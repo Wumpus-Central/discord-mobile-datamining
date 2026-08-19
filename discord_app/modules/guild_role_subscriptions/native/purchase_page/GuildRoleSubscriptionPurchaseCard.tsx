@@ -1,0 +1,63 @@
+// === Module 15802: GuildRoleSubscriptionPurchaseCard ===
+
+// Module 15802 (GuildRoleSubscriptionPurchaseCard)
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import Background from "Background" /* 6950 */;
+import BottomSheetModal from "BottomSheetModal" /* 6952 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
+import SectionTitle from "SectionTitle" /* 14583 */;
+import TruncatedText from "TruncatedText" /* 15797 */;
+import emphasisHookDefault from "emphasisHook" /* 15803 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+
+require = arg1;
+noopAll;
+({ jsx: closure_6, jsxs: error } = jsxProd);
+createCacheKey = { container: null, header: null, content: null, headerText: null, headerDot: null, seperator: null };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { padding: 16, paddingBottom: 24 };
+createCacheKey[2] = { padding: 16, paddingTop: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
+let obj1 = { padding: 16, paddingTop: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[4] = { width: 3, height: 3, borderRadius: 1.5, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginHorizontal: 8 };
+let obj2 = { width: 3, height: 3, borderRadius: 1.5, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginHorizontal: 8 };
+createCacheKey[5] = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const obj3 = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx");
+
+export default function GuildRoleSubscriptionPurchaseCard(guildId) {
+  const listingId = guildId.listingId;
+  const tmp = callback4();
+  let obj = getRoleEmojisAll;
+  obj1 = getRoleEmojisAll;
+  let obj2 = TruncatedText;
+  const formattedSubscriptionPlan = obj2.useFormattedSubscriptionPlan(listingId);
+  obj = { scrollable: true, startExpanded: true, children: null };
+  obj = { style: tmp.container, children: null };
+  obj1 = { style: tmp.header, children: null };
+  obj2 = { style: tmp.headerText, children: null };
+  const items = [callback2(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: callback(obj1.useName(listingId), 1)[0] }), callback2(View, { style: tmp.headerDot }), callback2(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: formattedSubscriptionPlan })];
+  obj2[1] = items;
+  const items1 = [callback3(View, obj2), callback2(Button.Spacer, { size: 16 }), callback2(TruncatedText.TruncatedText, { variant: "text-sm/normal", color: "text-default", lineClamp: 2, children: callback(obj.useDescription(listingId), 1)[0] }), callback2(Button.Spacer, { size: 24 }), callback2(emphasisHookDefault, { listingId })];
+  obj1[1] = items1;
+  const items2 = [callback3(View, obj1), callback2(View, { style: tmp.seperator }), ];
+  const obj5 = { scrollsToTop: false, style: tmp.content, contentContainerStyle: obj6, children: null };
+  const obj7 = { variant: "text-sm/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
+  const intl = getSystemLocale.intl;
+  obj7[3] = intl.string(getSystemLocale.t.UdEvUi);
+  const items3 = [callback2(Text.Text, obj7), callback2(Button.Spacer, { size: 24 }), callback2(SectionTitle.Content, { listingId, guildId: guildId.guildId })];
+  obj5[3] = items3;
+  items2[2] = callback3(BottomSheetModal.BottomSheetScrollView, obj5);
+  obj[1] = items2;
+  obj[2] = callback3(View, obj);
+  return callback2(Background.BottomSheet, obj);
+};

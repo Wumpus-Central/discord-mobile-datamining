@@ -1,0 +1,63 @@
+// === Module 4790: frozen ===
+
+// Module 4790 (frozen)
+import importAllResult from "fromString" /* 506 */;
+
+let obj = { EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED: require("module_0"), SEXUALLY_SUGGESTIVE_IMAGERY: null, SEXUALLY_SUGGESTIVE_TEXT: null, SEXUALLY_EXPLICIT_IMAGERY: null, SEXUALLY_EXPLICIT_TEXT: null, NUDITY: null, DATING: null, REGULATED_GOODS_USAGE: null, REGULATED_GOODS_DEPICTION: null, VIOLENCE_DOMESTIC_SIMULATED: null, VIOLENCE_ANIMALS: null, VIOLENCE_FANTASY: null, VIOLENCE_GRAPHIC: null, SELF_HARM_DEPICTION: null, SELF_HARM_REFERENCE: null, GAMBLING_REAL: null, GAMBLING_SIMULATED: null, PROFANITY_MILD: null, PROFANITY_SEVERE: null, SLURS: null, DANGEROUS_PHYSICALLY_HARMFUL: null, DANGEROUS_MENTALLY_HARMFUL: null, TRAGEDY_SIMULATED_HISTORICAL: null, TRAGEDY_SIMULATED_NATURAL_DISASTER: null, TRAGEDY_REAL_MILITARY_CONFLICT: null };
+obj[1] = require("module_1");
+const importAllResult1 = importAllResult;
+obj[2] = require("set");
+const importAllResult2 = importAllResult;
+obj[3] = require("module_3");
+const importAllResult3 = importAllResult;
+obj[4] = require("module_4");
+const importAllResult4 = importAllResult;
+obj[5] = require("module_5");
+const importAllResult5 = importAllResult;
+obj[6] = require("module_6");
+const importAllResult6 = importAllResult;
+obj[7] = require("module_7");
+const importAllResult7 = importAllResult;
+obj[8] = require("module_8");
+const importAllResult8 = importAllResult;
+obj[9] = require("module_9");
+const importAllResult9 = importAllResult;
+obj[10] = require("module_10");
+const importAllResult10 = importAllResult;
+obj[11] = require("module_11");
+const importAllResult11 = importAllResult;
+obj[12] = require("module_12");
+const importAllResult12 = importAllResult;
+obj[13] = require("module_13");
+const importAllResult13 = importAllResult;
+obj[14] = require("module_14");
+const importAllResult14 = importAllResult;
+obj[15] = require("module_15");
+const importAllResult15 = importAllResult;
+obj[16] = require("module_16");
+const importAllResult16 = importAllResult;
+obj[17] = require("module_17");
+const importAllResult17 = importAllResult;
+obj[18] = require("module_18");
+const importAllResult18 = importAllResult;
+obj[19] = require("module_19");
+const importAllResult19 = importAllResult;
+obj[20] = require("module_20");
+const importAllResult20 = importAllResult;
+obj[21] = require("module_21");
+const importAllResult21 = importAllResult;
+obj[22] = require("module_22");
+const importAllResult22 = importAllResult;
+obj[23] = require("module_23");
+const importAllResult23 = importAllResult;
+obj[24] = require("module_24");
+const frozen = Object.freeze(obj);
+obj = { RESTRICTED_TO_ADULT: null };
+const importAllResult24 = importAllResult;
+obj[0] = importAllResult.combine(frozen.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED, frozen.SEXUALLY_EXPLICIT_IMAGERY, frozen.SEXUALLY_EXPLICIT_TEXT);
+const frozen1 = Object.freeze(obj);
+const importAllResult25 = importAllResult;
+const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/DiscordContentClassificationFlags.tsx");
+
+export const DiscordContentClassificationFlags = frozen;
+export const DiscordContentClassificationFlagMasks = frozen1;

@@ -1,0 +1,25 @@
+// === Module 16012: trackYouTabAvatarPress ===
+
+// Module 16012 (trackYouTabAvatarPress)
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");
+
+export const trackYouTabAvatarPress = function trackYouTabAvatarPress() {
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_AVATAR_PRESS);
+};
+export const trackYouTabCustomStatusPress = function trackYouTabCustomStatusPress() {
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_CUSTOM_STATUS_PRESS);
+};
+export const trackYouTabEditProfilePress = function trackYouTabEditProfilePress() {
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_EDIT_PROFILE_PRESS);
+};
+export const trackYouTabNitroIconPress = function trackYouTabNitroIconPress() {
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_NITRO_ICON_PRESS);
+};
+export const trackYouTabSettingsIconPress = function trackYouTabSettingsIconPress(has_badge) {
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_SETTINGS_ICON_PRESS, { has_badge: has_badge.isBadged });
+};

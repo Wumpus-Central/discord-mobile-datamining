@@ -1,0 +1,54 @@
+// === Module 12660: VoiceEmptyState ===
+
+// Module 12660 (VoiceEmptyState)
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import registerAssetDefault from "registerAsset" /* 12661 */;
+import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton" /* 12662 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { Fonts } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
+
+require = arg1;
+noopAll;
+({ jsx: c4, jsxs: c5 } = jsxProd);
+createCacheKey = { container: { justifyContent: "center" }, button: { paddingHorizontal: 12, paddingTop: 16 }, emptyTitle: null, emptyBody: null };
+createCacheKey = {};
+const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+createCacheKey.textTransform = "none";
+createCacheKey.lineHeight = 24;
+createCacheKey[2] = createCacheKey;
+const obj1 = {};
+const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_SUBTLE, 16));
+obj1.lineHeight = 20;
+obj1.fontWeight = "600";
+createCacheKey[3] = obj1;
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const importDefaultResult1 = importDefaultResult;
+const result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx");
+
+export default function VoiceEmptyState(channel) {
+  const tmp = callback3();
+  let obj = { style: null, children: null };
+  const items = [tmp.container, ];
+  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
+  items[1] = obj;
+  obj[0] = items;
+  obj = { title: null, body: null, lightSource: null, darkSource: null, titleStyle: null, bodyStyle: null, imageStyle: null };
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["/HABZo"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["5Jy2FY"]);
+  obj[2] = registerAssetDefault;
+  obj[3] = registerAssetDefault;
+  ({ emptyTitle: obj3[4], emptyBody: obj3[5] } = tmp);
+  obj[6] = { marginBottom: 16, marginTop: 20 };
+  const items1 = [callback(Button.ThemedEmptyState, obj), callback(JoinVoiceChannelButtonDefault, { channel: channel.channel, style: tmp.button })];
+  obj[1] = items1;
+  return callback2(View, obj);
+};

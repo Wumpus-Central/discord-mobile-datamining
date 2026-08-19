@@ -1,0 +1,386 @@
+// === Module 10256: getString ===
+
+// Module 10256 (getString)
+import set from "set" /* 2 */;
+import _modDef38 from "module_38" /* 38 */;
+import setDefault from "set" /* 4362 */;
+import TRUE_OPTION_NAME2 from "TRUE_OPTION_NAME" /* 5246 */;
+import numberParts from "numberParts" /* 10257 */;
+
+function getString(arg0, arg1) {
+  let str = "";
+  const iter = arg0[arg1][Symbol.iterator]();
+  const nextResult = iter.next();
+  for (; iter !== undefined; str = str + tmp2.text) {
+    tmp2 = nextResult;
+    let type = nextResult.type;
+    if ("text" !== type) {
+      if ("textMention" !== type) {
+        if ("userMention" === type) {
+          let tmp11 = str;
+          let tmp12 = nextResult;
+          let _HermesInternal4 = HermesInternal;
+          str = `${"<@" + tmp2.userId + ">"}`;
+        } else if ("channelMention" === type) {
+          let tmp9 = str;
+          let tmp10 = nextResult;
+          let _HermesInternal3 = HermesInternal;
+          str = `${"<@" + tmp2.userId + ">"}${"<#" + tmp2.channelId + ">"}`;
+        } else if ("roleMention" === type) {
+          let tmp7 = str;
+          let tmp8 = nextResult;
+          let _HermesInternal2 = HermesInternal;
+          str = `${"<@" + tmp2.userId + ">"}${"<#" + tmp2.channelId + ">"}${"<@&" + tmp2.roleId + ">"}`;
+        } else if ("emoji" === type) {
+          let tmp5 = str;
+          let tmp6 = nextResult;
+          str = `${"<@" + tmp2.userId + ">"}${"<#" + tmp2.channelId + ">"}${"<@&" + tmp2.roleId + ">"}${tmp2.surrogate}`;
+        } else if ("customEmoji" === type) {
+          let tmp15 = str;
+          let tmp16 = nextResult;
+          let str2 = "";
+          if (tmp2.animated) {
+            str2 = "a";
+          }
+          let tmp3 = nextResult;
+          let str3 = tmp2.name;
+          let str4 = str3.replace(/:/g, "");
+          let _HermesInternal = HermesInternal;
+          let str5 = "<";
+          let tmp4 = str2;
+          let str6 = ":";
+          let str7 = ":";
+          let str8 = ">";
+          str = str + "<" + str2 + ":" + str4.split("~")[0] + ":" + tmp2.emojiId + ">";
+        }
+      }
+      continue;
+    }
+    let tmp13 = str;
+    let tmp14 = nextResult;
+  }
+  return str;
+}
+const TRUE_OPTION_NAME = TRUE_OPTION_NAME2.TRUE_OPTION_NAME;
+const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandOptionUtils.tsx");
+
+export const filterEmpty = function filterEmpty(arr) {
+  closure_0 = arr;
+  if (null == arr) {
+    let items = [];
+  } else {
+    items = arr.filter((type) => {
+      let str = type;
+      if ("text" !== type.type) {
+        return tmp;
+      } else {
+        if (arg1 <= 0) {
+          let tmp4 = "" !== str.text.trim();
+          const str2 = str.text;
+        }
+        str = "";
+        tmp4 = "" !== str.text;
+      }
+    });
+  }
+  return items;
+};
+export const getBoolean = function getBoolean(arg0, arg1) {
+  const arr = arg0[arg1];
+  if (null == arr) {
+    let items = [];
+  } else {
+    items = arr.filter((type) => {
+      let str = type;
+      if ("text" !== type.type) {
+        return tmp;
+      } else {
+        if (arg1 <= 0) {
+          let tmp4 = "" !== str.text.trim();
+          const str2 = str.text;
+        }
+        str = "";
+        tmp4 = "" !== str.text;
+      }
+    });
+  }
+  _modDef38(1 === items.length, "Contains multiple values");
+  const first = items[0];
+  let type;
+  if (first != null) {
+    type = first.type;
+  }
+  _modDef38("text" === type, "First value is not text");
+  return items[0].text === TRUE_OPTION_NAME;
+};
+export const getOptionalBoolean = function getOptionalBoolean(arg0, arg1) {
+  let tmp = null;
+  if (null != arg0[arg1]) {
+    const arr = arg0[arg1];
+    if (null == arr) {
+      let items = [];
+    } else {
+      items = arr.filter((type) => {
+        let str = type;
+        if ("text" !== type.type) {
+          return tmp;
+        } else {
+          if (arg1 <= 0) {
+            let tmp4 = "" !== str.text.trim();
+            const str2 = str.text;
+          }
+          str = "";
+          tmp4 = "" !== str.text;
+        }
+      });
+    }
+    _modDef38(1 === items.length, "Contains multiple values");
+    const first = items[0];
+    let type;
+    if (first != null) {
+      type = first.type;
+    }
+    _modDef38("text" === type, "First value is not text");
+    tmp = items[0].text === TRUE_OPTION_NAME;
+    const tmp5 = _modDef38;
+  }
+  return tmp;
+};
+export const getChannelId = function getChannelId(arg0, arg1) {
+  const arr = arg0[arg1];
+  if (null == arr) {
+    let items = [];
+  } else {
+    items = arr.filter((type) => {
+      let str = type;
+      if ("text" !== type.type) {
+        return tmp;
+      } else {
+        if (arg1 <= 0) {
+          let tmp4 = "" !== str.text.trim();
+          const str2 = str.text;
+        }
+        str = "";
+        tmp4 = "" !== str.text;
+      }
+    });
+  }
+  _modDef38(1 === items.length, "Contains multiple values");
+  const first = items[0];
+  let type;
+  if (first != null) {
+    type = first.type;
+  }
+  _modDef38("channelMention" === type, "First value is not a channel mention");
+  return items[0].channelId;
+};
+export const getOptionalChannelId = function getOptionalChannelId(arg0, arg1) {
+  let channelId = null;
+  if (null != arg0[arg1]) {
+    const arr = arg0[arg1];
+    if (null == arr) {
+      let items = [];
+    } else {
+      items = arr.filter((type) => {
+        let str = type;
+        if ("text" !== type.type) {
+          return tmp;
+        } else {
+          if (arg1 <= 0) {
+            let tmp4 = "" !== str.text.trim();
+            const str2 = str.text;
+          }
+          str = "";
+          tmp4 = "" !== str.text;
+        }
+      });
+    }
+    _modDef38(1 === items.length, "Contains multiple values");
+    const first = items[0];
+    let type;
+    if (first != null) {
+      type = first.type;
+    }
+    _modDef38("channelMention" === type, "First value is not a channel mention");
+    channelId = items[0].channelId;
+    const tmp5 = _modDef38;
+  }
+  return channelId;
+};
+export const getUserId = function getUserId(arg0, arg1) {
+  const arr = arg0[arg1];
+  if (null == arr) {
+    let items = [];
+  } else {
+    items = arr.filter((type) => {
+      let str = type;
+      if ("text" !== type.type) {
+        return tmp;
+      } else {
+        if (arg1 <= 0) {
+          let tmp4 = "" !== str.text.trim();
+          const str2 = str.text;
+        }
+        str = "";
+        tmp4 = "" !== str.text;
+      }
+    });
+  }
+  _modDef38(1 === items.length, "Contains multiple values");
+  const first = items[0];
+  let type;
+  if (first != null) {
+    type = first.type;
+  }
+  _modDef38("userMention" === type, "First value is not a user mention");
+  return items[0].userId;
+};
+export const getOptionalUserId = function getOptionalUserId(arg0, arg1) {
+  let userId = null;
+  if (null != arg0[arg1]) {
+    const arr = arg0[arg1];
+    if (null == arr) {
+      let items = [];
+    } else {
+      items = arr.filter((type) => {
+        let str = type;
+        if ("text" !== type.type) {
+          return tmp;
+        } else {
+          if (arg1 <= 0) {
+            let tmp4 = "" !== str.text.trim();
+            const str2 = str.text;
+          }
+          str = "";
+          tmp4 = "" !== str.text;
+        }
+      });
+    }
+    _modDef38(1 === items.length, "Contains multiple values");
+    const first = items[0];
+    let type;
+    if (first != null) {
+      type = first.type;
+    }
+    _modDef38("userMention" === type, "First value is not a user mention");
+    userId = items[0].userId;
+    const tmp5 = _modDef38;
+  }
+  return userId;
+};
+export const getRoleId = function getRoleId(arg0, arg1) {
+  const arr = arg0[arg1];
+  if (null == arr) {
+    let items = [];
+  } else {
+    items = arr.filter((type) => {
+      let str = type;
+      if ("text" !== type.type) {
+        return tmp;
+      } else {
+        if (arg1 <= 0) {
+          let tmp4 = "" !== str.text.trim();
+          const str2 = str.text;
+        }
+        str = "";
+        tmp4 = "" !== str.text;
+      }
+    });
+  }
+  _modDef38(1 === items.length, "Contains multiple values");
+  const first = items[0];
+  let type;
+  if (first != null) {
+    type = first.type;
+  }
+  _modDef38("roleMention" === type, "First value is not a role mention");
+  return items[0].roleId;
+};
+export const getOptionalRoleId = function getOptionalRoleId(arg0, arg1) {
+  let roleId = null;
+  if (null != arg0[arg1]) {
+    const arr = arg0[arg1];
+    if (null == arr) {
+      let items = [];
+    } else {
+      items = arr.filter((type) => {
+        let str = type;
+        if ("text" !== type.type) {
+          return tmp;
+        } else {
+          if (arg1 <= 0) {
+            let tmp4 = "" !== str.text.trim();
+            const str2 = str.text;
+          }
+          str = "";
+          tmp4 = "" !== str.text;
+        }
+      });
+    }
+    _modDef38(1 === items.length, "Contains multiple values");
+    const first = items[0];
+    let type;
+    if (first != null) {
+      type = first.type;
+    }
+    _modDef38("roleMention" === type, "First value is not a role mention");
+    roleId = items[0].roleId;
+    const tmp5 = _modDef38;
+  }
+  return roleId;
+};
+export { getString };
+export const getOptionalString = function getOptionalString(closure_1, name) {
+  let tmp = null;
+  if (null != closure_1[name]) {
+    tmp = getString(closure_1, name);
+  }
+  return tmp;
+};
+export const normalizeNumericString = function normalizeNumericString(locale, trimmed) {
+  if (locale !== closure_5) {
+    closure_5 = locale;
+    en_US = numberParts.numberParts[locale];
+    if (en_US == null) {
+      en_US = tmp11(10257).numberParts["en-US"];
+    }
+    const _RegExp = RegExp;
+    ({ group, decimal } = en_US);
+    const regExp = new RegExp(setDefault.escape(group), "g");
+    const _RegExp2 = RegExp;
+    const obj = setDefault;
+    tmp11 = require;
+    const regExp1 = new RegExp(setDefault.escape(decimal), "g");
+    const obj2 = setDefault;
+  }
+  return trimmed.replace(regExp, "").replace(regExp1, ".");
+};
+export const getInitialValuesFromInteractionOptions = function getInitialValuesFromInteractionOptions(command, interactionOptions) {
+  closure_0 = command;
+  const obj = {};
+  function _loop(iter) {
+    command = iter;
+    const options = command.options;
+    if (options != null) {
+      const found = options.find((name) => name.name === iter.name);
+    }
+    let num = 0;
+    if (iter.type !== command(closure_1_2[4]).ApplicationCommandOptionType.ATTACHMENT) {
+      let autocomplete;
+      if (found != null) {
+        autocomplete = found.autocomplete;
+      }
+      num = 0;
+      if (!autocomplete) {
+        obj[iter.name] = iter;
+      }
+    }
+    return num;
+  }
+  const iter = interactionOptions[Symbol.iterator]();
+  while (iter !== undefined) {
+    let _loopResult = _loop(iter.next());
+    continue;
+  }
+  return obj;
+};

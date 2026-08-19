@@ -1,0 +1,51 @@
+// === Module 16200: ? ===
+
+// Module 16200
+import getFontScale from "getFontScale" /* 4751 */;
+import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 8498 */;
+import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 8498 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10055 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
+
+require = arg1;
+let closure_7 = createCacheKey.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
+const memoResult = importAllResult.memo(function UnreadBadge(arg0) {
+  ({ unread, resolvedUnreadSetting, muted } = arg0);
+  const tmp4 = getLayoutStyleDefault();
+  getFontScale;
+  let tmp9Result = null;
+  if (unread) {
+    let obj = { style: null, children: null };
+    const items = [tmp.unreadBadge, tmp4.unreadBadge.position, ];
+    obj = { width: null, height: null };
+    obj[0] = tmp4.unreadBadge.size;
+    obj[1] = tmp4.unreadBadge.size;
+    items[2] = obj;
+    obj[0] = items;
+    obj = { classic: true, size: null, badgeStyle: null };
+    const _Math = Math;
+    obj[1] = DEFAULT_BADGE_SIZE.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
+    if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
+      let num2 = MUTED_OPACITY_CONTENT;
+    } else {
+      num2 = 1;
+    }
+    obj1 = { opacity: null };
+    obj1[0] = num2;
+    const items1 = [obj1];
+    obj[2] = items1;
+    obj[1] = jsx(DEFAULT_BADGE_SIZEDefault, { classic: true, size: null, badgeStyle: null });
+    tmp9Result = tmp9(View, obj);
+    const tmp10 = View;
+    const tmp2Result = DEFAULT_BADGE_SIZEDefault;
+  }
+  return tmp9Result;
+});
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");
+
+export default memoResult;

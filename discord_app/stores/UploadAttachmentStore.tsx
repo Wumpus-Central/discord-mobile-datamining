@@ -1,0 +1,347 @@
+// === Module 4824: map ===
+
+// Module 4824 (map)
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import handleChanged from "handleChanged" /* 4825 */;
+import set2 from "set" /* 4828 */;
+
+const DraftType = handleChanged.DraftType;
+const MAX_UPLOAD_COUNT = ME.MAX_UPLOAD_COUNT;
+let map = new Map();
+let closure_6 = [];
+const Store = initializeDefault.Store;
+class UploadAttachmentStore extends Store {
+}
+const prototype = UploadAttachmentStore.prototype;
+prototype["getFirstUpload"] = function getFirstUpload(arg0, arg1) {
+  map = map.get(arg0);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  let value;
+  if (map != null) {
+    value = map.get(arg1);
+  }
+  if (value == null) {
+    value = closure_6;
+  }
+  let first = null;
+  if (value.length > 0) {
+    first = value[0];
+  }
+  return first;
+};
+prototype["hasAdditionalUploads"] = function hasAdditionalUploads(arg0, arg1) {
+  map = map.get(arg0);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  let value;
+  if (map != null) {
+    value = map.get(arg1);
+  }
+  if (value == null) {
+    value = closure_6;
+  }
+  let num = value.length;
+  if (num == null) {
+    num = 0;
+  }
+  return num > 1;
+};
+prototype["getUploads"] = function getUploads(id, ChannelMessage) {
+  map = map.get(id);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  let value;
+  if (map != null) {
+    value = map.get(ChannelMessage);
+  }
+  if (value == null) {
+    value = closure_6;
+  }
+  return value;
+};
+prototype["getUploadCount"] = function getUploadCount(channelId, ChannelMessage) {
+  map = map.get(channelId);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  let value;
+  if (map != null) {
+    value = map.get(ChannelMessage);
+  }
+  if (value == null) {
+    value = closure_6;
+  }
+  let num = value.length;
+  if (num == null) {
+    num = 0;
+  }
+  return num;
+};
+prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
+  closure_0 = id;
+  map = map.get(channelId);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  let value;
+  if (map != null) {
+    value = map.get(ChannelMessage);
+  }
+  if (value == null) {
+    value = closure_6;
+  }
+  return value.find((id) => id.id === closure_0);
+};
+prototype["findUpload"] = function findUpload(totalNumItems, ChannelMessage, closure_4) {
+  map = map.get(totalNumItems);
+  if (map == null) {
+    const _Map = Map;
+    map = new Map();
+  }
+  let value;
+  if (map != null) {
+    value = map.get(ChannelMessage);
+  }
+  if (value == null) {
+    value = closure_6;
+  }
+  return value.find(closure_4);
+};
+UploadAttachmentStore.displayName = "UploadAttachmentStore";
+const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
+  UPLOAD_ATTACHMENT_POP_FILE: function handlePopFile(channelId) {
+    channelId = channelId.channelId;
+    map = map.get(channelId);
+    if (map == null) {
+      const _Map = Map;
+      map = new Map();
+    }
+    let value;
+    if (map != null) {
+      value = map.get(DraftType.ChannelMessage);
+    }
+    if (value == null) {
+      value = closure_6;
+    }
+    const items = [...value];
+    items.shift();
+    let value1 = obj.get(channelId);
+    if (value1 == null) {
+      const _Map2 = Map;
+      value1 = new Map();
+    }
+    const result = value1.set(DraftType.ChannelMessage, items);
+    const result1 = obj.set(channelId, value1);
+  },
+  UPLOAD_ATTACHMENT_ADD_FILES: function handleAddFiles(arg0) {
+    ({ files, channelId } = arg0);
+    ({ draftType, allowOptimization: importDefault } = arg0);
+    let items;
+    let obj = map;
+    map = map.get(channelId);
+    if (map == null) {
+      const _Map = Map;
+      map = new Map();
+    }
+    let value;
+    if (map != null) {
+      value = map.get(draftType);
+    }
+    if (value == null) {
+      value = closure_6;
+    }
+    items = [...value];
+    if (items.length + files.length > MAX_UPLOAD_COUNT) {
+      if (draftType !== DraftType.SlashCommand) {
+        if (draftType !== DraftType.ApplicationLauncherCommand) {
+          obj = { title: null, body: null };
+          const intl = channelId(items[3]).intl;
+          obj[0] = intl.string(channelId(items[3]).t.wOr6hB);
+          const intl2 = channelId(items[3]).intl;
+          obj = { limit: null };
+          obj[0] = tmp5;
+          obj[1] = intl2.formatToPlainString(channelId(items[3]).t["qqyp/e"], obj);
+          importDefault(items[2]).show(obj);
+          const obj4 = importDefault(items[2]);
+        }
+      }
+    }
+    const item = importDefault(items[4]).forEach(files, (file) => {
+      const cloudUpload = new channelId(items[5]).CloudUpload(file, channelId, items.length, closure_1);
+      items.push(cloudUpload);
+    });
+    let value1 = obj.get(channelId);
+    if (value1 == null) {
+      const _Map2 = Map;
+      value1 = new Map();
+    }
+    const result = value1.set(draftType, items);
+    const result1 = obj.set(channelId, value1);
+  },
+  UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
+    ({ channelId, id: require, filename: importDefault, description: dependencyMap, spoiler: DraftType, thumbnail: MAX_UPLOAD_COUNT, draftType } = arg0);
+    map = map.get(channelId);
+    if (map == null) {
+      const _Map = Map;
+      map = new Map();
+    }
+    let value;
+    if (map != null) {
+      value = map.get(draftType);
+    }
+    if (value == null) {
+      value = closure_6;
+    }
+    const items = [...value];
+    const mapped = items.map((id) => {
+      if (id.id === closure_0) {
+        if (undefined !== closure_1) {
+          id.filename = closure_1;
+        }
+        if (undefined !== closure_3) {
+          id.spoiler = closure_3;
+        }
+        if (undefined !== closure_2) {
+          id.description = closure_2;
+        }
+        if (undefined !== closure_4) {
+          id.isThumbnail = closure_4;
+        }
+      }
+      return id;
+    });
+    let value1 = obj.get(channelId);
+    if (value1 == null) {
+      const _Map2 = Map;
+      value1 = new Map();
+    }
+    const result = value1.set(draftType, mapped);
+    const result1 = obj.set(channelId, value1);
+  },
+  UPLOAD_ATTACHMENT_REMOVE_FILE: function handleRemoveFile(id) {
+    ({ channelId, id: require, draftType } = id);
+    map = map.get(channelId);
+    if (map == null) {
+      const _Map = Map;
+      map = new Map();
+    }
+    let value;
+    if (map != null) {
+      value = map.get(draftType);
+    }
+    if (value == null) {
+      value = closure_6;
+    }
+    const items = [...value];
+    const findIndexResult = items.findIndex((closure_0) => {
+      let obj = closure_1_0(closure_1_2[6]);
+      obj = { uri: closure_0, filename: closure_0 };
+      return obj.doesImageMatchUpload(obj, closure_0);
+    });
+    if (findIndexResult > -1) {
+      const first = items.splice(findIndexResult, 1)[0];
+      first.removeFromMsgDraft();
+      let value1 = obj.get(channelId);
+      if (value1 == null) {
+        const _Map2 = Map;
+        value1 = new Map();
+      }
+      const result = value1.set(draftType, items);
+      const result1 = obj.set(channelId, value1);
+    }
+  },
+  UPLOAD_ATTACHMENT_REMOVE_FILES: function handleRemoveFiles(arg0) {
+    ({ channelId, attachmentIds, draftType } = arg0);
+    let items;
+    map = map.get(channelId);
+    if (map == null) {
+      const _Map = Map;
+      map = new Map();
+    }
+    let value;
+    if (map != null) {
+      value = map.get(draftType);
+    }
+    if (value == null) {
+      value = closure_6;
+    }
+    items = [...value];
+    const item = attachmentIds.forEach((arg0) => {
+      items = arg0;
+      const findIndexResult = items.findIndex((id) => closure_0 === id.id);
+      if (findIndexResult > -1) {
+        const first = items.splice(findIndexResult, 1)[0];
+        first.removeFromMsgDraft();
+      }
+    });
+    let value1 = obj.get(channelId);
+    if (value1 == null) {
+      const _Map2 = Map;
+      value1 = new Map();
+    }
+    const result = value1.set(draftType, items);
+    const result1 = obj.set(channelId, value1);
+  },
+  UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function handleClearAllFiles(channelId) {
+    channelId = channelId.channelId;
+    map = map.get(channelId);
+    if (map == null) {
+      const _Map = Map;
+      map = new Map();
+    }
+    const result = map.set(channelId.draftType, []);
+    const result1 = map.set(channelId, map);
+  },
+  UPLOAD_ATTACHMENT_SET_UPLOADS: function handleSetUploads(channelId) {
+    channelId = channelId.channelId;
+    ({ uploads, draftType } = channelId);
+    map = map.get(channelId);
+    if (map == null) {
+      const _Map = Map;
+      map = new Map();
+    }
+    const result = map.set(draftType, uploads);
+    const result1 = map.set(channelId, map);
+  },
+  UPLOAD_ATTACHMENT_SET_FILE: function handleSetFile(arg0) {
+    ({ channelId, id: require, file, draftType, allowOptimization } = arg0);
+    map = map.get(channelId);
+    if (map == null) {
+      const _Map = Map;
+      map = new Map();
+    }
+    let value;
+    if (map != null) {
+      value = map.get(draftType);
+    }
+    if (value == null) {
+      value = closure_6;
+    }
+    const items = [...value];
+    const found = items.filter((id) => id.id !== closure_0);
+    const cloudUpload = new set2.CloudUpload(file, channelId, undefined, allowOptimization);
+    found.push(cloudUpload);
+    let value1 = obj.get(channelId);
+    if (value1 == null) {
+      const _Map2 = Map;
+      value1 = new Map();
+    }
+    const result = value1.set(draftType, found);
+    const result1 = obj.set(channelId, value1);
+  }
+});
+let result = set.fileFinishedImporting("stores/UploadAttachmentStore.tsx");
+
+export default uploadAttachmentStore;

@@ -1,0 +1,67 @@
+// === Module 691: keys ===
+
+// Module 691 (keys)
+import set from "set" /* 2 */;
+
+let set = new Set(["token", "fingerprint"]);
+const frozen = Object.freeze({ START: { x: 0, y: 0 }, END: { x: 1, y: 0 } });
+const frozen1 = Object.freeze({ START: { x: 0, y: 0 }, END: { x: 0, y: 1 } });
+const result = set.fileFinishedImporting("ConstantsIOS.tsx");
+
+export const DrawerSourceTypes = { BACK_BUTTON: "Back Button", SWIPE: "Swipe", MUTUAL_GUILD_ITEM: "Mutual Guild Item", MEMBER_LIST_ICON: "Member List Icon", CHANNEL_DRAWER_ICON: "Channel Drawer Icon", CHANNEL_TITLE: "Channel Title", PREMIUM_GUILD_SUBSCRIPTION_GUILD_LIST_UPSELL: "Premium Guild Subscription Guild List Upsell" };
+export const AppStates = { INACTIVE: "inactive", BACKGROUND: "background", ACTIVE: "active" };
+export const AuthStates = { WELCOME: "WELCOME", LOGIN: "LOGIN", REGISTER_IDENTITY: "REGISTER_IDENTITY", REGISTER_DISPLAY_NAME: "REGISTER_DISPLAY_NAME", REGISTER_ACCOUNT_INFORMATION: "REGISTER_ACCOUNT_INFORMATION", VERIFY_PHONE: "VERIFY_PHONE", MFA: "MFA", ACCOUNT_DISABLED_OR_DELETION_SCHEDULED: "ACCOUNT_DISABLED_OR_DELETION_SCHEDULED", AGE_GATE_UNDERAGE: "AGE_GATE_UNDERAGE", AGE_GATE: "AGE_GATE", COUNTRY_SELECT: "COUNTRY_SELECT", EXTERNAL_LINK: "EXTERNAL_LINK", COMPANION_REMOTE_AUTH: "COMPANION_REMOTE_AUTH" };
+export const KeyboardThemes = { DEFAULT: "default", DARK: "dark", LIGHT: "light" };
+export const DiscoverabilityScenes = { LANDING: "LANDING", NAME: "NAME" };
+export const WebBrowserType = { SAFARI: 0, [0]: "SAFARI", IN_APP: 1, [1]: "IN_APP", CHROME: 2, [2]: "CHROME" };
+export const CaptchaEvent = { SOLVED: "solved", EXPIRED: "expired" };
+export const VerificationModalScenes = { OVERVIEW: "OVERVIEW", RESEND_EMAIL: "RESEND_EMAIL", CONFIRM_EMAIL_CHANGE_START: "CONFIRM_EMAIL_CHANGE_START", CONFIRM_EMAIL_CHANGE_CODE: "CONFIRM_EMAIL_CHANGE_CODE", ENTER_EMAIL: "ENTER_EMAIL", ADD_PHONE: "ADD_PHONE", VERIFY_PHONE: "VERIFY_PHONE", VERIFY_PASSWORD: "VERIFY_PASSWORD", PHONE_THEN_EMAIL_INTERSTITIAL: "PHONE_THEN_EMAIL_INTERSTITIAL", CHANGE_EMAIL_COMPLETE: "CHANGE_EMAIL_COMPLETE", CHANGE_EMAIL_COLLECT_REASONS: "CHANGE_EMAIL_COLLECT_REASONS", CHANGE_EMAIL_WARNING: "CHANGE_EMAIL_WARNING" };
+export const InviteModalScenes = { ADVANCED: "ADVANCED" };
+export const AuditLogFilterTypes = { USER: "USER", ACTION: "ACTION" };
+export const NotificationSettingsSections = { OVERVIEW: "OVERVIEW", ADD_OVERRIDE: "ADD_OVERRIDE", CHANNEL_OVERRIDE: "CHANNEL_OVERRIDE" };
+export const APP_STORE_REVIEW_LINK = "itms-apps://itunes.apple.com/us/app/id985746746?mt=8&action=write-review";
+export const MANAGE_SUBSCRIPTION_LINK = "itms-apps://apps.apple.com/account/subscriptions";
+export const Base64JPEGPrefix = "data:image/jpeg;base64,";
+export const Base64PNGPrefix = "data:image/png;base64,";
+export const Base64GIFPrefix = "data:image/gif;base64,";
+export const Base64AVIFPrefix = "data:image/avif;base64,";
+export const Base64WEBPPrefix = "data:image/webp;base64,";
+export const LinkingTypes = { INVITE: "invite", GUILD_TEMPLATE: "guild-template", CHANNEL: "channel", GIFT_CODE: "gift-code", MESSAGE: "message", OAUTH2_AUTHORIZE: "oauth2-authorize", ONE_TIME_LOGIN: "one-time-login", APP_DIRECTORY_PROFILE: "app-directory-profile", PROMOTIONS: "promotions", FEATURE_PROMO_URL: "promo-url", NONE: "none", REMOTE_AUTH: "remote-auth", USER_PROFILE: "user-profile", BUILD_OVERRIDE: "build-override", CONTACT_SYNC: "contact-sync", ADD_FRIENDS: "add-friends", COMPOSE_MESSAGE: "compose-message", GUILD_EVENT_DETAILS: "guild-event-details", FRIENDS: "friends", EDIT_PROFILE: "edit-profile", MOBILE_WEB_HANDOFF: "mobile-web-handoff", USER_CONNECTIONS_CALLBACK: "user-connections-callback", VOICE_CHANNEL: "voice-channel", GUILD_HOME: "guild-home", USER_CONNECTIONS_LINK_CALLBACK: "user-connections-link-callback", SESSION_MANAGEMENT: "session-management", CONNECTIONS: "connections", GUILD_SETTINGS: "guild-settings", GUILD_SETTINGS_PICKER: "guild-settings-picker", ACTIVATE_DEVICE: "activate-device", FAMILY_CENTER: "family-center", SHARE: "share", CREATE_VOICE_INVITE: "create_voice_invite", SEND_VOICE_HANGOUT_WAVE: "send_voice_hangout_wave", ACCOUNT_STANDING: "account-standing", MOBILE_NATIVE_UPDATE: "mobile-native-update", SHOP: "shop", MOBILE_WEB_REDIRECT_CHECKOUT: "mobile-web-redirect-checkout", AUTHORIZED_APPS: "authorized-apps", DAVE_PROTOCOL_VERIFICATION: "dave-protocol-verification", ICYMI: "icymi", QUESTS: "quests", GIFT: "gift", NITRO_HOME: "store", ACTIVITY: "activity", CONNECTED_GAMES: "connected-games", BOOST_MARKETING: "boost-marketing", BOOST_SETTINGS: "boost-settings", QUEST_PREVIEW_TOOL: "quest-preview-tool", QUEST_HOME_PREVIEW: "quest-home-preview", SUBSCRIPTION_SETTINGS: "subscription-settings", ROLL_DICE: "roll-dice", GAME_PROFILE: "game-profile", MESSAGE_REQUESTS: "message-requests" };
+export const ActivityPartyApplicationNames = { spotify: "Spotify" };
+export const CACHE_STORE_LAZY_KEY = "CacheStoreLazy";
+export const CACHE_STORE_CHANNELS_LAZY_KEY = "CacheStoreChannelsLazy";
+export const CACHE_STORE_KEY = "CacheStore";
+export const STORAGE_SECURE_KEYS = set;
+export const MAX_INVITE_AVATARS_TO_SHOW = 6;
+export const INVITE_EMBED_AVATAR_SIZE = 50;
+export const UPLOAD_BANNER_SIZE = { width: 1080, height: 432 };
+export const UPLOAD_STICKER_SIZE = 320;
+export const UPLOAD_MEDIUM_SIZE = 256;
+export const UPLOAD_SMALL_SIZE = 128;
+export const UPLOAD_EMOJI_SIZE = 128;
+export const EMOJI_CHAT_SIZE = 18;
+export const DM_WIDTH = 72;
+export const UpsellTypes = { UPLOAD: "upload", GLOBAL_EMOJI: "global-emoji", EMOJI_AUTOCOMPLETE: "emoji-autocomplete", BADGE: "badge", ANIMATED_EMOJI: "animated-emoji", ANIMATED_AVATAR: "animated-avatar", CUSTOM_PROFILES: "custom-profiles", GLOBAL_STICKER: "global-sticker", PREMIUM_GUILD_PROFILE: "premium-guild-profile", LONGER_MESSAGE: "longer-message", GUILD_CAP: "guild-cap", ACTIVITIES: "activities", APP_ICONS: "app-icons", SOUNDBOARD: "soundboard", CLIENT_THEMES: "client-themes", FOR_LATER: "for-later", STREAM_HIGH_QUALITY: "stream-high-quality" };
+export const StoreKitErrors = { UNKNOWN: "ESKERRORDOMAIN0", CLIENT_INVALID: "ESKERRORDOMAIN1", PAYMENT_CANCELED: "ESKERRORDOMAIN2", PAYMENT_INVALID: "ESKERRORDOMAIN3", PAYMENT_NOT_ALLOWED: "ESKERRORDOMAIN4", STORE_PRODUCT_NOT_AVAILABLE: "ESKERRORDOMAIN5", CLOUD_SERVICE_PERMISSION_DENIED: "ESKERRORDOMAIN6", CLOUD_SERVICE_NETWORK_CONNECTION_FAILED: "ESKERRORDOMAIN7", CLOUD_SERVICE_REVOKED: "ESKERRORDOMAIN8", PRIVACY_ACKNOWLEDGEMENT_REQUIRED: "ESKERRORDOMAIN9", UNAUTHORIZED_REQUEST_DATA: "ESKERRORDOMAIN10", INVALID_OFFER_IDENTIFIER: "ESKERRORDOMAIN11", INVALID_SIGNATURE: "ESKERRORDOMAIN12", MISSING_OFFER_PARAMS: "ESKERRORDOMAIN13", INVALID_OFFER_PRICE: "ESKERRORDOMAIN14", OVERLAY_CANCELLED: "ESKERRORDOMAIN15", OVERLAY_INVALID_CONFIGURATION: "ESKERRORDOMAIN16", OVERLAY_TIMEOUT: "ESKERRORDOMAIN17", INELIGIBLE_FOR_OFFER: "ESKERRORDOMAIN18", UNSUPPORTED_PLATFORM: "ESKERRORDOMAIN19" };
+export const StorageKeys = { LOGOUT_TIMESTAMP_KEY: "logout_timestamp_key", ACKNOWLEDGED_TOOLTIPS_KEY: "acknowledged_tooltips_key", KRISP_ONBOARD: "krisp_onboard" };
+export const ModalAnimation = { NONE: "none", SLIDE_UP: "slide-up", SLIDE_IN: "slide-in", SLIDE_OUT: "slide-out", SLIDE_IN_OUT: "slide-in-out", SLIDE_IN_OUT_REVERSE: "slide-in-out-reverse", FADE: "fade" };
+export const GIF_RE_IOS = /\.(gif)$/i;
+export const WEBP_RE_IOS = /\.(webp)$/i;
+export const HorizontalGradient = frozen;
+export const VerticalGradient = frozen1;
+export const CompressionQuality = { HIGH: 0.6, [0.6]: "HIGH", LOW: 0.3, [0.3]: "LOW" };
+export const USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING = 16;
+export const DISCORD_CONNECT_EXAMPLE_APP_DEEPLINK_URI = "discordconnect://connect";
+export const DISCORD_CONNECT_EXAMPLE_APP_APPLICATION_ID = "628735568569696256";
+export const MediaType = { IMAGE: 0, [0]: "IMAGE", GIF: 1, [1]: "GIF", VIDEO: 2, [2]: "VIDEO" };
+export const TooltipNames = { GUILD_TOOLTIP: "guild_tooltip", GIF_PICKER_TOOLTIP: "gif_picker_tooltip", GIF_PICKER_TOOLTIP_SPARKLE: "gif_picker_tooltip_sparkle", STICKER_PICKER_SHOP_VIEW_ALL: "sticker_picker_shop_view_all", SCREENSHARE_ONBOARD_SPARKLES: "screenshare_onboard_sparkles", SCREENSHARE_SWIPE_UP_CONTROLS: "screenshare_swipe_up_controls", STAGE_DISCOVERY_TOOLTIP: "stage_discovery_tooltip", HUB_DISCOVERY_TOOLTIP: "hub_discovery_tooltip" };
+export const GIF_FETCH_LIMIT_IOS = 50;
+export const EMOJI_SEARCH_HEADER_HEIGHT = 56;
+export const NODE_SIZE = 32;
+export const NODE_MARGIN = 4;
+export const EXPRESSION_FOOTER_HEIGHT = 40;
+export const CATEGORY_ICON_RIPPLE_CONFIG = { radius: 16 };
+export const CATEGORY_ICON_SIZE = 24;
+export const WHITESPACE_RE = /(\t|\s)/;
+export const SectionListElementType = { ROW: 0, [0]: "ROW", HEADER: 1, [1]: "HEADER", FOOTER: 2, [2]: "FOOTER" };
+export const BANNER_HEIGHT = 150;

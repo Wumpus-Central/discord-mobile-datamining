@@ -1,0 +1,34 @@
+// === Module 10811: FeedbackRating ===
+
+// Module 10811 (FeedbackRating)
+import set from "set" /* 2 */;
+import create from "create" /* 1306 */;
+
+let obj = { BAD: "bad", NEUTRAL: "neutral", GOOD: "good" };
+const items = [create.InAppFeedbackType.VIDEO_BACKGROUND, create.InAppFeedbackType.STREAM, create.InAppFeedbackType.ACTIVITY, create.InAppFeedbackType.VOICE, create.InAppFeedbackType.IN_APP_REPORTS, create.InAppFeedbackType.SEARCH_RESULTS, create.InAppFeedbackType.VIBEGRATIONS];
+const items1 = [, , ];
+({ BAD: arr2[0], NEUTRAL: arr2[1], GOOD: arr2[2] } = obj);
+const reduced = items.reduce((arg0, arg1, arg2) => {
+  const obj = {};
+  const merged = Object.assign(arg0);
+  obj[arg1] = arg2;
+  return obj;
+}, {});
+const result = set.fileFinishedImporting("modules/feedback/Constants.tsx");
+
+export const FeedbackRating = obj;
+export const FEEDBACK_FREEFORM_LENGTH = 1024;
+export const FeedbackType = create.InAppFeedbackType;
+export const FeedbackGroup = { AV: "AV", SOCIAL: "SOCIAL", SEARCH: "SEARCH", SAFETY: "SAFETY", BUILDER: "BUILDER" };
+export const FeedbackTypePrecedence = reduced;
+export const DEFAULT_RATINGS = items1;
+export const MAX_REPRESENTABLE_DATE = 8640000000000000;
+export const FeedbackCategory = { CONNECTION: "CONNECTION", AUDIO: "AUDIO", VIDEO: "VIDEO", STREAMING: "STREAMING", STREAM_WATCHING: "STREAM_WATCHING", PEOPLE: "PEOPLE", VIBEGRATIONS: "VIBEGRATIONS" };
+export const ConnectionFeedbackOption = { FREEFORM: "FREEFORM", COULD_NOT_CONNECT: "COULD_NOT_CONNECT", HIGH_TTC: "HIGH_TTC", HIGH_LATENCY: "HIGH_LATENCY", ROBOT_VOICE: "ROBOT_VOICE", DESYNC: "DESYNC", CUTTING: "CUTTING" };
+export const AudioFeedbackOption = { FREEFORM: "FREEFORM", NO_AUDIO: "NO_AUDIO", LOW_QUALITY_AUDIO: "LOW_QUALITY_AUDIO", ROBOT_VOICE: "ROBOT", ECHO: "ECHO", TOO_QUIET: "TOO_QUIET", TOO_LOUD: "TOO_LOUD", TOO_QUIET_OR_LOUD: "TOO_QUIET_OR_LOUD", CUTTING: "CUTTING", DELAYED: "DELAYED", BACKGROUND_NOISE: "BACKGROUND_NOISE", UNABLE_TO_FIND_DEVICE: "UNABLE_TO_FIND_DEVICE", UNABLE_TO_FIND_INPUT_DEVICE: "UNABLE_TO_FIND_INPUT_DEVICE", UNABLE_TO_FIND_OUTPUT_DEVICE: "UNABLE_TO_FIND_OUTPUT_DEVICE", TROUBLE_WITH_SPEAKERPHONE: "TROUBLE_WITH_SPEAKERPHONE", COMPLAINTS: "COMPLAINTS", NO_GAME_AUDIO: "NO_GAME_AUDIO" };
+export const VideoFeedbackOption = { FREEFORM: "FREEFORM", NO_VIDEO: "NO_VIDEO", FREEZING_OR_HITCHING: "FREEZING_OR_HITCHING", BLURRY_OR_PIXELATED: "BLURRY_OR_PIXELATED", UNABLE_TO_ENABLE_DEVICE: "UNABLE_TO_ENABLE_DEVICE", DESYNC: "DESYNC" };
+export const VideoBackgroundFeedbackOption = { OUTLINE_FUZZY_OR_HALO: "OUTLINE_FUZZY_OR_HALO", INACCURATE_BACKGROUND_DETECTION: "INACCURATE_BACKGROUND_DETECTION", FLICKERING_ARTIFACTS: "FLICKERING_ARTIFACTS", LAG_ON_MOVEMENT: "LAG_ON_MOVEMENT" };
+export const StreamFeedbackOption = { FREEFORM: "FREEFORM", COULD_NOT_LOAD: "COULD_NOT_LOAD", BLACK_SCREEN: "BLACK_SCREEN", FREEZING_OR_HITCHING: "FREEZING_OR_HITCHING", LAG: "LAG", BLURRY_OR_PIXELATED: "BLURRY_OR_PIXELATED", NO_AUDIO: "NO_AUDIO", BAD_AUDIO: "BAD_AUDIO", STOPPED_UNEXPECTEDLY: "STOPPED_UNEXPECTEDLY", DESYNC: "DESYNC", NO_GAME_AUDIO: "NO_GAME_AUDIO" };
+export const PeopleFeedbackOption = { FREEFORM: "FREEFORM", TOXIC_OR_INAPPROPRIATE: "TOXIC_OR_INAPPROPRIATE" };
+export const VibegrationsFeedbackOption = { FREEFORM: "FREEFORM", NOT_WHAT_I_WANTED: "NOT_WHAT_I_WANTED", TOO_SLOW: "TOO_SLOW", APP_DIDNT_WORK: "APP_DIDNT_WORK", DIDNT_KNOW_WHAT_TO_ASK_FOR: "DIDNT_KNOW_WHAT_TO_ASK_FOR" };
+export const FeedbackOptionVariant = { UNSPECIFIED: "UNSPECIFIED", SELF: "SELF", SOMEONE: "SOMEONE", OTHERS: "OTHERS" };

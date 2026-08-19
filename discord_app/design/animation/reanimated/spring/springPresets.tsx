@@ -1,0 +1,13 @@
+// === Module 4748: SUBTLE_SPRING ===
+
+// Module 4748 (SUBTLE_SPRING)
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
+
+export const SUBTLE_SPRING = { mass: 1, damping: 27, stiffness: 300 };
+export const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
+export const springSlow = { mass: 1, damping: 30, stiffness: 380 };
+export const springUnclamped = { mass: 0.35, damping: 13, stiffness: 250 };
+export const springUnclampedBounce = { mass: 0.3, damping: 13, stiffness: 250 };
+export const springStandard = { mass: 0.35, damping: 13, stiffness: 250, overshootClamping: true };

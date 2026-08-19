@@ -1,0 +1,16 @@
+// === Module 4522: DevToolsFocusedPidsTrackMode ===
+
+// Module 4522 (DevToolsFocusedPidsTrackMode)
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");
+
+export const DevToolsFocusedPidsTrackMode = { TRACK_FOCUS: "track_focus", UNTRACK_FOCUS: "untrack_focus" };
+export const OverlayForcedRenderMode = { UNSET: "UNSET", IN_PROCESS_V2: "IN_PROCESS_V2", OUT_OF_PROCESS_V3: "OUT_OF_PROCESS_V3", OUT_OF_PROCESS_V3_LIMITED_INTERACTION: "OUT_OF_PROCESS_V3_LIMITED_INTERACTION" };
+export const OverlayMethod = { Disabled: 0, [0]: "Disabled", Hook: 1, [1]: "Hook", OutOfProcess: 2, [2]: "OutOfProcess", OutOfProcessLimitedInteraction: 3, [3]: "OutOfProcessLimitedInteraction" };
+export const RenderDebugMode = { ClickZones: "click_zones", WidgetAreas: "widget_areas", WindowContainer: "window_container", DisabledGPUBoost: "disabled_gpu_boost", ForceGPUBoost: "force_gpu_boost", TrackFocusPIDs: "track_focus_pids", OverlayRafManagerForceEnabled: "overlay_raf_manager_force_enabled", LegacyOverlayLogging: "legacy_overlay_logging" };
+export const GPUBoostRequestReasons = { HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED: "HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED", OVERLAY_UNLOCKED: "OVERLAY_UNLOCKED", OVERLAY_VIDEO_STREAM_RENDERING: "OVERLAY_VIDEO_STREAM_RENDERING", OVERLAY_RENDERING: "OVERLAY_RENDERING", DEV_FORCED_GPU_BOOST: "DEV_FORCED_GPU_BOOST" };
+export const OverlayTextChatSessionEntrySource = { INCOMING_DM_MESSAGE: "INCOMING_DM_MESSAGE", INCOMING_MENTION_MESSAGE: "INCOMING_MENTION_MESSAGE", FRIENDS_WIDGET_CLICK: "FRIENDS_WIDGET_CLICK", MANUAL: "MANUAL", NOTIFICATION_CLICK: "NOTIFICATION_CLICK", AUTOMATIC_CHANNEL_SELECT: "AUTOMATIC_CHANNEL_SELECT" };
+export const OverlayGameStatusSource = { LAUNCHER: "LAUNCHER", LIBRARY_APPLICATION: "LIBRARY_APPLICATION", USER_OVERRIDE: "USER_OVERRIDE", DATABASE: "DATABASE", DEFAULT: "DEFAULT", OOP_DEFAULT: "OOP_DEFAULT", OOP_DEFAULT_DATABASE: "OOP_DEFAULT_DATABASE", DEV_OVERRIDE: "DEV_OVERRIDE", LEGACY_ENABLED: "LEGACY_ENABLED", NO_OUT_OF_PROCESS_SUPPORT: "NO_OUT_OF_PROCESS_SUPPORT", FULL_SCREEN_TYPE: "FULL_SCREEN_TYPE", NO_TRACKED_GAME: "NO_TRACKED_GAME", GLOBAL_OVERLAY_LOCK_FAILED: "GLOBAL_OVERLAY_LOCK_FAILED", UNKNOWN: "UNKNOWN" };
+export const OverlayTimerType = { SCREEN_TYPE_RESOLUTION: "screen_type_resolution", MODULE_TRACKING: "module_tracking", OVERLAY_RENDERING: "overlay_rendering" };
+export const OverlayState = { INITIALIZING: "initializing", OVERLAY_DISABLED: "overlay_disabled", OVERLAY_TEARING_DOWN: "overlay_tearing_down", WAITING_FOR_SCREEN_TYPE_RESOLUTION: "waiting_for_screen_type_resolution", WAITING_FOR_MODULE_TRACKING: "waiting_for_module_tracking", WAITING_FOR_OVERLAY_OPEN: "waiting_for_overlay_open", WAITING_FOR_POPOUT_OPEN: "waiting_for_popout_open", WAITING_FOR_MODULE_POPOUT_CAPTURE: "waiting_for_module_popout_capture", WAITING_FOR_REACT_INITIALIZATION: "waiting_for_react_initialization", WAITING_FOR_PID_FOCUS: "waiting_for_pid_focus", WAITING_FOR_SUCCESSFUL_SHOW: "waiting_for_successful_show", OVERLAY_RENDERING: "overlay_rendering", OVERLAY_CRASHED: "overlay_crashed", OVERLAY_CRASHED_DISABLED: "overlay_crashed_disabled", GAME_UNTRACKED: "game_untracked" };

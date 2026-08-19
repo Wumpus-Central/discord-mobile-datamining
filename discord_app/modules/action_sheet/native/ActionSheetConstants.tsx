@@ -1,0 +1,26 @@
+// === Module 6951: ACTION_SHEET_START_HEIGHT_RATIO ===
+
+// Module 6951 (ACTION_SHEET_START_HEIGHT_RATIO)
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/action_sheet/native/ActionSheetConstants.tsx");
+
+export const ACTION_SHEET_START_HEIGHT_RATIO = 0.6;
+export const ACTION_SHEET_MAX_DYNAMIC_CONTENT_SIZE_RATIO = 0.85;
+export const ACTION_SHEET_BORDER_RADIUS_LEGACY = 8;
+export const ACTION_SHEET_BORDER_RADIUS_REDESIGN = 24;
+export const ACTION_SHEET_INNER_BORDER_RADIUS_LEGACY = 6;
+export const ACTION_SHEET_INNER_BORDER_RADIUS_REDESIGN = 22;
+export const ACTION_SHEET_MAX_WIDTH = 500;
+export const ACTION_SHEET_SPRING_CONFIG = { damping: 17, stiffness: 240, mass: 0.5, restDisplacementThreshold: 0.4 };
+export const ACTION_SHEET_SPRING_CONFIG_REDUCED_MOTION = { duration: 250 };
+export const ACTION_SHEET_BORDER_RADIUS = 24;
+export const ACTION_SHEET_INNER_BORDER_RADIUS = 22;
+export const ACTION_SHEET_GRADIENT_BORDER_WIDTH = 2;
+export const ACTION_SHEET_GRADIENT_BORDER_RADIUS = 20;
+export const ACTION_SHEET_HANDLE_PADDING = 8;
+export const ACTION_SHEET_HANDLE_HEIGHT = 4;
+export const ACTION_SHEET_HANDLE_SPACING = 20;
+export const ACTION_SHEET_HANDLE_SPACING_REDESIGN = 12;
+export const ACTION_SHEET_HANDLE_OVERHANG_REDESIGN = 8;
+export const ACTION_SHEET_MINIMUM_BOTTOM_PADDING = 16;

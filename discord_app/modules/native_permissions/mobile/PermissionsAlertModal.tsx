@@ -1,0 +1,29 @@
+// === Module 4850: PermissionsAlertModal ===
+
+// Module 4850 (PermissionsAlertModal)
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import jsxProd from "jsxProd" /* 21 */;
+
+require = arg1;
+noopAll;
+({ jsx: obj1, jsxs: c3 } = jsxProd);
+const result = require("set").fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
+
+export default function PermissionsAlertModal(arg0) {
+  ({ title, body, onConfirm } = arg0);
+  let obj = { title, content: body, actions: null };
+  obj = { children: null };
+  obj = { onPress: onConfirm, text: null };
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.jVcuVY);
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
+  obj1 = { variant: "secondary", text: null };
+  const intl2 = getSystemLocale.intl;
+  obj1[1] = intl2.string(getSystemLocale.t.cpT0Cq);
+  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "close");
+  obj[0] = items;
+  obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
+  return callback(getAlertModalItemKey.AlertModal, obj);
+};

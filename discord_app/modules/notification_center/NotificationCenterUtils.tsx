@@ -1,0 +1,61 @@
+// === Module 4967: getRelativeTimestamp ===
+
+// Module 4967 (getRelativeTimestamp)
+import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import NotificationCenterScenes from "NotificationCenterScenes" /* 4802 */;
+import getDurationString from "getDurationString" /* 4968 */;
+import getDurationStringDefault from "getDurationString" /* 4968 */;
+
+const result = set.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
+
+export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult, flag) {
+  if (flag === undefined) {
+    flag = true;
+  }
+  const obj = { since: extractTimestampResult, getFormatter: null };
+  const tmp2 = getDurationString;
+  obj[1] = flag ? tmp2.getAbbreviatedFormatter : tmp2.getFullFormatter;
+  return getDurationStringDefault(obj);
+};
+export const isRemoteAcked = function isRemoteAcked(addResult, closure_1) {
+  let acked = addResult.acked;
+  if (!acked) {
+    let tmp4 = closure_1 !== explicitContentFromProto.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET;
+    if (tmp4) {
+      tmp4 = DISCORD_EPOCHDefault.compare(closure_1, addResult.id) >= 0;
+      const obj = DISCORD_EPOCHDefault;
+    }
+    acked = tmp4;
+  }
+  return acked;
+};
+export const incomingFriendRequestLocalItem = function incomingFriendRequestLocalItem(user, since, origin_application_id) {
+  let obj = DISCORD_EPOCHDefault;
+  const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
+  obj = { acked: false, forceUnacked: true, other_user: user, kind: "notification-center-item", local_id: "incoming_friend_requests_" + user.id + "_" + fromTimestampResult, deeplink: "https://discord.com/users/" + user.id, type: NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, id: fromTimestampResult, applicationId: origin_application_id };
+  return obj;
+};
+export const incomingGameFriendRequestLocalItem = function incomingGameFriendRequestLocalItem(user, since, applicationId) {
+  let obj = DISCORD_EPOCHDefault;
+  const fromTimestampResult = obj.fromTimestamp(new Date(since).getTime());
+  obj = { acked: false, forceUnacked: true, other_user: user, kind: "notification-center-item", local_id: "incoming_game_friend_requests_" + user.id + "_" + fromTimestampResult, deeplink: "https://discord.com/users/" + user.id, type: NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, id: fromTimestampResult, applicationId };
+  return obj;
+};
+export const mobileNativeUpdateAvailableLocalItem = function mobileNativeUpdateAvailableLocalItem(newBuild) {
+  const obj = { acked: false, enableBadge: true, id: null, kind: "notification-center-item", local_id: null, type: null, deeplink: null };
+  const obj2 = DISCORD_EPOCHDefault;
+  obj[2] = obj2.fromTimestamp(new Date().getTime());
+  obj[4] = "mobile_update_available_" + newBuild.build;
+  obj[5] = NotificationCenterScenes.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE;
+  obj[6] = newBuild.urls.install.toString();
+  return obj;
+};
+export const isMentionItem = function isMentionItem(addResult) {
+  let tmp3 = addResult.type === NotificationCenterScenes.NotificationCenterItems.RECENT_MENTION;
+  if (!tmp3) {
+    tmp3 = addResult.type === NotificationCenterScenes.NotificationCenterItems.REPLY_MENTION;
+  }
+  return tmp3;
+};

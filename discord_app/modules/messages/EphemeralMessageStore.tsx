@@ -1,0 +1,180 @@
+// === Module 4995: dropChannelIfEmpty ===
+
+// Module 4995 (dropChannelIfEmpty)
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import { MessageFlags } from "ME" /* 676 */;
+
+require = arg1;
+function dropChannelIfEmpty(channelId, value) {
+  if (0 === value.size) {
+    map.delete(channelId);
+  }
+}
+function clearAll() {
+  if (0 === map.size) {
+    return false;
+  } else {
+    obj.clear();
+  }
+  obj = map;
+}
+let closure_4 = [];
+let map = new Map();
+const Store = initializeDefault.Store;
+class EphemeralMessageStore extends Store {
+}
+const prototype = EphemeralMessageStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(closure_2);
+};
+prototype["getMessages"] = function getMessages(arg0) {
+  const value = map.get(arg0);
+  if (null != value) {
+    if (0 !== value.size) {
+      const _Array = Array;
+      let arr = Array.from(value.values());
+    }
+    return arr;
+  }
+  arr = closure_4;
+};
+EphemeralMessageStore.displayName = "EphemeralMessageStore";
+const ephemeralMessageStore = new EphemeralMessageStore(dispatcherDefault, {
+  MESSAGE_CREATE: function handleMessageCreate(arg0) {
+    ({ channelId, message } = arg0);
+    let num = message.flags;
+    if (num == null) {
+      num = 0;
+    }
+    if (obj.hasFlag(num, MessageFlags.EPHEMERAL)) {
+      let value = map.get(channelId);
+      if (null == value) {
+        const _Map = Map;
+        map = new Map();
+        const result = map.set(channelId, map);
+        value = map;
+      }
+      const result1 = value.set(message.id, createMinimalMessageRecord.createMessageRecord(message));
+      if (value.size > 50) {
+        const iter2 = value.keys().next();
+        while (true !== iter2.done) {
+          let deleteResult = value.delete(iter2.value);
+          if (value.size <= 50) {
+            break;
+          }
+        }
+        const iter = value.keys();
+      }
+    } else {
+      return false;
+    }
+    obj = hasFlag;
+    const tmp = require;
+  },
+  MESSAGE_UPDATE: function handleMessageUpdate(message) {
+    message = message.message;
+    ({ channel_id, id } = message);
+    if (null != channel_id) {
+      if (null != id) {
+        let value = map.get(channel_id);
+        if (null == value) {
+          return false;
+        } else {
+          value = value.get(id);
+          if (null == value) {
+            return false;
+          } else {
+            const result = value.set(id, createMinimalMessageRecord.updateMessageRecord(value, message));
+          }
+        }
+      }
+    }
+    return false;
+  },
+  MESSAGE_DELETE: function handleMessageDelete(channelId) {
+    channelId = channelId.channelId;
+    const value = map.get(channelId);
+    if (null != value) {
+      if (value.delete(channelId.id)) {
+        if (0 === value.size) {
+          map.delete(channelId);
+        }
+      }
+    }
+    return false;
+  },
+  MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
+    ({ channelId, ids } = arg0);
+    const value = map.get(channelId);
+    if (null == value) {
+      return false;
+    } else {
+      let flag2 = false;
+      for (const item10014 of ids) {
+        if (value.delete(item10014)) {
+          flag2 = true;
+        }
+        continue;
+      }
+      if (flag2) {
+        dropChannelIfEmpty(channelId, value);
+      } else {
+        return false;
+      }
+    }
+  },
+  CLEAR_MESSAGES: function handleClearMessages(channelId) {
+    channelId = channelId.channelId;
+    if (map.has(channelId)) {
+      obj.delete(channelId);
+    } else {
+      return false;
+    }
+    obj = map;
+  },
+  CHANNEL_DELETE: function handleChannelDelete(channel) {
+    if (!map.delete(channel.channel.id)) {
+      return false;
+    }
+  },
+  THREAD_DELETE: function handleThreadDelete(channel) {
+    if (!map.delete(channel.channel.id)) {
+      return false;
+    }
+  },
+  GUILD_DELETE: function handleGuildDelete() {
+    if (0 === map.size) {
+      return false;
+    } else {
+      let flag = false;
+      const keys = obj.keys();
+      const iter = keys[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp10 = channel;
+        let tmp9 = nextResult;
+        if (null == channel.getChannel(nextResult)) {
+          let tmp11 = map;
+          let tmp12 = map;
+          let tmp13 = nextResult;
+          let deleteResult = map.delete(tmp9);
+          flag = true;
+        }
+        continue;
+      }
+      return flag && undefined;
+    }
+    obj = map;
+  },
+  CACHE_LOADED: clearAll,
+  CONNECTION_OPEN: clearAll,
+  OVERLAY_INITIALIZE: clearAll,
+  LOGOUT: clearAll
+});
+let result = require("set").fileFinishedImporting("modules/messages/EphemeralMessageStore.tsx");
+
+export default ephemeralMessageStore;
