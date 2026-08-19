@@ -1,15 +1,18 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import getAvatarURL from "../../../../../utils/AvatarUtils.tsx";
 import ensureAvatarSource from "../../../../../utils/native/AvatarUtils.tsx";
 import useNullableMessageAuthor from "../../../useMessageAuthor.tsx";
 import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import closure_3 from "../../../../../records/MessageRecord.tsx";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import getGuildProductPurchaseSystemMessageContentMobile from "../../../../guild_products/GuildProductSystemMessageUtils.tsx";
+import hasFlag from "../../../../../records/MessageRecord.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
 import { MessageTypes } from "../../../../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");
 
 export const createGuildProductPurchaseSystemMessage = function createGuildProductPurchaseSystemMessage(message) {
   let obj = {};
@@ -40,7 +43,7 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
     ensureAvatarSource;
     if (null != guildMemberAvatar) {
       if (null != guildId) {
-        let tmp5Result = tmp5(1435);
+        let tmp5Result = getAvatarURL;
         obj = { userId: null, avatar: null, guildId: null };
         obj[0] = author.id;
         obj[1] = guildMemberAvatar;
@@ -48,7 +51,7 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
         let guildMemberAvatarSource = tmp5Result.getGuildMemberAvatarSource(obj, author);
       }
       obj = { content: null, totalMonthsSubscribed: 0, username: null, avatarURL: null, welcomeLabel: null };
-      tmp5Result = tmp5(8213);
+      tmp5Result = getGuildProductPurchaseSystemMessageContentMobile;
       obj1 = { username: null, usernameOnClickHandler: null, productName: null };
       obj1[0] = messageAuthorWithProcessedColor.nick;
       obj2 = { message: null, author: null, roleStyle: null };
@@ -60,11 +63,12 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
       obj[0] = tmp5Result.getGuildProductPurchaseSystemMessageContentMobile(obj1);
       obj[2] = messageAuthorWithProcessedColor.nick;
       obj[3] = tmp9(guildMemberAvatarSource).uri;
-      const intl = tmp5(1236).intl;
-      obj[4] = intl.string(tmp5(1236).t.s2N5HS);
+      const intl = getSystemLocale.intl;
+      obj[4] = intl.string(getSystemLocale.t.s2N5HS);
       const merged1 = Object.assign(createCommonMessageDefault(obj));
       return obj;
     }
     guildMemberAvatarSource = author.getAvatarSource(undefined);
   }
+  const tmp2 = new closure_3(message.message);
 };

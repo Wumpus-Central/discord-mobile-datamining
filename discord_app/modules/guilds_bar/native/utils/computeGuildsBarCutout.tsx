@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import Button from "../../../../design/void/native.tsx";
 import SolidCutout from "../../../../design/components/Icon/native/ClipView.tsx";
@@ -7,7 +7,7 @@ import GUILD_ITEM_SIZE2 from "../GuildsBarConstants.tsx";
 
 const PixelRatio = get_ActivityIndicator.PixelRatio;
 const GUILD_ITEM_SIZE = GUILD_ITEM_SIZE2.GUILD_ITEM_SIZE;
-const result = set.fileFinishedImporting("modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx");
+const result = obj132.fileFinishedImporting("modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx");
 
 export default function computeGuildsBarCutout(containerSize) {
   containerSize = containerSize.containerSize;

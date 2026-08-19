@@ -1,8 +1,8 @@
 // discord_app/utils/getDeprecatedModalData.tsx
-import closure_0 from "../modules/a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../modules/a11y/AccessibilityStore.tsx";
 import { ModalAnimation } from "../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("utils/getDeprecatedModalData.tsx");
+const result = require("obj132").fileFinishedImporting("utils/getDeprecatedModalData.tsx");
 
 export default function getDeprecatedModalData(modal, key) {
   let tmp = arg3;

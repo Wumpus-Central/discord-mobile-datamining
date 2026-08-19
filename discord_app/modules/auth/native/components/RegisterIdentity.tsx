@@ -1,25 +1,20 @@
 // discord_app/modules/auth/native/components/RegisterIdentity.tsx
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import useRegistrationUIStore from "../RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../../RegistrationConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 function RegisterIdentityBase(inputMode) {
   inputMode = inputMode.inputMode;
   const setInputMode = inputMode.setInputMode;
-  dependencyMap = undefined;
-  closure_3 = undefined;
-  let loginEmail;
-  let identityErrorMessage;
   c6 = undefined;
   c7 = undefined;
   c8 = undefined;
-  closure_9 = undefined;
   function handleSubmit() {
     const self = this;
     const apply = _handleSubmit.apply;
@@ -75,17 +70,17 @@ function RegisterIdentityBase(inputMode) {
                 if (null != tmp26) {
                   const obj3 = { email: null };
                   obj3[0] = tmp26;
-                  tmp40(obj3);
+                  closure_1_9(obj3);
                   const obj4 = { step: null, actionType: null, details: null };
                   ACCOUNT_IDENTITY = ACCOUNT_IDENTITY.ACCOUNT_IDENTITY;
                   obj4[0] = ACCOUNT_IDENTITY;
                   obj4[1] = items.INPUT_ERROR;
                   items = ["email"];
                   obj4[2] = items;
-                  tmp42(obj4);
+                  closure_1_9(obj4);
                 } else {
-                  const result = tmp45(tmp46[16]).handleNextOrSubmitRegistration(tmp45(tmp46[12]).AuthStates.REGISTER_IDENTITY, closure_1_2, tmp42);
-                  const tmp45Result = tmp45(tmp46[16]);
+                  const result = closure_1_0(closure_1_2[16]).handleNextOrSubmitRegistration(closure_1_0(closure_1_2[12]).AuthStates.REGISTER_IDENTITY, closure_1_2, closure_1_9);
+                  const tmp45Result = closure_1_0(closure_1_2[16]);
                 }
                 c4 = 3;
               } else {
@@ -99,7 +94,6 @@ function RegisterIdentityBase(inputMode) {
                 });
                 return obj5;
               }
-              tmp40 = closure_1_9;
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -150,8 +144,8 @@ function RegisterIdentityBase(inputMode) {
   closure_3 = tmp5;
   let obj2 = inputMode(15222);
   const identityRegistrationStep = obj2.useIdentityRegistrationStep(inputMode(691).AuthStates.REGISTER_IDENTITY, inputMode);
-  loginEmail = identityRegistrationStep.loginEmail;
-  identityErrorMessage = identityRegistrationStep.identityErrorMessage;
+  const loginEmail = identityRegistrationStep.loginEmail;
+  const identityErrorMessage = identityRegistrationStep.identityErrorMessage;
   ({ registerAndVerifyPhone: c6, validateEmail: c7 } = identityRegistrationStep);
   ({ setLoginEmail, loginPhone, updateLoginPhone, preventSubmitIdentity, identityError } = identityRegistrationStep);
   const tmp4 = setInputMode(8582)();
@@ -173,7 +167,6 @@ function RegisterIdentityBase(inputMode) {
   setInputMode(4761)(() => {
     callback({ step: closure_1_12.ACCOUNT_IDENTITY, actionType: closure_1_13.VIEWED });
   });
-  obj = { headerText, subHeader: subheader, children: null };
   obj = { style: tmp2.container, contentContainerStyle: tmp2.scrollContent, keyboardShouldPersistTaps: "handled", children: null };
   const items1 = [controlComponent, , , ];
   const tmp12 = setInputMode(15228);
@@ -193,19 +186,19 @@ function RegisterIdentityBase(inputMode) {
       obj3 = { style: null, children: null };
       obj3[0] = tmp2.errors;
       obj3[1] = memo;
-      tmp15Result = tmp15(tmp3(8579), obj3);
+      tmp15Result = callback3(tmp3(8579), obj3);
     }
   }
   items1[3] = tmp15Result;
   obj[3] = items1;
-  obj[2] = closure_15(c7, obj);
-  tmp15Result = tmp15(setInputMode(8609), obj);
+  obj[2] = callback(c7, obj);
+  tmp15Result = callback3(setInputMode(8609), obj);
   let tmp15Result1 = tmp15Result;
   if (!tmp4) {
     let obj4 = { style: null, children: null };
     obj4[0] = tmp2.page;
     obj4[1] = tmp15Result;
-    tmp15Result1 = tmp15(tmp3(6551), obj4);
+    tmp15Result1 = callback3(tmp3(6551), obj4);
   }
   return tmp15Result1;
 }
@@ -217,7 +210,7 @@ let closure_16 = createCacheKey.createStyles((minHeight) => {
   const segmentedControl = { minHeight, marginBottom: 24 };
   return { container: { marginTop: 24, flex: 1 }, page: { flex: 1 }, button: { width: "100%", marginTop: 24 }, errors: { marginTop: 4 }, segmentedControl, scrollContent: { paddingBottom: 128 } };
 });
-let result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterIdentity.tsx");
+let result = require("obj132").fileFinishedImporting("modules/auth/native/components/RegisterIdentity.tsx");
 
 export const RegisterIdentity = function RegisterIdentity() {
   let obj = hasItem(4751);
@@ -264,8 +257,8 @@ export const RegisterIdentity = function RegisterIdentity() {
     pageWidth: 0,
     defaultIndex: 0,
     onSetActiveIndex: callback,
-    items: memo.map((descriptor) => {
-      descriptor = descriptor.descriptor;
+    items: memo.map((item, index) => {
+      const descriptor = item.descriptor;
       const obj = { id: null, label: null, page: null };
       const intl = hasItem(1236).intl;
       obj[0] = intl.string(descriptor);
@@ -280,7 +273,7 @@ export const RegisterIdentity = function RegisterIdentity() {
     inputMode: tmp6[0],
     setInputMode: React.useCallback((arg0) => {
       closure_0 = arg0;
-      const findIndexResult = memo.findIndex((mode) => mode.mode === closure_0);
+      const findIndexResult = memo.findIndex((item, index) => item.mode === closure_0);
       if (-1 !== findIndexResult) {
         segmentedControlState.setActiveIndex(findIndexResult, false);
       }

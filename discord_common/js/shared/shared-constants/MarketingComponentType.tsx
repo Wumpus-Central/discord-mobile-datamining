@@ -1,6 +1,6 @@
 // discord_common/js/shared/shared-constants/MarketingComponentType.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingComponentType.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingComponentType.tsx");
 
 export const MarketingComponentType = { ANNOUNCEMENT_MODAL: 0, [0]: "ANNOUNCEMENT_MODAL", PREMIUM_TAB: 1, [1]: "PREMIUM_TAB", MARKETING_PAGE_BANNER: 2, [2]: "MARKETING_PAGE_BANNER", PAYMENT_MODAL_BANNER: 3, [3]: "PAYMENT_MODAL_BANNER", MOBILE_BOTTOM_SHEET: 4, [4]: "MOBILE_BOTTOM_SHEET", GIFT_ICON: 5, [5]: "GIFT_ICON", GIFT_ICON_COACHMARK: 6, [6]: "GIFT_ICON_COACHMARK", GIFT_PLAN_SELECTION_CARD_BANNER: 7, [7]: "GIFT_PLAN_SELECTION_CARD_BANNER", GIFT_CUSTOMIZATION_BANNER: 8, [8]: "GIFT_CUSTOMIZATION_BANNER", BILLING_SETTINGS_NITRO_GIFT_BANNER: 9, [9]: "BILLING_SETTINGS_NITRO_GIFT_BANNER", GIFT_REMINDER_NAGBAR: 10, [10]: "GIFT_REMINDER_NAGBAR", GIFT_REMINDER_COACHMARK: 11, [11]: "GIFT_REMINDER_COACHMARK", PREMIUM_TAB_TOOLTIP: 12, [12]: "PREMIUM_TAB_TOOLTIP", PREMIUM_TAB_POPOVER: 13, [13]: "PREMIUM_TAB_POPOVER", NAGBAR: 14, [14]: "NAGBAR", PLAN_SELECT_CARD_BANNER: 15, [15]: "PLAN_SELECT_CARD_BANNER", BILLING_SETTINGS_BANNER: 16, [16]: "BILLING_SETTINGS_BANNER", SHOP_NAGBAR: 17, [17]: "SHOP_NAGBAR" };

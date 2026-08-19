@@ -1,12 +1,12 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import ReadStateTypes from "../../../read_states/ReadStateConstants.tsx";
 
 const UserNotificationSettings = ME.UserNotificationSettings;
 const UnreadSetting = ReadStateTypes.UnreadSetting;
-const result = set.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx");
 
 export const getPushNotificationSelectOptions = function getPushNotificationSelectOptions() {
   let obj = { label: null, value: null };

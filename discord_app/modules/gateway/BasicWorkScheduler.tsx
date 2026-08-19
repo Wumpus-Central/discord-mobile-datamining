@@ -1,13 +1,14 @@
 // discord_app/modules/gateway/BasicWorkScheduler.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import timestampDefault from "../debug/Logger.tsx";
+import _modDef38 from "../../../_runtime/metro/00038__.js";
 import WorkSchedulerTelemetryEvent from "WorkSchedulerTelemetry.tsx";
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DispatcherWorkConstants.tsx";
 
 ({ MAX_DISPATCHER_FLUSH_DEADLINE_TRIES: c3, DISPATCHER_STANDARD_TIMEOUT_MS: c4, DISPATCHER_IDEAL_TIME_LIMIT_MS: c5, DISPATCHER_LONG_TIMEOUT_MS: closure_6 } = DISPATCHER_STANDARD_TIMEOUT_MS);
 let closure_7 = new timestampDefault("DispatcherWorkScheduler");
 const tmp3 = new timestampDefault("DispatcherWorkScheduler");
-const result = set.fileFinishedImporting("modules/gateway/BasicWorkScheduler.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/BasicWorkScheduler.tsx");
 class BasicWorkScheduler {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -132,8 +133,7 @@ prototype["clearWorkTimeout"] = function clearWorkTimeout() {
   self._workCallbackFn = null;
 };
 prototype["requestWorkTimeout"] = function requestWorkTimeout(flush, arg1) {
-  let self = this;
-  self = this;
+  const self = this;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -151,15 +151,14 @@ prototype["requestWorkTimeout"] = function requestWorkTimeout(flush, arg1) {
     } else {
       const _setTimeout = setTimeout;
       self._flushTimeoutHandler = setTimeout(() => {
-        closure_1_1(closure_1_2[3])(null != self._workCallbackFn, "Work callback should be set");
+        _modDef38(null != self._workCallbackFn, "Work callback should be set");
         if (self._isBackgrounded) {
-          const telemetry = obj.telemetry;
-          telemetry.track(self(tmp[2]).WorkSchedulerTelemetryEvent.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED);
-          return obj._processWorkCallback();
+          const telemetry = self.telemetry;
+          telemetry.track(self(dependencyMap[2]).WorkSchedulerTelemetryEvent.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED);
+          return self._processWorkCallback();
         } else {
-          obj._queueIdleCallback();
+          self._queueIdleCallback();
         }
-        tmp = closure_1_2;
       }, self._nextDispatchTimeout);
     }
     tmp = self;

@@ -1,10 +1,10 @@
 // discord_app/modules/multi_account/setUserStatus.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../notifications/LastMentionTimestampStore.tsx";
-import closure_5 from "../../stores/SelfPresenceStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import initialize from "../notifications/LastMentionTimestampStore.tsx";
+import filterPlayingActivities from "../../stores/SelfPresenceStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _setUserStatus() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -110,26 +110,26 @@ function _setUserStatus() {
               let obj = _undefined(_undefined2[4]);
               const humanizeStatusResult = obj.humanizeStatus(c0);
               if ("0" === arg1) {
-                const intl3 = tmp(tmp2[5]).intl;
+                const intl3 = _undefined(_undefined2[5]).intl;
                 obj = { statusLabel: null };
                 obj[0] = humanizeStatusResult;
-                return intl3.formatToPlainString(tmp(tmp2[5]).t.dO2aLi, obj);
+                return intl3.formatToPlainString(_undefined(_undefined2[5]).t.dO2aLi, obj);
               } else {
-                const statusExpiryParts = tmp(tmp2[6]).getStatusExpiryParts(arg1);
+                const statusExpiryParts = _undefined(_undefined2[6]).getStatusExpiryParts(arg1);
                 const timeString = statusExpiryParts.timeString;
                 if ("today" === statusExpiryParts.kind) {
-                  const intl2 = tmp(tmp2[5]).intl;
+                  const intl2 = _undefined(_undefined2[5]).intl;
                   obj = { statusLabel: null, timeString: null };
                   obj[0] = humanizeStatusResult;
                   obj[1] = timeString;
-                  let formatToPlainStringResult = intl2.formatToPlainString(tmp(tmp2[5]).t["r50t/S"], obj);
+                  let formatToPlainStringResult = intl2.formatToPlainString(_undefined(_undefined2[5]).t["r50t/S"], obj);
                 } else {
-                  const intl = tmp(tmp2[5]).intl;
+                  const intl = _undefined(_undefined2[5]).intl;
                   obj1 = { statusLabel: null, dateString: null, timeString: null };
                   obj1[0] = humanizeStatusResult;
                   obj1[1] = tmp6;
                   obj1[2] = timeString;
-                  formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[5]).t["J+GJHv"], obj1);
+                  formatToPlainStringResult = intl.formatToPlainString(_undefined(_undefined2[5]).t["J+GJHv"], obj1);
                 }
                 return formatToPlainStringResult;
               }
@@ -181,7 +181,7 @@ function _setUserStatus() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/multi_account/setUserStatus.tsx");
+let result = require("obj132").fileFinishedImporting("modules/multi_account/setUserStatus.tsx");
 
 export default function setUserStatus() {
   const self = this;

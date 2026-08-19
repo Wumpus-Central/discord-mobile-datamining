@@ -1,9 +1,9 @@
 // discord_app/modules/quests/QuestBarRenderDelayTracker.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import setDefault from "../monitoring/MonitoringAgent.tsx";
-import set2 from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
@@ -21,9 +21,8 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
 };
 prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
   if (Math.random() <= 0.1) {
-    let obj = setDefault;
-    obj = { name: null, tags: null };
-    obj[0] = set2.MetricEvents.QUEST_BAR_RENDER_DELAY;
+    let obj = { name: null, tags: null };
+    obj[0] = set.MetricEvents.QUEST_BAR_RENDER_DELAY;
     const _HermesInternal = HermesInternal;
     const items = ["quest_id:" + arg0, ];
     const _HermesInternal2 = HermesInternal;
@@ -35,7 +34,6 @@ prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
     obj[1] = arg1;
     obj[2] = arg2;
     expandEventPropertiesDefault.track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj);
-    const obj3 = expandEventPropertiesDefault;
   }
 };
 prototype["startTracking"] = function startTracking(questId) {
@@ -78,6 +76,6 @@ prototype["clearTracking"] = function clearTracking() {
   this.startTime = null;
   this.questId = null;
 };
-const result = set.fileFinishedImporting("modules/quests/QuestBarRenderDelayTracker.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/QuestBarRenderDelayTracker.tsx");
 
 export default Object.create(QuestBarRenderDelayTracker.prototype);

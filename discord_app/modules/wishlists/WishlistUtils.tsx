@@ -1,15 +1,15 @@
 // discord_app/modules/wishlists/WishlistUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import useSKUPrice from "../storefront/StorefrontUtils.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../skus/SKURecord.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import createFromServer from "../skus/SKURecord.tsx";
 import { isCollectiblesWishlistItemRecord as closure_5 } from "records/CollectiblesWishlistItemRecord.tsx";
 import { isPremiumWishlistItemRecord as closure_6, isSKUWishlistItemRecord } from "records/PremiumWishlistItemRecord.tsx";
 import { SKUProductLines } from "../../Constants.tsx";
 import { PremiumSubscriptionSKUs } from "../premium/PremiumConstants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/wishlists/WishlistUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/wishlists/WishlistUtils.tsx");
 
 export const createNitroSuggestedSku = function createNitroSuggestedSku() {
   const obj = { id: PremiumSubscriptionSKUs.TIER_2, productLine: SKUProductLines.PREMIUM, name: null, features: null, genres: null, manifests: null, availableRegions: null, locales: null, bundledSkuIds: null, selectedOptions: null, eligibleOffers: null, prices: null };
@@ -36,7 +36,6 @@ export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnM
       if (prop) {
         if (!isWishlistOwner) {
           isWishlistOwner = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(sku.sku);
-          const obj = useSKUPrice;
         }
         prop = isWishlistOwner;
       }
@@ -88,7 +87,7 @@ export const buildReorderedWishlistData = function buildReorderedWishlistData(se
   return { newWishlistData: set.set("items", items), previousSkuId: skuId2, nextSkuId: skuId3 };
 };
 export const buildReorderedNitroFirstWishlistItems = function buildReorderedNitroFirstWishlistItems(arr) {
-  const findIndexResult = arr.findIndex((skuId) => callback(table[9]).isPremiumSku(skuId.skuId));
+  const findIndexResult = arr.findIndex((item, index) => callback(table[9]).isPremiumSku(item.skuId));
   if (findIndexResult <= 0) {
     return arr;
   } else {
@@ -99,18 +98,16 @@ export const buildReorderedNitroFirstWishlistItems = function buildReorderedNitr
     return items1;
   }
 };
-export const buildReorderedOwnedItemsLastWishlistItems = function buildReorderedOwnedItemsLastWishlistItems(items) {
+export const buildReorderedOwnedItemsLastWishlistItems = function buildReorderedOwnedItemsLastWishlistItems(items, fn) {
   let tmp = items;
   items = [];
   const items1 = [];
   for (const item10009 of arg0) {
-    let tmp2 = item10009;
     let arr3 = items;
     if (arg1(item10009)) {
       arr3 = items1;
     }
-    let tmp3 = item10009;
-    let arr = arr3.push(tmp2);
+    let arr = arr3.push(item10009);
     continue;
   }
   if (0 !== items1.length) {

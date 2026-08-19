@@ -1,17 +1,16 @@
 // discord_app/modules/app_launcher/native/screens/home/SubmittingOverlay.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
 const jsx = jsxProd.jsx;
-let obj = { ellipsis: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" };
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
 let closure_5 = { code: "function SubmittingOverlayTsx1(){const{withSpring,submitting,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(submitting?1:0,SUBTLE_SPRING,'animate-always')};}" };
-const result = set.fileFinishedImporting("modules/app_launcher/native/screens/home/SubmittingOverlay.tsx");
+const result = obj132.fileFinishedImporting("modules/app_launcher/native/screens/home/SubmittingOverlay.tsx");
 
 export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   submitting = submitting.submitting;
@@ -37,7 +36,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   obj = { style: items, children: null };
   items = [submitting.style, callback().ellipsis, animatedStyle];
   if (submitting) {
-    submitting = tmp5(submitting(4760).Ellipsis, { variant: "active", size: "md" });
+    submitting = jsx(submitting(4760).Ellipsis, { variant: "active", size: "md" });
   }
   obj[1] = submitting;
   return jsx(_modDef4115.View, { style: items, children: null });

@@ -1,5 +1,5 @@
 // discord_app/stores/ApplicationStreamingSettingsStore.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import DesktopSources from "../../discord_common/js/packages/media-engine/Constants.tsx";
@@ -98,6 +98,6 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
     return flag;
   }
 });
-const result = set.fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
+const result = obj132.fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
 
 export default applicationStreamingSettingsStore;

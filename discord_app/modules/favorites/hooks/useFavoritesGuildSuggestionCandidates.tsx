@@ -1,19 +1,19 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../channel_affinities_v2/ChannelAffinitiesV2Store.tsx";
-import closure_5 from "../../user_affinities/UserAffinitiesV2Store.tsx";
-import closure_6 from "../../../stores/ChannelStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import map from "../../channel_affinities_v2/ChannelAffinitiesV2Store.tsx";
+import recomputeAffinities from "../../user_affinities/UserAffinitiesV2Store.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
 import { NO_SUGGESTIONS } from "../FavoritesGuildSuggestionsStore.tsx";
 import { isAllowedType } from "../../share/ShareConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function getAffineChannelId(channelId) {
   return channelId.channelId;
 }
 function getAffineUserDMId(otherUserId) {
   return dMFromUserId.getDMFromUserId(otherUserId.otherUserId);
 }
-let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
+let result = require("obj132").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
 
 export default function useFavoritesGuildSuggestionCandidates(arg0) {
   let stateFromStores1 = arg0;
@@ -27,7 +27,6 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   let obj = stateFromStores1(results[10]);
   let items = [memo1];
   const stateFromStores = stateFromStores1(results[7]).useStateFromStores(items, () => memo1.getChannelAffinities());
-  stateFromStores1 = stateFromStores;
   const items1 = [stateFromStores];
   memo = memo.useMemo(() => {
     const substr = stateFromStores1.slice();
@@ -44,9 +43,9 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   memo1 = memo.useMemo(() => {
     array = new Array(array.size);
     c1 = 0;
-    const item = array.forEach((arg0) => {
+    const item = array.forEach((item, index) => {
       closure_1 = tmp + 1;
-      array[+closure_1] = arg0;
+      array[+closure_1] = item;
     });
     return array.sort((dmProbability, dmProbability2) => dmProbability2.dmProbability - dmProbability.dmProbability);
   }, items3);
@@ -54,13 +53,11 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   return memo.useMemo(() => {
     let items = [];
     const set = new Set();
-    let obj = { affinities: memo, getChannelId: closure_1_9, index: 0 };
-    obj = { affinities: memo1, getChannelId: closure_1_10, index: 0 };
+    const obj = { affinities: memo1, getChannelId: getAffineUserDMId, index: 0 };
     let num = 0;
     if (items.length < stateFromStores1) {
       while (true) {
         let result = items.length % 2;
-        let tmp2 = num;
         let obj4 = obj;
         if (result === 0) {
           obj4 = obj;
@@ -73,14 +70,10 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
             if (null != tmp4) {
               let channelId = obj4.getChannelId(tmp4);
               if (null != channelId) {
-                let tmp6 = callback;
-                let tmp7 = results;
                 let tmp8 = callback(results[11])(channelId);
                 if (null != tmp8) {
-                  let tmp9 = closure_1_8;
-                  if (closure_1_8(tmp8)) {
+                  if (isAllowedType(tmp8)) {
                     if (!set.has(tmp8.record.id)) {
-                      let tmp10 = callback;
                       tmp3 = tmp8;
                       if (callback(tmp8, false)) {
                         break;
@@ -110,14 +103,10 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
               if (null != tmp12) {
                 let channelId1 = obj5.getChannelId(tmp12);
                 if (null != channelId1) {
-                  let tmp14 = callback;
-                  let tmp15 = results;
                   let tmp16 = callback(results[11])(channelId1);
                   if (null != tmp16) {
-                    let tmp17 = closure_1_8;
-                    if (closure_1_8(tmp16)) {
+                    if (isAllowedType(tmp16)) {
                       if (!set.has(tmp16.record.id)) {
-                        let tmp18 = callback;
                         tmp11 = tmp16;
                         if (callback(tmp16, false)) {
                           break;
@@ -138,17 +127,13 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
         }
         let tmp19 = num;
         if (null == tmp3) {
-          let tmp30 = results;
           let tmp25 = num;
           let tmp26 = num;
           if (num < results.length) {
             while (true) {
               let tmp20 = results[tmp25];
               let sum = tmp25 + 1;
-              let arr2 = results;
               if (null != tmp20) {
-                let tmp22 = stateFromStores1;
-                let tmp23 = results;
                 if (tmp20.type !== stateFromStores1(results[12]).AutocompleterResultTypes.HEADER) {
                   let tmp24 = sum;
                   if (!set.has(tmp20.record.id)) {
@@ -170,7 +155,6 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
         } else {
           let addResult = set.add(tmp3.record.id);
           let arr = items.push(tmp3);
-          let tmp29 = stateFromStores1;
           num = tmp19;
           if (items.length >= stateFromStores1) {
             break;
@@ -179,7 +163,7 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
       }
     }
     if (items.length <= 0) {
-      items = closure_1_7;
+      items = NO_SUGGESTIONS;
     }
     return items;
   }, items4);

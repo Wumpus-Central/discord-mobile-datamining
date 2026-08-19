@@ -2,14 +2,14 @@
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import closure_4 from "../../stores/UserGuildSettingsStore.tsx";
+import updateUserGuildSettingsInternal from "../../stores/UserGuildSettingsStore.tsx";
 import { UserNotificationSettings } from "../../Constants.tsx";
 import MAX_FAVORITES from "../user_settings/UserSettingsConstants.tsx";
 
-require = arg1;
+require = fn;
 ({ MuteUntilSeconds: closure_6, ChannelNotificationSettingsFlags: error } = MAX_FAVORITES);
 let closure_8 = { ignoreMute: false, ignoreUnreadSetting: true, ignoreNotificationSetting: false };
-const result = require("set").fileFinishedImporting("modules/notifications/NotificationUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/NotificationUtils.tsx");
 
 export const getMuteTimeOptions = function getMuteTimeOptions() {
   let obj = { id: "15-minutes", label: null, value: null };
@@ -52,19 +52,19 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
   }
   importDefault = tmp;
   const keys = DISCORD_EPOCHDefault.keys(channelOverrides);
-  return keys.filter((arg0) => {
-    let num = dependencyMap[arg0].flags;
+  return keys.filter((item, index) => {
+    let num = dependencyMap[item].flags;
     if (num == null) {
       num = 0;
     }
-    let hasFlagResult = closure_1_2(closure_1_3[5]).hasFlag(num, closure_1_7.UNREADS_ALL_MESSAGES);
+    let hasFlagResult = importAll(closure_1_3[5]).hasFlag(num, closure_1_7.UNREADS_ALL_MESSAGES);
     if (!hasFlagResult) {
-      let num2 = tmp[arg0].flags;
+      let num2 = dependencyMap[item].flags;
       if (num2 == null) {
         num2 = 0;
       }
-      hasFlagResult = closure_1_2(tmp3[5]).hasFlag(num2, closure_1_7.UNREADS_ONLY_MENTIONS);
-      const tmp2Result = closure_1_2(tmp3[5]);
+      hasFlagResult = importAll(closure_1_3[5]).hasFlag(num2, closure_1_7.UNREADS_ONLY_MENTIONS);
+      const tmp2Result = importAll(closure_1_3[5]);
     }
     ignoreUnreadSetting = ignoreUnreadSetting.ignoreUnreadSetting;
     let tmp7 = !ignoreUnreadSetting;
@@ -75,7 +75,7 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
       const ignoreNotificationSetting = tmp6.ignoreNotificationSetting;
       let tmp8 = !ignoreNotificationSetting;
       if (!ignoreNotificationSetting) {
-        tmp8 = dependencyMap[arg0].message_notifications !== closure_1_5.NULL;
+        tmp8 = dependencyMap[item].message_notifications !== UserNotificationSettings.NULL;
       }
       tmp7 = tmp8;
     }
@@ -83,8 +83,8 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
       const ignoreMute = tmp6.ignoreMute;
       let isMuted = !ignoreMute;
       if (!ignoreMute) {
-        isMuted = dependencyMap(tmp3[6]).computeIsMuted(tmp[arg0]);
-        const obj3 = dependencyMap(tmp3[6]);
+        isMuted = dependencyMap(closure_1_3[6]).computeIsMuted(dependencyMap[item]);
+        const obj3 = dependencyMap(closure_1_3[6]);
       }
       tmp7 = isMuted;
     }

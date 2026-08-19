@@ -1,15 +1,15 @@
 // discord_app/modules/premium/native/discounts/PremiumDiscountOfferActionSheet.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import GuildFeatures from "../../PremiumConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ PremiumTypes: c4, SubscriptionPlanInfo: c5 } = GuildFeatures);
 ({ AnalyticEvents: closure_6, AnalyticsObjectTypes, AnalyticsPages, AnalyticsSections } = ME);
 let closure_9 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_PREMIUM, objectType: AnalyticsObjectTypes.BUY };
-const result = require("set").fileFinishedImporting("modules/premium/native/discounts/PremiumDiscountOfferActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/discounts/PremiumDiscountOfferActionSheet.tsx");
 
 export default function _default(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -44,33 +44,33 @@ export default function _default(markAsDismissed) {
   }, items);
   const effect = memo.useEffect(() => {
     if (null != userDiscountOffer) {
-      let obj = userDiscountOffer(analyticsLocations[7]);
-      obj = { location: null, discount_offer_id: null };
+      userDiscountOffer(analyticsLocations[7]);
+      const obj = { location: null, discount_offer_id: null };
       obj[0] = analyticsLocations;
-      obj[1] = tmp.id;
+      obj[1] = userDiscountOffer.id;
       obj.track(closure_1_6.PREMIUM_DISCOUNT_OFFER_ACTION_SHEET_VIEWED, obj);
-      markAsDismissed(analyticsLocations[8]).acknowledgeUserOffer(undefined, tmp);
+      markAsDismissed(analyticsLocations[8]).acknowledgeUserOffer(undefined, userDiscountOffer);
       const obj3 = markAsDismissed(analyticsLocations[8]);
     }
   }, []);
   const items1 = [userDiscountOffer, markAsDismissed];
   const effect1 = memo.useEffect(() => {
     if (null == userDiscountOffer) {
-      markAsDismissed(closure_1_7.AUTO_DISMISS);
+      markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items1);
   const items2 = [analyticsLocations, markAsDismissed, userDiscountOffer];
   const items3 = [analyticsLocations, markAsDismissed, userDiscountOffer, memo];
   const callback = memo.useCallback(() => {
-    let obj = userDiscountOffer(analyticsLocations[7]);
-    obj = { location: analyticsLocations, discount_offer_id: null };
+    userDiscountOffer(analyticsLocations[7]);
+    const obj = { location: analyticsLocations, discount_offer_id: null };
     let id;
     if (userDiscountOffer != null) {
       id = userDiscountOffer.id;
     }
     obj[1] = id;
     obj.track(closure_1_6.PREMIUM_DISCOUNT_OFFER_ACTION_SHEET_DISMISSED, obj);
-    markAsDismissed(closure_1_7.USER_DISMISS);
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items2);
   let tmp10Result = null;
   if (null != userDiscountOffer) {
@@ -85,7 +85,6 @@ export default function _default(markAsDismissed) {
       id = userDiscountOffer.id;
     }
     tmp10Result = jsx(markAsDismissed(tmp2[11]).BottomSheet, { discountOffer: null, onConfirm: null }, id);
-    const tmp10 = jsx;
   }
   return tmp10Result;
 };

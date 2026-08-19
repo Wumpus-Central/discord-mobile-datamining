@@ -1,22 +1,21 @@
 // discord_app/modules/collectibles/native/CollectiblesShopGiftModal.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../CollectiblesCategoryStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import updateCategoriesAndProducts from "../CollectiblesCategoryStore.tsx";
 import { COLLECTIBLES_APPLICATION_ID as closure_5 } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftModal.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftModal.tsx");
 
 export default function CollectiblesShopGiftModal(skuId) {
   skuId = skuId.skuId;
   ({ analyticsLocations, onGiftModalDismiss } = skuId);
   const giftingOrigin = skuId.giftingOrigin;
-  let enabled;
   let skuId2;
   skuId = undefined;
   let obj = giftingOrigin;
   const GiftingBadgeExperiment = skuId(giftingOrigin[4]).GiftingBadgeExperiment;
-  enabled = GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
+  const enabled = GiftingBadgeExperiment.useConfig({ location: "CollectiblesShopGiftModal" }).enabled;
   const items = [enabled];
   const effect = enabled.useEffect(() => {
     if (enabled) {
@@ -63,22 +62,23 @@ export default function CollectiblesShopGiftModal(skuId) {
       obj[6] = renderProductDetails;
       renderProductDetails = function renderProductDetails(arg0) {
         ({ recipientUser, isValidRecipient } = arg0);
-        return closure_1_6(onGiftModalDismiss(giftingOrigin[16]), { product: skuId2, recipientUser, isValidRecipient, isGift: true });
+        return jsx(onGiftModalDismiss(giftingOrigin[16]), { product: skuId2, recipientUser, isValidRecipient, isGift: true });
       };
       obj[7] = renderProductDetails;
       obj[8] = function renderPurchaseSection(arg0) {
         ({ isPurchaseDisabled, giftOptions, baseAnalyticsFields } = arg0);
-        return closure_1_6(onGiftModalDismiss(giftingOrigin[17]), { product: skuId2, isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin, onGiftModalDismiss });
+        return jsx(onGiftModalDismiss(giftingOrigin[17]), { product: skuId2, isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin, onGiftModalDismiss });
       };
-      let tmp7Result = tmp7(tmp3, obj);
+      let tmp7Result = <tmp3 skuId={null} applicationId={null} analyticsLocations={null} lockedRecipientUser={null} onGiftModalDismiss={null} giftingOrigin={null} validateRecipient={null} renderProductDetails={null} renderPurchaseSection={null} />;
     } else {
       obj = { onDismiss: null, title: null };
       obj[0] = onGiftModalDismiss;
       const intl = tmp(obj[14]).intl;
       obj[1] = intl.string(tmp(obj[14]).t["JCFN/y"]);
-      tmp7Result = tmp7(tmp3(obj[13]), obj);
+      tmp7Result = jsx(tmp3(obj[13]), { onDismiss: null, title: null });
       const tmp3Result = tmp3(obj[13]);
     }
     tmpResult = tmp(obj[12]);
   }
+  const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
 };

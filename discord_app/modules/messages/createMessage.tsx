@@ -1,15 +1,15 @@
 // discord_app/modules/messages/createMessage.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import snowflakeSequence from "createNonce.tsx";
-import closure_3 from "../replies/ReferencedMessageStore.tsx";
+import processMessage from "../replies/ReferencedMessageStore.tsx";
 import { ReferencedMessageState } from "../replies/ReferencedMessageStore.tsx";
-import closure_5 from "../../records/UserRecord.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
+import createdAt from "../../records/UserRecord.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ MessageStates: error, MessageTypes: closure_8, LOCAL_BOT_ID: c9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/createMessage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/createMessage.tsx");
 
 export default function createMessage(tts) {
   let flag = tts.tts;
@@ -51,7 +51,6 @@ export default function createMessage(tts) {
   _modDef38(null != tmp8, "createMessage: author cannot be undefined");
   if (nonce == null) {
     nonce = snowflakeSequence.createNonce();
-    const obj3 = snowflakeSequence;
   }
   obj = { id: nonce, type: DEFAULT, content, channel_id: channelId, author: tmp8, attachments: [], embeds: [], pinned: false, mentions: items, mention_channels: [], mention_roles: [], mention_everyone: false, timestamp: new Date().toISOString(), state: null, tts: null, message_reference: null, message_snapshots: null, flags: null, nonce: null, poll: null, shared_client_theme: null, changelog_id: null, gifting_prompt: null, boosting_prompt: null, media_mention: null };
   if (state == null) {
@@ -81,7 +80,6 @@ export const createBotMessage = function createBotMessage(arg0) {
     let obj = snowflakeSequence;
     messageId = obj.createNonce();
   }
-  obj = { id: messageId, type: constants2.DEFAULT, flags: constants3.EPHEMERAL, content, channel_id: channelId, author: obj, attachments: [], embeds: null, pinned: false, mentions: null, mention_channels: null, mention_roles: null, mention_everyone: false, timestamp: null, state: null, tts: false, loggingName: null };
   obj = { id: closure_9, username: "Clyde", discriminator: closure_10, avatar: "clyde", bot: true };
   if (embeds == null) {
     embeds = [];

@@ -3,11 +3,11 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
-import closure_2 from "../../UnsyncedUserSettingsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import CHANNEL_SIDEBAR_WIDTH from "../../UnsyncedUserSettingsStore.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.ix8XIj);
@@ -18,8 +18,7 @@ createToggle = {
     return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   },
   onValueChange: function onDataSavingModeSettingValueChange(arg0) {
-    let obj = UserSettingsText;
-    obj = { videoUploadQuality: closure_2.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
+    const obj = { videoUploadQuality: closure_2.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
     const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();
     obj[2] = closure_2.lowQualityImageMode;
@@ -28,6 +27,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");
 
 export default createToggle;

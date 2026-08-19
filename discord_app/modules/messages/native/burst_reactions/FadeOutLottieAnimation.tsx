@@ -1,25 +1,23 @@
 // discord_app/modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_7 = createCacheKey.createStyles({ content: { width: "100%" } });
 let closure_8 = { code: "function FadeOutLottieAnimationTsx1(){const{isAnimationComplete,isFadeOut,withTiming,runOnJS,setIsFadeOut}=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(setIsFadeOut)(false);})};}return{opacity:0};}" };
 let closure_9 = { code: "function FadeOutLottieAnimationTsx2(finished){const{runOnJS,setIsFadeOut}=this.__closure;if(finished)runOnJS(setIsFadeOut)(false);}" };
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx");
 
 export default function FadeOutLottieAnimation(onComplete) {
   onComplete = onComplete.onComplete;
   const merged = Object.assign(onComplete, Object.create(null));
-  let first;
-  dependencyMap = undefined;
   let first1;
   let React;
   const tmp3 = first1(React.useState(false), 2);
-  first = tmp3[0];
+  const first = tmp3[0];
   dependencyMap = tmp3[1];
   const tmp5 = first1(React.useState(true), 2);
   first1 = tmp5[0];
@@ -42,8 +40,8 @@ export default function FadeOutLottieAnimation(onComplete) {
           obj3 = onComplete(closure_2[7]);
           fn = function t(arg0) {
             if (arg0) {
-              closure_1_0(closure_1_2[6]).runOnJS(closure_4)(false);
-              const obj = closure_1_0(closure_1_2[6]);
+              onComplete(closure_1_2[6]).runOnJS(closure_4)(false);
+              const obj = onComplete(closure_1_2[6]);
             }
           };
           obj1 = { runOnJS: null, setIsFadeOut: null };
@@ -92,7 +90,7 @@ export default function FadeOutLottieAnimation(onComplete) {
     };
     const merged1 = Object.assign(merged);
     obj[1] = jsx(first(7130), { style: null, speed: null, onAnimationFinish: null });
-    let tmp14Result = tmp14(first(4115).View, obj);
+    let tmp14Result = jsx(first(4115).View, { style: null, children: null });
     const tmp16 = first(7130);
   } else {
     tmp14Result = null;

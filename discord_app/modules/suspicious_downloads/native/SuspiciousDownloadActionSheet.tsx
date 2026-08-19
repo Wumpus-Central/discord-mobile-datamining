@@ -2,27 +2,26 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
+import _openURLDefault from "../../../lib/openURL.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: null, title: null, body: null };
-createCacheKey = { padding: ThemesDefault.space.PX_12 };
+const createCacheKey = { padding: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/suspicious_downloads/native/SuspiciousDownloadActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/suspicious_downloads/native/SuspiciousDownloadActionSheet.tsx");
 
 export default function SuspiciousDownloadActionSheet(href) {
   href = href.href;
   const tmp = callback3();
-  let obj = { startExpanded: true, children: null };
-  obj = { spacing: 16, justify: "center", align: "center", style: items, children: null };
-  items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
-  obj = { spacing: 8, justify: "center", align: "center", children: null };
+  const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  const obj = { spacing: 8, justify: "center", align: "center", children: null };
   const items1 = [callback(href(5447).TrafficConeSpotIllustration, {}), , ];
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = href(1236).intl;
@@ -46,8 +45,8 @@ export default function SuspiciousDownloadActionSheet(href) {
   const intl4 = href(1236).intl;
   obj5[0] = intl4.string(href(1236).t["/bHu89"]);
   obj5[1] = function onPress() {
-    closure_1_1(closure_1_2[11]).hideActionSheet();
-    closure_1_1(closure_1_2[12])(href, true);
+    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+    _openURLDefault(href, true);
   };
   items3[1] = callback(href(4745).Button, obj5);
   obj3[1] = items3;

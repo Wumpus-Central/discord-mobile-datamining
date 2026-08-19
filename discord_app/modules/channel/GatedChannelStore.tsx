@@ -3,18 +3,18 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isSubscriptionRole from "../guild_role_subscriptions/PremiumRoleUtils.tsx";
 import hasViewChannelPermission from "../guild_role_subscriptions/RolePermissionUtils.tsx";
-import closure_2 from "../impersonate/ImpersonateStore.tsx";
+import isRestrictedFromShowingGuildPurchaseEntryPoints from "../creator_monetization_review/CreatorMonetizationRestrictionsUtils.tsx";
+import initialize from "../impersonate/ImpersonateStore.tsx";
 import { THREAD_CHANNEL_TYPES } from "../../records/ChannelRecord.tsx";
 import { hasPermission } from "../../records/GuildRoleRecord.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/GuildMemberStore.tsx";
-import closure_7 from "../../stores/GuildRoleStore.tsx";
-import closure_8 from "../../stores/GuildStore.tsx";
-import closure_9 from "../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
+import createGuildRoleRecordFromRust from "../../stores/GuildRoleStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
 
-require = arg1;
+require = fn;
 function isSubscriptionGated(role) {
   role = role.role;
   ({ guildId, isPreviewingRoles } = role);
@@ -41,7 +41,6 @@ function isSubscriptionGated(role) {
         result = flag;
       }
       tmp4 = result;
-      const tmp6 = role;
       const tmpResult = isSubscriptionRole;
     }
     isSubscriptionRoleResult = tmp4;
@@ -52,7 +51,7 @@ function isChannelSubscriptionGatedInGuild(channel, guild) {
   const features = guild.features;
   if (!features.has(constants2.CREATOR_MONETIZABLE)) {
     const features2 = guild.features;
-    if (!features2.has(tmp.CREATOR_MONETIZABLE_PROVISIONAL)) {
+    if (!features2.has(constants2.CREATOR_MONETIZABLE_PROVISIONAL)) {
       return false;
     }
   }
@@ -61,21 +60,14 @@ function isChannelSubscriptionGatedInGuild(channel, guild) {
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp6 = store2;
-    let tmp7 = store2;
     let tmp5 = nextResult;
-    let tmp8 = isSubscriptionGated;
     let obj = { guildId: null, role: null, isPreviewingRoles: null };
     obj[0] = guild.id;
     obj[1] = store2.getRole(guild.id, nextResult);
     obj[2] = isViewingServerShopResult;
     if (isSubscriptionGated(obj)) {
-      let tmp9 = nextResult;
-      let tmp10 = require;
-      let tmp11 = dependencyMap;
       let obj2 = hasViewChannelPermission;
       if (obj2.isChannelAccessGrantedBy(channel, channel.permissionOverwrites[tmp5])) {
-        let tmp12 = iter;
         iter.return();
         let flag2 = true;
         return true;
@@ -83,27 +75,18 @@ function isChannelSubscriptionGatedInGuild(channel, guild) {
     }
     continue;
   }
-  const obj3 = store2;
-  tmp = constants2;
-  const tmp13 = store2;
   const tmp14 = hasPermission(store2.getEveryoneRole(guild), constants.VIEW_CHANNEL);
   if (!tmp14) {
     if (!obj4.isChannelAccessDeniedBy(channel, channel.permissionOverwrites[guild.id])) {
-      const sortedRoles = obj3.getSortedRoles(guild.id);
+      const sortedRoles = store2.getSortedRoles(guild.id);
       for (const item10077 of sortedRoles) {
-        let tmp20 = isSubscriptionGated;
         obj = { guildId: null, role: null, isPreviewingRoles: null };
         obj[0] = arg1.id;
         obj[1] = item10077;
         obj[2] = isViewingServerShopResult;
-        let tmp19 = item10077;
         if (isSubscriptionGated(obj)) {
-          let tmp21 = require;
-          let tmp22 = dependencyMap;
           let obj7 = hasViewChannelPermission;
-          let tmp23 = item10077;
-          if (obj7.hasViewChannelPermission(tmp19)) {
-            let tmp24 = obj5;
+          if (obj7.hasViewChannelPermission(item10077)) {
             obj5.return();
             let flag3 = true;
             return true;
@@ -210,9 +193,7 @@ prototype["isChannelGated"] = function isChannelGated(guildId, channelId) {
         if (features.has(constants2.ROLE_SUBSCRIPTIONS_ENABLED)) {
           const mutableGuildChannelsForGuild = store.getMutableGuildChannelsForGuild(guildId);
           for (const key10008 in mutableGuildChannelsForGuild) {
-            let tmp17 = key10008;
             let tmp18 = mutableGuildChannelsForGuild[key10008];
-            let tmp19 = isChannelSubscriptionGatedInGuild;
             if (!isChannelSubscriptionGatedInGuild(tmp18, guild)) {
               continue;
             } else {
@@ -292,8 +273,6 @@ const gatedChannelStore = new GatedChannelStore(dispatcherDefault, {
       let tmp2 = nextResult;
       let tmp3 = null != nextResult.guild_id;
       if (tmp3) {
-        let tmp4 = computeForChannel;
-        let tmp5 = nextResult;
         tmp3 = computeForChannel(tmp2.guild_id, tmp2.id);
       }
       if (tmp3) {
@@ -306,15 +285,16 @@ const gatedChannelStore = new GatedChannelStore(dispatcherDefault, {
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function handleRoleSubscriptionsRestrictionsUpdate(guildId) {
     guildId = guildId.guildId;
     if (obj.isRestrictedFromShowingGuildPurchaseEntryPoints(guildId.restrictions)) {
-      obj2.add(guildId);
+      set.add(guildId);
     } else {
-      obj2.delete(guildId);
+      set.delete(guildId);
     }
+    obj = isRestrictedFromShowingGuildPurchaseEntryPoints;
   },
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function handleRoleSubscriptionsRestrictionsFetchFailure(guildId) {
     set.add(guildId.guildId);
   }
 });
-let result = set.fileFinishedImporting("modules/channel/GatedChannelStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/channel/GatedChannelStore.tsx");
 
 export default gatedChannelStore;

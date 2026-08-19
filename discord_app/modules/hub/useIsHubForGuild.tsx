@@ -1,16 +1,15 @@
 // discord_app/modules/hub/useIsHubForGuild.tsx
-import closure_2 from "../../stores/GuildStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
 
 export default function useIsHubForGuild(arg0) {
   const _require = arg0;
   const items = [closure_2];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
@@ -18,7 +17,7 @@ export default function useIsHubForGuild(arg0) {
       let flag;
       if (guild != null) {
         const features = guild.features;
-        flag = features.has(closure_1_3.HUB);
+        flag = features.has(GuildFeatures.HUB);
       }
       if (flag == null) {
         flag = false;

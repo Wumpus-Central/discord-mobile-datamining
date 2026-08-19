@@ -1,16 +1,14 @@
 // discord_app/modules/rpc/server/commands/invites.tsx
-import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../activities/EmbeddedActivitiesStore.tsx";
-import closure_4 from "../../../../stores/ChannelStore.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import participantFromServer from "../../../activities/EmbeddedActivitiesStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
 import { InstantInviteSources } from "../../../../Constants.tsx";
 import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 import createRPCCommand from "../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 
-const require = arg1;
+const require = fn;
 ({ RPCCommands, RPCErrors: closure_6 } = sum);
 let obj = {};
-obj = { scope: null, handler: null };
-obj = {};
 const items = [require("set").OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, require("set").OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
 obj[require("RPC_SCOPE_CONFIG").RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
@@ -136,6 +134,6 @@ obj[1] = function handler(arg0) {
   })();
 };
 obj[RPCCommands.INVITE_USER_EMBEDDED] = createRPCCommand.createRPCCommand(RPCCommands.INVITE_USER_EMBEDDED, obj);
-const result = require("set").fileFinishedImporting("modules/rpc/server/commands/invites.tsx");
+const result = require("obj132").fileFinishedImporting("modules/rpc/server/commands/invites.tsx");
 
 export default obj;

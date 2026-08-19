@@ -1,15 +1,15 @@
 // discord_app/modules/premium/native/hooks/useCheckoutPlanPriceString.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { useNativeCheckoutStore } from "../../../checkout/native/NativeCheckoutStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
 
-export const useCheckoutPlanPriceString = function useCheckoutPlanPriceString(productId, first) {
+export const useCheckoutPlanPriceString = function useCheckoutPlanPriceString(productId, stateFromStores) {
   const _require = productId;
   let priceString;
-  if (first != null) {
-    priceString = first.priceString;
+  if (stateFromStores != null) {
+    priceString = stateFromStores.priceString;
   }
   if (priceString == null) {
     priceString = null;
@@ -21,14 +21,13 @@ export const useCheckoutPlanPriceString = function useCheckoutPlanPriceString(pr
     if (null == table) {
       return null;
     } else {
-      const availablePlanForItems = obj.getAvailablePlanForItems(productId(table[2]).getSubscriptionItemsForProduct(productId));
+      const availablePlanForItems = table.getAvailablePlanForItems(productId(table[2]).getSubscriptionItemsForProduct(productId));
       let priceString = null;
       if (null != availablePlanForItems) {
         priceString = availablePlanForItems.getPriceString();
       }
       return priceString;
     }
-    obj = table;
   }, items);
   const tmp2 = useNativeCheckoutStore((orderRequired) => orderRequired.orderRequired);
   let tmp5 = priceString;

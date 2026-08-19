@@ -2,15 +2,15 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/AccessibilityFocusNativeComponent.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import set from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 
 noopAll;
-if (set.isAndroid()) {
-  let importDefaultResult = __INTERNAL_VIEW_CONFIGDefault;
+if (obj132.isAndroid()) {
+  __INTERNAL_VIEW_CONFIGDefault;
 } else {
-  importDefaultResult = require("get ActivityIndicator").requireNativeComponent("AccessibilityFocusView");
+  require("get ActivityIndicator").requireNativeComponent("AccessibilityFocusView");
 }
-const result = set.fileFinishedImporting("design/void/AccessibilityFocusView/native/AccessibilityFocusView.tsx");
+const result = obj132.fileFinishedImporting("design/void/AccessibilityFocusView/native/AccessibilityFocusView.tsx");
 
 export default function AccessibilityFocusView(arg0) {
   ({ onAccessibilityFocus, onAccessibilityBlur } = arg0);

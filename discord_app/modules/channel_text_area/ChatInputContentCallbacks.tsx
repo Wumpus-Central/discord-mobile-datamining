@@ -2,13 +2,13 @@
 import reset from "../../lib/guild/GuildChannelSubscriptions.tsx";
 import subscribeMembers from "../../actions/GuildSubscriptionsActionCreators.tsx";
 import useMessageMaxLengthDefault from "../messages/useMessageMaxLength.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../../stores/ChannelMemberStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import getMemberListId from "../../stores/ChannelMemberStore.tsx";
 
-require = arg1;
+require = fn;
 let c6 = "@here";
-const result = require("set").fileFinishedImporting("modules/channel_text_area/ChatInputContentCallbacks.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel_text_area/ChatInputContentCallbacks.tsx");
 
 export const tryUpdateSubscriptionForHereMention = function tryUpdateSubscriptionForHereMention(arr, maxMessageLength, guild_id, id) {
   const groups = props.getProps(guild_id, id).groups;
@@ -32,7 +32,6 @@ export const tryUpdateSubscriptionForHereMention = function tryUpdateSubscriptio
       if (flag) {
         subscribeMembers.subscribeChannel(guild_id, id, reset.DEFAULT_RANGES);
         flag = true;
-        const obj = subscribeMembers;
       }
       tmp7 = flag;
     }
@@ -64,7 +63,7 @@ export const useHereMentionCallback = function useHereMentionCallback(arg0, arg1
     if (!tmp6) {
       let tmp9 = !tmp8;
       if (!(arr.length < 5 || arr.length > closure_3)) {
-        let flag = -1 !== arr.indexOf(closure_1_6);
+        let flag = -1 !== arr.indexOf(memo);
         if (flag) {
           closure_1_0(closure_1_2[3]).subscribeChannel(closure_1, closure_2, closure_1_0(closure_1_2[4]).DEFAULT_RANGES);
           flag = true;

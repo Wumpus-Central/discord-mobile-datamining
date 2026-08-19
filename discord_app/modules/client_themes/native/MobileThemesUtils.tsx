@@ -6,19 +6,19 @@ import useIsMobileVisualRefreshExperimentEnabled from "../../themes/experiments/
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import messagesProxyDefault from "../intl/ClientThemes.messages.js";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
-import closure_3 from "../../user_settings/ThemeStore.tsx";
-import closure_4 from "../SavedCustomThemeStore.tsx";
-import closure_5 from "CustomThemeMobileStore.tsx";
+import handleThemeChange from "../../user_settings/ThemeStore.tsx";
+import validateSavedTheme from "../SavedCustomThemeStore.tsx";
+import reset from "CustomThemeMobileStore.tsx";
 import ThemeTypes from "../ClientThemesConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-require = arg1;
+require = fn;
 function getCustomThemesName() {
   const intl = getSystemLocale.intl;
   return intl.string(messagesProxyDefault.yl1iMm);
 }
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_6, LEGACY_STANDARD_BACKGROUND_THEMES: error, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } = ThemeTypes);
-const result = require("set").fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
 
 export const getCustomBackgroundGradient = function getCustomBackgroundGradient() {
   const customThemeDisplaySettings = store.getCustomThemeDisplaySettings();
@@ -32,9 +32,9 @@ export const getCustomBackgroundGradient = function getCustomBackgroundGradient(
   }
   return tmp2;
 };
-export const useCustomBackgroundGradient = function useCustomBackgroundGradient(base_theme) {
+export const useCustomBackgroundGradient = function useCustomBackgroundGradient(stateFromStores) {
   let obj = useCustomThemeDisplaySettings;
-  const customThemeDisplaySettings = obj.useCustomThemeDisplaySettings(base_theme);
+  const customThemeDisplaySettings = obj.useCustomThemeDisplaySettings(stateFromStores);
   let tmp4 = null;
   if (undefined !== customThemeDisplaySettings) {
     obj = { type: null, getName: null, theme: null, customThemeSettings: null };
@@ -48,11 +48,11 @@ export const useCustomBackgroundGradient = function useCustomBackgroundGradient(
 export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackgroundGradient(arg0) {
   const _require = arg0;
   const items = [closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == mode) {
       return null;
     } else {
-      const syncedClientTheme = closure_1_3.getSyncedClientTheme(tmp);
+      const syncedClientTheme = closure_1_3.getSyncedClientTheme(mode);
       let prop;
       if (syncedClientTheme != null) {
         prop = syncedClientTheme.customUserThemeSettings;
@@ -62,9 +62,9 @@ export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackg
         tmp3 = null;
         if (0 !== prop.colors.length) {
           const obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-          obj[0] = mode(closure_1_2[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
-          obj[1] = closure_1_9;
-          obj[2] = closure_1_3.themePreferenceForSystemTheme(tmp);
+          obj[0] = mode(dependencyMap[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
+          obj[1] = getCustomThemesName;
+          obj[2] = closure_1_3.themePreferenceForSystemTheme(mode);
           obj[3] = prop;
           tmp3 = obj;
         }
@@ -97,7 +97,7 @@ export const getAllMobileThemes = function getAllMobileThemes() {
   return items1;
 };
 export const useAllMobileThemes = function useAllMobileThemes(mode) {
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp4 = null;
@@ -122,7 +122,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
       if (null == mode) {
         return null;
       } else {
-        const syncedClientTheme = closure_1_3.getSyncedClientTheme(tmp);
+        const syncedClientTheme = closure_1_3.getSyncedClientTheme(mode);
         let prop;
         if (syncedClientTheme != null) {
           prop = syncedClientTheme.customUserThemeSettings;
@@ -132,9 +132,9 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
           tmp3 = null;
           if (0 !== prop.colors.length) {
             const obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-            obj[0] = mode(closure_1_2[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
-            obj[1] = closure_1_9;
-            obj[2] = closure_1_3.themePreferenceForSystemTheme(tmp);
+            obj[0] = mode(dependencyMap[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
+            obj[1] = getCustomThemesName;
+            obj[2] = closure_1_3.themePreferenceForSystemTheme(mode);
             obj[3] = prop;
             tmp3 = obj;
           }

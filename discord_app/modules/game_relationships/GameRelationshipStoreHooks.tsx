@@ -1,21 +1,19 @@
 // discord_app/modules/game_relationships/GameRelationshipStoreHooks.tsx
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "GameRelationshipStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import recountRelationshipTypes from "GameRelationshipStore.tsx";
 import { RelationshipTypes } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");
 
 export const useGameRelationshipsByType = function useGameRelationshipsByType(FRIEND) {
   const _require = FRIEND;
   let items = [closure_3];
   const items1 = [FRIEND];
-  return callback(_initialize.useStateFromStores(items, () => {
+  return callback(require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [closure_1_3.getGameRelationshipsByType(closure_0), closure_1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _isVersionEqual.isVersionEqual), 1)[0];
+  }, items1, require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
 };
 export const useGameFriendsForUser = function useGameFriendsForUser(id) {
   const FRIEND = RelationshipTypes.FRIEND;
@@ -41,20 +39,20 @@ export const useHasGameRelationshipsForUser = function useHasGameRelationshipsFo
   const _require = arg0;
   let items = [closure_3];
   const items1 = [arg0];
-  return callback(_initialize.useStateFromStores(items, () => {
+  return callback(require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const gameRelationshipsForUser = closure_1_3.getGameRelationshipsForUser(closure_0);
     const items = [gameRelationshipsForUser.length > 0, closure_1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _isVersionEqual.isVersionEqual), 1)[0];
+  }, items1, require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
 };
 export const useHasGameRelationshipsForUserByType = function useHasGameRelationshipsForUserByType(arg0, arg1) {
   const _require = arg0;
   dependencyMap = arg1;
   let items = [closure_3];
   const items1 = [arg1, arg0];
-  return callback(_initialize.useStateFromStores(items, () => {
+  return callback(require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const gameRelationshipsForUserByType = closure_1_3.getGameRelationshipsForUserByType(closure_0, closure_1);
     const items = [gameRelationshipsForUserByType.length > 0, closure_1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _isVersionEqual.isVersionEqual), 1)[0];
+  }, items1, require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
 };

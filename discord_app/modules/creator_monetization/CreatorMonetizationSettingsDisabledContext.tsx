@@ -3,9 +3,9 @@ import useShouldHideGuildPurchaseEntryPoints from "../creator_monetization_revie
 import importAllResult from "../../../_runtime/00019_noop.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
 
 export default context;
 export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetizationSettingsDisabled() {

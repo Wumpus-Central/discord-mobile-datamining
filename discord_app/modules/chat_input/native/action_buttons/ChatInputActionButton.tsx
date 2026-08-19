@@ -8,15 +8,15 @@ import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 let closure_5 = createCacheKey.createStyles((arg0, height, marginHorizontal) => {
   const radii = ThemesDefault.radii;
   if (arg0) {
     let round = radii.sm;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     round = radii.round;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   let obj = { borderRadius: round, height, width: height, marginHorizontal, flexShrink: 0, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: null };
   let prop;
@@ -42,10 +42,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
   const mobileVisualRefreshConfig = obj.useMobileVisualRefreshConfig({ location: "ChatInputActionButton" });
   ({ enabled, chatInputFloating } = mobileVisualRefreshConfig);
   const token = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const obj2 = map;
-  const tmp = require;
   const token1 = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  const obj3 = map;
   const token2 = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = callback(enabled, token, token1);
   let tmp8;
@@ -105,6 +102,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
   obj[12] = <IconComponent size="custom" style={items1} />;
   return jsx(PressableBase.PressableOpacity, { disabled });
 }));
-const result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButton.tsx");
 
 export default memoResult;

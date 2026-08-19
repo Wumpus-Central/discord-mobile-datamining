@@ -1,6 +1,6 @@
 // discord_app/modules/premium/premium_group/PremiumGroupConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
-import setDefault from "../../../utils/Durations.tsx";
+import obj132 from "../../../../_runtime/00002_obj132.js";
+import obj132Default from "../../../utils/Durations.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "PremiumGroup.messages.js";
 import ME from "../../../Constants.tsx";
@@ -10,12 +10,12 @@ import importDefaultResult from "../../../utils/HelpdeskUtils.tsx";
 const items = [, , , , ];
 ({ CANCELED: arr[0], PAUSED: arr[1], PAST_DUE: arr[2], ACCOUNT_HOLD: arr[3], BILLING_RETRY: arr[4] } = SubscriptionStatusTypes);
 const articleURL = importDefaultResult.getArticleURL(HelpdeskArticles.PREMIUM_GROUP_ABOUT);
-const result = set.fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
 
 export const TOTAL_PREMIUM_GROUP_MEMBER_SEATS = 5;
 export const TOTAL_PREMIUM_GROUP_USERS = 6;
 export const MIN_AVAILABLE_SEATS_FOR_REMINDER = 3;
-export const MIN_SUBSCRIPTION_AGE_FOR_PRIMARY_REMINDER_IN_MS = setDefault.Millis.DAY;
+export const MIN_SUBSCRIPTION_AGE_FOR_PRIMARY_REMINDER_IN_MS = obj132Default.Millis.DAY;
 export const PREMIUM_GROUP_COOLDOWN_MONTHS = 12;
 export const PREMIUM_GROUP_ANNOUNCEMENT_MODAL_PROMOTION_KEY = "2026-07-premium-group-announcement-modal";
 export const HELP_CENTER_LINK = articleURL;

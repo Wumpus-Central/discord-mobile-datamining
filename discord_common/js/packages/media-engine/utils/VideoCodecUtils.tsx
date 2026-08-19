@@ -1,10 +1,10 @@
 // discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx
-import set2 from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import DesktopSources from "../Constants.tsx";
 
 const ExperimentFlags = DesktopSources.ExperimentFlags;
 let items = [{ name: "H264", encode: true, decode: true }, { name: "VP8", encode: true, decode: true }];
-const result = set2.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx");
 
 export const filterParsedVideoCodecs = function filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodecs, arg2) {
   closure_0 = parseNativeCodecsResult;
@@ -16,27 +16,27 @@ export const filterParsedVideoCodecs = function filterParsedVideoCodecs(parseNat
   let set;
   const combined = experimentCodecs.concat(items);
   items = [];
-  const item = combined.forEach((encode) => {
-    mapped = encode;
-    const found = mapped.find((name) => encode.name === name.name);
+  const item = combined.forEach((item, index) => {
+    mapped = item;
+    const found = mapped.find((item, index) => item.name === item.name);
     if (null != found) {
       const obj = { name: null, encode: null, decode: null };
       ({ name: obj[0], encode } = found);
       if (encode) {
-        encode = encode.encode;
+        encode = item.encode;
       }
       obj[1] = encode;
-      obj[2] = found.decode && encode.decode;
+      obj[2] = found.decode && item.decode;
       items.push(obj);
     }
   });
   if (flag) {
     const _Set = Set;
-    set = new Set(items.map((name) => name.name));
-    const item1 = parseNativeCodecsResult.forEach((name) => {
-      if (!set.has(name.name)) {
+    set = new Set(items.map((item, index) => item.name));
+    const item1 = parseNativeCodecsResult.forEach((item, index) => {
+      if (!set.has(item.name)) {
         const obj = { name: null, encode: false, decode: null };
-        ({ name: obj[0], decode: obj[2] } = name);
+        ({ name: obj[0], decode: obj[2] } = item);
         items.push(obj);
       }
     });
@@ -59,13 +59,13 @@ export const getExperimentCodecs = function getExperimentCodecs(experimentFlags)
   }
   let hasItem2;
   if (experimentFlags != null) {
-    hasItem2 = experimentFlags.has(tmp.H265_HARDWARE_ONLY);
+    hasItem2 = experimentFlags.has(ExperimentFlags.H265_HARDWARE_ONLY);
   }
   let tmp8 = !hasItem2;
   if (hasItem2) {
     let hasItem3;
     if (experimentFlags != null) {
-      hasItem3 = experimentFlags.has(tmp.H265_HARDWARE_DECODE_AVAILABLE);
+      hasItem3 = experimentFlags.has(ExperimentFlags.H265_HARDWARE_DECODE_AVAILABLE);
     }
     tmp8 = hasItem3;
   }
@@ -78,13 +78,13 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
     flag = false;
   }
   const parsed = JSON.parse(arg0);
-  let mapped = parsed.map((codec) => {
-    codec = codec.codec;
+  let mapped = parsed.map((item, index) => {
+    const codec = item.codec;
     let str = "AV1";
     if ("AV1X" !== codec) {
       str = codec;
     }
-    return { name: str, encode: codec.encode, decode: codec.decode };
+    return { name: str, encode: item.encode, decode: item.decode };
   });
   if (flag === undefined) {
     flag = false;
@@ -93,27 +93,27 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
   let set;
   const combined = arr.concat(items);
   items = [];
-  const item = combined.forEach((encode) => {
-    mapped = encode;
-    const found = mapped.find((name) => encode.name === name.name);
+  const item = combined.forEach((item, index) => {
+    mapped = item;
+    const found = mapped.find((item, index) => item.name === item.name);
     if (null != found) {
       const obj = { name: null, encode: null, decode: null };
       ({ name: obj[0], encode } = found);
       if (encode) {
-        encode = encode.encode;
+        encode = item.encode;
       }
       obj[1] = encode;
-      obj[2] = found.decode && encode.decode;
+      obj[2] = found.decode && item.decode;
       items.push(obj);
     }
   });
   if (flag) {
     const _Set = Set;
-    set = new Set(items.map((name) => name.name));
-    const item1 = mapped.forEach((name) => {
-      if (!set.has(name.name)) {
+    set = new Set(items.map((item, index) => item.name));
+    const item1 = mapped.forEach((item, index) => {
+      if (!set.has(item.name)) {
         const obj = { name: null, encode: false, decode: null };
-        ({ name: obj[0], decode: obj[2] } = name);
+        ({ name: obj[0], decode: obj[2] } = item);
         items.push(obj);
       }
     });
@@ -122,13 +122,13 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
 };
 export const parseNativeCodecs = function parseNativeCodecs(arg0) {
   const parsed = JSON.parse(arg0);
-  return parsed.map((codec) => {
-    codec = codec.codec;
+  return parsed.map((item, index) => {
+    const codec = item.codec;
     let str = "AV1";
     if ("AV1X" !== codec) {
       str = codec;
     }
-    return { name: str, encode: codec.encode, decode: codec.decode };
+    return { name: str, encode: item.encode, decode: item.decode };
   });
 };
 export function codecNameToPayloadName(name) {

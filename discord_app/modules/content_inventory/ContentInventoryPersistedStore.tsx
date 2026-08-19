@@ -1,9 +1,8 @@
 // discord_app/modules/content_inventory/ContentInventoryPersistedStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
-import set from "../../../_runtime/00002_set.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 
 function updateImpressionCaches(flag) {
   if (flag === undefined) {
@@ -20,7 +19,6 @@ function updateImpressionCaches(flag) {
       num7 = num6;
       while (tmp8[1] < tmp4) {
         num5 = num5 + 1;
-        let tmp11 = closure_2;
         num6 = num5;
         num7 = num5;
         if (num5 >= closure_2.itemImpressions.length) {
@@ -48,20 +46,13 @@ function updateImpressionCaches(flag) {
     let num11 = null;
     itemImpressions = closure_2.itemImpressions;
     for (const item10073 of itemImpressions) {
-      let tmp27 = callback;
       let tmp28 = callback(item10073, 2);
       [tmp29, tmp30] = tmp28;
       if (tmp30 < tmp22) {
-        let tmp34 = tmp29;
         let addResult = set.add(tmp29);
-      } else {
-        let tmp32 = num11;
-        if (null == num11) {
-          let tmp33 = tmp30;
-          num11 = tmp31 + num10;
-        }
+      } else if (null == num11) {
+        num11 = tmp31 + num10;
       }
-      let tmp36 = tmp29;
       let addResult1 = set1.add(tmp29);
       continue;
     }
@@ -73,7 +64,7 @@ function updateImpressionCaches(flag) {
     const _Date = Date;
   }
 }
-let closure_1 = 3 * setDefault.Millis.DAY;
+let closure_1 = 3 * obj132Default.Millis.DAY;
 let closure_2 = { itemImpressions: [], hidden: false };
 let set = new Set();
 let set1 = new Set();
@@ -85,8 +76,7 @@ class ContentInventoryPersistedStore extends PersistedStore {
 }
 const prototype = ContentInventoryPersistedStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
-  obj = {};
+  let obj = {};
   const merged = Object.assign(obj);
   if (arg0 == null) {
     obj = {};
@@ -104,7 +94,7 @@ prototype["getDebugFastImpressionCappingEnabled"] = function getDebugFastImpress
   return c7;
 };
 Object.defineProperty(prototype, "hidden", {
-  get: function hidden(arg0) {
+  get: function hidden(closure_2) {
     return closure_2.hidden;
   },
   set: undefined
@@ -121,13 +111,9 @@ const contentInventoryPersistedStore = new ContentInventoryPersistedStore(dispat
     }
     let flag = false;
     for (const item10017 of tmp) {
-      let tmp6 = set1;
-      let tmp5 = item10017;
       if (!set1.has(item10017)) {
-        let tmp7 = closure_2;
         let itemImpressions = closure_2.itemImpressions;
-        let tmp8 = item10017;
-        let items = [tmp5, tmp4];
+        let items = [item10017, tmp4];
         let arr = itemImpressions.push(items);
         flag = true;
       }
@@ -150,6 +136,6 @@ const contentInventoryPersistedStore = new ContentInventoryPersistedStore(dispat
     closure_2.hidden = !closure_2.hidden;
   }
 });
-const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryPersistedStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/content_inventory/ContentInventoryPersistedStore.tsx");
 
 export default contentInventoryPersistedStore;

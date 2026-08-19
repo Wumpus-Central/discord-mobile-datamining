@@ -1,18 +1,19 @@
 // discord_app/design/void/TextInput/native/TextInput.tsx
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AccessibilityAnnouncer from "../../../shared.tsx";
+import hexToRgba from "../../../../utils/ColorUtils.tsx";
 import { TextInput } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 ({ KeyboardThemes: c4, Fonts } = ME);
-let obj = { input: null, placeholderTextColor: null };
-obj = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_DEFAULT };
+let obj = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_DEFAULT };
 obj[0] = obj;
-createCacheKey = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+const createCacheKey = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((style, ref) => {
@@ -20,25 +21,24 @@ const forwardRefResult = importAllResult.forwardRef((style, ref) => {
   const tmp2 = callback();
   let obj = AccessibilityAnnouncer;
   const theme = obj.useThemeContext().theme;
-  const obj2 = AccessibilityAnnouncer;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   const tmp6 = AccessibilityAnnouncer.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
   obj = { ref, style: items, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   items = [tmp2.input, style.style];
-  let tmp3Result = tmp3(1363);
-  obj[2] = tmp3Result.isThemeDark(theme) ? closure_4.DARK : closure_4.LIGHT;
+  let tmp3Result = AccessibilityAnnouncer;
+  obj[2] = tmp3Result.isThemeDark(theme) ? constants.DARK : constants.LIGHT;
   obj[3] = tmp2.placeholderTextColor.color;
-  tmp3Result = tmp3(500);
+  tmp3Result = obj132;
   let hexWithOpacityResult = tmp6;
   if (tmp3Result.isAndroid()) {
-    hexWithOpacityResult = tmp3(4223).hexWithOpacity(tmp6, 0.5);
-    const tmp3Result1 = tmp3(4223);
+    hexWithOpacityResult = hexToRgba.hexWithOpacity(tmp6, 0.5);
+    const tmp3Result1 = hexToRgba;
   }
   obj[4] = hexWithOpacityResult;
   const merged1 = Object.assign(merged);
-  return <TextInput ref={arg1} style={items} keyboardAppearance={null} placeholderTextColor={null} selectionColor={null} />;
+  return <TextInput ref={ref} style={items} keyboardAppearance={null} placeholderTextColor={null} selectionColor={null} />;
 });
 forwardRefResult.displayName = "VoidTextInput";
-const result = require("set").fileFinishedImporting("design/void/TextInput/native/TextInput.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/TextInput/native/TextInput.tsx");
 
 export default forwardRefResult;

@@ -1,20 +1,20 @@
 // discord_app/modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/MFAStore.tsx";
+import getVerificationKey from "../../../../stores/MFAStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function CodeRow(code) {
   code = code.code;
   const showCheckMark = code.showCheckMark;
   const items = [code];
   const callback = React.useCallback(() => {
-    code(closure_1_2[6]).copy(code.replace(/[^a-zA-Z0-9]/g, ""));
-    const obj = code(closure_1_2[6]);
-    const result = code(closure_1_2[7]).presentCopiedToClipboard();
+    code(dependencyMap[6]).copy(code.replace(/[^a-zA-Z0-9]/g, ""));
+    const obj = code(dependencyMap[6]);
+    const result = code(dependencyMap[7]).presentCopiedToClipboard();
   }, items);
   let tmp5;
   if (!showCheckMark) {
@@ -25,17 +25,16 @@ function CodeRow(code) {
   if (showCheckMark) {
     obj = { color: null };
     obj[0] = ThemesDefault.colors.TEXT_BRAND;
-    tmp2Result = tmp2(code(6933).CheckmarkSmallIcon, obj);
+    tmp2Result = callback(code(6933).CheckmarkSmallIcon, obj);
   }
   obj[2] = tmp2Result;
-  return closure_6(code(6291).TableRow, obj);
+  return callback(code(6291).TableRow, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { generateCode: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
+const createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx");
 
 export default function UserSettingsAccountBackupCodes(headerLabel) {
   headerLabel = headerLabel.headerLabel;
@@ -53,11 +52,11 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   const memo = React.useMemo(() => {
     const usedCodes = [];
     const unusedCodes = [];
-    const item = usedCodes.forEach((consumed) => {
-      if (consumed.consumed) {
-        let arr = usedCodes.push(consumed);
+    const item = usedCodes.forEach((item, index) => {
+      if (item.consumed) {
+        let arr = usedCodes.push(item);
       } else {
-        arr = unusedCodes.push(consumed);
+        arr = unusedCodes.push(item);
       }
       return arr;
     });
@@ -67,17 +66,16 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   const effect = React.useEffect(() => () => {
     callback(table[13]).clearBackupCodes();
   }, []);
-  obj = { spacing: ThemesDefault.space.PX_24, style: null, children: null };
   obj = { paddingHorizontal: token, paddingTop: ThemesDefault.space.PX_16 };
   obj[1] = obj;
-  const items2 = [headerLabel.map((children) => callback2(stateFromStores(4734).Text, { variant: "text-sm/medium", children }, arg1)), , , ];
+  const items2 = [headerLabel.map((item, index) => callback2(stateFromStores(4734).Text, { variant: "text-sm/medium", children: item }, index)), , , ];
   let tmp10Result = unusedCodes.length > 0;
   if (tmp10Result) {
     obj1 = { title: null, hasIcons: false, children: null };
     const intl2 = tmp3(1236).intl;
     obj1[0] = intl2.string(tmp3(1236).t.zdzyFo);
-    obj1[2] = unusedCodes.map((code) => callback2(closure_9, { code: code.code, showCheckMark: false }, arg1));
-    tmp10Result = tmp10(tmp3(6286).TableRowGroup, obj1);
+    obj1[2] = unusedCodes.map((item, index) => callback2(closure_9, { code: item.code, showCheckMark: false }, index));
+    tmp10Result = callback(tmp3(6286).TableRowGroup, obj1);
   }
   items2[1] = tmp10Result;
   tmp10Result = usedCodes.length > 0;
@@ -85,8 +83,8 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     const obj2 = { title: null, hasIcons: false, children: null };
     const intl3 = tmp3(1236).intl;
     obj2[0] = intl3.string(tmp3(1236).t.FkFLDN);
-    obj2[2] = usedCodes.map((code) => callback2(closure_9, { code: code.code, showCheckMark: true }, arg1));
-    tmp10Result = tmp10(tmp3(6286).TableRowGroup, obj2);
+    obj2[2] = usedCodes.map((item, index) => callback2(closure_9, { code: item.code, showCheckMark: true }, index));
+    tmp10Result = callback(tmp3(6286).TableRowGroup, obj2);
   }
   items2[2] = tmp10Result;
   let tmp10Result1 = null !== headerLabel.onGenerate;
@@ -97,18 +95,16 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     obj5[1] = tmp6.generateCode;
     const intl4 = tmp3(1236).intl;
     obj5[2] = intl4.string(tmp3(1236).t.RIThUu);
-    obj4[0] = tmp10(tmp3(4734).Text, obj5);
+    obj4[0] = callback(tmp3(4734).Text, obj5);
     obj4[1] = function onPress() {
       const verificationKey = store.getVerificationKey();
       const result = callback(14101).confirmViewBackupCodes(verificationKey, true);
     };
-    obj3[1] = tmp10(tmp3(6291).TableRow, obj4);
-    tmp10Result1 = tmp10(tmp3(6286).TableRowGroup, obj3);
+    obj3[1] = callback(tmp3(6291).TableRow, obj4);
+    tmp10Result1 = callback(tmp3(6286).TableRowGroup, obj3);
   }
-  const tmp11 = ScrollView;
-  const tmp12 = closure_7;
   tmp6 = callback();
   items2[3] = tmp10Result1;
   obj[2] = items2;
-  return closure_6(tmp11, { children: closure_7(stateFromStores(4733).Stack, obj) });
+  return callback(ScrollView, { children: callback2(stateFromStores(4733).Stack, obj) });
 };

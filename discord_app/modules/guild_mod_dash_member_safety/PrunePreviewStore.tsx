@@ -1,5 +1,5 @@
 // discord_app/modules/guild_mod_dash_member_safety/PrunePreviewStore.tsx
-import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import keys from "../../../_runtime/00644_keys.js";
 
 let c1 = 3600000;
@@ -14,19 +14,14 @@ keys = keys.create((arg0) => {
       const sorted = items.sort();
       closure_2 = "" + arg0 + ":" + arg1 + ":" + sorted.join(",");
       callback((arg0) => {
-        let entries = {};
         const merged = Object.assign(arg0.entries);
-        entries = {};
+        let entries = {};
         const timestamp = Date.now();
         entries = Object.entries(entries);
         while (tmp4 !== undefined) {
-          let tmp6 = callback;
           let tmp7 = callback(tmp5, 2);
           [tmp8, tmp9] = tmp7;
-          let tmp11 = closure_1;
           if (timestamp - tmp9.cachedAt < closure_1) {
-            let tmp12 = tmp8;
-            let tmp13 = tmp9;
             entries[tmp8] = tmp10;
           }
           continue;
@@ -34,7 +29,6 @@ keys = keys.create((arg0) => {
         let tmp16 = null == tmp15;
         if (!tmp16) {
           tmp16 = tmp15.count <= callback && !tmp15.isFinished;
-          const tmp18 = tmp15.count <= callback && !tmp15.isFinished;
         }
         if (tmp16) {
           const obj = { count: null, isFinished: null, cachedAt: null };
@@ -52,7 +46,7 @@ keys = keys.create((arg0) => {
     }
   };
 });
-const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/PrunePreviewStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_mod_dash_member_safety/PrunePreviewStore.tsx");
 
 export const CACHE_TTL_MS = 3600000;
 export const getPrunePreviewKey = function getPrunePreviewKey(arg0, arg1, arg2) {

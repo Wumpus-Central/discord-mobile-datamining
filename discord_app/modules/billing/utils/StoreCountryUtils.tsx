@@ -1,7 +1,7 @@
 // discord_app/modules/billing/utils/StoreCountryUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/billing/utils/StoreCountryUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/billing/utils/StoreCountryUtils.tsx");
 
 export const parseStoreCountry = function parseStoreCountry(storeCountry) {
   let tmp = storeCountry;

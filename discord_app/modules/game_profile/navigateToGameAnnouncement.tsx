@@ -1,9 +1,9 @@
 // discord_app/modules/game_profile/navigateToGameAnnouncement.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/GuildStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 import ME from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _navigateToGameAnnouncement() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -166,7 +166,7 @@ function _navigateToGameAnnouncement() {
   return applyArgumentsResult;
 }
 ({ GuildFeatures: c5, JoinGuildSources: closure_6, Routes: error } = ME);
-const result = require("set").fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");
 
 export default function navigateToGameAnnouncement() {
   const self = this;

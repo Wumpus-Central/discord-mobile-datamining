@@ -1,10 +1,10 @@
 // discord_app/modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx
 import useMobilePurchaseSKUDefault from "../../../billing/native/hooks/useMobilePurchaseSKU.android.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { PriceSetAssignmentPurchaseTypes as closure_4 } from "../../../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");
 
 export default function useMobileSocialLayerPurchaseSKU(sku) {
   sku = sku.sku;
@@ -35,8 +35,8 @@ export default function useMobileSocialLayerPurchaseSKU(sku) {
     const effect = React.useEffect(() => {
       if (null != _null) {
         const items = [tmp];
-        const inAppSkus = _null(closure_1_2[2]).loadInAppSkus(items);
-        const obj = _null(closure_1_2[2]);
+        const inAppSkus = _null(dependencyMap[2]).loadInAppSkus(items);
+        const obj = _null(dependencyMap[2]);
       }
     }, items);
     let obj = {};

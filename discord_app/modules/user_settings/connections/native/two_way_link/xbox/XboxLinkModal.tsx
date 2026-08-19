@@ -2,12 +2,12 @@
 import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import registerAssetDefault from "../../../../../../../_runtime/08143_registerAsset.js";
-import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../../_runtime/00019_noop.js";
 import { XboxLinkModalScenes } from "XboxLinkConstants.tsx";
 import { PlatformTypes } from "../../../../../../Constants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function CloseButton() {
   const obj = {
     source: registerAssetDefault,
@@ -26,7 +26,7 @@ function CloseButton() {
     accessibilityLabel: null
   });
 }
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx");
 
 export default function XboxLinkModal(locationStack) {
   let twoWayLinkStyles;
@@ -40,29 +40,9 @@ export default function XboxLinkModal(locationStack) {
     function blank() {
       return null;
     }
-    let obj = {
+    const obj = {
       headerLeft: blank,
-      headerRight: closure_1_7,
-      headerTitle: blank,
-      headerStyle: onClose.navHeader,
-      render() {
-        return callback2(callback(9753), {});
-      }
-    };
-    obj = {
-      headerLeft: blank,
-      headerRight: closure_1_7,
-      headerStyle: onClose.navHeader,
-      headerTitle() {
-        return callback2(onClose(9757).TwoWayLinkStepHeader, { idx: 1, total: 2 });
-      },
-      render() {
-        return callback2(callback(9758), {});
-      }
-    };
-    obj = {
-      headerLeft: blank,
-      headerRight: closure_1_7,
+      headerRight: CloseButton,
       headerStyle: onClose.navHeader,
       headerTitle() {
         return callback2(onClose(9757).TwoWayLinkStepHeader, { idx: 2, total: 2 });
@@ -78,7 +58,7 @@ export default function XboxLinkModal(locationStack) {
       [closure_1_4.DISCORD_CONSENT]: obj,
       [closure_1_4.SUCCESS]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {
@@ -87,7 +67,7 @@ export default function XboxLinkModal(locationStack) {
       },
       [closure_1_4.EDUCATION]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {
@@ -96,7 +76,7 @@ export default function XboxLinkModal(locationStack) {
       },
       [closure_1_4.ERROR]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {

@@ -1,11 +1,11 @@
 // discord_app/design/components/mana-assets/native/generated/GiftCardLeft3dIllustration.native.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
 import metadataDefault from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftCardLeft3dIllustration-2x.png.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftCardLeft3dIllustration.native.tsx");
+const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/GiftCardLeft3dIllustration.native.tsx");
 
 export const GiftCardLeft3dIllustration = function GiftCardLeft3dIllustration(width) {
   let num = width.width;
@@ -21,8 +21,7 @@ export const GiftCardLeft3dIllustration = function GiftCardLeft3dIllustration(wi
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
+  let obj = { uri: metadataDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];

@@ -19,11 +19,12 @@ import getOrParseMessagePreviewMarkupAST from "../../../message_previews/native/
 import getLayoutStyles from "guild_channels/layouts/ChannelListLayout.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/RelationshipStore.tsx";
+import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import { formatMessagePreview } from "../../../message_previews/useFormattedMessagePreview.tsx";
 
-require = arg1;
+require = fn;
 function PreviewIcon(icon) {
   icon = icon.icon;
   const merged = Object.assign(icon, Object.create(null));
@@ -195,8 +196,8 @@ class NativeChannelRowPreview {
     items[2] = setting2;
     items[3] = gifAutoPlay;
     memo = closure_3.useMemo(() => {
-      let obj = new gifAutoPlay(seeMoreLabelColor[24])();
-      obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, renderComponents: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
+      new gifAutoPlay(seeMoreLabelColor[24])();
+      const obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, renderComponents: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
       obj.setOptions(obj);
       return obj;
     }, items);
@@ -205,11 +206,11 @@ class NativeChannelRowPreview {
       horizontalOffset: 0,
       modifyRow(message) {
             let processColorOrThrowResult;
-            message.contextType = closure_1_0(seeMoreLabelColor[26]).MessageContextType.SEARCH;
+            message.contextType = require(seeMoreLabelColor[26]).MessageContextType.SEARCH;
             if (null != closure_3) {
               try {
-                processColorOrThrowResult = closure_1_0(seeMoreLabelColor[27]).processColorOrThrow(tmp4);
-                const tmp2Result = closure_1_0(seeMoreLabelColor[27]);
+                processColorOrThrowResult = require(seeMoreLabelColor[27]).processColorOrThrow(tmp4);
+                const tmp2Result = require(seeMoreLabelColor[27]);
               } catch (err) {
               }
             }
@@ -241,12 +242,11 @@ let c3 = importAllResult;
 let closure_9 = importAllResult.memo((arg0) => {
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
   const fontScale = getFontScale.useFontScale();
-  const obj = getFontScale;
   return getOrParseMessagePreviewMarkupAST.renderMessagePreviewMarkup({ content, muted, guildId, channelId, layout, color, fontScale });
 });
 const memoResult = importAllResult.memo((message) => {
   const _require = message;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const items1 = [message.message.author.id];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.isBlockedOrIgnored(message.message.author.id), items1);
@@ -261,8 +261,9 @@ const memoResult = importAllResult.memo((message) => {
   obj = {};
   const merged1 = Object.assign(message);
   tmp7 = callback(ChannelRowPreview, obj);
+  obj2 = formatMessagePreview;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
 
 export { ChannelRowPreview };
 export { NativeChannelRowPreview };

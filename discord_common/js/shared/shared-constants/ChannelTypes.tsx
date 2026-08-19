@@ -1,9 +1,8 @@
 // discord_common/js/shared/shared-constants/ChannelTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const obj = { CALLABLE: null, TEXTUAL: null, GUILD_THREADS_ONLY: null, STICKERS: null, READABLE: null, GUILD: null, GUILD_CHANNEL: null, THREADS: null, PRIVATE_CHANNEL: null, PUBLIC_THREADS: null, GUILD_THREADED: null, GUILD_STORED: null, GUILD_TEXTUAL: null, GUILD_VOCAL: null, GUILD_VOCAL_PRIMARY: null, GUILD_TEXT_PRIMARY: null, VOCAL_THREAD: null, VOCAL: null, VOICE_EFFECTS: null, GUILD_TEXT_ONLY: null, LIMITED_CHANNEL_NAME: null, SEARCHABLE: null, GUILD_USER_CONTENT: null, GUILD_TOPICAL: null, GUILD_WEBHOOKS: null, GUILD_SYSTEM_CHANNEL: null, GUILD_PARENTABLE: null, GUILD_AUTO_MODERATED: null, GUILD_BASIC: null, CREATEABLE_GUILD_CHANNELS: null, TYPE_CHANGEABLE_GUILD_CHANNELS: null, MULTI_USER_DMS: null, ALL_DMS: null, INVITABLE: null, GUILD_FEED_FEATURABLE_MESSAGES: null, ROLE_SUBSCRIPTIONS: null, ICON_EMOJIS: null, SUMMARIZEABLE: null, CONTENT_ENTRY_EMBEDS: null, POLLS: null, ACTIVITY_LAUNCHABLE: null, APPLICATION_MANAGEABLE: null, ALL: null };
-let set = new Set([1, 3]);
-obj[0] = set;
+const obj = { CALLABLE: new Set([1, 3]), TEXTUAL: null, GUILD_THREADS_ONLY: null, STICKERS: null, READABLE: null, GUILD: null, GUILD_CHANNEL: null, THREADS: null, PRIVATE_CHANNEL: null, PUBLIC_THREADS: null, GUILD_THREADED: null, GUILD_STORED: null, GUILD_TEXTUAL: null, GUILD_VOCAL: null, GUILD_VOCAL_PRIMARY: null, GUILD_TEXT_PRIMARY: null, VOCAL_THREAD: null, VOCAL: null, VOICE_EFFECTS: null, GUILD_TEXT_ONLY: null, LIMITED_CHANNEL_NAME: null, SEARCHABLE: null, GUILD_USER_CONTENT: null, GUILD_TOPICAL: null, GUILD_WEBHOOKS: null, GUILD_SYSTEM_CHANNEL: null, GUILD_PARENTABLE: null, GUILD_AUTO_MODERATED: null, GUILD_BASIC: null, CREATEABLE_GUILD_CHANNELS: null, TYPE_CHANGEABLE_GUILD_CHANNELS: null, MULTI_USER_DMS: null, ALL_DMS: null, INVITABLE: null, GUILD_FEED_FEATURABLE_MESSAGES: null, ROLE_SUBSCRIPTIONS: null, ICON_EMOJIS: null, SUMMARIZEABLE: null, CONTENT_ENTRY_EMBEDS: null, POLLS: null, ACTIVITY_LAUNCHABLE: null, APPLICATION_MANAGEABLE: null, ALL: null };
+const set = new Set([1, 3]);
 obj[1] = new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 17, 18, 19, 21]);
 const set1 = new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 17, 18, 19, 21]);
 obj[2] = new Set([15, 16]);
@@ -87,7 +86,8 @@ const set40 = new Set([0, 1, 2, 3, 20, 21]);
 obj[41] = new Set([3, 18]);
 const set41 = new Set([3, 18]);
 obj[42] = new Set([0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]);
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ChannelTypes.tsx");
+const set42 = new Set([0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]);
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/ChannelTypes.tsx");
 
 export const ChannelTypes = { DM: 1, [1]: "DM", GROUP_DM: 3, [3]: "GROUP_DM", GUILD_TEXT: 0, [0]: "GUILD_TEXT", GUILD_VOICE: 2, [2]: "GUILD_VOICE", GUILD_CATEGORY: 4, [4]: "GUILD_CATEGORY", GUILD_ANNOUNCEMENT: 5, [5]: "GUILD_ANNOUNCEMENT", GUILD_STORE: 6, [6]: "GUILD_STORE", ANNOUNCEMENT_THREAD: 10, [10]: "ANNOUNCEMENT_THREAD", PUBLIC_THREAD: 11, [11]: "PUBLIC_THREAD", PRIVATE_THREAD: 12, [12]: "PRIVATE_THREAD", GUILD_STAGE_VOICE: 13, [13]: "GUILD_STAGE_VOICE", GUILD_DIRECTORY: 14, [14]: "GUILD_DIRECTORY", GUILD_FORUM: 15, [15]: "GUILD_FORUM", GUILD_MEDIA: 16, [16]: "GUILD_MEDIA", LOBBY: 17, [17]: "LOBBY", DM_SDK: 18, [18]: "DM_SDK", MEDIA_THREAD: 19, [19]: "MEDIA_THREAD", GUILD_SPACE: 20, [20]: "GUILD_SPACE", GUILD_APP: 21, [21]: "GUILD_APP", UNKNOWN: 10000, [10000]: "UNKNOWN" };
 export const ChannelTypesSets = obj;

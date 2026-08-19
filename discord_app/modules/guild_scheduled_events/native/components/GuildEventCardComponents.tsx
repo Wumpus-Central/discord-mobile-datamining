@@ -11,27 +11,26 @@ import canEveryoneRoleViewEventDefault from "../../useCanInviteForGuildEvent.tsx
 import guildEventDetailsParser from "../../guildEventDetailsParser.native.tsx";
 import getGuildEventImageURLDefault from "../../utils/getGuildEventImage.tsx";
 import ThrottledButtonDefault from "ThrottledButton.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_9 from "../../../../stores/AuthenticationStore.tsx";
-import closure_10 from "../../../../stores/ChannelStore.tsx";
-import closure_11 from "../../../../stores/GuildMemberStore.tsx";
-import closure_12 from "../../../../stores/GuildStore.tsx";
-import closure_13 from "../../../../stores/PermissionStore.tsx";
-import closure_14 from "../../../../stores/UserStore.tsx";
+import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import trackCommunicationDisabled from "../../../../stores/GuildMemberStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import scheduledEventSort from "../../GuildScheduledEventStore.tsx";
-import closure_17 from "../../GuildScheduledEventStore.tsx";
+import scheduledEventSort2 from "../../GuildScheduledEventStore.tsx";
 import { GuildScheduledEventEntityTypes as closure_18 } from "../../GuildScheduledEventsConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import "createCacheKey";
 import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
 
-require = arg1;
+require = fn;
 function usePrimaryActionButtonType(event, isConnected) {
   const _require = event;
   ({ guild_id: importDefault, channel_id } = event);
@@ -41,8 +40,6 @@ function usePrimaryActionButtonType(event, isConnected) {
   const stateFromStores = _require(channel_id[26]).useStateFromStores(items1, () => closure_1_12.getGuild(closure_1));
   const obj = _require(channel_id[26]);
   const tmp = _require;
-  const tmp2 = channel_id;
-  const tmp3 = closure_12;
   const items2 = [closure_10];
   const items3 = [channel_id];
   let stateFromStores1 = _require(channel_id[26]).useStateFromStores(items2, () => closure_1_10.getChannel(channel_id), items3);
@@ -52,14 +49,14 @@ function usePrimaryActionButtonType(event, isConnected) {
   }
   const canManageGuildEventResult = _require(channel_id[27]).useManageResourcePermissions(stateFromStores1).canManageGuildEvent(event);
   const obj3 = _require(channel_id[27]);
-  const items4 = [tmp3];
+  const items4 = [closure_12];
   if (tmpResult.useStateFromStores(items4, () => null != closure_1_12.getGuild(event.guild_id))) {
     if (callback2(event)) {
       let RSVP = obj12.ENDED;
     } else if (callback3(event)) {
       if (event.entity_type !== constants.EXTERNAL) {
         if (!isConnected) {
-          const JOIN = tmp14.JOIN;
+          const JOIN = obj12.JOIN;
         }
       }
     } else {
@@ -73,6 +70,7 @@ function usePrimaryActionButtonType(event, isConnected) {
   } else {
     return obj12.JOIN_GUILD;
   }
+  tmpResult = tmp(channel_id[26]);
 }
 class GuildEventCardRSVPAction {
   constructor(arg0) {
@@ -88,7 +86,7 @@ class GuildEventCardRSVPAction {
     items2 = [, ];
     items2[0] = obj.useStateFromStores(items, () => closure_1_17.isInterestedInEventRecurrence(event.id, c1), items1);
     items2[1] = () => {
-      const result = event(closure_1_2[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
+      const result = event(dependencyMap[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
     };
     tmp3 = closure_4(items2, 2);
     first = tmp3[0];
@@ -219,7 +217,7 @@ class GuildEventJoinAndRSVPAction {
     items2 = [, ];
     items2[0] = obj.useStateFromStores(items, () => closure_1_17.isInterestedInEventRecurrence(event.id, c1), items1);
     items2[1] = () => {
-      const result = event(closure_1_2[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
+      const result = event(dependencyMap[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
     };
     tmp = _handleJoinGuild(items2, 2);
     [closure_1, closure_2] = tmp;
@@ -339,45 +337,32 @@ let c5 = importAllResult;
 ({ Permissions: closure_19, JoinGuildSources: closure_20 } = ME);
 ({ Fonts, NOOP: closure_21 } = sum);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-let obj = { imageHeaderContainer: null, imageHeaderBanner: null, headerContainer: null, dateContainer: null, dateIcon: null, newBadge: null, topicContainer: null, detailsContainer: null, channelContainer: null, channelIcon: null, channelText: null, guildInfoContainer: null, guildIcon: null, guildInfo: null, guildInfoChannelContainer: null, guildInfoChannelText: null, creatorAvatar: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 obj[0] = obj;
 obj[1] = { width: "100%", aspectRatio: 2.5 };
 obj[2] = { flexDirection: "row", alignItems: "center" };
 obj[3] = { flexDirection: "row", alignItems: "center", flex: 1 };
-createCacheKey = { marginRight: ThemesDefault.space.PX_8 };
+const createCacheKey = { marginRight: ThemesDefault.space.PX_8 };
 obj[4] = createCacheKey;
 obj[5] = { paddingHorizontal: 4, paddingVertical: 2, marginEnd: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-let obj2 = { paddingHorizontal: 4, paddingVertical: 2, marginEnd: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 obj[6] = { paddingTop: ThemesDefault.space.PX_8 };
-let obj3 = { paddingTop: ThemesDefault.space.PX_8 };
 obj[7] = { paddingTop: ThemesDefault.space.PX_8 };
-let obj4 = { paddingTop: ThemesDefault.space.PX_8 };
 obj[8] = { flexDirection: "row", alignItems: "center", paddingTop: ThemesDefault.space.PX_8 };
-let obj5 = { flexDirection: "row", alignItems: "center", paddingTop: ThemesDefault.space.PX_8 };
 obj[9] = { marginRight: ThemesDefault.space.PX_8 };
-let obj6 = { marginRight: ThemesDefault.space.PX_8 };
 obj[10] = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, flexShrink: 1 };
-let obj7 = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, flexShrink: 1 };
 obj[11] = { flexDirection: "row", alignItems: "center", paddingTop: ThemesDefault.space.PX_8 };
-let obj8 = { flexDirection: "row", alignItems: "center", paddingTop: ThemesDefault.space.PX_8 };
 obj[12] = { marginRight: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.sm };
 obj[13] = { flexDirection: "column" };
 obj[14] = { flexDirection: "row", alignItems: "center" };
-let obj9 = { marginRight: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.sm };
 obj[15] = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 12, lineHeight: 16 };
-let obj10 = { fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 12, lineHeight: 16 };
 obj[16] = { marginRight: ThemesDefault.space.PX_8 };
 const styles = createCacheKey.createStyles(obj);
 let obj12 = { RSVP: 0, [0]: "RSVP", JOIN: 1, [1]: "JOIN", START: 2, [2]: "START", STARTED: 3, [3]: "STARTED", CONNECTED: 4, [4]: "CONNECTED", END: 5, [5]: "END", ENDED: 6, [6]: "ENDED", JOIN_GUILD: 7, [7]: "JOIN_GUILD" };
-let obj11 = { marginRight: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo(function GuildEventCardPrimaryAction(event) {
   event = event.event;
   ({ onCloseAction: importDefault, recurrenceId } = event);
   c3 = undefined;
   channel_id = undefined;
-  closure_5 = undefined;
-  closure_6 = undefined;
   ({ guild_id: c3, channel_id } = event);
   let obj = event(recurrenceId[26]);
   const items = [closure_10];
@@ -390,31 +375,31 @@ const memoResult = importAllResult.memo(function GuildEventCardPrimaryAction(eve
   const stateFromStores = obj1.useStateFromStores(items2, () => closure_1_13.can(closure_1_19.CONNECT, closure_5));
   if (obj12.ENDED === tmp4) {
     obj = { variant: "secondary", text: null, accessibilityLabel: null, grow: true, disabled: true, onPress: null };
-    let tmp3Result = tmp3(tmp2[31]);
-    const intl10 = tmp(tmp2[20]).intl;
-    obj[1] = intl10.string(tmp(tmp2[20]).t.Pj7Xrv);
-    const intl11 = tmp(tmp2[20]).intl;
+    let tmp3Result = importDefault(recurrenceId[31]);
+    const intl10 = tmp(recurrenceId[20]).intl;
+    obj[1] = intl10.string(tmp(recurrenceId[20]).t.Pj7Xrv);
+    const intl11 = tmp(recurrenceId[20]).intl;
     const _HermesInternal6 = HermesInternal;
-    obj[2] = "" + intl11.string(tmp(tmp2[20]).t.Pj7Xrv) + ", " + event.name;
+    obj[2] = "" + intl11.string(tmp(recurrenceId[20]).t.Pj7Xrv) + ", " + event.name;
     obj[5] = closure_21;
     return callback4(tmp3Result, obj);
   } else {
     function handleListenIn() {
-      if (null != closure_5) {
+      if (null != id) {
         if (event.entity_type === closure_1_18.STAGE_INSTANCE) {
-          callback2(c3, tmp.id);
+          callback2(c3, id.id);
         }
-        event(recurrenceId[39]).openGuildVoiceModal(tmp);
+        event(recurrenceId[39]).openGuildVoiceModal(id);
         if (callback != null) {
           callback();
         }
         const obj = event(recurrenceId[39]);
       }
     }
-    if (tmp6.JOIN === tmp4) {
-      const intl9 = tmp(tmp2[20]).intl;
+    if (obj12.JOIN === tmp4) {
+      const intl9 = tmp(recurrenceId[20]).intl;
       const string = intl9.string;
-      const t = tmp(tmp2[20]).t;
+      const t = tmp(recurrenceId[20]).t;
       if (stateFromStores) {
         let stringResult = string(t.ZYO5OK);
       } else {
@@ -423,58 +408,58 @@ const memoResult = importAllResult.memo(function GuildEventCardPrimaryAction(eve
       obj = { variant: "active", text: null, accessibilityLabel: null, onPress: null, disabled: null, grow: true };
       obj[1] = stringResult;
       const _HermesInternal5 = HermesInternal;
-      tmp3Result = tmp3(tmp2[31]);
+      tmp3Result = importDefault(recurrenceId[31]);
       obj[2] = "" + stringResult + ", " + event.name;
       obj[3] = handleListenIn;
       obj[4] = !stateFromStores;
       return callback4(tmp3Result, obj);
-    } else if (tmp6.CONNECTED === tmp4) {
+    } else if (obj12.CONNECTED === tmp4) {
       obj1 = { variant: "active", text: null, accessibilityLabel: null, onPress: null, grow: true };
-      const intl7 = tmp(tmp2[20]).intl;
-      obj1[1] = intl7.string(tmp(tmp2[20]).t.aW2YlJ);
-      const intl8 = tmp(tmp2[20]).intl;
+      const intl7 = tmp(recurrenceId[20]).intl;
+      obj1[1] = intl7.string(tmp(recurrenceId[20]).t.aW2YlJ);
+      const intl8 = tmp(recurrenceId[20]).intl;
       const _HermesInternal4 = HermesInternal;
-      obj1[2] = "" + intl8.string(tmp(tmp2[20]).t.aW2YlJ) + ", " + event.name;
+      obj1[2] = "" + intl8.string(tmp(recurrenceId[20]).t.aW2YlJ) + ", " + event.name;
       obj1[3] = handleListenIn;
-      return callback4(tmp3(tmp2[31]), obj1);
-    } else if (tmp6.RSVP === tmp4) {
+      return callback4(importDefault(recurrenceId[31]), obj1);
+    } else if (obj12.RSVP === tmp4) {
       const obj2 = { event: null, recurrenceId: null };
       obj2[0] = event;
       obj2[1] = recurrenceId;
       return callback4(GuildEventCardRSVPAction, obj2);
-    } else if (tmp6.START === tmp4) {
+    } else if (obj12.START === tmp4) {
       const obj3 = { variant: "active", text: null, accessibilityLabel: null, onPress: null, grow: true };
-      const intl5 = tmp(tmp2[20]).intl;
-      obj3[1] = intl5.string(tmp(tmp2[20]).t.cK1GGY);
-      const intl6 = tmp(tmp2[20]).intl;
+      const intl5 = tmp(recurrenceId[20]).intl;
+      obj3[1] = intl5.string(tmp(recurrenceId[20]).t.cK1GGY);
+      const intl6 = tmp(recurrenceId[20]).intl;
       const _HermesInternal3 = HermesInternal;
-      obj3[2] = "" + intl6.string(tmp(tmp2[20]).t.cK1GGY) + ", " + event.name;
+      obj3[2] = "" + intl6.string(tmp(recurrenceId[20]).t.cK1GGY) + ", " + event.name;
       obj3[3] = function handleStartEvent() {
         if (closure_1 != null) {
           tmp();
         }
         const result = event(recurrenceId[21]).openStartGuildEventModal(event, recurrenceId);
       };
-      return callback4(tmp3(tmp2[31]), obj3);
-    } else if (tmp6.STARTED === tmp4) {
+      return callback4(importDefault(recurrenceId[31]), obj3);
+    } else if (obj12.STARTED === tmp4) {
       const obj4 = { variant: "secondary", text: null, accessibilityLabel: null, grow: true, disabled: true, onPress: null };
-      let intl3 = tmp(tmp2[20]).intl;
-      obj4[1] = intl3.string(tmp(tmp2[20]).t.Yz0V6O);
-      let intl4 = tmp(tmp2[20]).intl;
+      let intl3 = tmp(recurrenceId[20]).intl;
+      obj4[1] = intl3.string(tmp(recurrenceId[20]).t.Yz0V6O);
+      let intl4 = tmp(recurrenceId[20]).intl;
       const _HermesInternal2 = HermesInternal;
-      obj4[2] = "" + intl4.string(tmp(tmp2[20]).t.Yz0V6O) + ", " + event.name;
+      obj4[2] = "" + intl4.string(tmp(recurrenceId[20]).t.Yz0V6O) + ", " + event.name;
       obj4[5] = closure_21;
-      return callback4(tmp3(tmp2[31]), obj4);
-    } else if (tmp6.END === tmp4) {
+      return callback4(importDefault(recurrenceId[31]), obj4);
+    } else if (obj12.END === tmp4) {
       const obj5 = { variant: "secondary", text: null, accessibilityLabel: null, onPress: null, grow: true };
-      let intl = tmp(tmp2[20]).intl;
-      obj5[1] = intl.string(tmp(tmp2[20]).t.qaYzPA);
-      let intl2 = tmp(tmp2[20]).intl;
+      let intl = tmp(recurrenceId[20]).intl;
+      obj5[1] = intl.string(tmp(recurrenceId[20]).t.qaYzPA);
+      let intl2 = tmp(recurrenceId[20]).intl;
       const _HermesInternal = HermesInternal;
-      obj5[2] = "" + intl2.string(tmp(tmp2[20]).t.qaYzPA) + ", " + event.name;
+      obj5[2] = "" + intl2.string(tmp(recurrenceId[20]).t.qaYzPA) + ", " + event.name;
       obj5[3] = function handleEndEvent() {
-        let obj = closure_1_1(recurrenceId[36]);
-        obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
+        importDefault(recurrenceId[36]);
+        const obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
         const intl = event(recurrenceId[20]).intl;
         obj[0] = intl.string(event(recurrenceId[20]).t.qaYzPA);
         const intl2 = event(recurrenceId[20]).intl;
@@ -484,57 +469,55 @@ const memoResult = importAllResult.memo(function GuildEventCardPrimaryAction(eve
         const intl4 = event(recurrenceId[20]).intl;
         obj[3] = intl4.string(event(recurrenceId[20]).t.p89ACt);
         obj[4] = function onConfirm() {
-          return closure_1_1(closure_1_2[37]).endEvent(closure_0.id, closure_0.guild_id);
+          return closure_1_1(recurrenceId[37]).endEvent(closure_0.id, closure_0.guild_id);
         };
-        obj[5] = closure_1_1(recurrenceId[38]).Colors.RED;
+        obj[5] = importDefault(recurrenceId[38]).Colors.RED;
         obj.show(obj);
       };
-      return callback4(tmp3(tmp2[31]), obj5);
-    } else if (tmp6.JOIN_GUILD === tmp4) {
+      return callback4(importDefault(recurrenceId[31]), obj5);
+    } else if (obj12.JOIN_GUILD === tmp4) {
       const obj6 = { event: null, recurrenceId: null };
       obj6[0] = event;
       obj6[1] = recurrenceId;
       return callback4(GuildEventJoinAndRSVPAction, obj6);
     } else {
-      tmp(tmp2[40]).assertNever(tmp4);
+      tmp(recurrenceId[40]).assertNever(tmp4);
+      const tmpResult = tmp(recurrenceId[40]);
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCardComponents.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCardComponents.tsx");
 
 export const useGuildEventCardStyles = styles;
 export const GuildEventShareAction = function GuildEventShareAction(event) {
   event = event.event;
-  importDefault = undefined;
-  dependencyMap = undefined;
   const tmp3 = canEveryoneRoleViewEventDefault(event);
   importDefault = tmp3;
-  let obj = event(8803);
-  obj = { guildId: event.guild_id, guildEventId: event.id };
+  event(8803);
+  let obj = { guildId: event.guild_id, guildEventId: event.id };
   dependencyMap = obj.SHARE_EVENT_DETAILS_LINK(obj);
   obj = { accessibilityLabel: null, onPress: null, icon: null, variant: "secondary" };
   const intl = event(1236).intl;
   obj[0] = "" + intl.string(event(1236).t.RDE0Sc) + ", " + event.name;
   obj[1] = function onPress() {
     if (closure_1) {
-      let tmpResult = tmp(tmp2[21]);
+      let tmpResult = event(table[21]);
       tmpResult.openShareEvent(event);
     } else {
-      tmpResult = tmp(tmp2[22]);
+      tmpResult = event(table[22]);
       tmpResult.copy(table);
       event(table[23]).presentLinkCopied();
       const obj2 = event(table[23]);
     }
   };
   obj[2] = importDefault(tmp3 ? 12048 : 4319);
-  return closure_22(event(8035).IconButton, obj);
+  return callback(event(8035).IconButton, obj);
 };
 export const GuildEventModeratorAction = function GuildEventModeratorAction(event) {
   event = event.event;
   const recurrenceId = event.recurrenceId;
-  let channel_id;
   closure_3 = undefined;
-  channel_id = event.channel_id;
+  const channel_id = event.channel_id;
   let obj = event(channel_id[26]);
   const items = [closure_12];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_12.getGuild(event.guild_id));
@@ -561,9 +544,9 @@ export const useEventRsvpState = function useEventRsvpState(id) {
   const items = [closure_17];
   const items1 = [id.id, arg1];
   const items2 = [
-    _initialize.useStateFromStores(items, () => closure_1_17.isInterestedInEventRecurrence(event.id, c1), items1),
+    require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_17.isInterestedInEventRecurrence(event.id, c1), items1),
     () => {
-      const result = event(closure_1_2[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
+      const result = event(dependencyMap[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
     }
   ];
   return items2;
@@ -577,7 +560,7 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
   const items2 = [
     obj.useStateFromStores(items, () => closure_1_17.isInterestedInEventRecurrence(event.id, c1), items1),
     () => {
-      const result = event(closure_1_2[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
+      const result = event(dependencyMap[21]).handleGuildScheduledEventRsvp(event.id, c1, event.guild_id);
     }
   ];
   const tmp3 = callback(items2, 2);
@@ -618,8 +601,8 @@ export const GuildEventCardImageHeader = function GuildEventCardImageHeader(even
     if (tmp5 > 0) {
       width = tmp5;
     }
-    let obj = _getAvatarURL;
-    obj = { style: null, onLayout: null, children: null };
+    getAvatarURL;
+    let obj = { style: null, onLayout: null, children: null };
     obj[0] = tmp.imageHeaderContainer;
     obj[1] = tmp6;
     obj = { style: null, source: null, resizeMode: "cover" };
@@ -628,7 +611,6 @@ export const GuildEventCardImageHeader = function GuildEventCardImageHeader(even
     obj[2] = callback4(closure_7, obj);
     return callback4(closure_6, obj);
   }
-  const tmp2 = importDefault;
   const tmp4 = callback(importAllResult.useState(0), 2);
 };
 export { UserCountIconPill };
@@ -714,13 +696,11 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
 
       };
       obj2[2] = tmp18;
-      tmp16Result = tmp16(tmp13(tmp3[51]).PressableOpacity, obj2);
+      tmp16Result = callback4(tmp13(tmp3[51]).PressableOpacity, obj2);
     }
     tmp15 = tmp16Result;
-    tmp16 = callback4;
   }
   const tmp5 = importDefault(toISOStringResult1[48]);
-  const tmp7 = undefined !== is_canceled && is_canceled;
   const items1 = [closure_14];
   const items2 = [event];
   const stateFromStores = event(toISOStringResult1[26]).useStateFromStores(items1, () => closure_1_14.getUser(event.creator_id), items2);
@@ -751,14 +731,14 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
   if (flag4) {
     const obj5 = { containerStyle: null, variant: "text-xs/bold" };
     obj5[0] = tmp.newBadge;
-    let tmp25Result = tmp25(tmp13(tmp3[45]).NewTag, obj5);
-    let tmp27 = tmp25;
+    let tmp25Result = callback4(tmp13(tmp3[45]).NewTag, obj5);
+    let tmp27 = callback4;
   } else {
     const obj6 = { size: "sm", color: null, style: null };
     obj6[1] = color;
     obj6[2] = tmp.dateIcon;
-    tmp25Result = tmp25(tmp13(tmp3[53]).CalendarIcon, obj6);
-    tmp27 = tmp25;
+    tmp25Result = callback4(tmp13(tmp3[53]).CalendarIcon, obj6);
+    tmp27 = callback4;
   }
   const items4 = [tmp25Result, , , ];
   const obj7 = { style: tmp.dateContainer, children: null };
@@ -802,14 +782,13 @@ export const GuildEventCardHeader = function GuildEventCardHeader(event) {
   items4[2] = flag3;
   items4[3] = tmp15;
   obj4[1] = items4;
-  return closure_23(closure_6, obj4);
+  return callback2(closure_6, obj4);
 };
 export { GuildEventCardTitle };
 export { GuildEventCardDescription };
 export const GuildEventCardMetaInfo = function GuildEventCardMetaInfo(textStyle) {
   ({ event, condensed } = textStyle);
-  let obj = { children: null };
-  obj = { event, textStyle: textStyle.titleStyle, style: textStyle.titleContainerStyle, condensed, onPress: textStyle.onTitlePress };
+  const obj = { event, textStyle: textStyle.titleStyle, style: textStyle.titleContainerStyle, condensed, onPress: textStyle.onTitlePress };
   ({ descriptionStyle, descriptionContainerStyle } = textStyle);
   const items = [callback4(GuildEventCardTitle, obj), callback4(GuildEventCardDescription, { event, textStyle: descriptionStyle, style: descriptionContainerStyle, condensed, numberOfLines: 3 })];
   obj[0] = items;
@@ -817,14 +796,12 @@ export const GuildEventCardMetaInfo = function GuildEventCardMetaInfo(textStyle)
 };
 export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event) {
   event = event.event;
-  let channel_id;
-  let stateFromStores;
   const tmp = styles();
-  channel_id = event.channel_id;
+  const channel_id = event.channel_id;
   let obj = channel_id(589);
   const items = [closure_10];
   const items1 = [channel_id];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getChannel(channel_id), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getChannel(channel_id), items1);
   obj1 = channel_id(589);
   const items2 = [closure_11, closure_9];
   const items3 = [stateFromStores];
@@ -878,13 +855,12 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   obj1[4] = tmp7;
   items4[1] = callback4(channel_id(4734).Text, obj1);
   obj[1] = items4;
-  return closure_23(closure_6, obj);
+  return callback2(closure_6, obj);
 };
 export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildInfo(arg0) {
-  let guild_id;
   ({ event, style, textStyle } = arg0);
   const tmp = styles();
-  guild_id = event.guild_id;
+  const guild_id = event.guild_id;
   let obj = guild_id(589);
   const items = [closure_12];
   const items1 = [guild_id];
@@ -908,18 +884,15 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     items3[1] = callback4(closure_6, obj1);
     obj[1] = items3;
     tmp5 = callback5(closure_6, obj);
-    const tmp10 = GuildIconSizesDefault;
   }
   return tmp5;
 };
 export const GuildEventCardGuildInfo = function GuildEventCardGuildInfo(event) {
   event = event.event;
-  let channel_id;
-  let guild_id;
   let stateFromStores;
   const tmp = styles();
-  channel_id = event.channel_id;
-  guild_id = event.guild_id;
+  const channel_id = event.channel_id;
+  let guild_id = event.guild_id;
   let obj = channel_id(stateFromStores[26]);
   const items = [closure_10];
   const items1 = [channel_id];
@@ -983,20 +956,20 @@ export const GuildEventCardGuildInfo = function GuildEventCardGuildInfo(event) {
         obj5[0] = eventLocationIconSource;
         obj5[1] = tmp2(tmp3[45]).Icon.Sizes.EXTRA_SMALL;
         obj5[2] = tmp.channelIcon;
-        tmp14Result = tmp14(tmp2(tmp3[45]).Icon, obj5);
+        tmp14Result = callback4(tmp2(tmp3[45]).Icon, obj5);
       }
       const items8 = [tmp14Result, ];
       const obj6 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
       obj6[0] = tmp.guildInfoChannelText;
       obj6[3] = tmp10;
-      items8[1] = tmp14(tmp2(tmp3[52]).Text, obj6);
+      items8[1] = callback4(tmp2(tmp3[52]).Text, obj6);
       obj3[3] = items8;
-      tmp12Result = tmp12(tmp13, obj3);
+      tmp12Result = callback2(closure_6, obj3);
     }
     items7[1] = tmp12Result;
     obj1[1] = items7;
-    items6[1] = closure_23(closure_6, obj1);
+    items6[1] = callback2(closure_6, obj1);
     obj[1] = items6;
-    return closure_23(closure_6, obj);
+    return callback2(closure_6, obj);
   }
 };

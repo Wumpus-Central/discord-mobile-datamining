@@ -2,12 +2,12 @@
 import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import componentDidMountDefault from "Timer.tsx";
-import closure_3 from "../../../../stores/CallStore.tsx";
+import callConnect from "../../../../stores/CallStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/voice_calls/native/components/OngoingCallTimer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_calls/native/components/OngoingCallTimer.tsx");
 
 export default function OnGoingCallTimer(style) {
   const channelId = style.channelId;
@@ -24,7 +24,6 @@ export default function OnGoingCallTimer(style) {
   let timestamp = 0;
   if (null != stateFromStores) {
     timestamp = DISCORD_EPOCHDefault.extractTimestamp(stateFromStores);
-    const obj2 = DISCORD_EPOCHDefault;
   }
   return jsx(componentDidMountDefault, { style: style.style, timestamp });
 };

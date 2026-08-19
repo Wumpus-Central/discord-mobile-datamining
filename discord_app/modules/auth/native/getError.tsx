@@ -1,7 +1,7 @@
 // discord_app/modules/auth/native/getError.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/auth/native/getError.tsx");
+const result = obj132.fileFinishedImporting("modules/auth/native/getError.tsx");
 
 export default function getError(arg0, arg1) {
   let tmp2 = null;

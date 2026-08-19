@@ -1,8 +1,8 @@
 // discord_app/modules/game_store/getAnalyticsDataForSKU.tsx
-import closure_0 from "../applications/ApplicationStore.tsx";
+import addApplication from "../applications/ApplicationStore.tsx";
 import { SKUFeatureTypes } from "../../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/game_store/getAnalyticsDataForSKU.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_store/getAnalyticsDataForSKU.tsx");
 
 export default function getAnalyticsDataForSKU(applicationId) {
   let flag = arg1;

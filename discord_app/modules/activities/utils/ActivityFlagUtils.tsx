@@ -1,5 +1,5 @@
 // discord_app/modules/activities/utils/ActivityFlagUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import hasFlag from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
@@ -7,7 +7,7 @@ import isEmbeddedActivityDefault from "isEmbeddedActivity.tsx";
 import ME from "../../../Constants.tsx";
 
 ({ ActivityFlags: c3, ActivityPartyPrivacy: c4 } = ME);
-const result = set.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
 
 export const computeActivityFlags = function computeActivityFlags(activity, flag, arg2, canLaunchFrameResult, privacy) {
   if (flag === undefined) {
@@ -48,18 +48,7 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
     const AllowActivityPartyPrivacyVoiceChannel2 = explicitContentFromProto.AllowActivityPartyPrivacyVoiceChannel;
     const PARTY_PRIVACY_FRIENDS2 = constants.PARTY_PRIVACY_FRIENDS;
     const setting1 = AllowActivityPartyPrivacyVoiceChannel2.getSetting();
-    if (setting) {
-      let tmp28 = tmp23 | PARTY_PRIVACY_FRIENDS2;
-    } else {
-      tmp28 = tmp23 & ~PARTY_PRIVACY_FRIENDS2;
-    }
     const PARTY_PRIVACY_VOICE_CHANNEL2 = constants.PARTY_PRIVACY_VOICE_CHANNEL;
-    if (setting1) {
-      let tmp29 = tmp28 | PARTY_PRIVACY_VOICE_CHANNEL2;
-    } else {
-      tmp29 = tmp28 & ~PARTY_PRIVACY_VOICE_CHANNEL2;
-    }
-    const tmp22 = constants;
   } else {
     let value = PRIVATE === constants2.PUBLIC;
     if (!value) {
@@ -75,18 +64,11 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
       const PARTY_PRIVACY_FRIENDS = constants.PARTY_PRIVACY_FRIENDS;
       const setting3 = AllowActivityPartyPrivacyVoiceChannel.getSetting();
       if (setting2) {
-        let tmp18 = tmp6 | PARTY_PRIVACY_FRIENDS;
-        let tmp19 = tmp17;
+        let tmp19 = constants;
       } else {
-        tmp18 = tmp6 & ~PARTY_PRIVACY_FRIENDS;
-        tmp19 = tmp17;
+        tmp19 = constants;
       }
       const PARTY_PRIVACY_VOICE_CHANNEL = tmp19.PARTY_PRIVACY_VOICE_CHANNEL;
-      if (setting3) {
-        let tmp20 = tmp18 | PARTY_PRIVACY_VOICE_CHANNEL;
-      } else {
-        tmp20 = tmp18 & ~PARTY_PRIVACY_VOICE_CHANNEL;
-      }
     }
   }
 };

@@ -1,21 +1,25 @@
 // discord_app/modules/main_tabs_v2/native/ConnectionBanner.tsx
+import nDefault from "../../../../_runtime/00689_n.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
 import _isNativeReflectConstructDefault from "../../../../_runtime/06352__isNativeReflectConstruct.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import ConnectionUnknownIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionUnknownIcon.tsx";
+import ConnectionFineIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
+import updateState from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import { ConnectivityIndicatorState as closure_8 } from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import CONNECTION_BANNER_HEIGHT from "you_bar/YouBarConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function ConnectionBannerIcon(state) {
   state = state.state;
   const tmp = callback3();
@@ -28,19 +32,19 @@ function ConnectionBannerIcon(state) {
     obj[2] = tmp.spinner;
     obj[1] = callback2(closure_5, obj);
     return callback2(closure_6, obj);
-  } else if (tmp7.NO_CONNECTION === state) {
+  } else if (constants.NO_CONNECTION === state) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.leadingSlot;
     const obj2 = { size: "xs", color: null };
-    obj2[1] = tmp5(712).colors.INTERACTIVE_ICON_DEFAULT;
-    obj1[1] = callback2(tmp2(15653).ConnectionUnknownIcon, obj2);
+    obj2[1] = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    obj1[1] = callback2(ConnectionUnknownIcon.ConnectionUnknownIcon, obj2);
     return callback2(closure_6, obj1);
-  } else if (tmp7.BACK_ONLINE === state) {
+  } else if (constants.BACK_ONLINE === state) {
     obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
     const obj3 = { size: "xs", color: null };
-    obj3[1] = tmp5(712).colors.ICON_FEEDBACK_POSITIVE;
-    obj[1] = callback2(tmp2(15655).ConnectionFineIcon, obj3);
+    obj3[1] = ThemesDefault.colors.ICON_FEEDBACK_POSITIVE;
+    obj[1] = callback2(ConnectionFineIcon.ConnectionFineIcon, obj3);
     return callback2(closure_6, obj);
   }
 }
@@ -54,19 +58,19 @@ function ConnectionBannerContent(state) {
   }
   obj = { variant: "text-sm/medium", color: str, maxFontSizeMultiplier: 1.5, children: null };
   if (constants.WAITING_FOR_NETWORK === state) {
-    const intl2 = tmp4(1236).intl;
-    let stringResult = intl2.string(tmp4(1236).t.XKk1gp);
-  } else if (tmp6.NO_CONNECTION === state) {
-    const intl = tmp4(1236).intl;
-    stringResult = intl.string(tmp4(1236).t.zPerw8);
-  } else if (tmp6.BACK_ONLINE === state) {
-    const intl3 = tmp4(1236).intl;
-    stringResult = intl3.string(tmp4(1236).t.j8lYE2);
+    const intl2 = getSystemLocale.intl;
+    let stringResult = intl2.string(getSystemLocale.t.XKk1gp);
+  } else if (constants.NO_CONNECTION === state) {
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t.zPerw8);
+  } else if (constants.BACK_ONLINE === state) {
+    const intl3 = getSystemLocale.intl;
+    stringResult = intl3.string(getSystemLocale.t.j8lYE2);
   }
   obj[3] = stringResult;
   items[1] = callback2(Text.Text, obj);
   obj[1] = items;
-  return closure_13(closure_6, obj);
+  return callback(closure_6, obj);
 }
 function BackOnlineGlow(opacity) {
   let token;
@@ -75,7 +79,7 @@ function BackOnlineGlow(opacity) {
   token = obj.useToken(ThemesDefault.colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = React.useMemo(() => {
-    const obj = closure_1_1(closure_1_2[14])(token);
+    const obj = nDefault(token);
     const items = [obj.alpha(0).css(), , , ];
     const alphaResult = obj.alpha(0);
     items[1] = obj.alpha(0.1).css();
@@ -85,8 +89,7 @@ function BackOnlineGlow(opacity) {
     items[3] = obj.alpha(0.55).css();
     return items;
   }, items);
-  obj = { style: items1, pointerEvents: "none", children: null };
-  items1 = [tmp.glow, { opacity: opacity.progress }];
+  const items1 = [tmp.glow, { opacity: opacity.progress }];
   obj = { style: tmp.glow, maskElement: callback2(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: closure_14, locations: closure_15, start: closure_16, end: closure_17 }), children: callback2(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: closure_18, start: closure_19, end: closure_20 }) };
   obj[2] = callback2(_isNativeReflectConstructDefault, obj);
   return callback2(_modDef4115.View, obj);
@@ -105,8 +108,7 @@ function ConnectionBannerInner() {
   }
   let tmp2Result = tmp2(tmp3[15]);
   sharedValue = tmp2Result.useSharedValue(0);
-  const tmp = callback3();
-  const tmp6 = constants;
+  let tmp = callback3();
   [tmp12, tmp13] = callback(sharedValue1.useState(tmp9), 2);
   callback = tmp13;
   tmp2Result = tmp2(tmp3[15]);
@@ -123,15 +125,16 @@ function ConnectionBannerInner() {
     }
     const fn = function n(arg0) {
       if (!tmp) {
-        closure_1_0(closure_1_2[15]).runOnJS(closure_3)(null);
-        const obj = closure_1_0(closure_1_2[15]);
+        closure_1_0(sharedValue[15]).runOnJS(closure_3)(null);
+        const obj = closure_1_0(sharedValue[15]);
       }
+      tmp = true !== arg0 || closure_0;
     };
     obj = { shouldShowBanner: callback, runOnJS: callback(sharedValue[15]).runOnJS, setRenderState: closure_3 };
     fn.__closure = obj;
     fn.__workletHash = 3065113239920;
     fn.__initData = closure_1_25;
-    const result = sharedValue1.set(obj.withSpring(num, closure_1_10, "respect-motion-settings", fn));
+    const result = sharedValue1.set(obj.withSpring(num, YOU_BAR_SPRING_CONFIG, "respect-motion-settings", fn));
   }, items1);
   const items2 = [stateFromStores === constants.BACK_ONLINE, sharedValue];
   const effect1 = obj4.useEffect(() => {
@@ -139,7 +142,8 @@ function ConnectionBannerInner() {
     if (closure_1) {
       num = 1;
     }
-    const result = sharedValue.set(callback(sharedValue[21]).withSpring(num, closure_1_10));
+    const result = sharedValue.set(callback(sharedValue[21]).withSpring(num, YOU_BAR_SPRING_CONFIG));
+    const obj = callback(sharedValue[21]);
   }, items2);
   const tmp11 = callback(sharedValue1.useState(tmp9), 2);
   tmp15 = null != tmp9 && tmp12 !== tmp9;
@@ -162,7 +166,7 @@ function ConnectionBannerInner() {
   obj = { pointerEvents: "none", style: items3, children: null };
   items3 = [tmp.container, { height: youBarBottomMargin + CONNECTION_BANNER_HEIGHT }, animatedStyle];
   let tmp21 = null;
-  if (tmp12 === tmp6.BACK_ONLINE) {
+  if (tmp12 === constants.BACK_ONLINE) {
     obj1 = { progress: null };
     obj1[0] = sharedValue;
     tmp21 = callback2(BackOnlineGlow, obj1);
@@ -176,7 +180,7 @@ function ConnectionBannerInner() {
   }
   items4[1] = tmp24;
   obj[2] = items4;
-  return closure_13(importDefault(sharedValue[15]).View, obj);
+  return callback(importDefault(sharedValue[15]).View, obj);
 }
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 CONNECTION_BANNER_HEIGHT = CONNECTION_BANNER_HEIGHT.CONNECTION_BANNER_HEIGHT;
@@ -189,8 +193,7 @@ let closure_17 = { x: 1, y: 0.5 };
 let closure_18 = [0, 0.4, 0.75, 1];
 let closure_19 = { x: 0, y: 0 };
 let closure_20 = { x: 0, y: 1 };
-createCacheKey = { container: { position: "absolute", left: 0, right: 0, bottom: 0 }, glow: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }, glowMaskGradient: { flex: 1 }, content: null, leadingSlot: null, spinner: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, height: CONNECTION_BANNER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12 };
+const createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, height: CONNECTION_BANNER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { width: 16, height: 16, alignItems: "center", justifyContent: "center" };
 let items = [{ scale: 0.8 }];
@@ -198,13 +201,12 @@ createCacheKey[5] = { transform: items };
 let closure_21 = createCacheKey.createStyles(createCacheKey);
 let closure_25 = { code: "function ConnectionBannerTsx1(finished){const{shouldShowBanner,runOnJS,setRenderState}=this.__closure;if(finished===true&&!shouldShowBanner){runOnJS(setRenderState)(null);}}" };
 let closure_26 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECTION_BANNER_HEIGHT}=this.__closure;return{transform:[{translateY:(1-progress.get())*CONNECTION_BANNER_HEIGHT}],opacity:progress.get()};}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
   const config = stateFromStores(13237).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
-  dependencyMap = undefined;
   let obj = stateFromStores(13237);
   const items = [closure_7];
   stateFromStores = hidden(589).useStateFromStores(items, () => state.getState());
@@ -215,20 +217,20 @@ export default function ConnectionBanner() {
     ref.current = stateFromStores;
     if (null != current) {
       if (current === closure_1_8.HIDDEN) {
-        if (tmp !== tmp7.HIDDEN) {
-          if (tmp !== tmp7.BACK_ONLINE) {
+        if (stateFromStores !== closure_1_8.HIDDEN) {
+          if (stateFromStores !== closure_1_8.BACK_ONLINE) {
             let str = "hidden";
             if (!hidden) {
               let str2 = "connecting";
-              if (tmp === tmp7.NO_CONNECTION) {
+              if (stateFromStores === closure_1_8.NO_CONNECTION) {
                 str2 = "offline";
               }
               str = str2;
             }
-            let obj = stateFromStores(ref[19]);
-            obj = { connection_indicator_type: null };
+            stateFromStores(ref[19]);
+            const obj = { connection_indicator_type: null };
             obj[0] = str;
-            obj.track(closure_1_11.CONNECTION_INDICATOR_SHOWN, obj);
+            obj.track(AnalyticEvents.CONNECTION_INDICATOR_SHOWN, obj);
           }
         }
       }

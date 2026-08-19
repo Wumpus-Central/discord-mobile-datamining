@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/isPartyFull.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");
 
 export const isPartyFull = function isPartyFull(partySize) {
   ({ partySize, maxPartySize } = partySize);

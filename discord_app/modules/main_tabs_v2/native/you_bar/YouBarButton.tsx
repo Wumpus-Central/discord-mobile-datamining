@@ -7,7 +7,7 @@ import CONNECTION_BANNER_HEIGHT from "YouBarConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 class YouBarButtonIcon {
   constructor(arg0) {
     hasBadge = global.hasBadge;
@@ -50,7 +50,7 @@ class YouBarButtonIcon {
       const result = 2 * sum;
       let sum1 = result;
       if (null != badgeWidth) {
-        sum1 = tmp4 + 2 * tmp;
+        sum1 = tmp4 + 2 * borderWidth;
       }
       return { shape: size2(num3[6]).CutoutShape.RoundedRect, x: size2 - (result - borderWidth) + badgeSize, y: size2 - (result - borderWidth) + num3, width: sum1, height: result, cornerRadius: Math.min(sum, size2 / 2, sum1 / 2) };
     }, items);
@@ -119,8 +119,7 @@ class YouBarButtonContainer {
 let c3 = importAllResult;
 ({ YOU_BAR_BUTTON_HIT_SLOP: c5, YOU_BAR_BUTTON_ICON_SIZE: closure_6 } = CONNECTION_BANNER_HEIGHT);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { buttonContainer: null };
-obj = { position: "relative", borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
+let obj = { position: "relative", borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
 obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function YouBarButton(arg0) {
@@ -132,14 +131,14 @@ const memoResult = importAllResult.memo(function YouBarButton(arg0) {
   }
   obj = { children: null };
   obj[1] = str;
-  obj[3] = closure_7(YouBarButtonIcon, { icon, badgeStyle, hasBadge });
+  obj[3] = callback(YouBarButtonIcon, { icon, badgeStyle, hasBadge });
   obj[4] = onPress;
   obj[5] = onLongPress;
   obj[6] = closure_5;
-  obj[0] = closure_7(IconButton.IconButton, obj);
-  return closure_7(YouBarButtonContainer, obj);
+  obj[0] = callback(IconButton.IconButton, obj);
+  return callback(YouBarButtonContainer, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");
 
 export default memoResult;
 export { YouBarButtonIcon };

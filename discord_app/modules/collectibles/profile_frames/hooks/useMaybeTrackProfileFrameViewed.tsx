@@ -1,20 +1,16 @@
 // discord_app/modules/collectibles/profile_frames/hooks/useMaybeTrackProfileFrameViewed.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import noop from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../CollectiblesCategoryStore.tsx";
+import updateCategoriesAndProducts from "../../CollectiblesCategoryStore.tsx";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
-let result = set.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeTrackProfileFrameViewed.tsx");
+let result = obj132.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeTrackProfileFrameViewed.tsx");
 
 export default function useMaybeTrackProfileFrameViewed(skuId) {
   skuId = skuId.skuId;
   const openedAt = skuId.openedAt;
   ({ context: closure_2, analyticsLocations: closure_3 } = skuId);
   let stateFromStores;
-  closure_5 = undefined;
-  closure_6 = undefined;
-  closure_7 = undefined;
-  closure_8 = undefined;
   const items = [stateFromStores];
   stateFromStores = skuId(openedAt[2]).useStateFromStores(items, () => stateFromStores.getProductFetch(skuId));
   closure_5 = callback2(undefined);
@@ -25,24 +21,24 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
   callback(() => {
     if (null != skuId) {
       if (null != openedAt) {
-        let tmp3 = ref2.current === tmp;
+        let tmp3 = ref2.current === skuId;
         if (tmp3) {
-          tmp3 = ref3.current === tmp22;
+          tmp3 = ref3.current === openedAt;
         }
         if (!tmp3) {
-          tmp23.current = tmp;
-          ref3.current = tmp22;
+          ref2.current = skuId;
+          ref3.current = openedAt;
           ref4.current = false;
           ref.current = undefined;
         }
         const _Date = Date;
         const timestamp = Date.now();
         if (ref.current == null) {
-          tmp9.current = timestamp - tmp22;
+          ref.current = timestamp - openedAt;
         }
         let state;
         if (stateFromStores != null) {
-          state = tmp10.state;
+          state = stateFromStores.state;
         }
         let current = "success" !== state;
         if (!current) {
@@ -50,24 +46,23 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
         }
         if (!current) {
           ref4.current = true;
-          let obj = skuId(openedAt[3]);
-          obj = { profileUi: "PROFILE_FRAME", timeToInteractiveMs: null, timeToLoadMs: null, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
-          obj[1] = tmp9.current;
-          obj[2] = timestamp - tmp22;
+          skuId(openedAt[3]);
+          const obj = { profileUi: "PROFILE_FRAME", timeToInteractiveMs: null, timeToLoadMs: null, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
+          obj[1] = ref.current;
+          obj[2] = timestamp - openedAt;
           let diff;
-          if (null != tmp10.startedAt) {
-            if (null != tmp10.endedAt) {
-              diff = tmp10.endedAt - tmp10.startedAt;
+          if (null != stateFromStores.startedAt) {
+            if (null != stateFromStores.endedAt) {
+              diff = stateFromStores.endedAt - stateFromStores.startedAt;
             }
           }
           obj[3] = diff;
-          obj[4] = tmp22;
-          obj[5] = tmp10.startedAt;
+          obj[4] = openedAt;
+          obj[5] = stateFromStores.startedAt;
           obj[6] = closure_3;
           const merged = Object.assign(closure_2);
           const result = obj.maybeTrackUserProfileUiViewed(obj);
         }
-        tmp23 = ref2;
       }
     }
   }, items1);

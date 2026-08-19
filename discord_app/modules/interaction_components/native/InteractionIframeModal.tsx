@@ -1,16 +1,15 @@
 // discord_app/modules/interaction_components/native/InteractionIframeModal.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { BotTagTypes } from "../../applications/ApplicationConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { wrapper: null, header: null, headerCenterContainer: null, headerTitleContainer: null, closeButton: null, spacerView: null, botTag: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" };
 createCacheKey[2] = { flexDirection: "column", alignItems: "center" };
@@ -19,7 +18,7 @@ createCacheKey[4] = { marginEnd: 8 };
 createCacheKey[5] = { marginStart: 8, width: 32 };
 createCacheKey[6] = { marginStart: 4 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/interaction_components/native/InteractionIframeModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/interaction_components/native/InteractionIframeModal.tsx");
 
 export default function InteractionIframeModal(children) {
   const tmp = callback3();
@@ -60,8 +59,8 @@ export default function InteractionIframeModal(children) {
     obj[5] = queryParams.instance_id;
     obj[6] = queryParams;
     obj[7] = function onLoadError() {
-      let obj = callback(callback[12]);
-      obj = { key: "interaction_iframe_modal", content: null };
+      callback(callback[12]);
+      const obj = { key: "interaction_iframe_modal", content: null };
       const intl = id(callback[13]).intl;
       obj[1] = intl.string(id(callback[13]).t.HehpFW);
       obj.open(obj);
@@ -96,12 +95,12 @@ export default function InteractionIframeModal(children) {
   obj6[2] = tmp.botTag;
   items4[1] = callback2(tmp6Result, obj6);
   obj4[1] = items4;
-  const items5 = [closure_8(View, obj4), callback2(id(callback[18]).Text, { variant: "text-xs/medium", color: "interactive-text-default", children: children.title })];
+  const items5 = [callback(View, obj4), callback2(id(callback[18]).Text, { variant: "text-xs/medium", color: "interactive-text-default", children: children.title })];
   obj3[1] = items5;
-  items3[1] = closure_8(View, obj3);
+  items3[1] = callback(View, obj3);
   items3[2] = callback2(View, { style: tmp.spacerView });
   obj1[1] = items3;
-  const items6 = [closure_8(View, obj1), tmp11];
+  const items6 = [callback(View, obj1), tmp11];
   obj[1] = items6;
-  return closure_8(View, obj);
+  return callback(View, obj);
 };

@@ -1,19 +1,20 @@
 // discord_app/modules/threads/native/components/ThreadParentMessage.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import transitionTo from "../../../routing/router_utils.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import setOptionsDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import DCDChatItemDefault from "../../../../components_native/chat/ChatItem.tsx";
-import closure_3 from "../../../replies/ReferencedMessageStore.tsx";
+import processMessage from "../../../replies/ReferencedMessageStore.tsx";
 import { ReferencedMessageState } from "../../../replies/ReferencedMessageStore.tsx";
-import closure_5 from "../../../../stores/MessageStore.tsx";
+import reinjectEphemerals from "../../../../stores/MessageStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
 let obj = new setOptionsDefault();
 obj.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderEmbeds: true, ignoreMentioned: true, inlineAttachmentMedia: true, inlineEmbedMedia: true, renderReactions: false, renderReplies: true, renderThreadEmbeds: false });
-const result = require("set").fileFinishedImporting("modules/threads/native/components/ThreadParentMessage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/threads/native/components/ThreadParentMessage.tsx");
 
 export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(arg0) {
   ({ guildId: require, messageId: importDefault, channelId: dependencyMap } = arg0);
@@ -28,7 +29,7 @@ export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(
   if (state === ReferencedMessageState.LOADED) {
     obj = { accessibilityRole: "button", onPress: null, children: null };
     obj[1] = function onPress() {
-      closure_1_0(closure_1_2[7]).transitionToGuild(closure_0, closure_2, closure_1);
+      transitionTo.transitionToGuild(closure_0, closure_2, closure_1);
     };
     obj = { rowGenerator: null, message: null };
     obj[0] = obj;

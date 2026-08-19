@@ -1,7 +1,7 @@
 // discord_app/modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");
+const result = obj132.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");
 class BaseTelemetryChannel {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);

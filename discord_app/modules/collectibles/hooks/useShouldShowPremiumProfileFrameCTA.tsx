@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import useCanPurchaseFramesDefault from "useCanPurchaseFrames.tsx";
 import useShouldShowPremiumProfileFrameEADefault from "useShouldShowPremiumProfileFrameEA.tsx";
 
-const result = set.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx");
 
 export default function useShouldShowPremiumProfileFrameCTA(location) {
   const _location = location.location;

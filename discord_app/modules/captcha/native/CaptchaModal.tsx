@@ -6,14 +6,15 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
 import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
 import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import prototype from "../SharedCaptchaUtils.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { doesRegistrationHaveIdentityType as closure_6 } from "../../auth/native/RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../../auth/RegistrationConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 ({ Keyboard: c4, View: c5 } = get_ActivityIndicator);
 ({ RegisterTransitionSteps: error, RegistrationTransitionActionTypes: closure_8 } = RegistrationTransitionActionTypes);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -24,16 +25,14 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
   }
   return { contentContainer: { alignItems: "center", paddingVertical: 8, paddingHorizontal }, description: { paddingBottom: 12, paddingTop: 4 } };
 });
-let result = require("set").fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx");
 
 export default function CaptchaModal(arg0) {
   ({ onCaptchaVerify: require, onReject } = arg0);
   ({ close: dependencyMap, sitekey: closure_3, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
-  let navigation;
-  let callback;
   const tmp2 = callback2(onReject(8582)());
   let obj = createStandardNavigationFactories;
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [navigation];
   const memo = React.useMemo(() => {
     const state = navigation.getState();
@@ -53,38 +52,37 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(16501)({ onReject, analyticsType: memo });
+  const callback = onReject(16501)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);
   obj = { style: tmp2.contentContainer, spacing: 12, children: null };
   const items1 = [callback(AccountAgeTier10LargeBadge.DisguiseSpotIllustration, { scale: 0.5 }), , ];
   if (headerText == null) {
-    const intl = tmp3(1236).intl;
-    headerText = intl.string(tmp3(1236).t.FpoiHe);
+    const intl = getSystemLocale.intl;
+    headerText = intl.string(getSystemLocale.t.FpoiHe);
   }
   const items2 = [callback(Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }), ];
   obj = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {
-    const intl2 = tmp3(1236).intl;
-    bodyText = intl2.string(tmp3(1236).t["/CidxO"]);
+    const intl2 = getSystemLocale.intl;
+    bodyText = intl2.string(getSystemLocale.t["/CidxO"]);
   }
   obj1 = { startHeight: 900, startExpanded: true, children: null };
   let obj2 = { children: null };
   obj[3] = bodyText;
   items2[1] = callback(Text.Text, obj);
   obj2[0] = items2;
-  items1[1] = closure_10(closure_5, obj2);
+  items1[1] = callback(closure_5, obj2);
   const obj3 = {
     grow: true,
     onPress() {
       callback2();
       callback();
-      const result = closure_1_0(closure_1_2[15]).emitCaptchaDistributionMetric(closure_7);
-      let obj = closure_1_0(closure_1_2[15]);
-      let obj2 = onReject(closure_1_2[16]);
-      const showCaptchaResult = onReject(closure_1_2[16]).showCaptcha(closure_4, closure_3, closure_5);
-      onReject(closure_1_2[16]).showCaptcha(closure_4, closure_3, closure_5).then((arg0) => {
+      const result = prototype.emitCaptchaDistributionMetric(closure_7);
+      let obj2 = onReject(dependencyMap[16]);
+      const showCaptchaResult = onReject(dependencyMap[16]).showCaptcha(closure_4, closure_3, closure_5);
+      onReject(dependencyMap[16]).showCaptcha(closure_4, closure_3, closure_5).then((result) => {
         let obj = state;
         state = state.getState();
         let name;
@@ -101,11 +99,11 @@ export default function CaptchaModal(arg0) {
         if (tmp4) {
           obj = { step: null, actionType: null };
           obj[0] = closure_1_7.CAPTCHA;
-          obj[1] = closure_1_8.SUBMITTED;
+          obj[1] = navigation.SUBMITTED;
           closure_1_0(closure_1_2[17]).trackRegTransition(obj);
           const obj2 = closure_1_0(closure_1_2[17]);
         }
-        callback(arg0, closure_6);
+        callback(result, closure_6);
         const state1 = obj.getState();
         let name1;
         if (state1 != null) {
@@ -121,22 +119,22 @@ export default function CaptchaModal(arg0) {
         if (tmp15) {
           obj = { step: null, actionType: null };
           obj[0] = closure_1_7.CAPTCHA;
-          obj[1] = closure_1_8.SUCCESS;
+          obj[1] = navigation.SUCCESS;
           closure_1_0(closure_1_2[17]).trackRegTransition(obj);
           const obj4 = closure_1_0(closure_1_2[17]);
         }
-      }).catch((arg0) => {
+      }).catch((error) => {
         if (closure_1 != null) {
-          tmp(arg0);
+          tmp(error);
         }
       });
     },
     text: null
   };
-  const intl3 = tmp3(1236).intl;
+  const intl3 = getSystemLocale.intl;
   obj3[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
   items1[2] = callback(Button.Button, obj3);
   obj[2] = items1;
-  obj1[2] = closure_10(Stack.Stack, obj);
+  obj1[2] = callback(Stack.Stack, obj);
   return callback(Background.BottomSheet, obj1);
 };

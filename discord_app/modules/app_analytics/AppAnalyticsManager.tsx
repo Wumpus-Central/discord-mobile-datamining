@@ -1,20 +1,20 @@
 // discord_app/modules/app_analytics/AppAnalyticsManager.tsx
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import _openRobloxURLWithRootPlaceId from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import collectGuildAnalyticsMetadata from "AppAnalyticsUtils.tsx";
 import getGamePlatformDefault from "../activities/utils/getGamePlatform.tsx";
-import closure_3 from "../game_detection/RunningGameStore.native.tsx";
-import closure_4 from "../../stores/MediaEngineStore.tsx";
-import closure_5 from "../../stores/RTCConnectionStore.tsx";
-import closure_6 from "../../stores/SelfPresenceStore.tsx";
-import closure_7 from "../../stores/SpeakingStore.tsx";
-import closure_8 from "../../stores/views/SortedVoiceStateStore.tsx";
+import initialize from "../game_detection/RunningGameStore.native.tsx";
+import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
+import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
+import filterPlayingActivities from "../../stores/SelfPresenceStore.tsx";
+import anyoneHasFlagInContext from "../../stores/SpeakingStore.tsx";
+import getVoiceStatesForGuild from "../../stores/views/SortedVoiceStateStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ AnalyticEvents: c9, ActivityTypes: c10 } = ME);
-const MINUTE = setDefault.Millis.MINUTE;
+const MINUTE = obj132Default.Millis.MINUTE;
 initializeDefault;
 class AppAnalyticsManager extends tmp3 {
   constructor() {
@@ -25,32 +25,32 @@ class AppAnalyticsManager extends tmp3 {
     applyArgumentsResult._handleRTCConnectionStoreChanged = function _handleRTCConnectionStoreChanged() {
       const channelId = closure_1_5.getChannelId();
       if (applyArgumentsResult._voiceChannelId !== channelId) {
-        obj._voiceChannelId = channelId;
+        applyArgumentsResult._voiceChannelId = channelId;
         if (null != channelId) {
-          if (null == obj._reportInterval) {
-            const interval = new applyArgumentsResult(closure_1_2[9]).Interval();
-            obj._reportInterval = interval;
-            const _reportInterval = obj._reportInterval;
-            _reportInterval.start(closure_1_11, () => {
+          if (null == applyArgumentsResult._reportInterval) {
+            const interval = new applyArgumentsResult(dependencyMap[9]).Interval();
+            applyArgumentsResult._reportInterval = interval;
+            const _reportInterval = applyArgumentsResult._reportInterval;
+            _reportInterval.start(MINUTE, () => {
               closure_0._trackStartSpeaking();
               closure_0._trackStartListening();
             });
           }
         } else {
-          obj._reset();
+          applyArgumentsResult._reset();
         }
       }
     };
     applyArgumentsResult._handleSpeakingStoreChanged = function _handleSpeakingStoreChanged() {
       const result = closure_1_7.isCurrentUserSpeaking();
       if (applyArgumentsResult._currentUserSpeaking !== result) {
-        obj2._currentUserSpeaking = result;
-        obj2._trackStartSpeaking();
+        applyArgumentsResult._currentUserSpeaking = result;
+        applyArgumentsResult._trackStartSpeaking();
       }
       const isAnyoneElseSpeakingResult = closure_1_7.isAnyoneElseSpeaking();
       if (applyArgumentsResult._anyoneElseSpeaking !== isAnyoneElseSpeakingResult) {
-        obj2._anyoneElseSpeaking = isAnyoneElseSpeakingResult;
-        obj2._trackStartListening();
+        applyArgumentsResult._anyoneElseSpeaking = isAnyoneElseSpeakingResult;
+        applyArgumentsResult._trackStartListening();
       }
     };
     return applyArgumentsResult;
@@ -78,8 +78,7 @@ prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
   if (this._currentUserSpeaking) {
     const channelId = store.getChannelId();
     const guildId = store.getGuildId();
-    let obj = collectGuildAnalyticsMetadata;
-    obj = { mode: null, priority: null, channel: null, server: null, channel_id: null, guild_id: null, rtc_connection_id: null, media_session_id: null, voice_state_count: null };
+    const obj = { mode: null, priority: null, channel: null, server: null, channel_id: null, guild_id: null, rtc_connection_id: null, media_session_id: null, voice_state_count: null };
     obj[0] = closure_4.getMode();
     obj[1] = closure_7.isCurrentUserPrioritySpeaking();
     obj[2] = channelId;
@@ -113,7 +112,6 @@ prototype["_trackStartListening"] = function _trackStartListening() {
       obj[8] = closure_8.countVoiceStatesForChannel(self._voiceChannelId);
       const merged = Object.assign(self.getGameMetadata());
       collectGuildAnalyticsMetadata.trackWithMetadata(constants.START_LISTENING, obj);
-      const obj2 = collectGuildAnalyticsMetadata;
     }
   }
 };
@@ -154,12 +152,11 @@ prototype["getGameMetadata"] = function getGameMetadata() {
   let subgameMetadata = null;
   if (null != currentGameForAnalytics) {
     subgameMetadata = _openRobloxURLWithRootPlaceId.getSubgameMetadata(currentGameForAnalytics);
-    const obj2 = _openRobloxURLWithRootPlaceId;
   }
   obj[6] = subgameMetadata;
   return obj;
 };
 const appAnalyticsManager = new AppAnalyticsManager();
-let result = require("set").fileFinishedImporting("modules/app_analytics/AppAnalyticsManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_analytics/AppAnalyticsManager.tsx");
 
 export default appAnalyticsManager;

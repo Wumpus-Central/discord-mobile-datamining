@@ -1,5 +1,5 @@
 // discord_app/modules/home_drawer/native/HomeDrawerSubtitleStore.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import keys from "../../../../_runtime/00644_keys.js";
 
 let c0 = null;
@@ -18,7 +18,7 @@ const obj = keys.create((arg0, arg1) => {
         if ("voice" === callback().currentType) {
           str = "activity";
         }
-        closure_0({ currentType: str });
+        callback({ currentType: str });
       }, 3500);
     },
     stopTimer() {
@@ -31,6 +31,6 @@ const obj = keys.create((arg0, arg1) => {
     }
   };
 });
-const result = set.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
+const result = obj132.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
 
 export default obj;

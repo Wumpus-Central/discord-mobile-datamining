@@ -1,12 +1,12 @@
 // discord_app/modules/device/ThermalUtils.native.tsx
 import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../../utils/PlatformUtils.tsx";
+import obj132 from "../../utils/PlatformUtils.tsx";
 import keys from "../../../_runtime/00644_keys.js";
-import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
+import { obj132 } from "../../utils/PlatformUtils.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   let DCDDeviceThermalStateManager = enforcingDefault;
 } else {
   DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
@@ -19,17 +19,16 @@ let closure_5 = keys.create((arg0) => {
     if (tmpResult.getSystemVersionMajor() >= 29) {
       thermalState = enforcingDefault.getThermalState();
       let resolved = Promise.resolve(thermalState);
-      const obj3 = enforcingDefault;
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = _DCDDeviceManager;
+    tmpResult = tmp(4354);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();
-    thermalState1.then(function updateThermalState(arg0) {
-      const callback = arg0;
-      callback(closure_1_2[5]).batchUpdates(() => state((rawThermalState) => {
+    thermalState1.then(function updateThermalState(result) {
+      const callback = result;
+      callback(dependencyMap[5]).batchUpdates(() => state((rawThermalState) => {
         let tmp = rawThermalState;
         if (rawThermalState.rawThermalState !== closure_0) {
           const obj = { rawThermalState: null };
@@ -41,7 +40,7 @@ let closure_5 = keys.create((arg0) => {
     });
     nativeEventEmitter.addListener("DeviceThermalStateDidChange", (state) => {
       state = state.state;
-      callback(closure_1_2[5]).batchUpdates(() => state((rawThermalState) => {
+      callback(dependencyMap[5]).batchUpdates(() => state((rawThermalState) => {
         let tmp = rawThermalState;
         if (rawThermalState.rawThermalState !== closure_0) {
           const obj = { rawThermalState: null };
@@ -53,8 +52,10 @@ let closure_5 = keys.create((arg0) => {
     });
     return { rawThermalState: "r" };
   }
+  obj = obj132;
+  tmp = _require;
 });
-const result = set.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");
+const result = obj132.fileFinishedImporting("modules/device/ThermalUtils.native.tsx");
 
 export default {
   getRawThermalState() {

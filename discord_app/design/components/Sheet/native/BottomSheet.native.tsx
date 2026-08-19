@@ -1,22 +1,21 @@
 // discord_app/design/components/Sheet/native/BottomSheet.native.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ACTION_SHEET_START_HEIGHT_RATIO from "../../../../modules/action_sheet/native/ActionSheetConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function Background(arg0) {
   const merged = Object.assign(arg0);
   return callback(closure_6, {});
 }
 function GradientBackground(arg0) {
-  let obj = {};
   const merged = Object.assign(arg0);
-  obj = { style: callback2(false).backgroundOverlay };
+  const obj = { style: callback2(false).backgroundOverlay };
   obj.children = callback(closure_6, obj);
   return callback(closure_6, obj);
 }
@@ -33,20 +32,19 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
   if (arg2 === undefined) {
     flag = false;
   }
-  let obj = { background: null, wrapper: null, wrapperWithBorder: null, content: null, gradient: null, handleIndicator: null, backgroundOverlay: null, header: null, body: null };
-  obj = { overflow: "hidden", borderTopLeftRadius: closure_13, borderTopRightRadius: closure_13, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+  let obj = { overflow: "hidden", borderTopLeftRadius: closure_13, borderTopRightRadius: closure_13, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
   obj[0] = obj;
   obj[1] = { overflow: "hidden", flex: 1 };
   obj = { overflow: "hidden", marginTop: closure_11, marginHorizontal: closure_11, borderTopLeftRadius: closure_12, borderTopRightRadius: closure_12, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
   obj[2] = obj;
   let tmp4;
   if (arg0) {
-    tmp4 = tmp;
+    tmp4 = closure_13;
   }
   obj1 = { borderTopLeftRadius: tmp4, borderTopRightRadius: null, overflow: null, marginBottom: null, flex: 1 };
   let tmp5;
   if (arg0) {
-    tmp5 = tmp;
+    tmp5 = closure_13;
   }
   obj1[1] = tmp5;
   let str;
@@ -60,7 +58,7 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
   }
   obj1[3] = num2;
   obj[3] = obj1;
-  let obj4 = set;
+  let obj4 = obj132;
   let str2;
   if (obj4.isIOS()) {
     str2 = "hidden";
@@ -138,11 +136,12 @@ let closure_19 = importAllResult.forwardRef((windowDimensions, ref) => {
     obj1[0] = callback;
     obj1[1] = wrapperStyle;
     obj1[2] = children;
-    obj[3] = closure_16(closure_6, obj1);
-    obj.children = closure_16(tmp4(tmp3[10]).BottomSheetScrollView, obj);
-    return closure_16(onExpand(tmp3[10]), obj);
+    obj[3] = callback(closure_6, obj1);
+    obj.children = callback(tmp4(tmp3[10]).BottomSheetScrollView, obj);
+    return callback(tmp2(tmp3[10]), obj);
   }
   items = [];
+  tmp2 = onExpand;
 });
 let closure_20 = importAllResult.forwardRef((windowDimensions, ref) => {
   ({ startHeight, contentHeight, maxHeight, hasEverExpanded } = windowDimensions);
@@ -152,12 +151,11 @@ let closure_20 = importAllResult.forwardRef((windowDimensions, ref) => {
   const borderGradient = windowDimensions.borderGradient;
   ({ wrapperStyle, children, extraContent } = windowDimensions);
   const merged = Object.assign(windowDimensions, Object.create(null));
-  let isScreenReaderEnabled;
   startHeight = undefined;
   maxHeight = undefined;
   c6 = undefined;
   let obj = hasEverExpanded(onExpand[9]);
-  isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   if (startHeight == null) {
     startHeight = height * closure_7;
   }
@@ -165,7 +163,7 @@ let closure_20 = importAllResult.forwardRef((windowDimensions, ref) => {
     maxHeight = contentHeight;
   }
   if (maxHeight == null) {
-    maxHeight = height - tmp5(tmp4[11]).NAV_BAR_HEIGHT_MULTILINE - onChange(onExpand[8])().top;
+    maxHeight = height - hasEverExpanded(tmp4[11]).NAV_BAR_HEIGHT_MULTILINE - onChange(onExpand[8])().top;
   }
   let items = [hasEverExpanded, isScreenReaderEnabled, maxHeight, startHeight];
   const memo = startHeight.useMemo(() => {
@@ -211,15 +209,15 @@ let closure_20 = importAllResult.forwardRef((windowDimensions, ref) => {
     obj = { style: null, start: null, end: null, colors: null, children: null };
     obj[0] = tmp2.gradient;
     tmp3Result = tmp3(tmp4[12]);
-    obj[1] = tmp5(tmp4[13]).VerticalGradient.START;
-    obj[2] = tmp5(tmp4[13]).VerticalGradient.END;
+    obj[1] = hasEverExpanded(tmp4[13]).VerticalGradient.START;
+    obj[2] = hasEverExpanded(tmp4[13]).VerticalGradient.END;
     obj[3] = borderGradient;
     obj[4] = tmp11;
     tmp10Result = callback(tmp3Result, obj);
   }
   const items3 = [tmp10Result, extraContent];
   obj.children = items3;
-  return closure_17(tmp3Result, obj);
+  return callback2(tmp3Result, obj);
 });
 let closure_23 = { code: "function BottomSheetNativeTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()<=-1;}" };
 let closure_24 = { code: "function BottomSheetNativeTsx2(){const{animatedIsVisuallyClosed}=this.__closure;return animatedIsVisuallyClosed.get();}" };
@@ -247,22 +245,13 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
   ({ borderGradient, showGradient } = scrollable);
   ({ keyboardShouldPersistTaps, children, backgroundStyles, contentStyles, bodyStyles, extraContent, contentHeight } = scrollable);
   let merged = Object.assign(scrollable, Object.create(null));
-  let transitionState;
-  let close;
-  let onLeave;
-  let registerDismissHandler;
-  ref = undefined;
-  closure_11 = undefined;
-  closure_12 = undefined;
-  closure_13 = undefined;
-  let animatedIndex;
   let derivedValue;
   let obj = onExpand;
   const context = onExpand.useContext(backdropChildren(dismissAccessibilityLabel[15]));
-  transitionState = context.transitionState;
-  close = context.close;
-  onLeave = context.onLeave;
-  registerDismissHandler = context.registerDismissHandler;
+  const transitionState = context.transitionState;
+  const close = context.close;
+  const onLeave = context.onLeave;
+  const registerDismissHandler = context.registerDismissHandler;
   const rect = backdropChildren(dismissAccessibilityLabel[8])();
   const tmp5 = callback2(handleDisabled, Math.max(rect.bottom, derivedValue), flag);
   ref = onExpand.useRef(null);
@@ -328,7 +317,7 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
       }
     }
   }, items2);
-  animatedIndex = merged.animatedIndex;
+  let animatedIndex = merged.animatedIndex;
   const callback1 = obj.useCallback(() => {
     callback(true);
     if (onExpand != null) {
@@ -382,9 +371,8 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
   }), items4);
   const items6 = [footer];
   const callback3 = obj.useCallback((animatedIndex) => {
-    let obj = { style: items, children: null };
-    items = [onDismiss.absoluteFill, animatedIndex.style];
-    obj = { animatedIndex: animatedIndex.animatedIndex, opacity: width };
+    const items = [onDismiss.absoluteFill, animatedIndex.style];
+    const obj = { animatedIndex: animatedIndex.animatedIndex, opacity: width };
     const items1 = [closure_1_16(width(dismissAccessibilityLabel[20]).BottomSheetBackdrop, obj), backdropChildren];
     obj[1] = items1;
     return closure_1_17(transitionState, obj);
@@ -394,13 +382,12 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
     const merged = Object.assign(arg0);
     let tmpResult = footer;
     if (footer == null) {
-      tmpResult = tmp(width(dismissAccessibilityLabel[21]).NavScrim, {});
+      tmpResult = closure_1_16(width(dismissAccessibilityLabel[21]).NavScrim, {});
     }
     obj.children = tmpResult;
     return closure_1_16(width(dismissAccessibilityLabel[10]).BottomSheetFooter, obj);
   }, items6);
   const tmp21 = backdropChildren(dismissAccessibilityLabel[22])({ ignoreKeyboard: true });
-  width = undefined;
   width = tmp21.width;
   const items7 = [width];
   const memo = obj.useMemo(() => ({ marginHorizontal: Math.max(width - onLeave, 0) / 2 }), items7);
@@ -409,8 +396,9 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
   if (backgroundComponent != null) {
     obj = { ref: null, accessible: null, accessibilityRole: "none", accessibilityLabel: "", startHeight: null, contentHeight: null, maxHeight: null, containerHeight: null, startExpanded: null, hasEverExpanded: null, windowDimensions: null, wrapperStyle: null, onExpand: null, enablePanDownToClose: true, containerStyle: null, backgroundStyle: null, topInset: null, keyboardBehavior: null, keyboardBlurBehavior: "restore", keyboardShouldPersistTaps: null, animationConfigs: null, overrideReduceMotion: null, handleIndicatorStyle: null, handleComponent: null, backdropComponent: null, backgroundComponent: null, renderFooter: null, animatedIndex: null, onAnimate: null, onClose: null, borderGradient: null, extraContent: null, children: null };
     obj[0] = ref;
+    const tmp8Result4 = tmp8(tmp3[7]);
     const isIOSResult = tmp8(tmp3[7]).isIOS();
-    obj[1] = !isIOSResult;
+    obj[1] = !tmp8(tmp3[7]).isIOS();
     obj[4] = startHeight;
     obj[5] = contentHeight;
     obj[6] = maxHeight;
@@ -458,7 +446,7 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
       const obj2 = { style: null, children: null };
       obj2[0] = tmp5.header;
       obj2[1] = header;
-      tmp26Result = tmp26(tmp31, obj2);
+      tmp26Result = callback(tmp31, obj2);
     }
     const obj3 = { children: null };
     const items11 = [tmp26Result, ];
@@ -466,11 +454,11 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
     const items12 = [tmp5.body, bodyStyles];
     obj4[0] = items12;
     obj4[1] = children;
-    items11[1] = closure_16(transitionState, obj4);
+    items11[1] = callback(transitionState, obj4);
     obj1[1] = items11;
-    obj3[0] = closure_17(transitionState, obj1);
-    obj[32] = closure_16(tmp8(tmp3[24]).LayerScope, obj3);
-    tmp26Result = tmp26(tmp23, obj);
+    obj3[0] = callback2(transitionState, obj1);
+    obj[32] = callback(tmp8(tmp3[24]).LayerScope, obj3);
+    tmp26Result = callback(tmp23, obj);
     let tmp26Result1 = tmp26Result;
     if (showGradient) {
       let tmp35 = tmp24;
@@ -480,11 +468,13 @@ const forwardRefResult = importAllResult.forwardRef((scrollable, ref) => {
       const obj5 = { gradient: null, children: null };
       obj5[0] = tmp35;
       obj5[1] = tmp26Result;
-      tmp26Result1 = tmp26(tmp8(tmp3[25]).ThemeContextProvider, obj5);
+      tmp26Result1 = callback(tmp8(tmp3[25]).ThemeContextProvider, obj5);
     }
     return tmp26Result1;
   }
+  tmp23 = flag ? closure_20 : closure_19;
+  const tmp8Result3 = width(dismissAccessibilityLabel[14]);
 });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/BottomSheet.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/BottomSheet.native.tsx");
 
 export const BottomSheet = forwardRefResult;

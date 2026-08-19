@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useLoadGuildPowerups.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useLoadGuildPowerups.tsx");
 
 export default function useLoadGuildPowerups(guildId) {
   const _require = guildId;

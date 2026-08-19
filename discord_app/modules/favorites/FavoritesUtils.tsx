@@ -1,12 +1,12 @@
 // discord_app/modules/favorites/FavoritesUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import date from "FavoritesConstants.tsx";
 
 const FAVORITES_RAW_GUILD_ID = date.FAVORITES_RAW_GUILD_ID;
 const FAVORITES = ME.FAVORITES;
-const result = set.fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
 
 export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(guild) {
   if (null != guild) {
@@ -32,7 +32,7 @@ export function isFavoritesGuildId(guildId) {
   return tmp;
 }
 export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(closure_0) {
-  return "" !== closure_0.trim();
+  return "" !== _require.trim();
 };
 export const isFavoritableChannel = function isFavoritableChannel(record) {
   return !record.isCategory();

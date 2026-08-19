@@ -1,14 +1,13 @@
 // discord_app/modules/quests/native/VideoQuestModal/captions/VideoQuestCaptions.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../../../../_runtime/00689_n.js";
 
-const require = arg1;
-createCacheKey = { container: null, captionBox: null, captionText: null };
-createCacheKey = { position: "absolute", bottom: ThemesDefault.space.PX_32, left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "flex-end" };
+const require = fn;
+const createCacheKey = { position: "absolute", bottom: ThemesDefault.space.PX_32, left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "flex-end" };
 createCacheKey[0] = createCacheKey;
 let obj1 = { backgroundColor: null, padding: null, borderRadius: null, overflow: "hidden" };
 const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK);
@@ -19,8 +18,7 @@ createCacheKey[1] = obj1;
 const alphaResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.35);
 createCacheKey[2] = { color: ThemesDefault.colors.WHITE, textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { color: ThemesDefault.colors.WHITE, textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptions.tsx");
 
 export const VideoQuestCaptions = function VideoQuestCaptions(currentTime) {
   currentTime = currentTime.currentTime;

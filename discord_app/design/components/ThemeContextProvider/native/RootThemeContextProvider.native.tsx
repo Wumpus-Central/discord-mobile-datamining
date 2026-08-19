@@ -1,10 +1,10 @@
 // discord_app/design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx");
 
 export const RootThemeContextProvider = function RootThemeContextProvider(children) {
   let DARK = children.theme;
@@ -50,8 +50,8 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   }
   const items = [DARK, primaryColor, secondaryColor, gradient, num, num2, num3, enabledExperiments, str, flag, flag2];
   const value = secondaryColor.useMemo(() => {
-    let obj = DARK(primaryColor[3]);
-    obj = { theme: DARK, primaryColor, secondaryColor, gradient, flags: num, contrast: num2, saturation: num3, enabledExperiments, density: str, disableAdaptiveTheme: flag, reduceAdaptiveTheme: flag2 };
+    DARK(primaryColor[3]);
+    const obj = { theme: DARK, primaryColor, secondaryColor, gradient, flags: num, contrast: num2, saturation: num3, enabledExperiments, density: str, disableAdaptiveTheme: flag, reduceAdaptiveTheme: flag2 };
     return obj.createThemedContext(obj);
   }, items);
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
@@ -61,8 +61,8 @@ export const DisableCustomTheme = function DisableCustomTheme(children) {
   themeContext = obj.useThemeContext();
   const items = [themeContext];
   const memo = React.useMemo(() => {
-    let obj = themeContext(closure_1_1[3]);
-    obj = {};
+    themeContext(dependencyMap[3]);
+    const obj = {};
     const merged = Object.assign(themeContext);
     obj.primaryColor = null;
     obj.secondaryColor = null;

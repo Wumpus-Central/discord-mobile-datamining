@@ -1,10 +1,10 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeForce.tsx
 import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
 import getTransformedBadgeColors from "GuildBadgeUtils.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = ["#be0351", "#ff2c52", "#f0f0f0"];
 let closure_6 = ["#ffb84b", "#ffe361", "#f0f0f0"];
@@ -12,7 +12,7 @@ let closure_7 = [0.3, 0.4, 1];
 let items = [{ base: 8, tint: 1 }, { base: 3, tint: 1 }, { base: 2, tint: 1 }];
 let closure_9 = [0.3, 0.5, 1];
 let items1 = [{ base: 8, tint: 1 }, { base: 3, tint: 1 }, { base: 2, tint: 1 }];
-const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeForce.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeForce.tsx");
 
 export const GuildBadgeForce = function GuildBadgeForce(width) {
   let num = width.width;
@@ -26,8 +26,7 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
   ({ primaryTintColor, secondaryTintColor } = width);
   const merged = Object.assign(width, Object.create(null));
   const memo = React.useMemo(() => "badge-force-gradient-" + callback(table[2]).v4(), []);
-  let obj = getTransformedBadgeColors;
-  obj = { primaryBaseColors: closure_5, primaryTintColor, primaryTintLuminances: closure_7, primaryLuminanceWeights: items, secondaryBaseColors: closure_6, secondaryTintColor, secondaryTintLuminances: closure_9, secondaryLuminanceWeights: items1 };
+  let obj = { primaryBaseColors: closure_5, primaryTintColor, primaryTintLuminances: closure_7, primaryLuminanceWeights: items, secondaryBaseColors: closure_6, secondaryTintColor, secondaryTintLuminances: closure_9, secondaryLuminanceWeights: items1 };
   const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
   let tmp9Result = typeof num === "number";
@@ -65,15 +64,15 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
     obj15[0] = memo;
     const obj16 = { stopColor: null, offset: "30%" };
     obj16[0] = primaryColorsTransformed[1];
-    items1 = [tmp9(tmp3(6571).Stop, obj16), ];
+    items1 = [callback(inlineStyles.Stop, obj16), ];
     const obj17 = { stopColor: null, offset: "70%" };
     obj17[0] = secondaryColorsTransformed[1];
-    items1[1] = tmp9(tmp3(6571).Stop, obj17);
+    items1[1] = callback(inlineStyles.Stop, obj17);
     obj15[6] = items1;
-    obj14[0] = tmp7(tmp3(6571).RadialGradient, obj15);
-    tmp9Result = tmp9(tmp3(6571).Defs, obj14);
+    obj14[0] = callback(inlineStyles.RadialGradient, obj15);
+    tmp9Result = callback(inlineStyles.Defs, obj14);
   }
   items[20] = tmp9Result;
   obj.children = items;
-  return closure_4(inlineStyles.Svg, obj);
+  return callback(inlineStyles.Svg, obj);
 };

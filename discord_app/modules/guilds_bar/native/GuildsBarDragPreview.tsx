@@ -2,12 +2,12 @@
 import isIterable from "../../../../_runtime/04006_isIterable.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { GuildsNodeType } from "../../../stores/SortedGuildStore.tsx";
-import closure_5 from "GuildsBarDnDStore.tsx";
+import withEqualityFn from "GuildsBarDnDStore.tsx";
 import { GUILD_ITEM_INSET_LEFT } from "GuildsBarConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function PreviewItem(dragRegion) {
   dragRegion = dragRegion.dragRegion;
   const draggedHeight = dragRegion.draggedHeight;
@@ -19,7 +19,6 @@ function PreviewItem(dragRegion) {
   const scrollPosition = dragRegion.scrollPosition;
   const windowSize = dragRegion.windowSize;
   const dropPosition = dragRegion.dropPosition;
-  let derivedValue;
   let derivedValue1;
   let tmp = windowSize();
   let obj = dragRegion(dropComplete[6]);
@@ -36,7 +35,7 @@ function PreviewItem(dragRegion) {
   fn.__closure = { scrollPosition, dragRegion, listInsets };
   fn.__workletHash = 17436881889698;
   fn.__initData = derivedValue1;
-  derivedValue = obj1.useDerivedValue(fn);
+  const derivedValue = obj1.useDerivedValue(fn);
   class E {
     constructor() {
       obj = scrollPosition;
@@ -97,8 +96,8 @@ function PreviewItem(dragRegion) {
             tmp = null != closure_9;
           }
           if (tmp) {
-            closure_1_0(closure_1_2[7]).runOnJS(closure_2)();
-            const obj = closure_1_0(closure_1_2[7]);
+            dragRegion(dropComplete[7]).runOnJS(closure_2)();
+            const obj = dragRegion(dropComplete[7]);
           }
         };
         obj = { dropPosition: null, runOnJS: null, dropComplete: null };
@@ -163,7 +162,7 @@ function getItemPreviewKey(id) {
   return "" + id.id;
 }
 function renderAnimatedItemPreview(arg0, node, transitionState, cleanUp) {
-  return <AnimatedItemPreview key={arg0} node={arg1} transitionState={arg2} cleanUp={arg3} />;
+  return <AnimatedItemPreview key={arg0} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 function AnimatedItemPreview(cleanUp) {
   ({ node, transitionState } = cleanUp);
@@ -185,7 +184,6 @@ function AnimatedItemPreview(cleanUp) {
     isHomeDrawerEnabled = !tmp9;
   }
   const tmp5 = callback3(GUILD_ITEM_INSET_LEFT + obj.useToken(cleanUp(sharedValue[12]).modules.mobile.GUILD_BAR_ITEM_SIZE) / 2);
-  const tmp8 = GuildsNodeType;
   let fn = function _() {
     const value = sharedValue.get();
     let num = 1;
@@ -195,13 +193,13 @@ function AnimatedItemPreview(cleanUp) {
         num3 = num;
       }
       let num2 = num3;
-      let obj = tmp2;
+      let obj = sharedValue;
     } else {
       num2 = 0.33;
       if (num === value) {
         num2 = num;
       }
-      obj = tmp2;
+      obj = sharedValue;
     }
     if (!closure_3) {
       if (num !== obj.get()) {
@@ -209,7 +207,7 @@ function AnimatedItemPreview(cleanUp) {
       }
       let num4 = num;
       ({ translateX, translateY } = obj);
-      if (tmp) {
+      if (closure_3) {
         num4 = 0;
       }
       obj = { zIndex: null, transform: null, opacity: null };
@@ -226,20 +224,20 @@ function AnimatedItemPreview(cleanUp) {
       const fn = function t(arg0) {
         let tmp = arg0;
         if (arg0) {
-          tmp = closure_0 === closure_1_0(closure_1_2[10]).TransitionStates.YEETED;
+          tmp = closure_0 === transitionState(sharedValue[10]).TransitionStates.YEETED;
         }
         if (tmp) {
           tmp = closure_3;
         }
         if (tmp) {
-          closure_1_0(closure_1_2[7]).runOnJS(closure_1)();
-          const obj = closure_1_0(closure_1_2[7]);
+          transitionState(sharedValue[7]).runOnJS(closure_1)();
+          const obj = transitionState(sharedValue[7]);
         }
       };
       obj4 = { transitionState: null, TransitionStates: null, isFolder: null, runOnJS: null, cleanUp: null };
       obj4[0] = transitionState;
       obj4[1] = transitionState(sharedValue[10]).TransitionStates;
-      obj4[2] = tmp;
+      obj4[2] = closure_3;
       obj4[3] = transitionState(sharedValue[7]).runOnJS;
       obj4[4] = cleanUp;
       fn.__closure = obj4;
@@ -249,16 +247,15 @@ function AnimatedItemPreview(cleanUp) {
       items[2] = obj3;
       obj[1] = items;
       const obj7 = transitionState(sharedValue[8]);
-      const tmp6 = closure_1_10;
-      if (tmp) {
+      if (closure_3) {
         num = obj.get();
       }
-      obj[2] = transitionState(sharedValue[8]).withSpring(num, tmp6, "animate-always");
+      obj[2] = transitionState(sharedValue[8]).withSpring(num, closure_1_10, "animate-always");
       return obj;
     }
     obj = { translateX: 0, translateY: 0 };
   };
-  obj = { isFolder: tmp9, visible: sharedValue, withSpring: tmp2(tmp3[8]).withSpring, DRAG_SPRING_PHYSICS: closure_10, transitionState, TransitionStates: tmp2(tmp3[10]).TransitionStates, runOnJS: tmp2(tmp3[7]).runOnJS, cleanUp };
+  obj = { isFolder: tmp9, visible: sharedValue, withSpring: transitionState(tmp3[8]).withSpring, DRAG_SPRING_PHYSICS: closure_10, transitionState, TransitionStates: transitionState(tmp3[10]).TransitionStates, runOnJS: transitionState(tmp3[7]).runOnJS, cleanUp };
   fn.__closure = obj;
   fn.__workletHash = 13465198693221;
   fn.__initData = closure_18;
@@ -279,21 +276,21 @@ function AnimatedItemPreview(cleanUp) {
   obj = { style: items, children: null };
   items[1] = prop;
   items[2] = animatedStyle;
-  if (node.type === tmp8.FOLDER) {
+  if (node.type === GuildsNodeType.FOLDER) {
     obj1 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
     ({ id: obj8[0], expanded: obj8[1], color: obj8[2], name: obj8[3], children: obj8[4] } = node);
     obj1[6] = !isHomeDrawerEnabled;
-    let tmp12Result = tmp12(tmp4(tmp3[13]), obj1);
+    let tmp12Result = jsx(tmp4(tmp3[13]), { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null });
   } else {
     obj2 = { guildId: null, isDragPreview: true, hideExpandedChildren: null };
     obj2[0] = node.id;
     let tmp16 = !isHomeDrawerEnabled;
     tmp4Result = tmp4(tmp3[14]);
     if (isHomeDrawerEnabled) {
-      tmp16 = transitionState === tmp2(tmp3[10]).TransitionStates.YEETED;
+      tmp16 = transitionState === transitionState(tmp3[10]).TransitionStates.YEETED;
     }
     obj2[2] = tmp16;
-    tmp12Result = tmp12(tmp4Result, obj2);
+    tmp12Result = <tmp4Result guildId={null} isDragPreview hideExpandedChildren={null} />;
   }
   obj[1] = tmp12Result;
   return <tmp4Result style={items}>{null}</tmp4Result>;
@@ -358,12 +355,11 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
   }, isIterable.shallow);
   let tmp2 = null;
   if (null != tmp) {
-    let obj = {};
     const merged = Object.assign(tmp);
     tmp2 = <PreviewItem />;
   }
   return tmp2;
 });
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDragPreview.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDragPreview.tsx");
 
 export default memoResult;

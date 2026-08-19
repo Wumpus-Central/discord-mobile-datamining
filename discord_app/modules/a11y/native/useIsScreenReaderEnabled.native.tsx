@@ -1,8 +1,7 @@
 // discord_app/modules/a11y/native/useIsScreenReaderEnabled.native.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import keys from "../../../../_runtime/00644_keys.js";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
 
 const AccessibilityInfo = get_ActivityIndicator.AccessibilityInfo;
 function SCREEN_READER_ENABLED_GETTER(screenReaderEnabled) {
@@ -11,44 +10,44 @@ function SCREEN_READER_ENABLED_GETTER(screenReaderEnabled) {
 let screenReaderEnabled = "screenReaderEnabled";
 let closure_5 = keys.create((arg0) => {
   const _require = arg0;
-  function updateScreenReaderEnabled(arg0) {
-    const callback = arg0;
-    callback(closure_1_1[3]).batchUpdates(() => callback((screenReaderEnabled) => {
+  function updateScreenReaderEnabled(event) {
+    const callback = event;
+    callback(dependencyMap[3]).batchUpdates(() => callback((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
       if (screenReaderEnabled.screenReaderEnabled !== closure_0) {
         const Storage = callback(closure_2_1[1]).Storage;
-        const result = Storage.set(closure_2_4, tmp2);
+        const result = Storage.set(closure_2_4, closure_0);
         const obj = { screenReaderEnabled: null };
-        obj[0] = tmp2;
+        obj[0] = closure_0;
         tmp = obj;
       }
       return tmp;
     }));
   }
   let result = AccessibilityInfo.isScreenReaderEnabled();
-  result.then(updateScreenReaderEnabled).catch(() => {
+  result.then(updateScreenReaderEnabled).catch((error) => {
     c0 = false;
-    callback(closure_1_1[3]).batchUpdates(() => callback((screenReaderEnabled) => {
+    callback(dependencyMap[3]).batchUpdates(() => callback((screenReaderEnabled) => {
       let tmp = screenReaderEnabled;
       if (screenReaderEnabled.screenReaderEnabled !== closure_0) {
         const Storage = callback(closure_2_1[1]).Storage;
-        const result = Storage.set(closure_2_4, tmp2);
+        const result = Storage.set(closure_2_4, closure_0);
         const obj = { screenReaderEnabled: null };
-        obj[0] = tmp2;
+        obj[0] = closure_0;
         tmp = obj;
       }
       return tmp;
     }));
   });
   const listener = AccessibilityInfo.addEventListener("screenReaderChanged", updateScreenReaderEnabled);
-  let Storage = _Storage.Storage;
+  let Storage = require("../../../../discord_common/js/packages/storage/Storage.tsx").Storage;
   screenReaderEnabled = Storage.get(screenReaderEnabled);
   if (screenReaderEnabled == null) {
     screenReaderEnabled = false;
   }
   return { screenReaderEnabled };
 });
-let result = set.fileFinishedImporting("modules/a11y/native/useIsScreenReaderEnabled.native.tsx");
+let result = obj132.fileFinishedImporting("modules/a11y/native/useIsScreenReaderEnabled.native.tsx");
 
 export const addScreenReaderEnabledListener = function addScreenReaderEnabledListener(arg0) {
   closure_0 = arg0;

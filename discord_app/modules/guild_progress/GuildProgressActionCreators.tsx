@@ -1,26 +1,24 @@
 // discord_app/modules/guild_progress/GuildProgressActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
-const result = set.fileFinishedImporting("modules/guild_progress/GuildProgressActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_progress/GuildProgressActionCreators.tsx");
 
 export default {
   createProgress(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_PROGRESS_INITIALIZE", guildId: id };
+    const obj = { type: "GUILD_PROGRESS_INITIALIZE", guildId: id };
     obj.dispatch(obj);
   },
   markCompletedProgressSeen(id) {
     importDefault = id;
     dispatcherDefault.wait(() => {
-      let obj = id(closure_1_1[0]);
-      obj = { type: "GUILD_PROGRESS_COMPLETED_SEEN", guildId: id };
+      id(dependencyMap[0]);
+      const obj = { type: "GUILD_PROGRESS_COMPLETED_SEEN", guildId: id };
       return obj.dispatch(obj);
     });
   },
   dismissProgress(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_PROGRESS_DISMISS", guildId: id };
+    const obj = { type: "GUILD_PROGRESS_DISMISS", guildId: id };
     obj.dispatch(obj);
   }
 };

@@ -1,13 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { hasPermission } from "../../records/GuildRoleRecord.tsx";
-import closure_4 from "../../stores/GuildRoleStore.tsx";
-import closure_5 from "../../stores/GuildStore.tsx";
+import createGuildRoleRecordFromRust from "../../stores/GuildRoleStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 import { GuildRoleSubscriptionFormat as closure_6 } from "GuildRoleSubscriptionsConstants.tsx";
 import { Permissions } from "../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
 
 export default function useRoleSubscriptionFormat(arg0) {
   const _require = arg0;
@@ -24,7 +24,7 @@ export default function useRoleSubscriptionFormat(arg0) {
   const items1 = [stateFromStores];
   const memo = React.useMemo(() => {
     if (null != stateFromStores) {
-      if (!closure_1_3(tmp, closure_1_7.VIEW_CHANNEL)) {
+      if (!hasPermission(tmp, Permissions.VIEW_CHANNEL)) {
         let SOME_CHANNELS = closure_1_6.ALL_CHANNELS;
       }
       return SOME_CHANNELS;

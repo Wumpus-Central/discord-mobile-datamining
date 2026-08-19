@@ -1,6 +1,6 @@
 // discord_app/components_native/common/LottieAnimationView.tsx
 import _isNativeReflectConstructDefault from "../../../_runtime/07131__isNativeReflectConstruct.js";
-import closure_3 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
@@ -59,8 +59,7 @@ prototype["render"] = function render() {
     obj[0] = source.w / source.h;
     tmp4 = obj;
   }
-  obj = { style: items, collapsable: props.collapsable, children: null };
-  items = [tmp4, style];
+  const items = [tmp4, style];
   obj = { ref: this.setRef, source, style: items1 };
   items1 = [tmp4, style];
   const tmp = callback(props, closure_2);
@@ -69,6 +68,6 @@ prototype["render"] = function render() {
   return <View ref={this.setRef} source={source} style={items1} />;
 };
 LottieAnimationView.defaultProps = { autoPlay: true, loop: true, collapsable: false };
-const result = require("set").fileFinishedImporting("components_native/common/LottieAnimationView.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/LottieAnimationView.tsx");
 
 export default LottieAnimationView;

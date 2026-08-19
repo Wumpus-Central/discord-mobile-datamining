@@ -1,5 +1,5 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import Environments2 from "../user/UserStoreConstants.tsx";
 
 const Environments = Environments2.Environments;
@@ -12,7 +12,7 @@ if (window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING) {
   tmp2 = null;
 }
 const re0 = /^\/(?:channels\/\d+\/)?game-shop(?:\/|$)/;
-const result = set.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConstants.tsx");
 
 export const STOREFRONT_MARKETING_GUILD_ID = str;
 export const STOREFRONT_MARKETING_GUILD_ID_TEST = tmp2;

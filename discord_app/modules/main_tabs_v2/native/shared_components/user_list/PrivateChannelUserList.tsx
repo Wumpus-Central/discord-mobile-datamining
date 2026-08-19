@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../../../stores/RelationshipStore.tsx";
-import closure_6 from "../../../../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 import ME from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ RelationshipTypes: error, MAX_GROUP_DM_PARTICIPANTS: closure_8 } = ME);
 const memoResult = importAllResult.memo(function PrivateChannelUserList(channelId) {
@@ -22,16 +22,13 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   if (opensUserProfileOnUserPress === undefined) {
     opensUserProfileOnUserPress = true;
   }
-  let analyticsLocations;
-  let stateFromStores;
   let stateFromStoresArray;
-  let flag2;
   let ownerId;
   let num;
-  analyticsLocations = hideTitle(onUserPress[6])().analyticsLocations;
+  const analyticsLocations = hideTitle(onUserPress[6])().analyticsLocations;
   let obj = channelId(onUserPress[7]);
   let items = [analyticsLocations];
-  stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.getChannel(channelId));
+  const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.getChannel(channelId));
   const items1 = [stateFromStoresArray];
   const items2 = [stateFromStores];
   stateFromStoresArray = channelId(onUserPress[7]).useStateFromStoresArray(items1, () => {
@@ -51,7 +48,7 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   const obj3 = channelId(onUserPress[7]);
   const tmp = onUserPress;
   const tmp2 = channelId;
-  flag2 = undefined;
+  let flag2;
   ({ listActionRenderer, listActionHeight } = hideTitle(onUserPress[10])(obj));
   if (stateFromStores != null) {
     flag2 = stateFromStores.isMultiUserDM();
@@ -104,8 +101,7 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
       if (flag2) {
         tmp4 = tmp3.id === ownerId;
       }
-      let obj = { type: "user", props: null };
-      obj = { type: null, user: null, nickname: null, isNameplatedRow: true, onPress: null, isOwner: null, start: null, end: null, canShowDisplayNameStyles: true };
+      let obj = { type: null, user: null, nickname: null, isNameplatedRow: true, onPress: null, isOwner: null, start: null, end: null, canShowDisplayNameStyles: true };
       obj[0] = flag2.NONE;
       obj[1] = tmp3;
       obj[2] = stateFromStores.getNickname(tmp3.id);
@@ -116,10 +112,10 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
           obj[1] = closure_0;
           tmp(obj);
         }
-        if (closure_1_3) {
+        if (opensUserProfileOnUserPress) {
           obj = { userId: null, sourceAnalyticsLocations: null, channelId: null };
           obj[0] = id.id;
-          obj[1] = closure_1_4;
+          obj[1] = analyticsLocations;
           obj[2] = closure_0;
           hideTitle(onUserPress[12])(obj);
         }
@@ -140,6 +136,6 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   }, items5);
   return num(tmp2(tmp[13]).UsersFastList, { sections, getItemProps, getSectionProps, listHeaderSize, renderListHeader, disableStickySections, disableBackgroundOverlay: true, listStyleOverride, disableBottomSafeZone, insetEnd, inActionSheet });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx");
 
 export default memoResult;

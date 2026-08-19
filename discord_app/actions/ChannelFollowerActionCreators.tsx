@@ -1,16 +1,16 @@
 // discord_app/actions/ChannelFollowerActionCreators.tsx
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("actions/ChannelFollowerActionCreators.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("actions/ChannelFollowerActionCreators.tsx");
 
 export default {
   createChannelFollower(webhook_channel_id, closure_1) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.CHANNEL_FOLLOWERS(closure_1), body: obj, oldFormErrors: true, rejectWithError: null };
+    { url: Endpoints.CHANNEL_FOLLOWERS(closure_1), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { webhook_channel_id };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
@@ -51,13 +51,11 @@ export default {
     })();
   },
   dismissPublishBump(messageId) {
-    let obj = dispatcherDefault;
-    obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED", messageId };
+    const obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED", messageId };
     obj.dispatch(obj);
   },
   permanentlyHidePublishBump(channelId) {
-    let obj = dispatcherDefault;
-    obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY", channelId };
+    const obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY", channelId };
     obj.dispatch(obj);
   }
 };

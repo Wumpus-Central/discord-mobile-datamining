@@ -1,18 +1,18 @@
 // discord_app/modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import closure_4 from "../../../../_runtime/00030_get.js";
 import importDefaultResult from "../../../../_runtime/03975_t.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx");
 
 export default function useOutboundPromotionRedemptionEndDate(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];
   return React.useMemo(() => {
-    let tmp = closure_1_2;
-    lib(closure_1_2[2]);
+    let tmp = dependencyMap;
+    lib(dependencyMap[2]);
     if (callback) {
       let outboundRedemptionEndDate = lib;
       if (null != lib.outboundRedemptionEndDate) {

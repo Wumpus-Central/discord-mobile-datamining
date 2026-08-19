@@ -1,14 +1,14 @@
 // discord_app/modules/share/useShareSearchResults.tsx
 import trackClose from "../quickswitcher/QuickSwitcherActionCreators.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../gateway/GatewayConnectionStore.tsx";
-import closure_6 from "../../stores/AuthenticationStore.tsx";
-import closure_7 from "../../stores/FrecencyStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import _handleConnectionOpen from "../gateway/GatewayConnectionStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import handleChannelSelect from "../../stores/FrecencyStore.tsx";
 import { ALLOWED_TYPES } from "ShareConstants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/share/useShareSearchResults.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 
 export const makeAutocompleterSearchParams = function makeAutocompleterSearchParams(arg0) {
   const query = trackClose.getQuickSwitcherOptions(arg0);
@@ -38,10 +38,7 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
   if (flag2 === undefined) {
     flag2 = true;
   }
-  let stateFromStores;
   let search;
-  let query;
-  let results;
   let first;
   closure_10 = undefined;
   let queryMode2;
@@ -53,11 +50,10 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
   closure_17 = undefined;
   let obj = targetDestination(originDestination[7]);
   let items = [search];
-  stateFromStores = obj.useStateFromStores(items, () => search.getId());
+  const stateFromStores = obj.useStateFromStores(items, () => search.getId());
   const items1 = [stateFromStores];
   const memo = flag.useMemo(() => {
-    let obj = { searchOptions: null };
-    obj = { blacklist: null, frecencyBoosters: true, userFilters: null };
+    const obj = { blacklist: null, frecencyBoosters: true, userFilters: null };
     const items = ["user:" + stateFromStores];
     obj[0] = new Set(items);
     obj[0] = obj;
@@ -65,8 +61,8 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
   }, items1);
   const tmp5 = selectedDestinations(originDestination[8])(memo);
   search = tmp5.search;
-  query = tmp5.query;
-  results = tmp5.results;
+  let query = tmp5.query;
+  const results = tmp5.results;
   const quickSwitcherOptions = targetDestination(originDestination[6]).getQuickSwitcherOptions("");
   let queryMode = quickSwitcherOptions.queryMode;
   let obj4 = results;
@@ -98,7 +94,7 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
       const items = [queryMode];
       resultTypes = items;
     }
-    return closure_10({ query: query.query, queryMode, resultTypes });
+    return callback({ query: query.query, queryMode, resultTypes });
   }, items3);
   ref = obj2.useRef(null);
   ref1 = obj2.useRef(selectedDestinations);

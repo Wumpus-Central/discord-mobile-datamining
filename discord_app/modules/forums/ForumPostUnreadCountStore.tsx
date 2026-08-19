@@ -2,10 +2,9 @@
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "../threads/ActiveThreadsStore.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/ReadStateStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import handleThreadCreateOrUpdate from "../threads/ActiveThreadsStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
 
 let closure_5 = {};
 let set = new Set();
@@ -21,10 +20,10 @@ prototype["getCount"] = function getCount(arg0) {
 };
 prototype["getThreadIdsMissingCounts"] = function getThreadIdsMissingCounts(guild_id, threadIds) {
   _modDef38(closure_2.hasLoaded(guild_id), "must wait for THREAD_LIST_SYNC before calling this");
-  return threadIds.filter((arg0) => {
-    let tmp = !(arg0 in closure_5);
+  return threadIds.filter((item, index) => {
+    let tmp = !(item in closure_5);
     if (tmp) {
-      tmp = !set.has(arg0);
+      tmp = !set.has(item);
     }
     return tmp;
   });
@@ -63,9 +62,9 @@ const forumPostUnreadCountStore = new ForumPostUnreadCountStore(dispatcherDefaul
   },
   FORUM_UNREADS: function handleForumUnreads(threads) {
     threads = threads.threads;
-    const item = threads.forEach((count) => {
-      if (null != count.count) {
-        closure_5[count.threadId] = count.count;
+    const item = threads.forEach((item, index) => {
+      if (null != item.count) {
+        closure_5[item.threadId] = item.count;
       }
     });
   },
@@ -90,9 +89,9 @@ const forumPostUnreadCountStore = new ForumPostUnreadCountStore(dispatcherDefaul
   },
   REQUEST_FORUM_UNREADS: function handleRequestForumUnreads(threads) {
     threads = threads.threads;
-    const item = threads.forEach((threadId) => set.add(threadId.threadId));
+    const item = threads.forEach((item, index) => set.add(item.threadId));
   }
 });
-const result = set.fileFinishedImporting("modules/forums/ForumPostUnreadCountStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/ForumPostUnreadCountStore.tsx");
 
 export default forumPostUnreadCountStore;

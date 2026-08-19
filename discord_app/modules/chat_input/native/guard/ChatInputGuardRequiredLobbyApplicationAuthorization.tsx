@@ -1,14 +1,14 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import _modDef4090 from "../../../../lib/native/Linking.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
 import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-let obj = { icon: null };
-obj = { height: 40, width: 40, resizeMode: "contain", borderRadius: ThemesDefault.radii.md };
+const require = fn;
+let obj = { height: 40, width: 40, resizeMode: "contain", borderRadius: ThemesDefault.radii.md };
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ChatInputGuardRequiredLobbyApplicationAuthorization(requiredLinkedLobbyApplication) {
@@ -48,7 +48,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardRequiredLobbyAppl
         obj1[3] = stringResult;
         let fn;
         if (null != connectionEntrypointUrl) {
-          fn = () => closure_1_1(closure_1_2[7]).openURLExternally(connectionEntrypointUrl);
+          fn = () => _modDef4090.openURLExternally(connectionEntrypointUrl);
         }
         obj1[4] = fn;
         return jsx(ChatInputGuardDefault, { type: "simple-action", icon: null, message: null, actionLabel: null, actionOnPress: null });
@@ -57,6 +57,6 @@ const memoResult = importAllResult.memo(function ChatInputGuardRequiredLobbyAppl
   }
   return jsx(ChatInputGuardDefault, { type: "simple-action", message: "" });
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx");
+const result = require("obj132").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx");
 
 export default memoResult;

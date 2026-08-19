@@ -1,35 +1,33 @@
 // discord_app/modules/user_profile/native/UserProfilePrivacyNotice.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UserSettingsSections } from "../../../Constants.tsx";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, icon: null, text: null, closeButton: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_8 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexShrink: 0, marginTop: 2 };
 createCacheKey[2] = { flex: 1 };
 createCacheKey[3] = { flexShrink: 0 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePrivacyNotice.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfilePrivacyNotice.tsx");
 
 export default function UserProfilePrivacyNotice() {
   const tmp = callback3();
   isInPrivateProfilesExperiment = undefined;
   let userIsTeen;
-  let setting;
   let obj = isInPrivateProfilesExperiment(userIsTeen[10]);
   isInPrivateProfilesExperiment = obj.useIsInPrivateProfilesExperiment("UserProfilePrivacyNotice");
   obj1 = isInPrivateProfilesExperiment(userIsTeen[11]);
   userIsTeen = obj1.useUserIsTeen();
   const ProfileVisibility = isInPrivateProfilesExperiment(userIsTeen[12]).ProfileVisibility;
-  setting = ProfileVisibility.useSetting();
+  const setting = ProfileVisibility.useSetting();
   const items = [isInPrivateProfilesExperiment, userIsTeen, setting];
   const memo = React.useMemo(() => {
     if (isInPrivateProfilesExperiment) {
@@ -49,8 +47,8 @@ export default function UserProfilePrivacyNotice() {
     variant: "text-sm/normal",
     color: "text-link",
     onPress() {
-      let obj = callback(table[16]);
-      obj = { screen: constants.DATA_AND_PRIVACY };
+      callback(table[16]);
+      const obj = { screen: constants.DATA_AND_PRIVACY };
       return obj.openUserSettings(obj);
     },
     children
@@ -83,7 +81,7 @@ export default function UserProfilePrivacyNotice() {
     const intl2 = tmp2(tmp3[9]).intl;
     obj3[1] = intl2.string(tmp2(tmp3[9]).t.WAI6xu);
     obj3[2] = function onPress() {
-      return isInPrivateProfilesExperiment(closure_1_6.USER_DISMISS);
+      return isInPrivateProfilesExperiment(ContentDismissActionType.USER_DISMISS);
     };
     obj3[3] = tmp.closeButton;
     obj3[4] = callback(tmp2(tmp3[19]).XSmallIcon, { size: "xs", color: "icon-feedback-info" });

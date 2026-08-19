@@ -2,9 +2,9 @@
 import initializeDefault from "../../lib/LifecycleManager.tsx";
 import apexExperiment from "../telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx";
 import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeTouchEventAnalyticsModule.tsx";
-import closure_3 from "../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 function updateEnabledState() {
   const currentUser = closure_3.getCurrentUser();
   let isStaffResult;
@@ -14,14 +14,12 @@ function updateEnabledState() {
   let result = true === isStaffResult;
   if (!result) {
     result = apexExperiment.isZoomedExperimentEnabled();
-    const obj2 = apexExperiment;
   }
   if (result) {
     if (!c4) {
       try {
         enforcingDefault.enableTouchLogging();
         c4 = true;
-        const obj3 = enforcingDefault;
       } catch (err) {
         c4 = false;
       }
@@ -32,7 +30,6 @@ function updateEnabledState() {
       try {
         enforcingDefault.disableTouchLogging();
         c4 = false;
-        const obj4 = enforcingDefault;
       } catch (err) {
       }
     }
@@ -53,12 +50,11 @@ prototype["_terminate"] = function _terminate() {
     try {
       enforcingDefault.disableTouchLogging();
       c4 = false;
-      const obj = enforcingDefault;
     } catch (err) {
     }
   }
 };
 const touchEventAnalyticsManager = new TouchEventAnalyticsManager();
-let result = require("set").fileFinishedImporting("modules/touch_analytics/TouchEventAnalyticsManager.android.tsx");
+let result = require("obj132").fileFinishedImporting("modules/touch_analytics/TouchEventAnalyticsManager.android.tsx");
 
 export default touchEventAnalyticsManager;

@@ -1,7 +1,7 @@
 // discord_app/modules/shared_space_warnings/SharedSpaceWarningConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");
 
 export const GdmWarningMedium = { BANNER: "BANNER", MODAL: "MODAL", ACTION_SHEET: "ACTION_SHEET" };
 export const BlockWarningEngagements = { CLICK_TO_STAY: "click_to_stay", CLICK_TO_LEAVE: "click_to_leave", CLICK_TO_JOIN: "click_to_join", DISMISS: "dismiss" };

@@ -9,24 +9,21 @@ import AccountAgeTier10LargeBadge from "../../../../design/assets/native.tsx";
 import Background from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import URLCallout from "../../../safety_common/native/URLCallout.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: null, title: null, warningMessage: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
+const createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
 
 export default function BlockedDomainActionSheet(url) {
   const tmp = callback3();
-  let obj = { startExpanded: true, children: null };
-  obj = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
-  obj = { spacing: 8, justify: "center", align: "center", children: null };
+  const obj = { spacing: 8, justify: "center", align: "center", children: null };
   const items = [callback(AccountAgeTier10LargeBadge.TrafficConeSpotIllustration, {}), , ];
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;

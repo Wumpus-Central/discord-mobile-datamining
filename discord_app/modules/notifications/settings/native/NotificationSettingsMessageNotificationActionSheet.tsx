@@ -10,25 +10,23 @@ import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMess
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { UserNotificationSettings } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { sheet: null, header: null, content: null, form: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 24, paddingTop: 0 };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
 createCacheKey[3] = { marginTop: 8, marginBottom: 16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageNotificationActionSheet.tsx");
 
 export default function NotificationSettingsMessageNotificationActionSheet(defaultValue) {
   const tmp = callback3();
   let obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
-  obj = { style: tmp.header, children: callback(NotificationSettingsMockMessageDefault, obj) };
+  { style: tmp.header, children: callback(NotificationSettingsMockMessageDefault, obj) };
   obj = { notificationSetting: defaultValue.value };
   const items = [callback(View, obj), ];
   obj1 = { style: tmp.content, children: null };

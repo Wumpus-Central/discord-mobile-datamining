@@ -1,9 +1,9 @@
 // discord_app/stores/NowPlayingStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import closure_2 from "../modules/user_affinities/UserAffinitiesV2Store.tsx";
-import closure_3 from "PresenceStore.tsx";
-import closure_4 from "UserStore.tsx";
+import recomputeAffinities from "../modules/user_affinities/UserAffinitiesV2Store.tsx";
+import sortActivity from "PresenceStore.tsx";
+import mergeGuildAvatar from "UserStore.tsx";
 import { ActivityTypes } from "../Constants.tsx";
 
 function _handlePresenceUpdate(user) {
@@ -13,7 +13,7 @@ function _handlePresenceUpdate(user) {
   if (null == user) {
     return false;
   } else {
-    const found = activities.filter((type) => type.type !== constants.CUSTOM_STATUS);
+    const found = activities.filter((item, index) => item.type !== constants.CUSTOM_STATUS);
     if (0 === found.length) {
       let flag2 = false;
       if (null != obj5[user.id]) {
@@ -35,11 +35,11 @@ function _handlePresenceUpdate(user) {
       return flag2;
     } else {
       c1 = false;
-      const item = found.forEach((timestamps) => {
-        const tmp7 = user(table[4])(timestamps);
+      const item = found.forEach((item, index) => {
+        const tmp7 = user(table[4])(item);
         if (null == tmp7) {
           let flag2 = false;
-          if (null != obj5[tmp6.id]) {
+          if (null != obj5[user.id]) {
             const gameId2 = tmp34.gameId;
             if (null != obj3[gameId2]) {
               let obj = {};
@@ -60,7 +60,7 @@ function _handlePresenceUpdate(user) {
           let flag = flag2;
         } else {
           if (tmp8) {
-            if (null != obj5[tmp6.id]) {
+            if (null != obj5[user.id]) {
               const gameId = tmp10.gameId;
               if (null != obj3[gameId]) {
                 obj = {};
@@ -78,7 +78,7 @@ function _handlePresenceUpdate(user) {
               delete tmp2[tmp4];
             }
           }
-          timestamps = timestamps.timestamps;
+          const timestamps = item.timestamps;
           let start;
           if (timestamps != null) {
             start = timestamps.start;
@@ -88,8 +88,8 @@ function _handlePresenceUpdate(user) {
             start = Date.now();
           }
           const obj2 = { userId: null, activity: null, startedPlaying: null };
-          obj2[0] = tmp6.id;
-          obj2[1] = timestamps;
+          obj2[0] = user.id;
+          obj2[1] = item;
           obj2[2] = start;
           obj3 = {};
           const merged4 = Object.assign(obj3);
@@ -104,7 +104,7 @@ function _handlePresenceUpdate(user) {
           obj6[1] = obj2.startedPlaying;
           obj5[obj2.userId] = obj6;
           flag = true;
-          tmp8 = null != obj5[tmp6.id] && obj5[tmp6.id].gameId !== tmp7;
+          tmp8 = null != obj5[user.id] && obj5[user.id].gameId !== tmp7;
         }
         if (flag) {
           table = true;
@@ -121,14 +121,14 @@ function handleUserAffinitiesV2StoreUpdate() {
     closure_8 = {};
     c0 = false;
     userIds = userIds.getUserIds();
-    const item = userIds.forEach((arg0) => {
-      const user = closure_1_4.getUser(arg0);
+    const item = userIds.forEach((item, index) => {
+      const user = closure_1_4.getUser(item);
       if (null != user) {
         const obj = { user: null, activities: null };
         obj[0] = user;
-        obj[1] = closure_1_3.getActivities(arg0);
-        closure_0 = closure_1_9(obj) || closure_0;
-        const tmp4 = closure_1_9(obj) || closure_0;
+        obj[1] = closure_1_3.getActivities(item);
+        closure_0 = _handlePresenceUpdate(obj) || closure_0;
+        const tmp4 = _handlePresenceUpdate(obj) || closure_0;
       }
     });
     flag = c0;
@@ -180,20 +180,19 @@ const nowPlayingStore = new NowPlayingStore(dispatcherDefault, {
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function handleConnectionOpenSupplemental(arg0) {
     ({ guilds, presences } = arg0);
-    c0 = false;
-    let item = guilds.forEach((presences) => {
-      presences = presences.presences;
+    let item = guilds.forEach((item, index) => {
+      const presences = item.presences;
       c0 = false;
-      const item = presences.forEach((arg0) => {
-        closure_0 = false !== closure_1_9(arg0) || closure_0;
+      item = presences.forEach((item, index) => {
+        closure_0 = false !== closure_1_9(item) || closure_0;
       });
       if (c0) {
         c0 = true;
       }
     });
     c0 = false;
-    const item1 = presences.forEach((arg0) => {
-      closure_0 = false !== closure_1_9(arg0) || closure_0;
+    const item1 = presences.forEach((item, index) => {
+      closure_0 = false !== closure_1_9(item) || closure_0;
     });
     if (c0) {
       c0 = true;
@@ -206,18 +205,18 @@ const nowPlayingStore = new NowPlayingStore(dispatcherDefault, {
   },
   PRESENCE_UPDATES: function handlePresenceUpdates(updates) {
     updates = updates.updates;
-    const mapped = updates.map((arg0) => callback(arg0));
-    return mapped.some((arg0) => arg0);
+    const mapped = updates.map((item, index) => callback(item));
+    return mapped.some((item, index) => item);
   },
   PRESENCES_REPLACE: function handlePresencesReplace(presences) {
     presences = presences.presences;
     c0 = false;
-    const item = presences.forEach((arg0) => {
-      closure_0 = false !== closure_1_9(arg0) || closure_0;
+    const item = presences.forEach((item, index) => {
+      closure_0 = false !== closure_1_9(item) || closure_0;
     });
     return c0;
   }
 });
-const result = require("set").fileFinishedImporting("stores/NowPlayingStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/NowPlayingStore.tsx");
 
 export default nowPlayingStore;

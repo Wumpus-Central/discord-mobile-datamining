@@ -1,20 +1,23 @@
 // discord_app/modules/client_themes/native/ThemedGradient.tsx
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ClientThemeType from "../ClientThemesTypes.tsx";
 import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
 import hslToRgbDefault from "../../../utils/Color.tsx";
 import set from "../../guild_themes/GuildThemePresets.tsx";
 import getGuildIdFromNavigationStateDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../ClientThemesBackgroundStore.tsx";
+import isSyncedModeThemesEnabled from "../ClientThemesBackgroundStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function getMixedGradientColor(mixColorOverride) {
   ({ mixAmount, theme } = mixColorOverride);
   let obj = { mixAmount, mixColorOverride: mixColorOverride.mixColorOverride, theme };
@@ -44,7 +47,6 @@ function getMixedGradientColor(mixColorOverride) {
       num2 = 0;
     }
     mixColorOverride = new hslToRgbDefault(num2, num2, num2, tmp4);
-    const obj3 = AccessibilityAnnouncer;
   }
   obj = { mixAmount, theme };
   let mixAmount1 = obj.mixAmount;
@@ -67,10 +69,10 @@ function getMixedGradientColor(mixColorOverride) {
   } else if (null != mixAmount1.light) {
     num3 = 1 - mixAmount1.light;
   }
-  let tmp12Result = tmp12(4223);
+  let tmp12Result = hexToRgba;
   obj6 = AccessibilityAnnouncer;
   ({ r, g, b } = tmp12Result.hexToRgb(mixColorOverride.color));
-  tmp12Result = tmp12(4223);
+  tmp12Result = hexToRgba;
   const hexToRgbResult = tmp12Result.hexToRgb(mixColorOverride.color);
   const tmp15 = new hslToRgbDefault(r, g, b, num3);
   return tmp12Result.mixColors(mixColorOverride, new hslToRgbDefault(r, g, b, num3)).toHexString();
@@ -86,7 +88,6 @@ function GradientBase(angleCenter) {
   ({ width, height } = useWindowDimensionsDefault());
   let obj = { colors, locations, angle, angleCenter, useAngle: true, style: null };
   const tmp2 = useWindowDimensionsDefault();
-  const tmp3 = closure_6;
   if (wide) {
     obj = { width: null };
     obj[0] = width;
@@ -106,7 +107,7 @@ function GradientBase(angleCenter) {
   items[3] = absolute;
   items[4] = angleCenter.componentStyles;
   obj[5] = items;
-  return tmp3(LinearGradientDefault, obj);
+  return callback(LinearGradientDefault, obj);
 }
 class Gradient {
   constructor(arg0) {
@@ -121,20 +122,20 @@ class Gradient {
     closure_3 = require("useTheme")();
     colors = gradient.colors;
     obj = {
-      colors: colors.map((arg0) => {
+      colors: colors.map((item, index) => {
             if (closure_0) {
               const obj = { color: null, mixAmount: null, mixColorOverride: null, theme: null };
-              obj[0] = mixAmount(mixColorOverride[11]).unsafe_rawColors[arg0.token];
+              obj[0] = mixAmount(mixColorOverride[11]).unsafe_rawColors[item.token];
               obj[1] = mixAmount;
               obj[2] = mixColorOverride;
               obj[3] = closure_3;
-              let tmp3 = closure_1_11(obj);
+              let tmp3 = getMixedGradientColor(obj);
             } else {
-              tmp3 = mixAmount(mixColorOverride[11]).unsafe_rawColors[arg0.token];
+              tmp3 = mixAmount(mixColorOverride[11]).unsafe_rawColors[item.token];
             }
             return tmp3;
           }),
-      locations: colors1.map((stop) => stop.stop / 100),
+      locations: colors1.map((item, index) => item.stop / 100),
       angle: null,
       angleCenter: null,
       absolute: null,
@@ -168,27 +169,26 @@ function GuildThemePresetGradient(mixColorOverride) {
     mixAmount = {};
   }
   mixColorOverride = mixColorOverride.mixColorOverride;
-  closure_3 = undefined;
   const tmp = mixAmount(mixColorOverride[10])();
   closure_3 = tmp;
   let obj = require(mixColorOverride[12]);
   const guildThemePresetAppearance = obj.getGuildThemePresetAppearance(preset, tmp);
   const colors = guildThemePresetAppearance.colors;
   obj = {
-    colors: colors.map((hex) => {
+    colors: colors.map((item, index) => {
       if (closure_0) {
         const obj = { color: null, mixAmount: null, mixColorOverride: null, theme: null };
-        obj[0] = hex.hex;
+        obj[0] = item.hex;
         obj[1] = mixAmount;
         obj[2] = mixColorOverride;
         obj[3] = closure_3;
-        hex = closure_1_11(obj);
+        let hex = getMixedGradientColor(obj);
       } else {
-        hex = hex.hex;
+        hex = item.hex;
       }
       return hex;
     }),
-    locations: colors1.map((stop) => stop.stop / 100),
+    locations: colors1.map((item, index) => item.stop / 100),
     angle: null,
     angleCenter: null,
     absolute: null,
@@ -206,7 +206,7 @@ function GuildThemePresetGradient(mixColorOverride) {
   obj[5] = wide;
   obj[6] = tall;
   obj[7] = componentStyles;
-  return closure_6(GradientBase, obj);
+  return callback(GradientBase, obj);
 }
 function CustomThemesGradient(arg0) {
   ({ colors, gradientColorStops, absolute, wide, tall, mixAmount } = arg0);
@@ -214,14 +214,11 @@ function CustomThemesGradient(arg0) {
   if (mixAmount === undefined) {
     mixAmount = {};
   }
-  let reduced;
-  reduced = undefined;
   ({ mixColorOverride, componentStyles, theme } = arg0);
   const tmp = callback3();
-  reduced = undefined;
   mixColorOverride = undefined;
   theme = undefined;
-  reduced = baseMix;
+  let reduced = baseMix;
   ({ width, height } = reduced(mixColorOverride[8])());
   if (mixAmount === undefined) {
     mixAmount = {};
@@ -229,11 +226,10 @@ function CustomThemesGradient(arg0) {
   reduced = mixAmount;
   let mapped = colors;
   if (mix) {
-    mapped = colors.map((PRIMARY_800) => {
-      let obj = reduced;
+    mapped = colors.map((item, index) => {
       let tmp2 = mixColorOverride;
       let num = closure_1_10;
-      obj = reduced;
+      let obj = reduced;
       const result = reduced / 100;
       if (reduced === undefined) {
         obj = {};
@@ -241,7 +237,7 @@ function CustomThemesGradient(arg0) {
       if (null == tmp2) {
         const diff = 1 - result;
         let sum = num + 0.2 * diff;
-        const isThemeDarkResult = reduced(mixColorOverride[5]).isThemeDark(tmp3);
+        const isThemeDarkResult = reduced(mixColorOverride[5]).isThemeDark(theme);
         if (isThemeDarkResult) {
           sum = num + 0.25 * diff;
         }
@@ -255,7 +251,6 @@ function CustomThemesGradient(arg0) {
         }
         tmp2 = new reduced(mixColorOverride[6])(num3, num3, num3, tmp6);
         const obj7 = reduced(mixColorOverride[5]);
-        const tmp21 = mixColorOverride;
       }
       if (reduced === undefined) {
         obj = {};
@@ -275,11 +270,11 @@ function CustomThemesGradient(arg0) {
       } else if (null != obj.light) {
         num = 1 - obj.light;
       }
-      let tmp14Result = tmp14(tmp15[7]);
+      let tmp14Result = reduced(mixColorOverride[7]);
       obj3 = reduced(mixColorOverride[5]);
-      ({ r, g, b } = tmp14Result.hexToRgb(PRIMARY_800));
-      tmp14Result = tmp14(tmp15[7]);
-      const hexToRgbResult = tmp14Result.hexToRgb(PRIMARY_800);
+      ({ r, g, b } = tmp14Result.hexToRgb(item));
+      tmp14Result = reduced(mixColorOverride[7]);
+      const hexToRgbResult = tmp14Result.hexToRgb(item);
       const tmp17 = new reduced(mixColorOverride[6])(r, g, b, num);
       const mixColorsResult = tmp14Result.mixColors(tmp2, new reduced(mixColorOverride[6])(r, g, b, num));
       return reduced(mixColorOverride[13]).colorToHex(mixColorsResult);
@@ -290,22 +285,20 @@ function CustomThemesGradient(arg0) {
     const items = [mapped[0], mapped[0]];
     arr2 = items;
   }
-  reduced = arr2;
   let result = (gradientAngle - 90) * Math.PI / 180;
   const cosResult = Math.cos(result);
   const sinResult = Math.sin(result);
-  let obj = { x: 0.6 - 0.7142857142857143 * cosResult, y: 0.5 - 0.7142857142857143 * sinResult };
-  obj = { x: 0.6 + 0.7142857142857143 * cosResult, y: 0.5 + 0.7142857142857143 * sinResult };
-  reduced = arr2.reduce((arr, str) => {
-    if (typeof str === "string") {
-      if (regex.test(str)) {
-        arr.push(str);
-        return arr;
+  let obj = { x: 0.6 + 0.7142857142857143 * cosResult, y: 0.5 + 0.7142857142857143 * sinResult };
+  reduced = arr2.reduce((acc, item, index) => {
+    if (typeof item === "string") {
+      if (regex.test(item)) {
+        acc.push(item);
+        return acc;
       }
     }
     try {
-      arr.push(reduced(mixColorOverride[14])(str).hex("rgb"));
-      return arr;
+      acc.push(reduced(mixColorOverride[14])(item).hex("rgb"));
+      return acc;
     } catch (err) {
     }
   }, []);
@@ -313,20 +306,19 @@ function CustomThemesGradient(arg0) {
     gradientColorStops = [];
   }
   if (gradientColorStops.length === reduced.length) {
-    let mapped1 = gradientColorStops.map((arg0) => arg0 / 100);
+    let mapped1 = gradientColorStops.map((item, index) => item / 100);
   } else if (1 === reduced.length) {
     mapped1 = [0, 1];
   } else {
-    mapped1 = reduced.map((arg0, arg1) => arg1 / (reduced.length - 1));
+    mapped1 = reduced.map((item, index) => index / (reduced.length - 1));
   }
   const items1 = [reduced, arr2];
   const effect = theme.useEffect(() => {
     if (reduced.length < 2) {
-      let obj = reduced(mixColorOverride[15]);
+      reduced(mixColorOverride[15]);
       const _Error = Error;
       error = new Error("Invalid custom theme gradient colors");
-      obj = { extra: null };
-      obj = { gradientColors: null };
+      const obj = { gradientColors: null };
       const _JSON = JSON;
       obj[0] = JSON.stringify(reduced);
       obj[0] = obj;
@@ -359,8 +351,7 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj[4] = items2;
-    tmp10Result = closure_6(reduced(mixColorOverride[9]), obj);
-    const tmp10 = closure_6;
+    tmp10Result = callback(reduced(mixColorOverride[9]), obj);
     const tmp2Result = reduced(mixColorOverride[9]);
   }
   return tmp10Result;
@@ -400,7 +391,7 @@ let closure_8 = createCacheKey.createStyles({ softenGradient: { flex: 1 }, linea
 let closure_9 = { x: 0.5, y: 0.5 };
 let c10 = 0.5;
 const re15 = /^#(?:[0-9a-fA-F]{3}){1,2}$/;
-let result = require("set").fileFinishedImporting("modules/client_themes/native/ThemedGradient.tsx");
+let result = require("obj132").fileFinishedImporting("modules/client_themes/native/ThemedGradient.tsx");
 
 export default function ThemedGradient(overlayOpacity) {
   let num = overlayOpacity.overlayOpacity;
@@ -416,15 +407,15 @@ export default function ThemedGradient(overlayOpacity) {
   const tmp8 = obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.BLACK : unsafe_rawColors.WHITE;
   const withOverlay = merged.withOverlay;
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
-  let tmp6Result = tmp6(647);
+  let tmp6Result = defaultAreStatesEqual;
   const items = [closure_5];
   const preset = tmp6Result.useStateFromStoresObject(items, () => ({ preset: gradientPreset.gradientPreset })).preset;
   const tmp10 = getGuildIdFromNavigationStateDefault();
-  tmp6Result = tmp6(4309);
+  tmp6Result = useCustomThemeDisplaySettings;
   const customThemeDisplaySettings = tmp6Result.useCustomThemeDisplaySettings();
   if (null != gradientOverride) {
     if (tmp12) {
-      if (gradientOverride.type === tmp6(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      if (gradientOverride.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
         obj = {};
         const merged1 = Object.assign(merged);
         const merged2 = Object.assign(gradientOverride.customThemeSettings);
@@ -438,18 +429,18 @@ export default function ThemedGradient(overlayOpacity) {
           obj1 = { style: null };
           const items2 = [tmp2.softenGradient, ];
           const obj2 = { backgroundColor: null };
-          obj2[0] = tmp6(4223).hexWithOpacity(tmp8, num);
+          obj2[0] = hexToRgba.hexWithOpacity(tmp8, num);
           items2[1] = obj2;
           obj1[0] = items2;
           items1[1] = callback(View, obj1);
           obj[1] = items1;
           tmp60 = callback2(View, obj);
-          const tmp6Result1 = tmp6(4223);
+          const tmp6Result1 = hexToRgba;
         }
         return tmp60;
       }
     }
-    if (gradientOverride.type === tmp6(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+    if (gradientOverride.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
       const obj3 = {};
       const merged3 = Object.assign(merged);
       obj3.gradient = gradientOverride;
@@ -462,13 +453,13 @@ export default function ThemedGradient(overlayOpacity) {
         const obj5 = { style: null };
         const items4 = [tmp2.softenGradient, ];
         const obj6 = { backgroundColor: null };
-        obj6[0] = tmp6(4223).hexWithOpacity(tmp8, num);
+        obj6[0] = hexToRgba.hexWithOpacity(tmp8, num);
         items4[1] = obj6;
         obj5[0] = items4;
         items3[1] = callback(View, obj5);
         obj4[1] = items3;
         tmp49 = callback2(View, obj4);
-        const tmp6Result2 = tmp6(4223);
+        const tmp6Result2 = hexToRgba;
       }
       return tmp49;
     }
@@ -487,16 +478,15 @@ export default function ThemedGradient(overlayOpacity) {
       const obj9 = { style: null };
       const items6 = [tmp2.softenGradient, ];
       const obj10 = { backgroundColor: null };
-      obj10[0] = tmp6(4223).hexWithOpacity(tmp8, num);
+      obj10[0] = hexToRgba.hexWithOpacity(tmp8, num);
       items6[1] = obj10;
       obj9[0] = items6;
-      items5[1] = tmp34(View, obj9);
+      items5[1] = callback(View, obj9);
       obj8[1] = items5;
       tmp40 = callback2(View, obj8);
-      const tmp6Result3 = tmp6(4223);
+      const tmp6Result3 = hexToRgba;
     }
     let tmp13 = tmp40;
-    tmp34 = callback;
   } else {
     if (tmp12) {
       if (tmp12) {
@@ -513,16 +503,15 @@ export default function ThemedGradient(overlayOpacity) {
           const obj13 = { style: null };
           const items8 = [tmp2.softenGradient, ];
           const obj14 = { backgroundColor: null };
-          obj14[0] = tmp6(4223).hexWithOpacity(tmp8, num);
+          obj14[0] = hexToRgba.hexWithOpacity(tmp8, num);
           items8[1] = obj14;
           obj13[0] = items8;
-          items7[1] = tmp23(View, obj13);
+          items7[1] = callback(View, obj13);
           obj12[1] = items7;
           tmp31 = callback2(View, obj12);
-          const tmp6Result4 = tmp6(4223);
+          const tmp6Result4 = hexToRgba;
         }
         tmp13 = tmp31;
-        tmp23 = callback;
       }
     }
     tmp13 = null;
@@ -539,32 +528,31 @@ export default function ThemedGradient(overlayOpacity) {
         const obj17 = { style: null };
         const items10 = [tmp2.softenGradient, ];
         const obj18 = { backgroundColor: null };
-        obj18[0] = tmp6(4223).hexWithOpacity(tmp8, num);
+        obj18[0] = hexToRgba.hexWithOpacity(tmp8, num);
         items10[1] = obj18;
         obj17[0] = items10;
-        items9[1] = tmp14(View, obj17);
+        items9[1] = callback(View, obj17);
         obj16[1] = items9;
         tmp20 = callback2(View, obj16);
-        const tmp6Result5 = tmp6(4223);
+        const tmp6Result5 = hexToRgba;
       }
       tmp13 = tmp20;
-      tmp14 = callback;
     }
   }
   return tmp13;
 };
 export { Gradient };
 export const validateColors = function validateColors(arr) {
-  return arr.reduce((arr, str) => {
-    if (typeof str === "string") {
-      if (regex.test(str)) {
-        arr.push(str);
-        return arr;
+  return arr.reduce((acc, item, index) => {
+    if (typeof item === "string") {
+      if (regex.test(item)) {
+        acc.push(item);
+        return acc;
       }
     }
     try {
-      arr.push(reduced(mixColorOverride[14])(str).hex("rgb"));
-      return arr;
+      acc.push(reduced(mixColorOverride[14])(item).hex("rgb"));
+      return acc;
     } catch (err) {
     }
   }, []);
@@ -577,11 +565,9 @@ export const CustomThemedGradient = function CustomThemedGradient(overlayOpacity
   const customTheme = overlayOpacity.customTheme;
   const merged = Object.assign(overlayOpacity, Object.create(null));
   const tmp2 = callback3();
-  let obj = AccessibilityAnnouncer;
   const tmp4 = useThemeDefault();
-  const tmp5 = require;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
-  obj = {};
+  let obj = {};
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   const merged1 = Object.assign(merged);
   const merged2 = Object.assign(customTheme.customThemeSettings);

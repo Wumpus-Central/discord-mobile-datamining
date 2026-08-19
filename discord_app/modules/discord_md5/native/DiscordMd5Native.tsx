@@ -1,6 +1,7 @@
 // discord_app/modules/discord_md5/native/DiscordMd5Native.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
+import obj1322 from "../../../utils/PlatformUtils.tsx";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
 import fromBlobDefault from "../DiscordMd5.tsx";
 
@@ -22,15 +23,15 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
       error = new Error("RTNFileManager doesn't exist?");
       let rejectResult = Promise.reject(error);
     } else {
-      rejectResult = tmp3(1271).getFileHash(uri, "md5", num);
-      const tmp3Result = tmp3(1271);
+      rejectResult = enforcingDefault.getFileHash(uri, "md5", num);
+      const tmp3Result = enforcingDefault;
     }
-    tmp3 = importDefault;
   } else {
     const DCDFileManager = NativeModules.DCDFileManager;
     return DCDFileManager.getFileHash(uri, "md5", num);
   }
+  obj = obj1322;
 };
-const result = set.fileFinishedImporting("modules/discord_md5/native/DiscordMd5Native.tsx");
+const result = obj132.fileFinishedImporting("modules/discord_md5/native/DiscordMd5Native.tsx");
 
 export default prototype;

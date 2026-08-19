@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/RpcNotificationSettingsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../stores/AuthenticationStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
 
 let closure_1 = {};
 const Store = initializeDefault.Store;
@@ -13,9 +13,6 @@ prototype["initialize"] = function initialize() {
 };
 prototype["areSlayerNotificationsSuppressed"] = function areSlayerNotificationsSuppressed() {
   for (const key10002 in closure_1) {
-    let tmp = key10002;
-    let tmp2 = table;
-    let tmp3 = id;
     if (table[key10002] !== id.getId()) {
       continue;
     } else {
@@ -37,6 +34,6 @@ const rpcNotificationSettingsStore = new RpcNotificationSettingsStore(dispatcher
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/notifications/RpcNotificationSettingsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/RpcNotificationSettingsStore.tsx");
 
 export default rpcNotificationSettingsStore;

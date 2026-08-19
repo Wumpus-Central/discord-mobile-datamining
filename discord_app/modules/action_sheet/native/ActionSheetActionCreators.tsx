@@ -1,13 +1,13 @@
 // discord_app/modules/action_sheet/native/ActionSheetActionCreators.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["impressionName", "impressionProperties", "backdropKind", "disableHapticOnOpen", "appEntryKey"];
 noopAll;
-let result = require("set").fileFinishedImporting("modules/action_sheet/native/ActionSheetActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/action_sheet/native/ActionSheetActionCreators.tsx");
 
 export default {
   openLazy(promise) {
@@ -15,11 +15,11 @@ export default {
     closure_1 = arg2;
     closure_2 = arg3;
     if (promise instanceof Promise) {
-      let nextPromise = promise.then((arg0) => arg0.default);
+      let nextPromise = promise.then((result) => result.default);
     } else {
       nextPromise = promise();
     }
-    nextPromise.then((arg0) => {
+    nextPromise.then((result) => {
       let obj = callback;
       if (callback == null) {
         obj = {};
@@ -27,7 +27,7 @@ export default {
       ({ impressionName, impressionProperties, backdropKind, disableHapticOnOpen, appEntryKey } = obj);
       obj = {};
       const merged = Object.assign(closure_1_4(obj, closure_1_3));
-      closure_0 = closure_1_5(arg0, obj);
+      closure_0 = <result />;
       callback = closure_0;
       closure_5 = impressionName;
       callback(table[3]).wait(() => {
@@ -39,25 +39,23 @@ export default {
         const obj2 = callback(impressionName[6]);
         obj = { type: "SHOW_ACTION_SHEET", content: callback, key: callback2, impressionName, impressionProperties, backdropKind, stackingBehavior: closure_5, appEntryKey };
         callback2(impressionName[3]).dispatch(obj);
+        const obj3 = callback2(impressionName[3]);
       });
     });
   },
   hideActionSheet(key) {
-    let obj = dispatcherDefault;
-    obj = { type: "HIDE_ACTION_SHEET", key };
+    const obj = { type: "HIDE_ACTION_SHEET", key };
     obj.dispatch(obj);
   },
   hideAllActionSheets() {
     dispatcherDefault.dispatch({ type: "HIDE_ALL_ACTION_SHEETS" });
   },
   setActionSheetZIndex(zIndex) {
-    let obj = dispatcherDefault;
-    obj = { type: "SET_ACTION_SHEET_Z_INDEX", zIndex };
+    const obj = { type: "SET_ACTION_SHEET_Z_INDEX", zIndex };
     obj.dispatch(obj);
   },
   resetActionSheetsForAppEntryKey(closure_0) {
-    let obj = dispatcherDefault;
-    obj = { type: "RESET_ACTION_SHEETS_FOR_APP_ENTRY_KEY", appEntryKey: closure_0 };
+    const obj = { type: "RESET_ACTION_SHEETS_FOR_APP_ENTRY_KEY", appEntryKey: closure_0 };
     obj.dispatch(obj);
   }
 };
@@ -74,5 +72,6 @@ export const showActionSheet = function showActionSheet(arg0) {
     const obj2 = callback(impressionName[6]);
     obj = { type: "SHOW_ACTION_SHEET", content: callback, key: callback2, impressionName, impressionProperties, backdropKind, stackingBehavior: closure_5, appEntryKey };
     callback2(impressionName[3]).dispatch(obj);
+    const obj3 = callback2(impressionName[3]);
   });
 };

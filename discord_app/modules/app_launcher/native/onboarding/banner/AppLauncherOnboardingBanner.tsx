@@ -6,9 +6,9 @@ import AppsBanerDefault from "AppsBanner.tsx";
 import BotsBannerDefault from "BotsBanner.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingBanner.tsx");
 
 export default function AppLauncherOnboardingBanner(arg0) {
   ({ context, visibleContent } = arg0);
@@ -16,9 +16,9 @@ export default function AppLauncherOnboardingBanner(arg0) {
     let obj = { context: null };
     obj[0] = context;
     return jsx(ActivitiesBannerDefault, { context: null });
-  } else if (tmp(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
+  } else if (DismissibleContent.DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER === visibleContent) {
     return jsx(AppsBanerDefault, {});
-  } else if (tmp(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
+  } else if (DismissibleContent.DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER === visibleContent) {
     obj = { context: null };
     obj[0] = context;
     return jsx(BotsBannerDefault, { context: null });

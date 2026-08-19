@@ -1,22 +1,22 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import useScaledRowHeightDefault from "useScaledRowHeight.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../../stores/ChannelStore.tsx";
-import closure_7 from "../../../../../stores/PermissionStore.tsx";
-import closure_8 from "../../../../../stores/RelationshipStore.tsx";
-import closure_9 from "../../../../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import getUncachedChannelPermissions from "../../../../../stores/PermissionStore.tsx";
+import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 import ME from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = ME);
 let closure_14 = { listActionRenderer: "r", listActionHeight: "accessibilityRole" };
 let closure_15 = createCacheKey.createStyles({ wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS } });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
 export default function useMemberListAction(channel) {
   channel = channel.channel;
@@ -24,9 +24,6 @@ export default function useMemberListAction(channel) {
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let stateFromStores;
   let React;
   c5 = undefined;
   let flag2;
@@ -42,14 +39,14 @@ export default function useMemberListAction(channel) {
   const tmp4 = useIsMobileVisualRefreshExperimentEnabledDefault("useMemberListAction");
   dependencyMap = tmp4;
   const items = [closure_9];
-  stateFromStores = channel(647).useStateFromStores(items, () => {
+  const stateFromStores = channel(647).useStateFromStores(items, () => {
     let isDMResult;
     if (channel != null) {
-      isDMResult = obj.isDM();
+      isDMResult = channel.isDM();
     }
     let tmp2 = null;
     if (isDMResult) {
-      user = user.getUser(obj.getRecipientId());
+      user = user.getUser(channel.getRecipientId());
       let username;
       if (user != null) {
         username = user.username;
@@ -143,16 +140,15 @@ export default function useMemberListAction(channel) {
             const intl3 = channel(1236).intl;
             obj[2] = intl3.string(channel(1236).t["LR+Ptf"]);
             obj[3] = function handlePress() {
-              if (null != closure_1_6.getChannel(closure_8)) {
+              if (null != flag2.getChannel(closure_8)) {
                 let obj = callback(closure_1_2[21]);
                 if (obj.UNSAFE_isDismissibleContentDismissed(callback(closure_1_2[22]).DismissibleContent.GDM_INVITE_REMINDER)) {
                   callback3();
                 } else {
                   obj = { onClick: null };
                   obj[0] = callback3;
-                  callback2(tmp2[23])(obj);
+                  callback2(closure_1_2[23])(obj);
                 }
-                tmp2 = closure_1_2;
               }
             };
             tmp12 = obj;
@@ -162,7 +158,7 @@ export default function useMemberListAction(channel) {
             const intl2 = channel(1236).intl;
             obj[2] = intl2.string(channel(1236).t.z9Mqln);
             obj[3] = function handlePress() {
-              channel = closure_1_6.getChannel(closure_8);
+              channel = flag2.getChannel(closure_8);
               if (null != channel) {
                 const result = callback(closure_1_2[26]).openChannelMembersActionSheet(channel.id, channel.guild_id);
                 const obj = callback(closure_1_2[26]);
@@ -175,7 +171,7 @@ export default function useMemberListAction(channel) {
             const intl = channel(1236).intl;
             obj[2] = intl.string(channel(1236).t["Ab/6S0"]);
             obj[3] = function handlePress() {
-              channel = closure_1_6.getChannel(closure_8);
+              channel = flag2.getChannel(closure_8);
               if (null != channel) {
                 let obj = callback(closure_1_2[27]);
                 const result = obj.dismissGlobalKeyboard();
@@ -197,32 +193,32 @@ export default function useMemberListAction(channel) {
           const obj3 = { source: null, IconComponent: null };
           obj3[0] = iconSource;
           obj3[1] = IconComponent;
-          obj2[0] = tmp42(channel(8086).RowButton.Icon, obj3);
+          obj2[0] = callback1(channel(8086).RowButton.Icon, obj3);
           obj2[1] = handlePress;
           obj2[2] = label;
           obj2[3] = sublabel;
-          let tmp42Result = tmp42(tmp47(8086).RowButton, obj2);
+          let tmp42Result = callback1(channel(8086).RowButton, obj2);
         } else {
           const obj4 = { icon: null, onPress: null, label: null, subLabel: null, start: true, end: true, arrow: true };
           const obj5 = { source: null, IconComponent: null };
           obj5[0] = iconSource;
           obj5[1] = IconComponent;
-          obj4[0] = tmp42(channel(8086).RowButton.Icon, obj5);
+          obj4[0] = callback1(channel(8086).RowButton.Icon, obj5);
           obj4[1] = handlePress;
           obj4[2] = label;
           obj4[3] = sublabel;
-          tmp42Result = tmp42(tmp47(6291).TableRow, obj4);
+          tmp42Result = callback1(channel(6291).TableRow, obj4);
         }
         obj1[2] = tmp42Result;
-        closure_0 = tmp42(c5, obj1);
+        closure_0 = callback1(c5, obj1);
         lib = closure_9 + lib.wrapper.paddingTop;
         const obj6 = { listActionRenderer: null, listActionHeight: null };
         obj6[0] = function listActionRenderer() {
           return closure_0;
         };
         obj6[1] = function listActionHeight() {
-          let tmp = closure_1_10;
-          if (closure_1_10 == null) {
+          let tmp = first;
+          if (first == null) {
             tmp = closure_1;
           }
           return tmp;

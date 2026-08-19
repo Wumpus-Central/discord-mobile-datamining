@@ -1,8 +1,8 @@
 // discord_app/modules/messages/EmbeddedApplicationInstanceUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import closure_2 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 function getJoinOrStartButtonState(channel) {
   ({ embeddedActivity, joinability, currentEmbeddedActivity } = channel);
   let obj = { disabled: false, isJoinAction: !tmp, text: null, tooltip: "Array" };
@@ -11,10 +11,10 @@ function getJoinOrStartButtonState(channel) {
   const t = getSystemLocale.t;
   if (null == embeddedActivity) {
     let stringResult = string(t.RscU7I);
-    let tmp6 = tmp2;
+    let tmp6 = require;
   } else {
     stringResult = string(t.sqe0hj);
-    tmp6 = tmp2;
+    tmp6 = require;
   }
   obj[2] = stringResult;
   const result = tmp6(8446).isActivitiesInTextEnabled(channel.channel);
@@ -78,7 +78,7 @@ function getJoinOrStartButtonState(channel) {
   }
   const tmp6Result = tmp6(8446);
 }
-let result = require("set").fileFinishedImporting("modules/messages/EmbeddedApplicationInstanceUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/messages/EmbeddedApplicationInstanceUtils.tsx");
 
 export const EmbedStates = { ACTIVE: 0, [0]: "ACTIVE", ENDED: 1, [1]: "ENDED" };
 export const useJoinOrStartButtonState = function useJoinOrStartButtonState(embeddedActivity) {

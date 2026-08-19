@@ -1,13 +1,12 @@
 // discord_app/modules/voice_panel/native/utils/useStableParticipant.tsx
 import shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import closure_3 from "../../../calls/ChannelRTCStore.tsx";
-import closure_4 from "../../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../../stores/MediaEngineStore.tsx";
-import closure_6 from "../../../../stores/UserStore.tsx";
+import getParticipants from "../../../calls/ChannelRTCStore.tsx";
+import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
+const require = fn;
 function areStableParticipantsEqual(arg0, arg1) {
   let tmp = arg0 === arg1;
   if (!tmp) {
@@ -19,7 +18,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
 export default function useStableParticipant(arg0, arg1, arg2) {
   const _require = arg0;
@@ -27,18 +26,18 @@ export default function useStableParticipant(arg0, arg1, arg2) {
   dependencyMap = arg2;
   const items = [closure_3, closure_6, closure_4, closure_5];
   const items1 = [arg0, arg1, arg2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null != callback) {
-      const participant = closure_1_3.getParticipant(callback2, tmp);
+      const participant = closure_1_3.getParticipant(callback2, callback);
       if (null == participant) {
-        const user = closure_1_6.getUser(tmp);
+        const user = closure_1_6.getUser(callback);
         if (null != user) {
           let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 0.785, isSelf: 0.607 };
-          obj[0] = closure_1_7.USER;
-          obj[1] = tmp;
+          obj[0] = ParticipantTypes.USER;
+          obj[1] = callback;
           obj[2] = user;
           const id = closure_1_4.getId();
-          obj[5] = callback(4796).getName(dependencyMap, tmp3, user);
+          obj[5] = callback(4796).getName(dependencyMap, callback2, user);
           const obj5 = callback(4796);
           obj[6] = callback(4797).getAvatarDecoration(user, dependencyMap);
           obj[10] = user.id === id;
@@ -47,19 +46,19 @@ export default function useStableParticipant(arg0, arg1, arg2) {
       } else {
         const tmp15 = callback2(11444)(participant);
         const type = participant.type;
-        if (closure_1_7.ACTIVITY === type) {
+        if (ParticipantTypes.ACTIVITY === type) {
           obj = { type: null, id: null, applicationId: null };
           obj[0] = participant.type;
-          obj[1] = tmp;
+          obj[1] = callback;
           obj[2] = participant.applicationId;
           return obj;
         } else {
-          if (tmp16.STREAM !== type) {
-            if (tmp16.HIDDEN_STREAM !== type) {
-              if (tmp16.USER === type) {
+          if (ParticipantTypes.STREAM !== type) {
+            if (ParticipantTypes.HIDDEN_STREAM !== type) {
+              if (ParticipantTypes.USER === type) {
                 obj = { type: null, id: null, user: null, selfVideo: null, userNick: null, userAvatarDecoration: null, streamId: null, ringing: null, hasVideo: null, canRenderVideo: null, isSelf: null };
                 obj[0] = participant.type;
-                obj[1] = tmp;
+                obj[1] = callback;
                 ({ user: obj[2], voiceState } = participant);
                 let flag;
                 const id1 = closure_1_4.getId();
@@ -86,7 +85,7 @@ export default function useStableParticipant(arg0, arg1, arg2) {
           }
           obj1 = { type: null, id: null, user: null, userNick: null, streamId: null, streamGuildId: null, hasVideo: null, isSelf: null };
           obj1[0] = participant.type;
-          obj1[1] = tmp;
+          obj1[1] = callback;
           ({ user: obj2[2], userNick: obj2[3], streamId: streamId2 } = participant);
           const id2 = closure_1_4.getId();
           obj1[4] = streamId2;
@@ -97,7 +96,6 @@ export default function useStableParticipant(arg0, arg1, arg2) {
           return obj1;
         }
       }
-      tmp3 = callback2;
     }
   }, items1, areStableParticipantsEqual);
 };
@@ -116,8 +114,8 @@ export const isStableStreamParticipant = function isStableStreamParticipant(cont
   }
   return Boolean(tmp3);
 };
-export const isStableUserParticipant = function isStableUserParticipant(type) {
-  type = undefined;
+export const isStableUserParticipant = function isStableUserParticipant(closure_16) {
+  let type;
   if (type != null) {
     type = type.type;
   }
@@ -141,7 +139,7 @@ export const isStableParticipantWithUser = function isStableParticipantWithUser(
     if (participant != null) {
       type1 = participant.type;
     }
-    tmp3 = type1 === tmp2.HIDDEN_STREAM;
+    tmp3 = type1 === ParticipantTypes.HIDDEN_STREAM;
   }
   let BooleanResult = Boolean(tmp3);
   if (!BooleanResult) {
@@ -149,14 +147,14 @@ export const isStableParticipantWithUser = function isStableParticipantWithUser(
     if (participant != null) {
       type2 = participant.type;
     }
-    BooleanResult = Boolean(type2 === tmp2.USER);
+    BooleanResult = Boolean(type2 === ParticipantTypes.USER);
   }
   return BooleanResult;
 };
-export const stableParticipantHasVideo = function stableParticipantHasVideo(arg0) {
-  let streamId = arg0;
+export const stableParticipantHasVideo = function stableParticipantHasVideo(closure_16) {
+  let streamId = closure_16;
   let type;
-  if (arg0 != null) {
+  if (closure_16 != null) {
     type = streamId.type;
   }
   const BooleanResult = Boolean(type === ParticipantTypes.ACTIVITY);
@@ -167,13 +165,13 @@ export const stableParticipantHasVideo = function stableParticipantHasVideo(arg0
     if (streamId != null) {
       type1 = streamId.type;
     }
-    let tmp5 = type1 === tmp2.STREAM;
+    let tmp5 = type1 === ParticipantTypes.STREAM;
     if (!tmp5) {
       let type2;
       if (streamId != null) {
         type2 = streamId.type;
       }
-      tmp5 = type2 === tmp2.HIDDEN_STREAM;
+      tmp5 = type2 === ParticipantTypes.HIDDEN_STREAM;
     }
     if (Boolean(tmp5)) {
       streamId = streamId.streamId;

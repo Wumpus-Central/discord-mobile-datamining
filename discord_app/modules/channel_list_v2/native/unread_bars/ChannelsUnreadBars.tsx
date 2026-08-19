@@ -2,20 +2,20 @@
 import getFontScale from "../../../screen/native/useFontScale.tsx";
 import computeSubtitle from "../../../guild_sidebar/ChannelListState.tsx";
 import renderDefaultEmpty from "../../../../lib/native/FastList.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../a11y/AccessibilityStore.tsx";
-import closure_7 from "../../../../stores/ChannelStore.tsx";
-import closure_8 from "../../../../stores/GuildReadStateStore.tsx";
-import closure_9 from "../../../../stores/ReadStateStore.tsx";
-import closure_10 from "../../../../stores/UserGuildSettingsStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import updateGuildUnreadSentinel from "../../../../stores/GuildReadStateStore.tsx";
+import generateOldThreadCutoff from "../../../../stores/ReadStateStore.tsx";
+import updateUserGuildSettingsInternal from "../../../../stores/UserGuildSettingsStore.tsx";
 import { getScaledChannelRowHeight } from "../RedesignChannelListConstants.tsx";
 import { UnreadSetting } from "../../../read_states/ReadStateConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function shouldSkipSection(diff1) {
   if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES !== diff1) {
     if (computeSubtitle.SECTION_INDEX_GUILD_ACTIONS !== diff1) {
@@ -37,9 +37,7 @@ function checkHasMentionOrUnread(getChannelFromSectionRow, section, item, MENTIO
         } else {
           const threadIds = channel.threadIds;
           for (const item10011 of threadIds) {
-            let tmp3 = store;
             if (store.getMentionCount(item10011) > 0) {
-              let tmp4 = obj;
               obj.return();
               let flag = true;
               return true;
@@ -53,13 +51,9 @@ function checkHasMentionOrUnread(getChannelFromSectionRow, section, item, MENTIO
         ({ record, threadIds } = channel);
         const obj = threadIds[Symbol.iterator]();
         while (obj !== undefined) {
-          let tmp2 = channel;
           channel = channel.getChannel(tmp);
           if (null != channel) {
-            let tmp5 = store;
-            let tmp6 = channel;
             if (store.hasUnread(tmp4.id)) {
-              let tmp7 = obj;
               obj.return();
               let flag = true;
               return true;
@@ -85,7 +79,7 @@ function checkHasMentionOrUnread(getChannelFromSectionRow, section, item, MENTIO
     }
   }
 }
-function findNearestUnreadItem(containerSize, id) {
+function findNearestUnreadItem(containerSize, id, headerHeight, youBarTotalHeight) {
   if (tmp) {
     let MENTION = constants.MENTION;
   } else {
@@ -102,7 +96,7 @@ function findNearestUnreadItem(containerSize, id) {
     const scrollPosValue = containerSize.scrollPosValue;
     const result = getScaledChannelRowHeight(getFontScale.getFontScale()) / 2;
     const value = scrollPosValue.get();
-    const item2 = containerSize.getSectionItemFromPosition(arg2 + value + result).item;
+    const item2 = containerSize.getSectionItemFromPosition(headerHeight + value + result).item;
     let layoutStart;
     if (item2 != null) {
       layoutStart = item2.layoutStart;
@@ -115,70 +109,34 @@ function findNearestUnreadItem(containerSize, id) {
     let tmp9 = null;
     const items = containerSize.state.items;
     for (const item10031 of items) {
-      let tmp12 = item10031;
       if (item10031.layoutStart >= layoutStart) {
-        let tmp69 = item10031;
-        let tmp70 = require;
-        let tmp71 = require;
-        let tmp72 = dependencyMap;
-        let tmp73 = dependencyMap;
-        if (tmp12.type === renderDefaultEmpty.FastListItemTypes.ITEM) {
-          let tmp16 = item10031;
-          if (tmp12.layoutStart > tmp8) {
-            let tmp29 = obj;
+        if (item10031.type === renderDefaultEmpty.FastListItemTypes.ITEM) {
+          if (item10031.layoutStart > tmp8) {
             obj.return();
             break;
           } else {
-            let tmp74 = section;
             if (-1 === section) {
-              let tmp17 = item10031;
-              ({ section, item } = tmp12);
+              ({ section, item } = item10031);
             }
-            let tmp18 = item10031;
-            let tmp19 = tmp70;
-            let tmp20 = tmp72;
-            if (tmp12.type !== tmp71(8124).FastListItemTypes.ITEM) {
+            if (item10031.type !== renderDefaultEmpty.FastListItemTypes.ITEM) {
               tmp9 = item10031;
-            } else {
-              let tmp21 = shouldSkipSection;
-              let tmp22 = item10031;
-              if (shouldSkipSection(tmp12.section)) {
-                continue;
-              } else {
-                let tmp23 = checkHasMentionOrUnread;
-                let tmp24 = item10031;
-                let num2 = 0;
-                let tmp25 = arg1;
-                let tmp26 = MENTION;
-                if (checkHasMentionOrUnread(arg1, tmp12.section, tmp12.item, MENTION)) {
-                  let tmp28 = obj;
-                  let tmp27 = closure_17;
-                  obj.return();
-                  return tmp27;
-                }
-              }
+            } else if (shouldSkipSection(item10031.section)) {
+              continue;
+            } else if (checkHasMentionOrUnread(arg1, item10031.section, item10031.item, MENTION)) {
+              obj.return();
+              return closure_17;
             }
             continue;
           }
           let sections = arg1.getSections();
           let diff1 = section;
-          let num3 = 1;
           if (section >= 0) {
             while (true) {
-              let tmp31 = shouldSkipSection;
               if (!shouldSkipSection(diff1)) {
                 let diff = sections[diff1] - 1;
                 if (0 <= diff) {
                   while (true) {
-                    let tmp34 = section;
-                    let tmp35 = item;
                     if (diff1 !== section) {
-                      let tmp38 = checkHasMentionOrUnread;
-                      let num4 = 0;
-                      let tmp39 = arg1;
-                      let tmp40 = diff1;
-                      let tmp41 = diff;
-                      let tmp42 = MENTION;
                       if (checkHasMentionOrUnread(arg1, tmp32, tmp37, MENTION)) {
                         break;
                       }
@@ -190,7 +148,6 @@ function findNearestUnreadItem(containerSize, id) {
                   obj = { section: null, row: null, isMention: null };
                   obj[0] = diff1;
                   obj[1] = diff;
-                  let tmp43 = constants;
                   obj[2] = MENTION === constants.MENTION;
                   obj[0] = obj;
                   return obj;
@@ -199,7 +156,6 @@ function findNearestUnreadItem(containerSize, id) {
               diff1 = diff1 - 1;
             }
           }
-          let tmp44 = tmp9;
           let num5;
           if (tmp9 != null) {
             num5 = tmp9.section;
@@ -209,25 +165,16 @@ function findNearestUnreadItem(containerSize, id) {
           }
           if (num5 < sections.length) {
             while (true) {
-              let tmp45 = shouldSkipSection;
               if (!shouldSkipSection(num5)) {
                 let tmp47 = sections[num5];
                 let num6 = 0;
                 if (0 < tmp47) {
                   while (true) {
-                    let tmp48 = tmp9;
                     let tmp49 = num6;
                     if (null != tmp9) {
-                      let tmp50 = tmp9;
                       num6 = num6 + 1;
                       continue;
                     }
-                    let tmp51 = checkHasMentionOrUnread;
-                    let num7 = 0;
-                    let tmp52 = arg1;
-                    let tmp53 = num5;
-                    let tmp54 = num6;
-                    let tmp55 = MENTION;
                     if (checkHasMentionOrUnread(arg1, tmp46, tmp49, MENTION)) {
                       break;
                     }
@@ -236,7 +183,6 @@ function findNearestUnreadItem(containerSize, id) {
                   let obj2 = { section: null, row: null, isMention: null };
                   obj2[0] = num5;
                   obj2[1] = num6;
-                  let tmp56 = constants;
                   obj2[2] = MENTION === constants.MENTION;
                   obj1[0] = obj2;
                   return obj1;
@@ -245,18 +191,13 @@ function findNearestUnreadItem(containerSize, id) {
               num5 = num5 + 1;
             }
           }
-          let tmp57 = closure_17;
           return closure_17;
-        } else {
-          let tmp13 = item10031;
-          let tmp14 = tmp70;
-          let tmp15 = tmp72;
         }
       }
       continue;
     }
-    const obj6 = getFontScale;
   }
+  tmp = mentionCount.getMentionCount(id.id) > 0;
 }
 let c4 = importAllResult;
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
@@ -270,49 +211,39 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   fastList = fastList.fastList;
   const guildChannels = fastList.guildChannels;
   const headerHeight = fastList.headerHeight;
-  let id;
   importAllResult = undefined;
-  closure_5 = undefined;
-  let youBarTotalHeight;
-  let beforeItem;
-  let afterItem;
-  closure_9 = undefined;
-  let memo;
-  let scrollPosValue;
   closure_12 = undefined;
   let bannerWidth;
   let listBottom;
   let callback;
   let stateFromStores;
-  id = guildChannels.id;
+  const id = guildChannels.id;
   let obj = importAllResult;
   importAllResult = importAllResult.useRef(-1);
   closure_5 = importAllResult.useRef(null);
   obj1 = fastList(headerHeight[15]);
-  youBarTotalHeight = obj1.useYouBarTotalHeight();
-  let tmp4 = id(importAllResult.useState(() => closure_1_20(fastList, guildChannels, headerHeight, youBarTotalHeight)), 2);
+  const youBarTotalHeight = obj1.useYouBarTotalHeight();
+  let tmp4 = id(importAllResult.useState(() => findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTotalHeight)), 2);
   const first = tmp4[0];
-  beforeItem = first.beforeItem;
-  afterItem = first.afterItem;
+  let beforeItem = first.beforeItem;
+  let afterItem = first.afterItem;
   closure_9 = tmp4[1];
   let items = [fastList, guildChannels, headerHeight, youBarTotalHeight];
-  memo = importAllResult.useMemo(() => guildChannels(headerHeight[16])(() => {
+  const memo = importAllResult.useMemo(() => guildChannels(headerHeight[16])(() => {
     closure_0 = closure_1_20(closure_0, closure_1, closure_2, closure_6);
     callback((afterItem) => {
       if (afterItem === closure_0) {
         let tmp6 = afterItem;
       } else {
         afterItem = afterItem.afterItem;
-        const afterItem2 = tmp.afterItem;
-        tmp6 = tmp;
+        const afterItem2 = closure_0.afterItem;
+        tmp6 = closure_0;
         if (tmp4(afterItem, afterItem2)) {
           beforeItem = afterItem.beforeItem;
-          const beforeItem2 = tmp.beforeItem;
-          tmp6 = tmp;
-          const tmp2Result = tmp2(tmp3[17]);
+          closure_1_1(closure_1_2[17]);
+          const beforeItem2 = closure_0.beforeItem;
+          tmp6 = closure_0;
         }
-        tmp2 = closure_1_1;
-        tmp3 = closure_1_2;
         tmp4 = closure_1_1(closure_1_2[17]);
       }
       return tmp6;
@@ -338,7 +269,7 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
       batchedStoreListener.detach();
     };
   }, items1);
-  scrollPosValue = fastList.scrollPosValue;
+  const scrollPosValue = fastList.scrollPosValue;
   let obj2 = fastList(headerHeight[19]);
   class L {
     constructor() {
@@ -450,7 +381,6 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   obj[2] = items6;
   return listBottom(closure_5, obj);
 });
-let obj = { wrapper: StyleSheet.absoluteFillObject };
-let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx");
+let result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx");
 
 export default memoResult;

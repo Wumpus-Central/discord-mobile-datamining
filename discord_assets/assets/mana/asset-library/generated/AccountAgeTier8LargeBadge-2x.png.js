@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/AccountAgeTier8LargeBadge-2x.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier8LargeBadge-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier8LargeBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/45e0a523aa412b4d7b775d8f799e59724ddf68ebf62a3e155cd0f0431ee05f16.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/AccountAgeTier8LargeBadge-2x.png";

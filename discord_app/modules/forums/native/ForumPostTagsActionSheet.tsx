@@ -1,15 +1,15 @@
 // discord_app/modules/forums/native/ForumPostTagsActionSheet.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { MAX_FORUM_POST_TAGS } from "../ForumConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" }, saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 }, subtitle: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/forums/native/ForumPostTagsActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/ForumPostTagsActionSheet.tsx");
 
 export default function ForumPostTagsActionSheet(thread) {
   thread = thread.thread;
@@ -26,7 +26,7 @@ export default function ForumPostTagsActionSheet(thread) {
   let first;
   closure_5 = undefined;
   closure_6 = undefined;
-  function toggleTag(closure_5, arg1) {
+  function toggleTag(closure_5, arg1, id) {
     if (null != closure_5) {
       const _Set = Set;
       const set = new Set(first);
@@ -50,17 +50,6 @@ export default function ForumPostTagsActionSheet(thread) {
   closure_6 = first.size >= closure_6;
   let set = new Set(appliedTags);
   const visibleForumTags = thread(7237).useVisibleForumTags(thread.parentChannel);
-  obj = {
-    onDismiss() {
-      let tmp;
-      if (callback != null) {
-        tmp = callback();
-      }
-      return tmp;
-    },
-    header: null,
-    children: null
-  };
   obj = { title, subtitle: null, subtitleStyle: null };
   const intl2 = tmp4(1236).intl;
   obj[1] = intl2.string(thread(1236).t["+HS9+m"]);
@@ -70,9 +59,9 @@ export default function ForumPostTagsActionSheet(thread) {
   let items = [
     toggleTag(closure_5, {
       style: tmp3.tagsContainer,
-      children: visibleForumTags.map((id) => {
-        const hasItem = first.has(id);
-        const obj = { tag: id, disabled: null, onPress: null, selected: null };
+      children: visibleForumTags.map((item, index) => {
+        const hasItem = first.has(item);
+        const obj = { tag: item, disabled: null, onPress: null, selected: null };
         let tmp4 = !flag;
         if (flag) {
           let tmp5 = closure_6;
@@ -84,12 +73,12 @@ export default function ForumPostTagsActionSheet(thread) {
         obj[1] = tmp4;
         obj[2] = toggleTag;
         obj[3] = hasItem;
-        return toggleTag(flag(closure_1_2[10]), obj, id.id);
+        return toggleTag(flag(dependencyMap[10]), obj, item.id);
       })
     }),
 
   ];
-  const obj2 = { style: tmp3.saveButton, children: null };
+  let obj2 = { style: tmp3.saveButton, children: null };
   const obj3 = { text: null, onPress: null };
   const intl3 = tmp4(1236).intl;
   obj3[0] = intl3.string(thread(1236).t["R3BPH+"]);
@@ -97,13 +86,14 @@ export default function ForumPostTagsActionSheet(thread) {
     Array.from(first);
     if (null != closure_2) {
       const items = [];
-      HermesBuiltin.arraySpread(tmp, 0);
+      HermesBuiltin.arraySpread(first, 0);
       tmp4(items);
     } else if (null != thread) {
-      flag(closure_1_2[12]).updateForumPostTags(tmp5.id, tmp3);
-      const obj = flag(closure_1_2[12]);
+      flag(dependencyMap[12]).updateForumPostTags(tmp5.id, tmp3);
+      const obj = flag(dependencyMap[12]);
     }
-    flag(closure_1_2[13]).hideActionSheet();
+    flag(dependencyMap[13]).hideActionSheet();
+    const obj2 = flag(dependencyMap[13]);
   };
   obj2[1] = toggleTag(thread(4745).Button, obj3);
   items[1] = toggleTag(closure_5, obj2);

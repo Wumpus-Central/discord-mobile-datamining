@@ -1,27 +1,24 @@
 // discord_app/modules/activities/utils/useRefocusOrLaunchActivity.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../frames/FramesStore.tsx";
-import closure_6 from "../EmbeddedActivitiesStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import map from "../../frames/FramesStore.tsx";
+import participantFromServer from "../EmbeddedActivitiesStore.tsx";
 import FrameLayoutModes from "../../frames/FramesConstants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ MAIN_SURFACE: error, FrameLayoutModes: closure_8 } = FrameLayoutModes);
-let result = require("set").fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
+let result = require("obj132").fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
 
 export default function useRefocusOrLaunchActivity(applicationId) {
   applicationId = applicationId.applicationId;
   const analyticsLocations = applicationId.analyticsLocations;
   const runBeforeLaunchAttempt = applicationId.runBeforeLaunchAttempt;
   const runAfterLaunchAttempt = applicationId.runAfterLaunchAttempt;
-  let data;
-  let stateFromStores;
   let stateFromStores1;
-  c7 = undefined;
-  data = applicationId(runBeforeLaunchAttempt[5]).useApplication(applicationId).data;
+  const data = applicationId(runBeforeLaunchAttempt[5]).useApplication(applicationId).data;
   let obj = applicationId(runBeforeLaunchAttempt[5]);
   const items = [stateFromStores1];
-  stateFromStores = applicationId(runBeforeLaunchAttempt[6]).useStateFromStores(items, () => stateFromStores1.getCurrentEmbeddedActivity());
+  const stateFromStores = applicationId(runBeforeLaunchAttempt[6]).useStateFromStores(items, () => stateFromStores1.getCurrentEmbeddedActivity());
   let obj2 = applicationId(runBeforeLaunchAttempt[6]);
   const items1 = [stateFromStores];
   stateFromStores1 = applicationId(runBeforeLaunchAttempt[6]).useStateFromStores(items1, () => stateFromStores.getMainFrame());
@@ -57,19 +54,19 @@ export default function useRefocusOrLaunchActivity(applicationId) {
             return obj;
           } else {
             closure_1 = tmp3;
-            if (null != closure_1_0) {
+            if (null != applicationId) {
               if (null != c4) {
                 let tmp9 = null != c5;
                 if (tmp9) {
-                  tmp9 = tmp43.applicationId === tmp41;
+                  tmp9 = tmp43.applicationId === applicationId;
                 }
-                if (null != closure_1_6) {
-                  if (tmp10.applicationId === tmp41) {
+                if (null != stateFromStores1) {
+                  if (stateFromStores1.applicationId === applicationId) {
                     obj1 = { frameId: null, layoutMode: null };
-                    obj1[0] = tmp10.id;
+                    obj1[0] = stateFromStores1.id;
                     obj1[1] = closure_1_8.FOCUSED;
-                    const result = closure_1_1(8705).updateFrameLayoutMode(obj1);
-                    const obj9 = closure_1_1(8705);
+                    const result = analyticsLocations(8705).updateFrameLayoutMode(obj1);
+                    const obj9 = analyticsLocations(8705);
                   }
                 }
                 if (tmp9) {
@@ -78,17 +75,17 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   if ("guild_id" in _location) {
                     guild_id = _location.guild_id;
                   }
-                  closure_1_1(8733)(guild_id, _location);
-                  const tmp25 = closure_1_1(8733);
+                  analyticsLocations(8733)(guild_id, _location);
+                  const tmp25 = analyticsLocations(8733);
                 } else {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
                   c4 = 1;
                   if (closure_1_7) {
-                    let obj5 = closure_1_1(8705);
+                    let obj5 = analyticsLocations(8705);
                     let obj2 = { applicationId: null, surface: null };
-                    obj2[0] = tmp41;
+                    obj2[0] = applicationId;
                     obj2[1] = closure_1_7;
                     dependencyMap = 2;
                     c5 = 1;
@@ -108,9 +105,9 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     }
                   }
                 }
-                obj2 = closure_1_0(10710);
+                obj2 = applicationId(10710);
                 const obj4 = { appId: null, botId: null, analyticsLocations: null };
-                obj4[0] = tmp41;
+                obj4[0] = applicationId;
                 let id1;
                 if (tmp42 != null) {
                   const bot2 = tmp42.bot;
@@ -119,8 +116,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   }
                 }
                 obj4[1] = id1;
-                closure_0 = closure_1_1;
-                if (closure_1_1 == null) {
+                closure_0 = analyticsLocations;
+                if (analyticsLocations == null) {
                   closure_0 = [];
                 }
                 obj4[2] = closure_0;

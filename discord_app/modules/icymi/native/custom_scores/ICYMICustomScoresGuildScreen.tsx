@@ -1,27 +1,25 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMICustomScoresGuildScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../guild_sidebar/ChannelListStore.tsx";
-import closure_7 from "../../../../stores/ChannelStore.tsx";
-import closure_8 from "../../../../stores/GuildStore.tsx";
-import closure_9 from "../../../../stores/UserGuildSettingsStore.tsx";
-import closure_10 from "../../ICYMIStore.tsx";
+import handleReset from "../../../guild_sidebar/ChannelListStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import updateUserGuildSettingsInternal from "../../../../stores/UserGuildSettingsStore.tsx";
+import filterStaffGuild from "../../ICYMIStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function ICYMICustomScoreChannelRow(channelId) {
   channelId = channelId.channelId;
-  let stateFromStores;
   let stateFromStores1;
-  closure_3 = undefined;
   ({ start, end, disabled } = channelId);
-  let tmp = callback3();
+  const tmp = callback3();
   let obj = channelId(stateFromStores1[11]);
   const items = [closure_7];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(channelId));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(channelId));
   const tmp6 = stateFromStores(stateFromStores1[12])(stateFromStores);
   obj1 = channelId(stateFromStores1[11]);
   const items1 = [closure_10, closure_9];
@@ -29,12 +27,12 @@ function ICYMICustomScoreChannelRow(channelId) {
     if (null == stateFromStores) {
       return channelId(stateFromStores1[13]).ICYMICustomScore.DEFAULT;
     } else {
-      const customChannelScore = closure_1_10.getCustomChannelScore(tmp.guild_id, tmp.id);
+      const customChannelScore = closure_1_10.getCustomChannelScore(stateFromStores.guild_id, stateFromStores.id);
       if (customChannelScore !== channelId(stateFromStores1[13]).ICYMICustomScore.UNKNOWN) {
         return customChannelScore;
       } else {
         const ICYMICustomScore = channelId(stateFromStores1[13]).ICYMICustomScore;
-        const isChannelMutedResult = closure_1_9.isChannelMuted(tmp.guild_id, tmp.id);
+        const isChannelMutedResult = closure_1_9.isChannelMuted(stateFromStores.guild_id, stateFromStores.id);
       }
     }
   });
@@ -46,18 +44,15 @@ function ICYMICustomScoreChannelRow(channelId) {
     if (closure_3) {
       const intl4 = channelId(stateFromStores1[14]).intl;
       let stringResult = intl4.string(channelId(stateFromStores1[14]).t.lhPHmz);
+    } else if (stateFromStores1 === channelId(stateFromStores1[13]).ICYMICustomScore.MORE) {
+      const intl3 = channelId(stateFromStores1[14]).intl;
+      stringResult = intl3.string(channelId(stateFromStores1[14]).t.Rxe3jF);
+    } else if (stateFromStores1 === channelId(stateFromStores1[13]).ICYMICustomScore.LESS) {
+      const intl2 = channelId(stateFromStores1[14]).intl;
+      stringResult = intl2.string(channelId(stateFromStores1[14]).t.rdt65I);
     } else {
-      if (stateFromStores1 === channelId(stateFromStores1[13]).ICYMICustomScore.MORE) {
-        const intl3 = channelId(stateFromStores1[14]).intl;
-        stringResult = intl3.string(channelId(stateFromStores1[14]).t.Rxe3jF);
-      } else if (tmp === channelId(stateFromStores1[13]).ICYMICustomScore.LESS) {
-        const intl2 = channelId(stateFromStores1[14]).intl;
-        stringResult = intl2.string(channelId(stateFromStores1[14]).t.rdt65I);
-      } else {
-        const intl = channelId(stateFromStores1[14]).intl;
-        stringResult = intl.string(channelId(stateFromStores1[14]).t.SnrG00);
-      }
-      tmp = stateFromStores1;
+      const intl = channelId(stateFromStores1[14]).intl;
+      stringResult = intl.string(channelId(stateFromStores1[14]).t.SnrG00);
     }
     return stringResult;
   }, items2);
@@ -81,10 +76,10 @@ function ICYMICustomScoreChannelRow(channelId) {
       obj2[0] = tmp5(tmp3[21]);
       obj2[1] = tmp2(tmp3[20]).Icon.Sizes.SMALL;
       obj2[2] = tmp.channelMutedIcon;
-      const items3 = [tmp15(tmp2(tmp3[20]).Icon, obj2), ];
+      const items3 = [callback(tmp2(tmp3[20]).Icon, obj2), ];
       const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
       obj3[3] = tmp6;
-      items3[1] = tmp15(tmp2(tmp3[22]).Text, obj3);
+      items3[1] = callback(tmp2(tmp3[22]).Text, obj3);
       obj1[1] = items3;
       tmp13 = callback2(View, obj1);
     }
@@ -113,32 +108,25 @@ function keyExtractor(kind) {
   }
 }
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-createCacheKey = { container: null, guildHeader: null, categoryHeader: null, channelNameContainer: null, channelMutedIcon: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_12 };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_32 };
-let obj1 = { marginBottom: ThemesDefault.space.PX_32 };
 createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-let obj2 = { paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[3] = { flexDirection: "row", gap: ThemesDefault.space.PX_4 };
-let obj3 = { flexDirection: "row", gap: ThemesDefault.space.PX_4 };
 createCacheKey[4] = { alignSelf: "center", tintColor: ThemesDefault.colors.ICON_MUTED };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { alignSelf: "center", tintColor: ThemesDefault.colors.ICON_MUTED };
-const result = require("set").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresGuildScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresGuildScreen.tsx");
 
 export default function ICYMICustomScoresGuildScreen(navigation) {
   navigation = navigation.navigation;
   const guildId = navigation.route.params.guildId;
-  dependencyMap = undefined;
-  let stateFromStores;
   let React;
   let guildChannels;
   const tmp = callback3();
   dependencyMap = tmp;
   let obj = navigation(589);
   let items = [closure_8];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
   obj1 = React;
   let items1 = [navigation, ];
   let name;
@@ -171,79 +159,46 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
     const sections = guildChannels.getSections(false);
     const entries = sections.entries();
     while (tmp3 !== undefined) {
-      let tmp5 = stateFromStores;
       let tmp6 = stateFromStores(tmp4, 2);
       let first = tmp6[0];
       if (0 !== tmp6[1]) {
-        let tmp25 = first;
-        let tmp26 = navigation;
-        let tmp27 = navigation;
-        let tmp28 = closure_2;
-        let tmp29 = closure_2;
         if (first !== navigation(closure_2[23]).SECTION_INDEX_GUILD_ACTIONS) {
-          let tmp30 = first;
-          let tmp31 = guildChannels;
-          let obj3 = guildChannels;
           if (first !== guildChannels.voiceChannelsSectionNumber) {
-            let tmp32 = tmp31;
-            let tmp33 = first;
-            let categoryFromSection = obj3.getCategoryFromSection(first);
+            let categoryFromSection = guildChannels.getCategoryFromSection(first);
             let found;
             if (categoryFromSection != null) {
               let channelRecords = categoryFromSection.getChannelRecords();
-              found = channelRecords.filter((stateFromStores) => callback(table[13]).isChannelCustomScoreEligible(stateFromStores));
+              found = channelRecords.filter((item, index) => callback(table[13]).isChannelCustomScoreEligible(item));
             }
             let arr3 = found;
             if (null != found) {
-              let tmp34 = found;
               if (0 !== arr3.length) {
-                let tmp35 = tmp26;
-                let tmp36 = tmp28;
-                let intl3 = tmp27(tmp29[14]).intl;
-                let stringResult = intl3.string(tmp27(tmp29[14]).t.GSfOoo);
-                let tmp37 = first;
-                if (first === tmp27(tmp29[23]).SECTION_INDEX_FAVORITES) {
-                  let tmp15 = tmp26;
-                  let tmp16 = tmp28;
-                  let intl2 = tmp27(tmp29[14]).intl;
-                  stringResult = intl2.string(tmp27(tmp29[14]).t.mlPMCy);
+                let intl3 = navigation(closure_2[14]).intl;
+                let stringResult = intl3.string(navigation(closure_2[14]).t.GSfOoo);
+                if (first === navigation(closure_2[23]).SECTION_INDEX_FAVORITES) {
+                  let intl2 = navigation(closure_2[14]).intl;
+                  stringResult = intl2.string(navigation(closure_2[14]).t.mlPMCy);
                   let obj = { kind: "categoryHeader", index: null, title: null };
-                  let tmp17 = first;
                   obj[1] = first;
-                  let tmp18 = stringResult;
                   obj[2] = stringResult;
                   let arr = items.push(obj);
-                  let tmp20 = found;
                   let entries1 = arr3.entries();
-                  let tmp22 = entries1;
                   let tmp23 = entries1[Symbol.iterator]();
-                } else {
-                  let tmp38 = first;
-                  let tmp39 = tmp26;
-                  let tmp40 = tmp28;
-                  if (first !== tmp27(tmp29[23]).SECTION_INDEX_RECENTS) {
-                    let tmp9 = first;
-                    let tmp10 = tmp26;
-                    let tmp11 = tmp28;
-                    if (first >= tmp27(tmp29[23]).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
-                      let tmp41 = tmp31;
-                      let tmp42 = first;
-                      let namedCategoryFromSection = obj3.getNamedCategoryFromSection(first);
-                      let str;
-                      if (namedCategoryFromSection != null) {
-                        str = namedCategoryFromSection.record.name;
-                      }
-                      if (str == null) {
-                        str = "";
-                      }
-                      stringResult = str;
+                } else if (first !== navigation(closure_2[23]).SECTION_INDEX_RECENTS) {
+                  if (first >= navigation(closure_2[23]).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+                    let namedCategoryFromSection = guildChannels.getNamedCategoryFromSection(first);
+                    let str;
+                    if (namedCategoryFromSection != null) {
+                      str = namedCategoryFromSection.record.name;
                     }
+                    if (str == null) {
+                      str = "";
+                    }
+                    stringResult = str;
                   }
                 }
-                let tmp13 = tmp26;
-                let tmp14 = tmp28;
-                let intl = tmp27(tmp29[14]).intl;
-                stringResult = intl.string(tmp27(tmp29[14]).t.gKcrqM);
+                let intl = navigation(closure_2[14]).intl;
+                stringResult = intl.string(navigation(closure_2[14]).t.gKcrqM);
               }
             }
           }
@@ -258,15 +213,13 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   }, items4);
   const items5 = [stateFromStores, , ];
   ({ categoryHeader: arr6[1], guildHeader: arr6[2] } = tmp);
-  obj = { style: tmp.container, children: null };
   const callback = obj1.useCallback((item) => {
     item = item.item;
     const kind = item.kind;
     if ("header" === kind) {
       let tmp16 = null;
       if (null != stateFromStores) {
-        let obj = { children: null };
-        obj = { style: null, children: null };
+        let obj = { style: null, children: null };
         obj[0] = closure_2.guildHeader;
         obj1 = { guild: null };
         obj1[0] = tmp15;
@@ -301,7 +254,7 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
     } else if ("channel" === kind) {
       obj = { disabled: null, channelId: null, start: null, end: null };
       ({ disabled: obj[0], channelId: obj[1], start: obj[2], end: obj[3] } = item);
-      return closure_1_11(closure_1_15, obj);
+      return closure_1_11(ICYMICustomScoreChannelRow, obj);
     } else {
       return null;
     }

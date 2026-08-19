@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/GuildSettingsModalMembersStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../stores/GuildMemberStore.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
 import { FormStates } from "../../Constants.tsx";
 
 function handleStopEditingRoles() {
@@ -80,7 +80,7 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispat
       items[HermesBuiltin.arraySpread(arr, 0)] = roleId;
       found = items;
     } else {
-      found = arr.filter((arg0) => arg0 !== roleId);
+      found = arr.filter((item, index) => item !== roleId);
     }
   },
   GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE: function handleSaveRoles() {
@@ -92,6 +92,6 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispat
     error = error.error;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
 
 export default guildSettingsModalMembersStore;

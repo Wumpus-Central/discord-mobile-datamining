@@ -4,7 +4,7 @@ import __INTERNAL_VIEW_CONFIGDefault from "../../../discord_common/js/packages/r
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
-import set from "../../utils/PlatformUtils.tsx";
+import obj132 from "../../utils/PlatformUtils.tsx";
 
 class FastImageAndroid {
   constructor(arg0) {
@@ -61,10 +61,6 @@ let merged = Object.assign(noopAll.memo((fade) => {
 }), {
   preload(arg0) {
     closure_0 = arg0;
-    let num = arg1;
-    if (arg1 === undefined) {
-      num = 2000;
-    }
     let promise = new Promise((arg0) => {
       const ImageManager = closure_1_3.ImageManager;
       ImageManager.preload(closure_0, arg0);
@@ -75,13 +71,12 @@ let merged = Object.assign(noopAll.memo((fade) => {
     return Promise.race(items);
   }
 });
-FastImageAndroid.preload = (closure_0) => {
-  closure_0 = arg1;
-  const catchPromise = closure_2.prefetch(closure_0).catch(() => {
+FastImageAndroid.preload = (closure_0, closure_0) => {
+  const catchPromise = closure_2.prefetch(closure_0).catch((error) => {
 
   });
   let racePromise = catchPromise;
-  if (null != arg1) {
+  if (null != closure_0) {
     const items = [catchPromise, ];
     const promise = new Promise((arg0) => setTimeout(arg0, closure_0));
     items[1] = promise;
@@ -89,9 +84,9 @@ FastImageAndroid.preload = (closure_0) => {
   }
   return racePromise;
 };
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   merged = FastImageAndroid;
 }
-const result = set.fileFinishedImporting("components_native/common/FastImage.tsx");
+const result = obj132.fileFinishedImporting("components_native/common/FastImage.tsx");
 
 export default merged;

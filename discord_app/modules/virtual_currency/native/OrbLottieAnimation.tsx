@@ -1,13 +1,12 @@
 // discord_app/modules/virtual_currency/native/OrbLottieAnimation.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import noop2 from "../../../../_runtime/00019_noop.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ useRef: c3, useEffect: c4, forwardRef } = noop);
 const forwardRefResult = forwardRef((animationType, ref) => {
   animationType = animationType.animationType;
-  dependencyMap = undefined;
   let obj = animationType(4310);
   const theme = obj.useTheme();
   const obj2 = animationType(1363);
@@ -46,7 +45,7 @@ const forwardRefResult = forwardRef((animationType, ref) => {
   return <SpendEarnOrbsLottie ref={tmp5} size="custom" width={60} height={60} opacity={0.8} animation={null} useLottieDefaultColors />;
 });
 forwardRefResult.displayName = "OrbsLottieAnimation";
-const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");
+const result = require("obj132").fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");
 
 export default forwardRefResult;
 export const OrbLottieAnimation = forwardRefResult;

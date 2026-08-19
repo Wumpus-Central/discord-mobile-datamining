@@ -1,14 +1,14 @@
 // discord_common/js/packages/time-utils/TimeUtils.tsx
 import u from "../performance-utils/index.js";
 import findLastIndexDefault from "../../../../_runtime/04550_findLastIndex.js";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import tryCatch from "../../../../_runtime/04549_tryCatch.js";
 
-require = arg1;
-function sleep(num) {
-  let asMillisecondsResult = num;
-  if (typeof num !== "number") {
-    asMillisecondsResult = num.asMilliseconds();
+require = fn;
+function sleep(asMilliseconds) {
+  let asMillisecondsResult = asMilliseconds;
+  if (typeof asMilliseconds !== "number") {
+    asMillisecondsResult = asMilliseconds.asMilliseconds();
   }
   require = asMillisecondsResult;
   return new Promise((arg0) => {
@@ -21,7 +21,7 @@ function now() {
   const _performance = u.performance;
   return Math.floor(u.timeOrigin + _performance.now());
 }
-const fn = () => Object.create(new.target.prototype);
+fn = (arg0) => Object.create(new.target.prototype);
 fn.prototype["now"] = function now() {
   if (typeof now !== "function") {
     HermesBuiltin.throwTypeError();
@@ -50,13 +50,13 @@ class TimeSpan {
       return obj.milliseconds / 1000 / 60 / 60;
     };
     obj.add = function add(milliseconds) {
-      return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+      return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
     };
     obj.subtract = function subtract(milliseconds) {
-      return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+      return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
     };
     obj.subtractOrZero = function subtractOrZero(milliseconds) {
-      return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+      return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
     };
     if (!importAll) {
       num = 0;
@@ -66,9 +66,9 @@ class TimeSpan {
     if (!importDefault) {
       num2 = 0;
     }
-    num3 = arg1;
+    num3 = fn;
     obj.milliseconds = obj.milliseconds + 1000 * num2;
-    if (!arg1) {
+    if (!fn) {
       num3 = 0;
     }
     num4 = global;
@@ -107,13 +107,13 @@ TimeSpan.fromMilliseconds = function fromMilliseconds(timePassed) {
     return obj.milliseconds / 1000 / 60 / 60;
   };
   obj.add = function add(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+    return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
   };
   obj.subtract = function subtract(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+    return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
   };
   obj.subtractOrZero = function subtractOrZero(milliseconds) {
-    return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+    return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
   };
   if (!timePassed) {
     num = 0;
@@ -142,13 +142,13 @@ TimeSpan.fromSeconds = function fromSeconds(arg0) {
     return obj.milliseconds / 1000 / 60 / 60;
   };
   obj.add = function add(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+    return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
   };
   obj.subtract = function subtract(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+    return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
   };
   obj.subtractOrZero = function subtractOrZero(milliseconds) {
-    return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+    return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
   };
   ({ milliseconds: tmp2.milliseconds, milliseconds } = obj);
   obj.milliseconds = obj.milliseconds;
@@ -175,13 +175,13 @@ TimeSpan.fromMinutes = function fromMinutes(arg0) {
     return obj.milliseconds / 1000 / 60 / 60;
   };
   obj.add = function add(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+    return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
   };
   obj.subtract = function subtract(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+    return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
   };
   obj.subtractOrZero = function subtractOrZero(milliseconds) {
-    return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+    return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
   };
   ({ milliseconds: tmp2.milliseconds, milliseconds: tmp2.milliseconds, milliseconds } = obj);
   if (!arg0) {
@@ -211,13 +211,13 @@ TimeSpan.fromHours = function fromHours(arg0) {
     return obj.milliseconds / 1000 / 60 / 60;
   };
   obj.add = function add(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
+    return TimeSpan.fromMilliseconds(obj.milliseconds + milliseconds.milliseconds);
   };
   obj.subtract = function subtract(milliseconds) {
-    return closure_1_12.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
+    return TimeSpan.fromMilliseconds(obj.milliseconds - milliseconds.milliseconds);
   };
   obj.subtractOrZero = function subtractOrZero(milliseconds) {
-    return closure_1_12.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
+    return TimeSpan.fromMilliseconds(Math.max(obj.milliseconds - milliseconds.milliseconds, 0));
   };
   ({ milliseconds: tmp2.milliseconds, milliseconds: tmp2.milliseconds, milliseconds: tmp2.milliseconds, milliseconds } = obj);
   if (!arg0) {
@@ -345,7 +345,7 @@ TimeOut["startNew"] = function startNew(timeout) {
   if (typeof StopWatch !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  obj = Object.create(TimeOut.prototype);
+  Object.create(TimeOut.prototype);
   obj = Object.create(StopWatch.prototype);
   obj.timestampProducer = obj;
   obj[0] = obj;
@@ -390,10 +390,10 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
             sleep = closure_1_7.fromMilliseconds(100);
             let tmp13 = closure_1_0;
             if (!(closure_1_0 instanceof closure_1_7)) {
-              const timeout = tmp24.timeout;
+              const timeout = closure_1_0.timeout;
               tmp13 = timeout;
-              if (null != tmp24.sleep) {
-                sleep = tmp24.sleep;
+              if (null != closure_1_0.sleep) {
+                sleep = closure_1_0.sleep;
                 tmp13 = timeout;
               }
             }
@@ -445,7 +445,7 @@ TimeOut["waitFor"] = function waitFor(arg0, arg1) {
 obj = { NONE: "NONE", SECONDS: "SECONDS", MINUTES: "MINUTES", HOURS: "HOURS", DAYS: "DAYS", WEEKS: "WEEKS", MONTHS: "MONTHS", YEARS: "YEARS" };
 obj = { unit: obj.NONE, max: 0 };
 const items = [obj, { unit: obj.SECONDS, max: 1 }, { unit: obj.MINUTES, max: 60 }, { unit: obj.HOURS, max: 1440 }, { unit: obj.DAYS, max: 44640 }, { unit: obj.WEEKS, max: 40320 }, { unit: obj.MONTHS, max: 525600 }, { unit: obj.YEARS, max: Infinity }];
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/time-utils/TimeUtils.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/time-utils/TimeUtils.tsx");
 class ControllableTimeStampProducer {
 }
 const prototype4 = ControllableTimeStampProducer.prototype;
@@ -463,8 +463,8 @@ prototype4["reset"] = function reset() {
 };
 class DurationEnabled {
   constructor(arg0) {
-    tmp = arg1;
-    if (arg1 === undefined) {
+    tmp = fn;
+    if (fn === undefined) {
       tmp = closure_6;
     }
     tmp2 = StopWatch;
@@ -532,19 +532,19 @@ export const TimeUnits = obj;
 export const convertMinutesToGivenTimeUnit = function convertMinutesToGivenTimeUnit(arg0, unit) {
   if (obj.NONE === unit) {
     return 0;
-  } else if (tmp.SECONDS === unit) {
+  } else if (obj.SECONDS === unit) {
     return 60 * arg0;
-  } else if (tmp.MINUTES === unit) {
+  } else if (obj.MINUTES === unit) {
     return arg0;
-  } else if (tmp.HOURS === unit) {
+  } else if (obj.HOURS === unit) {
     return arg0 / 60;
-  } else if (tmp.DAYS === unit) {
+  } else if (obj.DAYS === unit) {
     return arg0 / 60 / 24;
-  } else if (tmp.WEEKS === unit) {
+  } else if (obj.WEEKS === unit) {
     return arg0 / 60 / 24 / 7;
-  } else if (tmp.MONTHS === unit) {
+  } else if (obj.MONTHS === unit) {
     return arg0 / 60 / 24 / 31;
-  } else if (tmp.YEARS === unit) {
+  } else if (obj.YEARS === unit) {
     return arg0 / 60 / 24 / 365;
   }
 };
@@ -552,9 +552,9 @@ export const TimeUnitMax = items;
 export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   closure_0 = arg0;
   importDefault = arg1;
-  const tmp2 = findLastIndexDefault(items, (unit) => f75588(unit.unit), items.findIndex((max) => {
-    max = max.max;
-    let tmp = max.unit === closure_1_10.NONE;
+  const tmp2 = findLastIndexDefault(items, (unit) => f75588(unit.unit), items.findIndex((item, index) => {
+    const max = item.max;
+    let tmp = item.unit === obj.NONE;
     if (tmp) {
       tmp = closure_0 === max;
     }
@@ -566,17 +566,16 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = arr.find((unit) => f75588(unit.unit));
+    const found = items.find((item, index) => f75588(item.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
     }
     return unit;
   }
-  arr = items;
-  const findIndexResult = items.findIndex((max) => {
-    max = max.max;
-    let tmp = max.unit === closure_1_10.NONE;
+  const findIndexResult = items.findIndex((item, index) => {
+    const max = item.max;
+    let tmp = item.unit === obj.NONE;
     if (tmp) {
       tmp = closure_0 === max;
     }
@@ -594,10 +593,10 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     return obj;
   } else {
     closure_0 = rounded;
-    const f75588 = (arg0) => closure_0.includes(arg0);
-    const tmp12 = f75588(4550)(items, (unit) => f75588(unit.unit), items.findIndex((max) => {
-      max = max.max;
-      let tmp = max.unit === closure_1_10.NONE;
+    const f75588 = (dependencyMap) => closure_0.includes(dependencyMap);
+    const tmp12 = f75588(4550)(items, (unit) => f75588(unit.unit), items.findIndex((item, index) => {
+      const max = item.max;
+      let tmp = item.unit === obj.NONE;
       if (tmp) {
         tmp = closure_0 === max;
       }
@@ -609,7 +608,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = arr.find((unit) => f75588(unit.unit));
+      const found = items.find((item, index) => f75588(item.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;
@@ -625,36 +624,19 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
       }
       obj[1] = rounded;
       return obj;
-    } else {
-      let num = 0;
-      if (obj.NONE !== unit) {
-        if (tmp4.SECONDS === unit) {
-          num = 60 * rounded;
-        } else {
-          num = rounded;
-          if (tmp4.MINUTES !== unit) {
-            if (tmp4.HOURS === unit) {
-              num = rounded / 60;
-            } else if (tmp4.DAYS === unit) {
-              num = rounded / 60 / 24;
-            } else {
-              if (tmp4.WEEKS === unit) {
-                num = rounded / 60 / 24 / 7;
-              } else if (tmp4.MONTHS !== unit) {
-                if (tmp4.YEARS === unit) {
-                  num = rounded / 60 / 24 / 365;
-                }
-              }
-              num = rounded / 60 / 24 / 31;
-            }
-          }
+    } else if (obj.NONE !== unit) {
+      if (tmp4.SECONDS === unit) {
+      } else if (tmp4.MINUTES !== unit) {
+        if (tmp4.HOURS === unit) {
+        } else if (tmp4.DAYS === unit) {
+        } else if (tmp4.WEEKS === unit) {
+        } else if (tmp4.MONTHS !== unit) {
         }
       }
     }
-    arr = items;
-    const findIndexResult = items.findIndex((max) => {
-      max = max.max;
-      let tmp = max.unit === closure_1_10.NONE;
+    const findIndexResult = items.findIndex((item, index) => {
+      const max = item.max;
+      let tmp = item.unit === obj.NONE;
       if (tmp) {
         tmp = closure_0 === max;
       }

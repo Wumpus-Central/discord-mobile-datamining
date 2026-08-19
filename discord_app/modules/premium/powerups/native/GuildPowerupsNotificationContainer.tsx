@@ -1,34 +1,34 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import messagesProxyDefault from "../GuildPowerups.messages.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import useGuildPowerupTier3OverrideConfigDefault from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
 import useGuildPowerupExpiringNotificationsConfigDefault from "../hooks/useGuildPowerupExpiringNotificationsConfig.tsx";
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 function Tier3OverrideNotice(children) {
-  let obj = apexExperiment;
-  obj = { style: callback().staffContainer, children: null };
+  const obj = { style: callback().staffContainer, children: null };
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("Tier3OverrideNotice");
   let str = "text-sm/medium";
   if (manaTypeConsolidationExperiment) {
     str = "experimental/body-sm/normal";
   }
-  obj[1] = closure_4(Text.Text, { variant: str, children: children.text });
-  return closure_4(View, obj);
+  obj[1] = callback(Text.Text, { variant: str, children: children.text });
+  return callback(View, obj);
 }
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { container: null, staffContainer: null };
-obj = { gap: ThemesDefault.space.PX_12, margin: ThemesDefault.space.PX_16 };
+let obj = { gap: ThemesDefault.space.PX_12, margin: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 obj[1] = { padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_6 = createCacheKey.createStyles(obj);
-let obj1 = { padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx");
 
 export default function GuildPowerupsNotificationContainer(guildId) {
   guildId = guildId.guildId;
@@ -50,14 +50,14 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       str2 = "experimental/heading-lg/semibold";
     }
     obj[1] = str2;
-    const intl = tmp6(1236).intl;
-    obj[2] = intl.string(tmp2(2367)["3FRirU"]);
-    const items = [closure_4(tmp6(4734).Text, obj), , ];
+    const intl = getSystemLocale.intl;
+    obj[2] = intl.string(messagesProxyDefault["3FRirU"]);
+    const items = [callback(Text.Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       obj1 = { text: null };
       obj1[0] = tmp4.text;
-      shouldShow = tmp11(Tier3OverrideNotice, obj1);
+      shouldShow = callback(Tier3OverrideNotice, obj1);
     }
     items[1] = shouldShow;
     let shouldShow2 = tmp5.shouldShow;
@@ -65,13 +65,11 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       const obj2 = { guildId: null, powerupNames: null, warnings: null };
       obj2[0] = guildId;
       ({ expiringPowerupNames: obj5[1], warnings: obj5[2] } = tmp5);
-      shouldShow2 = tmp11(tmp2(11729), obj2);
+      shouldShow2 = callback(GuildPowerupsWarningDefault, obj2);
     }
     items[2] = shouldShow2;
     obj[1] = items;
-    let tmp9Result = closure_5(View, obj);
-    const tmp10 = View;
-    const tmp9 = closure_5;
+    let tmp9Result = callback2(View, obj);
   } else {
     tmp9Result = null;
   }

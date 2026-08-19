@@ -2,13 +2,13 @@
 import getSystemLocale from "../../../intl/index.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import registerAssetDefault from "../../../../_runtime/09416_registerAsset.js";
-import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_6 from "../QuestStore.tsx";
+import initializeState from "../QuestStore.tsx";
 import { LinkingTypes } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(callback(ref, closure_3));
@@ -37,16 +37,6 @@ const memoResult = importAllResult.memo((children) => {
     additionalItems = [];
   }
   const sourceQuestContent = children.sourceQuestContent;
-  let handleComplete;
-  let handleProgress;
-  let handleResetDismissibilityClick;
-  let handleResetStatusClick;
-  let handleOverridePreviewClick;
-  let handleResetHasBeenSeenClick;
-  stateFromStores = undefined;
-  let trackQuestContentClickedWithImpression;
-  let questImpressionId;
-  let externalCtaLabel;
   flag = undefined;
   let callback;
   let callback1;
@@ -59,21 +49,21 @@ const memoResult = importAllResult.memo((children) => {
   let shouldShowQuestPreviewOverrides;
   let memo3;
   const questPreviewActions = quest(sourceQuestContent[8]).useQuestPreviewActions(quest.id);
-  handleComplete = questPreviewActions.handleComplete;
-  handleProgress = questPreviewActions.handleProgress;
-  handleResetDismissibilityClick = questPreviewActions.handleResetDismissibilityClick;
-  handleResetStatusClick = questPreviewActions.handleResetStatusClick;
-  handleOverridePreviewClick = questPreviewActions.handleOverridePreviewClick;
-  handleResetHasBeenSeenClick = questPreviewActions.handleResetHasBeenSeenClick;
+  const handleComplete = questPreviewActions.handleComplete;
+  const handleProgress = questPreviewActions.handleProgress;
+  const handleResetDismissibilityClick = questPreviewActions.handleResetDismissibilityClick;
+  const handleResetStatusClick = questPreviewActions.handleResetStatusClick;
+  const handleOverridePreviewClick = questPreviewActions.handleOverridePreviewClick;
+  const handleResetHasBeenSeenClick = questPreviewActions.handleResetHasBeenSeenClick;
   let obj = quest(sourceQuestContent[8]);
   let items = [handleResetStatusClick];
   stateFromStores = quest(sourceQuestContent[9]).useStateFromStores(items, () => handleResetStatusClick.getQuestPreviewOverride(quest(sourceQuestContent[10]).QuestContent.QUEST_BAR_MOBILE), []);
   const obj2 = quest(sourceQuestContent[9]);
-  trackQuestContentClickedWithImpression = quest(sourceQuestContent[11]).useTrackQuestContentClickedWithImpression();
+  const trackQuestContentClickedWithImpression = quest(sourceQuestContent[11]).useTrackQuestContentClickedWithImpression();
   const obj3 = quest(sourceQuestContent[11]);
-  questImpressionId = quest(sourceQuestContent[12]).useQuestImpressionId();
+  const questImpressionId = quest(sourceQuestContent[12]).useQuestImpressionId();
   const obj4 = quest(sourceQuestContent[12]);
-  externalCtaLabel = quest(sourceQuestContent[13]).getExternalCtaLabel(quest);
+  const externalCtaLabel = quest(sourceQuestContent[13]).getExternalCtaLabel(quest);
   if (flag) {
     let tmpResult = tmp(tmp2[14]);
     flag = tmpResult.isShareableQuest(quest.config);
@@ -83,22 +73,23 @@ const memoResult = importAllResult.memo((children) => {
     let obj = quest(sourceQuestContent[15]);
     let isIOSResult = obj.isIOS();
     if (isIOSResult) {
-      let tmpResult = tmp(tmp2[13]);
-      isIOSResult = additionalItems(tmp2[16])(tmpResult.getCtaLink(quest.config)).payload.type === handleOverridePreviewClick.INVITE;
-      const tmp5 = additionalItems(tmp2[16]);
+      let tmpResult = quest(sourceQuestContent[13]);
+      isIOSResult = additionalItems(sourceQuestContent[16])(tmpResult.getCtaLink(quest.config)).payload.type === handleOverridePreviewClick.INVITE;
+      const tmp5 = additionalItems(sourceQuestContent[16]);
     }
     if (isIOSResult) {
-      tmpResult = tmp(tmp2[17]);
+      tmpResult = quest(sourceQuestContent[17]);
       const result = tmpResult.dismissOverlayScreens();
     }
-    obj = { content: tmp(tmp2[10]).QuestContent.QUEST_HOME_MOBILE, ctaContent: tmp(tmp2[19]).QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK, impressionId: questImpressionId, sourceQuestContent };
+    obj = { content: quest(sourceQuestContent[10]).QuestContent.QUEST_HOME_MOBILE, ctaContent: quest(sourceQuestContent[19]).QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK, impressionId: questImpressionId, sourceQuestContent };
     quest(sourceQuestContent[18]).openGameLinkDirectly(quest, obj);
+    const tmpResult1 = quest(sourceQuestContent[18]);
   }, items1);
   let items2 = [flag, quest.id, questImpressionId, sourceQuestContent];
   callback1 = handleResetDismissibilityClick.useCallback(() => {
     if (flag) {
-      let obj = quest(sourceQuestContent[13]);
-      obj = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
+      quest(sourceQuestContent[13]);
+      const obj = { content: null, ctaContent: null, impressionId: null, sourceQuestContent: null };
       obj[0] = quest(sourceQuestContent[10]).QuestContent.QUEST_HOME_MOBILE;
       obj[1] = quest(sourceQuestContent[19]).QuestContentCTA.CONTEXT_MENU_COPY_LINK;
       obj[2] = questImpressionId;
@@ -111,9 +102,8 @@ const memoResult = importAllResult.memo((children) => {
   }, items2);
   let items3 = [quest, sourceQuestContent];
   callback2 = handleResetDismissibilityClick.useCallback(() => {
-    let obj = additionalItems(sourceQuestContent[21]);
-    obj = { quest, isTargetedDisclosure: false, trackingCtx: null };
-    obj = { content: quest(sourceQuestContent[10]).QuestContent.QUEST_HOME_MOBILE, ctaContent: quest(sourceQuestContent[19]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent };
+    additionalItems(sourceQuestContent[21]);
+    const obj = { content: quest(sourceQuestContent[10]).QuestContent.QUEST_HOME_MOBILE, ctaContent: quest(sourceQuestContent[19]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent };
     obj[2] = obj;
     obj.showModal(obj);
   }, items3);
@@ -133,9 +123,9 @@ const memoResult = importAllResult.memo((children) => {
     items[1] = obj;
     if (flag) {
       obj = { label: null, IconComponent: null, action: null };
-      const intl2 = tmp(tmp2[7]).intl;
-      obj[0] = intl2.string(tmp(tmp2[7]).t.WqhZss);
-      obj[1] = tmp(tmp2[25]).CopyIcon;
+      const intl2 = quest(sourceQuestContent[7]).intl;
+      obj[0] = intl2.string(quest(sourceQuestContent[7]).t.WqhZss);
+      obj[1] = quest(sourceQuestContent[25]).CopyIcon;
       obj[2] = callback1;
       const items1 = [obj];
       let items2 = items1;
@@ -179,7 +169,7 @@ const memoResult = importAllResult.memo((children) => {
     items[HermesBuiltin.arraySpread(memo1, 5)] = {
       label: "Copy Quest ID",
       action() {
-        return closure_1_0(closure_1_2[27]).copy(id.id);
+        return quest(sourceQuestContent[27]).copy(id.id);
       }
     };
     return items;
@@ -196,7 +186,7 @@ const memoResult = importAllResult.memo((children) => {
     const obj = {
       label: "Show in Quest Bar",
       action() {
-        return callback(closure_1_0(closure_1_2[10]).QuestContent.QUEST_BAR_MOBILE);
+        return callback(quest(sourceQuestContent[10]).QuestContent.QUEST_BAR_MOBILE);
       },
       IconComponent: null
     };
@@ -236,26 +226,26 @@ const memoResult = importAllResult.memo((children) => {
     let obj = quest(sourceQuestContent[29]);
     if (obj.shouldMigrateToAdAnalyticsInterface(quest(sourceQuestContent[29]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_context_menu")) {
       obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
-      obj[0] = tmp(tmp2[31]).AdUserActionType.CLICK_INTERNAL;
-      obj[1] = tmp(tmp2[32]).AdCreativeType.QUEST;
+      obj[0] = quest(sourceQuestContent[31]).AdUserActionType.CLICK_INTERNAL;
+      obj[1] = quest(sourceQuestContent[32]).AdCreativeType.QUEST;
       obj[2] = quest.id;
-      obj[3] = tmp(tmp2[19]).QuestContentCTA.OPEN_CONTEXT_MENU;
-      obj[4] = tmp(tmp2[10]).QuestContent.QUEST_HOME_MOBILE;
+      obj[3] = quest(sourceQuestContent[19]).QuestContentCTA.OPEN_CONTEXT_MENU;
+      obj[4] = quest(sourceQuestContent[10]).QuestContent.QUEST_HOME_MOBILE;
       obj[5] = sourceQuestContent;
       obj[6] = questImpressionId;
-      tmp(tmp2[30]).captureAdUserAction(obj);
-      const tmpResult = tmp(tmp2[30]);
+      quest(sourceQuestContent[30]).captureAdUserAction(obj);
+      const tmpResult = quest(sourceQuestContent[30]);
     } else {
       obj = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
       obj[0] = quest.id;
-      obj[1] = tmp(tmp2[10]).QuestContent.QUEST_HOME_MOBILE;
-      obj[2] = tmp(tmp2[19]).QuestContentCTA.OPEN_CONTEXT_MENU;
+      obj[1] = quest(sourceQuestContent[10]).QuestContent.QUEST_HOME_MOBILE;
+      obj[2] = quest(sourceQuestContent[19]).QuestContentCTA.OPEN_CONTEXT_MENU;
       obj[3] = sourceQuestContent;
       trackQuestContentClickedWithImpression(obj);
     }
   }, items11);
   return handleResetHasBeenSeenClick(quest(sourceQuestContent[33]).ContextMenu, { items, onOpen, triggerOnTap: true, children });
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/QuestContextMenu.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/QuestContextMenu.tsx");
 
 export default memoResult;

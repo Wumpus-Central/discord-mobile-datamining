@@ -1,7 +1,7 @@
 // discord_app/utils/callOnce.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("utils/callOnce.tsx");
+const result = obj132.fileFinishedImporting("utils/callOnce.tsx");
 
 export function callOnce(closure_1_1) {
   closure_0 = closure_1_1;

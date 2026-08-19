@@ -1,7 +1,7 @@
 // discord_common/js/packages/backoff/Backoff.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-let result = set.fileFinishedImporting("../discord_common/js/packages/backoff/Backoff.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/packages/backoff/Backoff.tsx");
 class Backoff {
   constructor() {
     num = global;
@@ -44,7 +44,7 @@ Object.defineProperty(prototype, "fails", {
   set: undefined
 });
 Object.defineProperty(prototype, "current", {
-  get: function current(AUTO_DISMISS, current, arg2) {
+  get: function current(closure_1_1, current, arg2) {
     return this._current;
   },
   set: undefined
@@ -61,8 +61,7 @@ prototype["succeed"] = function succeed() {
   this._current = this.min;
 };
 prototype["fail"] = function fail(_callback) {
-  let self = this;
-  self = this;
+  const self = this;
   closure_0 = _callback;
   this._fails = this._fails + 1;
   const result = 2 * this._current;

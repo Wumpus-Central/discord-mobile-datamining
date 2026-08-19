@@ -1,26 +1,24 @@
 // discord_app/modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useEmbeddedActivityBackgroundDefault from "../utils/useEmbeddedActivityBackground.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
 ({ ImageBackground: c4, View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
-createCacheKey = { overlay: null };
-createCacheKey = { flex: 1, opacity: 0.6, backgroundColor: ThemesDefault.colors.BLACK };
+const createCacheKey = { flex: 1, opacity: 0.6, backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = ["embedded_background"];
-const result = require("set").fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
 
 export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
   ({ application, dimensionsStyle, borderRadius, resizeMode } = arg0);
   if (resizeMode === undefined) {
     resizeMode = "contain";
   }
-  importDefault = undefined;
   const tmp2 = callback(React.useState(false), 2);
   importDefault = tmp2[1];
   let str;
@@ -61,8 +59,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
         items[1] = obj3;
         obj2[0] = items;
         obj[5] = <closure_5 style={null} />;
-        tmp7Result = tmp7(closure_4, obj);
-        const tmp8 = closure_4;
+        tmp7Result = <closure_4 uri={null} />;
       }
     }
   }

@@ -1,9 +1,9 @@
 // discord_app/modules/media/web/utils/DiscordImageFactory.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import detectFile from "../../../../../_runtime/04880_detectFile.js";
 import create from "DiscordImagePng.tsx";
 
-const result = set.fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
+const result = obj132.fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
 const prototype = function DiscordImageFactory() {
   return Object.create(new.target.prototype);
 }.prototype;

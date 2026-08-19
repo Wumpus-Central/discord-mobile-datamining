@@ -3,16 +3,15 @@ import timestampDefault from "../../debug/Logger.tsx";
 import isMetaQuest from "../../device/MetaQuestUtils.android.tsx";
 import useMountLayoutEffectDefault from "../../../hooks/useMountEffect.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import items from "AppIconConstants.tsx";
 import ME from "../../../Constants.tsx";
 import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
-import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
+import obj132 from "../../../utils/PlatformUtils.tsx";
 
-require = arg1;
+require = fn;
 function fetchCurrentAppIcon() {
   const self = this;
   const apply = _fetchCurrentAppIcon.apply;
@@ -31,10 +30,10 @@ function _fetchCurrentAppIcon() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw id;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj[0] = id;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -45,11 +44,11 @@ function _fetchCurrentAppIcon() {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw id;
           } else if (arg0 === 2) {
             c5 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = id;
             return obj;
           } else {
             closure_1 = tmp3;
@@ -77,18 +76,18 @@ function _fetchCurrentAppIcon() {
           return obj2;
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw id;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
           obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          obj3[0] = id;
           return obj3;
         } else {
           c3 = 0;
           c5 = 3;
           obj = { value: null, done: true };
-          obj[0] = arg1.id;
+          obj[0] = id.id;
           return obj;
         }
       } catch (tmp18) {
@@ -173,13 +172,13 @@ function _setAppIcon() {
 ({ getDefaultIcon: closure_6, getOfficialAlternateIcons: error, getLimitedAlternateIcons: closure_8 } = items);
 ({ AnalyticEvents: c9, UserSettingsSections: c10 } = ME);
 let closure_12 = new timestampDefault("AppIconUtils");
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   let DCDIconManager = require("enforcing").default;
 } else {
   DCDIconManager = require("get ActivityIndicator").NativeModules.DCDIconManager;
 }
 function useCurrentAppIcon() {
-  const tmp = callback(React.useState(_FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT), 2);
+  const tmp = callback(React.useState(require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT), 2);
   _require = tmp[1];
   importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -246,7 +245,7 @@ function useCurrentAppIcon() {
   });
   return tmp[0];
 }
-const result = set.fileFinishedImporting("modules/app_icons/native/AppIconUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/app_icons/native/AppIconUtils.tsx");
 
 export { fetchCurrentAppIcon };
 export { useCurrentAppIcon };
@@ -261,7 +260,7 @@ export const setAppIcon = function setAppIcon(DEFAULT, premiumType) {
   return applyArgumentsResult;
 };
 export const useAppIcons = function useAppIcons() {
-  const currentAppIcon = callback(React.useState(_FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT), 2);
+  const currentAppIcon = callback(React.useState(require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT), 2);
   _require = currentAppIcon[1];
   importDefault = React.useCallback(callback2(function*() {
     if (c3 === 2) {
@@ -348,24 +347,23 @@ export const useAppIcons = function useAppIcons() {
       let v0 = 3;
     } else if (arg0 === 1) {
       v0 = 3;
-      throw arg1;
+      throw arr;
     } else if (arg0 !== 2) {
-      let callback = arg1.map((id) => id.id);
-      const callback2 = closure_1_7().filter((id) => closure_0.includes(id.id));
-      const arr = closure_1_7();
-      closure_2 = closure_1_8().filter((id) => closure_0.includes(id.id));
+      arr.map((item, index) => item.id);
+      arr = closure_1_7();
+      const callback2 = arr.filter((item, index) => closure_0.includes(item.id));
+      closure_2 = closure_1_8().filter((item, index) => closure_0.includes(item.id));
       callback2(closure_2);
-      callback = 0;
+      let callback = 0;
       const items = [v0()];
       const sum = callback + 1;
-      callback = sum;
       callback = HermesBuiltin.arraySpread(callback2, sum);
       callback(items);
       c4 = 0;
       const arr2 = closure_1_8();
     }
     c4 = 0;
-    return arg1;
+    return arr;
   }), []);
   useMountLayoutEffectDefault(() => {
     dependencyMap();
@@ -377,8 +375,7 @@ export const useAppIcons = function useAppIcons() {
   return { officialAppIcons, limitedTimeAppIcons, currentAppIcon: currentAppIcon[0] };
 };
 export const navigateToAppIconSettings = function navigateToAppIconSettings() {
-  let obj = openUserSettings;
-  obj = { screen: constants.APP_ICONS };
+  const obj = { screen: constants.APP_ICONS };
   obj.openUserSettings(obj);
 };
 export const isAppIconsSupported = function isAppIconsSupported() {

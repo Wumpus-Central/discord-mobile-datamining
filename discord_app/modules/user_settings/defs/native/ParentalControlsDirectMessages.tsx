@@ -2,11 +2,11 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import result2 from "../../family_center/ParentalControlledUserSettings.tsx";
-import closure_2 from "../../../parent_tools/FamilyCenterStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import freshTeenActivityWithMap from "../../../parent_tools/FamilyCenterStore.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.RAQUSN);
@@ -29,7 +29,7 @@ createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
 
 export default createToggle;
 export const ParentalControlsDirectMessages = createToggle;

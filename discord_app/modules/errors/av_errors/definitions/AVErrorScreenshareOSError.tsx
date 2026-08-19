@@ -1,14 +1,14 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorScreenshareOSError.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import closure_2 from "module_4294963475" /* 4294963475 */;
 
-const result = set.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorScreenshareOSError.tsx");
+const result = obj132.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorScreenshareOSError.tsx");
 
 export const AVErrorScreenshareOSErrorDefinition = {
   getActiveErrors(activeStreams) {
     activeStreams = activeStreams.activeStreams;
-    const found = activeStreams.filter((errorCode) => null != errorCode.errorCode);
-    return found.map((errorCode) => {
+    const found = activeStreams.filter((item, index) => null != item.errorCode);
+    return found.map((item, index) => {
       const obj = { type: callback(9668).AVError.SCREENSHARE_OS_ERROR, errorMessage: null };
       if (obj2.isMac()) {
         if (str === closure_2) {
@@ -16,12 +16,13 @@ export const AVErrorScreenshareOSErrorDefinition = {
           let combined = "" + str + " - your Mac may be low on disk space";
         }
         obj[1] = combined;
-        let tmpResult = tmp(17055);
-        tmpResult = tmp(4531);
-        const merged = Object.assign(tmpResult.getStreamErrorContext(tmpResult.encodeStreamKey(errorCode)));
+        callback(17055);
+        const tmpResult = callback(4531);
+        const merged = Object.assign(tmpResult.getStreamErrorContext(tmpResult.encodeStreamKey(item)));
         return obj;
       }
       combined = str.toString();
+      obj2 = callback(500);
     });
   },
   makeErrorContextKey(streamKey) {

@@ -2,18 +2,18 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
 import { EMBEDDED_ACTIVITIES_BLOG_POST_URL as closure_5 } from "../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
 let closure_7 = { duration: 500 };
 let items = [{ rotateZ: "225deg" }];
 let closure_8 = createCacheKey.createStyles({ arrow: { marginLeft: 200, top: 9, position: "relative", borderTopWidth: 0, borderRightWidth: 0, borderBottomWidth: 16, borderLeftWidth: 16, transform: items }, tooltip: { padding: 16 }, tooltipContainer: { position: "absolute", width: 280, zIndex: 2, right: -48, top: -8 }, tooltipText: { textAlign: "center", fontSize: 14 }, closeButtonWrapper: { marginTop: 14 } });
 let closure_9 = { code: "function ActivitiesPrivateChannelCallTooltipTsx1(){const{withRepeat,withSequence,withTiming,OFFSET,translateBounceOffset,TIMING_CONFIG}=this.__closure;return{transform:[{translateY:withRepeat(withSequence(withTiming(OFFSET,{duration:0}),withTiming(OFFSET+translateBounceOffset,TIMING_CONFIG),withTiming(OFFSET,TIMING_CONFIG)),10)}]};}" };
-const result = require("set").fileFinishedImporting("modules/activities/native/ActivitiesPrivateChannelCallTooltip.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/native/ActivitiesPrivateChannelCallTooltip.tsx");
 
 export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   let num;

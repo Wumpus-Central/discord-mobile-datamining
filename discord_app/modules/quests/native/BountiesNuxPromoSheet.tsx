@@ -4,17 +4,16 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
 import BountiesPosterSpotIllustration from "../../../design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
-createCacheKey = { illustrationContainer: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_12 };
+require = fn;
+const createCacheKey = { paddingTop: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
 
 export default function BountiesNuxPromoSheet() {
   const callback = React.useCallback(() => {

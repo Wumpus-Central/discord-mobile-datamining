@@ -3,36 +3,19 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
 let closure_4 = createCacheKey.createStyles({ icon: { width: 32, height: 32 } });
-const result = require("set").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressItem.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressItem.tsx");
 
 export default function GuildProgressItem(guild) {
   guild = guild.guild;
-  let numFinished;
   let completed;
-  let totalSteps;
   let obj = guild(completed[3]);
   const iOSCompletionStates = obj.useIOSCompletionStates(guild);
-  numFinished = iOSCompletionStates.numFinished;
+  const numFinished = iOSCompletionStates.numFinished;
   completed = iOSCompletionStates.completed;
-  totalSteps = iOSCompletionStates.totalSteps;
-  obj = {
-    onPress() {
-      if (!completed) {
-        const progress = numFinished(completed[5]).createProgress(guild.id);
-        const obj = numFinished(completed[5]);
-      }
-      guild(completed[3]).openActionSheet(guild);
-    },
-    source: null,
-    iconStyle: null,
-    title: null,
-    isCompleted: null,
-    renderEndComponent: null,
-    fullWidth: true
-  };
+  const totalSteps = iOSCompletionStates.totalSteps;
   obj = { uri: null };
   const tmp = callback();
   const tmp3 = totalSteps;

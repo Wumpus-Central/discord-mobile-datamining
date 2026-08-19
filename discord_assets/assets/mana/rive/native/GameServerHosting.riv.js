@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/rive/native/GameServerHosting.riv.js
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/GameServerHosting.riv.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/rive/native/GameServerHosting.riv.js");
 
 export default "https://cdn.discordapp.com/assets/content/03622d5cf6122c0557116bfd66c48955caf9a146c3dc6dcbd53c94fe0fe58a3a.riv";
 export const metadata = { fileBytes: 1458564 };

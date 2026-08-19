@@ -1,13 +1,12 @@
 // discord_app/modules/billing/native/subscription/BillingInformation.tsx
-import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { SubscriptionStatusTypes } from "../../../../Constants.tsx";
-import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
 
-export const getBillingInformationStringNative = function getBillingInformationStringNative(subscription, first, first1, flag, fractionalPremiumInfo) {
+export const getBillingInformationStringNative = function getBillingInformationStringNative(subscription, subscriptionPeriodStart, first1, flag, fractionalPremiumInfo) {
   let tmp = first1;
   if (first1 === undefined) {
     tmp = null;
@@ -16,16 +15,16 @@ export const getBillingInformationStringNative = function getBillingInformationS
     flag = false;
   }
   let _require;
-  let obj = _getPremiumPlanItem;
-  let billingInformationString = obj.getBillingInformationString(subscription, first, tmp, flag, fractionalPremiumInfo);
-  let tmp5 = _PlatformTypes.isIOS() && subscription.isPurchasedViaApple;
+  let obj = getPremiumPlanItem;
+  let billingInformationString = obj.getBillingInformationString(subscription, subscriptionPeriodStart, tmp, flag, fractionalPremiumInfo);
+  let tmp5 = require("../../../../../discord_common/js/shared/utils/PlatformUtils.tsx").isIOS() && subscription.isPurchasedViaApple;
   if (tmp5) {
     tmp5 = subscription.status === SubscriptionStatusTypes.ACTIVE;
   }
   if (tmp5) {
     const intl = tmp2(1236).intl;
     obj = { renewalDate: null, onSubscriptionManagementClick: null };
-    obj[0] = first.subscriptionPeriodStart;
+    obj[0] = subscriptionPeriodStart.subscriptionPeriodStart;
     _require = callback(function*() {
       if (v0 === 2) {
         v0 = 3;

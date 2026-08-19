@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Stickers/StickerTypes.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx");
 
 export const MetaStickerType = { STANDARD: 1, [1]: "STANDARD", GUILD: 2, [2]: "GUILD" };
 export const StickerFormat = { PNG: 1, [1]: "PNG", APNG: 2, [2]: "APNG", LOTTIE: 3, [3]: "LOTTIE", GIF: 4, [4]: "GIF" };

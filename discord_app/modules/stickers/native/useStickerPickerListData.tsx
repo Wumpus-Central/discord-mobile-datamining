@@ -1,21 +1,20 @@
 // discord_app/modules/stickers/native/useStickerPickerListData.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { useStickerPickerStore } from "StickerPickerStore.tsx";
 import PADDING_HORIZONTAL from "StickerPickerConstants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ MIN_MARGIN: c5, ROW_HEIGHT: closure_6, STICKER_SIZE: error, LABEL_HEIGHT } = PADDING_HORIZONTAL);
 let obj = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
 let closure_9 = LABEL_HEIGHT + 2 * require("ExpressionPickerViewType").PADDING_VERTICAL;
-const result = require("set").fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 
 export default function useStickerPickerListData(containerWidth) {
   containerWidth = containerWidth.containerWidth;
   const searchResults = containerWidth.searchResults;
   const stickerFormats = containerWidth.stickerFormats;
-  let stickerCategories;
   useStickerPickerStore = undefined;
-  stickerCategories = containerWidth(stickerFormats[4]).useStickerCategories(containerWidth.channel);
+  const stickerCategories = containerWidth(stickerFormats[4]).useStickerCategories(containerWidth.channel);
   const tmp2 = useStickerPickerStore((packToScrollTo) => packToScrollTo.packToScrollTo);
   useStickerPickerStore = tmp2;
   let items = [containerWidth, stickerCategories, stickerFormats, searchResults, tmp2];
@@ -33,7 +32,7 @@ export default function useStickerPickerListData(containerWidth) {
       if (str === undefined) {
         str = "";
       }
-      let found = items.filter((format_type) => closure_2.includes(format_type.format_type));
+      let found = items.filter((item, index) => closure_2.includes(item.format_type));
       obj = searchResults(stickerFormats[5]);
       let chunkResult = obj.chunk(found, rounded);
       obj = { type: null, stickersByRow: null };
@@ -42,18 +41,17 @@ export default function useStickerPickerListData(containerWidth) {
       items3.push(obj);
       items.push(chunkResult.length);
       items2.push(str);
-      const tmp11 = stickerFormats;
     } else {
-      const mapped = items3.map((id) => {
-        if (c4 === id.id) {
-          closure_4 = arg1;
+      const mapped = items3.map((item, index) => {
+        if (c4 === item.id) {
+          closure_4 = index;
         }
-        let shouldNSFWGateGuildResult = id.type === containerWidth(stickerFormats[7]).StickerCategoryTypes.GUILD;
+        let shouldNSFWGateGuildResult = item.type === containerWidth(stickerFormats[7]).StickerCategoryTypes.GUILD;
         if (shouldNSFWGateGuildResult) {
-          shouldNSFWGateGuildResult = containerWidth(tmp3[8]).shouldNSFWGateGuild(id.id);
-          const tmp2Result = containerWidth(tmp3[8]);
+          shouldNSFWGateGuildResult = containerWidth(stickerFormats[8]).shouldNSFWGateGuild(item.id);
+          const tmp2Result = containerWidth(stickerFormats[8]);
         }
-        ({ stickers, name } = id);
+        ({ stickers, name } = item);
         if (name === undefined) {
           name = "";
         }
@@ -64,27 +62,27 @@ export default function useStickerPickerListData(containerWidth) {
           items3.push(obj);
           items.push(1);
         } else {
-          const found = stickers.filter((format_type) => closure_2.includes(format_type.format_type));
-          const chunkResult = searchResults(tmp3[5]).chunk(found, c0);
+          const found = stickers.filter((item, index) => closure_2.includes(item.format_type));
+          const chunkResult = searchResults(stickerFormats[5]).chunk(found, c0);
           obj = { type: null, stickersByRow: null };
           obj[0] = closure_2_8.STICKERS;
           obj[1] = chunkResult;
           items3.push(obj);
           items.push(chunkResult.length);
-          const obj2 = searchResults(tmp3[5]);
+          const obj2 = searchResults(stickerFormats[5]);
         }
         items2.push(name);
       });
       const push = items1.push;
       c0 = 0;
       const items4 = [];
-      HermesBuiltin.arraySpread(items.map((arg0, arg1) => {
-        if (0 === arg1) {
-          if (0 === arg0) {
+      HermesBuiltin.arraySpread(items.map((item, index) => {
+        if (0 === index) {
+          if (0 === item) {
             return 0;
           }
         }
-        const sum = arg0 * closure_1_6 + closure_1_9 + 12 + c0;
+        const sum = item * closure_1_6 + closure_1_9 + 12 + c0;
         c0 = sum;
         return sum;
       }), 0);

@@ -1,11 +1,11 @@
 // discord_common/js/packages/analytics-utils/AnalyticsTrackingActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingActionCreators.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingActionCreators.tsx");
 
-export (arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
+export (dispatcher, TRACK_ACTION_NAME) => {
+  closure_0 = dispatcher;
+  closure_1 = TRACK_ACTION_NAME;
   return (arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -14,7 +14,7 @@ export (arg0, arg1) => {
       const obj = { type: closure_1, event: closure_0, properties: closure_1, flush: null, fingerprint: null, resolve: null };
       let flag;
       if (closure_2 != null) {
-        flag = tmp2.flush;
+        flag = closure_2.flush;
       }
       if (flag == null) {
         flag = false;
@@ -22,7 +22,7 @@ export (arg0, arg1) => {
       obj[3] = flag;
       let fingerprint;
       if (closure_2 != null) {
-        fingerprint = tmp2.fingerprint;
+        fingerprint = closure_2.fingerprint;
       }
       obj[4] = fingerprint;
       obj[5] = arg0;

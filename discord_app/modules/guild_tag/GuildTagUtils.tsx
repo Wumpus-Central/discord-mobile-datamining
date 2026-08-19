@@ -1,15 +1,15 @@
 // discord_app/modules/guild_tag/GuildTagUtils.tsx
 import GuildMemberFlags from "../guild_automod/AutomodPermissionUtils.tsx";
-import closure_2 from "../../stores/GuildMemberStore.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import items from "GuildTagConstants.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-require = arg1;
+require = fn;
 ({ GuildTagBadgeMediaProxySizes, GuildTagBadgeMediaProxySizesMobile: c5, GuildTagBadgeSize: closure_6 } = items);
-let result = require("set").fileFinishedImporting("modules/guild_tag/GuildTagUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_tag/GuildTagUtils.tsx");
 
 export const guildHasTag = function guildHasTag(guild) {
   let tag;
@@ -49,7 +49,7 @@ export const getUserPrimaryGuild = function getUserPrimaryGuild(primaryGuild) {
 export const useUserPrimaryGuild = function useUserPrimaryGuild(arg0) {
   let tmp = arg0;
   const _require = arg0;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(closure_0), items1);
@@ -79,13 +79,13 @@ export const useShouldDisplayGuildTag = function useShouldDisplayGuildTag(arg0, 
   const _require = arg0;
   dependencyMap = arg1;
   let tmp = arg2;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
   const items1 = [arg0];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(closure_0), items1);
   const items2 = [closure_2];
   const items3 = [arg1, arg0];
-  const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     if (null != table) {
       if (null != callback) {
         const member = closure_1_2.getMember(tmp, tmp2);
@@ -110,7 +110,7 @@ export const useShouldDisplayGuildTag = function useShouldDisplayGuildTag(arg0, 
   }
   obj = {};
 };
-export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, merged) {
+export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, guildId) {
   let tmp = arg2;
   user = user.getUser(id);
   if (undefined === arg2) {
@@ -127,10 +127,9 @@ export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, merged) 
     }
     let tmp5 = null != obj.guildId && null != obj.tag;
     if (tmp5) {
-      let result = null != merged && null != id;
+      let result = null != guildId && null != id;
       if (result) {
-        result = GuildMemberFlags.hasAutomodQuarantinedProfile(member.getMember(merged, id));
-        const obj3 = GuildMemberFlags;
+        result = GuildMemberFlags.hasAutomodQuarantinedProfile(member.getMember(guildId, id));
       }
       tmp5 = !result;
     }

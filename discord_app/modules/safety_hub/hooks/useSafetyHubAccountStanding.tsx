@@ -1,9 +1,9 @@
 // discord_app/modules/safety_hub/hooks/useSafetyHubAccountStanding.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../SafetyHubStore.tsx";
+import handleSafetyHubRequestAgeVerificationResetModalAction from "../SafetyHubStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubAccountStanding.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubAccountStanding.tsx");
 
 export const useSafetyHubAccountStanding = function useSafetyHubAccountStanding() {
   const items = [closure_2];

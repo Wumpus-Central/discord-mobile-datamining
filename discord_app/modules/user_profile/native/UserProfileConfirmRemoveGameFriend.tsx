@@ -1,27 +1,26 @@
 // discord_app/modules/user_profile/native/UserProfileConfirmRemoveGameFriend.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmRemoveGameFriend.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmRemoveGameFriend.tsx");
 
 export default function UserProfileConfirmRemoveGameFriend(gameName) {
   ({ userDisplayName, userId } = gameName);
   const applicationId = gameName.applicationId;
   const items = [applicationId, userId];
   const callback = React.useCallback(() => {
-    let obj = userId(closure_1_2[2]);
+    let obj = userId(dependencyMap[2]);
     const result = obj.trackUserProfileAction({ action: "REMOVE_GAME_FRIEND" });
     obj = { userId, applicationId, location: "UserProfileConfirmRemoveGameFriend" };
-    applicationId(closure_1_2[3]).removeFriend(obj);
+    applicationId(dependencyMap[3]).removeFriend(obj);
   }, items);
   let obj = { title: null, content: null, actions: null };
   const intl = userId(1236).intl;
   obj[0] = intl.formatToPlainString(userId(1236).t.fBKKfq, { name: userDisplayName });
   const intl2 = userId(1236).intl;
   obj[1] = intl2.formatToPlainString(userId(1236).t.dsU5bl, { name: userDisplayName, gameName: gameName.gameName });
-  obj = { children: null };
   obj = { variant: "destructive", text: null, onPress: null };
   const intl3 = userId(1236).intl;
   obj[1] = intl3.string(userId(1236).t.RLcE6x);

@@ -5,33 +5,29 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import { HubEmailConnectionSteps } from "../../HubConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_6, Fonts } = ME);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }, header: null, row: null };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 createCacheKey.textAlign = "center";
 createCacheKey.marginBottom = 24;
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.sm, marginBottom: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.sm, marginBottom: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionStudentPrompt.tsx");
+const result = require("obj132").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionStudentPrompt.tsx");
 
 export default function HubEmailConnectionStudentPrompt(onClose) {
   onClose = onClose.onClose;
   const invite = onClose.invite;
-  dependencyMap = undefined;
   const tmp = callback3();
   let obj = onClose(1500);
   dependencyMap = obj.useNavigation();
-  obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.header, children: null };
   const intl = onClose(1236).intl;
@@ -49,7 +45,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
     let obj = invite(arr[14]);
     obj.track(closure_1_6.HUB_STUDENT_PROMPT_CLICKED);
     obj = { onClose, invite };
-    arr = arr.push(closure_1_5.VERIFY_EMAIL, obj);
+    arr = arr.push(HubEmailConnectionSteps.VERIFY_EMAIL, obj);
   };
   items[1] = callback(invite(6937), obj2);
   const obj4 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };

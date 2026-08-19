@@ -1,14 +1,14 @@
 // discord_app/design/void/Badge/native/Badge.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../modules/user_settings/LocaleStore.tsx";
+import _getSystemLocale from "../../../../modules/user_settings/LocaleStore.tsx";
 import PX_16 from "../../BadgeConstants/native/BadgeConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 
-let require = arg1;
+let require = fn;
 class Badge {
   constructor(arg0) {
     value = global.value;
@@ -116,7 +116,7 @@ class Badge {
         items4[0] = items2.badgeText;
         items4[1] = textStyle;
         obj3[0] = items4;
-        tmp11 = require("module_8115");
+        tmp11 = require("../../LegacyText/native/LegacyText.tsx");
         tmpResult2 = require("shortenAndLocalizeNumber");
         tmp12 = globalThis;
         _Math = Math;
@@ -132,43 +132,39 @@ class Badge {
 }
 ({ BADGE_MASK_SIZE: closure_6, BADGE_MASK_UNREAD_SIZE: error, BADGE_PADDING, BADGE_SIZE } = PX_16);
 const BADGE_SIZE_UNREAD = PX_16.BADGE_SIZE_UNREAD;
-createCacheKey = { badgeMask: createCacheKey, badge: null, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
 createCacheKey = { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 };
 createCacheKey[1] = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: ThemesDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 let obj2 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: ThemesDefault.colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
-set = set.isAndroid();
+obj132 = obj132.isAndroid();
 const space = ThemesDefault.space;
-obj2[3] = set ? space.PX_12 : space.PX_16;
+obj2[3] = obj132 ? space.PX_12 : space.PX_16;
 obj2[4] = require("ME").Fonts.PRIMARY_BOLD;
 let str;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   str = "center";
 }
 obj2[6] = str;
 createCacheKey[2] = obj2;
 const obj3 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: ThemesDefault.colors.WHITE };
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   const obj4 = { lineHeight: null, textAlignVertical: "center" };
   obj4[0] = ThemesDefault.space.PX_12;
-  set = obj4;
+  obj132 = obj4;
 } else {
-  set = {};
+  obj132 = {};
 }
-set = Object.assign(set);
+Object.assign(obj132);
 obj3.textAlign = "center";
 createCacheKey[3] = obj3;
-set = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: ThemesDefault.colors.WHITE };
-createCacheKey[4] = set;
-let obj1 = { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: ThemesDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+obj132 = { width: 5, height: 5, borderRadius: 2.5, backgroundColor: ThemesDefault.colors.WHITE };
+createCacheKey[4] = obj132;
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
-set = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-createCacheKey[6] = set;
-const obj7 = { backgroundColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT };
+obj132 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
+createCacheKey[6] = obj132;
 createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-const obj9 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
+const result = obj132.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
 
 export default Badge;
 export const MaskedBadge = function MaskedBadge(maskStyle) {
@@ -180,7 +176,6 @@ export const MaskedBadge = function MaskedBadge(maskStyle) {
   if (flag === undefined) {
     flag = false;
   }
-  closure_3 = undefined;
   const tmp = callback();
   closure_3 = tmp;
   let items = [tmp, maskStyle, flag, value];

@@ -1,11 +1,11 @@
 // discord_app/modules/channel/useTextareaPlaceholderAndLabels.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import computeChannelNameDefault from "useChannelName.tsx";
 import ME from "../../Constants.tsx";
 
 ({ ChannelTypes: c3, ChannelTypesSets: c4 } = ME);
-const result = set.fileFinishedImporting("modules/channel/useTextareaPlaceholderAndLabels.tsx");
+const result = obj132.fileFinishedImporting("modules/channel/useTextareaPlaceholderAndLabels.tsx");
 
 export default function useTextareaPlaceholderAndLabels(isCreatingThread) {
   ({ channel, isReadonly } = isCreatingThread);

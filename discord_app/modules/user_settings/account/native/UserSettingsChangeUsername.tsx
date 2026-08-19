@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/account/native/UserSettingsChangeUsername.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_6 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_9 from "../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { UserSettingsSections } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(4486).match(showHint.usernameStatus);
@@ -25,28 +25,25 @@ function UsernameStatusMessage(showHint) {
     let tmp = null;
     if (showHint) {
       const obj = { variant: "text-xs/medium", color: "text-default", children: null };
-      const intl = showHint(closure_1_3[12]).intl;
-      obj[2] = intl.string(showHint(closure_1_3[12]).t.z7c4bP);
-      tmp = closure_1_11(showHint(closure_1_3[11]).Text, obj);
+      const intl = showHint(dependencyMap[12]).intl;
+      obj[2] = intl.string(showHint(dependencyMap[12]).t.z7c4bP);
+      tmp = closure_1_11(showHint(dependencyMap[11]).Text, obj);
     }
     return tmp;
   });
 }
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { background: null, container: null, inputs: null, username: null, discriminator: null, divider: null, dividerInner: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 16 };
 createCacheKey[2] = { flex: 1, flexDirection: "row", marginTop: 8 };
 createCacheKey[3] = { flex: 2 };
 createCacheKey[4] = { flex: 1 };
 createCacheKey[5] = { width: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
-let obj1 = { width: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
 createCacheKey[6] = { flex: 1, marginVertical: 12, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flex: 1, marginVertical: 12, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsChangeUsername.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/UserSettingsChangeUsername.tsx");
 
 export default function UserSettingsChangeUsername() {
   let tmp = callback();
@@ -127,7 +124,7 @@ export default function UserSettingsChangeUsername() {
   callback = obj4.useCallback(() => {
     if (isMatch) {
       let obj = stateFromStores(first[17]);
-      obj.setSection(closure_1_10.ACCOUNT_CONFIRM_PASSWORD);
+      obj.setSection(UserSettingsSections.ACCOUNT_CONFIRM_PASSWORD);
       obj = { onSubmit: null, onSuccess: null };
       navigation = callback((arg0) => {
         closure_0 = arg0;
@@ -147,11 +144,11 @@ export default function UserSettingsChangeUsername() {
             const tmp34 = closure_1_5;
           }
           obj1[2] = tmp34;
-          const obj3 = closure_2_2(closure_2_3[18]);
+          const obj3 = closure_2_2(first[18]);
           const lib = yield obj3.saveAccountChanges(obj1, { close: false });
           if (!lib.ok) {
-            v6OrEarlierAPIError = new lib(closure_2_3[19]).V6OrEarlierAPIError(lib);
-            const CommonActions = lib(closure_2_3[20]).CommonActions;
+            v6OrEarlierAPIError = new lib(first[19]).V6OrEarlierAPIError(lib);
+            const CommonActions = lib(first[20]).CommonActions;
             lib.dispatch(CommonActions.navigate(closure_2_10.ACCOUNT_CHANGE_USERNAME));
             closure_1_6(v6OrEarlierAPIError);
             c4 = 3;
@@ -171,10 +168,10 @@ export default function UserSettingsChangeUsername() {
         return applyArgumentsResult;
       };
       obj[1] = function onSuccess() {
-        const CommonActions = lib(closure_1_3[20]).CommonActions;
+        const CommonActions = lib(first[20]).CommonActions;
         lib.dispatch(CommonActions.navigate(closure_1_10.ACCOUNT));
       };
-      navigation.push(closure_1_10.ACCOUNT_CONFIRM_PASSWORD, obj);
+      navigation.push(UserSettingsSections.ACCOUNT_CONFIRM_PASSWORD, obj);
     }
   }, items1);
   const items2 = [canEditDiscriminatorResult, callback];
@@ -197,9 +194,9 @@ export default function UserSettingsChangeUsername() {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.onPress = closure_9;
-          const intl = closure_1_0(closure_1_3[12]).intl;
-          obj.label = intl.string(closure_1_0(closure_1_3[12]).t["R3BPH+"]);
-          tmp = closure_1_11(closure_1_0(closure_1_3[21]).HeaderTextButton, obj);
+          const intl = navigation(first[12]).intl;
+          obj.label = intl.string(navigation(first[12]).t["R3BPH+"]);
+          tmp = closure_1_11(navigation(first[21]).HeaderTextButton, obj);
         }
         return tmp;
       }
@@ -242,14 +239,14 @@ export default function UserSettingsChangeUsername() {
     }
     const obj2 = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj2[0] = tmp.background;
-    let tmp32Result = tmp32(tmp2(tmp3[22]).TextInput, obj1);
-    const items4 = [closure_11(tmp5(tmp3[23]), {}), ];
+    let tmp32Result = callback(tmp2(tmp3[22]).TextInput, obj1);
+    const items4 = [callback(tmp5(tmp3[23]), {}), ];
     obj3 = { style: null, children: null };
     obj3[0] = tmp.container;
     obj4 = { children: null };
     let intl = tmp2(tmp3[12]).intl;
     obj4[0] = intl.string(tmp2(tmp3[12]).t.IEpCBQ);
-    const items5 = [closure_11(tmp5(tmp3[24]), obj4), , ];
+    const items5 = [callback(tmp5(tmp3[24]), obj4), , ];
     obj5 = { style: null, children: null };
     obj5[0] = tmp.inputs;
     obj6 = { containerStyle: null, textContentType: "username", value: null, enableAndroidSanitizedInputWorkaround: null, onChange: null, onSubmitEditing: null, placeholder: null, returnKeyType: null, autoCapitalize: "none", autoFocus: true };
@@ -276,7 +273,7 @@ export default function UserSettingsChangeUsername() {
       str6 = "next";
     }
     obj6[7] = str6;
-    const items6 = [closure_11(tmp2(tmp3[22]).TextInput, obj6), , ];
+    const items6 = [callback(tmp2(tmp3[22]).TextInput, obj6), , ];
     const hasUniqueUsernameResult2 = stateFromStores.hasUniqueUsername();
     tmp32Result = !hasUniqueUsernameResult2;
     if (!hasUniqueUsernameResult2) {
@@ -284,8 +281,8 @@ export default function UserSettingsChangeUsername() {
       obj7[0] = tmp.divider;
       const obj8 = { style: null };
       obj8[0] = tmp.dividerInner;
-      obj7[1] = tmp32(tmp36, obj8);
-      tmp32Result = tmp32(tmp36, obj7);
+      obj7[1] = callback(tmp36, obj8);
+      tmp32Result = callback(tmp36, obj7);
     }
     items6[1] = tmp32Result;
     const hasUniqueUsernameResult3 = stateFromStores.hasUniqueUsername();
@@ -295,16 +292,15 @@ export default function UserSettingsChangeUsername() {
     }
     items6[2] = tmp41;
     obj5[1] = items6;
-    items5[1] = closure_12(ref, obj5);
+    items5[1] = callback2(ref, obj5);
     const obj9 = { usernameStatus: null, showHint: null };
     obj9[0] = tmp31;
     obj9[1] = stateFromStores.hasUniqueUsername();
-    items5[2] = closure_11(UsernameStatusMessage, obj9);
+    items5[2] = callback(UsernameStatusMessage, obj9);
     obj3[1] = items5;
-    items4[1] = closure_12(ref, obj3);
+    items4[1] = callback2(ref, obj3);
     obj2[3] = items4;
-    return closure_12(isMatch, obj2);
+    return callback2(isMatch, obj2);
   }
-  const tmp16 = !hasUniqueUsernameResult1;
   const tmp2Result = navigation(first[16]);
 };

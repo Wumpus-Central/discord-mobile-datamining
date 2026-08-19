@@ -1,20 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../gateway/GatewayConnectionStore.tsx";
-import closure_5 from "../../../lurker_mode/LurkingStore.tsx";
-import closure_6 from "../../../../stores/ChannelStore.tsx";
-import closure_7 from "../../../../stores/MediaEngineStore.tsx";
-import closure_8 from "../../../../stores/RTCConnectionStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import _handleConnectionOpen from "../../../gateway/GatewayConnectionStore.tsx";
+import initialize from "../../../lurker_mode/LurkingStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import createRTCConnection from "../../../../stores/RTCConnectionStore.tsx";
 import { InputModes } from "../../../../Constants.tsx";
 import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
 let closure_12 = createCacheKey.createStyles((backgroundColor) => {
-  let obj = { lurker: null, chat: null, voice: null, expressionPickerBackground: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+  let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
   obj[0] = obj;
   obj[1] = { backgroundColor };
   obj[2] = { backgroundColor };
@@ -22,7 +21,7 @@ let closure_12 = createCacheKey.createStyles((backgroundColor) => {
   obj[3] = obj;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx");
 
 export default function useChannelSafeAreaBottomStyles(arg0) {
   let obj = _require(stateFromStores[16]);
@@ -32,14 +31,12 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
   _require = tmp2;
   const obj3 = _require(stateFromStores[17]);
   const gradientBottom = _require(stateFromStores[18]).useGradientBottom();
-  importDefault = gradientBottom;
   _require = arg0;
   importDefault = undefined;
   stateFromStores = undefined;
-  let React;
   importDefault = null != importDefault(stateFromStores[10])(arg0);
   stateFromStores = importDefault(stateFromStores[11])(arg0).needSubscriptionToAccess;
-  React = importDefault(stateFromStores[12])();
+  const React = importDefault(stateFromStores[12])();
   const obj4 = _require(stateFromStores[18]);
   const items = [closure_4, closure_6, closure_5, closure_7, closure_8];
   stateFromStores = _require(stateFromStores[13]).useStateFromStores(items, () => {
@@ -47,19 +44,19 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
     if (channel != null) {
       const guildId = channel.getGuildId();
     }
-    if (lib !== closure_1_10.GUILD_HOME) {
-      if (tmp !== closure_1_10.ROLE_SUBSCRIPTIONS) {
+    if (lib !== StaticChannelRoute.GUILD_HOME) {
+      if (lib !== StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
         if (!stateFromStores) {
           if (closure_1_4.isConnected()) {
-            if (closure_1_7.getMode() !== closure_1_9.PUSH_TO_TALK) {
+            if (closure_1_7.getMode() !== InputModes.PUSH_TO_TALK) {
               if (closure_3 === lib(stateFromStores[14]).KeyboardTypes.EXPRESSION) {
-                let tmp10Result = tmp10(tmp11[15]);
+                let tmp10Result = lib(stateFromStores[15]);
                 if (tmp10Result.isAndroid()) {
                   let VOICE = closure_1_11.EXPRESSION_PICKER;
                 }
               }
               if (closure_3 === lib(stateFromStores[14]).KeyboardTypes.MEDIA) {
-                tmp10Result = tmp10(tmp11[15]);
+                tmp10Result = lib(stateFromStores[15]);
                 if (tmp10Result.isAndroid()) {
                   VOICE = closure_1_11.MEDIA;
                 }
@@ -68,7 +65,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
                 if (tmp10Result1.isAndroid()) {
                   VOICE = closure_1_11.APPS;
                 }
-                tmp10Result1 = tmp10(tmp11[15]);
+                tmp10Result1 = lib(stateFromStores[15]);
               }
               let isDirectoryResult;
               if (channel != null) {
@@ -91,7 +88,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
                     VOICE = closure_1_11.CHAT;
                   }
                 }
-                if (null != tmp) {
+                if (null != lib) {
                   let NONE2 = closure_1_11.CHAT;
                 } else {
                   NONE2 = closure_1_11.NONE;
@@ -99,7 +96,7 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
               }
             }
             VOICE = closure_1_11.VOICE;
-          } else if (null == tmp) {
+          } else if (null == lib) {
             let NONE = closure_1_11.NONE;
           } else {
             NONE = closure_1_11.CHAT;
@@ -113,23 +110,23 @@ export default function useChannelSafeAreaBottomStyles(arg0) {
   const items1 = [tmp2, gradientBottom, stateFromStores];
   return React.useMemo(() => {
     if (stateFromStores !== closure_1_11.NONE) {
-      if (tmp !== tmp2.DIRECTORY) {
-        if (tmp !== tmp2.EXPRESSION_PICKER) {
-          if (tmp !== tmp2.MEDIA) {
-            if (tmp !== tmp2.APPS) {
-              if (tmp === tmp2.CHAT) {
+      if (stateFromStores !== closure_1_11.DIRECTORY) {
+        if (stateFromStores !== closure_1_11.EXPRESSION_PICKER) {
+          if (stateFromStores !== closure_1_11.MEDIA) {
+            if (stateFromStores !== closure_1_11.APPS) {
+              if (stateFromStores === closure_1_11.CHAT) {
                 let obj = {};
                 const merged = Object.assign(lib.chat);
                 const merged1 = Object.assign(closure_1);
                 let prop = obj;
-              } else if (tmp === tmp2.VOICE) {
+              } else if (stateFromStores === closure_1_11.VOICE) {
                 obj = {};
                 const merged2 = Object.assign(lib.voice);
                 const merged3 = Object.assign(closure_1);
                 prop = obj;
               } else {
                 prop = {};
-                const merged4 = Object.assign(lib[tmp]);
+                const merged4 = Object.assign(lib[stateFromStores]);
                 const merged5 = Object.assign(closure_1);
               }
             }

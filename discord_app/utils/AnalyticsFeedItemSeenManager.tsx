@@ -1,6 +1,6 @@
 // discord_app/utils/AnalyticsFeedItemSeenManager.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 let obj = { IMMEDIATE: 0, [0]: "IMMEDIATE", IMMEDIATE_WITH_COOLDOWN: 1, [1]: "IMMEDIATE_WITH_COOLDOWN", IMMEDIATE_WITH_DELAY: 2, [2]: "IMMEDIATE_WITH_DELAY" };
 class TrackedFeedItem {
@@ -59,19 +59,14 @@ prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(is
       if (isForcedFlush) {
         let _Date = Date;
         let timestamp = Date.now();
-        let tmp8 = num;
-        let tmp9 = nextResult;
         num = num + (timestamp - tmp2.startTimeMillis);
         obj = { startTimeMillis: null };
         obj[0] = timestamp;
         let arr = items.push(obj);
       } else {
-        let tmp5 = nextResult;
         arr = items.push(tmp2);
       }
     } else {
-      let tmp3 = num;
-      let tmp4 = nextResult;
       num = num + (tmp2.endTimeMillis - tmp2.startTimeMillis);
     }
     continue;
@@ -80,7 +75,7 @@ prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(is
   this.seenIntervals = items;
   return Math.round(num);
 };
-let result = require("set").fileFinishedImporting("utils/AnalyticsFeedItemSeenManager.tsx");
+let result = require("obj132").fileFinishedImporting("utils/AnalyticsFeedItemSeenManager.tsx");
 class AnalyticsFeedItemSeenManager {
   constructor(arg0) {
     flag = global.isPaused;
@@ -88,31 +83,31 @@ class AnalyticsFeedItemSeenManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.initialize = function initialize() {
-      obj = obj(closure_1_1[2]);
+      obj = obj(dependencyMap[2]);
       const subscription = obj.subscribe("ANALYTICS_FEED_ITEM_SEEN", obj.handleFeedItemSeen);
-      const subscription1 = obj(closure_1_1[2]).subscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
-      const obj2 = obj(closure_1_1[2]);
-      const subscription2 = obj(closure_1_1[2]).subscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
-      const obj3 = obj(closure_1_1[2]);
-      const subscription3 = obj(closure_1_1[2]).subscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
-      const obj4 = obj(closure_1_1[2]);
-      const subscription4 = obj(closure_1_1[2]).subscribe("WINDOW_FOCUS", obj.handleWindowFocus);
+      const subscription1 = obj(dependencyMap[2]).subscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
+      const obj2 = obj(dependencyMap[2]);
+      const subscription2 = obj(dependencyMap[2]).subscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
+      const obj3 = obj(dependencyMap[2]);
+      const subscription3 = obj(dependencyMap[2]).subscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
+      const obj4 = obj(dependencyMap[2]);
+      const subscription4 = obj(dependencyMap[2]).subscribe("WINDOW_FOCUS", obj.handleWindowFocus);
       const onInitialize = obj.onInitialize;
       if (onInitialize != null) {
         onInitialize();
       }
     };
     obj.terminate = function terminate() {
-      obj = obj(closure_1_1[2]);
+      obj = obj(dependencyMap[2]);
       obj.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", obj.handleFeedItemSeen);
-      obj(closure_1_1[2]).unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
+      obj(dependencyMap[2]).unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
       const obj2 = obj;
-      const obj3 = obj(closure_1_1[2]);
-      obj(closure_1_1[2]).unsubscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
-      const obj4 = obj(closure_1_1[2]);
-      obj(closure_1_1[2]).unsubscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
-      const obj5 = obj(closure_1_1[2]);
-      obj(closure_1_1[2]).unsubscribe("WINDOW_FOCUS", obj.handleWindowFocus);
+      const obj3 = obj(dependencyMap[2]);
+      obj(dependencyMap[2]).unsubscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
+      const obj4 = obj(dependencyMap[2]);
+      obj(dependencyMap[2]).unsubscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
+      const obj5 = obj(dependencyMap[2]);
+      obj(dependencyMap[2]).unsubscribe("WINDOW_FOCUS", obj.handleWindowFocus);
       const onTerminate = obj.onTerminate;
       if (onTerminate != null) {
         onTerminate();
@@ -156,21 +151,20 @@ class AnalyticsFeedItemSeenManager {
     };
     obj.getTrackedFeedItem = function getTrackedFeedItem(feedItemId) {
       if (null == obj.trackedFeedItems[feedItemId]) {
-        if (typeof closure_1_4 !== "function") {
+        if (typeof TrackedFeedItem !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj = Object.create(closure_1_4.prototype);
+        obj = Object.create(TrackedFeedItem.prototype);
         obj.seenIntervals = [];
         tmp.trackedFeedItems[feedItemId] = obj;
-        const tmp2 = closure_1_4;
       }
       return obj.trackedFeedItems[feedItemId];
     };
     obj.getVisibleFeedItemIds = function getVisibleFeedItemIds() {
       const keys = Object.keys(obj.trackedFeedItems);
-      return new Set(keys.filter((arg0) => {
+      return new Set(keys.filter((item, index) => {
         let isVisibleResult;
-        if (trackedFeedItems.trackedFeedItems[arg0] != null) {
+        if (trackedFeedItems.trackedFeedItems[item] != null) {
           isVisibleResult = obj.isVisible();
         }
         return isVisibleResult;
@@ -199,8 +193,8 @@ class AnalyticsFeedItemSeenManager {
     obj.pause = function pause() {
       if (!obj._paused) {
         const visibleFeedItemIds = obj.getVisibleFeedItemIds();
-        const item = visibleFeedItemIds.forEach((feedItemId) => {
-          closure_0.handleFeedItemUnseen({ id: closure_0._id, feedItemId, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_UNSEEN" });
+        const item = visibleFeedItemIds.forEach((item, index) => {
+          closure_0.handleFeedItemUnseen({ id: closure_0._id, feedItemId: item, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_UNSEEN" });
         });
         obj._paused = true;
         obj._pausedFeedItemIds = visibleFeedItemIds;
@@ -210,8 +204,8 @@ class AnalyticsFeedItemSeenManager {
       if (obj._paused) {
         obj._paused = false;
         const _pausedFeedItemIds = obj._pausedFeedItemIds;
-        const item = _pausedFeedItemIds.forEach((feedItemId) => {
-          closure_0.handleFeedItemSeen({ id: closure_0._id, feedItemId, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_SEEN" });
+        const item = _pausedFeedItemIds.forEach((item, index) => {
+          closure_0.handleFeedItemSeen({ id: closure_0._id, feedItemId: item, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_SEEN" });
         });
         const result = obj.clearPausedFeedItemIds();
       }
@@ -268,8 +262,8 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
   } else {
     const _Date3 = Date;
     self._lastFlushTimeMillis = Date.now();
-    if (IMMEDIATE !== tmp2.IMMEDIATE) {
-      if (IMMEDIATE !== tmp2.IMMEDIATE_WITH_COOLDOWN) {
+    if (IMMEDIATE !== obj.IMMEDIATE) {
+      if (IMMEDIATE !== obj.IMMEDIATE_WITH_COOLDOWN) {
         resolved = new Promise((arg0) => {
           closure_0 = arg0;
           const timerId = setTimeout(closure_1_2(function*() {
@@ -328,7 +322,6 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
         });
       }
     }
-    closure_0 = undefined;
     closure_0 = callback((arg0) => {
       closure_0 = arg0;
       c2 = 0;

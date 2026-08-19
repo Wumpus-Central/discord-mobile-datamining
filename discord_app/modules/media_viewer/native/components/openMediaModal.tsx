@@ -1,10 +1,10 @@
 // discord_app/modules/media_viewer/native/components/openMediaModal.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../action_sheet/native/ActionSheetStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import setContent from "../../../action_sheet/native/ActionSheetStore.tsx";
 import { MEDIA_MODAL_KEY } from "../../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _openMediaModal() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -98,15 +98,15 @@ function _openMediaModal() {
             MediaViewerAnalytics = 5.MediaViewerAnalytics;
             initVideoStateStore = 4086.initVideoStateStore;
             !(function getMeasureInWindowFunction(c0) {
-              closure_0 = c0;
-              if (null != c0) {
-                if ("measureInWindow" in c0) {
-                  const measureInWindow = c0.measureInWindow;
-                  let fn = measureInWindow.bind(c0);
+              closure_0 = _undefined;
+              if (null != _undefined) {
+                if ("measureInWindow" in _undefined) {
+                  const measureInWindow = _undefined.measureInWindow;
+                  let fn = measureInWindow.bind(_undefined);
                 }
                 return fn;
               }
-              fn = (arg0) => {
+              fn = (fn) => {
                 let size = c0;
                 if (c0 == null) {
                   const obj = { x: 0, y: 0, width: null, height: null };
@@ -116,14 +116,14 @@ function _openMediaModal() {
                   size = obj;
                   const obj3 = c0(closure_1_2[4]);
                 }
-                arg0(size.x, size.y, size.width, size.height, size.resizeMode);
+                fn(size.x, size.y, size.width, size.height, size.resizeMode);
               };
             })(callback)((arg0, arg1, arg2, arg3, arg4) => {
               if ("action-sheet" === openAs) {
                 initialIndex(_undefined2[9])(_undefined3.isOpen(), "An action sheet must be open to open the media modal as an action sheet");
-                let obj = initialIndex(_undefined2[10]);
+                initialIndex(_undefined2[10]);
                 const tmp12 = _undefined(_undefined2[6])(_undefined2[11], _undefined2.paths);
-                obj = {};
+                let obj = {};
                 const merged = Object.assign(closure_7);
                 obj.initialIndex = initialIndex;
                 obj = { x: null, y: null, width: null, height: null, resizeMode: null };
@@ -180,7 +180,7 @@ function _openMediaModal() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/openMediaModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/openMediaModal.tsx");
 
 export const openMediaModal = function openMediaModal(arg0) {
   const self = this;

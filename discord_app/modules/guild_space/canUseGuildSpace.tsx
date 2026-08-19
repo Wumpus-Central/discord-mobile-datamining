@@ -1,11 +1,10 @@
 // discord_app/modules/guild_space/canUseGuildSpace.tsx
-import closure_2 from "../../stores/PermissionStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { experiment } from "GuildSpaceExperiment.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_space/canUseGuildSpace.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_space/canUseGuildSpace.tsx");
 
 export const isGuildSpaceAdmin = function isGuildSpaceAdmin(arg0) {
   let canResult = null != arg0;
@@ -18,10 +17,10 @@ export const useIsGuildSpaceAdmin = function useIsGuildSpaceAdmin(arg0) {
   const _require = arg0;
   const items = [closure_2];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_2.can(closure_1_3.MANAGE_GUILD, tmp);
+      canResult = closure_1_2.can(Permissions.MANAGE_GUILD, tmp);
     }
     return canResult;
   }, items1);
@@ -34,16 +33,15 @@ export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActi
   if (id != null) {
     id = id.id;
   }
-  const guildSpaceExperimentEnabled = _experiment.useGuildSpaceExperimentEnabled(id, useGuildActionRows);
+  const guildSpaceExperimentEnabled = require("GuildSpaceExperiment.tsx").useGuildSpaceExperimentEnabled(id, useGuildActionRows);
   _require = id;
-  const obj = _experiment;
-  const tmp = _require;
+  const obj = experiment;
   const items = [closure_2];
   const items1 = [id];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_2.can(closure_1_3.MANAGE_GUILD, tmp);
+      canResult = closure_1_2.can(Permissions.MANAGE_GUILD, tmp);
     }
     return canResult;
   }, items1);

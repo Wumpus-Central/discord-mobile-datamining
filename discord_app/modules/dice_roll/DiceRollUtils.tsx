@@ -1,8 +1,8 @@
 // discord_app/modules/dice_roll/DiceRollUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
-const result = set.fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");
 
 export const getBarText = function getBarText(flag, results) {
   if (flag) {
@@ -13,7 +13,7 @@ export const getBarText = function getBarText(flag, results) {
     if (null != results) {
       const intl = getSystemLocale.intl;
       const obj = { total: null };
-      obj[0] = results.reduce((arg0, arg1) => arg0 + arg1, 0);
+      obj[0] = results.reduce((acc, item, index) => acc + item, 0);
       str = intl.formatToPlainString(getSystemLocale.t.xU4pF1, obj);
     }
   }

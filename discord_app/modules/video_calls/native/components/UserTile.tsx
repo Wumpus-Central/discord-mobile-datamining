@@ -4,30 +4,29 @@ import registerAssetDefault from "../../../../../_runtime/08117_registerAsset.js
 import registerAssetDefault2 from "../../../../../_runtime/12461_registerAsset.js";
 import registerAssetDefault3 from "../../../../../_runtime/12462_registerAsset.js";
 import registerAssetDefault4 from "../../../../../_runtime/12463_registerAsset.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../voice_channel_effects/VoiceChannelEffectsStore.tsx";
+import recentlyUsedEmojis from "../../../voice_channel_effects/VoiceChannelEffectsStore.tsx";
 import { clearVoiceChannelEffectForUser as closure_7 } from "../../../voice_channel_effects/VoiceChannelEffectsStore.tsx";
-import closure_8 from "../../../../stores/AuthenticationStore.tsx";
-import closure_9 from "../../../../stores/ChannelStore.tsx";
-import closure_10 from "../../../../stores/MediaEngineStore.tsx";
+import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
 import { VideoToggleState } from "../../../../Constants.tsx";
 import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 import { MediaEngineContextTypes } from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let obj = { container: null, imageBackground: null, autoDisabledVideoWrapper: null, autoDisabledVideo: null, autoDisabledVideoTextWrapper: null, statusWrapper: null, labelText: null };
-obj = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BLACK };
+let obj = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BLACK };
 obj[0] = obj;
 obj[1] = { flex: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch" };
 obj[2] = { width: "100%", flexDirection: "row", justifyContent: "center" };
-createCacheKey = { backgroundColor: null, alignItems: "center", height: 24 };
+const createCacheKey = { backgroundColor: null, alignItems: "center", height: 24 };
 createCacheKey[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj[3] = createCacheKey;
 obj[4] = { borderRadius: ThemesDefault.radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
@@ -40,14 +39,11 @@ let closure_17 = createCacheKey.createStyles(obj);
 let closure_18 = importAllResult.memo((guildId) => {
   ({ user, hasVideo } = guildId);
   guildId = guildId.guildId;
-  importDefault = undefined;
-  let id;
   let callback;
-  closure_4 = undefined;
   ({ streamId, resizeMode, ringing, avatarSize, speaking, gestureEnabled } = guildId);
   let tmp = callback3();
   importDefault = tmp;
-  id = user.id;
+  const id = user.id;
   let obj = hasVideo(id[14]);
   let items = [closure_8];
   let items1 = [hasVideo, id];
@@ -65,14 +61,13 @@ let closure_18 = importAllResult.memo((guildId) => {
     return items;
   }, items3), 1)[0];
   const obj2 = hasVideo(id[14]);
-  let tmp2 = hasVideo;
   const items4 = [closure_10];
   const items5 = [id];
   const tmp5 = hasVideo(id[14]).useStateFromStores(items4, () => {
     if (null != id) {
-      let NONE = closure_1_10.getVideoToggleState(tmp, closure_1_13.DEFAULT);
+      let NONE = closure_1_10.getVideoToggleState(tmp, MediaEngineContextTypes.DEFAULT);
     } else {
-      NONE = closure_1_11.NONE;
+      NONE = VideoToggleState.NONE;
     }
     return NONE;
   }, items5) === VideoToggleState.AUTO_PROBING;
@@ -84,11 +79,10 @@ let closure_18 = importAllResult.memo((guildId) => {
         obj[0] = resizeMode;
         obj[1] = streamId;
         obj[2] = gestureEnabled;
-        const VideoSpinnerContext = tmp2(tmp3[21]).VideoSpinnerContext;
+        const VideoSpinnerContext = hasVideo(tmp3[21]).VideoSpinnerContext;
         obj[3] = stateFromStores ? VideoSpinnerContext.SELF_VIDEO : VideoSpinnerContext.REMOTE_VIDEO;
         obj[4] = user.id;
         let tmp6Result = callback2(importDefault(tmp3[20]), obj);
-        const tmp6 = callback2;
         const tmp8 = importDefault(tmp3[20]);
       }
       return tmp6Result;
@@ -119,14 +113,15 @@ let closure_18 = importAllResult.memo((guildId) => {
       obj1[3] = intl.string(hasVideo(id[19]).t.m2Hyj0);
       items1[1] = closure_1_14(hasVideo(id[18]).Text, obj1);
       obj[1] = items1;
-      obj[1] = closure_1_15(closure_1_5, obj);
-      let tmp2 = closure_1_14(closure_1_5, obj);
+      obj[1] = closure_1_15(View, obj);
+      let tmp2 = closure_1_14(View, obj);
     } else {
       tmp2 = null;
     }
     return tmp2;
   };
   tmp6Result = callback2(importDefault(id[15]), obj);
+  const tmp10 = importDefault(id[15]);
 });
 let closure_19 = importAllResult.memo((userId) => {
   userId = userId.userId;
@@ -180,22 +175,18 @@ let closure_19 = importAllResult.memo((userId) => {
       obj3[2] = ThemesDefault.unsafe_rawColors.WHITE;
       obj3[3] = tmp6 === registerAssetDefault;
       obj2[1] = callback2(tmp2(1297).Icon, obj3);
-      tmp19Result = tmp19(View, obj2);
-      const tmp20 = View;
+      tmp19Result = callback2(View, obj2);
     }
     const obj4 = { children: null };
     items3[1] = tmp19Result;
     obj4[0] = items3;
-    let tmp11Result = closure_15(closure_16, obj4);
-    const tmp11 = closure_15;
-    const tmp12 = closure_16;
+    let tmp11Result = callback2(closure_16, obj4);
   } else {
     tmp11Result = null;
   }
   return tmp11Result;
 });
-let obj2 = { borderRadius: ThemesDefault.radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
-let result = require("set").fileFinishedImporting("modules/video_calls/native/components/UserTile.tsx");
+let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/UserTile.tsx");
 
 export default function UserTile(participant) {
   participant = participant.participant;
@@ -321,7 +312,7 @@ export default function UserTile(participant) {
   obj1[6] = tmp9;
   obj1[7] = participant.avatarSize;
   obj1[8] = gestureEnabled;
-  const items7 = [closure_14(closure_18, obj1), , ];
+  const items7 = [callback(closure_18, obj1), , ];
   let tmp23Result = null;
   if (null != id) {
     tmp23Result = null;
@@ -333,12 +324,12 @@ export default function UserTile(participant) {
       };
       obj2[2] = id;
       obj2[3] = hasNotch;
-      tmp23Result = tmp23(tmp7(tmp8[32]), obj2);
+      tmp23Result = callback(tmp7(tmp8[32]), obj2);
     }
   }
   items7[1] = tmp23Result;
-  items7[2] = closure_14(closure_19, { muted: flag, deafened: flag2, userId: user.id, style: statusStyle });
+  items7[2] = callback(closure_19, { muted: flag, deafened: flag2, userId: user.id, style: statusStyle });
   obj[1] = items7;
-  obj[1] = closure_15(id, obj);
-  return closure_14(participant(onDoubleTap[31]).GestureDetector, obj);
+  obj[1] = callback2(id, obj);
+  return callback(participant(onDoubleTap[31]).GestureDetector, obj);
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
@@ -25,38 +25,34 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj[2] = closure_5(rule(4734).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
+  obj[2] = callback(rule(4734).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
   obj[3] = !readOnly;
   let fn;
   if (!readOnly) {
     fn = () => {
-      let obj = { teenId: closure_1, rule: null };
-      obj = {};
+      const obj = {};
       const merged = Object.assign(rule);
       obj[1] = obj;
-      return navigation.navigate(closure_1_4.FAMILY_CENTER_SCHEDULE_DOWNTIME, obj);
+      return navigation.navigate(UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME, obj);
     };
   }
   obj[4] = fn;
-  return closure_5(rule(6291).TableRow, obj);
+  return callback(rule(6291).TableRow, obj);
 }
 const View = get_ActivityIndicator.View;
 const UserSettingsSections = ME.UserSettingsSections;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { header: null, container: null };
-obj = { paddingTop: ThemesDefault.space.PX_24 };
+let obj = { paddingTop: ThemesDefault.space.PX_24 };
 obj[0] = obj;
 obj[1] = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-const result = set.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx");
+const result = obj132.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsScreenTime.tsx");
 
 export default function FamilyCenterParentalControlsScreenTime(readOnly) {
   let flag = readOnly.readOnly;
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = undefined;
   let id;
   const tmp = callback3();
   let obj = flag(id[10]);
@@ -88,7 +84,7 @@ export default function FamilyCenterParentalControlsScreenTime(readOnly) {
     obj[3] = intl.string(importDefault(tmp3[9])["72CmJd"]);
     const items = [callback(tmp2(tmp3[7]).Text, obj), ];
     obj1 = { hasIcons: false, children: null };
-    obj1[1] = sortRulesByStartTimeResult.map((rule) => closure_1_5(closure_1_8, { rule, teenId: id, navigation: closure_1, readOnly: flag }, rule.ruleId));
+    obj1[1] = sortRulesByStartTimeResult.map((item, index) => closure_1_5(ScheduleRuleRow, { rule: item, teenId: id, navigation: closure_1, readOnly: flag }, item.ruleId));
     items[1] = callback(tmp2(tmp3[12]).TableRowGroup, obj1);
     obj[1] = items;
     tmp6 = callback2(View, obj);

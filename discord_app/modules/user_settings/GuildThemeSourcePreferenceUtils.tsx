@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/GuildThemeSourcePreferenceUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 
-const result = set.fileFinishedImporting("modules/user_settings/GuildThemeSourcePreferenceUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/GuildThemeSourcePreferenceUtils.tsx");
 
 export const resolveDefaultGuildThemePreference = function resolveDefaultGuildThemePreference(arg0) {
   if (arg0 === create.GuildThemeSourcePreference.PERSONAL) {
-    let GUILD = tmp(1306).GuildThemeSourcePreference.PERSONAL;
+    let GUILD = create.GuildThemeSourcePreference.PERSONAL;
   } else {
-    GUILD = tmp(1306).GuildThemeSourcePreference.GUILD;
+    GUILD = create.GuildThemeSourcePreference.GUILD;
   }
   return GUILD;
 };
@@ -17,12 +17,12 @@ export const resolveGuildThemeSourcePreference = function resolveGuildThemeSourc
   let tmp2 = arg0;
   if (arg0 !== create.GuildThemeSourcePreference.GUILD) {
     tmp2 = arg0;
-    if (arg0 !== tmp(1306).GuildThemeSourcePreference.PERSONAL) {
-      if (arg1 === tmp(1306).GuildThemeSourcePreference.PERSONAL) {
-        GuildThemeSourcePreference = tmp(1306).GuildThemeSourcePreference;
+    if (arg0 !== create.GuildThemeSourcePreference.PERSONAL) {
+      if (arg1 === create.GuildThemeSourcePreference.PERSONAL) {
+        GuildThemeSourcePreference = create.GuildThemeSourcePreference;
         let GUILD = GuildThemeSourcePreference.PERSONAL;
       } else {
-        GUILD = tmp(1306).GuildThemeSourcePreference.GUILD;
+        GUILD = create.GuildThemeSourcePreference.GUILD;
       }
     }
   }

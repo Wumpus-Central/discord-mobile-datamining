@@ -1,9 +1,9 @@
 // discord_app/modules/tooltip/useCanShowTooltip.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "TooltipStore.tsx";
+import noop from "../../../_runtime/00019_noop.js";
+import set from "TooltipStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/tooltip/useCanShowTooltip.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/tooltip/useCanShowTooltip.tsx");
 
 export const useCanShowTooltip = function useCanShowTooltip(SCREENSHARE_SWIPE_UP_CONTROLS, arg1) {
   const _require = SCREENSHARE_SWIPE_UP_CONTROLS;

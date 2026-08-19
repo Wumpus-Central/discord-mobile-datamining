@@ -1,4 +1,5 @@
 // discord_app/modules/guild_settings/GuildSettingsStore.tsx
+import obj132 from "../../../_runtime/00002_obj132.js";
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
@@ -15,14 +16,13 @@ import canUseMobileServerTagSettings from "GuildSettingsServerTagUtils.tsx";
 import fetchVanityUrl from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
 import getDefaultGuildSettingsSection from "utils/getDefaultGuildSettingsSection.tsx";
 import _fetchGuildIntegrationsApplications from "GuildSettingsFetchActionCreators.tsx";
-import closure_14 from "../guild_profile/GuildProfileStore.tsx";
-import closure_17 from "../../records/InviteRecord.tsx";
-import closure_18 from "../../records/UserRecord.tsx";
-import closure_19 from "../../stores/GuildStore.tsx";
-import closure_20 from "../../stores/UserStore.tsx";
+import handleUpdateStart from "../guild_profile/GuildProfileStore.tsx";
+import createFromServer from "../../records/InviteRecord.tsx";
+import createdAt from "../../records/UserRecord.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "../public_guilds/PublicGuildsConstants.tsx";
-import set from "../../../_runtime/00002_set.js";
 
 function handleFormInit(location) {
   ({ guildId, section, subsection } = location);
@@ -30,7 +30,6 @@ function handleFormInit(location) {
   if (null == guild) {
     c35 = false;
     let OPEN = FormStates.CLOSED;
-    guild = null;
     guild = null;
     c39 = false;
     closure_41 = false;
@@ -67,11 +66,11 @@ function handleFormInit(location) {
     }
     if (null != section) {
       obj = { key: "landing", name: null };
-      obj[1] = tmp16.LANDING;
+      obj[1] = constants.LANDING;
       const items = [obj];
-      if (section === tmp16.TAG_CUSTOMIZE) {
+      if (section === constants.TAG_CUSTOMIZE) {
         obj = { key: null, name: null };
-        ({ TAG: obj2[0], TAG: obj2[1] } = tmp16);
+        ({ TAG: obj2[0], TAG: obj2[1] } = constants);
         items.push(obj);
       }
       obj1 = { key: null, name: null };
@@ -81,7 +80,6 @@ function handleFormInit(location) {
       obj2 = { type: "stack", routes: null };
       obj2[1] = items;
     }
-    const obj5 = DISCORD_EPOCHDefault;
   }
 }
 function _createInvite(code) {
@@ -96,7 +94,6 @@ function _createInvite(code) {
   let fromInviteGuildResult = null;
   if (null != code.guild) {
     fromInviteGuildResult = fromGuildPropertiesWithAdditionalFields.fromInviteGuild(code.guild);
-    const obj2 = fromGuildPropertiesWithAdditionalFields;
   }
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
@@ -118,7 +115,6 @@ function handleIntegrationsUpdate(type) {
     }
     if (tmp5) {
       const guildIntegrationsApplications = _fetchGuildIntegrationsApplications.fetchGuildIntegrationsApplications(user.id);
-      obj = _fetchGuildIntegrationsApplications;
     }
     tmp = tmp5;
   }
@@ -140,7 +136,6 @@ function handleProfileApiUpdateFailure(arg0) {
   }
   return false;
 }
-let set = isValueEqual.set;
 let closure_15 = createChannelRecord.createChannelRecordFromInvite;
 const getGuildEveryoneRoleId = GuildNSFWContentLevel.getGuildEveryoneRoleId;
 const FormStates = ME.FormStates;
@@ -151,7 +146,7 @@ const DEFAULT_DISCOVERY_CATEGORY_ID = DEFAULT_DISCOVERY_CATEGORY_ID2.DEFAULT_DIS
 let c30 = true;
 let closure_31 = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "ownerConfiguredContentLevel", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled", "officialMessageColor", "verificationRoleId"];
 let closure_32 = ["brandColorPrimary", "description", "icon", "name", "traits", "visibility", "gameApplicationIds", "customBanner", "tag", "badge", "badgeColorPrimary", "badgeColorSecondary"];
-set = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]);
+let set = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]);
 let closure_34 = { icon: "iconOriginalMd5", banner: "bannerOriginalMd5", splash: "splashOriginalMd5", discoverySplash: "discoverySplashOriginalMd5" };
 let c35 = false;
 let CLOSED = FormStates.CLOSED;
@@ -200,11 +195,11 @@ prototype["hasChanges"] = function hasChanges() {
   const isEqualResult = obj.isEqual(closure_7, closure_6);
   let widgetHasChangesResult = !isEqualResult;
   if (isEqualResult) {
-    let tmpResult = tmp(12);
+    let tmpResult = applyDefault;
     widgetHasChangesResult = !tmpResult.isEqual(obj, obj);
   }
   if (!widgetHasChangesResult) {
-    tmpResult = tmp(12);
+    tmpResult = applyDefault;
     widgetHasChangesResult = !tmpResult.isEqual(closure_9, closure_8);
   }
   if (!widgetHasChangesResult) {
@@ -313,37 +308,27 @@ obj = {
     if (null == closure_7) {
       return false;
     } else {
-      const item = closure_31.forEach((key10009) => {
+      const item = closure_31.forEach((item, index) => {
         let hasOwnPropertyResult = null != closure_7;
         if (hasOwnPropertyResult) {
-          hasOwnPropertyResult = closure_0.hasOwnProperty(key10009);
+          hasOwnPropertyResult = closure_0.hasOwnProperty(item);
         }
         if (hasOwnPropertyResult) {
-          let tmp6 = closure_0[key10009];
+          let tmp6 = closure_0[item];
           if (tmp6 == null) {
             tmp6 = null;
           }
-          closure_7 = closure_1_13(closure_7, key10009, tmp6);
-          const tmp3 = closure_1_13;
-          const tmp4 = closure_7;
+          closure_7 = set(closure_7, item, tmp6);
         }
       });
       const _Object = Object;
       const keys = Object.keys(table);
       for (const item10007 of keys) {
-        let tmp4 = item10007;
         if (arg0.hasOwnProperty(item10007)) {
-          let tmp5 = table;
-          let tmp6 = item10007;
-          let tmp7 = arg0[table[tmp4]];
+          let tmp7 = arg0[table[item10007]];
           if (null != tmp7) {
-            let tmp11 = closure_44;
-            let tmp12 = item10007;
-            let tmp13 = tmp7;
-            closure_44[tmp4] = tmp8;
+            closure_44[item10007] = tmp8;
           } else {
-            let tmp9 = closure_44;
-            let tmp10 = item10007;
             delete tmp2[tmp];
           }
         }
@@ -353,7 +338,7 @@ obj = {
         closure_0 = closure_7;
         if (null == closure_7) {
           return false;
-        } else if (!closure_31.some((arg0) => table[arg0] !== closure_1_6[arg0])) {
+        } else if (!closure_31.some((item, index) => table[item] !== closure_1_6[item])) {
           closure_7 = closure_6;
         }
       })();
@@ -364,16 +349,15 @@ obj = {
     if (null != obj) {
       if (null != user) {
         if (user.id === tmp) {
-          const item = closure_32.forEach((key10009) => {
+          const item = closure_32.forEach((item, index) => {
             if (null != obj) {
-              if (closure_0.hasOwnProperty(key10009)) {
-                if (undefined !== tmp2[key10009]) {
+              if (closure_0.hasOwnProperty(item)) {
+                if (undefined !== closure_0[item]) {
                   obj = {};
                   const merged = Object.assign(obj);
-                  obj[key10009] = tmp3;
+                  obj[item] = tmp3;
                 }
               }
-              tmp2 = closure_0;
             }
           });
         }
@@ -407,14 +391,12 @@ obj = {
     if (tmp) {
       fromGuildResult = fromGuildPropertiesWithAdditionalFields.fromGuild(guild.guild, fromGuildResult);
       user = fromGuildResult;
-      obj = fromGuildPropertiesWithAdditionalFields;
     }
   },
   GUILD_SETTINGS_SUBMIT_FAILURE: function handleFormSubmitFailure(errors) {
     const OPEN = FormStates.OPEN;
     if (defaultGuildSettingsSection == null) {
       defaultGuildSettingsSection = getDefaultGuildSettingsSection.getDefaultGuildSettingsSection();
-      obj = getDefaultGuildSettingsSection;
     }
     c4 = null;
     errors = errors.errors;
@@ -428,15 +410,14 @@ obj = {
     } else {
       ({ section: closure_3, subsection: closure_4 } = section);
       if (closure_3 !== constants.INSTANT_INVITES) {
-        if (closure_3 !== tmp27.INVITES) {
-          if (closure_3 !== tmp27.INTEGRATIONS) {
-            if (closure_3 !== tmp27.ROLES) {
-              if (closure_3 === tmp27.MEMBERS) {
+        if (closure_3 !== constants.INVITES) {
+          if (closure_3 !== constants.INTEGRATIONS) {
+            if (closure_3 !== constants.ROLES) {
+              if (closure_3 === constants.MEMBERS) {
                 c10 = getGuildEveryoneRoleId(user);
-              } else if (closure_3 === tmp27.VANITY_URL) {
+              } else if (closure_3 === constants.VANITY_URL) {
                 const vanityUrl = fetchVanityUrl.fetchVanityUrl(user.id);
-                const obj2 = fetchVanityUrl;
-              } else if (closure_3 === tmp27.SAFETY) {
+              } else if (closure_3 === constants.SAFETY) {
                 if (null == closure_4) {
                   let SAFETY_OVERVIEW = constants2.SAFETY_OVERVIEW;
                 } else {
@@ -445,7 +426,6 @@ obj = {
                 obj = { type: "GUILD_SETTINGS_SAFETY_SET_SUBSECTION", subsection: null };
                 obj[1] = SAFETY_OVERVIEW;
                 dispatcherDefault.dispatch(obj);
-                const obj5 = dispatcherDefault;
               }
             }
           }
@@ -462,7 +442,6 @@ obj = {
               }
               if (tmp13) {
                 const guildIntegrationsApplications = _fetchGuildIntegrationsApplications.fetchGuildIntegrationsApplications(user.id);
-                const obj3 = _fetchGuildIntegrationsApplications;
               }
               tmp12 = tmp13;
             }
@@ -474,9 +453,9 @@ obj = {
       obj = { url: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_25.GUILD_INSTANT_INVITES(user.id);
       const value = HTTP.get(obj);
-      value.then((body) => {
-        obj = callback(table[14]);
-        obj = { type: "GUILD_SETTINGS_LOADED_INVITES", invites: body.body };
+      value.then((result) => {
+        callback(table[14]);
+        obj = { type: "GUILD_SETTINGS_LOADED_INVITES", invites: result.body };
         obj.dispatch(obj);
       });
     }
@@ -486,11 +465,11 @@ obj = {
   },
   GUILD_SETTINGS_LOADED_BANS: function handleLoadedBans(bans) {
     bans = bans.bans;
-    closure_53 = bans.reduce((set, user) => {
+    closure_53 = bans.reduce((acc, item, index) => {
       if (tmp) {
-        const result = set.set(user.user.id, user);
+        const result = acc.set(item.user.id, item);
       }
-      return set;
+      return acc;
     }, new Map());
     closure_54 = closure_54 + 1;
   },
@@ -505,19 +484,19 @@ obj = {
       const map = new Map();
       closure_53 = map;
     }
-    closure_53 = bans.reduce((set, user) => {
+    closure_53 = bans.reduce((acc, item, index) => {
       if (tmp) {
-        const result = set.set(user.user.id, user);
+        const result = acc.set(item.user.id, item);
       }
-      return set;
+      return acc;
     }, closure_53);
     closure_54 = closure_54 + 1;
   },
   GUILD_SETTINGS_LOADED_INVITES: function handleLoadedInvites(invites) {
     invites = invites.invites;
-    closure_56 = invites.reduce((arg0, code) => {
-      arg0[code.code] = callback(code);
-      return arg0;
+    closure_56 = invites.reduce((acc, item, index) => {
+      acc[item.code] = callback(item);
+      return acc;
     }, {});
   },
   GUILD_SETTINGS_SET_WIDGET: function handleSetEmbed(enabled) {
@@ -680,7 +659,7 @@ obj = {
           const profile = store.getProfile(user.id);
           let result = closure_3 === constants.PROFILE;
           if (!result) {
-            result = closure_3 === tmp23.TAG;
+            result = closure_3 === constants.TAG;
           }
           if (!result) {
             obj = guild(obj[12]);
@@ -694,27 +673,25 @@ obj = {
           } else {
             obj = {};
             const merged = Object.assign(user);
-            const item = closure_31.forEach((arg0) => {
-              if (!closure_1_33.has(arg0)) {
-                let tmp = "rulesChannelId" !== arg0;
+            const item = closure_31.forEach((item, index) => {
+              if (!closure_1_33.has(item)) {
+                let tmp = "rulesChannelId" !== item;
                 if (tmp) {
-                  tmp = "publicUpdatesChannelId" !== arg0;
+                  tmp = "publicUpdatesChannelId" !== item;
                 }
                 if (!tmp) {
-                  tmp = obj[arg0] !== closure_1_29;
+                  tmp = obj[item] !== closure_1_29;
                 }
                 if (tmp) {
-                  tmp = "features" !== arg0;
+                  tmp = "features" !== item;
                 }
                 if (tmp) {
-                  if ("ownerConfiguredContentLevel" !== arg0) {
-                    let tmp7 = obj[arg0];
+                  if ("ownerConfiguredContentLevel" !== item) {
+                    let tmp7 = obj[item];
                   } else {
-                    tmp7 = guild[arg0];
+                    tmp7 = guild[item];
                   }
-                  closure_1 = closure_1_13(closure_1, arg0, tmp7);
-                  const tmp4 = closure_1_13;
-                  const tmp5 = closure_1;
+                  closure_1 = closure_1_13(closure_1, item, tmp7);
                 }
               }
             });
@@ -760,8 +737,6 @@ obj = {
     if (tmp2) {
       const result = canUseMobileServerTagSettings.isServerTagDraftDirty(profile, profile);
       tmp2 = !result;
-      obj = canUseMobileServerTagSettings;
-      const tmp8 = !result;
     }
     return tmp2;
   },
@@ -1058,7 +1033,7 @@ obj = {
   }
 };
 const guildSettingsStore = new GuildSettingsStore(dispatcherDefault, obj);
-let result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsStore.tsx");
+let result = obj132.fileFinishedImporting("modules/guild_settings/GuildSettingsStore.tsx");
 
 export default guildSettingsStore;
 export const EMPTY_METADATA = obj;

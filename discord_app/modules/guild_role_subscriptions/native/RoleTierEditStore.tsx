@@ -1,25 +1,24 @@
 // discord_app/modules/guild_role_subscriptions/native/RoleTierEditStore.tsx
 import isIterable from "../../../../_runtime/04006_isIterable.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import identity from "../../../../_runtime/00700_identity.js";
-import { isIterable } from "../../../../_runtime/04006_isIterable.js";
 
-require = arg1;
+require = fn;
 function usePriceTiers(guildId) {
   const _require = guildId;
   let tmp = callback(withEqualityFn((arg0) => {
     const items = [, , ];
     ({ priceTiers: arr[0], priceTierState: arr[1], loadPriceTiers: arr[2] } = arg0);
     return items;
-  }, _isIterable.shallow), 3);
+  }, require("../../../../_runtime/04006_isIterable.js").shallow), 3);
   const first = tmp[0];
   closure_2 = tmp3;
   dependencyMap = tmp[2];
   first(4761)(() => {
     let tmp2 = null == first;
     if (tmp2) {
-      tmp2 = closure_2 !== closure_1_6.LOADING;
+      tmp2 = closure_2 !== obj.LOADING;
     }
     if (tmp2) {
       callback(closure_0);
@@ -31,7 +30,7 @@ function usePriceTiers(guildId) {
     onRefresh(arg0) {
       let tmp = null == first;
       if (tmp) {
-        tmp = closure_2 !== closure_1_6.LOADING;
+        tmp = closure_2 !== obj.LOADING;
       }
       if (tmp) {
         callback(arg0);
@@ -43,30 +42,25 @@ function usePriceTiers(guildId) {
 let obj = { IDLE: 0, [0]: "IDLE", LOADING: 1, [1]: "LOADING", ERROR: 2, [2]: "ERROR" };
 let closure_7 = Object.freeze({ currentScene: null, groupCover: null, groupDescription: "", groupIsFullGate: false });
 const withEqualityFn = identity.createWithEqualityFn((arg0) => {
-  closure_0 = arg0;
   obj = {};
   const merged = Object.assign(closure_7);
   obj.setScene = function setScene(arg0) {
     const callback = arg0;
-    callback(closure_1_3[2]).batchUpdates(() => callback({ currentScene: callback }));
+    callback(dependencyMap[2]).batchUpdates(() => callback({ currentScene: callback }));
   };
-  closure_0 = arg0;
-  let groupIsFullGate = "groupCover";
   obj.setGroupCover = (arg0) => {
     const callback = arg0;
-    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+    callback(dependencyMap[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
   };
-  closure_0 = arg0;
-  groupIsFullGate = "groupDescription";
   obj.setGroupDescription = (arg0) => {
     const callback = arg0;
-    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+    callback(dependencyMap[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
   };
   closure_0 = arg0;
-  groupIsFullGate = "groupIsFullGate";
+  const groupIsFullGate = "groupIsFullGate";
   obj.setGroupIsFullGate = (arg0) => {
     const callback = arg0;
-    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
+    callback(dependencyMap[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
   };
   obj.priceTiers = null;
   obj.priceTierState = obj.IDLE;
@@ -97,11 +91,11 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     })();
   };
   obj.reset = function reset() {
-    callback(closure_1_3[2]).batchUpdates(() => callback(closure_1_7));
+    callback(dependencyMap[2]).batchUpdates(() => callback(closure_1_7));
   };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
 
 export const LoadingState = obj;
 export const useRoleTierEditStore = withEqualityFn;
@@ -129,7 +123,7 @@ export const usePriceTiersAvailableInGuild = function usePriceTiersAvailableInGu
   }
   tiers = undefined;
   if (tiers != null) {
-    tiers = tiers.filter((arg0) => !set.has(arg0));
+    tiers = tiers.filter((item, index) => !set.has(item));
   }
   return { tiers, state, onRefresh };
 };

@@ -1,10 +1,11 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetPillButton.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
 import registerAssetDefault from "../../../../_runtime/09239_registerAsset.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 class BalanceWidgetPillButton {
   constructor(arg0) {
     ({ balance, variant } = global);
@@ -52,7 +53,7 @@ class BalanceWidgetPillButton {
 }
 noopAll;
 BalanceWidgetPillButton.displayName = "BalanceWidgetPillButton";
-const result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPillButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPillButton.tsx");
 
 export default BalanceWidgetPillButton;
 export { BalanceWidgetPillButton };

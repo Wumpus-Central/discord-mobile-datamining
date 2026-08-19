@@ -1,20 +1,19 @@
 // discord_app/modules/app_launcher/hooks/useSortedSectionCommands.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { CommandListSortOrder } from "../AppLauncherConstants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 
 export default function useSortedSectionCommands(sectionId) {
   sectionId = sectionId.sectionId;
-  let memo = sectionId;
   const commandsByActiveSection = sectionId.commandsByActiveSection;
   let setSortOrder;
   canSort = undefined;
   [tmp3, tmp4] = canSort(React.useState(CommandListSortOrder.ALPHABETICAL), 2);
   const items = [commandsByActiveSection, sectionId];
-  memo = React.useMemo(() => {
-    const found = commandsByActiveSection.find((section) => section.section.id === closure_0);
+  let memo = React.useMemo(() => {
+    const found = commandsByActiveSection.find((item, index) => item.section.id === closure_0);
     let data;
     if (found != null) {
       data = found.data;
@@ -32,13 +31,13 @@ export default function useSortedSectionCommands(sectionId) {
       return obj;
     } else {
       memo = false;
-      const mapped = arr.map((command, alphabeticalSortIndex) => {
+      const mapped = arr.map((item, index) => {
         let tmp = closure_0;
         if (!closure_0) {
-          tmp = null != command.global_popularity_rank;
+          tmp = null != item.global_popularity_rank;
         }
         closure_0 = tmp;
-        return { command, alphabeticalSortIndex };
+        return { command: item, alphabeticalSortIndex: index };
       });
       if (memo) {
         const sorted = mapped.sort((command, command2) => {
@@ -59,7 +58,7 @@ export default function useSortedSectionCommands(sectionId) {
           }
         });
         obj = { popularSortedCommands: null, canSort: true };
-        obj[0] = mapped.map((command) => command.command);
+        obj[0] = mapped.map((item, index) => item.command);
       } else {
         obj = { popularSortedCommands: null, canSort: false };
         obj[0] = arr;
@@ -70,14 +69,14 @@ export default function useSortedSectionCommands(sectionId) {
   ({ popularSortedCommands, canSort } = memo1);
   const items2 = [sectionId];
   const effect = React.useEffect(() => {
-    let obj = commandsByActiveSection(setSortOrder[3]);
-    obj = { dontRefetchMs: memo(setSortOrder[4]).Millis.DAY };
+    commandsByActiveSection(setSortOrder[3]);
+    const obj = { dontRefetchMs: memo(setSortOrder[4]).Millis.DAY };
     const application = obj.getApplication(memo, obj);
   }, items2);
   const items3 = [canSort];
   const layoutEffect = React.useLayoutEffect(() => {
     if (canSort) {
-      setSortOrder(closure_1_5.POPULAR);
+      setSortOrder(CommandListSortOrder.POPULAR);
     }
   }, items3);
   if (CommandListSortOrder.POPULAR !== sortOrder) {

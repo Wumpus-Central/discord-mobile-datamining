@@ -1,25 +1,23 @@
 // discord_app/modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../ExplicitMediaStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import getFpMessageInfo from "../../ExplicitMediaStore.tsx";
 import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "../../ExplicitMediaRedactionConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaSenderFalsePositiveActionSheet.tsx");
 
 export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
-  dependencyMap = undefined;
-  let React;
   let reportFalsePositive;
   let obj = channelId(647);
   const items = [reportFalsePositive];
   const stateFromStores = obj.useStateFromStores(items, () => reportFalsePositive.getFpMessageInfo(messageId));
   const attachments = stateFromStores.attachments;
-  dependencyMap = attachments.map((id) => id.id);
+  dependencyMap = attachments.map((item, index) => item.id);
   const attachments1 = stateFromStores.attachments;
-  React = attachments1.map((filename) => filename.filename);
+  const React = attachments1.map((item, index) => item.filename);
   obj = {
     onSuccess() {
       channelId(10871).handleSuccess(closure_1_5);

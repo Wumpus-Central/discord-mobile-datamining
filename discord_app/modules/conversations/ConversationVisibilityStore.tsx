@@ -32,6 +32,6 @@ const conversationVisibilityStore = new ConversationVisibilityStore(dispatcherDe
     closure_0 = !closure_0;
   }
 });
-const result = require("set").fileFinishedImporting("modules/conversations/ConversationVisibilityStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/conversations/ConversationVisibilityStore.tsx");
 
 export default conversationVisibilityStore;

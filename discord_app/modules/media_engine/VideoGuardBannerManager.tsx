@@ -1,10 +1,10 @@
 // discord_app/modules/media_engine/VideoGuardBannerManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "VideoGuardBannerStore.tsx";
+import initialize from "VideoGuardBannerStore.tsx";
 import { RTCConnectionStates } from "../../Constants.tsx";
 import { MediaEngineContextTypes } from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
-let require = arg1;
+let require = fn;
 initializeDefault;
 let prototype = function VideoGuardBannerManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -38,6 +38,6 @@ let prototype = function VideoGuardBannerManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/media_engine/VideoGuardBannerManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/media_engine/VideoGuardBannerManager.tsx");
 
 export default prototype;

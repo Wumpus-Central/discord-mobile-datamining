@@ -28,10 +28,9 @@ import getSelectedGuildChannel from "screens/DevToolsInAppNotificationTestingScr
 import effectName from "screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-let obj = { analytics: null, buildOverride: null, experiments: null, loggingFlags: null, cacheStats: null, generatedTestUsers: null, dataStorage: null, designSystems: null, dismissibleContent: null, gameCommunityUpsell: null, i18n: null, otatest: null, profiling: null, quickActions: null, revenuePlayground: null, surveyOverride: null, toggles: null, ageVerification: null, components: null, shop: null, shopProductPreview: null, actionSheets: null, accountLinking: null, performanceTesting: null, inAppNotificationTesting: null };
-obj = {
+let obj = {
   headerTitle: "Analytics",
   Icon: require("ClipboardListIcon").ClipboardListIcon,
   render() {
@@ -390,7 +389,7 @@ const obj25 = {
     return jsx(effectName.default, {});
   }
 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
+const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
 
 export const DevToolsScreens = obj;
 export const PerformanceTestingScreens = obj24;

@@ -1,9 +1,9 @@
 // discord_app/modules/markup/StaticRouteRendering.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
-import closure_2 from "../../stores/GuildRoleStore.tsx";
+import createGuildRoleRecordFromRust from "../../stores/GuildRoleStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");
 
 export const staticRouteToTranslation = function staticRouteToTranslation(arg0) {
   if ("home" !== arg0) {

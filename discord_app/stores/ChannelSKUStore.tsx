@@ -21,6 +21,6 @@ const channelSKUStore = new ChannelSKUStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("stores/ChannelSKUStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/ChannelSKUStore.tsx");
 
 export default channelSKUStore;

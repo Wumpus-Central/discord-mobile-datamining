@@ -3,12 +3,11 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import closure_2 from "../user_settings/LocaleStore.tsx";
-import closure_3 from "../user_settings/UserSettingsProtoStore.tsx";
+import _getSystemLocale from "../user_settings/LocaleStore.tsx";
+import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
 import CHANGELOG_MODAL_KEY from "ChangelogConstants.tsx";
-import set from "../../../_runtime/00002_set.js";
 
-require = arg1;
+require = fn;
 function handleUserSettingsProtoStoreChange() {
   const LastReceivedChangelogId = explicitContentFromProto.LastReceivedChangelogId;
   const setting = LastReceivedChangelogId.getSetting();
@@ -45,9 +44,9 @@ prototype["initialize"] = function initialize() {
     }
   }
 };
-prototype["getChangelog"] = function getChangelog(closure_1_0, closure_1) {
+prototype["getChangelog"] = function getChangelog(closure_0, closure_1) {
   let tmp2;
-  if (dependencyMap[closure_1_0] != null) {
+  if (dependencyMap[closure_0] != null) {
     tmp2 = tmp[closure_1];
   }
   if (tmp2 == null) {
@@ -58,9 +57,9 @@ prototype["getChangelog"] = function getChangelog(closure_1_0, closure_1) {
 prototype["latestChangelogId"] = function latestChangelogId() {
   return c8;
 };
-prototype["getChangelogLoadStatus"] = function getChangelogLoadStatus(arg0, closure_1) {
+prototype["getChangelogLoadStatus"] = function getChangelogLoadStatus(closure_0, closure_1) {
   let NOT_LOADED;
-  if (dependencyMap2[arg0] != null) {
+  if (dependencyMap2[closure_0] != null) {
     NOT_LOADED = tmp[closure_1];
   }
   if (NOT_LOADED == null) {
@@ -115,7 +114,7 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
   CHANGE_LOG_FETCH_SUCCESS: function handleChangelogFetch(arg0) {
     ({ id, changelog } = arg0);
     if (null == dependencyMap[id]) {
-      tmp[id] = {};
+      dependencyMap[id] = {};
     }
     const obj = { id, date: changelog.date, body: changelog.content, revision: 1, locale: changelog.locale };
     let str = "image";
@@ -125,7 +124,7 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
     obj[str] = changelog.asset;
     dependencyMap[id][changelog.locale] = obj;
     if (null == dependencyMap2[id]) {
-      tmp2[id] = {};
+      dependencyMap2[id] = {};
     }
     dependencyMap2[id][changelog.locale] = constants2.LOADED_SUCCESS;
   },
@@ -137,7 +136,7 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
       }
     }
     if (null == dependencyMap2[id]) {
-      tmp[id] = {};
+      dependencyMap2[id] = {};
     }
     dependencyMap2[id][locale] = constants2.LOADED_FAILURE;
   },
@@ -151,6 +150,6 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
     const result = Storage.set(lastChangeLogDate, changelogDate);
   }
 });
-let result = set.fileFinishedImporting("modules/changelog/ChangelogStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/changelog/ChangelogStore.tsx");
 
 export default changelogStore;

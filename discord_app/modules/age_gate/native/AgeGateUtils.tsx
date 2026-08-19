@@ -1,21 +1,20 @@
 // discord_app/modules/age_gate/native/AgeGateUtils.tsx
-import set2 from "../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../utils/PlatformUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import resolveNsfwTogglesWithDefaults from "../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
-import closure_3 from "../../../stores/GuildStore.tsx";
-import closure_4 from "../../../stores/PermissionStore.tsx";
-import closure_5 from "../../../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
-import set from "../../../../_runtime/00002_set.js";
 
-require = arg1;
+require = fn;
 const GuildNSFWContentLevel = ME.GuildNSFWContentLevel;
 const Permissions = ME.Permissions;
 const items = [, ];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");
+const set = new Set(items);
+const result = require("obj132").fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");
 
 export const isNSFWInvite = function isNSFWInvite(guild) {
   let nsfw_level;
@@ -31,7 +30,7 @@ export const isNSFWInvite = function isNSFWInvite(guild) {
   return set.has(nsfw_level);
 };
 export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
-  let obj = set2;
+  let obj = obj132;
   if (obj.isIOS()) {
     let nsfw_level;
     if (invite != null) {
@@ -66,16 +65,14 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
       }
       obj = { guildId: null };
       obj[0] = id;
-      obj2.pushLazy(asyncRequireImpl(9347, tmp2.paths), obj);
+      obj2.pushLazy(asyncRequireImpl(9347, dependencyMap.paths), obj);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(9347, tmp2.paths);
+      const tmp12 = asyncRequireImpl(9347, dependencyMap.paths);
     }
     return flag2;
   } else {
     return false;
   }
-  const tmp = require;
-  tmp2 = dependencyMap;
 };
 export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   if (obj.isIOS()) {
@@ -94,7 +91,6 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
           let tmp12 = guild.nsfwLevel === GuildNSFWContentLevel.EXPLICIT;
           if (!tmp12) {
             tmp12 = guild.nsfwLevel === GuildNSFWContentLevel.AGE_RESTRICTED && !nsfwAllowed;
-            const tmp13 = guild.nsfwLevel === GuildNSFWContentLevel.AGE_RESTRICTED && !nsfwAllowed;
           }
           tmp11 = tmp12;
         }
@@ -105,6 +101,5 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   } else {
     return false;
   }
-  obj = set2;
-  const tmp = require;
+  obj = obj132;
 };

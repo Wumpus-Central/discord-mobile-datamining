@@ -1,9 +1,9 @@
 // discord_app/records/StoreListingRecord.tsx
 import toJSDefault from "../lib/Record.tsx";
 import transformStoreAssetFromServer from "../modules/game_store/GameStoreAsset.tsx";
-import closure_2 from "UserRecord.tsx";
+import createdAt from "UserRecord.tsx";
 
-require = arg1;
+require = fn;
 toJSDefault;
 let StoreListingRecord;
 class StoreListingRecord extends tmp2 {
@@ -86,19 +86,19 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
   let mapped = null;
   if (null != id.child_skus) {
     const child_skus = id.child_skus;
-    mapped = child_skus.map((id) => id.id);
+    mapped = child_skus.map((item, index) => item.id);
   }
   obj[8] = mapped;
   let mapped1 = null;
   if (null != id.alternative_skus) {
     const alternative_skus = id.alternative_skus;
-    mapped1 = alternative_skus.map((id) => id.id);
+    mapped1 = alternative_skus.map((item, index) => item.id);
   }
   obj[9] = mapped1;
   let mapped2 = null;
   if (null != id.carousel_items) {
     const carousel_items = id.carousel_items;
-    mapped2 = carousel_items.map((assetId) => ({ assetId: assetId.asset_id, youtubeVideoId: assetId.youtube_video_id }));
+    mapped2 = carousel_items.map((item, index) => ({ assetId: item.asset_id, youtubeVideoId: item.youtube_video_id }));
   }
   obj[10] = mapped2;
   let mapped3 = null;
@@ -133,49 +133,41 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
   let result = null;
   if (null != id.thumbnail) {
     result = transformStoreAssetFromServer.transformStoreAssetFromServer(id.thumbnail);
-    const obj4 = transformStoreAssetFromServer;
   }
   obj[14] = result;
   let result1 = null;
   if (null != id.preview_video) {
     result1 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.preview_video);
-    const obj5 = transformStoreAssetFromServer;
   }
   obj[15] = result1;
   let result2 = null;
   if (null != id.header_background) {
     result2 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.header_background);
-    const obj6 = transformStoreAssetFromServer;
   }
   obj[16] = result2;
   let result3 = null;
   if (null != id.header_logo_dark_theme) {
     result3 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.header_logo_dark_theme);
-    const obj7 = transformStoreAssetFromServer;
   }
   obj[17] = result3;
   let result4 = null;
   if (null != id.header_logo_light_theme) {
     result4 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.header_logo_light_theme);
-    const obj8 = transformStoreAssetFromServer;
   }
   obj[18] = result4;
   let result5 = null;
   if (null != id.box_art) {
     result5 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.box_art);
-    const obj9 = transformStoreAssetFromServer;
   }
   obj[19] = result5;
   let result6 = null;
   if (null != id.hero_background) {
     result6 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.hero_background);
-    const obj10 = transformStoreAssetFromServer;
   }
   obj[20] = result6;
   let result7 = null;
   if (null != id.hero_video) {
     result7 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.hero_video);
-    const obj11 = transformStoreAssetFromServer;
   }
   obj[21] = result7;
   ({ entitlement_branch_id: obj[22], benefits: obj[23], published: obj[24] } = id);
@@ -184,6 +176,6 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
 StoreListingRecord.prototype["isSlimDirectoryVersion"] = function isSlimDirectoryVersion() {
   return null == this.description;
 };
-let result = require("set").fileFinishedImporting("records/StoreListingRecord.tsx");
+let result = require("obj132").fileFinishedImporting("records/StoreListingRecord.tsx");
 
 export default StoreListingRecord;

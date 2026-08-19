@@ -1,23 +1,19 @@
 // discord_app/modules/contact_sync/native/components/AddPhoneScreens.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AddPhoneDefault from "../../../verification/native/components/AddPhone.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { useContactSyncModalStore } from "../ContactSyncModalStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, redesignContainer: null, header: null, title: null, subtitle: null };
-createCacheKey = { paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
+const createCacheKey = { paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
 createCacheKey[2] = { alignItems: "center" };
@@ -25,28 +21,27 @@ createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
-let result = require("set").fileFinishedImporting("modules/contact_sync/native/components/AddPhoneScreens.tsx");
+let result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/AddPhoneScreens.tsx");
 
 export const AddPhoneScreen = function AddPhoneScreen() {
-  let obj = _useNavigation;
+  let obj = useNavigation;
   _require = obj.useNavigation();
   const tmp = callback4();
-  obj = { style: tmp.header, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = _getSystemLocale.intl;
-  obj[4] = intl.string(_getSystemLocale.t.Xgb497);
-  const items = [callback2(_Text.Text, obj), ];
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[4] = intl.string(require("../../../../intl/index.native.tsx").t.Xgb497);
+  const items = [callback2(require("../../../../design/components/Text/native/Text.tsx").Text, obj), ];
   obj1 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj1[3] = intl2.string(_getSystemLocale.t.qFmzyo);
-  items[1] = callback2(_Text.Text, obj1);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj1[3] = intl2.string(require("../../../../intl/index.native.tsx").t.qFmzyo);
+  items[1] = callback2(require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
   obj[1] = items;
   const obj2 = { style: tmp.container, reason: null, header: null, onComplete: null };
   const tmp2 = callback3(View, obj);
-  obj2[1] = _ChangePhoneReason.ChangePhoneReason.CONTACT_SYNC;
+  obj2[1] = require("../../../phone/PhoneActionCreators.tsx").ChangePhoneReason.CONTACT_SYNC;
   obj2[2] = tmp2;
   obj2[3] = function onComplete(arg0) {
-    return callback(closure_1_2[15]).submitPhone(arg0, callback);
+    return callback(dependencyMap[15]).submitPhone(arg0, callback);
   };
   return callback2(AddPhoneDefault, obj2);
 };
@@ -58,14 +53,12 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
       c3 = 0;
       c4 = 0;
       return (function*(arg0) {
-        let addedPhone = tmp5;
-        let codeIntercepted = tmp2;
         lib(true);
         closure_1_1(undefined);
         const obj2 = lib(closure_1_2[15]);
         lib = yield obj2.verifyPhone(lib);
-        codeIntercepted = lib.codeIntercepted;
-        addedPhone = lib.addedPhone;
+        const codeIntercepted = lib.codeIntercepted;
+        const addedPhone = lib.addedPhone;
         codeIntercepted(error);
         let tmp7 = addedPhone;
         if (addedPhone) {
@@ -107,15 +100,15 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
   const effect = React.useEffect(() => {
     c0 = null;
     if (null != stateFromStores) {
-      const result = closure_1_0(navigation[15]).handlePhoneVerificationComplete(tmp, navigation);
-      result.then(() => {
-        closure_0 = closure_2_0(navigation[17]).runAfterInteractions(() => callback(false));
+      const result = require(navigation[15]).handlePhoneVerificationComplete(tmp, navigation);
+      result.then((result) => {
+        closure_0 = require(navigation[17]).runAfterInteractions(() => callback(false));
       });
-      const obj = closure_1_0(navigation[15]);
+      const obj = require(navigation[15]);
     }
     return () => {
-      if (c0 != null) {
-        c0.cancel();
+      if (_null != null) {
+        _null.cancel();
       }
     };
   }, items1);
@@ -137,7 +130,7 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
       return applyArgumentsResult;
     },
     onVerified(arg0) {
-      const result = closure_1_0(navigation[15]).verifyPhoneWithPassword(arg0, navigation);
+      const result = require(navigation[15]).verifyPhoneWithPassword(arg0, navigation);
     }
   };
   return callback2(importDefault(navigation[19]), obj);
@@ -163,14 +156,14 @@ export const VerifyPasswordScreen = function VerifyPasswordScreen() {
     c0 = null;
     if (null != stateFromStores) {
       const result = callback(phoneToken[15]).handlePhoneVerificationComplete(tmp, navigation);
-      result.then(() => {
+      result.then((result) => {
         _null = _null(phoneToken[17]).runAfterInteractions(() => callback(false));
       });
       const obj = callback(phoneToken[15]);
     }
     return () => {
-      if (c0 != null) {
-        c0.cancel();
+      if (_null != null) {
+        _null.cancel();
       }
     };
   }, items1);

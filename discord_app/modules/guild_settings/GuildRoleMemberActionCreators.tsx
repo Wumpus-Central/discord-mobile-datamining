@@ -1,11 +1,12 @@
 // discord_app/modules/guild_settings/GuildRoleMemberActionCreators.tsx
 import privDefault from "../../../_runtime/01405_priv.js";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "GuildRoleMemberCountStore.tsx";
+import showTooManyUserGuildsAlertDefault from "../../actions/GuildActionCreators.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import getRoleMemberCount from "GuildRoleMemberCountStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
-const require = arg1;
+const require = fn;
 function _fetchMemberCountsFromBackend() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -87,24 +88,21 @@ function _fetchMemberCounts() {
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
-            } else {
-              if (closure_1_4.shouldFetch(closure_0)) {
-                c2 = 1;
-                c1 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = (function fetchMemberCountsFromBackend(arg0) {
-                  const self = this;
-                  const apply = closure_6.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })(tmp5);
-                return obj1;
-              }
-              tmp5 = closure_0;
+            } else if (closure_1_4.shouldFetch(closure_0)) {
+              c2 = 1;
+              c1 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = (function fetchMemberCountsFromBackend(closure_0) {
+                const self = this;
+                const apply = closure_6.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(closure_0);
+              return obj1;
             }
           } else if (arg0 === 1) {
             c1 = 3;
@@ -135,9 +133,9 @@ function _fetchMemberCounts() {
 }
 let closure_8 = new privDefault({ maxAge: 10000 });
 const tmp2 = new privDefault({ maxAge: 10000 });
-let result = require("set").fileFinishedImporting("modules/guild_settings/GuildRoleMemberActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/GuildRoleMemberActionCreators.tsx");
 
-export const fetchMemberCounts = function fetchMemberCounts(guildId) {
+export const fetchMemberCounts = function fetchMemberCounts(closure_0) {
   const self = this;
   const apply = _fetchMemberCounts.apply;
   if (typeof apply === "unknown") {
@@ -161,11 +159,12 @@ export const requestMembersForRole = function requestMembersForRole(closure_0, c
   }
   const result = store.set(combined, true);
   const _require = closure_0;
-  const HTTP = _sendRequest.HTTP;
-  const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: _sendRequest.rejectWithMigratedError() };
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
   const value = HTTP.get(obj);
-  resolved = value.then((body) => {
-    const membersById = closure_1_1(closure_1_2[6]).requestMembersById(closure_0, body.body, false);
-    return body.body.length;
+  resolved = value.then((result) => {
+    const membersById = showTooManyUserGuildsAlertDefault.requestMembersById(closure_0, result.body, false);
+    return result.body.length;
   });
+  const obj2 = sendRequest;
 };

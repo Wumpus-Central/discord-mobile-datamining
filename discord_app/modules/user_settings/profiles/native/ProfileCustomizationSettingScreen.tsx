@@ -2,19 +2,19 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile.tsx";
 import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile.tsx";
-import closure_5 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_6 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_7 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_10 from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
-import closure_11 from "../../../user_profile/UserProfileSettingsStore.tsx";
+import zustandStore from "../../../profile_customization/ProfileCustomizationNavigationStore.tsx";
+import handleFormOpen from "../../../user_profile/UserProfileSettingsStore.tsx";
 import { ProfileCustomizationSubsection } from "../../UserSettingsConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 let closure_3 = ["handleSubmit"];
 let closure_4 = ["guild", "handleSubmit"];
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14 } = ME);
@@ -61,9 +61,9 @@ const memoResult = importAllResult.memo(() => {
   }
   const field = callback.useField("subsection");
   _require = { autoFocusElement };
-  const mapped = items.map((renderLabel) => {
-    ({ id, renderPage } = renderLabel);
-    return { label: renderLabel.renderLabel(), id, page: renderPage(closure_0) };
+  const mapped = items.map((item, index) => {
+    ({ id, renderPage } = item);
+    return { label: item.renderLabel(), id, page: renderPage(closure_0) };
   });
   let tmp2Result = tmp2(tmp3[18]);
   obj = { items: mapped, pageWidth: tmp7, defaultIndex: null, onPageChange: null, onPageChangeStart: null };
@@ -81,7 +81,7 @@ const memoResult = importAllResult.memo(() => {
   };
   obj[4] = function onPageChangeStart(arg0, arg1) {
     const obj = { hasEdits: stateFromStores, resetPending: callback(nativeStackNavigation[20]).resetAllPending, onHasEdits: callback(nativeStackNavigation[21]).dismissKeyboard, onConfirm: arg1 };
-    return closure_1_1(nativeStackNavigation[19])(obj);
+    return importDefault(nativeStackNavigation[19])(obj);
   };
   const segmentedControlState = tmp2Result.useSegmentedControlState(obj);
   const activeIndex = segmentedControlState.activeIndex;
@@ -103,7 +103,7 @@ const memoResult = importAllResult.memo(() => {
   closure_9 = tmp20;
   const items1 = [field, handleSubmit, handleSubmit2];
   callback = obj1.useCallback(() => {
-    if (field === closure_1_12.GUILD) {
+    if (field === ProfileCustomizationSubsection.GUILD) {
       let tmp2 = handleSubmit2();
     } else {
       tmp2 = handleSubmit();
@@ -112,8 +112,8 @@ const memoResult = importAllResult.memo(() => {
   }, items1);
   const items2 = [first.subSection];
   const effect = obj1.useEffect(() => {
-    let obj = closure_1_1(nativeStackNavigation[25]);
-    obj = { settings_type: "user", subsection: first.subSection, destination_pane: closure_1_14.SETTINGS_CUSTOMIZE_PROFILE };
+    importDefault(nativeStackNavigation[25]);
+    const obj = { settings_type: "user", subsection: first.subSection, destination_pane: closure_1_14.SETTINGS_CUSTOMIZE_PROFILE };
     obj.trackWithMetadata(closure_1_13.SETTINGS_PANE_VIEWED, obj);
   }, items2);
   const items3 = [guild];
@@ -129,75 +129,7 @@ const memoResult = importAllResult.memo(() => {
   }, []);
   const items4 = [token, nativeStackNavigation, stateFromStores, tmp20, callback];
   const layoutEffect = obj1.useLayoutEffect(() => {
-    obj = {
-      contentStyle: obj,
-      headerShadowVisible: false,
-      headerRight: closure_9 ? (() => callback2(callback(table[27]).HeaderSubmittingIndicator, {})) : ((arg0) => {
-        let obj = {};
-        const merged = Object.assign(arg0);
-        const intl = closure_1_0(closure_1_2[11]).intl;
-        obj.label = intl.string(closure_1_0(closure_1_2[11]).t["R3BPH+"]);
-        obj.disabled = !closure_8;
-        obj.onPress = closure_1_5(function*() {
-          if (navigation === 2) {
-            navigation = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: "HermesInternal" };
-            }
-          } else {
-            try {
-              navigation = 2;
-              if (0 === c1) {
-                if (arg0 === 1) {
-                  navigation = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  navigation = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  closure_0 = tmp4;
-                  c1 = 1;
-                  navigation = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_10();
-                  return obj1;
-                }
-              } else if (arg0 === 1) {
-                navigation = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                navigation = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                if (false !== arg1) {
-                  const delayedCall = new closure_1_0(navigation[29]).DelayedCall(closure_1_0(navigation[23]).RESET_DELAY_MS + 50, navigation.goBack);
-                  delayedCall.delay();
-                }
-                navigation = 3;
-                return { value: "HermesInternal", done: "HermesInternal" };
-              }
-            } catch (tmp14) {
-              navigation = tmp;
-              throw tmp14;
-            }
-          }
-        });
-        return closure_1_15(closure_1_0(closure_1_2[28]).HeaderTextButton, obj);
-      })
-    };
-    obj = { backgroundColor: closure_0 };
+    let obj = { backgroundColor: closure_0 };
     nativeStackNavigation.setOptions(obj);
   }, items4);
   const callback1 = obj1.useCallback((nativeEvent) => {
@@ -214,10 +146,10 @@ const memoResult = importAllResult.memo(() => {
       resetPending: callback(nativeStackNavigation[20]).resetAllPending,
       onHasEdits: callback(nativeStackNavigation[21]).dismissKeyboard,
       onConfirm() {
-        return closure_1_2.dispatch(action);
+        return nativeStackNavigation.dispatch(action);
       }
     };
-    closure_1_1(nativeStackNavigation[19])(obj);
+    importDefault(nativeStackNavigation[19])(obj);
   });
   obj = { style: tmp.container, onLayout: callback1, children: null };
   obj1 = { style: tmp.controls, children: callback(tmp2(tmp3[31]).Tabs, { state: segmentedControlState }) };
@@ -225,17 +157,6 @@ const memoResult = importAllResult.memo(() => {
   obj[2] = items5;
   return callback2(closure_9, obj);
 });
-let obj = {
-  renderLabel() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["2p07FR"]);
-  },
-  id: "edit-user-profile",
-  renderPage(autoFocusElement) {
-    return callback(UserSettingsEditUserProfileDefault, { autoFocusElement: autoFocusElement.autoFocusElement });
-  },
-  subSection: ProfileCustomizationSubsection.USER_PROFILE
-};
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/profiles/native/ProfileCustomizationSettingScreen.tsx");
 
 export default memoResult;

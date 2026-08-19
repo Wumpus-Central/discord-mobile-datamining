@@ -1,10 +1,10 @@
 // discord_app/design/components/ErrorText/native/ErrorText.native.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/ErrorText/native/ErrorText.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/ErrorText/native/ErrorText.native.tsx");
 
 export const ErrorText = function ErrorText(children) {
   children = children.children;
@@ -15,11 +15,11 @@ export const ErrorText = function ErrorText(children) {
   const effect = React.useEffect(() => {
     let tmp2 = null != nodeText;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== nodeText;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = nodeText(closure_1_1[3]).AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(tmp);
+      const AccessibilityAnnouncer = nodeText(dependencyMap[3]).AccessibilityAnnouncer;
+      AccessibilityAnnouncer.announce(nodeText);
     }
   }, items);
   obj = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };

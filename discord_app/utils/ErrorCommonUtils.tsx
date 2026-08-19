@@ -1,9 +1,9 @@
 // discord_app/utils/ErrorCommonUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import add from "../../discord_common/js/packages/flux/LastFewActions.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 
-const result = set.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
 export const getUpdatedOptions = function getUpdatedOptions(extra) {
   let obj = {};
@@ -23,7 +23,8 @@ export const getUpdatedOptions = function getUpdatedOptions(extra) {
   }
   const obj2 = {};
   const merged2 = Object.assign(obj1);
-  obj2.lastFewActions = add.serialize();
+  const serializer = add;
+  obj2.lastFewActions = serializer.serialize();
   const merged3 = Object.assign(obj2);
   obj.extra = obj;
   return obj;

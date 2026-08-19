@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx
-import closure_2 from "../../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../../_runtime/00019_noop.js";
 import { CrunchyrollLinkModalScenes as closure_3 } from "CrunchyrollLinkConstants.tsx";
 import { PlatformTypes } from "../../../../../../Constants.tsx";
 import CRUNCHYROLL_LINK_DEST_ORIGIN from "../../../../../connections/CrunchyrollConnectionConstants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ CRUNCHYROLL_CLIENT_ID: c5, CRUNCHYROLL_CLIENT_SCOPES: closure_6 } = CRUNCHYROLL_LINK_DEST_ORIGIN);
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkDiscordConsent.tsx");
 
 export default function CrunchyrollLinkDiscordConsent(arg0) {
   let navigation;

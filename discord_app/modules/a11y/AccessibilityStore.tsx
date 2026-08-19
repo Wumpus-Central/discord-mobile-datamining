@@ -3,16 +3,16 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import Storage7 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import AccessibilityAnnouncer from "../../design/shared.tsx";
-import setDefault from "../../utils/CrossPlatformNativeUtils.native.tsx";
-import closure_4 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
-import closure_6 from "../user_settings/ThemeStore.tsx";
-import closure_7 from "../user_settings/UserSettingsProtoStore.tsx";
+import obj132Default from "../../utils/CrossPlatformNativeUtils.native.tsx";
+import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import initialize from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import handleThemeChange from "../user_settings/ThemeStore.tsx";
+import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
 import ME from "../../Constants.tsx";
 import MESSAGE_GROUP_SPACING from "../messages/MessageConstants.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
-require = arg1;
+require = fn;
 function maybeApplyNoTextColorForLightCustomTheme() {
   const officialMessageStyleExplicitlySet = obj.officialMessageStyleExplicitlySet;
   let tmp = !officialMessageStyleExplicitlySet;
@@ -22,7 +22,7 @@ function maybeApplyNoTextColorForLightCustomTheme() {
       tmp3 = theme.theme !== ThemeTypes.LIGHT;
     }
     if (!tmp3) {
-      const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
+      const ClientThemeSettings = explicitContentFromProto /* explicitContentFromProto */.ClientThemeSettings;
       const setting = ClientThemeSettings.getSetting();
       let tmp10 = null != setting.backgroundGradientPresetId;
       if (!tmp10) {
@@ -94,8 +94,7 @@ let closure_3 = ["fontScale"];
 const Accessibility = ME.Accessibility;
 const ThemeTypes = ME.ThemeTypes;
 ({ MESSAGE_GROUP_SPACING: c10, DEFAULT_COMPACT_SPACING: unpackModuleId, DEFAULT_COZY_SPACING: closure_12 } = MESSAGE_GROUP_SPACING);
-let obj = { DEFAULT: "default", HIGH: "high" };
-obj = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
+let obj = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
 obj = { fontSize: Accessibility.FONT_SIZE_DEFAULT, zoom: Accessibility.ZOOM_DEFAULT, keyboardModeEnabled: false, contrastMode: obj.DEFAULT, colorblindMode: false, lowContrastMode: false, saturation: 1, contrast: 1, desaturateUserColors: false, forcedColorsModalSeen: false, keyboardNavigationExplainerModalSeen: false, messageGroupSpacing: null, systemPrefersReducedMotion: "no-preference", systemPrefersCrossfades: false, prefersReducedMotion: "auto", systemForcedColors: "none", syncForcedColors: true, systemPrefersContrast: "no-preference", alwaysShowLinkDecorations: false, roleStyle: "username", officialMessageStyle: "default", officialMessageStyleExplicitlySet: false, displayNameStylesEnabled: true, submitButtonEnabled: false, syncProfileThemeWithUserTheme: false, enableCustomCursor: true, switchIconsEnabled: false, appsButtonEnabled: true, expressionPickerFormat: obj.FLEXIBLE, condensePickerWhenNarrow: true, emojiButtonEnabled: true, gifButtonEnabled: true, stickerButtonEnabled: true, youBarNameplateAnimation: "animate-never", youBarAvatarDecoAnimation: "animate-never" };
 let closure_17 = { 12: "font-size-12", 14: "font-size-14", 15: "font-size-15", 16: "font-size-16", 18: "font-size-18", 20: "font-size-20", 24: "font-size-24" };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
@@ -126,7 +125,7 @@ prototype["initialize"] = function initialize(arg0) {
   self.syncWith(items, maybeApplyNoTextColorForLightCustomTheme);
 };
 Object.defineProperty(prototype, "fontScale", {
-  get: function fontScale(applicationAccountLinkMarkAsDismissed, arg1, id) {
+  get: function fontScale(closure_2, arg1, id) {
     return obj.fontSize / Accessibility.FONT_SIZE_DEFAULT * 100;
   },
   set: undefined
@@ -242,7 +241,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
     if (null != obj.messageGroupSpacing) {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
-      const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
+      const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
       messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_11 : closure_12;
     }
     return messageGroupSpacing;
@@ -251,14 +250,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
-    const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
+    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
-    const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
+    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
     return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_11 : closure_12);
   },
   set: undefined
@@ -338,7 +337,7 @@ Object.defineProperty(prototype, "systemPrefersCrossfades", {
   set: undefined
 });
 Object.defineProperty(prototype, "alwaysShowLinkDecorations", {
-  get: function alwaysShowLinkDecorations(arg0) {
+  get: function alwaysShowLinkDecorations(token) {
     return obj.alwaysShowLinkDecorations;
   },
   set: undefined
@@ -362,7 +361,7 @@ Object.defineProperty(prototype, "officialMessageStyle", {
   set: undefined
 });
 Object.defineProperty(prototype, "displayNameStylesEnabled", {
-  get: function displayNameStylesEnabled(arg0) {
+  get: function displayNameStylesEnabled(closure_1_2) {
     return obj.displayNameStylesEnabled;
   },
   set: undefined
@@ -464,18 +463,18 @@ let items = [
   () => {
     const Storage = Storage7.Storage;
     const fontScale = Storage.get("a11yFontScale") || 100;
-    const Storage2 = tmp(595).Storage;
+    const Storage2 = Storage7.Storage;
     let zoom = Storage2.get("a11yZoom");
     if (!zoom) {
       zoom = Accessibility.ZOOM_DEFAULT;
     }
-    const Storage3 = tmp(595).Storage;
+    const Storage3 = Storage7.Storage;
     const colorblindMode = Storage3.get("a11yColorblindMode") || false;
-    const Storage4 = tmp(595).Storage;
+    const Storage4 = Storage7.Storage;
     Storage4.remove("a11yFontScale");
-    const Storage5 = tmp(595).Storage;
+    const Storage5 = Storage7.Storage;
     Storage5.remove("a11yZoom");
-    const Storage6 = tmp(595).Storage;
+    const Storage6 = Storage7.Storage;
     Storage6.remove("a11yColorblindMode");
     return { fontScale, zoom, colorblindMode, keyboardModeEnabled: false };
   },
@@ -581,10 +580,10 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
     let FONT_SIZE_DEFAULT = fontSize.fontSize;
     const FONT_SIZES = Accessibility.FONT_SIZES;
     if (FONT_SIZES.indexOf(FONT_SIZE_DEFAULT) < 0) {
-      FONT_SIZE_DEFAULT = tmp.FONT_SIZE_DEFAULT;
+      FONT_SIZE_DEFAULT = Accessibility.FONT_SIZE_DEFAULT;
     }
     if (FONT_SIZE_DEFAULT <= Accessibility.FONT_SIZE_MAX) {
-      if (FONT_SIZE_DEFAULT >= tmp.FONT_SIZE_MIN) {
+      if (FONT_SIZE_DEFAULT >= Accessibility.FONT_SIZE_MIN) {
         if (obj.fontSize !== FONT_SIZE_DEFAULT) {
           obj = {};
           const merged = Object.assign(obj);
@@ -601,7 +600,7 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
           obj = {};
           const merged = Object.assign(obj);
           obj.zoom = zoom.zoom;
-          setDefault.setZoomFactor(obj.zoom);
+          obj132Default.setZoomFactor(obj.zoom);
         }
       }
     }
@@ -616,12 +615,11 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
     obj = {};
     const merged = Object.assign(obj);
     if (obj.fontSize !== Accessibility.FONT_SIZE_DEFAULT) {
-      obj.fontSize = tmp.FONT_SIZE_DEFAULT;
+      obj.fontSize = Accessibility.FONT_SIZE_DEFAULT;
     }
     if (obj.zoom !== Accessibility.ZOOM_DEFAULT) {
-      obj.zoom = tmp.ZOOM_DEFAULT;
-      setDefault.setZoomFactor(obj.zoom);
-      const obj2 = setDefault;
+      obj.zoom = Accessibility.ZOOM_DEFAULT;
+      obj132Default.setZoomFactor(obj.zoom);
     }
   },
   ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function handleEnableKeyboardMode() {
@@ -843,7 +841,7 @@ const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
     obj.youBarAvatarDecoAnimation = str;
   }
 });
-const result = require("set").fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");
 
 export default accessibilityStore;
 export const AccessibilityContrastMode = obj;

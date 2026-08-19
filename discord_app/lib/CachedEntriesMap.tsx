@@ -1,7 +1,7 @@
 // discord_app/lib/CachedEntriesMap.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
-let result = set.fileFinishedImporting("lib/CachedEntriesMap.tsx");
+let result = obj132.fileFinishedImporting("lib/CachedEntriesMap.tsx");
 class CachedEntriesMap {
   constructor() {
     obj = Object.create(new.target.prototype);

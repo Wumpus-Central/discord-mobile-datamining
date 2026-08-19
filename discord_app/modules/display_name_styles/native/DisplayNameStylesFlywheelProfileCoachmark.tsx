@@ -1,18 +1,18 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx
 import AccountAgeTier10LargeBadge from "../../../design/assets/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function CoachmarkImage() {
   return <View style={callback().coachmarkImageContainer}>{jsx(AccountAgeTier10LargeBadge.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}</View>;
 }
 let closure_8 = createCacheKey.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
-let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
+let result = require("obj132").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
 
 export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   visible = visible.visible;
@@ -45,7 +45,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   React = string2Result;
   const items1 = [markAsDismissed];
   callback = React.useCallback(() => {
-    markAsDismissed(closure_1_6.USER_DISMISS);
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items1);
   const items2 = [stringResult, string2Result, visible, callback];
   const memo = React.useMemo(() => ({

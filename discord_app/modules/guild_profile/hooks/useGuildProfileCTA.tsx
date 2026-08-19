@@ -1,19 +1,18 @@
 // discord_app/modules/guild_profile/hooks/useGuildProfileCTA.tsx
 import usePendingFolderGuildIdsDefault from "../../guilds_bar/usePendingFolderGuildIds.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../../stores/GuildStore.tsx";
-import closure_7 from "../../../stores/InviteStore.tsx";
-import closure_8 from "../../../stores/UserStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import updateInvite from "../../../stores/InviteStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
+const require = fn;
 ({ InviteStates: c9, GuildFeatures: c10 } = ME);
-let obj = { IS_MEMBER: 0, [0]: "IS_MEMBER", ADOPT_TAG: 1, [1]: "ADOPT_TAG", HAS_APPLICATION: 2, [2]: "HAS_APPLICATION", APPLY_TO_JOIN: 3, [3]: "APPLY_TO_JOIN", LURK_DISCOVERABLE: 4, [4]: "LURK_DISCOVERABLE", JOIN_VIA_INVITE: 5, [5]: "JOIN_VIA_INVITE", ACCEPT_ROLES: 6, [6]: "ACCEPT_ROLES" };
-obj = { INVITE: "INVITE" };
-const result = require("set").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileCTA.tsx");
+let obj = { INVITE: "INVITE" };
+const result = require("obj132").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileCTA.tsx");
 
 export default function useGuildProfileCTA(id) {
   const _require = id;
@@ -21,19 +20,19 @@ export default function useGuildProfileCTA(id) {
   dependencyMap = arg2;
   id = id.id;
   const features = id.features;
-  obj = _initialize;
+  obj = initialize;
   const items = [features];
   const stateFromStores = obj.useStateFromStores(items, () => features.getId());
   const items1 = [stateFromStores1];
-  stateFromStores1 = _initialize.useStateFromStores(items1, () => stateFromStores1.getGuild(id));
-  let obj2 = _initialize;
+  stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => stateFromStores1.getGuild(id));
+  let obj2 = initialize;
   const items2 = [stateFromStores3];
   const items3 = [stateFromStores];
-  const stateFromStores2 = _initialize.useStateFromStores(items2, () => stateFromStores3.getUser(stateFromStores), items3);
-  const obj3 = _initialize;
+  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => stateFromStores3.getUser(stateFromStores), items3);
+  const obj3 = initialize;
   const items4 = [stateFromStores];
   const items5 = [id, stateFromStores];
-  stateFromStores3 = _initialize.useStateFromStores(items4, () => {
+  stateFromStores3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items4, () => {
     let member = null;
     if (null != id) {
       member = stateFromStores.getMember(tmp, stateFromStores);
@@ -44,10 +43,10 @@ export default function useGuildProfileCTA(id) {
     }
     return null != joinedAt;
   }, items5);
-  const obj4 = _initialize;
+  const obj4 = initialize;
   const items6 = [stateFromStores2];
   const items7 = [id, arg2];
-  const stateFromStoresObject = _initialize.useStateFromStoresObject(items6, () => {
+  const stateFromStoresObject = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items6, () => {
     let inviteKeyForGuildId = dependencyMap;
     if (dependencyMap == null) {
       inviteKeyForGuildId = stateFromStores2.getInviteKeyForGuildId(id);
@@ -68,7 +67,6 @@ export default function useGuildProfileCTA(id) {
           obj[1] = id(1403).hasFlag(num, id(8056).GuildInviteFlags.IS_APPLICATION_BYPASS);
           obj[2] = invite.roles;
           const obj2 = id(1403);
-          const tmp6 = id;
         }
         return obj;
       }
@@ -78,7 +76,7 @@ export default function useGuildProfileCTA(id) {
   const validInviteKey = stateFromStoresObject.validInviteKey;
   const isBypassInvite = stateFromStoresObject.isBypassInvite;
   const inviteRoles = stateFromStoresObject.inviteRoles;
-  let tmp6 = usePendingFolderGuildIdsDefault();
+  const tmp6 = usePendingFolderGuildIdsDefault();
   closure_12 = tmp6;
   const items8 = [stateFromStores3, tmp6, id, features, validInviteKey, , , , , , , ];
   ({ visibility: arr9[5], tag: arr9[6] } = id);
@@ -93,7 +91,7 @@ export default function useGuildProfileCTA(id) {
       if (stateFromStores3) {
         if (closure_1 === closure_12.INVITE) {
           if (null != inviteRoles) {
-            if (arr2.length > 0) {
+            if (inviteRoles.length > 0) {
               if (null != stateFromStores2) {
                 const member = stateFromStores.getMember(id, tmp24.id);
                 let roles;
@@ -104,7 +102,7 @@ export default function useGuildProfileCTA(id) {
                   roles = [];
                 }
                 const set = new Set(roles);
-                if (arr2.some((id) => !set.has(id.id))) {
+                if (inviteRoles.some((item, index) => !set.has(item.id))) {
                   return inviteRoles.ACCEPT_ROLES;
                 }
               }
@@ -127,7 +125,7 @@ export default function useGuildProfileCTA(id) {
           }
           tmp38 = true === identityEnabled;
         }
-        if (tmp22 !== tmp23.INVITE) {
+        if (closure_1 !== closure_12.INVITE) {
           if (null != set.tag) {
             if (!tmp38) {
               if (null != stateFromStores1) {
@@ -140,20 +138,18 @@ export default function useGuildProfileCTA(id) {
           }
         }
         IS_MEMBER = inviteRoles.IS_MEMBER;
-        tmp22 = closure_1;
-        tmp23 = closure_12;
       } else {
         if (closure_12.includes(id)) {
           let APPLY_TO_JOIN = inviteRoles.HAS_APPLICATION;
         } else {
           let hasItem;
           if (features != null) {
-            hasItem = obj.includes(isBypassInvite.MEMBER_VERIFICATION_GATE_ENABLED);
+            hasItem = features.includes(isBypassInvite.MEMBER_VERIFICATION_GATE_ENABLED);
           }
           if (hasItem) {
             let hasItem1;
-            if (obj != null) {
-              hasItem1 = obj.includes(isBypassInvite.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+            if (features != null) {
+              hasItem1 = features.includes(isBypassInvite.MEMBER_VERIFICATION_MANUAL_APPROVAL);
             }
             if (hasItem1) {
               if (null != validInviteKey) {
@@ -167,8 +163,8 @@ export default function useGuildProfileCTA(id) {
             let JOIN_VIA_INVITE = inviteRoles.JOIN_VIA_INVITE;
           } else {
             let hasItem2;
-            if (obj != null) {
-              hasItem2 = obj.includes(isBypassInvite.DISCOVERABLE);
+            if (features != null) {
+              hasItem2 = features.includes(isBypassInvite.DISCOVERABLE);
             }
             JOIN_VIA_INVITE = null;
             if (hasItem2) {
@@ -221,7 +217,6 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
         }
         flag = obj.hasFlag(num, set(8056).GuildInviteFlags.IS_APPLICATION_BYPASS);
         tmp11 = inviteKeyForGuildId;
-        const tmp13 = set;
       }
     }
   }
@@ -244,7 +239,7 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
           }
           set = new Set(roles1);
           roles = invite.roles;
-          if (roles.some((id) => !set.has(id.id))) {
+          if (roles.some((item, index) => !set.has(item.id))) {
             return obj.ACCEPT_ROLES;
           }
         }
@@ -288,6 +283,5 @@ export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfi
     return APPLY_TO_JOIN;
   }
   const obj2 = set(9535);
-  const tmp15 = set;
   tmp7 = null != joinedAt;
 };

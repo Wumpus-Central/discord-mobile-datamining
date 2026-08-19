@@ -1,8 +1,8 @@
 // discord_app/modules/message_previews/RemoteFetchData.tsx
-import closure_0 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 let obj = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };
-const result = require("set").fileFinishedImporting("modules/message_previews/RemoteFetchData.tsx");
+const result = require("obj132").fileFinishedImporting("modules/message_previews/RemoteFetchData.tsx");
 class RemoteFetchData {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -62,7 +62,7 @@ prototype["markFetching"] = function markFetching(closure_1_0) {
 };
 prototype["markCompleted"] = function markCompleted(closure_0) {
   const self = this;
-  const iter = closure_0[Symbol.iterator]();
+  const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let pending = self.pending;
@@ -74,7 +74,7 @@ prototype["markCompleted"] = function markCompleted(closure_0) {
 };
 prototype["markFailed"] = function markFailed(closure_0) {
   const self = this;
-  const iter = closure_0[Symbol.iterator]();
+  const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let pending = self.pending;
@@ -119,7 +119,7 @@ prototype["try"] = function try(nextWantsResult, arg1) {
             closure_0 = tmp7;
             closure_0 = undefined;
             c3 = 1;
-            closure_1_2.markFetching(closure_1_0);
+            self.markFetching(closure_1_0);
             c4 = 2;
             c5 = 1;
             obj1 = { value: null, done: false };

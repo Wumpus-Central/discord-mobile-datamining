@@ -1,16 +1,16 @@
 // discord_app/modules/app_database/util/ExtendedMemoryLru.tsx
 import length from "Lru.tsx";
 import nextAll from "Iterable.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_database/util/ExtendedMemoryLru.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/app_database/util/ExtendedMemoryLru.tsx");
 class ExtendedMemoryLru {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     lru = new require("length").Lru(global);
     obj.primary = lru;
-    lru1 = new require("length").Lru(arg1);
+    lru1 = new require("length").Lru(fn);
     obj.extended = lru1;
     return obj;
   }
@@ -82,7 +82,6 @@ prototype["upstreamItems"] = function upstreamItems() {
     const entries = extended.entries();
     const obj = entries[Symbol.iterator]();
     while (obj !== undefined) {
-      let tmp6 = callback;
       let tmp7 = callback(tmp4, 2);
       let first = tmp7[0];
       let primary = self.primary;
@@ -92,7 +91,6 @@ prototype["upstreamItems"] = function upstreamItems() {
       if (self.canUpstreamItems()) {
         continue;
       } else {
-        let tmp11 = obj;
         obj.return();
         break;
       }

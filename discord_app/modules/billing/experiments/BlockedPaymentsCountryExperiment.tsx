@@ -1,5 +1,5 @@
 // discord_app/modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import useGeoForUserDefault from "../../premium/hooks/useGeoForUser.native.tsx";
 import createExperiment from "../../experiments/index.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
@@ -9,7 +9,7 @@ let closure_2 = createExperiment.createExperiment({ kind: "user", id: "2022-03_b
 const obj = { 1: null };
 obj[1] = { enabled: true };
 let closure_3 = ApexExperiment.createApexExperiment({ name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
 
 export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
   let enabled = closure_2.useExperiment({ location: "c519a9_1" }, { autoTrackExposure: false }).paymentsBlocked;

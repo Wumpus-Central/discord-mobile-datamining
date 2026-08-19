@@ -1,18 +1,18 @@
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesProduct.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import { useEffect } from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/game_store/SKUStore.tsx";
-import closure_5 from "../CollectiblesCategoryStore.tsx";
+import addSku from "../../../stores/game_store/SKUStore.tsx";
+import updateCategoriesAndProducts from "../CollectiblesCategoryStore.tsx";
 import { SKUProductLines } from "../../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProduct.tsx");
 
 export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(skuId, arg1) {
   const _require = skuId;
   dependencyMap = arg1;
-  let obj = _defaultAreStatesEqual;
+  let obj = defaultAreStatesEqual;
   let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let value = null;
@@ -73,8 +73,8 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
       tmp2 = stateFromStores1;
     }
     if (!tmp2) {
-      let obj = skuId(table[7]);
-      obj = { includeBundles: null };
+      skuId(table[7]);
+      const obj = { includeBundles: null };
       obj[0] = table;
       const collectiblesProduct = obj.fetchCollectiblesProduct(skuId, obj);
     }

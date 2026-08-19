@@ -1,13 +1,13 @@
 // discord_app/modules/links/LinkUtils.tsx
-import setDefault from "../../utils/RegexUtils.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
-import closure_4 from "../../stores/PermissionStore.tsx";
+import obj132Default from "../../utils/RegexUtils.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
 
 ME = ME.ME;
 const Permissions = ME.Permissions;
-const mapped = Array.from(require("set").StaticChannelRoutes).map((arg0) => setDefault.escape(arg0));
+const mapped = Array.from(require("set").StaticChannelRoutes).map((item, index) => obj132Default.escape(item));
 const joined = mapped.join("|");
 const regExp = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)?(\\d+|" + joined + ")?");
 const regExp1 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+|" + joined + ")(?:/)(\\d+)");
@@ -18,7 +18,7 @@ const regExp5 = new RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?");
 const regExp6 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|" + ME + ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?");
 const regExp7 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
 const arr = Array.from(require("set").StaticChannelRoutes);
-const result = require("set").fileFinishedImporting("modules/links/LinkUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/links/LinkUtils.tsx");
 
 export const CHANNEL_OR_MESSAGES_URL_RE = regExp6;
 export const MEDIA_POST_URL_RE = regExp7;
@@ -110,10 +110,10 @@ export const isAccessibleChannelPath = function isAccessibleChannelPath(arg0) {
   }
 };
 export const tryParseDiceRollLink = function tryParseDiceRollLink(closure_0) {
-  if (null == closure_0) {
+  if (null == importDefault) {
     return null;
   } else {
-    const match = closure_0.match(regExp3);
+    const match = importDefault.match(regExp3);
     let tmp = null;
     if (null != match) {
       tmp = null;

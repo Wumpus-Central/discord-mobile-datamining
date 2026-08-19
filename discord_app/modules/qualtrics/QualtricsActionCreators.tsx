@@ -1,13 +1,13 @@
 // discord_app/modules/qualtrics/QualtricsActionCreators.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../stores/SurveyStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import fetchSurveyIfNeeded from "../../stores/SurveyStore.tsx";
 import { useQualtricsResponseStore } from "QualtricsResponseStore.tsx";
-import closure_7 from "QualtricsStore.tsx";
+import map from "QualtricsStore.tsx";
 import QuestionTypeEnum from "QualtricsConstants.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function fetchSurveyDetails() {
   const self = this;
   const apply = _fetchSurveyDetails.apply;
@@ -168,7 +168,7 @@ function _submitSurveyResponse() {
               if (displayedQuestions == null) {
                 table = [];
               }
-              let tmp19 = (function parseSurveyResponses(arg0, arg1, closure_2) {
+              let tmp19 = (function parseSurveyResponses(arg0, callback2, closure_2) {
                 let tmp20;
                 const survey = tmp20.getSurvey(arg0);
                 if (null == survey) {
@@ -176,10 +176,9 @@ function _submitSurveyResponse() {
                 } else {
                   const obj = {};
                   const _Object2 = Object;
-                  const entries = Object.entries(arg1);
+                  const entries = Object.entries(callback2);
                   const tmp43 = entries[Symbol.iterator]();
                   while (tmp43 !== undefined) {
-                    let tmp5 = callback;
                     let tmp6 = callback(tmp3, 2);
                     let first = tmp6[0];
                     let tmp8 = first;
@@ -187,87 +186,58 @@ function _submitSurveyResponse() {
                     let tmp9 = survey.Questions[first];
                     let tmp10 = tmp9;
                     if (null != tmp9) {
-                      let tmp44 = tmp9;
-                      let tmp45 = constants2;
                       if (tmp10.QuestionType === constants2.MULTIPLE_CHOICE) {
-                        let tmp11 = tmp9;
-                        let tmp12 = constants;
                         if (tmp10.Selector === constants.MULTIPLE_ANSWER) {
-                          let tmp32 = first;
-                          let tmp33 = str;
                           obj[tmp8] = str.split(",");
-                          let tmp34 = tmp9;
                           if (null != tmp10.ChoiceOrder) {
-                            let tmp35 = first;
                             let _HermesInternal4 = HermesInternal;
-                            let tmp36 = tmp9;
                             obj["" + tmp8 + "_DO"] = tmp10.ChoiceOrder;
                           }
                         }
                       }
-                      let tmp13 = tmp9;
-                      if (tmp10.QuestionType === tmp45.MULTIPLE_CHOICE) {
-                        let tmp14 = tmp9;
-                        let tmp15 = constants;
+                      if (tmp10.QuestionType === constants2.MULTIPLE_CHOICE) {
                         if (tmp10.Selector === constants.SINGLE_ANSWER) {
-                          let tmp21 = str;
                           if (str.includes(":TEXT:")) {
-                            let tmp24 = str;
                             let first1 = str.split(":TEXT:", 2)[0];
-                            let tmp26 = first;
                             let _parseInt2 = parseInt;
                             obj[tmp8] = parseInt(first1);
                             let _HermesInternal2 = HermesInternal;
-                            let str2 = "";
-                            let tmp27 = tmp8;
-                            let str3 = "_";
-                            let tmp28 = first1;
-                            let str4 = "_TEXT";
                             obj["" + first + "_" + first1 + "_TEXT"] = str.split(":TEXT:", 2)[1];
                           } else {
-                            let tmp22 = first;
                             let _parseInt = parseInt;
-                            let tmp23 = str;
                             obj[tmp8] = parseInt(str);
                           }
-                          let tmp29 = tmp9;
                           if (null != tmp10.ChoiceOrder) {
-                            let tmp30 = first;
                             let _HermesInternal3 = HermesInternal;
-                            let tmp31 = tmp9;
                             obj["" + tmp8 + "_DO"] = tmp10.ChoiceOrder;
                           }
                         }
                       }
-                      let tmp16 = tmp9;
-                      if (tmp10.QuestionType === tmp45.TEXT_ENTRY) {
-                        let tmp19 = first;
+                      if (tmp10.QuestionType === constants2.TEXT_ENTRY) {
                         let _HermesInternal = HermesInternal;
                         tmp20 = str;
                         obj["" + tmp8 + "_TEXT"] = str;
                       } else {
-                        let tmp17 = first;
-                        let tmp18 = str;
                         obj[tmp8] = str;
                       }
                     }
                     continue;
                   }
                   const _Object = Object;
-                  closure_2 = Object.keys(arg1);
-                  const item = closure_2.forEach((arg0) => {
-                    if (!closure_2.includes(arg0)) {
-                      if (null != survey.Questions[arg0]) {
+                  closure_2 = Object.keys(callback2);
+                  const item = closure_2.forEach((item, index) => {
+                    if (!closure_2.includes(item)) {
+                      if (null != survey.Questions[item]) {
                         let tmp4 = null != tmp2.ChoiceOrder;
                         if (tmp4) {
                           tmp4 = tmp2.QuestionType === closure_1_9.MULTIPLE_CHOICE;
                         }
                         if (tmp4) {
                           if (tmp2.Selector === closure_1_8.MULTIPLE_ANSWER) {
-                            obj[arg0] = [];
+                            obj[item] = [];
                           }
                           const _HermesInternal = HermesInternal;
-                          obj["" + arg0 + "_DO"] = tmp2.ChoiceOrder;
+                          obj["" + item + "_DO"] = tmp2.ChoiceOrder;
                         }
                       }
                     }
@@ -296,7 +266,6 @@ function _submitSurveyResponse() {
                 obj4[0] = HTTP.post(obj2);
                 return obj4;
               }
-              let tmp31 = callback2;
             }
           } else if (1 === tmp7) {
             state = 0;
@@ -403,8 +372,8 @@ function _fireSurveyAction() {
               })(lib)) {
                 obj1 = { action_type: null };
                 obj1[0] = tmp26;
-                if (null != tmp27) {
-                  obj1.metadata = tmp27;
+                if (null != callback) {
+                  obj1.metadata = callback;
                 }
                 c4 = 1;
                 const HTTP = lib(closure_1_2[7]).HTTP;
@@ -468,7 +437,7 @@ function _fireSurveyAction() {
   return applyArgumentsResult;
 }
 ({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: c9 } = QuestionTypeEnum);
-let result = require("set").fileFinishedImporting("modules/qualtrics/QualtricsActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/qualtrics/QualtricsActionCreators.tsx");
 
 export default { fetchSurveyDetails, submitSurveyResponse, fireSurveyAction };
 export { fetchSurveyDetails };

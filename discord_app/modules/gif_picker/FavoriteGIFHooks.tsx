@@ -1,11 +1,10 @@
 // discord_app/modules/gif_picker/FavoriteGIFHooks.tsx
 import useFrecencySettings from "../user_settings/FrecencyUserSettingsHooks.tsx";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import { useFrecencySettings } from "../user_settings/FrecencyUserSettingsHooks.tsx";
+import noop from "../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 let closure_4 = {};
-const result = require("set").fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
+const result = require("obj132").fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
 
 export const useFavoriteGIFs = function useFavoriteGIFs() {
   const favoriteGifs = useFrecencySettings.useFrecencySettings().favoriteGifs;
@@ -20,7 +19,7 @@ export const useFavoriteGIFs = function useFavoriteGIFs() {
 };
 export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFavoriteGifUrl) {
   const _require = transformFavoriteGifUrl;
-  const favoriteGifs = _useFrecencySettings.useFrecencySettings().favoriteGifs;
+  const favoriteGifs = require("../user_settings/FrecencyUserSettingsHooks.tsx").useFrecencySettings().favoriteGifs;
   let gifs;
   if (favoriteGifs != null) {
     gifs = favoriteGifs.gifs;
@@ -30,21 +29,21 @@ export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFav
   }
   const items = [gifs, transformFavoriteGifUrl];
   return React.useMemo(() => {
-    const mapped = gifs(closure_1_2[2])(gifs).map((src, url) => {
+    const mapped = gifs(dependencyMap[2])(gifs).map((item, index) => {
       const obj = {};
-      const merged = Object.assign(src);
-      obj.url = url;
-      src = undefined;
+      const merged = Object.assign(item);
+      obj.url = index;
+      let src;
       if (closure_0 != null) {
-        src = tmp2(src.src, url);
+        src = tmp2(item.src, index);
       }
       if (src == null) {
-        src = src.src;
+        src = item.src;
       }
       obj.src = src;
       return obj;
     });
-    const arr = gifs(closure_1_2[2])(gifs);
+    const arr = gifs(dependencyMap[2])(gifs);
     const sortByResult = mapped.sortBy("order");
     return mapped.sortBy("order").reverse().value();
   }, items);

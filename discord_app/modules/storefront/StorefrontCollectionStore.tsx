@@ -133,36 +133,33 @@ StorefrontCollectionStore.displayName = "StorefrontCollectionStore";
 const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefault, {
   STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH: function handleCollectionsWithProductsFetch(collectionIds) {
     collectionIds = collectionIds.collectionIds;
-    const item = collectionIds.forEach((arg0) => {
+    const item = collectionIds.forEach((item, index) => {
       let collection;
-      if (table[arg0] != null) {
+      if (table[item] != null) {
         collection = tmp2.collection;
       }
-      table[arg0] = { state: "loading", collection };
+      table[item] = { state: "loading", collection };
     });
   },
   STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function handleCollectionsWithProductsFetchSuccess(arg0) {
     ({ collectionIds, collections } = arg0);
-    closure_0 = undefined;
-    let set;
     closure_0 = Date.now();
-    set = new Set();
-    const item = collections.forEach((collection) => {
-      set.add(collection.id);
-      closure_0[collection.id] = { state: "success", collection, fetchedAt: closure_0 };
+    const set = new Set();
+    const item = collections.forEach((item, index) => {
+      set.add(item.id);
+      closure_0[item.id] = { state: "success", collection: item, fetchedAt: closure_0 };
     });
-    const item1 = collectionIds.forEach((arg0) => {
-      if (!set.has(arg0)) {
+    const item1 = collectionIds.forEach((item, index) => {
+      if (!set.has(item)) {
         delete tmp[tmp2];
       }
     });
   },
   STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_FAILURE: function handleCollectionsWithProductsFetchFailure(arg0) {
     ({ collectionIds, apiError: closure_0 } = arg0);
-    closure_1 = undefined;
     closure_1 = Date.now();
-    const item = collectionIds.forEach((arg0) => {
-      closure_1_0[arg0] = { state: "error", fetchedAt: closure_1, fetchError: closure_0 };
+    const item = collectionIds.forEach((item, index) => {
+      closure_1_0[item] = { state: "error", fetchedAt: closure_1, fetchError: closure_0 };
     });
   },
   STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH: function handleCollectionsForApplicationFetch(applicationId) {
@@ -175,12 +172,11 @@ const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefaul
   },
   STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function handleCollectionsForApplicationFetchSuccess(collections) {
     collections = collections.collections;
-    let timestamp;
     ({ applicationId, includePricing, skuTypes } = collections);
-    timestamp = Date.now();
+    const timestamp = Date.now();
     closure_1[applicationId] = { state: "success", collections, fetchedAt: timestamp, includePricing, skuTypes };
-    const item = collections.forEach((collection) => {
-      timestamp[collection.id] = { state: "success", collection, fetchedAt: timestamp };
+    const item = collections.forEach((item, index) => {
+      timestamp[item.id] = { state: "success", collection: item, fetchedAt: timestamp };
     });
   },
   STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE: function handleCollectionsForApplicationFetchFailure(arg0) {
@@ -192,6 +188,6 @@ const storefrontCollectionStore = new StorefrontCollectionStore(dispatcherDefaul
     closure_1 = {};
   }
 });
-const result = require("set").fileFinishedImporting("modules/storefront/StorefrontCollectionStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/storefront/StorefrontCollectionStore.tsx");
 
 export default storefrontCollectionStore;

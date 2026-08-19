@@ -1,8 +1,8 @@
 // discord_app/modules/guild_settings/GuildSettingsModalChannelsActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
-const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsModalChannelsActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_settings/GuildSettingsModalChannelsActionCreators.tsx");
 
 export default {
   terminate() {
@@ -16,8 +16,7 @@ export default {
     dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER" });
   },
   localChannelUpdate(found) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_SETTINGS_MODAL_LOCAL_SORT_CHANGE", updates: found };
+    const obj = { type: "GUILD_SETTINGS_MODAL_LOCAL_SORT_CHANGE", updates: found };
     obj.dispatch(obj);
   }
 };

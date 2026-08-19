@@ -1,7 +1,7 @@
 // discord_app/modules/quests/types/v2/CTA.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
 
 export const questCtaConfigFromServer = function questCtaConfigFromServer(cta_config) {
   let tmp;

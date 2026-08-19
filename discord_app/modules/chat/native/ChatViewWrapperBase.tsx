@@ -5,9 +5,9 @@ import useChatViewPointerEventsAndroidDefault from "useChatViewPointerEvents.and
 import StickyWrapper from "../../../design/components/Sticky/native/StickyWrapper.native.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
+const result = require("obj132").fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
 
 export default function ChatViewWrapperBase(arg0) {
   ({ channelId, children, stickyHeader, style } = arg0);

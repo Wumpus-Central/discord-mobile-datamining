@@ -3,12 +3,12 @@ import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
 import useIsCreatorMonetizationEnabledGuild from "../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import getJoinButtonLabels from "GuildRoleSubscriptionSystemMessageConstants.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function identityHook(arg0) {
   return arg0;
 }
@@ -62,7 +62,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
 }
 ({ getJoinButtonLabels: c5, getRenewButtonLabels: closure_6, STICKERS: error } = getJoinButtonLabels);
 ({ AnalyticEvents: closure_8, NOOP: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx");
 
 export const pickRoleSubscriptionPurchaseSticker = function pickRoleSubscriptionPurchaseSticker(id) {
   const currentUser = authStore.getCurrentUser();
@@ -73,7 +73,6 @@ export const pickRoleSubscriptionPurchaseSticker = function pickRoleSubscription
   let num = 0;
   if (null != id) {
     num = DISCORD_EPOCHDefault.extractTimestamp(id);
-    const obj = DISCORD_EPOCHDefault;
   }
   const obj2 = DISCORD_EPOCHDefault;
   return length[(num + obj2.extractTimestamp(obj2, id)) % length.length];
@@ -125,21 +124,19 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
   const t = getSystemLocale.t;
   if (tmp2) {
     if (flag) {
-      _N9bxq = t.OQ0OUy;
-      let tmp7 = tmp4;
-      let tmp8 = tmp3;
+      let OQ0OUy = t.OQ0OUy;
     } else {
-      _N9bxq = t["+N9bxq"];
-      tmp7 = tmp4;
-      tmp8 = tmp3;
+      OQ0OUy = t["+N9bxq"];
     }
   } else {
     if (flag) {
-      let tmp6 = tmp3;
+      let OxP1NC = t.OxP1NC;
+      let tmp7 = require;
     } else {
-      tmp6 = tmp3;
+      OxP1NC = t["6Z1E+7"];
+      tmp7 = require;
     }
-    const intl = tmp6(1236).intl;
+    const intl = tmp7(1236).intl;
     let name;
     if (guild != null) {
       name = guild.name;
@@ -155,15 +152,15 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
     obj[3] = usernameOnClickHandler;
     obj[4] = roleSubscriptionOnClickHandler;
     obj[5] = num;
-    return intl.formatToParts(_6Z1E_7, obj);
+    return intl.formatToParts(OxP1NC, obj);
   }
+  tmp2 = num > 0;
 };
 export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings = function isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild) {
   return useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
 };
 export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(guild_id) {
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { guild_id, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
+  const obj = { guild_id, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
   const currentUser = authStore.getCurrentUser();
   let id;
   if (currentUser != null) {

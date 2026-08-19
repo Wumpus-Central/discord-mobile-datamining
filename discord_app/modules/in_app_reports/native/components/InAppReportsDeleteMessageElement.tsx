@@ -1,17 +1,16 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../stores/MessageStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import reinjectEphemerals from "../../../../stores/MessageStore.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx");
 
 export default function DeleteMessageElement(message) {
   message = message.message;
   const reportId = message.reportId;
-  dependencyMap = undefined;
   let stateFromStores;
   const tmp = stateFromStores(React.useState(false), 2);
   dependencyMap = tmp[1];
@@ -26,9 +25,9 @@ export default function DeleteMessageElement(message) {
   const items3 = [message, reportId];
   const callback = React.useCallback(() => {
     dependencyMap(true);
-    let obj = reportId(5042);
-    obj = { report_id: reportId };
-    obj.trackWithMetadata(closure_1_6.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
+    reportId(5042);
+    const obj = { report_id: reportId };
+    obj.trackWithMetadata(AnalyticEvents.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
     reportId(7427).deleteMessage(message.getChannelId(), message.id);
   }, items3);
   obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };

@@ -1,11 +1,11 @@
 // discord_app/modules/user_profile/experiments/UserProfileMobileGameCollectionExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
 const obj = { 1: null };
 obj[1] = { enabled: true };
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-mobile-game-collection", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/user_profile/experiments/UserProfileMobileGameCollectionExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/experiments/UserProfileMobileGameCollectionExperiment.tsx");
 
 export const useIsMobileGameCollectionExperimentEnabled = function useIsMobileGameCollectionExperimentEnabled(UserProfileWidgetsBoard) {
   return closure_0.useConfig({ location: UserProfileWidgetsBoard }).enabled;

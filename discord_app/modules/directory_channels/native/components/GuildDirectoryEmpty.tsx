@@ -2,38 +2,34 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/GuildChannelStore.tsx";
+import comparator from "../../../../stores/GuildChannelStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ Image: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ InstantInviteSources: closure_6, Fonts } = ME);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, header: null, title: null, description: null, ctaContainer: null };
-createCacheKey = { flex: 1, justifyContent: "flex-end", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, justifyContent: "flex-end", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 16, alignSelf: "center" };
 createCacheKey[2] = { fontFamily: Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8, alignSelf: "center" };
 createCacheKey[3] = { textAlign: "center", alignSelf: "center", marginBottom: 24 };
 createCacheKey[4] = { marginBottom: 8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { fontFamily: Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8, alignSelf: "center" };
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEmpty.tsx");
+const result = require("obj132").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEmpty.tsx");
 
 export default function GuildDirectoryEmpty(guild) {
   guild = guild.guild;
   const channel = guild.channel;
-  dependencyMap = undefined;
   const tmp = callback2();
   let obj = guild(589);
   const items = [closure_5];
   dependencyMap = obj.useStateFromStores(items, () => closure_1_5.getChannels(guild.id));
-  obj1 = guild(11474);
-  obj = { contentContainerStyle: items1, children: null };
-  items1 = [tmp.container, ];
+  guild(11474);
+  const items1 = [tmp.container, ];
   obj = { paddingBottom: channel(1629)().bottom + 16 };
   items1[1] = obj;
   obj1 = { source: null, style: null };
@@ -54,14 +50,14 @@ export default function GuildDirectoryEmpty(guild) {
     const obj5 = { style: null, onPress: null, iconSource: null, title: null };
     obj5[0] = tmp.ctaContainer;
     obj5[1] = function onPress() {
-      let obj = channel(11475);
-      obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id };
+      channel(11475);
+      const obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id };
       return obj.open(obj);
     };
     obj5[2] = tmp2(11935);
     const intl3 = tmp4(1236).intl;
     obj5[3] = intl3.string(tmp4(1236).t.hyK15i);
-    tmp8Result = tmp8(tmp4(8083).FormCTA, obj5);
+    tmp8Result = callback(tmp4(8083).FormCTA, obj5);
   }
   items2[3] = tmp8Result;
   const obj6 = {
@@ -76,5 +72,5 @@ export default function GuildDirectoryEmpty(guild) {
   obj6[3] = intl4.string(guild(1236).t.L4bwJ9);
   items2[4] = callback(guild(8083).FormCTA, obj6);
   obj[1] = items2;
-  return closure_8(closure_4, obj);
+  return callback(closure_4, obj);
 };

@@ -1,13 +1,13 @@
 // discord_app/modules/quests/useQuestForPlacement.tsx
-import set from "../../../_runtime/00002_set.js";
-import setDefault from "../../utils/Durations.tsx";
+import obj132 from "../../../_runtime/00002_obj132.js";
+import obj132Default from "../../utils/Durations.tsx";
+import _manuallyStartConsoleQuest from "QuestActionCreators.tsx";
 import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
 import getIsEligibleForQuests from "lib/QuestsEligibility.tsx";
 import noop from "../../../_runtime/00019_noop.js";
-import closure_5 from "QuestStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initializeState from "QuestStore.tsx";
 
-function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
+function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP, arg2) {
   let isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     let tmp5 = null != fetchedAt;
@@ -21,30 +21,28 @@ function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
   if (isEligibleForQuests) {
     if ("active" === obj2.getState()) {
       if (!fetchingQuestToDeliverByPlacement.isFetchingQuestToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
-        if (obj4.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
-          let tmpResult = tmp(10477);
+        if (fetchingQuestToDeliverByPlacement.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
+          let tmpResult = _manuallyStartConsoleQuest;
           const currentQuests = tmpResult.fetchCurrentQuests();
-          tmpResult = tmp(10477);
+          tmpResult = _manuallyStartConsoleQuest;
           const questToDeliver = tmpResult.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
         }
       }
-      obj4 = fetchingQuestToDeliverByPlacement;
     } else if (null != fetchedAt) {
-      tmp(10477).clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
-      const tmpResult1 = tmp(10477);
+      _manuallyStartConsoleQuest.clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
+      const tmpResult1 = _manuallyStartConsoleQuest;
     }
     obj2 = _modDef10501;
   }
 }
 ({ useEffect: c3, useRef: c4 } = noop);
-let closure_6 = 10 * setDefault.Millis.MINUTE;
-let closure_7 = 30 * setDefault.Millis.SECOND;
-const result = set.fileFinishedImporting("modules/quests/useQuestForPlacement.tsx");
+let closure_6 = 10 * obj132Default.Millis.MINUTE;
+let closure_7 = 30 * obj132Default.Millis.SECOND;
+const result = obj132.fileFinishedImporting("modules/quests/useQuestForPlacement.tsx");
 
 export default function useFetchQuestForAdPlacement(arg0) {
-  let _require = arg0;
   importDefault = callback(null);
-  _require = arg0;
+  let _require = arg0;
   const items = [closure_5];
   const items1 = [arg0];
   stateFromStores = _require(stateFromStores[6]).useStateFromStores(items, () => {
@@ -56,15 +54,14 @@ export default function useFetchQuestForAdPlacement(arg0) {
     return value;
   }, items1);
   const obj = _require(stateFromStores[6]);
-  const tmp3 = closure_5;
   const enableFastAdRecheck = importDefault(stateFromStores[7]).useConfig({ location: "useQuestForAdPlacement" }).enableFastAdRecheck;
   const items2 = [stateFromStores, arg0, enableFastAdRecheck];
   enableFastAdRecheck(() => {
     if (null != ref.current) {
       let _clearInterval = clearInterval;
-      clearInterval(tmp.current);
+      clearInterval(ref.current);
     }
-    closure_1_8(stateFromStores, current, "questBar-open");
+    maybeRefreshAd(stateFromStores, current, "questBar-open");
     ref.current = setInterval(() => {
       const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
       let value = questAdDecisionByPlacement.get(current);
@@ -73,7 +70,7 @@ export default function useFetchQuestForAdPlacement(arg0) {
       }
       closure_1_8(value, current, "questBar-interval");
     }, enableFastAdRecheck ? closure_1_7 : closure_1_6);
-    current = tmp.current;
+    current = ref.current;
     return () => {
       if (null != current) {
         const _clearInterval = clearInterval;
@@ -100,7 +97,7 @@ export default function useFetchQuestForAdPlacement(arg0) {
   }
   _require = _require(stateFromStores[8]).getDeliveredQuestId(creative);
   let tmpResult = tmp(tmp2[6]);
-  const items5 = [tmp3];
+  const items5 = [closure_5];
   const stateFromStores2 = tmpResult.useStateFromStores(items5, () => {
     let tmp2 = null;
     if (null != closure_0) {
@@ -127,7 +124,7 @@ export const useAdDecisionForPlacement = function useAdDecisionForPlacement(MOBI
   const _require = MOBILE_HOME_DOCK_AREA;
   const items = [closure_5];
   const items1 = [MOBILE_HOME_DOCK_AREA];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
     let value = questAdDecisionByPlacement.get(closure_0);
     if (value == null) {
@@ -137,9 +134,8 @@ export const useAdDecisionForPlacement = function useAdDecisionForPlacement(MOBI
   }, items1);
 };
 export const useAdRefreshLoop = function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA) {
-  let _require = MOBILE_HOME_DOCK_AREA;
   importDefault = callback(null);
-  _require = MOBILE_HOME_DOCK_AREA;
+  const _require = MOBILE_HOME_DOCK_AREA;
   const items = [closure_5];
   const items1 = [MOBILE_HOME_DOCK_AREA];
   stateFromStores = _require(stateFromStores[6]).useStateFromStores(items, () => {
@@ -156,9 +152,9 @@ export const useAdRefreshLoop = function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA)
   enableFastAdRecheck(() => {
     if (null != ref.current) {
       let _clearInterval = clearInterval;
-      clearInterval(tmp.current);
+      clearInterval(ref.current);
     }
-    closure_1_8(stateFromStores, current, "questBar-open");
+    maybeRefreshAd(stateFromStores, current, "questBar-open");
     ref.current = setInterval(() => {
       const questAdDecisionByPlacement = closure_1_5.questAdDecisionByPlacement;
       let value = questAdDecisionByPlacement.get(current);
@@ -167,7 +163,7 @@ export const useAdRefreshLoop = function useAdRefreshLoop(MOBILE_HOME_DOCK_AREA)
       }
       closure_1_8(value, current, "questBar-interval");
     }, enableFastAdRecheck ? closure_1_7 : closure_1_6);
-    current = tmp.current;
+    current = ref.current;
     return () => {
       if (null != current) {
         const _clearInterval = clearInterval;

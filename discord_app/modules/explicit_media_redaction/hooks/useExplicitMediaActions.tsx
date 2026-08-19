@@ -1,10 +1,10 @@
 // discord_app/modules/explicit_media_redaction/hooks/useExplicitMediaActions.tsx
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaActions.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaActions.tsx");
 
 export const useExplicitMediaActions = function useExplicitMediaActions(onError) {
   onError = onError.onError;
@@ -55,7 +55,7 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
                 c4 = 3;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2();
+                obj1[0] = report();
                 return obj1;
               }
             }
@@ -63,7 +63,7 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
             if (2 === tmp8) {
               v0 = 1;
               callback = closure_2;
-              aPIError = new closure_1_0(closure_1_1[3]).APIError(callback);
+              aPIError = new onError(onSuccess[3]).APIError(callback);
               if (aPIError != null) {
                 tmp25(aPIError);
               }

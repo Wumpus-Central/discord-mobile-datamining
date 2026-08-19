@@ -1,6 +1,6 @@
 // discord_app/modules/impersonate/ImpersonateTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/impersonate/ImpersonateTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/impersonate/ImpersonateTypes.tsx");
 
 export const ImpersonateType = { ROLES: "ROLES", NEW_MEMBER: "NEW_MEMBER", SERVER_SHOP: "SERVER_SHOP" };

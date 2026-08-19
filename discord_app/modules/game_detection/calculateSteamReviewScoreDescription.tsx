@@ -1,8 +1,8 @@
 // discord_app/modules/game_detection/calculateSteamReviewScoreDescription.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import GameTheme from "GameDetectionTypes.tsx";
 
-const result = set.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
+const result = obj132.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 
 export const calculateSteamReviewScoreDescription = function calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating) {
   let num = 50;

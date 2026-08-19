@@ -1,18 +1,20 @@
 // discord_app/modules/app_launcher/native/options/user/AppLauncherUserOption.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppLauncherSelectOptionFormRowDefault from "../../base_components/AppLauncherSelectOptionFormRow.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../a11y/AccessibilityStore.tsx";
+import stylesDefault from "../../base_components/AppLauncherOptionIcon.tsx";
+import UsernameTextDefault from "../../base_components/UsernameText.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
-createCacheKey = { iconWrapper: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+const require = fn;
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserOption.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserOption.tsx");
 
 export default function AppLauncherUserOption(option) {
   option = option.option;
@@ -30,8 +32,8 @@ export default function AppLauncherUserOption(option) {
     let userId = null;
     if (null != closure_1) {
       userId = null;
-      if ("userMention" === tmp.type) {
-        userId = tmp.userId;
+      if ("userMention" === closure_1.type) {
+        userId = closure_1.userId;
       }
     }
     return userId;
@@ -40,8 +42,8 @@ export default function AppLauncherUserOption(option) {
     let userId = null;
     if (null != closure_1) {
       userId = null;
-      if ("userMention" === tmp.type) {
-        userId = tmp.userId;
+      if ("userMention" === closure_1.type) {
+        userId = closure_1.userId;
       }
     }
     return userId;
@@ -58,9 +60,9 @@ export default function AppLauncherUserOption(option) {
     if (onPress != null) {
       tmp();
     }
-    let obj = option(closure_1_2[8]);
+    let obj = option(dependencyMap[8]);
     const result = obj.dismissGlobalKeyboard();
-    const obj2 = closure_1_1(closure_1_2[9]);
+    const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = {
       option,
       channel,
@@ -76,7 +78,7 @@ export default function AppLauncherUserOption(option) {
       },
       onActionSheetDismiss: closure_3
     };
-    obj2.openLazy(option(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), option(closure_1_2[12]).APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
+    obj2.openLazy(option(dependencyMap[11])(dependencyMap[10], dependencyMap.paths), option(dependencyMap[12]).APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
   };
   if (null != tmp8) {
     obj = { user: null, guildId: null, animate: null, size: null };
@@ -89,15 +91,15 @@ export default function AppLauncherUserOption(option) {
     obj1 = { icon: null, wrapperStyle: null };
     obj1[0] = tmp9(tmp2(9923).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
     obj1[1] = tmp.iconWrapper;
-    tmp9Result = tmp9(tmp10(11357), obj1);
-    const tmp10Result = tmp10(11357);
+    tmp9Result = tmp9(stylesDefault, obj1);
+    const tmp10Result = stylesDefault;
   }
   obj[5] = tmp9Result;
   if (null != tmp8) {
     let obj2 = { guildId: null, user: null };
     obj2[0] = guild_id;
     obj2[1] = tmp8;
-    tmp9Result = tmp9(tmp10(11360), obj2);
+    tmp9Result = tmp9(UsernameTextDefault, obj2);
   } else {
     tmp9Result = null;
     if (null != tmp6) {

@@ -1,9 +1,9 @@
 // discord_app/modules/applications/getApplicationInstallURL.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 
 const Routes = ME.Routes;
-let result = set.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
+let result = obj132.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
 
 export const getActivityLaunchURL = function getActivityLaunchURL(applicationId) {
   ({ customId, referrerId, linkId } = applicationId);
@@ -32,16 +32,16 @@ export const getApplicationInstallURL = function getApplicationInstallURL(applic
     if (someResult) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      someResult = values.some((oauth2_install_params) => {
+      someResult = values.some((item, index) => {
         let prop;
-        if (oauth2_install_params != null) {
-          prop = oauth2_install_params.oauth2_install_params;
+        if (item != null) {
+          prop = item.oauth2_install_params;
         }
         let tmp2 = null != prop;
         if (!tmp2) {
           let oauth2InstallParams;
-          if (oauth2_install_params != null) {
-            oauth2InstallParams = oauth2_install_params.oauth2InstallParams;
+          if (item != null) {
+            oauth2InstallParams = item.oauth2InstallParams;
           }
           tmp2 = null != oauth2InstallParams;
         }

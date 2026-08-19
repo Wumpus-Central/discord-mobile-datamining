@@ -1,23 +1,22 @@
 // discord_app/modules/auth/native/components/RegisterAgeGate.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/ConsentStore.tsx";
+import hasConsented from "../../../../stores/ConsentStore.tsx";
 import useRegistrationUIStore from "../RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../../RegistrationConstants.tsx";
 import { AuthStates } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../../../_runtime/03975_t.js";
 import subtractResult from "../../../../../_runtime/00100_getConstants.js";
 
-const require = arg1;
+const require = fn;
 ({ updateRegistrationOptions: error, useRegistrationUIStore: closure_8 } = useRegistrationUIStore);
 ({ RegisterTransitionSteps: c9, RegistrationTransitionActionTypes: c10 } = RegistrationTransitionActionTypes);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { inputGroup: { marginTop: 24, marginBottom: 24 }, flexGrow: { flexGrow: 1 }, button: { flexGrow: 0, marginBottom: 4, marginTop: 16, flexDirection: "column" }, datePickerButton: null, page: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flex: 1 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
@@ -27,8 +26,8 @@ const cloneResult = utcResult.clone();
 let closure_18 = utcResult.clone().endOf("year").toDate();
 const endOfResult = utcResult.clone().endOf("year");
 const cloneResult1 = utcResult.clone();
-let closure_19 = require("module_100").toDate();
-let result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterAgeGate.tsx");
+let closure_19 = require("../../../../../_runtime/00100_getConstants.js").toDate();
+let result = require("obj132").fileFinishedImporting("modules/auth/native/components/RegisterAgeGate.tsx");
 
 export default function RegisterAgeGate() {
   const tmp = callback2();
@@ -63,11 +62,11 @@ export default function RegisterAgeGate() {
   }, items);
   tmp7Result = tmp7(obj2.useState(false), 2);
   [tmp14, closure_6] = tmp7Result;
-  let obj4Result = obj3((submitting) => submitting.submitting);
+  obj3((submitting) => submitting.submitting);
   let tmp2Result = tmp2(tmp3[15]);
   const items1 = [closure_6];
   const stateFromStores = tmp2Result.useStateFromStores(items1, () => authenticationConsentRequired.getAuthenticationConsentRequired());
-  obj4Result = obj3((errors) => errors.errors);
+  const obj4Result = obj3((errors) => errors.errors);
   let message = context(tmp3[16])("consent", obj4Result);
   if (message == null) {
     message = obj4Result.message;
@@ -80,7 +79,6 @@ export default function RegisterAgeGate() {
     context({ step: closure_1_9.AGE_GATE, actionType: closure_1_10.VIEWED });
   }, items2);
   const tmp22 = context(first[11])(first);
-  obj = { style: tmp.page, children: null };
   obj = { headerText: null, contentStyle: null, children: null };
   tmp18Result = tmp18(tmp3[20]);
   const intl = tmp2(tmp3[21]).intl;
@@ -116,9 +114,9 @@ export default function RegisterAgeGate() {
   obj3[3] = intl4.string(_require(first[21]).t.xNpFJ6);
   const intl5 = tmp2(tmp3[21]).intl;
   obj3[4] = intl5.string(_require(first[21]).t["hZaF/O"]);
-  obj2[2] = closure_12(_require(first[23]).InputButton, obj3);
-  obj1[1] = closure_12(_require(first[22]).Input, obj2);
-  const items3 = [closure_12(closure_5, obj1), , , ];
+  obj2[2] = callback(_require(first[23]).InputButton, obj3);
+  obj1[1] = callback(_require(first[22]).Input, obj2);
+  const items3 = [callback(closure_5, obj1), , , ];
   const obj4 = {
     consentRequired: Boolean(stateFromStores),
     consent: first1,
@@ -126,7 +124,7 @@ export default function RegisterAgeGate() {
       return callback3((arg0) => !arg0);
     }
   };
-  items3[1] = closure_12(context(first[24]), obj4);
+  items3[1] = callback(context(first[24]), obj4);
   const obj5 = { style: tmp.button, children: null };
   const obj6 = {
     size: "lg",
@@ -143,32 +141,30 @@ export default function RegisterAgeGate() {
       stateFromStores(obj);
       obj = { step: closure_1_9.AGE_GATE, actionType: closure_1_10.SUBMITTED };
       context(obj);
-      const result = callback(first[18]).handleRegistrationSubmit(closure_1_11.AGE_GATE, callback, context);
+      const result = callback(first[18]).handleRegistrationSubmit(AuthStates.AGE_GATE, callback, context);
+      const obj3 = callback(first[18]);
     },
     text: null
   };
   const intl6 = tmp2(tmp3[21]).intl;
   obj6[4] = intl6.string(_require(first[21]).t["825cFy"]);
-  obj5[1] = closure_12(_require(first[25]).Button, obj6);
-  items3[2] = closure_12(closure_5, obj5);
+  obj5[1] = callback(_require(first[25]).Button, obj6);
+  items3[2] = callback(closure_5, obj5);
   let tmp26Result = null;
   if (null != message) {
     tmp26Result = null;
     if ("" !== message) {
       const obj7 = { children: null };
       obj7[0] = message;
-      tmp26Result = tmp26(tmp18(tmp3[26]), obj7);
+      tmp26Result = callback(tmp18(tmp3[26]), obj7);
     }
   }
   items3[3] = tmp26Result;
   obj[2] = items3;
-  obj[1] = closure_13(tmp18Result, obj);
-  const items4 = [closure_12(closure_5, obj), ];
+  obj[1] = callback2(tmp18Result, obj);
+  const items4 = [callback(closure_5, obj), ];
   const obj8 = { modal: true, open: tmp14, title: null, mode: "date", theme: null, date: null, maximumDate: null, minimumDate: null, onConfirm: null, onDateChange: null, onCancel: null, buttonColor: null };
   const tmp18Result1 = context(first[24]);
-  const tmp23 = !tmp22;
-  const tmp25 = closure_14;
-  const tmp9 = null != consent && consent;
   const intl7 = tmp2(tmp3[21]).intl;
   obj8[2] = intl7.string(_require(first[21]).t.xNpFJ6);
   const tmp18Result2 = context(first[27]);
@@ -196,7 +192,7 @@ export default function RegisterAgeGate() {
     return authenticationConsentRequired(false);
   };
   obj8[11] = tmp.datePickerButton.color;
-  items4[1] = closure_12(tmp18Result2, obj8);
+  items4[1] = callback(tmp18Result2, obj8);
   obj9[0] = items4;
-  return closure_13(tmp25, obj9);
+  return callback2(closure_14, obj9);
 };

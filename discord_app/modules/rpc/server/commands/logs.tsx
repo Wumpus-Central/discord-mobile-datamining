@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/server/commands/logs.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import timestampDefault from "../../../debug/Logger.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import recurseReplaceContentTree from "../../RPCHelpers.tsx";
@@ -9,8 +9,8 @@ import ME from "../../../../Constants.tsx";
 let closure_3 = new timestampDefault(RPC_APPLICATION_LOGGING_CATEGORY);
 let obj = {
   validation(string) {
-    let obj = createRpcJoiSchemaObjectDefault(string);
-    obj = { level: null, message: null };
+    createRpcJoiSchemaObjectDefault(string);
+    const obj = { level: null, message: null };
     const requiredResult = obj.required();
     const stringResult = string.string();
     obj[0] = string.string().max(10).required();
@@ -38,6 +38,6 @@ let obj = {
   }
 };
 const tmp3 = new timestampDefault(RPC_APPLICATION_LOGGING_CATEGORY);
-let result = set.fileFinishedImporting("modules/rpc/server/commands/logs.tsx");
+let result = obj132.fileFinishedImporting("modules/rpc/server/commands/logs.tsx");
 
 export default { [RPCCommands.CAPTURE_LOG]: obj };

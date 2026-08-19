@@ -1,7 +1,7 @@
 // discord_app/modules/overlay/OverlayTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");
 
 export const DevToolsFocusedPidsTrackMode = { TRACK_FOCUS: "track_focus", UNTRACK_FOCUS: "untrack_focus" };
 export const OverlayForcedRenderMode = { UNSET: "UNSET", IN_PROCESS_V2: "IN_PROCESS_V2", OUT_OF_PROCESS_V3: "OUT_OF_PROCESS_V3", OUT_OF_PROCESS_V3_LIMITED_INTERACTION: "OUT_OF_PROCESS_V3_LIMITED_INTERACTION" };

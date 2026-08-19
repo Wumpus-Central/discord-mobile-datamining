@@ -6,16 +6,15 @@ import UrlAll from "../../../_runtime/01489_Url.js";
 import BUILD_OVERRIDE_TARGET_NAMES from "BuildOverrideConstants.tsx";
 import parseDefault from "../../../_runtime/04292_parse.js";
 import getConstants from "../../utils/native/ClientInfoUtils.tsx";
-import set from "../../utils/PlatformUtils.tsx";
+import obj132 from "../../utils/PlatformUtils.tsx";
 
 let closure_4 = BUILD_OVERRIDE_TARGET_NAMES.BUILD_OVERRIDE_COOKIE_NAME;
 const PRIMARY_DOMAIN = ME.PRIMARY_DOMAIN;
 getConstants = getConstants.getConstants();
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   let Version = getConstants.Version.split(" - ")[0];
-  const str = getConstants.Version;
 } else {
-  const _module2 = set;
+  const _module2 = obj132;
   if (_module2.isIOS()) {
     Version = getConstants.Version;
   }
@@ -34,9 +33,7 @@ function manualOverrideLinkMeta(str) {
   const match = str.match(regExp1);
   if (null != match) {
     if (2 === match.length) {
-      let obj = set;
-      obj = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
-      obj = {};
+      const obj = {};
       const _HermesInternal = HermesInternal;
       obj1 = { type: "branch", id: null };
       obj1[1] = match[1];
@@ -50,9 +47,9 @@ function manualOverrideLinkMeta(str) {
 }
 const regExp = new RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
 const regExp1 = new RegExp("^dev://branch/([\\w-./]+)$", "i");
-set = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]);
+const set = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]);
 const set1 = new Set(["/__development/link", "/__development/link/"]);
-const result = set.fileFinishedImporting("modules/build_overrides/BuildOverrideUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/build_overrides/BuildOverrideUtils.tsx");
 
 export const APP_VERSION = Version;
 export { getAPIEndpoint };
@@ -70,8 +67,7 @@ export const getBuildOverride = function getBuildOverride() {
     obj = { url: null, oldFormErrors: true, rejectWithError: false };
     obj[0] = UrlAll.format(safeParseWithQueryResult);
     const value = HTTP.get(obj);
-    resolved = value.then((body) => body.body || null, () => null);
-    const obj3 = UrlAll;
+    resolved = value.then((result) => result.body || null, () => null);
   }
   return resolved;
 };
@@ -86,16 +82,14 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
     if (null != match) {
       tmp13 = null;
       if (2 === match.length) {
-        let obj = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
-        obj = {};
+        let obj = {};
         const _HermesInternal = HermesInternal;
         obj1 = { type: "branch", id: null };
         obj1[1] = match[1];
-        obj["discord_" + set.getNativePlatform()] = obj1;
+        obj["discord_" + obj132.getNativePlatform()] = obj1;
         obj[0] = obj;
         obj[1] = [];
         tmp13 = obj;
-        const obj4 = set;
       }
     }
     return Promise.resolve(tmp13);
@@ -113,11 +107,10 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
       const _window = window;
       safeParseWithQueryResult.host = window.location.host;
       const HTTP = sendRequest.HTTP;
-      let obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj2 = UrlAll;
+      const obj2 = UrlAll;
       obj2[0] = obj2.format(safeParseWithQueryResult);
       const value = HTTP.get(obj2);
-      resolved = value.then((body) => body.body || null, () => null);
+      resolved = value.then((result) => result.body || null, () => null);
     }
     return resolved;
   }
@@ -173,7 +166,6 @@ export const validateURL = function validateURL(target) {
         if ("s" in url.query) {
           if (set1.has(url.pathname)) {
             for (const key10021 in url.query) {
-              let tmp11 = key10021;
               if ("s" === key10021) {
                 continue;
               } else {

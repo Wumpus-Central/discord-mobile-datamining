@@ -3,9 +3,9 @@ import AdCreativeType from "../../../../../discord_common/js/shared/shared-const
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 let context = importAllResult.createContext(null);
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockCreativeContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockCreativeContext.tsx");
 
 export const getDeliveredQuest = function getDeliveredQuest(type) {
   let quest = null;
@@ -15,7 +15,7 @@ export const getDeliveredQuest = function getDeliveredQuest(type) {
   return quest;
 };
 export const QuestDockQuestProvider = function QuestDockQuestProvider(quest) {
-  return <redux.Provider value={arg0.quest}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={quest.quest}>{quest.children}</redux.Provider>;
 };
 export const useQuestCreative = function useQuestCreative() {
   const context = importAllResult.useContext(closure_4);

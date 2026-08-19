@@ -1,5 +1,5 @@
 // discord_app/modules/native_permissions/NativePermissionStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
@@ -48,8 +48,7 @@ prototype["handleSetNativePermission"] = function handleSetNativePermission(arg0
   let NONE = permissionStates[permissionType];
   permissionStates[permissionType] = state;
   if (NONE !== state) {
-    let obj = expandEventPropertiesDefault;
-    obj = { type: null, action: null, previous_action: null };
+    const obj = { type: null, action: null, previous_action: null };
     obj[0] = permissionType;
     obj[1] = state;
     if (NONE == null) {
@@ -61,6 +60,6 @@ prototype["handleSetNativePermission"] = function handleSetNativePermission(arg0
 };
 NativePermissionStore.displayName = "NativePermissionStore";
 NativePermissionStore.persistKey = "NativePermissionsStore";
-const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionStore.tsx");
+const result = obj132.fileFinishedImporting("modules/native_permissions/NativePermissionStore.tsx");
 
 export default NativePermissionStore;

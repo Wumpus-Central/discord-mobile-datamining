@@ -1,9 +1,9 @@
 // discord_app/modules/activities/handleUsePrimaryEntryPointAppCommand.tsx
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 
-const require = arg1;
+const require = fn;
 function _handleUsePrimaryEntryPointAppCommand() {
   let self = this;
   const tmp = callback((arg0) => {
@@ -51,7 +51,7 @@ function _handleUsePrimaryEntryPointAppCommand() {
                 c4 = 2;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(8735)(tmp27.targetApplicationId, tmp27.channelId);
+                obj1[0] = closure_1_1(8735)(lib.targetApplicationId, lib.channelId);
                 return obj1;
               }
             }
@@ -256,7 +256,7 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/activities/handleUsePrimaryEntryPointAppCommand.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/handleUsePrimaryEntryPointAppCommand.tsx");
 
 export default function handleUsePrimaryEntryPointAppCommand() {
   const self = this;

@@ -1,23 +1,25 @@
 // discord_app/modules/forums/native/composer/ForumComposer.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useKeyboardTypeDefault from "../../../keyboard/native/useKeyboardType.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import TagIcon from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import TileDefault from "../../../../components_native/chat/ImageCarousel.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_10 from "../../../a11y/AccessibilityStore.tsx";
-import closure_11 from "../../../user_settings/ThemeStore.tsx";
-import closure_12 from "../../../../stores/DraftStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import handleThemeChange from "../../../user_settings/ThemeStore.tsx";
+import handleChanged from "../../../../stores/DraftStore.tsx";
 import { DraftType } from "../../../../stores/DraftStore.tsx";
-import closure_14 from "../../../../stores/GuildMemberStore.tsx";
-import closure_15 from "../../../../stores/PermissionStore.tsx";
-import closure_16 from "../../../../stores/SelectedChannelStore.tsx";
-import closure_17 from "../../../../stores/SlowmodeStore.tsx";
+import trackCommunicationDisabled from "../../../../stores/GuildMemberStore.tsx";
+import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
+import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
+import setCooldown from "../../../../stores/SlowmodeStore.tsx";
 import { SlowmodeType } from "../../../../stores/SlowmodeStore.tsx";
-import closure_19 from "../../../../stores/UploadAttachmentStore.tsx";
-import closure_20 from "../../../../stores/UserStore.tsx";
+import map from "../../../../stores/UploadAttachmentStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { ChannelFlags } from "../../../channel/ChannelConstants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
@@ -25,9 +27,9 @@ import { ExpressionPickerViewType } from "../../../expression_picker/ExpressionP
 import { OpenThreadAnalyticsLocations as closure_27 } from "../../../threads/ThreadConstants.tsx";
 import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function Tags(tags) {
   tags = tags.tags;
   const tmp = callback3();
@@ -39,19 +41,18 @@ function Tags(tags) {
     obj[1] = tmp.tagIcon;
     let items = [
       callback(TagIcon.TagIcon, obj),
-      tags.map((id) => {
-          let tmp2 = 0 !== arg1;
+      tags.map((item, index) => {
+          let tmp2 = 0 !== index;
           if (tmp2) {
             let obj = { style: null };
             obj[0] = { width: 4 };
             tmp2 = callback2(closure_9, obj);
           }
-          obj = { children: null };
           const items = [tmp2, ];
-          obj = { tag: id };
+          obj = { tag: item };
           items[1] = callback2(callback(table[69]).AppliedForumTagPill, obj);
           obj[0] = items;
-          return closure_30(React.Fragment, obj, id.id);
+          return callback(React.Fragment, obj, item.id);
         })
     ];
     obj[1] = items;
@@ -63,13 +64,11 @@ function ActionBar(channel) {
   channel = channel.channel;
   ({ tags: importDefault, onTagsSave: dependencyMap, canPost } = channel);
   ({ submitting, onSubmit: closure_4, focusLastInput: closure_5, isEdit } = channel);
-  closure_7 = undefined;
-  closure_8 = undefined;
   ({ onShowExpressionPicker, lastInput, onLayout } = channel);
   const tmp = callback3();
   let obj = channel(589);
   const items = [closure_19];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_19.getUploads(channel.id, closure_1_13.ChannelMessage));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_19.getUploads(channel.id, DraftType.ChannelMessage));
   obj1 = channel(589);
   const items1 = [closure_15];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
@@ -106,14 +105,14 @@ function ActionBar(channel) {
     obj = { attachments: null, channelId: null, highlightThumbnails: true };
     obj[0] = stateFromStores;
     obj[1] = channel.id;
-    isMediaChannelResult = callback(tmp5(10265), obj);
+    isMediaChannelResult = callback(TileDefault, obj);
   }
   const items3 = [isMediaChannelResult, ];
   obj1 = { style: tmp.actions, children: null };
   if (!stateFromStores1) {
     const items4 = [stateFromStores1, , , ];
     if (tmp10) {
-      const obj2 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
+      let obj2 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
       const intl2 = tmp2(1236).intl;
       obj2[0] = intl2.string(tmp2(1236).t["112vVE"]);
       const items5 = [, ];
@@ -122,28 +121,29 @@ function ActionBar(channel) {
       obj2[2] = tmp2(8014).TagIcon;
       obj2[3] = function onPress() {
         isEdit.dismiss();
-        let obj = closure_1_1(closure_1_2[76]);
-        obj = {
+        const obj = {
           parentChannel: channel,
           onSave(arg0) {
             callback(arg0);
             if (!tmp5) {
               callback2();
             }
+            tmp5 = closure_7 !== channel(closure_1_2[58]).KeyboardTypes.SYSTEM && closure_7 !== channel(closure_1_2[58]).KeyboardTypes.EXPRESSION;
           },
           title: null,
           tags: null,
           onClose: null
         };
-        const intl = channel(closure_1_2[43]).intl;
-        obj[2] = intl.string(channel(closure_1_2[43]).t.HPu3kq);
+        const intl = channel(dependencyMap[43]).intl;
+        obj[2] = intl.string(channel(dependencyMap[43]).t.HPu3kq);
         obj[3] = closure_1;
         obj[4] = function onClose() {
           if (!tmp4) {
             callback2();
           }
+          tmp4 = closure_7 !== channel(closure_1_2[58]).KeyboardTypes.SYSTEM && closure_7 !== channel(closure_1_2[58]).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(channel(closure_1_2[52])(closure_1_2[77], closure_1_2.paths), "ForumPostTagsActionSheet", obj);
+        obj.openLazy(channel(dependencyMap[52])(dependencyMap[77], dependencyMap.paths), "ForumPostTagsActionSheet", obj);
       };
       tmp10 = callback(tmp2(5432).HeaderActionButton, obj2);
     }
@@ -177,7 +177,7 @@ function ActionBar(channel) {
     }
     obj5[2] = submitting;
     const obj6 = { size: "sm", color: null };
-    obj6[1] = tmp5(712).colors.WHITE;
+    obj6[1] = ThemesDefault.colors.WHITE;
     obj5[3] = callback(tmp2(6867).ChatIcon, obj6);
     obj5[4] = function onPress() {
       if (canPost) {
@@ -185,11 +185,11 @@ function ActionBar(channel) {
       }
     };
     obj4[1] = callback(tmp2(4745).Button, obj5);
-    items4[3] = callback(tmp13, obj4);
+    items4[3] = callback(closure_9, obj4);
     obj1[1] = items4;
-    items3[1] = tmp12(tmp13, obj1);
+    items3[1] = callback(closure_9, obj1);
     obj[2] = items3;
-    return tmp12(tmp13, obj);
+    return callback(closure_9, obj);
   } else {
     const obj7 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
     let intl = tmp2(1236).intl;
@@ -207,14 +207,14 @@ function ActionBar(channel) {
       if (closure_8) {
         callback2();
       } else {
-        const result = channel(closure_1_2[74]).showSimpleMediaKeyboard(channel);
+        const result = channel(dependencyMap[74]).showSimpleMediaKeyboard(channel);
         isEdit.dismiss();
-        const obj = channel(closure_1_2[74]);
+        const obj = channel(dependencyMap[74]);
       }
-      const result1 = channel(closure_1_2[75]).trackForumChannelMediaUploaderClicked({ isMobile: true });
+      const result1 = channel(dependencyMap[75]).trackForumChannelMediaUploaderClicked({ isMobile: true });
+      const obj2 = channel(dependencyMap[75]);
     };
     callback(tmp2(5432).HeaderActionButton, obj7);
-    const tmp15 = callback;
   }
 }
 ({ Keyboard: closure_6, Pressable: error, StyleSheet, Text: closure_8, View: c9 } = get_ActivityIndicator);
@@ -222,17 +222,14 @@ function ActionBar(channel) {
 ({ NOOP: closure_28, Fonts } = sum);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-createCacheKey = { container: null, scrollViewContentContainer: null, avatarContainer: null, avatar: null, titleInput: null, titleInputText: null, contentInput: null, mentionText: null, postButtonWrapper: null, tags: null, tagIcon: null, editor: null, editorBody: null, usernameToChannel: null, channelName: null, actionsContainer: null, actions: null, actionButton: null, mediaButton: null, horizontalAutocomplete: null, nameError: null, messageError: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative" };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingBottom: 16 };
 createCacheKey[2] = { height: 40 };
 createCacheKey[3] = { marginRight: 12 };
 createCacheKey[4] = { padding: 8 };
 createCacheKey[5] = { minHeight: 40, height: "auto", fontFamily: Fonts.DISPLAY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj1 = { minHeight: 40, height: "auto", fontFamily: Fonts.DISPLAY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[6] = { width: "100%", height: "100%", padding: 0, lineHeight: 20, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlignVertical: "top" };
-let obj2 = { width: "100%", height: "100%", padding: 0, lineHeight: 20, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlignVertical: "top" };
 createCacheKey[7] = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
 createCacheKey[8] = { marginLeft: "auto" };
 createCacheKey[9] = { flexDirection: "row", alignItems: "center", padding: 8 };
@@ -249,17 +246,14 @@ obj4.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
 obj4.top = undefined;
 createCacheKey[15] = obj4;
 createCacheKey[16] = { flex: 1, flexDirection: "row", alignItems: "center", padding: 8, width: "100%" };
-let obj3 = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
 createCacheKey[17] = { height: 40, minHeight: 40, maxHeight: 40, width: 40, minWidth: 40, maxWidth: 40, borderRadius: 20, color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginLeft: 0, marginRight: 0, overflow: "hidden" };
 createCacheKey[18] = { marginRight: 8 };
-let obj5 = { height: 40, minHeight: 40, maxHeight: 40, width: 40, minWidth: 40, maxWidth: 40, borderRadius: 20, color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginLeft: 0, marginRight: 0, overflow: "hidden" };
 createCacheKey[19] = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 100, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[20] = { marginBottom: 16, marginLeft: 16, marginRight: 16 };
 createCacheKey[21] = { marginTop: 8 };
 let closure_33 = createCacheKey.createStyles(createCacheKey);
 let closure_34 = { code: "function ForumComposerTsx1({contentOffset:{y:y}}){const{scrollTopValue}=this.__closure;return scrollTopValue.set(y);}" };
-let obj6 = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 100, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let result = require("set").fileFinishedImporting("modules/forums/native/composer/ForumComposer.tsx");
+let result = require("obj132").fileFinishedImporting("modules/forums/native/composer/ForumComposer.tsx");
 
 export default function ForumComposer(parentChannel) {
   parentChannel = parentChannel.parentChannel;
@@ -270,10 +264,6 @@ export default function ForumComposer(parentChannel) {
   const onClose = parentChannel.onClose;
   const message = parentChannel.message;
   const isEdit = parentChannel.isEdit;
-  closure_6 = undefined;
-  let analyticsLocations;
-  let stateFromStores;
-  let stateFromStores4;
   let stateFromStores5;
   closure_11 = undefined;
   closure_12 = undefined;
@@ -310,12 +300,12 @@ export default function ForumComposer(parentChannel) {
   }
   const tmp = blurLastInput();
   closure_6 = tmp;
-  analyticsLocations = content(threadSettingsDraft[22])().analyticsLocations;
+  const analyticsLocations = content(threadSettingsDraft[22])().analyticsLocations;
   let obj = isEdit;
   const ref = isEdit.useRef(null);
   obj1 = _require(threadSettingsDraft[23]);
   let items = [closure_20];
-  stateFromStores = obj1.useStateFromStores(items, () => {
+  const stateFromStores = obj1.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     if (currentUser == null) {
       currentUser = null;
@@ -335,18 +325,18 @@ export default function ForumComposer(parentChannel) {
   const items4 = [closure_11];
   const stateFromStores3 = obj5.useStateFromStores(items4, () => lib(threadSettingsDraft[24]).isThemeDark(theme.theme));
   const unsafe_rawColors = content(threadSettingsDraft[21]).unsafe_rawColors;
-  let tmp10 = stateFromStores3 ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
+  const tmp10 = stateFromStores3 ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
   let tmp5Result = tmp5(tmp3[23]);
   const items5 = [closure_17];
-  stateFromStores4 = tmp5Result.useStateFromStores(items5, () => slowmodeCooldownGuess.getSlowmodeCooldownGuess(lib.id, appliedTags.CreateThread));
+  const stateFromStores4 = tmp5Result.useStateFromStores(items5, () => slowmodeCooldownGuess.getSlowmodeCooldownGuess(lib.id, appliedTags.CreateThread));
   tmp5Result = tmp5(tmp3[23]);
   const items6 = [first1];
   stateFromStores5 = tmp5Result.useStateFromStores(items6, () => first1.getUploads(lib.id, _undefined.ChannelMessage));
-  let tmp12 = content(threadSettingsDraft[25])();
+  const tmp12 = content(threadSettingsDraft[25])();
   closure_11 = tmp12;
-  let tmp13 = content(threadSettingsDraft[26])();
+  const tmp13 = content(threadSettingsDraft[26])();
   closure_12 = tmp13;
-  let tmp14 = content(threadSettingsDraft[27])(parentChannel);
+  const tmp14 = content(threadSettingsDraft[27])(parentChannel);
   [tmp17, c13] = message(obj.useState(false), 2);
   if (isEdit) {
     let name;
@@ -363,7 +353,7 @@ export default function ForumComposer(parentChannel) {
   let tmp15Result = tmp15(obj.useState(str2), 2);
   first = tmp15Result[0];
   closure_15 = tmp15Result[1];
-  let tmp16 = message(obj.useState(false), 2);
+  const tmp16 = message(obj.useState(false), 2);
   const channelTemplate = _require(threadSettingsDraft[28]).useChannelTemplate(parentChannel);
   let str3 = "";
   if (isEdit) {
@@ -397,21 +387,21 @@ export default function ForumComposer(parentChannel) {
     map = undefined;
     if (!isEdit) {
       appliedTags = undefined;
-      if (tmp != null) {
-        appliedTags = tmp.appliedTags;
+      if (threadSettingsDraft != null) {
+        appliedTags = threadSettingsDraft.appliedTags;
       }
       if (null != appliedTags) {
         if (0 !== appliedTags.size) {
           if (availableTags == null) {
             availableTags = [];
           }
-          map = new Map(availableTags.map((id) => {
-            const items = [id.id, id];
+          map = new Map(availableTags.map((item, index) => {
+            const items = [item.id, item];
             return items;
           }));
           const _Array = Array;
-          const mapped = Array.from(appliedTags).map((arg0) => map.get(arg0));
-          found = mapped.filter((arg0) => null != arg0);
+          const mapped = Array.from(appliedTags).map((item, index) => map.get(item));
+          found = mapped.filter((item, index) => null != item);
           const arr = Array.from(appliedTags);
         }
       }
@@ -474,8 +464,8 @@ export default function ForumComposer(parentChannel) {
   const items8 = [isEdit, parentChannel.id];
   const callback1 = obj.useCallback((arg0) => {
     if (!isEdit) {
-      let obj = content(threadSettingsDraft[34]);
-      obj = { name: null };
+      content(threadSettingsDraft[34]);
+      const obj = { name: null };
       obj[0] = arg0;
       obj.changeThreadSettings(lib.id, obj);
     }
@@ -485,25 +475,24 @@ export default function ForumComposer(parentChannel) {
   const callback2 = obj.useCallback((arr) => {
     currentUser(arr);
     if (!isEdit) {
-      let obj = content(threadSettingsDraft[34]);
-      obj = { appliedTags: null };
+      content(threadSettingsDraft[34]);
+      const obj = { appliedTags: null };
       const _Set = Set;
-      const set = new Set(arr.map((id) => id.id));
+      const set = new Set(arr.map((item, index) => item.id));
       obj[0] = set;
       obj.changeThreadSettings(lib.id, obj);
     }
   }, items8);
   callback3 = obj.useCallback((channel) => {
     onClose(true);
-    let obj = lib(threadSettingsDraft[35]);
-    obj = { navigationReplace: true, source: memo1.FORUM };
+    lib(threadSettingsDraft[35]);
+    const obj = { navigationReplace: true, source: memo1.FORUM };
     obj.transitionToThread(channel, obj);
   }, items9);
   const items10 = [first1];
-  memo = obj.useMemo(() => new Set(first1.map((id) => id.id)), items10);
+  memo = obj.useMemo(() => new Set(first1.map((item, index) => item.id)), items10);
   const items11 = [appliedTags];
-  memo1 = obj.useMemo(() => new Set(appliedTags.map((id) => id.id)), items11);
-  _require = undefined;
+  memo1 = obj.useMemo(() => new Set(appliedTags.map((item, index) => item.id)), items11);
   _require = onClose((arg0) => {
     closure_0 = arg0;
     c2 = 0;
@@ -539,29 +528,28 @@ export default function ForumComposer(parentChannel) {
               if (null == closure_1_1) {
                 v0 = 3;
               } else {
-                let tmp6 = null != closure_1_4;
+                let tmp6 = null != message;
                 if (tmp6) {
-                  tmp6 = tmp46.content !== tmp43;
+                  tmp6 = message.content !== closure_0;
                 }
                 if (tmp6) {
                   let obj2 = content(threadSettingsDraft[36]);
                   obj1 = { content: null };
-                  obj1[0] = tmp43;
-                  obj2.editMessage(closure_1_1.id, tmp46.id, obj1);
+                  obj1[0] = closure_0;
+                  obj2.editMessage(closure_1_1.id, message.id, obj1);
                 }
                 let obj4 = content(threadSettingsDraft[37]);
-                if (!obj4.isEqual(closure_1_27, closure_1_26)) {
+                if (!obj4.isEqual(memo1, memo)) {
                   let obj5 = content(threadSettingsDraft[38]);
                   const _Array = Array;
                   c2 = 1;
                   v0 = 1;
                   obj2 = { value: null, done: false };
-                  obj2[0] = obj5.updateForumPostTags(closure_1_1.id, Array.from(tmp14));
+                  obj2[0] = obj5.updateForumPostTags(closure_1_1.id, Array.from(memo));
                   return obj2;
                 }
-                tmp14 = closure_1_26;
               }
-              closure_1_25(closure_1_1);
+              callback3(closure_1_1);
             }
           } else {
             if (1 === tmp5) {
@@ -587,9 +575,9 @@ export default function ForumComposer(parentChannel) {
               v0(true);
             }
           }
-          if (closure_1_1.name !== closure_1_14) {
+          if (closure_1_1.name !== first) {
             obj4 = { name: null };
-            obj4[0] = closure_1_14;
+            obj4[0] = first;
             c2 = 2;
             v0 = 1;
             obj5 = { value: null, done: false };
@@ -625,7 +613,6 @@ export default function ForumComposer(parentChannel) {
   }
   if (tmp46) {
     tmp46 = trimmed.length > 0 || tmp45;
-    const tmp47 = trimmed.length > 0 || tmp45;
   }
   let tmp48 = !isEdit;
   if (!isEdit) {
@@ -662,7 +649,6 @@ export default function ForumComposer(parentChannel) {
   tmp44 = null != name1 && threadSettingsDraft.name.length > 0;
   tmp45 = stateFromStores5.length > 0;
   createForumPost = _require(threadSettingsDraft[40]).useCreateForumPost({ parentChannel, threadSettings: threadSettingsDraft, appliedTags: memo, onThreadCreated: callback3 });
-  _require = undefined;
   _require = tmp41((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -671,199 +657,181 @@ export default function ForumComposer(parentChannel) {
     const iter = (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
-        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
-      } else {
-        throwTypeErrorResult = arg1;
-        throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp6;
-        throwTypeErrorResult = null;
-        if (tmp7 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
-          }
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          try {
-            c6 = 2;
-            if (0 === c5) {
+          return { value: "HermesInternal", done: "HermesInternal" };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              closure_2 = tmp4;
+              c1 = tmp8;
+              let stickerId;
+              stickerId = stickerId.stickerId;
+              c1 = undefined;
+              c5 = 1;
+              c6 = 1;
+              return { value: "ct", done: true };
+            }
+          } else {
+            if (1 === tmp8) {
               if (arg0 === 1) {
                 c6 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
                 c6 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
               } else {
-                closure_2 = tmp4;
-                c1 = tmp8;
-                let stickerId;
-                throwTypeErrorResult = stickerId;
-                stickerId = stickerId.stickerId;
-                c1 = undefined;
-                c5 = 1;
-                c6 = 1;
-                return { value: "ct", done: true };
-              }
-            } else {
-              if (1 === tmp8) {
-                if (arg0 === 1) {
+                if (lib.hasFlag(sharedValue.REQUIRE_TAG)) {
+                  if (0 === first1.length) {
+                    closure_1_22(lib(threadSettingsDraft[41]).makeEmptyTagsError());
+                    const obj9 = lib(threadSettingsDraft[41]);
+                  }
                   c6 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = arg1;
-                  return obj1;
-                } else {
-                  throwTypeErrorResult = closure_2;
-                  throwTypeErrorResult = lib;
-                  throwTypeErrorResult = sharedValue;
-                  if (lib.hasFlag(sharedValue.REQUIRE_TAG)) {
-                    if (0 === closure_1_19.length) {
-                      throwTypeErrorResult = threadSettingsDraft;
-                      throwTypeErrorResult = closure_1_22(lib(threadSettingsDraft[41]).makeEmptyTagsError());
-                      const obj9 = lib(threadSettingsDraft[41]);
-                    }
-                    c6 = 3;
-                  }
-                  closure_1_13(true);
-                  if (c5) {
-                    let tmp74 = closure_1_1;
-                  } else {
-                    tmp74 = lib;
-                  }
-                  content = content(threadSettingsDraft[29]).parse(tmp74, closure_1_16).content;
-                  c4 = 2;
-                  closure_1_21(null);
-                  closure_1_22(null);
-                  if (c5) {
-                    c5 = 4;
-                    c6 = 1;
-                    let obj2 = { value: null, done: false };
-                    obj2[0] = closure_1_28(closure_1_1);
-                    return obj2;
-                  } else {
-                    let tmp90;
-                    if (null != lib) {
-                      const items = [stickerId];
-                      tmp90 = items;
-                    }
-                    c5 = 5;
-                    c6 = 1;
-                    let obj3 = { value: null, done: false };
-                    obj3[0] = closure_1_29(closure_1_1, tmp90, closure_1_10);
-                    return obj3;
-                  }
-                  const obj6 = content(threadSettingsDraft[29]);
                 }
-              } else if (2 !== tmp8) {
-                if (3 === tmp8) {
-                  c4 = 1;
-                  closure_2 = closure_3;
-                  const body = closure_2.body;
-                  let code;
-                  if (body != null) {
-                    code = body.code;
-                  }
-                  if (null != code) {
-                    throwTypeErrorResult = c1;
-                    throwTypeErrorResult = closure_2;
-                    const body3 = closure_2.body;
-                    let code1;
-                    if (body3 != null) {
-                      code1 = body3.code;
-                    }
-                    if (code1 === constants.AUTOMOD_TITLE_BLOCKED) {
-                      let obj4 = lib(threadSettingsDraft[41]);
-                      closure_1_21(obj4.makeAutomodViolationError(closure_2.body, lib));
-                    } else {
-                      throwTypeErrorResult = c1;
-                      throwTypeErrorResult = threadSettingsDraft;
-                      const body4 = threadSettingsDraft.body;
-                      let code2;
-                      if (body4 != null) {
-                        code2 = body4.code;
-                      }
-                      if (code2 === constants.AUTOMOD_MESSAGE_BLOCKED) {
-                        obj3 = lib(threadSettingsDraft[41]);
-                        closure_1_22(obj3.makeAutomodViolationError(closure_2.body, lib));
-                      } else {
-                        throwTypeErrorResult = c1;
-                        throwTypeErrorResult = threadSettingsDraft;
-                        const body5 = threadSettingsDraft.body;
-                        let code3;
-                        if (body5 != null) {
-                          code3 = body5.code;
-                        }
-                        let tmp29 = code3 === constants.INVALID_FORM_BODY;
-                        if (tmp29) {
-                          const body2 = closure_2.body;
-                          let name;
-                          if (body2 != null) {
-                            const errors = body2.errors;
-                            if (errors != null) {
-                              name = errors.name;
-                            }
-                          }
-                          tmp29 = null != name;
-                        }
-                        if (tmp29) {
-                          obj2 = lib(threadSettingsDraft[41]);
-                          closure_1_21(obj2.makeApiNameValidationError());
-                        }
-                      }
-                    }
-                  }
+                closure_1_13(true);
+                if (c5) {
+                  let tmp74 = closure_1_1;
                 } else {
-                  if (4 === tmp8) {
-                    if (arg0 === 1) {
-                      c6 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      c4 = 0;
-                      closure_1_13(false);
-                      c6 = 3;
-                      obj4 = { value: null, done: true };
-                      obj4[0] = arg1;
-                      return obj4;
+                  tmp74 = lib;
+                }
+                content = content(threadSettingsDraft[29]).parse(tmp74, str4).content;
+                c4 = 2;
+                closure_1_21(null);
+                closure_1_22(null);
+                if (c5) {
+                  c5 = 4;
+                  c6 = 1;
+                  let obj2 = { value: null, done: false };
+                  obj2[0] = callback4(closure_1_1);
+                  return obj2;
+                } else {
+                  let tmp90;
+                  if (null != lib) {
+                    const items = [stickerId];
+                    tmp90 = items;
+                  }
+                  c5 = 5;
+                  c6 = 1;
+                  let obj3 = { value: null, done: false };
+                  obj3[0] = createForumPost(closure_1_1, tmp90, stateFromStores5);
+                  return obj3;
+                }
+                const obj6 = content(threadSettingsDraft[29]);
+              }
+            } else if (2 !== tmp8) {
+              if (3 === tmp8) {
+                c4 = 1;
+                closure_2 = closure_3;
+                const body = closure_2.body;
+                let code;
+                if (body != null) {
+                  code = body.code;
+                }
+                if (null != code) {
+                  const body3 = closure_2.body;
+                  let code1;
+                  if (body3 != null) {
+                    code1 = body3.code;
+                  }
+                  if (code1 === constants.AUTOMOD_TITLE_BLOCKED) {
+                    let obj4 = lib(threadSettingsDraft[41]);
+                    closure_1_21(obj4.makeAutomodViolationError(closure_2.body, lib));
+                  } else {
+                    const body4 = threadSettingsDraft.body;
+                    let code2;
+                    if (body4 != null) {
+                      code2 = body4.code;
                     }
-                  } else if (arg0 === 1) {
+                    if (code2 === constants.AUTOMOD_MESSAGE_BLOCKED) {
+                      obj3 = lib(threadSettingsDraft[41]);
+                      closure_1_22(obj3.makeAutomodViolationError(closure_2.body, lib));
+                    } else {
+                      const body5 = threadSettingsDraft.body;
+                      let code3;
+                      if (body5 != null) {
+                        code3 = body5.code;
+                      }
+                      let tmp29 = code3 === constants.INVALID_FORM_BODY;
+                      if (tmp29) {
+                        const body2 = closure_2.body;
+                        let name;
+                        if (body2 != null) {
+                          const errors = body2.errors;
+                          if (errors != null) {
+                            name = errors.name;
+                          }
+                        }
+                        tmp29 = null != name;
+                      }
+                      if (tmp29) {
+                        obj2 = lib(threadSettingsDraft[41]);
+                        closure_1_21(obj2.makeApiNameValidationError());
+                      }
+                    }
+                  }
+                }
+              } else {
+                if (4 === tmp8) {
+                  if (arg0 === 1) {
                     c6 = 3;
                     throw arg1;
                   } else if (arg0 === 2) {
                     c4 = 0;
                     closure_1_13(false);
                     c6 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
+                    obj4 = { value: null, done: true };
+                    obj4[0] = arg1;
+                    return obj4;
                   }
-                  c4 = 1;
+                } else if (arg0 === 1) {
+                  c6 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c4 = 0;
+                  closure_1_13(false);
+                  c6 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
                 }
-                c4 = 0;
-                closure_1_13(false);
+                c4 = 1;
               }
               c4 = 0;
               closure_1_13(false);
-              throw closure_3;
             }
-          } catch (throwTypeErrorResult) {
-            closure_3 = throwTypeErrorResult;
-            if (tmp5 === c4) {
-              throwTypeErrorResult = tmp3;
-              c6 = tmp3;
-              throw throwTypeErrorResult;
-            } else if (tmp2 === throwTypeErrorResult) {
-              c5 = throwTypeErrorResult;
-            } else {
-              c5 = tmp3;
-            }
+            c4 = 0;
+            closure_1_13(false);
+            throw closure_3;
+          }
+        } catch (tmp103) {
+          closure_3 = tmp103;
+          if (tmp5 === c4) {
+            c6 = tmp3;
+            throw tmp103;
+          } else if (tmp2 === tmp105) {
+            c5 = tmp;
+          } else {
+            c5 = tmp3;
           }
         }
       }
@@ -893,7 +861,7 @@ export default function ForumComposer(parentChannel) {
         obj[0] = intl4.string(lib(threadSettingsDraft[43]).t.l8rYLt);
         const intl5 = lib(threadSettingsDraft[43]).intl;
         obj = { currentLength: null, maxLength: null };
-        obj[0] = arr.length;
+        obj[0] = str4.length;
         obj[1] = tmp40;
         obj[1] = intl5.formatToPlainString(lib(threadSettingsDraft[43]).t.FfjF15, obj);
         content(threadSettingsDraft[42]).show(obj);
@@ -902,40 +870,21 @@ export default function ForumComposer(parentChannel) {
         const RESTRICTIONS = lib(threadSettingsDraft[44]).RESTRICTIONS;
         const iter = RESTRICTIONS[Symbol.iterator]();
         while (iter !== undefined) {
-          let tmp5 = str4;
-          let tmp6 = str4;
-          let tmp7 = stickerId;
           let checkResult = iter.next().check(str4, stickerId, null != stickerId.getGuildId());
-          let tmp9 = checkResult;
           if (false !== checkResult) {
-            let tmp10 = content;
-            let tmp11 = threadSettingsDraft;
             obj = content(threadSettingsDraft[42]);
             obj1 = { title: null, body: null, confirmText: null, onConfirm: null, cancelText: null };
-            let tmp12 = lib;
-            let tmp13 = threadSettingsDraft;
             let intl = lib(threadSettingsDraft[43]).intl;
-            let tmp14 = lib;
-            let tmp15 = threadSettingsDraft;
             obj1[0] = intl.string(lib(threadSettingsDraft[43]).t.mY3Y38);
             obj1[1] = checkResult.body;
-            let tmp16 = lib;
-            let tmp17 = threadSettingsDraft;
             let intl2 = lib(threadSettingsDraft[43]).intl;
-            let tmp18 = lib;
-            let tmp19 = threadSettingsDraft;
             obj1[2] = intl2.string(lib(threadSettingsDraft[43]).t.KJnHq3);
             obj1[3] = function onConfirm() {
-              closure_1_30({ stickerId });
+              callback5({ stickerId });
             };
-            let tmp20 = lib;
-            let tmp21 = threadSettingsDraft;
             let intl3 = lib(threadSettingsDraft[43]).intl;
-            let tmp22 = lib;
-            let tmp23 = threadSettingsDraft;
             obj1[4] = intl3.string(lib(threadSettingsDraft[43]).t.fsBWmS);
             let showResult1 = obj.show(obj1);
-            let tmp25 = iter;
             iter.return();
           }
         }
@@ -970,12 +919,13 @@ export default function ForumComposer(parentChannel) {
         const timerId = setTimeout(() => {
           let tmp3 = closure_1;
           if (closure_1 == null) {
-            tmp3 = tmp2;
+            tmp3 = closure_0;
           }
           current.setSelection(closure_0, tmp3);
         });
       }
     }
+    obj = lib(threadSettingsDraft[46]);
   }, []);
   const tmp15Result4 = message(obj.useState(obj), 2);
   closure_35 = _require(threadSettingsDraft[47]).usePressEmojiHandler({ selection: tmp59, draftContent: str4, handleTextChange: callback7, focusTextInput: callback, setSelection: callback9 });
@@ -1011,18 +961,18 @@ export default function ForumComposer(parentChannel) {
           const parts = str4.split(focusLastInput);
           let mapped = null;
           if (1 !== parts.length) {
-            mapped = parts.map((children) => {
-              if (arg1 % 2 === 1) {
-                let obj = closure_1_1(closure_1_2[29]);
-                if (obj.parse(closure_39, children, closure_40).content !== children) {
+            mapped = parts.map((item, index) => {
+              if (index % 2 === 1) {
+                let obj = content(threadSettingsDraft[29]);
+                if (obj.parse(closure_39, item, closure_40).content !== item) {
                   obj = { style: null, children: null };
                   obj[0] = mentionText.mentionText;
-                  obj[1] = children;
-                  return closure_1_29(closure_1_8, obj, arg1);
+                  obj[1] = item;
+                  return createForumPost(stateFromStores, obj, index);
                 }
               }
-              obj = { children };
-              return closure_1_29(closure_1_5.Fragment, obj, arg1);
+              obj = { children: item };
+              return createForumPost(isEdit.Fragment, obj, index);
             });
           }
           return mapped;
@@ -1060,8 +1010,8 @@ export default function ForumComposer(parentChannel) {
     obj4[2] = onClose;
     obj4[3] = function onGuidelinesPress() {
       blurLastInput();
-      let obj = lib(threadSettingsDraft[54]);
-      obj = {
+      lib(threadSettingsDraft[54]);
+      const obj = {
         channel: lib,
         onClose() {
           callback();
@@ -1089,27 +1039,25 @@ export default function ForumComposer(parentChannel) {
       if (!isEdit) {
         let name;
         if (threadSettingsDraft != null) {
-          name = tmp.name;
+          name = threadSettingsDraft.name;
         }
         if (null != name) {
           let name1;
-          if (tmp != null) {
-            name1 = tmp.name;
+          if (threadSettingsDraft != null) {
+            name1 = threadSettingsDraft.name;
           }
           const tmp6Result = content(threadSettingsDraft[57])(name1, true);
           let name2;
-          if (tmp != null) {
-            name2 = tmp.name;
+          if (threadSettingsDraft != null) {
+            name2 = threadSettingsDraft.name;
           }
           if (tmp6Result !== name2) {
             const obj = { name: null };
             obj[0] = tmp6Result;
-            tmp4(tmp5[34]).changeThreadSettings(lib.id, obj);
+            content(threadSettingsDraft[34]).changeThreadSettings(lib.id, obj);
             callback(tmp6Result);
-            const tmp4Result = tmp4(tmp5[34]);
+            const tmp4Result = content(threadSettingsDraft[34]);
           }
-          tmp4 = content;
-          tmp5 = threadSettingsDraft;
           const tmp6 = content(threadSettingsDraft[57]);
         }
       }
@@ -1117,12 +1065,13 @@ export default function ForumComposer(parentChannel) {
     obj6[13] = function onFocus() {
       if (!tmp4) {
         const obj = { type: null, context: null };
-        obj[0] = tmp2(tmp3[58]).KeyboardTypes.SYSTEM;
+        obj[0] = lib(threadSettingsDraft[58]).KeyboardTypes.SYSTEM;
         obj[1] = { keyboardWillOpen: true };
-        tmp2(tmp3[59]).setKeyboardType(obj);
-        const tmp2Result = tmp2(tmp3[59]);
+        lib(threadSettingsDraft[59]).setKeyboardType(obj);
+        const tmp2Result = lib(threadSettingsDraft[59]);
       }
       _undefined2(lib(threadSettingsDraft[45]).PostComposerInputs.TITLE);
+      tmp4 = closure_11 !== lib(threadSettingsDraft[58]).KeyboardTypes.MEDIA && closure_11 !== lib(threadSettingsDraft[58]).KeyboardTypes.EXPRESSION;
     };
     obj6[18] = callback;
     const items22 = [createForumPost(tmp5(tmp3[55]).FormInput, obj6), , ];
@@ -1166,7 +1115,6 @@ export default function ForumComposer(parentChannel) {
       obj10[5] = intl2.formatToPlainString(tmp5(tmp3[43]).t.LvU3nj, obj11);
       obj9[2] = tmp71(tmp5(tmp3[56]).Avatar, obj10);
       tmp71Result = tmp71(analyticsLocations, obj9);
-      const tmp76 = analyticsLocations;
     }
     const items23 = [tmp71Result, ];
     const obj12 = { style: null, children: null };
@@ -1212,10 +1160,10 @@ export default function ForumComposer(parentChannel) {
     obj19[8] = function onFocus() {
       if (closure_11 === lib(threadSettingsDraft[58]).KeyboardTypes.MEDIA) {
         const obj = { type: null, context: null };
-        obj[0] = tmp(tmp2[58]).KeyboardTypes.SYSTEM;
+        obj[0] = lib(threadSettingsDraft[58]).KeyboardTypes.SYSTEM;
         obj[1] = { keyboardWillOpen: true };
-        tmp(tmp2[59]).setKeyboardType(obj);
-        const tmpResult = tmp(tmp2[59]);
+        lib(threadSettingsDraft[59]).setKeyboardType(obj);
+        const tmpResult = lib(threadSettingsDraft[59]);
       }
       _undefined2(lib(threadSettingsDraft[45]).PostComposerInputs.CONTENT);
     };
@@ -1247,8 +1195,8 @@ export default function ForumComposer(parentChannel) {
     obj23[5] = callback6;
     obj23[6] = function onShowExpressionPicker() {
       closure_6.dismiss();
-      let obj = lib(threadSettingsDraft[64]);
-      obj = { channelId: lib.id, onPressEmoji: closure_35, onPressSticker: callback4, onPressGIF: closure_36, onBackspace: closure_37, visibleTabs: items };
+      lib(threadSettingsDraft[64]);
+      const obj = { channelId: lib.id, onPressEmoji: closure_35, onPressSticker: callback4, onPressGIF: closure_36, onBackspace: closure_37, visibleTabs: items };
       items = [, ];
       ({ EMOJI: arr[0], GIF: arr[1] } = memo);
       const result = obj.openExpressionPickerActionSheet(obj);
@@ -1277,7 +1225,7 @@ export default function ForumComposer(parentChannel) {
       if (markAsDismissed.visibleContent === lib(threadSettingsDraft[50]).DismissibleContent.MEDIA_CHANNEL_MULTIPLE_THUMBNAIL_NOTICE) {
         const obj = { markAsDismissed: null, actionSheetKey: "ThumbnailBottomSheet", importer: null };
         obj[0] = function markAsDismissed() {
-          return markAsDismissed(closure_1_25.UNKNOWN);
+          return markAsDismissed(callback3.UNKNOWN);
         };
         obj[2] = MediaPostMultipleThumbnailActionSheetImporter;
         tmp3 = createForumPost(lib(threadSettingsDraft[67]).DismissibleActionSheet, obj);

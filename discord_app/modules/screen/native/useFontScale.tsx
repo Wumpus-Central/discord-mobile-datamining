@@ -1,9 +1,9 @@
 // discord_app/modules/screen/native/useFontScale.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "DimensionsStore.android.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import getDimensionsStoreStateForEntry from "DimensionsStore.android.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/screen/native/useFontScale.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/screen/native/useFontScale.tsx");
 
 export const getFontScale = function getFontScale() {
   let str = arg0;

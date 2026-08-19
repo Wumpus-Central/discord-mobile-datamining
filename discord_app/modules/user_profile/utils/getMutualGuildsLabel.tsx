@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/utils/getMutualGuildsLabel.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 
-const result = set.fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
 
 export default function getMutualGuildsLabel(arg0) {
   if (undefined === arg0) {

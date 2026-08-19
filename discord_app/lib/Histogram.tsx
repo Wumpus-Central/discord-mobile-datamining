@@ -1,8 +1,8 @@
 // discord_app/lib/Histogram.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import TDigest from "../../_runtime/07491_TDigest.js";
 
-const result = set.fileFinishedImporting("lib/Histogram.tsx");
+const result = obj132.fileFinishedImporting("lib/Histogram.tsx");
 class Histogram {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -39,7 +39,7 @@ prototype["addSamples"] = function addSamples(prop3) {
   if (arg1 === undefined) {
     num = 1;
   }
-  this.total = this.total + prop3.reduce((arg0, arg1) => arg0 + arg1 * num, 0);
+  this.total = this.total + prop3.reduce((acc, item, index) => acc + item * num, 0);
   this.totalWeight = this.totalWeight + num * prop3.length;
   this.samples = this.samples + prop3.length;
   const push = num(7491).TDigest.prototype.push;

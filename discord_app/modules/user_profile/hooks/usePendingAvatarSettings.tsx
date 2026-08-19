@@ -1,15 +1,14 @@
 // discord_app/modules/user_profile/hooks/usePendingAvatarSettings.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../UserProfileSettingsStore.tsx";
+import handleFormOpen from "../UserProfileSettingsStore.tsx";
 
 noop.useCallback;
-let result = set.fileFinishedImporting("modules/user_profile/hooks/usePendingAvatarSettings.tsx");
+let result = obj132.fileFinishedImporting("modules/user_profile/hooks/usePendingAvatarSettings.tsx");
 
 export default function usePendingAvatarSettings(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
   const guildId = isTryItOut.guildId;
-  dependencyMap = undefined;
   const tmp2 = guildId(8373)(isTryItOut.analyticsLocations);
   dependencyMap = tmp2;
   let obj = isTryItOut(647);
@@ -33,8 +32,8 @@ export default function usePendingAvatarSettings(isTryItOut) {
   const items1 = [guildId];
   ({ pendingAvatar, pendingAvatarDecoration, pendingErrors } = stateFromStoresObject);
   let setTryItOutAvatar = useCallback((avatar) => {
-    let obj = isTryItOut(8374);
-    obj = { guildId, avatar };
+    isTryItOut(8374);
+    const obj = { guildId, avatar };
     obj.setPendingChanges(obj);
     let str = "set";
     if (null == avatar) {
@@ -44,8 +43,8 @@ export default function usePendingAvatarSettings(isTryItOut) {
   }, items1);
   const items2 = [tmp2, guildId];
   let setTryItOutAvatarDecoration = useCallback((avatarDecoration) => {
-    let obj = isTryItOut(8374);
-    obj = { guildId, avatarDecoration };
+    isTryItOut(8374);
+    const obj = { guildId, avatarDecoration };
     obj.setPendingChanges(obj);
     if (null != avatarDecoration) {
       dependencyMap(avatarDecoration);

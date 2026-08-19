@@ -1,9 +1,9 @@
 // discord_app/modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../VerifiedKeyStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import initialize from "../VerifiedKeyStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx");
 
 export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUserVerifiedKeysCount(userId) {
   userId = userId.userId;
@@ -15,7 +15,7 @@ export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUser
       return null;
     } else {
       const _Uint8Array = Uint8Array;
-      const uint8Array = new Uint8Array(tmp);
+      const uint8Array = new Uint8Array(keyToOmit);
       return userId(keyToOmit[2]).serializeKey(uint8Array);
     }
   }, items);
@@ -27,7 +27,7 @@ export const useSecureFramesUserVerifiedKeysCount = function useSecureFramesUser
     if (null != userVerifiedKeys) {
       const _Object = Object;
       const keys = Object.keys(userVerifiedKeys);
-      num = keys.filter((arg0) => arg0 !== closure_2).length;
+      num = keys.filter((item, index) => item !== closure_2).length;
     }
     return num;
   }, items2);

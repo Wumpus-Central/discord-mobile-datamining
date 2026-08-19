@@ -1,5 +1,5 @@
 // discord_common/js/packages/media-engine/native/transformStats.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import formatSinkWantStat from "../utils/transformStatsUtils.tsx";
 import { formatSinkWantStat } from "../utils/transformStatsUtils.tsx";
 
@@ -129,11 +129,10 @@ function sumBytes(rtpStats) {
 function transformPlayoutStats(obj) {
   obj = {};
   for (const key10006 in arg0) {
-    let tmp3 = key10006;
     let _Array = Array;
     let arr = arg0[key10006];
     if (Array.isArray(arg0[key10006])) {
-      obj[key10006] = arr.map((arg0) => arg0 * closure_2);
+      obj[key10006] = arr.map((item, index) => item * closure_2);
       continue;
     } else {
       if (null == arr) {
@@ -142,7 +141,6 @@ function transformPlayoutStats(obj) {
         let tmp = arg0[key10006];
         obj = { last: null, mean: null, p75: null, p95: null, p99: null, max: null };
         let _Math = Math;
-        let tmp2 = c2;
         obj[0] = Math.round(tmp.last * c2);
         let _Math2 = Math;
         obj[1] = Math.round(tmp.mean * c2);
@@ -165,22 +163,22 @@ function transformPlayoutStats(obj) {
 }
 function transformOutboundVideoStats(substreams, id) {
   substreams = substreams.substreams;
-  const found = substreams.find((isRTX) => {
-    isRTX = isRTX.isRTX;
+  const found = substreams.find((item, index) => {
+    const isRTX = item.isRTX;
     let tmp = !isRTX;
     if (!isRTX) {
-      tmp = !isRTX.isFlexFEC;
+      tmp = !item.isFlexFEC;
     }
     return tmp;
   });
   if (null != found) {
     const substreams1 = substreams.substreams;
     const substreams2 = substreams.substreams;
-    const reduced = substreams1.reduce((arg0, rtpStats) => arg0 + callback(rtpStats.rtpStats), 0);
+    const reduced = substreams1.reduce((acc, item, index) => acc + callback(item.rtpStats), 0);
     let obj = { type: "video", ssrc: null, sinkWant: null, sinkWantAsInt: null, codec: null, keyFrameInterval: null, bytesSent: null, packetsSent: null, packetsLost: null, fractionLost: null, bitrate: null, bitrateTarget: null, encoderImplementationName: null, encodeUsage: null, averageEncodeTime: null, resolution: null, framesSent: null, keyFramesEncoded: null, framesEncoded: null, frameRateInput: null, frameRateEncode: null, firCount: null, nackCount: null, pliCount: null, qpSum: null, bandwidthLimitedResolution: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, cpuLimitedResolution: null, encoderQualityVmaf: null, encoderQualityPsnr: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, filter: null, passthroughCount: null, encryptSuccessCount: null, encryptFailureCount: null, encryptDuration: null, encryptAttempts: null, encryptMaxAttempts: null, encryptMissingKeyCount: null, hqSimulcastStreamEncoded: null, lqSimulcastStreamEncoded: null, bandwidthLimitedFrameRate: null, freezeCount: null, totalFreezesDuration: null, totalFramesDuration: null, videoEntropy: null, consecutiveStaticColorFrames: null, minResolutionWidth: null, minResolutionHeight: null, reconFramesRequested: null, reconFramesSuccessful: null, reconFramesFailed: null };
     obj[1] = found.ssrc;
-    const reduced1 = substreams2.reduce((arg0, rtpStats) => {
-      rtpStats = rtpStats.rtpStats;
+    const reduced1 = substreams2.reduce((acc, item, index) => {
+      const rtpStats = item.rtpStats;
       let num;
       if (rtpStats != null) {
         num = rtpStats.packets;
@@ -219,10 +217,9 @@ function transformOutboundVideoStats(substreams, id) {
       if (num4 == null) {
         num4 = 0;
       }
-      return arg0 + (sum + num4 + num);
+      return acc + (sum + num4 + num);
     }, 0);
     obj[2] = formatSinkWantStat.formatSinkWantStat(id, found.ssrc, true);
-    const obj2 = formatSinkWantStat;
     obj[3] = formatSinkWantStat.formatSinkWantAsInt(id, found.ssrc);
     obj = { id: null, name: null };
     ({ codecPayloadType: obj4[0], codecName: obj4[1] } = substreams);
@@ -389,7 +386,7 @@ function transformOutboundVideoStats(substreams, id) {
     return obj;
   }
 }
-function transformInboundVideoStats(height, id, id) {
+function transformInboundVideoStats(height, id, id, playout2) {
   const rtpStats = height.rtpStats;
   let num;
   if (rtpStats != null) {
@@ -433,11 +430,8 @@ function transformInboundVideoStats(height, id, id) {
   const sum1 = sum + num4 + num;
   const tmp = sumBytes(height.rtpStats);
   obj[2] = formatSinkWantStat.formatSinkWantStat(id, height.ssrc, true);
-  const obj2 = formatSinkWantStat;
   obj[3] = formatSinkWantStat.formatSinkWantAsInt(id, height.ssrc);
-  const obj3 = formatSinkWantStat;
   obj[4] = formatSinkWantStat.formatSinkWantStat(id, height.ssrc, true);
-  const obj4 = formatSinkWantStat;
   obj[5] = formatSinkWantStat.formatSinkWantAsInt(id, height.ssrc);
   obj[6] = { id: height.codecPayloadType, name: height.codecName };
   obj[7] = tmp;
@@ -463,9 +457,9 @@ function transformInboundVideoStats(height, id, id) {
   obj[31] = height.rtcpStats.nackPackets;
   obj[32] = height.rtcpStats.pliPackets;
   ({ qpSum: obj[33], freezeCount: obj[34], pauseCount: obj[35], totalFreezesDuration: obj[36], totalPausesDuration: obj[37], totalFramesDuration: obj[38], sumOfSquaredFramesDurations: obj[39], passthroughCount: obj[40], decryptSuccessCount: obj[41], decryptFailureCount: obj[42], decryptDuration: obj[43], decryptAttempts: obj[44], decryptMissingKeyCount: obj[45], decryptInvalidNonceCount: obj[46], minResolutionWidth: obj[47], minResolutionHeight: obj[48] } = height);
-  if (null != arg3) {
+  if (null != playout2) {
     obj = { videoJitterBuffer: null, videoJitterDelay: null, videoJitterTarget: null };
-    ({ videoJitterBuffer: obj7[0], videoJitterDelay: obj7[1], videoJitterTarget: obj7[2] } = arg3);
+    ({ videoJitterBuffer: obj7[0], videoJitterDelay: obj7[1], videoJitterTarget: obj7[2] } = playout2);
     obj = transformPlayoutStats(obj);
   } else {
     obj = {};
@@ -474,7 +468,7 @@ function transformInboundVideoStats(height, id, id) {
   return obj;
 }
 let c2 = 1000;
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/transformStats.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/native/transformStats.tsx");
 
 export default function transformStats(mediaEngineConnectionId, str, id) {
   const _require = id;
@@ -497,9 +491,9 @@ export default function transformStats(mediaEngineConnectionId, str, id) {
       closure_3 = num + audio.bytesSent;
       let obj = { type: "audio", ssrc: null, sinkWant: null, sinkWantAsInt: null, codec: null, bytesSent: null, packetsSent: null, packetsLost: null, fractionLost: null, audioLevel: null, bitrate: null, bitrateTarget: null, audioDetected: null, framesCaptured: null, framesRendered: null, noiseCancellerFrames: null, noiseCancellerProcessTime: null, voiceActivityDetectorProcessTime: null, passthroughCount: null, encryptSuccessCount: null, encryptFailureCount: null, encryptDuration: null, encryptAttempts: null, encryptMaxAttempts: null, encryptMissingKeyCount: null, pttQueueLatencyMicrosSamples: null, sampleRateMismatchPercent: null, currentSampleRate: null };
       obj[1] = audio.ssrc;
-      obj1 = _formatSinkWantStat;
+      obj1 = formatSinkWantStat;
       obj[2] = obj1.formatSinkWantStat(id, audio.ssrc, false);
-      let obj2 = _formatSinkWantStat;
+      let obj2 = formatSinkWantStat;
       obj[3] = obj2.formatSinkWantAsInt(id, audio.ssrc);
       obj = { id: null, name: null };
       ({ codecPayloadType: obj4[0], codecName: obj4[1] } = audio);
@@ -513,8 +507,8 @@ export default function transformStats(mediaEngineConnectionId, str, id) {
       items.push(obj);
     }
     if (null != videos) {
-      let item = videos.forEach((arg0) => {
-        const tmp = obj(arg0, closure_0);
+      let item = videos.forEach((item, index) => {
+        const tmp = obj(item, closure_0);
         if (null != tmp) {
           let num = closure_3;
           if (closure_3 == null) {
@@ -539,31 +533,30 @@ export default function transformStats(mediaEngineConnectionId, str, id) {
   obj = {};
   if (null != parsed.inbound) {
     const inbound = parsed.inbound;
-    const item1 = inbound.forEach((id) => {
-      id = id.id;
-      ({ audio, video, videos, playout } = id);
+    const item1 = inbound.forEach((item, index) => {
+      id = item.id;
+      ({ audio, video, videos, playout } = item);
       obj[id] = [];
       if (null == audio) {
         if (null != videos) {
-          const item = videos.forEach((rtpStats) => {
+          item = videos.forEach((item, index) => {
             let num = closure_2;
-            const tmp = closure_2_6(rtpStats, id, playout, playout);
+            const tmp = transformInboundVideoStats(item, id, playout, playout);
             if (closure_2 == null) {
               num = 0;
             }
-            closure_2 = num + callback(rtpStats.rtpStats);
-            let arr = closure_1_5[id];
+            closure_2 = num + callback(item.rtpStats);
+            let arr = obj[id];
             arr = arr.push(tmp);
           });
         } else if (null != video) {
           let num7 = closure_2;
-          const tmp14 = closure_1_6(video, id, playout, playout);
+          const tmp14 = transformInboundVideoStats(video, id, playout, playout);
           if (closure_2 == null) {
             num7 = 0;
           }
           closure_2 = num7 + callback(video.rtpStats);
           let arr = tmp[id].push(tmp14);
-          const arr2 = tmp[id];
           const tmp16 = callback(video.rtpStats);
         }
       } else {
@@ -595,7 +588,6 @@ export default function transformStats(mediaEngineConnectionId, str, id) {
         if (null != playout) {
           ({ audioJitterBuffer: obj6[0], audioJitterBufferSamples: obj6[1], audioJitterDelay: obj6[2], audioJitterDelaySamples: obj6[3], audioJitterTarget: obj6[4], audioJitterTargetSamples: obj6[5], audioPlayoutUnderruns: obj6[6], relativeReceptionDelay: obj6[7], relativePlayoutDelay: obj6[8] } = playout);
           obj2 = items({ audioJitterBuffer: null, audioJitterBufferSamples: null, audioJitterDelay: null, audioJitterDelaySamples: null, audioJitterTarget: null, audioJitterTargetSamples: null, audioPlayoutUnderruns: null, relativeReceptionDelay: null, relativePlayoutDelay: null });
-          obj1 = { audioJitterBuffer: null, audioJitterBufferSamples: null, audioJitterDelay: null, audioJitterDelaySamples: null, audioJitterTarget: null, audioJitterTargetSamples: null, audioPlayoutUnderruns: null, relativeReceptionDelay: null, relativePlayoutDelay: null };
         } else {
           obj2 = {};
         }
@@ -678,7 +670,6 @@ export default function transformStats(mediaEngineConnectionId, str, id) {
   if (null != camera) {
     ({ capturedFramesDropped: obj8[0], capturedFramesCount: obj8[1], capturedFramesMean: obj8[2], capturedFramesStdev: obj8[3] } = camera);
     tmp25 = { capturedFramesDropped: null, capturedFramesCount: null, capturedFramesMean: null, capturedFramesStdev: null };
-    let obj3 = { capturedFramesDropped: null, capturedFramesCount: null, capturedFramesMean: null, capturedFramesStdev: null };
   }
   obj2[3] = tmp25;
   obj2[4] = parsed.clips;

@@ -1,10 +1,10 @@
 // discord_app/modules/instant_invite/native/components/openInstantInviteActionSheet.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import encodeProperties from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
-const result = set.fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
+const result = obj132.fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
 
 export default function openInstantInviteActionSheet(invite_channel_id) {
   let obj = ACTION_SHEET_HEIGHT_HALFDefault;
@@ -18,4 +18,5 @@ export default function openInstantInviteActionSheet(invite_channel_id) {
   obj.impressionName = encodeProperties.ImpressionNames.GUILD_INVITE;
   obj.impressionProperties = { invite_channel_id: invite_channel_id.channel.id, invite_guild_id: invite_channel_id.channel.guild_id };
   obj.openLazy(asyncRequireImpl(8927, dependencyMap.paths), combined, obj, invite_channel_id.stackingBehavior);
+  const tmp3 = asyncRequireImpl(8927, dependencyMap.paths);
 };

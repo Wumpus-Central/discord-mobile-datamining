@@ -4,16 +4,16 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
 import redactionSettingToRenderedString from "ExplicitMediaRedactionUtils.tsx";
 
-require = arg1;
+require = fn;
 function handleSearchMessagesSuccess(data) {
   data = data.data;
   closure_2 = {};
-  let item = data.forEach((messages) => {
-    messages = messages.messages;
-    let item = messages.forEach((arr) => {
-      const item = arr.forEach((channel_id) => {
-        const combined = "" + channel_id.channel_id + ":" + channel_id.id;
-        closure_2[combined] = callback(table[0]).createMessageRecord(channel_id);
+  let item = data.forEach((item, index) => {
+    const messages = item.messages;
+    item = messages.forEach((item, index) => {
+      item = item.forEach((item, index) => {
+        const combined = "" + item.channel_id + ":" + item.id;
+        closure_2[combined] = callback(table[0]).createMessageRecord(item);
       });
     });
   });
@@ -37,8 +37,7 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(dispatcherDefault,
         const combined = "" + message.channel_id + ":" + message.id;
         let flag = null != tmp7;
         if (flag) {
-          let obj = createMinimalMessageRecord;
-          obj = { attachments: null, embeds: null };
+          const obj = { attachments: null, embeds: null };
           ({ attachments: obj2[0], embeds: obj2[1] } = message);
           dependencyMap[combined] = obj.updateMessageRecord(tmp7, obj);
           flag = true;
@@ -58,10 +57,9 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(dispatcherDefault,
     const combined = "" + channelId.channelId + ":" + channelId.messageId;
     if (null != dependencyMap[combined]) {
       dependencyMap[combined] = redactionSettingToRenderedString.handleExplicitMediaScanTimeoutForMessage(tmp2);
-      const obj = redactionSettingToRenderedString;
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx");
 
 export default explicitMediaSearchStore;

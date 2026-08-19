@@ -3,13 +3,13 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import context from "../CollectiblesAnalyticsContext.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../user_settings/ThemeStore.tsx";
-import closure_6 from "../CollectiblesCategoryStore.tsx";
+import handleThemeChange from "../../user_settings/ThemeStore.tsx";
+import updateCategoriesAndProducts from "../CollectiblesCategoryStore.tsx";
 import items from "../CollectiblesShopConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function CollectiblesShopCardInternalV2(product) {
   product = product.product;
   require = product;
@@ -71,8 +71,8 @@ function CollectiblesShopCardInternalV2(product) {
   c5 = stringResult;
   const items1 = [stringResult];
   const callback1 = shouldShowWishlistNUXActionSheet.useCallback(() => {
-    let obj = closure_1_1(selectedProduct[15]);
-    obj = { key: "WISHLIST_ERROR", content: c5 };
+    importDefault(selectedProduct[15]);
+    const obj = { key: "WISHLIST_ERROR", content: c5 };
     obj.open(obj);
   }, items1);
   trackShopCardClick = require(selectedProduct[17]).useTrackShopCardClick({ product, analyticsLocations: importDefault(tmp3[16])().analyticsLocations });
@@ -176,8 +176,7 @@ function CollectiblesShopCardInternalV2(product) {
       }
       items7[1] = tmp18;
       obj3[1] = items7;
-      let tmp25Result = tmp25(showWishlistNUXActionSheet, obj3);
-      const tmp40 = showWishlistNUXActionSheet;
+      let tmp25Result = callback2(showWishlistNUXActionSheet, obj3);
     } else {
       tmp25Result = null;
     }
@@ -193,16 +192,16 @@ function CollectiblesShopCardInternalV2(product) {
     obj5[4] = disableBundleStaticBackground;
     obj5[5] = muteBundleStaticBackground;
     obj5[6] = cardWidth;
-    items8[1] = callback(tmp9(tmp3[32]), obj5);
+    items8[1] = callback(importDefault(tmp3[32]), obj5);
     const obj6 = { product: null, collectibleProductState: null, preferVCPrice: null, isDisabled: null, hidePrice: null };
     obj6[0] = product;
     obj6[1] = collectibleProductState;
     obj6[2] = preferVCPrice;
     obj6[3] = isDisabled;
     obj6[4] = flag;
-    items8[2] = callback(tmp9(tmp3[33]), obj6);
+    items8[2] = callback(importDefault(tmp3[33]), obj6);
     obj2[7] = items8;
-    return tmp25(tmp2(tmp3[22]).PressableOpacity, obj2);
+    return callback2(tmp2(tmp3[22]).PressableOpacity, obj2);
   } else if (tmp28) {
     const items9 = [tmp.badgePill, ];
     obj7 = { style: null, accessibilityLabel: null, children: null };
@@ -219,7 +218,6 @@ function CollectiblesShopCardInternalV2(product) {
     stateFromStores = tmp36(tmp2(tmp3[25]).NitroWheelIcon, obj8);
     obj7[2] = stateFromStores;
     let tmp34Result = tmp36(showWishlistNUXActionSheet, obj7);
-    const tmp37 = showWishlistNUXActionSheet;
   } else if (null != badgeOverride) {
     const items10 = [tmp.badgePill, ];
     const obj9 = { style: null, children: null };
@@ -235,7 +233,6 @@ function CollectiblesShopCardInternalV2(product) {
     obj10[5] = badgeOverride;
     obj9[1] = callback(tmp2(tmp3[26]).Text, obj10);
     tmp34Result = tmp34(showWishlistNUXActionSheet, obj9);
-    const tmp35 = showWishlistNUXActionSheet;
   } else {
     if (tmp2Result8.isDynamicProduct(selectedProduct)) {
       const obj11 = { icon: null, accessibilityLabel: null, isDark: null };
@@ -248,7 +245,7 @@ function CollectiblesShopCardInternalV2(product) {
       const obj12 = { unpublishedAt: null, style: null };
       obj12[0] = unpublishedAt;
       obj12[1] = tmp.badge;
-      tmp34Result = callback(tmp9(tmp3[29]), obj12);
+      tmp34Result = callback(importDefault(tmp3[29]), obj12);
     } else if ("nitroClaim" === collectibleProductState) {
       tmp34Result = callback(tmp2(tmp3[25]).NitroWheelIcon, { color: "mobile-text-heading-primary" });
     } else {
@@ -265,33 +262,30 @@ function CollectiblesShopCardInternalV2(product) {
     }
     tmp2Result8 = tmp2(tmp3[9]);
   }
+  const tmp2Result7 = require(selectedProduct[9]);
 }
 function CollectiblesShopCardV2Inner(product) {
   product = product.product;
   require = product;
   let onPress = product.onPress;
-  let defaultVariantIndex;
   let analyticsLocations;
-  let collectiblesAnalyticsContext;
-  let isPurchased;
-  let isPartiallyOwnedBundle;
   closure_6 = undefined;
-  let result1;
   ({ unpublishedAt, solidBackground, preferVCPrice, cardWidth, cardStyle, hideWishlistButton, hidePrice, disableBundleStaticBackground, muteBundleStaticBackground } = product);
   let obj = require(analyticsLocations[8]);
-  defaultVariantIndex = obj.useDefaultVariantIndex(product);
+  const defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const selectedProduct = require(analyticsLocations[9]).getSelectedProduct(product, defaultVariantIndex);
   analyticsLocations = defaultVariantIndex(analyticsLocations[16])().analyticsLocations;
-  const obj2 = require(analyticsLocations[9]);
+  let obj2 = require(analyticsLocations[9]);
   const tmp = analyticsLocations;
   const tmp4 = defaultVariantIndex;
-  collectiblesAnalyticsContext = require(analyticsLocations[34]).useCollectiblesAnalyticsContext();
+  const collectiblesAnalyticsContext = require(analyticsLocations[34]).useCollectiblesAnalyticsContext();
   const items = [analyticsLocations, product, defaultVariantIndex, collectiblesAnalyticsContext];
   const callback = collectiblesAnalyticsContext.useCallback(() => {
     let obj = defaultVariantIndex(analyticsLocations[35]);
     obj.hideActionSheet();
     obj = { product: closure_0, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
     const result = product(analyticsLocations[36]).openProductDetailsActionSheet(obj);
+    const obj2 = product(analyticsLocations[36]);
   }, items);
   const obj3 = require(analyticsLocations[34]);
   const obj4 = collectiblesAnalyticsContext;
@@ -303,15 +297,15 @@ function CollectiblesShopCardV2Inner(product) {
   const canUseCollectiblesResult = defaultVariantIndex(analyticsLocations[39]).canUseCollectibles(currentUser);
   const obj8 = defaultVariantIndex(analyticsLocations[39]);
   const productPurchaseState = require(analyticsLocations[40]).useProductPurchaseState(selectedProduct);
-  isPurchased = productPurchaseState.isPurchased;
-  isPartiallyOwnedBundle = productPurchaseState.isPartiallyOwnedBundle;
+  const isPurchased = productPurchaseState.isPurchased;
+  const isPartiallyOwnedBundle = productPurchaseState.isPartiallyOwnedBundle;
   const obj9 = require(analyticsLocations[40]);
   const obj10 = require(analyticsLocations[41]);
   const oneDayFractionalNitroEnabled = require(analyticsLocations[42]).useOneDayFractionalNitroEnabled("product_card");
   const obj11 = require(analyticsLocations[42]);
   let result = require(analyticsLocations[23]).isPremiumCollectiblesProduct(selectedProduct);
   const obj12 = require(analyticsLocations[23]);
-  result1 = require(analyticsLocations[23]).isFreeCollectiblesProduct(selectedProduct);
+  let result1 = require(analyticsLocations[23]).isFreeCollectiblesProduct(selectedProduct);
   let tmp14 = result;
   if (result) {
     tmp14 = !canUseCollectiblesResult;
@@ -362,13 +356,13 @@ function CollectiblesShopCardV2Inner(product) {
   obj[11] = isShopCardImpressionMobileEnabled;
   obj[12] = disableBundleStaticBackground;
   obj[13] = muteBundleStaticBackground;
-  let tmp17Result = tmp17(CollectiblesShopCardInternalV2, obj);
+  let tmp17Result = callback(CollectiblesShopCardInternalV2, obj);
   if (!isShopCardImpressionMobileEnabled) {
     obj = { onChange: null, resetKey: null, children: null };
     obj[0] = obj6.useTrackProductCardImpression(product.skuId).handleCardVisibilityChange;
     obj[1] = product.skuId;
     obj[2] = tmp17Result;
-    tmp17Result = tmp17(tmp4(tmp[43]), obj);
+    tmp17Result = callback(tmp4(tmp[43]), obj);
   }
   return tmp17Result;
 }
@@ -380,20 +374,17 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-let obj = { card: null, topRowOverlay: null, badge: null, badgePill: null, badgeOverrideText: null, badgePillDarkMode: null, badgePillLightMode: null, wishlistButton: null };
-obj = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+let obj = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[0] = obj;
 obj[1] = { position: "absolute", top: 6, left: 6, right: 6, zIndex: 2, display: "flex", flexDirection: "row", gap: 4, justifyContent: "space-between", alignItems: "flex-start" };
 obj[2] = { flexShrink: 1 };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_4, paddingVertical: 1.5, borderRadius: ThemesDefault.radii.round, flexShrink: 1 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_4, paddingVertical: 1.5, borderRadius: ThemesDefault.radii.round, flexShrink: 1 };
 obj[3] = createCacheKey;
 obj[4] = { textTransform: "uppercase" };
 obj[5] = { backgroundColor: ThemesDefault.colors.WHITE };
-let obj2 = { backgroundColor: ThemesDefault.colors.WHITE };
 obj[6] = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
 obj[7] = { marginLeft: "auto", flexShrink: 0 };
 let closure_11 = createCacheKey.createStyles(obj);
-let obj3 = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
 const memoResult = importAllResult.memo(function CollectiblesShopCardV2(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
@@ -412,7 +403,7 @@ const memoResult = importAllResult.memo(function CollectiblesShopCardV2(arg0) {
     return callback(context.CollectiblesAnalyticsProvider, obj);
   }
 });
-let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardV2.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardV2.tsx");
 
 export default memoResult;
 export const COLLECTIBLES_SHOP_CARD_HEIGHT = num;

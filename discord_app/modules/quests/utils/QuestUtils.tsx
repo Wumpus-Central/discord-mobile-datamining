@@ -4,15 +4,15 @@ import QuestSharePolicy from "../../../../discord_common/js/shared/shared-consta
 import canStreamInChannel from "../../go_live/utils/StreamPermissionUtils.tsx";
 import QuestType2 from "../../../../discord_common/js/shared/shared-constants/QuestType.tsx";
 import getQuestContentName from "../lib/analytics/AnalyticsTypes.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../game_console/GameConsoleStore.tsx";
-import closure_4 from "../../../stores/GuildStore.tsx";
-import closure_5 from "../../../stores/PermissionStore.tsx";
-import closure_6 from "../../../stores/VoiceStateStore.tsx";
-import closure_7 from "../QuestUtmStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import set from "../../game_console/GameConsoleStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
+import keys from "../QuestUtmStore.tsx";
 import QuestsExperimentLocations from "../QuestConstants.tsx";
 
-require = arg1;
+require = fn;
 function isSponsoredPlayQuest(quest) {
   if (null == quest) {
     return false;
@@ -29,7 +29,7 @@ function hasVariant(nextResult, NON_GAMING_PLAY_QUEST) {
   return new Set(nextResult.config.features).has(NON_GAMING_PLAY_QUEST);
 }
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: c9, RewardFilterTypes: c10 } = QuestsExperimentLocations);
-let result = require("set").fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
 export { isSponsoredPlayQuest };
 export const isPlayAnyActivityQuest = function isPlayAnyActivityQuest(quest) {
@@ -47,29 +47,15 @@ export const canLaunchActivity = function canLaunchActivity(quest) {
 export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(stateFromStores, closure_1_15) {
   const map = new Map();
   while (tmp !== undefined) {
-    let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
     [tmp5, tmp6] = tmp4;
-    let tmp7 = tmp6;
-    let tmp8 = isSponsoredPlayQuest;
     if (!isSponsoredPlayQuest(tmp6)) {
-      let tmp9 = hasVariant;
-      let tmp10 = tmp6;
-      let tmp11 = constants;
-      if (!hasVariant(tmp7, constants.NON_GAMING_PLAY_QUEST)) {
-        let tmp12 = require;
-        let tmp13 = dependencyMap;
+      if (!hasVariant(tmp6, constants.NON_GAMING_PLAY_QUEST)) {
         let obj2 = getApplicationIdsByTaskTypes;
-        let tmp14 = tmp6;
-        let questTaskTypes = obj2.getQuestTaskTypes(tmp7);
-        let tmp16 = questTaskTypes;
-        let tmp17 = questTaskTypes;
+        let questTaskTypes = obj2.getQuestTaskTypes(tmp6);
         for (const item10038 of questTaskTypes) {
           if (arg1.has(item10038)) {
-            let tmp18 = tmp5;
-            let tmp19 = tmp6;
-            let result = map.set(tmp5, tmp7);
-            let tmp21 = obj3;
+            let result = map.set(tmp5, tmp6);
             obj3.return();
             break;
           }
@@ -93,8 +79,7 @@ export const isStreamingAndCanWatch = function isStreamingAndCanWatch(arg0, stat
   return first;
 };
 export const getQuestType = function getQuestType(config) {
-  let obj = getApplicationIdsByTaskTypes;
-  obj = { config };
+  const obj = { config };
   const QuestType = QuestType2.QuestType;
   return obj.hasWatchVideoTasks(obj) ? QuestType.VIDEO : QuestType.GAMEPLAY;
 };
@@ -110,20 +95,20 @@ export const isQuestFeaturedByHero = function isQuestFeaturedByHero(questHomeHer
   return flag;
 };
 export const shouldShowBountiesGivenFilters = function shouldShowBountiesGivenFilters(filters) {
-  const someResult = filters.some((group) => "task" === group.group);
+  const someResult = filters.some((item, index) => "task" === item.group);
   let tmp2 = !someResult;
   if (!someResult) {
-    tmp2 = 0 === filters.length || filters.some((group) => {
-      let tmp = "reward" === group.group;
+    tmp2 = 0 === filters.length || filters.some((item, index) => {
+      let tmp = "reward" === item.group;
       if (tmp) {
-        tmp = group.filter === constants.VIRTUAL_CURRENCY;
+        tmp = item.filter === constants.VIRTUAL_CURRENCY;
       }
       return tmp;
     });
-    const tmp3 = 0 === filters.length || filters.some((group) => {
-      let tmp = "reward" === group.group;
+    const tmp3 = 0 === filters.length || filters.some((item, index) => {
+      let tmp = "reward" === item.group;
       if (tmp) {
-        tmp = group.filter === constants.VIRTUAL_CURRENCY;
+        tmp = item.filter === constants.VIRTUAL_CURRENCY;
       }
       return tmp;
     });

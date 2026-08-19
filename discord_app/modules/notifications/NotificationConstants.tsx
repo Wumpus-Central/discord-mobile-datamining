@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/NotificationConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/notifications/NotificationConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/notifications/NotificationConstants.tsx");
 
 export const AccountNotificationFlags = { USE_NEW_NOTIFICATIONS: 16, [16]: "USE_NEW_NOTIFICATIONS", MENTION_ON_ALL_MESSAGES: 32, [32]: "MENTION_ON_ALL_MESSAGES" };
 export const NotificationSettingsUpdateType = { GUILD: "guild", CHANNEL: "channel", ACCOUNT: "account", AUTHORIZED_APP_DM: "authorized_app_dm", AUTHORIZED_APP_DM_PUSH_NOTIFICATION: "authorized_app_dm_push_notification" };

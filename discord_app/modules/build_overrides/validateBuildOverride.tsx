@@ -1,26 +1,25 @@
 // discord_app/modules/build_overrides/validateBuildOverride.tsx
 import applyDefault from "../../../_runtime/00012_apply.js";
 import getSystemLocale from "../../intl/index.native.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../stores/AuthenticationStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
 import { BUILD_OVERRIDE_TARGET_NAMES as closure_5 } from "BuildOverrideConstants.tsx";
 import { PublicReleaseChannels } from "../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");
 
-export default function validateBuildOverride(targetBuildOverride, items1) {
+export default function validateBuildOverride(targetBuildOverride, items2) {
   if (null != targetBuildOverride) {
-    if (null != items1) {
+    if (null != items2) {
       ({ releaseChannel, expiresAt, validForUserIds, allowedVersions } = targetBuildOverride);
       const _Object = Object;
       const keys = Object.keys(targetBuildOverride.targetBuildOverride);
-      if (0 === obj12.intersection(keys, items1).length) {
-        let obj = { valid: false, reason: null };
+      if (0 === obj12.intersection(keys, items2).length) {
         const intl5 = getSystemLocale.intl;
-        obj = { requestedTargets: null };
-        const mapped = keys.map((arg0) => {
-          let str = table[arg0];
+        let obj = { requestedTargets: null };
+        const mapped = keys.map((item, index) => {
+          let str = table[item];
           if (str == null) {
             str = "unknown";
           }
@@ -58,14 +57,11 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
           } else {
             const iter = allowedVersions[Symbol.iterator]();
             while (iter !== undefined) {
-              let tmp6 = callback;
               let tmp7 = callback(str3.split("."), 2);
               let first = tmp7[0];
               if ("*" === tmp7[1]) {
-                let tmp9 = first;
                 if (tmp2 === first) {
                   flag = true;
-                  let tmp10 = iter;
                   iter.return();
                   break;
                 }

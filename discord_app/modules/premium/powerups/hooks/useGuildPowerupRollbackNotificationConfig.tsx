@@ -1,15 +1,15 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx
 import messagesProxyDefault from "../GuildPowerups.messages.js";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
-import closure_3 from "../GuildPowerupsStore.tsx";
+import calculateAppliedBoosts from "../GuildPowerupsStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");
 
 export default function useGuildPowerupRollbackNotificationConfig(guildId, location) {
   const _require = guildId;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getStateForGuild(closure_0));
   let tmp4;

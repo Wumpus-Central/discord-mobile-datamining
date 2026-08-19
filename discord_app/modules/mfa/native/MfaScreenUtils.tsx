@@ -1,5 +1,5 @@
 // discord_app/modules/mfa/native/MfaScreenUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import NAV_BAR_HEIGHT2 from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -16,16 +16,15 @@ obj[0] = createCacheKey.createStyles((arg0) => {
   const space = ThemesDefault.space;
   if (arg0) {
     let PX_16 = space.PX_24;
-    let tmp6 = tmp5;
+    let tmp6 = importDefault;
   } else {
     PX_16 = space.PX_16;
-    tmp6 = tmp5;
+    tmp6 = importDefault;
   }
   obj[1] = PX_16;
   const space2 = tmp6(712).space;
   obj[2] = arg0 ? space2.PX_24 : space2.PX_16;
   const space3 = tmp6(712).space;
-  obj = { contentContainer: obj, mfaContainerHeader: null, mfaContainerHeaderText: null, inputContainer: arg0 ? space3.PX_24 : space3.PX_16, smsContainer: null, smsInput: null, radioItem: null, submit: null };
   obj = { flexDirection: "column", alignItems: "center", paddingBottom: tmp6(712).space.PX_24 };
   obj[1] = obj;
   let num = 0;
@@ -44,10 +43,9 @@ obj[0] = createCacheKey.createStyles((arg0) => {
   obj[5] = { flexDirection: "row", alignSelf: "stretch" };
   obj[6] = { backgroundColor: tmp6(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: tmp6(712).radii.md };
   const obj2 = { backgroundColor: tmp6(712).colors.BACKGROUND_SURFACE_HIGH, borderRadius: tmp6(712).radii.md };
-  const tmp = require;
   obj[7] = { paddingTop: tmp6(712).space.PX_24 };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/mfa/native/MfaScreenUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/mfa/native/MfaScreenUtils.tsx");
 
 export default obj;

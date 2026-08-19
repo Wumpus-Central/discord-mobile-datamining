@@ -5,17 +5,16 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import SafeAreaPaddingView from "../../../../components_native/common/SafeAreaView.tsx";
 import FormSeparatorDefault from "FormSeparator.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function Header(arg0) {
   ({ description, title } = arg0);
   const tmp = callback3();
-  let obj = { top: true, style: tmp.headerContainer, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
+  let obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
   const items = [callback(Text.Text, obj), , ];
   obj = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
   items[1] = callback(Text.Text, obj);
@@ -34,9 +33,8 @@ function Footer(arg0) {
     stringResult = intl.string(getSystemLocale.t["bm6P5/"]);
     tmp5 = require;
   }
-  let obj = { style: null, children: null };
   const items = [callback3().footerContainer, ];
-  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
+  let obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
   obj[0] = items;
   obj = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };
@@ -45,8 +43,7 @@ function Footer(arg0) {
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, scrollContainer: null, headerContainer: null, title: null, subtitle: null, separator: null, footerContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 1 };
 createCacheKey[2] = { position: "relative", paddingTop: 48, paddingBottom: 8, paddingHorizontal: 16, alignItems: "center" };
@@ -55,17 +52,16 @@ createCacheKey[4] = { marginTop: 8, textAlign: "center" };
 createCacheKey[5] = { marginTop: 24 };
 createCacheKey[6] = { width: "100%", padding: 16 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx");
 
 export default function GuildRoleSubscriptionTierEditStep(scrollable) {
   const merged = Object.assign(scrollable, Object.create(null));
   let navigation;
-  let nextStep;
   let onProceed;
   const tmp2 = callback3();
   let obj = navigation(onProceed[11]);
   navigation = obj.useNavigation();
-  nextStep = merged.nextStep;
+  const nextStep = merged.nextStep;
   onProceed = merged.onProceed;
   const items = [navigation, nextStep, onProceed];
   const callback = React.useCallback(() => {
@@ -104,5 +100,5 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
     items3[2] = callback(Footer, obj5);
     obj3[1] = items3;
   }
-  return closure_7(closure_4, obj3);
+  return callback(closure_4, obj3);
 };

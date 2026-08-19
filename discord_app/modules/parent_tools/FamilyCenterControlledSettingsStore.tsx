@@ -4,7 +4,7 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import create from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import b64ToProto from "../user_settings/UserSettingsUtils.tsx";
 
-require = arg1;
+require = fn;
 let c2 = false;
 let closure_3 = {};
 let closure_4 = {};
@@ -31,7 +31,6 @@ prototype["hasConsented"] = function hasConsented(arg0, arg1) {
     let tmp3 = null != tmp2;
     if (tmp3) {
       tmp3 = null != tmp2[arg1] && tmp2[arg1].consented;
-      const tmp5 = null != tmp2[arg1] && tmp2[arg1].consented;
     }
     return tmp3;
   }
@@ -51,7 +50,6 @@ const familyCenterControlledSettingsStore = new FamilyCenterControlledSettingsSt
     ({ userId, settings, consents } = arg0);
     if (null != settings) {
       closure_3[userId] = b64ToProto.b64ToPreloadedUserSettingsProto(settings);
-      const obj = b64ToProto;
     }
     if (null != consents) {
       closure_4[userId] = consents;
@@ -64,7 +62,6 @@ const familyCenterControlledSettingsStore = new FamilyCenterControlledSettingsSt
   FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: function handleTeenUpdateSettingsSuccess(userId) {
     userId = userId.userId;
     const result = b64ToProto.b64ToPreloadedUserSettingsProto(userId.settings);
-    const obj = b64ToProto;
     dependencyMap[userId] = b64ToProto.mergeTopLevelFields(create.PreloadedUserSettings, dependencyMap[userId], result);
   },
   LOGOUT: function handleLogout() {
@@ -73,6 +70,6 @@ const familyCenterControlledSettingsStore = new FamilyCenterControlledSettingsSt
     c2 = false;
   }
 });
-let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterControlledSettingsStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/parent_tools/FamilyCenterControlledSettingsStore.tsx");
 
 export default familyCenterControlledSettingsStore;

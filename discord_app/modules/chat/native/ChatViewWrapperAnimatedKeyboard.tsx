@@ -6,7 +6,7 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import { Easing } from "../../reanimated/ReanimatedRexport.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { duration: require("timingNone").timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
@@ -15,7 +15,6 @@ let closure_9 = { code: "function ChatViewWrapperAnimatedKeyboardTsx2(height,hei
 let closure_10 = { code: "function ChatViewWrapperAnimatedKeyboardTsx3(){const{animatedAdjustedMargin,withTiming,animatedHeight,INSET_ANIMATION_CONFIG2,animatedAdjustedMarginPending}=this.__closure;return{flex:1,marginTop:animatedAdjustedMargin.get(),transform:[{translateY:withTiming(-animatedHeight.get(),INSET_ANIMATION_CONFIG2,'respect-motion-settings',function(finished){if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}})}]};}" };
 let closure_11 = { code: "function ChatViewWrapperAnimatedKeyboardTsx4(finished){const{animatedAdjustedMarginPending,animatedAdjustedMargin}=this.__closure;if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}}" };
 let closure_12 = importAllResult.memo((channelId) => {
-  closure_0 = undefined;
   const tmp = useCustomKeyboardHeightDefault();
   closure_0 = tmp;
   const items = [tmp];
@@ -25,12 +24,11 @@ let closure_12 = importAllResult.memo((channelId) => {
   return callback(View, obj);
 });
 const bezierResult = Easing.bezier(0.2, 0, 0, 1);
-let result = require("set").fileFinishedImporting("modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx");
+let result = require("obj132").fileFinishedImporting("modules/chat/native/ChatViewWrapperAnimatedKeyboard.tsx");
 
 export default function ChatViewWrapperAnimatedKeyboard(arg0) {
   ({ channelId, style } = arg0);
   ({ children, stickyHeader } = arg0);
-  obj = undefined;
   let sharedValue;
   let sharedValue1;
   obj = sharedValue(sharedValue1[5])();
@@ -61,8 +59,7 @@ export default function ChatViewWrapperAnimatedKeyboard(arg0) {
   const animatedReaction = obj(sharedValue1[3]).useAnimatedReaction(fn, fn2);
   const obj4 = obj(sharedValue1[3]);
   const fn3 = function s() {
-    obj = { flex: 1, marginTop: sharedValue.get(), transform: null };
-    obj = { translateY: null };
+    { flex: 1, marginTop: sharedValue.get(), transform: null };
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {

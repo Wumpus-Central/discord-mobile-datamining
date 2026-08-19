@@ -1,10 +1,9 @@
 // discord_app/actions/EntitlementActionCreators.tsx
 import dispatcherDefault from "../Dispatcher.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../Constants.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
-const require = arg1;
+const require = fn;
 function _fetchUserEntitlements() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -175,7 +174,7 @@ function _fetchGiftableEntitlements() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("actions/EntitlementActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("actions/EntitlementActionCreators.tsx");
 
 export const fetchUserEntitlementsForApplication = function fetchUserEntitlementsForApplication(closure_18, arg1) {
   const _require = closure_18;
@@ -185,21 +184,18 @@ export const fetchUserEntitlementsForApplication = function fetchUserEntitlement
   }
   let obj = dispatcherDefault;
   obj.wait(() => {
-    let obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId: closure_0 };
+    const obj = { type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId: closure_0 };
     obj.dispatch(obj);
   });
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj = { url: Endpoints.ENTITLEMENTS_FOR_APPLICATION(closure_18), oldFormErrors: true, query: { exclude_consumed: flag }, rejectWithError: true };
   const value = HTTP.get(obj);
-  return value.then((body) => {
-    let obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS", applicationId: closure_0, entitlements: body.body };
+  return value.then((result) => {
+    const obj = { type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS", applicationId: closure_0, entitlements: result.body };
     obj.dispatch(obj);
-    return body.body;
-  }).catch(() => {
-    let obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "ENTITLEMENT_FETCH_APPLICATION_FAIL", applicationId: closure_0 };
+    return result.body;
+  }).catch((error) => {
+    const obj = { type: "ENTITLEMENT_FETCH_APPLICATION_FAIL", applicationId: closure_0 };
     obj.dispatch(obj);
   });
 };

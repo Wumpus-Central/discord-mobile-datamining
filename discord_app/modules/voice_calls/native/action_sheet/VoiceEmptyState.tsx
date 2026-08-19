@@ -9,14 +9,13 @@ import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Fonts } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { justifyContent: "center" }, button: { paddingHorizontal: 12, paddingTop: 16 }, emptyTitle: null, emptyBody: null };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
 createCacheKey.textTransform = "none";
 createCacheKey.lineHeight = 24;
@@ -28,13 +27,12 @@ obj1.fontWeight = "600";
 createCacheKey[3] = obj1;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx");
 
 export default function VoiceEmptyState(channel) {
   const tmp = callback3();
-  let obj = { style: null, children: null };
   const items = [tmp.container, ];
-  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
+  let obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
   obj[0] = items;
   obj = { title: null, body: null, lightSource: null, darkSource: null, titleStyle: null, bodyStyle: null, imageStyle: null };

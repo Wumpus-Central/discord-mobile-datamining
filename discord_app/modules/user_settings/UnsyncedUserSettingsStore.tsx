@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UnsyncedUserSettingsStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
@@ -72,7 +72,7 @@ Object.defineProperty(prototype, "lowQualityImageMode", {
   set: undefined
 });
 Object.defineProperty(prototype, "videoUploadQuality", {
-  get: function videoUploadQuality(arg0) {
+  get: function videoUploadQuality(dataSavingMode) {
     let videoUploadQuality = closure_12.videoUploadQuality;
     if (videoUploadQuality == null) {
       videoUploadQuality = STANDARD;
@@ -362,7 +362,7 @@ obj = {
   }
 };
 const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
 
 export default unsyncedUserSettingsStore;
 export const VideoQualitySettings = obj;

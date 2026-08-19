@@ -1,37 +1,37 @@
 // discord_app/modules/activate_device/useActivateDeviceStepTracking.tsx
 import usePreviousDefault from "../../hooks/usePrevious.tsx";
-import closure_3 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
 
-export const useActivateDeviceStepTracking = function useActivateDeviceStepTracking(first) {
-  closure_0 = first;
-  const tmp = usePreviousDefault(first);
+export const useActivateDeviceStepTracking = function useActivateDeviceStepTracking(arg0) {
+  closure_0 = arg0;
+  const tmp = usePreviousDefault(arg0);
   importDefault = tmp;
-  const items = [tmp, first];
+  const items = [tmp, arg0];
   const effect = React.useEffect(() => {
     if (callback !== callback2) {
-      let tmp3 = "user-code-input" !== tmp.type;
+      let tmp3 = "user-code-input" !== callback.type;
       if (tmp3) {
-        tmp3 = "handoff" !== tmp.type;
+        tmp3 = "handoff" !== callback.type;
       }
       let result = null;
       if (tmp3) {
-        let obj = callback(closure_1_2[3]);
-        result = obj.clientIdToActivateDevicePlatform(tmp.userCodeData.clientId);
+        let obj = callback(dependencyMap[3]);
+        result = obj.clientIdToActivateDevicePlatform(callback.userCodeData.clientId);
       }
       let type;
-      if (tmp2 != null) {
-        type = tmp2.type;
+      if (callback2 != null) {
+        type = callback2.type;
       }
       obj = { previous_step: null, current_step: null, platform_type: null };
       obj[0] = type;
-      obj[1] = tmp.type;
+      obj[1] = callback.type;
       obj[2] = result;
-      callback2(closure_1_2[4]).track(closure_1_4.DEVICE_LINK_STEP, obj);
-      const obj2 = callback2(closure_1_2[4]);
+      callback2(dependencyMap[4]).track(AnalyticEvents.DEVICE_LINK_STEP, obj);
+      const obj2 = callback2(dependencyMap[4]);
     }
   }, items);
 };

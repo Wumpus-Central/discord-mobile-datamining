@@ -1,7 +1,7 @@
 // discord_app/modules/messages/getDisplayFilename.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/messages/getDisplayFilename.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/getDisplayFilename.tsx");
 
 export default function getDisplayFilename(title) {
   if (null != title.title) {
@@ -11,7 +11,6 @@ export default function getDisplayFilename(title) {
       let str2 = "";
       if (lastIndexOfResult > 0) {
         str2 = title.filename.substr(lastIndexOfResult);
-        const str3 = title.filename;
       }
       return title.title + str2;
     }

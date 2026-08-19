@@ -40,6 +40,6 @@ const dataHarvestStore = new DataHarvestStore(dispatcherDefault, {
     c1 = null;
   }
 });
-const result = require("set").fileFinishedImporting("modules/harvester/DataHarvestStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/harvester/DataHarvestStore.tsx");
 
 export default dataHarvestStore;

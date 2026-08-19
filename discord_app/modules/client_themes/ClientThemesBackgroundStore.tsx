@@ -7,18 +7,20 @@ import DismissibleContent from "../../../discord_common/js/packages/protos/disco
 import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import UNSAFE_isDismissibleContentDismissed from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import closure_5 from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
-import closure_6 from "../user_settings/ThemeStore.tsx";
-import closure_7 from "../user_settings/UnsyncedUserSettingsStore.tsx";
-import closure_8 from "../user_settings/UserSettingsProtoStore.tsx";
+import nameFromUser from "../../utils/UserUtils.tsx";
+import setSystemTheme from "../user_settings/ThemeActionCreators.tsx";
+import initialize from "../user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import handleThemeChange from "../user_settings/ThemeStore.tsx";
+import CHANNEL_SIDEBAR_WIDTH from "../user_settings/UnsyncedUserSettingsStore.tsx";
+import handleConnectionClosedOrResumed from "../user_settings/UserSettingsProtoStore.tsx";
 import { isGuildTextChannelType } from "../../records/ChannelRecord.tsx";
-import closure_10 from "../../stores/ChannelStore.tsx";
-import closure_11 from "../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "ClientThemesConstants.tsx";
 import { SystemThemeState } from "../user_settings/ThemeConstants.tsx";
 import { isPerModeThemingActive } from "../user_settings/isPerModeThemingActive.tsx";
 
-require = arg1;
+require = fn;
 function isSyncedModeThemesEnabled() {
   return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
@@ -37,7 +39,6 @@ function handleUserStoreChange() {
     closure_14 = tmp;
     c16 = false;
   }
-  const obj = getPremiumPlanItemDefault;
 }
 function handleSelectivelySyncedStoreChange() {
   const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
@@ -55,7 +56,7 @@ function handleSelectivelySyncedStoreChange() {
   }
 }
 function handleSyncedModeChange() {
-  return isPerModeThemingActive.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return isPerModeThemingActive /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
 }
 function handleSameAsDeviceThemeToggle() {
   return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
@@ -68,11 +69,11 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = tmp(1366);
+    let tmpResult = isPerModeThemingActive;
     result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
   }
   if (!result) {
-    tmpResult = tmp(4222);
+    tmpResult = setSystemTheme;
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
@@ -179,7 +180,6 @@ prototype["getLinearGradient"] = function getLinearGradient() {
   let linearGradientForBackgroundGradient = null;
   if (null != this.gradientPreset) {
     linearGradientForBackgroundGradient = getThemeForColor.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
-    const obj = getThemeForColor;
   }
   return linearGradientForBackgroundGradient;
 };
@@ -241,10 +241,9 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
               c15 = true;
             }
           }
-          tmp6Result = tmp6(4219);
+          tmp6Result = nameFromUser;
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
-        tmp6 = require;
       }
     }
   },
@@ -260,6 +259,6 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
   SET_SAME_AS_DEVICE_THEME_ENABLED: handleSameAsDeviceThemeToggle,
   CLEAR_SYNCED_CLIENT_THEMES: handleSameAsDeviceThemeToggle
 });
-let result = require("set").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundStore.tsx");
 
 export default clientThemesBackgroundStore;

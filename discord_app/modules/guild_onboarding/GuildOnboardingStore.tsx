@@ -1,5 +1,5 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import ME2 from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
@@ -63,7 +63,7 @@ obj = {
     if (dependencyMap[guildId] !== obj.STARTED) {
       return false;
     } else {
-      dependencyMap[guildId] = tmp ? tmp2.READY : tmp2.NOT_APPLICABLE;
+      dependencyMap[guildId] = tmp ? obj.READY : obj.NOT_APPLICABLE;
     }
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function handlePromptsFetchFailure(guildId) {
@@ -80,7 +80,7 @@ obj = {
   }
 };
 const guildOnboardingStore = new GuildOnboardingStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingStore.tsx");
 
 export default guildOnboardingStore;
 export const GuildOnboardingStatus = obj;

@@ -1,8 +1,8 @@
 // discord_app/modules/expression_picker/native/useExpressionPickerInsets.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { EXPRESSION_FOOTER_HEIGHT } from "../../../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");
+const result = require("obj132").fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");
 
 export default function useExpressionPickerInsets(hasCategories) {
   let bottom;

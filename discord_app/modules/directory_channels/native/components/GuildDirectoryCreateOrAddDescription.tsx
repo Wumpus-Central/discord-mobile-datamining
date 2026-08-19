@@ -1,17 +1,17 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryCreateOrAddDescription.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { flex: 1 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 } });
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAddDescription.tsx");
+const result = require("obj132").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCreateOrAddDescription.tsx");
 
 export default function GuildDirectoryCreateOrAddDescription(directoryChannelId) {
   directoryChannelId = directoryChannelId.directoryChannelId;
@@ -54,7 +54,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
                 closure_2 = tmp2;
                 closure_2 = undefined;
                 if (null != closure_1_3) {
-                  const template = tmp37.template;
+                  const template = closure_1_3.template;
                   if (null == template) {
                     c5 = 3;
                     return { value: "HermesInternal", done: "HermesInternal" };
@@ -80,7 +80,6 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
                   obj3[0] = obj3.onAddDirectoryGuildEntry(obj2);
                   return obj3;
                 }
-                tmp37 = closure_1_3;
               }
             } else if (1 === tmp5) {
               if (arg0 === 1) {
@@ -124,9 +123,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
     return applyArgumentsResult;
   }
   let tmp = callback3();
-  let obj = { children: null };
-  obj = { style: tmp.container, keyboardShouldPersistTaps: "handled", children: null };
-  obj = { style: tmp.header, children: null };
+  let obj = { style: tmp.header, children: null };
   obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = directoryChannelId(1236).intl;
   obj1[4] = intl.string(directoryChannelId(1236).t["5bQcoa"]);

@@ -10,18 +10,17 @@ import get_ActivityIndicator from "../../../../../../_runtime/00017_get_Activity
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" }, authIcon: { width: 120, height: 120, marginBottom: 32 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
 
 export default function TwoFASetupLanding() {
   const tmp = callback3();
   let obj = styles;
   const twoFASetupStyles = obj.useTwoFASetupStyles();
-  obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj1 = { bottom: true, style: tmp.container, children: null };
   const items = [callback(closure_3, { source: registerAssetDefault, style: tmp.authIcon }), , ];

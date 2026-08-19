@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/SpendingLimitUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");
 
 export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {
   let tmp = null == amount && null == amount2;
@@ -9,7 +9,6 @@ export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {
     let tmp2 = null != amount && null != amount2;
     if (tmp2) {
       tmp2 = amount.amount === amount2.amount && amount.currency === amount2.currency;
-      const tmp3 = amount.amount === amount2.amount && amount.currency === amount2.currency;
     }
     tmp = tmp2;
   }
@@ -28,7 +27,7 @@ export const getCurrencySymbol = function getCurrencySymbol(formatted) {
     obj[1] = formatted.toUpperCase();
     formatted = undefined;
     const numberFormat = new Intl.NumberFormat(undefined, obj);
-    const iter = numberFormat.formatToParts(0).find((type) => "currency" === type.type);
+    const iter = numberFormat.formatToParts(0).find((item, index) => "currency" === item.type);
     if (iter != null) {
       formatted = iter.value;
     }

@@ -1,12 +1,12 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx
 import wrapChildrenDefault from "../../../../../design/components/TransitionGroup/TransitionGroup.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function getItemKey(items) {
   items = items.items;
-  const mapped = items.map((id) => id.id);
+  const mapped = items.map((item, index) => item.id);
   return mapped.join("-");
 }
 function AnimatedTabs(state) {
@@ -24,19 +24,18 @@ function AnimatedTabs(state) {
   sharedValue = obj.useSharedValue(num);
   let tmpResult = tmp(tmp2[4]);
   let fn = function f() {
-    let obj = { opacity: null, position: null };
     const value = sharedValue.get();
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = closure_1 === closure_1_0(closure_1_2[5]).TransitionStates.YEETED;
+        tmp = closure_1 === setting(cleanUp[5]).TransitionStates.YEETED;
       }
       if (tmp) {
-        closure_1_0(closure_1_2[4]).runOnJS(closure_2)();
-        const obj = closure_1_0(closure_1_2[4]);
+        setting(cleanUp[4]).runOnJS(closure_2)();
+        const obj = setting(cleanUp[4]);
       }
     };
-    obj = { transitionState, TransitionStates: setting(cleanUp[5]).TransitionStates, runOnJS: setting(cleanUp[4]).runOnJS, cleanUp };
+    let obj = { transitionState, TransitionStates: setting(cleanUp[5]).TransitionStates, runOnJS: setting(cleanUp[4]).runOnJS, cleanUp };
     fn.__closure = obj;
     fn.__workletHash = 15209468679721;
     fn.__initData = closure_1_7;
@@ -74,6 +73,7 @@ function AnimatedTabs(state) {
       return combined;
     }
     combined = "(" + setting(cleanUp[3]).defaultCountFormatter(toLocaleString) + ")";
+    const obj2 = setting(cleanUp[3]);
   }, items1);
   context = sharedValue.useContext(tmp(tmp2[8]).SwipeForMemberListContext);
   const fn2 = function h() {
@@ -125,14 +125,14 @@ function AnimatedTabs(state) {
   return context(transitionState(cleanUp[4]).View, obj);
 }
 function renderItem(arg0, state, transitionState, cleanUp) {
-  return <AnimatedTabs key={arg0} state={arg1} transitionState={arg2} cleanUp={arg3} />;
+  return <AnimatedTabs key={arg0} state={state} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 let closure_6 = { code: "function SearchTabsTransitionGroupTsx1(){const{withSpring,opacity,springStandard,transitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();}}),position:opacity.get()===1?'relative':'absolute'};}" };
 let closure_7 = { code: "function SearchTabsTransitionGroupTsx2(finished){const{transitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
 let closure_8 = { code: "function SearchTabsTransitionGroupTsx3(){const{swipeForMemberListContext}=this.__closure;var _swipeForMemberListCo;(_swipeForMemberListCo=swipeForMemberListContext)===null||_swipeForMemberListCo===void 0||_swipeForMemberListCo.disallowGesture.set(false);}" };
 let closure_9 = { code: "function SearchTabsTransitionGroupTsx4(){const{state}=this.__closure;return state.scrollOffset.get()>0;}" };
 let closure_10 = { code: "function SearchTabsTransitionGroupTsx5(isOffsetFromStart,prevIsOffsetFromStart){const{swipeForMemberListContext}=this.__closure;if(isOffsetFromStart!==prevIsOffsetFromStart){var _swipeForMemberListCo;(_swipeForMemberListCo=swipeForMemberListContext)===null||_swipeForMemberListCo===void 0||_swipeForMemberListCo.disallowGesture.set(isOffsetFromStart);}}" };
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx");
 
 export default function SearchTabsTransitionGroup(state) {
   const items = [state.state];

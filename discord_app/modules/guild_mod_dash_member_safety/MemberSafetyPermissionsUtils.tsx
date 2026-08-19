@@ -1,27 +1,28 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import { isGuildOwner } from "../../records/GuildRecord.tsx";
-import closure_5 from "../../stores/GuildStore.tsx";
-import closure_6 from "../../stores/PermissionStore.tsx";
-import closure_7 from "../../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { MemberSafetyPagePermissions as closure_8 } from "MemberSafetyConstants.tsx";
 import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
+const require = fn;
 ({ GuildFeatures: c9, Permissions: c10 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx");
 
-export const getContextForPermission = function getContextForPermission(arg0, arg1) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    const items = [closure_7, closure_8];
+export const getContextForPermission = function getContextForPermission(arg0, items) {
+  let tmp = items;
+  if (items === undefined) {
+    items = [closure_7, closure_8];
     tmp = items;
   }
   [obj, obj2] = callback(tmp, 2);
   const guild = obj.getGuild(arg0);
   const currentUser = obj2.getCurrentUser();
+  const tmp4 = callback(tmp, 2);
 };
 export const canAccessMemberSafetyPage = function canAccessMemberSafetyPage(arg0) {
   let tmp = arg1;
@@ -67,7 +68,6 @@ export const canPruneGuildMembers = function canPruneGuildMembers(guild, current
     let canResult1 = canResult;
   } else {
     canResult1 = obj.can(fromStringAll.combine(constants2.MANAGE_GUILD, constants2.KICK_MEMBERS), guild);
-    const obj2 = fromStringAll;
   }
   return canResult1;
 };
@@ -75,7 +75,7 @@ export const useCanAccessMemberSafetyPage = function useCanAccessMemberSafetyPag
   const _require = id;
   const items = [closure_5, closure_7];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [closure_1_5, closure_1_7];
     [obj, obj2] = closure_1_3(items, 2);
     const guild = obj.getGuild(closure_0);
@@ -87,14 +87,14 @@ export const useCanAccessBulkBanningFeature = function useCanAccessBulkBanningFe
   const _require = arg0;
   let items = [closure_5, closure_7];
   const items1 = [arg0];
-  let stateFromStores = _initialize.useStateFromStores(items, () => {
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const items = [closure_1_5, closure_1_7];
     [obj, obj2] = closure_1_3(items, 2);
     const guild = obj.getGuild(closure_0);
     const currentUser = obj2.getCurrentUser();
     return false;
   }, items1);
-  const obj = _initialize;
+  const obj = initialize;
   const items2 = [closure_5, closure_7];
   const items3 = [arg0];
   if (stateFromStores) {
@@ -112,7 +112,7 @@ export const useCanAccessInviteCodeFeature = function useCanAccessInviteCodeFeat
   const _require = arg0;
   const items = [closure_5, closure_6];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_5.getGuild(closure_0);
     let canResult = null != guild;
     if (canResult) {
@@ -127,7 +127,7 @@ export const useCanBulkBanUser = function useCanBulkBanUser(arg0, arg1, arg2) {
   dependencyMap = arg2;
   const items = [closure_6, closure_5];
   const items1 = [arg1, arg0, arg2];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_5.getGuild(closure_0);
     let tmp2 = null != guild;
     if (tmp2) {

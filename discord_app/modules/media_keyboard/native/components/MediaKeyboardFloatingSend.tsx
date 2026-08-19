@@ -1,22 +1,21 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/UploadAttachmentStore.tsx";
+import map from "../../../../stores/UploadAttachmentStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { sendContainer: null, gradient: null };
-obj = {};
+let obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.top = undefined;
 const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
 obj[0] = obj;
-createCacheKey = {};
+const createCacheKey = {};
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.color = ThemesDefault.colors.BACKGROUND_SURFACE_HIGH;
 obj[1] = createCacheKey;
@@ -27,7 +26,6 @@ let closure_11 = { code: "function MediaKeyboardFloatingSendTsx3(){const{insetFa
 let closure_12 = { code: "function MediaKeyboardFloatingSendTsx4(){const{sendVisibleSharedValue}=this.__closure;return{pointerEvents:sendVisibleSharedValue.get()?'box-none':'none'};}" };
 const memoResult = importAllResult.memo(importAllResult.forwardRef(function MediaKeyboardFloatingSendInner(onSend, ref) {
   ({ animatedIndex, channelId, draftType } = onSend);
-  animatedIndex = undefined;
   channelId = undefined;
   draftType = undefined;
   let sharedValue;
@@ -40,13 +38,10 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Medi
     bottom = tmp4.bottom;
   }
   draftType = bottom;
-  sharedValue = undefined;
-  sharedValue = undefined;
   obj1 = animatedIndex(tmp3[7]);
   let items = [closure_5];
   const items1 = [channelId, draftType];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_5.getUploadCount(channelId, draftType) > 0, items1);
-  sharedValue = stateFromStores;
   let obj2 = animatedIndex(tmp3[8]);
   sharedValue = obj2.useSharedValue(false);
   const tmp5 = sharedValue(sharedValue.useState(null), 2);
@@ -120,6 +115,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Medi
   obj[2] = items4;
   return callback2(channelId(draftType[8]).View, obj);
 }));
-let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx");
+let result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFloatingSend.tsx");
 
 export default memoResult;

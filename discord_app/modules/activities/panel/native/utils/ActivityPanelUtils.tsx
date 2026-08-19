@@ -1,10 +1,10 @@
 // discord_app/modules/activities/panel/native/utils/ActivityPanelUtils.tsx
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import closure_3 from "../../../EmbeddedActivitiesStore.tsx";
+import participantFromServer from "../../../EmbeddedActivitiesStore.tsx";
 import { ActivityPanelModes } from "../../ActivityPanelConstants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 
 export const useIsActivityPanelFullscreen = function useIsActivityPanelFullscreen() {
   const items = [closure_3];

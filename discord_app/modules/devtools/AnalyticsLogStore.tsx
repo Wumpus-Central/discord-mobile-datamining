@@ -3,10 +3,10 @@ import extractId from "../../../discord_common/js/packages/fingerprint-utils/Fin
 import v1 from "../../../_runtime/00514_v1.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../stores/DeveloperExperimentStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import init from "../../stores/DeveloperExperimentStore.tsx";
 
-require = arg1;
+require = fn;
 let c4 = 0;
 let closure_5 = [];
 let c6 = 0;
@@ -55,7 +55,6 @@ const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
       obj[2] = tmp2;
       if (null != fingerprint) {
         let extractIdResult = extractId.extractId(fingerprint);
-        const obj2 = extractId;
       } else {
         extractIdResult = id.getId();
       }
@@ -93,7 +92,6 @@ const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
       obj[7] = date;
       items[arraySpreadResult] = obj;
       isDeveloper = items.length > 500;
-      const obj2 = v1;
     }
     if (isDeveloper) {
       items.shift();
@@ -108,6 +106,6 @@ const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
     closure_7 = [];
   }
 });
-const result = require("set").fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
 
 export default analyticsLogStore;

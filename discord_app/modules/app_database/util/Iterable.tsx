@@ -1,5 +1,5 @@
 // discord_app/modules/app_database/util/Iterable.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 class Chained {
   constructor(arg0) {
@@ -25,7 +25,7 @@ prototype["next"] = function next() {
   }
   return { done: true, value: "a" };
 };
-const result = set.fileFinishedImporting("modules/app_database/util/Iterable.tsx");
+const result = obj132.fileFinishedImporting("modules/app_database/util/Iterable.tsx");
 
 export const chain = function chain() {
   const items = [...arguments];

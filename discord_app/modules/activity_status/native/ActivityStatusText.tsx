@@ -4,10 +4,10 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_3 = createCacheKey.createStyles({ text: { flexShrink: 1 } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
 
 export default function ActivityStatusText(variant) {
   let str = variant.variant;

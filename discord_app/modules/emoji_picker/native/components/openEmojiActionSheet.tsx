@@ -1,13 +1,13 @@
 // discord_app/modules/emoji_picker/native/components/openEmojiActionSheet.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
 import dismissGlobalKeyboard from "../../../../utils/native/KeyboardManagerUtils.tsx";
-import set2 from "../../../emojis/EmojiConstants.tsx";
+import set from "../../../emojis/EmojiConstants.tsx";
 import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
-const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
-let result = set.fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");
+const EMOJI_URL_BASE_SIZE = set.EMOJI_URL_BASE_SIZE;
+let result = obj132.fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");
 
 export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
   if (null != uniqueName.uniqueName) {
@@ -31,7 +31,6 @@ export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
     obj[0] = uniqueName.id;
     obj[1] = name;
     if (null != uniqueName.id) {
-      obj1 = getAvatarURLDefault;
       obj1 = { id: null, animated: null, size: null };
       ({ id: obj3[0], animated: obj3[1] } = uniqueName);
       obj1[2] = EMOJI_URL_BASE_SIZE;

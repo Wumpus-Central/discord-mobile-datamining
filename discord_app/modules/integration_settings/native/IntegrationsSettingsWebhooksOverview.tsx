@@ -6,20 +6,20 @@ import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
 import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import NavScrim from "../../../design/components/Navigator/native/NavScrim.android.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
 import comparator from "../../../stores/GuildChannelStore.tsx";
-import closure_8 from "../../../stores/GuildChannelStore.tsx";
-import closure_9 from "../../../stores/GuildStore.tsx";
-import closure_10 from "../../../stores/PermissionStore.tsx";
-import closure_11 from "../../../stores/UserStore.tsx";
-import closure_12 from "../../../stores/WebhooksStore.tsx";
+import comparator2 from "../../../stores/GuildChannelStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import handleWebhookCreateUpdate from "../../../stores/WebhooksStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function WebhookItem(avatar) {
   avatar = avatar.avatar;
   const channel = avatar.channel;
@@ -28,17 +28,16 @@ function WebhookItem(avatar) {
   const token = avatar.token;
   ({ user, webhookId } = avatar);
   const webhookType = avatar.webhookType;
-  let navigation;
   let obj = avatar(guildId[12]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [webhookId, webhookType, avatar, channel, guildId, name, token, navigation];
   const items1 = [webhookId, avatar];
   const callback = token.useCallback(() => {
     navigation.push(closure_1_14.EDIT_WEBHOOK, { webhookId, webhookType, avatar, name, channel, guildId, token });
   }, items);
   const memo = token.useMemo(() => {
-    let obj = avatar(guildId[13]);
-    obj = { id: webhookId, avatar, discriminator: closure_1_15 };
+    avatar(guildId[13]);
+    const obj = { id: webhookId, avatar, discriminator: closure_1_15 };
     return obj.makeSource(avatar(guildId[13]).getUserAvatarURL(obj));
   }, items1);
   obj = { icon: callback(avatar(guildId[15]).Avatar, { source: memo }), arrow: true, label: name, subLabel: null, onPress: null };
@@ -85,18 +84,17 @@ function CreateWebhookButton(guild) {
   guild = guild.guild;
   let channel = guild.channel;
   let navigation;
-  let stateFromStores;
   let obj = guild(navigation[12]);
   navigation = obj.useNavigation();
   let items = [closure_8, closure_10];
-  stateFromStores = guild(navigation[19]).useStateFromStores(items, () => {
+  const stateFromStores = guild(navigation[19]).useStateFromStores(items, () => {
     if (null != channel) {
       return channel;
     } else {
       const channels = closure_1_8.getChannels(guild.id);
       const items = [];
       HermesBuiltin.arraySpread(channels[closure_1_7], HermesBuiltin.arraySpread(channels[closure_1_6], 0));
-      const found = items.find((channel) => closure_10.can(constants.MANAGE_WEBHOOKS, channel.channel));
+      const found = items.find((item, index) => closure_10.can(constants.MANAGE_WEBHOOKS, item.channel));
       channel = undefined;
       if (found != null) {
         channel = found.channel;
@@ -136,11 +134,11 @@ function CreateWebhookButton(guild) {
             closure_1 = tmp2;
             let user;
             if (null != id) {
-              obj1 = closure_1_1(closure_1_2[20]);
+              obj1 = channel(navigation[20]);
               id = 1;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.create(closure_1_0.id, id.id);
+              obj1[0] = obj1.create(guild.id, id.id);
               return obj1;
             } else {
               c4 = 3;
@@ -178,7 +176,6 @@ function CreateWebhookButton(guild) {
       }
     }
   }), items1);
-  obj = { icon: null, label: null, disabled: null, onPress: null };
   obj = { IconComponent: guild(navigation[22]).WebhookPlusIcon };
   obj[0] = callback(guild(navigation[21]).RowButton.Icon, obj);
   const intl = guild(navigation[16]).intl;
@@ -191,11 +188,9 @@ let c4 = importAllResult;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_6, GUILD_VOCAL_CHANNELS_KEY: error } = comparator);
 ({ HelpdeskArticles: map1, ChannelSettingsSections: closure_14, NON_USER_BOT_DISCRIMINATOR: closure_15, Permissions: closure_16, WebhookTypes: closure_17 } = ME);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-createCacheKey = { form: null, content: null, hint: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-let obj1 = { paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
 let closure_21 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
@@ -208,13 +203,11 @@ prototype["getHelpText"] = function getHelpText() {
     let obj = { helpdeskArticle: null };
     obj[0] = combinedDefault.getArticleURL(constants.CHANNEL_FOLLOWING);
     let formatResult = intl2.format(getSystemLocale.t["5u+aV1"], obj);
-    const obj4 = combinedDefault;
   } else {
     const intl = getSystemLocale.intl;
     obj = { articleURL: null };
     obj[0] = combinedDefault.getArticleURL(constants.WEBHOOKS_INTRODUCTION);
     formatResult = intl.format(getSystemLocale.t["3hX7G+"], obj);
-    const obj2 = combinedDefault;
   }
   return formatResult;
 };
@@ -223,7 +216,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   ({ webhooks, webhookType } = this.props);
   let found = webhooks;
   if (null != webhookType) {
-    found = webhooks.filter((type) => type.type === webhookType);
+    found = webhooks.filter((item, index) => item.type === webhookType);
   }
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
@@ -233,41 +226,39 @@ prototype["renderWebhooks"] = function renderWebhooks() {
     let obj = { guild: null, channel: null };
     obj[0] = self.props.guild;
     obj[1] = self.props.channel;
-    tmp4Result = tmp4(CreateWebhookButton, obj);
+    tmp4Result = callback(CreateWebhookButton, obj);
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
     obj = { Illustration: null, title: null };
-    obj[0] = tmp5(16062).WebhookEmpty;
+    obj[0] = webhookType(16062).WebhookEmpty;
     if (webhookType === constants2.CHANNEL_FOLLOWER) {
-      const intl2 = tmp5(1236).intl;
-      dkHRkE = tmp5(1236).t.dkHRkE;
+      const intl2 = webhookType(1236).intl;
+      dkHRkE = webhookType(1236).t.dkHRkE;
       let stringResult = intl2.string(dkHRkE);
     } else {
-      const intl = tmp5(1236).intl;
-      stringResult = intl.string(tmp5(1236).t["4JAVI+"]);
+      const intl = webhookType(1236).intl;
+      stringResult = intl.string(webhookType(1236).t["4JAVI+"]);
     }
     obj[1] = stringResult;
-    tmp4Result = tmp4(tmp5(1297).EmptyState, obj);
+    tmp4Result = callback(webhookType(1297).EmptyState, obj);
   } else {
     obj = { hasIcons: true, children: null };
-    obj[1] = found.map((type) => {
-      ({ id, avatar } = type);
-      const obj = { webhookId: id, webhookType: type.type, avatar, name, user, channelId: channel_id, token, guildId: guild_id };
-      ({ name, user, token, guild_id, channel_id } = type);
-      return closure_18(closure_23, obj, id);
+    obj[1] = found.map((item, index) => {
+      ({ id, avatar } = item);
+      const obj = { webhookId: id, webhookType: item.type, avatar, name, user, channelId: channel_id, token, guildId: guild_id };
+      ({ name, user, token, guild_id, channel_id } = item);
+      return callback(closure_23, obj, id);
     });
     obj1 = { children: null };
-    items[2] = tmp4(tmp5(6286).TableRowGroup, obj);
+    items[2] = callback(webhookType(6286).TableRowGroup, obj);
     obj1[0] = items;
-    return closure_20(closure_19, obj1);
+    return callback(closure_19, obj1);
   }
 };
 prototype["render"] = function render() {
   const tmp = callback3(this.context);
-  let obj = { children: null };
-  obj = { style: tmp.form, contentContainerStyle: this.props.contentContainerStyle, children: null };
-  obj = { spacing: ThemesDefault.space.PX_24, style: tmp.content, children: this.renderWebhooks() };
+  const obj = { spacing: ThemesDefault.space.PX_24, style: tmp.content, children: this.renderWebhooks() };
   obj[2] = callback(Stack.Stack, obj);
   const items = [callback(Form.Form, obj), callback(NavScrim.NavScrim, {})];
   obj[0] = items;
@@ -275,14 +266,12 @@ prototype["render"] = function render() {
 };
 WebhooksOverview.contextType = require("ManaContext").ThemeContext;
 let closure_26 = [];
-let obj2 = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsWebhooksOverview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsWebhooksOverview.tsx");
 
 export default function ConnectedWebhooksOverview(channelId) {
   channelId = channelId.channelId;
   const guildId = channelId.guildId;
   let stateFromStores;
-  let id;
   let id1;
   ({ contentContainerStyle, webhookType } = channelId);
   let obj = channelId(stateFromStores[19]);
@@ -299,7 +288,7 @@ export default function ConnectedWebhooksOverview(channelId) {
     }
     return closure_1_9.getGuild(guild_id);
   });
-  id = undefined;
+  let id;
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
   }
@@ -314,19 +303,17 @@ export default function ConnectedWebhooksOverview(channelId) {
     id1 = channelId;
   }
   let obj2 = channelId(stateFromStores[19]);
-  const tmp = channelId;
-  const tmp2 = stateFromStores;
   const items2 = [closure_12];
   const items3 = [id, id1];
   const stateFromStoresArray = channelId(stateFromStores[19]).useStateFromStoresArray(items2, () => {
     if (null != id) {
       if (null != id1) {
-        let webhooksForChannel = closure_1_12.getWebhooksForChannel(tmp, tmp2);
+        let webhooksForChannel = closure_1_12.getWebhooksForChannel(id, tmp2);
       }
       return webhooksForChannel;
     }
     if (null != id) {
-      webhooksForChannel = closure_1_12.getWebhooksForGuild(tmp);
+      webhooksForChannel = closure_1_12.getWebhooksForGuild(id);
     } else {
       webhooksForChannel = closure_1_26;
     }
@@ -334,12 +321,12 @@ export default function ConnectedWebhooksOverview(channelId) {
   const effect = id1.useEffect(() => {
     if (null != id) {
       if (null != id1) {
-        const forChannel = guildId(stateFromStores[20]).fetchForChannel(tmp, tmp2);
+        const forChannel = guildId(stateFromStores[20]).fetchForChannel(id, tmp2);
         const obj2 = guildId(stateFromStores[20]);
       }
     }
     if (null != id) {
-      const forGuild = guildId(stateFromStores[20]).fetchForGuild(tmp);
+      const forGuild = guildId(stateFromStores[20]).fetchForGuild(id);
       const obj = guildId(stateFromStores[20]);
     }
   }, items3);

@@ -1,29 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx
-import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesFlatData.tsx");
 
 export default function useMessagesFlatData(channels, listItemHeight) {
   listItemHeight = listItemHeight.listItemHeight;
   const isRefreshEnabled = listItemHeight.isRefreshEnabled;
   channels = undefined;
-  let channelFavorites;
-  let renderHeader;
-  let sections;
   channels = channels.channels;
-  channelFavorites = channels.channelFavorites;
-  renderHeader = channels.renderHeader;
-  sections = channels.sections;
+  const channelFavorites = channels.channelFavorites;
+  const renderHeader = channels.renderHeader;
+  const sections = channels.sections;
   const items = [channels, channelFavorites, renderHeader, sections, listItemHeight, isRefreshEnabled];
   return channels.useMemo(() => {
     if (renderHeader === listItemHeight(isRefreshEnabled[1]).MessagesDataHeader.HappeningNow) {
-      let listHeaderHeight = tmp2(tmp3[2]).getMessagesItemHappeningNowHeight(isRefreshEnabled);
-      const tmp2Result = tmp2(tmp3[2]);
+      let listHeaderHeight = listItemHeight(isRefreshEnabled[2]).getMessagesItemHappeningNowHeight(isRefreshEnabled);
+      const tmp2Result = listItemHeight(isRefreshEnabled[2]);
     } else {
       listHeaderHeight = 0;
-      if (renderHeader === tmp2(tmp3[1]).MessagesDataHeader.EmptyState) {
-        listHeaderHeight = tmp2(tmp3[3]).MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
+      if (renderHeader === listItemHeight(isRefreshEnabled[1]).MessagesDataHeader.EmptyState) {
+        listHeaderHeight = listItemHeight(isRefreshEnabled[3]).MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
       }
     }
     const listData = [];
@@ -34,11 +31,9 @@ export default function useMessagesFlatData(channels, listItemHeight) {
     if (0 < tmp5) {
       do {
         let obj = { kind: "favorite", channelId: null, row: null };
-        let tmp8 = channelFavorites;
         obj[1] = channelFavorites[num2].channelId;
         obj[2] = num2;
         let arr = listData.push(obj);
-        let tmp10 = listItemHeight;
         sum = sum + listItemHeight;
         num2 = num2 + 1;
         tmp7 = sum;
@@ -51,11 +46,9 @@ export default function useMessagesFlatData(channels, listItemHeight) {
     if (0 < tmp11) {
       do {
         obj = { kind: "channel", channelId: null, row: null };
-        let tmp14 = channels;
         obj[1] = channels[num3].channelId;
         obj[2] = num3;
         arr = listData.push(obj);
-        let tmp16 = listItemHeight;
         sum1 = sum1 + listItemHeight;
         num3 = num3 + 1;
         tmp13 = sum1;
@@ -64,7 +57,7 @@ export default function useMessagesFlatData(channels, listItemHeight) {
     let sum2 = tmp13;
     if (sections[listItemHeight(undefined, isRefreshEnabled[1]).MessagesDataSections.Separator] > 0) {
       listData.push({ kind: "separator" });
-      sum2 = tmp13 + tmp18(tmp19[4]).MESSAGES_ITEM_SEPERATOR_HEIGHT;
+      sum2 = tmp13 + listItemHeight(isRefreshEnabled[4]).MESSAGES_ITEM_SEPERATOR_HEIGHT;
     }
     const tmp22 = sections[listItemHeight(undefined, isRefreshEnabled[1]).MessagesDataSections.SuggestedFriends];
     let friendsHeaderOffset;

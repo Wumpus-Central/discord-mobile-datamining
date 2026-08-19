@@ -3,11 +3,11 @@ import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import DEFAULT_FRECENCYDefault from "../lib/Frecency.tsx";
-import closure_2 from "../modules/user_settings/UserSettingsProtoStore.tsx";
-import closure_3 from "ChannelStore.tsx";
-import closure_4 from "GuildStore.tsx";
-import closure_5 from "SelectedChannelStore.tsx";
-import closure_6 from "SelectedGuildStore.tsx";
+import handleConnectionClosedOrResumed from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import ensureGuildLoaded from "ChannelStore.tsx";
+import createGuildRecordFromRust from "GuildStore.tsx";
+import handleConnectionOpen from "SelectedChannelStore.tsx";
+import handleConnectionOpen2 from "SelectedGuildStore.tsx";
 import { ID_REGEX } from "../Constants.tsx";
 import { UserSettingsTypes } from "../modules/user_settings/UserSettingsConstants.tsx";
 
@@ -77,7 +77,7 @@ function initFrecency() {
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;
       const mapped = recentUses.map(Number);
-      obj.recentUses = mapped.filter((arg0) => arg0 > 0);
+      obj.recentUses = mapped.filter((item, index) => item > 0);
       return obj;
     }), closure_13.pendingUsages);
   }
@@ -137,10 +137,10 @@ prototype["initialize"] = function initialize(pendingUsages) {
   this.waitFor(closure_3, closure_4, closure_5, closure_6, closure_2);
   if (null != pendingUsages) {
     pendingUsages = pendingUsages.pendingUsages;
-    pendingUsages.pendingUsages = pendingUsages.filter((key) => {
-      let isMatch = null != key;
+    pendingUsages.pendingUsages = pendingUsages.filter((item, index) => {
+      let isMatch = null != item;
       if (isMatch) {
-        isMatch = regex.test(key.key);
+        isMatch = regex.test(item.key);
       }
       return isMatch;
     });
@@ -205,7 +205,7 @@ obj = {
 };
 const frecencyStore = new FrecencyStore(dispatcherDefault, obj);
 let tmp2 = new DEFAULT_FRECENCYDefault(obj);
-const result = require("set").fileFinishedImporting("stores/FrecencyStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/FrecencyStore.tsx");
 
 export default frecencyStore;
 export const MAX_NUM_SELECTED_ITEMS = 100;

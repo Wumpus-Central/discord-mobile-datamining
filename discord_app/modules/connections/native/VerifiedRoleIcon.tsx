@@ -7,18 +7,17 @@ import getHigherContrastColor from "../../user_profile/utils/getHigherContrastCo
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ DEFAULT_ROLE_COLOR_HEX: c3, EMPTY_STRING_SNOWFLAKE_ID: c4 } = ME);
 const WHITE = ThemesDefault.unsafe_rawColors.WHITE;
 const PRIMARY_630 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
-createCacheKey = { iconContainer: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
+const createCacheKey = { alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/connections/native/VerifiedRoleIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/connections/native/VerifiedRoleIcon.tsx");
 
 export default function VerifiedRoleIcon(arg0) {
   ({ role, roleId, roleColor, size } = arg0);
@@ -61,7 +60,7 @@ export default function VerifiedRoleIcon(arg0) {
     obj2[1] = diff;
     obj1[0] = obj2;
     obj1[2] = higherContrastColor;
-    roleIcon = tmp9(LinkIcon.LinkIcon, obj1);
+    roleIcon = jsx(LinkIcon.LinkIcon, { style: null, size: "custom", color: null });
   }
   obj[1] = roleIcon;
   return <View style={items1}>{null}</View>;

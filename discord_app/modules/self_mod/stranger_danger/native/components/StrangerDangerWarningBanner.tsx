@@ -1,15 +1,15 @@
 // discord_app/modules/self_mod/stranger_danger/native/components/StrangerDangerWarningBanner.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../../stores/RelationshipStore.tsx";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
 import { SafetyWarningTypes } from "../../../ChannelSafetyWarningsStore.tsx";
 import LOCATION_CONTEXT_MOBILE from "../../../Constants.tsx";
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_9 } from "../../../../relationships/native/RestrictionConfirmationConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 class StrangerDangerWarningBanner {
   constructor(arg0) {
     channelId = global.channelId;
@@ -33,9 +33,9 @@ class StrangerDangerWarningBanner {
     items2[2] = senderId;
     stateFromStores = obj.useStateFromStores(items, () => callback.isBlocked(senderId), items1);
     effect = closure_3.useEffect(() => {
-      let obj = channelId(senderId[10]);
-      obj = { channelId, warningId, senderId, warningType: callback1.STRANGER_DANGER };
-      obj.trackViewedEvent(closure_1_8.SAFETY_WARNING_VIEWED, obj);
+      channelId(senderId[10]);
+      const obj = { channelId, warningId, senderId, warningType: callback1.STRANGER_DANGER };
+      obj.trackViewedEvent(AnalyticEvents.SAFETY_WARNING_VIEWED, obj);
     }, items2);
     items3 = [, ];
     items3[0] = channelId;
@@ -55,9 +55,9 @@ class StrangerDangerWarningBanner {
     callback1 = closure_3.useCallback((arg0) => {
       closure_0 = arg0;
       return () => {
-        closure_1_4();
-        let obj = channelId(senderId[10]);
-        obj = { channelId: closure_0, warningId: closure_1_1, senderId: closure_1_2, warningType: callback1.STRANGER_DANGER, cta: closure_0 };
+        callback();
+        channelId(senderId[10]);
+        const obj = { channelId: closure_0, warningId, senderId: closure_1_2, warningType: callback1.STRANGER_DANGER, cta: closure_0 };
         obj.trackCtaEvent(obj);
       };
     }, items4);
@@ -71,18 +71,18 @@ class StrangerDangerWarningBanner {
     callback2 = closure_3.useCallback((arg0) => {
       closure_0 = arg0;
       return () => {
-        let obj = warningId(senderId[13]);
-        obj = {
+        warningId(senderId[13]);
+        let obj = {
           userId: closure_1_2,
           channelId: closure_0,
-          onBlock: closure_1_5(closure_0),
+          onBlock: callback1(closure_0),
           onSuccess() {
             return callback(table[13]).hideActionSheet();
           },
           onIgnore() {
             callback2();
-            let obj = closure_1_0(closure_1_2[10]);
-            obj = { channelId: closure_0, warningId: closure_1, senderId: closure_2, warningType: closure_1_5.STRANGER_DANGER, cta: closure_1_0(closure_1_2[10]).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM };
+            closure_1_0(closure_1_2[10]);
+            const obj = { channelId: closure_0, warningId: closure_1, senderId: closure_2, warningType: closure_1_5.STRANGER_DANGER, cta: closure_1_0(closure_1_2[10]).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM };
             obj.trackCtaEvent(obj);
           },
           impressionName: channelId(senderId[16]).ImpressionNames.BLOCK_USER_CONFIRMATION
@@ -103,16 +103,16 @@ class StrangerDangerWarningBanner {
     intl3 = require("getSystemLocale").intl;
     obj1[0] = intl3.string(require("getSystemLocale").t["Qk/c48"]);
     obj1[2] = function onpress() {
-      let obj = warningId(senderId[12]);
-      obj = { modalKey: callback2, headerStyle: moreTipsHeader.moreTipsHeader, channelId, warningId, senderId, description: null, safetyTips: null, actionItems: null };
+      warningId(senderId[12]);
+      let obj = { modalKey: callback2, headerStyle: moreTipsHeader.moreTipsHeader, channelId, warningId, senderId, description: null, safetyTips: null, actionItems: null };
       const intl = channelId(senderId[18]).intl;
       obj[5] = intl.string(channelId(senderId[18]).t.DJMZX6);
       const tmp = channelId(senderId[15])(senderId[19], senderId.paths);
-      obj[6] = closure_1_7().map((children) => callback2(callback(table[20]).Text, { variant: "text-sm/medium", children }, arg1));
+      obj[6] = closure_1_7().map((item, index) => callback2(callback(table[20]).Text, { variant: "text-sm/medium", children: item }, index));
       obj = { channelId, warningId, senderId, onBlockPressed: null };
       const arr = closure_1_7();
       obj[3] = callback2(channelId(senderId[10]).CtaEventTypes.USER_MODAL_BLOCK_CONFIRM);
-      obj[7] = closure_1_10(warningId(senderId[21]), obj);
+      obj[7] = jsx(warningId(senderId[21]), { channelId, warningId, senderId, onBlockPressed: null });
       obj.pushLazy(tmp, obj, callback2);
       const tmp2 = warningId(senderId[21]);
       const obj4 = channelId(senderId[10]);
@@ -136,11 +136,10 @@ class StrangerDangerWarningBanner {
   }
 }
 ({ STRANGER_DANGER_MORE_TIPS_MODAL_KEY: closure_6, getStrangerDangerSafetyTips: error } = LOCATION_CONTEXT_MOBILE);
-createCacheKey = { moreTipsHeader: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
 createCacheKey[0] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerWarningBanner.tsx");
+let result = require("obj132").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerWarningBanner.tsx");
 
 export default StrangerDangerWarningBanner;
 export { StrangerDangerWarningBanner };

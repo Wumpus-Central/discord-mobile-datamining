@@ -1,5 +1,5 @@
 // discord_app/modules/poggermode/PoggermodeSettingsStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import ConfettiLocation from "PoggermodeConstants.tsx";
@@ -121,7 +121,7 @@ obj = {
   }
 };
 const poggermodeSettingsStore = new PoggermodeSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/poggermode/PoggermodeSettingsStore.tsx");
+const result = obj132.fileFinishedImporting("modules/poggermode/PoggermodeSettingsStore.tsx");
 
 export default poggermodeSettingsStore;
 export const initialState = obj;

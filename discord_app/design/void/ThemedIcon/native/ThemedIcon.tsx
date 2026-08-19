@@ -4,9 +4,9 @@ import map from "../../../tokens/native/useToken.tsx";
 import IconSizesDefault from "../../Icon/native/Icon.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
 
 export default function ThemedIcon(themedColor) {
   const merged = Object.assign(themedColor, Object.create(null));

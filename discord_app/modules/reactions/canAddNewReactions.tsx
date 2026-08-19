@@ -1,9 +1,9 @@
 // discord_app/modules/reactions/canAddNewReactions.tsx
-import closure_0 from "../../stores/GuildVerificationStore.tsx";
-import closure_1 from "../../stores/PermissionStore.tsx";
+import recomputeGuild from "../../stores/GuildVerificationStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 
 export default (getGuildId) => {
   const guildId = getGuildId.getGuildId();

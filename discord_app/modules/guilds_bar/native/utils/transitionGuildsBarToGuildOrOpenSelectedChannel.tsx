@@ -1,11 +1,14 @@
 // discord_app/modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx
+import coerceMainRoute from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import getRootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
-import closure_2 from "../../../../stores/SelectedChannelStore.tsx";
-import closure_3 from "../../../../stores/SelectedGuildStore.tsx";
+import transitionToChannel from "../../../routing/transitionToChannel.tsx";
+import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
+import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
+import handleConnectionOpen2 from "../../../../stores/SelectedGuildStore.tsx";
 import { ME } from "../../../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");
 
 export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
@@ -15,7 +18,7 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
   }
   let tmp4;
   if (true === isReadyResult) {
-    let tmpResult = tmp(4229);
+    let tmpResult = coerceMainRoute;
     const coerceGuildsRouteResult = tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
     let drawerOpen;
     if (coerceGuildsRouteResult != null) {
@@ -42,10 +45,10 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
     }
   }
   if (null != tmp4) {
-    tmpResult = tmp(4768);
+    tmpResult = transitionToChannel;
     tmpResult.transitionToChannel(tmp4);
   } else {
-    tmp(7302).transitionToGuild(arg0);
-    const tmpResult1 = tmp(7302);
+    transitionToGuild.transitionToGuild(arg0);
+    const tmpResult1 = transitionToGuild;
   }
 };

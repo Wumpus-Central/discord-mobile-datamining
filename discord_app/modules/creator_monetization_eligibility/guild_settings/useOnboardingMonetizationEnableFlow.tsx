@@ -1,19 +1,17 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { isGuildOwner } from "../../../records/GuildRecord.tsx";
-import closure_5 from "../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { set } from "../CreatorMonetizationEligibilityExperimentUtils.tsx";
-import { getCreatorMonetizationAcceptTermsCheckboxText } from "CreatorMonetizationAcceptTermCheckboxText.tsx";
 
-const require = arg1;
+const require = fn;
 ({ GuildFeatures: closure_6, HelpdeskArticles: error, MarketingURLs: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx");
 
 export default function useOnboardingMonetizationEnableFlow(features) {
   const _require = features;
-  let obj = _set;
+  let obj = set;
   let isExpeditedOnboardingGuild = obj.useIsExpeditedOnboardingGuild(features);
   if (features != null) {
     features = features.features;
@@ -28,7 +26,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     let tmp3 = null != closure_0;
     if (tmp3) {
-      tmp3 = closure_1_4(tmp2, tmp);
+      tmp3 = isGuildOwner(tmp2, tmp);
     }
     return tmp3;
   });
@@ -84,7 +82,6 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   tmp9Result = tmp9(1993);
   obj[0] = tmp9Result.getArticleURL(constants2.CREATOR_FAQ);
   const tmp16 = refresh(16934)(eligibility);
-  const tmp26 = constants2;
   if (isApplicationRejected) {
     if (tmpResult.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
       if (true === hasItem) {
@@ -109,7 +106,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     const intl2 = tmp(1236).intl;
     const obj2 = { requestCooldownDuration: null, creatorRevenuePolicyUrl: null };
     obj2[0] = requestCooldownDuration;
-    obj2[1] = tmp9(1993).getArticleURL(tmp26.CREATOR_POLICY);
+    obj2[1] = tmp9(1993).getArticleURL(constants2.CREATOR_POLICY);
     formatResult2 = intl2.format(tmp(1236).t.TvX207, obj2);
     const tmp9Result1 = tmp9(1993);
   }
@@ -124,9 +121,9 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (isExpeditedOnboardingGuild) {
     isExpeditedOnboardingGuild = false === hasItem;
   }
-  const formatResult = intl.format(_getSystemLocale.t.aJUdOi, obj);
+  const formatResult = intl.format(require("../../../intl/index.native.tsx").t.aJUdOi, obj);
   let formatResult3;
-  const creatorMonetizationAcceptTermsCheckboxText = _getCreatorMonetizationAcceptTermsCheckboxText.getCreatorMonetizationAcceptTermsCheckboxText();
+  const creatorMonetizationAcceptTermsCheckboxText = require("CreatorMonetizationAcceptTermCheckboxText.tsx").getCreatorMonetizationAcceptTermsCheckboxText();
   if (isApplicationRejected) {
     if (tmp35) {
       if (stateFromStores) {

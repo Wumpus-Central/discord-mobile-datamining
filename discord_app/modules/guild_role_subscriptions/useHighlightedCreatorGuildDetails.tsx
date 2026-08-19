@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { MarketingURLs } from "../../Constants.tsx";
 
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 
 export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   importDefault = arg1;
@@ -21,34 +21,34 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   memo = memo.useMemo(() => {
     let group_listings;
     if (store_page != null) {
-      const role_subscription = tmp.role_subscription;
+      const role_subscription = store_page.role_subscription;
       if (role_subscription != null) {
         group_listings = role_subscription.group_listings;
       }
     }
-    const set = new Set();
+    new Set();
     if (group_listings != null) {
-      let item = group_listings.forEach((subscription_listings) => {
-        const prop = subscription_listings.subscription_listings;
+      let item = group_listings.forEach((item, index) => {
+        const prop = item.subscription_listings;
         if (prop != null) {
-          const item = prop.forEach((role_id) => {
-            set.add(role_id.role_id);
+          item = prop.forEach((item, index) => {
+            set.add(item.role_id);
           });
         }
       });
     }
     let benefit_emojis;
     if (store_page != null) {
-      const role_subscription2 = tmp.role_subscription;
+      const role_subscription2 = store_page.role_subscription;
       if (role_subscription2 != null) {
         benefit_emojis = role_subscription2.benefit_emojis;
       }
     }
     let found;
     if (benefit_emojis != null) {
-      found = benefit_emojis.filter((roles) => {
-        roles = roles.roles;
-        return roles.some((arg0) => set.has(arg0));
+      found = benefit_emojis.filter((item, index) => {
+        const roles = item.roles;
+        return roles.some((item, index) => set.has(item));
       });
     }
     return found;
@@ -64,9 +64,9 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
   const memo1 = obj.useMemo(() => {
     let substr = memo;
     if (null != memo) {
-      substr = arr;
-      if (arr.length > closure_0) {
-        substr = arr.slice(0, tmp2);
+      substr = memo;
+      if (memo.length > closure_0) {
+        substr = memo.slice(0, tmp2);
       }
     }
     return substr;

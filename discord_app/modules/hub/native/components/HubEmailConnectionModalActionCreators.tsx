@@ -1,17 +1,15 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionModalActionCreators.tsx
 import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+const require = fn;
 const HUB_EMAIL_CONNECTION_MODAL_KEY = "HUB_EMAIL_CONNECTION_MODAL_KEY";
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModalActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionModalActionCreators.tsx");
 
 export default {
-  open(closure_0) {
-    closure_0 = arg1;
+  open(closure_0, closure_0) {
     _modDef5260.pushLazy(callback(function*() {
       closure_1 = tmp5;
-      closure_0 = tmp2;
       yield closure_1_0(paths[3])(paths[2], paths.paths);
       closure_0 = arg1.default;
       if (null != closure_0) {

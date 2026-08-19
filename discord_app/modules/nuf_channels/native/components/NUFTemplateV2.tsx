@@ -6,17 +6,16 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ container: { padding: 16, alignItems: "center" }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 46, paddingLeft: 18, paddingRight: 18 }, illustration: { alignSelf: "stretch", alignItems: "center", marginBottom: 32 } });
-const result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplateV2.tsx");
+const result = require("obj132").fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplateV2.tsx");
 
 export default function NUFActionSheetTemplate(arg0) {
   ({ title, illustration, description, onCTAPress, CTALabel } = arg0);
   const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.illustration, children: illustration };
+  let obj = { style: tmp.illustration, children: illustration };
   const items = [callback(View, obj), , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", children: title };
   items[1] = callback(Text.Text, obj);

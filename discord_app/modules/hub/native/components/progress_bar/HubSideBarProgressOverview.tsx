@@ -1,12 +1,13 @@
 // discord_app/modules/hub/native/components/progress_bar/HubSideBarProgressOverview.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import items from "../../../HubProgressBarConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ HUB_PROGRESS_ACTION_SHEET_ID: c3, HUB_PROGRESS_NUM_TOTAL_STEPS: c4 } = items);
-const result = require("set").fileFinishedImporting("modules/hub/native/components/progress_bar/HubSideBarProgressOverview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/hub/native/components/progress_bar/HubSideBarProgressOverview.tsx");
 
 export default function HubSidebarProgressOverview(guild) {
   guild = guild.guild;
@@ -23,19 +24,18 @@ export default function HubSidebarProgressOverview(guild) {
       obj = { number: null, total: null };
       const _HermesInternal = HermesInternal;
       obj[0] = "" + size;
-      obj[1] = tmp11;
+      obj[1] = closure_4;
       let formatToPlainStringResult = intl2.formatToPlainString(tmp(1236).t["9j7xDu"], obj);
     } else {
       const intl = tmp(1236).intl;
       formatToPlainStringResult = intl.string(tmp(1236).t["+Gyklt"]);
     }
     const _Math = Math;
-    const bound = Math.max(tmp(11643).MIN_PROGRESS_PERCENT, 100 * size / tmp11);
+    const bound = Math.max(tmp(11643).MIN_PROGRESS_PERCENT, 100 * size / closure_4);
     obj = { onPress: null, title: null, subtitle: null, percentComplete: null };
     obj[0] = function onPress() {
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { guild, analyticsSource: "Channels Sidebar" };
-      obj.openLazy(guild(closure_1_2[9])(closure_1_2[8], closure_1_2.paths), closure_1_3, obj);
+      const obj = { guild, analyticsSource: "Channels Sidebar" };
+      obj.openLazy(guild(dependencyMap[9])(dependencyMap[8], dependencyMap.paths), closure_1_3, obj);
     };
     obj[1] = hubProgressTitleForStep;
     obj[2] = formatToPlainStringResult;

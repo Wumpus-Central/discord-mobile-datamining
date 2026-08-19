@@ -1,7 +1,7 @@
 // discord_app/modules/errors/EmbeddedActivityClientError.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/errors/EmbeddedActivityClientError.tsx");
+const result = obj132.fileFinishedImporting("modules/errors/EmbeddedActivityClientError.tsx");
 const prototype = function EmbeddedActivityClientError(reason, detailCode) {
   const obj = Object.create(new.target.prototype);
   obj.reason = reason;

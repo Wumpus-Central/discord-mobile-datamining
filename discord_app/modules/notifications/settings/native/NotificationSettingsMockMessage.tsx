@@ -1,32 +1,27 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsMockMessage.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { UserNotificationSettings } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { card: null, cardContent: null, cardMessage: null, overlay: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, padding: 16 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, padding: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row" };
 createCacheKey[2] = { marginLeft: 12, maxWidth: 240 };
 createCacheKey[3] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function NotificationSettingsMockMessageTsx1(){const{withTiming,opacity,timingStandard}=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};}" };
-let obj1 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMockMessage.tsx");
+let result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMockMessage.tsx");
 
 export default function NotificationSettingsMockMessage(notificationSetting) {
   const tmp = callback3();
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj1 = sharedValue(4219);
@@ -45,7 +40,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const fn = function h() {
     const obj = { opacity: null };
     const value = sharedValue.get();
-    obj[0] = callback(closure_1_2[10]).withTiming(value, callback(closure_1_2[11]).timingStandard);
+    obj[0] = callback(dependencyMap[10]).withTiming(value, callback(dependencyMap[11]).timingStandard);
     return obj;
   };
   obj = { withTiming: tmp2(4664).withTiming, opacity: sharedValue, timingStandard: tmp2(4667).timingStandard };
@@ -83,13 +78,13 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   }, items3);
   const obj4 = { style: tmp.card, children: null };
   const obj5 = { style: tmp.cardContent, children: null };
-  const obj6 = { children: tmp12(_Button.Avatar, { source: sharedValue(10102), size: _Button.AvatarSizes.LARGE_48 }) };
+  const obj6 = { children: tmp12(require("../../../../design/void/native.tsx").Avatar, { source: sharedValue(10102), size: require("../../../../design/void/native.tsx").AvatarSizes.LARGE_48 }) };
   const items4 = [tmp12(View, obj6), ];
   const obj8 = { style: tmp.cardMessage, children: null };
   const obj9 = { variant: "text-sm/semibold", children: null };
   const intl2 = tmp2(1236).intl;
-  obj9[1] = intl2.string(_getSystemLocale.t.qSq0tD);
-  const items5 = [tmp12(_Text.Text, obj9), tmp11];
+  obj9[1] = intl2.string(require("../../../../intl/index.native.tsx").t.qSq0tD);
+  const items5 = [tmp12(require("../../../../design/components/Text/native/Text.tsx").Text, obj9), tmp11];
   obj8[1] = items5;
   items4[1] = callback2(View, obj8);
   obj5[1] = items4;

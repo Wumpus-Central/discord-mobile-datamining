@@ -1,8 +1,8 @@
 // discord_app/lib/guild/GuildChannelSubscriptions.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import privDefault from "../../../_runtime/01405_priv.js";
 
-let result = set.fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");
+let result = obj132.fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");
 class GuildChannelSubscriptions {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -17,8 +17,8 @@ prototype["reset"] = function reset() {
 };
 prototype["get"] = function get(arg0) {
   const obj = {};
-  const item = this._get(arg0).forEach((arg0, arg1) => {
-    obj[arg1] = arg0;
+  const item = this._get(arg0).forEach((item, index) => {
+    obj[index] = item;
   });
   return obj;
 };
@@ -42,8 +42,8 @@ prototype["subscribe"] = function subscribe(arg0, arg1, arg2) {
     const result = _getResult.set(arg1, arg2);
     self._subscriptions[arg0] = _getResult;
     obj = {};
-    const item = _getResult.forEach((arg0, arg1) => {
-      obj[arg1] = arg0;
+    const item = _getResult.forEach((item, index) => {
+      obj[index] = item;
     });
     self._onChange(arg0, obj);
     flag = true;

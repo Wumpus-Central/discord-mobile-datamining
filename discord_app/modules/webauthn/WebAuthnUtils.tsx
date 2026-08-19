@@ -1,7 +1,7 @@
 // discord_app/modules/webauthn/WebAuthnUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");
 
 export const encodeUserIdForWebAuthn = function encodeUserIdForWebAuthn(c1) {
   const uint8Array = new Uint8Array(16);

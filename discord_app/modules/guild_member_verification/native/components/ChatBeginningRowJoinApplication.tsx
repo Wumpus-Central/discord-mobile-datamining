@@ -2,32 +2,29 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/PermissionStore.tsx";
-import closure_5 from "../../../../stores/UserStore.tsx";
+import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { Permissions } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-createCacheKey = { container: null, guildInfoRow: null, divider: null, formQuestion: null };
-createCacheKey = { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: ThemesDefault.radii.lg };
+const createCacheKey = { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: ThemesDefault.radii.lg };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, border: "none", marginVertical: 16 };
 createCacheKey[3] = { marginBottom: 4 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, border: "none", marginVertical: 16 };
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/ChatBeginningRowJoinApplication.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/ChatBeginningRowJoinApplication.tsx");
 
 export default function ChatBeginningRowJoinRequest(channelId) {
   channelId = channelId.channelId;
-  let _require;
   let joinRequest;
   let joinRequestGuild;
   const tmp = callback2();
-  _require = tmp;
+  const _require = tmp;
   const tmp4 = joinRequest(joinRequestGuild[8])(channelId);
   joinRequest = tmp4.joinRequest;
   joinRequestGuild = tmp4.joinRequestGuild;
@@ -45,7 +42,7 @@ export default function ChatBeginningRowJoinRequest(channelId) {
   ({ approveRequest, rejectRequest } = joinRequestButtonActions);
   let obj2 = _require(joinRequestGuild[9]);
   const items1 = [closure_4];
-  let stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_4.can(closure_1_6.KICK_MEMBERS, joinRequestGuild));
+  let stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_4.can(Permissions.KICK_MEMBERS, joinRequestGuild));
   let tmp10Result = null;
   if (null != joinRequest) {
     tmp10Result = null;
@@ -64,7 +61,7 @@ export default function ChatBeginningRowJoinRequest(channelId) {
         obj2[2] = joinRequestGuild.name;
         items2[1] = callback(tmp5(tmp3[12]).Text, obj2);
         obj[1] = items2;
-        tmp10Result = tmp10(tmp12, obj);
+        tmp10Result = callback(View, obj);
         const tmp2Result = joinRequest(tmp3[11]);
       }
       const items3 = [tmp10Result, , ];
@@ -79,31 +76,30 @@ export default function ChatBeginningRowJoinRequest(channelId) {
       }
       items3[1] = tmp16;
       const formResponses = joinRequest.formResponses;
-      const found = formResponses.filter((field_type) => field_type.field_type !== lib(joinRequestGuild[14]).VerificationFormFieldTypes.TERMS);
-      items3[2] = found.map((field_type) => {
-        if (field_type.field_type === lib(joinRequestGuild[14]).VerificationFormFieldTypes.MULTIPLE_CHOICE) {
-          if (null != field_type.response) {
-            let response = field_type.choices[field_type.response];
+      const found = formResponses.filter((item, index) => item.field_type !== lib(joinRequestGuild[14]).VerificationFormFieldTypes.TERMS);
+      items3[2] = found.map((item, index) => {
+        if (item.field_type === lib(joinRequestGuild[14]).VerificationFormFieldTypes.MULTIPLE_CHOICE) {
+          if (null != item.response) {
+            let response = item.choices[item.response];
           }
-          let obj = { children: null };
-          obj = { style: null };
+          let obj = { style: null };
           obj[0] = lib.divider;
-          const items = [closure_1_7(closure_1_3, obj), , ];
+          const items = [closure_1_7(View, obj), , ];
           obj = { style: null, variant: "text-xs/semibold", color: "text-muted", children: null };
           obj[0] = lib.formQuestion;
-          obj[3] = field_type.label;
-          items[1] = closure_1_7(tmp(tmp2[12]).Text, obj);
+          obj[3] = item.label;
+          items[1] = closure_1_7(lib(joinRequestGuild[12]).Text, obj);
           obj1 = { variant: "text-md/medium", color: "text-strong", children: null };
           obj1[2] = response;
-          items[2] = closure_1_7(tmp(tmp2[12]).Text, obj1);
+          items[2] = closure_1_7(lib(joinRequestGuild[12]).Text, obj1);
           obj[0] = items;
           const _HermesInternal = HermesInternal;
-          return closure_1_8(closure_1_3, obj, "form-response-" + arg1);
+          return closure_1_8(View, obj, "form-response-" + index);
         }
-        response = field_type.response;
+        response = item.response;
       });
       obj[1] = items3;
-      const items4 = [closure_8(View, obj), ];
+      const items4 = [callback(View, obj), ];
       if (stateFromStores1) {
         stateFromStores1 = joinRequest.applicationStatus === tmp5(tmp3[14]).GuildJoinRequestApplicationStatuses.SUBMITTED;
       }
@@ -120,13 +116,12 @@ export default function ChatBeginningRowJoinRequest(channelId) {
         obj7[4] = intl3.string(tmp5(tmp3[13]).t.hDtbsz);
         items5[1] = callback(tmp5(tmp3[16]).Button, obj7);
         obj5[2] = items5;
-        stateFromStores1 = tmp10(tmp5(tmp3[15]).ButtonGroup, obj5);
+        stateFromStores1 = callback(tmp5(tmp3[15]).ButtonGroup, obj5);
       }
       const obj8 = { children: null };
       items4[1] = stateFromStores1;
       obj8[0] = items4;
-      tmp10Result = tmp10(closure_9, obj8);
-      const tmp11 = closure_9;
+      tmp10Result = callback(closure_9, obj8);
     }
   }
   return tmp10Result;

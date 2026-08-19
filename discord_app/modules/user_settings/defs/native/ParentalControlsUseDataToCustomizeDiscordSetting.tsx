@@ -2,12 +2,12 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import maybeFetchCollectiblesForInvoicesDefault from "../../../parent_tools/FamilyCenterActionCreators.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import closure_3 from "../../../parent_tools/FamilyCenterStore.tsx";
+import freshTeenActivityWithMap from "../../../parent_tools/FamilyCenterStore.tsx";
 import { Consents } from "../../../../Constants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.MNKzyg);
@@ -31,11 +31,10 @@ createToggle = {
         items2 = [Consents.PERSONALIZATION];
       }
       maybeFetchCollectiblesForInvoicesDefault.updateTeenConsents(selectedTeenId, items1, items2);
-      const obj = maybeFetchCollectiblesForInvoicesDefault;
     }
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx");
 
 export default createToggle;

@@ -1,12 +1,12 @@
 // discord_app/modules/app_database/modules/GuildVersions.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import itemsDefault from "../DatabaseDaos.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../stores/GuildStore.tsx";
-import set from "../../../../_runtime/00002_set.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-let set = arg1;
+let obj132 = fn;
 let closure_6 = new timestampDefault("GuildVersions");
 class GuildVersions {
   constructor() {
@@ -68,10 +68,10 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw arr;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj[0] = arr;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -82,11 +82,11 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         if (0 === c5) {
           if (arg0 === 1) {
             logger = 3;
-            throw arg1;
+            throw arr;
           } else if (arg0 === 2) {
             logger = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = arr;
             return obj;
           } else {
             closure_2 = tmp3;
@@ -119,17 +119,17 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           return obj3;
         } else if (arg0 === 1) {
           logger = 3;
-          throw arg1;
+          throw arr;
         } else if (arg0 === 2) {
           c4 = 0;
           logger = 3;
           const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
+          obj4[0] = arr;
           return obj4;
         } else {
-          closure_0 = arg1.map((arg0) => {
+          closure_0 = arr.map((item, index) => {
             const items = [, ];
-            ({ id: arr[0], version: arr[1] } = arg0);
+            ({ id: arr[0], version: arr[1] } = item);
             return items;
           });
           if (closure_0 == null) {
@@ -164,14 +164,10 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("unavailable" !== nextResult.data_mode) {
-      let tmp3 = nextResult;
       let items = [tmp2];
       let updateWithResult = self.updateWith(tmp2.id, items);
     }
-    let tmp5 = guild;
-    let tmp6 = nextResult;
     if (null == guild.getGuild(tmp2.id)) {
-      let tmp7 = nextResult;
       let removeResult = self.remove(tmp2.id, arg1);
     }
     continue;
@@ -204,8 +200,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op) {
     writes = emojis.writes;
   } else {
-    set(1370).assertNever(emojis);
-    const obj = set(1370);
+    obj132(1370).assertNever(emojis);
+    const obj = obj132(1370);
   }
   this.updateWith(id, writes);
   const stickers = guild.stickers;
@@ -215,8 +211,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op2) {
     writes2 = stickers.writes;
   } else {
-    set(1370).assertNever(stickers);
-    const obj2 = set(1370);
+    obj132(1370).assertNever(stickers);
+    const obj2 = obj132(1370);
   }
   self.updateWith(id, writes2);
   const channels = guild.channels;
@@ -226,8 +222,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op3) {
     writes3 = channels.writes;
   } else {
-    set(1370).assertNever(channels);
-    const obj3 = set(1370);
+    obj132(1370).assertNever(channels);
+    const obj3 = obj132(1370);
   }
   self.updateWith(id, writes3);
   const roles = guild.roles;
@@ -237,8 +233,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op4) {
     writes4 = roles.writes;
   } else {
-    set(1370).assertNever(roles);
-    const obj4 = set(1370);
+    obj132(1370).assertNever(roles);
+    const obj4 = obj132(1370);
   }
   self.updateWith(id, writes4);
   self.commit(arg1);
@@ -290,7 +286,6 @@ prototype["handleChannelUpdates"] = function handleChannelUpdates(arg0, arg1) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (null != nextResult.guild_id) {
-      let tmp3 = nextResult;
       let items = [tmp2];
       let updateWithResult = self.updateWith(tmp2.guild_id, items);
     }
@@ -341,7 +336,6 @@ prototype["updateWith"] = function updateWith(arg0, arg1) {
 };
 prototype["computeLatestVersion"] = function computeLatestVersion(bound, arg1) {
   while (tmp2 !== undefined) {
-    let tmp4 = bound;
     let num = tmp3.version;
     if (num == null) {
       num = 0;
@@ -358,21 +352,16 @@ prototype["commit"] = function commit(database) {
     const pending2 = self.pending;
     const tmp21 = pending2[Symbol.iterator]();
     while (tmp21 !== undefined) {
-      let tmp4 = callback;
       let tmp5 = callback(tmp2, 2);
       [tmp6, tmp7] = tmp5;
-      let tmp8 = tmp7;
       if (null != tmp7) {
         let obj = { id: null, version: null };
-        let tmp12 = tmp6;
         obj[0] = tmp6;
-        let tmp13 = tmp7;
-        obj[1] = tmp8;
+        obj[1] = tmp7;
         let putResult = result.put(obj);
         let committed2 = self.committed;
-        let result1 = committed2.set(tmp6, tmp8);
+        let result1 = committed2.set(tmp6, tmp7);
       } else {
-        let tmp9 = tmp6;
         let deleteResult = result.delete(tmp6);
         let committed = self.committed;
         let deleteResult1 = committed.delete(tmp6);
@@ -381,15 +370,14 @@ prototype["commit"] = function commit(database) {
     }
     const pending = self.pending;
     pending.clear();
-    const obj2 = itemsDefault;
   }
 };
-set = Object.create(GuildVersions.prototype);
+obj132 = Object.create(GuildVersions.prototype);
 let tmp2 = new timestampDefault("GuildVersions");
-set.pending = new Map();
+obj132.pending = new Map();
 let map = new Map();
-set.committed = new Map();
-set.actions = {
+obj132.committed = new Map();
+obj132.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -430,7 +418,7 @@ set.actions = {
     return obj.handleGuildUpdate(arg0, arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/GuildVersions.tsx");
+let result = obj132.fileFinishedImporting("modules/app_database/modules/GuildVersions.tsx");
 
-export default set;
+export default obj132;
 export { GuildVersions };

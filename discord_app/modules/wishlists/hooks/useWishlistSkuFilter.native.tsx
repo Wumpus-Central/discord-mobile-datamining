@@ -1,31 +1,29 @@
 // discord_app/modules/wishlists/hooks/useWishlistSkuFilter.native.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { WishlistRecommendationReason as closure_3 } from "../records/WishlistRecommendationRecord.tsx";
 import { SKUProductLines } from "../../../Constants.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/wishlists/hooks/useWishlistSkuFilter.native.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/wishlists/hooks/useWishlistSkuFilter.native.tsx");
 
 export const useWishlistSkuFilter = function useWishlistSkuFilter(wishlistAndRecommendations) {
   wishlistAndRecommendations = wishlistAndRecommendations.wishlistAndRecommendations;
   const skusToUserAndReason = wishlistAndRecommendations.skusToUserAndReason;
   const userId = wishlistAndRecommendations.userId;
   const numItems = wishlistAndRecommendations.numItems;
-  let isEligibleForSocialLayerStorefrontMobilePurchasing;
-  let memo;
   let obj = wishlistAndRecommendations(skusToUserAndReason[3]);
-  isEligibleForSocialLayerStorefrontMobilePurchasing = obj.useIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "use_wishlist_sku_filter" });
+  const isEligibleForSocialLayerStorefrontMobilePurchasing = obj.useIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "use_wishlist_sku_filter" });
   const items = [wishlistAndRecommendations, isEligibleForSocialLayerStorefrontMobilePurchasing];
-  memo = userId.useMemo(() => wishlistAndRecommendations.filter((productLine) => {
-    const GIFTABLE_PRODUCT_LINES = closure_1_0(closure_1_1[4]).GIFTABLE_PRODUCT_LINES;
-    let hasItem = GIFTABLE_PRODUCT_LINES.has(productLine.productLine);
+  const memo = userId.useMemo(() => wishlistAndRecommendations.filter((item, index) => {
+    const GIFTABLE_PRODUCT_LINES = wishlistAndRecommendations(skusToUserAndReason[4]).GIFTABLE_PRODUCT_LINES;
+    let hasItem = GIFTABLE_PRODUCT_LINES.has(item.productLine);
     if (hasItem) {
-      let tmp5 = productLine.productLine !== closure_1_4.SOCIAL_LAYER_GAME_ITEM;
+      let tmp5 = item.productLine !== isEligibleForSocialLayerStorefrontMobilePurchasing.SOCIAL_LAYER_GAME_ITEM;
       if (!tmp5) {
         let result = closure_4;
         if (closure_4) {
-          result = closure_1_0(closure_1_1[5]).isSlayerSkuAvailableOnThisPlatform(productLine);
-          const tmpResult = closure_1_0(closure_1_1[5]);
+          result = wishlistAndRecommendations(skusToUserAndReason[5]).isSlayerSkuAvailableOnThisPlatform(item);
+          const tmpResult = wishlistAndRecommendations(skusToUserAndReason[5]);
         }
         tmp5 = result;
       }
@@ -34,10 +32,10 @@ export const useWishlistSkuFilter = function useWishlistSkuFilter(wishlistAndRec
     return hasItem;
   }), items);
   obj = {
-    totalUnownedWishlistItemCount: userId.useMemo(() => memo.filter((arg0) => {
-      let tmp2 = null != table[arg0.id];
+    totalUnownedWishlistItemCount: userId.useMemo(() => memo.filter((item, index) => {
+      let tmp2 = null != table[item.id];
       if (tmp2) {
-        tmp2 = tmp[arg0.id][closure_2] === closure_1_3.WISHLIST;
+        tmp2 = tmp[item.id][closure_2] === numItems.WISHLIST;
       }
       return tmp2;
     }).length, items1),

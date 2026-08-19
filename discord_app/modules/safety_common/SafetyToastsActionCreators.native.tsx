@@ -1,11 +1,11 @@
 // discord_app/modules/safety_common/SafetyToastsActionCreators.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import presentAddedFriendToast from "../toast/native/ToastUtils.tsx";
 import SafetyToastType2 from "Constants.tsx";
 import getSafetyToastTypeContent from "SafetyToastsUtils.tsx";
 
 const SafetyToastType = SafetyToastType2.SafetyToastType;
-const result = set.fileFinishedImporting("modules/safety_common/SafetyToastsActionCreators.native.tsx");
+const result = obj132.fileFinishedImporting("modules/safety_common/SafetyToastsActionCreators.native.tsx");
 
 export default {
   showIgnoreSuccessToast(closure_0, closure_1) {
@@ -20,9 +20,9 @@ export default {
     const obj = presentAddedFriendToast;
     obj.showSafetySuccess(SafetyToastType.BLOCK_SUCCESS, getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.BLOCK_SUCCESS, closure_0, closure_1));
   },
-  showUnblockSuccessToast(closure_3, id) {
+  showUnblockSuccessToast(id, id2) {
     const obj = presentAddedFriendToast;
-    obj.showSafetySuccess(SafetyToastType.UNBLOCK_SUCCESS, getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.UNBLOCK_SUCCESS, closure_3, id));
+    obj.showSafetySuccess(SafetyToastType.UNBLOCK_SUCCESS, getSafetyToastTypeContent.getSafetyToastTypeContent(SafetyToastType.UNBLOCK_SUCCESS, id, id2));
   },
   showMuteSuccessToast(id, channelId) {
     const obj = presentAddedFriendToast;

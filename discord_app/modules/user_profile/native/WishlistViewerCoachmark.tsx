@@ -1,17 +1,15 @@
 // discord_app/modules/user_profile/native/WishlistViewerCoachmark.tsx
 import metadataDefault from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 function CoachmarkImage() {
   const tmp = callback();
-  let obj = { style: tmp.imageContainer, children: null };
-  obj = { source: null, style: null };
-  obj = { uri: metadataDefault };
+  const obj = { uri: metadataDefault };
   obj[0] = obj;
   obj[1] = tmp.image;
   obj[1] = <closure_5 uri={metadataDefault} />;
@@ -19,7 +17,7 @@ function CoachmarkImage() {
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 let closure_8 = createCacheKey.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");
 
 export default function WishlistViewerCoachmark(isVisible) {
   isVisible = isVisible.isVisible;

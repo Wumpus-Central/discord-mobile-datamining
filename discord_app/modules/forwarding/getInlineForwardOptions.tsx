@@ -1,9 +1,9 @@
 // discord_app/modules/forwarding/getInlineForwardOptions.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 
 const MessageReferenceTypes = ME.MessageReferenceTypes;
-const result = set.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
+const result = obj132.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
 
 export const getInlineForwardOptions = function getInlineForwardOptions(message, nativeSyntheticEventData) {
   ({ targetKind, embedIndex } = nativeSyntheticEventData);
@@ -25,8 +25,8 @@ export const getInlineForwardOptions = function getInlineForwardOptions(message,
     let mapped;
     if (tmp6 != null) {
       const attachments = tmp6.attachments;
-      const found = attachments.filter((filename) => {
-        filename = filename.filename;
+      const found = attachments.filter((item, index) => {
+        const filename = item.filename;
         let isImageFileResult = callback(table[1]).isImageFile(filename);
         if (!isImageFileResult) {
           isImageFileResult = callback(table[1]).isVideoFile(filename);
@@ -34,7 +34,7 @@ export const getInlineForwardOptions = function getInlineForwardOptions(message,
         }
         return isImageFileResult;
       });
-      mapped = found.map((id) => id.id);
+      mapped = found.map((item, index) => item.id);
     }
     let obj = { onlyAttachmentIds: null };
     obj[0] = mapped;

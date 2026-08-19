@@ -1,49 +1,42 @@
 // discord_app/stores/DeveloperOptionsStore.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import ME from "../Constants.tsx";
-import setDefault from "../utils/Durations.tsx";
+import obj132Default from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import importDefaultResult from "../../discord_common/js/packages/backoff/Backoff.tsx";
 
-let closure_0 = require;
-let c1 = importDefault;
-let c2 = importAll;
-let refreshSourceMapCookie = dependencyMap;
 const UserFlags = ME.UserFlags;
-closure_0 = undefined;
-c1 = undefined;
-c2 = undefined;
-refreshSourceMapCookie = function refreshSourceMapCookie() {
+function refreshSourceMapCookie() {
   const HTTP = callback(refreshSourceMapCookie[3]).HTTP;
-  obj = { url: callback, headers: null, oldFormErrors: true, rejectWithError: true };
   obj = { Authorization: _undefined(refreshSourceMapCookie[4]).getToken() };
   obj[1] = obj;
   const obj3 = _undefined(refreshSourceMapCookie[4]);
-  HTTP.put(obj).then((status) => {
-    if (401 !== status.status) {
-      if (403 !== status.status) {
-        if (200 !== status.status) {
+  HTTP.put(obj).then((result) => {
+    if (401 !== result.status) {
+      if (403 !== result.status) {
+        if (200 !== result.status) {
           const _setTimeout2 = setTimeout;
           let timeout = setTimeout(closure_3, closure_2.fail());
         } else {
           closure_2.succeed();
           const _setTimeout = setTimeout;
-          timeout = setTimeout(closure_3, status.body.sourceMapCookieTTLSeconds * closure_1_1(closure_1_3[2]).Millis.SECOND * 0.75);
+          timeout = setTimeout(closure_3, result.body.sourceMapCookieTTLSeconds * closure_1_1(refreshSourceMapCookie[2]).Millis.SECOND * 0.75);
         }
       }
     }
     timeout = null;
-    const result = closure_1_0(closure_1_3[5]).setDeveloperOptionSettings({ sourceMapsEnabled: false });
+    result = closure_1_0(refreshSourceMapCookie[5]).setDeveloperOptionSettings({ sourceMapsEnabled: false });
+    obj = closure_1_0(refreshSourceMapCookie[5]);
   }, () => {
     const timeout = setTimeout(closure_3, closure_2.fail());
   });
-};
-closure_0 = "" + location.protocol + "//" + location.host + "/__development/source_maps";
-c1 = null;
-let result = 5 * setDefault.Millis.SECOND;
-importDefaultResult = new importDefaultResult(result, setDefault.Millis.MINUTE, true);
-c2 = importDefaultResult;
+}
+let closure_0 = "" + location.protocol + "//" + location.host + "/__development/source_maps";
+let c1 = null;
+let result = 5 * obj132Default.Millis.SECOND;
+importDefaultResult = new importDefaultResult(result, obj132Default.Millis.MINUTE, true);
+let c2 = importDefaultResult;
 let closure_5 = {
   set(arg0) {
     if (arg0 !== null != timeout) {
@@ -67,8 +60,7 @@ let closure_5 = {
   }
 };
 const DeveloperOptionsStore = "DeveloperOptionsStore";
-let obj = { trace: false, canary: false, logGatewayEvents: false, logOverlayEvents: false, logAnalyticsEvents: false, sourceMapsEnabled: false, axeEnabled: false, cssDebuggingEnabled: false, layoutDebuggingEnabled: false, bugReporterEnabled: true, idleStatusIndicatorEnabled: false, onlyShowPreviewAppCollections: false, disableAppCollectionsCache: false, isStreamInfoOverlayEnabled: false, preventPopoutClose: false, logKeyboardMismatches: false, alertStartupMetrics: false, logQuestEvents: false };
-obj = {};
+let obj = {};
 let merged = Object.assign(obj);
 const DeveloperOptionsRoutingKey = "DeveloperOptionsRoutingKey";
 let closure_10 = [];
@@ -145,7 +137,7 @@ Object.defineProperty(prototype, "sourceMapsEnabled", {
   set: undefined
 });
 Object.defineProperty(prototype, "isBugReporterEnabled", {
-  get: function isBugReporterEnabled(arg0) {
+  get: function isBugReporterEnabled(hasBugReporterAccess) {
     return obj.bugReporterEnabled;
   },
   set: undefined
@@ -200,9 +192,9 @@ Object.defineProperty(prototype, "isLoggingQuestEvents", {
 });
 prototype["getDebugOptionsHeaderValue"] = function getDebugOptionsHeaderValue() {
   const keys = Object.keys(obj);
-  const mapped = keys.map((arg0) => dependencyMap[arg0]);
+  const mapped = keys.map((item, index) => dependencyMap[item]);
   const keys1 = Object.keys(obj);
-  const found = keys1.filter((arg0) => dependencyMap[arg0]);
+  const found = keys1.filter((item, index) => dependencyMap[item]);
   return found.join(",");
 };
 Object.defineProperty(prototype, "routingKeyTags", {
@@ -244,7 +236,7 @@ obj = {
     if ((num & UserFlags.STAFF) === UserFlags.STAFF) {
       const result = store.set(obj.sourceMapsEnabled);
     }
-    obj = _null(refreshSourceMapCookie[7]);
+    _null(refreshSourceMapCookie[7]);
     obj = { isStaff: str.toString() };
     obj.setTags(obj);
   },
@@ -264,6 +256,6 @@ obj = {
   }
 };
 const developerOptionsStore = new DeveloperOptionsStore(dispatcherDefault, obj);
-let result1 = set.fileFinishedImporting("stores/DeveloperOptionsStore.tsx");
+let result1 = obj132.fileFinishedImporting("stores/DeveloperOptionsStore.tsx");
 
 export default developerOptionsStore;

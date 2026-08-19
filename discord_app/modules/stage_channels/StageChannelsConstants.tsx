@@ -1,11 +1,11 @@
 // discord_app/modules/stage_channels/StageChannelsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
 
 const HelpdeskArticles = ME.HelpdeskArticles;
-const result = set.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
 
 export const MAX_STAGE_TOPIC_LENGTH = 240;
 export const MAX_AUDIENCE_ROW_LIMIT = 4;

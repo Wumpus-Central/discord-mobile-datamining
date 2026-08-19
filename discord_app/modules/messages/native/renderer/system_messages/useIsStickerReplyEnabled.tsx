@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx
 import useCanUnarchiveThread from "../../../../threads/ThreadHooks.tsx";
-import closure_2 from "../../../../../stores/GuildMemberStore.tsx";
-import closure_3 from "../../../../../stores/PermissionStore.tsx";
-import closure_4 from "../../../../../stores/UserStore.tsx";
+import trackCommunicationDisabled from "../../../../../stores/GuildMemberStore.tsx";
+import getUncachedChannelPermissions from "../../../../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 import { Permissions } from "../../../../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");
 
 export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnabled(guildId, channel, message, arg3) {
   currentUser = currentUser.getCurrentUser();

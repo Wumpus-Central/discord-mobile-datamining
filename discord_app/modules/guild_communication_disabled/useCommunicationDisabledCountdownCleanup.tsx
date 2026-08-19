@@ -1,9 +1,9 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import noop from "../../../_runtime/00019_noop.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
-let result = set.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx");
+let result = obj132.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx");
 
 export const useCommunicationDisabledCountdownCleanup = function useCommunicationDisabledCountdownCleanup(guildMember) {
   importDefault = guildMember;
@@ -35,14 +35,14 @@ export const useCommunicationDisabledCountdownCleanup = function useCommunicatio
           if (tmp5) {
             const _setTimeout = setTimeout;
             ref.current = setTimeout(() => {
-              const result = closure_1_0(closure_1_1[2]).clearGuildMemberTimeout(closure_2, closure_1);
+              const result = guildMember(userId[2]).clearGuildMemberTimeout(closure_2, closure_1);
             }, 1000);
           }
           return () => {
             if (null != ref.current) {
               const _clearTimeout = clearTimeout;
-              clearTimeout(tmp.current);
-              tmp.current = null;
+              clearTimeout(ref.current);
+              ref.current = null;
             }
           };
         }

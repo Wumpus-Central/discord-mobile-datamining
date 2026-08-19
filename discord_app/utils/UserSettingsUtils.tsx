@@ -4,21 +4,21 @@ import getSystemLocale from "../intl/index.native.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
 import collectGuildAnalyticsMetadataDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
 import getSearchSessionIdDefault from "../modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx";
-import closure_3 from "../stores/GuildAvailabilityStore.tsx";
-import closure_4 from "../stores/GuildStore.tsx";
+import handleConnectionOpen from "../stores/GuildAvailabilityStore.tsx";
+import createGuildRecordFromRust from "../stores/GuildStore.tsx";
 import ME from "../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ AnalyticEvents: c5, FriendSourceFlags: closure_6, AllFriendSourceFlags: error, ComponentActions: closure_8 } = ME);
 let obj = { UNDECIDED: 0, [0]: "UNDECIDED", OPTIN: 1, [1]: "OPTIN", OPTOUT: 2, [2]: "OPTOUT" };
-const result = require("set").fileFinishedImporting("utils/UserSettingsUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/UserSettingsUtils.tsx");
 
 export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuilds() {
   const RestrictedGuildIds = explicitContentFromProto.RestrictedGuildIds;
   const setting = RestrictedGuildIds.getSetting();
   let found = setting;
   if (0 === closure_3.totalUnavailableGuilds) {
-    found = setting.filter((arg0) => null != guild.getGuild(arg0));
+    found = setting.filter((item, index) => null != guild.getGuild(item));
   }
   return new Set(found);
 };
@@ -27,7 +27,7 @@ export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedM
   const setting = MessageRequestRestrictedGuildIds.getSetting();
   let found = setting;
   if (0 === closure_3.totalUnavailableGuilds) {
-    found = setting.filter((arg0) => null != guild.getGuild(arg0));
+    found = setting.filter((item, index) => null != guild.getGuild(item));
   }
   return new Set(found);
 };
@@ -36,7 +36,7 @@ export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivit
   const setting = ActivityRestrictedGuilds.getSetting();
   let found = setting;
   if (0 === closure_3.totalUnavailableGuilds) {
-    found = setting.filter((arg0) => null != guild.getGuild(arg0));
+    found = setting.filter((item, index) => null != guild.getGuild(item));
   }
   return new Set(found);
 };
@@ -45,7 +45,7 @@ export const getSanitizedActivityJoiningRestrictedGuilds = function getSanitized
   const setting = ActivityJoiningRestrictedGuilds.getSetting();
   let found = setting;
   if (0 === closure_3.totalUnavailableGuilds) {
-    found = setting.filter((arg0) => null != guild.getGuild(arg0));
+    found = setting.filter((item, index) => null != guild.getGuild(item));
   }
   return new Set(found);
 };
@@ -61,7 +61,6 @@ export const computeFlags = function computeFlags(setting) {
 };
 export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(arg0) {
   ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = arg0);
-  obj = collectGuildAnalyticsMetadataDefault;
   obj = { settings_type: "user", origin_pane: originPane, destination_pane: destinationPane, location_stack: locationStack, source, subsection, application_id: applicationId, search_session_id: getSearchSessionIdDefault.getSearchSessionId() };
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };

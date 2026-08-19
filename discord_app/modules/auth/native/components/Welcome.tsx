@@ -9,22 +9,23 @@ import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx
 import renderDefault from "../../../guild/native/GuildInviteIcon.tsx";
 import registerAssetDefault from "../../../../../_runtime/12770_registerAsset.js";
 import registerAsset from "../../../../../_runtime/13322_registerAsset.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../age_gate/AgeGateStore.tsx";
-import closure_8 from "../../../experiments/ExperimentStore.tsx";
-import closure_9 from "../../../guild_templates/GuildTemplateStore.tsx";
-import closure_10 from "../../../multi_account/MultiAccountStore.tsx";
-import closure_11 from "../../../../records/UserRecord.tsx";
-import closure_12 from "../../../../stores/InviteStore.tsx";
-import closure_13 from "../../../../stores/native/DisplayedInviteStore.tsx";
+import isUnderageAnonymous from "../../../age_gate/AgeGateStore.tsx";
+import getHash from "../../../experiments/ExperimentStore.tsx";
+import handleGuildTemplateResolveSuccess from "../../../guild_templates/GuildTemplateStore.tsx";
+import initialize from "../../../multi_account/MultiAccountStore.tsx";
+import createdAt from "../../../../records/UserRecord.tsx";
+import updateInvite from "../../../../stores/InviteStore.tsx";
+import getDisplayedInviteCode from "../../../../stores/native/DisplayedInviteStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { GuildTemplateStates } from "../../../guild_templates/GuildTemplatesConstants.tsx";
 import { InviteTypes } from "../../../instant_invite/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function InviteCard(invite) {
   invite = invite.invite;
   const tmp = callback4();
@@ -66,7 +67,6 @@ function InviteCard(invite) {
       tmp14 = tmp35;
       tmp17 = require;
       tmp18 = callback;
-      const obj9 = nameFromUserDefault;
     }
     obj1 = { style: null, children: null };
     const items = [tmp.container, invite.style];
@@ -89,9 +89,8 @@ function InviteCard(invite) {
 function GuildTemplateCard(arg0) {
   ({ guildTemplate, style } = arg0);
   const tmp = callback4();
-  let obj = { style: items, children: null };
-  items = [tmp.container, style];
-  obj = { source: registerAssetDefault };
+  const items = [tmp.container, style];
+  let obj = { source: registerAssetDefault };
   const items1 = [callback(closure_5, obj), ];
   obj = { style: tmp.text, children: null };
   obj1 = { variant: "text-sm/medium", color: "text-subtle", children: null };
@@ -111,10 +110,8 @@ function Centerpiece(inlineButtons) {
   if (tmp7) {
     tmp7 = guildTemplate.state === GuildTemplateStates.RESOLVED;
   }
-  let obj = { style: items, children: null };
-  items = [tmp3.centerpieceContainer];
-  obj = { alwaysBounceVertical: false, contentContainerStyle: tmp3.scrollViewContainer, children: null };
-  obj = { style: tmp3.logo, source: registerAsset };
+  const items = [tmp3.centerpieceContainer];
+  const obj = { style: tmp3.logo, source: registerAsset };
   const items1 = [callback(closure_5, obj), , ];
   obj1 = { style: tmp3.header, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   let num = 2;
@@ -122,7 +119,7 @@ function Centerpiece(inlineButtons) {
     num = 1;
   }
   obj1[1] = num;
-  const intl = tmp4(1236).intl;
+  const intl = getSystemLocale.intl;
   obj1[5] = intl.string(getSystemLocale.t["3S2xmm"]);
   const items2 = [callback(Text.Heading, obj1), , , ];
   const items3 = [tmp3.subHeader, ];
@@ -133,27 +130,27 @@ function Centerpiece(inlineButtons) {
   }
   const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: items3, maxFontSizeMultiplier: 3, children: null };
   items3[1] = subHeaderWithInvite;
-  const intl2 = tmp4(1236).intl;
+  const intl2 = getSystemLocale.intl;
   obj2[4] = intl2.string(getSystemLocale.t.Gtcthl);
   items2[1] = callback(Text.Text, obj2);
   let tmp9Result = null;
   if (null != invite) {
     const obj3 = { invite: null };
     obj3[0] = invite;
-    tmp9Result = tmp9(InviteCard, obj3);
+    tmp9Result = callback(InviteCard, obj3);
   }
   items2[2] = tmp9Result;
   tmp9Result = null;
   if (tmp7) {
     const obj4 = { guildTemplate: null };
     obj4[0] = guildTemplate;
-    tmp9Result = tmp9(GuildTemplateCard, obj4);
+    tmp9Result = callback(GuildTemplateCard, obj4);
   }
   items2[3] = tmp9Result;
-  items1[1] = closure_21(closure_4, { children: items2 });
+  items1[1] = callback(closure_4, { children: items2 });
   items1[2] = inlineButtons.inlineButtons;
   obj[2] = items1;
-  obj[1] = closure_21(closure_6, obj);
+  obj[1] = callback(closure_6, obj);
   return callback(closure_4, obj);
 }
 ({ View: c4, Image: c5, ScrollView: closure_6 } = get_ActivityIndicator);
@@ -171,12 +168,11 @@ let closure_22 = createCacheKey.createStyles((arg0) => {
   obj[7] = { paddingHorizontal: 28, maxWidth: 480, alignSelf: "center", width: "100%" };
   return obj;
 });
-createCacheKey = { container: null, text: null };
 createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16, flexDirection: "row", borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginLeft: 16 };
 let closure_23 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/auth/native/components/Welcome.tsx");
+let result = require("obj132").fileFinishedImporting("modules/auth/native/components/Welcome.tsx");
 
 export default function Welcome() {
   const tmp3 = importDefault(stateFromStores[22])();
@@ -215,19 +211,18 @@ export default function Welcome() {
     let tmp6 = null;
     if (null != stateFromStores) {
       tmp6 = null;
-      if (null != tmp5.type) {
-        tmp6 = closure_1_19[tmp5.type];
+      if (null != stateFromStores.type) {
+        tmp6 = InviteTypes[stateFromStores.type];
       }
     }
     const obj2 = navigation(stateFromStores[28]);
-    const tmp = navigation;
     obj = { last_logout_ts: null, invite_type: null, guild_id: null, channel_id: null, invite_code: null };
-    const Storage = tmp(tmp2[30]).Storage;
+    const Storage = navigation(stateFromStores[30]).Storage;
     obj[0] = Storage.get(closure_1_15.LOGOUT_TIMESTAMP_KEY);
     obj[1] = tmp6;
     let id;
     if (stateFromStores != null) {
-      const guild = tmp5.guild;
+      const guild = stateFromStores.guild;
       if (guild != null) {
         id = guild.id;
       }
@@ -235,7 +230,7 @@ export default function Welcome() {
     obj[2] = id;
     let id1;
     if (stateFromStores != null) {
-      const channel = tmp5.channel;
+      const channel = stateFromStores.channel;
       if (channel != null) {
         id1 = channel.id;
       }
@@ -243,10 +238,11 @@ export default function Welcome() {
     obj[3] = id1;
     let code;
     if (stateFromStores != null) {
-      code = tmp5.code;
+      code = stateFromStores.code;
     }
     obj[4] = code;
     callback(stateFromStores[29]).track(closure_1_14.APP_LANDING_VIEWED, obj);
+    const obj3 = callback(stateFromStores[29]);
   });
   const effect = React.useEffect(() => {
     const locationMetadata = callback(stateFromStores[31]).getLocationMetadata();
@@ -263,7 +259,6 @@ export default function Welcome() {
       return callback(importDefault(tmp2[33]), {});
     }
   }
-  obj = { style: tmp4.buttonContainer, children: null };
   obj = { children: null };
   obj1 = {
     size: "lg",

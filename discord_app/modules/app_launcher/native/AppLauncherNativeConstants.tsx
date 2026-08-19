@@ -1,10 +1,10 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import registerAssetDefault from "../../../../_runtime/01623_registerAsset.js";
 
-const result = set.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
 export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = registerAssetDefault;
 export const AppLauncherRouteName = { HOME: "home", APPLICATION_VIEW: "application_view", COMMAND_VIEW: "command_view", APP_LIST_VIEW: "app_list_view" };

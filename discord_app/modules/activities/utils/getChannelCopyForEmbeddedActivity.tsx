@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 
-const result = set.fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
 
 export default function getChannelCopyForEmbeddedActivity(arg0) {
   let stringResult = arg0;

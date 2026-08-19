@@ -2,20 +2,20 @@
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
-import closure_4 from "../../stores/PermissionStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
 import { HelpdeskArticles } from "../../Constants.tsx";
 import { GuildScheduledEventPrivacyLevel as closure_6 } from "../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
 
 export default function useStagePrivacyLevelSettings(channel, privacy_level) {
   const _require = channel;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(closure_1_7.CREATE_INSTANT_INVITE, closure_0));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0));
   const obj2 = applyOverwritesAll;
   const canEveryoneRoleResult = obj2.canEveryoneRole(fromStringAll.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT), channel);
   privacy_level = undefined;
@@ -28,12 +28,11 @@ export default function useStagePrivacyLevelSettings(channel, privacy_level) {
   } else if (stateFromStores) {
     if (canEveryoneRoleResult) {
       let formatResult = null;
-      if (arg2 === tmp6.PUBLIC) {
+      if (arg2 === constants.PUBLIC) {
         const intl3 = tmp(1236).intl;
         obj = { articleURL: null };
         obj[0] = combinedDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
         formatResult = intl3.format(tmp(1236).t["ew/Jq4"], obj);
-        const obj5 = combinedDefault;
       }
       let stringResult1 = formatResult;
     } else {

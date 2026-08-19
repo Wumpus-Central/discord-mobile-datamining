@@ -1,18 +1,17 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../../stores/RelationshipStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");
 
 export default function BlockUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
-  let stateFromStores1;
   let obj = user(reportId[5]);
   const items = [closure_5];
   const items1 = [user];
@@ -20,23 +19,22 @@ export default function BlockUserElement(user) {
   obj1 = user(reportId[5]);
   const items2 = [closure_4];
   const items3 = [channelId];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_4.getChannel(channelId), items3);
+  const stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_4.getChannel(channelId), items3);
   const items4 = [stateFromStores1, user];
   const memo = stateFromStores1.useMemo(() => {
     let guild_id;
     if (stateFromStores1 != null) {
-      guild_id = tmp.guild_id;
+      guild_id = stateFromStores1.guild_id;
     }
     let id;
     if (stateFromStores1 != null) {
-      id = tmp.id;
+      id = stateFromStores1.id;
     }
     return channelId(reportId[6]).getName(guild_id, id, user);
   }, items4);
   const items5 = [user, reportId, channelId];
   let tmp7 = null;
   if (null != user) {
-    obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };
     const intl = tmp(tmp2[11]).intl;
     obj = { username: null };
     obj[0] = memo;

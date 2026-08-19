@@ -1,23 +1,23 @@
 // discord_app/lib/zipWithNext.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("lib/zipWithNext.tsx");
+const result = obj132.fileFinishedImporting("lib/zipWithNext.tsx");
 
-export default function zipWithNext(arg0, arg1) {
+export default function zipWithNext(closure_0, fn) {
   let length;
-  if (arg0.length < 2) {
+  if (closure_0.length < 2) {
     return [];
   } else {
     const items = [];
-    let first = arg0[0];
+    let first = closure_0[0];
     let num2 = 1;
-    if (1 < arg0.length) {
+    if (1 < closure_0.length) {
       do {
-        let tmp2 = arg0[num2];
-        let arr = items.push(arg1(first, tmp2));
+        let tmp2 = closure_0[num2];
+        let arr = items.push(fn(first, tmp2));
         num2 = num2 + 1;
         first = tmp2;
-        length = arg0.length;
+        length = closure_0.length;
       } while (num2 < length);
     }
     return items;

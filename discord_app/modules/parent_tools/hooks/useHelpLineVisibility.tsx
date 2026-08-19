@@ -1,14 +1,13 @@
 // discord_app/modules/parent_tools/hooks/useHelpLineVisibility.tsx
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../user_settings/LocaleStore.tsx";
-import closure_5 from "../FamilyCenterStore.tsx";
-import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import _getSystemLocale from "../../user_settings/LocaleStore.tsx";
+import freshTeenActivityWithMap from "../FamilyCenterStore.tsx";
 
-const require = arg1;
-let set = new Set(["US"]);
+const require = fn;
+const set = new Set(["US"]);
 const set1 = new Set(["en-US", "es-ES"]);
-const result = set.fileFinishedImporting("modules/parent_tools/hooks/useHelpLineVisibility.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useHelpLineVisibility.tsx");
 
 export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
   const tmp = useIsInAdultAgeGroupDefault();
@@ -20,8 +19,8 @@ export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
   const stateFromStores1 = stateFromStores(647).useStateFromStores(items1, () => locale.locale);
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {
-      const userCountryCode = stateFromStores(closure_1_2[5]).fetchUserCountryCode();
-      const obj = stateFromStores(closure_1_2[5]);
+      const userCountryCode = stateFromStores(dependencyMap[5]).fetchUserCountryCode();
+      const obj = stateFromStores(dependencyMap[5]);
     }
   }, items2);
   let hasItem = !tmp;
@@ -48,8 +47,8 @@ export const useShouldShowThroughlineLink = function useShouldShowThroughlineLin
   const stateFromStores1 = stateFromStores(647).useStateFromStores(items1, () => locale.locale);
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {
-      const userCountryCode = stateFromStores(closure_1_2[5]).fetchUserCountryCode();
-      const obj = stateFromStores(closure_1_2[5]);
+      const userCountryCode = stateFromStores(dependencyMap[5]).fetchUserCountryCode();
+      const obj = stateFromStores(dependencyMap[5]);
     }
   }, items2);
   let hasItem = !tmp2;

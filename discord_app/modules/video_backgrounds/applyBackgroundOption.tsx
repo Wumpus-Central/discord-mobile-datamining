@@ -2,13 +2,13 @@
 import _fetchVideoFilterAssets from "VideoBackgroundActionCreators.tsx";
 import getLastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption.tsx";
 import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/UserStore.tsx";
-import closure_5 from "VideoBackgroundStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import handleSyncedStoresUpdate from "VideoBackgroundStore.tsx";
 import VideoFilterType from "VideoBackgroundConstants.tsx";
 import { NOOP } from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function _getFilterBlob() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -35,8 +35,7 @@ function _getFilterBlob() {
   return applyArgumentsResult;
 }
 function applyBackgroundMediaFilterSettings(arg0, target, graph, image, blob) {
-  let obj = _fetchVideoFilterAssets;
-  obj = { graph, target, image, blob };
+  const obj = { graph, target, image, blob };
   const result = obj.applyMediaFilterSettings({ [arg0]: obj });
 }
 function applyBackgroundOption() {
@@ -86,17 +85,17 @@ function _applyBackgroundOption() {
               return obj;
             } else {
               c5 = tmp3;
-              c4 = tmp30;
+              c4 = callback3;
               let source;
               c4 = undefined;
               c5 = undefined;
               closure_3 = false;
               if (null == source) {
-                closure_1_10(tmp57, tmp58, callback(4569).FilterSettingsGraph.NONE);
+                closure_1_10(callback, callback2, callback(4569).FilterSettingsGraph.NONE);
                 c9 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else if (tmp59 === c7) {
-                closure_1_10(tmp57, tmp58, callback(4569).FilterSettingsGraph.BACKGROUND_BLUR);
+                closure_1_10(callback, callback2, callback(4569).FilterSettingsGraph.BACKGROUND_BLUR);
                 c9 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
@@ -141,7 +140,6 @@ function _applyBackgroundOption() {
                         c5 = tmp8;
                         callback3(callback, callback2, callback(source[7]).FilterSettingsGraph.BACKGROUND_REPLACEMENT, c4, c5);
                         c7 = 0;
-                        tmp30 = callback3;
                       }
                     } else {
                       c8 = 2;
@@ -439,7 +437,7 @@ function _applyBackgroundOptionPreview() {
   return applyArgumentsResult;
 }
 ({ BACKGROUND_REPLACEMENT_SIZE: closure_6, BLUR_BACKGROUND_OPTION: error } = VideoFilterType);
-let result = require("set").fileFinishedImporting("modules/video_backgrounds/applyBackgroundOption.tsx");
+let result = require("obj132").fileFinishedImporting("modules/video_backgrounds/applyBackgroundOption.tsx");
 
 export { applyBackgroundOptionLive };
 export const applyBackgroundOptionPreview = function applyBackgroundOptionPreview() {
@@ -467,6 +465,5 @@ export const applyInitialVideoBackgroundOption = function applyInitialVideoBackg
       applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false }).catch(NOOP);
       const promise = applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false });
     }
-    const obj = getLastUsedVideoBackgroundOption;
   }
 };

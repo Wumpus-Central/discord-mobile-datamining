@@ -5,20 +5,19 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import shortenAndLocalizeNumber from "../../../../utils/NumberUtils.tsx";
 import Text from "../../Text/native/Text.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_3 from "../../../../modules/user_settings/LocaleStore.tsx";
+import _getSystemLocale from "../../../../modules/user_settings/LocaleStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsxs: c4, jsx: c5 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, flexShrink: 0 };
+const createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, flexShrink: 0 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let items = [[64, "text-lg/semibold"], [48, "text-md/semibold"], [40, "text-md/semibold"], [30, "text-sm/semibold"], [24, "text-xs/semibold"], [16, "text-xxs/semibold"]];
 const map = new Map(items);
-const result = require("set").fileFinishedImporting("design/components/Pile/native/PileOverflow.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Pile/native/PileOverflow.native.tsx");
 
 export const PileOverflow = function PileOverflow(size) {
   size = size.size;
@@ -42,6 +41,6 @@ export const PileOverflow = function PileOverflow(size) {
   obj1 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: str, children: null };
   const items2 = ["+", shortenAndLocalizeNumber.humanizeValue(value, stateFromStores)];
   obj1[3] = items2;
-  obj[1] = closure_4(Text.Text, obj1);
-  return closure_5(View, obj);
+  obj[1] = callback(Text.Text, obj1);
+  return callback2(View, obj);
 };

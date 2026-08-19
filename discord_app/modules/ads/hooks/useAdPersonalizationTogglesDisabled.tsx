@@ -1,9 +1,9 @@
 // discord_app/modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../AdPersonalizationStore.tsx";
+import reset from "../AdPersonalizationStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx");
 
 export const useAdPersonalizationTogglesDisabled = function useAdPersonalizationTogglesDisabled() {
   const items = [closure_2];

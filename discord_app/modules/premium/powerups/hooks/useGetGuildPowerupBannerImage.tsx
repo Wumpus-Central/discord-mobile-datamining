@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
 
 export default function useGetGuildPowerupBannerImage(animatedImageUrl) {
   initialize;
@@ -22,19 +22,19 @@ export default function useGetGuildPowerupBannerImage(animatedImageUrl) {
     staticImageUrl = animatedImageUrl.staticImageUrl;
   }
 };
-export const getGuildPowerupBannerImage = function getGuildPowerupBannerImage(found, closure_1_4, arg2) {
-  if (null != found) {
+export const getGuildPowerupBannerImage = function getGuildPowerupBannerImage(arr, closure_1_4, arg2) {
+  if (null != arr) {
     if (!closure_1_4) {
       if (false !== arg2) {
         if (!arg3) {
-          let staticImageUrl = found.animatedImageUrl;
+          let staticImageUrl = arr.animatedImageUrl;
           if (staticImageUrl == null) {
-            staticImageUrl = found.staticImageUrl;
+            staticImageUrl = arr.staticImageUrl;
           }
         }
         return staticImageUrl;
       }
     }
-    staticImageUrl = found.staticImageUrl;
+    staticImageUrl = arr.staticImageUrl;
   }
 };

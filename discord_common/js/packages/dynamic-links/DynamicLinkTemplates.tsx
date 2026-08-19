@@ -1,7 +1,7 @@
 // discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");
 
 export const getInviteDynamicLinkTemplate = function getInviteDynamicLinkTemplate(baseCode) {
   return "" + location.protocol + "//" + window.GLOBAL_ENV.INVITE_HOST + "/" + baseCode;

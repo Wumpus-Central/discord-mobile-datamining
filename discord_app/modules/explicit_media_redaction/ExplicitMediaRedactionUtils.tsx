@@ -9,15 +9,15 @@ import set from "../../../discord_common/js/shared/shared-constants/MetricEvents
 import resetManager from "ExplicitMediaManager.tsx";
 import ObscureReason from "ObscureMediaModels.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import closure_3 from "../devtools/dev_settings/DevSettingsStore.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import closure_5 from "ExplicitMediaStore.tsx";
+import getUserAgnosticState from "../devtools/dev_settings/DevSettingsStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import getFpMessageInfo from "ExplicitMediaStore.tsx";
 import USER_SETTING_ACTION_SHEET_KEY from "ExplicitMediaRedactionConstants.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ EXPLICIT_MEDIA_MIN_HEIGHT: closure_6, EXPLICIT_MEDIA_MIN_WIDTH: error } = USER_SETTING_ACTION_SHEET_KEY);
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
 
 export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
   if (create.ExplicitContentRedaction.SHOW === prop) {
@@ -25,12 +25,12 @@ export const redactionSettingToRenderedString = function redactionSettingToRende
       const intl = callback(1236).intl;
       return intl.string(callback(1236).t["5k5OFp"]);
     };
-  } else if (tmp(1306).ExplicitContentRedaction.BLUR === prop) {
+  } else if (create.ExplicitContentRedaction.BLUR === prop) {
     return () => {
       const intl = callback(1236).intl;
       return intl.string(callback(1236).t.S49Uad);
     };
-  } else if (tmp(1306).ExplicitContentRedaction.BLOCK === prop) {
+  } else if (create.ExplicitContentRedaction.BLOCK === prop) {
     return () => {
       const intl = callback(1236).intl;
       return intl.string(callback(1236).t["D/157Y"]);
@@ -76,15 +76,13 @@ export const trackMediaRedactionAction = function trackMediaRedactionAction(arg0
       obj[4] = obj.isCurrentUserTeen();
       obj[5] = tmp2;
       expandEventPropertiesDefault.track(AnalyticEvents.EXPLICIT_MEDIA_ACTION, obj);
-      const obj2 = expandEventPropertiesDefault;
     }
   }
 };
 export const TimeoutCancelSource = { UPDATE: "update", TIMEOUT: "timeout" };
 export const trackScanTiming = function trackScanTiming(setAt, UPDATE) {
   const bound = Math.min(Math.floor((Date.now() - setAt) / 1000), 3);
-  let obj = setDefault;
-  obj = { name: set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
+  const obj = { name: set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING, tags: null };
   const items = ["timingBucket:" + bound, "source:" + UPDATE, "metricVersion:1"];
   obj[1] = items;
   obj.increment(obj);
@@ -102,8 +100,7 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
       }
       if (0 !== num) {
         const channel = store.getChannel(channelId);
-        let obj = expandEventPropertiesDefault;
-        obj = { channel_id: null, guild_id: null, message_id: null, embed_ids: null, user_is_underage: null, scan_timeout_duration: null, attachment_ids_v2: null };
+        let obj = { channel_id: null, guild_id: null, message_id: null, embed_ids: null, user_is_underage: null, scan_timeout_duration: null, attachment_ids_v2: null };
         obj[0] = channelId;
         let guild_id;
         if (channel != null) {
@@ -116,12 +113,12 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj[5] = resetManager.MESSAGE_SCAN_TIMEOUT;
         obj[6] = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj);
-        let tmp3Result = tmp3(5006);
+        let tmp3Result = setDefault;
         obj = { name: null, tags: null };
         obj[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT;
         obj[1] = ["metricVersion:1"];
         tmp3Result.increment(obj);
-        tmp3Result = tmp3(5006);
+        tmp3Result = setDefault;
         obj1 = { name: null };
         obj1[0] = set.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION;
         let num4;
@@ -139,7 +136,6 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
           num5 = 0;
         }
         tmp3Result.distribution(obj1, num4 + num5);
-        const obj3 = isCurrentUserTeen;
       } else {
         let num3;
         if (embedIds != null) {
@@ -172,11 +168,9 @@ export const trackExplicitMediaRedactableMessagedLoaded = function trackExplicit
     if (sum > 0) {
       obj = { name: null };
       obj[0] = set.MetricEvents.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2;
-      tmp10(5006).distribution(obj, sum);
-      const tmp10Result = tmp10(5006);
+      setDefault.distribution(obj, sum);
+      const tmp10Result = setDefault;
     }
-    const obj3 = expandEventPropertiesDefault;
-    tmp10 = importDefault;
   }
 };
 export const trackRedactableMessageLoaded = function trackRedactableMessageLoaded(arg0) {
@@ -189,8 +183,7 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
   if (null != channelId) {
     if (null != messageId) {
       const channel = store.getChannel(channelId);
-      let obj = expandEventPropertiesDefault;
-      obj = { message_id: null, channel_id: null, channel_type: null, guild_id: null, num_of_attachments: null, num_of_gore_attachments: null, num_of_explicit_attachments: null, num_of_self_harm_attachments: null, num_of_embeds: null, num_of_gore_embeds: null, num_of_explicit_embeds: null, num_of_self_harm_embeds: null, has_redactable_explicit: null, has_redactable_gore: null, has_redactable_self_harm: null };
+      const obj = { message_id: null, channel_id: null, channel_type: null, guild_id: null, num_of_attachments: null, num_of_gore_attachments: null, num_of_explicit_attachments: null, num_of_self_harm_attachments: null, num_of_embeds: null, num_of_gore_embeds: null, num_of_explicit_embeds: null, num_of_self_harm_embeds: null, has_redactable_explicit: null, has_redactable_gore: null, has_redactable_self_harm: null };
       obj[0] = messageId;
       obj[1] = channelId;
       let type;
@@ -217,13 +210,14 @@ export const trackRedactableMessageLoaded = function trackRedactableMessageLoade
       obj.track(AnalyticEvents.REDACTABLE_MESSAGE_LOADED, obj);
     }
   }
+  tmp2 = numOfGoreAttachments > 0 || numOfGoreEmbeds > 0;
+  tmp3 = numOfSelfHarmAttachments > 0 || numOfSelfHarmEmbeds > 0;
 };
 export const trackExplicitMediaScanComplete = function trackExplicitMediaScanComplete(channelId) {
   channelId = channelId.channelId;
   if (null != channelId) {
     const channel = store.getChannel(channelId);
-    let obj = expandEventPropertiesDefault;
-    obj = { message_id: null, channel_id: null, channel_type: null, guild_id: null, num_of_attachments: null, num_of_explicit_attachments: null, num_of_embeds: null, num_of_explicit_embeds: null };
+    const obj = { message_id: null, channel_id: null, channel_type: null, guild_id: null, num_of_attachments: null, num_of_explicit_attachments: null, num_of_embeds: null, num_of_explicit_embeds: null };
     obj[0] = tmp;
     obj[1] = channelId;
     let type;
@@ -246,34 +240,34 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
 export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitMediaScanTimeoutForMessage(message) {
   let attachments = message.attachments;
   let embeds = message.embeds;
-  attachments = attachments.map((arg0) => {
-    arg0.content_scan_version = -1;
-    return arg0;
+  attachments = attachments.map((item, index) => {
+    item.content_scan_version = -1;
+    return item;
   });
   let messageSnapshots = message.messageSnapshots;
-  embeds = embeds.map((arg0) => {
-    arg0.contentScanVersion = -1;
-    return arg0;
+  embeds = embeds.map((item, index) => {
+    item.contentScanVersion = -1;
+    return item;
   });
   if (null != messageSnapshots) {
     if (0 !== messageSnapshots.length) {
-      messageSnapshots = messageSnapshots.map((message) => {
-        message = message.message;
+      messageSnapshots = messageSnapshots.map((item, index) => {
+        const message = item.message;
         const attachments = message.attachments;
         const embeds = message.embeds;
-        const mapped = attachments.map((arg0) => {
-          arg0.content_scan_version = -1;
-          return arg0;
+        const mapped = attachments.map((item, index) => {
+          item.content_scan_version = -1;
+          return item;
         });
         let obj = {
           attachments: mapped,
-          embeds: embeds.map((arg0) => {
-            arg0.contentScanVersion = -1;
-            return arg0;
+          embeds: embeds.map((item, index) => {
+            item.contentScanVersion = -1;
+            return item;
           })
         };
         obj = { message: message.merge(obj) };
-        return message.merge(obj);
+        return item.merge(obj);
       });
     }
   }
@@ -292,7 +286,6 @@ export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowCons
 };
 export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplicitMedia() {
   let isFeatureAgeGatedResult = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
-  const obj = isFeatureAgeGated2;
   if (isFeatureAgeGatedResult) {
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
   }
@@ -300,7 +293,6 @@ export const shouldAgeVerifyForExplicitMedia = function shouldAgeVerifyForExplic
 };
 export const useShouldAgeVerifyForExplicitMedia = function useShouldAgeVerifyForExplicitMedia() {
   let isFeatureAgeGated = isFeatureAgeGated2.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
-  const obj = isFeatureAgeGated2;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
   }
@@ -308,8 +300,6 @@ export const useShouldAgeVerifyForExplicitMedia = function useShouldAgeVerifyFor
 };
 export const useShouldAgeVerifyForReason = function useShouldAgeVerifyForReason(obscureReason) {
   let isFeatureAgeGated = isFeatureAgeGated2.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.SENSITIVE_CONTENT_SHOW_SETTING);
-  const obj = isFeatureAgeGated2;
-  const tmp = require;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
   }
@@ -334,32 +324,31 @@ export const trackToggleMediaObscurityV2 = function trackToggleMediaObscurityV2(
     obj = { toggle_direction: null };
     obj[0] = str;
     expandEventPropertiesDefault.track(AnalyticEvents.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, obj);
-    const obj2 = expandEventPropertiesDefault;
   }
 };
 export const hasMessageSnapshotsWithAttachmentsOrEmbeds = function hasMessageSnapshotsWithAttachmentsOrEmbeds(message) {
   const message_snapshots = message.message_snapshots;
   let someResult;
   if (message_snapshots != null) {
-    someResult = message_snapshots.some((message) => {
-      message = message.message;
+    someResult = message_snapshots.some((item, index) => {
+      const message = item.message;
       let attachments;
       if (message != null) {
         attachments = message.attachments;
       }
       let tmp2 = null != attachments;
       if (tmp2) {
-        tmp2 = message.message.attachments.length > 0;
+        tmp2 = item.message.attachments.length > 0;
       }
       if (!tmp2) {
-        const message2 = message.message;
+        const message2 = item.message;
         let embeds;
         if (message2 != null) {
           embeds = message2.embeds;
         }
         let tmp4 = null != embeds;
         if (tmp4) {
-          tmp4 = message.message.embeds.length > 0;
+          tmp4 = item.message.embeds.length > 0;
         }
         tmp2 = tmp4;
       }

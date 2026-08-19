@@ -1,8 +1,8 @@
 // discord_app/modules/app_database/modules/Channels.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import createChannelRecord from "../../../records/ChannelRecord.tsx";
-import closure_3 from "../../../stores/AuthenticationStore.tsx";
-import closure_4 from "../../../stores/ChannelStore.tsx";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
 
 let obj = importDefault;
 let closure_2 = createChannelRecord.createChannelRecordFromServer;
@@ -54,8 +54,8 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
     closure_0 = iter;
     const data_mode = iter.data_mode;
     if ("unavailable" !== data_mode) {
-      function asRecord(arg0) {
-        return closure_1_2(arg0, iter.id);
+      function asRecord(item, index) {
+        return closure_1_2(item, iter.id);
       }
       if ("partial" === data_mode) {
         const channels = iter.partial_updates.channels;
@@ -214,6 +214,6 @@ obj.actions = {
     return obj.handleGuildDelete(arg0, arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/Channels.tsx");
+let result = obj132.fileFinishedImporting("modules/app_database/modules/Channels.tsx");
 
 export default obj;

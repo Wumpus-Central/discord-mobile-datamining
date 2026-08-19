@@ -1,17 +1,28 @@
 // discord_app/modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx
 import getSystemLocale from "../../../../../../intl/index.native.tsx";
 import nameFromUserDefault from "../../../../../../utils/UserUtils.tsx";
+import LinkIcon from "../../../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
+import ImageIcon from "../../../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
+import StickerIcon from "../../../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
+import SoundboardIcon from "../../../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
+import VideoIcon from "../../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import ForwardingIconDefault from "../../../../../forwarding/native/ForwardingIcon.tsx";
+import EmbedIcon from "../../../../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
+import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import AttachmentIcon from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import PollsIcon from "../../../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
+import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import SearchTokenTypes from "../../../../SearchUtils.tsx";
-import closure_3 from "../../../../../../stores/GuildMemberStore.tsx";
-import closure_4 from "../../../../../../stores/RelationshipStore.tsx";
-import closure_5 from "../../../../../../stores/UserStore.tsx";
-import closure_6 from "../../../stores/SearchQueryStore.tsx";
+import WebhookIcon from "../../../../../../design/components/Icon/native/redesign/generated/WebhookIcon.tsx";
+import trackCommunicationDisabled from "../../../../../../stores/GuildMemberStore.tsx";
+import markAllUserIdListsStale from "../../../../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../../../../stores/UserStore.tsx";
+import prototype from "../../../stores/SearchQueryStore.tsx";
 import { SearchListItemTypes } from "../../../../SearchConstants.tsx";
 import { RelationshipTypes } from "../../../../../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
 
 export const getSearchQueryChannelIds = function getSearchQueryChannelIds(items) {
   return new Set(store2.getChannelIds(items));
@@ -24,47 +35,46 @@ export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
     return set;
   } else {
     const _Set = Set;
-    const set1 = new Set(obj.getUserIds(items, prefixTag.searchTokenType));
+    const set1 = new Set(store2.getUserIds(items, prefixTag.searchTokenType));
     return set1;
   }
-  obj = store2;
 };
 export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
   const intl = getSystemLocale.intl;
   if (intl.string(getSystemLocale.t.nrpA5E) === text) {
     return ForwardingIconDefault;
   } else {
-    const intl3 = tmp(1236).intl;
-    if (intl3.string(tmp(1236).t.ZNR2fi) === text) {
-      return tmp(4318).LinkIcon;
+    const intl3 = getSystemLocale.intl;
+    if (intl3.string(getSystemLocale.t.ZNR2fi) === text) {
+      return LinkIcon.LinkIcon;
     } else {
-      const intl4 = tmp(1236).intl;
-      if (intl4.string(tmp(1236).t["20uQR3"]) === text) {
-        return tmp(9828).EmbedIcon;
+      const intl4 = getSystemLocale.intl;
+      if (intl4.string(getSystemLocale.t["20uQR3"]) === text) {
+        return EmbedIcon.EmbedIcon;
       } else {
-        const intl5 = tmp(1236).intl;
-        if (intl5.string(tmp(1236).t.L4lxyE) === text) {
-          return tmp(10272).PollsIcon;
+        const intl5 = getSystemLocale.intl;
+        if (intl5.string(getSystemLocale.t.L4lxyE) === text) {
+          return PollsIcon.PollsIcon;
         } else {
-          const intl6 = tmp(1236).intl;
-          if (intl6.string(tmp(1236).t["AV/v6i"]) === text) {
-            return tmp(10051).AttachmentIcon;
+          const intl6 = getSystemLocale.intl;
+          if (intl6.string(getSystemLocale.t["AV/v6i"]) === text) {
+            return AttachmentIcon.AttachmentIcon;
           } else {
-            const intl7 = tmp(1236).intl;
-            if (intl7.string(tmp(1236).t.XM9XGP) === text) {
-              return tmp(7998).VideoIcon;
+            const intl7 = getSystemLocale.intl;
+            if (intl7.string(getSystemLocale.t.XM9XGP) === text) {
+              return VideoIcon.VideoIcon;
             } else {
-              const intl8 = tmp(1236).intl;
-              if (intl8.string(tmp(1236).t.TNLcpx) === text) {
-                return tmp(6882).ImageIcon;
+              const intl8 = getSystemLocale.intl;
+              if (intl8.string(getSystemLocale.t.TNLcpx) === text) {
+                return ImageIcon.ImageIcon;
               } else {
-                const intl9 = tmp(1236).intl;
-                if (intl9.string(tmp(1236).t.F8Wf0e) === text) {
-                  return tmp(7993).SoundboardIcon;
+                const intl9 = getSystemLocale.intl;
+                if (intl9.string(getSystemLocale.t.F8Wf0e) === text) {
+                  return SoundboardIcon.SoundboardIcon;
                 } else {
-                  const intl2 = tmp(1236).intl;
-                  if (intl2.string(tmp(1236).t.PJgX2h) === text) {
-                    return tmp(7990).StickerIcon;
+                  const intl2 = getSystemLocale.intl;
+                  if (intl2.string(getSystemLocale.t.PJgX2h) === text) {
+                    return StickerIcon.StickerIcon;
                   }
                 }
               }
@@ -78,15 +88,15 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
 export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
   const intl = getSystemLocale.intl;
   if (intl.string(getSystemLocale.t.tPZo4p) === text) {
-    return tmp(11004).UserIcon;
+    return UserIcon.UserIcon;
   } else {
-    const intl3 = tmp(1236).intl;
-    if (intl3.string(tmp(1236).t.JL7sRS) === text) {
-      return tmp(9832).RobotIcon;
+    const intl3 = getSystemLocale.intl;
+    if (intl3.string(getSystemLocale.t.JL7sRS) === text) {
+      return RobotIcon.RobotIcon;
     } else {
-      const intl2 = tmp(1236).intl;
-      if (intl2.string(tmp(1236).t.WjkIKU) === text) {
-        return tmp(15947).WebhookIcon;
+      const intl2 = getSystemLocale.intl;
+      if (intl2.string(getSystemLocale.t.WjkIKU) === text) {
+        return WebhookIcon.WebhookIcon;
       }
     }
   }
@@ -106,7 +116,6 @@ export const toSearchListUserItem = function toSearchListUserItem(items, user, c
     }
     if (nickname == null) {
       nickname = nameFromUserDefault.getName(user);
-      const obj2 = nameFromUserDefault;
     }
     obj = { type: null, props: null };
     obj[0] = SearchListItemTypes.DM;
@@ -137,7 +146,6 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
       let nickname = store.getNickname(user.id);
       if (nickname == null) {
         nickname = nameFromUserDefault.getName(user);
-        const obj6 = nameFromUserDefault;
       }
       obj[2] = nickname;
       obj[3] = function onPress() {
@@ -150,14 +158,14 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
   } else {
     obj = { type: null, props: null };
     if (channel.isGroupDM()) {
-      obj[0] = tmp.GROUP_DM;
+      obj[0] = SearchListItemTypes.GROUP_DM;
       obj1 = { channel: null, onPress: null };
       obj1[0] = channel;
       obj1[1] = closure_1_8;
       obj[1] = obj1;
       let tmp2 = obj;
     } else {
-      obj[0] = tmp.GUILD_TEXT_CHANNEL;
+      obj[0] = SearchListItemTypes.GUILD_TEXT_CHANNEL;
       const obj2 = { channel: null, onPress: null };
       obj2[0] = channel;
       obj2[1] = closure_1_8;

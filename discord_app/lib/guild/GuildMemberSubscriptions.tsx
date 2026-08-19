@@ -2,11 +2,11 @@
 import timestampDefault from "../../modules/debug/Logger.tsx";
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 
-const require = arg1;
-const MINUTE = setDefault.Millis.MINUTE;
-const result = require("set").fileFinishedImporting("lib/guild/GuildMemberSubscriptions.tsx");
+const require = fn;
+const MINUTE = obj132Default.Millis.MINUTE;
+const result = require("obj132").fileFinishedImporting("lib/guild/GuildMemberSubscriptions.tsx");
 class GuildMemberSubscriptions {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -106,12 +106,11 @@ prototype["checkForLeaks"] = function checkForLeaks(arg0, arg1) {
   }
 };
 prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
-  let self = this;
-  self = this;
+  const self = this;
   if (!obj.isEmpty(this._unsubscriptions)) {
     let item = applyDefault.forEach(self._unsubscriptions, (arg0, arg1) => {
       const _self = tmp3;
-      const item = closure_1_1(closure_1_2[4]).forEach(arg0, (arg0, arg1) => {
+      const item = applyDefault.forEach(arg0, (arg0, arg1) => {
         let num = table[arg1];
         if (num == null) {
           num = 0;
@@ -121,7 +120,6 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
           delete tmp[tmp2];
         }
       });
-      const arr = closure_1_1(closure_1_2[4]);
       if (obj2.isEmpty(_self._subscriptions[arg1])) {
         const _subscriptions = obj._subscriptions;
         delete tmp[tmp2];
@@ -131,6 +129,7 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
     self._unsubscriptions = {};
     const tmpResult = applyDefault;
   }
+  obj = applyDefault;
 };
 
 export default GuildMemberSubscriptions;

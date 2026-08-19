@@ -1,8 +1,8 @@
 // discord_app/modules/billing/actions/StripeActionCreators.tsx
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _createStripeSetupIntent() {
   const self = this;
   const tmp = callback(() => {
@@ -193,7 +193,7 @@ function _createSetupIntentForPaymentElements() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/billing/actions/StripeActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/billing/actions/StripeActionCreators.tsx");
 
 export const createStripeSetupIntent = function createStripeSetupIntent() {
   const self = this;

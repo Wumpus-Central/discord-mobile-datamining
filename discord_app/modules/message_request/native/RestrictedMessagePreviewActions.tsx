@@ -1,23 +1,21 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewActions.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/RelationshipStore.tsx";
+import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
 import ME from "../../../Constants.tsx";
 import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_8 } from "../../relationships/native/RestrictionConfirmationConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ AnalyticsPages: closure_6, RelationshipTypes: error } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, buttonRow: null };
-createCacheKey = { gap: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_12 };
+const createCacheKey = { gap: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewActions.tsx");
+let result = require("obj132").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewActions.tsx");
 
 export default function RestrictedMessagePreviewActions(channel) {
   channel = channel.channel;
@@ -36,30 +34,29 @@ export default function RestrictedMessagePreviewActions(channel) {
   const items3 = [user.id];
   const callback = React.useCallback(() => {
     let obj = user(message[10]);
-    obj = { userId: user.id, context: obj };
     obj = { location: closure_1_6.DM_CHANNEL };
     obj.addRelationship(obj);
   }, items2);
   const items4 = [user.id];
   const callback1 = React.useCallback(() => {
-    let obj = user(message[11]);
-    obj = { userId: user.id, location: closure_1_6.DM_CHANNEL };
+    user(message[11]);
+    const obj = { userId: user.id, location: closure_1_6.DM_CHANNEL };
     const result = obj.maybeConfirmFriendRequestAccept(obj);
   }, items3);
   const items5 = [user];
   callback2 = React.useCallback(() => {
-    let obj = user(message[10]);
-    obj = { location: closure_1_6.DM_CHANNEL };
+    user(message[10]);
+    const obj = { location: closure_1_6.DM_CHANNEL };
     obj.cancelFriendRequest(user.id, obj);
   }, items4);
   const items6 = [user.id, channel.id];
   const callback3 = React.useCallback(() => {
-    let obj = channel(message[12]);
-    obj = {
+    channel(message[12]);
+    let obj = {
       userDisplayName: user(message[13]).getName(user),
       onConfirm() {
-        let obj = closure_1_1(closure_1_2[10]);
-        obj = { location: closure_1_6.DM_CHANNEL };
+        user(message[10]);
+        const obj = { location: closure_1_6.DM_CHANNEL };
         obj.removeFriend(id.id, obj);
       }
     };
@@ -67,21 +64,21 @@ export default function RestrictedMessagePreviewActions(channel) {
   }, items5);
   const items7 = [user.id];
   const callback4 = React.useCallback(() => {
-    let obj = user(message[14]);
-    obj = { userId: user.id, channelId: channel.id };
+    user(message[14]);
+    const obj = { userId: user.id, channelId: channel.id };
     obj.openLazy(channel(message[16])(message[15], message.paths), closure_1_8, obj);
   }, items6);
   const items8 = [message, channel.id];
   const callback5 = React.useCallback(() => {
-    let obj = user(message[10]);
-    obj = { location: closure_1_6.DM_CHANNEL };
+    user(message[10]);
+    const obj = { location: closure_1_6.DM_CHANNEL };
     obj.unblockUser(user.id, obj);
   }, items7);
   let tmp14 = null;
   const callback6 = React.useCallback(() => {
     if (null != message) {
       const result = channel(message[17]).showReportModalForFirstDM(tmp, () => {
-        closure_1_1(closure_1_2[18]).closePrivateChannel(id.id, true);
+        user(message[18]).closePrivateChannel(id.id, true);
       });
       const obj = channel(message[17]);
     }
@@ -119,7 +116,7 @@ export default function RestrictedMessagePreviewActions(channel) {
       tmp18 = null;
       formatResult = null;
     }
-  } else if (tmp13.PENDING_INCOMING === stateFromStores) {
+  } else if (constants.PENDING_INCOMING === stateFromStores) {
     const intl5 = tmp2(tmp3[20]).intl;
     const obj2 = { username: null };
     let obj7 = user(tmp3[13]);
@@ -135,7 +132,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     obj4[2] = intl7.string(tmp2(tmp3[20]).t.rQSndv);
     obj4[3] = callback2;
     tmp18 = callback(tmp2(tmp3[19]).Button, obj4);
-  } else if (tmp13.FRIEND === stateFromStores) {
+  } else if (constants.FRIEND === stateFromStores) {
     const obj5 = { size: "sm", variant: "secondary", text: null, onPress: null };
     const intl4 = tmp2(tmp3[20]).intl;
     obj5[2] = intl4.string(tmp2(tmp3[20]).t.cvSt1J);
@@ -143,7 +140,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     tmp19 = callback(tmp2(tmp3[19]).Button, obj5);
     tmp18 = null;
     formatResult = null;
-  } else if (tmp13.PENDING_OUTGOING === stateFromStores) {
+  } else if (constants.PENDING_OUTGOING === stateFromStores) {
     const obj6 = { size: "sm", variant: "active", text: null, disabled: true, onPress: "a" };
     const intl3 = tmp2(tmp3[20]).intl;
     obj6[2] = intl3.string(tmp2(tmp3[20]).t.xMH6vD);
@@ -154,7 +151,7 @@ export default function RestrictedMessagePreviewActions(channel) {
     tmp18 = null;
     tmp19 = null;
     formatResult = null;
-    if (tmp13.BLOCKED === stateFromStores) {
+    if (constants.BLOCKED === stateFromStores) {
       obj7 = { size: "sm", variant: "secondary", text: null, onPress: null };
       const intl9 = tmp2(tmp3[20]).intl;
       obj7[2] = intl9.string(tmp2(tmp3[20]).t.XyHpKH);
@@ -173,7 +170,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   }
   const items9 = [tmp28, ];
   const items10 = [tmp19, tmp18, tmp14, tmp16];
-  items9[1] = closure_10(View, { style: tmp.buttonRow, children: items10 });
+  items9[1] = callback(View, { style: tmp.buttonRow, children: items10 });
   obj8[1] = items9;
-  return closure_10(View, obj8);
+  return callback(View, obj8);
 };

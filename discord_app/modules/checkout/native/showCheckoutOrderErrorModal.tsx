@@ -1,19 +1,17 @@
 // discord_app/modules/checkout/native/showCheckoutOrderErrorModal.tsx
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function SyncedLoadingAlertModal(onConfirm) {
   onConfirm = onConfirm.onConfirm;
   dependencyMap = undefined;
   ({ title, content, confirmText, onCancel } = onConfirm);
   [tmp2, c1] = callback2(React.useState(false), 2);
-  let obj = { title, content, actions: null };
-  obj = { children: null };
-  obj = {
+  let obj = {
     variant: "primary",
     text: confirmText,
     onPress: callback(function*() {
@@ -49,7 +47,7 @@ function SyncedLoadingAlertModal(onConfirm) {
               v0 = 2;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0();
+              obj1[0] = onConfirm();
               return obj1;
             }
           } else if (1 === tmp7) {
@@ -97,15 +95,13 @@ function SyncedLoadingAlertModal(onConfirm) {
   return callback3(onConfirm(4660).AlertModal, obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/checkout/native/showCheckoutOrderErrorModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/checkout/native/showCheckoutOrderErrorModal.tsx");
 
 export const showRetryConfirmModal = function showRetryConfirmModal(dismissable) {
   ({ key, onCloseCallback } = dismissable);
   const merged = Object.assign(dismissable, Object.create(null));
-  let obj = useAlertStore;
-  obj = {};
   const merged1 = Object.assign(merged);
-  obj = { dismissable: dismissable.dismissable };
+  const obj = { dismissable: dismissable.dismissable };
   obj.openAlert(key, callback3(SyncedLoadingAlertModal, obj), onCloseCallback, obj);
 };
 export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(arg0, c5) {
@@ -197,6 +193,6 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     obj = {};
     const merged1 = Object.assign(merged);
     obj = { dismissable: obj.dismissable };
-    callback(4657).openAlert(key, closure_1_5(closure_1_8, obj), onCloseCallback, obj);
+    callback(4657).openAlert(key, closure_1_5(SyncedLoadingAlertModal, obj), onCloseCallback, obj);
   });
 };

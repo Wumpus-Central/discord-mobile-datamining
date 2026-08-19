@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/useIsParentalConsentBannerActive.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import useParentalConsentWarning from "useParentalConsentWarning.tsx";
 import frozen from "ParentalConsentWarningTypes.tsx";
 
-const result = set.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
+const result = obj132.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 
 export const useIsParentalConsentBannerActive = function useIsParentalConsentBannerActive() {
   const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();

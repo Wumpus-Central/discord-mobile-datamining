@@ -3,26 +3,23 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/billing/SubscriptionStore.tsx";
-import closure_5 from "GooglePlayPriceChangeStore.tsx";
+import reset from "../../../../stores/billing/SubscriptionStore.tsx";
+import onInitializeSync from "GooglePlayPriceChangeStore.tsx";
 import { HelpdeskArticles } from "../../../../Constants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, textContainer: null, header: null, body: null };
-createCacheKey = { padding: ThemesDefault.space.PX_32, paddingTop: ThemesDefault.space.PX_24 };
+const createCacheKey = { padding: ThemesDefault.space.PX_32, paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_24 };
-let obj1 = { marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16, alignItems: "center", textAlign: "center" };
 createCacheKey[3] = { textAlign: "center" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginBottom: ThemesDefault.space.PX_16, alignItems: "center", textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx");
 
 export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -48,7 +45,6 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   const tmp2Result2 = markAsDismissed(5316);
   const formatPriceResult = markAsDismissed(5316).formatPrice(stateFromStores.oldPrice, stateFromStores.oldCurrency);
   const tmp2Result3 = markAsDismissed(5316);
-  obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/bold", style: tmp.header, children: null };
@@ -73,7 +69,7 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   const intl3 = tmp2(1236).intl;
   obj5[1] = intl3.string(markAsDismissed(1236).t.BddRzS);
   obj5[2] = function onPress() {
-    markAsDismissed(closure_1_7.USER_DISMISS);
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   };
   items3[1] = callback(markAsDismissed(4745).Button, obj5);
   obj[1] = items3;

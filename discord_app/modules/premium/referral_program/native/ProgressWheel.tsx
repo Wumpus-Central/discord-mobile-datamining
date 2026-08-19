@@ -1,11 +1,13 @@
 // discord_app/modules/premium/referral_program/native/ProgressWheel.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import map from "../../../../design/tokens/native/useToken.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
+import inlineStylesDefault from "../../../../../_runtime/06571_inlineStyles.js";
 import MAX_REFERRALS_SENT from "../hooks/useReferralProgramBannerDetails.tsx";
+import registerAssetDefault from "../../../../../_runtime/12889_registerAsset.js";
 import metadataDefault from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -15,7 +17,7 @@ const View = get_ActivityIndicator.View;
 let c6 = 160;
 let closure_7 = 2 * Math.PI * 77;
 let closure_8 = createCacheKey.createStyles({ progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 }, progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 }, glowImage: { position: "absolute", width: 180, height: 180 } });
-const result = set.fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
 
 export default function ProgressWheel(nReferralsSent) {
   nReferralsSent = nReferralsSent.nReferralsSent;
@@ -28,22 +30,22 @@ export default function ProgressWheel(nReferralsSent) {
   let tmp9 = nReferralsSent === MAX_REFERRALS_SENT.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
-    let tmp4Result = tmp4(5449);
-    obj[0] = tmp4(12889);
+    let tmp4Result = preloadDefault;
+    obj[0] = registerAssetDefault;
     obj[1] = tmp.glowImage;
     tmp9 = callback(tmp4Result, obj);
   }
   const items = [tmp9, , ];
   obj1 = { width: c6, height: c6, children: null };
-  tmp4Result = tmp4(6571);
+  tmp4Result = inlineStylesDefault;
   const items1 = [callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray: closure_7, strokeDashoffset: closure_7 * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" })];
   obj1[2] = items1;
-  items[1] = closure_5(tmp4Result, obj1);
+  items[1] = callback(tmp4Result, obj1);
   const obj3 = { source: null, style: null };
   const obj4 = { uri: metadataDefault };
   obj3[0] = obj4;
   obj3[1] = tmp.progressCircleImage;
   items[2] = callback(preloadDefault, obj3);
   obj[1] = items;
-  return closure_5(View, obj);
+  return callback(View, obj);
 };

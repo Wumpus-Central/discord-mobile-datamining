@@ -14,14 +14,14 @@ import registerAssetDefault2 from "../../../../../_runtime/13324_registerAsset.j
 import registerAssetDefault3 from "../../../../../_runtime/13325_registerAsset.js";
 import registerAssetDefault4 from "../../../../../_runtime/13326_registerAsset.js";
 import registerAssetDefault5 from "../../../../../_runtime/13327_registerAsset.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Endpoints } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function RemoteAuthBody(remoteAuthFingerprint) {
   remoteAuthFingerprint = remoteAuthFingerprint.remoteAuthFingerprint;
   [tmp3, importDefault] = callback(React.useState(constants.LOADING), 2);
@@ -29,22 +29,21 @@ function RemoteAuthBody(remoteAuthFingerprint) {
   [tmp5, dependencyMap] = callback(React.useState(null), 2);
   const items = [remoteAuthFingerprint];
   const effect = React.useEffect(() => {
-    const HTTP = remoteAuthFingerprint(closure_1_2[11]).HTTP;
-    obj = { url: closure_1_8.REMOTE_AUTH_INITIALIZE, body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { fingerprint: remoteAuthFingerprint };
+    const HTTP = remoteAuthFingerprint(dependencyMap[11]).HTTP;
+    const obj = { fingerprint: remoteAuthFingerprint };
     const postResult = HTTP.post(obj);
-    HTTP.post(obj).then((body) => {
-      callback2(body.body.handshake_token);
+    HTTP.post(obj).then((result) => {
+      callback2(result.body.handshake_token);
       callback(closure_1_13.LOADED);
-      const result = closure_1_0(closure_1_2[10]).DeprecatedLayoutAnimation();
-    }).catch(() => {
+      result = remoteAuthFingerprint(closure_1_2[10]).DeprecatedLayoutAnimation();
+    }).catch((error) => {
       callback(closure_1_13.NOT_FOUND);
-      const result = closure_1_0(closure_1_2[10]).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(closure_1_2[10]).DeprecatedLayoutAnimation();
     });
   }, items);
   if (constants.LOADING === tmp3) {
     return callback2(RemoteAuthLoading, {});
-  } else if (tmp.LOADED === tmp3) {
+  } else if (constants.LOADED === tmp3) {
     if (null == tmp5) {
       let tmp13 = callback2(RemoteAuthNotFound, {});
     } else {
@@ -52,15 +51,15 @@ function RemoteAuthBody(remoteAuthFingerprint) {
       obj[0] = tmp5;
       obj[1] = function transitionStep(arg0) {
         callback(arg0);
-        const result = remoteAuthFingerprint(closure_1_2[10]).DeprecatedLayoutAnimation();
+        const result = remoteAuthFingerprint(dependencyMap[10]).DeprecatedLayoutAnimation();
       };
       tmp13 = callback2(RemoteAuthLogin, obj);
     }
     return tmp13;
-  } else if (tmp.SUCCEEDED === tmp3) {
+  } else if (constants.SUCCEEDED === tmp3) {
     return callback2(RemoteAuthLoginSucceeded, {});
   } else {
-    const NOT_FOUND = tmp.NOT_FOUND;
+    const NOT_FOUND = constants.NOT_FOUND;
     return callback2(RemoteAuthNotFound, {});
   }
   const tmp4 = callback(React.useState(null), 2);
@@ -82,11 +81,9 @@ function RemoteAuthLogin(arg0) {
   let obj = applyDefault;
   let tmp10 = !tmp3;
   const tmp4 = callback(React.useState(false), 2);
-  const tmp7 = importDefault;
   if (!tmp3) {
     tmp10 = !tmp5;
   }
-  obj = { children: null };
   obj = { source: registerAssetDefault3, style: tmp.mainImage };
   const items = [callback2(closure_6, obj), , , ];
   obj1 = { variant: "heading-md/extrabold", children: null };
@@ -103,13 +100,12 @@ function RemoteAuthLogin(arg0) {
   obj4[0] = intl3.string(getSystemLocale.t.N3qV8e);
   obj4[1] = obj.throttle(() => {
     _undefined2(true);
-    const HTTP = closure_1_0(_undefined[11]).HTTP;
-    obj = { url: closure_1_8.REMOTE_AUTH_FINISH, body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { handshake_token: closure_0 };
+    const HTTP = require(_undefined[11]).HTTP;
+    const obj = { handshake_token: closure_0 };
     const postResult = HTTP.post(obj);
-    HTTP.post(obj).then(() => {
+    HTTP.post(obj).then((result) => {
       callback(closure_1_13.SUCCEEDED);
-    }).catch(() => {
+    }).catch((error) => {
       callback(closure_1_13.NOT_FOUND);
     });
   }, 1000, { leading: true, trailing: false });
@@ -119,11 +115,10 @@ function RemoteAuthLogin(arg0) {
   const intl4 = getSystemLocale.intl;
   obj5[1] = intl4.string(getSystemLocale.t["ETE/oC"]);
   obj5[2] = function onPress() {
-    const HTTP = closure_1_0(_undefined[11]).HTTP;
-    obj = { url: closure_1_8.REMOTE_AUTH_CANCEL, body: obj, oldFormErrors: true, rejectWithError: true };
-    obj = { handshake_token: closure_0 };
+    const HTTP = require(_undefined[11]).HTTP;
+    const obj = { handshake_token: closure_0 };
     HTTP.post(obj);
-    let arr = closure_1_1(_undefined[19]);
+    let arr = importDefault(_undefined[19]);
     arr = arr.pop();
   };
   items1[1] = callback2(Button2.Button, obj5);
@@ -134,8 +129,7 @@ function RemoteAuthLogin(arg0) {
 }
 function RemoteAuthLoginSucceeded() {
   const tmp = callback4();
-  let obj = { children: null };
-  obj = { source: registerAssetDefault4, style: tmp.mainImage };
+  let obj = { source: registerAssetDefault4, style: tmp.mainImage };
   const items = [callback2(closure_6, obj), , , ];
   obj = { variant: "heading-xl/extrabold", children: null };
   const intl = getSystemLocale.intl;
@@ -157,8 +151,7 @@ function RemoteAuthLoginSucceeded() {
 }
 function RemoteAuthNotFound() {
   const tmp = callback4();
-  let obj = { children: null };
-  obj = { source: registerAssetDefault5, style: tmp.mainImage };
+  let obj = { source: registerAssetDefault5, style: tmp.mainImage };
   const items = [callback2(closure_6, obj), , , ];
   obj = { variant: "heading-xl/extrabold", children: null };
   const intl = getSystemLocale.intl;
@@ -183,8 +176,7 @@ function RemoteAuthLoading() {
 }
 ({ ImageBackground: c5, Image: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { background: { width: "100%", height: "100%" }, container: { flex: 1, alignItems: "stretch", alignContent: "center" }, imageStyle: { resizeMode: "cover" }, logo: { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 }, mainImage: { marginTop: 16, marginBottom: 32 }, warningCaption: null, caption: null, mainCard: null, buttonGroup: null, loadingContainer: null };
-createCacheKey = { fontSize: 16, lineHeight: 20, color: ThemesDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 };
+const createCacheKey = { fontSize: 16, lineHeight: 20, color: ThemesDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 };
 createCacheKey[5] = createCacheKey;
 createCacheKey[6] = { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 };
 createCacheKey[7] = { display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: "auto", marginBottom: "auto", marginLeft: 16, marginRight: 16, borderRadius: ThemesDefault.radii.sm, padding: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.16, shadowRadius: 2, shadowOffset: { height: 2, width: 0 } };
@@ -192,8 +184,7 @@ createCacheKey[8] = { paddingVertical: 0 };
 createCacheKey[9] = { height: 300, justifyContent: "center" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let closure_13 = { LOADING: 0, [0]: "LOADING", NOT_FOUND: 1, [1]: "NOT_FOUND", LOADED: 2, [2]: "LOADED", SUCCEEDED: 3, [3]: "SUCCEEDED" };
-let obj1 = { display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: "auto", marginBottom: "auto", marginLeft: 16, marginRight: 16, borderRadius: ThemesDefault.radii.sm, padding: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.16, shadowRadius: 2, shadowOffset: { height: 2, width: 0 } };
-let result = require("set").fileFinishedImporting("modules/remote_auth/components/native/RemoteAuthModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/remote_auth/components/native/RemoteAuthModal.tsx");
 
 export default function RemoteAuth(arg0) {
   const tmp = callback4();

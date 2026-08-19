@@ -29,6 +29,6 @@ const threadSummaryStore = new ThreadSummaryStore(dispatcherDefault, {
   SUMMARIZE_THREAD_SUCCESS: handleSummarizeThreadFinish,
   SUMMARIZE_THREAD_FAILURE: handleSummarizeThreadFinish
 });
-const result = require("set").fileFinishedImporting("modules/threads/ThreadSummaryStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/threads/ThreadSummaryStore.tsx");
 
 export default threadSummaryStore;

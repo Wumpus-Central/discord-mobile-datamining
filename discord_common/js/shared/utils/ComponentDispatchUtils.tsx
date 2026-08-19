@@ -1,8 +1,8 @@
 // discord_common/js/shared/utils/ComponentDispatchUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import EventEmitter from "../../../../_runtime/00652_EventEmitter.js";
 
-let result = set.fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
 class ComponentDispatcher {
   constructor() {
     obj = global;
@@ -111,8 +111,8 @@ prototype["_checkSavedDispatches"] = function _checkSavedDispatches(arg0) {
   const self = this;
   closure_0 = arg0;
   if (null != this._savedDispatches[arg0]) {
-    const item = arr.forEach((arg0) => {
-      self.dispatch(closure_0, arg0);
+    const item = arr.forEach((item, index) => {
+      self.dispatch(closure_0, item);
     });
     tmp._savedDispatches[arg0] = undefined;
   }

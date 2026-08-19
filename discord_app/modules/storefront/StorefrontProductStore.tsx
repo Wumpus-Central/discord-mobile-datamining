@@ -110,109 +110,101 @@ StorefrontProductStore.displayName = "StorefrontProductStore";
 const storefrontProductStore = new StorefrontProductStore(dispatcherDefault, {
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH: function handleProductsWithSkusFetch(productIds) {
     productIds = productIds.productIds;
-    const item = productIds.forEach((arg0) => {
+    const item = productIds.forEach((item, index) => {
       let product;
-      if (table[arg0] != null) {
+      if (table[item] != null) {
         product = tmp2.product;
       }
-      table[arg0] = { state: "loading", product };
+      table[item] = { state: "loading", product };
     });
   },
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_SUCCESS: function handleProductsWithSkusFetchSuccess(arg0) {
     ({ productIds, products } = arg0);
-    closure_0 = undefined;
-    let set;
     closure_0 = Date.now();
-    set = new Set();
-    const item = products.forEach((id) => {
-      set.add(id.id);
-      closure_0[id.id] = { state: "success", product: id, fetchedAt: closure_0 };
+    const set = new Set();
+    const item = products.forEach((item, index) => {
+      set.add(item.id);
+      closure_0[item.id] = { state: "success", product: item, fetchedAt: closure_0 };
     });
-    const item1 = productIds.forEach((arg0) => {
-      if (!set.has(arg0)) {
+    const item1 = productIds.forEach((item, index) => {
+      if (!set.has(item)) {
         delete tmp[tmp2];
       }
     });
   },
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_FAILURE: function handleProductsWithSkusFetchFailure(arg0) {
     ({ productIds, apiError: closure_0 } = arg0);
-    closure_1 = undefined;
     closure_1 = Date.now();
-    const item = productIds.forEach((arg0) => {
-      closure_1_0[arg0] = { state: "error", fetchedAt: closure_1, fetchError: closure_0 };
+    const item = productIds.forEach((item, index) => {
+      closure_1_0[item] = { state: "error", fetchedAt: closure_1, fetchError: closure_0 };
     });
   },
   STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH: function handleProductsBySkuIdsFetch(skuIds) {
     skuIds = skuIds.skuIds;
-    const item = skuIds.forEach((arg0) => {
+    const item = skuIds.forEach((item, index) => {
       let products;
-      if (table[arg0] != null) {
+      if (table[item] != null) {
         products = tmp2.products;
       }
-      table[arg0] = { state: "loading", products };
+      table[item] = { state: "loading", products };
     });
   },
   STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_SUCCESS: function handleProductsBySkuIdsFetchSuccess(arg0) {
     ({ skuIds, products } = arg0);
-    closure_0 = undefined;
-    closure_1 = undefined;
     closure_0 = Date.now();
-    closure_1 = products.reduce((arg0, skuIds) => {
-      closure_0 = arg0;
-      closure_1 = skuIds;
-      skuIds = skuIds.skuIds;
-      const item = skuIds.forEach((arg0) => {
-        if (null == table[arg0]) {
+    closure_1 = products.reduce((acc, item, index) => {
+      closure_0 = acc;
+      closure_1 = item;
+      const skuIds = item.skuIds;
+      item = skuIds.forEach((item, index) => {
+        if (null == acc[item]) {
           const items = [closure_1];
-          tmp[arg0] = items;
+          acc[item] = items;
         } else {
-          let arr = tmp[arg0];
+          let arr = acc[item];
           arr = arr.push(closure_1);
         }
       });
-      return arg0;
+      return acc;
     }, {});
-    let item = skuIds.forEach((arg0) => {
-      if (null != table[arg0]) {
+    let item = skuIds.forEach((item, index) => {
+      if (null != table[item]) {
         const obj = { state: "success", products: null, fetchedAt: null };
-        obj[1] = tmp3[arg0];
+        obj[1] = tmp3[item];
         obj[2] = closure_0;
-        table[arg0] = obj;
+        table[item] = obj;
       } else {
         delete tmp[tmp2];
       }
     });
-    const item1 = products.forEach((id) => {
-      closure_0[id.id] = { state: "success", product: id, fetchedAt: closure_0 };
+    const item1 = products.forEach((item, index) => {
+      closure_0[item.id] = { state: "success", product: item, fetchedAt: closure_0 };
     });
   },
   STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE: function handleProductsBySkuIdsFetchFailure(arg0) {
     ({ skuIds, apiError: closure_0 } = arg0);
-    closure_1 = undefined;
     closure_1 = Date.now();
-    const item = skuIds.forEach((arg0) => {
-      closure_1[arg0] = { state: "error", fetchedAt: closure_1, fetchError: closure_0 };
+    const item = skuIds.forEach((item, index) => {
+      closure_1[item] = { state: "error", fetchedAt: closure_1, fetchError: closure_0 };
     });
   },
   STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function handleCollectionsWithProductsFetchSuccess(collections) {
     collections = collections.collections;
-    closure_0 = undefined;
     closure_0 = Date.now();
-    let item = collections.forEach((products) => {
-      products = products.products;
-      const item = products.forEach((id) => {
-        closure_1_0[id.id] = { state: "success", product: id, fetchedAt: closure_0 };
+    let item = collections.forEach((item, index) => {
+      const products = item.products;
+      item = products.forEach((item, index) => {
+        closure_1_0[item.id] = { state: "success", product: item, fetchedAt: closure_0 };
       });
     });
   },
   STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function handleCollectionsForApplicationFetchSuccess(collections) {
     collections = collections.collections;
-    closure_0 = undefined;
     closure_0 = Date.now();
-    let item = collections.forEach((products) => {
-      products = products.products;
-      const item = products.forEach((id) => {
-        closure_1_0[id.id] = { state: "success", product: id, fetchedAt: closure_0 };
+    let item = collections.forEach((item, index) => {
+      const products = item.products;
+      item = products.forEach((item, index) => {
+        closure_1_0[item.id] = { state: "success", product: item, fetchedAt: closure_0 };
       });
     });
   },
@@ -221,6 +213,6 @@ const storefrontProductStore = new StorefrontProductStore(dispatcherDefault, {
     closure_1 = {};
   }
 });
-const result = require("set").fileFinishedImporting("modules/storefront/StorefrontProductStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/storefront/StorefrontProductStore.tsx");
 
 export default storefrontProductStore;

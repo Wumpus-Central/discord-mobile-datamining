@@ -3,20 +3,23 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import isUndefinedOrNullDefault from "../../../_runtime/00659_isUndefinedOrNull.js";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
+import computeChannelName from "../channel/useChannelName.tsx";
+import useStageHasMedia from "StageMediaHooks.tsx";
+import sortKey from "StageChannelParticipants.tsx";
 import unpackStageChannelParty from "StageChannelRichPresenceUtils.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import closure_5 from "../../stores/GuildStore.tsx";
-import closure_6 from "../../stores/RTCConnectionStore.tsx";
-import closure_7 from "../../stores/RelationshipStore.tsx";
-import closure_8 from "../../stores/SelectedChannelStore.tsx";
-import closure_9 from "../../stores/UserStore.tsx";
-import closure_10 from "StageChannelParticipantStore.tsx";
-import closure_11 from "StageInstanceStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
+import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import getActiveStageChannelIds from "StageChannelParticipantStore.tsx";
+import handleStageInstanceCreateOrUpdate from "StageInstanceStore.tsx";
 import { STAGE_APPLICATION_ID } from "StageChannelsConstants.tsx";
 import ME from "../../Constants.tsx";
 import { unpackStageChannelParty } from "StageChannelRichPresenceUtils.tsx";
 
-require = arg1;
+require = fn;
 function handleUpdateActivity() {
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   let tmp2 = null;
@@ -49,8 +52,8 @@ function handleUpdateActivity() {
               if (id === result) {
                 tmp15 = obj;
               }
-              const mutableParticipants = store.getMutableParticipants(channel.id, tmp12(6703).StageChannelParticipantNamedIndex.SPEAKER);
-              const length = mutableParticipants.filter((type) => type.type === callback(table[12]).StageChannelParticipantTypes.STREAM).length;
+              const mutableParticipants = store.getMutableParticipants(channel.id, sortKey.StageChannelParticipantNamedIndex.SPEAKER);
+              const length = mutableParticipants.filter((item, index) => item.type === callback(table[12]).StageChannelParticipantTypes.STREAM).length;
               const diff = mutableParticipants.length - length;
               let size;
               const diff1 = store.getParticipantCount(voiceChannelId) - length;
@@ -71,12 +74,12 @@ function handleUpdateActivity() {
                 topic = channel.topic;
               }
               if (topic == null) {
-                let tmp12Result = tmp12(4984);
+                let tmp12Result = computeChannelName;
                 topic = tmp12Result.computeChannelName(channel, closure_9, closure_7);
               }
               obj[1] = topic;
-              tmp12Result = tmp12(4988);
-              obj[2] = tmp12Result.getStageHasMedia(channel.id) ? closure_13.WATCHING : closure_13.LISTENING;
+              tmp12Result = useStageHasMedia;
+              obj[2] = tmp12Result.getStageHasMedia(channel.id) ? constants.WATCHING : constants.LISTENING;
               let start;
               if (tmp15 != null) {
                 const timestamps = tmp15.timestamps;
@@ -166,16 +169,16 @@ const stageChannelSelfRichPresenceStore = new StageChannelSelfRichPresenceStore(
     voiceStates = voiceStates.voiceStates;
     let _require;
     if (null != c17) {
-      const result = _unpackStageChannelParty.unpackStageChannelParty(c17);
+      const result = require("StageChannelRichPresenceUtils.tsx").unpackStageChannelParty(c17);
       _require = result;
-      const obj = _unpackStageChannelParty;
+      const obj = unpackStageChannelParty;
       if (tmp5) {
         handleUpdateActivity();
       }
-      tmp5 = null != result && null != voiceStates.find((channelId) => channelId.channelId === _undefined.channelId);
+      tmp5 = null != result && null != voiceStates.find((item, index) => item.channelId === _undefined.channelId);
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelSelfRichPresenceStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelSelfRichPresenceStore.tsx");
 
 export default stageChannelSelfRichPresenceStore;

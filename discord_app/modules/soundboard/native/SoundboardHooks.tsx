@@ -1,15 +1,15 @@
 // discord_app/modules/soundboard/native/SoundboardHooks.tsx
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../a11y/AccessibilityStore.tsx";
-import closure_6 from "../../user_settings/ThemeStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import handleThemeChange from "../../user_settings/ThemeStore.tsx";
 import SOUND_BUTTON_HEIGHT from "SoundboardStyleConstants.tsx";
 import { ACTION_SHEET_MAX_WIDTH } from "../../action_sheet/native/ActionSheetConstants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ SOUNDS_PER_ROW: error, SOUND_ROW_PADDING: closure_8 } = SOUND_BUTTON_HEIGHT);
-const result = require("set").fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
+const result = require("obj132").fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
 
 export const useSoundButtonStyleConfig = function useSoundButtonStyleConfig() {
   return { buttonWidth: (Math.min(ACTION_SHEET_MAX_WIDTH, useWindowDimensionsDefault().width) - closure_8) / closure_7 };

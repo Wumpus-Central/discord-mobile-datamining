@@ -3,14 +3,14 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import dispatcherDefault from "../../Dispatcher.tsx";
 import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
 
-const require = arg1;
+const require = fn;
 let obj = { IN_FLIGHT: 0, [0]: "IN_FLIGHT", ERRORED: 1, [1]: "ERRORED", SUCCEEDED: 2, [2]: "SUCCEEDED" };
 const Store = initializeDefault.Store;
 class InteractionModalStore extends Store {
 }
-InteractionModalStore.prototype["getModalState"] = function getModalState(first) {
+InteractionModalStore.prototype["getModalState"] = function getModalState(arg0) {
   let tmp = null;
-  if (first === closure_3) {
+  if (arg0 === closure_3) {
     tmp = closure_4;
   }
   return tmp;
@@ -31,7 +31,6 @@ obj = {
       c5 = null;
       c6 = null;
       c7 = null;
-      obj = trackInviteDefault;
     }
     return false;
   },
@@ -41,7 +40,6 @@ obj = {
       c5 = null;
       c6 = null;
       c7 = null;
-      obj = trackInviteDefault;
     }
     return false;
   },
@@ -64,7 +62,7 @@ obj = {
       }
       startTimeout(38)(tmp7, "cannot submit multiple modals at once");
       IN_FLIGHT = obj.IN_FLIGHT;
-      startTimeout = function startTimeout(arg0) {
+      startTimeout = function startTimeout(closure_1_2) {
 
       };
       if (null != preflight) {
@@ -72,38 +70,38 @@ obj = {
         let timerId = setTimeout(() => {
           let tmp2 = closure_1_3 === closure_0;
           if (tmp2) {
-            tmp2 = closure_1_4 === closure_1_8.IN_FLIGHT;
+            tmp2 = IN_FLIGHT === closure_1_8.IN_FLIGHT;
           }
           if (tmp2) {
             closure_1_0(closure_1_2[2]).setFailed(closure_0);
             obj = closure_1_0(closure_1_2[2]);
           }
         }, 2 * tmp3(687).Millis.MINUTE);
-        preflight.then(() => {
-          const result = 10 * startTimeout(closure_1_2[3]).Millis.SECOND;
+        preflight.then((result) => {
+          result = 10 * startTimeout(dependencyMap[3]).Millis.SECOND;
           if (typeof startTimeout !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const timerId = setTimeout(() => {
             let tmp2 = closure_1_3 === closure_0;
             if (tmp2) {
-              tmp2 = closure_1_4 === closure_1_8.IN_FLIGHT;
+              tmp2 = IN_FLIGHT === closure_1_8.IN_FLIGHT;
             }
             if (tmp2) {
               closure_1_0(closure_1_2[2]).setFailed(closure_0);
               obj = closure_1_0(closure_1_2[2]);
             }
           }, result);
-        }).catch(() => nonce(closure_1_2[2]).setFailed(nonce));
-        const nextPromise = preflight.then(() => {
-          const result = 10 * startTimeout(closure_1_2[3]).Millis.SECOND;
+        }).catch((error) => nonce(dependencyMap[2]).setFailed(nonce));
+        const nextPromise = preflight.then((result) => {
+          result = 10 * startTimeout(dependencyMap[3]).Millis.SECOND;
           if (typeof startTimeout !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const timerId = setTimeout(() => {
             let tmp2 = closure_1_3 === closure_0;
             if (tmp2) {
-              tmp2 = closure_1_4 === closure_1_8.IN_FLIGHT;
+              tmp2 = IN_FLIGHT === closure_1_8.IN_FLIGHT;
             }
             if (tmp2) {
               closure_1_0(closure_1_2[2]).setFailed(closure_0);
@@ -116,7 +114,7 @@ obj = {
         const timerId1 = setTimeout(() => {
           let tmp2 = closure_1_3 === closure_0;
           if (tmp2) {
-            tmp2 = closure_1_4 === closure_1_8.IN_FLIGHT;
+            tmp2 = IN_FLIGHT === closure_1_8.IN_FLIGHT;
           }
           if (tmp2) {
             closure_1_0(closure_1_2[2]).setFailed(closure_0);
@@ -156,7 +154,7 @@ obj = {
   }
 };
 const interactionModalStore = new InteractionModalStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("modules/interaction_components/InteractionModalStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/interaction_components/InteractionModalStore.tsx");
 
 export default interactionModalStore;
 export const InteractionModalState = obj;

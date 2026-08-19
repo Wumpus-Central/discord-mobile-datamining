@@ -1,5 +1,5 @@
 // discord_app/modules/gateway/GatewayEncoding.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import get from "../../utils/ProcessArgs.tsx";
 import getErlpackEncoding from "GatewayEncodingErlpackEncoding.native.tsx";
 
@@ -38,6 +38,6 @@ const ProcessArgs = get.ProcessArgs;
 if (ProcessArgs.isDiscordGatewayPlaintextSet()) {
   tmp3 = JSONEncoding;
 }
-const result = set.fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
 
 export default tmp3;

@@ -1,10 +1,10 @@
 // discord_app/modules/errors/hooks/useVideoReadyTimeout.tsx
-import setDefault from "../../../utils/Durations.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import obj132Default from "../../../utils/Durations.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-let closure_3 = 20 * setDefault.Millis.SECOND;
-let result = require("set").fileFinishedImporting("modules/errors/hooks/useVideoReadyTimeout.tsx");
+const require = fn;
+let closure_3 = 20 * obj132Default.Millis.SECOND;
+let result = require("obj132").fileFinishedImporting("modules/errors/hooks/useVideoReadyTimeout.tsx");
 
 export default function useVideoReadyTimeout(streamId) {
   streamId = streamId.streamId;
@@ -15,7 +15,6 @@ export default function useVideoReadyTimeout(streamId) {
   if (flag === undefined) {
     flag = false;
   }
-  closure_5 = undefined;
   let STREAM;
   let obj = streamKey;
   const timeout = new streamId(userId[2]).Timeout();
@@ -32,7 +31,7 @@ export default function useVideoReadyTimeout(streamId) {
           if (WindowVisibilityVideoManager.isIncomingVideoEnabled()) {
             const current = ref.current;
             current.start(loading, () => {
-              current(closure_1_1[6]).videoStreamTimedOut(current, closure_1, closure_6, closure_2);
+              current(userId[6]).videoStreamTimedOut(current, closure_1, closure_6, closure_2);
             });
             return () => {
               current.stop();

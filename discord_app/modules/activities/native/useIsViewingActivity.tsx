@@ -1,10 +1,10 @@
 // discord_app/modules/activities/native/useIsViewingActivity.tsx
 import ChannelCallCameraPreviewDefault from "../../video_calls/native/components/ChannelCallModal.tsx";
 import useIsActivityFocusedDefault from "../useIsActivityFocused.tsx";
-import closure_3 from "../../calls/ChannelRTCStore.tsx";
+import getParticipants from "../../calls/ChannelRTCStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/native/useIsViewingActivity.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/native/useIsViewingActivity.tsx");
 
 export const useIsViewingActivity = function useIsViewingActivity(channelId) {
   channelId = channelId.channelId;

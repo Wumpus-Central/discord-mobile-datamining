@@ -1,17 +1,16 @@
 // discord_app/modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../FamilyCenter.messages.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");
+const result = obj132.fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");
 
 export default function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
-    let obj = { subLabel: null, trailing: "a" };
-    obj = { variant: "text-xs/medium", color: "text-muted", children: null };
+    let obj = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = getSystemLocale.intl;
     obj[2] = intl.string(messagesProxyDefault.fOBIZH);
     obj[0] = jsx(Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });

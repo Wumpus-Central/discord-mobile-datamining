@@ -1,12 +1,12 @@
 // discord_app/modules/parent_tools/ParentalConsentWarningActionCreators.tsx
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "ParentalConsentWarningStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import initialize from "ParentalConsentWarningStore.tsx";
 import importDefaultResult from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import { isParentalConsentWarningFetchEnabled } from "ParentalConsentWarningFetchExperiment.tsx";
 
-const require = arg1;
+const require = fn;
 function clearPendingRetry() {
   if (null != c8) {
     const _clearTimeout = clearTimeout;
@@ -158,7 +158,7 @@ function fetchWarning() {
   } else {
     return Promise.resolve();
   }
-  obj = _isParentalConsentWarningFetchEnabled;
+  obj = isParentalConsentWarningFetchEnabled;
 }
 function maybeFetchWarning() {
   const self = this;
@@ -308,12 +308,12 @@ function _forceFetchWarning() {
   return applyArgumentsResult;
 }
 let logger = new require("log").Logger("ParentalConsentWarning");
-const result = 5 * setDefault.Millis.SECOND;
-importDefaultResult = new importDefaultResult(result, 5 * setDefault.Millis.MINUTE, true);
+const result = 5 * obj132Default.Millis.SECOND;
+importDefaultResult = new importDefaultResult(result, 5 * obj132Default.Millis.MINUTE, true);
 let c7 = null;
 let c8 = null;
 let c9 = 0;
-const result1 = require("set").fileFinishedImporting("modules/parent_tools/ParentalConsentWarningActionCreators.tsx");
+const result1 = require("obj132").fileFinishedImporting("modules/parent_tools/ParentalConsentWarningActionCreators.tsx");
 
 export { maybeFetchWarning };
 export const forceFetchWarning = function forceFetchWarning() {

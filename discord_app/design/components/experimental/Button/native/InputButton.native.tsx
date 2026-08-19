@@ -3,18 +3,17 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import CollapsingText from "../../../Button/native/BaseTextButton.native.tsx";
 import MINIMUM_HIT_AREA from "../../../Button/native/ButtonConstants.native.tsx";
 import useInputStyles from "../../../Input/native/InputFieldContainer.native.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { Text } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 let closure_2 = ["size", "isRound", "text", "value", "icon", "iconPosition", "accessibilityLabel", "accessibilityValue", "maxFontSizeMultiplier"];
-let obj = { buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" }, buttonTextPlaceholder: null, buttonTextValue: null };
-obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+let obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj[1] = obj;
-createCacheKey = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+const createCacheKey = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 obj[2] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((size, ref) => {
@@ -84,6 +83,6 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
     return jsx(CollapsingText.BaseTextButton, {});
   }
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");
 
 export const InputButton = forwardRefResult;

@@ -2,13 +2,13 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import useSyncedModeThemeName from "useSyncedModeThemeName.tsx";
-import closure_3 from "../../ThemeStore.tsx";
+import handleThemeChange from "../../ThemeStore.tsx";
 import { SystemTheme } from "../../ThemeConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SettingsAppearanceLightModeThemePickerScreen } from "../../appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.NoFvjZ);
@@ -30,10 +30,10 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
   getComponent() {
-    return SettingsAppearanceLightModeThemePickerScreen.default;
+    return SettingsAppearanceLightModeThemePickerScreen /* SettingsAppearanceLightModeThemePickerScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");
 
 export default createToggle;

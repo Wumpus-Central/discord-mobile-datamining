@@ -1,10 +1,10 @@
 // discord_app/modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../stores/RTCConnectionStore.tsx";
-import closure_4 from "../../../stores/StreamRTCConnectionStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
+import initialize from "../../../stores/StreamRTCConnectionStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesKeyInconsistent.tsx");
 
 export const useIsSecureFramesKeyInconsistent = function useIsSecureFramesKeyInconsistent(userId) {
   userId = userId.userId;
@@ -16,12 +16,10 @@ export const useIsSecureFramesKeyInconsistent = function useIsSecureFramesKeyInc
 };
 export const useAlertIfSecureFramesKeyInconsistent = function useAlertIfSecureFramesKeyInconsistent(channelId) {
   channelId = channelId.channelId;
-  let userId = channelId;
-  userId = channelId.userId;
+  const userId = channelId.userId;
   const nickname = channelId.nickname;
   const onAlertOpen = channelId.onAlertOpen;
   let stateFromStores;
-  closure_5 = undefined;
   let items = [onAlertOpen, stateFromStores];
   stateFromStores = userId(userId[3]).useStateFromStores(items, () => {
     const items = [onAlertOpen, stateFromStores];
@@ -33,13 +31,13 @@ export const useAlertIfSecureFramesKeyInconsistent = function useAlertIfSecureFr
     if (stateFromStores) {
       if (null == ref.current) {
         const _setTimeout = setTimeout;
-        tmp.current = setTimeout(() => {
+        ref.current = setTimeout(() => {
           callback();
-          let obj = current(closure_1_1[4]);
-          obj = { userId: closure_1, channelId: current, nickname: closure_2 };
+          current(userId[4]);
+          const obj = { userId: closure_1, channelId: current, nickname: closure_2 };
           const result = obj.showSecureFramesKeyInconsistentAlert(obj);
         }, 1000);
-        let tmp3 = tmp;
+        let tmp3 = ref;
       }
       const current = tmp3.current;
       return () => {

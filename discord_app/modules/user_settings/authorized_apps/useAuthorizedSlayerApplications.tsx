@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../oauth2/AuthorizedAppsStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import recomputeFromAppTokens from "../../oauth2/AuthorizedAppsStore.tsx";
 import { FetchState } from "../../oauth2/AuthorizedAppsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
 
 export default function useAuthorizedSlayerApplications(arg0, arg1) {
   const _require = arg0;
@@ -15,9 +15,9 @@ export default function useAuthorizedSlayerApplications(arg0, arg1) {
   const items1 = [closure_4];
   stateFromStores1 = _require(stateFromStores1[2]).useStateFromStores(items1, () => {
     if (closure_0) {
-      let newestTokensForNonChildrenApplications = obj.getNewestTokensForNonChildrenApplications();
+      let newestTokensForNonChildrenApplications = closure_1_4.getNewestTokensForNonChildrenApplications();
     } else {
-      newestTokensForNonChildrenApplications = obj.getNewestTokens();
+      newestTokensForNonChildrenApplications = closure_1_4.getNewestTokens();
     }
     return newestTokensForNonChildrenApplications;
   });
@@ -27,8 +27,8 @@ export default function useAuthorizedSlayerApplications(arg0, arg1) {
     if (null == stateFromStores1) {
       let items = [];
     } else {
-      const found = stateFromStores1.filter((application) => callback(table[3]).isSocialLayerSDKAuthorization(application.application, application.scopes));
-      items = found.map((application) => application.application);
+      const found = stateFromStores1.filter((item, index) => callback(table[3]).isSocialLayerSDKAuthorization(item.application, item.scopes));
+      items = found.map((item, index) => item.application);
     }
     return items;
   }, items2);

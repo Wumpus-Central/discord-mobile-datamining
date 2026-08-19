@@ -2,22 +2,21 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import trackImpressionDefault from "../../../app_analytics/useTrackImpression.tsx";
-import closure_4 from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { NOOP } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["impressionName", "impressionProperties"];
 ({ View: closure_6, StyleSheet: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { containerWithPadding: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalScreen.tsx");
 
 export default function Modal(route) {
   const modal = route.route.params.modal;
@@ -62,7 +61,6 @@ export default function Modal(route) {
     return currentResult;
   }, []);
   const layoutEffect = obj1.useLayoutEffect(() => modal(5066).trackAppUIViewed("ModalScreen"), []);
-  const tmp6 = trackImpressionDefault;
   ({ left, right } = useSafeAreaInsetsDefault());
   let tmp7Result = tmp7(16088);
   const items = [absoluteFillObject.absoluteFillObject, ];
@@ -96,5 +94,5 @@ export default function Modal(route) {
   }
   items2[1] = isIOSResult;
   obj1[2] = items2;
-  return closure_10(closure_6, obj1);
+  return callback(closure_6, obj1);
 };

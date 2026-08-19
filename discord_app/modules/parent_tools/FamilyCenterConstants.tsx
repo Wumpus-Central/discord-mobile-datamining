@@ -1,14 +1,14 @@
 // discord_app/modules/parent_tools/FamilyCenterConstants.tsx
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import messagesProxyDefault from "FamilyCenter.messages.js";
-import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import "getAuthenticationPath";
 
-require = arg1;
-const result = 30 * setDefault.Millis.SECOND;
-const result1 = 5 * setDefault.Millis.MINUTE;
-const result2 = 5 * setDefault.Millis.MINUTE;
-getAuthenticationPath = { USER_ADD: 1, [1]: "USER_ADD", GUILD_ADD: 2, [2]: "GUILD_ADD", USER_INTERACTION: 3, [3]: "USER_INTERACTION", GUILD_INTERACTION: 4, [4]: "GUILD_INTERACTION", USER_CALLED: 5, [5]: "USER_CALLED", TOTAL_VOICE_MINUTES: 6, [6]: "TOTAL_VOICE_MINUTES", PURCHASES: 7, [7]: "PURCHASES", GIFTS: 8, [8]: "GIFTS" };
+require = fn;
+const result = 30 * obj132Default.Millis.SECOND;
+const result1 = 5 * obj132Default.Millis.MINUTE;
+const result2 = 5 * obj132Default.Millis.MINUTE;
+let getAuthenticationPath = { USER_ADD: 1, [1]: "USER_ADD", GUILD_ADD: 2, [2]: "GUILD_ADD", USER_INTERACTION: 3, [3]: "USER_INTERACTION", GUILD_INTERACTION: 4, [4]: "GUILD_INTERACTION", USER_CALLED: 5, [5]: "USER_CALLED", TOTAL_VOICE_MINUTES: 6, [6]: "TOTAL_VOICE_MINUTES", PURCHASES: 7, [7]: "PURCHASES", GIFTS: 8, [8]: "GIFTS" };
 const items = [
   getAuthenticationPath.USER_INTERACTION,
   {
@@ -377,7 +377,7 @@ const obj6 = {
   },
   icon: getAuthenticationPath.X
 };
-const result3 = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
+const result3 = require("obj132").fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
 
 export const RESTRICTED_HOURS_LAYER_KEY = "RESTRICTED_HOURS_LAYER";
 export const FAMILY_CENTER_REFETCH_COOLDOWN = result;

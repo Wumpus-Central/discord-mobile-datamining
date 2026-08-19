@@ -1,5 +1,5 @@
 // discord_app/modules/activities/utils/isStreaming.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import items3 from "../Constants.tsx";
 
@@ -16,7 +16,7 @@ function _isStreaming(type) {
 }
 const validStreamURL = items3.validStreamURL;
 const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/isStreaming.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/isStreaming.tsx");
 
 export default function isStreaming(activeSourceId, arg1) {
   if (null == activeSourceId) {

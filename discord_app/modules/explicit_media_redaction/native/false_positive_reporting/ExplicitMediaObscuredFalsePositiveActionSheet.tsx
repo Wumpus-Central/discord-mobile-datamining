@@ -1,21 +1,19 @@
 // discord_app/modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "../../ExplicitMediaRedactionConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx");
 
 export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   let redactableMediaAttachmentsForMessage;
-  let redactableMediaEmbedsForMessage;
-  let reportFalsePositive;
   ({ attachmentId, embedId } = channelId);
   let obj = channelId(redactableMediaAttachmentsForMessage[3]);
   redactableMediaAttachmentsForMessage = obj.useRedactableMediaAttachmentsForMessage(channelId, messageId, attachmentId);
-  redactableMediaEmbedsForMessage = channelId(redactableMediaAttachmentsForMessage[3]).useRedactableMediaEmbedsForMessage(channelId, messageId, embedId);
+  const redactableMediaEmbedsForMessage = channelId(redactableMediaAttachmentsForMessage[3]).useRedactableMediaEmbedsForMessage(channelId, messageId, embedId);
   const obj2 = channelId(redactableMediaAttachmentsForMessage[3]);
   obj = {
     onSuccess() {
@@ -27,12 +25,12 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
     report() {
       let mapped;
       if (redactableMediaAttachmentsForMessage != null) {
-        mapped = redactableMediaAttachmentsForMessage.map((id) => id.id);
+        mapped = redactableMediaAttachmentsForMessage.map((item, index) => item.id);
       }
       if (mapped == null) {
         mapped = [];
       }
-      let mapped1 = redactableMediaEmbedsForMessage.map((id) => id.id);
+      let mapped1 = redactableMediaEmbedsForMessage.map((item, index) => item.id);
       if (mapped1 == null) {
         mapped1 = [];
       }
@@ -40,7 +38,7 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
     }
   };
   const explicitMediaActions = channelId(redactableMediaAttachmentsForMessage[4]).useExplicitMediaActions(obj);
-  reportFalsePositive = explicitMediaActions.reportFalsePositive;
+  const reportFalsePositive = explicitMediaActions.reportFalsePositive;
   let num;
   if (redactableMediaAttachmentsForMessage != null) {
     num = redactableMediaAttachmentsForMessage.length;

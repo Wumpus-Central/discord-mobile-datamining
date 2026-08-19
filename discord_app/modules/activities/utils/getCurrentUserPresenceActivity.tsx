@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/getCurrentUserPresenceActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
 
 export default function getCurrentUserPresenceActivity(getApplicationActivity, getApplicationActivity2) {
   closure_0 = arg2;
@@ -13,7 +13,7 @@ export default function getCurrentUserPresenceActivity(getApplicationActivity, g
     }
     if (applicationActivity == null) {
       const hiddenActivities = getApplicationActivity2.getHiddenActivities();
-      applicationActivity = hiddenActivities.find((application_id) => application_id.application_id === closure_0);
+      applicationActivity = hiddenActivities.find((item, index) => item.application_id === closure_0);
     }
     tmp = applicationActivity;
   }

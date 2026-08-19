@@ -1,16 +1,15 @@
 // discord_app/modules/channel/native/openChannelLongPressActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
-const result = set.fileFinishedImporting("modules/channel/native/openChannelLongPressActionSheet.tsx");
+const result = obj132.fileFinishedImporting("modules/channel/native/openChannelLongPressActionSheet.tsx");
 
 export const openChannelLongPressActionSheet = function openChannelLongPressActionSheet(id) {
   const combined = "ChannelLongPress-" + id;
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const obj = {
     channelId: id,
     onClose() {
-      closure_1_1(closure_1_2[0]).hideActionSheet(combined);
+      ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(combined);
     }
   };
   obj.openLazy(combined(2007)(9920, dependencyMap.paths), combined, obj);

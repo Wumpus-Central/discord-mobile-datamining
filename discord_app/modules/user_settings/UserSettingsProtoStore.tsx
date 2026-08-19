@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UserSettingsProtoStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
@@ -14,15 +14,15 @@ import MAX_FAVORITES from "UserSettingsConstants.tsx";
 
 function handleConnectionClosedOrResumed() {
   const values = Object.values(closure_7);
-  const item = values.forEach((editInfo) => {
-    if (null != editInfo.editInfo.timeout) {
+  const item = values.forEach((item, index) => {
+    if (null != item.editInfo.timeout) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(editInfo.editInfo.timeout);
-      editInfo.editInfo.timeout = undefined;
+      clearTimeout(item.editInfo.timeout);
+      item.editInfo.timeout = undefined;
       const _Number = Number;
-      editInfo.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER;
-      editInfo.editInfo.rateLimited = false;
-      const versions = editInfo.proto.versions;
+      item.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER;
+      item.editInfo.rateLimited = false;
+      const versions = item.proto.versions;
       let num;
       if (versions != null) {
         num = versions.dataVersion;
@@ -30,7 +30,7 @@ function handleConnectionClosedOrResumed() {
       if (num == null) {
         num = 0;
       }
-      editInfo.editInfo.offlineEditDataVersion = num;
+      item.editInfo.offlineEditDataVersion = num;
     }
   });
 }
@@ -48,7 +48,6 @@ function handleUserSettingsProtoUpdate(settings) {
   if (settings.partial) {
     tmp.proto = b64ToProto.mergeTopLevelFields(tmp.ProtoClass, tmp.proto, proto);
     _modDef38(typeof tmp.proto !== "string", "UserSettingsProto cannot be a string");
-    obj = b64ToProto;
   } else {
     tmp.proto = proto;
     _modDef38(typeof tmp.proto !== "string", "UserSettingsProto cannot be a string");
@@ -85,10 +84,10 @@ prototype["initialize"] = function initialize(arg0) {
         if (str == null) {
           str = "";
         }
-        const b64ToProtoResult = userSettings(closure_1_2[4]).b64ToProto(ProtoClass.ProtoClass, str);
+        const b64ToProtoResult = userSettings(dependencyMap[4]).b64ToProto(ProtoClass.ProtoClass, str);
         if (null != b64ToProtoResult) {
           ProtoClass.proto = b64ToProtoResult;
-          closure_1_1(tmp4[3])(typeof ProtoClass.proto !== "string", "UserSettingsProto cannot be a string");
+          _modDef38(typeof ProtoClass.proto !== "string", "UserSettingsProto cannot be a string");
           let protoToSave;
           if (tmp != null) {
             protoToSave = tmp.protoToSave;
@@ -98,20 +97,18 @@ prototype["initialize"] = function initialize(arg0) {
           }
           if (null != protoToSave) {
             if (null != tmp.offlineEditDataVersion) {
-              const b64ToProtoResult1 = tmp3(tmp4[4]).b64ToProto(ProtoClass.ProtoClass, protoToSave);
+              const b64ToProtoResult1 = userSettings(dependencyMap[4]).b64ToProto(ProtoClass.ProtoClass, protoToSave);
               if (null != b64ToProtoResult1) {
                 ProtoClass.editInfo.protoToSave = b64ToProtoResult1;
                 ProtoClass.editInfo.offlineEditDataVersion = tmp.offlineEditDataVersion;
               }
-              const tmp3Result = tmp3(tmp4[4]);
+              const tmp3Result = userSettings(dependencyMap[4]);
             }
           }
         }
-        obj = userSettings(closure_1_2[4]);
-        tmp3 = userSettings;
+        obj = userSettings(dependencyMap[4]);
       }
     });
-    const arr = applyDefault;
   }
 };
 prototype["getState"] = function getState() {
@@ -132,7 +129,7 @@ prototype["hasLoaded"] = function hasLoaded(arg0) {
   return dependencyMap[arg0].editInfo.loaded;
 };
 Object.defineProperty(prototype, "settings", {
-  get: function settings(arg0) {
+  get: function settings(c2) {
     return obj.proto;
   },
   set: undefined
@@ -160,16 +157,16 @@ prototype["getGuildFolders"] = function getGuildFolders() {
   }
   let mapped = null;
   if (null != folders) {
-    mapped = folders.map((guildIds) => {
+    mapped = folders.map((item, index) => {
       let value;
-      if (guildIds.id != null) {
+      if (item.id != null) {
         value = iter.value;
       }
       value = undefined;
-      if (guildIds.color != null) {
+      if (item.color != null) {
         value = iter2.value;
       }
-      obj = { guildIds: guildIds.guildIds, folderId: null, folderName: null, folderColor: null };
+      obj = { guildIds: item.guildIds, folderId: null, folderName: null, folderColor: null };
       let NumberResult;
       if (null != value) {
         const _Number = Number;
@@ -177,7 +174,7 @@ prototype["getGuildFolders"] = function getGuildFolders() {
       }
       obj[1] = NumberResult;
       let value1;
-      if (guildIds.name != null) {
+      if (item.name != null) {
         value1 = iter3.value;
       }
       obj[2] = value1;
@@ -231,13 +228,13 @@ prototype["getDismissedGuildContent"] = function getDismissedGuildContent(closur
   }
   return tmp;
 };
-prototype["getGuildDismissedContentState"] = function getGuildDismissedContentState(closure_0) {
+prototype["getGuildDismissedContentState"] = function getGuildDismissedContentState(closure_1) {
   const guilds = this.settings.guilds;
   let prop;
   if (guilds != null) {
     const guilds2 = guilds.guilds;
     if (guilds2 != null) {
-      if (guilds2[closure_0] != null) {
+      if (guilds2[closure_1] != null) {
         prop = tmp3.guildDismissibleContentStates;
       }
     }
@@ -245,8 +242,7 @@ prototype["getGuildDismissedContentState"] = function getGuildDismissedContentSt
   return prop;
 };
 prototype["getGuildsProto"] = function getGuildsProto() {
-  let guilds = this.settings.guilds;
-  guilds = undefined;
+  let guilds;
   if (guilds != null) {
     guilds = guilds.guilds;
   }
@@ -307,10 +303,10 @@ obj = {
           if (str == null) {
             str = "";
           }
-          const b64ToProtoResult = userSettings(closure_1_2[4]).b64ToProto(ProtoClass.ProtoClass, str);
+          const b64ToProtoResult = userSettings(dependencyMap[4]).b64ToProto(ProtoClass.ProtoClass, str);
           if (null != b64ToProtoResult) {
             ProtoClass.proto = b64ToProtoResult;
-            closure_1_1(tmp4[3])(typeof ProtoClass.proto !== "string", "UserSettingsProto cannot be a string");
+            _modDef38(typeof ProtoClass.proto !== "string", "UserSettingsProto cannot be a string");
             let protoToSave;
             if (tmp != null) {
               protoToSave = tmp.protoToSave;
@@ -320,20 +316,18 @@ obj = {
             }
             if (null != protoToSave) {
               if (null != tmp.offlineEditDataVersion) {
-                const b64ToProtoResult1 = tmp3(tmp4[4]).b64ToProto(ProtoClass.ProtoClass, protoToSave);
+                const b64ToProtoResult1 = userSettings(dependencyMap[4]).b64ToProto(ProtoClass.ProtoClass, protoToSave);
                 if (null != b64ToProtoResult1) {
                   ProtoClass.editInfo.protoToSave = b64ToProtoResult1;
                   ProtoClass.editInfo.offlineEditDataVersion = tmp.offlineEditDataVersion;
                 }
-                const tmp3Result = tmp3(tmp4[4]);
+                const tmp3Result = userSettings(dependencyMap[4]);
               }
             }
           }
-          obj = userSettings(closure_1_2[4]);
-          tmp3 = userSettings;
+          obj = userSettings(dependencyMap[4]);
         }
       });
-      const arr = applyDefault;
     }
   },
   USER_SETTINGS_PROTO_UPDATE: handleUserSettingsProtoUpdate,
@@ -367,22 +361,22 @@ obj = {
     obj.editInfo.cleanupFuncs = cleanupFuncs;
     obj.editInfo.loaded = true;
     let values = Object.values(closure_7);
-    const item = values.forEach((lazyLoaded) => {
-      if (lazyLoaded.lazyLoaded) {
-        lazyLoaded.editInfo.loaded = false;
-        lazyLoaded.editInfo.loading = false;
+    const item = values.forEach((item, index) => {
+      if (item.lazyLoaded) {
+        item.editInfo.loaded = false;
+        item.editInfo.loading = false;
       }
     });
     values = Object.values(closure_7);
-    const item1 = values.forEach((editInfo) => {
-      if (null != editInfo.editInfo.timeout) {
+    const item1 = values.forEach((item, index) => {
+      if (null != item.editInfo.timeout) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(editInfo.editInfo.timeout);
-        editInfo.editInfo.timeout = undefined;
+        clearTimeout(item.editInfo.timeout);
+        item.editInfo.timeout = undefined;
         const _Number = Number;
-        editInfo.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER;
-        editInfo.editInfo.rateLimited = false;
-        const versions = editInfo.proto.versions;
+        item.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER;
+        item.editInfo.rateLimited = false;
+        const versions = item.proto.versions;
         let num;
         if (versions != null) {
           num = versions.dataVersion;
@@ -390,9 +384,10 @@ obj = {
         if (num == null) {
           num = 0;
         }
-        editInfo.editInfo.offlineEditDataVersion = num;
+        item.editInfo.offlineEditDataVersion = num;
       }
     });
+    const runMigrationsResult = obj.runMigrations(obj.proto, MAX_FAVORITESDefault[UserSettingsTypes.PRELOADED_USER_SETTINGS]);
   },
   CONNECTION_CLOSED: handleConnectionClosedOrResumed,
   CONNECTION_RESUMED: handleConnectionClosedOrResumed,
@@ -403,15 +398,15 @@ obj = {
   },
   LOGOUT: function handleLogout() {
     let values = Object.values(closure_7);
-    const item = values.forEach((editInfo) => {
-      if (null != editInfo.editInfo.timeout) {
+    const item = values.forEach((item, index) => {
+      if (null != item.editInfo.timeout) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(editInfo.editInfo.timeout);
-        editInfo.editInfo.timeout = undefined;
+        clearTimeout(item.editInfo.timeout);
+        item.editInfo.timeout = undefined;
         const _Number = Number;
-        editInfo.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER;
-        editInfo.editInfo.rateLimited = false;
-        const versions = editInfo.proto.versions;
+        item.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER;
+        item.editInfo.rateLimited = false;
+        const versions = item.proto.versions;
         let num;
         if (versions != null) {
           num = versions.dataVersion;
@@ -419,18 +414,18 @@ obj = {
         if (num == null) {
           num = 0;
         }
-        editInfo.editInfo.offlineEditDataVersion = num;
+        item.editInfo.offlineEditDataVersion = num;
       }
     });
     values = Object.values(closure_7);
-    const item1 = values.forEach((ProtoClass) => {
-      ProtoClass = ProtoClass.ProtoClass;
-      ProtoClass.proto = ProtoClass.create();
-      ProtoClass.editInfo = callback();
+    const item1 = values.forEach((item, index) => {
+      const ProtoClass = item.ProtoClass;
+      item.proto = ProtoClass.create();
+      item.editInfo = callback();
     });
   }
 };
 const userSettingsProtoStore = new UserSettingsProtoStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/user_settings/UserSettingsProtoStore.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/UserSettingsProtoStore.tsx");
 
 export default userSettingsProtoStore;

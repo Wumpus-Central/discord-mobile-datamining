@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import VoicePanelControlsModes from "../controls/VoicePanelControlsConstants.tsx";
 import VoicePanelModes from "../../VoicePanelConstants.tsx";
 import CARD_SIZE from "../card/VoicePanelCardConstants.tsx";
@@ -20,7 +20,7 @@ function getControlsDrawerOpenWidth(width, left, right) {
 getControlsDrawerOpenWidth.__closure = { VOICE_PANEL_DRAWER_MAX_WIDTH };
 getControlsDrawerOpenWidth.__workletHash = 10795739180192;
 getControlsDrawerOpenWidth.__initData = { code: "function getControlsDrawerOpenWidth_VoicePanelControlsUtilsTsx2(windowWidth,safeAreaLeft,safeAreaRight){const{VOICE_PANEL_DRAWER_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,VOICE_PANEL_DRAWER_MAX_WIDTH);}" };
-const result = set.fileFinishedImporting("modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx");
 
 export { getControlsDefaultWidth };
 export { getControlsDrawerOpenWidth };

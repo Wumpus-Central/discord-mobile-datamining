@@ -1,5 +1,5 @@
 // discord_app/modules/chat/native/ChatViewWrapper.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ChatViewWrapperAnimatedKeyboardDefault from "ChatViewWrapperAnimatedKeyboard.tsx";
 import ChatViewWrapperBaseDefault from "ChatViewWrapperBase.tsx";
 import apexExperiment from "../../keyboard/native/AnimatedKeyboardExperiment.tsx";
@@ -9,6 +9,6 @@ if (apexExperiment.isAnimatedAndroidKeyboard()) {
 } else {
   importDefaultResult = ChatViewWrapperBaseDefault;
 }
-const result = set.fileFinishedImporting("modules/chat/native/ChatViewWrapper.tsx");
+const result = obj132.fileFinishedImporting("modules/chat/native/ChatViewWrapper.tsx");
 
 export default importDefaultResult;

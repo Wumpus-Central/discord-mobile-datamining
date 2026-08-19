@@ -1,13 +1,12 @@
 // discord_app/modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx
 import setDefault from "../../hooks/useIsStricterMessageRequests.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
-  let id;
-  id = guild.id;
+  const id = guild.id;
   let MessageRequestRestrictedGuildIds = id(4066).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
@@ -16,16 +15,17 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];
   const callback = React.useCallback((arg0) => {
-    const sanitizedMessageRequestRestrictedGuilds = id(closure_1_2[3]).getSanitizedMessageRequestRestrictedGuilds();
+    const sanitizedMessageRequestRestrictedGuilds = id(dependencyMap[3]).getSanitizedMessageRequestRestrictedGuilds();
     if (arg0) {
       sanitizedMessageRequestRestrictedGuilds.delete(id);
     } else {
       sanitizedMessageRequestRestrictedGuilds.add(id);
     }
-    const MessageRequestRestrictedGuildIds = id(closure_1_2[2]).MessageRequestRestrictedGuildIds;
+    const MessageRequestRestrictedGuildIds = id(dependencyMap[2]).MessageRequestRestrictedGuildIds;
     MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
+    const obj = id(dependencyMap[3]);
   }, items);
-  const obj = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
+  let obj = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
   const intl = id(1236).intl;
   obj[0] = intl.string(id(1236).t["7UgSGP"]);
   const intl2 = id(1236).intl;
@@ -39,7 +39,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj[4] = hasItem1;
   return jsx(id(7177).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 }
-const result = require("set").fileFinishedImporting("modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx");
+const result = require("obj132").fileFinishedImporting("modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx");
 
 export const useMessageRequestPrivacyOption = function useMessageRequestPrivacyOption(guild) {
   let tmp = null;

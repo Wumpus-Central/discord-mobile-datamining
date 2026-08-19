@@ -5,16 +5,16 @@ import nameFromUserDefault from "../../../utils/UserUtils.tsx";
 import computeChannelName from "../../channel/useChannelName.tsx";
 import DividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
 import { isGuildSelectableChannelType as closure_3 } from "../../../records/ChannelRecord.tsx";
-import closure_4 from "../../../stores/GuildChannelStore.tsx";
-import closure_5 from "../../../stores/RelationshipStore.tsx";
-import closure_6 from "../../../stores/UserStore.tsx";
+import comparator from "../../../stores/GuildChannelStore.tsx";
+import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import AUTOCOMPLETE_ROW_HEIGHT from "../../application_commands/native/ApplicationCommandsConstants.tsx";
 import regExp from "../../channel_autocomplete/ChannelAutocompleteConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function AutocompleteFormDivider() {
   const tmp = callback2();
   return jsx(DividerDefault, { style: callback2().itemDivider });
@@ -24,11 +24,10 @@ noopAll;
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: c9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = AUTOCOMPLETE_ROW_HEIGHT);
 ({ CHANNEL_SENTINEL: unpackModuleId, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = regExp);
 const hairlineWidth = require("get ActivityIndicator").StyleSheet.hairlineWidth;
-createCacheKey = { itemDivider: null };
-createCacheKey = { marginLeft: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+const createCacheKey = { marginLeft: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[0] = createCacheKey;
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/autocompleter/native/AutocompleteUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/autocompleter/native/AutocompleteUtils.tsx");
 
 export const getItemLayout = function getItemLayout(arg0, index) {
   let type;
@@ -52,19 +51,19 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     const user = type.user;
     if (obj5.hasSameRoleAsUsername(channel, user)) {
       const _HermesInternal9 = HermesInternal;
-      let combined = "" + tmp34 + user.tag;
+      let combined = "" + closure_14 + user.tag;
     } else {
       const _HermesInternal8 = HermesInternal;
-      combined = "" + tmp34 + nameFromUserDefault.getUserTag(user);
+      combined = "" + closure_14 + nameFromUserDefault.getUserTag(user);
       const tmp32Result = nameFromUserDefault;
     }
     return combined;
-  } else if (tmp.GLOBAL === type) {
+  } else if (constants.GLOBAL === type) {
     return type.text;
-  } else if (tmp.ROLE === type) {
+  } else if (constants.ROLE === type) {
     const _HermesInternal7 = HermesInternal;
     return "" + closure_14 + type.name;
-  } else if (tmp.CHANNEL === type) {
+  } else if (constants.CHANNEL === type) {
     channel = type.channel;
     if (channel.isThread()) {
       const obj3 = computeChannelName;
@@ -82,7 +81,6 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
           }
           if (name == null) {
             name = computeChannelName.computeChannelName(type.channel, closure_6, closure_5);
-            const obj2 = computeChannelName;
           }
           const _HermesInternal5 = HermesInternal;
           return "" + closure_11 + name;
@@ -91,16 +89,16 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
       const _HermesInternal4 = HermesInternal;
       return "" + closure_11 + computeChannelName.computeChannelName(type.channel, closure_6, closure_5);
     }
-  } else if (tmp.GAME_MENTION === type) {
+  } else if (constants.GAME_MENTION === type) {
     const _HermesInternal3 = HermesInternal;
     return "" + closure_13 + type.game.name;
-  } else if (tmp.EMOJI === type) {
+  } else if (constants.EMOJI === type) {
     const _HermesInternal2 = HermesInternal;
     return "" + closure_12 + type.name + ":";
   } else {
-    if (tmp.EMOJI_PREMIUM_UPSELL !== type) {
-      if (tmp.SLASH !== type) {
-        if (tmp.CHOICE === type) {
+    if (constants.EMOJI_PREMIUM_UPSELL !== type) {
+      if (constants.SLASH !== type) {
+        if (constants.CHOICE === type) {
           const _HermesInternal = HermesInternal;
           return "" + type.choice.displayName;
         } else {
@@ -114,10 +112,10 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
 export const getMentionTextWithUser = function getMentionTextWithUser(messageChannel, user) {
   if (obj.hasSameRoleAsUsername(messageChannel, user)) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "" + tmp3 + user.tag;
+    let combined = "" + closure_14 + user.tag;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "" + tmp3 + nameFromUserDefault.getUserTag(user);
+    combined = "" + closure_14 + nameFromUserDefault.getUserTag(user);
     const tmpResult = nameFromUserDefault;
   }
   return combined;
@@ -134,7 +132,7 @@ export const getQuery = function getQuery(arr) {
 export const isWhitespaceSeparatingBoundary = function isWhitespaceSeparatingBoundary(c22, index) {
   let isMatch = 0 === index;
   if (!isMatch) {
-    isMatch = regex.test(c22[index - 1]);
+    isMatch = regex.test(table[index - 1]);
   }
   return isMatch;
 };
@@ -150,7 +148,6 @@ export const findWordStart = function findWordStart(arg0, arg1) {
       const diff = tmp4 - 1;
       tmp = diff;
       while (diff > 0) {
-        let tmp6 = regex;
         tmp4 = diff;
         tmp = diff;
         if (regex.test(arg0[diff - 1])) {
@@ -161,9 +158,9 @@ export const findWordStart = function findWordStart(arg0, arg1) {
   }
   return tmp;
 };
-export const isSpaceJustTypedAtCaret = function isSpaceJustTypedAtCaret(text, selectionEnd, arr, arg3) {
-  let sum = arg3;
-  if (arg3 === selectionEnd + 1) {
+export const isSpaceJustTypedAtCaret = function isSpaceJustTypedAtCaret(text, selectionEnd, arr, selectionEnd2) {
+  let sum = selectionEnd2;
+  if (selectionEnd2 === selectionEnd + 1) {
     if (arr.length === text.length + 1) {
       if (" " === arr[sum - 1]) {
         let num = 0;
@@ -185,10 +182,10 @@ export const isSpaceJustTypedAtCaret = function isSpaceJustTypedAtCaret(text, se
   }
   return false;
 };
-export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(arr, arg1, closure_18) {
-  if (arg1 >= closure_18.length + 2) {
-    if (" " === arr[arg1 - 1]) {
-      const diff = arg1 - 1;
+export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(arr, selectionEnd, closure_18) {
+  if (selectionEnd >= AutocompleteFormDivider.length + 2) {
+    if (" " === arr[selectionEnd - 1]) {
+      const diff = selectionEnd - 1;
       let tmp3 = diff;
       if (0 < diff) {
         let tmp2 = diff;
@@ -197,7 +194,6 @@ export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(ar
           const diff1 = tmp2 - 1;
           tmp3 = diff1;
           while (0 < diff1) {
-            let tmp5 = regex;
             tmp2 = diff1;
             tmp3 = diff1;
             if (regex.test(arr[diff1 - 1])) {
@@ -206,13 +202,13 @@ export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(ar
           }
         }
       }
-      if (arr.startsWith(closure_18, tmp3)) {
-        if (arr.lastIndexOf(closure_18, diff - closure_18.length) !== tmp3) {
+      if (arr.startsWith(AutocompleteFormDivider, tmp3)) {
+        if (arr.lastIndexOf(AutocompleteFormDivider, diff - AutocompleteFormDivider.length) !== tmp3) {
           return null;
         } else {
           const obj = { tokenStart: null, trigger: null };
           obj[0] = tmp3;
-          obj[1] = arr.slice(tmp3 + closure_18.length, diff);
+          obj[1] = arr.slice(tmp3 + AutocompleteFormDivider.length, diff);
           return obj;
         }
       } else {

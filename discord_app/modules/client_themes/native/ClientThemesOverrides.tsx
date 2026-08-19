@@ -1,11 +1,11 @@
 // discord_app/modules/client_themes/native/ClientThemesOverrides.tsx
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_4 = createCacheKey.createStyles({ none: { backgroundColor: "transparent" } });
-const result = require("set").fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
+const result = require("obj132").fileFinishedImporting("modules/client_themes/native/ClientThemesOverrides.tsx");
 
 export const useGradientBottom = function useGradientBottom() {
   gradientValue = gradientValue(4194).useGradientValue(gradientValue(4194).GradientPercentage.END);

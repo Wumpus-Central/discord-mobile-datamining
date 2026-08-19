@@ -1,5 +1,5 @@
 // discord_app/modules/age_gate/AgeGateStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import result2 from "AgeGateConstants.tsx";
@@ -22,6 +22,6 @@ const ageGateStore = new AgeGateStore(dispatcherDefault, {
     c0 = false;
   }
 });
-const result = set.fileFinishedImporting("modules/age_gate/AgeGateStore.tsx");
+const result = obj132.fileFinishedImporting("modules/age_gate/AgeGateStore.tsx");
 
 export default ageGateStore;

@@ -1,44 +1,43 @@
 // discord_app/modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx
 import computeGuildRoleSubscriptionSettingsVisibility from "../feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
 import GuildFeatures2 from "../GuildRoleSubscriptionsExperimentUtils.tsx";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { useMemo } from "../../../../_runtime/00019_noop.js";
-import closure_6 from "../../../stores/ChannelStore.tsx";
-import closure_7 from "../GuildRoleSubscriptionsStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import makeGroupListingIndexSubscriptionListingTag from "../GuildRoleSubscriptionsStore.tsx";
 import { useEditStateStore } from "../edit_state/GuildRoleSubscriptionEditStore.tsx";
-import closure_9 from "GuildRoleSubscriptionTierTemplatesStore.tsx";
+import initialize from "GuildRoleSubscriptionTierTemplatesStore.tsx";
 import { GuildFeatures } from "../../../Constants.tsx";
 import { ChannelFlags } from "../../channel/ChannelConstants.tsx";
 import importDefaultResult from "../../../../_runtime/04385_allSettled.js";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
-require = arg1;
+require = fn;
 function getUsedTemplateChannelsForGuild(arg0) {
   let arr = useEditStateStore.getState().editStateIdsForGroup[arg0];
   const listings = useEditStateStore.getState().listings;
   const set = new Set();
   if (null != arr) {
-    let item = arr.forEach((arg0) => {
+    let item = arr.forEach((item, index) => {
       let channelBenefits;
-      if (listings[arg0] != null) {
+      if (listings[item] != null) {
         channelBenefits = tmp.channelBenefits;
       }
       if (channelBenefits != null) {
-        const item = channelBenefits.forEach((ref_id) => {
-          if (null != closure_1_9.getChannel(ref_id.ref_id)) {
-            set.add(ref_id.ref_id);
+        item = channelBenefits.forEach((item, index) => {
+          if (null != closure_1_9.getChannel(item.ref_id)) {
+            set.add(item.ref_id);
           }
         });
       }
     });
   }
   const items = [];
+  const tmp2 = new Set();
   while (tmp4 !== undefined) {
-    let tmp6 = store;
     let channel = store.getChannel(tmp5);
     let obj = channel;
     if (null != channel) {
-      let tmp8 = channel;
       arr = items.push(obj.set("guild_id", arg0));
     }
     continue;
@@ -82,8 +81,8 @@ function _createChannelsFromTemplateTierBenefits() {
               let items = tmp2;
               items = [];
               c3 = [];
-              let item = closure_1.forEach((ref_id) => {
-                const channel = closure_1_9.getChannel(ref_id.ref_id);
+              let item = closure_1.forEach((item, index) => {
+                const channel = closure_1_9.getChannel(item.ref_id);
                 if (null != channel) {
                   const obj = callback(arr[12]);
                   arr = items.push(obj.createRoleSubscriptionTemplateChannel(closure_0, channel.name, channel.type, channel.topic));
@@ -104,25 +103,25 @@ function _createChannelsFromTemplateTierBenefits() {
             c4 = 3;
             throw arr;
           } else if (arg0 !== 2) {
-            const item1 = arr.forEach((status) => {
-              const id = arr[arg1].id;
-              if ("fulfilled" === status.status) {
-                const body = status.value.body;
+            const item1 = arr.forEach((item, index) => {
+              const id = arr[index].id;
+              if ("fulfilled" === item.status) {
+                const body = item.value.body;
                 const arr2 = closure_1_8.getState().editStateIdsForGroup[id];
                 const listings = closure_1_8.getState().listings;
                 if (null != arr2) {
-                  let item = arr2.forEach((arg0) => {
+                  item = arr2.forEach((item, index) => {
                     let channelBenefits;
-                    if (listings[arg0] != null) {
+                    if (listings[item] != null) {
                       channelBenefits = tmp.channelBenefits;
                     }
                     if (channelBenefits != null) {
-                      const item = channelBenefits.forEach(() => { ... });
+                      item = channelBenefits.forEach(() => { ... });
                     }
                   });
                 }
               } else if (null != body) {
-                const findIndexResult = arr.findIndex((ref_id) => ref_id.ref_id === id);
+                const findIndexResult = arr.findIndex((item, index) => item.ref_id === id);
                 if (-1 !== findIndexResult) {
                   if (arr != null) {
                     arr.splice(findIndexResult, 1);
@@ -153,18 +152,18 @@ function _createChannelsFromTemplateTierBenefits() {
 }
 importDefaultResult.shim();
 let closure_12 = {};
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx");
 
 export const useChannelWithTemplateFallback = function useChannelWithTemplateFallback(ref_id) {
   const _require = ref_id;
   const items = [closure_6];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_6.getChannel(closure_0));
-  let obj = _defaultAreStatesEqual;
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_6.getChannel(closure_0));
+  let obj = defaultAreStatesEqual;
   const items1 = [closure_9];
-  let stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => closure_1_9.getChannel(closure_0));
-  let obj3 = _defaultAreStatesEqual;
+  let stateFromStores1 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => closure_1_9.getChannel(closure_0));
+  let obj3 = defaultAreStatesEqual;
   const items2 = [closure_7];
-  const stateFromStores2 = _defaultAreStatesEqual.useStateFromStores(items2, () => closure_1_7.getBenefitChannel(closure_0));
+  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items2, () => closure_1_7.getBenefitChannel(closure_0));
   const items3 = [stateFromStores, stateFromStores2];
   let tmp3 = useMemo(() => {
     let obj = stateFromStores;
@@ -176,9 +175,9 @@ export const useChannelWithTemplateFallback = function useChannelWithTemplateFal
         if (null != stateFromStores2) {
           obj = { name: null, flags: null };
           obj[0] = tmp2.name;
-          obj[1] = stateFromStores2(closure_1_3[10]).removeFlag(obj.flags, closure_1_11.OBFUSCATED);
+          obj[1] = stateFromStores2(dependencyMap[10]).removeFlag(obj.flags, ChannelFlags.OBFUSCATED);
           mergeResult = obj.merge(obj);
-          const obj3 = stateFromStores2(closure_1_3[10]);
+          const obj3 = stateFromStores2(dependencyMap[10]);
         }
       }
     }
@@ -199,25 +198,25 @@ export const useChannelWithTemplateFallback = function useChannelWithTemplateFal
 export const useSuggestedUnusedPrices = function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
   const _require = guildId;
   const items = [closure_7];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_7.getSubscriptionListingsForGuild(closure_0));
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => closure_1_7.getSubscriptionListingsForGuild(closure_0));
   const arr3 = useEditStateStore((arg0) => arg0.editStateIdsForGroup[closure_0]);
   closure_1 = useEditStateStore((listings) => listings.listings);
   if (undefined !== price_tier) {
     if (undefined !== priceTiers) {
-      const found = stateFromStores.filter((soft_deleted) => {
-        soft_deleted = soft_deleted.soft_deleted;
+      const found = stateFromStores.filter((item, index) => {
+        const soft_deleted = item.soft_deleted;
         let tmp = !soft_deleted;
         if (!soft_deleted) {
-          tmp = !soft_deleted.archived;
+          tmp = !item.archived;
         }
         return tmp;
       });
       const items1 = [];
-      const mapped = found.map((arg0) => arg0.subscription_plans[0].price);
+      const mapped = found.map((item, index) => item.subscription_plans[0].price);
       if (undefined !== arr3) {
-        const item = arr3.forEach((arg0) => {
+        const item = arr3.forEach((item, index) => {
           let priceTier;
-          if (table[arg0] != null) {
+          if (table[item] != null) {
             priceTier = tmp.priceTier;
           }
           if (null != priceTier) {
@@ -236,7 +235,6 @@ export const useSuggestedUnusedPrices = function useSuggestedUnusedPrices(guildI
           let sum = index + 1;
           if (sum < priceTiers.length) {
             while (true) {
-              let tmp9 = sum;
               if (!set.has(priceTiers[sum])) {
                 let arr = items2.push(priceTiers[sum]);
               }
@@ -260,8 +258,8 @@ export const useSuggestedUnusedPrices = function useSuggestedUnusedPrices(guildI
 export const announceCreateTemplateChannels = function announceCreateTemplateChannels(arg0) {
   const arr = getUsedTemplateChannelsForGuild(arg0);
   closure_12[arg0] = arr;
-  const item = arr.forEach((set) => {
-    const result = set.set("flags", constants.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+  const item = arr.forEach((item, index) => {
+    const result = item.set("flags", constants.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
     callback(table[11]).dispatch({ type: "CHANNEL_CREATE", channel: result });
   });
 };
@@ -270,9 +268,9 @@ export const announceDeleteTemplateChannels = function announceDeleteTemplateCha
   if (arr == null) {
     arr = getUsedTemplateChannelsForGuild(arg0);
   }
-  const item = arr.forEach((channel) => {
-    let obj = callback(table[11]);
-    obj = { type: "CHANNEL_DELETE", channel };
+  const item = arr.forEach((item, index) => {
+    callback(table[11]);
+    const obj = { type: "CHANNEL_DELETE", channel: item };
     obj.dispatch(obj);
   });
 };

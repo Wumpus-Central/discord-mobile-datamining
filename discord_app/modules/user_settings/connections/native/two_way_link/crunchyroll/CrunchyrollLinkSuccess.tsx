@@ -10,17 +10,16 @@ import get_ActivityIndicator from "../../../../../../../_runtime/00017_get_Activ
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
 
 export default function CrunchyrollLinkDiscordSuccess(onClose) {
   let obj = styles;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = callback3();
   const items = [callback(closure_3, { source: registerAssetDefault, style: callback3().image }), , ];

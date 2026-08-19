@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx");
 
 export const createGuildDiscoveryDisqualifiedSystemMessage = function createGuildDiscoveryDisqualifiedSystemMessage(message) {
   const obj = { content: null };

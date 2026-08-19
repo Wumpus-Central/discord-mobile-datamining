@@ -1,17 +1,19 @@
 // discord_app/modules/collectibles/nameplates/native/NameplateProductPreview.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import getNameplateData from "../utils.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
 import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import firstAvatarDecoration from "../../hooks/useShopProductItems.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function NameplateUser(arg0) {
   let currentUser;
   importDefault = undefined;
@@ -63,7 +65,6 @@ function PlaceholderUser(end) {
     flag = false;
   }
   let obj = { icon: null, label: null, start: null, end: null };
-  obj = { source: obj, size: Button.AvatarSizes.NORMAL, "aria-hidden": true };
   obj = { uri: user.avatarSrc };
   obj[0] = callback(Button.Avatar, obj);
   obj[1] = user.name;
@@ -72,15 +73,12 @@ function PlaceholderUser(end) {
   return callback(TableRowInner.TableRow, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: null, memberListTitle: null, memberListGradient: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingVertical: ThemesDefault.space.PX_8 };
-let obj1 = { paddingVertical: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { position: "absolute", right: 0, left: 0, top: 0, bottom: 0, color: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { position: "absolute", right: 0, left: 0, top: 0, bottom: 0, color: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/NameplateProductPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/nameplates/native/NameplateProductPreview.tsx");
 
 export default function NameplateProductPreview(product) {
   const tmp = callback3();
@@ -95,10 +93,10 @@ export default function NameplateProductPreview(product) {
   if (null != nameplateData) {
     obj = { style: null, pointerEvents: "box-none", accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
     obj[0] = tmp.container;
-    const intl = tmp2(1236).intl;
+    const intl = getSystemLocale.intl;
     obj = { a11y_text: null };
     obj[0] = nameplateData.imgAlt;
-    obj[2] = intl.formatToPlainString(tmp2(1236).t.YJig7C, obj);
+    obj[2] = intl.formatToPlainString(getSystemLocale.t.YJig7C, obj);
     obj1 = { style: null, children: null };
     obj1[0] = tmp.memberListContainer;
     obj2 = { user: null, end: true };
@@ -106,10 +104,10 @@ export default function NameplateProductPreview(product) {
     const items = [callback(PlaceholderUser, obj2), , , , , , ];
     const obj3 = { maxFontSizeMultiplier: 2, variant: "text-sm/semibold", accessibilityRole: "header", color: "interactive-text-default", style: null, children: null };
     obj3[4] = tmp.memberListTitle;
-    const intl2 = tmp2(1236).intl;
-    const items1 = [intl2.string(tmp2(1236).t["yzW/fZ"]), " \u2014 3"];
+    const intl2 = getSystemLocale.intl;
+    const items1 = [intl2.string(getSystemLocale.t["yzW/fZ"]), " \u2014 3"];
     obj3[5] = items1;
-    items[1] = callback2(tmp2(4734).Text, obj3);
+    items[1] = callback2(Text.Text, obj3);
     const obj4 = { user: null, start: true };
     obj4[0] = nameplateSampleUsers.phibi;
     items[2] = callback(PlaceholderUser, obj4);
@@ -122,10 +120,10 @@ export default function NameplateProductPreview(product) {
     items[4] = callback(PlaceholderUser, obj6);
     const obj7 = { maxFontSizeMultiplier: 2, variant: "text-sm/semibold", accessibilityRole: "header", color: "interactive-text-default", style: null, children: null };
     obj7[4] = tmp.memberListTitle;
-    const intl3 = tmp2(1236).intl;
-    const items2 = [intl3.string(tmp2(1236).t["NG43/6"]), " \u2014 12"];
+    const intl3 = getSystemLocale.intl;
+    const items2 = [intl3.string(getSystemLocale.t["NG43/6"]), " \u2014 12"];
     obj7[5] = items2;
-    items[5] = callback2(tmp2(4734).Text, obj7);
+    items[5] = callback2(Text.Text, obj7);
     const obj8 = { user: null, start: true };
     obj8[0] = nameplateSampleUsers.boom;
     items[6] = callback(PlaceholderUser, obj8);
@@ -145,13 +143,11 @@ export default function NameplateProductPreview(product) {
     obj10[1] = { x: 0, y: 0.6 };
     obj10[2] = { x: 0, y: 1 };
     const _HermesInternal2 = HermesInternal;
-    const tmp14 = LinearGradientDefault;
     const items5 = ["" + tmp.memberListGradient.color + "00", tmp.memberListGradient.color];
     obj10[3] = items5;
     items3[2] = callback(LinearGradientDefault, obj10);
     obj[5] = items3;
     tmp7 = callback2(View, obj);
-    const tmp16 = LinearGradientDefault;
   }
   return tmp7;
 };

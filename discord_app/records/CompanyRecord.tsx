@@ -2,8 +2,7 @@
 import toJSDefault from "../lib/Record.tsx";
 
 toJSDefault;
-let prototype;
-prototype = function CompanyRecord(arg0) {
+const prototype = function CompanyRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, name: tmp.name } = arg0);
@@ -20,6 +19,6 @@ prototype["createFromServer"] = function createFromServer(arg0) {
   ({ id: tmp2.id, name: tmp2.name } = arg0);
   return tmp2;
 };
-const result = require("set").fileFinishedImporting("records/CompanyRecord.tsx");
+const result = require("obj132").fileFinishedImporting("records/CompanyRecord.tsx");
 
 export default prototype;

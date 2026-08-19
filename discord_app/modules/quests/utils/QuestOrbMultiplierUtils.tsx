@@ -1,13 +1,14 @@
 // discord_app/modules/quests/utils/QuestOrbMultiplierUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import parseServerPerkConfigKind from "../../premium/perks_state/PerksStateUtils.tsx";
+import create from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
+import apexExperiment from "../../croissant/crepe/CrepeExperiment.tsx";
 
-let obj = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
-obj = { NITRO: "nitro", CREPE: "crepe" };
+let obj = { NITRO: "nitro", CREPE: "crepe" };
 const items = [, ];
 ({ CREPE: arr[0], NITRO: arr[1] } = obj);
-const result = set.fileFinishedImporting("modules/quests/utils/QuestOrbMultiplierUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/utils/QuestOrbMultiplierUtils.tsx");
 
 export const QuestOrbMultiplierEligibilityType = obj;
 export const QuestOrbMultiplierSource = obj;
@@ -24,10 +25,10 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       if (perks != null) {
         perks = perks.perks;
       }
-      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1940).Perk.MORE_QUEST_ORBS);
+      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, create.Perk.MORE_QUEST_ORBS);
       let hasItem;
       if (perkSource != null) {
-        hasItem = perkSource.includes(tmp4(1940).PerkSource.SOURCE_NITRO);
+        hasItem = perkSource.includes(create.PerkSource.SOURCE_NITRO);
       }
       if (hasItem) {
         let NITRO = obj.NITRO;
@@ -36,14 +37,14 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
         if (tmp4Result.getIsCrepeEnabled("getQuestOrbMultiplierSource")) {
           let hasItem1;
           if (perkSource != null) {
-            hasItem1 = perkSource.includes(tmp4(1940).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+            hasItem1 = perkSource.includes(create.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
           }
           NITRO = null;
           if (hasItem1) {
             NITRO = obj.CREPE;
           }
         }
-        tmp4Result = tmp4(5315);
+        tmp4Result = apexExperiment;
       }
       return NITRO;
     }
@@ -51,5 +52,4 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
   } else {
     return null;
   }
-  const tmp = importDefault;
 };

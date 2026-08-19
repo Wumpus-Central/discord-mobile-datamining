@@ -1,35 +1,33 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { Image } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import isMetaQuest from "../../../../device/MetaQuestUtils.android.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 if (isMetaQuest.isMetaQuest()) {
   let MobilePhoneShareIcon = require("ScreenArrowIcon").ScreenArrowIcon;
 } else {
   MobilePhoneShareIcon = require("MobilePhoneShareIcon").MobilePhoneShareIcon;
 }
-isMetaQuest = { circle: null, iconContainer: null, icon: null };
 isMetaQuest = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.round };
 isMetaQuest[0] = isMetaQuest;
 isMetaQuest[1] = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
 isMetaQuest[2] = { width: 24, height: 24 };
 let closure_10 = createCacheKey.createStyles(isMetaQuest);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
 
 export default function ScreenshareButton(arg0) {
-  let channelId;
   let isActive;
   let isFeatureEnabled;
   let onPress;
   ({ props, wrapperSpecs } = arg0);
-  channelId = onPress.useContext(isActive(isFeatureEnabled[10])).channelId;
+  const channelId = onPress.useContext(isActive(isFeatureEnabled[10])).channelId;
   const tmp3 = callback2();
   let obj = channelId(isFeatureEnabled[11]);
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
@@ -44,10 +42,10 @@ export default function ScreenshareButton(arg0) {
   const items1 = [isActive, isFeatureEnabled, onPress];
   const callback = onPress.useCallback(() => {
     if (isFeatureEnabled) {
-      let obj = isActive(isFeatureEnabled[15]);
-      obj = { source: "connected button", was_active: null };
+      isActive(isFeatureEnabled[15]);
+      const obj = { source: "connected button", was_active: null };
       obj[1] = isActive;
-      obj.track(closure_1_6.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED, obj);
+      obj.track(AnalyticEvents.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED, obj);
       onPress();
     }
   }, items1);
@@ -101,5 +99,5 @@ export default function ScreenshareButton(arg0) {
   obj[1] = tmp16Result;
   items3[1] = callback(tmpResult, obj);
   obj[5] = items3;
-  return closure_8(tmpResult, obj);
+  return callback(tmpResult, obj);
 };

@@ -5,13 +5,13 @@ import create from "../../../../discord_common/js/packages/protos/discord_protos
 import getThemeForColor from "../ClientThemesUtils.tsx";
 import isPerModeThemingActive from "../../user_settings/isPerModeThemingActive.tsx";
 import useIsMobileVisualRefreshExperimentEnabled from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import closure_6 from "../../user_settings/SelectivelySyncedUserSettingsStore.tsx";
-import closure_7 from "../../user_settings/ThemeStore.tsx";
-import closure_8 from "../../user_settings/UnsyncedUserSettingsStore.tsx";
-import closure_9 from "../../user_settings/UserSettingsProtoStore.tsx";
+import initialize from "../../user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import handleThemeChange from "../../user_settings/ThemeStore.tsx";
+import CHANNEL_SIDEBAR_WIDTH from "../../user_settings/UnsyncedUserSettingsStore.tsx";
+import handleConnectionClosedOrResumed from "../../user_settings/UserSettingsProtoStore.tsx";
 import { UserSettingsTypes } from "../../user_settings/UserSettingsConstants.tsx";
 
-require = arg1;
+require = fn;
 function reset() {
   c3 = undefined;
   c4 = undefined;
@@ -37,9 +37,7 @@ function loadFromProtoSettings() {
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      const obj = getThemeForColor;
       dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-      const obj2 = dispatcherDefault;
     }
   }
 }
@@ -57,9 +55,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      const obj = getThemeForColor;
       dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-      const obj2 = dispatcherDefault;
     }
   }
 }
@@ -90,18 +86,17 @@ prototype["initialize"] = function initialize(arg0) {
       }
     }
     const customThemeBaseTheme = getThemeForColor.getCustomThemeBaseTheme(customTheme.theme);
-    const obj = getThemeForColor;
   }
 };
 prototype["getState"] = function getState() {
-  let tmp2 = null != closure_3 && null != tmp;
+  let tmp2 = null != closure_3 && null != colors;
   if (tmp2) {
-    tmp2 = tmp.colors.length > 0;
+    tmp2 = colors.colors.length > 0;
   }
   if (tmp2) {
     let obj = { theme: null, customTheme: null };
     obj[0] = closure_3;
-    obj[1] = closure_4;
+    obj[1] = colors;
   } else {
     obj = { theme: "r", customTheme: "accessibilityRole" };
   }
@@ -192,8 +187,8 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       if (null == prop) {
         let theme = obj.theme;
       } else {
-        theme = tmp10(1347).getCustomThemeBaseTheme(obj.theme);
-        const tmp10Result = tmp10(1347);
+        theme = getThemeForColor.getCustomThemeBaseTheme(obj.theme);
+        const tmp10Result = getThemeForColor;
       }
       obj = { baseTheme: null, customTheme: null };
       obj[0] = theme;
@@ -216,7 +211,6 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       return tmp9;
     }
     obj5 = isPerModeThemingActive;
-    tmp10 = require;
   }
 };
 prototype["hasCustomTheme"] = function hasCustomTheme() {
@@ -296,14 +290,12 @@ const customThemeMobileStore = new CustomThemeMobileStore(dispatcherDefault, {
         if (clientThemeSettings != null) {
           prop = clientThemeSettings.customUserThemeSettings;
         }
-        const obj = getThemeForColor;
         dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-        const obj2 = dispatcherDefault;
       }
     }
   },
   LOGOUT: reset
 });
-const result = require("set").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileStore.tsx");
 
 export default customThemeMobileStore;

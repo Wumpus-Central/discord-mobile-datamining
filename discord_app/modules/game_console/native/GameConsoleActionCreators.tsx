@@ -1,7 +1,7 @@
 // discord_app/modules/game_console/native/GameConsoleActionCreators.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+const require = fn;
 function _transferToPlaystationWithAlert() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -48,9 +48,9 @@ function _transferToPlaystationWithAlert() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/game_console/native/GameConsoleActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_console/native/GameConsoleActionCreators.tsx");
 
-export const transferToPlaystationWithAlert = function transferToPlaystationWithAlert(closure_1, closure_3, c1) {
+export const transferToPlaystationWithAlert = function transferToPlaystationWithAlert(closure_1, c2, c1) {
   const self = this;
   const apply = _transferToPlaystationWithAlert.apply;
   if (typeof apply === "unknown") {

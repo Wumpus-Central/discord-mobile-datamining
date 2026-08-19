@@ -1,10 +1,11 @@
 // discord_app/modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import prototypeDefault from "../../errors/APIError.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
-const require = arg1;
+const require = fn;
 function _getApplicationSubscriptionGroupListingsForApplication() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -109,7 +110,7 @@ function _fetchEligibleApplicationSubscriptionGuilds() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx");
 
 export const getApplicationSubscriptionGroupListingsForApplication = function getApplicationSubscriptionGroupListingsForApplication(closure_0, closure_1) {
   const self = this;
@@ -143,23 +144,21 @@ export const getSubscriptionGroupForSubscriptionPlan = function getSubscriptionG
 };
 export const fetchApplication = function fetchApplication(applicationId, signal) {
   const _require = applicationId;
-  let obj = dispatcherDefault;
-  obj = { type: "APPLICATION_FETCH", applicationId };
+  let obj = { type: "APPLICATION_FETCH", applicationId };
   obj.dispatch(obj);
-  const HTTP = _sendRequest.HTTP;
-  obj = { url: Endpoints.APPLICATION_PUBLIC(applicationId), signal, rejectWithError: _sendRequest.rejectWithMigratedError() };
+  const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+  obj = { url: Endpoints.APPLICATION_PUBLIC(applicationId), signal, rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
   const value = HTTP.get(obj);
-  const obj4 = _sendRequest;
-  return value.then((application) => {
-    let obj = callback(table[3]);
-    obj = { type: "APPLICATION_FETCH_SUCCESS", application: application.body, isHydrated: true };
+  const obj4 = sendRequest;
+  return value.then((result) => {
+    callback(table[3]);
+    const obj = { type: "APPLICATION_FETCH_SUCCESS", application: result.body, isHydrated: true };
     obj.dispatch(obj);
-    return application.body;
-  }).catch((arg0) => {
-    let obj = closure_1_1(closure_1_2[3]);
-    obj = { type: "APPLICATION_FETCH_FAIL", applicationId: closure_0 };
+    return result.body;
+  }).catch((error) => {
+    const obj = { type: "APPLICATION_FETCH_FAIL", applicationId: closure_0 };
     obj.dispatch(obj);
-    return Promise.reject(new closure_1_1(closure_1_2[4])(arg0));
+    return Promise.reject(new prototypeDefault(error));
   });
 };
 export const fetchEligibleApplicationSubscriptionGuilds = function fetchEligibleApplicationSubscriptionGuilds() {

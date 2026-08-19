@@ -8,24 +8,19 @@ import RowButtonWrapper from "../../../components/TableRow/native/RowButton.nati
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Fonts } from "../../../../../discord_common/js/shared/Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { form: null, title: null, description: null, icon: null, completedIcon: null, completedText: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12 };
+const createCacheKey = { borderRadius: ThemesDefault.radii.xs, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { fontSize: ThemesDefault.space.PX_16, lineHeight: 18, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-let obj1 = { fontSize: ThemesDefault.space.PX_16, lineHeight: 18, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 createCacheKey[2] = { fontSize: 12, lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
-let obj2 = { fontSize: 12, lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
 createCacheKey[3] = { width: ThemesDefault.space.PX_40, height: ThemesDefault.space.PX_40 };
 createCacheKey[4] = { opacity: 0.3 };
-let obj3 = { width: ThemesDefault.space.PX_40, height: ThemesDefault.space.PX_40 };
 createCacheKey[5] = { color: ThemesDefault.colors.TEXT_MUTED };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { color: ThemesDefault.colors.TEXT_MUTED };
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormCTA.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormCTA.tsx");
 
 export default function FormCTA(arg0) {
   ({ title, titleStyle, subtitle, completed, iconSource, trailing, onPress, onLongPress, variant } = arg0);
@@ -47,8 +42,7 @@ export default function FormCTA(arg0) {
     obj[1] = iconSource;
     obj[2] = Button.Icon.Sizes.CUSTOM;
     obj[1] = jsx(Button.Icon, { style: null, source: null, size: null, disableColor: true });
-    tmp3Result = tmp3(View, obj);
-    const tmp4 = View;
+    tmp3Result = <View style={null} source={null} size={null} disableColor />;
   }
   let tmp9Result = null;
   if (undefined !== subtitle) {
@@ -62,11 +56,9 @@ export default function FormCTA(arg0) {
     obj[0] = items2;
     obj[1] = subtitle;
     tmp9Result = jsx(_modDef6937.SubLabel, { style: null, text: null });
-    const tmp9 = jsx;
   }
   if ("row-button" === variant) {
     let FormCheckbox = require;
-    let obj4 = dependencyMap;
     obj1 = { arrow: false, onPress: null, onLongPress: null, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null };
     obj1[1] = onPress;
     obj1[2] = onLongPress;
@@ -87,15 +79,13 @@ export default function FormCTA(arg0) {
     obj1[5] = tmp9Result;
     if (completed) {
       FormCheckbox = FormCheckbox(8085).FormCheckbox;
-      obj4 = { checked: true };
-      trailing = tmp16(FormCheckbox, obj4);
+      trailing = <FormCheckbox checked />;
     } else if (trailing == null) {
-      trailing = tmp16(tmp17(6937).Arrow, {});
+      trailing = jsx(_modDef6937.Arrow, {});
     }
     obj1[6] = trailing;
     obj1[7] = tmp3Result;
     jsx(RowButtonWrapper.RowButton, { arrow: false, onPress: null, onLongPress: null, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null });
-    tmp17 = importDefault;
   } else {
     const obj5 = { start: true, end: true, variant: null, onPress: null, onLongPress: null, DEPRECATED_style: null, accessibilityState: null, label: null, subLabel: null, trailing: null, leading: null };
     obj5[2] = variant;
@@ -119,11 +109,11 @@ export default function FormCTA(arg0) {
     obj5[7] = jsx(_modDef6937.Label, { style: null, text: null });
     obj5[8] = tmp9Result;
     if (completed) {
-      let tmp20Result = tmp20(FormCheckbox2.FormCheckbox, { checked: true });
+      let tmp20Result = jsx(FormCheckbox2.FormCheckbox, { checked: true });
     } else {
       tmp20Result = trailing;
       if (trailing == null) {
-        tmp20Result = tmp20(_modDef6937.Arrow, {});
+        tmp20Result = jsx(_modDef6937.Arrow, {});
       }
     }
     obj5[9] = tmp20Result;

@@ -1,5 +1,5 @@
 // discord_app/modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import v1 from "../../../../_runtime/00514_v1.js";
 import trackSettingSearchInputFocused from "Tracking.tsx";
 
@@ -21,14 +21,12 @@ prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
   if (!this.isQueryEnteredTracked) {
     const result = trackSettingSearchInputFocused.trackSettingSearchQueryEntered();
     tmp.isQueryEnteredTracked = true;
-    const obj = trackSettingSearchInputFocused;
   }
 };
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    let obj = trackSettingSearchInputFocused;
-    obj = { searchSessionDuration: null };
+    const obj = { searchSessionDuration: null };
     const _Date = Date;
     obj[0] = Date.now() - self.searchSessionStartTime;
     const result = obj.trackSettingSearchClosed(obj);
@@ -36,7 +34,8 @@ prototype["terminate"] = function terminate() {
     self.searchSessionStartTime = null;
     self.isQueryEnteredTracked = false;
   }
+  tmp = null != this.searchSessionId && null != self.searchSessionStartTime;
 };
-let result = set.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
+let result = obj132.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
 
 export default Object.create(SettingSearchSessionAnalyticsManager.prototype);

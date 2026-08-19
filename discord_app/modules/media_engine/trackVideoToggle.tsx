@@ -1,18 +1,17 @@
 // discord_app/modules/media_engine/trackVideoToggle.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import calculateFps from "../../lib/VideoHealthManager.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/media_engine/trackVideoToggle.tsx");
+const result = obj132.fileFinishedImporting("modules/media_engine/trackVideoToggle.tsx");
 
 export default function trackVideoToggle(toggled_user_id, video_toggle_reason) {
   const defaultConfig = calculateFps.VideoHealthManager.defaultConfig;
   const featureEnabled = defaultConfig.featureEnabled;
   ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
-  let obj = expandEventPropertiesDefault;
-  obj = { video_toggle_reason, toggled_user_id, rtc_connection_id: null, media_session_id: null, video_health_manager_window_length: null, video_health_manager_poor_fps_ratio: null, video_health_manager_fps_threshold: null, is_video_shown: null, video_health_manager_backoff_time_seconds: null };
+  const obj = { video_toggle_reason, toggled_user_id, rtc_connection_id: null, media_session_id: null, video_health_manager_window_length: null, video_health_manager_poor_fps_ratio: null, video_health_manager_fps_threshold: null, is_video_shown: null, video_health_manager_backoff_time_seconds: null };
   let tmp;
   if (callback != null) {
     tmp = callback();

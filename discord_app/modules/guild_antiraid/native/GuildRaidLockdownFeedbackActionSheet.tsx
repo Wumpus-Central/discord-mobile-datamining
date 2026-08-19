@@ -1,23 +1,21 @@
 // discord_app/modules/guild_antiraid/native/GuildRaidLockdownFeedbackActionSheet.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { display: "flex", gap: 24 } });
-const result = require("set").fileFinishedImporting("modules/guild_antiraid/native/GuildRaidLockdownFeedbackActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_antiraid/native/GuildRaidLockdownFeedbackActionSheet.tsx");
 
 export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   guildId = guildId.guildId;
-  let first;
-  dependencyMap = undefined;
   let first1;
   let React;
   const tmp2 = first1(React.useState([]), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   dependencyMap = tmp2[1];
   const tmp3 = first1(React.useState(), 2);
   first1 = tmp3[0];
@@ -59,24 +57,23 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   obj5[1] = callback(guildId(6949).BottomSheetTitleHeader, obj6);
   const obj7 = { style: callback2().container, children: null };
   const tmp = callback2();
-  const tmp8 = closure_7;
   const tmp9 = first(6551);
   const items1 = [
     callback(guildId(6286).TableRowGroup, {
       hasIcons: false,
-      children: items.map((label) => {
-        const value = label.value;
+      children: items.map((item, index) => {
+        const value = item.value;
         guildId = value;
         return closure_1_6(guildId(8558).TableCheckboxRow, {
           onPress() {
-            closure_1_2(closure_1_1.includes(closure_0) ? ((arr) => arr.filter((arg0) => arg0 !== closure_0)) : ((arg0) => {
+            closure_1_2(first.includes(closure_0) ? ((arr) => arr.filter((item, index) => item !== closure_0)) : ((arg0) => {
               const items = [];
               items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
               return items;
             }));
           },
           checked: first.includes(value),
-          label: label.text
+          label: item.text
         }, value);
       })
     }),
@@ -92,14 +89,14 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
     obj9[3] = function onChange(arg0) {
       callback(arg0);
     };
-    hasItem = tmp7(tmp5(8092).TextArea, obj9);
+    hasItem = callback(tmp5(8092).TextArea, obj9);
   }
   items1[1] = hasItem;
   const obj10 = {
     onPress() {
-      let obj = guildId(5042);
-      obj = { raid_lockdown_feedback_type: first, raid_lockdown_feedback_other_reason: first1, guild_id: guildId };
-      obj.trackWithMetadata(closure_1_5.GUILD_RAID_LOCKDOWN_FEEDBACK, obj);
+      guildId(5042);
+      const obj = { raid_lockdown_feedback_type: first, raid_lockdown_feedback_other_reason: first1, guild_id: guildId };
+      obj.trackWithMetadata(AnalyticEvents.GUILD_RAID_LOCKDOWN_FEEDBACK, obj);
       first(4342).hideActionSheet("GuildRaidLockdownFeedbackActionSheet");
     },
     text: null
@@ -108,6 +105,6 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   obj10[1] = intl9.string(guildId(1236).t.nAt0rE);
   items1[2] = callback(guildId(4745).Button, obj10);
   obj7[1] = items1;
-  obj5[2] = tmp8(tmp9, obj7);
+  obj5[2] = callback(tmp9, obj7);
   return callback(guildId(7175).ActionSheet, obj5);
 };

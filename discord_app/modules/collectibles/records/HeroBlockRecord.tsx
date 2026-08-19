@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/records/HeroBlockRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
+import getItemRecordsFromPurchases from "../CollectiblesUtils.tsx";
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 
-let prototype;
-prototype = function HeroBlockRecord(unpublished_at) {
+const prototype = function HeroBlockRecord(unpublished_at) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.HERO;
   ({ category_sku_id: tmp.categorySkuId, name: tmp.name, summary } = unpublished_at);
@@ -16,15 +16,15 @@ prototype = function HeroBlockRecord(unpublished_at) {
   }
   obj.unpublishedAt = date;
   ({ banner_text_color: tmp.bannerTextColor, mobile_title: tmp.mobileTitle, mobile_summary: tmp.mobileSummary, mobile_products_title: tmp.mobileProductsTitle, hero_banner_url: tmp.heroBannerUrl, hero_banner_animated_url: tmp.heroBannerAnimatedUrl, hero_rive_url: tmp.heroRiveUrl, hero_logo_url: tmp.heroLogoUrl, mobile_hero_url: tmp.mobileHeroUrl, mobile_hero_animated_url: tmp.mobileHeroAnimatedUrl } = unpublished_at);
-  let tmp2Result = tmp2(5313);
+  let tmp2Result = getItemRecordsFromPurchases;
   obj.bannerDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.banner_display_config);
-  tmp2Result = tmp2(5313);
+  tmp2Result = getItemRecordsFromPurchases;
   obj.logoDisplayConfig = tmp2Result.getAssetDisplayConfig(unpublished_at.logo_display_config);
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {
   return new prototype(arg0);
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/HeroBlockRecord.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/records/HeroBlockRecord.tsx");
 
 export const HeroBlockRecord = prototype;

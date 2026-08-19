@@ -1,15 +1,15 @@
 // discord_app/utils/native/WelcomeScreenUtils.tsx
 import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../modules/welcome_screen/WelcomeScreenStore.tsx";
+import noop from "../../../_runtime/00019_noop.js";
+import handleInviteData from "../../modules/welcome_screen/WelcomeScreenStore.tsx";
 import { NO_WELCOME_SCREEN } from "../../modules/welcome_screen/WelcomeScreenStore.tsx";
-import closure_6 from "../../stores/GuildChannelStore.tsx";
-import closure_7 from "../../stores/GuildStore.tsx";
+import comparator from "../../stores/GuildChannelStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 
-require = arg1;
+require = fn;
 let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "Array" };
-const result = require("set").fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
 
 export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channelId) {
   const _require = guildId;
@@ -34,7 +34,7 @@ export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channel
         tmp14 = null != value;
       }
       if (tmp14) {
-        tmp14 = value !== closure_1_5;
+        tmp14 = value !== NO_WELCOME_SCREEN;
       }
       if (tmp14) {
         tmp14 = !isFetchingResult;

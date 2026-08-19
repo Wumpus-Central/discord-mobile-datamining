@@ -4,7 +4,7 @@ import UnavailableNoticeDefault from "../components/UnavailableNotice.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 const forwardRefResult = importAllResult.forwardRef(() => {
   const obj = { title: null, description: null, brightTitle: true };
   const intl = getSystemLocale.intl;
@@ -13,6 +13,6 @@ const forwardRefResult = importAllResult.forwardRef(() => {
   obj[1] = intl2.string(getSystemLocale.t.pRuzXJ);
   return jsx(UnavailableNoticeDefault, { title: null, description: null, brightTitle: true });
 });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx");
 
 export default forwardRefResult;

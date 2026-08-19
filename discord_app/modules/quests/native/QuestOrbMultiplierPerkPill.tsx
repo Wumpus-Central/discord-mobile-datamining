@@ -1,23 +1,26 @@
 // discord_app/modules/quests/native/QuestOrbMultiplierPerkPill.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
 import isThemeLight from "../../../design/utils/shared/themes.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import items5 from "../utils/QuestOrbMultiplierUtils.tsx";
 import useQuests from "../hooks/QuestHooks.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = { x: 0, y: 0 };
 let closure_9 = { x: 1, y: 0 };
-createCacheKey = { fullGradientContainer: null, fullGradient: null, fullGradientContent: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, overflow: "hidden", height: 19, backgroundColor: "transparent" };
+const createCacheKey = { borderRadius: ThemesDefault.radii.round, overflow: "hidden", height: 19, backgroundColor: "transparent" };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -25,16 +28,10 @@ obj1.borderRadius = ThemesDefault.radii.round;
 createCacheKey[1] = obj1;
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: 4, height: 19 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: 4, height: 19 };
-let result = require("set").fileFinishedImporting("modules/quests/native/QuestOrbMultiplierPerkPill.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/QuestOrbMultiplierPerkPill.tsx");
 
 export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(questId) {
   ({ onPress: require, orbMultiplierEligibility } = questId);
-  dependencyMap = undefined;
-  let token2;
-  let token3;
-  let questOrbRewardMultiplier;
-  closure_6 = undefined;
   const tmp = callback();
   let obj = useTheme;
   const theme = obj.useTheme();
@@ -46,16 +43,14 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
   let obj3 = map;
   const token1 = obj3.useToken(orbMultiplierEligibility(712).colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END, "dark");
   let obj4 = map;
-  token2 = obj4.useToken(orbMultiplierEligibility(712).colors.BACKGROUND_BASE_LOWEST, "dark");
+  const token2 = obj4.useToken(orbMultiplierEligibility(712).colors.BACKGROUND_BASE_LOWEST, "dark");
   let obj5 = hexToRgba;
   const items = [obj5.hexOpacityToRgba(token, 1), ];
   let obj6 = hexToRgba;
   items[1] = obj6.hexOpacityToRgba(token1, 0.5);
   let obj7 = map;
-  token3 = obj7.useToken(orbMultiplierEligibility(712).colors.BACKGROUND_BRAND);
-  questOrbRewardMultiplier = useQuests.useQuestOrbRewardMultiplier(questId.questId);
-  const obj9 = useQuests;
-  const tmp6 = orbMultiplierEligibility;
+  const token3 = obj7.useToken(orbMultiplierEligibility(712).colors.BACKGROUND_BRAND);
+  const questOrbRewardMultiplier = useQuests.useQuestOrbRewardMultiplier(questId.questId);
   const result = items5.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   const tmp13 = orbMultiplierEligibility === items5.QuestOrbMultiplierEligibilityType.CREPE;
   closure_6 = tmp13;
@@ -63,9 +58,9 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
   if (null == questOrbRewardMultiplier) {
     return null;
   } else {
-    const intl = tmp2(1236).intl;
+    const intl = getSystemLocale.intl;
     const formatToPlainString = intl.formatToPlainString;
-    const t = tmp2(1236).t;
+    const t = getSystemLocale.t;
     if (result) {
       obj = { bonusOrbMultiplier: null };
       obj[0] = questOrbRewardMultiplier;
@@ -78,13 +73,13 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     let tmp21Result = !tmp13;
     let tmp19 = tmp21Result;
     if (!tmp13) {
-      tmp19 = questOrbRewardMultiplier(tmp2(7988).NitroWheelIcon, { size: "xs", color: "white" });
+      tmp19 = questOrbRewardMultiplier(NitroWheelIcon.NitroWheelIcon, { size: "xs", color: "white" });
     }
     obj1 = { children: null };
     const items2 = [tmp19, ];
     obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
     obj2[2] = formatToPlainStringResult;
-    items2[1] = questOrbRewardMultiplier(tmp2(4734).Text, obj2);
+    items2[1] = questOrbRewardMultiplier(Text.Text, obj2);
     obj1[0] = items2;
     obj3 = { onPress: null, activeOpacity: 0.8, accessibilityRole: "button", accessibilityLabel: null, children: null };
     obj3[0] = function onPress() {
@@ -108,16 +103,15 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
       obj6[1] = items;
       obj6[2] = closure_8;
       obj6[3] = closure_9;
-      tmp21Result = tmp21(tmp6(4756), obj6);
+      tmp21Result = tmp21(orbMultiplierEligibility(4756), obj6);
     }
     const items4 = [tmp21Result, ];
     obj7 = { style: null, children: null };
     obj7[0] = tmp.fullGradientContent;
-    obj7[1] = closure_7(closure_6, obj1);
+    obj7[1] = callback(closure_6, obj1);
     items4[1] = questOrbRewardMultiplier(token3, obj7);
     obj4[1] = items4;
-    obj3[4] = closure_7(token3, obj4);
-    return questOrbRewardMultiplier(tmp2(5433).PressableOpacity, obj3);
+    obj3[4] = callback(token3, obj4);
+    return questOrbRewardMultiplier(PressableBase.PressableOpacity, obj3);
   }
-  const obj10 = items5;
 };

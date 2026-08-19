@@ -1,5 +1,5 @@
 // discord_app/design/config.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
 const obj = {
   getDefaultLinkInterceptor() {
@@ -9,7 +9,7 @@ const obj = {
 
   }
 };
-const result = set.fileFinishedImporting("design/config.tsx");
+const result = obj132.fileFinishedImporting("design/config.tsx");
 
 export const designConfig = obj;
 export const setDesignConfig = function setDesignConfig(arg0) {

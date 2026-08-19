@@ -1,7 +1,7 @@
 // discord_app/modules/errors/CommonSentryInitUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");
 
 export const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = ["notification_clicked", "experiment_user_triggered", "experiment_dm_triggered", "experiment_guild_triggered", "device_event", "react_soft_exception", "network_capabilities_changed", "foreground_service", "app_lifecycle", "ui_lifecycle", "touch_event", "http_request", "websocket_message_received"];
 export const filterThrottle = function filterThrottle(arg0) {

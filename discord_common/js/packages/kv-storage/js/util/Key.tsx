@@ -1,8 +1,8 @@
 // discord_common/js/packages/kv-storage/js/util/Key.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import TableId from "../types/index.tsx";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 
 export const combineKey = function combineKey(prefix, key) {
   if (Array.isArray(key)) {

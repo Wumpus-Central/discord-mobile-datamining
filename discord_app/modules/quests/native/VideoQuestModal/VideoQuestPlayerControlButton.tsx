@@ -3,15 +3,14 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import isBlurDisabledDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import importDefaultResult from "../../../../../_runtime/00689_n.js";
 
-require = arg1;
-let obj = { disabled: { opacity: 0.5 }, container: null, blur: null };
-obj = { borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
+require = fn;
+let obj = { borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
 obj[1] = obj;
-createCacheKey = { backgroundColor: null, padding: null };
+const createCacheKey = { backgroundColor: null, padding: null };
 const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK);
 createCacheKey[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
 createCacheKey[1] = ThemesDefault.space.PX_12;
@@ -27,14 +26,13 @@ const memoResult = importAllResult.memo((arg0) => {
   if (disabled) {
     disabled = tmp2.disabled;
   }
-  let obj = { style: items };
   items[1] = disabled;
   items[2] = style;
   const merged1 = Object.assign(merged);
-  obj = { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children };
+  const obj = { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children };
   obj.children = jsx(isBlurDisabledDefault, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
   return jsx(PressableBase.PressableOpacity, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx");
 
 export const VideoQuestPlayerControlButton = memoResult;

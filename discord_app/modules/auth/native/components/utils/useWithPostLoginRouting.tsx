@@ -1,13 +1,13 @@
 // discord_app/modules/auth/native/components/utils/useWithPostLoginRouting.tsx
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../../_runtime/00019_noop.js";
-import closure_6 from "../../../../../stores/AuthenticationStore.tsx";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import fetchFingerprint from "../../../../../stores/AuthenticationStore.tsx";
 import ME from "../../../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ LoginStates: error, AuthStates: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useWithPostLoginRouting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/components/utils/useWithPostLoginRouting.tsx");
 
 export default function useWithPostLoginRouting(arg0, arg1) {
   const _require = arg0;
@@ -20,16 +20,16 @@ export default function useWithPostLoginRouting(arg0, arg1) {
   const items1 = [arg0, arg1, loginStatus, first];
   const effect = React.useEffect(() => {
     if (closure_2 !== closure_1_7.LOGGING_IN) {
-      if (tmp !== tmp2.FORGOT_PASSWORD) {
+      if (tmp !== closure_1_7.FORGOT_PASSWORD) {
         callback(loginStatus);
       }
     }
     if (closure_1_7.MFA_STEP === loginStatus) {
       arr = arr.push(closure_1_8.MFA);
     } else {
-      if (tmp2.ACCOUNT_SCHEDULED_FOR_DELETION !== tmp6) {
-        if (tmp2.ACCOUNT_DISABLED !== tmp6) {
-          if (tmp2.LOGIN_AGE_GATE === tmp6) {
+      if (closure_1_7.ACCOUNT_SCHEDULED_FOR_DELETION !== loginStatus) {
+        if (closure_1_7.ACCOUNT_DISABLED !== loginStatus) {
+          if (closure_1_7.LOGIN_AGE_GATE === loginStatus) {
             arr = arr.push(closure_1_8.AGE_GATE_UNDERAGE, { existingUser: true });
           }
         }
@@ -52,7 +52,7 @@ export default function useWithPostLoginRouting(arg0, arg1) {
         callback(5256).loginReset();
       };
       let replaced = arr.replace(closure_1_8.VERIFY_PHONE, obj);
-    } else if (tmp2.PHONE_IP_AUTHORIZATION === tmp6) {
+    } else if (closure_1_7.PHONE_IP_AUTHORIZATION === loginStatus) {
       const credentials = closure_1_6.getCredentials();
       ({ login: closure_0, password: closure_1 } = credentials);
       obj = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
@@ -112,7 +112,7 @@ export default function useWithPostLoginRouting(arg0, arg1) {
                 return obj;
               } else {
                 const routes = arr.getState().routes;
-                arr = routes.findIndex((name) => name.name === constants.LOGIN);
+                arr = routes.findIndex((item, index) => item.name === constants.LOGIN);
                 if (arr >= 0) {
                   arr = arr.pop(arr);
                 } else {
@@ -141,10 +141,10 @@ export default function useWithPostLoginRouting(arg0, arg1) {
         if (arg0) {
           let tmp6 = null != callback;
           if (tmp6) {
-            tmp6 = "" !== tmp4;
+            tmp6 = "" !== callback;
           }
           if (tmp6) {
-            closure_1_1(closure_0, tmp4);
+            closure_1_1(closure_0, callback);
           }
         } else {
           callback(first[8]).loginReset();

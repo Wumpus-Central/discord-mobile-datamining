@@ -2,19 +2,20 @@
 import noopAll from "../../../../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import computeChannelNameDefault from "../../../../channel/useChannelName.tsx";
+import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
 import _isStreamingDefault from "../../../../activities/utils/isStreaming.tsx";
 import getChannelA11yLabelDefault from "../../../../channel/getChannelA11yLabel.tsx";
 import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HappeningNowCard.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
 import { ActivityTypes } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_7 = createCacheKey.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
 
 export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubtitle(voiceState) {
   voiceState = voiceState.voiceState;
@@ -23,7 +24,6 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(voiceState.channelId));
   obj = { style: callback().cardDetails, children: null };
   const tmp = callback();
-  const tmp4 = importDefault;
   let tmp8;
   if (null != stateFromStores) {
     obj = { channel: null };
@@ -40,7 +40,6 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
       let trimmed = null;
       if (null != activity.state) {
         trimmed = activity.state.trim();
-        const str4 = activity.state;
       }
       let tmp3 = trimmed;
     }
@@ -64,7 +63,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     tmp3 = null;
     if (null != name) {
       if (!_isStreamingDefault(activity)) {
-        if (tmp4(7261)(activity)) {
+        if (isListeningOnSpotifyDefault(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;
@@ -78,7 +77,6 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         const name2 = activity.name;
       }
       const details = activity.details;
-      tmp4 = importDefault;
     }
   }
 };

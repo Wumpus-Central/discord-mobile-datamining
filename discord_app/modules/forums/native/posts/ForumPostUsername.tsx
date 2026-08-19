@@ -1,15 +1,20 @@
 // discord_app/modules/forums/native/posts/ForumPostUsername.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
+import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import Button from "../../../../design/void/native.tsx";
 import set from "../../../../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import processColorStrings from "../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import useLoadForumUnreadCounts from "../../ForumHooks.tsx";
 import useChatWidthDefault from "../../../chat/native/useChatWidth.tsx";
+import GIFIcon from "grid/ForumPostGridBody.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 import { useForumChannelStore } from "../../ForumChannelStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function ForumPostUsername(arg0) {
   ({ thread, authorId, authorName, authorColor, authorColors } = arg0);
   ({ containerStyle, roleDotStyle, textStyle, suffix, hasUnreads } = arg0);
@@ -18,8 +23,8 @@ function ForumPostUsername(arg0) {
   if (useForumChannelStore(thread.parent_id).layoutType === set.ForumLayout.GRID) {
     num = 72;
   }
-  const diff = useChatWidthDefault() - tmp2(11182).GRID_HORIZONTAL_PADDING - num;
-  let tmp2Result = tmp2(589);
+  const diff = useChatWidthDefault() - GIFIcon.GRID_HORIZONTAL_PADDING - num;
+  let tmp2Result = initialize;
   const items = [closure_4];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
@@ -27,9 +32,9 @@ function ForumPostUsername(arg0) {
       let obj = { color: null };
       obj[0] = authorColor;
     }
-    tmp2Result = tmp2(8186);
+    tmp2Result = processColorStrings;
     const processColorStringsArray = tmp2Result.useProcessColorStringsArray(authorColors);
-    const tmp2Result1 = tmp2(8186);
+    const tmp2Result1 = processColorStrings;
     const useIsRoleStyleAndRoleColorsEligibleForERC = tmp2Result1.useIsRoleStyleAndRoleColorsEligibleForERC;
     const guild_id = thread.guild_id;
     let tmp19Result = null;
@@ -48,8 +53,8 @@ function ForumPostUsername(arg0) {
         const obj3 = { size: "small", color: null, colors: null };
         obj3[1] = authorColor;
         obj3[2] = authorColors;
-        obj2[1] = callback(tmp2(1297).RoleDot, obj3);
-        tmp23 = callback(tmp20, obj2);
+        obj2[1] = callback(Button.RoleDot, obj3);
+        tmp23 = callback(View, obj2);
       }
       const items3 = [tmp23, ];
       let tmp25;
@@ -62,17 +67,18 @@ function ForumPostUsername(arg0) {
       obj4[4] = items4;
       const items5 = [authorName, suffix];
       obj4[5] = items5;
-      items3[1] = closure_7(tmp2(4734).Text, obj4);
+      items3[1] = callback2(Text.Text, obj4);
       obj[2] = items3;
-      tmp19Result = tmp19(tmp20, obj);
+      tmp19Result = callback2(View, obj);
     }
     return tmp19Result;
   }
+  const tmp4 = useChatWidthDefault();
 }
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 }, roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 }, authorName: { overflow: "hidden", flexWrap: "nowrap" } });
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostUsername.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/posts/ForumPostUsername.tsx");
 
 export const ForumPostAuthor = function ForumPostAuthor(thread) {
   thread = thread.thread;
@@ -114,9 +120,7 @@ export const ForumPostAuthor = function ForumPostAuthor(thread) {
     obj[7] = roleDotStyle;
     obj[8] = textStyle;
     obj[9] = hasUnreads;
-    tmp5Result = closure_6(ForumPostUsername, obj);
-    const tmp5 = closure_6;
-    const tmp6 = ForumPostUsername;
+    tmp5Result = callback(ForumPostUsername, obj);
   }
   return tmp5Result;
 };
@@ -141,5 +145,5 @@ export const ForumPostMessageAuthor = function ForumPostMessageAuthor(thread) {
   obj[7] = roleDotStyle;
   obj[8] = textStyle;
   obj[9] = hasUnreads;
-  return closure_6(ForumPostUsername, obj);
+  return callback(ForumPostUsername, obj);
 };

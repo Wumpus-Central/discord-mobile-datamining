@@ -1,41 +1,31 @@
 // discord_app/modules/premium/powerups/native/RoleGradientPickerActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import HOLOGRAPHIC_ROLE_COLORS from "../constants/EnhancedRoleColorConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
 ({ DEFAULT_GRADIENT_ROLE_COLORS: error, GRADIENT_PRESETS: closure_8 } = HOLOGRAPHIC_ROLE_COLORS);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { body: null, gradientContainer: null, dropperContainer: null, dropper: null, gradient: null, optionContainer: null, pressable: null, selected: null, option: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj1 = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, position: "absolute", display: "flex", flexDirection: "row", justifyContent: "space-between" };
-let obj2 = { left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, position: "absolute", display: "flex", flexDirection: "row", justifyContent: "space-between" };
 createCacheKey[3] = { borderColor: "white", tintColor: "white", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, borderWidth: 1 };
-let obj3 = { borderColor: "white", tintColor: "white", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, borderWidth: 1 };
 createCacheKey[4] = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
-const obj4 = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
 createCacheKey[5] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
-let obj5 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
 createCacheKey[6] = { width: 80, height: 50, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", padding: 2 };
-let obj6 = { width: 80, height: 50, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", padding: 2 };
 createCacheKey[7] = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
-let obj7 = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[8] = { flex: 1, borderRadius: ThemesDefault.radii.sm };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const obj8 = { flex: 1, borderRadius: ThemesDefault.radii.sm };
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/RoleGradientPickerActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/RoleGradientPickerActionSheet.tsx");
 
 export default function RoleGradientPickerActionSheet(arg0) {
   ({ colors, onSelect } = arg0);
-  importDefault = undefined;
   let first;
   let callback;
   let callback1;
@@ -47,7 +37,6 @@ export default function RoleGradientPickerActionSheet(arg0) {
   }
   const tmp2 = callback(callback1.useState(colors), 2);
   first = tmp2[0];
-  callback = tmp2[1];
   obj1 = onSelect(first[7]);
   const values = Object.values(obj1.extractColorStringsFromServerColors(first));
   let items = [first, onSelect];
@@ -97,7 +86,6 @@ export default function RoleGradientPickerActionSheet(arg0) {
       }
     }, "stack");
   }, items2);
-  obj = { header: null, children: null };
   obj = { title: null, trailing: null };
   const intl = onSelect(first[13]).intl;
   obj[0] = intl.string(onSelect(first[13]).t.XpWmJz);
@@ -128,8 +116,8 @@ export default function RoleGradientPickerActionSheet(arg0) {
     callback3(closure_5, obj3),
     callback2(closure_5, {
       style: tmp.optionContainer,
-      children: closure_8.map((colors) => {
-        const tmp = callback(colors.colors, 2);
+      children: closure_8.map((item, index) => {
+        const tmp = callback(item.colors, 2);
         first = tmp[0];
         const lib = tmp3;
         const items = [lib.pressable, ];
@@ -140,28 +128,17 @@ export default function RoleGradientPickerActionSheet(arg0) {
         if (selected) {
           selected = tmp7.selected;
         }
-        let obj = {
-          style: items,
-          onPress() {
-            const obj = {};
-            const merged = Object.assign(closure_1_2);
-            obj.primary_color = first;
-            obj.secondary_color = closure_1;
-            return closure_1_4(obj);
-          },
-          children: null
-        };
         items[1] = selected;
-        obj = { style: tmp7.option, colors: null, start: null, end: null };
-        let tmp5Result = tmp5(tmp6[18]);
+        let obj = { style: tmp7.option, colors: null, start: null, end: null };
+        let tmp5Result = onSelect(tmp6[18]);
         const items1 = [tmp5Result.int2hex(first), ];
-        tmp5Result = tmp5(tmp6[18]);
+        tmp5Result = onSelect(tmp6[18]);
         items1[1] = tmp5Result.int2hex(tmp[1]);
         obj[1] = items1;
         obj[2] = { x: 0, y: 0 };
         obj[3] = { x: 1, y: 0 };
         obj[2] = closure_1_9(lib(first[15]), obj);
-        return closure_1_9(onSelect(first[17]).PressableOpacity, obj, colors.name);
+        return closure_1_9(onSelect(first[17]).PressableOpacity, obj, item.name);
       })
     }),
 

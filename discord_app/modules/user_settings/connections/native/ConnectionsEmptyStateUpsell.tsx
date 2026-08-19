@@ -3,13 +3,13 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { AnalyticsLocations } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function EmptyStateCard(platform) {
   platform = platform.platform;
   importDefault = undefined;
@@ -19,7 +19,7 @@ function EmptyStateCard(platform) {
   importDefault = tmp3;
   const items = [platform];
   const callback = React.useCallback(() => {
-    let obj = { platformType: platform.type, location: closure_1_5.CONNECTIONS_EMPTY_STATE };
+    let obj = { platformType: platform.type, location: AnalyticsLocations.CONNECTIONS_EMPTY_STATE };
     callback(connectionBackgroundColor[7])(obj);
     obj = { platformType: platform.type };
     const result = platform(connectionBackgroundColor[8]).trackEmptyStateCardClicked(obj);
@@ -46,27 +46,26 @@ function EmptyStateCard(platform) {
     tmp10 = obj;
   }
   items2[1] = tmp10;
-  obj[3] = closure_6(View, { style: items2, children: closure_6(platform(connectionBackgroundColor[13]).Icon, obj2) });
-  return closure_6(platform(connectionBackgroundColor[12]).Card, obj);
+  obj[3] = callback(View, { style: items2, children: callback(platform(connectionBackgroundColor[13]).Icon, obj2) });
+  return callback(platform(connectionBackgroundColor[12]).Card, obj);
 }
 function OtherConnectionsCard(count) {
   const callback = React.useCallback(() => {
     callback2(paths[14]).openLazy(callback(paths[16])(paths[15], paths.paths), "AddConnection");
   }, []);
-  let obj = { onPress: callback, style: callback3().card, border: "strong", children: null };
-  obj = { variant: "text-md/medium", color: "interactive-text-default", children: "+" + count.count };
+  { onPress: callback, style: callback3().card, border: "strong", children: null };
+  const obj = { variant: "text-md/medium", color: "interactive-text-default", children: "+" + count.count };
   obj[3] = callback(Text.Text, obj);
   return callback(PressableCard.Card, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {
-  let obj = { container: { flex: 1, alignItems: "center" }, content: { flex: 1, width: "100%", maxWidth: 260, alignItems: "center", justifyContent: "center" }, card: { flex: 1, maxHeight: 76, maxWidth: 76, aspectRatio: 1, alignItems: "center", justifyContent: "center", padding: 12 }, textContainer: { marginTop: 32 }, text: { textAlign: "center" }, iconContainer: null, icon: null };
-  obj = { flex: 1, maxHeight: 52, maxWidth: 52, aspectRatio: 1, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", padding: 8 };
+  const obj = { flex: 1, maxHeight: 52, maxWidth: 52, aspectRatio: 1, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", padding: 8 };
   obj[5] = obj;
   obj[6] = { flex: 1, aspectRatio: 1 };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsEmptyStateUpsell.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsEmptyStateUpsell.tsx");
 
 export default function ConnectionsEmptyStateUpsell() {
   const tmp = callback3();
@@ -76,16 +75,15 @@ export default function ConnectionsEmptyStateUpsell() {
   const memo = React.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
   const items1 = [emptyStatePlatforms];
   const memo1 = React.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
-  obj = { style: null, children: null };
   const items2 = [tmp.container, ];
   obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   items2[1] = obj;
   obj[0] = items2;
   obj1 = { style: tmp.content, children: null };
   const obj2 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: null };
-  const items3 = [callback(emptyStatePlatforms(4733).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((platform) => callback(closure_9, { platform }, platform.type)) }), ];
+  const items3 = [callback(emptyStatePlatforms(4733).Stack, { spacing: 16, justify: "center", direction: "horizontal", children: memo.map((item, index) => callback(closure_9, { platform: item }, item.type)) }), ];
   const obj4 = { spacing: 16, justify: "center", direction: "horizontal", children: null };
-  const items4 = [memo1.map((platform) => callback(closure_9, { platform }, platform.type)), callback(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 })];
+  const items4 = [memo1.map((item, index) => callback(closure_9, { platform: item }, item.type)), callback(OtherConnectionsCard, { count: emptyStatePlatforms.length - 5 })];
   obj4[3] = items4;
   items3[1] = callback2(emptyStatePlatforms(4733).Stack, obj4);
   obj2[4] = items3;

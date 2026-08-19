@@ -1,18 +1,20 @@
 // discord_app/modules/voice_calls/collectCallFeedback.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
-import closure_3 from "../video_backgrounds/VideoBackgroundStore.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import closure_5 from "../../stores/MediaEngineStore.tsx";
-import closure_6 from "../../stores/RTCConnectionStore.tsx";
-import closure_7 from "../../stores/SelectedChannelStore.tsx";
-import closure_8 from "../../stores/UserStore.tsx";
-import closure_9 from "AudioRouteStore.native.tsx";
+import isAnimatedBackgroundOption from "../video_backgrounds/VideoBackgroundUtils.tsx";
+import getLastUsedVideoBackgroundOption from "../video_backgrounds/LastUsedVideoBackgroundOption.tsx";
+import handleSyncedStoresUpdate from "../video_backgrounds/VideoBackgroundStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
+import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import handleAudioRouteChanged from "AudioRouteStore.native.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_calls/collectCallFeedback.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/voice_calls/collectCallFeedback.tsx");
 
-export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
+export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   channel = channel.getChannel(voiceChannelId);
   if (null == arg1) {
@@ -41,11 +43,11 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
         }
         obj.duration_muted_ms = duration_muted_ms;
         obj.output_audio_route_type = currentRouteType.getCurrentRouteType();
-        arg0();
+        fn();
         if (obj.hasUsedBackgroundInCall) {
           obj = {};
           const merged1 = Object.assign(obj);
-          let tmp5Result = tmp5(9664);
+          let tmp5Result = getLastUsedVideoBackgroundOption;
           const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
           const videoDevices = store.getVideoDevices();
           const tmp22 = videoDevices[store.getVideoDeviceId(store)];
@@ -56,25 +58,21 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
           obj1 = { video_device_name: null, video_hardware_scaling_enabled: null, video_effect_type: null, video_effect_detail: null };
           obj1[0] = name;
           obj1[1] = store.getHardwareEncoding();
-          tmp5Result = tmp5(9661);
+          tmp5Result = isAnimatedBackgroundOption;
           obj1[2] = tmp5Result.getEffectAnalyticsType(lastUsedVideoBackgroundOption);
-          obj1[3] = tmp5(9661).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
+          obj1[3] = isAnimatedBackgroundOption.getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
           const merged2 = Object.assign(obj1);
-          const obj10 = store;
-          const tmp5Result1 = tmp5(9661);
+          const tmp5Result1 = isAnimatedBackgroundOption;
           const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: null };
           obj2[1] = obj;
           dispatcherDefault.dispatch(obj2);
-          const obj14 = dispatcherDefault;
         } else {
           const obj3 = { type: "VOICE_CHANNEL_SHOW_FEEDBACK", analyticsData: null };
           obj3[1] = obj;
           dispatcherDefault.dispatch(obj3);
-          const obj6 = dispatcherDefault;
         }
-        const obj5 = collectGuildAnalyticsMetadata;
       }
     }
   }
-  arg0();
+  fn();
 };

@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountUtils.tsx
 import defaultAreStatesEqual from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import closure_2 from "../../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
+import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
 
 export const useIs2FAEnabled = function useIs2FAEnabled() {
   const items = [closure_3];

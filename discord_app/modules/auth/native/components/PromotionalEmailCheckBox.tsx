@@ -6,20 +6,19 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ View: obj1, Pressable: c3 } = get_ActivityIndicator);
 ({ usePromoEmailConsentStore: c4, setPromoEmailConsentChecked: c5 } = setPromoEmailConsentState);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, checkboxLabel: { flex: 1 } });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/PromotionalEmailCheckBox.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/components/PromotionalEmailCheckBox.tsx");
 
 export default function PromotionalEmailCheckBox(style) {
-  let _require;
   const tmp = callback4();
   const tmp3 = callback((checked) => checked.checked);
-  _require = tmp3;
-  let obj = _useCheckboxA11yNative;
+  const _require = tmp3;
+  let obj = useCheckboxA11yNative;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: tmp3 });
   let tmp9 = null;
   if (tmp2) {

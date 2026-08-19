@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/activityLaunchErrorUtils.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../DeveloperActivityShelfStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import initialize from "../DeveloperActivityShelfStore.tsx";
 import { DevShelfFetchState } from "../DeveloperActivityShelfStore.tsx";
 import { AbortCodes } from "../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _getActivityLaunchErrorInfo() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -13,8 +13,8 @@ function _getActivityLaunchErrorInfo() {
     c5 = 0;
     c6 = 0;
     return (function*(arg0, arg1) {
-      if (closure_6 === 2) {
-        closure_6 = 3;
+      if (constants2 === 2) {
+        constants2 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
@@ -28,13 +28,13 @@ function _getActivityLaunchErrorInfo() {
         }
       } else {
         try {
-          closure_6 = 2;
+          constants2 = 2;
           if (0 === closure_5) {
             if (arg0 === 1) {
-              closure_6 = 3;
+              constants2 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              closure_6 = 3;
+              constants2 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
@@ -49,7 +49,7 @@ function _getActivityLaunchErrorInfo() {
               closure_5 = intl9.string(lib(closure_1_2[3]).t["IOy+I5"]);
               if (lib instanceof callback(closure_1_2[4])) {
                 ApiError = closure_1_7.ClientError;
-                reason = tmp84.reason;
+                reason = lib.reason;
                 const fetchState = closure_1_4.getFetchState();
                 const DeveloperMode = lib(closure_1_2[5]).DeveloperMode;
                 let setting = DeveloperMode.getSetting();
@@ -58,24 +58,24 @@ function _getActivityLaunchErrorInfo() {
                 }
                 if (setting) {
                   closure_5 = 1;
-                  closure_6 = 1;
+                  constants2 = 1;
                   obj1 = { value: null, done: false };
                   obj1[0] = lib(closure_1_2[6]).fetchDeveloperApplications();
                   return obj1;
                 }
-              } else if (tmp84 instanceof callback(closure_1_2[7])) {
-                ApiError = tmp8.CallbackError;
-                reason = tmp84.reason;
+              } else if (lib instanceof callback(closure_1_2[7])) {
+                ApiError = closure_1_7.CallbackError;
+                reason = lib.reason;
                 obj1 = lib(closure_1_2[8]);
-                const result = obj1.interactionCallbackErrorReason(tmp84.reason, tmp85);
+                const result = obj1.interactionCallbackErrorReason(lib.reason, callback);
                 ApiError = result;
                 if (result == null) {
                   ApiError = closure_5;
                 }
                 closure_5 = ApiError;
               } else {
-                ApiError = tmp8.ApiError;
-                ({ status: detailCode, code: reason, code } = tmp84);
+                ApiError = closure_1_7.ApiError;
+                ({ status: detailCode, code: reason, code } = lib);
                 if (constants2.INVALID_ACTIVITY_LAUNCH_NO_ACCESS === code) {
                   const intl6 = lib(closure_1_2[3]).intl;
                   closure_5 = intl6.string(lib(closure_1_2[3]).t.GyzcrS);
@@ -107,14 +107,13 @@ function _getActivityLaunchErrorInfo() {
               obj2[1] = ApiError;
               obj2[2] = detailCode;
               obj2[3] = reason;
-              closure_6 = 3;
-              tmp85 = callback;
+              constants2 = 3;
             }
           } else if (arg0 === 1) {
-            closure_6 = 3;
+            constants2 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            closure_6 = 3;
+            constants2 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
@@ -132,7 +131,7 @@ function _getActivityLaunchErrorInfo() {
             detailCode = lib.detailCode;
           }
         } catch (tmp78) {
-          closure_6 = tmp;
+          constants2 = tmp;
           throw tmp78;
         }
       }
@@ -148,7 +147,7 @@ function _getActivityLaunchErrorInfo() {
   return applyArgumentsResult;
 }
 let obj = { ClientError: 0, [0]: "ClientError", CallbackError: 1, [1]: "CallbackError", ApiError: 2, [2]: "ApiError" };
-let result = require("set").fileFinishedImporting("modules/activities/utils/activityLaunchErrorUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/activities/utils/activityLaunchErrorUtils.tsx");
 
 export const ActivityLaunchFailErrorType = obj;
 export const getActivityLaunchErrorInfo = function getActivityLaunchErrorInfo(c5, applicationId) {

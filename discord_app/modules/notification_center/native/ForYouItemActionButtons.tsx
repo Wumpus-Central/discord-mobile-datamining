@@ -1,16 +1,19 @@
 // discord_app/modules/notification_center/native/ForYouItemActionButtons.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import Button from "../../../design/components/Button/native/Button.native.tsx";
+import NotificationCenterScenes from "../NotificationCenterItemsTypes.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../stores/ChannelStore.tsx";
-import closure_7 from "../../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useCanReplyToMessage } from "../../replies/canReplyToMessage.tsx";
 
-const require = arg1;
+require = fn;
 function focusChatInput(arg0) {
   let tmp;
   if (null != arg0) {
@@ -36,19 +39,19 @@ class IncomingFriendRequestActions {
     tmp2 = pressed;
     tmp3 = closure_2;
     tmp = closure_14();
-    obj = require("module_4115");
-    sharedValue = require("module_0");
+    obj = require("../../reanimated/ReanimatedRexport.tsx");
+    sharedValue = require("../../../index.native.tsx");
     closure_1 = sharedValue;
-    obj2 = require("module_4115");
+    obj2 = require("../../reanimated/ReanimatedRexport.tsx");
     sharedValue1 = require("module_4294967295");
     closure_2 = sharedValue1;
-    obj3 = require("module_4115");
+    obj3 = require("../../reanimated/ReanimatedRexport.tsx");
     sharedValue2 = require("module_4294967295");
     closure_3 = sharedValue2;
-    obj4 = require("module_4115");
+    obj4 = require("../../reanimated/ReanimatedRexport.tsx");
     sharedValue3 = require("module_4294967295");
     closure_4 = sharedValue3;
-    obj5 = require("module_4115");
+    obj5 = require("../../reanimated/ReanimatedRexport.tsx");
     fn = function u() {
       let obj = pressed(sharedValue1[10]);
       let num = 1;
@@ -68,7 +71,7 @@ class IncomingFriendRequestActions {
     fn.__workletHash = 100815030677;
     fn.__initData = closure_17;
     animatedStyle = obj5.useAnimatedStyle(fn);
-    obj7 = require("module_4115");
+    obj7 = require("../../reanimated/ReanimatedRexport.tsx");
     fn2 = function _() {
       let obj = pressed;
       let num = 1;
@@ -82,7 +85,6 @@ class IncomingFriendRequestActions {
       if (!obj.get()) {
         num2 = -diff / 2;
       }
-      obj = { transform: null, opacity: null, pointerEvents: null };
       obj = { scaleX: pressed(sharedValue1[10]).withTiming(num) };
       const items = [obj, ];
       obj1 = { translateX: null };
@@ -108,7 +110,7 @@ class IncomingFriendRequestActions {
     fn2.__workletHash = 12358515723480;
     fn2.__initData = closure_18;
     animatedStyle1 = obj7.useAnimatedStyle(fn2);
-    obj9 = require("module_4115");
+    obj9 = require("../../reanimated/ReanimatedRexport.tsx");
     class E {
       constructor() {
         obj = { transform: null };
@@ -125,13 +127,13 @@ class IncomingFriendRequestActions {
     E.__workletHash = 667441788226;
     E.__initData = closure_19;
     animatedStyle2 = obj9.useAnimatedStyle(E);
-    obj10 = require("module_4115");
+    obj10 = require("../../reanimated/ReanimatedRexport.tsx");
     class I {
       constructor() {
         tmp = pressed;
         tmp2 = closure_2;
-        obj = require("module_4115");
-        obj2 = require("module_4115");
+        obj = require("../../reanimated/ReanimatedRexport.tsx");
+        obj2 = require("../../reanimated/ReanimatedRexport.tsx");
         obj3 = require("CONFIG_NEVER_ANIMATE_TIMING");
         str = "-2deg";
         if (pressed.get()) {
@@ -140,9 +142,9 @@ class IncomingFriendRequestActions {
         obj = { transform: null };
         obj1 = { rotateZ: null };
         obj2 = { duration: 150, easing: null };
-        Easing = require("module_4115").Easing;
-        obj2[1] = Easing.inOut(require("module_4115").Easing.quad);
-        obj1[0] = require("module_450");
+        Easing = require("../../reanimated/ReanimatedRexport.tsx").Easing;
+        obj2[1] = Easing.inOut(require("../../reanimated/ReanimatedRexport.tsx").Easing.quad);
+        obj1[0] = require("../../../../_runtime/00450_showActionSheetWithOptions.js");
         items = [, , ];
         items[0] = obj1;
         obj3 = { translateX: -closure_3.get() / 2 };
@@ -153,12 +155,12 @@ class IncomingFriendRequestActions {
         return obj;
       }
     }
-    obj2 = { withDelay: require("module_4115").withDelay, withRepeat: require("module_4115").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, pressed, Easing: require("module_4115").Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
+    obj2 = { withDelay: require("../../reanimated/ReanimatedRexport.tsx").withDelay, withRepeat: require("../../reanimated/ReanimatedRexport.tsx").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, pressed, Easing: require("../../reanimated/ReanimatedRexport.tsx").Easing, waveWidth: sharedValue2, waveHeight: sharedValue3 };
     I.__closure = obj2;
     I.__workletHash = 498167545082;
     I.__initData = closure_20;
     animatedStyle3 = obj10.useAnimatedStyle(I);
-    obj12 = require("module_4115");
+    obj12 = require("../../reanimated/ReanimatedRexport.tsx");
     fn3 = function p() {
       const value = pressed.get();
       return { pointerEvents: "none" };
@@ -208,7 +210,7 @@ class IncomingFriendRequestActions {
     obj7[2] = items1;
     obj3[1] = tmp13(require("Stack").Stack, obj7);
     items2 = [, ];
-    items2[0] = tmp15(require("module_4115").View, obj3);
+    items2[0] = tmp15(require("../../reanimated/ReanimatedRexport.tsx").View, obj3);
     obj8 = {
       style: animatedStyle1,
       onLayout(nativeEvent) {
@@ -228,8 +230,8 @@ class IncomingFriendRequestActions {
           },
       children: tmp15(require("Text").Text, { maxFontSizeMultiplier: 2, variant: "text-sm/normal", children: "\u{1F44B}" })
     };
-    obj10[3] = tmp15(require("module_4115").View, obj11);
-    obj9[2] = tmp15(require("module_4115").View, obj10);
+    obj10[3] = tmp15(require("../../reanimated/ReanimatedRexport.tsx").View, obj11);
+    obj9[2] = tmp15(require("../../reanimated/ReanimatedRexport.tsx").View, obj10);
     if (compactMode) {
       str = "sm";
     }
@@ -237,7 +239,7 @@ class IncomingFriendRequestActions {
     obj9[3] = str;
     obj9[4] = onWavePress;
     obj8.children = tmp15(require("Button").Button, obj9);
-    items2[1] = tmp15(require("module_4115").View, obj8);
+    items2[1] = tmp15(require("../../reanimated/ReanimatedRexport.tsx").View, obj8);
     obj12[0] = items2;
     return tmp13(tmp14, obj12);
   }
@@ -251,7 +253,7 @@ let closure_18 = { code: "function ForYouItemActionButtonsTsx2(){const{pressed,a
 let closure_19 = { code: "function ForYouItemActionButtonsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}" };
 let closure_20 = { code: "function ForYouItemActionButtonsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}" };
 let closure_21 = { code: "function ForYouItemActionButtonsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}" };
-let result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouItemActionButtons.tsx");
+let result = require("obj132").fileFinishedImporting("modules/notification_center/native/ForYouItemActionButtons.tsx");
 
 export { IncomingFriendRequestActions };
 export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(item, callback, navigation, forceHoistItem, isForceHoisted, onSoftAckItem, arg6, compactMode) {
@@ -271,7 +273,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
   }
   const notification_center_v2 = "notification_center_v2";
   let tmp2 = _require;
-  let obj = _defaultAreStatesEqual;
+  let obj = defaultAreStatesEqual;
   const items = [id];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const message = item.message;
@@ -281,7 +283,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
     }
     return id.getChannel(channel_id);
   });
-  obj1 = _useCanReplyToMessage;
+  obj1 = useCanReplyToMessage;
   let message = item.message;
   const canReplyToMessage = obj1.useCanReplyToMessage(stateFromStores, item.message);
   if (message != null) {
@@ -295,17 +297,17 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
     if (null != dMFromUserId) {
       const _HermesInternal = HermesInternal;
       obj = { payload: null, safe: true, navigationReplace: false };
-      obj[0] = callback(tmp[18])("https://discord.com/channels/@me/" + dMFromUserId).payload;
-      callback(tmp[19])(obj);
-      const tmp5 = callback(tmp[18]);
+      obj[0] = callback(navigation[18])("https://discord.com/channels/@me/" + dMFromUserId).payload;
+      callback(navigation[19])(obj);
+      const tmp5 = callback(navigation[18]);
     }
     onSoftAckItem(item);
   }, items1);
   sharedValue = tmp2(4115).useSharedValue(false);
   const items2 = [forceHoistItem, sharedValue, item, id, arg6];
   const callback1 = React.useCallback(() => {
-    let obj = callback(navigation[20]);
-    obj = { userId: id, applicationId: null, location: null, onConfirm: null };
+    callback(navigation[20]);
+    let obj = { userId: id, applicationId: null, location: null, onConfirm: null };
     let applicationId;
     if (item.type === item(navigation[21]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
       applicationId = item.applicationId;
@@ -313,9 +315,9 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
     obj[1] = applicationId;
     obj[2] = notification_center_v2;
     obj[3] = function onConfirm() {
-      const user = closure_1_7.getUser(closure_6);
+      const user = notification_center_v2.getUser(closure_6);
       if (null != user) {
-        const intl = closure_1_0(closure_1_2[13]).intl;
+        const intl = item(navigation[13]).intl;
         let username = user.globalName;
         if (username == null) {
           username = user.username;
@@ -323,8 +325,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
         const obj = { username: null };
         const _HermesInternal = HermesInternal;
         obj[0] = "**" + username + "**";
-        closure_5(intl.formatToPlainString(closure_1_0(closure_1_2[13]).t["5Uzkdp"], obj));
-        const tmp6 = closure_5;
+        callback(intl.formatToPlainString(item(navigation[13]).t["5Uzkdp"], obj));
       }
       const result = closure_10.set(true);
       closure_0.enableBadge = false;
@@ -336,8 +337,8 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
   ({ applicationId: arr4[0], type: arr4[1] } = item);
   items3[2] = id;
   const callback2 = React.useCallback(() => {
-    let obj = callback(navigation[20]);
-    obj = { userId: id, applicationId: null, location: null };
+    callback(navigation[20]);
+    const obj = { userId: id, applicationId: null, location: null };
     let applicationId;
     if (item.type === item(navigation[21]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
       applicationId = item.applicationId;
@@ -348,20 +349,20 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
   }, items3);
   const items4 = [navigation];
   const callback3 = React.useCallback(() => {
-    if (closure_2 != null) {
-      closure_2.navigate("friends", { screen: "requests" });
+    if (navigation != null) {
+      navigation.navigate("friends", { screen: "requests" });
     }
   }, items4);
   const items5 = [id];
   const callback4 = React.useCallback(() => {
     const dMChannel = callback(navigation[22]).getDMChannel(id);
-    dMChannel.then((arg0) => {
-      callback(4492)({ payload: callback(4355)("https://discord.com/channels/@me/" + arg0).payload, safe: true, navigationReplace: false });
+    dMChannel.then((result) => {
+      callback(4492)({ payload: callback(4355)("https://discord.com/channels/@me/" + result).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
-      if (null != arg0) {
+      if (null != result) {
         obj = { channelId: null };
-        obj[0] = arg0;
+        obj[0] = result;
         tmp3 = obj;
       }
       obj = tmp3;
@@ -374,7 +375,6 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
   const items6 = [id];
   const callback5 = React.useCallback(() => {
     let obj = callback(navigation[23]);
-    obj = { userId: id, context: obj };
     obj = { location: notification_center_v2 };
     obj.addRelationship(obj);
     obj1 = { key: "NOTIF_CENTER_V2_ADD_FRIEND_TOAST", content: null };
@@ -412,15 +412,15 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
             return obj;
           } else {
             const message_channel_id = tmp2;
-            let tmp7 = null != closure_1_0.message_id;
+            let tmp7 = null != item.message_id;
             if (tmp7) {
-              tmp7 = null != closure_1_8;
+              tmp7 = null != stateFromStores;
             }
             if (tmp7) {
-              obj1 = closure_1_0(table[25]);
+              obj1 = item(table[25]);
               obj1 = { messageId: null, channel: null, shouldMention: true, showMentionToggle: true };
-              obj1[0] = closure_1_0.message_id;
-              obj1[1] = closure_1_8;
+              obj1[0] = item.message_id;
+              obj1[1] = stateFromStores;
               v0 = 1;
               table = 1;
               const obj2 = { value: null, done: false };
@@ -688,9 +688,9 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
       const actionName = nativeEvent.nativeEvent.actionName;
       if (closure_1_15.WAVE === actionName) {
         callback();
-      } else if (tmp.ACCEPT === actionName) {
+      } else if (closure_1_15.ACCEPT === actionName) {
         callback1();
-      } else if (tmp.IGNORE === actionName) {
+      } else if (closure_1_15.IGNORE === actionName) {
         callback2();
       }
     };
@@ -710,9 +710,9 @@ export const ForYouItemActionButtons = function ForYouItemActionButtons(arg0) {
     obj[0] = tmp2.buttonsContainer;
     let merged1 = Object.assign(merged);
     if (mapped) {
-      mapped = actionButtons.map((id) => {
-        id = id.id;
-        const merged = Object.assign(id, Object.create(null));
+      mapped = actionButtons.map((item, index) => {
+        let id = item.id;
+        const merged = Object.assign(item, Object.create(null));
         let obj = {};
         const merged1 = Object.assign(merged);
         obj.onPress = function onPress(arg0) {
@@ -721,14 +721,13 @@ export const ForYouItemActionButtons = function ForYouItemActionButtons(arg0) {
             onPress(arg0);
           }
           closure_1_2(id);
-          let obj = closure_2_1(closure_2_2[26]);
-          obj = { action_type: closure_2_0(closure_2_2[21]).NotificationCenterActionTypes.ACTION_BUTTON, notification_center_id: id.id, item_type: id.type, acked: false, item_index: merged, deeplink: id.deeplink, action_button_id: id };
+          const obj = { action_type: NotificationCenterScenes.NotificationCenterActionTypes.ACTION_BUTTON, notification_center_id: id.id, item_type: id.type, acked: false, item_index: merged, deeplink: id.deeplink, action_button_id: id };
           obj.track(closure_2_8.NOTIFICATION_CENTER_ACTION, obj);
         };
         if (id == null) {
-          id = arg1;
+          id = index;
         }
-        return closure_1_12(closure_1_0(closure_1_2[12]).Button, obj, id);
+        return closure_1_12(Button.Button, obj, id);
       });
     }
     const items = [mapped, ];
@@ -738,9 +737,7 @@ export const ForYouItemActionButtons = function ForYouItemActionButtons(arg0) {
     }
     items[1] = tmp11;
     obj.children = items;
-    let tmp6Result = closure_13(View, obj);
-    const tmp6 = closure_13;
-    const tmp7 = View;
+    let tmp6Result = callback2(View, obj);
   } else {
     tmp6Result = null;
   }

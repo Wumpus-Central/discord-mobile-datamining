@@ -1,12 +1,12 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx
 import experiment from "../../../game_server/GameServerExperiment.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../game_server/GameServerStore.tsx";
-import closure_4 from "../../../../stores/GuildStore.tsx";
-import closure_5 from "../GuildPowerupsStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import handleGameServerInstanceCreated from "../../../game_server/GameServerStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import calculateAppliedBoosts from "../GuildPowerupsStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");
 
 export default function useGuildAppliedBoostCount(guildId) {
   const _require = guildId;

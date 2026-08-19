@@ -2,16 +2,16 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import context from "../ICYMIContext.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ACTION_SHEET_MAX_WIDTH } from "../../../action_sheet/native/ActionSheetConstants.tsx";
 import { EmojiIntention } from "../../../emojis/EmojiConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function AddEmojiButton(channel) {
   channel = channel.channel;
   const onOpenPicker = channel.onOpenPicker;
@@ -19,8 +19,8 @@ function AddEmojiButton(channel) {
   const items = [channel, onPressEmoji, onOpenPicker];
   const callback = React.useCallback(() => {
     onOpenPicker();
-    let obj = channel(onPressEmoji[10]);
-    obj = { pickerIntention: closure_1_8.REACTION, autoFocus: false, startExpanded: false, onPressEmoji, channel, reactionType: channel(onPressEmoji[11]).ReactionTypes.NORMAL };
+    channel(onPressEmoji[10]);
+    const obj = { pickerIntention: EmojiIntention.REACTION, autoFocus: false, startExpanded: false, onPressEmoji, channel, reactionType: channel(onPressEmoji[11]).ReactionTypes.NORMAL };
     const result = obj.openEmojiPickerActionSheet(obj);
   }, items);
   let obj = { onPress: callback, style: items1, accessible: true, accessibilityLabel: null, disabled: null, children: null };
@@ -36,10 +36,8 @@ function ReactActionSheetBase(content) {
   let _require = content;
   const onPressEmoji = content.onPressEmoji;
   const sendMessage = content.sendMessage;
-  let callback;
   let first;
   let React;
-  let hotwheels_gaming_activity;
   let first1;
   closure_8 = undefined;
   let ref;
@@ -48,13 +46,13 @@ function ReactActionSheetBase(content) {
   let width;
   ({ author, channel } = content);
   const tmp = width();
-  callback = tmp;
+  let callback = tmp;
   let obj = React;
   const tmp3 = first(React.useState(false), 2);
   first = tmp3[0];
   React = tmp3[1];
   let str = "unknown";
-  hotwheels_gaming_activity = "unknown";
+  let hotwheels_gaming_activity = "unknown";
   const intl = _require(sendMessage[7]).intl;
   const content_type = content.content_type;
   if (_require(sendMessage[14]).ContentInventoryEntryType.TOP_GAME !== content_type) {
@@ -80,7 +78,7 @@ function ReactActionSheetBase(content) {
         if (current != null) {
           const capture = current.capture;
           if (capture != null) {
-            nextPromise = capture().then((arg0) => callback(arg0));
+            nextPromise = capture().then((result) => callback(result));
             const captureResult = capture();
           }
         }
@@ -88,7 +86,6 @@ function ReactActionSheetBase(content) {
       }, 500);
     }, []);
     let items = [content.id, str, first1, sendMessage];
-    _require = undefined;
     callback = obj.useCallback(callback(function*() {
       if (dependencyMap === 2) {
         dependencyMap = 3;
@@ -118,17 +115,17 @@ function ReactActionSheetBase(content) {
             } else {
               closure_0 = tmp4;
               closure_1_5(true);
-              v0(9057).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
+              v0(9057).itemInteracted(closure_1_0.id, hotwheels_gaming_activity, "press_reply_send");
               const obj5 = v0(9057);
               obj1 = { itemId: null, itemType: null, actionParameters: null };
               obj1[0] = closure_1_0.id;
-              obj1[1] = closure_1_6;
+              obj1[1] = hotwheels_gaming_activity;
               obj1[2] = { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null };
               v0(9057).feedItemActioned(obj1);
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = dependencyMap(closure_1_7);
+              obj2[0] = dependencyMap(first1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -184,11 +181,11 @@ function ReactActionSheetBase(content) {
               } else {
                 closure_1 = tmp2;
                 closure_1_5(true);
-                onPressEmoji(sendMessage[15]).itemInteracted(user.id, closure_1_6, "press_emoji_send");
+                onPressEmoji(sendMessage[15]).itemInteracted(user.id, hotwheels_gaming_activity, "press_emoji_send");
                 const obj5 = onPressEmoji(sendMessage[15]);
                 obj1 = { itemId: null, itemType: null, actionParameters: null };
                 obj1[0] = user.id;
-                obj1[1] = closure_1_6;
+                obj1[1] = hotwheels_gaming_activity;
                 obj1[2] = { actionGestureType: "press", actionTargetElement: "reaction_picker_button", actionIntentType: "open", actionDestinationType: null };
                 onPressEmoji(sendMessage[15]).feedItemActioned(obj1);
                 c2 = 1;
@@ -235,7 +232,6 @@ function ReactActionSheetBase(content) {
     width = onPressEmoji(tmp6[19])().width;
     const items2 = [width];
     const memo = obj.useMemo(() => Math.floor(Math.min(width, first1) / 52), items2);
-    obj = { header: null, children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.header;
     obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
@@ -257,10 +253,10 @@ function ReactActionSheetBase(content) {
     obj4[1] = { fileName: "icymi_content", format: "png", quality: 1 };
     let obj5 = { style: null, children: null };
     obj5[0] = tmp.base;
-    let tmp19Result = tmp19(tmp6[22]);
+    tmp19(tmp6[22]);
     const obj6 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
     const obj7 = { dark: null, light: null };
-    tmp19Result = tmp19(tmp6[23]);
+    const tmp19Result = tmp19(tmp6[23]);
     obj7[0] = tmp5(tmp6[24]).OverlayOpacity.LEVEL_7;
     obj7[1] = tmp5(tmp6[24]).OverlayOpacity.LEVEL_8;
     obj6[4] = obj7;
@@ -291,12 +287,12 @@ function ReactActionSheetBase(content) {
       obj12[0] = items7;
       const substr = frequentlyUsedReactionEmojis.slice(0, memo - 1);
       const items8 = [
-        substr.map((id) => {
-              const lib = id;
-              if (null != id.id) {
+        substr.map((item, index) => {
+              const lib = item;
+              if (null != item.id) {
                 let obj = { onPress: null, style: null, disabled: null, children: null };
                 obj[0] = function onPress() {
-                  return closure_1_11(closure_0);
+                  return callback1(closure_0);
                 };
                 obj[1] = closure_3.emoji;
                 obj[2] = first;
@@ -306,17 +302,16 @@ function ReactActionSheetBase(content) {
                 obj[0] = items;
                 obj = { uri: null };
                 let obj3 = onPressEmoji(sendMessage[28]);
-                ({ id: obj5[0], animated: obj5[1] } = id);
+                ({ id: obj5[0], animated: obj5[1] } = item);
                 obj[0] = obj3.getEmojiURL({ id: null, animated: null, size: 48 });
                 obj[1] = obj;
-                obj[3] = ref(onPressEmoji(sendMessage[27]), obj, id.id);
+                obj[3] = ref(onPressEmoji(sendMessage[27]), obj, item.id);
                 let tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj);
-                obj1 = { id: null, animated: null, size: 48 };
                 const tmp9 = onPressEmoji(sendMessage[27]);
               } else {
                 const obj2 = { onPress: null, style: null, disabled: null, children: null };
                 obj2[0] = function onPress() {
-                  return closure_1_11(closure_0);
+                  return callback1(closure_0);
                 };
                 obj2[1] = closure_3.emoji;
                 obj2[2] = first;
@@ -324,7 +319,7 @@ function ReactActionSheetBase(content) {
                 const items1 = [, ];
                 ({ defaultEmoji: arr2[0], emojiText: arr2[1] } = closure_3);
                 obj3[2] = items1;
-                obj3[4] = id.surrogates;
+                obj3[4] = item.surrogates;
                 obj2[3] = ref(lib(sendMessage[21]).Text, obj3);
                 tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj2);
               }
@@ -371,7 +366,6 @@ function ReactActionSheetBase(content) {
       items9[1] = tmp25(tmp24, obj14);
       obj11[0] = items9;
       let tmp23Result = tmp25(callback1, obj11);
-      const tmp30 = callback1;
       const tmp5Result1 = tmp5(tmp6[30]);
     } else {
       tmp23Result = tmp23(tmp19(tmp6[33]), {});
@@ -385,35 +379,31 @@ function ReactActionSheetBase(content) {
   const intl3 = tmp5(tmp6[7]).intl;
   stringResult1 = intl3.string(tmp5(tmp6[7]).t.XC5YE5);
   str = "hotwheels_gaming_activity";
+  stringResult = intl.string(_require(sendMessage[7]).t["5IEsGx"]);
 }
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: null, loading: null, base: null, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
+const createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { opacity: 0.5 };
 createCacheKey[4] = { position: "relative" };
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: 8 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[7] = { flex: 1, borderRadius: ThemesDefault.radii.round };
 createCacheKey[8] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[9] = { opacity: 0.6 };
-let obj2 = { flex: 1, borderRadius: ThemesDefault.radii.round };
 createCacheKey[10] = { padding: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 createCacheKey[11] = { width: 24, height: 24 };
 createCacheKey[12] = { resizeMode: "contain", width: 24, height: 24 };
 createCacheKey[13] = { lineHeight: 24, fontSize: 20, textAlign: "center", paddingTop: 2 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { padding: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
-let result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/ReactActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/icymi/native/content_inventory/ReactActionSheet.tsx");
 
 export default function ReactActionSheet(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
     const merged = Object.assign(arg0, undefined);
-    let obj = { children: null };
-    obj = {};
+    const obj = {};
     const merged1 = Object.assign(merged);
     obj[0] = callback2(ReactActionSheetBase, obj);
     return callback2(context.ICYMIContextProvider, obj);
@@ -431,12 +421,12 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
     let obj = { username: null };
     obj[0] = username;
     let formatToPlainStringResult = formatToPlainString(t.S5JNyW, obj);
-    let tmp5 = tmp;
+    let tmp5 = require;
   } else {
     obj = { username: null };
     obj[0] = username;
     formatToPlainStringResult = formatToPlainString(t.XPQgL2, obj);
-    tmp5 = tmp;
+    tmp5 = require;
   }
   const items = [];
   items.push("> -# *" + formatToPlainStringResult + "*");

@@ -1,12 +1,12 @@
 // discord_app/modules/messages/isMessagePinnable.tsx
 import isSystemMessageDefault from "isSystemMessage.tsx";
 import useCanUnarchiveThread from "../threads/ThreadHooks.tsx";
-import closure_3 from "../../stores/PermissionStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ ChannelTypes: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
 
 export default function isMessagePinnable(arg0, isSystemDM) {
   const isSystemDMResult = isSystemDM.isSystemDM();
@@ -23,7 +23,6 @@ export default function isMessagePinnable(arg0, isSystemDM) {
   }
   if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(isSystemDM);
-    const obj2 = useCanUnarchiveThread;
   }
   if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = isSystemDM.type !== constants.GUILD_VOICE;

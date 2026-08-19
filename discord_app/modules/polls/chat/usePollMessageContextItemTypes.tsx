@@ -1,11 +1,11 @@
 // discord_app/modules/polls/chat/usePollMessageContextItemTypes.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../../stores/AuthenticationStore.tsx";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
 
-require = arg1;
+require = fn;
 let obj = { END_EARLY: 0, [0]: "END_EARLY" };
 let closure_4 = [];
-const result = require("set").fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
+const result = require("obj132").fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
 
 export default function usePollMessageContextItemTypes(poll) {
   obj = initialize;

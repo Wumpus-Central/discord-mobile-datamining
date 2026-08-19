@@ -1,13 +1,15 @@
 // discord_app/modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx
+import getSystemLocale from "../../../../../intl/index.native.tsx";
+import computeChannelName from "../../../../channel/useChannelName.tsx";
 import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import closure_3 from "../../../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../../../stores/RelationshipStore.tsx";
-import closure_5 from "../../../../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/NewThreadSystemMessage.tsx");
 
 export const createNewThreadSystemMessage = function createNewThreadSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -19,11 +21,11 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
     channel_id = messageReference.channel_id;
   }
   channel = channel.getChannel(channel_id);
-  const intl = tmp(1236).intl;
+  const intl = getSystemLocale.intl;
   obj = { actorName: messageAuthorWithProcessedColor.nick, actorHook: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), threadName: null, threadOnClick: null };
   if (null != channel) {
-    let content = tmp(4984).computeChannelName(channel, closure_5, closure_4);
-    const tmpResult = tmp(4984);
+    let content = computeChannelName.computeChannelName(channel, closure_5, closure_4);
+    const tmpResult = computeChannelName;
   } else {
     content = message.content;
   }
@@ -33,7 +35,7 @@ export const createNewThreadSystemMessage = function createNewThreadSystemMessag
   if (messageReference2 != null) {
     channel_id1 = messageReference2.channel_id;
   }
-  obj = { content: intl.formatToParts(tmp(1236).t.veX9jq, obj) };
+  obj = { content: intl.formatToParts(getSystemLocale.t.veX9jq, obj) };
   obj[3] = { action: "bindOpenThreadChannel", threadId: channel_id1, medium: true };
   const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj;

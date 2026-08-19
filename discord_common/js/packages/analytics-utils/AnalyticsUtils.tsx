@@ -1,17 +1,17 @@
 // discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import logger from "AnalyticsTrackingStore.tsx";
 import ImpressionGroups from "StandardAnalyticsConstants.tsx";
 import queueTrackingEventMaker from "AnalyticsTrackingActionCreators.tsx";
-import encodeProperties from "encodeProperties.tsx";
+import encodeProperties2 from "encodeProperties.tsx";
 import ImpressionNames from "AnalyticsSchema.tsx";
 import getOS from "getSuperProperties.tsx";
 
 let closure_4 = {};
 let closure_5 = {};
-const result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx");
 
-export const encodeProperties = encodeProperties.encodeProperties;
+export const encodeProperties = encodeProperties2.encodeProperties;
 export const analyticsTrackingStoreMaker = logger.analyticsTrackingStoreMaker;
 export const AnalyticsActionHandlers = logger.AnalyticsActionHandlers;
 export const ImpressionTypes = ImpressionGroups.ImpressionTypes;
@@ -32,18 +32,17 @@ export const isThrottled = function isThrottled(CHANNEL_OPENED) {
   }
   return tmp;
 };
-export const trackMaker = (arg0) => {
-  ({ addBreadcrumb: global, analyticEventConfigs: require } = arg0);
-  closure_2 = undefined;
-  ({ dispatcher, TRACK_ACTION_NAME } = arg0);
+export const trackMaker = (encodeProperties) => {
+  ({ addBreadcrumb: global, analyticEventConfigs: require } = encodeProperties);
+  ({ dispatcher, TRACK_ACTION_NAME } = encodeProperties);
   closure_2 = queueTrackingEventMaker.queueTrackingEventMaker(dispatcher, TRACK_ACTION_NAME);
   return function track(arg0, arg1) {
     let obj = arg2;
     if (arg2 === undefined) {
       obj = {};
     }
-    if (null != closure_1_0.isServerRendering) {
-      if (true === closure_1_0.isServerRendering) {
+    if (null != global.isServerRendering) {
+      if (true === global.isServerRendering) {
         return Promise.resolve();
       }
     }
@@ -67,7 +66,7 @@ export const trackMaker = (arg0) => {
         let tmp13 = null != closure_1_4[joined];
         if (tmp13) {
           const _Date = Date;
-          tmp13 = tmp12[joined] > Date.now();
+          tmp13 = closure_1_4[joined] > Date.now();
         }
         if (tmp13) {
           return Promise.resolve();
@@ -79,15 +78,14 @@ export const trackMaker = (arg0) => {
             }
           }
           if (obj3.deduplicate) {
-            if (callback2(closure_1_3[3])(closure_1_5[joined], obj)) {
+            if (callback2(dependencyMap[3])(closure_1_5[joined], obj)) {
               return Promise.resolve();
             } else {
-              tmp15[joined] = obj;
+              closure_1_5[joined] = obj;
             }
-            tmp15 = closure_1_5;
           }
           const _Date2 = Date;
-          tmp12[joined] = Date.now() + obj3.throttlePeriod;
+          closure_1_4[joined] = Date.now() + obj3.throttlePeriod;
         }
       } else if ("throttlePercent" in obj3) {
         const _Math = Math;
@@ -96,8 +94,8 @@ export const trackMaker = (arg0) => {
         }
       } else {
         const _HermesInternal = HermesInternal;
-        callback2(closure_1_3[4])(false, "Unsupported analytics event config: " + obj3);
-        const tmp5 = callback2(closure_1_3[4]);
+        callback2(dependencyMap[4])(false, "Unsupported analytics event config: " + obj3);
+        const tmp5 = callback2(dependencyMap[4]);
       }
     }
     if (callback != null) {

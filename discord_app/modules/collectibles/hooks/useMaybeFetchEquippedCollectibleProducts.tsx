@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/UserStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 
-const require = arg1;
+const require = fn;
 function useEquippedCollectibleSkuIds(id, guildId) {
   const _require = id;
   let obj = _require(skuId1[2]);
@@ -39,10 +39,10 @@ function useEquippedCollectibleSkuIds(id, guildId) {
   const items2 = [skuId, skuId1, skuId2, skuId3];
   return skuId2.useMemo(() => {
     const items = [skuId, skuId1, skuId2, skuId3];
-    return items.filter((arg0) => null != arg0);
+    return items.filter((item, index) => null != item);
   }, items2);
 }
-let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx");
 
 export default function useMaybeFetchEquippedCollectibleProducts(id, guildId) {
   closure_0 = arg2;
@@ -55,8 +55,8 @@ export default function useMaybeFetchEquippedCollectibleProducts(id, guildId) {
       tmp = 0 !== length.length;
     }
     if (tmp) {
-      let obj = callback(closure_1_2[6]);
-      obj = { skuIds: null };
+      callback(dependencyMap[6]);
+      const obj = { skuIds: null };
       obj[0] = length;
       const result = obj.maybeFetchProductsBySkuIds(obj);
     }

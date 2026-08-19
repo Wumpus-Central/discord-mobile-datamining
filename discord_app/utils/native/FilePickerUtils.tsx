@@ -1,8 +1,8 @@
 // discord_app/utils/native/FilePickerUtils.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _handleDocumentSelection() {
   const self = this;
   const tmp = callback(() => {
@@ -75,25 +75,19 @@ function _handleDocumentSelection() {
                     const nextResult = iter.next();
                     while (iter !== undefined) {
                       if ("jfif" !== nextResult) {
-                        let tmp10 = flag;
-                        let tmp11 = _undefined;
                         let obj2 = flag(_undefined[2]);
                         let obj = { kind: "extension", value: null };
-                        let tmp12 = nextResult;
                         obj[1] = tmp2;
                         let isKnownTypeResult = obj2.isKnownType(obj);
                         if (isKnownTypeResult.isKnown) {
-                          let tmp10Result = tmp10(tmp11[3]);
+                          let tmp10Result = flag(_undefined[3]);
                           let tmp4 = tmp10Result.isIOS() ? tmp15 : tmp14;
                           if (null == tmp4) {
-                            let tmp8 = iter;
                             iter.return();
                           } else {
-                            let tmp6 = tmp4;
                             let arr = items.push(tmp5);
                           }
                         } else {
-                          let tmp3 = iter;
                           iter.return();
                         }
                       }
@@ -160,7 +154,7 @@ function _handleDocumentSelection() {
             return obj7;
           } else {
             closure_3 = arg1;
-            if (closure_3.some((size) => 0 === size.size)) {
+            if (closure_3.some((item, index) => 0 === item.size)) {
               obj = extensions(4656);
               obj8 = { title: null, body: null };
               const intl = flag(1236).intl;
@@ -195,7 +189,7 @@ function _handleDocumentSelection() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("utils/native/FilePickerUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/native/FilePickerUtils.tsx");
 
 export const handleDocumentSelection = function handleDocumentSelection(arg0) {
   const self = this;

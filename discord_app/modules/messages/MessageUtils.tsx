@@ -1,10 +1,10 @@
 // discord_app/modules/messages/MessageUtils.tsx
 import shouldShowAgeGateForVoiceChannel from "../age_gate/AgeGateUtils.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/MessageUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/messages/MessageUtils.tsx");
 
 export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChannel(channel_id) {
   currentUser = currentUser.getCurrentUser();
@@ -12,7 +12,6 @@ export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChan
   let tmp3 = null != currentUser && null != channel;
   if (tmp3) {
     tmp3 = !shouldShowAgeGateForVoiceChannel.isChannelContentGated(channel);
-    const obj = shouldShowAgeGateForVoiceChannel;
   }
   return tmp3;
 };

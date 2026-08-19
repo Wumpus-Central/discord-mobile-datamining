@@ -3,18 +3,17 @@ import noopAll from "../../../_runtime/00019_noop.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import Text from "../../design/components/Text/native/Text.tsx";
 import Button from "../../design/components/Button/native/Button.native.tsx";
-import setDefault from "../../actions/AlertActionCreators.tsx";
+import obj132Default from "../../actions/AlertActionCreators.tsx";
 import registerAssetDefault from "../../../_runtime/08743_registerAsset.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { PRIVATE_APPS_HELP_ARTICLE } from "Constants.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = callback3();
-  let obj = { style: tmp.alertContainer, children: null };
-  obj = { source: registerAssetDefault, style: tmp.announcementBirb };
+  let obj = { source: registerAssetDefault, style: tmp.announcementBirb };
   const items = [callback(closure_3, obj), , , ];
   obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = getSystemLocale.intl;
@@ -32,8 +31,8 @@ function ConfirmActivityGateContent(activityName) {
   return callback2(closure_4, obj);
 }
 function LinkButton() {
-  let obj = { style: callback3().linkWrapper, children: null };
-  obj = {
+  { style: callback3().linkWrapper, children: null };
+  const obj = {
     variant: "secondary",
     size: "sm",
     onPress() {
@@ -50,12 +49,11 @@ noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
-const result = require("set").fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
 
 export const confirmExternalAppLaunchAlert = function confirmExternalAppLaunchAlert(arg0) {
   ({ application, onConfirm, onCancel } = arg0);
-  let obj = setDefault;
-  obj = { title: "", children: callback(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
+  const obj = { title: "", children: callback(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["3PatSz"]);
   obj[4] = onCancel;

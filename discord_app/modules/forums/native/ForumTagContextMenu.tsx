@@ -1,9 +1,9 @@
 // discord_app/modules/forums/native/ForumTagContextMenu.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/forums/native/ForumTagContextMenu.tsx");
+const result = obj132.fileFinishedImporting("modules/forums/native/ForumTagContextMenu.tsx");
 
 export default function ForumTagContextMenu(children) {
   const tagId = children.tagId;
@@ -14,9 +14,9 @@ export default function ForumTagContextMenu(children) {
   obj[0] = intl.string(tagId(1236).t["8VG6IY"]);
   obj[1] = tagId(9563).IdIcon;
   obj[2] = function action() {
-    tagId(closure_1_1[4]).copy(tagId);
-    const obj = tagId(closure_1_1[4]);
-    tagId(closure_1_1[5]).presentIdCopied();
+    tagId(dependencyMap[4]).copy(tagId);
+    const obj = tagId(dependencyMap[4]);
+    tagId(dependencyMap[5]).presentIdCopied();
   };
   const items = [obj];
   return jsx(tagId(9958).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });

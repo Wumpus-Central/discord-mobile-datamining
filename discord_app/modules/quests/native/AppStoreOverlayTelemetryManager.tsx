@@ -1,7 +1,8 @@
 // discord_app/modules/quests/native/AppStoreOverlayTelemetryManager.tsx
-import set from "../../../../_runtime/00002_set.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../_runtime/00002_obj132.js";
+import obj1322 from "../../../utils/PlatformUtils.tsx";
 import ME from "../../../Constants.tsx";
+import keys from "../../../ConstantsIOS.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
@@ -22,15 +23,15 @@ class AppStoreOverlayTelemetryManager extends tmp2 {
 }
 AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
   state = state.state;
-  const isAndroidResult = set2.isAndroid();
+  const isAndroidResult = obj1322.isAndroid();
   if (isAndroidResult) {
     return !isAndroidResult;
   } else {
     let flag = null != _null;
     if (flag) {
-      if (state !== tmp(691).AppStates.ACTIVE) {
+      if (state !== keys.AppStates.ACTIVE) {
         flag = false;
-        if (state === tmp(691).AppStates.BACKGROUND) {
+        if (state === keys.AppStates.BACKGROUND) {
           _null.trackOverlayEvent(AnalyticEvents.QUEST_APP_STORE_OVERLAY_BACKGROUNDED);
           const _Date = Date;
           c4 = Date.now();
@@ -45,7 +46,7 @@ AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function han
   }
 };
 const appStoreOverlayTelemetryManager = new AppStoreOverlayTelemetryManager();
-const result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlayTelemetryManager.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/native/AppStoreOverlayTelemetryManager.tsx");
 
 export default appStoreOverlayTelemetryManager;
 export function setAppStoreOverlayOpen(arg0) {

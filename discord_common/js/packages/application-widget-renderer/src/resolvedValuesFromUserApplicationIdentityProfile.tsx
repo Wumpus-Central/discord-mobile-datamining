@@ -1,9 +1,9 @@
 // discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx
 import resolveFieldValue from "resolvedValues.tsx";
 import ProfileDataDynamicType from "../../../shared/shared-constants/ProfileDataDynamicType.tsx";
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 
-require = arg1;
+require = fn;
 function isVisualUnfurledMedia(value) {
   let tmp = null != value.width;
   if (tmp) {
@@ -31,56 +31,31 @@ function resolvedValuesFromPrimary(data) {
     const entries = Object.entries(primary);
     const tmp29 = entries[Symbol.iterator]();
     while (tmp29 !== undefined) {
-      let tmp5 = callback;
       let tmp6 = callback(tmp3, 2);
       [tmp7, tmp8] = tmp6;
-      let tmp9 = tmp8;
       if (typeof tmp8 === "string") {
-        let tmp22 = tmp7;
         obj = { type: null, value: null };
-        let tmp23 = require;
-        let tmp24 = dependencyMap;
         obj[0] = resolveFieldValue.ResolvedValueType.STRING;
-        let tmp25 = tmp8;
-        obj[1] = tmp9;
+        obj[1] = tmp8;
         obj[tmp7] = obj;
-      } else {
-        let tmp30 = tmp8;
-        if (typeof tmp9 === "number") {
-          let tmp18 = tmp7;
-          obj = { type: null, value: null };
-          let tmp19 = require;
-          let tmp20 = dependencyMap;
-          obj[0] = resolveFieldValue.ResolvedValueType.NUMBER;
-          let tmp21 = tmp8;
-          obj[1] = tmp9;
-          obj[tmp7] = obj;
-        } else {
-          let tmp31 = tmp8;
-          if (typeof tmp9 === "object") {
-            let tmp32 = tmp8;
-            if ("url" in tmp9) {
-              let tmp10 = tmp8;
-              if ("proxy_url" in tmp9) {
-                let tmp11 = tmp8;
-                if ("loading_state" in tmp9) {
-                  let tmp12 = isVisualUnfurledMedia;
-                  let tmp13 = tmp8;
-                  if (isVisualUnfurledMedia(tmp9)) {
-                    let tmp14 = tmp7;
-                    obj1 = { type: null, media: null };
-                    let tmp15 = require;
-                    let tmp16 = dependencyMap;
-                    obj1[0] = resolveFieldValue.ResolvedValueType.MEDIA;
-                    let obj2 = { url: null, width: null, height: null };
-                    let tmp17 = tmp8;
-                    ({ proxy_url: obj3[0], width: obj3[1], height: obj3[2] } = tmp9);
-                    obj1[1] = obj2;
-                    obj[tmp7] = obj1;
-                  }
-                  continue;
-                }
+      } else if (typeof tmp8 === "number") {
+        obj = { type: null, value: null };
+        obj[0] = resolveFieldValue.ResolvedValueType.NUMBER;
+        obj[1] = tmp8;
+        obj[tmp7] = obj;
+      } else if (typeof tmp8 === "object") {
+        if ("url" in tmp8) {
+          if ("proxy_url" in tmp8) {
+            if ("loading_state" in tmp8) {
+              if (isVisualUnfurledMedia(tmp8)) {
+                obj1 = { type: null, media: null };
+                obj1[0] = resolveFieldValue.ResolvedValueType.MEDIA;
+                let obj2 = { url: null, width: null, height: null };
+                ({ proxy_url: obj3[0], width: obj3[1], height: obj3[2] } = tmp8);
+                obj1[1] = obj2;
+                obj[tmp7] = obj1;
               }
+              continue;
             }
           }
         }
@@ -104,48 +79,35 @@ function resolvedValuesFromDynamic(data) {
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
       let iter = nextResult;
-      let tmp5 = require;
-      let tmp6 = dependencyMap;
       if (nextResult.type === ProfileDataDynamicType.ProfileDataDynamicType.STRING) {
-        let tmp9 = nextResult;
         obj = { type: null, value: null };
-        obj[0] = tmp5(12193).ResolvedValueType.STRING;
+        obj[0] = resolveFieldValue.ResolvedValueType.STRING;
         obj[1] = iter.value;
         obj[iter.name] = obj;
-      } else {
-        let tmp11 = nextResult;
-        if (iter.type === tmp5(12276).ProfileDataDynamicType.NUMBER) {
-          let tmp8 = nextResult;
-          obj = { type: null, value: null };
-          obj[0] = tmp5(12193).ResolvedValueType.NUMBER;
-          obj[1] = iter.value;
-          obj[iter.name] = obj;
-        } else {
-          let tmp12 = nextResult;
-          if (iter.type === tmp5(12276).ProfileDataDynamicType.MEDIA) {
-            let tmp13 = isVisualUnfurledMedia;
-            let tmp14 = nextResult;
-            if (isVisualUnfurledMedia(iter.value)) {
-              let tmp7 = nextResult;
-              obj1 = { type: null, media: null };
-              obj1[0] = tmp5(12193).ResolvedValueType.MEDIA;
-              let obj2 = { url: null, width: null, height: null };
-              obj2[0] = iter.value.proxy_url;
-              obj2[1] = iter.value.width;
-              obj2[2] = iter.value.height;
-              obj1[1] = obj2;
-              obj[iter.name] = obj1;
-            }
-            continue;
-          }
+      } else if (iter.type === ProfileDataDynamicType.ProfileDataDynamicType.NUMBER) {
+        obj = { type: null, value: null };
+        obj[0] = resolveFieldValue.ResolvedValueType.NUMBER;
+        obj[1] = iter.value;
+        obj[iter.name] = obj;
+      } else if (iter.type === ProfileDataDynamicType.ProfileDataDynamicType.MEDIA) {
+        if (isVisualUnfurledMedia(iter.value)) {
+          obj1 = { type: null, media: null };
+          obj1[0] = resolveFieldValue.ResolvedValueType.MEDIA;
+          let obj2 = { url: null, width: null, height: null };
+          obj2[0] = iter.value.proxy_url;
+          obj2[1] = iter.value.width;
+          obj2[2] = iter.value.height;
+          obj1[1] = obj2;
+          obj[iter.name] = obj1;
         }
+        continue;
       }
       continue;
     }
     return obj;
   }
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx");
 
 export default function resolvedValuesFromUserApplicationIdentityProfile(profile) {
   if (null == profile) {

@@ -8,15 +8,15 @@ import SegmentedControl from "../../../../design/components/SegmentedControl/nat
 import registerAssetDefault from "../../../../../_runtime/15716_registerAsset.js";
 import registerAssetDefault2 from "../../../../../_runtime/15717_registerAsset.js";
 import registerAssetDefault3 from "../../../../../_runtime/15718_registerAsset.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/UserGuildSettingsStore.tsx";
-import closure_7 from "../../ICYMIStore.tsx";
+import updateUserGuildSettingsInternal from "../../../../stores/UserGuildSettingsStore.tsx";
+import filterStaffGuild from "../../ICYMIStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function ContentSettingsControl(initialValue) {
   ({ onValueUpdated: require, disabled } = initialValue);
   importDefault = undefined;
@@ -33,10 +33,10 @@ function ContentSettingsControl(initialValue) {
   }
   items[1] = iconSelected;
   obj[1] = items;
-  obj[2] = closure_8(Button.Icon, obj);
+  obj[2] = callback(Button.Icon, obj);
   const items1 = [obj, , ];
   obj = { label: null, id: "0", icon: null, page: null };
-  const intl2 = tmp4(1236).intl;
+  const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t.SnrG00);
   obj1 = { source: registerAssetDefault2, style: null };
   const items2 = [tmp.icon, ];
@@ -46,10 +46,10 @@ function ContentSettingsControl(initialValue) {
   }
   items2[1] = iconSelected1;
   obj1[1] = items2;
-  obj[2] = closure_8(Button.Icon, obj1);
+  obj[2] = callback(Button.Icon, obj1);
   items1[1] = obj;
   const obj2 = { label: null, id: "1", icon: null, page: null };
-  const intl3 = tmp4(1236).intl;
+  const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.Rxe3jF);
   const obj3 = { source: registerAssetDefault3, style: null };
   const items3 = [tmp.icon, ];
@@ -59,17 +59,17 @@ function ContentSettingsControl(initialValue) {
   }
   items3[1] = iconSelected2;
   obj3[1] = items3;
-  obj2[2] = closure_8(Button.Icon, obj3);
+  obj2[2] = callback(Button.Icon, obj3);
   items1[2] = obj2;
   const tmp2 = callback(React.useState(initialValue.initialValue), 2);
   const obj4 = {
     pageWidth: 0,
     onSetActiveIndex(arg0) {
-      let MORE = closure_1_0(closure_1_2[8]).ICYMICustomScore.DEFAULT;
+      let MORE = generateHydrationId.ICYMICustomScore.DEFAULT;
       if (0 === arg0) {
-        MORE = tmp(tmp2[8]).ICYMICustomScore.LESS;
+        MORE = generateHydrationId.ICYMICustomScore.LESS;
       } else if (2 === arg0) {
-        MORE = tmp(tmp2[8]).ICYMICustomScore.MORE;
+        MORE = generateHydrationId.ICYMICustomScore.MORE;
       }
       _undefined(MORE);
       callback(MORE);
@@ -80,7 +80,7 @@ function ContentSettingsControl(initialValue) {
   let num = 0;
   if (generateHydrationId.ICYMICustomScore.LESS !== tmp3) {
     num = 1;
-    if (tmp4(9056).ICYMICustomScore.MORE === tmp3) {
+    if (generateHydrationId.ICYMICustomScore.MORE === tmp3) {
       num = 2;
     }
   }
@@ -96,29 +96,22 @@ function ContentSettingsControl(initialValue) {
     str = "none";
   }
   obj6[1] = str;
-  obj6[2] = closure_8(SegmentedControl.SegmentedControl, { variant: "experimental_Large", state: segmentedControlState });
-  return closure_8(View, obj6);
+  obj6[2] = callback(SegmentedControl.SegmentedControl, { variant: "experimental_Large", state: segmentedControlState });
+  return callback(View, obj6);
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { customScoreWrapper: null, warningText: null, icon: null, iconSelected: null, muted: null };
-createCacheKey = { marginVertical: ThemesDefault.space.PX_16 };
+const createCacheKey = { marginVertical: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_12 };
-let obj1 = { marginTop: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { width: 24, height: 24, tintColor: ThemesDefault.colors.TEXT_MUTED };
-let obj2 = { width: 24, height: 24, tintColor: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[3] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let obj3 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginTop: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx");
 
 export const GuildScoreSettings = function GuildScoreSettings(guild) {
   guild = guild.guild;
-  let id;
-  c1 = undefined;
-  id = guild.id;
+  const id = guild.id;
   let obj = id(589);
   const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getCustomGuildScore(id));
@@ -129,10 +122,10 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = React.useCallback((arg0) => {
-    let obj = _undefined(closure_1_2[17]);
-    obj = { guildId: id, guildScore: null };
-    const customScoreToNumber = id(closure_1_2[8]).customScoreToNumber;
-    const ICYMICustomScore = id(closure_1_2[8]).ICYMICustomScore;
+    _undefined(dependencyMap[17]);
+    const obj = { guildId: id, guildScore: null };
+    const customScoreToNumber = id(dependencyMap[8]).customScoreToNumber;
+    const ICYMICustomScore = id(dependencyMap[8]).ICYMICustomScore;
     if (arg0) {
       let customScoreToNumberResult = customScoreToNumber(ICYMICustomScore.DEFAULT);
     } else {
@@ -143,12 +136,12 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   }, items1);
   const callback1 = React.useCallback((DEFAULT) => {
     if (_undefined !== DEFAULT) {
-      let obj = _undefined(closure_1_2[17]);
-      obj = { guildId: null, guildScore: null };
+      _undefined(dependencyMap[17]);
+      const obj = { guildId: null, guildScore: null };
       obj[0] = id;
-      obj[1] = id(closure_1_2[8]).customScoreToNumber(DEFAULT);
+      obj[1] = id(dependencyMap[8]).customScoreToNumber(DEFAULT);
       obj.customScoreGuild(obj);
-      const obj3 = id(closure_1_2[8]);
+      const obj3 = id(dependencyMap[8]);
     }
   }, items2);
   const tmp8 = callback3();
@@ -168,8 +161,8 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
     let obj3 = { initialValue: null, onValueUpdated: null };
     obj3[0] = numberToCustomScoreResult;
     obj3[1] = callback1;
-    obj2[1] = tmp11(ContentSettingsControl, obj3);
-    tmp11Result = tmp11(tmp10, obj2);
+    obj2[1] = callback2(ContentSettingsControl, obj3);
+    tmp11Result = callback2(View, obj2);
   }
   items3[2] = tmp11Result;
   let muted = tmp5;
@@ -188,15 +181,13 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   obj7[3] = intl4.string(id(1236).t.vRVs07);
   items3[4] = callback2(id(4734).Text, obj7);
   obj4[0] = items3;
-  return closure_9(View, obj4);
+  return callback2(View, obj4);
 };
 export const ChannelScoreSettings = function ChannelScoreSettings(channel) {
   channel = channel.channel;
-  let id;
-  let id2;
   let stateFromStores;
-  id = channel.guild.id;
-  id2 = channel.id;
+  const id = channel.guild.id;
+  const id2 = channel.id;
   let obj = id(stateFromStores[16]);
   let items = [closure_7, closure_6];
   stateFromStores = obj.useStateFromStores(items, () => {
@@ -219,8 +210,8 @@ export const ChannelScoreSettings = function ChannelScoreSettings(channel) {
   const items3 = [id2, id];
   const callback = React.useCallback((DEFAULT) => {
     if (stateFromStores !== DEFAULT) {
-      let obj = id2(stateFromStores[17]);
-      obj = { guildId: null, channelScores: null };
+      id2(stateFromStores[17]);
+      let obj = { guildId: null, channelScores: null };
       obj[0] = id;
       obj = { channelId: null, score: null };
       obj[0] = id2;
@@ -232,9 +223,8 @@ export const ChannelScoreSettings = function ChannelScoreSettings(channel) {
     }
   }, items2);
   const callback1 = React.useCallback((arg0) => {
-    let obj = id2(stateFromStores[17]);
-    obj = { guildId: id, channelScores: null };
-    obj = { channelId: id2, score: null };
+    id2(stateFromStores[17]);
+    const obj = { channelId: id2, score: null };
     const customScoreToNumber = id(stateFromStores[8]).customScoreToNumber;
     const ICYMICustomScore = id(stateFromStores[8]).ICYMICustomScore;
     if (arg0) {
@@ -264,8 +254,8 @@ export const ChannelScoreSettings = function ChannelScoreSettings(channel) {
     obj2[0] = tmp7;
     obj2[1] = stateFromStores;
     obj2[2] = callback;
-    obj1[1] = tmp14(ContentSettingsControl, obj2);
-    tmp14Result = tmp14(tmp13, obj1);
+    obj1[1] = callback2(ContentSettingsControl, obj2);
+    tmp14Result = callback2(View, obj1);
   }
   items4[2] = tmp14Result;
   let muted = tmp8;
@@ -285,5 +275,5 @@ export const ChannelScoreSettings = function ChannelScoreSettings(channel) {
   obj6[3] = intl4.string(id(stateFromStores[9]).t["5lP6Ax"]);
   items4[4] = callback2(id(stateFromStores[18]).Text, obj6);
   obj3[0] = items4;
-  return closure_9(View, obj3);
+  return callback2(View, obj3);
 };

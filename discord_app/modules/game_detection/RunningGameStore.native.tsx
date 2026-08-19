@@ -2,11 +2,11 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import DevToolsFocusedPidsTrackMode from "../overlay/OverlayTypes.tsx";
-import closure_2 from "../games/GameStore.tsx";
-import closure_3 from "../../stores/DetectableGameStore.tsx";
-import closure_4 from "../../stores/LibraryApplicationStore.tsx";
+import handleLoadMessages from "../games/GameStore.tsx";
+import gameFromServer from "../../stores/DetectableGameStore.tsx";
+import setLibraryApplications from "../../stores/LibraryApplicationStore.tsx";
 
-require = arg1;
+require = fn;
 const Store = initializeDefault.Store;
 class RunningGameStore extends Store {
 }
@@ -121,7 +121,7 @@ prototype["isSystemServiceInitialized"] = function isSystemServiceInitialized() 
 };
 RunningGameStore.displayName = "RunningGameStore";
 const runningGameStore = new RunningGameStore(dispatcherDefault, {});
-const result = require("set").fileFinishedImporting("modules/game_detection/RunningGameStore.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_detection/RunningGameStore.native.tsx");
 
 export default runningGameStore;
 export function gameKey() {

@@ -1,9 +1,9 @@
 // discord_app/modules/media_viewer/native/components/MediaModalSheetWrapper.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { MEDIA_MODAL_KEY } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/MediaModalSheetWrapper.tsx");
 
 export default function MediaModalSheetWrapper(onCloseCallback) {
   onCloseCallback = onCloseCallback.onCloseCallback;
@@ -14,10 +14,10 @@ export default function MediaModalSheetWrapper(onCloseCallback) {
   const effect = React.useEffect(() => {
     let transitionState;
     if (context != null) {
-      transitionState = obj.transitionState;
+      transitionState = context.transitionState;
     }
     if ("exiting" === transitionState) {
-      obj.onLeave();
+      context.onLeave();
     }
   }, items);
   const items1 = [onCloseCallback];
@@ -25,7 +25,7 @@ export default function MediaModalSheetWrapper(onCloseCallback) {
     if (onCloseCallback != null) {
       tmp();
     }
-    onCloseCallback(context[4]).hideActionSheet(closure_1_3);
+    onCloseCallback(context[4]).hideActionSheet(MEDIA_MODAL_KEY);
   }, items1);
   const obj = {};
   const merged1 = Object.assign(merged);

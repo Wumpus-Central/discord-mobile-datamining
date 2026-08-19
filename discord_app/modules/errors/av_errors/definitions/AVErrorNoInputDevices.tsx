@@ -1,12 +1,12 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorNoInputDevices.tsx
 import mapped from "../AVError.tsx";
 import getVoiceChannelErrorContext from "../AVErrorContext.tsx";
-import closure_2 from "../../../../stores/ChannelStore.tsx";
-import closure_3 from "../../../../stores/MediaEngineStore.tsx";
-import closure_4 from "../../../../stores/RTCConnectionStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import createRTCConnection from "../../../../stores/RTCConnectionStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoInputDevices.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoInputDevices.tsx");
 
 export const AVErrorNoInputDevicesDefinition = {
   getActiveErrors(voiceState) {

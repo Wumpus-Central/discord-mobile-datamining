@@ -1,6 +1,6 @@
 // discord_app/modules/channel_list_v2/native/unread_bars/ChannelsUnreadBar.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import hairlineWidth from "../RedesignChannelListConstants.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
@@ -8,7 +8,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ getScaledSearchBarHeight: c5, VIEWABILITY_CONFIG: closure_6 } = hairlineWidth);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
@@ -99,8 +99,8 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
   }, items1);
   const effect1 = obj.useEffect(() => {
     if (shown) {
-      let obj = shown(onPress[13]);
-      obj = { is_mention: null, position: null };
+      shown(onPress[13]);
+      const obj = { is_mention: null, position: null };
       obj[0] = first;
       obj[1] = position;
       obj.trackWithMetadata(endReachedCounter.CHANNEL_LIST_UNREAD_BADGE_VIEWED, obj);
@@ -108,8 +108,8 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
   }, items2);
   const items3 = [onPress, position, first];
   const callback1 = obj.useCallback(() => {
-    let obj = shown(onPress[13]);
-    obj = { is_mention: first, position };
+    shown(onPress[13]);
+    const obj = { is_mention: first, position };
     obj.trackWithMetadata(endReachedCounter.CHANNEL_LIST_UNREAD_BADGE_CLICKED, obj);
     onPress();
   }, items3);
@@ -306,6 +306,6 @@ const memoResult = importAllResult.memo(function ChannelsUnreadBar(position) {
   obj[8] = items9;
   return first(closure_10, obj);
 });
-let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBar.tsx");
+let result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBar.tsx");
 
 export default memoResult;

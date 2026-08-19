@@ -1,20 +1,19 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx
-import closure_2 from "../../stores/GuildStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
-const require = arg1;
+const require = fn;
 let items = [, , ];
 ({ ROLE_SUBSCRIPTIONS_ENABLED: arr[0], CREATOR_MONETIZABLE: arr[1], CREATOR_MONETIZABLE_PROVISIONAL: arr[2] } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx");
 
 export const hasEnabledMonetization = function hasEnabledMonetization(arg0) {
   closure_0 = arg0;
   let someResult = null != arg0;
   if (someResult) {
-    someResult = items.some((arg0) => {
+    someResult = items.some((item, index) => {
       features = features.features;
-      return features.has(arg0);
+      return features.has(item);
     });
   }
   return someResult;
@@ -34,12 +33,12 @@ export const isGuildEligibleForTierTemplates = function isGuildEligibleForTierTe
 export const useGuildEligibleForTierTemplates = function useGuildEligibleForTierTemplates(guildId) {
   const _require = guildId;
   items = [closure_2];
-  return _defaultAreStatesEqual.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     const guild = closure_1_2.getGuild(closure_0);
     let flag;
     if (guild != null) {
       const features = guild.features;
-      flag = features.has(closure_1_3.ROLE_SUBSCRIPTIONS_ENABLED);
+      flag = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
     }
     if (flag == null) {
       flag = false;

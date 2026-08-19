@@ -1,17 +1,17 @@
 // discord_app/modules/quests/native/QuestContentImpressionTracker.native.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../stores/native/AppStateStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import getState from "../../../stores/native/AppStateStore.tsx";
 import { MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE as closure_6 } from "../lib/analytics/ContentImpressionTrackerConstants.tsx";
 import { AppStates } from "../../../Constants.tsx";
 import { createElement } from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   let obj = adContentIds2(589);
   let items = [closure_5];
-  let tmp3 = obj.useStateFromStores(items, () => state.getState()) === AppStates.ACTIVE;
+  const tmp3 = obj.useStateFromStores(items, () => state.getState()) === AppStates.ACTIVE;
   const ref = React.useRef(null);
   const tmp5 = visibilityRef;
   obj1 = adContentIds2(10687);
@@ -20,12 +20,9 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   obj = {};
   let merged = Object.assign(skipRemountKey);
   obj.adContentIds = adContentIds;
-  adContentIds2 = undefined;
-  visibilityRef = undefined;
   adContentIds2 = obj.adContentIds;
   visibilityRef = obj.visibilityRef;
   let overrideVisibility = obj.overrideVisibility;
-  dependencyMap = undefined;
   const joined = adContentIds2.join("_");
   let tmp6 = visibilityRef(6701)(tmp3);
   let items1 = [joined];
@@ -42,8 +39,8 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
           const merged = Object.assign(visibilityRef.current.children[iter]);
           obj.calculateVisibility = function calculateVisibility() {
             let tmp4;
-            if (closure_1_1 != null) {
-              const current = tmp2.current;
+            if (visibilityRef != null) {
+              const current = visibilityRef.current;
               if (current != null) {
                 children = current.children;
                 if (children != null) {
@@ -58,27 +55,27 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
             let num = 0;
             if (null != layout) {
               let layout1;
-              if (tmp2 != null) {
-                const parent = tmp2.current.parent;
+              if (visibilityRef != null) {
+                const parent = visibilityRef.current.parent;
                 if (parent != null) {
                   layout1 = parent.layout;
                 }
               }
               num = 0;
               if (null != layout1) {
-                let str = tmp2.current.axis;
+                let str = visibilityRef.current.axis;
                 if (str == null) {
                   str = "vertical";
                 }
                 if ("horizontal" === str) {
                   num = 0;
-                  if (null != tmp2.current.parent.scrollX) {
+                  if (null != visibilityRef.current.parent.scrollX) {
                     const items = [tmp4.layout.x, tmp4.layout.x + tmp4.layout.width];
-                    const items1 = [tmp2.current.parent.scrollX, tmp2.current.parent.scrollX + tmp2.current.parent.layout.width];
+                    const items1 = [visibilityRef.current.parent.scrollX, visibilityRef.current.parent.scrollX + visibilityRef.current.parent.layout.width];
                     let items3 = items1;
                     let items2 = items;
-                    if (null != tmp2.current.parent.firstItemOffset) {
-                      const firstItemOffset = tmp2.current.parent.firstItemOffset;
+                    if (null != visibilityRef.current.parent.firstItemOffset) {
+                      const firstItemOffset = visibilityRef.current.parent.firstItemOffset;
                       items2[0] = items2[0] + firstItemOffset;
                       items2[1] = items2[1] + firstItemOffset;
                     }
@@ -91,15 +88,15 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
                   }
                 } else {
                   num = 0;
-                  if (null != tmp2.current.parent.scrollY) {
+                  if (null != visibilityRef.current.parent.scrollY) {
                     items2 = [tmp4.layout.y, tmp4.layout.y + tmp4.layout.height];
-                    items3 = [tmp2.current.parent.scrollY, tmp2.current.parent.scrollY + tmp2.current.parent.layout.height];
+                    items3 = [visibilityRef.current.parent.scrollY, visibilityRef.current.parent.scrollY + visibilityRef.current.parent.layout.height];
                     const height = tmp4.layout.height;
                   }
                 }
               }
             }
-            closure_0(num >= closure_2_6);
+            iter(num >= closure_2_6);
           };
           visibilityRef.current.children[iter] = obj;
         }
@@ -120,10 +117,8 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
     return () => {
       if (null != children) {
         for (const item10008 of children) {
-          let tmp3 = children;
           let tmp4 = children[item10008];
           if (null != tmp4) {
-            let tmp6 = tmp4;
             tmp5.calculateVisibility = undefined;
           }
           continue;
@@ -159,7 +154,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   }
   return createElement(adContentIds2(10688).QuestContentImpressionTracker, tmp19);
 }
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestContentImpressionTracker.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestContentImpressionTracker.native.tsx");
 
 export const QuestContentImpressionTrackerNative = function QuestContentImpressionTrackerNative(arg0) {
   const merged = Object.assign(arg0);

@@ -1,10 +1,10 @@
 // discord_app/modules/guild_action_sheet/native/useGuildHeaderCounts.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/GuildMemberCountStore.tsx";
-import closure_5 from "GuildHeaderCountsStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import handleInviteData from "../../../stores/GuildMemberCountStore.tsx";
+import initialize from "GuildHeaderCountsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/useGuildHeaderCounts.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_action_sheet/native/useGuildHeaderCounts.tsx");
 
 export const useGuildHeaderCounts = function useGuildHeaderCounts(id) {
   let GUILD_HEADER_ONLINE_COUNT = id;
@@ -17,14 +17,12 @@ export const useGuildHeaderCounts = function useGuildHeaderCounts(id) {
     }
     return num;
   });
-  GUILD_HEADER_ONLINE_COUNT = "GUILD_HEADER_MEMBER_COUNT";
-  closure_1 = id;
   stateFromStores2 = stateFromStores;
   let memo1;
   const items1 = ["GUILD_HEADER_MEMBER_COUNT", id];
   const memo = memo1.useMemo(() => GUILD_HEADER_ONLINE_COUNT(stateFromStores2[3]).throttle((count) => {
-    let obj = closure_1_1(closure_1_2[4]);
-    obj = { type: closure_0, count, guildId: closure_1 };
+    id(stateFromStores2[4]);
+    const obj = { type: closure_0, count, guildId: closure_1 };
     obj.dispatch(obj);
   }, 3000), items1);
   memo1 = memo;
@@ -53,8 +51,8 @@ export const useGuildHeaderCounts = function useGuildHeaderCounts(id) {
   memo1 = undefined;
   const items6 = ["GUILD_HEADER_ONLINE_COUNT", id];
   memo1 = memo1.useMemo(() => GUILD_HEADER_ONLINE_COUNT(stateFromStores2[3]).throttle((count) => {
-    let obj = closure_1_1(closure_1_2[4]);
-    obj = { type: closure_0, count, guildId: closure_1 };
+    id(stateFromStores2[4]);
+    const obj = { type: closure_0, count, guildId: closure_1 };
     obj.dispatch(obj);
   }, 3000), items6);
   const items7 = [memo1];

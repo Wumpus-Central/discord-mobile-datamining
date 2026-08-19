@@ -1,9 +1,9 @@
 // discord_app/modules/wishlists/experiments/WishlistingNitroExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-03-wishlisting-nitro", kind: "user", defaultConfig: { isEnabled: false, isRoadblocksEnabled: false }, variations: { 0: { isEnabled: false, isRoadblocksEnabled: false }, 1: { isEnabled: true, isRoadblocksEnabled: false }, 2: { isEnabled: true, isRoadblocksEnabled: true } } });
-const result = set.fileFinishedImporting("modules/wishlists/experiments/WishlistingNitroExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/wishlists/experiments/WishlistingNitroExperiment.tsx");
 
 export const useIsNitroWishlistingEnabled = function useIsNitroWishlistingEnabled(add_to_wishlist_grid_suggested_nitro) {
   return store.useConfig({ location: add_to_wishlist_grid_suggested_nitro }).isEnabled;

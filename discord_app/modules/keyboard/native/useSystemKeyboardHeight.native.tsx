@@ -1,10 +1,10 @@
 // discord_app/modules/keyboard/native/useSystemKeyboardHeight.native.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import context from "../../window/native/AppEntryKeyContext.tsx";
 import computeEntryStateDefault from "KeyboardUIStore.native.tsx";
 
 let closure_3 = { excludeSafeAreaInsets: false };
-const result = set.fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
+const result = obj132.fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
 
 export default function useSystemKeyboardHeight() {
   let tmp = arg0;
@@ -15,7 +15,6 @@ export default function useSystemKeyboardHeight() {
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = undefined;
   importDefault = flag(1497).useAppEntryKey();
   return computeEntryStateDefault((arg0) => flag ? arg0.byAppEntry[closure_1].keyboardHeightExcludingSafeAreaInsets : arg0.byAppEntry[closure_1].keyboardHeight);
 };

@@ -1,16 +1,16 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupsBoostAction.tsx
 import contextDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import useGuildBoostPurchaseHandlerDefault from "../../../../guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx";
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../../stores/billing/GuildBoostSlotStore.tsx";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import handleGuildBoostsUpdate from "../../../../../stores/billing/GuildBoostSlotStore.tsx";
 import BoostedGuildTiers from "../../constants/GuildPowerupsConstants.tsx";
 import ME from "../../../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: error } = BoostedGuildTiers);
 ({ AnalyticsObjects: closure_8, AnalyticsObjectTypes: c9 } = ME);
-let result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupsBoostAction.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupsBoostAction.tsx");
 
 export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4) {
   closure_0 = arg0;
@@ -57,7 +57,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
             if (null != arr) {
               tmp15 = dependencyMap;
               if (dependencyMap > 0) {
-                if (!closure_1_5.hasFetched) {
+                if (!handleMobileWebRedirectCheckout.hasFetched) {
                   obj1 = arr(7390);
                   const items = [obj1.init(), ];
                   let obj2 = PERK(4270);
@@ -71,7 +71,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               }
             }
             c3 = 3;
-            closure_1_5(closure_1_6, PERK);
+            handleMobileWebRedirectCheckout(analyticsLocations, PERK);
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -85,10 +85,10 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
         tmp15 = undefined;
         PERK = undefined;
         if (arr.type === closure_1_7.PERK) {
-          PERK = closure_1_6.PERK;
+          PERK = analyticsLocations.PERK;
         }
         let obj4 = PERK(4266);
-        arr = obj4.getAvailableGuildBoostSlots(closure_1_5.boostSlots);
+        arr = obj4.getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
         if (arr.length >= dependencyMap) {
           tmp15 = PERK(6710);
           obj2 = { guildBoostSlots: null, guildId: null, intent: null };
@@ -96,18 +96,18 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
           obj2[1] = PERK;
           obj2[2] = PERK;
           tmp15.openTransferModal(obj2);
-        } else if (!closure_1_4) {
+        } else if (!shouldUseMobileWebRedirectCheckout) {
           const obj3 = { source: null, analyticsLocations: null, guildId: null, onPaymentSuccess: null };
           obj4 = {};
           const merged = Object.assign(c3);
           obj4.object = closure_1_8.BUTTON_CTA;
           obj4.objectType = closure_1_9.BUY;
           obj3[0] = obj4;
-          obj3[1] = closure_1_6;
+          obj3[1] = analyticsLocations;
           obj3[2] = PERK;
           obj3[3] = function onPaymentSuccess() {
             let obj = PERK(table[9]);
-            const availableGuildBoostSlots = obj.getAvailableGuildBoostSlots(closure_2_5.boostSlots);
+            const availableGuildBoostSlots = obj.getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
             if (availableGuildBoostSlots.length >= table) {
               obj = { guildBoostSlots: null, guildId: null, intent: null };
               obj[0] = availableGuildBoostSlots.slice(0, tmp3);

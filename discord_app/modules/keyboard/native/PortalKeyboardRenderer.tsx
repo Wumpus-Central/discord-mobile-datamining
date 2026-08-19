@@ -1,11 +1,14 @@
 // discord_app/modules/keyboard/native/PortalKeyboardRenderer.tsx
+import obj132 from "../../../utils/PlatformUtils.tsx";
+import KeyboardTypes from "KeyboardTypes.tsx";
+import useKeyboardType from "useKeyboardType.tsx";
 import wrapChildrenDefault from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
 import _modDef15976 from "PortalKeyboardRendererComponent.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "subscribeToKeyboardUIStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function transitionGroupGetItemKey(id) {
   return id.id;
 }
@@ -13,12 +16,12 @@ let closure_6 = [];
 function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
   let isAndroidResult = arg2 === wrapChildrenDefault.TransitionStates.YEETED;
   if (isAndroidResult) {
-    let tmpResult = tmp(4239);
+    let tmpResult = useKeyboardType;
     const keyboardType = tmpResult.getKeyboardType();
-    isAndroidResult = keyboardType === tmp(1627).KeyboardTypes.SYSTEM;
+    isAndroidResult = keyboardType === KeyboardTypes.KeyboardTypes.SYSTEM;
   }
   if (isAndroidResult) {
-    tmpResult = tmp(500);
+    tmpResult = obj132;
     isAndroidResult = tmpResult.isAndroid();
   }
   let tmp5 = null;
@@ -31,18 +34,16 @@ function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
   }
   return tmp5;
 }
-let result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboardRenderer.tsx");
+let result = require("obj132").fileFinishedImporting("modules/keyboard/native/PortalKeyboardRenderer.tsx");
 
 export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
   let flag = portal.portal;
   if (flag === undefined) {
     flag = true;
   }
-  let id;
-  let field;
   dependencyMap = undefined;
   let obj = React;
-  id = React.useId();
+  const id = React.useId();
   let items = [id];
   const layoutEffect = React.useLayoutEffect(() => id(4240).registerPortalKeyboardRenderer(id), items);
   const layoutEffect1 = React.useLayoutEffect(() => {
@@ -54,6 +55,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
         const result = callback(4240).closePortalKeyboardIfUnhandled();
         const tmpResult = callback(4240);
       }
+      tmp6 = null != field && tmp5 !== field.type;
     });
     return () => {
       callback();
@@ -66,38 +68,40 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
       field = PortalKeyboardUIStore.getField("keyboard");
       let tmp4 = null != field;
       if (tmp4) {
-        tmp4 = field.channelId !== tmp(tmp2[10]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+        tmp4 = field.channelId !== rootNavigationRef(table[10]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
       }
       if (tmp4) {
-        let tmpResult = tmp(tmp2[11]);
+        let tmpResult = rootNavigationRef(table[11]);
         tmp4 = tmpResult.getFocusedChannelId() !== field.channelId;
       }
       if (tmp4) {
-        tmpResult = tmp(tmp2[4]);
+        tmpResult = rootNavigationRef(table[4]);
         const keyboardType = tmpResult.getKeyboardType();
-        if (keyboardType !== tmp(tmp2[5]).KeyboardTypes.SYSTEM) {
+        if (keyboardType !== rootNavigationRef(table[5]).KeyboardTypes.SYSTEM) {
           const obj = { type: null };
-          obj[0] = tmp(tmp2[5]).KeyboardTypes.SYSTEM;
-          tmp(tmp2[12]).setKeyboardType(obj);
-          const tmpResult1 = tmp(tmp2[12]);
+          obj[0] = rootNavigationRef(table[5]).KeyboardTypes.SYSTEM;
+          rootNavigationRef(table[12]).setKeyboardType(obj);
+          const tmpResult1 = rootNavigationRef(table[12]);
         }
-        const result = tmp(tmp2[8]).closePortalKeyboardIfUnhandled();
-        const tmpResult2 = tmp(tmp2[8]);
+        const result = rootNavigationRef(table[8]).closePortalKeyboardIfUnhandled();
+        const tmpResult2 = rootNavigationRef(table[8]);
       }
     }
     if (obj.isAndroid()) {
-      rootNavigationRef = rootNavigationRef(4230).getRootNavigationRef();
+      const rootNavigationRef = tmp(4230).getRootNavigationRef();
       if (null != rootNavigationRef) {
         rootNavigationRef.addListener("state", onNavigationStateChange);
         return () => {
           rootNavigationRef.removeListener("state", onNavigationStateChange);
         };
       }
-      let tmpResult = rootNavigationRef(4230);
+      let tmpResult = tmp(4230);
     }
+    obj = rootNavigationRef(500);
+    tmp = rootNavigationRef;
   }, []);
   let PortalKeyboardUIStore = id(4240).PortalKeyboardUIStore;
-  field = PortalKeyboardUIStore.useField("keyboard");
+  let field = PortalKeyboardUIStore.useField("keyboard");
   const PortalKeyboardUIStore2 = id(4240).PortalKeyboardUIStore;
   const field1 = PortalKeyboardUIStore2.useField("renderers");
   let tmp8 = 0 === field1.length;
@@ -121,11 +125,11 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
   if (flag) {
     obj = { children: null };
     obj[0] = tmp11;
-    let tmp10Result = tmp10(tmp5(4243).PortalKeyboard, obj);
+    let tmp10Result = jsx(tmp5(4243).PortalKeyboard, { children: null });
   } else {
     obj1 = { value: true, children: null };
     obj1[1] = tmp11;
-    tmp10Result = tmp10(tmp5(9388).PortalKeyboardInModalContext.Provider, obj1);
+    tmp10Result = jsx(tmp5(9388).PortalKeyboardInModalContext.Provider, { value: true, children: null });
   }
   return tmp10Result;
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/external_pip/ExternalPipView.android.tsx
 import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideo.android.tsx";
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
 import closure_4 from "../panels/morphable/AppFreezeStore.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
@@ -22,7 +22,7 @@ function FreezeAfterLayoutPipView() {
   }, []);
   return jsx(ExternalPipViewVideoUnavailableDefault, { onLayout });
 }
-const result = require("set").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
+const result = require("obj132").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
 
 export default function ExternalPipView() {
   const obj = { disabled: null };

@@ -1,8 +1,8 @@
 // discord_app/modules/core/isActionRequired.tsx
-import closure_0 from "../auth/LoginRequiredActionStore.tsx";
-import closure_1 from "../../stores/UserRequiredActionStore.tsx";
+import handleUpdateUser from "../auth/LoginRequiredActionStore.tsx";
+import handleRequiredAction from "../../stores/UserRequiredActionStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/core/isActionRequired.tsx");
+const result = require("obj132").fileFinishedImporting("modules/core/isActionRequired.tsx");
 
 export default function isActionRequired() {
   let obj = arg0;

@@ -1,10 +1,10 @@
 // discord_app/modules/noise_cancellation/NoiseCancellationUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import setDefault from "getEffectiveNoiseCancellation.tsx";
-import closure_3 from "../../stores/MediaEngineStore.tsx";
+import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
 
 export const getNoiseCancellationDeferredToSystem = function getNoiseCancellationDeferredToSystem(closure_3) {
   let obj = closure_3;

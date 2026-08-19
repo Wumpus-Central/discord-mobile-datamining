@@ -2,23 +2,23 @@
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import closure_3 from "../modules/user_settings/LocaleStore.tsx";
-import closure_4 from "ChannelStore.tsx";
-import closure_5 from "GuildMemberStore.tsx";
-import closure_6 from "GuildStore.tsx";
-import closure_7 from "MessageStore.tsx";
-import closure_8 from "RelationshipStore.tsx";
-import closure_9 from "UserStore.tsx";
+import _getSystemLocale from "../modules/user_settings/LocaleStore.tsx";
+import ensureGuildLoaded from "ChannelStore.tsx";
+import trackCommunicationDisabled from "GuildMemberStore.tsx";
+import createGuildRecordFromRust from "GuildStore.tsx";
+import reinjectEphemerals from "MessageStore.tsx";
+import markAllUserIdListsStale from "RelationshipStore.tsx";
+import mergeGuildAvatar from "UserStore.tsx";
 
-const require = arg1;
+const require = fn;
 function handleChannelDelete(arg0) {
   delete tmp2[tmp];
 }
 function handleRelationshipUpdate() {
   let item = applyDefault.forEach(closure_11, (items) => {
     items = items.items;
-    const item = items.forEach((message) => {
-      message = message.message;
+    const item = items.forEach((item, index) => {
+      const message = item.message;
       const result = message.set("blocked", closure_8.isBlockedForMessage(message));
       const result1 = message.set("ignored", closure_8.isIgnoredForMessage(message));
     });
@@ -63,10 +63,10 @@ obj = {
     if (null == dependencyMap[pins.channelId]) {
       return false;
     } else {
-      const mapped = pins.map((pinned_at) => {
-        obj = { pinnedAt: new Date(Date.parse(pinned_at.pinned_at)), message: null };
-        const date = new Date(Date.parse(pinned_at.pinned_at));
-        obj[1] = callback(table[7]).createMessageRecord(pinned_at.message);
+      const mapped = pins.map((item, index) => {
+        obj = { pinnedAt: new Date(Date.parse(item.pinned_at)), message: null };
+        const date = new Date(Date.parse(item.pinned_at));
+        obj[1] = callback(table[7]).createMessageRecord(item.message);
         return obj;
       });
       const items = [];
@@ -86,7 +86,7 @@ obj = {
   THREAD_DELETE: handleChannelDelete,
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    const found = applyDefault(closure_11).filter((guildId) => guildId.guildId !== guild.id);
+    const found = applyDefault(closure_11).filter((item, index) => item.guildId !== guild.id);
     const arr = applyDefault(closure_11);
     closure_11 = found.keyBy("id").value();
   },
@@ -101,7 +101,6 @@ obj = {
         dependencyMap[channelId] = tmp;
       }
       tmp2 = tmp5;
-      obj = applyDefault;
     }
     return tmp2;
   },
@@ -111,7 +110,7 @@ obj = {
       return false;
     } else {
       const items = tmp.items;
-      tmp.items = items.filter((message) => !ids.includes(message.message.id));
+      tmp.items = items.filter((item, index) => !ids.includes(item.message.id));
     }
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
@@ -139,7 +138,6 @@ obj = {
           tmp20.items[findIndexResult].message = id(4803).updateMessageRecord(tmp20.items[findIndexResult].message, message.message);
           const obj4 = id(4803);
         }
-        const obj3 = applyDefault;
       } else {
         const findIndexResult1 = applyDefault.findIndex(tmp20.items, (message) => message.message.id === id);
         if (-1 === findIndexResult1) {
@@ -150,7 +148,6 @@ obj = {
           const items3 = tmp20.items;
           items3.splice(findIndexResult1, 1);
         }
-        const obj2 = applyDefault;
       }
     } else {
       const findIndexResult2 = applyDefault.findIndex(tmp20.items, (message) => message.message.id === id);
@@ -168,7 +165,6 @@ obj = {
           dependencyMap[channel_id].items = substr;
         }
       }
-      const obj7 = applyDefault;
     }
   },
   RELATIONSHIP_ADD: handleRelationshipUpdate,
@@ -186,13 +182,13 @@ obj = {
         const items = tmp.items;
         tmp.items = items.slice();
         tmp.items[findIndexResult].message = messageId(5001).handleExplicitMediaScanTimeoutForMessage(tmp.items[findIndexResult].message);
+        obj = messageId(5001);
       }
-      const obj2 = applyDefault;
     }
   }
 };
 const channelPinsStore = new ChannelPinsStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("stores/ChannelPinsStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/ChannelPinsStore.tsx");
 
 export default channelPinsStore;
 export const FetchState = obj;

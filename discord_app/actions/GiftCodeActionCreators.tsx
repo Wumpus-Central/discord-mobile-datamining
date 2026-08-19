@@ -1,13 +1,13 @@
 // discord_app/actions/GiftCodeActionCreators.tsx
 import _modDef10643 from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../modules/applications/ApplicationStore.tsx";
-import closure_5 from "../modules/collectibles/CollectiblesCategoryStore.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import addApplication from "../modules/applications/ApplicationStore.tsx";
+import updateCategoriesAndProducts from "../modules/collectibles/CollectiblesCategoryStore.tsx";
 import { isUnknownCollectiblesItemRecord as closure_6 } from "../modules/collectibles/records/UnknownCollectiblesItemRecord.tsx";
 import ME from "../Constants.tsx";
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "../modules/premium/PremiumConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function resolveGiftCode() {
   const self = this;
   const apply = _resolveGiftCode.apply;
@@ -211,7 +211,7 @@ function _resolveGiftCode() {
 }
 ({ COLLECTIBLES_APPLICATION_ID: error, Endpoints: closure_8, RPCCommands: c9 } = ME);
 const merged = Object.assign(require("redeemGiftCode").default);
-const result = require("set").fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 
 export default {
   resolveGiftCode,
@@ -225,15 +225,15 @@ export default {
     return callback(function*() {
       closure_1 = tmp3;
       obj1 = { type: "GIFT_CODES_FETCH", skuId: null, subscriptionPlanId: null };
-      obj1[1] = closure_1_0;
+      obj1[1] = skuId;
       obj1[2] = closure_1_1;
       closure_1_1(closure_1_2[6]).dispatch(obj1);
       c3 = 1;
-      const HTTP = closure_1_0(closure_1_2[11]).HTTP;
+      const HTTP = skuId(closure_1_2[11]).HTTP;
       const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
       obj2[0] = closure_1_8.USER_GIFT_CODES;
       let obj3 = { sku_id: null, subscription_plan_id: null };
-      obj3[0] = closure_1_0;
+      obj3[0] = skuId;
       obj3[1] = closure_1_1;
       obj2[1] = obj3;
       yield HTTP.get(obj2);
@@ -277,20 +277,18 @@ export default {
     return callback(function*() {
       closure_1 = tmp3;
       obj1 = { type: "GIFT_CODE_CREATE_START", skuId: null, subscriptionPlanId: null };
-      obj1[1] = closure_1_0;
+      obj1[1] = skuId;
       obj1[2] = closure_1_1;
       closure_1_1(closure_1_2[6]).dispatch(obj1);
-      c3 = 1;
-      const HTTP = closure_1_0(closure_1_2[11]).HTTP;
+      const HTTP = skuId(closure_1_2[11]).HTTP;
       const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
       obj2[0] = closure_1_8.USER_GIFT_CODE_CREATE;
       const obj3 = { sku_id: null, subscription_plan_id: null, gift_style: null };
-      obj3[0] = closure_1_0;
+      obj3[0] = skuId;
       obj3[1] = closure_1_1;
       obj3[2] = closure_1_2;
       obj2[1] = obj3;
       yield HTTP.post(obj2);
-      c3 = 0;
       const obj4 = closure_1_1(closure_1_2[6]);
       const obj5 = { type: "GIFT_CODE_CREATE_FAILURE", skuId: null, subscriptionPlanId: null };
       obj5[1] = closure_0;
@@ -310,12 +308,12 @@ export default {
     return callback(function*() {
       closure_0 = tmp3;
       obj1 = { type: "GIFT_CODE_REVOKE", code: null };
-      obj1[1] = closure_1_0;
+      obj1[1] = code;
       v0(closure_1_2[6]).dispatch(obj1);
       c3 = 1;
-      const HTTP = closure_1_0(closure_1_2[11]).HTTP;
+      const HTTP = code(closure_1_2[11]).HTTP;
       const obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj2[0] = closure_1_8.USER_GIFT_CODE_REVOKE(closure_1_0);
+      obj2[0] = closure_1_8.USER_GIFT_CODE_REVOKE(code);
       yield HTTP.del(obj2);
       if (1 === tmp7) {
         c3 = 0;

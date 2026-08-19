@@ -1,13 +1,12 @@
 // discord_app/modules/safe_area/useSafeAreaInsets.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import context from "../window/native/AppEntryKeyContext.tsx";
 import _modDef1630 from "SafeAreaStore.native.tsx";
-import { context } from "../window/native/AppEntryKeyContext.tsx";
 
-const result = set.fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");
+const result = obj132.fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");
 
 export default function useSafeAreaInsets() {
-  _require = _context.useAppEntryKey();
+  _require = require("../window/native/AppEntryKeyContext.tsx").useAppEntryKey();
   return _modDef1630((arg0) => arg0.byAppEntry[closure_0].safeAreaInsets);
 };
 export const getSafeAreaInsets = function getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY) {

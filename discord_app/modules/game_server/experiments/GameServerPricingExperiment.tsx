@@ -1,11 +1,11 @@
 // discord_app/modules/game_server/experiments/GameServerPricingExperiment.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import experiment2 from "../GameServerExperiment.tsx";
 import createExperiment from "../../experiments/index.tsx";
 
 const items = [{ id: 1, label: "Enable Game Server Pricing", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-03_game_server_pricing", label: "Game Server Pricing", defaultConfig: { enabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/game_server/experiments/GameServerPricingExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/game_server/experiments/GameServerPricingExperiment.tsx");
 
 export const GameServerPricingExperiment = experiment;
 export const useIsGameServerPricingEnabled = function useIsGameServerPricingEnabled(guildId, useGuildPowerupsChannelListPopout) {

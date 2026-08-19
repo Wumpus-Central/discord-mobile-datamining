@@ -1,11 +1,11 @@
 // discord_common/js/packages/design/components/Rive/native/generated/OmnibuttonCoachmarkRive.tsx
 import BaseRive from "../BaseRive.tsx";
 import getDerivedStateFromError from "../RiveErrorBoundary.tsx";
-import closure_4 from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let c5 = importAllResult;
 let closure_7 = { Omnibutton: { reducedMotion: "boolean" } };
@@ -38,7 +38,7 @@ let closure_10 = importAllResult.forwardRef(function OmnibuttonCoachmarkRiveInne
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = closure_1_6(tmp, obj);
+      tmp2 = <tmp />;
     }
     return tmp2;
   }, items);
@@ -47,12 +47,11 @@ let closure_10 = importAllResult.forwardRef(function OmnibuttonCoachmarkRiveInne
   return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 });
 const forwardRefResult = importAllResult.forwardRef(function OmnibuttonCoachmarkRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
+  const obj = { ref };
   const merged = Object.assign(fallback);
-  obj[1] = <closure_10 ref={arg1} />;
+  obj[1] = <closure_10 ref={ref} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/OmnibuttonCoachmarkRive.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/OmnibuttonCoachmarkRive.tsx");
 
 export const OmnibuttonCoachmarkRive = forwardRefResult;

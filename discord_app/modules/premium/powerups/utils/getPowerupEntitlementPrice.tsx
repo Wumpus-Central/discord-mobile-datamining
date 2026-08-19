@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx");
 
 export default function getPowerupEntitlementPrice(tenant_metadata) {
   let guild_monetization;

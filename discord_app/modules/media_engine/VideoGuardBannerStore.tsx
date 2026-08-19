@@ -27,6 +27,6 @@ const videoGuardBannerStore = new VideoGuardBannerStore(dispatcherDefault, {
     obj.hasShownBanner = true;
   }
 });
-const result = require("set").fileFinishedImporting("modules/media_engine/VideoGuardBannerStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_engine/VideoGuardBannerStore.tsx");
 
 export default videoGuardBannerStore;

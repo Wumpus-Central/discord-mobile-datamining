@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/fetchIsLinkTrusted.tsx
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _fetchIsLinkTrusted() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -100,7 +100,7 @@ function _fetchIsLinkTrusted() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/activities/utils/fetchIsLinkTrusted.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/fetchIsLinkTrusted.tsx");
 
 export const fetchIsLinkTrusted = function fetchIsLinkTrusted(id1, arg1) {
   const self = this;

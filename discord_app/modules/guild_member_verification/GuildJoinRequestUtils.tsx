@@ -1,8 +1,8 @@
 // discord_app/modules/guild_member_verification/GuildJoinRequestUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
 
-const result = set.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");
 
 export const isActionedApplicationStatus = function isActionedApplicationStatus(applicationStatus) {
   return applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED || applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED;

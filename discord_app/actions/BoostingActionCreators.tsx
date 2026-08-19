@@ -1,11 +1,11 @@
 // discord_app/actions/BoostingActionCreators.tsx
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../records/AppliedGuildBoostRecord.tsx";
-import closure_5 from "../records/GuildBoostSlotRecord.tsx";
-import closure_6 from "../stores/billing/SubscriptionStore.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import createFromServer from "../records/AppliedGuildBoostRecord.tsx";
+import createFromServer2 from "../records/GuildBoostSlotRecord.tsx";
+import reset from "../stores/billing/SubscriptionStore.tsx";
 import { Endpoints } from "../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _fetchAppliedGuildBoostsForGuild() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -90,7 +90,7 @@ function _fetchAppliedGuildBoostsForGuild() {
             return obj6;
           } else {
             body = body.body;
-            dependencyMap = body.map((arg0) => c4.createFromServer(arg0));
+            dependencyMap = body.map((item, index) => c4.createFromServer(item));
             obj = flag(709);
             const obj7 = { type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS", guildId: null, appliedBoosts: null };
             obj7[1] = callback;
@@ -195,7 +195,7 @@ function _fetchAppliedGuildBoostsForUser() {
             return obj5;
           } else {
             body = body.body;
-            callback = body.map((arg0) => c4.createFromServer(arg0));
+            callback = body.map((item, index) => c4.createFromServer(item));
             obj = callback(709);
             const obj6 = { type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: null };
             obj6[1] = callback;
@@ -237,7 +237,6 @@ function _fetchGuildBoostSlots() {
   const self = this;
   const tmp = callback(function*() {
     const callback = tmp2;
-    closure_0 = tmp5;
     closure_1_1(709).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
     const HTTP = closure_1_0(530).HTTP;
     obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
@@ -245,8 +244,8 @@ function _fetchGuildBoostSlots() {
     const obj8 = closure_1_1(709);
     obj1[2] = closure_1_0(530).rejectWithMigratedError();
     yield HTTP.get(obj1);
-    const body = arg1.body;
-    closure_0 = body.map((subscription_id) => closure_5.createFromServer(subscription_id, subscriptionById.getSubscriptionById(subscription_id.subscription_id)));
+    body = body.body;
+    closure_0 = body.map((item, index) => closure_5.createFromServer(item, subscriptionById.getSubscriptionById(item.subscription_id)));
     const obj = callback(709);
     const obj4 = { type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS", guildBoostSlots: null };
     obj4[1] = closure_0;
@@ -270,10 +269,10 @@ function _fetchAppliedBoostsCooldown() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw body;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj[0] = body;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -284,11 +283,11 @@ function _fetchAppliedBoostsCooldown() {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw body;
           } else if (arg0 === 2) {
             c5 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = body;
             return obj;
           } else {
             let lib = tmp3;
@@ -319,15 +318,15 @@ function _fetchAppliedBoostsCooldown() {
           }
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
           const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          obj3[0] = body;
           return obj3;
         } else {
-          ends_at = arg1.body.ends_at;
+          ends_at = body.body.ends_at;
           obj = lib(709);
           obj4 = { type: "APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS", endsAt: null };
           obj4[1] = ends_at;
@@ -602,12 +601,11 @@ function _cancelGuildBoostSlot() {
     c4 = 0;
     return (function*(arg0) {
       const table = tmp2;
-      let callback = tmp5;
       const HTTP = lib(closure_1_2[5]).HTTP;
       obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
       obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOT_CANCEL(lib);
       lib = yield HTTP.post(obj1);
-      callback = closure_5.createFromServer(lib.body, subscriptionById.getSubscriptionById(lib.body.subscription_id));
+      const callback = closure_5.createFromServer(lib.body, subscriptionById.getSubscriptionById(lib.body.subscription_id));
       const obj4 = { type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: null };
       obj4[1] = callback;
       callback(table[6]).dispatch(obj4);
@@ -631,12 +629,11 @@ function _uncancelGuildBoostSlot() {
     c4 = 0;
     return (function*(arg0) {
       const table = tmp2;
-      let callback = tmp5;
       const HTTP = lib(closure_1_2[5]).HTTP;
       obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
       obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOT_UNCANCEL(lib);
       lib = yield HTTP.post(obj1);
-      callback = closure_5.createFromServer(lib.body, subscriptionById.getSubscriptionById(lib.body.subscription_id));
+      const callback = closure_5.createFromServer(lib.body, subscriptionById.getSubscriptionById(lib.body.subscription_id));
       const obj4 = { type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: null };
       obj4[1] = callback;
       callback(table[6]).dispatch(obj4);
@@ -652,7 +649,7 @@ function _uncancelGuildBoostSlot() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("actions/BoostingActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("actions/BoostingActionCreators.tsx");
 
 export const fetchAppliedGuildBoostsForGuild = function fetchAppliedGuildBoostsForGuild(closure_0, arg1) {
   const self = this;
@@ -685,7 +682,7 @@ export const fetchAppliedBoostsCooldown = function fetchAppliedBoostsCooldown() 
   }
   return applyArgumentsResult;
 };
-export const applyToGuild = function applyToGuild(id, closure_7, arg2) {
+export const applyToGuild = function applyToGuild(id, arg1, arg2) {
   const self = this;
   const apply = _applyToGuild.apply;
   if (typeof apply === "unknown") {

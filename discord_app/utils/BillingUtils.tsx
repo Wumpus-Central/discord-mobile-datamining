@@ -2,10 +2,10 @@
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import _modDef1208 from "SentryUtils.native.tsx";
 import setDefault from "../errors/BillingError.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import { PaymentGateways } from "../../discord_common/js/shared/Constants.tsx";
 
-require = arg1;
+require = fn;
 function _createGatewayCheckoutContext() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -84,7 +84,7 @@ function _createGatewayCheckoutContext() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("utils/BillingUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/BillingUtils.tsx");
 
 export const getLocalizedDisplayMonth = function getLocalizedDisplayMonth(arg0, arg1) {
   const date = new Date();
@@ -102,8 +102,7 @@ export const createGatewayCheckoutContext = function createGatewayCheckoutContex
   return applyArgumentsResult;
 };
 export const captureBillingException = function captureBillingException(error, tags) {
-  let obj = _modDef1208;
-  obj = {};
+  let obj = {};
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {
@@ -139,8 +138,7 @@ export const isExpectedHttpClientError = function isExpectedHttpClientError(clos
   return tmp2;
 };
 export const captureBillingMessage = function captureBillingMessage(arg0, tags) {
-  let obj = _modDef1208;
-  obj = {};
+  let obj = {};
   const merged = Object.assign(tags);
   tags = undefined;
   if (tags != null) {

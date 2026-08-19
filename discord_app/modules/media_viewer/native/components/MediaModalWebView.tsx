@@ -2,22 +2,18 @@
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import set from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let str = "";
-if (set.isIOS()) {
-  str = "\n  window.addEventListener('click', function(event) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({event: 'click'}));\n  });\n";
-}
 let obj = { UNREADY: 0, [0]: "UNREADY", READY: 1, [1]: "READY", ERRORED: 2, [2]: "ERRORED", UNSTARTED: 3, [3]: "UNSTARTED", ENDED: 4, [4]: "ENDED", PLAYING: 5, [5]: "PLAYING", PAUSED: 6, [6]: "PAUSED", BUFFERING: 7, [7]: "BUFFERING", VIDEO_CUED: 8, [8]: "VIDEO_CUED" };
 let closure_10 = createCacheKey.createStyles({ loading: { top: 0, left: 0, right: 0, bottom: 0, position: "absolute", alignItems: "center", justifyContent: "center" } });
 let closure_11 = { code: "function MediaModalWebViewTsx1(){const{withTiming,webviewOpacity}=this.__closure;return{opacity:withTiming(webviewOpacity.get())};}" };
 let closure_12 = { code: "function MediaModalWebViewTsx2(){const{withTiming,loaderOpacity}=this.__closure;return{opacity:withTiming(loaderOpacity.get())};}" };
-let result = set.fileFinishedImporting("modules/media_viewer/native/components/MediaModalWebView.tsx");
+let result = obj132.fileFinishedImporting("modules/media_viewer/native/components/MediaModalWebView.tsx");
 
 export default importAllResult.memo(importAllResult.forwardRef((playerState, ref) => {
   playerState = playerState.playerState;
@@ -26,12 +22,10 @@ export default importAllResult.memo(importAllResult.forwardRef((playerState, ref
   const panGestureConfig = playerState.panGestureConfig;
   ({ style, injectedJavaScript } = playerState);
   const merged = Object.assign(playerState, Object.create(null));
-  let sharedValue;
-  let sharedValue1;
   obj = playerState(baseURL[5]);
-  sharedValue = obj.useSharedValue(1);
+  const sharedValue = obj.useSharedValue(1);
   obj1 = playerState(baseURL[5]);
-  sharedValue1 = obj1.useSharedValue(0);
+  const sharedValue1 = obj1.useSharedValue(0);
   let obj2 = playerState(baseURL[5]);
   const fn = function f() {
     obj = { opacity: playerState(baseURL[6]).withTiming(sharedValue1.get()) };
@@ -62,6 +56,7 @@ export default importAllResult.memo(importAllResult.forwardRef((playerState, ref
       const result = sharedValue.set(0);
       const result1 = sharedValue1.set(1);
     }
+    tmp3 = playerState !== obj.BUFFERING && playerState !== obj.PLAYING && playerState !== obj.ERRORED;
   }, items);
   const items1 = [onDataReceived, panGestureConfig];
   const items2 = [baseURL];
@@ -84,7 +79,6 @@ export default importAllResult.memo(importAllResult.forwardRef((playerState, ref
     }
     if (tmp) {
       tmp = null == url.isTopFrame || url.isTopFrame;
-      const tmp4 = null == url.isTopFrame || url.isTopFrame;
     }
     let flag = !tmp;
     if (tmp) {
@@ -97,11 +91,10 @@ export default importAllResult.memo(importAllResult.forwardRef((playerState, ref
   obj2 = { style: items3, children: null };
   items3 = [animatedStyle, { flex: 1 }];
   const obj3 = {};
-  const tmp11 = closure_7;
   const tmp12 = sharedValue1;
   const tmp14 = onDataReceived;
   const tmp2 = callback2();
-  const tmp3 = baseURL;
+  let tmp3 = baseURL;
   const merged1 = Object.assign(merged);
   obj3.injectedJavaScript = "" + injectedJavaScript + "\n" + str;
   obj3.bounces = false;
@@ -124,6 +117,6 @@ export default importAllResult.memo(importAllResult.forwardRef((playerState, ref
   }
   items4[1] = tmp13Result;
   obj1[1] = items4;
-  return tmp11(tmp12, obj1);
+  return callback(tmp12, obj1);
 }));
 export const PlayerState = obj;

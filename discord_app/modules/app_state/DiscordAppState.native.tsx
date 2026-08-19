@@ -1,12 +1,12 @@
 // discord_app/modules/app_state/DiscordAppState.native.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../stores/native/AppStateStore.tsx";
+import getState from "../../stores/native/AppStateStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_state/DiscordAppState.native.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/app_state/DiscordAppState.native.tsx");
 
 export default {
-  canUIRequestGatewaySocket(arg0) {
+  canUIRequestGatewaySocket(closure_1_2) {
     return "active" === store.getState();
   },
   getState() {

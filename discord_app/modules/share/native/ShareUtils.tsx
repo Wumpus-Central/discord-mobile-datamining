@@ -1,11 +1,11 @@
 // discord_app/modules/share/native/ShareUtils.tsx
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import registerAssetDefault from "../../../../_runtime/10455_registerAsset.js";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { DraftType } from "../../../stores/DraftStore.tsx";
 import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function _sendShareMessage() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -64,8 +64,8 @@ function _sendShareMessage() {
               return obj1;
             } else {
               id = lib2.id;
-              c4 = lib.map((uri) => {
-                const cloudUpload = new _undefined(_undefined2[8]).CloudUpload({ uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: _undefined(_undefined2[7]).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height }, _var.id);
+              c4 = lib.map((item, index) => {
+                const cloudUpload = new _undefined(_undefined2[8]).CloudUpload({ uri: item.uri, originalUri: item.uri, mimeType: item.mimeType, filename: item.name, platform: _undefined(_undefined2[7]).UploadPlatform.REACT_NATIVE, width: item.width, height: item.height }, _var.id);
                 return cloudUpload;
               });
               lib2 = dependencyMap;
@@ -84,8 +84,8 @@ function _sendShareMessage() {
               obj2[2] = c4;
               obj2[3] = function onAttachmentUploadError() {
                 future.reject(undefined);
-                let obj = _var(_undefined2[5]);
-                obj = { channelId: id, uploads: c4, draftType: c4.ChannelMessage, resetState: true };
+                _var(_undefined2[5]);
+                const obj = { channelId: id, uploads: c4, draftType: c4.ChannelMessage, resetState: true };
                 obj.setUploads(obj);
                 _var(_undefined2[6]).saveDraft(id, _undefined2, c4.ChannelMessage);
               };
@@ -128,11 +128,10 @@ function _sendShareMessage() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/share/native/ShareUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
-  let obj = dispatcherDefault;
-  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: registerAssetDefault };
+  const obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: registerAssetDefault };
   obj.open(obj);
 };
 export const sendShareMessage = function sendShareMessage(arg0) {

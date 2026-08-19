@@ -1,39 +1,34 @@
 // discord_app/modules/instant_invite/native/action_sheet/invite_to_guilds/SelectInviteRolesActionSheet.tsx
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ list: { flex: 1 }, label: { flexDirection: "row", alignItems: "center" }, roleDot: { marginEnd: 8 } });
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/SelectInviteRolesActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/instant_invite/native/action_sheet/invite_to_guilds/SelectInviteRolesActionSheet.tsx");
 
 export default function SelectInviteRolesActionSheet(assignableRoles) {
   assignableRoles = assignableRoles.assignableRoles;
   const selectedRoleIds = assignableRoles.selectedRoleIds;
   const onSave = assignableRoles.onSave;
-  let callback;
   let memo;
-  let first;
-  closure_6 = undefined;
-  let stateFromStores;
-  callback = undefined;
   const tmp = callback2();
-  callback = tmp;
+  let callback = tmp;
   let items = [assignableRoles, selectedRoleIds];
   memo = memo.useMemo(() => {
-    set = new Set(set.map((id) => id.id));
-    return selectedRoleIds.filter((arg0) => set.has(arg0));
+    set = new Set(set.map((item, index) => item.id));
+    return selectedRoleIds.filter((item, index) => set.has(item));
   }, items);
   const tmp3 = callback(memo.useState(() => new Set(memo)), 2);
-  first = tmp3[0];
+  const first = tmp3[0];
   closure_6 = tmp3[1];
   let obj = assignableRoles(onSave[6]);
   const items1 = [closure_6];
-  stateFromStores = obj.useStateFromStores(items1, () => lib.roleStyle);
+  const stateFromStores = obj.useStateFromStores(items1, () => lib.roleStyle);
   const tmp6 = selectedRoleIds(onSave[7])();
   callback = memo.useCallback((arg0) => {
     closure_0 = arg0;
@@ -57,6 +52,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     if (!isEqualResult) {
       onSave(sorted);
     }
+    isEqualResult = assignableRoles(onSave[10]).isEqual(sorted, items.sort());
   }, items2);
   callback2 = memo.useCallback((arg0, arg1) => {
     assignableRoles = tmp;
@@ -70,7 +66,7 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
       obj = { containerStyles: null, color: null, colors: null, background: false };
       obj[0] = label.roleDot;
       ({ colorString: obj2[1], colorStrings: obj2[2] } = tmp);
-      tmp5Result = tmp5(tmp6(tmp7[12]).RoleDot, obj);
+      tmp5Result = stateFromStores(tmp6(onSave[12]).RoleDot, obj);
     }
     const items = [tmp5Result, ];
     let tmp13;
@@ -87,18 +83,17 @@ export default function SelectInviteRolesActionSheet(assignableRoles) {
     obj[1] = items;
     obj1[0] = callback(first, obj);
     obj1[1] = function onPress() {
-      return closure_1_8(id.id);
+      return callback(id.id);
     };
     obj1[2] = stateFromStores(assignableRoles(onSave[11]).FormRow.Checkbox, { selected: first.has(assignableRoles[arg1].id) });
     const children = [stateFromStores(assignableRoles(onSave[11]).FormRow, obj1), ];
     tmp5Result = !tmp14;
     if (arg1 !== diff) {
-      tmp5Result = tmp5(tmp6(tmp7[11]).FormDivider, {});
+      tmp5Result = stateFromStores(tmp6(onSave[11]).FormDivider, {});
     }
     children[1] = tmp5Result;
     return callback(closure_1_9, { children });
   }, items3);
-  obj = { onPress: callback1, accessibilityRole: "button", children: null };
   obj = { variant: "text-md/semibold", children: null };
   const intl = assignableRoles(onSave[15]).intl;
   obj[1] = intl.string(assignableRoles(onSave[15]).t.i4jeWR);

@@ -1,33 +1,32 @@
 // discord_app/modules/devtools/native/components/DevToolsContent.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import HapticFeedbackTypes from "../../../haptics/HapticUtils.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
+import getSortedDevToolsScreens from "../useSortedDevToolsScreens.tsx";
 import getSortedDevToolsScreensDefault from "../useSortedDevToolsScreens.tsx";
 import ArrowSmallUpIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx";
 import ArrowSmallDownIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallDownIcon.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../build_overrides/BuildOverrideStore.tsx";
-import closure_8 from "../../../experiments/ExperimentStore.tsx";
-import closure_9 from "../../../experiments/apex/ApexExperimentStore.tsx";
+import getCurrentBuildOverride from "../../../build_overrides/BuildOverrideStore.tsx";
+import getHash from "../../../experiments/ExperimentStore.tsx";
+import initialize from "../../../experiments/apex/ApexExperimentStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 
-require = arg1;
+require = fn;
 function DevToolsContentSortButtons(arg0) {
   ({ screenKey: require, start, end } = arg0);
   const tmp = callback4();
-  let obj = { style: tmp.sortingIcons, children: null };
-  obj = {
+  let obj = {
     onPress() {
-      const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(closure_1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
-      const obj = closure_1_0(closure_1_2[14]);
-      closure_1_0(closure_1_2[11]).updateSortOrder(closure_0, "up");
+      const result = HapticFeedbackTypes.triggerHapticFeedback(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_MEDIUM);
+      getSortedDevToolsScreens.updateSortOrder(closure_0, "up");
     },
     disabled: start,
     style: null,
@@ -41,13 +40,12 @@ function DevToolsContentSortButtons(arg0) {
   }
   items[1] = start;
   obj[2] = items;
-  obj[5] = closure_10(ArrowSmallUpIcon.ArrowSmallUpIcon, {});
-  const items1 = [closure_10(PressableBase.PressableOpacity, obj), ];
+  obj[5] = callback(ArrowSmallUpIcon.ArrowSmallUpIcon, {});
+  const items1 = [callback(PressableBase.PressableOpacity, obj), ];
   obj = {
     onPress() {
-      const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(closure_1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
-      const obj = closure_1_0(closure_1_2[14]);
-      closure_1_0(closure_1_2[11]).updateSortOrder(closure_0, "down");
+      const result = HapticFeedbackTypes.triggerHapticFeedback(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_MEDIUM);
+      getSortedDevToolsScreens.updateSortOrder(closure_0, "down");
     },
     disabled: end,
     style: null,
@@ -61,18 +59,17 @@ function DevToolsContentSortButtons(arg0) {
   }
   items2[1] = end;
   obj[2] = items2;
-  obj[5] = closure_10(ArrowSmallDownIcon.ArrowSmallDownIcon, {});
-  items1[1] = closure_10(PressableBase.PressableOpacity, obj);
+  obj[5] = callback(ArrowSmallDownIcon.ArrowSmallDownIcon, {});
+  items1[1] = callback(PressableBase.PressableOpacity, obj);
   obj[1] = items1;
-  return closure_11(closure_5, obj);
+  return callback2(closure_5, obj);
 }
 let c4 = importAllResult;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { devToolsContainer: null, sortingIcons: null, button: null, disabledButton: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
+const createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
 obj[2] = { backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center" };
 obj[3] = { opacity: 0.5 };
@@ -84,21 +81,18 @@ const memoResult = importAllResult.memo((arg0) => {
   obj[2] = items;
   return callback3(Text.Text, obj);
 });
-const obj2 = { backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center" };
 const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
   let _require;
-  importDefault = undefined;
   dependencyMap = undefined;
   let callback;
   let arr5;
   ({ title, embedded } = arg0);
-  let obj = _useNavigation;
-  _require = obj.useNavigation();
+  let obj = useNavigation;
+  obj.useNavigation();
   _require = undefined;
   importDefault = undefined;
   const tmp = callback4();
-  const tmp3 = importDefault;
-  obj1 = _initialize;
+  obj1 = initialize;
   const items = [closure_7];
   _require = obj1.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -113,13 +107,13 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
   });
   let tmp4 = useSafeAreaInsetsDefault();
   const items1 = [closure_8];
-  const stateFromStores = _initialize.useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
-  const obj3 = _initialize;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+  let obj3 = initialize;
   const items2 = [closure_9];
-  importDefault = stateFromStores + _initialize.useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
-  const obj4 = _initialize;
-  importDefault = getSortedDevToolsScreensDefault().map((arg0) => {
-    [tmp] = arg0;
+  stateFromStores + require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => Object.keys(clientOverrides.getClientOverrides()).length);
+  const obj4 = initialize;
+  importDefault = getSortedDevToolsScreensDefault().map((item, index) => {
+    [tmp] = item;
     if ("buildOverride" === tmp) {
       let tmp7;
       if (null != closure_0) {
@@ -144,16 +138,16 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
   obj = {
     title,
     hasIcons: true,
-    children: arr5.map((arg0, arg1) => {
-      [tmp, ] = arg0;
-      let obj = { label: tmp2, subLabel: table[arg1], icon: closure_1_10(callback(_undefined[20]).TableRow.Icon, { IconComponent: tmp3 }), arrow: !_undefined, trailing: null, onLongPress: null, onPress: null };
+    children: arr5.map((item, index) => {
+      [tmp, ] = item;
+      let obj = { label: tmp2, subLabel: table[index], icon: closure_1_10(callback(_undefined[20]).TableRow.Icon, { IconComponent: tmp3 }), arrow: !_undefined, trailing: null, onLongPress: null, onPress: null };
       let tmp4Result;
       if (_undefined) {
         obj = { screenKey: null, start: null, end: null };
         obj[0] = tmp;
-        obj[1] = 0 === arg1;
-        obj[2] = arg1 === arr5.length - 1;
-        tmp4Result = tmp4(closure_1_14, obj);
+        obj[1] = 0 === index;
+        obj[2] = index === arr5.length - 1;
+        tmp4Result = closure_1_10(DevToolsContentSortButtons, obj);
       }
       obj[4] = tmp4Result;
       obj[5] = function onLongPress() {
@@ -169,8 +163,9 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
         }
         obj[1] = str2;
         obj.open(obj);
-        const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(tmp[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
+        const result = closure_1_0(closure_1_2[14]).triggerHapticFeedback(closure_1_0(closure_1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
         callback2((arg0) => !arg0);
+        const obj3 = closure_1_0(closure_1_2[14]);
       };
       obj[6] = function onPress() {
         if (!closure_1_2) {
@@ -178,8 +173,8 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
           if (null != closure_1_0.push) {
             arr = arr.push(callback);
           } else {
-            let obj = callback(table[22]);
-            obj = { screenKey: null };
+            callback(table[22]);
+            const obj = { screenKey: null };
             obj[0] = callback;
             obj.navigateToDevTools(obj);
           }
@@ -188,7 +183,7 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
       return closure_1_10(callback(_undefined[20]).TableRow, obj, tmp);
     })
   };
-  const tmp8 = callback2(_TableRowGroupTitle.TableRowGroup, obj);
+  const tmp8 = callback2(require("../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj);
   let tmp7Result = tmp8;
   if (!embedded) {
     obj = { style: null, contentContainerStyle: null, children: null };
@@ -201,7 +196,7 @@ const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {
   }
   return tmp7Result;
 });
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/DevToolsContent.tsx");
+let result = require("obj132").fileFinishedImporting("modules/devtools/native/components/DevToolsContent.tsx");
 
 export default memoResult1;
 export const DevToolsContentSubLabel = memoResult;

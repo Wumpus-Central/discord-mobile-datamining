@@ -1,12 +1,11 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockConstants.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
-let obj = { mass: 0.5, damping: 80, stiffness: 320 };
-obj = {};
+const obj = {};
 const merged = Object.assign(obj);
 obj.overshootClamping = true;
-const result = set.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockConstants.tsx");
 
 export const QUEST_DOCK_COLLAPSED_HEIGHT = 56;
 export const QUEST_DOCK_CLOSED_HEIGHT = 22;

@@ -1,18 +1,19 @@
 // discord_app/modules/activities/panel/native/ActivityPanelUI.tsx
+import useActivityWebViewLockDefault from "ActivityPanelStateContext.tsx";
 import useIsConnectedToVoiceChannelDefault from "../../../voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
     let tmp4 = 16236;
   } else {
     tmp4 = 16242;
   }
-  return closure_7(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
+  return callback(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
 function getKey(arg0) {
   return arg0;
@@ -32,11 +33,11 @@ class BaseActivityPanelUI {
     items[0] = mode;
     items[1] = tmp;
     memo = closure_3.useMemo(() => {
-      if (mode !== closure_1_6.DISCONNECTED) {
-        if (tmp === tmp2.PIP) {
+      if (mode !== ActivityPanelModes.DISCONNECTED) {
+        if (mode === ActivityPanelModes.PIP) {
           return tmp4;
         }
-        tmp4 = tmp === tmp2.PIP ? closure_1_13 : closure_1_14;
+        tmp4 = mode === ActivityPanelModes.PIP ? closure_1_13 : closure_1_14;
       }
       tmp4 = closure_1_12;
     }, items);
@@ -54,11 +55,11 @@ class BaseActivityPanelUI {
 let closure_12 = [];
 let closure_13 = ["pip"];
 let closure_14 = ["activity"];
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelUI.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelUI.tsx");
 
 export default function ActivityPanelUI() {
   const callback = React.useCallback(() => callback2(callback(table[9]), {}), []);
   const items = [callback];
-  return React.useMemo(() => closure_1_7(closure_1_15, { renderActivityOrPIP: closure_1_9, context: closure_1_1(closure_1_2[10]), renderActivityPanelSystemUIManager: callback }), items);
+  return React.useMemo(() => closure_1_7(BaseActivityPanelUI, { renderActivityOrPIP, context: useActivityWebViewLockDefault, renderActivityPanelSystemUIManager: callback }), items);
 };
 export { BaseActivityPanelUI };

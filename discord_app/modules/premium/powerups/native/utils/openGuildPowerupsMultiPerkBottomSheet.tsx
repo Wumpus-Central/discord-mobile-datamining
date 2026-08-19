@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/native/utils/openGuildPowerupsMultiPerkBottomSheet.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import asyncRequireImpl from "../../../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet.tsx";
 
-const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsMultiPerkBottomSheet.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsMultiPerkBottomSheet.tsx");
 
 export default function openGuildPowerupsMultiPerkBottomSheet(arg0) {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;

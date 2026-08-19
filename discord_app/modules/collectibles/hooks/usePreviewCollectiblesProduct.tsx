@@ -1,17 +1,16 @@
 // discord_app/modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "../records/AvatarDecorationRecord.tsx";
-import { firstAvatarDecoration } from "useShopProductItems.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
 
 export const usePreviewCollectibleProduct = function usePreviewCollectibleProduct(product, arg1, arg2) {
   const _require = product;
   dependencyMap = arg1;
   closure_2 = arg2;
-  const shopProductItems = _firstAvatarDecoration.useShopProductItems(product);
+  const shopProductItems = require("useShopProductItems.tsx").useShopProductItems(product);
   const firstProfileEffect = shopProductItems.firstProfileEffect;
   const firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
   const firstNameplate = shopProductItems.firstNameplate;
@@ -35,17 +34,17 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
         obj.profileFrame = firstProfileFrame;
       }
       if (null != callback) {
-        if (firstAvatarDecoration(tmp11)) {
-          obj.avatarDecoration = tmp11;
+        if (firstAvatarDecoration(callback)) {
+          obj.avatarDecoration = callback;
         } else {
-          if (firstProfileFrame(tmp11)) {
-            obj.profileEffect = tmp11;
-          } else if (!firstNameplate(tmp11)) {
-            if (closure_1_7(tmp11)) {
-              obj.profileFrame = tmp11;
+          if (firstProfileFrame(callback)) {
+            obj.profileEffect = callback;
+          } else if (!firstNameplate(callback)) {
+            if (isProfileFrameRecord(callback)) {
+              obj.profileFrame = callback;
             }
           }
-          obj.nameplate = tmp11;
+          obj.nameplate = callback;
         }
       }
       obj = obj(setPendingChangesResult[8]);
@@ -67,7 +66,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
         obj2[0] = first;
         obj(setPendingChangesResult[8]).setPendingChanges(obj2);
         const objResult1 = obj(setPendingChangesResult[8]);
-      } else if (closure_1_7(first)) {
+      } else if (isProfileFrameRecord(first)) {
         const obj3 = { profileFrame: null };
         obj3[0] = first;
         obj(setPendingChangesResult[8]).setPendingChanges(obj3);

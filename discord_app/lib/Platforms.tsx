@@ -1,5 +1,5 @@
 // discord_app/lib/Platforms.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import ME from "../Constants.tsx";
 import isDiscordProxiedAssetUrlDefault from "../utils/URLUtils.tsx";
 import items2 from "../modules/user_application_identity/UserApplicationIdentityConstants.tsx";
@@ -150,7 +150,6 @@ obj[6] = ["youtube.com", "youtu.be"];
 items[1] = obj;
 const obj2 = { type: PlatformTypes.BATTLENET, name: "Battle.net", color: null, icon: null, enabled: true, migrationData: null };
 obj2[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_BATTLENET");
-const obj1 = { lightPNG: registerAsset5, darkPNG: registerAsset5, whitePNG: registerAsset6, lightSVG: registerAsset7, darkSVG: registerAsset7, whiteSVG: registerAsset8 };
 obj2[3] = { lightPNG: registerAsset9, darkPNG: registerAsset9, whitePNG: registerAsset10, lightSVG: registerAsset11, darkSVG: registerAsset11, whiteSVG: registerAsset12, blackSVG: registerAsset11 };
 const obj4 = {
   replacedBy: ApplicationIdentityAppIds.BATTLENET,
@@ -161,7 +160,6 @@ const obj4 = {
   helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
   deprecationDate: null
 };
-const obj3 = { lightPNG: registerAsset9, darkPNG: registerAsset9, whitePNG: registerAsset10, lightSVG: registerAsset11, darkSVG: registerAsset11, whiteSVG: registerAsset12, blackSVG: registerAsset11 };
 obj4[3] = new Date("2026-09-22Z-07:00");
 obj2[5] = obj4;
 items[2] = obj2;
@@ -174,12 +172,10 @@ obj5[4] = function getPlatformUserUrl(id) {
 items[3] = obj5;
 const obj7 = { type: PlatformTypes.BUNGIE, name: "Bungie.net", color: null, icon: null, enabled: true };
 obj7[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_BUNGIE");
-const obj6 = { lightPNG: registerAsset13, darkPNG: registerAsset13, whitePNG: registerAsset14, lightSVG: registerAsset15, darkSVG: registerAsset15, whiteSVG: registerAsset16 };
 obj7[3] = { lightPNG: registerAsset17, darkPNG: registerAsset18, whitePNG: registerAsset19, lightSVG: registerAsset20, darkSVG: registerAsset21, whiteSVG: registerAsset22 };
 items[4] = obj7;
 const obj9 = { type: PlatformTypes.SKYPE, name: "Skype", color: null, icon: null, enabled: false, getPlatformUserUrl: null };
 obj9[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_SKYPE");
-const obj8 = { lightPNG: registerAsset17, darkPNG: registerAsset18, whitePNG: registerAsset19, lightSVG: registerAsset20, darkSVG: registerAsset21, whiteSVG: registerAsset22 };
 obj9[3] = { lightPNG: registerAsset23, darkPNG: registerAsset23, whitePNG: registerAsset24, lightSVG: registerAsset25, darkSVG: registerAsset25, whiteSVG: registerAsset26 };
 obj9[5] = function getPlatformUserUrl(id) {
   return "skype:" + encodeURIComponent(id.id) + "?userinfo";
@@ -187,7 +183,6 @@ obj9[5] = function getPlatformUserUrl(id) {
 items[5] = obj9;
 const obj11 = { type: PlatformTypes.LEAGUE_OF_LEGENDS, name: "League of Legends", color: null, icon: null, enabled: true, migrationData: null };
 obj11[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_LOL");
-const obj10 = { lightPNG: registerAsset23, darkPNG: registerAsset23, whitePNG: registerAsset24, lightSVG: registerAsset25, darkSVG: registerAsset25, whiteSVG: registerAsset26 };
 obj11[3] = { lightPNG: registerAsset27, darkPNG: registerAsset27, whitePNG: registerAsset28, lightSVG: registerAsset29, darkSVG: registerAsset29, whiteSVG: registerAsset30 };
 const obj13 = {
   replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
@@ -197,7 +192,6 @@ const obj13 = {
   helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
   deprecationDate: null
 };
-const obj12 = { lightPNG: registerAsset27, darkPNG: registerAsset27, whitePNG: registerAsset28, lightSVG: registerAsset29, darkSVG: registerAsset29, whiteSVG: registerAsset30 };
 obj13[3] = new Date("2026-07-10Z-07:00");
 obj11[5] = obj13;
 items[6] = obj11;
@@ -211,7 +205,6 @@ obj14[5] = function getPlatformUserUrl(id) {
 items[7] = obj14;
 const obj16 = { type: PlatformTypes.REDDIT, name: "Reddit", color: null, icon: null, enabled: true, domains: null, getPlatformUserUrl: null, hasMetadata: true };
 obj16[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_REDDIT");
-const obj15 = { lightPNG: registerAsset31, darkPNG: registerAsset32, whitePNG: registerAsset32, lightSVG: registerAsset33, darkSVG: registerAsset34, whiteSVG: registerAsset34 };
 obj16[3] = { lightPNG: registerAsset35, darkPNG: registerAsset35, whitePNG: registerAsset36, lightSVG: registerAsset37, darkSVG: registerAsset37, whiteSVG: registerAsset38 };
 obj16[5] = ["reddit.com"];
 obj16[6] = function getPlatformUserUrl(name) {
@@ -220,13 +213,11 @@ obj16[6] = function getPlatformUserUrl(name) {
 items[8] = obj16;
 const obj18 = { type: PlatformTypes.FACEBOOK, name: "Facebook", color: null, icon: null, domains: null, enabled: true };
 obj18[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_FACEBOOK");
-const obj17 = { lightPNG: registerAsset35, darkPNG: registerAsset35, whitePNG: registerAsset36, lightSVG: registerAsset37, darkSVG: registerAsset37, whiteSVG: registerAsset38 };
 obj18[3] = { lightPNG: registerAsset39, darkPNG: registerAsset39, whitePNG: registerAsset40, lightSVG: registerAsset41, darkSVG: registerAsset41, whiteSVG: registerAsset42 };
 obj18[4] = ["facebook.com"];
 items[9] = obj18;
 const obj20 = { type: PlatformTypes.TWITTER_LEGACY, name: "Twitter", color: null, icon: null, enabled: false, getPlatformUserUrl: null, domains: null, hasMetadata: true };
 obj20[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_TWITTER");
-const obj19 = { lightPNG: registerAsset39, darkPNG: registerAsset39, whitePNG: registerAsset40, lightSVG: registerAsset41, darkSVG: registerAsset41, whiteSVG: registerAsset42 };
 obj20[3] = { lightPNG: registerAsset43, darkPNG: registerAsset43, whitePNG: registerAsset44, lightSVG: registerAsset45, darkSVG: registerAsset45, whiteSVG: registerAsset46 };
 obj20[5] = function getPlatformUserUrl(name) {
   return "https://twitter.com/" + encodeURIComponent(name.name);
@@ -235,7 +226,6 @@ obj20[6] = ["twitter.com"];
 items[10] = obj20;
 const obj22 = { type: PlatformTypes.TWITTER, name: "X", color: null, icon: null, enabled: true, getPlatformUserUrl: null, domains: null, hasMetadata: true };
 obj22[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_TWITTER");
-const obj21 = { lightPNG: registerAsset43, darkPNG: registerAsset43, whitePNG: registerAsset44, lightSVG: registerAsset45, darkSVG: registerAsset45, whiteSVG: registerAsset46 };
 obj22[3] = { lightPNG: registerAsset47, darkPNG: registerAsset48, whitePNG: registerAsset49, lightSVG: registerAsset50, darkSVG: registerAsset51, whiteSVG: registerAsset52 };
 obj22[5] = function getPlatformUserUrl(name) {
   return "https://x.com/" + encodeURIComponent(name.name);
@@ -244,7 +234,6 @@ obj22[6] = ["x.com"];
 items[11] = obj22;
 const obj24 = { type: PlatformTypes.SPOTIFY, name: "Spotify", color: null, icon: null, enabled: true, getPlatformUserUrl: null };
 obj24[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_SPOTIFY");
-const obj23 = { lightPNG: registerAsset47, darkPNG: registerAsset48, whitePNG: registerAsset49, lightSVG: registerAsset50, darkSVG: registerAsset51, whiteSVG: registerAsset52 };
 obj24[3] = { lightPNG: registerAsset53, darkPNG: registerAsset53, whitePNG: registerAsset54, lightSVG: registerAsset55, darkSVG: registerAsset55, whiteSVG: registerAsset56 };
 obj24[5] = function getPlatformUserUrl(id) {
   return "https://open.spotify.com/user/" + encodeURIComponent(id.id);
@@ -252,17 +241,14 @@ obj24[5] = function getPlatformUserUrl(id) {
 items[12] = obj24;
 const obj26 = { type: PlatformTypes.XBOX, name: "Xbox", color: null, icon: null, enabled: true };
 obj26[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_XBOX");
-const obj25 = { lightPNG: registerAsset53, darkPNG: registerAsset53, whitePNG: registerAsset54, lightSVG: registerAsset55, darkSVG: registerAsset55, whiteSVG: registerAsset56 };
 obj26[3] = { lightPNG: registerAsset57, darkPNG: registerAsset58, whitePNG: registerAsset58, lightSVG: registerAsset59, darkSVG: registerAsset60, whiteSVG: registerAsset60, customPNG: registerAsset61 };
 items[13] = obj26;
 const obj28 = { type: PlatformTypes.SAMSUNG, name: "Samsung Galaxy", color: null, icon: null, enabled: false };
 obj28[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_SAMSUNG");
-const obj27 = { lightPNG: registerAsset57, darkPNG: registerAsset58, whitePNG: registerAsset58, lightSVG: registerAsset59, darkSVG: registerAsset60, whiteSVG: registerAsset60, customPNG: registerAsset61 };
 obj28[3] = { lightPNG: registerAsset62, darkPNG: registerAsset62, whitePNG: registerAsset63, lightSVG: registerAsset64, darkSVG: registerAsset64, whiteSVG: registerAsset65 };
 items[14] = obj28;
 const obj30 = { type: PlatformTypes.GITHUB, name: "GitHub", color: null, icon: null, enabled: true, getPlatformUserUrl: null, domains: null };
 obj30[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_GITHUB");
-const obj29 = { lightPNG: registerAsset62, darkPNG: registerAsset62, whitePNG: registerAsset63, lightSVG: registerAsset64, darkSVG: registerAsset64, whiteSVG: registerAsset65 };
 obj30[3] = { lightPNG: registerAsset66, darkPNG: registerAsset67, whitePNG: registerAsset67, lightSVG: registerAsset68, darkSVG: registerAsset69, whiteSVG: registerAsset69 };
 obj30[5] = function getPlatformUserUrl(name) {
   return "https://github.com/" + encodeURIComponent(name.name);
@@ -271,20 +257,16 @@ obj30[6] = ["github.com"];
 items[15] = obj30;
 const obj32 = { type: PlatformTypes.PLAYSTATION, name: "PlayStation Network", color: null, icon: null, enabled: true };
 obj32[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_PLAYSTATION");
-const obj31 = { lightPNG: registerAsset66, darkPNG: registerAsset67, whitePNG: registerAsset67, lightSVG: registerAsset68, darkSVG: registerAsset69, whiteSVG: registerAsset69 };
 obj32[3] = { lightPNG: registerAsset70, darkPNG: registerAsset71, whitePNG: registerAsset71, lightSVG: registerAsset72, darkSVG: registerAsset73, whiteSVG: registerAsset73 };
 items[16] = obj32;
 const obj34 = { type: PlatformTypes.PLAYSTATION_STAGING, name: "PlayStation Network (Staging)", color: null, icon: null, enabled: false };
 obj34[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_PLAYSTATION");
-const obj33 = { lightPNG: registerAsset70, darkPNG: registerAsset71, whitePNG: registerAsset71, lightSVG: registerAsset72, darkSVG: registerAsset73, whiteSVG: registerAsset73 };
 obj34[3] = { lightPNG: registerAsset71, darkPNG: registerAsset70, whitePNG: registerAsset70, lightSVG: registerAsset73, darkSVG: registerAsset72, whiteSVG: registerAsset72 };
 items[17] = obj34;
 const obj36 = { type: PlatformTypes.EPIC_GAMES, name: "Epic Games", icon: null, enabled: true };
-const obj35 = { lightPNG: registerAsset71, darkPNG: registerAsset70, whitePNG: registerAsset70, lightSVG: registerAsset73, darkSVG: registerAsset72, whiteSVG: registerAsset72 };
 obj36[2] = { lightPNG: registerAsset74, darkPNG: registerAsset75, whitePNG: registerAsset75, lightSVG: registerAsset76, darkSVG: registerAsset77, whiteSVG: registerAsset77 };
 items[18] = obj36;
 const obj38 = { type: PlatformTypes.RIOT_GAMES, name: "Riot Games", icon: null, enabled: true, migrationData: null };
-const obj37 = { lightPNG: registerAsset74, darkPNG: registerAsset75, whitePNG: registerAsset75, lightSVG: registerAsset76, darkSVG: registerAsset77, whiteSVG: registerAsset77 };
 obj38[2] = { lightPNG: registerAsset78, darkPNG: registerAsset78, whitePNG: registerAsset79, lightSVG: registerAsset80, darkSVG: registerAsset80, whiteSVG: registerAsset81, blackSVG: registerAsset82 };
 const obj40 = {
   replacedBy: ApplicationIdentityAppIds.RIOT_GAMES,
@@ -294,7 +276,6 @@ const obj40 = {
   helpCenterLink: "https://www.riotgames.com/en/riot-games-discord-account-linking",
   deprecationDate: null
 };
-const obj39 = { lightPNG: registerAsset78, darkPNG: registerAsset78, whitePNG: registerAsset79, lightSVG: registerAsset80, darkSVG: registerAsset80, whiteSVG: registerAsset81, blackSVG: registerAsset82 };
 obj40[3] = new Date("2026-07-10Z-07:00");
 obj38[4] = obj40;
 items[19] = obj38;
@@ -306,18 +287,15 @@ obj41[4] = function getPlatformUserUrl(id) {
 };
 items[20] = obj41;
 const obj43 = { type: PlatformTypes.PAYPAL, name: "PayPal", icon: null, enabled: true, hasMetadata: true };
-const obj42 = { lightPNG: registerAsset83, darkPNG: registerAsset84, whitePNG: registerAsset85, lightSVG: registerAsset86, darkSVG: registerAsset87, whiteSVG: registerAsset88 };
 obj43[2] = { lightPNG: registerAsset89, darkPNG: registerAsset89, whitePNG: registerAsset90, lightSVG: registerAsset91, darkSVG: registerAsset91, whiteSVG: registerAsset92 };
 items[21] = obj43;
 const obj45 = { type: PlatformTypes.EBAY, name: "eBay", icon: null, enabled: true, hasMetadata: true, getPlatformUserUrl: null };
-const obj44 = { lightPNG: registerAsset89, darkPNG: registerAsset89, whitePNG: registerAsset90, lightSVG: registerAsset91, darkSVG: registerAsset91, whiteSVG: registerAsset92 };
 obj45[2] = { lightPNG: registerAsset93, darkPNG: registerAsset93, whitePNG: registerAsset94, lightSVG: registerAsset95, darkSVG: registerAsset95, whiteSVG: registerAsset96 };
 obj45[5] = function getPlatformUserUrl(name) {
   return "https://www.ebay.com/usr/" + encodeURIComponent(name.name);
 };
 items[22] = obj45;
 const obj47 = { type: PlatformTypes.TIKTOK, name: "TikTok", icon: null, enabled: false, hasMetadata: true, domains: null, getPlatformUserUrl: null };
-const obj46 = { lightPNG: registerAsset93, darkPNG: registerAsset93, whitePNG: registerAsset94, lightSVG: registerAsset95, darkSVG: registerAsset95, whiteSVG: registerAsset96 };
 obj47[2] = { lightPNG: registerAsset97, darkPNG: registerAsset98, whitePNG: registerAsset98, lightSVG: registerAsset99, darkSVG: registerAsset100, whiteSVG: registerAsset100 };
 obj47[5] = ["tiktok.com"];
 obj47[6] = function getPlatformUserUrl(name) {
@@ -325,7 +303,6 @@ obj47[6] = function getPlatformUserUrl(name) {
 };
 items[23] = obj47;
 const obj49 = { type: PlatformTypes.INSTAGRAM, name: "Instagram", icon: null, enabled: false, domains: null, getPlatformUserUrl: null };
-const obj48 = { lightPNG: registerAsset97, darkPNG: registerAsset98, whitePNG: registerAsset98, lightSVG: registerAsset99, darkSVG: registerAsset100, whiteSVG: registerAsset100 };
 obj49[2] = { lightPNG: registerAsset101, darkPNG: registerAsset101, whitePNG: registerAsset102, lightSVG: registerAsset103, darkSVG: registerAsset103, whiteSVG: registerAsset104 };
 obj49[4] = ["instagram.com"];
 obj49[5] = function getPlatformUserUrl(name) {
@@ -333,7 +310,6 @@ obj49[5] = function getPlatformUserUrl(name) {
 };
 items[24] = obj49;
 const obj51 = { type: PlatformTypes.MASTODON, name: "Mastodon", icon: null, enabled: false, getPlatformUserUrl: null, isFederated: true, hasMetadata: true };
-const obj50 = { lightPNG: registerAsset101, darkPNG: registerAsset101, whitePNG: registerAsset102, lightSVG: registerAsset103, darkSVG: registerAsset103, whiteSVG: registerAsset104 };
 obj51[2] = { lightPNG: registerAsset105, darkPNG: registerAsset105, whitePNG: registerAsset106, lightSVG: registerAsset107, darkSVG: registerAsset107, whiteSVG: registerAsset108 };
 obj51[4] = function getPlatformUserUrl(id) {
   return id.id;
@@ -341,33 +317,28 @@ obj51[4] = function getPlatformUserUrl(id) {
 items[25] = obj51;
 const obj53 = { type: PlatformTypes.CRUNCHYROLL, name: "Crunchyroll", color: null, icon: null, enabled: true };
 obj53[2] = unsafe_getRawColor.unsafe_getRawColor("PLATFORM_CRUNCHYROLL");
-const obj52 = { lightPNG: registerAsset105, darkPNG: registerAsset105, whitePNG: registerAsset106, lightSVG: registerAsset107, darkSVG: registerAsset107, whiteSVG: registerAsset108 };
 obj53[3] = { lightPNG: registerAsset109, darkPNG: registerAsset109, whitePNG: registerAsset109, lightSVG: registerAsset110, darkSVG: registerAsset110, whiteSVG: registerAsset111 };
 items[26] = obj53;
 const obj55 = { type: PlatformTypes.DOMAIN, name: "Domain", icon: null, getPlatformUserUrl: null, enabled: true };
-const obj54 = { lightPNG: registerAsset109, darkPNG: registerAsset109, whitePNG: registerAsset109, lightSVG: registerAsset110, darkSVG: registerAsset110, whiteSVG: registerAsset111 };
 obj55[2] = { lightPNG: registerAsset112, darkPNG: registerAsset113, whitePNG: registerAsset113, lightSVG: registerAsset114, darkSVG: registerAsset115, whiteSVG: registerAsset115 };
 obj55[3] = function getPlatformUserUrl(id) {
   return "https://" + id.id + "/";
 };
 items[27] = obj55;
 const obj57 = { type: PlatformTypes.AMAZON_MUSIC, name: "Amazon Music", icon: null, enabled: true };
-const obj56 = { lightPNG: registerAsset112, darkPNG: registerAsset113, whitePNG: registerAsset113, lightSVG: registerAsset114, darkSVG: registerAsset115, whiteSVG: registerAsset115 };
 obj57[2] = { lightPNG: registerAsset116, darkPNG: registerAsset116, whitePNG: registerAsset116, lightSVG: registerAsset117, darkSVG: registerAsset117, whiteSVG: registerAsset117 };
 items[28] = obj57;
 const obj59 = { type: PlatformTypes.META_QUEST_OR_HORIZON, name: "Meta Quest", icon: null, enabled: false };
-const obj58 = { lightPNG: registerAsset116, darkPNG: registerAsset116, whitePNG: registerAsset116, lightSVG: registerAsset117, darkSVG: registerAsset117, whiteSVG: registerAsset117 };
 obj59[2] = { lightPNG: registerAsset118, darkPNG: registerAsset119, whitePNG: registerAsset120, lightSVG: registerAsset121, darkSVG: registerAsset122, whiteSVG: registerAsset122 };
 items[29] = obj59;
-const obj60 = { lightPNG: registerAsset118, darkPNG: registerAsset119, whitePNG: registerAsset120, lightSVG: registerAsset121, darkSVG: registerAsset122, whiteSVG: registerAsset122 };
 let closure_4 = importDefaultResult.keyBy(items, "type");
 let closure_5 = {};
-let item = items.forEach((domains) => {
-  closure_0 = domains;
-  domains = domains.domains;
+let item = items.forEach((item, index) => {
+  closure_0 = item;
+  const domains = item.domains;
   if (domains != null) {
-    const item = domains.forEach((arg0) => {
-      closure_1_5[arg0] = closure_0;
+    item = domains.forEach((item, index) => {
+      closure_1_5[item] = closure_0;
     });
   }
 });
@@ -389,7 +360,6 @@ const obj61 = {
       }
       return table2[substr];
     }
-    const obj = isDiscordProxiedAssetUrlDefault;
   },
   isSupported(key10009) {
     const call = hasOwnProperty.call;
@@ -410,6 +380,6 @@ const obj61 = {
     return items.find(closure_4);
   }
 };
-const result = set.fileFinishedImporting("lib/Platforms.tsx");
+const result = obj132.fileFinishedImporting("lib/Platforms.tsx");
 
 export default obj61;

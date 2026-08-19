@@ -4,15 +4,14 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import tDefault from "../../../../_runtime/03975_t.js";
 import NativeModulesDefault from "../../../lib/pushnotification/PushNotification.tsx";
-import closure_3 from "../../../stores/GuildStore.tsx";
-import closure_4 from "../../../stores/GuildVerificationStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import recomputeGuild from "../../../stores/GuildVerificationStore.tsx";
 import LocalNotificationTypes from "Constants.tsx";
 import { VerificationLevels } from "../../../Constants.tsx";
-import set from "../../../../_runtime/00002_set.js";
 
-require = arg1;
+require = fn;
 ({ LocalNotificationTypes: c5, FIRE_DATE_FORMAT: closure_6 } = LocalNotificationTypes);
-let set = new Set();
+const set = new Set();
 const Store = initializeDefault.Store;
 class LocalPushNotificationStore extends Store {
 }
@@ -27,15 +26,15 @@ LocalPushNotificationStore.displayName = "LocalPushNotificationStore";
 const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleCheckScheduledNotifs() {
     const scheduledLocalNotifications = NativeModulesDefault.getScheduledLocalNotifications((arr) => {
-      const found = arr.filter((userInfo) => {
-        let tmp = null != userInfo.userInfo;
+      const found = arr.filter((item, index) => {
+        let tmp = null != item.userInfo;
         if (tmp) {
-          tmp = userInfo.userInfo.type === constants.GUILD_VERIFICATION;
+          tmp = item.userInfo.type === constants.GUILD_VERIFICATION;
         }
         return tmp;
       });
-      const item = found.forEach((userInfo) => {
-        userInfo = userInfo.userInfo;
+      const item = found.forEach((item, index) => {
+        const userInfo = item.userInfo;
         const guildId = userInfo.guildId;
         if (null != guild.getGuild(guildId)) {
           if (!closure_4.canChatInGuild(guildId)) {
@@ -46,6 +45,7 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
         const obj = callback(11579);
         const result1 = callback(11579).cancelLocalNotifications(userInfo);
         set.delete(userInfo);
+        const obj2 = callback(11579);
       });
     });
   },
@@ -59,9 +59,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
       if (!check.canChat) {
         if (guild.verificationLevel === VerificationLevels.MEDIUM) {
           const verificationLevel = guild.verificationLevel;
-          if (tmp2.MEDIUM === verificationLevel) {
+          if (VerificationLevels.MEDIUM === verificationLevel) {
             let obj = tDefault(check.accountDeadline);
-          } else if (tmp2.HIGH === verificationLevel) {
+          } else if (VerificationLevels.HIGH === verificationLevel) {
             obj = tDefault(check.memberDeadline);
           }
           if (null != obj) {
@@ -76,10 +76,9 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
               obj[2] = guild.name;
               const intl = getSystemLocale.intl;
               obj[3] = intl.string(getSystemLocale.t["hrDBa+"]);
-              const result = tmp15(11579).scheduleLocalNotification(obj);
-              const tmp15Result = tmp15(11579);
+              const result = NativeModulesDefault.scheduleLocalNotification(obj);
+              const tmp15Result = NativeModulesDefault;
             }
-            tmp15 = importDefault;
           }
         }
       }
@@ -90,7 +89,6 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
     if (set.has(obj)) {
       const result = NativeModulesDefault.cancelLocalNotifications(obj);
       set.delete(obj);
-      const obj3 = NativeModulesDefault;
     }
   },
   LOGOUT: function handleCancelAll() {
@@ -98,6 +96,6 @@ const localPushNotificationStore = new LocalPushNotificationStore(dispatcherDefa
     const result = NativeModulesDefault.cancelAllLocalNotifications();
   }
 });
-let result = set.fileFinishedImporting("modules/local_push_notification/native/LocalPushNotificationStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/local_push_notification/native/LocalPushNotificationStore.tsx");
 
 export default localPushNotificationStore;

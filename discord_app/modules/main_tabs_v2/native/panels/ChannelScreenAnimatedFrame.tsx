@@ -5,23 +5,20 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import MIN_HEADER_HEIGHT from "../shared_components/MainTabsV2Constants.tsx";
 import { ThemeTypes } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ HEADER_CORNER_RADIUS, MIDNIGHT_BORDER_WIDTH } = MIN_HEADER_HEIGHT);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, midnightContainer: null, splitDivider: null, additionalHeight: null };
-createCacheKey = { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
-let obj1 = { borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
 createCacheKey[2] = { borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };
 createCacheKey[3] = { height: HEADER_CORNER_RADIUS };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function ChannelScreenAnimatedFrameTsx1(){const{translateX,maxWidth,isChatLockedOpen,withTiming,STANDARD_EASING,SIDE_PANEL_CLOSE_DURATION_MS,SIDE_PANEL_OPEN_DURATION_MS}=this.__closure;const hide=translateX.get()===maxWidth||isChatLockedOpen;return{opacity:withTiming(hide?0:1,{easing:STANDARD_EASING,duration:hide?SIDE_PANEL_CLOSE_DURATION_MS:SIDE_PANEL_OPEN_DURATION_MS})};}" };
-const obj2 = { borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx");
 
 export default function ChannelScreenAnimatedFrame(translateX) {
   translateX = translateX.translateX;
@@ -72,5 +69,5 @@ export default function ChannelScreenAnimatedFrame(translateX) {
   obj1 = { style: tmp.additionalHeight };
   items1[1] = callback(View, obj1);
   obj[2] = items1;
-  return closure_6(maxWidth(isChatLockedOpen[9]).View, obj);
+  return callback(maxWidth(isChatLockedOpen[9]).View, obj);
 };

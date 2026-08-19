@@ -2,15 +2,12 @@
 import timestampDefault from "../../debug/Logger.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import databaseNameDefault from "DatabaseManager.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import set from "../../../../_runtime/00002_set.js";
-import { index } from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_5 = new timestampDefault("AppDatabaseManager");
-let set = new Set(["MESSAGE_CREATE"]);
+const set = new Set(["MESSAGE_CREATE"]);
 let AppDatabaseManager;
 class AppDatabaseManager {
   constructor(arg0, arg1, arg2) {
@@ -29,7 +26,7 @@ class AppDatabaseManager {
     actions = obj.actions;
     items = [...actions.keys()];
     handleAction = obj.handleAction;
-    registerResult1 = AppDatabaseManager.register(global, items, arg1, handleAction.bind(obj));
+    registerResult1 = AppDatabaseManager.register(global, items, fn, handleAction.bind(obj));
     verboseResult = closure_5.verbose("" + global + " created with " + importDefault.length + " modules, " + obj.actions.size + " distinct actions.");
     return obj;
   }
@@ -69,7 +66,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
   if (null != value) {
     if (0 !== value.length) {
       if (null != databaseResult) {
-        if (stateResult === _index.DatabaseState.Open) {
+        if (stateResult === require("../../../../discord_common/js/packages/kv-storage/js/index.tsx").DatabaseState.Open) {
           let combined = null;
           if (!set.has(type.type)) {
             const _HermesInternal2 = HermesInternal;
@@ -77,7 +74,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
           }
           databaseResult.transaction((arg0) => {
             closure_0 = arg0;
-            return value.forEach((execute) => execute.execute(closure_0, closure_0));
+            return value.forEach((item, index) => item.execute(closure_0, closure_0));
           }, combined);
           if ("WRITE_CACHES" === type.type) {
             const promisesToWaitOn = type.promisesToWaitOn;
@@ -92,34 +89,26 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
 };
 AppDatabaseManager["handleException"] = function handleException(arg0, type, error) {
   closure_5.info("disabling database \u00B7 error encountered during dispatch", error, error.stack);
-  let obj = dispatcherDefault;
-  obj = { type: "RESET_SOCKET", args: null };
-  obj = { error, action: "AppDatabaseManager(" + type.type + ")" };
+  const obj = { error, action: "AppDatabaseManager(" + type.type + ")" };
   obj[1] = obj;
   obj.dispatch(obj);
 };
 AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabaseManager, arr) {
   closure_0 = MobileAppDatabaseManager;
   const map = new Map();
-  const mapped = arr.map((arg0) => {
-    const entry = new MobileAppDatabaseManager(closure_1_2[6]).Entry(MobileAppDatabaseManager, arg0);
+  const mapped = arr.map((item, index) => {
+    const entry = new MobileAppDatabaseManager(dependencyMap[6]).Entry(MobileAppDatabaseManager, item);
     return entry;
   });
   const result = map.set("LOGOUT", []);
   const result1 = map.set("LOGIN_RESET", []);
   for (const item10025 of mapped) {
     let actions = item10025.actions;
-    let tmp5 = actions;
-    let tmp6 = actions;
     for (const item10032 of actions) {
-      let tmp7 = item10032;
       if (!map.has(item10032)) {
-        let tmp8 = item10032;
-        let result2 = map.set(tmp7, []);
+        let result2 = map.set(item10032, []);
       }
-      let tmp10 = item10032;
-      let value = map.get(tmp7);
-      let tmp11 = item10025;
+      let value = map.get(item10032);
       arr = value.push(tmp4);
       continue;
     }
@@ -131,14 +120,14 @@ AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabase
 AppDatabaseManager["register"] = function register(arg0, arr) {
   const _require = arg3;
   const obj = dispatcherDefault;
-  const registerResult = obj.register(arg0, Object.fromEntries(arr.map((arg0) => {
-    const items = [arg0, closure_0];
+  const registerResult = obj.register(arg0, Object.fromEntries(arr.map((item, index) => {
+    const items = [item, closure_0];
     return items;
   })), () => {
 
-  }, _dispatcher.DispatchBand.Database);
-  const fromEntriesResult = Object.fromEntries(arr.map((arg0) => {
-    const items = [arg0, closure_0];
+  }, require("../../../Dispatcher.tsx").DispatchBand.Database);
+  const fromEntriesResult = Object.fromEntries(arr.map((item, index) => {
+    const items = [item, closure_0];
     return items;
   }));
   dispatcherDefault.addDependencies(registerResult, arg2);
@@ -147,6 +136,7 @@ AppDatabaseManager["register"] = function register(arg0, arr) {
 prototype["validateInDev"] = function validateInDev() {
 
 };
-let result = set.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.tsx");
+const tmp2 = new timestampDefault("AppDatabaseManager");
+let result = require("obj132").fileFinishedImporting("modules/app_database/system/AppDatabaseManager.tsx");
 
 export { AppDatabaseManager };

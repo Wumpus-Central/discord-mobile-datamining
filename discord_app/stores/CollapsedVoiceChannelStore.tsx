@@ -2,13 +2,13 @@
 import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import closure_2 from "ChannelStore.tsx";
+import ensureGuildLoaded from "ChannelStore.tsx";
 
 function handleConnectionOpen() {
   obj = DISCORD_EPOCHDefault;
   const keys = obj.keys(obj);
-  const item = keys.forEach((arg0) => {
-    if (null == channel.getChannel(arg0)) {
+  const item = keys.forEach((item, index) => {
+    if (null == channel.getChannel(item)) {
       delete tmp[tmp2];
     }
   });
@@ -52,6 +52,6 @@ obj = {
   }
 };
 const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");
 
 export default collapsedVoiceChannelStore;

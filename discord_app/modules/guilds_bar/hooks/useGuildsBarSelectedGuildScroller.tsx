@@ -1,8 +1,8 @@
 // discord_app/modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx
-import closure_0 from "../../../../_runtime/00019_noop.js";
-import closure_1 from "../../../stores/SelectedGuildStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import handleConnectionOpen from "../../../stores/SelectedGuildStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
 
 export default function useGuildsBarSelectedGuildScroller(arg0) {
   const React = arg0;
@@ -20,7 +20,6 @@ export default function useGuildsBarSelectedGuildScroller(arg0) {
           guildId = null;
         }
         c0(guildId, false);
-        const tmp4 = c0;
       }
     }
     c0 = null;

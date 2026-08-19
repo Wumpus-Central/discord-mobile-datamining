@@ -6,16 +6,16 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 let c3 = importAllResult;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = MINIMUM_HIT_AREA.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4749).SMALL_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = MINIMUM_HIT_AREA.SMALL_BUTTON_PADDING;
   } else if ("md" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4749).MEDIUM_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = MINIMUM_HIT_AREA.MEDIUM_BUTTON_PADDING;
   }
   const sum = arg1 + 2 * MEDIUM_BUTTON_PADDING;
   const buttonBorderRadius = MINIMUM_HIT_AREA.getButtonBorderRadius(arg0);
@@ -29,7 +29,6 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   obj[1] = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: MINIMUM_HIT_AREA.BUTTON_BORDER_WIDTH, outlineColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
   obj[2] = { width: sum, height: sum, position: "relative" };
   obj[3] = { width: sum, height: sum };
-  obj1 = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: MINIMUM_HIT_AREA.BUTTON_BORDER_WIDTH, outlineColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
   obj[4] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: ThemesDefault.colors.REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND, borderRadius: buttonBorderRadius };
   return obj;
 });
@@ -106,13 +105,13 @@ const forwardRefResult = importAllResult.forwardRef((size) => {
     obj3.onPressIn = callback;
     obj3.onPressOut = callback1;
     obj3.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items4 = [tmp10(tmp2(tmp3[11]).BaseIconButton, obj3), ];
+    const items4 = [tmp10(onPressIn(tmp3[11]).BaseIconButton, obj3), ];
     const obj4 = { variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier: null, children: null };
     obj4[2] = maxFontSizeMultiplier;
     obj4[3] = label;
-    items4[1] = tmp10(tmp2(tmp3[12]).Text, obj4);
+    items4[1] = tmp10(onPressIn(tmp3[12]).Text, obj4);
     obj2.children = items4;
-    let tmp10Result = callback2(tmp2(tmp3[10]).BaseButton, obj2);
+    let tmp10Result = callback2(onPressIn(tmp3[10]).BaseButton, obj2);
   } else {
     const obj5 = { ref: null };
     obj5[0] = arg1;
@@ -124,10 +123,10 @@ const forwardRefResult = importAllResult.forwardRef((size) => {
     obj5.variant = "secondary";
     obj5.onPressIn = callback;
     obj5.onPressOut = callback1;
-    tmp10Result = tmp10(tmp2(tmp3[11]).BaseIconButton, obj5);
+    tmp10Result = tmp10(onPressIn(tmp3[11]).BaseIconButton, obj5);
   }
   return tmp10Result;
 });
-let result = require("set").fileFinishedImporting("design/components/Button/native/ImageButton.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Button/native/ImageButton.native.tsx");
 
 export const ImageButton = forwardRefResult;

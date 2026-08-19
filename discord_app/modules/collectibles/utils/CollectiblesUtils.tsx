@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import resetCache from "../../../utils/DateUtils.tsx";
 import RESOLUTION_720 from "../../go_live/StreamSettingsConstants.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
@@ -7,11 +7,10 @@ import ShopVariantsReturnStyle from "../../../../discord_common/js/shared/shared
 import calculateFractionalPremiumInfoDefault from "../../billing/hooks/useFractionalPremiumInfo.tsx";
 
 const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
-const result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
 
 export const constructGoLiveSource = function constructGoLiveSource(resolution, frameRate, desktopSource) {
-  obj = { qualityOptions: obj, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
-  obj = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate };
+  let obj = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate };
   if (null != desktopSource) {
     if (null != desktopSource.desktopSource) {
       obj = { sourceId: null, sound: true };
@@ -56,7 +55,7 @@ export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectible
       obj.payment_gateway = noCache.paymentGateway;
     }
     if (noCache.variantsReturnStyle === ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP) {
-      obj.variants_return_style = tmp2(5355).ShopVariantsReturnStyle.VARIANTS_GROUP;
+      obj.variants_return_style = ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP;
     }
     if (null != noCache.shopHomeConfig) {
       obj.shop_home_config = noCache.shopHomeConfig;
@@ -64,7 +63,6 @@ export const buildFetchCollectiblesOptionsQuery = function buildFetchCollectible
     if (null != noCache.skipNumCategories) {
       obj.skip_num_categories = noCache.skipNumCategories;
     }
-    tmp2 = require;
   }
   return obj;
 };

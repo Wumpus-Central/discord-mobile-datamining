@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/NitroWumpusGreenSpotIllustration-2x.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWumpusGreenSpotIllustration-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWumpusGreenSpotIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/083abb6ec4aebe1ee925dbe4dff984dec140593d1217699446a7b75ad230229a.png";
 export const metadata = { fileBytes: 78108 };

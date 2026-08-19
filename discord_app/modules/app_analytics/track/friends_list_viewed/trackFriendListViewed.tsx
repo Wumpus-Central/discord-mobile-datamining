@@ -1,18 +1,17 @@
 // discord_app/modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import isClickstreamEnabled from "../../clickstream/Clickstream.tsx";
 import getTrackFriendsListViewedDataDefault from "getTrackFriendsListViewedData.native.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");
+const result = obj132.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");
 
 export default function trackFriendsListViewed(source) {
   let str = source.tab_opened;
   const tmp = getTrackFriendsListViewedDataDefault();
-  let obj = expandEventPropertiesDefault;
-  obj = { tab_opened: str, source: source.source };
+  let obj = { tab_opened: str, source: source.source };
   const merged = Object.assign(tmp);
   obj.track(AnalyticEvents.FRIENDS_LIST_VIEWED, obj);
   if (str == null) {

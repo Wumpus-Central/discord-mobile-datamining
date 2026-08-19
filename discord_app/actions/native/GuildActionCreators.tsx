@@ -1,12 +1,12 @@
 // discord_app/actions/native/GuildActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 
 function batchChannelUpdate(closure_1_0) {
   if (arg1.length > 0) {
-    function onEnd() {
+    function onEnd(result) {
       return callback(table[1]).dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS" });
     }
     let obj = dispatcherDefault;
@@ -21,7 +21,7 @@ function batchChannelUpdate(closure_1_0) {
 }
 function batchRoleUpdate(closure_1_0) {
   if (arg1.length > 0) {
-    function onEnd() {
+    function onEnd(result) {
       return callback(table[1]).dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS" });
     }
     let obj = dispatcherDefault;
@@ -35,7 +35,7 @@ function batchRoleUpdate(closure_1_0) {
   }
 }
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("actions/native/GuildActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/native/GuildActionCreators.tsx");
 
 export default { batchChannelUpdate, batchRoleUpdate };
 export { batchChannelUpdate };

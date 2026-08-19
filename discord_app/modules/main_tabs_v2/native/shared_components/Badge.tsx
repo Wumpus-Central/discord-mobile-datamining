@@ -2,13 +2,12 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-let obj = { badge: null, badgeClassic: null, mask: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 obj[0] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[1] = createCacheKey;
 obj[2] = { alignItems: "center", justifyContent: "center" };
 let closure_2 = createCacheKey.createStyles(obj);
@@ -38,12 +37,12 @@ const memoResult = importAllResult.memo(function Badge(size) {
     obj[3] = sum / 2;
     tmp3 = obj;
   }
-  obj = { style: items, children: tmp4(tmp5, { style: items1 }) };
+  obj = { style: items, children: <View style={items1} /> };
   items = [tmp.mask, tmp3, style];
   items1 = [flag ? tmp.badgeClassic : tmp.badge, { height: num, width: num, borderRadius: num / 2 }, badgeStyle];
-  return <View style={items}>{tmp4(tmp5, { style: items1 })}</View>;
+  return <View style={items}><View style={items1} /></View>;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/Badge.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/Badge.tsx");
 
 export default memoResult;
 export const DEFAULT_BADGE_SIZE = 12;

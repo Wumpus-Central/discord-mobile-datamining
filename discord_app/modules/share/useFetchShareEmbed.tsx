@@ -1,10 +1,10 @@
 // discord_app/modules/share/useFetchShareEmbed.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/share/useFetchShareEmbed.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/share/useFetchShareEmbed.tsx");
 
 export default function useFetchShareEmbed(arg0) {
   closure_0 = arg0;
@@ -139,7 +139,7 @@ export default function useFetchShareEmbed(arg0) {
     }
     if (null != closure_0) {
       if ("" !== str) {
-        const match = str.match(callback(closure_1_2[3]).URL_REGEX);
+        const match = str.match(callback(dependencyMap[3]).URL_REGEX);
         let atResult;
         if (match != null) {
           atResult = match.at(0);

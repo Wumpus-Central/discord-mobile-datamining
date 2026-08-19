@@ -1,10 +1,10 @@
 // discord_app/stores/ApplicationStreamPreviewStore.tsx
+import obj132 from "../../_runtime/00002_obj132.js";
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import StreamIssueReportReasons from "../modules/go_live/Constants.tsx";
-import set from "../../_runtime/00002_set.js";
 
 function reset() {
   closure_4 = {};
@@ -13,7 +13,7 @@ function reset() {
 const StreamTypes = StreamIssueReportReasons.StreamTypes;
 let closure_4 = {};
 let closure_5 = {};
-let set = new Set();
+const set = new Set();
 const Store = initializeDefault.Store;
 class ApplicationStreamPreviewStore extends Store {
 }
@@ -114,10 +114,10 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(dispatch
       const tmpResult = applyDefault;
     }
     if (reduced) {
-      reduced = voiceStates.reduce((arg0, guildId) => {
-        guildId = guildId.guildId;
-        if (guildId.selfStream) {
-          return arg0;
+      reduced = voiceStates.reduce((acc, item, index) => {
+        const guildId = item.guildId;
+        if (item.selfStream) {
+          return acc;
         } else {
           let obj = callback(table[2]);
           if (null != guildId) {
@@ -140,6 +140,6 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(dispatch
     return reduced;
   }
 });
-const result = set.fileFinishedImporting("stores/ApplicationStreamPreviewStore.tsx");
+const result = obj132.fileFinishedImporting("stores/ApplicationStreamPreviewStore.tsx");
 
 export default applicationStreamPreviewStore;

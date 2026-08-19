@@ -1,5 +1,5 @@
 // discord_app/modules/billing/native/ACOMExperiments.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
 let obj = { 1: null };
@@ -20,7 +20,7 @@ const apexExperiment4 = ApexExperiment.createApexExperiment({ name: "2026-07-nit
 const obj4 = { 1: null };
 obj4[1] = { enabled: true };
 const apexExperiment5 = ApexExperiment.createApexExperiment({ name: "2026-07-nitro-acom-discounts", kind: "user", defaultConfig: { enabled: false }, variations: obj4 });
-const result = set.fileFinishedImporting("modules/billing/native/ACOMExperiments.tsx");
+const result = obj132.fileFinishedImporting("modules/billing/native/ACOMExperiments.tsx");
 
 export const NitroACOMSubscriptionExperiment = apexExperiment;
 export const ACOMModifyDarkLaunchExperiment = apexExperiment1;

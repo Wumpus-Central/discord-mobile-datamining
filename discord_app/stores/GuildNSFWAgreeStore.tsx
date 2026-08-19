@@ -4,7 +4,7 @@ import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import shouldShowAgeGateForVoiceChannel from "../modules/age_gate/AgeGateUtils.tsx";
 
-require = arg1;
+require = fn;
 const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";
 let closure_3 = {};
 const Store = initializeDefault.Store;
@@ -26,10 +26,8 @@ prototype["didAgree"] = function didAgree(arg0) {
     let tmp5 = !result;
     if (!result) {
       tmp5 = table[arg0] || false;
-      const tmp7 = table[arg0] || false;
     }
     tmp = tmp5;
-    const obj = shouldShowAgeGateForVoiceChannel;
   }
   return tmp;
 };
@@ -41,6 +39,6 @@ const guildNSFWAgreeStore = new GuildNSFWAgreeStore(dispatcherDefault, {
     const result = Storage.set(GuildNSFWAgreeStore, closure_3);
   }
 });
-let result = require("set").fileFinishedImporting("stores/GuildNSFWAgreeStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/GuildNSFWAgreeStore.tsx");
 
 export default guildNSFWAgreeStore;

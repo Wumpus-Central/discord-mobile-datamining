@@ -1,5 +1,5 @@
 // discord_app/stores/views/GIFPickerViewStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
@@ -82,7 +82,7 @@ const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
       query = query.query;
     }
     const items = query.items;
-    closure_8 = items.map((width) => ({ width: width.width, height: width.height, src: width.src, gifSrc: width.gif_src, url: width.url, id: width.id, format: closure_4 }));
+    closure_8 = items.map((item, index) => ({ width: item.width, height: item.height, src: item.src, gifSrc: item.gif_src, url: item.url, id: item.id, format: closure_4 }));
   },
   GIF_PICKER_QUERY_FAILURE: function handleQueryFailure(query) {
     query = query.query;
@@ -108,12 +108,12 @@ const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
     }
     const items2 = [
       ...items1,
-      ...trendingCategories.map((src) => {
+      ...trendingCategories.map((item, index) => {
         const obj = {};
-        const merged = Object.assign(src);
-        obj.src = src.src;
+        const merged = Object.assign(item);
+        obj.src = item.src;
         obj.type = constants.TRENDING_CATEGORY;
-        obj.format = callback(src.src);
+        obj.format = callback(item.src);
         return obj;
       })
     ];
@@ -125,6 +125,6 @@ const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
     items = items.items;
   }
 });
-const result = set.fileFinishedImporting("stores/views/GIFPickerViewStore.tsx");
+const result = obj132.fileFinishedImporting("stores/views/GIFPickerViewStore.tsx");
 
 export default gIFPickerViewStore;

@@ -1,10 +1,10 @@
 // discord_app/modules/screen/native/useBaseAppContainerDimensions.tsx
 import useWindowDimensions from "../useWindowDimensions.native.tsx";
 import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");
 
 export default function useBaseAppContainerDimensions() {
   const size = height(left[1])();

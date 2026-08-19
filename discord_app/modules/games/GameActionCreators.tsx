@@ -1,10 +1,9 @@
 // discord_app/modules/games/GameActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
 import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "GameStore.tsx";
+import handleLoadMessages from "GameStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-let closure_0 = arg1;
 function requestGames() {
   const self = this;
   const apply = _requestGames.apply;
@@ -131,8 +130,7 @@ function _fetchGamesWithSupplementalData() {
   return applyArgumentsResult;
 }
 let c3 = importDefaultResult;
-closure_0 = undefined;
-closure_0 = importDefaultResult((arg0) => {
+let closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c2 = 0;
   c1 = 0;
@@ -167,7 +165,7 @@ closure_0 = importDefaultResult((arg0) => {
             table = 1;
             v0 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = Promise.all(obj1.chunk(closure_0, 20).map(closure_1_6));
+            obj1[0] = Promise.all(obj1.chunk(closure_0, 20).map(requestGames));
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -199,21 +197,19 @@ const batchInvocationManager = new require("start").BatchInvocationManager(funct
   }
   return applyArgumentsResult;
 }, {
-  predicate(closure_0) {
-    return !closure_4.hasNoData(closure_0);
+  predicate(item) {
+    return !closure_4.hasNoData(item);
   },
   onQueued(gameIds) {
-    let obj = dispatcherDefault;
-    obj = { type: "GAME_FETCH", gameIds };
+    const obj = { type: "GAME_FETCH", gameIds };
     return obj.dispatch(obj);
   },
   onCancelled(gameIds) {
-    let obj = dispatcherDefault;
-    obj = { type: "GAME_FETCH_CANCELLED", gameIds };
+    const obj = { type: "GAME_FETCH_CANCELLED", gameIds };
     return obj.dispatch(obj);
   }
 });
-const result = require("set").fileFinishedImporting("modules/games/GameActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/games/GameActionCreators.tsx");
 
 export const fetchGamesWithSupplementalData = function fetchGamesWithSupplementalData(items) {
   const self = this;

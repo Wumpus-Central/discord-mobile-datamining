@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx
 import useMountLayoutEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/native/AppStateStore.tsx";
-import closure_5 from "../../UserSettingSearchStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import getState from "../../../../stores/native/AppStateStore.tsx";
+import zustandStore from "../../UserSettingSearchStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx");
 
 export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSearchSessionAnalytics() {
   const items = [closure_4];
@@ -33,10 +33,10 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
       tmp3 = field;
     }
     if (tmp3) {
-      callback(closure_1_2[7]).initialize();
-      const obj = callback(closure_1_2[7]);
+      callback(dependencyMap[7]).initialize();
+      const obj = callback(dependencyMap[7]);
     }
-    let tmp8 = !tmp2;
+    let tmp8 = !stateFromStores;
     if (!stateFromStores) {
       tmp8 = callback;
     }
@@ -44,8 +44,8 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
       tmp8 = field;
     }
     if (tmp8) {
-      callback(closure_1_2[7]).terminate();
-      const obj2 = callback(closure_1_2[7]);
+      callback(dependencyMap[7]).terminate();
+      const obj2 = callback(dependencyMap[7]);
     }
   }, items1);
   const items2 = [stateFromStores];

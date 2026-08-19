@@ -3,11 +3,11 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import handleSaveTheme from "../../appearance/native/UserSettingsAppearanceThemeUtils.tsx";
-import closure_3 from "../../ThemeStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import handleThemeChange from "../../ThemeStore.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.c445ix);
@@ -34,6 +34,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx");
 
 export default createToggle;

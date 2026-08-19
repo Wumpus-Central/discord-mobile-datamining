@@ -2,11 +2,11 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import handleAutomaticGainControlChange from "../../voice/native/UserSettingsVoiceUtils.tsx";
-import closure_2 from "../../../../stores/MediaEngineStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.t8Qhib);
@@ -26,6 +26,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
 
 export default createToggle;

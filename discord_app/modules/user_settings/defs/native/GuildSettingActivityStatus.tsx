@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/GuildSettingActivityStatus.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import getSanitizedRestrictedGuilds from "../../../../utils/UserSettingsUtils.tsx";
@@ -36,34 +36,6 @@ const toggle = createToggle.createToggle({
     ActivityRestrictedGuilds.updateSetting(items);
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.IQO6Bi);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.TUKMak);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue() {
-    const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
-    const setting = ActivityRestrictedGuilds.useSetting();
-    return !setting.includes(callback2().selectedGuildId);
-  },
-  onValueChange(arg0) {
-    const tmp = callback();
-    const sanitizedActivityRestrictedGuilds = getSanitizedRestrictedGuilds.getSanitizedActivityRestrictedGuilds();
-    if (arg0) {
-      sanitizedActivityRestrictedGuilds.delete(tmp);
-    } else {
-      sanitizedActivityRestrictedGuilds.add(tmp);
-    }
-    const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
-    const items = [...sanitizedActivityRestrictedGuilds];
-    ActivityRestrictedGuilds.updateSetting(items);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/GuildSettingActivityStatus.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/GuildSettingActivityStatus.tsx");
 
 export default toggle;

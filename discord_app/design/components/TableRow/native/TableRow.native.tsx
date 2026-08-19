@@ -1,19 +1,23 @@
 // discord_app/design/components/TableRow/native/TableRow.native.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useIsMobileVisualRefreshExperimentEnabled from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import map from "../../../tokens/native/useToken.tsx";
+import Text from "../../Text/native/Text.tsx";
 import getFontScale from "../../../../modules/screen/native/useFontScale.tsx";
+import TableRowDivider from "TableRowDivider.native.tsx";
 import context2 from "TableRowGroupContext.native.tsx";
 import PressableCard from "../../Card/native/Card.native.tsx";
+import TableRowArrow from "TableRowArrow.native.tsx";
 import TableRowTrailingText from "TableRowTrailingText.native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import DragIcon from "../../Icon/native/redesign/generated/DragIcon.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 class TableRow {
   constructor(arg0) {
     ({ icon, disabled } = global);
@@ -105,7 +109,7 @@ class TableRowInner {
     tmp6 = closure_0;
     obj2 = require("getFontScale");
     fontScale = obj2.useFontScale();
-    obj3 = require("set");
+    obj3 = require("obj132");
     if (obj3.isAndroid()) {
       num2 = 1.2;
       tmp8 = fontScale > 1.2;
@@ -235,10 +239,9 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   obj[4] = num;
   let md;
   if (flag) {
-    md = tmp(712).radii.md;
+    md = ThemesDefault.radii.md;
   }
-  obj = { row: obj, iconContainer: null, trailing: null, content: null, labels: null, trailingText: md, dragHandle: null };
-  obj = { minWidth: tmp(712).modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: tmp(712).modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
+  obj = { minWidth: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
   obj[1] = obj;
   obj[2] = { marginStart: 18 };
   let str = "row";
@@ -288,7 +291,7 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2) => {
 TableRow.Icon = require("TableRowIcon").TableRowIcon;
 TableRow.Arrow = require("TableRowArrow").TableRowArrow;
 TableRow.TrailingText = require("TableRowTrailingText").TableRowTrailingText;
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 
 export { TableRow };
 export { TableRowInner };

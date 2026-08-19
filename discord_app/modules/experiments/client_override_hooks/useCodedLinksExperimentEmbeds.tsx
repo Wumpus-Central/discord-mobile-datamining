@@ -1,19 +1,18 @@
 // discord_app/modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/UserStore.tsx";
-import closure_5 from "../ExperimentStore.tsx";
-import closure_6 from "../apex/ApexExperimentStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import getHash from "../ExperimentStore.tsx";
 
-require = arg1;
+require = fn;
 let closure_7 = {};
 let closure_8 = {};
 let closure_9 = {};
 let closure_10 = {};
 let closure_11 = {};
 let closure_12 = { legacyExperiments: {}, legacyOverridesInfo: {}, apexExperiments: {}, apexOverridesInfo: {} };
-const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
+const result = require("obj132").fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
 
 export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
   let tmp = arg0;

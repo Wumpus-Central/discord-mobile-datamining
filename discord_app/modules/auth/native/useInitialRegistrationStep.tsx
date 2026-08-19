@@ -1,27 +1,27 @@
 // discord_app/modules/auth/native/useInitialRegistrationStep.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../stores/ConsentStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import hasConsented from "../../../stores/ConsentStore.tsx";
 import { resetRegistration } from "RegistrationUIStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
 
 export default function useInitialRegistrationStep(arg0) {
   const _require = arg0;
   const items = [closure_5];
-  const stateFromStores = _initialize.useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
-    let tmp2 = callback === callback(closure_1_2[4]).getRegistrationSteps()[1];
+    let tmp2 = callback === callback(dependencyMap[4]).getRegistrationSteps()[1];
     if (tmp2) {
       tmp2 = null == stateFromStores;
     }
     if (tmp2) {
-      const locationMetadata = stateFromStores(closure_1_2[6]).getLocationMetadata();
-      const obj2 = stateFromStores(closure_1_2[6]);
+      const locationMetadata = stateFromStores(dependencyMap[6]).getLocationMetadata();
+      const obj2 = stateFromStores(dependencyMap[6]);
     }
+    const obj = callback(dependencyMap[4]);
   }, items1);
   const items2 = [arg0];
   const effect1 = React.useEffect(() => {
@@ -34,6 +34,6 @@ export default function useInitialRegistrationStep(arg0) {
         }
       };
     }
-    obj = callback(closure_1_2[4]);
+    obj = callback(dependencyMap[4]);
   }, items2);
 };

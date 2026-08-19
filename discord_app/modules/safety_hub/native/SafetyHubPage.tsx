@@ -1,22 +1,23 @@
 // discord_app/modules/safety_hub/native/SafetyHubPage.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../SafetyHubStore.tsx";
+import handleSafetyHubRequestAgeVerificationResetModalAction from "../SafetyHubStore.tsx";
 import { AgeCheckStatus } from "../SafetyHubConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function AutomatedUnderageAppealStatus() {
   let obj = initialize;
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
   if (AgeCheckStatus.SUCCESS === stateFromStores) {
-    obj = { message: null, type: null };
-    const intl4 = tmp(1236).intl;
+    const intl4 = getSystemLocale.intl;
     obj = { loginHook: null };
     obj[0] = function loginHook(children) {
       return callback2(callback(table[7]).Text, {
@@ -28,26 +29,26 @@ function AutomatedUnderageAppealStatus() {
         children
       });
     };
-    obj[0] = intl4.format(tmp(1236).t.hyh4ls, obj);
-    obj[1] = tmp(1297).HelpMessageTypes.SUCCESS;
+    obj[0] = intl4.format(getSystemLocale.t.hyh4ls, obj);
+    obj[1] = Button.HelpMessageTypes.SUCCESS;
     let obj4 = obj;
-  } else if (tmp4.ERROR === stateFromStores) {
+  } else if (AgeCheckStatus.ERROR === stateFromStores) {
     obj1 = { message: null, type: null };
-    const intl3 = tmp(1236).intl;
-    obj1[0] = intl3.string(tmp(1236).t["4sILBU"]);
-    obj1[1] = tmp(1297).HelpMessageTypes.ERROR;
+    const intl3 = getSystemLocale.intl;
+    obj1[0] = intl3.string(getSystemLocale.t["4sILBU"]);
+    obj1[1] = Button.HelpMessageTypes.ERROR;
     obj4 = obj1;
-  } else if (tmp4.FAILURE === stateFromStores) {
+  } else if (AgeCheckStatus.FAILURE === stateFromStores) {
     const obj2 = { message: null, type: null };
-    const intl2 = tmp(1236).intl;
-    obj2[0] = intl2.string(tmp(1236).t["40R63o"]);
-    obj2[1] = tmp(1297).HelpMessageTypes.ERROR;
+    const intl2 = getSystemLocale.intl;
+    obj2[0] = intl2.string(getSystemLocale.t["40R63o"]);
+    obj2[1] = Button.HelpMessageTypes.ERROR;
     obj4 = obj2;
-  } else if (tmp4.LOADING === stateFromStores) {
+  } else if (AgeCheckStatus.LOADING === stateFromStores) {
     const obj3 = { message: null, type: null };
-    const intl = tmp(1236).intl;
-    obj3[0] = intl.string(tmp(1236).t["nhhy/R"]);
-    obj3[1] = tmp(1297).HelpMessageTypes.INFO;
+    const intl = getSystemLocale.intl;
+    obj3[0] = intl.string(getSystemLocale.t["nhhy/R"]);
+    obj3[1] = Button.HelpMessageTypes.INFO;
     obj4 = obj3;
   } else {
     obj4 = { message: null, type: null };
@@ -58,26 +59,22 @@ function AutomatedUnderageAppealStatus() {
     const obj5 = { messageType: null, children: null };
     obj5[0] = type;
     obj5[1] = tmp5;
-    tmp6 = callback(tmp(1297).HelpMessage, obj5);
+    tmp6 = callback(Button.HelpMessage, obj5);
   }
   return tmp6;
 }
 ({ View: c5, ActivityIndicator: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, Routes: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { container: null, loadingIndicator: null, body: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", justifyContent: "center", alignItems: "center" };
 createCacheKey[2] = { gap: ThemesDefault.space.PX_8 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/SafetyHubPage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/native/SafetyHubPage.tsx");
 
 export default function SafetyHubPage(visible) {
   visible = visible.visible;
-  importDefault = undefined;
-  closure_2 = undefined;
   let safetyHubFetchError;
   const tmp = callback3();
   let obj = visible(safetyHubFetchError[14]);
@@ -94,12 +91,12 @@ export default function SafetyHubPage(visible) {
     if (callback) {
       obj = { account_standing: null };
       obj[0] = lib.state;
-      callback(tmp[19]).track(closure_1_10.SAFETY_HUB_VIEWED, obj);
-      const obj2 = callback(tmp[19]);
+      callback(safetyHubFetchError[19]).track(closure_1_10.SAFETY_HUB_VIEWED, obj);
+      const obj2 = callback(safetyHubFetchError[19]);
       obj = { name: null };
-      obj[0] = visible(tmp[21]).MetricEvents.SAFETY_HUB_VIEW;
-      callback(tmp[20]).increment(obj);
-      const obj4 = callback(tmp[20]);
+      obj[0] = visible(safetyHubFetchError[21]).MetricEvents.SAFETY_HUB_VIEW;
+      callback(safetyHubFetchError[20]).increment(obj);
+      const obj4 = callback(safetyHubFetchError[20]);
     }
   });
   const items = [safetyHubFetchError, visible];
@@ -111,6 +108,7 @@ export default function SafetyHubPage(visible) {
       }
     }
     callback(safetyHubFetchError[22]).hideActionSheet("SafetyHubErrorActionSheet");
+    const obj = callback(safetyHubFetchError[22]);
   }, items);
   if (tmp4) {
     obj = { style: null, children: null };

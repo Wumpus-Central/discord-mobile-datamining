@@ -21,7 +21,7 @@ obj[6] = function useActivityWebViewLock() {
   return true;
 };
 const context = importAllResult.createContext(obj);
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelStateContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelStateContext.tsx");
 
 export default context;
 export const activityPanelStateContextDefault = obj;

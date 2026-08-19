@@ -18,6 +18,6 @@ const phoneVerificationStore = new PhoneVerificationStore(dispatcherDefault, {
     c0 = false;
   }
 });
-const result = require("set").fileFinishedImporting("stores/PhoneVerificationStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/PhoneVerificationStore.tsx");
 
 export default phoneVerificationStore;

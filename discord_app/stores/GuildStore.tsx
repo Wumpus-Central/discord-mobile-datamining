@@ -1,5 +1,5 @@
 // discord_app/stores/GuildStore.tsx
-import set2 from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import date2 from "../modules/favorites/FavoritesConstants.tsx";
 import fromGuildPropertiesWithAdditionalFieldsAll from "../utils/GuildRecordUtils.tsx";
 import areSetsEqual from "../../discord_common/js/shared/utils/SetUtils.tsx";
@@ -7,7 +7,7 @@ import identity from "../modules/libdiscore/stores/LibdiscoreStore.tsx";
 import items from "../modules/libdiscore/libdiscoreExperiments.tsx";
 import isValueEqual from "../lib/PlainRecord.tsx";
 import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
-import closure_9 from "AuthenticationStore.tsx";
+import fetchFingerprint from "AuthenticationStore.tsx";
 
 function createGuildRecordFromRust(features) {
   const obj = {};
@@ -25,7 +25,7 @@ function createGuildRecordFromRust(features) {
     date1 = new Date(features.premiumProgressBarEnabledUserUpdatedAt);
   }
   obj.premiumProgressBarEnabledUserUpdatedAt = date1;
-  return closure_4(closure_6, obj);
+  return callback(closure_6, obj);
 }
 ({ constructInPlace: c4, set: c5 } = isValueEqual);
 const LibdiscoreStore = identity.LibdiscoreStore;
@@ -39,7 +39,7 @@ class GuildStore extends LibdiscoreStore {
     applyArgumentsResult.getGuild = function getGuild(guildId) {
       if (null != guildId) {
         if (obj.isFavoritesGuildId(guildId)) {
-          let value = closure_1_10;
+          let value = FAVORITES_GUILD_RECORD;
         } else {
           const database = applyArgumentsResult.database;
           value = database.get(guildId);
@@ -79,15 +79,10 @@ const guildStore = new GuildStore({
       let tmp5 = null != value;
       let tmp4 = value;
       if (tmp5) {
-        let tmp6 = nextResult;
         tmp5 = "unavailable" !== tmp2.data_mode;
       }
       if (tmp5) {
-        let tmp7 = nextResult;
-        let tmp8 = importAll;
-        let tmp9 = dependencyMap;
         let obj = fromGuildPropertiesWithAdditionalFieldsAll;
-        let tmp10 = value;
         let result = get.set(tmp2.id, obj.fromBackgroundSync(tmp2, tmp4));
       }
       continue;
@@ -109,20 +104,12 @@ const guildStore = new GuildStore({
       let tmp4 = nextResult;
       let deleteResult = set.delete(nextResult.id);
       if (null == nextResult.properties) {
-        let tmp6 = nextResult;
         if (null == allRecords[tmp4.id]) {
           let _Error = Error;
-          let tmp11 = new.target;
-          let str = "Guild data was missing from store, but hash was still available.";
-          let tmp12 = new.target;
           error = new Error("Guild data was missing from store, but hash was still available.");
-          let tmp14 = error;
           throw error;
         }
       }
-      let tmp7 = nextResult;
-      let tmp8 = importAll;
-      let tmp9 = dependencyMap;
       let obj2 = fromGuildPropertiesWithAdditionalFieldsAll;
       let result = getAllRecords.set(tmp4.id, obj2.fromServer(tmp4, allRecords[tmp4.id]));
       continue;
@@ -131,10 +118,11 @@ const guildStore = new GuildStore({
       let deleteResult1 = set.delete(item10053);
       continue;
     }
-    for (const item10061 of set) {
+    for (const item10061 of tmp2) {
       let removeResult = arg1.remove(item10061);
       continue;
     }
+    const tmp2 = set;
   },
   OVERLAY_INITIALIZE(guilds, clear) {
     guilds = guilds.guilds;
@@ -143,22 +131,15 @@ const guildStore = new GuildStore({
       const iter = guilds[Symbol.iterator]();
       while (iter !== undefined) {
         ({ properties, additionalFields } = nextResult);
-        let tmp5 = additionalFields;
-        let tmp6 = importAll;
-        let tmp7 = dependencyMap;
         let obj = fromGuildPropertiesWithAdditionalFieldsAll;
         let date = null;
         if (null != additionalFields.joinedAt) {
           let _Date = Date;
-          let tmp9 = additionalFields;
-          let tmp10 = new.target;
-          let tmp11 = new.target;
-          date = new Date(tmp5.joinedAt);
+          date = new Date(additionalFields.joinedAt);
         }
         obj = { joinedAt: null, premiumSubscriberCount: null };
         obj[0] = date;
-        let tmp12 = additionalFields;
-        obj[1] = tmp5.premiumSubscriberCount;
+        obj[1] = additionalFields.premiumSubscriberCount;
         let result = clear.set(properties.id, obj.fromGuildPropertiesWithAdditionalFields(properties, obj));
         continue;
       }
@@ -168,8 +149,6 @@ const guildStore = new GuildStore({
   CACHE_LOADED(arg0, clear) {
     clear.clear();
     for (const item10009 of tmp) {
-      let tmp3 = importAll;
-      let tmp4 = dependencyMap;
       let obj = fromGuildPropertiesWithAdditionalFieldsAll;
       let result = arg1.set(item10009.id, obj.fromSerializedGuildRecord(item10009));
       continue;
@@ -180,8 +159,6 @@ const guildStore = new GuildStore({
     if (0 !== guilds.length) {
       clear.clear();
       for (const item10011 of guilds) {
-        let tmp5 = importAll;
-        let tmp6 = dependencyMap;
         let obj = fromGuildPropertiesWithAdditionalFieldsAll;
         let result = arg1.set(item10011.id, obj.fromSerializedGuildRecord(item10011));
         continue;
@@ -251,6 +228,6 @@ const guildStore = new GuildStore({
     }
   }
 }, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
-let result = set2.fileFinishedImporting("stores/GuildStore.tsx");
+let result = obj132.fileFinishedImporting("stores/GuildStore.tsx");
 
 export default guildStore;

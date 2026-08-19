@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx
-import closure_0 from "../../../user_settings/LocaleStore.tsx";
+import _getSystemLocale from "../../../user_settings/LocaleStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx");
 
 export default function getGuildPowerupFormattedDateString(arg0) {
   let obj = arg1;

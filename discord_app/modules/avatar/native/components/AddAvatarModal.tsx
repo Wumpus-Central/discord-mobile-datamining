@@ -6,18 +6,21 @@ import Button from "../../../../design/void/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import getArchivedAvatarURL from "../../../recent_avatars/RecentAvatarUtils.tsx";
 import useDominantRGBFromImage from "../../../calls/native/VideoBackground.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import createPendingImage from "../../../profile_customization/ProfilePendingImageUtils.tsx";
+import DefaultAvatarButton from "PresetAvatarSelect.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../user_profile/UserProfileSettingsStore.tsx";
+import handleFormOpen from "../../../user_profile/UserProfileSettingsStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
-require = arg1;
+require = fn;
 function AddAvatarScreen() {
   function _handleSelectAvatar(closure_5, arg1) {
     const self = this;
@@ -27,10 +30,10 @@ function AddAvatarScreen() {
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw base64;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = base64;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -41,15 +44,15 @@ function AddAvatarScreen() {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw base64;
             } else if (arg0 === 2) {
               c3 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = base64;
               return obj;
             } else {
               c1 = tmp5;
-              let base64 = tmp2;
+              base64 = tmp2;
               base64 = undefined;
               c1 = undefined;
               closure_1_0(false);
@@ -63,14 +66,14 @@ function AddAvatarScreen() {
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw base64;
           } else if (arg0 === 2) {
             c3 = 3;
             let obj3 = { value: null, done: true };
-            obj3[0] = arg1;
+            obj3[0] = base64;
             return obj3;
           } else {
-            base64 = arg1.base64;
+            base64 = base64.base64;
             if (null == base64) {
               pendingImage = undefined;
               if (null != closure_1_0) {
@@ -122,10 +125,9 @@ function AddAvatarScreen() {
   let pendingImage;
   const stateFromStores = obj.useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
   if (null != first) {
-    let tmp9Result = tmp9(14007);
     obj = { imageUri: null, description: null };
-    obj[0] = tmp9(16648).DEFAULT_AVATARS[first];
-    tmp9Result = tmp9(8384);
+    obj[0] = DefaultAvatarButton.DEFAULT_AVATARS[first];
+    const tmp9Result = getArchivedAvatarURL;
     obj[1] = tmp9Result.generateAvatarDescription();
     pendingImage = tmp9Result.createPendingImage(obj);
   }
@@ -148,15 +150,15 @@ function AddAvatarScreen() {
   obj1 = { style: tmp.headerContainer, children: null };
   let obj2 = { children: null };
   let obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp9(1236).intl;
+  const intl = getSystemLocale.intl;
   obj3[4] = intl.string(getSystemLocale.t.XQRWvR);
   const items2 = [callback(Text.Text, obj3), ];
   let obj4 = { style: tmp.subtitle, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
-  const intl2 = tmp9(1236).intl;
+  const intl2 = getSystemLocale.intl;
   obj4[3] = intl2.string(getSystemLocale.t.fH9TLT);
   items2[1] = callback(Text.Text, obj4);
   obj2[0] = items2;
-  const items3 = [closure_10(View, obj2), , ];
+  const items3 = [callback(View, obj2), , ];
   const memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(imageUri);
   items3[1] = callback(first(16657), {
     avatarSource: useDominantRGBFromImage.memoizedImageSource(imageUri),
@@ -175,32 +177,31 @@ function AddAvatarScreen() {
   const obj6 = { style: tmp.errorContainer, children: null };
   const obj7 = { style: tmp.errorText, children: null };
   if (stringResult) {
-    const intl3 = tmp9(1236).intl;
-    stringResult = intl3.string(tmp9(1236).t.XyLlVm);
+    const intl3 = getSystemLocale.intl;
+    stringResult = intl3.string(getSystemLocale.t.XyLlVm);
   }
   obj7[1] = stringResult;
   obj6[1] = callback(Button.LegacyText, obj7);
   items3[2] = callback(View, obj6);
   obj1[1] = items3;
-  const items4 = [closure_10(View, obj1), callback(first(16648), { onAvatarSelect: tmp4[1], selectedAvatar: first }), ];
+  const items4 = [callback(View, obj1), callback(first(16648), { onAvatarSelect: tmp4[1], selectedAvatar: first }), ];
   const obj8 = { style: tmp.buttonContainer, children: null };
   const obj9 = { text: null, grow: true, onPress: null, disabled: null };
-  const intl4 = tmp9(1236).intl;
+  const intl4 = getSystemLocale.intl;
   obj9[0] = intl4.string(getSystemLocale.t.PDTjLN);
   obj9[2] = function onPress() {
-    return closure_1_0(table[25]).handlePressNext(pendingImage, first);
+    return require(table[25]).handlePressNext(pendingImage, first);
   };
   obj9[3] = null == pendingImage;
   obj8[1] = callback(Button2.Button, obj9);
   items4[2] = callback(View, obj8);
   obj[1] = items4;
-  return closure_10(View, obj);
+  return callback(View, obj);
 }
 class AddAvatarModal {
   constructor() {
     memo = closure_5.useMemo(() => {
-      let obj = { ADD_AVATAR: null };
-      obj = {
+      let obj = {
         impressionName: callback(503).ImpressionNames.AVATAR_UPLOAD,
         headerRight() {
           const obj = { text: null, onPress: null };
@@ -229,8 +230,7 @@ class AddAvatarModal {
 }
 ({ UPLOAD_MEDIUM_SIZE: closure_8, Fonts, ModalAnimation } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null, errorText: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32, alignItems: "center" };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", alignItems: "center" };
 createCacheKey[2] = { marginHorizontal: 16, marginBottom: 16 };
@@ -241,7 +241,6 @@ const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_MEDIUM, ThemesDef
 createCacheKey[6] = {};
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 AddAvatarModal.modalConfig = { animation: ModalAnimation.SLIDE_IN_OUT };
-let obj1 = {};
-let result = require("set").fileFinishedImporting("modules/avatar/native/components/AddAvatarModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/avatar/native/components/AddAvatarModal.tsx");
 
 export default AddAvatarModal;

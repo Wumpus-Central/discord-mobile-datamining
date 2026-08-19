@@ -1,20 +1,24 @@
 // discord_app/modules/emojis/native/Emoji.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import set from "../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../utils/PlatformUtils.tsx";
+import Button from "../../../design/void/native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import getEmojiUnavailableReasonDefault from "../../../utils/EmojiUtils.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import registerAssetDefault from "../../../../_runtime/06931_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/06932_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../user_settings/ThemeStore.tsx";
+import handleThemeChange from "../../user_settings/ThemeStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/emojis/native/Emoji.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emojis/native/Emoji.tsx");
 
 export default function Emoji(arg0) {
   ({ src, name } = arg0);
   ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit } = arg0);
-  let obj = set;
+  let obj = obj132;
   let uRL = src;
   if (obj.isAndroid()) {
     uRL = src;
@@ -29,22 +33,21 @@ export default function Emoji(arg0) {
       if ("" !== uRL) {
         obj = { resizeMode: "contain", style: null, placeholder: null, source: null };
         obj[1] = fastImageStyle;
-        const tmp10 = preloadDefault;
         if (tmpResult.isThemeDark(theme.theme)) {
-          let tmp9Result = tmp9(6931);
+          let tmp9Result = registerAssetDefault;
         } else {
-          tmp9Result = tmp9(6932);
+          tmp9Result = registerAssetDefault2;
         }
         obj[2] = tmp9Result;
         obj1 = { uri: null };
         obj1[0] = uRL;
         obj[3] = obj1;
-        let tmp6Result = tmp6(tmp10, obj);
-        tmpResult = tmp(1363);
+        let tmp6Result = <tmp10 resizeMode="contain" style={null} placeholder={null} source={null} />;
+        tmpResult = AccessibilityAnnouncer;
       }
       obj[1] = tmp6Result;
-      return tmp6(tmp7, obj);
+      return <tmp7 {...obj} />;
     }
   }
-  tmp6Result = tmp6(tmp(1297).LegacyText, { style: textEmojiStyle, allowFontScaling: false, adjustsFontSizeToFit, children: name });
+  tmp6Result = jsx(Button.LegacyText, { style: textEmojiStyle, allowFontScaling: false, adjustsFontSizeToFit, children: name });
 };

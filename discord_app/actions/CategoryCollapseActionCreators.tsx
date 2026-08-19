@@ -1,26 +1,22 @@
 // discord_app/actions/CategoryCollapseActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import dispatcherDefault from "../Dispatcher.tsx";
 
-const result = set.fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
 
 export const categoryCollapse = function categoryCollapse(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "CATEGORY_COLLAPSE", id };
+  const obj = { type: "CATEGORY_COLLAPSE", id };
   obj.dispatch(obj);
 };
 export const categoryExpand = function categoryExpand(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "CATEGORY_EXPAND", id };
+  const obj = { type: "CATEGORY_EXPAND", id };
   obj.dispatch(obj);
 };
 export const categoryCollapseAll = function categoryCollapseAll(guildId) {
-  let obj = dispatcherDefault;
-  obj = { type: "CATEGORY_COLLAPSE_ALL", guildId };
+  const obj = { type: "CATEGORY_COLLAPSE_ALL", guildId };
   obj.dispatch(obj);
 };
 export const categoryExpandAll = function categoryExpandAll(guildId) {
-  let obj = dispatcherDefault;
-  obj = { type: "CATEGORY_EXPAND_ALL", guildId };
+  const obj = { type: "CATEGORY_EXPAND_ALL", guildId };
   obj.dispatch(obj);
 };

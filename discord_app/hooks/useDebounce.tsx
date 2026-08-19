@@ -1,8 +1,8 @@
 // discord_app/hooks/useDebounce.tsx
-import closure_0 from "../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../_runtime/00019_noop.js";
+import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("hooks/useDebounce.tsx");
+const result = require("obj132").fileFinishedImporting("hooks/useDebounce.tsx");
 
 export default function useDebounce(arg0, arg1) {
   const callback = arg0;

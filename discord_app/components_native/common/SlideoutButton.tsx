@@ -5,10 +5,10 @@ import Button from "../../design/void/native.tsx";
 import PressableBase from "../../design/void/Pressables/native/Pressables.tsx";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import hexToRgba from "../../utils/ColorUtils.tsx";
 
-require = arg1;
+require = fn;
 class SlideoutButton {
   constructor(arg0) {
     ({ title, height } = global);
@@ -34,13 +34,12 @@ class SlideoutButton {
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { button: { alignSelf: "flex-end", justifyContent: "center", alignItems: "center" }, buttonText: null };
-createCacheKey = { color: null, fontSize: 12, fontFamily: null, marginTop: 2, marginHorizontal: 2, textAlign: "center" };
+const createCacheKey = { color: null, fontSize: 12, fontFamily: null, marginTop: 2, marginHorizontal: 2, textAlign: "center" };
 createCacheKey[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.6);
 createCacheKey[2] = require("ME").Fonts.PRIMARY_SEMIBOLD;
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 SlideoutButton.width = 72;
-const result = require("set").fileFinishedImporting("components_native/common/SlideoutButton.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/SlideoutButton.tsx");
 
 export default SlideoutButton;

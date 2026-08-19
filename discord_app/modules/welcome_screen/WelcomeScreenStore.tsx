@@ -50,10 +50,6 @@ prototype["hasSeen"] = function hasSeen(arg0) {
   }
   if (null == arg0) {
     return tmp;
-  } else if (flag) {
-    let tmp3 = c3;
-  } else {
-    tmp3 = table[arg0] || false;
   }
 };
 prototype["isEmpty"] = function isEmpty(arg0) {
@@ -104,7 +100,7 @@ obj = {
   }
 };
 const welcomeScreenStore = new WelcomeScreenStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/welcome_screen/WelcomeScreenStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/welcome_screen/WelcomeScreenStore.tsx");
 
 export default welcomeScreenStore;
 export const NO_WELCOME_SCREEN = obj;

@@ -1,5 +1,5 @@
 // discord_app/modules/blocked_domains/BlockedDomainStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import isBlockedDomain from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
@@ -19,10 +19,9 @@ prototype["isBlockedDomain"] = function isBlockedDomain(arg0) {
     obj = { blocked_domain: null };
     obj[0] = isBlockedDomainResult;
     expandEventPropertiesDefault.track(AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, obj);
-    const obj3 = expandEventPropertiesDefault;
   }
   return isBlockedDomainResult;
 };
-const result = set.fileFinishedImporting("modules/blocked_domains/BlockedDomainStore.tsx");
+const result = obj132.fileFinishedImporting("modules/blocked_domains/BlockedDomainStore.tsx");
 
 export default prototype;

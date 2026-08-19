@@ -1,11 +1,13 @@
 // discord_app/modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import parseServerPerkConfigKind from "../../premium/perks_state/PerksStateUtils.tsx";
+import create from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import { PremiumTypes } from "../../premium/PremiumConstants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx");
 
 export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentUser) {
   if (obj.canUseMonthlyOrbs(currentUser)) {
@@ -14,10 +16,10 @@ export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentU
       if (currentUser != null) {
         perks = currentUser.perks;
       }
-      const perkSource = tmp2(1938).getPerkSource(perks, tmp2(1940).Perk.MONTHLY_ORBS);
+      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, create.Perk.MONTHLY_ORBS);
       let hasItem = null != perkSource;
       if (hasItem) {
-        hasItem = perkSource.includes(tmp2(1940).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+        hasItem = perkSource.includes(create.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
       }
       return hasItem;
     }
@@ -28,21 +30,20 @@ export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentU
 export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize;
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
-    let tmpResult = tmp(4039);
+    let tmpResult = getPremiumPlanItem;
     flag = false;
     if (!tmpResult.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2)) {
-      tmpResult = tmp(1938);
+      tmpResult = parseServerPerkConfigKind;
       let perks;
       if (stateFromStores != null) {
         perks = stateFromStores.perks;
       }
-      const perkSource = tmpResult.getPerkSource(perks, tmp(1940).Perk.MONTHLY_ORBS);
+      const perkSource = tmpResult.getPerkSource(perks, create.Perk.MONTHLY_ORBS);
       let hasItem = null != perkSource;
       if (hasItem) {
-        hasItem = perkSource.includes(tmp(1940).PerkSource.SOURCE_THIRDPARTY_CROISSANT);
+        hasItem = perkSource.includes(create.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
       }
       flag = hasItem;
     }

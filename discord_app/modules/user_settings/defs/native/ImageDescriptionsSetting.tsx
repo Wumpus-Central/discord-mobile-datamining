@@ -2,16 +2,15 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
-import closure_2 from "../../UnsyncedUserSettingsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import CHANNEL_SIDEBAR_WIDTH from "../../UnsyncedUserSettingsStore.tsx";
+import "createToggle";
 
-require = arg1;
+require = fn;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
-  let obj = UserSettingsText;
-  obj = { videoUploadQuality: closure_2.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: closure_2.lowQualityImageMode, dataSavingMode: closure_2.dataSavingMode };
+  const obj = { videoUploadQuality: closure_2.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: closure_2.lowQualityImageMode, dataSavingMode: closure_2.dataSavingMode };
   obj.setImageDescriptions(obj);
 }
-createToggle = {
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["w8j+yW"]);
@@ -24,7 +23,7 @@ createToggle = {
   onValueChange: onImageDescriptionSettingValueChange
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
 
 export default createToggle;
 export { onImageDescriptionSettingValueChange };

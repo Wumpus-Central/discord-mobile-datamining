@@ -10,7 +10,7 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 let closure_7 = createCacheKey.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
 const memoResult = importAllResult.memo(function UnreadBadge(arg0) {
   ({ unread, resolvedUnreadSetting, muted } = arg0);
@@ -18,9 +18,8 @@ const memoResult = importAllResult.memo(function UnreadBadge(arg0) {
   getFontScale;
   let tmp9Result = null;
   if (unread) {
-    let obj = { style: null, children: null };
     const items = [tmp.unreadBadge, tmp4.unreadBadge.position, ];
-    obj = { width: null, height: null };
+    let obj = { width: null, height: null };
     obj[0] = tmp4.unreadBadge.size;
     obj[1] = tmp4.unreadBadge.size;
     items[2] = obj;
@@ -38,12 +37,11 @@ const memoResult = importAllResult.memo(function UnreadBadge(arg0) {
     const items1 = [obj1];
     obj[2] = items1;
     obj[1] = jsx(DEFAULT_BADGE_SIZEDefault, { classic: true, size: null, badgeStyle: null });
-    tmp9Result = tmp9(View, obj);
-    const tmp10 = View;
+    tmp9Result = <View classic size={null} badgeStyle={null} />;
     const tmp2Result = DEFAULT_BADGE_SIZEDefault;
   }
   return tmp9Result;
 });
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");
+const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");
 
 export default memoResult;

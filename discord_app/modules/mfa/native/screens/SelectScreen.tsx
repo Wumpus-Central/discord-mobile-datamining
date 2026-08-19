@@ -6,12 +6,9 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SELECT_NAMES } from "../../MFAConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0) => {
@@ -25,40 +22,39 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
   obj[1] = { marginTop: diff, marginLeft: 16, marginRight: 16, display: "flex", alignItems: "center" };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/mfa/native/screens/SelectScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/mfa/native/screens/SelectScreen.tsx");
 
 export default function SelectScreen(mfaChallenge) {
   const _require = mfaChallenge;
   const tmp = useWideAuthViewDefault();
   const tmp2 = callback3(tmp);
-  let obj = _useNavigation;
+  let obj = useNavigation;
   importDefault = obj.useNavigation();
-  obj = { top: !tmp, style: tmp2.container, children: null };
   obj = { style: tmp2.selectContainer, children: null };
   obj1 = { variant: "heading-xl/extrabold", children: null };
-  const intl = _getSystemLocale.intl;
-  obj1[1] = intl.string(_getSystemLocale.t.S9b9bX);
-  const items = [callback(_Text.Text, obj1), ];
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj1[1] = intl.string(require("../../../../intl/index.native.tsx").t.S9b9bX);
+  const items = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj1), ];
   const obj2 = { variant: "text-sm/medium", children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj2[1] = intl2.string(_getSystemLocale.t.Jz1lXO);
-  items[1] = callback(_Text.Text, obj2);
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj2[1] = intl2.string(require("../../../../intl/index.native.tsx").t.Jz1lXO);
+  items[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj2);
   obj[1] = items;
   const items1 = [callback2(View, obj), ];
   const methods = mfaChallenge.mfaChallenge.methods;
   items1[1] = callback(View, {
     style: { marginTop: 16, gap: 8 },
-    children: methods.map((type) => {
-      closure_1 = type;
+    children: methods.map((item, index) => {
+      closure_1 = item;
       closure_2 = closure_1;
-      return closure_1_5(mfaChallenge(closure_1_2[6]).RowButton, {
-        label: closure_1_4[type.type],
+      return closure_1_5(mfaChallenge(dependencyMap[6]).RowButton, {
+        label: SELECT_NAMES[item.type],
         onPress() {
 
         }
-      }, type.type);
+      }, item.type);
     })
   });
   obj[2] = items1;
-  return callback2(_SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  return callback2(require("../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, obj);
 };

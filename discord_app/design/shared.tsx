@@ -1,10 +1,10 @@
 // discord_app/design/shared.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import _mod1350 from "../../discord_common/js/packages/design/shared.tsx";
 import isThemeLight from "utils/shared/themes.tsx";
 import WCAGContrastRatios from "../../discord_common/js/packages/design/components/Colors/shared/Colors.tsx";
 
-const result = set.fileFinishedImporting("design/shared.tsx");
+const result = obj132.fileFinishedImporting("design/shared.tsx");
 
 export const AccessibilityAnnouncer = _mod1350.AccessibilityAnnouncer;
 export const AccessibilityPreferencesContext = _mod1350.AccessibilityPreferencesContext;

@@ -1,5 +1,5 @@
 // discord_app/modules/content_inventory/ContentInventoryExperiments.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ExperimentBuckets from "../experiments/ExperimentConstants.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
 import createExperiment from "../experiments/index.tsx";
@@ -11,7 +11,7 @@ const experiment = createExperiment.createExperiment(obj);
 obj = { 1: null };
 obj[1] = { enabled: true };
 const apexExperiment1 = ApexExperiment.createApexExperiment({ name: "2026-07-hotwheels-clickable-game-icon", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryExperiments.tsx");
+const result = obj132.fileFinishedImporting("modules/content_inventory/ContentInventoryExperiments.tsx");
 
 export const MemberlistRankerExperiment = apexExperiment;
 export const HotwheelsActivityFeedNvidiaExperiment = experiment;

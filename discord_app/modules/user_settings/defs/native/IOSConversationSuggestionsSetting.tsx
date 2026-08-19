@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import isIterable from "../../../../../_runtime/04006_isIterable.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import identity from "../../../../../_runtime/00700_identity.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 
-require = arg1;
+require = fn;
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 require("get ActivityIndicator").NativeModules.IntentsHandler;
 identity = {
@@ -18,8 +18,8 @@ identity = {
   useValue: function useIOSConversationSuggestionsSettingValue() {
     const effect = React.useEffect(() => {
       conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();
-      conversationSuggestionsEnabled.then((arg0) => {
-        const callback = arg0;
+      conversationSuggestionsEnabled.then((result) => {
+        const callback = result;
         callback(table[4]).batchUpdates(() => closure_1_4.setState({ isEnabled: closure_0 }));
       });
     }, []);
@@ -27,18 +27,18 @@ identity = {
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
-    result.then((arg0) => {
-      const callback = arg0;
+    result.then((result) => {
+      const callback = result;
       callback(705).batchUpdates(() => closure_1_4.setState({ isEnabled: closure_0 }));
-    }).catch((arg0) => {
-      new callback2(3)("ConversationSuggestions").error("Error suggesting conversations", arg0);
+    }).catch((error) => {
+      new callback2(3)("ConversationSuggestions").error("Error suggesting conversations", error);
     });
   },
   usePredicate: function useHasIOSConversationSuggestionsSetting() {
-    return !set.isAndroid();
+    return !obj132.isAndroid();
   }
 };
 identity = createToggle.createToggle(identity);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/IOSConversationSuggestionsSetting.tsx");
 
 export default identity;

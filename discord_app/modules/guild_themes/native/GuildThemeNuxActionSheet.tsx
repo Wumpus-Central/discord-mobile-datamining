@@ -1,45 +1,37 @@
 // discord_app/modules/guild_themes/native/GuildThemeNuxActionSheet.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../stores/SelectedGuildStore.tsx";
-import closure_8 from "../GuildThemeRuntimeStore.tsx";
+import handleConnectionOpen from "../../../stores/SelectedGuildStore.tsx";
+import snapshotSelectedGuildId from "../GuildThemeRuntimeStore.tsx";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const GuildThemeNuxActionSheet = "GuildThemeNuxActionSheet";
 let closure_13 = new timestampDefault("GuildThemeNuxActionSheet");
-createCacheKey = { container: null, title: null, description: null, options: null, warning: null, footer: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: 0 };
+const createCacheKey = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: 0 };
 createCacheKey[0] = createCacheKey;
 const tmp3 = new timestampDefault("GuildThemeNuxActionSheet");
 createCacheKey[1] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
-let obj1 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
-let obj2 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_12 };
-let obj3 = { marginBottom: ThemesDefault.space.PX_12 };
 createCacheKey[4] = { marginBottom: ThemesDefault.space.PX_12 };
-let obj4 = { marginBottom: ThemesDefault.space.PX_12 };
 createCacheKey[5] = { gap: ThemesDefault.space.PX_8 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_themes/native/GuildThemeNuxActionSheet.tsx");
 
 export default function GuildThemeNuxActionSheet(guildId) {
   guildId = guildId.guildId;
   const markAsDismissed = guildId.markAsDismissed;
   dependencyMap = undefined;
-  let callback;
   let callback2;
   let React;
-  closure_6 = undefined;
   let stateFromStores;
   let callback1;
   const tmp = callback5();
@@ -75,12 +67,12 @@ export default function GuildThemeNuxActionSheet(guildId) {
   }, items2);
   const effect = React.useEffect(() => {
     if (stateFromStores !== guildId) {
-      markAsDismissed(_undefined[14]).hideActionSheet(closure_1_12);
+      markAsDismissed(_undefined[14]).hideActionSheet(GuildThemeNuxActionSheet);
       const obj = markAsDismissed(_undefined[14]);
     }
   }, items3);
   const items4 = [markAsDismissed];
-  callback = React.useCallback((arg0) => {
+  let callback = React.useCallback((arg0) => {
     _undefined2(null);
     _undefined(arg0);
   }, []);
@@ -121,11 +113,11 @@ export default function GuildThemeNuxActionSheet(guildId) {
           } else {
             const callback = tmp3;
             closure_0 = tmp7;
-            if (closure_1_7 === closure_1_0) {
+            if (stateFromStores === guildId) {
               v02(true);
               v0(null);
               v0 = 1;
-              let obj3 = closure_1_0(closure_1_2[11]);
+              let obj3 = guildId(closure_1_2[11]);
               v02 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
@@ -139,8 +131,8 @@ export default function GuildThemeNuxActionSheet(guildId) {
           v0 = 0;
           closure_0 = closure_2;
           closure_1_13.error("Failed to save guild theme NUX preference", closure_0);
-          const intl = closure_1_0(closure_1_2[15]).intl;
-          v0(intl.string(closure_1_0(closure_1_2[15]).t.fEptJP));
+          const intl = guildId(closure_1_2[15]).intl;
+          v0(intl.string(guildId(closure_1_2[15]).t.fEptJP));
           v02(false);
           c5 = 3;
           const obj2 = { value: null, done: true };
@@ -153,7 +145,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
           v0 = 0;
           c5.current = true;
           callback(closure_1_9.TAKE_ACTION);
-          obj = closure_1_1(closure_1_2[14]);
+          obj = markAsDismissed(closure_1_2[14]);
           obj.hideActionSheet(closure_1_12);
         }
         v0 = 0;
@@ -173,7 +165,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
     }
   }), items5);
   const callback3 = React.useCallback(() => {
-    callback1(closure_1_9.USER_DISMISS);
+    callback1(ContentDismissActionType.USER_DISMISS);
   }, items6);
   let intl = guildId(1236).intl;
   const string = intl.string;

@@ -1,22 +1,25 @@
 // discord_app/modules/polls/native/PollVotesActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import registerAssetDefault from "../../../../_runtime/10887_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10888_registerAsset.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_9 from "../../a11y/AccessibilityStore.tsx";
-import closure_10 from "../../emojis/EmojiStore.tsx";
-import closure_11 from "../../../stores/ChannelStore.tsx";
-import closure_12 from "../../../stores/MessageStore.tsx";
-import closure_13 from "../../../stores/UserStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import getEmojiToGroupId from "../../emojis/EmojiStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import reinjectEphemerals from "../../../stores/MessageStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function PollEmoji(emoji) {
   emoji = emoji.emoji;
   const tmp = callback3();
@@ -24,9 +27,9 @@ function PollEmoji(emoji) {
   const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != emoji.id) {
-      let animated = tmp.animated;
+      let animated = emoji.animated;
       if (!animated) {
-        const customEmojiById = closure_1_10.getCustomEmojiById(tmp.id);
+        const customEmojiById = closure_1_10.getCustomEmojiById(emoji.id);
         let flag;
         if (customEmojiById != null) {
           flag = customEmojiById.animated;
@@ -36,9 +39,8 @@ function PollEmoji(emoji) {
         }
         animated = flag;
       }
-      let obj = closure_1_1(closure_1_2[13]);
-      obj = { id: null, animated: null, size: 16 };
-      obj[0] = tmp.id;
+      const obj = { id: null, animated: null, size: 16 };
+      obj[0] = emoji.id;
       obj[1] = animated;
       return obj.getEmojiURL(obj);
     }
@@ -50,13 +52,11 @@ function PollVotesHeader(message) {
   message = message.message;
   const selectedAnswerId = message.selectedAnswerId;
   const setSelectedAnswerId = message.setSelectedAnswerId;
-  let ref;
-  closure_4 = undefined;
   importAllResult = undefined;
   let tmp = callback3();
   let items = [message.reactions];
   const memo = importAllResult.useMemo(() => message(setSelectedAnswerId[18]).getTotalVotes(message.reactions), items);
-  ref = importAllResult.useRef(null);
+  const ref = importAllResult.useRef(null);
   closure_4 = importAllResult.useRef(null);
   importAllResult = importAllResult.useRef(false);
   const items1 = [selectedAnswerId];
@@ -189,8 +189,7 @@ function PollVotesHeader(message) {
   message(setSelectedAnswerId[19]);
   let tmp9 = null;
   if (null != message.poll) {
-    let obj = { children: null };
-    obj = { style: null, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
+    let obj = { style: null, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
     obj[0] = tmp.headerText;
     obj[4] = message.poll.question.text;
     const items2 = [callback(tmp5(tmp6[17]).Text, obj), , ];
@@ -209,14 +208,14 @@ function PollVotesHeader(message) {
     const intl2 = tmp5(tmp6[15]).intl;
     obj3[6] = intl2.string(tmp5(tmp6[15]).t["qbir+4"]);
     const answers = message.poll.answers;
-    obj3[7] = answers.map((answer) => {
-      const tmp = selectedAnswerId === String(answer.answer_id);
+    obj3[7] = answers.map((item, index) => {
+      const tmp = selectedAnswerId === String(item.answer_id);
       let tmp4;
       if (tmp) {
         tmp4 = closure_4;
       }
-      const obj = { ref: tmp4, answer, selected: tmp, reaction: message(setSelectedAnswerId[20]).reactionForId(message.reactions, String(answer.answer_id)), setSelectedAnswerId };
-      return closure_1_14(closure_1_18, obj, answer.answer_id);
+      const obj = { ref: tmp4, answer: item, selected: tmp, reaction: message(setSelectedAnswerId[20]).reactionForId(message.reactions, String(item.answer_id)), setSelectedAnswerId };
+      return closure_1_14(closure_1_18, obj, item.answer_id);
     });
     obj2[1] = callback(closure_8, obj3);
     items2[2] = callback(tmp5(tmp6[19]).GestureDetector, obj2);
@@ -230,19 +229,17 @@ function VotersList(channelId) {
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
   let analyticsLocations;
-  let reactors;
-  let stateFromStores;
   let sharedValue;
   analyticsLocations = messageId(analyticsLocations[21])().analyticsLocations;
   const tmp4 = messageId(analyticsLocations[22])({ channelId, messageId, reaction });
-  reactors = tmp4.reactors;
-  let obj = channelId(analyticsLocations[23]);
-  obj = { channelId, messageId, reactionSelected: reaction, reactors, reactorsHasMore: tmp4.hasMore, reactionType: channelId(analyticsLocations[24]).ReactionTypes.VOTE };
+  const reactors = tmp4.reactors;
+  channelId(analyticsLocations[23]);
+  let obj = { channelId, messageId, reactionSelected: reaction, reactors, reactorsHasMore: tmp4.hasMore, reactionType: channelId(analyticsLocations[24]).ReactionTypes.VOTE };
   const reactorsOnScrollNative = obj.useReactorsOnScrollNative(obj);
   const tmp = callback3();
   const tmp2 = messageId;
   const items = [closure_11];
-  stateFromStores = channelId(analyticsLocations[12]).useStateFromStores(items, () => closure_1_11.getChannel(channelId));
+  const stateFromStores = channelId(analyticsLocations[12]).useStateFromStores(items, () => closure_1_11.getChannel(channelId));
   const items1 = [stateFromStores, reactors.length, channelId, messageId, analyticsLocations];
   const callback = sharedValue.useCallback((item) => {
     item = item.item;
@@ -250,24 +247,24 @@ function VotersList(channelId) {
     let obj = messageId(analyticsLocations[25]);
     let guild_id;
     if (stateFromStores != null) {
-      guild_id = tmp3.guild_id;
+      guild_id = stateFromStores.guild_id;
     }
     let id;
     if (stateFromStores != null) {
-      id = tmp3.id;
+      id = stateFromStores.id;
     }
     let nickname = obj.getNickname(guild_id, id, item);
     if (nickname == null) {
-      let tmpResult = tmp(tmp2[26]);
+      let tmpResult = messageId(analyticsLocations[26]);
       nickname = tmpResult.getGlobalName(item);
     }
-    tmpResult = tmp(tmp2[26]);
+    tmpResult = messageId(analyticsLocations[26]);
     const userTag = tmpResult.getUserTag(item);
     let user = closure_1_13.getUser(item.id);
     obj = { start: 0 === index, end: reactors.length - 1 === index, icon: null, label: null, subLabel: null, onPress: null };
     let guild_id1;
     if (stateFromStores != null) {
-      guild_id1 = tmp3.guild_id;
+      guild_id1 = stateFromStores.guild_id;
     }
     obj = { guildId: guild_id1, user: null, size: null };
     if (user == null) {
@@ -280,7 +277,7 @@ function VotersList(channelId) {
     if (nickname == null) {
       obj1 = { user: null };
       obj1[0] = item;
-      tmp9Result = tmp9(tmp(tmp2[29]), obj1);
+      tmp9Result = closure_1_14(messageId(analyticsLocations[29]), obj1);
     }
     obj[3] = tmp9Result;
     let tmp13 = null;
@@ -325,37 +322,32 @@ function VotersList(channelId) {
 }
 function NoResults() {
   const tmp = callback3();
-  let obj = { style: tmp.noResultsContainer, children: null };
-  obj = { style: tmp.noResultsImage, source: null };
+  let obj = { style: tmp.noResultsImage, source: null };
   const tmp4 = useThemeDefault();
-  const tmp5 = closure_15;
-  const tmp6 = closure_7;
-  const tmp8 = closure_6;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(10887);
+    let tmp2Result = registerAssetDefault;
   } else {
-    tmp2Result = tmp2(10888);
+    tmp2Result = registerAssetDefault2;
   }
   obj[1] = tmp2Result;
-  const items = [closure_14(tmp8, obj), , ];
+  const items = [callback(closure_6, obj), , ];
   obj = { style: tmp.noResultsTitle, variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = tmp9(1236).intl;
+  const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.vhQK3o);
-  items[1] = closure_14(Text.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj1 = { style: tmp.noResultsSubtitle, variant: "text-sm/semibold", color: "text-default", children: null };
-  const intl2 = tmp9(1236).intl;
+  const intl2 = getSystemLocale.intl;
   obj1[3] = intl2.string(getSystemLocale.t.bwytdh);
-  items[2] = closure_14(Text.Text, obj1);
+  items[2] = callback(Text.Text, obj1);
   obj[1] = items;
-  return tmp5(tmp6, obj);
+  return callback2(closure_7, obj);
 }
 let c5 = importAllResult;
 ({ Image: closure_6, View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let obj = { headerText: { textAlign: "center", paddingHorizontal: 16 }, subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 }, answerScroll: { marginTop: 24 }, answerScrollContainer: { gap: 4, paddingHorizontal: 16 }, answerName: { marginTop: 16, marginHorizontal: 16, marginBottom: 8 }, list: { paddingHorizontal: 16 }, answerButton: null, answerSelected: null, answerEmoji: null, answerText: null, emojiText: null, emojiImage: null, noResultsContainer: null, noResultsImage: null, noResultsTitle: null, noResultsSubtitle: null };
-obj = { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.xs, maxWidth: 200 };
+let obj = { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: ThemesDefault.radii.xs, maxWidth: 200 };
 obj[6] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[7] = createCacheKey;
 obj[8] = { marginRight: 8 };
 obj[9] = { flexShrink: 1 };
@@ -389,8 +381,7 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
     str = "interactive-text-active";
   }
   const intl = answer(1236).intl;
-  let obj = { numVotes: num, option: answer.poll_media.text };
-  obj = { ref, onPress: callback, style: null, accessibilityRole: "tab", accessibilityState: null, accessibilityLabel: null, children: null };
+  let obj = { ref, onPress: callback, style: null, accessibilityRole: "tab", accessibilityState: null, accessibilityLabel: null, children: null };
   const items1 = [tmp.answerButton, ];
   let answerSelected;
   if (selected) {
@@ -420,23 +411,21 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
   const obj2 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
   const items3 = [" ", "(", num.toLocaleString(), ")"];
   obj2[3] = items3;
-  items2[2] = closure_15(answer(4734).Text, obj2);
+  items2[2] = callback2(answer(4734).Text, obj2);
   obj[6] = items2;
-  return closure_15(answer(5433).PressableHighlight, obj);
+  return callback2(answer(5433).PressableHighlight, obj);
 });
 let closure_20 = { code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}" };
-let result = require("set").fileFinishedImporting("modules/polls/native/PollVotesActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/polls/native/PollVotesActionSheet.tsx");
 
 export default function PollVotesActionSheet(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
-  let first;
   let stateFromStores;
-  closure_4 = undefined;
   const tmp = callback3();
   let obj = importAllResult;
   const tmp4 = stateFromStores(importAllResult.useState(channelId.initialAnswerId), 2);
-  first = tmp4[0];
+  const first = tmp4[0];
   obj1 = channelId(first[12]);
   const items = [closure_12];
   stateFromStores = obj1.useStateFromStores(items, () => closure_1_12.getMessage(channelId, messageId));
@@ -456,10 +445,10 @@ export default function PollVotesActionSheet(channelId) {
   const memo = obj.useMemo(() => {
     let reactions;
     if (stateFromStores != null) {
-      reactions = tmp.reactions;
+      reactions = stateFromStores.reactions;
     }
     if (null != reactions) {
-      return channelId(first[20]).reactionForId(tmp.reactions, first);
+      return channelId(first[20]).reactionForId(stateFromStores.reactions, first);
     }
   }, items2);
   if (null != stateFromStores && null != stateFromStores.poll) {
@@ -468,7 +457,7 @@ export default function PollVotesActionSheet(channelId) {
       const poll = stateFromStores.poll;
       if (poll != null) {
         const answers = poll.answers;
-        found = answers.find((answer_id) => String(answer_id.answer_id) === first);
+        found = answers.find((item, index) => String(item.answer_id) === first);
       }
     }
     let num;
@@ -501,22 +490,23 @@ export default function PollVotesActionSheet(channelId) {
     obj3[0] = num;
     items3[2] = intl.format(tmp6(tmp2[15]).t["SG/Cyy"], obj3);
     obj2[3] = items3;
-    const items4 = [closure_15(tmp6(tmp2[17]).Text, obj2), ];
+    const items4 = [callback2(tmp6(tmp2[17]).Text, obj2), ];
     if (null != memo) {
       if (num > 0) {
         const obj4 = { channelId: null, messageId: null, reaction: null };
         obj4[0] = channelId;
         obj4[1] = messageId;
         obj4[2] = memo;
-        let tmp13Result = tmp13(VotersList, obj4);
+        let tmp13Result = callback(VotersList, obj4);
       }
       items4[1] = tmp13Result;
       obj[2] = items4;
-      obj[1] = tmp14(tmp6(tmp2[40]).BottomSheet, obj);
-      return tmp13(tmp6(tmp2[21]).AnalyticsLocationProvider, obj);
+      obj[1] = callback2(tmp6(tmp2[40]).BottomSheet, obj);
+      return callback(tmp6(tmp2[21]).AnalyticsLocationProvider, obj);
     }
-    tmp13Result = tmp13(NoResults, {});
+    tmp13Result = callback(NoResults, {});
   } else {
     return null;
   }
+  tmp3 = messageId(first[21]);
 };

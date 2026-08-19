@@ -1,9 +1,8 @@
 // discord_app/modules/collectibles/records/FeaturedCategorySubblockRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import FeaturedSubblockType from "../../../../discord_common/js/shared/shared-constants/FeaturedSubblockType.tsx";
 
-let prototype;
-prototype = function FeaturedCategorySubblockRecord(unpublished_at) {
+const prototype = function FeaturedCategorySubblockRecord(unpublished_at) {
   const obj = Object.create(new.target.prototype);
   obj.type = FeaturedSubblockType.FeaturedSubblockType.CATEGORY;
   ({ category_store_listing_id: tmp.categoryStoreListingId, name: tmp.name } = unpublished_at);
@@ -32,6 +31,6 @@ prototype["fromServer"] = function fromServer(unpublished_at) {
   ({ body_text: tmp2.bodyText, banner_text_color: tmp2.bannerTextColor, banner_url: tmp2.bannerUrl, asset_url: tmp2.assetUrl } = unpublished_at);
   return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/FeaturedCategorySubblockRecord.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/records/FeaturedCategorySubblockRecord.tsx");
 
 export const FeaturedCategorySubblockRecord = prototype;

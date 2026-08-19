@@ -4,9 +4,9 @@ import dispatcherDefault from "../Dispatcher.tsx";
 import explicitContentFromProto from "../modules/user_settings/UserSettings.tsx";
 import rebuildDefault from "../modules/messages/MessageParser.tsx";
 import createEmptyState from "../modules/channel_text_area/slate/SlateUtils.tsx";
-import closure_3 from "MessageStore.tsx";
+import reinjectEphemerals from "MessageStore.tsx";
 
-require = arg1;
+require = fn;
 let closure_4 = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
@@ -58,7 +58,7 @@ prototype["getEditingMessage"] = function getEditingMessage(id) {
   return message;
 };
 prototype["getEditActionSource"] = function getEditActionSource(closure_1_0) {
-  return table[closure_1_0];
+  return table[require];
 };
 EditMessageStore.displayName = "EditMessageStore";
 const editMessageStore = new EditMessageStore(dispatcherDefault, {
@@ -114,6 +114,6 @@ const editMessageStore = new EditMessageStore(dispatcherDefault, {
     closure_5 = {};
   }
 });
-const result = require("set").fileFinishedImporting("stores/EditMessageStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/EditMessageStore.tsx");
 
 export default editMessageStore;

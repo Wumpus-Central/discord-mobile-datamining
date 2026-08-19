@@ -1,10 +1,10 @@
 // discord_app/modules/forums/ForumManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import loadForumPostData from "ForumPostDataLoader.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 import { isStaticChannelRoute } from "../channel/ChannelConstants.tsx";
 
-require = arg1;
+require = fn;
 initializeDefault;
 class ForumManager extends tmp2 {
   constructor() {
@@ -19,12 +19,11 @@ ForumManager.prototype["handleChannelPreload"] = function handleChannelPreload(c
     channel = channel.getChannel(channelId);
     if (tmp3) {
       loadForumPostData.preloadForumThreads(channel);
-      const obj2 = loadForumPostData;
     }
     tmp3 = null != channel && channel.isForumLikeChannel();
   }
 };
 const forumManager = new ForumManager();
-const result = require("set").fileFinishedImporting("modules/forums/ForumManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/ForumManager.tsx");
 
 export default forumManager;

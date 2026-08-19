@@ -1,13 +1,15 @@
 // discord_app/modules/application_account_linking/native/useStartAuthorize.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import _modDef4090 from "../../../lib/native/Linking.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { AuthorizeFlow } from "../ApplicationAccountLinkingConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
 import { useAuthorizedAppsTokens } from "../hooks/useAuthorizedAppsToken.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
 
 export default function useStartAuthorize(getOfficialApplicationId) {
   let obj = arg1;
@@ -16,7 +18,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   }
   let _require;
   const debug = obj.debug;
-  const authorizationApp = _getAuthorizationApp.useAuthorizationApp(getOfficialApplicationId);
+  const authorizationApp = require("../hooks/useAuthorizationApp.tsx").useAuthorizationApp(getOfficialApplicationId);
   _require = authorizationApp;
   let prop;
   if (authorizationApp != null) {
@@ -26,9 +28,8 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   if (null != prop) {
     WEB = AuthorizeFlow.WEB;
   }
-  let obj2 = _getAuthorizationApp;
+  let obj2 = getAuthorizationApp;
   const tmp = undefined !== debug && debug;
-  const tmp2 = _require;
   let parentId;
   if (authorizationApp != null) {
     parentId = authorizationApp.parentId;
@@ -40,9 +41,8 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     parentId = id;
   }
-  const authorizedAppsToken = _useAuthorizedAppsTokens.useAuthorizedAppsToken(parentId);
+  const authorizedAppsToken = require("../hooks/useAuthorizedAppsToken.tsx").useAuthorizedAppsToken(parentId);
   ({ token, fetched } = authorizedAppsToken);
-  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -89,7 +89,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
                 c5 = 2;
                 c6 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_2_1(closure_2_2[6]).openURL(lib.connectionEntrypointUrl);
+                obj1[0] = _modDef4090.openURL(lib.connectionEntrypointUrl);
                 return obj1;
               }
             }
@@ -116,13 +116,13 @@ export default function useStartAuthorize(getOfficialApplicationId) {
             if (onConfirm != null) {
               onConfirm();
             }
-            obj = closure_2_1(closure_2_2[7]);
+            obj = expandEventPropertiesDefault;
             const obj3 = { location_stack: null, application_id: null, flow_type: null };
             obj3[0] = lib.analyticsLocations;
             obj3[1] = lib.id;
-            obj3[2] = closure_2_5.WEB;
-            obj.track(closure_2_6.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj3);
-            obj2 = lib(closure_2_2[8]);
+            obj3[2] = AuthorizeFlow.WEB;
+            obj.track(AnalyticEvents.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj3);
+            obj2 = lib(dependencyMap[8]);
             const obj4 = { onSuccess: null, onError: null };
             obj4[0] = lib.onSuccess;
             obj4[1] = lib.onError;
@@ -183,4 +183,5 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     obj[3] = items2;
   }
+  const tmp2Result = useAuthorizedAppsTokens;
 };

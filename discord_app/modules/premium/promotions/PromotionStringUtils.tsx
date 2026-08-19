@@ -4,12 +4,12 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
 import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
 import formatSingleCurrencyPrice from "../../../utils/PriceUtils.tsx";
-import closure_3 from "../../../stores/billing/SubscriptionPlanStore.tsx";
+import addSubscriptionPlan from "../../../stores/billing/SubscriptionPlanStore.tsx";
 import GuildFeatures from "../PremiumConstants.tsx";
 
-require = arg1;
+require = fn;
 ({ PremiumSubscriptionSKUs: c4, SubscriptionPlans: c5 } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/promotions/PromotionStringUtils.tsx");
 
 export const useFormatStringWithCommonPremiumParams = function useFormatStringWithCommonPremiumParams(body) {
   let str = "...";
@@ -19,7 +19,6 @@ export const useFormatStringWithCommonPremiumParams = function useFormatStringWi
     if (stateFromStores) {
       try {
         const defaultPrice = getPremiumPlanItemDefault.getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
-        const obj2 = getPremiumPlanItemDefault;
         str = formatSingleCurrencyPrice.formatPrice(defaultPrice.amount, defaultPrice.currency);
         const tmpResult = formatSingleCurrencyPrice;
       } catch (err) {

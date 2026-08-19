@@ -1,21 +1,20 @@
 // discord_app/actions/GIFPickerActionCreators.tsx
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import isDiscordProxiedAssetUrlDefault from "../utils/URLUtils.tsx";
+import obj132Default from "AlertActionCreators.tsx";
 import collectGuildAnalyticsMetadataDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
 import shouldRefreshAttachmentUrl from "../modules/messages/SignedAttachmentLinkUtils.tsx";
 import GIF_PROVIDER from "../modules/gif_picker/GifProvider.tsx";
 import isKlipyProvider from "../utils/GIFPickerUtils.tsx";
-import closure_3 from "../modules/user_settings/LocaleStore.tsx";
-import closure_4 from "../stores/views/GIFPickerViewStore.tsx";
+import _getSystemLocale from "../modules/user_settings/LocaleStore.tsx";
+import getFormatFromUrl from "../stores/views/GIFPickerViewStore.tsx";
 import ME from "../Constants.tsx";
 import MAX_FAVORITES from "../modules/user_settings/UserSettingsConstants.tsx";
 import importDefaultResult from "../../_runtime/00012_apply.js";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { GIF_PROVIDER } from "../modules/gif_picker/GifProvider.tsx";
-import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
 
-require = arg1;
+require = fn;
 function doSearchRequest(q, arg1, limit) {
   const _require = q;
   importDefault = arg1;
@@ -28,26 +27,25 @@ function doSearchRequest(q, arg1, limit) {
     obj = {};
   }
   let obj2 = collectGuildAnalyticsMetadataDefault;
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _GIF_PROVIDER.GIF_PROVIDER };
+  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: require("../modules/gif_picker/GifProvider.tsx").GIF_PROVIDER };
   obj2.trackWithMetadata(constants.SEARCH_STARTED, obj);
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj1 = { url: constants2.GIFS_SEARCH, query: null, oldFormErrors: true, rejectWithError: true };
   obj2 = { q, media_format: store.getSelectedFormat(), locale: closure_3.locale, limit };
   obj1[1] = obj2;
   const value = HTTP.get(obj1);
-  value.then((body) => {
-    body = body.body;
+  value.then((result) => {
+    const body = result.body;
     let obj = { startTime: closure_3, limit };
     const startTime = obj.startTime;
     const merged = Object.assign(obj, Object.create(null));
-    obj = { offset: 0, limit: null, totalResults: body.length };
     let obj2 = q(limit[6]);
     obj = {};
     const analyticsID = closure_1_4.getAnalyticsID();
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(merged);
     obj.results = body.length;
-    const result = obj2.calculateAnalyticsMetadata(analyticsID, callback, obj);
+    result = obj2.calculateAnalyticsMetadata(analyticsID, callback, obj);
     if (null == startTime) {
       obj1 = {};
     } else {
@@ -61,11 +59,11 @@ function doSearchRequest(q, arg1, limit) {
     obj2.gif_provider = q(limit[5]).GIF_PROVIDER;
     callback(limit[4]).trackWithMetadata(closure_1_5.SEARCH_RESULT_VIEWED, obj2);
     const obj6 = callback(limit[4]);
-    const tmp2 = q;
     callback(limit[8]).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", query: q, items: body });
+    const obj8 = callback(limit[8]);
   }, () => {
-    let obj = callback(limit[8]);
-    obj = { type: "GIF_PICKER_QUERY_FAILURE", query: closure_0 };
+    callback(limit[8]);
+    const obj = { type: "GIF_PICKER_QUERY_FAILURE", query: closure_0 };
     return obj.dispatch(obj);
   });
 }
@@ -74,7 +72,7 @@ function doSearchRequest(q, arg1, limit) {
 const re11 = /-/g;
 let closure_13 = importDefaultResult.debounce(doSearchRequest, 250);
 const re14 = /\.(webp|avif|gif)(\?|$)/i;
-let result = require("set").fileFinishedImporting("actions/GIFPickerActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("actions/GIFPickerActionCreators.tsx");
 
 export const trackSearchStart = function trackSearchStart(arg0) {
   if (null != arg0) {
@@ -93,7 +91,6 @@ export const trackSearchResultViewed = function trackSearchResultViewed(totalRes
   }
   const startTime = obj.startTime;
   const merged = Object.assign(obj, Object.create(null));
-  obj = { offset: 0, limit: null, totalResults: totalResults.length };
   let obj2 = isKlipyProvider;
   obj = {};
   const analyticsID = store.getAnalyticsID();
@@ -121,10 +118,8 @@ export const search = function search(q, arg1, arg2, limit) {
   }
   if ("" === q) {
     dispatcherDefault.dispatch({ type: "GIF_PICKER_QUERY", query: "" });
-    const obj3 = dispatcherDefault;
   } else {
-    let obj = dispatcherDefault;
-    obj = { type: "GIF_PICKER_QUERY", query: null };
+    const obj = { type: "GIF_PICKER_QUERY", query: null };
     obj[1] = q;
     obj.dispatch(obj);
     if (flag) {
@@ -134,24 +129,23 @@ export const search = function search(q, arg1, arg2, limit) {
     }
   }
 };
-export const fetchSuggestions = function fetchSuggestions(arg0) {
-  const _require = arg0;
-  let tmp = "" !== arg0;
+export const fetchSuggestions = function fetchSuggestions(resultQuery) {
+  const _require = resultQuery;
+  let tmp = "" !== resultQuery;
   if (tmp) {
-    tmp = null != arg0;
+    tmp = null != resultQuery;
   }
   if (tmp) {
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     let obj = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = constants2.GIFS_SUGGEST;
     obj = { q: null, limit: 5, locale: null };
-    obj[0] = arg0;
+    obj[0] = resultQuery;
     obj[2] = closure_3.locale;
     obj[1] = obj;
     const value = HTTP.get(obj);
-    value.then((body) => {
-      let obj = closure_1_1(closure_1_2[8]);
-      obj = { type: "GIF_PICKER_SUGGESTIONS_SUCCESS", query: closure_0, items: body.body };
+    value.then((result) => {
+      const obj = { type: "GIF_PICKER_SUGGESTIONS_SUCCESS", query: closure_0, items: result.body };
       obj.dispatch(obj);
     });
   }
@@ -188,23 +182,20 @@ export const initializeSearch = function initializeSearch() {
   const str = obj.v4();
   obj = { search_type: constants3.GIF, load_id: replaced };
   collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.SEARCH_OPENED, obj);
-  const obj2 = collectGuildAnalyticsMetadataDefault;
   dispatcherDefault.wait(() => {
-    let obj = closure_1_1(closure_1_2[8]);
-    obj = { type: "GIF_PICKER_INITIALIZE", analyticsID: replaced };
+    const obj = { type: "GIF_PICKER_INITIALIZE", analyticsID: replaced };
     obj.dispatch(obj);
   });
 };
 export const fetchTrending = function fetchTrending() {
   const HTTP = sendRequest.HTTP;
-  let obj = { url: constants2.GIFS_TRENDING, query: null, oldFormErrors: true, rejectWithError: true };
-  obj = { locale: closure_3.locale, media_format: store.getSelectedFormat() };
+  let obj = { locale: closure_3.locale, media_format: store.getSelectedFormat() };
   obj[1] = obj;
   const value = HTTP.get(obj);
-  value.then((body) => {
-    ({ categories, gifs } = body.body);
-    let obj = callback(table[8]);
-    obj = { type: "GIF_PICKER_TRENDING_FETCH_SUCCESS", trendingCategories: categories, trendingGIFPreview: gifs[0] };
+  value.then((result) => {
+    ({ categories, gifs } = result.body);
+    callback(table[8]);
+    const obj = { type: "GIF_PICKER_TRENDING_FETCH_SUCCESS", trendingCategories: categories, trendingGIFPreview: gifs[0] };
     obj.dispatch(obj);
   });
 };
@@ -219,26 +210,25 @@ export const fetchTrendingGIFs = function fetchTrendingGIFs(closure_10) {
     obj = {};
   }
   let obj2 = collectGuildAnalyticsMetadataDefault;
-  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: _GIF_PROVIDER.GIF_PROVIDER };
+  obj = { search_type: constants3.GIF, load_id: store.getAnalyticsID(), num_modifiers: Object.keys(obj).length, modifiers: obj, gif_provider: require("../modules/gif_picker/GifProvider.tsx").GIF_PROVIDER };
   obj2.trackWithMetadata(constants.SEARCH_STARTED, obj);
-  const HTTP = _sendRequest.HTTP;
+  const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
   obj1 = { url: constants2.GIFS_TRENDING_GIFS, query: null, oldFormErrors: true, rejectWithError: true };
   obj2 = { media_format: store.getSelectedFormat(), locale: closure_3.locale, limit: closure_10 };
   obj1[1] = obj2;
   const value = HTTP.get(obj1);
-  value.then((body) => {
-    body = body.body;
+  value.then((result) => {
+    const body = result.body;
     let obj = { startTime: callback2, limit: callback };
     const startTime = obj.startTime;
     const merged = Object.assign(obj, Object.create(null));
-    obj = { offset: 0, limit: null, totalResults: body.length };
-    let obj2 = callback(closure_1_2[6]);
+    let obj2 = callback(dependencyMap[6]);
     obj = {};
     const analyticsID = closure_1_4.getAnalyticsID();
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(merged);
     obj.results = body.length;
-    const result = obj2.calculateAnalyticsMetadata(analyticsID, closure_1_8.TRENDING_GIFS, obj);
+    result = obj2.calculateAnalyticsMetadata(analyticsID, closure_1_8.TRENDING_GIFS, obj);
     if (null == startTime) {
       obj1 = {};
     } else {
@@ -249,11 +239,11 @@ export const fetchTrendingGIFs = function fetchTrendingGIFs(closure_10) {
     obj2 = {};
     const merged3 = Object.assign(result);
     const merged4 = Object.assign(obj1);
-    obj2.gif_provider = callback(closure_1_2[5]).GIF_PROVIDER;
-    callback2(closure_1_2[4]).trackWithMetadata(closure_1_5.SEARCH_RESULT_VIEWED, obj2);
-    const obj6 = callback2(closure_1_2[4]);
-    const tmp2 = callback;
-    callback2(closure_1_2[8]).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: body });
+    obj2.gif_provider = callback(dependencyMap[5]).GIF_PROVIDER;
+    callback2(dependencyMap[4]).trackWithMetadata(closure_1_5.SEARCH_RESULT_VIEWED, obj2);
+    const obj6 = callback2(dependencyMap[4]);
+    callback2(dependencyMap[8]).dispatch({ type: "GIF_PICKER_QUERY_SUCCESS", items: body });
+    const obj8 = callback2(dependencyMap[8]);
   }, () => {
     callback2(table[8]).dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
   });
@@ -264,54 +254,52 @@ export const gifUrlKey = function gifUrlKey(uri) {
   let tmp4 = uri;
   if (null != toURLSafeResult) {
     if (obj2.isAttachmentUrl(toURLSafeResult)) {
-      str = tmp5(9085).removeSignedUrlParameters(toURLSafeResult);
+      str = shouldRefreshAttachmentUrl.removeSignedUrlParameters(toURLSafeResult);
       str = str.toString();
-      const tmp5Result = tmp5(9085);
+      const tmp5Result = shouldRefreshAttachmentUrl;
     }
     tmp4 = str;
     obj2 = shouldRefreshAttachmentUrl;
-    tmp5 = require;
   }
   return tmp4;
 };
 export const addFavoriteGIF = function addFavoriteGIF(item) {
   const _require = item;
-  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", (gifs) => {
-    let obj = closure_1_1(closure_1_2[9]);
+    let obj = importDefaultResult;
     const values = Object.values(gifs.gifs);
-    let num = obj.max(values.map((order) => order.order));
+    let num = obj.max(values.map((item, index) => item.order));
     if (num == null) {
       num = 0;
     }
     obj1 = /\.(mp4|webm)(\?|$)/i;
     if (obj1.test(item.src)) {
-      if (null != tmp3.gifSrc) {
-        if ("" !== tmp3.gifSrc) {
-          let tmpResult = tmp(tmp2[11]);
-          const toURLSafeResult = tmpResult.toURLSafe(tmp3.src);
+      if (null != item.gifSrc) {
+        if ("" !== item.gifSrc) {
+          let tmpResult = isDiscordProxiedAssetUrlDefault;
+          const toURLSafeResult = tmpResult.toURLSafe(item.src);
           let tmp9 = null != toURLSafeResult;
           if (tmp9) {
-            let result = item(tmp2[12]).isExternalProxiedAttachmentUrl(toURLSafeResult);
+            let result = item(dependencyMap[12]).isExternalProxiedAttachmentUrl(toURLSafeResult);
             if (!result) {
-              result = tmp10(tmp2[12]).isAttachmentUrl(toURLSafeResult);
-              const tmp10Result = tmp10(tmp2[12]);
+              result = item(dependencyMap[12]).isAttachmentUrl(toURLSafeResult);
+              const tmp10Result = item(dependencyMap[12]);
             }
             tmp9 = result;
-            const obj7 = item(tmp2[12]);
-            tmp10 = item;
+            const obj7 = item(dependencyMap[12]);
           }
           let obj9 = src;
           if (tmp9) {
             obj9 = src;
             if (closure_1_14.test(src)) {
-              tmpResult = tmp(tmp2[11]);
+              tmpResult = isDiscordProxiedAssetUrlDefault;
               const str2 = tmpResult.toURLSafe(src);
               let tmp13 = src;
               if (null != str2) {
                 const formatted = str2.pathname.toLowerCase();
                 let endsWithResult1 = formatted.endsWith(".avif");
-                const endsWithResult2 = formatted.endsWith(".gif");
+                const endsWithResult = formatted.endsWith(".webp");
                 if (!endsWithResult) {
                   tmp13 = src;
                 }
@@ -325,8 +313,7 @@ export const addFavoriteGIF = function addFavoriteGIF(item) {
                 const searchParams2 = str2.searchParams;
                 const result2 = searchParams2.set("animated", "true");
                 src = str2.toString();
-                endsWithResult = formatted.endsWith(".webp");
-                const str10 = str2.pathname;
+                endsWithResult2 = formatted.endsWith(".gif");
               }
               obj9 = tmp13;
             }
@@ -337,101 +324,99 @@ export const addFavoriteGIF = function addFavoriteGIF(item) {
             combined = "https:" + obj9;
           }
           if (closure_1_14.test(combined)) {
-            let format = item(tmp2[14]).GIFType.IMAGE;
+            let format = item(dependencyMap[14]).GIFType.IMAGE;
           } else {
-            format = tmp3.format;
+            format = item.format;
           }
-          let url = tmp3.url;
-          const toURLSafeResult1 = tmp(tmp2[11]).toURLSafe(url);
+          let url = item.url;
+          const toURLSafeResult1 = isDiscordProxiedAssetUrlDefault.toURLSafe(url);
           let tmp23 = url;
           if (null != toURLSafeResult1) {
             if (obj12.isAttachmentUrl(toURLSafeResult1)) {
-              const tmp24Result = tmp24(tmp2[12]);
-              url = tmp24(tmp2[12]).removeSignedUrlParameters(toURLSafeResult1).toString();
-              const str9 = tmp24(tmp2[12]).removeSignedUrlParameters(toURLSafeResult1);
+              const tmp24Result = item(dependencyMap[12]);
+              url = item(dependencyMap[12]).removeSignedUrlParameters(toURLSafeResult1).toString();
+              const str9 = item(dependencyMap[12]).removeSignedUrlParameters(toURLSafeResult1);
             }
             tmp23 = url;
-            obj12 = item(tmp2[12]);
-            tmp24 = item;
+            obj12 = item(dependencyMap[12]);
           }
           obj = {};
-          const merged = Object.assign(tmp3);
+          const merged = Object.assign(item);
           obj.src = combined;
           obj.format = format;
           obj.order = num + 1;
           gifs.gifs[tmp23] = obj;
-          const FavoriteGIFs = item(tmp2[14]).FavoriteGIFs;
+          const FavoriteGIFs = item(dependencyMap[14]).FavoriteGIFs;
           if (FavoriteGIFs.toBinary(gifs).length > closure_1_9) {
             obj = { title: null, body: null };
-            const intl = tmp28(tmp2[16]).intl;
-            obj[0] = intl.string(tmp28(tmp2[16]).t["+XYXtZ"]);
-            const intl2 = tmp28(tmp2[16]).intl;
-            obj[1] = intl2.string(tmp28(tmp2[16]).t.YSDH9n);
-            tmp(tmp2[15]).show(obj);
+            const intl = item(dependencyMap[16]).intl;
+            obj[0] = intl.string(item(dependencyMap[16]).t["+XYXtZ"]);
+            const intl2 = item(dependencyMap[16]).intl;
+            obj[1] = intl2.string(item(dependencyMap[16]).t.YSDH9n);
+            obj132Default.show(obj);
             return false;
           } else {
-            const sizeResult = tmp(tmp2[9]).size(gifs.gifs);
+            const sizeResult = importDefaultResult.size(gifs.gifs);
             if (sizeResult > 2) {
               gifs.hideTooltip = true;
             }
-            const tmpResult3 = tmp(tmp2[9]);
+            const tmpResult3 = importDefaultResult;
             obj1 = { total_num_favorited: null };
             obj1[0] = sizeResult;
-            tmp(tmp2[17]).track(closure_1_5.GIF_FAVORITED, obj1);
+            expandEventPropertiesDefault.track(closure_1_5.GIF_FAVORITED, obj1);
+            const tmpResult4 = expandEventPropertiesDefault;
           }
-          const tmpResult1 = tmp(tmp2[11]);
+          const tmpResult1 = isDiscordProxiedAssetUrlDefault;
         }
-        src = tmp3.gifSrc;
+        src = item.gifSrc;
       }
     }
-    const toURLSafeResult2 = closure_1_1(closure_1_2[11]).toURLSafe(item.src);
+    const toURLSafeResult2 = isDiscordProxiedAssetUrlDefault.toURLSafe(item.src);
     let tmp5 = null != toURLSafeResult2;
     if (tmp5) {
-      let result3 = item(tmp2[12]).isExternalProxiedAttachmentUrl(toURLSafeResult2);
+      let result3 = item(dependencyMap[12]).isExternalProxiedAttachmentUrl(toURLSafeResult2);
       if (!result3) {
-        result3 = tmp6(tmp2[12]).isAttachmentUrl(toURLSafeResult2);
-        const tmp6Result = tmp6(tmp2[12]);
+        result3 = item(dependencyMap[12]).isAttachmentUrl(toURLSafeResult2);
+        const tmp6Result = item(dependencyMap[12]);
       }
       tmp5 = result3;
-      const obj4 = item(tmp2[12]);
-      tmp6 = item;
+      const obj4 = item(dependencyMap[12]);
     }
-    src = tmp3.src;
+    src = item.src;
+    const tmpResult5 = isDiscordProxiedAssetUrlDefault;
   }, constants5.INFREQUENT_USER_ACTION);
 };
 export const removeFavoriteGIF = function removeFavoriteGIF(uri) {
   const _require = uri;
-  const FrecencyUserSettingsActionCreators = _updateUserGuildSettings.FrecencyUserSettingsActionCreators;
+  const FrecencyUserSettingsActionCreators = require("../modules/user_settings/UserSettingsProtoActionCreators.tsx").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteGifs", (gifs) => {
     if (uri in gifs.gifs) {
       delete tmp[tmp2];
     } else {
-      let obj = closure_1_1(closure_1_2[11]);
-      const toURLSafeResult = obj.toURLSafe(tmp4);
+      let obj = isDiscordProxiedAssetUrlDefault;
+      const toURLSafeResult = obj.toURLSafe(uri);
       if (null != toURLSafeResult) {
-        let str = tmp4;
+        let str = uri;
         if (obj2.isAttachmentUrl(toURLSafeResult)) {
-          str = tmp10(tmp6[12]).removeSignedUrlParameters(toURLSafeResult);
+          str = uri(dependencyMap[12]).removeSignedUrlParameters(toURLSafeResult);
           str = str.toString();
-          const tmp10Result = tmp10(tmp6[12]);
+          const tmp10Result = uri(dependencyMap[12]);
         }
-        obj2 = uri(tmp6[12]);
-        tmp10 = uri;
+        obj2 = uri(dependencyMap[12]);
       }
       delete tmp[tmp3];
     }
     obj = { total_num_favorited: null };
-    const obj4 = closure_1_1(closure_1_2[17]);
-    obj[0] = closure_1_1(closure_1_2[9]).size(gifs.gifs);
+    const obj4 = expandEventPropertiesDefault;
+    obj[0] = importDefaultResult.size(gifs.gifs);
     obj4.track(closure_1_5.GIF_UNFAVORITED, obj);
   }, constants5.INFREQUENT_USER_ACTION);
 };
 export const fetchTrendingSearchTerms = function fetchTrendingSearchTerms() {
   const HTTP = sendRequest.HTTP;
-  obj = { url: constants2.GIFS_TRENDING_SEARCH, query: obj, oldFormErrors: true, rejectWithError: true };
-  obj = { limit: 5, locale: closure_3.locale };
+  const obj = { limit: 5, locale: closure_3.locale };
   const value = HTTP.get(obj);
-  value.then((items) => {
-    callback(table[8]).dispatch({ type: "GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS", items: items.body });
+  value.then((result) => {
+    callback(table[8]).dispatch({ type: "GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS", items: result.body });
   });
 };

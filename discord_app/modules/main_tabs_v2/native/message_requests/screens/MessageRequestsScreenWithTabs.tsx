@@ -2,26 +2,24 @@
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import PendingMessageRequestRowDefault from "../../../../message_request/native/MessageRequestList.tsx";
 import PendingSpamMessageRequestRowDefault from "../../../../message_request/native/spam/SpamMessageList.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = { REQUEST: "REQUEST", SPAM: "SPAM" };
-let obj = { container: null, messageRequestContent: null, tabContainer: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+let obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[0] = obj;
 obj[1] = { flex: 1 };
-createCacheKey = { minHeight: 32, paddingHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { minHeight: 32, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[2] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((navigation) => {
   navigation = navigation.navigation;
-  importDefault = undefined;
   const tmp = callback4();
   const tmp2 = callback(importAllResult.useState(0), 2);
   importDefault = tmp2[1];
@@ -30,9 +28,8 @@ const memoResult = importAllResult.memo((navigation) => {
   const callback1 = importAllResult.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj = navigation(8799);
-  obj = { items: null, pageWidth: null, defaultIndex: 0 };
-  obj = { label: null, id: null, page: null };
+  navigation(8799);
+  const obj = { label: null, id: null, page: null };
   const intl = navigation(1236).intl;
   obj[0] = intl.string(navigation(1236).t["7RFcXZ"]);
   obj[1] = constants.REQUEST;
@@ -55,6 +52,6 @@ const memoResult = importAllResult.memo((navigation) => {
   obj2[1] = items2;
   return callback3(View, obj2);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx");
 
 export default memoResult;

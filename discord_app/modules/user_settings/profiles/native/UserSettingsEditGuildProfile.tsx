@@ -1,20 +1,19 @@
 // discord_app/modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../user_profile/UserProfileSettingsStore.tsx";
-import closure_6 from "../../../../stores/UserStore.tsx";
+import handleFormOpen from "../../../user_profile/UserProfileSettingsStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { guildSelector: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.none, borderTopWidth: StyleSheet.hairlineWidth, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden" };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.none, borderTopWidth: StyleSheet.hairlineWidth, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx");
 
 export default function UserSettingsEditGuildProfile() {
   function onSelectGuild(id) {
@@ -68,12 +67,12 @@ export default function UserSettingsEditGuildProfile() {
               tmp2 = null != closure_1;
             }
             if (tmp2) {
-              let obj = closure_1_1(closure_1_2[17]);
-              obj = { user: null, selectedGuild: null, onSelectGuild: null };
+              guild(resetPending[17]);
+              const obj = { user: null, selectedGuild: null, onSelectGuild: null };
               obj[0] = closure_0;
               obj[1] = closure_1;
               obj[2] = closure_4;
-              obj.openLazy(closure_1_0(closure_1_2[19])(closure_1_2[18], closure_1_2.paths), "GuildSelectComponentActionSheet", obj);
+              obj.openLazy(stateFromStores(resetPending[19])(resetPending[18], resetPending.paths), "GuildSelectComponentActionSheet", obj);
             }
           },
           hasEdits: closure_3,

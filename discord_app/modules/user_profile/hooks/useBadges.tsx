@@ -1,11 +1,12 @@
 // discord_app/modules/user_profile/hooks/useBadges.tsx
+import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import explicitContentFromProto from "../../user_settings/UserSettings.tsx";
-import closure_2 from "../../../stores/StreamerModeStore.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
+import initialize from "../../../stores/StreamerModeStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 const legacy_username = "legacy_username";
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
 
 export default function useBadges(getBadges) {
   const LegacyUsernameDisabled = explicitContentFromProto.LegacyUsernameDisabled;
@@ -13,10 +14,10 @@ export default function useBadges(getBadges) {
   if (undefined !== arg1) {
     setting = arg1;
   }
-  let tmpResult = tmp(647);
+  let tmpResult = defaultAreStatesEqual;
   const items = [closure_3];
   const stateFromStores = tmpResult.useStateFromStores(items, () => currentUser.getCurrentUser());
-  tmpResult = tmp(647);
+  tmpResult = defaultAreStatesEqual;
   [][0] = closure_2;
   if (null == getBadges) {
     return [];
@@ -30,18 +31,18 @@ export default function useBadges(getBadges) {
     }
     let found = badges;
     if (tmp7) {
-      found = badges.filter((id) => id.id !== closure_4);
+      found = badges.filter((item, index) => item.id !== closure_4);
     }
     let mapped = found;
     if (tmp6) {
-      mapped = found.map((id) => {
+      mapped = found.map((item, index) => {
         const obj = {};
-        const merged = Object.assign(id);
-        if (id.id === closure_4) {
+        const merged = Object.assign(item);
+        if (item.id === closure_4) {
           const intl = callback(1236).intl;
           let description = intl.string(callback(1236).t.Br1ls3);
         } else {
-          description = id.description;
+          description = item.description;
         }
         obj.description = description;
         return obj;

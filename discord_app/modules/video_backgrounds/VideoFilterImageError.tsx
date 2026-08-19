@@ -1,5 +1,5 @@
 // discord_app/modules/video_backgrounds/VideoFilterImageError.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 
@@ -21,13 +21,13 @@ const prototype = function VideoFilterImageError(arg0, arg1) {
     tmp7 = code === constants.ASSET_SIZE;
   }
   if (tmp7) {
-    const intl2 = tmp4(1236).intl;
-    tmp3.message = intl2.string(tmp4(1236).t.mrlScX);
+    const intl2 = getSystemLocale.intl;
+    tmp3.message = intl2.string(getSystemLocale.t.mrlScX);
   }
   return tmp3;
 }.prototype;
 class prototype extends V8APIError {
 }
-const result = set.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
+const result = obj132.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
 
 export default prototype;

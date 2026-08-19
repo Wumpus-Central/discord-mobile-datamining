@@ -1,5 +1,5 @@
 // discord_app/modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
 import GuildFeatures from "../../PremiumConstants.tsx";
 
@@ -12,7 +12,7 @@ items1[1] = items2;
 const items3 = [AnalyticsLocations.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK, GiftIntentType.FRIEND_ANNIVERSARY];
 items1[2] = items3;
 const map = new Map(items1);
-const result = set.fileFinishedImporting("modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx");
 
 export const getPremiumGiftingIntentAnalyticsLocation = function getPremiumGiftingIntentAnalyticsLocation(arg0) {
   if (arg0 === GiftIntentType.FRIEND_ANNIVERSARY) {

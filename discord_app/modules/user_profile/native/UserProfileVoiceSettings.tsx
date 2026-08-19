@@ -1,21 +1,20 @@
 // discord_app/modules/user_profile/native/UserProfileVoiceSettings.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../soundboard/SoundboardStore.tsx";
-import closure_5 from "../../../stores/MediaEngineStore.tsx";
-import closure_6 from "../../../stores/PermissionStore.tsx";
+import handleSoundCreateOrUpdate from "../../soundboard/SoundboardStore.tsx";
+import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
+import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
 import { VideoToggleState } from "../../../Constants.tsx";
 import { Permissions } from "../../../../discord_common/js/shared/Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 function UserVoiceSettings(user) {
   user = user.user;
   const channel = user.channel;
   let trackUserProfileAction;
   isLocalVideoDisabled = undefined;
-  let isLocalVideoAutoDisabled;
   const tmp = callback3();
   let obj = user(trackUserProfileAction[9]);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
@@ -23,14 +22,14 @@ function UserVoiceSettings(user) {
   const items = [closure_5];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ localVolume: closure_1_5.getLocalVolume(user.id), isLocalMute: closure_1_5.isLocalMute(user.id), isLocalVideoDisabled: closure_1_5.isLocalVideoDisabled(user.id), isLocalVideoAutoDisabled: closure_1_5.isLocalVideoAutoDisabled(user.id), supportsDisableLocalVideo: closure_1_5.supportsDisableLocalVideo() }));
   ({ isLocalMute, isLocalVideoDisabled } = stateFromStoresObject);
-  isLocalVideoAutoDisabled = stateFromStoresObject.isLocalVideoAutoDisabled;
+  let isLocalVideoAutoDisabled = stateFromStoresObject.isLocalVideoAutoDisabled;
   ({ localVolume, supportsDisableLocalVideo } = stateFromStoresObject);
   let obj2 = user(trackUserProfileAction[10]);
   const items1 = [closure_6];
   const stateFromStores = obj2.useStateFromStores(items1, () => {
     let isPrivateResult = channel.isPrivate();
     if (!isPrivateResult) {
-      isPrivateResult = closure_1_6.can(closure_1_8.SPEAK, channel);
+      isPrivateResult = closure_1_6.can(Permissions.SPEAK, channel);
     }
     return isPrivateResult;
   });
@@ -75,7 +74,7 @@ function UserVoiceSettings(user) {
       trackUserProfileAction({ action: "MUTE_SOUNDBOARD" });
       const result = channel(trackUserProfileAction[14]).toggleLocalSoundboardMute(user.id);
     };
-    items3.push(tmp10(tmp2(tmp3[15]).UserProfileFormRow, obj1, "mute-soundboard"));
+    items3.push(callback(tmp2(tmp3[15]).UserProfileFormRow, obj1, "mute-soundboard"));
     if (supportsDisableLocalVideo) {
       const intl3 = tmp2(tmp3[16]).intl;
       const string3 = intl3.string;
@@ -96,11 +95,11 @@ function UserVoiceSettings(user) {
       if (isLocalVideoAutoDisabled) {
         obj3 = { style: null, children: null };
         obj3[0] = tmp.disableVideoSublabel;
-        const items4 = [tmp10(tmp2(tmp3[23]).CircleErrorIcon, { size: "xxs", color: "text-feedback-warning" }), ];
+        const items4 = [callback(tmp2(tmp3[23]).CircleErrorIcon, { size: "xxs", color: "text-feedback-warning" }), ];
         obj4 = { variant: "text-xs/medium", color: "text-feedback-warning", children: null };
         const intl4 = tmp2(tmp3[16]).intl;
         obj4[2] = intl4.string(tmp2(tmp3[16]).t.m2Hyj0);
-        items4[1] = tmp10(tmp2(tmp3[24]).Text, obj4);
+        items4[1] = callback(tmp2(tmp3[24]).Text, obj4);
         obj3[1] = items4;
         isLocalVideoAutoDisabled = callback2(isLocalVideoDisabled, obj3);
       }
@@ -108,14 +107,14 @@ function UserVoiceSettings(user) {
       obj2[3] = function onPress() {
         trackUserProfileAction({ action: "DISABLE_VIDEO" });
         if (isLocalVideoAutoDisabled) {
-          const result = user(trackUserProfileAction[25]).confirmVideoUnstableConnection(() => closure_1_1(closure_1_2[14]).setDisableLocalVideo(id.id, closure_1_7.MANUAL_ENABLED));
+          const result = user(trackUserProfileAction[25]).confirmVideoUnstableConnection(() => channel(trackUserProfileAction[14]).setDisableLocalVideo(id.id, closure_1_7.MANUAL_ENABLED));
           const obj2 = user(trackUserProfileAction[25]);
         } else {
-          channel(trackUserProfileAction[14]).setDisableLocalVideo(user.id, isLocalVideoDisabled ? closure_1_7.MANUAL_ENABLED : closure_1_7.DISABLED);
+          channel(trackUserProfileAction[14]).setDisableLocalVideo(user.id, isLocalVideoDisabled ? VideoToggleState.MANUAL_ENABLED : VideoToggleState.DISABLED);
           const obj = channel(trackUserProfileAction[14]);
         }
       };
-      items3.push(tmp10(tmp2(tmp3[15]).UserProfileFormRow, obj2, "disable-video"));
+      items3.push(callback(tmp2(tmp3[15]).UserProfileFormRow, obj2, "disable-video"));
     }
     if (isSecureFramesUIEnabled) {
       const obj5 = { label: null, icon: null, hint: null, onPress: null };
@@ -128,12 +127,12 @@ function UserVoiceSettings(user) {
         channel(trackUserProfileAction[28]).hideActionSheet();
         let obj = channel(trackUserProfileAction[28]);
         const result = channel(trackUserProfileAction[29]).openSecureFramesUserVerificationModal(user.id, channel.id, () => {
-          let obj = closure_1_0(closure_1_2[30]);
-          obj = { userId: id.id, channelId: closure_1.id, guildId: closure_1.guild_id };
+          user(trackUserProfileAction[30]);
+          const obj = { userId: id.id, channelId: closure_1.id, guildId: closure_1.guild_id };
           return obj.validateSecureFramesKeyConsistent(obj);
         });
       };
-      items3.push(tmp10(tmp2(tmp3[15]).UserProfileFormRow, obj5, "view-secure-frames-verification-code"));
+      items3.push(callback(tmp2(tmp3[15]).UserProfileFormRow, obj5, "view-secure-frames-verification-code"));
     }
     let tmp10Result = null;
     if (0 !== items3.length) {
@@ -145,9 +144,9 @@ function UserVoiceSettings(user) {
       obj6[2] = tmp.cardTitle;
       const obj7 = { children: null };
       obj7[0] = items3;
-      obj6[3] = tmp10(tmp2(tmp3[15]).UserProfileCardRows, obj7);
-      tmp10Result = tmp10(channel(tmp3[15]), obj6);
-      const tmp6Result = channel(tmp3[15]);
+      obj6[3] = callback(tmp2(tmp3[15]).UserProfileCardRows, obj7);
+      tmp10Result = callback(tmp6(tmp3[15]), obj6);
+      const tmp6Result = tmp6(tmp3[15]);
     }
     return tmp10Result;
   } else {
@@ -171,17 +170,18 @@ function UserVoiceSettings(user) {
       trackUserProfileAction({ action: "MUTE" });
       channel(trackUserProfileAction[14]).toggleLocalMute(user.id);
     };
-    items3.push(tmp10(tmp2(tmp3[15]).UserProfileFormRow, obj8, "mute"));
+    items3.push(callback(tmp2(tmp3[15]).UserProfileFormRow, obj8, "mute"));
   }
+  tmp6 = channel;
+  tmp7 = channel(trackUserProfileAction[11])(user.id, channel.id);
 }
 function CurrentUserVoiceSettings(channel) {
   channel = channel.channel;
-  let trackUserProfileAction;
   ({ user, style } = channel);
   const tmp = callback3();
   let tmp9Result = dependencyMap;
   let obj = channel(8934);
-  trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   obj1 = channel(589);
   const items = [closure_5];
   const stateFromStores = obj1.useStateFromStores(items, () => selfMute.isSelfMute());
@@ -189,7 +189,7 @@ function CurrentUserVoiceSettings(channel) {
   const stateFromStores1 = channel(589).useStateFromStores(items1, () => {
     let isPrivateResult = channel.isPrivate();
     if (!isPrivateResult) {
-      isPrivateResult = closure_1_6.can(closure_1_8.SPEAK, channel);
+      isPrivateResult = closure_1_6.can(Permissions.SPEAK, channel);
     }
     return isPrivateResult;
   });
@@ -223,12 +223,12 @@ function CurrentUserVoiceSettings(channel) {
     obj[1] = MicrophoneIcon;
     obj[2] = function onPress() {
       trackUserProfileAction({ action: "MUTE" });
-      trackUserProfileAction(closure_1_2[14]).toggleSelfMute();
+      trackUserProfileAction(dependencyMap[14]).toggleSelfMute();
     };
-    obj1[0] = closure_9(tmp2(7185).UserProfileFormRow, obj, "mute");
-    tmp9Result = tmp9(tmp2(7185).UserProfileCardRows, obj1);
+    obj1[0] = callback(tmp2(7185).UserProfileFormRow, obj, "mute");
+    tmp9Result = callback(tmp2(7185).UserProfileCardRows, obj1);
     obj[3] = tmp9Result;
-    tmp9Result = tmp9(trackUserProfileAction(7185), obj);
+    tmp9Result = callback(trackUserProfileAction(7185), obj);
     const tmp6Result = trackUserProfileAction(7185);
   }
   return tmp8;
@@ -236,7 +236,7 @@ function CurrentUserVoiceSettings(channel) {
 noopAll;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ card: { paddingBottom: 0 }, cardTitle: { marginBottom: 0 }, volumeSlider: { paddingVertical: 20 }, disableVideoSublabel: { flexDirection: "row", alignItems: "center", gap: 4 } });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileVoiceSettings.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileVoiceSettings.tsx");
 
 export default function UserProfileVoiceSettings(arg0) {
   ({ user, currentUser, channel, style } = arg0);

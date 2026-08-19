@@ -4,9 +4,9 @@ import getSystemLocale from "../../../../../intl/index.native.tsx";
 import filterLayerDefault from "../../../../user_profile/native/UserProfilePreview.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/previews/ProfileFrameUserPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/profile_frames/native/previews/ProfileFrameUserPreview.tsx");
 
 export default function ProfileFrameUserPreview(profileFrame) {
   profileFrame = profileFrame.profileFrame;

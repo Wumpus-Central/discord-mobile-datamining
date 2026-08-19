@@ -11,11 +11,10 @@ import TableRadioRow from "../../../../design/components/TableRow/native/TableRa
 import context from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function UserSettingsDebugLogsFiltersActionSheet(arg0) {
   ({ sortOrder, onSortOrderChanged, onRefresh } = arg0);
-  let obj = { header: null, children: null };
-  obj = { title: null };
+  let obj = { title: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["+B9e11"]);
   obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
@@ -47,10 +46,9 @@ function UserSettingsDebugLogsFiltersActionSheet(arg0) {
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsDebugLogsActionSheet.tsx");
 
 export const openUserSettingsDebugLogsFiltersActionSheet = function openUserSettingsDebugLogsFiltersActionSheet(arg0) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { default: UserSettingsDebugLogsFiltersActionSheet };
+  const obj = { default: UserSettingsDebugLogsFiltersActionSheet };
   obj.openLazy(Promise.resolve(obj), "UserSettingsDebugLogsFiltersActionSheet", arg0);
 };

@@ -1,16 +1,16 @@
 // discord_app/modules/premium/promotions/PromotionsManager.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import fetchActivePromotions from "PromotionsActionCreators.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../user_settings/LocaleStore.tsx";
-import closure_5 from "../../../stores/UserStore.tsx";
-import closure_6 from "../../../stores/billing/SubscriptionStore.tsx";
-import closure_7 from "PromotionsStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _getSystemLocale from "../../user_settings/LocaleStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import reset from "../../../stores/billing/SubscriptionStore.tsx";
+import createEmptyPromotionsByType from "PromotionsStore.tsx";
 import { PremiumTypes } from "../PremiumConstants.tsx";
 import { EntitlementTypes } from "../../../Constants.tsx";
 import { SubscriptionTypes } from "../../../../discord_common/js/shared/Constants.tsx";
 
-require = arg1;
+require = fn;
 initializeDefault;
 class PromotionsManager extends tmp2 {
   constructor() {
@@ -56,7 +56,7 @@ class PromotionsManager extends tmp2 {
             } else {
               const currentUser = closure_1_5.getCurrentUser();
               if (!obj6.isPremiumExactly(currentUser, closure_1_8.TIER_2)) {
-                obj1 = v0(tmp15[11]);
+                obj1 = v0(closure_1_2[11]);
                 v02 = 1;
                 v0 = 1;
                 obj1 = { value: null, done: false };
@@ -64,7 +64,6 @@ class PromotionsManager extends tmp2 {
                 return obj1;
               }
               obj6 = v02(closure_1_2[10]);
-              tmp15 = closure_1_2;
             }
           } else if (arg0 === 1) {
             v0 = 3;
@@ -98,7 +97,6 @@ prototype["onLocaleChanged"] = function onLocaleChanged() {
   }
   if (tmp) {
     const result = fetchActivePromotions.maybeFetchActivePromotions(false);
-    const obj = fetchActivePromotions;
   }
 };
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
@@ -163,12 +161,12 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
   if (null != subscriptions) {
     const _Object = Object;
     const values = Object.values(subscriptions);
-    const found = values.filter((type) => type.type === constants.PREMIUM);
-    let mapped = found.map((items) => {
-      items = items.items;
-      const mapped = items.map((planId) => planId.planId);
+    const found = values.filter((item, index) => item.type === constants.PREMIUM);
+    let mapped = found.map((item, index) => {
+      const items = item.items;
+      const mapped = items.map((item, index) => item.planId);
       const sorted = mapped.sort();
-      return "" + items.id + ":" + items.type + ":" + items.status + ":" + sorted.join("|");
+      return "" + item.id + ":" + item.type + ":" + item.status + ":" + sorted.join("|");
     });
     let sorted = mapped.sort();
     str = sorted.join(",");
@@ -181,7 +179,6 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
         self.hasPendingSubscriptionRefetch = true;
       } else {
         const result = fetchActivePromotions.maybeFetchActivePromotions(false);
-        const obj3 = fetchActivePromotions;
       }
     }
   }
@@ -191,7 +188,6 @@ prototype["onPromotionsFetchSettled"] = function onPromotionsFetchSettled() {
     if (!closure_7.isFetchingActivePromotions) {
       tmp.hasPendingSubscriptionRefetch = false;
       const result = fetchActivePromotions.maybeFetchActivePromotions(false);
-      const obj = fetchActivePromotions;
     }
   }
 };
@@ -203,12 +199,11 @@ prototype["onOfferUpdated"] = function onOfferUpdated() {
 };
 prototype["onVCRedeemed"] = function onVCRedeemed(entitlements) {
   entitlements = entitlements.entitlements;
-  if (entitlements.some((type) => type.type === constants.FRACTIONAL_REDEMPTION)) {
+  if (entitlements.some((item, index) => item.type === constants.FRACTIONAL_REDEMPTION)) {
     const result = fetchActivePromotions.maybeFetchActivePromotions(false);
-    const obj = fetchActivePromotions;
   }
 };
 const promotionsManager = new PromotionsManager();
-let result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionsManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/promotions/PromotionsManager.tsx");
 
 export default promotionsManager;

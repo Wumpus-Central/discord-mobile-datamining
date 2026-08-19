@@ -1,13 +1,13 @@
 // discord_app/modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { SearchTypes } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_7 = createCacheKey.createStyles({ container: { flex: 1 } });
-let result = require("set").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx");
 
 export default function SearchNavigatorPreviewScreen() {
   let obj = navigation(searchContext[5]);
@@ -19,8 +19,8 @@ export default function SearchNavigatorPreviewScreen() {
   const onBeforeJumpToMessage = route.params.onBeforeJumpToMessage;
   const items = [searchContext, channelId, onBeforeJumpToMessage, navigation];
   callback = onBeforeJumpToMessage.useCallback(() => {
-    let obj = channelId(searchContext[7]);
-    obj = { searchContext, channelId };
+    channelId(searchContext[7]);
+    const obj = { searchContext, channelId };
     const result = obj.trackSearchJumpToMessage(obj);
     if (onBeforeJumpToMessage != null) {
       onBeforeJumpToMessage();

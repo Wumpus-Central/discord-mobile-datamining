@@ -1,12 +1,12 @@
 // discord_app/modules/video-qoe/SimpleMuxWrapper.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import log from "../../../discord_common/js/packages/logger/Logger.tsx";
 import generateSessionId from "utils/SessionManager.tsx";
 import mapDiscordToMuxMetadata from "integrations/MuxIntegration.tsx";
 import UDefault from "../../../_runtime/14493_U.js";
 
 const logger = new log.Logger("SimpleMuxWrapper");
-const result = set.fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
+const result = obj132.fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
 class SimpleMuxWrapper {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -45,11 +45,10 @@ prototype["endSession"] = function endSession() {
   if (this.isMonitoring) {
     try {
       if (typeof UDefault.destroyMonitor === "function") {
-        tmp(14493).destroyMonitor(self.videoElement);
-        const tmpResult = tmp(14493);
+        UDefault.destroyMonitor(self.videoElement);
+        const tmpResult = UDefault;
       }
       self.isMonitoring = false;
-      tmp = importDefault;
     } catch (tmp3) {
       logger.error("Error ending Mux session", tmp3);
     }
@@ -60,11 +59,10 @@ prototype["destroy"] = function destroy() {
   if (this.isMonitoring) {
     try {
       if (typeof UDefault.destroyMonitor === "function") {
-        tmp(14493).destroyMonitor(self.videoElement);
-        const tmpResult = tmp(14493);
+        UDefault.destroyMonitor(self.videoElement);
+        const tmpResult = UDefault;
       }
       self.isMonitoring = false;
-      tmp = importDefault;
     } catch (tmp3) {
       logger.error("Error destroying Mux monitor", tmp3);
     }

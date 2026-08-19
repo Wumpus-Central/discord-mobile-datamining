@@ -5,13 +5,12 @@ import getIllustrationSource from "../../index.tsx";
 import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/BansEmpty.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/BansEmpty.tsx");
 
 export const getBansEmptySource = function getBansEmptySource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
       return callback(16873);
     },
@@ -25,8 +24,7 @@ export const getBansEmptySource = function getBansEmptySource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useBansEmptySource = function useBansEmptySource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
       return callback(16873);
     },
@@ -40,19 +38,7 @@ export const useBansEmptySource = function useBansEmptySource() {
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const BansEmpty = function BansEmpty(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
-    dark() {
-      return callback(16873);
-    },
-    darker() {
-      return callback(16874);
-    },
-    light() {
-      return callback(16875);
-    }
-  };
-  obj = {};
+  const obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

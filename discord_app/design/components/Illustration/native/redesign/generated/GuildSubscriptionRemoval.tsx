@@ -5,13 +5,12 @@ import getIllustrationSource from "../../index.tsx";
 import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionRemoval.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionRemoval.tsx");
 
 export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRemovalSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
       return callback(13051);
     },
@@ -25,8 +24,7 @@ export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRe
   return obj.getIllustrationSource(theme, obj);
 };
 export const useGuildSubscriptionRemovalSource = function useGuildSubscriptionRemovalSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
       return callback(13051);
     },
@@ -40,19 +38,7 @@ export const useGuildSubscriptionRemovalSource = function useGuildSubscriptionRe
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const GuildSubscriptionRemoval = function GuildSubscriptionRemoval(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
-    dark() {
-      return callback(13051);
-    },
-    darker() {
-      return callback(13052);
-    },
-    light() {
-      return callback(13053);
-    }
-  };
-  obj = {};
+  const obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

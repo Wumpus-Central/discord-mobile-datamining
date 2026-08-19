@@ -3,11 +3,11 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
 import TableRowInner from "TableRow.native.tsx";
 import TableRowIcon from "TableRowIcon.native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 class RowButton {
   constructor(arg0) {
     flag = global.arrow;
@@ -71,12 +71,10 @@ function RowButtonWrapper(isRefreshEnabled) {
   }
   ({ onPress, disabled, children } = isRefreshEnabled);
   const merged = Object.assign(isRefreshEnabled, Object.create(null));
-  let sharedValue;
-  dependencyMap = undefined;
   let React;
   const tmp2 = callback(flag);
   let obj = merged(4115);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
   const items = [sharedValue];
   dependencyMap = React.useCallback(() => {
     const result = sharedValue.set(1);
@@ -142,14 +140,13 @@ let closure_5 = createCacheKey.createStyles(() => {
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = { card: null, cardWithBlur: null };
-  obj = { padding: num, borderTopStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
+  const obj = { padding: num, borderTopStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
   obj[0] = obj;
   obj[1] = { overflow: "hidden" };
   return obj;
 });
 RowButton.Icon = require("TableRowIcon").TableRowIcon;
-let result = require("set").fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
 export const RowButtonIconProps = require("TableRowIcon").TableRowIconProps;
 export { RowButton };

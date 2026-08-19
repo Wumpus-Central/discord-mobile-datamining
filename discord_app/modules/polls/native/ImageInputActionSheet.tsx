@@ -1,18 +1,17 @@
 // discord_app/modules/polls/native/ImageInputActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY as closure_5 } from "../PollsConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 }, emojiIcon: null };
-createCacheKey = { marginRight: 12, borderRadius: ThemesDefault.radii.sm };
+const createCacheKey = { marginRight: 12, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/polls/native/ImageInputActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/polls/native/ImageInputActionSheet.tsx");
 
 export default function ImageInputAnswerActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -55,16 +54,14 @@ export default function ImageInputAnswerActionSheet(channelId) {
     obj = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const _HermesInternal = HermesInternal;
     obj[2] = ":" + name + ":";
-    items[1] = callback(tmp7(tmp2[10]).Text, obj);
+    items[1] = callback(tmp7(answer[10]).Text, obj);
     obj[1] = items;
-    tmp6Result = tmp6(View, obj);
-    const tmp10 = callback;
-    const tmp9 = View;
+    tmp6Result = callback(View, obj);
   }
   const items1 = [tmp6Result, callback(channelId(answer[11]).Spacer, { size: 21 }), ];
-  const intl = tmp7(tmp2[13]).intl;
+  const intl = tmp7(answer[13]).intl;
   const string = intl.string;
-  const t = tmp7(tmp2[13]).t;
+  const t = tmp7(answer[13]).t;
   if (tmp4) {
     let stringResult = string(t.CZeRhU);
   } else {
@@ -84,31 +81,31 @@ export default function ImageInputAnswerActionSheet(channelId) {
   let tmp13Result = null;
   if (null != upload) {
     const obj2 = { label: null, onPress: null };
-    const intl2 = tmp7(tmp2[13]).intl;
-    obj2[0] = intl2.string(tmp7(tmp2[13]).t.w7x2t4);
+    const intl2 = tmp7(answer[13]).intl;
+    obj2[0] = intl2.string(tmp7(answer[13]).t.w7x2t4);
     obj2[1] = function onPress() {
       callback4();
-      let obj = channelId(answer[14]);
-      obj = { channelId, answer, index: closure_1, onSave: closure_3, imageSize: 40 };
+      channelId(answer[14]);
+      const obj = { channelId, answer, index: closure_1, onSave: closure_3, imageSize: 40 };
       const result = obj.openEditPollCreationImageAltTextModal(obj);
     };
-    tmp13Result = tmp13(tmp7(tmp2[12]).ActionSheetRow, obj2);
+    tmp13Result = tmp13(tmp7(answer[12]).ActionSheetRow, obj2);
   }
   items2[1] = tmp13Result;
   tmp13Result = null;
   if (tmp4) {
     const obj3 = { label: null, onPress: null };
-    const intl3 = tmp7(tmp2[13]).intl;
-    obj3[0] = intl3.string(tmp7(tmp2[13]).t.IhMxgu);
+    const intl3 = tmp7(answer[13]).intl;
+    obj3[0] = intl3.string(tmp7(answer[13]).t.IhMxgu);
     obj3[1] = function onPress() {
       callback2(closure_1);
       callback4();
     };
-    tmp13Result = tmp13(tmp7(tmp2[12]).ActionSheetRow, obj3);
+    tmp13Result = tmp13(tmp7(answer[12]).ActionSheetRow, obj3);
   }
   const obj4 = { startExpanded: true, children: null };
   items2[2] = tmp13Result;
-  items1[2] = closure_7(channelId(answer[12]).ActionSheetRow.Group, { hasIcons: false, children: items2 });
+  items1[2] = callback(channelId(answer[12]).ActionSheetRow.Group, { hasIcons: false, children: items2 });
   obj4[1] = items1;
-  return closure_7(channelId(answer[9]).ActionSheet, obj4);
+  return callback(channelId(answer[9]).ActionSheet, obj4);
 };

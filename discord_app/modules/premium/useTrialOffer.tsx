@@ -1,11 +1,11 @@
 // discord_app/modules/premium/useTrialOffer.tsx
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/UserStore.tsx";
-import closure_5 from "../../stores/billing/UserOfferStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import emitChanges from "../../stores/billing/UserOfferStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/useTrialOffer.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/premium/useTrialOffer.tsx");
 
 export const hasUserTrialOfferExpired = function hasUserTrialOfferExpired(hasExpired) {
   let flag;
@@ -32,25 +32,22 @@ export const useTrialOffer = function useTrialOffer(closure_9) {
   first = tmp3[0];
   React = tmp3[1];
   const obj = _require(stateFromStores[4]);
-  const obj2 = closure_5;
   const obj4 = React;
-  const tmp = _require;
-  const tmp2 = stateFromStores;
   const items1 = [closure_4];
   const stateFromStores1 = _require(stateFromStores[4]).useStateFromStores(items1, () => callback(stateFromStores[5]).isPremium(currentUser.getCurrentUser()));
   let result = !stateFromStores1;
   if (stateFromStores1) {
-    result = obj2.canFractionalPremiumUserUseOffer();
+    result = closure_5.canFractionalPremiumUserUseOffer();
   }
   const items2 = [first, stateFromStores];
   const effect = obj4.useEffect(() => {
     if (null != stateFromStores) {
-      if (null != tmp.expiresAt) {
+      if (null != stateFromStores.expiresAt) {
         const timeout = new callback(stateFromStores[6]).Timeout();
-        if (null != tmp) {
+        if (null != stateFromStores) {
           let num = 0;
-          if (null != tmp.expiresAt) {
-            const expiresAt = tmp.expiresAt;
+          if (null != stateFromStores.expiresAt) {
+            const expiresAt = stateFromStores.expiresAt;
             const _Date = Date;
             const time = expiresAt.getTime();
             num = time - Date.now();
@@ -63,14 +60,14 @@ export const useTrialOffer = function useTrialOffer(closure_9) {
             }
             if (null != closure_1_1) {
               let num = 0;
-              if (null != tmp4.expiresAt) {
-                let expiresAt = tmp4.expiresAt;
+              if (null != closure_1_1.expiresAt) {
+                let expiresAt = closure_1_1.expiresAt;
                 let _Date = Date;
                 let time = expiresAt.getTime();
                 num = time - Date.now();
               }
               if (closure_0 != null) {
-                obj.start(num, () => {
+                closure_0.start(num, () => {
                   if (!closure_1_2) {
                     if (closure_1_1.hasExpired()) {
                       closure_1_3(true);
@@ -78,14 +75,14 @@ export const useTrialOffer = function useTrialOffer(closure_9) {
                   }
                   if (null != closure_1_1) {
                     let num = 0;
-                    if (null != tmp4.expiresAt) {
-                      let expiresAt = tmp4.expiresAt;
+                    if (null != closure_1_1.expiresAt) {
+                      let expiresAt = closure_1_1.expiresAt;
                       let _Date = Date;
                       let time = expiresAt.getTime();
                       num = time - Date.now();
                     }
                     if (closure_0 != null) {
-                      obj.start(num, () => {
+                      closure_0.start(num, () => {
                         if (!closure_1_2) {
                           if (closure_1_1.hasExpired()) {
                             closure_1_3(true);
@@ -93,24 +90,21 @@ export const useTrialOffer = function useTrialOffer(closure_9) {
                         }
                         if (null != closure_1_1) {
                           let num = 0;
-                          if (null != tmp4.expiresAt) {
-                            let expiresAt = tmp4.expiresAt;
+                          if (null != closure_1_1.expiresAt) {
+                            let expiresAt = closure_1_1.expiresAt;
                             let _Date = Date;
                             let time = expiresAt.getTime();
                             num = time - Date.now();
                           }
                           if (closure_0 != null) {
-                            obj.start(num, () => { ... });
+                            closure_0.start(num, () => { ... });
                           }
-                          obj = closure_0;
                         }
                       });
                     }
-                    obj = closure_0;
                   }
                 });
               }
-              obj = closure_0;
             }
           });
         }

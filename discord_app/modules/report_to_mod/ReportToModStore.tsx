@@ -1,7 +1,7 @@
 // discord_app/modules/report_to_mod/ReportToModStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../stores/SelectedGuildStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedGuildStore.tsx";
 
 function handleSelectedGuildChange() {
   lastSelectedGuildId = lastSelectedGuildId.getLastSelectedGuildId();
@@ -24,8 +24,8 @@ prototype["initialize"] = function initialize(reportedMessages) {
     const _Object = Object;
     const _Object2 = Object;
     const entries = Object.entries(reportedMessages.reportedMessages);
-    closure_3.reportedMessages = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    closure_3.reportedMessages = Object.fromEntries(entries.map((item, index) => {
+      [tmp, tmp2] = item;
       const items = [tmp, new Set(tmp2)];
       return items;
     }));
@@ -38,8 +38,8 @@ prototype["getState"] = function getState() {
 };
 prototype["isUserBanned"] = function isUserBanned(arg0) {
   let value;
-  if (c2 != null) {
-    value = c2.get(arg0);
+  if (_null != null) {
+    value = _null.get(arg0);
   }
   if (value == null) {
     value = null;
@@ -80,7 +80,7 @@ const reportToModStore = new ReportToModStore(dispatcherDefault, {
     if (null == closure_3.reportedMessages[channelId]) {
       const _Set = Set;
       const set = new Set();
-      tmp.reportedMessages[channelId] = set;
+      closure_3.reportedMessages[channelId] = set;
     }
     closure_3.reportedMessages[channelId].add(channelId.messageId);
   },
@@ -107,8 +107,8 @@ const reportToModStore = new ReportToModStore(dispatcherDefault, {
     let set;
     if (guildId.guildId === c1) {
       const _Set = Set;
-      set = new Set(bans.map((user) => {
-        user = user.user;
+      set = new Set(bans.map((item, index) => {
+        const user = item.user;
         let id;
         if (user != null) {
           id = user.id;
@@ -119,19 +119,19 @@ const reportToModStore = new ReportToModStore(dispatcherDefault, {
         userIds = [];
       }
       const set1 = new Set(userIds);
-      const found = Array.from(set1).filter((arg0) => !set.has(arg0));
+      const found = Array.from(set1).filter((item, index) => !set.has(item));
       if (null == map) {
         const _Map = Map;
         map = new Map();
       }
-      const item = set.forEach((arg0) => {
+      const item = set.forEach((item, index) => {
         if (map != null) {
-          const result = map.set(arg0, true);
+          const result = map.set(item, true);
         }
       });
-      const item1 = found.forEach((arg0) => {
+      const item1 = found.forEach((item, index) => {
         if (map != null) {
-          const result = map.set(arg0, false);
+          const result = map.set(item, false);
         }
       });
       const arr = Array.from(set1);
@@ -143,6 +143,6 @@ const reportToModStore = new ReportToModStore(dispatcherDefault, {
     closure_3.reportedMessages = {};
   }
 });
-let result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/report_to_mod/ReportToModStore.tsx");
 
 export default reportToModStore;

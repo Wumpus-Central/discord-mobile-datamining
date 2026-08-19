@@ -2,19 +2,19 @@
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionOverwriteType from "../../flow/Server.tsx";
 import resolveNsfwTogglesWithDefaults from "../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../impersonate/ImpersonateStore.tsx";
+import noop from "../../../_runtime/00019_noop.js";
+import initialize from "../impersonate/ImpersonateStore.tsx";
 import { ChannelRecordBase } from "../../records/ChannelRecord.tsx";
 import { isGuildNSFW } from "../../records/GuildRecord.tsx";
-import closure_7 from "../../stores/AuthenticationStore.tsx";
-import closure_8 from "../../stores/ChannelStore.tsx";
-import closure_9 from "../../stores/GuildMemberStore.tsx";
-import closure_10 from "../../stores/GuildStore.tsx";
-import closure_11 from "../../stores/PermissionStore.tsx";
-import closure_12 from "../../stores/UserStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function computePermissions(isPrivate) {
   if (!(isPrivate instanceof ChannelRecordBase)) {
     if (null != isPrivate) {
@@ -22,23 +22,23 @@ function computePermissions(isPrivate) {
       let SEND_MESSAGES_IN_THREADS = constants2;
       let flag = true;
       let flag2 = true;
-      if (!obj6.has(permissions, constants2.ADMINISTRATOR)) {
-        let tmp13Result = tmp13(506);
+      if (!obj5.has(permissions, constants2.ADMINISTRATOR)) {
+        let tmp13Result = fromStringAll;
         const hasItem = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.VIEW_CHANNEL);
         if (tmp3) {
           let hasItem1 = hasItem;
           if (hasItem) {
-            tmp13Result = tmp13(506);
+            tmp13Result = fromStringAll;
             hasItem1 = tmp13Result.has(permissions, SEND_MESSAGES_IN_THREADS.USE_APPLICATION_COMMANDS);
           }
-          const has = tmp13(506).has;
+          const has = fromStringAll.has;
           if (arg1) {
             SEND_MESSAGES_IN_THREADS = SEND_MESSAGES_IN_THREADS.SEND_MESSAGES_IN_THREADS;
             let hasItem2 = has(permissions, SEND_MESSAGES_IN_THREADS);
           } else {
             hasItem2 = has(permissions, SEND_MESSAGES_IN_THREADS.SEND_MESSAGES);
           }
-          const tmp13Result1 = tmp13(506);
+          const tmp13Result1 = fromStringAll;
         } else {
           flag = true;
           flag2 = hasItem;
@@ -52,11 +52,13 @@ function computePermissions(isPrivate) {
       return obj;
     }
   }
-  obj = { computedPermissions: fromStringAll.deserialize(0), hasBaseAccessPermissions: true, hasSendMessagesPermission: true };
+  obj = { computedPermissions: null, hasBaseAccessPermissions: true, hasSendMessagesPermission: true };
+  const deserializer = fromStringAll;
+  obj[0] = deserializer.deserialize(0);
   return obj;
 }
 ({ ChannelTypes: map1, Permissions: closure_14 } = ME);
-const result = require("set").fileFinishedImporting("modules/application_commands/CommandPermissionContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_commands/CommandPermissionContext.tsx");
 
 export const buildPermissionContext = function buildPermissionContext(channel, items) {
   let obj = channel;
@@ -91,13 +93,11 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
     } else {
       items = [];
     }
-    let isThreadResult = channel instanceof tmp;
-    const obj2 = resolveNsfwTogglesWithDefaults;
+    let isThreadResult = channel instanceof ChannelRecordBase;
     if (isThreadResult) {
       isThreadResult = channel.isThread();
     }
     const isViewingRolesResult = viewingRoles.isViewingRoles(undefined);
-    const tmp17 = computePermissions;
     obj = { context: null, userId: null, roleIds: null, isImpersonating: null, commandTypes: null, computedPermissions: null, hasBaseAccessPermissions: null, hasSendMessagesPermission: null, allowNsfw: null };
     obj[0] = obj;
     obj[1] = id;
@@ -107,7 +107,7 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
     ({ computedPermissions: obj3[5], hasBaseAccessPermissions: obj3[6], hasSendMessagesPermission: obj3[7] } = computePermissions(obj, isThreadResult));
     let tmp24 = flag;
     if (tmp24) {
-      let tmp25 = !(obj instanceof tmp);
+      let tmp25 = !(obj instanceof ChannelRecordBase);
       if (!tmp25) {
         if (null != obj.guild_id) {
           viewNsfwCommandsOrDefault = obj.isNSFW() || tmp23;
@@ -126,13 +126,13 @@ export const usePermissionContext = function usePermissionContext(channel, items
   closure_1 = items;
   items = [channel];
   const memo = React.useMemo(() => {
-    let tmp = closure_0;
-    if (closure_0 instanceof stateFromStoresArray) {
-      tmp = obj;
-      if (obj.isThread()) {
-        channel = closure_1_8.getChannel(obj.parent_id);
+    let tmp = thread;
+    if (thread instanceof stateFromStoresArray) {
+      tmp = thread;
+      if (thread.isThread()) {
+        channel = closure_1_8.getChannel(thread.parent_id);
         if (channel == null) {
-          channel = obj;
+          channel = thread;
         }
         tmp = channel;
       }
@@ -196,17 +196,18 @@ export const usePermissionContext = function usePermissionContext(channel, items
     }
     viewNsfwCommandsOrDefault = tmp17;
     const items7 = [items, memo, stateFromStores2, stateFromStoresArray, stateFromStores, tmp17, channel];
-    return React.useMemo(() => {
+    return obj.useMemo(() => {
       let obj = closure_0;
       let isThreadResult = closure_0 instanceof stateFromStoresArray;
       if (isThreadResult) {
         isThreadResult = obj.isThread();
       }
-      const tmpResult = closure_1_15(memo, isThreadResult);
-      obj = { context: tmp2, userId: stateFromStores, roleIds: stateFromStoresArray, commandTypes: closure_1, isImpersonating: stateFromStores2, computedPermissions: tmpResult.computedPermissions, hasBaseAccessPermissions: tmpResult.hasBaseAccessPermissions, hasSendMessagesPermission: tmpResult.hasSendMessagesPermission, allowNsfw: viewNsfwCommandsOrDefault };
+      const tmpResult = computePermissions(memo, isThreadResult);
+      obj = { context: memo, userId: stateFromStores, roleIds: stateFromStoresArray, commandTypes: closure_1, isImpersonating: stateFromStores2, computedPermissions: tmpResult.computedPermissions, hasBaseAccessPermissions: tmpResult.hasBaseAccessPermissions, hasSendMessagesPermission: tmpResult.hasSendMessagesPermission, allowNsfw: viewNsfwCommandsOrDefault };
       return obj;
     }, items7);
   }
+  obj = React;
 };
 export const computeCommandContextType = function computeCommandContextType(channel, applicationId) {
   if (channel instanceof ChannelRecordBase) {

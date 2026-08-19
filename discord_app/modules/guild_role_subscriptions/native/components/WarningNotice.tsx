@@ -7,34 +7,29 @@ import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import registerAssetDefault from "../../../../../_runtime/08555_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, horizontalContainer: null, message: null, actionButtonWrapper: null, containerYellow: null, textYellow: null, alertIcon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, borderWidth: 1, padding: 12 };
+const createCacheKey = { borderRadius: ThemesDefault.radii.xs, borderWidth: 1, padding: 12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[2] = { flex: 1, marginStart: 10, textAlignVertical: "center" };
 createCacheKey[3] = { marginTop: 24, alignSelf: "center", width: "100%" };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: ThemesDefault.colors.STATUS_WARNING };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: ThemesDefault.colors.STATUS_WARNING };
 createCacheKey[5] = { color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
 createCacheKey[6] = { alignSelf: "flex-start", width: 20, height: 20 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/WarningNotice.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/WarningNotice.tsx");
 
 export default function WarningNotice(arg0) {
   ({ ctaLabel, onClick } = arg0);
   ({ style, notice, submitting, disabled } = arg0);
   const tmp = callback3();
-  let obj = { style: items, children: null };
-  items = [style, , ];
+  const items = [style, , ];
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
-  obj = { style: tmp.horizontalContainer, children: null };
-  obj = { style: tmp.alertIcon, source: registerAssetDefault };
+  const obj = { style: tmp.alertIcon, source: registerAssetDefault };
   const items1 = [callback(preloadDefault, obj), ];
   const items2 = [, ];
   ({ message: arr3[0], textYellow: arr3[1] } = tmp);
@@ -50,8 +45,8 @@ export default function WarningNotice(arg0) {
     obj2[1] = disabled;
     obj2[2] = submitting;
     obj2[3] = ctaLabel;
-    obj1[1] = tmp4(Button.Button, obj2);
-    tmp4Result = tmp4(tmp3, obj1);
+    obj1[1] = callback(Button.Button, obj2);
+    tmp4Result = callback(View, obj1);
   }
   items3[1] = tmp4Result;
   obj[1] = items3;

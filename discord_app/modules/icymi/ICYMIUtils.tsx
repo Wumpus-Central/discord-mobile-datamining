@@ -1,24 +1,24 @@
 // discord_app/modules/icymi/ICYMIUtils.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
 import createMinimalMessageRecord from "../messages/MessageRecordUtils.tsx";
 import MessageEmbedTypes from "ICYMITypes.tsx";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import isMediaAttachment from "../forums/ForumPostMediaUtils.tsx";
 import apexExperiment from "ICYMIExperiment.tsx";
 import ContentInventoryAuthorType from "../../../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import scheduledEventSort from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
 import { ThreadChannelRecord } from "../../records/ChannelRecord.tsx";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import closure_7 from "../../stores/GuildStore.tsx";
-import closure_8 from "../../stores/MessageStore.tsx";
-import closure_9 from "../../stores/ReadStateStore.tsx";
-import closure_10 from "ICYMIStore.tsx";
-import closure_11 from "ICYMIUnreadStateStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import reinjectEphemerals from "../../stores/MessageStore.tsx";
+import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
+import filterStaffGuild from "ICYMIStore.tsx";
+import initialize from "ICYMIUnreadStateStore.tsx";
 import ME from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-require = arg1;
+require = fn;
 function generateHydrationId(messageItems, activityItems) {
   return "hydration-" + messageItems + "-" + activityItems;
 }
@@ -71,13 +71,13 @@ function _hydrateItems() {
               const substr = arr.slice(callback, dependencyMap);
               if (0 !== substr.length) {
                 obj1 = callback(9057);
-                const hydratedAttempt = obj1.loadHydratedAttempt(closure_1_14(tmp24, tmp25));
-                const found = substr.filter((arg0) => null == dependencyMap[arg0.id]);
-                const found1 = found.filter((type) => type.type === dependencyMap(7589).ICYMIItemTypes.MESSAGE);
-                const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
-                const mapped1 = found.map((type) => {
-                  if (type.type === dependencyMap(7589).ICYMIItemTypes.MESSAGE) {
-                    const message_context = type.data.message_context;
+                const hydratedAttempt = obj1.loadHydratedAttempt(closure_1_14(callback, dependencyMap));
+                const found = substr.filter((item, index) => null == dependencyMap[item.id]);
+                const found1 = found.filter((item, index) => item.type === dependencyMap(7589).ICYMIItemTypes.MESSAGE);
+                const mapped = found1.map((item, index) => ({ channel_id: item.data.channel_id, message_id: item.data.message_id }));
+                const mapped1 = found.map((item, index) => {
+                  if (item.type === dependencyMap(7589).ICYMIItemTypes.MESSAGE) {
+                    const message_context = item.data.message_context;
                     let reply_message_id;
                     if (message_context != null) {
                       reply_message_id = message_context.reply_message_id;
@@ -85,30 +85,30 @@ function _hydrateItems() {
                     const items = [];
                     if (null != reply_message_id) {
                       obj = { channel_id: null, message_id: null };
-                      obj[0] = type.data.channel_id;
-                      obj[1] = type.data.message_context.reply_message_id;
+                      obj[0] = item.data.channel_id;
+                      obj[1] = item.data.message_context.reply_message_id;
                       items.push(obj);
                     }
-                    const message_context2 = type.data.message_context;
+                    const message_context2 = item.data.message_context;
                     let before_message_id;
                     if (message_context2 != null) {
                       before_message_id = message_context2.before_message_id;
                     }
                     if (null != before_message_id) {
                       obj = { channel_id: null, message_id: null };
-                      obj[0] = type.data.channel_id;
-                      obj[1] = type.data.message_context.before_message_id;
+                      obj[0] = item.data.channel_id;
+                      obj[1] = item.data.message_context.before_message_id;
                       items.push(obj);
                     }
-                    const message_context3 = type.data.message_context;
+                    const message_context3 = item.data.message_context;
                     let after_message_id;
                     if (message_context3 != null) {
                       after_message_id = message_context3.after_message_id;
                     }
                     if (null != after_message_id) {
                       obj = { channel_id: null, message_id: null };
-                      obj[0] = type.data.channel_id;
-                      obj[1] = type.data.message_context.after_message_id;
+                      obj[0] = item.data.channel_id;
+                      obj[1] = item.data.message_context.after_message_id;
                       items.push(obj);
                     }
                     return items;
@@ -118,8 +118,8 @@ function _hydrateItems() {
                 });
                 const _Boolean = Boolean;
                 const found2 = mapped1.flat().filter(Boolean);
-                const found3 = found.filter((type) => type.type === dependencyMap(7589).ICYMIItemTypes.ACTIVITY);
-                const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
+                const found3 = found.filter((item, index) => item.type === dependencyMap(7589).ICYMIItemTypes.ACTIVITY);
+                const mapped2 = found3.map((item, index) => ({ user_id: item.data.user_id, content_id: item.data.content_id }));
                 const flatResult = mapped1.flat();
                 obj1 = { messageItems: null, activityItems: null };
                 let items = [];
@@ -129,7 +129,7 @@ function _hydrateItems() {
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback(9057).fetchHydrated(tmp24, tmp25, obj1);
+                obj2[0] = callback(9057).fetchHydrated(callback, dependencyMap, obj1);
                 return obj2;
               }
             }
@@ -299,22 +299,22 @@ function _regenerateFeedAndClearReadStates() {
             } else {
               AnalyticsObjectTypes = ack.AnalyticsObjectTypes;
               dehydratedItems = dehydratedItems.getDehydratedItems();
-              const item = dehydratedItems.forEach((type) => {
-                let tmp2 = type.type === callback(AnalyticsObjectTypes[10]).ICYMIItemTypes.MESSAGE;
+              const item = dehydratedItems.forEach((item, index) => {
+                let tmp2 = item.type === callback(AnalyticsObjectTypes[10]).ICYMIItemTypes.MESSAGE;
                 if (tmp2) {
-                  tmp2 = type.data.channel_type === closure_1_12.GUILD_ANNOUNCEMENT;
+                  tmp2 = item.data.channel_type === closure_1_12.GUILD_ANNOUNCEMENT;
                 }
                 if (tmp2) {
-                  obj = ack(tmp[13]);
-                  tmp2 = obj.compare(closure_1_9.ackMessageId(type.data.channel_id), type.data.message_id) >= 0;
+                  obj = ack(AnalyticsObjectTypes[13]);
+                  tmp2 = obj.compare(closure_1_9.ackMessageId(item.data.channel_id), item.data.message_id) >= 0;
                 }
                 if (tmp2) {
-                  const channel_id = type.data.channel_id;
+                  const channel_id = item.data.channel_id;
                   obj = { object: null, objectType: null };
                   obj[0] = callback;
                   obj[1] = AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC;
-                  ack(channel_id, obj, true, true, ack(tmp[13]).atPreviousMillisecond(type.data.message_id));
-                  const obj3 = ack(tmp[13]);
+                  ack(channel_id, obj, true, true, ack(AnalyticsObjectTypes[13]).atPreviousMillisecond(item.data.message_id));
+                  const obj3 = ack(AnalyticsObjectTypes[13]);
                 }
               });
               let obj11 = ack(AnalyticsObjectTypes[11]);
@@ -407,7 +407,7 @@ function _regenerateFeedAndClearReadStates() {
 }
 ({ ChannelTypes: closure_12, GuildNSFWContentLevel: map1 } = ME);
 let obj = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };
-let result = require("set").fileFinishedImporting("modules/icymi/ICYMIUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/icymi/ICYMIUtils.tsx");
 
 export { generateHydrationId };
 export const ICYMICustomScore = obj;
@@ -421,8 +421,7 @@ export const isGuildItem = function isGuildItem(type) {
 export const isChannelCustomScoreEligible = function isChannelCustomScoreEligible(stateFromStores) {
   let tmp2 = stateFromStores.type === constants.GUILD_FORUM;
   if (!tmp2) {
-    tmp2 = stateFromStores.type === tmp.GUILD_ANNOUNCEMENT || stateFromStores.type === tmp.GUILD_TEXT;
-    const tmp3 = stateFromStores.type === tmp.GUILD_ANNOUNCEMENT || stateFromStores.type === tmp.GUILD_TEXT;
+    tmp2 = stateFromStores.type === constants.GUILD_ANNOUNCEMENT || stateFromStores.type === constants.GUILD_TEXT;
   }
   return tmp2;
 };
@@ -441,9 +440,9 @@ export const numberToCustomScore = function numberToCustomScore(stateFromStores1
 export const customScoreToNumber = function customScoreToNumber(DEFAULT) {
   if (obj.MORE === DEFAULT) {
     return 1;
-  } else if (tmp.LESS === DEFAULT) {
+  } else if (obj.LESS === DEFAULT) {
     return -1;
-  } else if (tmp.MUTED === DEFAULT) {
+  } else if (obj.MUTED === DEFAULT) {
     return -2;
   } else {
     return 0;
@@ -460,13 +459,13 @@ export const hydrateNextPage = function hydrateNextPage() {
   }
   return applyArgumentsResult;
 };
-export const createGravityMessageFromServer = function createGravityMessageFromServer(message, arg1) {
+export const createGravityMessageFromServer = function createGravityMessageFromServer(closure_0, arg1) {
   obj = {};
   const merged = Object.assign(arg1);
-  obj.message = createMinimalMessageRecord.createMessageRecord(message.message);
+  obj.message = createMinimalMessageRecord.createMessageRecord(_require.message);
   let fromServerResult;
-  if (null != message.thread_channel) {
-    fromServerResult = ThreadChannelRecord.fromServer(message.thread_channel, message.guild_id);
+  if (null != _require.thread_channel) {
+    fromServerResult = ThreadChannelRecord.fromServer(_require.thread_channel, _require.guild_id);
   }
   obj.threadChannel = fromServerResult;
   return obj;
@@ -475,10 +474,8 @@ export const isItemUnreadInChannel = function isItemUnreadInChannel(channel_id, 
   trackedAckMessageId = trackedAckMessageId.getTrackedAckMessageId(channel_id);
   let tmp2 = null == trackedAckMessageId;
   if (!tmp2) {
-    obj = DISCORD_EPOCHDefault;
     const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message_id);
     tmp2 = extractTimestampResult > DISCORD_EPOCHDefault.extractTimestamp(trackedAckMessageId);
-    const obj2 = DISCORD_EPOCHDefault;
   }
   return tmp2;
 };
@@ -486,7 +483,7 @@ export const useGravityMessage = function useGravityMessage(message) {
   const _require = message;
   const items = [closure_8, closure_10];
   const items1 = [message];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     message = closure_1_8.getMessage(message.getChannelId(), message.id);
     if (message == null) {
       const hydratedItem = closure_1_10.getHydratedItem(tmp.id);
@@ -506,19 +503,19 @@ export const useGravityMessageItem = function useGravityMessageItem(id) {
   const _require = id;
   const items = [closure_10];
   const items1 = [id.id];
-  return _initialize.useStateFromStores(items, () => closure_1_10.getHydratedItem(id.id), items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_10.getHydratedItem(id.id), items1);
 };
 export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
   const _require = id;
   closure_1 = before_message_id;
   const items = [closure_8, closure_10];
   const items1 = [id, before_message_id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_1) {
-      let message = closure_1_8.getMessage(closure_0, tmp);
+      let message = closure_1_8.getMessage(closure_0, closure_1);
       if (message == null) {
-        const hydratedItem = closure_1_10.getHydratedItem(tmp);
+        const hydratedItem = closure_1_10.getHydratedItem(closure_1);
         let message1;
         if (hydratedItem != null) {
           message1 = hydratedItem.message;
@@ -534,7 +531,6 @@ export const icymiEnabled = function icymiEnabled(customScores) {
   return apexExperiment.getICYMIEnabled(customScores);
 };
 export const customStatusToContentInventoryEntry = function customStatusToContentInventoryEntry(data) {
-  obj = { id: data.id, type: MessageEmbedTypes.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
   obj = { id: data.id, author_id: data.data.user_id, author_type: ContentInventoryAuthorType.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
   let str = data.data.text;
   if (str == null) {
@@ -586,10 +582,7 @@ export const getViewableFeedItemsArray = function getViewableFeedItemsArray(view
   if (0 <= diff) {
     while (true) {
       tmp3 = viewableItems[diff];
-      let tmp4 = diff;
       if (null != tmp3) {
-        let tmp5 = id;
-        let tmp6 = dependencyMap;
         let NON_ELIGIBLE_SCROLL_ITEMS = id(9063).NON_ELIGIBLE_SCROLL_ITEMS;
         if (!NON_ELIGIBLE_SCROLL_ITEMS.has(tmp3.item.data.kind)) {
           break;
@@ -604,7 +597,7 @@ export const getViewableFeedItemsArray = function getViewableFeedItemsArray(view
   if (null == tmp2) {
     return [];
   } else {
-    const findIndexResult = items.findIndex((id) => id.id === id);
+    const findIndexResult = items.findIndex((item, index) => item.id === id);
     if (findIndexResult < 0) {
       let items1 = [];
     } else {
@@ -709,14 +702,14 @@ export const determineContentType = function determineContentType(channel, messa
   } else {
     if (null != message.reactions) {
       const reactions = message.reactions;
-      const mapped = reactions.map((count_details) => {
+      const mapped = reactions.map((item, index) => {
         let num = 0;
-        if (null != count_details.count_details) {
-          let num2 = count_details.count_details.burst;
+        if (null != item.count_details) {
+          let num2 = item.count_details.burst;
           if (num2 == null) {
             num2 = 0;
           }
-          let num3 = count_details.count_details.normal;
+          let num3 = item.count_details.normal;
           if (num3 == null) {
             num3 = 0;
           }
@@ -725,7 +718,7 @@ export const determineContentType = function determineContentType(channel, messa
         return num;
       });
       if (0 !== mapped.length) {
-        if (mapped.reduce((arg0, arg1) => arg0 + arg1) > 10) {
+        if (mapped.reduce((acc, item, index) => acc + item) > 10) {
           return MessageEmbedTypes.ContentType.POPULAR_MESSAGE;
         }
       }
@@ -733,13 +726,13 @@ export const determineContentType = function determineContentType(channel, messa
     if (message.attachments.length > 0) {
       let ContentType = dependencyMap;
       if (obj.isValidImageAttachment(message.attachments[0])) {
-        ContentType = tmp6(7589).ContentType;
+        ContentType = MessageEmbedTypes.ContentType;
         let IMAGE = ContentType.IMAGE;
       } else {
-        const result = tmp6(8515).isValidVideoAttachment(message.attachments[0]);
-        const ContentType2 = tmp6(7589).ContentType;
+        const result = isMediaAttachment.isValidVideoAttachment(message.attachments[0]);
+        const ContentType2 = MessageEmbedTypes.ContentType;
         IMAGE = result ? ContentType2.VIDEO : ContentType2.FILE;
-        const tmp6Result = tmp6(8515);
+        const tmp6Result = isMediaAttachment;
       }
       obj = isMediaAttachment;
     } else {
@@ -758,42 +751,42 @@ export const contentTypeToText = function contentTypeToText(arg0) {
     flag = false;
   }
   if (MessageEmbedTypes.ContentType.POPULAR_MESSAGE === arg0) {
-    const intl10 = tmp(1236).intl;
-    return intl10.string(tmp(1236).t["H/2+cl"]);
-  } else if (tmp(7589).ContentType.IMAGE === arg0) {
-    const intl9 = tmp(1236).intl;
-    return intl9.string(tmp(1236).t.gmOWAo);
-  } else if (tmp(7589).ContentType.VIDEO === arg0) {
-    const intl8 = tmp(1236).intl;
-    return intl8.string(tmp(1236).t.swhcPM);
-  } else if (tmp(7589).ContentType.LINK === arg0) {
-    const intl7 = tmp(1236).intl;
-    return intl7.string(tmp(1236).t.oj5yvD);
-  } else if (tmp(7589).ContentType.THREAD === arg0) {
-    const intl6 = tmp(1236).intl;
-    return intl6.string(tmp(1236).t.DwLrLK);
-  } else if (tmp(7589).ContentType.FORUM_POST === arg0) {
-    const intl5 = tmp(1236).intl;
-    return intl5.string(tmp(1236).t["Q9/6BS"]);
-  } else if (tmp(7589).ContentType.CHANGED_STATUS === arg0) {
-    const intl4 = tmp(1236).intl;
-    return intl4.string(tmp(1236).t.TGrUmi);
-  } else if (tmp(7589).ContentType.INTERESTING === arg0) {
-    const intl3 = tmp(1236).intl;
-    return intl3.string(tmp(1236).t["TahE/i"]);
-  } else if (tmp(7589).ContentType.ANNOUNCEMENT === arg0) {
-    const intl2 = tmp(1236).intl;
+    const intl10 = getSystemLocale.intl;
+    return intl10.string(getSystemLocale.t["H/2+cl"]);
+  } else if (MessageEmbedTypes.ContentType.IMAGE === arg0) {
+    const intl9 = getSystemLocale.intl;
+    return intl9.string(getSystemLocale.t.gmOWAo);
+  } else if (MessageEmbedTypes.ContentType.VIDEO === arg0) {
+    const intl8 = getSystemLocale.intl;
+    return intl8.string(getSystemLocale.t.swhcPM);
+  } else if (MessageEmbedTypes.ContentType.LINK === arg0) {
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t.oj5yvD);
+  } else if (MessageEmbedTypes.ContentType.THREAD === arg0) {
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t.DwLrLK);
+  } else if (MessageEmbedTypes.ContentType.FORUM_POST === arg0) {
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t["Q9/6BS"]);
+  } else if (MessageEmbedTypes.ContentType.CHANGED_STATUS === arg0) {
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.TGrUmi);
+  } else if (MessageEmbedTypes.ContentType.INTERESTING === arg0) {
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t["TahE/i"]);
+  } else if (MessageEmbedTypes.ContentType.ANNOUNCEMENT === arg0) {
+    const intl2 = getSystemLocale.intl;
     const string = intl2.string;
-    const t = tmp(1236).t;
+    const t = getSystemLocale.t;
     if (flag) {
       let stringResult = string(t.E0MW8I);
     } else {
       stringResult = string(t["2ih63V"]);
     }
     return stringResult;
-  } else if (tmp(7589).ContentType.FILE === arg0) {
-    const intl = tmp(1236).intl;
-    return intl.string(tmp(1236).t.pYrnTY);
+  } else if (MessageEmbedTypes.ContentType.FILE === arg0) {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.pYrnTY);
   }
 };
 export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates(ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON) {

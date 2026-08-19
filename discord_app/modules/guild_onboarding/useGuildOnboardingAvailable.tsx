@@ -1,23 +1,22 @@
 // discord_app/modules/guild_onboarding/useGuildOnboardingAvailable.tsx
-import closure_2 from "../impersonate/ImpersonateStore.tsx";
+import initialize from "../impersonate/ImpersonateStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/useGuildOnboardingAvailable.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/useGuildOnboardingAvailable.tsx");
 
 export default function useGuildOnboardingAvailable(features) {
   const _require = features;
   const items = [closure_2];
-  let stateFromStores = _initialize.useStateFromStores(items, () => {
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let id;
-    if (closure_0 != null) {
-      id = tmp.id;
+    if (user != null) {
+      id = user.id;
     }
     if (null == id) {
       return false;
     } else {
-      return closure_1_2.isFullServerPreview(tmp.id) && closure_1_2.isOnboardingEnabled(tmp.id);
+      return closure_1_2.isFullServerPreview(user.id) && closure_1_2.isOnboardingEnabled(user.id);
     }
   });
   if (!stateFromStores) {

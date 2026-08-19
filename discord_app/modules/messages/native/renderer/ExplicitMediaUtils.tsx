@@ -1,12 +1,14 @@
 // discord_app/modules/messages/native/renderer/ExplicitMediaUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
 import hasFlag from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
 import getEligibleHarmTypesConfigsForContext from "../../../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import ContentHarmTypeChannel from "../../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 
 const MessageAttachmentFlags = ME.MessageAttachmentFlags;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");
 
 export const getAttachmentObscurityProps = function getAttachmentObscurityProps(shouldAgeVerify) {
   ({ attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags } = shouldAgeVerify);
@@ -30,15 +32,14 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
     num3 = 0;
   }
   obj[1] = num3;
-  let tmpResult = tmp(5019);
-  obj = { type: tmp(5022).ObscuredMediaTypes.Attachment, media: obj };
+  let tmpResult = getEligibleHarmTypesConfigsForContext;
+  obj = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj };
   const mediaObscuredReasonFromBitmask = tmpResult.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
-  tmpResult = tmp(5019);
+  tmpResult = getEligibleHarmTypesConfigsForContext;
   let isVerifiedTeenResult = tmp5;
-  obj1 = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj };
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    isVerifiedTeenResult = tmp(4992).isVerifiedTeen();
-    const tmpResult1 = tmp(4992);
+    isVerifiedTeenResult = useAgeVerificationRunner.isVerifiedTeen();
+    const tmpResult1 = useAgeVerificationRunner;
   }
   let tmp7 = shouldObscureSpoiler;
   if (shouldObscureSpoiler) {
@@ -50,16 +51,16 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   if (shouldObscureSpoiler) {
     str2 = str;
     if (hasFlagResult) {
-      const intl = tmp(1236).intl;
-      str2 = intl.string(tmp(1236).t["F+x38C"]).toUpperCase();
-      const str3 = intl.string(tmp(1236).t["F+x38C"]);
+      const intl = getSystemLocale.intl;
+      str2 = intl.string(getSystemLocale.t["F+x38C"]).toUpperCase();
+      const str3 = intl.string(getSystemLocale.t["F+x38C"]);
     }
   }
   obj2[1] = str2;
   obj2[2] = mediaObscuredReasonFromBitmask.length > 0;
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    const intl2 = tmp(1236).intl;
-    str = intl2.string(tmp(1236).t.SpxcUR);
+    const intl2 = getSystemLocale.intl;
+    str = intl2.string(getSystemLocale.t.SpxcUR);
   }
   obj2[3] = str;
   obj2[4] = tmpResult.isMediaScanPending({ type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj }, enabledContentHarmTypeFlags);
@@ -75,14 +76,13 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
 export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemObscurityProps(arg0) {
   ({ type, mediaItem, isSpoilered, isAuthorBot, enabledContentHarmTypeFlags } = arg0);
   ({ shouldObscureSpoiler, shouldAgeVerify } = arg0);
-  let obj = getEligibleHarmTypesConfigsForContext;
-  obj = { type: ContentHarmTypeChannel.ObscuredMediaTypes.GenericMedia, media: mediaItem };
+  let obj = { type: ContentHarmTypeChannel.ObscuredMediaTypes.GenericMedia, media: mediaItem };
   let isMediaScanPendingResult = !isAuthorBot;
   const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
   if (!isAuthorBot) {
-    let tmpResult = tmp(5019);
+    let tmpResult = getEligibleHarmTypesConfigsForContext;
     obj = { type: null, media: null };
-    obj[0] = tmp(5022).ObscuredMediaTypes.GenericMedia;
+    obj[0] = ContentHarmTypeChannel.ObscuredMediaTypes.GenericMedia;
     obj[1] = mediaItem;
     isMediaScanPendingResult = tmpResult.isMediaScanPending(obj, enabledContentHarmTypeFlags);
   }
@@ -91,7 +91,7 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
   }
   let isVerifiedTeenResult = tmp4;
   if (mediaObscuredReasonFromBitmask.length > 0) {
-    tmpResult = tmp(4992);
+    tmpResult = useAgeVerificationRunner;
     isVerifiedTeenResult = tmpResult.isVerifiedTeen();
   }
   obj1 = { isSpoiler: isSpoilered, spoilerDescription: null, isObscured: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };
@@ -100,8 +100,8 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
     obj1[2] = tmp4;
     let stringResult = null;
     if (tmp4) {
-      const intl4 = tmp(1236).intl;
-      stringResult = intl4.string(tmp(1236).t.SpxcUR);
+      const intl4 = getSystemLocale.intl;
+      stringResult = intl4.string(getSystemLocale.t.SpxcUR);
     }
     obj1[3] = stringResult;
     obj1[4] = isMediaScanPendingResult;
@@ -114,20 +114,20 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
     obj1[7] = tmp4;
     return obj1;
   } else if ("image" === type) {
-    const intl3 = tmp(1236).intl;
-    let stringResult1 = intl3.string(tmp(1236).t.sb2W2J);
+    const intl3 = getSystemLocale.intl;
+    let stringResult1 = intl3.string(getSystemLocale.t.sb2W2J);
   } else {
     if ("video" === type) {
-      const intl2 = tmp(1236).intl;
-      stringResult1 = intl2.string(tmp(1236).t.ehBaMc);
+      const intl2 = getSystemLocale.intl;
+      stringResult1 = intl2.string(getSystemLocale.t.ehBaMc);
     } else if ("file" !== type) {
       if ("generic" === type) {
-        const intl5 = tmp(1236).intl;
-        stringResult1 = intl5.string(tmp(1236).t.G71b77);
+        const intl5 = getSystemLocale.intl;
+        stringResult1 = intl5.string(getSystemLocale.t.G71b77);
       }
     }
-    const intl = tmp(1236).intl;
-    stringResult1 = intl.string(tmp(1236).t["3Gc2XP"]);
+    const intl = getSystemLocale.intl;
+    stringResult1 = intl.string(getSystemLocale.t["3Gc2XP"]);
   }
 };
 export function getAttachmentObscurityDefaults() {

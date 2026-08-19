@@ -1,17 +1,16 @@
 // discord_app/modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx
 import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");
 
 export default function UserSettingsSensitiveContentFilters() {
   const node = React.useMemo(() => {
-    let obj = callback(10669);
-    obj = { sections: null };
-    obj = { label: null, settings: null, subLabel: null };
+    callback(10669);
+    const obj = { label: null, settings: null, subLabel: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.GYpoAq);
     const items = [, ];

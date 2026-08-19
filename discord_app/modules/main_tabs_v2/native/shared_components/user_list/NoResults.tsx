@@ -5,12 +5,12 @@ import get_ActivityIndicator from "../../../../../../_runtime/00017_get_Activity
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ headerContainer: { paddingHorizontal: 16 }, container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16, paddingBottom: 16, paddingTop: 32 }, image: { marginBottom: 12 }, textContainer: { justifyContent: "center", alignItems: "center" }, text: { textAlign: "center", marginTop: 4 }, fullHeightContentContainer: { paddingBottom: 0, paddingTop: 0 }, fullHeightScrollContent: { flexGrow: 1 } });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/NoResults.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/NoResults.tsx");
 
 export default function NoResults(illustration) {
   ({ subtitle, fullHeight } = illustration);
@@ -39,7 +39,7 @@ export default function NoResults(illustration) {
     obj = { style: null, children: null };
     obj[0] = tmp.image;
     obj[1] = callback(illustration, {});
-    tmp5 = callback(tmp4, obj);
+    tmp5 = callback(closure_2, obj);
   }
   const items2 = [tmp5, ];
   obj1 = { style: tmp.textContainer, children: null };
@@ -53,9 +53,9 @@ export default function NoResults(illustration) {
   }
   items3[1] = tmp7Result;
   obj1[1] = items3;
-  items2[1] = closure_5(closure_2, obj1);
+  items2[1] = callback(closure_2, obj1);
   obj[1] = items2;
-  const items4 = [closure_5(closure_2, obj), children];
+  const items4 = [callback(closure_2, obj), children];
   obj[3] = items4;
-  return closure_5(closure_3, obj);
+  return callback(closure_3, obj);
 };

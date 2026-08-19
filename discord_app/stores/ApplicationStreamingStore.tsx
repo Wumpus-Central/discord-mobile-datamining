@@ -1,25 +1,26 @@
 // discord_app/stores/ApplicationStreamingStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../utils/Durations.tsx";
+import obj132Default from "../utils/Durations.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import isStreamKey from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import windowSourceMatchesDefault from "../modules/go_live/utils/windowSourceMatches.tsx";
 import getTitleFromPickedStreamContentDefault from "../modules/go_live/utils/getTitleFromPickedStreamContent.tsx";
 import canStreamInChannel from "../modules/go_live/utils/StreamPermissionUtils.tsx";
 import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
-import closure_8 from "../modules/game_console/GameConsoleStore.tsx";
-import closure_9 from "../modules/game_detection/RunningGameStore.native.tsx";
-import closure_10 from "AuthenticationStore.tsx";
-import closure_11 from "ChannelStore.tsx";
-import closure_12 from "GuildStore.tsx";
-import closure_13 from "MediaEngineStore.tsx";
-import closure_14 from "PermissionStore.tsx";
-import closure_15 from "RTCConnectionStore.tsx";
-import closure_16 from "SelectedChannelStore.tsx";
-import closure_17 from "VoiceStateStore.tsx";
+import set from "../modules/game_console/GameConsoleStore.tsx";
+import initialize from "../modules/game_detection/RunningGameStore.native.tsx";
+import fetchFingerprint from "AuthenticationStore.tsx";
+import ensureGuildLoaded from "ChannelStore.tsx";
+import createGuildRecordFromRust from "GuildStore.tsx";
+import _detectH265HardwareDecode from "MediaEngineStore.tsx";
+import getUncachedChannelPermissions from "PermissionStore.tsx";
+import createRTCConnection from "RTCConnectionStore.tsx";
+import handleConnectionOpen from "SelectedChannelStore.tsx";
+import updateVoiceState from "VoiceStateStore.tsx";
 import ME from "../Constants.tsx";
 import { StreamTypes } from "../modules/go_live/Constants.tsx";
 
-require = arg1;
+require = fn;
 function reset() {
   map = new Map();
   closure_4 = {};
@@ -41,7 +42,7 @@ function handleStreamUpdate(streamKey) {
   }
   const obj = {};
   const merged = Object.assign(isStreamKey.decodeStreamKey(streamKey));
-  obj.state = paused ? closure_18.PAUSED : closure_18.ACTIVE;
+  obj.state = paused ? constants.PAUSED : constants.ACTIVE;
   const result = map.set(streamKey, obj);
   closure_5[streamKey] = { streamKey, region, viewerIds };
 }
@@ -49,7 +50,7 @@ function handleStreamUpdate(streamKey) {
 let c24 = null;
 let closure_25 = {};
 let c26 = null;
-let closure_27 = 10 * setDefault.Millis.SECOND;
+let closure_27 = 10 * obj132Default.Millis.SECOND;
 let map = new Map();
 let closure_4 = {};
 let closure_5 = {};
@@ -75,7 +76,6 @@ prototype["initialize"] = function initialize(selfStreamParticipantsHidden) {
       prop1 = selfStreamParticipantsHidden.selfStreamParticipantsHidden;
     }
     const merged = Object.assign(closure_25, prop1);
-    const tmp5 = closure_25;
   }
 };
 prototype["getState"] = function getState() {
@@ -114,7 +114,7 @@ prototype["getAllActiveStreamsForChannel"] = function getAllActiveStreamsForChan
   closure_0 = channelId;
   if (canSpectateDefault(closure_13)) {
     const _Array = Array;
-    let found = Array.from(map.values()).filter((channelId) => channelId.channelId === closure_0);
+    let found = Array.from(map.values()).filter((item, index) => item.channelId === closure_0);
     const arr = Array.from(map.values());
   } else {
     found = [];
@@ -166,7 +166,7 @@ prototype["getActiveStreamForUser"] = function getActiveStreamForUser(id, guildI
     let activeStreamForApplicationStream = self.getActiveStreamForApplicationStream(streamForUser);
   } else {
     const allActiveStreams = self.getAllActiveStreams();
-    activeStreamForApplicationStream = allActiveStreams.find((ownerId) => ownerId.ownerId === closure_0);
+    activeStreamForApplicationStream = allActiveStreams.find((item, index) => item.ownerId === closure_0);
     if (activeStreamForApplicationStream == null) {
       activeStreamForApplicationStream = null;
     }
@@ -216,9 +216,9 @@ prototype["getAnyStreamForUser"] = function getAnyStreamForUser(userId) {
     if (null != dependencyMap[userId]) {
       const _Object = Object;
       const values = Object.values(tmp3);
-      let found = values.find((channelId) => {
-        basicChannel = basicChannel.getBasicChannel(channelId.channelId);
-        let tmp2 = channelId.streamType === constants2.CALL;
+      let found = values.find((item, index) => {
+        basicChannel = basicChannel.getBasicChannel(item.channelId);
+        let tmp2 = item.streamType === constants2.CALL;
         if (!tmp2) {
           let canBasicChannelResult = null != basicChannel;
           if (canBasicChannelResult) {
@@ -228,7 +228,7 @@ prototype["getAnyStreamForUser"] = function getAnyStreamForUser(userId) {
         }
         let flag = true;
         if (!tmp2) {
-          const basicChannel1 = basicChannel.getBasicChannel(channelId.channelId);
+          const basicChannel1 = basicChannel.getBasicChannel(item.channelId);
           let first = null != basicChannel1;
           if (first) {
             const obj2 = callback(table[18]);
@@ -248,15 +248,15 @@ prototype["getAnyStreamForUser"] = function getAnyStreamForUser(userId) {
     return null;
   }
 };
-prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStreamForUser(arg0) {
+prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStreamForUser(closure_0) {
   if (canSpectateDefault(closure_13)) {
     let tmp4 = null;
-    if (null != dependencyMap[arg0]) {
+    if (null != dependencyMap[closure_0]) {
       const _Object = Object;
       const values = Object.values(tmp3);
-      let found = values.find((channelId) => {
-        basicChannel = basicChannel.getBasicChannel(channelId.channelId);
-        let tmp2 = channelId.streamType === constants2.CALL;
+      let found = values.find((item, index) => {
+        basicChannel = basicChannel.getBasicChannel(item.channelId);
+        let tmp2 = item.streamType === constants2.CALL;
         if (!tmp2) {
           let canBasicChannelResult = null != basicChannel;
           if (canBasicChannelResult) {
@@ -266,7 +266,7 @@ prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStream
         }
         let flag = true;
         if (!tmp2) {
-          const basicChannel1 = basicChannel.getBasicChannel(channelId.channelId);
+          const basicChannel1 = basicChannel.getBasicChannel(item.channelId);
           let first = null != basicChannel1;
           if (first) {
             const obj2 = callback(table[18]);
@@ -275,7 +275,7 @@ prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStream
           flag = first;
         }
         if (flag) {
-          flag = false !== channelId.discoverable;
+          flag = false !== item.discoverable;
         }
         return flag;
       });
@@ -312,7 +312,7 @@ prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
       }
       let flag = true;
       if (!tmp10) {
-        const basicChannel1 = obj.getBasicChannel(tmp5.channelId);
+        const basicChannel1 = store3.getBasicChannel(tmp5.channelId);
         let first = null != basicChannel1;
         if (first) {
           const obj2 = canStreamInChannel;
@@ -325,7 +325,6 @@ prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
         tmp23 = tmp5;
       }
       tmp7 = tmp23;
-      obj = store3;
     }
     return tmp7;
   } else {
@@ -347,29 +346,23 @@ prototype["getAllApplicationStreams"] = function getAllApplicationStreams() {
   const items = [];
   if (canSpectateDefault(closure_13)) {
     for (const key10011 in closure_4) {
-      let tmp5 = key10011;
-      let tmp6 = dependencyMap;
-      let tmp7 = dependencyMap[key10011];
-      let tmp8 = tmp7;
       let keys = Object.keys();
       if (keys === undefined) {
         continue;
       } else {
         let tmp4 = keys[tmp];
         while (tmp4 !== undefined) {
-          let tmp10 = tmp4;
-          let tmp11 = dependencyMap;
           let arr = items.push(dependencyMap[key10011][tmp4]);
           continue;
         }
       }
       continue;
     }
-    let found = items.filter((channelId) => {
-      let tmp = null != channelId;
+    let found = items.filter((item, index) => {
+      let tmp = null != item;
       if (tmp) {
-        basicChannel = basicChannel.getBasicChannel(channelId.channelId);
-        let tmp5 = channelId.streamType === constants2.CALL;
+        basicChannel = basicChannel.getBasicChannel(item.channelId);
+        let tmp5 = item.streamType === constants2.CALL;
         if (!tmp5) {
           let canBasicChannelResult = null != basicChannel;
           if (canBasicChannelResult) {
@@ -391,32 +384,26 @@ prototype["getAllApplicationStreamsForChannel"] = function getAllApplicationStre
   const items = [];
   if (canSpectateDefault(closure_13)) {
     for (const key10012 in closure_4) {
-      let tmp5 = key10012;
-      let tmp6 = dependencyMap;
-      let tmp7 = dependencyMap[key10012];
-      let tmp8 = tmp7;
       let keys = Object.keys();
       if (keys === undefined) {
         continue;
       } else {
         let tmp4 = keys[tmp];
         while (tmp4 !== undefined) {
-          let tmp10 = tmp4;
-          let tmp11 = dependencyMap;
           let arr = items.push(dependencyMap[key10012][tmp4]);
           continue;
         }
       }
       continue;
     }
-    let found = items.filter((channelId) => {
-      let tmp = null != channelId;
+    let found = items.filter((item, index) => {
+      let tmp = null != item;
       if (tmp) {
-        tmp = channelId.channelId === closure_0;
+        tmp = item.channelId === closure_0;
       }
       if (tmp) {
-        const basicChannel = closure_1_11.getBasicChannel(channelId.channelId);
-        let tmp6 = channelId.streamType === closure_1_23.CALL;
+        const basicChannel = closure_1_11.getBasicChannel(item.channelId);
+        let tmp6 = item.streamType === StreamTypes.CALL;
         if (!tmp6) {
           let canBasicChannelResult = null != basicChannel;
           if (canBasicChannelResult) {
@@ -438,7 +425,6 @@ prototype["getViewerIds"] = function getViewerIds(currentUserActiveStream) {
     let encodeStreamKeyResult = currentUserActiveStream;
     if (typeof currentUserActiveStream !== "string") {
       encodeStreamKeyResult = isStreamKey.encodeStreamKey(currentUserActiveStream);
-      const obj = isStreamKey;
     }
     let tmp5 = null;
     if (null != encodeStreamKeyResult) {
@@ -494,18 +480,12 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
           if (keys !== undefined) {
             flag2 = flag;
             while (keys[tmp] !== undefined) {
-              let tmp15 = tmp8;
-              let tmp16 = map;
               let value = map.get(tmp8);
               if (null == value) {
                 continue;
               } else {
-                let tmp9 = map;
                 let obj = {};
-                let tmp10 = obj;
-                let tmp11 = value;
                 let merged = Object.assign(value);
-                let tmp13 = constants;
                 obj.state = constants.FAILED;
                 obj.endReason = tmp2;
                 obj.errorCode = errorCode;
@@ -530,23 +510,16 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       const tmp20 = (function getGameForContent(content) {
         const obj = content.applications[Symbol.iterator]();
         while (obj !== undefined) {
-          let tmp2 = store;
           let gameForPID = store.getGameForPID(tmp.id);
-          let tmp4 = gameForPID;
           if (null != gameForPID) {
-            let tmp5 = obj;
             obj.return();
             return gameForPID;
           }
         }
         for (const item10023 of tmp6) {
           if (null != item10023.owningApplication) {
-            let tmp8 = store;
-            let tmp9 = item10023;
             let gameForPID1 = store.getGameForPID(tmp7.owningApplication.id);
-            let tmp11 = gameForPID1;
             if (null != gameForPID1) {
-              let tmp12 = obj2;
               obj2.return();
               return gameForPID1;
             }
@@ -577,8 +550,6 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
         if (keys !== undefined) {
           flag3 = flag2;
           while (keys[tmp] !== undefined) {
-            let tmp21 = tmp12;
-            let tmp22 = dependencyMap3;
             let tmp23 = dependencyMap3[tmp12];
             let startsWithResult;
             if (tmp23 != null) {
@@ -590,12 +561,8 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
             if (!startsWithResult) {
               continue;
             } else {
-              let tmp14 = dependencyMap3;
               obj = {};
-              let tmp15 = obj;
               let merged = Object.assign(dependencyMap3[tmp12]);
-              let tmp17 = obj;
-              let tmp18 = obj;
               let merged1 = Object.assign(obj);
               dependencyMap3[tmp12] = obj;
               flag2 = true;
@@ -619,16 +586,16 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((arg0, selfStream) => {
-      ({ userId, guildId, channelId, sessionId } = selfStream);
-      if (selfStream.selfStream) {
+    return voiceStates.reduce((acc, item, index) => {
+      ({ userId, guildId, channelId, sessionId } = item);
+      if (item.selfStream) {
         if (null != channelId) {
           if (null != guildId) {
             let CALL = constants.GUILD;
           } else {
             CALL = constants.CALL;
           }
-          const obj = { streamType: null, ownerId: null, guildId: null, channelId: null, discoverable: null };
+          let obj = { streamType: null, ownerId: null, guildId: null, channelId: null, discoverable: null };
           obj[0] = CALL;
           obj[1] = userId;
           obj[2] = guildId;
@@ -649,13 +616,13 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       if (userId === id) {
         if (sessionId !== store.getSessionId()) {
           if (null != channelId.getChannelId()) {
-            return arg0;
+            return acc;
           }
         }
       }
       c2 = false;
-      const item = closure_7.forEach((arg0, streamKey) => {
-        const decodeStreamKeyResult = userId(table[13]).decodeStreamKey(streamKey);
+      item = closure_7.forEach((item, index) => {
+        const decodeStreamKeyResult = userId(table[13]).decodeStreamKey(index);
         let tmp2 = decodeStreamKeyResult.ownerId === userId;
         if (tmp2) {
           guildId = decodeStreamKeyResult.guildId;
@@ -669,9 +636,10 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
           tmp2 = guildId === tmp5;
         }
         if (tmp2) {
-          closure_2 = closure_1_7.delete(streamKey) || closure_2;
-          const tmp7 = closure_1_7.delete(streamKey) || closure_2;
+          closure_2 = closure_1_7.delete(index) || closure_2;
+          const tmp7 = closure_1_7.delete(index) || closure_2;
         }
+        const obj = userId(table[13]);
       });
       let tmp10 = guildId;
       if (guildId == null) {
@@ -690,7 +658,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
         flag = c2;
       }
       if (!flag) {
-        flag = arg0;
+        flag = acc;
       }
       return flag;
     }, false);
@@ -711,8 +679,8 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    let obj = sourceId(4531);
-    obj = { streamType, guildId, channelId, ownerId: store2.getId() };
+    sourceId(4531);
+    let obj = { streamType, guildId, channelId, ownerId: store2.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     let startsWithResult;
     if (sourceId != null) {
@@ -762,7 +730,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       gameForPID = null;
       if (null != sourceId) {
         const runningGames = store.getRunningGames();
-        gameForPID = runningGames.find((windowHandle) => closure_1_1(closure_1_2[14])(sourceId, windowHandle.windowHandle));
+        gameForPID = runningGames.find((item, index) => windowSourceMatchesDefault(sourceId, item.windowHandle));
       }
     }
   },
@@ -799,28 +767,28 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
     } else {
       let FAILED = constants.ENDED;
       if (unavailable.unavailable) {
-        FAILED = tmp22.RECONNECTING;
-      } else if (reason === tmp3.UNAUTHORIZED) {
-        FAILED = tmp22.FAILED;
-      } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
+        FAILED = constants.RECONNECTING;
+      } else if (reason === constants3.UNAUTHORIZED) {
+        FAILED = constants.FAILED;
+      } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         let obj = guildId(4531);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(2007)(4655, dependencyMap.paths).then((arg0) => {
-          arg0.default(guildId);
+        guildId(2007)(4655, dependencyMap.paths).then((result) => {
+          result.default(guildId);
         });
-        FAILED = tmp22.ENDED;
+        FAILED = constants.ENDED;
         const promise = guildId(2007)(4655, dependencyMap.paths);
       } else {
         if (tmp9) {
-          FAILED = tmp22.FAILED;
+          FAILED = constants.FAILED;
         }
-        tmp9 = value.state === tmp22.FAILED && reason === tmp3.USER_REQUESTED;
+        tmp9 = value.state === constants.FAILED && reason === constants3.USER_REQUESTED;
       }
       obj = {};
       const merged = Object.assign(value);
       obj.state = FAILED;
       const result1 = map.set(streamKey, obj);
-      let tmp18 = FAILED === tmp22.ENDED;
+      let tmp18 = FAILED === constants.ENDED;
       if (tmp18) {
         tmp18 = c24 !== streamKey;
       }
@@ -861,11 +829,12 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       return false;
     } else {
       c1 = false;
-      const item = map1.forEach((arg0, streamKey) => {
-        if (obj.decodeStreamKey(streamKey).channelId !== channelId) {
-          closure_1 = closure_1_7.delete(streamKey) || closure_1;
-          const tmp2 = closure_1_7.delete(streamKey) || closure_1;
+      const item = map1.forEach((item, index) => {
+        if (obj.decodeStreamKey(index).channelId !== channelId) {
+          closure_1 = map1.delete(index) || closure_1;
+          const tmp2 = map1.delete(index) || closure_1;
         }
+        obj = channelId(dependencyMap[13]);
       });
       return c1;
     }
@@ -881,16 +850,16 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
       const value = map.get(streamKey);
       if (null != value) {
         if (value.state !== constants.ENDED) {
-          if (value.state === tmp10.FAILED) {
+          if (value.state === constants.FAILED) {
             if (value.ownerId === store2.getId()) {
               return false;
             }
           }
           let ACTIVE = value.state;
           if (constants2.DISCONNECTED === state) {
-            ACTIVE = tmp10.RECONNECTING;
+            ACTIVE = constants.RECONNECTING;
           } else if (tmp2.RTC_CONNECTED === state) {
-            ACTIVE = tmp10.ACTIVE;
+            ACTIVE = constants.ACTIVE;
           }
           if (ACTIVE === value.state) {
             return false;
@@ -907,20 +876,20 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
   },
   CHANNEL_RTC_SELECT_PARTICIPANT: function handleStreamCloseAll(id) {
     id = id.id;
-    const item = Array.from(map.values()).forEach((state) => {
-      let tmp3 = callback(table[13]).encodeStreamKey(state) !== id;
+    const item = Array.from(map.values()).forEach((item, index) => {
+      let tmp3 = callback(table[13]).encodeStreamKey(item) !== id;
       if (tmp3) {
-        tmp3 = state.state === constants.ENDED;
+        tmp3 = item.state === constants.ENDED;
       }
       if (tmp3) {
-        set.delete(callback(table[13]).encodeStreamKey(state));
+        set.delete(callback(table[13]).encodeStreamKey(item));
         const tmpResult = callback(table[13]);
       }
+      const obj = callback(table[13]);
     });
     let isStreamKeyResult = null != id;
     if (isStreamKeyResult) {
       isStreamKeyResult = isStreamKey.isStreamKey(id);
-      const obj = isStreamKey;
     }
     if (isStreamKeyResult) {
       isStreamKeyResult = id.includes(store2.getId());
@@ -928,11 +897,12 @@ const applicationStreamingStore = new ApplicationStreamingStore(dispatcherDefaul
     if (isStreamKeyResult) {
       closure_25[id.channelId] = false;
     }
+    const arr = Array.from(map.values());
   },
   CONNECTION_OPEN: reset,
   CONNECTION_CLOSED: reset,
   LOGOUT: reset
 });
-let result = require("set").fileFinishedImporting("stores/ApplicationStreamingStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/ApplicationStreamingStore.tsx");
 
 export default applicationStreamingStore;

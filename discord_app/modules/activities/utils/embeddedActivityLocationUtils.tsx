@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/embeddedActivityLocationUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
 
 export const getEmbeddedActivityLocationChannelId = function getEmbeddedActivityLocationChannelId(_location) {
   if (null != _location) {

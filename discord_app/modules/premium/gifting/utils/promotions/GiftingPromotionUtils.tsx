@@ -1,13 +1,16 @@
 // discord_app/modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx
+import DismissibleContent from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import UNSAFE_isDismissibleContentDismissed from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import MarketingComponentType from "../../../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import apexExperiment from "../../experiments/PremiumGiftingGogoPromotionExperiment.tsx";
 import apexExperiment2 from "../../experiments/GiftPromotionReminderExperiment.tsx";
-import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../promotions/PromotionsStore.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import createEmptyPromotionsByType from "../../../promotions/PromotionsStore.tsx";
 import { SubscriptionPlans } from "../../../PremiumConstants.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchClaimableGiftingPromotionRewardSkuIds() {
   const tmp = purchases(hasPreviouslyFetched.useState(), 2);
@@ -26,14 +29,13 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
           if (null == fetchPurchasesError) {
-            let found = arr.filter((arg0) => null == closure_2.get(arg0));
+            let found = stateFromStoresArray.filter((item, index) => null == closure_2.get(item));
           } else {
             found = [];
           }
           callback(found);
           tmp.current = true;
         }
-        arr = stateFromStoresArray;
       }
     }
   }, items1);
@@ -41,7 +43,7 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
 };
 export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   const map = new Map();
-  const item = arr.forEach((skuId) => map.set(skuId.skuId, skuId.assetId));
+  const item = arr.forEach((item, index) => map.set(item.skuId, item.assetId));
   return map;
 };
 export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSkuStep(id) {
@@ -128,7 +130,7 @@ export const createGradientStyle = function createGradientStyle(gradient) {
       result = (angle + 180) % 360;
     }
     if (null != colorStops) {
-      const mapped = gradient.map((arg0, arg1) => "" + arg0 + " " + colorStops[arg1] + "%");
+      const mapped = gradient.map((item, index) => "" + item + " " + colorStops[index] + "%");
       let joined = mapped.join(", ");
     } else {
       joined = gradient.join(", ");
@@ -176,27 +178,26 @@ export const combinePromotionStyles = function combinePromotionStyles(background
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
   const GiftPromotionReminderExperiment = apexExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
-    if (null == marketingComponentByType.getMarketingComponentByType(tmp(7931).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
+    if (null == marketingComponentByType.getMarketingComponentByType(MarketingComponentType.MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
       return false;
     } else {
-      const giftPromotion = obj.getGiftPromotion();
+      const giftPromotion = marketingComponentByType.getGiftPromotion();
       let id;
       if (giftPromotion != null) {
         id = giftPromotion.id;
       }
       let tmp5 = null != id;
       if (tmp5) {
-        let tmpResult = tmp(4196);
-        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1377).DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
+        let tmpResult = UNSAFE_isDismissibleContentDismissed;
+        let isDismissed = tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(DismissibleContent.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK, id).isDismissed;
         if (isDismissed) {
-          tmpResult = tmp(4196);
-          isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(tmp(1377).DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
+          tmpResult = UNSAFE_isDismissibleContentDismissed;
+          isDismissed = !tmpResult.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(DismissibleContent.DismissibleContent.GIFTING_PROMOTION_REMINDER, id).isDismissed;
         }
         tmp5 = isDismissed;
       }
       return tmp5;
     }
-    obj = marketingComponentByType;
   } else {
     return false;
   }

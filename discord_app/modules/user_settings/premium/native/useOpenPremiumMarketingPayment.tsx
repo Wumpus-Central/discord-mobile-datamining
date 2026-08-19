@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/premium/native/useOpenPremiumMarketingPayment.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import ME from "../../../../Constants.tsx";
 import GuildFeatures from "../../../premium/PremiumConstants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ AnalyticsPages, AnalyticsSections, AnalyticsObjectTypes } = ME);
 ({ SubscriptionIntervalTypes: c4, PremiumTypes: c5 } = GuildFeatures);
 let closure_6 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_PREMIUM, objectType: AnalyticsObjectTypes.BUY };
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/useOpenPremiumMarketingPayment.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/useOpenPremiumMarketingPayment.tsx");
 
 export default function useOpenPremiumMarketingPayment(arg0) {
   const analyticsLocations = premiumTrialOffer(premiumTrialOfferPremiumType[3])(arg0).analyticsLocations;
@@ -45,6 +45,7 @@ export default function useOpenPremiumMarketingPayment(arg0) {
       obj[3] = fn2;
       obj[4] = premiumTrialOfferPremiumType;
       premiumTrialOffer(premiumTrialOfferPremiumType[6])(obj);
+      let tmp = premiumTrialOffer(premiumTrialOfferPremiumType[6]);
     }, items),
     buttonText: null
   };
@@ -74,7 +75,7 @@ export default function useOpenPremiumMarketingPayment(arg0) {
       let obj = analyticsLocations(premiumTrialOfferPremiumType[8]);
       let interval;
       if (premiumTrialOffer != null) {
-        const subscriptionTrial = tmp3.subscriptionTrial;
+        const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
         if (subscriptionTrial != null) {
           interval = subscriptionTrial.interval;
         }
@@ -83,7 +84,7 @@ export default function useOpenPremiumMarketingPayment(arg0) {
       obj[0] = interval;
       let intervalCount;
       if (premiumTrialOffer != null) {
-        const subscriptionTrial2 = tmp3.subscriptionTrial;
+        const subscriptionTrial2 = premiumTrialOffer.subscriptionTrial;
         if (subscriptionTrial2 != null) {
           intervalCount = subscriptionTrial2.intervalCount;
         }

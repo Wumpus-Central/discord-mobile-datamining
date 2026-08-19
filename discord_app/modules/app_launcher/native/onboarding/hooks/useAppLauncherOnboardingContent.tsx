@@ -1,12 +1,12 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx
 import resultDefault from "useCanShowAppLauncherOnboarding.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../applications/ApplicationFrecencyStore.tsx";
-import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import handleUserSettingsProtoStoreChange from "../../../../applications/ApplicationFrecencyStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
 import { DismissibleContentGroupName as closure_6 } from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx");
 
 export default function useAppLauncherOnboardingContent(channelId) {
   channelId = channelId.channelId;
@@ -26,7 +26,6 @@ export default function useAppLauncherOnboardingContent(channelId) {
       let result = obj.useIsDismissibleContentDismissed_UNSAFE(channelId(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
       const result1 = channelId(4196).useIsDismissibleContentDismissed_UNSAFE(channelId(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
       const obj2 = channelId(4196);
-      const tmp = channelId;
       const items = [closure_4];
       const stateFromStores = channelId(589).useStateFromStores(items, () => applicationFrecencyWithoutLoadingLatest.getApplicationFrecencyWithoutLoadingLatest());
       let guild_id;
@@ -39,12 +38,11 @@ export default function useAppLauncherOnboardingContent(channelId) {
         result = result1;
       }
       obj[1] = !result;
-      const activityApplications = tmp(11211).useActivityApplications(obj);
+      const activityApplications = channelId(11211).useActivityApplications(obj);
       let flag = false;
       for (const item10042 of activityApplications) {
         if (null != stateFromStores.getEntry(item10042.id)) {
           flag = true;
-          let tmp7 = obj7;
           obj7.return();
           break;
         }
@@ -52,6 +50,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
         obj[0] = flag;
         return obj;
       }
+      const tmpResult = channelId(11211);
     })(obj).hasUsedActivities) {
       push(DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
     } else {
@@ -59,7 +58,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
     }
   }
   let obj2 = channelId(589);
-  let tmp7 = callback(channelId(7366).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING), 2);
+  const tmp7 = callback(channelId(7366).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING), 2);
   obj = { visibleContent: tmp7[0], markAsDismissed: tmp7[1] };
   return obj;
 };

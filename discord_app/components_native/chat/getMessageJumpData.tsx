@@ -1,21 +1,20 @@
 // discord_app/components_native/chat/getMessageJumpData.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import set from "../../utils/PlatformUtils.tsx";
+import obj132 from "../../utils/PlatformUtils.tsx";
 import useSystemKeyboardHeight from "../../modules/keyboard/native/useSystemKeyboardHeight.native.tsx";
 import GuildThemeSourcePreference from "../../flow/Client.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../../modules/keyboard/native/subscribeToKeyboardUIStore.tsx";
-import closure_6 from "../../stores/UserStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import subscribeToKeyboardUIStore from "../../modules/keyboard/native/subscribeToKeyboardUIStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("components_native/chat/getMessageJumpData.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("components_native/chat/getMessageJumpData.tsx");
 
 export default function getMessageJumpData(messages, isAtBottom, messages2) {
   messages = messages.messages;
   const lastResult = messages.last();
   messages2 = messages2.messages;
-  const lastResult1 = messages2.last();
   currentUser = currentUser.getCurrentUser();
   const ANIMATED = GuildThemeSourcePreference.JumpType.ANIMATED;
   let tmp7 = tmp6;
@@ -30,11 +29,11 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
   if (null != messages.jumpTargetId) {
     if (tmp7) {
       ({ channelId, jumpTargetId } = messages);
-      const firstResult = messages.first();
       if (channelId !== jumpTargetId) {
         ({ jumpTargetId: jumpTargetId2, jumpType } = messages);
       }
-      jumpTargetId2 = firstResult.id;
+      jumpTargetId2 = messages.first().id;
+      const firstResult = messages.first();
     }
   }
   if (!isAtBottom.isAtBottom) {
@@ -87,8 +86,8 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
       }
     }
   }
-  const tmp4 = require;
-  const tmp4Result = set;
+  lastResult1 = messages2.last();
+  const tmp4Result = obj132;
   flag = false;
   tmp12 = ANIMATED;
   tmp13 = null;
@@ -99,6 +98,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
     tmp12 = ANIMATED;
     tmp13 = null;
   }
+  tmp14 = obj132.isAndroid() && messages2.androidKeyboardHeight < messages.androidKeyboardHeight && null != messages.replyingMessageId;
 };
 export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroidKeyboardHeight() {
   let num = 0;
@@ -106,14 +106,13 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
     num = useSystemKeyboardHeight.getSystemKeyboardHeight();
     const tmpResult = useSystemKeyboardHeight;
   }
-  const obj = React;
-  obj2 = set;
-  const tmp = require;
+  obj2 = obj132;
   [tmp4, require] = callback(React.useState(num), 2);
-  const effect = obj.useEffect(() => closure_1_5((keyboardHeight) => {
+  const effect = React.useEffect(() => closure_1_5((keyboardHeight) => {
     if (obj.isAndroid()) {
       callback(keyboardHeight.keyboardHeight);
     }
+    obj = closure_1_0(closure_1_2[4]);
   }), []);
   return tmp4;
 };

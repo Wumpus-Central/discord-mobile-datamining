@@ -5,18 +5,18 @@ import PressableBase from "../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconSizes from "../../modules/guild/native/GuildIcon.tsx";
 import GuildIconSizesDefault from "../../modules/guild/native/GuildIcon.tsx";
 import registerAssetDefault from "../../../_runtime/09945_registerAsset.js";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { UPLOAD_MEDIUM_SIZE } from "../../Constants.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ uploadIcon: { position: "absolute", right: -7, top: -7 }, avatar: { height: 64, width: 64, borderRadius: 32 } });
-const result = require("set").fileFinishedImporting("components_native/common/IconUploader.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/IconUploader.tsx");
 
 export default function IconUploader(disabled) {
   let flag = disabled.disabled;
@@ -34,7 +34,6 @@ export default function IconUploader(disabled) {
     str = "avatar";
   }
   ({ name, icon, onUpload: require, iconStyle, onChangeIconPress: importDefault } = disabled);
-  dependencyMap = undefined;
   function _handleChangeIcon(arg0) {
     const self = this;
     const tmp = _handleChangeIcon(function*() {
@@ -43,10 +42,10 @@ export default function IconUploader(disabled) {
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw base64;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = base64;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -57,15 +56,15 @@ export default function IconUploader(disabled) {
           if (0 === ref) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw base64;
             } else if (arg0 === 2) {
               c3 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = base64;
               return obj;
             } else {
               closure_1 = tmp5;
-              let base64 = tmp2;
+              base64 = tmp2;
               base64 = undefined;
               if (closure_1_1 != null) {
                 closure_1_1();
@@ -85,9 +84,9 @@ export default function IconUploader(disabled) {
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw base64;
           } else if (arg0 !== 2) {
-            base64 = arg1.base64;
+            base64 = base64.base64;
             if (null != base64) {
               if (base64 != null) {
                 tmp10(base64);
@@ -97,7 +96,7 @@ export default function IconUploader(disabled) {
           }
           c3 = 3;
           obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = base64;
           return obj;
         } catch (tmp22) {
           c3 = tmp;
@@ -130,7 +129,6 @@ export default function IconUploader(disabled) {
       obj[2] = name;
       obj[3] = GuildIconSizes.GuildIconSizes.XLARGE;
       let tmp7 = callback(GuildIconSizesDefault, obj);
-      const tmp12 = GuildIconSizesDefault;
     }
     tmp8 = null == icon && null == name;
   } else {
@@ -150,7 +148,7 @@ export default function IconUploader(disabled) {
     tmp16 = callback(closure_6, obj1);
   }
   items1[1] = tmp16;
-  const tmp14Result = closure_10(closure_9, { children: items1 });
+  const tmp14Result = callback(closure_9, { children: items1 });
   let tmp22 = tmp14Result;
   if (!flag) {
     let obj2 = { style: null, children: null };

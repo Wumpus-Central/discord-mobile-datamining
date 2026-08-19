@@ -1,38 +1,33 @@
 // discord_app/modules/home_drawer/native/HomeDrawerFolderRow.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/GuildReadStateStore.tsx";
-import closure_6 from "../../../stores/GuildStore.tsx";
-import closure_7 from "../../../stores/SortedGuildStore.tsx";
-import closure_8 from "../../../stores/UserGuildSettingsStore.tsx";
-import closure_9 from "../../../stores/VoiceStateStore.tsx";
+import updateGuildUnreadSentinel from "../../../stores/GuildReadStateStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import insertUnsortedGuilds from "../../../stores/SortedGuildStore.tsx";
+import updateUserGuildSettingsInternal from "../../../stores/UserGuildSettingsStore.tsx";
+import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
 import { NOOP } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 function Wrapper(folder) {
   folder = folder.folder;
-  closure_1 = undefined;
-  let memo;
   let stateFromStoresArray;
-  let stateFromStoresArray1;
   let stateFromStoresArray2;
   let formatResult3;
-  c7 = undefined;
   const tmp = callback2();
   closure_1 = tmp;
-  let obj = stateFromStoresArray;
-  memo = stateFromStoresArray.useMemo(() => ({ isMuted: false }), []);
+  const memo = stateFromStoresArray.useMemo(() => ({ isMuted: false }), []);
   obj1 = folder(memo[10]);
   let items = [stateFromStoresArray2, closure_8];
   stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const guildIds = folder.guildIds;
-    return guildIds.filter((arg0) => {
-      const isMutedResult = muted.isMuted(arg0);
+    return guildIds.filter((item, index) => {
+      const isMutedResult = muted.isMuted(item);
       let tmp2 = !isMutedResult;
       if (!isMutedResult) {
-        tmp2 = mentionCount.getMentionCount(arg0) > 0;
+        tmp2 = mentionCount.getMentionCount(item) > 0;
       }
       return tmp2;
     });
@@ -54,13 +49,13 @@ function Wrapper(folder) {
   });
   let obj3 = folder(memo[10]);
   const items2 = [stateFromStoresArray2, closure_8];
-  stateFromStoresArray1 = obj3.useStateFromStoresArray(items2, () => {
+  const stateFromStoresArray1 = obj3.useStateFromStoresArray(items2, () => {
     const guildIds = folder.guildIds;
-    return guildIds.filter((arg0) => {
-      const isMutedResult = muted.isMuted(arg0);
+    return guildIds.filter((item, index) => {
+      const isMutedResult = muted.isMuted(item);
       let hasUnreadResult = !isMutedResult;
       if (!isMutedResult) {
-        hasUnreadResult = closure_5.hasUnread(arg0);
+        hasUnreadResult = closure_5.hasUnread(item);
       }
       return hasUnreadResult;
     });
@@ -83,39 +78,36 @@ function Wrapper(folder) {
   const items4 = [closure_9, formatResult3, closure_8];
   stateFromStoresArray2 = folder(memo[10]).useStateFromStoresArray(items4, () => {
     const guildIds = folder.guildIds;
-    return guildIds.filter((arg0) => {
-      closure_0 = arg0;
-      if (muted.isMuted(arg0)) {
+    return guildIds.filter((item, index) => {
+      closure_0 = item;
+      if (muted.isMuted(item)) {
         return false;
       } else {
-        guild = guild.getGuild(arg0);
+        guild = guild.getGuild(item);
         if (guild != null) {
           const afkChannelId = guild.afkChannelId;
         }
         const _Set = Set;
         const set = new Set();
         const _Object = Object;
-        const values = Object.values(voiceStates.getVoiceStates(arg0));
+        const values = Object.values(voiceStates.getVoiceStates(item));
         for (const item10027 of values) {
-          let tmp12 = item10027;
           let tmp13 = null != item10027.channelId;
           if (tmp13) {
-            let tmp14 = item10027;
-            tmp13 = tmp12.channelId !== afkChannelId;
+            tmp13 = item10027.channelId !== afkChannelId;
           }
           if (tmp13) {
-            let tmp15 = item10027;
-            let addResult = set.add(tmp12.channelId);
+            let addResult = set.add(item10027.channelId);
           }
           continue;
         }
         const items = [];
         HermesBuiltin.arraySpread(set, 0);
-        return items.some((id) => {
-          const isCategoryMutedResult = closure_1_8.isCategoryMuted(closure_0, id);
+        return items.some((item, index) => {
+          const isCategoryMutedResult = closure_1_8.isCategoryMuted(closure_0, item);
           let tmp3 = !isCategoryMutedResult;
           if (!isCategoryMutedResult) {
-            tmp3 = !closure_1_8.isChannelMuted(closure_0, id);
+            tmp3 = !closure_1_8.isChannelMuted(closure_0, item);
           }
           return tmp3;
         });
@@ -143,11 +135,10 @@ function Wrapper(folder) {
     if (memo.isMuted) {
       let BellSlashIcon = folder(memo[11]).BellSlashIcon;
     } else {
-      BellSlashIcon = closure_1_10;
+      BellSlashIcon = NOOP;
     }
-    let obj = { style: closure_1.title, children: null };
     const items = [closure_1_11(BellSlashIcon, { size: "xs" }), ];
-    obj = { variant: "text-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: null };
+    const obj = { variant: "text-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: null };
     let folderName = folder.folderName;
     if (folderName == null) {
       const intl = folder(memo[13]).intl;
@@ -159,7 +150,7 @@ function Wrapper(folder) {
     return closure_1_12(stateFromStoresArray1, obj);
   }, items6);
   let intl = folder(memo[13]).intl;
-  obj = { num: folder.guildIds.length };
+  let obj = { num: folder.guildIds.length };
   const formatResult = intl.format(folder(memo[13]).t.knOfkb, obj);
   formatResult3 = formatResult;
   c7 = "text-muted";
@@ -183,7 +174,7 @@ function Wrapper(folder) {
       tmp20 = memo2;
     }
     obj1[1] = tmp20;
-    return closure_11(tmp3(tmp4[14]).HomeDrawerSharedItem, obj1);
+    return callback(tmp3(tmp4[14]).HomeDrawerSharedItem, obj1);
   }
   if (stateFromStoresArray2.length > 0) {
     if (null != stateFromStores2) {
@@ -213,10 +204,11 @@ function Wrapper(folder) {
     str = "text-muted";
     tmp14 = formatResult3;
   }
+  const obj7 = folder(memo[10]);
 }
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
 
 export default function HomeDrawerFolderExpandedChildren(folderId) {
   folderId = folderId.folderId;

@@ -1,7 +1,7 @@
 // discord_app/modules/multi_account/native/MultiAccountManagerNative.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import timestampDefault from "../../debug/Logger.tsx";
-import setDefault from "../../../utils/Durations.tsx";
+import obj132Default from "../../../utils/Durations.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import MAX_ACCOUNTS from "../Constants.tsx";
@@ -9,35 +9,34 @@ import _initializeDefault from "../MultiAccountManager.tsx";
 import registerAssetDefault from "../../../../_runtime/16641_registerAsset.js";
 import ME from "../../../Constants.tsx";
 
-let obj = require;
 const SWITCH_ACCOUNTS_MODAL_KEY = MAX_ACCOUNTS.SWITCH_ACCOUNTS_MODAL_KEY;
 ({ ComponentActions: c4, Routes: c5 } = ME);
 let closure_6 = new timestampDefault("MultiAccountManagerNative");
 let c7 = "switch-accounts-spinner-modal";
-let closure_8 = 15 * setDefault.Millis.SECOND;
+let closure_8 = 15 * obj132Default.Millis.SECOND;
 let c9 = null;
-obj = Object.create(function MultiAccountModalManagerImpl() {
+let obj = Object.create(function MultiAccountModalManagerImpl() {
   obj = Object.create(new.target.prototype);
   obj.cancelled = false;
   obj.push = function push() {
-    obj = closure_1_1(closure_1_2[4]);
-    obj.pushLazy(obj(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), {}, closure_1_7);
+    obj = _modDef5260;
+    obj.pushLazy(obj(dependencyMap[6])(dependencyMap[5], dependencyMap.paths), {}, closure_1_7);
     if (obj.cancelled) {
-      closure_1_1(closure_1_2[4]).popWithKey(closure_1_7);
-      const tmpResult = closure_1_1(closure_1_2[4]);
+      _modDef5260.popWithKey(closure_1_7);
+      const tmpResult = _modDef5260;
     }
   };
   obj.enqueue = function enqueue() {
     let arr = obj;
     obj.cancelled = false;
-    obj = obj(closure_1_2[7]);
+    obj = obj(dependencyMap[7]);
     const rootNavigationRef = obj.getRootNavigationRef();
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
         arr = arr.push();
       }
     }
-    const ComponentDispatch = obj(closure_1_2[8]).ComponentDispatch;
+    const ComponentDispatch = obj(dependencyMap[8]).ComponentDispatch;
     ComponentDispatch.subscribeOnce(closure_1_4.NAVIGATOR_READY, () => {
       let arr = cancelled;
       if (!cancelled.cancelled) {
@@ -47,31 +46,31 @@ obj = Object.create(function MultiAccountModalManagerImpl() {
   };
   obj.pop = function pop() {
     obj.cancelled = true;
-    obj = closure_1_1(closure_1_2[4]);
+    obj = _modDef5260;
     obj.popWithKey(closure_1_7);
   };
   return obj;
 }.prototype.prototype);
 obj.cancelled = false;
 obj.push = function push() {
-  obj = closure_1_1(closure_1_2[4]);
-  obj.pushLazy(obj(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), {}, closure_1_7);
+  obj = _modDef5260;
+  obj.pushLazy(obj(dependencyMap[6])(dependencyMap[5], dependencyMap.paths), {}, closure_1_7);
   if (obj.cancelled) {
-    closure_1_1(closure_1_2[4]).popWithKey(closure_1_7);
-    const tmpResult = closure_1_1(closure_1_2[4]);
+    _modDef5260.popWithKey(closure_1_7);
+    const tmpResult = _modDef5260;
   }
 };
 obj.enqueue = function enqueue() {
   let arr = obj;
   obj.cancelled = false;
-  obj = obj(closure_1_2[7]);
+  obj = obj(dependencyMap[7]);
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       arr = arr.push();
     }
   }
-  const ComponentDispatch = obj(closure_1_2[8]).ComponentDispatch;
+  const ComponentDispatch = obj(dependencyMap[8]).ComponentDispatch;
   ComponentDispatch.subscribeOnce(closure_1_4.NAVIGATOR_READY, () => {
     let arr = cancelled;
     if (!cancelled.cancelled) {
@@ -81,7 +80,7 @@ obj.enqueue = function enqueue() {
 };
 obj.pop = function pop() {
   obj.cancelled = true;
-  obj = closure_1_1(closure_1_2[4]);
+  obj = _modDef5260;
   obj.popWithKey(closure_1_7);
 };
 _initializeDefault;
@@ -116,17 +115,14 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     tmp = obj;
   }
   const timerId = setTimeout(() => {
-    obj = closure_1_1(closure_1_2[15]);
-    obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", content: null, icon: null };
-    const intl = currentUser(closure_1_2[16]).intl;
+    const intl = currentUser(dependencyMap[16]).intl;
     obj = { username: currentUser.username };
-    obj[1] = intl.formatToPlainString(currentUser(closure_1_2[16]).t.wx7O3L, obj);
-    obj[2] = closure_1_1(closure_1_2[17]);
+    obj[1] = intl.formatToPlainString(currentUser(dependencyMap[16]).t.wx7O3L, obj);
+    obj[2] = registerAssetDefault;
     obj.open(obj);
   }, 100);
 };
 prototype["onSwitchError"] = function onSwitchError(currentUser) {
-  obj = dispatcherDefault;
   obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
   const intl = obj(1236).intl;
   obj[1] = intl.string(obj(1236).t.pqvKWA);
@@ -145,6 +141,6 @@ prototype["onSwitchComplete"] = function onSwitchComplete() {
 };
 const multiAccountManagerNative = new MultiAccountManagerNative();
 const tmp3 = new timestampDefault("MultiAccountManagerNative");
-let result = set.fileFinishedImporting("modules/multi_account/native/MultiAccountManagerNative.tsx");
+let result = obj132.fileFinishedImporting("modules/multi_account/native/MultiAccountManagerNative.tsx");
 
 export default multiAccountManagerNative;

@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/getEmbeddedActivityKey.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");
 
 export default function getEmbeddedActivityKey(location) {
   return "" + location.location.id + ":" + location.applicationId + ":" + location.launchId;

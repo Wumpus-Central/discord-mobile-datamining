@@ -1,9 +1,9 @@
 // discord_app/modules/icymi/native/NativeICYMIActionCreators.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
 
 export default {
   customScoreGuild(arg0) {
@@ -45,7 +45,7 @@ export default {
                 obj2[0] = closure_1_0;
                 let mapped;
                 if (v0 != null) {
-                  mapped = v0.map((channelId) => ({ channel_id: channelId.channelId, score: channelId.score }));
+                  mapped = v0.map((item, index) => ({ channel_id: item.channelId, score: item.score }));
                 }
                 obj2[1] = mapped;
                 obj2[2] = closure_1_2;

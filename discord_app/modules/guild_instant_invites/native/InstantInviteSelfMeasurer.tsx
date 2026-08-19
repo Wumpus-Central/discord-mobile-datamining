@@ -4,7 +4,7 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles({ container: { position: "absolute", opacity: 0 } });
 const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type) {
@@ -30,11 +30,11 @@ const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type)
   if ("invite" === item.type) {
     obj = { invite: null };
     obj[0] = item.data;
-    let tmp2Result = tmp2(str(9948), obj);
+    let tmp2Result = jsx(str(9948), { invite: null });
   } else {
     obj = { channel: null };
     obj[0] = item.data;
-    tmp2Result = tmp2(onMeasured(9948).LinkedChannelInvite, obj);
+    tmp2Result = jsx(onMeasured(9948).LinkedChannelInvite, { channel: null });
   }
   obj[6] = tmp2Result;
   return <View style={items1} onLayout={importAllResult.useCallback((nativeEvent) => {
@@ -42,6 +42,6 @@ const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type)
     onMeasured("height" === str ? layout.height : layout.width);
   }, items)} pointerEvents="none" importantForAccessibility="no-hide-descendants" accessibilityElementsHidden accessible={false}>{null}</View>;
 });
-const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
 
 export default memoResult;

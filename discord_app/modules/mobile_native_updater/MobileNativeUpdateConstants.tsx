@@ -15,10 +15,10 @@ if (undefined !== process.env.INTERNAL_UPDATE_URL) {
       const importDefaultResult1 = isDiscordProxiedAssetUrlDefault;
     } else {
       toURLSafeResult = null;
-      const obj3 = require("set");
+      const obj3 = require("obj132");
     }
     tmp3 = toURLSafeResult;
-    obj2 = require("set");
+    obj2 = require("obj132");
   }
 }
 getConstants = getConstants.getConstants();
@@ -62,7 +62,7 @@ if (null !== tmp3) {
     }
   }
 }
-const result = require("set").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateConstants.tsx");
+const result = require("obj132").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateConstants.tsx");
 
 export const UPDATE_CHECK_INTERVAL = durationResult;
 export const UPDATE_CONFIG = tmp11;

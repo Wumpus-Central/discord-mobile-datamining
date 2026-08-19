@@ -1,4 +1,5 @@
 // discord_app/utils/native/PrivateChannelCallUtils.tsx
+import ComponentDispatcher from "../ComponentDispatchUtils.tsx";
 import asyncRequireImpl from "../../../_runtime/02007_asyncRequireImpl.js";
 import coerceMainRoute from "../../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
@@ -8,31 +9,29 @@ import _modDef5260 from "../../actions/ModalActionCreators.tsx";
 import runAfterInteractions from "RunAfterInteractionsUtils.tsx";
 import openStageChannelSettings from "../../modules/stage_channels/StageChannelActionCreatorExtras.native.tsx";
 import _modDef8666 from "../../actions/ChannelRTCActionCreators.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../../modules/action_sheet/native/ActionSheetStore.tsx";
-import closure_6 from "../../modules/voice_panel/VoicePanelStore.tsx";
-import closure_7 from "../../stores/ChannelStore.tsx";
-import closure_8 from "../../stores/RelationshipStore.tsx";
-import closure_9 from "../../stores/SelectedChannelStore.tsx";
-import closure_10 from "../../stores/UserStore.tsx";
+import isVoicePanelEnabled from "../../modules/voice_panel/VoicePanelUtils.native.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../_runtime/00019_noop.js";
+import setContent from "../../modules/action_sheet/native/ActionSheetStore.tsx";
+import withEqualityFn from "../../modules/voice_panel/VoicePanelStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 import { AgeGateSource } from "../../modules/age_gate/AgeGateConstants.tsx";
 import { NativePermissionTypes } from "../../modules/native_permissions/NativePermissionConstants.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 
-require = arg1;
+require = fn;
 function openChannelCallModal(channel) {
   let obj = shouldShowAgeGateForVoiceChannel;
   if (!obj.maybeOpenAgeGateForVoiceChannel(channel.id)) {
     const result = _modDef8666.rebuildRTCActiveChannels();
-    const obj2 = _modDef8666;
-    const tmp3 = importDefault;
     if (tmpResult.isVoicePanelEnabled(channel)) {
       state = state.getState();
       state.openChannel(channel.id);
-      const ComponentDispatch = tmp(1231).ComponentDispatch;
+      const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
       obj = { channelId: null };
       obj[0] = channel.id;
       ComponentDispatch.dispatch(constants2.VOICE_PANEL_OPEN, obj);
@@ -40,11 +39,11 @@ function openChannelCallModal(channel) {
       obj = { channel: null };
       obj[0] = channel;
       const _HermesInternal = HermesInternal;
-      const tmp3Result = tmp3(5260);
-      tmp3Result.pushLazy(tmp(2007)(8668, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
-      const tmp5 = tmp(2007)(8668, dependencyMap.paths);
+      const tmp3Result = _modDef5260;
+      tmp3Result.pushLazy(asyncRequireImpl(8668, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
+      const tmp5 = asyncRequireImpl(8668, dependencyMap.paths);
     }
-    tmpResult = tmp(8667);
+    tmpResult = isVoicePanelEnabled;
   }
 }
 function monkeyPatchCall() {
@@ -55,18 +54,18 @@ function monkeyPatchCall() {
       const combined = "" + closure_17 + "-" + channel.id;
       callback(5260).popWithKey(combined, undefined);
       if (key.getKey() === combined) {
-        tmp5(4342).hideActionSheet();
-        const tmp5Result = tmp5(4342);
+        callback(4342).hideActionSheet();
+        const tmp5Result = callback(4342);
       }
       const obj = callback(5260);
-      tmp5 = callback;
     }
     const voiceChannel = callback(4975).selectVoiceChannel(null);
     const timerId = setTimeout(arg0, 500);
+    const obj3 = callback(4975);
   });
 }
-function guardPrivateCallForChannel(id, arg1) {
-  let _require = arg1;
+function guardPrivateCallForChannel(id, fn) {
+  let _require = fn;
   channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
   if (null != channel) {
     if (channel.type !== constants.GUILD_VOICE) {
@@ -125,14 +124,13 @@ function guardPrivateCallForChannel(id, arg1) {
               }
             }
           });
-          let obj = _modDef4656;
-          obj = { title: null, body: null, cancelText: null, onConfirm: null, onCancel: null };
-          const intl = _getSystemLocale.intl;
-          obj[0] = intl.string(_getSystemLocale.t["91WuJ9"]);
-          const intl2 = _getSystemLocale.intl;
-          obj[1] = intl2.string(_getSystemLocale.t["Rs+Vk1"]);
-          const intl3 = _getSystemLocale.intl;
-          obj[2] = intl3.string(_getSystemLocale.t["ETE/oC"]);
+          let obj = { title: null, body: null, cancelText: null, onConfirm: null, onCancel: null };
+          const intl = require("../../intl/index.native.tsx").intl;
+          obj[0] = intl.string(require("../../intl/index.native.tsx").t["91WuJ9"]);
+          const intl2 = require("../../intl/index.native.tsx").intl;
+          obj[1] = intl2.string(require("../../intl/index.native.tsx").t["Rs+Vk1"]);
+          const intl3 = require("../../intl/index.native.tsx").intl;
+          obj[2] = intl3.string(require("../../intl/index.native.tsx").t["ETE/oC"]);
           obj[3] = function onConfirm() {
             return callback();
           };
@@ -142,11 +140,11 @@ function guardPrivateCallForChannel(id, arg1) {
       }
     }
   }
-  arg1();
+  fn();
 }
 ({ ChannelTypes: unpackModuleId, ComponentActions: closure_12, NOOP: map1 } = ME);
 let c17 = "voice-channel";
-let result = require("set").fileFinishedImporting("utils/native/PrivateChannelCallUtils.tsx");
+let result = require("obj132").fileFinishedImporting("utils/native/PrivateChannelCallUtils.tsx");
 
 export const getVoiceChannelKeyByChannelId = function getVoiceChannelKeyByChannelId(arg0) {
   return "" + c17 + "-" + arg0;
@@ -165,14 +163,14 @@ export const maybeShowAgeGateModal = function maybeShowAgeGateModal(width) {
     }, 150);
     const tmpResult = runAfterInteractions;
   }
+  obj = shouldShowAgeGateForVoiceChannel;
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(closure_0) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl(12644, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
+  const obj = { channel: _require };
+  obj.openLazy(asyncRequireImpl(12644, dependencyMap.paths), "" + c17 + "-" + _require.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(closure_0) {
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet("" + c17 + "-" + closure_0.id);
+  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet("" + c17 + "-" + _require.id);
 };
 export const dismissVoiceChannelScreens = function dismissVoiceChannelScreens(channel, onExited) {
   const combined = "" + c17 + "-" + channel.id;
@@ -185,14 +183,13 @@ export const dismissVoiceChannelScreens = function dismissVoiceChannelScreens(ch
 export { monkeyPatchCall };
 export const showGuardCallAlert = function showGuardCallAlert(arg0) {
   const _require = arg0;
-  let obj = _modDef4656;
-  obj = { title: null, body: null, cancelText: null, onConfirm: null, onCancel: null };
-  const intl = _getSystemLocale.intl;
-  obj[0] = intl.string(_getSystemLocale.t["91WuJ9"]);
-  const intl2 = _getSystemLocale.intl;
-  obj[1] = intl2.string(_getSystemLocale.t["Rs+Vk1"]);
-  const intl3 = _getSystemLocale.intl;
-  obj[2] = intl3.string(_getSystemLocale.t["ETE/oC"]);
+  const obj = { title: null, body: null, cancelText: null, onConfirm: null, onCancel: null };
+  const intl = require("../../intl/index.native.tsx").intl;
+  obj[0] = intl.string(require("../../intl/index.native.tsx").t["91WuJ9"]);
+  const intl2 = require("../../intl/index.native.tsx").intl;
+  obj[1] = intl2.string(require("../../intl/index.native.tsx").t["Rs+Vk1"]);
+  const intl3 = require("../../intl/index.native.tsx").intl;
+  obj[2] = intl3.string(require("../../intl/index.native.tsx").t["ETE/oC"]);
   obj[3] = function onConfirm() {
     return callback();
   };
@@ -596,13 +593,13 @@ export const openGuildVoiceModal = function openGuildVoiceModal(channel, newestA
   if (!obj.isModalOpen(combined)) {
     openChannelCallModal(channel);
   }
+  obj = coerceMainRoute;
 };
 export const navigateToVoiceChannel = function navigateToVoiceChannel(channel, LiveActivity) {
   if (channel.isPrivate()) {
     openChannelCallModal(channel);
   } else if (channel.isGuildStageVoice()) {
     openStageChannelSettings.openStageChannel(channel);
-    const obj2 = openStageChannelSettings;
   } else {
     const _HermesInternal = HermesInternal;
     const combined = "" + c17 + "-" + channel.id;

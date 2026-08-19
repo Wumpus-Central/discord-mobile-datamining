@@ -1,5 +1,5 @@
 // discord_app/modules/app_startup/AllCacheStores.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import handleSelectedChannelStoreChanged from "../app_database/modules/messages/SaveableChannelsStore.tsx";
 import isSubscriptionGated from "../channel/GatedChannelStore.tsx";
 import isSyncedModeThemesEnabled from "../client_themes/ClientThemesBackgroundStore.tsx";
@@ -8,7 +8,8 @@ import getHash from "../experiments/ExperimentStore.tsx";
 import getMemberSafetyPageStore from "../guild_mod_dash_member_safety/MemberSafetyStore.tsx";
 import handleReset from "../guild_sidebar/ChannelListStore.tsx";
 import snapshotSelectedGuildId from "../guild_themes/GuildThemeRuntimeStore.tsx";
-import processChannel from "../message_request/MessageRequestStore.tsx";
+import "processChannel";
+import processChannel from "../message_request/SpamMessageRequestStore.tsx";
 import dropChannelIfEmpty from "../messages/EphemeralMessageStore.tsx";
 import freshTeenActivityWithMap from "../parent_tools/FamilyCenterStore.tsx";
 import guildHasCommunity from "../recent_channels/NewChannelsStore.tsx";
@@ -34,7 +35,7 @@ import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import handleCacheOrSocketLoaded from "../../stores/native/NUFStore.tsx";
 import makeSortedChannel from "../../stores/views/PrivateChannelSortStore.tsx";
 
-const result = set.fileFinishedImporting("modules/app_startup/AllCacheStores.native.tsx");
+const result = obj132.fileFinishedImporting("modules/app_startup/AllCacheStores.native.tsx");
 
 export default function noop() {
 

@@ -1,9 +1,9 @@
 // discord_app/modules/game_detection/GameAnalyticsUtils.tsx
 import _openRobloxURLWithRootPlaceId from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
-import closure_2 from "../../stores/DetectableGameStore.tsx";
+import gameFromServer from "../../stores/DetectableGameStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_detection/GameAnalyticsUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_detection/GameAnalyticsUtils.tsx");
 
 export const removeExecutablePathPrefix = function removeExecutablePathPrefix(exePath) {
   const formatted = exePath.toLowerCase();
@@ -67,7 +67,6 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
     let subgameMetadata;
     if (null != streamApplication) {
       subgameMetadata = _openRobloxURLWithRootPlaceId.getSubgameMetadata(streamApplication);
-      const obj4 = _openRobloxURLWithRootPlaceId;
     }
     obj[5] = subgameMetadata;
     obj[6] = str;
@@ -83,15 +82,14 @@ export const isVerifiedGameExecutable = function isVerifiedGameExecutable(str, a
         substr = formatted.slice(0, -1);
       }
       dependencyMap = substr(500).getPlatformName();
-      return arr.some((os) => {
-        let tmp = os.os === closure_1;
+      return arr.some((item, index) => {
+        let tmp = item.os === closure_1;
         if (tmp) {
           let endsWithResult;
           if (substr != null) {
-            endsWithResult = obj.endsWith(os.name);
+            endsWithResult = substr.endsWith(item.name);
           }
           tmp = endsWithResult;
-          obj = substr;
         }
         return tmp;
       });

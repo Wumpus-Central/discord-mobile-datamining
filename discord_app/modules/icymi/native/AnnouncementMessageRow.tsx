@@ -2,22 +2,20 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../stores/GuildStore.tsx";
-import closure_7 from "../../../stores/RelationshipStore.tsx";
-import closure_8 from "../../../stores/UserGuildSettingsStore.tsx";
-import closure_9 from "../../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import updateUserGuildSettingsInternal from "../../../stores/UserGuildSettingsStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import { ITEM_PADDING } from "DesignConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createICYMIStyles from "createICYMIStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createICYMIStyles.createICYMIStyles((inset) => {
-  obj = { pressable: obj, footer: null };
-  obj = { flex: 1, paddingLeft: inset.inset };
-  obj = { marginVertical: inset.margin, gap: ThemesDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: inset.inset };
+  const obj = { marginVertical: inset.margin, gap: ThemesDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: inset.inset };
   obj[1] = obj;
   return obj;
 });
@@ -39,12 +37,12 @@ let closure_14 = importAllResult.memo((message) => {
   const effect = importAllResult.useEffect(() => {
     let id;
     if (guild != null) {
-      id = tmp.id;
+      id = guild.id;
     }
     if (null != id) {
       let id1;
-      if (tmp != null) {
-        id1 = tmp.id;
+      if (guild != null) {
+        id1 = guild.id;
       }
       const membersById = guild(channel[12]).requestMembersById(id1, message.author.id);
       const obj = guild(channel[12]);
@@ -78,15 +76,16 @@ let closure_14 = importAllResult.memo((message) => {
     guild(channel[13]).feedItemActioned(obj);
     if (null != message) {
       obj = { id: null, timestamp: null };
-      obj[0] = tmp3.id;
+      obj[0] = message.id;
       const _Date = Date;
       obj[1] = Date.now();
       const items = [obj];
-      guild(tmp2[13]).ackGravityItems(items);
-      const tmpResult = guild(tmp2[13]);
-      message(tmp2[16]).navigateToPost(channel.id, guild.id, tmp3.id);
-      const obj6 = message(tmp2[16]);
+      guild(channel[13]).ackGravityItems(items);
+      const tmpResult = guild(channel[13]);
+      message(channel[16]).navigateToPost(channel.id, guild.id, message.id);
+      const obj6 = message(channel[16]);
     }
+    const obj2 = guild(channel[13]);
   }, items4);
   let tmpResult = tmp(tmp2[17]);
   const gravityMessage = tmpResult.useGravityMessage(message);
@@ -111,16 +110,15 @@ let closure_14 = importAllResult.memo((message) => {
   obj[9] = items5;
   return callback2(tmp11, obj);
 });
-let result = require("set").fileFinishedImporting("modules/icymi/native/AnnouncementMessageRow.tsx");
+let result = require("obj132").fileFinishedImporting("modules/icymi/native/AnnouncementMessageRow.tsx");
 
 export default function AnnouncementMessageRowWrapper(message) {
   message = message.message;
-  let stateFromStores;
   let author;
   ({ unread, visible } = message);
   let obj = message(author[11]);
   const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(message.getChannelId()));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(message.getChannelId()));
   const items1 = [closure_6];
   const stateFromStores1 = message(author[11]).useStateFromStores(items1, () => {
     let guild_id;

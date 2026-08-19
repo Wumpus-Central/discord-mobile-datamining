@@ -1,18 +1,17 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormGuildGatingModeSelector.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { padding: 16 }, space: { height: 8 }, alertHeader: { paddingBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormGuildGatingModeSelector.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormGuildGatingModeSelector.tsx");
 
 export default function FormGuildGatingModeSelector(isFullServerGating) {
   isFullServerGating = isFullServerGating.isFullServerGating;
   const onChange = isFullServerGating.onChange;
-  dependencyMap = undefined;
   const tmp = callback3();
   dependencyMap = tmp;
   let obj = isFullServerGating(16945);
@@ -22,11 +21,10 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   const callback = React.useCallback(() => {
     onChange(false);
   }, items);
-  obj = { style: tmp.container, accessibilityRole: "radiogroup", accessibilityState: { disabled: roleSubscriptionSettingsDisabled }, children: null };
   const callback1 = React.useCallback(() => {
     if (!isFullServerGating) {
-      let obj = onChange(alertHeader[5]);
-      obj = { confirmText: null, children: null };
+      onChange(alertHeader[5]);
+      let obj = { confirmText: null, children: null };
       const intl = isFullServerGating(alertHeader[6]).intl;
       obj[0] = intl.string(isFullServerGating(alertHeader[6]).t["NX+WJN"]);
       obj = { children: null };
@@ -55,7 +53,6 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   obj[5] = roleSubscriptionSettingsDisabled;
   const items2 = [callback(onChange(16947), obj), callback(View, { style: tmp.space }), ];
   let obj2 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
-  obj1 = { style: tmp.space };
   const tmp5 = onChange(16947);
   obj2[0] = onChange(16948);
   let intl3 = isFullServerGating(1236).intl;

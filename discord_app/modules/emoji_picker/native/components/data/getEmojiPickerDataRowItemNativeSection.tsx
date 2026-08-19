@@ -1,8 +1,8 @@
 // discord_app/modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import useEmojiPickerData from "useEmojiPickerData.tsx";
 
-const result = set.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");
+const result = obj132.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");
 
 export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLocked) {
   let flag = isSectionNitroLocked.isSectionNitroLocked;

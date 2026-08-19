@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/profile_effects/utils.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { apply } from "../../../../_runtime/00012_apply.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/utils.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/profile_effects/utils.tsx");
 
 export const sortEffectLayers = function sortEffectLayers(effects) {
   return effects.sort((zIndex, zIndex2) => {
@@ -24,12 +24,12 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
   let tmp6 = arg0;
   [tmp4, tmp5] = callback(React.useState(arg0), 2);
   if (null != arg0) {
-    const cloneDeepResult = _apply.cloneDeep(arg0);
+    const cloneDeepResult = require("../../../../_runtime/00012_apply.js").cloneDeep(arg0);
     const effects = cloneDeepResult.effects;
     let _Math = Math;
     const _Math2 = Math;
-    const diff = effects.reduce((arg0, randomizedSources) => {
-      randomizedSources = randomizedSources.randomizedSources;
+    const diff = effects.reduce((acc, item, index) => {
+      const randomizedSources = item.randomizedSources;
       let num;
       if (randomizedSources != null) {
         num = randomizedSources.length;
@@ -37,12 +37,12 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
       if (num == null) {
         num = 0;
       }
-      let tmp = arg0;
+      let tmp = acc;
       if (num > 0) {
         let bound = num;
-        if (0 !== arg0) {
+        if (0 !== acc) {
           const _Math = Math;
-          bound = Math.min(arg0, num);
+          bound = Math.min(acc, num);
         }
         tmp = bound;
       }
@@ -50,20 +50,19 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
     }, 0) - 1;
     _require = Math.floor(Math.random() * (diff + 1));
     const effects1 = cloneDeepResult.effects;
-    cloneDeepResult.effects = effects1.map((randomizedSources) => {
-      let tmp = null != randomizedSources.randomizedSources;
+    cloneDeepResult.effects = effects1.map((item, index) => {
+      let tmp = null != item.randomizedSources;
       if (tmp) {
-        tmp = randomizedSources.randomizedSources.length > 0;
+        tmp = item.randomizedSources.length > 0;
       }
       if (tmp) {
-        randomizedSources.src = randomizedSources.randomizedSources[closure_0].src;
+        item.src = item.randomizedSources[closure_0].src;
       }
-      return randomizedSources;
+      return item;
     });
     tmp6 = cloneDeepResult;
-    const obj2 = _apply;
+    const obj2 = apply;
   }
-  const tmp2 = callback;
   const tmp3 = callback(React.useState(arg0), 2);
   [tmp8, tmp9] = callback(React.useState(tmp6), 2);
   const tmp10 = _require;
@@ -77,8 +76,8 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
       const effects2 = cloneDeepResult1.effects;
       const _Math3 = Math;
       const _Math4 = Math;
-      const diff1 = effects2.reduce((arg0, randomizedSources) => {
-        randomizedSources = randomizedSources.randomizedSources;
+      const diff1 = effects2.reduce((acc, item, index) => {
+        const randomizedSources = item.randomizedSources;
         let num;
         if (randomizedSources != null) {
           num = randomizedSources.length;
@@ -86,12 +85,12 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
         if (num == null) {
           num = 0;
         }
-        let tmp = arg0;
+        let tmp = acc;
         if (num > 0) {
           let bound = num;
-          if (0 !== arg0) {
+          if (0 !== acc) {
             const _Math = Math;
-            bound = Math.min(arg0, num);
+            bound = Math.min(acc, num);
           }
           tmp = bound;
         }
@@ -99,15 +98,15 @@ export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRand
       }, 0) - 1;
       _require = Math.floor(Math.random() * (diff1 + 1));
       const effects3 = cloneDeepResult1.effects;
-      cloneDeepResult1.effects = effects3.map((randomizedSources) => {
-        let tmp = null != randomizedSources.randomizedSources;
+      cloneDeepResult1.effects = effects3.map((item, index) => {
+        let tmp = null != item.randomizedSources;
         if (tmp) {
-          tmp = randomizedSources.randomizedSources.length > 0;
+          tmp = item.randomizedSources.length > 0;
         }
         if (tmp) {
-          randomizedSources.src = randomizedSources.randomizedSources[closure_0].src;
+          item.src = item.randomizedSources[closure_0].src;
         }
-        return randomizedSources;
+        return item;
       });
       tmp13 = cloneDeepResult1;
       const tmp10Result = tmp10(12);

@@ -1,5 +1,5 @@
 // discord_common/js/packages/libdiscore/mobile/js/index.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import typedGlobal from "global_types.tsx";
 
@@ -17,7 +17,7 @@ if (NativeModules.LibDiscoreModule) {
 }
 LibDiscoreModule.bridgeJSIFunctions();
 const LIBDISCORE_JSI = typedGlobal.typedGlobal.LIBDISCORE_JSI;
-let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
 const prototype = function BlockedDomainsStore() {
   return Object.create(new.target.prototype);
 }.prototype;

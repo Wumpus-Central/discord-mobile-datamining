@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import StickerFormat from "../stickers/StickersTypes.tsx";
 
@@ -10,10 +10,8 @@ items[1] = obj;
 obj = { id: "781323769960202280", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco sparkles", name: "OMG" };
 items[2] = obj;
 items[3] = { id: "781324722394103808", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco cheers", name: "Cheer" };
-const obj1 = { id: "781324722394103808", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco cheers", name: "Cheer" };
 items[4] = { id: "813951723822645278", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco gives thumbs up", name: "Nice" };
-const obj2 = { id: "813951723822645278", format_type: StickerFormat.StickerFormat.APNG, description: "Cheerful Choco gives thumbs up", name: "Nice" };
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx");
 
 export const getJoinButtonLabels = function getJoinButtonLabels() {
   const intl = getSystemLocale.intl;

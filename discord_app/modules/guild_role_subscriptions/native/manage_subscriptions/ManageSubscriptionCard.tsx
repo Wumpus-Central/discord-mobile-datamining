@@ -8,16 +8,16 @@ import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
 import registerAssetDefault from "../../../../../_runtime/08822_registerAsset.js";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
-import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_6 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../Constants.tsx";
 import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function HeaderStatus(arg0) {
   ({ isCancelled, isTrial, isPastDue } = arg0);
   const tmp = callback3();
@@ -53,9 +53,8 @@ function HeaderStatus(arg0) {
     obj = { variant: "text-xs/semibold", color: null, children: null };
     obj[1] = str2;
     obj[2] = str;
-    obj[1] = closure_11(Text.Text, obj);
-    tmp9Result = tmp9(View, obj);
-    const tmp10 = View;
+    obj[1] = callback(Text.Text, obj);
+    tmp9Result = callback(View, obj);
   }
   return tmp9Result;
 }
@@ -63,23 +62,21 @@ function Header(arg0) {
   ({ expanded, guild } = arg0);
   ({ isCancelled, isTrial, isPastDue, listing, onToggleExpanded } = arg0);
   const tmp = callback3();
-  let obj = { style: tmp.header, onPress: onToggleExpanded, children: null };
   const items = [callback2(HeaderStatus, { isCancelled, isTrial, isPastDue }), ];
-  obj = { style: tmp.headerContent, children: null };
   const items1 = [callback2(GuildIconSizesDefault, { guild }), , ];
-  obj = { style: tmp.headerTitlesContainer, children: null };
+  const obj = { style: tmp.headerTitlesContainer, children: null };
   const items2 = [callback2(Text.Text, { ellipsizeMode: "tail", lineClamp: 2, variant: "text-md/semibold", color: "interactive-text-active", children: listing.name }), callback2(Button.Spacer, { size: 2 }), ];
   let name;
   if (guild != null) {
     name = guild.name;
   }
   if (name == null) {
-    const intl = tmp3(1236).intl;
-    name = intl.string(tmp3(1236).t["He+cmd"]);
+    const intl = getSystemLocale.intl;
+    name = intl.string(getSystemLocale.t["He+cmd"]);
   }
   items2[2] = callback2(Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: name });
   obj[1] = items2;
-  items1[1] = closure_12(View, obj);
+  items1[1] = callback2(View, obj);
   const items3 = [tmp.expandIcon, ];
   if (expanded) {
     expanded = tmp.expandIconExpanded;
@@ -87,9 +84,9 @@ function Header(arg0) {
   items3[1] = expanded;
   items1[2] = callback2(Button.Icon, { style: items3, size: Button.Icon.Sizes.MEDIUM, source: registerAssetDefault });
   obj[1] = items1;
-  items[1] = closure_12(View, obj);
+  items[1] = callback2(View, obj);
   obj[2] = items;
-  return closure_12(PressableBase.PressableHighlight, obj);
+  return callback2(PressableBase.PressableHighlight, obj);
 }
 function Separator() {
   const tmp = callback3();
@@ -99,8 +96,6 @@ function CardBody(isTrial) {
   isTrial = isTrial.isTrial;
   const subscription = isTrial.subscription;
   const guildId = isTrial.guildId;
-  dependencyMap = undefined;
-  let resubscribeSubscription;
   let callback;
   let analyticsLocations;
   function _handleResubscribe() {
@@ -191,8 +186,8 @@ function CardBody(isTrial) {
             }
             if (closure_0) {
               (function openResubsribedAlert() {
-                let obj = tmp3(table[16]);
-                obj = {
+                tmp3(table[16]);
+                const obj = {
                   importer() {
                     return callback(paths[18])(paths[17], paths.paths).then(() => { ... });
                   }
@@ -233,7 +228,7 @@ function CardBody(isTrial) {
   let tmp = callback3();
   dependencyMap = tmp;
   let obj = subscription(7935);
-  resubscribeSubscription = obj.useResubscribeSubscription(subscription.id);
+  let resubscribeSubscription = obj.useResubscribeSubscription(subscription.id);
   resubscribeSubscription = resubscribeSubscription.resubscribeSubscription;
   [tmp6, c5] = callback(analyticsLocations.useState(false), 2);
   analyticsLocations = subscription(7139)().analyticsLocations;
@@ -251,16 +246,16 @@ function CardBody(isTrial) {
     obj3[2] = intl.string(isTrial(1236).t.eaqlau);
     items[2] = callback2(isTrial(4734).Text, obj3);
     obj1[1] = items;
-    const items1 = [tmp7(tmp8, obj1), callback2(isTrial(1297).Spacer, { size: 12 })];
+    const items1 = [callback2(tmp8, obj1), callback2(isTrial(1297).Spacer, { size: 12 })];
     obj[0] = items1;
-    tmp7Result = tmp7(closure_13, obj);
+    tmp7Result = callback2(closure_13, obj);
   }
   const items2 = [tmp7Result, , , , ];
   let obj4 = { title: null, icon: null, onPressIcon: null, children: null };
-  let tmp2Result = tmp2(14566);
+  tmp2(14566);
   let intl2 = isTrial(1236).intl;
   obj4[0] = intl2.string(isTrial(1236).t.dltUMH);
-  tmp2Result = undefined;
+  let tmp2Result;
   if (isTrial) {
     tmp2Result = tmp2(7919);
   }
@@ -282,7 +277,7 @@ function CardBody(isTrial) {
   obj6[1] = memberSince;
   items3[2] = callback2(subscription(14566), obj6);
   obj5[1] = items3;
-  items2[3] = closure_12(_handleResubscribe, obj5);
+  items2[3] = callback2(_handleResubscribe, obj5);
   const obj7 = { inset: true, titleViewStyle: tmp.manageSection, title: null, children: null };
   const intl4 = tmp15(1236).intl;
   obj7[2] = intl4.string(isTrial(1236).t["4neDM+"]);
@@ -299,12 +294,12 @@ function CardBody(isTrial) {
   obj10[0] = intl5.string(isTrial(1236).t["7spYft"]);
   obj10[1] = function handleUpdatePaymentMethod() {
     if (null != subscription) {
-      if (tmp.isPurchasedViaAppleGeneric) {
-        let tmp14Result = tmp14(tmp15[28]);
-        tmp14Result.openURL(isTrial(buttonDivider[29]).getExternalSubscriptionMethodUrl(tmp.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
+      if (subscription.isPurchasedViaAppleGeneric) {
+        let tmp14Result = subscription(buttonDivider[28]);
+        tmp14Result.openURL(isTrial(buttonDivider[29]).getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
         const obj4 = isTrial(buttonDivider[29]);
       } else {
-        tmp14Result = tmp14(tmp15[16]);
+        tmp14Result = subscription(buttonDivider[16]);
         const obj = { body: null, confirmText: null, isDismissable: true };
         const intl = isTrial(buttonDivider[9]).intl;
         obj[0] = intl.string(isTrial(buttonDivider[9]).t.fmm9jo);
@@ -320,7 +315,7 @@ function CardBody(isTrial) {
   const intl6 = tmp15(1236).intl;
   obj11[0] = intl6.string(isTrial(1236).t.FRbWR8);
   obj11[1] = function handleChangeTier() {
-    isTrial(buttonDivider[30]).transitionTo(closure_1_8.CHANNEL(guildId, closure_1_10.ROLE_SUBSCRIPTIONS));
+    isTrial(buttonDivider[30]).transitionTo(closure_1_8.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   };
   items4[1] = callback2(subscription(14567), obj11);
   if (isCancelled) {
@@ -340,41 +335,37 @@ function CardBody(isTrial) {
       return applyArgumentsResult;
     };
     obj13[2] = tmp6;
-    obj12[1] = tmp13(tmp2(9354), obj13);
-    let tmp13Result = tmp13(tmp8, obj12);
+    obj12[1] = callback2(tmp2(9354), obj13);
+    let tmp13Result = callback2(tmp8, obj12);
     const tmp2Result4 = tmp2(9354);
   } else {
     const obj14 = { text: null, onPress: null };
     const intl7 = tmp15(1236).intl;
     obj14[0] = intl7.string(tmp15(1236).t.Dx0lF7);
     obj14[1] = onCancelSubscription;
-    tmp13Result = tmp13(tmp2(14567), obj14);
+    tmp13Result = callback2(tmp2(14567), obj14);
     const tmp2Result5 = tmp2(14567);
   }
   items4[2] = tmp13Result;
   obj9[1] = items4;
-  obj8[1] = closure_12(isTrial(9422).GappedList, obj9);
+  obj8[1] = callback2(isTrial(9422).GappedList, obj9);
   obj7[3] = callback2(_handleResubscribe, obj8);
   items2[4] = callback2(isTrial(8083).FormSection, obj7);
   obj[1] = items2;
-  return closure_12(_handleResubscribe, obj);
+  return callback2(_handleResubscribe, obj);
 }
 ({ Routes: closure_8, UserSettingsSections: c9 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-createCacheKey = { container: null, cardContent: null, buttonsContainer: null, buttonDivider: null, resubscribeButtonContainer: null, separator: null, header: null, headerContent: null, headerTitlesContainer: null, expandIcon: null, expandIconExpanded: null, cardRow: null, manageSection: null, paymentOverDueWarning: null, headerStatusContainer: null, headerStatusCancel: null, headerStatusTrial: null, headerStatusPastDue: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 16 };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[3] = { width: "100%", borderBottomWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16, marginTop: -1 };
 createCacheKey[4] = { padding: 16 };
 createCacheKey[5] = { paddingHorizontal: 16 };
-let obj2 = { width: "100%", borderBottomWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16, marginTop: -1 };
 createCacheKey[6] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[7] = { padding: 16, alignItems: "center", flexDirection: "row" };
 createCacheKey[8] = { alignSelf: "stretch", flexGrow: 1, flexShrink: 1, paddingHorizontal: 16 };
-let obj3 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[9] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let items = [{ rotate: "180deg" }];
 createCacheKey[10] = { transform: items };
@@ -382,19 +373,14 @@ createCacheKey[11] = { flexDirection: "row" };
 createCacheKey[12] = { paddingTop: 16 };
 createCacheKey[13] = { flexDirection: "row", width: "90%" };
 createCacheKey[14] = { paddingVertical: 4, paddingHorizontal: 18, flexDirection: "row", alignItems: "center" };
-let obj4 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[15] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
-let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
 createCacheKey[16] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-let obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[17] = { backgroundColor: ThemesDefault.colors.STATUS_WARNING };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj7 = { backgroundColor: ThemesDefault.colors.STATUS_WARNING };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/ManageSubscriptionCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/ManageSubscriptionCard.tsx");
 
 export default function ManageSubscriptionCard(subscription) {
   subscription = subscription.subscription;
-  importDefault = undefined;
   const tmp2 = useManageSubscriptionCardDataDefault(subscription);
   ({ listing, guild, expanded, subscriptionInfo } = tmp2);
   ({ groupListing, handleToggleExpanded } = tmp2);
@@ -416,7 +402,7 @@ export default function ManageSubscriptionCard(subscription) {
         obj[6] = handleToggleExpanded;
         const items = [callback2(Header, obj), ];
         if (expanded) {
-          const items1 = [tmp6(Separator, {}), ];
+          const items1 = [callback2(Separator, {}), ];
           obj1 = {};
           const merged = Object.assign(subscriptionInfo);
           let id;
@@ -429,16 +415,13 @@ export default function ManageSubscriptionCard(subscription) {
           obj1.onCancelSubscription = function handleCancelSubscription() {
 
           };
-          items1[1] = tmp6(CardBody, obj1);
+          items1[1] = callback2(CardBody, obj1);
           obj2[0] = items1;
-          expanded = tmp4(closure_13, obj2);
-          const tmp10 = CardBody;
-          const tmp8 = closure_13;
+          expanded = callback2(closure_13, obj2);
         }
         items[1] = expanded;
         obj[1] = items;
-        tmp4Result = tmp4(View, obj);
-        const tmp5 = View;
+        tmp4Result = callback2(View, obj);
       }
     }
   }

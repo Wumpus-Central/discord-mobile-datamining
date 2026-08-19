@@ -1,13 +1,16 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
 import create from "../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import messagesProxyDefault from "../PremiumGroup.messages.js";
+import getPremiumGroupInviteEmbedText from "../PremiumGroupUtils.native.tsx";
 import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName.tsx";
-import closure_3 from "../../../../stores/billing/SubscriptionStore.tsx";
+import reset from "../../../../stores/billing/SubscriptionStore.tsx";
 import SubscriptionStatusTypes from "../PremiumGroupConstants.tsx";
 
-require = arg1;
+require = fn;
 ({ getPremiumGroupProductName: c4, HELP_CENTER_LINK: c5 } = SubscriptionStatusTypes);
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
 
 export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
   let obj = { useCachedData: true, fetch: arg0 === create.PremiumSubscriptionGroupRole.MEMBER };
@@ -18,32 +21,32 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
   if (arg0 === create.PremiumSubscriptionGroupRole.UNSPECIFIED) {
     return null;
   } else {
-    if (arg0 === tmp(1940).PremiumSubscriptionGroupRole.PRIMARY) {
-      let priceString = tmp(8268).getPriceString(stateFromStores, { withIntervals: true });
-      const tmpResult = tmp(8268);
+    if (arg0 === create.PremiumSubscriptionGroupRole.PRIMARY) {
+      let priceString = getPremiumGroupInviteEmbedText.getPriceString(stateFromStores, { withIntervals: true });
+      const tmpResult = getPremiumGroupInviteEmbedText;
     } else {
       priceString = null;
       if (null != tmp4) {
-        const intl = tmp(1236).intl;
+        const intl = getSystemLocale.intl;
         obj = { primaryName: null, premiumGroupProductName: null };
         obj[0] = tmp4;
         obj[1] = callback();
-        priceString = intl.format(tmp3(2917).Nu9LNm, obj);
+        priceString = intl.format(messagesProxyDefault.Nu9LNm, obj);
       }
     }
     let str = "...";
     if (null != priceString) {
       str = priceString;
     }
-    if (arg0 === tmp(1940).PremiumSubscriptionGroupRole.PRIMARY) {
-      const intl3 = tmp(1236).intl;
+    if (arg0 === create.PremiumSubscriptionGroupRole.PRIMARY) {
+      const intl3 = getSystemLocale.intl;
       obj = { helpCenterLink: null, premiumGroupProductName: null };
       obj[0] = closure_5;
       obj[1] = callback();
-      let formatResult = intl3.format(tmp3(2917)["+R/K74"], obj);
+      let formatResult = intl3.format(messagesProxyDefault["+R/K74"], obj);
     } else {
-      const intl2 = tmp(1236).intl;
-      const tmp3Result = tmp3(2917);
+      const intl2 = getSystemLocale.intl;
+      const tmp3Result = messagesProxyDefault;
       obj1 = { helpCenterLink: null };
       obj1[0] = closure_5;
       formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj1);

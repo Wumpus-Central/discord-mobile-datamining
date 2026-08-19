@@ -1,5 +1,5 @@
 // discord_app/modules/overlay/OverlayV3Experiment.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ApexExperiment from "../experiments/apex/index.tsx";
 
 let obj = { 1: null, 2: { keybindOverride: "ctrl+tab" }, 3: { keybindOverride: "alt+x" } };
@@ -11,7 +11,7 @@ const apexExperiment1 = ApexExperiment.createApexExperiment({ name: "2025-11-ove
 const obj1 = { 1: null };
 obj1[1] = { enabled: true };
 const apexExperiment2 = ApexExperiment.createApexExperiment({ name: "2026-04-overlay-streamer-mode", kind: "user", defaultConfig: { enabled: false }, variations: obj1 });
-const result = set.fileFinishedImporting("modules/overlay/OverlayV3Experiment.tsx");
+const result = obj132.fileFinishedImporting("modules/overlay/OverlayV3Experiment.tsx");
 
 export const OverlayDefaultKeybindOverrideExperiment = apexExperiment;
 export const getOverlayDefaultKeybind = function getOverlayDefaultKeybind(location) {

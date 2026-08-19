@@ -1,15 +1,15 @@
 // discord_app/modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import createChannelRecord from "../../../../../records/ChannelRecord.tsx";
 import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx");
 
 export const createAddRecipientSystemMessage = function createAddRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);

@@ -1,15 +1,14 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "GlobalDiscoveryServersSearchResultsStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import map from "GlobalDiscoveryServersSearchResultsStore.tsx";
 import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "GlobalDiscoveryServersConstants.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 initializeDefault;
 let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  closure_0 = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return closure_0.handleConnectionOpen();
@@ -20,19 +19,17 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
     closure_0.isFetchEnabled = true;
     const queue = closure_0.queue;
-    const item = queue.forEach((arg0) => {
-      if (arg0 === closure_1_6) {
+    const item = queue.forEach((item, index) => {
+      if (item === closure_1_6) {
         const featuredGuilds = closure_0.fetchFeaturedGuilds();
       } else {
         const obj = { categoryId: null };
-        obj[0] = arg0;
+        obj[0] = item;
         const categoryFeaturedGuilds = closure_0.fetchCategoryFeaturedGuilds(obj);
       }
     });
   };
-  closure_0 = undefined;
-  importDefault = applyArgumentsResult;
-  closure_0 = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c6 = 0;
     c7 = 0;
@@ -164,7 +161,6 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
     }
     return applyArgumentsResult;
   };
-  closure_0 = undefined;
   importDefault = applyArgumentsResult;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
@@ -320,6 +316,6 @@ let prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx");
 
 export default prototype;

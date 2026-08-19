@@ -1,10 +1,10 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryAddModalActionCreators.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
 
 const GUILD_DIRECTORY_ADD_MODAL_KEY = "GUILD_DIRECTORY_ADD_MODAL_KEY";
-const result = set.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddModalActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryAddModalActionCreators.tsx");
 
 export default {
   open(closure_0) {

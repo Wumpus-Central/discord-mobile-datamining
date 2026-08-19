@@ -1,5 +1,5 @@
 // discord_app/modules/markup/MarkupSubtextRule.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import t from "../../../_runtime/04092_t.js";
 import tDefault from "../../../_runtime/04092_t.js";
 
@@ -12,26 +12,24 @@ let obj = {
     let tmp = null;
     if (false !== allowSubtext.allowSubtext) {
       if (null != str) {
-        if ("" !== str) {
+        if ("" !== "") {
           let tmp4 = null;
         }
         tmp = tmp4;
       }
       tmp4 = t.anyScopeRegex(closure_3)(arg0, allowSubtext, str);
-      const obj = t;
     }
     return tmp;
   },
-  parse(arg0, arg1, arg2) {
-    let obj = { content: null };
-    obj = {};
+  parse(arg0, fn) {
+    const obj = {};
     const trimmed = arg0[1].trim();
     const merged = Object.assign(arg2);
     obj.allowSubtext = false;
-    obj[0] = t.parseInline(arg1, trimmed, obj);
+    obj[0] = t.parseInline(fn, trimmed, obj);
     return obj;
   }
 };
-const result = set.fileFinishedImporting("modules/markup/MarkupSubtextRule.tsx");
+const result = obj132.fileFinishedImporting("modules/markup/MarkupSubtextRule.tsx");
 
 export default obj;

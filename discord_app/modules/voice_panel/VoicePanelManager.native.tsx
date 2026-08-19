@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/VoicePanelManager.native.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_0 from "../../stores/RTCConnectionStore.tsx";
-import closure_1 from "VoicePanelStore.tsx";
+import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
+import withEqualityFn from "VoicePanelStore.tsx";
 
 initializeDefault;
 let prototype = function VoicePanelManager() {
@@ -33,6 +33,6 @@ let prototype = function VoicePanelManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
 
 export default prototype;

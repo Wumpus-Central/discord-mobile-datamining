@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/GameDiversityTier10SmallBadge-2x.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDiversityTier10SmallBadge-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDiversityTier10SmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/c91cd0cc71bc0996ef551771e2123ffcc0d5cbca9628cd0aa3f36ad020716dd1.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/GameDiversityTier10SmallBadge-2x.png";

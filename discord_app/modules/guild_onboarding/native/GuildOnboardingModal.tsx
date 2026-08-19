@@ -1,15 +1,15 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingModal.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../guild_member_verification/MemberVerificationFormStore.tsx";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../stores/GuildStore.tsx";
-import closure_7 from "../../../stores/SelectedChannelStore.tsx";
-import closure_8 from "../GuildOnboardingPromptsStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import get from "../../guild_member_verification/MemberVerificationFormStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import handleConnectionOpen from "../../../stores/SelectedChannelStore.tsx";
+import handleUpdate from "../GuildOnboardingPromptsStore.tsx";
 import { GuildOnboardingModalStates as closure_9 } from "GuildOnboardingConstants.tsx";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function headerTitle() {
   return null;
 }
@@ -17,7 +17,7 @@ function headerRight() {
   return null;
 }
 ({ GuildFeatures: c10, Routes: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingModal.tsx");
 
 export default function GuildOnboardingModal(guildId) {
   guildId = guildId.guildId;
@@ -27,9 +27,7 @@ export default function GuildOnboardingModal(guildId) {
   const isFirstOpen = guildId.isFirstOpen;
   const backShouldLeaveGuild = guildId.backShouldLeaveGuild;
   let stateFromStores;
-  let stateFromStoresArray;
   let callback;
-  let callback1;
   let obj = guildId(onClose[16]);
   const items = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => {
@@ -40,15 +38,14 @@ export default function GuildOnboardingModal(guildId) {
       let hasItem = features.has(closure_1_10.MEMBER_VERIFICATION_GATE_ENABLED);
       if (hasItem) {
         const features2 = guild.features;
-        hasItem = !features2.has(tmp3.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+        hasItem = !features2.has(closure_1_10.MEMBER_VERIFICATION_MANUAL_APPROVAL);
       }
       tmp2 = hasItem;
-      tmp3 = closure_1_10;
     }
     return tmp2;
   });
   const items1 = [callback];
-  stateFromStoresArray = guildId(onClose[16]).useStateFromStoresArray(items1, () => callback.getOnboardingPromptsForOnboarding(guildId));
+  const stateFromStoresArray = guildId(onClose[16]).useStateFromStoresArray(items1, () => callback.getOnboardingPromptsForOnboarding(guildId));
   let obj2 = guildId(onClose[16]);
   const items2 = [callback];
   const stateFromStores1 = guildId(onClose[16]).useStateFromStores(items2, () => callback.getOnboardingConnections(guildId));
@@ -57,7 +54,7 @@ export default function GuildOnboardingModal(guildId) {
     const option = onFinish(onClose[17]).selectOption(guildId, id, id2, arg2);
   }, items3);
   const items4 = [guildId, stateFromStoresArray];
-  callback1 = landingAnimation.useCallback(() => {
+  const callback1 = landingAnimation.useCallback(() => {
     onFinish(onClose[17]).completeOnboarding(guildId, stateFromStoresArray);
   }, items4);
   const items5 = [guildId, stateFromStores];
@@ -80,4 +77,5 @@ export default function GuildOnboardingModal(guildId) {
     return jsx(tmp(tmp2[19]).Navigator, { screens: null, initialRouteName: null, headerBackTitle: null });
   }
   PROMPT = callback1.PROMPT;
+  const obj3 = guildId(onClose[16]);
 };

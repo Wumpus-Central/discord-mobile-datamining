@@ -10,7 +10,7 @@ import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
-require = arg1;
+require = fn;
 let closure_4 = createCacheKey.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     let obj = { paddingHorizontal: null, paddingVertical: null };
@@ -60,11 +60,11 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
   const iconSizeStyles = styleProperties.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = MINIMUM_HIT_AREA.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(4749).SMALL_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT;
   } else if ("md" === DEFAULT_BUTTON_SIZE) {
-    MEDIUM_BUTTON_HEIGHT = tmp4(4749).MEDIUM_BUTTON_HEIGHT;
+    MEDIUM_BUTTON_HEIGHT = MINIMUM_HIT_AREA.MEDIUM_BUTTON_HEIGHT;
   }
-  const bound = Math.max((tmp4(4749).MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
+  const bound = Math.max((MINIMUM_HIT_AREA.MINIMUM_HIT_AREA - MEDIUM_BUTTON_HEIGHT) / 2, 0);
   obj = {};
   const merged = Object.assign(variant);
   obj.ref = ref;
@@ -87,12 +87,12 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
     obj1[0] = icon;
     const items2 = [iconTintStyles, iconSizeStyles];
     obj1[1] = items2;
-    tmp10Result = tmp10(closure_5, obj1);
+    tmp10Result = <closure_5 source={null} style={null} />;
   }
   obj[6] = tmp10Result;
   obj.children = jsx(PillWrapper.ButtonPill, { style: items1, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
   return jsx(BaseButton.BaseButton, { style: items1, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
 });
-const result = require("set").fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
 
 export const BaseIconButton = forwardRefResult;

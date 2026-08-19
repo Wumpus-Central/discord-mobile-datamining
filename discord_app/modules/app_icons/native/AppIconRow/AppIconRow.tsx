@@ -1,12 +1,12 @@
 // discord_app/modules/app_icons/native/AppIconRow/AppIconRow.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 const items = [
   () => {
     const intl = getSystemLocale.intl;
@@ -29,17 +29,15 @@ const items = [
     return intl.string(getSystemLocale.t.RnMLvl);
   }
 ];
-createCacheKey = { icon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md };
+const createCacheKey = { borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
 
 export default function AppIconRow(arg0) {
   ({ icon, onSelect: require, onLongPress: importDefault } = arg0);
-  let id;
   ({ hasNitro, currentAppIcon, showEasterEgg } = arg0);
-  id = icon.id;
+  const id = icon.id;
   if (id === require(id[6]).PremiumAppIconIds.PIRATE) {
     let obj = importDefault(tmp4[7]);
     let name = items[obj.random(obj, 0, items.length - 1)]();
@@ -57,7 +55,6 @@ export default function AppIconRow(arg0) {
   }
   tmp10Result = null;
   if (!icon.isHidden) {
-    obj = { icon: null, label: null, onLongPress: null, onPress: null, accessibilityRole: null, accessibilityState: null, trailing: null };
     obj = { id: null, style: null };
     obj[0] = id;
     obj[1] = tmp.icon;
@@ -76,10 +73,11 @@ export default function AppIconRow(arg0) {
         tmp10Result = null;
       }
       obj[6] = tmp10Result;
-      tmp10Result = tmp10(tmp3(tmp4[9]).TableRow, obj, id);
+      tmp10Result = jsx(require(tmp4[9]).TableRow, obj, id);
     }
     obj1 = { selected: null };
     obj1[0] = tmp7;
-    tmp10Result = tmp10(tmp3(tmp4[11]).FormRadio, obj1);
+    tmp10Result = jsx(require(tmp4[11]).FormRadio, { selected: null });
   }
+  const tmp3Result = require(id[8]);
 };

@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/helpers/transformUser.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import parseAvatarDecorationData from "../../collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 
-const result = set.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
+const result = obj132.fileFinishedImporting("modules/rpc/helpers/transformUser.tsx");
 
 export default function transformUser(id) {
   let num = id.premiumType;

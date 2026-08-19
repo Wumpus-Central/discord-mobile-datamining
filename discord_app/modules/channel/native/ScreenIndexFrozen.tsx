@@ -1,22 +1,21 @@
 // discord_app/modules/channel/native/ScreenIndexFrozen.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-let set = new Set();
+const require = fn;
+const set = new Set();
 const set1 = new Set();
-let result = set.fileFinishedImporting("modules/channel/native/ScreenIndexFrozen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/channel/native/ScreenIndexFrozen.tsx");
 
 export const freezeScreenIndex = function freezeScreenIndex(shouldFreeze, arg1) {
   if (shouldFreeze) {
-    obj.add(arg1);
+    set.add(arg1);
   } else {
-    obj.delete(arg1);
+    set.delete(arg1);
   }
-  const item = set1.forEach((arg0) => arg0());
+  const item = set1.forEach((item, index) => item());
 };
-export const isScreenIndexFrozen = function isScreenIndexFrozen(arg0) {
-  return set.has(arg0);
+export const isScreenIndexFrozen = function isScreenIndexFrozen(item) {
+  return set.has(item);
 };
 export const addFrozenScreenIndexesChangedListener = function addFrozenScreenIndexesChangedListener(arg0) {
   closure_0 = arg0;
@@ -36,7 +35,7 @@ export const useIsScreenIndexFrozenSharedValue = function useIsScreenIndexFrozen
     const fn = () => {
       const result = closure_1.set(closure_1_3.has(fn));
     };
-    closure_1_4.add(fn);
+    set1.add(fn);
     return () => {
       closure_1_4.delete(fn);
     };

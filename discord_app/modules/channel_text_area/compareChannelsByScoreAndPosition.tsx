@@ -1,8 +1,8 @@
 // discord_app/modules/channel_text_area/compareChannelsByScoreAndPosition.tsx
-import closure_0 from "../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 import { ChannelTypes } from "../../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
 
 export default function compareChannelsByScoreAndPosition(score, score2) {
   if (score.score !== score2.score) {

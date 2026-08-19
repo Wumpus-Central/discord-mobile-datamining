@@ -3,12 +3,12 @@ import toJSDefault from "../../lib/Record.tsx";
 import tDefault from "../../../_runtime/03975_t.js";
 import getPricesFromServerDefault from "utils/getPricesFromServer.tsx";
 import transformProfileEffectKeyFrameFromServerDefault from "utils/transformSKUTenantMetadata.tsx";
-import closure_3 from "../../records/ApplicationRecord.tsx";
+import createExecutable from "../../records/ApplicationRecord.tsx";
 import { THE_GAME_AWARD_WINNER_SKUS as closure_4 } from "SKUConstants.tsx";
 import ME from "../../Constants.tsx";
 import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
-const require = arg1;
+const require = fn;
 toJSDefault;
 ({ GIFTABLE_CURRENCIES: c5, OperatingSystems: closure_6, SKUFlags: error, SKUTypes: closure_8 } = ME);
 let SKURecord;
@@ -59,7 +59,6 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   ({ preorder_approximate_release_date: obj[10], summary: obj[11] } = id);
   obj[12] = new Set(id.features);
   const set = new Set(id.features);
-  const tmp = SKURecord;
   obj[13] = new Set(id.genres);
   ({ dependent_sku_id: obj[14], manifests: obj[15], available_regions: obj[16], access_type: obj[17], system_requirements: obj[18], content_rating: obj[19], content_rating_agency: obj[20], legal_notice: obj[21] } = id);
   let tmp14 = null;
@@ -101,7 +100,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   const bundled_skus = id.bundled_skus;
   let mapped;
   if (bundled_skus != null) {
-    mapped = bundled_skus.map((arg0) => closure_9.createFromServer(arg0));
+    mapped = bundled_skus.map((item, index) => closure_9.createFromServer(item));
   }
   if (mapped == null) {
     mapped = [];
@@ -111,7 +110,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   const selected_options = id.selected_options;
   let mapped1;
   if (selected_options != null) {
-    mapped1 = selected_options.map((optionName) => ({ optionName: optionName.option_name, optionValue: optionName.option_value }));
+    mapped1 = selected_options.map((item, index) => ({ optionName: item.option_name, optionValue: item.option_value }));
   }
   if (mapped1 == null) {
     mapped1 = [];
@@ -132,7 +131,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
     tmp17 = obj;
   }
   obj[42] = tmp17;
-  return new tmp(obj);
+  return new SKURecord(obj);
 };
 Object.defineProperty(prototype, "supportedOperatingSystems", {
   get: function supportedOperatingSystems() {
@@ -246,7 +245,7 @@ Object.defineProperty(prototype, "isTheGameAwardsWinner", {
 });
 Object.defineProperty(prototype, "available", {
   get: function available() {
-    let hasFlagResult = hasFlag.hasFlag(this.flags, constants2.AVAILABLE);
+    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
     if (!hasFlagResult) {
       hasFlagResult = null != this.externalPurchaseUrl;
     }
@@ -267,7 +266,7 @@ prototype["isAvailableForDistribution"] = function isAvailableForDistribution() 
     const premium = self.premium;
     let hasFlagResult = !premium;
     if (premium) {
-      hasFlagResult = hasFlag.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
+      hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
       const obj = hasFlag;
     }
     available = hasFlagResult;
@@ -275,21 +274,19 @@ prototype["isAvailableForDistribution"] = function isAvailableForDistribution() 
   return available;
 };
 prototype["isAvailable"] = function isAvailable() {
-  return hasFlag.hasFlag(this.flags, constants2.AVAILABLE);
+  return hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
 };
 prototype["isPremiumPerk"] = function isPremiumPerk() {
   const self = this;
   let premium = this.premium;
   if (premium) {
-    let hasFlagResult = hasFlag.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
+    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp(1403).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
-      const tmpResult = tmp(1403);
+      hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
+      const tmpResult = hasFlag;
     }
     premium = hasFlagResult;
     const obj = hasFlag;
-    tmp = require;
-    tmp3 = constants2;
   }
   return premium;
 };
@@ -300,6 +297,6 @@ prototype["hasFeature"] = function hasFeature(arg0) {
 prototype["isPreorder"] = function isPreorder() {
   return null != this.preorderReleaseAt || null != this.preorderApproximateReleaseDate;
 };
-const result = require("set").fileFinishedImporting("modules/skus/SKURecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/skus/SKURecord.tsx");
 
 export default SKURecord;

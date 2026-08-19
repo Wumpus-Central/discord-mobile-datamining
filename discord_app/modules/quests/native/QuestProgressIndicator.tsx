@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/QuestProgressIndicator.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import inlineStyles from "../../../../_runtime/06571_inlineStyles.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import importDefaultResult from "../../../../_runtime/00019_noop.js";
-import closure_8 from "../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult1 from "../../reanimated/ReanimatedRexport.tsx";
@@ -17,8 +17,7 @@ let closure_11 = ["#666777", "#535564"];
 let closure_12 = importDefaultResult1.createAnimatedComponent(inlineStyles.Circle);
 let obj = { "x-sm": 40, sm: 64, md: 70, "md-lg": 100, lg: 128 };
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  obj = { wrapper: { position: "relative" }, container: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1 }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 20, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: { transform: items }, imageContainer: null, progressPath: null, confetti: null, opacityMask: null };
-  items = [{ rotate: "-90deg" }];
+  const items = [{ rotate: "-90deg" }];
   obj = { position: "absolute", height: 0.78 * arg0, width: 0.78 * arg0, borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
   obj[4] = obj;
   obj = { color: ThemesDefault.colors.STATUS_POSITIVE };
@@ -42,11 +41,6 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   }
   ({ onPress, accessibilityLabel } = loading);
   let stateFromStores;
-  let callback;
-  let callback2;
-  let callback3;
-  importDefaultResult = undefined;
-  let sharedValue;
   let sharedValue1;
   closure_9 = undefined;
   let sharedValue2;
@@ -55,16 +49,16 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   let items = [sharedValue1];
   stateFromStores = obj.useStateFromStores(items, () => sharedValue1.useReducedMotion);
   const tmp4 = { "x-sm": 3, sm: 3, md: 3, "md-lg": 4, lg: 6 }[size];
-  callback = tmp5;
+  const callback = tmp5;
   const tmp6 = { "x-sm": 1.6, sm: 1, md: 1.4, "md-lg": 1.5, lg: 1.6 }[size];
-  callback2 = tmp6;
+  const callback2 = tmp6;
   const diff = tmp5 / 2 - tmp4 / 2;
   let result = 2 * Math.PI * diff;
-  callback3 = result;
+  const callback3 = result;
   const tmp9 = callback4(obj[size]);
   importDefaultResult = tmp9;
   obj1 = progress(stateFromStores[4]);
-  sharedValue = obj1.useSharedValue(progress);
+  const sharedValue = obj1.useSharedValue(progress);
   let obj2 = progress(stateFromStores[4]);
   let num = 0;
   if (flag) {
@@ -124,7 +118,7 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
     }
     const result = sharedValue.set(progress(stateFromStores[9]).withTiming(progress, { duration: num }));
     return () => {
-      closure_1_0(closure_1_2[4]).cancelAnimation(closure_7);
+      progress(stateFromStores[4]).cancelAnimation(closure_7);
     };
   }, items1);
   const items2 = [sharedValue1, flag];
@@ -135,7 +129,7 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
     }
     const result = sharedValue1.set(progress(stateFromStores[9]).withTiming(num, { duration: 500 }));
     return () => {
-      closure_1_0(closure_1_2[4]).cancelAnimation(closure_8);
+      progress(stateFromStores[4]).cancelAnimation(closure_8);
     };
   }, items2);
   const tmp20 = callback3(null);
@@ -208,10 +202,6 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
     const tmp28Result = tmp28(tmp2[12]);
   }
   items9[1] = tmp25Result;
-  const obj10 = { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: tmp9.progressPath.color, strokeWidth: tmp4, strokeDasharray: result, strokeLinecap: "round", animatedProps };
-  const obj7 = { offset: "0", stopColor: 19 };
-  const obj8 = { offset: "1", stopColor: 17 };
-  const obj9 = { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: "url(#underlayGradient)", strokeWidth: tmp4 };
   tmp21 = callback(() => {
     obj = {};
     const merged = Object.assign(closure_6.confetti);
@@ -229,7 +219,7 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   obj.children = sharedValue2(flag(stateFromStores[4]).View, obj1);
   return closure_9(PressableOpacity, obj);
 });
-let result = set.fileFinishedImporting("modules/quests/native/QuestProgressIndicator.tsx");
+let result = obj132.fileFinishedImporting("modules/quests/native/QuestProgressIndicator.tsx");
 
 export default memoResult;
 export const QUEST_PROGRESS_DIAMETER_BY_SIZE = obj;

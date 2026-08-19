@@ -1,12 +1,12 @@
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import tDefault from "../../../_runtime/03975_t.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/AuthenticationStore.tsx";
-import closure_5 from "AuthSessionsStore.tsx";
+import noop from "../../../_runtime/00019_noop.js";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import handleInit from "AuthSessionsStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
 
 export const useAuthSessions = function useAuthSessions() {
   const items = [closure_5];
@@ -17,7 +17,7 @@ export const useAuthSessions = function useAuthSessions() {
     authSessionIdHash = closure_1_4.getAuthSessionIdHash();
     let currentSession = null;
     if (null != authSessionIdHash) {
-      const findIndexResult = otherSessions.findIndex((id_hash) => id_hash.id_hash === authSessionIdHash);
+      const findIndexResult = otherSessions.findIndex((item, index) => item.id_hash === authSessionIdHash);
       currentSession = null;
       if (findIndexResult >= 0) {
         currentSession = otherSessions.splice(findIndexResult, 1)[0];

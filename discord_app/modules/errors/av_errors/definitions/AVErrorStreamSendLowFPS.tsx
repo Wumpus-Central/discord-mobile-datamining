@@ -1,14 +1,18 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx
-import setDefault from "../../../../utils/Durations.tsx";
+import obj132Default from "../../../../utils/Durations.tsx";
 import isStreamKey from "../../../go_live/utils/StreamKeyUtils.tsx";
-import closure_2 from "../../../calls/ChannelRTCStore.tsx";
-import closure_3 from "../../../../stores/ApplicationStreamingStore.tsx";
-import closure_4 from "../../../../stores/StreamRTCConnectionStore.tsx";
+import isPremiumResolution from "../../../../utils/StreamQualityUtils.tsx";
+import mapped from "../AVError.tsx";
+import getVoiceChannelErrorContext from "../AVErrorContext.tsx";
+import getReportInboundErrors from "../AVErrorUtils.tsx";
+import getParticipants from "../../../calls/ChannelRTCStore.tsx";
+import reset from "../../../../stores/ApplicationStreamingStore.tsx";
+import initialize from "../../../../stores/StreamRTCConnectionStore.tsx";
 import { ApplicationStreamStates } from "../../../../Constants.tsx";
 
-require = arg1;
-let closure_6 = 20 * setDefault.Millis.SECOND;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");
+require = fn;
+let closure_6 = 20 * obj132Default.Millis.SECOND;
+const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");
 
 export const AVErrorStreamSendLowFPSDefinition = {
   getActiveErrors() {
@@ -36,33 +40,33 @@ export const AVErrorStreamSendLowFPSDefinition = {
                 }
               }
               if (rTCConnection.hasActiveRemoteWants()) {
-                let tmp11Result = tmp11(4531);
+                let tmp11Result = isStreamKey;
                 participant = participant.getParticipant(currentUserActiveStream.channelId, tmp11Result.encodeStreamKey(currentUserActiveStream));
                 if (null == participant) {
                   return null;
                 } else {
-                  tmp11Result = tmp11(17058);
+                  tmp11Result = getReportInboundErrors;
                   const accumulatedStatsWithMinDatapoints = tmp11Result.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, currentUserActiveStream.ownerId);
                   if (null == accumulatedStatsWithMinDatapoints) {
                     return null;
                   } else {
-                    const maxQuality = tmp11(9667).getMaxQuality(participant);
+                    const maxQuality = isPremiumResolution.getMaxQuality(participant);
                     let tmp9 = null;
                     if (null != maxQuality) {
                       if (accumulatedStatsWithMinDatapoints.short.frameRate < tmp11Result2.getWarningFrameRate(maxQuality.maxFrameRate)) {
                         obj = { type: null };
-                        obj[0] = tmp11(9668).AVError.STREAM_SEND_LOW_FPS;
-                        const tmp11Result3 = tmp11(17055);
-                        const merged = Object.assign(tmp11Result3.getStreamErrorContext(tmp11(4531).encodeStreamKey(currentUserActiveStream)));
+                        obj[0] = mapped.AVError.STREAM_SEND_LOW_FPS;
+                        const tmp11Result3 = getVoiceChannelErrorContext;
+                        const merged = Object.assign(tmp11Result3.getStreamErrorContext(isStreamKey.encodeStreamKey(currentUserActiveStream)));
                         const items = [obj];
                         let tmp6 = items;
-                        const tmp11Result4 = tmp11(4531);
+                        const tmp11Result4 = isStreamKey;
                       } else {
+                        getReportInboundErrors;
                         tmp6 = null;
-                        const tmp11Result5 = tmp11(17058);
                       }
                       tmp9 = tmp6;
-                      tmp11Result2 = tmp11(17058);
+                      tmp11Result2 = getReportInboundErrors;
                     }
                     return tmp9;
                   }
@@ -72,7 +76,6 @@ export const AVErrorStreamSendLowFPSDefinition = {
               }
             }
           }
-          const obj8 = isStreamKey;
           obj9 = rTCConnection;
         }
       }

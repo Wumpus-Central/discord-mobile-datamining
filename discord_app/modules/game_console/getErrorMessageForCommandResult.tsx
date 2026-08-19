@@ -1,11 +1,11 @@
 // discord_app/modules/game_console/getErrorMessageForCommandResult.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
 import XBOX_URL_BASE from "GameConsoleConstants.tsx";
 
 let closure_3 = XBOX_URL_BASE.GameConsoleCommandResultErrorCodes;
-const result = set.fileFinishedImporting("modules/game_console/getErrorMessageForCommandResult.tsx");
+const result = obj132.fileFinishedImporting("modules/game_console/getErrorMessageForCommandResult.tsx");
 
 export default function getErrorMessageForCommandResult(arg0, arg1, code) {
   if ("failed" === arg1) {
@@ -20,7 +20,7 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
       obj[0] = platform;
       obj[1] = intl8.formatToPlainString(getSystemLocale.t["cYX/3E"], obj);
       let obj7 = obj;
-    } else if (tmp2.CONSOLE_DEVICE_INVALID_POWER_MODE === code) {
+    } else if (constants.CONSOLE_DEVICE_INVALID_POWER_MODE === code) {
       obj1 = { title: null, body: null };
       const intl5 = getSystemLocale.intl;
       const obj2 = { deviceType: null };
@@ -32,7 +32,7 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
       obj1[1] = intl6.formatToPlainString(getSystemLocale.t.RyOvpJ, obj3);
       obj7 = obj1;
     } else {
-      if (tmp2.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS === code) {
+      if (constants.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS === code) {
         const obj4 = { title: null, body: null };
         const intl3 = getSystemLocale.intl;
         const obj5 = { deviceType: null };
@@ -43,7 +43,7 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
         obj6[0] = name;
         obj4[1] = intl4.formatToPlainString(getSystemLocale.t.InKtnC, obj6);
         obj7 = obj4;
-      } else if (tmp2.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR !== code) {
+      } else if (constants.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR !== code) {
         obj7 = { title: null, body: null };
         const intl12 = getSystemLocale.intl;
         obj7[0] = intl12.string(getSystemLocale.t.QL1y93);

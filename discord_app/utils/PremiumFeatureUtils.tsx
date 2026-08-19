@@ -1,10 +1,10 @@
 // discord_app/utils/PremiumFeatureUtils.tsx
 import isPremiumAtLeast from "PremiumTypeUtils.tsx";
-import closure_2 from "../modules/premium/OverridePremiumTypeStore.tsx";
+import setPremiumTypeActual from "../modules/premium/OverridePremiumTypeStore.tsx";
 import ME from "../Constants.tsx";
 import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 
-require = arg1;
+require = fn;
 function getUserMaxFileSize(currentUser) {
   if (null == currentUser) {
     return closure_3;
@@ -27,7 +27,7 @@ function getUserMaxFileSize(currentUser) {
 }
 ({ MAX_ATTACHMENT_SIZE: c3, MAX_STAFF_ATTACHMENT_SIZE: c4 } = ME);
 ({ PremiumUserLimits: c5, UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_6 } = GuildFeatures);
-const result = require("set").fileFinishedImporting("utils/PremiumFeatureUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/PremiumFeatureUtils.tsx");
 
 export default { getUserMaxFileSize };
 export { getUserMaxFileSize };

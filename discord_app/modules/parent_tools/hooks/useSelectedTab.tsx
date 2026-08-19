@@ -1,12 +1,12 @@
 // discord_app/modules/parent_tools/hooks/useSelectedTab.tsx
 import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import closure_3 from "../FamilyCenterStore.tsx";
+import freshTeenActivityWithMap from "../FamilyCenterStore.tsx";
 import items from "../FamilyCenterConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ FamilyCenterAction: c4, FamilyCenterSubPages } = items);
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
 
 export default function useSelectedMyFamilyTab() {
   let obj = {

@@ -1,12 +1,11 @@
 // discord_app/modules/safety_flows/SafetyFlowsActionCreators.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _getCurrentTask() {
   const self = this;
   const tmp = callback(function*() {
-    closure_0 = tmp4;
     obj1 = { url: null, trackedActionData: null, rejectWithError: true };
     obj1[0] = closure_1_4.SAFETY_FLOWS_TASK;
     const obj2 = { event: null };
@@ -148,7 +147,7 @@ function _resendVerificationCode() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/safety_flows/SafetyFlowsActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_flows/SafetyFlowsActionCreators.tsx");
 
 export const getCurrentTask = function getCurrentTask() {
   const self = this;

@@ -1,5 +1,5 @@
 // discord_app/lib/QueryTokenizer.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
 function getMatch(str, arg1, index) {
   let tmp3;
@@ -11,13 +11,9 @@ function getMatch(str, arg1, index) {
       while (true) {
         let obj = arg1[num10];
         let match = str.match(obj.regex);
-        let tmp2 = num10;
         tmp3 = null;
         if (null != match) {
           let items = [];
-          let tmp4 = items;
-          let tmp5 = match;
-          let num = 0;
           let arraySpreadResult = HermesBuiltin.arraySpread(match, 0);
           items.index = index;
           tmp3 = items;
@@ -37,18 +33,12 @@ function getMatch(str, arg1, index) {
           } else {
             if (null == tmp10) {
               let type = obj.type;
-              let tmp33 = new.target;
-              let tmp32 = Token;
               if (typeof Token !== "function") {
-                let str2 = "Trying to call a non-function";
                 let throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
-              obj = Object.create(tmp32.prototype);
-              let tmp22 = Token;
+              obj = Object.create(Token.prototype);
               if (tmp3 instanceof Token) {
                 let items1 = [];
-                let tmp26 = items1;
-                let num9 = 0;
                 arraySpreadResult = HermesBuiltin.arraySpread(tmp3.match, 0);
                 obj.match = items1;
                 ({ start: tmp21.start, type: tmp21.type } = tmp3);
@@ -57,9 +47,6 @@ function getMatch(str, arg1, index) {
                 }
               } else if (null != tmp3) {
                 let items2 = [];
-                let tmp23 = items2;
-                let tmp24 = tmp3;
-                let num6 = 0;
                 let arraySpreadResult1 = HermesBuiltin.arraySpread(tmp3, 0);
                 obj.match = items2;
                 let num7 = 0;
@@ -128,7 +115,6 @@ function getMatch(str, arg1, index) {
       }
       obj.start = num3;
       obj.type = undefined;
-      const tmp11 = Token;
     }
     return null;
   }
@@ -147,7 +133,7 @@ class QueryTokenizer {
     obj._followers = {};
     obj._nonTokenType = NON_TOKEN;
     resetResult = obj.reset();
-    item = items.forEach((arg0) => obj.addRule(arg0));
+    item = items.forEach((item, index) => obj.addRule(item));
     return obj;
   }
 }
@@ -176,16 +162,16 @@ prototype["addRule"] = function addRule(type) {
     const tmp7 = map;
   }
   if (null != follows) {
-    const item = follows.forEach((arg0) => {
-      if (null == self._followers[arg0]) {
-        tmp._followers[arg0] = [];
+    const item = follows.forEach((item, index) => {
+      if (null == self._followers[item]) {
+        self._followers[item] = [];
       }
-      let arr = tmp._followers[arg0];
+      let arr = self._followers[item];
       arr = arr.push({ regex: regExp, type, validator, cache: map });
     });
   } else {
     const _rules = this._rules;
-    const obj = { regex: null, type: null, validator: null, cache: null };
+    let obj = { regex: null, type: null, validator: null, cache: null };
     obj[0] = tmp;
     obj[1] = type;
     obj[2] = validator;
@@ -204,9 +190,6 @@ prototype["tokenize"] = function tokenize(errorcode) {
   if (errorcode.length > 0) {
     while (true) {
       let _getMatchResult = self._getMatch(str, tmp, num + ``.length);
-      let tmp2 = num;
-      let tmp3 = str2;
-      let tmp4 = str;
       let tmp5 = tmp;
       if (null != _getMatchResult) {
         if ("" !== ``) {
@@ -242,7 +225,7 @@ prototype["tokenize"] = function tokenize(errorcode) {
     if (typeof Token !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    arr = Object.create(tmp32.prototype);
+    arr = Object.create(Token.prototype);
     if (_data instanceof Token) {
       const items2 = [];
       HermesBuiltin.arraySpread(_data.match, 0);
@@ -287,7 +270,7 @@ prototype["tokenize"] = function tokenize(errorcode) {
     if (typeof Token !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = Object.create(tmp36.prototype);
+    let obj = Object.create(Token.prototype);
     if (_data1 instanceof Token) {
       const items5 = [];
       HermesBuiltin.arraySpread(_data1.match, 0);
@@ -320,8 +303,8 @@ prototype["tokenize"] = function tokenize(errorcode) {
 };
 prototype["clearCache"] = function clearCache() {
   const _rules = this._rules;
-  const item = _rules.forEach((cache) => {
-    cache = cache.cache;
+  const item = _rules.forEach((item, index) => {
+    const cache = item.cache;
     let clearResult;
     if (cache != null) {
       clearResult = cache.clear();
@@ -329,10 +312,9 @@ prototype["clearCache"] = function clearCache() {
     return clearResult;
   });
   for (const key10008 in this._followers) {
-    let tmp2 = key10008;
     let arr2 = this._followers[key10008];
-    let item1 = arr2.forEach((cache) => {
-      cache = cache.cache;
+    let item1 = arr2.forEach((item, index) => {
+      const cache = item.cache;
       let clearResult;
       if (cache != null) {
         clearResult = cache.clear();
@@ -451,7 +433,7 @@ prototype2["getData"] = function getData(arg0) {
 };
 QueryTokenizer.NON_TOKEN_TYPE = "NON_TOKEN";
 QueryTokenizer.Token = Token;
-let result = set.fileFinishedImporting("lib/QueryTokenizer.tsx");
+let result = obj132.fileFinishedImporting("lib/QueryTokenizer.tsx");
 
 export default QueryTokenizer;
 export const NON_TOKEN_TYPE = "NON_TOKEN";

@@ -1,5 +1,5 @@
 // discord_app/modules/multi_account/MultiAccountStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import setSecondaryTokenAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
@@ -33,13 +33,13 @@ prototype["getUsers"] = function getUsers() {
   return closure_8;
 };
 prototype["getValidUsers"] = function getValidUsers() {
-  return closure_8.filter((tokenStatus) => tokenStatus.tokenStatus !== constants.INVALID);
+  return closure_8.filter((item, index) => item.tokenStatus !== constants.INVALID);
 };
 prototype["getHasLoggedInAccounts"] = function getHasLoggedInAccounts() {
   return closure_8.length > 0;
 };
 prototype["getIsValidatingUsers"] = function getIsValidatingUsers() {
-  return closure_8.some((tokenStatus) => tokenStatus.tokenStatus === constants.VALIDATING);
+  return closure_8.some((item, index) => item.tokenStatus === constants.VALIDATING);
 };
 Object.defineProperty(prototype, "canUseMultiAccountNotifications", {
   get: function canUseMultiAccountNotifications() {
@@ -78,7 +78,7 @@ obj = {
       c5 = true;
     }
     substr = substr.slice();
-    const findIndexResult = substr.findIndex((id) => id.id === user.id);
+    const findIndexResult = substr.findIndex((item, index) => item.id === user.id);
     if (findIndexResult > -1) {
       substr[findIndexResult].avatar = user.avatar;
       substr[findIndexResult].username = user.username;
@@ -91,9 +91,9 @@ obj = {
       substr.push(obj);
     }
     if (substr.length > MAX_ACCOUNTS) {
-      const item = substr.splice(tmp12).forEach((id) => {
-        id = id.id;
-        substr = substr.filter((id) => id.id !== id);
+      const item = substr.splice(tmp12).forEach((item, index) => {
+        id = item.id;
+        substr = substr.filter((item, index) => item.id !== id);
         callback(table[2]).removeToken(id);
       });
       const spliceResult = substr.splice(tmp12);
@@ -101,14 +101,14 @@ obj = {
   },
   LOGOUT: function handleLogout(isSwitchingAccount) {
     if (!isSwitchingAccount.isSwitchingAccount) {
-      closure_8 = closure_8.filter((id) => id.id !== c4);
+      closure_8 = closure_8.filter((item, index) => item.id !== c4);
     }
     c4 = null;
   },
   MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST(userId) {
     userId = userId.userId;
     substr = substr.slice();
-    const found = substr.find((id) => id.id === userId);
+    const found = substr.find((item, index) => item.id === userId);
     if (null != found) {
       found.tokenStatus = obj.VALIDATING;
     }
@@ -116,7 +116,7 @@ obj = {
   MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS(userId) {
     userId = userId.userId;
     substr = substr.slice();
-    const found = substr.find((id) => id.id === userId);
+    const found = substr.find((item, index) => item.id === userId);
     if (null != found) {
       found.tokenStatus = obj.VALID;
     }
@@ -124,14 +124,14 @@ obj = {
   MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE(userId) {
     userId = userId.userId;
     substr = substr.slice();
-    const found = substr.find((id) => id.id === userId);
+    const found = substr.find((item, index) => item.id === userId);
     if (null != found) {
       found.tokenStatus = obj.INVALID;
     }
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT(userId) {
     userId = userId.userId;
-    closure_8 = closure_8.filter((id) => id.id !== id);
+    closure_8 = closure_8.filter((item, index) => item.id !== id);
     setSecondaryTokenAll.removeToken(userId);
   },
   MULTI_ACCOUNT_MOVE_ACCOUNT: function handleMoveAccount(arg0) {
@@ -141,18 +141,18 @@ obj = {
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate(user) {
     user = user.user;
     substr = substr.slice();
-    const found = substr.find((id) => id.id === user.id);
+    const found = substr.find((item, index) => item.id === user.id);
     if (null != found) {
       ({ avatar: tmp.avatar, username: tmp.username, discriminator: tmp.discriminator } = user);
     }
   },
   MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: function handleUpdatePushSyncToken(arg0) {
     ({ userId: require, pushSyncToken: importDefault } = arg0);
-    closure_8 = closure_8.map((id) => {
-      let tmp = id;
-      if (id.id === closure_0) {
+    closure_8 = closure_8.map((item, index) => {
+      let tmp = item;
+      if (item.id === closure_0) {
         obj = {};
-        const merged = Object.assign(id);
+        const merged = Object.assign(item);
         obj.pushSyncToken = closure_1;
         tmp = obj;
       }
@@ -161,13 +161,13 @@ obj = {
   },
   MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: function handleInvalidatePushSyncTokens(invalidPushSyncTokens) {
     invalidPushSyncTokens = invalidPushSyncTokens.invalidPushSyncTokens;
-    closure_8 = closure_8.map((pushSyncToken) => {
-      let tmp = pushSyncToken;
-      if (null != pushSyncToken.pushSyncToken) {
-        tmp = pushSyncToken;
-        if (invalidPushSyncTokens.includes(pushSyncToken.pushSyncToken)) {
+    closure_8 = closure_8.map((item, index) => {
+      let tmp = item;
+      if (null != item.pushSyncToken) {
+        tmp = item;
+        if (invalidPushSyncTokens.includes(item.pushSyncToken)) {
           obj = {};
-          const merged = Object.assign(pushSyncToken);
+          const merged = Object.assign(item);
           obj.pushSyncToken = null;
           tmp = obj;
         }
@@ -177,7 +177,7 @@ obj = {
   }
 };
 const multiAccountStore = new MultiAccountStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/multi_account/MultiAccountStore.tsx");
+const result = obj132.fileFinishedImporting("modules/multi_account/MultiAccountStore.tsx");
 
 export default multiAccountStore;
 export const MultiAccountTokenStatus = obj;

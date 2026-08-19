@@ -1,4 +1,5 @@
 // discord_app/modules/dismissible_content/DismissibleContentFrameworkStore.tsx
+import obj132 from "../../../_runtime/00002_obj132.js";
 import timestampDefault from "../debug/Logger.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import ME from "../../Constants.tsx";
@@ -6,15 +7,14 @@ import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isSingleUseDismissibleContent from "DismissibleContentTypes.tsx";
 import set2 from "DismissibleContentFatigueConfig.tsx";
-import set from "../../../_runtime/00002_set.js";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = new timestampDefault("DCF");
 let c5 = false;
 let obj = { numberOfDCsShownToday: 0, dailyCapPeriodStart: null, dismissibleContentSeenDuringSession: null, dailyCapOverridden: false, newUserMinAgeRequiredOverridden: false, renderedAtTimestamps: null, lastDismissed: null, seenForGuildId: null };
-let set = new Set();
-obj[2] = set;
 const tmp2 = new timestampDefault("DCF");
+obj[2] = new Set();
+let set = new Set();
 obj[5] = new Map();
 let map = new Map();
 obj[7] = new Map();
@@ -39,14 +39,12 @@ prototype["initialize"] = function initialize(numberOfDCsShownToday) {
       flag = false;
     }
     obj.newUserMinAgeRequiredOverridden = flag;
-    const tmp = obj;
-    const tmp3 = obj;
-    const tmp4 = obj;
   }
   obj.dismissibleContentSeenDuringSession = new Set();
   const set = new Set();
   obj.seenForGuildId = new Map();
   obj.lastDismissed = null;
+  const map = new Map();
 };
 prototype["getState"] = function getState() {
   return obj;
@@ -195,12 +193,11 @@ obj = {
               obj[1] = dismissibleContent;
               obj[2] = obj.numberOfDCsShownToday;
               expandEventPropertiesDefault.track(AnalyticEvents.DCF_CAP_EXCEEDED, obj);
-              const obj7 = expandEventPropertiesDefault;
             }
           } else {
             const seenForGuildId = obj.seenForGuildId;
             const value = seenForGuildId.get(guildId);
-            const tmp10 = null != value && value.has(dismissibleContent);
+            null != value && value.has(dismissibleContent);
           }
         } else {
           const dismissibleContentSeenDuringSession = obj.dismissibleContentSeenDuringSession;
@@ -208,6 +205,7 @@ obj = {
         const tmp2Result = isSingleUseDismissibleContent;
       }
     }
+    const date = new Date();
   },
   DCF_HANDLE_DC_DISMISSED: function handleDCDismissed(dismissibleContent) {
     dismissibleContent = dismissibleContent.dismissibleContent;
@@ -237,6 +235,7 @@ obj = {
   }
 };
 const dismissibleContentFrameworkStore = new DismissibleContentFrameworkStore(dispatcherDefault, obj);
-let result = set.fileFinishedImporting("modules/dismissible_content/DismissibleContentFrameworkStore.tsx");
+const map1 = new Map();
+let result = obj132.fileFinishedImporting("modules/dismissible_content/DismissibleContentFrameworkStore.tsx");
 
 export default dismissibleContentFrameworkStore;

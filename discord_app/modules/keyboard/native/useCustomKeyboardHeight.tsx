@@ -1,18 +1,17 @@
 // discord_app/modules/keyboard/native/useCustomKeyboardHeight.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import context from "../../window/native/AppEntryKeyContext.tsx";
 import computeEntryStateDefault from "KeyboardUIStore.native.tsx";
-import { context } from "../../window/native/AppEntryKeyContext.tsx";
 
-const result = set.fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
+const result = obj132.fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
 
 export default function useCustomKeyboardHeight() {
-  _require = _context.useAppEntryKey();
+  _require = require("../../window/native/AppEntryKeyContext.tsx").useAppEntryKey();
   return computeEntryStateDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
 };
-export const getCustomKeyboardHeight = function getCustomKeyboardHeight(arg0) {
-  let DEFAULT_APP_ENTRY_KEY = arg0;
-  if (arg0 === undefined) {
+export const getCustomKeyboardHeight = function getCustomKeyboardHeight(appEntryKey) {
+  let DEFAULT_APP_ENTRY_KEY = appEntryKey;
+  if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   return computeEntryStateDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].customKeyboardHeight;

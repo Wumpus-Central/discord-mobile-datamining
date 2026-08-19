@@ -1,14 +1,15 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsImage.tsx
+import PlatformTypes from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 let closure_5 = createCacheKey.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
 
 export default function GuildPowerupsImage(style) {
   ({ imageUrl, isAnimated } = style);
@@ -34,4 +35,5 @@ export default function GuildPowerupsImage(style) {
   }
   const items2 = [tmp.image, style];
   tmp6 = jsx(preloadDefault, { style: items2, source: { uri: imageUrl } });
+  obj2 = PlatformTypes;
 };

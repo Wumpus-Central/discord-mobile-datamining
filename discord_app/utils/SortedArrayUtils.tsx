@@ -1,9 +1,9 @@
 // discord_app/utils/SortedArrayUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("utils/SortedArrayUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/SortedArrayUtils.tsx");
 
-export const insertionIndex = function insertionIndex(arg0, arg1, arg2) {
+export const insertionIndex = function insertionIndex(arg0, key, fn) {
   let sum;
   let tmp4;
   let length = arg0.length;
@@ -12,10 +12,9 @@ export const insertionIndex = function insertionIndex(arg0, arg1, arg2) {
   if (0 < length) {
     do {
       let tmp = num + length >>> 1;
-      let tmp2 = length;
       sum = num;
       tmp4 = tmp;
-      if (arg2(arg0[tmp], arg1) < 0) {
+      if (fn(arg0[tmp], key) < 0) {
         sum = tmp + 1;
         tmp4 = length;
       }
@@ -26,7 +25,7 @@ export const insertionIndex = function insertionIndex(arg0, arg1, arg2) {
   }
   return num2;
 };
-export const insert = function insert(arr) {
+export const insert = function insert(arr, key, fn) {
   let sum;
   let tmp4;
   let length = arr.length;
@@ -35,10 +34,9 @@ export const insert = function insert(arr) {
   if (0 < length) {
     do {
       let tmp = num + length >>> 1;
-      let tmp2 = length;
       sum = num;
       tmp4 = tmp;
-      if (arg2(arr[tmp], arg1) < 0) {
+      if (fn(arr[tmp], key) < 0) {
         sum = tmp + 1;
         tmp4 = length;
       }
@@ -47,5 +45,5 @@ export const insert = function insert(arr) {
       num2 = sum;
     } while (sum < tmp4);
   }
-  arr.splice(num2, 0, arg1);
+  arr.splice(num2, 0, key);
 };

@@ -1,30 +1,33 @@
 // discord_app/modules/user_settings/account/native/UserSettingsConfirmPassword.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
 import useSettingNavigationRoute from "../../core/native/useSettingNavigationRoute.tsx";
 import _modDef8575 from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
+import LabelDefault from "../../../../design/void/Form/native/FreeFormErrorLabel.tsx";
 import handleOpenEmailVerificationDefault from "UserSettingsAccountUnverifiedHeader.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { UserSettingsSections } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 let c5 = importAllResult;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { background: null, container: null, title: null, prompt: null, input: null, redesignInput: null, button: null, hint: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
 obj[1] = { paddingVertical: 12, paddingHorizontal: 16 };
 obj[2] = { textAlign: "center" };
 obj[3] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 obj[4] = { marginTop: 24 };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg };
+const createCacheKey = { borderRadius: ThemesDefault.radii.lg };
 obj[5] = createCacheKey;
 obj[6] = { marginTop: 16 };
 obj[7] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
@@ -70,8 +73,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
               return obj;
             } else {
               let lib = tmp4;
-              closure_0 = tmp8;
-              closure_0 = undefined;
+              let status = tmp8;
+              status = undefined;
               v0(true);
               v0 = 2;
               c4 = 3;
@@ -109,8 +112,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
               obj2[0] = arg1;
               return obj2;
             } else {
-              closure_0 = arg1;
-              if (null == closure_0) {
+              status = arg1;
+              if (null == status) {
                 if (callback != null) {
                   callback();
                 }
@@ -121,11 +124,11 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
                 obj3[0] = undefined;
                 return obj3;
               } else {
-                if (closure_0.status < 400) {
+                if (status.status < 400) {
                   lib();
                   v0 = 1;
                 }
-                const v6OrEarlierAPIError1 = new closure_1_0(closure_1_2[12]).V6OrEarlierAPIError(closure_0);
+                const v6OrEarlierAPIError1 = new closure_1_0(closure_1_2[12]).V6OrEarlierAPIError(status);
                 v02(v6OrEarlierAPIError1);
                 if (callback != null) {
                   callback();
@@ -175,8 +178,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const tmp6 = first(undefined.useState(false), 2);
   [obj2, c5] = first(undefined.useState(null), 2);
   const effect = importAllResult.useEffect(() => {
-    let obj = callback(table[11]);
-    obj = { destinationPane: constants.ACCOUNT_CONFIRM_PASSWORD };
+    callback(table[11]);
+    const obj = { destinationPane: constants.ACCOUNT_CONFIRM_PASSWORD };
     const result = obj.trackUserSettingsPaneViewed(obj);
   }, []);
   let tmp13Result = null;
@@ -203,18 +206,18 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj[0] = tmp.container;
     obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.title;
-    let intl = tmp3(1236).intl;
-    obj1[4] = intl.string(tmp3(1236).t["x+d9t3"]);
-    const items3 = [callback(tmp3(4734).Text, obj1), , , , ];
+    let intl = getSystemLocale.intl;
+    obj1[4] = intl.string(getSystemLocale.t["x+d9t3"]);
+    const items3 = [callback(Text.Text, obj1), , , , ];
     obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj2[0] = tmp.prompt;
-    const intl2 = tmp3(1236).intl;
-    obj2[3] = intl2.string(tmp3(1236).t.vaZmAx);
-    items3[1] = callback(tmp3(4734).Text, obj2);
+    const intl2 = getSystemLocale.intl;
+    obj2[3] = intl2.string(getSystemLocale.t.vaZmAx);
+    items3[1] = callback(Text.Text, obj2);
     let obj3 = { style: null, textStyle: null, label: null, textContentType: "password", keyboardType: "default", secureTextEntry: true, value: null, onChangeText: null, onSubmitEditing: null, error: null, returnKeyType: "done", autoCapitalize: "none", autoFocus: true };
     ({ input: obj7[0], redesignInput: obj7[1] } = tmp);
-    const intl3 = tmp3(1236).intl;
-    obj3[2] = intl3.string(tmp3(1236).t["CIGa+7"]);
+    const intl3 = getSystemLocale.intl;
+    obj3[2] = intl3.string(getSystemLocale.t["CIGa+7"]);
     obj3[6] = first;
     obj3[7] = tmp8[1];
     obj3[8] = handleSubmit;
@@ -231,36 +234,31 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.hint;
         obj4[1] = obj1.message;
-        tmp19Result = tmp19(tmp20(8579), obj4);
+        tmp19Result = callback(LabelDefault, obj4);
       }
     }
     items3[3] = tmp19Result;
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.button;
     const obj6 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
-    const intl4 = tmp3(1236).intl;
-    obj6[2] = intl4.string(tmp3(1236).t.i4jeWR);
+    const intl4 = getSystemLocale.intl;
+    obj6[2] = intl4.string(getSystemLocale.t.i4jeWR);
     obj6[3] = handleSubmit;
     obj6[4] = tmp7;
-    obj5[1] = callback(tmp3(4745).Button, obj6);
+    obj5[1] = callback(Button.Button, obj6);
     items3[4] = callback(_handleSubmit, obj5);
     obj[1] = items3;
-    items2[1] = closure_11(_handleSubmit, obj);
+    items2[1] = callback(_handleSubmit, obj);
     obj[3] = items2;
-    tmp13Result = tmp13(closure_7, obj);
-    const tmp14 = closure_7;
-    tmp20 = importDefault;
-    const tmp21 = _modDef8575;
+    tmp13Result = callback(closure_7, obj);
   }
   return tmp13Result;
 });
-let obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-let result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsConfirmPassword.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/UserSettingsConfirmPassword.tsx");
 
 export default forwardRefResult;
 export const UserSettingsConfirmPasswordWrapped = function UserSettingsConfirmPasswordWrapped() {
-  let obj = useSettingNavigationRoute;
-  obj = {};
+  const obj = {};
   const merged = Object.assign(obj.useSettingNavigationRoute().params);
   return callback(closure_13, obj);
 };

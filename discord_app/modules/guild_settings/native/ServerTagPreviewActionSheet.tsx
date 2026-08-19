@@ -1,19 +1,18 @@
 // discord_app/modules/guild_settings/native/ServerTagPreviewActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { GuildProfileFetchStatus } from "../../guild_profile/GuildProfileStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { error: null };
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", rowGap: ThemesDefault.space.PX_12 };
+const createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", rowGap: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/ServerTagPreviewActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/ServerTagPreviewActionSheet.tsx");
 
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
@@ -22,13 +21,13 @@ export default function ServerTagPreviewActionSheet(guildId) {
   guildProfile = guildProfile.guildProfile;
   const items = [guildId];
   const effect = React.useEffect(() => {
-    const guildProfile = guildId(closure_1_2[7]).getGuildProfile(guildId, false, { respectBackoff: true });
+    const guildProfile = guildId(dependencyMap[7]).getGuildProfile(guildId, false, { respectBackoff: true });
   }, items);
   if (null != guildProfile) {
     obj = { guildId: null, tag: null, badge: null, primaryColor: null, secondaryColor: null, isDirty: false, variant: "plain", onAdopted: null };
     obj[0] = guildId;
     ({ tag: obj5[1], badge: obj5[2], badgeColorPrimary: obj5[3], badgeColorSecondary: obj5[4] } = guildProfile);
-    obj[7] = function onAdopted(arg0) {
+    obj[7] = function onAdopted(c2) {
       return callback(table[9]).hideActionSheet();
     };
     let tmp7 = callback(GuildSettingsServerTagPreviewDefault, obj);
@@ -44,7 +43,7 @@ export default function ServerTagPreviewActionSheet(guildId) {
     const intl2 = tmp2(1236).intl;
     obj2[1] = intl2.string(tmp2(1236).t["5911Lb"]);
     obj2[2] = function onPress() {
-      return guildId(closure_1_2[7]).getGuildProfile(guildId, true);
+      return guildId(dependencyMap[7]).getGuildProfile(guildId, true);
     };
     items1[1] = callback(tmp2(4745).Button, obj2);
     obj[1] = items1;

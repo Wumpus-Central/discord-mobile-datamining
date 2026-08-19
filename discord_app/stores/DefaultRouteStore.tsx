@@ -1,5 +1,5 @@
 // discord_app/stores/DefaultRouteStore.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
 import ME2 from "../Constants.tsx";
@@ -77,6 +77,6 @@ obj = {
   }
 };
 const defaultRouteStore = new DefaultRouteStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("stores/DefaultRouteStore.tsx");
+const result = obj132.fileFinishedImporting("stores/DefaultRouteStore.tsx");
 
 export default defaultRouteStore;

@@ -1,7 +1,7 @@
 // discord_app/modules/multi_account/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/multi_account/Constants.tsx");
+const result = obj132.fileFinishedImporting("modules/multi_account/Constants.tsx");
 
 export const MAX_ACCOUNTS = 5;
 export const SWITCH_ACCOUNTS_MODAL_KEY = "switch-accounts-modal";

@@ -1,4 +1,4 @@
 // discord_app/modules/devtools/native/components/screens/performance/types.tsx
-import set from "../../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/devtools/native/components/screens/performance/types.tsx");
+const result = obj132.fileFinishedImporting("modules/devtools/native/components/screens/performance/types.tsx");

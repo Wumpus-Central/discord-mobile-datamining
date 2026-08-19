@@ -7,25 +7,22 @@ import _modDef11364 from "../../../../../main_tabs_v2/native/shared_components/u
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { EVERYONE_CHANNEL_ID } from "../../../../../../stores/ChannelMemberStore.tsx";
-import closure_7 from "../../../../../../stores/ChannelStore.tsx";
-import closure_8 from "../../../../../../stores/GuildMemberStore.tsx";
-import closure_9 from "../../../../../../stores/GuildStore.tsx";
-import closure_10 from "../../../../../../stores/SelectedChannelStore.tsx";
-import closure_11 from "../../../stores/SearchMemberTabStore.tsx";
-import closure_12 from "../../../stores/SearchQueryStore.tsx";
+import ensureGuildLoaded from "../../../../../../stores/ChannelStore.tsx";
+import trackCommunicationDisabled from "../../../../../../stores/GuildMemberStore.tsx";
+import createGuildRecordFromRust from "../../../../../../stores/GuildStore.tsx";
+import handleConnectionOpen from "../../../../../../stores/SelectedChannelStore.tsx";
+import setAutocompleteOptions from "../../../stores/SearchMemberTabStore.tsx";
+import prototype from "../../../stores/SearchQueryStore.tsx";
 import MessageEmbedTypes from "../../../../SearchConstants.tsx";
 import { SearchResultContentEntityTypes as closure_15 } from "../../../tracking/TrackingConstants.tsx";
 import ME from "../../../../../../Constants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function SearchableMembersScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const guildId = searchContext.guildId;
-  let analyticsLocations;
-  dependencyMap = undefined;
-  let stateFromStores;
   let first;
   let stateFromStores2;
   let fullscreenPlaceholderCount;
@@ -33,12 +30,12 @@ function SearchableMembersScreen(searchContext) {
   let callback;
   let stateFromStores5;
   let stateFromStores6;
-  analyticsLocations = guildId(7139)().analyticsLocations;
+  const analyticsLocations = guildId(7139)().analyticsLocations;
   let obj = searchContext(11511);
   dependencyMap = obj.getSearchContextId(searchContext);
   obj1 = searchContext(647);
   let items = [stateFromStores6];
-  stateFromStores = obj1.useStateFromStores(items, () => stateFromStores6.getResults(closure_3));
+  const stateFromStores = obj1.useStateFromStores(items, () => stateFromStores6.getResults(closure_3));
   let obj2 = searchContext(647);
   const items1 = [closure_12];
   const items2 = [searchContext];
@@ -59,8 +56,7 @@ function SearchableMembersScreen(searchContext) {
   obj = { placeholderHeight: closure_13, numColumns: 1 };
   fullscreenPlaceholderCount = tmp4Result.useFullscreenPlaceholderCount(obj);
   const tmp = callback();
-  let tmp5 = stateFromStores6;
-  let tmp7 = closure_12;
+  const tmp5 = stateFromStores6;
   const items4 = [callback];
   stateFromStores3 = searchContext(647).useStateFromStores(items4, () => {
     const guild = callback.getGuild(guildId);
@@ -75,14 +71,14 @@ function SearchableMembersScreen(searchContext) {
   const items5 = [fullscreenPlaceholderCount];
   const stateFromStores4 = searchContext(647).useStateFromStores(items5, () => {
     if (first === stateFromStores2) {
-      return tmp;
+      return first;
     } else {
-      const channel = fullscreenPlaceholderCount.getChannel(tmp);
-      let tmp4 = tmp;
+      const channel = fullscreenPlaceholderCount.getChannel(first);
+      let tmp4 = first;
       if (null != channel) {
-        let parent_id = tmp;
+        let parent_id = first;
         if (channel.isAnnouncementThread()) {
-          parent_id = tmp;
+          parent_id = first;
           if (null != channel.parent_id) {
             parent_id = channel.parent_id;
           }
@@ -112,8 +108,8 @@ function SearchableMembersScreen(searchContext) {
   const items8 = [callback];
   const callback1 = stateFromStores.useCallback((arg0) => {
     ({ user, index } = arg0);
-    let obj = guildId(11531);
-    obj = { searchContext, userId: user.id, index, entityType: closure_1_15.USER };
+    guildId(11531);
+    const obj = { searchContext, userId: user.id, index, entityType: closure_1_15.USER };
     const result = obj.trackSearchResultClicked(obj);
     const result1 = searchContext(1892).dismissGlobalKeyboard();
   }, items7);
@@ -121,7 +117,7 @@ function SearchableMembersScreen(searchContext) {
     callback(user.user, user.index);
   }, items8);
   const tmp4Result2 = searchContext(647);
-  const items9 = [tmp7];
+  const items9 = [closure_12];
   const items10 = [searchContext];
   stateFromStores5 = searchContext(647).useStateFromStores(items9, () => closure_1_12.isInitialSearchQuery(searchContext), items10);
   const tmp4Result3 = searchContext(647);
@@ -148,11 +144,10 @@ function SearchableMembersScreen(searchContext) {
   const items13 = [stateFromStores, stateFromStores6, stateFromStores5, guildId, stateFromStores3, callback, fullscreenPlaceholderCount];
   const memo = stateFromStores.useMemo(() => {
     let items = [];
-    const item = stateFromStores.forEach((record) => {
-      items = arg1;
-      const member = stateFromStores3.getMember(closure_1_1, record.record.id);
-      let obj = { type: closure_2_14.GUILD_CHANNEL_MEMBER, props: null };
-      obj = { type: closure_2_16.NONE, user: record.record, nickname: null, usernameColor: null, roleColors: null, isNameplatedRow: true, premiumSince: null, isOwner: null, guildId: null, onLongPress: null, onPress: null, start: null, end: null, canShowDisplayNameStylesFont: true };
+    const item = stateFromStores.forEach((item, index) => {
+      items = index;
+      const member = stateFromStores3.getMember(guildId, item.record.id);
+      const obj = { type: closure_2_16.NONE, user: item.record, nickname: null, usernameColor: null, roleColors: null, isNameplatedRow: true, premiumSince: null, isOwner: null, guildId: null, onLongPress: null, onPress: null, start: null, end: null, canShowDisplayNameStylesFont: true };
       let nick;
       if (member != null) {
         nick = member.nick;
@@ -173,32 +168,26 @@ function SearchableMembersScreen(searchContext) {
         premiumSince = member.premiumSince;
       }
       obj[6] = premiumSince;
-      obj[7] = closure_1_8 === record.record.id;
-      obj[8] = closure_1_1;
+      obj[7] = closure_1_8 === item.record.id;
+      obj[8] = guildId;
       obj[9] = function onLongPress(arg0) {
         return closure_1_9(arg0, closure_0);
       };
       obj[10] = function onPress(arg0) {
         return closure_1_9(arg0, closure_0);
       };
-      obj[11] = 0 === arg1;
-      obj[12] = arg1 === closure_1_4.length - 1;
+      obj[11] = 0 === index;
+      obj[12] = index === stateFromStores.length - 1;
       obj[1] = obj;
       items.push(obj);
     });
     if (stateFromStores6) {
-      let num2 = 0;
-      if (0 < fullscreenPlaceholderCount) {
-        do {
-          let obj = { type: null, key: null };
-          let tmp5 = closure_1_14;
-          obj[0] = closure_1_14.GUILD_CHANNEL_MEMBER_PLACEHOLDER;
-          let _HermesInternal = HermesInternal;
-          obj[1] = "guild-channel-member-placeholder-" + num2;
-          let arr = items.push(obj);
-          num2 = num2 + 1;
-          let tmp7 = fullscreenPlaceholderCount;
-        } while (num2 < fullscreenPlaceholderCount);
+      for (let num2 = 0; num2 < fullscreenPlaceholderCount; num2 = num2 + 1) {
+        let obj = { type: null, key: null };
+        obj[0] = closure_1_14.GUILD_CHANNEL_MEMBER_PLACEHOLDER;
+        let _HermesInternal = HermesInternal;
+        obj[1] = "guild-channel-member-placeholder-" + num2;
+        let arr = items.push(obj);
       }
     }
     return items;
@@ -254,13 +243,15 @@ function ThreadMembersScreen(searchContext) {
       obj = { channelId: null, guildId: null, onUserPress: null, disableStickySections: true };
       obj[0] = channelId;
       obj[1] = guildId;
-      obj[2] = searchContext(1892).dismissGlobalKeyboard;
+      obj[2] = tmp(1892).dismissGlobalKeyboard;
       let tmp7 = jsx(channelId(15910), { channelId: null, guildId: null, onUserPress: null, disableStickySections: true });
       const tmp6 = channelId(15910);
     }
     return tmp7;
   }
   tmp7 = <SearchableMembersScreen searchContext={searchContext} guildId={guildId} />;
+  obj2 = searchContext(647);
+  tmp = searchContext;
 }
 let c4 = importAllResult;
 ({ MESSAGE_PLACEHOLDER_ITEM_SIZE: map1, SearchListItemTypes: closure_14 } = MessageEmbedTypes);
@@ -283,14 +274,14 @@ const memoResult = importAllResult.memo(function MembersScreen(searchContext) {
     obj[1] = jsx(_modDef11364, { channelId: null, disableStickySections: true, listStyleOverride: null, onUserPress: null });
     obj[1] = <View style={null}>{null}</View>;
     return jsx(context.AnalyticsLocationProvider, { style: null, children: null });
-  } else if (tmp5.THREAD === type) {
+  } else if (constants.THREAD === type) {
     const obj2 = { searchContext: null, channelId: null, guildId: null };
     obj2[0] = searchContext;
     ({ channelId: obj3[1], guildId: obj3[2] } = searchContext);
     return <ThreadMembersScreen searchContext={null} channelId={null} guildId={null} />;
   } else {
-    if (tmp5.GUILD_CHANNEL !== type) {
-      if (tmp5.GUILD !== type) {
+    if (constants.GUILD_CHANNEL !== type) {
+      if (constants.GUILD !== type) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
         error = new Error("[MembersScreen] Unsupported search context type: " + searchContext.type);
@@ -305,9 +296,7 @@ const memoResult = importAllResult.memo(function MembersScreen(searchContext) {
     obj[1] = <SearchableMembersScreen searchContext={null} guildId={null} />;
     return jsx(context.AnalyticsLocationProvider, { value: null, children: null });
   }
-  const tmp2 = importDefault;
-  const tmp4 = contextDefault;
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/MembersScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/MembersScreen.tsx");
 
 export default memoResult;

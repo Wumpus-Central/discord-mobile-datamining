@@ -5,7 +5,7 @@ import { QuestDockMode } from "../../QuestConstants.tsx";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QuestDockConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function useQuestDockSwipeGesture() {
   const context = minExpandedContentHeight.useContext(questDockWrapperSpecs(windowDimensions[4]).QuestDockGestureContext);
   questDockWrapperSpecs = context.questDockWrapperSpecs;
@@ -19,8 +19,8 @@ function useQuestDockSwipeGesture() {
   const setRestingQuestDockMode = context1.setRestingQuestDockMode;
   const questDockOffset = context1.questDockOffset;
   const isVisibleToUser = minExpandedContentHeight.useContext(activeQuestDockMode(windowDimensions[7])).isVisibleToUser;
-  let obj = questDockWrapperSpecs(windowDimensions[8]);
-  obj = { absoluteX: 0, absoluteY: 0, x: 0, y: 0, height: 0, isDrawer: restingQuestDockMode.get() === QuestDockMode.EXPANDED, active: false };
+  questDockWrapperSpecs(windowDimensions[8]);
+  let obj = { absoluteX: 0, absoluteY: 0, x: 0, y: 0, height: 0, isDrawer: restingQuestDockMode.get() === QuestDockMode.EXPANDED, active: false };
   const sharedValue = obj.useSharedValue(obj);
   const sharedValue1 = questDockWrapperSpecs(windowDimensions[8]).useSharedValue(0);
   let obj3 = questDockWrapperSpecs(windowDimensions[8]);
@@ -163,9 +163,9 @@ function useQuestDockSwipeGesture() {
       }
       if (obj1.get() > 0) {
         const _Math = Math;
-        let bound = Math.min(obj1.get(), closure_1_10);
+        let bound = Math.min(obj1.get(), sharedValue1);
       } else {
-        bound = closure_1_10;
+        bound = sharedValue1;
       }
       if (sum >= bound) {
         if (!obj.get().isDrawer) {
@@ -182,17 +182,17 @@ function useQuestDockSwipeGesture() {
           num3 = closure_12;
         }
         obj.y = num3;
-        obj.width = closure_1_0(closure_1_2[12]).getQuestDockExpandedWidth(store3.get().width, store4.get().left, store4.get().right);
+        obj.width = questDockWrapperSpecs(windowDimensions[12]).getQuestDockExpandedWidth(store3.get().width, store4.get().left, store4.get().right);
         const _Math4 = Math;
         obj.height = Math.min(sum, store3.get().height);
         obj.prevDeltaY = diff;
         const result1 = store.set(obj);
         const result2 = store2.set(closure_1_4.EXPANDED);
-        const obj12 = closure_1_0(closure_1_2[12]);
-      } else if (sum < closure_1_11) {
+        const obj12 = questDockWrapperSpecs(windowDimensions[12]);
+      } else if (sum < sharedValue2) {
         if (store2.get() === closure_1_4.CLOSED) {
           const _Math5 = Math;
-          const result3 = (1 - Math.min(sum, 0) / closure_1_6) * (closure_1_6 - sum);
+          const result3 = (1 - Math.min(sum, 0) / setRestingQuestDockMode) * (setRestingQuestDockMode - sum);
           obj1 = {};
           const merged2 = Object.assign(store.get());
           obj1.x = 0;
@@ -201,21 +201,19 @@ function useQuestDockSwipeGesture() {
             num2 = result3 * closure_1_15;
           }
           obj1.y = num2;
-          obj1.width = closure_1_0(closure_1_2[12]).getQuestDockClosedWidth(store3.get().width, store4.get().left, store4.get().right);
+          obj1.width = questDockWrapperSpecs(windowDimensions[12]).getQuestDockClosedWidth(store3.get().width, store4.get().left, store4.get().right);
           let tmp49 = sum;
           if (0 < result3) {
-            tmp49 = tmp76;
+            tmp49 = setRestingQuestDockMode;
           }
           obj1.height = tmp49;
           obj1.prevDeltaY = diff;
           const result4 = store.set(obj1);
-          const result5 = obj8.set(closure_1_4.CLOSED);
-          const obj9 = closure_1_0(closure_1_2[12]);
-          tmp76 = closure_1_6;
+          const result5 = store2.set(closure_1_4.CLOSED);
+          const obj9 = questDockWrapperSpecs(windowDimensions[12]);
         }
-        obj8 = store2;
       } else {
-        const result6 = -1 * (sum - closure_1_5) * (1 - sum / closure_1_10 / closure_1_14);
+        const result6 = -1 * (sum - restingQuestDockMode) * (1 - sum / sharedValue1 / closure_1_14);
         let num = 0;
         if (closure_12 > 0) {
           const _Math2 = Math;
@@ -229,20 +227,20 @@ function useQuestDockSwipeGesture() {
           const result8 = obj.set(obj2);
         }
         let obj3 = store;
-        let tmp17 = tmp69 !== store.get().height;
+        let tmp17 = restingQuestDockMode !== store.get().height;
         if (tmp17) {
           tmp17 = store2.get() !== closure_1_4.EXPANDED;
         }
         if (tmp17) {
-          const obj5 = closure_1_0(closure_1_2[8]);
-          closure_1_0(closure_1_2[8]).runOnJS(closure_1_0(closure_1_2[13]).triggerHapticFeedback)(closure_1_0(closure_1_2[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
-          const runOnJSResult = closure_1_0(closure_1_2[8]).runOnJS(closure_1_0(closure_1_2[13]).triggerHapticFeedback);
+          const obj5 = questDockWrapperSpecs(windowDimensions[8]);
+          questDockWrapperSpecs(windowDimensions[8]).runOnJS(questDockWrapperSpecs(windowDimensions[13]).triggerHapticFeedback)(questDockWrapperSpecs(windowDimensions[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
+          const runOnJSResult = questDockWrapperSpecs(windowDimensions[8]).runOnJS(questDockWrapperSpecs(windowDimensions[13]).triggerHapticFeedback);
         }
         obj3 = {};
         const merged4 = Object.assign(obj3.get());
         obj3.x = 0;
         let bound1 = result6;
-        const result9 = -1 * closure_1_7;
+        const result9 = -1 * questDockOffset;
         if (closure_12 > 0) {
           const _Math3 = Math;
           bound1 = Math.min(result6, 0);
@@ -258,12 +256,12 @@ function useQuestDockSwipeGesture() {
         } else {
           right = store4.get().right;
         }
-        obj3.width = closure_1_0(closure_1_2[12]).getQuestDockCollapsedWidth(store3.get().width, left, right);
-        obj3.height = closure_1_5;
+        obj3.width = questDockWrapperSpecs(windowDimensions[12]).getQuestDockCollapsedWidth(store3.get().width, left, right);
+        obj3.height = restingQuestDockMode;
         obj3.prevDeltaY = diff;
         const result10 = obj3.set(obj3);
         const result11 = store2.set(closure_1_4.COLLAPSED);
-        const obj7 = closure_1_0(closure_1_2[12]);
+        const obj7 = questDockWrapperSpecs(windowDimensions[12]);
       }
     };
     const onTouchesMoveResult = result.onTouchesDown(I).onTouchesMove(A);
@@ -274,31 +272,32 @@ function useQuestDockSwipeGesture() {
     const fn2 = function t(arg0) {
       ({ velocityY, y } = arg0);
       const absolute = Math.abs(velocityY);
-      if (absolute <= closure_1_12) {
+      if (absolute <= youBarTotalHeight) {
         if (store5.get() !== closure_1_4.COLLAPSED) {
-          if (velocityY <= tmp3) {
-            if (obj.get() !== tmp5.COLLAPSED) {
-              if (obj.get() !== tmp5.CLOSED) {
-                let COLLAPSED = tmp5.COLLAPSED;
+          if (velocityY <= youBarTotalHeight) {
+            if (store5.get() !== closure_1_4.COLLAPSED) {
+              if (store5.get() !== closure_1_4.CLOSED) {
+                let COLLAPSED = closure_1_4.COLLAPSED;
               }
             }
-            COLLAPSED = tmp5.RESET_TO_PREVIOUS;
+            COLLAPSED = closure_1_4.RESET_TO_PREVIOUS;
           }
-          COLLAPSED = tmp5.COLLAPSED;
+          COLLAPSED = closure_1_4.COLLAPSED;
         } else {
-          COLLAPSED = tmp5.SOFT_DISMISSED;
+          COLLAPSED = closure_1_4.SOFT_DISMISSED;
         }
-        let tmp10 = obj.get() === tmp5.CLOSED && COLLAPSED !== tmp5.EXPANDED;
+        let tmp10 = store5.get() === closure_1_4.CLOSED && COLLAPSED !== closure_1_4.EXPANDED;
         if (tmp10) {
           tmp10 = y < 0;
         }
         if (tmp10) {
-          tmp10 = tmp2 > closure_1_11;
+          tmp10 = tmp2 > sharedValue2;
         }
         if (tmp10) {
-          COLLAPSED = tmp5.COLLAPSED;
+          COLLAPSED = closure_1_4.COLLAPSED;
         }
-        closure_1_0(closure_1_2[8]).runOnJS(closure_6)(COLLAPSED);
+        questDockWrapperSpecs(windowDimensions[8]).runOnJS(closure_6)(COLLAPSED);
+        const obj2 = questDockWrapperSpecs(windowDimensions[8]);
       }
       store5.get() === closure_1_4.EXPANDED ? closure_1_4.RESET_TO_PREVIOUS : closure_1_4.EXPANDED;
     };
@@ -369,7 +368,7 @@ const memoResult = importAllResult.memo(function QuestDockGestureDetector(childr
   const tmp = useQuestDockSwipeGesture();
   return jsx(LegacyBaseButton.GestureDetector, { gesture: useQuestDockSwipeGesture(), children: children.children });
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockGestureDetector.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockGestureDetector.tsx");
 
 export default memoResult;
 export { useQuestDockSwipeGesture };

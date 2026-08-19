@@ -1,12 +1,12 @@
 // discord_app/modules/activities/utils/useTransitionToConnectedActivityInVoice.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../stores/SelectedChannelStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import handleConnectionOpen from "../../../stores/SelectedChannelStore.tsx";
 import { ComponentActions } from "../../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/utils/useTransitionToConnectedActivityInVoice.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/useTransitionToConnectedActivityInVoice.tsx");
 
 export default function useTransitionToConnectedActivityInVoice(onTransition) {
   onTransition = onTransition.onTransition;
@@ -77,7 +77,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                     obj1[0] = arg1;
                     return obj1;
                   } else {
-                    callback = closure_2_0(closure_2_2[5]).getEmbeddedActivityLocationChannelId(location);
+                    callback = handler(closure_2_2[5]).getEmbeddedActivityLocationChannelId(location);
                     if (null != callback) {
                       if (callback(closure_2_2[6])(callback)) {
                         if (closure_2_6.getVoiceChannelId() !== callback) {
@@ -129,11 +129,11 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
       }
       return applyArgumentsResult;
     }
-    let ComponentDispatch = onTransition(closure_1_2[9]).ComponentDispatch;
-    const subscription = ComponentDispatch.subscribe(closure_1_7.OPEN_EMBEDDED_ACTIVITY, handler);
+    let ComponentDispatch = onTransition(dependencyMap[9]).ComponentDispatch;
+    const subscription = ComponentDispatch.subscribe(ComponentActions.OPEN_EMBEDDED_ACTIVITY, handler);
     return () => {
-      const ComponentDispatch = onTransition(closure_2_2[9]).ComponentDispatch;
-      ComponentDispatch.unsubscribe(closure_2_7.OPEN_EMBEDDED_ACTIVITY, handler);
+      const ComponentDispatch = onTransition(dependencyMap[9]).ComponentDispatch;
+      ComponentDispatch.unsubscribe(ComponentActions.OPEN_EMBEDDED_ACTIVITY, handler);
     };
   }, items);
 };

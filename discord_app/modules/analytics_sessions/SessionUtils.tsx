@@ -1,9 +1,9 @@
 // discord_app/modules/analytics_sessions/SessionUtils.tsx
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 
-const result = 30 * setDefault.Millis.MINUTE;
+const result = 30 * obj132Default.Millis.MINUTE;
 let c0 = result;
-const result1 = require("set").fileFinishedImporting("modules/analytics_sessions/SessionUtils.tsx");
+const result1 = require("obj132").fileFinishedImporting("modules/analytics_sessions/SessionUtils.tsx");
 
 export const SESSION_IDLE_TIMEOUT_MILLIS = result;
 export const CLIENT_SESSION_STORAGE_VERSION = 1;

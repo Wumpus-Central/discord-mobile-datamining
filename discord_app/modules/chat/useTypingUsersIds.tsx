@@ -1,10 +1,10 @@
 // discord_app/modules/chat/useTypingUsersIds.tsx
-import closure_2 from "../../stores/RelationshipStore.tsx";
-import closure_3 from "../../stores/TypingStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
+import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
+import handleTypingStart from "../../stores/TypingStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/chat/useTypingUsersIds.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/chat/useTypingUsersIds.tsx");
 
 export const useTypingUserIds = function useTypingUserIds(id, arg1) {
   const _require = id;
@@ -23,12 +23,9 @@ export const useTypingUserIds = function useTypingUserIds(id, arg1) {
     const typingUsers = closure_1_3.getTypingUsers(closure_0);
     const items = [];
     for (const key10013 in typingUsers) {
-      let tmp7 = key10013;
-      let tmp8 = MAX_SAFE_INTEGER;
       if (items.length >= MAX_SAFE_INTEGER) {
         break;
       } else {
-        let tmp3 = closure_1_4;
         let user = closure_1_4.getUser(key10013);
         if (null == user) {
           continue;
@@ -36,7 +33,6 @@ export const useTypingUserIds = function useTypingUserIds(id, arg1) {
           if (user.id === id) {
             continue;
           } else {
-            let tmp5 = closure_1_2;
             if (closure_1_2.isBlockedOrIgnored(user.id)) {
               continue;
             } else {

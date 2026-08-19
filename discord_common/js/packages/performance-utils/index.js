@@ -1,5 +1,5 @@
 // discord_common/js/packages/performance-utils/index.js
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import u from "performance-polyfill.js";
 
 try {
@@ -48,7 +48,7 @@ try {
     } catch (err) {
     }
   }
-  const _module1 = set;
+  const _module1 = obj132;
   const result = _module1.fileFinishedImporting("../discord_common/js/packages/performance-utils/index.js");
   exports.navigationStart = tmp4;
   exports.timeOrigin = tmp5;

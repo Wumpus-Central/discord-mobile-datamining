@@ -1,26 +1,26 @@
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import tinycolorDefault from "../../../../_runtime/05311_tinycolor.js";
 import hasFetchedColors from "../../avatar/useAvatarColor.tsx";
 import hasFetchedColorsDefault from "../../avatar/useAvatarColor.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");
 
 export const useProfilePrimaryColor = function useProfilePrimaryColor(guildProfile, token) {
   let guildIconURL = null;
   if (null != guildProfile) {
     guildIconURL = null;
     if (null == guildProfile.brandColorPrimary) {
-      let obj = getAvatarURLDefault;
-      obj = { id: null, icon: null, size: 64 };
+      const obj = { id: null, icon: null, size: 64 };
       ({ id: obj2[0], icon: obj2[1] } = guildProfile);
       guildIconURL = obj.getGuildIconURL(obj);
     }
   }
-  let brandColorPrimary = hasFetchedColorsDefault(guildIconURL, token);
-  brandColorPrimary = undefined;
+  hasFetchedColorsDefault(guildIconURL, token);
+  let brandColorPrimary;
   if (guildProfile != null) {
     brandColorPrimary = guildProfile.brandColorPrimary;
   }
@@ -55,9 +55,9 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         obj[1] = tmp5;
         obj[2] = tmp6;
         const tmp3 = callback(first, 3);
-        const obj2 = tmp8(5311)(obj);
+        const obj2 = tinycolorDefault(obj);
         let num2 = 1;
-        ({ h, s, l } = tmp8(5311)(obj).toHsl());
+        ({ h, s, l } = tinycolorDefault(obj).toHsl());
         if (closure_4.desaturateUserColors) {
           num2 = closure_4.saturation;
         }
@@ -65,13 +65,11 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         obj[0] = h;
         obj[1] = s * num2;
         obj[2] = l;
-        const toHslResult = tmp8(5311)(obj).toHsl();
-        return tmp8(5311)(obj).toHexString();
+        const toHslResult = tinycolorDefault(obj).toHsl();
+        return tinycolorDefault(obj).toHexString();
       } else {
         return null;
       }
-      const obj7 = hasFetchedColors;
     }
-    const obj5 = getAvatarURLDefault;
   }
 };

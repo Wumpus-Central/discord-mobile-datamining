@@ -3,14 +3,14 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import getSystemLocale from "../../../intl/index.native.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
 import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
+import "createCacheKey";
+import obj132 from "../../../utils/PlatformUtils.tsx";
 
-require = arg1;
+require = fn;
 class ToastEmoji {
   constructor(arg0) {
     emoji = global.emoji;
@@ -26,18 +26,18 @@ class ToastEmoji {
     items1[1] = stateFromStores;
     memo = closure_3.useMemo(() => {
       if (null != emoji.id) {
-        let obj = stateFromStores(closure_1_2[8]);
-        obj = { id: null, animated: null, size: null };
-        obj[0] = tmp.id;
+        stateFromStores(dependencyMap[8]);
+        const obj = { id: null, animated: null, size: null };
+        obj[0] = emoji.id;
         let animated = !stateFromStores;
         if (!stateFromStores) {
-          animated = tmp.animated;
+          animated = emoji.animated;
         }
         obj[1] = animated;
-        obj[2] = closure_1_5;
+        obj[2] = EMOJI_URL_BASE_SIZE;
         let url = obj.getEmojiURL(obj);
       } else {
-        url = tmp.url;
+        url = emoji.url;
       }
       return url;
     }, items1);
@@ -54,23 +54,22 @@ class ToastEmoji {
   }
 }
 function ToastText(emoji) {
-  let obj = { variant: "text-sm/normal", style: callback().toastText, children: null };
+  { variant: "text-sm/normal", style: callback().toastText, children: null };
   const intl = getSystemLocale.intl;
-  obj = { emojiName: emoji.emoji.name };
+  const obj = { emojiName: emoji.emoji.name };
   obj[2] = intl.format(getSystemLocale.t.nKY0Fl, obj);
   return jsx(Text.Text, { emojiName: emoji.emoji.name });
 }
-createCacheKey = { toastEmoji: null, toastEmojiCustom: null, toastEmojiText: null, toastText: null };
-createCacheKey = { marginLeft: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8 };
+const createCacheKey = { marginLeft: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 24, height: 24 };
 let num = 16;
-if (set.isIOS()) {
+if (obj132.isIOS()) {
   num = 24;
 }
 const obj1 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
 let num2;
-if (set.isIOS()) {
+if (obj132.isIOS()) {
   num2 = 32;
 }
 obj1[1] = num2;
@@ -78,7 +77,7 @@ obj1[3] = ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 createCacheKey[2] = obj1;
 createCacheKey[3] = { marginRight: ThemesDefault.space.PX_12, marginVertical: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
+const result = obj132.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
 
 export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
@@ -93,12 +92,11 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
   } else {
     obj = { key: "DEFAULT_REACTION_EMOJI_UPDATED", icon: null, content: null, toastDurationMs: 3000 };
     obj[1] = function icon() {
-      return closure_1_6(closure_1_8, { emoji });
+      return <ToastEmoji emoji={emoji} />;
     };
     obj[2] = function content() {
-      return closure_1_6(closure_1_9, { emoji });
+      return <ToastText emoji={emoji} />;
     };
     dispatcherDefault.open(obj);
-    const obj2 = dispatcherDefault;
   }
 };

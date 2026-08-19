@@ -50,6 +50,6 @@ prototype["isAvailable"] = function isAvailable() {
   const self = this;
   return null == this.premiumGuildSubscription && !self.isOnCooldown();
 };
-const result = require("set").fileFinishedImporting("records/GuildBoostSlotRecord.tsx");
+const result = require("obj132").fileFinishedImporting("records/GuildBoostSlotRecord.tsx");
 
 export default GuildBoostSlotRecord;

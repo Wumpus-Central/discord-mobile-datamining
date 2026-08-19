@@ -1,14 +1,13 @@
 // discord_app/modules/launchpad/native/shared/useSimpleGuildSize.tsx
-import closure_0 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");
+const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");
 
 export default function useSimpleGuildSize(size) {
   size = size.size;
   const style = size.style;
-  let num;
   let memo;
-  num = 48;
+  let num = 48;
   if (null != size) {
     num = size;
   }

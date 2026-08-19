@@ -1,12 +1,12 @@
 // discord_app/modules/app_database/modules/messages/SaveableChannelsStore.tsx
 import clearAllDefault from "../../../../stores/MobileCacheSnapshotStore.tsx";
-import closure_2 from "../../../../stores/ChannelStore.tsx";
-import closure_3 from "../../../../stores/GuildMemberCountStore.tsx";
-import closure_4 from "../../../../stores/SelectedChannelStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import handleInviteData from "../../../../stores/GuildMemberCountStore.tsx";
+import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
 import closure_5 from "../../stores/FileSystemStore.tsx";
 import bound from "../../../../../_runtime/metro/00025___INTERNAL_VIEW_CONFIG.js";
 
-let prototype = arg1;
+let prototype = fn;
 function handleSelectedChannelStoreChanged() {
   const channelId = store2.getChannelId();
   if (null != channelId) {
@@ -30,13 +30,14 @@ function handleChannelUpdate(id) {
   if (!isReadableChannelResult) {
     SaveableChannelsStore.deleteChannel(id);
   }
+  const obj = prototype(5075);
 }
 function handleChannelUpdates(arg0) {
   while (tmp !== undefined) {
-    let tmp3 = handleChannelUpdate;
     let tmp4 = handleChannelUpdate(tmp2);
     continue;
   }
+  tmp = arg0.channels[Symbol.iterator]();
 }
 function handleChannelDelete(channel) {
   SaveableChannelsStore.deleteChannel(channel.channel.id);
@@ -55,6 +56,7 @@ function handleThreadUpdate(channel) {
   if (!isReadableChannelResult) {
     SaveableChannelsStore.deleteChannel(id);
   }
+  const obj = prototype(5075);
 }
 function handleThreadDelete(channel) {
   SaveableChannelsStore.deleteChannel(channel.channel.id);
@@ -137,14 +139,14 @@ prototype["saveLimit"] = function saveLimit(channelId) {
     }
     let num = num3;
   } else {
+    prototype(5074);
     num = 25;
-    const obj = prototype(5074);
   }
   return num;
 };
 prototype["getSaveableChannels"] = function getSaveableChannels() {
   const channelIds = store.getChannelIds(null);
-  const mapped = channelIds.map((channelId) => ({ guildId: null, channelId }));
+  const mapped = channelIds.map((item, index) => ({ guildId: null, channelId: item }));
   if (isLowDisk.isLowDisk) {
     let tmp9 = mapped;
     if (null != c6) {
@@ -161,8 +163,7 @@ prototype["getSaveableChannels"] = function getSaveableChannels() {
   return items1;
 };
 prototype["takeSnapshot"] = function takeSnapshot() {
-  let obj = { version: SaveableChannelsStore.LATEST_SNAPSHOT_VERSION, data: null };
-  obj = { channels: items.filter((fallback) => !fallback.fallback), penalized: [...lru.keys()], lastChannel: c6 };
+  const obj = { channels: items.filter((item, index) => !item.fallback), penalized: [...lru.keys()], lastChannel: c6 };
   items = [...extendedMemoryLru.allValues()];
   obj[1] = obj;
   return obj;
@@ -175,14 +176,9 @@ SaveableChannelsStore["mergeSnapshot"] = function mergeSnapshot(snapshot) {
   }
   const items = [snapshot.channels, extendedMemoryLru.values()];
   for (const item10036 of items) {
-    let tmp3 = item10036;
-    let tmp4 = item10036;
     for (const item10041 of item10036) {
-      let tmp5 = item10041;
       if (!item10041.fallback) {
-        let tmp6 = extendedMemoryLru;
-        let tmp7 = item10041;
-        let putResult = extendedMemoryLru.put(tmp5.channelId, tmp5);
+        let putResult = extendedMemoryLru.put(item10041.channelId, item10041);
       }
       continue;
     }
@@ -190,10 +186,7 @@ SaveableChannelsStore["mergeSnapshot"] = function mergeSnapshot(snapshot) {
   }
   const items1 = [snapshot.penalized, lru.keys()];
   for (const item10059 of items1) {
-    let tmp9 = item10059;
-    let tmp10 = item10059;
     for (const item10064 of item10059) {
-      let tmp11 = lru;
       let putResult1 = lru.put(item10064, null);
       continue;
     }
@@ -218,10 +211,9 @@ SaveableChannelsStore["recordChannel"] = function recordChannel(id) {
           extendedMemoryLru.delete(id);
         }
       }
-      tmp8Result = tmp8(5076);
+      tmp8Result = prototype(5076);
     }
     obj3 = prototype(5075);
-    tmp8 = prototype;
   }
 };
 SaveableChannelsStore["deleteChannel"] = function deleteChannel(arg0) {
@@ -230,26 +222,19 @@ SaveableChannelsStore["deleteChannel"] = function deleteChannel(arg0) {
 SaveableChannelsStore["deleteGuild"] = function deleteGuild(arg0) {
   for (const item10009 of allValuesResult) {
     if (item10009.guildId === arg0) {
-      let tmp3 = extendedMemoryLru;
-      let tmp4 = item10009;
       let deleteResult = extendedMemoryLru.delete(tmp2.channelId);
     }
     continue;
   }
+  const allValuesResult = extendedMemoryLru.allValues();
 };
 SaveableChannelsStore["dropUnreachableChannels"] = function dropUnreachableChannels() {
   const keys = extendedMemoryLru.keys();
   for (const item10008 of keys) {
-    let tmp3 = store;
-    let tmp2 = item10008;
-    let tmp5 = prototype;
-    let tmp6 = dependencyMap;
     let basicChannel = store.getBasicChannel(item10008);
     let obj = prototype(5075);
     if (!obj.isReadableChannel(basicChannel)) {
-      let tmp7 = SaveableChannelsStore;
-      let tmp8 = item10008;
-      let deleteChannelResult = SaveableChannelsStore.deleteChannel(tmp2);
+      let deleteChannelResult = SaveableChannelsStore.deleteChannel(item10008);
     }
     continue;
   }
@@ -257,19 +242,13 @@ SaveableChannelsStore["dropUnreachableChannels"] = function dropUnreachableChann
 SaveableChannelsStore["deleteUnreadableGuildChannels"] = function deleteUnreadableGuildChannels(arg0) {
   const values = extendedMemoryLru.values();
   for (const item10009 of values) {
-    let tmp2 = item10009;
     let isReadableChannelIdResult = arg0 !== item10009.guildId;
     if (!isReadableChannelIdResult) {
-      let tmp4 = prototype;
-      let tmp5 = dependencyMap;
       let obj = prototype(5075);
-      let tmp6 = item10009;
-      isReadableChannelIdResult = obj.isReadableChannelId(tmp2.channelId);
+      isReadableChannelIdResult = obj.isReadableChannelId(item10009.channelId);
     }
     if (!isReadableChannelIdResult) {
-      let tmp7 = SaveableChannelsStore;
-      let tmp8 = item10009;
-      let deleteChannelResult = SaveableChannelsStore.deleteChannel(tmp2.channelId);
+      let deleteChannelResult = SaveableChannelsStore.deleteChannel(item10009.channelId);
     }
     continue;
   }
@@ -296,7 +275,7 @@ obj[7] = handleThreadDelete;
 obj[8] = handleThreadUpdate;
 prototype = new prototype(obj, 500, tmp, Object, CACHE_LOADED_LAZY, handleChannelDelete, handleChannelUpdates, handleConnectionOpenSupplemental, handleGuildDelete, handleLoginSuccess, handleThreadDelete, SaveableChannelsStore, prototype, new.target);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("modules/app_database/modules/messages/SaveableChannelsStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_database/modules/messages/SaveableChannelsStore.tsx");
 
 export default prototype;
 export const MAXIMUM_MESSAGES_PER_CHANNEL_DM = 25;

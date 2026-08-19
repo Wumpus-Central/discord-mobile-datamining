@@ -2,14 +2,14 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import _fetchWebAuthnConditionalChallenge from "../../../webauthn/WebAuthnActionCreators.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../webauthn/WebAuthnStore.tsx";
-import closure_5 from "../../../../stores/UserStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import hasFetchedCredentials from "../../../webauthn/WebAuthnStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { UserSettingsWebAuthn } from "../../../webauthn/native/UserSettingsWebAuthn.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.y7SXYX);
@@ -26,8 +26,8 @@ createToggle = {
         flag = false;
       }
       if (!flag) {
-        let obj = callback2(4827);
-        obj = { title: null, body: null };
+        callback2(4827);
+        const obj = { title: null, body: null };
         const intl = callback(1236).intl;
         obj[0] = intl.string(callback(1236).t.v740sh);
         const intl2 = callback(1236).intl;
@@ -40,7 +40,6 @@ createToggle = {
   useTrailing: function useAccountSecurityKeysSettingTrailing() {
     if (!closure_4.hasFetchedCredentials()) {
       const webAuthnCredentials = _fetchWebAuthnConditionalChallenge.fetchWebAuthnCredentials();
-      const obj = _fetchWebAuthnConditionalChallenge;
     }
     const items = [closure_4];
     return initialize.useStateFromStores(items, () => {
@@ -54,10 +53,10 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.WEBAUTHN_VIEW,
   getComponent() {
-    return UserSettingsWebAuthn.default;
+    return UserSettingsWebAuthn /* UserSettingsWebAuthn */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
 
 export default createToggle;

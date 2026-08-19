@@ -1,6 +1,7 @@
 // discord_app/modules/report_to_mod/ReportToModChannelStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import keys from "../../../_runtime/00644_keys.js";
+import "createJSONStorage";
 import createJSONStorage from "../../../_runtime/04242_createJSONStorage.js";
 import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 
@@ -14,9 +15,8 @@ obj = keys.create(createJSONStorage.persist((arg0, arg1) => {
     setShowResolvedFlags(arg0, arg1) {
       const callback = arg0;
       closure_1 = arg1;
-      return callback(closure_1_2[2]).batchUpdates(() => {
+      return callback(dependencyMap[2]).batchUpdates(() => {
         callback((channelShowResolvedFlags) => {
-          obj = { channelShowResolvedFlags: null };
           obj = {};
           const merged = Object.assign(channelShowResolvedFlags.channelShowResolvedFlags);
           obj[closure_0] = closure_1;
@@ -34,7 +34,7 @@ obj = keys.create(createJSONStorage.persist((arg0, arg1) => {
     }
   };
 }, obj));
-const result = set.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
+const result = obj132.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
 
 export const useReportToModChannelFiltersStore = obj;
 export const useShouldShowResolvedFlagsForChannel = function useShouldShowResolvedFlagsForChannel(arg0) {

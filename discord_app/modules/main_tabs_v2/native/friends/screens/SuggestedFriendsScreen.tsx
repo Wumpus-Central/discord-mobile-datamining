@@ -1,27 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { emptyContainer: null, container: null };
-createCacheKey = { flex: 1, paddingTop: ThemesDefault.space.PX_32 };
+const createCacheKey = { flex: 1, paddingTop: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx");
 
 export default function SuggestedFriendsScreen() {
   const tmp = callback2();
   const analyticsLocations = added(setAdded[6])(added(setAdded[7]).SUGGESTED_FRIENDS).analyticsLocations;
   const effect = friendSuggestions.useEffect(() => {
-    let obj = added(setAdded[8]);
-    obj = { friend_add_type: constants2.FRIENDS_SUGGESTED_FRIENDS_MODAL };
+    added(setAdded[8]);
+    const obj = { friend_add_type: constants2.FRIENDS_SUGGESTED_FRIENDS_MODAL };
     obj.track(constants.FRIEND_ADD_VIEWED, obj);
   }, []);
   const tmp6 = added(setAdded[9])();
@@ -63,7 +62,7 @@ export default function SuggestedFriendsScreen() {
           suggestedFriend: closure_1,
           start: 0 === closure_0,
           end: closure_2,
-          onPress: closure_1_4,
+          onPress: callback,
           onAddSuggestion() {
             return closure_1_2((arg0) => {
               const items = [];
@@ -79,9 +78,8 @@ export default function SuggestedFriendsScreen() {
   callback2 = friendSuggestions.useCallback(() => {
 
   }, []);
-  let obj = { value: analyticsLocations, children: null };
   const items2 = [callback(added(setAdded[12]), { absolute: true }), ];
-  obj = { style: tmp.container, children: null };
+  let obj = { style: tmp.container, children: null };
   if (0 !== friendSuggestions.length) {
     obj = { sections: null, getItemProps: null, getSectionProps: null, insetStart: 8 };
     const items3 = [friendSuggestions.length];
@@ -102,5 +100,5 @@ export default function SuggestedFriendsScreen() {
   obj[1] = tmp12Result;
   items2[1] = callback(callback, obj);
   obj[1] = items2;
-  return closure_8(analyticsLocations(setAdded[6]).AnalyticsLocationProvider, obj);
+  return callback(analyticsLocations(setAdded[6]).AnalyticsLocationProvider, obj);
 };

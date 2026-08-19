@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
 
 export default function formatUsernameOnClick(arg0) {
   ({ userId, message, author, roleStyle, messageChannelId } = arg0);

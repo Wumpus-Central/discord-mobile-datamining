@@ -1,23 +1,19 @@
 // discord_app/utils/ExperimentUtils.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
 import trackExposureToExperiment from "../modules/experiments/ExperimentManager.tsx";
-import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../modules/experiments/ExperimentStore.tsx";
+import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
+import getHash from "../modules/experiments/ExperimentStore.tsx";
 import ExperimentBuckets from "../modules/experiments/ExperimentConstants.tsx";
 
-require = arg1;
+require = fn;
 function getFirstEligibleUserExperiment(arg0) {
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = authStore;
     let tmp2 = nextResult;
     let userExperimentDescriptor = authStore.getUserExperimentDescriptor(nextResult);
-    let tmp5 = userExperimentDescriptor;
     if (null != userExperimentDescriptor) {
-      let tmp6 = nextResult;
       let items = [tmp2, userExperimentDescriptor];
-      let tmp7 = iter;
       iter.return();
       return items;
     }
@@ -25,7 +21,7 @@ function getFirstEligibleUserExperiment(arg0) {
   return null;
 }
 ({ ExperimentTypes: c5, ExperimentBuckets: closure_6 } = ExperimentBuckets);
-let result = require("set").fileFinishedImporting("utils/ExperimentUtils.tsx");
+let result = require("obj132").fileFinishedImporting("utils/ExperimentUtils.tsx");
 
 export default {
   getFirstEligibleUserExperiment,
@@ -92,21 +88,20 @@ export default {
   getRecentExperimentBuckets(arg0, arg1) {
     closure_0 = arg1;
     const entries = Object.entries(arg0);
-    return entries.reduce((arg0, arg1) => {
-      [tmp, tmp2] = arg1;
+    return entries.reduce((acc, item, index) => {
+      [tmp, tmp2] = item;
       let tmp3 = (function isRecentExperiment(str, closure_0) {
         try {
-          [tmp4, tmp5] = callback(str.split("-"), 2);
+          [tmp4, tmp5] = callback("-".split("-"), 2);
           if (null == tmp5) {
             return false;
           } else {
             const _Date = Date;
             const _HermesInternal = HermesInternal;
-            const date = new Date("" + tmp4 + "-" + arr.slice(0, 2) + "-01");
+            const date = new Date("" + tmp4 + "-" + tmp5.slice(0, 2) + "-01");
             return date > closure_0;
           }
-          arr = tmp5;
-          const tmp3 = callback(str.split("-"), 2);
+          const tmp3 = callback("-".split("-"), 2);
         } catch (err) {
           return false;
         }
@@ -115,9 +110,9 @@ export default {
         tmp3 = tmp2 > closure_1_6.CONTROL;
       }
       if (tmp3) {
-        arg0[tmp] = tmp2;
+        acc[tmp] = tmp2;
       }
-      return arg0;
+      return acc;
     }, {});
   }
 };

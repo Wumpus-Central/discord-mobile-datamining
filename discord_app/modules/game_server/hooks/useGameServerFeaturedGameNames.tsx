@@ -1,10 +1,10 @@
 // discord_app/modules/game_server/hooks/useGameServerFeaturedGameNames.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import importDefaultResult1 from "../../games/hooks/useGame.tsx";
 import str11 from "../GameServerConstants.tsx";
 
 ({ MINECRAFT_GAME_ID: obj1, HYTALE_GAME_ID: c3 } = str11);
-const result = set.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
+const result = obj132.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
 
 export default function useGameServerFeaturedGameNames() {
   let obj = importDefaultResult1;

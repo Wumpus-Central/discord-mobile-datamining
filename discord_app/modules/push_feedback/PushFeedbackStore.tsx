@@ -1,5 +1,5 @@
 // discord_app/modules/push_feedback/PushFeedbackStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import str2 from "../push_notifications/PushNotificationConstants.tsx";
@@ -110,6 +110,6 @@ const pushFeedbackStore = new PushFeedbackStore(dispatcherDefault, {
     return false;
   }
 });
-const result = set.fileFinishedImporting("modules/push_feedback/PushFeedbackStore.tsx");
+const result = obj132.fileFinishedImporting("modules/push_feedback/PushFeedbackStore.tsx");
 
 export default pushFeedbackStore;

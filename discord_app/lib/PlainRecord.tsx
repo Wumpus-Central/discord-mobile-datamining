@@ -6,47 +6,45 @@ import areSetsEqual from "../../discord_common/js/shared/utils/SetUtils.tsx";
 import { TypeTag } from "../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
 import importDefaultResult from "../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
 
-require = arg1;
-function isValueEqual(items, current) {
-  if (null != items) {
-    if (null != current) {
-      let tmp11 = items === current;
+require = fn;
+function isValueEqual(getTime, getTime2) {
+  if (null != getTime) {
+    if (null != getTime2) {
+      let tmp11 = getTime === getTime2;
       if (!tmp11) {
         const _Date = Date;
-        if (!(items instanceof Date)) {
+        if (!(getTime instanceof Date)) {
           const _Set = Set;
-          if (items instanceof Set) {
+          if (getTime instanceof Set) {
             const _Set2 = Set;
-            if (current instanceof Set) {
-              let areSetsEqualResult = areSetsEqual.areSetsEqual(items, current);
-              const obj2 = areSetsEqual;
+            if (getTime2 instanceof Set) {
+              let areSetsEqualResult = areSetsEqual.areSetsEqual(getTime, getTime2);
             }
           }
           const _Array = Array;
-          if (Array.isArray(items)) {
+          if (Array.isArray(getTime)) {
             const _Array2 = Array;
-            if (Array.isArray(current)) {
-              areSetsEqualResult = shallowEqual.areArraysShallowEqual(items, current);
-              const obj = shallowEqual;
+            if (Array.isArray(getTime2)) {
+              areSetsEqualResult = shallowEqual.areArraysShallowEqual(getTime, getTime2);
             }
           }
-          areSetsEqualResult = typeof items === "object";
-          if (typeof items === "object") {
-            areSetsEqualResult = typeof current === "object";
+          areSetsEqualResult = typeof getTime === "object";
+          if (typeof getTime === "object") {
+            areSetsEqualResult = typeof getTime2 === "object";
           }
           if (areSetsEqualResult) {
-            areSetsEqualResult = shallowEqualDefault(items, current);
+            areSetsEqualResult = shallowEqualDefault(getTime, getTime2);
           }
         } else {
           const _Date2 = Date;
         }
-        const time = items.getTime();
-        areSetsEqualResult = time === current.getTime();
+        const time = getTime.getTime();
+        areSetsEqualResult = time === getTime2.getTime();
       }
     }
     return tmp11;
   }
-  tmp11 = items === current;
+  tmp11 = getTime === getTime2;
 }
 function isPlainRecordDataEqual(arg0, arg1) {
   if (arg0 === arg1) {
@@ -55,11 +53,9 @@ function isPlainRecordDataEqual(arg0, arg1) {
     const _Object = Object;
     const keys = Object.keys(arg0);
     for (const item10010 of keys) {
-      let tmp5 = isValueEqual;
       if (isValueEqual(arg0[item10010], arg1[item10010])) {
         continue;
       } else {
-        let tmp6 = obj;
         obj.return();
         let flag = false;
         return false;
@@ -68,16 +64,16 @@ function isPlainRecordDataEqual(arg0, arg1) {
     return true;
   }
 }
-const result = require("set").fileFinishedImporting("lib/PlainRecord.tsx");
+const result = require("obj132").fileFinishedImporting("lib/PlainRecord.tsx");
 
 export default importDefaultResult;
 export { TypeTag };
-export const set = function set(arg0, arg1, current) {
+export const set = function set(arg0, arg1, getTime2) {
   let tmp = arg0;
-  if (!isValueEqual(arg0[arg1], current)) {
+  if (!isValueEqual(arg0[arg1], getTime2)) {
     const obj = {};
     const merged = Object.assign(arg0);
-    obj[arg1] = current;
+    obj[arg1] = getTime2;
     tmp = obj;
   }
   return tmp;
@@ -91,11 +87,9 @@ export const merge = function merge(arg0, arg1) {
     let tmp6 = tmp3;
     tmp4 = tmp3;
     while (keys[tmp] !== undefined) {
-      let tmp13 = tmp7;
       let tmp15 = arg1[tmp7];
       let tmp9 = undefined === tmp15;
       if (!tmp9) {
-        let tmp8 = isValueEqual;
         tmp9 = isValueEqual(tmp14, tmp15);
       }
       tmp3 = tmp6;
@@ -104,8 +98,6 @@ export const merge = function merge(arg0, arg1) {
       } else {
         if (null == tmp6) {
           let obj = {};
-          let tmp10 = obj;
-          let tmp11 = tmp2;
           let merged = Object.assign(tmp2);
           obj[tmp7] = tmp15;
           tmp6 = obj;
@@ -143,7 +135,6 @@ export const objectIsPlainRecordOfType = function objectIsPlainRecordOfType(arg0
   }
   if (tmp) {
     tmp = (TypeTag in obj && obj[TypeTag]) === arg0;
-    const tmp2 = TypeTag in obj && obj[TypeTag];
   }
   return tmp;
 };

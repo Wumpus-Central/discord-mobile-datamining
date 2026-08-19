@@ -1,5 +1,5 @@
 // discord_app/modules/location_metadata/stores/LocationMetadataStore.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import DEFAULT_COUNTRY_CODE_NAME from "../../i18n/CountryCodeUtils.tsx";
@@ -24,6 +24,6 @@ LocationMetadataStore.prototype["getCountryCode"] = function getCountryCode() {
 };
 LocationMetadataStore.displayName = "LocationMetadataStore";
 const locationMetadataStore = new LocationMetadataStore(dispatcherDefault, { CONNECTION_OPEN: handleSetLocationMetadata, SET_LOCATION_METADATA: handleSetLocationMetadata });
-const result = set.fileFinishedImporting("modules/location_metadata/stores/LocationMetadataStore.tsx");
+const result = obj132.fileFinishedImporting("modules/location_metadata/stores/LocationMetadataStore.tsx");
 
 export default locationMetadataStore;

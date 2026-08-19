@@ -1,12 +1,12 @@
 // discord_app/modules/activities/utils/isVoiceEmbeddedActivity.tsx
 import set from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import closure_2 from "../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../stores/SelectedChannelStore.tsx";
-import closure_5 from "../../../stores/VoiceStateStore.tsx";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import handleConnectionOpen from "../../../stores/SelectedChannelStore.tsx";
+import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");
 
 export default function isVoiceEmbeddedActivity(arg0) {
   let obj = arg1;

@@ -2,14 +2,14 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import _generateAnimationSource from "BurstReactionEffectUtils.tsx";
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_5 = createCacheKey.createStyles({ content: { width: "100%" } });
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
 
 export default function BurstReactionAnimation(arg0) {
   ({ onComplete, withFadeOut } = arg0);

@@ -4,36 +4,31 @@ import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../Constants.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ EMPTY_STRING_SNOWFLAKE_ID: c4, MAX_VISUAL_ROLE_LENGTH: c5 } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, pill: null, bubble: null, verifiedContainer: null, roleIcon: null };
-createCacheKey = { marginRight: 4, marginBottom: 4, borderRadius: ThemesDefault.radii.xs };
+const createCacheKey = { marginRight: 4, marginBottom: 4, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj1 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[2] = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12, backgroundColor: ThemesDefault.colors.ICON_MUTED };
-let obj2 = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12, backgroundColor: ThemesDefault.colors.ICON_MUTED };
 createCacheKey[3] = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12 };
 createCacheKey[4] = { paddingRight: 4 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12 };
-const result = require("set").fileFinishedImporting("components_native/common/RolePill.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/RolePill.tsx");
 
 export default function RolePill(role) {
   role = role.role;
   ({ guildId, color } = role);
-  let combined;
   const DeveloperMode = role(4066).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = role(7163);
-  obj = { guildId, roleId: role.id, size: 12 };
+  role(7163);
+  let obj = { guildId, roleId: role.id, size: 12 };
   const roleIcon = obj.useRoleIcon(obj);
   let name = role.name;
-  combined = name;
+  let combined = name;
   if (role.name.length > closure_5) {
     name = role.name;
     const _HermesInternal = HermesInternal;
@@ -57,9 +52,9 @@ export default function RolePill(role) {
     disabled: disableInteraction,
     style: tmp9.container,
     onPress: function handlePress() {
-      role(closure_1_2[8]).copy(role.id);
-      const obj = role(closure_1_2[8]);
-      role(closure_1_2[9]).roleIdCopied(combined);
+      role(dependencyMap[8]).copy(role.id);
+      const obj = role(dependencyMap[8]);
+      role(dependencyMap[9]).roleIdCopied(combined);
     },
     accessible: false,
     children: null
@@ -74,7 +69,7 @@ export default function RolePill(role) {
     }
     obj2[2] = guildId;
     obj2[3] = color;
-    let tmp10Result = tmp10(combined(7182), obj2);
+    let tmp10Result = callback(combined(7182), obj2);
     const tmp15 = combined(7182);
   } else {
     const items = [tmp9.bubble, ];
@@ -88,7 +83,7 @@ export default function RolePill(role) {
     const obj5 = { style: null };
     items[1] = obj4;
     obj5[0] = items;
-    tmp10Result = tmp10(tmp12, obj5);
+    tmp10Result = callback(View, obj5);
   }
   const items1 = [tmp10Result, , ];
   tmp10Result = null;
@@ -96,11 +91,11 @@ export default function RolePill(role) {
     const obj6 = { style: null, children: null };
     obj6[0] = tmp9.roleIcon;
     obj6[1] = roleIcon;
-    tmp10Result = tmp10(tmp12, obj6);
+    tmp10Result = callback(View, obj6);
   }
   items1[1] = tmp10Result;
-  items1[2] = closure_6(role(4734).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
+  items1[2] = callback(role(4734).Text, { variant: "text-xs/semibold", color: "interactive-text-active", children: name });
   obj1[1] = items1;
-  obj[4] = closure_7(View, obj1);
-  return closure_6(role(5433).PressableHighlight, obj);
+  obj[4] = callback2(View, obj1);
+  return callback(role(5433).PressableHighlight, obj);
 };

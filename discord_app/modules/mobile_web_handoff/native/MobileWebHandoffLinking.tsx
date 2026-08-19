@@ -1,40 +1,41 @@
 // discord_app/modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
+import extractId from "../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
+import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
+import showSimpleLoadingModal from "SimpleLoadingModal.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
 import ME from "../../../Constants.tsx";
 
-const require = arg1;
+require = fn;
 function createHandoffTokenWithLoadingModal(arg0) {
   ({ nonce: require, fingerprint: importDefault, handoffSource: dependencyMap } = arg0);
-  return new Promise((arg0) => {
-    closure_0 = arg0;
-    let obj = closure_1_1(closure_1_2[3]);
+  return new Promise((fn) => {
+    closure_0 = fn;
+    let obj = _modDef5260;
     obj.popWithKey(closure_1_8);
     if (closure_1_4.isAuthenticated()) {
       obj = { operation: null, onResolved: null, onRejected: null };
-      obj[0] = function operation(arg0) {
+      obj[0] = function operation(onResolved) {
         return closure_1_1(closure_1_2[5]).createHandoffToken(closure_0);
       };
-      obj[1] = arg0;
-      obj[2] = function onRejected(arg0) {
-        let obj = closure_2_1(closure_2_2[6]);
-        obj = { reason: "handoff_token_fetch_failure", fingerprint: closure_2_0(closure_2_2[7]).maybeExtractId(closure_1_1), handoff_source: closure_1_2 };
-        obj = { fingerprint: closure_1_1 };
+      obj[1] = fn;
+      obj[2] = function onRejected(_55) {
+        { reason: "handoff_token_fetch_failure", fingerprint: extractId.maybeExtractId(closure_1_1), handoff_source: closure_1_2 };
+        const obj = { fingerprint: closure_1_1 };
         obj.track(closure_2_5.MOBILE_WEB_HANDOFF_FAILURE, obj, obj);
         callback("null");
       };
-      const result = closure_1_0(tmp2[4]).showSimpleLoadingModal(closure_1_8, obj);
-      const obj6 = closure_1_0(tmp2[4]);
+      const result = showSimpleLoadingModal.showSimpleLoadingModal(closure_1_8, obj);
     } else {
       obj = { reason: "user_not_authenticated_in_app", fingerprint: null, handoff_source: null };
-      const tmpResult = closure_1_1(tmp2[6]);
-      obj[1] = closure_1_0(tmp2[7]).maybeExtractId(closure_1);
+      const tmpResult = expandEventPropertiesDefault;
+      obj[1] = extractId.maybeExtractId(closure_1);
       obj[2] = closure_2;
       obj1 = { fingerprint: null };
       obj1[0] = closure_1;
       tmpResult.track(closure_1_5.MOBILE_WEB_HANDOFF_FAILURE, obj, obj1);
-      arg0("null");
-      const obj4 = closure_1_0(tmp2[7]);
+      fn("null");
     }
   });
 }
@@ -286,7 +287,7 @@ function _redirectDeveloperPortalWithHandoffToken() {
 }
 ({ AnalyticEvents: c5, MarketingURLs: closure_6, Routes: error } = ME);
 let c8 = "mweb-handoff";
-let result = require("set").fileFinishedImporting("modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx");
+let result = require("obj132").fileFinishedImporting("modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx");
 
 export default {
   redirectWithHandoffToken(combined, arg1) {

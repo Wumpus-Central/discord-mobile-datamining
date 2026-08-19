@@ -1,35 +1,35 @@
 // discord_app/modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_6 from "../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { isGuildOwner } from "../../records/GuildRecord.tsx";
-import closure_8 from "../../stores/GuildStore.tsx";
-import closure_9 from "../../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { set } from "CreatorMonetizationEligibilityExperimentUtils.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx");
 
 export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(closure_0));
   const tmp2 = isExpeditedOnboardingGuild(React.useState(), 2);
   dependencyMap = tmp2[1];
   [tmp4, closure_4] = isExpeditedOnboardingGuild(React.useState(false), 2);
   let tmp3 = isExpeditedOnboardingGuild(React.useState(false), 2);
-  isExpeditedOnboardingGuild = _set.useIsExpeditedOnboardingGuild(stateFromStores);
+  isExpeditedOnboardingGuild = require("CreatorMonetizationEligibilityExperimentUtils.tsx").useIsExpeditedOnboardingGuild(stateFromStores);
   obj = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
-  let obj2 = _set;
+  let obj2 = set;
   const items1 = [closure_9];
   const items2 = [stateFromStores];
-  obj[0] = _initialize.useStateFromStores(items1, () => {
+  obj[0] = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let tmp3 = null != stateFromStores;
     if (tmp3) {
-      tmp3 = closure_1_7(tmp2, tmp);
+      tmp3 = isGuildOwner(tmp2, tmp);
     }
     return tmp3;
   }, items2);
@@ -73,14 +73,14 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 v0 = 4;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_2(16906).acceptCreatorMonetizationTerms(tmp56, tmp42);
+                obj1[0] = stateFromStores(16906).acceptCreatorMonetizationTerms(closure_1_0, tmp42);
                 return obj1;
               } else {
-                let obj2 = closure_1_2(16906);
+                let obj2 = stateFromStores(16906);
                 v0 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };
-                obj2[0] = obj2.acceptCreatorMonetizationTermsV2(tmp56);
+                obj2[0] = obj2.acceptCreatorMonetizationTermsV2(closure_1_0);
                 return obj2;
               }
             }

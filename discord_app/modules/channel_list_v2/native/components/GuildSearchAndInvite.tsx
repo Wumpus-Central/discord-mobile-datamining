@@ -1,20 +1,20 @@
 // discord_app/modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import setDefault from "../../../../hooks/useStableCallback.tsx";
+import obj132Default from "../../../../hooks/useStableCallback.tsx";
 import useEventsButtonPropsDefault from "../../../guild_scheduled_events/native/hooks/useEventsButtonProps.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../../stores/GuildChannelStore.tsx";
-import closure_7 from "../../../../stores/GuildStore.tsx";
-import closure_8 from "../../../../stores/SelectedChannelStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import comparator from "../../../../stores/GuildChannelStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
 import { SEARCH_BAR_MARGIN_BOTTOM } from "../RedesignChannelListConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function handleInviteDisabledPress() {
   const lazyResult = importAllResult.lazy(() => callback(paths[12])(paths[11], paths.paths));
   useAlertStore.openAlert("invites-disabled", callback(lazyResult, {}));
@@ -28,9 +28,6 @@ function GuildSearchAndInvite(guildId) {
   const hasUnreadEvents = guildId.hasUnreadEvents;
   const useEventsButton = guildId.useEventsButton;
   const useButtonComponent = guildId.useButtonComponent;
-  closure_7 = undefined;
-  closure_8 = undefined;
-  closure_9 = undefined;
   let tmp = callback2(useButtonComponent);
   closure_7 = tmp;
   let obj = guildId(invitesDisabled[14]);
@@ -74,7 +71,7 @@ function GuildSearchAndInvite(guildId) {
       const obj = { variant: "secondary", size: "sm", icon: null, onPress: null, onPressDisabled: null, accessibilityLabel: null, disabled: null, maxFontSizeMultiplier: 2 };
       obj[2] = canInvite(invitesDisabled[21]);
       obj[3] = onInvitePress;
-      obj[4] = closure_1_15;
+      obj[4] = handleInviteDisabledPress;
       const intl = guildId(invitesDisabled[22]).intl;
       obj[5] = intl.string(guildId(invitesDisabled[22]).t.VINpSK);
       obj[6] = invitesDisabled;
@@ -89,7 +86,7 @@ function GuildSearchAndInvite(guildId) {
     obj[5] = tmp5;
     let intl2 = tmp2(tmp3[22]).intl;
     obj[6] = intl2.string(tmp2(tmp3[22]).t["5h0QOP"]);
-    const items2 = [tmp11(tmp2(tmp3[24]).Button, obj), memo, tmp8];
+    const items2 = [callback(tmp2(tmp3[24]).Button, obj), memo, tmp8];
     obj[1] = items2;
     let tmp14 = obj;
   } else {
@@ -100,8 +97,8 @@ function GuildSearchAndInvite(guildId) {
     obj2[0] = tmp5;
     obj2[1] = onPressIn;
     obj2[2] = onPressOut;
-    obj1[1] = tmp11(tmp2(tmp3[27]).SearchButtonContent, obj2);
-    const items4 = [tmp11(tmp4(tmp3[26]).View, obj1), ];
+    obj1[1] = callback(tmp2(tmp3[27]).SearchButtonContent, obj2);
+    const items4 = [callback(tmp4(tmp3[26]).View, obj1), ];
     let tmp11Result = null;
     if (canInvite) {
       const obj3 = { variant: "tertiary", icon: null, onPress: null, onPressDisabled: null, accessibilityLabel: null, disabled: null };
@@ -111,13 +108,13 @@ function GuildSearchAndInvite(guildId) {
       let intl = tmp2(tmp3[22]).intl;
       obj3[4] = intl.string(tmp2(tmp3[22]).t.VINpSK);
       obj3[5] = invitesDisabled;
-      tmp11Result = tmp11(tmp2(tmp3[20]).IconButton, obj3);
+      tmp11Result = callback(tmp2(tmp3[20]).IconButton, obj3);
     }
     items4[1] = tmp11Result;
     obj[1] = items4;
     tmp14 = obj;
   }
-  return closure_13(onEventsPress, tmp14);
+  return callback2(onEventsPress, tmp14);
 }
 let c3 = importAllResult;
 ({ GuildFeatures: c10, InstantInviteSources: unpackModuleId } = ME);
@@ -126,11 +123,11 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: SEARCH_BAR_MARGIN_BOTTOM, flexDirection: "row", gap: null };
   let num = 10;
   if (arg0) {
-    num = tmp(712).space.PX_12;
+    num = ThemesDefault.space.PX_12;
   }
   obj = { container: obj, search: { flex: 1 }, badge: null };
   obj[3] = num;
-  obj = { position: "absolute", right: 0, top: 0, width: 8, height: 8, borderRadius: tmp(712).radii.round, backgroundColor: tmp(712).colors.BACKGROUND_BRAND };
+  obj = { position: "absolute", right: 0, top: 0, width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
   obj[2] = obj;
   return obj;
 });
@@ -149,12 +146,12 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
   const items1 = [guild];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const channels = closure_1_6.getChannels(guild.id);
-    return guild(closure_1_2[29]).shouldRenderInvite(channels, guild);
+    return guild(dependencyMap[29]).shouldRenderInvite(channels, guild);
   }, items1);
-  const tmp2 = setDefault(() => {
+  const tmp2 = obj132Default(() => {
     const channelId = closure_1_8.getChannelId(guild.id);
     const channels = closure_1_6.getChannels(guild.id);
-    const result = guild(closure_1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, closure_1_11.GUILD_HEADER);
+    const result = guild(dependencyMap[30]).handleOpenInviteActionsheet(guild, channelId, channels, closure_1_11.GUILD_HEADER);
   });
   const shouldShowInvitesDisabledNotif = guild(11545).useShouldShowInvitesDisabledNotif(guild);
   const obj2 = guild(11545);
@@ -165,8 +162,8 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
   }
   obj[7] = flag2;
   obj[8] = flag;
-  return closure_12(GuildSearchAndInvite, obj);
+  return callback(GuildSearchAndInvite, obj);
 });
-let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx");
+let result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx");
 
 export default memoResult;

@@ -1,14 +1,16 @@
 // discord_app/utils/native/ImageUtils.tsx
+import applyDefault from "../../../_runtime/00012_apply.js";
 import getAvatarURL from "../AvatarUtils.tsx";
 import ensureAvatarSource from "AvatarUtils.tsx";
 import items2 from "../../modules/image_upload/AttachmentImageLadder.tsx";
 import parseDefault from "../../../_runtime/01484_parse.js";
 import useWindowDimensions from "../../modules/screen/useWindowDimensions.native.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
+import getDevicePixelRatioDefault from "../getDevicePixelRatio.native.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function getSrcWithWidthAndHeight(animated) {
   ({ src, sourceWidth, sourceHeight, targetWidth, targetHeight, format } = animated);
   if (format === undefined) {
@@ -29,10 +31,10 @@ function getSrcWithWidthAndHeight(animated) {
     tmp6.format = format;
   }
   if (targetWidth > closure_6) {
-    targetWidth = tmp8;
+    targetWidth = closure_6;
   }
   if (targetHeight > closure_6) {
-    targetHeight = tmp8;
+    targetHeight = closure_6;
   }
   if (targetWidth !== sourceWidth) {
     const tmp9 = (function getAttachmentLadderConfig(arg0) {
@@ -59,9 +61,8 @@ function getSrcWithWidthAndHeight(animated) {
       obj[2] = sourceWidth;
       obj[3] = sourceHeight;
       const obj2 = items2;
-      obj[4] = items2.getSnapDownMaxUpscale(tmp9, tmp2(1896)());
+      obj[4] = items2.getSnapDownMaxUpscale(tmp9, getDevicePixelRatioDefault());
       size = obj2.snapAttachmentDimensions(obj);
-      const obj4 = items2;
     }
     if (!tmp12) {
       tmp6.width = size.width | 0;
@@ -72,10 +73,10 @@ function getSrcWithWidthAndHeight(animated) {
   if (flag) {
     tmp6.animated = true;
   }
-  let tmp2Result = tmp2(12);
+  let tmp2Result = applyDefault;
   let text = tmp5;
   if (!tmp2Result.isEmpty(tmp6)) {
-    tmp2Result = tmp2(1484);
+    tmp2Result = parseDefault;
     text = `${tmp5}?${obj6.stringify(tmp6)}`;
   }
   return text;
@@ -114,7 +115,7 @@ const tmp3 = /\.(gif)$/i;
 const re7 = tmp3;
 const tmp4 = /\.(avif)$/i;
 const re8 = tmp4;
-let result = require("set").fileFinishedImporting("utils/native/ImageUtils.tsx");
+let result = require("obj132").fileFinishedImporting("utils/native/ImageUtils.tsx");
 
 export default { getMobileOptimizedSrc, getPaletteForAvatarMobile };
 export const GIF_RE = tmp3;

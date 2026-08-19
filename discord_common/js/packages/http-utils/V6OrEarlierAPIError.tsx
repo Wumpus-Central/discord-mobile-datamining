@@ -1,7 +1,7 @@
 // discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
 class APIError {
   constructor(arg0, arg1) {
     str = importDefault;

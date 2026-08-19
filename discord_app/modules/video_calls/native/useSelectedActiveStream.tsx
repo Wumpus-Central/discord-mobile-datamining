@@ -1,15 +1,14 @@
 // discord_app/modules/video_calls/native/useSelectedActiveStream.tsx
-import closure_2 from "../../calls/ChannelRTCStore.tsx";
-import closure_3 from "../../../stores/ApplicationStreamingStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import getParticipants from "../../calls/ChannelRTCStore.tsx";
+import reset from "../../../stores/ApplicationStreamingStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
 
 export default function useSelectedActiveStream(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const selectedParticipantId = closure_1_2.getSelectedParticipantId(id.id);
     let activeStreamForStreamKey = null;
     if (null != selectedParticipantId) {

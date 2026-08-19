@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/records/ShopAssetConfigRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 let AssetDisplayConfigRecord;
 class AssetDisplayConfigRecord {
@@ -47,6 +47,6 @@ prototype["toMobileStyles"] = function toMobileStyles() {
   }
   return tmp;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/ShopAssetConfigRecord.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/records/ShopAssetConfigRecord.tsx");
 
 export { AssetDisplayConfigRecord };

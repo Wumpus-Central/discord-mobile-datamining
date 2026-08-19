@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/premium/native/utils/usePremiumFeatures.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import GuildFeatures from "../../../../premium/PremiumConstants.tsx";
 import { TOTAL_PREMIUM_GROUP_USERS } from "../../../../premium/premium_group/PremiumGroupConstants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: c4, PremiumTypes: c5 } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/utils/usePremiumFeatures.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/utils/usePremiumFeatures.tsx");
 
 export default function usePremiumFeatures(arg0) {
   const _require = arg0;
@@ -19,9 +19,9 @@ export default function usePremiumFeatures(arg0) {
   }
   let items = [arg0, flag, UNSPECIFIED];
   return React.useMemo(() => {
-    let obj = { IconComponent: callback(UNSPECIFIED[4]).FriendsIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
+    { IconComponent: callback(UNSPECIFIED[4]).FriendsIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
     const intl = callback(UNSPECIFIED[5]).intl;
-    obj = { totalSeats: closure_1_6 };
+    let obj = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
     obj[1] = intl.formatToPlainString(flag(UNSPECIFIED[6]).gsE005, obj);
     const items = [closure_1_5.TIER_2];
     obj[2] = new Set(items);
@@ -91,7 +91,6 @@ export default function usePremiumFeatures(arg0) {
     const intl8 = callback(UNSPECIFIED[5]).intl;
     obj7[1] = intl8.formatToPlainString(flag(UNSPECIFIED[6]).HVCRVf, { numBoosts: closure_1_4 });
     const items15 = [closure_1_5.TIER_2];
-    const obj8 = { numBoosts: closure_1_4 };
     const set6 = new Set(items13);
     obj7[2] = new Set(items15);
     const items16 = [callback(UNSPECIFIED[3]).PremiumSubscriptionGroupRole.PRIMARY];
@@ -101,7 +100,6 @@ export default function usePremiumFeatures(arg0) {
     const intl9 = callback(UNSPECIFIED[5]).intl;
     obj9[1] = intl9.formatToPlainString(callback(UNSPECIFIED[5]).t.DbkNFj, { numBoosts: closure_1_4 });
     const items17 = [closure_1_5.TIER_2];
-    const obj10 = { numBoosts: closure_1_4 };
     const set7 = new Set(items15);
     obj9[2] = new Set(items17);
     const items18 = [callback(UNSPECIFIED[3]).PremiumSubscriptionGroupRole.UNSPECIFIED];
@@ -116,25 +114,25 @@ export default function usePremiumFeatures(arg0) {
     const items20 = [callback(UNSPECIFIED[3]).PremiumSubscriptionGroupRole.UNSPECIFIED, callback(UNSPECIFIED[3]).PremiumSubscriptionGroupRole.PRIMARY, callback(UNSPECIFIED[3]).PremiumSubscriptionGroupRole.MEMBER];
     obj11[3] = items20;
     items2[9] = obj11;
-    const found = items2.filter((premiumTypes) => {
-      premiumTypes = premiumTypes.premiumTypes;
+    const found = items2.filter((item, index) => {
+      const premiumTypes = item.premiumTypes;
       let hasItem = premiumTypes.has(closure_0);
       if (hasItem) {
         let availableOnFractional = !closure_1;
         if (closure_1) {
-          availableOnFractional = premiumTypes.availableOnFractional;
+          availableOnFractional = item.availableOnFractional;
         }
         hasItem = availableOnFractional;
       }
       return hasItem;
     });
-    const found1 = found.filter((premiumGroupRoles) => {
-      premiumGroupRoles = premiumGroupRoles.premiumGroupRoles;
+    const found1 = found.filter((item, index) => {
+      const premiumGroupRoles = item.premiumGroupRoles;
       return premiumGroupRoles.includes(closure_2);
     });
-    return found1.map((arg0) => {
+    return found1.map((item, index) => {
       const obj = {};
-      const merged = Object.assign(arg0);
+      const merged = Object.assign(item);
       obj.color = callback(table[15]).unsafe_rawColors.WHITE;
       return obj;
     });

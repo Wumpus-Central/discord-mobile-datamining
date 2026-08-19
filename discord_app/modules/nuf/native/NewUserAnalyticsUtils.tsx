@@ -1,17 +1,16 @@
 // discord_app/modules/nuf/native/NewUserAnalyticsUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let c3 = 0;
-let result = set.fileFinishedImporting("modules/nuf/native/NewUserAnalyticsUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/nuf/native/NewUserAnalyticsUtils.tsx");
 
 export const trackNUFStep = function trackNUFStep(STEP_GUILD_TEMPLATE, STEP_FRIEND_LIST, arg2) {
   const timestamp = Date.now();
   const result = (timestamp - timestamp) / 1000;
-  let obj = expandEventPropertiesDefault;
-  obj = {};
+  const obj = {};
   const merged = Object.assign(arg2);
   obj.flow_type = "Mobile NUX Post Reg";
   obj.from_step = STEP_GUILD_TEMPLATE;

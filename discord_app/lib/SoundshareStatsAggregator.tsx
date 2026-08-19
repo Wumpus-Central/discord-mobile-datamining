@@ -1,7 +1,7 @@
 // discord_app/lib/SoundshareStatsAggregator.tsx
-import set2 from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
-const result = set2.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
+const result = obj132.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
 class SoundshareStatsAggregator {
   constructor() {
     obj = Object.create(new.target.prototype);

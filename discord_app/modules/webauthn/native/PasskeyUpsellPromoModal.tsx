@@ -6,14 +6,12 @@ import getScreens from "WebAuthnScreens.tsx";
 import { WebAuthnScreens } from "../WebAuthnConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoModal.tsx");
 
 export default function PasskeyUpsellPromoModal(arg0) {
-  let obj = getScreens;
-  obj = { name: WebAuthnScreens.NAME, params: null };
-  obj = {};
+  const obj = {};
   const screens = obj.getScreens({ isModal: true });
   const merged = Object.assign(arg0);
   const intl = getSystemLocale.intl;

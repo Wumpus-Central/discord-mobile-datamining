@@ -1,14 +1,13 @@
 // discord_app/modules/collectibles/native/WishlistButtonCoachmark.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/WishlistButtonCoachmark.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/WishlistButtonCoachmark.tsx");
 
 export default function WishlistButtonCoachmark(anchorRef) {
   let hasNeverWishlisted;
-  dependencyMap = undefined;
   let callback;
   let registerDismiss;
   hasNeverWishlisted = hasNeverWishlisted(9179).useHasNeverWishlisted();

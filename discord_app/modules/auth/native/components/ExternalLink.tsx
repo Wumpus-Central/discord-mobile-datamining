@@ -1,11 +1,11 @@
 // discord_app/modules/auth/native/components/ExternalLink.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ Linking: c4, ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
@@ -15,13 +15,13 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     str = "space-between";
   }
   container[3] = str;
-  const space = tmp(712).space;
+  const space = ThemesDefault.space;
   container[4] = arg0 ? space.PX_24 : space.PX_16;
-  const space2 = tmp(712).space;
+  const space2 = ThemesDefault.space;
   container[5] = arg0 ? space2.PX_24 : space2.PX_16;
   return { container, description: { textAlign: "center", marginTop: 8 } };
 });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/ExternalLink.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/components/ExternalLink.tsx");
 
 export default function ExternalLink(externalURL) {
   externalURL = externalURL.externalURL;
@@ -38,7 +38,6 @@ export default function ExternalLink(externalURL) {
   const effect = React.useEffect(() => {
     callback();
   }, items1);
-  obj = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: tmp.container, children: null };
   obj = { children: null };
   obj1 = { children: null };
   const intl = externalURL(callback[8]).intl;

@@ -1,40 +1,38 @@
 // discord_app/modules/application_commands/native/ApplicationCommandList.tsx
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { FlatList } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let closure_7 = 3 * require("AUTOCOMPLETE_ROW_HEIGHT").AUTOCOMPLETE_ROW_HEIGHT;
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
 
 export default function ApplicationCommandList(channel) {
   channel = channel.channel;
   const onPressCommandItem = channel.onPressCommandItem;
   const onCommandsChange = channel.onCommandsChange;
   let commands;
-  let sections;
-  let scrollDown;
   ({ style, query, ItemSeparatorComponent, getItemLayout } = channel);
-  let obj = onCommandsChange(commands[4]);
-  obj = { text: query, commandTypes: null };
+  onCommandsChange(commands[4]);
+  let obj = { text: query, commandTypes: null };
   const items = [channel(commands[5]).ApplicationCommandType.CHAT];
   obj[1] = items;
   obj = { placeholderCount: 3, limit: 7, scoreMethod: channel(commands[6]).ScoreMethod.COMMAND_OR_APPLICATION };
   query = obj.useQuery({ channel, type: "channel" }, obj, obj);
   commands = query.commands;
-  sections = query.sections;
-  scrollDown = query.scrollDown;
+  const sections = query.sections;
+  const scrollDown = query.scrollDown;
   const items1 = [sections, channel.guild_id, onPressCommandItem];
   let length;
   const callback = sections.useCallback((item) => {
     item = item.item;
     let found;
     if (item.inputType === channel(commands[7]).ApplicationCommandInputType.PLACEHOLDER) {
-      return closure_1_6(onPressCommandItem(tmp[8]), {});
+      return jsx(onPressCommandItem(commands[8]), {});
     } else {
       found = undefined;
       if (sections != null) {
-        found = sections.find((id) => id.id === item.applicationId);
+        found = sections.find((item, index) => item.id === item.applicationId);
       }
       const obj = { command: null, section: null, onPress: null, guildId: null, highlighted: null };
       obj[0] = item;
@@ -44,7 +42,7 @@ export default function ApplicationCommandList(channel) {
       };
       obj[3] = item.guild_id;
       obj[4] = 0 === item.index;
-      return closure_1_6(onPressCommandItem(tmp[9]), obj);
+      return jsx(onPressCommandItem(commands[9]), { command: null, section: null, onPress: null, guildId: null, highlighted: null });
     }
   }, items1);
   if (commands != null) {

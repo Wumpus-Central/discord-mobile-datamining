@@ -1,12 +1,12 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidActionCreators.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/GuildStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 import { DEFAULT_LOCKDOWN_DURATION } from "GuildAntiRaidConstants.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function _setGuildRaidAlerts() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -47,7 +47,7 @@ function _setGuildRaidAlerts() {
               let saveGuildResult = set;
               let saveGuild = closure_1_8;
               if (set.has(closure_1_8.COMMUNITY)) {
-                if (tmp18) {
+                if (callback) {
                   saveGuildResult.delete(saveGuild.RAID_ALERTS_DISABLED);
                 } else {
                   saveGuildResult.add(saveGuild.RAID_ALERTS_DISABLED);
@@ -59,7 +59,7 @@ function _setGuildRaidAlerts() {
                 c3 = 1;
                 table = 1;
                 const tmp11 = callback(table[6]);
-              } else if (!tmp18) {
+              } else if (!callback) {
                 saveGuildResult.delete(saveGuild.NON_COMMUNITY_RAID_ALERTS);
               }
               saveGuildResult.add(saveGuild.NON_COMMUNITY_RAID_ALERTS);
@@ -104,9 +104,9 @@ function _setGuildIncidentActions() {
     return (function*(arg0, arg1, arg2, arg3) {
       let tmp5 = callback2;
       if (!callback2) {
-        tmp5 = tmp26;
+        tmp5 = dependencyMap;
       }
-      closure_4 = tmp27;
+      closure_4 = closure_3;
       if (closure_3 == null) {
         closure_4 = c5;
       }
@@ -194,10 +194,10 @@ function _handleResolveRaid() {
               if (null != tmp8) {
                 const HTTP = callback(530).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
-                obj1[0] = closure_1_7.GUILD_INCIDENT_REPORT_FALSE_ALARM(tmp18);
+                obj1[0] = closure_1_7.GUILD_INCIDENT_REPORT_FALSE_ALARM(callback);
                 const obj2 = { alert_message_id: null, reason: null };
-                obj2[0] = tmp19;
-                obj2[1] = tmp20;
+                obj2[0] = callback2;
+                obj2[1] = dependencyMap;
                 obj1[1] = obj2;
                 let obj3 = callback(530);
                 obj1[2] = obj3.rejectWithMigratedError();
@@ -207,9 +207,6 @@ function _handleResolveRaid() {
                 obj3[0] = HTTP.post(obj1);
                 return obj3;
               }
-              tmp18 = callback;
-              tmp19 = callback2;
-              tmp20 = dependencyMap;
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -285,7 +282,7 @@ function _handleReportRaid() {
               if (null != tmp8) {
                 const HTTP = callback(530).HTTP;
                 obj1 = { url: null, rejectWithError: null };
-                obj1[0] = closure_1_7.GUILD_INCIDENT_REPORT_RAID(tmp18);
+                obj1[0] = closure_1_7.GUILD_INCIDENT_REPORT_RAID(callback);
                 let obj2 = callback(530);
                 obj1[1] = obj2.rejectWithMigratedError();
                 dependencyMap = 1;
@@ -294,7 +291,6 @@ function _handleReportRaid() {
                 obj2[0] = HTTP.post(obj1);
                 return obj2;
               }
-              tmp18 = callback;
             }
           } else if (arg0 === 1) {
             v0 = 3;
@@ -329,7 +325,7 @@ function _handleReportRaid() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: closure_6, Endpoints: error, GuildFeatures: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
 
 export const trackReportRaidViewed = function trackReportRaidViewed(onChange, onSubmit) {
   let items = onSubmit;
@@ -337,13 +333,11 @@ export const trackReportRaidViewed = function trackReportRaidViewed(onChange, on
     items = [];
   }
   if (0 !== items.length) {
-    let obj = expandEventPropertiesDefault;
-    obj = {};
+    const obj = {};
     const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(onChange));
     obj.guild_id = onChange;
     obj.raid_types = items;
     obj.track(constants.GUILD_RAID_REPORTED, obj);
-    const obj3 = collectGuildAnalyticsMetadata;
   }
 };
 export const setGuildRaidAlerts = function setGuildRaidAlerts() {

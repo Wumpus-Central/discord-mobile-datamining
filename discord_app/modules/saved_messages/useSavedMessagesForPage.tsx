@@ -1,11 +1,11 @@
 // discord_app/modules/saved_messages/useSavedMessagesForPage.tsx
 import SavedMessageSortTypes from "SavedMessagesTypes.tsx";
 import useRefreshSavedMessagesDefault from "useRefreshSavedMessages.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "SavedMessagesStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import getTimeSafe from "SavedMessagesStore.tsx";
 
-require = arg1;
+require = fn;
 function getSavedMessagesForType(arg0) {
   if (SavedMessageSortTypes.SavedMessageSortTypes.BOOKMARK === arg0) {
     return store.getMessageBookmarks();
@@ -14,9 +14,8 @@ function getSavedMessagesForType(arg0) {
   } else {
     return store.getSavedMessages();
   }
-  const tmp = require;
 }
-const result = require("set").fileFinishedImporting("modules/saved_messages/useSavedMessagesForPage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/saved_messages/useSavedMessagesForPage.tsx");
 
 export default function useSavedMessagesForPage() {
   let ALL = arg0;
@@ -34,7 +33,7 @@ export default function useSavedMessagesForPage() {
     } else {
       messageBookmarks = closure_1_5.getSavedMessages();
     }
-    return messageBookmarks.map((saveData) => saveData.saveData);
+    return messageBookmarks.map((item, index) => item.saveData);
   }), 2);
   callback = React.useRef(store.getIsStale());
   let items = [ALL];
@@ -43,22 +42,22 @@ export default function useSavedMessagesForPage() {
       const lastChanged = closure_2_5.getLastChanged();
       if (lastChanged !== lastChanged) {
         if (closure_1_3.current) {
-          if (!obj.getIsStale()) {
+          if (!closure_2_5.getIsStale()) {
             tmp9.current = false;
             if (ALL(table[3]).SavedMessageSortTypes.BOOKMARK === closure_0) {
-              let messageBookmarks = obj.getMessageBookmarks();
+              let messageBookmarks = closure_2_5.getMessageBookmarks();
             } else if (ALL(table[3]).SavedMessageSortTypes.REMINDER === closure_0) {
-              messageBookmarks = obj.getMessageReminders();
+              messageBookmarks = closure_2_5.getMessageReminders();
             } else {
-              messageBookmarks = obj.getSavedMessages();
+              messageBookmarks = closure_2_5.getSavedMessages();
             }
-            closure_1_2(messageBookmarks.map((saveData) => saveData.saveData));
+            closure_1_2(messageBookmarks.map((item, index) => item.saveData));
           }
         }
         closure_1_2((arg0) => {
           let items = [...arg0];
-          const map = new Map(closure_1_6(lastChanged).map((saveData) => {
-            const items = [saveData.saveData.messageId, saveData];
+          const map = new Map(closure_1_6(lastChanged).map((item, index) => {
+            const items = [item.saveData.messageId, item];
             return items;
           }));
           const iter = arg0[Symbol.iterator]();
@@ -66,10 +65,8 @@ export default function useSavedMessagesForPage() {
           while (iter !== undefined) {
             let tmp2 = nextResult;
             if (map.has(nextResult.messageId)) {
-              let tmp5 = nextResult;
               let deleteResult = map.delete(tmp2.messageId);
             } else {
-              let tmp3 = nextResult;
               let spliceResult = items.splice(items.indexOf(tmp2), 1);
             }
             continue;
@@ -98,11 +95,11 @@ export default function useSavedMessagesForPage() {
     } else {
       messageBookmarks = closure_1_5.getSavedMessages();
     }
-    return messageBookmarks.map((saveData) => saveData.saveData);
+    return messageBookmarks.map((item, index) => item.saveData);
   }), 2);
   const items1 = [store];
   return ALL(589).useStateFromStoresArray(items1, () => {
-    const mapped = _undefined.map((channelId) => savedMessage.getSavedMessage(channelId.channelId, channelId.messageId));
+    const mapped = _undefined.map((item, index) => savedMessage.getSavedMessage(item.channelId, item.messageId));
     return mapped.filter(ALL(_undefined2[6]).isNotNullish);
   });
 };

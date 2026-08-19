@@ -1,13 +1,13 @@
 // discord_app/modules/client_themes/native/useCustomThemeDisplaySettings.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import getThemeForColor from "../ClientThemesUtils.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "CustomThemeMobileStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import reset from "CustomThemeMobileStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/client_themes/native/useCustomThemeDisplaySettings.tsx");
 
-export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySettings(base_theme) {
+export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySettings(stateFromStores) {
   let obj = initialize;
   let items = [closure_3];
   [tmp4, tmp5, tmp6] = callback(obj.useStateFromStoresArray(items, () => {
@@ -25,17 +25,16 @@ export const useCustomThemeDisplaySettings = function useCustomThemeDisplaySetti
         return obj;
       }
     }
-    if (null != base_theme) {
+    if (null != stateFromStores) {
       obj = { colors: null, gradientAngle: null, baseMix: null, gradientColorStops: null };
-      ({ colors: obj2[0], gradient_angle: obj2[1], base_mix: obj2[2] } = base_theme);
+      ({ colors: obj2[0], gradient_angle: obj2[1], base_mix: obj2[2] } = stateFromStores);
       obj[3] = [];
       obj1 = { baseTheme: null, customTheme: null };
-      obj1[0] = getThemeForColor.getCustomThemeBaseTheme(base_theme.base_theme);
+      obj1[0] = getThemeForColor.getCustomThemeBaseTheme(stateFromStores.base_theme);
       obj1[1] = obj;
       return obj1;
     }
   }
-  const tmp = require;
   const tmp3 = callback(obj.useStateFromStoresArray(items, () => {
     const items = [store.getCustomTheme(), store.getBaseTheme(), store.getPreviewTheme()];
     return items;

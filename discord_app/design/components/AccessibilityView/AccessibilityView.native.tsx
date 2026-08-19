@@ -29,10 +29,10 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityViewIsModal, r
   obj[3] = onAccessibilityEscape;
   obj[4] = flag;
   const merged1 = Object.assign(merged);
-  return <View ref={arg1} nativeID={nativeID} collapsable={null} onAccessibilityEscape={null} accessibilityViewIsModal={null} />;
+  return <View ref={ref} nativeID={nativeID} collapsable={null} onAccessibilityEscape={null} accessibilityViewIsModal={null} />;
 });
 const animatedComponent = importDefaultResult.createAnimatedComponent(forwardRefResult);
-const result = require("set").fileFinishedImporting("design/components/AccessibilityView/AccessibilityView.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/AccessibilityView/AccessibilityView.native.tsx");
 
 export const AccessibilityView = forwardRefResult;
 export const AccessibilityViewAnimated = animatedComponent;

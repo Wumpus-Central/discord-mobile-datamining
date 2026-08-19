@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx
-import setDefault from "../../../utils/Durations.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../UserProfileStore.tsx";
+import obj132Default from "../../../utils/Durations.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import createUserWidgetFromServer from "../UserProfileStore.tsx";
 import { ContentDismissActionType } from "../../dismissible_content/DismissibleContentConstants.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 
-const require = arg1;
-let closure_6 = 90 * setDefault.Millis.DAY;
-let closure_7 = 90 * setDefault.Millis.DAY;
+const require = fn;
+let closure_6 = 90 * obj132Default.Millis.DAY;
+let closure_7 = 90 * obj132Default.Millis.DAY;
 let closure_8 = ApexExperiment.createApexExperiment({ name: "2026-07-smag-wishlist-recommendations-dismiss-threshold", kind: "user", defaultConfig: { minItemsToDismiss: 1 }, variations: { 0: { minItemsToDismiss: 1 }, 1: { minItemsToDismiss: 3 }, 2: { minItemsToDismiss: 10 } } });
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx");
 
 export default function useWishlistSuggestionsDismissibleContent(userId) {
   userId = userId.userId;
@@ -72,7 +72,7 @@ export default function useWishlistSuggestionsDismissibleContent(userId) {
     isDismissible: tmp,
     markAsDismissed: obj.useCallback(() => {
       _undefined(false);
-      callback(closure_1_5.USER_DISMISS);
+      callback(ContentDismissActionType.USER_DISMISS);
     }, items2)
   };
   items2 = [tmp2Result[1]];

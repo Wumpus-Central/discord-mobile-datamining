@@ -3,9 +3,9 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function RequestToSpeakParticipant(participant) {
   participant = participant.participant;
   const channel = participant.channel;
@@ -13,8 +13,7 @@ function RequestToSpeakParticipant(participant) {
   ({ onGrantRequest, onDenyRequest } = participant);
   const tmp = callback3();
   analyticsLocations = channel(analyticsLocations[6])().analyticsLocations;
-  let obj = { style: tmp.participantItemContainer, children: null };
-  obj = {
+  let obj = {
     onPress() {
       channel(analyticsLocations[8])({ userId: participant.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
     },
@@ -44,13 +43,12 @@ function RequestToSpeakParticipant(participant) {
   const items3 = [callback(participant(analyticsLocations[10]).LegacyText, { style: items2, numberOfLines: 1, children: participant.user.username }), ];
   const obj4 = { variant: "text-xs/medium", color: "text-default", children: null };
   obj1 = { user: participant.user, guildId: channel.guild_id, size: participant(analyticsLocations[10]).AvatarSizes.NORMAL };
-  const obj3 = { style: items2, numberOfLines: 1, children: participant.user.username };
   obj4[2] = participant(analyticsLocations[9]).participantMemberInfo(participant);
   items3[1] = callback(participant(analyticsLocations[11]).Text, obj4);
   obj2[1] = items3;
-  items1[1] = closure_5(View, obj2);
+  items1[1] = callback(View, obj2);
   obj[4] = items1;
-  const items4 = [closure_5(participant(analyticsLocations[7]).PressableOpacity, obj), ];
+  const items4 = [callback(participant(analyticsLocations[7]).PressableOpacity, obj), ];
   const obj5 = { style: tmp.participantActionContainer, children: null };
   const obj6 = { accessibilityLabel: null, containerStyle: null, source: null, onPress: null, disabled: null };
   let tmp2Result = tmp2(tmp3[12]);
@@ -70,14 +68,13 @@ function RequestToSpeakParticipant(participant) {
   obj7[3] = onDenyRequest;
   items5[1] = callback(tmp2Result, obj7);
   obj5[1] = items5;
-  items4[1] = closure_5(View, obj5);
+  items4[1] = callback(View, obj5);
   obj[1] = items4;
-  return closure_5(View, obj);
+  return callback(View, obj);
 }
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 }, listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 }, participantItemContainer: { padding: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, touchableContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, participantAvatarContainer: { paddingLeft: 4 }, participantNameplateContainer: { paddingHorizontal: 16, flex: 1 }, participantNameplateText: null, participantActionContainer: null, participantActionIcon: null, emptyContainer: null, emptyParticipant: null, emptyTitle: null, emptyBody: null };
-createCacheKey = { fontSize: 16, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, marginTop: 0, marginBottom: 0, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const createCacheKey = { fontSize: 16, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, marginTop: 0, marginBottom: 0, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[6] = createCacheKey;
 createCacheKey[7] = { flexDirection: "row", paddingRight: 4 };
 createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
@@ -86,12 +83,10 @@ createCacheKey[10] = { flex: 1, height: 64 };
 createCacheKey[11] = { textAlign: "center", marginTop: 16, marginBottom: 8 };
 createCacheKey[12] = { textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/RequestToSpeakParticipantList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/RequestToSpeakParticipantList.tsx");
 
 export default function RequestToSpeakParticipantList(channel) {
   channel = channel.channel;
-  importDefault = undefined;
   let sortedRequestToSpeakParticipants;
   const tmp = callback3();
   importDefault = tmp;
@@ -131,7 +126,7 @@ export default function RequestToSpeakParticipantList(channel) {
       if (null == sortedRequestToSpeakParticipants[arg1]) {
         let obj = { style: null };
         obj[0] = emptyParticipant.emptyParticipant;
-        let tmp5 = closure_1_4(closure_1_3, obj);
+        let tmp5 = closure_1_4(View, obj);
       } else {
         obj = { participant: null, channel: null, onGrantRequest: null, onDenyRequest: null };
         obj[0] = tmp;
@@ -142,7 +137,7 @@ export default function RequestToSpeakParticipantList(channel) {
         obj[3] = function onDenyRequest() {
           channel(sortedRequestToSpeakParticipants[18]).setUserSuppress(closure_0, closure_0.user.id, true);
         };
-        tmp5 = closure_1_4(closure_1_7, obj, tmp.user.id);
+        tmp5 = closure_1_4(RequestToSpeakParticipant, obj, tmp.user.id);
       }
       return tmp5;
     };

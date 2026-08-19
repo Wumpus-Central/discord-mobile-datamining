@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockUnenrolledHeader.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../../design/animation/reanimated/spring/spring.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { QuestDockMode } from "../../QuestConstants.tsx";
@@ -10,26 +10,20 @@ import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.ts
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 let c4 = importAllResult;
 ({ AccessibilityInfo: c5, View: closure_6 } = get_ActivityIndicator);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({ QUEST_DOCK_CONTENT_BORDER_RADII: c9, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: c10, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: unpackModuleId, QUEST_DOCK_COLLAPSED_HEIGHT } = QUEST_DOCK_COLLAPSED_HEIGHT);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-let obj = { questDockHeader: { alignItems: "center", justifyContent: "space-between", flexDirection: "row", height: QUEST_DOCK_COLLAPSED_HEIGHT, overflow: "hidden", paddingRight: 16, paddingLeft: 8, position: "absolute", zIndex: 2 }, wreathImage: { height: 35, marginRight: 4, width: 35 }, questDockHeaderPrimary: { alignItems: "center", flexDirection: "row" }, logo: { marginTop: 2 }, questDockHeaderSecondary: { flexGrow: 0, flexShrink: 0 }, questDockHeaderContentCollapsed: { justifyContent: "center", position: "absolute", bottom: 0, top: 0, right: 0 }, questDockHeaderContentExpanded: { alignItems: "center", flexDirection: "row", gap: 8 }, questDockHeaderActionDisclosures: { alignItems: "center", display: "flex", flexDirection: "row", gap: 4 }, questDockHeaderActionDisclosuresIcon: { height: 14, width: 14 }, questDockHeaderActionSeparator: null, questDockHeaderTertiaryContent: null };
-obj = { backgroundColor: ThemesDefault.colors.TEXT_DEFAULT, opacity: 0.2, height: 18, width: 1.5 };
+let obj = { backgroundColor: ThemesDefault.colors.TEXT_DEFAULT, opacity: 0.2, height: 18, width: 1.5 };
 obj[9] = obj;
 obj[10] = { opacity: 0.7 };
 let closure_16 = createCacheKey.createStyles(obj);
 function questDockHeaderLayoutAnimation(currentOriginX) {
-  obj = { initialValues: obj, animations: null };
-  obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
-  obj = { originX: CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED), originY: null, height: null, width: null };
-  const obj4 = CONFIG_NEVER_ANIMATE;
+  const obj = { originX: CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED), originY: null, height: null, width: null };
   obj[1] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginY, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
-  const obj5 = CONFIG_NEVER_ANIMATE;
   obj[2] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetHeight, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
-  const obj6 = CONFIG_NEVER_ANIMATE;
   obj[3] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetWidth, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
   obj[1] = obj;
   return obj;
@@ -50,7 +44,6 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   questCreative = obj.useQuestCreative();
   const context = token.useContext(questCreative(questDockWrapperSpecs[11]).QuestDockGestureContext);
   const activeQuestDockMode = context.activeQuestDockMode;
-  questDockWrapperSpecs = context.questDockWrapperSpecs;
   [tmp6, closure_3] = callback(token.useState(false), 2);
   const effect = token.useEffect(() => {
     if (obj.isIOS()) {
@@ -65,24 +58,23 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   let items = [questCreative];
   const tmp5 = callback(token.useState(false), 2);
   callback = token.useCallback(() => {
-    let obj = activeQuestDockMode(questDockWrapperSpecs[14]);
-    obj = { quest: questCreative, isTargetedDisclosure: true, trackingCtx: null };
-    obj = { content: questCreative(questDockWrapperSpecs[15]).QuestContent.QUEST_BAR_MOBILE, ctaContent: questCreative(questDockWrapperSpecs[16]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent: questCreative(questDockWrapperSpecs[15]).QuestContent.QUEST_BAR_MOBILE };
+    activeQuestDockMode(questDockWrapperSpecs[14]);
+    const obj = { content: questCreative(questDockWrapperSpecs[15]).QuestContent.QUEST_BAR_MOBILE, ctaContent: questCreative(questDockWrapperSpecs[16]).QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE, sourceQuestContent: questCreative(questDockWrapperSpecs[15]).QuestContent.QUEST_BAR_MOBILE };
     obj[2] = obj;
     obj.showModal(obj);
   }, items);
   const actionSheetPressHandler = obj1.useActionSheetPressHandler(questCreative);
   let obj2 = questCreative(questDockWrapperSpecs[18]);
   if (obj2.isThemeDark(tmp11)) {
-    let LIGHT = tmp12.DARK;
-    let tmp13 = tmp12;
+    let LIGHT = ThemeTypes.DARK;
+    let tmp13 = ThemeTypes;
   } else {
-    LIGHT = tmp12.LIGHT;
-    tmp13 = tmp12;
+    LIGHT = ThemeTypes.LIGHT;
+    tmp13 = ThemeTypes;
   }
   let tmpResult = tmp(tmp2[19]);
   token = tmpResult.useToken(tmp10(tmp2[8]).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
-  let tmp15 = activeQuestDockMode(questDockWrapperSpecs[20])(token);
+  const tmp15 = activeQuestDockMode(questDockWrapperSpecs[20])(token);
   closure_5 = tmp15;
   tmpResult = tmp(tmp2[21]);
   class K {
@@ -149,7 +141,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   K.__workletHash = 15527986377887;
   K.__initData = closure_18;
   const animatedStyle = tmpResult.useAnimatedStyle(K);
-  tmp11 = activeQuestDockMode(questDockWrapperSpecs[17])();
+  tmp11 = activeQuestDockMode(context.questDockWrapperSpecs[17])();
   class X {
     constructor() {
       obj = closure_0(questDockWrapperSpecs[9]);
@@ -169,7 +161,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   const tmpResult1 = questCreative(questDockWrapperSpecs[21]);
   const fn = function q() {
     let right = 0;
-    if (activeQuestDockMode.get() === closure_1_7.EXPANDED) {
+    if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
       right = -1 * closure_1_10;
     }
     return { right };
@@ -183,10 +175,10 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   const fn2 = function f() {
     let obj = questCreative(questDockWrapperSpecs[9]);
     let num = 0;
-    if (activeQuestDockMode.get() === closure_1_7.EXPANDED) {
+    if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, closure_1_8) };
+    obj = { opacity: obj.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
     return obj;
   };
   obj2 = { withSpring: tmp(tmp2[9]).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
@@ -224,19 +216,18 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
   const animatedProps = questCreative(questDockWrapperSpecs[21]).useAnimatedProps(G);
   const tmpResult5 = questCreative(questDockWrapperSpecs[21]);
   const fn3 = function x() {
-    let obj = activeQuestDockMode;
-    obj = { borderRadius: activeQuestDockMode.get() === closure_1_7.EXPANDED ? closure_1_9 : token, borderBottomLeftRadius: null, borderBottomRightRadius: null, width: null };
-    if (obj.get() === closure_1_7.EXPANDED) {
+    const obj = { borderRadius: activeQuestDockMode.get() === QuestDockMode.EXPANDED ? closure_1_9 : token, borderBottomLeftRadius: null, borderBottomRightRadius: null, width: null };
+    if (obj.get() === QuestDockMode.EXPANDED) {
       let withSpringResult = closure_1_9;
     } else {
-      withSpringResult = questCreative(questDockWrapperSpecs[9]).withSpring(store.get(), closure_1_8);
+      withSpringResult = questCreative(questDockWrapperSpecs[9]).withSpring(store.get(), QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
       const obj3 = questCreative(questDockWrapperSpecs[9]);
     }
     obj[1] = withSpringResult;
-    if (obj.get() === closure_1_7.EXPANDED) {
+    if (obj.get() === QuestDockMode.EXPANDED) {
       let withSpringResult1 = closure_1_9;
     } else {
-      withSpringResult1 = questCreative(questDockWrapperSpecs[9]).withSpring(store.get(), closure_1_8);
+      withSpringResult1 = questCreative(questDockWrapperSpecs[9]).withSpring(store.get(), QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
       const obj4 = questCreative(questDockWrapperSpecs[9]);
     }
     obj[2] = withSpringResult1;
@@ -244,12 +235,12 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     return obj;
   };
   const tmpResult6 = questCreative(questDockWrapperSpecs[21]);
-  fn3.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, questDockBorderRadius: token, withSpring: questCreative(questDockWrapperSpecs[9]).withSpring, questDockAnimatedBorderRadius: tmp15, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs };
+  fn3.__closure = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, questDockBorderRadius: token, withSpring: questCreative(context.questDockWrapperSpecs[9]).withSpring, questDockAnimatedBorderRadius: tmp15, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs: context.questDockWrapperSpecs };
   fn3.__workletHash = 16321960714067;
   fn3.__initData = closure_24;
   const animatedStyle5 = tmpResult6.useAnimatedStyle(fn3);
   const tmp23 = callback3();
-  let obj3 = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, questDockBorderRadius: token, withSpring: questCreative(questDockWrapperSpecs[9]).withSpring, questDockAnimatedBorderRadius: tmp15, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs };
+  let obj3 = { activeQuestDockMode, QuestDockMode, QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, questDockBorderRadius: token, withSpring: questCreative(questDockWrapperSpecs[9]).withSpring, questDockAnimatedBorderRadius: tmp15, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, questDockWrapperSpecs: context.questDockWrapperSpecs };
   const questBarHeroBlurhash = questCreative.config.assets.questBarHeroBlurhash;
   const questGameLogotypeAssetUrl = questCreative(questDockWrapperSpecs[22]).useQuestGameLogotypeAssetUrl(questCreative);
   let obj4 = { style: items1, layout: questDockHeaderLayoutAnimation, children: null };
@@ -261,7 +252,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
       let obj5 = { placeholder: null, animatedStyle: null, animatedLayout: null };
       obj5[0] = questBarHeroBlurhash;
       obj5[1] = animatedStyle5;
-      obj5[2] = tmp27;
+      obj5[2] = questDockHeaderLayoutAnimation;
       let tmp30 = callback2(tmp10(tmp2[24]), obj5);
       let tmp29 = callback2;
     }
@@ -283,13 +274,13 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     obj8[3] = tmp23.logo;
     items3[1] = tmp29(tmp10(tmp2[29]), obj8);
     obj6[1] = items3;
-    items2[1] = tmp25(closure_6, obj6);
+    items2[1] = callback(closure_6, obj6);
     const obj9 = { style: null, children: null };
     obj9[0] = tmp23.questDockHeaderSecondary;
     const obj10 = { style: null, layout: null, children: null };
     const items4 = [tmp23.questDockHeaderContentCollapsed, animatedStyle2];
     obj10[0] = items4;
-    obj10[1] = tmp27;
+    obj10[1] = questDockHeaderLayoutAnimation;
     const obj11 = { style: null, children: null };
     obj11[0] = animatedStyle1;
     const tmp10Result2 = tmp10(tmp2[23]);
@@ -361,7 +352,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     const obj13 = { animatedProps: null, style: null, layout: null, children: null };
     obj13[0] = animatedProps;
     obj13[1] = animatedStyle4;
-    obj13[2] = tmp27;
+    obj13[2] = questDockHeaderLayoutAnimation;
     const tmp10Result3 = tmp10(tmp2[23]);
     const obj14 = { style: null, children: null };
     const items6 = [tmp23.questDockHeaderContentExpanded, animatedStyle3];
@@ -392,7 +383,7 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     obj17[1] = tmp23.questDockHeaderActionDisclosuresIcon;
     items8[1] = tmp29(tmp(tmp2[33]).CircleQuestionIcon, obj17);
     tmp40[0] = items8;
-    obj15[3] = tmp25(closure_15, tmp40);
+    obj15[3] = callback(closure_15, tmp40);
     const items9 = [tmp29(tmp(tmp2[32]).PressableOpacity, obj15), , ];
     const obj18 = { style: null };
     obj18[0] = tmp23.questDockHeaderActionSeparator;
@@ -405,16 +396,17 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledHeader() {
     obj19[3] = tmp29(tmp(tmp2[34]).MoreHorizontalIcon, obj20);
     items9[2] = tmp29(tmp(tmp2[32]).PressableOpacity, obj19);
     obj14[1] = items9;
-    obj13[3] = tmp25(tmp10(tmp2[23]), obj14);
+    obj13[3] = callback(tmp10(tmp2[23]), obj14);
     items5[1] = tmp29(tmp10Result4, obj13);
     obj9[1] = items5;
-    items2[2] = tmp25(closure_6, obj9);
+    items2[2] = callback(closure_6, obj9);
     obj4[2] = items2;
-    return tmp25(tmp10Result, obj4);
+    return callback(tmp10Result, obj4);
   }
   tmp29 = callback2;
-  tmp30 = callback2(tmp10(tmp2[25]), { animatedStyle: animatedStyle5, animatedLayout: tmp27 });
+  tmp30 = callback2(tmp10(tmp2[25]), { animatedStyle: animatedStyle5, animatedLayout: questDockHeaderLayoutAnimation });
+  tmpResult8 = questCreative(questDockWrapperSpecs[12]);
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledHeader.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledHeader.tsx");
 
 export default memoResult;

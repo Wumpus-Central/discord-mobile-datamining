@@ -1,17 +1,15 @@
 // discord_app/modules/messages/native/renderer/resolveMessageContentColors.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AccessibilityAnnouncer from "../../../../design/shared.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
 const result = createCacheKey.experimental_createToken((theme) => {
-  obj = AccessibilityAnnouncer;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
 });
 let obj = { textColor: null, linkColor: null, timestampColor: null, highlightColor: null, unsupportedColor: null, embedProviderColor: null, embedBorderLeftColor: null, embedBodyTextColor: null, embedHeaderTextColor: null, opTagTextColor: null, opTagBackgroundColor: null, failedMessageBodyTextColor: null, automodBlockedBodyTextColor: null, aiBotTagColor: null, editedColor: null, defaultUsernameColor: null, feedbackColor: null, reportFpTextColor: null, reportFpBackgroundColor: null, retryTextColor: null, retryBackgroundColor: null, clipTagBackgroundColor: null, clipTagTextColor: null };
 const result1 = createCacheKey.experimental_createToken((theme) => {
-  obj = AccessibilityAnnouncer;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
 });
@@ -44,7 +42,7 @@ let closure_4 = createCacheKey.createNativeStyleProperties((arg0) => {
   const merged = Object.assign(obj);
   return obj;
 });
-const result2 = set.fileFinishedImporting("modules/messages/native/renderer/resolveMessageContentColors.tsx");
+const result2 = obj132.fileFinishedImporting("modules/messages/native/renderer/resolveMessageContentColors.tsx");
 
 export default function resolveMessageContentColors(arg0) {
   let flag = arg1;

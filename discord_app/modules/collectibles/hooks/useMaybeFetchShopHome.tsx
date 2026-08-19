@@ -1,54 +1,44 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchShopHome.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import closure_6 from "../../experiments/ExperimentStore.tsx";
-import closure_7 from "../CollectiblesCategoryStore.tsx";
-import closure_8 from "../CollectiblesShopHomeStore.tsx";
+import getHash from "../../experiments/ExperimentStore.tsx";
+import updateCategoriesAndProducts from "../CollectiblesCategoryStore.tsx";
+import map from "../CollectiblesShopHomeStore.tsx";
 import items from "../CollectiblesShopConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useHasExpiredShopBlocks } from "useHasExpiredShopBlocks.tsx";
 
-const require = arg1;
+const require = fn;
 ({ useEffect: c3, useCallback: c4, useMemo: c5 } = noop);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: c9, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: c10 } = items);
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchShopHome.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchShopHome.tsx");
 
-export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectiblesShopHome(HOME, arg1, memo) {
+export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectiblesShopHome(HOME, arg1, memo, flag) {
   const _require = HOME;
   dependencyMap = arg1;
   const callback = memo;
-  let flag = arg3;
-  if (arg3 === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
-  let stateFromStores;
-  let stateFromStores1;
-  let callback2;
   closure_6 = undefined;
   closure_7 = undefined;
   closure_8 = undefined;
-  closure_9 = undefined;
-  closure_10 = undefined;
-  closure_11 = undefined;
-  closure_12 = undefined;
-  closure_13 = undefined;
   let hasExpiredShopBlocks;
   closure_15 = undefined;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_7];
-  stateFromStores1 = _initialize.useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
-  const obj2 = _initialize;
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => skipNumCategories.skipNumCategories);
+  const obj2 = initialize;
   const items2 = [closure_8];
-  const tmp3 = callback(_initialize.useStateFromStoresArray(items2, () => {
+  const tmp3 = callback(require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items2, () => {
     const items = [store.getShopBlocks(closure_0), , , , , , , ];
     let num = store.getLastSuccessfulFetch(closure_0);
     if (num == null) {
       num = 0;
     }
     items[1] = num;
-    let num2 = obj.getLastErrorTimestamp(tmp);
+    let num2 = store.getLastErrorTimestamp(closure_0);
     if (num2 == null) {
       num2 = 0;
     }
@@ -61,7 +51,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
     return items;
   }), 8);
   [tmp4, tmp5] = tmp3;
-  callback2 = tmp5;
+  const callback2 = tmp5;
   closure_6 = tmp6;
   closure_7 = tmp7;
   closure_8 = tmp8;
@@ -83,13 +73,13 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   const items4 = [tmp3[3], tmp13];
   const tmp14 = callback2(() => !HOME(5300).areRequestOptionsEqual(closure_7, closure_12), items4);
   closure_13 = tmp14;
-  const obj3 = _initialize;
+  const obj3 = initialize;
   const tmp12 = callback2;
   let flag2 = tmp9;
   if (tmp3[5] == null) {
     flag2 = false;
   }
-  hasExpiredShopBlocks = _useHasExpiredShopBlocks.useHasExpiredShopBlocks(tmp4, flag2, flag);
+  hasExpiredShopBlocks = require("useHasExpiredShopBlocks.tsx").useHasExpiredShopBlocks(tmp4, flag2, flag);
   const items5 = [tmp5, hasExpiredShopBlocks];
   const tmp12Result = tmp12(() => {
     let tmp = !hasExpiredShopBlocks;

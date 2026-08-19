@@ -1,34 +1,32 @@
 // discord_app/modules/age_gate/native/components/NsfwGateGuildSidebar.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../../../stores/GuildStore.tsx";
-import closure_7 from "../../../../stores/UserStore.tsx";
+import trackCommunicationDisabled from "../../../../stores/GuildMemberStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { NsfwGateSource } from "Constants.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ AnalyticEvents: c9, HelpdeskArticles: c10, Fonts: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { container: null, emptyStateContainer: null, emptyStateImageContainer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.PANEL_BG };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.PANEL_BG };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { marginBottom: 16 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuildSidebar.tsx");
+const result = require("obj132").fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuildSidebar.tsx");
 
 export default function NsfwGateGuildSidebar(guildId) {
   guildId = guildId.guildId;
-  let stateFromStores;
   let currentUser;
   const tmp = callback3();
   let obj = guildId(currentUser[10]);
   const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId));
   currentUser = currentUser.getCurrentUser();
   const items1 = [guildId, stateFromStores, currentUser];
   const effect = React.useEffect(() => {
@@ -37,20 +35,19 @@ export default function NsfwGateGuildSidebar(guildId) {
       tmp2 = null != stateFromStores;
     }
     if (tmp2) {
-      let obj = stateFromStores(currentUser[11]);
-      obj = { guild_id: null, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
+      stateFromStores(currentUser[11]);
+      const obj = { guild_id: null, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
       obj[0] = guildId;
-      obj[1] = tmp.id;
-      obj[2] = closure_1_5.isMember(guildId, tmp.id);
-      let nsfwAllowed = tmp.nsfwAllowed;
+      obj[1] = currentUser.id;
+      obj[2] = closure_1_5.isMember(guildId, currentUser.id);
+      let nsfwAllowed = currentUser.nsfwAllowed;
       if (nsfwAllowed) {
-        nsfwAllowed = guildId(tmp5[12]).getViewNsfwGuildsOrDefault();
-        const obj3 = guildId(tmp5[12]);
+        nsfwAllowed = guildId(currentUser[12]).getViewNsfwGuildsOrDefault();
+        const obj3 = guildId(currentUser[12]);
       }
       obj[3] = nsfwAllowed;
-      obj[4] = closure_1_8.GUILD_SIDEBAR;
+      obj[4] = NsfwGateSource.GUILD_SIDEBAR;
       obj.track(closure_1_9.GUILD_NSFW_GATE_VIEWED, obj);
-      tmp5 = currentUser;
     }
   }, items1);
   let tmp7 = null;

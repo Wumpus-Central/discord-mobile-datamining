@@ -6,11 +6,11 @@ import PressableBase from "../../../void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_4 = Object.freeze({ radius: 12 });
 let closure_5 = Object.freeze({ top: 8, right: 8, bottom: 8, left: 8 });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
 
 export const ActionSheetCloseButton = function ActionSheetCloseButton(arg0) {
   ({ onPress, variant } = arg0);

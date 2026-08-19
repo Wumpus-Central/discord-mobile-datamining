@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
@@ -9,7 +9,7 @@ import items from "../MemberVerificationConstants.tsx";
 
 ({ MEMBER_VERIFICATION_TYPE: c3, IN_APP_MEMBER_VERIFICATION_MODAL_KEY: c4 } = items);
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx");
 
 export default {
   openMemberVerificationModal(guildId, connect) {
@@ -17,7 +17,6 @@ export default {
     const verificationForm = obj.fetchVerificationForm(guildId);
     obj = { type: closure_3, guild_id: guildId };
     expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, obj);
-    const obj2 = expandEventPropertiesDefault;
     obj = { guildId, onClose: connect };
     _modDef5260.pushLazy(asyncRequireImpl(8524, dependencyMap.paths), obj, closure_4);
   },
@@ -27,8 +26,7 @@ export default {
       flag = false;
     }
     if (!flag) {
-      let obj = expandEventPropertiesDefault;
-      obj = { type: null };
+      const obj = { type: null };
       obj[0] = closure_3;
       obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
     }

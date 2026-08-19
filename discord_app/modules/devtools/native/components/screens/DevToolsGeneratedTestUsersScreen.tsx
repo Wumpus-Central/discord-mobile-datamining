@@ -1,32 +1,27 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsGeneratedTestUsersScreen.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../../generated_test_users/GeneratedTestUsersStore.tsx";
-import closure_9 from "../../../../../stores/AuthenticationStore.tsx";
+import handleAddUser from "../../../../generated_test_users/GeneratedTestUsersStore.tsx";
+import fetchFingerprint from "../../../../../stores/AuthenticationStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 
-const require = arg1;
+const require = fn;
 function PoolIdInput(onSubmit) {
   onSubmit = onSubmit.onSubmit;
-  let first;
-  dependencyMap = undefined;
-  let first1;
   let callback2;
   let React;
   const tmp2 = callback2(React.useState(""), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   dependencyMap = tmp3;
   const tmp4 = callback2(React.useState(""), 2);
-  first1 = tmp4[0];
+  const first1 = tmp4[0];
   callback2 = tmp5;
   const tmp = callback4();
   [tmp7, c5] = callback2(React.useState(false), 2);
@@ -65,7 +60,7 @@ function PoolIdInput(onSubmit) {
               length = 2;
               v0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(tmp24, c3);
+              obj1[0] = onSubmit(tmp24, c3);
               return obj1;
             } else {
               v0 = 3;
@@ -112,14 +107,11 @@ function PoolIdInput(onSubmit) {
   }
   items1[2] = callback3(onSubmit(4745).Button, { size: "md", variant: "primary", text: "Get Pool", disabled: tmp11, loading: tmp7, onPress: callback });
   obj[2] = items1;
-  return closure_11(onSubmit(4733).Stack, obj);
+  return callback(onSubmit(4733).Stack, obj);
 }
 function UserActionSheet(pool) {
   pool = pool.pool;
-  let usersForPool;
-  dependencyMap = undefined;
-  closure_3 = undefined;
-  usersForPool = authStore.getUsersForPool(pool.id);
+  const usersForPool = authStore.getUsersForPool(pool.id);
   dependencyMap = id.getId();
   items = [pool.id];
   closure_3 = React.useCallback((arg0) => {
@@ -127,37 +119,36 @@ function UserActionSheet(pool) {
     const obj = usersForPool(4342);
     pool(13985).loginAsGeneratedUser(pool.id, arg0);
   }, items);
-  let obj = { header: null, children: null };
-  obj = { title: pool.summary, subtitle: "" + usersForPool.length + " users" };
+  let obj = { title: pool.summary, subtitle: "" + usersForPool.length + " users" };
   obj[0] = callback3(pool(6949).BottomSheetTitleHeader, obj);
   obj = { style: { paddingHorizontal: usersForPool(712).space.PX_12 }, children: null };
   obj1 = { paddingHorizontal: usersForPool(712).space.PX_12 };
   obj[1] = callback3(pool(6286).TableRowGroup, {
     title: "Select User to Login As",
     hasIcons: true,
-    children: usersForPool.map((id) => {
-      closure_0 = id;
+    children: usersForPool.map((item, index) => {
+      closure_0 = item;
       const obj = {
         icon: closure_1_10(pool(11004).UserIcon, { size: "md" }),
         label: null,
         subLabel: null,
         onPress() {
-          return closure_1_3(id.id);
+          return closure_1_3(item.id);
         },
-        disabled: id.id === dependencyMap,
+        disabled: item.id === dependencyMap,
         trailing: null,
         start: null,
         end: null
       };
-      ({ username: obj[1], email: obj[2] } = id);
+      ({ username: obj[1], email: obj[2] } = item);
       let tmp2Result;
-      if (id.id === dependencyMap) {
-        tmp2Result = tmp2(pool(4326).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
+      if (item.id === dependencyMap) {
+        tmp2Result = closure_1_10(pool(4326).CheckmarkLargeIcon, { size: "md", color: "text-feedback-positive" });
       }
       obj[5] = tmp2Result;
-      obj[6] = 0 === arg1;
-      obj[7] = arg1 === usersForPool.length - 1;
-      return closure_1_10(pool(6291).TableRow, obj, id.id);
+      obj[6] = 0 === index;
+      obj[7] = index === usersForPool.length - 1;
+      return closure_1_10(pool(6291).TableRow, obj, item.id);
     })
   });
   obj[1] = callback3(closure_6, obj);
@@ -170,9 +161,7 @@ function PoolUsers(pool) {
   const usersForPool = authStore.getUsersForPool(id);
   items = [pool];
   const callback = React.useCallback(() => {
-    let obj = closure_1_1(closure_1_2[31]);
-    obj = { default: closure_1_16 };
-    obj = { pool };
+    const obj = { pool };
     obj.openLazy(Promise.resolve(obj), "generated-test-users", obj);
   }, items);
   return callback3(pool(6291).TableRow, { icon: callback3(items[Number(undefined, id) % items.length], { size: "md", color: length[Number(undefined, id) % length.length] }), label: pool.summary, subLabel: "" + usersForPool.length + " users", arrow: true, onPress: callback, start, end });
@@ -181,19 +170,16 @@ function PoolUsers(pool) {
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let items = [require("UserIcon").UserIcon, require("ShieldIcon").ShieldIcon, require("GiftIcon").GiftIcon, require("AchievementsIcon").AchievementsIcon, require("PiggyBankIcon").PiggyBankIcon, require("TreehouseIcon").TreehouseIcon, require("SpeedometerIcon").SpeedometerIcon, require("CompassIcon").CompassIcon, require("SignPostIcon").SignPostIcon, require("CarIcon").CarIcon, require("TrainIcon").TrainIcon, require("TeacupIcon").TeacupIcon, require("InventoryIcon").InventoryIcon, require("FoodIcon").FoodIcon, require("BurgerIcon").BurgerIcon, require("MagicDoorIcon").MagicDoorIcon, require("PawPrintIcon").PawPrintIcon, require("RecordPlayerIcon").RecordPlayerIcon, require("SettingsIcon").SettingsIcon];
 let closure_13 = ["text-default", "text-feedback-positive", "text-feedback-warning", "text-feedback-critical", "text-link", "text-brand"];
-createCacheKey = { container: null, contentContainer: null, inputContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
-let obj1 = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGeneratedTestUsersScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGeneratedTestUsersScreen.tsx");
 
 export default function DevToolsGeneratedTestUsersScreen() {
   const tmp = callback4();
-  let obj = _initialize;
+  let obj = initialize;
   items = [closure_8];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     pools = pools.getPools();
@@ -202,8 +188,6 @@ export default function DevToolsGeneratedTestUsersScreen() {
     }
     return pools;
   });
-  _require = stateFromStoresArray;
-  _require = undefined;
   _require = callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -262,7 +246,6 @@ export default function DevToolsGeneratedTestUsersScreen() {
       }
     })();
   });
-  obj = { style: tmp.container, children: null };
   obj = { contentContainerStyle: null, children: null };
   const items1 = [tmp.contentContainer, ];
   obj1 = { paddingBottom: null };
@@ -282,15 +265,15 @@ export default function DevToolsGeneratedTestUsersScreen() {
   const items2 = [callback3(PoolIdInput, { onSubmit: callback }), ];
   let tmp5Result = 0 === stateFromStoresArray.length;
   if (tmp5Result) {
-    tmp5Result = tmp5(_TableRowInner.TableRow, { label: "No pools available." });
+    tmp5Result = callback3(require("../../../../../design/components/TableRow/native/TableRow.native.tsx").TableRow, { label: "No pools available." });
   }
   const obj2 = { spacing: 16, children: null };
   const obj3 = { title: "Generated Test User Pools", hasIcons: true, children: null };
-  const items3 = [tmp5Result, stateFromStoresArray.map((id) => closure_1_10(closure_1_17, { pool: id, start: 0 === arg1, end: arg1 === length.length - 1 }, id.id))];
+  const items3 = [tmp5Result, stateFromStoresArray.map((item, index) => closure_1_10(PoolUsers, { pool: item, start: 0 === index, end: index === length.length - 1 }, item.id))];
   obj3[2] = items3;
-  items2[1] = closure_11(_TableRowGroupTitle.TableRowGroup, obj3);
+  items2[1] = callback(require("../../../../../design/components/TableRow/native/TableRowGroup.native.tsx").TableRowGroup, obj3);
   obj2[1] = items2;
-  obj[1] = closure_11(_Stack.Stack, obj2);
+  obj[1] = callback(require("../../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj2);
   obj[1] = callback3(closure_7, obj);
   return callback3(closure_6, obj);
 };

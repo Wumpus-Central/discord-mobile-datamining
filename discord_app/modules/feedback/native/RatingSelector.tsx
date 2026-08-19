@@ -8,13 +8,13 @@ import FeedbackRating from "../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ DEFAULT_RATINGS: c5, FeedbackRating: closure_6 } = FeedbackRating);
 let closure_8 = createCacheKey.createStyles({ ratings: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, rating: {}, emoji: { width: 64, height: 64, marginVertical: 24, marginHorizontal: 12 } });
 let closure_9 = createCacheKey.createStyles({ ratings: { flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start", gap: 16, marginBottom: 12 }, rating: { width: "100%" }, emoji: { width: 32, height: 32 } });
-const result = require("set").fileFinishedImporting("modules/feedback/native/RatingSelector.tsx");
+const result = require("obj132").fileFinishedImporting("modules/feedback/native/RatingSelector.tsx");
 
 export default function RatingSelector(ratingOptions) {
   ratingOptions = ratingOptions.ratingOptions;
@@ -30,9 +30,6 @@ export default function RatingSelector(ratingOptions) {
     tmp2 = tmp;
   }
   closure_3 = tmp2;
-  obj = undefined;
-  obj = {};
-  obj = { source: null, getLabel: null, rating: null };
   obj = { selected: registerAssetDefault, normal: null };
   let obj3 = obj(10817);
   obj[1] = obj3.useFeedbackModalSadDesaturatedSource();
@@ -65,12 +62,12 @@ export default function RatingSelector(ratingOptions) {
   };
   obj3[2] = constants.GOOD;
   obj[constants.GOOD] = obj3;
-  const mapped = ratingOptions.map((arg0) => obj[arg0]);
+  const mapped = ratingOptions.map((item, index) => obj[item]);
   const obj10 = obj(10827);
-  return <closure_3 style={tmp2.ratings}>{mapped.map((rating) => {
-    rating = rating.rating;
-    ({ selected, normal } = rating.source);
-    const getLabel = rating.getLabel;
+  return <closure_3 style={tmp2.ratings}>{mapped.map((item, index) => {
+    const rating = item.rating;
+    ({ selected, normal } = item.source);
+    const getLabel = item.getLabel;
     if (null != rating) {
       obj = { style: null, children: null };
       obj[0] = closure_3.rating;
@@ -88,15 +85,10 @@ export default function RatingSelector(ratingOptions) {
         normal = selected;
       }
       obj1[1] = normal;
-      obj[4] = closure_1_7(closure_1_4, obj1);
+      obj[4] = <closure_1_4 style={null} source={null} />;
       obj[5] = tmp[rating];
-      obj[1] = closure_1_7(obj(closure_1_2[12]).RowButton, obj);
-      let tmp14Result = closure_1_7(closure_3, obj, rating);
-      const tmp12 = closure_1_7;
-      const tmp13 = closure_1_4;
-      const tmp4 = closure_1_7;
-      const tmp5 = closure_3;
-      const tmp7 = closure_1_7;
+      obj[1] = jsx(obj(dependencyMap[12]).RowButton, { selected: null });
+      let tmp14Result = <closure_3 key={rating} selected={null} />;
     } else {
       const obj2 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
       obj2[1] = getLabel();
@@ -113,11 +105,8 @@ export default function RatingSelector(ratingOptions) {
         tmp2 = selected;
       }
       obj4[1] = tmp2;
-      obj2[4] = closure_1_7(closure_1_4, obj4);
-      tmp14Result = closure_1_7(obj(closure_1_2[13]).PressableOpacity, obj2, rating);
-      const tmp14 = closure_1_7;
-      const tmp19 = closure_1_7;
-      const tmp20 = closure_1_4;
+      obj2[4] = <closure_1_4 style={null} source={null} />;
+      tmp14Result = jsx(obj(dependencyMap[13]).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null }, rating);
     }
     return tmp14Result;
   })}</closure_3>;

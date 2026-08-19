@@ -1,8 +1,8 @@
 // discord_app/lib/uploader/stageAttachmentFiles.tsx
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { AbortCodes } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _stageAttachmentFiles() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -59,17 +59,17 @@ function _stageAttachmentFiles() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              closure_3 = closure_0.map((arg0) => {
-                closure_0 = arg0;
-                return new Promise((arg0, arg1) => {
-                  const lib = arg0;
-                  closure_1 = arg1;
-                  const status = lib.status;
-                  if (lib(flag[2]).CloudUploadStatus.NOT_STARTED === status) {
+              closure_3 = closure_0.map((item, index) => {
+                closure_0 = item;
+                return new Promise((fn, fn2) => {
+                  item = fn;
+                  closure_1 = fn2;
+                  const status = item.status;
+                  if (item(flag[2]).CloudUploadStatus.NOT_STARTED === status) {
                     obj.upload();
-                  } else if (tmp(tmp2[2]).CloudUploadStatus.COMPLETED === status) {
-                    arg0("complete");
-                  } else if (tmp(tmp2[2]).CloudUploadStatus.ERROR === status) {
+                  } else if (tmp(flag[2]).CloudUploadStatus.COMPLETED === status) {
+                    fn("complete");
+                  } else if (tmp(flag[2]).CloudUploadStatus.ERROR === status) {
                     if (closure_1_1) {
                       if (obj.error !== constants.ENTITY_TOO_LARGE) {
                         obj.upload();
@@ -77,19 +77,19 @@ function _stageAttachmentFiles() {
                     }
                     const _Error2 = Error;
                     error = new Error("File failed to upload");
-                    arg1(error);
-                  } else if (tmp(tmp2[2]).CloudUploadStatus.CANCELED === status) {
+                    fn2(error);
+                  } else if (tmp(flag[2]).CloudUploadStatus.CANCELED === status) {
                     const _Error = Error;
                     const error1 = new Error("Upload is canceled");
-                    arg1(error1);
-                  } else if (tmp(tmp2[2]).CloudUploadStatus.REMOVED_FROM_MSG_DRAFT === status) {
+                    fn2(error1);
+                  } else if (tmp(flag[2]).CloudUploadStatus.REMOVED_FROM_MSG_DRAFT === status) {
                     const _Error3 = Error;
                     const error2 = new Error("Upload is removed from draft");
-                    arg1(error2);
+                    fn2(error2);
                   }
-                  lib.on("complete", () => { ... });
-                  lib.on("error", () => { ... });
-                  lib.on("progress", () => { ... });
+                  item.on("complete", () => { ... });
+                  item.on("error", () => { ... });
+                  item.on("progress", () => { ... });
                 });
               });
               c4 = 2;
@@ -128,7 +128,7 @@ function _stageAttachmentFiles() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("lib/uploader/stageAttachmentFiles.tsx");
+const result = require("obj132").fileFinishedImporting("lib/uploader/stageAttachmentFiles.tsx");
 
 export default function stageAttachmentFiles() {
   const self = this;

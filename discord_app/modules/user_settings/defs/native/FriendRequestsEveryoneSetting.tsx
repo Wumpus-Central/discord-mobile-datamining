@@ -2,13 +2,13 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import useParentalControlledExplicitContentSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import ME from "../../../../Constants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import "createToggle";
 
-require = arg1;
+require = fn;
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: c4 } = ME);
-createToggle = {
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.mGr3CX);
@@ -18,14 +18,14 @@ createToggle = {
     const FriendSourceFlagsSetting = setting(4066).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
-    return React.useMemo(() => setting(closure_1_1[4]).computeFlags(setting), items).all;
+    return React.useMemo(() => setting(dependencyMap[4]).computeFlags(setting), items).all;
   },
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
     const FriendSourceFlagsSetting = explicitContentFromProto.FriendSourceFlagsSetting;
     if (arg0) {
-      let tmp3 = tmp;
+      let tmp3 = closure_3;
     } else {
-      tmp3 = tmp & ~constants.NO_RELATION;
+      tmp3 = closure_3 & ~constants.NO_RELATION;
     }
     FriendSourceFlagsSetting.updateSetting(tmp3);
   },
@@ -34,6 +34,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx");
 
 export default createToggle;

@@ -1,27 +1,27 @@
 // discord_app/modules/favorites/native/action/useFavoritesGuildChannelActions.tsx
-import closure_2 from "../../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../../../stores/GuildMemberStore.tsx";
-import closure_4 from "../../FavoriteStore.tsx";
+import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import trackCommunicationDisabled from "../../../../stores/GuildMemberStore.tsx";
+import initializeFromUserSettings from "../../FavoriteStore.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useFavoritesAccess } from "../../FavoritesHooks.tsx";
 import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
 
 export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildActionSheet) {
   const _require = channelId;
-  let obj = _useFavoritesAccess;
+  let obj = useFavoritesAccess;
   const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildActionSheet);
   ({ hasAccess, isExperimentEnabled } = favoritesAccess);
-  let isFavoritableChannelResult = _getFavoritesAwareGuildName.isFavoritableChannel(channelId);
-  const obj2 = _getFavoritesAwareGuildName;
+  let isFavoritableChannelResult = require("../../FavoritesUtils.tsx").isFavoritableChannel(channelId);
+  const obj2 = getFavoritesAwareGuildName;
   const tmp = _require;
   const items = [closure_4];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.isFavorite(channelId.id));
-  const obj3 = _initialize;
-  const isFavoritesGuildSelected = _useFavoritesAccess.useIsFavoritesGuildSelected();
-  const obj4 = _useFavoritesAccess;
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.isFavorite(channelId.id));
+  const obj3 = initialize;
+  const isFavoritesGuildSelected = require("../../FavoritesHooks.tsx").useIsFavoritesGuildSelected();
+  const obj4 = useFavoritesAccess;
   const items1 = [closure_3, closure_2];
   if (isFavoritableChannelResult) {
     isFavoritableChannelResult = obj5.useStateFromStores(items1, () => {
@@ -32,7 +32,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
       return isMemberResult;
     });
   }
-  obj5 = _initialize;
+  obj5 = initialize;
   let tmp7 = hasAccess;
   if (hasAccess) {
     tmp7 = isFavoritableChannelResult;

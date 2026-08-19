@@ -1,24 +1,24 @@
 // discord_app/modules/guild_sidebar/native/ChannelItem.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
+import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import BaseChannelSubtitle from "BaseChannelItem.tsx";
 import registerAssetDefault from "../../../../_runtime/15379_registerAsset.js";
-import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../stores/PresenceStore.tsx";
-import closure_7 from "../../../stores/RelationshipStore.tsx";
-import closure_8 from "../../../stores/UserStore.tsx";
+import sortActivity from "../../../stores/PresenceStore.tsx";
+import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import { StaticChannelRoute } from "../../channel/ChannelConstants.tsx";
 import { UnreadSetting } from "../../read_states/ReadStateConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importAllResult from "../../../../_runtime/00019_noop.js";
-import set from "../../../../_runtime/00002_set.js";
 
-require = arg1;
+require = fn;
 function getChannelMode(selected) {
   ({ unread, channel } = selected);
   if (selected.selected) {
@@ -57,7 +57,6 @@ function ChannelIcon(arg0) {
     return callback2(DMChannelIcon, obj);
   } else {
     if (channel.type === tmp4.GROUP_DM) {
-      obj = getAvatarURLDefault;
       obj = { id: null, icon: null, applicationId: null, size: 20 };
       ({ id: obj2[0], icon: obj2[1] } = channel);
       obj[2] = channel.getApplicationId();
@@ -66,9 +65,8 @@ function ChannelIcon(arg0) {
         obj1 = { style: null, source: null };
         obj1[0] = tmp.groupDmAvatar;
         obj1[1] = channelIconSource;
-        return callback2(tmp5(5449), obj1);
+        return callback2(preloadDefault, obj1);
       }
-      tmp5 = importDefault;
     }
     if (tmp2) {
       let tmp12 = registerAssetDefault;
@@ -76,8 +74,7 @@ function ChannelIcon(arg0) {
       let tmp9 = require;
     } else {
       tmp9 = require;
-      let obj2 = getChannelIcon;
-      obj2 = { isRulesChannel: false, locked: null };
+      const obj2 = { isRulesChannel: false, locked: null };
       obj2[1] = locked;
       const channelIcon = obj2.getChannelIcon(channel, obj2);
       let obj4 = getChannelIcon;
@@ -130,7 +127,7 @@ function DMChannelIcon(userId) {
   }
   items4[1] = avatarStatusSelected;
   obj[7] = items4;
-  return closure_13(userId(1297).Avatar, obj);
+  return callback(userId(1297).Avatar, obj);
 }
 let closure_3 = ["channel", "subtitle", "hideIcon", "children", "textStyle", "channelInfo", "onPress"];
 const ChannelTypes = ME.ChannelTypes;
@@ -138,21 +135,18 @@ const Routes = ME.Routes;
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [, ];
 ({ GUILD_VOICE: arr[0], GUILD_STAGE_VOICE: arr[1] } = ChannelTypes);
-let set = new Set(items);
-let obj = { channelIconLive: null, dmAvatar: null, avatarStatus: null, groupDmAvatar: null, channelInfoContainer: null, avatarStatusSelected: null };
-obj = { tintColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
+const set = new Set(items);
+let obj = { tintColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
 obj[0] = obj;
 obj[1] = { marginRight: 8 };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[2] = createCacheKey;
 obj[3] = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
 obj[4] = { paddingStart: 4 };
 obj[5] = { backgroundColor: require("result").DARK_393C42_LIGHT_DEE0E4 };
 let closure_16 = createCacheKey.createStyles(obj);
 let obj2 = { backgroundColor: require("result").DARK_393C42_LIGHT_DEE0E4 };
-const result = set.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
-
-export default importAllResult.memo((channel) => {
+const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   ({ channelInfo, onPress: importDefault } = channel);
   ({ subtitle, hideIcon, children, textStyle } = channel);
@@ -168,13 +162,11 @@ export default importAllResult.memo((channel) => {
     if (isSubscriptionGated) {
       obj = { locked: null };
       obj[0] = needSubscriptionToAccess;
-      tmp10 = callback2(tmp3(tmp4[22]), obj);
+      tmp10 = callback2(importDefault(needSubscriptionToAccess[22]), obj);
     }
     items[1] = tmp10;
     obj[1] = items;
-    let tmp8Result = closure_14(View, obj);
-    const tmp8 = closure_14;
-    const tmp9 = View;
+    let tmp8Result = callback2(View, obj);
   } else {
     tmp8Result = null;
   }
@@ -196,8 +188,8 @@ export default importAllResult.memo((channel) => {
   obj[5] = tmp8Result;
   obj[6] = function onPress(arg0) {
     if (needSubscriptionToAccess) {
-      if (closure_1_15.has(channel.type)) {
-        channel(needSubscriptionToAccess[24]).transitionTo(closure_1_10.CHANNEL(channel.guild_id, closure_1_11.ROLE_SUBSCRIPTIONS));
+      if (set.has(channel.type)) {
+        channel(needSubscriptionToAccess[24]).transitionTo(Routes.CHANNEL(channel.guild_id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
         const obj = channel(needSubscriptionToAccess[24]);
       }
     }
@@ -209,4 +201,7 @@ export default importAllResult.memo((channel) => {
   obj.children = children;
   return callback2(tmp3Result, obj);
 });
+const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
+
+export default memoResult;
 export { getChannelMode };

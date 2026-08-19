@@ -2,11 +2,11 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import apexExperiment from "../../../premium/powerups/experiments/ServerThemeUserExperiment.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Q7mm4g);
@@ -37,6 +37,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
 
 export default createToggle;

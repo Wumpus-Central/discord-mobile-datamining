@@ -1,30 +1,29 @@
 // discord_app/modules/app_launcher/native/screens/home/recommendations/RecommendationsBannerCard.tsx
 import ThemesDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import getAvatarURLDefault from "../../../../../../utils/AvatarUtils.tsx";
-import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import maybeFetchUserProfileDefault from "../../../../../user_profile/maybeFetchUserProfile.tsx";
+import EntityBorderAppIconDefault from "../../../base_components/EntityBorderAppIcon.tsx";
+import ActivityShelfBadgeDefault from "../../../../../activities/native/ActivityShelfBadge.tsx";
+import _modDef11269 from "RecommendationsBanner.tsx";
+import noop from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "../../../../../../Constants.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, banner: null, appDetailsContainer: null, appDetails: null, appIconContainer: null, notifsContainer: null, badge: null, promotedLabelWrapper: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, width: "100%", overflow: "hidden" };
+const createCacheKey = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, width: "100%", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: "100%", height: 106, overflow: "hidden" };
 createCacheKey[2] = { padding: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-let obj1 = { padding: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[3] = { marginLeft: ThemesDefault.space.PX_16, flexDirection: "column", flexGrow: 1, flexShrink: 1 };
 createCacheKey[4] = { flexShrink: 0 };
-let obj2 = { marginLeft: ThemesDefault.space.PX_16, flexDirection: "column", flexGrow: 1, flexShrink: 1 };
 createCacheKey[5] = { position: "absolute", display: "flex", gap: ThemesDefault.space.PX_4, right: ThemesDefault.space.PX_8, top: ThemesDefault.space.PX_8, alignItems: "flex-end" };
 createCacheKey[6] = {};
-let obj3 = { position: "absolute", display: "flex", gap: ThemesDefault.space.PX_4, right: ThemesDefault.space.PX_8, top: ThemesDefault.space.PX_8, alignItems: "flex-end" };
 createCacheKey[7] = { paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg };
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/recommendations/RecommendationsBannerCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/home/recommendations/RecommendationsBannerCard.tsx");
 
 export default function RecommendationsBannerCard(application) {
   application = application.application;
@@ -53,9 +52,9 @@ export default function RecommendationsBannerCard(application) {
       id = bot.id;
     }
     if (id == null) {
-      id = closure_1_5;
+      id = EMPTY_STRING_SNOWFLAKE_ID;
     }
-    closure_1_1(closure_1_2[7])(id);
+    maybeFetchUserProfileDefault(id);
   }, items);
   let obj2 = getAvatarURLDefault;
   obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
@@ -90,7 +89,7 @@ export default function RecommendationsBannerCard(application) {
     obj3[0] = tmp.banner;
     const obj4 = { applicationBot: null, applicationEmbedded: null, applicationId: null, applicationIcon: null, overrideImageUrl: null };
     obj4[0] = application.bot;
-    const tmp10Result = tmp10(11269);
+    const tmp10Result = _modDef11269;
     obj4[1] = tmp4(8447).isEmbeddedApp(application);
     ({ id: obj8[2], icon } = application);
     obj4[3] = icon;
@@ -102,25 +101,25 @@ export default function RecommendationsBannerCard(application) {
       const obj6 = { labelType: null, replacementStyles: null };
       obj6[0] = shelfBadgeTypeIfActive;
       obj6[1] = tmp.badge;
-      const items3 = [tmp14(tmp10(11262), obj6), ];
+      const items3 = [callback(ActivityShelfBadgeDefault, obj6), ];
       if (showsPromoted) {
         const obj7 = { style: null, children: null };
         obj7[0] = tmp.promotedLabelWrapper;
         const obj8 = { variant: "text-xxs/medium", color: "mobile-text-heading-primary", children: null };
         const intl = tmp4(1236).intl;
         obj8[2] = intl.string(tmp4(1236).t["/eVltv"]);
-        obj7[1] = tmp14(tmp4(4734).Text, obj8);
-        showsPromoted = tmp14(tmp13, obj7);
+        obj7[1] = callback(tmp4(4734).Text, obj8);
+        showsPromoted = callback(View, obj7);
       }
       items3[1] = showsPromoted;
       obj5[1] = items3;
-      tmp12Result = tmp12(tmp13, obj5);
+      tmp12Result = callback(View, obj5);
     } else {
       tmp12Result = null;
     }
     items2[1] = tmp12Result;
     obj3[1] = items2;
-    const items4 = [closure_7(View, obj3), ];
+    const items4 = [callback(View, obj3), ];
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.appDetailsContainer;
     let tmp14Result = null != applicationIconSource;
@@ -128,7 +127,7 @@ export default function RecommendationsBannerCard(application) {
       const obj10 = { iconSource: null, iconSize: 36, wrapperStyle: null };
       obj10[0] = applicationIconSource;
       obj10[2] = tmp.appIconContainer;
-      tmp14Result = tmp14(tmp10(11229), obj10);
+      tmp14Result = callback(EntityBorderAppIconDefault, obj10);
     }
     const items5 = [tmp14Result, , ];
     const obj11 = { style: null, children: null };
@@ -140,12 +139,12 @@ export default function RecommendationsBannerCard(application) {
     obj13[3] = application.description;
     items6[1] = callback(tmp4(4734).Text, obj13);
     obj11[1] = items6;
-    items5[1] = closure_7(View, obj11);
+    items5[1] = callback(View, obj11);
     items5[2] = callback(tmp4(6297).TableRowArrow, {});
     obj9[1] = items5;
-    items4[1] = closure_7(View, obj9);
+    items4[1] = callback(View, obj9);
     obj2[2] = items4;
-    tmp12Result = tmp12(tmp4(5433).PressableOpacity, obj2);
+    tmp12Result = callback(tmp4(5433).PressableOpacity, obj2);
     const tmp4Result = tmp4(8447);
   }
   return tmp12Result;

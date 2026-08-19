@@ -3,32 +3,27 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { set } from "../../../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { flex: 0, alignSelf: "stretch", marginBottom: 16, paddingHorizontal: 16 }, title: { lineHeight: 16, marginBottom: 8 }, breadCrumbItemContainer: { flexDirection: "row", justifyContent: "flex-start", marginBottom: 8, marginEnd: 32, overflow: "visible" }, breadCrumbDot: null, breadCrumbBar: null, breadCrumbText: null };
-createCacheKey = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+const createCacheKey = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[5] = { marginStart: 8, lineHeight: 20 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx");
 
 export default function Breadcrumbs(element) {
   element = element.element;
-  let _require;
   let found;
   const merged = Object.assign(element, Object.create(null));
   const tmp2 = callback();
-  _require = tmp2;
+  const _require = tmp2;
   if (null != element) {
     if ("breadcrumbs" === element.type) {
+      let prop = dependencyMap;
       let obj = found(12);
       found = obj.flatMap(merged.history, (destination) => {
         [tmp] = destination.destination;
@@ -49,50 +44,48 @@ export default function Breadcrumbs(element) {
           items[1] = tmp;
         }
         return items;
-      }).filter((arg0) => null != arg0);
+      }).filter((item, index) => null != item);
       if (0 === found.length) {
         return null;
       } else {
         obj = { style: null, children: null };
         obj[0] = tmp2.container;
-        let map = _Text.Text;
+        let map = require("../../../../design/components/Text/native/Text.tsx").Text;
         obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
         obj[0] = tmp2.title;
-        const REPORT_TO_MOD = _set.ReportMenuTypeSets.REPORT_TO_MOD;
+        const REPORT_TO_MOD = require("../../../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx").ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(element.menuName);
-        const intl = _getSystemLocale.intl;
+        const intl = require("../../../../intl/index.native.tsx").intl;
         const string = intl.string;
         if (hasItem) {
-          let stringResult = string(_6mx_DP);
+          prop = tmp7(2435)["6mx/DP"];
+          let stringResult = string(prop);
         } else {
-          stringResult = string(tmp11(1236).t["+3V9Tp"]);
+          stringResult = string(tmp12(1236).t["+3V9Tp"]);
         }
         obj[3] = stringResult;
         obj = [, ];
-        obj[0] = closure_4(map, obj);
+        obj[0] = callback(map, obj);
         map = found.map;
         obj[1] = map((children) => {
           let obj = { style: lib.breadCrumbItemContainer, children: null };
           let tmp4 = null;
           if (arg1 !== found.length - 1) {
             obj = { style: null };
-            obj[0] = tmp3.breadCrumbBar;
-            tmp4 = closure_1_4(tmp2, obj);
+            obj[0] = lib.breadCrumbBar;
+            tmp4 = closure_1_4(View, obj);
           }
           const items = [tmp4, , ];
-          obj = { style: tmp3.breadCrumbDot };
-          items[1] = closure_1_4(closure_1_3, obj);
-          items[2] = closure_1_4(lib(closure_1_2[6]).Text, { lineClamp: 2, ellipsizeMode: "tail", style: lib.breadCrumbText, variant: "text-md/medium", children });
+          obj = { style: lib.breadCrumbDot };
+          items[1] = closure_1_4(View, obj);
+          items[2] = closure_1_4(lib(dependencyMap[6]).Text, { lineClamp: 2, ellipsizeMode: "tail", style: lib.breadCrumbText, variant: "text-md/medium", children });
           obj[1] = items;
-          return closure_1_5(closure_1_3, obj, "" + children + "+" + arg1);
+          return closure_1_5(View, obj, "" + children + "+" + arg1);
         });
         obj[1] = obj;
-        closure_5(View, obj);
-        const tmp10 = closure_4;
-        const tmp10Result = closure_4(map, obj);
-        tmp11 = _require;
-        const tmp8 = closure_5;
-        const tmp9 = View;
+        callback2(View, obj);
+        const tmp11Result = callback(map, obj);
+        tmp12 = _require;
       }
       const flatMapResult = obj.flatMap(merged.history, (destination) => {
         [tmp] = destination.destination;
@@ -114,7 +107,7 @@ export default function Breadcrumbs(element) {
         }
         return items;
       });
-      tmp6 = found;
+      tmp7 = found;
     }
   }
   return null;

@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/utils/getBoostLifecyclePhase.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
 
 let c2 = 259200000;
-const result = set.fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");
 
 export const BOOST_EXPIRING_DISPLAY_WINDOW_DAYS = 3;
 export const BOOST_EXPIRING_DISPLAY_WINDOW_MS = 259200000;
@@ -38,7 +38,6 @@ export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id
     }
     if (time == null) {
       time = DISCORD_EPOCHDefault.extractTimestamp(id.id);
-      const obj = DISCORD_EPOCHDefault;
     }
     return time;
   }

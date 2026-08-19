@@ -1,5 +1,5 @@
 // discord_app/modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import result2 from "ChannelAffinitiesV2Constants.tsx";
@@ -20,8 +20,8 @@ prototype["initialize"] = function initialize(channelAffinities) {
     obj.lastFetched = channelAffinities.lastFetched;
     const _Map = Map;
     channelAffinities = obj.channelAffinities;
-    map = new Map(channelAffinities.map((channelId) => {
-      const items = [channelId.channelId, channelId];
+    map = new Map(channelAffinities.map((item, index) => {
+      const items = [item.channelId, item];
       return items;
     }));
   }
@@ -77,8 +77,8 @@ obj = {
     c2 = false;
     obj.channelAffinities = affineChannels.affineChannels;
     const channelAffinities = obj.channelAffinities;
-    map = new Map(channelAffinities.map((channelId) => {
-      const items = [channelId.channelId, channelId];
+    map = new Map(channelAffinities.map((item, index) => {
+      const items = [item.channelId, item];
       return items;
     }));
   },
@@ -86,13 +86,12 @@ obj = {
     c2 = false;
   },
   LOGOUT: function handleLogout() {
-    obj = {};
     const merged = Object.assign(frozen);
     map = new Map();
     c2 = false;
   }
 };
 const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
+const result = obj132.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
 
 export default channelAffinitiesV2Store;

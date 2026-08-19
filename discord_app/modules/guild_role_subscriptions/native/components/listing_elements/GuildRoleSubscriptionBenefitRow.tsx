@@ -5,18 +5,17 @@ import parseRawEmojiObjectDefault from "../../../../emojis/UnicodeEmojis.tsx";
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import EmojiIconDefault from "../EmojiIcon.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function BenefitRow(description) {
   description = description.description;
   ({ emojiId, guildId, title } = description);
   const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
   const items = [callback(EmojiIconDefault, { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(Button.Spacer, { size: 16 }), ];
-  obj = { style: tmp.textContainer, children: null };
+  let obj = { style: tmp.textContainer, children: null };
   const items1 = [title, ];
   let tmp4Result = null;
   if (null != description) {
@@ -27,14 +26,14 @@ function BenefitRow(description) {
   }
   items1[1] = tmp4Result;
   obj[1] = items1;
-  items[2] = closure_6(View, obj);
+  items[2] = callback2(View, obj);
   obj[1] = items;
-  return closure_6(View, obj);
+  return callback2(View, obj);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, textContainer: { flex: 1, justifyContent: "center" }, description: { marginTop: 2 }, channelTitle: { flexDirection: "row", alignItems: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx");
 
 export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   benefit = benefit.benefit;
@@ -54,10 +53,10 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
     obj1[0] = tmp.channelIcon;
     obj1[1] = tmp2(1297).Icon.Sizes.CUSTOM;
     obj1[2] = tmp2(6832).getChannelIcon(stateFromStores);
-    const items2 = [tmp7(tmp2(1297).Icon, obj1), ];
+    const items2 = [callback(tmp2(1297).Icon, obj1), ];
     const obj2 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj2[2] = tmp6;
-    items2[1] = tmp7(tmp2(4734).Text, obj2);
+    items2[1] = callback(tmp2(4734).Text, obj2);
     obj[1] = items2;
     tmp8 = callback2(View, obj);
     const tmp2Result = tmp2(6832);
@@ -84,7 +83,7 @@ export const IntangibleBenefitRow = function IntangibleBenefitRow(benefit) {
       str = obj.convertSurrogateToName(benefit.emoji_name, false);
     }
   }
-  obj = { emojiId: str, guildId: benefit.guildId, title: tmp(Text.Text, obj), description: benefit.description };
+  { emojiId: str, guildId: benefit.guildId, title: callback(Text.Text, obj), description: benefit.description };
   obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name };
-  return closure_5(BenefitRow, obj);
+  return callback(BenefitRow, obj);
 };

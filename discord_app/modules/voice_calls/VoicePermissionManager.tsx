@@ -1,15 +1,15 @@
 // discord_app/modules/voice_calls/VoicePermissionManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../stage_channels/StageChannelRoleStore.tsx";
-import closure_4 from "../../records/VoiceStateRecord.tsx";
-import closure_5 from "../../stores/AuthenticationStore.tsx";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import closure_7 from "../../stores/MediaEngineStore.tsx";
-import closure_8 from "../../stores/RTCConnectionStore.tsx";
+import buildStageChannelUserRoles from "../stage_channels/StageChannelRoleStore.tsx";
+import isVoiceMuted from "../../records/VoiceStateRecord.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
+import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
 import { InputModes } from "../../Constants.tsx";
 import { NativePermissionTypes } from "../native_permissions/NativePermissionConstants.tsx";
 
-const require = arg1;
+const require = fn;
 let c11 = null;
 initializeDefault;
 class VoicePermissionManager extends tmp2 {
@@ -27,8 +27,8 @@ prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(channe
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceStates) {
   voiceStates = voiceStates.voiceStates;
-  const item = voiceStates.forEach((arg0) => {
-    ({ userId, channelId } = arg0);
+  const item = voiceStates.forEach((item, index) => {
+    ({ userId, channelId } = item);
     if (null != channelId) {
       if (id.getId() === userId) {
         if (null != rTCConnectionId.getRTCConnectionId()) {
@@ -44,8 +44,8 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
             }
             if (isSpeakerResult) {
               const permission = callback2(4840).requestPermission(constants2.AUDIO);
-              permission.then((arg0) => {
-                if (arg0) {
+              permission.then((result) => {
+                if (result) {
                   callback(table[9])(true);
                 }
               });
@@ -53,23 +53,22 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
                 const permission1 = callback2(4840).requestPermission(constants2.INPUT_MONITORING);
                 const tmp19Result = callback2(4840);
               }
+              const obj4 = callback2(4840);
             } else {
-              const tmp8 = new closure_4(arg0);
+              const tmp8 = new closure_4(item);
               const audienceRequestToSpeakState = callback(4981).getAudienceRequestToSpeakState(tmp8);
               if (audienceRequestToSpeakState === callback(4981).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
                 const permission2 = callback2(4840).requestPermission(constants2.AUDIO);
-                permission2.then((arg0) => {
-                  if (arg0) {
+                permission2.then((result) => {
+                  if (result) {
                     callback(table[9])(true);
                   }
                 });
                 if (store.getMode() === constants.PUSH_TO_TALK) {
-                  const permission3 = tmp13(4840).requestPermission(tmp14.INPUT_MONITORING);
-                  const tmp13Result = tmp13(4840);
+                  const permission3 = callback2(4840).requestPermission(constants2.INPUT_MONITORING);
+                  const tmp13Result = callback2(4840);
                 }
                 const obj2 = callback2(4840);
-                tmp13 = callback2;
-                tmp14 = constants2;
               }
               const obj = callback(4981);
             }
@@ -80,7 +79,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
   });
 };
 const voicePermissionManager = new VoicePermissionManager();
-const result = require("set").fileFinishedImporting("modules/voice_calls/VoicePermissionManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_calls/VoicePermissionManager.tsx");
 
 export default voicePermissionManager;
 export const shouldImmediatelyRequestVoicePermissions = function shouldImmediatelyRequestVoicePermissions(id, id2) {

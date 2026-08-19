@@ -6,8 +6,8 @@ import trackHeartbeat from "../modules/analytics_sessions/SessionHeartbeatSchedu
 import importDefaultResult from "AuthenticationStore.tsx";
 import encodeProperties from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 
-require = arg1;
-encodeProperties = {
+require = fn;
+{
   dispatcher: dispatcherDefault,
   actionHandler: encodeProperties,
   TRACKING_URL: require("ME").Endpoints.TRACK,
@@ -15,10 +15,10 @@ encodeProperties = {
   getFingerprint: importDefaultResult.getFingerprint,
   getSessionId() {
     const session = trackHeartbeat.getSession();
-    return session.then((uuid) => {
+    return session.then((result) => {
       let sessionId;
-      if (uuid != null) {
-        sessionId = uuid.uuid;
+      if (result != null) {
+        sessionId = result.uuid;
       }
       return { sessionId };
     });
@@ -54,6 +54,6 @@ encodeProperties = {
 };
 items = [importDefaultResult];
 encodeProperties = encodeProperties.analyticsTrackingStoreMaker(encodeProperties);
-const result1 = require("set").fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
+const result1 = require("obj132").fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
 
 export default encodeProperties;

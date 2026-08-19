@@ -1,11 +1,11 @@
 // discord_app/modules/activities/utils/getActivityChannelId.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import createChannelRecord from "../../../records/ChannelRecord.tsx";
-import closure_1 from "../../../stores/ChannelStore.tsx";
-import closure_2 from "../../../stores/VoiceStateStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import updateVoiceState from "../../../stores/VoiceStateStore.tsx";
 
 const isTextChannel = createChannelRecord.isTextChannel;
-const result = set.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");
 
 export default function getActivityChannelId(userId) {
   ({ channelId, activity } = userId);

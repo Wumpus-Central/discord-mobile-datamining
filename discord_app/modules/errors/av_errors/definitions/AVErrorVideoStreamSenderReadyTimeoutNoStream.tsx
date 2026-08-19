@@ -1,23 +1,23 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx
-import closure_2 from "../../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../../../stores/VideoStreamStore.tsx";
+import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import makeTimeoutKey from "../../../../stores/VideoStreamStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx");
 
 export const AVErrorVideoStreamSenderReadyTimeoutNoStreamDefinition = {
   getActiveErrors() {
     const values = Object.values(timedoutVideos.getTimedoutVideos());
-    const found = values.filter((arg0) => {
-      ({ userId, videoStreamId } = arg0);
+    const found = values.filter((item, index) => {
+      ({ userId, videoStreamId } = item);
       let tmp = id.getId() === userId;
       if (tmp) {
         tmp = null == videoStreamId;
       }
       return tmp;
     });
-    return found.map((arg0) => {
-      const merged = Object.assign(arg0);
+    return found.map((item, index) => {
+      const merged = Object.assign(item);
       return { type: callback(table[2]).AVError.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM };
     });
   },

@@ -1,12 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import GuildNSFWContentLevel from "../../../records/GuildRecord.tsx";
-import set2 from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
-import closure_3 from "../../../stores/PermissionStore.tsx";
-import closure_4 from "../../../stores/UserStore.tsx";
+import set from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
+import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
 import { useShouldHideGuildPurchaseEntryPoints } from "../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 
 function computeGuildRoleSubscriptionSettingsVisibility(guild) {
@@ -23,16 +22,16 @@ function computeGuildRoleSubscriptionSettingsVisibility(guild) {
       let tmp4 = !shouldRestrictUpdatingRoleSubscriptionSettings;
       if (!shouldRestrictUpdatingRoleSubscriptionSettings) {
         const features2 = guild.features;
-        let hasItem = features2.has(tmp.CREATOR_MONETIZABLE);
+        let hasItem = features2.has(constants.CREATOR_MONETIZABLE);
         let tmp6 = !hasItem;
         if (!hasItem) {
           const features3 = guild.features;
-          tmp6 = !features3.has(tmp.CREATOR_MONETIZABLE_PROVISIONAL);
+          tmp6 = !features3.has(constants.CREATOR_MONETIZABLE_PROVISIONAL);
         }
         let tmp7 = !tmp6;
         if (tmp6) {
           const features4 = guild.features;
-          hasItem = features4.has(tmp.COMMUNITY);
+          hasItem = features4.has(constants.COMMUNITY);
           if (hasItem) {
             if (isOwner) {
               isOwner = tmp2;
@@ -45,13 +44,13 @@ function computeGuildRoleSubscriptionSettingsVisibility(guild) {
       }
       prop = tmp4;
     }
-    NONE = prop ? tmp9.VISIBLE : tmp9.NONE;
+    NONE = prop ? obj.VISIBLE : obj.NONE;
   }
   return NONE;
 }
 function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
   const _require = stateFromStores;
-  obj = _initialize;
+  obj = initialize;
   const items = [closure_3];
   const items1 = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => {
@@ -62,16 +61,16 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
     return canResult;
   }, items1);
   const items2 = [closure_4];
-  const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let tmp3 = null != closure_0;
     if (tmp3) {
-      tmp3 = closure_1_2(tmp2, tmp);
+      tmp3 = isGuildOwner(tmp2, tmp);
     }
     return tmp3;
   });
-  const obj2 = _initialize;
-  const isUserInCreatorMonetizationEligibleCountry = _set.useIsUserInCreatorMonetizationEligibleCountry();
-  _useShouldHideGuildPurchaseEntryPoints;
+  const obj2 = initialize;
+  const isUserInCreatorMonetizationEligibleCountry = require("../../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx").useIsUserInCreatorMonetizationEligibleCountry();
+  useShouldHideGuildPurchaseEntryPoints;
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -91,7 +90,7 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 ({ GuildFeatures: c5, Permissions: closure_6 } = ME);
 let obj = { NONE: 0, [0]: "NONE", VISIBLE: 1, [1]: "VISIBLE" };
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx");
 
 export const GuildRoleSubscriptionSettingsVisibility = obj;
 export const canSeeGuildRoleSubscriptionSettingsContent = function canSeeGuildRoleSubscriptionSettingsContent(canManageGuildRoleSubscriptions) {
@@ -108,12 +107,12 @@ export const canSeeGuildRoleSubscriptionSettingsContent = function canSeeGuildRo
       let tmp6 = !hasItem;
       if (!hasItem) {
         const features2 = guild.features;
-        tmp6 = !features2.has(tmp4.CREATOR_MONETIZABLE_PROVISIONAL);
+        tmp6 = !features2.has(constants.CREATOR_MONETIZABLE_PROVISIONAL);
       }
       let tmp7 = !tmp6;
       if (tmp6) {
         const features3 = guild.features;
-        hasItem = features3.has(tmp4.COMMUNITY);
+        hasItem = features3.has(constants.COMMUNITY);
         if (hasItem) {
           if (isOwner) {
             isOwner = tmp;
@@ -145,7 +144,7 @@ export const getGuildRoleSubscriptionSettingsVisibility = function getGuildRoleS
       canResult = closure_3.can(constants2.ADMINISTRATOR, guild);
     }
     obj[2] = canResult;
-    obj = set2;
+    obj = set;
     obj[3] = obj.isUserInCreatorMonetizationEligibleCountry();
     const features = guild.features;
     obj[4] = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
@@ -159,7 +158,7 @@ export const useCanManageGuildRoleSubscriptions = function useCanManageGuildRole
   const _require = guild;
   const items = [closure_3];
   const items1 = [guild];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_3.can(closure_1_6.ADMINISTRATOR, tmp);

@@ -7,10 +7,11 @@ import frozen from "../EmbedUtils.tsx";
 import registerAssetDefault from "../../../../../../_runtime/08189_registerAsset.js";
 import registerAssetDefault2 from "../../../../../../_runtime/08190_registerAsset.js";
 import MessageAccessibilityAction from "../../MessageAccessibilityActions.tsx";
-import closure_3 from "../../../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 const result = createCacheKey.experimental_createToken((theme) => {
   let str = "rgba(201,210,240,0.6)";
   if (obj.isThemeDark(theme.theme)) {
@@ -21,7 +22,7 @@ const result = createCacheKey.experimental_createToken((theme) => {
 });
 createCacheKey = { timestampColor: ThemesDefault.colors.TEXT_MUTED, highlightColor: result };
 let closure_4 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result1 = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/createCommonMessage.tsx");
+const result1 = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/createCommonMessage.tsx");
 
 export default function createCommonMessage(reactions) {
   ({ message, theme } = reactions);
@@ -30,15 +31,11 @@ export default function createCommonMessage(reactions) {
   channel = channel.getChannel(message.channel_id);
   obj[4] = resetCache.calendarFormat(message.timestamp, true);
   obj[5] = tmp.timestampColor;
-  const obj2 = resetCache;
   obj[6] = AccessibilityAnnouncer.isThemeDark(theme);
   obj[7] = tmp.highlightColor;
   obj[8] = reactions.reactions;
-  const obj3 = AccessibilityAnnouncer;
   obj[9] = frozen.getAssetUriForEmbed(registerAssetDefault);
-  const obj4 = frozen;
   obj[10] = frozen.getAssetUriForEmbed(registerAssetDefault2);
-  const obj5 = frozen;
   obj[11] = MessageAccessibilityAction.createMessageAccessibilityActions(message, channel);
   return obj;
 };

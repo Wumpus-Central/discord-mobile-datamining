@@ -6,14 +6,13 @@ import GameTheme from "../../modules/game_detection/GameDetectionTypes.tsx";
 import DomainMigrationEventType from "../../../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx";
 import IPCEvents from "../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx";
 import decideFileExtension from "../../modules/media/FileExtensionUtils.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeFeatures } from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { set } from "../PlatformUtils.tsx";
+import { obj132 } from "../PlatformUtils.tsx";
 
-require = arg1;
+require = fn;
 function sanitizeFilename(arg0) {
   try {
     const _decodeURIComponent = decodeURIComponent;
@@ -254,7 +253,7 @@ function normalizeRunningGame(id) {
   return obj;
 }
 function backwardCompatSend(APP_ASYNC_INDEX_TSX_LOADED) {
-  obj = set;
+  obj = obj132;
   if (obj.isDesktop()) {
     try {
       obj.sendIPC(APP_ASYNC_INDEX_TSX_LOADED);
@@ -262,7 +261,7 @@ function backwardCompatSend(APP_ASYNC_INDEX_TSX_LOADED) {
     }
   }
 }
-let set = new Set(["jpg", "jpeg", "jfif", "png"]);
+const set = new Set(["jpg", "jpeg", "jfif", "png"]);
 const set1 = new Set(["webp", "avif"]);
 const set2 = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]);
 let closure_10 = null;
@@ -274,7 +273,7 @@ let closure_15 = {};
 if (null != DiscordNative) {
   let app = DiscordNative.app;
   let parts = app.getVersion().split(".");
-  closure_10 = parts.map((joined) => parseInt(joined));
+  closure_10 = parts.map((item, index) => parseInt(item));
   const app2 = DiscordNative.app;
   moduleVersions = app2.getModuleVersions();
   const app3 = DiscordNative.app;
@@ -290,13 +289,12 @@ const re20 = /(\.[a-zA-Z0-9]+):[^.]*$/;
 const re21 = /(\.[a-zA-Z0-9]+)%3A.+$/;
 const re22 = /[^a-zA-Z0-9]/g;
 const re23 = /\.[^.]*$/;
-let obj = { SAVED: "saved", CANCELED: "canceled", ERRORED: "errored" };
-obj = {
+let obj = {
   requireModule(discord_krisp) {
     if (c14) {
       if (closure_15.hasOwnProperty(discord_krisp)) {
-        if (null != tmp[discord_krisp]) {
-          return tmp[discord_krisp];
+        if (null != closure_15[discord_krisp]) {
+          return closure_15[discord_krisp];
         }
       }
     }
@@ -308,7 +306,7 @@ obj = {
     return requireModuleResult;
   },
   ensureModule(discord_voice) {
-    if (set.isPlatformEmbedded) {
+    if (obj132 /* obj132 */.isPlatformEmbedded) {
       const nativeModules = DiscordNative.nativeModules;
       let ensureModuleResult = nativeModules.ensureModule(discord_voice);
     } else {
@@ -378,8 +376,8 @@ obj.beforeUnload = function beforeUnload() {
 obj.inputEventRegister = function inputEventRegister(parsed, arr, arg2, arg3) {
   const discordUtils = this.getDiscordUtils();
   parsed = parseInt("" + parsed);
-  discordUtils.inputEventRegister(parsed, arr.map((arg0) => {
-    [tmp, tmp2, tmp3] = arg0;
+  discordUtils.inputEventRegister(parsed, arr.map((item, index) => {
+    [tmp, tmp2, tmp3] = item;
     if (typeof tmp3 === "string") {
       const items = [tmp, tmp2, tmp3];
       let items1 = items;
@@ -389,12 +387,12 @@ obj.inputEventRegister = function inputEventRegister(parsed, arr, arg2, arg3) {
     return items1;
   }), arg2, arg3);
 };
-obj.inputEventUnregister = function inputEventUnregister(joined) {
+obj.inputEventUnregister = function inputEventUnregister(match) {
   const discordUtils = this.getDiscordUtils();
-  discordUtils.inputEventUnregister(parseInt(joined));
+  discordUtils.inputEventUnregister(parseInt(match));
 };
 obj.setOnInputEventCallback = function setOnInputEventCallback(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const self = this;
     const discordUtils = this.getDiscordUtils();
     discordUtils.inputWatchAll(arg0);
@@ -411,15 +409,15 @@ obj.setObservedGamesCallback = function setObservedGamesCallback(mapped, normali
     closure_13 = {};
     c1 = 0;
     const discordUtils = this.getDiscordUtils();
-    mapped = mapped.map((id) => {
+    mapped = mapped.map((item, index) => {
       const sum = c1 + 1;
       c1 = sum;
-      if (null != id.id) {
-        closure_13[sum] = id.id;
+      if (null != item.id) {
+        closure_13[sum] = item.id;
       }
       obj = {};
-      const merged = Object.assign(id);
-      obj.cmdline = id.cmdLine;
+      const merged = Object.assign(item);
+      obj.cmdline = item.cmdLine;
       obj.id = sum;
       return obj;
     });
@@ -432,7 +430,7 @@ obj.setObservedGamesCallback = function setObservedGamesCallback(mapped, normali
       const result = discordUtils.setProcessObserverUserId(arg3);
     }
     normalizeCallback = function normalizeCallback(arr) {
-      return callback(arr.map((arg0) => closure_1_30(arg0, closure_2)));
+      return callback(arr.map((item, index) => closure_1_30(item, closure_2)));
     };
     if (normalizeCallback) {
       if (null != discordUtils.setObservedGamesCallback2) {
@@ -453,8 +451,8 @@ obj.setProcessObserverCollectExecutableFingerprint = function setProcessObserver
 obj.getExecutableFingerprintForProcess = function getExecutableFingerprintForProcess(arg0) {
   const self = this;
   closure_0 = arg0;
-  return new Promise((arg0) => {
-    closure_0 = arg0;
+  return new Promise((fn) => {
+    closure_0 = fn;
     const discordUtils = self.getDiscordUtils();
     let prop;
     if (discordUtils != null) {
@@ -469,10 +467,10 @@ obj.getExecutableFingerprintForProcess = function getExecutableFingerprintForPro
             tmp2 = arg0;
           }
         }
-        return closure_0(tmp2);
+        return callback(tmp2);
       });
     } else {
-      arg0(null);
+      fn(null);
     }
   });
 };
@@ -481,8 +479,8 @@ obj.setGameDetectionCallback = function setGameDetectionCallback(arg0) {
   const discordUtils = this.getDiscordUtils();
   if (discordUtils.setGameDetectionCallback != null) {
     const result = setGameDetectionCallback((arr, arr2) => {
-      const mapped = arr.map((arg0) => callback(arg0));
-      return callback(mapped, arr2.map((arg0) => callback(arg0)));
+      const mapped = arr.map((item, index) => callback(item));
+      return callback(mapped, arr2.map((item, index) => callback(item)));
     });
   }
 };
@@ -510,7 +508,7 @@ obj.setCandidateGamesCallback = function setCandidateGamesCallback(arg0) {
   closure_0 = arg0;
   const discordUtils = this.getDiscordUtils();
   const result = discordUtils.setCandidateGamesCallback((arr) => {
-    callback(arr.map((arg0) => callback(arg0)));
+    callback(arr.map((item, index) => callback(item)));
   });
 };
 obj.clearCandidateGamesCallback = function clearCandidateGamesCallback() {
@@ -519,10 +517,10 @@ obj.clearCandidateGamesCallback = function clearCandidateGamesCallback() {
 };
 obj.setGameCandidateOverrides = function setGameCandidateOverrides(arr) {
   const discordUtils = this.getDiscordUtils();
-  const result = discordUtils.setGameCandidateOverrides(arr.map((arg0) => {
+  const result = discordUtils.setGameCandidateOverrides(arr.map((item, index) => {
     obj = {};
-    const merged = Object.assign(arg0);
-    ({ id: obj.gameId, name: obj.gameName } = arg0);
+    const merged = Object.assign(item);
+    ({ id: obj.gameId, name: obj.gameName } = item);
     return obj;
   }));
 };
@@ -546,7 +544,6 @@ obj.getVoiceEngine = function getVoiceEngine() {
     log.setNativeLogFn((arg0, arg1, arg2) => {
       closure_0.consoleLog(arg1, "[" + arg0 + "] " + arg2);
     });
-    obj = log;
   }
   c16 = true;
   return requireModuleResult;
@@ -562,7 +559,7 @@ obj.getDiscordUtils = function getDiscordUtils() {
   return self.requireModule("discord_utils");
 };
 obj.isSystemDarkMode = function isSystemDarkMode() {
-  let isWindowsResult = set.isWindows();
+  let isWindowsResult = obj132 /* obj132 */.isWindows();
   if (isWindowsResult) {
     const self = this;
     const discordUtils = this.getDiscordUtils();
@@ -617,12 +614,12 @@ obj.setBadge = function setBadge(arg0) {
     const dock = DiscordNative.app.dock;
     dock.setBadge(str2);
   } else {
-    let tmpResult = tmp(500);
+    let tmpResult = obj132;
     if ("win32" === tmpResult.getPlatformName()) {
       const self = this;
-      this.sendIPC(tmp(6923).IPCEvents.APP_BADGE_SET, arg0);
+      this.sendIPC(IPCEvents.IPCEvents.APP_BADGE_SET, arg0);
     } else {
-      tmpResult = tmp(500);
+      tmpResult = obj132;
       if ("linux" === tmpResult.getPlatformName()) {
         const app = DiscordNative.app;
         let num = 0;
@@ -633,15 +630,16 @@ obj.setBadge = function setBadge(arg0) {
       }
     }
   }
+  obj = obj132;
 };
 obj.setSystemTrayIcon = function setSystemTrayIcon(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const self = this;
     this.sendIPC(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_ICON, arg0);
   }
 };
 obj.setThumbarButtons = function setThumbarButtons(arg0, arg1) {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const thumbar = DiscordNative.thumbar;
     if (thumbar != null) {
       const setThumbarButtons = thumbar.setThumbarButtons;
@@ -719,7 +717,7 @@ obj.bounceDock = function bounceDock(arg0) {
   }
 };
 obj.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const self = this;
     this.sendIPC(IPCEvents.IPCEvents.SYSTEM_TRAY_SET_APPLICATIONS, arg0);
   }
@@ -727,7 +725,7 @@ obj.setSystemTrayApplications = function setSystemTrayApplications(arg0) {
 Object.defineProperty(obj, "architecture", {
   get: () => {
     let str = "";
-    if (set.isPlatformEmbedded) {
+    if (obj132 /* obj132 */.isPlatformEmbedded) {
       str = DiscordNative.process.arch;
     }
     return str;
@@ -737,7 +735,7 @@ Object.defineProperty(obj, "architecture", {
 Object.defineProperty(obj, "releaseChannel", {
   get: () => {
     let str = "";
-    if (set.isPlatformEmbedded) {
+    if (obj132 /* obj132 */.isPlatformEmbedded) {
       const app = DiscordNative.app;
       str = app.getReleaseChannel();
     }
@@ -750,10 +748,9 @@ Object.defineProperty(obj, "buildNumber", { get: () => closure_11, set: undefine
 Object.defineProperty(obj, "moduleVersions", { get: () => closure_12, set: undefined });
 Object.defineProperty(obj, "parsedOSRelease", {
   get: () => {
-    if (set.isPlatformEmbedded) {
+    if (obj132 /* obj132 */.isPlatformEmbedded) {
       const parts = DiscordNative.os.release.split(".");
-      let mapped = parts.map((joined) => parseInt(joined, 10));
-      const str = DiscordNative.os.release;
+      let mapped = parts.map((item, index) => parseInt(item, 10));
     } else {
       mapped = [];
     }
@@ -762,7 +759,7 @@ Object.defineProperty(obj, "parsedOSRelease", {
   set: undefined
 });
 obj.copy = function copy(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.copy(arg0);
   }
@@ -944,15 +941,14 @@ obj.copyImageBlob = function copyImageBlob(arg0, arg1) {
 };
 obj.canSaveImage = function canSaveImage(closure_1_0, closure_1_1) {
   if (null != closure_1_0) {
-    if (set.isPlatformEmbedded) {
-      const decideFileExtensionResult = tmp(6924).decideFileExtension(closure_1_0, closure_1_1);
+    if (obj132 /* obj132 */.isPlatformEmbedded) {
+      const decideFileExtensionResult = decideFileExtension.decideFileExtension(closure_1_0, importDefault);
       let hasItem = null == decideFileExtensionResult;
       if (!hasItem) {
         hasItem = set2.has(decideFileExtensionResult);
       }
       return hasItem;
     }
-    tmp = require;
   }
   return false;
 };
@@ -1039,7 +1035,6 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
               tmp54 = closure_1_28(tmp54);
               c9 = 1;
               c10 = 1;
-              const str12 = toURLSafeResult.pathname;
             }
             const obj13 = closure_1_1(closure_1_2[12]);
           }
@@ -1200,7 +1195,6 @@ obj.saveFile = function saveFile(arg0, arg1) {
               if (closure_1_1 == null) {
                 const parts = toURLSafeResult.pathname.split("/");
                 closure_1 = parts.pop();
-                const str = toURLSafeResult.pathname;
               }
               closure_0 = closure_1;
               if (closure_1 == null) {
@@ -1212,11 +1206,10 @@ obj.saveFile = function saveFile(arg0, arg1) {
               c4 = 1;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_26(tmp33);
+              obj1[0] = closure_1_26(closure_1_0);
               return obj1;
             }
             const obj8 = closure_1_1(closure_1_2[12]);
-            tmp33 = closure_1_0;
           }
         } else if (1 === tmp6) {
           if (arg0 === 1) {
@@ -1368,7 +1361,7 @@ obj.cleanupUnusedOpenH264Files = function cleanupUnusedOpenH264Files(c0) {
   })();
 };
 obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const fileManager = DiscordNative.fileManager;
     const getOpenH264LibraryPathSync = fileManager.getOpenH264LibraryPathSync;
     let openH264LibraryPathSync;
@@ -1379,7 +1372,7 @@ obj.getOpenH264LibraryPath = function getOpenH264LibraryPath() {
   }
 };
 obj.canCopyImage = function canCopyImage(closure_1_0) {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     if (typeof DiscordNative.clipboard.copyImage !== "function") {
       return false;
     } else {
@@ -1399,30 +1392,29 @@ obj.canCopyImage = function canCopyImage(closure_1_0) {
   } else {
     return false;
   }
-  const tmp2 = require;
 };
 obj.cut = function cut() {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.cut();
   }
 };
 obj.paste = function paste() {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     clipboard.paste();
   }
 };
 obj.readClipboard = function readClipboard() {
   let str = "";
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     str = clipboard.read();
   }
   return str;
 };
 obj.clipboardHasMixedContent = function clipboardHasMixedContent() {
-  let isPlatformEmbedded = set.isPlatformEmbedded;
+  let isPlatformEmbedded = obj132 /* obj132 */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     const clipboard = DiscordNative.clipboard;
     const hasMixedContent = clipboard.hasMixedContent;
@@ -1466,15 +1458,15 @@ obj.sendIPC = function sendIPC(APP_BADGE_SET, arg1) {
   ipc.send.apply(items);
 };
 obj.isIPCReady = function isIPCReady() {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     try {
       let ipc;
       if (DiscordNative != null) {
-        ipc = tmp.ipc;
+        ipc = DiscordNative.ipc;
       }
       let tmp4 = null != ipc;
       if (tmp4) {
-        tmp4 = typeof tmp.ipc.send === "function";
+        tmp4 = typeof DiscordNative.ipc.send === "function";
       }
       return tmp4;
     } catch (err) {
@@ -1485,10 +1477,6 @@ obj.isIPCReady = function isIPCReady() {
   }
 };
 obj.waitForIPCReady = function waitForIPCReady() {
-  let num = arg0;
-  if (arg0 === undefined) {
-    num = 5000;
-  }
   let _window = arg1;
   if (arg1 === undefined) {
     _window = window;
@@ -1527,7 +1515,7 @@ obj.waitForIPCReady = function waitForIPCReady() {
             const _Date2 = Date;
             timestamp = Date.now();
             const _Date3 = Date;
-            if (Date.now() - timestamp < closure_1_0) {
+            if (Date.now() - timestamp < num) {
               if (iPCReady.isIPCReady()) {
                 c3 = 3;
                 return { value: true, done: true };
@@ -1601,8 +1589,8 @@ obj.focus = function focus(arg0) {
   }
   let isWindowsResult = flag;
   if (flag) {
-    isWindowsResult = set.isWindows();
-    obj = set;
+    isWindowsResult = obj132 /* obj132 */.isWindows();
+    obj = obj132;
   }
   if (isWindowsResult) {
     const self = this;
@@ -1612,7 +1600,7 @@ obj.focus = function focus(arg0) {
   _window.focus(flag, arg0);
 };
 obj.blur = function blur() {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     if (null != DiscordNative.window.blur) {
       const _window = DiscordNative.window;
       _window.blur();
@@ -1638,7 +1626,7 @@ obj.setAlwaysOnTop = function setAlwaysOnTop(arg0, arg1) {
   }
 };
 obj.isAlwaysOnTop = function isAlwaysOnTop(closure_1_0) {
-  closure_0 = closure_1_0;
+  closure_0 = require;
   return callback2(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -1699,13 +1687,13 @@ obj.isAlwaysOnTop = function isAlwaysOnTop(closure_1_0) {
 obj.showInactive = function showInactive(arg0) {
   let showInactive;
   if (DiscordNative != null) {
-    const _window = tmp.window;
+    const _window = DiscordNative.window;
     if (_window != null) {
       showInactive = _window.showInactive;
     }
   }
   if (typeof showInactive === "function") {
-    const _window2 = tmp.window;
+    const _window2 = DiscordNative.window;
     _window2.showInactive(arg0);
   }
 };
@@ -1721,19 +1709,19 @@ obj.setMinimumSize = function setMinimumSize(arg0, arg1) {
   }
 };
 obj.setTrafficLightPosition = function setTrafficLightPosition(arg0) {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     if ("darwin" === tmpResult.getPlatformName()) {
       try {
         const self = this;
-        this.sendIPC(tmp(6923).IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
+        this.sendIPC(IPCEvents.IPCEvents.WINDOW_SET_TRAFFIC_LIGHT_POSITION, arg0);
       } catch (err) {
       }
     }
-    tmpResult = tmp(500);
+    tmpResult = obj132;
   }
 };
 obj.purgeMemory = function purgeMemory() {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const processUtils = DiscordNative.processUtils;
     processUtils.purgeMemory();
   }
@@ -1747,7 +1735,7 @@ obj.triggerJSException = function triggerJSException(arg0) {
   crashReporter.triggerJSException(arg0);
 };
 obj.flushDNSCache = function flushDNSCache() {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const processUtils = DiscordNative.processUtils;
     processUtils.flushDNSCache();
   }
@@ -1757,7 +1745,7 @@ obj.supportsFeature = function supportsFeature(arg0) {
   return features.supports(arg0);
 };
 obj.getEnableHardwareAcceleration = function getEnableHardwareAcceleration() {
-  const isPlatformEmbedded = set.isPlatformEmbedded;
+  const isPlatformEmbedded = obj132 /* obj132 */.isPlatformEmbedded;
   let enableHardwareAcceleration = !isPlatformEmbedded;
   if (isPlatformEmbedded) {
     const gpuSettings = DiscordNative.gpuSettings;
@@ -1837,7 +1825,7 @@ obj.getGPUDriverVersions = function getGPUDriverVersions() {
   gPUDriverVersions = Promise.resolve(Object.freeze({}));
 };
 obj.setZoomFactor = function setZoomFactor(arg0) {
-  let flag = set.isPlatformEmbedded;
+  let flag = obj132 /* obj132 */.isPlatformEmbedded;
   if (flag) {
     const _window = DiscordNative.window;
     _window.setZoomFactor(arg0);
@@ -1847,10 +1835,10 @@ obj.setZoomFactor = function setZoomFactor(arg0) {
 };
 obj.setBackgroundThrottling = function setBackgroundThrottling(arg0) {
   if (null != DiscordNative.window.setBackgroundThrottling) {
-    const _window = tmp.window;
+    const _window = DiscordNative.window;
     const result = _window.setBackgroundThrottling(arg0);
   } else {
-    const webContents = tmp.window.webContents;
+    const webContents = DiscordNative.window.webContents;
     const result1 = webContents.setBackgroundThrottling(arg0);
   }
 };
@@ -2094,7 +2082,7 @@ obj.stopCPUProfiling = function stopCPUProfiling() {
           } else {
             closure_0 = tmp4;
             closure_0 = undefined;
-            const stopCPUProfiling = closure_1_0.getDiscordUtils().stopCPUProfiling;
+            const stopCPUProfiling = self.getDiscordUtils().stopCPUProfiling;
             let stopCPUProfilingResult;
             if (stopCPUProfiling != null) {
               stopCPUProfilingResult = stopCPUProfiling();
@@ -2149,9 +2137,9 @@ obj.showOpenDialog = function showOpenDialog(properties) {
 };
 obj.flushStorageData = function flushStorageData(arg0) {
   let _Promise = Promise;
-  if (set.isPlatformEmbedded) {
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
       if (null != closure_6.processUtils.flushStorageData) {
         const processUtils = closure_6.processUtils;
@@ -2166,7 +2154,7 @@ obj.flushStorageData = function flushStorageData(arg0) {
           return tmp2;
         });
       } else {
-        arg0();
+        fn();
       }
     });
   } else {
@@ -2176,9 +2164,9 @@ obj.flushStorageData = function flushStorageData(arg0) {
 };
 obj.flushCookies = function flushCookies() {
   let _Promise = Promise;
-  if (set.isPlatformEmbedded) {
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
+    _Promise = new _Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
       if (null != closure_6.processUtils.flushCookies) {
         const processUtils = closure_6.processUtils;
@@ -2193,7 +2181,7 @@ obj.flushCookies = function flushCookies() {
           return tmp2;
         });
       } else {
-        arg0();
+        fn();
       }
     });
   } else {
@@ -2202,7 +2190,7 @@ obj.flushCookies = function flushCookies() {
   return _Promise;
 };
 obj.setCrashInformation = function setCrashInformation(arg0, arg1) {
-  let isPlatformEmbedded = set.isPlatformEmbedded;
+  let isPlatformEmbedded = obj132 /* obj132 */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     let setCrashInformation;
     if (DiscordNative != null) {
@@ -2220,7 +2208,7 @@ obj.setCrashInformation = function setCrashInformation(arg0, arg1) {
 };
 obj.blockDisplaySleep = function blockDisplaySleep() {
   let blockDisplaySleepResult = null;
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     blockDisplaySleepResult = null;
     if (null != DiscordNative.powerSaveBlocker) {
       const powerSaveBlocker = DiscordNative.powerSaveBlocker;
@@ -2230,7 +2218,7 @@ obj.blockDisplaySleep = function blockDisplaySleep() {
   return blockDisplaySleepResult;
 };
 obj.unblockDisplaySleep = function unblockDisplaySleep(arg0) {
-  let isPlatformEmbedded = set.isPlatformEmbedded;
+  let isPlatformEmbedded = obj132 /* obj132 */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     isPlatformEmbedded = null != DiscordNative.powerSaveBlocker;
   }
@@ -2240,7 +2228,7 @@ obj.unblockDisplaySleep = function unblockDisplaySleep(arg0) {
   }
 };
 obj.cleanupDisplaySleep = function cleanupDisplaySleep() {
-  let isPlatformEmbedded = set.isPlatformEmbedded;
+  let isPlatformEmbedded = obj132 /* obj132 */.isPlatformEmbedded;
   if (isPlatformEmbedded) {
     isPlatformEmbedded = null != DiscordNative.powerSaveBlocker;
   }
@@ -2250,15 +2238,15 @@ obj.cleanupDisplaySleep = function cleanupDisplaySleep() {
   }
 };
 obj.relaunch = function relaunch() {
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     const app = DiscordNative.app;
     app.relaunch();
   }
 };
 obj.makeChunkedRequest = function makeChunkedRequest(closure_0, array, arg2, arg3) {
-  obj = _sendRequest;
+  obj = sendRequest;
   _require = "" + obj.getAPIBaseURL() + closure_0;
-  if (_set.isPlatformEmbedded) {
+  if (require("../PlatformUtils.tsx").isPlatformEmbedded) {
     if (null == DiscordNative.http) {
       const _Error2 = Error;
       error = new Error("HTTP module not available");
@@ -2284,8 +2272,8 @@ obj.makeChunkedRequest = function makeChunkedRequest(closure_0, array, arg2, arg
       }
       const promise = new Promise((closure_0) => {
         closure_1 = arg1;
-        if (null != closure_1_6.http) {
-          const http = closure_1_6.http;
+        if (null != DiscordNative.http) {
+          const http = DiscordNative.http;
           obj = { method: null, chunkInterval: null, contentType: null, token: null };
           obj[0] = closure_1;
           obj[1] = chunkInterval;
@@ -2314,7 +2302,7 @@ obj.makeChunkedRequest = function makeChunkedRequest(closure_0, array, arg2, arg
   }
 };
 obj.submitLiveCrashReport = function submitLiveCrashReport(arg0) {
-  obj = set;
+  obj = obj132;
   if (obj.isWindows()) {
     const self = this;
     if (null != this.getDiscordUtils().submitLiveCrashReport) {
@@ -2445,14 +2433,14 @@ obj.GetSystemServicePerformanceMonitorSnapshot = function GetSystemServicePerfor
     const systemServiceNotAvailableError = new _require(getSystemServicePerformanceMonitorSnapshot[14]).SystemServiceNotAvailableError();
     return Promise.reject(systemServiceNotAvailableError);
   } else {
-    let promise = new Promise((arg0, arg1) => {
+    new Promise((arg0, arg1) => {
       closure_0 = arg1;
       const timeout = setTimeout(() => {
         error = new Error("Timed out waiting for performance snapshot");
         return callback(error);
       }, 1000);
     });
-    promise = new Promise((arg0, arg1) => {
+    const promise = new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
       getSystemServicePerformanceMonitorSnapshot(closure_0, (arg0) => {
@@ -2471,7 +2459,6 @@ obj.GetSystemServicePerformanceMonitorSnapshot = function GetSystemServicePerfor
             }
             error = new Error("Invalid performance snapshot JSON: " + message);
             tmp12Result = callback2(error);
-            const tmp12 = callback2;
           }
         } else {
           const _Error = Error;
@@ -2602,23 +2589,16 @@ obj.isModuleVersionAtLeast = function isModuleVersionAtLeast(arg0, stable) {
   const entries = items1.entries();
   obj = entries[Symbol.iterator]();
   while (obj !== undefined) {
-    let tmp5 = callback;
     let tmp6 = callback(tmp4, 2);
     [tmp7, tmp9] = tmp6;
     if (tmp9 > stable[tmp7]) {
-      let tmp14 = obj;
       obj.return();
       let flag2 = true;
       return true;
-    } else {
-      let tmp11 = tmp9;
-      let tmp12 = tmp7;
-      if (tmp10 < stable[tmp8]) {
-        let tmp13 = obj;
-        obj.return();
-        let flag = false;
-        return false;
-      }
+    } else if (tmp10 < stable[tmp8]) {
+      obj.return();
+      let flag = false;
+      return false;
     }
   }
   return true;
@@ -2628,7 +2608,7 @@ obj.fetchRiotGamesLiveClientData = function fetchRiotGamesLiveClientData(arg0) {
   if (arg1 === undefined) {
     obj = {};
   }
-  if (set.isPlatformEmbedded) {
+  if (obj132 /* obj132 */.isPlatformEmbedded) {
     if (null == DiscordNative.riotGames) {
       const _Error2 = Error;
       error = new Error("Riot Games module not available");
@@ -2714,6 +2694,7 @@ obj.appViewed = function appViewed() {
     performance.mark("app_viewed");
     this.sendIPC(IPCEvents.IPCEvents.APP_VIEWED);
   }
+  obj = obj132;
 };
 obj.appFirstRenderAfterReadyPayload = function appFirstRenderAfterReadyPayload(arg0) {
   if (obj.isDesktop()) {
@@ -2722,6 +2703,7 @@ obj.appFirstRenderAfterReadyPayload = function appFirstRenderAfterReadyPayload(a
     performance.mark("app_first_render_after_ready_payload");
     this.sendIPC(IPCEvents.IPCEvents.APP_FIRST_RENDER_AFTER_READY_PAYLOAD, arg0);
   }
+  obj = obj132;
 };
 obj.appLoaded = function appLoaded() {
   backwardCompatSend(IPCEvents.IPCEvents.APP_LOADED);
@@ -2769,7 +2751,7 @@ obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
               table = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_1.ensureModule("discord_media");
+              obj1[0] = self.ensureModule("discord_media");
               return obj1;
             } else {
               c3 = 3;
@@ -2796,7 +2778,7 @@ obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
             const items = [];
           } else {
             gpuStats = gpuStats.getGpuStats(gpuStats);
-            gpuStats.catch(() => []);
+            gpuStats.catch((error) => []);
           }
           c3 = 3;
         }
@@ -2807,7 +2789,7 @@ obj.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
     }
   })();
 };
-let result = set.fileFinishedImporting("utils/web/DesktopNativeUtils.tsx");
+let result = require("obj132").fileFinishedImporting("utils/web/DesktopNativeUtils.tsx");
 
 export default obj;
 export const SaveImageResult = obj;

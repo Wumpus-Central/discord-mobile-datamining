@@ -6,8 +6,8 @@ import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
 noopAll;
 let closure_4 = createCacheKey.createStyles({ radio: { width: 22, height: 22 } });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormRadio.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormRadio.tsx");
 
 export default function FormRadio(selected) {
-  return <Image style={callback().radio} source={importDefault(arg0.selected ? 6944 : 6945)} />;
+  return <Image style={callback().radio} source={importDefault(selected.selected ? 6944 : 6945)} />;
 };

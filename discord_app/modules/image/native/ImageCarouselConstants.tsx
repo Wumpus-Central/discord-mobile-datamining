@@ -1,7 +1,7 @@
 // discord_app/modules/image/native/ImageCarouselConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/image/native/ImageCarouselConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/image/native/ImageCarouselConstants.tsx");
 
 export const IMAGE_CAROUSEL_TILE_HEIGHT = 60;
 export const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = 6;

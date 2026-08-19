@@ -1,15 +1,15 @@
 // discord_app/modules/custom_status/utils/getRandomCustomStatusPrompt.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import StatusTypes from "../Constants.tsx";
 
 ({ CustomStatusPrompts: obj1, CustomStatusPromptValues: c3 } = StatusTypes);
-const result = set.fileFinishedImporting("modules/custom_status/utils/getRandomCustomStatusPrompt.tsx");
+const result = obj132.fileFinishedImporting("modules/custom_status/utils/getRandomCustomStatusPrompt.tsx");
 
 export default function getRandomCustomStatusPrompt(size) {
   closure_0 = size;
   if (null != size) {
     if (size.size > 0) {
-      let found = closure_2.filter((value) => !size.has(value.value));
+      let found = closure_2.filter((item, index) => !size.has(item.value));
     }
     if (0 === found.length) {
       const obj = { value: null, label: null };

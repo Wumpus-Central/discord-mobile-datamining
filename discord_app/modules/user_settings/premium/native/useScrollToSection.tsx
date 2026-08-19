@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/useScrollToSection.tsx
-import closure_0 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/useScrollToSection.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/useScrollToSection.tsx");
 
 export default function useScrollToSection(arg0, arg1) {
   const React = arg0;

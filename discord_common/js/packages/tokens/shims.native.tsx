@@ -1,8 +1,8 @@
 // discord_common/js/packages/tokens/shims.native.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "native.tsx";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/shims.native.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/tokens/shims.native.tsx");
 
 export const unsafe_getRawColor = function unsafe_getRawColor(RED_400) {
   return ThemesDefault.unsafe_rawColors[RED_400];

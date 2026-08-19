@@ -2,11 +2,10 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import saveGuildFoldersDefault from "../../../../actions/UserSettingsActionCreators.tsx";
-import closure_2 from "../../SelectivelySyncedUserSettingsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["3340dY"]);
@@ -19,6 +18,6 @@ createToggle = {
   onValueChange: saveGuildFoldersDefault.setShouldSyncTextSettings
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/TextAndMediaSyncSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/TextAndMediaSyncSetting.tsx");
 
 export default createToggle;

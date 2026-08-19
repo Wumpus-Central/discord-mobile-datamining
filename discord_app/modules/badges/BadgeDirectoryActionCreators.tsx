@@ -1,10 +1,10 @@
 // discord_app/modules/badges/BadgeDirectoryActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/UserStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function urlUserId(arg0) {
   currentUser = currentUser.getCurrentUser();
   let id;
@@ -308,7 +308,7 @@ function _fetchBadge() {
   return applyArgumentsResult;
 }
 ({ Endpoints: c5, ME: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/badges/BadgeDirectoryActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/badges/BadgeDirectoryActionCreators.tsx");
 
 export const fetchBadgeDirectory = function fetchBadgeDirectory(id) {
   const self = this;
@@ -331,7 +331,6 @@ export const fetchBadge = function fetchBadge(GIFTING) {
   return applyArgumentsResult;
 };
 export const markBadgeDirectoryBadgeIndicatorSeen = function markBadgeDirectoryBadgeIndicatorSeen(badgeId) {
-  let obj = dispatcherDefault;
-  obj = { type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId };
+  const obj = { type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId };
   obj.dispatch(obj);
 };

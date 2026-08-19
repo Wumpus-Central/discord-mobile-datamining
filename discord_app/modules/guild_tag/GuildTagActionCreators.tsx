@@ -1,9 +1,9 @@
 // discord_app/modules/guild_tag/GuildTagActionCreators.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/UserStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _adoptGuildIdentity() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -107,7 +107,7 @@ function _adoptGuildIdentity() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_tag/GuildTagActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_tag/GuildTagActionCreators.tsx");
 
 export const adoptGuildIdentity = function adoptGuildIdentity(closure_1_0, arg1) {
   const self = this;

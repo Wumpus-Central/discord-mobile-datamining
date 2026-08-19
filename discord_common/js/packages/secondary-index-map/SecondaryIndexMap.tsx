@@ -1,9 +1,9 @@
 // discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx
 import sortedIndexByDefault from "../../../../_runtime/04018_sortedIndexBy.js";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 let closure_3 = [];
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx");
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx");
 class SecondaryIndexMap {
   constructor(arg0, arg1) {
     fn = importDefault;
@@ -19,7 +19,7 @@ class SecondaryIndexMap {
     obj[2] = {};
     obj[3] = {};
     obj.indexBy = global;
-    obj.sortBy = arg1;
+    obj.sortBy = fn;
     obj.isEqual = fn;
     return obj;
   }
@@ -46,11 +46,8 @@ prototype["indexes"] = function indexes(flag) {
         const entries = Object.entries(self.valueIndexes);
         const tmp4 = entries[Symbol.iterator]();
         while (tmp4 !== undefined) {
-          let tmp8 = callback;
           let tmp9 = callback(tmp6, 2);
           let items = [];
-          let tmp10 = items;
-          let num2 = 0;
           let arraySpreadResult = HermesBuiltin.arraySpread(tmp9[1], 0);
           obj[tmp9[0]] = items;
           continue;
@@ -112,8 +109,7 @@ prototype["get"] = function get(arg0) {
   return valueMap.get(arg0);
 };
 prototype["set"] = function set(arg0, value) {
-  let self = this;
-  self = this;
+  const self = this;
   dependencyMap = value;
   value = this.get(arg0);
   importDefault = value;
@@ -153,18 +149,18 @@ prototype["set"] = function set(arg0, value) {
         valueArray.splice(sortedIndexByDefault(valueArray, value, sortBy), 0, value);
       }
       if (null != value) {
-        const item = self.indexBy(value).forEach((arg0) => {
-          const index = self.getIndex(arg0);
+        const item = self.indexBy(value).forEach((item, index) => {
+          index = self.getIndex(item);
           if (null != closure_0) {
-            const tmp5 = value(value[1])(index, tmp, tmp2);
+            const tmp5 = value(value[1])(index, closure_0, tmp2);
             let tmp6 = tmp5;
-            if (index[tmp5] !== tmp) {
+            if (index[tmp5] !== closure_0) {
               let tmp7 = tmp5;
               tmp6 = tmp5;
               if (tmp5 < index.length - 1) {
                 const sum = tmp7 + 1;
                 tmp6 = sum;
-                while (index[sum] !== tmp) {
+                while (index[sum] !== closure_0) {
                   tmp7 = sum;
                   tmp6 = sum;
                   if (sum >= index.length - 1) {
@@ -179,10 +175,10 @@ prototype["set"] = function set(arg0, value) {
         const indexByResult = self.indexBy(value);
       }
       if (null != value) {
-        const item1 = self.indexBy(value).forEach((arg0) => {
-          const index = self.getIndex(arg0);
+        const item1 = self.indexBy(value).forEach((item, index) => {
+          index = self.getIndex(item);
           if (null != value) {
-            index.splice(value(value[1])(index, tmp, tmp2), 0, tmp);
+            index.splice(value(value[1])(index, value, tmp2), 0, value);
           }
         });
         const indexByResult1 = self.indexBy(value);
@@ -198,11 +194,11 @@ prototype["set"] = function set(arg0, value) {
 prototype["delete"] = function delete(arg0) {
   return this.set(arg0, null);
 };
-prototype["getIndex"] = function getIndex(arg0) {
-  let tmp2 = this.valueIndexes[arg0];
+prototype["getIndex"] = function getIndex(item) {
+  let tmp2 = this.valueIndexes[item];
   if (null == tmp2) {
     const items = [];
-    tmp.valueIndexes[arg0] = items;
+    tmp.valueIndexes[item] = items;
     tmp2 = items;
   }
   return tmp2;

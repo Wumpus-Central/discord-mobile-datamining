@@ -1,5 +1,5 @@
 // discord_app/modules/app_database/util/Lru.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 class Lru {
   constructor(arg0) {
@@ -78,6 +78,6 @@ prototype["oldestKey"] = function oldestKey() {
   const items = this.items;
   return items.keys().next().value;
 };
-let result = set.fileFinishedImporting("modules/app_database/util/Lru.tsx");
+let result = obj132.fileFinishedImporting("modules/app_database/util/Lru.tsx");
 
 export { Lru };

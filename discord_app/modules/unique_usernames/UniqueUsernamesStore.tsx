@@ -1,6 +1,6 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import privDefault from "../../../_runtime/01405_priv.js";
 
@@ -41,8 +41,8 @@ prototype["usernameSuggestionLoading"] = function usernameSuggestionLoading() {
 prototype["isCurrentUsernameInvalid"] = function isCurrentUsernameInvalid() {
   return obj.currentUsernameInvalid;
 };
-prototype["wasRegistrationSuggestionFetched"] = function wasRegistrationSuggestionFetched(arg0) {
-  return obj.suggestions.registration.source === arg0 && obj.suggestions.registration.fetched;
+prototype["wasRegistrationSuggestionFetched"] = function wasRegistrationSuggestionFetched(callback) {
+  return obj.suggestions.registration.source === callback && obj.suggestions.registration.fetched;
 };
 prototype["wasSuggestionsFetched"] = function wasSuggestionsFetched() {
   return obj.suggestions.migration.fetched;
@@ -64,9 +64,8 @@ obj = {
       if (retryAfter == null) {
         num = 7;
       }
-      const result = validations.set(username, obj, num * setDefault.Millis.SECOND);
+      const result = validations.set(username, obj, num * obj132Default.Millis.SECOND);
       let tmp = obj;
-      const tmp3 = obj;
     } else {
       tmp = obj;
       validations = obj.validations;
@@ -77,7 +76,7 @@ obj = {
     if (null != retryAfter) {
       const _Date = Date;
       const timestamp = Date.now();
-      tmp.retryAfterTime = timestamp + retryAfter * setDefault.Millis.SECOND;
+      tmp.retryAfterTime = timestamp + retryAfter * obj132Default.Millis.SECOND;
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
@@ -110,6 +109,6 @@ obj = {
 };
 const uniqueUsernamesStore = new UniqueUsernamesStore(dispatcherDefault, obj);
 let tmp2 = new privDefault({ max: 100, maxAge: 60000 });
-let result = require("set").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesStore.tsx");
 
 export default uniqueUsernamesStore;

@@ -1,12 +1,12 @@
 // discord_app/design/components/Modal/native/ModalStepIndicator.native.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../intl/Mana.messages.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function StepPill(isActive) {
   isActive = isActive.isActive;
   let TEXT_BRAND = isActive.activeColor;
@@ -72,7 +72,7 @@ function StepPill(isActive) {
 let closure_6 = { overshootClamping: true };
 let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", gap: 4 }, stepPill: { height: 4, borderRadius: 2 } });
 let closure_8 = { code: "function ModalStepIndicatorNativeTsx1(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}" };
-let result = require("set").fileFinishedImporting("design/components/Modal/native/ModalStepIndicator.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Modal/native/ModalStepIndicator.native.tsx");
 
 export const ModalStepIndicator = function ModalStepIndicator(arg0) {
   ({ currentStep, totalSteps } = arg0);
@@ -85,8 +85,6 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
   } else {
     const items = [];
     for (let num = 0; num < totalSteps; num = num + 1) {
-      let tmp2 = jsx;
-      let tmp3 = StepPill;
       obj = { isActive: null, activeColor: null, inactiveColor: null, inactiveOpacity: null };
       obj[0] = num === currentStep;
       obj[1] = activeColor;

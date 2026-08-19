@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import messagesProxyDefault from "FamilyCenter.messages.js";
 import _mod3618 from "../../../_runtime/metro/03618__.js";
 import formatSingleCurrencyPrice from "../../utils/PriceUtils.tsx";
 
-const result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
 
 export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {
   return { skuId: giftInfo.sku_id, subscriptionPlanId: giftInfo.subscription_plan_id, price: giftInfo.price, gifterUserId: giftInfo.gifter_user_id, claimed: giftInfo.claimed, offeredAt: giftInfo.offered_at, claimedAt: giftInfo.claimed_at };
@@ -39,15 +39,15 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
       }
       obj = { date: null };
       const _Intl2 = Intl;
-      const dateTimeFormat = new Intl.DateTimeFormat(tmp8(1236).intl.currentLocale, { month: "short", day: "numeric" });
-      let tmp8Result = tmp8(3618);
+      const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { month: "short", day: "numeric" });
+      let tmp8Result = _mod3618;
       obj[0] = dateTimeFormat.format(tmp8Result.parseISO(claimedAt));
       let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj);
     } else {
       obj1 = { date: null };
       const _Intl = Intl;
-      const dateTimeFormat1 = new Intl.DateTimeFormat(tmp8(1236).intl.currentLocale, { month: "short", day: "numeric" });
-      tmp8Result = tmp8(3618);
+      const dateTimeFormat1 = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { month: "short", day: "numeric" });
+      tmp8Result = _mod3618;
       obj1[0] = dateTimeFormat1.format(tmp8Result.parseISO(offeredAt));
       formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj1);
     }

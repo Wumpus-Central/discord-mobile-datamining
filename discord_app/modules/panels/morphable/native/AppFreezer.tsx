@@ -1,13 +1,13 @@
 // discord_app/modules/panels/morphable/native/AppFreezer.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
-import setDefault from "../../../core/native/NativeView.tsx";
+import obj132Default from "../../../core/native/NativeView.tsx";
 import closure_2 from "../AppFreezeStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopAll;
-let closure_4 = jsx(setDefault, { style: { flex: 1 } });
-const result = require("set").fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
+let closure_4 = jsx(obj132Default, { style: { flex: 1 } });
+const result = require("obj132").fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
 
 export default function AppFreezer(children) {
   let flag = children.manualFreeze;
@@ -22,7 +22,7 @@ export default function AppFreezer(children) {
   let freeze = callback((lockKeys) => {
     lockKeys = lockKeys.lockKeys;
     if (null != lockKeys) {
-      let someResult = lockKeys.some((arg0) => lockKeys.has(arg0));
+      let someResult = lockKeys.some((item, index) => lockKeys.has(item));
     } else {
       someResult = lockKeys.size > 0;
     }

@@ -1,7 +1,7 @@
 // discord_app/intl/number-parts.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("intl/number-parts.tsx");
+const result = obj132.fileFinishedImporting("intl/number-parts.tsx");
 const obj = Object.create(null);
 obj[0] = { group: " ", decimal: "," };
 obj[1] = { group: " ", decimal: "," };

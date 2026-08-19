@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/transports/PostMessageProxySocket.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import HANDSHAKEDefault from "../RPCOpcodes.tsx";
 import prototypeDefault from "../RPCError.tsx";
@@ -78,6 +78,6 @@ prototype["close"] = function close(arg0, arg1) {
   }
   self.closed = true;
 };
-let result = set.fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
+let result = obj132.fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
 
 export default WindowProxySocket;

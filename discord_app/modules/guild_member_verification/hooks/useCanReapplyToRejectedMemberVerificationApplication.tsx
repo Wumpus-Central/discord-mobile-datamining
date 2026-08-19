@@ -1,13 +1,13 @@
 // discord_app/modules/guild_member_verification/hooks/useCanReapplyToRejectedMemberVerificationApplication.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import closure_6 from "../../../stores/InviteStore.tsx";
-import closure_7 from "../UserGuildJoinRequestStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import updateInvite from "../../../stores/InviteStore.tsx";
+import handleGatewayJoinRequestUpdate from "../UserGuildJoinRequestStore.tsx";
 import { GuildFeatures } from "../../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useCanReapplyToRejectedMemberVerificationApplication.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useCanReapplyToRejectedMemberVerificationApplication.tsx");
 
 export const useCanReapplyToRejectedMemberVerificationApplication = function useCanReapplyToRejectedMemberVerificationApplication(guildId) {
   let _require = guildId;
@@ -21,7 +21,6 @@ export const useCanReapplyToRejectedMemberVerificationApplication = function use
     }
     return joinRequestGuild;
   });
-  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c2 = 0;
@@ -62,10 +61,9 @@ export const useCanReapplyToRejectedMemberVerificationApplication = function use
                 c2 = 2;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj1.fetchVerificationForm(tmp30, inviteKeyForGuildId);
+                obj1[0] = obj1.fetchVerificationForm(closure_0, inviteKeyForGuildId);
                 return obj1;
               }
-              tmp30 = closure_0;
             }
           } else if (1 === tmp7) {
             c4 = 0;

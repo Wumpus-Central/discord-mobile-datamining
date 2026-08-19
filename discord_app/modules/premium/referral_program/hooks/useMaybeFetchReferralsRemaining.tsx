@@ -1,12 +1,12 @@
 // discord_app/modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/UserStore.tsx";
-import closure_5 from "../../ReferralTrialStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import emitChanges from "../../ReferralTrialStore.tsx";
 import GuildFeatures from "../../PremiumConstants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ PremiumTypes: closure_6, FractionalPremiumStates: error } = GuildFeatures);
-let result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
 
 export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRemaining(flag) {
   if (flag === undefined) {
@@ -52,4 +52,5 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
       const result = closure_1_5.checkAndFetchReferralsRemaining();
     }
   }, items1);
+  const obj3 = flag(8277);
 };

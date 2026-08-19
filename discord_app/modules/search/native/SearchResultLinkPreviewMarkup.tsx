@@ -8,6 +8,6 @@ const items = [parseLinkDefault.NATIVE_SEARCH_RESULT_LINK_RULES, ];
 items[1] = require("createSearchResultLinkPreviewReactRules").createSearchResultLinkPreviewReactRules();
 const importDefaultResultResult = importDefaultResult(items);
 const reactParserForResult = importAllResult.reactParserFor(importDefaultResultResult);
-const result = require("set").fileFinishedImporting("modules/search/native/SearchResultLinkPreviewMarkup.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/SearchResultLinkPreviewMarkup.tsx");
 
 export const NativeSearchResultLinkPreviewParser = reactParserForResult;

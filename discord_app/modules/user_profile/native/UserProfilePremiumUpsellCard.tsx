@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/native/UserProfilePremiumUpsellCard.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ AnalyticsObjects: c4, AnalyticsPages: c5, AnalyticsSections: closure_6, UserSettingsSections: error } = ME);
 let closure_9 = createCacheKey.createStyles((bottom) => {
   const container = { position: "absolute", bottom, start: 0, end: 0 };
   return { container };
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePremiumUpsellCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfilePremiumUpsellCard.tsx");
 
 export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCard(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
@@ -27,15 +27,14 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   analyticsLocations = analyticsLocations(7139)(items).analyticsLocations;
   const items1 = [navigation];
   callback = React.useCallback(() => {
-    analyticsLocations(closure_1_2[9]).setSection(closure_1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
+    analyticsLocations(dependencyMap[9]).setSection(closure_1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
     navigation.push(closure_1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
   }, items1);
   const items2 = [analyticsLocations];
   const callback1 = React.useCallback(() => {
-    obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: null };
-    obj = { page: closure_1_5.USER_SETTINGS, section: closure_1_6.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT, object: closure_1_4.BUTTON_CTA };
-    obj[2] = navigation(closure_1_2[11]).PremiumFeatureCardOrder.TIER_2_LEADING;
-    analyticsLocations(closure_1_2[10])(obj);
+    const obj = { page: closure_1_5.USER_SETTINGS, section: closure_1_6.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT, object: closure_1_4.BUTTON_CTA };
+    obj[2] = navigation(dependencyMap[11]).PremiumFeatureCardOrder.TIER_2_LEADING;
+    analyticsLocations(dependencyMap[10])(obj);
   }, items2);
   obj = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
   const tmp7 = analyticsLocations(7139);

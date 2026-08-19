@@ -1,8 +1,8 @@
 // discord_app/modules/ato_alerts/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
-const result = set.fileFinishedImporting("modules/ato_alerts/Constants.tsx");
+const result = obj132.fileFinishedImporting("modules/ato_alerts/Constants.tsx");
 
 export const LIKELY_ATO_MORE_TIPS_MODAL_KEY = "LIKELY_ATO_MORE_TIPS_MODAL";
 export const LEARN_MORE_HC_ARTICLE = "https://discord.com/safety/understanding-and-avoiding-common-scams";

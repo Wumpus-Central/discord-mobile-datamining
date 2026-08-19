@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/hooks/useHandleUseNow.tsx
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { isExternalProduct } from "../CollectiblesShopConstants.tsx";
 
-let require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useHandleUseNow.tsx");
+let require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useHandleUseNow.tsx");
 
 export const useHandleUseNow = function useHandleUseNow(product) {
   product = product.product;
@@ -14,18 +14,15 @@ export const useHandleUseNow = function useHandleUseNow(product) {
   const onError = product.onError;
   let callback;
   let firstAvatarDecoration;
-  let firstProfileEffect;
-  let firstNameplate;
-  let firstProfileFrame;
   let memo;
   let obj = firstAvatarDecoration;
   const tmp = callback(firstAvatarDecoration.useState(false), 2);
   callback = tmp[1];
   const shopProductItems = require(onSuccess[6]).useShopProductItems(product);
   firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
-  firstProfileEffect = shopProductItems.firstProfileEffect;
-  firstNameplate = shopProductItems.firstNameplate;
-  firstProfileFrame = shopProductItems.firstProfileFrame;
+  const firstProfileEffect = shopProductItems.firstProfileEffect;
+  const firstNameplate = shopProductItems.firstNameplate;
+  const firstProfileFrame = shopProductItems.firstProfileFrame;
   const type = product.type;
   if (require(onSuccess[4]).CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = tmp2(tmp3[5]).intl;
@@ -55,15 +52,12 @@ export const useHandleUseNow = function useHandleUseNow(product) {
       const set = new Set();
       const items = closure_0.items;
       for (const item10023 of items) {
-        let tmp9 = item10023;
         if (set.has(item10023.type)) {
-          let tmp12 = obj2;
           obj2.return();
           let flag = false;
           return false;
         } else {
-          let tmp10 = item10023;
-          let addResult = set.add(tmp9.type);
+          let addResult = set.add(item10023.type);
           continue;
         }
       }
@@ -101,7 +95,7 @@ export const useHandleUseNow = function useHandleUseNow(product) {
               const callback2 = tmp4;
               closure_2 = tmp8;
               c0 = undefined;
-              if (!closure_1_8) {
+              if (!memo) {
                 c7 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
@@ -109,8 +103,8 @@ export const useHandleUseNow = function useHandleUseNow(product) {
                 obj1 = {};
                 c0 = obj1;
                 c5 = 2;
-                if (null != closure_1_4) {
-                  obj1.avatarDecoration = closure_1_4;
+                if (null != firstAvatarDecoration) {
+                  obj1.avatarDecoration = firstAvatarDecoration;
                 }
                 if (null == c5) {
                   if (null == c7) {
@@ -119,7 +113,7 @@ export const useHandleUseNow = function useHandleUseNow(product) {
                     }
                     const _Object = Object;
                     if (Object.keys(c0).length > 0) {
-                      let obj3 = closure_1_0(closure_1_1[9]);
+                      let obj3 = closure_1_0(onSuccess[9]);
                       c6 = 4;
                       c7 = 1;
                       const obj2 = { value: null, done: false };
@@ -135,7 +129,7 @@ export const useHandleUseNow = function useHandleUseNow(product) {
                     }
                   }
                 }
-                let obj5 = closure_1_0(closure_1_1[7]);
+                let obj5 = closure_1_0(onSuccess[7]);
                 c0 = tmp21;
                 if (c5 == null) {
                   c0 = undefined;
@@ -151,7 +145,7 @@ export const useHandleUseNow = function useHandleUseNow(product) {
                 c6 = 3;
                 c7 = 1;
                 const obj4 = { value: null, done: false };
-                obj4[0] = closure_1_0(closure_1_1[8]).saveProfileChanges(profileChangesForUpdateRequest);
+                obj4[0] = closure_1_0(onSuccess[8]).saveProfileChanges(profileChangesForUpdateRequest);
                 return obj4;
               }
             }

@@ -1,11 +1,11 @@
 // discord_app/modules/game_console/native/transferToXbox.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Linking } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { PlatformTypes } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function _transferToXbox() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -122,8 +122,8 @@ function _transferToXbox() {
           } else {
             const obj10 = { importer: null };
             obj10[0] = function importer() {
-              return callback(paths[10])(paths[9], paths.paths).then((arg0) => {
-                closure_0 = arg0.default;
+              return callback(paths[10])(paths[9], paths.paths).then((result) => {
+                closure_0 = result.default;
                 return () => { ... };
               });
             };
@@ -149,7 +149,7 @@ function _transferToXbox() {
   return applyArgumentsResult;
 }
 noopAll;
-const result = require("set").fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");
 
 export default function transferToXbox() {
   const self = this;

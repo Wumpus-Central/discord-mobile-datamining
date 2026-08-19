@@ -1,8 +1,8 @@
 // discord_app/modules/messages/ApplicationCommands.tsx
-import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 
 const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;
-const result = require("set").fileFinishedImporting("modules/messages/ApplicationCommands.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/ApplicationCommands.tsx");
 
 export const getApplicationCommand = function getApplicationCommand(content) {
   const match = regex.exec(content);

@@ -1,27 +1,24 @@
 // discord_app/modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocompleteWrapper.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { FlatList } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 require("ME").AutoCompleteResultTypes;
 let closure_7 = { code: "function HorizontalAutocompleteWrapperTsx1(){const{withTiming,toValue}=this.__closure;return{opacity:withTiming(toValue)};}" };
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocompleteWrapper.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocompleteWrapper.tsx");
 
 export default function HorizontalAutocompleteWrapper(channel) {
   channel = channel.channel;
   const onPressAutocompleteItem = channel.onPressAutocompleteItem;
   autocompleteSelectionStart = undefined;
-  let query;
-  let callback;
-  let num;
   ({ style, text, selection } = channel);
   let obj = channel(autocompleteSelectionStart[4]);
   const horizontalAutocompleteResults = obj.useHorizontalAutocompleteResults({ channel, text, selection });
   ({ results, autocompleteSelectionStart } = horizontalAutocompleteResults);
-  query = horizontalAutocompleteResults.query;
+  const query = horizontalAutocompleteResults.query;
   const items = [onPressAutocompleteItem, autocompleteSelectionStart, query];
-  callback = query.useCallback((stopPropagation) => {
+  const callback = query.useCallback((stopPropagation) => {
     stopPropagation.stopPropagation();
     num = autocompleteSelectionStart;
     if (autocompleteSelectionStart == null) {
@@ -34,7 +31,7 @@ export default function HorizontalAutocompleteWrapper(channel) {
     onPressAutocompleteItem(arg1, num, str);
   }, items);
   const items1 = [channel.guild_id, callback];
-  num = 0;
+  let num = 0;
   const callback1 = query.useCallback((item) => {
     item = item.item;
     const type = item.type;
@@ -43,31 +40,31 @@ export default function HorizontalAutocompleteWrapper(channel) {
       const merged = Object.assign(item);
       obj.guildId = item.guild_id;
       obj.onPress = function onPress(arg0) {
-        return closure_1_4(arg0, item);
+        return callback(arg0, item);
       };
-      return closure_1_6(onPressAutocompleteItem(autocompleteSelectionStart[5]).User, obj);
-    } else if (tmp.ROLE === type) {
+      return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).User, {});
+    } else if (num.ROLE === type) {
       obj = {};
       const merged1 = Object.assign(item);
       obj.guildId = item.guild_id;
       obj.onPress = function onPress(arg0) {
-        return closure_1_4(arg0, item);
+        return callback(arg0, item);
       };
-      return closure_1_6(onPressAutocompleteItem(autocompleteSelectionStart[5]).Role, obj);
-    } else if (tmp.CHANNEL === type) {
+      return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).Role, {});
+    } else if (num.CHANNEL === type) {
       obj1 = {};
       const merged2 = Object.assign(item);
       obj1.onPress = function onPress(arg0) {
-        return closure_1_4(arg0, item);
+        return callback(arg0, item);
       };
-      return closure_1_6(onPressAutocompleteItem(autocompleteSelectionStart[5]).Channel, obj1);
-    } else if (tmp.EMOJI === type) {
+      return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).Channel, {});
+    } else if (num.EMOJI === type) {
       obj = {};
       const merged3 = Object.assign(item);
       obj.onPress = function onPress(arg0) {
-        return closure_1_4(arg0, item);
+        return callback(arg0, item);
       };
-      return closure_1_6(onPressAutocompleteItem(autocompleteSelectionStart[5]).Emoji, obj);
+      return jsx(onPressAutocompleteItem(autocompleteSelectionStart[5]).Emoji, {});
     } else {
       return null;
     }

@@ -1,10 +1,10 @@
 // discord_app/utils/SpellcheckUtils.tsx
-import set2 from "PlatformUtils.tsx";
-import setDefault from "../lib/DiscordNative.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import set from "PlatformUtils.tsx";
+import obj1322 from "PlatformUtils.tsx";
+import obj132Default from "../lib/DiscordNative.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import obj132 from "PlatformUtils.tsx";
 
-require = arg1;
+require = fn;
 function _setEnabled() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -533,33 +533,33 @@ function _replaceWithCorrection() {
   return applyArgumentsResult;
 }
 require("processCallbacks").addPostConnectionCallback;
-set = set.isDesktop();
-if (set) {
-  const importDefaultResult = setDefault;
+obj132 = obj132.isDesktop();
+if (obj132) {
+  const importDefaultResult = obj132Default;
   let spellCheck;
   if (importDefaultResult != null) {
     spellCheck = importDefaultResult.spellCheck;
   }
-  set = null != spellCheck;
+  obj132 = null != spellCheck;
 }
 let promise = null;
-if (set) {
+if (obj132) {
   promise = new Promise((arg0) => {
     closure_0 = arg0;
     const resolved = Promise.resolve();
-    resolved.then(() => closure_1_4(() => callback(closure_1_0(closure_1_2[4]).install())));
+    resolved.then((result) => addPostConnectionCallback(() => callback(closure_1_0(closure_1_2[4]).install())));
   });
 }
 let c6 = null;
 if (promise != null) {
-  promise.then((arg0) => {
-    closure_6 = arg0;
+  promise.then((result) => {
+    closure_6 = result;
   });
 }
 function isSupported() {
-  let isDesktopResult = set2.isDesktop();
+  let isDesktopResult = obj1322.isDesktop();
   if (isDesktopResult) {
-    const tmp4 = setDefault;
+    const tmp4 = obj132Default;
     let spellCheck;
     if (tmp4 != null) {
       spellCheck = tmp4.spellCheck;
@@ -568,7 +568,7 @@ function isSupported() {
   }
   return isDesktopResult;
 }
-const result = set.fileFinishedImporting("utils/SpellcheckUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/SpellcheckUtils.tsx");
 
 export { isSupported };
 export const setEnabled = function setEnabled() {
@@ -637,13 +637,13 @@ export const setAppLocale = function setAppLocale(arg0) {
   }
 };
 export const addResultListener = function addResultListener(arg0) {
-  const tmp3 = setDefault;
+  const tmp3 = obj132Default;
   let spellCheck;
   if (tmp3 != null) {
     spellCheck = tmp3.spellCheck;
   }
   if (null != spellCheck) {
-    spellCheck = setDefault.spellCheck;
+    spellCheck = obj132Default.spellCheck;
     let fn2 = spellCheck.on("spellcheck-result", arg0);
     if (fn2 == null) {
       fn2 = () => {

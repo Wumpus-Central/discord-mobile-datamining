@@ -3,9 +3,9 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
 
 export default function InAppReportsUpsellsTableRow(disabled) {
   ({ title, disabledTitle, variant } = disabled);

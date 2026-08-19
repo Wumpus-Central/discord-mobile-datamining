@@ -1,19 +1,22 @@
 // discord_app/modules/parent_tools/native/FamilyCenterBannerButton.tsx
+import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import messagesProxyDefault from "../FamilyCenter.messages.js";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
+import NativePermissionsRequestOptionsDefault from "../../native_permissions/NativePermissionUtils.tsx";
 import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/UserStore.tsx";
-import closure_6 from "../FamilyCenterStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import freshTeenActivityWithMap from "../FamilyCenterStore.tsx";
 import items from "../FamilyCenterConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { NativePermissionTypes } from "../../native_permissions/NativePermissionConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import "createCacheKey";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function FamilyCenterTeenQRCodeButtonInner() {
   let obj = stateFromStores1;
   const callback = stateFromStores1.useCallback(() => {
@@ -47,10 +50,10 @@ function FamilyCenterTeenQRCodeButtonInner() {
       tmp2 = null != stateFromStores1;
     }
     if (tmp2) {
-      let obj = getLinkCode2(stateFromStores[16]);
-      obj = { action: null };
+      getLinkCode2(stateFromStores[16]);
+      const obj = { action: null };
       obj[0] = closure_1_9.ShareLink;
-      obj.track(closure_1_10.FAMILY_CENTER_ACTION, obj);
+      obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
       const result = getLinkCode(stateFromStores[17]).shareGuardianConnectLink(stateFromStores, stateFromStores1);
       const obj3 = getLinkCode(stateFromStores[17]);
     }
@@ -61,10 +64,10 @@ function FamilyCenterTeenQRCodeButtonInner() {
       tmp2 = null != stateFromStores2;
     }
     if (tmp2) {
-      let obj = getLinkCode2(stateFromStores[16]);
-      obj = { action: null };
+      getLinkCode2(stateFromStores[16]);
+      let obj = { action: null };
       obj[0] = closure_1_9.ShowQRCodeModal;
-      obj.track(closure_1_10.FAMILY_CENTER_ACTION, obj);
+      obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
       obj = { linkCode: null, expiresAt: null, onRefresh: null };
       obj[0] = stateFromStores1;
       obj[1] = stateFromStores2;
@@ -73,7 +76,7 @@ function FamilyCenterTeenQRCodeButtonInner() {
       const obj3 = getLinkCode2(stateFromStores[18]);
     }
   }, items4);
-  obj = { direction: "horizontal", spacing: tmp10(tmp4[9]).space.PX_8, style: tmp.container, children: null };
+  { direction: "horizontal", spacing: tmp10(tmp4[9]).space.PX_8, style: tmp.container, children: null };
   obj = { grow: true, shrink: true, size: "md", variant: "primary", text: null, disabled: null, onPress: null, icon: null, iconPosition: "start" };
   let intl = tmp3(tmp4[12]).intl;
   obj[4] = intl.string(getLinkCode(stateFromStores[12]).t.Ej3B3Y);
@@ -104,12 +107,11 @@ class FamilyCenterBannerButton {
 }
 ({ CONNECT_GUARDIAN_BOTTOM_SHEET_KEY: error, FAMILY_CENTER_LINK_REQUEST_REGEX: closure_8, FamilyCenterAction: c9 } = items);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
+let createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let closure_16 = createCacheKey.createStyles({ button: { height: 50, width: "100%", marginTop: 16 }, art: { width: 18, height: 18, marginRight: 6 } });
-let result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterBannerButton.tsx");
+let result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterBannerButton.tsx");
 
 export default FamilyCenterBannerButton;
 export const FamilyCenterTeenQRCodeButton = function FamilyCenterTeenQRCodeButton() {
@@ -120,10 +122,10 @@ export const FamilyCenterTeenQRCodeButton = function FamilyCenterTeenQRCodeButto
   return tmp;
 };
 export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeButton() {
-  function handleQrCodeScanSucess(url) {
+  function handleQrCodeScanSucess(closure_1_2) {
     let arr = callback(5260);
     arr = arr.pop();
-    let toURLSafeResult = callback(1487).toURLSafe(url);
+    let toURLSafeResult = callback(1487).toURLSafe(dependencyMap);
     if (toURLSafeResult == null) {
       toURLSafeResult = {};
     }
@@ -153,22 +155,20 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
     const intl = tmp(1236).intl;
     obj[0] = intl.string(messagesProxyDefault.z4a9HP);
     obj[1] = function onPress() {
-      let obj = closure_1_1(closure_1_2[16]);
-      obj = { action: closure_1_9.ScanQRCodeButton };
-      obj.track(closure_1_10.FAMILY_CENTER_ACTION, obj);
-      const obj3 = handleQrCodeScanSucess(closure_1_2[29]);
-      const tmp = closure_1_1;
-      const tmp2 = closure_1_2;
-      const tmp5 = handleQrCodeScanSucess(closure_1_2[29]).isMetaQuest() ? closure_1_11.HEADSET_CAMERA : closure_1_11.CAMERA;
-      const permission = tmp(tmp2[30]).requestPermission(tmp5);
-      permission.then((arg0) => {
-        if (arg0) {
-          let obj = closure_1_1(closure_1_2[26]);
-          obj = { showHelp: false, onScanSuccess: null };
+      let obj = { action: closure_1_9.ScanQRCodeButton };
+      obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
+      const obj3 = handleQrCodeScanSucess(dependencyMap[29]);
+      const tmp5 = handleQrCodeScanSucess(dependencyMap[29]).isMetaQuest() ? NativePermissionTypes.HEADSET_CAMERA : NativePermissionTypes.CAMERA;
+      const permission = NativePermissionsRequestOptionsDefault.requestPermission(tmp5);
+      permission.then((result) => {
+        if (result) {
+          closure_1_1(closure_1_2[26]);
+          const obj = { showHelp: false, onScanSuccess: null };
           obj[1] = closure_0;
-          obj.pushLazy(closure_1_0(closure_1_2[20])(closure_1_2[31], closure_1_2.paths), obj);
+          obj.pushLazy(handleQrCodeScanSucess(closure_1_2[20])(closure_1_2[31], closure_1_2.paths), obj);
         }
       });
+      const tmpResult = NativePermissionsRequestOptionsDefault;
     };
     return callback(FamilyCenterBannerButton, obj);
   }

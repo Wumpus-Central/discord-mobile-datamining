@@ -1,12 +1,12 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingManager.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../../stores/GuildMemberStore.tsx";
-import closure_4 from "../../../stores/GuildStore.tsx";
-import closure_5 from "../../../stores/SelectedGuildStore.tsx";
+import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import handleConnectionOpen from "../../../stores/SelectedGuildStore.tsx";
 import { GuildFeatures } from "../../../Constants.tsx";
 import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
 
-let require = arg1;
+let require = fn;
 let c8 = null;
 let c9 = null;
 initializeDefault;
@@ -92,6 +92,6 @@ let prototype = function GuildOnboardingManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
 
 export default prototype;

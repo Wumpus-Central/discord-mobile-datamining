@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import ARBITRARY_LARGE_OFFSET from "../../native/Constants.tsx";
 
 const BANNER_ASPECT_RATIO = ARBITRARY_LARGE_OFFSET.BANNER_ASPECT_RATIO;
-const result = set.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");
 
 export default function useUserProfileBannerHeight(arg0) {
   const width = useWindowDimensionsDefault().width;

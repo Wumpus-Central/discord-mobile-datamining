@@ -1,13 +1,13 @@
 // discord_app/modules/app_database/modules/NonGuildVersions.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import applyDefault from "../../../../_runtime/00012_apply.js";
-import setDefault from "../../../utils/Durations.tsx";
+import obj132Default from "../../../utils/Durations.tsx";
 import itemsDefault from "../DatabaseDaos.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import importDefaultResult from "../../../stores/SelectedGuildStore.tsx";
 import isCacheEnabled from "../../cache/isCacheEnabled.native.tsx";
 
-let obj = arg1;
+let obj = fn;
 let c4 = importDefaultResult;
 let closure_5 = new timestampDefault("NonGuildVersions");
 class NonGuildVersions {
@@ -47,9 +47,10 @@ class NonGuildVersions {
             }
             const result1 = callback(1955).nonGuildVersionsTransaction(database);
             result1.delete("initial_guild_id");
+            const obj4 = callback(1955);
           });
         }
-      }, 10 * require("set").Millis.SECOND));
+      }, 10 * require("obj132").Millis.SECOND));
     }
     return obj;
   }
@@ -62,10 +63,10 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw arr;
       } else if (arg0 === 2) {
         obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj[0] = arr;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -76,11 +77,11 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         if (0 === logger) {
           if (arg0 === 1) {
             c6 = 3;
-            throw arg1;
+            throw arr;
           } else if (arg0 === 2) {
             c6 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = arr;
             return obj;
           } else {
             closure_2 = tmp3;
@@ -113,16 +114,16 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           return obj3;
         } else if (arg0 === 1) {
           c6 = 3;
-          throw arg1;
+          throw arr;
         } else if (arg0 === 2) {
           c4 = 0;
           c6 = 3;
           const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
+          obj4[0] = arr;
           return obj4;
         } else {
-          closure_0 = arg1.map((id) => {
-            const items = [id.id, "version" in id ? id.version : id.versionString];
+          closure_0 = arr.map((item, index) => {
+            const items = [item.id, "version" in item ? item.version : item.versionString];
             return items;
           });
           if (closure_0 == null) {
@@ -186,13 +187,14 @@ if (isCacheEnabled.isCacheEnabled()) {
         }
         const result1 = callback(1955).nonGuildVersionsTransaction(database);
         result1.delete("initial_guild_id");
+        const obj4 = callback(1955);
       });
     }
-  }, 10 * setDefault.Millis.SECOND));
+  }, 10 * obj132Default.Millis.SECOND));
   const importDefaultResult1 = applyDefault;
 }
 const tmp2 = new timestampDefault("NonGuildVersions");
-let result = require("set").fileFinishedImporting("modules/app_database/modules/NonGuildVersions.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_database/modules/NonGuildVersions.tsx");
 
 export default obj;
 export { NonGuildVersions };

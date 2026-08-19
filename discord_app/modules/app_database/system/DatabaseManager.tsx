@@ -2,11 +2,11 @@
 import timestampDefault from "../../debug/Logger.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import getUserIdAll from "StartupData.native.tsx";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../stores/AuthenticationStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
 import importDefaultResult from "../../../Dispatcher.tsx";
 
-let closure_0 = arg1;
+let closure_0 = fn;
 function databaseName(arg0) {
   return "@account." + arg0;
 }
@@ -171,20 +171,18 @@ prototype["carefullyOpenDatabase"] = function carefullyOpenDatabase(id) {
         const combined = "@account." + id;
         const _HermesInternal2 = HermesInternal;
         closure_6.verbose("synchronously opening " + combined);
-        const tmp6 = (function tryUntil(arg0, arg1) {
-          let num = 0;
+        const tmp6 = (function tryUntil(arg0, fn) {
           if (0 >= 50) {
             return null;
           } else {
             try {
-              return arg1();
+              return fn();
             } catch (tmp7) {
               logger.error(tmp2 + tmp5, tmp7);
-              num = tmp5 + tmp;
             }
           }
         })(50, () => {
-          const Database = combined(closure_1_3[6]).Database;
+          const Database = combined(dependencyMap[6]).Database;
           return Database.openSyncUnsafe(combined, { invalidateDisabledHandles: true });
         });
         const _HermesInternal3 = HermesInternal;
@@ -212,12 +210,10 @@ prototype["replaceDisableAllDatabases"] = function replaceDisableAllDatabases(ar
     if (value != null) {
       let disableResult = value.disable(arg0);
     }
-    let tmp6 = value;
     if (obj2 != null) {
       let closeResult = obj2.close();
     }
     let databases3 = self.databases;
-    let tmp8 = nextResult;
     let result = databases3.set(tmp4, null);
     continue;
   }
@@ -275,7 +271,6 @@ prototype["handleAuthenticationStoreChanged"] = function handleAuthenticationSto
     self.activeUserId = id;
     const databases = self.databases;
     databases.delete(activeUserId);
-    const obj = getUserIdAll;
   }
 };
 function carefullySpeculativelyOpen(userId) {
@@ -312,9 +307,9 @@ function carefullySpeculativelyOpen(userId) {
             closure_1 = tmp2;
             closure_0 = tmp3;
             closure_0 = undefined;
-            if (closure_1_1.preventWritingCachesAgainThisSession) {
+            if (self.preventWritingCachesAgainThisSession) {
               verboseResult = closure_1_6.verbose("Not opening database because caches have been manually cleared.");
-            } else if (null != closure_1_0) {
+            } else if (null != userId) {
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -327,7 +322,7 @@ function carefullySpeculativelyOpen(userId) {
                   applyArgumentsResult = apply(self, arguments);
                 }
                 return applyArgumentsResult;
-              })(closure_1_0);
+              })(userId);
               return obj1;
             }
             c3 = 3;
@@ -383,7 +378,7 @@ let obj = {
     return obj.handleAuthenticationStoreChanged();
   }
 };
-tmp = new tmp(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, DatabaseManager, tmp, importDefaultResult, obj, new.target, undefined, carefullySpeculativelyOpen, globalThis, arg1);
+tmp = new tmp(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, DatabaseManager, tmp, importDefaultResult, obj, new.target, undefined, carefullySpeculativelyOpen, globalThis, fn);
 // ThrowIfThisInitialized (0x7c)
 closure_0 = tmp;
 let tmp3 = new timestampDefault("DatabaseManager");
@@ -391,6 +386,6 @@ tmp.databases = new Map();
 tmp.activeUserId = null;
 tmp.preventWritingCachesAgainThisSession = false;
 const map = new Map();
-let result = require("set").fileFinishedImporting("modules/app_database/system/DatabaseManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_database/system/DatabaseManager.tsx");
 
 export default tmp;

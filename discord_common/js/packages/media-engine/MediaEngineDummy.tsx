@@ -1,5 +1,5 @@
 // discord_common/js/packages/media-engine/MediaEngineDummy.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import BaseConnectionEvent from "index.tsx";
 import onDefault from "../../shared/utils/TypedEventEmitter.tsx";
 import DesktopSources from "Constants.tsx";
@@ -77,8 +77,8 @@ prototype["getVideoInputDeviceId"] = function getVideoInputDeviceId() {
 prototype["setAsyncVideoInputDeviceInit"] = function setAsyncVideoInputDeviceInit() {
 
 };
-prototype["getCodecCapabilities"] = function getCodecCapabilities(arg0) {
-  arg0("");
+prototype["getCodecCapabilities"] = function getCodecCapabilities(fn) {
+  fn("");
 };
 prototype["getCodecSurvey"] = function getCodecSurvey() {
   error = new Error("getCodecSurvey is not implemented for MediaEngineDummy");
@@ -262,8 +262,8 @@ prototype["setNcModels"] = function setNcModels() {
 prototype["getSupportedSecureFramesProtocolVersion"] = function getSupportedSecureFramesProtocolVersion() {
   return 0;
 };
-prototype["getSupportedBandwidthEstimationExperiments"] = function getSupportedBandwidthEstimationExperiments(arg0) {
-  arg0([]);
+prototype["getSupportedBandwidthEstimationExperiments"] = function getSupportedBandwidthEstimationExperiments(fn) {
+  fn([]);
 };
 prototype["getMLSSigningKey"] = function getMLSSigningKey() {
   error = new Error("NOT_IMPLEMENTED");
@@ -322,6 +322,6 @@ prototype["getNoiseCancellationStats"] = function getNoiseCancellationStats() {
 prototype["setNoiseCancellationEnableStats"] = function setNoiseCancellationEnableStats() {
 
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaEngineDummy.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaEngineDummy.tsx");
 
 export default MediaEngineDummy;

@@ -1,8 +1,9 @@
 // discord_app/modules/games/hooks/useGameNameAndCoverImage.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
+import getSystemLocale from "../../../intl/index.native.tsx";
 import importDefaultResult1 from "useGame.tsx";
 
-const result = set.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
+const result = obj132.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
 export default function useGameNameAndCoverImage(arg0, arg1, size) {
   let obj = importDefaultResult1;
@@ -21,8 +22,8 @@ export default function useGameNameAndCoverImage(arg0, arg1, size) {
     name = arg1;
   }
   if (name == null) {
-    const intl = tmp(1236).intl;
-    name = intl.string(tmp(1236).t.GIWFlF);
+    const intl = getSystemLocale.intl;
+    name = intl.string(getSystemLocale.t.GIWFlF);
   }
   obj[1] = name;
   obj[2] = game.isLoading;

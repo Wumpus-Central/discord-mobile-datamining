@@ -2,7 +2,7 @@
 import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import closure_2 from "GuildStore.tsx";
+import createGuildRecordFromRust from "GuildStore.tsx";
 
 let c3 = null;
 let closure_4 = {};
@@ -21,10 +21,9 @@ prototype["getOptimalRegion"] = function getOptimalRegion(guildId) {
   const regions = this.getRegions(tmp);
   let tmp2 = null;
   if (null != regions) {
-    let found = regions.find((optimal) => optimal.optimal);
+    let found = regions.find((item, index) => item.optimal);
     if (found == null) {
       found = applyDefault.sample(regions);
-      const obj = applyDefault;
     }
     tmp2 = found;
   }
@@ -51,7 +50,6 @@ prototype["getRandomRegion"] = function getRandomRegion(guildId) {
   let sampleResult = null;
   if (null != regions) {
     sampleResult = applyDefault.sample(regions);
-    const obj = applyDefault;
   }
   return sampleResult;
 };
@@ -89,6 +87,6 @@ const regionStore = new RegionStore(dispatcherDefault, {
     delete tmp2[tmp];
   }
 });
-const result = require("set").fileFinishedImporting("stores/RegionStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/RegionStore.tsx");
 
 export default regionStore;

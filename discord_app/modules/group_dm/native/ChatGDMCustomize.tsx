@@ -1,43 +1,37 @@
 // discord_app/modules/group_dm/native/ChatGDMCustomize.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c5 = importAllResult;
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
-let obj = { container: null, iconUploader: null, iconClear: null, textInput: null, rateLimitedContainer: null, rateLimitedText: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[0] = obj;
-createCacheKey = { marginTop: ThemesDefault.space.PX_24, alignSelf: "center" };
+const createCacheKey = { marginTop: ThemesDefault.space.PX_24, alignSelf: "center" };
 obj[1] = createCacheKey;
 obj[2] = { marginTop: ThemesDefault.space.PX_8, alignSelf: "center" };
-let obj2 = { marginTop: ThemesDefault.space.PX_8, alignSelf: "center" };
 obj[3] = { marginVertical: ThemesDefault.space.PX_16 };
-let obj3 = { marginVertical: ThemesDefault.space.PX_16 };
 obj[4] = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-let obj4 = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 obj[5] = { fontSize: 12, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let closure_12 = createCacheKey.createStyles(obj);
-let obj5 = { fontSize: 12, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, ref) => {
   channelId = channelId.channelId;
   const onFinish = channelId.onFinish;
   let stateFromStores;
-  let callback;
   ref = undefined;
   let first;
   closure_6 = undefined;
   let first1;
   closure_8 = undefined;
-  callback = undefined;
+  let callback;
   let first2;
   closure_11 = undefined;
   let callback2;
@@ -97,11 +91,11 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   const items1 = [stateFromStores, channelId];
   const memo = obj2.useMemo(() => ({
     makeURL(icon) {
-      let obj = closure_1_1(closure_1_2[12]);
-      obj = { id: closure_0, icon, applicationId: null, size: 64 };
+      onFinish(stateFromStores[12]);
+      const obj = { id: closure_0, icon, applicationId: null, size: 64 };
       let applicationId;
-      if (closure_2 != null) {
-        applicationId = closure_2.getApplicationId();
+      if (applicationId != null) {
+        applicationId = applicationId.getApplicationId();
       }
       obj[2] = applicationId;
       return obj.getChannelIconURL(obj);
@@ -115,7 +109,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
       if (null != icon) {
         tmp3 = closure_1_11;
       }
-      closure_8(tmp3);
+      callback(tmp3);
     }
   }), items1);
   const items2 = [tmp9, first1];
@@ -159,16 +153,16 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
             closure_0 = tmp8;
             c3 = 2;
             closure_1_12(true);
-            if (null != closure_1_7) {
-              let obj6 = closure_1_1(closure_1_2[14]);
+            if (null != first1) {
+              let obj6 = onFinish(stateFromStores[14]);
               let tmp54 = null;
-              if (tmp84 !== closure_1_11) {
-                tmp54 = tmp84;
+              if (first1 !== closure_1_11) {
+                tmp54 = first1;
               }
               c4 = 3;
               length = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj6.setIcon(closure_1_0, tmp54);
+              obj1[0] = obj6.setIcon(channelId, tmp54);
               return obj1;
             }
           }
@@ -191,17 +185,16 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
               if (body2 != null) {
                 retry_after1 = body2.retry_after;
               }
-              closure_11(retry_after1);
-              const tmp22 = closure_11;
+              callback(retry_after1);
             } else {
               const obj2 = { key: "GCM_ERROR_GENERIC", IconComponent: null, content: null };
-              obj2[1] = closure_1_0(closure_1_2[17]).CircleErrorIcon;
-              const intl2 = closure_1_0(closure_1_2[15]).intl;
+              obj2[1] = channelId(stateFromStores[17]).CircleErrorIcon;
+              const intl2 = channelId(stateFromStores[15]).intl;
               const obj3 = { code: null };
               obj3[0] = closure_0.status;
-              obj2[2] = intl2.formatToPlainString(closure_1_0(closure_1_2[15]).t.r477WB, obj3);
-              closure_1_1(closure_1_2[16]).open(obj2);
-              const obj11 = closure_1_1(closure_1_2[16]);
+              obj2[2] = intl2.formatToPlainString(channelId(stateFromStores[15]).t.r477WB, obj3);
+              onFinish(stateFromStores[16]).open(obj2);
+              const obj11 = onFinish(stateFromStores[16]);
             }
             c3 = 0;
             callback2(false);
@@ -238,11 +231,11 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
               callback();
               c3 = 1;
             }
-            const intl = closure_1_0(closure_1_2[15]).intl;
+            const intl = channelId(stateFromStores[15]).intl;
             c4 = 5;
             length = 1;
             obj6 = { value: null, done: false };
-            obj6[0] = callback3(intl.string(closure_1_0(closure_1_2[15]).t.ZhunuI));
+            obj6[0] = callback3(intl.string(channelId(stateFromStores[15]).t.ZhunuI));
             return obj6;
           }
           c3 = 0;
@@ -257,11 +250,11 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
           tmp36 = length.length > 0;
         }
         if (tmp36) {
-          obj4 = closure_1_1(closure_1_2[14]);
+          obj4 = onFinish(stateFromStores[14]);
           c4 = 4;
           length = 1;
           const obj7 = { value: null, done: false };
-          obj7[0] = obj4.setName(closure_1_0, length);
+          obj7[0] = obj4.setName(channelId, length);
           return obj7;
         }
       } catch (tmp55) {
@@ -370,10 +363,9 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
     obj[2] = items6;
     tmp43Result = tmp43(closure_6, obj);
     tmp34 = first1;
-    const tmp44 = closure_6;
   }
   return tmp43Result;
 }));
-const result = require("set").fileFinishedImporting("modules/group_dm/native/ChatGDMCustomize.tsx");
+const result = require("obj132").fileFinishedImporting("modules/group_dm/native/ChatGDMCustomize.tsx");
 
 export default memoResult;

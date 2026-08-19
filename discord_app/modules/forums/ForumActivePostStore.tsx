@@ -5,17 +5,15 @@ import set3 from "../../../discord_common/js/shared/shared-constants/ThreadSortO
 import set4 from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
 import areSetsEqual from "../../../discord_common/js/shared/utils/SetUtils.tsx";
 import getCreationDefaultFormatter from "ForumUtils.tsx";
-import closure_4 from "../threads/ActiveThreadsStore.tsx";
-import closure_5 from "../threads/ThreadMessageStore.tsx";
-import closure_6 from "../../stores/AuthenticationStore.tsx";
-import closure_7 from "../../stores/ChannelStore.tsx";
-import closure_8 from "../../stores/ReadStateStore.tsx";
-import closure_9 from "../../stores/SelectedChannelStore.tsx";
+import handleThreadCreateOrUpdate from "../threads/ActiveThreadsStore.tsx";
+import updateState from "../threads/ThreadMessageStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
 import importDefaultResult from "../../../_runtime/00012_apply.js";
-import set from "../../../_runtime/00002_set.js";
-import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 
-require = arg1;
+require = fn;
 function maybeRebuildState() {
   channelId = channelId.getChannelId();
   if (null != channelId) {
@@ -31,13 +29,12 @@ function maybeRebuildState() {
   closure_17 = [];
   c3 = null;
   c12 = null;
-  set = new Set();
+  new Set();
   LATEST_ACTIVITY = set3.ThreadSortOrder.LATEST_ACTIVITY;
   MATCH_SOME = set4.ThreadSearchTagSetting.MATCH_SOME;
   c16 = 0;
   closure_19 = [];
   closure_20 = importDefaultResult.chain(items);
-  const obj2 = importDefaultResult;
   closure_21 = importDefaultResult.chain(items);
   set2.clear();
   set1.clear();
@@ -53,22 +50,22 @@ function rebuildState(refreshThreadIds) {
     if (refreshThreadIds) {
       const _Object = Object;
       let values = Object.values(store.getThreadsForParent(channel.guild_id, channel.id));
-      closure_19 = values.map((id) => id.id);
+      closure_19 = values.map((item, index) => item.id);
       c16 = 0;
       c18 = true;
     }
     if (0 !== set1.size) {
-      closure_19 = closure_19.filter((arg0) => !set.has(arg0));
-      obj.clear();
+      closure_19 = closure_19.filter((item, index) => !set.has(item));
+      set1.clear();
     }
     if (0 !== set2.size) {
       const _Array = Array;
       const _Set = Set;
       items = [];
-      HermesBuiltin.arraySpread(obj2, HermesBuiltin.arraySpread(closure_19, 0));
+      HermesBuiltin.arraySpread(set2, HermesBuiltin.arraySpread(closure_19, 0));
       set = new Set(items);
       closure_19 = Array.from(set);
-      obj2.clear();
+      set2.clear();
     }
     let refreshThreadIds1;
     if (refreshThreadIds != null) {
@@ -82,17 +79,16 @@ function rebuildState(refreshThreadIds) {
       refreshThreadIds1 = sortThreadIds;
     }
     if (refreshThreadIds1) {
-      const obj3 = importDefaultResult;
-      _require = _set.ThreadSortOrder.LATEST_ACTIVITY;
+      _require = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY;
       closure_21 = importDefaultResult.chain(closure_19).sort((id, id) => {
-        let compare = closure_1_2;
+        let compare = dependencyMap;
         let num = -1;
         if (!obj.isForumPostPinned(id)) {
           let lastMessageIdResult1 = id;
           if (tmpResult.isForumPostPinned(id)) {
             num = 1;
-          } else if (callback === tmp(compare[6]).ThreadSortOrder.LATEST_ACTIVITY) {
-            compare = closure_1_1(compare[10]).compare;
+          } else if (callback === callback(compare[6]).ThreadSortOrder.LATEST_ACTIVITY) {
+            compare = importDefault(compare[10]).compare;
             let lastMessageIdResult = closure_1_8.lastMessageId(lastMessageIdResult1);
             if (lastMessageIdResult == null) {
               lastMessageIdResult = lastMessageIdResult1;
@@ -102,28 +98,26 @@ function rebuildState(refreshThreadIds) {
               lastMessageIdResult1 = id;
             }
             let compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
-            const obj4 = closure_1_8;
-            const tmp8 = closure_1_1(compare[10]);
+            const tmp8 = importDefault(compare[10]);
           } else {
-            compareResult = closure_1_1(compare[10]).compare(lastMessageIdResult1, id);
-            const obj3 = closure_1_1(compare[10]);
+            compareResult = importDefault(compare[10]).compare(lastMessageIdResult1, id);
+            const obj3 = importDefault(compare[10]);
           }
-          tmpResult = tmp(compare[9]);
+          tmpResult = callback(compare[9]);
         }
         return num;
       });
       const chainResult = importDefaultResult.chain(closure_19);
-      const obj5 = importDefaultResult;
-      _require = _set.ThreadSortOrder.CREATION_DATE;
+      _require = require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.CREATION_DATE;
       closure_20 = importDefaultResult.chain(closure_19).sort((id, id) => {
-        let compare = closure_1_2;
+        let compare = dependencyMap;
         let num = -1;
         if (!obj.isForumPostPinned(id)) {
           let lastMessageIdResult1 = id;
           if (tmpResult.isForumPostPinned(id)) {
             num = 1;
-          } else if (callback === tmp(compare[6]).ThreadSortOrder.LATEST_ACTIVITY) {
-            compare = closure_1_1(compare[10]).compare;
+          } else if (callback === callback(compare[6]).ThreadSortOrder.LATEST_ACTIVITY) {
+            compare = importDefault(compare[10]).compare;
             let lastMessageIdResult = closure_1_8.lastMessageId(lastMessageIdResult1);
             if (lastMessageIdResult == null) {
               lastMessageIdResult = lastMessageIdResult1;
@@ -133,40 +127,38 @@ function rebuildState(refreshThreadIds) {
               lastMessageIdResult1 = id;
             }
             let compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
-            const obj4 = closure_1_8;
-            const tmp8 = closure_1_1(compare[10]);
+            const tmp8 = importDefault(compare[10]);
           } else {
-            compareResult = closure_1_1(compare[10]).compare(lastMessageIdResult1, id);
-            const obj3 = closure_1_1(compare[10]);
+            compareResult = importDefault(compare[10]).compare(lastMessageIdResult1, id);
+            const obj3 = importDefault(compare[10]);
           }
-          tmpResult = tmp(compare[9]);
+          tmpResult = callback(compare[9]);
         }
         return num;
       });
       const chainResult1 = importDefaultResult.chain(closure_19);
     }
-    const valueResult = LATEST_ACTIVITY === _set.ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
+    const valueResult = LATEST_ACTIVITY === require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
     let found = valueResult;
     if (0 !== set.size) {
       _require = set;
       importDefault = MATCH_SOME;
-      found = valueResult.filter((arg0) => {
-        const channel = closure_1_7.getChannel(arg0);
+      found = valueResult.filter((item, index) => {
+        const channel = closure_1_7.getChannel(item);
         let appliedTags;
         if (channel != null) {
           appliedTags = channel.appliedTags;
         }
         if (null != appliedTags) {
           if (0 !== appliedTags.length) {
-            if (closure_1 === lib(closure_1_2[7]).ThreadSearchTagSetting.MATCH_SOME) {
-              return appliedTags.some((arg0) => set.has(arg0));
+            if (closure_1 === lib(dependencyMap[7]).ThreadSearchTagSetting.MATCH_SOME) {
+              return appliedTags.some((item, index) => set.has(item));
             } else {
               const values = lib.values();
               for (const item10014 of values) {
                 if (appliedTags.includes(item10014)) {
                   continue;
                 } else {
-                  let tmp7 = obj;
                   obj.return();
                   let flag = false;
                   return false;
@@ -179,8 +171,8 @@ function rebuildState(refreshThreadIds) {
         return false;
       });
     }
-    let found1 = found.find((arg0) => {
-      count = count.getCount(arg0);
+    let found1 = found.find((item, index) => {
+      count = count.getCount(item);
       let tmp2 = null === count;
       if (!tmp2) {
         tmp2 = 0 === count;
@@ -192,8 +184,7 @@ function rebuildState(refreshThreadIds) {
       tmp33 = found1;
     }
     found1 = tmp33;
-    const iter = LATEST_ACTIVITY === _set.ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
-    obj = set1;
+    const iter = LATEST_ACTIVITY === require("../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx").ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
   }
 }
 let items = [];
@@ -268,13 +259,12 @@ const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
         c3 = null;
         c12 = null;
         const _Set = Set;
-        set = new Set();
         LATEST_ACTIVITY = set3.ThreadSortOrder.LATEST_ACTIVITY;
         MATCH_SOME = set4.ThreadSearchTagSetting.MATCH_SOME;
         c16 = 0;
         closure_19 = [];
+        set = new Set();
         closure_20 = importDefaultResult.chain(items);
-        const obj = importDefaultResult;
         closure_21 = importDefaultResult.chain(items);
         set2.clear();
         set1.clear();
@@ -323,13 +313,13 @@ const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
         const hasItem = set2.has(channel.id);
         if (isForumPostPinnedResult) {
           if (!hasItem) {
-            obj2.add(channel.id);
+            set2.add(channel.id);
             rebuildState({ sortThreadIds: true });
           }
         }
         if (!isForumPostPinnedResult) {
           if (hasItem) {
-            obj2.delete(channel.id);
+            set2.delete(channel.id);
             rebuildState({ sortThreadIds: true });
           }
         }
@@ -367,7 +357,8 @@ const forumActivePostStore = new ForumActivePostStore(dispatcherDefault, {
     return false;
   }
 });
-const result = set.fileFinishedImporting("modules/forums/ForumActivePostStore.tsx");
+const importDefaultResult1 = importDefaultResult;
+const result = require("obj132").fileFinishedImporting("modules/forums/ForumActivePostStore.tsx");
 
 export default forumActivePostStore;
 export const computeThreadIdsSnapshot = function computeThreadIdsSnapshot(id) {
@@ -377,17 +368,17 @@ export const computeThreadIdsSnapshot = function computeThreadIdsSnapshot(id) {
   } else {
     const _Object = Object;
     const values = Object.values(store.getThreadsForParent(channel.guild_id, channel.id));
-    const mapped = values.map((id) => id.id);
+    const mapped = values.map((item, index) => item.id);
     closure_0 = LATEST_ACTIVITY;
     items = mapped.sort((id, id) => {
-      let compare = closure_1_2;
+      let compare = dependencyMap;
       let num = -1;
       if (!obj.isForumPostPinned(id)) {
         let lastMessageIdResult1 = id;
         if (tmpResult.isForumPostPinned(id)) {
           num = 1;
-        } else if (callback === tmp(compare[6]).ThreadSortOrder.LATEST_ACTIVITY) {
-          compare = closure_1_1(compare[10]).compare;
+        } else if (callback === callback(compare[6]).ThreadSortOrder.LATEST_ACTIVITY) {
+          compare = importDefault(compare[10]).compare;
           let lastMessageIdResult = closure_1_8.lastMessageId(lastMessageIdResult1);
           if (lastMessageIdResult == null) {
             lastMessageIdResult = lastMessageIdResult1;
@@ -397,13 +388,12 @@ export const computeThreadIdsSnapshot = function computeThreadIdsSnapshot(id) {
             lastMessageIdResult1 = id;
           }
           let compareResult = compare(lastMessageIdResult, lastMessageIdResult1);
-          const obj4 = closure_1_8;
-          const tmp8 = closure_1_1(compare[10]);
+          const tmp8 = importDefault(compare[10]);
         } else {
-          compareResult = closure_1_1(compare[10]).compare(lastMessageIdResult1, id);
-          const obj3 = closure_1_1(compare[10]);
+          compareResult = importDefault(compare[10]).compare(lastMessageIdResult1, id);
+          const obj3 = importDefault(compare[10]);
         }
-        tmpResult = tmp(compare[9]);
+        tmpResult = callback(compare[9]);
       }
       return num;
     });

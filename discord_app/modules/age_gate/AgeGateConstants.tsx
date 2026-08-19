@@ -1,13 +1,12 @@
 // discord_app/modules/age_gate/AgeGateConstants.tsx
-import setDefault from "../../utils/Durations.tsx";
-import set from "../../../_runtime/00002_set.js";
+import obj132Default from "../../utils/Durations.tsx";
 
 const obj = { AUTH: "Register Age Gate", NEW_USER_FLOW: "NUF", CLAIM_ACCOUNT: "Claim Age Gate", NSFW_CHANNEL: "NSFW Channel", NSFW_SERVER: "NSFW Server", NSFW_SERVER_INVITE: "NSFW Server Invite", NSFW_SERVER_INVITE_EMBED: "NSFW Server Invite Embed", NSFW_VOICE_CHANNEL: "NSFW Voice Channel", LARGE_GUILD: "Large Guild", ACCESS_LARGE_GUILD_UNDERAGE: "Access Large Guild Access Underage", JOIN_LARGE_GUILD_UNDERAGE: "Join Large Guild Underage", FAMILY_CENTER: "Family Center", REGISTER: "Register", DEEP_LINK_PROMPT: "Deep Link Prompt", UNSPECIFIED: "Unspecified" };
 const items = [, , ];
 ({ NSFW_CHANNEL: arr[0], NSFW_VOICE_CHANNEL: arr[1], NSFW_SERVER: arr[2] } = obj);
-const result = 2 * setDefault.Millis.HOUR;
-let set = new Set(items);
-const result1 = set.fileFinishedImporting("modules/age_gate/AgeGateConstants.tsx");
+const result = 2 * obj132Default.Millis.HOUR;
+const set = new Set(items);
+const result1 = require("obj132").fileFinishedImporting("modules/age_gate/AgeGateConstants.tsx");
 
 export const AGE_GATE_REGISTER_TIMEOUT_MS = result;
 export const NEW_USER_AGE_GATE_MODAL_KEY = "new-user-age-gate-modal";

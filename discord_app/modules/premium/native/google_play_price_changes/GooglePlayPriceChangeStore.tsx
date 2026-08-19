@@ -1,10 +1,10 @@
 // discord_app/modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../../Dispatcher.tsx";
-import closure_2 from "../../../../stores/billing/SubscriptionStore.tsx";
-import set from "../../../../../_runtime/00002_set.js";
+import reset from "../../../../stores/billing/SubscriptionStore.tsx";
 
-const require = arg1;
+require = fn;
 function onInitializeSync() {
   let priceChange = null;
   c4 = false;
@@ -30,10 +30,11 @@ function onInitializeSync() {
       c4 = true;
     }
   }
+  obj = obj132;
 }
 let items = [, , ];
 ({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = require("ME").SubscriptionStatusTypes);
-let set = new Set(items);
+const set = new Set(items);
 let c4 = false;
 let c5 = null;
 const Store = initializeDefault.Store;
@@ -59,6 +60,6 @@ Object.defineProperty(prototype, "priceChangeRecord", {
 });
 GooglePlayPriceChangeStore.displayName = "GooglePlayPriceChangeStore";
 const googlePlayPriceChangeStore = new GooglePlayPriceChangeStore(dispatcherDefault, {});
-const result = set.fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx");
 
 export default googlePlayPriceChangeStore;

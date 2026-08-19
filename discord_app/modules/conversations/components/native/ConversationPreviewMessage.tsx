@@ -2,14 +2,14 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import setOptionsDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import MediaGalleryItemType from "../../../messages/native/renderer/RowGeneratorTypes.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
-import closure_6 from "../../../../stores/GuildMemberStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import trackCommunicationDisabled from "../../../../stores/GuildMemberStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function modifyRow(arg0) {
   arg0.contextType = MediaGalleryItemType.MessageContextType.SEARCH;
   arg0.renderContentOnly = true;
@@ -17,16 +17,14 @@ function modifyRow(arg0) {
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = new setOptionsDefault();
 obj.setOptions({ renderReplies: false, renderReactions: false });
-obj = { container: null, header: null, authorRow: null, headerTimestamp: null };
 obj = { gap: ThemesDefault.space.PX_4 };
 obj[0] = obj;
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+const createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
 obj[2] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 obj[3] = { flex: 1 };
 let closure_11 = createCacheKey.createStyles(obj);
-let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationPreviewMessage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/conversations/components/native/ConversationPreviewMessage.tsx");
 
 export default function ConversationPreviewMessage(message) {
   message = message.message;
@@ -83,8 +81,7 @@ export default function ConversationPreviewMessage(message) {
     }
     if (tmp24Result) {
       ({ colorString: obj10[1], colorStrings: obj10[2] } = stateFromStores1);
-      tmp24Result = tmp24(tmp2(tmp3[14]).RoleDot, { size: "small", color: null, colors: null });
-      const obj4 = { size: "small", color: null, colors: null };
+      tmp24Result = callback(tmp2(tmp3[14]).RoleDot, { size: "small", color: null, colors: null });
     }
     const items5 = [tmp24Result, ];
     const obj5 = { variant: "text-md/medium", lineClamp: 1, style: null, gradientColors: null, children: null };
@@ -97,19 +94,19 @@ export default function ConversationPreviewMessage(message) {
     obj5[4] = tmp7;
     items5[1] = callback(tmp2(tmp3[15]).Text, obj5);
     obj3[1] = items5;
-    items4[1] = closure_8(View, obj3);
+    items4[1] = callback(View, obj3);
     const obj6 = { variant: "text-xs/normal", color: "text-muted", lineClamp: 1, style: null, children: null };
     obj6[3] = tmp.headerTimestamp;
     obj6[4] = memo;
     items4[2] = callback(tmp2(tmp3[15]).Text, obj6);
     obj1[1] = items4;
-    const items6 = [closure_8(View, obj1), ];
+    const items6 = [callback(View, obj1), ];
     const obj7 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: null, message: null, rowGenerator: null };
     obj7[2] = modifyRow;
     obj7[3] = message;
     obj7[4] = obj;
     items6[1] = callback(guildId(tmp3[16]), obj7);
     obj[1] = items6;
-    return closure_8(View, obj);
+    return callback(View, obj);
   }
 };

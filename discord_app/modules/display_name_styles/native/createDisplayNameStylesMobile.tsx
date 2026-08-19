@@ -1,8 +1,8 @@
 // discord_app/modules/display_name_styles/native/createDisplayNameStylesMobile.tsx
-import closure_0 from "../../a11y/AccessibilityStore.tsx";
-import closure_1 from "../../../stores/UserStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/display_name_styles/native/createDisplayNameStylesMobile.tsx");
 
 export const createDisplayNameStylesMobile = function createDisplayNameStylesMobile(author, member) {
   currentUser = currentUser.getCurrentUser();

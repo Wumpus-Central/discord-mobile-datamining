@@ -2,18 +2,17 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
-import closure_6 from "../../../quests/QuestStore.tsx";
-import closure_7 from "../../../quests/UnenrolledActivityQuestStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import initializeState from "../../../quests/QuestStore.tsx";
+import set from "../../../quests/UnenrolledActivityQuestStore.tsx";
 import { QuestVariants } from "../../../quests/QuestConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
-const require = arg1;
+const require = fn;
 function QuestActivityButtonInner(quest) {
   quest = quest.quest;
-  let stateFromStores;
   dependencyMap = undefined;
   let num;
   closure_4 = undefined;
@@ -24,7 +23,7 @@ function QuestActivityButtonInner(quest) {
   let obj = quest(10684);
   obj1 = quest(589);
   let items = [sharedValue];
-  stateFromStores = obj1.useStateFromStores(items, () => sharedValue.useReducedMotion);
+  const stateFromStores = obj1.useStateFromStores(items, () => sharedValue.useReducedMotion);
   let obj2 = num;
   const items1 = [, ];
   ({ id: arr2[0], userStatus } = quest);
@@ -44,13 +43,13 @@ function QuestActivityButtonInner(quest) {
     }
     if (null == enrolledAt) {
       let obj = { questId: null };
-      obj[0] = tmp.id;
-      stateFromStores(_undefined[13]).pushLazy(quest(_undefined[15])(_undefined[14], _undefined.paths), obj, closure_1_17);
+      obj[0] = quest.id;
+      stateFromStores(_undefined[13]).pushLazy(quest(_undefined[15])(_undefined[14], _undefined.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
       const obj3 = stateFromStores(_undefined[13]);
     } else {
-      obj = stateFromStores(_undefined[16]);
+      stateFromStores(_undefined[16]);
       obj = { questId: null };
-      obj[0] = tmp.id;
+      obj[0] = quest.id;
       obj.openLazy(quest(_undefined[15])(_undefined[17], _undefined.paths), "QuestProgressBottomSheet", obj);
     }
   }, items1);
@@ -127,7 +126,7 @@ function QuestActivityButtonInner(quest) {
     }
     const result = sharedValue.set(quest(_undefined[18]).withTiming(num, { duration: num }));
     return () => {
-      closure_1_0(closure_1_2[7]).cancelAnimation(closure_5);
+      quest(closure_1_2[7]).cancelAnimation(closure_5);
     };
   }, items3);
   const items4 = [sharedValue1, tmp9, stateFromStores];
@@ -148,8 +147,7 @@ function QuestActivityButtonInner(quest) {
       current2.reset();
     }
   }, items4);
-  obj = { style: items5, pointerEvents: "box-none", children: null };
-  items5 = [, , ];
+  const items5 = [, , ];
   ({ container: arr6[0], completionGlow: arr6[1] } = tmp14);
   items5[2] = animatedStyle;
   obj = { style: memo, pointerEvents: "none", children: null };
@@ -184,9 +182,8 @@ let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let c11 = 32;
 let closure_12 = importDefaultResult.createAnimatedComponent(require("inlineStyles").Circle);
-let obj = { container: { position: "relative", width: 32, height: 32, justifyContent: "center", alignItems: "center" }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 12, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: { position: "absolute", transform: items }, progressPath: null, buttonWrapper: null, confetti: null };
-items = [{ rotate: "-90deg" }];
-obj = { color: ThemesDefault.colors.STATUS_POSITIVE };
+let items = [{ rotate: "-90deg" }];
+let obj = { color: ThemesDefault.colors.STATUS_POSITIVE };
 obj[3] = obj;
 obj[4] = { position: "absolute", borderRadius: 16, overflow: "hidden" };
 obj[5] = { position: "absolute" };
@@ -196,26 +193,24 @@ let closure_15 = { code: "function QuestActivityButtonTsx2(){const{circumference
 const QUEST_ACTIVITY_UNENROLLED_MODAL_KEY = "QUEST_ACTIVITY_UNENROLLED_MODAL_KEY";
 const memoResult = importAllResult.memo(function QuestActivityButton(applicationId) {
   applicationId = applicationId.applicationId;
-  let stateFromStores;
   let stateFromStores1;
   let memo;
-  let stateFromStores2;
   let obj = applicationId(stateFromStores1[12]);
   const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => quests.quests);
+  const stateFromStores = obj.useStateFromStores(items, () => quests.quests);
   const items1 = [closure_7];
   stateFromStores1 = applicationId(stateFromStores1[12]).useStateFromStores(items1, () => state.getState().autoEnroll);
   const items2 = [stateFromStores, applicationId];
   memo = memo.useMemo(() => {
     const eligibleQuestsForApplicationId = applicationId(stateFromStores1[24]).getEligibleQuestsForApplicationId(stateFromStores, applicationId, true);
-    return eligibleQuestsForApplicationId.find((config) => {
-      const features = config.config.features;
+    return eligibleQuestsForApplicationId.find((item, index) => {
+      const features = item.config.features;
       return features.includes(constants.MOBILE_ACTIVITY_QUEST);
     });
   }, items2);
   const obj2 = applicationId(stateFromStores1[12]);
   const items3 = [closure_7];
-  stateFromStores2 = applicationId(stateFromStores1[12]).useStateFromStores(items3, () => {
+  const stateFromStores2 = applicationId(stateFromStores1[12]).useStateFromStores(items3, () => {
     let id;
     if (memo != null) {
       id = memo.id;
@@ -226,7 +221,7 @@ const memoResult = importAllResult.memo(function QuestActivityButton(application
   const effect = memo.useEffect(() => {
     let tmp2 = null == memo;
     if (!tmp2) {
-      const userStatus = tmp.userStatus;
+      const userStatus = memo.userStatus;
       let enrolledAt;
       if (userStatus != null) {
         enrolledAt = userStatus.enrolledAt;
@@ -240,10 +235,10 @@ const memoResult = importAllResult.memo(function QuestActivityButton(application
       tmp2 = stateFromStores2;
     }
     if (!tmp2) {
-      let obj = stateFromStores(stateFromStores1[13]);
-      obj = { questId: null };
-      obj[0] = tmp.id;
-      obj.pushLazy(applicationId(stateFromStores1[15])(stateFromStores1[14], stateFromStores1.paths), obj, closure_1_17);
+      stateFromStores(stateFromStores1[13]);
+      const obj = { questId: null };
+      obj[0] = memo.id;
+      obj.pushLazy(applicationId(stateFromStores1[15])(stateFromStores1[14], stateFromStores1.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     }
   }, items4);
   let tmp6 = null;
@@ -254,6 +249,6 @@ const memoResult = importAllResult.memo(function QuestActivityButton(application
   }
   return tmp6;
 });
-let result = require("set").fileFinishedImporting("modules/frames/panel/native/QuestActivityButton.tsx");
+let result = require("obj132").fileFinishedImporting("modules/frames/panel/native/QuestActivityButton.tsx");
 
 export default memoResult;

@@ -6,21 +6,20 @@ import useFavoritesAccess from "FavoritesHooks.tsx";
 import useFavoritesGuildConfig from "FavoritesGuildExperiment.tsx";
 import hasOfferedFavoritesGuildOnboarding from "onboarding/FavoritesGuildIntroPopover.tsx";
 import useCanShowFavoritesGuildOnboardingDefault from "hooks/useCanShowFavoritesGuildOnboarding.native.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { ContentDismissActionType } from "../dismissible_content/DismissibleContentConstants.tsx";
 
-require = arg1;
+require = fn;
 let items = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_NEW_BADGE, require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
 const items1 = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
 const items2 = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
-const result = require("set").fileFinishedImporting("modules/favorites/FavoritesDismissibleContent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/favorites/FavoritesDismissibleContent.tsx");
 
 export const FAVORITES_GUILD_DISMISSIBLE_CONTENT = items;
 export const useFavoritesMenuItemPopoverDismissibleContent = function useFavoritesMenuItemPopoverDismissibleContent(set) {
   let obj = useFavoritesGuildConfig;
   const isFavoritesGuildSelected = useFavoritesAccess.useIsFavoritesGuildSelected();
-  const obj2 = useFavoritesAccess;
   const tmp4 = useCanShowFavoritesGuildOnboardingDefault();
   let first = callback(canShowTimeRecurringContent.useDangerouslyPeekDismissibleContents(items1), 1)[0];
   if (first == null) {
@@ -31,12 +30,12 @@ export const useFavoritesMenuItemPopoverDismissibleContent = function useFavorit
     if (set) {
       if (tmp4) {
         if (!isFavoritesGuildSelected) {
-          if (first === tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM) {
-            let items = [tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+          if (first === DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM) {
+            let items = [DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
           }
           obj = { shouldShowPopover: null, markPopoverAsDismissed: null };
           [tmp11, tmp12] = callback(tmp8(items), 2);
-          obj[0] = tmp11 === tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          obj[0] = tmp11 === DismissibleContent.DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           obj[1] = tmp12;
           return obj;
         }
@@ -71,16 +70,16 @@ export const useFavoritesBetaTagDismissibleContent = function useFavoritesBetaTa
   useSelectedDismissibleContent;
   if (obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium) {
     if (arg0) {
-      const items = [tmp(1377).DismissibleContent.FAVORITES_GUILD_NEW_BADGE];
+      const items = [DismissibleContent.DismissibleContent.FAVORITES_GUILD_NEW_BADGE];
     }
     [tmp9, require] = callback(tmp4([]), 2);
-    const tmp10 = tmp9 === tmp(1377).DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
+    const tmp10 = tmp9 === DismissibleContent.DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
     closure_1 = tmp10;
     obj = { shouldShowBetaTag: null, dismissBetaTag: null };
     obj[0] = tmp10;
     obj[1] = function dismissBetaTag() {
       if (closure_1) {
-        callback(closure_1_5.TAKE_ACTION);
+        callback(ContentDismissActionType.TAKE_ACTION);
       }
     };
     return obj;

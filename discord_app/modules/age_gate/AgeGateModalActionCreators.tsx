@@ -1,5 +1,5 @@
 // discord_app/modules/age_gate/AgeGateModalActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import result2 from "AgeGateConstants.tsx";
@@ -9,11 +9,10 @@ import ME from "../../Constants.tsx";
 
 const AgeGateAnalyticAction = result2.AgeGateAnalyticAction;
 ({ Routes: c4, AnalyticEvents: c5 } = ME);
-const result = set.fileFinishedImporting("modules/age_gate/AgeGateModalActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/age_gate/AgeGateModalActionCreators.tsx");
 
 export const openAgeGateModal = function openAgeGateModal(JOIN_LARGE_GUILD_UNDERAGE) {
-  let obj = expandEventPropertiesDefault;
-  obj = { section: JOIN_LARGE_GUILD_UNDERAGE };
+  let obj = { section: JOIN_LARGE_GUILD_UNDERAGE };
   obj.track(constants2.OPEN_MODAL, { type: "Enter Your Birthday", source: obj });
   obj = { type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE };
   dispatcherDefault.dispatch(obj);
@@ -41,8 +40,7 @@ export const openFailureAgeGateModal = function openFailureAgeGateModal(source) 
   closure_0 = arg1;
   let obj = dispatcherDefault;
   obj.wait(() => {
-    let obj = closure_1_1(closure_1_2[3]);
-    obj = { type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage: closure_0 };
+    const obj = { type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage: closure_0 };
     obj.dispatch(obj);
   });
   obj = { source, action: AgeGateAnalyticAction.AGE_GATE_FAILURE };
@@ -50,6 +48,5 @@ export const openFailureAgeGateModal = function openFailureAgeGateModal(source) 
 };
 export const closeFailedAgeGate = function closeFailedAgeGate() {
   handleLogoutDefault.logoutInternal();
-  const obj = handleLogoutDefault;
   transitionTo.transitionTo(constants.LOGIN, { source: "age_gate_modal" });
 };

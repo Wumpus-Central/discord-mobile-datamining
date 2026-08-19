@@ -3,7 +3,7 @@ import toJSDefault from "../../lib/Record.tsx";
 import { createExecutable } from "../../records/ApplicationRecord.tsx";
 
 toJSDefault;
-const result = require("set").fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
 class DetectableGameRecord extends tmp2 {
   constructor(arg0) {
     tmp3 = new DetectableGameRecord(tmp2, new.target, new.target, tmp);

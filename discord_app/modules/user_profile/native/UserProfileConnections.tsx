@@ -1,23 +1,29 @@
 // discord_app/modules/user_profile/native/UserProfileConnections.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button2 from "../../../design/void/native.tsx";
+import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
+import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import Divider from "UserProfileCard.tsx";
 import DividerDefault from "UserProfileCard.tsx";
+import registerAssetDefault from "../../../../_runtime/10777_registerAsset.js";
+import registerAssetDefault2 from "../../../../_runtime/10778_registerAsset.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../user_settings/LocaleStore.tsx";
-import closure_7 from "../../../stores/StreamerModeStore.tsx";
+import _getSystemLocale from "../../user_settings/LocaleStore.tsx";
 import ARBITRARY_LARGE_OFFSET from "Constants.tsx";
 import ME from "../../../Constants.tsx";
 import { MetadataFields } from "../../connections/Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import Button from "../../../design/void/native.tsx";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function VerifiedIcon(arg0) {
   ({ theme, isTwitterVerifiedAccount } = arg0);
   if (isTwitterVerifiedAccount === undefined) {
@@ -28,28 +34,29 @@ function VerifiedIcon(arg0) {
   obj1 = map;
   let PLATFORM_TWITTER = obj1.useToken(ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, theme);
   if (isTwitterVerifiedAccount) {
-    PLATFORM_TWITTER = tmp4(712).unsafe_rawColors.PLATFORM_TWITTER;
+    PLATFORM_TWITTER = ThemesDefault.unsafe_rawColors.PLATFORM_TWITTER;
   }
   if (!tmp2Result.isThemeLight(theme)) {
     if (!isTwitterVerifiedAccount) {
-      let WHITE = tmp4(712).unsafe_rawColors.BLACK;
+      let WHITE = ThemesDefault.unsafe_rawColors.BLACK;
     }
     obj = { style: null, children: null };
     obj[0] = tmp.verifiedIconContainer;
     obj = { source: null, color: null };
-    obj[0] = tmp4(10777);
+    obj[0] = registerAssetDefault;
     obj[1] = PLATFORM_TWITTER;
     const merged = Object.assign(obj);
-    const items = [callback(tmp2(1297).Icon, obj), ];
+    const items = [callback(Button2.Icon, obj), ];
     obj1 = { source: null, color: null };
-    obj1[0] = tmp4(10778);
+    obj1[0] = registerAssetDefault2;
     obj1[1] = WHITE;
     const merged1 = Object.assign(obj);
-    items[1] = callback(tmp2(1297).Icon, obj1);
+    items[1] = callback(Button2.Icon, obj1);
     obj[1] = items;
     return callback2(closure_5, obj);
   }
-  WHITE = tmp4(712).unsafe_rawColors.WHITE;
+  WHITE = ThemesDefault.unsafe_rawColors.WHITE;
+  tmp2Result = AccessibilityAnnouncer;
 }
 let c3 = importAllResult;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
@@ -58,12 +65,11 @@ let c3 = importAllResult;
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const REFRESH_SMALL_16 = require("Button").Icon.Sizes.REFRESH_SMALL_16;
 const iconSize = Button.getIconSize(REFRESH_SMALL_16);
-obj = { cardContainer: obj, cardTitle: { marginBottom: 0 }, connectionRow: { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP, paddingVertical: 12, minHeight: 60 }, connectionInfoContainer: { flex: 1 }, connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, connectedAccountNameText: { flexShrink: 1 }, verifiedIconContainer: { height: iconSize, width: iconSize }, verifiedIcon: { position: "absolute", left: 0, top: 0 }, connectionMetadata: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" }, metadataItem: null, poweredByContainer: null, applicationIcon: null };
-obj = { paddingBottom: CARD_PADDING - 12 };
+let obj = { paddingBottom: CARD_PADDING - 12 };
 Button = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[9] = Button;
 obj[10] = { flexDirection: "row", alignItems: "center", marginTop: 6 };
-createCacheKey = { borderRadius: null };
+const createCacheKey = { borderRadius: null };
 createCacheKey[0] = Button.getIconSize(require("Button").Icon.Sizes.MEDIUM);
 obj[11] = createCacheKey;
 let closure_17 = createCacheKey.createStyles(obj);
@@ -99,10 +105,10 @@ let closure_19 = importAllResult.memo((userId) => {
     if (tmp13) {
       tmp13 = null.length > 0;
     }
-    const value = account(tmp3[19]).get(account.type);
+    const value = tmp4(tmp3[19]).get(account.type);
     c4 = value;
     tmp2Result = tmp2(tmp3[20]);
-    const tmp4Result = account(tmp3[19]);
+    const tmp4Result = tmp4(tmp3[19]);
     if (tmp2Result1.isThemeDark(theme)) {
       let darkPNG;
       if (!tmp15) {
@@ -129,15 +135,15 @@ let closure_19 = importAllResult.memo((userId) => {
     const callback = createdAtDate.useCallback(() => {
       if (null != platformUserUrl) {
         trackUserProfileAction({ action: "PRESS_VIEW_CONNECTED_ACCOUNT" });
-        let obj = userId(trackUserProfileAction[21]);
-        obj = { href: null, trusted: null, onConfirm: null };
+        userId(trackUserProfileAction[21]);
+        let obj = { href: null, trusted: null, onConfirm: null };
         obj[0] = tmp;
         obj[1] = account.type !== closure_1_11.DOMAIN;
         obj[2] = function onConfirm() {
-          let obj = closure_1_0(closure_1_2[22]);
-          obj = { platform_type: type.type, other_user_id: closure_0 };
+          userId(trackUserProfileAction[22]);
+          const obj = { platform_type: type.type, other_user_id: closure_0 };
           obj.trackWithMetadata(closure_1_10.CONNECTED_ACCOUNT_VIEWED, obj);
-          closure_1_1(closure_1_2[23]).openURL(closure_5);
+          account(trackUserProfileAction[23]).openURL(closure_5);
         };
         obj.handleClick(obj);
       }
@@ -218,7 +224,7 @@ let closure_19 = importAllResult.memo((userId) => {
       }
       items4[1] = tmp40Result;
       obj[1] = items4;
-      let tmp38Result = tmp38(tmp39, obj);
+      let tmp38Result = callback2(tmp39, obj);
       if (null != createdAtDate) {
         tmp40Result = null;
         if (null != createdAtDate) {
@@ -240,8 +246,7 @@ let closure_19 = importAllResult.memo((userId) => {
         const obj5 = { children: null };
         items5[1] = tmp40Result1;
         obj5[0] = items5;
-        tmp38Result = tmp38(closure_15, obj5);
-        const tmp45 = closure_15;
+        tmp38Result = callback2(closure_15, obj5);
       }
       const obj6 = { label: null, subLabel: null, icon: null, trailing: null, onPress: null, onLongPress: null, accessibilityLabel: null, accessibilityHint: null, accessibilityRole: "button" };
       obj6[0] = tmp38Result;
@@ -301,7 +306,7 @@ let closure_19 = importAllResult.memo((userId) => {
       }
       items7[1] = tmp30Result;
       obj11[1] = items7;
-      const items8 = [closure_14(platformUserUrl, obj11), , ];
+      const items8 = [callback2(platformUserUrl, obj11), , ];
       tmp30Result = null;
       if (null != createdAtDate) {
         const obj14 = { variant: "text-xs/medium", color: "text-muted", children: null };
@@ -321,10 +326,10 @@ let closure_19 = importAllResult.memo((userId) => {
       }
       items8[2] = tmp30Result1;
       obj10[1] = items8;
-      items6[1] = closure_14(platformUserUrl, obj10);
+      items6[1] = callback2(platformUserUrl, obj10);
       items6[2] = null != platformUserUrl && callback(tmp2(tmp3[31]).LinkExternalSmallIcon, { size: "sm" });
       obj8[6] = items6;
-      return closure_14(PressableOpacity, obj8);
+      return callback2(PressableOpacity, obj8);
     }
     tmp2Result1 = tmp2(tmp3[13]);
   } else {
@@ -333,19 +338,19 @@ let closure_19 = importAllResult.memo((userId) => {
     if (constants.REDDIT === type) {
       let redditMetadataItems = tmp2(tmp3[11]).generateRedditMetadataItems(metadata, metadataItem);
       const tmp2Result2 = tmp2(tmp3[11]);
-    } else if (tmp10.STEAM === type) {
+    } else if (constants.STEAM === type) {
       redditMetadataItems = tmp2(tmp3[11]).generateSteamMetadataItems(metadata, metadataItem);
       const tmp2Result3 = tmp2(tmp3[11]);
     } else {
-      if (tmp10.BLUESKY !== type) {
-        if (tmp10.TWITTER !== type) {
-          if (tmp10.MASTODON !== type) {
-            if (tmp10.PAYPAL === type) {
+      if (constants.BLUESKY !== type) {
+        if (constants.TWITTER !== type) {
+          if (constants.MASTODON !== type) {
+            if (constants.PAYPAL === type) {
               redditMetadataItems = tmp2(tmp3[11]).generatePaypalMetadataItems(metadata, metadataItem);
               const tmp2Result4 = tmp2(tmp3[11]);
-            } else if (tmp10.EBAY !== type) {
+            } else if (constants.EBAY !== type) {
               redditMetadataItems = null;
-              if (tmp10.TIKTOK === type) {
+              if (constants.TIKTOK === type) {
                 redditMetadataItems = tmp2(tmp3[11]).generateTikTokMetadataItems(metadata, metadataItem);
                 const tmp2Result5 = tmp2(tmp3[11]);
               }
@@ -359,14 +364,15 @@ let closure_19 = importAllResult.memo((userId) => {
       const tmp2Result7 = tmp2(tmp3[11]);
     }
   }
+  tmp4 = account;
+  tmp5 = account(trackUserProfileAction[17])("UserProfileConnections");
 });
 let closure_20 = importAllResult.memo((application) => {
   application = application.application;
-  let trackUserProfileAction;
   let str;
   const tmp = callback3();
   let obj = application(str[16]);
-  trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   const iconSource = application.getIconSource(closure_8);
   const profile = application.identity.profile;
   str = undefined;
@@ -440,9 +446,7 @@ let closure_20 = importAllResult.memo((application) => {
     obj3[1] = callback(closure_5, obj4);
     items3[1] = callback(closure_5, obj3);
     obj1[5] = items3;
-    tmp17Result = closure_14(closure_4, obj1);
-    const tmp10 = closure_4;
-    const tmp9 = closure_14;
+    tmp17Result = callback2(closure_4, obj1);
   }
   return tmp17Result;
 });
@@ -498,7 +502,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     }
     const obj6 = { label: null, subLabel: null, icon: null };
     obj6[0] = name;
-    obj6[1] = tmp6(closure_15, obj2);
+    obj6[1] = callback2(closure_15, obj2);
     const obj7 = { size: null, source: null, disableColor: true };
     obj7[0] = tmp4(1297).Icon.Sizes.MEDIUM;
     obj7[1] = applicationIconSource;
@@ -517,14 +521,14 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     if (null != applicationRoleConnection.platform_name) {
       const obj11 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj11[2] = applicationRoleConnection.platform_name;
-      tmp8Result = tmp8(tmp4(4734).Text, obj11);
+      tmp8Result = callback(tmp4(4734).Text, obj11);
     }
     const items2 = [tmp8Result, , , ];
     tmp8Result = null;
     if (null != applicationRoleConnection.platform_username) {
       const obj12 = { variant: "text-md/normal", color: "text-default", children: null };
       obj12[2] = applicationRoleConnection.platform_username;
-      tmp8Result = tmp8(tmp4(4734).Text, obj12);
+      tmp8Result = callback(tmp4(4734).Text, obj12);
     }
     items2[1] = tmp8Result;
     let tmp8Result1 = null;
@@ -534,7 +538,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
         const obj13 = { style: null, children: null };
         obj13[0] = tmp.connectionMetadata;
         obj13[1] = roleConnectionMetadataItems;
-        tmp8Result1 = tmp8(tmp7, obj13);
+        tmp8Result1 = callback(closure_5, obj13);
       }
     }
     items2[2] = tmp8Result1;
@@ -550,19 +554,18 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     obj14[1] = callback(tmp4(4734).Text, obj15);
     items2[3] = callback(closure_5, obj14);
     obj10[1] = items2;
-    items1[1] = tmp6(closure_5, obj10);
+    items1[1] = callback2(closure_5, obj10);
     obj8[1] = items1;
-    return tmp6(closure_5, obj8);
+    return callback2(closure_5, obj8);
   }
   tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("UserProfileConnections");
 });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConnections.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileConnections.tsx");
 
 export const ApplicationRoleConnection = memoResult;
 export const UserProfileAccountConnectionsCard = function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   let theme;
-  dependencyMap = undefined;
   const tmp = callback3();
   const tmp4 = theme(1367)("UserProfileConnections");
   let obj = userId(4104);
@@ -577,10 +580,10 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   ({ connections, appIdentities } = theme(12311)(userId));
   if (!stateFromStores) {
     const items2 = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => closure_1_13(closure_1_19, { account, theme, locale: closure_2, userId }, account.id)), 0);
-    arraySpreadResult = HermesBuiltin.arraySpread(appIdentities.map((application) => {
-      const identity = application.identity;
-      return callback(closure_20, { identity, application: application.application }, "" + identity.application_id + "-" + identity.provider_issued_user_id);
+    let arraySpreadResult = HermesBuiltin.arraySpread(connections.map((item, index) => closure_1_13(closure_1_19, { account: item, theme, locale: closure_2, userId }, item.id)), 0);
+    arraySpreadResult = HermesBuiltin.arraySpread(appIdentities.map((item, index) => {
+      const identity = item.identity;
+      return callback(closure_20, { identity, application: item.application }, "" + identity.application_id + "-" + identity.provider_issued_user_id);
     }), arraySpreadResult);
     obj = { style: null, title: null, titleStyle: null, children: null };
     const items3 = [tmp.cardContainer, userId.style];
@@ -597,14 +600,14 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
       const intl2 = tmp5(1236).intl;
       obj[1] = intl2.string(tmp5(1236).t["3fe7U5"]);
       obj[2] = items2;
-      let tmp12Result = tmp12(tmp5(6286).TableRowGroup, obj);
+      let tmp12Result = callback(tmp5(6286).TableRowGroup, obj);
     } else {
       obj1 = { children: null };
       obj1[0] = items2;
-      tmp12Result = tmp12(tmp5(7185).UserProfileCardRows, obj1);
+      tmp12Result = callback(tmp5(7185).UserProfileCardRows, obj1);
     }
     obj[3] = tmp12Result;
-    return closure_13(tmp2(7185), obj);
+    return callback(tmp2(7185), obj);
   }
   return null;
 };
@@ -617,30 +620,30 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
   const items = [closure_7];
   if (!obj.useStateFromStores(items, () => obj.hidePersonalInformation)) {
     if (0 !== arr.length) {
-      const mapped = arr.map((application) => callback(closure_21, { applicationRoleConnection: application }, application.application.id));
+      const mapped = arr.map((item, index) => callback(closure_21, { applicationRoleConnection: item }, item.application.id));
       obj = { style: null, title: null, titleStyle: null, children: null };
       const items1 = [tmp.cardContainer, style];
       obj[0] = items1;
       let stringResult;
       if (!tmp4) {
-        const intl = tmp5(1236).intl;
-        stringResult = intl.string(tmp5(1236).t.PHjkRE);
+        const intl = getSystemLocale.intl;
+        stringResult = intl.string(getSystemLocale.t.PHjkRE);
       }
       obj[1] = stringResult;
       obj[2] = tmp.cardTitle;
       if (tmp4) {
         obj = { hasIcons: true, title: null, children: null };
-        const intl2 = tmp5(1236).intl;
-        obj[1] = intl2.string(tmp5(1236).t.PHjkRE);
+        const intl2 = getSystemLocale.intl;
+        obj[1] = intl2.string(getSystemLocale.t.PHjkRE);
         obj[2] = mapped;
-        let tmp9Result = tmp9(tmp5(6286).TableRowGroup, obj);
+        let tmp9Result = callback(TableRowGroupTitle.TableRowGroup, obj);
       } else {
         obj1 = { children: null };
         obj1[0] = mapped;
-        tmp9Result = tmp9(tmp5(7185).UserProfileCardRows, obj1);
+        tmp9Result = callback(Divider.UserProfileCardRows, obj1);
       }
       obj[3] = tmp9Result;
-      return closure_13(DividerDefault, obj);
+      return callback(DividerDefault, obj);
     }
   }
   return null;

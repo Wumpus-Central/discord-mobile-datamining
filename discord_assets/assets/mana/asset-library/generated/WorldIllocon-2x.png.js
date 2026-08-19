@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/WorldIllocon-2x.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WorldIllocon-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WorldIllocon-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/28c3e4b487ce4a7ed4f326f4cb7ea374c39822fa0cc13fe95de78012efff4321.png";
 export const metadata = { fileBytes: 673 };

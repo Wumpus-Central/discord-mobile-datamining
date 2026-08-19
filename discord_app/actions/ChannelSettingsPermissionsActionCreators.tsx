@@ -1,8 +1,8 @@
 // discord_app/actions/ChannelSettingsPermissionsActionCreators.tsx
 import dispatcherDefault from "../Dispatcher.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+const require = fn;
 function _updatePermission() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
@@ -50,14 +50,13 @@ function _updatePermission() {
                   c6 = 1;
                   c7 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = guildId(8852).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, tmp25, tmp24);
+                  obj1[0] = guildId(8852).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, closure_3, tmp24);
                   return obj1;
                 }
               }
               tmp22 = guildId;
               tmp23 = callback;
               tmp24 = dependencyMap;
-              tmp25 = closure_3;
             }
           } else if (arg0 === 1) {
             c7 = 3;
@@ -95,7 +94,7 @@ function _updatePermission() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("actions/ChannelSettingsPermissionsActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("actions/ChannelSettingsPermissionsActionCreators.tsx");
 
 export const updatePermission = function updatePermission(closure_1_0, id, addResult, deny) {
   const self = this;
@@ -108,13 +107,11 @@ export const updatePermission = function updatePermission(closure_1_0, id, addRe
   return applyArgumentsResult;
 };
 export const selectPermission = function selectPermission(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id };
+  const obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id };
   obj.dispatch(obj);
 };
 export const setAdvancedMode = function setAdvancedMode(advancedMode) {
-  let obj = dispatcherDefault;
-  obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode };
+  const obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode };
   obj.dispatch(obj);
 };
 export const init = function init() {
@@ -126,7 +123,6 @@ export const savePermissionUpdates = function savePermissionUpdates(id, items, a
   dependencyMap = [];
   closure_3 = arg2;
   dispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
-  let obj = dispatcherDefault;
   return new Promise((arg0) => {
     closure_0 = arg0;
     function chain() {
@@ -157,9 +153,9 @@ export const savePermissionUpdates = function savePermissionUpdates(id, items, a
       }
     }
     !chain();
-  }).then(() => {
-    let obj = items(table[2]);
-    obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent: closure_3 };
+  }).then((result) => {
+    items(table[2]);
+    const obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent: closure_3 };
     obj.dispatch(obj);
   });
 };
@@ -169,7 +165,6 @@ export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpda
   dependencyMap = arg2;
   closure_3 = arg3;
   dispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
-  const obj = dispatcherDefault;
   return new Promise((arg0) => {
     closure_0 = arg0;
     function chain() {
@@ -200,9 +195,9 @@ export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpda
       }
     }
     !chain();
-  }).then(() => {
-    let obj = items(table[2]);
-    obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent: closure_3 };
+  }).then((result) => {
+    items(table[2]);
+    const obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent: closure_3 };
     obj.dispatch(obj);
   });
 };

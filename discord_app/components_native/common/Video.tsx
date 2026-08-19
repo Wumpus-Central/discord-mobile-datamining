@@ -1,13 +1,13 @@
 // discord_app/components_native/common/Video.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class VideoComponent {
   constructor(arg0) {
     flag = global.paused;
@@ -47,8 +47,8 @@ class VideoComponent {
     items[0] = pauseWhileAppInactive;
     effect = closure_3.useEffect(() => {
       if (closure_0) {
-        closure_0 = closure_1_7.addEventListener("change", (arg0) => {
-          callback("active" === arg0);
+        closure_0 = closure_1_7.addEventListener("change", (event) => {
+          callback("active" === event);
         });
         return () => {
           closure_0.remove();
@@ -86,8 +86,7 @@ class VideoComponent {
 }
 let c3 = importAllResult;
 ({ TouchableWithoutFeedback: c4, View: c5, Image: closure_6, AppState: error } = get_ActivityIndicator);
-createCacheKey = { container: null, video: null };
-createCacheKey = { flex: 1, shadowColor: ThemesDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+const createCacheKey = { flex: 1, shadowColor: ThemesDefault.unsafe_rawColors.BLACK, shadowOpacity: 0.5, shadowOffset: { height: 1, width: 0 }, shadowRadius: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 let closure_9 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
@@ -118,9 +117,8 @@ class Video extends PureComponent {
       }
       const current = applyArgumentsResult.ref.current;
       if (null != current) {
-        let obj = applyArgumentsResult(closure_1_1[8]);
-        obj = { initialSources: null, originViewOrOriginLayout: null };
-        obj = {};
+        applyArgumentsResult(dependencyMap[8]);
+        const obj = {};
         const merged = Object.assign(src);
         obj.width = width;
         obj.height = height;
@@ -153,9 +151,8 @@ prototype["renderVideo"] = function renderVideo() {
       const videoURI = src.videoURI;
       let tmp13;
       if (null != videoURI) {
-        let obj = { style: null, source: null, poster: null, muted: null, paused: null, resizeMode: null, posterResizeMode: null, ariaHidden: null, disableFocus: null, httpEngine: null };
         const items = [tmp.video, , ];
-        obj = { width: null, height: null };
+        let obj = { width: null, height: null };
         obj[0] = tmp3;
         obj[1] = tmp4;
         items[1] = obj;
@@ -183,8 +180,7 @@ prototype["renderImage"] = function renderImage() {
   const src = this.props.src;
   if ("uri" in src) {
     if ("" !== src.uri) {
-      let obj = { source: null, style: null, "aria-hidden": null };
-      obj = { uri: null };
+      let obj = { uri: null };
       obj[0] = src.uri;
       obj[0] = obj;
       obj = { width: null, height: null };
@@ -208,7 +204,7 @@ prototype["render"] = function render() {
   if (this.state.postponeRender) {
     if (false !== tmp2) {
       obj[4] = null;
-      let tmp3Result = tmp3(tmp4, obj);
+      let tmp3Result = <tmp4 {...obj} />;
       if (tmp) {
         if (accessibilityLabel == null) {
           const intl = getSystemLocale.intl;
@@ -218,8 +214,7 @@ prototype["render"] = function render() {
         obj[1] = accessibilityLabel;
         obj[2] = self.handleOpenFullScreen;
         obj[3] = tmp3Result;
-        tmp3Result = tmp3(closure_4, obj);
-        const tmp9 = closure_4;
+        tmp3Result = <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null}>{null}</closure_4>;
       }
       return tmp3Result;
     }
@@ -231,8 +226,7 @@ prototype["render"] = function render() {
   }
 };
 Video.contextType = require("ManaContext").ThemeContext;
-const obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-const result = require("set").fileFinishedImporting("components_native/common/Video.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/Video.tsx");
 
 export default Video;
 export const createVideoControls = function createVideoControls(NOOP) {
@@ -242,44 +236,7 @@ export const createVideoControls = function createVideoControls(NOOP) {
   c6 = 0;
   c7 = 0;
   c8 = false;
-  obj = {
-    seek(arg0) {
-      const current = ref.current;
-      if (current != null) {
-        const seek = current.seek;
-        if (seek != null) {
-          seek(arg0);
-        }
-      }
-    },
-    pause(arg0) {
-      NOOP(arg0);
-      if (closure_8 !== arg0) {
-        closure_8 = arg0;
-        if (closure_2 != null) {
-          tmp2(closure_8);
-        }
-      }
-    },
-    useSubscribe(arg0, arg1, arg2) {
-      closure_1 = arg0;
-      closure_2 = arg1;
-      closure_3 = arg2;
-      const layoutEffect = closure_1_3.useLayoutEffect(() => {
-        if (closure_1 != null) {
-          tmp(closure_5, closure_6);
-        }
-        if (closure_2 != null) {
-          tmp5(closure_8);
-        }
-        if (closure_3 != null) {
-          tmp8(closure_7);
-        }
-      }, []);
-    },
-    props: obj
-  };
-  obj = {
+  const obj = {
     ref,
     onPlaybackRateChange(nativeEvent) {
       if (closure_8 !== 0 === nativeEvent.playbackRate) {

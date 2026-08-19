@@ -1,5 +1,5 @@
 // discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
@@ -32,6 +32,6 @@ if (null != global.__KvStorage) {
     throw error3;
   }
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx");
 
 export const KV_RAW = __KvStorage;

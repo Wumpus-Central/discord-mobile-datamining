@@ -1,5 +1,5 @@
 // discord_app/modules/soundpacks/SoundpackStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import Soundpacks2 from "Constants.tsx";
@@ -16,9 +16,8 @@ prototype["initialize"] = function initialize(arg0) {
     const _Object = Object;
     const values = Object.values(Soundpacks);
     if (!values.includes(closure_1.soundpack)) {
-      closure_1.soundpack = tmp2.CLASSIC;
+      closure_1.soundpack = Soundpacks.CLASSIC;
     }
-    tmp2 = Soundpacks;
   }
 };
 prototype["getState"] = function getState() {
@@ -42,6 +41,6 @@ const soundpackStore = new SoundpackStore(dispatcherDefault, {
     obj[1] = lastSoundpackExperimentId;
   }
 });
-const result = set.fileFinishedImporting("modules/soundpacks/SoundpackStore.tsx");
+const result = obj132.fileFinishedImporting("modules/soundpacks/SoundpackStore.tsx");
 
 export default soundpackStore;

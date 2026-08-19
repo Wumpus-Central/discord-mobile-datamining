@@ -1,14 +1,14 @@
 // discord_app/modules/messages/native/renderer/MarkupParsers.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
-import setDefault from "../../../../utils/Durations.tsx";
+import obj132Default from "../../../../utils/Durations.tsx";
 import get_defaultRulesDefault from "../../../markup/MarkupUtils.tsx";
 import LHeading from "../../../../components_native/ChangeLogStandardTemplate.tsx";
 import getInitialParserState from "../../renderMessageMarkup.tsx";
 import importDefaultResult from "../../../../../_runtime/01405_priv.js";
 
 const MessageTypes = ME.MessageTypes;
-let obj = { max: Infinity, maxAge: 15 * setDefault.Millis.MINUTE, updateAgeOnGet: true };
+let obj = { max: Infinity, maxAge: 15 * obj132Default.Millis.MINUTE, updateAgeOnGet: true };
 let closure_4 = new importDefaultResult(obj);
 const tmp2 = new importDefaultResult(obj);
 let closure_5 = new importDefaultResult(obj);
@@ -19,7 +19,7 @@ importDefaultResult = new importDefaultResult(obj);
 const tmp3 = new importDefaultResult(obj);
 let closure_7 = new importDefaultResult(obj);
 const tmp7 = new importDefaultResult(obj);
-let result = set.fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
+let result = obj132.fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
 
 export const parseEmbedTitleMarkup = function parseEmbedTitleMarkup(rawName, closure_0) {
   const combined = "" + rawName + "-" + closure_0;
@@ -31,7 +31,6 @@ export const parseEmbedTitleMarkup = function parseEmbedTitleMarkup(rawName, clo
     const parseEmbedTitleToASTResult = get_defaultRulesDefault.parseEmbedTitleToAST(rawName, true, obj);
     const result = obj.set(combined, parseEmbedTitleToASTResult);
     value = parseEmbedTitleToASTResult;
-    const obj2 = get_defaultRulesDefault;
   }
   return value;
 };
@@ -45,7 +44,6 @@ export const parseEmbedTitleMarkupWithoutLinks = function parseEmbedTitleMarkupW
     const result = get_defaultRulesDefault.parseEmbedTitleWithoutLinksToAST(arg0, true, obj);
     const result1 = obj.set(combined, result);
     value = result;
-    const obj2 = get_defaultRulesDefault;
   }
   return value;
 };
@@ -65,7 +63,6 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
   if (keys !== undefined) {
     tmp4 = replaced;
     while (keys[tmp] !== undefined) {
-      let tmp11 = tmp7;
       replaced = replaced.replaceAll(tmp7, replaceMap[tmp7]);
       continue;
     }
@@ -127,12 +124,10 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
     const merged = Object.assign(getInitialParserState.renderMessageMarkupToAST(message, obj));
     obj.isInlineReplyPreview = flag;
     result = obj1.set(message, obj);
-    const obj3 = getInitialParserState;
   }
   const obj6 = get_defaultRulesDefault;
   obj1 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
   flag = flag2;
-  const obj7 = LHeading;
   if (!flag2) {
     flag = obj;
   }
@@ -145,4 +140,5 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   obj1[4] = flag3;
   obj1[5] = flag3;
   const result1 = obj1.set(message, obj);
+  const astParserForResult = obj6.astParserFor(LHeading.changelogRules(message.changelogId, true));
 };

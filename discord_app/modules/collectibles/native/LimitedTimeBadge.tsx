@@ -2,24 +2,23 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../user_settings/LocaleStore.tsx";
-import closure_5 from "../../user_settings/ThemeStore.tsx";
+import _getSystemLocale from "../../user_settings/LocaleStore.tsx";
+import handleThemeChange from "../../user_settings/ThemeStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { root: null, backgroundDarkMode: null, backgroundLightMode: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
+const createCacheKey = { borderRadius: ThemesDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.WHITE };
-let obj1 = { backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/LimitedTimeBadge.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/LimitedTimeBadge.tsx");
 
 export default function LimitedTimeBadge(unpublishedAt) {
   const tmp = callback();
@@ -33,30 +32,30 @@ export default function LimitedTimeBadge(unpublishedAt) {
   ({ days, hours } = useCountdownDefault(unpublishedAt.unpublishedAt, 1000, undefined, true));
   if (hasItem) {
     if (days > 1) {
-      const intl6 = tmp2(1236).intl;
+      const intl6 = getSystemLocale.intl;
       obj = { days: null };
       obj[0] = days;
-      let formatToPlainStringResult = intl6.formatToPlainString(tmp2(1236).t.DkxLY0, obj);
+      let formatToPlainStringResult = intl6.formatToPlainString(getSystemLocale.t.DkxLY0, obj);
     } else {
       if (days <= 1) {
         if (hours > 0) {
-          const intl5 = tmp2(1236).intl;
+          const intl5 = getSystemLocale.intl;
           obj = { hours: null };
           obj[0] = hours;
-          formatToPlainStringResult = intl5.formatToPlainString(tmp2(1236).t.WJieZ2, obj);
+          formatToPlainStringResult = intl5.formatToPlainString(getSystemLocale.t.WJieZ2, obj);
         }
       }
-      const intl4 = tmp2(1236).intl;
-      formatToPlainStringResult = intl4.formatToPlainString(tmp2(1236).t.WJieZ2, { hours: 0 });
+      const intl4 = getSystemLocale.intl;
+      formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t.WJieZ2, { hours: 0 });
     }
   } else {
-    const intl = tmp2(1236).intl;
-    let sum = days + intl.string(tmp2(1236).t.QJyuxY);
-    const intl2 = tmp2(1236).intl;
-    let sum1 = hours + intl2.string(tmp2(1236).t["1LyF1h"]);
+    const intl = getSystemLocale.intl;
+    let sum = days + intl.string(getSystemLocale.t.QJyuxY);
+    const intl2 = getSystemLocale.intl;
+    let sum1 = hours + intl2.string(getSystemLocale.t["1LyF1h"]);
     if (days <= 1) {
       if (days > 1) {
-        const intl3 = tmp2(1236).intl;
+        const intl3 = getSystemLocale.intl;
         sum1 = `0${tmp9(tmp2(1236).t["1LyF1h"])}`;
       }
       sum = sum1;
@@ -72,12 +71,13 @@ export default function LimitedTimeBadge(unpublishedAt) {
     }
     const obj2 = { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null };
     obj2[0] = str2;
-    const intl7 = tmp2(1236).intl;
+    const intl7 = getSystemLocale.intl;
     const obj3 = { daysLeft: null };
     obj3[0] = days;
-    obj2[2] = intl7.formatToPlainString(tmp2(1236).t.TlZULM, obj3);
+    obj2[2] = intl7.formatToPlainString(getSystemLocale.t.TlZULM, obj3);
     obj2[4] = sum;
-    obj1[1] = jsx(tmp2(4734).Text, { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
+    obj1[1] = jsx(Text.Text, { color: null, variant: "text-xs/bold", accessibilityLabel: null, allowFontScaling: false, children: null });
     return <View style={null}>{null}</View>;
   }
+  const tmp6 = useCountdownDefault(unpublishedAt.unpublishedAt, 1000, undefined, true);
 };

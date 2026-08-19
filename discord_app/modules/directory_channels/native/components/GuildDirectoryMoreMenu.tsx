@@ -1,11 +1,13 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
+import _modDef4656 from "../../../../actions/native/AlertActionCreators.tsx";
 import useCanManageGuildDirectoryEntryDefault from "../../useCanManageGuildDirectoryEntry.tsx";
+import _modDef11481 from "GuildDirectoryEditDescriptionModalActionCreators.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx");
+let result = require("obj132").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx");
 
 export default function GuildDirectoryMoreMenu(entry) {
   entry = entry.entry;
@@ -18,8 +20,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     obj[0] = intl.string(entry(1236).t.XnuOvN);
     obj[1] = entry(9925).PencilIcon;
     obj[2] = function handleEdit() {
-      let obj = closure_1_1(closure_1_3[3]);
-      obj = { entry };
+      const obj = { entry };
       obj.open(obj);
     };
     items.push(obj);
@@ -30,21 +31,20 @@ export default function GuildDirectoryMoreMenu(entry) {
     obj[0] = intl2.string(entry(1236).t.KUxYWH);
     obj[1] = entry(4333).TrashIcon;
     obj[3] = function handleRemove() {
-      let obj = closure_1_1(closure_1_3[4]);
-      obj = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null };
-      const intl = entry(closure_1_3[5]).intl;
-      obj[0] = intl.string(entry(closure_1_3[5]).t.KUxYWH);
-      const intl2 = entry(closure_1_3[5]).intl;
+      let obj = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null };
+      const intl = entry(dependencyMap[5]).intl;
+      obj[0] = intl.string(entry(dependencyMap[5]).t.KUxYWH);
+      const intl2 = entry(dependencyMap[5]).intl;
       obj = { guildName: entry.name };
-      obj[1] = intl2.formatToPlainString(entry(closure_1_3[5]).t["/5y0uV"], obj);
+      obj[1] = intl2.formatToPlainString(entry(dependencyMap[5]).t["/5y0uV"], obj);
       obj[2] = function onConfirm() {
         const result = closure_1_2(closure_1_3[6]).removeDirectoryGuildEntry(closure_0.channelId, closure_0.guildId);
       };
-      obj[3] = entry(closure_1_3[7]).ButtonColors.RED;
-      const intl3 = entry(closure_1_3[5]).intl;
-      obj[4] = intl3.string(entry(closure_1_3[5]).t.N86XcP);
-      const intl4 = entry(closure_1_3[5]).intl;
-      obj[5] = intl4.string(entry(closure_1_3[5]).t["ETE/oC"]);
+      obj[3] = entry(dependencyMap[7]).ButtonColors.RED;
+      const intl3 = entry(dependencyMap[5]).intl;
+      obj[4] = intl3.string(entry(dependencyMap[5]).t.N86XcP);
+      const intl4 = entry(dependencyMap[5]).intl;
+      obj[5] = intl4.string(entry(dependencyMap[5]).t["ETE/oC"]);
       obj[6] = function onCancel() {
         callback(table[4]).close();
       };
@@ -58,7 +58,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     obj[0] = intl3.string(entry(1236).t.Aen9eh);
     obj[1] = entry(9435).FlagIcon;
     obj[3] = function handleReport() {
-      const result = entry(closure_1_3[8]).showReportModalForGuildDirectoryEntry(entry);
+      const result = entry(dependencyMap[8]).showReportModalForGuildDirectoryEntry(entry);
     };
     items.push(obj);
   }

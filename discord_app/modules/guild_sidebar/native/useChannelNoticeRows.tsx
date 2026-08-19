@@ -1,17 +1,17 @@
 // discord_app/modules/guild_sidebar/native/useChannelNoticeRows.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../guild_progress/GuildProgressStore.tsx";
-import closure_6 from "../../../stores/GuildChannelStore.tsx";
-import closure_7 from "../../../stores/GuildStore.tsx";
-import closure_8 from "../../../stores/UserStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import completeStep from "../../guild_progress/GuildProgressStore.tsx";
+import comparator from "../../../stores/GuildChannelStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import { ChannelListChannelNoticeRow as closure_9 } from "../GuildSidebarConstants.tsx";
 import { MFALevels } from "../../../Constants.tsx";
 import ContentDismissActionType from "../../dismissible_content/DismissibleContentConstants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ ContentDismissActionType: unpackModuleId, DismissibleContentGroupName: closure_12 } = ContentDismissActionType);
-let result = require("set").fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");
 
 export default function useChannelNoticeRows(id) {
   id = id.id;
@@ -25,7 +25,7 @@ export default function useChannelNoticeRows(id) {
   const stateFromStores1 = id(stateFromStores[10]).useStateFromStores(items1, () => {
     let result = null != currentUser;
     if (result) {
-      result = id.mfaLevel === closure_1_10.ELEVATED;
+      result = id.mfaLevel === MFALevels.ELEVATED;
     }
     if (result) {
       result = !currentUser.mfaEnabled;
@@ -51,12 +51,11 @@ export default function useChannelNoticeRows(id) {
   hasAlreadyLinked = undefined;
   const obj5 = id(stateFromStores[14]);
   const tmp12 = hasAlreadyLinked;
-  const tmp8 = constants;
   const tmp9 = currentUser;
   let enabled = hasAlreadyLinked(stateFromStores[9]).useConfig({ location: "useMobileAccountLinkRow" }).enabled;
-  let tmpResult = tmp(tmp2[10]);
+  tmp(tmp2[10]);
   const items5 = [closure_7];
-  tmpResult = tmp(tmp2[11]);
+  const tmpResult = tmp(tmp2[11]);
   let first = null;
   if (enabled) {
     first = tmpResult.useStateFromStoresArray(items5, () => {
@@ -106,11 +105,11 @@ export default function useChannelNoticeRows(id) {
   }
   const tmpResult2 = id(stateFromStores[14]);
   const items8 = [id, hasAlreadyLinked];
-  [tmp17, tmp18] = tmp9(id(stateFromStores[14]).useSelectedSingleUseGuildDismissibleContent(items7, id, tmp8.CHANNEL_NOTICES, true), 2);
+  [tmp17, tmp18] = tmp9(id(stateFromStores[14]).useSelectedSingleUseGuildDismissibleContent(items7, id, constants.CHANNEL_NOTICES, true), 2);
   const effect = stateFromStores1.useEffect(() => {
     if (hasAlreadyLinked) {
-      let obj = id(stateFromStores[16]);
-      obj = { dismissAction: null, guildId: null, groupName: null };
+      id(stateFromStores[16]);
+      const obj = { dismissAction: null, guildId: null, groupName: null };
       obj[0] = closure_1_11.INDIRECT_ACTION;
       obj[1] = id;
       obj[2] = closure_1_12.CHANNEL_NOTICES;
@@ -122,18 +121,18 @@ export default function useChannelNoticeRows(id) {
     rows: stateFromStores1.useMemo(() => {
       const items = [closure_1_9.SPACER];
       if (closure_6) {
-        items.push(tmp.GAME_CLAIM);
+        items.push(closure_1_9.GAME_CLAIM);
       }
       if (closure_7) {
-        items.push(tmp.APPLICATION_ACCOUNT_LINK);
+        items.push(closure_1_9.APPLICATION_ACCOUNT_LINK);
       }
       if (stateFromStores) {
-        items.push(tmp.GUILD_PROGRESS);
+        items.push(closure_1_9.GUILD_PROGRESS);
       } else if (stateFromStores1) {
-        items.push(tmp.MFA_WARNING);
+        items.push(closure_1_9.MFA_WARNING);
       }
       if (guildHasLiveChannelNotice) {
-        items.push(tmp.LIVE_CHANNEL_NOTICE);
+        items.push(closure_1_9.LIVE_CHANNEL_NOTICE);
       }
       return items;
     }, items9),

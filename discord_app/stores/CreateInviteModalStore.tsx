@@ -4,12 +4,12 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import isGuildMemberDefault from "../utils/InstantInviteUtils.tsx";
 import getDefaultInviteExpiration from "../modules/instant_invite/DefaultInviteExpirationExperiments.tsx";
-import closure_9 from "ChannelStore.tsx";
-import closure_10 from "GuildStore.tsx";
-import closure_11 from "InstantInviteStore.tsx";
+import ensureGuildLoaded from "ChannelStore.tsx";
+import createGuildRecordFromRust from "GuildStore.tsx";
+import map from "InstantInviteStore.tsx";
 import { FormStates } from "../Constants.tsx";
 
-require = arg1;
+require = fn;
 function updateWithLatestInvite(channelId, arg1) {
   ({ targetType, targetUserId, targetApplicationId } = arg1);
   channel = channel.getChannel(channelId);
@@ -49,7 +49,7 @@ function updateWithLatestInvite(channelId, arg1) {
   if (invite != null) {
     const roles = invite.roles;
     if (roles != null) {
-      mapped = roles.map((id) => id.id);
+      mapped = roles.map((item, index) => item.id);
     }
   }
   if (mapped == null) {
@@ -169,6 +169,6 @@ const createInviteModalStore = new CreateInviteModalStore(dispatcherDefault, {
     c8 = undefined;
   }
 });
-const result = require("set").fileFinishedImporting("stores/CreateInviteModalStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/CreateInviteModalStore.tsx");
 
 export default createInviteModalStore;

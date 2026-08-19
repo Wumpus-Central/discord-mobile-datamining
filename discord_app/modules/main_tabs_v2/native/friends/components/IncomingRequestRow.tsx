@@ -1,14 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import nameFromUserDefault from "../../../../../utils/UserUtils.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../a11y/AccessibilityStore.tsx";
-import closure_5 from "../../../../applications/ApplicationStore.tsx";
+import ApplicationIconAndNameDefault from "../../../../user_profile/native/ApplicationIconAndName.tsx";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../../a11y/AccessibilityStore.tsx";
+import addApplication from "../../../../applications/ApplicationStore.tsx";
 import { UserRowModes } from "../../shared_components/user_list/UserRowConstants.tsx";
 import { RelationshipTypes } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function IncomingRequestRow(user) {
   user = user.user;
   const applicationId = user.applicationId;
@@ -19,11 +20,8 @@ function IncomingRequestRow(user) {
   const ignoreRequestAccessibilityLabel = user.ignoreRequestAccessibilityLabel;
   ({ accessibilityLabel, acceptedRequestLabel, acceptedRequestAccessibilityLabel } = user);
   const merged = Object.assign(user, Object.create(null));
-  let sharedValue;
-  let userTag;
-  let stateFromStores1;
   let obj = user(accepted[6]);
-  sharedValue = obj.useSharedValue(false);
+  const sharedValue = obj.useSharedValue(false);
   obj1 = user(accepted[7]);
   let items = [onDeclineIncomingRequest];
   const stateFromStores = obj1.useStateFromStores(items, () => onDeclineIncomingRequest.useReducedMotion);
@@ -36,7 +34,7 @@ function IncomingRequestRow(user) {
   const memo = onAcceptIncomingRequest.useMemo(() => {
     let obj = { name: null, label: null };
     if (accepted) {
-      obj[0] = tmp.WAVE;
+      obj[0] = stateFromStores1.WAVE;
       const intl = user(accepted[8]).intl;
       obj = { username: null };
       obj[0] = applicationId(accepted[9]).getName(user);
@@ -45,7 +43,7 @@ function IncomingRequestRow(user) {
       let items1 = items;
       const obj4 = applicationId(accepted[9]);
     } else {
-      obj[0] = tmp.ACCEPT;
+      obj[0] = stateFromStores1.ACCEPT;
       obj[1] = acceptRequestAccessibilityLabel;
       items1 = [obj, ];
       obj = { name: null, label: null };
@@ -64,27 +62,27 @@ function IncomingRequestRow(user) {
       obj[0] = user.id;
       obj[1] = applicationId;
       return user(accepted[10]).acceptIncomingRequest(obj);
-    } else if (tmp.DECLINE === actionName) {
+    } else if (stateFromStores1.DECLINE === actionName) {
       onDeclineIncomingRequest(user.id, applicationId);
       obj = { userId: null, applicationId: null };
       obj[0] = user.id;
       obj[1] = applicationId;
       return user(accepted[10]).dismissIncomingRequest(obj);
-    } else if (tmp.WAVE === actionName) {
+    } else if (stateFromStores1.WAVE === actionName) {
       obj = user(accepted[10]);
       return obj.sendWave(user.id, true, "Incoming Friend Request");
     }
   }, items3);
-  userTag = applicationId(accepted[9]).useUserTag(user);
+  const userTag = applicationId(accepted[9]).useUserTag(user);
   const obj3 = applicationId(accepted[9]);
   const items4 = [acceptRequestAccessibilityLabel];
-  stateFromStores1 = user(accepted[7]).useStateFromStores(items4, () => acceptRequestAccessibilityLabel.getApplication(applicationId));
+  const stateFromStores1 = user(accepted[7]).useStateFromStores(items4, () => acceptRequestAccessibilityLabel.getApplication(applicationId));
   const items5 = [stateFromStores1, applicationId, userTag];
   const memo1 = onAcceptIncomingRequest.useMemo(() => {
     if (null != stateFromStores1) {
       const obj = { application: null, textVariant: "text-xs/medium", iconSize: 12 };
-      obj[0] = tmp;
-      let str = userTag(applicationId(accepted[11]), obj, tmp.id);
+      obj[0] = stateFromStores1;
+      let str = userTag(applicationId(accepted[11]), obj, stateFromStores1.id);
     } else {
       str = "";
       if (null == applicationId) {
@@ -119,7 +117,7 @@ function IncomingGameFriendRequestRow(arg0) {
   const intl2 = application(1236).intl;
   obj = {
     applicationNameHook() {
-      return closure_1_8(closure_1_1(closure_1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
+      return jsx(ApplicationIconAndNameDefault, { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
     }
   };
   obj[3] = intl2.format(application(1236).t.gRgJGR, obj);
@@ -131,11 +129,11 @@ function IncomingGameFriendRequestRow(arg0) {
   obj[6] = intl5.formatToPlainString(application(1236).t.d8Cw5e, { name: userTag, applicationName: application.name });
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow applicationNameHook={function applicationNameHook() {
-    return closure_1_8(closure_1_1(closure_1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
+    return jsx(ApplicationIconAndNameDefault, { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
   }} />;
 }
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx");
 
 export const IncomingFriendRequestRow = function IncomingFriendRequestRow(user) {
   user = user.user;

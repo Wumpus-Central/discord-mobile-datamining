@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/GuildSettingsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
 const obj = {
@@ -20,7 +20,7 @@ const obj = {
     return intl.string(getSystemLocale.t.NASFnq);
   }
 };
-const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
 
 export const MAX_SUBCATEGORIES = 5;
 export const MAX_KEYWORDS = 10;

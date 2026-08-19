@@ -1,10 +1,10 @@
 // discord_app/modules/soundboard/useSoundboardSoundPlayer.native.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "SoundboardStore.tsx";
+import noop from "../../../_runtime/00019_noop.js";
+import handleSoundCreateOrUpdate from "SoundboardStore.tsx";
 import { SoundOutputChannel } from "../sound_playback/Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/soundboard/useSoundboardSoundPlayer.native.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/soundboard/useSoundboardSoundPlayer.native.tsx");
 
 export default function useSoundboardSoundPlayer(arg0, arg1) {
   const _require = arg0;
@@ -22,10 +22,10 @@ export default function useSoundboardSoundPlayer(arg0, arg1) {
   }
   audioRef = undefined;
   audioRef = React.useContext(importDefault(audioRef[4])).audioRef;
-  let obj = _require(audioRef[5]);
+  _require(audioRef[5]);
   const items = [closure_4];
   const items1 = [arg0];
-  obj = { playSoundboardSound: null, isPlayingSound: null, previewSound: null, isPreviewingSound: false };
+  let obj = { playSoundboardSound: null, isPlayingSound: null, previewSound: null, isPreviewingSound: false };
   const items2 = [arg0, audioRef, arg1];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.isPlayingSound(lib.soundId), items1);
   obj[0] = React.useCallback((arg0) => {

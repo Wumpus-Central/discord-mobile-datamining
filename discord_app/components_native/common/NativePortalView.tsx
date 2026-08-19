@@ -4,13 +4,13 @@ import importAllResult from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
-import set from "../../utils/PlatformUtils.tsx";
+import obj132 from "../../utils/PlatformUtils.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ NativeModules, requireNativeComponent, NativeEventEmitter } = get_ActivityIndicator);
 let closure_5 = createCacheKey.createStyles({ base: { overflow: "hidden" } });
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   let importDefaultResult = __INTERNAL_VIEW_CONFIGDefault;
 } else {
   importDefaultResult = requireNativeComponent("DCDPortalView");
@@ -18,8 +18,8 @@ if (set.isAndroid()) {
 const MediaPlayerManager = NativeModules.MediaPlayerManager;
 const DCDPortalViewManager = NativeModules.DCDPortalViewManager;
 const nativeEventEmitter = new NativeEventEmitter(MediaPlayerManager);
-set = new Set();
-const result = set.fileFinishedImporting("components_native/common/NativePortalView.tsx");
+const set = new Set();
+const result = obj132.fileFinishedImporting("components_native/common/NativePortalView.tsx");
 
 export default importAllResult.memo((paused) => {
   paused = paused.paused;
@@ -35,13 +35,13 @@ export default importAllResult.memo((paused) => {
     const items = [merged.portal, paused];
     const layoutEffect = merged.useLayoutEffect(() => {
       if (null != merged.portal) {
-        closure_1_7.toggle(tmp.portal, !paused);
+        MediaPlayerManager.toggle(tmp.portal, !paused);
       }
     }, items);
     const items1 = [merged.portal, muted];
     const layoutEffect1 = merged.useLayoutEffect(() => {
       if (null != merged.portal) {
-        closure_1_7.setMuted(tmp.portal, muted);
+        MediaPlayerManager.setMuted(tmp.portal, muted);
       }
     }, items1);
     const items2 = [onLoad, merged.portal];
@@ -51,16 +51,17 @@ export default importAllResult.memo((paused) => {
           onLoad();
         }
       }
-      closure_1_7.setLoopPlayback(merged.portal, true);
+      MediaPlayerManager.setLoopPlayback(merged.portal, true);
       return () => {
         closure_1_7.setLoopPlayback(portal.portal, false);
         if (obj.isAndroid()) {
-          closure_1_1(closure_1_2[6]).unregisterView(tmp.portal);
-          const obj2 = closure_1_1(closure_1_2[6]);
+          muted(onLoad[6]).unregisterView(portal.portal);
+          const obj2 = muted(onLoad[6]);
         } else {
-          closure_1_8.unregisterView(tmp.portal);
+          closure_1_8.unregisterView(portal.portal);
         }
         closure_1_10.add(portal.portal);
+        obj = paused(onLoad[4]);
       };
     }, items2);
     const items3 = [onLoad, merged.portal];
@@ -71,16 +72,16 @@ export default importAllResult.memo((paused) => {
         }
       }
     }, items3);
-    let obj = paused(onLoad[4]);
-    obj = {};
+    paused(onLoad[4]);
+    let obj = {};
     const merged1 = Object.assign(merged);
     const items4 = [tmp2.base, style];
     obj.style = items4;
     if (isAndroidResult) {
       obj.onPortalViewLoaded = callback;
-      let tmp17Result = tmp17(tmp18, obj);
+      let tmp17Result = <closure_6 {...obj} />;
     } else {
-      tmp17Result = tmp17(tmp18, obj);
+      tmp17Result = <closure_6 {...obj} />;
     }
     return tmp17Result;
   }
@@ -89,10 +90,10 @@ export function createPortalControls(portal) {
   closure_0 = portal;
   return {
     seek(arg0) {
-      closure_1_7.changeProgress(closure_0, arg0);
+      MediaPlayerManager.changeProgress(closure_0, arg0);
     },
     pause(arg0) {
-      closure_1_7.toggle(closure_0, !arg0);
+      MediaPlayerManager.toggle(closure_0, !arg0);
     },
     useSubscribe(arg0, arg1, arg2) {
       closure_1 = arg0;

@@ -1,5 +1,5 @@
 // discord_app/modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import QuestsExperimentLocations2 from "../QuestConstants.tsx";
 import getApplicationIdsByTaskTypes from "QuestTaskUtils.tsx";
@@ -7,9 +7,8 @@ import apexExperimentDefault from "../experiments/VQRemainingTimeTruncationExper
 
 function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
   let obj = getApplicationIdsByTaskTypes;
-  const remainingTaskTime = obj.getRemainingTaskTime(questTaskDetails);
+  const time = obj.getRemainingTaskTime(questTaskDetails);
   let num = 60;
-  truncate = 60 * remainingTaskTime.minutes + remainingTaskTime.seconds;
   truncate = undefined;
   if (truncate != null) {
     truncate = truncate.truncate;
@@ -18,24 +17,22 @@ function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
     truncate = truncate.truncate;
   }
   if (truncate >= num) {
-    const intl2 = tmp(1236).intl;
-    let t = tmp(1236).t;
-    t = { count: null };
+    const intl2 = getSystemLocale.intl;
+    let t = { count: null };
     const _Math = Math;
     num = truncate / num;
     t[0] = Math.round(num);
-    intl2.formatToPlainString(tmp5 ? t.XTdnRd : t.PHhTXX, t);
-    const tmp6 = tmp5 ? t.XTdnRd : t.PHhTXX;
+    intl2.formatToPlainString(tmp4 ? t.XTdnRd : t.PHhTXX, t);
   } else {
-    const intl = tmp(1236).intl;
-    t = tmp(1236).t;
+    const intl = getSystemLocale.intl;
+    t = getSystemLocale.t;
     obj = { count: null };
     obj[0] = truncate;
-    return intl.formatToPlainString(tmp5 ? t["spl/XS"] : t.rUfeQx, obj);
+    return intl.formatToPlainString(tmp4 ? t["spl/XS"] : t.rUfeQx, obj);
   }
 }
 const QuestsExperimentLocations = QuestsExperimentLocations2.QuestsExperimentLocations;
-const result = set.fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
 
 export { formatWatchRemainingDurationShort };
 export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(questTaskDetails) {
@@ -45,7 +42,6 @@ export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(ques
     obj[0] = formatWatchRemainingDurationShort(questTaskDetails);
     return intl.formatToPlainString(getSystemLocale.t["pF/deA"], obj);
   } else {
-    obj1 = apexExperimentDefault;
     obj = { location: null };
     obj[0] = QuestsExperimentLocations.QUESTS_CARD;
     const intl2 = getSystemLocale.intl;
@@ -62,15 +58,15 @@ export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWat
   ({ minutes, seconds } = remainingTaskTime);
   if (minutes > 0) {
     if (seconds > 0) {
-      const intl3 = tmp2(1236).intl;
+      const intl3 = getSystemLocale.intl;
       obj = { minutes: null, seconds: null };
       obj[0] = minutes;
       obj[1] = seconds;
-      let formatToPlainStringResult = intl3.formatToPlainString(tmp2(1236).t["lW/66D"], obj);
+      let formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t["lW/66D"], obj);
     }
-    const intl4 = tmp2(1236).intl;
+    const intl4 = getSystemLocale.intl;
     const formatToPlainString = intl4.formatToPlainString;
-    const t = tmp2(1236).t;
+    const t = getSystemLocale.t;
     if (tmp) {
       obj = { remainTime: null };
       obj[0] = formatToPlainStringResult;
@@ -83,14 +79,15 @@ export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWat
     return formatToPlainStringResult1;
   }
   if (minutes > 0) {
-    const intl2 = tmp2(1236).intl;
+    const intl2 = getSystemLocale.intl;
     const obj2 = { count: null };
     obj2[0] = minutes;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t["SxnF/O"], obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["SxnF/O"], obj2);
   } else {
-    const intl = tmp2(1236).intl;
+    const intl = getSystemLocale.intl;
     const obj3 = { count: null };
     obj3[0] = seconds;
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t["0BZpdi"], obj3);
+    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["0BZpdi"], obj3);
   }
+  tmp = questTaskDetails.percentComplete > 0;
 };

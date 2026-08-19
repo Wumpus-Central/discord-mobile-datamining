@@ -2,14 +2,14 @@
 import expandEventPropertiesDefault from "../AnalyticsUtils.tsx";
 import createSoundForPack from "../../modules/sound_playback/SoundUtils.tsx";
 import NativeModulesDefault from "../../lib/pushnotification/PushNotification.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { PermissionStateType } from "../../stores/native/PushNotificationPermissionStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 import { getOrRefreshPushSyncToken } from "../../actions/native/PushNotificationActionCreators.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("utils/native/NotificationUtils.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("utils/native/NotificationUtils.tsx");
 
 export default {
   hasPermission() {
@@ -26,15 +26,14 @@ export default {
   },
   requestPermission(arg0) {
     const _require = arg0;
-    let result = _getOrRefreshPushSyncToken.setPushPermissionState(PermissionStateType.REQUESTED);
-    let obj = _getOrRefreshPushSyncToken;
+    let result = require("../../actions/native/PushNotificationActionCreators.tsx").setPushPermissionState(PermissionStateType.REQUESTED);
+    let obj = getOrRefreshPushSyncToken;
     expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
-    const obj2 = expandEventPropertiesDefault;
     const permissions = NativeModulesDefault.requestPermissions();
-    permissions.then((sound) => {
-      ({ alert: _alert, badge } = sound);
+    permissions.then((result) => {
+      ({ alert: _alert, badge } = result);
       if (!_alert) {
-        _alert = sound.sound;
+        _alert = result.sound;
       }
       if (!_alert) {
         _alert = badge;
@@ -43,12 +42,12 @@ export default {
       if (_alert) {
         str = "accepted";
       }
-      closure_1_1(closure_1_2[5]).track(closure_1_6.PERMISSIONS_ACKED, { type: "notification", action: str });
-      const NativePermissionManager = closure_1_4.NativePermissionManager;
+      expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_ACKED, { type: "notification", action: str });
+      const NativePermissionManager = NativeModules.NativePermissionManager;
       const notificationAuthorizationStatus = NativePermissionManager.getNotificationAuthorizationStatus();
-      notificationAuthorizationStatus.then((closure_0) => {
-        if (null != closure_0) {
-          const result = callback(table[4]).updateNotificationAuthorizationStatus(closure_0);
+      notificationAuthorizationStatus.then((result) => {
+        if (null != result) {
+          result = callback(table[4]).updateNotificationAuthorizationStatus(result);
           const obj = callback(table[4]);
         }
       });

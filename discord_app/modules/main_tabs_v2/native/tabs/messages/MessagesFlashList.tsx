@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 const memoResult = importAllResult.memo(importAllResult.forwardRef(function MessagesFlashList(listItemHeight, ref) {
   ({ data, insetEnd } = listItemHeight);
@@ -14,28 +14,18 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const listTop = listItemHeight.listTop;
   const scrollIndicatorInsetBottom = listItemHeight.scrollIndicatorInsetBottom;
   const scrollPosition = listItemHeight.scrollPosition;
-  let friendSuggestions;
-  let renderHeader;
-  let renderFooter;
-  let setAddedFriendSuggestions;
-  ref = undefined;
   data = undefined;
-  let friendsHeaderIndex;
-  let extraData;
-  let listHeaderHeight;
-  let first;
-  closure_18 = undefined;
-  friendSuggestions = data.friendSuggestions;
-  renderHeader = data.renderHeader;
-  renderFooter = data.renderFooter;
-  setAddedFriendSuggestions = data.setAddedFriendSuggestions;
+  const friendSuggestions = data.friendSuggestions;
+  const renderHeader = data.renderHeader;
+  const renderFooter = data.renderFooter;
+  const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ({ accessibilityLabel, handleScrollAnimated, isRefreshEnabled } = listItemHeight);
   ref = listRefHappeningNow.useRef(null);
-  let tmp2 = listItemHeight(listItemSuggestedFriendHeight[3])(data, { listItemHeight, isRefreshEnabled });
+  const tmp2 = listItemHeight(listItemSuggestedFriendHeight[3])(data, { listItemHeight, isRefreshEnabled });
   data = tmp2.listData;
-  friendsHeaderIndex = tmp2.friendsHeaderIndex;
-  extraData = tmp2.friendsHeaderOffset;
-  listHeaderHeight = tmp2.listHeaderHeight;
+  const friendsHeaderIndex = tmp2.friendsHeaderIndex;
+  const extraData = tmp2.friendsHeaderOffset;
+  const listHeaderHeight = tmp2.listHeaderHeight;
   let items = [listHeaderHeight];
   const imperativeHandle = listRefHappeningNow.useImperativeHandle(ref, () => ({
     scrollToTop() {
@@ -118,14 +108,12 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
     if (insetEnd(listItemSuggestedFriendHeight[9]).MessagesDataHeader.HappeningNow === renderHeader) {
       const obj = { listRef: null };
       obj[0] = listRefHappeningNow;
-      return listTop(listItemHeight(tmp3[10]), obj);
-    } else if (tmp2(tmp3[9]).MessagesDataHeader.EmptyState === tmp) {
-      return listTop(listItemHeight(tmp3[11]), {});
+      return listTop(listItemHeight(listItemSuggestedFriendHeight[10]), obj);
+    } else if (insetEnd(listItemSuggestedFriendHeight[9]).MessagesDataHeader.EmptyState === renderHeader) {
+      return listTop(listItemHeight(listItemSuggestedFriendHeight[11]), {});
     } else {
       return null;
     }
-    tmp = renderHeader;
-    tmp2 = insetEnd;
   }, items3);
   const ListFooterComponent = listRefHappeningNow.useMemo(() => {
     let tmp = null;
@@ -135,7 +123,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
     return tmp;
   }, items4);
   const tmp9 = listLeft(listRefHappeningNow.useState(null), 2);
-  first = tmp9[0];
+  const first = tmp9[0];
   closure_18 = tmp9[1];
   const items5 = [data];
   const onCommitLayoutEffect = listRefHappeningNow.useCallback(() => callback(data), items5);
@@ -156,6 +144,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const scrollIndicatorInsets = listRefHappeningNow.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
   return listTop(insetEnd(listItemSuggestedFriendHeight[13]).AnimatedFlashList, { ref, accessibilityLabel, contentContainerStyle, data, extraData, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onCommitLayoutEffect, onLoad: onCommitLayoutEffect, onScroll, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
 }));
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx");
 
 export default memoResult;

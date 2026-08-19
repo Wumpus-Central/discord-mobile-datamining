@@ -1,11 +1,11 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStyles.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/GuildMemberStore.tsx";
-import closure_5 from "../../../stores/UserStore.tsx";
+import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 
 const useContext = noop.useContext;
-const result = set.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStyles.tsx");
+const result = obj132.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStyles.tsx");
 
 export default function useDisplayNameStyles() {
   let obj = arg0;
@@ -21,7 +21,6 @@ export default function useDisplayNameStyles() {
   let stateFromStores;
   const displayNameStylesEnabled = require(stateFromStores[3]).useDisplayNameStylesEnabled({ location: "useDisplayNameStyles" });
   const obj2 = require(stateFromStores[3]);
-  const tmp = require;
   const tmp2 = stateFromStores;
   const items = [closure_5];
   stateFromStores = require(stateFromStores[4]).useStateFromStores(items, () => {
@@ -40,7 +39,7 @@ export default function useDisplayNameStyles() {
   }
   const obj3 = require(stateFromStores[4]);
   const items1 = [closure_4];
-  const stateFromStores1 = tmp(tmp2[4]).useStateFromStores(items1, () => {
+  const stateFromStores1 = require(tmp2[4]).useStateFromStores(items1, () => {
     let member = null;
     if (null != closure_1) {
       member = null;
@@ -82,4 +81,5 @@ export default function useDisplayNameStyles() {
       displayNameStyles = displayNameStyles1;
     }
   }
+  const tmpResult = require(tmp2[4]);
 };

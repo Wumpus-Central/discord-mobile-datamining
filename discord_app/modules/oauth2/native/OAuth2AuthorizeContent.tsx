@@ -1,15 +1,14 @@
 // discord_app/modules/oauth2/native/OAuth2AuthorizeContent.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { fill: { flex: 1 }, scrollView: null, scrollViewContentLandscape: null, scrollViewContentPortrait: null, header: null, bodyContainer: null, bodyContainerBackground: null, footerPortrait: null, separator: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", width: "100%", flexGrow: 1, gap: 16 };
 createCacheKey[3] = { flexDirection: "column", width: "100%", flexGrow: 1, gap: 16 };
@@ -17,33 +16,26 @@ createCacheKey[4] = { paddingTop: 24 };
 createCacheKey[5] = { flexDirection: "column", gap: 16, padding: 16 };
 createCacheKey[6] = { marginHorizontal: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg };
 createCacheKey[7] = { flexDirection: "column", padding: 16, gap: 16 };
-let obj1 = { marginHorizontal: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg };
 createCacheKey[8] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeContent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeContent.tsx");
 
 export default function OAuth2AuthorizeContent(onScroll) {
   ({ header, footer, appDetails, setAllContentSeen } = onScroll);
   onScroll = onScroll.onScroll;
-  let ref;
   let first;
-  closure_4 = undefined;
-  let first1;
-  closure_6 = undefined;
-  closure_7 = undefined;
   closure_8 = undefined;
   ({ body, centerContent, hasContentBackground, obscured } = onScroll);
   const tmp = callback();
   let obj = first;
-  ref = first.useRef(null);
+  const ref = first.useRef(null);
   const size = setAllContentSeen(onScroll[6])();
   ({ left, right, bottom } = setAllContentSeen(onScroll[7])());
   const tmp7 = ref(first.useState(-1), 2);
   first = tmp7[0];
   closure_4 = tmp7[1];
   const tmp9 = ref(first.useState(-1), 2);
-  first1 = tmp9[0];
+  const first1 = tmp9[0];
   closure_6 = tmp9[1];
   const tmp11 = ref(first.useState(-1), 2);
   closure_7 = tmp11[1];
@@ -53,14 +45,12 @@ export default function OAuth2AuthorizeContent(onScroll) {
   }
   if (tmp12) {
     tmp12 = null == footer || tmp11[0] >= 0;
-    const tmp13 = null == footer || tmp11[0] >= 0;
   }
   closure_8 = tmp12;
   const items = [first, tmp12, first1, setAllContentSeen];
   const layoutEffect = obj.useLayoutEffect(() => {
     if (closure_8) {
-      let obj = { layoutMeasurement: null, contentSize: null };
-      obj = { height: null };
+      let obj = { height: null };
       obj[0] = first1;
       obj[0] = obj;
       obj = { height: null };
@@ -79,8 +69,7 @@ export default function OAuth2AuthorizeContent(onScroll) {
       }
     }
   }, items);
-  obj = { style: items1, children: null };
-  items1 = [tmp.fill, { marginBottom: bottom }];
+  const items1 = [tmp.fill, { marginBottom: bottom }];
   obj = {
     style: items2,
     contentContainerStyle: items3,
@@ -116,10 +105,10 @@ export default function OAuth2AuthorizeContent(onScroll) {
   };
   items2 = [tmp.scrollView, { paddingLeft: left, paddingRight: right }];
   items3 = [size.width > size.height ? tmp.scrollViewContentLandscape : tmp.scrollViewContentPortrait];
-  let tmp3Result = tmp3(tmp4[8]);
+  tmp3(tmp4[8]);
   obj1 = { obscured, children: null };
   let tmp17Result = null;
-  tmp3Result = tmp3(tmp4[9]);
+  const tmp3Result = tmp3(tmp4[9]);
   if (null != header) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.header;

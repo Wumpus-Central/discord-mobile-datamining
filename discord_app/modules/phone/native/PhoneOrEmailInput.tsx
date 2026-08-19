@@ -1,9 +1,9 @@
 // discord_app/modules/phone/native/PhoneOrEmailInput.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
   onChange = onChange.onChange;
@@ -11,9 +11,6 @@ const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
   const onPressCountrySelector = onChange.onPressCountrySelector;
   const forceMode = onChange.forceMode;
   const merged = Object.assign(onChange, Object.create(null));
-  ref = undefined;
-  closure_6 = undefined;
-  let combined;
   let obj = importAllResult;
   [tmp3, c4] = forceMode(undefined.useState(""), 2);
   ref = importAllResult.useRef(null);
@@ -115,9 +112,9 @@ const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
     if (str == null) {
       str = "";
     }
-    closure_6(str);
+    callback(str);
   }, items1);
-  combined = undefined;
+  let combined;
   if (result) {
     if (alpha2 == null) {
       alpha2 = "";
@@ -145,6 +142,6 @@ const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
   obj.leadingPressableProps = memo;
   return ref(tmp6(tmp7[6]).SplitTextInput, obj);
 });
-let result = require("set").fileFinishedImporting("modules/phone/native/PhoneOrEmailInput.tsx");
+let result = require("obj132").fileFinishedImporting("modules/phone/native/PhoneOrEmailInput.tsx");
 
 export default forwardRefResult;

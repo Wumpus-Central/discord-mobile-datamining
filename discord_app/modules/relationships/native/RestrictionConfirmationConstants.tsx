@@ -1,7 +1,7 @@
 // discord_app/modules/relationships/native/RestrictionConfirmationConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/relationships/native/RestrictionConfirmationConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/relationships/native/RestrictionConfirmationConstants.tsx");
 
 export const IGNORE_CONFIRMATION_ACTION_SHEET_KEY = "IgnoreConfirmationActionSheet";
 export const BLOCK_CONFIRMATION_ACTION_SHEET_KEY = "BlockConfirmationActionSheet";

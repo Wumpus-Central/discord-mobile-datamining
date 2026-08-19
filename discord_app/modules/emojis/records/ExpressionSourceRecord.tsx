@@ -3,10 +3,10 @@ import fromGuildPropertiesWithAdditionalFields from "../../../utils/GuildRecordU
 import areSetsEqual from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import toJSDefault from "../../../lib/Record.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function getEmojiSourceData() {
   const self = this;
   const apply = _getEmojiSourceData.apply;
@@ -93,7 +93,6 @@ prototype["getIconURL"] = function getIconURL(size) {
   if (arg1 === undefined) {
     flag = false;
   }
-  obj = getAvatarURLDefault;
   obj = { id: this.id, size, icon: this.icon, canAnimate: flag };
   return obj.getGuildIconURL(obj);
 };
@@ -104,7 +103,7 @@ prototype["getIconSource"] = function getIconSource(arg0, flag) {
     flag = false;
   }
   return self(1435).getAnimatableSourceWithFallback(flag, (canAnimate) => {
-    obj = self(closure_1_2[4]);
+    self(dependencyMap[4]);
     obj = { id: self.id, size: closure_0, icon: self.icon, canAnimate };
     return obj.getGuildIconSource(obj);
   });
@@ -120,8 +119,7 @@ ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiI
   closure_0 = arg0;
   return callback(function*() {
     closure_1 = tmp5;
-    let type = tmp2;
-    type = yield closure_1_7(closure_1_0);
+    let type = yield closure_1_7(closure_1_0);
     let guild = null;
     if (null != type) {
       type = undefined;
@@ -198,15 +196,14 @@ ExpressionSourceGuildRecord["createFromGuildType"] = function createFromGuildTyp
     return guild;
   } else {
     if (obj2.isGuildRecord(guild)) {
-      let fromGuildRecord = obj.createFromGuildRecord(guild);
+      let fromGuildRecord = ExpressionSourceGuildRecord.createFromGuildRecord(guild);
     } else {
-      fromGuildRecord = obj.createFromDiscoverableGuild(guild);
+      fromGuildRecord = ExpressionSourceGuildRecord.createFromDiscoverableGuild(guild);
     }
     obj2 = fromGuildPropertiesWithAdditionalFields;
   }
 };
-let prototype2;
-prototype2 = function ExpressionSourceApplicationRecord(arg0) {
+const prototype2 = function ExpressionSourceApplicationRecord(arg0) {
   const tmp = new prototype2(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, name: tmp.name } = arg0);
@@ -225,7 +222,7 @@ prototype2["createFromServer"] = function createFromServer(arg0) {
   tmp2.name = name;
   return tmp2;
 };
-const result = require("set").fileFinishedImporting("modules/emojis/records/ExpressionSourceRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emojis/records/ExpressionSourceRecord.tsx");
 
 export const EmojiSourceDataTypes = obj;
 export { getEmojiSourceData };

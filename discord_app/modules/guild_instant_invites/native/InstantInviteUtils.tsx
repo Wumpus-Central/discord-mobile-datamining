@@ -1,11 +1,11 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteUtils.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../stores/UserStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import { InstantInviteSources } from "../../../Constants.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUtils.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUtils.tsx");
 
 export const useInviteActions = function useInviteActions(invite) {
   invite = invite.invite;
@@ -24,15 +24,15 @@ export const useInviteActions = function useInviteActions(invite) {
   obj[1] = onInviteRevoked(9953).share;
   obj[2] = function action() {
     onInviteRevoked(9968)(() => {
-      let obj = closure_1_0(closure_1_2[7]);
+      let obj = invite(closure_1_2[7]);
       let tmp4;
       if (!closure_3) {
-        tmp4 = closure_1_1(tmp2[8])(closure_0.code);
+        tmp4 = onInviteRevoked(closure_1_2[8])(closure_0.code);
       }
       obj = { url: tmp4, message: null };
       let formatToPlainStringResult;
       if (closure_3) {
-        const intl = tmp(tmp2[4]).intl;
+        const intl = invite(closure_1_2[4]).intl;
         const currentUser = closure_1_5.getCurrentUser();
         let str;
         if (currentUser != null) {
@@ -43,8 +43,8 @@ export const useInviteActions = function useInviteActions(invite) {
         }
         obj = { username: null, link: null };
         obj[0] = str;
-        obj[1] = closure_1_1(tmp2[8])(closure_0.code);
-        formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[4]).t["+zWvOQ"], obj);
+        obj[1] = onInviteRevoked(closure_1_2[8])(closure_0.code);
+        formatToPlainStringResult = intl.formatToPlainString(invite(closure_1_2[4]).t["+zWvOQ"], obj);
       }
       obj[1] = formatToPlainStringResult;
       let str2 = "Guild Instant Invite";
@@ -61,10 +61,10 @@ export const useInviteActions = function useInviteActions(invite) {
   obj[1] = onInviteRevoked(9953).copy;
   obj[2] = function action() {
     if (c3) {
-      let tmpResult = tmp(8918);
-      tmpResult.handleCopy(invite.code, invite.channel, closure_1_6.GROUP_DM, false);
+      let tmpResult = invite(8918);
+      tmpResult.handleCopy(invite.code, invite.channel, InstantInviteSources.GROUP_DM, false);
     } else {
-      tmpResult = tmp(7167);
+      tmpResult = invite(7167);
       tmpResult.copy(onInviteRevoked(7506)(invite.code));
       const result = invite(4093).presentCopiedToClipboard();
       const obj2 = invite(4093);
@@ -78,13 +78,13 @@ export const useInviteActions = function useInviteActions(invite) {
   dependencyMap = callback(function*() {
     closure_0 = tmp3;
     c3 = 1;
-    yield v0(closure_1_2[12]).revokeInvite(closure_1_0);
+    yield v0(closure_1_2[12]).revokeInvite(invite);
     if (1 === tmp7) {
       c3 = 0;
       obj1 = v0(closure_1_2[13]);
       const obj2 = { key: "ERROR_ANOTHER_TRY", content: null };
-      const intl = closure_1_0(closure_1_2[4]).intl;
-      obj2[1] = intl.string(closure_1_0(closure_1_2[4]).t.CKsXk3);
+      const intl = invite(closure_1_2[4]).intl;
+      obj2[1] = intl.string(invite(closure_1_2[4]).t.CKsXk3);
       obj1.open(obj2);
       c4 = 3;
     } else if (arg0 === 1) {

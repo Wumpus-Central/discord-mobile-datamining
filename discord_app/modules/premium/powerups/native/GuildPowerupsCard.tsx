@@ -4,13 +4,12 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import PressableCard from "../../../../design/components/Card/native/Card.native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../../../_runtime/00689_n.js";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { cardActive: null, cardExpiring: null, cardRemoving: null };
-createCacheKey = { borderColor: null };
+const createCacheKey = { borderColor: null };
 const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.GREEN_360);
 createCacheKey[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.GREEN_360).alpha(0.35).hex();
 createCacheKey[0] = createCacheKey;
@@ -28,15 +27,14 @@ obj2[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0
 createCacheKey[2] = obj2;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
 const alphaResult2 = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
 
 export default function GuildPowerupsCard(status) {
   status = status.status;
   ({ children, containerStyle, style } = status);
   const merged = Object.assign(status, Object.create(null));
   const tmp2 = callback();
-  let obj = { style: containerStyle, children: null };
-  obj = { border: "faint", radius: 16, shadow: "none" };
+  const obj = { border: "faint", radius: 16, shadow: "none" };
   const merged1 = Object.assign(merged);
   let type;
   if (status != null) {

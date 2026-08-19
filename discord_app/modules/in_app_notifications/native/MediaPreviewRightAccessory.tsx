@@ -1,27 +1,35 @@
 // discord_app/modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx
 import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSrcWithWidthAndHeight from "../../../utils/native/ImageUtils.tsx";
 import map from "../../../design/tokens/native/useToken.tsx";
 import isBlurDisabledDefault from "../../visual_effect_view/native/VisualEffectView.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import redactionSettingToRenderedString from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
+import getEligibleHarmTypesConfigsForContext from "../../explicit_media_redaction/ObscuredMediaUtils.tsx";
+import ContentHarmTypeChannel from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import ImageWarningIcon from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
+import getAttachmentObscurityProps from "../../messages/native/renderer/ExplicitMediaUtils.tsx";
 import SolidCutoutDefault from "../../../design/components/Icon/native/ClipView.tsx";
+import EyeIcon from "../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
+import isValidImageAttachment from "../../media_viewer/native/MediaSourceUtil.tsx";
 import PlayIcon from "../../../design/components/Icon/native/redesign/generated/PlayIcon.tsx";
 import VideoComponentDefault from "../../../components_native/common/Video.tsx";
 import VoiceMessageIcon from "hooks/usePreviewableMedia.tsx";
 import useEnabledHarmTypesBitmaskForChannelAndAuthorId from "../../explicit_media_redaction/hooks/useContentHarmTypes.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
+import "createCacheKey";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function VideoBadge() {
   const tmp = callback3();
-  obj = { style: tmp.badge, children: callback(PlayIcon.PlayIcon, obj) };
+  { style: tmp.badge, children: callback(PlayIcon.PlayIcon, obj) };
   obj = { style: tmp.icon, size: "custom", color: "white" };
   return callback(View, obj);
 }
@@ -61,18 +69,18 @@ function ObscuredMediaOverlay(isSpoiler) {
   items[2] = tmp11;
   obj1 = { style: tmp.spoilerIconContainer, children: null };
   if (isObscured) {
-    let tmp14Result = tmp14(tmp2(6877).ImageWarningIcon, { size: "sm", color: "white" });
+    let tmp14Result = callback(ImageWarningIcon.ImageWarningIcon, { size: "sm", color: "white" });
   } else {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.spoilerPill;
-    obj2[1] = tmp14(tmp2(8607).EyeIcon, { size: "sm", color: "white" });
-    tmp14Result = tmp14(tmp15, obj2);
+    obj2[1] = callback(EyeIcon.EyeIcon, { size: "sm", color: "white" });
+    tmp14Result = callback(View, obj2);
   }
   const obj3 = { children: null };
   obj1[1] = tmp14Result;
   items[3] = callback(View, obj1);
   obj3[0] = items;
-  return closure_10(closure_9, obj3);
+  return callback(closure_9, obj3);
 }
 function SinglePreviewableMedia(arg0) {
   ({ previewableMedia, size, message } = arg0);
@@ -86,7 +94,6 @@ function SinglePreviewableMedia(arg0) {
   let obj2 = useEnabledHarmTypesBitmaskForChannelAndAuthorId;
   const enabledHarmTypesBitmaskForMessage = obj2.useEnabledHarmTypesBitmaskForMessage(message);
   if (VoiceMessageIcon.PreviewableMediaTypes.VOICE_MESSAGE === type) {
-    obj = { style: null, children: null };
     obj = { width: null, height: null };
     obj[0] = size;
     obj[1] = size;
@@ -94,11 +101,11 @@ function SinglePreviewableMedia(arg0) {
     obj[1] = icon;
     return callback(View, obj);
   } else {
-    if (tmp2(10070).PreviewableMediaTypes.AUDIO !== type) {
-      if (tmp2(10070).PreviewableMediaTypes.FILE !== type) {
-        if (tmp2(10070).PreviewableMediaTypes.IMAGE !== type) {
-          if (tmp2(10070).PreviewableMediaTypes.VIDEO !== type) {
-            if (tmp2(10070).PreviewableMediaTypes.GIF === type) {
+    if (VoiceMessageIcon.PreviewableMediaTypes.AUDIO !== type) {
+      if (VoiceMessageIcon.PreviewableMediaTypes.FILE !== type) {
+        if (VoiceMessageIcon.PreviewableMediaTypes.IMAGE !== type) {
+          if (VoiceMessageIcon.PreviewableMediaTypes.VIDEO !== type) {
+            if (VoiceMessageIcon.PreviewableMediaTypes.GIF === type) {
               const video = media.video;
               if (video != null) {
                 const url = video.url;
@@ -107,17 +114,17 @@ function SinglePreviewableMedia(arg0) {
               if (null == thumbnail) {
                 return null;
               } else {
-                let tmp2Result = tmp2(5019);
+                let tmp2Result = getEligibleHarmTypesConfigsForContext;
                 const author = message.author;
                 let id;
                 if (author != null) {
                   id = author.id;
                 }
                 const enabledHarmTypesForChannelAndAuthorId = tmp2Result.getEnabledHarmTypesForChannelAndAuthorId(message.channel_id, id);
-                tmp2Result = tmp2(5019);
+                tmp2Result = getEligibleHarmTypesConfigsForContext;
                 obj1 = { type: null, media: null };
                 const getMediaObscuredReasonFromBitmask = tmp2Result.getMediaObscuredReasonFromBitmask;
-                obj1[0] = tmp2(5022).ObscuredMediaTypes.Embed;
+                obj1[0] = ContentHarmTypeChannel.ObscuredMediaTypes.Embed;
                 obj1[1] = media;
                 if (null != thumbnail.proxyURL) {
                   if ("" !== thumbnail.proxyURL) {
@@ -142,11 +149,11 @@ function SinglePreviewableMedia(arg0) {
                         obj6[0] = url;
                         obj5[4] = obj6;
                         obj5[5] = url2;
-                        let tmp16Result = tmp16(VideoComponentDefault, obj5);
+                        let tmp16Result = callback(VideoComponentDefault, obj5);
                       }
                       obj4[2] = tmp16Result;
-                      obj2[1] = tmp16(tmp18, obj4);
-                      return tmp16(tmp17, obj2);
+                      obj2[1] = callback(tmp18, obj4);
+                      return callback(tmp17, obj2);
                     }
                   }
                   const obj7 = { source: null, style: null, resizeMode: "cover" };
@@ -154,11 +161,11 @@ function SinglePreviewableMedia(arg0) {
                   obj8[0] = url2;
                   obj7[0] = obj8;
                   obj7[1] = tmp.mediaThumbnail;
-                  tmp16Result = tmp16(preloadDefault, obj7);
+                  tmp16Result = callback(preloadDefault, obj7);
                 }
                 url2 = thumbnail.url;
               }
-            } else if (tmp2(10070).PreviewableMediaTypes.STICKER === type) {
+            } else if (VoiceMessageIcon.PreviewableMediaTypes.STICKER === type) {
               const obj9 = { style: null, children: null };
               const items2 = [tmp.mediaThumbnailContainer, ];
               const obj10 = { width: null, height: null };
@@ -186,10 +193,10 @@ function SinglePreviewableMedia(arg0) {
                 obj12[0] = media;
                 obj12[2] = enabledHarmTypesBitmaskForMessage;
                 obj12[3] = shouldAgeVerifyForExplicitMedia;
-                const attachmentObscurityProps = tmp2(8339).getAttachmentObscurityProps(obj12);
-                const tmp2Result1 = tmp2(8339);
-                const attachmentUrl = tmp2(8994).getAttachmentUrl(media);
-                const tmp2Result2 = tmp2(8994);
+                const attachmentObscurityProps = getAttachmentObscurityProps.getAttachmentObscurityProps(obj12);
+                const tmp2Result1 = getAttachmentObscurityProps;
+                const attachmentUrl = isValidImageAttachment.getAttachmentUrl(media);
+                const tmp2Result2 = isValidImageAttachment;
                 const obj13 = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, animated: false, format: null };
                 obj13[0] = attachmentUrl;
                 obj13[1] = width;
@@ -197,7 +204,7 @@ function SinglePreviewableMedia(arg0) {
                 obj13[3] = 2 * size;
                 obj13[4] = 2 * size;
                 let str3;
-                if (type === tmp2(10070).PreviewableMediaTypes.VIDEO) {
+                if (type === VoiceMessageIcon.PreviewableMediaTypes.VIDEO) {
                   str3 = "png";
                 }
                 obj13[6] = str3;
@@ -210,7 +217,7 @@ function SinglePreviewableMedia(arg0) {
                 obj14[0] = items3;
                 const obj16 = { isObscured: null, isSpoiler: null, children: null };
                 ({ obscure: obj17[0], isSpoiler: obj17[1] } = attachmentObscurityProps);
-                const srcWithWidthAndHeight = tmp2(1493).getSrcWithWidthAndHeight(obj13);
+                const srcWithWidthAndHeight = getSrcWithWidthAndHeight.getSrcWithWidthAndHeight(obj13);
                 const obj17 = { source: null, style: null, resizeMode: "cover" };
                 const obj18 = { uri: null };
                 obj18[0] = srcWithWidthAndHeight;
@@ -218,12 +225,12 @@ function SinglePreviewableMedia(arg0) {
                 obj17[1] = tmp.mediaThumbnail;
                 const items4 = [callback(preloadDefault, obj17), ];
                 let tmp24Result = null;
-                if (type === tmp2(10070).PreviewableMediaTypes.VIDEO) {
-                  tmp24Result = tmp24(VideoBadge, {});
+                if (type === VoiceMessageIcon.PreviewableMediaTypes.VIDEO) {
+                  tmp24Result = callback(VideoBadge, {});
                 }
                 items4[1] = tmp24Result;
                 obj16[2] = items4;
-                obj14[1] = closure_10(ObscuredMediaOverlay, obj16);
+                obj14[1] = callback(ObscuredMediaOverlay, obj16);
                 return callback(View, obj14);
               }
             }
@@ -245,7 +252,7 @@ function SinglePreviewableMedia(arg0) {
 }
 function MultiplePreviewableMedia(arg0) {
   ({ previewableMedia, totalMediaCount, message } = arg0);
-  let obj = { style: callback6().container, children: null };
+  { style: callback6().container, children: null };
   const memo = React.useMemo(() => {
     const BADGE_PADDING = callback(1297).BADGE_PADDING;
     const sum = BADGE_PADDING + 5;
@@ -253,7 +260,7 @@ function MultiplePreviewableMedia(arg0) {
     const obj = { shape: callback(8402).CutoutShape.RoundedRect, x: 56 - roundToNearestPixelResult + sum, y: -sum, width: roundToNearestPixelResult, height: roundToNearestPixelResult, cornerRadius: closure_4.roundToNearestPixel(roundToNearestPixelResult / 2) };
     return obj;
   }, []);
-  obj = { cutouts: items, children: null };
+  let obj = { cutouts: items, children: null };
   items = [memo];
   const tmp = callback6();
   obj[1] = callback(SinglePreviewableMedia, { previewableMedia, size: 56, message });
@@ -281,18 +288,15 @@ function MediaPreviewRightAccessoryContent(arg0) {
 ({ PixelRatio: c4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { badge: null, icon: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.xs, width: 16, height: 16, position: "absolute", bottom: 4, left: 4 };
+let createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.xs, width: 16, height: 16, position: "absolute", bottom: 4, left: 4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 10, height: 10 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { badge: { width: 20, height: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", position: "absolute", right: -5, top: -5 } };
 let closure_12 = createCacheKey.createStyles(obj1);
 createCacheKey = { mediaThumbnailContainer: null, mediaThumbnail: null, iconContainer: null, obscureBackground: null, spoilerIconContainer: null, spoilerPill: null };
-let obj2 = { width: 20, height: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", position: "absolute", right: -5, top: -5 };
 createCacheKey[0] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[1] = { width: "100%", height: "100%" };
-let obj4 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.sm };
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -303,13 +307,11 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj7.justifyContent = "center";
 obj7.alignItems = "center";
 createCacheKey[4] = obj7;
-let obj5 = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[5] = { padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let closure_14 = createCacheKey.createStyles({ container: { overflow: "visible" } });
 let closure_15 = createCacheKey.createStyles({ rightAccessoryContainer: { marginLeft: require("set").RIGHT_ACCESSORY_LEFT_MARGIN } });
-let obj8 = { padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 
 export const MediaPreviewRightAccessory = function MediaPreviewRightAccessory(message) {
   message = message.message;

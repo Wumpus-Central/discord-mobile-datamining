@@ -1,38 +1,37 @@
 // discord_app/modules/age_gate/AgeGateUtils.tsx
+import obj132 from "../../../_runtime/00002_obj132.js";
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import result2 from "AgeGateConstants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
 import GuildNSFWContentLevel from "../../records/GuildRecord.tsx";
 import combinedDefault from "../../utils/HelpdeskUtils.tsx";
 import isFeatureAgeGated2 from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useAgeVerificationRunner from "../age_assurance/AgeVerificationUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
+import AgeVerificationModalEntryPoint from "../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import openAgeGateModal from "AgeGateModalActionCreators.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import closure_5 from "../../stores/GuildNSFWAgreeStore.tsx";
-import closure_6 from "../../stores/GuildStore.tsx";
-import closure_7 from "../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { AgeGatedFeature } from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import { useAgeVerificationRunner } from "../age_assurance/AgeVerificationUtils.tsx";
 import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 
 function shouldShowAgeGateForVoiceChannel(channelId) {
   const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
-  const obj = useAgeVerificationRunner;
   let tmp4 = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
   if (tmp4) {
     const currentUser = authStore.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
-      let tmpResult = tmp(4992);
+      let tmpResult = useAgeVerificationRunner;
       const result1 = tmpResult.shouldShowTiggerPawtect();
-      tmpResult = tmp(4072);
-      const tmp9 = tmpResult.isFeatureAgeGated(tmp(5039).AgeGatedFeature.AGE_GATED_SPACES) && result1;
-      flag = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5039).AgeGatedFeature.AGE_GATED_SPACES) && result1;
-      const tmp10 = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(tmp(5039).AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      tmpResult = isFeatureAgeGated2;
+      const tmp9 = tmpResult.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      flag = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
+      const tmp10 = true !== currentUser.nsfwAllowed || tmpResult.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
     }
     let tmp12 = !flag;
     if (flag) {
@@ -55,7 +54,6 @@ function isChannelContentGated(channel, arg1) {
     if (currentUser != null) {
       const nsfwAllowed = currentUser.nsfwAllowed;
     }
-    const obj = isFeatureAgeGated2;
     const isFeatureAgeGatedResult = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
     let result = useAgeVerificationRunner.shouldShowTiggerPawtect();
     if (didAgreeResult) {
@@ -84,19 +82,19 @@ function isChannelContentGated(channel, arg1) {
 }
 function useIsChannelContentGated(channel) {
   const _require = channel;
-  const shouldShowTiggerPawtect = _useAgeVerificationRunner.useShouldShowTiggerPawtect();
-  const obj = _useAgeVerificationRunner;
+  const shouldShowTiggerPawtect = require("../age_assurance/AgeVerificationUtils.tsx").useShouldShowTiggerPawtect();
+  const obj = useAgeVerificationRunner;
   items = [closure_5];
-  let stateFromStores = _initialize.useStateFromStores(items, () => {
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
     return closure_1_5.didAgree(guild_id);
   });
-  const obj2 = _initialize;
+  const obj2 = initialize;
   const items1 = [closure_7];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {
@@ -104,11 +102,11 @@ function useIsChannelContentGated(channel) {
     }
     return false === nsfwAllowed;
   });
-  const obj3 = _initialize;
-  let isFeatureAgeGated = _isFeatureAgeGated.useIsFeatureAgeGated(_AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
-  const obj4 = _isFeatureAgeGated;
+  const obj3 = initialize;
+  let isFeatureAgeGated = require("../regional_feature_config/RegionalFeatureConfigUtils.tsx").useIsFeatureAgeGated(require("../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx").AgeGatedFeature.AGE_GATED_SPACES);
+  const obj4 = isFeatureAgeGated;
   const items2 = [closure_6];
-  const stateFromStores2 = _initialize.useStateFromStores(items2, () => {
+  const stateFromStores2 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -157,15 +155,14 @@ let items = [, ];
 ({ AGE_RESTRICTED: arr[0], EXPLICIT: arr[1] } = GuildNSFWContentLevel);
 let items1 = [, , ];
 ({ NSFW_SERVER: arr2[0], NSFW_SERVER_INVITE: arr2[1], NSFW_SERVER_INVITE_EMBED: arr2[2] } = AgeGateSource);
-let set = new Set(items1);
-let result = set.fileFinishedImporting("modules/age_gate/AgeGateUtils.tsx");
+const set = new Set(items1);
+let result = obj132.fileFinishedImporting("modules/age_gate/AgeGateUtils.tsx");
 
 export const SERVER_AGE_GATE_SOURCES = set;
 export const userNeedsAgeGate = function userNeedsAgeGate() {
   const currentUser = authStore.getCurrentUser();
   let tmp2 = null != currentUser;
   if (tmp2) {
-    const obj = DISCORD_EPOCHDefault;
     tmp2 = DISCORD_EPOCHDefault.extractTimestamp(currentUser.id) > date.getTime();
     const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(currentUser.id);
   }
@@ -179,13 +176,10 @@ export const guildNeedsAgeGate = function guildNeedsAgeGate(nsfwLevel) {
 };
 export const shouldAgeVerifyForAgeGate = function shouldAgeVerifyForAgeGate() {
   const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
-  const obj = useAgeVerificationRunner;
-  const obj2 = isFeatureAgeGated2;
   return isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
 };
 export const useShouldAgeVerifyForAgeGate = function useShouldAgeVerifyForAgeGate() {
   let isFeatureAgeGated = isFeatureAgeGated2.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
-  const obj = isFeatureAgeGated2;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
   }
@@ -205,69 +199,66 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     }
     return false === nsfwAllowed;
   });
-  const obj2 = initialize;
   const isFeatureAgeGated = isFeatureAgeGated2.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
-  const obj3 = isFeatureAgeGated2;
   let shouldShowTiggerPawtect = isFeatureAgeGated;
   if (isFeatureAgeGated) {
     shouldShowTiggerPawtect = obj4.useShouldShowTiggerPawtect();
   }
-  const intl = tmp(1236).intl;
-  const t = tmp(1236).t;
+  const intl = getSystemLocale.intl;
+  const t = getSystemLocale.t;
   const stringResult = intl.string(tmp3 ? t.xi46lg : t.ZmwvDc);
   obj = { title: null, description: null, agreement: null, modalType: null };
   if (shouldShowTiggerPawtect) {
     obj[0] = stringResult;
-    const intl6 = tmp(1236).intl;
+    const intl6 = getSystemLocale.intl;
     if (!isAgeVerified) {
       const string = intl6.string;
-      const t4 = tmp(1236).t;
+      const t4 = getSystemLocale.t;
       if (tmp3) {
         let stringResult1 = string(t4.V6Gmu9);
       } else {
         stringResult1 = string(t4["5rygLk"]);
       }
       obj[1] = stringResult1;
-      const intl7 = tmp(1236).intl;
-      obj[2] = intl7.string(tmp(1236).t.FDSSia);
-      obj[3] = tmp(5254).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+      const intl7 = getSystemLocale.intl;
+      obj[2] = intl7.string(getSystemLocale.t.FDSSia);
+      obj[3] = AgeVerificationModalEntryPoint.NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
     }
     const format = intl6.format;
-    let string2 = tmp(1236).t;
+    let string2 = getSystemLocale.t;
     if (tmp3) {
       let formatResult = format(string2["8tk6bB"], {});
     } else {
       formatResult = format(string2.XQZvwn, {});
     }
     obj[1] = formatResult;
-    const intl8 = tmp(1236).intl;
+    const intl8 = getSystemLocale.intl;
     string2 = intl8.string;
-    obj[2] = string2(tmp(1236).t.Zt4Mf4);
-    NSFW_CHANNEL_AGE_VERIFY = tmp(5254).NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
+    obj[2] = string2(getSystemLocale.t.Zt4Mf4);
+    NSFW_CHANNEL_AGE_VERIFY = AgeVerificationModalEntryPoint.NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY;
     obj[3] = NSFW_CHANNEL_AGE_VERIFY;
   } else if (stateFromStores) {
-    const intl4 = tmp(1236).intl;
-    const t3 = tmp(1236).t;
+    const intl4 = getSystemLocale.intl;
+    const t3 = getSystemLocale.t;
     obj[0] = intl4.string(tmp3 ? t3["H0SG/g"] : t3.NEabBa);
-    const intl5 = tmp(1236).intl;
-    let NSFW_CHANNEL_UNDERAGE = tmp(1236).t;
+    const intl5 = getSystemLocale.intl;
+    let NSFW_CHANNEL_UNDERAGE = getSystemLocale.t;
     obj = { helpURL: null };
     obj[0] = combinedDefault.getArticleURL(constants.NSFW_AGE_GATING);
     obj[1] = intl5.format(tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"], obj);
-    NSFW_CHANNEL_UNDERAGE = tmp(5254).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
+    NSFW_CHANNEL_UNDERAGE = AgeVerificationModalEntryPoint.NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE;
     obj[3] = NSFW_CHANNEL_UNDERAGE;
-    const obj7 = combinedDefault;
-    const tmp9 = tmp3 ? NSFW_CHANNEL_UNDERAGE["6++3cX"] : NSFW_CHANNEL_UNDERAGE["2kHZes"];
   } else {
     obj[0] = stringResult;
-    const intl2 = tmp(1236).intl;
-    const t2 = tmp(1236).t;
+    const intl2 = getSystemLocale.intl;
+    const t2 = getSystemLocale.t;
     obj[1] = intl2.string(tmp3 ? t2.ZtuRts : t2.E4Cd5I);
-    const intl3 = tmp(1236).intl;
-    obj[2] = intl3.string(tmp(1236).t.wVq7uo);
-    obj[3] = tmp(5254).NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
+    const intl3 = getSystemLocale.intl;
+    obj[2] = intl3.string(getSystemLocale.t.wVq7uo);
+    obj[3] = AgeVerificationModalEntryPoint.NsfwSpaceWarningModalType.NSFW_CHANNEL_VERIFIED;
     return obj;
   }
+  obj4 = useAgeVerificationRunner;
 };
 export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) {
   let obj = useAgeVerificationRunner;
@@ -282,23 +273,23 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
   initialize;
   [][0] = closure_7;
   if (source !== AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
-    if (source !== tmp6.ACCESS_LARGE_GUILD_UNDERAGE) {
+    if (source !== AgeGateSource.ACCESS_LARGE_GUILD_UNDERAGE) {
       if (isAgeVerified) {
         obj = { verifyAgreementButtonText: null, verifyGateDescription: null, verifyTitle: null };
-        const intl9 = tmp(1236).intl;
-        obj[0] = intl9.string(tmp(1236).t.Zt4Mf4);
-        const intl10 = tmp(1236).intl;
+        const intl9 = getSystemLocale.intl;
+        obj[0] = intl9.string(getSystemLocale.t.Zt4Mf4);
+        const intl10 = getSystemLocale.intl;
         const format = intl10.format;
-        const t2 = tmp(1236).t;
+        const t2 = getSystemLocale.t;
         if (tmp7) {
           let formatResult = format(t2["8tk6bB"], {});
         } else {
           formatResult = format(t2.XQZvwn, {});
         }
         obj[1] = formatResult;
-        const intl11 = tmp(1236).intl;
+        const intl11 = getSystemLocale.intl;
         const string3 = intl11.string;
-        let xi46lg2 = tmp(1236).t;
+        let xi46lg2 = getSystemLocale.t;
         if (tmp7) {
           xi46lg2 = xi46lg2.xi46lg;
           let string3Result = string3(xi46lg2);
@@ -307,45 +298,44 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
         }
         obj[2] = string3Result;
       } else {
-        if (source === tmp6.LARGE_GUILD) {
+        if (source === AgeGateSource.LARGE_GUILD) {
           obj = { verifyTitle: null, verifyGateDescription: null, verifyAgreementButtonText: null };
-          const intl6 = tmp(1236).intl;
-          obj[0] = intl6.string(tmp(1236).t["7ymzsL"]);
-          const intl7 = tmp(1236).intl;
-          obj[1] = intl7.string(tmp(1236).t.SxY4IW);
-          const intl8 = tmp(1236).intl;
-          obj[2] = intl8.string(tmp(1236).t.FDSSia);
+          const intl6 = getSystemLocale.intl;
+          obj[0] = intl6.string(getSystemLocale.t["7ymzsL"]);
+          const intl7 = getSystemLocale.intl;
+          obj[1] = intl7.string(getSystemLocale.t.SxY4IW);
+          const intl8 = getSystemLocale.intl;
+          obj[2] = intl8.string(getSystemLocale.t.FDSSia);
           obj1 = obj;
         } else {
           if (tmp9) {
             if (tmp7) {
               if (!shouldShowTiggerPawtect) {
                 obj1 = { verifyTitle: null, verifyGateDescription: null, verifyAgreementButtonText: null };
-                const intl = tmp(1236).intl;
-                obj1[0] = intl.string(tmp(1236).t["H0SG/g"]);
-                const intl2 = tmp(1236).intl;
+                const intl = getSystemLocale.intl;
+                obj1[0] = intl.string(getSystemLocale.t["H0SG/g"]);
+                const intl2 = getSystemLocale.intl;
                 obj2 = { helpURL: null };
                 obj2[0] = combinedDefault.getArticleURL(constants.AGE_GATE);
-                obj1[1] = intl2.format(tmp(1236).t["6++3cX"], obj2);
-                const obj6 = combinedDefault;
+                obj1[1] = intl2.format(getSystemLocale.t["6++3cX"], obj2);
               }
             }
           }
           const obj3 = { verifyAgreementButtonText: null, verifyGateDescription: null, verifyTitle: null };
-          const intl3 = tmp(1236).intl;
-          obj3[0] = intl3.string(tmp(1236).t.FDSSia);
-          const intl4 = tmp(1236).intl;
+          const intl3 = getSystemLocale.intl;
+          obj3[0] = intl3.string(getSystemLocale.t.FDSSia);
+          const intl4 = getSystemLocale.intl;
           const string = intl4.string;
-          const t = tmp(1236).t;
+          const t = getSystemLocale.t;
           if (tmp7) {
             let stringResult = string(t.V6Gmu9);
           } else {
             stringResult = string(t["5rygLk"]);
           }
           obj3[1] = stringResult;
-          const intl5 = tmp(1236).intl;
+          const intl5 = getSystemLocale.intl;
           const string2 = intl5.string;
-          let xi46lg = tmp(1236).t;
+          let xi46lg = getSystemLocale.t;
           if (tmp7) {
             xi46lg = xi46lg.xi46lg;
             let string2Result = string2(xi46lg);
@@ -359,28 +349,28 @@ export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) 
     }
   }
   if (source === AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
-    let MjQbfi = tmp(1236).t["u/xsK9"];
+    let MjQbfi = getSystemLocale.t["u/xsK9"];
   } else {
-    MjQbfi = tmp(1236).t.MjQbfi;
+    MjQbfi = getSystemLocale.t.MjQbfi;
   }
-  const intl12 = tmp(1236).intl;
+  const intl12 = getSystemLocale.intl;
   const string4 = intl12.string;
-  const t3 = tmp(1236).t;
+  const t3 = getSystemLocale.t;
   if (isAgeVerified) {
     let string4Result = string4(t3.SAoMVJ);
   } else {
     string4Result = string4(t3.SxY4IW);
   }
-  const intl13 = tmp(1236).intl;
+  const intl13 = getSystemLocale.intl;
   const string5 = intl13.string;
-  const t4 = tmp(1236).t;
+  const t4 = getSystemLocale.t;
   if (isAgeVerified) {
     let string5Result = string5(t4.Zt4Mf4);
   } else {
     string5Result = string5(t4.FDSSia);
   }
   const obj4 = { verifyTitle: null, verifyGateDescription: null, verifyAgreementButtonText: null };
-  const intl14 = tmp(1236).intl;
+  const intl14 = getSystemLocale.intl;
   obj4[0] = intl14.string(MjQbfi);
   obj4[1] = string4Result;
   obj4[2] = string5Result;
@@ -392,8 +382,6 @@ export const shouldShowAgeGateForCurrentUser = function shouldShowAgeGateForCurr
     return false;
   } else {
     const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
-    const obj = useAgeVerificationRunner;
-    const obj2 = isFeatureAgeGated2;
     const tmp5 = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
     return true !== currentUser.nsfwAllowed || isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
   }
@@ -403,8 +391,6 @@ export const shouldShowAgeGateForGuildContentLevel = function shouldShowAgeGateF
   let flag = false;
   if (null != currentUser) {
     const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
-    const obj = useAgeVerificationRunner;
-    const obj2 = isFeatureAgeGated2;
     const tmp5 = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
     flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
     const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
@@ -426,8 +412,6 @@ export const shouldShowAgeGateForChannelId = function shouldShowAgeGateForChanne
   let flag = false;
   if (null != currentUser) {
     const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
-    const obj = useAgeVerificationRunner;
-    const obj2 = isFeatureAgeGated2;
     const tmp5 = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
     flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
     const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
@@ -448,7 +432,6 @@ export const maybeOpenAgeGateForVoiceChannel = function maybeOpenAgeGateForVoice
   if (flag) {
     openAgeGateModal.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL);
     flag = true;
-    const obj = openAgeGateModal;
   }
   return flag;
 };
@@ -457,8 +440,6 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
   let flag = false;
   if (null != currentUser) {
     const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
-    const obj2 = useAgeVerificationRunner;
-    const obj3 = isFeatureAgeGated2;
     const tmp5 = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
     flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
     const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
@@ -481,17 +462,14 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
       NSFW_SERVER = AgeGateSource.NSFW_SERVER;
     }
     openAgeGateModal.openAgeGateModal(NSFW_SERVER);
-    const obj7 = openAgeGateModal;
   } else {
-    const currentUser1 = obj.getCurrentUser();
+    const currentUser1 = authStore.getCurrentUser();
     let tmp13 = null != currentUser1 && null == currentUser1.nsfwAllowed;
     if (tmp13) {
-      const currentUser2 = obj.getCurrentUser();
+      const currentUser2 = authStore.getCurrentUser();
       let flag4 = false;
       if (null != currentUser2) {
         const result1 = useAgeVerificationRunner.shouldShowTiggerPawtect();
-        const obj4 = useAgeVerificationRunner;
-        const obj5 = isFeatureAgeGated2;
         const tmp18 = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
         flag4 = true !== currentUser2.nsfwAllowed || isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
         const tmp19 = true !== currentUser2.nsfwAllowed || isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
@@ -512,7 +490,6 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
         NSFW_CHANNEL = AgeGateSource.NSFW_CHANNEL;
       }
       openAgeGateModal.openAgeGateModal(NSFW_CHANNEL);
-      const obj6 = openAgeGateModal;
     }
   }
 };
@@ -584,7 +561,6 @@ export const isCurrentUserMissingDateOfBirth = function isCurrentUserMissingDate
 };
 export const shouldAgeVerifyForSettingsToggles = function shouldAgeVerifyForSettingsToggles() {
   let isFeatureAgeGatedResult = isFeatureAgeGated2.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE);
-  const obj = isFeatureAgeGated2;
   if (isFeatureAgeGatedResult) {
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
   }
@@ -592,7 +568,6 @@ export const shouldAgeVerifyForSettingsToggles = function shouldAgeVerifyForSett
 };
 export const useShouldAgeVerifyForSettingsToggles = function useShouldAgeVerifyForSettingsToggles() {
   let isFeatureAgeGated = isFeatureAgeGated2.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE);
-  const obj = isFeatureAgeGated2;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
   }

@@ -1,16 +1,14 @@
 // discord_app/modules/auth/native/RegistrationUtils.tsx
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/InviteStore.tsx";
-import closure_5 from "../../../stores/native/DisplayedInviteStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import updateInvite from "../../../stores/InviteStore.tsx";
+import getDisplayedInviteCode from "../../../stores/native/DisplayedInviteStore.tsx";
 import useRegistrationUIStore from "RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../RegistrationConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import { Background } from "../../../../_runtime/06319_Background.js";
-import { NavigatorWithCaptchaHook } from "components/Auth.tsx";
 
-const require = arg1;
+const require = fn;
 function trackRegTransition(overrideRegistrationOptions) {
   let registrationOptions = overrideRegistrationOptions.overrideRegistrationOptions;
   ({ step, fromStep, toStep, actionType, details } = overrideRegistrationOptions);
@@ -41,8 +39,7 @@ function trackRegTransition(overrideRegistrationOptions) {
       str2 = "phone";
     }
   }
-  let obj = expandEventPropertiesDefault;
-  obj = { step, identity_type: str2, action_type: actionType, action_details: details, registration_source: str, invite_code: null, invite_channel_id: null, invite_channel_type: null, invite_guild_id: null, invite_inviter_id: null, from_step: null, to_step: null };
+  const obj = { step, identity_type: str2, action_type: actionType, action_details: details, registration_source: str, invite_code: null, invite_channel_id: null, invite_channel_type: null, invite_guild_id: null, invite_inviter_id: null, from_step: null, to_step: null };
   let code;
   if (invite != null) {
     code = invite.code;
@@ -86,7 +83,7 @@ function trackRegTransition(overrideRegistrationOptions) {
 }
 ({ clearRegistrationErrorMessage: closure_6, useRegistrationUIStore: error } = useRegistrationUIStore);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: c9 } = RegistrationTransitionActionTypes);
-const result = require("set").fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
 
 export const hasAllRegistrationFieldsCompleted = function hasAllRegistrationFieldsCompleted(email, isConsentRequired) {
   isConsentRequired = isConsentRequired.isConsentRequired;
@@ -126,7 +123,7 @@ export function getTrackRegTransition(closure_0) {
         obj[0] = step;
         obj[1] = ref.current;
         obj[2] = actionType;
-        closure_1_12(obj);
+        trackRegTransition(obj);
       }
     }
     if (actionType === closure_1_9.VIEWED) {
@@ -135,7 +132,7 @@ export function getTrackRegTransition(closure_0) {
         obj[0] = step;
         obj[1] = ref.current;
         obj[2] = actionType;
-        closure_1_12(obj);
+        trackRegTransition(obj);
       }
       ref.current = step;
     } else if (null != step) {
@@ -145,13 +142,13 @@ export function getTrackRegTransition(closure_0) {
       obj[2] = actionType;
       obj[3] = details;
       obj[4] = overrideRegistrationOptions;
-      closure_1_12(obj);
+      trackRegTransition(obj);
     }
     return tmp9;
   };
 }
 export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
-  _require = React.useContext(_NavigatorWithCaptchaHook.TrackRegistrationContext);
+  _require = React.useContext(require("components/Auth.tsx").TrackRegistrationContext);
   ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
   let obj = {};
   const merged = Object.assign(arg0);
@@ -165,7 +162,7 @@ export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
       tmp();
     }
   };
-  return jsx(_Background.HeaderBackButton, {});
+  return jsx(require("../../../../_runtime/06319_Background.js").HeaderBackButton, {});
 };
 export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {

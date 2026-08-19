@@ -1,14 +1,14 @@
 // discord_app/utils/ReleaseChannelUtils.native.tsx
 import getConstantsAll from "native/ClientInfoUtils.tsx";
-import set from "PlatformUtils.tsx";
+import obj132 from "PlatformUtils.tsx";
 
 const ReleaseChannel = getConstantsAll.getConstants().ReleaseChannel;
-set = set.isAndroid();
-if (set) {
-  set = -1 === ReleaseChannel.indexOf("canary");
+obj132 = obj132.isAndroid();
+if (obj132) {
+  obj132 = -1 === ReleaseChannel.indexOf("canary");
 }
-if (set) {
-  set = -1 === ReleaseChannel.indexOf("beta");
+if (obj132) {
+  obj132 = -1 === ReleaseChannel.indexOf("beta");
 }
 let tmp3 = -1 !== ReleaseChannel.indexOf("debug");
 if (!tmp3) {
@@ -16,10 +16,9 @@ if (!tmp3) {
 }
 let tmp4 = !tmp3;
 if (!tmp3) {
-  tmp4 = "stable" === ReleaseChannel || set;
-  const tmp5 = "stable" === ReleaseChannel || set;
+  tmp4 = "stable" === ReleaseChannel || obj132;
 }
-const result = set.fileFinishedImporting("utils/ReleaseChannelUtils.native.tsx");
+const result = obj132.fileFinishedImporting("utils/ReleaseChannelUtils.native.tsx");
 
 export const isStable = tmp4;
 export const CurrentReleaseChannel = ReleaseChannel;

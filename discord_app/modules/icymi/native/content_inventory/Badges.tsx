@@ -1,18 +1,25 @@
 // discord_app/modules/icymi/native/content_inventory/Badges.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../../../utils/Durations.tsx";
+import obj132Default from "../../../../utils/Durations.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
+import TrophyIcon from "../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import calculateTimestampDurations from "../../../content_inventory/utils.tsx";
 import GameControllerIcon from "../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import FireIcon from "../../../../design/components/Icon/native/redesign/generated/FireIcon.tsx";
+import RetryIcon from "../../../../design/components/Icon/native/redesign/generated/RetryIcon.tsx";
 import TimerIcon from "../../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import NewUserIcon from "../../../../design/components/Icon/native/redesign/generated/NewUserIcon.tsx";
+import FlashIcon from "../../../../design/components/Icon/native/redesign/generated/FlashIcon.tsx";
+import TrendingType from "../../../../../discord_common/js/shared/shared-constants/TrendingType.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../user_settings/LocaleStore.tsx";
+import _getSystemLocale from "../../../user_settings/LocaleStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class ActiveTimestamp {
   constructor(arg0) {
     entry = global.entry;
@@ -22,7 +29,7 @@ class ActiveTimestamp {
     items = [, ];
     items[0] = entry;
     items[1] = now;
-    memo = closure_3.useMemo(() => entry(closure_1_2[7]).formatActiveTimestamp(entry, now), items);
+    memo = closure_3.useMemo(() => entry(dependencyMap[7]).formatActiveTimestamp(entry, now), items);
     return jsx(require("Text").Text, { style: global.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children: memo });
   }
 }
@@ -35,21 +42,20 @@ function ContentTimestamp(entry) {
   if (isEntryActiveResult) {
     obj = { entry: null };
     obj[0] = entry;
-    let tmp7Result = tmp7(ActiveTimestamp, obj);
+    let tmp7Result = callback(ActiveTimestamp, obj);
   } else {
     obj = { variant: "text-sm/medium", style: null, children: null };
     obj[1] = tmp.text;
-    obj[2] = tmp2(8348).formatEndedTimestamp(entry, tmp6);
-    tmp7Result = tmp7(tmp2(4734).Text, obj);
-    const tmp2Result = tmp2(8348);
+    obj[2] = calculateTimestampDurations.formatEndedTimestamp(entry, tmp6);
+    tmp7Result = callback(Text.Text, obj);
+    const tmp2Result = calculateTimestampDurations;
   }
   return tmp7Result;
 }
 function BaseBadge(arg0) {
   ({ Icon, iconColor, text } = arg0);
   const tmp = callback3();
-  let obj = { style: tmp.badgeContainer, children: null };
-  obj = { style: tmp.icon, color: iconColor };
+  let obj = { style: tmp.icon, color: iconColor };
   const items = [callback(Icon, obj), ];
   obj = { variant: "text-sm/medium", style: tmp.text, children: text };
   items[1] = callback(Text.Text, obj);
@@ -57,23 +63,19 @@ function BaseBadge(arg0) {
   return callback2(View, obj);
 }
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { icon: { width: 16, height: 16 }, badgeContainer: null, text: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, backgroundColor: "rgba(255, 255, 255, 0.08)", paddingVertical: ThemesDefault.space.PX_4, paddingLeft: ThemesDefault.space.PX_8, paddingRight: 10, borderRadius: ThemesDefault.radii.sm };
+const createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, backgroundColor: "rgba(255, 255, 255, 0.08)", paddingVertical: ThemesDefault.space.PX_4, paddingLeft: ThemesDefault.space.PX_8, paddingRight: 10, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { color: ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
-const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/Badges.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/native/content_inventory/Badges.tsx");
 
 export { ActiveTimestamp };
 export const GameTimestampBadge = function GameTimestampBadge(entry) {
   entry = entry.entry;
   const tmp = callback3();
-  let obj = calculateTimestampDurations;
   const colors = ThemesDefault.colors;
-  obj = { style: tmp.badgeContainer, children: null };
+  let obj = { style: tmp.badgeContainer, children: null };
   const isEntryActiveResult = obj.isEntryActive(entry);
-  const tmp2 = require;
   obj = { style: tmp.icon, color: obj.isEntryActive(entry) ? colors.STATUS_POSITIVE : colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
   const items = [callback(GameControllerIcon.GameControllerIcon, obj), callback(ContentTimestamp, { entry })];
   obj[1] = items;
@@ -83,15 +85,15 @@ export const MarathonBadge = function MarathonBadge(entry) {
   entry = entry.entry;
   let obj = calculateTimestampDurations;
   if (obj.isEntryMarathon(entry)) {
-    let tmpResult = tmp(8348);
+    let tmpResult = calculateTimestampDurations;
     const colors = ThemesDefault.colors;
     const isEntryActiveResult = tmpResult.isEntryActive(entry);
-    tmpResult = tmp(8348);
+    tmpResult = calculateTimestampDurations;
     const text = tmpResult.getMarathonDescription(entry).text;
     let tmp7 = null;
     if (null != text) {
       obj = { Icon: null, iconColor: null, text: null };
-      obj[0] = tmp(10793).TimerIcon;
+      obj[0] = TimerIcon.TimerIcon;
       obj[1] = tmp6;
       obj[2] = text;
       tmp7 = callback(BaseBadge, obj);
@@ -106,9 +108,9 @@ export const NewGameBadge = function NewGameBadge(entry) {
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(12106).NewUserIcon;
-    const intl = tmp(1236).intl;
-    obj[1] = intl.string(tmp(1236).t.keY6mW);
+    obj[0] = NewUserIcon.NewUserIcon;
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.keY6mW);
     obj[2] = ThemesDefault.colors.STATUS_POSITIVE;
     tmp3 = callback(BaseBadge, obj);
   }
@@ -122,11 +124,11 @@ export const StreakBadge = function StreakBadge(entry) {
     tmp4 = null;
     if (streakCount >= 2) {
       obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(12108).FlashIcon;
-      const intl = tmp(1236).intl;
+      obj[0] = FlashIcon.FlashIcon;
+      const intl = getSystemLocale.intl;
       obj = { days: null };
       obj[0] = streakCount;
-      obj[1] = intl.formatToPlainString(tmp(1236).t["Klie/P"], obj);
+      obj[1] = intl.formatToPlainString(getSystemLocale.t["Klie/P"], obj);
       obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
       tmp4 = callback(BaseBadge, obj);
     }
@@ -139,11 +141,11 @@ export const TrendingBadge = function TrendingBadge(entry) {
   let tmp4 = null;
   if (null != trendingType) {
     tmp4 = null;
-    if (trendingType !== tmp(12110).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
+    if (trendingType !== TrendingType.TrendingType.TRENDING_TYPE_UNSPECIFIED) {
       obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(9526).FireIcon;
-      const intl = tmp(1236).intl;
-      obj[1] = intl.string(tmp(1236).t.TsWCdW);
+      obj[0] = FireIcon.FireIcon;
+      const intl = getSystemLocale.intl;
+      obj[1] = intl.string(getSystemLocale.t.TsWCdW);
       obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
       tmp4 = callback(BaseBadge, obj);
     }
@@ -155,9 +157,9 @@ export const ResurrectedBadge = function ResurrectedBadge(entry) {
   let tmp3 = null;
   if (null != obj.getResurrectedEntryLastPlayTime(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(10123).RetryIcon;
-    const intl = tmp(1236).intl;
-    obj[1] = intl.string(tmp(1236).t.adnLsB);
+    obj[0] = RetryIcon.RetryIcon;
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.adnLsB);
     obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
     tmp3 = callback(BaseBadge, obj);
   }
@@ -170,15 +172,15 @@ export const TopGameBadge = function TopGameBadge(entry) {
     return null;
   } else {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(8010).TrophyIcon;
+    obj[0] = TrophyIcon.TrophyIcon;
     obj = { children: null };
-    const intl = tmp(1236).intl;
-    const items = [intl.string(tmp(1236).t["/50eHi"]), ": ", ];
-    const intl2 = tmp(1236).intl;
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t["/50eHi"]), ": ", ];
+    const intl2 = getSystemLocale.intl;
     obj1 = { hours: null };
     const _Math = Math;
-    obj1[0] = Math.round(entryDuration / setDefault.Seconds.HOUR);
-    items[2] = intl2.format(tmp(1236).t.SDRHgr, obj1);
+    obj1[0] = Math.round(entryDuration / obj132Default.Seconds.HOUR);
+    items[2] = intl2.format(getSystemLocale.t.SDRHgr, obj1);
     obj[0] = items;
     obj[1] = callback2(closure_8, obj);
     obj[2] = ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;
@@ -187,8 +189,7 @@ export const TopGameBadge = function TopGameBadge(entry) {
 };
 export const CustomStatusTimestampBadge = function CustomStatusTimestampBadge(entry) {
   const tmp = callback3();
-  let obj = { style: tmp.badgeContainer, children: null };
-  obj = { style: tmp.icon, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  const obj = { style: tmp.icon, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   const items = [callback(TimerIcon.TimerIcon, obj), callback(ContentTimestamp, { entry: entry.entry })];
   obj[1] = items;
   return callback2(View, obj);

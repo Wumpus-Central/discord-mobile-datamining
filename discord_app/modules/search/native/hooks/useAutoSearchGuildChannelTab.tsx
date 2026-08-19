@@ -1,9 +1,9 @@
 // discord_app/modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_4 } from "../SearchPlatformConstants.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
 
 export const useAutoSearchGuildChannelTab = function useAutoSearchGuildChannelTab(searchContext, arg1) {
   closure_0 = searchContext;
@@ -37,6 +37,6 @@ export const useAutoSearchGuildChannelTab = function useAutoSearchGuildChannelTa
   }, items2);
   const items3 = [searchContext];
   const effect2 = React.useEffect(() => () => {
-    const result = closure_1_1(closure_1_2[3]).cleanupGuildChannelTab(closure_0);
+    const result = closure_1_1(callback[3]).cleanupGuildChannelTab(closure_0);
   }, items3);
 };

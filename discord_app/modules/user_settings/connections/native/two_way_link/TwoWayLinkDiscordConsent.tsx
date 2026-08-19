@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx
 import timestampDefault from "../../../../debug/Logger.tsx";
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsxs: closure_8, jsx: c9 } = jsxProd);
 let closure_10 = new timestampDefault("TwoWayLinkDiscordConsentNative");
 let closure_11 = createCacheKey.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
 const tmp4 = new timestampDefault("TwoWayLinkDiscordConsentNative");
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");
 
 export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callbackCode) {
   callbackCode = callbackCode.callbackCode;
@@ -23,14 +23,12 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
   const onNext = callbackCode.onNext;
   const onError = callbackCode.onError;
   let React;
-  let sendAuthorize;
   ({ clientId, scopes, redirectUri } = callbackCode);
   const tmp = callback2();
   let obj = _require(platformType[7]);
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
   const tmp5 = onError(React.useState(false), 2);
   React = tmp5[1];
-  _require = undefined;
   _require = onNext((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -100,7 +98,7 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
               v0 = 0;
             }
             if (null != _location) {
-              closure_1_3();
+              onNext();
             } else {
               v0(code);
             }
@@ -130,10 +128,9 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     return applyArgumentsResult;
   }, items);
   const tmp7 = callbackState(platformType[9])({ clientId, scopes, responseType: "code", callback, isTrustedName: true, isEmbeddedFlow: true, redirectUri, withBackPressHandler: false });
-  sendAuthorize = tmp7.sendAuthorize;
+  const sendAuthorize = tmp7.sendAuthorize;
   const items1 = [sendAuthorize];
   ({ header, body, appDetails } = tmp7);
-  obj = { style: twoWayLinkStyles.container, children: null };
   const callback1 = React.useCallback(() => {
     callbackState(platformType[10])(null != sendAuthorize, "sendAuthorize not available");
     callback(true);
@@ -157,13 +154,13 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     obj6[2] = intl.string(tmp2(tmp3[14]).t.ZN4hkc);
     obj6[3] = callback1;
     obj6[4] = tmp5[0];
-    obj5[1] = tmp9(tmp2(tmp3[13]).Button, obj6);
-    tmp9Result = tmp9(tmp10, obj5);
+    obj5[1] = callback(tmp2(tmp3[13]).Button, obj6);
+    tmp9Result = callback(tmp10, obj5);
   }
   obj4[2] = tmp9Result;
-  items4[1] = closure_9(_require(platformType[12]).SafeAreaPaddingView, obj4);
+  items4[1] = callback(_require(platformType[12]).SafeAreaPaddingView, obj4);
   obj1[1] = items4;
   obj[1] = callback(closure_7, obj1);
-  obj[1] = closure_9(callbackState(platformType[11]), obj);
-  return closure_9(sendAuthorize, obj);
+  obj[1] = callback(callbackState(platformType[11]), obj);
+  return callback(sendAuthorize, obj);
 };

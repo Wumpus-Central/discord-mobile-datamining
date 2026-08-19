@@ -1,8 +1,9 @@
 // discord_app/modules/markup/MarkupReactLinkUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
+import reactParserFor from "../../../discord_common/js/packages/markup/MarkupParser.tsx";
 import isLinkTrusted from "../../utils/MaskedLinkUtils.tsx";
 
-const result = set.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
 export const isLinkTrusted = function isLinkTrusted(target) {
   if (null == target.target) {
@@ -10,11 +11,10 @@ export const isLinkTrusted = function isLinkTrusted(target) {
   } else {
     isLinkTrusted;
     if (null == target.title) {
-      let title = tmp2(6902).astToString(target.content);
+      let title = reactParserFor.astToString(target.content);
       tmp5(tmp6, title);
-      const tmp2Result = tmp2(6902);
+      const tmp2Result = reactParserFor;
     }
     title = target.title;
-    tmp2 = require;
   }
 };

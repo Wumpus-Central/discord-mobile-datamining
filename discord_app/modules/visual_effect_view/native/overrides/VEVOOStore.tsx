@@ -1,12 +1,11 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOStore.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import batchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import keys from "../../../../../_runtime/00644_keys.js";
-import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let closure_2 = {};
 let closure_3 = keys.create(() => closure_2);
-const result = set.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOStore.tsx");
+const result = obj132.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOStore.tsx");
 
 export const useVisualEffectViewOverrides = function useVisualEffectViewOverrides() {
   return state();
@@ -16,7 +15,7 @@ export const getVisualEffectViewOverrides = function getVisualEffectViewOverride
 };
 export const setVisualEffectViewOverides = function setVisualEffectViewOverides(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => closure_1_3.setState(closure_0));
+  require("../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx").batchUpdates(() => closure_1_3.setState(closure_0));
 };
 export const clearVisualEffectViewOverrides = function clearVisualEffectViewOverrides() {
   batchUpdates.batchUpdates(() => state.setState(closure_2));

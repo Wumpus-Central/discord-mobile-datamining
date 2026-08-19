@@ -1,12 +1,15 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
-import initialize from "../../badges/BadgeDirectoryStore.tsx";
+import obj132 from "../../../../_runtime/00002_obj132.js";
+import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import UNSAFE_isDismissibleContentDismissed from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import initialize2 from "../../badges/BadgeDirectoryStore.tsx";
 import apexExperiment from "experiments/GiftingBadgeExperiment.tsx";
 import apexExperiment2 from "experiments/GiftingBadgeDesktopExperiment.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 
-let closure_2 = initialize.getSingleRequirementThreshold;
-let result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
+let closure_2 = initialize2.getSingleRequirementThreshold;
+let result = obj132.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
 export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
   const tmp = callback(currentTier);
@@ -67,7 +70,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     tmp4 = enabled2;
   }
-  let tmpResult = tmp(589);
+  let tmpResult = initialize;
   const items = [closure_3];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -80,8 +83,8 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     }
     return flag;
   });
-  tmpResult = tmp(4196);
-  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(1377).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  tmpResult = UNSAFE_isDismissibleContentDismissed;
+  const result = tmpResult.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (tmp4) {
     tmp4 = stateFromStores;
   }

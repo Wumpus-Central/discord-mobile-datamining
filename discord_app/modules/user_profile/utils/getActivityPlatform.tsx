@@ -1,13 +1,13 @@
 // discord_app/modules/user_profile/utils/getActivityPlatform.tsx
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId.tsx";
-import set from "../../../../_runtime/00002_set.js";
 
 const PlatformTypes = ME.PlatformTypes;
 const items = [, , , ];
 ({ LEAGUE_OF_LEGENDS: arr[0], ROBLOX: arr[1], TWITCH: arr[2], YOUTUBE: arr[3] } = PlatformTypes);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityPlatform.tsx");
+const set = new Set(items);
+const result = obj132.fileFinishedImporting("modules/user_profile/utils/getActivityPlatform.tsx");
 
 export default function getActivityPlatform(session_id) {
   importDefault = session_id;
@@ -27,7 +27,7 @@ export default function getActivityPlatform(session_id) {
   } else {
     if (!tmp(12114)(session_id)) {
       if (!tmp(12115)(session_id)) {
-        const found = tmp(5097).find((name) => name.name === session_id.name);
+        const found = tmp(5097).find((item, index) => item.name === session_id.name);
         let tmp5 = null;
         if (null != found) {
           tmp5 = null;

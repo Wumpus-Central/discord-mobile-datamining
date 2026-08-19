@@ -1,11 +1,11 @@
 // discord_app/modules/auth/native/LoginRequiredActionManager.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import handleLogoutDefault from "../../../actions/AuthenticationActionCreators.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
-import closure_4 from "../LoginRequiredActionStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import handleUpdateUser from "../LoginRequiredActionStore.tsx";
 import ME from "../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ LoginRequiredActions: c5, Routes: closure_6, UserSettingsSections: error } = ME);
 initializeDefault;
 class LoginRequiredActionManager extends tmp3 {
@@ -29,8 +29,7 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
         obj[2] = function onClose() {
           const items = [closure_1_5.UPDATE_PASSWORD];
           if (closure_1_4.requiredActionsIncludes(currentUser.id, items)) {
-            closure_1_1(closure_1_2[5]).logout("login_required_account_manager", closure_1_6.LOGIN);
-            const obj = closure_1_1(closure_1_2[5]);
+            handleLogoutDefault.logout("login_required_account_manager", closure_1_6.LOGIN);
           }
         };
         currentUser(7360).openUserSettings(obj);
@@ -44,6 +43,6 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
   }
 };
 const loginRequiredActionManager = new LoginRequiredActionManager();
-let result = require("set").fileFinishedImporting("modules/auth/native/LoginRequiredActionManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/auth/native/LoginRequiredActionManager.tsx");
 
 export default loginRequiredActionManager;

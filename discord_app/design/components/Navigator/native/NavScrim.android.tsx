@@ -7,8 +7,7 @@ import createCacheKey from "../../Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
 ({ View: obj1, StyleSheet } = get_ActivityIndicator);
-let obj = { androidNavScrim: null };
-obj = {};
+let obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.backgroundColor = ThemesDefault.colors.ANDROID_NAVIGATION_SCRIM_BACKGROUND;
 obj.top = undefined;
@@ -18,9 +17,8 @@ const memoResult = importAllResult.memo(() => {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeCustomKeyboardHeight: false }).insets;
   let tmp2 = null;
   if (0 !== insets.bottom) {
-    let obj = { style: null, pointerEvents: "none" };
     const items = [tmp.androidNavScrim, ];
-    obj = { height: null };
+    const obj = { height: null };
     obj[0] = insets.bottom;
     items[1] = obj;
     obj[0] = items;
@@ -28,6 +26,6 @@ const memoResult = importAllResult.memo(() => {
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/NavScrim.android.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Navigator/native/NavScrim.android.tsx");
 
 export const NavScrim = memoResult;

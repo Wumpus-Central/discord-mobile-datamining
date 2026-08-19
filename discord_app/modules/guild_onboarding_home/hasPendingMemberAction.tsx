@@ -1,15 +1,15 @@
 // discord_app/modules/guild_onboarding_home/hasPendingMemberAction.tsx
 import hasFlagAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import guildHasOnboardingHomeDefault from "guildHasOnboardingHome.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/GuildMemberStore.tsx";
-import closure_5 from "../../stores/GuildStore.tsx";
-import closure_6 from "GuildOnboardingHomeSettingsStore.tsx";
-import closure_7 from "GuildOnboardingMemberActionStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import handleSettingsLoadSuccess from "GuildOnboardingHomeSettingsStore.tsx";
+import set from "GuildOnboardingMemberActionStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
 import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 
 export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, selectedChannelId) {
   guild = guild.getGuild(guild_id);
@@ -32,7 +32,6 @@ export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, 
       num = 0;
     }
     hasItem = !hasFlagAll.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
-    const obj = hasFlagAll;
   }
   if (hasItem) {
     hasItem = closure_6.hasMemberAction(guild.id, channel.id);

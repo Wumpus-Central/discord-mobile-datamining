@@ -14,10 +14,9 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { contentContainer: null, buttonContainer: null, title: null, heroIllustrationContainer: null };
-obj = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };
+let obj = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };
 obj[0] = obj;
 obj[1] = { marginVertical: 6, width: "100%", height: 48 };
 obj[2] = { width: "100%", textAlign: "center" };
@@ -64,6 +63,6 @@ const memoResult = importAllResult.memo(function PremiumDiscountOfferActionSheet
   obj1[1] = items1;
   return callback2(View, obj1);
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx");
 
 export default memoResult;

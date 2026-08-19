@@ -1,9 +1,9 @@
 // discord_app/modules/app_database/modules/messages/requireSortedDescending.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import DISCORD_EPOCHDefault from "../../../../utils/SnowflakeUtils.tsx";
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 
-const result = set.fileFinishedImporting("modules/app_database/modules/messages/requireSortedDescending.tsx");
+const result = obj132.fileFinishedImporting("modules/app_database/modules/messages/requireSortedDescending.tsx");
 
 export const requireSortedDescending = function requireSortedDescending(messages) {
   let tmp4 = messages.length <= 2;

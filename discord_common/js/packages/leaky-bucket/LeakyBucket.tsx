@@ -1,7 +1,7 @@
 // discord_common/js/packages/leaky-bucket/LeakyBucket.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx");
 class LeakyBucket {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -18,18 +18,18 @@ prototype["_processQueue"] = function _processQueue() {
   const self = this;
   const timerId = setTimeout(() => {
     if (self._queue.length > 0) {
-      if (obj._tokenCount > 0) {
-        obj._tokenCount = obj._tokenCount - 1;
-        if (null == obj._intervalID) {
+      if (self._tokenCount > 0) {
+        self._tokenCount = self._tokenCount - 1;
+        if (null == self._intervalID) {
           const _setInterval = setInterval;
-          obj._intervalID = setInterval(() => closure_0._iterate(), obj._intervalPeriod);
+          self._intervalID = setInterval(() => closure_0._iterate(), self._intervalPeriod);
         }
-        const _queue = obj._queue;
+        const _queue = self._queue;
         const arr = _queue.shift();
         if (arr != null) {
           arr.resolve();
         }
-        obj._processQueue();
+        self._processQueue();
       }
     }
   }, 0);
@@ -51,8 +51,8 @@ prototype["_iterate"] = function _iterate() {
 prototype["process"] = function process(arg0) {
   const self = this;
   closure_0 = arg0;
-  return new Promise((arg0, arg1) => {
-    closure_0 = arg1;
+  return new Promise((arg0, fn) => {
+    closure_0 = fn;
     let obj = closure_0;
     let aborted;
     if (closure_0 != null) {
@@ -61,7 +61,7 @@ prototype["process"] = function process(arg0) {
     if (aborted) {
       const _Error = Error;
       error = new Error("Already aborted");
-      arg1(error);
+      fn(error);
     } else {
       obj = { resolve: null, signal: null };
       obj[0] = arg0;
@@ -69,7 +69,7 @@ prototype["process"] = function process(arg0) {
       let _queue = obj._queue;
       _queue.push(obj);
       if (obj) {
-        const listener = obj.addEventListener("abort", () => {
+        const listener = obj.addEventListener("abort", (event) => {
           const _queue = obj._queue;
           const index = _queue.indexOf(obj);
           if (index >= 0) {
@@ -81,7 +81,6 @@ prototype["process"] = function process(arg0) {
         }, { once: true });
       }
       obj._processQueue();
-      const obj3 = obj;
     }
   });
 };

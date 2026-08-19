@@ -1,18 +1,17 @@
 // discord_app/modules/frames/native/FrameWebView.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/frames/native/FrameWebView.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/frames/native/FrameWebView.tsx");
 
 export default function FrameWebView(applicationId) {
   const frameId = applicationId.frameId;
   const merged = Object.assign(applicationId, Object.create(null));
-  let hasInvalidUrlError;
   let hadInvalidUrlError;
   let obj = frameId(hadInvalidUrlError[2]);
   const hasInvalidUrlErrorState = obj.useHasInvalidUrlErrorState();
-  hasInvalidUrlError = hasInvalidUrlErrorState.hasInvalidUrlError;
+  const hasInvalidUrlError = hasInvalidUrlErrorState.hasInvalidUrlError;
   hadInvalidUrlError = hasInvalidUrlErrorState.hadInvalidUrlError;
   const items = [hasInvalidUrlError, hadInvalidUrlError, frameId];
   const effect = React.useEffect(() => {

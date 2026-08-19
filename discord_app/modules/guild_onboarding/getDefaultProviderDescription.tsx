@@ -1,10 +1,10 @@
 // discord_app/modules/guild_onboarding/getDefaultProviderDescription.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 
 const PlatformTypes = ME.PlatformTypes;
-const result = set.fileFinishedImporting("modules/guild_onboarding/getDefaultProviderDescription.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_onboarding/getDefaultProviderDescription.tsx");
 
 export default function getDefaultProviderDescription(arg0) {
   if (PlatformTypes.TWITCH === arg0) {

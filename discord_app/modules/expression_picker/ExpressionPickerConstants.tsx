@@ -1,10 +1,10 @@
 // discord_app/modules/expression_picker/ExpressionPickerConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
 const obj = { EMOJI: "emoji", GIF: "gif", STICKER: "sticker", SOUNDBOARD: "soundboard" };
 const items = [, , ];
 ({ EMOJI: arr[0], GIF: arr[1], STICKER: arr[2] } = obj);
-const result = set.fileFinishedImporting("modules/expression_picker/ExpressionPickerConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/expression_picker/ExpressionPickerConstants.tsx");
 
 export const ExpressionPickerViewType = obj;
 export const CHAT_INPUT_BUTTON_CLASSNAME = "expression-picker-chat-input-button";

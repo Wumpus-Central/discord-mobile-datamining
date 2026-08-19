@@ -4,14 +4,14 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
 import ButtonGroup from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import SafeAreaPaddingView from "../../../components_native/common/SafeAreaView.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { QuestHomeSortMethods } from "../QuestConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function FilterFooter(inline) {
   let flag = inline.inline;
   ({ onConfirm, onReset, onLayout } = inline);
@@ -25,37 +25,32 @@ function FilterFooter(inline) {
     footerInline = [, ];
     ({ footer: arr[0], content: arr[1] } = tmp);
   }
-  let obj = { style: footerInline, onLayout, children: null };
-  obj = { bottom: true, children: null };
-  obj = { direction: "vertical", style: tmp.footerButtonGroup, children: null };
+  const obj = { direction: "vertical", style: tmp.footerButtonGroup, children: null };
   obj1 = { size: "lg", grow: true, text: null, onPress: null };
   const intl = getSystemLocale.intl;
   obj1[2] = intl.string(getSystemLocale.t.i4jeWR);
   obj1[3] = onConfirm;
-  const items = [closure_7(Button.Button, obj1), ];
+  const items = [callback(Button.Button, obj1), ];
   const obj2 = { size: "lg", grow: true, text: null, onPress: null, variant: "secondary" };
   const intl2 = getSystemLocale.intl;
   obj2[2] = intl2.string(getSystemLocale.t.yBZMsQ);
   obj2[3] = onReset;
-  items[1] = closure_7(Button.Button, obj2);
+  items[1] = callback(Button.Button, obj2);
   obj[2] = items;
   obj[1] = callback2(ButtonGroup.ButtonGroup, obj);
-  obj[2] = closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-  return closure_7(View, obj);
+  obj[2] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  return callback(View, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { content: null, bodyContainer: null, footerInline: null, footer: null, footerButtonGroup: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, minHeight: 0 };
 createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_16 };
-let obj1 = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[4] = { paddingBottom: 0 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = [];
-let obj2 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestHomeSortingFilteringBottomSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestHomeSortingFilteringBottomSheet.tsx");
 
 export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange) {
   onSortMethodChange = onSortMethodChange.onSortMethodChange;
@@ -84,7 +79,7 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
         items[HermesBuiltin.arraySpread(arr, 0)] = closure_0;
         let found = items;
       } else {
-        found = arr.filter((group) => !(group.group === group.group && group.filter === arr.filter));
+        found = arr.filter((item, index) => !(item.group === group.group && item.filter === arr.filter));
       }
       return found;
     });
@@ -110,7 +105,6 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
   const questHomeSortOptions = obj1.useQuestHomeSortOptions();
   let obj2 = onSortMethodChange(first[14]);
   const questHomeFilterOptions = obj2.useQuestHomeFilterOptions();
-  obj = { header: null, footer: null, scrollable: true, startExpanded: true, children: null };
   obj = { title: null };
   let intl = onSortMethodChange(first[10]).intl;
   obj[0] = intl.string(onSortMethodChange(first[10]).t.UdhTtk);
@@ -137,26 +131,26 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
   const obj5 = { groupRef: ref, hasIcons: false, defaultValue: first, onChange: tmp5[1], title: null, children: null };
   const intl2 = tmp2(tmp3[10]).intl;
   obj5[4] = intl2.string(onSortMethodChange(first[10]).t.tZXJIS);
-  obj5[5] = questHomeSortOptions.map((label) => ref(onSortMethodChange(first[20]).TableRadioRow, { label: label.label, value: label.value }, arg1));
+  obj5[5] = questHomeSortOptions.map((item, index) => ref(onSortMethodChange(first[20]).TableRadioRow, { label: item.label, value: item.value }, index));
   const items2 = [
     ref(onSortMethodChange(first[19]).TableRadioGroup, obj5),
-    questHomeFilterOptions.map((heading) => {
-      const options = heading.options;
+    questHomeFilterOptions.map((item, index) => {
+      const options = item.options;
       return ref(onSortMethodChange(first[21]).TableRowGroup, {
-        title: heading.heading,
+        title: item.heading,
         hasIcons: false,
-        children: options.map((arg0, arg1) => {
-          closure_0 = arg0;
+        children: options.map((item, index) => {
+          closure_0 = item;
           const obj = {
-            label: closure_1_0(closure_1_2[23]).getFilterTypeText(arg0.filter),
+            label: onSortMethodChange(first[23]).getFilterTypeText(item.filter),
             onPress(arg0) {
               return closure_1_8(closure_0, arg0);
             },
-            checked: closure_4.some((group) => group.group === group.group && group.filter === arr.filter)
+            checked: closure_4.some((item, index) => item.group === item.group && item.filter === arr.filter)
           };
-          return closure_1_7(closure_1_0(closure_1_2[22]).TableCheckboxRow, obj, arg1);
+          return ref(onSortMethodChange(first[22]).TableCheckboxRow, obj, index);
         })
-      }, arg1);
+      }, index);
     })
   ];
   obj4[1] = items2;

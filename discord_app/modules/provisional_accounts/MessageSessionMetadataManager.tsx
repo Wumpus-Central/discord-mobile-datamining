@@ -1,5 +1,5 @@
 // discord_app/modules/provisional_accounts/MessageSessionMetadataManager.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
@@ -37,8 +37,7 @@ prototype["_getAuthorizedApplicationIds"] = function _getAuthorizedApplicationId
 };
 prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExists(message) {
   if (null != message.session_metadata) {
-    let obj = expandEventPropertiesDefault;
-    obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
+    const obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
     ({ id: obj2[0], channel_id: obj2[1], author } = message);
     let id;
     if (author != null) {
@@ -51,6 +50,6 @@ prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExi
   }
 };
 const messageSessionMetadataManager = new MessageSessionMetadataManager();
-let result = set.fileFinishedImporting("modules/provisional_accounts/MessageSessionMetadataManager.tsx");
+let result = obj132.fileFinishedImporting("modules/provisional_accounts/MessageSessionMetadataManager.tsx");
 
 export default messageSessionMetadataManager;

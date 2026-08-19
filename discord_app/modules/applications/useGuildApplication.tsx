@@ -1,11 +1,11 @@
 // discord_app/modules/applications/useGuildApplication.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../_runtime/00019_noop.js";
-import closure_6 from "ApplicationStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import addApplication from "ApplicationStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/applications/useGuildApplication.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/applications/useGuildApplication.tsx");
 
 export default function useGuildApplication(arg0, arg1) {
   const _require = arg0;
@@ -49,12 +49,12 @@ export default function useGuildApplication(arg0, arg1) {
           } else {
             closure_1 = tmp4;
             closure_0 = tmp8;
-            if (null == closure_1_2) {
+            if (null == application) {
               if (null != closure_1_0) {
                 closure_1_6(true);
                 v0(true);
                 v0 = 2;
-                obj1 = closure_1_1(closure_1_2[5]);
+                obj1 = closure_1_1(application[5]);
                 obj1 = { type: null, includeTeam: true };
                 obj1[0] = closure_1_1;
                 v02 = 3;
@@ -70,7 +70,7 @@ export default function useGuildApplication(arg0, arg1) {
           if (2 === tmp8) {
             v0 = 1;
             closure_0 = closure_2;
-            const aPIError = new closure_1_0(closure_1_2[6]).APIError(closure_0);
+            const aPIError = new closure_1_0(application[6]).APIError(closure_0);
             v02(aPIError);
           } else if (arg0 === 1) {
             c5 = 3;

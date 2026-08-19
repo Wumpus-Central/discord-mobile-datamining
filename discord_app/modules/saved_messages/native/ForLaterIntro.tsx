@@ -1,5 +1,5 @@
 // discord_app/modules/saved_messages/native/ForLaterIntro.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
@@ -9,7 +9,7 @@ import ACTION_SHEET_START_HEIGHT_RATIO from "../../action_sheet/native/ActionShe
 import SavedMessageSortTypes from "../SavedMessagesTypes.tsx";
 import BookmarkIcon from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";
 import registerAssetDefault from "../../../../_runtime/12732_registerAsset.js";
-import setDefault from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import obj132Default from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
@@ -17,9 +17,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 function IntroDemo(isReminder) {
   isReminder = isReminder.isReminder;
   const tmp = callback3();
-  let obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-  obj = { style: tmp.messages, children: null };
-  obj = { source: { uri: setDefault }, style: tmp.avatar };
+  const obj = { source: { uri: obj132Default }, style: tmp.avatar };
   const items = [callback(closure_3, obj), ];
   const obj2 = { style: tmp.messageLines, children: null };
   const obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
@@ -71,9 +69,8 @@ function SheetRow(hasArrow) {
   if (highlighted) {
     sheetRowHighlighted = tmp.sheetRowHighlighted;
   }
-  let obj = { style: items, children: null };
   items[1] = sheetRowHighlighted;
-  obj = { size: "sm", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  let obj = { size: "sm", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   const items1 = [callback(icon, obj), , ];
   obj = { variant: "text-sm/medium", color: "text-default", style: tmp.sheetRowLabel, children: label };
   items1[1] = callback(Text.Text, obj);
@@ -85,46 +82,33 @@ function SheetRow(hasArrow) {
   }
   items1[2] = tmp5Result;
   obj[1] = items1;
-  return closure_7(closure_5, obj);
+  return callback(closure_5, obj);
 }
 ({ Image: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
 const ACTION_SHEET_BORDER_RADIUS = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_BORDER_RADIUS;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { scrollView: { flex: 1 }, pageContainer: null, container: null, upsellImage: null, textContainer: null, text: null, demo: null, messages: null, avatar: null, messageLines: null, sheet: null, grabber: null, sheetRow: null, sheetRowHighlighted: null, sheetRowLabel: null };
-obj = { flexGrow: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_32, paddingBottom: ThemesDefault.space.PX_32 };
+let obj = { flexGrow: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_32, paddingBottom: ThemesDefault.space.PX_32 };
 obj[1] = obj;
 obj[2] = { alignItems: "center" };
 obj[3] = { width: 180, height: 144, marginBottom: ThemesDefault.space.PX_16 };
-let obj1 = { width: 180, height: 144, marginBottom: ThemesDefault.space.PX_16 };
 obj[4] = { gap: ThemesDefault.space.PX_8 };
 obj[5] = { textAlign: "center" };
-let obj2 = { gap: ThemesDefault.space.PX_8 };
 obj[6] = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, marginTop: ThemesDefault.space.PX_24, overflow: "hidden" };
-let obj3 = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, marginTop: ThemesDefault.space.PX_24, overflow: "hidden" };
 obj[7] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_12 };
-let obj4 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_12 };
 obj[8] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round };
-let obj5 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round };
 obj[9] = { flex: 1, gap: ThemesDefault.space.PX_4 };
-let obj6 = { flex: 1, gap: ThemesDefault.space.PX_4 };
 obj[10] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj7 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8 };
 obj[11] = { alignSelf: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, height: 4, marginVertical: ThemesDefault.space.PX_8, width: 36 };
-const obj8 = { alignSelf: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, height: 4, marginVertical: ThemesDefault.space.PX_8, width: 36 };
 obj[12] = { alignItems: "center", borderRadius: ThemesDefault.radii.sm, flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
-let obj9 = { alignItems: "center", borderRadius: ThemesDefault.radii.sm, flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
 obj[13] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj[14] = { flex: 1 };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj10 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-const result = set.fileFinishedImporting("modules/saved_messages/native/ForLaterIntro.tsx");
+const result = obj132.fileFinishedImporting("modules/saved_messages/native/ForLaterIntro.tsx");
 
 export default function ForLaterIntro(type) {
   const tmp = callback3();
   const tmp4 = type.type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER;
-  let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { source: registerAssetDefault, style: tmp.upsellImage };
+  const obj = { source: registerAssetDefault, style: tmp.upsellImage };
   const items = [callback(closure_3, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
@@ -133,16 +117,16 @@ export default function ForLaterIntro(type) {
   obj2[3] = intl.string(tmp4 ? t["5Iw19e"] : t["93WOd1"]);
   const items1 = [callback(Text.Heading, obj2), ];
   const obj3 = { variant: "text-sm/medium", color: "text-default", style: tmp.text, includeFontPadding: true, children: null };
-  const intl2 = tmp2(1236).intl;
-  const t2 = tmp2(1236).t;
-  const intl3 = tmp2(1236).intl;
-  const t3 = tmp2(1236).t;
+  const intl2 = getSystemLocale.intl;
+  const t2 = getSystemLocale.t;
+  const intl3 = getSystemLocale.intl;
+  const t3 = getSystemLocale.t;
   obj3[4] = intl2.format(tmp4 ? t2.YI4UjI : t2["5TSj/g"], { itemName: intl3.string(tmp4 ? t3.mJ3P0N : t3.tpxJto) });
   items1[1] = callback(Text.Text, obj3);
   obj1[1] = items1;
-  items[1] = closure_7(closure_5, obj1);
+  items[1] = callback(closure_5, obj1);
   items[2] = callback(IntroDemo, { isReminder: tmp4 });
   obj[1] = items;
-  obj[2] = closure_7(closure_5, obj);
+  obj[2] = callback(closure_5, obj);
   return callback(closure_4, obj);
 };

@@ -1,8 +1,8 @@
 // discord_app/stores/channel_notices/GuildMFAWarningStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../GuildChannelStore.tsx";
-import closure_1 from "../UserStore.tsx";
+import comparator from "../GuildChannelStore.tsx";
+import mergeGuildAvatar from "../UserStore.tsx";
 import { MFALevels } from "../../Constants.tsx";
 
 function handleUserStoreUpdates() {
@@ -44,6 +44,6 @@ const guildMFAWarningStore = new GuildMFAWarningStore(dispatcherDefault, {
     return true;
   }
 });
-let result = require("set").fileFinishedImporting("stores/channel_notices/GuildMFAWarningStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/channel_notices/GuildMFAWarningStore.tsx");
 
 export default guildMFAWarningStore;

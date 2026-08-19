@@ -1,10 +1,9 @@
 // discord_app/design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 
-const require = arg1;
+const require = fn;
 require("get ActivityIndicator").BackHandler;
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx");
 
 export const useNavigatorBackPressHandler = function useNavigatorBackPressHandler(callback) {
   const _require = callback;
@@ -12,9 +11,9 @@ export const useNavigatorBackPressHandler = function useNavigatorBackPressHandle
   const layoutEffect = React.useLayoutEffect(() => {
     closure_1.current = closure_0;
   });
-  const focusEffect = _createStandardNavigationFactories.useFocusEffect(React.useCallback(() => {
+  const focusEffect = require("../../../../../_runtime/01501_createStandardNavigationFactories.js").useFocusEffect(React.useCallback(() => {
     if (!obj.isIOS()) {
-      callback = closure_1_3.addEventListener("hardwareBackPress", () => ref.current());
+      callback = BackHandler.addEventListener("hardwareBackPress", (event) => ref.current());
       return () => closure_0.remove();
     }
     obj = callback(table[3]);

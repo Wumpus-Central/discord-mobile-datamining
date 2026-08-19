@@ -1,9 +1,9 @@
 // discord_app/modules/guild_member_verification/hooks/useSortedMemberApplications.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../GuildJoinRequestStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import updateSubmittedGuildJoinRequestTotal from "../GuildJoinRequestStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useSortedMemberApplications.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useSortedMemberApplications.tsx");
 
 export const useSortedMemberApplications = function useSortedMemberApplications(guildId) {
   guildId = guildId.guildId;

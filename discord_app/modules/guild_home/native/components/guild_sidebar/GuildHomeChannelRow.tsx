@@ -1,26 +1,24 @@
 // discord_app/modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseChannelSubtitleDefault from "../../../../guild_sidebar/native/BaseChannelItem.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { Routes } from "../../../../../Constants.tsx";
 import { StaticChannelRoute } from "../../../../channel/ChannelConstants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
-createCacheKey = { container: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+const require = fn;
+const createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");
 
 export default function GuildHomeChannelRow(selected) {
   selected = selected.selected;
-  let id;
-  id = selected.guild.id;
+  const id = selected.guild.id;
   const items = [id];
   const callback = React.useCallback(() => {
-    id(closure_1_2[7]).transitionTo(closure_1_4.CHANNEL(id, closure_1_5.GUILD_HOME));
+    id(dependencyMap[7]).transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
   }, items);
   const ChannelModes = id(11553).ChannelModes;
   if (selected) {

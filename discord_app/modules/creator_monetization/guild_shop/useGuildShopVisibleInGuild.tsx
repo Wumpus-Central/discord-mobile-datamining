@@ -1,12 +1,13 @@
 // discord_app/modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import computeCanEveryoneInGuildSeeRoleSubscriptions from "../../guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx";
 import useShouldHideGuildPurchaseEntryPoints from "../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 import useGuildEligibleForGuildProducts from "../../guild_products/GuildProductsEligibility.tsx";
+import useGuildShopPreviewVisible from "useGuildShopPreviewVisible.tsx";
 
 const GuildFeatures = ME.GuildFeatures;
-let result = set.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
+let result = obj132.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
 
 export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id) {
   id = undefined;
@@ -14,15 +15,14 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
     id = id.id;
   }
   const guildEligibleForGuildProducts = useGuildEligibleForGuildProducts.useGuildEligibleForGuildProducts(id);
-  let tmpResult = tmp(7216);
+  let tmpResult = computeCanEveryoneInGuildSeeRoleSubscriptions;
   let id1;
   if (id != null) {
     id1 = id.id;
   }
   const roleSubscriptionsVisibleInGuild = tmpResult.useRoleSubscriptionsVisibleInGuild(id1);
-  tmpResult = tmp(7229);
+  tmpResult = useGuildShopPreviewVisible;
   const guildShopPreviewVisible = tmpResult.useGuildShopPreviewVisible(id);
-  const obj = useGuildEligibleForGuildProducts;
   let id2;
   if (id != null) {
     id2 = id.id;
@@ -32,15 +32,13 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
 };
 export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(closure_2, closure_3) {
   let id;
-  if (closure_2 != null) {
-    id = closure_2.id;
+  if (user != null) {
+    id = user.id;
   }
   const result = useGuildEligibleForGuildProducts.isGuildEligibleForGuildProducts(id);
-  const obj = useGuildEligibleForGuildProducts;
-  const tmp = require;
   let id1;
-  if (closure_2 != null) {
-    id1 = closure_2.id;
+  if (user != null) {
+    id1 = user.id;
   }
   const result1 = computeCanEveryoneInGuildSeeRoleSubscriptions.areRoleSubscriptionsVisibleInGuild(id1, closure_3);
   return false;

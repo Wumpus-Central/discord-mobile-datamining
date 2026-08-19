@@ -6,18 +6,15 @@ import useOpenGameProfileModalDefault from "../../game_profile/hooks/useOpenGame
 import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
 import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard.tsx";
 import PersonalWidgetTextDefault from "UserProfilePersonalWidgetCard.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../stores/AuthenticationStore.tsx";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
 import { UserProfileSections } from "../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { isNullOrEmpty } from "../../../utils/StringUtils.tsx";
-import { GameProfileEmbedAction } from "../../game_profile/GameProfileAnalyticUtils.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function WidgetRenderer(isFirstWidget) {
   ({ userId, widget, cardStyle } = isFirstWidget);
   if (widget instanceof toSubmission.ApplicationWidget) {
@@ -32,13 +29,13 @@ function WidgetRenderer(isFirstWidget) {
     obj[0] = userId;
     obj[1] = widget;
     obj[2] = cardStyle;
-    tmp3Result = tmp3(PersonalWidgetTextDefault, obj);
+    tmp3Result = callback2(PersonalWidgetTextDefault, obj);
   } else {
     obj = { userId: null, widget: null, cardStyle: null };
     obj[0] = userId;
     obj[1] = widget;
     obj[2] = cardStyle;
-    tmp3Result = tmp3(closure_20, obj);
+    tmp3Result = callback2(closure_20, obj);
   }
   return tmp3Result;
 }
@@ -46,41 +43,30 @@ let c4 = importAllResult;
 ({ Image: c5, Pressable: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let closure_13 = { top: 8, bottom: 8, left: 8, right: 8 };
-let obj = { board: null, coverPlaceholder: null, favoriteRow: null, favoriteDetails: null, favoriteCover: null, list: null, listRow: null, listCover: null, listDetails: null, comment: null, commentText: null, grid: null, gridCover: null, tags: null, tag: null, viewMore: null };
-obj = { gap: ThemesDefault.space.PX_16 };
+let obj = { gap: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-createCacheKey = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[1] = createCacheKey;
 obj[2] = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
-let obj2 = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
 obj[3] = { flex: 1, gap: ThemesDefault.space.PX_8 };
 obj[4] = { aspectRatio: 0.75 };
-let obj3 = { flex: 1, gap: ThemesDefault.space.PX_8 };
 obj[5] = { gap: ThemesDefault.space.PX_16 };
-let obj4 = { gap: ThemesDefault.space.PX_16 };
 obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 obj[7] = { aspectRatio: 0.75 };
-let obj5 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 obj[8] = { flex: 1, gap: ThemesDefault.space.PX_8 };
-let obj6 = { flex: 1, gap: ThemesDefault.space.PX_8 };
 obj[9] = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_4 };
 obj[10] = { flex: 1 };
-let obj7 = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_4 };
 obj[11] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_16 };
 obj[12] = { aspectRatio: 0.75 };
-let obj8 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_16 };
 obj[13] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
-let obj9 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
 obj[14] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj10 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[15] = { marginTop: ThemesDefault.space.PX_12 };
 let closure_14 = createCacheKey.createStyles(obj);
 let closure_15 = importAllResult.memo((arg0) => {
   ({ uri, style } = arg0);
   const tmp = callback4();
   if (null != uri) {
-    let obj = { source: null, style: null };
-    obj = { uri: null };
+    let obj = { uri: null };
     obj[0] = uri;
     obj[0] = obj;
     const items = [style, tmp.coverPlaceholder];
@@ -96,18 +82,17 @@ let closure_15 = importAllResult.memo((arg0) => {
 });
 let closure_16 = importAllResult.memo((tags) => {
   tags = tags.tags;
-  closure_0 = undefined;
   const tmp = callback4();
   closure_0 = tmp;
   if (tags == null) {
     tags = [];
   }
-  const flatMapResult = tags.flatMap((arg0) => {
+  const flatMapResult = tags.flatMap((item, index) => {
     let obj = lib(table[11]);
-    const widgetGameTagMetadata = obj.getWidgetGameTagMetadata(arg0);
+    const widgetGameTagMetadata = obj.getWidgetGameTagMetadata(item);
     if (null != widgetGameTagMetadata) {
       obj = { tag: null, meta: null };
-      obj[0] = arg0;
+      obj[0] = item;
       obj[1] = widgetGameTagMetadata;
       const items = [obj];
       let items1 = items;
@@ -120,15 +105,14 @@ let closure_16 = importAllResult.memo((tags) => {
   if (0 !== flatMapResult.length) {
     let obj = { style: null, children: null };
     obj[0] = tmp.tags;
-    obj[1] = flatMapResult.map((meta) => {
-      meta = meta.meta;
-      let obj = { style: lib.tag, children: null };
-      obj = { size: "xs", color: closure_1_1(closure_1_2[7]).colors.TEXT_MUTED };
+    obj[1] = flatMapResult.map((item, index) => {
+      const meta = item.meta;
+      let obj = { size: "xs", color: ThemesDefault.colors.TEXT_MUTED };
       const items = [closure_1_10(meta.icon, obj), ];
       obj = { variant: "text-xs/medium", color: "text-muted", children: meta.getText() };
-      items[1] = closure_1_10(lib(closure_1_2[12]).Text, obj);
+      items[1] = closure_1_10(lib(dependencyMap[12]).Text, obj);
       obj[1] = items;
-      return closure_1_11(closure_1_7, obj, meta.tag);
+      return closure_1_11(closure_1_7, obj, item.tag);
     });
     tmp2 = callback2(closure_7, obj);
   }
@@ -141,16 +125,14 @@ let closure_17 = importAllResult.memo((game) => {
   let tmp = callback4();
   ({ gameName, coverImageUrl } = useGameNameAndCoverImageDefault(game.gameId));
   let obj = { location: "UserProfileWidgetsBoard", applicationId: game.gameId, source: null, sourceUserId: null, trackEntryPointImpression: true, stackingBehavior: "stack" };
-  const tmp2 = importDefault;
   const tmp4 = useGameNameAndCoverImageDefault(game.gameId);
-  obj[2] = _GameProfileEmbedAction.GameProfileSources.UserProfile;
+  obj[2] = require("../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.UserProfile;
   obj[3] = userId;
   let tmp5Result;
   if (!disableInteraction) {
     tmp5Result = tmp5(obj);
   }
   _require = tmp5Result;
-  obj = { style: tmp.favoriteRow, children: null };
   obj = {
     onPress() {
       let tmp;
@@ -180,7 +162,7 @@ let closure_17 = importAllResult.memo((game) => {
       disabled: null == tmp5Result,
       accessibilityRole: "button",
       accessibilityLabel: gameName,
-      children: callback2(_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
+      children: callback2(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
     }),
   ,
 
@@ -196,33 +178,33 @@ let closure_17 = importAllResult.memo((game) => {
     disabled: null == tmp5Result,
     accessibilityRole: "button",
     accessibilityLabel: gameName,
-    children: callback2(_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
+    children: callback2(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
   };
   let trimmed;
   if (game.comment != null) {
     trimmed = str.trim();
   }
-  const isNullOrEmptyResult = _isNullOrEmpty.isNullOrEmpty(trimmed);
+  const isNullOrEmptyResult = require("../../../utils/StringUtils.tsx").isNullOrEmpty(trimmed);
   let tmp8Result = !isNullOrEmptyResult;
   if (!isNullOrEmptyResult) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.comment;
     const obj4 = { size: "xxs", color: null };
     obj4[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items3 = [tmp10(tmp6(12184).QuoteIcon, obj4), ];
+    const items3 = [callback2(tmp6(12184).QuoteIcon, obj4), ];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: null, children: null };
     obj5[3] = tmp.commentText;
     obj5[4] = game.comment;
-    items3[1] = tmp10(tmp6(4734).Text, obj5);
+    items3[1] = callback2(tmp6(4734).Text, obj5);
     obj3[1] = items3;
-    tmp8Result = tmp8(tmp9, obj3);
+    tmp8Result = callback(closure_7, obj3);
   }
   items2[1] = tmp8Result;
   items2[2] = callback2(closure_16, { tags: game.tags });
   obj1[1] = items2;
-  items1[1] = closure_11(closure_7, obj1);
+  items1[1] = callback(closure_7, obj1);
   obj[1] = items1;
-  return closure_11(closure_7, obj);
+  return callback(closure_7, obj);
 });
 let closure_18 = importAllResult.memo((game) => {
   game = game.game;
@@ -232,14 +214,13 @@ let closure_18 = importAllResult.memo((game) => {
   ({ gameName, coverImageUrl } = useGameNameAndCoverImageDefault(game.gameId));
   let obj = { location: "UserProfileWidgetsBoard", applicationId: game.gameId, source: null, sourceUserId: null, trackEntryPointImpression: true, stackingBehavior: "stack" };
   const tmp3 = useGameNameAndCoverImageDefault(game.gameId);
-  obj[2] = _GameProfileEmbedAction.GameProfileSources.UserProfile;
+  obj[2] = require("../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.UserProfile;
   obj[3] = userId;
   let tmp4Result;
   if (!disableInteraction) {
     tmp4Result = tmp4(obj);
   }
   _require = tmp4Result;
-  obj = { style: tmp.listRow, children: null };
   obj = {
     onPress() {
       let tmp;
@@ -257,7 +238,6 @@ let closure_18 = importAllResult.memo((game) => {
   const items1 = [callback2(closure_6, obj), ];
   obj1 = { style: tmp.listDetails, children: null };
   tmp4 = useOpenGameProfileModalDefault;
-  const tmp5 = _require;
   const items2 = [
     callback2(closure_6, {
       onPress() {
@@ -270,7 +250,7 @@ let closure_18 = importAllResult.memo((game) => {
       disabled: null == tmp4Result,
       accessibilityRole: "button",
       accessibilityLabel: gameName,
-      children: callback2(_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName })
+      children: callback2(require("../../../design/components/Text/native/Text.tsx").Text, { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName })
     }),
     callback2(closure_16, { tags: game.tags })
   ];
@@ -287,7 +267,7 @@ let closure_19 = importAllResult.memo((game) => {
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(game.gameId));
   let obj = { location: "UserProfileWidgetsBoard", applicationId: game.gameId, source: null, sourceUserId: null, trackEntryPointImpression: true, stackingBehavior: "stack" };
   const tmp2 = useGameNameAndCoverImageDefault(game.gameId);
-  obj[2] = _GameProfileEmbedAction.GameProfileSources.UserProfile;
+  obj[2] = require("../../game_profile/GameProfileAnalyticUtils.tsx").GameProfileSources.UserProfile;
   obj[3] = userId;
   let tmp3Result;
   if (!disableInteraction) {
@@ -315,7 +295,6 @@ const memoResult = importAllResult.memo((style) => {
   const widget = style.widget;
   const disableInteraction = style.disableInteraction;
   let callback;
-  c5 = undefined;
   const tmp = callback4();
   let obj = userId(disableInteraction[16]);
   const items = [closure_8];
@@ -349,7 +328,7 @@ const memoResult = importAllResult.memo((style) => {
     obj[0] = tmp.list;
     let mapped = tmp10 > 0;
     if (mapped) {
-      mapped = substr.map((game) => closure_1_10(closure_1_18, { userId, game, coverWidth: c5, disableInteraction }, game.gameId));
+      mapped = substr.map((item, index) => closure_1_10(closure_1_18, { userId, game: item, coverWidth: c5, disableInteraction }, item.gameId));
     }
     obj[1] = mapped;
     const items2 = [callback2(closure_7, obj), ];
@@ -357,7 +336,7 @@ const memoResult = importAllResult.memo((style) => {
       obj1 = { children: null };
       items2[1] = tmp24;
       obj1[0] = items2;
-      tmp14Result = tmp25(tmp26, obj1);
+      tmp14Result = callback(closure_12, obj1);
     } else {
       const obj2 = { style: null, hitSlop: null, onPress: null, accessibilityRole: "button", children: null };
       obj2[0] = tmp.viewMore;
@@ -380,14 +359,10 @@ const memoResult = importAllResult.memo((style) => {
         stringResult = intl2.formatToPlainString(tmp2(tmp3[20]).t.zr0Y5R, obj4);
       }
       obj3[2] = stringResult;
-      obj3 = tmp27(tmp2(tmp3[12]).Text, obj3);
+      obj3 = callback2(tmp2(tmp3[12]).Text, obj3);
       obj2[4] = obj3;
-      tmp27(closure_6, obj2);
-      const tmp30 = closure_6;
+      callback2(closure_6, obj2);
     }
-    tmp25 = closure_11;
-    tmp26 = closure_12;
-    const tmp28 = closure_7;
   } else {
     if (tmp2(tmp3[19]).WidgetType.WANT_TO_PLAY_GAMES !== type) {
       if (tmp2(tmp3[19]).WidgetType.PLAYED_GAMES !== type) {
@@ -402,7 +377,7 @@ const memoResult = importAllResult.memo((style) => {
     obj5[0] = tmp.grid;
     let mapped1 = tmp10 > 0;
     if (mapped1) {
-      mapped1 = substr1.map((game) => closure_1_10(closure_1_19, { userId, game, coverWidth: c5, disableInteraction }, game.gameId));
+      mapped1 = substr1.map((item, index) => closure_1_10(closure_1_19, { userId, game: item, coverWidth: c5, disableInteraction }, item.gameId));
     }
     obj5[1] = mapped1;
     const items3 = [callback2(closure_7, obj5), ];
@@ -410,7 +385,7 @@ const memoResult = importAllResult.memo((style) => {
       const obj6 = { children: null };
       items3[1] = tmp13;
       obj6[0] = items3;
-      tmp14Result = tmp14(tmp15, obj6);
+      tmp14Result = callback(closure_12, obj6);
     } else {
       const obj7 = { style: null, hitSlop: null, onPress: null, accessibilityRole: "button", children: null };
       obj7[0] = tmp.viewMore;
@@ -433,14 +408,10 @@ const memoResult = importAllResult.memo((style) => {
         stringResult1 = intl.formatToPlainString(tmp2(tmp3[20]).t.zr0Y5R, obj9);
       }
       obj8[2] = stringResult1;
-      obj8 = tmp16(tmp2(tmp3[12]).Text, obj8);
+      obj8 = callback2(tmp2(tmp3[12]).Text, obj8);
       obj7[4] = obj8;
-      tmp16(closure_6, obj7);
-      const tmp19 = closure_6;
+      callback2(closure_6, obj7);
     }
-    tmp14 = closure_11;
-    tmp15 = closure_12;
-    const tmp17 = closure_7;
   }
   const obj10 = { style: style.cardStyle, title: null, trailingAction: null, children: null };
   const tmp9 = callback(undefined.useState(0), 2);
@@ -454,7 +425,7 @@ const memoResult = importAllResult.memo((style) => {
     const obj11 = { userId: null, widget: null };
     obj11[0] = userId;
     obj11[1] = widget;
-    tmp37Result = tmp37(tmp5(tmp3[23]), obj11);
+    tmp37Result = callback2(tmp5(tmp3[23]), obj11);
   }
   obj10[2] = tmp37Result;
   obj10[3] = callback2(closure_7, {
@@ -465,22 +436,18 @@ const memoResult = importAllResult.memo((style) => {
   });
   return callback2(tmp5Result, obj10);
 });
-let obj11 = { marginTop: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoard.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoard.tsx");
 
 export default function UserProfileWidgetsBoard(userId) {
   userId = userId.userId;
-  let flag = userId;
-  flag = userId.isVisible;
+  let flag = userId.isVisible;
   if (flag === undefined) {
     flag = true;
   }
-  let cardStyle = userId.cardStyle;
   let obj = flag(trackUserProfileAction[28]);
   const displayableBoardWidgets = obj.useDisplayableBoardWidgets(userId);
-  cardStyle = tmp2;
+  const cardStyle = tmp2;
   trackUserProfileAction = undefined;
-  closure_3 = undefined;
   const tmp = callback4();
   trackUserProfileAction = flag(trackUserProfileAction[10]).useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_3 = importAllResult.useRef(false);
@@ -493,7 +460,7 @@ export default function UserProfileWidgetsBoard(userId) {
       }
       if (tmp2) {
         const obj = { action: "VIEW", section: null };
-        obj[1] = closure_1_9.WIDGETS;
+        obj[1] = UserProfileSections.WIDGETS;
         trackUserProfileAction(obj);
         ref.current = true;
       }
@@ -505,7 +472,7 @@ export default function UserProfileWidgetsBoard(userId) {
   if (0 !== displayableBoardWidgets.length) {
     obj = { style: null, children: null };
     obj[0] = tmp.board;
-    obj[1] = displayableBoardWidgets.map((getUniqueKey) => closure_1_10(closure_1_21, { userId: flag, widget: getUniqueKey, cardStyle: closure_1, isFirstWidget: 0 === arg1 }, getUniqueKey.getUniqueKey()));
+    obj[1] = displayableBoardWidgets.map((item, index) => closure_1_10(WidgetRenderer, { userId: flag, widget: item, cardStyle: closure_1, isFirstWidget: 0 === index }, item.getUniqueKey()));
     tmp4 = callback2(closure_7, obj);
   }
   return tmp4;

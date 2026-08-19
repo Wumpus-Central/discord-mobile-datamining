@@ -1,17 +1,17 @@
 // discord_app/modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx
 import ProfileFrameLayerType from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx";
-import closure_2 from "../../../../../_runtime/00853__toArray.js";
-import set from "../../../../../_runtime/00002_set.js";
+import ProfileFrameLayerAnchor from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerAnchor.tsx";
+import _toArray from "../../../../../_runtime/00853__toArray.js";
 
-require = arg1;
+require = fn;
 const preview = "preview";
 const responsive = "responsive";
-let obj = { foreground: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.FRONT, background: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.BACK };
+{ foreground: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.FRONT, background: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.BACK };
 const items = [require("ProfileFrameLayerType").ProfileFrameLayerType.STAPLE, require("ProfileFrameLayerType").ProfileFrameLayerType.RAIL, require("ProfileFrameLayerType").ProfileFrameLayerType.BORDER];
-let set = new Set(items);
+const set = new Set(items);
 const items1 = [require("ProfileFrameLayerAnchor").ProfileFrameLayerAnchor.TOP, require("ProfileFrameLayerAnchor").ProfileFrameLayerAnchor.BOTTOM, require("ProfileFrameLayerAnchor").ProfileFrameLayerAnchor.CENTER];
 const set1 = new Set(items1);
-obj = { WRONG_PART_COUNT: "wrong_part_count", INVALID_INDEX: "invalid_index", INVALID_TYPE: "invalid_type", INVALID_ANCHOR: "invalid_anchor", INVALID_RESPONSIVE: "invalid_responsive", BORDER_HAS_ANCHOR: "border_has_anchor" };
+let obj = { WRONG_PART_COUNT: "wrong_part_count", INVALID_INDEX: "invalid_index", INVALID_TYPE: "invalid_type", INVALID_ANCHOR: "invalid_anchor", INVALID_RESPONSIVE: "invalid_responsive", BORDER_HAS_ANCHOR: "border_has_anchor" };
 obj = { [obj.WRONG_PART_COUNT]: "wrong filename format", [obj.INVALID_INDEX]: "invalid index" };
 const items2 = [...set];
 obj[obj.INVALID_TYPE] = "invalid type (expected: " + items2.join(", ") + ")";
@@ -19,8 +19,8 @@ const items3 = [...set1];
 obj[obj.INVALID_ANCHOR] = "invalid anchor (expected: " + items3.join(", ") + ")";
 obj[obj.INVALID_RESPONSIVE] = "invalid suffix (expected '" + "responsive" + "')";
 obj[obj.BORDER_HAS_ANCHOR] = "border layers must omit the anchor";
-let closure_8 = { [arg1(8951).ProfileFrameLayerOrder.FRONT]: 0, [arg1(8951).ProfileFrameLayerOrder.BACK]: 1 };
-const result = set.fileFinishedImporting("modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx");
+let closure_8 = { [fn(8951).ProfileFrameLayerOrder.FRONT]: 0, [fn(8951).ProfileFrameLayerOrder.BACK]: 1 };
+const result = require("obj132").fileFinishedImporting("modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx");
 
 export const PREVIEW_FILENAME = "preview";
 export const RESPONSIVE_KEYWORD = "responsive";
@@ -28,7 +28,7 @@ export const FOLDER_ORDER_MAP = obj;
 export const ParseErrorKind = obj;
 export const PARSE_ERROR_LABELS = obj;
 export const parseLayerFilename = function parseLayerFilename(c7) {
-  const parts = c7.replace(/\.\w+$/, "").split("_");
+  const parts = obj.replace(/\.\w+$/, "").split("_");
   if (parts.length >= 2) {
     if (parts.length <= 4) {
       const arr2 = callback(parts);
@@ -61,7 +61,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
               const _Number2 = Number;
               obj3[0] = Number(tmp19);
               obj3[1] = tmp20;
-              obj3[2] = tmp4(8953).ProfileFrameLayerAnchor.CENTER;
+              obj3[2] = ProfileFrameLayerAnchor.ProfileFrameLayerAnchor.CENTER;
               obj3[3] = 1 === substr.length;
               obj2[0] = obj3;
               return obj2;
@@ -88,7 +88,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
                   obj7[0] = Number(tmp19);
                   obj7[1] = tmp20;
                   obj7[2] = first;
-                  obj7[3] = 2 === substr.length || tmp20 === tmp4(8952).ProfileFrameLayerType.RAIL;
+                  obj7[3] = 2 === substr.length || tmp20 === ProfileFrameLayerType.ProfileFrameLayerType.RAIL;
                   obj6[0] = obj7;
                   return obj6;
                 }

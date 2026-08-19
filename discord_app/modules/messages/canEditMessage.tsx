@@ -1,11 +1,12 @@
 // discord_app/modules/messages/canEditMessage.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import createMinimalMessageRecord from "MessageRecordUtils.tsx";
+import isForwardMessageDefault from "../forwarding/isForwardMessage.tsx";
 import isSystemMessageDefault from "isSystemMessage.tsx";
 import ME from "../../Constants.tsx";
 
 ({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
-let result = set.fileFinishedImporting("modules/messages/canEditMessage.tsx");
+let result = obj132.fileFinishedImporting("modules/messages/canEditMessage.tsx");
 
 export default function canEditMessage(author) {
   let tmp = null != arg1;
@@ -27,7 +28,7 @@ export default function canEditMessage(author) {
                 const isPollResult = author.isPoll();
                 let tmp17 = !isPollResult;
                 if (!isPollResult) {
-                  const tmp18 = tmp6(5026)(author);
+                  const tmp18 = isForwardMessageDefault(author);
                   let tmp19 = !tmp18;
                   if (!tmp18) {
                     tmp19 = author.type !== constants3.MEDIA_MENTION_MESSAGE;
@@ -41,10 +42,8 @@ export default function canEditMessage(author) {
             result = tmp14;
           }
           tmp9 = result;
-          const obj = createMinimalMessageRecord;
         }
         tmp5 = tmp9;
-        tmp6 = importDefault;
       }
       tmp3 = tmp5;
     }

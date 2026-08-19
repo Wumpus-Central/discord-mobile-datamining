@@ -1,11 +1,11 @@
 // discord_app/lib/NetworkQuality.tsx
 import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import closure_2 from "../stores/NetworkStore.tsx";
+import handleConnectionInfoChange from "../stores/NetworkStore.tsx";
 import ME from "../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ NetworkConnectionTypes: c3, NetworkConnectionSpeeds: c4 } = ME);
-let result = require("set").fileFinishedImporting("lib/NetworkQuality.tsx");
+let result = require("obj132").fileFinishedImporting("lib/NetworkQuality.tsx");
 class NetworkQuality {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -19,12 +19,12 @@ const prototype = NetworkQuality.prototype;
 prototype["_initStats"] = function _initStats() {
   const obj = { effectiveConnectionSpeedBuckets: {}, connectionTypeBuckets: {} };
   let values = Object.values(closure_3);
-  const item = values.forEach((arg0) => {
-    obj.connectionTypeBuckets[arg0] = 0;
+  const item = values.forEach((item, index) => {
+    obj.connectionTypeBuckets[item] = 0;
   });
   values = Object.values(closure_4);
-  const item1 = values.forEach((arg0) => {
-    obj.effectiveConnectionSpeedBuckets[arg0] = 0;
+  const item1 = values.forEach((item, index) => {
+    obj.effectiveConnectionSpeedBuckets[item] = 0;
   });
   return obj;
 };

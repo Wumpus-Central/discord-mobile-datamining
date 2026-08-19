@@ -1,8 +1,8 @@
 // discord_app/modules/in_app_reports/showReportModal.native.tsx
 import _modDef5260 from "../../actions/ModalActionCreators.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+const require = fn;
 function _showReportModal() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -139,7 +139,7 @@ function _showReportModal() {
   return applyArgumentsResult;
 }
 const IN_APP_REPORT_MODAL_KEY = "IN_APP_REPORT_MODAL_KEY";
-const result = require("set").fileFinishedImporting("modules/in_app_reports/showReportModal.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/showReportModal.native.tsx");
 
 export const showReportModal = function showReportModal(arg0, arg1, arg2) {
   const self = this;

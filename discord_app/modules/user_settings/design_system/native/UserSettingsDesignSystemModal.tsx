@@ -6,20 +6,22 @@ import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
 import ModalScreen from "../../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../../design/components/Modal/native/ModalContent.native.tsx";
 import NavigationStack from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import ModalFooter from "../../../../design/components/Modal/native/ModalFooter.native.tsx";
 import Modal from "../../../../design/components/Modal/native/Modal.native.tsx";
+import ModalActionButton from "../../../../design/components/Modal/native/ModalActionButton.native.tsx";
 import StepModal from "../../../../design/components/Modal/native/StepModal.native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import ModalDisclaimer from "../../../../design/components/Modal/native/ModalDisclaimer.native.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function DemoModal() {
   let obj = NavigationStack;
   const navigatorScreens = obj.useNavigatorScreens(() => {
-    let obj = {};
-    obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    let obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     let obj2 = callback(6314);
     obj[0] = obj2.getHeaderCloseButton(callback2(5260).pop);
     obj[1] = function headerRight() {
@@ -135,8 +137,7 @@ function DemoModal() {
 function DemoStepModal() {
   let obj = NavigationStack;
   const navigatorScreens = obj.useNavigatorScreens(() => {
-    let obj = {};
-    obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
+    let obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     let obj2 = callback(6314);
     obj[0] = obj2.getHeaderCloseButton(callback2(5260).pop);
     obj[1] = function headerRight() {
@@ -265,19 +266,19 @@ function DemoScreen(arg0) {
     obj = { maxFontSizeMultiplier: 1, variant: "heading-xxl/medium", style: null, children: null };
     obj[2] = tmp.emoji;
     obj[3] = emoji;
-    obj[1] = callback2(tmp3(4734).Text, obj);
+    obj[1] = callback2(Text.Text, obj);
     tmp5 = callback2(closure_5, obj);
   }
   obj = { children: null };
   const items = [tmp5, callback2(Text.Text, { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title }), children];
   obj[0] = items;
-  children = [closure_8(ModalContent.ModalContent, obj), ];
+  children = [callback(ModalContent.ModalContent, obj), ];
   if (footer == null) {
     let tmp8Result = null != disclaimer;
     if (tmp8Result) {
       const obj2 = { children: null };
       obj2[0] = disclaimer;
-      tmp8Result = tmp8(tmp3(13540).ModalDisclaimer, obj2);
+      tmp8Result = callback2(ModalDisclaimer.ModalDisclaimer, obj2);
     }
     const items2 = [tmp8Result, , ];
     tmp8Result = null != action;
@@ -285,7 +286,7 @@ function DemoScreen(arg0) {
       const obj3 = { variant: "primary", text: null, onPress: null };
       obj3[1] = action;
       obj3[2] = onAction;
-      tmp8Result = tmp8(tmp3(11964).ModalActionButton, obj3);
+      tmp8Result = callback2(ModalActionButton.ModalActionButton, obj3);
     }
     items2[1] = tmp8Result;
     let tmp8Result1 = null != secondaryAction;
@@ -293,45 +294,43 @@ function DemoScreen(arg0) {
       const obj4 = { variant: "secondary", text: null, onPress: null };
       obj4[1] = secondaryAction;
       obj4[2] = onSecondaryAction;
-      tmp8Result1 = tmp8(tmp3(11964).ModalActionButton, obj4);
+      tmp8Result1 = callback2(ModalActionButton.ModalActionButton, obj4);
     }
     const obj5 = { children: null };
     items2[2] = tmp8Result1;
     obj5[0] = items2;
-    footer = tmp2(tmp3(11114).ModalFooter, obj5);
+    footer = callback(ModalFooter.ModalFooter, obj5);
   }
   children[1] = footer;
-  return closure_8(ModalScreen.ModalScreen, { children });
+  return callback(ModalScreen.ModalScreen, { children });
 }
 function SwitchesScreen(onAction) {
-  let parts;
   c1 = undefined;
   let tmp = callback4();
-  parts = "I said ooh ah fhqwhgads, I said ooh ah fhqhgads!".split(" ");
-  [arr2, c1] = callback(React.useState(parts.map(() => false)), 2);
-  let obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
-  obj = { isVisible: arr2.some((arg0) => arg0), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction };
+  let parts = "I said ooh ah fhqwhgads, I said ooh ah fhqhgads!".split(" ");
+  [arr2, c1] = callback(React.useState(parts.map((item, index) => false)), 2);
+  let obj = { isVisible: arr2.some((item, index) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction };
   obj[2] = callback2(parts(11963).ModalFloatingAction, obj);
   obj = { style: tmp.tableRows, children: null };
-  const tmp2 = callback(React.useState(parts.map(() => false)), 2);
+  const tmp2 = callback(React.useState(parts.map((item, index) => false)), 2);
   obj[1] = callback2(parts(6286).TableRowGroup, {
     hasIcons: false,
-    children: arr2.map((value) => {
-      parts = arg1;
-      return closure_1_7(parts(closure_1_2[23]).TableSwitchRow, {
-        label: parts[arg1],
-        value,
+    children: arr2.map((item, index) => {
+      parts = index;
+      return closure_1_7(parts(dependencyMap[23]).TableSwitchRow, {
+        label: parts[index],
+        value: item,
         onValueChange(arg0) {
           closure_0 = arg0;
-          closure_1_1((arr) => arr.map((arg0, arg1) => {
-            let tmp = arg0;
-            if (arg1 === closure_1_0) {
+          closure_1_1((arr) => arr.map((item, index) => {
+            let tmp = item;
+            if (index === closure_1_0) {
               tmp = closure_0;
             }
             return tmp;
           }));
         }
-      }, arg1);
+      }, index);
     })
   });
   const items = [callback2(closure_5, obj), callback2(parts(11963).ModalFloatingActionSpacer, {})];
@@ -348,8 +347,7 @@ function openDemoStepModal() {
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: { flex: 1, alignItems: "center", padding: 16, gap: 16 }, screen: null, emojiContainer: null, emoji: null, title: null, tableRows: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { alignItems: "center", justifyContent: "center", width: 80, height: 80, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 16 };
 createCacheKey[3] = { fontSize: 48, lineHeight: 80 };
@@ -357,13 +355,11 @@ createCacheKey[4] = { marginBottom: 16 };
 createCacheKey[5] = { width: "100%" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { START: "Come on fhqwhgads", WHO_DAT: "Who's that?", EVERYBODY: "Everybody come on fhqwhgads", JOCKIN: "I see you jockin' me", LIMIT: "Everybody to the limit" };
-let obj1 = { alignItems: "center", justifyContent: "center", width: 80, height: 80, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 16 };
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemModal.tsx");
 
 export default function UserSettingsDesignSystemModal() {
-  let obj = { children: null };
-  obj = { style: callback4().container, children: null };
-  obj = { onPress: openDemoModal, text: "Show Modal" };
+  { style: callback4().container, children: null };
+  const obj = { onPress: openDemoModal, text: "Show Modal" };
   const items = [callback2(Button.Button, obj), callback2(Button.Button, { onPress: openDemoStepModal, text: "Show Stepped Modal" })];
   obj[1] = items;
   obj[0] = callback3(closure_5, obj);

@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/VideoQuestModal/captions/VttParser.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 
 const prototype = function VttParserError(arg0, error) {
   tmp = new tmp(arg0, new.target);
@@ -11,7 +11,7 @@ const prototype = function VttParserError(arg0, error) {
 class prototype extends Error {
 }
 const re1 = /([0-9]+)?:?([0-9]{2}):([0-9]{2}\.[0-9]{2,3})/;
-let result = set.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VttParser.tsx");
+let result = obj132.fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VttParser.tsx");
 
 export const VttParserError = prototype;
 export const parseVtt = function parseVtt(text) {
@@ -72,10 +72,10 @@ export const parseVtt = function parseVtt(text) {
     }
     obj = tmp5;
     const items = [];
-    const mapped = parts.map((arg0, arg1) => {
+    const mapped = parts.map((item, index) => {
       try {
-        return (function parseCue(str, arg1, arg2) {
-          const parts = str.split("\n");
+        return (function parseCue(item, index, arg2) {
+          const parts = item.split("\n");
           const found = parts.filter(Boolean);
           let length = found.length;
           if (length > 0) {
@@ -84,17 +84,16 @@ export const parseVtt = function parseVtt(text) {
             if (length) {
               return null;
             }
-            str = found[0];
           }
           if (1 === found.length) {
             const first = found[0];
             if (!first.includes("-->")) {
               const _HermesInternal = HermesInternal;
-              const combined = "Cue identifier cannot be standalone (cue #" + arg1 + ")";
+              const combined = "Cue identifier cannot be standalone (cue #" + index + ")";
               if (typeof closure_0 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              const tmp14 = new closure_2(combined, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined, 0, arg1);
+              const tmp14 = new closure_2(combined, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined, 0, index);
               // ThrowIfThisInitialized (0x7c)
               tmp14.error = undefined;
               tmp14.name = "ParserError";
@@ -106,11 +105,11 @@ export const parseVtt = function parseVtt(text) {
             if (!first1.includes("-->")) {
               if (!obj2.includes("-->")) {
                 const _HermesInternal2 = HermesInternal;
-                const combined1 = "Cue identifier needs to be followed by timestamp (cue #" + arg1 + ")";
+                const combined1 = "Cue identifier needs to be followed by timestamp (cue #" + index + ")";
                 if (typeof closure_0 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                const tmp23 = new closure_2(combined1, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined1, 0, arg1);
+                const tmp23 = new closure_2(combined1, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined1, 0, index);
                 // ThrowIfThisInitialized (0x7c)
                 tmp23.error = undefined;
                 tmp23.name = "ParserError";
@@ -122,7 +121,6 @@ export const parseVtt = function parseVtt(text) {
           let hasItem = found.length > 1;
           if (hasItem) {
             hasItem = found[1].includes("-->");
-            const obj3 = found[1];
           }
           let str10 = "";
           if (hasItem) {
@@ -131,8 +129,8 @@ export const parseVtt = function parseVtt(text) {
           const parts1 = found[0].split(" --> ");
           if (2 === parts1.length) {
             if (regex.test(parts1[0])) {
-              if (obj7.test(parts1[1])) {
-                const match = parts1[0].match(obj7);
+              if (regex.test(parts1[1])) {
+                const match = parts1[0].match(regex);
                 let num = 0;
                 if (null != match) {
                   let str13 = match[1];
@@ -146,7 +144,7 @@ export const parseVtt = function parseVtt(text) {
                   num = result * 60 + result1 + parseFloat(match[3]);
                 }
                 let str14 = parts1[1];
-                const match1 = str14.match(obj7);
+                const match1 = str14.match(regex);
                 let num3 = 0;
                 if (null != match1) {
                   let str15 = match1[1];
@@ -162,22 +160,22 @@ export const parseVtt = function parseVtt(text) {
                 if (arg2) {
                   if (num > num3) {
                     const _HermesInternal5 = HermesInternal;
-                    const combined2 = "Start timestamp greater than end (cue #" + arg1 + ")";
+                    const combined2 = "Start timestamp greater than end (cue #" + index + ")";
                     if (typeof closure_0 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    const tmp62 = new closure_2(combined2, tmp6, tmp5, _parseFloat, str14, obj7, "\n", "", str10, num);
+                    const tmp62 = new closure_2(combined2, tmp6, tmp5, _parseFloat, str14, regex, "\n", "", str10, num);
                     // ThrowIfThisInitialized (0x7c)
                     tmp62.error = undefined;
                     tmp62.name = "ParserError";
                     throw tmp62;
                   } else if (num3 <= num) {
                     const _HermesInternal4 = HermesInternal;
-                    const combined3 = "End must be greater than start (cue #" + arg1 + ")";
+                    const combined3 = "End must be greater than start (cue #" + index + ")";
                     if (typeof closure_0 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    const tmp53 = new closure_2(combined3, tmp6, tmp5, _parseFloat, str14, obj7, "\n", "", str10, num);
+                    const tmp53 = new closure_2(combined3, tmp6, tmp5, _parseFloat, str14, regex, "\n", "", str10, num);
                     // ThrowIfThisInitialized (0x7c)
                     tmp53.error = undefined;
                     tmp53.name = "ParserError";
@@ -187,18 +185,18 @@ export const parseVtt = function parseVtt(text) {
                 if (!arg2) {
                   if (num3 < num) {
                     const _HermesInternal3 = HermesInternal;
-                    const combined4 = "End must be greater or equal to start when not strict (cue #" + arg1 + ")";
+                    const combined4 = "End must be greater or equal to start when not strict (cue #" + index + ")";
                     if (typeof closure_0 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    const tmp42 = new closure_2(combined4, tmp6, closure_0, combined4, new.target, obj7, "\n", "", str10, num, num3, arg1, found, closure_2, parts1, globalThis, length, tmp31);
+                    const tmp42 = new closure_2(combined4, tmp6, closure_0, combined4, new.target, regex, "\n", "", str10, num, num3, index, found, closure_2, parts1, globalThis, length, tmp31);
                     // ThrowIfThisInitialized (0x7c)
                     tmp42.error = undefined;
                     tmp42.name = "ParserError";
                     throw tmp42;
                   }
                 }
-                const trimmed1 = parts1[1].replace(obj7, "").trim();
+                const trimmed1 = parts1[1].replace(regex, "").trim();
                 found.shift();
                 const str21 = found.join("\n");
                 if ("" === str21.trim()) {
@@ -212,31 +210,29 @@ export const parseVtt = function parseVtt(text) {
                   obj[4] = trimmed1;
                   return obj;
                 }
-                const str12 = parts1[0];
-                const str19 = parts1[1];
-                const str20 = parts1[1].replace(obj7, "");
+                const str20 = parts1[1].replace(regex, "");
               }
             }
           }
-          const combined5 = "Invalid cue timestamp (cue #" + arg1 + ")";
+          const combined5 = "Invalid cue timestamp (cue #" + index + ")";
           if (typeof closure_0 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          const tmp65 = new closure_2(combined5, tmp6, tmp5, tmp4, tmp3, obj7, "\n");
+          const tmp65 = new closure_2(combined5, tmp6, tmp5, tmp4, tmp3, regex, "\n");
           // ThrowIfThisInitialized (0x7c)
           tmp65.error = undefined;
           tmp65.name = "ParserError";
           throw tmp65;
-        })(arg0, arg1, obj);
+        })(item, index, obj);
       } catch (tmp4) {
         items.push(tmp4);
         return null;
       }
     });
-    let found = mapped.filter((arg0) => {
-      let tmp = null !== arg0;
+    let found = mapped.filter((item, index) => {
+      let tmp = null !== item;
       if (tmp) {
-        tmp = false !== arg0;
+        tmp = false !== item;
       }
       return tmp;
     });
@@ -249,11 +245,11 @@ export const parseVtt = function parseVtt(text) {
     if (tmp4) {
       obj = {};
       const substr = parts1.slice(1);
-      const item = substr.forEach((arr) => {
-        const index = arr.indexOf(":");
-        const trimmed = arr.slice(0, index).trim();
-        const str = arr.slice(0, index);
-        obj[trimmed] = arr.slice(index + 1).trim();
+      const item = substr.forEach((item, index) => {
+        index = item.indexOf(":");
+        const trimmed = item.slice(0, index).trim();
+        const str = item.slice(0, index);
+        obj[trimmed] = item.slice(index + 1).trim();
       });
       const _Object = Object;
       let tmp25 = null;

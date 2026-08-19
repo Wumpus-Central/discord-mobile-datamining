@@ -1,8 +1,8 @@
 // discord_app/utils/SecondaryIndexMapUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import isUndefinedOrNullDefault from "../../_runtime/00659_isUndefinedOrNull.js";
 
-const result = set.fileFinishedImporting("utils/SecondaryIndexMapUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/SecondaryIndexMapUtils.tsx");
 
 export const isVersionEqual = function isVersionEqual(arg0, arg1) {
   [tmp, tmp2] = arg0;

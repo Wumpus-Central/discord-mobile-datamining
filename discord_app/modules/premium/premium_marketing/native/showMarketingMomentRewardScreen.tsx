@@ -1,8 +1,8 @@
 // discord_app/modules/premium/premium_marketing/native/showMarketingMomentRewardScreen.tsx
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../collectibles/CollectiblesCategoryStore.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import updateCategoriesAndProducts from "../../../collectibles/CollectiblesCategoryStore.tsx";
 
-const require = arg1;
+const require = fn;
 function _showMarketingMomentRewardScreen() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -81,9 +81,9 @@ function _showMarketingMomentRewardScreen() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/premium/premium_marketing/native/showMarketingMomentRewardScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_marketing/native/showMarketingMomentRewardScreen.tsx");
 
-export const showMarketingMomentRewardScreen = function showMarketingMomentRewardScreen(arg0) {
+export const showMarketingMomentRewardScreen = function showMarketingMomentRewardScreen(closure_0) {
   const self = this;
   const apply = _showMarketingMomentRewardScreen.apply;
   if (typeof apply === "unknown") {

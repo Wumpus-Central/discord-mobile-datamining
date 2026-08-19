@@ -1,9 +1,9 @@
 // discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import json from "../ThemeContextProvider/ThemeContext.tsx";
 import remapTypographyVariant from "typographyVariantRemap.tsx";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 
 export const useTypographyVariantRemap = function useTypographyVariantRemap(variant, arg1) {
   let themeContext = json.useThemeContext();
@@ -11,8 +11,6 @@ export const useTypographyVariantRemap = function useTypographyVariantRemap(vari
     themeContext = [];
   }
   let enabledExperiments = themeContext.enabledExperiments;
-  const obj = json;
-  const tmp = require;
   if (enabledExperiments == null) {
     enabledExperiments = [];
   }

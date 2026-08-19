@@ -4,6 +4,6 @@ import importDefaultResult from "../../../utils/native/requireNativeComponentOrD
 
 const obj = { componentName: "DCDTTIMeasurementView", componentFoundInstance: __INTERNAL_VIEW_CONFIGDefault };
 const importDefaultResultResult = importDefaultResult(obj);
-const result = require("set").fileFinishedImporting("modules/tti_analytics/native/TTIMeasurementView.tsx");
+const result = require("obj132").fileFinishedImporting("modules/tti_analytics/native/TTIMeasurementView.tsx");
 
 export const TTIMeasurementView = importDefaultResultResult;

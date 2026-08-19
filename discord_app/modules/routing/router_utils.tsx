@@ -1,8 +1,8 @@
 // discord_app/modules/routing/router_utils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import timestampDefault from "../debug/Logger.tsx";
 import ComponentDispatcher from "../../utils/ComponentDispatchUtils.tsx";
-import set2 from "RoutingSources.tsx";
+import set from "RoutingSources.tsx";
 import ME from "../../Constants.tsx";
 import _extends from "../../../_runtime/metro/01223__extends.js";
 
@@ -10,7 +10,7 @@ function transitionTo(ME, closure_1) {
   closure_0 = ME;
   let tmp = typeof ME !== "string";
   if (typeof ME === "string") {
-    tmp = !items.some((arg0) => ME.startsWith(arg0));
+    tmp = !items.some((item, index) => ME.startsWith(item));
   }
   let flag = !tmp;
   if (!tmp) {
@@ -29,14 +29,14 @@ function transitionTo(ME, closure_1) {
     const _HermesInternal2 = HermesInternal;
     logger.log("transitionTo - Transitioning to " + ME);
     let source;
-    if (closure_1 != null) {
-      source = closure_1.source;
+    if (dependencyMap != null) {
+      source = dependencyMap.source;
     }
     let sourceLocationStack;
-    if (closure_1 != null) {
-      sourceLocationStack = closure_1.sourceLocationStack;
+    if (dependencyMap != null) {
+      sourceLocationStack = dependencyMap.sourceLocationStack;
     }
-    if (null == closure_1) {
+    if (null == dependencyMap) {
       _extends.push(ME);
     } else {
       const _URL = URL;
@@ -45,7 +45,7 @@ function transitionTo(ME, closure_1) {
       const uRL = new URL(ME, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
       obj = { pathname: null, search: null, hash: null };
       ({ pathname: obj[0], search: obj[1], hash: obj[2] } = uRL);
-      const merged = Object.assign(closure_1);
+      const merged = Object.assign(dependencyMap);
       _extends.push(obj);
     }
   }
@@ -60,7 +60,7 @@ let closure_10 = _extends.listen((arg0, arg1) => {
   }
 });
 const tmp3 = new timestampDefault("Routing/Utils");
-const result = set.fileFinishedImporting("modules/routing/router_utils.tsx");
+const result = obj132.fileFinishedImporting("modules/routing/router_utils.tsx");
 
 export const shouldNavigate = function shouldNavigate() {
   const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
@@ -74,7 +74,7 @@ export const transitionToGuild = function transitionToGuild(guildId, channelId, 
 export const currentRouteHasBackNavigation = function currentRouteHasBackNavigation() {
   let hasItem = null != closure_3;
   if (hasItem) {
-    const ChannelBackNavigationSources = set2.ChannelBackNavigationSources;
+    const ChannelBackNavigationSources = set.ChannelBackNavigationSources;
     hasItem = ChannelBackNavigationSources.has(closure_3);
   }
   return hasItem;
@@ -83,7 +83,7 @@ export const replaceWith = function replaceWith(ME, state) {
   closure_0 = ME;
   let tmp = typeof ME !== "string";
   if (typeof ME === "string") {
-    tmp = !items.some((arg0) => ME.startsWith(arg0));
+    tmp = !items.some((item, index) => ME.startsWith(item));
   }
   let flag = !tmp;
   if (!tmp) {
@@ -96,7 +96,6 @@ export const replaceWith = function replaceWith(ME, state) {
     const _window2 = window;
     const replaced = window.location.replace(ME);
     flag = true;
-    const str5 = window.location;
   }
   if (!flag) {
     const _HermesInternal2 = HermesInternal;
@@ -132,31 +131,31 @@ export const getFingerprintLocation = function getFingerprintLocation(arg0) {
   }
   if (ACCOUNT_REVERT.startsWith(closure_5.LOGIN)) {
     ACCOUNT_REVERT = constants.LOGIN;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REGISTER)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.REGISTER)) {
     ACCOUNT_REVERT = constants.REGISTER;
-  } else if (ACCOUNT_REVERT.startsWith(obj.INVITE(""))) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.INVITE(""))) {
     ACCOUNT_REVERT = constants.INVITE;
-  } else if (ACCOUNT_REVERT.startsWith(obj.VERIFY)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.VERIFY)) {
     ACCOUNT_REVERT = constants.VERIFY;
-  } else if (ACCOUNT_REVERT.startsWith(obj.DISABLE_EMAIL_NOTIFICATIONS)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.DISABLE_EMAIL_NOTIFICATIONS)) {
     ACCOUNT_REVERT = constants.DISABLE_EMAIL_NOTIFICATIONS;
-  } else if (ACCOUNT_REVERT.startsWith(obj.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) {
     ACCOUNT_REVERT = constants.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REJECT_IP)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.REJECT_IP)) {
     ACCOUNT_REVERT = constants.REJECT_IP;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REJECT_MFA)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.REJECT_MFA)) {
     ACCOUNT_REVERT = constants.REJECT_MFA;
-  } else if (ACCOUNT_REVERT.startsWith(obj.AUTHORIZE_IP)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.AUTHORIZE_IP)) {
     ACCOUNT_REVERT = constants.AUTHORIZE_IP;
-  } else if (ACCOUNT_REVERT.startsWith(obj.AUTHORIZE_PAYMENT)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.AUTHORIZE_PAYMENT)) {
     ACCOUNT_REVERT = constants.AUTHORIZE_PAYMENT;
-  } else if (ACCOUNT_REVERT.startsWith(obj.RESET)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.RESET)) {
     ACCOUNT_REVERT = constants.RESET;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REPORT)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.REPORT)) {
     ACCOUNT_REVERT = constants.REPORT;
-  } else if (ACCOUNT_REVERT.startsWith(obj.REPORT_SECOND_LOOK)) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.REPORT_SECOND_LOOK)) {
     ACCOUNT_REVERT = constants.REPORT_SECOND_LOOK;
-  } else if (ACCOUNT_REVERT.startsWith(obj.ACCOUNT_REVERT(""))) {
+  } else if (ACCOUNT_REVERT.startsWith(closure_5.ACCOUNT_REVERT(""))) {
     ACCOUNT_REVERT = constants.ACCOUNT_REVERT;
   }
   return ACCOUNT_REVERT;
@@ -170,6 +169,7 @@ export const back = function back() {
     c3 = null;
     _extends.goBack();
   }
+  hasSubscribersResult = ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };
 export const forward = function forward() {
   const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
@@ -177,4 +177,5 @@ export const forward = function forward() {
     c3 = null;
     _extends.goForward();
   }
+  hasSubscribersResult = ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);
 };

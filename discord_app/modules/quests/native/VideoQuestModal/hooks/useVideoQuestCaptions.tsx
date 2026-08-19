@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx
-import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 
-const require = arg1;
+const require = fn;
 let closure_4 = { NONE: "none", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx");
 
 export const useVideoQuestCaptions = (quest) => {
   const questAsset = url(10486).getQuestAsset(quest, url(10486).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
@@ -19,24 +19,26 @@ export const useVideoQuestCaptions = (quest) => {
   const items = [url];
   const effect = React.useEffect(() => {
     if (null != url) {
-      const HTTP = url(closure_1_1[3]).HTTP;
-      const obj = { url: null, rejectWithError: true };
+      const HTTP = url(dependencyMap[3]).HTTP;
+      let obj = { url: null, rejectWithError: true };
       obj[0] = tmp;
       const value = HTTP.get(obj);
-      value.then((text) => {
+      value.then((result) => {
         try {
-          callback2(closure_1_0(closure_1_1[4]).parseVtt(text.text).cues);
+          callback2(url(closure_1_1[4]).parseVtt(result.text).cues);
           callback(closure_1_4.SUCCESS);
+          const obj = url(closure_1_1[4]);
         } catch (err) {
           callback(closure_1_4.ERROR);
         }
-      }).catch(() => {
+      }).catch((error) => {
         callback(closure_1_4.ERROR);
       });
-      const nextPromise = value.then((text) => {
+      const nextPromise = value.then((result) => {
         try {
-          callback2(closure_1_0(closure_1_1[4]).parseVtt(text.text).cues);
+          callback2(url(closure_1_1[4]).parseVtt(result.text).cues);
           callback(closure_1_4.SUCCESS);
+          const obj = url(closure_1_1[4]);
         } catch (err) {
           callback(closure_1_4.ERROR);
         }

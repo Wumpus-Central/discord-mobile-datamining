@@ -3,35 +3,30 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "../../action_sheet/native/ActionSheetConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import set from "../../../utils/PlatformUtils.tsx";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import obj132 from "../../../utils/PlatformUtils.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
-let closure_7 = set.isIOS();
-set = { container: null, toast: null };
-set = {};
+let closure_7 = obj132.isIOS();
+obj132 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-set.flex = 1;
-set.alignItems = "center";
-set.justifyContent = "center";
-set[0] = set;
-createCacheKey = { position: "absolute", bottom: 16, backgroundColor: ThemesDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingTop: 6, paddingBottom: 8, paddingHorizontal: 16 };
-set[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(set);
+obj132.flex = 1;
+obj132.alignItems = "center";
+obj132.justifyContent = "center";
+obj132[0] = obj132;
+const createCacheKey = { position: "absolute", bottom: 16, backgroundColor: ThemesDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingTop: 6, paddingBottom: 8, paddingHorizontal: 16 };
+obj132[1] = createCacheKey;
+let closure_8 = createCacheKey.createStyles(obj132);
 let closure_9 = { code: "function ActionSheetBackdropToastTsx1(){const{isInIOS,isExpanded,maxDynamicContentSize,TOAST_BOTTOM_MARGIN,nonExpandedHeight,ACTION_SHEET_START_HEIGHT_RATIO,TOAST_BOTTOM_GAP,positionDelta,TOAST_ANIMATION_Y_DELTA,opacity}=this.__closure;return{bottom:(isInIOS?isExpanded?maxDynamicContentSize+TOAST_BOTTOM_MARGIN:nonExpandedHeight+TOAST_BOTTOM_MARGIN:isExpanded?maxDynamicContentSize+TOAST_BOTTOM_MARGIN:ACTION_SHEET_START_HEIGHT_RATIO*maxDynamicContentSize+TOAST_BOTTOM_GAP)+ +(1-positionDelta.get())*TOAST_ANIMATION_Y_DELTA,opacity:opacity.get()};}" };
-let result = set.fileFinishedImporting("modules/user_profile/native/ActionSheetBackdropToast.tsx");
+let result = obj132.fileFinishedImporting("modules/user_profile/native/ActionSheetBackdropToast.tsx");
 
 export const ActionSheetBackdropToast = function ActionSheetBackdropToast(children) {
   const isExpanded = children.isExpanded;
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let sharedValue;
-  let sharedValue1;
   const tmp = callback();
   const height = useWindowDimensionsDefault().height;
   let result = height * closure_5;
@@ -39,13 +34,13 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
   const diff = height - isExpanded(6370).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   dependencyMap = diff;
   let obj = isExpanded(4115);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
   obj1 = isExpanded(4115);
-  sharedValue1 = obj1.useSharedValue(0);
+  const sharedValue1 = obj1.useSharedValue(0);
   const items = [sharedValue, sharedValue1];
   const effect = sharedValue.useEffect(() => {
-    let obj = isExpanded(_undefined[10]);
-    obj = { duration: 200, easing: null };
+    isExpanded(_undefined[10]);
+    let obj = { duration: 200, easing: null };
     let Easing = isExpanded(_undefined[10]).Easing;
     obj[1] = Easing.in(isExpanded(_undefined[10]).Easing.ease);
     let result = sharedValue.set(obj.withDelay(100, isExpanded(_undefined[11]).withTiming(1, obj)));
@@ -55,24 +50,24 @@ export const ActionSheetBackdropToast = function ActionSheetBackdropToast(childr
     obj[1] = Easing2.in(isExpanded(_undefined[10]).Easing.linear);
     let result1 = sharedValue1.set(isExpanded(_undefined[11]).withTiming(1, obj));
     return () => {
-      let obj = closure_1_0(closure_1_2[10]);
-      const result = closure_3.set(obj.withDelay(200, closure_1_0(closure_1_2[11]).withTiming(0)));
-      const obj2 = closure_1_0(closure_1_2[11]);
+      let obj = isExpanded(closure_1_2[10]);
+      const result = closure_3.set(obj.withDelay(200, isExpanded(closure_1_2[11]).withTiming(0)));
+      const obj2 = isExpanded(closure_1_2[11]);
       obj = { duration: 200, easing: null };
-      const Easing = closure_1_0(closure_1_2[10]).Easing;
-      obj[1] = Easing.out(closure_1_0(closure_1_2[10]).Easing.exp);
-      const result1 = closure_4.set(closure_1_0(closure_1_2[11]).withTiming(0, obj));
+      const Easing = isExpanded(closure_1_2[10]).Easing;
+      obj[1] = Easing.out(isExpanded(closure_1_2[10]).Easing.exp);
+      const result1 = closure_4.set(isExpanded(closure_1_2[11]).withTiming(0, obj));
     };
   }, items);
   const fn = function x() {
     if (closure_1_7) {
-      if (tmp) {
+      if (isExpanded) {
         let sum = c2 + 24;
       } else {
         sum = c1 + 24;
       }
     } else {
-      if (tmp) {
+      if (isExpanded) {
         let sum1 = c2 + 24;
       } else {
         sum1 = closure_1_5 * c2 + 46;

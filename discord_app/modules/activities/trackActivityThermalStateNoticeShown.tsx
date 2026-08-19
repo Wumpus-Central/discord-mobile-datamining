@@ -1,13 +1,13 @@
 // discord_app/modules/activities/trackActivityThermalStateNoticeShown.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getEmbeddedActivityLocationChannelId from "utils/embeddedActivityLocationUtils.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/RTCConnectionStore.tsx";
-import closure_5 from "EmbeddedActivitiesStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
+import participantFromServer from "EmbeddedActivitiesStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
 
 export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();

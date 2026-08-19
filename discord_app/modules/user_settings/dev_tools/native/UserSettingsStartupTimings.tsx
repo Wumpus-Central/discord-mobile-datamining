@@ -1,34 +1,30 @@
 // discord_app/modules/user_settings/dev_tools/native/UserSettingsStartupTimings.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../../stores/DeveloperOptionsStore.tsx";
+import refreshSourceMapCookie from "../../../../stores/DeveloperOptionsStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
-import { noop } from "../../../../../discord_common/js/packages/flash-list/index.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getDeviceMetadata } from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 
-require = arg1;
+require = fn;
 function Code(arg0) {
   ({ children, color } = arg0);
   const tmp = callback3();
   return callback2(Text.Text, { variant: "text-sm/normal", color, lineClamp: 1, style: callback3().code, children });
 }
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-createCacheKey = { wrap: null, code: null, border: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { fontFamily: require("ME").Fonts.CODE_BOLD };
 createCacheKey[2] = { height: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
 const appStartedTimestamp = importDefaultResult.getAppStartedTimestamp();
-let result = require("set").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsStartupTimings.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/dev_tools/native/UserSettingsStartupTimings.tsx");
 
 export default function UserSettingsStartupTimings() {
   const tmp = callback3();
@@ -44,7 +40,7 @@ export default function UserSettingsStartupTimings() {
   React = useResult;
   let items = [useResult, first, first1];
   const memo = React.useMemo(() => first(10136)(closure_5, !first, first1).split("\n"), items);
-  obj1 = _initialize;
+  obj1 = initialize;
   let items1 = [closure_7];
   closure_6 = obj1.useStateFromStores(items1, () => alertStartupMetrics.alertStartupMetrics);
   closure_7 = first(9).loadIndex.start - useResult;
@@ -53,7 +49,7 @@ export default function UserSettingsStartupTimings() {
   closure_9 = first(9).loadLazyCache.end - first(9).loadLazyCache.start;
   closure_10 = first(9).ready.end - first(9).ready.start;
   callback3 = Math.ceil(first(9).renderLatestMessages.importTime);
-  const lastTrackedAppUiViewed2Properties = _getDeviceMetadata.getLastTrackedAppUiViewed2Properties();
+  const lastTrackedAppUiViewed2Properties = require("../../../tti_analytics/native/TTIAnalyticsUtils.tsx").getLastTrackedAppUiViewed2Properties();
   num = undefined;
   if (lastTrackedAppUiViewed2Properties != null) {
     num = lastTrackedAppUiViewed2Properties.time_first_contentful_paint;
@@ -92,7 +88,7 @@ export default function UserSettingsStartupTimings() {
             closure_0 = tmp2;
             closure_0 = undefined;
             closure_1 = undefined;
-            let obj3 = closure_1_1(4236);
+            let obj3 = first(4236);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -109,7 +105,7 @@ export default function UserSettingsStartupTimings() {
           return obj2;
         } else {
           closure_0 = arg1;
-          closure_1 = closure_1_1(10136)(closure_0);
+          closure_1 = first(10136)(closure_0);
           obj = closure_1_0(9067);
           obj3 = { message: null };
           obj3[0] = closure_1;
@@ -123,18 +119,17 @@ export default function UserSettingsStartupTimings() {
       }
     }
   }), []);
-  obj = { style: tmp.wrap, children: null };
   obj = { contentContainerStyle: null, ListHeaderComponent: null, data: null, renderItem: null };
   obj1 = { paddingBottom: first(1629)().bottom + first(712).space.PX_16 };
   obj[0] = obj1;
   obj[1] = function ListHeaderComponent() {
     let obj = { spacing: 16, style: { padding: 16 }, children: null };
-    obj = { title: "Performance testing", hasIcons: false, children: callback(lib(8558).TableCheckboxRow, obj) };
+    { title: "Performance testing", hasIcons: false, children: callback(lib(8558).TableCheckboxRow, obj) };
     obj = {
       label: "Show start times at launch",
       onPress() {
-        let obj = closure_1_0(closure_1_2[21]);
-        obj = { alertStartupMetrics: !closure_6 };
+        closure_1_0(closure_1_2[21]);
+        const obj = { alertStartupMetrics: !closure_6 };
         return obj.setDeveloperOptionSettings(obj);
       },
       checked: closure_6
@@ -182,7 +177,7 @@ export default function UserSettingsStartupTimings() {
     items2[5] = callback2(lastTrackedAppUiViewed2Properties, obj11);
     let prop;
     if (lastTrackedAppUiViewed2Properties != null) {
-      prop = tmp13.time_display_messages_with_cache_end;
+      prop = lastTrackedAppUiViewed2Properties.time_display_messages_with_cache_end;
     }
     let str3 = "";
     if (null != prop) {
@@ -197,7 +192,7 @@ export default function UserSettingsStartupTimings() {
     items2[6] = callback2(lastTrackedAppUiViewed2Properties, obj12);
     let prop1;
     if (lastTrackedAppUiViewed2Properties != null) {
-      prop1 = tmp13.time_display_latest_messages_end;
+      prop1 = lastTrackedAppUiViewed2Properties.time_display_latest_messages_end;
     }
     let str5 = "";
     if (null != prop1) {
@@ -247,20 +242,6 @@ export default function UserSettingsStartupTimings() {
     items[3] = callback2(lib(6286).TableRowGroup, obj21);
     const obj24 = { title: "Share Timings", hasIcons: true, children: null };
     const obj10 = { color: "text-brand", children: "" + result4 + "s (" + Math.round(closure_10 / num * 100) + "%)" };
-    const obj22 = {
-      label: "Hide the Noise",
-      onPress() {
-        return callback((arg0) => !arg0);
-      },
-      checked: first
-    };
-    const obj23 = {
-      label: "Hide paints",
-      onPress() {
-        return callback2((arg0) => !arg0);
-      },
-      checked: !first1
-    };
     obj24[2] = callback(lib(6291).TableRow, { icon: callback(lib(12047).ShareIcon, {}), label: "Copy timings to clipboard.", arrow: true, onPress: closure_14 });
     items[4] = callback(lib(6286).TableRowGroup, obj24);
     obj[2] = items;
@@ -272,6 +253,6 @@ export default function UserSettingsStartupTimings() {
   obj[3] = function renderItem(children) {
     return callback(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj[1] = callback2(_noop.FlashList, obj);
+  obj[1] = callback2(require("../../../../../discord_common/js/packages/flash-list/index.js").FlashList, obj);
   return callback2(closure_6, obj);
 };

@@ -1,40 +1,37 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionWaitlist.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 16 }, title: null, description: null, redesignButton: null };
-createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
+const createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { textAlign: "center", marginBottom: 16 };
 createCacheKey[4] = { paddingHorizontal: 16, width: "100%" };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionWaitlist.tsx");
+const result = require("obj132").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionWaitlist.tsx");
 
 export default function HubEmailConnectionWaitlist(school) {
   const onClose = school.onClose;
-  let navigation;
   const tmp = callback3();
   let obj = onClose(1500);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [navigation, onClose];
   const layoutEffect = React.useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft() {
         const obj = { text: null, onPress: null };
-        const intl = closure_1_0(closure_1_2[8]).intl;
-        obj[0] = intl.string(closure_1_0(closure_1_2[8]).t.cpT0Cq);
+        const intl = onClose(closure_1_2[8]).intl;
+        obj[0] = intl.string(onClose(closure_1_2[8]).t.cpT0Cq);
         obj[1] = closure_0;
-        return closure_1_6(closure_1_0(closure_1_2[7]).HeaderActionButton, obj);
+        return closure_1_6(onClose(closure_1_2[7]).HeaderActionButton, obj);
       }
     });
   }, items);
-  obj = { style: tmp.container, children: null };
   obj = { source: navigation(11913), style: tmp.header };
   const items1 = [callback(closure_5, obj), , , ];
   obj1 = { style: tmp.title, accessibilityRole: "header", children: null };

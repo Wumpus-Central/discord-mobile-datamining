@@ -1,5 +1,5 @@
 // discord_app/stores/ChangeVanityURLModalStore.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
@@ -39,6 +39,6 @@ const changeVanityURLModalStore = new ChangeVanityURLModalStore(dispatcherDefaul
     c5 = null;
   }
 });
-const result = set.fileFinishedImporting("stores/ChangeVanityURLModalStore.tsx");
+const result = obj132.fileFinishedImporting("stores/ChangeVanityURLModalStore.tsx");
 
 export default changeVanityURLModalStore;

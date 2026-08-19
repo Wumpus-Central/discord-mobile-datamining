@@ -2,13 +2,13 @@
 import context from "../../../../home_drawer/native/useHomeDrawerGesture.tsx";
 import _modDef15545 from "../../../../guilds_bar/native/GuildsBar.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../home_drawer/native/HomeDrawerStore.tsx";
+import withEqualityFn from "../../../../home_drawer/native/HomeDrawerStore.tsx";
 import { DM_WIDTH } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 function HomeDrawerPanelContent() {
   const tmp = callback();
   let obj = panelSpringTranslateX(isClientThemeOrCustomThemeActive[8]);
@@ -45,8 +45,8 @@ function HomeDrawerPanelContent() {
   const animatedStyle = panelSpringTranslateX(isClientThemeOrCustomThemeActive[12]).useAnimatedStyle(fn);
   obj = { style: items, children: null };
   items = [tmp.container, animatedStyle];
-  obj1 = { style: drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault, children: tmp10(tmp6(tmp2[7]), { enableHome: true }) };
-  obj[1] = <token style={drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault}>{tmp10(tmp6(tmp2[7]), { enableHome: true })}</token>;
+  obj1 = { style: drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault, children: jsx(tmp6(tmp2[7]), { enableHome: true }) };
+  obj[1] = <token style={drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault}>{jsx(tmp6(tmp2[7]), { enableHome: true })}</token>;
   return jsx(importDefault(isClientThemeOrCustomThemeActive[12]).View, { style: items, children: null });
 }
 let closure_7 = createCacheKey.createStyles((width) => {
@@ -58,18 +58,18 @@ const memoResult = importAllResult.memo(() => {
   const tmp = callback(DM_WIDTH);
   let obj = context;
   if (obj.useIsHomeDrawerEnabled()) {
-    let tmp3Result = tmp3(HomeDrawerPanelContent, {});
+    let tmp3Result = <HomeDrawerPanelContent />;
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.guildLisetContainerDefault;
-    obj[1] = tmp3(_modDef15545, {});
-    obj[1] = tmp3(View, obj);
-    tmp3Result = tmp3(View, obj);
+    obj[1] = jsx(_modDef15545, {});
+    obj[1] = <View style={null}>{null}</View>;
+    tmp3Result = <View style={null}>{null}</View>;
   }
   return tmp3Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx");
 
 export const HomePanelContent = memoResult;

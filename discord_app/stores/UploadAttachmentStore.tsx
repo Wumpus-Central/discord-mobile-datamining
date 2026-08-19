@@ -1,10 +1,11 @@
 // discord_app/stores/UploadAttachmentStore.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import ME from "../Constants.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import handleChanged from "DraftStore.tsx";
-import set2 from "../lib/uploader/CloudUpload.tsx";
+import set from "../lib/uploader/CloudUpload.tsx";
+import doesImageMatchUpload from "../lib/uploader/UploadUtils.tsx";
 
 const DraftType = handleChanged.DraftType;
 const MAX_UPLOAD_COUNT = ME.MAX_UPLOAD_COUNT;
@@ -100,10 +101,10 @@ prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
   if (value == null) {
     value = closure_6;
   }
-  return value.find((id) => id.id === closure_0);
+  return value.find((item, index) => item.id === closure_0);
 };
-prototype["findUpload"] = function findUpload(totalNumItems, ChannelMessage, closure_4) {
-  map = map.get(totalNumItems);
+prototype["findUpload"] = function findUpload(closure_0, ChannelMessage, closure_4) {
+  map = map.get(closure_0);
   if (map == null) {
     const _Map = Map;
     map = new Map();
@@ -187,6 +188,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
     }
     const result = value1.set(draftType, items);
     const result1 = obj.set(channelId, value1);
+    const arr2 = importDefault(items[4]);
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
     ({ channelId, id: require, filename: importDefault, description: dependencyMap, spoiler: DraftType, thumbnail: MAX_UPLOAD_COUNT, draftType } = arg0);
@@ -203,22 +205,22 @@ const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
       value = closure_6;
     }
     const items = [...value];
-    const mapped = items.map((id) => {
-      if (id.id === closure_0) {
+    const mapped = items.map((item, index) => {
+      if (item.id === closure_0) {
         if (undefined !== closure_1) {
-          id.filename = closure_1;
+          item.filename = closure_1;
         }
         if (undefined !== closure_3) {
-          id.spoiler = closure_3;
+          item.spoiler = closure_3;
         }
         if (undefined !== closure_2) {
-          id.description = closure_2;
+          item.description = closure_2;
         }
         if (undefined !== closure_4) {
-          id.isThumbnail = closure_4;
+          item.isThumbnail = closure_4;
         }
       }
-      return id;
+      return item;
     });
     let value1 = obj.get(channelId);
     if (value1 == null) {
@@ -228,8 +230,8 @@ const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
     const result = value1.set(draftType, mapped);
     const result1 = obj.set(channelId, value1);
   },
-  UPLOAD_ATTACHMENT_REMOVE_FILE: function handleRemoveFile(id) {
-    ({ channelId, id: require, draftType } = id);
+  UPLOAD_ATTACHMENT_REMOVE_FILE: function handleRemoveFile(dependencyMap) {
+    ({ channelId, id: require, draftType } = dependencyMap);
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
@@ -243,10 +245,9 @@ const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
       value = closure_6;
     }
     const items = [...value];
-    const findIndexResult = items.findIndex((closure_0) => {
-      let obj = closure_1_0(closure_1_2[6]);
-      obj = { uri: closure_0, filename: closure_0 };
-      return obj.doesImageMatchUpload(obj, closure_0);
+    const findIndexResult = items.findIndex((item, index) => {
+      const obj = { uri: closure_0, filename: closure_0 };
+      return obj.doesImageMatchUpload(obj, item);
     });
     if (findIndexResult > -1) {
       const first = items.splice(findIndexResult, 1)[0];
@@ -276,9 +277,9 @@ const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
       value = closure_6;
     }
     items = [...value];
-    const item = attachmentIds.forEach((arg0) => {
-      items = arg0;
-      const findIndexResult = items.findIndex((id) => closure_0 === id.id);
+    const item = attachmentIds.forEach((item, index) => {
+      items = item;
+      const findIndexResult = items.findIndex((item, index) => closure_0 === item.id);
       if (findIndexResult > -1) {
         const first = items.splice(findIndexResult, 1)[0];
         first.removeFromMsgDraft();
@@ -328,8 +329,8 @@ const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
       value = closure_6;
     }
     const items = [...value];
-    const found = items.filter((id) => id.id !== closure_0);
-    const cloudUpload = new set2.CloudUpload(file, channelId, undefined, allowOptimization);
+    const found = items.filter((item, index) => item.id !== closure_0);
+    const cloudUpload = new set.CloudUpload(file, channelId, undefined, allowOptimization);
     found.push(cloudUpload);
     let value1 = obj.get(channelId);
     if (value1 == null) {
@@ -340,6 +341,6 @@ const uploadAttachmentStore = new UploadAttachmentStore(dispatcherDefault, {
     const result1 = obj.set(channelId, value1);
   }
 });
-let result = set.fileFinishedImporting("stores/UploadAttachmentStore.tsx");
+let result = obj132.fileFinishedImporting("stores/UploadAttachmentStore.tsx");
 
 export default uploadAttachmentStore;

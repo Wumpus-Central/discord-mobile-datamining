@@ -1,11 +1,11 @@
 // discord_app/modules/activities/utils/isOnXbox.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import items3 from "../Constants.tsx";
 
 let closure_0 = items3.XBOX_ACTIVITY_APPLICATION_ID;
 const ActivityGamePlatforms = ME.ActivityGamePlatforms;
-const result = set.fileFinishedImporting("modules/activities/utils/isOnXbox.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/isOnXbox.tsx");
 
 export default function isOnXbox(application_id) {
   application_id = undefined;

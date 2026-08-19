@@ -1,15 +1,15 @@
 // discord_app/stores/GuildVerificationStore.tsx
+import obj132 from "../../_runtime/00002_obj132.js";
 import DISCORD_EPOCHDefault from "../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
 import GuildMemberFlags2 from "../modules/guild_member/GuildMemberConstants.tsx";
-import closure_4 from "GuildMemberStore.tsx";
-import closure_5 from "GuildRoleStore.tsx";
-import closure_6 from "GuildStore.tsx";
-import closure_7 from "UserStore.tsx";
+import trackCommunicationDisabled from "GuildMemberStore.tsx";
+import createGuildRoleRecordFromRust from "GuildRoleStore.tsx";
+import createGuildRecordFromRust from "GuildStore.tsx";
+import mergeGuildAvatar from "UserStore.tsx";
 import ME from "../Constants.tsx";
-import set from "../../_runtime/00002_set.js";
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 function recomputeGuild(guildId) {
@@ -64,17 +64,13 @@ function recomputeGuild(guildId) {
                   set = new Set();
                   const roles2 = member.roles;
                   for (const item10071 of roles2) {
-                    let tmp23 = store;
-                    let tmp22 = item10071;
                     let role1 = store.getRole(guild.id, item10071);
                     let managed = null == role1;
                     if (!managed) {
-                      let tmp26 = role1;
                       managed = tmp25.managed;
                     }
                     if (!managed) {
-                      let tmp27 = item10071;
-                      let addResult1 = set.add(tmp22);
+                      let addResult1 = set.add(item10071);
                     }
                     continue;
                   }
@@ -119,17 +115,14 @@ function recomputeGuild(guildId) {
                   let flag10 = false;
                   let flag11 = false;
                   if (!currentUser.isStaff()) {
-                    let tmp53 = guild.verificationLevel >= tmp49.MEDIUM;
+                    let tmp53 = guild.verificationLevel >= constants.MEDIUM;
                     if (tmp53) {
                       tmp53 = diff > 0;
                     }
-                    flag8 = guild.verificationLevel >= tmp49.HIGH && diff1 > 0;
+                    flag8 = guild.verificationLevel >= constants.HIGH && diff1 > 0;
                     flag9 = tmp53;
-                    flag10 = guild.verificationLevel >= tmp49.VERY_HIGH;
-                    flag11 = guild.verificationLevel >= tmp49.LOW && !currentUser.verified;
-                    const tmp51 = guild.verificationLevel >= tmp49.LOW && !currentUser.verified;
-                    const tmp52 = guild.verificationLevel >= tmp49.VERY_HIGH;
-                    const tmp54 = guild.verificationLevel >= tmp49.HIGH && diff1 > 0;
+                    flag10 = guild.verificationLevel >= constants.VERY_HIGH;
+                    flag11 = guild.verificationLevel >= constants.LOW && !currentUser.verified;
                   }
                   flag2 = flag8;
                   flag3 = flag9;
@@ -138,8 +131,6 @@ function recomputeGuild(guildId) {
                   num3 = diff1;
                   num4 = diff;
                   flag6 = guild.verificationLevel >= constants.LOW && !currentUser.isClaimed();
-                  const tmp41 = +currentUser.createdAt;
-                  const tmp46 = +guild.joinedAt;
                   const tmp50 = guild.verificationLevel >= constants.LOW && !currentUser.isClaimed();
                 }
               }
@@ -159,8 +150,7 @@ function recomputeGuild(guildId) {
               HermesBuiltin.arraySpread(items, 0);
               const _Math2 = Math;
               timerId = setTimeout(() => {
-                let obj = closure_1_1(closure_1_2[8]);
-                obj = { type: "GUILD_VERIFICATION_CHECK", guildId: closure_0 };
+                const obj = { type: "GUILD_VERIFICATION_CHECK", guildId: closure_0 };
                 return obj.dispatch(obj);
               }, HermesBuiltin.apply(items1, Math));
             }
@@ -198,13 +188,12 @@ function recomputeGuild(guildId) {
             obj[9] = date3;
             obj[10] = timerId;
             closure_14[guildId] = obj;
-            const tmp64 = closure_14;
           } else {
+            hasFlag;
             let num = member.flags;
             if (num == null) {
               num = 0;
             }
-            const obj2 = _hasFlag;
           }
         }
       }
@@ -257,8 +246,6 @@ const guildVerificationStore = new GuildVerificationStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set.clear();
     for (const key10008 in closure_14) {
-      let tmp5 = key10008;
-      let tmp6 = dependencyMap;
       let tmp7 = dependencyMap[key10008];
       if (null != tmp7) {
         let _clearTimeout = clearTimeout;
@@ -302,6 +289,6 @@ const guildVerificationStore = new GuildVerificationStore(dispatcherDefault, {
     recomputeGuild(guildId.guildId);
   }
 });
-let result = set.fileFinishedImporting("stores/GuildVerificationStore.tsx");
+let result = obj132.fileFinishedImporting("stores/GuildVerificationStore.tsx");
 
 export default guildVerificationStore;

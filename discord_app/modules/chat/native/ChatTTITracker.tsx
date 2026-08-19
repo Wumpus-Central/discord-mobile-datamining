@@ -1,10 +1,10 @@
 // discord_app/modules/chat/native/ChatTTITracker.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import TTIMeasurementView from "../../tti_analytics/native/TTIMeasurementView.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-const result = set.fileFinishedImporting("modules/chat/native/ChatTTITracker.tsx");
+const result = obj132.fileFinishedImporting("modules/chat/native/ChatTTITracker.tsx");
 
 export const ChatTTITracker = function ChatTTITracker(messages) {
   messages = messages.messages;
@@ -32,5 +32,5 @@ export const ChatTTITracker = function ChatTTITracker(messages) {
     }
   }
   children[1] = tmp7;
-  return closure_5(closure_4, { children });
+  return callback(closure_4, { children });
 };

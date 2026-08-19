@@ -1,16 +1,15 @@
 // discord_app/modules/game_server/hooks/useGameServerPowerupStatus.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../GameServerStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import handleGameServerInstanceCreated from "../GameServerStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
 
 export default function useGameServerPowerupStatus(arg0) {
   const _require = arg0;
   const items = [closure_4];
   const items1 = [arg0];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const stateForGuild = closure_1_4.getStateForGuild(closure_0);
     let entitlements;
     if (stateForGuild != null) {

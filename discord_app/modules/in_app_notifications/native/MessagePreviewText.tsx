@@ -6,15 +6,16 @@ import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import isReactionMilestoneNotification from "InAppNotificationUtils.tsx";
 import useTruncatedGradientColorsDefault from "hooks/useTruncatedGradientColors.tsx";
 import PreviewIcon from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import set from "InAppNotificationConstants.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import PlatformTypes from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import "createCacheKey";
+import set from "InAppNotificationConstants.tsx";
 
-require = arg1;
+require = fn;
 function NativeMessagePreviewContent(arg0) {
   ({ message, lineClamp, maxHeight } = arg0);
   const tmp = useTruncatedGradientColorsDefault();
@@ -45,7 +46,7 @@ function EmbedMediaThumbnail(media) {
       num = result;
     }
   }
-  obj = { style: items, children: callback(preloadDefault, obj) };
+  { style: items, children: callback(preloadDefault, obj) };
   items = [tmp.embedMediaContainer, { aspectRatio: num }];
   obj = { source: { uri: url }, style: tmp.embedMedia, resizeMode: "contain" };
   return callback(View, obj);
@@ -77,13 +78,12 @@ function EmbedCard(embed) {
   let obj = { style: tmp.embedContainer, children: null };
   let tmp7 = null != color;
   if (tmp7) {
-    obj = { style: null };
     const items = [tmp.embedAccentBar, ];
     obj = { backgroundColor: null };
     obj[0] = color;
     items[1] = obj;
     obj[0] = items;
-    tmp7 = callback(tmp6, obj);
+    tmp7 = callback(View, obj);
   }
   const items1 = [tmp7, , ];
   obj1 = { style: tmp.embedTextContainer, children: null };
@@ -114,7 +114,6 @@ function EmbedCard(embed) {
     obj4[2] = num2;
     obj4[3] = rawTitle;
     tmp18Result = callback(Text.Text, obj4);
-    const tmp18 = callback;
   }
   items2[2] = tmp18Result;
   let tmp21 = null != embed.rawDescription;
@@ -125,7 +124,7 @@ function EmbedCard(embed) {
   }
   items2[3] = tmp21;
   obj1[1] = items2;
-  items1[1] = closure_9(View, obj1);
+  items1[1] = callback(View, obj1);
   let tmp25 = null != thumbnail;
   if (tmp25) {
     const obj6 = { media: null };
@@ -134,16 +133,15 @@ function EmbedCard(embed) {
   }
   items1[2] = tmp25;
   obj[1] = items1;
-  return closure_9(View, obj);
+  return callback(View, obj);
 }
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = require("set"));
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let str = "ggsans-MediumItalic, NotoSans-MediumItalic";
 if (PlatformTypes.isIOS()) {
   str = "ggsans-NormalItalic, NotoSans-NormalItalic";
 }
 let closure_10 = createCacheKey.createStyles({ italic: { fontStyle: "italic", fontFamily: str } });
-createCacheKey = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 createCacheKey = { borderRadius: ThemesDefault.radii.sm, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 PlatformTypes = { width: 4, marginTop: -ThemesDefault.space.PX_8, marginBottom: -ThemesDefault.space.PX_8, alignSelf: "stretch" };
@@ -153,7 +151,7 @@ createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "accessibilityRole" };
 createCacheKey[4] = { width: "100%", height: "100%" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = set.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
+let result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
 
 export default function MessagePreviewText(message) {
   message = message.message;
@@ -177,7 +175,7 @@ export default function MessagePreviewText(message) {
   const items = [message.embeds];
   const memo = React.useMemo(() => {
     const embeds = message.embeds;
-    return embeds.filter((image) => null != image.image || null != image.thumbnail);
+    return embeds.filter((item, index) => null != item.image || null != item.thumbnail);
   }, items);
   if (memo.length > 0) {
     const first = memo[0];

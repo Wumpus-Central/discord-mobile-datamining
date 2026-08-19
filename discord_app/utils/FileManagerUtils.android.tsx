@@ -1,7 +1,7 @@
 // discord_app/utils/FileManagerUtils.android.tsx
 import timestampDefault from "../modules/debug/Logger.tsx";
 import enforcingDefault from "../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
-import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 function _readFile() {
   const self = this;
@@ -49,10 +49,10 @@ function _readFile() {
                   return null;
                 } else {
                   if ("cache" === closure_0) {
-                    let tmpResult = tmp(tmp2[2]);
+                    let tmpResult = callback(table[2]);
                     let DocumentsDirPath = tmpResult.getConstants().CacheDirPath;
                   } else {
-                    tmpResult = tmp(tmp2[2]);
+                    tmpResult = callback(table[2]);
                     DocumentsDirPath = tmpResult.getConstants().DocumentsDirPath;
                   }
                   return DocumentsDirPath;
@@ -137,13 +137,13 @@ function _readFile() {
 }
 let closure_3 = new timestampDefault("FileManagerUtils");
 const tmp2 = new timestampDefault("FileManagerUtils");
-const result = require("set").fileFinishedImporting("utils/FileManagerUtils.android.tsx");
+const result = require("obj132").fileFinishedImporting("utils/FileManagerUtils.android.tsx");
 
 export const writeFile = function writeFile(cache, c5, c6, utf8) {
   const obj = enforcingDefault;
   let nextPromise;
   if (obj != null) {
-    nextPromise = obj.writeFile(cache, c5, c6, utf8).then((arg0) => "file:" + arg0);
+    nextPromise = obj.writeFile(cache, c5, c6, utf8).then((result) => "file:" + result);
     const writeFileResult = obj.writeFile(cache, c5, c6, utf8);
   }
   if (nextPromise == null) {

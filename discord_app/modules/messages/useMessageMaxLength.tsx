@@ -1,12 +1,12 @@
 // discord_app/modules/messages/useMessageMaxLength.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import getPremiumPlanItemDefault from "../../utils/PremiumUtils.tsx";
-import closure_3 from "../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ MAX_MESSAGE_LENGTH_PREMIUM: c4, MAX_MESSAGE_LENGTH: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/useMessageMaxLength.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/useMessageMaxLength.tsx");
 
 export default function useMessageMaxLength() {
   const items = [closure_3];

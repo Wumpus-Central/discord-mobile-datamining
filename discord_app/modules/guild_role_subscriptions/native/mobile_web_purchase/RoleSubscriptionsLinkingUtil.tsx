@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import ME from "../../../../Constants.tsx";
 import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function performRoleSubscriptionUpsellRedirect(guildId) {
   const self = this;
   const apply = _performRoleSubscriptionUpsellRedirect.apply;
@@ -364,7 +364,7 @@ function _performDeveloperPortalRedirectWithTokenHandoff() {
   return applyArgumentsResult;
 }
 ({ RelativeMarketingURLs: c4, Routes: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx");
 
 export default {
   performRoleSubscriptionUpsellRedirect,
@@ -389,7 +389,7 @@ export default {
     return applyArgumentsResult;
   },
   maybePerformRoleSubscriptionUpsellRedirect(closure_2) {
-    const guildId = closure_2.guildId;
+    const guildId = dependencyMap.guildId;
     if (null != guildId) {
       if (tmp === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
         let resolved = performRoleSubscriptionUpsellRedirect(guildId);

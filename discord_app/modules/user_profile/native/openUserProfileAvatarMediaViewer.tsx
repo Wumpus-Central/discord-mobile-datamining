@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx
 import _openMediaModal from "../../media_viewer/native/components/openMediaModal.tsx";
-import closure_2 from "../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
 import { AVATAR_MAX_SIZE } from "../../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");
 
 export default function openUserProfileAvatarMediaViewer(user) {
   user = user.user;
@@ -14,14 +14,12 @@ export default function openUserProfileAvatarMediaViewer(user) {
   if (!useReducedMotion) {
     animate = user.animate;
   }
-  const avatarURL = user.getAvatarURL(guildId, tmp, animate);
+  const avatarURL = user.getAvatarURL(guildId, AVATAR_MAX_SIZE, animate);
   if (typeof avatarURL === "string") {
-    let obj = _openMediaModal;
-    obj = { initialSources: null, originViewOrOriginLayout: null, analyticsSource: "user_profile_avatar", openAs: "action-sheet", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true };
-    obj = { uri: null, mediaIndex: 0, height: null, width: null, accessoryType: "embed" };
+    const obj = { uri: null, mediaIndex: 0, height: null, width: null, accessoryType: "embed" };
     obj[0] = avatarURL;
-    obj[2] = tmp;
-    obj[3] = tmp;
+    obj[2] = AVATAR_MAX_SIZE;
+    obj[3] = AVATAR_MAX_SIZE;
     const items = [obj];
     obj[0] = items;
     obj[1] = originViewOrOriginLayout;

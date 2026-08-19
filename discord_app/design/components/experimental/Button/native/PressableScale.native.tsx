@@ -1,12 +1,12 @@
 // discord_app/design/components/experimental/Button/native/PressableScale.native.tsx
 import _mod4115 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 import styleProperties from "../../../Button/native/ButtonHooks.native.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import importDefaultResult from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
 
-require = arg1;
+require = fn;
 let closure_2 = ["style"];
 let closure_5 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);
 const forwardRefResult = importAllResult.forwardRef((scaleAmountInPx, ref) => {
@@ -28,6 +28,6 @@ const forwardRefResult = importAllResult.forwardRef((scaleAmountInPx, ref) => {
   obj.style = items;
   return <closure_5 />;
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/PressableScale.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/experimental/Button/native/PressableScale.native.tsx");
 
 export const PressableScale = forwardRefResult;

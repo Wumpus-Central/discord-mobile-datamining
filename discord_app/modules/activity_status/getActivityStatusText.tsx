@@ -1,11 +1,16 @@
 // discord_app/modules/activity_status/getActivityStatusText.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
+import getSystemLocale from "../../intl/index.native.tsx";
+import unpackStageChannelParty from "../stage_channels/StageChannelRichPresenceUtils.tsx";
 import isEmbeddedActivityDefault from "../activities/utils/isEmbeddedActivity.tsx";
+import isListeningOnSpotifyDefault from "../activities/utils/isListeningOnSpotify.tsx";
+import isCrunchyrollActivityDefault from "../activities/utils/isCrunchyrollActivity.tsx";
 import StatusDisplayTypes from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
+import getChannelCopyForEmbeddedActivityDefault from "../activities/utils/getChannelCopyForEmbeddedActivity.tsx";
 
 const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");
+const result = obj132.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");
 
 export default function getActivityStatusText(name) {
   let flag = arg1;
@@ -69,7 +74,7 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       status_display_type1 = name.status_display_type;
     }
-    if (status_display_type1 !== tmp15(9907).StatusDisplayTypes.STATE) {
+    if (status_display_type1 !== StatusDisplayTypes.StatusDisplayTypes.STATE) {
       let status_display_type2;
       if (name != null) {
         status_display_type2 = name.status_display_type;
@@ -78,7 +83,7 @@ export default function getActivityStatusText(name) {
       if (tmp20) {
         tmp17 = tmp5;
       }
-      tmp20 = status_display_type2 === tmp15(9907).StatusDisplayTypes.DETAILS && null != tmp5;
+      tmp20 = status_display_type2 === StatusDisplayTypes.StatusDisplayTypes.DETAILS && null != tmp5;
     } else {
       tmp17 = tmp8;
     }
@@ -86,7 +91,7 @@ export default function getActivityStatusText(name) {
     tmp17 = tmp2;
   }
   if (isEmbeddedActivityDefault(name)) {
-    const tmp28 = tmp21(9908)(tmp2);
+    const tmp28 = getChannelCopyForEmbeddedActivityDefault(tmp2);
     let obj = { text: null, tooltip: null };
     obj[0] = tmp28;
     obj[1] = tmp28;
@@ -96,18 +101,18 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       type1 = name.type;
     }
-    if (type1 === tmp11.PLAYING) {
+    if (type1 === ActivityTypes.PLAYING) {
       if (null != tmp17) {
         obj = { text: null, tooltip: null };
         obj[0] = tmp17;
-        const intl8 = tmp15(1236).intl;
+        const intl8 = getSystemLocale.intl;
         obj1 = { game: null };
         obj1[0] = tmp17;
-        obj[1] = intl8.formatToPlainString(tmp15(1236).t.lFApmz, obj1);
+        obj[1] = intl8.formatToPlainString(getSystemLocale.t.lFApmz, obj1);
         return obj;
       }
     }
-    if (tmp21(7261)(name)) {
+    if (isListeningOnSpotifyDefault(name)) {
       if (flag) {
         if (null != tmp8) {
           const parts = tmp8.split("; ");
@@ -117,10 +122,10 @@ export default function getActivityStatusText(name) {
           }
           const obj2 = { text: null, tooltip: null };
           obj2[0] = joined;
-          const intl7 = tmp15(1236).intl;
+          const intl7 = getSystemLocale.intl;
           const obj3 = { name: null };
           obj3[0] = joined;
-          obj2[1] = intl7.formatToPlainString(tmp15(1236).t.Vnuxue, obj3);
+          obj2[1] = intl7.formatToPlainString(getSystemLocale.t.Vnuxue, obj3);
           return obj2;
         }
       }
@@ -129,10 +134,10 @@ export default function getActivityStatusText(name) {
       if (null != tmp2) {
         const obj4 = { text: null, tooltip: null };
         obj4[0] = tmp2;
-        const intl6 = tmp15(1236).intl;
+        const intl6 = getSystemLocale.intl;
         const obj5 = { name: null };
         obj5[0] = tmp2;
-        obj4[1] = intl6.formatToPlainString(tmp15(1236).t.pW3Ip3, obj5);
+        obj4[1] = intl6.formatToPlainString(getSystemLocale.t.pW3Ip3, obj5);
         let obj16 = obj4;
       }
       return obj16;
@@ -141,26 +146,26 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       type2 = name.type;
     }
-    if (type2 === tmp11.LISTENING) {
+    if (type2 === ActivityTypes.LISTENING) {
       if (null != tmp17) {
         const obj6 = { text: null, tooltip: null };
         obj6[0] = tmp17;
-        const intl5 = tmp15(1236).intl;
+        const intl5 = getSystemLocale.intl;
         const obj7 = { name: null };
         obj7[0] = tmp17;
-        obj6[1] = intl5.formatToPlainString(tmp15(1236).t.Vnuxue, obj7);
+        obj6[1] = intl5.formatToPlainString(getSystemLocale.t.Vnuxue, obj7);
         obj16 = obj6;
       }
     }
-    if (tmp21(9051)(name)) {
+    if (isCrunchyrollActivityDefault(name)) {
       if (flag) {
         if (null != tmp5) {
           const obj8 = { text: null, tooltip: null };
           obj8[0] = tmp5;
-          const intl4 = tmp15(1236).intl;
+          const intl4 = getSystemLocale.intl;
           const obj9 = { name: null };
           obj9[0] = tmp5;
-          obj8[1] = intl4.formatToPlainString(tmp15(1236).t.pW3Ip3, obj9);
+          obj8[1] = intl4.formatToPlainString(getSystemLocale.t.pW3Ip3, obj9);
           obj16 = obj8;
         }
       }
@@ -169,14 +174,14 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       type3 = name.type;
     }
-    if (type3 === tmp11.WATCHING) {
+    if (type3 === ActivityTypes.WATCHING) {
       if (null != tmp17) {
         const obj10 = { text: null, tooltip: null };
         obj10[0] = tmp17;
-        const intl3 = tmp15(1236).intl;
+        const intl3 = getSystemLocale.intl;
         const obj11 = { name: null };
         obj11[0] = tmp17;
-        obj10[1] = intl3.formatToPlainString(tmp15(1236).t.pW3Ip3, obj11);
+        obj10[1] = intl3.formatToPlainString(getSystemLocale.t.pW3Ip3, obj11);
         obj16 = obj10;
       }
     }
@@ -184,14 +189,14 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       type4 = name.type;
     }
-    if (type4 === tmp11.COMPETING) {
+    if (type4 === ActivityTypes.COMPETING) {
       if (null != tmp17) {
         const obj12 = { text: null, tooltip: null };
         obj12[0] = tmp17;
-        const intl2 = tmp15(1236).intl;
+        const intl2 = getSystemLocale.intl;
         const obj13 = { name: null };
         obj13[0] = tmp17;
-        obj12[1] = intl2.formatToPlainString(tmp15(1236).t.QQ2wVE, obj13);
+        obj12[1] = intl2.formatToPlainString(getSystemLocale.t.QQ2wVE, obj13);
         obj16 = obj12;
       }
     }
@@ -199,18 +204,18 @@ export default function getActivityStatusText(name) {
     if (name != null) {
       type5 = name.type;
     }
-    if (type5 === tmp11.STREAMING) {
+    if (type5 === ActivityTypes.STREAMING) {
       if (null != tmp17) {
         const obj14 = { text: null, tooltip: null };
         obj14[0] = tmp17;
-        const intl = tmp15(1236).intl;
+        const intl = getSystemLocale.intl;
         const obj15 = { name: null };
         obj15[0] = tmp17;
-        obj14[1] = intl.formatToPlainString(tmp15(1236).t["0wJXSh"], obj15);
+        obj14[1] = intl.formatToPlainString(getSystemLocale.t["0wJXSh"], obj15);
         obj16 = obj14;
       }
     }
     obj16 = {};
-    tmp15Result = tmp15(7254);
+    tmp15Result = unpackStageChannelParty;
   }
 };

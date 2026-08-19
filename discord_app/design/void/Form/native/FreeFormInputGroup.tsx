@@ -1,6 +1,9 @@
 // discord_app/design/void/Form/native/FreeFormInputGroup.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
+import Button from "../../native.tsx";
+import Text from "../../../components/Text/native/Text.tsx";
 import context2 from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import TextInput from "../../../components/TextInput/native/TextInput.native.tsx";
 import FreeFormLabelDefault from "FreeFormLabel.tsx";
 import ClearButtonDefault from "FreeFormTextInput.tsx";
 import LabelDefault from "FreeFormErrorLabel.tsx";
@@ -9,7 +12,7 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 } });
@@ -24,7 +27,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   const tmp2 = callback2();
   let isAndroidResult = enableAndroidSanitizedInputWorkaround;
   if (enableAndroidSanitizedInputWorkaround) {
-    let obj = set;
+    let obj = obj132;
     isAndroidResult = obj.isAndroid();
   }
   if (!isAndroidResult) {
@@ -33,7 +36,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   if (!enableAndroidSanitizedInputWorkaround) {
     let str = keyboardType;
   } else {
-    obj1 = set;
+    obj1 = obj132;
     str = "visible-password";
   }
   const context = importAllResult.useContext(context2.RedesignCompatContext);
@@ -48,11 +51,11 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     obj[4] = hint;
     obj[5] = placeholder;
     obj[6] = onChangeText;
-    obj[7] = clearButtonVisibility !== tmp8(1297).ClearButtonVisibility.WITH_CONTENT;
+    obj[7] = clearButtonVisibility !== Button.ClearButtonVisibility.WITH_CONTENT;
     obj[8] = str;
     obj[9] = isAndroidResult;
     obj[10] = merged.autoCapitalize;
-    return callback(tmp8(8071).TextInput, obj);
+    return callback(TextInput.TextInput, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = style;
@@ -68,12 +71,10 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     const obj2 = {};
     const merged1 = Object.assign(merged);
     if (accessibilityLabel == null) {
-      if (null == label) {
-        const tmp23 = label;
-      } else {
-        const tmp8Result = tmp8(500);
+      if (null != label) {
+        obj132;
       }
-      accessibilityLabel = tmp23;
+      accessibilityLabel = label;
     }
     obj2.accessibilityLabel = accessibilityLabel;
     obj2.accessibilityLabelledBy = id;
@@ -90,7 +91,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
       const obj3 = { style: null, children: null };
       obj3[0] = tmp2.error;
       obj3[1] = error;
-      tmp17Result = tmp17(LabelDefault, obj3);
+      tmp17Result = callback(LabelDefault, obj3);
     }
     items[2] = tmp17Result;
     tmp17Result = null;
@@ -98,13 +99,13 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
       const obj4 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
       obj4[0] = tmp2.hint;
       obj4[3] = hint;
-      tmp17Result = tmp17(tmp8(4734).Text, obj4);
+      tmp17Result = callback(Text.Text, obj4);
     }
     items[3] = tmp17Result;
     obj[1] = items;
-    return closure_6(View, obj);
+    return callback(View, obj);
   }
 });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FreeFormInputGroup.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FreeFormInputGroup.tsx");
 
 export default forwardRefResult;

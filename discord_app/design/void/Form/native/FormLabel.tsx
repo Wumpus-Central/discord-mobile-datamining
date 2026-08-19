@@ -3,9 +3,9 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import Text from "../../../components/Text/native/Text.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormLabel.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormLabel.tsx");
 
 export default function FormLabel(children) {
   let lineClamp = children.numberOfLines;

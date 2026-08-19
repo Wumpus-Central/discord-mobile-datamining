@@ -1,16 +1,15 @@
 // discord_app/modules/spoiler_channels/SpoilerChannelUtils.tsx
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "ChannelSpoilerAgreeStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import initialize from "ChannelSpoilerAgreeStore.tsx";
 
-const require = arg1;
-function isChannelSpoilerGated(channel) {
-  let obj = arg1;
-  if (arg1 === undefined) {
+const require = fn;
+function isChannelSpoilerGated(channel, closure_1_3, closure_1_2) {
+  let obj = closure_1_3;
+  if (closure_1_3 === undefined) {
     obj = closure_3;
   }
-  let obj2 = arg2;
-  if (arg2 === undefined) {
+  let obj2 = closure_1_2;
+  if (closure_1_2 === undefined) {
     obj2 = closure_2;
   }
   if (obj === undefined) {
@@ -46,33 +45,33 @@ function isChannelSpoilerGated(channel) {
   }
   return null != id1;
 }
-const result = require("set").fileFinishedImporting("modules/spoiler_channels/SpoilerChannelUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/spoiler_channels/SpoilerChannelUtils.tsx");
 
 export const useGetSpoilerGatingChannelId = function useGetSpoilerGatingChannelId(stateFromStores) {
   const _require = stateFromStores;
   const items = [closure_3, closure_2];
   const items1 = [stateFromStores];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (closure_1_3 !== undefined) {
-      if (obj3 !== undefined) {
+      if (closure_1_2 !== undefined) {
         let id1 = null;
-        if (null != obj) {
-          if (obj.isSpoilerChannel()) {
+        if (null != stateFromStores) {
+          if (stateFromStores.isSpoilerChannel()) {
             let id = null;
-            if (!obj2.didAgree(obj.id)) {
-              id = obj.id;
+            if (!closure_1_3.didAgree(stateFromStores.id)) {
+              id = stateFromStores.id;
             }
             id1 = id;
           } else {
             id1 = null;
-            if (null != obj.parent_id) {
-              const channel = obj3.getChannel(obj.parent_id);
+            if (null != stateFromStores.parent_id) {
+              const channel = closure_1_2.getChannel(stateFromStores.parent_id);
               id1 = null;
               if (null != channel) {
                 id1 = null;
                 if (channel.isSpoilerChannel()) {
                   id1 = null;
-                  if (!obj2.didAgree(channel.id)) {
+                  if (!closure_1_3.didAgree(channel.id)) {
                     id1 = channel.id;
                   }
                 }
@@ -90,13 +89,13 @@ export const useIsChannelSpoilerGated = function useIsChannelSpoilerGated(channe
   const _require = channel;
   const items = [closure_3, closure_2];
   const items1 = [channel];
-  return _initialize.useStateFromStores(items, () => closure_1_4(closure_0, closure_1_3, closure_1_2), items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => isChannelSpoilerGated(closure_0, closure_1_3, closure_1_2), items1);
 };
 export const useShouldShowSpoilerGateForChannelId = function useShouldShowSpoilerGateForChannelId(arg0) {
   const _require = arg0;
   const items = [closure_2, closure_3];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => closure_1_4(closure_1_2.getChannel(closure_0), closure_1_3, closure_1_2), items1);
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => isChannelSpoilerGated(closure_1_2.getChannel(closure_0), closure_1_3, closure_1_2), items1);
 };
 export const shouldShowSpoilerGateForChannelId = function shouldShowSpoilerGateForChannelId(channelId) {
   let tmp = null != channelId;

@@ -1,11 +1,11 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroSectionHeader.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
 ({ jsx: obj1, Fragment: c3, jsxs: c4 } = jsxProd);
 const Nitro = "Nitro";
-const result = set.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroSectionHeader.tsx");
+const result = obj132.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroSectionHeader.tsx");
 
 export default function BuyNitroSectionHeader(arg0) {
   ({ title, titleRequiresNitroHack } = arg0);
@@ -19,19 +19,17 @@ export default function BuyNitroSectionHeader(arg0) {
     const index = title.indexOf(Nitro);
     let tmp7 = title;
     if (-1 !== index) {
-      obj = { children: null };
       const items = [title.slice(0, index), , ];
       obj = { variant: "text-sm/semibold", color: "text-link", accessibilityRole: "link", onPress: null, children: null };
       obj[3] = onPress;
-      obj[4] = tmp5;
-      items[1] = tmp(Text.Text, obj);
+      obj[4] = Nitro;
+      items[1] = callback(Text.Text, obj);
       items[2] = title.slice(index + 5);
       obj[0] = items;
       tmp7 = callback(closure_3, obj);
     }
     tmp4 = tmp7;
-    tmp5 = Nitro;
   }
   obj[4] = tmp4;
-  return closure_2(Text.Text, obj);
+  return callback(Text.Text, obj);
 };

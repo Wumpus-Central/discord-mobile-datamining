@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/SystemNotificationsSetting.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { NotificationAuthorizationStatus as closure_6 } from "../../../native_permissions/NativePermissionConstants.tsx";
 import EventActionType from "../../../nuf/native/components/notification/NotificationPermissionConstants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import "createToggle";
 
-require = arg1;
+require = fn;
 function _handleEnableSystemNotification() {
   const self = this;
   const tmp = callback(function*() {
@@ -60,12 +60,12 @@ function _handleEnableSystemNotification() {
           if (closure_0 === constants2.UNDETERMINED) {
             let obj3 = callback(11590);
             const permission = obj3.requestPermission((permission_granted) => {
-              let obj = tmp2(table[7]);
-              obj = { action_type: constants2.ALLOW_TO_REQUEST, action_location: constants3.NOTIFICATION_SETTING, permission_granted };
+              table(table[7]);
+              const obj = { action_type: constants2.ALLOW_TO_REQUEST, action_location: constants3.NOTIFICATION_SETTING, permission_granted };
               obj.track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
               if (!permission_granted) {
-                const result = tmp2(tmp2[8]).openNotificationSettings();
-                const tmpResult = tmp2(tmp2[8]);
+                const result = table(table[8]).openNotificationSettings();
+                const tmpResult = table(table[8]);
               }
             });
           } else {
@@ -98,7 +98,7 @@ function _handleEnableSystemNotification() {
   return applyArgumentsResult;
 }
 ({ EventActionType: error, EventActionLocation: closure_8 } = EventActionType);
-createToggle = {
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.nl2Dqx);
@@ -117,6 +117,6 @@ createToggle = {
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");
 
 export default createToggle;

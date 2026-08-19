@@ -6,20 +6,18 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { infoBox: null, infoBoxWarning: null, infoText: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: ThemesDefault.colors.TEXT_LINK, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 };
+const createCacheKey = { borderRadius: ThemesDefault.radii.xs, padding: 8, borderStyle: "solid", borderWidth: 1, borderColor: ThemesDefault.colors.TEXT_LINK, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, flexDirection: "row", alignItems: "center", gap: 8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING };
 createCacheKey[2] = { flex: 1 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { INFO: "info", WARNING: "warning" };
-let obj1 = { borderColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING };
-const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/InfoBox.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/authorized_apps/native/InfoBox.tsx");
 
 export default function InfoBox(look) {
   let INFO = look.look;
@@ -31,8 +29,7 @@ export default function InfoBox(look) {
   const items = [tmp2.infoBox];
   const items1 = [, ];
   ({ infoBox: arr2[0], infoBoxWarning: arr2[1] } = tmp2);
-  let obj = {};
-  obj = { color: ThemesDefault.colors.TEXT_LINK };
+  let obj = { color: ThemesDefault.colors.TEXT_LINK };
   obj[obj2.INFO] = callback(CircleInformationIcon.CircleInformationIcon, obj);
   obj = { color: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
   obj[obj2.WARNING] = callback(CircleErrorIcon.CircleErrorIcon, obj);

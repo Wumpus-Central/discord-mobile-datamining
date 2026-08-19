@@ -1,10 +1,10 @@
 // discord_app/modules/staff/StaffMemberPreloader.tsx
 import showTooManyUserGuildsAlertDefault from "../../actions/GuildActionCreators.tsx";
-import closure_2 from "../../stores/GuildStore.tsx";
-import closure_3 from "../../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { PRELOAD_SERVER_ID } from "StaffMemberConstants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/staff/StaffMemberPreloader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/staff/StaffMemberPreloader.tsx");
 
 export const preloadStaffMembers = function preloadStaffMembers() {
   currentUser = currentUser.getCurrentUser();

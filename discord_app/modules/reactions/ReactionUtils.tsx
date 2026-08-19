@@ -4,19 +4,18 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import parseRawEmojiObjectDefault from "../emojis/UnicodeEmojis.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
 import ReactionTypes from "../messages/MessageReactionsTypes.tsx";
-import closure_3 from "../../stores/AuthenticationStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
 import ME from "../../Constants.tsx";
 import { NotificationSettingsUpdateType as closure_6 } from "../notifications/NotificationConstants.tsx";
 
-require = arg1;
+require = fn;
 ({ AnalyticsSections: c4, AnalyticEvents: c5 } = ME);
-let result = require("set").fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 
 export const MAX_REACTIONS = 20;
 export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   if (null == emoji.id) {
     let result = parseRawEmojiObjectDefault.convertSurrogateToName(emoji.name);
-    const obj = parseRawEmojiObjectDefault;
   } else {
     const _HermesInternal = HermesInternal;
     result = ":" + emoji.name + ":";
@@ -27,30 +26,23 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
   const t = getSystemLocale.t;
   if (arg3) {
     if (me) {
-      Z_l_qu = t.i9DXqM;
-      let tmp6 = tmp2;
-      let tmp7 = tmp2;
-      let tmp8 = tmp;
+      let i9DXqM = t.i9DXqM;
     } else {
-      Z_l_qu = t["Z/l+qu"];
-      tmp6 = tmp2;
-      tmp7 = tmp2;
-      tmp8 = tmp;
+      i9DXqM = t["Z/l+qu"];
     }
   } else {
     if (me) {
       let PirBBE = t.CLuzw5;
-      let tmp5 = tmp;
+      let tmp5 = require;
     } else {
       PirBBE = t.PirBBE;
-      tmp5 = tmp;
+      tmp5 = require;
     }
     const intl = tmp5(1236).intl;
     const obj = { reactions: null, emojiName: null };
     obj[0] = count;
     if (null == emoji.id) {
       let str2 = parseRawEmojiObjectDefault.convertSurrogateToName(emoji.name);
-      const obj2 = parseRawEmojiObjectDefault;
     } else {
       const _HermesInternal = HermesInternal;
       str2 = ":" + emoji.name + ":";
@@ -108,14 +100,13 @@ export const isCustomReactionEmojiId = function isCustomReactionEmojiId(emojiId)
   if (!tmp) {
     return tmp;
   } else if (typeof emojiId === "number") {
-    let tmp2 = 0 !== emojiId;
   } else {
     const _String = String;
-    tmp2 = "0" !== String(emojiId);
+    const tmp2 = "0" !== String(emojiId);
   }
 };
 export const emojiEquals = function emojiEquals(emoji, closure_0) {
-  if (null != closure_0.id) {
+  if (null != _require.id) {
     if (null != emoji.id) {
       const _HermesInternal = HermesInternal;
       let id = "" + emoji.id;
@@ -123,9 +114,9 @@ export const emojiEquals = function emojiEquals(emoji, closure_0) {
       id = emoji.id;
     }
     const _HermesInternal2 = HermesInternal;
-    return "" + closure_0.id === id;
+    return "" + _require.id === id;
   } else {
-    return null == emoji.id && closure_0.name === emoji.name;
+    return null == emoji.id && _require.name === emoji.name;
   }
 };
 export const getBurstAnalyticsSection = function getBurstAnalyticsSection(isThread) {
@@ -134,7 +125,7 @@ export const getBurstAnalyticsSection = function getBurstAnalyticsSection(isThre
   } else if (isThread.isForumPost()) {
     FORUM_CHANNEL_TEXT_AREA = constants.FORUM_CHANNEL_TEXT_AREA;
   } else {
-    FORUM_CHANNEL_TEXT_AREA = isThread.isGuildVocal() ? tmp.TEXT_IN_VOICE : tmp.CHANNEL_TEXT_AREA;
+    FORUM_CHANNEL_TEXT_AREA = isThread.isGuildVocal() ? constants.TEXT_IN_VOICE : constants.CHANNEL_TEXT_AREA;
   }
   return FORUM_CHANNEL_TEXT_AREA;
 };
@@ -148,7 +139,6 @@ export const shouldApplyReaction = function shouldApplyReaction(optimistic) {
 export const updateReactionNotificationsSetting = function updateReactionNotificationsSetting(NumberResult, setting) {
   const ReactionNotifications = explicitContentFromProto.ReactionNotifications;
   ReactionNotifications.updateSetting(NumberResult);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting };
+  const obj = { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting };
   obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

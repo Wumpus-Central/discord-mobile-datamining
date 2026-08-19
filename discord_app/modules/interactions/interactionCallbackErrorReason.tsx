@@ -1,10 +1,10 @@
 // discord_app/modules/interactions/interactionCallbackErrorReason.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import prototypeDefault from "../errors/InteractionCallbackError.tsx";
-import closure_3 from "../applications/ApplicationStore.tsx";
+import addApplication from "../applications/ApplicationStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/interactions/interactionCallbackErrorReason.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/interactions/interactionCallbackErrorReason.tsx");
 
 export const interactionCallbackErrorReason = function interactionCallbackErrorReason(reason, applicationId) {
   if (prototypeDefault.ReasonCodes.TIMEOUT === reason) {
@@ -19,32 +19,32 @@ export const interactionCallbackErrorReason = function interactionCallbackErrorR
       formatToPlainStringResult = intl10.string(getSystemLocale.t["vGU8+r"]);
     }
     return formatToPlainStringResult;
-  } else if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_NOT_IN_EXPERIMENT === reason) {
+  } else if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_NOT_IN_EXPERIMENT === reason) {
     const intl9 = getSystemLocale.intl;
     return intl9.string(getSystemLocale.t.GyzcrS);
   } else {
-    if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_VERIFICATION_LEVEL !== reason) {
-      if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_PERMISSIONS !== reason) {
-        if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_UNKNOWN_CHANNEL !== reason) {
-          if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_UNKNOWN_GUILD !== reason) {
-            if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_CHANNEL_TYPE !== reason) {
-              if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_CHANNEL_NO_AFK !== reason) {
-                if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_AGE_GATE === reason) {
+    if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_VERIFICATION_LEVEL !== reason) {
+      if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_PERMISSIONS !== reason) {
+        if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_UNKNOWN_CHANNEL !== reason) {
+          if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_UNKNOWN_GUILD !== reason) {
+            if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CHANNEL_TYPE !== reason) {
+              if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CHANNEL_NO_AFK !== reason) {
+                if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_AGE_GATE === reason) {
                   const intl6 = getSystemLocale.intl;
                   return intl6.string(getSystemLocale.t["4WuFRE"]);
-                } else if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_DEV_PREVIEW_GUILD_SIZE === reason) {
+                } else if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_DEV_PREVIEW_GUILD_SIZE === reason) {
                   const intl5 = getSystemLocale.intl;
                   return intl5.string(getSystemLocale.t.RvkXdb);
                 } else {
-                  if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_SUPPORTED !== reason) {
-                    if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_RELEASED !== reason) {
-                      if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_NO_ACCESS_TO_ACTIVITY === reason) {
+                  if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_SUPPORTED !== reason) {
+                    if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_CONFIGURATION_PLATFORM_NOT_RELEASED !== reason) {
+                      if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_NO_ACCESS_TO_ACTIVITY === reason) {
                         const intl3 = getSystemLocale.intl;
                         return intl3.string(getSystemLocale.t.WjNAAA);
-                      } else if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_LOCATION_TYPE === reason) {
+                      } else if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_LOCATION_TYPE === reason) {
                         const intl2 = getSystemLocale.intl;
                         return intl2.string(getSystemLocale.t.PtobXW);
-                      } else if (tmp(4808).ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION === reason) {
+                      } else if (prototypeDefault.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION === reason) {
                         const intl = getSystemLocale.intl;
                         return intl.string(getSystemLocale.t.PrHIM5);
                       }

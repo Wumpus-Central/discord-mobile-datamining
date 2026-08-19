@@ -1,29 +1,27 @@
 // discord_app/modules/auth/native/components/RegisterDisplayName.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../unique_usernames/UniqueUsernamesStore.tsx";
+import isRateLimited from "../../../unique_usernames/UniqueUsernamesStore.tsx";
 import useRegistrationUIStore from "../RegistrationUIStore.tsx";
 import RegistrationTransitionActionTypes from "../../RegistrationConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ updateRegistrationOptions: closure_8, useRegistrationUIStore: c9 } = useRegistrationUIStore);
 ({ RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: unpackModuleId } = RegistrationTransitionActionTypes);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { globalName: null, button: null, page: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_24 };
+const createCacheKey = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { flex: 1 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let closure_15 = ["discord", "hypesquad", "snowsgiving", "system message", "system mesage", "sustem mesage", "sustem message"];
 let closure_16 = ["everyone", "here"];
-let obj1 = { marginTop: ThemesDefault.space.PX_24 };
-let result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterDisplayName.tsx");
+let result = require("obj132").fileFinishedImporting("modules/auth/native/components/RegisterDisplayName.tsx");
 
 export default function RegisterDisplayName() {
   const tmp = callback3();
@@ -32,7 +30,7 @@ export default function RegisterDisplayName() {
   _require = navigation;
   const tmp7 = context(callback.useState(false), 2);
   importDefault = tmp7[1];
-  let tmp4 = importDefault(str[11])();
+  const tmp4 = importDefault(str[11])();
   const tmp9 = context(callback.useState(() => {
     str = state.getState().registrationOptions.globalName;
     if (str == null) {
@@ -40,7 +38,6 @@ export default function RegisterDisplayName() {
     }
     return str;
   }), 2);
-  str = tmp9[0];
   callback = tmp9[1];
   const tmp10 = (function getGlobalNameError(str) {
     if (closure_16.includes(str)) {
@@ -50,30 +47,26 @@ export default function RegisterDisplayName() {
       for (const item10009 of closure_15) {
         let formatted = arg0.toLowerCase();
         if (formatted.includes(item10009)) {
-          let tmp3 = options;
-          let tmp4 = str;
           let intl = options(str[10]).intl;
-          let tmp6 = obj;
           let stringResult = intl.string(options(str[10]).t.WeJZyy);
           obj.return();
           return stringResult;
         }
       }
     }
-  })(str);
+  })(tmp9[0]);
   context = callback.useContext(_require(str[13]).TrackRegistrationContext);
   const tmp8 = callback2((errors) => errors.errors);
   obj1 = _require(str[15]);
-  importDefault(str[14])(obj1.getPreviousRegistrationTransitionStep(_require(str[16]).AuthStates.REGISTER_DISPLAY_NAME));
-  const tmp12 = importDefault(str[14]);
-  importDefault(str[17])(_require(str[16]).AuthStates.REGISTER_DISPLAY_NAME);
+  importDefault(tmp9[0][14])(obj1.getPreviousRegistrationTransitionStep(_require(tmp9[0][16]).AuthStates.REGISTER_DISPLAY_NAME));
+  const tmp12 = importDefault(tmp9[0][14]);
+  importDefault(tmp9[0][17])(_require(tmp9[0][16]).AuthStates.REGISTER_DISPLAY_NAME);
   const items = [context];
   const effect = callback.useEffect(() => {
     context({ step: closure_1_10.ACCOUNT_DISPLAY_NAME, actionType: closure_1_11.VIEWED });
   }, items);
   const ref = callback.useRef(null);
-  importDefault(str[18])({ inputRef: ref });
-  _require = undefined;
+  importDefault(tmp9[0][18])({ inputRef: ref });
   _require = callback((arg0) => {
     closure_0 = arg0;
     c2 = 0;
@@ -113,24 +106,24 @@ export default function RegisterDisplayName() {
               const obj2 = { step: null, actionType: null };
               obj2[0] = closure_2_10.ACCOUNT_DISPLAY_NAME;
               obj2[1] = closure_2_11.SUBMITTED;
-              closure_1_4(obj2);
+              context(obj2);
               let tmp6 = null != registrationOptions.username;
               if (tmp6) {
                 tmp6 = "" !== registrationOptions.username;
               }
               if (!tmp6) {
                 closure_1_1(true);
-                if (!closure_2_7.wasRegistrationSuggestionFetched(tmp28)) {
+                if (!closure_2_7.wasRegistrationSuggestionFetched(callback)) {
                   obj1 = callback2(str[19]);
                   c2 = 1;
                   c3 = 1;
                   let obj3 = { value: null, done: false };
-                  obj3[0] = obj1.fetchSuggestionsRegistration(tmp28);
+                  obj3[0] = obj1.fetchSuggestionsRegistration(callback);
                   return obj3;
                 }
               }
               obj3 = callback(str[15]);
-              const result = obj3.handleNextOrSubmitRegistration(callback(str[16]).AuthStates.REGISTER_DISPLAY_NAME, callback, closure_1_4);
+              const result = obj3.handleNextOrSubmitRegistration(callback(str[16]).AuthStates.REGISTER_DISPLAY_NAME, callback, context);
               c3 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             }
@@ -167,12 +160,12 @@ export default function RegisterDisplayName() {
     options.setOptions({
       headerRight() {
         const obj = { text: null, onPress: null };
-        const intl = closure_1_0(closure_1_2[10]).intl;
-        obj[0] = intl.string(closure_1_0(closure_1_2[10]).t["5Wxrcd"]);
+        const intl = closure_1_0(str[10]).intl;
+        obj[0] = intl.string(closure_1_0(str[10]).t["5Wxrcd"]);
         obj[1] = function onPress() {
           return callback(null);
         };
-        return closure_1_12(closure_1_0(closure_1_2[20]).HeaderActionButton, obj);
+        return closure_1_12(closure_1_0(str[20]).HeaderActionButton, obj);
       }
     });
   }, items2);
@@ -181,8 +174,7 @@ export default function RegisterDisplayName() {
     tmp21 = tmp10;
   }
   obj = { headerText: null, children: null };
-  const tmp14 = importDefault(str[17]);
-  const tmp22 = closure_13;
+  const tmp14 = importDefault(tmp9[0][17]);
   let intl = tmp5(tmp3[10]).intl;
   obj[0] = intl.string(_require(str[10]).t.LYIh7j);
   obj = { style: tmp.globalName, children: null };
@@ -191,7 +183,7 @@ export default function RegisterDisplayName() {
     value: str,
     onChange(str) {
       str = "";
-      closure_3(str);
+      callback(str);
     },
     returnKeyType: "next",
     onSubmitEditing() {
@@ -211,8 +203,8 @@ export default function RegisterDisplayName() {
     stringResult = intl3.string(tmp5(tmp3[10]).t.fbKwSs);
   }
   obj1[8] = stringResult;
-  obj[1] = closure_12(_require(str[23]).TextInput, obj1);
-  const items3 = [closure_12(View, obj), ];
+  obj[1] = callback(_require(str[23]).TextInput, obj1);
+  const items3 = [callback(View, obj), ];
   let obj2 = { style: tmp.button, children: null };
   let obj3 = { size: "lg", loading: tmp7[0], text: null, onPress: null, disabled: null };
   const intl4 = tmp5(tmp3[10]).intl;
@@ -225,16 +217,16 @@ export default function RegisterDisplayName() {
     tmp27 = "" === str.trim();
   }
   obj3[4] = tmp27;
-  obj2[1] = closure_12(_require(str[24]).Button, obj3);
-  items3[1] = closure_12(View, obj2);
+  obj2[1] = callback(_require(str[24]).Button, obj3);
+  items3[1] = callback(View, obj2);
   obj[1] = items3;
-  const tmp22Result = tmp22(importDefault(str[22]), obj);
+  const tmp22Result = callback2(importDefault(tmp9[0][22]), obj);
   let tmp24Result = tmp22Result;
   if (!tmp4) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.page;
     obj4[1] = tmp22Result;
-    tmp24Result = tmp24(tmp2(tmp3[25]), obj4);
+    tmp24Result = callback(tmp2(tmp3[25]), obj4);
   }
   return tmp24Result;
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/jank_stats/native/JankStatsManager.android.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import getDeviceMetadata from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
@@ -41,6 +41,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
     self._timeoutId = null;
     self.sendReport("background");
   }
+  tmp3 = state !== constants.BACKGROUND || self._isScheduledReportSent;
 };
 prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSupplemental() {
   const self = this;
@@ -51,8 +52,7 @@ prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSup
   }, 0);
 };
 prototype["scheduleReport"] = function scheduleReport() {
-  let self = this;
-  self = this;
+  const self = this;
   if (null == this._timeoutId) {
     self._isScheduledReportSent = false;
     const _setTimeout = setTimeout;
@@ -60,7 +60,7 @@ prototype["scheduleReport"] = function scheduleReport() {
       self._timeoutId = null;
       self.sendReport("timer");
       self._isScheduledReportSent = true;
-      const obj = closure_1_1(closure_1_2[2]);
+      const obj = enforcingDefault;
       if (obj != null) {
         obj.stopTracking();
       }
@@ -76,7 +76,6 @@ prototype["sendReport"] = function sendReport(background) {
   let tmp4 = null == report;
   if (!tmp4) {
     tmp4 = 0 === report.totalFrameCount && 0 === report.frameMetricsTotalFrameCount;
-    const tmp5 = 0 === report.totalFrameCount && 0 === report.frameMetricsTotalFrameCount;
   }
   if (!tmp4) {
     obj = {};
@@ -86,10 +85,9 @@ prototype["sendReport"] = function sendReport(background) {
     ({ totalFrameCount: obj3.total_frame_count, jankFrameCount: obj3.jank_frame_count, frameMetricsTotalFrameCount: obj3.frame_metrics_total_frame_count, frameMetricsJankFrameCount: obj3.frame_metrics_jank_frame_count } = report);
     obj.trigger = background;
     tmpResult.track(constants2.ANDROID_JANK_STATS, obj);
-    const obj4 = getDeviceMetadata;
   }
 };
 const jankStatsManager = new JankStatsManager();
-let result = set.fileFinishedImporting("modules/jank_stats/native/JankStatsManager.android.tsx");
+let result = obj132.fileFinishedImporting("modules/jank_stats/native/JankStatsManager.android.tsx");
 
 export default jankStatsManager;

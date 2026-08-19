@@ -1,20 +1,19 @@
 // discord_app/modules/messages/MessageConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import importDefaultResult from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 
 const ChannelStreamTypes = ME.ChannelStreamTypes;
-let obj = { timeout: null, backoff: null, retries: 8 };
-obj = { response: null, deadline: null };
+const obj = { response: null, deadline: null };
 const frozen = Object.freeze({ referencedAvatarProfile: false, referencedUsernameProfile: false, interactionAvatarProfile: false, interactionUsernameProfile: false, interactionData: false, avatarProfile: false, usernameProfile: false, emojiPicker: false, emojiBurstPicker: false, moreUtilities: false, contextMenu: false });
-obj[0] = 10 * setDefault.Millis.SECOND;
-obj[1] = setDefault.Millis.MINUTE;
+obj[0] = 10 * obj132Default.Millis.SECOND;
+obj[1] = obj132Default.Millis.MINUTE;
 obj[0] = obj;
-const result = 0.5 * setDefault.Millis.SECOND;
-importDefaultResult = new importDefaultResult(result, 60 * setDefault.Millis.SECOND);
+const result = 0.5 * obj132Default.Millis.SECOND;
+importDefaultResult = new importDefaultResult(result, 60 * obj132Default.Millis.SECOND);
 obj[1] = importDefaultResult;
-const result1 = set.fileFinishedImporting("modules/messages/MessageConstants.tsx");
+const result1 = obj132.fileFinishedImporting("modules/messages/MessageConstants.tsx");
 
 export const MESSAGE_GROUP_SPACING = [0, 4, 8, 16, 24];
 export const DEFAULT_COZY_SPACING = 16;

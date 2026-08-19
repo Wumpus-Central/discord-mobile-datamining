@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/DmsHappeningNowCardsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
@@ -14,15 +14,6 @@ const toggle = createToggle.createToggle({
   useValue: explicitContentFromProto.HappeningNowCardsDisabled.useSetting,
   onValueChange: explicitContentFromProto.HappeningNowCardsDisabled.updateSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.cSb1ub);
-  },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: explicitContentFromProto.HappeningNowCardsDisabled.useSetting,
-  onValueChange: explicitContentFromProto.HappeningNowCardsDisabled.updateSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DmsHappeningNowCardsSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/DmsHappeningNowCardsSetting.tsx");
 
 export default toggle;

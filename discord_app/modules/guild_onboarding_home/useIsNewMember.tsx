@@ -1,41 +1,39 @@
 // discord_app/modules/guild_onboarding_home/useIsNewMember.tsx
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import closure_3 from "../impersonate/ImpersonateStore.tsx";
-import closure_4 from "../../stores/GuildMemberStore.tsx";
+import initialize from "../impersonate/ImpersonateStore.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
 import { GuildMemberFlags } from "../guild_member/GuildMemberConstants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/useIsNewMember.tsx");
 
 export default function useIsNewMember(arg0) {
   const _require = arg0;
   const items = [closure_4, closure_3];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let flag = true;
     if (!closure_1_3.isFullServerPreview(callback)) {
-      const selfMember = obj.getSelfMember(tmp);
+      const selfMember = closure_1_4.getSelfMember(callback);
       flag = false;
       if (null != selfMember) {
-        const selfMemberJoinedAt = obj.getSelfMemberJoinedAt(tmp);
+        const selfMemberJoinedAt = closure_1_4.getSelfMemberJoinedAt(callback);
         let tmp4 = null != selfMemberJoinedAt;
         if (tmp4) {
           let num = selfMember.flags;
           if (num == null) {
             num = 0;
           }
-          const hasFlagResult = callback(closure_1_2[3]).hasFlag(num, closure_1_5.COMPLETED_HOME_ACTIONS);
+          const hasFlagResult = callback(dependencyMap[3]).hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
           let tmp9 = !hasFlagResult;
           if (!hasFlagResult) {
             const _Date = Date;
             const timestamp = Date.now();
             const diff = timestamp - selfMemberJoinedAt.getTime();
-            tmp9 = diff < closure_1_1(tmp6[4]).Millis.WEEK;
+            tmp9 = diff < obj132Default.Millis.WEEK;
           }
           tmp4 = tmp9;
-          const obj3 = callback(closure_1_2[3]);
-          tmp6 = closure_1_2;
+          const obj3 = callback(dependencyMap[3]);
         }
         flag = tmp4;
       }
@@ -46,10 +44,10 @@ export default function useIsNewMember(arg0) {
 export const getIsNewMember = function getIsNewMember(closure_0) {
   let flag = true;
   if (!fullServerPreview.isFullServerPreview(closure_0)) {
-    const selfMember = obj.getSelfMember(closure_0);
+    const selfMember = store.getSelfMember(closure_0);
     flag = false;
     if (null != selfMember) {
-      const selfMemberJoinedAt = obj.getSelfMemberJoinedAt(closure_0);
+      const selfMemberJoinedAt = store.getSelfMemberJoinedAt(closure_0);
       let tmp3 = null != selfMemberJoinedAt;
       if (tmp3) {
         let num = selfMember.flags;
@@ -62,10 +60,9 @@ export const getIsNewMember = function getIsNewMember(closure_0) {
           const _Date = Date;
           const timestamp = Date.now();
           const diff = timestamp - selfMemberJoinedAt.getTime();
-          tmp8 = diff < setDefault.Millis.WEEK;
+          tmp8 = diff < obj132Default.Millis.WEEK;
         }
         tmp3 = tmp8;
-        const obj3 = hasFlag;
       }
       flag = tmp3;
     }

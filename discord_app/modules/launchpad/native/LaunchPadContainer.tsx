@@ -3,15 +3,14 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import LAUNCH_PAD_SPRING_CONFIG from "LaunchPadConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 ({ LAUNCH_PAD_SPRING_CONFIG: c4, LaunchPadTypes: c5 } = LAUNCH_PAD_SPRING_CONFIG);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { wrapper: null, container: null };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = "transparent";
 createCacheKey[0] = createCacheKey;
@@ -23,16 +22,14 @@ let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = { code: "function LaunchPadContainerTsx1(){const{windowDimensions}=this.__closure;return windowDimensions.get().height;}" };
 let closure_10 = { code: "function LaunchPadContainerTsx2(height,lastHeight){const{updaters}=this.__closure;if(lastHeight==null)return;if(lastHeight<=height)return;updaters.onWindowHeightChange();}" };
 let closure_11 = { code: "function LaunchPadContainerTsx3(){const{interpolate,launchPadSharedState,withSpring,windowDimensions,LAUNCH_PAD_SPRING_CONFIG}=this.__closure;return{borderRadius:interpolate(launchPadSharedState.get(),[0,1],[0,16]),transform:[{scale:withSpring(interpolate(launchPadSharedState.get(),[0,1],[1,(windowDimensions.get().width-16*3)/windowDimensions.get().width]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')},{translateY:withSpring(interpolate(launchPadSharedState.get(),[0,1],[0,-4]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')}]};}" };
-const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadContainer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/launchpad/native/LaunchPadContainer.tsx");
 
 export default function LaunchPadContainer(children) {
-  let launchPadSharedState;
   updaters = undefined;
-  dependencyMap = undefined;
   const tmp = callback2();
   const tmp4 = updaters(10666)();
   const tmp5 = updaters(16179)();
-  launchPadSharedState = tmp5.launchPadSharedState;
+  const launchPadSharedState = tmp5.launchPadSharedState;
   ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp5);
   ({ gesture, gestureRef } = updaters(16181)({ launchPadType: tmp4, launchPadSharedState, launchPadPullTabState, launchPadShown, gestureState, updaters }));
   const tmp7 = updaters(11155)();
@@ -57,8 +54,8 @@ export default function LaunchPadContainer(children) {
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
   obj1 = launchPadSharedState(4115);
   const fn3 = function v() {
-    let obj = { borderRadius: launchPadSharedState(store[9]).interpolate(launchPadSharedState.get(), [0, 1], [0, 16]), transform: null };
-    obj = { scale: null };
+    { borderRadius: launchPadSharedState(store[9]).interpolate(launchPadSharedState.get(), [0, 1], [0, 16]), transform: null };
+    let obj = { scale: null };
     const obj2 = launchPadSharedState(store[9]);
     const obj4 = launchPadSharedState(store[10]);
     const value = launchPadSharedState.get();
@@ -93,11 +90,11 @@ export default function LaunchPadContainer(children) {
     obj3[3] = launchPadSharedState;
     obj3[4] = launchPadPullTabState;
     obj3[5] = updaters;
-    const tmp10Result = tmp10(updaters(16182), obj3);
+    const tmp10Result = callback(updaters(16182), obj3);
   }
   items1[1] = tmp10Result;
   obj2[1] = items1;
-  obj1[1] = closure_7(closure_3, obj2);
+  obj1[1] = callback(closure_3, obj2);
   obj[1] = callback(launchPadSharedState(6377).GestureDetector, obj1);
   return callback(updaters(15274).Provider, obj);
 };

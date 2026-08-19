@@ -1,16 +1,17 @@
 // discord_app/modules/nuf/native/components/notification/RedesignNotificationModal.tsx
+import expandEventPropertiesDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import NewUserPermissionsOnboardingDefault from "../NewUserPermissionsOnboarding.android.tsx";
 import registerAssetDefault from "../../../../../../_runtime/15266_registerAsset.js";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { PermissionStateType } from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
 import EventActionType from "NotificationPermissionConstants.tsx";
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 class RedesignNotificationModal {
   constructor(arg0) {
     onComplete = global.onComplete;
@@ -20,7 +21,7 @@ class RedesignNotificationModal {
     items1 = [];
     items1[0] = onComplete;
     callback = closure_3.useCallback(() => {
-      const pushNotificationPermission = onComplete(closure_1_2[8]).requestPushNotificationPermission(closure_1_8.ALLOW_TO_REQUEST, closure_1_7.ALERT, () => {
+      const pushNotificationPermission = onComplete(dependencyMap[8]).requestPushNotificationPermission(closure_1_8.ALLOW_TO_REQUEST, closure_1_7.ALERT, () => {
         if (closure_0 != null) {
           tmp();
         }
@@ -28,12 +29,11 @@ class RedesignNotificationModal {
     }, items);
     obj = { style: tmp.container, children: null };
     callback1 = closure_3.useCallback(() => {
-      let obj = closure_1_1(closure_1_2[9]);
-      obj = { action_type: closure_1_8.SKIP_STEP, action_location: closure_1_7.ALERT };
-      obj.track(closure_1_9.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
-      const result = onComplete(closure_1_2[10]).setPushPermissionState(closure_1_6.PROMPT_SKIPPED);
-      const obj3 = onComplete(closure_1_2[10]);
-      const result1 = onComplete(closure_1_2[8]).enableProvisionalPushNotification();
+      const obj = { action_type: closure_1_8.SKIP_STEP, action_location: closure_1_7.ALERT };
+      obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
+      const result = onComplete(dependencyMap[10]).setPushPermissionState(PermissionStateType.PROMPT_SKIPPED);
+      const obj3 = onComplete(dependencyMap[10]);
+      const result1 = onComplete(dependencyMap[8]).enableProvisionalPushNotification();
       if (onComplete != null) {
         tmp4(true);
       }
@@ -53,14 +53,13 @@ class RedesignNotificationModal {
 }
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ EventActionLocation: error, EventActionType: closure_8 } = EventActionType);
-createCacheKey = { container: null, notificationHeaderImage: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: -ThemesDefault.space.PX_48 };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: -ThemesDefault.space.PX_48 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", alignSelf: "center", zIndex: 2, top: -140, height: 156, width: 150 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/RedesignNotificationModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/nuf/native/components/notification/RedesignNotificationModal.tsx");
 
 export default RedesignNotificationModal;
 export const RedesignNotificationScreen = function RedesignNotificationScreen(onComplete) {
-  return <RedesignNotificationModal onComplete={arg0.route.params.onComplete} />;
+  return <RedesignNotificationModal onComplete={onComplete.route.params.onComplete} />;
 };

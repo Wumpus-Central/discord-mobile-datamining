@@ -1,8 +1,8 @@
 // discord_app/utils/web/WindowInteractingUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
 let c0 = null;
-const result = set.fileFinishedImporting("utils/web/WindowInteractingUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/web/WindowInteractingUtils.tsx");
 
 export const INTERACTION_EVENTS = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"];
 export function getCurrentlyInteractingWindowId() {

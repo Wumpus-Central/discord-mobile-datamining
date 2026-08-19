@@ -1,8 +1,8 @@
 // discord_app/actions/PermissionActionCreators.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import dispatcherDefault from "../Dispatcher.tsx";
 
-const result = set.fileFinishedImporting("actions/PermissionActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/PermissionActionCreators.tsx");
 
 export default {
   clearVADWarning() {
@@ -19,16 +19,14 @@ export default {
     dispatcherDefault.dispatch({ type: "PERMISSION_CLEAR_PTT_ADMIN_WARNING" });
   },
   requestElevatedProcess(pid) {
-    let obj = dispatcherDefault;
-    obj = { type: "PERMISSION_REQUEST_ELEVATED_PROCESS", pid };
+    const obj = { type: "PERMISSION_REQUEST_ELEVATED_PROCESS", pid };
     obj.dispatch(obj);
   },
   clearElevatedProcess() {
     dispatcherDefault.dispatch({ type: "PERMISSION_CLEAR_ELEVATED_PROCESS" });
   },
   continueNonelevatedProcess(pid) {
-    let obj = dispatcherDefault;
-    obj = { type: "PERMISSION_CONTINUE_NONELEVATED_PROCESS", pid };
+    const obj = { type: "PERMISSION_CONTINUE_NONELEVATED_PROCESS", pid };
     obj.dispatch(obj);
   }
 };

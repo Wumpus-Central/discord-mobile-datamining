@@ -1,15 +1,15 @@
 // discord_app/modules/collectibles/records/CollectiblesItemRecord.tsx
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import closure_2 from "AvatarDecorationRecord.tsx";
-import closure_3 from "NameplateRecord.tsx";
-import closure_4 from "ProfileEffectRecord.tsx";
-import closure_5 from "ProfileFrameRecord.tsx";
-import closure_6 from "UnknownCollectiblesItemRecord.tsx";
+import fromServer from "AvatarDecorationRecord.tsx";
+import fromServer2 from "NameplateRecord.tsx";
+import fromServer3 from "ProfileEffectRecord.tsx";
+import fromServer4 from "ProfileFrameRecord.tsx";
+import fromServer5 from "UnknownCollectiblesItemRecord.tsx";
 import ME from "../../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ SKUProductLines: error, SKUTypes: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");
 function transformSKUToCollectiblesItem(productLine) {
   if (productLine.productLine === constants.COLLECTIBLES) {
     if (productLine.type === constants2.BUNDLE) {
@@ -20,7 +20,6 @@ function transformSKUToCollectiblesItem(productLine) {
       }
       const tmp32 = bundledSkus[Symbol.iterator]();
       while (tmp32 !== undefined) {
-        let tmp36 = transformSKUToCollectiblesItem;
         let tmp37 = transformSKUToCollectiblesItem(tmp34);
         let type;
         let tmp38 = tmp37;
@@ -28,7 +27,6 @@ function transformSKUToCollectiblesItem(productLine) {
           type = tmp37.type;
         }
         if ("single" === type) {
-          let tmp40 = tmp37;
           let arr = items.push(tmp38.item);
         }
         continue;
@@ -60,7 +58,7 @@ function transformSKUToCollectiblesItem(productLine) {
           const tmp28 = new closure_2(obj1);
           obj[1] = tmp28;
           return obj;
-        } else if (tmp4(1949).CollectiblesItemType.NAMEPLATE === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
           const obj2 = { type: "single", item: null };
           const obj3 = { skuId: null, type: null, asset: null, label: null, palette: null };
           obj3[0] = productLine.id;
@@ -68,7 +66,7 @@ function transformSKUToCollectiblesItem(productLine) {
           const tmp22 = new closure_3(obj3);
           obj2[1] = tmp22;
           return obj2;
-        } else if (tmp4(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
           const obj4 = { skuId: null, type: null, title: null, description: null, thumbnailPreviewSrc: null, reducedMotionSrc: null, effects: null, accessibilityLabel: null, animationType: null, staticFrameSrc: null };
           obj4[0] = productLine.id;
           ({ type: obj3[1], title: obj3[2], description: obj3[3], thumbnailPreviewSrc: obj3[4], reducedMotionSrc: obj3[5], effects } = item);
@@ -82,7 +80,7 @@ function transformSKUToCollectiblesItem(productLine) {
           tmp12 = new tmp12(obj4);
           obj5[1] = tmp12;
           return obj5;
-        } else if (tmp4(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
           obj = { type: "single", item: null };
           const obj6 = { skuId: null, type: null, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
           obj6[0] = productLine.id;
@@ -100,20 +98,20 @@ export const createCollectiblesItemsFromServerResponse = function createCollecti
   if (null == arr) {
     let items = [];
   } else {
-    items = arr.reduce((arr, type) => {
-      type = type.type;
+    items = arr.reduce((acc, item, index) => {
+      const type = item.type;
       if (callback(table[6]).CollectiblesItemType.AVATAR_DECORATION === type) {
-        arr.push(closure_2.fromServer(type));
-      } else if (tmp(tmp2[6]).CollectiblesItemType.NAMEPLATE === type) {
-        arr.push(closure_3.fromServer(type));
-      } else if (tmp(tmp2[6]).CollectiblesItemType.PROFILE_EFFECT === type) {
-        arr.push(closure_4.fromServer(type));
-      } else if (tmp(tmp2[6]).CollectiblesItemType.PROFILE_FRAME === type) {
-        arr.push(closure_5.fromServer(type));
+        acc.push(closure_2.fromServer(item));
+      } else if (callback(table[6]).CollectiblesItemType.NAMEPLATE === type) {
+        acc.push(closure_3.fromServer(item));
+      } else if (callback(table[6]).CollectiblesItemType.PROFILE_EFFECT === type) {
+        acc.push(closure_4.fromServer(item));
+      } else if (callback(table[6]).CollectiblesItemType.PROFILE_FRAME === type) {
+        acc.push(closure_5.fromServer(item));
       } else {
-        arr.push(closure_6.fromServer(type));
+        acc.push(closure_6.fromServer(item));
       }
-      return arr;
+      return acc;
     }, []);
   }
   return items;

@@ -2,11 +2,11 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import _modDef8561 from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["w/qqKK"]);
@@ -29,6 +29,6 @@ createToggle = {
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
 
 export default createToggle;

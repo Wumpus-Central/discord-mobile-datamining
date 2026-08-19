@@ -5,9 +5,9 @@ import Text from "../../../../../design/components/Text/native/Text.tsx";
 import styles from "TwoWayLinkStyles.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx");
 
 export const TwoWayLinkStepHeader = function TwoWayLinkStepHeader(arg0) {
   ({ idx, total } = arg0);

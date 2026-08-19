@@ -10,17 +10,16 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { padding: 16, paddingBottom: 64 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemButtonGroup.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemButtonGroup.tsx");
 
 export default function UserSettingsDesignSystemButtonGroup() {
-  let obj = { children: null };
-  obj = { style: callback3().container, children: null };
-  obj = { spacing: 24, children: null };
+  { style: callback3().container, children: null };
+  const obj = { spacing: 24, children: null };
   obj1 = { children: null };
   const obj2 = { children: null };
   const items = [callback(Text.Text, { variant: "text-lg/bold", children: "Text Button Example" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "By default, stacks buttons vertically. This is best for buttons with text." }), ];
@@ -61,28 +60,6 @@ export default function UserSettingsDesignSystemButtonGroup() {
     }),
 
   ];
-  const obj4 = {
-    text: "Agree",
-    variant: "primary",
-    onPress() {
-
-    }
-  };
-  const obj5 = {
-    text: "Cancel",
-    variant: "secondary",
-    onPress() {
-
-    }
-  };
-  const obj9 = {
-    accessibilityLabel: "Settings",
-    variant: "secondary",
-    icon: registerAssetDefault,
-    onPress() {
-
-    }
-  };
   items4[1] = callback(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
@@ -111,22 +88,6 @@ export default function UserSettingsDesignSystemButtonGroup() {
     }),
 
   ];
-  const obj10 = {
-    accessibilityLabel: "Settings",
-    variant: "secondary",
-    icon: registerAssetDefault,
-    onPress() {
-
-    }
-  };
-  const obj14 = {
-    text: "Search",
-    variant: "secondary",
-    grow: true,
-    onPress() {
-
-    }
-  };
   items6[1] = callback(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",

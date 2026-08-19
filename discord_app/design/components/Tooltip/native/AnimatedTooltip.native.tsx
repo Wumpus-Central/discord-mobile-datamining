@@ -2,12 +2,12 @@
 import _modDef4115 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import Tooltip from "Tooltip.native.tsx";
 import AnimatedRenderItemDefault from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function renderTooltipItem(arg0, arg1) {
   let obj = { style: items, pointerEvents: "box-none", children: null };
   items = [arg1, StyleSheet.absoluteFill];
@@ -15,17 +15,16 @@ function renderTooltipItem(arg0, arg1) {
   if (null != arg0) {
     obj = {};
     const merged = Object.assign(arg0);
-    tmpResult = tmp(Tooltip.Tooltip, obj);
+    tmpResult = jsx(Tooltip.Tooltip, {});
   }
   obj[2] = tmpResult;
   return jsx(_modDef4115.View, { style: items, pointerEvents: "box-none", children: null });
 }
-let result = require("set").fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");
 
 export const AnimatedTooltip = function AnimatedTooltip(visible) {
   visible = visible.visible;
   const merged = Object.assign(visible, Object.create(null));
-  importDefault = undefined;
   let obj = visible(9274);
   const result = obj.tooltipEnterExitAnimation(merged.position);
   const tmp3 = callback(React.useState(false), 2);

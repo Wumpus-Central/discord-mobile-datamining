@@ -3,22 +3,24 @@ import applyDefault from "../../../../../_runtime/00012_apply.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
+import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import CirclePlusIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../GuildRoleMemberCountStore.tsx";
-import closure_6 from "../GuildSettingsRolesStore.tsx";
+import getRoleMemberCount from "../../GuildRoleMemberCountStore.tsx";
+import handleSetSection from "../GuildSettingsRolesStore.tsx";
 import { HelpdeskArticles } from "../../../../Constants.tsx";
 import OperatorTypes from "../../../connections/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function HeaderSection(arg0) {
   ({ clearConnections, locked, hasConnections, hasMembers } = arg0);
   const tmp = callback2();
@@ -35,7 +37,7 @@ function HeaderSection(arg0) {
     obj[2] = intl.string(getSystemLocale.t["2aFeef"]);
     items[1] = callback(Text.Text, obj);
     obj[1] = items;
-    tmp2Result = tmp2(View, obj);
+    tmp2Result = callback2(View, obj);
   }
   const items1 = [tmp2Result, ];
   obj1 = { style: tmp.headerTitleContainer, children: null };
@@ -49,25 +51,25 @@ function HeaderSection(arg0) {
     obj3[1] = clearConnections;
     obj3[2] = locked;
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
-    const intl3 = tmp10(1236).intl;
-    obj4[2] = intl3.string(tmp10(1236).t.ntW1cc);
-    obj3[3] = tmp13(tmp10(4734).Text, obj4);
-    tmp13Result = tmp13(tmp10(5433).PressableOpacity, obj3);
+    const intl3 = getSystemLocale.intl;
+    obj4[2] = intl3.string(getSystemLocale.t.ntW1cc);
+    obj3[3] = callback(Text.Text, obj4);
+    tmp13Result = callback(PressableBase.PressableOpacity, obj3);
   }
   const obj5 = { children: null };
   const obj6 = { children: null };
   items2[1] = tmp13Result;
   obj1[1] = items2;
-  const items3 = [closure_11(View, obj1), ];
+  const items3 = [callback2(View, obj1), ];
   const obj7 = { variant: "text-sm/medium", children: null };
-  const intl4 = tmp10(1236).intl;
+  const intl4 = getSystemLocale.intl;
   const obj8 = { helpdeskArticleUrl: combinedDefault.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN) };
   obj7[1] = intl4.format(getSystemLocale.t.q5f7tK, obj8);
   items3[1] = callback(Text.Text, obj7);
   obj6[0] = items3;
-  items1[1] = closure_11(Stack.Stack, obj6);
+  items1[1] = callback2(Stack.Stack, obj6);
   obj5[0] = items1;
-  return closure_11(closure_12, obj5);
+  return callback2(closure_12, obj5);
 }
 function AndOrRadios(setPendingRoleConfigurations) {
   ({ locked, roleConnectionConfigurations } = setPendingRoleConfigurations);
@@ -85,30 +87,30 @@ function AndOrRadios(setPendingRoleConfigurations) {
     let obj = applyDefault;
     const values = Object.values(obj.groupBy(roleConnectionConfigurations, (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId));
     obj = { title: null, value: null, onChange: null, hasIcons: false, children: null };
-    const intl = tmp(1236).intl;
-    obj[0] = intl.string(tmp(1236).t.Xs7PHX);
+    const intl = roleConnectionConfigurations(1236).intl;
+    obj[0] = intl.string(roleConnectionConfigurations(1236).t.Xs7PHX);
     obj[1] = setPendingRoleConfigurations.currentOperator;
     obj[2] = function onChange(arg0) {
       callback(roleConnectionConfigurations, arg0);
     };
     obj = { value: null, label: null, disabled: null };
-    obj[0] = tmp(5224).ConnectionConfigurationRuleOperator.OR;
-    const intl2 = tmp(1236).intl;
-    obj[1] = intl2.string(tmp(1236).t.W3iY58);
+    obj[0] = roleConnectionConfigurations(5224).ConnectionConfigurationRuleOperator.OR;
+    const intl2 = roleConnectionConfigurations(1236).intl;
+    obj[1] = intl2.string(roleConnectionConfigurations(1236).t.W3iY58);
     let tmp11 = locked;
     if (!locked) {
       tmp11 = values.length < 2;
     }
     obj[2] = tmp11;
-    const items2 = [closure_10(tmp(8100).TableRadioRow, obj), ];
+    const items2 = [callback(roleConnectionConfigurations(8100).TableRadioRow, obj), ];
     obj1 = { value: null, label: null, disabled: null };
-    obj1[0] = tmp(5224).ConnectionConfigurationRuleOperator.AND;
-    const intl3 = tmp(1236).intl;
-    obj1[1] = intl3.string(tmp(1236).t.gHXS9A);
+    obj1[0] = roleConnectionConfigurations(5224).ConnectionConfigurationRuleOperator.AND;
+    const intl3 = roleConnectionConfigurations(1236).intl;
+    obj1[1] = intl3.string(roleConnectionConfigurations(1236).t.gHXS9A);
     obj1[2] = locked;
-    items2[1] = closure_10(tmp(8100).TableRadioRow, obj1);
+    items2[1] = callback(roleConnectionConfigurations(8100).TableRadioRow, obj1);
     obj[4] = items2;
-    return closure_11(tmp(8101).TableRadioGroup, obj);
+    return callback2(roleConnectionConfigurations(8101).TableRadioGroup, obj);
   }
 }
 function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integrations) {
@@ -120,23 +122,20 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
     const items = [];
     for (const item10006 of iter) {
       let obj = {};
-      let tmp = obj;
-      let tmp2 = item10006;
       let merged = Object.assign(item10006);
       let arr = items.push(obj);
       continue;
     }
     if (null == arg0) {
-      iter = iter[arg1];
-      if (null !== iter) {
+      if (null !== iter[arg1]) {
         if (null == iter.connectionMetadataField) {
           if (null == iter.operator) {
             if (null == iter.value) {
-              let found = items.filter((connectionType) => {
+              let found = items.filter((item, index) => {
                 if (null == iter.applicationId) {
-                  let tmp2 = connectionType.connectionType !== tmp.connectionType;
+                  let tmp2 = item.connectionType !== iter.connectionType;
                 } else {
-                  tmp2 = connectionType.connectionType !== tmp.connectionType || connectionType.applicationId !== tmp.applicationId;
+                  tmp2 = item.connectionType !== iter.connectionType || item.applicationId !== iter.applicationId;
                 }
                 return tmp2;
               });
@@ -159,34 +158,32 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
     callback(found);
   }
   const map = new Map();
-  const item = memo.forEach((connectionType) => {
-    const combined = "" + connectionType.connectionType + ":" + connectionType.applicationId;
+  const item = memo.forEach((item, index) => {
+    const combined = "" + item.connectionType + ":" + item.applicationId;
     let obj = map;
     if (map.has(combined)) {
       const value = obj.get(combined);
       if (value != null) {
         obj = { index: null, configuration: null };
-        obj[0] = arg1;
-        obj[1] = connectionType;
+        obj[0] = index;
+        obj[1] = item;
         value.push(obj);
       }
     } else {
       obj = { index: null, configuration: null };
-      obj[0] = arg1;
-      obj[1] = connectionType;
+      obj[0] = index;
+      obj[1] = item;
       const items = [obj];
       const result = obj.set(combined, items);
     }
   });
   const values = map.values();
-  let iter = values[Symbol.iterator]();
+  const iter = values[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let arr = nextResult;
-    if (!nextResult.some((configuration) => null == configuration.configuration.connectionMetadataField && null == configuration.configuration.operator && null == configuration.configuration.value)) {
+    if (!nextResult.some((item, index) => null == item.configuration.connectionMetadataField && null == item.configuration.operator && null == item.configuration.value)) {
       let obj = {};
-      let tmp3 = nextResult;
-      let tmp4 = obj;
       let merged = Object.assign(arr[0].configuration);
       obj.connectionMetadataField = undefined;
       obj.operator = undefined;
@@ -200,8 +197,8 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
   }
   obj1 = { spacing: ThemesDefault.space.PX_24, children: null };
   arr = Array.from(map.values());
-  obj1[1] = arr.map((configurationItems) => closure_1_10(callback(locked[19]), { configurationItems, onConfigurationChange: handleConfigurationChange, locked, integrations: closure_3 }, configurationItems[0].configuration.connectionType + ":" + configurationItems[0].index));
-  return callback(_Stack.Stack, obj1);
+  obj1[1] = arr.map((item, index) => closure_1_10(callback(locked[19]), { configurationItems: item, onConfigurationChange: handleConfigurationChange, locked, integrations: closure_3 }, item[0].configuration.connectionType + ":" + item[0].index));
+  return callback(require("../../../../design/components/Stack/native/Stack.native.tsx").Stack, obj1);
 }
 function AddConnectionButton(locked) {
   ({ handleConnectionTapped: require, excludedConnections: importDefault, excludedApplications: dependencyMap, roleId: closure_3, integrations: View, gameApplicationIds: closure_5 } = locked);
@@ -211,8 +208,7 @@ function AddConnectionButton(locked) {
   obj[2] = callback(CirclePlusIcon.CirclePlusIcon, { size: "sm" });
   obj[3] = locked.locked;
   obj[4] = function onPress() {
-    let obj = closure_1_1(closure_1_2[22]);
-    obj = {
+    const obj = {
       addConnection(arg0) {
         return callback(arg0, undefined);
       },
@@ -231,22 +227,21 @@ function AddConnectionButton(locked) {
       tmp3 = null;
     }
     obj[5] = tmp3;
-    obj[6] = function onCompleteIdentityApplication(arg0) {
-      return callback(closure_1_9, arg0);
+    obj[6] = function onCompleteIdentityApplication(closure_0) {
+      return callback(closure_1_9, closure_0);
     };
-    obj.openLazy(closure_1_0(closure_1_2[24])(closure_1_2[23], closure_1_2.paths), combined, obj);
+    obj.openLazy(asyncRequireImpl(dependencyMap[23], dependencyMap.paths), combined, obj);
   };
   return callback(Button.Button, obj);
 }
 ({ GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: c9 } = OperatorTypes);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-createCacheKey = { formContent: { paddingTop: 16, paddingBottom: 0 }, warningContainer: null, warningText: null, headerTitleContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", padding: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: ThemesDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: ThemesDefault.radii.xs };
+const createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", padding: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: ThemesDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, marginLeft: 10 };
 createCacheKey[3] = { display: "flex", flexDirection: "row", justifyContent: "space-between" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionsControls.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionsControls.tsx");
 
 export default function GuildSettingsRolesEditConnectionsControls(guild) {
   guild = guild.guild;
@@ -291,8 +286,8 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
       let flatResult = stateFromStoresArray.flat();
     } else {
       if (null != stateFromStoresArray) {
-        if (arr.length > 0) {
-          flatResult = arr[0];
+        if (stateFromStoresArray.length > 0) {
+          flatResult = stateFromStoresArray[0];
         }
       }
       flatResult = [];
@@ -300,19 +295,19 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
     return flatResult;
   }, items3);
   const items4 = [memo];
-  const memo1 = AND.useMemo(() => new Set(memo.map((connectionType) => connectionType.connectionType)), items4);
+  const memo1 = AND.useMemo(() => new Set(memo.map((item, index) => item.connectionType)), items4);
   const items5 = [memo];
   const memo2 = AND.useMemo(() => {
-    const mapped = memo.map((applicationId) => {
-      let str = applicationId.applicationId;
+    const mapped = memo.map((item, index) => {
+      let str = item.applicationId;
       if (str == null) {
         str = "";
       }
       return str;
     });
-    return new Set(mapped.filter((arg0) => "" !== arg0));
+    return new Set(mapped.filter((item, index) => "" !== item));
   }, items5);
-  obj = { contentContainerStyle: callback2().formContent, keyboardShouldPersistTaps: "handled", children: null };
+  { contentContainerStyle: callback2().formContent, keyboardShouldPersistTaps: "handled", children: null };
   obj = { spacing: role(tmp3[8]).space.PX_24, children: null };
   obj1 = {
     clearConnections() {
@@ -326,7 +321,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
     num = 0;
   }
   obj1[3] = num > 0;
-  const items6 = [closure_10(HeaderSection, obj1), , , ];
+  const items6 = [callback(HeaderSection, obj1), , , ];
   let tmp10Result = null;
   if (memo1.size > 0) {
     obj2 = { locked: null, currentOperator: null, roleConnectionConfigurations: null, setPendingRoleConfigurations: null };
@@ -345,9 +340,11 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
       } else {
         const _Object = Object;
         const result = obj.updateRoleConnectionConfigurations(role.id, Object.values(role(stateFromStoresArray[10]).groupBy(arg0, (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId)));
+        const obj2 = role(stateFromStoresArray[10]);
       }
+      obj = guild(stateFromStoresArray[29]);
     };
-    tmp10Result = tmp10(AndOrRadios, obj2);
+    tmp10Result = callback(AndOrRadios, obj2);
   }
   items6[1] = tmp10Result;
   let tmp15 = null;
@@ -365,7 +362,9 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
       } else {
         const _Object = Object;
         const result = obj.updateRoleConnectionConfigurations(role.id, Object.values(role(stateFromStoresArray[10]).groupBy(arg0, (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId)));
+        const obj2 = role(stateFromStoresArray[10]);
       }
+      obj = guild(stateFromStoresArray[29]);
     }, locked, 0, integrations);
   }
   items6[2] = tmp15;
@@ -386,7 +385,9 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
       } else {
         const _Object = Object;
         const result = obj2.updateRoleConnectionConfigurations(role.id, Object.values(role(stateFromStoresArray[10]).groupBy(items, (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId)));
+        const obj3 = role(stateFromStoresArray[10]);
       }
+      obj2 = guild(stateFromStoresArray[29]);
     },
     excludedConnections: memo1,
     excludedApplications: memo2,
@@ -402,8 +403,8 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   }
   obj3[5] = gameApplicationIds;
   obj3[6] = locked;
-  items6[3] = closure_10(AddConnectionButton, obj3);
+  items6[3] = callback(AddConnectionButton, obj3);
   obj[1] = items6;
-  obj[2] = closure_11(guild(stateFromStoresArray[14]).Stack, obj);
-  return closure_10(guild(stateFromStoresArray[28]).Form, obj);
+  obj[2] = callback2(guild(stateFromStoresArray[14]).Stack, obj);
+  return callback(guild(stateFromStoresArray[28]).Form, obj);
 };

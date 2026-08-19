@@ -1,20 +1,19 @@
 // discord_app/modules/feedback/native/FeedbackModal.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-let require = arg1;
+let require = fn;
 function FeedbackForm(result) {
   result = result.result;
   require = result;
   ({ trackReport: importDefault, titleLabel, descriptionLabel, hideHelpdeskLink } = result);
-  let first;
   const tmp = callback3();
   const reason = result.reason;
   const tmp2 = callback(React.useState(""), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   let label;
   if (reason != null) {
     label = reason.label;
@@ -25,7 +24,7 @@ function FeedbackForm(result) {
     titleLabel = intl.string(tmp6(tmp7[6]).t.vcqwCj);
   }
   obj[1] = titleLabel;
-  const items = [closure_7(require(first[5]).FormInput, obj, "channel-input"), closure_7(require(first[5]).FormDivider, {}), ];
+  const items = [callback(require(first[5]).FormInput, obj, "channel-input"), callback(require(first[5]).FormDivider, {}), ];
   obj = { value: first, title: null, onChange: null, multiline: true, numberOfLines: 4, autoCorrect: true };
   if (descriptionLabel == null) {
     const intl2 = tmp6(tmp7[6]).intl;
@@ -34,9 +33,9 @@ function FeedbackForm(result) {
   obj = { children: null };
   obj[1] = descriptionLabel;
   obj[2] = tmp2[1];
-  items[2] = closure_7(require(first[5]).FormInput, obj);
+  items[2] = callback(require(first[5]).FormInput, obj);
   obj[0] = items;
-  const items1 = [closure_8(require(first[5]).FormSection, obj), ];
+  const items1 = [callback2(require(first[5]).FormSection, obj), ];
   obj1 = { style: tmp.bottomContainer, children: null };
   let tmp8Result = !hideHelpdeskLink;
   if (!hideHelpdeskLink) {
@@ -47,7 +46,7 @@ function FeedbackForm(result) {
     let obj6 = importDefault(tmp7[8]);
     obj3[0] = obj6.getSubmitRequestURL();
     obj2[3] = intl3.format(tmp6(tmp7[6]).t.ybi2tD, obj3);
-    tmp8Result = tmp8(tmp6(tmp7[7]).Text, obj2);
+    tmp8Result = callback(tmp6(tmp7[7]).Text, obj2);
   }
   const items2 = [tmp8Result, ];
   const obj4 = { style: tmp.submitButton, children: null };
@@ -60,24 +59,24 @@ function FeedbackForm(result) {
   const intl4 = tmp6(tmp7[6]).intl;
   obj6[1] = intl4.string(require(first[6]).t.geKm7t);
   obj6[2] = function onPress() {
-    let arr = closure_1_1(first[10]);
+    let arr = importDefault(first[10]);
     arr = arr.pop();
     const obj = {};
     const merged = Object.assign(closure_0);
     obj.feedback = first;
     callback(obj);
   };
-  obj4[1] = closure_7(require(first[9]).Button, obj6);
-  items2[1] = closure_7(closure_5, obj4);
+  obj4[1] = callback(require(first[9]).Button, obj6);
+  items2[1] = callback(closure_5, obj4);
   obj1[1] = items2;
-  items1[1] = closure_8(closure_5, obj1);
+  items1[1] = callback2(closure_5, obj1);
   obj5[1] = items1;
-  return closure_8(closure_6, obj5);
+  return callback2(closure_6, obj5);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ helpDeskLabel: { lineHeight: 16, marginTop: 8 }, bottomContainer: { paddingHorizontal: 16 }, submitButton: { marginTop: 24, marginBottom: 24 } });
-let result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/feedback/native/FeedbackModal.tsx");
 
 export default function FeedbackModal(result) {
   const _require = result;
@@ -94,15 +93,13 @@ export default function FeedbackModal(result) {
     const current = ref.current;
     current.trackReport(current.result);
   }, []);
-  let obj = { initialRouteName: "Feedback", screens: null };
-  obj = { Feedback: null };
-  obj = { title: null, headerLeft: null, render: null };
+  const obj = { title: null, headerLeft: null, render: null };
   const intl = _require(trackReport[6]).intl;
   obj[0] = intl.string(_require(trackReport[6]).t["dBx+Cn"]);
   obj[1] = _require(trackReport[12]).getHeaderCloseButton(callback);
   obj[2] = function render() {
     const merged = Object.assign(closure_0);
-    return closure_1_7(closure_1_10, {});
+    return closure_1_7(FeedbackForm, {});
   };
   obj[0] = obj;
   obj[1] = obj;

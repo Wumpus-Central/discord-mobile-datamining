@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx
-import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../gateway/GatewayConnectionStore.tsx";
-import closure_5 from "../../../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../../../stores/views/PrivateChannelSortStore.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import _handleConnectionOpen from "../../../../gateway/GatewayConnectionStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import makeSortedChannel from "../../../../../stores/views/PrivateChannelSortStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
 
 export default function useMessagesReconnectToCallsEffect() {
   const effect = React.useEffect(() => {
@@ -20,10 +20,8 @@ export default function useMessagesReconnectToCallsEffect() {
           let num3 = 0;
           if (0 < Math.min(20, arr.length)) {
             do {
-              let tmp7 = closure_1_5;
               let channel = closure_1_5.getChannel(arr[num3].channelId);
               let isGroupDMResult = null != channel;
-              let tmp9 = num3;
               if (isGroupDMResult) {
                 isGroupDMResult = channel.isGroupDM();
               }

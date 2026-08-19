@@ -4,9 +4,9 @@ import initializeDefault from "../../../../../../discord_common/js/packages/flux
 import dispatcherDefault from "../../../../../Dispatcher.tsx";
 import ApplicationCommandSectionType from "../../../../application_commands/ApplicationCommandTypes.tsx";
 import result2 from "../hooks/useCanShowAppLauncherOnboarding.tsx";
-import closure_5 from "../../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 const Store = initializeDefault.Store;
 class AppLauncherOnboardingStore extends Store {
 }
@@ -67,6 +67,6 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(dispatcherDefa
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingStore.tsx");
 
 export default appLauncherOnboardingStore;

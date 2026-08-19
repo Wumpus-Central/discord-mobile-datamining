@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCard.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import CONFIG_NEVER_ANIMATE from "../../../../design/animation/reanimated/spring/spring.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/ApplicationStreamingStore.tsx";
-import closure_7 from "../../../../stores/RTCConnectionStore.tsx";
-import closure_8 from "../../../../stores/SpeakingStore.tsx";
+import reset from "../../../../stores/ApplicationStreamingStore.tsx";
+import createRTCConnection from "../../../../stores/RTCConnectionStore.tsx";
+import anyoneHasFlagInContext from "../../../../stores/SpeakingStore.tsx";
 import VoicePanelModes from "../../VoicePanelConstants.tsx";
 import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
 import { VoicePanelPIPModes } from "../pip/VoicePanelPIPConstants.tsx";
@@ -15,10 +15,10 @@ import ME from "../../../../Constants.tsx";
 import { ParticipantTypes } from "../../../calls/CallConstants.tsx";
 import { SCALE_PHYSICS } from "../../../panels/morphable/native/MorphablePanelConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
-require = arg1;
+require = fn;
 function SelfStreamCard(sharedCoords) {
   sharedCoords = sharedCoords.sharedCoords;
   const stream = sharedCoords.stream;
@@ -81,26 +81,24 @@ function SelfStreamCard(sharedCoords) {
     obj4[3] = intl3.string(tmp3(tmp4[22]).t.CpkXwZ);
     items2[1] = tmp11(tmp3(tmp4[23]).Button, obj4);
     obj2[0] = items2;
-    tmp6Result = tmp6(closure_22, obj2);
+    tmp6Result = callback(closure_22, obj2);
   }
   items1[2] = tmp6Result;
   obj[1] = items1;
-  return closure_23(stream(isFocused[21]), obj);
+  return callback(stream(isFocused[21]), obj);
 }
 function SpeakingIndicator(id) {
   id = id.id;
   const isSelf = id.isSelf;
   const speaking = id.speaking;
   const layout = id.layout;
-  let mode;
   let focused;
-  let token;
   const context = focused.useContext(isSelf(speaking[24]));
-  mode = context.mode;
+  const mode = context.mode;
   focused = context.focused;
   const tmp2 = callback3();
   obj = id(speaking[43]);
-  token = obj.useToken(isSelf(speaking[18]).modules.mobile.VOICE_TILE_BORDER_RADIUS);
+  const token = obj.useToken(isSelf(speaking[18]).modules.mobile.VOICE_TILE_BORDER_RADIUS);
   obj1 = id(speaking[14]);
   const fn = function u() {
     obj = mode;
@@ -170,22 +168,21 @@ function SpeakingIndicator(id) {
       obj[2] = id1;
       obj[3] = isSelf;
       obj[4] = token;
-      num = isSelf(tmp8[44])(obj);
-      const tmp10 = isSelf(tmp8[44]);
+      num = isSelf(speaking[44])(obj);
+      const tmp10 = isSelf(speaking[44]);
     }
     let str = "animate-always";
     let str2 = "animate-always";
     if (tmp) {
       str2 = "animate-never";
     }
-    obj = { borderRadius: id(speaking[39]).withSpring(num, tmp18, str2), borderWidth: null };
+    obj = { borderRadius: id(speaking[39]).withSpring(num, closure_1_12, str2), borderWidth: null };
     const obj2 = id(speaking[39]);
-    const tmp7 = id;
     let num2 = 0;
     if (!tmp) {
       num2 = 0;
       if (speaking.get()) {
-        num2 = isSelf(tmp8[45])(5);
+        num2 = isSelf(speaking[45])(5);
       }
     }
     if (tmp) {
@@ -224,17 +221,16 @@ function SpeakingIndicator(id) {
       obj[2] = id1;
       obj[3] = isSelf;
       obj[4] = token;
-      num = isSelf(tmp8[44])(obj);
-      const tmp10 = isSelf(tmp8[44]);
+      num = isSelf(speaking[44])(obj);
+      const tmp10 = isSelf(speaking[44]);
     }
     let str = "animate-always";
     let str2 = "animate-always";
     if (tmp) {
       str2 = "animate-never";
     }
-    obj = { borderRadius: id(speaking[39]).withSpring(num, tmp18, str2), borderWidth: null };
+    obj = { borderRadius: id(speaking[39]).withSpring(num, closure_1_12, str2), borderWidth: null };
     const obj2 = id(speaking[39]);
-    const tmp7 = id;
     let num2 = 0;
     if (!tmp) {
       num2 = 0;
@@ -265,65 +261,51 @@ function SpeakingIndicator(id) {
 }
 function AnimatedWrapper(children) {
   let cleanUp = children.cleanUp;
-  let id = cleanUp;
   const coords = children.coords;
   importDefault = coords;
-  id = children.id;
+  let id = children.id;
   transitionState = id;
   const isRTCConnected = children.isRTCConnected;
   cleanUp = isRTCConnected;
   let isScrollVisible = children.isScrollVisible;
-  mode = isScrollVisible;
   const layoutPhysics = children.layoutPhysics;
-  focused = layoutPhysics;
   ({ transitionState, sharedVisible } = children);
   isScrollVisible = sharedVisible;
-  sharedVisible = undefined;
-  let sharedValue;
-  closure_9 = undefined;
-  let callback;
   c11 = undefined;
   focused = undefined;
   c13 = undefined;
   mode = undefined;
   pipAvoidanceSpecs = undefined;
-  let safeArea;
-  let scrollPosition;
   c18 = undefined;
   c19 = undefined;
   windowDimensions = undefined;
-  let wrapperDimensions;
-  let wrapperOffset;
-  let panelCardStillInPIP;
-  let pIPState;
   let isSelf;
   let id2;
   let derivedValue;
   let derivedValue1;
   let derivedValue2;
-  sharedValue = undefined;
   closure_31 = undefined;
   let token;
   sharedVisible = importDefault(transitionState[48])().analyticsLocations;
   obj = mode;
   const context = mode.useContext(importDefault(transitionState[24]));
   const channelId = context.channelId;
-  sharedValue = channelId;
+  let sharedValue = channelId;
   const connected = context.connected;
   closure_9 = connected;
   const contentDimensions = context.contentDimensions;
-  callback = contentDimensions;
+  let callback = contentDimensions;
   ({ controlsSpecs: c11, focused } = context);
   ({ hideControls: c13, mode } = context);
   ({ mountedCards, pipAvoidanceSpecs } = context);
-  safeArea = context.safeArea;
-  scrollPosition = context.scrollPosition;
+  const safeArea = context.safeArea;
+  const scrollPosition = context.scrollPosition;
   ({ setFocused: c18, showControls: c19, windowDimensions } = context);
-  wrapperDimensions = context.wrapperDimensions;
-  wrapperOffset = context.wrapperOffset;
-  panelCardStillInPIP = context.panelCardStillInPIP;
+  const wrapperDimensions = context.wrapperDimensions;
+  const wrapperOffset = context.wrapperOffset;
+  const panelCardStillInPIP = context.panelCardStillInPIP;
   obj1 = id(transitionState[49]);
-  pIPState = obj1.usePIPState();
+  const pIPState = obj1.usePIPState();
   const tmp7 = importDefault(transitionState[50])(id, channelId, context.guildId);
   let obj2 = id(transitionState[50]);
   let tmp8 = tmp7;
@@ -367,7 +349,7 @@ function AnimatedWrapper(children) {
   I.__workletHash = 8770947887509;
   I.__initData = closure_50;
   derivedValue1 = tmp5Result.useDerivedValue(I);
-  const tmp3 = derivedValue2();
+  let tmp3 = derivedValue2();
   let tmp9 = callback;
   class C {
     constructor() {
@@ -394,8 +376,6 @@ function AnimatedWrapper(children) {
   C.__initData = closure_51;
   derivedValue2 = id(transitionState[14]).useDerivedValue(C);
   importDefault = tmp7;
-  sharedValue = undefined;
-  closure_9 = undefined;
   callback = undefined;
   const tmp5Result1 = id(transitionState[14]);
   sharedValue = id(transitionState[14]).useSharedValue(transitionState);
@@ -531,7 +511,6 @@ function AnimatedWrapper(children) {
       id = value.id;
     }
     if (closure_31) {
-      obj = pIPState;
       const width3 = pIPState.width;
       let obj2 = id(transitionState[51]);
       obj = { pipX: null, pipY: null, width: null, height: null, windowDimensions: null, safeArea: null, bottomAvoidanceRegion: null, topAvoidanceRegion: null };
@@ -547,7 +526,6 @@ function AnimatedWrapper(children) {
       const x2 = point.x;
       const sum = derivedValue1.get() + point.y;
       const height3 = pIPState.height;
-      const tmp9 = pIPState.showSecondaryPIP ? obj.containerHeight : obj.height;
     } else {
       if (null != obj.get()) {
         let value1 = y;
@@ -589,7 +567,7 @@ function AnimatedWrapper(children) {
         num2 = 9001;
       }
       obj1 = { id: null, mode: null, focused: null, isSelf: null, defaultBorderRadius: null };
-      obj1[0] = tmp4;
+      obj1[0] = transitionState;
       obj1[1] = mode.get();
       const value3 = obj.get();
       let id1;
@@ -752,8 +730,6 @@ function AnimatedWrapper(children) {
     const result = panelCardStillInPIP.set(closure_31);
   }, items1);
   function be(currentOriginX) {
-    obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
-    obj = { animations: null, initialValues: null, callback: null };
     obj = { originX: id(transitionState[39]).withSpring(currentOriginX.targetOriginX, focused, "animate-always"), originY: null, width: null, height: null };
     const obj4 = id(transitionState[39]);
     obj[1] = id(transitionState[39]).withSpring(currentOriginX.targetOriginY, focused, "animate-always");
@@ -764,13 +740,13 @@ function AnimatedWrapper(children) {
     obj[0] = obj;
     obj[1] = obj;
     obj[2] = function callback() {
-      const value = closure_22.get();
+      const value = store.get();
       let gestureActive = value.gestureActive;
       if (!gestureActive) {
         gestureActive = 0 === value.y;
       }
       if (!gestureActive) {
-        const result = closure_22.set({ gestureActive: false, x: 0, y: 0 });
+        const result = store.set({ gestureActive: false, x: 0, y: 0 });
       }
     };
     return obj;
@@ -799,18 +775,15 @@ let closure_27 = { duration: 0 };
 let c28 = 0.75;
 obj = { positionWrapper: null, userRoundedCard: null, nonUserRoundedCard: null, blackBackground: null, selfStreamFocusedSubtitle: null, avatarImageMaskStyles: null, avatarPlaceholder: null, image: null, speakingIndicatorWrapper: null, speakingIndicatorUnderlay: null, speakingIndicatorGreenBar: null };
 obj[0] = { position: "absolute", top: 0, left: 0, overflow: "hidden", backgroundColor: ThemesDefault.colors.BLACK };
-let obj1 = { position: "absolute", top: 0, left: 0, overflow: "hidden", backgroundColor: ThemesDefault.colors.BLACK };
 obj[1] = { position: "absolute", top: -4, left: -4, bottom: -4, right: -4, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800 };
-createCacheKey = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
+const createCacheKey = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj[2] = createCacheKey;
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj4.backgroundColor = "black";
 obj[3] = obj4;
 obj[4] = { textAlign: "center", marginTop: 4, marginBottom: 40 };
-let obj2 = { position: "absolute", top: -4, left: -4, bottom: -4, right: -4, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_800 };
 obj[5] = { position: "relative", borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
-let obj5 = { position: "relative", borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
 obj[6] = { width: tmp5, height: tmp5, borderRadius: ThemesDefault.radii.round, backgroundColor: "rgba(0,0,0,0.3)" };
 obj[7] = { maxWidth: 80, maxHeight: 80 };
 let obj7 = {};
@@ -834,26 +807,24 @@ let closure_34 = importAllResult.memo((id) => {
   const userId = id.userId;
   ({ streamId, streamGuildId } = id);
   ({ sharedCoords, layout } = id);
-  let focused;
   let setFocused;
-  let stream;
   c6 = undefined;
   ({ userNick, isSelf, isScrollVisible } = id);
   const context = setFocused.useContext(userId(streamGuildId[24]));
-  focused = context.focused;
+  const focused = context.focused;
   setFocused = context.setFocused;
   obj = id(streamGuildId[25]);
   const items = [c6];
   const items1 = [userId, streamGuildId];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ stream: _undefined.getStreamForUser(userId, streamGuildId), activeStream: _undefined.getActiveStreamForUser(userId, streamGuildId) }), items1);
-  stream = stateFromStoresObject.stream;
+  const stream = stateFromStoresObject.stream;
   const activeStream = stateFromStoresObject.activeStream;
   const items2 = [stream, setFocused];
   const callback = setFocused.useCallback(() => {
     if (null != stream) {
-      id(streamGuildId[19]).watchStream(tmp, { forceMultiple: true });
+      id(streamGuildId[19]).watchStream(stream, { forceMultiple: true });
       obj = id(streamGuildId[19]);
-      setFocused(id(streamGuildId[20]).encodeStreamKey(tmp));
+      setFocused(id(streamGuildId[20]).encodeStreamKey(stream));
       const obj2 = id(streamGuildId[20]);
     }
   }, items2);
@@ -902,55 +873,55 @@ let closure_34 = importAllResult.memo((id) => {
     obj1[1] = stream;
     obj1[2] = callback;
     obj1[4] = layout;
-    return callback(tmp4(tmp2[28]).VoicePanelStreamPreview, obj1);
+    return callback(tmp4(streamGuildId[28]).VoicePanelStreamPreview, obj1);
   } else {
     if (null == tmp11Result) {
       if (activeStream.state !== constants3.FAILED) {
-        if (activeStream.state === tmp29.ENDED) {
+        if (activeStream.state === constants3.ENDED) {
           let obj2 = { stream: null, removeSplashImage: null, type: null, style: null };
           obj2[0] = activeStream;
           obj2[1] = !tmp8;
-          let tmpResult = tmp(tmp2[29]);
-          obj2[2] = tmp4(tmp2[29]).VideoEmptyTypes.STREAM_ENDED;
+          let tmpResult = tmp(streamGuildId[29]);
+          obj2[2] = tmp4(streamGuildId[29]).VideoEmptyTypes.STREAM_ENDED;
           obj2[3] = stream.absoluteFill;
           return callback(tmpResult, obj2);
         } else {
-          if (activeStream.state === tmp29.RECONNECTING) {
+          if (activeStream.state === constants3.RECONNECTING) {
             const obj3 = { title: null };
-            const intl = tmp4(tmp2[22]).intl;
-            obj3[0] = intl.string(tmp4(tmp2[22]).t["pdFFK+"]);
-            let tmp15 = callback(tmp4(tmp2[30]).StreamTextOverlay, obj3);
+            const intl = tmp4(streamGuildId[22]).intl;
+            obj3[0] = intl.string(tmp4(streamGuildId[22]).t["pdFFK+"]);
+            let tmp15 = callback(tmp4(streamGuildId[30]).StreamTextOverlay, obj3);
           } else {
             tmp15 = null;
-            if (activeStream.state === tmp29.PAUSED) {
+            if (activeStream.state === constants3.PAUSED) {
               const obj4 = { title: null, subtext: null };
-              const intl2 = tmp4(tmp2[22]).intl;
-              obj4[0] = intl2.string(tmp4(tmp2[22]).t["5q17w5"]);
-              const intl3 = tmp4(tmp2[22]).intl;
+              const intl2 = tmp4(streamGuildId[22]).intl;
+              obj4[0] = intl2.string(tmp4(streamGuildId[22]).t["5q17w5"]);
+              const intl3 = tmp4(streamGuildId[22]).intl;
               const obj5 = { username: null };
               obj5[0] = userNick;
-              obj4[1] = intl3.formatToPlainString(tmp4(tmp2[22]).t.meVVlb, obj5);
-              tmp15 = callback(tmp4(tmp2[30]).StreamTextOverlay, obj4);
+              obj4[1] = intl3.formatToPlainString(tmp4(streamGuildId[22]).t.meVVlb, obj5);
+              tmp15 = callback(tmp4(streamGuildId[30]).StreamTextOverlay, obj4);
             }
           }
           const obj6 = { layout: null, id: null, streamId: null, userId: null, streamKey: null, isScrollVisible: null, videoSpinnerContext: null, sharedCoords: null, isCamera: false, paused: null };
           obj6[0] = layout;
           obj6[1] = id;
-          tmpResult = tmp(tmp2[31]);
+          tmpResult = tmp(streamGuildId[31]);
           if (streamId == null) {
             streamId = null;
           }
           const obj7 = { children: null };
           obj6[2] = streamId;
           obj6[3] = userId;
-          obj6[4] = tmp4(tmp2[20]).encodeStreamKey(activeStream);
+          obj6[4] = tmp4(streamGuildId[20]).encodeStreamKey(activeStream);
           obj6[5] = isScrollVisible;
-          obj6[6] = tmp4(tmp2[32]).VideoSpinnerContext.REMOTE_STREAM;
+          obj6[6] = tmp4(streamGuildId[32]).VideoSpinnerContext.REMOTE_STREAM;
           obj6[7] = sharedCoords;
-          obj6[9] = activeStream.state === tmp29.PAUSED;
+          obj6[9] = activeStream.state === constants3.PAUSED;
           const items3 = [callback(tmpResult, obj6), tmp15];
           obj7[0] = items3;
-          return closure_23(closure_22, obj7);
+          return callback(closure_22, obj7);
         }
       }
     }
@@ -958,9 +929,9 @@ let closure_34 = importAllResult.memo((id) => {
     obj8[0] = tmp11Result;
     obj8[1] = activeStream;
     obj8[2] = !tmp8;
-    obj8[3] = tmp4(tmp2[29]).VideoEmptyTypes.STREAM_FAILED;
+    obj8[3] = tmp4(streamGuildId[29]).VideoEmptyTypes.STREAM_FAILED;
     obj8[4] = stream.absoluteFill;
-    return callback(tmp(tmp2[29]), obj8);
+    return callback(tmp(streamGuildId[29]), obj8);
   }
   const tmp11 = userId(streamGuildId[26]);
 });
@@ -971,7 +942,6 @@ let closure_37 = importAllResult.memo(function AnimatedUserCardInner(isRinging) 
   ({ layout, avatarURI, avatarDecoration, layoutPhysics } = isRinging);
   ({ userId, guildId } = isRinging);
   let mode;
-  let dominantColorFromImage;
   importAllResult = undefined;
   userId = undefined;
   guildId = undefined;
@@ -979,7 +949,7 @@ let closure_37 = importAllResult.memo(function AnimatedUserCardInner(isRinging) 
   obj = importAllResult;
   mode = importAllResult.useContext(layoutPhysics(mode[24])).mode;
   obj1 = isRinging(mode[33]);
-  dominantColorFromImage = obj1.useDominantColorFromImage(avatarURI);
+  const dominantColorFromImage = obj1.useDominantColorFromImage(avatarURI);
   const tmp6 = layoutPhysics(mode[34])("VoicePanelCard-native");
   importAllResult = tmp6;
   if (userId == null) {
@@ -1080,23 +1050,23 @@ let closure_37 = importAllResult.memo(function AnimatedUserCardInner(isRinging) 
   obj1 = { style: items1, layout, children: null };
   items1 = [tmp.userRoundedCard, animatedStyle];
   let tmp20 = null;
-  let tmp2Result = tmp2(tmp3[40]);
+  let tmp2Result = layoutPhysics(tmp3[40]);
   if (null != videoTileGradientColors) {
     const obj2 = { colors: null, start: null, end: null, style: null, pointerEvents: "none" };
     obj2[0] = videoTileGradientColors;
     obj2[1] = { x: 0, y: 0 };
     obj2[2] = { x: 0, y: 1 };
     obj2[3] = userId.absoluteFill;
-    tmp20 = callback(tmp2(tmp3[41]), obj2);
+    tmp20 = callback(layoutPhysics(tmp3[41]), obj2);
   }
   const items2 = [tmp20, ];
   if (null == cachedSourceFromURI) {
     const obj3 = { style: null };
     obj3[0] = tmp.avatarPlaceholder;
-    let tmp28Result = callback(tmp2(tmp3[21]), obj3);
+    let tmp28Result = callback(layoutPhysics(tmp3[21]), obj3);
   } else {
     let prop;
-    tmp2Result = tmp2(tmp3[40]);
+    tmp2Result = layoutPhysics(tmp3[40]);
     if (null == avatarDecoration) {
       prop = tmp.avatarImageMaskStyles;
     }
@@ -1109,19 +1079,19 @@ let closure_37 = importAllResult.memo(function AnimatedUserCardInner(isRinging) 
       obj5[0] = cachedSourceFromURI;
       obj5[1] = tmp4(tmp3[16]).AvatarSizes.XXLARGE;
       obj5[2] = avatarDecoration;
-      tmp28Result = tmp28(tmp4(tmp3[16]).Avatar, obj5);
+      tmp28Result = callback(tmp4(tmp3[16]).Avatar, obj5);
     } else {
       const obj6 = { source: null, resizeMode: "stretch", width: 80, height: 80, style: null };
       obj6[0] = cachedSourceFromURI;
       obj6[4] = tmp.image;
-      tmp28Result = tmp28(tmp2(tmp3[42]), obj6);
+      tmp28Result = callback(layoutPhysics(tmp3[42]), obj6);
     }
     obj4[2] = tmp28Result;
-    tmp28Result = tmp28(tmp2Result, obj4);
+    tmp28Result = callback(tmp2Result, obj4);
   }
   items2[1] = tmp28Result;
   obj1[2] = items2;
-  return closure_23(tmp2Result, obj1);
+  return callback(tmp2Result, obj1);
 });
 let closure_38 = { code: "function VoicePanelCardTsx6(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS}=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()!==VoicePanelModes.PIP&&((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{opacity:disable?0:1,borderRadius:withSpring(disable?0:computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}),SPEAKING_PHYSICS,!disable?'animate-always':'animate-never')};}" };
 let closure_39 = { code: "function VoicePanelCardTsx7(){const{mode,VoicePanelModes,focused,id,withSpring,computeCardBorderRadius,isSelf,defaultBorderRadius,SPEAKING_PHYSICS,speaking,roundToNearestPixel,SPEAKING_BORDER_SIZE,SPEAKING_INSET}=this.__closure;var _focused$get,_focused$get2;const disable=mode.get()===VoicePanelModes.PIP||((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id;return{borderRadius:withSpring(!disable?computeCardBorderRadius({id:id,mode:mode.get(),focused:(_focused$get2=focused.get())===null||_focused$get2===void 0?void 0:_focused$get2.id,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}):0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never'),borderWidth:withSpring(!disable&&speaking.get()?roundToNearestPixel(SPEAKING_BORDER_SIZE+SPEAKING_INSET):0,SPEAKING_PHYSICS,!disable?'animate-always':'animate-never')};}" };
@@ -1171,13 +1141,13 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     str2 = "animate-never";
   }
   obj = { originX: obj.withSpring(originX.targetOriginX, SUBTLE_SPRING, str2), originY: null, width: null, height: null };
-  let tmpResult = tmp(4744);
+  let tmpResult = CONFIG_NEVER_ANIMATE;
   let str3 = str;
   if (flag) {
     str3 = "animate-never";
   }
   obj[1] = tmpResult.withSpring(originX.targetOriginY, SUBTLE_SPRING, str3);
-  tmpResult = tmp(4744);
+  tmpResult = CONFIG_NEVER_ANIMATE;
   let str4 = str;
   if (flag) {
     str4 = "animate-never";
@@ -1192,7 +1162,6 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
   return obj;
 }
-let obj6 = { width: tmp5, height: tmp5, borderRadius: ThemesDefault.radii.round, backgroundColor: "rgba(0,0,0,0.3)" };
 layoutTransitionFunction.__closure = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring };
 layoutTransitionFunction.__workletHash = 4871152530917;
 layoutTransitionFunction.__initData = { code: "function layoutTransitionFunction_VoicePanelCardTsx13(values,physics,disableAnimation=false){const{withSpring}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,physics,!disableAnimation?'animate-always':'animate-never'),originY:withSpring(values.targetOriginY,physics,!disableAnimation?'animate-always':'animate-never'),width:withSpring(values.targetWidth,physics,!disableAnimation?'animate-always':'animate-never'),height:withSpring(values.targetHeight,physics,!disableAnimation?'animate-always':'animate-never')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}" };
@@ -1249,7 +1218,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
     DEFAULT = tmp5(tmp2[27]).MediaEngineContextTypes.DEFAULT;
   }
   let tmpResultResult = tmpResult(DEFAULT, str);
-  const tmp13 = windowDimensions(id2[56])(str);
+  windowDimensions(id2[56])(str);
   if (transitionState === scrollPosition(id2[47]).TransitionStates.MOUNTED) {
     let num = 1;
   } else {
@@ -1365,11 +1334,11 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
     }
     items2[2] = result;
     obj[8] = items2;
-    return closure_23(AnimatedWrapper, obj);
+    return callback(AnimatedWrapper, obj);
   } else if (null != tmp4) {
     type = item.type;
     const type2 = tmp4.type;
-    if (tmp11.USER === type2) {
+    if (ParticipantTypes.USER === type2) {
       ({ id: id3, streamId, user } = tmp4);
       if (tmp4.hasVideo) {
         if (stateFromStores) {
@@ -1406,8 +1375,8 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
             obj4[2] = user.id;
             user = StyleSheet.absoluteFill;
             obj4[3] = user;
-            tmp31Result = tmp31(tmp(tmp2[61]), obj4);
-            tmp28 = tmp31;
+            tmp31Result = callback(tmp(tmp2[61]), obj4);
+            tmp28 = callback;
             const tmpResult2 = tmp(tmp2[61]);
           }
         }
@@ -1421,10 +1390,9 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       obj5[4] = physics;
       obj5[5] = user.id;
       obj5[6] = guildId;
-      tmp25 = tmp26;
-      tmp26Result = tmp26(closure_37, obj5);
-      const tmp27 = closure_37;
-    } else if (tmp11.STREAM === type2) {
+      tmp25 = callback;
+      tmp26Result = callback(closure_37, obj5);
+    } else if (ParticipantTypes.STREAM === type2) {
       const obj6 = { userId: null, id: null, streamGuildId: null, streamId: null, userNick: null, isSelf: null, sharedCoords: null, isScrollVisible: null, layout: null };
       obj6[0] = tmp4.user.id;
       ({ id: obj10[1], streamGuildId: obj10[2], streamId: obj10[3], userNick: obj10[4] } = tmp4);
@@ -1434,7 +1402,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       obj6[8] = layoutTransition;
       tmp26Result = callback(closure_34, obj6);
       tmp25 = callback;
-    } else if (tmp11.ACTIVITY === type2) {
+    } else if (ParticipantTypes.ACTIVITY === type2) {
       const obj7 = { sharedVisible: null, applicationId: null, layout: null };
       obj7[0] = sharedValue;
       obj7[1] = tmp4.applicationId;
@@ -1448,7 +1416,8 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
   obj8[4] = physics;
   tmp26Result = callback(closure_37, obj8);
   tmp25 = callback;
+  const tmp5Result4 = scrollPosition(id2[14]);
 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCard.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCard.tsx");
 
 export default memoResult;

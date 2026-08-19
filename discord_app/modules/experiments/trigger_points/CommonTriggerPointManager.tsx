@@ -3,7 +3,7 @@ import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import commonTriggerPointConfiguration from "OpenUserSettingsTriggerPoint.tsx";
 import commonTriggerPointConfiguration2 from "VoiceCallTriggerPoint.tsx";
 
-require = arg1;
+require = fn;
 initializeDefault;
 class CommonTriggerPointManager extends tmp2 {
   constructor() {
@@ -31,6 +31,6 @@ prototype["handleUserSettingsModalOpen"] = function handleUserSettingsModalOpen(
   OpenUserSettingsTriggerPoint.trigger();
 };
 const commonTriggerPointManager = new CommonTriggerPointManager();
-const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
 
 export default commonTriggerPointManager;

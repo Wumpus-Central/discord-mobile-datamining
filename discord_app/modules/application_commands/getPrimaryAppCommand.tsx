@@ -2,13 +2,13 @@
 import PermissionOverwriteType from "../../flow/Server.tsx";
 import ScoreMethod from "ApplicationCommandQueryTypes.tsx";
 import ApplicationIntegrationType from "../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/ChannelStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../_runtime/00019_noop.js";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 import getIndexKey from "ApplicationCommandIndexStore.tsx";
-import closure_7 from "ApplicationCommandIndexStore.tsx";
+import getIndexKey2 from "ApplicationCommandIndexStore.tsx";
 
-require = arg1;
+require = fn;
 function _getPrimaryAppCommand() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -117,7 +117,7 @@ function queryForPrimaryAppCommand(closure_0, id) {
 ({ getOrFetchApplicationCommandIndexForTarget: c5, useQueryState: closure_6 } = getIndexKey);
 let c8 = "no primary app command for application";
 let items = [require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT];
-const result = require("set").fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
 
 export default function getPrimaryAppCommand() {
   const self = this;
@@ -133,8 +133,7 @@ export const NO_PRIMARY_APP_COMMAND_ERROR = "no primary app command for applicat
 export { queryForPrimaryAppCommand };
 export const useGetPrimaryAppCommand = function useGetPrimaryAppCommand(context, id) {
   const _require = id;
-  let obj = { commandTypes: items };
-  obj = { placeholderCount: 1, scoreMethod: _require(loading[5]).ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true };
+  const obj = { placeholderCount: 1, scoreMethod: _require(loading[5]).ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true };
   const tmp = callback2(context, obj, obj);
   loading = tmp.loading;
   const first = tmp.commands[0];
@@ -146,8 +145,8 @@ export const useGetPrimaryAppCommand = function useGetPrimaryAppCommand(context,
       tmp = loading;
     }
     if (!tmp) {
-      let obj = applicationId(loading[6]);
-      obj = { type: "application", applicationId: null };
+      applicationId(loading[6]);
+      const obj = { type: "application", applicationId: null };
       obj[1] = applicationId;
       const applicationCommandIndex = obj.requestApplicationCommandIndex(obj);
     }
@@ -155,16 +154,13 @@ export const useGetPrimaryAppCommand = function useGetPrimaryAppCommand(context,
   return first;
 };
 export const useQueryForPrimaryAppCommand = function useQueryForPrimaryAppCommand(arg0, applicationId) {
-  let obj = { commandTypes: items };
-  obj = { placeholderCount: 1, scoreMethod: ScoreMethod.ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true };
+  const obj = { placeholderCount: 1, scoreMethod: ScoreMethod.ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true };
   return callback2(arg0, obj, obj);
 };
 export const useIsPrimaryAppCommandUsableInAppDM = function useIsPrimaryAppCommandUsableInAppDM(applicationId) {
   applicationId = applicationId.applicationId;
   let loading;
-  closure_2 = undefined;
-  let obj = { commandTypes: items };
-  obj = { placeholderCount: 1, scoreMethod: applicationId(loading[5]).ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true };
+  let obj = { placeholderCount: 1, scoreMethod: applicationId(loading[5]).ScoreMethod.COMMAND_ONLY, applicationId, allowFetch: false, allowApplicationState: true };
   ({ context, botUserId } = applicationId);
   const tmp3 = callback2(context, obj, obj);
   loading = tmp3.loading;
@@ -177,8 +173,8 @@ export const useIsPrimaryAppCommandUsableInAppDM = function useIsPrimaryAppComma
       tmp = loading;
     }
     if (!tmp) {
-      let obj = applicationId(loading[6]);
-      obj = { type: "application", applicationId: null };
+      applicationId(loading[6]);
+      const obj = { type: "application", applicationId: null };
       obj[1] = applicationId;
       const applicationCommandIndex = obj.requestApplicationCommandIndex(obj);
     }

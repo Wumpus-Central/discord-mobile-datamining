@@ -2,16 +2,16 @@
 import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import _modDef9498 from "../../../premium/components/native/NitroUpsellButton.tsx";
 import BackwardsCompatibleAppIconRowsDefault from "../../../app_icons/native/AppIconRows.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { getIconById } from "../../../app_icons/native/AppIconConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-const require = arg1;
+const require = fn;
 ({ UpsellTypes: closure_6, AnalyticsPages: error } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ upsellButtonContainer: { padding: 0, position: "absolute", bottom: 56, width: 350, alignSelf: "center" } });
@@ -52,7 +52,7 @@ const memoResult = importAllResult.memo(() => {
                 const tmp25 = closure_1_8(lib);
                 if (null != tmp25) {
                   const id = tmp25.id;
-                  if (id === tmp23) {
+                  if (id === lib) {
                     if (v0 !== id) {
                       if (tmp27) {
                         if (!dependencyMap) {
@@ -86,7 +86,6 @@ const memoResult = importAllResult.memo(() => {
                     return obj3;
                   }
                 }
-                tmp23 = lib;
               }
             } else if (1 === tmp4) {
               if (arg0 === 1) {
@@ -134,7 +133,6 @@ const memoResult = importAllResult.memo(() => {
   const isPremiumResult = obj2.isPremium(stateFromStores);
   dependencyMap = isPremiumResult;
   const analyticsLocations = contextDefault().analyticsLocations;
-  obj = { page: constants.APP_ICONS };
   obj = { children: null };
   obj1 = { accessibilityRole: "radiogroup", children: callback(BackwardsCompatibleAppIconRowsDefault, obj2) };
   obj2 = {
@@ -162,13 +160,13 @@ const memoResult = importAllResult.memo(() => {
     };
     const intl = tmp2(1236).intl;
     obj4[1] = intl.string(tmp2(1236).t.M0rDSO);
-    obj3[1] = tmp9(_modDef9498, obj4);
-    tmp9Result = tmp9(obj, obj3);
+    obj3[1] = callback(_modDef9498, obj4);
+    tmp9Result = callback(obj, obj3);
     const tmp6Result = _modDef9498;
   }
   children[1] = tmp9Result;
-  return closure_11(closure_10, { children });
+  return callback(closure_10, { children });
 });
-let result = require("set").fileFinishedImporting("modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx");
 
 export default memoResult;

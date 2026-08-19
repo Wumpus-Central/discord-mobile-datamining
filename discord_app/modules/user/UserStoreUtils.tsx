@@ -1,5 +1,5 @@
 // discord_app/modules/user/UserStoreUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import Environments2 from "UserStoreConstants.tsx";
@@ -7,15 +7,15 @@ import ME from "../../Constants.tsx";
 
 const Environments = Environments2.Environments;
 ({ PREMIUM_TYPE_NONE: c4, UserFlags: c5 } = ME);
-const result = set.fileFinishedImporting("modules/user/UserStoreUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/user/UserStoreUtils.tsx");
 
-export const validatePremiumType = function validatePremiumType(arg0, arg1, premiumType) {
+export const validatePremiumType = function validatePremiumType(arg0, premiumType, premiumType2) {
   let tmp = arg0;
   if (!arg0) {
-    tmp = undefined === arg1;
+    tmp = undefined === premiumType;
   }
   if (!tmp) {
-    _modDef38(premiumType === arg1, "Premium type should not change for non-staff users");
+    _modDef38(premiumType2 === premiumType, "Premium type should not change for non-staff users");
   }
 };
 export const getEnv = function getEnv(arg0) {
@@ -36,10 +36,10 @@ export const isStaffEnv = function isStaffEnv(currentUser) {
       str = tmp;
     }
   }
-  let tmp4 = str === tmp2.DEVELOPMENT;
+  let tmp4 = str === Environments.DEVELOPMENT;
   if (!tmp4) {
     const _window = window;
-    tmp4 = window.GLOBAL_ENV.RELEASE_CHANNEL === tmp2.STAGING;
+    tmp4 = window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING;
   }
   if (!tmp4) {
     let tmp8 = null != currentUser;
@@ -59,10 +59,10 @@ export const isStaffEnvRawData = function isStaffEnvRawData(flags) {
       str = tmp;
     }
   }
-  let tmp4 = str !== tmp2.DEVELOPMENT;
+  let tmp4 = str !== Environments.DEVELOPMENT;
   if (tmp4) {
     const _window = window;
-    tmp4 = window.GLOBAL_ENV.RELEASE_CHANNEL !== tmp2.STAGING;
+    tmp4 = window.GLOBAL_ENV.RELEASE_CHANNEL !== Environments.STAGING;
   }
   let tmp6 = !tmp4;
   if (tmp4) {
@@ -71,7 +71,6 @@ export const isStaffEnvRawData = function isStaffEnvRawData(flags) {
       let tmp10 = null == flags.flags;
       if (!tmp10) {
         tmp10 = !hasFlag.hasFlag(flags.flags, constants.STAFF);
-        const obj = hasFlag;
       }
       let tmp14 = !tmp10;
       if (tmp10) {

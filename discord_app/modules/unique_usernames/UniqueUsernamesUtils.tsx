@@ -1,12 +1,11 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import t from "../../../_runtime/04486_t.js";
 
-const result = set.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
 export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(arg0) {
   const match = t.match(arg0);
-  const str = t;
   let obj = { error: null };
   const P = t.P;
   obj[0] = P.not(t.P.nullish);

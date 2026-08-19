@@ -9,14 +9,12 @@ import { HelpdeskArticles } from "../../../Constants.tsx";
 import { MobileUserSettings } from "../../user_settings/core/native/SettingsConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
 
 export default function FamilyCenterParentalControlsContentAndSocial() {
-  let obj = createToggle;
-  obj = { sections: null };
-  obj = { settings: items, subLabel: null };
+  const obj = { settings: items, subLabel: null };
   items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
   const intl = getSystemLocale.intl;
   obj1 = { learnMoreLink: null };

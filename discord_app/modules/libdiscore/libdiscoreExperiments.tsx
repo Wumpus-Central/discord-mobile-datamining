@@ -1,5 +1,5 @@
 // discord_app/modules/libdiscore/libdiscoreExperiments.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import timestampDefault from "../debug/Logger.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import ensureValidMode2 from "stores/BridgedStore.tsx";
@@ -35,14 +35,13 @@ prototype["getCachedConfig"] = function getCachedConfig() {
   const self = this;
   if (this.cachedConfig === closure_6) {
     if (obj.isLibdiscoreInitialized()) {
-      const experimentCacher = tmp(1917).getExperimentCacher();
+      const experimentCacher = isBlockedDomain.getExperimentCacher();
       self.cachedConfig = experimentCacher.getConfig(self.id);
-      const tmpResult = tmp(1917);
+      const tmpResult = isBlockedDomain;
     } else {
       self.cachedConfig = undefined;
     }
     obj = isBlockedDomain;
-    tmp = require;
   }
   return self.cachedConfig;
 };
@@ -237,7 +236,7 @@ tmp3.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of caus
 tmp3.defaultValue = false;
 let c7 = false;
 const tmp6 = new timestampDefault("libdiscoreExperiments");
-const result = set.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
+const result = obj132.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
 
 export const ALL_LIBDISCORE_EXPERIMENTS = items;
 export { LibdiscoreCachedExperiment };
@@ -262,4 +261,5 @@ export const clearLibdiscoreExperimentCache = function clearLibdiscoreExperiment
     experimentCacher.clearCache();
     const tmpResult = isBlockedDomain;
   }
+  obj = isBlockedDomain;
 };

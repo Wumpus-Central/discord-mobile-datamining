@@ -1,17 +1,16 @@
 // discord_app/modules/profile_customization/native/HeaderAvatar.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
-import closure_5 from "../../../stores/GuildMemberStore.tsx";
-import closure_6 from "../../../stores/PresenceStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
+import sortActivity from "../../../stores/PresenceStore.tsx";
 import { ActivityTypes } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-let obj = { avatarStatusStyle: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const require = fn;
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((animate) => {
@@ -26,9 +25,7 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
     flag = true;
   }
   const merged = Object.assign(animate, Object.create(null));
-  let id;
-  id = user.id;
-  let obj = guildId;
+  const id = user.id;
   let avatarSource = dependencyMap;
   obj1 = guildId(589);
   const items = [closure_4];
@@ -50,7 +47,7 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
   const tmp4 = callback();
   const tmp9 = id;
   let obj4 = guildId(8376);
-  obj = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
+  let obj = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
     avatarDecoration = user.avatarDecoration;
@@ -119,7 +116,8 @@ const forwardRefResult = importAllResult.forwardRef((animate) => {
     obj4.children = jsx(obj(1297).Avatar, obj6);
     return <View ref={null} style={null} accessibilityRole="image" accessible />;
   }
+  const tmp10Result = id(8410)(obj4.getProfilePreviewValue(obj));
 });
-const result = require("set").fileFinishedImporting("modules/profile_customization/native/HeaderAvatar.tsx");
+const result = require("obj132").fileFinishedImporting("modules/profile_customization/native/HeaderAvatar.tsx");
 
 export default forwardRefResult;

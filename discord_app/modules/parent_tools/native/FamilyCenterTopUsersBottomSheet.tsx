@@ -9,11 +9,11 @@ import getEmptyActivityFormatter from "../FamilyCenterUtils.tsx";
 import TableRowGroupTitle from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableRowInner from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function UserRow(userActivity) {
   userActivity = userActivity.userActivity;
   user = user.getUser(userActivity.user_id);
@@ -35,16 +35,15 @@ function UserRow(userActivity) {
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ header: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
 
 export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   topUserActivities = topUserActivities.topUserActivities;
-  let obj = { children: null };
-  obj = { variant: "text-md/bold", style: callback3().header, children: null };
+  let obj = { variant: "text-md/bold", style: callback3().header, children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.BxbvS7);
   const items = [callback(Text.Text, obj), ];
-  obj = { hasIcons: true, children: topUserActivities.map((userActivity) => callback(closure_7, { userActivity }, userActivity.user_id)) };
+  obj = { hasIcons: true, children: topUserActivities.map((item, index) => callback(closure_7, { userActivity: item }, item.user_id)) };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
   obj[0] = items;
   return callback2(ActionSheet.ActionSheet, obj);

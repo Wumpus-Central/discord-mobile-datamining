@@ -1,18 +1,17 @@
 // discord_common/js/packages/flux/createFetchStore.tsx
 import failsDefault from "../backoff/Backoff.tsx";
 import shallowEqual from "../shallow-equal/shallowEqual.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import keys from "../../../../_runtime/00644_keys.js";
 
-require = arg1;
+require = fn;
 function areStatesEqual(items, current) {
   if (Array.isArray(items)) {
     const _Array = Array;
     if (Array.isArray(current)) {
       let result = shallowEqual.areArraysShallowEqual(items, current);
-      const obj = shallowEqual;
     }
     return result;
   }
@@ -53,7 +52,7 @@ let closure_13 = keys.create(() => {
   const obj = { isLoading: false, error: null, backoff: new failsDefault(), lastSuccessAt: null, failureLockedUntil: null };
   return obj;
 });
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/createFetchStore.tsx");
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/flux/createFetchStore.tsx");
 
 export const NO_DATA = SymbolResult;
 export const createFetchStore = function createFetchStore(importDefaultResult, initialize) {
@@ -75,7 +74,6 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
     retryableErrors = map;
   }
   ({ staleAfter: HTTPResponseError, failureStaleAfter: areStatesEqual } = initialize);
-  map = undefined;
   getUseStoreState = function getUseStoreState(arg0) {
     if (null == arg0) {
       return loader;
@@ -83,10 +81,10 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
       let obj = map;
       let value = map.get(arg0);
       if (null == value) {
-        obj = importDefaultResult(closure_1_2[5]).create(() => ({ isLoading: false, error: null, backoff: callback(), lastSuccessAt: null, failureLockedUntil: null }));
+        obj = importDefaultResult(dependencyMap[5]).create(() => ({ isLoading: false, error: null, backoff: callback(), lastSuccessAt: null, failureLockedUntil: null }));
         const result = obj.set(arg0, obj);
         value = obj;
-        const obj2 = importDefaultResult(closure_1_2[5]);
+        const obj2 = importDefaultResult(dependencyMap[5]);
       }
       return value;
     }
@@ -231,20 +229,19 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                       return obj2;
                     }
                   }
-                  const tmp93 = c4;
                 }
               } else {
                 if (2 === tmp7) {
                   c5 = 0;
                   callback = (function makeError(c4) {
-                    if (c4 instanceof Error) {
-                      return c4;
+                    if (_undefined instanceof Error) {
+                      return _undefined;
                     } else {
-                      if (typeof c4 === "object") {
-                        if (null != c4) {
-                          if ("status" in c4) {
-                            if (typeof c4.status === "number") {
-                              const retryAfter = c4.retryAfter;
+                      if (typeof _undefined === "object") {
+                        if (null != _undefined) {
+                          if ("status" in _undefined) {
+                            if (typeof _undefined.status === "number") {
+                              const retryAfter = _undefined.retryAfter;
                               let tmp5;
                               if (typeof retryAfter === "number") {
                                 const _Number = Number;
@@ -254,13 +251,13 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                                   }
                                 }
                               }
-                              if ("body" in c4) {
-                                if (null != c4.body) {
-                                  if (typeof c4.body === "object") {
-                                    if ("message" in c4.body) {
+                              if ("body" in _undefined) {
+                                if (null != _undefined.body) {
+                                  if (typeof _undefined.body === "object") {
+                                    if ("message" in _undefined.body) {
                                       const _String2 = String;
-                                      const obj3 = new closure_9(String(c4.body.message));
-                                      obj3.setStatus(c4.status);
+                                      const obj3 = new closure_9(String(_undefined.body.message));
+                                      obj3.setStatus(_undefined.status);
                                       obj3.setRetryAfter(tmp5);
                                       return obj3;
                                     }
@@ -268,10 +265,10 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                                 }
                               }
                               const _Object = Object;
-                              const entries = Object.entries(c4);
+                              const entries = Object.entries(_undefined);
                               const mapped = entries.map(() => { ... });
                               const obj2 = new closure_9(mapped.join(","));
-                              obj2.setStatus(c4.status);
+                              obj2.setStatus(_undefined.status);
                               obj2.setRetryAfter(tmp5);
                               return obj2;
                             }
@@ -280,7 +277,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                       }
                       const _Error = Error;
                       const _String = String;
-                      error = new Error(String(c4));
+                      error = new Error(String(_undefined));
                       return error;
                     }
                   })(c4);
@@ -375,14 +372,13 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
   }
   function useCfsHook() {
     let items = [...arguments];
-    let first;
     let callback;
     c2 = undefined;
     const tmp = closure_1_4(backoff(items), 2);
-    first = tmp[0];
+    const first = tmp[0];
     let result = items === first;
     if (!result) {
-      let obj = importDefaultResult(closure_1_2[3]);
+      let obj = importDefaultResult(dependencyMap[3]);
       result = obj.areArraysShallowEqual(items, first);
     }
     if (!result) {
@@ -400,16 +396,15 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
     } else {
       value = map.get(tmp9);
       if (null == value) {
-        obj = importDefaultResult(closure_1_2[5]).create(() => ({ isLoading: false, error: null, backoff: callback(), lastSuccessAt: null, failureLockedUntil: null }));
-        const result1 = obj2.set(tmp9, obj);
+        obj = importDefaultResult(dependencyMap[5]).create(() => ({ isLoading: false, error: null, backoff: callback(), lastSuccessAt: null, failureLockedUntil: null }));
+        const result1 = map.set(tmp9, obj);
         value = obj;
-        const obj3 = importDefaultResult(closure_1_2[5]);
+        const obj3 = importDefaultResult(dependencyMap[5]);
       }
-      obj2 = map;
     }
     c2 = value;
     const items2 = [first];
-    let stateFromStores = importDefaultResult(closure_1_2[6]).useStateFromStores(tmp8, () => {
+    let stateFromStores = importDefaultResult(dependencyMap[6]).useStateFromStores(tmp8, () => {
       let applyResult;
       if (closure_1_4 != null) {
         const items = [];
@@ -418,7 +413,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
       }
       return applyResult;
     }, items2);
-    const obj4 = importDefaultResult(closure_1_2[6]);
+    const obj4 = importDefaultResult(dependencyMap[6]);
     tmp7 = first;
     const valueResult = value((isLoading) => {
       isLoading = null == closure_4;
@@ -428,7 +423,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
       return isLoading;
     });
     const items3 = [first];
-    let stateFromStores1 = importDefaultResult(closure_1_2[6]).useStateFromStores(tmp8, () => {
+    let stateFromStores1 = importDefaultResult(dependencyMap[6]).useStateFromStores(tmp8, () => {
       let applyResult;
       if (closure_1_5 != null) {
         const items = [];
@@ -437,7 +432,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
       }
       return applyResult;
     }, items3);
-    const obj5 = importDefaultResult(closure_1_2[6]);
+    const obj5 = importDefaultResult(dependencyMap[6]);
     const valueResult1 = value((error) => {
       error = null;
       if (null == closure_5) {
@@ -446,14 +441,14 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
       return error;
     });
     const items4 = [first];
-    const stateFromStores2 = importDefaultResult(closure_1_2[6]).useStateFromStores(tmp8, () => _undefined(...first), items4, closure_1_10);
+    const stateFromStores2 = importDefaultResult(dependencyMap[6]).useStateFromStores(tmp8, () => _undefined(...first), items4, areStatesEqual);
     const items5 = [tmp9, first, value];
     num(() => {
-      closure_1_13({ queryId: closure_1, args: first, useStoreState: c2 });
+      loader({ queryId: closure_1, args: first, useStoreState: c2 });
     }, items5);
     const items6 = [tmp9, first, value];
     let tmp22 = null;
-    const obj6 = importDefaultResult(closure_1_2[6]);
+    const obj6 = importDefaultResult(dependencyMap[6]);
     if (stateFromStores2 !== retryableErrors) {
       tmp22 = stateFromStores2;
     }
@@ -467,7 +462,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
     }
     obj[2] = stateFromStores;
     obj[3] = closure_1_5(() => {
-      closure_1_13({ queryId: closure_1, args: first, useStoreState: c2, refetch: true });
+      loader({ queryId: closure_1, args: first, useStoreState: c2, refetch: true });
     }, items6);
     return obj;
   }
@@ -607,24 +602,23 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
             } else {
               c2 = 2;
               c3 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = Promise.all(closure_0.map((args) => {
-                const tmp = tmp2(...args);
-                let obj = { queryId: tmp, args, useStoreState: null };
+              const obj2 = { value: null, done: false };
+              obj2[0] = Promise.all(closure_0.map((item, index) => {
+                const tmp = callback(...item);
+                let obj = { queryId: tmp, args: item, useStoreState: null };
                 if (null == tmp) {
                   let value = closure_1_13;
                 } else {
-                  value = closure_11.get(tmp);
+                  value = store.get(tmp);
                   if (null == value) {
                     obj = callback(table[5]).create(() => ({ isLoading: false, error: null, backoff: callback(), lastSuccessAt: null, failureLockedUntil: null }));
-                    const result = obj2.set(tmp, obj);
+                    const result = store.set(tmp, obj);
                     value = obj;
                     const obj3 = callback(table[5]);
                   }
-                  obj2 = closure_11;
                 }
                 obj[2] = value;
-                return closure_13(obj);
+                return callback(obj);
               }));
               return obj2;
             }
@@ -698,8 +692,8 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               c2 = 2;
               c3 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = Promise.all(closure_0.map((args) => {
-                const tmp = tmp2(...args);
+              obj2[0] = Promise.all(closure_0.map((item, index) => {
+                const tmp = callback(...item);
                 if (null == tmp) {
                   let value = closure_1_13;
                 } else {
@@ -710,13 +704,12 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                     const result = obj.set(tmp, obj);
                     value = obj;
                     const obj3 = callback(table[5]);
-                    tmp2 = callback;
                   }
                 }
                 backoff = value.getState().backoff;
                 backoff.succeed();
                 value.setState({ failureLockedUntil: null });
-                obj = { queryId: tmp, args, useStoreState: value, refetch: true };
+                obj = { queryId: tmp, args: item, useStoreState: value, refetch: true };
                 return callback2(obj);
               }));
               return obj2;

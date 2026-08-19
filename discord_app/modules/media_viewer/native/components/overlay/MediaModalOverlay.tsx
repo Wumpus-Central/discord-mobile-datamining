@@ -1,34 +1,38 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx
+import obj132 from "../../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
 import isBlurDisabledDefault from "../../../../visual_effect_view/native/VisualEffectView.tsx";
 import SafeAreaPaddingView from "../../../../../components_native/common/SafeAreaView.tsx";
 import renderDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import useVideoControls from "../../useVideoControls.tsx";
 import nativeEventEmitter from "../../MediaPlayerMuteManager.tsx";
+import MediaViewerDimensionsProvider from "../../MediaViewerDimensionsContext.tsx";
 import useOverlayLayoutDriver from "../../useOverlayLayoutDriver.tsx";
 import ObscuredViewDefault from "../MediaViewerThumbnails.tsx";
 import MediaModalOverlayHeader from "MediaModalOverlayHeader.tsx";
 import _modDef12063 from "MediaModalOverlayAltText.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import clamp from "MediaModalOverlayFooter.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function OverlayMuteButton(arg0) {
   ({ isMuted, onToggleMute } = arg0);
   let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
   const tmp = callback3();
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.w4m945);
-  obj = { left: true, right: true, children: tmp4(isMuted ? 12052 : 12053) };
+  obj = { left: true, right: true, children: importDefault(isMuted ? 12052 : 12053) };
   obj[3] = ThemesDefault.unsafe_rawColors.WHITE;
   obj[4] = onToggleMute;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
-  obj[2] = closure_7(renderDefault, obj);
-  return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  obj[2] = callback(renderDefault, obj);
+  return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function OverlayObscureToggleButton(arg0) {
   ({ spoilerActive, onToggleObscure } = arg0);
@@ -36,24 +40,24 @@ function OverlayObscureToggleButton(arg0) {
   const tmp = callback3();
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.UIsxUw);
-  obj = { left: true, right: true, children: tmp4(spoilerActive ? 12054 : 12055) };
+  obj = { left: true, right: true, children: importDefault(spoilerActive ? 12054 : 12055) };
   obj[3] = ThemesDefault.unsafe_rawColors.WHITE;
   obj[4] = onToggleObscure;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
-  obj[2] = closure_7(renderDefault, obj);
-  return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  obj[2] = callback(renderDefault, obj);
+  return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  let obj = index(12058);
+  index(12058);
   const items = [index];
   const items1 = [videoControls];
-  const callback = importAllResult.useCallback(() => index(closure_1_2[25]).toggleSpoiler(index), items);
+  const callback = importAllResult.useCallback(() => index(dependencyMap[25]).toggleSpoiler(index), items);
   const effect = importAllResult.useEffect(() => {
-    const result = index(closure_1_2[22]).setVideoStateControls(videoControls);
+    const result = index(dependencyMap[22]).setVideoStateControls(videoControls);
   }, items1);
-  obj = {};
+  const obj = {};
   const merged = Object.assign(getVideoControls);
   obj.slider = videoControls(9000)(index, source, videoControls);
   obj.source = source;
@@ -64,19 +68,18 @@ function MediaModalOverlay(getVideoControls) {
   obj.obscure = flag;
   obj.spoilerActive = callback(obj.useMediaItemSpoilerState(index), 1)[0];
   obj.toggleObscure = callback;
-  return closure_7(closure_13, obj);
+  return callback(closure_13, obj);
 }
 let c4 = importAllResult;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let obj = { portraitFooterButtons: null, invisibleFooter: null, overlayIcons: null, overlayButtonIcon: null, overlayButton: null };
-obj = {};
+let obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.top = undefined;
 obj.backgroundColor = "transparent";
 obj[0] = obj;
-createCacheKey = { paddingBottom: ThemesDefault.space.PX_8 };
+const createCacheKey = { paddingBottom: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
 obj[2] = { position: "absolute", top: -40, right: 8, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4 };
 obj[3] = { width: 20, height: 20 };
@@ -96,7 +99,7 @@ let closure_13 = importAllResult.memo((arg0) => {
   if (null != slider) {
     obj = { bottom: true, left: true, right: true, style: null, children: null };
     obj[3] = { paddingTop: 8 };
-    let tmp2Result = tmp2(500);
+    let tmp2Result = obj132;
     let isIOSResult = tmp2Result.isIOS();
     if (isIOSResult) {
       obj = { blurTheme: "dark", style: null };
@@ -112,12 +115,11 @@ let closure_13 = importAllResult.memo((arg0) => {
     }
     items[2] = tmp16;
     obj[4] = items;
-    let tmp21Result2 = closure_8(tmp2(6803).SafeAreaPaddingView, obj);
-    const tmp11 = closure_8;
+    let tmp21Result2 = callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
   } else {
     tmp21Result2 = null;
   }
-  tmp2Result = tmp2(9013);
+  tmp2Result = MediaViewerDimensionsProvider;
   obj2 = { animationDriver: overlayLayoutDriver, disableDownload, disableMediaOverlayButton, source, shareable, contextName, contextIcon, onClose, channelId: source.channelId };
   const items1 = [callback2(MediaModalOverlayHeader.MediaModalOverlayHeader, obj2), ];
   const obj3 = { style: items2, children: null };
@@ -126,7 +128,7 @@ let closure_13 = importAllResult.memo((arg0) => {
   if (!tmp7) {
     const obj4 = { description: null };
     obj4[0] = source.description;
-    tmp21Result = tmp21(_modDef12063, obj4);
+    tmp21Result = callback2(_modDef12063, obj4);
   }
   const items3 = [tmp21Result, , ];
   if (null != slider) {
@@ -136,8 +138,8 @@ let closure_13 = importAllResult.memo((arg0) => {
     if (tmp21Result) {
       const obj6 = { isMuted: null, onToggleMute: null };
       obj6[0] = mediaPlayerMutedStore;
-      obj6[1] = tmp2(9000).toggleMuted;
-      tmp21Result = tmp21(OverlayMuteButton, obj6);
+      obj6[1] = useVideoControls.toggleMuted;
+      tmp21Result = callback2(OverlayMuteButton, obj6);
     }
     const items4 = [tmp21Result, ];
     let tmp21Result1 = null;
@@ -145,12 +147,11 @@ let closure_13 = importAllResult.memo((arg0) => {
       const obj7 = { spoilerActive: null, onToggleObscure: null };
       obj7[0] = spoilerActive;
       obj7[1] = toggleObscure;
-      tmp21Result1 = tmp21(OverlayObscureToggleButton, obj7);
+      tmp21Result1 = callback2(OverlayObscureToggleButton, obj7);
     }
     items4[1] = tmp21Result1;
     obj5[1] = items4;
-    let tmp19Result = tmp19(View, obj5);
-    const tmp25 = View;
+    let tmp19Result = callback2(View, obj5);
   } else {
     tmp19Result = null;
   }
@@ -158,7 +159,7 @@ let closure_13 = importAllResult.memo((arg0) => {
   if (disableMediaOverlayFooter) {
     const obj8 = { bottom: true, style: null };
     obj8[1] = tmp.invisibleFooter;
-    tmp21Result2 = tmp21(tmp2(6803).SafeAreaPaddingView, obj8);
+    tmp21Result2 = callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj8);
   } else if (tmp2Result.useMediaViewerDimensions().height >= 600) {
     const obj9 = { sliderElement: null, syncer: null, guildId: null, channelId: null, messageId: null, onClose: null, onFullViewToggled: null, overlayEnabled: null };
     obj9[0] = slider;
@@ -167,26 +168,24 @@ let closure_13 = importAllResult.memo((arg0) => {
     obj9[5] = onClose;
     obj9[6] = tmp8;
     obj9[7] = overlayEnabled;
-    tmp21Result2 = tmp21(tmp2(12064).MediaModalOverlayFooter, obj9);
+    tmp21Result2 = callback2(clamp.MediaModalOverlayFooter, obj9);
   }
   const obj10 = { children: null };
   items3[2] = tmp21Result2;
   obj3[1] = items3;
-  items1[1] = closure_8(_modDef4115.View, obj3);
+  items1[1] = callback2(_modDef4115.View, obj3);
   obj10[0] = items1;
-  return closure_8(closure_9, obj10);
+  return callback2(closure_9, obj10);
 });
-let obj2 = { position: "absolute", top: -40, right: 8, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4 };
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx");
+let result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx");
 
 export default function MediaModalOverlayGuard(onIndexChange) {
   onIndexChange = onIndexChange.onIndexChange;
   let tmp = null;
   const merged = Object.assign(onIndexChange, Object.create(null));
-  let first;
   let obj = onIndexChange(8994);
   const tmp3 = callback(obj.useSelectedMediaSource(merged.syncer), 2);
-  first = tmp3[0];
+  const first = tmp3[0];
   const items = [first, onIndexChange];
   const effect = importAllResult.useEffect(() => {
     if (onIndexChange != null) {

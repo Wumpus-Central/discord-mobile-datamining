@@ -11,11 +11,11 @@ import context from "../../../app_analytics/useAnalyticsLocations.tsx";
 import contextDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import getBlockedSource from "../../../../design/components/Illustration/native/redesign/generated/Blocked.tsx";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/RelationshipStore.tsx";
+import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function IgnoredUsersList(userIds) {
   userIds = userIds.userIds;
   const tmp = callback3();
@@ -40,7 +40,7 @@ function IgnoredUsersList(userIds) {
     obj2[3] = intl2.formatToPlainString(getSystemLocale.t.iNKUhU, obj3);
     const items = [callback(Text.Text, obj2), ];
     const obj4 = { hasIcons: true, children: null };
-    obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
+    obj4[1] = userIds.map((item, index) => callback2(callback(table[14]), { userId: item }, item));
     const intl3 = getSystemLocale.intl;
     items[1] = callback(TableRowGroupTitle.TableRowGroup, obj4, intl3.string(getSystemLocale.t["93ZDWE"]));
     obj1[0] = items;
@@ -52,13 +52,11 @@ function IgnoredUsersList(userIds) {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { list: null, sectionLabelStyle: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { marginTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
 
 export default function ConnectedIgnoredUsersList() {
   let obj = initialize;

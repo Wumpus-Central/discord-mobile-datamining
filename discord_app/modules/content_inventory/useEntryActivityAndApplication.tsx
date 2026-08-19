@@ -1,15 +1,15 @@
 // discord_app/modules/content_inventory/useEntryActivityAndApplication.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../activities/EmbeddedActivitiesStore.tsx";
-import closure_5 from "ContentInventoryActivityStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import participantFromServer from "../activities/EmbeddedActivitiesStore.tsx";
+import entryToKey from "ContentInventoryActivityStore.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
 
 export default function useEntryActivityAndApplication(extra) {
   const _require = extra;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMatchingActivity(closure_0));
   let application_id;
@@ -25,10 +25,9 @@ export default function useEntryActivityAndApplication(extra) {
   const tmp7 = callback(first(7145)(items1), 2);
   first = tmp7[0];
   obj = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
-  const tmp = _require;
   const tmp4 = first(7145);
   const items2 = [closure_4];
-  obj[1] = _initialize.useStateFromStores(items2, () => {
+  obj[1] = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => {
     let id;
     if (first != null) {
       id = first.id;

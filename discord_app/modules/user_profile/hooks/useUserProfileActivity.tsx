@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/hooks/useUserProfileActivity.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import DesktopSources from "../../../../discord_common/js/packages/media-engine/Constants.tsx";
-import closure_4 from "../../content_inventory/ContentInventoryOutboxStore.tsx";
-import closure_5 from "../../../stores/MediaEngineStore.tsx";
-import closure_6 from "../../../stores/PresenceStore.tsx";
+import map from "../../content_inventory/ContentInventoryOutboxStore.tsx";
+import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
+import sortActivity from "../../../stores/PresenceStore.tsx";
 
 const useMemo = noop.useMemo;
 const Features = DesktopSources.Features;
 let closure_8 = [];
 let closure_9 = [];
-let result = set.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
+let result = obj132.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
 
 export default function useUserProfileActivity(arg0) {
   const _require = arg0;
@@ -39,46 +39,47 @@ export default function useUserProfileActivity(arg0) {
     let found;
     if (stateFromStores2 != null) {
       const entries = stateFromStores2.entries;
-      found = entries.filter((traits) => {
-        let length = traits;
-        userProfileLiveActivities = traits;
-        const isEntryLiveResult = userProfileLiveActivities(closure_1_2[8]).isEntryLive(traits);
+      found = entries.filter((item, index) => {
+        let length = item;
+        userProfileLiveActivities = item;
+        const isEntryLiveResult = userProfileLiveActivities(stateFromStores2[8]).isEntryLive(item);
         if (isEntryLiveResult) {
           return !isEntryLiveResult;
         } else {
-          let tmpResult = tmp(tmp2[9]);
+          let tmpResult = tmp(stateFromStores2[9]);
           if (tmpResult.isListenedSessionEntry(length)) {
             length = length.extra.entries.length;
             let tmp6 = length > 0;
             if (tmp6) {
               length = userProfileLiveActivities;
-              tmp6 = !userProfileLiveActivities.some((party) => {
-                let result = null != party;
+              tmp6 = !userProfileLiveActivities.some((item, index) => {
+                let result = null != item;
                 if (result) {
-                  result = traits(closure_1_2[10]).isMatchingListeningActivity(traits, party);
-                  const obj = traits(closure_1_2[10]);
+                  result = item(closure_1_2[10]).isMatchingListeningActivity(item, item);
+                  const obj = item(closure_1_2[10]);
                 }
                 return result;
               });
             }
             let result = tmp6;
           } else {
-            tmpResult = tmp(tmp2[9]);
+            tmpResult = tmp(stateFromStores2[9]);
             if (tmpResult.isWatchedMediaEntry(length)) {
-              result = !userProfileLiveActivities.some((details) => {
-                let result = null != details;
+              result = !userProfileLiveActivities.some((item, index) => {
+                let result = null != item;
                 if (result) {
-                  result = traits(closure_1_2[10]).isMatchingWatchActivity(traits, details);
-                  const obj = traits(closure_1_2[10]);
+                  result = item(closure_1_2[10]).isMatchingWatchActivity(item, item);
+                  const obj = item(closure_1_2[10]);
                 }
                 return result;
               });
             } else {
-              result = tmp(tmp2[9]).isRecentActivityEntry(length);
-              const tmpResult1 = tmp(tmp2[9]);
+              result = tmp(stateFromStores2[9]).isRecentActivityEntry(length);
+              const tmpResult1 = tmp(stateFromStores2[9]);
             }
           }
         }
+        let obj = userProfileLiveActivities(stateFromStores2[8]);
       });
     }
     if (0 === userProfileLiveActivities.length) {

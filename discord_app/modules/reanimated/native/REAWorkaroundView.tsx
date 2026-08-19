@@ -1,5 +1,5 @@
 // discord_app/modules/reanimated/native/REAWorkaroundView.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ReanimatedViewNativeComponent.tsx";
@@ -15,6 +15,6 @@ const forwardRefResult = noop.forwardRef((entering, ref) => {
   return <closure_1 />;
 });
 forwardRefResult.displayName = "REAWorkaroundView";
-const result = set.fileFinishedImporting("modules/reanimated/native/REAWorkaroundView.tsx");
+const result = obj132.fileFinishedImporting("modules/reanimated/native/REAWorkaroundView.tsx");
 
 export default forwardRefResult;

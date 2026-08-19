@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import apexExperimentDefault from "../../ConnectionIndicatorExperiment.tsx";
-import closure_3 from "../../../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
+import updateState from "../../../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import { ConnectivityIndicatorState as closure_4 } from "../../../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import { CONNECTION_BANNER_HEIGHT } from "../YouBarConstants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
 
 export const useConnectionBannerHeight = function useConnectionBannerHeight() {
   const config = apexExperimentDefault.useConfig({ location: "useConnectionBannerHeight" });

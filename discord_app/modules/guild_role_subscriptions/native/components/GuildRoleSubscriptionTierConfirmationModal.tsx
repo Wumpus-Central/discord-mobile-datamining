@@ -2,21 +2,20 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import stylesDefault from "FormStyles.tsx";
 import HeaderDefault from "GuildRoleSubscriptionTierEditStep.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../RoleTierEditStore.tsx";
+import usePriceTiers from "../RoleTierEditStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
-createCacheKey = { height: 114, width: "100%", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+const createCacheKey = { height: 114, width: "100%", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx");
 
 export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
   onDone = onDone.onDone;
@@ -25,7 +24,6 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     flag = false;
   }
   const merged = Object.assign(onDone, Object.create(null));
-  importDefault = undefined;
   const tmp2 = callback4();
   const tmp5 = stylesDefault();
   let obj = onDone(16962);
@@ -68,7 +66,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
             v0 = 2;
             c4 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0();
+            obj1[0] = onDone();
             return obj1;
           }
         } else if (1 === tmp7) {
@@ -130,7 +128,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
       obj2[1] = callback3(tmp3(5449), obj3);
       items1[1] = callback3(View, obj2);
       obj[0] = items1;
-      tmp13Result = tmp13(tmp16, obj);
+      tmp13Result = callback(closure_9, obj);
     }
     const obj4 = { children: null };
     const items2 = [tmp13Result, , ];
@@ -145,9 +143,9 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     obj6[3] = callback2(closure_7.useGroupDescriptionState(), 1)[0];
     items2[2] = callback3(tmp6(4734).Text, obj6);
     obj4[0] = items2;
-    flag = tmp13(tmp16, obj4);
+    flag = callback(closure_9, obj4);
   }
   const items3 = [flag, callback3(onDone(16986).GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
   obj.children = items3;
-  return closure_10(HeaderDefault, obj);
+  return callback(HeaderDefault, obj);
 };

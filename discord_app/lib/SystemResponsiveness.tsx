@@ -1,15 +1,16 @@
 // discord_app/lib/SystemResponsiveness.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
+import applyDefault from "../../_runtime/00012_apply.js";
 import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/index.tsx";
 
-const result = set.fileFinishedImporting("lib/SystemResponsiveness.tsx");
+const result = obj132.fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
-        const item = closure_1_1(closure_1_2[2]).forEach(rtp.rtp.outbound, (type) => {
+        const item = applyDefault.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             let prop = type.pttQueueLatencyMicrosSamples;
             if (prop == null) {
@@ -17,14 +18,12 @@ class SystemResponsiveness {
             }
             const iter = prop[Symbol.iterator]();
             while (iter !== undefined) {
-              let tmp5 = obj;
               let pttQueueLatencyHistogram = obj.pttQueueLatencyHistogram;
               let addSampleResult = pttQueueLatencyHistogram.addSample(iter.next() / 1000);
               continue;
             }
           }
         });
-        const arr = closure_1_1(closure_1_2[2]);
       }
     };
     obj.connection = global;

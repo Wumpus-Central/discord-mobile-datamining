@@ -1,14 +1,14 @@
 // discord_app/modules/search/tokens/SearchTokensUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
 
 export const ANSWER_IN_REGEX = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i;
 export const GENERIC_REGEX = /(?:\s*([^\s]+))/;
 export const makeRegexForOptionsWithNegation = function makeRegexForOptionsWithNegation(items) {
   items = [...items];
   const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
-  const mapped = sorted.map((arg0) => callback(table[0]).escape(arg0));
+  const mapped = sorted.map((item, index) => callback(table[0]).escape(item));
   const regExp = new RegExp("(?:\\s*(-?(?:" + mapped.join("|") + ")))", "i");
   return regExp;
 };

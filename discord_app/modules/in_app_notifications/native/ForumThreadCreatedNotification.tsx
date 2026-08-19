@@ -1,20 +1,18 @@
 // discord_app/modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "InAppNotificationConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
 
 export default function ForumThreadCreatedNotification(notification) {
   notification = notification.notification;
-  let thread;
   parentChannel = undefined;
-  let guild;
   let userAuthor;
-  thread = notification.thread;
+  const thread = notification.thread;
   ({ threadCreator, parentChannel } = notification);
-  guild = notification.guild;
+  const guild = notification.guild;
   let stringResult = thread(parentChannel[3])(thread);
   if (stringResult == null) {
     const intl = notification(tmp[4]).intl;
@@ -31,11 +29,10 @@ export default function ForumThreadCreatedNotification(notification) {
     notification(parentChannel[6]).transitionToThread(thread);
   }, items1);
   const callback1 = guild.useCallback(() => {
-    let obj = thread(parentChannel[7]);
-    obj = { channelId: notification.parentChannel.id };
+    thread(parentChannel[7]);
+    const obj = { channelId: notification.parentChannel.id };
     return obj.pushLazy(notification(parentChannel[9])(parentChannel[8], parentChannel.paths), obj);
   }, items2);
-  obj = { icon: null, children: null, header: null, onPress: null, onSettingsPress: null, notification: null };
   obj = { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id };
   obj[0] = jsx(notification(parentChannel[11]).Avatar, { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id });
   const formatToPlainStringResult = intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, { threadName: stringResult });

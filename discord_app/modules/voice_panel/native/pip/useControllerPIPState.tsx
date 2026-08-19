@@ -1,33 +1,27 @@
 // discord_app/modules/voice_panel/native/pip/useControllerPIPState.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../activities/EmbeddedActivitiesStore.tsx";
-import closure_6 from "../../../calls/ChannelRTCStore.tsx";
-import closure_7 from "../../../frames/FramesStore.tsx";
-import closure_8 from "../../../../stores/ChannelStore.tsx";
-import closure_9 from "../../../../stores/SpeakingStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import participantFromServer from "../../../activities/EmbeddedActivitiesStore.tsx";
+import getParticipants from "../../../calls/ChannelRTCStore.tsx";
+import map from "../../../frames/FramesStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import anyoneHasFlagInContext from "../../../../stores/SpeakingStore.tsx";
 import { VoicePanelModes } from "../../VoicePanelConstants.tsx";
 import { ActivityPanelModes } from "../../../activities/panel/ActivityPanelConstants.tsx";
 import { asLaunched } from "../../../frames/FramesConstants.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
 
 export const useControllerPIPState = function useControllerPIPState(channelId) {
   channelId = channelId.channelId;
-  let obj = channelId;
   ({ connected, focusedId } = channelId);
-  let ref = focusedId;
   const layoutManager = channelId.layoutManager;
-  dependencyMap = layoutManager;
   const mode = channelId.mode;
   let first;
   let React;
-  closure_5 = undefined;
-  let first1;
   c7 = undefined;
-  obj = React;
-  ref = React.useRef({ id: "dispatch", mode: "isArray", width: false, height: "money_mouth", containerHeight: "money_mouth_face", showSecondaryPIP: "none" });
+  React.useRef({ id: "dispatch", mode: "isArray", width: false, height: "money_mouth", containerHeight: "money_mouth_face", showSecondaryPIP: "none" });
   const tmp2 = first(React.useState(undefined), 2);
   first = tmp2[0];
   React = tmp2[1];
@@ -35,15 +29,14 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   const insertionEffect = React.useInsertionEffect(() => {
     closure_5.current = first;
   });
-  obj = channelId;
-  ref = mode;
-  dependencyMap = undefined;
+  let obj = channelId;
+  const ref = mode;
   const tmp7 = ref(16256)(channelId);
   dependencyMap = tmp7;
   let items = [closure_5, c7, closure_8];
   const items1 = [channelId, tmp7, mode];
   const stateFromStores = obj(589).useStateFromStores(items, () => {
-    const channel = closure_1_8.getChannel(obj);
+    const channel = closure_1_8.getChannel(closure_1_8);
     let isVocalResult;
     if (channel != null) {
       isVocalResult = channel.isVocal();
@@ -53,9 +46,9 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
         return false;
       }
     }
-    const tmp4 = closure_1_12(_undefined.getMainFrame());
+    const tmp4 = asLaunched(_undefined.getMainFrame());
     if (null != tmp4) {
-      if (tmp4.data.activityPanelMode === closure_1_11.PIP) {
+      if (tmp4.data.activityPanelMode === ActivityPanelModes.PIP) {
         return true;
       }
     }
@@ -63,21 +56,20 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     if (null == connectedActivityLocation) {
       return false;
     } else {
-      const embeddedActivityLocationChannelId = obj(closure_2[12]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
-      const channel1 = obj.getChannel(embeddedActivityLocationChannelId);
+      const embeddedActivityLocationChannelId = closure_1_8(closure_2[12]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+      const channel1 = closure_1_8.getChannel(embeddedActivityLocationChannelId);
       let result = null != channel1;
       const activityPanelMode = obj3.getActivityPanelMode();
       if (result) {
-        result = obj(closure_2[13]).isActivityInTextSupportedForChannel(channel1);
-        const tmp14Result = obj(closure_2[13]);
+        result = closure_1_8(closure_2[13]).isActivityInTextSupportedForChannel(channel1);
+        const tmp14Result = closure_1_8(closure_2[13]);
       }
       if (result) {
-        result = embeddedActivityLocationChannelId !== tmp;
+        result = embeddedActivityLocationChannelId !== closure_1_8;
       }
-      let tmp10 = activityPanelMode === closure_1_11.PIP;
+      let tmp10 = activityPanelMode === ActivityPanelModes.PIP;
       if (tmp10) {
-        tmp10 = ref === closure_1_10.PIP || embeddedActivityLocationChannelId !== tmp;
-        const tmp13 = ref === closure_1_10.PIP || embeddedActivityLocationChannelId !== tmp;
+        tmp10 = ref === VoicePanelModes.PIP || embeddedActivityLocationChannelId !== closure_1_8;
       }
       if (result) {
         result = tmp10;
@@ -87,11 +79,11 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     obj3 = connectedActivityLocation;
   }, items1);
   let tmp10 = ref(16304)(channelId);
-  first1 = first(React.useState(() => ref(closure_2[16])((arg0) => arg0(), 1000, { leading: true })), 1)[0];
+  const first1 = first(React.useState(() => ref(closure_2[16])((fn) => fn(), 1000, { leading: true })), 1)[0];
   const items2 = [first1];
   const layoutEffect = React.useLayoutEffect(() => () => closure_6.cancel(), items2);
   const obj2 = obj(589);
-  let tmp5 = ref;
+  const tmp5 = ref;
   [tmp14, c7] = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
   obj = { connected, mode, focusedId, participantTargetDimensions: tmp14, selfHasVideo: tmp10, showSecondaryPIP: stateFromStores };
   let tmp13 = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
@@ -107,7 +99,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   obj.showSecondaryPIP = stateFromStores;
   let tmp8Result = tmp8(16306);
   obj.mode = tmp8Result.getPIPMode({ channelId, connected, manuallyFocusedId: focusedId, mode, selfHasVideo: tmp10 });
-  dependencyMap = undefined;
   tmp8Result = tmp8(8692);
   let result = tmp8Result.cheapWorkletShallowEqual(obj, ref.current);
   dependencyMap = !result;
@@ -128,11 +119,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
         const iter = speakers[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
-          let tmp3 = nextResult;
-          let tmp4 = closure_1_6;
-          let tmp5 = closure_0;
           if (null != closure_1_6.getParticipant(closure_0, nextResult)) {
-            let tmp6 = iter;
             iter.return();
             return nextResult;
           }

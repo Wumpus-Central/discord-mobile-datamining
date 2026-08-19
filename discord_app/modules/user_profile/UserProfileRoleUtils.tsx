@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/UserProfileRoleUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import compareGuildRoles from "../../utils/GuildRoleUtils.tsx";
 
-const result = set.fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
 
 export const sortRolesByVerification = function sortRolesByVerification(tags, tags2) {
   tags = tags.tags;
@@ -18,7 +18,6 @@ export const sortRolesByVerification = function sortRolesByVerification(tags, ta
   if (undefined === guild_connections) {
     if (tmp3) {
       let num2 = compareGuildRoles.compareGuildRoles(tags, tags2);
-      const obj = compareGuildRoles;
     } else {
       num2 = -1;
     }

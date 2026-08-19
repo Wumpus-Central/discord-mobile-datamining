@@ -1,20 +1,18 @@
 // discord_app/design/components/Forms/native/FormRadio.native.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_5 = createCacheKey.createStyles(() => {
   const CONTROL_RADIO_ICON_SIZE_DEFAULT = ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_SIZE_DEFAULT;
   const CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT = ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT;
-  let obj = { radio: null, unselected: null, selected: null, dot: null };
-  obj = { width: CONTROL_RADIO_ICON_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, borderWidth: ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_BORDER_WIDTH, borderColor: ThemesDefault.colors.RADIO_BORDER_DEFAULT };
+  let obj = { width: CONTROL_RADIO_ICON_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, borderWidth: ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_BORDER_WIDTH, borderColor: ThemesDefault.colors.RADIO_BORDER_DEFAULT };
   obj[0] = obj;
   obj = { backgroundColor: "transparent", borderColor: ThemesDefault.colors.RADIO_BORDER_DEFAULT };
   obj[1] = obj;
   obj[2] = { borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
-  obj1 = { borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
   obj[3] = { width: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round };
   return obj;
 });
@@ -22,16 +20,13 @@ let closure_6 = { code: "function FormRadioNativeTsx1(){const{withSpring,selecte
 let closure_7 = { code: "function FormRadioNativeTsx2(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.backgroundColor:unselectedStyles.backgroundColor,SUBTLE_SPRING,'animate-always');}" };
 let closure_8 = { code: "function FormRadioNativeTsx3(){const{borderColor,backgroundColor}=this.__closure;return{borderColor:borderColor.get(),backgroundColor:backgroundColor.get()};}" };
 let closure_9 = { code: "function FormRadioNativeTsx4(){const{useReducedMotion,withSpring,selected,SUBTLE_SPRING}=this.__closure;const unselectedScale=useReducedMotion?1:0.5;return{opacity:withSpring(selected?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(selected?1:unselectedScale,SUBTLE_SPRING)}]};}" };
-let result = require("set").fileFinishedImporting("design/components/Forms/native/FormRadio.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Forms/native/FormRadio.native.tsx");
 
 export const FormRadio = function FormRadio(selected) {
   selected = selected.selected;
   const tmp = derivedValue1();
-  enabled = sharedValue.useContext(enabled(unselected[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
+  sharedValue.useContext(enabled(unselected[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
   enabled = selected;
-  selected = undefined;
-  unselected = undefined;
-  sharedValue = undefined;
   let derivedValue;
   derivedValue1 = undefined;
   const tmp2 = derivedValue1();
@@ -104,12 +99,12 @@ export const FormRadio = function FormRadio(selected) {
     if (selected) {
       num2 = 1;
     }
-    obj = { opacity: obj.withSpring(num2, tmp(tmp2[7]).SUBTLE_SPRING, "animate-always"), transform: null };
+    obj = { opacity: obj.withSpring(num2, enabled(unselected[7]).SUBTLE_SPRING, "animate-always"), transform: null };
     let num3 = 1;
     if (!selected) {
       num3 = num;
     }
-    obj = { scale: enabled(unselected[6]).withSpring(num3, tmp(tmp2[7]).SUBTLE_SPRING) };
+    obj = { scale: enabled(unselected[6]).withSpring(num3, enabled(unselected[7]).SUBTLE_SPRING) };
     const items = [obj];
     obj[1] = items;
     return obj;

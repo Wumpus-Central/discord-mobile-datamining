@@ -1,22 +1,21 @@
 // discord_app/modules/wishlists/hooks/useWishlistHooks.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { useEffect } from "../../../../_runtime/00019_noop.js";
-import closure_6 from "../../user_profile/UserProfileStore.tsx";
-import closure_7 from "../../../stores/AuthenticationStore.tsx";
-import closure_8 from "../../../stores/UserStore.tsx";
-import closure_9 from "../WishlistStore.tsx";
+import createUserWidgetFromServer from "../../user_profile/UserProfileStore.tsx";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import get from "../WishlistStore.tsx";
 import { getWishlistSkuIds } from "../records/WishlistRecord.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-function getUserWishlistKey(arg0, arg1) {
+const require = fn;
+function getUserWishlistKey(userId, arg1) {
   if (null != arg1) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "" + arg0 + ":" + arg1;
+    let combined = "" + userId + ":" + arg1;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "" + arg0 + ":default";
+    combined = "" + userId + ":default";
   }
   return combined;
 }
@@ -27,8 +26,6 @@ function useFetchWishlist(wishlistId) {
     source = obj.USER_PROFILE;
   }
   let first;
-  let React;
-  useEffect = undefined;
   let stateFromStores;
   obj = wishlistId(source[7]);
   let items = [closure_9];
@@ -37,19 +34,19 @@ function useFetchWishlist(wishlistId) {
       const items = [null, "success", undefined, undefined];
       let items1 = items;
     } else {
-      items1 = [closure_1_9.getWishlist(tmp), closure_1_9.getStatus(tmp), closure_1_9.getError(tmp), closure_1_9.getUpdatedAt(tmp)];
+      items1 = [closure_1_9.getWishlist(wishlistId), closure_1_9.getStatus(wishlistId), closure_1_9.getError(wishlistId), closure_1_9.getUpdatedAt(wishlistId)];
     }
     return items1;
   }), 4);
   first = tmp2[0];
-  React = tmp5;
+  const React = tmp5;
   useEffect = tmp6;
   let items1 = [first];
   const memo = React.useMemo(() => {
     if (null == first) {
       let items = [];
     } else {
-      items = wishlistId(source[9]).uniq(closure_1_10(tmp));
+      items = wishlistId(source[9]).uniq(getWishlistSkuIds(tmp));
       obj = wishlistId(source[9]);
     }
     return items;
@@ -73,7 +70,7 @@ function useFetchWishlist(wishlistId) {
   useEffect(() => {
     let isFetchingResult = null == wishlistId;
     if (!isFetchingResult) {
-      isFetchingResult = closure_1_9.isFetching(tmp);
+      isFetchingResult = closure_1_9.isFetching(wishlistId);
     }
     if (!isFetchingResult) {
       isFetchingResult = null != closure_4;
@@ -88,8 +85,8 @@ function useFetchWishlist(wishlistId) {
         tmp6 = tmp8;
       }
       if (tmp6) {
-        const wishlist = closure_1_1(source[8]).fetchWishlist(tmp, stateFromStores, source);
-        obj = closure_1_1(source[8]);
+        const wishlist = importDefault(source[8]).fetchWishlist(wishlistId, stateFromStores, source);
+        obj = importDefault(source[8]);
       }
     }
   }, items3);
@@ -103,7 +100,7 @@ function useFetchWishlist(wishlistId) {
   return obj;
 }
 let obj = { USER_PROFILE: "user_profile" };
-const result = require("set").fileFinishedImporting("modules/wishlists/hooks/useWishlistHooks.tsx");
+const result = require("obj132").fileFinishedImporting("modules/wishlists/hooks/useWishlistHooks.tsx");
 
 export const WISHLIST_IN_DM_LENGTH = 5;
 export const WISHLIST_IN_DM_LENGTH_MOBILE = 6;
@@ -117,12 +114,11 @@ export const useFetchWishlists = function useFetchWishlists(wishlistIdsAndUsers)
     USER_PROFILE = obj.USER_PROFILE;
   }
   let stateFromStoresArray2;
-  let memo;
   obj = wishlistIdsAndUsers(stateFromStoresArray2[7]);
   const items = [closure_9];
   const items1 = [wishlistIdsAndUsers];
-  const wishlists = obj.useStateFromStoresArray(items, () => wishlistIdsAndUsers.map((wishlistId) => {
-    wishlistId = wishlistId.wishlistId;
+  const wishlists = obj.useStateFromStoresArray(items, () => wishlistIdsAndUsers.map((item, index) => {
+    const wishlistId = item.wishlistId;
     let wishlist = null;
     if (null != wishlistId) {
       wishlist = wishlist.getWishlist(wishlistId);
@@ -131,19 +127,19 @@ export const useFetchWishlists = function useFetchWishlists(wishlistIdsAndUsers)
   }), items1);
   const items2 = [closure_9];
   const items3 = [wishlistIdsAndUsers];
-  const isFetching = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStores(items2, () => wishlistIdsAndUsers.some((wishlistId) => {
-    wishlistId = wishlistId.wishlistId;
+  const isFetching = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStores(items2, () => wishlistIdsAndUsers.some((item, index) => {
+    const wishlistId = item.wishlistId;
     let isFetchingResult = null != wishlistId;
     if (isFetchingResult) {
       isFetchingResult = fetching.isFetching(wishlistId);
     }
     return isFetchingResult;
   }), items3);
-  let obj2 = wishlistIdsAndUsers(stateFromStoresArray2[7]);
+  const obj2 = wishlistIdsAndUsers(stateFromStoresArray2[7]);
   const items4 = [closure_9];
   const items5 = [wishlistIdsAndUsers];
-  const errors = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStoresArray(items4, () => wishlistIdsAndUsers.map((wishlistId) => {
-    wishlistId = wishlistId.wishlistId;
+  const errors = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStoresArray(items4, () => wishlistIdsAndUsers.map((item, index) => {
+    const wishlistId = item.wishlistId;
     error = undefined;
     if (null != wishlistId) {
       error = error.getError(wishlistId);
@@ -152,8 +148,8 @@ export const useFetchWishlists = function useFetchWishlists(wishlistIdsAndUsers)
   }), items5);
   const obj3 = wishlistIdsAndUsers(stateFromStoresArray2[7]);
   const items6 = [closure_6];
-  stateFromStoresArray2 = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStoresArray(items6, () => wishlistIdsAndUsers.map((wishlistId) => {
-    wishlistId = wishlistId.wishlistId;
+  stateFromStoresArray2 = wishlistIdsAndUsers(stateFromStoresArray2[7]).useStateFromStoresArray(items6, () => wishlistIdsAndUsers.map((item, index) => {
+    const wishlistId = item.wishlistId;
     let tmp2;
     if (null != wishlistId) {
       wishlistSettings = wishlistSettings.getWishlistSettings(tmp, wishlistId);
@@ -166,12 +162,12 @@ export const useFetchWishlists = function useFetchWishlists(wishlistIdsAndUsers)
     return tmp2;
   }));
   const items7 = [wishlistIdsAndUsers, stateFromStoresArray2];
-  memo = React.useMemo(() => {
+  const memo = React.useMemo(() => {
     obj = {};
-    const item = obj.forEach((arg0, arg1) => {
-      ({ userId, wishlistId } = arg0);
-      let tmp = closure_1_2;
-      if (arg1 < closure_1_2.length) {
+    const item = obj.forEach((item, index) => {
+      ({ userId, wishlistId } = item);
+      let tmp = stateFromStoresArray2;
+      if (index < stateFromStoresArray2.length) {
         if (null != wishlistId) {
           const _HermesInternal2 = HermesInternal;
           let combined = "" + userId + ":" + wishlistId;
@@ -179,9 +175,8 @@ export const useFetchWishlists = function useFetchWishlists(wishlistIdsAndUsers)
           const _HermesInternal = HermesInternal;
           combined = "" + userId + ":default";
         }
-        tmp = tmp[arg1];
+        tmp = tmp[index];
         obj[combined] = tmp;
-        const tmp2 = obj;
       }
     });
     return obj;
@@ -195,36 +190,21 @@ export const useFetchWishlists = function useFetchWishlists(wishlistIdsAndUsers)
       let tmp3 = wishlistId;
       let userId = nextResult.userId;
       if (null != wishlistId) {
-        let obj2 = closure_1_9;
-        let tmp23 = wishlistId;
         if (!closure_1_9.isFetching(tmp3)) {
-          let tmp4 = wishlistId;
-          if (null == obj2.getError(tmp3)) {
-            let tmp5 = wishlistId;
-            let wishlist = obj2.getWishlist(tmp3);
-            let updatedAt = obj2.getUpdatedAt(tmp3);
-            let tmp8 = memo;
-            let tmp9 = closure_1_12;
-            let tmp10 = userId;
-            let tmp11 = memo[closure_1_12(0, userId, tmp3)];
+          if (null == closure_1_9.getError(tmp3)) {
+            let wishlist = closure_1_9.getWishlist(tmp3);
+            let updatedAt = closure_1_9.getUpdatedAt(tmp3);
+            let tmp11 = memo[getUserWishlistKey(0, userId, tmp3)];
             let tmp12 = null == wishlist;
             if (!tmp12) {
-              let tmp13 = tmp11;
               let tmp14 = null != tmp11;
               if (tmp14) {
-                let tmp15 = updatedAt;
-                let tmp16 = tmp11;
                 tmp14 = updatedAt !== tmp11;
               }
               tmp12 = tmp14;
             }
             if (tmp12) {
-              let tmp17 = USER_PROFILE;
-              let tmp18 = stateFromStoresArray2;
               obj = USER_PROFILE(stateFromStoresArray2[8]);
-              let tmp19 = wishlistId;
-              let tmp20 = tmp11;
-              let tmp21 = USER_PROFILE;
               let wishlist1 = obj.fetchWishlist(tmp3, tmp11, USER_PROFILE);
             }
           }
@@ -240,7 +220,7 @@ export const useIsSkuInWishlist = function useIsSkuInWishlist(stateFromStores, s
   const _require = stateFromStores;
   closure_1 = skuId;
   const items = [closure_9];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let hasSkuIdResult = null != closure_0;
     if (hasSkuIdResult) {
       hasSkuIdResult = closure_1_9.hasSkuId(tmp, closure_1);
@@ -266,10 +246,10 @@ export const useShouldShowWishlistInDMGifting = function useShouldShowWishlistIn
   const effect = wishlistGiftableItems.useEffect(() => {
     let id;
     if (giftRecipient != null) {
-      id = tmp.id;
+      id = giftRecipient.id;
     }
     if (null != id) {
-      giftRecipient(flag[11])(tmp.id);
+      giftRecipient(flag[11])(giftRecipient.id);
     }
   }, items);
   let id1;
@@ -284,11 +264,11 @@ export const useShouldShowWishlistInDMGifting = function useShouldShowWishlistIn
   const stateFromStores = isGift(flag[7]).useStateFromStores(items1, () => {
     let id;
     if (giftRecipient != null) {
-      id = tmp.id;
+      id = giftRecipient.id;
     }
     let firstWishlistId = null;
     if (null != id) {
-      firstWishlistId = closure_1_6.getFirstWishlistId(tmp.id);
+      firstWishlistId = closure_1_6.getFirstWishlistId(giftRecipient.id);
     }
     return firstWishlistId;
   });
@@ -309,8 +289,7 @@ export const useShouldShowWishlistInDMGifting = function useShouldShowWishlistIn
   }
   obj[1] = id2;
   const obj2 = isGift(flag[7]);
-  const tmp9 = useFetchWishlist;
-  wishlistGiftableItems = tmp7(flag[13]).useWishlistGiftableItems(tmp9(obj).wishlist);
+  wishlistGiftableItems = tmp7(flag[13]).useWishlistGiftableItems(useFetchWishlist(obj).wishlist);
   const items2 = [isGift, giftRecipient, wishlistGiftableItems, tmp4Result, flag];
   return obj.useMemo(() => {
     let tmp = true === isGift;
@@ -335,22 +314,21 @@ export const useCurrentUserWishlist = function useCurrentUserWishlist() {
   obj = stateFromStores(userProfile[7]);
   const items = [closure_7];
   stateFromStores = obj.useStateFromStores(items, () => id.getId());
-  let stateFromStores1;
   userProfile = undefined;
   const items1 = [closure_8];
-  stateFromStores1 = stateFromStores(userProfile[7]).useStateFromStores(items1, () => closure_1_8.getUser(stateFromStores));
+  const stateFromStores1 = stateFromStores(userProfile[7]).useStateFromStores(items1, () => closure_1_8.getUser(stateFromStores));
   const obj2 = stateFromStores(userProfile[7]);
   const items2 = [closure_6];
   const items3 = [stateFromStores];
   const stateFromStoresObject = stateFromStores(userProfile[7]).useStateFromStoresObject(items2, () => {
     userProfile = null;
     if (null != stateFromStores) {
-      userProfile = closure_1_6.getUserProfile(tmp);
+      userProfile = closure_1_6.getUserProfile(stateFromStores);
     }
     obj = { userProfile, wishlistId: null };
     let firstWishlistId = null;
     if (null != stateFromStores) {
-      firstWishlistId = closure_1_6.getFirstWishlistId(tmp);
+      firstWishlistId = closure_1_6.getFirstWishlistId(stateFromStores);
     }
     obj[1] = firstWishlistId;
     return obj;
@@ -390,12 +368,12 @@ export const useFetchWishlistAndProfileInfoForUser = function useFetchWishlistAn
   const stateFromStoresObject = _require(userProfile[7]).useStateFromStoresObject(items1, () => {
     userProfile = null;
     if (null != stateFromStores) {
-      userProfile = closure_1_6.getUserProfile(tmp);
+      userProfile = closure_1_6.getUserProfile(stateFromStores);
     }
     obj = { userProfile, wishlistId: null };
     let firstWishlistId = null;
     if (null != stateFromStores) {
-      firstWishlistId = closure_1_6.getFirstWishlistId(tmp);
+      firstWishlistId = closure_1_6.getFirstWishlistId(stateFromStores);
     }
     obj[1] = firstWishlistId;
     return obj;
@@ -419,7 +397,6 @@ export const useFetchWishlistAndProfileInfoForUser = function useFetchWishlistAn
       const tmp7 = stateFromStores1(userProfile[11]);
     }
   }, items3);
-  obj = {};
   obj = { wishlistId, userId: recipientUserId };
   const merged = Object.assign(useFetchWishlist(obj));
   obj.wishlistId = wishlistId;

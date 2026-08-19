@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouConstants.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Button from "../../../../../design/void/native.tsx";
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouConstants.tsx");
 
 export const YOU_SCREEN_ID = "you-screen-native-id";
 export const YOU_BANNER_IMAGE_HEIGHT = 150;

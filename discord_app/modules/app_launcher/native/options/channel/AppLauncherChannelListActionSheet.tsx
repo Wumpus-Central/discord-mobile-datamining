@@ -3,15 +3,16 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import Text from "../../../../../design/components/Text/native/Text.tsx";
 import computeChannelNameDefault from "../../../../channel/useChannelName.tsx";
 import TableRowInner from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
+import getChannelIcon from "../../../../../utils/native/ChannelUtils.tsx";
 import TextIcon3 from "../../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import stylesDefault from "../../base_components/AppLauncherOptionIcon.tsx";
-import closure_3 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../../stores/GuildStore.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import createGuildRecordFromRust from "../../../../../stores/GuildStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class ChannelIcon {
   constructor(arg0) {
     ({ channel, size } = global);
@@ -52,36 +53,30 @@ function ChannelListItem(arg0) {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
-createCacheKey = { channelIconWrapper: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/options/channel/AppLauncherChannelListActionSheet.tsx");
 
 export default function AppLauncherChannelListActionSheet(channel) {
   ({ onChannelPress: require, onActionSheetDismiss } = channel);
   channel = channel.channel;
   const option = channel.option;
   let first;
-  closure_5 = undefined;
-  let ref;
-  let first1;
-  closure_8 = undefined;
   const tmp = option(first.useState(""), 2);
   first = tmp[0];
   closure_5 = tmp[1];
-  ref = first.useRef(null);
+  const ref = first.useRef(null);
   const tmp4 = option(first.useState([]), 2);
-  first1 = tmp4[0];
+  const first1 = tmp4[0];
   closure_8 = tmp4[1];
   const items = [first, channel, option];
   const effect = first.useEffect(() => {
-    let obj = onActionSheetDismiss(channel[9]);
-    obj = { query: first, channel, channelTypes: option.channelTypes, limit: null, allowSnowflake: true };
+    onActionSheetDismiss(channel[9]);
+    const obj = { query: first, channel, channelTypes: option.channelTypes, limit: null, allowSnowflake: true };
     callback2(obj.queryApplicationCommandChannelResults(obj).channels);
   }, items);
-  let obj = { onDismiss: onActionSheetDismiss, option, children: null };
-  obj = {
+  let obj = {
     onChange(str) {
       callback(str.toLowerCase());
       const current = ref.current;
@@ -92,25 +87,25 @@ export default function AppLauncherChannelListActionSheet(channel) {
   };
   const items1 = [ref(require(channel[12]).AppLauncherListSearchBar, obj), ];
   if (0 === first1.length) {
-    let tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherListEmptyState, {});
+    let tmp9Result = tmp9(require(tmp8[12]).AppLauncherListEmptyState, {});
   } else {
     obj = { ref: null, data: null, renderItem: null };
     obj[0] = ref;
     obj[1] = first1;
     obj[2] = function renderItem(index) {
       const item = index.item;
-      return ref(closure_1_11, {
+      return ref(ChannelListItem, {
         channel: item,
         index: index.index,
         totalCount: first1.length,
         onPress() {
           item({ channel: item });
-          closure_1_1(closure_1_2[10]).hideActionSheet(closure_1_8);
-          closure_1_1();
+          onActionSheetDismiss(channel[10]).hideActionSheet(closure_1_8);
+          onActionSheetDismiss();
         }
       });
     };
-    tmp9Result = tmp9(tmp7(tmp8[12]).AppLauncherList, obj);
+    tmp9Result = tmp9(require(tmp8[12]).AppLauncherList, obj);
   }
   items1[1] = tmp9Result;
   obj[2] = items1;

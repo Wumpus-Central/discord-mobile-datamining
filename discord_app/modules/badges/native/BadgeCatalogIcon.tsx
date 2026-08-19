@@ -1,20 +1,19 @@
 // discord_app/modules/badges/native/BadgeCatalogIcon.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 const re7 = /\.svg(?:[?#]|$)/i;
-const result = require("set").fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
 
 export default function BadgeCatalogIcon(style) {
   ({ badge, size } = style);
-  let complex_icon_animated_url;
   let isMatch;
   dependencyMap = undefined;
   let callback;
-  complex_icon_animated_url = badge.simple_icon_url;
+  let complex_icon_animated_url = badge.simple_icon_url;
   if (complex_icon_animated_url == null) {
     complex_icon_animated_url = badge.complex_icon_static_url;
   }
@@ -35,23 +34,21 @@ export default function BadgeCatalogIcon(style) {
         if (null == obj.getCachedSvgXml(tmp)) {
           const _AbortController = AbortController;
           abortController = new AbortController();
-          const svgXml = tmp3(tmp4[4]).loadSvgXml(tmp, abortController.signal);
-          const tmp3Result = tmp3(tmp4[4]);
-          svgXml.then((arg0) => {
+          const svgXml = complex_icon_animated_url(_undefined[4]).loadSvgXml(tmp, abortController.signal);
+          const tmp3Result = complex_icon_animated_url(_undefined[4]);
+          svgXml.then((result) => {
             if (!abortController.signal.aborted) {
               const obj = { url: null, xml: null };
               obj[0] = abortController;
-              obj[1] = arg0;
+              obj[1] = result;
               closure_1_2(obj);
             }
-          }).catch(() => {
+          }).catch((error) => {
 
           });
           return () => abortController.abort();
         }
         obj = complex_icon_animated_url(_undefined[4]);
-        tmp3 = complex_icon_animated_url;
-        tmp4 = _undefined;
       }
     }
   }, items);
@@ -80,7 +77,7 @@ export default function BadgeCatalogIcon(style) {
       obj1[0] = xml;
       obj1[1] = size;
       obj1[2] = size;
-      tmp15Result = tmp15(complex_icon_animated_url(6571).SvgXml, obj1);
+      tmp15Result = jsx(complex_icon_animated_url(6571).SvgXml, { xml: null, width: null, height: null });
     }
     obj[2] = tmp15Result;
     return <View style={null} aria-hidden>{null}</View>;
@@ -101,9 +98,9 @@ export default function BadgeCatalogIcon(style) {
       obj5[1] = size;
       obj3[1] = obj5;
       obj3[2] = tmp7;
-      obj[2] = tmp8(isMatch(5449), obj3);
+      obj[2] = jsx(isMatch(5449), { source: null, style: null, onError: null });
     }
     return <View {...obj} />;
   }
-  let tmp3 = callback(React.useState(null), 2);
+  const tmp3 = callback(React.useState(null), 2);
 };

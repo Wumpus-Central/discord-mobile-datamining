@@ -1,24 +1,27 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getNameplateData from "../../collectibles/nameplates/utils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
+import NitroWheelIcon2 from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import useMaybeFetchProfileFrameDefault from "../../collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
 import getNameplateAssets from "../../collectibles/nameplates/native/NameplateUtils.tsx";
+import filterLayerDefault from "../../collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
 import ShopIcon from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
 import getCollectibleTypeName from "../FamilyCenterActivityPurchaseRowUtils.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { PROFILE_FRAME_ASPECT_RATIO as closure_5 } from "../../collectibles/profile_frames/native/ProfileFrameConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function AvatarDecorationPreviewImage(arg0) {
   ({ product, styles } = arg0);
   let obj = getCollectibleTypeName;
   const avatarDecorationPreviewUrl = obj.getAvatarDecorationPreviewUrl(product);
   let tmp2 = null;
   if (null != avatarDecorationPreviewUrl) {
-    obj = { source: null, style: null, fadeDuration: 0 };
     obj = { uri: null };
     obj[0] = avatarDecorationPreviewUrl;
     obj[0] = obj;
@@ -51,7 +54,6 @@ function ProfileEffectPreviewImage(arg0) {
   const profileEffectPreviewUrl = obj.getProfileEffectPreviewUrl(product);
   let tmp2 = null;
   if (null != profileEffectPreviewUrl) {
-    obj = { source: null, style: null, fadeDuration: 0 };
     obj = { uri: null };
     obj[0] = profileEffectPreviewUrl;
     obj[0] = obj;
@@ -71,10 +73,10 @@ function ProfileFramePreviewImage(arg0) {
     obj[0] = tmp3;
     obj[1] = getCollectibleTypeName.PREVIEW_SIZE * closure_5;
     obj[2] = getCollectibleTypeName.PREVIEW_SIZE;
-    obj[3] = tmp(712).colors.BACKGROUND_BASE_LOW;
-    obj[1] = jsx(tmp(9225), { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null });
+    obj[3] = ThemesDefault.colors.BACKGROUND_BASE_LOW;
+    obj[1] = jsx(filterLayerDefault, { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null });
     tmp4 = <closure_3 profileFrame={null} previewWidth={null} previewHeight={null} profileBackgroundColor={null} />;
-    const tmpResult = tmp(9225);
+    const tmpResult = filterLayerDefault;
   }
   return tmp4;
 }
@@ -91,9 +93,9 @@ function SubscriptionPreview(arg0) {
     obj1 = { style: null, children: null };
     obj1[0] = styles.purchasePlaceholder;
     if (obj4.isGuildBoostSubscription(subscriptionPlanId)) {
-      let NitroWheelIcon = tmp5(7979).BoostGemIcon;
+      let NitroWheelIcon = BoostGemIcon.BoostGemIcon;
     } else {
-      NitroWheelIcon = tmp5(7988).NitroWheelIcon;
+      NitroWheelIcon = NitroWheelIcon2.NitroWheelIcon;
     }
     obj = { size: "custom", style: null };
     obj[1] = { width: 20, height: 20 };
@@ -117,8 +119,8 @@ function CollectiblePreview(arg0) {
       obj1[0] = product;
       obj1[1] = styles;
       return <AvatarDecorationPreviewImage product={null} styles={null} />;
-    } else if (tmp17(1949).CollectiblesItemType.NAMEPLATE === type) {
-      const nameplateDataFromProductRecord = tmp17(1946).getNameplateDataFromProductRecord(product);
+    } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
+      const nameplateDataFromProductRecord = getNameplateData.getNameplateDataFromProductRecord(product);
       let tmp8 = null;
       if (null != nameplateDataFromProductRecord) {
         const obj2 = { nameplateData: null, styles: null };
@@ -127,12 +129,12 @@ function CollectiblePreview(arg0) {
         tmp8 = <NameplatePreviewImage nameplateData={null} styles={null} />;
       }
       return tmp8;
-    } else if (tmp17(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+    } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj3 = { product: null, styles: null };
       obj3[0] = product;
       obj3[1] = styles;
       return <ProfileEffectPreviewImage product={null} styles={null} />;
-    } else if (tmp17(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+    } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
       const obj4 = { product: null, styles: null };
       obj4[0] = product;
       obj4[1] = styles;
@@ -142,15 +144,14 @@ function CollectiblePreview(arg0) {
       obj[0] = styles.purchasePlaceholder;
       const obj5 = { size: "custom", style: null };
       obj5[1] = { width: 20, height: 20 };
-      obj[1] = jsx(tmp17(11316).ShopIcon, { size: "custom", style: null });
+      obj[1] = jsx(ShopIcon.ShopIcon, { size: "custom", style: null });
       return <closure_3 style={null}>{null}</closure_3>;
     }
   }
 }
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
-createCacheKey = { purchasePlaceholder: null, avatarDecorationPreview: null, nameplateContainer: null, nameplatePreview: null, profileFrameContainer: null };
-createCacheKey = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
+const createCacheKey = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12 };
 let obj1 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12 };
@@ -161,7 +162,7 @@ let obj3 = { position: "absolute", right: 0, width: require("getCollectibleTypeN
 createCacheKey[4] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx");
 
 export default function FamilyCenterActivityItemPreview(arg0) {
   ({ displayName, product, isSubscription, subscriptionPlanId } = arg0);
@@ -171,12 +172,12 @@ export default function FamilyCenterActivityItemPreview(arg0) {
     obj = { subscriptionPlanId: null, styles: null };
     obj[0] = subscriptionPlanId;
     obj[1] = tmp;
-    let tmp2Result = tmp2(SubscriptionPreview, obj);
+    let tmp2Result = <SubscriptionPreview subscriptionPlanId={null} styles={null} />;
   } else {
     obj = { product: null, styles: null };
     obj[0] = product;
     obj[1] = tmp;
-    tmp2Result = tmp2(CollectiblePreview, obj);
+    tmp2Result = <CollectiblePreview product={null} styles={null} />;
   }
   obj[2] = tmp2Result;
   return <closure_3 accessible accessibilityLabel={displayName}>{null}</closure_3>;

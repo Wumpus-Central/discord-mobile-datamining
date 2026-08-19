@@ -1,5 +1,5 @@
 // discord_common/js/packages/libdiscore/mobile/js/timers.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import typedGlobal from "global_types.tsx";
 
 function setTimeout(arg0, arg1) {
@@ -49,7 +49,7 @@ let closure_3 = LIBDISCORE_JSI.makeTimerManager(function expirationCallback(arg0
     }
   }
 });
-let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/timers.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/timers.tsx");
 
 export function setTimersMonitorCallback(onTimersDelayCallback) {
   closure_1 = onTimersDelayCallback;

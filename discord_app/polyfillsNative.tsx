@@ -1,5 +1,5 @@
 // discord_app/polyfillsNative.tsx
-import set from "../_runtime/00002_set.js";
+import obj132 from "../_runtime/00002_obj132.js";
 import Buffer from "../_runtime/00511_Buffer.js";
 import q from "../_runtime/01214_q.js";
 import _isNativeReflectConstruct from "../_runtime/13764__isNativeReflectConstruct.js";
@@ -46,4 +46,4 @@ if (tmp7) {
 if (!tmp7) {
   const _module6 = q;
 }
-const result = set.fileFinishedImporting("polyfillsNative.tsx");
+const result = obj132.fileFinishedImporting("polyfillsNative.tsx");

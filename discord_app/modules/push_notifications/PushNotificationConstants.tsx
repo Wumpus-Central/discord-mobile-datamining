@@ -1,6 +1,6 @@
 // discord_app/modules/push_notifications/PushNotificationConstants.tsx
-import set from "../../../_runtime/00002_set.js";
-import set2 from "../../utils/PlatformUtils.tsx";
+import obj132 from "../../../_runtime/00002_obj132.js";
+import obj1322 from "../../utils/PlatformUtils.tsx";
 import getConstants from "../../utils/native/ClientInfoUtils.tsx";
 import isMetaQuest from "../device/MetaQuestUtils.android.tsx";
 
@@ -32,7 +32,7 @@ if (!startsWithResult) {
   }
   str4 = str5;
 }
-const result = set.fileFinishedImporting("modules/push_notifications/PushNotificationConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/push_notifications/PushNotificationConstants.tsx");
 
 export const BUNDLE_ID = str;
 export const IS_QUEST_RELEASE = isMetaQuest;
@@ -48,7 +48,7 @@ export const getDevicePushProvider = function getDevicePushProvider() {
     if (!obj.isAndroid()) {
       str = str2;
     }
-    obj = set2;
+    obj = obj1322;
   }
   return str;
 };

@@ -1,23 +1,23 @@
 // discord_common/js/packages/media-engine/native/Devices.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import formatDefault from "../../../../../_runtime/00669_format.js";
 import AudioSubsystems from "Constants.tsx";
 
 ({ DEFAULT_DEVICE_ID: c3, DeviceTypes: c4 } = AudioSubsystems);
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Devices.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Devices.tsx");
 
 export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
   closure_0 = AUDIO_INPUT;
   importDefault = false;
-  const mapped = items.map((arg0, arg1) => {
-    ({ guid, name, index } = arg0);
+  const mapped = items.map((item, index) => {
+    ({ guid, name, index } = item);
     if (VIDEO_INPUT === closure_1_4.VIDEO_INPUT) {
       let obj = /^front/i;
       if (obj.test(name)) {
         let tmp12 = closure_1_3;
         let str2 = "Default";
       }
-      let tmp13 = arg1;
+      let tmp13 = index;
       if (null != index) {
         tmp13 = index;
       }
@@ -86,15 +86,15 @@ export const getAudioInputDevices = function getAudioInputDevices() {
     const inputDevices = voiceEngine.getInputDevices((arr) => {
       const AUDIO_INPUT = closure_1_4.AUDIO_INPUT;
       c1 = false;
-      const mapped = arr.map((arg0, arg1) => {
-        ({ guid, name, index } = arg0);
+      const mapped = arr.map((item, index) => {
+        ({ guid, name, index } = item);
         if (VIDEO_INPUT === closure_1_4.VIDEO_INPUT) {
           let obj = /^front/i;
           if (obj.test(name)) {
             let tmp12 = closure_1_3;
             let str2 = "Default";
           }
-          let tmp13 = arg1;
+          let tmp13 = index;
           if (null != index) {
             tmp13 = index;
           }
@@ -152,7 +152,7 @@ export const getAudioInputDevices = function getAudioInputDevices() {
         obj = { id: null, type: null, index: -1, name: "Default" };
         obj[0] = closure_1_3;
         obj[1] = AUDIO_INPUT;
-        mapped.unshift(obj);
+        arr = mapped.unshift(obj);
       }
       return AUDIO_INPUT(mapped);
     });
@@ -165,15 +165,15 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
     const outputDevices = voiceEngine.getOutputDevices((arr) => {
       const AUDIO_OUTPUT = closure_1_4.AUDIO_OUTPUT;
       c1 = false;
-      const mapped = arr.map((arg0, arg1) => {
-        ({ guid, name, index } = arg0);
+      const mapped = arr.map((item, index) => {
+        ({ guid, name, index } = item);
         if (VIDEO_INPUT === closure_1_4.VIDEO_INPUT) {
           let obj = /^front/i;
           if (obj.test(name)) {
             let tmp12 = closure_1_3;
             let str2 = "Default";
           }
-          let tmp13 = arg1;
+          let tmp13 = index;
           if (null != index) {
             tmp13 = index;
           }
@@ -231,7 +231,7 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
         obj = { id: null, type: null, index: -1, name: "Default" };
         obj[0] = closure_1_3;
         obj[1] = AUDIO_OUTPUT;
-        mapped.unshift(obj);
+        arr = mapped.unshift(obj);
       }
       return AUDIO_OUTPUT(mapped);
     });
@@ -244,15 +244,15 @@ export const getVideoInputDevices = function getVideoInputDevices() {
     const videoInputDevices = voiceEngine.getVideoInputDevices((arr) => {
       const VIDEO_INPUT = closure_1_4.VIDEO_INPUT;
       c1 = false;
-      const mapped = arr.map((arg0, arg1) => {
-        ({ guid, name, index } = arg0);
+      const mapped = arr.map((item, index) => {
+        ({ guid, name, index } = item);
         if (VIDEO_INPUT === closure_1_4.VIDEO_INPUT) {
           let obj = /^front/i;
           if (obj.test(name)) {
             let tmp12 = closure_1_3;
             let str2 = "Default";
           }
-          let tmp13 = arg1;
+          let tmp13 = index;
           if (null != index) {
             tmp13 = index;
           }
@@ -310,7 +310,7 @@ export const getVideoInputDevices = function getVideoInputDevices() {
         obj = { id: null, type: null, index: -1, name: "Default" };
         obj[0] = closure_1_3;
         obj[1] = VIDEO_INPUT;
-        mapped.unshift(obj);
+        arr = mapped.unshift(obj);
       }
       return VIDEO_INPUT(mapped);
     });

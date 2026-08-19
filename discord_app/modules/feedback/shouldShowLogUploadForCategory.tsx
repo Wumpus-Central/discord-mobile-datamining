@@ -1,10 +1,10 @@
 // discord_app/modules/feedback/shouldShowLogUploadForCategory.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import FeedbackRating2 from "Constants.tsx";
 
 const FeedbackRating = FeedbackRating2.FeedbackRating;
 let closure_1 = {};
-const result = set.fileFinishedImporting("modules/feedback/shouldShowLogUploadForCategory.tsx");
+const result = obj132.fileFinishedImporting("modules/feedback/shouldShowLogUploadForCategory.tsx");
 
 export const shouldShowLogUploadForCategory = function shouldShowLogUploadForCategory(rating, category, reason) {
   if (rating !== FeedbackRating.BAD) {

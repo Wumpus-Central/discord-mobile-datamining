@@ -1,8 +1,8 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchLayoutStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "GlobalDiscoveryServersSearchCountsStore.tsx";
-import closure_1 from "GlobalDiscoveryServersSearchResultsStore.tsx";
+import map from "GlobalDiscoveryServersSearchCountsStore.tsx";
+import map2 from "GlobalDiscoveryServersSearchResultsStore.tsx";
 
 function reset() {
   closure_2 = [];
@@ -29,6 +29,6 @@ const globalDiscoveryServersSearchLayoutStore = new GlobalDiscoveryServersSearch
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchLayoutStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchLayoutStore.tsx");
 
 export default globalDiscoveryServersSearchLayoutStore;

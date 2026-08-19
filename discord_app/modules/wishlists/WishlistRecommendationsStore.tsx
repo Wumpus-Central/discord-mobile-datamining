@@ -1,7 +1,7 @@
 // discord_app/modules/wishlists/WishlistRecommendationsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../user_settings/LocaleStore.tsx";
+import _getSystemLocale from "../user_settings/LocaleStore.tsx";
 
 function handleUserSettingsStoreUpdate() {
   if (locale === closure_0.locale) {
@@ -117,6 +117,6 @@ const wishlistRecommendationsStore = new WishlistRecommendationsStore(dispatcher
     return false;
   }
 });
-const result = require("set").fileFinishedImporting("modules/wishlists/WishlistRecommendationsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/wishlists/WishlistRecommendationsStore.tsx");
 
 export default wishlistRecommendationsStore;

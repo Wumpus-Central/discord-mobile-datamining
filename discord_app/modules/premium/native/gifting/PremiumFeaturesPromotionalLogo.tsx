@@ -1,24 +1,23 @@
 // discord_app/modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx");
 
 export default function PremiumFeaturesPromotionalLogo(arg0) {
   ({ rotatingAvatarImageUrl, promoRotatingStyle, shouldAnimate } = arg0);
   if (shouldAnimate === undefined) {
     shouldAnimate = true;
   }
-  let stateFromStores;
   let aPNGPlayerControls;
   let first;
   let React;
   let obj = shouldAnimate(aPNGPlayerControls[4]);
   const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let num = null;
   const ref = React.useRef(null);
   aPNGPlayerControls = shouldAnimate(aPNGPlayerControls[5]).useAPNGPlayerControls(ref);
@@ -40,6 +39,7 @@ export default function PremiumFeaturesPromotionalLogo(arg0) {
         aPNGPlayerControls.stop();
       }
     }
+    const obj = shouldAnimate(aPNGPlayerControls[6]);
   }, items1);
   const obj2 = shouldAnimate(aPNGPlayerControls[5]);
   const tmp9 = stateFromStores;
@@ -63,4 +63,5 @@ export default function PremiumFeaturesPromotionalLogo(arg0) {
     return tmp13;
   }
   tmp13 = jsx(tmp9(tmp2[8]), { style: promoRotatingStyle, resizeMode: "contain", source: { uri: rotatingAvatarImageUrl } });
+  tmpResult = shouldAnimate(aPNGPlayerControls[6]);
 };

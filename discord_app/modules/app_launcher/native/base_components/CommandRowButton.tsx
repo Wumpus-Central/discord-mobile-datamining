@@ -1,23 +1,27 @@
 // discord_app/modules/app_launcher/native/base_components/CommandRowButton.tsx
-import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import getSystemLocale from "../../../../intl/index.native.tsx";
+import SendMessageIcon from "../../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import TableRowArrow from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
 
 export default function CommandRowIcon(hasOptions) {
   if (hasOptions.hasOptions) {
-    let tmp3Result = tmp3(tmp4(6297).TableRowArrow, {});
+    let tmp3Result = jsx(TableRowArrow.TableRowArrow, {});
   } else {
     const obj = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
-    const intl = tmp4(1236).intl;
-    obj[1] = intl.string(tmp4(1236).t.TXNS7S);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.TXNS7S);
     obj[2] = tmp2;
-    obj[3] = tmp3(tmp4(4320).SendMessageIcon, { size: "sm" });
+    obj[3] = jsx(SendMessageIcon.SendMessageIcon, { size: "sm" });
     obj[7] = tmp;
-    tmp3Result = tmp3(tmp4(4745).Button, obj);
+    tmp3Result = jsx(Button.Button, { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null });
   }
   return tmp3Result;
 };
@@ -72,13 +76,13 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               dependencyMap();
             }
             c3 = 1;
-            obj1 = closure_1_0(8447);
+            obj1 = command(8447);
             obj1 = { command: null, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-            obj1[0] = closure_1_0;
-            obj1[1] = closure_1_0(11165).parseOptionValuesForSend(closure_1_6.channel, closure_1_0, {});
-            obj1[2] = closure_1_6;
+            obj1[0] = command;
+            obj1[1] = command(11165).parseOptionValuesForSend(commandContext.channel, command, {});
+            obj1[2] = commandContext;
             obj1[3] = c4;
-            obj1[4] = closure_1_0(5248).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            obj1[4] = command(5248).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
             const obj2 = { value: null, done: false };

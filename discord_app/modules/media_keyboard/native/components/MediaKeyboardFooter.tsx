@@ -7,21 +7,19 @@ import _modDef10278 from "../../../device/native/DeviceMedia.tsx";
 import registerAssetDefault from "../../../../../_runtime/10290_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 ({ View: c3, Image: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { container: null, label: null, buttonWrapper: null, loadingSpinner: null };
-obj = { padding: ThemesDefault.space.PX_16, height: 280, alignItems: "center" };
+let obj = { padding: ThemesDefault.space.PX_16, height: 280, alignItems: "center" };
 obj[0] = obj;
 obj[1] = { textAlign: "center", marginBottom: 16 };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_48 };
+const createCacheKey = { marginBottom: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_48 };
 obj[2] = createCacheKey;
 obj[3] = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, margin: ThemesDefault.space.PX_16 };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj2 = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, margin: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function MediaKeyboardFooter(arg0) {
   ({ disabled, onViewAll } = arg0);
   const tmp = callback3();
@@ -56,7 +54,7 @@ const memoResult = importAllResult.memo(function MediaKeyboardFooter(arg0) {
   }
   return tmp6;
 });
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFooter.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardFooter.tsx");
 
 export default memoResult;
 export const FOOTER_HEIGHT = 280;

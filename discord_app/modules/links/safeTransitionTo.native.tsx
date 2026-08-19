@@ -1,9 +1,9 @@
 // discord_app/modules/links/safeTransitionTo.native.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/GuildStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 import { Routes } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _safeTransitionTo() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -49,13 +49,13 @@ function _safeTransitionTo() {
                 ({ guildId, diceCount, diceSides } = tryParseDiceRollLinkResult);
                 callback(closure_1_2[4]).startDiceRoll(channelId, diceCount, diceSides);
                 const obj13 = callback(closure_1_2[4]);
-                callback(closure_1_2[5]).transitionTo(c5.CHANNEL(guildId, channelId), tmp83);
+                callback(closure_1_2[5]).transitionTo(c5.CHANNEL(guildId, channelId), callback2);
                 c6 = 3;
                 obj1 = { value: null, done: true };
                 obj1[0] = undefined;
                 return obj1;
               } else {
-                const tryParseChannelPathResult = callback(closure_1_2[3]).tryParseChannelPath(tmp82);
+                const tryParseChannelPathResult = callback(closure_1_2[3]).tryParseChannelPath(callback);
                 closure_2 = tryParseChannelPathResult;
                 if (null != tryParseChannelPathResult) {
                   c5 = 1;
@@ -67,8 +67,6 @@ function _safeTransitionTo() {
                 const obj19 = callback(closure_1_2[3]);
               }
               const obj18 = callback(closure_1_2[3]);
-              tmp82 = callback;
-              tmp83 = callback2;
             }
           } else {
             if (1 === tmp5) {
@@ -154,7 +152,7 @@ function _safeTransitionTo() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/links/safeTransitionTo.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/links/safeTransitionTo.native.tsx");
 
 export default function safeTransitionTo() {
   const self = this;

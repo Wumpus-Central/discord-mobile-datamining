@@ -1,10 +1,12 @@
 // discord_app/intl/native/migration.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../_runtime/00019_noop.js";
+import _modDef4090 from "../../lib/native/Linking.tsx";
+import tDefault from "../../../_runtime/04092_t.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_5 = createCacheKey.createStyles((arg0) => {
   const link = { color: ThemesDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -14,14 +16,14 @@ let closure_5 = createCacheKey.createStyles((arg0) => {
   link[1] = str;
   return { link };
 });
-const result = require("set").fileFinishedImporting("intl/native/migration.tsx");
+const result = require("obj132").fileFinishedImporting("intl/native/migration.tsx");
 
 export const IntlLink = function IntlLink(children) {
   const target = children.target;
   if (typeof target === "string") {
     let fn = () => {
-      const obj = closure_1_1(closure_1_2[5]);
-      return obj.openURL(closure_1_1(closure_1_2[6]).sanitizeUrl(target));
+      const obj = _modDef4090;
+      return obj.openURL(tDefault.sanitizeUrl(target));
     };
   } else {
     fn = target;

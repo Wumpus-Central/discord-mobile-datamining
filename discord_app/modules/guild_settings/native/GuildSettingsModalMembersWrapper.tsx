@@ -3,11 +3,11 @@ import canReviewGuildMemberApplications from "../../guild_member_verification/ca
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
   return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 15825 : 15827), { guildId });
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWrapper.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWrapper.tsx");
 
 export default memoResult;

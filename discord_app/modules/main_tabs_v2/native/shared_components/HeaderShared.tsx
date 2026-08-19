@@ -6,15 +6,15 @@ import map from "../../../../design/tokens/native/useToken.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import Background from "../../../../../_runtime/06319_Background.js";
+import PressableNavigatorModalIconDefault from "navigator/PressableNavigatorModalIcon.tsx";
 import JoinCallButtonDefault from "../channel/ChannelActions.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { MIN_HEADER_HEIGHT } from "MainTabsV2Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class GenericHeaderTitle {
   constructor(arg0) {
     ({ title, subtitle, color } = global);
@@ -54,7 +54,7 @@ class GenericHeaderTitle {
         obj[3] = closure_5.headerText;
         obj[4] = maxFontSizeMultiplier;
         obj[5] = closure_0;
-        items[1] = closure_1_6(closure_1_0(closure_1_2[6]).Text, obj);
+        items[1] = closure_1_6(Text.Text, obj);
         obj[3] = items;
         let tmp10 = closure_1_7(variant, obj);
       } else {
@@ -65,7 +65,7 @@ class GenericHeaderTitle {
         obj[4] = closure_5.headerText;
         obj[5] = maxFontSizeMultiplier;
         obj[6] = closure_0;
-        tmp10 = closure_1_6(closure_1_0(closure_1_2[6]).Text, obj);
+        tmp10 = closure_1_6(Text.Text, obj);
       }
       return tmp10;
     };
@@ -136,11 +136,10 @@ function HeaderChannelActions(arg0) {
 let c3 = importAllResult;
 ({ View: c4, Platform } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { headerRightContainer: { marginRight: 16 }, headerWrapper: null, actionButtonPressable: null, actionButtonIcon: null, headerText: null, subtitleText: null, backButtonLabel: null, titleContainer: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: ThemesDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: ThemesDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 };
 obj[1] = obj;
 obj[2] = { padding: 8, zIndex: 100, width: 40, height: 40, borderRadius: 20 };
-createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
+const createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
 obj[3] = createCacheKey;
 obj[4] = { textAlign: "center", fontSize: 18 };
 obj[5] = { textAlign: "center" };
@@ -157,12 +156,10 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
   }
   style = style.style;
   navigation = style;
-  importDefault = undefined;
-  let num;
   let gradientTop;
   const tmp = callback2();
   importDefault = tmp;
-  num = 0;
+  let num = 0;
   if (shouldHandleSafeArea) {
     num = importDefault(num[13])().top;
   }
@@ -171,8 +168,8 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
     fn = (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
-      obj.navigation = navigation;
-      return closure_1_6(navigation(closure_1_2[10]).PressableNavigatorBackIcon, obj);
+      obj.navigation = lib;
+      return closure_1_6(lib(dependencyMap[10]).PressableNavigatorBackIcon, obj);
     };
   }
   ({ headerTitle, headerRight } = options);
@@ -182,7 +179,7 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
   gradientTop = obj1.useGradientTop();
   let items = [num, gradientTop, tmp, style];
   const memo = gradientTop.useMemo(() => {
-    const items = [headerWrapper.headerWrapper, gradientTop, { paddingTop: num, minHeight: num + closure_1_5 }, navigation];
+    const items = [headerWrapper.headerWrapper, gradientTop, { paddingTop: num, minHeight: num + MIN_HEADER_HEIGHT }, navigation];
     return items;
   }, items);
   if (typeof headerTitle === "string") {
@@ -197,11 +194,7 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
     title = back.title;
   }
   obj = { label: title, canGoBack: null, tintColor: null };
-  const obj3 = gradientTop;
-  const tmp10 = closure_4;
-  const tmp2 = importDefault;
   const tmp7 = importDefault(num[8])("custom-drawn");
-  const tmp9 = closure_7;
   obj[1] = navigation.isFocused() && navigation.canGoBack();
   obj[2] = text;
   const items1 = [fn(obj), , , ];
@@ -224,7 +217,7 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
   items1[2] = headerRightResult;
   items1[3] = tmp7;
   obj[1] = items1;
-  return tmp9(tmp10, obj);
+  return callback2(closure_4, obj);
 }, (back, back2) => {
   let tmpResultResult = shallowEqualDefault(back, back2, ["back"]);
   if (tmpResultResult) {
@@ -241,8 +234,7 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
   }
   return tmpResultResult;
 });
-let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/HeaderShared.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/HeaderShared.tsx");
 
 export { GenericHeaderTitle };
 export { renderGenericTitle };
@@ -252,7 +244,7 @@ export function getRenderHeaderTextButton(intl, closure_3) {
   closure_1 = closure_3;
   return (arg0) => {
     const merged = Object.assign(arg0);
-    return closure_1_6(closure_1_11, { label: closure_0, onPress: closure_1 });
+    return closure_1_6(HeaderTextButton, { label: closure_0, onPress: closure_1 });
   };
 }
 export const renderHeader = function renderHeader(arg0) {
@@ -264,17 +256,17 @@ export function getRenderBackImage(navigation) {
   return (arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
-    obj.navigation = navigation;
-    return closure_1_6(navigation(closure_1_2[10]).PressableNavigatorBackIcon, obj);
+    obj.navigation = lib;
+    return closure_1_6(lib(dependencyMap[10]).PressableNavigatorBackIcon, obj);
   };
 }
 export const getRenderModalBackImage = function getRenderModalBackImage(navigation) {
   const _require = navigation;
-  return _set.isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0 }));
+  return require("../../../../utils/PlatformUtils.tsx").isAndroid() ? undefined : (() => closure_1_6(PressableNavigatorModalIconDefault, { navigation: closure_0 }));
 };
 export const getRenderModalCloseImage = function getRenderModalCloseImage(navigation) {
   const _require = navigation;
-  return _set.isAndroid() ? undefined : (() => closure_1_6(closure_1_1(closure_1_2[12]), { navigation: closure_0, type: "close" }));
+  return require("../../../../utils/PlatformUtils.tsx").isAndroid() ? undefined : (() => closure_1_6(PressableNavigatorModalIconDefault, { navigation: closure_0, type: "close" }));
 };
 export const Header = memoResult;
 export function getDefaultStackHeaderProps(navigation) {
@@ -283,37 +275,37 @@ export function getDefaultStackHeaderProps(navigation) {
     headerLeft: (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
-      obj.navigation = navigation;
-      return closure_1_6(navigation(closure_1_2[10]).PressableNavigatorBackIcon, obj);
+      obj.navigation = lib;
+      return closure_1_6(lib(dependencyMap[10]).PressableNavigatorBackIcon, obj);
     },
     headerTitle: renderGenericTitle,
     headerBackVisible: false
   };
 }
-export const getDefaultChannelStackHeaderProps = function getDefaultChannelStackHeaderProps(navigation, closure_2) {
+export const getDefaultChannelStackHeaderProps = function getDefaultChannelStackHeaderProps(closure_1, closure_2) {
   closure_0 = closure_2;
-  const routes = navigation.getState().routes;
-  let str = routes.findIndex((key) => key.key === navigation.key);
+  const routes = importDefault.getState().routes;
+  let str = routes.findIndex((item, index) => item.key === lib.key);
   if (str == null) {
     str = "none";
   }
-  closure_0 = navigation;
+  closure_0 = importDefault;
   return {
     headerLeft: (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
-      obj.navigation = navigation;
-      return closure_1_6(navigation(closure_1_2[10]).PressableNavigatorBackIcon, obj);
+      obj.navigation = lib;
+      return closure_1_6(lib(dependencyMap[10]).PressableNavigatorBackIcon, obj);
     },
     headerTitle() {
       const obj = {};
-      const merged = Object.assign(navigation.params);
+      const merged = Object.assign(lib.params);
       obj.isNavigationScreen = true;
       obj.screenIndex = str;
-      return closure_1_6(str(closure_1_2[19]), obj);
+      return closure_1_6(str(dependencyMap[19]), obj);
     },
     headerRight() {
-      return closure_1_6(closure_1_13, { route: closure_0, screenIndex: str });
+      return closure_1_6(HeaderChannelActions, { route: closure_0, screenIndex: str });
     },
     headerBackVisible: false
   };
@@ -326,6 +318,6 @@ export const HeaderIconButton = function HeaderIconButton(color) {
   if (tintColor == null) {
     tintColor = tmp.actionButtonIcon.tintColor;
   }
-  obj[4] = closure_6(Button.Icon, { color: tintColor, source, resizeMode });
-  return closure_6(PressableBase.PressableOpacity, obj);
+  obj[4] = callback(Button.Icon, { color: tintColor, source, resizeMode });
+  return callback(PressableBase.PressableOpacity, obj);
 };

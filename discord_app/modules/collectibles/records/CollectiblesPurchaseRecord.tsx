@@ -1,12 +1,11 @@
 // discord_app/modules/collectibles/records/CollectiblesPurchaseRecord.tsx
-import closure_2 from "CollectiblesBundledProductRecord.tsx";
+import fromServer from "CollectiblesBundledProductRecord.tsx";
 import { createCollectiblesItemsFromServerResponse as closure_3 } from "CollectiblesItemRecord.tsx";
 import { CollectiblesVariantProductRecord as closure_4 } from "CollectiblesProductRecord.tsx";
 import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_5 } from "../CollectiblesShopConstants.tsx";
 import { PREMIUM_TYPE_NONE } from "../../../Constants.tsx";
 
-let prototype;
-prototype = function CollectiblesPurchaseRecord(arg0) {
+const prototype = function CollectiblesPurchaseRecord(arg0) {
   ({ skuId: tmp.skuId, name: tmp.name, type: tmp.type, premiumType: tmp.premiumType, items: tmp.items, categorySkuId: tmp.categorySkuId, isCategoryReward: tmp.isCategoryReward, prices: tmp.prices, bundledProducts: tmp.bundledProducts, googleSkuIds: tmp.googleSkuIds, variants: tmp.variants, eligibleOffers: tmp.eligibleOffers, baseVariantName: tmp.baseVariantName, baseVariantSkuId: tmp.baseVariantSkuId, variantLabel: tmp.variantLabel, variantValue: tmp.variantValue, purchasedAt: tmp.purchasedAt, purchaseType: tmp.purchaseType, expiresAt: tmp.expiresAt } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
@@ -19,7 +18,7 @@ prototype["fromServer"] = function fromServer(sku_id) {
   if (premium_type !== PREMIUM_TYPE_NONE) {
     tmp3 = premium_type;
   }
-  const someResult = closure_5.some((rewardSkuId) => rewardSkuId.rewardSkuId === sku_id);
+  const someResult = closure_5.some((item, index) => item.rewardSkuId === sku_id);
   let mapped;
   const tmp5 = sku_id(4517)(prices);
   if (bundled_products != null) {
@@ -65,6 +64,6 @@ prototype["fromServer"] = function fromServer(sku_id) {
   obj.expiresAt = date1;
   return obj;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesPurchaseRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/records/CollectiblesPurchaseRecord.tsx");
 
 export default prototype;

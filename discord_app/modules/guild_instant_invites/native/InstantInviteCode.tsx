@@ -1,19 +1,22 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteCode.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import computeChannelName from "../../channel/useChannelName.tsx";
 import getChannelIcon from "../../../utils/native/ChannelUtils.tsx";
+import TextIcon2 from "../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import componentDidMountDefault from "../../../components_native/common/CountDown.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { createChannelRecordFromInvite as closure_5 } from "../../../records/ChannelRecord.tsx";
-import closure_6 from "../../../stores/RelationshipStore.tsx";
-import closure_7 from "../../../stores/UserStore.tsx";
+import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class InstantInviteDetails {
   constructor(arg0) {
     ({ channel, expiresAt } = global);
@@ -59,19 +62,17 @@ class InstantInviteDetails {
   }
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, channel: { flex: 0 }, time: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
+const createCacheKey = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 createCacheKey[2] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCode.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCode.tsx");
 
 export default function InstantInviteCode(invite) {
   invite = invite.invite;
   const items = [invite.channel];
-  let obj = { style: callback3().flex, children: null };
+  { style: callback3().flex, children: null };
   const memo = React.useMemo(() => closure_1_5(invite.channel), items);
-  obj = { children: null };
-  obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
+  const obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
   const items1 = [callback(invite(4734).Text, obj), ];
   const tmp = callback3();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });

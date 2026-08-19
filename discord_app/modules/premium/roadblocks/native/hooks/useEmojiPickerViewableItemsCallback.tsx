@@ -1,9 +1,9 @@
 // discord_app/modules/premium/roadblocks/native/hooks/useEmojiPickerViewableItemsCallback.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../../stores/UserStore.tsx";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/hooks/useEmojiPickerViewableItemsCallback.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/premium/roadblocks/native/hooks/useEmojiPickerViewableItemsCallback.tsx");
 
 export default function useEmojiPickerViewableItemsChanged(arg0) {
   const _require = arg0;
@@ -33,20 +33,18 @@ export default function useEmojiPickerViewableItemsChanged(arg0) {
           let item = nextResult.item;
           let isSectionNitroLocked;
           let tmp2 = nextResult;
-          let tmp3 = closure_1_1;
           if (item != null) {
             isSectionNitroLocked = item.isSectionNitroLocked;
           }
           let num = 0;
           if (true === isSectionNitroLocked) {
-            let tmp5 = nextResult;
             let num2 = -1;
             if (tmp2.isViewable) {
               num2 = 1;
             }
             num = num2;
           }
-          tmp3.current = Math.max(0, closure_1_1.current + num);
+          closure_1_1.current = Math.max(0, closure_1_1.current + num);
           continue;
         }
         callback();

@@ -1,14 +1,14 @@
 // discord_app/modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../stores/AuthenticationStore.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import closure_5 from "../../stores/MessageStore.tsx";
-import closure_6 from "../../stores/PermissionStore.tsx";
-import closure_7 from "../../stores/SelectedChannelStore.tsx";
-import closure_8 from "../../stores/UserStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import reinjectEphemerals from "../../stores/MessageStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { MessageFlags } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 initializeDefault;
 class StageChannelRequestToSpeakMessageManager extends tmp2 {
   constructor() {
@@ -19,19 +19,19 @@ class StageChannelRequestToSpeakMessageManager extends tmp2 {
 }
 StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceStates) {
   voiceStates = voiceStates.voiceStates;
-  const item = voiceStates.forEach((requestToSpeakTimestamp) => {
-    ({ channelId, userId } = requestToSpeakTimestamp);
-    requestToSpeakTimestamp = requestToSpeakTimestamp.requestToSpeakTimestamp;
+  const item = voiceStates.forEach((item, index) => {
+    ({ channelId, userId } = item);
+    const requestToSpeakTimestamp = item.requestToSpeakTimestamp;
     if (voiceChannelId.getVoiceChannelId() === channelId) {
-      if (requestToSpeakTimestamp.suppress) {
+      if (item.suppress) {
         if (null != channelId) {
           if (userId !== id.getId()) {
             if (closure_6.can(userId(table[8]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = tmp11(tmp12[9]).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
-                  const tmp11Result = tmp11(tmp12[9]);
+                  const result = userId(table[9]).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const tmp11Result = userId(table[9]);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -46,12 +46,11 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  callback(tmp12[11]).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = callback(tmp12[11]);
+                  callback(table[11]).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = callback(table[11]);
                 }
               }
             }
-            tmp11 = userId;
           }
         }
       }
@@ -59,6 +58,6 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
   });
 };
 const stageChannelRequestToSpeakMessageManager = new StageChannelRequestToSpeakMessageManager();
-let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx");
 
 export default stageChannelRequestToSpeakMessageManager;

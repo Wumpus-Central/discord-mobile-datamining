@@ -1,16 +1,17 @@
 // discord_app/modules/guild/markGuildsAsRead.tsx
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
-import closure_3 from "../guild_onboarding/GuildOnboardingPromptsStore.tsx";
-import closure_4 from "../threads/ActiveJoinedThreadsStore.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/GuildChannelStore.tsx";
-import closure_7 from "../../stores/ReadStateStore.tsx";
+import handleUpdate from "../guild_onboarding/GuildOnboardingPromptsStore.tsx";
+import rebuild from "../threads/ActiveJoinedThreadsStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import comparator from "../../stores/GuildChannelStore.tsx";
+import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 import { ReadStateTypes } from "../read_states/ReadStateConstants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
 export default function markGuildsAsRead(arr, source, onFinished) {
   let obj = applyDefault;
@@ -25,18 +26,16 @@ export default function markGuildsAsRead(arr, source, onFinished) {
       if (obj == null) {
         obj = {};
       }
-      let tmp4 = obj;
       for (const key10027 in obj) {
-        let tmp5 = key10027;
         let arr = items.push(key10027);
         continue;
       }
       continue;
     }
     return items;
-  }).map((channelId) => {
-    const obj = { channelId, readStateType: constants.CHANNEL, messageId: null };
-    channel = channel.getChannel(channelId);
+  }).map((item, index) => {
+    const obj = { channelId: item, readStateType: constants.CHANNEL, messageId: null };
+    channel = channel.getChannel(item);
     let isForumLikeChannelResult;
     if (channel != null) {
       isForumLikeChannelResult = channel.isForumLikeChannel();
@@ -46,19 +45,18 @@ export default function markGuildsAsRead(arr, source, onFinished) {
       let fromTimestampResult = callback(table[8]).fromTimestamp(Date.now());
       const obj3 = callback(table[8]);
     } else {
-      fromTimestampResult = closure_7.lastMessageId(channelId);
+      fromTimestampResult = closure_7.lastMessageId(item);
     }
     obj[2] = fromTimestampResult;
     return obj;
   });
-  const item = arr.forEach((id) => {
-    let obj = { channelId: closure_1_1(closure_1_2[8]).cast(id), readStateType: closure_1_9.GUILD_EVENT, messageId: closure_1_7.lastMessageId(id, closure_1_9.GUILD_EVENT) };
+  const item = arr.forEach((item, index) => {
+    let obj = { channelId: DISCORD_EPOCHDefault.cast(item), readStateType: ReadStateTypes.GUILD_EVENT, messageId: closure_1_7.lastMessageId(item, ReadStateTypes.GUILD_EVENT) };
     mapped.push(obj);
     obj = { channelId: null, readStateType: null, messageId: null };
-    const obj2 = closure_1_1(closure_1_2[8]);
-    obj[0] = closure_1_1(closure_1_2[8]).cast(id);
-    obj[1] = closure_1_9.GUILD_ONBOARDING_QUESTION;
-    obj[2] = closure_1_3.ackIdForGuild(id);
+    obj[0] = DISCORD_EPOCHDefault.cast(item);
+    obj[1] = ReadStateTypes.GUILD_ONBOARDING_QUESTION;
+    obj[2] = closure_1_3.ackIdForGuild(item);
     mapped.push(obj);
   });
   const flatMapResult = obj.flatMap(arr, (closure_0) => {
@@ -72,9 +70,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
       if (obj == null) {
         obj = {};
       }
-      let tmp4 = obj;
       for (const key10027 in obj) {
-        let tmp5 = key10027;
         let arr = items.push(key10027);
         continue;
       }
@@ -84,6 +80,5 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   });
   obj = { source, type: "guild" };
   expandEventPropertiesDefault.track(AnalyticEvents.MARK_AS_READ, obj);
-  let obj2 = expandEventPropertiesDefault;
   return mapped(5277).bulkAck(mapped, onFinished);
 };

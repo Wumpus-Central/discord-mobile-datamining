@@ -8,15 +8,15 @@ import Text from "../../../../design/components/Text/native/Text.tsx";
 import Button2 from "../../../../design/components/Button/native/Button.native.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { HubEmailConnectionSteps } from "../../HubConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class HubEmailConnectionGuildSelectRow {
   constructor(arg0) {
     guildInfo = global.guildInfo;
@@ -37,8 +37,7 @@ class HubEmailConnectionGuildSelectRow {
 }
 function HubEmailConnectionGuildSelectHeader() {
   const tmp = callback3();
-  let obj = { style: tmp.header, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.mOMeiR);
   obj[1] = callback(Text.Text, obj);
@@ -47,9 +46,8 @@ function HubEmailConnectionGuildSelectHeader() {
 function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   ({ errors, loading } = onFooterButtonPressed);
   const tmp = callback3();
-  let obj = { style: null, children: null };
   const items = [tmp.footerSafeAreaContainer, ];
-  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
+  let obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
   obj[0] = items;
   obj = { style: tmp.footerContainer, children: null };
@@ -67,70 +65,61 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
       anyErrorMessage = errors.getAnyErrorMessage();
     }
     obj2[1] = anyErrorMessage;
-    tmp3Result = tmp3(Button.LegacyText, obj2);
+    tmp3Result = callback(Button.LegacyText, obj2);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;
-  obj[1] = closure_10(closure_6, obj);
+  obj[1] = callback(closure_6, obj);
   return callback(closure_6, obj);
 }
 ({ View: closure_6, FlatList: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { rowContainer: null, guildIcon: null, separator: null, header: null, title: null, footerSafeAreaContainer: null, footerContainer: null, error: null };
-createCacheKey = { marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+const createCacheKey = { marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[2] = { height: 8 };
 createCacheKey[3] = { padding: 16, alignItems: "center", justifyContent: "center" };
 createCacheKey[4] = { marginBottom: 8, textAlign: "center" };
-let obj1 = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
 createCacheKey[6] = { paddingHorizontal: 16, height: 110, justifyContent: "center", alignItems: "center" };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
 createCacheKey[7] = { color: ThemesDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginVertical: 8 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { color: ThemesDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginVertical: 8 };
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionGuildSelect.tsx");
+const result = require("obj132").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionGuildSelect.tsx");
 
 export default function HubEmailConnectionGuildSelect(onClose) {
   onClose = onClose.onClose;
   const email = onClose.email;
   const guildsInfo = onClose.guildsInfo;
-  closure_3 = undefined;
-  let navigation;
   let React;
-  let first;
-  closure_7 = undefined;
   closure_3 = callback3();
   let obj = onClose(guildsInfo[16]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [email, guildsInfo, navigation, onClose];
   const layoutEffect = React.useLayoutEffect(() => {
     navigation.setOptions({
       headerRight() {
         const obj = {
-          IconComponent: closure_1_0(closure_1_2[18]).MagnifyingGlassIcon,
+          IconComponent: onClose(guildsInfo[18]).MagnifyingGlassIcon,
           onPress() {
 
           },
           accessibilityLabel: null
         };
-        const intl = closure_1_0(closure_1_2[12]).intl;
-        obj[2] = intl.string(closure_1_0(closure_1_2[12]).t["5h0QOP"]);
-        return closure_1_9(closure_1_0(closure_1_2[17]).HeaderActionButton, obj);
+        const intl = onClose(guildsInfo[12]).intl;
+        obj[2] = intl.string(onClose(guildsInfo[12]).t["5h0QOP"]);
+        return closure_1_9(onClose(guildsInfo[17]).HeaderActionButton, obj);
       }
     });
   }, items);
   const items1 = [email, navigation, onClose];
   const callback = React.useCallback(() => {
-    navigation.push(closure_1_8.SUBMIT_SCHOOL, { email, onClose });
+    navigation.push(HubEmailConnectionSteps.SUBMIT_SCHOOL, { email, onClose });
   }, items1);
   const tmp4 = navigation(React.useState(null), 2);
   React = tmp4[1];
   const tmp5 = navigation(React.useState(false), 2);
-  first = tmp5[0];
+  const first = tmp5[0];
   closure_7 = tmp5[1];
-  obj = { children: null };
   obj = {
     data: guildsInfo,
     ListHeaderComponent() {
@@ -138,9 +127,8 @@ export default function HubEmailConnectionGuildSelect(onClose) {
     },
     renderItem(item) {
       item = item.item;
-      let id;
-      id = item.id;
-      return closure_1_9(closure_1_12, {
+      const id = item.id;
+      return closure_1_9(HubEmailConnectionGuildSelectRow, {
         guildInfo: item,
         signup: lib(function*() {
           if (v0 === 2) {
@@ -174,7 +162,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   v0(null);
                   closure_1_7(true);
                   c3 = 2;
-                  let obj2 = closure_2_1(closure_2_2[19]);
+                  let obj2 = email(guildsInfo[19]);
                   arr = 3;
                   v0 = 1;
                   obj1 = { value: null, done: false };
@@ -189,7 +177,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_0 = closure_2;
-                  const aPIError = new id(closure_2_2[20]).APIError(closure_0);
+                  const aPIError = new id(guildsInfo[20]).APIError(closure_0);
                   v0(aPIError);
                   c3 = 0;
                   closure_1_7(false);

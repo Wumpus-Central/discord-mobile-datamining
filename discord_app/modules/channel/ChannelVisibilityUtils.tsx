@@ -1,9 +1,9 @@
 // discord_app/modules/channel/ChannelVisibilityUtils.tsx
-import closure_0 from "../../stores/ChannelSectionStore.tsx";
-import closure_1 from "../../stores/SelectedChannelStore.tsx";
-import closure_2 from "../../stores/SelectedGuildStore.tsx";
+import handlePermissionsChange from "../../stores/ChannelSectionStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import handleConnectionOpen2 from "../../stores/SelectedGuildStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/channel/ChannelVisibilityUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel/ChannelVisibilityUtils.tsx");
 
 export const isChannelCurrentlyVisible = function isChannelCurrentlyVisible(id) {
   channelId = channelId.getChannelId(guildId.getGuildId());

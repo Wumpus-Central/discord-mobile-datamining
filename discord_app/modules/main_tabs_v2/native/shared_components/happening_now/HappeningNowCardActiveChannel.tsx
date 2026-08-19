@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../guild_home/ActiveChannelsStore.tsx";
+import truncateOldMessageData from "../../../../guild_home/ActiveChannelsStore.tsx";
 import { MAX_STORED_MESSAGES } from "../../../../guild_home/ActiveChannelsStore.tsx";
-import closure_7 from "../../../../../stores/ChannelStore.tsx";
-import closure_8 from "../../../../../stores/TypingStore.tsx";
-import closure_9 from "../../../../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import handleTypingStart from "../../../../../stores/TypingStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 import { HappeningNowCardTrackingType as closure_10 } from "HappeningNowConstants.tsx";
 import ME from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ AnalyticEvents: unpackModuleId, Routes: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -24,7 +24,6 @@ const memoResult = importAllResult.memo((index) => {
   if (flag === undefined) {
     flag = false;
   }
-  let stateFromStoresArray;
   const tmp = callback2();
   let obj = index(channelId[10]);
   const items = [closure_7];
@@ -33,12 +32,12 @@ const memoResult = importAllResult.memo((index) => {
   const items1 = [closure_8, closure_9];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     const keys = guildId(channelId[11]).keys(closure_1_8.getTypingUsers(channelId));
-    const mapped = keys.map((arg0) => user.getUser(arg0));
+    const mapped = keys.map((item, index) => user.getUser(item));
     return mapped.filter(index(channelId[12]).isNotNullish)[0];
   });
   let obj2 = index(channelId[10]);
   const items2 = [closure_5];
-  stateFromStoresArray = obj2.useStateFromStoresArray(items2, () => {
+  const stateFromStoresArray = obj2.useStateFromStoresArray(items2, () => {
     let channelMessageData = closure_1_5.getChannelMessageData(channelId);
     if (channelMessageData == null) {
       channelMessageData = [];
@@ -58,13 +57,13 @@ const memoResult = importAllResult.memo((index) => {
   const stateFromStoresArray1 = obj4.useStateFromStoresArray(items4, () => {
     const obj = guildId(channelId[13]);
     const arr = guildId(channelId[13]);
-    const mapped = obj.uniq(guildId(channelId[13]).map(stateFromStoresArray, "userId")).map((arg0) => user.getUser(arg0));
+    const mapped = obj.uniq(guildId(channelId[13]).map(stateFromStoresArray, "userId")).map((item, index) => user.getUser(item));
     return mapped.filter(index(channelId[12]).isNotNullish);
   });
   const items5 = [channelId, index, guildId];
   const callback = stateFromStoresArray.useCallback(() => {
-    let obj = guildId(channelId[15]);
-    obj = { order: index, guild_id: guildId, type: closure_1_10.ACTIVE_CHANNEL_CARD, destination_channel_id: channelId };
+    guildId(channelId[15]);
+    const obj = { order: index, guild_id: guildId, type: closure_1_10.ACTIVE_CHANNEL_CARD, destination_channel_id: channelId };
     obj.track(closure_1_11.ACTIVITY_CARD_CLICKED, obj);
     index(channelId[16]).transitionTo(closure_1_12.CHANNEL(guildId, channelId));
   }, items5);
@@ -100,21 +99,21 @@ const memoResult = importAllResult.memo((index) => {
     obj3[2] = stateFromStoresArray1;
     obj3[3] = stateFromStoresArray1.length;
     obj3[4] = guildId;
-    obj2[1] = closure_13(tmp2(tmp3[21]).HappeningNowAvatarStack, obj3);
-    const items6 = [closure_13(View, obj2), , ];
+    obj2[1] = callback(tmp2(tmp3[21]).HappeningNowAvatarStack, obj3);
+    const items6 = [callback(View, obj2), , ];
     obj4 = { noMargin: null, children: null };
     obj4[0] = stateFromStoresArray1.length > 0;
     obj4[1] = formatToPlainStringResult;
-    items6[1] = closure_13(tmp2(tmp3[20]).HappeningNowCardHeader, obj4);
+    items6[1] = callback(tmp2(tmp3[20]).HappeningNowCardHeader, obj4);
     const obj5 = { children: null };
     obj5[0] = tmp10;
-    items6[2] = closure_13(tmp2(tmp3[20]).HappeningNowCardSubtitle, obj5);
+    items6[2] = callback(tmp2(tmp3[20]).HappeningNowCardSubtitle, obj5);
     obj1[1] = items6;
     obj[4] = callback(View, obj1);
-    return closure_13(tmp9(tmp3[20]), obj);
+    return callback(tmp9(tmp3[20]), obj);
   }
   tmp9 = guildId;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx");
 
 export default memoResult;

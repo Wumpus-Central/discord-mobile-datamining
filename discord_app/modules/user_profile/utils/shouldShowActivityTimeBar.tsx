@@ -1,9 +1,9 @@
 // discord_app/modules/user_profile/utils/shouldShowActivityTimeBar.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 
 const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");
 
 export default function shouldShowActivityTimeBar(type) {
   let tmp2 = type.type === ActivityTypes.LISTENING || type.type === tmp.WATCHING;

@@ -7,13 +7,13 @@ import VideoButtonRiveDefault from "buttons/VoicePanelVideoButton.tsx";
 import SoundboardButtonDefault from "buttons/VoicePanelSoundboardButton.tsx";
 import MobilePhoneShareIconDefault from "buttons/VoicePanelScreenshareButton.tsx";
 import VoicePanelDrawerToggleButtonDefault from "buttons/VoicePanelDrawerToggleButton.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/MediaEngineStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
 import VoicePanelControlsModes from "VoicePanelControlsConstants.tsx";
 import { InputModes } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 ({ CONTROLS_BUTTON_SIZE_LARGE: c5, CONTROLS_BUTTON_SIZE_NORMAL: closure_6 } = VoicePanelControlsModes);
 let closure_9 = {
   mic(arg0, arg1) {
@@ -58,7 +58,7 @@ let closure_9 = {
   }
 };
 let closure_10 = { code: "function useControlsButtonsTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea}=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);}" };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
   const context = treatment.useContext(safeArea(11439));
@@ -94,36 +94,35 @@ export default function useControlsButtons() {
         push(obj);
         if (!stateFromStores) {
           obj = { type: "icon-normal", key: "connected-mic", render: null };
-          obj[2] = tmp6.micConnected;
+          obj[2] = redux.micConnected;
           items.push(obj);
         }
         if (treatment === callback(16418).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           obj1 = { type: "icon-normal", key: "connected-screenshare", render: null };
-          obj1[2] = tmp6.screenshare;
+          obj1[2] = redux.screenshare;
           items.push(obj1);
         } else {
           const obj2 = { type: "icon-normal", key: "connected-chat", render: null };
-          obj2[2] = tmp6.chat;
+          obj2[2] = redux.chat;
           items.push(obj2);
         }
         if (stateFromStores) {
           const obj3 = { type: "icon-large", key: "connected-ptt", render: null };
-          obj3[2] = tmp6.ptt;
+          obj3[2] = redux.ptt;
           items.push(obj3);
         }
-        if (treatment === tmp10(16418).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === callback(16418).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: null };
-          obj4[2] = tmp6.screenshare;
+          obj4[2] = redux.screenshare;
           items.push(obj4);
         } else {
           const obj5 = { type: "icon-normal", key: "connected-soundboard", render: null };
-          obj5[2] = tmp6.soundboard;
+          obj5[2] = redux.soundboard;
           items.push(obj5);
         }
         const obj6 = { type: "icon-normal", key: "connected-disconnect", render: null };
         obj6[2] = redux.disconnectCancel;
         items.push(obj6);
-        tmp10 = callback;
       } else {
         obj = { type: "icon-normal", key: "disconnected-mute", render: null };
         obj[2] = redux.mic;
@@ -141,20 +140,20 @@ export default function useControlsButtons() {
         }
         return items;
       }
-    })(closure_2, stateFromStores, treatment).map((type) => {
-      if ("label" === type.type) {
+    })(closure_2, stateFromStores, treatment).map((item, index) => {
+      if ("label" === item.type) {
         c0 = true;
       }
       let tmp = closure_1_6;
-      if ("icon-large" === type.type) {
+      if ("icon-large" === item.type) {
         closure_1 = closure_1 + 1;
         tmp = closure_1_5;
       }
       const obj = {};
-      const merged = Object.assign(type);
+      const merged = Object.assign(item);
       obj.height = tmp;
       let num2 = -1;
-      if ("label" !== type.type) {
+      if ("label" !== item.type) {
         num2 = tmp;
       }
       obj.width = num2;
@@ -174,17 +173,10 @@ export default function useControlsButtons() {
       let width = nextResult.width;
       let tmp8 = width;
       if (-1 === width) {
-        let tmp9 = closure_1_6;
-        let tmp10 = closure_5;
         let diff = closure_5 - (32 + (mapped.length - 1) * closure_1_6 + (mapped.length - 1) * num);
         tmp8 = diff;
-        let tmp12 = nextResult;
         tmp7.width = diff;
       }
-      let tmp13 = nextResult;
-      let tmp14 = num4;
-      let tmp15 = closure_5;
-      let tmp16 = tmp8;
       tmp7.x = num4 - closure_5 / 2 + tmp8 / 2;
       num4 = num4 + (tmp8 + num);
       continue;

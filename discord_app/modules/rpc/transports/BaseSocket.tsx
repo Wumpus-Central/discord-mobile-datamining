@@ -1,11 +1,11 @@
 // discord_app/modules/rpc/transports/BaseSocket.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import applyDefault from "../../../../_runtime/00012_apply.js";
 import prototypeDefault from "../RPCError.tsx";
 import ME from "../../../Constants.tsx";
 
 ({ RPC_VERSION: obj1, RPCCloseCodes: c3 } = ME);
-const result = set.fileFinishedImporting("modules/rpc/transports/BaseSocket.tsx");
+const result = obj132.fileFinishedImporting("modules/rpc/transports/BaseSocket.tsx");
 class BaseSocket {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);

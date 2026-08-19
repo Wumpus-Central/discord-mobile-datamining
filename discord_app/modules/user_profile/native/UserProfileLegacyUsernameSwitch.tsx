@@ -2,9 +2,9 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx");
 
 export default function UserProfileLegacyUsernameSwitch(username) {
   const pendingLegacyUsernameDisabled = username.pendingLegacyUsernameDisabled;
@@ -22,11 +22,11 @@ export default function UserProfileLegacyUsernameSwitch(username) {
   obj[2] = intl2.formatToPlainString(setting(1236).t.aYhclf, { username: username.legacyUsername });
   obj[3] = function onValueChange(arg0) {
     if (!arg0 === setting) {
-      const result = setting(closure_1_1[5]).resetPendingLegacyUsernameDisabled();
-      const obj3 = setting(closure_1_1[5]);
+      const result = setting(dependencyMap[5]).resetPendingLegacyUsernameDisabled();
+      const obj3 = setting(dependencyMap[5]);
     } else {
-      let obj = setting(closure_1_1[6]);
-      obj = { legacyUsernameDisabled: null };
+      setting(dependencyMap[6]);
+      const obj = { legacyUsernameDisabled: null };
       obj[0] = !arg0;
       obj.setPendingChanges(obj);
     }

@@ -1,5 +1,5 @@
 // discord_app/modules/status_bar/native/components/StatusBarManager.android.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const StatusBar = get_ActivityIndicator.StatusBar;
@@ -50,14 +50,14 @@ prototype["updatePropsStack"] = function updatePropsStack() {
   clearImmediate(this.updateImmediate);
   this.updateImmediate = setImmediate(() => {
     const items = [{ hidden: false, barStyle: "default" }, ...self.propsStack];
-    const applyResult = self(closure_1_1[1]).merge.apply(items);
-    closure_1_2.setBarStyle(applyResult.barStyle);
-    const tmp = self(closure_1_1[1]);
-    self(closure_1_1[2]).setStatusBarVisible(!applyResult.hidden);
+    const applyResult = self(dependencyMap[1]).merge.apply(items);
+    StatusBar.setBarStyle(applyResult.barStyle);
+    const tmp = self(dependencyMap[1]);
+    self(dependencyMap[2]).setStatusBarVisible(!applyResult.hidden);
   });
 };
 let obj = Object.create(StatusBarManager.prototype);
 obj[0] = [];
-const result = set.fileFinishedImporting("modules/status_bar/native/components/StatusBarManager.android.tsx");
+const result = obj132.fileFinishedImporting("modules/status_bar/native/components/StatusBarManager.android.tsx");
 
 export default obj;

@@ -1,11 +1,13 @@
 // discord_app/modules/interaction_components/InteractionModalManager.tsx
+import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../applications/ApplicationStore.tsx";
-import closure_5 from "../interactions/InteractionStore.tsx";
+import _openInteractionIframeModalDefault from "openInteractionIframeModal.native.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import addApplication from "../applications/ApplicationStore.tsx";
+import deleteNonce from "../interactions/InteractionStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-let require = arg1;
+let require = fn;
 function _handleInteractionModalCreate() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -69,7 +71,7 @@ function _handleInteractionModalCreate() {
                 if (interactionDebugContext != null) {
                   data = interactionDebugContext.interaction.data;
                 }
-                const obj = { interactionId: closure_0.id, nonce: closure_0.nonce, channelId: closure_0.channelId, applicationId: closure_0.application.id, hasApplicationRecord: null != application.getApplication(closure_0.application.id), hasActionApplicationBot: null != closure_0.application.bot, componentCount: closure_0.components.length, componentTypes: components.map((type) => type.type), sourceInteractionType: null, sourceApplicationId: null, sourceMessageId: null, hasSourceCustomId: null, hasSourceComponentId: null };
+                const obj = { interactionId: closure_0.id, nonce: closure_0.nonce, channelId: closure_0.channelId, applicationId: closure_0.application.id, hasApplicationRecord: null != application.getApplication(closure_0.application.id), hasActionApplicationBot: null != closure_0.application.bot, componentCount: closure_0.components.length, componentTypes: components.map((item, index) => item.type), sourceInteractionType: null, sourceApplicationId: null, sourceMessageId: null, hasSourceCustomId: null, hasSourceComponentId: null };
                 components = closure_0.components;
                 let interactionType;
                 if (data != null) {
@@ -151,10 +153,9 @@ let prototype = function InteractionModalManager() {
     },
     INTERACTION_IFRAME_MODAL_CREATE(application) {
       closure_0.iframeModalOpenTimeMs = Date.now();
-      closure_1_1(closure_1_2[10])(application);
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { type: closure_1_7, application_id: application.application.id };
-      obj.track(closure_1_6.OPEN_MODAL, obj);
+      _openInteractionIframeModalDefault(application);
+      const obj = { type: interaction_iframe_modal, application_id: application.application.id };
+      obj.track(AnalyticEvents.OPEN_MODAL, obj);
     },
     INTERACTION_IFRAME_MODAL_CLOSE(applicationId) {
       const iframeModalOpenTimeMs = applyArgumentsResult.iframeModalOpenTimeMs;
@@ -163,9 +164,8 @@ let prototype = function InteractionModalManager() {
         const _Date = Date;
         diff = Date.now() - iframeModalOpenTimeMs;
       }
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { type: closure_1_7, application_id: applicationId.applicationId, duration_open_ms: diff };
-      obj.track(closure_1_6.MODAL_DISMISSED, obj);
+      const obj = { type: interaction_iframe_modal, application_id: applicationId.applicationId, duration_open_ms: diff };
+      obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
       applyArgumentsResult.iframeModalOpenTimeMs = undefined;
     },
     RPC_APP_DISCONNECTED(application) {
@@ -185,7 +185,7 @@ let prototype = function InteractionModalManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/interaction_components/InteractionModalManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/InteractionModalManager.tsx");
 
 export default prototype;
 export const INTERACTION_IFRAME_MODAL_ANALYTICS_TYPE = "interaction_iframe_modal";

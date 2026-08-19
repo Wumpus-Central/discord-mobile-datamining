@@ -2,24 +2,26 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
+import Button from "../../../../design/components/Button/native/Button.native.tsx";
+import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import handleOpenEmailVerification from "UserSettingsAccountUnverifiedHeader.tsx";
 import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySettingsNotice.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/RelationshipStore.tsx";
-import closure_6 from "../../../../stores/UserStore.tsx";
+import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { AnalyticsSections } from "../../../../Constants.tsx";
 import { SafetySettingsNoticeType } from "../../../safety_common/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function RestrictedAccountRedirect() {
   let obj = {
     label: getSystemLocale.t.zqv4nV,
     labelHook() {
-      let obj = callback(table[11]);
-      obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
+      callback(table[11]);
+      const obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
       obj.openUserSettings(obj);
     },
     noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE
@@ -28,8 +30,7 @@ function RestrictedAccountRedirect() {
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { header: null };
-obj = { paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
+let obj = { paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
@@ -60,19 +61,17 @@ const memoResult = importAllResult.memo(() => {
       obj1 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6[0], button: obj6[1] } = bannerText);
       obj1[2] = callback;
-      obj[4] = callback(tmp2(4745).Button, obj1);
-      tmp14 = callback(tmp2(6291).TableRow, obj);
+      obj[4] = callback(Button.Button, obj1);
+      tmp14 = callback(TableRowInner.TableRow, obj);
     }
     items2[1] = tmp14;
     obj[1] = items2;
-    let tmp9Result = closure_10(View, obj);
-    const tmp10 = View;
-    const tmp9 = closure_10;
+    let tmp9Result = callback(View, obj);
   } else {
     tmp9Result = null;
   }
   return tmp9Result;
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
 
 export default memoResult;

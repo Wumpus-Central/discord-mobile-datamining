@@ -34,7 +34,7 @@ obj = {
   }
 };
 const frecencySectionStore = new FrecencySectionStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStore.tsx");
 
 export default frecencySectionStore;
 export const FrecencySectionSelection = obj;

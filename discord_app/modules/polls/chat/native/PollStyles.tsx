@@ -1,19 +1,17 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import NativeShadowType from "../PollMessageChatDataTypes.tsx";
 import { t } from "../../../../../_runtime/04486_t.js";
-import { PollLayoutTypes } from "../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
-import { NativeShadowType } from "../PollMessageChatDataTypes.tsx";
 
 function normal(border) {
   const _require = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = _t.match(arg1);
-  const str = _t;
-  obj[3] = match.with(_PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
+  const match = require("../../../../../_runtime/04486_t.js").match(arg1);
+  const str = t;
+  obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
   obj[6] = border.colors.BACKGROUND_MOD_SUBTLE;
-  obj[7] = _NativeShadowType.PollRadioStyle.HOLLOW;
+  obj[7] = require("../PollMessageChatDataTypes.tsx").PollRadioStyle.HOLLOW;
   obj[8] = border.colors.INTERACTIVE_TEXT_ACTIVE;
   obj[9] = border.colors.WHITE;
   return obj;
@@ -22,15 +20,14 @@ function normalVote(border, arg1) {
   if (typeof normal !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let obj = {};
   const _require = border;
-  obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = _t.match(arg1);
-  const str = _t;
-  obj[3] = match.with(_PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
+  const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
+  const match = require("../../../../../_runtime/04486_t.js").match(arg1);
+  const str = t;
+  obj[3] = match.with(require("../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx").PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
   obj[5] = border.colors.BACKGROUND_MOD_MUTED;
   obj[6] = border.colors.BACKGROUND_MOD_SUBTLE;
-  obj[7] = _NativeShadowType.PollRadioStyle.HOLLOW;
+  obj[7] = require("../PollMessageChatDataTypes.tsx").PollRadioStyle.HOLLOW;
   obj[8] = border.colors.INTERACTIVE_TEXT_ACTIVE;
   obj[9] = border.colors.WHITE;
   const merged = Object.assign(obj);
@@ -53,15 +50,14 @@ function victorNotSelected(colors) {
   obj.radioStyle = NativeShadowType.PollRadioStyle.NONE;
   return obj;
 }
-const result = set.fileFinishedImporting("modules/polls/chat/native/PollStyles.tsx");
+const result = obj132.fileFinishedImporting("modules/polls/chat/native/PollStyles.tsx");
 
 export const pollStyleSets = {
   loserSelected(colors) {
     if (typeof notVoted !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = {};
-    obj = {};
+    const obj = {};
     const merged = Object.assign(normalVote(colors, arg1));
     obj.answerFill = colors.colors.INTERACTIVE_BACKGROUND_ACTIVE;
     obj.radioStyle = NativeShadowType.PollRadioStyle.NONE;
@@ -73,14 +69,14 @@ export const pollStyleSets = {
   },
   normal,
   notVoted,
-  selected(guild, arg1, selected) {
+  selected(iconBackground, arg1, selected) {
     const obj = {};
-    const merged = Object.assign(normalVote(guild, arg1));
-    obj.border = guild.colors.BACKGROUND_BRAND;
+    const merged = Object.assign(normalVote(iconBackground, arg1));
+    obj.border = iconBackground.colors.BACKGROUND_BRAND;
     obj.borderWidth = 1;
     obj.radioStyle = NativeShadowType.PollRadioStyle.FILLED;
-    obj.radioBackground = guild.colors.REDESIGN_INPUT_CONTROL_SELECTED;
-    obj.radioForeground = guild.colors.STATUS_POSITIVE_TEXT;
+    obj.radioBackground = iconBackground.colors.REDESIGN_INPUT_CONTROL_SELECTED;
+    obj.radioForeground = iconBackground.colors.STATUS_POSITIVE_TEXT;
     return obj;
   },
   victorNotSelected,
@@ -88,8 +84,7 @@ export const pollStyleSets = {
     if (typeof victorNotSelected !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = {};
-    obj = {};
+    const obj = {};
     const merged = Object.assign(normalVote(colors, arg1));
     obj.border = colors.colors.STATUS_POSITIVE;
     obj.borderWidth = 1;

@@ -1,7 +1,7 @@
 // discord_app/modules/reanimated/ReanimatedHelperTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/reanimated/ReanimatedHelperTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/reanimated/ReanimatedHelperTypes.tsx");
 
 export function createFakeSharedValue(COLLAPSED) {
   return {

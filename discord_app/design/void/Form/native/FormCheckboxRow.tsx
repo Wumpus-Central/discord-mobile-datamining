@@ -6,10 +6,10 @@ import FormCheckboxDefault from "FormCheckbox.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_4 = createCacheKey.createStyles({ checkboxWrapperStyle: { flexShrink: 0 } });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormCheckboxRow.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormCheckboxRow.tsx");
 
 export default function FormCheckboxRow(selected) {
   selected = selected.selected;

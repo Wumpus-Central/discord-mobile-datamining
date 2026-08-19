@@ -1,22 +1,20 @@
 // discord_app/utils/FileUtils.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
 import noConflictDefault from "../../_runtime/04835_noConflict.js";
-import closure_3 from "../stores/GuildStore.tsx";
-import closure_4 from "../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../stores/UserStore.tsx";
 import ME from "../Constants.tsx";
 import GuildFeatures from "../modules/premium/PremiumConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function getUploadFileSizeSum(arg0) {
   let num = 0;
   while (tmp !== undefined) {
-    let tmp3 = num;
     num = num + tmp2.size;
     continue;
   }
   return num;
 }
-let GuildFeatures = ME.GuildFeatures;
 const MAX_ATTACHMENT_SIZE = ME.MAX_ATTACHMENT_SIZE;
 let closure_7 = GuildFeatures.MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE;
 let items = [{ reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" }, { reType: /^image\/svg\+xml/, klass: "webcode" }, { reType: /^image\//, klass: "image" }, { reType: /^video\//, klass: "video" }, { reName: /\.pdf$/, klass: "acrobat" }, { reName: /\.ae/, klass: "ae" }, { reName: /\.sketch$/, klass: "sketch" }, { reName: /\.ai$/, klass: "ai" }, { reName: /\.(?:rar|zip|7z|tar|tar\.gz)$/, klass: "archive" }, { reName: /\.(?:c\+\+|cpp|cc|c|h|hpp|mm|m|json|js|ts|rb|rake|py|asm|fs|pyc|dtd|cgi|bat|rss|java|graphml|idb|lua|o|gml|prl|sls|conf|cmake|make|sln|vbe|cxx|wbf|vbs|r|wml|php|bash|applescript|fcgi|yaml|ex|exs|sh|ml|actionscript)$/, klass: "code" }, { reName: /\.(?:txt|rtf|doc|docx|md|pages|ppt|pptx|pptm|key|log)$/, klass: "document" }, { reName: /\.(?:xls|xlsx|numbers|csv)$/, klass: "spreadsheet" }, { reName: /\.(?:html|xhtml|htm|xml|xsd|css|styl)$/, klass: "webcode" }, { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" }];
@@ -26,7 +24,7 @@ const items3 = [GuildFeatures.MAX_FILE_SIZE_100_MB, GuildFeatures.MAX_GUILD_FILE
 items2[1] = items3;
 const items4 = [GuildFeatures.MAX_FILE_SIZE_50_MB, GuildFeatures.MAX_GUILD_FILE_SIZE_50_MB];
 items2[2] = items4;
-const result = require("set").fileFinishedImporting("utils/FileUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/FileUtils.tsx");
 
 export const transformNativeFile = function transformNativeFile(filename) {
   let file = filename;
@@ -50,9 +48,8 @@ export const makeFile = function makeFile(arg0, arg1, type) {
   return file;
 };
 export const classifyFile = function classifyFile(file) {
-  let str2 = str;
   const type = file.type;
-  str2 = undefined;
+  let str2;
   if (file.name != null) {
     str2 = str.toLowerCase();
   }
@@ -127,20 +124,20 @@ export const maxFileSize = function maxFileSize(guildId) {
     if (null != guild) {
       const FileUploadPowerupHoldoutExperiment = guild(4301).FileUploadPowerupHoldoutExperiment;
       enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
-      let reduced = items2.reduce((arg0, arg1) => {
-        [tmp, tmp2] = arg1;
+      let reduced = items2.reduce((acc, item, index) => {
+        [tmp, tmp2] = item;
         if (!enabled) {
           const features = _Math.features;
-          let tmp6 = arg0;
+          let tmp6 = acc;
           if (features.has(tmp)) {
-            tmp6 = arg0;
-            if (tmp2 > arg0) {
+            tmp6 = acc;
+            if (tmp2 > acc) {
               tmp6 = tmp2;
             }
           }
           let tmp4 = tmp6;
         } else {
-          tmp4 = arg0;
+          tmp4 = acc;
         }
         return tmp4;
       }, MAX_ATTACHMENT_SIZE);
@@ -159,7 +156,7 @@ export const anyFileTooLarge = function anyFileTooLarge(arg0, arg1) {
   if (null == arg1) {
     let guild = userMaxFileSize;
     const _Array = Array;
-    return Array.from(arg0).some((size) => size.size > guild);
+    return Array.from(arg0).some((item, index) => item.size > guild);
   } else {
     guild = store.getGuild(arg1);
     if (null != guild) {
@@ -167,20 +164,20 @@ export const anyFileTooLarge = function anyFileTooLarge(arg0, arg1) {
       enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
       guild = items2;
       reduce = items2.reduce;
-      let reduced = reduce((arg0, arg1) => {
-        [tmp, tmp2] = arg1;
+      let reduced = reduce((acc, item, index) => {
+        [tmp, tmp2] = item;
         if (!enabled) {
           const features = _Math.features;
-          let tmp6 = arg0;
+          let tmp6 = acc;
           if (features.has(tmp)) {
-            tmp6 = arg0;
-            if (tmp2 > arg0) {
+            tmp6 = acc;
+            if (tmp2 > acc) {
               tmp6 = tmp2;
             }
           }
           let tmp4 = tmp6;
         } else {
-          tmp4 = arg0;
+          tmp4 = acc;
         }
         return tmp4;
       }, MAX_ATTACHMENT_SIZE);
@@ -190,6 +187,7 @@ export const anyFileTooLarge = function anyFileTooLarge(arg0, arg1) {
     const _Math = Math;
     const bound = Math.max(reduced, userMaxFileSize);
   }
+  const obj = enabled(4039);
 };
 export { getUploadFileSizeSum };
 export const uploadSumTooLarge = function uploadSumTooLarge(arg0) {
@@ -220,20 +218,20 @@ export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadb
       if (null != _Math) {
         const FileUploadPowerupHoldoutExperiment = tmp(4301).FileUploadPowerupHoldoutExperiment;
         enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
-        let reduced = items2.reduce((arg0, arg1) => {
-          [tmp, tmp2] = arg1;
+        let reduced = items2.reduce((acc, item, index) => {
+          [tmp, tmp2] = item;
           if (!enabled) {
             const features = _Math.features;
-            let tmp6 = arg0;
+            let tmp6 = acc;
             if (features.has(tmp)) {
-              tmp6 = arg0;
-              if (tmp2 > arg0) {
+              tmp6 = acc;
+              if (tmp2 > acc) {
                 tmp6 = tmp2;
               }
             }
             let tmp4 = tmp6;
           } else {
-            tmp4 = arg0;
+            tmp4 = acc;
           }
           return tmp4;
         }, MAX_ATTACHMENT_SIZE);

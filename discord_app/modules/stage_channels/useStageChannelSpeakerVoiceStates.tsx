@@ -1,43 +1,41 @@
 // discord_app/modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../favorites/FavoriteStore.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
+import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import initializeFromUserSettings from "../favorites/FavoriteStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 import { getComparator } from "../../stores/views/SortedVoiceStateStore.tsx";
-import closure_7 from "StageChannelParticipantStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { isVersionEqual } from "../../utils/SecondaryIndexMapUtils.tsx";
+import getActiveStageChannelIds from "StageChannelParticipantStore.tsx";
 
-const require = arg1;
+const require = fn;
 function transformParticipantToSortedVoiceState(user) {
   ({ voiceState, userNick } = user);
   return { user: user.user, voiceState, nick: userNick, comparator: getComparator(voiceState, userNick) };
 }
-const result = require("set").fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/useStageChannelSpeakerVoiceStates.tsx");
 
 export default function useStageChannelSpeakerVoiceStates(arg0) {
   const _require = arg0;
   let items = [closure_7, closure_5, closure_4];
   const items1 = [arg0];
-  return callback(_initialize.useStateFromStores(items, () => {
+  return callback(require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (obj.isFavoritesGuildId(callback)) {
-      const keys = closure_1_1(tmp2[7]).keys(closure_1_4.getFavoriteChannels());
-      const mapped = keys.map((arg0) => channel.getChannel(arg0));
-      let found = mapped.filter(callback(tmp2[8]).isNotNullish);
-      let found1 = found.filter((isGuildStageVoice) => isGuildStageVoice.isGuildStageVoice());
-      const obj2 = closure_1_1(tmp2[7]);
+      const keys = DISCORD_EPOCHDefault.keys(closure_1_4.getFavoriteChannels());
+      const mapped = keys.map((item, index) => channel.getChannel(item));
+      let found = mapped.filter(callback(dependencyMap[8]).isNotNullish);
+      let found1 = found.filter((item, index) => item.isGuildStageVoice());
     } else {
       found1 = closure_1_7.getChannels(callback);
     }
     const items = [
-      found1.reduce((arg0, id) => {
-        const mutableParticipants = store.getMutableParticipants(id.id, callback(table[9]).StageChannelParticipantNamedIndex.SPEAKER);
-        const found = mutableParticipants.filter((type) => type.type === callback(table[9]).StageChannelParticipantTypes.VOICE);
-        arg0[id.id] = found.map(closure_8);
-        return arg0;
+      found1.reduce((acc, item, index) => {
+        const mutableParticipants = store.getMutableParticipants(item.id, callback(table[9]).StageChannelParticipantNamedIndex.SPEAKER);
+        const found = mutableParticipants.filter((item, index) => item.type === callback(table[9]).StageChannelParticipantTypes.VOICE);
+        acc[item.id] = found.map(closure_8);
+        return acc;
       }, {}),
-      found1.reduce((arg0, id) => arg0 + store.getParticipantsVersion(id.id), 0)
+      found1.reduce((acc, item, index) => acc + store.getParticipantsVersion(item.id), 0)
     ];
     return items;
-  }, items1, _isVersionEqual.isVersionEqual), 1)[0];
+  }, items1, require("../../utils/SecondaryIndexMapUtils.tsx").isVersionEqual), 1)[0];
 };
 export { transformParticipantToSortedVoiceState };

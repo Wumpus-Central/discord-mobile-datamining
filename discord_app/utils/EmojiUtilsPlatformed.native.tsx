@@ -1,22 +1,22 @@
 // discord_app/utils/EmojiUtilsPlatformed.native.tsx
 import applyDefault from "../../_runtime/00012_apply.js";
-import set from "PlatformUtils.tsx";
+import obj132 from "PlatformUtils.tsx";
 import onDismiss from "../components_native/reactions/BurstReactionFirstSendActionSheet.tsx";
-import closure_3 from "../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../node_modules/.pnpm/@discordapp+twemoji@16.0.1/node_modules/@discordapp/twemoji/dist/twemoji.npm.js";
+import defaultImageSrcGenerator from "../../node_modules/.pnpm/@discordapp+twemoji@16.0.1/node_modules/@discordapp/twemoji/dist/twemoji.npm.js";
 import importDefaultResult from "MemoizerUtils.tsx";
 
-require = arg1;
+require = fn;
 function getURL(name) {
   if (null == name) {
     convert = convert.convert;
     const _HermesInternal = HermesInternal;
     let str = "asset:/emoji-" + convert.toCodePoint(name) + ".png";
   } else {
+    obj132;
     str = "";
-    const obj = set;
   }
   return str;
 }
@@ -101,9 +101,9 @@ function _getEmojiColors() {
             closure_1 = arg1;
             let mapped;
             if (closure_1 != null) {
-              mapped = closure_1.map((arg0) => {
-                [tmp2, tmp3, tmp4] = v2(arg0, 3);
-                const tmp = v2(arg0, 3);
+              mapped = closure_1.map((item, index) => {
+                [tmp2, tmp3, tmp4] = v2(item, 3);
+                const tmp = v2(item, 3);
                 return emojiURL(table[10]).rgbToHex(tmp2, tmp3, tmp4);
               });
             }
@@ -135,10 +135,10 @@ function _getEmojiColors() {
 ({ NativeModules: c5, processColor: closure_6 } = get_ActivityIndicator);
 let obj = {
   getURL: importDefaultResult.makeMemoizer(getURL),
-  filterUnsupportedEmojis(emojis) {
-    let found = emojis;
+  filterUnsupportedEmojis(arg0) {
+    let found = arg0;
     if (!obj.isAndroid()) {
-      found = applyDefault.filter(emojis, (unicodeVersion) => {
+      found = applyDefault.filter(arg0, (unicodeVersion) => {
         unicodeVersion = unicodeVersion.unicodeVersion;
         const systemVersionMajor = callback(4354).getSystemVersionMajor();
         const obj = callback(4354);
@@ -257,7 +257,6 @@ let obj = {
         }
         return flag;
       });
-      const arr = applyDefault;
     }
     return found;
   },
@@ -274,17 +273,17 @@ let obj = {
           accentColor = LIGHT.accentColor;
         }
         let obj = { accentColor: null, backgroundColor: null, highlightColor: null, opacity: null };
-        obj[0] = closure_6(accentColor);
+        obj[0] = callback(accentColor);
         let backgroundColor;
         if (LIGHT != null) {
           backgroundColor = LIGHT.backgroundColor;
         }
-        obj[1] = closure_6(backgroundColor);
+        obj[1] = callback(backgroundColor);
         let highlightColor;
         if (LIGHT != null) {
           highlightColor = LIGHT.highlightColor;
         }
-        obj[2] = closure_6(highlightColor);
+        obj[2] = callback(highlightColor);
         let opacity;
         if (LIGHT != null) {
           opacity = LIGHT.opacity;
@@ -297,17 +296,17 @@ let obj = {
           accentColor1 = DARK.accentColor;
         }
         obj = { accentColor: null, backgroundColor: null, highlightColor: null, opacity: null };
-        obj[0] = closure_6(accentColor1);
+        obj[0] = callback(accentColor1);
         let backgroundColor1;
         if (DARK != null) {
           backgroundColor1 = DARK.backgroundColor;
         }
-        obj[1] = closure_6(backgroundColor1);
+        obj[1] = callback(backgroundColor1);
         let highlightColor1;
         if (DARK != null) {
           highlightColor1 = DARK.highlightColor;
         }
-        obj[2] = closure_6(highlightColor1);
+        obj[2] = callback(highlightColor1);
         let opacity1;
         if (DARK != null) {
           opacity1 = DARK.opacity;
@@ -334,6 +333,6 @@ let obj = {
     const result = onDismiss.openBurstReactionFirstSendActionSheet({ channelId, messageId, emoji });
   }
 };
-let result = require("set").fileFinishedImporting("utils/EmojiUtilsPlatformed.native.tsx");
+let result = require("obj132").fileFinishedImporting("utils/EmojiUtilsPlatformed.native.tsx");
 
 export default obj;

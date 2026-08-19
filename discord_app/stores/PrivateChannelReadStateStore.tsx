@@ -1,17 +1,17 @@
 // discord_app/stores/PrivateChannelReadStateStore.tsx
+import obj132 from "../../_runtime/00002_obj132.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import createChannelRecord from "../records/ChannelRecord.tsx";
 import areArraysShallowlyEqual from "../utils/FunctionUtils.tsx";
-import closure_3 from "ChannelStore.tsx";
-import closure_4 from "ReadStateStore.tsx";
-import closure_5 from "SelectedChannelStore.tsx";
-import closure_6 from "views/PrivateChannelSortStore.tsx";
-import set from "../../_runtime/00002_set.js";
+import ensureGuildLoaded from "ChannelStore.tsx";
+import generateOldThreadCutoff from "ReadStateStore.tsx";
+import handleConnectionOpen2 from "SelectedChannelStore.tsx";
+import makeSortedChannel from "views/PrivateChannelSortStore.tsx";
 
 function rebuildUnreads() {
   const privateChannelIds = store2.getPrivateChannelIds();
-  const found = privateChannelIds.filter((arg0) => mentionCount.getMentionCount(arg0) > 0);
+  const found = privateChannelIds.filter((item, index) => mentionCount.getMentionCount(item) > 0);
   if (found.length > 20) {
     found.length = 20;
   }
@@ -26,7 +26,7 @@ function rebuildUnreads() {
 }
 function handleConnectionOpen() {
   const privateChannelIds = store2.getPrivateChannelIds();
-  const found = privateChannelIds.filter((arg0) => mentionCount.getMentionCount(arg0) > 0);
+  const found = privateChannelIds.filter((item, index) => mentionCount.getMentionCount(item) > 0);
   if (found.length > 20) {
     found.length = 20;
   }
@@ -48,7 +48,7 @@ function handleGenericUpdate(channelId) {
   let tmp4 = !tmp2;
   if (!tmp2) {
     const privateChannelIds = store2.getPrivateChannelIds();
-    const found = privateChannelIds.filter((arg0) => mentionCount.getMentionCount(arg0) > 0);
+    const found = privateChannelIds.filter((item, index) => mentionCount.getMentionCount(item) > 0);
     if (found.length > 20) {
       found.length = 20;
     }
@@ -56,11 +56,10 @@ function handleGenericUpdate(channelId) {
     let flag = !result;
     if (!result) {
       const _Set = Set;
-      set = new Set(found);
       flag = true;
+      set = new Set(found);
     }
     tmp4 = flag;
-    const obj = areArraysShallowlyEqual;
   }
   return tmp4;
 }
@@ -92,7 +91,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
     let tmp4 = !tmp2;
     if (!tmp2) {
       const privateChannelIds = store2.getPrivateChannelIds();
-      const found = privateChannelIds.filter((arg0) => mentionCount.getMentionCount(arg0) > 0);
+      const found = privateChannelIds.filter((item, index) => mentionCount.getMentionCount(item) > 0);
       if (found.length > 20) {
         found.length = 20;
       }
@@ -100,11 +99,10 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
       let flag = !result;
       if (!result) {
         const _Set = Set;
-        set = new Set(found);
         flag = true;
+        set = new Set(found);
       }
       tmp4 = flag;
-      const obj = areArraysShallowlyEqual;
     }
     return tmp4;
   },
@@ -112,7 +110,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
     let hasItem = set.has(channel.channel.id);
     if (hasItem) {
       const privateChannelIds = store2.getPrivateChannelIds();
-      const found = privateChannelIds.filter((arg0) => mentionCount.getMentionCount(arg0) > 0);
+      const found = privateChannelIds.filter((item, index) => mentionCount.getMentionCount(item) > 0);
       if (found.length > 20) {
         found.length = 20;
       }
@@ -124,7 +122,6 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
         flag = true;
       }
       hasItem = flag;
-      const obj = areArraysShallowlyEqual;
     }
     return hasItem;
   },
@@ -137,7 +134,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
     let tmp4 = !tmp2;
     if (!tmp2) {
       const privateChannelIds = store2.getPrivateChannelIds();
-      const found = privateChannelIds.filter((arg0) => mentionCount.getMentionCount(arg0) > 0);
+      const found = privateChannelIds.filter((item, index) => mentionCount.getMentionCount(item) > 0);
       if (found.length > 20) {
         found.length = 20;
       }
@@ -145,11 +142,10 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
       let flag = !result;
       if (!result) {
         const _Set = Set;
-        set = new Set(found);
         flag = true;
+        set = new Set(found);
       }
       tmp4 = flag;
-      const obj = areArraysShallowlyEqual;
     }
     return tmp4;
   },
@@ -162,7 +158,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
     let tmp4 = !tmp2;
     if (!tmp2) {
       const privateChannelIds = store2.getPrivateChannelIds();
-      const found = privateChannelIds.filter((arg0) => mentionCount.getMentionCount(arg0) > 0);
+      const found = privateChannelIds.filter((item, index) => mentionCount.getMentionCount(item) > 0);
       if (found.length > 20) {
         found.length = 20;
       }
@@ -170,11 +166,10 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
       let flag = !result;
       if (!result) {
         const _Set = Set;
-        set = new Set(found);
         flag = true;
+        set = new Set(found);
       }
       tmp4 = flag;
-      const obj = areArraysShallowlyEqual;
     }
     return tmp4;
   },
@@ -182,12 +177,9 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
     let flag = false;
     const iter = arg0.channels[Symbol.iterator]();
     while (iter !== undefined) {
-      let tmp = store;
       let channel = store.getChannel(iter.next().id);
       let tmp4 = null != channel;
       if (tmp4) {
-        let tmp5 = isPrivate;
-        let tmp6 = channel;
         tmp4 = isPrivate(tmp3.type);
       }
       if (tmp4) {
@@ -202,6 +194,6 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcher
     return tmp7;
   }
 });
-let result = set.fileFinishedImporting("stores/PrivateChannelReadStateStore.tsx");
+let result = obj132.fileFinishedImporting("stores/PrivateChannelReadStateStore.tsx");
 
 export default privateChannelReadStateStore;

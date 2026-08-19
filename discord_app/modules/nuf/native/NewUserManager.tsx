@@ -3,16 +3,16 @@ import keys from "../../../ConstantsIOS.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import _startContactSyncForDiscoverability from "NUFActionCreators.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../phone/PhoneStore.tsx";
-import closure_5 from "../../../stores/ConnectedAccountsStore.tsx";
-import closure_6 from "../../../stores/UserStore.tsx";
-import closure_7 from "../NewUserStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import handleSetLocationMetadata from "../../phone/PhoneStore.tsx";
+import set from "../../../stores/ConnectedAccountsStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import initialize from "../NewUserStore.tsx";
 import { NewUserTypes } from "../NUFConstants.tsx";
 import { PlatformTypes } from "../../../Constants.tsx";
 import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "../../hub/HubConstants.tsx";
 
-require = arg1;
+require = fn;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
 obj = {
   key: obj.ADD_AVATAR,
@@ -103,7 +103,6 @@ items[5] = {
 initializeDefault;
 let prototype = function NewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  closure_0 = applyArgumentsResult;
   applyArgumentsResult._onboardingStepIndex = -1;
   applyArgumentsResult._lastStep = null;
   applyArgumentsResult.actions = {
@@ -111,7 +110,6 @@ let prototype = function NewUserManager() {
       closure_0.handleOnboardingStep(guildId);
     }
   };
-  closure_0 = undefined;
   importDefault = applyArgumentsResult;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
@@ -256,7 +254,6 @@ let prototype = function NewUserManager() {
               }
               c1._lastStep = c2;
               transitionToStep();
-              const tmp16 = c1;
             } else {
               obj = { skip: null };
               obj[0] = flag;
@@ -295,6 +292,6 @@ let obj2 = {
     dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
-let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");
 
 export default prototype;

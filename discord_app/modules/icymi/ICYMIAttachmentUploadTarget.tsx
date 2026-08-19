@@ -1,10 +1,10 @@
 // discord_app/modules/icymi/ICYMIAttachmentUploadTarget.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import items from "../../utils/UploadUtils.tsx";
 import ME from "../../Constants.tsx";
 
 ({ Endpoints: obj1, MAX_ATTACHMENT_SIZE: c3, MAX_UPLOAD_COUNT: c4 } = ME);
-const result = set.fileFinishedImporting("modules/icymi/ICYMIAttachmentUploadTarget.tsx");
+const result = obj132.fileFinishedImporting("modules/icymi/ICYMIAttachmentUploadTarget.tsx");
 class ICYMIAttachmentUploadTarget {
 }
 const prototype = ICYMIAttachmentUploadTarget.prototype;

@@ -1,11 +1,11 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import sendRequest from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../../Constants.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
 
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx");
 
 export const playVibingWumpusMusic = function playVibingWumpusMusic() {
   dispatcherDefault.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
@@ -23,7 +23,7 @@ export const deleteAllSafetyWarnings = function deleteAllSafetyWarnings(arg0) {
 };
 export const markAsInappropriateConversation = function markAsInappropriateConversation(id, INAPPROPRIATE_CONVERSATION_TIER_1) {
   const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.ADD_SAFETY_WARNING(id), body: obj, rejectWithError: null };
+  { url: Endpoints.ADD_SAFETY_WARNING(id), body: obj, rejectWithError: null };
   obj = { safety_warning_type: INAPPROPRIATE_CONVERSATION_TIER_1 };
   obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.post(obj);

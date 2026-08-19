@@ -2,10 +2,9 @@
 import fromServerDefault from "BaseCollectiblesItemRecord.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
-require = arg1;
+require = fn;
 fromServerDefault;
-let prototype;
-prototype = function NameplateRecord(arg0) {
+const prototype = function NameplateRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);
   // ThrowIfThisInitialized (0x7c)
   tmp2.type = CollectiblesItemType.CollectiblesItemType.NAMEPLATE;
@@ -28,9 +27,9 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ asset: tmp4.asset, label: tmp4.label, palette: tmp4.palette } = obj);
   return tmp;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/NameplateRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/records/NameplateRecord.tsx");
 
 export default prototype;
-export const isNameplateRecord = function isNameplateRecord(first) {
-  return first instanceof prototype;
+export const isNameplateRecord = function isNameplateRecord(collectiblesItem) {
+  return collectiblesItem instanceof prototype;
 };

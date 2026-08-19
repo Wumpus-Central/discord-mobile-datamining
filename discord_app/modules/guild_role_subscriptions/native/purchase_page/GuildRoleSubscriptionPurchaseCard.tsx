@@ -10,37 +10,30 @@ import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditS
 import SectionTitle from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import TruncatedText from "Elements.tsx";
 import emphasisHookDefault from "SubscribeButton.tsx";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, header: null, content: null, headerText: null, headerDot: null, seperator: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 16, paddingBottom: 24 };
 createCacheKey[2] = { padding: 16, paddingTop: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
-let obj1 = { padding: 16, paddingTop: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[4] = { width: 3, height: 3, borderRadius: 1.5, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginHorizontal: 8 };
-let obj2 = { width: 3, height: 3, borderRadius: 1.5, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginHorizontal: 8 };
 createCacheKey[5] = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchaseCard.tsx");
 
 export default function GuildRoleSubscriptionPurchaseCard(guildId) {
   const listingId = guildId.listingId;
   const tmp = callback4();
-  let obj = getRoleEmojisAll;
-  obj1 = getRoleEmojisAll;
   let obj2 = TruncatedText;
   const formattedSubscriptionPlan = obj2.useFormattedSubscriptionPlan(listingId);
-  obj = { scrollable: true, startExpanded: true, children: null };
-  obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.header, children: null };
   obj2 = { style: tmp.headerText, children: null };
   const items = [callback2(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: callback(obj1.useName(listingId), 1)[0] }), callback2(View, { style: tmp.headerDot }), callback2(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: formattedSubscriptionPlan })];

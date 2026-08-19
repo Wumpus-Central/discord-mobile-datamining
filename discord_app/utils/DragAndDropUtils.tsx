@@ -29,7 +29,6 @@ function calculatePositionDeltas(arg0) {
       const items = [];
       for (let num2 = 0; num2 < length; num2 = num2 + 1) {
         let idGetterResult1 = idGetter(newOrdering[num2]);
-        let tmp3 = num2;
         let diff = num2;
         if (!ascending) {
           diff = length - 1 - num2;
@@ -49,10 +48,10 @@ function calculatePositionDeltas(arg0) {
     }
   }
 }
-function moveItemFromTo(c9, arg1, to) {
+function moveItemFromTo(c9, c2, to) {
   const items = [...c9];
-  items.splice(arg1, 1);
-  items.splice(to, 0, c9[arg1]);
+  items.splice(c2, 1);
+  items.splice(to, 0, table[c2]);
   return items;
 }
 function getPositionUpdates(arg0) {
@@ -78,7 +77,7 @@ function getPositionUpdates(arg0) {
 }
 let closure_2 = new timestampDefault("DragAndDropUtils");
 const tmp2 = new timestampDefault("DragAndDropUtils");
-const result = require("set").fileFinishedImporting("utils/DragAndDropUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/DragAndDropUtils.tsx");
 
 export default { moveItemFromTo, calculatePositionDeltas, getPositionUpdates };
 export { calculatePositionDeltas };

@@ -1,13 +1,13 @@
 // discord_app/modules/quests/lib/analytics/AnalyticsTypes.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import QuestsVisibleMessagesChangedSource from "../../QuestTypes.tsx";
 
 let closure_2 = Object.keys(QuestsVisibleMessagesChangedSource.QuestContent);
-const result = set.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
 
 export const getQuestContentName = function getQuestContentName(questContent) {
   closure_0 = questContent;
-  let str = closure_2.find((arg0) => questContent(closure_1_1[0]).QuestContent[arg0] === questContent);
+  let str = closure_2.find((item, index) => questContent(dependencyMap[0]).QuestContent[item] === questContent);
   if (str == null) {
     str = "";
   }
@@ -46,7 +46,7 @@ export const getQuestStatus = function getQuestStatus(quest) {
 export const getContentProperties = function getContentProperties(questContent, questContentPosition, questContentRowIndex) {
   const obj = { content_id: questContent, content_name: null, content_position: null, row_index: null };
   closure_0 = questContent;
-  let str = closure_2.find((arg0) => questContent(closure_1_1[0]).QuestContent[arg0] === questContent);
+  let str = closure_2.find((item, index) => questContent(dependencyMap[0]).QuestContent[item] === questContent);
   if (str == null) {
     str = "";
   }

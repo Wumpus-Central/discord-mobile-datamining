@@ -1,24 +1,18 @@
 // discord_app/modules/collectibles/shop_this_look/native/ShopThisLookActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../storefront/StorefrontProductStore.tsx";
+import getFetchState from "../../../storefront/StorefrontProductStore.tsx";
 import { ACTION_SHEET_MAX_WIDTH } from "../../../action_sheet/native/ActionSheetConstants.tsx";
 import { UserProfileThemeTypes } from "../../../user_profile/native/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import "createCacheKey";
 import { useEquippedCollectibleSkuIds } from "../../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
 
-const require = arg1;
+const require = fn;
 function ShopThisLookCard(skuId) {
   skuId = skuId.skuId;
   ({ size, onPress } = skuId);
-  dependencyMap = undefined;
-  let stateFromStores;
-  let type;
   let memo;
   closure_6 = undefined;
   let callback;
@@ -30,16 +24,16 @@ function ShopThisLookCard(skuId) {
   obj1 = skuId(589);
   const items = [closure_6];
   const items1 = [skuId];
-  stateFromStores = obj1.useStateFromStores(items, () => {
+  const stateFromStores = obj1.useStateFromStores(items, () => {
     const productsForSku = ref.getProductsForSku(skuId);
     let found;
     if (productsForSku != null) {
-      found = productsForSku.flatMap((skus) => skus.skus).find((id) => id.id === closure_0);
-      const flatMapResult = productsForSku.flatMap((skus) => skus.skus);
+      found = productsForSku.flatMap((item, index) => item.skus).find((item, index) => item.id === closure_0);
+      const flatMapResult = productsForSku.flatMap((item, index) => item.skus);
     }
     return found;
   }, items1);
-  type = undefined;
+  let type;
   if (stateFromStores != null) {
     const tenantMetadata = stateFromStores.tenantMetadata;
     if (tenantMetadata != null) {
@@ -56,17 +50,15 @@ function ShopThisLookCard(skuId) {
     if (null == _undefined) {
       return null;
     } else {
-      if (obj.getIsVariantProduct(tmp)) {
+      if (obj.getIsVariantProduct(_undefined)) {
         const _Math = Math;
-        const variants = tmp.variants;
-        const bound = Math.max(0, variants.findIndex((skuId) => skuId.skuId === closure_0));
-        return tmp2(tmp3[14]).getSelectedProduct(tmp, bound);
+        const variants = _undefined.variants;
+        const bound = Math.max(0, variants.findIndex((item, index) => item.skuId === closure_0));
+        return skuId(_undefined[14]).getSelectedProduct(_undefined, bound);
       } else {
-        return tmp;
+        return _undefined;
       }
       obj = skuId(_undefined[14]);
-      tmp2 = skuId;
-      tmp3 = _undefined;
     }
   }, items3);
   closure_6 = stateFromStores.useRef(false);
@@ -78,20 +70,20 @@ function ShopThisLookCard(skuId) {
     }
     if (!current) {
       ref.current = true;
-      let obj = skuId(_undefined[15]);
-      obj = { action: null, skuId: null, productType: null, isDisabled: null, source: null };
+      skuId(_undefined[15]);
+      const obj = { action: null, skuId: null, productType: null, isDisabled: null, source: null };
       obj[0] = skuId(_undefined[15]).ShopThisLookRowAction.ROW_VIEWED;
       obj[1] = skuId;
       obj[2] = type;
       obj[3] = !memo;
-      obj[4] = closure_1_8.ACTION_SHEET;
+      obj[4] = UserProfileThemeTypes.ACTION_SHEET;
       const result = obj.trackShopThisLookRowAction(obj);
     }
   }, items4);
   const items5 = [skuId, type, memo];
   callback = stateFromStores.useCallback(() => {
-    let obj = skuId(_undefined[15]);
-    obj = { action: skuId(_undefined[15]).ShopThisLookRowAction.ROW_CLICKED, skuId, productType: type, isDisabled: !memo, source: closure_1_8.ACTION_SHEET };
+    skuId(_undefined[15]);
+    const obj = { action: skuId(_undefined[15]).ShopThisLookRowAction.ROW_CLICKED, skuId, productType: type, isDisabled: !memo, source: UserProfileThemeTypes.ACTION_SHEET };
     const result = obj.trackShopThisLookRowAction(obj);
   }, items5);
   const items6 = [callback, onPress];
@@ -124,15 +116,12 @@ function ShopThisLookCard(skuId) {
           callback1[0] = memo1;
           wishlistButton = wishlistButton.wishlistButton;
           callback1[1] = wishlistButton;
-          tmp17Result = tmp17(tmp18(9240), callback1);
+          tmp17Result = tmp17(onPress(9240), callback1);
         }
         items7[1] = tmp17Result;
         obj[1] = items7;
-        let tmp15Result = closure_10(memo, obj);
-        const tmp15 = closure_10;
-        const tmp16 = memo;
+        let tmp15Result = callback(memo, obj);
         tmp17 = callback;
-        tmp18 = onPress;
       } else {
         const obj2 = { sku: null, size: null, overlay: null, onPress: null };
         obj2[0] = stateFromStores;
@@ -148,11 +137,9 @@ function ShopThisLookCard(skuId) {
 }
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, description: null, itemsContainer: null, cardWrapper: null, wishlistButton: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginTop: -ThemesDefault.space.PX_8 };
-let obj1 = { textAlign: "center", marginTop: -ThemesDefault.space.PX_8 };
 createCacheKey[2] = { alignSelf: "center", flexDirection: "row", flexWrap: "wrap", paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { position: "relative" };
 let obj3 = {};
@@ -160,16 +147,14 @@ const merged = Object.assign(require("SourceIcon").CARD_TOP_RIGHT_OVERLAY_POSITI
 obj3.zIndex = 1;
 createCacheKey[4] = obj3;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { alignSelf: "center", flexDirection: "row", flexWrap: "wrap", paddingBottom: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookActionSheet.tsx");
 
 export default function ShopThisLookActionSheet(arg0) {
   let _require;
   let analyticsLocations;
-  dependencyMap = undefined;
   ({ userId, guildId } = arg0);
   const tmp = callback3();
-  let obj = _useEquippedCollectibleSkuIds;
+  let obj = useEquippedCollectibleSkuIds;
   const equippedCollectibleSkuIds = obj.useEquippedCollectibleSkuIds(userId, guildId);
   obj = { maxWidth: ACTION_SHEET_MAX_WIDTH };
   ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(12317)(obj));
@@ -187,30 +172,30 @@ export default function ShopThisLookActionSheet(arg0) {
   obj[0] = items1;
   obj1 = { startExpanded: true, title: null, children: null };
   const tmp3 = analyticsLocations(7139);
-  const intl = _getSystemLocale.intl;
-  obj1[1] = intl.string(_getSystemLocale.t.xNdRDO);
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj1[1] = intl.string(require("../../../../intl/index.native.tsx").t.xNdRDO);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.description, children: null };
-  const intl2 = _getSystemLocale.intl;
-  obj3[3] = intl2.string(_getSystemLocale.t["ws+0Lr"]);
-  const items2 = [callback(_Text.Text, obj3), ];
+  const intl2 = require("../../../../intl/index.native.tsx").intl;
+  obj3[3] = intl2.string(require("../../../../intl/index.native.tsx").t["ws+0Lr"]);
+  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj3), ];
   const tmp4 = analyticsLocations(9450);
   const items3 = [tmp.itemsContainer, { gap, width: rowWidth }];
   items2[1] = callback(closure_5, {
     style: items3,
-    children: equippedCollectibleSkuIds.map((skuId) => {
-      closure_0 = skuId;
-      return closure_1_9(closure_1_12, {
-        skuId,
+    children: equippedCollectibleSkuIds.map((item, index) => {
+      closure_0 = item;
+      return closure_1_9(ShopThisLookCard, {
+        skuId: item,
         size: closure_0,
         onPress() {
           return closure_1_2(closure_0);
         }
-      }, skuId);
+      }, item);
     })
   });
   obj2[1] = items2;
   obj1[2] = callback2(closure_5, obj2);
   obj[1] = callback(tmp4, obj1);
-  return callback(_context.AnalyticsLocationProvider, obj);
+  return callback(require("../../../app_analytics/useAnalyticsLocations.tsx").AnalyticsLocationProvider, obj);
 };

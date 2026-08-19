@@ -1,7 +1,7 @@
 // discord_app/modules/voice_calls/trackVoiceFeedback.tsx
-import closure_3 from "../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../stores/MediaEngineStore.tsx";
+import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
 
 function _trackVoiceFeedback() {
   const self = this;
@@ -175,7 +175,7 @@ function _trackVoiceFeedback() {
   return applyArgumentsResult;
 }
 let closure_2 = ["output_audio_route_type"];
-const result = require("set").fileFinishedImporting("modules/voice_calls/trackVoiceFeedback.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_calls/trackVoiceFeedback.tsx");
 
 export default function trackVoiceFeedback() {
   const self = this;

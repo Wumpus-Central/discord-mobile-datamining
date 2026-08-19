@@ -8,20 +8,19 @@ import BalanceCounter from "BalanceCounter.tsx";
 import EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS from "../shared/AnimationUtils.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
+import "createCacheKey";
+import obj132 from "../../../utils/PlatformUtils.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: null, orbsLottieContainer: null, balanceCounterContainer: null, balanceText: null };
-createCacheKey = { minHeight: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, gap: 4 };
+const createCacheKey = { minHeight: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, gap: 4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "relative", height: 18, width: 18, justifyContent: "center", alignItems: "center" };
 createCacheKey[2] = { justifyContent: "center", alignItems: "flex-end" };
 let obj1 = { color: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, textAlign: "right", lineHeight: null };
 let num;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   num = 14;
 }
 class BalanceWidgetPill {
@@ -70,7 +69,7 @@ obj1[2] = num;
 createCacheKey[3] = obj1;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 BalanceWidgetPill.displayName = "BalanceWidgetPill";
-const result = set.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPill.tsx");
+const result = obj132.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPill.tsx");
 
 export default BalanceWidgetPill;
 export { BalanceWidgetPill };

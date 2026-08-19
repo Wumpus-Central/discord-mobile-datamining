@@ -1,7 +1,7 @@
 // discord_app/utils/ProcessUtilsBase.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
+const result = obj132.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
 class ProcessUtils {
 }
 const prototype = ProcessUtils.prototype;

@@ -1,6 +1,6 @@
 // discord_app/modules/activate_device/native/ActivateDeviceSharedStyles.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSharedStyles.tsx");
+const result = obj132.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSharedStyles.tsx");
 
 export default { innerContent: { flexDirection: "column", gap: 8, alignItems: "center" }, centerText: { textAlign: "center" } };

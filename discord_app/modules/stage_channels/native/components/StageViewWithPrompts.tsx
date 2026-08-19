@@ -9,20 +9,19 @@ import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.ts
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ ScrollView: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = require("CALL_ACTION_BAR_HEIGHT").CALL_ACTION_BAR_HEIGHT + 8;
 const styles = createCacheKey.createStyles({ scrollView: { flex: 1 }, container: { paddingHorizontal: 16, alignItems: "center" }, sparkle: { marginTop: 48, marginBottom: 16 }, title: { marginTop: 16, marginBottom: 8, textAlign: "center" }, body: { fontSize: 14, textAlign: "center" }, prompts: { marginTop: 24, display: "flex", flexDirection: "column", width: "100%" } });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageViewWithPrompts.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/StageViewWithPrompts.tsx");
 
 export default function StageViewWithPrompts(arg0) {
   ({ title, body, children } = arg0);
   const tmp = styles();
-  let obj = { style: tmp.scrollView, contentContainerStyle: null, alwaysBounceVertical: false, children: null };
   const items = [tmp.container, ];
-  obj = { paddingTop: top + FocusedControlsHeader.FOCUSED_CONTROLS_HEADER_HEIGHT, paddingBottom: bottom + closure_8 };
+  let obj = { paddingTop: top + FocusedControlsHeader.FOCUSED_CONTROLS_HEADER_HEIGHT, paddingBottom: bottom + closure_8 };
   ({ top, bottom } = useSafeAreaInsetsDefault());
   items[1] = obj;
   obj[1] = items;

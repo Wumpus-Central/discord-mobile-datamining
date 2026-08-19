@@ -1,9 +1,8 @@
 // discord_app/stores/game_store/SKUStore.tsx
 import initializeAll from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_1 from "../../modules/skus/SKURecord.tsx";
-import closure_2 from "../../modules/user_settings/LocaleStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import createFromServer from "../../modules/skus/SKURecord.tsx";
+import _getSystemLocale from "../../modules/user_settings/LocaleStore.tsx";
 
 function addSku(sku) {
   closure_0 = sku;
@@ -37,8 +36,8 @@ function addSku(sku) {
   set1.delete(sku.id);
   const bundled_sku_ids = sku.bundled_sku_ids;
   if (bundled_sku_ids != null) {
-    const item = bundled_sku_ids.forEach((arg0) => {
-      const result = closure_1_3.set(arg0, sku.id);
+    const item = bundled_sku_ids.forEach((item, index) => {
+      const result = map.set(item, sku.id);
     });
   }
   if (!map2.has(sku.application_id)) {
@@ -56,14 +55,14 @@ function handleStoreListing(sku) {
   addSku(sku.sku);
   if (null != sku.child_skus) {
     const child_skus = sku.child_skus;
-    const item = child_skus.forEach((arg0) => {
-      callback(arg0);
+    const item = child_skus.forEach((item, index) => {
+      callback(item);
     });
   }
   if (null != sku.alternative_skus) {
     const alternative_skus = sku.alternative_skus;
-    const item1 = alternative_skus.forEach((arg0) => {
-      callback(arg0);
+    const item1 = alternative_skus.forEach((item, index) => {
+      callback(item);
     });
   }
 }
@@ -72,8 +71,6 @@ function handleEntitlementsFetch(arg0) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     if (null != nextResult.sku) {
-      let tmp3 = addSku;
-      let tmp4 = nextResult;
       let tmp5 = addSku(tmp2.sku);
     }
     continue;
@@ -123,7 +120,7 @@ prototype["getForApplication"] = function getForApplication(arg0) {
     let items = [];
   } else {
     const _Array = Array;
-    items = Array.from(value).map((arg0) => closure_6.get(arg0));
+    items = Array.from(value).map((item, index) => closure_6.get(item));
     const arr = Array.from(value);
   }
   return items;
@@ -160,24 +157,24 @@ const sKUStore = new SKUStore(dispatcherDefault, {
   },
   STORE_LISTINGS_FETCH_SUCCESS: function handleStoreListingsFetchSuccess(arg0) {
     while (tmp !== undefined) {
-      let tmp3 = handleStoreListing;
       let tmp4 = handleStoreListing(tmp2);
       continue;
     }
+    tmp = arg0.storeListings[Symbol.iterator]();
   },
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetchSuccess(storeListing) {
     storeListing = storeListing.storeListing;
     addSku(storeListing.sku);
     if (null != storeListing.child_skus) {
       const child_skus = storeListing.child_skus;
-      const item = child_skus.forEach((arg0) => {
-        callback(arg0);
+      const item = child_skus.forEach((item, index) => {
+        callback(item);
       });
     }
     if (null != storeListing.alternative_skus) {
       const alternative_skus = storeListing.alternative_skus;
-      const item1 = alternative_skus.forEach((arg0) => {
-        callback(arg0);
+      const item1 = alternative_skus.forEach((item, index) => {
+        callback(item);
       });
     }
   },
@@ -203,15 +200,15 @@ const sKUStore = new SKUStore(dispatcherDefault, {
   SKUS_FETCH_SUCCESS: function handleSkusFetchSuccess(arg0) {
     ({ guildId, skus } = arg0);
     while (tmp !== undefined) {
-      let tmp3 = skuFetchSuccess;
       let tmp4 = skuFetchSuccess(tmp2);
       continue;
     }
     if (null != guildId) {
       const _Set = Set;
-      set = new Set(skus.map((id) => id.id));
+      set = new Set(skus.map((item, index) => item.id));
       const result = map3.set(guildId, set);
     }
+    tmp = skus[Symbol.iterator]();
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: handleEntitlementsFetch,
   APPLICATION_STORE_CLEAR_DATA: function handleClearData() {
@@ -225,6 +222,6 @@ const sKUStore = new SKUStore(dispatcherDefault, {
   APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: handleEntitlementsFetch,
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: handleEntitlementsFetch
 });
-let result = set.fileFinishedImporting("stores/game_store/SKUStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/game_store/SKUStore.tsx");
 
 export default sKUStore;

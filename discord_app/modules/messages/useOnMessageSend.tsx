@@ -1,8 +1,8 @@
 // discord_app/modules/messages/useOnMessageSend.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { MessageStates } from "../../Constants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
 
 export default function useOnMessageSend(arg0) {
   closure_0 = arg0;

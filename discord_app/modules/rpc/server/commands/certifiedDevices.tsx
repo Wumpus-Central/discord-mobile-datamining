@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/server/commands/certifiedDevices.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import set2 from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
+import set from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import DesktopSources from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
 import prototypeDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
@@ -11,15 +11,13 @@ import ME from "../../../../Constants.tsx";
 ({ RPCErrors: c3, RPCCommands } = ME);
 const DeviceTypes = DesktopSources.DeviceTypes;
 let obj = {};
-obj = { scope: null, validation: null, handler: null };
-obj = {};
-let items = [set2.OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
+let items = [set.OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function validation(array) {
-  let obj = createRpcJoiSchemaObjectDefault(array);
-  obj = { devices: null };
-  let arrayResult = array.array();
+  createRpcJoiSchemaObjectDefault(array);
+  let obj = { devices: null };
+  array.array();
   const requiredResult = obj.required();
   obj = { type: null, id: null, vendor: null, model: null, related: null, echo_cancellation: null, noise_suppression: null, automatic_gain_control: null, hardware_mute: null };
   const obj5 = createRpcJoiSchemaObjectDefault(array);
@@ -46,7 +44,7 @@ obj[1] = function validation(array) {
   const stringResult4 = array.string();
   obj2[1] = array.string().min(1);
   obj[3] = requiredResult4.keys(obj2);
-  arrayResult = array.array();
+  const arrayResult = array.array();
   const stringResult5 = array.string();
   obj[4] = arrayResult.items(array.string().min(1));
   obj[5] = array.boolean();
@@ -66,26 +64,26 @@ obj[2] = function handler(socket) {
     throw tmp10;
   } else {
     obj = devices(13840);
-    obj.setCertifiedDevices(socket.application.id, devices.map((type) => {
-      const related = type.related;
+    obj.setCertifiedDevices(socket.application.id, devices.map((item, index) => {
+      const related = item.related;
       return {
-        type: type.type,
-        id: type.id,
-        vendor: type.vendor,
-        model: type.model,
-        related: related.filter((arg0) => {
-          closure_0 = arg0;
-          return closure_0.some((id) => id.id === closure_0);
+        type: item.type,
+        id: item.id,
+        vendor: item.vendor,
+        model: item.model,
+        related: related.filter((item, index) => {
+          closure_0 = item;
+          return closure_0.some((item, index) => item.id === closure_0);
         }),
-        echoCancellation: type.echo_cancellation,
-        noiseSuppression: type.noise_suppression,
-        automaticGainControl: type.automatic_gain_control,
-        hardwareMute: type.hardware_mute
+        echoCancellation: item.echo_cancellation,
+        noiseSuppression: item.noise_suppression,
+        automaticGainControl: item.automatic_gain_control,
+        hardwareMute: item.hardware_mute
       };
     }));
   }
 };
 obj[RPCCommands.SET_CERTIFIED_DEVICES] = obj;
-const result = set.fileFinishedImporting("modules/rpc/server/commands/certifiedDevices.tsx");
+const result = obj132.fileFinishedImporting("modules/rpc/server/commands/certifiedDevices.tsx");
 
 export default obj;

@@ -2,11 +2,11 @@
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import updateImpersonating from "../impersonate/ImpersonateActionCreators.tsx";
-import closure_3 from "../impersonate/ImpersonateStore.tsx";
+import initialize from "../impersonate/ImpersonateStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
 
 export const updateGuildSelfMember = function updateGuildSelfMember(closure_1_0, arg1) {
   let flag = arg2;
@@ -18,7 +18,6 @@ export const updateGuildSelfMember = function updateGuildSelfMember(closure_1_0,
     obj[0] = arg1;
     const result = updateImpersonating.updateImpersonatedData(closure_1_0, obj);
   } else {
-    obj = dispatcherDefault;
     obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId: null, roles: null, flags: null };
     obj[1] = closure_1_0;
     ({ roles: obj2[2], flags: obj2[3] } = arg1);

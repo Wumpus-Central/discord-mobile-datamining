@@ -1,10 +1,10 @@
 // discord_app/modules/game_profile/hooks/useGameProfileObscured.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import isAgeRestrictedContentClassification from "../../content_classification/utils.tsx";
-import closure_2 from "../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
 
 export default function useGameProfileObscured(contentClassification) {
   initialize;
@@ -26,7 +26,6 @@ export const isGameProfileObscured = function isGameProfileObscured(game, nsfwAl
   }
   if (result) {
     result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(game.contentClassification);
-    const obj = isAgeRestrictedContentClassification;
   }
   return result;
 };

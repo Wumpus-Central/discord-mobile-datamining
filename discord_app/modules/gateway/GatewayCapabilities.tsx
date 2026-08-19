@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/GatewayCapabilities.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/gateway/GatewayCapabilities.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/GatewayCapabilities.tsx");
 
 export const getClientCapabilities = function getClientCapabilities(useChannelObfuscation) {
   let num = 1734655;

@@ -1,32 +1,29 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalContentCompleted.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ ActivityIndicator: c5, ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: false };
-let obj = { wrapper: { flexGrow: 1, flexShrink: 1 }, headerContentCopy: { flexGrow: 1, flexShrink: 1 }, closeButton: { opacity: 0.5 }, scroll: { flexGrow: 1, flexShrink: 1 }, scrollContent: { flexGrow: 1 }, content: null, contentRewardsAnimatedWrapper: null, contentRewardsWrapper: null, contentRewards: null, contentRewardsCopy: null, contentEndCardHeader: null, contentEndCardHeaderCopy: null, contentEndCard: null, image: null };
-obj = { padding: ThemesDefault.space.PX_16 };
+let obj = { padding: ThemesDefault.space.PX_16 };
 obj[5] = obj;
 obj[6] = { flexGrow: 1, flexShrink: 0 };
 obj[7] = { flexGrow: 1, flexShrink: 0 };
 obj[8] = { alignItems: "center" };
 obj[9] = { textAlign: "center" };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
+const createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
 obj[10] = createCacheKey;
 obj[11] = { flexGrow: 1, flexShrink: 1 };
 obj[12] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_STRONG, paddingTop: ThemesDefault.space.PX_24, flexShrink: 0 };
-let obj2 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_STRONG, paddingTop: ThemesDefault.space.PX_24, flexShrink: 0 };
 obj[13] = { height: 210, marginBottom: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.xl };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function VideoQuestModalContentCompletedTsx1(){const{withDelay,ANIMATION_DELAY,withSpring,isComponentMounted,ANIMATED_CONTENT_SPRING_CONFIG,interpolate,ANIMATED_CONTENT_OFFSET_Y}=this.__closure;return{opacity:withDelay(ANIMATION_DELAY,withSpring(isComponentMounted.get(),ANIMATED_CONTENT_SPRING_CONFIG)),transform:[{translateY:withDelay(ANIMATION_DELAY,withSpring(interpolate(isComponentMounted.get(),[0,1],[ANIMATED_CONTENT_OFFSET_Y,0]),ANIMATED_CONTENT_SPRING_CONFIG))}]};}" };
-let obj3 = { height: 210, marginBottom: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.xl };
 const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted(onRestartVideo) {
   ({ onClose, sourceQuestContent } = onRestartVideo);
   const tmp = callback4();
@@ -79,8 +76,8 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   const items2 = [isShareableQuestResult, quest.id];
   const callback = obj1.useCallback(() => {
     if (closure_2) {
-      let obj = quest(isShareableQuestResult[15]);
-      obj = { message: null };
+      quest(isShareableQuestResult[15]);
+      const obj = { message: null };
       obj[0] = quest(isShareableQuestResult[16]).getQuestUrl(quest.id);
       obj.showShareActionSheet(obj, "Video Quest Modal");
       const obj3 = quest(isShareableQuestResult[16]);
@@ -124,7 +121,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   ({ content: arr7[0], contentRewardsWrapper: arr7[1] } = tmp);
   if (isLoading) {
     if (!isClaiming) {
-      const items7 = [tmp22(closure_5, {}), ];
+      const items7 = [callback2(closure_5, {}), ];
       let tmp22Result = !tmp9;
       if (!tmp9) {
         const obj9 = { grow: true, variant: "secondary", loading: null, disabled: null, onPress: null, text: null, onPressDisabled: null };
@@ -141,12 +138,12 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
           tmp6Result = tmp6(14470);
         }
         obj9[6] = tmp6Result;
-        tmp22Result = tmp22(tmp2(4745).Button, obj9);
+        tmp22Result = callback2(tmp2(4745).Button, obj9);
       }
       items7[1] = tmp22Result;
       obj8[4] = items7;
-      obj7[1] = tmp21(tmp2(4733).Stack, obj8);
-      const items8 = [tmp22(tmp6Result, obj7), ];
+      obj7[1] = callback3(tmp2(4733).Stack, obj8);
+      const items8 = [callback2(tmp6Result, obj7), ];
       const obj10 = { style: null, children: null };
       const items9 = [, ];
       ({ content: arr11[0], contentEndCard: arr11[1] } = tmp);
@@ -158,22 +155,22 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
       obj12[1] = tmp.contentEndCardHeaderCopy;
       const obj13 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj13[2] = quest.config.messages.gameTitle;
-      const items10 = [tmp22(tmp2(4734).Heading, obj13), ];
+      const items10 = [callback2(tmp2(4734).Heading, obj13), ];
       const obj14 = { variant: "text-sm/medium", color: "text-subtle", children: null };
       obj14[2] = quest.config.messages.gamePublisher;
-      items10[1] = tmp22(tmp2(4734).Text, obj14);
+      items10[1] = callback2(tmp2(4734).Text, obj14);
       obj12[2] = items10;
-      const items11 = [tmp21(tmp2(4733).Stack, obj12), ];
+      const items11 = [callback3(tmp2(4733).Stack, obj12), ];
       const obj15 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
       const intl4 = tmp2(1236).intl;
       obj15[1] = intl4.string(tmp2(1236).t.YsCuyF);
       obj15[2] = onRestartVideo.onRestartVideo;
       const obj16 = { color: null };
       obj16[0] = tmp6(712).colors.INTERACTIVE_TEXT_DEFAULT;
-      obj15[3] = tmp22(tmp2(10123).RetryIcon, obj16);
-      items11[1] = tmp22(tmp2(5433).PressableOpacity, obj15);
+      obj15[3] = callback2(tmp2(10123).RetryIcon, obj16);
+      items11[1] = callback2(tmp2(5433).PressableOpacity, obj15);
       obj11[3] = items11;
-      const items12 = [tmp21(tmp2(4733).Stack, obj11), , ];
+      const items12 = [callback3(tmp2(4733).Stack, obj11), , ];
       tmp22Result = null != memo;
       if (tmp22Result) {
         const obj17 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
@@ -187,8 +184,8 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
         const obj20 = { uri: null };
         obj20[0] = memo.url;
         obj19[1] = obj20;
-        obj17[3] = tmp22(tmp6(5449), obj19);
-        tmp22Result = tmp22(tmp2(5433).PressableOpacity, obj17);
+        obj17[3] = callback2(tmp6(5449), obj19);
+        tmp22Result = callback2(tmp2(5433).PressableOpacity, obj17);
       }
       items12[1] = tmp22Result;
       const obj21 = { direction: "horizontal", spacing: null, align: "center", children: null };
@@ -196,7 +193,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
       const obj22 = { grow: true, variant: "expressive", onPress: null, text: null };
       obj22[2] = videoQuestClickCtaAndMaybeCloseModal;
       obj22[3] = tmp2(10496).getExternalCtaLabel(quest);
-      const items13 = [tmp22(tmp2(4745).Button, obj22), ];
+      const items13 = [callback2(tmp2(4745).Button, obj22), ];
       if (isShareableQuestResult) {
         const obj23 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
         const intl6 = tmp2(1236).intl;
@@ -204,18 +201,18 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
         obj23[2] = callback;
         const obj24 = { color: null };
         obj24[0] = tmp6(712).colors.INTERACTIVE_TEXT_DEFAULT;
-        obj23[3] = tmp22(tmp2(12047).ShareIcon, obj24);
-        isShareableQuestResult = tmp22(tmp2(5433).PressableOpacity, obj23);
+        obj23[3] = callback2(tmp2(12047).ShareIcon, obj24);
+        isShareableQuestResult = callback2(tmp2(5433).PressableOpacity, obj23);
       }
       items13[1] = isShareableQuestResult;
       obj21[3] = items13;
-      items12[2] = tmp21(tmp2(4733).Stack, obj21);
+      items12[2] = callback3(tmp2(4733).Stack, obj21);
       obj10[1] = items12;
-      items8[1] = tmp21(closure_7, obj10);
+      items8[1] = callback3(closure_7, obj10);
       obj6[4] = items8;
-      items4[1] = tmp21(closure_6, obj6);
+      items4[1] = callback3(closure_6, obj6);
       obj1[2] = items4;
-      return tmp21(tmp2(6803).SafeAreaPaddingView, obj1);
+      return callback3(tmp2(6803).SafeAreaPaddingView, obj1);
     }
   }
   const obj25 = { style: tmp.contentRewards, onLayout: callback1, children: null };
@@ -223,19 +220,20 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   let obj26 = { color: "text-strong", style: tmp.contentRewardsCopy, variant: "heading-lg/semibold", children: null };
   const intl2 = tmp2(1236).intl;
   const string = intl2.string;
-  EMp8_M = tmp2(1236).t;
+  let t = tmp2(1236).t;
   if (null != claimedAt) {
-    EMp8_M = EMp8_M["EMp8/M"];
-    let stringResult = string(EMp8_M);
+    t = t["EMp8/M"];
+    let stringResult = string(t);
   } else {
-    stringResult = string(EMp8_M.qyKLdg);
+    stringResult = string(t.qyKLdg);
   }
   obj26[3] = stringResult;
-  obj26 = tmp22(tmp2(4734).Heading, obj26);
+  obj26 = callback2(tmp2(4734).Heading, obj26);
   items14[1] = obj26;
   obj25[2] = items14;
   callback3(closure_7, obj25);
+  const tmp17 = callback(obj1.useState(null), 2);
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContentCompleted.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContentCompleted.tsx");
 
 export default memoResult;

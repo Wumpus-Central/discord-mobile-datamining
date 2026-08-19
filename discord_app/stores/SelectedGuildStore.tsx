@@ -4,13 +4,13 @@ import dispatcherDefault from "../Dispatcher.tsx";
 import transitionTo from "../modules/routing/router_utils.tsx";
 import matchPath from "../modules/routing/matchPathCompat.tsx";
 import RouteParam2 from "../modules/routing/RouteUtils.tsx";
-import closure_2 from "../modules/guild_member_verification/UserGuildJoinRequestStore.tsx";
-import closure_3 from "AuthenticationStore.tsx";
-import closure_4 from "DefaultRouteStore.tsx";
-import closure_5 from "GuildStore.tsx";
+import handleGatewayJoinRequestUpdate from "../modules/guild_member_verification/UserGuildJoinRequestStore.tsx";
+import fetchFingerprint from "AuthenticationStore.tsx";
+import initialize from "DefaultRouteStore.tsx";
+import createGuildRecordFromRust from "GuildStore.tsx";
 import ME from "../Constants.tsx";
 
-require = arg1;
+require = fn;
 function handleConnectionOpen() {
   let tmp = null != c8;
   if (tmp) {
@@ -47,7 +47,7 @@ class SelectedGuildStore extends PersistedStore {
 const prototype = SelectedGuildStore.prototype;
 prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
   this.mustEmitChanges((type) => "CONNECTION_OPEN" !== type.type);
-  this.waitFor(closure_3, closure_4, closure_5, closure_2);
+  this.waitFor(closure_3, lastNonVoiceRoute, closure_5, closure_2);
   let prop;
   if (selectedGuildTimestampMillis != null) {
     prop = selectedGuildTimestampMillis.selectedGuildTimestampMillis;
@@ -73,7 +73,7 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
   const obj = { path: null };
   const RouteParam = RouteParam2.RouteParam;
   obj[0] = closure_7.CHANNEL(RouteParam.guildId());
-  const matchPathResult = matchPath.matchPath(closure_4.lastNonVoiceRoute, obj);
+  const matchPathResult = matchPath.matchPath(lastNonVoiceRoute.lastNonVoiceRoute, obj);
   guildId = undefined;
   if (matchPathResult != null) {
     const params = matchPathResult.params;
@@ -161,18 +161,11 @@ const selectedGuildStore = new SelectedGuildStore(dispatcherDefault, {
           let num = 0;
           const keys = Object.keys(table);
           for (const item10022 of keys) {
-            let tmp5 = item10022;
             if (item10022 !== arg0) {
-              let tmp6 = table;
-              let tmp7 = item10022;
-              let tmp8 = table[tmp5];
-              let tmp9 = tmp8;
-              let tmp10 = num;
+              let tmp8 = table[item10022];
               let tmp11 = tmp8 > num;
               if (tmp11) {
-                let tmp12 = store;
-                let tmp13 = item10022;
-                tmp11 = null != store.getGuild(tmp5);
+                tmp11 = null != store.getGuild(item10022);
               }
               if (tmp11) {
                 tmp3 = item10022;
@@ -185,7 +178,7 @@ const selectedGuildStore = new SelectedGuildStore(dispatcherDefault, {
             return tmp3;
           } else {
             const guildsArray = store.getGuildsArray();
-            const found = guildsArray.find((id) => id.id !== closure_0);
+            const found = guildsArray.find((item, index) => item.id !== closure_0);
             let id;
             if (found != null) {
               id = found.id;
@@ -200,13 +193,11 @@ const selectedGuildStore = new SelectedGuildStore(dispatcherDefault, {
           closure_8 = null;
           transitionTo.replaceWith(closure_7.ME);
           flag = true;
-          const obj = transitionTo;
         }
       }
       closure_8 = tmp3;
       transitionTo.replaceWith(closure_7.CHANNEL(tmp3));
       flag = true;
-      const obj2 = transitionTo;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -233,18 +224,11 @@ const selectedGuildStore = new SelectedGuildStore(dispatcherDefault, {
           let num = 0;
           const keys = Object.keys(table);
           for (const item10022 of keys) {
-            let tmp5 = item10022;
             if (item10022 !== arg0) {
-              let tmp6 = table;
-              let tmp7 = item10022;
-              let tmp8 = table[tmp5];
-              let tmp9 = tmp8;
-              let tmp10 = num;
+              let tmp8 = table[item10022];
               let tmp11 = tmp8 > num;
               if (tmp11) {
-                let tmp12 = store;
-                let tmp13 = item10022;
-                tmp11 = null != store.getGuild(tmp5);
+                tmp11 = null != store.getGuild(item10022);
               }
               if (tmp11) {
                 tmp3 = item10022;
@@ -257,7 +241,7 @@ const selectedGuildStore = new SelectedGuildStore(dispatcherDefault, {
             return tmp3;
           } else {
             const guildsArray = store.getGuildsArray();
-            const found = guildsArray.find((id) => id.id !== closure_0);
+            const found = guildsArray.find((item, index) => item.id !== closure_0);
             let id;
             if (found != null) {
               id = found.id;
@@ -272,13 +256,11 @@ const selectedGuildStore = new SelectedGuildStore(dispatcherDefault, {
           closure_8 = null;
           transitionTo.replaceWith(closure_7.ME);
           flag = true;
-          const obj = transitionTo;
         }
       }
       closure_8 = tmp8;
       transitionTo.replaceWith(closure_7.CHANNEL(tmp8));
       flag = true;
-      const obj2 = transitionTo;
     }
   },
   LOGOUT: function handleLogout() {
@@ -286,7 +268,7 @@ const selectedGuildStore = new SelectedGuildStore(dispatcherDefault, {
     c9 = null;
   }
 });
-const result = require("set").fileFinishedImporting("stores/SelectedGuildStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/SelectedGuildStore.tsx");
 
 export default selectedGuildStore;
 export const SELECTED_GUILD_TIMESTAMP_NOW = -1;

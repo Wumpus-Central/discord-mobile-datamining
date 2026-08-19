@@ -1,19 +1,18 @@
 // discord_app/modules/app_analytics/useAnalyticsLocations.tsx
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../_runtime/00019_noop.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
 let c3 = importAllResult;
 let context = importAllResult.createContext([]);
-const result = require("set").fileFinishedImporting("modules/app_analytics/useAnalyticsLocations.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_analytics/useAnalyticsLocations.tsx");
 
 export default function useAnalyticsLocations() {
   let items = [...arguments];
-  let first;
   let callback;
   context = undefined;
   const tmp = callback(context.useState(items), 2);
-  first = tmp[0];
+  const first = tmp[0];
   callback = tmp[1];
   context = context.useContext(context);
   const items1 = [first, context];
@@ -22,7 +21,7 @@ export default function useAnalyticsLocations() {
     if (0 !== first.length) {
       const flattenResult = items(first[3]).flatten(tmp2);
       items = [];
-      HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(tmp, 0));
+      HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(context, 0));
       tmp3 = items;
       const obj = items(first[3]);
     }
@@ -35,7 +34,7 @@ export default function useAnalyticsLocations() {
     if (0 !== substr.length) {
       const flattenResult = items(first[3]).flatten(substr);
       items = [];
-      HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(tmp, 0));
+      HermesBuiltin.arraySpread(flattenResult, HermesBuiltin.arraySpread(context, 0));
       tmp2 = items;
       const obj = items(first[3]);
     }
@@ -51,7 +50,7 @@ export default function useAnalyticsLocations() {
 };
 export const LocationContext = context;
 export const AnalyticsLocationProvider = function AnalyticsLocationProvider(value) {
-  return <context.Provider value={arg0.value}>{arg0.children}</context.Provider>;
+  return <context.Provider value={value.value}>{value.children}</context.Provider>;
 };
 export const useLocationStackFromLocationContext = function useLocationStackFromLocationContext() {
   context = importAllResult.useContext(context);

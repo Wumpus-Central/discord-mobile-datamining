@@ -1,7 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx
-import set from "../../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../../_runtime/00002_obj132.js";
 import explicitContentFromProto from "../../../../../user_settings/UserSettings.tsx";
 import ChannelListLayoutTypes2 from "../../../../ChannelListLayoutTypes.tsx";
+import importDefaultResult1 from "layout/CozyDrawer.tsx";
+import CHANNEL_LIST_STYLES_COMPACT from "layout/Compact.tsx";
+import CHANNEL_LIST_STYLES_COZY from "layout/Cozy.tsx";
 
 function getLayoutStyles(layout, launchpad) {
   let flag = launchpad;
@@ -9,21 +12,21 @@ function getLayoutStyles(layout, launchpad) {
     flag = false;
   }
   if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER === layout) {
-    return tmp(10057).CHANNEL_LIST_STYLES_COZY_DRAWER;
-  } else if (tmp(4071).ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
-    return tmp(10057).CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
-  } else if (tmp(4071).ChannelListLayoutTypes.COMPACT === layout) {
-    let tmpResult = tmp(10059);
+    return importDefaultResult1.CHANNEL_LIST_STYLES_COZY_DRAWER;
+  } else if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL === layout) {
+    return importDefaultResult1.CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL;
+  } else if (ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT === layout) {
+    let tmpResult = CHANNEL_LIST_STYLES_COMPACT;
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COMPACT_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COMPACT;
   } else {
-    if (tmp(4071).ChannelListLayoutTypes.MINIMAL !== layout) {
-      const COZY = tmp(4071).ChannelListLayoutTypes.COZY;
+    if (ChannelListLayoutTypes2.ChannelListLayoutTypes.MINIMAL !== layout) {
+      const COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
     }
-    tmpResult = tmp(10060);
+    tmpResult = CHANNEL_LIST_STYLES_COZY;
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COZY;
   }
 }
-let result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx");
+let result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx");
 
 export { getLayoutStyles };
 export function makeSizeStyle(size) {
@@ -42,9 +45,9 @@ export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) 
   if (panelVariant) {
     let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
   } else if (setting === ChannelListLayoutTypes.COMPACT) {
-    COZY = tmp(4071).ChannelListLayoutTypes.COMPACT;
+    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
   } else {
-    COZY = tmp(4071).ChannelListLayoutTypes.COZY;
+    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
   }
   return COZY;
 };

@@ -2,12 +2,12 @@
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import combinedDefault from "../../../../../utils/HelpdeskUtils.tsx";
 import getEphemeralReasonMessage from "../../../../application_commands/ApplicationCommandUserAppUtils.tsx";
-import closure_3 from "../../../../guild_automod/GuildAutomodMessageStore.tsx";
+import handleMessageSendFailedAutomod from "../../../../guild_automod/GuildAutomodMessageStore.tsx";
 import ME from "../../../../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ HelpdeskArticles: c4, MessageFlags: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/EphemeralIndication.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/row_data/EphemeralIndication.tsx");
 
 export const createEphemeralIndication = function createEphemeralIndication(message) {
   if (message.hasFlag(constants2.EPHEMERAL)) {
@@ -23,17 +23,16 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       if (interactionMetadata2 != null) {
         ephemerality_reason1 = interactionMetadata2.ephemerality_reason;
       }
-      let obj = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
       const ephemeralReasonMessage = obj1.getEphemeralReasonMessage(ephemerality_reason1);
-      const intl2 = tmp3(1236).intl;
-      obj = { handleDelete: null, reason: null };
+      const intl2 = getSystemLocale.intl;
+      const obj = { handleDelete: null, reason: null };
       obj1 = { action: "bindDismissMessage", message: null };
       obj1[1] = message;
       obj[0] = obj1;
       obj[1] = ephemeralReasonMessage;
       obj[0] = intl2.formatToParts(getSystemLocale.t.xgCMRQ, obj);
       obj[1] = combinedDefault.getArticleURL(constants.USING_APPS_FAQ);
-      const intl3 = tmp3(1236).intl;
+      const intl3 = getSystemLocale.intl;
       obj[2] = intl3.string(getSystemLocale.t.OIWSJe);
       return obj;
     } else {
@@ -49,8 +48,8 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       obj2[2] = intl5.string(getSystemLocale.t.htHOrp);
       if (null != message.getMessage(message.id)) {
         obj2.helpArticleLink = combinedDefault.getArticleURL(constants.GUILD_AUTOMOD_BLOCKED_MESSAGE);
-        const intl = tmp9(1236).intl;
-        obj2.helpButtonAccessibilityLabel = intl.string(tmp9(1236).t.OiCBhP);
+        const intl = getSystemLocale.intl;
+        obj2.helpButtonAccessibilityLabel = intl.string(getSystemLocale.t.OiCBhP);
         const tmp11Result = combinedDefault;
       }
       return obj2;

@@ -1,19 +1,14 @@
 // discord_app/modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const obj = {
-  resolve() {
-
-  }
-};
 const promise = new Promise((resolve) => {
   obj.resolve = resolve;
 });
-const result = set.fileFinishedImporting("modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx");
+const result = obj132.fileFinishedImporting("modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx");
 
 export const schedulePostTTIEvent = function schedulePostTTIEvent(arg0) {
   closure_0 = arg0;
-  promise.then(() => {
+  promise.then((result) => {
     callback();
   });
 };

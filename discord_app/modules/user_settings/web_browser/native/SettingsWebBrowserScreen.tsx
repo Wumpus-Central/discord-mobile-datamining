@@ -4,7 +4,7 @@ import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
   const node = importAllResult.useMemo(() => {
@@ -14,6 +14,6 @@ const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
   }, []);
   return jsx(_modDef13991, { node });
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
 
 export default memoResult;

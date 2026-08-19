@@ -5,13 +5,12 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import HomeDrawerSharedItem from "HomeDrawerShared.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerAddServerRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/home_drawer/native/HomeDrawerAddServerRow.tsx");
 
 export const HomeDrawerAddServerRowExpandedChildren = function HomeDrawerAddServerRowExpandedChildren() {
-  let obj = { title: null, subtitle: null };
-  obj = { variant: "text-md/medium", color: "text-default", children: null };
+  const obj = { variant: "text-md/medium", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.l5WIbf);
   obj[0] = jsx(Text.Text, { variant: "text-md/medium", color: "text-default", children: null });

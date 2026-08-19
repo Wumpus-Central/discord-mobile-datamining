@@ -1,15 +1,15 @@
 // discord_app/design/components/Modal/native/ModalFloatingAction.native.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ floating: { position: "absolute", bottom: 0, width: "100%", paddingHorizontal: 16 }, spacer: { height: 96 } });
 let closure_9 = { code: "function ModalFloatingActionNativeTsx1(){const{interpolate,sharedValue,floatingBackgroundColor,useReducedMotion}=this.__closure;return{opacity:interpolate(sharedValue.get(),[0,1],[0,1]),borderBottomColor:floatingBackgroundColor,borderBottomWidth:16,transform:[{translateY:interpolate(sharedValue.get(),[useReducedMotion?0.999999:0,1],[32,0])}]};}" };
-let result = require("set").fileFinishedImporting("design/components/Modal/native/ModalFloatingAction.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Modal/native/ModalFloatingAction.native.tsx");
 
 export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   isVisible = isVisible.isVisible;
@@ -32,6 +32,7 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
       num = 1;
     }
     const result = sharedValue.set(isVisible(sharedValue[7]).withSpring(num, isVisible(sharedValue[8]).SUBTLE_SPRING, "animate-always"));
+    const obj = isVisible(sharedValue[7]);
   }, items);
   const tmp7 = floatingBackgroundColor(sharedValue[6])();
   const fn = function y() {
@@ -61,7 +62,6 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   }
   obj[1] = str;
   obj1 = { colors: null, locations: null, style: null };
-  const tmp10 = closure_7;
   const tmp3Result = isVisible(sharedValue[4]);
   const tmp6Result = floatingBackgroundColor(sharedValue[9]);
   const obj6 = floatingBackgroundColor(sharedValue[10])(floatingBackgroundColor);
@@ -75,7 +75,7 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   obj2.variant = "primary";
   items3[1] = callback(isVisible(sharedValue[11]).ModalActionButton, obj2);
   obj[2] = items3;
-  return tmp10(floatingBackgroundColor(sharedValue[4]).View, obj);
+  return callback(floatingBackgroundColor(sharedValue[4]).View, obj);
 };
 export const ModalFloatingActionSpacer = function ModalFloatingActionSpacer() {
   return callback(closure_5, { style: callback2().spacer });

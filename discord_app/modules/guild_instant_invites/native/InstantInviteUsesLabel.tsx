@@ -3,9 +3,9 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import { jsxs } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");
 
 export default function InstantInviteUsesLabel(style) {
   ({ uses, maxUses } = style);

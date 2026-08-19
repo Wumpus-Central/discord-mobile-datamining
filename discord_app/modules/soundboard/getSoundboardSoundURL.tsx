@@ -1,9 +1,9 @@
 // discord_app/modules/soundboard/getSoundboardSoundURL.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/soundboard/getSoundboardSoundURL.tsx");
+const result = obj132.fileFinishedImporting("modules/soundboard/getSoundboardSoundURL.tsx");
 
 export default function getSoundboardSoundURL(arg0) {
   if ("development" !== window.GLOBAL_ENV.PROJECT_ENV) {

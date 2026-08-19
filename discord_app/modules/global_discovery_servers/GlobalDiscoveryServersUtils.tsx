@@ -3,13 +3,13 @@ import v1 from "../../../_runtime/00514_v1.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import prototypeDefault from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../user_settings/LocaleStore.tsx";
-import closure_6 from "GlobalDiscoveryServersSearchResultsStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _getSystemLocale from "../user_settings/LocaleStore.tsx";
+import map from "GlobalDiscoveryServersSearchResultsStore.tsx";
 import DEFAULT_DISCOVERY_CATEGORY_ID from "GlobalDiscoveryServersConstants.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function _navigateToGuild() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -116,28 +116,28 @@ function _navigateToGuild() {
   return applyArgumentsResult;
 }
 ({ GlobalDiscoveryServerTab: error, FEATURED_GUILDS_CACHE_DURATION: closure_8, FEATURED_GUILDS_SEARCH_OPTIONS: c9, CategoryId: c10, DISCOVERY_ALL_CATEGORIES_ID: unpackModuleId, getLanguageOptions: closure_12, HUBS_CATEGORY_ID: map1 } = DEFAULT_DISCOVERY_CATEGORY_ID);
-const result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
 export const getGlobalDiscoveryServersTabTitle = function getGlobalDiscoveryServersTabTitle(arg0) {
   if (constants.FEATURED === arg0) {
     const intl7 = getSystemLocale.intl;
     return intl7.string(getSystemLocale.t["RU+DCe"]);
-  } else if (tmp.GAMING === arg0) {
+  } else if (constants.GAMING === arg0) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t["CD/USA"]);
-  } else if (tmp.MUSIC === arg0) {
+  } else if (constants.MUSIC === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t["nt9PL+"]);
-  } else if (tmp.ENTERTAINMENT === arg0) {
+  } else if (constants.ENTERTAINMENT === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.gSbmdt);
-  } else if (tmp.TECH === arg0) {
+  } else if (constants.TECH === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t["0A0By5"]);
-  } else if (tmp.EDUCATION === arg0) {
+  } else if (constants.EDUCATION === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.Gy9woq);
-  } else if (tmp.HUBS === arg0) {
+  } else if (constants.HUBS === arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["q469/Z"]);
   }
@@ -146,22 +146,22 @@ export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryS
   if (constants.FEATURED === arg0) {
     const intl7 = getSystemLocale.intl;
     return intl7.string(getSystemLocale.t.OlDfzP);
-  } else if (tmp.GAMING === arg0) {
+  } else if (constants.GAMING === arg0) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t["CD/USA"]);
-  } else if (tmp.MUSIC === arg0) {
+  } else if (constants.MUSIC === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t["nt9PL+"]);
-  } else if (tmp.ENTERTAINMENT === arg0) {
+  } else if (constants.ENTERTAINMENT === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.gSbmdt);
-  } else if (tmp.TECH === arg0) {
+  } else if (constants.TECH === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t["0A0By5"]);
-  } else if (tmp.EDUCATION === arg0) {
+  } else if (constants.EDUCATION === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.Gy9woq);
-  } else if (tmp.HUBS === arg0) {
+  } else if (constants.HUBS === arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.X5xPlb);
   } else {
@@ -175,22 +175,22 @@ export const getGlobalDiscoveryServersBannerDescription = function getGlobalDisc
   if (constants.FEATURED === arg0) {
     const intl7 = getSystemLocale.intl;
     return intl7.string(getSystemLocale.t.SdMhrk);
-  } else if (tmp.GAMING === arg0) {
+  } else if (constants.GAMING === arg0) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t.AAJ5ov);
-  } else if (tmp.MUSIC === arg0) {
+  } else if (constants.MUSIC === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t["SOio+D"]);
-  } else if (tmp.ENTERTAINMENT === arg0) {
+  } else if (constants.ENTERTAINMENT === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.R09vf0);
-  } else if (tmp.TECH === arg0) {
+  } else if (constants.TECH === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.Ew4d56);
-  } else if (tmp.EDUCATION === arg0) {
+  } else if (constants.EDUCATION === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.sasIWU);
-  } else if (tmp.HUBS === arg0) {
+  } else if (constants.HUBS === arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["F/IQCI"]);
   } else {
@@ -204,19 +204,19 @@ export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscov
   if (constants.FEATURED === arg0) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t.crt84X);
-  } else if (tmp.GAMING === arg0) {
+  } else if (constants.GAMING === arg0) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t.fWbIpf);
-  } else if (tmp.MUSIC === arg0) {
+  } else if (constants.MUSIC === arg0) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t.nfgDzz);
-  } else if (tmp.ENTERTAINMENT === arg0) {
+  } else if (constants.ENTERTAINMENT === arg0) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.k1CYxv);
-  } else if (tmp.TECH === arg0) {
+  } else if (constants.TECH === arg0) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t["4dawps"]);
-  } else if (tmp.EDUCATION === arg0) {
+  } else if (constants.EDUCATION === arg0) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.uexPgT);
   } else {
@@ -226,17 +226,17 @@ export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscov
 export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(arg0) {
   if (constants.FEATURED === arg0) {
     return closure_11;
-  } else if (tmp.GAMING === arg0) {
+  } else if (constants.GAMING === arg0) {
     return closure_10.Activity;
-  } else if (tmp.MUSIC === arg0) {
+  } else if (constants.MUSIC === arg0) {
     return closure_10.Music;
-  } else if (tmp.ENTERTAINMENT === arg0) {
+  } else if (constants.ENTERTAINMENT === arg0) {
     return closure_10.Television;
-  } else if (tmp.TECH === arg0) {
+  } else if (constants.TECH === arg0) {
     return closure_10.Science;
-  } else if (tmp.EDUCATION === arg0) {
+  } else if (constants.EDUCATION === arg0) {
     return closure_10.Education;
-  } else if (tmp.HUBS === arg0) {
+  } else if (constants.HUBS === arg0) {
     return closure_13;
   } else {
     isDiscordFrontendDevelopment.assertNever(arg0);
@@ -267,10 +267,9 @@ export const getLanguageCodeFallback = function getLanguageCodeFallback() {
     tmp = items;
   }
   [tmp3] = tmp;
-  let locale;
   const arr2 = callback2();
-  locale = tmp3.locale;
-  let found = arr2.find((code) => code.code === locale);
+  const locale = tmp3.locale;
+  let found = arr2.find((item, index) => item.code === locale);
   if (found == null) {
     found = arr2[0];
   }
@@ -293,7 +292,6 @@ export const handleTabPressPrefetch = function handleTabPressPrefetch() {
   if (!isInitialFetchComplete) {
     if (!isFetching) {
       const featuredGuilds = prototypeDefault.fetchFeaturedGuilds();
-      const obj = prototypeDefault;
     }
   }
   if (isInitialFetchComplete) {
@@ -304,10 +302,8 @@ export const handleTabPressPrefetch = function handleTabPressPrefetch() {
   }
   if (isInitialFetchComplete) {
     const featuredGuilds1 = prototypeDefault.fetchFeaturedGuilds({ forceRefresh: true });
-    const obj2 = prototypeDefault;
   }
 };
 export const makeAnalyticsID = function makeAnalyticsID() {
-  const obj = v1;
   return v1.v4().replace(/-/g, "");
 };

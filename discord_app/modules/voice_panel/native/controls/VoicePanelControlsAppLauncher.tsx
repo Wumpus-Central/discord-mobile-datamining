@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
 import VoicePanelControlsModes from "VoicePanelControlsConstants.tsx";
 import { ComponentActions } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ VoicePanelControlsModes: c5, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsModes);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
@@ -19,8 +19,6 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   let setControlsMode;
   dependencyMap = undefined;
   importAllResult = undefined;
-  let rect;
-  let derivedValue;
   let derivedValue1;
   let obj = gestureSpecs(8501);
   const gradientTop = obj.useGradientTop();
@@ -29,7 +27,7 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   ({ channelId: c2, safeArea, windowDimensions } = context);
   const tmp4 = setControlsMode(8995)(windowDimensions);
   importAllResult = tmp4;
-  rect = setControlsMode(8995)(safeArea);
+  const rect = setControlsMode(8995)(safeArea);
   obj1 = gestureSpecs(589);
   const items = [rect];
   const stateFromStores = obj1.useStateFromStores(items, () => rect.getChannel(c2));
@@ -57,7 +55,7 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   fn.__closure = { gestureSpecs };
   fn.__workletHash = 1130089519653;
   fn.__initData = closure_11;
-  derivedValue = gestureSpecs(4115).useDerivedValue(fn);
+  const derivedValue = gestureSpecs(4115).useDerivedValue(fn);
   const obj7 = gestureSpecs(4115);
   class E {
     constructor() {
@@ -85,7 +83,6 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   L.__closure = { isGestureActive: derivedValue, isGestureDrawerMode: derivedValue1, windowDimensions: tmp4, safeArea: rect };
   L.__workletHash = 3671157204025;
   L.__initData = closure_13;
-  obj = { children: null };
   const animatedStyle = gestureSpecs(4115).useAnimatedStyle(L);
   obj = { style: items2, children: null };
   items2 = [tmp.container, gradientTop, animatedStyle];
@@ -99,6 +96,6 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   obj[0] = callback2(setControlsMode(4115).View, obj);
   return callback(closure_9, obj);
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx");
 
 export default memoResult;

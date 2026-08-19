@@ -1,32 +1,29 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDirectMessage.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../stores/CallStore.tsx";
-import closure_6 from "../../../stores/ChannelStore.tsx";
-import closure_7 from "../../../stores/GuildReadStateStore.tsx";
-import closure_8 from "../../../stores/RelationshipStore.tsx";
-import closure_9 from "../../../stores/UserStore.tsx";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import callConnect from "../../../stores/CallStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import updateGuildUnreadSentinel from "../../../stores/GuildReadStateStore.tsx";
+import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import { ChannelTypes } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
-let obj = { dm: null };
-obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
+let obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj[0] = obj;
 let closure_12 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelId) {
   channelId = channelId.channelId;
-  let stateFromStores;
   let channel;
-  let dmRecipient;
   let obj = channelId(channel[11]);
   const tmp = callback();
   obj1 = channelId(channel[12]);
   const items = [closure_7];
-  stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getMentionCountForPrivateChannel(channelId).count);
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getMentionCountForPrivateChannel(channelId).count);
   let obj2 = channelId(channel[12]);
   const items1 = [closure_6, closure_9, closure_8, closure_5, closure_4];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => {
@@ -36,10 +33,10 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
       type = channel.type;
     }
     let user;
-    if (type === closure_1_10.DM) {
+    if (type === ChannelTypes.DM) {
       user = closure_1_9.getUser(channel.getRecipientId());
     }
-    const call = closure_1_5.getCall(tmp);
+    const call = closure_1_5.getCall(channelId);
     const id = closure_1_4.getId();
     let hasItem = null != call && null != id;
     if (hasItem) {
@@ -63,7 +60,7 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
     return obj;
   });
   channel = stateFromStoresObject.channel;
-  dmRecipient = stateFromStoresObject.dmRecipient;
+  const dmRecipient = stateFromStoresObject.dmRecipient;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
   const items2 = [channel, dmRecipient];
   ({ badge, cutouts } = stateFromStores(channel[15])({ mentionCount: stateFromStores }));
@@ -76,10 +73,9 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
     if (isDMResult) {
       let avatarSource;
       if (dmRecipient != null) {
-        avatarSource = obj2.getAvatarSource(undefined);
+        avatarSource = dmRecipient.getAvatarSource(undefined);
       }
       tmp2 = avatarSource;
-      obj2 = dmRecipient;
     }
     return tmp2;
   }, items2);
@@ -87,14 +83,14 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
   const memo1 = dmRecipient.useMemo(() => ({
     onPress() {
       if (null != closure_2) {
-        closure_1_0(closure_1_2[16]).transitionToChannel(tmp.id);
-        const obj = closure_1_0(closure_1_2[16]);
+        channelId(channel[16]).transitionToChannel(tmp.id);
+        const obj = channelId(channel[16]);
       }
     },
     onLongPress() {
       if (null != closure_2) {
-        const result = closure_1_0(closure_1_2[17]).openChannelLongPressActionSheet(tmp.id);
-        const obj = closure_1_0(closure_1_2[17]);
+        const result = channelId(channel[17]).openChannelLongPressActionSheet(tmp.id);
+        const obj = channelId(channel[17]);
       }
     }
   }), items3);
@@ -111,7 +107,7 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
   if (null != channel) {
     obj = { channel: null };
     obj[0] = channel;
-    tmp11Result = tmp11(tmp7(tmp3[18]), obj);
+    tmp11Result = jsx(tmp7(tmp3[18]), { channel: null });
   }
   obj[9] = tmp11Result;
   let isMultiUserDMResult1;
@@ -123,7 +119,7 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
     obj1[0] = channel;
     obj1[1] = tmp2(tmp3[20]).AvatarSizes.LARGE_48;
     obj1[2] = tmp2(tmp3[20]).AvatarSizes.REFRESH_MEDIUM_32;
-    tmp11Result = tmp11(tmp7(tmp3[19]), obj1);
+    tmp11Result = jsx(tmp7(tmp3[19]), { channel: null, size: null, pileSizeOverride: null, animate: true });
     const tmp7Result = tmp7(tmp3[19]);
   } else {
     tmp11Result = null;
@@ -131,12 +127,12 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
       obj2 = { style: null, source: null };
       obj2[0] = tmp.dm;
       obj2[1] = memo;
-      tmp11Result = tmp11(tmp7(tmp3[21]), obj2);
+      tmp11Result = jsx(tmp7(tmp3[21]), { style: null, source: null });
     }
   }
   obj[10] = tmp11Result;
   return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" });
 });
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
 
 export default memoResult;

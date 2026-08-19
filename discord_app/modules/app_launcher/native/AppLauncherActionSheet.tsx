@@ -1,14 +1,13 @@
 // discord_app/modules/app_launcher/native/AppLauncherActionSheet.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { AppLauncherRouteName } from "AppLauncherNativeConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function AppLauncherActionSheet(arg0) {
   ({ chatInputRef: require, channel } = arg0);
-  let ref;
-  ref = React.useRef(null);
+  const ref = React.useRef(null);
   let obj = require(ref[4]);
   const sharedValue = obj.useSharedValue(-1);
   obj1 = require(ref[4]);
@@ -18,28 +17,6 @@ function AppLauncherActionSheet(arg0) {
   let obj2 = require(ref[7]);
   const items = [channel];
   const defaultAppLauncherWidth = obj2.useDefaultAppLauncherWidth(TEXT);
-  obj = {
-    getApplicationCommandManager() {
-      const current = ref.current;
-      let applicationCommandManager;
-      if (current != null) {
-        applicationCommandManager = current.getApplicationCommandManager();
-      }
-      return applicationCommandManager;
-    },
-    closeCustomKeyboard() {
-      const current = ref.current;
-      if (current != null) {
-        current.closeActionSheet();
-      }
-    },
-    openCustomKeyboard() {
-      const current = ref.current;
-      if (current != null) {
-        current.expandActionSheet();
-      }
-    }
-  };
   const memo = React.useMemo(() => ({ channel, type: "channel" }), items);
   const ref2 = React.useRef(require(ref[5]).AppLauncherKeyboardCloseReason.DISMISSED);
   obj = { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null };
@@ -57,7 +34,7 @@ function AppLauncherActionSheet(arg0) {
   obj[4] = <tmp10 bottomSheetIndex={sharedValue} bottomSheetPosition={sharedValue1} bottomSheetExpandReasonRef={ref1} context={memo} chatInputRef={React.useRef(obj)} entrypoint={TEXT} keyboardCloseReasonRef={ref2} width={defaultAppLauncherWidth} overrideParams={null} />;
   return jsx(require(ref[8]).BottomSheet, { ref, animatedIndex: sharedValue, scrollable: true, startExpanded: true, children: null });
 }
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/AppLauncherActionSheet.tsx");
 
 export const useAppLauncherActionSheet = function useAppLauncherActionSheet(arg0) {
   closure_0 = arg0;
@@ -69,8 +46,7 @@ export const useAppLauncherActionSheet = function useAppLauncherActionSheet(arg0
     appLauncherActionSheet: React.useMemo(() => {
       let tmp = null;
       if (first) {
-        let obj = { value: null, children: null };
-        obj = { transitionState: "visible", close: null, onLeave: null, registerDismissHandler: null };
+        let obj = { transitionState: "visible", close: null, onLeave: null, registerDismissHandler: null };
         obj[1] = function close() {
 
         };
@@ -83,8 +59,8 @@ export const useAppLauncherActionSheet = function useAppLauncherActionSheet(arg0
         obj[0] = obj;
         obj = {};
         const merged = Object.assign(closure_0);
-        obj[1] = closure_1_6(closure_1_7, obj);
-        tmp = closure_1_6(first(table[11]).Provider, obj);
+        obj[1] = <AppLauncherActionSheet />;
+        tmp = jsx(first(table[11]).Provider, {});
       }
       return tmp;
     }, items),

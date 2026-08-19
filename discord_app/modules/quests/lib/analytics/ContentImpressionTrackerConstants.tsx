@@ -1,7 +1,7 @@
 // discord_app/modules/quests/lib/analytics/ContentImpressionTrackerConstants.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerConstants.tsx");
 
 export const MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN = 100;
 export const HEARTBEAT_SECONDS = 60;

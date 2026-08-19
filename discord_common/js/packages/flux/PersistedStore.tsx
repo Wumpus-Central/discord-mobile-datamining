@@ -2,11 +2,10 @@
 import isTracingDefault from "../app-start-performance/AppStartPerformance.tsx";
 import Storage3 from "../storage/Storage.tsx";
 import throttleDefault from "../../../../_runtime/00635_throttle.js";
-import closure_4 from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import { Store } from "Store.tsx";
-import set from "../../../../_runtime/00002_set.js";
 
-require = arg1;
+require = fn;
 let closure_3 = ["_state", "_version"];
 let closure_6 = { _state: "r", _version: "accessibilityRole" };
 let c7 = null;
@@ -14,7 +13,7 @@ let PersistedStore;
 class PersistedStore extends r10016 {
   constructor(arg0, arg1, arg2) {
     closure_0 = undefined;
-    tmp3 = new tmp3(global, arg1, importDefault, new.target, tmp3, tmp2, tmp, new.target);
+    tmp3 = new tmp3(global, fn, importDefault, new.target, tmp3, tmp2, tmp, new.target);
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp3;
     num = 0;
@@ -22,13 +21,13 @@ class PersistedStore extends r10016 {
       num = tmp3.getClass().migrations.length;
     }
     tmp3._version = num;
-    tmp3.callback = function callback(arg0) {
+    tmp3.callback = function callback(fn) {
       const persistKey = closure_0.getClass().persistKey;
       closure_0.persist();
-      closure_1_9._writePromises.delete(persistKey);
-      const _writeResolvers = closure_1_9._writeResolvers;
+      PersistedStore._writePromises.delete(persistKey);
+      const _writeResolvers = PersistedStore._writeResolvers;
       _writeResolvers.delete(persistKey);
-      arg0();
+      fn();
     };
     tmp4 = require("throttle");
     tmp3.throttledCallback = tmp4((arg0) => closure_0.callback(arg0), tmp3.getClass().throttleDelay, { leading: false });
@@ -82,35 +81,35 @@ PersistedStore["clearAll"] = function clearAll(arg0) {
     const promise = new Promise((arg0) => {
       closure_0 = arg0;
       requestIdleCallback(() => {
-        closure_2_9.clearPersistQueue(callback);
-        const allPersistKeys = closure_2_9.allPersistKeys;
-        const item = allPersistKeys.forEach((persistKey) => {
-          if (closure_1_9.shouldClear(closure_0, persistKey)) {
+        PersistedStore.clearPersistQueue(callback);
+        const allPersistKeys = PersistedStore.allPersistKeys;
+        const item = allPersistKeys.forEach((item, index) => {
+          if (closure_1_9.shouldClear(closure_0, item)) {
             const Storage = closure_1_0(closure_1_2[2]).Storage;
-            Storage.remove(persistKey);
+            Storage.remove(item);
           }
         });
-        const all = closure_2_5.getAll();
-        const item1 = all.forEach((getClass) => {
-          let shouldClearResult = getClass instanceof closure_1_9;
+        const all = Store.getAll();
+        const item1 = all.forEach((item, index) => {
+          let shouldClearResult = item instanceof closure_1_9;
           if (shouldClearResult) {
-            shouldClearResult = closure_1_9.shouldClear(closure_0, getClass.getClass().persistKey);
+            shouldClearResult = closure_1_9.shouldClear(closure_0, item.getClass().persistKey);
           }
           if (shouldClearResult) {
-            getClass._isInitialized = false;
-            getClass.initializeIfNeeded();
+            item._isInitialized = false;
+            item.initializeIfNeeded();
           }
         });
-        closure_2_9._clearAllPromise = null;
+        PersistedStore._clearAllPromise = null;
         callback();
       }, { timeout: 500 });
     });
-    tmp._clearAllPromise = promise;
+    PersistedStore._clearAllPromise = promise;
   }
   return PersistedStore._clearAllPromise;
 };
 PersistedStore["shouldClear"] = function shouldClear(closure_0, persistKey) {
-  const omit = closure_0.omit;
+  const omit = _require.omit;
   let hasItem;
   if (omit != null) {
     hasItem = omit.includes(persistKey);
@@ -118,29 +117,29 @@ PersistedStore["shouldClear"] = function shouldClear(closure_0, persistKey) {
   if (hasItem) {
     return false;
   } else {
-    const type = closure_0.type;
+    const type = _require.type;
     if ("all" === type) {
       return true;
     } else if ("user-data-only" === type) {
       const userAgnosticPersistKeys = PersistedStore.userAgnosticPersistKeys;
       return !userAgnosticPersistKeys.has(persistKey);
     } else {
-      const type2 = closure_0.type;
+      const type2 = _require.type;
       return false;
     }
   }
 };
 PersistedStore["clearPersistQueue"] = function clearPersistQueue(closure_0) {
   let _writeResolvers = PersistedStore._writeResolvers;
-  const item = _writeResolvers.forEach((arg0, persistKey) => {
-    [tmp, tmp2] = arg0;
-    if (closure_1_9.shouldClear(closure_0, persistKey)) {
-      tmp3._writePromises.delete(persistKey);
-      const _writeResolvers = tmp3._writeResolvers;
-      _writeResolvers.delete(persistKey);
+  const item = _writeResolvers.forEach((item, index) => {
+    [tmp, tmp2] = item;
+    if (PersistedStore.shouldClear(closure_0, index)) {
+      PersistedStore._writePromises.delete(index);
+      const _writeResolvers = PersistedStore._writeResolvers;
+      _writeResolvers.delete(index);
       cancelIdleCallback(tmp2);
       tmp(false);
-      const _writePromises = tmp3._writePromises;
+      const _writePromises = PersistedStore._writePromises;
     }
   });
   PersistedStore._writePromises.clear();
@@ -148,16 +147,16 @@ PersistedStore["clearPersistQueue"] = function clearPersistQueue(closure_0) {
   _writeResolvers.clear();
 };
 PersistedStore["getAllStates"] = function getAllStates() {
-  return Promise.all(Array.from(PersistedStore._writePromises.values())).then(() => {
+  return Promise.all(Array.from(PersistedStore._writePromises.values())).then((result) => {
     const obj = {};
     allPersistKeys = allPersistKeys.allPersistKeys;
-    const item = allPersistKeys.forEach((arg0) => {
+    const item = allPersistKeys.forEach((item, index) => {
       const Storage = obj(closure_1_2[2]).Storage;
-      let value = Storage.get(arg0);
+      let value = Storage.get(item);
       if (value == null) {
         value = closure_1_6;
       }
-      obj[arg0] = value._state;
+      obj[item] = value._state;
     });
     return obj;
   });
@@ -165,13 +164,12 @@ PersistedStore["getAllStates"] = function getAllStates() {
 PersistedStore["initializeAll"] = function initializeAll(arg0) {
   closure_0 = arg0;
   const all = Store.getAll();
-  const item = all.forEach((getClass) => {
-    if (getClass instanceof closure_1_9) {
-      const persistKey = getClass.getClass().persistKey;
+  const item = all.forEach((item, index) => {
+    if (item instanceof PersistedStore) {
+      const persistKey = item.getClass().persistKey;
       if (closure_0.hasOwnProperty(persistKey)) {
-        getClass.initializeFromState(tmp[persistKey]);
+        item.initializeFromState(closure_0[persistKey]);
       }
-      tmp = closure_0;
     }
   });
 };
@@ -216,7 +214,6 @@ prototype["initializeIfNeeded"] = function initializeIfNeeded() {
     const diff = Date.now() - timestamp;
     if (diff > 5) {
       isTracingDefault.mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
-      const obj = isTracingDefault;
     }
   }
 };
@@ -283,17 +280,17 @@ prototype["asyncPersist"] = function asyncPersist() {
   const throttleDelay = getClassResult.throttleDelay;
   if (!PersistedStore.disableWrites) {
     if (!getClassResult.disableWrite) {
-      let value = tmp2._writePromises.get(persistKey);
+      let value = PersistedStore._writePromises.get(persistKey);
       if (null == value) {
         const promise = new Promise((arg0) => {
           closure_0 = arg0;
-          const _writeResolvers = closure_1_9._writeResolvers;
-          const items = [arg0, requestIdleCallback(closure_0 > 0 ? (() => closure_1_2.throttledCallback(closure_0)) : (() => closure_1_2.callback(closure_0)), { timeout: 500 })];
+          const _writeResolvers = PersistedStore._writeResolvers;
+          const items = [arg0, requestIdleCallback(closure_0 > 0 ? (() => self.throttledCallback(closure_0)) : (() => self.callback(closure_0)), { timeout: 500 })];
           const result = _writeResolvers.set(persistKey, items);
         });
-        let result = tmp2._writePromises.set(persistKey, promise);
+        let result = PersistedStore._writePromises.set(persistKey, promise);
         value = promise;
-        const _writePromises2 = tmp2._writePromises;
+        const _writePromises2 = PersistedStore._writePromises;
       }
       return value;
     }
@@ -309,8 +306,8 @@ prototype["clear"] = function clear() {
   const Storage = Storage3.Storage;
   Storage.remove(this.getClass().persistKey);
 };
-let set = new Set();
-PersistedStore.allPersistKeys = set;
+PersistedStore.allPersistKeys = new Set();
+const set = new Set();
 PersistedStore.userAgnosticPersistKeys = new Set();
 const set1 = new Set();
 PersistedStore._writePromises = new Map();
@@ -335,7 +332,8 @@ const prototype2 = UserAgnosticStore.prototype;
 prototype2["getState"] = function getState() {
   return this.getUserAgnosticState();
 };
-let result = set.fileFinishedImporting("../discord_common/js/packages/flux/PersistedStore.tsx");
+const map1 = new Map();
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/flux/PersistedStore.tsx");
 const prototype3 = function DeviceSettingsStore() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;

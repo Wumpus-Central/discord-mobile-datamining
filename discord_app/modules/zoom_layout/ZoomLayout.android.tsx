@@ -4,7 +4,7 @@ import importAllResult from "../../../_runtime/00019_noop.js";
 import { PixelRatio } from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   ref = importAllResult.useRef(null);
@@ -47,6 +47,6 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj.ref = ref;
   return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
 });
-let result = require("set").fileFinishedImporting("modules/zoom_layout/ZoomLayout.android.tsx");
+let result = require("obj132").fileFinishedImporting("modules/zoom_layout/ZoomLayout.android.tsx");
 
 export default forwardRefResult;

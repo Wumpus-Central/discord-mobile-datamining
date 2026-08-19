@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx
-import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
-const require = arg1;
+const require = fn;
 function _generateAnimationSource() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
@@ -354,7 +354,7 @@ function _generateAnimationSourceFromLocalImage() {
   return applyArgumentsResult;
 }
 ({ NativeModules: c5, Image: closure_6 } = get_ActivityIndicator);
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx");
 
 export const useBurstReactionAnimationSource = function useBurstReactionAnimationSource(channelId) {
   channelId = channelId.channelId;
@@ -459,7 +459,6 @@ export const useBurstReactionAnimationSource = function useBurstReactionAnimatio
 export const useSuperReactionAnimationSourceFromLocalImage = function useSuperReactionAnimationSourceFromLocalImage(animationSource) {
   animationSource = animationSource.animationSource;
   const localImageSource = animationSource.localImageSource;
-  closure_2 = undefined;
   let tmp = callback2(React.useState(null), 2);
   closure_2 = tmp[1];
   const items = [animationSource, localImageSource];

@@ -1,28 +1,26 @@
 // discord_app/modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx
+import expandEventPropertiesDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ACTION_SHEET_HEIGHT_HALFDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import registerAssetDefault from "../../../../../../_runtime/16670_registerAsset.js";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { EventActionType } from "NotificationPermissionConstants.tsx";
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, image: null, title: null, subtitle: null, buttons: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_24, alignItems: "center" };
+const createCacheKey = { marginHorizontal: ThemesDefault.space.PX_24, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginVertical: ThemesDefault.space.PX_24, height: 120 };
 createCacheKey[2] = { textAlign: "center" };
-let obj1 = { marginVertical: ThemesDefault.space.PX_24, height: 120 };
 createCacheKey[3] = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
-let obj2 = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx");
 
 export default function NotificationReactivationActionSheet(location) {
   const _location = location.location;
@@ -30,19 +28,16 @@ export default function NotificationReactivationActionSheet(location) {
   const items = [_location];
   const items1 = [_location];
   const callback = React.useCallback(() => {
-    const pushNotificationPermission = _location(closure_1_2[8]).requestPushNotificationPermission(closure_1_6.ALLOW_TO_REQUEST, _location, () => {
+    const pushNotificationPermission = _location(dependencyMap[8]).requestPushNotificationPermission(EventActionType.ALLOW_TO_REQUEST, _location, () => {
       callback(table[9]).hideActionSheet();
     });
   }, items);
   const callback1 = React.useCallback(() => {
-    let obj = closure_1_1(closure_1_2[7]);
-    obj = { action_type: closure_1_6.SKIP_STEP, action_location: _location, permission_granted: "Array" };
-    obj.track(closure_1_7.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
-    closure_1_1(closure_1_2[9]).hideActionSheet();
+    const obj = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "Array" };
+    obj.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
+    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
   }, items1);
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.image, source: registerAssetDefault, resizeMode: "contain" };
+  let obj = { style: tmp.image, source: registerAssetDefault, resizeMode: "contain" };
   const items2 = [callback(closure_5, obj), , , ];
   obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1236).intl;

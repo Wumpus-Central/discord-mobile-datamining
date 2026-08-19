@@ -1,5 +1,5 @@
 // discord_app/lib/uploader/Upload.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import v1 from "../../../_runtime/00514_v1.js";
 import EventEmitter2 from "../../../_runtime/00652_EventEmitter.js";
@@ -68,7 +68,7 @@ prototype["cancel"] = function cancel() {
 prototype["resetState"] = function resetState() {
   return this;
 };
-const result = set.fileFinishedImporting("lib/uploader/Upload.tsx");
+const result = obj132.fileFinishedImporting("lib/uploader/Upload.tsx");
 
 export default Upload;
 export const UploadPlatform = obj;

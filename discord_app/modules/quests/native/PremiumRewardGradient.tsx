@@ -1,28 +1,25 @@
 // discord_app/modules/quests/native/PremiumRewardGradient.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "hexToRgba";
 import hexToRgba from "../../../utils/ColorUtils.tsx";
 
-const require = arg1;
+const require = fn;
 function PremiumRewardFillGradient(arg0) {
-  let transparentBlack;
-  let opaqueBlack;
   let transparentWhite;
   let opaqueWhite;
-  c4 = undefined;
   ({ children, style } = arg0);
   const tmp = callback3();
-  transparentBlack = undefined;
-  opaqueBlack = undefined;
+  let transparentBlack;
+  let opaqueBlack;
   let obj = transparentBlack(transparentWhite[6]);
   const token = obj.useToken(opaqueBlack(transparentWhite[5]).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START);
   transparentBlack = token;
   obj1 = transparentBlack(transparentWhite[6]);
   const token1 = obj1.useToken(opaqueBlack(transparentWhite[5]).colors.EXPRESSIVE_GRADIENT_NITRO_PINK_END);
-  opaqueBlack = token1;
   let items = [token, token1];
   const memo = opaqueWhite.useMemo(() => {
     const items = [token, token1];
@@ -37,8 +34,7 @@ function PremiumRewardFillGradient(arg0) {
   const isThemeDarkResult = transparentBlack(transparentWhite[8]).isThemeDark(tmp6);
   c4 = isThemeDarkResult;
   let items1 = [transparentBlack, opaqueBlack, transparentWhite, opaqueWhite, isThemeDarkResult];
-  obj = { style: items2, children: null };
-  items2 = [tmp.wrapper, style];
+  const items2 = [tmp.wrapper, style];
   const memo1 = opaqueWhite.useMemo(() => {
     if (c4) {
       const items = [transparentBlack, opaqueBlack];
@@ -76,19 +72,17 @@ function PremiumRewardGlowGradient(arg0) {
   items1 = [tmp.wrapper, style];
   const items2 = [tmp.glow, ];
   let glowLight = !isThemeDarkResult;
-  const tmp10 = closure_5;
   const tmp7 = token1(4310)();
-  const tmp9 = closure_7;
   if (!isThemeDarkResult) {
     glowLight = tmp.glowLight;
   }
-  obj = { style: items2, maskElement: tmp11(tmp3(4756), obj1), children: tmp11(tmp3(4756), obj2) };
+  obj = { style: items2, maskElement: callback(tmp3(4756), obj1), children: callback(tmp3(4756), obj2) };
   items2[1] = glowLight;
   obj1 = { style: closure_4.absoluteFill, colors: ["transparent", "black"], start: closure_11, end: closure_12 };
   obj2 = { style: closure_4.absoluteFill, colors: memo, start: closure_9, end: closure_10 };
-  const items3 = [closure_6(token1(6352), obj), children];
+  const items3 = [callback(token1(6352), obj), children];
   obj[1] = items3;
-  return tmp9(tmp10, obj);
+  return callback2(closure_5, obj);
 }
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -100,7 +94,7 @@ let closure_12 = { x: 0.5, y: 1 };
 const hexOpacityToRgbaResult = hexToRgba.hexOpacityToRgba("#000000", 0);
 let closure_13 = createCacheKey.createStyleProperties({ transparentBlack: hexOpacityToRgbaResult, opaqueBlack: ThemesDefault.colors.BLACK, transparentWhite: hexToRgba.hexOpacityToRgba("#FFFFFF", 0), opaqueWhite: ThemesDefault.colors.WHITE });
 const hexOpacityToRgbaResult1 = hexToRgba.hexOpacityToRgba("#FFFFFF", 0);
-const result = require("set").fileFinishedImporting("modules/quests/native/PremiumRewardGradient.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/PremiumRewardGradient.tsx");
 
 export default function QuestPremiumRewardGradientWrapper(visible) {
   if (!visible.visible) {

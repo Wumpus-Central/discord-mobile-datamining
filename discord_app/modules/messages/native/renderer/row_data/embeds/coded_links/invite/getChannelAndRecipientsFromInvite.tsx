@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/getChannelAndRecipientsFromInvite.tsx
-import set from "../../../../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../../../../_runtime/00002_obj132.js";
 import createChannelRecord from "../../../../../../../../records/ChannelRecord.tsx";
 
 let closure_0 = createChannelRecord.createChannelRecordFromInvite;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/getChannelAndRecipientsFromInvite.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/getChannelAndRecipientsFromInvite.tsx");
 
 export default function getChannelAndRecipientsFromInvite(channel) {
   if (null != channel.channel) {

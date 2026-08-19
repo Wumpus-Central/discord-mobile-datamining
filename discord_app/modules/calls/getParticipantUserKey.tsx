@@ -1,7 +1,7 @@
 // discord_app/modules/calls/getParticipantUserKey.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/calls/getParticipantUserKey.tsx");
+const result = obj132.fileFinishedImporting("modules/calls/getParticipantUserKey.tsx");
 
 export default function getParticipantUserKey(str, id) {
   const formatted = str.toLowerCase();

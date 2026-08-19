@@ -1,10 +1,10 @@
 // discord_app/modules/premium/premium_group/PremiumGroupUtils.shared.tsx
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
 import formatSingleCurrencyPrice from "../../../utils/PriceUtils.tsx";
-import closure_2 from "../../../stores/billing/SubscriptionPlanStore.tsx";
+import addSubscriptionPlan from "../../../stores/billing/SubscriptionPlanStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
 
 export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
   if (null != hasAnyPremiumGroup) {
@@ -18,16 +18,13 @@ export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
           return null;
         } else {
           const price = getPremiumPlanItem.getPrice(planIdFromItems);
-          const obj2 = getPremiumPlanItem;
-          const tmp2 = require;
           const formatPriceResult = formatSingleCurrencyPrice.formatPrice(price.amount, price.currency);
           if (tmp) {
             ({ interval, intervalCount } = value);
-            return tmp2(5316).formatRate(formatPriceResult, interval, intervalCount);
+            return formatSingleCurrencyPrice.formatRate(formatPriceResult, interval, intervalCount);
           } else {
             return formatPriceResult;
           }
-          const obj3 = formatSingleCurrencyPrice;
         }
       }
     }

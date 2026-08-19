@@ -1,12 +1,13 @@
 // discord_app/modules/guild_sidebar/SectionFooterHelpers.tsx
+import getFavoritesAwareGuildName from "../favorites/FavoritesUtils.tsx";
 import computeSubtitle from "ChannelListState.tsx";
-import closure_2 from "../../stores/CategoryCollapseStore.tsx";
-import closure_3 from "../../stores/PermissionStore.tsx";
+import incrementVersion from "../../stores/CategoryCollapseStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
 import { ChannelListGuildActionRow } from "GuildSidebarConstants.tsx";
 import { Permissions } from "../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
 
 export const getSectionFooterConfig = function getSectionFooterConfig(guildChannels, optInChannelsEnabled, section) {
   if (section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS) {
@@ -26,18 +27,18 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
   }
   let tmp6 = !tmp3;
   if (!tmp3) {
-    const tmp7 = section === tmp(5272).SECTION_INDEX_GUILD_ACTIONS;
+    const tmp7 = section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS;
     if (tmp7) {
       tmp6 = tmp7;
     } else {
       if (tmpResult.isFavoritesGuildId(guildChannels.id)) {
         let tmp8 = section !== guildChannels.getSections(false).length - 1;
       } else {
-        tmp8 = section === tmp(5272).SECTION_INDEX_FAVORITES;
+        tmp8 = section === computeSubtitle.SECTION_INDEX_FAVORITES;
         if (!tmp8) {
           let tmp10 = optInChannelsEnabled;
           if (tmp10) {
-            let tmp11 = section !== tmp(5272).SECTION_INDEX_UNCATEGORIZED_CHANNELS;
+            let tmp11 = section !== computeSubtitle.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
             if (tmp11) {
               let flag2 = section === guildChannels.recentsSectionNumber;
               if (!flag2) {
@@ -51,7 +52,7 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
           tmp8 = tmp10;
         }
       }
-      tmpResult = tmp(1913);
+      tmpResult = getFavoritesAwareGuildName;
     }
   }
   const obj = { hasDivider: tmp6, canHaveVoiceSummary: !(section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS || section === computeSubtitle.SECTION_INDEX_FAVORITES || section === computeSubtitle.SECTION_INDEX_UNCATEGORIZED_CHANNELS || section === guildChannels.recentsSectionNumber || section === guildChannels.voiceChannelsSectionNumber) };
@@ -63,15 +64,15 @@ export const getSectionFooterActiveVoiceChannels = function getSectionFooterActi
     let items = [];
   } else {
     const channelRecords = category.getChannelRecords();
-    items = channelRecords.filter((id) => {
-      if (closure_1_3.can(closure_1_5.VIEW_CHANNEL, id)) {
-        let items = table[id.id];
+    items = channelRecords.filter((item, index) => {
+      if (closure_1_3.can(Permissions.VIEW_CHANNEL, item)) {
+        let items = table[item.id];
         if (items == null) {
           items = [];
         }
-        let tmp4 = id.id !== closure_2;
+        let tmp4 = item.id !== closure_2;
         if (tmp4) {
-          tmp4 = id.id !== closure_1;
+          tmp4 = item.id !== closure_1;
         }
         if (tmp4) {
           tmp4 = items.length > 0;
@@ -90,15 +91,15 @@ export const isSectionFooterWithActiveVoiceChannels = function isSectionFooterWi
     let items = [];
   } else {
     const channelRecords = category.getChannelRecords();
-    items = channelRecords.filter((id) => {
-      if (closure_1_3.can(closure_1_5.VIEW_CHANNEL, id)) {
-        let items = table[id.id];
+    items = channelRecords.filter((item, index) => {
+      if (closure_1_3.can(Permissions.VIEW_CHANNEL, item)) {
+        let items = table[item.id];
         if (items == null) {
           items = [];
         }
-        let tmp4 = id.id !== closure_2;
+        let tmp4 = item.id !== closure_2;
         if (tmp4) {
-          tmp4 = id.id !== closure_1;
+          tmp4 = item.id !== closure_1;
         }
         if (tmp4) {
           tmp4 = items.length > 0;

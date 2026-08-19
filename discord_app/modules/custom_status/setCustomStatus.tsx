@@ -1,5 +1,5 @@
 // discord_app/modules/custom_status/setCustomStatus.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import tDefault from "../../../_runtime/03975_t.js";
@@ -9,7 +9,7 @@ import getClearAfterDurationDefault from "utils/getClearAfterDuration.tsx";
 
 const ClearAfterValues = StatusTypes.ClearAfterValues;
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
+const result = obj132.fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
 
 export default function setCustomStatus(arg0) {
   ({ text, emojiInfo, clearAfter, analyticsContext, createdAtMs, prompt: _prompt, analyticsLocations } = arg0);

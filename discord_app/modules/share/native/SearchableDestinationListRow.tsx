@@ -3,9 +3,9 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import sortByMatchScore from "../../autocompleter/index.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/share/native/SearchableDestinationListRow.tsx");
+let result = require("obj132").fileFinishedImporting("modules/share/native/SearchableDestinationListRow.tsx");
 
 export default function SearchableDestinationListRow(result) {
   result = result.result;
@@ -17,7 +17,7 @@ export default function SearchableDestinationListRow(result) {
     return null;
   } else {
     if (null != onPressDestination) {
-      const fn = () => onPressDestination(result(closure_1_2[3]).getDestinationIdFromResult(closure_0));
+      const fn = () => onPressDestination(result(dependencyMap[3]).getDestinationIdFromResult(closure_0));
     }
     if (tmp2(7593).AutocompleterResultTypes.USER === type) {
       let obj = {};

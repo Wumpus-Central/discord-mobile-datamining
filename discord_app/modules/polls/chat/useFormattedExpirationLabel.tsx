@@ -1,5 +1,5 @@
 // discord_app/modules/polls/chat/useFormattedExpirationLabel.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import tDefault from "../../../../_runtime/03975_t.js";
 
@@ -28,7 +28,7 @@ function formatExpirationLabel(expiry) {
     }
   }
 }
-const result = set.fileFinishedImporting("modules/polls/chat/useFormattedExpirationLabel.tsx");
+const result = obj132.fileFinishedImporting("modules/polls/chat/useFormattedExpirationLabel.tsx");
 
 export default function useFormattedExpirationLabel(expiry) {
   if (null != expiry) {

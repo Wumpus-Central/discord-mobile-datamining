@@ -1,10 +1,10 @@
 // discord_app/modules/expression_picker/native/openExpressionPickerActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const ExpressionPickerActionSheet = "ExpressionPickerActionSheet";
-const result = set.fileFinishedImporting("modules/expression_picker/native/openExpressionPickerActionSheet.tsx");
+const result = obj132.fileFinishedImporting("modules/expression_picker/native/openExpressionPickerActionSheet.tsx");
 
 export const EXPRESSION_PICKER_ACTION_SHEET_KEY = "ExpressionPickerActionSheet";
 export const openExpressionPickerActionSheet = function openExpressionPickerActionSheet(arg0) {

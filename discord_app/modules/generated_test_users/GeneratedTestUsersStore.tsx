@@ -1,16 +1,17 @@
 // discord_app/modules/generated_test_users/GeneratedTestUsersStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../records/UserRecord.tsx";
+import createdAt from "../../records/UserRecord.tsx";
 
 function handleAddUser(id) {
   if (null == closure_1.users) {
     const _Map = Map;
     const map = new Map();
-    tmp.users = map;
+    closure_1.users = map;
   }
-  const users = tmp.users;
+  const users = closure_1.users;
   const result = users.set(id.id, new closure_0(id));
+  const tmp7 = new closure_0(id);
 }
 let closure_1 = { pools: null, users: null };
 const PersistedStore = initializeDefault.PersistedStore;
@@ -37,13 +38,13 @@ prototype["getState"] = function getState() {
   let fromEntriesResult = null;
   if (null != closure_1.pools) {
     const _Object = Object;
-    fromEntriesResult = Object.fromEntries(tmp.pools);
+    fromEntriesResult = Object.fromEntries(closure_1.pools);
   }
   const obj = { pools: fromEntriesResult, users: null };
   let fromEntriesResult1 = null;
   if (null != closure_1.users) {
     const _Object2 = Object;
-    fromEntriesResult1 = Object.fromEntries(tmp.users);
+    fromEntriesResult1 = Object.fromEntries(closure_1.users);
   }
   obj[1] = fromEntriesResult1;
   return obj;
@@ -58,14 +59,14 @@ prototype["getUsersForPool"] = function getUsersForPool(id) {
   if (items == null) {
     items = [];
   }
-  return Array.from(items).filter((id) => {
+  return Array.from(items).filter((item, index) => {
     const pools = closure_1_1.pools;
     let hasItem;
     if (pools != null) {
       const value = pools.get(closure_0);
       if (value != null) {
         const userIds = value.userIds;
-        hasItem = userIds.includes(id.id);
+        hasItem = userIds.includes(item.id);
       }
     }
     return hasItem;
@@ -110,9 +111,9 @@ const generatedTestUsersStore = new GeneratedTestUsersStore(dispatcherDefault, {
     if (null == closure_1.pools) {
       const _Map = Map;
       const map = new Map();
-      tmp.pools = map;
+      closure_1.pools = map;
     }
-    const pools = tmp.pools;
+    const pools = closure_1.pools;
     const result = pools.set(pool.id, pool);
     const item = users.forEach(handleAddUser);
   },
@@ -128,21 +129,20 @@ const generatedTestUsersStore = new GeneratedTestUsersStore(dispatcherDefault, {
     } else {
       if (value.userIds.length > 0) {
         const userIds = value.userIds;
-        const item = userIds.forEach((arg0) => {
+        const item = userIds.forEach((item, index) => {
           users = users.users;
           if (users != null) {
-            users.delete(arg0);
+            users.delete(item);
           }
         });
       }
-      const pools2 = tmp.pools;
+      const pools2 = closure_1.pools;
       if (pools2 != null) {
         pools2.delete(poolId);
       }
     }
-    tmp = closure_1;
   }
 });
-let result = require("set").fileFinishedImporting("modules/generated_test_users/GeneratedTestUsersStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/generated_test_users/GeneratedTestUsersStore.tsx");
 
 export default generatedTestUsersStore;

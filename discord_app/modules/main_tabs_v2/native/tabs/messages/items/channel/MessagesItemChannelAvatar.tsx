@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx
 import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import FacepileGroupDMAvatarDefault from "../../../../../../group_dm/native/GroupDMAvatar.tsx";
-import closure_3 from "../../../../../../a11y/AccessibilityStore.tsx";
-import closure_4 from "../../../../../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../../../../../stores/PresenceStore.tsx";
-import closure_6 from "../../../../../../../stores/TypingStore.tsx";
-import closure_7 from "../../../../../../../stores/UserStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../../../../a11y/AccessibilityStore.tsx";
+import fetchFingerprint from "../../../../../../../stores/AuthenticationStore.tsx";
+import sortActivity from "../../../../../../../stores/PresenceStore.tsx";
+import handleTypingStart from "../../../../../../../stores/TypingStore.tsx";
+import mergeGuildAvatar from "../../../../../../../stores/UserStore.tsx";
 import { MUTED_OPACITY_CONTENT } from "../../../../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../../../../_runtime/00019_noop.js";
 
-const require = arg1;
+const require = fn;
 let closure_10 = createCacheKey.createStyles((arg0) => {
   const avatar = { borderRadius: ThemesDefault.radii.round, marginRight: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
   let num = 1;
@@ -36,7 +36,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   if (muted) {
     muted = !channelSelected;
   }
-  const tmpResult = closure_10(muted);
+  const tmpResult = callback(muted);
   const REFRESH_MEDIUM_32 = channel(1297).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = id.getId();
   let obj = channel(589);
@@ -44,8 +44,6 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   stateFromStores = obj.useStateFromStores(items, () => {
     const typingUsers = closure_1_6.getTypingUsers(channel.id);
     for (const key10007 in typingUsers) {
-      let tmp2 = key10007;
-      let tmp3 = closure_2;
       if (key10007 === closure_2) {
         continue;
       } else {
@@ -69,8 +67,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
     return tmp;
   });
   const obj2 = channel(589);
-  let tmp = closure_10;
-  let tmp3 = channel;
+  const tmp3 = channel;
   const items2 = [closure_7];
   const stateFromStores2 = channel(589).useStateFromStores(items2, () => {
     let recipientId;
@@ -124,11 +121,10 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
       obj[9] = stateFromStores1;
       obj[10] = stateFromStores;
       tmp11Result = jsx(tmp3(1297).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "md", size: "primary", animate: null, typing: null, autoStatusCutout: null });
-      const tmp11 = jsx;
     }
   }
   return tmp11Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx");
 
 export default memoResult;

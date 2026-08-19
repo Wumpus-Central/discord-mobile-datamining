@@ -4,7 +4,7 @@ import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx");
 
 export default function ActionRowLayoutComponent(components) {
   components = components.components;

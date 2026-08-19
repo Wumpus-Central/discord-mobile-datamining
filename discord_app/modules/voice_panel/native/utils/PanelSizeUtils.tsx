@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/utils/PanelSizeUtils.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import VoicePanelModes from "../../VoicePanelConstants.tsx";
 
 const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelModes.VOICE_PANEL_DRAWER_MAX_WIDTH;
@@ -21,7 +21,7 @@ function getPanelX(width, maxPanelWidth) {
 getPanelX.__closure = {};
 getPanelX.__workletHash = 6050807520832;
 getPanelX.__initData = { code: "function getPanelX_PanelSizeUtilsTsx2(windowWidth,width){return(windowWidth-width)/2;}" };
-const result = set.fileFinishedImporting("modules/voice_panel/native/utils/PanelSizeUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_panel/native/utils/PanelSizeUtils.tsx");
 
 export { getMaxPanelWidth };
 export { getPanelX };

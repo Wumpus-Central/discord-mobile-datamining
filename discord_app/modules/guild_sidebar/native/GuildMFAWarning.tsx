@@ -7,13 +7,13 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import map from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import registerAssetDefault from "../../../../_runtime/15462_registerAsset.js";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Image } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function handlePress() {
   const self = this;
   const apply = _handlePress.apply;
@@ -95,19 +95,16 @@ function _handlePress() {
 noopAll;
 ({ HelpdeskArticles: c5, Fonts } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { MFAWarning: null, MFAWarningIcon: null, MFAWarningLink: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginVertical: 10, width: 98, height: 53 };
 createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/GuildMFAWarning.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/GuildMFAWarning.tsx");
 
 export default function GuildMFAWarning() {
   const tmp = callback4();
-  let obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  obj = { style: tmp.MFAWarningIcon, source: registerAssetDefault };
+  let obj = { style: tmp.MFAWarningIcon, source: registerAssetDefault };
   const items = [callback2(Image, obj), ];
   obj = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = getSystemLocale.intl;

@@ -4,13 +4,13 @@ import registerAsset from "../../../../../../_runtime/13510_registerAsset.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 let closure_3 = ["I"];
 const items = [{ name: "all", start: 0, duration: 71 }];
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   return jsx(LottieIcon.LottieIcon, { dotLottie: registerAsset, animation: "all", ref, layers: closure_3, markers: items });
 });
-const result = require("set").fileFinishedImporting("design/components/LottieIcon/native/generated/NitroGem1Lottie.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/LottieIcon/native/generated/NitroGem1Lottie.tsx");
 
 export const NitroGem1Lottie = forwardRefResult;

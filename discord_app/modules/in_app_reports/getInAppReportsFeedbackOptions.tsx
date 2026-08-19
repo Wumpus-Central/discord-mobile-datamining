@@ -1,9 +1,9 @@
 // discord_app/modules/in_app_reports/getInAppReportsFeedbackOptions.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
 let obj = { COULD_NOT_FIND: "I couldn't find what I was looking for", CONFUSING_LANGUAGE: "I found the language confusing", OTHER: "Other" };
-const result = set.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
+const result = obj132.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
 
 export default function getInAppReportsFeedbackOptions() {
   obj = { label: null, code: 2, value: null };

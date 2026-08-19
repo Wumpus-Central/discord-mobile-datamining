@@ -1,11 +1,11 @@
 // discord_app/modules/wishlists/native/CollectiblesWishlistItemCard.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { transformSKUToCollectiblesItem as closure_4 } from "../../collectibles/records/CollectiblesItemRecord.tsx";
-import closure_5 from "../SentGiftsStore.tsx";
+import initialize from "../SentGiftsStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");
 
 export default function CollectiblesWishlistItemCard(sku) {
   sku = sku.sku;
@@ -37,7 +37,7 @@ export default function CollectiblesWishlistItemCard(sku) {
       const obj = { collectiblesItemData: null, size: null };
       obj[0] = tmp;
       obj[1] = size;
-      tmp2 = closure_1_6(sku(size[6]).CollectiblesPreview, obj);
+      tmp2 = jsx(sku(size[6]).CollectiblesPreview, { collectiblesItemData: null, size: null });
     }
     return tmp2;
   }, items3);
@@ -45,14 +45,14 @@ export default function CollectiblesWishlistItemCard(sku) {
   const obj2 = sku(size[5]);
   let tmp2 = sku;
   const tmp3 = size;
-  const tmp8 = jsx;
   const merged1 = Object.assign(merged);
   if (!flag) {
     if (!stateFromStores) {
       let OWNED = merged.overlay;
     }
     obj.overlay = OWNED;
-    return tmp8(tmp9, obj);
+    return <tmp9 {...obj} />;
   }
   OWNED = tmp2(tmp3[7]).WishlistItemCardOverlay.OWNED;
+  const tmp9 = wishlistOwnerId(size[7]);
 };

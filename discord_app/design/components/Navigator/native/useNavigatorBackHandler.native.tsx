@@ -1,9 +1,9 @@
 // discord_app/design/components/Navigator/native/useNavigatorBackHandler.native.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 
-const require = arg1;
+const require = fn;
 let closure_3 = {};
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Navigator/native/useNavigatorBackHandler.native.tsx");
 
 export default function useNavigatorBackHandler() {
   let tmp = arg0;
@@ -30,7 +30,7 @@ export default function useNavigatorBackHandler() {
     if (ref.current) {
       let isIOSResult = "POP" === data.data.action.type;
       if (isIOSResult) {
-        let obj = closure_1_0(closure_1_1[2]);
+        let obj = onBeforeGoBack(navigation[2]);
         isIOSResult = obj.isIOS();
       }
       if (closure_0 != null) {

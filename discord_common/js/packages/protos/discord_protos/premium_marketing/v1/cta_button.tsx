@@ -2,10 +2,10 @@
 import _mod1307 from "../../../../../../../_runtime/metro/01307__.js";
 import defineProperty from "../../../google/protobuf/wrappers.tsx";
 import create from "../../common/v1/localized_string.tsx";
-import closure_2 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import { MessageType } from "../../../../../../../_runtime/metro/01307__.js";
 
-require = arg1;
+require = fn;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", OPEN_MARKETING_PAGE: 1, [1]: "OPEN_MARKETING_PAGE", OPEN_TIER_2_PAYMENT_MODAL: 2, [2]: "OPEN_TIER_2_PAYMENT_MODAL", OPEN_TIER_1_PAYMENT_MODAL: 3, [3]: "OPEN_TIER_1_PAYMENT_MODAL", OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER: 4, [4]: "OPEN_TIER_2_PAYMENT_MODAL_CUSTOM_CONFIRMATION_FOOTER", OPEN_PLAN_SELECTION_MODAL: 5, [5]: "OPEN_PLAN_SELECTION_MODAL", OPEN_PREMIUM_GROUP_PAYMENT_MODAL: 6, [6]: "OPEN_PREMIUM_GROUP_PAYMENT_MODAL", OPEN_SOCIAL_LAYER_STOREFRONT: 7, [7]: "OPEN_SOCIAL_LAYER_STOREFRONT" };
 class CTAButton$Type extends MessageType {
   constructor() {
@@ -44,7 +44,6 @@ class CTAButton$Type extends MessageType {
 }
 let prototype = CTAButton$Type.prototype;
 prototype["create"] = function create(arr) {
-  obj = { copy: "", buttonAction: 0, deeplinkSection: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -63,7 +62,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -73,49 +71,24 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (3 === tmp5) {
         obj.deeplinkSection = pos.string();
       } else if (4 === tmp5) {
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
         let LocalizedString = create.LocalizedString;
-        let tmp29 = LocalizedString;
-        let tmp30 = pos;
-        let tmp31 = readUnknownField;
         obj.copyLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.copyLocalized);
       } else if (5 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
         let UInt64Value = defineProperty.UInt64Value;
-        let tmp24 = UInt64Value;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
         obj.navigableStorefrontApplicationId = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.navigableStorefrontApplicationId);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
-          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
-          let str = ") for ";
-          let str2 = " (wire type ";
-          let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
-          let tmp18 = new.target;
-          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -190,9 +163,9 @@ items[4] = {
     return callback(1337).UInt64Value;
   }
 };
-prototype = new prototype("discord_protos.premium_marketing.v1.CTAButton", items, tmp, T, CTAButton$Type, prototype, items, arg1, dependencyMap);
+prototype = new prototype("discord_protos.premium_marketing.v1.CTAButton", items, tmp, T, CTAButton$Type, prototype, items, fn, dependencyMap);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx");
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx");
 
 export const ButtonAction = obj;
 export const CTAButton = prototype;

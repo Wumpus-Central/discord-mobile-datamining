@@ -1,7 +1,7 @@
 // discord_app/modules/contact_sync/native/ContactSyncConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/contact_sync/native/ContactSyncConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/contact_sync/native/ContactSyncConstants.tsx");
 
 export const ContactSyncLandingPage = { DEFAULT: 0, [0]: "DEFAULT", UPSELL_ACTION_SHEET: 1, [1]: "UPSELL_ACTION_SHEET" };
 export const ContactSyncScenes = { WELCOME: "WELCOME", NAME_INPUT: "NAME_INPUT", SUGGESTIONS: "SUGGESTIONS", ADD_PHONE: "ADD_PHONE", VERIFY_PHONE: "VERIFY_PHONE", VERIFY_PASSWORD: "VERIFY_PASSWORD" };

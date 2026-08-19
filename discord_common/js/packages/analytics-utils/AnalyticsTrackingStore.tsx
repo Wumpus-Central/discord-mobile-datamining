@@ -1,7 +1,10 @@
 // discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import log from "../logger/Logger.tsx";
 import generate from "../id-generator/IdGenerator.tsx";
+import extractId from "../fingerprint-utils/FingerprintUtils.tsx";
+import v1 from "../../../../_runtime/00514_v1.js";
+import sendRequest from "../http-utils/HTTPUtils.tsx";
 import sum from "../../shared/Constants.tsx";
 
 ({ TelemetryEndpoints: c3, TelemetryEvents: c4 } = sum);
@@ -56,25 +59,25 @@ let c33 = false;
 function defaultGetSessionId() {
   return Promise.resolve({ sessionId: "r" });
 }
-let result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
 
 export const AnalyticsActionHandlers = obj;
-export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
-  ({ dispatcher, actionHandler, getFingerprint: require, getSessionId } = getLaunchSignature);
+export const analyticsTrackingStoreMaker = (encodeProperties) => {
+  ({ dispatcher, actionHandler, getFingerprint: require, getSessionId } = encodeProperties);
   if (getSessionId === undefined) {
     getSessionId = defaultGetSessionId;
   }
-  ({ TRACKING_URL: dependencyMap, drainTimeoutOverride, waitFor: closure_3, scheduleWhenIdle } = getLaunchSignature);
+  ({ TRACKING_URL: dependencyMap, drainTimeoutOverride, waitFor: closure_3, scheduleWhenIdle } = encodeProperties);
   if (scheduleWhenIdle === undefined) {
     scheduleWhenIdle = fn;
   }
-  fn = getLaunchSignature.getLaunchSignature;
+  fn = encodeProperties.getLaunchSignature;
   if (fn === undefined) {
     fn = function z() {
       return null;
     };
   }
-  ({ submitEvents: logger, sendUnloadRequest: closure_7 } = getLaunchSignature);
+  ({ submitEvents: logger, sendUnloadRequest: closure_7 } = encodeProperties);
   function scheduleDrain(shouldFlushOnNextTick) {
     let flag = shouldFlushOnNextTick.shouldFlushOnNextTick;
     if (flag === undefined) {
@@ -85,9 +88,8 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
       if (0 === arr.length) {
         tmp = tmp3;
       } else if (null != userId) {
-        let tmp6 = null != analyticsToken;
       } else {
-        tmp6 = null != callback();
+        const tmp6 = null != callback();
       }
     }
     if (tmp) {
@@ -119,9 +121,9 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
         }
         c21 = c21 + num2;
         const promise = submitEventsImmediately(substr);
-        promise.then(() => {
-          const item = substr.forEach((resolve) => {
-            resolve = resolve.resolve;
+        promise.then((result) => {
+          const item = substr.forEach((item, index) => {
+            const resolve = item.resolve;
             if (resolve != null) {
               resolve();
             }
@@ -137,18 +139,16 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
         return Promise.resolve();
       }
     } else if (null != userId) {
-      let tmp4 = null != analyticsToken;
     } else {
-      tmp4 = null != substr();
+      const tmp4 = null != substr();
     }
   }
   function submitEventsImmediately(items, CLIENT_TELEMETRY) {
     closure_0 = Date.now();
-    const mapped = items.map((properties) => {
+    const mapped = items.map((item, index) => {
+      const merged = Object.assign(item);
       obj = {};
-      const merged = Object.assign(properties);
-      obj = {};
-      const merged1 = Object.assign(properties.properties);
+      const merged1 = Object.assign(item.properties);
       obj.client_send_timestamp = closure_0;
       obj.properties = obj;
       return obj;
@@ -162,12 +162,11 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
       }
       obj = {};
       if (!c23) {
-        v4Result = closure_1_0(closure_1_2[4]).v4();
-        obj[fn] = v4Result;
+        obj[fn] = v1.v4();
         c23 = true;
-        const obj2 = closure_1_0(closure_1_2[4]);
+        v4Result = v1.v4();
       }
-      const HTTP = closure_1_0(closure_1_2[5]).HTTP;
+      const HTTP = sendRequest.HTTP;
       obj = { url: null, headers: null, body: null, retries: 3, rejectWithError: false };
       obj[0] = tmp3;
       obj[1] = obj;
@@ -175,11 +174,11 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
       obj[0] = analyticsToken;
       obj[1] = mapped;
       obj[2] = obj;
-      return HTTP.post(obj).then((headers) => {
-        if (obj[closure_1_5]) {
+      return HTTP.post(obj).then((result) => {
+        if (obj[fn]) {
           let tmp3;
-          if (headers != null) {
-            headers = headers.headers;
+          if (result != null) {
+            const headers = result.headers;
             if (headers != null) {
               tmp3 = headers[tmp];
             }
@@ -189,11 +188,11 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
           }
           c24 = tmp3;
         }
-        return headers;
+        return result;
       });
     }
   }
-  function flushQueuedEvents() {
+  function flushQueuedEvents(event) {
     if (null != closure_6) {
       return false;
     } else if (null == closure_7) {
@@ -208,11 +207,10 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
             const _JSON = JSON;
             obj = { token: null, events: null };
             obj[0] = analyticsToken;
-            obj[1] = substr.map((properties) => {
+            obj[1] = substr.map((item, index) => {
+              const merged = Object.assign(item);
               obj = {};
-              const merged = Object.assign(properties);
-              obj = {};
-              const merged1 = Object.assign(properties.properties);
+              const merged1 = Object.assign(item.properties);
               obj.client_send_timestamp = closure_0;
               obj.properties = obj;
               return obj;
@@ -221,8 +219,8 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
             if (flag) {
               arr = [];
               c32 = null;
-              const item = substr.forEach((resolve) => {
-                resolve = resolve.resolve;
+              const item = substr.forEach((item, index) => {
+                const resolve = item.resolve;
                 let resolveResult;
                 if (resolve != null) {
                   resolveResult = resolve();
@@ -234,9 +232,8 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
             return flag;
           }
         } else if (null != userId) {
-          let tmp3 = null != analyticsToken;
         } else {
-          tmp3 = null != callback();
+          const tmp3 = null != callback();
         }
       }
       return false;
@@ -244,7 +241,6 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
   }
   drainTimeoutOverride = flushQueuedEvents;
   function sendTelemetryEvent() {
-    obj = { type: scheduleWhenIdle.CLIENT_TELEMETRY, properties: null };
     obj = { client_track_timestamp: Date.now(), rpc_success_count: c14, rpc_failure_count: c15, first_seen_event_sequence_number: closure_16, last_seen_event_sequence_number: sendTelemetryEvent, telemetry_period_start_timestamp: closure_17, telemetry_period_end_timestamp: Date.now(), event_queue_rejection_count: closure_13, event_queue_batch_count: c18, event_queue_batch_min_size: null, event_queue_batch_max_size: null, event_queue_batch_avg_size: null, science_request_id: null, science_response: null, launch_signature: null };
     let num = 0;
     if (MAX_SAFE_INTEGER !== Number.MAX_SAFE_INTEGER) {
@@ -271,10 +267,10 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
     closure_17 = Date.now();
     closure_16 = sendTelemetryEvent;
     const items = [obj];
-    return submitEventsImmediately(items, closure_1_3.CLIENT_TELEMETRY).catch((status) => {
+    return submitEventsImmediately(items, closure_1_3.CLIENT_TELEMETRY).catch((error) => {
       let str;
-      if (status != null) {
-        str = status.status;
+      if (error != null) {
+        str = error.status;
       }
       if (str == null) {
         str = "unknown";
@@ -293,7 +289,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
   if (!tmp) {
     c33 = true;
     const _document2 = document;
-    const listener = document.addEventListener("visibilitychange", () => {
+    const listener = document.addEventListener("visibilitychange", (event) => {
       if ("hidden" === document.visibilityState) {
         drainTimeoutOverride();
       }
@@ -315,7 +311,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
       obj = { type: "timeout", id: null };
       const _setTimeout = setTimeout;
       obj[1] = setTimeout(() => {
-        closure_1_12();
+        sendTelemetryEvent();
         if (typeof scheduleNextHeartbeat !== "function") {
           HermesBuiltin.throwTypeError();
         }
@@ -370,9 +366,8 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
   };
   obj.handleTrack = (arg0) => {
     ({ event: closure_0, properties: getSessionId, flush: closure_2, fingerprint: closure_3, resolve: scheduleWhenIdle } = arg0);
-    getSessionId().then((client_heartbeat_session_id) => {
-      obj = { type: closure_0, fingerprint: closure_3, properties: null, resolve: null };
-      obj = { client_track_timestamp: Date.now(), client_heartbeat_session_id: client_heartbeat_session_id.sessionId, event_sequence_number: sum };
+    getSessionId().then((result) => {
+      obj = { client_track_timestamp: Date.now(), client_heartbeat_session_id: result.sessionId, event_sequence_number: sum };
       sum = sendTelemetryEvent + 1;
       sendTelemetryEvent = sum;
       const merged = Object.assign(closure_1);
@@ -387,19 +382,18 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
         }
         extractIdResult = null;
         if (null != fingerprint) {
-          extractIdResult = closure_2_0(closure_2_2[3]).extractId(fingerprint);
-          const obj3 = closure_2_0(closure_2_2[3]);
+          extractIdResult = extractId.extractId(fingerprint);
         }
       }
       if (null != extractIdResult) {
-        obj.properties.client_uuid = closure_2_29.generate(extractIdResult);
+        obj.properties.client_uuid = idGenerator.generate(extractIdResult);
       }
       arr = arr.push(obj);
       if (arr.length > 10000) {
         closure_13 = closure_13 + (arr.length - 10000);
         arr = arr.slice(-10000);
       }
-      closure_1_8(closure_2 ? { shouldFlushOnNextTick: true } : { shouldFlushOnNextTick: false });
+      scheduleDrain(closure_2 ? { shouldFlushOnNextTick: true } : { shouldFlushOnNextTick: false });
     });
     return false;
   };
@@ -429,6 +423,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
           }, tmp4);
           continue;
         }
+        tmp3 = closure_1_7[Symbol.iterator]();
       };
       return applyArgumentsResult;
     }
@@ -438,7 +433,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
       const self = this;
       const waitFor = this.waitFor;
       const items = [];
-      HermesBuiltin.arraySpread(tmp, 0);
+      HermesBuiltin.arraySpread(closure_3, 0);
       const self2 = this;
       HermesBuiltin.apply(items, this);
     }

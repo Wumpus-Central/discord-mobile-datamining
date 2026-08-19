@@ -4,12 +4,11 @@ import Button from "../../native.tsx";
 import PressableBase from "../../Pressables/native/Pressables.tsx";
 import { ActivityIndicator } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = arg1;
-createCacheKey = { button: null, buttonText: null, buttonIcon: null, buttonSpinner: null, buttonDisabled: null };
-createCacheKey = { flexGrow: 0, flexShrink: 1, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", alignSelf: "flex-start", borderRadius: ThemesDefault.radii.sm };
+require = fn;
+const createCacheKey = { flexGrow: 0, flexShrink: 1, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", alignSelf: "flex-start", borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { lineHeight: 24, margin: 10, maxWidth: 60, fontSize: 16 };
 createCacheKey[2] = { margin: 10 };
@@ -46,7 +45,6 @@ TouchableHitBox.prototype["render"] = function render() {
     obj[3] = iconSize;
     obj[4] = tmp2;
     tmp8Result = jsx(Button.Icon, { style: null, source: null, color: null, size: null, disableColor: null });
-    const tmp4 = jsx;
   }
   if (loading) {
     obj = { style: null, animating: true, color: null };
@@ -67,7 +65,6 @@ TouchableHitBox.prototype["render"] = function render() {
     obj[1] = items1;
     obj[2] = text;
     tmp8Result = jsx(Button.LegacyText, { numberOfLines: 1, style: null, children: null });
-    const tmp8 = jsx;
   } else {
     if (null != IconComponent) {
       if (null != source) {
@@ -82,7 +79,6 @@ TouchableHitBox.prototype["render"] = function render() {
         items2[2] = iconStyle;
         obj2[2] = items2;
         tmp8Result = <IconComponent size="sm" color={null} style={null} />;
-        const tmp7 = jsx;
       }
     }
     if (null == source) {
@@ -106,6 +102,6 @@ TouchableHitBox.defaultProps = {
 
   }
 };
-const result = require("set").fileFinishedImporting("design/void/TouchableHitBox/native/TouchableHitBox.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/TouchableHitBox/native/TouchableHitBox.tsx");
 
 export default TouchableHitBox;

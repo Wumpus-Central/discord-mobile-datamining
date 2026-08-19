@@ -1,14 +1,14 @@
 // discord_app/modules/user_affinities/UserAffinitiesV2Store.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../stores/RelationshipStore.tsx";
+import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
 import { USER_AFFINITY_TTL } from "UserAffinitiesConstants.tsx";
 
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;
-  const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
-  map = new Map(found.map((otherUserId) => {
-    const items = [otherUserId.otherUserId, otherUserId];
+  const found = userAffinities.filter((item, index) => !blockedOrIgnored.isBlockedOrIgnored(item.otherUserId));
+  map = new Map(found.map((item, index) => {
+    const items = [item.otherUserId, item];
     return items;
   }));
 }
@@ -29,9 +29,9 @@ prototype["initialize"] = function initialize(userAffinities) {
     obj.lastFetched = userAffinities.lastFetched;
     const _Map = Map;
     userAffinities = obj.userAffinities;
-    const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
-    map = new Map(found.map((otherUserId) => {
-      const items = [otherUserId.otherUserId, otherUserId];
+    const found = userAffinities.filter((item, index) => !blockedOrIgnored.isBlockedOrIgnored(item.otherUserId));
+    map = new Map(found.map((item, index) => {
+      const items = [item.otherUserId, item];
       return items;
     }));
   }
@@ -119,9 +119,9 @@ obj = {
     c3 = false;
     obj.userAffinities = affineUsers.affineUsers;
     const userAffinities = obj.userAffinities;
-    const found = userAffinities.filter((otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId));
-    map = new Map(found.map((otherUserId) => {
-      const items = [otherUserId.otherUserId, otherUserId];
+    const found = userAffinities.filter((item, index) => !blockedOrIgnored.isBlockedOrIgnored(item.otherUserId));
+    map = new Map(found.map((item, index) => {
+      const items = [item.otherUserId, item];
       return items;
     }));
   },
@@ -129,13 +129,12 @@ obj = {
     c3 = false;
   },
   LOGOUT: function handleLogout() {
-    obj = {};
     const merged = Object.assign(frozen);
     map = new Map();
     c3 = false;
   }
 };
 const userAffinitiesV2Store = new UserAffinitiesV2Store(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");
 
 export default userAffinitiesV2Store;

@@ -1,50 +1,47 @@
 // discord_app/modules/double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../a11y/AccessibilityStore.tsx";
-import closure_7 from "../../screen/native/DimensionsStore.android.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import getDimensionsStoreStateForEntry from "../../screen/native/DimensionsStore.android.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
-import set from "../../emojis/EmojiConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import set from "../../emojis/EmojiConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function DoubleTapEmojiEditNudgeInner(location) {
   const _location = location.location;
   const emoji = location.emoji;
-  dependencyMap = undefined;
-  let stateFromStores;
   let obj = _location(1497);
   dependencyMap = obj.useAppEntryKey();
   obj1 = _location(589);
   const items = [closure_6];
-  stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp5 = callback3(callback((arg0) => arg0.byAppEntry[closure_2].fontScale));
   const items1 = [emoji, stateFromStores];
   const items2 = [_location];
   const memo = React.useMemo(() => {
     if (null != emoji.id) {
-      let obj = emoji(1435);
-      obj = { id: null, size: null, animated: null };
-      obj[0] = tmp.id;
+      emoji(1435);
+      const obj = { id: null, size: null, animated: null };
+      obj[0] = emoji.id;
       obj[1] = closure_1_9;
       let animated = !stateFromStores;
       if (!stateFromStores) {
-        animated = tmp.animated;
+        animated = emoji.animated;
       }
       obj[2] = animated;
       let url = obj.getEmojiURL(obj);
     } else {
-      url = tmp.url;
+      url = emoji.url;
     }
     return url;
   }, items1);
-  obj = { style: tmp5.doubleTapEmojiEditNudgeContainer, children: null };
   callback = React.useCallback(() => {
-    let obj = _location(9298);
-    obj = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+    _location(9298);
+    let obj = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     closure_0 = stateFromStores((arg0) => {
       closure_0 = arg0;
       c3 = 0;
@@ -81,7 +78,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
                 obj1 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
                 ({ id: obj8[0], name: obj8[1], animated: obj8[2] } = callback);
                 obj1[4] = callback;
-                closure_2_1(closure_2_2[16]).track(closure_2_8.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj1);
+                emoji(closure_2_2[16]).track(closure_2_8.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj1);
                 const DoubleTapReactionEmoji = callback(closure_2_2[10]).DoubleTapReactionEmoji;
                 ({ id: obj9[0], name: obj9[1], animated: obj9[2] } = callback);
                 c3 = 1;
@@ -132,8 +129,6 @@ function DoubleTapEmojiEditNudgeInner(location) {
   obj1 = { style: tmp5.doubleTapEmojiContainer, fastImageStyle: tmp5.doubleTapCustomEmoji, textEmojiStyle: tmp5.doubleTapTextEmoji, src: memo, name: null };
   let str = "";
   const tmp3 = callback((arg0) => arg0.byAppEntry[closure_2].fontScale);
-  const tmp8 = closure_12;
-  const tmp9 = View;
   if (null == emoji.id) {
     str = emoji.surrogates;
   }
@@ -146,25 +141,22 @@ function DoubleTapEmojiEditNudgeInner(location) {
   obj2[4] = callback2(_location(4734).Text, obj3);
   items3[2] = callback2(_location(5433).PressableOpacity, obj2);
   obj[1] = items3;
-  return tmp8(tmp9, obj);
+  return callback(View, obj);
 }
-({ EMOJI_URL_BASE_SIZE: c9, EmojiIntention: c10 } = set);
+({ EMOJI_URL_BASE_SIZE: c9, EmojiIntention: c10 } = require("set"));
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = { left: 8, right: 8 };
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { doubleTapEmojiContainer: null, doubleTapTextEmoji: null, doubleTapCustomEmoji: null, doubleTapEmojiEditNudgeContainer: null, editButton: null };
-  obj = { marginHorizontal: ThemesDefault.space.PX_4 };
+  let obj = { marginHorizontal: ThemesDefault.space.PX_4 };
   obj[0] = obj;
   obj = { fontSize: 12 * arg0, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   obj[1] = obj;
   obj[2] = { height: 16 * arg0, width: 16 * arg0 };
   obj[3] = { marginTop: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
-  obj1 = { height: 16 * arg0, width: 16 * arg0 };
-  const obj2 = { marginTop: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
   obj[4] = { marginHorizontal: ThemesDefault.space.PX_4 };
   return obj;
 });
-let result = set.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx");
+let result = require("obj132").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx");
 
 export const DoubleTapEmojiEditNudge = function DoubleTapEmojiEditNudge(location) {
   const _location = location.location;
@@ -172,7 +164,7 @@ export const DoubleTapEmojiEditNudge = function DoubleTapEmojiEditNudge(location
   const DoubleTapReactionEmoji = setting(4066).DoubleTapReactionEmoji;
   setting = DoubleTapReactionEmoji.useSetting();
   const items = [setting];
-  const memo = React.useMemo(() => setting(closure_1_2[11]).disambiguatedEmojiFromSettingsValue(setting), items);
+  const memo = React.useMemo(() => setting(dependencyMap[11]).disambiguatedEmojiFromSettingsValue(setting), items);
   const memo1 = React.useMemo(() => setting(table[11]).getFallbackDoubleTapDisambiguatedEmoji(), []);
   [][0] = setting;
   let tmp5 = null;
@@ -184,7 +176,7 @@ export const DoubleTapEmojiEditNudge = function DoubleTapEmojiEditNudge(location
         let obj = { location: null, emoji: null };
         obj[0] = _location;
         obj[1] = memo1;
-        let tmp8 = callback2(DoubleTapEmojiEditNudgeInner, obj);
+        const tmp8 = callback2(DoubleTapEmojiEditNudgeInner, obj);
       }
     }
     tmp5 = null;
@@ -194,7 +186,6 @@ export const DoubleTapEmojiEditNudge = function DoubleTapEmojiEditNudge(location
       obj[1] = memo;
       tmp5 = callback2(DoubleTapEmojiEditNudgeInner, obj);
     }
-    tmp8 = tmp5;
     tmp9 = tmp5 != memo;
   }
 };

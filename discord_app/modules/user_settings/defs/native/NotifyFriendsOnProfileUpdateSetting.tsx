@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js";
 import explicitContentFromProto from "../../UserSettings.tsx";
@@ -20,19 +20,6 @@ const toggle = createToggle.createToggle({
   useValue: explicitContentFromProto.NotifyFriendsOnProfileUpdate.useSetting,
   onValueChange: onNotifyFriendsOnProfileUpdateSettingsChanged.onNotifyFriendsOnProfileUpdateSettingsChanged
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.F3llsQ);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["6goWcz"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: explicitContentFromProto.NotifyFriendsOnProfileUpdate.useSetting,
-  onValueChange: onNotifyFriendsOnProfileUpdateSettingsChanged.onNotifyFriendsOnProfileUpdateSettingsChanged
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx");
 
 export default toggle;

@@ -3,12 +3,12 @@ import ManaContext from "../../../../discord_common/js/packages/design/native.ts
 import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
 import useUserProfileColors from "../hooks/native/useUserProfileColors.tsx";
 import useUserProfileGradientColors from "../hooks/native/useUserProfileGradientColors.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 const memoResult = importAllResult.memo((style) => {
   style = style.style;
@@ -17,8 +17,6 @@ const memoResult = importAllResult.memo((style) => {
   const themeContext = obj.useThemeContext();
   ({ primaryColor, secondaryColor, theme } = themeContext);
   const gradientFallbackBackground = useUserProfileColors.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
-  const obj2 = useUserProfileColors;
-  const obj3 = useUserProfileGradientColors;
   const first = callback(useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
   if (null != primaryColor) {
     if (null != secondaryColor) {
@@ -39,6 +37,6 @@ const memoResult = importAllResult.memo((style) => {
   style[2] = style;
   return <closure_5 style={style} pointerEvents="none" />;
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileFixedBackground.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileFixedBackground.tsx");
 
 export default memoResult;

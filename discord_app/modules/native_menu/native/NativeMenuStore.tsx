@@ -38,6 +38,6 @@ const nativeMenuStore = new NativeMenuStore(dispatcherDefault, {
     c1 = null;
   }
 });
-const result = require("set").fileFinishedImporting("modules/native_menu/native/NativeMenuStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/native_menu/native/NativeMenuStore.tsx");
 
 export default nativeMenuStore;

@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx
-import closure_4 from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import closure_5 from "../../../../../../_runtime/00019_noop.js";
+import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { DM_WIDTH } from "../../../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["height"];
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
   fontScale = fontScale(4751).useFontScale();
@@ -17,7 +17,7 @@ export default function useMessagesSpecs() {
     let obj = fontScale(15287);
     const messagesHeaderHeight = obj.getMessagesHeaderHeight(fontScale, dependencyMap);
     const messagesItemChannelSizes = fontScale(15295).getMessagesItemChannelSizes(fontScale);
-    obj = { headerSize: messagesHeaderHeight, listTop: top + messagesHeaderHeight, listLeft: closure_1_6, listItemHeight: messagesItemChannelSizes.height, listItemSizes: closure_1_4(messagesItemChannelSizes, closure_1_3), listItemSuggestedFriendHeight: null, scrollIndicatorInsetEnd: null };
+    obj = { headerSize: messagesHeaderHeight, listTop: top + messagesHeaderHeight, listLeft: DM_WIDTH, listItemHeight: messagesItemChannelSizes.height, listItemSizes: closure_1_4(messagesItemChannelSizes, closure_1_3), listItemSuggestedFriendHeight: null, scrollIndicatorInsetEnd: null };
     const obj2 = fontScale(15295);
     obj[5] = fontScale(15307).getMessagesItemSuggestedFriendHeight(fontScale);
     obj[6] = top(712).space.PX_4;

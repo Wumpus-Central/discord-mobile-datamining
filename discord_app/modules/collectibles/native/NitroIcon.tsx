@@ -4,9 +4,9 @@ import inlineStyles from "../../../../_runtime/06571_inlineStyles.js";
 import inlineStylesDefault from "../../../../_runtime/06571_inlineStyles.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/NitroIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/NitroIcon.tsx");
 
 export default function NitroIcon(width) {
   let num = width.width;

@@ -1,9 +1,9 @@
 // discord_app/modules/icymi/ICYMIPopularGuildsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "../../stores/GuildStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_3 = [];
 let closure_4 = [];
 let c5 = 0;
@@ -34,17 +34,17 @@ const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(dispatcherDefault, {
       let items = [];
       offset = 0;
     }
-    set = new Set(items.map((id) => id.id));
+    set = new Set(items.map((item, index) => item.id));
     set1 = new Set(guildIds.getGuildIds());
-    const mapped = guilds.map((body) => {
+    const mapped = guilds.map((item, index) => {
       const obj = set(set1[1]);
-      return obj.fromClientDiscoverableGuild(set(set1[2]).makeDiscoverableGuild(body));
+      return obj.fromClientDiscoverableGuild(set(set1[2]).makeDiscoverableGuild(item));
     });
-    const found = mapped.filter((id) => {
-      const hasItem = set1.has(id.id);
+    const found = mapped.filter((item, index) => {
+      const hasItem = set1.has(item.id);
       let tmp2 = !hasItem;
       if (!hasItem) {
-        tmp2 = !set.has(id.id);
+        tmp2 = !set.has(item.id);
       }
       return tmp2;
     });
@@ -56,6 +56,6 @@ const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(dispatcherDefault, {
     c5 = 0;
   }
 });
-const result = require("set").fileFinishedImporting("modules/icymi/ICYMIPopularGuildsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/ICYMIPopularGuildsStore.tsx");
 
 export default iCYMIPopularGuildsStore;

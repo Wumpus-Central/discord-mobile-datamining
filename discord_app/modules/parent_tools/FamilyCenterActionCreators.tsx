@@ -1,12 +1,12 @@
 // discord_app/modules/parent_tools/FamilyCenterActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "FamilyCenterControlledSettingsStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import getSettings from "FamilyCenterControlledSettingsStore.tsx";
 import { FamilyCenterAction } from "FamilyCenterConstants.tsx";
 import ME from "../../Constants.tsx";
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
-const require = arg1;
+const require = fn;
 function maybeFetchCollectiblesForInvoices() {
   const self = this;
   const apply = _maybeFetchCollectiblesForInvoices.apply;
@@ -52,10 +52,10 @@ function _maybeFetchCollectiblesForInvoices() {
             } else {
               const _Set = Set;
               const set = new Set();
-              const item = set.forEach((invoice_items) => {
-                if (null != invoice_items.invoice_items) {
-                  if (invoice_items.invoice_items.length > 0) {
-                    const first = invoice_items.invoice_items[0];
+              const item = set.forEach((item, index) => {
+                if (null != item.invoice_items) {
+                  if (item.invoice_items.length > 0) {
+                    const first = item.invoice_items[0];
                     if (null != first.sku_id) {
                       set.add(first.sku_id);
                     }
@@ -66,7 +66,7 @@ function _maybeFetchCollectiblesForInvoices() {
               c2 = 1;
               c1 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(Array.from(set).map((skuId) => set(table[4]).maybeFetchCollectiblesProduct(skuId)));
+              obj1[0] = Promise.all(Array.from(set).map((item, index) => set(table[4]).maybeFetchCollectiblesProduct(item)));
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -142,16 +142,16 @@ function _maybeFetchCollectiblesForGifts() {
             } else {
               const _Set = Set;
               const set = new Set();
-              const item = set.forEach((sku_id) => {
-                if (null != sku_id.sku_id) {
-                  set.add(sku_id.sku_id);
+              const item = set.forEach((item, index) => {
+                if (null != item.sku_id) {
+                  set.add(item.sku_id);
                 }
               });
               const _Array = Array;
               c2 = 1;
               c1 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(Array.from(set).map((skuId) => set(table[4]).maybeFetchCollectiblesProduct(skuId)));
+              obj1[0] = Promise.all(Array.from(set).map((item, index) => set(table[4]).maybeFetchCollectiblesProduct(item)));
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -228,8 +228,8 @@ function _updateLinkForUserId() {
               c3 = 1;
               dependencyMap = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.patch(obj1).then((body) => {
-                body = body.body;
+              obj3[0] = HTTP.patch(obj1).then((result) => {
+                const body = result.body;
                 callback(table[5]).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: body });
                 return body;
               });
@@ -307,10 +307,10 @@ function _removeLinkForUserId() {
               dependencyMap = 1;
               c1 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.del(obj1).then((body) => {
-                body = body.body;
-                let obj = v3(table[5]);
-                obj = { type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: body, deletedUserId: closure_0 };
+              obj3[0] = HTTP.del(obj1).then((result) => {
+                const body = result.body;
+                v3(table[5]);
+                const obj = { type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: body, deletedUserId: closure_0 };
                 obj.dispatch(obj);
                 return body;
               });
@@ -381,8 +381,8 @@ function _getLinkCodeForCurrentUser() {
             c1 = 1;
             v0 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = value.then((body) => {
-              body = body.body;
+            obj2[0] = value.then((result) => {
+              const body = result.body;
               const link_code = body.link_code;
               v1(table[5]).dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: link_code, expiresAt: body.expires_at });
               return link_code;
@@ -482,57 +482,53 @@ function _shareIarWithParents() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: closure_6, Endpoints: error } = ME);
-let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/parent_tools/FamilyCenterActionCreators.tsx");
 
 export default {
   initialPageLoad() {
     return callback(function*() {
-      if (closure_15 === 2) {
-        closure_15 = 3;
+      if (c15 === 2) {
+        c15 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = body;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
         }
       } else {
         try {
-          closure_15 = 2;
+          c15 = 2;
           if (0 === c14) {
             if (arg0 === 1) {
-              closure_15 = 3;
-              throw arg1;
+              c15 = 3;
+              throw body;
             } else if (arg0 === 2) {
-              closure_15 = 3;
+              c15 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = body;
               return obj;
             } else {
               c13 = 0;
               closure_12 = tmp4;
-              let body;
+              body = undefined;
               let lib;
               dependencyMap = undefined;
               let users2;
               let age_group;
               let obj4;
               closure_1_1(closure_1_2[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-              let tmp = closure_1_0;
-              tmp = closure_1_2;
               const HTTP = closure_1_0(closure_1_2[6]).HTTP;
               obj1 = { url: null, rejectWithError: null };
-              tmp = closure_1_7;
               obj1[0] = closure_1_7.FAMILY_CENTER_TEEN_ACTIVITY_ME;
-              tmp = closure_1_2;
               const obj15 = closure_1_1(closure_1_2[5]);
               obj1[1] = closure_1_0(closure_1_2[6]).rejectWithMigratedError();
               c14 = 1;
-              closure_15 = 1;
+              c15 = 1;
               const obj2 = { value: null, done: false };
               obj2[0] = HTTP.get(obj1);
               return obj2;
@@ -540,15 +536,15 @@ export default {
           } else {
             if (1 === tmp4) {
               if (arg0 === 1) {
-                closure_15 = 3;
-                throw arg1;
+                c15 = 3;
+                throw body;
               } else if (arg0 === 2) {
-                closure_15 = 3;
+                c15 = 3;
                 let obj3 = { value: null, done: true };
-                obj3[0] = arg1;
+                obj3[0] = body;
                 return obj3;
               } else {
-                body = arg1.body;
+                body = body.body;
                 lib = body.teen_audit_log;
                 dependencyMap = body.linked_users;
                 users2 = body.users;
@@ -678,7 +674,7 @@ export default {
                 }
                 if (tmp46) {
                   c14 = 2;
-                  closure_15 = 1;
+                  c15 = 1;
                   let obj5 = { value: null, done: false };
                   obj5[0] = callback(obj4.invoices);
                   return obj5;
@@ -687,21 +683,21 @@ export default {
             } else {
               if (2 === tmp4) {
                 if (arg0 === 1) {
-                  closure_15 = 3;
-                  throw arg1;
+                  c15 = 3;
+                  throw body;
                 } else if (arg0 === 2) {
-                  closure_15 = 3;
+                  c15 = 3;
                   const obj6 = { value: null, done: true };
-                  obj6[0] = arg1;
+                  obj6[0] = body;
                   return obj6;
                 }
               } else if (arg0 === 1) {
-                closure_15 = 3;
-                throw arg1;
+                c15 = 3;
+                throw body;
               } else if (arg0 === 2) {
-                closure_15 = 3;
+                c15 = 3;
                 obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj[0] = body;
                 return obj;
               }
               obj3 = lib(709);
@@ -722,7 +718,7 @@ export default {
                 obj8[2] = body.restricted_schedule;
                 obj5.dispatch(obj8);
               }
-              closure_15 = 3;
+              c15 = 3;
               const obj9 = { value: null, done: true };
               obj9[0] = obj4;
               return obj9;
@@ -733,14 +729,14 @@ export default {
             }
             if (tmp52) {
               c14 = 3;
-              closure_15 = 1;
+              c15 = 1;
               const obj10 = { value: null, done: false };
               obj10[0] = callback2(obj4.gifts);
               return obj10;
             }
           }
         } catch (tmp85) {
-          closure_15 = tmp;
+          c15 = tmp;
           throw tmp85;
         }
       }
@@ -748,15 +744,14 @@ export default {
   },
   fetchLinkedUsers() {
     return callback(function*() {
-      let obj4 = tmp2;
       let body = tmp5;
       const HTTP = closure_1_0(530).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
       obj1[1] = closure_1_0(530).rejectWithMigratedError();
       yield HTTP.get(obj1);
-      body = arg1.body;
-      obj4 = { linkedUsers: null, users: null };
+      body = body.body;
+      const obj4 = { linkedUsers: null, users: null };
       obj4[0] = body.linked_users;
       obj4[1] = body.users;
       const obj5 = { type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" };
@@ -775,12 +770,11 @@ export default {
       obj2[1] = c1;
       obj1[1] = obj2;
       yield HTTP.get(obj1);
-      return arg1.body;
+      return body.body;
     })();
   },
-  setPendingConnection(teenId, linkCode) {
-    let obj = dispatcherDefault;
-    obj = { type: "FAMILY_CENTER_PENDING_CONNECTION_SET", teenId, linkCode };
+  setPendingConnection(match, match2) {
+    const obj = { type: "FAMILY_CENTER_PENDING_CONNECTION_SET", teenId: match, linkCode: match2 };
     obj.dispatch(obj);
   },
   clearPendingConnection() {
@@ -790,23 +784,22 @@ export default {
     closure_0 = userId;
     closure_1 = linkCode;
     return callback(function*() {
-      let obj5 = tmp2;
       let body = tmp5;
-      const HTTP = closure_1_0(530).HTTP;
+      const HTTP = userId(530).HTTP;
       obj1 = { url: null, body: null, rejectWithError: null };
       obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
       const obj2 = { recipient_id: null, code: null };
-      obj2[0] = closure_1_0;
-      obj2[1] = closure_1_1;
+      obj2[0] = userId;
+      obj2[1] = linkCode;
       obj1[1] = obj2;
-      obj1[2] = closure_1_0(530).rejectWithMigratedError();
+      obj1[2] = userId(530).rejectWithMigratedError();
       yield HTTP.post(obj1);
-      body = arg1.body;
-      obj5 = { linkedUsers: null, users: null };
+      body = body.body;
+      const obj5 = { linkedUsers: null, users: null };
       obj5[0] = body.linked_users;
       obj5[1] = body.users;
-      let obj6 = closure_1_1(709);
-      obj6 = { type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" };
+      linkCode(709);
+      const obj6 = { type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" };
       const merged = Object.assign(obj5);
       obj6.dispatch(obj6);
       return obj5;
@@ -820,10 +813,10 @@ export default {
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = body;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -834,16 +827,16 @@ export default {
           if (0 === v0) {
             if (arg0 === 1) {
               c11 = 3;
-              throw arg1;
+              throw body;
             } else if (arg0 === 2) {
               c11 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = body;
               return obj;
             } else {
               closure_9 = tmp5;
               closure_8 = tmp2;
-              let body;
+              body = undefined;
               let teen_audit_log;
               let obj4;
               closure_1_1(closure_1_2[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
@@ -863,14 +856,14 @@ export default {
             if (1 === tmp5) {
               if (arg0 === 1) {
                 c11 = 3;
-                throw arg1;
+                throw body;
               } else if (arg0 === 2) {
                 c11 = 3;
                 const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
+                obj3[0] = body;
                 return obj3;
               } else {
-                body = arg1.body;
+                body = body.body;
                 teen_audit_log = body.teen_audit_log;
                 obj4 = { teenId: null, rangeStartId: null, totals: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
                 obj4[0] = teen_audit_log.teen_user_id;
@@ -961,20 +954,20 @@ export default {
               if (2 === tmp5) {
                 if (arg0 === 1) {
                   c11 = 3;
-                  throw arg1;
+                  throw body;
                 } else if (arg0 === 2) {
                   c11 = 3;
                   const obj6 = { value: null, done: true };
-                  obj6[0] = arg1;
+                  obj6[0] = body;
                   return obj6;
                 }
               } else if (arg0 === 1) {
                 c11 = 3;
-                throw arg1;
+                throw body;
               } else if (arg0 === 2) {
                 c11 = 3;
                 obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj[0] = body;
                 return obj;
               }
               obj2 = closure_1_1(closure_1_2[5]);
@@ -1020,12 +1013,12 @@ export default {
     return callback(function*() {
       closure_7 = tmp2;
       closure_6 = tmp5;
-      const HTTP = closure_1_0(closure_1_2[6]).HTTP;
+      const HTTP = selectedTeenId(startId[6]).HTTP;
       obj1 = { url: null, rejectWithError: null };
-      obj1[0] = closure_1_7.FAMILY_CENTER_TEEN_ACTIVITY_MORE(closure_1_0, closure_1_1, closure_1_2, closure_1_3);
-      obj1[1] = closure_1_0(closure_1_2[6]).rejectWithMigratedError();
+      obj1[0] = closure_1_7.FAMILY_CENTER_TEEN_ACTIVITY_MORE(selectedTeenId, closure_1_1, startId, event_id);
+      obj1[1] = selectedTeenId(startId[6]).rejectWithMigratedError();
       yield HTTP.get(obj1);
-      let teen_audit_log = arg1.body.teen_audit_log;
+      let teen_audit_log = body.body.teen_audit_log;
       let obj4 = { teenId: null, rangeStartId: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
       obj4[0] = teen_audit_log.teen_user_id;
       obj4[1] = teen_audit_log.range_start_id;
@@ -1082,13 +1075,13 @@ export default {
         closure_5 = [];
       }
       obj4[10] = closure_5;
-      const obj = closure_1_1(closure_1_2[7]);
+      const obj = closure_1_1(startId[7]);
       const obj5 = { action: null, selected_teen_id: null, action_display_type: null };
       obj5[0] = closure_1_5.LoadMore;
       obj5[1] = teen_audit_log;
       obj5[2] = obj4;
       obj.track(closure_1_6.FAMILY_CENTER_ACTION, obj5);
-      const obj2 = closure_1_1(closure_1_2[5]);
+      const obj2 = closure_1_1(startId[5]);
       const obj6 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS", familyCenterTeenActivity: null };
       obj6[1] = obj4;
       obj2.dispatch(obj6);
@@ -1096,19 +1089,17 @@ export default {
     })();
   },
   selectTab(REQUESTS) {
-    let obj = dispatcherDefault;
-    obj = { type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: REQUESTS };
+    const obj = { type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: REQUESTS };
     obj.dispatch(obj);
   },
   fetchTeenSettingsAndConsents(id) {
     const _require = id;
-    const HTTP = _sendRequest.HTTP;
-    let obj = { url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id), rejectWithError: _sendRequest.rejectWithMigratedError() };
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    let obj = { url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id), rejectWithError: require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError() };
     const value = HTTP.get(obj);
-    return value.then((body) => {
-      ({ settings, consents } = body.body);
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS", userId: closure_0, settings, consents };
+    return value.then((result) => {
+      ({ settings, consents } = result.body);
+      const obj = { type: "FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS", userId: closure_0, settings, consents };
       obj.dispatch(obj);
     });
   },
@@ -1122,10 +1113,10 @@ export default {
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = body;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -1136,11 +1127,11 @@ export default {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw body;
             } else if (arg0 === 2) {
               c3 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = body;
               return obj;
             } else {
               closure_1 = tmp2;
@@ -1150,19 +1141,19 @@ export default {
               settings = closure_1_4.getSettings(closure_1_0);
               let tmp13;
               if (settings != null) {
-                tmp13 = settings[tmp37];
+                tmp13 = settings[closure_1_1];
               }
-              let tmp34Result = tmp34(1375);
-              const modifiedProto = tmp34Result.createModifiedProto(tmp13, dependencyMap, protoFieldClass, tmp34(1306).PreloadedUserSettings, tmp37);
+              let tmp34Result = closure_1_0(1375);
+              const modifiedProto = tmp34Result.createModifiedProto(tmp13, dependencyMap, protoFieldClass, closure_1_0(1306).PreloadedUserSettings, closure_1_1);
               if (null != modifiedProto) {
-                const HTTP = tmp34(530).HTTP;
+                const HTTP = closure_1_0(530).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
                 obj1[0] = closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(closure_1_0);
                 const obj2 = { settings: null };
-                tmp34Result = tmp34(1342);
-                obj2[0] = tmp34Result.protoToB64(tmp34(1306).PreloadedUserSettings, modifiedProto);
+                tmp34Result = closure_1_0(1342);
+                obj2[0] = tmp34Result.protoToB64(closure_1_0(1306).PreloadedUserSettings, modifiedProto);
                 obj1[1] = obj2;
-                obj1[2] = tmp34(530).rejectWithMigratedError();
+                obj1[2] = closure_1_0(530).rejectWithMigratedError();
                 dependencyMap = 1;
                 c3 = 1;
                 const obj3 = { value: null, done: false };
@@ -1175,9 +1166,9 @@ export default {
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw body;
           } else if (arg0 !== 2) {
-            settings = arg1.body.settings;
+            settings = body.body.settings;
             obj = closure_1_1(709);
             const obj4 = { type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: null, settings: null };
             obj4[1] = settings;
@@ -1186,7 +1177,7 @@ export default {
           }
           c3 = 3;
           const obj5 = { value: null, done: true };
-          obj5[0] = arg1;
+          obj5[0] = body;
           return obj5;
         } catch (tmp28) {
           c3 = tmp;
@@ -1197,14 +1188,13 @@ export default {
   },
   updateTeenConsents(selectedTeenId, items1, items2) {
     const _require = selectedTeenId;
-    const HTTP = _sendRequest.HTTP;
-    obj = { url: closure_7.FAMILY_CENTER_TEEN_CONSENTS(selectedTeenId), body: obj, rejectWithError: null };
+    const HTTP = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
+    { url: closure_7.FAMILY_CENTER_TEEN_CONSENTS(selectedTeenId), body: obj, rejectWithError: null };
     obj = { grant: items1, revoke: items2 };
-    obj[2] = _sendRequest.rejectWithMigratedError();
-    const obj3 = _sendRequest;
-    return HTTP.patch(obj).then((body) => {
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS", userId: closure_0, consents: body.body };
+    obj[2] = require("../../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const obj3 = sendRequest;
+    return HTTP.patch(obj).then((result) => {
+      const obj = { type: "FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS", userId: closure_0, consents: result.body };
       obj.dispatch(obj);
     });
   }

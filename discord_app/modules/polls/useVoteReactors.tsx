@@ -1,9 +1,9 @@
 // discord_app/modules/polls/useVoteReactors.tsx
-import closure_3 from "../../stores/MessageReactionsStore.tsx";
+import reactionKey from "../../stores/MessageReactionsStore.tsx";
 import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/polls/useVoteReactors.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/polls/useVoteReactors.tsx");
 
 export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;

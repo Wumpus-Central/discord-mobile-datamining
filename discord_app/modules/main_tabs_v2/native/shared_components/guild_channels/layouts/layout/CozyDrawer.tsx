@@ -2,8 +2,7 @@
 import ThemesDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import importDefaultResult from "../utils/deepmerge.tsx";
 
-let obj = { container: null, channelName: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
-obj = { borderRadius: ThemesDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 6, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } };
+let obj = { borderRadius: ThemesDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 6, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } };
 obj[0] = obj;
 obj[1] = { height: 20, text: { variant: "text-md/semibold" } };
 obj = { text: { variant: "text-xs/medium" }, messageTypeIconSize: require("Button").IconSizes.EXTRA_SMALL, messageTypeIconSizeNew: "xs", height: 18, margin: { marginTop: 0 } };
@@ -28,7 +27,7 @@ const importDefaultResult1 = importDefaultResult;
 obj4[1] = { avatarSize: require("Button").AvatarSizes.REFRESH_MEDIUM_32 };
 const obj5 = { avatarSize: require("Button").AvatarSizes.REFRESH_MEDIUM_32 };
 const importDefaultResult1Result = importDefaultResult1(require("CHANNEL_LIST_STYLES_COMPACT").CHANNEL_LIST_STYLES_COMPACT, obj4);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/CozyDrawer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/CozyDrawer.tsx");
 
 export const CHANNEL_LIST_STYLES_COZY_DRAWER = importDefaultResultResult;
 export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = importDefaultResult1Result;

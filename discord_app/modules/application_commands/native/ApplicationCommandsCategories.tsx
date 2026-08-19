@@ -3,21 +3,20 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../user_settings/ThemeStore.tsx";
-import closure_8 from "../../../stores/GuildMemberStore.tsx";
+import handleThemeChange from "../../user_settings/ThemeStore.tsx";
+import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
 import ICON_SIZE from "ApplicationCommandsCategoriesConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet: c5, FlatList: closure_6 } = get_ActivityIndicator);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: c9 } = ICON_SIZE);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { container: null, categoryImage: null, fadedItem: null, activeItem: null, item: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: ThemesDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
+let obj = { backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: ThemesDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
 obj[0] = obj;
-createCacheKey = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
+const createCacheKey = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
 obj[1] = createCacheKey;
 obj[2] = { opacity: 0.5 };
 obj[3] = { opacity: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
@@ -26,23 +25,22 @@ let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = importAllResult.memo((section) => {
   section = section.section;
   ({ handlePressCategory: importDefault, active, index: dependencyMap, guildId: closure_3 } = section);
-  let stateFromStores;
   const tmp = callback2();
   let obj = section(589);
   const items = [closure_8];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != closure_3) {
       let botId;
       if (section != null) {
-        botId = tmp2.botId;
+        botId = section.botId;
       }
       if (null != botId) {
-        return closure_1_8.getMember(tmp, tmp2.botId);
+        return closure_1_8.getMember(tmp, section.botId);
       }
     }
   });
   const items1 = [section, stateFromStores];
-  const memo = importAllResult.useMemo(() => section(closure_1_2[9]).getApplicationCommandsIconSource(section, stateFromStores), items1);
+  const memo = importAllResult.useMemo(() => section(dependencyMap[9]).getApplicationCommandsIconSource(section, stateFromStores), items1);
   let tmp6 = null != memo;
   if (tmp6) {
     obj = { style: null, source: null };
@@ -75,25 +73,20 @@ let closure_13 = importAllResult.memo((section) => {
   obj[3] = callback(stateFromStores, { style: items2, children: tmp6 });
   return callback(section(5433).PressableOpacity, obj, section.name);
 });
-let obj2 = { opacity: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-let result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategories.tsx");
+let result = require("obj132").fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategories.tsx");
 
 export default function ApplicationCommandsCategories(onPressSection) {
   onPressSection = onPressSection.onPressSection;
   const selectedIndex = onPressSection.selectedIndex;
   const guildId = onPressSection.guildId;
   importAllResult = undefined;
-  closure_4 = undefined;
-  let absoluteFill;
-  let ref;
-  let callback;
   ({ style, sections } = onPressSection);
   let obj = onPressSection(guildId[13]);
   const enabled = obj.useMobileVisualRefreshConfig({ location: "ApplicationCommandsCategories" }).enabled;
   importAllResult = importAllResult.useRef(null);
   closure_4 = importAllResult.useRef(null);
-  absoluteFill = importAllResult.useRef(null);
-  ref = importAllResult.useRef(null);
+  const absoluteFill = importAllResult.useRef(null);
+  const ref = importAllResult.useRef(null);
   const items = [selectedIndex];
   const effect = importAllResult.useEffect(() => {
     if (null != ref.current) {
@@ -114,7 +107,7 @@ export default function ApplicationCommandsCategories(onPressSection) {
     }
   }, items);
   const items1 = [onPressSection];
-  callback = importAllResult.useCallback((arg0) => {
+  const callback = importAllResult.useCallback((arg0) => {
     onPressSection(arg0);
     const result = onPressSection(guildId[14]).triggerHapticFeedback(selectedIndex(guildId[15]).IMPACT_LIGHT);
   }, items1);
@@ -170,5 +163,5 @@ export default function ApplicationCommandsCategories(onPressSection) {
     })
   ];
   obj[1] = items4;
-  return closure_11(closure_4, obj);
+  return callback(closure_4, obj);
 };

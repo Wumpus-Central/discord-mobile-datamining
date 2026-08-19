@@ -1,25 +1,19 @@
 // discord_app/modules/captcha/tooling/native/CaptchaTestModal.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import { HCAPTCHA_DIFFICULTY_OPTIONS as prop, CAPTCHA_DECIDER_TYPE_OPTIONS as prop1 } from "../CaptchaTestUtils.tsx";
-import set from "../../../../../_runtime/00002_set.js";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 function CaptchaTestScreen(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
-    let first;
-    closure_1 = undefined;
-    let first1;
-    closure_3 = undefined;
     function _sendCaptchaRequest(closure_5, arg1) {
       const self = this;
       const tmp = callback2(function*() {
@@ -112,10 +106,10 @@ function CaptchaTestScreen(arg0) {
     }
     const tmp5 = callback3();
     const tmp8 = _sendCaptchaRequest(React.useState(null), 2);
-    first = tmp8[0];
+    const first = tmp8[0];
     closure_1 = tmp8[1];
     const tmp10 = _sendCaptchaRequest(React.useState(null), 2);
-    first1 = tmp10[0];
+    const first1 = tmp10[0];
     closure_3 = tmp10[1];
     let obj = { style: null, children: null };
     obj[0] = tmp5.container;
@@ -139,7 +133,7 @@ function CaptchaTestScreen(arg0) {
     let tmp12Result = first === first(first1[8]).CaptchaDeciderType.HCAPTCHA_RQDATA;
     if (tmp12Result) {
       obj = { children: null };
-      const items2 = [tmp14(tmp15(tmp16[10]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: "Difficulty" }), ];
+      const items2 = [callback(tmp15(tmp16[10]).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: "Difficulty" }), ];
       let obj3 = { withSpacing: true, value: null, options: null, onChange: null };
       obj3[1] = first1;
       obj3[2] = closure_10;
@@ -148,9 +142,9 @@ function CaptchaTestScreen(arg0) {
           callback2(value.value);
         }
       };
-      items2[1] = tmp14(tmp15(tmp16[11]).RadioGroup, obj3);
+      items2[1] = callback(tmp15(tmp16[11]).RadioGroup, obj3);
       obj[0] = items2;
-      tmp12Result = tmp12(tmp13, obj);
+      tmp12Result = callback2(View, obj);
     }
     items1[1] = tmp12Result;
     obj[1] = items1;
@@ -182,39 +176,33 @@ function CaptchaTestScreen(arg0) {
   }
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, separator: null, footerContainer: null, footerButton: null, content: null };
-createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: ThemesDefault.space.PX_24 };
-let obj1 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16 };
-let obj2 = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { margin: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let closure_10 = prop.map((label) => ({ name: label.label, value: label.value }));
+let closure_10 = prop.map((item, index) => ({ name: item.label, value: item.value }));
 let items = [require("_testCaptcha").CaptchaDeciderType.HCAPTCHA_RQDATA, require("_testCaptcha").CaptchaDeciderType.SMITE_RQDATA];
-let set = new Set(items);
-const mapped = prop1.map((label) => ({ name: label.label, value: label.value }));
-let closure_12 = mapped.filter((value) => set.has(value.value));
+const set = new Set(items);
+const mapped = prop1.map((item, index) => ({ name: item.label, value: item.value }));
+let closure_12 = mapped.filter((item, index) => set.has(item.value));
 let closure_13 = { TEST_CAPTCHA: "TEST_CAPTCHA" };
 let obj5 = { headerStyle: null };
-let obj4 = { margin: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
 obj5[0] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 let closure_15 = createCacheKey.createStyles(obj5);
-const result = set.fileFinishedImporting("modules/captcha/tooling/native/CaptchaTestModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/captcha/tooling/native/CaptchaTestModal.tsx");
 
 export default function CaptchaTestModal() {
   const tmp = callback4();
   const _require = tmp;
   const items = [tmp];
   const memo = React.useMemo(() => {
-    let obj = {};
-    obj = {
+    const obj = {
       headerStyle: lib.headerStyle,
       headerTitle: "Captcha Test Tool",
-      headerLeft: lib(closure_1_2[15]).getHeaderCloseButton(function closeModal() {
+      headerLeft: lib(dependencyMap[15]).getHeaderCloseButton(function closeModal() {
         return callback(table[14]).pop();
       }),
       render() {
@@ -225,7 +213,7 @@ export default function CaptchaTestModal() {
     return obj;
   }, items);
   let obj = { screens: memo, initialRouteName: constants.TEST_CAPTCHA, headerBackTitle: null };
-  const intl = _getSystemLocale.intl;
-  obj[2] = intl.string(_getSystemLocale.t["13/7kX"]);
-  return callback(_NavigationStack.Navigator, obj);
+  const intl = require("../../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(require("../../../../intl/index.native.tsx").t["13/7kX"]);
+  return callback(require("../../../../design/components/Navigator/native/Navigator.native.tsx").Navigator, obj);
 };

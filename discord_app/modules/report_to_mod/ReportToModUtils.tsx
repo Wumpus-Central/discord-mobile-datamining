@@ -2,19 +2,21 @@
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import isCurrentUserTeen from "../self_mod/SelfModUtils.tsx";
+import getEligibleHarmTypesConfigsForContext from "../explicit_media_redaction/ObscuredMediaUtils.tsx";
+import ContentHarmType from "../explicit_media_redaction/HarmTypeConfiguration.tsx";
 import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId.tsx";
 import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled.tsx";
 import getContextForPermission from "../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx";
 import canReportUser from "../../utils/ReportUtils.tsx";
-import closure_4 from "../forums/ForumPostMessagesStore.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/GuildStore.tsx";
-import closure_7 from "../../stores/MessageStore.tsx";
-import closure_8 from "../../stores/UserStore.tsx";
+import handleLoadThreadsSuccess from "../forums/ForumPostMessagesStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import reinjectEphemerals from "../../stores/MessageStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { ReportToModPermissions } from "ReportToModConstants.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 
 export const canReportMessageToMods = function canReportMessageToMods(message) {
   if (obj.canReportUser(message.author)) {
@@ -34,10 +36,10 @@ export const canReportMessageToMods = function canReportMessageToMods(message) {
   }
   obj = canReportUser;
 };
-export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    const items = [closure_6, closure_8];
+export const canAccessReportsChannel = function canAccessReportsChannel(arg0, items) {
+  let tmp = items;
+  if (items === undefined) {
+    items = [closure_6, closure_8];
     tmp = items;
   }
   let obj = getContextForPermission;
@@ -60,7 +62,6 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
       obj[0] = contextForPermission.user;
       obj[1] = guild;
       hasAnyResult = obj2.hasAny(applyOverwritesAll.computePermissions(obj), ReportToModPermissions);
-      const obj3 = applyOverwritesAll;
     }
     return hasAnyResult;
   }
@@ -179,8 +180,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(5019).messageHasObscurableMediaForBitmask(firstMessage, tmp10(5020).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(5019);
+          tmp9 = !getEligibleHarmTypesConfigsForContext.messageHasObscurableMediaForBitmask(firstMessage, ContentHarmType.ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = getEligibleHarmTypesConfigsForContext;
         }
         return tmp9;
       } else {
@@ -224,7 +225,7 @@ export const sortedModeratorReportTags = function sortedModeratorReportTags(foun
 };
 export const isModeratorReportMessage = function isModeratorReportMessage(messageSnapshots) {
   messageSnapshots = messageSnapshots.messageSnapshots;
-  return messageSnapshots.some((moderatorReport) => null != moderatorReport.moderatorReport);
+  return messageSnapshots.some((item, index) => null != item.moderatorReport);
 };
 export const isUserAuthorOfReportedMessage = function isUserAuthorOfReportedMessage(arg0, arg1) {
   const channel = store.getChannel(arg0);

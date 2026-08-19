@@ -1,10 +1,10 @@
 // discord_app/modules/experiments/fetchExperiments.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../Constants.tsx";
 
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/experiments/fetchExperiments.tsx");
+const result = obj132.fileFinishedImporting("modules/experiments/fetchExperiments.tsx");
 
 export const fetchExperiments = function fetchExperiments(arg0) {
   ({ withGuildExperiments, headers, context } = arg0);

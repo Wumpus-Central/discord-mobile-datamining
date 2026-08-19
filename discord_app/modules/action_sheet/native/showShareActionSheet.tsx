@@ -1,5 +1,5 @@
 // discord_app/modules/action_sheet/native/showShareActionSheet.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
 import trackAppClickInNativeShareSheet from "ShowShareActionSheetUtils.tsx";
@@ -12,7 +12,7 @@ if (PlatformTypes.isAndroid()) {
     const result = trackAppClickInNativeShareSheet.trackAppClickInNativeShareSheet(app, _location);
   });
 }
-let result = set.fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");
+let result = obj132.fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");
 
 export const showShareActionSheet = function showShareActionSheet(source, PREMIUM_GIFT_SUCCESS_MODAL) {
   const _require = source;
@@ -59,9 +59,9 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
   }
   const obj5 = importDefault(fn[2]);
   const shareResult = importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn);
-  const nextPromise = importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((method) => {
-    if (null != method) {
-      method = method.method;
+  const nextPromise = importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((result) => {
+    if (null != result) {
+      const method = result.method;
       if (source.iOSOnlyShareCallback != null) {
         let tmp3 = method;
         if (method == null) {
@@ -69,13 +69,13 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
         }
         iOSOnlyShareCallback(tmp, tmp3);
       }
-      const result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
+      result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
       const obj = source(fn[3]);
     }
   });
-  importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((method) => {
-    if (null != method) {
-      method = method.method;
+  importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((result) => {
+    if (null != result) {
+      const method = result.method;
       if (source.iOSOnlyShareCallback != null) {
         let tmp3 = method;
         if (method == null) {
@@ -83,15 +83,15 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
         }
         iOSOnlyShareCallback(tmp, tmp3);
       }
-      const result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
+      result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
       const obj = source(fn[3]);
     }
-  }).catch((arg0) => {
+  }).catch((error) => {
     let str = PREMIUM_GIFT_SUCCESS_MODAL;
     if (PREMIUM_GIFT_SUCCESS_MODAL == null) {
       str = "";
     }
-    PREMIUM_GIFT_SUCCESS_MODAL(fn[5]).captureException(arg0, { tags: { location: str } });
+    PREMIUM_GIFT_SUCCESS_MODAL(fn[5]).captureException(error, { tags: { location: str } });
     if (source.iOSOnlyShareCallback != null) {
       iOSOnlyShareCallback(false, null);
     }

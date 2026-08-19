@@ -1,9 +1,8 @@
 // discord_app/modules/experiments/apex/ApexTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/experiments/apex/ApexTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/experiments/apex/ApexTypes.tsx");
 for (const key10018 in require("UnitType")) {
-  let tmp3 = key10018;
   arg5[key10018] = require("UnitType")[key10018];
   continue;
 }

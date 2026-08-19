@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import asyncRequireImpl from "../../../../../_runtime/02007_asyncRequireImpl.js";
 import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
 
 const BOUNTIES_MODAL = "BOUNTIES_MODAL";
-const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx");
 
 export default {
   showModal(arg0) {

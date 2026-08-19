@@ -1,21 +1,23 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalInstantInvites.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
 import combinedDefault from "../../../utils/HelpdeskUtils.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
+import TableRowIcon from "../../../design/components/TableRow/native/TableRowIcon.native.tsx";
 import registerAssetDefault from "../../../../_runtime/08555_registerAsset.js";
 import TableCheckboxRow from "../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../guild_antiraid/GuildIncidentsStore.tsx";
+import computeAlertSettings from "../../guild_antiraid/GuildIncidentsStore.tsx";
 import importDefaultResult from "../../../records/InviteRecord.tsx";
-import closure_7 from "../../../stores/ChannelStore.tsx";
-import closure_8 from "../../../stores/GuildStore.tsx";
-import closure_9 from "../GuildSettingsStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import handleFormInit from "../GuildSettingsStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 class InvitesDisabledRow {
   constructor(arg0) {
     invitesDisabled = global.invitesDisabled;
@@ -56,9 +58,6 @@ function GuildSettingsModalInstantInvites(invites) {
   if (flag === undefined) {
     flag = false;
   }
-  let invitesDisabledPermission;
-  let stateFromStores;
-  let hasItem;
   let first;
   closure_7 = undefined;
   closure_8 = undefined;
@@ -67,12 +66,12 @@ function GuildSettingsModalInstantInvites(invites) {
   let callback1;
   const tmp = callback3();
   let obj = invites(flag[17]);
-  invitesDisabledPermission = obj.useInvitesDisabledPermission(guild);
+  const invitesDisabledPermission = obj.useInvitesDisabledPermission(guild);
   obj1 = invites(flag[18]);
   let items = [first];
-  stateFromStores = obj1.useStateFromStores(items, () => first.getGuildIncident(guild.id));
+  const stateFromStores = obj1.useStateFromStores(items, () => first.getGuildIncident(guild.id));
   const features = guild.features;
-  hasItem = features.has(stateFromStoresArray.INVITES_DISABLED);
+  let hasItem = features.has(stateFromStoresArray.INVITES_DISABLED);
   if (!hasItem) {
     let invitesDisabledUntil;
     if (stateFromStores != null) {
@@ -102,7 +101,6 @@ function GuildSettingsModalInstantInvites(invites) {
         let formatted;
         if (channel != null) {
           formatted = channel.name.toLowerCase();
-          const str3 = channel.name;
         }
         let str = formatted;
       } else {
@@ -128,7 +126,7 @@ function GuildSettingsModalInstantInvites(invites) {
   stateFromStoresArray = invites(flag[18]).useStateFromStoresArray(items2, () => sortedLinkedChannelsForGuild.getSortedLinkedChannelsForGuild(guild.id));
   const items3 = [memo, stateFromStoresArray];
   const memo1 = stateFromStores.useMemo(() => {
-    const items = [...memo.map((data) => ({ type: "invite", data })), ...stateFromStoresArray.map((data) => ({ type: "channel", data }))];
+    const items = [...memo.map((item, index) => ({ type: "invite", data: item })), ...stateFromStoresArray.map((item, index) => ({ type: "channel", data: item }))];
     return items;
   }, items3);
   const effect = stateFromStores.useEffect(() => {
@@ -155,20 +153,18 @@ function GuildSettingsModalInstantInvites(invites) {
         obj[0] = guild;
         obj[1] = obj;
         guild(flag[22]).openLazy(invites(flag[24])(flag[23], flag.paths), "GuildIncidentActionsActionSheet", obj);
-        tmp3(false);
+        sortedLinkedChannelsForGuild(false);
         const obj3 = guild(flag[22]);
       } catch (tmp17) {
         tmp2(false);
         throw tmp17;
       }
-      tmp3 = sortedLinkedChannelsForGuild;
     }
   }, items4);
   const items5 = [hasItem, callback1, first];
   if (null == invites) {
     let tmp28 = callback(tmp2(tmp3[27]).SceneLoadingIndicator, {});
   } else if (0 === memo1.length) {
-    obj = { children: null };
     obj = { onPauseInvites: null, invitesDisabled: null, invitesDisabledLoading: null };
     obj[0] = callback1;
     obj[1] = hasItem;
@@ -204,7 +200,7 @@ let closure_15 = createCacheKey.createStyles({ list: { paddingTop: 8 }, content:
 const pause_invites = "pause_invites";
 importDefaultResult = new importDefaultResult({ code: "pause_invites" });
 let closure_18 = {};
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalInstantInvites.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalInstantInvites.tsx");
 
 export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
   guildId = guildId.guildId;
@@ -215,7 +211,6 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
   [][0] = closure_9;
   let tmp6 = null;
   if (null != stateFromStores) {
-    obj = { children: null };
     obj = { guild: null, invites: null, contentContainerStyle: null, showChannel: true };
     obj[0] = stateFromStores;
     obj[1] = tmp5;

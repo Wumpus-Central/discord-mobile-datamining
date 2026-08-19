@@ -4,25 +4,24 @@ import importAllResult from "../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { EXPRESSION_FOOTER_HEIGHT } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
-let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: null, emptyStateImage: null };
-obj = { color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj = { color: ThemesDefault.colors.TEXT_SUBTLE };
 obj[1] = obj;
-createCacheKey = { marginBottom: ThemesDefault.space.PX_8, marginTop: 0 };
+const createCacheKey = { marginBottom: ThemesDefault.space.PX_8, marginTop: 0 };
 obj[2] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function StickerPickerListEmptyState(insetBottom) {
   ({ inActionSheet, insetTop } = insetBottom);
   insetBottom = insetBottom.insetBottom;
   const items = [insetBottom, insetTop];
-  const memo = importAllResult.useMemo(() => ({ marginBottom: insetBottom + closure_1_5, marginTop: insetTop, flex: 1 }), items);
+  const memo = importAllResult.useMemo(() => ({ marginBottom: insetBottom + EXPRESSION_FOOTER_HEIGHT, marginTop: insetTop, flex: 1 }), items);
   let obj = insetTop(9387);
   const modalDismissGuardRefreshControl = obj.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp3(6952).BottomSheetScrollView;
+    let BottomSheetScrollView = insetTop(6952).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
@@ -33,7 +32,7 @@ const memoResult = importAllResult.memo(function StickerPickerListEmptyState(ins
   }
   obj[2] = tmp7;
   obj = { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null };
-  const intl = tmp3(1236).intl;
+  const intl = insetTop(1236).intl;
   obj[0] = intl.string(insetTop(1236).t.jyiGfc);
   ({ emptyStateBody: obj3[1], emptyStateContainer: obj3[2], emptyStateImage: obj3[3] } = callback());
   obj[4] = insetBottom(10248);
@@ -41,6 +40,6 @@ const memoResult = importAllResult.memo(function StickerPickerListEmptyState(ins
   obj[3] = jsx(insetTop(1297).RefreshEmptyState, { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null });
   return <BottomSheetScrollView body={null} bodyStyle={null} containerStyle={null} imageStyle={null} source={null} titleStyle={null} />;
 });
-const result = require("set").fileFinishedImporting("modules/stickers/native/StickerPickerListEmptyState.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stickers/native/StickerPickerListEmptyState.tsx");
 
 export default memoResult;

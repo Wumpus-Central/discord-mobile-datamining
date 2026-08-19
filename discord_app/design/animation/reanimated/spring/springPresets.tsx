@@ -1,7 +1,7 @@
 // discord_app/design/animation/reanimated/spring/springPresets.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
+const result = obj132.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
 
 export const SUBTLE_SPRING = { mass: 1, damping: 27, stiffness: 300 };
 export const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };

@@ -1,12 +1,12 @@
 // discord_app/modules/notifications/HabitualDNDStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import closure_3 from "../../stores/SelfPresenceStore.tsx";
+import filterPlayingActivities from "../../stores/SelfPresenceStore.tsx";
 import { StatusTypes } from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 let closure_5 = [];
 let c6 = false;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -45,23 +45,23 @@ const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
       if ("0" === StatusExpiresAtSetting.getSetting()) {
         const _Date = Date;
         arr = arr.push(Date.now());
-        const found = arr.filter((arg0) => {
+        const found = arr.filter((item, index) => {
           const timestamp = Date.now();
-          return arg0 > timestamp - 5 * callback(687).Millis.DAY;
+          return item > timestamp - 5 * callback(687).Millis.DAY;
         });
         arr = found;
         let someResult = found.length >= 4;
         if (someResult) {
-          someResult = arr.some((arg0) => {
+          someResult = arr.some((item, index) => {
             const timestamp = Date.now();
-            return arg0 < timestamp - 3 * callback(table[2]).Millis.DAY;
+            return item < timestamp - 3 * callback(table[2]).Millis.DAY;
           });
         }
         if (someResult) {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
             callback(709).dispatch({ type: "HABITUAL_DND_CLEAR" });
-          }, 15 * setDefault.Millis.SECOND);
+          }, 15 * obj132Default.Millis.SECOND);
         }
       }
     }
@@ -70,15 +70,15 @@ const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
   HABITUAL_DND_CLEAR: function handleDNDClear() {
     let someResult = arr.length >= 4;
     if (someResult) {
-      someResult = arr.some((arg0) => {
+      someResult = arr.some((item, index) => {
         const timestamp = Date.now();
-        return arg0 < timestamp - 3 * callback(table[2]).Millis.DAY;
+        return item < timestamp - 3 * callback(table[2]).Millis.DAY;
       });
     }
     c6 = someResult;
     arr = [];
   }
 });
-const result = require("set").fileFinishedImporting("modules/notifications/HabitualDNDStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/HabitualDNDStore.tsx");
 
 export default habitualDNDStore;

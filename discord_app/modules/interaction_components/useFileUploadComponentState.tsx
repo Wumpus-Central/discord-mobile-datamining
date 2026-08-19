@@ -1,10 +1,10 @@
 // discord_app/modules/interaction_components/useFileUploadComponentState.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { DraftType } from "../../stores/DraftStore.tsx";
-import closure_5 from "../../stores/UploadAttachmentStore.tsx";
+import map from "../../stores/UploadAttachmentStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/interaction_components/useFileUploadComponentState.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/useFileUploadComponentState.tsx");
 
 export const useFileUploadComponentState = function useFileUploadComponentState(maxValues) {
   const componentStateContext = state(uploadIds[3]).useComponentStateContext();
@@ -18,27 +18,27 @@ export const useFileUploadComponentState = function useFileUploadComponentState(
   uploadIds = uploads.useMemo(() => {
     let type;
     if (state != null) {
-      type = tmp.type;
+      type = state.type;
     }
     return type === state(uploadIds[5]).ComponentType.FILE_UPLOAD ? state.uploadIds : [];
   }, items);
   uploads = setUploadIds.getUploads(channelId, currentUploads.InteractionModal);
   const items1 = [uploadIds, uploads];
   currentUploads = uploads.useMemo(() => {
-    const mapped = uploadIds.map((arg0) => {
-      closure_0 = arg0;
-      return closure_3.find((id) => id.id === closure_0);
+    const mapped = uploadIds.map((item, index) => {
+      closure_0 = item;
+      return closure_3.find((item, index) => item.id === closure_0);
     });
-    return mapped.filter((arg0) => null != arg0);
+    return mapped.filter((item, index) => null != item);
   }, items1);
   const items2 = [executeStateUpdate];
   setUploadIds = uploads.useCallback((uploadIds) => executeStateUpdate({ type: state(uploadIds[5]).ComponentType.FILE_UPLOAD, uploadIds }), items2);
   const items3 = [uploadIds, currentUploads, setUploadIds];
   const effect = uploads.useEffect(() => {
     if (uploadIds.length > currentUploads.length) {
-      setUploadIds(uploadIds.filter((arg0) => {
-        closure_0 = arg0;
-        return closure_4.some((id) => id.id === closure_0);
+      setUploadIds(uploadIds.filter((item, index) => {
+        closure_0 = item;
+        return closure_4.some((item, index) => item.id === closure_0);
       }));
     }
   }, items3);

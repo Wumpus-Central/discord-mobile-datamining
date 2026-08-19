@@ -1,10 +1,10 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertPending.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertPending.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertPending.tsx");
 
 export default function MemberVerificationAlertPending(guildId) {
   guildId = guildId.guildId;
@@ -15,8 +15,8 @@ export default function MemberVerificationAlertPending(guildId) {
     if (onClose != null) {
       tmp();
     }
-    let obj = guildId(closure_1_2[2]);
-    obj = { guildId };
+    guildId(dependencyMap[2]);
+    const obj = { guildId };
     const result = obj.openMemberVerificationCancelPendingAlert(obj);
   }, items);
   let obj = {};
@@ -26,7 +26,6 @@ export default function MemberVerificationAlertPending(guildId) {
   obj.header = intl.string(guildId(1236).t.zhfXbs);
   const intl2 = guildId(1236).intl;
   obj.subtitle = intl2.string(guildId(1236).t["SRM/e/"]);
-  obj = { children: null };
   obj = { variant: "secondary", text: null, onPress: null };
   const intl3 = guildId(1236).intl;
   obj[1] = intl3.string(guildId(1236).t.f293OM);

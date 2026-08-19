@@ -1,4 +1,5 @@
 // discord_app/modules/user_profile/UserProfileSettingsStore.tsx
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import INVITE from "../routing/RouteConstants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
@@ -6,7 +7,6 @@ import date from "../favorites/FavoritesConstants.tsx";
 import ANALYTICS_NAME from "../notifications_inbox/NotificationsInboxConstants.tsx";
 import useBioMaxLength from "experiments/BioMaxLengthExperiment.tsx";
 import ME from "../../Constants.tsx";
-import set from "../../../_runtime/00002_set.js";
 
 function handleFormOpen() {
   const OPEN = FormStates.OPEN;
@@ -14,7 +14,6 @@ function handleFormOpen() {
 }
 function handleReset() {
   closure_9 = {};
-  closure_13 = {};
   closure_10 = obj;
   CLOSED = FormStates.CLOSED;
   closure_13 = {};
@@ -25,7 +24,7 @@ let closure_5 = {};
 let obj = {};
 let closure_7 = {};
 let items = [...INVITE.PSEUDO_GUILD_IDS, date.FAVORITES_RAW_GUILD_ID, ANALYTICS_NAME.NOTIFICATIONS_INBOX_RAW_GUILD_ID];
-let set = new Set(items);
+const set = new Set(items);
 let closure_9 = {};
 let c11;
 let CLOSED = FormStates.CLOSED;
@@ -35,7 +34,7 @@ class UserProfileSettingsStore extends Store {
 }
 const prototype = UserProfileSettingsStore.prototype;
 Object.defineProperty(prototype, "selectedGuildId", {
-  get: function selectedGuildId(arg0) {
+  get: function selectedGuildId(callback) {
     return c11;
   },
   set: undefined
@@ -48,7 +47,7 @@ prototype["getErrors"] = function getErrors(arg0) {
   if (arg0 == null) {
     tmp = closure_3;
   }
-  let tmp3 = closure_13[tmp];
+  let tmp3 = table[tmp];
   if (tmp3 == null) {
     tmp3 = closure_7;
   }
@@ -59,7 +58,7 @@ prototype["getPendingChanges"] = function getPendingChanges(closure_0) {
   if (closure_0 == null) {
     tmp = closure_3;
   }
-  let tmp3 = closure_9[tmp];
+  let tmp3 = dependencyMap[tmp];
   if (tmp3 == null) {
     tmp3 = closure_5;
   }
@@ -70,23 +69,23 @@ prototype["getTryItOutChanges"] = function getTryItOutChanges() {
 };
 prototype["hasTryItOutChanges"] = function hasTryItOutChanges() {
   const values = Object.values(obj);
-  return values.some((arg0) => undefined !== arg0);
+  return values.some((item, index) => undefined !== item);
 };
 prototype["hasUnsavedChanges"] = function hasUnsavedChanges() {
   let values = Object.values(closure_9);
-  return values.some((arg0) => {
-    const values = Object.values(arg0);
-    return values.some((arg0) => undefined !== arg0);
+  return values.some((item, index) => {
+    const values = Object.values(item);
+    return values.some((item, index) => undefined !== item);
   });
 };
 prototype["showNotice"] = function showNotice() {
   const self = this;
   let values = Object.values(this.getPendingChanges(closure_3));
-  let someResult = values.some((arg0) => undefined !== arg0);
+  let someResult = values.some((item, index) => undefined !== item);
   if (!someResult) {
     const _Object = Object;
     values = Object.values(self.getPendingChanges(c11));
-    someResult = values.some((arg0) => undefined !== arg0);
+    someResult = values.some((item, index) => undefined !== item);
   }
   return someResult;
 };
@@ -97,9 +96,7 @@ prototype["canSubmit"] = function canSubmit() {
   for (const item10016 of items) {
     let pendingChanges = self.getPendingChanges(item10016);
     if (undefined !== pendingChanges.pendingBio) {
-      let tmp5 = pendingChanges;
       if (tmp4.pendingBio.length > tmp2) {
-        let tmp6 = obj;
         obj.return();
         let flag = false;
         return false;
@@ -190,9 +187,9 @@ obj = {
     if (guildId == null) {
       guildId = closure_3;
     }
-    const merged1 = Object.assign(closure_9[guildId]);
+    const merged1 = Object.assign(dependencyMap[guildId]);
     const merged2 = Object.assign(merged);
-    closure_9[tmp3] = {};
+    dependencyMap[tmp3] = {};
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function handleSetTryItOutAvatar(avatar) {
     obj = {};
@@ -242,8 +239,8 @@ obj = {
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function handleResetPendingAccountChanges() {
     const entries = Object.entries(closure_9);
-    closure_9 = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    closure_9 = Object.fromEntries(entries.map((item, index) => {
+      [tmp, tmp2] = item;
       const items = [tmp, ];
       obj = {};
       const merged = Object.assign(tmp2);
@@ -259,8 +256,8 @@ obj = {
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function handleResetPendingProfileChanges() {
     const entries = Object.entries(closure_9);
-    closure_9 = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    closure_9 = Object.fromEntries(entries.map((item, index) => {
+      [tmp, tmp2] = item;
       const items = [tmp, ];
       obj = {};
       const merged = Object.assign(tmp2);
@@ -295,9 +292,9 @@ obj = {
       return false;
     } else {
       obj = {};
-      const merged = Object.assign(dependencyMap[tmp]);
+      const merged = Object.assign(dependencyMap[closure_3]);
       obj.pendingLegacyUsernameDisabled = undefined;
-      dependencyMap[tmp] = obj;
+      dependencyMap[closure_3] = obj;
     }
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function handleResetPendingPrimaryGuildChanges() {
@@ -313,9 +310,9 @@ obj = {
       return false;
     } else {
       obj = {};
-      const merged = Object.assign(dependencyMap[tmp]);
+      const merged = Object.assign(dependencyMap[closure_3]);
       obj.pendingPrimaryGuildId = undefined;
-      dependencyMap[tmp] = obj;
+      dependencyMap[closure_3] = obj;
     }
   },
   USER_PROFILE_UPDATE_FAILURE: function handleProfileUpdateFailure(arg0) {
@@ -332,7 +329,7 @@ obj = {
   LOGOUT: handleReset
 };
 const userProfileSettingsStore = new UserProfileSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/user_profile/UserProfileSettingsStore.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/UserProfileSettingsStore.tsx");
 
 export default userProfileSettingsStore;
 export const IGNORE_GUILD_IDS = set;

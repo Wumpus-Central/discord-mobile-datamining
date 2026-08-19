@@ -5,19 +5,18 @@ import keysSorter from "../../../_runtime/04376_keysSorter.js";
 import _httpGetWithCountryCodeQuery from "../../utils/StoreUtils.tsx";
 import RewardRequirementType from "SocialLayerStorefrontTypes.tsx";
 import useSKUPrice from "../storefront/StorefrontUtils.tsx";
-import closure_3 from "../applications/ApplicationStore.tsx";
+import addApplication from "../applications/ApplicationStore.tsx";
 import { WishlistRecommendationReason as closure_4 } from "../wishlists/records/WishlistRecommendationRecord.tsx";
-import closure_5 from "../../records/ApplicationRecord.tsx";
-import closure_6 from "../../stores/GuildStore.tsx";
-import closure_7 from "SocialLayerStorefrontStore.tsx";
+import createExecutable from "../../records/ApplicationRecord.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import handleUserSettingsStoreUpdate from "SocialLayerStorefrontStore.tsx";
 import STOREFRONT_MARKETING_GUILD_ID from "SocialLayerStorefrontConstants.tsx";
 import ME from "../../Constants.tsx";
 import { CollectibleShopTab } from "../collectibles/CollectiblesShopConstants.tsx";
 import { CurrencyCodes } from "../../../discord_common/js/shared/Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
 
-require = arg1;
+require = fn;
 function getPrice(price) {
   if (null != price.prices[arg1]) {
     if (price.prices[arg1].countryPrices.prices.length > 0) {
@@ -36,8 +35,8 @@ function getPrice(price) {
   countryPrices = null;
   if (null != price.prices[constants2.DEFAULT]) {
     countryPrices = null;
-    if (price.prices[tmp.DEFAULT].countryPrices.prices.length > 0) {
-      countryPrices = price.prices[tmp.DEFAULT].countryPrices;
+    if (price.prices[constants2.DEFAULT].countryPrices.prices.length > 0) {
+      countryPrices = price.prices[constants2.DEFAULT].countryPrices;
     }
   }
 }
@@ -48,7 +47,7 @@ function hasSocialLayerStorefront(guild) {
   } else if ("type" in guild) {
     return false;
   } else {
-    let applicationIdFromGuildId = obj.getApplicationIdFromGuildId(guild.id);
+    let applicationIdFromGuildId = store2.getApplicationIdFromGuildId(guild.id);
     if (applicationIdFromGuildId == null) {
       let length;
       if (guild != null) {
@@ -63,7 +62,7 @@ function hasSocialLayerStorefront(guild) {
       }
       applicationIdFromGuildId = first;
     }
-    const storefrontApplicationIds = obj.getStorefrontApplicationIds();
+    const storefrontApplicationIds = store2.getStorefrontApplicationIds();
     const tmp5 = null == applicationIdFromGuildId || !storefrontApplicationIds.has(applicationIdFromGuildId);
     let tmp6 = !tmp5;
     if (tmp5) {
@@ -125,7 +124,6 @@ function transformSlayerStorefrontPromotionServer(id) {
   if (null != checkout) {
     ({ label: obj4[0], tooltip: obj4[1], icon: obj4[2] } = checkout);
     tmp4 = { label: null, tooltip: null, icon: null };
-    obj1 = { label: null, tooltip: null, icon: null };
   }
   obj[5] = tmp4;
   const vc_stream = id.vc_stream;
@@ -141,7 +139,7 @@ function transformSlayerStorefrontPromotionServer(id) {
     reward_requirements = [];
   }
   const mapped = reward_requirements.map(transformRewardRequirementServer);
-  obj[7] = mapped.filter((arg0) => null != arg0);
+  obj[7] = mapped.filter((item, index) => null != item);
   return obj;
 }
 function isSubscriptionRewardRequirement(type) {
@@ -157,7 +155,6 @@ function getSKUShareURL(arg0, applicationId) {
     let tmp3 = pathname.indexOf(closure_13.COLLECTIBLES_SHOP) >= 0;
     if (tmp3) {
       tmp3 = tab === CollectibleShopTab.GAME_SHOPS && applicationId === applicationId.applicationId && true;
-      const tmp2 = tab === CollectibleShopTab.GAME_SHOPS && applicationId === applicationId.applicationId && true;
     }
     if (!tmp3) {
       const _location = location;
@@ -185,8 +182,8 @@ function getCountryPrices(arg0, arg1) {
   countryPrices = null;
   if (null != arg0.prices[constants2.DEFAULT]) {
     countryPrices = null;
-    if (arg0.prices[tmp.DEFAULT].countryPrices.prices.length > 0) {
-      countryPrices = arg0.prices[tmp.DEFAULT].countryPrices;
+    if (arg0.prices[constants2.DEFAULT].countryPrices.prices.length > 0) {
+      countryPrices = arg0.prices[constants2.DEFAULT].countryPrices;
     }
   }
 }
@@ -212,13 +209,12 @@ function isOnCollectiblesShopGameShopPage(arr) {
     }
     if (tmp4) {
       tmp4 = null == arg3 || skuId === arg3;
-      const tmp8 = null == arg3 || skuId === arg3;
     }
     tmp2 = tmp4;
   }
   return tmp2;
 }
-let result = require("set").fileFinishedImporting("modules/slayer_storefront/SlayerStorefrontUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/slayer_storefront/SlayerStorefrontUtils.tsx");
 
 export const LARGE_ASSET_FORMAT = str;
 export const hasPrice = function hasPrice(price) {
@@ -252,35 +248,24 @@ export const getOrderedStorefrontSkuIds = function getOrderedStorefrontSkuIds(ar
   const nextResult = iter.next();
   while (iter !== undefined) {
     let skuIds = nextResult.skuIds;
-    let tmp3 = skuIds;
-    let tmp4 = skuIds;
     let tmp2 = nextResult;
     for (const item10024 of skuIds) {
-      let tmp5 = item10024;
       if (!set.has(item10024)) {
-        let tmp6 = item10024;
-        let addResult = set.add(tmp5);
-        let arr = items.push(tmp5);
+        let addResult = set.add(item10024);
+        let arr = items.push(item10024);
       }
       continue;
     }
-    let tmp9 = nextResult;
     let sections = tmp2.sections;
     if (sections == null) {
       sections = [];
     }
-    let tmp10 = sections;
-    let tmp11 = sections;
     for (const item10040 of sections) {
       let skuIds2 = item10040.skuIds;
-      let tmp12 = skuIds2;
-      let tmp13 = skuIds2;
       for (const item10046 of skuIds2) {
-        let tmp14 = item10046;
         if (!set.has(item10046)) {
-          let tmp15 = item10046;
-          let addResult1 = set.add(tmp14);
-          arr = items.push(tmp14);
+          let addResult1 = set.add(item10046);
+          arr = items.push(item10046);
         }
         continue;
       }
@@ -384,22 +369,22 @@ export const transformSlayerApplicationStorefrontServer = function transformSlay
   }
   obj[1] = tmp;
   ({ application_id: obj[2], title: obj[3], logo_asset_id: obj[4], light_theme_logo_asset_id: obj[5], pages } = body);
-  obj[6] = pages.map((title) => {
-    let obj = { title: title.title, leaderboard: null, skuIds: null, sections: null };
+  obj[6] = pages.map((item, index) => {
+    let obj = { title: item.title, leaderboard: null, skuIds: null, sections: null };
     let tmp;
-    if (null != title.leaderboard) {
+    if (null != item.leaderboard) {
       obj = { title: null, description: null, backgroundImageAssetId: null };
-      obj[0] = title.leaderboard.title;
-      obj[1] = title.leaderboard.description;
-      obj[2] = title.leaderboard.background_image_asset_id;
+      obj[0] = item.leaderboard.title;
+      obj[1] = item.leaderboard.description;
+      obj[2] = item.leaderboard.background_image_asset_id;
       tmp = obj;
     }
     obj[1] = tmp;
-    obj[2] = title.sku_ids;
+    obj[2] = item.sku_ids;
     let mapped;
-    if (null != title.sections) {
-      const sections = title.sections;
-      mapped = sections.map((title) => ({ title: title.title, skuIds: title.sku_ids }));
+    if (null != item.sections) {
+      const sections = item.sections;
+      mapped = sections.map((item, index) => ({ title: item.title, skuIds: item.sku_ids }));
     }
     obj[3] = mapped;
     return obj;
@@ -413,11 +398,8 @@ export const transformSlayerApplicationStorefrontServer = function transformSlay
   let result;
   if (null != body.storefront_pricing) {
     result = useSKUPrice.transformStorefrontPricesServer(body.storefront_pricing);
-    const obj4 = useSKUPrice;
   }
   obj[9] = result;
-  const obj3 = applyDefault;
-  const tmp8 = importDefault;
   let promotions = body.promotions;
   if (promotions == null) {
     promotions = {};
@@ -453,11 +435,10 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
           obj = { primaryIconAsset: "r", primaryIconLabel: "accessibilityRole" };
         } else {
           const obj3 = _httpGetWithCountryCodeQuery;
-          const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
           obj = { primaryIconAsset: null, primaryIconLabel: null };
-          obj[0] = toURLSafeResult;
+          obj[0] = isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
           obj[1] = first.label;
-          const obj2 = isDiscordProxiedAssetUrlDefault;
+          const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
         }
         return obj;
       }
@@ -465,7 +446,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
   }
   return { primaryIconAsset: "r", primaryIconLabel: "accessibilityRole" };
 };
-export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
+export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -475,14 +456,14 @@ export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   if (undefined !== size) {
     num = size;
   }
-  if (null != error) {
-    if (null != error.thumbnailAssetId) {
+  if (null != value) {
+    if (null != value.thumbnailAssetId) {
       const obj3 = _httpGetWithCountryCodeQuery;
-      return isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(error.applicationId, error.thumbnailAssetId, num, "webp"));
+      return isDiscordProxiedAssetUrlDefault.toURLSafe(obj3.getAssetURL(value.applicationId, value.thumbnailAssetId, num, "webp"));
     }
   }
 };
-export const getCardImageURL = function getCardImageURL(sku, arg1) {
+export const getCardImageURL = function getCardImageURL(stateFromStores, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -492,12 +473,12 @@ export const getCardImageURL = function getCardImageURL(sku, arg1) {
   if (undefined !== size) {
     num = size;
   }
-  if (sku != null) {
-    const applicationId = sku.applicationId;
+  if (stateFromStores != null) {
+    const applicationId = stateFromStores.applicationId;
   }
   let cardImageAssetId;
-  if (sku != null) {
-    const tenantMetadata = sku.tenantMetadata;
+  if (stateFromStores != null) {
+    const tenantMetadata = stateFromStores.tenantMetadata;
     if (tenantMetadata != null) {
       const socialLayer = tenantMetadata.socialLayer;
       if (socialLayer != null) {
@@ -507,8 +488,8 @@ export const getCardImageURL = function getCardImageURL(sku, arg1) {
   }
   if (cardImageAssetId == null) {
     let thumbnailAssetId;
-    if (sku != null) {
-      thumbnailAssetId = sku.thumbnailAssetId;
+    if (stateFromStores != null) {
+      thumbnailAssetId = stateFromStores.thumbnailAssetId;
     }
     cardImageAssetId = thumbnailAssetId;
   }
@@ -570,14 +551,14 @@ export const getHasWishlistOrPopularRecommendations = function getHasWishlistOrP
     let obj = { hasWishlist: false, hasPopular: false };
   } else {
     obj = { hasWishlist: null, hasPopular: null };
-    obj[0] = arr.some((arg0) => {
-      let obj = dependencyMap[arg0.id];
+    obj[0] = arr.some((item, index) => {
+      let obj = dependencyMap[item.id];
       if (obj == null) {
         obj = {};
       }
       const entries = Object.entries(obj);
-      return entries.some((arg0) => {
-        [tmp, tmp2] = arg0;
+      return entries.some((item, index) => {
+        [tmp, tmp2] = item;
         let hasItem = tmp2 === closure_1_4.WISHLIST;
         if (hasItem) {
           hasItem = set.has(tmp);
@@ -585,13 +566,13 @@ export const getHasWishlistOrPopularRecommendations = function getHasWishlistOrP
         return hasItem;
       });
     });
-    obj[1] = arr.some((arg0) => {
+    obj[1] = arr.some((item, index) => {
       let everyResult = null == tmp;
       if (!everyResult) {
         const _Object = Object;
         const entries = Object.entries(tmp);
-        everyResult = entries.every((arg0) => {
-          [tmp, tmp2] = arg0;
+        everyResult = entries.every((item, index) => {
+          [tmp, tmp2] = item;
           let hasItem = tmp2 === closure_1_4.RECOMMENDATION;
           if (hasItem) {
             hasItem = set.has(tmp);
@@ -643,7 +624,6 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
     let tmp4 = tab === CollectibleShopTab.GAME_SHOPS && applicationId === applicationId.applicationId;
     if (tmp4) {
       tmp4 = null == skuId || skuId2 === skuId;
-      const tmp6 = null == skuId || skuId2 === skuId;
     }
     tmp2 = tmp4;
   }
@@ -659,9 +639,9 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
 export const useGetSocialLayerStorefrontGuildIdAndApplication = function useGetSocialLayerStorefrontGuildIdAndApplication(applicationId) {
   const _require = applicationId;
   const items = [closure_7];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
-  const obj = _initialize;
-  const application = _useGetOrFetchApplications.useGetOrFetchApplication(applicationId);
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_7.getGuildIdFromApplicationId(closure_0));
+  const obj = initialize;
+  const application = require("../applications/useGetOrFetchApplications.tsx").useGetOrFetchApplication(applicationId);
   let guildId = stateFromStores;
   if (stateFromStores == null) {
     guildId = undefined;
@@ -693,11 +673,11 @@ export const getSocialLayerStorefrontApplicationId = function getSocialLayerStor
 export const useGetSocialLayerStorefrontApplicationId = function useGetSocialLayerStorefrontApplicationId(arg0) {
   const _require = arg0;
   const items = [closure_7];
-  let stateFromStores = _initialize.useStateFromStores(items, () => closure_1_7.getApplicationIdFromGuildId(closure_0));
-  const obj = _initialize;
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_7.getApplicationIdFromGuildId(closure_0));
+  const obj = initialize;
   const items1 = [closure_6];
   const items2 = [arg0];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => closure_1_6.getGuild(closure_0), items2);
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_6.getGuild(closure_0), items2);
   if (stateFromStores == null) {
     let length;
     if (stateFromStores1 != null) {

@@ -1,36 +1,31 @@
 // discord_app/modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../design/animation/reanimated/timing/timing.tsx";
-import { timingNone } from "../../../design/animation/reanimated/timing/timingPresets.tsx";
-import { PlusLargeIcon } from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
-import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
 import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
 let closure_4 = { code: "function MediaKeyboardButtonIconTsx1(){const{keyboard,KeyboardTypes,chatInputFloating,withTiming,timingStandard}=this.__closure;const isActive=keyboard===KeyboardTypes.MEDIA||chatInputFloating&&keyboard===KeyboardTypes.APP_LAUNCHER;return{transform:[{rotate:withTiming(isActive?'45deg':'0deg',timingStandard)}]};}" };
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardButtonIcon.tsx");
 
 export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
-    let _require;
     let chatInputFloating;
     const merged = Object.assign(arg0, undefined);
     const tmp6 = chatInputFloating(4239)();
-    _require = tmp6;
-    let obj = _useIsMobileVisualRefreshExperimentEnabled;
+    const _require = tmp6;
+    let obj = useIsMobileVisualRefreshExperimentEnabled;
     chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "MediaKeyboardButtonIcon" }).chatInputFloating;
-    obj1 = _ReanimatedRexport;
+    obj1 = ReanimatedRexport;
     const fn = function s() {
-      let tmp4 = callback === callback(closure_1_2[5]).KeyboardTypes.MEDIA;
+      let tmp4 = callback === callback(dependencyMap[5]).KeyboardTypes.MEDIA;
       if (!tmp4) {
         let tmp5 = chatInputFloating;
         if (chatInputFloating) {
-          tmp5 = callback === tmp2(tmp3[5]).KeyboardTypes.APP_LAUNCHER;
+          tmp5 = callback === callback(dependencyMap[5]).KeyboardTypes.APP_LAUNCHER;
         }
         tmp4 = tmp5;
       }
@@ -38,18 +33,17 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
       if (tmp4) {
         str = "45deg";
       }
-      let obj = { transform: null };
-      obj = { rotate: callback(closure_1_2[6]).withTiming(str, tmp2(tmp3[7]).timingStandard) };
+      const obj = { rotate: callback(dependencyMap[6]).withTiming(str, callback(dependencyMap[7]).timingStandard) };
       const items = [obj];
       obj[0] = items;
       return obj;
     };
     obj = { keyboard: null, KeyboardTypes: null, chatInputFloating: null, withTiming: null, timingStandard: null };
     obj[0] = tmp6;
-    obj[1] = _KeyboardTypes.KeyboardTypes;
+    obj[1] = require("../../keyboard/native/KeyboardTypes.tsx").KeyboardTypes;
     obj[2] = chatInputFloating;
-    obj[3] = _CONFIG_NEVER_ANIMATE_TIMING.withTiming;
-    obj[4] = _timingNone.timingStandard;
+    obj[3] = require("../../../design/animation/reanimated/timing/timing.tsx").withTiming;
+    obj[4] = require("../../../design/animation/reanimated/timing/timingPresets.tsx").timingStandard;
     fn.__closure = obj;
     fn.__workletHash = 12686941860647;
     fn.__initData = closure_4;
@@ -58,7 +52,7 @@ export const MediaKeyboardButtonIcon = function MediaKeyboardButtonIcon(arg0) {
     obj[0] = animatedStyle;
     obj1 = {};
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(_PlusLargeIcon.PlusLargeIcon, {});
+    obj[1] = jsx(require("../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx").PlusLargeIcon, {});
     return jsx(chatInputFloating(4115).View, { style: null, children: null });
   }
 };

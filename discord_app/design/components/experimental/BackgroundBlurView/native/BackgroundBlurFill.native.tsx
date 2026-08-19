@@ -2,12 +2,12 @@
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import animatedComponentDefault from "../../../../../modules/visual_effect_view/native/VisualEffectViewAnimated.tsx";
 import isBlurDisabledDefault from "../../../../../modules/visual_effect_view/native/VisualEffectView.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { StyleSheet } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import hexToRgba from "../../../../../utils/ColorUtils.tsx";
 
-const require = arg1;
+const require = fn;
 const BLACK = ThemesDefault.unsafe_rawColors.BLACK;
 let closure_6 = hexToRgba.hexWithOpacity(BLACK, 0);
 let closure_7 = hexToRgba.hexWithOpacity(BLACK, 0.2);
@@ -15,7 +15,7 @@ let closure_8 = hexToRgba.hexWithOpacity(BLACK, 0.4);
 let closure_9 = hexToRgba.hexWithOpacity(BLACK, 0.5);
 let closure_10 = { code: "function BackgroundBlurFillNativeTsx1(){const{withSpring,interpolateColor,pressed,fallbackColor,fallbackColorPressed,ON_PRESS_SPRING}=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[fallbackColor,fallbackColorPressed]),ON_PRESS_SPRING,'animate-always')};}" };
 let closure_11 = { code: "function BackgroundBlurFillNativeTsx2(){const{shouldUseFallback,withSpring,interpolateColor,pressed,restingTint,pressedTint,ON_PRESS_SPRING}=this.__closure;return{tintColor:shouldUseFallback?undefined:withSpring(interpolateColor(pressed.get(),[0,1],[restingTint,pressedTint]),ON_PRESS_SPRING,'animate-always')};}" };
-const result = require("set").fileFinishedImporting("design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx");
 
 export const BlurTheme = require("isBlurDisabled").BlurTheme;
 export const BlurStyle = require("isBlurDisabled").BlurStyle;
@@ -37,11 +37,9 @@ export const BackgroundBlurFill = function BackgroundBlurFill(arg0) {
   }
   const items1 = [blurTheme];
   if (tintColor == null) {
-    tintColor = obj2.useMemo(() => "light" === blurTheme ? closure_1_6 : closure_1_8, items1);
+    tintColor = React.useMemo(() => "light" === blurTheme ? closure_1_6 : closure_1_8, items1);
   }
   obj = blurTheme(4104);
-  obj2 = React;
-  const tmp = blurTheme;
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(ThemesDefault.colors.BACKGROUND_SCRIM, blurTheme);
   }
@@ -68,7 +66,7 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
   }
   const items1 = [blurTheme];
   if (tintColor == null) {
-    tintColor = obj2.useMemo(() => "light" === blurTheme ? closure_1_6 : closure_1_8, items1);
+    tintColor = React.useMemo(() => "light" === blurTheme ? closure_1_6 : closure_1_8, items1);
   }
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(ThemesDefault.colors.BACKGROUND_SCRIM, blurTheme);
@@ -76,10 +74,6 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
   obj = { blurTheme, blurStyle, blurAmount, tintColor, android_fallbackColor, android_blurTargetViewNativeId, style: items2 };
   items2 = [StyleSheet.absoluteFill, style];
   let tmp6 = null != animatedProps;
-  obj2 = React;
-  const tmp = blurTheme;
-  const tmp3 = importDefault;
-  const tmp4 = jsx;
   tmpResult = blurTheme(4097);
   if (tmp6) {
     obj = { animatedProps: null };
@@ -87,7 +81,7 @@ export const BackgroundBlurFillAnimated = function BackgroundBlurFillAnimated(ar
     tmp6 = obj;
   }
   const merged = Object.assign(tmp6);
-  return tmp4(animatedComponentDefault, obj);
+  return jsx(animatedComponentDefault, { blurTheme, blurStyle, blurAmount, tintColor, android_fallbackColor, android_blurTargetViewNativeId, style: items2 });
 };
 export const BackgroundBlurFillWithPress = function BackgroundBlurFillWithPress(style) {
   ({ blurTheme, pressed } = style);

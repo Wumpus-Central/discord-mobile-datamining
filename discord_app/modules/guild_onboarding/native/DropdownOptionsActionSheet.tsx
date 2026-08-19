@@ -1,15 +1,21 @@
 // discord_app/modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx
 import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import Button2 from "../../../design/components/Button/native/Button.native.tsx";
+import RedesignBottomSheetTitleHeaderBase from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
+import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import BottomSheetModal from "../../../../_runtime/06952_BottomSheetModal.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../emojis/EmojiStore.tsx";
-import closure_6 from "../GuildOnboardingPromptsStore.tsx";
+import getEmojiToGroupId from "../../emojis/EmojiStore.tsx";
+import handleUpdate from "../GuildOnboardingPromptsStore.tsx";
 import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function DropdownOptionRow(option) {
   option = option.option;
   ({ responses, onSelect } = option);
@@ -54,8 +60,8 @@ function DropdownOptionRow(option) {
       obj1 = { id: null, animated: null, size: null };
       ({ id: obj5[0], animated: obj5[1] } = stateFromStores);
       obj1[2] = EMOJI_URL_BASE_SIZE;
-      emojiURL = tmp12(tmp3[9]).getEmojiURL(obj1);
-      const tmp12Result = tmp12(tmp3[9]);
+      emojiURL = onSelect(tmp3[9]).getEmojiURL(obj1);
+      const tmp12Result = onSelect(tmp3[9]);
     }
     obj[2] = emojiURL;
     const emoji3 = option.emoji;
@@ -68,9 +74,7 @@ function DropdownOptionRow(option) {
     }
     obj[3] = str;
     obj[1] = callback(onSelect(tmp3[8]), obj);
-    let leading = tmp10(View, obj);
-    const tmp11 = View;
-    tmp12 = onSelect;
+    let leading = callback(View, obj);
     const tmp13 = onSelect(tmp3[8]);
   } else {
     let emoji2 = option.emoji;
@@ -100,11 +104,10 @@ function DropdownOptionRow(option) {
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24 }, newBadge: { fontWeight: "bold" }, labelRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, closeButtonWrapper: { marginTop: 16, marginHorizontal: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/DropdownOptionsActionSheet.tsx");
 
 export default function DropdownOptionsActionSheet(arg0) {
   ({ guildId: require, promptId: importDefault, canBeNew: dependencyMap, onSelect: closure_3 } = arg0);
-  closure_4 = undefined;
   let obj = defaultAreStatesEqual;
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getOnboardingPrompt(closure_1));
@@ -115,31 +118,31 @@ export default function DropdownOptionsActionSheet(arg0) {
     return null;
   } else {
     obj = { title: null };
-    const intl = tmp3(1236).intl;
-    obj[0] = intl.string(tmp3(1236).t.E2ICbC);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.E2ICbC);
     obj = { scrollable: true, header: null, children: null };
-    obj[1] = callback(tmp3(6949).BottomSheetTitleHeader, obj);
+    obj[1] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
     obj1 = { contentContainerStyle: null, children: null };
     const obj2 = { paddingBottom: null };
     obj2[0] = useSafeAreaInsetsDefault().bottom;
     obj1[0] = obj2;
     const obj3 = { accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
-    const intl2 = tmp3(1236).intl;
-    obj3[1] = intl2.string(tmp3(1236).t.E2ICbC);
+    const intl2 = getSystemLocale.intl;
+    obj3[1] = intl2.string(getSystemLocale.t.E2ICbC);
     const options = stateFromStores.options;
-    obj3[2] = options.map((id) => closure_1_8(closure_1_11, { option: id, responses: closure_4, onSelect: closure_3, canBeNew: Boolean(closure_2) }, id.id));
-    const items2 = [callback(tmp3(1297).CardSection, obj3), ];
+    obj3[2] = options.map((item, index) => closure_1_8(DropdownOptionRow, { option: item, responses: closure_4, onSelect: closure_3, canBeNew: Boolean(closure_2) }, item.id));
+    const items2 = [callback(Button.CardSection, obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.closeButtonWrapper;
     const obj5 = { onPress: null, text: null, grow: true };
     obj5[0] = tmp5;
-    const intl3 = tmp3(1236).intl;
-    obj5[1] = intl3.string(tmp3(1236).t.cpT0Cq);
-    obj4[1] = callback(tmp3(4745).Button, obj5);
+    const intl3 = getSystemLocale.intl;
+    obj5[1] = intl3.string(getSystemLocale.t.cpT0Cq);
+    obj4[1] = callback(Button2.Button, obj5);
     items2[1] = callback(closure_4, obj4);
     obj1[1] = items2;
-    obj[2] = callback2(tmp3(6952).BottomSheetScrollView, obj1);
-    return callback(tmp3(6950).BottomSheet, obj);
+    obj[2] = callback2(BottomSheetModal.BottomSheetScrollView, obj1);
+    return callback(Background.BottomSheet, obj);
   }
   tmp = callback3();
 };

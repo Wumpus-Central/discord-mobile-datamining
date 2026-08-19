@@ -3,15 +3,16 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../../../parent_tools/FamilyCenter.messages.js";
+import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import useIsParentalConsentBannerActive from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
 import useParentalConsentWarning from "../../../parent_tools/useParentalConsentWarning.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { FamilyCenterLoading } from "../../family_center/native/UserSettingsFamilyCenter.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
-createToggle = {
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(messagesProxyDefault.RZqaJn);
@@ -37,9 +38,9 @@ createToggle = {
         if (daysRemaining >= 0) {
           obj = { size: "sm", color: null, accessible: true, accessibilityLabel: null };
           obj[1] = ThemesDefault.colors.ICON_FEEDBACK_WARNING;
-          const intl = tmp(1236).intl;
+          const intl = getSystemLocale.intl;
           obj[3] = intl.string(messagesProxyDefault.wucWfE);
-          tmp6 = jsx(tmp(8078).WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
+          tmp6 = jsx(WarningIcon.WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
         }
       }
     }
@@ -50,10 +51,10 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER,
   getComponent() {
-    return FamilyCenterLoading.default;
+    return FamilyCenterLoading /* FamilyCenterLoading */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterSetting.tsx");
 
 export default createToggle;

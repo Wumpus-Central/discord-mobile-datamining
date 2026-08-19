@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/native/EditCollectiblesCTAButton.tsx
 import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
 import { CollectiblesMobileShopScreen as closure_5 } from "../../collectibles/CollectiblesShopConstants.tsx";
 import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_6 } from "../../media_keyboard/native/MediaKeyboardConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 let closure_8 = createCacheKey.createStyles({ buttonRowContainer: { flexGrow: 0, flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 12, height: 48 }, buttonContainer: { position: "absolute", bottom: 0, left: 0, right: 0, marginLeft: 24, marginRight: 24, flexDirection: "column", justifyContent: "flex-end" } });
 let closure_9 = { code: "function EditCollectiblesCTAButtonTsx1(){const{shouldShowButton,APPLY_BUTTON_BOUNCE_DISTANCE,APPLY_BUTTON_SCALE_TRANSITION,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetTranslateY=shouldShowButton.get()?0:APPLY_BUTTON_BOUNCE_DISTANCE;const targetScale=shouldShowButton.get()?1:APPLY_BUTTON_SCALE_TRANSITION;return{transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}]};}" };
@@ -19,17 +19,15 @@ const memoResult = importAllResult.memo((user) => {
   ({ isTryItOut, onApply } = user);
   const analyticsLocations = user.analyticsLocations;
   const analyticsSource = user.analyticsSource;
-  let stateFromStores;
-  let sharedValue;
   isTryItOut = undefined;
   c9 = undefined;
   const tmp = isTryItOut();
   let obj = user(selectedSkuId[7]);
   const items = [analyticsLocations];
-  stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
+  const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
   ({ purchase, product } = currentSkuId(selectedSkuId[8])(selectedSkuId));
   obj1 = user(selectedSkuId[9]);
-  sharedValue = obj1.useSharedValue(false);
+  const sharedValue = obj1.useSharedValue(false);
   let obj2 = onApply;
   const items1 = [selectedSkuId, currentSkuId, sharedValue];
   const effect = onApply.useEffect(() => {
@@ -133,7 +131,6 @@ const memoResult = importAllResult.memo((user) => {
   let tmp15 = null == selectedSkuId;
   if (!tmp15) {
     tmp15 = null != purchase && !result1;
-    const tmp16 = null != purchase && !result1;
   }
   if (!tmp15) {
     let tmp17 = result;
@@ -180,10 +177,10 @@ const memoResult = importAllResult.memo((user) => {
       onApply();
       const obj4 = user(selectedSkuId[14]);
     } else if (c9) {
-      let tmp2Result = tmp2(tmp3[15]);
+      let tmp2Result = user(selectedSkuId[15]);
       const result1 = tmp2Result.navigateToNitroManagement();
     } else {
-      tmp2Result = tmp2(tmp3[16]);
+      tmp2Result = user(selectedSkuId[16]);
       const obj = { analyticsLocations: null, analyticsSource: null, initialProductSkuId: null, screen: null };
       obj[0] = analyticsLocations;
       obj[1] = analyticsSource;
@@ -192,6 +189,7 @@ const memoResult = importAllResult.memo((user) => {
       const result2 = tmp2Result.openCollectiblesShopMobile(obj);
     }
     currentSkuId(selectedSkuId[17]).hideActionSheet();
+    const obj5 = currentSkuId(selectedSkuId[17]);
   }, items3);
   obj1 = { style: items4, animatedProps, children: null };
   items4 = [tmp.buttonContainer, animatedStyle1];
@@ -205,6 +203,6 @@ const memoResult = importAllResult.memo((user) => {
   obj1[2] = sharedValue(currentSkuId(selectedSkuId[9]).View, obj2);
   return sharedValue(currentSkuId(selectedSkuId[9]).View, obj1);
 });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/EditCollectiblesCTAButton.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/EditCollectiblesCTAButton.tsx");
 
 export default memoResult;

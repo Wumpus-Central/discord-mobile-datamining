@@ -1,14 +1,14 @@
 // discord_app/modules/headless_tasks/android/BackgroundSync.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import databaseNameDefault from "../../app_database/system/DatabaseManager.tsx";
-import closure_3 from "../../gateway/GatewayConnectionStore.tsx";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../stores/native/AppStateStore.tsx";
+import _handleConnectionOpen from "../../gateway/GatewayConnectionStore.tsx";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import getState from "../../../stores/native/AppStateStore.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_6 = new timestampDefault("BackgroundSync");
 let tmp = new timestampDefault("BackgroundSync");
-let result = require("set").fileFinishedImporting("modules/headless_tasks/android/BackgroundSync.tsx");
+let result = require("obj132").fileFinishedImporting("modules/headless_tasks/android/BackgroundSync.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
@@ -17,14 +17,12 @@ export default (arg0) => {
   } else {
     if (!tmp) {
       const result = databaseNameDefault.carefullyOpenDatabase(id.getId());
-      const obj2 = databaseNameDefault;
     }
     resolved = new Promise((arg0) => {
       closure_1_6.log("Executing BackgroundSync with ", callback);
-      const obj = callback(closure_1_2[5]);
-      callback(closure_1_2[5]).backgroundSync({}).then(arg0);
+      const obj = callback(dependencyMap[5]);
+      callback(dependencyMap[5]).backgroundSync({}).then(arg0);
     });
-    let obj = connected;
     tmp = connected.isConnected() || connected.isTryingToConnect();
   }
   return resolved;

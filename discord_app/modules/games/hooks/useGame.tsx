@@ -1,28 +1,25 @@
 // discord_app/modules/games/hooks/useGame.tsx
-import setDefault from "../../../utils/Durations.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import obj132Default from "../../../utils/Durations.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
 import importDefaultResult1 from "../GameStore.tsx";
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import "initialize";
 import importDefaultResult from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-initialize = {
+const require = fn;
+const initialize = {
   getQueryId: require("ME").QueryIds.GAME,
-  failureStaleAfter: 15 * setDefault.Seconds.SECOND,
+  failureStaleAfter: 15 * obj132Default.Seconds.SECOND,
   get(closure_0) {
     if (null == closure_0) {
       return null;
+    } else if (importDefaultResult1.hasNoData(closure_0)) {
+      let NO_DATA = initialize /* initialize */.NO_DATA;
     } else {
-      if (importDefaultResult1.hasNoData(closure_0)) {
-        let NO_DATA = initialize.NO_DATA;
-      } else {
-        NO_DATA = obj.getGame(closure_0);
-        if (NO_DATA == null) {
-          NO_DATA = null;
-        }
+      NO_DATA = importDefaultResult1.getGame(closure_0);
+      if (NO_DATA == null) {
+        NO_DATA = null;
       }
-      obj = importDefaultResult1;
     }
   },
   load: null,
@@ -103,11 +100,11 @@ initialize[4] = function getIsLoading(arg0) {
   }
   return isFetchingResult;
 };
-initialize[5] = function getError(closure_0) {
+initialize[5] = function getError(item) {
   error = null;
-  if (null != closure_0) {
+  if (null != item) {
     error = null;
-    if (importDefaultResult1.didFetchingFail(closure_0)) {
+    if (importDefaultResult1.didFetchingFail(item)) {
       const _Error = Error;
       error = new Error("Failed to fetch game data");
     }
@@ -115,7 +112,7 @@ initialize[5] = function getError(closure_0) {
   return error;
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult1, initialize);
-const result = require("set").fileFinishedImporting("modules/games/hooks/useGame.tsx");
+const result = require("obj132").fileFinishedImporting("modules/games/hooks/useGame.tsx");
 
 export const useGame = fetchStore;
 export const useGames = function useGames(memo) {
@@ -123,11 +120,11 @@ export const useGames = function useGames(memo) {
   let items = [memo];
   const effect = React.useEffect(() => {
     let items = [
-      ...closure_0.map((arg0) => {
-        const items = [arg0];
+      ...closure_0.map((item, index) => {
+        const items = [item];
         return items;
       })
     ];
-    closure_1_5.fetchMany.apply(items);
+    fetchStore.fetchMany.apply(items);
   }, items);
 };

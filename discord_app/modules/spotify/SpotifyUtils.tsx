@@ -1,13 +1,13 @@
 // discord_app/modules/spotify/SpotifyUtils.tsx
-import setDefault from "../../utils/Durations.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../game_detection/RunningGameStore.native.tsx";
-import closure_5 from "SpotifyProtocolStore.tsx";
-import closure_6 from "SpotifyStore.tsx";
+import obj132Default from "../../utils/Durations.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import initialize from "../game_detection/RunningGameStore.native.tsx";
+import isProtocolRegistered from "SpotifyProtocolStore.tsx";
+import upsertAccount from "SpotifyStore.tsx";
 import SPOTIFY_APP_PROTOCOL from "SpotifyConstants.tsx";
 import { PlatformTypes } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function asString(str) {
   if (typeof str === "string") {
     return str;
@@ -78,7 +78,7 @@ function _getSpotifyMetadataFromActivity() {
               TRACK = constants.TRACK;
             }
             callback(TRACK);
-            closure_1 = closure_9(TRACK);
+            closure_1 = callback(TRACK);
             if (null === closure_1) {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
@@ -113,8 +113,6 @@ function _getSpotifyMetadataFromActivity() {
               obj[4] = mapped1;
               c6 = 3;
             }
-            const tmp49 = closure_9;
-            const tmp50 = callback;
           }
         } catch (tmp41) {
           c6 = tmp;
@@ -133,8 +131,8 @@ function _getSpotifyMetadataFromActivity() {
   return applyArgumentsResult;
 }
 ({ SPOTIFY_APP_PROTOCOL: error, SpotifyResourceTypes: closure_8, getSpotifyResourceType: c9 } = SPOTIFY_APP_PROTOCOL);
-let closure_11 = 30 * setDefault.Millis.SECOND;
-const result = require("set").fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");
+let closure_11 = 30 * obj132Default.Millis.SECOND;
+const result = require("obj132").fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");
 
 export const isSpotifyPlayable = function isSpotifyPlayable(getActiveSocketAndDevice) {
   let isProtocolRegisteredResult = null != getActiveSocketAndDevice.getActiveSocketAndDevice();
@@ -168,7 +166,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
         function _loop(socket, device) {
           closure_0 = socket;
           closure_1 = device;
-          if (null == closure_1_0.find((device) => device.device.id === device.id)) {
+          if (null == closure_1_0.find((item, index) => item.device.id === device.id)) {
             const _clearTimeout = clearTimeout;
             clearTimeout(closure_2);
             closure_2_6.removeChangeListener(closure_3);
@@ -223,7 +221,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
       let resolved = Promise.resolve();
     } else {
       const profile = socket(7243).getProfile(socket.accountId, socket.accessToken);
-      resolved = profile.then(() => {
+      resolved = profile.then((result) => {
         if (!socket.isPremium) {
           const _Error = Error;
           error = new Error("spotify account is not premium");

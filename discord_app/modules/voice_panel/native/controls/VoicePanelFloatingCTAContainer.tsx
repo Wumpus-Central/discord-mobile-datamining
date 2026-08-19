@@ -4,21 +4,20 @@ import useIsMobileVisualRefreshExperimentEnabled from "../../../themes/experimen
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import RowButtonWrapper from "../../../../design/components/TableRow/native/RowButton.native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../stores/ChannelStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
 import VoicePanelModes from "../../VoicePanelConstants.tsx";
 import { CALL_TILE_GUTTER } from "../card/VoicePanelCardConstants.tsx";
 import { ThemeTypes } from "../../../../../discord_common/js/shared/Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function FloatingCTA(trailing) {
   trailing = trailing.trailing;
   const merged = Object.assign(trailing, Object.create(null));
-  let obj = { children: null };
-  obj = { experimental_withBlurBackground: true, arrow: null == trailing, trailing };
+  const obj = { experimental_withBlurBackground: true, arrow: null == trailing, trailing };
   const merged1 = Object.assign(merged);
   obj[0] = jsx(RowButtonWrapper.RowButton, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
   return jsx(Stack.Stack, { experimental_withBlurBackground: true, arrow: null == trailing, trailing });
@@ -57,14 +56,14 @@ class VoicePanelFloatingCTAContainer {
     items1[0] = first;
     items1[1] = stateFromStores;
     memo = cleanUp.useMemo(() => {
-      let obj = wrapperSpecs(controlsSpecs[17]);
-      obj = { dismissableContent: first, channel: stateFromStores };
+      wrapperSpecs(controlsSpecs[17]);
+      const obj = { dismissableContent: first, channel: stateFromStores };
       return obj.getDismissableCTAProps(obj);
     }, items1);
     closure_11 = memo;
     obj3 = require("useFloatingCTAProps");
     floatingCTAProps = obj3.useFloatingCTAProps(stateFromStores);
-    obj4 = require("module_4115");
+    obj4 = require("../../../reanimated/ReanimatedRexport.tsx");
     class A {
       constructor() {
         tmp = wrapperSpecs;
@@ -81,14 +80,14 @@ class VoicePanelFloatingCTAContainer {
         fn = function t(arg0) {
           let tmp = arg0;
           if (arg0) {
-            tmp = closure_3 === closure_1_0(closure_1_2[20]).TransitionStates.YEETED;
+            tmp = closure_3 === wrapperSpecs(controlsSpecs[20]).TransitionStates.YEETED;
           }
           if (tmp) {
-            closure_1_0(closure_1_2[18]).runOnJS(closure_4)();
-            const obj = closure_1_0(closure_1_2[18]);
+            wrapperSpecs(controlsSpecs[18]).runOnJS(closure_4)();
+            const obj = wrapperSpecs(controlsSpecs[18]);
           }
         };
-        obj1 = { state: tmp4, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("module_4115").runOnJS, cleanUp };
+        obj1 = { state: tmp4, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, cleanUp };
         fn.__closure = obj1;
         fn.__workletHash = 7334460639890;
         fn.__initData = closure_1_14;
@@ -118,7 +117,7 @@ class VoicePanelFloatingCTAContainer {
         return obj;
       }
     }
-    obj = { getControlsDefaultWidth: require("VOICE_PANEL_DRAWER_MAX_WIDTH").getControlsDefaultWidth, windowDimensions, safeArea, state, TransitionStates: require("wrapChildrenDefault").TransitionStates, controlsSpecs, roundToNearestPixel: require("t"), withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, OPACITY_CHANGE_PHYSICS: closure_12, runOnJS: require("module_4115").runOnJS, cleanUp, wrapperSpecs, UI_SHOW_HIDE_PHYSICS: windowDimensions, gestureState, CALL_TILE_GUTTER: channelId, accessoryHeights };
+    obj = { getControlsDefaultWidth: require("VOICE_PANEL_DRAWER_MAX_WIDTH").getControlsDefaultWidth, windowDimensions, safeArea, state, TransitionStates: require("wrapChildrenDefault").TransitionStates, controlsSpecs, roundToNearestPixel: require("t"), withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, OPACITY_CHANGE_PHYSICS: closure_12, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, cleanUp, wrapperSpecs, UI_SHOW_HIDE_PHYSICS: windowDimensions, gestureState, CALL_TILE_GUTTER: channelId, accessoryHeights };
     A.__closure = obj;
     A.__workletHash = 3338259366067;
     A.__initData = closure_13;
@@ -128,7 +127,7 @@ class VoicePanelFloatingCTAContainer {
     items2 = [, ];
     items2[0] = tmp.container;
     items2[1] = animatedStyle;
-    tmp12 = require("set");
+    tmp12 = require("obj132");
     if (null != memo) {
       obj2 = { contentTypes: null, children: null };
       obj2[0] = tmp5;
@@ -153,8 +152,7 @@ class VoicePanelFloatingCTAContainer {
   }
 }
 ({ UI_SHOW_HIDE_PHYSICS: closure_6, MODE_CHANGE_PHYSICS } = VoicePanelModes);
-createCacheKey = { container: null };
-createCacheKey = { zIndex: 1, position: "absolute", bottom: 0, left: "50%", overflow: "hidden", alignItems: "center", borderRadius: ThemesDefault.radii.lg };
+const createCacheKey = { zIndex: 1, position: "absolute", bottom: 0, left: "50%", overflow: "hidden", alignItems: "center", borderRadius: ThemesDefault.radii.lg };
 createCacheKey[0] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj1 = {};
@@ -162,15 +160,14 @@ let merged = Object.assign(MODE_CHANGE_PHYSICS);
 obj1.overshootClamping = true;
 let closure_13 = { code: "function VoicePanelFloatingCTAContainerTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea,state,TransitionStates,controlsSpecs,roundToNearestPixel,withSpring,OPACITY_CHANGE_PHYSICS,runOnJS,cleanUp,wrapperSpecs,UI_SHOW_HIDE_PHYSICS,gestureState,CALL_TILE_GUTTER,accessoryHeights}=this.__closure;const width=getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);const opacity=state===TransitionStates.YEETED?0:1;return{bottom:controlsSpecs.get().height+16,width:width,marginLeft:roundToNearestPixel(width/2)*-1,opacity:withSpring(opacity,OPACITY_CHANGE_PHYSICS,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}),transform:[{translateX:withSpring(wrapperSpecs.get().x,UI_SHOW_HIDE_PHYSICS)},{translateY:withSpring(wrapperSpecs.get().hidden||gestureState.get().active&&!gestureState.get().requiresPop?wrapperSpecs.get().height+CALL_TILE_GUTTER+accessoryHeights.get():wrapperSpecs.get().y,UI_SHOW_HIDE_PHYSICS)}]};}" };
 let closure_14 = { code: "function VoicePanelFloatingCTAContainerTsx2(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelFloatingCTAContainer.tsx");
 
 export default VoicePanelFloatingCTAContainer;
 export const getFloatingCTATotalViewHeight = function getFloatingCTATotalViewHeight(chatInputFloating) {
   return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, chatInputFloating) + 16;
 };
 export const renderVoicePanelFloatingCTA = function renderVoicePanelFloatingCTA(arg0, arg1, state, cleanUp) {
-  let obj = { theme: ThemeTypes.DARK, children: null };
-  obj = {};
+  const obj = {};
   const merged = Object.assign(arg1);
   obj.state = state;
   obj.cleanUp = cleanUp;

@@ -1,8 +1,8 @@
 // discord_app/modules/gateway/DispatcherWorkConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
 let c0 = 2.0833333333333335;
-const result = set.fileFinishedImporting("modules/gateway/DispatcherWorkConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/DispatcherWorkConstants.tsx");
 class WorkIdleDeadline {
   constructor(arg0) {
     flag = require;

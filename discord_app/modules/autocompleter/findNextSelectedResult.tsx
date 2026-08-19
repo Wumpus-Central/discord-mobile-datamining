@@ -1,9 +1,9 @@
 // discord_app/modules/autocompleter/findNextSelectedResult.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import HeaderRecord from "AutocompleterConstants.tsx";
 
 ({ FindResultDirections: c0, AutocompleterResultTypes: closure_1 } = HeaderRecord);
-const result = set.fileFinishedImporting("modules/autocompleter/findNextSelectedResult.tsx");
+const result = obj132.fileFinishedImporting("modules/autocompleter/findNextSelectedResult.tsx");
 function findNextSelectedResult(DOWN, closure_23, items) {
   if (0 === items.length) {
     return 0;
@@ -34,7 +34,6 @@ function findNextSelectedResult(DOWN, closure_23, items) {
       num2 = length;
     }
     tmp13Result = callback(DOWN, num2, items, tmp);
-    const tmp13 = callback;
   }
 }
 

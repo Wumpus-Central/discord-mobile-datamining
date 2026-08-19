@@ -1,7 +1,7 @@
 // discord_assets/assets/premium/display_name_styles/dns_flywheel_halfsheet_animated_2x.png.js
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/premium/display_name_styles/dns_flywheel_halfsheet_animated_2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/premium/display_name_styles/dns_flywheel_halfsheet_animated_2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/4bfadf7b5fec1892fc18ec639d445be3d0209bc75e5f41c14da37e4779ea6722.png";
 export const metadata = { fileBytes: 259060 };

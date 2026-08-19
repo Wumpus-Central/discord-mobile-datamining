@@ -1,16 +1,15 @@
 // discord_app/modules/share/native/SharePreparingModal.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef9075 from "../../media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { content: null, topBar: null, topBarEnd: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_12 };
+const createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -18,17 +17,15 @@ obj1.bottom = undefined;
 createCacheKey[1] = obj1;
 createCacheKey[2] = { justifyContent: "flex-end" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/share/native/SharePreparingModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/share/native/SharePreparingModal.tsx");
 
 export default function SharePreparingModal(onCancel) {
   onCancel = onCancel.onCancel;
   const tmp = callback3();
   const items = [onCancel];
   const effect = React.useEffect(() => () => callback(), items);
-  let obj = { style: tmp.content, children: null };
   const items1 = [callback(onCancel(4723).Backdrop, { blur: "none", "aria-hidden": true }), , , ];
-  obj = { style: tmp.topBar, pointerEvents: "box-none", children: null };
-  obj = { style: tmp.topBarEnd, children: null };
+  const obj = { style: tmp.topBarEnd, children: null };
   obj1 = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = onCancel(1236).intl;
   obj1[0] = intl.string(onCancel(1236).t.cpT0Cq);

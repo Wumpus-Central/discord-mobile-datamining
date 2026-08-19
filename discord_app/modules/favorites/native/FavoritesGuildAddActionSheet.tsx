@@ -2,62 +2,19 @@
 import ACTION_SHEET_HEIGHT_HALF from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FavoritesGuildAddCategoryActionSheet from "FavoritesGuildAddCategoryActionSheet.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function handleCreateCategory() {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(FavoritesGuildAddActionSheet);
-  const obj = ACTION_SHEET_HEIGHT_HALFDefault;
   const result = FavoritesGuildAddCategoryActionSheet.openFavoritesGuildAddCategoryActionSheet();
 }
-function FavoritesGuildAddActionSheet() {
-  let obj = shouldShowUpsell(favoriteLimit[4]);
-  const favoritesLimitUpsell = obj.useFavoritesLimitUpsell();
-  shouldShowUpsell = favoritesLimitUpsell.shouldShowUpsell;
-  const isAtLimit = favoritesLimitUpsell.isAtLimit;
-  favoriteLimit = favoritesLimitUpsell.favoriteLimit;
-  const items = [shouldShowUpsell, isAtLimit, favoriteLimit];
-  const callback = React.useCallback(() => {
-    isAtLimit(favoriteLimit[2]).hideActionSheet(closure_1_6);
-    if (shouldShowUpsell) {
-      if (isAtLimit) {
-        tmp(tmp2[5])(favoriteLimit);
-      }
-    }
-    isAtLimit(favoriteLimit[6])({ source: "favorites_header_add_button_context_menu" });
-  }, items);
-  obj = { header: null, children: null };
-  obj = { title: null };
-  const intl = shouldShowUpsell(favoriteLimit[9]).intl;
-  obj[0] = intl.string(shouldShowUpsell(favoriteLimit[9]).t.wMWyci);
-  obj[0] = callback(shouldShowUpsell(favoriteLimit[8]).BottomSheetTitleHeader, obj);
-  obj1 = { hasIcons: true, children: null };
-  const obj2 = { label: null, icon: null, onPress: null };
-  const intl2 = shouldShowUpsell(favoriteLimit[9]).intl;
-  obj2[0] = intl2.string(isAtLimit(favoriteLimit[11]).G9fGlP);
-  obj2[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, { IconComponent: shouldShowUpsell(favoriteLimit[12]).PlusMediumIcon });
-  obj2[2] = callback;
-  obj1[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow, obj2);
-  const items1 = [callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Group, obj1), ];
-  const obj4 = { hasIcons: true, children: null };
-  const obj5 = { label: null, icon: null, onPress: null };
-  const intl3 = shouldShowUpsell(favoriteLimit[9]).intl;
-  obj5[0] = intl3.string(shouldShowUpsell(favoriteLimit[9]).t["ISN+NM"]);
-  const obj3 = { IconComponent: shouldShowUpsell(favoriteLimit[12]).PlusMediumIcon };
-  obj5[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Icon, { IconComponent: shouldShowUpsell(favoriteLimit[13]).FolderPlusIcon });
-  obj5[2] = handleCreateCategory;
-  obj4[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow, obj5);
-  items1[1] = callback(shouldShowUpsell(favoriteLimit[10]).ActionSheetRow.Group, obj4);
-  obj[1] = items1;
-  return callback2(shouldShowUpsell(favoriteLimit[7]).ActionSheet, obj);
-}
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-FavoritesGuildAddActionSheet = "FavoritesGuildAddActionSheet";
-let result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildAddActionSheet.tsx");
+const FavoritesGuildAddActionSheet = "FavoritesGuildAddActionSheet";
+let result = require("obj132").fileFinishedImporting("modules/favorites/native/FavoritesGuildAddActionSheet.tsx");
 
 export const openFavoritesGuildAddActionSheet = function openFavoritesGuildAddActionSheet() {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
-  obj = { content: callback(FavoritesGuildAddActionSheet, {}), key: FavoritesGuildAddActionSheet };
+  const obj = { content: callback(FavoritesGuildAddActionSheet, {}), key: FavoritesGuildAddActionSheet };
   obj.showActionSheet(obj);
 };

@@ -1,19 +1,15 @@
 // discord_app/modules/app_startup/PostTTIScheduler/SafePostTTIScheduler.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/app_startup/PostTTIScheduler/SafePostTTIScheduler.tsx");
+const result = obj132.fileFinishedImporting("modules/app_startup/PostTTIScheduler/SafePostTTIScheduler.tsx");
 
 export const waitSafelyForPostTTI = function waitSafelyForPostTTI(arg0) {
-  let num = arg0;
-  if (arg0 === undefined) {
-    num = 4000;
-  }
   return new Promise((arg0) => {
     closure_0 = arg0;
     const timeout = setTimeout(() => {
       callback();
     }, closure_0);
-    num(closure_1_1[0]).schedulePostTTIEvent(() => {
+    num(dependencyMap[0]).schedulePostTTIEvent(() => {
       clearTimeout(closure_1);
       callback();
     });

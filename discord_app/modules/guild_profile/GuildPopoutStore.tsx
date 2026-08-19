@@ -2,9 +2,9 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import _startLurking from "../../utils/GuildDiscoveryUtils.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
 
-require = arg1;
+require = fn;
 let closure_3 = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };
 let closure_4 = { guilds: {} };
 const Store = initializeDefault.Store;
@@ -46,8 +46,7 @@ const guildPopoutStore = new GuildPopoutStore(dispatcherDefault, {
   },
   GUILD_POPOUT_FETCH_SUCCESS: function handleFetchSuccess(guildId) {
     guildId = guildId.guildId;
-    let obj = _startLurking;
-    obj = {};
+    const obj = {};
     const discoverableGuild = obj.makeDiscoverableGuild(guildId.guild);
     const merged = Object.assign(closure_4.guilds[guildId]);
     obj.guild = discoverableGuild;
@@ -62,6 +61,6 @@ const guildPopoutStore = new GuildPopoutStore(dispatcherDefault, {
     closure_4.guilds[guildId] = obj;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_profile/GuildPopoutStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_profile/GuildPopoutStore.tsx");
 
 export default guildPopoutStore;

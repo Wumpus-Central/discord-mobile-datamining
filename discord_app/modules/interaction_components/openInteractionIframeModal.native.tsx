@@ -1,8 +1,8 @@
 // discord_app/modules/interaction_components/openInteractionIframeModal.native.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { INTERACTION_IFRAME_MODAL_KEY as closure_4 } from "native/InteractionIframeConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function _openInteractionIframeModal() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -55,7 +55,7 @@ function _openInteractionIframeModal() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
 
 export default function openInteractionIframeModal() {
   const self = this;

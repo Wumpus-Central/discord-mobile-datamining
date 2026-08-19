@@ -1,14 +1,14 @@
 // discord_app/modules/messages/useMessageAuthor.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import nameFromUserDefault from "../../utils/UserUtils.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/GuildMemberStore.tsx";
-import closure_5 from "../../stores/GuildRoleStore.tsx";
-import closure_6 from "../../stores/GuildStore.tsx";
-import closure_7 from "../../stores/RelationshipStore.tsx";
-import closure_8 from "../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
+import createGuildRoleRecordFromRust from "../../stores/GuildRoleStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 
-const require = arg1;
+const require = fn;
 function useNullableMessageAuthor(message) {
   const _require = message;
   let obj = _require(id[7]);
@@ -86,13 +86,12 @@ function useNullableMessageAuthor(message) {
     if (null != id) {
       let isPrivateResult;
       if (stateFromStores != null) {
-        isPrivateResult = obj.isPrivate();
+        isPrivateResult = stateFromStores.isPrivate();
       }
       nickname = null;
       if (isPrivateResult) {
         nickname = closure_1_7.getNickname(tmp);
       }
-      obj = stateFromStores;
     }
     return nickname;
   });
@@ -158,14 +157,13 @@ function useNullableUserAuthor(author, channel) {
     let nickname = null;
     if (null != id) {
       let isPrivateResult;
-      if (closure_0 != null) {
-        isPrivateResult = obj.isPrivate();
+      if (_private != null) {
+        isPrivateResult = _private.isPrivate();
       }
       nickname = null;
       if (isPrivateResult) {
         nickname = closure_1_7.getNickname(tmp);
       }
-      obj = closure_0;
     }
     return nickname;
   });
@@ -286,7 +284,7 @@ function computeMessageAuthor(channel) {
   }
   obj1 = { nick: str, colorString: null, colorStrings: null, displayNameStyles };
 }
-const result = require("set").fileFinishedImporting("modules/messages/useMessageAuthor.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/useMessageAuthor.tsx");
 
 export default function useMessageNickAndColor(message) {
   let tmp = arg1;

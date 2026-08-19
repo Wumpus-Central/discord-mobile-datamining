@@ -6,7 +6,7 @@ import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 class BaseLeaveActivityButton {
   constructor(arg0) {
     obj = { onPress: global.onPress, icon: require("registerAsset"), text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
@@ -20,24 +20,24 @@ class BaseLeaveActivityButton {
 const memoResult = importAllResult.memo(function LeaveActivityButton(arg0) {
   ({ selfEmbeddedActivity: require, setMode: importDefault } = arg0);
   return <BaseLeaveActivityButton onPress={function onPress() {
-    callback(closure_1_3.DISCONNECTED);
+    callback(ActivityPanelModes.DISCONNECTED);
     const timerId = setTimeout(() => {
       let obj = closure_1_1(closure_1_2[6]);
       let _location;
       if (closure_0 != null) {
-        _location = tmp.location;
+        _location = closure_0.location;
       }
       obj = { location: _location, applicationId: null };
       let applicationId;
       if (closure_0 != null) {
-        applicationId = tmp.applicationId;
+        applicationId = closure_0.applicationId;
       }
       obj[1] = applicationId;
       obj.leaveActivity(obj);
     }, 400);
   }} />;
 });
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");
 
 export default memoResult;
 export { BaseLeaveActivityButton };

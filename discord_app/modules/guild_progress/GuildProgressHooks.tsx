@@ -1,42 +1,42 @@
 // discord_app/modules/guild_progress/GuildProgressHooks.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
+import noop from "../../../_runtime/00019_noop.js";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 import comparator from "../../stores/GuildChannelStore.tsx";
-import closure_8 from "../../stores/GuildChannelStore.tsx";
-import closure_9 from "../../stores/GuildMemberCountStore.tsx";
-import closure_10 from "../../stores/GuildStore.tsx";
-import closure_11 from "../../stores/LayerStore.tsx";
-import closure_12 from "../../stores/MessageStore.tsx";
-import closure_13 from "../../stores/PermissionStore.tsx";
+import comparator2 from "../../stores/GuildChannelStore.tsx";
+import handleInviteData from "../../stores/GuildMemberCountStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import handlePopAllLayers from "../../stores/LayerStore.tsx";
+import reinjectEphemerals from "../../stores/MessageStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
 import ME from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
+const require = fn;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_6, GUILD_VOCAL_CHANNELS_KEY: error } = comparator);
 ({ Permissions: closure_14, MessageTypes: closure_15 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_progress/GuildProgressHooks.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_progress/GuildProgressHooks.tsx");
 
 export const usePermissions = function usePermissions(channel, guild) {
   const _require = channel;
   closure_1 = guild;
   const items = [closure_13];
   const items1 = [guild, channel];
-  return _initialize.useStateFromStoresObject(items, () => {
-    const obj = { canInvite: channel(closure_1_2[11]).canViewInviteModal(closure_1_13, closure_1, channel), canManageGuild: null, canMessage: null, canCreateChannel: null };
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresObject(items, () => {
+    const obj = { canInvite: channel(dependencyMap[11]).canViewInviteModal(closure_1_13, closure_1, channel), canManageGuild: null, canMessage: null, canCreateChannel: null };
     let canResult = null != closure_1;
     if (canResult) {
-      canResult = obj3.can(closure_1_14.MANAGE_GUILD, tmp);
+      canResult = closure_1_13.can(closure_1_14.MANAGE_GUILD, closure_1);
     }
     obj[1] = canResult;
-    let canResult1 = null != tmp2;
+    let canResult1 = null != channel;
     if (canResult1) {
-      canResult1 = obj3.can(closure_1_14.SEND_MESSAGES, tmp2);
+      canResult1 = closure_1_13.can(closure_1_14.SEND_MESSAGES, channel);
     }
     obj[2] = canResult1;
-    let canResult2 = null != tmp;
+    let canResult2 = null != closure_1;
     if (canResult2) {
-      canResult2 = obj3.can(closure_1_14.MANAGE_CHANNELS, tmp);
+      canResult2 = closure_1_13.can(closure_1_14.MANAGE_CHANNELS, closure_1);
     }
     obj[3] = canResult2;
     return obj;
@@ -46,18 +46,18 @@ export const useGuildChannelCreated = function useGuildChannelCreated(arg0) {
   const _require = arg0;
   const items = [closure_8];
   const items1 = [arg0];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let id;
     if (guild != null) {
       id = guild.id;
     }
-    function hasNewChannel(channel) {
+    function hasNewChannel(item, index) {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        const obj = closure_1_1(closure_1_2[12]);
-        const extractTimestampResult = closure_1_1(closure_1_2[12]).extractTimestamp(channel.channel.id);
-        tmp2 = extractTimestampResult - closure_1_1(closure_1_2[12]).extractTimestamp(tmp.id) > 500;
-        const obj2 = closure_1_1(closure_1_2[12]);
+        const obj = closure_1_1(stateFromStoresArray[12]);
+        const extractTimestampResult = closure_1_1(stateFromStoresArray[12]).extractTimestamp(item.channel.id);
+        tmp2 = extractTimestampResult - closure_1_1(stateFromStoresArray[12]).extractTimestamp(tmp.id) > 500;
+        const obj2 = closure_1_1(stateFromStoresArray[12]);
       }
       return tmp2;
     }
@@ -98,16 +98,16 @@ export const useGuildPopulated = function useGuildPopulated(guild) {
     if (num == null) {
       num = 0;
     }
-    return num > 1 || stateFromStoresArray.some((type) => type.type === constants.USER_JOIN);
+    return num > 1 || stateFromStoresArray.some((item, index) => item.type === constants.USER_JOIN);
   }, items3);
 };
 export const useGuildPersonalized = function useGuildPersonalized(guild) {
   const _require = guild;
   const items = [closure_11];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_11.hasLayers());
-  const obj = _initialize;
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_11.hasLayers());
+  const obj = initialize;
   const items1 = [closure_10];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => {
     let id;
     if (guild != null) {
       id = guild.id;
@@ -123,13 +123,13 @@ export const useGuildPersonalized = function useGuildPersonalized(guild) {
 export const useChannelsMessaged = function useChannelsMessaged(items3) {
   const _require = items3;
   const items = [closure_4];
-  closure_1 = _initialize.useStateFromStores(items, () => id.getId());
-  const obj = _initialize;
+  closure_1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => id.getId());
+  const obj = initialize;
   const items1 = [closure_12];
-  return _initialize.useStateFromStores(items1, () => callback(stateFromStoresArray[13]).some(closure_0, (id) => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => callback(stateFromStoresArray[13]).some(closure_0, (id) => {
     const messages = closure_1_12.getMessages(id.id);
     const toArrayResult = messages.toArray();
-    return closure_1_1(closure_1_2[13]).some(toArrayResult, (author) => {
+    return closure_1_1(stateFromStoresArray[13]).some(toArrayResult, (author) => {
       let tmp = author.author.id === closure_1;
       if (tmp) {
         tmp = !closure_1_1(closure_1_2[14])(author);
@@ -141,14 +141,13 @@ export const useChannelsMessaged = function useChannelsMessaged(items3) {
 export const useGuildMessaged = function useGuildMessaged(arg0) {
   let _require = arg0;
   const items = [closure_5];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let mutableBasicGuildChannelsForGuild = null;
     if (null != closure_0) {
       mutableBasicGuildChannelsForGuild = closure_1_5.getMutableBasicGuildChannelsForGuild(tmp.id);
     }
     return mutableBasicGuildChannelsForGuild;
   });
-  closure_1 = stateFromStores;
   const items1 = [stateFromStores];
   _require = React.useMemo(() => {
     if (null == callback) {
@@ -159,16 +158,15 @@ export const useGuildMessaged = function useGuildMessaged(arg0) {
     }
     return items;
   }, items1);
-  closure_1 = undefined;
-  const obj = _initialize;
+  const obj = initialize;
   const items2 = [closure_4];
-  closure_1 = _initialize.useStateFromStores(items2, () => id.getId());
-  const obj2 = _initialize;
+  closure_1 = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => id.getId());
+  const obj2 = initialize;
   const items3 = [closure_12];
-  return _initialize.useStateFromStores(items3, () => callback(stateFromStoresArray[13]).some(closure_0, (id) => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => callback(stateFromStoresArray[13]).some(closure_0, (id) => {
     const messages = closure_1_12.getMessages(id.id);
     const toArrayResult = messages.toArray();
-    return closure_1_1(closure_1_2[13]).some(toArrayResult, (author) => {
+    return closure_1_1(stateFromStoresArray[13]).some(toArrayResult, (author) => {
       let tmp = author.author.id === closure_1;
       if (tmp) {
         tmp = !closure_1_1(closure_1_2[14])(author);
@@ -181,7 +179,7 @@ export const useCompletedStates = function useCompletedStates(guild) {
   let obj = { guildPopulated: null, guildMessaged: null, guildPersonalized: null, guildChannelCreated: null };
   let _require = guild;
   let items = [closure_5];
-  closure_1 = _require(stateFromStoresArray[10]).useStateFromStores(items, () => {
+  _require(stateFromStoresArray[10]).useStateFromStores(items, () => {
     let systemChannelId;
     if (guild != null) {
       systemChannelId = guild.systemChannelId;
@@ -213,10 +211,9 @@ export const useCompletedStates = function useCompletedStates(guild) {
     if (num == null) {
       num = 0;
     }
-    return num > 1 || stateFromStoresArray.some((type) => type.type === constants.USER_JOIN);
+    return num > 1 || stateFromStoresArray.some((item, index) => item.type === constants.USER_JOIN);
   }, items3);
   _require = guild;
-  closure_1 = undefined;
   const obj4 = _require(stateFromStoresArray[10]);
   const items4 = [closure_5];
   const stateFromStores = _require(stateFromStoresArray[10]).useStateFromStores(items4, () => {
@@ -226,7 +223,6 @@ export const useCompletedStates = function useCompletedStates(guild) {
     }
     return mutableBasicGuildChannelsForGuild;
   });
-  closure_1 = stateFromStores;
   const items5 = [stateFromStores];
   _require = React.useMemo(() => {
     if (null == callback) {
@@ -237,7 +233,6 @@ export const useCompletedStates = function useCompletedStates(guild) {
     }
     return items;
   }, items5);
-  closure_1 = undefined;
   const obj5 = _require(stateFromStoresArray[10]);
   const items6 = [closure_4];
   closure_1 = _require(stateFromStoresArray[10]).useStateFromStores(items6, () => id.getId());
@@ -246,7 +241,7 @@ export const useCompletedStates = function useCompletedStates(guild) {
   obj[1] = _require(stateFromStoresArray[10]).useStateFromStores(items7, () => callback(stateFromStoresArray[13]).some(closure_0, (id) => {
     const messages = closure_1_12.getMessages(id.id);
     const toArrayResult = messages.toArray();
-    return closure_1_1(closure_1_2[13]).some(toArrayResult, (author) => {
+    return closure_1_1(stateFromStoresArray[13]).some(toArrayResult, (author) => {
       let tmp = author.author.id === closure_1;
       if (tmp) {
         tmp = !closure_1_1(closure_1_2[14])(author);
@@ -281,13 +276,13 @@ export const useCompletedStates = function useCompletedStates(guild) {
     if (guild != null) {
       id = guild.id;
     }
-    function hasNewChannel(channel) {
+    function hasNewChannel(item, index) {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        const obj = closure_1_1(closure_1_2[12]);
-        const extractTimestampResult = closure_1_1(closure_1_2[12]).extractTimestamp(channel.channel.id);
-        tmp2 = extractTimestampResult - closure_1_1(closure_1_2[12]).extractTimestamp(tmp.id) > 500;
-        const obj2 = closure_1_1(closure_1_2[12]);
+        const obj = closure_1_1(stateFromStoresArray[12]);
+        const extractTimestampResult = closure_1_1(stateFromStoresArray[12]).extractTimestamp(item.channel.id);
+        tmp2 = extractTimestampResult - closure_1_1(stateFromStoresArray[12]).extractTimestamp(tmp.id) > 500;
+        const obj2 = closure_1_1(stateFromStoresArray[12]);
       }
       return tmp2;
     }

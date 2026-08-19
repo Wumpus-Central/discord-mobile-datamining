@@ -1,9 +1,9 @@
 // discord_app/modules/guild_verification/GuildVerificationManager.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import hasFlag from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import set2 from "../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
 import _modDef12831 from "../hub/HubUtils.native.tsx";
 import inviteGuildHasPendingMemberDisabledVerification from "GuildVerificationUtils.tsx";
 
@@ -23,29 +23,25 @@ function handleInviteData(invite) {
     }
     if (hasItem) {
       _modDef12831.onOpenHubInvite(invite.invite);
-      const obj5 = _modDef12831;
     }
   }
   let new_member = invite.invite.new_member;
   if (new_member) {
-    let hasFlagResult = hasFlag.hasFlag(num, set2.GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = hasFlag.hasFlag(num, set.GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp3(1403).hasFlag(num, tmp3(8056).GuildInviteFlags.IS_APPLICATION_BYPASS);
-      const tmp3Result = tmp3(1403);
+      hasFlagResult = hasFlag.hasFlag(num, set.GuildInviteFlags.IS_APPLICATION_BYPASS);
+      const tmp3Result = hasFlag;
     }
     new_member = !hasFlagResult;
-    const obj = hasFlag;
   }
   if (new_member) {
     new_member = null != guild;
   }
   if (new_member) {
     new_member = inviteGuildHasPendingMemberDisabledVerification.inviteGuildHasPendingMemberDisabledVerification(guild);
-    const obj3 = inviteGuildHasPendingMemberDisabledVerification;
   }
   if (new_member) {
     const result = inviteGuildHasPendingMemberDisabledVerification.openVerificationModalOrTransitionToApplication(guild.id);
-    const obj4 = inviteGuildHasPendingMemberDisabledVerification;
   }
 }
 const GuildFeatures = ME.GuildFeatures;
@@ -58,6 +54,6 @@ let prototype = function GuildVerificationManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = set.fileFinishedImporting("modules/guild_verification/GuildVerificationManager.tsx");
+let result = obj132.fileFinishedImporting("modules/guild_verification/GuildVerificationManager.tsx");
 
 export default prototype;

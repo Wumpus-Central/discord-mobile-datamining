@@ -1,22 +1,24 @@
 // discord_app/modules/self_mod/ChannelSafetyWarningsManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import InappropriateConversationExperiment from "inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/SelectedChannelStore.tsx";
+import getSafetyAlertsSettingOrDefault from "inappropriate_conversation/InappropriateConversationUtils.tsx";
+import showTakeoverModal from "inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
 
-require = arg1;
+require = fn;
 function handleChannelSelect(channelId) {
   channelId = channelId.channelId;
   if (null == channelId) {
     return false;
   } else {
     if (obj6.isEligibleForInappropriateConversationWarning({ location: "channel_select" })) {
-      let tmp4Result = tmp4(10610);
+      let tmp4Result = getSafetyAlertsSettingOrDefault;
       if (tmp4Result.getSafetyAlertsSettingOrDefault()) {
         channel = channel.getChannel(channelId);
         if (null != channel) {
           if (channel.isDM()) {
-            tmp4Result = tmp4(10610);
+            tmp4Result = getSafetyAlertsSettingOrDefault;
             const inappropriateConversationTakeoverForChannel = tmp4Result.getInappropriateConversationTakeoverForChannel(channelId);
             let flag3 = null != inappropriateConversationTakeoverForChannel;
             if (flag3) {
@@ -24,9 +26,9 @@ function handleChannelSelect(channelId) {
               ({ id: obj5[0], type: obj5[1] } = inappropriateConversationTakeoverForChannel);
               obj[2] = channel.getRecipientId();
               obj[3] = channelId;
-              tmp4(16545).showTakeoverModal(obj);
+              showTakeoverModal.showTakeoverModal(obj);
               flag3 = true;
-              const tmp4Result1 = tmp4(16545);
+              const tmp4Result1 = showTakeoverModal;
             }
             return flag3;
           }
@@ -52,7 +54,7 @@ function handleChannelUpdates(channels) {
       if (null == currentlySelectedChannelId) {
         return false;
       } else {
-        const found = channels.find((id) => id.id === currentlySelectedChannelId);
+        const found = channels.find((item, index) => item.id === currentlySelectedChannelId);
         if (null == found) {
           return false;
         } else {
@@ -88,6 +90,6 @@ let prototype = function ChannelSafetyWarningsManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsManager.tsx");
 
 export default prototype;

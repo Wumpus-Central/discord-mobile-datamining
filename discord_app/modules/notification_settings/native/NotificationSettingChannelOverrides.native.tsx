@@ -1,24 +1,23 @@
 // discord_app/modules/notification_settings/native/NotificationSettingChannelOverrides.native.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { isGuildReadableType } from "../../../records/ChannelRecord.tsx";
-import closure_7 from "../../../stores/GuildCategoryStore.tsx";
-import closure_8 from "../../../stores/RelationshipStore.tsx";
-import closure_9 from "../../../stores/UserStore.tsx";
+import setIndex from "../../../stores/GuildCategoryStore.tsx";
+import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ ChannelTypes: c10, NotificationSettingsSections: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { container: null, searchContainer: null };
-obj = { marginHorizontal: ThemesDefault.space.PX_8, flex: 1 };
+let obj = { marginHorizontal: ThemesDefault.space.PX_8, flex: 1 };
 obj[0] = obj;
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingVertical: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
 let closure_14 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function NotificationSettingChannelOverrides(arg0) {
@@ -49,18 +48,18 @@ const memoResult = importAllResult.memo(function NotificationSettingChannelOverr
       }
       if (tmp) {
         if ("" !== closure_3) {
-          if (null != str) {
-            const obj = closure_1_0(closure_1_2[14]);
-            const formatted = closure_1_0(closure_1_2[14]).computeChannelName(channel, closure_1_9, closure_1_8).toLowerCase();
-            const str3 = closure_1_0(closure_1_2[14]).computeChannelName(channel, closure_1_9, closure_1_8);
-            return closure_1_1(closure_1_2[15])(str.toLowerCase(), formatted);
+          if (null != closure_3) {
+            const obj = closure_1_0(stateFromStores[14]);
+            const formatted = closure_1_0(stateFromStores[14]).computeChannelName(channel, closure_1_9, closure_1_8).toLowerCase();
+            const str3 = closure_1_0(stateFromStores[14]).computeChannelName(channel, closure_1_9, closure_1_8);
+            return navigation(stateFromStores[15])(closure_3.toLowerCase(), formatted);
           }
         }
         return tmp;
       } else {
         return false;
       }
-    }).map((channel) => channel.channel);
+    }).map((item, index) => item.channel);
     const sections = [channels.length];
     return { channels, sections };
   }, items1);
@@ -70,15 +69,15 @@ const memoResult = importAllResult.memo(function NotificationSettingChannelOverr
     if (null != first) {
       if ("" !== tmp) {
         if (channels.length > 0) {
-          const intl2 = closure_1_0(stateFromStores[16]).intl;
+          const intl2 = require(stateFromStores[16]).intl;
           const obj = { count: null };
           obj[0] = length;
-          let formatToPlainStringResult = intl2.formatToPlainString(closure_1_0(stateFromStores[16]).t.ZGVL3g, obj);
+          let formatToPlainStringResult = intl2.formatToPlainString(require(stateFromStores[16]).t.ZGVL3g, obj);
         } else {
-          const intl = closure_1_0(stateFromStores[16]).intl;
-          formatToPlainStringResult = intl.string(closure_1_0(stateFromStores[16]).t.f5cMAg);
+          const intl = require(stateFromStores[16]).intl;
+          formatToPlainStringResult = intl.string(require(stateFromStores[16]).t.f5cMAg);
         }
-        const AccessibilityAnnouncer = closure_1_0(stateFromStores[17]).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = require(stateFromStores[17]).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(formatToPlainStringResult);
       }
     }
@@ -86,22 +85,19 @@ const memoResult = importAllResult.memo(function NotificationSettingChannelOverr
   const items3 = [channels, navigation];
   const callback = channels.useCallback((arg0, arg1) => {
     closure_0 = tmp;
-    let obj = { icon: null, start: null, end: null, label: null, labelLineClamp: 1, arrow: true, onPress: null };
-    obj = { IconComponent: closure_1_0(stateFromStores[21]).getChannelIconComponent(channels[arg1]) };
-    obj[0] = closure_1_12(closure_1_0(stateFromStores[20]).TableRowIcon, obj);
+    const obj = { IconComponent: require(stateFromStores[21]).getChannelIconComponent(channels[arg1]) };
+    obj[0] = closure_1_12(require(stateFromStores[20]).TableRowIcon, obj);
     obj[1] = 0 === arg1;
     obj[2] = arg1 === channels.length - 1;
-    const obj3 = closure_1_0(stateFromStores[21]);
-    obj[3] = closure_1_0(stateFromStores[14]).computeChannelName(channels[arg1], closure_1_9, closure_1_8);
+    const obj3 = require(stateFromStores[21]);
+    obj[3] = require(stateFromStores[14]).computeChannelName(channels[arg1], closure_1_9, closure_1_8);
     obj[6] = function onPress() {
-      closure_1_1.push(closure_2_11.CHANNEL_OVERRIDE, { channelId: id.id });
+      navigation.push(closure_2_11.CHANNEL_OVERRIDE, { channelId: id.id });
     };
-    return closure_1_12(closure_1_0(stateFromStores[19]).TableRow, obj);
+    return closure_1_12(require(stateFromStores[19]).TableRow, obj);
   }, items3);
-  obj = { style: tmp.container, children: null };
   obj = { style: tmp.searchContainer, children: null };
   const tmp10 = navigation(stateFromStores[18])();
-  const tmp5 = navigation;
   obj1 = { placeholder: null, onChange: null };
   let intl = require(stateFromStores[16]).intl;
   obj1[0] = intl.string(require(stateFromStores[16]).t["5h0QOP"]);
@@ -110,12 +106,12 @@ const memoResult = importAllResult.memo(function NotificationSettingChannelOverr
   const items4 = [callback(View, obj), ];
   if (0 === channels.length) {
     const obj2 = { Illustration: null, title: null, body: null };
-    obj2[0] = tmp2(tmp3[25]).NoResults;
-    let intl2 = tmp2(tmp3[16]).intl;
-    obj2[1] = intl2.string(tmp2(tmp3[16]).t.wM7uRI);
-    const intl3 = tmp2(tmp3[16]).intl;
-    obj2[2] = intl3.string(tmp2(tmp3[16]).t.f5cMAg);
-    let tmp15Result = tmp15(tmp2(tmp3[24]).EmptyState, obj2);
+    obj2[0] = require(tmp3[25]).NoResults;
+    let intl2 = require(tmp3[16]).intl;
+    obj2[1] = intl2.string(require(tmp3[16]).t.wM7uRI);
+    const intl3 = require(tmp3[16]).intl;
+    obj2[2] = intl3.string(require(tmp3[16]).t.f5cMAg);
+    let tmp15Result = tmp15(require(tmp3[24]).EmptyState, obj2);
   } else {
     let obj3 = { sections: null, renderItem: null, itemSize: null, insetEnd: null, estimatedListSize: "windowSize", placeholderConfig: null, wrapChildren: true };
     obj3[0] = memo.sections;
@@ -123,12 +119,12 @@ const memoResult = importAllResult.memo(function NotificationSettingChannelOverr
     obj3[2] = tmp10;
     obj3[3] = navigation(stateFromStores[12])().insets.bottom;
     obj3[5] = tmp12;
-    tmp15Result = tmp15(tmp5(tmp3[26]), obj3);
+    tmp15Result = tmp15(navigation(tmp3[26]), obj3);
   }
   items4[1] = tmp15Result;
   obj[1] = items4;
-  return closure_13(View, obj);
+  return callback(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/notification_settings/native/NotificationSettingChannelOverrides.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notification_settings/native/NotificationSettingChannelOverrides.native.tsx");
 
 export default memoResult;

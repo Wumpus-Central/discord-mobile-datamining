@@ -1,25 +1,22 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { MediaPickerActionSheetEngagedActions as closure_4 } from "../MediaKeyboardConstants.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardActionSheet.tsx");
 
 export default function MediaKeyboardActionSheet(onAttachPress) {
   onAttachPress = onAttachPress.onAttachPress;
   const onViewAll = onAttachPress.onViewAll;
   const onClose = onAttachPress.onClose;
   const onBack = onAttachPress.onBack;
-  let sharedValue;
-  let memo;
-  let callback2;
   ({ channel, draftType, uploadLimit, disableWhenReachedLimit, includedUploadIds, extensions, allowCamera, onPressCamera, onPressItem, onLongPressItem, onManageLimited } = onAttachPress);
   let obj = onAttachPress(onClose[4]);
-  sharedValue = obj.useSharedValue(-1);
+  const sharedValue = obj.useSharedValue(-1);
   let items = [onAttachPress];
-  memo = onBack.useMemo(() => {
+  const memo = onBack.useMemo(() => {
     let obj = { text: null, IconComponent: null, onPress: null, disabled: true };
     const intl = onAttachPress(onClose[5]).intl;
     obj[0] = intl.string(onAttachPress(onClose[5]).t.RgIi2B);
@@ -45,7 +42,7 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
     obj = { action: sharedValue.FULLY_EXPANDED };
     onViewAll(onClose[11]).track(memo.MEDIA_PICKER_ACTION_SHEET_ENGAGED, obj);
   }, []);
-  callback2 = onBack.useCallback(() => {
+  const callback2 = onBack.useCallback(() => {
     if (onClose != null) {
       tmp();
     }
@@ -59,15 +56,7 @@ export default function MediaKeyboardActionSheet(onAttachPress) {
   });
   const items3 = [onViewAll, memo];
   const memo1 = onBack.useMemo(() => {
-    let obj = {
-      canPostPolls: false,
-      onHeightChange() {
-
-      },
-      uploadDisabled: false,
-      overflowButtons: null
-    };
-    obj = { text: null, IconComponent: null, onPress: null, disabled: false };
+    const obj = { text: null, IconComponent: null, onPress: null, disabled: false };
     const intl = onAttachPress(onClose[5]).intl;
     obj[0] = intl.string(onAttachPress(onClose[5]).t.Zmm6dN);
     obj[1] = onAttachPress(onClose[14]).ImageIcon;

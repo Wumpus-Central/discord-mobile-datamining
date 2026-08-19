@@ -1,5 +1,5 @@
 // discord_app/design/assets/native.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import AccountAgeTier10LargeBadge from "../components/mana-assets/native/generated/AccountAgeTier10LargeBadge.native.tsx";
 import AccountAgeTier10SmallBadge from "../components/mana-assets/native/generated/AccountAgeTier10SmallBadge.native.tsx";
 import AccountAgeTier1LargeBadge from "../components/mana-assets/native/generated/AccountAgeTier1LargeBadge.native.tsx";
@@ -419,7 +419,7 @@ import WumpusCouchSpotIllustration from "../components/mana-assets/native/genera
 import WumpusGearSpotIllustration from "../components/mana-assets/native/generated/WumpusGearSpotIllustration.native.tsx";
 import WumpusMahjongSpotIllustration from "../components/mana-assets/native/generated/WumpusMahjongSpotIllustration.native.tsx";
 
-const result = set.fileFinishedImporting("design/assets/native.tsx");
+const result = obj132.fileFinishedImporting("design/assets/native.tsx");
 
 export const AccountAgeTier10LargeBadge = AccountAgeTier10LargeBadge.AccountAgeTier10LargeBadge;
 export const AccountAgeTier10SmallBadge = AccountAgeTier10SmallBadge.AccountAgeTier10SmallBadge;

@@ -1,10 +1,10 @@
 // discord_app/modules/activities/useDeveloperActivityShelfItems.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
-import closure_3 from "DeveloperActivityShelfStore.tsx";
+import noop from "../../../_runtime/00019_noop.js";
+import initialize from "DeveloperActivityShelfStore.tsx";
 import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
 
 export const useDeveloperActivityShelfItems = function useDeveloperActivityShelfItems() {
   const items = [closure_3];
@@ -17,12 +17,11 @@ export const useDeveloperActivityShelfItems = function useDeveloperActivityShelf
   const items2 = [stateFromStoresArray, isEnabled, lastUsedObject];
   return stateFromStoresArray.useMemo(() => {
     if (isEnabled) {
-      const mapped = stateFromStoresArray.map((application) => {
-        let obj = { application, activity: null };
-        obj = {};
+      const mapped = stateFromStoresArray.map((item, index) => {
+        const obj = {};
         const merged = Object.assign(closure_4);
-        const merged1 = Object.assign(application.embeddedActivityConfig);
-        obj.application_id = application.id;
+        const merged1 = Object.assign(item.embeddedActivityConfig);
+        obj.application_id = item.id;
         obj[1] = obj;
         return obj;
       });

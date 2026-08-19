@@ -1,13 +1,13 @@
 // discord_app/modules/harvester/HarvesterUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/UserStore.tsx";
-import closure_5 from "DataHarvestStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
+import harvestType from "DataHarvestStore.tsx";
 import { REQUEST_DATA_LIMIT_MS } from "HarvesterConstants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 
 export const harvestDisabled = function harvestDisabled(created_at, stateFromStores) {
   const verified = stateFromStores.verified;
@@ -35,7 +35,6 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [closure_5];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => harvestType.harvestType);
-  const obj3 = initialize;
   [tmp3, require] = callback(React.useState(() => Date.now()), 2);
   let sum = tmp3;
   if (null != stateFromStores1) {
@@ -44,9 +43,9 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
     sum = date.getTime() + REQUEST_DATA_LIMIT_MS;
   }
   dependencyMap = sum;
-  callback = obj4.useRef(null);
+  callback = React.useRef(null);
   const items2 = [sum];
-  const effect = obj4.useEffect(() => {
+  const effect = React.useEffect(() => {
     const diff = closure_1 - Date.now();
     if (diff > 0) {
       const _setTimeout = setTimeout;
@@ -77,4 +76,5 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   } else {
     return { allowed: false, reason: "not_verified" };
   }
+  const tmp2 = callback(React.useState(() => Date.now()), 2);
 };

@@ -1,7 +1,7 @@
 // discord_app/modules/gateway/LocalPresenceStateManager.tsx
 import shouldCommitDefault from "../../lib/StateManager.tsx";
 import rateLimitDefault from "../../lib/rateLimit.tsx";
-import closure_2 from "../../stores/SelfPresenceStore.tsx";
+import filterPlayingActivities from "../../stores/SelfPresenceStore.tsx";
 
 shouldCommitDefault;
 class LocalPresenceStateManager extends tmp2 {
@@ -11,7 +11,7 @@ class LocalPresenceStateManager extends tmp2 {
     tmp3.switchingAccounts = false;
     emitPresenceUpdate = tmp3.emitPresenceUpdate;
     tmp4 = require("rateLimit");
-    tmp3.didCommit = require("module_5");
+    tmp3.didCommit = require("../../../_runtime/00005_asyncGeneratorStep.js");
     tmp3.socket = global;
     return tmp3;
   }
@@ -40,6 +40,6 @@ prototype["handleAccountSwitch"] = function handleAccountSwitch() {
   this.reset();
   this.emitPresenceUpdate(this.getState());
 };
-const result = require("set").fileFinishedImporting("modules/gateway/LocalPresenceStateManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/gateway/LocalPresenceStateManager.tsx");
 
 export default LocalPresenceStateManager;

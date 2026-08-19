@@ -2,11 +2,11 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import savePersistentCodesEnabledDefault from "../../../rtc/SecureFramesActionCreators.tsx";
-import closure_3 from "../../../rtc/SecureFramesPersistedStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import items from "../../../rtc/SecureFramesPersistedStore.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["opi/XK"]);
@@ -25,7 +25,7 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SecureFramesPersistentCodesSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/SecureFramesPersistentCodesSetting.tsx");
 
 export default createToggle;
 export const DataAndPrivacySecureFramesPersistentCodesSetting = createToggle;

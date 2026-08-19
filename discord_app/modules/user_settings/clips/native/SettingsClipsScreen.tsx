@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/clips/native/SettingsClipsScreen.tsx
 import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
 
 export default function ClipsSettingsScreen() {
   const node = React.useMemo(() => {

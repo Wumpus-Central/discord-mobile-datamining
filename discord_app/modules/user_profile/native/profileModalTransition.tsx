@@ -1,11 +1,10 @@
 // discord_app/modules/user_profile/native/profileModalTransition.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import set from "../../../../_runtime/00002_set.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
-const require = arg1;
+const require = fn;
 let c3 = 0;
-let set = new Set();
-const result = set.fileFinishedImporting("modules/user_profile/native/profileModalTransition.tsx");
+const set = new Set();
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/profileModalTransition.tsx");
 
 export const useReportProfileModalTransition = function useReportProfileModalTransition() {
   navigation = navigation(1500).useNavigation();
@@ -17,7 +16,7 @@ export const useReportProfileModalTransition = function useReportProfileModalTra
         const _Math = Math;
         bound = Math.max(0, bound - 1);
         if (bound !== bound) {
-          const item = closure_1_4.forEach((arg0) => arg0());
+          const item = closure_1_4.forEach((item, index) => item());
         }
       }
     }
@@ -29,7 +28,7 @@ export const useReportProfileModalTransition = function useReportProfileModalTra
           const _Math = Math;
           bound = Math.max(0, bound + 1);
           if (bound !== bound) {
-            const item = closure_1_4.forEach((arg0) => arg0());
+            const item = closure_1_4.forEach((item, index) => item());
           }
         }
       }),
@@ -37,13 +36,13 @@ export const useReportProfileModalTransition = function useReportProfileModalTra
       navigation.addListener("gestureCancel", leave)
     ];
     return () => {
-      const item = items.forEach((arg0) => arg0());
+      const item = items.forEach((item, index) => item());
       if (c0) {
         c0 = false;
         const _Math = Math;
         bound = Math.max(0, bound - 1);
         if (bound !== bound) {
-          const item1 = closure_1_4.forEach((arg0) => arg0());
+          const item1 = closure_1_4.forEach((item, index) => item());
         }
       }
     };

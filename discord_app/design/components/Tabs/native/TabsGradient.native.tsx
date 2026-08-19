@@ -1,12 +1,12 @@
 // discord_app/design/components/Tabs/native/TabsGradient.native.tsx
 import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { HorizontalGradient } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = importDefaultResult.createAnimatedComponent(LinearGradientDefault);
 let closure_8 = { mass: 1, damping: 30, stiffness: 250 };
@@ -15,37 +15,33 @@ let closure_10 = { code: "function TabsGradientNativeTsx1(){const{withSpring,vis
 let closure_11 = { code: "function TabsGradientNativeTsx2(){const{itemDimensions,state}=this.__closure;const items=itemDimensions.get();const itemWidths=items.reduce(function(s,layout){var _layout$width;return s+((_layout$width=layout===null||layout===void 0?void 0:layout.width)!==null&&_layout$width!==void 0?_layout$width:0);},0);const itemsSpacing=items.length*state.itemSpacing;return itemWidths+itemsSpacing;}" };
 let closure_12 = { code: "function TabsGradientNativeTsx3(){const{scrollOffset,totalItemWidth,pageWidth}=this.__closure;return scrollOffset.get()>0&&totalItemWidth.get()>pageWidth;}" };
 let closure_13 = { code: "function TabsGradientNativeTsx4(){const{scrollOffset,totalItemWidth,pageWidth}=this.__closure;return scrollOffset.get()<totalItemWidth.get()-pageWidth&&totalItemWidth.get()>pageWidth;}" };
-const result = require("set").fileFinishedImporting("design/components/Tabs/native/TabsGradient.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Tabs/native/TabsGradient.native.tsx");
 
 export default function TabsGradient(state) {
   state = state.state;
   let derivedValue2 = state;
   const colors = state.colors;
-  let scrollOffset;
-  let itemDimensions;
-  let pageWidth;
-  let derivedValue;
-  scrollOffset = state.scrollOffset;
-  itemDimensions = state.itemDimensions;
-  pageWidth = state.pageWidth;
+  const scrollOffset = state.scrollOffset;
+  const itemDimensions = state.itemDimensions;
+  const pageWidth = state.pageWidth;
   let obj = derivedValue2(colors[3]);
   const fn = function f() {
     const value = itemDimensions.get();
-    return value.reduce((arg0, width) => {
+    return value.reduce((acc, item, index) => {
       let num;
-      if (width != null) {
-        num = width.width;
+      if (item != null) {
+        num = item.width;
       }
       if (num == null) {
         num = 0;
       }
-      return arg0 + num;
+      return acc + num;
     }, 0) + value.length * derivedValue2.itemSpacing;
   };
   fn.__closure = { itemDimensions, state };
   fn.__workletHash = 456613763143;
   fn.__initData = closure_11;
-  derivedValue = obj.useDerivedValue(fn);
+  const derivedValue = obj.useDerivedValue(fn);
   obj1 = derivedValue2(colors[3]);
   const fn2 = function y() {
     let tmp = scrollOffset.get() > 0;

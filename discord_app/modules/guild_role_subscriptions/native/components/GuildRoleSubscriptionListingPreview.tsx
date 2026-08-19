@@ -8,24 +8,24 @@ import preloadDefault from "../../../../components_native/common/FastImage.tsx";
 import getRoleEmojisAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
 import getBenefitKey from "../../GuildRoleSubscriptionTypeUtils.tsx";
 import GuildRoleSubscriptionMemberPreview from "listing_elements/GuildRoleSubscriptionMemberPreview.tsx";
+import NEW_LISTING_EDIT_STATE_ID from "../../GuildRoleSubscriptionsActionCreatorExtras.native.tsx";
+import BaseBenefitRow from "GuildRoleSubscriptionBenefitPreview.tsx";
 import GuildPremiumRoleSubscribeButton from "GuildPremiumRoleSubscribeButton.tsx";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function PriceTier(arg0) {
   ({ price, currency } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   const tmp2 = callback4();
-  let obj = { style: tmp2.priceGroup, children: null };
-  obj = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: formatSingleCurrencyPrice.formatPrice(price, currency) };
+  let obj = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: formatSingleCurrencyPrice.formatPrice(price, currency) };
   const items = [callback2(Text.Text, obj), ];
   obj = { style: tmp2.priceInterval, variant: "eyebrow", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj1 = { period: null };
-  const obj3 = formatSingleCurrencyPrice;
   obj1[0] = getBenefitKey.formatPlanInterval(merged);
   obj[3] = intl.format(getSystemLocale.t.isLGyX, obj1);
   items[1] = callback2(Text.Text, obj);
@@ -35,16 +35,11 @@ function PriceTier(arg0) {
 function Header(onPress) {
   const listingId = onPress.listingId;
   const tmp = callback4();
-  let obj = getRoleEmojisAll;
   obj1 = getRoleEmojisAll;
   let str = callback(getRoleEmojisAll.useImage(listingId), 1)[0];
-  const obj3 = getRoleEmojisAll;
-  obj = { style: tmp.header, children: null };
   const items = [callback2(Text.Text, { variant: "heading-md/semibold", color: "interactive-text-active", children: callback(obj1.useName(listingId), 1)[0] }), , , , ];
-  obj = { style: tmp.image, source: null };
+  const obj = { style: tmp.image, source: null };
   obj4 = getRoleEmojisAll;
-  const tmp3 = closure_7;
-  const tmp4 = View;
   if (str == null) {
     str = "";
   }
@@ -56,7 +51,7 @@ function Header(onPress) {
   items[3] = callback2(GuildPremiumRoleSubscribeButton.GuildPremiumRoleSubscribeButton, { onPress: onPress.onSubscribePress });
   items[4] = callback2(Text.Text, { variant: "text-sm/medium", children: callback(obj4.useDescription(listingId), 1)[0] });
   obj[1] = items;
-  return tmp3(tmp4, obj);
+  return callback2(View, obj);
 }
 function Content(arg0) {
   ({ children, noBackground, style } = arg0);
@@ -68,21 +63,19 @@ function Content(arg0) {
   }
   style[1] = contentWithBackground;
   style[2] = style;
-  return closure_6(View, { style, children });
+  return callback(View, { style, children });
 }
 function SectionLabel(children) {
   const merged = Object.assign(children, Object.create(null));
-  let obj = {};
   const merged1 = Object.assign(merged);
-  obj = { style: callback4().sectionLabel, variant: "eyebrow", color: "text-default", children: children.label };
+  const obj = { style: callback4().sectionLabel, variant: "eyebrow", color: "text-default", children: children.label };
   obj.children = callback2(Text.Text, obj);
   return callback2(Content, obj);
 }
 function LabeledSection(arg0) {
   ({ label, children } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = { children: null };
-  obj = {};
+  let obj = {};
   const merged1 = Object.assign(merged);
   obj.label = label;
   const items = [callback2(SectionLabel, obj), ];
@@ -94,8 +87,7 @@ function LabeledSection(arg0) {
   return callback3(closure_8, obj);
 }
 function Separator() {
-  let obj = { children: null };
-  obj = { style: callback4().separator };
+  const obj = { style: callback4().separator };
   obj[0] = callback2(View, obj);
   return callback2(Content, obj);
 }
@@ -123,15 +115,14 @@ class BenefitsSection {
         obj[0] = benefits.length;
         formatToPlainStringResult = intl.formatToPlainString(label, obj);
       }
-      mapped = benefits.map((benefit) => {
-        let benefitSpacing = arg1 > 0;
+      mapped = benefits.map((item, index) => {
+        let benefitSpacing = index > 0;
         if (benefitSpacing) {
           benefitSpacing = benefitSpacing.benefitSpacing;
         }
-        let obj = { style: benefitSpacing, children: null };
-        obj = { guildId: closure_0, benefit, isInteractive: listingId !== closure_1_0(closure_1_3[14]).NEW_LISTING_EDIT_STATE_ID };
-        obj[1] = closure_1_6(closure_1_0(closure_1_3[13]).GuildRoleSubscriptionBenefitPreview, obj);
-        return closure_1_6(closure_1_5, obj, closure_1_0(closure_1_3[9]).getBenefitKey(benefit));
+        const obj = { guildId: closure_0, benefit: item, isInteractive: listingId !== NEW_LISTING_EDIT_STATE_ID.NEW_LISTING_EDIT_STATE_ID };
+        obj[1] = closure_1_6(BaseBenefitRow.GuildRoleSubscriptionBenefitPreview, obj);
+        return closure_1_6(View, obj, getBenefitKey.getBenefitKey(item));
       });
       tmp4 = jsx;
       obj = { noBackground: null, label: null, children: null };
@@ -154,26 +145,22 @@ class BenefitsSection {
 }
 noopAll;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, header: null, image: null, priceGroup: null, priceInterval: null, content: null, contentWithBackground: null, separator: null, sectionLabel: null, benefitSpacing: null, roundedBenefitsContainer: null, footer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: 16 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: 16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 80, height: 80, borderRadius: 40, marginTop: 16 };
 createCacheKey[3] = { marginTop: 16, alignItems: "center" };
 createCacheKey[4] = { marginTop: 4 };
 createCacheKey[5] = { paddingHorizontal: 16 };
 createCacheKey[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[7] = { width: "100%", height: 1, marginTop: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[8] = { paddingVertical: 16 };
 createCacheKey[9] = { marginTop: 16 };
-let obj2 = { width: "100%", height: 1, marginTop: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: 16 };
 createCacheKey[11] = { borderBottomStartRadius: 8, borderBottomEndRadius: 8, height: 16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
 BenefitsSection.Looks = obj4;
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: 16 };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx");
 
 export { BenefitsSection };
 export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptionListingPreview(arg0) {
@@ -184,7 +171,6 @@ export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptio
   obj1 = getRoleEmojisAll;
   const first1 = callback(obj1.useIntangibleBenefits(listingId), 1)[0];
   let obj2 = getRoleEmojisAll;
-  obj = { style: tmp.container, children: null };
   obj = {};
   const role = obj2.useRole(listingId, guildId);
   const merged = Object.assign(arg0);
@@ -197,32 +183,32 @@ export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptio
   let tmp4Result = first.length > 0;
   if (tmp4Result) {
     obj2 = { children: null };
-    const items1 = [tmp6(Separator, {}), ];
+    const items1 = [callback2(Separator, {}), ];
     const obj3 = { guildId: null, benefits: null, label: null, listingId: null };
     obj3[0] = guildId;
     obj3[1] = first;
-    obj3[2] = tmp8(1236).t.sqjII9;
+    obj3[2] = getSystemLocale.t.sqjII9;
     obj3[3] = listingId;
-    items1[1] = tmp6(BenefitsSection, obj3);
+    items1[1] = callback2(BenefitsSection, obj3);
     obj2[0] = items1;
-    tmp4Result = tmp4(closure_8, obj2);
+    tmp4Result = callback2(closure_8, obj2);
   }
   items[2] = tmp4Result;
   tmp4Result = first1.length > 0;
   if (tmp4Result) {
     obj4 = { children: null };
-    const items2 = [tmp6(Separator, {}), ];
+    const items2 = [callback2(Separator, {}), ];
     const obj5 = { guildId: null, benefits: null, label: null, listingId: null };
     obj5[0] = guildId;
     obj5[1] = first1;
-    obj5[2] = tmp8(1236).t.aBE7f9;
+    obj5[2] = getSystemLocale.t.aBE7f9;
     obj5[3] = listingId;
-    items2[1] = tmp6(BenefitsSection, obj5);
+    items2[1] = callback2(BenefitsSection, obj5);
     obj4[0] = items2;
-    tmp4Result = tmp4(closure_8, obj4);
+    tmp4Result = callback2(closure_8, obj4);
   }
   items[3] = tmp4Result;
   items[4] = callback2(Content, { style: tmp.footer });
   obj[1] = items;
-  return closure_7(View, obj);
+  return callback2(View, obj);
 };

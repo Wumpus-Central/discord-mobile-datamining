@@ -1,11 +1,11 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertIncomplete.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../UserGuildJoinRequestStore.tsx";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import handleGatewayJoinRequestUpdate from "../../../UserGuildJoinRequestStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertIncomplete.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertIncomplete.tsx");
 
 export default function MemberVerificationAlertIncomplete(guildId) {
   guildId = guildId.guildId;
@@ -21,19 +21,19 @@ export default function MemberVerificationAlertIncomplete(guildId) {
     if (onClose != null) {
       tmp();
     }
-    const result = guildId(closure_1_2[4]).openMemberVerificationModal(guildId);
+    const result = guildId(dependencyMap[4]).openMemberVerificationModal(guildId);
   }, items2);
   let name;
   const callback1 = React.useCallback(() => {
     if (onClose != null) {
       tmp();
     }
-    let obj = guildId(closure_1_2[5]);
-    obj = { guildId, subtitleText: null, confirmText: null };
-    const intl = guildId(closure_1_2[6]).intl;
-    obj[1] = intl.string(guildId(closure_1_2[6]).t.fJwWVt);
-    const intl2 = guildId(closure_1_2[6]).intl;
-    obj[2] = intl2.string(guildId(closure_1_2[6]).t.OQFlFD);
+    guildId(dependencyMap[5]);
+    const obj = { guildId, subtitleText: null, confirmText: null };
+    const intl = guildId(dependencyMap[6]).intl;
+    obj[1] = intl.string(guildId(dependencyMap[6]).t.fJwWVt);
+    const intl2 = guildId(dependencyMap[6]).intl;
+    obj[2] = intl2.string(guildId(dependencyMap[6]).t.OQFlFD);
     const result = obj.openMemberVerificationCancelPendingAlert(obj);
   }, items3);
   if (stateFromStores != null) {

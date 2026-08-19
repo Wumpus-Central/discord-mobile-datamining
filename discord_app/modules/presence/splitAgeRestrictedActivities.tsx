@@ -1,9 +1,9 @@
 // discord_app/modules/presence/splitAgeRestrictedActivities.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import isAgeRestrictedClassificationReference from "../content_classification/ContentClassificationReference.tsx";
 import apexExperiment from "ContentClassificationPresenceFilterExperiment.tsx";
 
-const result = set.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
+const result = obj132.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 
 export default function splitAgeRestrictedActivities(arg0, arg1) {
   const ContentClassificationPresenceFilterExperiment = apexExperiment.ContentClassificationPresenceFilterExperiment;
@@ -14,14 +14,10 @@ export default function splitAgeRestrictedActivities(arg0, arg1) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp5 = nextResult;
-      let tmp6 = require;
-      let tmp7 = dependencyMap;
       let obj2 = isAgeRestrictedClassificationReference;
       if (obj2.isAgeRestrictedClassificationReference(nextResult.content_classification)) {
-        let tmp10 = nextResult;
         let arr = items1.push(tmp5);
       } else {
-        let tmp8 = nextResult;
         arr = items.push(tmp5);
       }
       continue;

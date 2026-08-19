@@ -1,13 +1,13 @@
 // discord_app/modules/application_widget/ApplicationWidgetConfigActions.tsx
-import setDefault from "../../utils/Durations.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "ApplicationWidgetConfigStore.tsx";
+import obj132Default from "../../utils/Durations.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import updateApplicationConfigs from "ApplicationWidgetConfigStore.tsx";
 import { FetchState } from "ApplicationWidgetConfigStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 import importDefaultResult from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import importDefaultResult1 from "../../Dispatcher.tsx";
 
-const require = arg1;
+const require = fn;
 function getApplicationsFromConfigs(arg0) {
   const map = new Map();
   const iter = arg0[Symbol.iterator]();
@@ -15,7 +15,6 @@ function getApplicationsFromConfigs(arg0) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (null != nextResult.application) {
-      let tmp3 = nextResult;
       let result = map.set(tmp2.application.id, tmp2.application);
     }
     continue;
@@ -82,7 +81,7 @@ function _fetchFeaturedWidgetConfigsFromApi() {
           obj1.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" });
           if (!closure_9.pending) {
             closure_9.fail(() => {
-              closure_8.one(undefined, closure_10).catch(() => {
+              closure_8.one(undefined, closure_10).catch((error) => {
 
               });
             });
@@ -333,13 +332,13 @@ function _fetchWidgetConfigsFromApi() {
   }
   return applyArgumentsResult;
 }
-let promiseDeduper = new require("areArraysShallowlyEqual").PromiseDeduper();
-importDefaultResult = new importDefaultResult(setDefault.Millis.SECOND, setDefault.Millis.MINUTE, true);
+new require("areArraysShallowlyEqual").PromiseDeduper();
+importDefaultResult = new importDefaultResult(obj132Default.Millis.SECOND, obj132Default.Millis.MINUTE, true);
 let c9 = importDefaultResult;
 const subscription = importDefaultResult1.subscribe("LOGOUT", () => importDefaultResult.succeed());
-promiseDeduper = new require("areArraysShallowlyEqual").PromiseDeduper();
+const promiseDeduper = new require("areArraysShallowlyEqual").PromiseDeduper();
 const promiseDeduper1 = new require("areArraysShallowlyEqual").PromiseDeduper();
-let result = require("set").fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigActions.tsx");
+let result = require("obj132").fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigActions.tsx");
 
 export const fetchFeaturedWidgetConfigs = function fetchFeaturedWidgetConfigs() {
   let obj = arg0;

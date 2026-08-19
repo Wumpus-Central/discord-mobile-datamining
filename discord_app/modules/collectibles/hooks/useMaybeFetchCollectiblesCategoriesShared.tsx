@@ -1,37 +1,37 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../experiments/ExperimentStore.tsx";
-import closure_6 from "../CollectiblesCategoryStore.tsx";
+import getHash from "../../experiments/ExperimentStore.tsx";
+import updateCategoriesAndProducts from "../CollectiblesCategoryStore.tsx";
 import items from "../CollectiblesShopConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
+const require = fn;
 ({ useEffect: c3, useCallback: c4 } = noop);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: error, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_8 } = items);
-let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx");
 
 export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchCollectiblesCategoriesShared(arg0, noOp, arg2) {
   const _require = arg0;
   dependencyMap = noOp;
   const callback = arg2;
-  let obj = _initialize;
+  let obj = initialize;
   let items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_6];
-  const tmp2 = callback(_initialize.useStateFromStoresArray(items1, () => {
+  const tmp2 = callback(require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items1, () => {
     const items = [, , , , , , ];
-    ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = closure_6);
+    ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = lastSuccessfulFetch);
     if (lastErrorTimestamp == null) {
       lastErrorTimestamp = 0;
     }
     items[3] = lastErrorTimestamp;
-    let num = tmp.lastSuccessfulFetch;
+    let num = lastSuccessfulFetch.lastSuccessfulFetch;
     if (num == null) {
       num = 0;
     }
     items[4] = num;
-    ({ categories: arr[5], skipNumCategories: arr[6] } = closure_6);
+    ({ categories: arr[5], skipNumCategories: arr[6] } = lastSuccessfulFetch);
     return items;
   }), 7);
   const callback2 = tmp3;
@@ -45,6 +45,7 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
       if (!isFetchingCategories.isFetchingCategories) {
         const _Date = Date;
         const _Boolean = Boolean;
+        Date.now() - isFetchingCategories < closure_8;
         if (!Boolean(closure_5)) {
           const obj = {};
           const merged = Object.assign(callback);
@@ -58,15 +59,11 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
             tmp18 = Date.now() - closure_7 < closure_7;
           }
           if (!tmp18) {
-            const collectiblesCategories = tmp10(tmp11[7]).fetchCollectiblesCategories(obj, noOp, closure_2);
-            const tmp10Result = tmp10(tmp11[7]);
+            const collectiblesCategories = callback(noOp[7]).fetchCollectiblesCategories(obj, noOp, closure_2);
+            const tmp10Result = callback(noOp[7]);
           }
           const obj2 = callback(noOp[7]);
-          tmp10 = callback;
-          tmp11 = noOp;
-          const tmp15 = !result;
         }
-        const tmp5 = Date.now() - isFetchingCategories < closure_8;
       }
     }
   }, items2);

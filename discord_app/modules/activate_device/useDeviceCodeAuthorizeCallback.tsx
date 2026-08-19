@@ -1,8 +1,8 @@
 // discord_app/modules/activate_device/useDeviceCodeAuthorizeCallback.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../_runtime/00019_noop.js";
 
-const require = arg1;
+const require = fn;
 function _createTwoWayLink() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -282,13 +282,11 @@ function _silentlyFinishTwoWayLinkError() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/activate_device/useDeviceCodeAuthorizeCallback.tsx");
+let result = require("obj132").fileFinishedImporting("modules/activate_device/useDeviceCodeAuthorizeCallback.tsx");
 
 export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCallback(callback, callback2, callback1) {
-  closure_0 = callback;
   closure_1 = callback2;
   closure_2 = callback1;
-  closure_0 = undefined;
   closure_0 = callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -325,12 +323,12 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
               closure_3 = tmp4;
               dependencyMap = tmp6;
               if (callback2) {
-                if (null == tmp49.twoWayLinkCode) {
+                if (null == callback.twoWayLinkCode) {
                   c5 = 2;
                   c6 = 4;
                   c7 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = callback(9772).finishUserCode(tmp49.userCode, "granted");
+                  obj1[0] = callback(9772).finishUserCode(callback.userCode, "granted");
                   return obj1;
                 } else {
                   c5 = 3;
@@ -346,7 +344,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                       applyArgumentsResult = apply(self, arguments);
                     }
                     return applyArgumentsResult;
-                  })(tmp49.clientId, tmp49.twoWayLinkCode, tmp49.userCode);
+                  })(callback.clientId, callback.twoWayLinkCode, callback.userCode);
                   return obj2;
                 }
               } else {
@@ -355,7 +353,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                 c6 = 6;
                 c7 = 1;
                 obj3 = { value: null, done: false };
-                obj3[0] = obj3.finishUserCode(tmp49.userCode, "denied");
+                obj3[0] = obj3.finishUserCode(callback.userCode, "denied");
                 return obj3;
               }
             }
@@ -382,7 +380,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                     obj4[0] = arg1;
                     return obj4;
                   } else {
-                    closure_1_2(callback);
+                    callback1(callback);
                     c5 = 0;
                   }
                 } else if (5 === tmp9) {
@@ -390,7 +388,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                     c7 = 3;
                     throw arg1;
                   } else if (arg0 !== 2) {
-                    closure_1_2(callback);
+                    callback1(callback);
                     c5 = 0;
                   }
                 } else if (arg0 === 1) {

@@ -2,9 +2,8 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import handleChannelSelectDefault from "SharedSpacesWarningManager.tsx";
-import closure_2 from "../../stores/RelationshipStore.tsx";
-import closure_3 from "../../stores/VoiceStateStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
+import updateVoiceState from "../../stores/VoiceStateStore.tsx";
 
 function init() {
   closure_4 = {};
@@ -47,7 +46,6 @@ function processUserInChannel(channelId, id) {
           }
           if (flag3) {
             const result = handleChannelSelectDefault.handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
-            const obj4 = handleChannelSelectDefault;
           }
           return flag4;
         }
@@ -107,14 +105,9 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(dispatcher
     while (tmp3 !== undefined) {
       let _Object = Object;
       values = Object.values(tmp4);
-      let tmp6 = values;
-      let tmp7 = values;
       for (const item10026 of values) {
-        let tmp8 = item10026;
         if (null != item10026.channelId) {
-          let tmp9 = processUserInChannel;
-          let tmp10 = item10026;
-          let tmp11 = processUserInChannel(tmp8.channelId, tmp8.userId);
+          let tmp11 = processUserInChannel(item10026.channelId, item10026.userId);
           if (!tmp11) {
             tmp11 = flag;
           }
@@ -129,24 +122,24 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(dispatcher
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
     c0 = false;
-    const item = voiceStates.forEach((oldChannelId) => {
-      if (null != oldChannelId.oldChannelId) {
-        if (null != closure_1_4[oldChannelId.oldChannelId]) {
-          if (closure_1_4[oldChannelId.oldChannelId] != null) {
-            obj.delete(oldChannelId.userId);
+    const item = voiceStates.forEach((item, index) => {
+      if (null != item.oldChannelId) {
+        if (null != closure_1_4[item.oldChannelId]) {
+          if (closure_1_4[item.oldChannelId] != null) {
+            obj.delete(item.userId);
           }
           closure_0 = true;
         }
-        if (null != closure_1_5[oldChannelId.oldChannelId]) {
-          if (closure_1_5[oldChannelId.oldChannelId] != null) {
-            obj2.delete(oldChannelId.userId);
+        if (null != closure_1_5[item.oldChannelId]) {
+          if (closure_1_5[item.oldChannelId] != null) {
+            obj2.delete(item.userId);
           }
           closure_0 = true;
         }
       }
-      if (null != oldChannelId.channelId) {
-        closure_0 = closure_1_8(oldChannelId.channelId, oldChannelId.userId) || closure_0;
-        const tmp8 = closure_1_8(oldChannelId.channelId, oldChannelId.userId) || closure_0;
+      if (null != item.channelId) {
+        closure_0 = processUserInChannel(item.channelId, item.userId) || closure_0;
+        const tmp8 = processUserInChannel(item.channelId, item.userId) || closure_0;
       }
     });
     return c0;
@@ -155,6 +148,6 @@ const voiceChannelBlockedUserStore = new VoiceChannelBlockedUserStore(dispatcher
   RELATIONSHIP_REMOVE: handleRelationshipChange,
   RELATIONSHIP_UPDATE: handleRelationshipChange
 });
-let result = set.fileFinishedImporting("modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/shared_space_warnings/VoiceChannelBlockedUserStore.tsx");
 
 export default voiceChannelBlockedUserStore;

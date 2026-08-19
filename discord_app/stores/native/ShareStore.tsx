@@ -5,15 +5,15 @@ import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
-import closure_6 from "../AuthenticationStore.tsx";
-import closure_7 from "../ChannelStore.tsx";
-import closure_8 from "../GuildStore.tsx";
-import closure_9 from "../SelectedChannelStore.tsx";
-import closure_10 from "../SelectedGuildStore.tsx";
-import closure_11 from "../UserStore.tsx";
+import fetchFingerprint from "../AuthenticationStore.tsx";
+import ensureGuildLoaded from "../ChannelStore.tsx";
+import createGuildRecordFromRust from "../GuildStore.tsx";
+import handleConnectionOpen from "../SelectedChannelStore.tsx";
+import handleConnectionOpen2 from "../SelectedGuildStore.tsx";
+import mergeGuildAvatar from "../UserStore.tsx";
 import { AppStates } from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function handleTokenUpdated(token) {
   token = token.token;
   return false;
@@ -32,7 +32,6 @@ const shareStore = new ShareStore(dispatcherDefault, {
   },
   LOGOUT: function handleLogout() {
     enforcingDefault.setSelectedChannel(null, null);
-    const obj = enforcingDefault;
     const obj2 = enforcingDefault;
     const result = obj2.setAuthenticationToken(null, expandEventPropertiesDefault.getSuperPropertiesBase64());
     c5 = null;
@@ -71,24 +70,21 @@ const shareStore = new ShareStore(dispatcherDefault, {
         enforcingDefault.setSelectedChannel(json1, json);
         c3 = null;
         c4 = null;
-        const obj3 = enforcingDefault;
       }
     }
     if (null != c5) {
       obj = { client_app_state: null };
       obj[0] = state;
       const result = encodeProperties.extendSuperProperties(obj);
-      const obj4 = encodeProperties;
       const obj6 = enforcingDefault;
       const result1 = obj6.setAuthenticationToken(c5, expandEventPropertiesDefault.getSuperPropertiesBase64());
       if (state === AppStates.INACTIVE) {
         c5 = null;
       }
-      const obj7 = expandEventPropertiesDefault;
     }
     return false;
   }
 });
-let result = require("set").fileFinishedImporting("stores/native/ShareStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/native/ShareStore.tsx");
 
 export default shareStore;

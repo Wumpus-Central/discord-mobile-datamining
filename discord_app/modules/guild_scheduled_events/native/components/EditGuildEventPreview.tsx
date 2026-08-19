@@ -1,48 +1,39 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventPreview.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import "createCacheKey";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getChannelFromEvent } from "../../utils/EntityUtils.tsx";
-import { getEventLocationIconSource } from "GuildEventUtils.tsx";
 
-const require = arg1;
+const require = fn;
 function PreviewBody(event) {
   event = event.event;
-  let _require;
-  let channel_id;
-  dependencyMap = undefined;
-  let locationFromEvent;
-  locationFromEvent = undefined;
   let eventLocationIconSource;
   const tmp = callback3();
-  _require = tmp;
-  channel_id = event.channel_id;
-  let obj = _initialize;
+  const _require = tmp;
+  const channel_id = event.channel_id;
+  let obj = initialize;
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channel_id), items1);
   const tmp6 = channel_id(4984)(stateFromStores);
   dependencyMap = tmp6;
-  obj1 = _getChannelFromEvent;
-  locationFromEvent = obj1.getLocationFromEvent(event);
+  obj1 = getChannelFromEvent;
+  let locationFromEvent = obj1.getLocationFromEvent(event);
   let tmp8 = tmp6;
   if (tmp6 == null) {
     tmp8 = locationFromEvent;
   }
   locationFromEvent = tmp8;
-  eventLocationIconSource = _getEventLocationIconSource.getEventLocationIconSource(event, stateFromStores, true);
-  obj = { style: tmp.header, children: null };
+  eventLocationIconSource = require("GuildEventUtils.tsx").getEventLocationIconSource(event, stateFromStores, true);
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1236).intl;
-  obj[3] = intl.string(_getSystemLocale.t.yBsFE3);
-  const items2 = [callback(_Text.Text, obj), ];
+  obj[3] = intl.string(require("../../../../intl/index.native.tsx").t.yBsFE3);
+  const items2 = [callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj), ];
   obj1 = { style: tmp.headerSubtitle, accessibilityLabel: null, variant: "text-sm/medium", color: "text-default", children: null };
   let formatToPlainStringResult;
   if (null != stateFromStores) {
@@ -66,7 +57,7 @@ function PreviewBody(event) {
         obj[0] = tmp5;
         obj[1] = lib(1297).Icon.Sizes.EXTRA_SMALL;
         obj[2] = tmp4.channelIcon;
-        tmp2Result = tmp2(lib(1297).Icon, obj);
+        tmp2Result = closure_1_6(lib(1297).Icon, obj);
       }
       obj[1] = tmp2Result;
       const items = [closure_1_6(locationFromEvent, obj), ];
@@ -94,13 +85,12 @@ function PreviewBody(event) {
     formatResult = intl3.string(tmp2(1236).t.KDPFi9);
   }
   obj1[4] = formatResult;
-  items2[1] = callback(_Text.Text, obj1);
+  items2[1] = callback(require("../../../../design/components/Text/native/Text.tsx").Text, obj1);
   obj[1] = items2;
-  return closure_7(locationFromEvent, obj);
+  return callback(locationFromEvent, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, centered: null, centerContainer: null, flex: null, header: null, headerTitle: null, headerSubtitle: null, eventContainer: null, channelContainer: null, channelIcon: null, buttonContainer: null, error: null };
-createCacheKey = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" };
+const createCacheKey = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "column", alignItems: "center", justifyContent: "center" };
 createCacheKey[2] = { flexGrow: 0, width: "100%" };
@@ -112,17 +102,16 @@ createCacheKey[7] = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGRO
 createCacheKey[8] = { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 14 };
 let obj2 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE, marginRight: 4, height: 14, transform: null };
 let num = 0;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   num = 2;
 }
 let items = [{ translateY: num }];
 obj2[3] = items;
 createCacheKey[9] = obj2;
 createCacheKey[10] = { position: "absolute", bottom: 16, left: 0, right: 0 };
-let obj1 = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: ThemesDefault.radii.sm, shadowOpacity: 0.2, elevation: 2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 }, overflow: "visible" };
 createCacheKey[11] = { paddingBottom: 8, fontSize: 14, fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, color: ThemesDefault.unsafe_rawColors.RED_400 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = set.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventPreview.tsx");
+let result = obj132.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventPreview.tsx");
 
 export default function EditGuildEventPreview(guild) {
   guild = guild.guild;
@@ -135,20 +124,18 @@ export default function EditGuildEventPreview(guild) {
   const t = guild(guildEvent[13]).t;
   if (isEdit) {
     let stringResult = string(t.e5VEcE);
-    let tmp5 = tmp3;
+    let tmp5 = guildEvent;
     let tmp6 = tmp2;
   } else {
     stringResult = string(t["60lJ0C"]);
-    tmp5 = tmp3;
+    tmp5 = guildEvent;
     tmp6 = tmp2;
   }
   const items = [guildEvent, guild.id];
   const memo = isEdit.useMemo(() => guild(guildEvent[17]).convertToFakeGuildEvent(guildEvent, guild.id), items);
-  let obj = { bottom: true, style: tmp.container, children: null };
-  obj = { style: items1, children: null };
-  items1 = [, ];
+  const items1 = [, ];
   ({ flex: arr2[0], centered: arr2[1] } = tmp);
-  obj = { style: tmp.centerContainer, children: null };
+  let obj = { style: tmp.centerContainer, children: null };
   obj1 = { style: tmp.eventContainer, children: null };
   const items2 = [callback(tmp6(tmp5[19]).GuildEventCardImageHeader, { event: memo }), callback(tmp6(tmp5[19]).GuildEventCardHeader, { event: memo, isPreview: true }), callback(tmp6(tmp5[19]).GuildEventCardMetaInfo, { event: memo }), callback(tmp6(tmp5[19]).GuildEventSimpleLocation, { event: memo })];
   obj1[1] = items2;
@@ -161,7 +148,7 @@ export default function EditGuildEventPreview(guild) {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.error;
     obj3[1] = error.getAnyErrorMessage();
-    tmp8Result = tmp8(tmp6(tmp5[15]).LegacyText, obj3);
+    tmp8Result = callback(tmp6(tmp5[15]).LegacyText, obj3);
   }
   const items5 = [
     tmp8Result,
@@ -175,8 +162,8 @@ export default function EditGuildEventPreview(guild) {
             if (obj.hasScheduleChanges(closure_1, tmp)) {
               obj = { importer: null };
               obj[0] = function importer() {
-                return closure_1_0(closure_1_2[24])(closure_1_2[23], closure_1_2.paths).then((arg0) => {
-                  closure_0 = arg0.default;
+                return guild(guildEvent[24])(guildEvent[23], guildEvent.paths).then((result) => {
+                  closure_0 = result.default;
                   return (arg0) => {
                     const obj = {};
                     const merged = Object.assign(arg0);
@@ -185,8 +172,8 @@ export default function EditGuildEventPreview(guild) {
                   };
                 });
               };
-              closure_1_1(guildEvent[22]).openLazy(obj);
-              const obj2 = closure_1_1(guildEvent[22]);
+              importDefault(guildEvent[22]).openLazy(obj);
+              const obj2 = importDefault(guildEvent[22]);
             }
           }
         }

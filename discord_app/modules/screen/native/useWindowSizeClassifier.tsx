@@ -1,10 +1,10 @@
 // discord_app/modules/screen/native/useWindowSizeClassifier.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions.tsx";
 import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions.tsx";
 
 let obj = { SMALL: 0, [0]: "SMALL", NORMAL: 1, [1]: "NORMAL", LARGE: 2, [2]: "LARGE", XLARGE: 3, [3]: "XLARGE" };
-const result = set.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
+const result = obj132.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
 
 export default function useWindowSizeClassifier() {
   const width = useBaseAppContainerDimensionsDefault().width;

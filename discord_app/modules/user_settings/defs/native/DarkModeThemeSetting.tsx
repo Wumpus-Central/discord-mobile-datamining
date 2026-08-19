@@ -2,13 +2,13 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import useSyncedModeThemeName from "useSyncedModeThemeName.tsx";
-import closure_3 from "../../ThemeStore.tsx";
+import handleThemeChange from "../../ThemeStore.tsx";
 import { SystemTheme } from "../../ThemeConstants.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { SettingsAppearanceDarkModeThemePickerScreen } from "../../appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["EgvHH/"]);
@@ -30,10 +30,10 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
   getComponent() {
-    return SettingsAppearanceDarkModeThemePickerScreen.default;
+    return SettingsAppearanceDarkModeThemePickerScreen /* SettingsAppearanceDarkModeThemePickerScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DarkModeThemeSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DarkModeThemeSetting.tsx");
 
 export default createToggle;

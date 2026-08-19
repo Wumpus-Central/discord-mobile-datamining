@@ -1,17 +1,16 @@
 // discord_app/modules/application_account_linking/native/useStartProviderConnection.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _modDef4090 from "../../../lib/native/Linking.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { useProviderConnection } from "../hooks/useProviderConnection.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/application_account_linking/native/useStartProviderConnection.tsx");
 
 export const useStartProviderConnection = function useStartProviderConnection(provider_id) {
-  let obj = _useProviderConnection;
+  let obj = useProviderConnection;
   const providerConnection = obj.useProviderConnection(provider_id);
   const startConnection = providerConnection.startConnection;
-  _require = startConnection;
-  _require = undefined;
   ({ loading, hasConnection, canConnect, account } = providerConnection);
   _require = callback((arg0) => {
     closure_0 = arg0;
@@ -68,7 +67,7 @@ export const useStartProviderConnection = function useStartProviderConnection(pr
               if (lib.success) {
                 if (null != lib.url) {
                   c4 = 1;
-                  let obj4 = closure_2_1(closure_2_2[3]);
+                  let obj4 = _modDef4090;
                   c5 = 3;
                   c6 = 1;
                   const obj3 = { value: null, done: false };

@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/DisplayNameStylesAbstractUI-2x.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DisplayNameStylesAbstractUI-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DisplayNameStylesAbstractUI-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/ff43e4e3de63954e3f19b99d5361dd3f5ec1942d0d696bbece4d3aca0b3a39e0.png";
 export const metadata = { fileBytes: 109872 };

@@ -1,29 +1,19 @@
 // discord_app/modules/icymi/useSharedICYMILogic.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "ICYMIStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import filterStaffGuild from "ICYMIStore.tsx";
 import { SCROLL_EVENT_THROTTLE_MS } from "ICYMIConstants.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
 
 export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem) {
   notificationItem = notificationItem.notificationItem;
-  importDefault = undefined;
   let unreadItems;
   let readItems;
   let allUnreadItemsHydrated;
   let stateFromStores;
-  let stateFromStores1;
-  let stateFromStores2;
-  let stateFromStores3;
   c9 = undefined;
-  let lastScrollEventTimestamp;
-  let arr;
-  closure_12 = undefined;
-  let callback;
-  let callback1;
-  let callback2;
   const tmp = readItems(allUnreadItemsHydrated.useState(false), 2);
   importDefault = tmp2;
   let tmp3 = importDefault(unreadItems[4])();
@@ -34,7 +24,7 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
   let items = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => stateFromStores.getVersion(), []);
   const items1 = [stateFromStores];
-  stateFromStores1 = notificationItem(unreadItems[5]).useStateFromStores(items1, () => {
+  const stateFromStores1 = notificationItem(unreadItems[5]).useStateFromStores(items1, () => {
     let isFirstPageHydratedResult = stateFromStores.isFirstPageHydrated();
     if (isFirstPageHydratedResult) {
       isFirstPageHydratedResult = stateFromStores > 0;
@@ -50,22 +40,22 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
   }, items2);
   let obj2 = notificationItem(unreadItems[5]);
   const items3 = [stateFromStores];
-  stateFromStores2 = notificationItem(unreadItems[5]).useStateFromStores(items3, () => stateFromStores.isRefreshing(), []);
+  const stateFromStores2 = notificationItem(unreadItems[5]).useStateFromStores(items3, () => stateFromStores.isRefreshing(), []);
   let obj3 = notificationItem(unreadItems[5]);
   const items4 = [stateFromStores];
-  stateFromStores3 = notificationItem(unreadItems[5]).useStateFromStores(items4, () => stateFromStores.isHydrating(), []);
+  const stateFromStores3 = notificationItem(unreadItems[5]).useStateFromStores(items4, () => stateFromStores.isHydrating(), []);
   let obj4 = notificationItem(unreadItems[5]);
   [arr6, c9] = readItems(allUnreadItemsHydrated.useState([]), 2);
   let tmp9 = readItems(allUnreadItemsHydrated.useState([]), 2);
   const items5 = [stateFromStores];
   const stateFromStoresObject = notificationItem(unreadItems[5]).useStateFromStoresObject(items5, () => ({ loadId: stateFromStores.getLoadId(), lastScrollEventTimestamp: stateFromStores.lastScrollEvent() }));
-  lastScrollEventTimestamp = stateFromStoresObject.lastScrollEventTimestamp;
-  let found = arr6.filter((item) => {
+  const lastScrollEventTimestamp = stateFromStoresObject.lastScrollEventTimestamp;
+  let found = arr6.filter((item, index) => {
     const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(unreadItems[7]).NON_ELIGIBLE_SCROLL_ITEMS;
     return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
   });
-  const mapped = found.map((item) => item.item.id);
-  arr = mapped.pop();
+  const mapped = found.map((item, index) => item.item.id);
+  let arr = mapped.pop();
   const tmp12 = importDefault(unreadItems[8])(arr);
   closure_12 = tmp12;
   const items6 = [stateFromStores2, lastScrollEventTimestamp, tmp12, arr, stateFromStoresObject.loadId, stateFromStores1];
@@ -90,9 +80,9 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
     }
   }, items6);
   const items7 = [stateFromStores, tmp[1]];
-  callback = allUnreadItemsHydrated.useCallback((viewableItems) => {
+  const callback = allUnreadItemsHydrated.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
-    if (viewableItems.some((item) => "end" === item.item.data.kind)) {
+    if (viewableItems.some((item, index) => "end" === item.item.data.kind)) {
       callback(true);
     }
     if (0 !== viewableItems.length) {
@@ -105,14 +95,10 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
       if (0 <= diff) {
         do {
           let tmp3 = viewableFeedItemsArray[diff];
-          let tmp4 = diff;
-          let tmp5 = timestamp;
           let sum = timestamp;
           if (null != tmp3) {
             let obj = { id: null, type: null, timestamp: null };
             obj[0] = tmp3.id;
-            let tmp7 = notificationItem;
-            let tmp8 = unreadItems;
             let obj2 = notificationItem(unreadItems[11]);
             obj[1] = obj2.typeToString(tmp3);
             let tmp9 = +timestamp;
@@ -129,29 +115,29 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
         const obj3 = callback(unreadItems[9]);
       }
       const ICYMIAnalytics = notificationItem(unreadItems[6]).ICYMIAnalytics;
-      const result = ICYMIAnalytics.trackItemShortImpression(viewableItems, viewableFeedItemsArray.map((id) => {
-        const obj = { id: id.id, type: callback(table[11]).typeToString(id) };
+      const result = ICYMIAnalytics.trackItemShortImpression(viewableItems, viewableFeedItemsArray.map((item, index) => {
+        const obj = { id: item.id, type: callback(table[11]).typeToString(item) };
         return obj;
       }), stateFromStores);
       const obj4 = notificationItem(unreadItems[10]);
     }
   }, items7);
   const items8 = [stateFromStores];
-  callback1 = allUnreadItemsHydrated.useCallback((viewableItems) => {
+  const callback1 = allUnreadItemsHydrated.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     if (0 !== viewableItems.length) {
       const viewableFeedItemsArray = notificationItem(unreadItems[10]).getViewableFeedItemsArray(viewableItems);
       const ICYMIAnalytics = notificationItem(unreadItems[6]).ICYMIAnalytics;
-      const result = ICYMIAnalytics.trackItemLongImpression(viewableItems, viewableFeedItemsArray.map((id) => {
-        const obj = { id: id.id, type: callback(7589).typeToString(id) };
+      const result = ICYMIAnalytics.trackItemLongImpression(viewableItems, viewableFeedItemsArray.map((item, index) => {
+        const obj = { id: item.id, type: callback(7589).typeToString(item) };
         return obj;
       }), stateFromStores);
       let obj = notificationItem(unreadItems[10]);
-      const found = viewableItems.filter((item) => {
+      const found = viewableItems.filter((item, index) => {
         const NON_ELIGIBLE_SCROLL_ITEMS = callback(9063).NON_ELIGIBLE_SCROLL_ITEMS;
         return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
       });
-      const result1 = callback(unreadItems[9]).triggerItemsLongImpression(found.map((item) => {
+      const result1 = callback(unreadItems[9]).triggerItemsLongImpression(found.map((item, index) => {
         item = item.item;
         const obj = { itemId: item.id, itemType: callback(9056).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
         let score = item.score;
@@ -169,13 +155,13 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
       const obj2 = callback(unreadItems[9]);
     }
   }, items8);
-  callback2 = allUnreadItemsHydrated.useCallback((viewableItems) => {
+  const callback2 = allUnreadItemsHydrated.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
-    const found = viewableItems.filter((item) => {
+    const found = viewableItems.filter((item, index) => {
       const NON_ELIGIBLE_SCROLL_ITEMS = callback(9063).NON_ELIGIBLE_SCROLL_ITEMS;
       return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
     });
-    callback(unreadItems[9]).startItemsDwell(found.map((item) => {
+    callback(unreadItems[9]).startItemsDwell(found.map((item, index) => {
       item = item.item;
       const obj = { itemId: item.id, itemType: callback(9056).itemToType(item), triggerType: "list", itemFeedIndex: item.index, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
       let score = item.score;
@@ -233,10 +219,11 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
       obj[3] = { kind: "loading" };
       data.push(obj);
     } else {
-      const item = unreadItems.forEach((data) => {
-        if (!obj.isItemNSFW(data)) {
-          data.push(data);
+      const item = unreadItems.forEach((item, index) => {
+        if (!obj.isItemNSFW(item)) {
+          data.push(item);
         }
+        obj = data(unreadItems[10]);
       });
       if (allUnreadItemsHydrated) {
         obj1 = { id: "end", timestamp: 0, unread: false, data: null };
@@ -245,10 +232,11 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
       }
       arr1 = readItems;
       if (readItems.length > 0) {
-        const item1 = arr1.forEach((data) => {
-          if (!obj.isItemNSFW(data)) {
-            data.push(data);
+        const item1 = arr1.forEach((item, index) => {
+          if (!obj.isItemNSFW(item)) {
+            data.push(item);
           }
+          obj = data(unreadItems[10]);
         });
       }
       if (stateFromStores3) {

@@ -5,9 +5,9 @@ import ThemeTypesDefault from "SettingsAppearanceThemePickerScreen.tsx";
 import { SystemTheme } from "../../ThemeConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx");
 
 export default function SettingsAppearanceLightModeThemePickerScreen() {
   const obj = { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null };

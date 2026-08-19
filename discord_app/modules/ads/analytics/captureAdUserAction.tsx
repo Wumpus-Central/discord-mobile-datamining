@@ -1,16 +1,19 @@
 // discord_app/modules/ads/analytics/captureAdUserAction.tsx
-import set from "../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../utils/PlatformUtils.tsx";
 import getDeviceMetadataDefault from "../../device/getDeviceMetadata.native.tsx";
+import getQuestDeliveryDataForPlacement from "../../quests/utils/QuestDataUtils.tsx";
 import getQuestLogger from "../../quests/lib/getQuestLogger.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import trackQuestEvent from "../../quests/lib/analytics/AnalyticsActions.tsx";
 import getQuestContentName from "../../quests/lib/analytics/AnalyticsTypes.tsx";
+import getOrCreateQuestHomeSearchSession from "../../quests/lib/analytics/QuestHomeSearchSession.tsx";
 import getBrandSafetyContext from "../../quests/lib/analytics/BrandSafetyContext.tsx";
 import AdUserActionType from "captureAdUserActionTypes.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../quests/QuestStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import initializeState from "../../quests/QuestStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function emitClickEventWithCreative() {
   const self = this;
   const apply = _emitClickEventWithCreative.apply;
@@ -209,31 +212,29 @@ function _handleClickInternalAction() {
               c4 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_6(tmp15);
+              obj1[0] = closure_1_6(lib);
               return obj1;
             } else {
-              const clickId = tmp15.clickId;
-              ({ surfaceId, questContentCTA, questContentPosition, questContentRowIndex } = tmp15);
+              const clickId = lib.clickId;
+              ({ surfaceId, questContentCTA, questContentPosition, questContentRowIndex } = lib);
               const contentProperties = lib(closure_1_2[6]).getContentProperties(surfaceId, questContentPosition, questContentRowIndex);
               const obj6 = lib(closure_1_2[6]);
-              const tmp17 = lib;
-              const tmp18 = closure_1_2;
               const obj2 = { cta_name: null, click_id: null, is_targeted: null, content_id: null, content_name: null, content_position: null, row_index: null, ad_content_id: null, quest_id: null };
               obj2[0] = questContentCTA;
               closure_1 = clickId;
               if (clickId == null) {
-                closure_1 = tmp17(tmp18[9]).v4();
-                const tmp17Result = tmp17(tmp18[9]);
+                closure_1 = lib(closure_1_2[9]).v4();
+                const tmp17Result = lib(closure_1_2[9]);
               }
               obj2[1] = closure_1;
-              const isTargeted = tmp15.isTargeted;
+              const isTargeted = lib.isTargeted;
               c2 = isTargeted;
               if (isTargeted == null) {
                 c2 = false;
               }
               obj2[2] = c2;
               ({ content_id: obj8[3], content_name: obj8[4], content_position: obj8[5], row_index: obj8[6] } = contentProperties);
-              ({ adContentId: obj8[7], relatedQuestId: obj8[8] } = tmp15);
+              ({ adContentId: obj8[7], relatedQuestId: obj8[8] } = lib);
               closure_1_1(closure_1_2[8]).track(closure_1_5.QUEST_CONTENT_CLICKED, obj2);
               const obj7 = closure_1_1(closure_1_2[8]);
             }
@@ -337,7 +338,7 @@ function handleViewImpression(minViewTimeSeconds) {
   let advertisingId = null;
   ({ impressionId, isQuestEnrollmentBlocked, questContentPosition, questContentRowIndex } = minViewTimeSeconds);
   if (null != adUser) {
-    obj1 = set;
+    obj1 = obj132;
     advertisingId = null;
     if (obj1.isIOS()) {
       advertisingId = adUser.advertisingId;
@@ -346,7 +347,7 @@ function handleViewImpression(minViewTimeSeconds) {
   obj[3] = advertisingId;
   let advertisingId1 = null;
   if (null != adUser) {
-    let obj2 = set;
+    let obj2 = obj132;
     advertisingId1 = null;
     if (obj2.isAndroid()) {
       advertisingId1 = adUser.advertisingId;
@@ -357,10 +358,9 @@ function handleViewImpression(minViewTimeSeconds) {
   const merged1 = Object.assign(getBrandSafetyContext.getBrandSafetyContext(surfaceId));
   obj.impression_id = impressionId;
   obj.is_quest_enrollment_blocked = isQuestEnrollmentBlocked;
-  const obj4 = getBrandSafetyContext;
   const merged2 = Object.assign(getQuestContentName.getContentProperties(surfaceId, questContentPosition, questContentRowIndex));
   if (minViewTimeSeconds.adCreativeType !== AdCreativeType.AdCreativeType.QUEST) {
-    let tmp9Result = tmp9(7470);
+    let tmp9Result = trackQuestEvent;
     obj = { event: null, adContentId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
     obj[0] = AnalyticEvents.QUEST_CONTENT_VIEWED;
     ({ adCreativeId: obj9[1], adCreativeType: obj9[2] } = minViewTimeSeconds);
@@ -373,7 +373,7 @@ function handleViewImpression(minViewTimeSeconds) {
     tmp9Result.trackAdContentEvent(obj);
   } else {
     const adCreativeId = minViewTimeSeconds.adCreativeId;
-    tmp9Result = tmp9(7470);
+    tmp9Result = trackQuestEvent;
     obj1 = { event: null, questId: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null, properties: null };
     obj1[0] = AnalyticEvents.QUEST_CONTENT_VIEWED;
     obj1[1] = adCreativeId;
@@ -382,13 +382,13 @@ function handleViewImpression(minViewTimeSeconds) {
     obj1[4] = sourceQuestContent;
     obj2 = {};
     const merged4 = Object.assign(obj);
-    let adMetadataSealed = tmp9(7451).getAdMetadataSealed(sourceQuestContent, adCreativeId);
+    let adMetadataSealed = getQuestDeliveryDataForPlacement.getAdMetadataSealed(sourceQuestContent, adCreativeId);
     if (adMetadataSealed == null) {
       adMetadataSealed = null;
     }
     obj2.metadata_sealed = adMetadataSealed;
-    const tmp9Result1 = tmp9(7451);
-    const currentQuestHomeSearchSession = tmp9(7486).getCurrentQuestHomeSearchSession();
+    const tmp9Result1 = getQuestDeliveryDataForPlacement;
+    const currentQuestHomeSearchSession = getOrCreateQuestHomeSearchSession.getCurrentQuestHomeSearchSession();
     let uuid;
     if (currentQuestHomeSearchSession != null) {
       uuid = currentQuestHomeSearchSession.uuid;
@@ -397,15 +397,15 @@ function handleViewImpression(minViewTimeSeconds) {
       uuid = null;
     }
     obj2.search_session_id = uuid;
-    const tmp9Result2 = tmp9(7486);
-    let adTrafficMetadataSealed = tmp9(7451).getAdTrafficMetadataSealed(sourceQuestContent, adCreativeId);
+    const tmp9Result2 = getOrCreateQuestHomeSearchSession;
+    let adTrafficMetadataSealed = getQuestDeliveryDataForPlacement.getAdTrafficMetadataSealed(sourceQuestContent, adCreativeId);
     if (adTrafficMetadataSealed == null) {
       adTrafficMetadataSealed = null;
     }
     obj2.traffic_metadata_sealed = adTrafficMetadataSealed;
     obj1[5] = obj2;
     tmp9Result.trackQuestEvent(obj1);
-    const tmp9Result3 = tmp9(7451);
+    const tmp9Result3 = getQuestDeliveryDataForPlacement;
   }
 }
 function _handleViewInternalSurfaceImpressionAction() {
@@ -445,14 +445,14 @@ function _handleViewInternalSurfaceImpressionAction() {
               dependencyMap = tmp2;
               let lib2;
               if (null != lib.adCreativeType) {
-                closure_1_10(tmp48);
+                closure_1_10(lib);
                 constants = 3;
               } else {
                 let obj3 = lib(closure_1_2[13]);
                 c4 = 1;
                 constants = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj3.getAdUser(lib(closure_1_2[6]).getQuestContentName(tmp48.surfaceId));
+                obj1[0] = obj3.getAdUser(lib(closure_1_2[6]).getQuestContentName(lib.surfaceId));
                 return obj1;
               }
             }
@@ -515,29 +515,29 @@ function reportCaptureAdUserActionError(arg0) {
   const questLogger = getQuestLogger.getQuestLogger();
   questLogger.error("captureAdUserAction failed to report an ad user action", arg0);
 }
-const result = require("set").fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
+const result = require("obj132").fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
 
-export const captureAdUserAction = function captureAdUserAction(type) {
+export const captureAdUserAction = function captureAdUserAction(captureAdUserActionResult1) {
   try {
-    type = type.type;
+    const type = captureAdUserActionResult1.type;
     if (AdUserActionType.AdUserActionType.END_CONTENT_LOAD === type) {
       (function handleEndContentLoadAction(adCreativeType) {
         if (adCreativeType.adCreativeType === callback(table[3]).AdCreativeType.QUEST) {
           const adCreativeId = adCreativeType.adCreativeId;
-          let tmp2Result = tmp2(tmp3[4]);
+          callback(table[4]);
           let obj = { event: null, questId: null, trackGuildAndChannelMetadata: null, sourceQuestContent: null, properties: null };
           obj[0] = constants.QUEST_CONTENT_LOADED;
           obj[1] = adCreativeId;
           ({ trackGuildAndChannelMetadata: obj2[2], sourceQuestContent: obj2[3] } = adCreativeType);
           obj = { triggered_by_status_change: null, metadata_sealed: null, traffic_metadata_sealed: null, impression_id: null, is_quest_enrollment_blocked: null, content_id: null, content_name: null, content_position: null, row_index: null };
           obj[0] = adCreativeType.triggeredByStatusChange;
-          tmp2Result = tmp2(tmp3[5]);
+          const tmp2Result = callback(table[5]);
           let adMetadataSealed = tmp2Result.getAdMetadataSealed(adCreativeType.sourceQuestContent, adCreativeId);
           if (adMetadataSealed == null) {
             adMetadataSealed = null;
           }
           obj[1] = adMetadataSealed;
-          let adTrafficMetadataSealed = tmp2(tmp3[5]).getAdTrafficMetadataSealed(adCreativeType.sourceQuestContent, adCreativeId);
+          let adTrafficMetadataSealed = callback(table[5]).getAdTrafficMetadataSealed(adCreativeType.sourceQuestContent, adCreativeId);
           if (adTrafficMetadataSealed == null) {
             adTrafficMetadataSealed = null;
           }
@@ -545,12 +545,12 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           obj[3] = adCreativeType.impressionId;
           obj[4] = tmp;
           obj[5] = adCreativeType.surfaceId;
-          const tmp2Result1 = tmp2(tmp3[5]);
-          obj[6] = tmp2(tmp3[6]).getQuestContentName(adCreativeType.surfaceId);
+          const tmp2Result1 = callback(table[5]);
+          obj[6] = callback(table[6]).getQuestContentName(adCreativeType.surfaceId);
           ({ questContentPosition: obj3[7], questContentRowIndex: obj3[8] } = adCreativeType);
           obj[4] = obj;
           tmp2Result.trackQuestEvent(obj);
-          const tmp2Result2 = tmp2(tmp3[6]);
+          const tmp2Result2 = callback(table[6]);
         } else {
           obj1 = { event: null, adContentId: null, adCreativeType: null, trackGuildAndChannelMetadata: null, sourceQuestContent: null, properties: null };
           obj1[0] = constants.QUEST_CONTENT_LOADED;
@@ -559,16 +559,16 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           ({ triggeredByStatusChange: obj9[0], impressionId: obj9[1] } = adCreativeType);
           obj2[2] = tmp;
           obj2[3] = adCreativeType.surfaceId;
-          const tmp2Result3 = tmp2(tmp3[4]);
-          obj2[4] = tmp2(tmp3[6]).getQuestContentName(adCreativeType.surfaceId);
+          const tmp2Result3 = callback(table[4]);
+          obj2[4] = callback(table[6]).getQuestContentName(adCreativeType.surfaceId);
           ({ questContentPosition: obj9[5], questContentRowIndex: obj9[6] } = adCreativeType);
           obj1[5] = obj2;
           tmp2Result3.trackAdContentEvent(obj1);
-          const tmp2Result4 = tmp2(tmp3[6]);
+          const tmp2Result4 = callback(table[6]);
         }
-      })(type);
-    } else if (tmp2(9507).AdUserActionType.CLICK_INTERNAL === type) {
-      (function handleClickInternalAction(type) {
+      })(captureAdUserActionResult1);
+    } else if (AdUserActionType.AdUserActionType.CLICK_INTERNAL === type) {
+      (function handleClickInternalAction(captureAdUserActionResult1) {
         const self = this;
         const apply = closure_8.apply;
         if (typeof apply === "unknown") {
@@ -577,8 +577,8 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(type).catch(reportCaptureAdUserActionError);
-      const promise3 = (function handleClickInternalAction(type) {
+      })(captureAdUserActionResult1).catch(reportCaptureAdUserActionError);
+      const promise3 = (function handleClickInternalAction(captureAdUserActionResult1) {
         const self = this;
         const apply = closure_8.apply;
         if (typeof apply === "unknown") {
@@ -587,9 +587,9 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(type);
-    } else if (tmp2(9507).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
-      (function handleClickExternalAdvertiserCtaAction(type) {
+      })(captureAdUserActionResult1);
+    } else if (AdUserActionType.AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA === type) {
+      (function handleClickExternalAdvertiserCtaAction(captureAdUserActionResult1) {
         const self = this;
         const apply = closure_9.apply;
         if (typeof apply === "unknown") {
@@ -598,8 +598,8 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(type).catch(reportCaptureAdUserActionError);
-      const promise2 = (function handleClickExternalAdvertiserCtaAction(type) {
+      })(captureAdUserActionResult1).catch(reportCaptureAdUserActionError);
+      const promise2 = (function handleClickExternalAdvertiserCtaAction(captureAdUserActionResult1) {
         const self = this;
         const apply = closure_9.apply;
         if (typeof apply === "unknown") {
@@ -608,9 +608,9 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(type);
-    } else if (tmp2(9507).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
-      (function handleViewInternalSurfaceImpressionAction(type) {
+      })(captureAdUserActionResult1);
+    } else if (AdUserActionType.AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION === type) {
+      (function handleViewInternalSurfaceImpressionAction(captureAdUserActionResult1) {
         const self = this;
         const apply = closure_11.apply;
         if (typeof apply === "unknown") {
@@ -619,8 +619,8 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(type).catch(reportCaptureAdUserActionError);
-      const promise = (function handleViewInternalSurfaceImpressionAction(type) {
+      })(captureAdUserActionResult1).catch(reportCaptureAdUserActionError);
+      const promise = (function handleViewInternalSurfaceImpressionAction(captureAdUserActionResult1) {
         const self = this;
         const apply = closure_11.apply;
         if (typeof apply === "unknown") {
@@ -629,9 +629,9 @@ export const captureAdUserAction = function captureAdUserAction(type) {
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(type);
-    } else if (tmp2(9507).AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
-      handleViewImpression(type);
+      })(captureAdUserActionResult1);
+    } else if (AdUserActionType.AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION === type) {
+      handleViewImpression(captureAdUserActionResult1);
     }
   } catch (tmp13) {
     reportCaptureAdUserActionError(tmp13);

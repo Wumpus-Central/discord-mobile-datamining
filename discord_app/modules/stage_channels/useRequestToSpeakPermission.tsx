@@ -1,19 +1,19 @@
 // discord_app/modules/stage_channels/useRequestToSpeakPermission.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
-import closure_5 from "../../stores/ChannelStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
 
 export const useRequestToSpeakPermission = function useRequestToSpeakPermission(id) {
   const _require = id;
   const items = [closure_5];
   const items1 = [id];
-  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getChannel(closure_0), items1);
-  let obj = _initialize;
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_5.getChannel(closure_0), items1);
+  let obj = initialize;
   const canEveryoneRoleResult = stateFromStores(4026).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
   const obj2 = stateFromStores(4026);
   [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);
@@ -25,8 +25,8 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
     tmp4,
     (arg0) => {
       if (null != stateFromStores) {
-        tmp5(arg0);
-        const result = id(id[6]).setEveryoneRolePermissionAllowed(tmp, closure_1_6.REQUEST_TO_SPEAK, arg0);
+        id(arg0);
+        const result = id(id[6]).setEveryoneRolePermissionAllowed(tmp, Permissions.REQUEST_TO_SPEAK, arg0);
         const obj = id(id[6]);
       }
     }

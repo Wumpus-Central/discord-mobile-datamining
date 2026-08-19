@@ -1,19 +1,18 @@
 // discord_app/utils/RelationshipUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import ME from "../Constants.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
 import getAvatarURLDefault from "AvatarUtils.tsx";
+import _modDef4770 from "../actions/ChannelActionCreators.tsx";
 import _modDef14825 from "../actions/NotificationActionCreators.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
 
 const FriendsSections = ME.FriendsSections;
-const result = set.fileFinishedImporting("utils/RelationshipUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/RelationshipUtils.tsx");
 
 export const showPendingNotification = function showPendingNotification(user) {
   const intl = getSystemLocale.intl;
-  let obj = _modDef14825;
   const stringResult = intl.string(getSystemLocale.t["t3+Af3"]);
-  obj = {
+  const obj = {
     omitViewTracking: true,
     omitClickTracking: true,
     tag: user.id,
@@ -26,16 +25,14 @@ export const showPendingNotification = function showPendingNotification(user) {
 };
 export const showAcceptedNotification = function showAcceptedNotification(user) {
   const _require = user;
-  const intl = _getSystemLocale.intl;
-  let obj = _modDef14825;
-  const stringResult = intl.string(_getSystemLocale.t.MYr3Ka);
-  obj = {
+  const intl = require("../intl/index.native.tsx").intl;
+  const stringResult = intl.string(require("../intl/index.native.tsx").t.MYr3Ka);
+  let obj = {
     omitViewTracking: true,
     omitClickTracking: true,
     tag: user.id,
     onClick: () => {
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { recipientIds: user.id };
+      const obj = { recipientIds: user.id };
       obj.openPrivateChannel(obj);
     },
     isUserAvatar: true

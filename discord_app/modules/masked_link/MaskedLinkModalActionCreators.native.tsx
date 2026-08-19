@@ -1,10 +1,10 @@
 // discord_app/modules/masked_link/MaskedLinkModalActionCreators.native.tsx
 import useAlertStore from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import closure_2 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/masked_link/MaskedLinkModalActionCreators.native.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/masked_link/MaskedLinkModalActionCreators.native.tsx");
 
 export default {
   show(onCancel) {

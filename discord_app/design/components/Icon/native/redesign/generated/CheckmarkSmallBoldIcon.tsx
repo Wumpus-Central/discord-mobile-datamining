@@ -5,9 +5,9 @@ import BaseIconImage from "../../BaseIconImage.tsx";
 import registerAsset from "../../../../../../../_runtime/07180_registerAsset.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/CheckmarkSmallBoldIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/CheckmarkSmallBoldIcon.tsx");
 
 export const CheckmarkSmallBoldIcon = function CheckmarkSmallBoldIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

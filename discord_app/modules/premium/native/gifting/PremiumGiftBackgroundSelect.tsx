@@ -1,13 +1,13 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import NativeGiftContextProvider from "../../../payments/native/NativeGiftContext.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
-require = arg1;
+require = fn;
 class GiftBackgroundSelect {
   constructor(arg0) {
     flag = global.withConsistentHeight;
@@ -22,7 +22,7 @@ class GiftBackgroundSelect {
     first = tmp2[0];
     closure_0 = first;
     closure_1 = tmp2[1];
-    obj = require("module_4115");
+    obj = require("../../../reanimated/ReanimatedRexport.tsx");
     sharedValue = obj.useSharedValue(false);
     closure_2 = sharedValue;
     items = [, ];
@@ -31,7 +31,7 @@ class GiftBackgroundSelect {
     effect = closure_4.useEffect(() => {
       const result = sharedValue.set(null != first);
     }, items);
-    obj2 = require("module_4115");
+    obj2 = require("../../../reanimated/ReanimatedRexport.tsx");
     class N {
       constructor() {
         tmp = closure_0;
@@ -92,13 +92,12 @@ class GiftBackgroundSelect {
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
-let obj = { scrollView: null, contentContainer: null };
-obj = { flex: 1, marginTop: ThemesDefault.space.PX_24 };
+let obj = { flex: 1, marginTop: ThemesDefault.space.PX_24 };
 obj[0] = obj;
 obj[1] = { justifyContent: "center" };
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function PremiumGiftBackgroundSelectTsx1(){const{STANDARD_EASING,withTiming,visibility}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:100};return{opacity:withTiming(visibility.get()?1:0,animationSettings)};}" };
-let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
 
 export default function PremiumGiftBackgroundSelect() {
   let obj = NativeGiftContextProvider;

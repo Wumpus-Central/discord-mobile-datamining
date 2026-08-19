@@ -1,9 +1,9 @@
 // discord_app/modules/premium/promotions/constants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 const items = ["logitech", "call_of_duty"];
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/premium/promotions/constants.tsx");
+const set = new Set(items);
+const result = obj132.fileFinishedImporting("modules/premium/promotions/constants.tsx");
 
 export const CountryListMode = { BLOCKLIST: "blocklist", ALLOWLIST: "allowlist" };
 export const PromotionTypes = { THIRD_PARTY: 0, [0]: "THIRD_PARTY", BOGO: 1, [1]: "BOGO", THIRD_PARTY_DIRECT_FULFILLMENT: 2, [2]: "THIRD_PARTY_DIRECT_FULFILLMENT", THIRD_PARTY_INBOUND: 3, [3]: "THIRD_PARTY_INBOUND", THIRD_PARTY_OUTBOUND: 4, [4]: "THIRD_PARTY_OUTBOUND", MARKETING_MOMENT: 5, [5]: "MARKETING_MOMENT", GIFT_PROMOTION: 6, [6]: "GIFT_PROMOTION", THIRD_PARTY_OUTBOUND_RECURRING: 7, [7]: "THIRD_PARTY_OUTBOUND_RECURRING" };

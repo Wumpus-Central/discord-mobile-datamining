@@ -11,18 +11,17 @@ import get_ActivityIndicator from "../../../../../../_runtime/00017_get_Activity
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
 
 export const TwoWayLinkError = function TwoWayLinkError(arg0) {
   ({ onClose, title, body, onRetry } = arg0);
   let obj = styles;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = callback3();
   const items = [callback(closure_3, { source: registerAssetDefault, style: callback3().image }), callback(Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), callback(Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];

@@ -1,5 +1,5 @@
 // discord_app/stores/NetworkStore.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import awaitOnlineDefault from "../utils/NetworkUtils.tsx";
@@ -20,8 +20,7 @@ function handleConnectionInfoChange(type) {
 }
 const NetworkConnectionTypes = ME.NetworkConnectionTypes;
 const NetworkConnectionSpeeds = ME.NetworkConnectionSpeeds;
-let UNKNOWN = NetworkConnectionTypes.UNKNOWN;
-UNKNOWN = NetworkConnectionSpeeds.UNKNOWN;
+let UNKNOWN = NetworkConnectionSpeeds.UNKNOWN;
 let c6 = null;
 const Store = initializeDefault.Store;
 class NetworkStoreClass extends Store {
@@ -30,7 +29,6 @@ const prototype = NetworkStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   const networkInformation = awaitOnlineDefault.getNetworkInformation();
   networkInformation.then(handleConnectionInfoChange);
-  const obj = awaitOnlineDefault;
   awaitOnlineDefault.addChangeCallback(handleConnectionInfoChange);
 };
 prototype["getType"] = function getType() {
@@ -44,6 +42,6 @@ prototype["getServiceProvider"] = function getServiceProvider() {
 };
 NetworkStoreClass.displayName = "NetworkStore";
 const networkStoreClass = new NetworkStoreClass(dispatcherDefault, {});
-const result = set.fileFinishedImporting("stores/NetworkStore.tsx");
+const result = obj132.fileFinishedImporting("stores/NetworkStore.tsx");
 
 export default networkStoreClass;

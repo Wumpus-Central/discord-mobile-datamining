@@ -1,19 +1,19 @@
 // discord_app/modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx
-import closure_3 from "../../stores/ConnectedAccountsStore.tsx";
-import closure_4 from "../../stores/SelfPresenceStore.tsx";
-import closure_5 from "GameConsoleStore.tsx";
+import set from "../../stores/ConnectedAccountsStore.tsx";
+import filterPlayingActivities from "../../stores/SelfPresenceStore.tsx";
+import set2 from "GameConsoleStore.tsx";
 import { CONSOLE_VOICE_PLATFORMS } from "GameConsoleConstants.tsx";
 import { ActivityTypes } from "../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");
 
 export default function useConsoleConnectedAccountForVoiceUpsell() {
   const items = [closure_4];
   const stateFromStores = found(589).useStateFromStores(items, () => activities.getActivities(true));
-  found = stateFromStores.filter((platform) => {
-    platform = platform.platform;
-    let hasItem = platform.type === constants.PLAYING;
+  found = stateFromStores.filter((item, index) => {
+    const platform = item.platform;
+    let hasItem = item.type === constants.PLAYING;
     if (hasItem) {
       hasItem = null != platform;
     }
@@ -28,8 +28,8 @@ export default function useConsoleConnectedAccountForVoiceUpsell() {
   const obj2 = found(589);
   const items2 = [closure_3];
   const stateFromStores2 = found(589).useStateFromStores(items2, () => {
-    const mapped = found.map((platform) => {
-      platform = platform.platform;
+    const mapped = found.map((item, index) => {
+      const platform = item.platform;
       if (null == platform) {
         return null;
       } else {
@@ -41,7 +41,7 @@ export default function useConsoleConnectedAccountForVoiceUpsell() {
         return account;
       }
     });
-    return mapped.find((arg0) => null != arg0);
+    return mapped.find((item, index) => null != item);
   });
   let tmp3 = null;
   if (found.length > 0) {

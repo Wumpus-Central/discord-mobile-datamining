@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/AppIconsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import DismissibleContent from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
@@ -7,31 +7,16 @@ import fetchCurrentAppIcon from "../../../app_icons/native/AppIconUtils.tsx";
 import SettingsItemAppIconDefault from "../../../app_icons/native/SettingsItemAppIcon.tsx";
 import createDismissiblePremiumNewBadgeRouteProps from "DismissiblePremiumNewBadgeRouteProps.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
-import { UserSettingsAppIcons } from "../../app_icon/native/UserSettingsAppIcons.tsx";
 
 const dismissiblePremiumNewBadgeRouteProps = createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(DismissibleContent.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE);
 ({ useTrailing, usePreNavigationAction } = dismissiblePremiumNewBadgeRouteProps);
-obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.N4YDao);
-  },
-  parent: null,
-  IconComponent: SettingsItemAppIconDefault,
-  useTrailing,
-  usePreNavigationAction,
-  usePredicate() {
-    return fetchCurrentAppIcon.isAppIconsSupported();
-  },
-  screen: obj
-};
-obj = {
+const obj = {
   route: ME.UserSettingsSections.APP_ICONS,
   getComponent() {
-    return UserSettingsAppIcons.default;
+    return require("../../app_icon/native/UserSettingsAppIcons.tsx").default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AppIconsSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/AppIconsSetting.tsx");
 
 export default route;

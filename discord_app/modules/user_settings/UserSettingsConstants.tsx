@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/UserSettingsConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/user_settings/UserSettingsConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/UserSettingsConstants.tsx");
 
 export const MAX_FAVORITES = 250;
 export const MAX_FAVORITE_GIFS_SIZE = 762880;

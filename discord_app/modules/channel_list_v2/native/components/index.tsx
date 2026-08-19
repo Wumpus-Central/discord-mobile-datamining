@@ -1,5 +1,5 @@
 // discord_app/modules/channel_list_v2/native/components/index.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import renderChannelBadge from "ChannelBadge.tsx";
 import _modDef11460 from "VocalChannelJoinButton.tsx";
 import Divider from "Divider.tsx";
@@ -7,7 +7,7 @@ import DividerDefault from "Divider.tsx";
 import NewBadgeDefault from "NewBadge.tsx";
 import handleInviteDisabledPressDefault from "GuildSearchAndInvite.tsx";
 
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/components/index.tsx");
+const result = obj132.fileFinishedImporting("modules/channel_list_v2/native/components/index.tsx");
 
 export const renderChannelBadge = renderChannelBadge.renderChannelBadge;
 export const VocalChannelJoinButton = _modDef11460;

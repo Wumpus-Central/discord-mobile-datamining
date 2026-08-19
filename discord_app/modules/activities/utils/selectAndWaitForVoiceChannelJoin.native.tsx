@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../stores/SelectedChannelStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import handleConnectionOpen from "../../../stores/SelectedChannelStore.tsx";
 
 function _selectAndWaitForVoiceChannelJoin() {
   const self = this;
@@ -135,7 +135,7 @@ const prototype = function JoinTimeoutError() {
 }.prototype;
 class prototype extends Error {
 }
-let result = require("set").fileFinishedImporting("modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx");
+let result = require("obj132").fileFinishedImporting("modules/activities/utils/selectAndWaitForVoiceChannelJoin.native.tsx");
 
 export default function selectAndWaitForVoiceChannelJoin() {
   const self = this;

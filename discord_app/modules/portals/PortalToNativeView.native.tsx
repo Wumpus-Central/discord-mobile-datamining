@@ -6,7 +6,7 @@ import createCacheKey from "../../design/components/Styles/native/createStyles.t
 noopAll;
 let closure_1 = require("get ActivityIndicator").requireNativeComponent("PortalToNativeView");
 let closure_2 = createCacheKey.createStyles({ portal: { position: "absolute", opacity: 0, height: 0, right: 0, left: 0, top: 0 } });
-const result = require("set").fileFinishedImporting("modules/portals/PortalToNativeView.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/portals/PortalToNativeView.native.tsx");
 
 export default function PortalToNativeView(arg0) {
   ({ portalId, children } = arg0);

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/SKUListing.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/premium/SKUListing.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/SKUListing.tsx");
 
 export default function SKUListing(skuId, skuFeatures) {
   const obj = Object.create(new.target.prototype);

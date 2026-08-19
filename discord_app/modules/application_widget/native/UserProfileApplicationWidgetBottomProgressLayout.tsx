@@ -1,32 +1,28 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetBottomProgressLayout.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text from "../../../design/components/Text/native/Text.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import ImageSkeleton from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { root: null, image: null, content: null, progressContainer: null, progress: null, textContent: null, textLeft: null, progressText: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+const createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[2] = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
-let obj2 = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
 createCacheKey[3] = { width: "100%", height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-let obj3 = { width: "100%", height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[4] = { height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.ICON_STRONG };
-let obj4 = { height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.ICON_STRONG };
 createCacheKey[5] = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
 createCacheKey[6] = { flex: 1, minWidth: 0 };
 createCacheKey[7] = { flexShrink: 0 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomProgressLayout.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomProgressLayout.tsx");
 
 export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   ({ bottomConfig, resolveFieldValue } = arg0);
@@ -55,7 +51,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   }
   const items2 = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.NUMBER];
   let iter2 = resolveFieldValue(max, items2);
-  let tmp3Result = tmp3(12190);
+  let tmp3Result = resolvedValuesFromUserApplicationIdentityProfile;
   obj = { style: tmp.root, children: null };
   const progressPercentage = tmp3Result.resolveProgressPercentage(iter, iter2);
   if (null != fieldValue) {
@@ -69,7 +65,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   } else {
     const obj2 = { style: null };
     obj2[0] = tmp.image;
-    tmp14 = callback(tmp3(12278).ImageSkeleton, obj2);
+    tmp14 = callback(ImageSkeleton.ImageSkeleton, obj2);
     tmp15 = callback;
   }
   const items3 = [tmp14, ];
@@ -104,21 +100,21 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   if ("value" === singleStringOrSkeleton.status) {
     const obj10 = { variant: "heading-sm/medium", lineClamp: 2, children: null };
     obj10[2] = singleStringOrSkeleton.text;
-    let tmp15Result = tmp15(tmp3(4734).Text, obj10);
+    let tmp15Result = tmp15(Text.Text, obj10);
   } else {
-    tmp15Result = tmp15(tmp3(12278).TextSkeleton, { variant: "heading-sm/medium" });
+    tmp15Result = tmp15(ImageSkeleton.TextSkeleton, { variant: "heading-sm/medium" });
   }
   const items6 = [tmp15Result, ];
   if ("value" === singleStringOrSkeleton1.status) {
     const obj11 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 2, children: null };
     obj11[3] = singleStringOrSkeleton1.text;
-    tmp15Result = tmp15(tmp3(4734).Text, obj11);
+    tmp15Result = tmp15(Text.Text, obj11);
   } else {
-    tmp15Result = tmp15(tmp3(12278).TextSkeleton, { variant: "text-xs/medium" });
+    tmp15Result = tmp15(ImageSkeleton.TextSkeleton, { variant: "text-xs/medium" });
   }
   items6[1] = tmp15Result;
   obj9[1] = items6;
-  const items7 = [closure_5(closure_3, obj9), ];
+  const items7 = [callback(closure_3, obj9), ];
   if (null != iter) {
     const obj12 = { variant: "text-sm/medium", lineClamp: 1, style: null, children: null };
     obj12[2] = tmp.progressText;
@@ -128,19 +124,20 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
       str = "/";
       let iter2Result = iter2(iter.value, "/", iter);
     } else {
-      tmp3Result = tmp3(12190);
+      tmp3Result = resolvedValuesFromUserApplicationIdentityProfile;
       const _HermesInternal = HermesInternal;
       iter2Result = "" + tmp3Result.decimalToClampedPercentage(iter.value) + "%";
     }
     obj12[3] = iter2Result;
-    tmp15(tmp3(4734).Text, obj12);
+    tmp15(Text.Text, obj12);
   } else {
-    items7[1] = tmp15(tmp3(12278).TextSkeleton, { variant: "text-sm/medium", widthChars: 4 });
+    items7[1] = tmp15(ImageSkeleton.TextSkeleton, { variant: "text-sm/medium", widthChars: 4 });
     obj8[1] = items7;
-    items5[1] = tmp11(tmp12, obj8);
+    items5[1] = callback(closure_3, obj8);
     obj3[1] = items5;
-    items3[1] = tmp11(tmp12, obj3);
+    items3[1] = callback(closure_3, obj3);
     obj[1] = items3;
-    return tmp11(tmp12, obj);
+    return callback(closure_3, obj);
   }
+  const obj7 = { width: "" + progressPercentage + "%" };
 };

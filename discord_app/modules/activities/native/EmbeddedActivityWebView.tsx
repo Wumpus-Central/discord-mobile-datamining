@@ -1,19 +1,19 @@
 // discord_app/modules/activities/native/EmbeddedActivityWebView.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import usePreviousDefault from "../../../hooks/usePrevious.tsx";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_6 from "../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { Linking } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../DeveloperActivityShelfStore.tsx";
+import initialize from "../DeveloperActivityShelfStore.tsx";
 import items3 from "../Constants.tsx";
 import ME from "../../../Constants.tsx";
 import { TransportTypes } from "../../rpc/Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../utils/PlatformUtils.tsx";
 
-const require = arg1;
+const require = fn;
 function getSafeArea(arg0, arg1) {
   let override = arg0;
   let num = arg1;
@@ -88,8 +88,8 @@ class BaseActivityWebView {
       if (null != webViewKey) {
         let v4Result = callback2();
       } else {
-        v4Result = closure_1_0(hasInvalidUrlError[13]).v4();
-        const obj = closure_1_0(hasInvalidUrlError[13]);
+        v4Result = require(hasInvalidUrlError[13]).v4();
+        const obj = require(hasInvalidUrlError[13]);
       }
       return v4Result;
     }), 1)[0];
@@ -103,8 +103,8 @@ class BaseActivityWebView {
     memo = applicationId.useMemo(() => {
       let webViewProxy;
       if (null != webViewKey) {
-        webViewProxy = closure_1_0(hasInvalidUrlError[14]).getWebViewProxy(tmp);
-        const obj = closure_1_0(hasInvalidUrlError[14]);
+        webViewProxy = require(hasInvalidUrlError[14]).getWebViewProxy(tmp);
+        const obj = require(hasInvalidUrlError[14]);
       }
       return webViewProxy;
     }, items);
@@ -237,7 +237,6 @@ class BaseActivityWebView {
                   obj2[3] = obj1;
                   let tmp36;
                   const obj7 = callback(closure_2_3[16]);
-                  const tmp44 = closure_2_3;
                   if (!closure_2_17) {
                     tmp36 = closure_2_10;
                   }
@@ -312,10 +311,10 @@ class BaseActivityWebView {
     }, items3);
     callback2 = obj2.useCallback(() => {
       first1.warn("activity WebView content process terminated for appId " + applicationId);
-      let obj = closure_1_1(hasInvalidUrlError[20]);
-      obj = { application_id: applicationId, channel_id: channelId, guild_id: guildId, activity_session_id: activitySessionId };
+      importDefault(hasInvalidUrlError[20]);
+      let obj = { application_id: applicationId, channel_id: channelId, guild_id: guildId, activity_session_id: activitySessionId };
       obj.track(safeAreasConfig.ACTIVITY_WEB_VIEW_CONTENT_PROCESS_TERMINATED, obj);
-      const ComponentDispatch = closure_1_0(hasInvalidUrlError[21]).ComponentDispatch;
+      const ComponentDispatch = require(hasInvalidUrlError[21]).ComponentDispatch;
       obj = { id: first1 };
       ComponentDispatch.dispatch(webViewKey.IFRAME_UNMOUNT, obj);
       releaseIframeId();
@@ -355,14 +354,14 @@ class BaseActivityWebView {
         tmp = hasInvalidUrlError;
       }
       if (tmp) {
-        let obj = closure_1_1(hasInvalidUrlError[23]);
-        obj = { title: null, body: null, confirmText: null };
-        const intl = closure_1_0(hasInvalidUrlError[24]).intl;
-        obj[0] = intl.string(closure_1_0(hasInvalidUrlError[24]).t.PtobXW);
-        const intl2 = closure_1_0(hasInvalidUrlError[24]).intl;
-        obj[1] = intl2.string(closure_1_0(hasInvalidUrlError[24]).t["55iAUT"]);
-        const intl3 = closure_1_0(hasInvalidUrlError[24]).intl;
-        obj[2] = intl3.string(closure_1_0(hasInvalidUrlError[24]).t.BddRzS);
+        importDefault(hasInvalidUrlError[23]);
+        const obj = { title: null, body: null, confirmText: null };
+        const intl = require(hasInvalidUrlError[24]).intl;
+        obj[0] = intl.string(require(hasInvalidUrlError[24]).t.PtobXW);
+        const intl2 = require(hasInvalidUrlError[24]).intl;
+        obj[1] = intl2.string(require(hasInvalidUrlError[24]).t["55iAUT"]);
+        const intl3 = require(hasInvalidUrlError[24]).intl;
+        obj[2] = intl3.string(require(hasInvalidUrlError[24]).t.BddRzS);
         obj.show(obj);
       }
     }, items7);
@@ -386,9 +385,8 @@ class BaseActivityWebView {
             const match = str.match(arg0);
             if (null !== match) {
               if (match.length >= 2) {
-                const parts = match[1].split(" ");
-                const found = parts.filter((arg0) => !closure_0.includes(arg0));
-                str = match[1];
+                const parts = str.split(" ");
+                const found = parts.filter((item, index) => !closure_0.includes(item));
               }
               return [];
             }
@@ -401,10 +399,10 @@ class BaseActivityWebView {
                 HermesBuiltin.throwTypeError();
               } else if (tmp5 === 3) {
                 if (arg0 === 1) {
-                  throw arg1;
+                  throw headers;
                 } else if (arg0 === 2) {
                   let obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj[0] = headers;
                   return obj;
                 } else {
                   return { value: "HermesInternal", done: "HermesInternal" };
@@ -415,11 +413,11 @@ class BaseActivityWebView {
                   if (0 === c3) {
                     if (arg0 === 1) {
                       c4 = 3;
-                      throw arg1;
+                      throw headers;
                     } else if (arg0 === 2) {
                       c4 = 3;
                       obj = { value: null, done: true };
-                      obj[0] = arg1;
+                      obj[0] = headers;
                       return obj;
                     } else {
                       let items = tmp3;
@@ -442,19 +440,19 @@ class BaseActivityWebView {
                     }
                   } else if (arg0 === 1) {
                     c4 = 3;
-                    throw arg1;
+                    throw headers;
                   } else if (arg0 === 2) {
                     c4 = 3;
                     obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    obj[0] = headers;
                     return obj;
                   } else {
-                    content_security_policy = arg1.headers["content-security-policy"];
+                    content_security_policy = headers.headers["content-security-policy"];
                     items = ["about:blank", "file://*", closure_0];
                     closure_0 = 3;
                     closure_0 = HermesBuiltin.arraySpread(content_security_policy(/frame-src (.*?);/, content_security_policy), closure_0);
                     closure_0 = HermesBuiltin.arraySpread(content_security_policy(/child-src (.*?);/, content_security_policy), closure_0);
-                    closure_1_30(items.map((arg0) => "^" + content_security_policy(table[26])(arg0).replace(/\\\*/g, ".*")));
+                    closure_1_30(items.map((item, index) => "^" + content_security_policy(table[26])(item).replace(/\\\*/g, ".*")));
                     closure_1_28(true);
                     c4 = 3;
                     return { value: "HermesInternal", done: "HermesInternal" };
@@ -505,13 +503,8 @@ class BaseActivityWebView {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let _RegExp = RegExp;
-          let tmp3 = new.target;
-          let tmp4 = new.target;
-          let tmp5 = nextResult;
           let regExp = new RegExp(nextResult);
-          let tmp6 = regExp;
           if (regExp.test(mainDocumentURL.url)) {
-            let tmp7 = iter;
             iter.return();
             let flag = true;
             return true;
@@ -521,11 +514,9 @@ class BaseActivityWebView {
         if (str == null) {
           str = "";
         }
-        const toURLSafeResult = closure_1_1(hasInvalidUrlError[27]).toURLSafe(str);
-        const obj2 = closure_1_1(hasInvalidUrlError[27]);
-        const tmp8 = closure_1_1;
-        const tmp9 = hasInvalidUrlError;
-        const toURLSafeResult1 = closure_1_1(hasInvalidUrlError[27]).toURLSafe(mainDocumentURL.url);
+        const toURLSafeResult = importDefault(hasInvalidUrlError[27]).toURLSafe(str);
+        const obj2 = importDefault(hasInvalidUrlError[27]);
+        const toURLSafeResult1 = importDefault(hasInvalidUrlError[27]).toURLSafe(mainDocumentURL.url);
         return null != toURLSafeResult && null != toURLSafeResult1 && toURLSafeResult.origin + toURLSafeResult.pathname === toURLSafeResult1.origin + toURLSafeResult1.pathname;
       }, items9);
       if (tmp39) {
@@ -540,7 +531,7 @@ class BaseActivityWebView {
       callback4 = obj2.useCallback((arg0) => {
         const current = ref.current;
         if (current != null) {
-          current.injectJavaScript(closure_1_1(hasInvalidUrlError[28])(arg0));
+          current.injectJavaScript(importDefault(hasInvalidUrlError[28])(arg0));
         }
       }, []);
       closure_33 = callback4;
@@ -572,8 +563,8 @@ class BaseActivityWebView {
             tmp = null != origin;
           }
           if (tmp) {
-            let obj = closure_1_1(hasInvalidUrlError[29]);
-            obj = { type: null, origin: null, iframeId: null };
+            importDefault(hasInvalidUrlError[29]);
+            const obj = { type: null, origin: null, iframeId: null };
             obj[0] = channelId.POST_MESSAGE;
             obj[1] = origin;
             obj[2] = first1;
@@ -684,10 +675,9 @@ class BaseActivityWebView {
                           c8 = 2;
                           c9 = 1;
                           const obj4 = { value: null, done: false };
-                          obj4[0] = obj8.injectJavaScript(closure_2_1(closure_2_3[28])(obj2));
+                          obj4[0] = closure_1_19.injectJavaScript(closure_2_1(closure_2_3[28])(obj2));
                           return obj4;
                         }
-                        obj8 = closure_1_19;
                       }
                     } else {
                       if (1 === tmp8) {
@@ -766,12 +756,12 @@ class BaseActivityWebView {
               if (null != left.override) {
                 _Math2 = Math;
                 left = left.override;
-                bound = require("module_0");
+                bound = require("../../../index.native.tsx");
               } else {
                 bound = num;
                 if (null != left.offset) {
                   _Math = Math;
-                  bound = require("module_0");
+                  bound = require("../../../index.native.tsx");
                 }
               }
               tmp47 = bound;
@@ -800,12 +790,12 @@ class BaseActivityWebView {
               if (null != right.override) {
                 _Math4 = Math;
                 right = right.override;
-                bound1 = require("module_0");
+                bound1 = require("../../../index.native.tsx");
               } else {
                 bound1 = num5;
                 if (null != right.offset) {
                   _Math3 = Math;
-                  bound1 = require("module_0");
+                  bound1 = require("../../../index.native.tsx");
                 }
               }
               tmp50 = bound1;
@@ -833,12 +823,12 @@ class BaseActivityWebView {
               if (null != top.override) {
                 _Math6 = Math;
                 top = top.override;
-                bound2 = require("module_0");
+                bound2 = require("../../../index.native.tsx");
               } else {
                 bound2 = num9;
                 if (null != top.offset) {
                   _Math5 = Math;
-                  bound2 = require("module_0");
+                  bound2 = require("../../../index.native.tsx");
                 }
               }
               tmp53 = bound2;
@@ -866,12 +856,12 @@ class BaseActivityWebView {
               if (null != bottom.override) {
                 _Math8 = Math;
                 bottom = bottom.override;
-                bound3 = require("module_0");
+                bound3 = require("../../../index.native.tsx");
               } else {
                 bound3 = num13;
                 if (null != bottom.offset) {
                   _Math7 = Math;
-                  bound3 = require("module_0");
+                  bound3 = require("../../../index.native.tsx");
                 }
               }
               tmp56 = bound3;
@@ -907,7 +897,7 @@ class BaseActivityWebView {
             str8 = "/";
             obj6[1] = "/" + first1 + "/";
             num17 = 0;
-            obj6[2] = require("module_0");
+            obj6[2] = require("../../../index.native.tsx");
             items12 = [];
             items12[0] = obj6;
             obj5[2] = items12;
@@ -958,22 +948,19 @@ class BaseActivityWebView {
 ({ ComponentActions: unpackModuleId, AnalyticEvents: closure_12 } = ME);
 let closure_15 = createCacheKey.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_16 = new timestampDefault("EmbeddedActivityWebView");
-let closure_17 = set.isIOS();
-const result = set.fileFinishedImporting("modules/activities/native/EmbeddedActivityWebView.tsx");
+let closure_17 = obj132.isIOS();
+const result = obj132.fileFinishedImporting("modules/activities/native/EmbeddedActivityWebView.tsx");
 
 export default function EmbeddedActivityWebView(channelId) {
   channelId = channelId.channelId;
   const currentEmbeddedActivity = channelId.currentEmbeddedActivity;
   const applicationId = channelId.applicationId;
   const merged = Object.assign(channelId, Object.create(null));
-  let first;
-  closure_4 = undefined;
-  let obj = React;
   const tmp2 = callback(React.useState(false), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   const tmp4 = currentEmbeddedActivity(first[30])(first);
   closure_4 = tmp4;
-  obj = {};
+  let obj = {};
   if (null != currentEmbeddedActivity) {
     if (null != currentEmbeddedActivity.customId) {
       obj.custom_id = currentEmbeddedActivity.customId;

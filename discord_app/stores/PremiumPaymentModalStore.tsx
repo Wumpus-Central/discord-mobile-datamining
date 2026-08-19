@@ -3,7 +3,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import V6OrEarlierAPIError from "../errors/index.tsx";
 
-require = arg1;
+require = fn;
 function handleSubscribeFailure(error) {
   error = error.error;
 }
@@ -66,6 +66,6 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(dispatcherDefault,
     return false;
   }
 });
-const result = require("set").fileFinishedImporting("stores/PremiumPaymentModalStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/PremiumPaymentModalStore.tsx");
 
 export default premiumPaymentModalStore;

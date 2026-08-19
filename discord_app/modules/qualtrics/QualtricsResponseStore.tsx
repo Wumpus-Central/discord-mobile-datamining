@@ -1,5 +1,5 @@
 // discord_app/modules/qualtrics/QualtricsResponseStore.tsx
-import set2 from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import keys from "../../../_runtime/00644_keys.js";
 
 let obj = keys.create((arg0, arg1) => {
@@ -13,10 +13,8 @@ let obj = keys.create((arg0, arg1) => {
       closure_1 = arg1;
       closure_2 = arg2;
       callback((responses) => {
-        let obj = { responses: null };
-        obj = {};
         const merged = Object.assign(responses.responses);
-        obj = {};
+        const obj = {};
         const merged1 = Object.assign(responses.responses[closure_0]);
         obj[closure_1] = closure_2;
         obj[closure_0] = obj;
@@ -53,9 +51,8 @@ let obj = keys.create((arg0, arg1) => {
           set = new Set();
         }
         set1 = new Set(set);
-        const item = closure_1.forEach((arg0) => set1.add(arg0));
-        let obj = { displayedQuestions: null };
-        obj = {};
+        const item = closure_1.forEach((item, index) => set1.add(item));
+        const obj = {};
         const merged = Object.assign(displayedQuestions.displayedQuestions);
         obj[set1] = set1;
         obj[0] = obj;
@@ -74,6 +71,6 @@ let obj = keys.create((arg0, arg1) => {
     }
   };
 });
-const result = set2.fileFinishedImporting("modules/qualtrics/QualtricsResponseStore.tsx");
+const result = obj132.fileFinishedImporting("modules/qualtrics/QualtricsResponseStore.tsx");
 
 export const useQualtricsResponseStore = obj;

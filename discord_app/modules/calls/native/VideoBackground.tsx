@@ -1,5 +1,5 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../Constants.tsx";
@@ -8,7 +8,7 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 import importDefaultResult from "../../../../_runtime/00012_apply.js";
 import { hexToRgba } from "../../../utils/ColorUtils.tsx";
 
-const require = arg1;
+const require = fn;
 function useDominantRGBFromImage(arg0, arg1) {
   const _require = arg0;
   let first = arg1;
@@ -17,15 +17,15 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  let tmp5 = first(8414)();
+  const tmp5 = first(8414)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
     hexToRgbResult = tmp3(8415).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _hexToRgba.hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
-    const obj2 = _hexToRgba;
+    hexToRgbResult = require("../../../utils/ColorUtils.tsx").hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
+    const obj2 = hexToRgba;
   }
   const tmp8 = callback(importAllResult.useState(hexToRgbResult), 2);
   callback = tmp8[1];
@@ -37,36 +37,34 @@ function useDominantRGBFromImage(arg0, arg1) {
     }
     if (tmp2) {
       if (null == first(table[8]).cachedDominantColors[closure_0]) {
-        if (typeof tmp === "number") {
+        if (typeof first === "number") {
           const ImageManager = closure_1_6.ImageManager;
-          let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(closure_1_7.resolveAssetSource(tmp));
+          let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(closure_1_7.resolveAssetSource(first));
         } else {
           const ImageManager2 = closure_1_6.ImageManager;
-          dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_7.resolveAssetSource(tmp));
+          dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_7.resolveAssetSource(first));
         }
-        dominantColorsLocalAsset.then((arg0) => {
+        dominantColorsLocalAsset.then((result) => {
           if (callback()) {
             const obj = { r: null, g: null, b: null };
-            [obj[0], obj[1], obj[2]] = closure_1_3(arg0[0], 3);
+            [obj[0], obj[1], obj[2]] = closure_1_3(result[0], 3);
             callback2(obj);
-            closure_1_1(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
-            const tmp3 = closure_1_3(arg0[0], 3);
+            first(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
+            const tmp3 = closure_1_3(result[0], 3);
           }
         }).catch(closure_1_9);
-        const nextPromise = dominantColorsLocalAsset.then((arg0) => {
+        const nextPromise = dominantColorsLocalAsset.then((result) => {
           if (callback()) {
             const obj = { r: null, g: null, b: null };
-            [obj[0], obj[1], obj[2]] = closure_1_3(arg0[0], 3);
+            [obj[0], obj[1], obj[2]] = closure_1_3(result[0], 3);
             callback2(obj);
-            closure_1_1(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
-            const tmp3 = closure_1_3(arg0[0], 3);
+            first(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
+            const tmp3 = closure_1_3(result[0], 3);
           }
         });
       } else {
-        callback(tmp4(tmp5[8]).cachedDominantColors[tmp6]);
+        callback(first(table[8]).cachedDominantColors[tmp6]);
       }
-      tmp4 = first;
-      tmp5 = table;
     }
   }, items);
   return tmp8[0];
@@ -248,7 +246,7 @@ const memoizeResult = importDefaultResult.memoize((num) => {
 });
 VideoBackground.AvatarSizes = require("Button").AvatarSizes;
 const memoResult = importAllResult.memo(VideoBackground);
-const result = require("set").fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
+const result = require("obj132").fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
 
 export default memoResult;
 export const AvatarSizes = require("Button").AvatarSizes;

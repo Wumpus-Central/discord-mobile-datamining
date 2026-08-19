@@ -1,41 +1,35 @@
 // discord_app/modules/verification/native/components/ChangeEmailWarning.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { COMMON_SCAMS_EDUCATION_HC_ARTICLE as closure_7 } from "../../VerificationConstants.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, title: null, body: null, buttonContainer: null };
-createCacheKey = { flex: 1, padding: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
+const createCacheKey = { flex: 1, padding: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16 };
-let obj1 = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
-let obj2 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[3] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/verification/native/components/ChangeEmailWarning.tsx");
+const result = require("obj132").fileFinishedImporting("modules/verification/native/components/ChangeEmailWarning.tsx");
 
 export default function ChangeEmailWarning(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
-  let navigation;
   const tmp = callback3();
   let obj = changeEmailReason(1500);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   obj1 = changeEmailReason(589);
   const items = [closure_6];
   const items1 = [navigation, changeEmailReason];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   let tmp7 = null;
   if (null != stateFromStores) {
-    obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     const items2 = [callback(tmp2(5447).TrafficConeSpotIllustration, {}), , , ];

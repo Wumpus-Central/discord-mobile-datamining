@@ -2,12 +2,12 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcher from "../../Dispatcher.tsx";
 import commonTriggerPointConfiguration from "trigger_points/ConnectionOpenTriggerPoint.tsx";
-import closure_3 from "ExperimentStore.tsx";
-import closure_4 from "apex/ApexExperimentStore.tsx";
+import getHash from "ExperimentStore.tsx";
+import initialize from "apex/ApexExperimentStore.tsx";
 import apexExperiment from "apex/DebugExperiment.tsx";
 import importDefaultResult from "../../Dispatcher.tsx";
 
-require = arg1;
+require = fn;
 function handleConnectionOpen() {
   const ConnectionOpenTriggerPoint = commonTriggerPointConfiguration.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
@@ -30,6 +30,6 @@ ExperimentTriggerPointStore.displayName = "ExperimentTriggerPointStore";
 const obj = { CONNECTION_OPEN: handleConnectionOpen };
 // ThrowIfThisInitialized (0x7c)
 const tmp4 = new "initialize"(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, prototype, ExperimentTriggerPointStore, "initialize", importDefaultResult, obj);
-const result = require("set").fileFinishedImporting("modules/experiments/ExperimentTriggerPointStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/experiments/ExperimentTriggerPointStore.tsx");
 
 export default tmp4;

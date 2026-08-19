@@ -1,16 +1,16 @@
 // discord_app/modules/threads/getThreadAutoArchiveTimeOnce.tsx
 import DISCORD_EPOCHDefault from "../../utils/SnowflakeUtils.tsx";
-import setDefault from "../../utils/Durations.tsx";
-import closure_2 from "../../stores/ReadStateStore.tsx";
+import obj132Default from "../../utils/Durations.tsx";
+import generateOldThreadCutoff from "../../stores/ReadStateStore.tsx";
 
-let result = require("set").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
+let result = require("obj132").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
 
 export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
   if (null == threadMetadata.threadMetadata) {
     return 0;
   } else {
     let num3 = 0;
-    const result = threadMetadata.threadMetadata.autoArchiveDuration * setDefault.Millis.MINUTE;
+    const result = threadMetadata.threadMetadata.autoArchiveDuration * obj132Default.Millis.MINUTE;
     if (null != threadMetadata.threadMetadata) {
       let id = closure_2.lastMessageId(threadMetadata.id);
       if (id == null) {
@@ -45,7 +45,6 @@ export const getThreadLastActivityTime = function getThreadLastActivityTime(thre
       id = threadMetadata.id;
     }
     let num = 0;
-    const obj = DISCORD_EPOCHDefault;
     if (null != threadMetadata.lastNonMessageActivityTimestamp) {
       const _Date = Date;
       const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);

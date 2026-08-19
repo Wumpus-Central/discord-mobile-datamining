@@ -1,19 +1,18 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx
 import _modDef13991 from "../../settings/native/renderer/SettingLayout.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { HelpdeskArticles } from "../../../Constants.tsx";
 import { MobileUserSettings } from "../../user_settings/core/native/SettingsConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");
 
 export default function FamilyCenterParentalControlsDataAndPrivacy() {
   const memo = React.useMemo(() => {
-    let obj = { settings: items, subLabel: null };
-    items = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_STATISTICS];
+    const items = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_STATISTICS];
     const intl = memo(1236).intl;
-    obj = { helpdeskArticle: null };
+    let obj = { helpdeskArticle: null };
     let obj2 = callback(1993);
     obj[0] = obj2.getArticleURL(constants.DATA_PRIVACY_CONTROLS);
     obj[1] = intl.format(callback(2335).Z5yJZy, obj);
@@ -44,8 +43,8 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
   }, []);
   let items = [memo];
   const node = React.useMemo(() => {
-    let obj = memo(closure_1_2[7]);
-    obj = { sections: memo };
+    memo(dependencyMap[7]);
+    const obj = { sections: memo };
     return obj.createList(obj);
   }, items);
   return jsx(_modDef13991, { node });

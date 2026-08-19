@@ -3,22 +3,21 @@ import timestampDefault from "../debug/Logger.tsx";
 import setSecondaryTokenAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import handleLogoutDefault from "../../actions/AuthenticationActionCreators.tsx";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../stores/AuthenticationStore.tsx";
-import closure_6 from "MultiAccountStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import initialize from "MultiAccountStore.tsx";
 import ME from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ AnalyticEvents: error, Endpoints: closure_8 } = ME);
 let closure_9 = new timestampDefault("MultiAccountActionCreators");
 const tmp3 = new timestampDefault("MultiAccountActionCreators");
-const result = require("set").fileFinishedImporting("modules/multi_account/MultiAccountActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/multi_account/MultiAccountActionCreators.tsx");
 
 export const validateMultiAccountTokens = function validateMultiAccountTokens() {
-  let id2 = id.getId();
+  id.getId();
   users = users.getUsers();
-  id2 = undefined;
-  id2 = callback((arg0) => {
+  const id2 = callback((arg0) => {
     closure_0 = arg0;
     c6 = 0;
     c7 = 0;
@@ -74,7 +73,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                const callback2 = closure_2_2(707).getToken(callback);
+                const callback2 = setSecondaryTokenAll.getToken(callback);
                 if (null != callback2) {
                   if ("" !== c1) {
                     let obj2 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: null };
@@ -99,7 +98,6 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
                 obj6[1] = id;
                 obj13.dispatch(obj6);
                 c7 = 3;
-                const obj24 = closure_2_2(707);
               }
             } else if (2 === tmp7) {
               obj12 = 0;
@@ -194,7 +192,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
     iter.next();
     return iter;
   });
-  const item = users.forEach(function() {
+  const item = users.forEach(function(item, index) {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -206,8 +204,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
   });
 };
 export const switchAccount = function switchAccount(id, switchSynchronously, CHOOSE_ACCOUNT) {
-  let obj = logger;
-  obj = { switchSynchronously };
+  let obj = { switchSynchronously };
   logger.log("Switching account to " + id, obj);
   const token = setSecondaryTokenAll.getToken(id);
   if (null == token) {
@@ -216,7 +213,6 @@ export const switchAccount = function switchAccount(id, switchSynchronously, CHO
     obj[1] = id;
     dispatcherDefault.dispatch(obj);
     let resolved = Promise.resolve();
-    const obj7 = dispatcherDefault;
   } else {
     let tmp4 = CHOOSE_ACCOUNT;
     obj1 = { type: "MULTI_ACCOUNT_SWITCH_START", targetUserId: null, location: null };
@@ -226,31 +222,25 @@ export const switchAccount = function switchAccount(id, switchSynchronously, CHO
     }
     obj1[2] = tmp4;
     dispatcherDefault.dispatch(obj1);
-    const obj4 = dispatcherDefault;
-    const tmp5 = importDefault;
     resolved = handleLogoutDefault.switchAccountToken(token, switchSynchronously);
     const tmp5Result = handleLogoutDefault;
   }
   return resolved;
 };
 export const moveAccount = function moveAccount(arg0, to) {
-  let obj = dispatcherDefault;
-  obj = { type: "MULTI_ACCOUNT_MOVE_ACCOUNT", from: arg0, to };
+  const obj = { type: "MULTI_ACCOUNT_MOVE_ACCOUNT", from: arg0, to };
   obj.dispatch(obj);
 };
 export const removeAccount = function removeAccount(userId) {
-  let obj = dispatcherDefault;
-  obj = { type: "MULTI_ACCOUNT_REMOVE_ACCOUNT", userId };
+  const obj = { type: "MULTI_ACCOUNT_REMOVE_ACCOUNT", userId };
   obj.dispatch(obj);
 };
 export const updatePushSyncToken = function updatePushSyncToken(id, token) {
-  let obj = dispatcherDefault;
-  obj = { type: "MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN", userId: id, pushSyncToken: token };
+  const obj = { type: "MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN", userId: id, pushSyncToken: token };
   obj.dispatch(obj);
 };
 export const invalidatePushSyncTokens = function invalidatePushSyncTokens(invalid_push_sync_tokens) {
-  let obj = dispatcherDefault;
-  obj = { type: "MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS", invalidPushSyncTokens: invalid_push_sync_tokens };
+  const obj = { type: "MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS", invalidPushSyncTokens: invalid_push_sync_tokens };
   obj.dispatch(obj);
 };
 export const reportAccountSwitchTimeout = function reportAccountSwitchTimeout() {

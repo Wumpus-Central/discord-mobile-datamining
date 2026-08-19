@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/ColorUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import nDefault from "../../../../_runtime/00689_n.js";
 
 function int2hslRaw(initialColor) {
@@ -38,7 +38,7 @@ function int2hslRaw(initialColor) {
   }
 }
 const re2 = /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?/;
-let result = set.fileFinishedImporting("../discord_common/js/shared/utils/ColorUtils.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/ColorUtils.tsx");
 
 export const hex2int = function hex2int(callback) {
   return nDefault(callback).num();
@@ -65,9 +65,6 @@ export const int2hex = function int2hex(color) {
     }
     const _HermesInternal8 = HermesInternal;
     let combined3 = "#" + combined + combined1 + combined2;
-    const str11 = 255 & color;
-    const str7 = color >> 16 & 255;
-    const str9 = color >> 8 & 255;
   } else {
     let str3 = color >> 24 & 255.toString(16);
     let combined4 = str3;
@@ -94,7 +91,6 @@ export const int2hex = function int2hex(color) {
     }
     const _HermesInternal4 = HermesInternal;
     combined3 = "#" + combined4 + combined5 + combined6;
-    const str14 = color >> 24 & 255;
   }
   return combined3;
 };
@@ -171,7 +167,6 @@ export const hex2rgb = function hex2rgb(PRIMARY_200, alphaResult) {
     return null;
   }
   obj = nDefault;
-  const tmp2 = importDefault;
 };
 export const int2rgba = function int2rgba(int2hslRaw, arg1) {
   let result = arg1;
@@ -183,17 +178,18 @@ export const int2rgba = function int2rgba(int2hslRaw, arg1) {
 export const rgb2int = function rgb2int(tmp2Result1) {
   const match = tmp2Result1.match(closure_2);
   if (null != match) {
-    let obj = { red: null, green: null, blue: null };
+    const obj = { red: null, green: null, blue: null };
     const _parseInt = parseInt;
     obj[0] = parseInt(match[1]);
     const _parseInt2 = parseInt;
     obj[1] = parseInt(match[2]);
     const _parseInt3 = parseInt;
     obj[2] = parseInt(match[3]);
+    let color = obj;
   } else {
-    obj = { red: 0, green: 0, blue: 0 };
+    color = { red: 0, green: 0, blue: 0 };
   }
-  return (obj.red << 16) + (obj.green << 8) + obj.blue;
+  return (color.red << 16) + (color.green << 8) + color.blue;
 };
 export const int2hsv = function int2hsv(color) {
   let num = (color >> 16 & 255) / 255;
@@ -243,8 +239,8 @@ export const int2rgbArray = function int2rgbArray(modalV2BackgroundColor) {
 };
 export const getLuminance = function getLuminance(arg0, arg1, arg2) {
   const items = [arg0, arg1, arg2];
-  const mapped = items.map((arg0) => {
-    const result = arg0 / 255;
+  const mapped = items.map((item, index) => {
+    const result = item / 255;
     if (result <= 0.03928) {
       let result1 = result / 12.92;
     } else {
@@ -260,8 +256,8 @@ export const getContrast = function getContrast(hex2intResult, hex2intResult1) {
   const items1 = [hex2intResult1 >> 16 & 255, hex2intResult1 >> 8 & 255, 255 & hex2intResult1];
   const items2 = [, , ];
   [arr3[0], arr3[1], arr3[2]] = items;
-  const mapped = items2.map((arg0) => {
-    const result = arg0 / 255;
+  const mapped = items2.map((item, index) => {
+    const result = item / 255;
     if (result <= 0.03928) {
       let result1 = result / 12.92;
     } else {
@@ -273,8 +269,8 @@ export const getContrast = function getContrast(hex2intResult, hex2intResult1) {
   const sum = 0.2126 * mapped[0] + 0.7152 * mapped[1] + 0.0722 * mapped[2];
   const items3 = [, , ];
   [arr4[0], arr4[1], arr4[2]] = items1;
-  const mapped1 = items3.map((arg0) => {
-    const result = arg0 / 255;
+  const mapped1 = items3.map((item, index) => {
+    const result = item / 255;
     if (result <= 0.03928) {
       let result1 = result / 12.92;
     } else {

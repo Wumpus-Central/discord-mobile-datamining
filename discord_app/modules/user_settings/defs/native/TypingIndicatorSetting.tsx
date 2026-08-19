@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/TypingIndicatorSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import DismissibleContent from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
@@ -12,27 +12,13 @@ import { CustomTypingIndicatorEditScreen } from "../../../custom_typing_indicato
 
 const dismissiblePremiumNewBadgeRouteProps = createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(DismissibleContent.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE);
 ({ useTrailing, usePreNavigationAction } = dismissiblePremiumNewBadgeRouteProps);
-obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["pT+BVM"]);
-  },
-  parent: null,
-  IconComponent: ChatDotsIcon.ChatDotsIcon,
-  useTrailing,
-  usePreNavigationAction,
-  usePredicate() {
-    return "settings" === apexExperiment.useCustomTypingIndicatorConfig("TypingIndicatorSetting").entryPoint;
-  },
-  screen: obj
-};
-obj = {
+const obj = {
   route: ME.UserSettingsSections.TYPING_INDICATOR,
   getComponent() {
-    return CustomTypingIndicatorEditScreen.default;
+    return CustomTypingIndicatorEditScreen /* CustomTypingIndicatorEditScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/TypingIndicatorSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/TypingIndicatorSetting.tsx");
 
 export default route;

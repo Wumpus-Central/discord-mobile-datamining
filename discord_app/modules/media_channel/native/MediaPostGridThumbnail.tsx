@@ -5,7 +5,7 @@ import ForumPostMediaAndroid from "../../forums/native/posts/ForumPostMedia.tsx"
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function MediaPostGridThumbnailAndroid(arg0) {
   ({ shouldSpoiler, blurTheme, source, androidStyle, backgroundImagesource } = arg0);
   if (null == backgroundImagesource) {
@@ -21,8 +21,7 @@ function MediaPostGridThumbnailAndroid(arg0) {
     obj[0] = shouldSpoiler;
     obj[1] = blurTheme;
     obj[4] = callback(ForumPostMediaAndroid.ForumPostMediaSpoiler, obj);
-    let tmp2Result = tmp2(closure_3, obj);
-    const tmp3 = closure_3;
+    let tmp2Result = callback(closure_3, obj);
   } else {
     obj = { style: null, source: null, resizeMode: "cover", imageStyle: null, children: null };
     obj[0] = androidStyle;
@@ -45,8 +44,7 @@ function MediaPostGridThumbnailAndroid(arg0) {
 function MediaPostGridThumbnailIOS(arg0) {
   ({ shouldSpoiler, blurTheme, source, iosStyle, backgroundImagesource, resizeMode } = arg0);
   if (null == backgroundImagesource) {
-    let obj = { children: null };
-    obj = { style: null, source: null, resizeMode: null };
+    let obj = { style: null, source: null, resizeMode: null };
     obj[0] = iosStyle;
     obj[1] = source;
     obj[2] = resizeMode;
@@ -75,12 +73,12 @@ function MediaPostGridThumbnailIOS(arg0) {
     items2[2] = callback(ForumPostMediaAndroid.ForumPostMediaSpoiler, obj4);
     obj1[0] = items2;
   }
-  return closure_6(closure_7, obj1);
+  return callback2(closure_7, obj1);
 }
 noopAll;
 ({ ImageBackground: c3, StyleSheet: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/media_channel/native/MediaPostGridThumbnail.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_channel/native/MediaPostGridThumbnail.tsx");
 
 export default function MediaPostGridThumbnail(isPortrait) {
   let tmp = true === isPortrait.isPortrait;
@@ -100,11 +98,11 @@ export default function MediaPostGridThumbnail(isPortrait) {
   if (obj2.isAndroid()) {
     obj = {};
     const merged1 = Object.assign(obj);
-    let tmp4Result = tmp4(MediaPostGridThumbnailAndroid, obj);
+    let tmp4Result = callback(MediaPostGridThumbnailAndroid, obj);
   } else {
     obj = {};
     const merged2 = Object.assign(obj);
-    tmp4Result = tmp4(MediaPostGridThumbnailIOS, obj);
+    tmp4Result = callback(MediaPostGridThumbnailIOS, obj);
   }
   return tmp4Result;
 };

@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/core/isUserSettingsOpen.native.tsx
 import getRootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 function isUserSettingsOpen() {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
@@ -17,10 +17,10 @@ function isUserSettingsOpen() {
     let someResult = null != routes;
     if (someResult) {
       routes = rootState.routes;
-      someResult = routes.some((name) => {
-        let tmp = "settings" === name.name;
+      someResult = routes.some((item, index) => {
+        let tmp = "settings" === item.name;
         if (!tmp) {
-          const state = name.state;
+          const state = item.state;
           let routes;
           if (state != null) {
             routes = state.routes;
@@ -28,10 +28,10 @@ function isUserSettingsOpen() {
           let someResult = null != routes;
           if (someResult) {
             routes = state.routes;
-            someResult = routes.some((name) => {
-              let tmp = "settings" === name.name;
+            someResult = routes.some((item, index) => {
+              let tmp = "settings" === item.name;
               if (!tmp) {
-                const state = name.state;
+                const state = item.state;
                 let routes;
                 if (state != null) {
                   routes = state.routes;
@@ -39,10 +39,10 @@ function isUserSettingsOpen() {
                 let someResult = null != routes;
                 if (someResult) {
                   routes = state.routes;
-                  someResult = routes.some((name) => {
-                    let tmp = "settings" === name.name;
+                  someResult = routes.some((item, index) => {
+                    let tmp = "settings" === item.name;
                     if (!tmp) {
-                      const state = name.state;
+                      const state = item.state;
                       let routes;
                       if (state != null) {
                         routes = state.routes;
@@ -50,10 +50,10 @@ function isUserSettingsOpen() {
                       let someResult = null != routes;
                       if (someResult) {
                         routes = state.routes;
-                        someResult = routes.some((name) => {
-                          let tmp = "settings" === name.name;
+                        someResult = routes.some((item, index) => {
+                          let tmp = "settings" === item.name;
                           if (!tmp) {
-                            const state = name.state;
+                            const state = item.state;
                             let routes;
                             if (state != null) {
                               routes = state.routes;
@@ -87,7 +87,7 @@ function isUserSettingsOpen() {
   }
   return tmp2;
 }
-const result = require("set").fileFinishedImporting("modules/user_settings/core/isUserSettingsOpen.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/core/isUserSettingsOpen.native.tsx");
 
 export { isUserSettingsOpen };
 export const useIsUserSettingsOpen = function useIsUserSettingsOpen() {
@@ -103,10 +103,10 @@ export const useIsUserSettingsOpen = function useIsUserSettingsOpen() {
         let someResult = null != routes;
         if (someResult) {
           routes = rootState.routes;
-          someResult = routes.some((name) => {
-            let tmp = "settings" === name.name;
+          someResult = routes.some((item, index) => {
+            let tmp = "settings" === item.name;
             if (!tmp) {
-              const state = name.state;
+              const state = item.state;
               let routes;
               if (state != null) {
                 routes = state.routes;
@@ -114,10 +114,10 @@ export const useIsUserSettingsOpen = function useIsUserSettingsOpen() {
               let someResult = null != routes;
               if (someResult) {
                 routes = state.routes;
-                someResult = routes.some((name) => {
-                  let tmp = "settings" === name.name;
+                someResult = routes.some((item, index) => {
+                  let tmp = "settings" === item.name;
                   if (!tmp) {
-                    const state = name.state;
+                    const state = item.state;
                     let routes;
                     if (state != null) {
                       routes = state.routes;
@@ -140,14 +140,13 @@ export const useIsUserSettingsOpen = function useIsUserSettingsOpen() {
         rootNavigationRef(someResult);
       }
     }
-    const rootNavigationRef = closure_1_0(closure_1_1[2]).getRootNavigationRef();
+    const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.addListener("state", handleStateChange);
       return () => {
         rootNavigationRef.removeListener("state", handleStateChange);
       };
     }
-    const obj = closure_1_0(closure_1_1[2]);
   }, []);
   return tmp2;
 };

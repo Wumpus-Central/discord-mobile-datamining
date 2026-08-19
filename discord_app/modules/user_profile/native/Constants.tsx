@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/Constants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import Button from "../../../design/void/native.tsx";
 import ICON_SIZE from "../../../design/components/Icon/IconSize.tsx";
 
@@ -7,7 +7,7 @@ const XXLARGE = Button.AvatarSizes.XXLARGE;
 const tmp2 = Button.AVATAR_SIZE_MAP[XXLARGE];
 const sum = tmp2 + 12;
 const result = tmp2 / 2;
-const result1 = set.fileFinishedImporting("modules/user_profile/native/Constants.tsx");
+const result1 = obj132.fileFinishedImporting("modules/user_profile/native/Constants.tsx");
 
 export const ARBITRARY_LARGE_OFFSET = 250;
 export const PROFILE_SIDE_PADDING = 16;

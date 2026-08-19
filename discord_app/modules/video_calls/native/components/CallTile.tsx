@@ -12,15 +12,15 @@ import registerAssetDefault5 from "../../../../../_runtime/12621_registerAsset.j
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/ApplicationStreamingStore.tsx";
-import closure_7 from "../../../../stores/UserStore.tsx";
+import reset from "../../../../stores/ApplicationStreamingStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import VoiceChatDrawerState from "../ChannelCallStore.tsx";
 import ParticipantTypes from "../../../calls/CallConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import hexToRgba from "../../../../utils/ColorUtils.tsx";
 
-require = arg1;
+require = fn;
 class StreamPreviewTile {
   constructor(arg0) {
     participant = global.participant;
@@ -50,11 +50,11 @@ function ParticipantIcon(participant) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
       tmp3 = registerAssetDefault4;
-    } else if (tmp19.XBOX === voicePlatform) {
+    } else if (constants2.XBOX === voicePlatform) {
       tmp3 = registerAssetDefault;
-    } else if (tmp19.PLAYSTATION === voicePlatform) {
+    } else if (constants2.PLAYSTATION === voicePlatform) {
       tmp3 = registerAssetDefault2;
-    } else if (tmp19.QUEST === voicePlatform) {
+    } else if (constants2.QUEST === voicePlatform) {
       tmp3 = registerAssetDefault5;
     }
   }
@@ -81,7 +81,7 @@ class TileOverlay {
     ({ bottom, left, top, right } = tmp4);
     tmp5 = reveal;
     reveal = closure_3.useContext(require("useRevealProviderValue").RevealContext).reveal;
-    obj = require("module_4115");
+    obj = require("../../../reanimated/ReanimatedRexport.tsx");
     class T {
       constructor() {
         tmp = reveal;
@@ -147,7 +147,7 @@ class TileOverlay {
     obj4[1] = tmp7(View, obj5);
     items1[1] = jsx(View, obj4);
     obj2[2] = items1;
-    return tmp7(require("module_4115").View, obj2);
+    return tmp7(require("../../../reanimated/ReanimatedRexport.tsx").View, obj2);
   }
 }
 let c3 = importAllResult;
@@ -155,21 +155,18 @@ let c3 = importAllResult;
 ({ resetFocus: closure_8, toggleFocus: c9 } = VoiceChatDrawerState);
 ({ ParticipantTypes: c10, isStreamParticipant: unpackModuleId, VoicePlatforms: closure_12 } = ParticipantTypes);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
-obj = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
+let obj = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
 obj[3] = hexToRgba.hexOpacityToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj[4] = ThemesDefault.radii.sm;
 obj[2] = obj;
-createCacheKey = { overflow: "hidden", position: "absolute", bottom: 8, left: 8, right: 40, borderRadius: ThemesDefault.radii.sm };
+const createCacheKey = { overflow: "hidden", position: "absolute", bottom: 8, left: 8, right: 40, borderRadius: ThemesDefault.radii.sm };
 obj[3] = createCacheKey;
 obj[4] = { flex: 1, width: "100%", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
-let obj2 = { flex: 1, width: "100%", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
 obj[5] = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
 hexToRgba = { backgroundColor: ThemesDefault.colors.BLACK };
 obj[6] = hexToRgba;
 let closure_16 = createCacheKey.createStyles(obj);
 let closure_19 = { code: "function CallTileTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}" };
-let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
 const memoResult = importAllResult.memo((participant) => {
   participant = participant.participant;
   const channel = participant.channel;
@@ -180,25 +177,22 @@ const memoResult = importAllResult.memo((participant) => {
   if (hasNotch === undefined) {
     hasNotch = false;
   }
-  let analyticsLocations;
-  let bottom;
-  let right;
   const tmp = callback3();
-  analyticsLocations = channel(hasRightSafeArea[10])().analyticsLocations;
+  const analyticsLocations = channel(hasRightSafeArea[10])().analyticsLocations;
   const rect = channel(hasRightSafeArea[11])();
-  bottom = rect.bottom;
-  right = rect.right;
+  const bottom = rect.bottom;
+  const right = rect.right;
   let obj = participant(hasRightSafeArea[12]);
   const items = [right];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let streamForUser = null;
     if (closure_1_11(participant)) {
-      streamForUser = right.getStreamForUser(tmp2.user.id, tmp2.stream.guildId);
+      streamForUser = right.getStreamForUser(participant.user.id, participant.stream.guildId);
     }
     const obj = { stream: streamForUser, activeStream: null };
     let activeStreamForUser = null;
     if (closure_1_11(participant)) {
-      activeStreamForUser = right.getActiveStreamForUser(tmp2.user.id, tmp2.stream.guildId);
+      activeStreamForUser = right.getActiveStreamForUser(participant.user.id, participant.stream.guildId);
     }
     obj[1] = activeStreamForUser;
     return obj;
@@ -236,7 +230,7 @@ const memoResult = importAllResult.memo((participant) => {
     obj[0] = participant;
     obj[1] = contentStyle;
     let tmp10 = callback(StreamPreviewTile, obj);
-  } else if (tmp9.STREAM === type) {
+  } else if (constants.STREAM === type) {
     if (null != activeStream) {
       let id;
       if (stateFromStores != null) {
@@ -266,7 +260,6 @@ const memoResult = importAllResult.memo((participant) => {
         obj2[3] = stageStreamContainer;
         obj1[1] = callback(tmp2(tmp3[16]), obj2);
         tmp17Result = tmp17(bottom, obj1);
-        const tmp18 = bottom;
         const tmp2Result = tmp2(tmp3[16]);
       }
       tmp10 = tmp17Result;
@@ -279,7 +272,7 @@ const memoResult = importAllResult.memo((participant) => {
         tmp10 = callback(StreamPreviewTile, obj3);
       }
     }
-  } else if (tmp9.USER === type) {
+  } else if (constants.USER === type) {
     const obj4 = { participant: null, avatarSize: null, onSingleTap: null, onDoubleTap: null, onLongPress: null, statusStyle: null, hasNotch: null, resizeMode: null, style: null };
     obj4[0] = participant;
     obj4[1] = avatarSize;
@@ -293,7 +286,7 @@ const memoResult = importAllResult.memo((participant) => {
     tmp10 = callback(tmp2(tmp3[17]), obj4);
   } else {
     tmp10 = null;
-    if (tmp9.ACTIVITY === type) {
+    if (constants.ACTIVITY === type) {
       const obj5 = { participant: null, style: null, channel: null, onSingleTap: null };
       obj5[0] = participant;
       obj5[1] = contentStyle;
@@ -317,7 +310,7 @@ const memoResult = importAllResult.memo((participant) => {
   const children = [tmp10, tmp27];
   return callback2(closure_14, { children });
 });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/CallTile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/CallTile.tsx");
 
 export default memoResult;
 export { StreamPreviewTile };

@@ -1,24 +1,21 @@
 // discord_app/modules/self_mod/shared/native/SafetyToolsAboutActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { getSafetyToolsActionSheetKey as closure_6 } from "../../Constants.tsx";
 import { HelpdeskArticles } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { aboutContainer: null, description: null, reportFalsePositive: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_32 };
+const createCacheKey = { marginHorizontal: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
-let obj1 = { alignSelf: "center", textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { alignSelf: "center", textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { alignSelf: "center", textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsAboutActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/self_mod/shared/native/SafetyToolsAboutActionSheet.tsx");
 
 export default function SafetyToolsAboutScreen(channelId) {
   channelId = channelId.channelId;
@@ -26,9 +23,6 @@ export default function SafetyToolsAboutScreen(channelId) {
   const warningId = channelId.warningId;
   const warningType = channelId.warningType;
   let first;
-  closure_5 = undefined;
-  closure_6 = undefined;
-  HelpdeskArticles = undefined;
   const tmp = warningType(first.useState(false), 2);
   first = tmp[0];
   closure_5 = tmp[1];
@@ -49,27 +43,27 @@ export default function SafetyToolsAboutScreen(channelId) {
       callback(true);
       let obj = channelId(warningId[11]);
       const reportFalsePositiveResult = channelId(warningId[11]).reportFalsePositive(channelId);
-      channelId(warningId[11]).reportFalsePositive(channelId).then(() => {
+      channelId(warningId[11]).reportFalsePositive(channelId).then((result) => {
         callback(false);
-        let obj = closure_1_0(closure_1_2[12]);
-        obj = { id: "safety-tools-report-false-positive", text: null };
-        const intl = closure_1_0(closure_1_2[13]).intl;
-        obj[1] = intl.string(closure_1_0(closure_1_2[13]).t.FhgVWi);
+        channelId(warningId[12]);
+        const obj = { id: "safety-tools-report-false-positive", text: null };
+        const intl = channelId(warningId[13]).intl;
+        obj[1] = intl.string(channelId(warningId[13]).t.FhgVWi);
         obj.showSafetyToast(obj);
-        closure_1_1(closure_1_2[9]).hideActionSheet(closure_1_6(closure_0));
-      }).catch(() => {
+        recipientId(warningId[9]).hideActionSheet(closure_1_6(closure_0));
+      }).catch((error) => {
         callback(false);
-        const intl = closure_1_0(closure_1_2[13]).intl;
-        closure_1_0(closure_1_2[14]).presentError(intl.string(closure_1_0(closure_1_2[13]).t.R0RpRX));
+        const intl = channelId(warningId[13]).intl;
+        channelId(warningId[14]).presentError(intl.string(channelId(warningId[13]).t.R0RpRX));
       });
-      const nextPromise = channelId(warningId[11]).reportFalsePositive(channelId).then(() => {
+      const nextPromise = channelId(warningId[11]).reportFalsePositive(channelId).then((result) => {
         callback(false);
-        let obj = closure_1_0(closure_1_2[12]);
-        obj = { id: "safety-tools-report-false-positive", text: null };
-        const intl = closure_1_0(closure_1_2[13]).intl;
-        obj[1] = intl.string(closure_1_0(closure_1_2[13]).t.FhgVWi);
+        channelId(warningId[12]);
+        const obj = { id: "safety-tools-report-false-positive", text: null };
+        const intl = channelId(warningId[13]).intl;
+        obj[1] = intl.string(channelId(warningId[13]).t.FhgVWi);
         obj.showSafetyToast(obj);
-        closure_1_1(closure_1_2[9]).hideActionSheet(closure_1_6(closure_0));
+        recipientId(warningId[9]).hideActionSheet(closure_1_6(closure_0));
       });
     }
   }, items1);

@@ -6,16 +6,15 @@ import Text from "../../../components/Text/native/Text.tsx";
 import registerAssetDefault from "../../../../../_runtime/06299_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { wrapper: { flexDirection: "row", alignItems: "center" }, icon: null };
-createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: -8, marginLeft: 8 };
+const createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: -8, marginLeft: 8 };
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormArrow.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormArrow.tsx");
 
 export default function FormArrow(arg0) {
   ({ label, style } = arg0);

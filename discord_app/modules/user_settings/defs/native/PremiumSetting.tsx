@@ -3,30 +3,31 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import getPremiumPlanItem from "../../../../utils/PremiumUtils.tsx";
 import apexExperiment from "../../../premium/experiments/MobileNitroManageSubscriptionsSettingsExperiment.tsx";
 import ThemedTabBadgeDefault from "../../../premium/native/PremiumTabBadge.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/UserStore.tsx";
-import closure_5 from "../../../../stores/billing/SubscriptionStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import reset from "../../../../stores/billing/SubscriptionStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { PremiumScreen } from "../../premium/native/PremiumSettingScreen.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+{
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment = apexExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
-    const obj = apexExperiment;
     currentUser = currentUser.getCurrentUser();
     const result = getPremiumPlanItem.hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription.getPremiumTypeSubscription());
     const intl = getSystemLocale.intl;
     const string = intl.string;
+    let t = getSystemLocale.t;
     if (result) {
       if (mobileNitroManageSubscriptionsSettingsExperiment) {
-        let stringResult = string(_4gwVVn);
+        t = t["4gwVVn"];
+        let stringResult = string(t);
       } else {
-        stringResult = string(_4gwVVn["8jmdON"]);
+        stringResult = string(t["8jmdON"]);
       }
     } else {
-      return string(_4gwVVn["8x0jKT"]);
+      return string(t["8x0jKT"]);
     }
   },
   parent: null,
@@ -50,10 +51,10 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM,
   getComponent() {
-    return PremiumScreen.default;
+    return PremiumScreen /* PremiumScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/PremiumSetting.tsx");
 
 export default createToggle;

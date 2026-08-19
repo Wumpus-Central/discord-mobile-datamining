@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/LiveChannelNoticesStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GuildScheduledEventsConstants.tsx";
@@ -55,39 +55,35 @@ const liveChannelNoticesStore = new LiveChannelNoticesStore(dispatcherDefault, {
   },
   GUILD_SCHEDULED_EVENT_UPDATE: function handleEventUpdate(guildScheduledEvent) {
     guildScheduledEvent = guildScheduledEvent.guildScheduledEvent;
-    let combined;
-    combined = "event-" + guildScheduledEvent.id;
+    const combined = "event-" + guildScheduledEvent.id;
     const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
     const hasItem = hiddenEventsAndStages.includes(combined);
     let tmp3 = !hasItem;
     if (hasItem) {
       tmp3 = guildScheduledEvent.status !== combined.CANCELED && guildScheduledEvent.status !== tmp4.COMPLETED;
-      const tmp5 = guildScheduledEvent.status !== combined.CANCELED && guildScheduledEvent.status !== tmp4.COMPLETED;
     }
     if (!tmp3) {
       const prop = closure_1.hiddenEventsAndStages;
-      closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
+      closure_1.hiddenEventsAndStages = prop.filter((item, index) => item !== combined);
     }
   },
   GUILD_SCHEDULED_EVENT_DELETE: function handleEventDelete(guildScheduledEvent) {
-    let combined;
-    combined = "event-" + guildScheduledEvent.guildScheduledEvent.id;
+    const combined = "event-" + guildScheduledEvent.guildScheduledEvent.id;
     const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
     if (hiddenEventsAndStages.includes(combined)) {
       const prop = closure_1.hiddenEventsAndStages;
-      closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
+      closure_1.hiddenEventsAndStages = prop.filter((item, index) => item !== combined);
     }
   },
   STAGE_INSTANCE_DELETE: function handleStageUpdate(instance) {
-    let combined;
-    combined = "stage-" + instance.instance.id;
+    const combined = "stage-" + instance.instance.id;
     const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
     if (hiddenEventsAndStages.includes(combined)) {
       const prop = closure_1.hiddenEventsAndStages;
-      closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
+      closure_1.hiddenEventsAndStages = prop.filter((item, index) => item !== combined);
     }
   }
 });
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/LiveChannelNoticesStore.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/LiveChannelNoticesStore.tsx");
 
 export default liveChannelNoticesStore;

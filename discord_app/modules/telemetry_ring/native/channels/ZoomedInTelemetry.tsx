@@ -2,10 +2,10 @@
 import apexExperiment from "../ZoomedInAnalyticsExperiment.tsx";
 import getIntervalMsDefault from "BaseTelemetryExportChannel.tsx";
 import TelemetryChannel from "../TelemetryRingNative.android.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import importDefaultResult1 from "../TelemetryRingNative.android.tsx";
 
-require = arg1;
+require = fn;
 let closure_4 = { type: "ROWS", limit: 250 };
 let closure_5 = { type: "ROWS", limit: 10000 };
 getIntervalMsDefault;
@@ -51,16 +51,13 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
       }
     } else {
       while (true) {
-        let num = 2;
         table = 2;
         let tmp3 = c3;
         if (0 === c3) {
           if (arg0 === 1) {
-            let num9 = 3;
             table = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            let num8 = 3;
             table = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
@@ -68,18 +65,10 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
           } else {
             c5 = 1;
             let items = [];
-            closure_0 = items;
-            let tmp20 = closure_1_0;
-            closure_1 = closure_1_0;
-            let tmp21 = closure_1_0;
             closure_1 = closure_1_0;
             closure_0 = closure_1_0[Symbol.iterator]();
-            let tmp7 = closure_1;
-            let tmp8 = closure_0;
             while (closure_0 !== undefined) {
               c5 = 2;
-              let tmp10 = closure_1_0;
-              let tmp11 = table;
               obj1 = closure_1_0(table[4]);
               let zoomedInAnalyticsEvent = obj1.buildZoomedInAnalyticsEvent(tmp9);
               if (null != zoomedInAnalyticsEvent) {
@@ -92,20 +81,18 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
             }
             if (0 === items.length) {
               c5 = 0;
-              let num7 = 3;
               table = 3;
               return { value: true, done: true };
             } else {
               let _Promise = Promise;
               c3 = 3;
-              let num6 = 1;
               table = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = Promise.all(items.map((arg0, arg1) => {
+              obj2[0] = Promise.all(items.map((item, index) => {
                 let flush = closure_1;
-                ({ key, props } = arg0);
+                ({ key, props } = item);
                 if (closure_1) {
-                  flush = arg1 === length.length - 1;
+                  flush = index === length.length - 1;
                 }
                 return closure_2_1(table[5]).track(key, props, { flush });
               }));
@@ -114,30 +101,23 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
           }
         } else if (1 === tmp3) {
           c5 = 0;
-          let num5 = 3;
           table = 3;
           return { value: false, done: true };
         } else if (2 === tmp3) {
-          let tmp4 = closure_4;
-          let tmp5 = closure_4;
           c5 = 1;
-          let tmp6 = closure_0;
           closure_0.return();
           throw closure_4;
         } else if (arg0 === 1) {
-          let num4 = 3;
           table = 3;
           throw arg1;
         } else if (arg0 === 2) {
           c5 = 0;
-          let num3 = 3;
           table = 3;
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
           c5 = 0;
-          let num2 = 3;
           table = 3;
           return { value: true, done: true };
         }
@@ -147,7 +127,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
 };
 let items = [require("TelemetryChannel").TelemetryChannel.ZOOMED];
 // ThrowIfThisInitialized (0x7c)
-let tmp5 = new "exportEntries"(importDefaultResult1, items, tmp, prototype, ZoomedInTelemetryImpl, "exportEntries", importDefaultResult1);
-const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
+const tmp5 = new "exportEntries"(importDefaultResult1, items, tmp, prototype, ZoomedInTelemetryImpl, "exportEntries", importDefaultResult1);
+const result = require("obj132").fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
 
 export default tmp5;

@@ -1,12 +1,12 @@
 // discord_app/modules/harvester/DataHarvestActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ME from "../../Constants.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import saveProfileAndAccountRequest from "../../actions/UserSettingsAccountActionCreators.tsx";
 
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
 
 export const getDataHarvestStatus = function getDataHarvestStatus() {
   let obj = dispatcherDefault;
@@ -14,25 +14,25 @@ export const getDataHarvestStatus = function getDataHarvestStatus() {
   const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
-  return value.then((body) => {
-    let obj = callback(709);
-    obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: body.body };
+  return value.then((result) => {
+    callback(709);
+    const obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: result.body };
     obj.dispatch(obj);
   }).catch((error) => {
-    let obj = callback(709);
-    obj = { type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error };
+    callback(709);
+    const obj = { type: "LOAD_DATA_HARVEST_TYPE_FAILURE", error };
     obj.dispatch(obj);
   });
 };
 export const requestDataHarvest = function requestDataHarvest(mapped) {
   const harvest = saveProfileAndAccountRequest.requestHarvest(mapped);
-  return harvest.then((body) => {
+  return harvest.then((result) => {
     if (tmp) {
-      let obj = callback(table[1]);
-      obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: null };
-      obj[1] = body.body;
+      callback(table[1]);
+      const obj = { type: "UPDATE_DATA_HARVEST_TYPE", harvestType: null };
+      obj[1] = result.body;
       obj.dispatch(obj);
     }
-    return body;
+    return result;
   });
 };

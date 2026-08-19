@@ -1,10 +1,10 @@
 // discord_app/utils/PurchaseTokenUtils.tsx
 import v1 from "../../_runtime/00514_v1.js";
 import Storage3 from "../../discord_common/js/packages/storage/Storage.tsx";
-import setDefault from "Durations.tsx";
-import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
+import obj132Default from "Durations.tsx";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
-require = arg1;
+require = fn;
 function getPurchaseToken() {
   const Storage = Storage3.Storage;
   const value = Storage.get(purchase_token);
@@ -15,10 +15,9 @@ function getPurchaseToken() {
     }
   }
   const v4Result = v1.v4();
-  const Storage2 = tmp(595).Storage;
-  const tmp3 = purchase_token;
+  const Storage2 = Storage3.Storage;
   const tmpResult = v1;
-  const result = Storage2.set(tmp3, { purchaseToken: v4Result, expires: Date.now() + closure_4 });
+  const result = Storage2.set(purchase_token, { purchaseToken: v4Result, expires: Date.now() + closure_4 });
   return v4Result;
 }
 function _getPurchaseTokenHash() {
@@ -27,9 +26,9 @@ function _getPurchaseTokenHash() {
     closure_1 = tmp2;
     const _Uint8Array2 = Uint8Array;
     const parts = closure_1_5().split("");
-    const uint8Array = new Uint8Array(parts.map((str) => str.charCodeAt(0)));
+    const uint8Array = new Uint8Array(parts.map((item, index) => item.charCodeAt(0)));
     const _window = window;
-    closure_0 = yield subtle.digest({ name: "SHA-256" }, uint8Array);
+    yield subtle.digest({ name: "SHA-256" }, uint8Array);
     const _btoa = btoa;
     const _String = String;
     closure_0 = 0;
@@ -50,8 +49,8 @@ function _getPurchaseTokenHash() {
   return applyArgumentsResult;
 }
 const purchase_token = "purchase_token";
-let closure_4 = 60 * setDefault.Millis.DAY;
-let result = require("set").fileFinishedImporting("utils/PurchaseTokenUtils.tsx");
+let closure_4 = 60 * obj132Default.Millis.DAY;
+let result = require("obj132").fileFinishedImporting("utils/PurchaseTokenUtils.tsx");
 
 export { getPurchaseToken };
 export const getPurchaseTokenHash = function getPurchaseTokenHash() {

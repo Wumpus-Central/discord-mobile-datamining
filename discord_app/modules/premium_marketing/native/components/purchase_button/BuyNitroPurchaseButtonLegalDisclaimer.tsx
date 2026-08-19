@@ -1,6 +1,6 @@
 // discord_app/modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
-import set from "../../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import combinedDefault from "../../../../../utils/HelpdeskUtils.tsx";
@@ -8,16 +8,15 @@ import getPremiumPlanItem from "../../../../../utils/PremiumUtils.tsx";
 import getPremiumPlanItemDefault from "../../../../../utils/PremiumUtils.tsx";
 import ME from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ HelpdeskArticles: c3, MarketingURLs: c4 } = ME);
-createCacheKey = { disclaimer: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
+const createCacheKey = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx");
 
 export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
   ({ item, ctaText } = arg0);
@@ -36,24 +35,21 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         let obj = { buttonText: null, interval: null, cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
         obj[0] = ctaText;
         obj[1] = getPremiumPlanItemDefault.formatInterval(item.interval);
-        const obj5 = getPremiumPlanItemDefault;
         obj[2] = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
-        const obj6 = combinedDefault;
         obj[3] = combinedDefault.getArticleURL(constants.PAID_TERMS);
-        let formatResult = format(tmp3(1236).t["3uC7vj"], obj);
-        let tmp10 = tmp3;
-        const obj7 = combinedDefault;
+        let formatResult = format(getSystemLocale.t["3uC7vj"], obj);
+        let tmp10 = require;
       } else {
-        let tmp3Result = tmp3(500);
-        let t = tmp3(1236).t;
+        let tmp3Result = obj132;
+        let t = getSystemLocale.t;
         obj = { paidURL: null, interval: null, ctaText: null };
         obj[0] = constants2.PAID_TERMS;
         const isAndroidResult = tmp3Result.isAndroid();
-        tmp3Result = tmp3(4039);
+        tmp3Result = getPremiumPlanItem;
         obj[1] = tmp3Result.getIntervalStringAsNoun(item.interval);
         obj[2] = ctaText;
         formatResult = format(tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"], obj);
-        tmp10 = tmp3;
+        tmp10 = require;
         const tmp6 = tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"];
       }
       obj1 = { style: null, variant: "text-xxs/medium", children: null };
@@ -61,17 +57,16 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       obj1[2] = formatResult;
       jsx(tmp10(4734).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
-    const tmp3Result1 = set;
-    t = tmp3(1236).t;
-    const isAndroidResult1 = set.isAndroid();
+    const tmp3Result1 = obj132;
+    const isAndroidResult1 = obj132.isAndroid();
     t = { paidURL: null, interval: null, cancelURL: null };
     t[0] = constants2.PAID_TERMS;
-    const tmp14 = set.isAndroid() ? t.tINI9V : t.ZWXtAj;
+    const tmp14 = obj132.isAndroid() ? t.tINI9V : t.ZWXtAj;
     t[1] = getPremiumPlanItem.getIntervalStringAsNoun(item.interval);
     const tmp3Result2 = getPremiumPlanItem;
     item = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
     t[2] = item;
     format(tmp14, t);
-    const obj11 = combinedDefault;
   }
+  tmp = callback();
 };

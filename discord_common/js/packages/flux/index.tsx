@@ -1,5 +1,5 @@
 // discord_common/js/packages/flux/index.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import initialize2 from "Store.tsx";
 import loggerDefault from "Emitter.tsx";
 import defaultAreStatesEqual from "useStateFromStores.tsx";
@@ -18,7 +18,7 @@ const Store = initialize2.Store;
 const obj = { Emitter: loggerDefault, Store, PersistedStore, DeviceSettingsStore, OfflineCacheStore, connectStores: connectStoresDefault, initialize };
 ({ createFetchStore, NO_DATA } = areStatesEqual);
 Object.defineProperty(obj, "initialized", { get: () => Store.initialized, set: undefined });
-const result = set.fileFinishedImporting("../discord_common/js/packages/flux/index.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/flux/index.tsx");
 
 export default obj;
 export { NO_DATA };

@@ -4,32 +4,29 @@ import encodeProperties from "../../discord_common/js/packages/analytics-utils/A
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import setSecondaryTokenAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
+import transitionTo from "../modules/routing/router_utils.tsx";
 import getRootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
-import setDefault from "../utils/CrossPlatformNativeUtils.native.tsx";
+import obj132Default from "../utils/CrossPlatformNativeUtils.native.tsx";
 import _modDef5227 from "../utils/TrackedHTTPUtils.tsx";
 import _modDef5260 from "ModalActionCreators.tsx";
-import closure_5 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import { setPromoEmailConsentState } from "../modules/auth/PromoEmailConsentStore.tsx";
-import closure_7 from "../stores/AuthenticationStore.tsx";
-import closure_8 from "../stores/ConsentStore.tsx";
+import fetchFingerprint from "../stores/AuthenticationStore.tsx";
+import hasConsented from "../stores/ConsentStore.tsx";
 import ME from "../Constants.tsx";
 import str2 from "../modules/push_notifications/PushNotificationConstants.tsx";
-import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 
-require = arg1;
+require = fn;
 function handleLogout(arg0, ME) {
   let DEFAULT_LOGGED_OUT = ME;
   if (ME === undefined) {
     DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
   }
-  obj = setDefault;
+  obj = obj132Default;
   const result = obj.clearNavigationHistory();
   obj = { type: "LOGOUT" };
   const merged = Object.assign(undefined);
-  const obj3 = dispatcherDefault;
-  const tmp2 = importDefault;
   dispatcherDefault.dispatch(obj).catch((error) => {
     logger.error("Error while dispatching LOGOUT", error);
     if (DiscordErrors != null) {
@@ -49,37 +46,33 @@ function handleLogout(arg0, ME) {
     } else {
       obj1 = { source: null };
       obj1[0] = arg0;
-      tmp11(1222).transitionTo(DEFAULT_LOGGED_OUT, obj1);
-      const tmp11Result = tmp11(1222);
+      transitionTo.transitionTo(DEFAULT_LOGGED_OUT, obj1);
+      const tmp11Result = transitionTo;
     }
-    const obj8 = getRootNavigationRef;
-    tmp11 = require;
   }
+  const dispatchResult = dispatcherDefault.dispatch(obj);
 }
 ({ Endpoints: c9, DEVICE_TOKEN: c10, DEVICE_VOIP_TOKEN: unpackModuleId, AbortCodes: closure_12, Routes: map1 } = ME);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_14, getDevicePushProvider: closure_15 } = require("str2"));
 let closure_16 = new timestampDefault("AuthenticationActionCreators");
 let c17 = null;
-let obj = { MFA: "MFA", SUCCESS: "SUCCESS" };
-obj = {
+let obj = {
   startSession(arg0) {
     closure_0 = arg0;
     dispatcherDefault.wait(() => {
-      obj = closure_1_1(closure_1_3[8]);
       obj = { type: "START_SESSION", token: closure_0 };
       obj.dispatch(obj);
     });
   },
-  login(login) {
-    const self = this;
-    login = login.login;
-    const password = login.password;
-    ({ invite, isMultiAccount } = login);
-    ({ undelete, source, giftCodeSKUId } = login);
+  login(self) {
+    self = this;
+    const login = self.login;
+    const password = self.password;
+    ({ invite, isMultiAccount } = self);
+    ({ undelete, source, giftCodeSKUId } = self);
     obj = login(self[8]);
     obj.dispatch({ type: "LOGIN", isPasswordAttempt: true });
     obj1 = login(self[12]);
-    obj = { url: closure_9.LOGIN, body: { login, password, undelete, login_source: source, gift_code_sku_id: giftCodeSKUId }, retries: 2, oldFormErrors: true, trackedActionData: null };
     obj = { event: isMultiAccount(self[13]).NetworkActionNames.USER_LOGIN, properties: null };
     let code;
     if (invite != null) {
@@ -96,17 +89,15 @@ obj = {
     }
     const merged = Object.assign(obj2);
     obj.rejectWithError = isMultiAccount(self[14]).rejectWithMigratedError();
-    const tmp = self;
-    const tmp3 = isMultiAccount;
     const tmp3Result = isMultiAccount(self[14]);
-    return obj1.post(obj).then((body) => {
-      body = body.body;
+    return obj1.post(obj).then((result) => {
+      const body = result.body;
       const token = body.token;
       ({ mfa, sms, webauthn, ticket, backup, user_id, required_actions, totp, login_instance_id } = body);
       obj = login(self[8]);
       obj.dispatch({ type: "LOGIN_ATTEMPTED", user_id, required_actions });
       if (mfa) {
-        let tmpResult = tmp(tmp2[8]);
+        let tmpResult = login(self[8]);
         obj = { type: "LOGIN_MFA_STEP", ticket: null, sms: null, webauthn: null, totp: null, backup: null, loginInstanceId: null };
         obj[1] = ticket;
         obj[2] = sms;
@@ -118,7 +109,7 @@ obj = {
       } else if (isMultiAccount) {
         self.switchAccountToken(token);
       } else {
-        tmpResult = tmp(tmp2[8]);
+        tmpResult = login(self[8]);
         obj = { type: "LOGIN_SUCCESS", token: null };
         obj[1] = token;
         tmpResult.dispatch(obj);
@@ -139,7 +130,7 @@ obj = {
           }
           obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
           obj[1] = suspended_user_token1;
-          login(tmp[8]).dispatch(obj);
+          login(self[8]).dispatch(obj);
           throw v6OrEarlierAPIError;
         }
       }
@@ -150,33 +141,33 @@ obj = {
       }
       if (code === closure_1_12.ACCOUNT_SCHEDULED_FOR_DELETION) {
         if (null != password) {
-          if ("" !== tmp6) {
+          if ("" !== password) {
             obj = { type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", credentials: null };
             obj1 = { login: null, password: null };
             obj1[0] = login;
-            obj1[1] = tmp6;
+            obj1[1] = password;
             obj[1] = obj1;
-            login(tmp[8]).dispatch(obj);
-            const obj9 = login(tmp[8]);
+            login(self[8]).dispatch(obj);
+            const obj9 = login(self[8]);
           }
           throw v6OrEarlierAPIError;
         }
       }
       if (code === closure_1_12.ACCOUNT_DISABLED) {
         if (null != password) {
-          if ("" !== tmp7) {
-            let obj5 = login(tmp[8]);
+          if ("" !== password) {
+            let obj5 = login(self[8]);
             let obj2 = { type: "LOGIN_ACCOUNT_DISABLED", credentials: null };
             const obj3 = { login: null, password: null };
             obj3[0] = login;
-            obj3[1] = tmp7;
+            obj3[1] = password;
             obj2[1] = obj3;
             obj5.dispatch(obj2);
           }
         }
       }
       if (code === closure_1_12.PHONE_VERIFICATION_REQUIRED) {
-        obj2 = login(tmp[8]);
+        obj2 = login(self[8]);
         const obj4 = { type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED", credentials: null };
         obj5 = { login: null, password: null };
         obj5[0] = login;
@@ -184,7 +175,7 @@ obj = {
         obj4[1] = obj5;
         obj2.dispatch(obj4);
       } else {
-        obj = login(tmp[8]);
+        obj = login(self[8]);
         const obj6 = { type: "LOGIN_FAILURE", error: null };
         obj6[1] = v6OrEarlierAPIError;
         obj.dispatch(obj6);
@@ -195,8 +186,8 @@ obj = {
     const self = this;
     ({ isMultiAccount: require, loginInstanceId } = arg0);
     ({ code, ticket, source, giftCodeSKUId, mfaType } = arg0);
-    obj = self(5227);
-    obj = { url: closure_9.LOGIN_MFA(mfaType), body: null, retries: 2, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
+    self(5227);
+    { url: closure_9.LOGIN_MFA(mfaType), body: null, retries: 2, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
     obj = { code, ticket, login_source: source, gift_code_sku_id: giftCodeSKUId, login_instance_id: null };
     if (loginInstanceId == null) {
       loginInstanceId = authStore.getLoginInstanceId();
@@ -204,37 +195,36 @@ obj = {
     obj[4] = loginInstanceId;
     obj[1] = obj;
     obj[4] = { event: encodeProperties.NetworkActionNames.USER_LOGIN_MFA };
-    obj1 = { event: encodeProperties.NetworkActionNames.USER_LOGIN_MFA };
     const postResult = obj.post(obj);
-    return obj.post(obj).then((body) => {
+    return obj.post(obj).then((result) => {
       if (closure_0) {
-        self.switchAccountToken(body.body.token);
+        self.switchAccountToken(result.body.token);
       } else {
-        obj = self(closure_1_3[8]);
+        self(dependencyMap[8]);
         obj = { type: "LOGIN_SUCCESS", token: null };
-        obj[1] = body.body.token;
+        obj[1] = result.body.token;
         obj.dispatch(obj);
       }
-    }).catch((body) => {
-      if (null != body.body) {
-        if (null != body.body.suspended_user_token) {
-          obj = self(table[8]);
+    }).catch((error) => {
+      if (null != error.body) {
+        if (null != error.body.suspended_user_token) {
+          self(table[8]);
           obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
-          obj[1] = body.body.suspended_user_token;
+          obj[1] = error.body.suspended_user_token;
           obj.dispatch(obj);
         }
       }
-      body = body.body;
+      const body = error.body;
       let code;
       if (body != null) {
         code = body.code;
       }
       if (code === constants.MFA_INVALID_CODE) {
         const _Error = Error;
-        error = new Error(body.body.message);
+        error = new Error(error.body.message);
         throw error;
       } else {
-        throw body;
+        throw error;
       }
     });
   },
@@ -407,35 +397,34 @@ obj = {
     const self = this;
     isMultiAccount = isMultiAccount.isMultiAccount;
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
-    obj = self(5227);
-    obj = { url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN, body: { credential, ticket, source, giftCodeSKUId }, retries: 1, trackedActionData: null, rejectWithError: true };
+    self(5227);
     obj = { event: isMultiAccount(503).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
     obj[3] = obj;
     const postResult = obj.post(obj);
-    return obj.post(obj).then((body) => {
-      body = body.body;
+    return obj.post(obj).then((result) => {
+      const body = result.body;
       const token = body.token;
       ({ user_id, required_actions } = body);
-      obj = self(closure_1_3[8]);
+      obj = self(dependencyMap[8]);
       obj.dispatch({ type: "LOGIN_ATTEMPTED", user_id, required_actions });
       if (isMultiAccount) {
         self.switchAccountToken(token);
       } else {
         obj = { type: "LOGIN_SUCCESS", token: null };
         obj[1] = token;
-        self(closure_1_3[8]).dispatch(obj);
-        const tmpResult = self(closure_1_3[8]);
+        self(dependencyMap[8]).dispatch(obj);
+        const tmpResult = self(dependencyMap[8]);
       }
-    }).catch((body) => {
-      let aPIError = body;
-      if (body instanceof isMultiAccount(table[14]).HTTPResponseError) {
-        if (null != body.body.suspended_user_token) {
-          obj = self(tmp2[8]);
+    }).catch((error) => {
+      let aPIError = error;
+      if (error instanceof isMultiAccount(table[14]).HTTPResponseError) {
+        if (null != error.body.suspended_user_token) {
+          self(table[8]);
           obj = { type: "LOGIN_SUSPENDED_USER", suspendedUserToken: null };
-          obj[1] = body.body.suspended_user_token;
+          obj[1] = error.body.suspended_user_token;
           obj.dispatch(obj);
         } else {
-          aPIError = new isMultiAccount(tmp2[15]).APIError(body);
+          aPIError = new isMultiAccount(table[15]).APIError(error);
         }
       }
       throw aPIError;
@@ -449,15 +438,14 @@ obj = {
       flag = true;
     }
     dispatcherDefault.dispatch({ type: "LOGIN" });
-    obj = dispatcherDefault;
     return new Promise((arg0) => {
       closure_0 = arg0;
       setImmediate(() => {
-        obj = callback2(closure_2_3[8]);
+        callback2(dependencyMap[8]);
         obj = { type: "LOGIN_SUCCESS", token: closure_1_1 };
         obj.dispatch(obj);
         if (callback) {
-          closure_1_2.startSession(closure_1_1);
+          self.startSession(closure_1_1);
         }
         callback();
       });
@@ -472,10 +460,10 @@ obj = {
         HermesBuiltin.throwTypeError();
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = body;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -486,19 +474,19 @@ obj = {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw body;
             } else if (arg0 === 2) {
               c5 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = body;
               return obj;
             } else {
               closure_1 = tmp3;
               let token = tmp7;
               token = undefined;
-              closure_1_1(709).dispatch({ type: "LOGIN" });
+              self(709).dispatch({ type: "LOGIN" });
               dependencyMap = 1;
-              const obj10 = closure_1_1(709);
+              const obj10 = self(709);
               obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
               obj1[0] = closure_1_9.ONE_TIME_LOGIN;
               const obj2 = { ticket: null };
@@ -510,13 +498,13 @@ obj = {
               c4 = 2;
               c5 = 1;
               let obj4 = { value: null, done: false };
-              obj4[0] = closure_1_1(5227).post(obj1);
+              obj4[0] = self(5227).post(obj1);
               return obj4;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
             closure_1 = closure_2;
-            obj4 = closure_1_1(709);
+            obj4 = self(709);
             const obj5 = { type: "LOGIN_FAILURE", error: null };
             const v6OrEarlierAPIError = new closure_1_0(4273).V6OrEarlierAPIError(closure_1);
             obj5[1] = v6OrEarlierAPIError;
@@ -525,15 +513,15 @@ obj = {
           } else if (2 === tmp7) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw body;
             } else if (arg0 === 2) {
               dependencyMap = 0;
               c5 = 3;
               const obj6 = { value: null, done: true };
-              obj6[0] = arg1;
+              obj6[0] = body;
               return obj6;
             } else {
-              token = arg1.body.token;
+              token = body.body.token;
               if (token) {
                 c4 = 3;
                 c5 = 1;
@@ -548,12 +536,12 @@ obj = {
             }
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw body;
           } else if (arg0 === 2) {
             dependencyMap = 0;
             c5 = 3;
             const obj8 = { value: null, done: true };
-            obj8[0] = arg1;
+            obj8[0] = body;
             return obj8;
           } else {
             dependencyMap = 0;
@@ -575,7 +563,6 @@ obj = {
     })();
   },
   loginReset(isMultiAccount) {
-    obj = dispatcherDefault;
     obj = { type: "LOGIN_RESET", isMultiAccount };
     obj.dispatch(obj);
   },
@@ -583,11 +570,10 @@ obj = {
     dispatcherDefault.dispatch({ type: "LOGIN_STATUS_RESET" });
   },
   logoutInternal(arg0) {
-    obj = setDefault;
+    obj = obj132Default;
     const result = obj.clearNavigationHistory();
     obj = { type: "LOGOUT" };
     const merged = Object.assign(arg0);
-    const obj3 = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       logger.error("Error while dispatching LOGOUT", error);
       if (DiscordErrors != null) {
@@ -596,23 +582,22 @@ obj = {
       throw error;
     });
   },
-  logout(login_required_account_manager, LOGIN) {
-    const _require = login_required_account_manager;
+  logout(TTI_test, LOGIN) {
+    const _require = TTI_test;
     let DEFAULT_LOGGED_OUT = LOGIN;
     if (LOGIN === undefined) {
       DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
     }
     importAll = arg2;
-    obj = DEFAULT_LOGGED_OUT(5227);
-    obj = { url: closure_9.LOGOUT, body: null, oldFormErrors: true, trackedActionData: null };
+    DEFAULT_LOGGED_OUT(5227);
     obj = { provider: callback2(), token: null, voip_provider: null, voip_token: null };
-    const Storage = _Storage.Storage;
+    const Storage = require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
     obj[1] = Storage.get(closure_10);
     obj[2] = closure_14;
-    const Storage2 = _Storage.Storage;
+    const Storage2 = require("../../discord_common/js/packages/storage/Storage.tsx").Storage;
     obj[3] = Storage2.get(closure_11);
     obj[1] = obj;
-    obj[3] = { event: _encodeProperties.NetworkActionNames.USER_LOGOUT, properties: obj2 };
+    obj[3] = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_LOGOUT, properties: obj2 };
     let tmp4 = null != arg2;
     if (tmp4) {
       let str = setSecondaryTokenAll.getToken(arg2);
@@ -624,20 +609,18 @@ obj = {
       obj4[0] = str;
       obj3[0] = obj4;
       tmp4 = obj3;
-      const obj6 = setSecondaryTokenAll;
     }
     const merged = Object.assign(tmp4);
-    obj1 = { event: _encodeProperties.NetworkActionNames.USER_LOGOUT, properties: obj2 };
-    const tmp3 = _require;
-    obj.rejectWithError = _sendRequest.rejectWithMigratedError();
-    const tmp3Result = _sendRequest;
+    obj1 = { event: require("../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").NetworkActionNames.USER_LOGOUT, properties: obj2 };
+    obj.rejectWithError = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").rejectWithMigratedError();
+    const tmp3Result = sendRequest;
     return obj.post(obj).finally(() => {
       let tmp2 = null != closure_2;
       if (tmp2) {
         tmp2 = tmp !== closure_1_7.getId();
       }
       if (!tmp2) {
-        closure_1_19(closure_0, DEFAULT_LOGGED_OUT);
+        handleLogout(closure_0, DEFAULT_LOGGED_OUT);
       }
     });
   },
@@ -650,12 +633,9 @@ obj = {
     token = authStore.getToken();
     obj = { wasLoggedIn: null != token, tokenHasChanged: token !== token };
     logger.log("Switching accounts", obj);
-    obj = { isSwitchingAccount: true, goHomeAfterSwitching: flag };
-    const result = setDefault.clearNavigationHistory();
+    const result = obj132Default.clearNavigationHistory();
     obj = { type: "LOGOUT" };
     const merged = Object.assign(obj);
-    const obj3 = setDefault;
-    const obj5 = dispatcherDefault;
     dispatcherDefault.dispatch(obj).catch((error) => {
       logger.error("Error while dispatching LOGOUT", error);
       if (DiscordErrors != null) {
@@ -664,7 +644,7 @@ obj = {
       throw error;
     });
     const dispatchResult = dispatcherDefault.dispatch(obj);
-    return this.loginToken(token, true).then(() => {
+    return this.loginToken(token, true).then((result) => {
       const tmp = closure_0 === closure_1_7.getToken();
       closure_1_16.log("Switched accounts finished", { isCorrectToken: tmp });
       return tmp;
@@ -676,17 +656,16 @@ obj = {
     if (arg1 === undefined) {
       DEFAULT_LOGGED_OUT = constants.DEFAULT_LOGGED_OUT;
     }
-    const HTTP = _sendRequest.HTTP;
+    const HTTP = require("../../discord_common/js/packages/http-utils/HTTPUtils.tsx").HTTP;
     const value = HTTP.get({ url: closure_9.ME, oldFormErrors: true, rejectWithError: true });
-    return value.catch(() => {
-      closure_1_19(closure_0, DEFAULT_LOGGED_OUT);
+    return value.catch((error) => {
+      handleLogout(closure_0, DEFAULT_LOGGED_OUT);
     });
   },
   verify(arg0) {
     closure_0 = arg0;
     return callback(function*() {
       closure_1 = tmp2;
-      closure_0 = tmp5;
       const obj7 = closure_1_1(5227);
       obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
       obj1[0] = closure_1_9.VERIFY;
@@ -707,21 +686,17 @@ obj = {
   },
   authorizePayment(token) {
     obj = _modDef5227;
-    obj = { url: closure_9.AUTHORIZE_PAYMENT, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token };
     obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_PAYMENT };
     return obj.post(obj);
   },
   authorizeIPAddress(closure_0) {
     obj = _modDef5227;
-    obj = { url: closure_9.AUTHORIZE_IP, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token: closure_0 };
     obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_IP };
     return obj.post(obj);
   },
   verifyResend() {
-    obj = _modDef5227;
-    obj = { url: closure_9.VERIFY_RESEND, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.USER_VERIFY_RESEND };
     obj[2] = obj;
     obj[3] = sendRequest.rejectWithMigratedError();
@@ -737,10 +712,10 @@ obj = {
         HermesBuiltin.throwTypeError();
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = body;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -751,15 +726,15 @@ obj = {
           if (0 === ticket) {
             if (arg0 === 1) {
               token = 3;
-              throw arg1;
+              throw body;
             } else if (arg0 === 2) {
               token = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = body;
               return obj;
             } else {
               let mfa = tmp3;
-              let body = tmp7;
+              body = tmp7;
               body = undefined;
               mfa = undefined;
               let sms;
@@ -792,7 +767,7 @@ obj = {
                 tmp37 = null != value;
               }
               if (tmp37) {
-                obj1.push_voip_provider = tmp36;
+                obj1.push_voip_provider = closure_1_14;
                 obj1.push_voip_token = value;
               }
               dependencyMap = 1;
@@ -804,7 +779,6 @@ obj = {
               obj3[0] = closure_1_0(503).NetworkActionNames.USER_RESET_PASSWORD;
               obj2[3] = obj3;
               const obj12 = closure_1_1(709);
-              tmp36 = closure_1_14;
               obj2[4] = closure_1_0(530).rejectWithMigratedError();
               ticket = 2;
               token = 1;
@@ -823,15 +797,15 @@ obj = {
             throw v6OrEarlierAPIError;
           } else if (arg0 === 1) {
             token = 3;
-            throw arg1;
+            throw body;
           } else if (arg0 === 2) {
             dependencyMap = 0;
             token = 3;
             const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
+            obj6[0] = body;
             return obj6;
           } else {
-            body = arg1.body;
+            body = body.body;
             mfa = body.mfa;
             sms = body.sms;
             dependencyMap = body.webauthn;
@@ -889,11 +863,11 @@ obj = {
       obj3[1] = { mfa: true };
       obj1[3] = obj3;
       yield v02(closure_1_3[12]).post(obj1);
-      return arg1.body.token;
+      return body.body.token;
     })();
   },
   forgotPassword(closure_1_6) {
-    closure_0 = closure_1_6;
+    closure_0 = setPromoEmailConsentState;
     return callback(function*() {
       if (c5 === 2) {
         c5 = 3;
@@ -995,12 +969,10 @@ obj = {
     })();
   },
   setFingerprint(fingerprint) {
-    obj = dispatcherDefault;
     obj = { type: "FINGERPRINT", fingerprint };
     obj.dispatch(obj);
   },
   getExperiments(withGuildExperiments) {
-    obj = dispatcherDefault;
     obj = { type: "EXPERIMENTS_FETCH", withGuildExperiments };
     obj.dispatch(obj);
   },
@@ -1016,12 +988,12 @@ obj = {
       obj = { url: null, retries: 2, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_9.AUTH_LOCATION_METADATA;
       const value = HTTP.get(obj);
-      nextPromise = value.then((body) => {
+      nextPromise = value.then((result) => {
         clearTimeout(closure_4);
         if (null == authenticationConsentRequired.getAuthenticationConsentRequired()) {
           let flag;
-          if (body != null) {
-            body = body.body;
+          if (result != null) {
+            const body = result.body;
             if (body != null) {
               flag = body.consent_required;
             }
@@ -1029,14 +1001,14 @@ obj = {
           if (flag == null) {
             flag = true;
           }
-          obj = callback(709);
+          callback(709);
           obj = { type: "SET_CONSENT_REQUIRED", consentRequired: null };
           obj[1] = flag;
           obj.dispatch(obj);
         }
         let country_code;
-        if (body != null) {
-          const body2 = body.body;
+        if (result != null) {
+          const body2 = result.body;
           if (body2 != null) {
             country_code = body2.country_code;
           }
@@ -1044,17 +1016,18 @@ obj = {
         callback(709).dispatch({ type: "SET_LOCATION_METADATA", countryCode: country_code });
         c17 = null;
         let prop;
-        if (body != null) {
-          const body3 = body.body;
+        if (result != null) {
+          const body3 = result.body;
           if (body3 != null) {
             prop = body3.promotional_email_opt_in;
           }
         }
         if (null != prop) {
           obj = { required: null, checked: null, preChecked: null };
-          ({ required: obj4[0], pre_checked: obj4[1], pre_checked: obj4[2] } = body.body.promotional_email_opt_in);
+          ({ required: obj4[0], pre_checked: obj4[1], pre_checked: obj4[2] } = result.body.promotional_email_opt_in);
           callback2(obj);
         }
+        const obj3 = callback(709);
       }, () => {
         clearTimeout(closure_4);
         callback(709).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
@@ -1068,7 +1041,7 @@ obj = {
   }
 };
 let tmp4 = new timestampDefault("AuthenticationActionCreators");
-let result = require("set").fileFinishedImporting("actions/AuthenticationActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("actions/AuthenticationActionCreators.tsx");
 
 export default obj;
 export const PasswordResetResult = obj;

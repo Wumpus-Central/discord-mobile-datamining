@@ -1,27 +1,26 @@
 // discord_app/modules/age_gate/native/components/AgeGateUnderage.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { HelpdeskArticles } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
     num = 80;
   }
-  let obj = { container: null, header: null, body: null, buttonWrapper: null };
-  obj = { alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+  const obj = { alignItems: "center", justifyContent: "center", flex: 1, padding: 16, paddingTop: 0, paddingBottom: num, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
   obj[0] = obj;
   obj[1] = { marginTop: 16 };
   obj[2] = { marginTop: 8, lineHeight: 20, textAlign: "center" };
   obj[3] = { width: "100%", marginTop: 24 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/age_gate/native/components/AgeGateUnderage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/age_gate/native/components/AgeGateUnderage.tsx");
 
 export default function AgeGateUnderage(onClose) {
   onClose = onClose.onClose;
@@ -37,11 +36,10 @@ export default function AgeGateUnderage(onClose) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let navigation;
   const tmp3 = existingUser(flag2[6])();
   const tmp4 = callback2(tmp3);
   let obj = onClose(flag2[7]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [onClose, existingUser, navigation, flag2];
   const layoutEffect = navigation.useLayoutEffect(() => {
     if (existingUser) {
@@ -98,19 +96,19 @@ export default function AgeGateUnderage(onClose) {
     obj4[0] = tmp4.body;
     const intl4 = tmp5(tmp2[10]).intl;
     obj4[3] = intl4.format(tmp5(tmp2[10]).t["3axQdB"], { days: 30 });
-    const items2 = [tmp14(tmp5(tmp2[15]).Text, obj4), ];
+    const items2 = [callback(tmp5(tmp2[15]).Text, obj4), ];
     const obj5 = { style: null, children: null };
     obj5[0] = tmp4.buttonWrapper;
     const obj6 = { onPress: null, text: null, grow: true };
     obj6[0] = onClose;
     const intl5 = tmp5(tmp2[10]).intl;
     obj6[1] = intl5.string(tmp5(tmp2[10]).t.JhDw5o);
-    obj5[1] = tmp14(tmp5(tmp2[17]).Button, obj6);
-    items2[1] = tmp14(tmp11, obj5);
+    obj5[1] = callback(tmp5(tmp2[17]).Button, obj6);
+    items2[1] = callback(View, obj5);
     obj3[0] = items2;
-    tmp10Result = tmp10(closure_7, obj3);
+    tmp10Result = callback(closure_7, obj3);
   }
   items1[5] = tmp10Result;
   obj[1] = items1;
-  return closure_8(View, obj);
+  return callback(View, obj);
 };

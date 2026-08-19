@@ -1,9 +1,9 @@
 // discord_app/modules/remote_auth/QRLoginUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 
 const re2 = /^\/ra\/([\w-]+)$/;
-const result = set.fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");
 
 export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host, pathname) {
   if (null != host) {

@@ -5,7 +5,7 @@ import MagnifyingGlassIcon from "../../Icon/native/redesign/generated/Magnifying
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 const forwardRefResult = importAllResult.forwardRef((arg0, arg1) => {
   const obj = { placeholder: null, returnKeyType: "search", ref: null };
   const intl = getSystemLocale.intl;
@@ -19,6 +19,6 @@ const forwardRefResult = importAllResult.forwardRef((arg0, arg1) => {
   obj.isClearable = true;
   return jsx(TextField.TextField, { placeholder: null, returnKeyType: "search", ref: null });
 });
-const result = require("set").fileFinishedImporting("design/components/TextField/native/SearchField.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/TextField/native/SearchField.native.tsx");
 
 export const SearchField = forwardRefResult;

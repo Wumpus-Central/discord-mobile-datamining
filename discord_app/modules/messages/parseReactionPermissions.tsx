@@ -1,7 +1,7 @@
 // discord_app/modules/messages/parseReactionPermissions.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
 
 export default function parseReactionPermissions(arg0) {
   ({ channel, canChat, isLurking, isActiveChannelOrUnarchivableThread, renderReactions, canAddNewReactions, communicationDisabled, isAutomodQuarantined } = arg0);
@@ -23,7 +23,6 @@ export default function parseReactionPermissions(arg0) {
   }
   if (!tmp4) {
     tmp4 = !((true === canAddNewReactions || isPrivateResult) && !isSystemDMResult && isActiveChannelOrUnarchivableThread && !isMediaThreadResult);
-    const tmp5 = (true === canAddNewReactions || isPrivateResult) && !isSystemDMResult && isActiveChannelOrUnarchivableThread && !isMediaThreadResult;
   }
   obj[1] = tmp4;
   if (!isLurking) {

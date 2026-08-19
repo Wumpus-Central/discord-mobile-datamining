@@ -1,5 +1,5 @@
 // discord_common/js/packages/performance-utils/performance-polyfill.js
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 let _Date = Date;
 if (Date.now) {
@@ -55,13 +55,14 @@ if (!tmp6.measure) {
     }
     let num = 0;
     if (dependencyMap[arg1]) {
-      num = tmp3[arg1].startTime;
+      num = dependencyMap[arg1].startTime;
     }
     if (dependencyMap[arg2]) {
-      let startTime = tmp3[arg2].startTime;
+      let startTime = dependencyMap[arg2].startTime;
     } else {
       startTime = closure_1.now();
     }
+    arr = arr.push({ name, entryType: "measure", startTime: num, duration: startTime - num });
   });
 }
 if (!tmp6.getEntriesByType) {
@@ -71,7 +72,6 @@ if (!tmp6.getEntriesByType) {
     }
     const items = [];
     for (let num = 0; num < length; num = num + 1) {
-      let tmp2 = num;
       if (arr[num].entryType == arg0) {
         arr = items.push(tmp[num]);
       }
@@ -86,7 +86,6 @@ if (!tmp6.getEntriesByName) {
     }
     const items = [];
     for (let num = 0; num < length; num = num + 1) {
-      let tmp2 = num;
       if (arr[num].name == arg0) {
         arr = items.push(tmp[num]);
       }
@@ -105,7 +104,6 @@ if (!tmp6.clearMarks) {
       do {
         let tmp4 = arr[diff];
         let tmp5 = tmp4.entryType != "mark";
-        let tmp6 = diff;
         if (!tmp5) {
           let tmp7 = tmp3;
           if (tmp3) {
@@ -133,7 +131,6 @@ if (!tmp6.clearMeasures) {
       do {
         let tmp4 = arr[diff];
         let tmp5 = tmp4.entryType != "measure";
-        let tmp6 = diff;
         if (!tmp5) {
           let tmp7 = tmp3;
           if (tmp3) {
@@ -162,4 +159,4 @@ if (typeof globalThis.define === "function") {
 if (tmp7) {
   globalThis.define("performance", [], () => closure_1);
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/performance-utils/performance-polyfill.js");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/performance-utils/performance-polyfill.js");

@@ -5,17 +5,16 @@ import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityInd
 import ME from "../../../../Constants.tsx";
 import { EmojiIntention } from "../../../emojis/EmojiConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ AnalyticEvents: c5, ChatInputComponentViewedTypes: closure_6, VerticalGradient: error } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { container: { flex: 1 }, list: { overflow: "hidden", flex: 1 }, header: null, headerGradientColor: null, headerGradient: null };
-obj = { flexDirection: "row", paddingTop: ThemesDefault.space.PX_8, paddingBottom: 1, gap: ThemesDefault.space.PX_12 };
+let obj = { flexDirection: "row", paddingTop: ThemesDefault.space.PX_8, paddingBottom: 1, gap: ThemesDefault.space.PX_12 };
 obj[2] = obj;
-createCacheKey = { color: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
+const createCacheKey = { color: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
 obj[3] = createCacheKey;
 let obj2 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -27,15 +26,14 @@ let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   ({ bottomSheetIndex, channel } = inPortalKeyboard);
   inPortalKeyboard = inPortalKeyboard.inPortalKeyboard;
-  let ref1;
   let handleTextChange;
   ({ bottomSheetRef, onPressEmoji, onBackspace } = inPortalKeyboard);
   const tmp = callback3();
   const items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const effect = importAllResult.useEffect(() => {
-    let obj = ref1(handleTextChange[7]);
-    obj = { type: closure_1_6.EMOJI, channel_id: channel.id, guild_id: channel.guild_id };
+    ref1(handleTextChange[7]);
+    const obj = { type: closure_1_6.EMOJI, channel_id: channel.id, guild_id: channel.guild_id };
     obj.track(closure_1_5.CHAT_INPUT_COMPONENT_VIEWED, obj);
   }, items);
   let obj = channel(handleTextChange[8]);
@@ -43,14 +41,14 @@ const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   obj1 = channel(handleTextChange[9]);
   const emojiCategories = obj1.useEmojiCategories(EmojiIntention.CHAT, channel);
   const ref = importAllResult.useRef(null);
-  ref1 = importAllResult.useRef(null);
+  const ref1 = importAllResult.useRef(null);
   const tmp8 = ref1(handleTextChange[12])(channel, sharedValue, EmojiIntention.CHAT);
   handleTextChange = tmp8.handleTextChange;
   const items1 = [channel];
   const items2 = [handleTextChange];
   const callback = importAllResult.useCallback(() => {
-    let obj = ref1(handleTextChange[7]);
-    obj = { type: closure_1_6.EMOJI_SEARCH, channel_id: channel.id, guild_id: channel.guild_id };
+    ref1(handleTextChange[7]);
+    const obj = { type: closure_1_6.EMOJI_SEARCH, channel_id: channel.id, guild_id: channel.guild_id };
     obj.track(closure_1_5.CHAT_INPUT_COMPONENT_VIEWED, obj);
   }, items1);
   const callback1 = importAllResult.useCallback(() => {
@@ -62,7 +60,7 @@ const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   }, items2);
   const tmp7 = ref1(handleTextChange[10]);
   ({ safeAreaStyle, safeAreaBottomKeyboardAware } = ref1(handleTextChange[13])({ hasCategories: true }));
-  obj = { value: tmp7(ref1(handleTextChange[11]).EMOJI_PICKER).analyticsLocations, children: null };
+  { value: tmp7(ref1(handleTextChange[11]).EMOJI_PICKER).analyticsLocations, children: null };
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.header, children: null };
   const obj2 = { ref: ref1, size: "md", placeholder: null, onChange: null, onFocus: null, isRound: true };
@@ -97,6 +95,6 @@ const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   obj[1] = callback2(closure_4, obj);
   return callback(channel(handleTextChange[10]).AnalyticsLocationProvider, obj);
 });
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPicker.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPicker.tsx");
 
 export default memoResult;

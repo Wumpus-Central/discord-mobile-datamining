@@ -3,41 +3,32 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
 import registerAssetDefault from "../../../../../_runtime/11866_registerAsset.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { NativePermissionTypes } from "../../../native_permissions/NativePermissionConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
-createCacheKey = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
-createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -ThemesDefault.space.PX_32 - require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
+const createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -ThemesDefault.space.PX_32 - require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[0] = createCacheKey;
-const tmp4 = -ThemesDefault.space.PX_32;
 createCacheKey[1] = { height: 135, width: 216, marginBottom: ThemesDefault.space.PX_24 };
-let obj1 = { height: 135, width: 216, marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_8 };
-let obj2 = { marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24 };
-let obj3 = { marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { height: 48, width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj4 = { height: 48, width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { paddingBottom: ThemesDefault.space.PX_4, justifyContent: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const obj5 = { paddingBottom: ThemesDefault.space.PX_4, justifyContent: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx");
+const result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx");
 
 export default function ContactSyncLandingOnboardingRedesign(onNext) {
   onNext = onNext.onNext;
   ({ loading, error, discoverabilityEnabled, setDiscoverabilityEnabled } = onNext);
   const tmp = callback4();
   const items = [onNext];
-  let obj = { children: null };
-  obj = { style: tmp.content, children: null };
-  obj = { resizeMode: "contain", style: tmp.headerImage, source: null };
+  let obj = { resizeMode: "contain", style: tmp.headerImage, source: null };
   callback = React.useCallback(callback(function*() {
     if (table === 2) {
       table = 3;

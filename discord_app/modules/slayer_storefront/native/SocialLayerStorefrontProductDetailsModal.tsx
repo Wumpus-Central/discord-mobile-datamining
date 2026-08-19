@@ -1,30 +1,31 @@
 // discord_app/modules/slayer_storefront/native/SocialLayerStorefrontProductDetailsModal.tsx
-import set from "../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../utils/PlatformUtils.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import isNullOrEmpty from "../../../utils/StringUtils.tsx";
 import _httpGetWithCountryCodeQuery from "../../../utils/StoreUtils.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import preloadDefault from "../../../components_native/common/FastImage.tsx";
+import apexExperiment from "../../billing/native/ACOMExperiments.tsx";
 import NativeCheckoutStoreProviderDefault from "../../checkout/native/stores/NativeCheckoutStoreProvider.tsx";
 import VideoComponent from "../../../components_native/common/Video.tsx";
 import NativePaymentContextProvider from "../../payments/native/NativePaymentContext.tsx";
 import SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY from "SocialLayerStorefrontNativeActionCreators.tsx";
 import useFormattedSKUPrice from "../../storefront/native/StorefrontNativeUtils.android.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { useNativeCheckoutStore } from "../../checkout/native/NativeCheckoutStore.tsx";
-import closure_9 from "../../../stores/game_store/SKUStore.tsx";
-import closure_10 from "../SocialLayerStorefrontStore.tsx";
+import addSku from "../../../stores/game_store/SKUStore.tsx";
+import handleUserSettingsStoreUpdate from "../SocialLayerStorefrontStore.tsx";
 import { SlayerShopPDPCTAType } from "../SocialLayerStorefrontAnalyticsConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import importDefaultResult from "../../../../_runtime/00689_n.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import alphaResult1 from "../../../index.native.tsx";
 
-require = arg1;
+require = fn;
 function HeroMedia(mediaItem) {
   mediaItem = mediaItem.mediaItem;
   const tmp = callback3();
@@ -77,8 +78,7 @@ function InGameItemTag() {
 }
 function ProductPriceSection(sku) {
   const tmp = callback3();
-  let obj = useFormattedSKUPrice;
-  obj = { sku: sku.sku, priceSetAssignmentPurchaseType: constants.DEFAULT };
+  let obj = { sku: sku.sku, priceSetAssignmentPurchaseType: constants.DEFAULT };
   const userPrice = obj.useFormattedSKUPrice(obj).userPrice;
   let tmp4 = null;
   if (null != userPrice) {
@@ -99,17 +99,14 @@ function ProductPriceSection(sku) {
 function BundleThumbnailRow(trackPDPClick) {
   ({ items: require, mediaItems, selectedIndex: importDefault, onSelectIndex } = trackPDPClick);
   trackPDPClick = trackPDPClick.trackPDPClick;
-  let React;
-  closure_5 = undefined;
   const tmp = callback3();
-  React = tmp;
+  const React = tmp;
   let items = [onSelectIndex, trackPDPClick];
   closure_5 = React.useCallback((arg0) => {
-    trackPDPClick(closure_1_11.CAROUSEL_ITEM);
+    trackPDPClick(SlayerShopPDPCTAType.CAROUSEL_ITEM);
     onSelectIndex(arg0);
   }, items);
-  let obj = { style: tmp.section, children: null };
-  obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
+  let obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = require(onSelectIndex[17]).intl;
   obj[2] = intl.string(require(onSelectIndex[17]).t.U7DAV9);
   let items1 = [callback(require(onSelectIndex[16]).Text, obj), ];
@@ -117,10 +114,10 @@ function BundleThumbnailRow(trackPDPClick) {
     horizontal: true,
     showsHorizontalScrollIndicator: false,
     contentContainerStyle: tmp.bundleThumbnailRow,
-    children: mediaItems.map((thumbnailSrc) => {
-      const table = arg1;
+    children: mediaItems.map((item, index) => {
+      const table = index;
       let label;
-      if (table[arg1] != null) {
+      if (table[index] != null) {
         label = tmp.label;
       }
       if (label == null) {
@@ -130,7 +127,7 @@ function BundleThumbnailRow(trackPDPClick) {
         }
         label = title;
       }
-      let thumbnailInnerSelected = arg1 === closure_1;
+      let thumbnailInnerSelected = index === closure_1;
       let obj = {
         accessibilityRole: "button",
         accessibilityLabel: label,
@@ -144,28 +141,24 @@ function BundleThumbnailRow(trackPDPClick) {
       const items = [thumbnail.thumbnail, ];
       let thumbnailSelected = thumbnailInnerSelected;
       if (thumbnailInnerSelected) {
-        thumbnailSelected = tmp8.thumbnailSelected;
+        thumbnailSelected = thumbnail.thumbnailSelected;
       }
       items[1] = thumbnailSelected;
       obj[4] = items;
       const items1 = [thumbnail.thumbnailInner, ];
       if (thumbnailInnerSelected) {
-        thumbnailInnerSelected = tmp8.thumbnailInnerSelected;
+        thumbnailInnerSelected = thumbnail.thumbnailInnerSelected;
       }
-      obj = { style: items1, children: null };
       items1[1] = thumbnailInnerSelected;
       obj = { source: null, style: null, resizeMode: "cover" };
       obj1 = { uri: null };
-      const tmp10 = closure_1_1(onSelectIndex[15]);
-      const tmp2 = closure_1;
-      const tmp4 = closure_1_0;
-      const tmp9 = closure_1_7;
-      obj1[0] = closure_1_0(onSelectIndex[13]).getThumbnailSrc(thumbnailSrc);
+      const tmp10 = importDefault(onSelectIndex[15]);
+      obj1[0] = require(onSelectIndex[13]).getThumbnailSrc(item);
       obj[0] = obj1;
       obj[1] = thumbnail.thumbnailImage;
       obj[1] = closure_1_15(tmp10, obj);
-      obj[5] = closure_1_15(tmp9, obj);
-      return closure_1_15(closure_1_0(onSelectIndex[19]).PressableOpacity, obj, arg1);
+      obj[5] = closure_1_15(closure_1_7, obj);
+      return closure_1_15(require(onSelectIndex[19]).PressableOpacity, obj, index);
     })
   };
   items1[1] = callback(closure_5, obj);
@@ -181,21 +174,18 @@ function SKUNameAndDescriptionSection(sku) {
     obj[0] = tmp.section;
     obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     obj[2] = sku.name;
-    const items = [callback(tmp2(4734).Heading, obj), ];
-    const isNullOrEmptyResult = tmp2(1903).isNullOrEmpty(sku.description);
+    const items = [callback(Text.Heading, obj), ];
+    const isNullOrEmptyResult = isNullOrEmpty.isNullOrEmpty(sku.description);
     let tmp7Result = !isNullOrEmptyResult;
     if (!isNullOrEmptyResult) {
       obj1 = { variant: "text-md/medium", color: "text-muted", children: null };
       obj1[2] = sku.description;
-      tmp7Result = tmp7(tmp2(4734).Text, obj1);
+      tmp7Result = callback(Text.Text, obj1);
     }
     items[1] = tmp7Result;
     obj[1] = items;
-    tmp5Result = closure_16(closure_7, obj);
-    const tmp2Result = tmp2(1903);
-    const tmp5 = closure_16;
-    const tmp6 = closure_7;
-    tmp7 = callback;
+    tmp5Result = callback2(closure_7, obj);
+    const tmp2Result = isNullOrEmpty;
   }
   return tmp5Result;
 }
@@ -221,9 +211,9 @@ function ItemDetailsSection(selectedItem) {
   }
   obj1 = isNullOrEmpty;
   if (obj1.isNullOrEmpty(trimmed)) {
-    let tmp8Result = tmp8(1903);
+    let tmp8Result = isNullOrEmpty;
     if (tmp8Result.isNullOrEmpty(trimmed1)) {
-      tmp8Result = tmp8(1903);
+      tmp8Result = isNullOrEmpty;
       let tmp11Result = null;
     }
     return tmp11Result;
@@ -234,7 +224,7 @@ function ItemDetailsSection(selectedItem) {
   if (!isNullOrEmptyResult) {
     obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
     obj[2] = trimmed;
-    tmp14 = callback(tmp8(4734).Heading, obj);
+    tmp14 = callback(Text.Heading, obj);
   }
   const items = [tmp14, , ];
   const tmp8Result1 = isNullOrEmpty;
@@ -255,9 +245,9 @@ function ItemDetailsSection(selectedItem) {
     const items1 = [tmp18, ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj4[2] = trimmed1;
-    items1[1] = callback(tmp8(4734).Text, obj4);
+    items1[1] = callback(Text.Text, obj4);
     obj1[1] = items1;
-    tmp11Result = tmp11(tmp12, obj1);
+    tmp11Result = callback2(closure_7, obj1);
   }
   items[1] = tmp11Result;
   const tmp8Result2 = isNullOrEmpty;
@@ -266,19 +256,16 @@ function ItemDetailsSection(selectedItem) {
   if (!isNullOrEmptyResult2) {
     const obj5 = { variant: "text-md/medium", color: "text-default", children: null };
     obj5[2] = trimmed2;
-    tmp23 = callback(tmp8(4734).Text, obj5);
+    tmp23 = callback(Text.Text, obj5);
   }
   items[2] = tmp23;
   obj[1] = items;
-  tmp11Result = tmp11(tmp12, obj);
+  tmp11Result = callback2(closure_7, obj);
+  const tmp8Result3 = isNullOrEmpty;
 }
 function SocialLayerStorefrontProductDetailsModal(skuId) {
   skuId = skuId.skuId;
   const analyticsLocations = skuId.analyticsLocations;
-  dependencyMap = undefined;
-  let storeFront;
-  let stateFromStores;
-  let stateFromStores1;
   let stateFromStores2;
   let memo1;
   useNativeCheckoutStore = undefined;
@@ -294,13 +281,13 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   dependencyMap = tmp;
   const rect = analyticsLocations(1629)();
   let obj = analyticsLocations(7935);
-  storeFront = obj.useNativeIAPPayments().storeFront;
+  const storeFront = obj.useNativeIAPPayments().storeFront;
   obj1 = skuId(589);
   let items = [memo2];
-  stateFromStores = obj1.useStateFromStores(items, () => memo2.get(skuId));
+  const stateFromStores = obj1.useStateFromStores(items, () => memo2.get(skuId));
   let obj2 = skuId(589);
   let items1 = [memo2];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => memo2.isFetching(skuId) || memo2.didFetchingSkuFail(skuId));
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => memo2.isFetching(skuId) || memo2.didFetchingSkuFail(skuId));
   let obj3 = skuId(7145);
   let applicationId;
   if (stateFromStores != null) {
@@ -352,25 +339,25 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     const obj = { is_gift: false, location_stack: memo1, payment_type: "sku", sku_id: skuId, sku_type: null, sku_product_line: null, application_id: null, load_id: null };
     let type;
     if (stateFromStores != null) {
-      type = tmp.type;
+      type = stateFromStores.type;
     }
     obj[4] = type;
     let productLine;
     if (stateFromStores != null) {
-      productLine = tmp.productLine;
+      productLine = stateFromStores.productLine;
     }
     obj[5] = productLine;
     let applicationId;
     if (stateFromStores != null) {
-      applicationId = tmp.applicationId;
+      applicationId = stateFromStores.applicationId;
     }
     obj[6] = applicationId;
     obj[7] = closure_8;
     return obj;
   }, items5);
   analyticsLocations(4761)(() => {
-    let obj = analyticsLocations(closeButtonIcon[32]);
-    obj = { location_stack: memo1, type: skuId(closeButtonIcon[33]).SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY, sku_id: skuId, application_id: null };
+    analyticsLocations(closeButtonIcon[32]);
+    const obj = { location_stack: memo1, type: skuId(closeButtonIcon[33]).SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY, sku_id: skuId, application_id: null };
     let applicationId;
     if (stateFromStores != null) {
       applicationId = stateFromStores.applicationId;
@@ -394,8 +381,8 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   items6[1] = applicationId2;
   items6[2] = memo1;
   callback = obj5.useCallback((arg0) => {
-    let obj = analyticsLocations(closeButtonIcon[32]);
-    obj = { slayer_storefront_session_id: "Array", sku_id: "a", guild_id: true, application_id: true, cta_type: "cartesianOffset", location_stack: null };
+    analyticsLocations(closeButtonIcon[32]);
+    const obj = { slayer_storefront_session_id: "Array", sku_id: "a", guild_id: true, application_id: true, cta_type: "cartesianOffset", location_stack: null };
     obj[1] = skuId;
     let applicationId;
     if (stateFromStores != null) {
@@ -410,14 +397,14 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   let tmp13Result = tmp13(obj5.useMemo(() => {
     let applicationId;
     if (stateFromStores != null) {
-      applicationId = tmp.applicationId;
+      applicationId = stateFromStores.applicationId;
     }
     if (null == applicationId) {
       const items = [[], []];
       let result = items;
     } else {
       const obj2 = skuId(closeButtonIcon[13]);
-      const tenantMetadata = tmp.tenantMetadata;
+      const tenantMetadata = stateFromStores.tenantMetadata;
       let carouselItems;
       if (tenantMetadata != null) {
         const socialLayer = tenantMetadata.socialLayer;
@@ -430,9 +417,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       }
       const obj = { heroWidth: null };
       obj[0] = skuId(closeButtonIcon[13]).MOBILE_HERO_WIDTH_PX;
-      result = obj2.convertCarouselItemsToMediaItems(carouselItems, tmp.applicationId, stateFromStores2, obj);
-      const tmp8 = skuId;
-      const tmp9 = closeButtonIcon;
+      result = obj2.convertCarouselItemsToMediaItems(carouselItems, stateFromStores.applicationId, stateFromStores2, obj);
     }
     return result;
   }, items7), 2);
@@ -486,9 +471,9 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       }
       if (!current) {
         ref2.current = true;
-        let obj = skuId(closeButtonIcon[34]);
-        obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
-        ({ applicationId, id } = tmp);
+        skuId(closeButtonIcon[34]);
+        const obj = { withGoogleSkuIds: null, countryCode: null, paymentGateway: null };
+        ({ applicationId, id } = stateFromStores);
         obj[0] = skuId(closeButtonIcon[35]).isAndroid();
         let country;
         if (storeFront != null) {
@@ -496,8 +481,6 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
         }
         obj[1] = country;
         const obj3 = skuId(closeButtonIcon[35]);
-        const tmp5 = skuId;
-        const tmp6 = closeButtonIcon;
         let APPLE;
         if (tmp5Result.isIOS()) {
           APPLE = _undefined.APPLE;
@@ -507,6 +490,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
         tmp5Result = skuId(closeButtonIcon[35]);
       }
     }
+    tmp2 = null != stateFromStores && null != stateFromStores.applicationId;
   }, items8);
   const items9 = [memo2];
   callback1 = obj5.useCallback(() => {
@@ -530,8 +514,8 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     closure_10.current = "succeeded";
     let obj = skuId(closeButtonIcon[35]);
     if (obj.isIOS()) {
-      analyticsLocations(tmp2[32]).track(constants.PAYMENT_FLOW_SUCCEEDED, memo2);
-      const obj2 = analyticsLocations(tmp2[32]);
+      analyticsLocations(closeButtonIcon[32]).track(constants.PAYMENT_FLOW_SUCCEEDED, memo2);
+      const obj2 = analyticsLocations(closeButtonIcon[32]);
     }
     _undefined(false);
     obj = { skuId, orbsReward: null, analyticsLocations: null };
@@ -543,6 +527,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     obj[2] = memo1;
     const result = skuId(closeButtonIcon[33]).openSocialLayerStorefrontProductSelfPurchaseSuccessModal(obj);
     result.then(skuId(closeButtonIcon[33]).closeSocialLayerStorefrontProductDetailsModal);
+    const tmpResult = skuId(closeButtonIcon[33]);
   };
   obj[7] = function onPurchaseError() {
     callback1(null);
@@ -560,8 +545,8 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     analyticsLocations(closeButtonIcon[32]).track(constants.PAYMENT_FLOW_STARTED, memo2);
     _undefined(true);
     const obj = analyticsLocations(closeButtonIcon[32]);
-    callback().catch((arg0) => {
-      callback(arg0);
+    callback().catch((error) => {
+      callback(error);
     });
   }, items10);
   if (null == stateFromStores) {
@@ -657,7 +642,6 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       items18[2] = tmp42Result;
       obj14[0] = items18;
       let tmp42Result1 = tmp63(closure_17, obj14);
-      const tmp52 = closure_17;
     } else {
       const obj15 = { sku: null };
       obj15[0] = stateFromStores;
@@ -716,10 +700,9 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const obj25 = { shouldAppendDisclaimer: null };
       obj25[0] = false === tmp2Result(tmp10).hasAlreadyLinked;
       const mobileFinePrintMessageForApplication = tmp4(10359).getMobileFinePrintMessageForApplication(getOrFetchApplication, stringResult, obj25);
-      obj24[1] = mobileFinePrintMessageForApplication.map((children) => callback1(skuId(closeButtonIcon[16]).Text, { variant: "text-xs/normal", color: "text-muted", children }, arg1));
+      obj24[1] = mobileFinePrintMessageForApplication.map((item, index) => callback1(skuId(closeButtonIcon[16]).Text, { variant: "text-xs/normal", color: "text-muted", children: item }, index));
       result = tmp42(tmp64, obj24);
       const tmp4Result3 = tmp4(10359);
-      const tmp60 = getOrFetchApplication;
     }
     items20[3] = result;
     obj16[1] = items20;
@@ -730,15 +713,15 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   tmp27 = arr10.length > 1;
 }
 function SocialLayerStorefrontProductDetailsModalWithOrderCTX(skuId) {
-  let obj = set;
+  let obj = obj132;
   if (obj.isIOS()) {
-    let GOOGLE = tmp3.APPLE_ADVANCED_COMMERCE;
-    let tmp4 = tmp3;
+    let GOOGLE = constants.APPLE_ADVANCED_COMMERCE;
+    let tmp4 = constants;
   } else {
-    GOOGLE = tmp3.GOOGLE;
-    tmp4 = tmp3;
+    GOOGLE = constants.GOOGLE;
+    tmp4 = constants;
   }
-  const OTPACOMOrderExperiment = tmp(7696).OTPACOMOrderExperiment;
+  const OTPACOMOrderExperiment = apexExperiment.OTPACOMOrderExperiment;
   let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
   obj = { paymentGateway: GOOGLE, orderRequired: null, skuIds: null, isGift: false, activeSubscription: null, onOrderRetryCancellation: null, children: null };
   if (enabled) {
@@ -750,8 +733,8 @@ function SocialLayerStorefrontProductDetailsModalWithOrderCTX(skuId) {
   obj[5] = SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY.closeSocialLayerStorefrontProductDetailsModal;
   obj = {};
   const merged = Object.assign(skuId);
-  obj[6] = closure_15(SocialLayerStorefrontProductDetailsModal, obj);
-  return closure_15(NativeCheckoutStoreProviderDefault, obj, skuId.skuId);
+  obj[6] = callback(SocialLayerStorefrontProductDetailsModal, obj);
+  return callback(NativeCheckoutStoreProviderDefault, obj, skuId.skuId);
 }
 ({ ScrollView: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, PaymentGateways: map1, PriceSetAssignmentPurchaseTypes: closure_14 } = ME);
@@ -761,56 +744,39 @@ let closure_18 = importDefaultResult(ThemesDefault.unsafe_rawColors.BRAND_500).a
 const alphaResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BRAND_500).alpha(0.25);
 const importDefaultResult1 = importDefaultResult;
 const importDefaultResult1Result = importDefaultResult(ThemesDefault.unsafe_rawColors.BRAND_500);
-let closure_19 = require("module_0").hex();
-let obj = { container: { flex: 1 }, header: null, headerTitle: null, closeButtonIcon: null, scrollContent: null, scrollContainer: null, section: null, bundleThumbnailRow: null, thumbnail: null, thumbnailSelected: null, thumbnailInner: null, thumbnailInnerSelected: null, thumbnailImage: null, labelRow: null, labelIcon: null, priceRow: null, footer: null, footerButtonRow: null, buyButton: null, availabilityCopy: null, legalCopy: null, hero: null, priceSection: null, heroImage: null, exclusiveBadgeContainer: null };
-obj = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+let closure_19 = require("../../../index.native.tsx").hex();
+let obj = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[1] = obj;
 obj[2] = { flexShrink: 1 };
 obj[3] = { tintColor: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT };
-let obj1 = { tintColor: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT };
 obj[4] = { alignItems: "stretch", gap: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16 };
 obj[5] = { flex: 1 };
-let obj2 = { alignItems: "stretch", gap: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16 };
 obj[6] = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
+const createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
 obj[7] = createCacheKey;
-let obj3 = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
 obj[8] = { width: 64, height: 64, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderColor: "transparent" };
-let obj5 = { width: 64, height: 64, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderColor: "transparent" };
 obj[9] = { borderColor: ThemesDefault.colors.BORDER_STRONG };
-let obj6 = { borderColor: ThemesDefault.colors.BORDER_STRONG };
 obj[10] = { flex: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-let obj7 = { flex: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[11] = { margin: 2, borderRadius: ThemesDefault.radii.sm };
 obj[12] = { width: "100%", height: "100%" };
-let obj8 = { margin: 2, borderRadius: ThemesDefault.radii.sm };
 obj[13] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-let obj9 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 obj[14] = { width: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_16 };
-let obj10 = { width: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_16 };
 obj[15] = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
-let obj11 = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
 obj[16] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj12 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[17] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 obj[18] = { flex: 1 };
 obj[19] = { textAlign: "center" };
-let obj13 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 obj[20] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
-let obj14 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
 obj[21] = { marginHorizontal: ThemesDefault.space.PX_16, height: require("WEB_HERO_WIDTH_PX").MOBILE_HERO_HEIGHT_PX, borderRadius: ThemesDefault.radii.md, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let obj15 = { marginHorizontal: ThemesDefault.space.PX_16, height: require("WEB_HERO_WIDTH_PX").MOBILE_HERO_HEIGHT_PX, borderRadius: ThemesDefault.radii.md, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[22] = { width: "100%", gap: ThemesDefault.space.PX_8 };
 obj[23] = { width: "100%", height: "100%" };
-let obj16 = { width: "100%", gap: ThemesDefault.space.PX_8 };
 obj[24] = { paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_20 = createCacheKey.createStyles(obj);
-let obj17 = { paddingHorizontal: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontProductDetailsModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontProductDetailsModal.tsx");
 
 export default function WrappedSocialLayerStorefrontProductDetailsModal(arg0) {
-  let obj = { skuIDs: [], activeSubscription: null, children: null };
-  obj = {};
+  const obj = {};
   const merged = Object.assign(arg0);
   obj[2] = callback(SocialLayerStorefrontProductDetailsModalWithOrderCTX, obj);
   return callback(NativePaymentContextProvider.NativePaymentContextProvider, obj);

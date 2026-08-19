@@ -1,19 +1,22 @@
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../../intl/index.native.tsx";
 import combinedDefault from "../../../../utils/HelpdeskUtils.tsx";
 import Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
+import TableRowGroupTitle from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import NavScrim from "../../../../design/components/Navigator/native/NavScrim.android.tsx";
+import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import useUserIsTeen from "../../../self_mod/hooks/useUserIsTeen.tsx";
 import _modDef8874 from "../../GuildSettingsActionCreators.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/PermissionStore.tsx";
-import closure_5 from "../../GuildSettingsStore.tsx";
+import getUncachedChannelPermissions from "../../../../stores/PermissionStore.tsx";
+import handleFormInit from "../../GuildSettingsStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function GuildSettingsOwnerConfiguredContentLevel(guild) {
   guild = guild.guild;
   let DEFAULT = guild.nsfwLevel;
@@ -28,34 +31,32 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
   let tmp7 = DEFAULT === constants3.AGE_RESTRICTED;
   const userIsTeen = obj.useUserIsTeen();
   if (tmp7) {
-    tmp7 = DEFAULT2 !== tmp6.AGE_RESTRICTED;
+    tmp7 = DEFAULT2 !== constants3.AGE_RESTRICTED;
   }
   let tmp9 = null;
   if (!userIsTeen) {
     obj = { title: null, hasIcons: false, description: null, children: null };
-    const intl = tmp3(1236).intl;
-    obj[0] = intl.string(tmp3(1236).t.YJlvBM);
-    const intl2 = tmp3(1236).intl;
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.YJlvBM);
+    const intl2 = getSystemLocale.intl;
     obj = { helpArticleLink: null };
     obj[0] = combinedDefault.getArticleURL(constants2.NSFW_SERVER_AGE_RESTRICTION);
-    obj[2] = intl2.format(tmp3(1236).t.iyQQ62, obj);
+    obj[2] = intl2.format(getSystemLocale.t.iyQQ62, obj);
     obj1 = { label: null, value: null, onValueChange: null, disabled: null };
-    const intl3 = tmp3(1236).intl;
-    obj1[0] = intl3.string(tmp3(1236).t.N9xEJF);
-    obj1[1] = DEFAULT2 === tmp6.AGE_RESTRICTED;
+    const intl3 = getSystemLocale.intl;
+    obj1[0] = intl3.string(getSystemLocale.t.N9xEJF);
+    obj1[1] = DEFAULT2 === constants3.AGE_RESTRICTED;
     obj1[2] = tmp8;
     obj1[3] = tmp7;
-    obj[3] = callback(tmp3(7178).TableSwitchRow, obj1);
-    tmp9 = callback(tmp3(6286).TableRowGroup, obj, "filter-section");
-    const obj4 = combinedDefault;
+    obj[3] = callback(TableSwitchRow.TableSwitchRow, obj1);
+    tmp9 = callback(TableRowGroupTitle.TableRowGroup, obj, "filter-section");
   }
   return tmp9;
 }
 let c3 = importAllResult;
 ({ GuildFeatures: closure_6, HelpdeskArticles: error, Permissions: closure_8, GuildNSFWContentLevel: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-createCacheKey = { stack: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+const createCacheKey = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 createCacheKey[0] = createCacheKey;
 let closure_13 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
@@ -65,8 +66,7 @@ class GuildSettingsModalModeration extends PureComponent {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleSaveChanges = function handleSaveChanges() {
       const guild = applyArgumentsResult.props.guild;
-      let obj = closure_1_1(closure_1_2[8]);
-      obj = { verificationLevel: guild.verificationLevel, explicitContentFilter: guild.explicitContentFilter, ownerConfiguredContentLevel: guild.ownerConfiguredContentLevel };
+      const obj = { verificationLevel: guild.verificationLevel, explicitContentFilter: guild.explicitContentFilter, ownerConfiguredContentLevel: guild.ownerConfiguredContentLevel };
       obj.saveGuild(guild.id, obj);
     };
     return applyArgumentsResult;
@@ -94,9 +94,9 @@ prototype["updateNavigation"] = function updateNavigation(submitting) {
     } else if (hasChanges) {
       fn2 = () => {
         const obj = { onPress: self.handleSaveChanges, text: null };
-        const intl = self(closure_1_2[10]).intl;
-        obj[1] = intl.string(self(closure_1_2[10]).t["R3BPH+"]);
-        return closure_1_10(self(closure_1_2[15]).HeaderActionButton, obj);
+        const intl = self(dependencyMap[10]).intl;
+        obj[1] = intl.string(self(dependencyMap[10]).t["R3BPH+"]);
+        return closure_1_10(self(dependencyMap[15]).HeaderActionButton, obj);
       };
     }
     setOptionsResult[1] = fn2;
@@ -117,18 +117,17 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
   };
   const features = guild.features;
   const verificationLevelOptions = self(14194).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
-  obj[5] = verificationLevelOptions.map((arg0) => {
-    ({ name, color, value } = arg0);
-    ({ desc, disabled } = arg0);
+  obj[5] = verificationLevelOptions.map((item, index) => {
+    ({ name, color, value } = item);
+    ({ desc, disabled } = item);
     let obj = { value, label: null, subLabel: null, disabled: null };
     let tmpResult = name;
     if (null != color) {
-      obj = { variant: "text-md/semibold", style: null, children: null };
       obj = { color: null };
       obj[0] = color;
       obj[1] = obj;
       obj[2] = name;
-      tmpResult = tmp(self(closure_1_2[19]).Text, obj);
+      tmpResult = closure_1_10(self(dependencyMap[19]).Text, obj);
     }
     obj[1] = tmpResult;
     obj[2] = desc;
@@ -138,7 +137,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
       tmp5 = disabled;
     }
     obj[3] = tmp5;
-    return closure_1_10(self(closure_1_2[18]).TableRadioRow, obj, "level-" + value);
+    return closure_1_10(self(dependencyMap[18]).TableRadioRow, obj, "level-" + value);
   });
   return callback(self(8101).TableRadioGroup, obj, "level-section");
 };
@@ -155,12 +154,11 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
   obj[4] = function onChange(explicitContentFilter) {
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
-  const obj3 = combinedDefault;
   const features = guild.features;
   const contentFilterOptions = self(14194).generateContentFilterOptions(features.has(constants.COMMUNITY));
-  obj[5] = contentFilterOptions.map((value) => {
-    value = value.value;
-    ({ name, desc, disabled } = value);
+  obj[5] = contentFilterOptions.map((item, index) => {
+    const value = item.value;
+    ({ name, desc, disabled } = item);
     const obj = { value, label: name, subLabel: desc, disabled: null };
     const canManageGuild = self.props.canManageGuild;
     let tmp2 = !canManageGuild;
@@ -168,7 +166,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
       tmp2 = disabled;
     }
     obj[3] = tmp2;
-    return closure_1_10(self(closure_1_2[18]).TableRadioRow, obj, "filter-" + value);
+    return closure_1_10(self(dependencyMap[18]).TableRadioRow, obj, "filter-" + value);
   });
   return callback(self(8101).TableRadioGroup, obj, "filter-section");
 };
@@ -176,42 +174,38 @@ prototype["render"] = function render() {
   const props = this.props;
   let canManageGuild = props.canManageGuild;
   ({ guild, hasChanges } = props);
-  let obj = { contentContainerStyle: items, children: null };
-  items = [{ paddingTop: 16 }, this.props.contentContainerStyle];
-  obj = { style: callback2(this.context).stack, spacing: ThemesDefault.space.PX_24, children: null };
+  const items = [{ paddingTop: 16 }, this.props.contentContainerStyle];
+  let obj = { style: callback2(this.context).stack, spacing: ThemesDefault.space.PX_24, children: null };
   const items1 = [this.renderVerificationLevelSection(), this.renderExplicitContentFilter(), ];
   if (canManageGuild) {
     obj = { guild: null, hasChanges: null };
     obj[0] = guild;
     obj[1] = hasChanges;
-    canManageGuild = tmp4(GuildSettingsOwnerConfiguredContentLevel, obj);
+    canManageGuild = callback(GuildSettingsOwnerConfiguredContentLevel, obj);
   }
   obj1 = { children: null };
   items1[2] = canManageGuild;
   obj[2] = items1;
-  obj[1] = closure_11(Stack.Stack, obj);
-  const items2 = [closure_10(Form.Form, obj), closure_10(NavScrim.NavScrim, {})];
+  obj[1] = callback2(Stack.Stack, obj);
+  const items2 = [callback(Form.Form, obj), callback(NavScrim.NavScrim, {})];
   obj1[0] = items2;
-  return closure_11(closure_12, obj1);
+  return callback2(closure_12, obj1);
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   if (this.props.hasChanges) {
     _modDef8874.cancelChanges(tmp.props.guild.id);
-    const obj = _modDef8874;
   }
 };
 prototype["handleVerificationLevelChange"] = function handleVerificationLevelChange(verificationLevel) {
-  let obj = _modDef8874;
-  obj = { verificationLevel };
+  const obj = { verificationLevel };
   obj.updateGuild(obj);
 };
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
-  let obj = _modDef8874;
-  obj = { explicitContentFilter };
+  const obj = { explicitContentFilter };
   obj.updateGuild(obj);
 };
 GuildSettingsModalModeration.contextType = require("ManaContext").ThemeContext;
-const result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx");
 
 export default function ConnectedGuildSettingsModalModeration(contentContainerStyle) {
   let guild;

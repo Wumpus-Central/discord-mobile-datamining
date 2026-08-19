@@ -1,6 +1,6 @@
 // discord_app/modules/sound_playback/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/sound_playback/Constants.tsx");
+const result = obj132.fileFinishedImporting("modules/sound_playback/Constants.tsx");
 
 export const SoundOutputChannel = { DEFAULT: "default", VOICE: "voice" };

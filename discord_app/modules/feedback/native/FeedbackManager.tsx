@@ -1,12 +1,12 @@
 // discord_app/modules/feedback/native/FeedbackManager.tsx
 import optOutEligibilityCheckDefault from "../FeedbackManager.tsx";
-import closure_3 from "../../applications/ApplicationStore.tsx";
-import closure_4 from "../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../stores/RTCConnectionStore.tsx";
-import closure_6 from "../../../stores/StreamRTCConnectionStore.tsx";
+import addApplication from "../../applications/ApplicationStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
+import initialize from "../../../stores/StreamRTCConnectionStore.tsx";
 import { FeedbackType } from "../Constants.tsx";
 
-let require = arg1;
+let require = fn;
 optOutEligibilityCheckDefault;
 let prototype = function FeedbackManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -28,7 +28,7 @@ let prototype = function FeedbackManager() {
   applyArgumentsResult.handleShowStreamFeedback = function handleShowStreamFeedback(streamKey) {
     streamKey = streamKey.streamKey;
     if (streamKey.canShowFeedback) {
-      const result = streamKey.possiblyShowFeedbackModal(closure_1_7.STREAM, () => {
+      const result = streamKey.possiblyShowFeedbackModal(FeedbackType.STREAM, () => {
         let obj = streamKey(closure_1_2[6]);
         const decodeStreamKeyResult = obj.decodeStreamKey(streamKey);
         streamKey = decodeStreamKeyResult;
@@ -48,13 +48,13 @@ let prototype = function FeedbackManager() {
           obj[2] = closure_1_6.getRegion(tmp3);
           obj[3] = closure_1_6.getMaxViewers(tmp3);
           const merged = Object.assign(videoStats);
-          closure_2 = tmp(tmp2[8])(tmp2[7], tmp2.paths);
-          tmp(tmp2[9]).runAfterInteractions(() => {
+          closure_2 = tmp(closure_1_2[8])(closure_1_2[7], closure_1_2.paths);
+          tmp(closure_1_2[9]).runAfterInteractions(() => {
             obj = closure_2_1(closure_2_2[10]);
             obj = { stream: closure_0, analyticsData: obj };
             obj.openLazy(closure_2, "StreamFeedback" + decodeStreamKeyResult, obj);
           });
-          const tmpResult = tmp(tmp2[9]);
+          const tmpResult = tmp(closure_1_2[9]);
         }
       });
     }
@@ -62,12 +62,10 @@ let prototype = function FeedbackManager() {
   applyArgumentsResult.handleShowActivityFeedback = function handleShowActivityFeedback(applicationId) {
     applicationId = applicationId.applicationId;
     const _location = applicationId.location;
-    let application;
-    let channel;
-    application = closure_1_3.getApplication(applicationId);
-    channel = closure_1_4.getChannel(applyArgumentsResult(closure_1_2[11]).getEmbeddedActivityLocationChannelId(_location));
+    const application = closure_1_3.getApplication(applicationId);
+    const channel = closure_1_4.getChannel(applyArgumentsResult(dependencyMap[11]).getEmbeddedActivityLocationChannelId(_location));
     if (tmp2) {
-      const result = applicationId.possiblyShowFeedbackModal(closure_1_7.ACTIVITY, () => {
+      const result = applicationId.possiblyShowFeedbackModal(FeedbackType.ACTIVITY, () => {
         closure_0 = applicationId(application[8])(application[12], application.paths);
         let obj = { media_session_id: closure_1_5.getMediaSessionId(), rtc_connection_id: closure_1_5.getRTCConnectionId() };
         applicationId(application[9]).runAfterInteractions(() => {
@@ -77,21 +75,23 @@ let prototype = function FeedbackManager() {
         });
       });
     }
+    let obj = applyArgumentsResult(dependencyMap[11]);
+    tmp2 = null != application && applicationId.showFeedback;
   };
   applyArgumentsResult.handleShowVoiceFeedback = function handleShowVoiceFeedback(analyticsData) {
     analyticsData = analyticsData.analyticsData;
-    const result = analyticsData.possiblyShowFeedbackModal(closure_1_7.VOICE, () => {
+    const result = analyticsData.possiblyShowFeedbackModal(FeedbackType.VOICE, () => {
       closure_0 = analyticsData(closure_1_2[8])(closure_1_2[13], closure_1_2.paths);
       analyticsData(closure_1_2[9]).runAfterInteractions(() => {
-        let obj = closure_2_1(closure_2_2[10]);
-        obj = { analyticsData: channel_id };
+        closure_2_1(closure_2_2[10]);
+        const obj = { analyticsData: channel_id };
         obj.openLazy(channel_id, "VoiceFeedback" + channel_id.channel_id, obj);
       });
     });
   };
   applyArgumentsResult.handleInAppReportsFeedback = function handleInAppReportsFeedback(arg0) {
     ({ reportId: closure_0, reportType: closure_1 } = arg0);
-    const result = applyArgumentsResult.possiblyShowFeedbackModal(closure_1_7.IN_APP_REPORTS, () => {
+    const result = applyArgumentsResult.possiblyShowFeedbackModal(FeedbackType.IN_APP_REPORTS, () => {
       closure_0 = closure_1_0(closure_1_2[8])(closure_1_2[14], closure_1_2.paths);
       closure_1_0(closure_1_2[9]).runAfterInteractions(() => {
         let str = closure_0;
@@ -99,6 +99,7 @@ let prototype = function FeedbackManager() {
           str = "";
         }
         closure_2_1(closure_2_2[10]).openLazy(closure_0, "ReportingFeedback" + closure_1_1 + str, { reportId: closure_0, reportType: closure_1_1 });
+        const obj = closure_2_1(closure_2_2[10]);
       });
     });
   };
@@ -107,6 +108,6 @@ let prototype = function FeedbackManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/feedback/native/FeedbackManager.tsx");
 
 export default prototype;

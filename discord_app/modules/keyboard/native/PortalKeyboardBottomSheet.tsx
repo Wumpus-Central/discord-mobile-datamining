@@ -3,15 +3,15 @@ import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.
 import _modDef4115 from "../../reanimated/ReanimatedRexport.tsx";
 import SCREEN_READER_ENABLED_GETTER from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import TwinButtons from "../../../design/components/experimental/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../native_menu/native/NativeMenuStore.tsx";
+import initialize from "../../native_menu/native/NativeMenuStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import set from "../../../utils/PlatformUtils.tsx";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import obj132 from "../../../utils/PlatformUtils.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function PortalKeyboardBottomSheetHeader(arg0) {
   ({ style, handleCollapse } = arg0);
   const tmp = callback2();
@@ -21,10 +21,10 @@ function PortalKeyboardBottomSheetHeader(arg0) {
   if (obj.useIsScreenReaderEnabled()) {
     prop = tmp.headerContainerScreenReaderEnabled;
   }
-  obj = { style: items, children: tmp4(TwinButtons.ActionSheetDragHandle, { onPress: handleCollapse }) };
+  obj = { style: items, children: callback(TwinButtons.ActionSheetDragHandle, { onPress: handleCollapse }) };
   items[1] = prop;
   items[2] = style;
-  return closure_7(closure_5, obj);
+  return callback(closure_5, obj);
 }
 function PortalKeyboardBackground(arg0) {
   ({ pointerEvents, style, roundingStyle } = arg0);
@@ -37,13 +37,12 @@ function PortalKeyboardBackground(arg0) {
 let c4 = importAllResult;
 ({ Platform, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = set.isIOS();
-let obj = { container: { position: "absolute", top: 0, left: 0 }, background: null, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
+let closure_9 = obj132.isIOS();
+let obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
 obj[1] = obj;
-set = { borderTopLeftRadius: ThemesDefault.radii.none, borderTopRightRadius: ThemesDefault.radii.none, width: "100%", height: require("TwinButtons").ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -require("TwinButtons").ACTION_SHEET_DRAG_HANDLE_HEIGHT };
-obj[2] = set;
-createCacheKey = { marginBottom: -ThemesDefault.space.PX_8 };
+obj132 = { borderTopLeftRadius: ThemesDefault.radii.none, borderTopRightRadius: ThemesDefault.radii.none, width: "100%", height: require("TwinButtons").ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -require("TwinButtons").ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+obj[2] = obj132;
+const createCacheKey = { marginBottom: -ThemesDefault.space.PX_8 };
 obj[3] = createCacheKey;
 obj[4] = { overflow: "hidden", display: "flex" };
 let closure_10 = createCacheKey.createStyles(obj);
@@ -53,7 +52,7 @@ let closure_15 = { code: "function PortalKeyboardBottomSheetTsx3(isFullyExpanded
 let closure_16 = { code: "function PortalKeyboardBottomSheetTsx4(){const{interpolate,animatedIndex,cornerRadiusInputStart,cornerRadiusInputEnd,cornerRadius}=this.__closure;return{borderTopLeftRadius:interpolate(animatedIndex.get(),[cornerRadiusInputStart,cornerRadiusInputEnd],[0,cornerRadius],'clamp'),borderTopRightRadius:interpolate(animatedIndex.get(),[cornerRadiusInputStart,cornerRadiusInputEnd],[0,cornerRadius],'clamp')};}" };
 let closure_17 = { code: "function PortalKeyboardBottomSheetTsx5(){const{animatedIndex}=this.__closure;return Math.max(animatedIndex.get(),0)>0;}" };
 let closure_18 = { code: "function PortalKeyboardBottomSheetTsx6(result,previous){const{runOnJS,setAccessibilityViewIsModal}=this.__closure;if(result===previous)return;runOnJS(setAccessibilityViewIsModal)(result);}" };
-let result = set.fileFinishedImporting("modules/keyboard/native/PortalKeyboardBottomSheet.tsx");
+let result = obj132.fileFinishedImporting("modules/keyboard/native/PortalKeyboardBottomSheet.tsx");
 
 export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(animatedIndex, ref) {
   animatedIndex = animatedIndex.animatedIndex;
@@ -82,8 +81,6 @@ export default importAllResult.forwardRef(function PortalKeyboardBottomSheet(ani
   if (flag3 === undefined) {
     flag3 = false;
   }
-  ref = undefined;
-  closure_9 = undefined;
   let isScreenReaderEnabled;
   let derivedValue;
   let token;

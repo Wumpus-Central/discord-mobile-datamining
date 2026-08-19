@@ -1,13 +1,13 @@
 // discord_app/stores/NotificationSettingsStore.tsx
-import set from "../../_runtime/00002_set.js";
-import set2 from "../utils/PlatformUtils.tsx";
+import obj132 from "../../_runtime/00002_obj132.js";
+import obj1322 from "../utils/PlatformUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import ME from "../Constants.tsx";
 
 const DesktopNotificationTypes = ME.DesktopNotificationTypes;
 ({ NotificationPermissionTypes: c3, TTSNotificationTypes } = ME);
-let obj = { desktopType: set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER, disableAllSounds: false, disabledSounds: [], ttsType: TTSNotificationTypes.NEVER, disableUnreadBadge: false, taskbarFlash: true, notifyMessagesInSelectedChannel: false, screenDowntimeReminder: true };
+let obj = { desktopType: obj1322.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER, disableAllSounds: false, disabledSounds: [], ttsType: TTSNotificationTypes.NEVER, disableUnreadBadge: false, taskbarFlash: true, notifyMessagesInSelectedChannel: false, screenDowntimeReminder: true };
 function handleSetDesktopType(desktopType) {
   obj.desktopType = desktopType.desktopType;
 }
@@ -78,7 +78,7 @@ const items = [
     if (null != obj.desktopType) {
       return obj;
     } else {
-      obj.desktopType = set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
+      obj.desktopType = obj1322.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
     }
   }
 ];
@@ -116,6 +116,6 @@ obj = {
   }
 };
 const notificationSettingsStore = new NotificationSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
+const result = obj132.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
 
 export default notificationSettingsStore;

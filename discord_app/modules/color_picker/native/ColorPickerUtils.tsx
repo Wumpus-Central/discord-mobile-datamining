@@ -1,5 +1,5 @@
 // discord_app/modules/color_picker/native/ColorPickerUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 function normalizeValue(arg0) {
   let num = 0;
@@ -115,7 +115,7 @@ function hslToRgbWorklet(s) {
 hslToRgbWorklet.__closure = {};
 hslToRgbWorklet.__workletHash = 13811670810842;
 hslToRgbWorklet.__initData = { code: "function hslToRgbWorklet_ColorPickerUtilsTsx3({h:h,s:s,l:l}){let r=0;let g=0;let b=0;const c=(1-Math.abs(2*l-1))*s;const x=c*(1-Math.abs(h/60%2-1));const m=l-c/2;if(h===360||0<=h&&h<60){r=c;g=x;b=0;}else if(60<=h&&h<120){r=x;g=c;b=0;}else if(120<=h&&h<180){r=0;g=c;b=x;}else if(180<=h&&h<240){r=0;g=x;b=c;}else if(240<=h&&h<300){r=x;g=0;b=c;}else if(300<=h&&h<360){r=c;g=0;b=x;}return[Math.round((r+m)*255),Math.round((g+m)*255),Math.round((b+m)*255)];}" };
-let result = set.fileFinishedImporting("modules/color_picker/native/ColorPickerUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/color_picker/native/ColorPickerUtils.tsx");
 
 export { normalizeValue };
 export { hsvToRgbWorklet };

@@ -1,8 +1,8 @@
 // discord_app/modules/threads/ThreadManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import withErrorHandlingDefault from "../forums/ForumActionCreators.tsx";
-import closure_2 from "../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 
 initializeDefault;
 class ThreadManager extends tmp2 {
@@ -22,9 +22,7 @@ prototype["handleChannelDelete"] = function handleChannelDelete(channel) {
       const Emitter = allThreadsForParent(589).Emitter;
       Emitter.batched(() => {
         for (const item10005 of allThreadsForParent) {
-          let tmp = allThreadsForParent;
-          let tmp2 = closure_1_1;
-          let obj = allThreadsForParent(closure_1_1[4]);
+          let obj = allThreadsForParent(dependencyMap[4]);
           obj = { type: "THREAD_DELETE", channel: null };
           obj[1] = item10005;
           let dispatchResult = obj.dispatch(obj);
@@ -60,7 +58,6 @@ prototype["handleMessageCreate"] = function handleMessageCreate(channelId) {
       const time = date.getTime();
       if (Date.now() - time < 5000) {
         withErrorHandlingDefault.resort(channel.parent_id);
-        const obj3 = withErrorHandlingDefault;
       }
     }
   }
@@ -74,9 +71,7 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
       const Emitter = allThreadsForGuild(589).Emitter;
       Emitter.batched(() => {
         for (const item10005 of allThreadsForGuild) {
-          let tmp = allThreadsForGuild;
-          let tmp2 = closure_1_1;
-          let obj = allThreadsForGuild(closure_1_1[4]);
+          let obj = allThreadsForGuild(dependencyMap[4]);
           obj = { type: "THREAD_DELETE", channel: null };
           obj[1] = item10005;
           let dispatchResult = obj.dispatch(obj);
@@ -87,6 +82,6 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
   }
 };
 const threadManager = new ThreadManager();
-const result = require("set").fileFinishedImporting("modules/threads/ThreadManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/threads/ThreadManager.tsx");
 
 export default threadManager;

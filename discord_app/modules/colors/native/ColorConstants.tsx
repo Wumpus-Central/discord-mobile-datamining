@@ -1,5 +1,5 @@
 // discord_app/modules/colors/native/ColorConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildFeatures from "../../premium/PremiumConstants.tsx";
 
@@ -18,15 +18,15 @@ obj[4] = items4;
 obj[5] = ["#3736BB", "#4670E8", "#8377EB", "#E782F1", "#DF90AF"];
 const items5 = [ThemesDefault.unsafe_rawColors.BLURPLE_50, ThemesDefault.unsafe_rawColors.PINK_60];
 obj[6] = items5;
-const result = set.fileFinishedImporting("modules/colors/native/ColorConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/colors/native/ColorConstants.tsx");
 
 export const Gradients = obj;
 export const getPremiumGradientColor = function getPremiumGradientColor(premiumType) {
   if (PremiumTypes.TIER_0 === premiumType) {
     return obj.PREMIUM_TIER_0;
-  } else if (tmp.TIER_1 === premiumType) {
+  } else if (PremiumTypes.TIER_1 === premiumType) {
     return obj.PREMIUM_TIER_1;
-  } else if (tmp.TIER_2 === premiumType) {
+  } else if (PremiumTypes.TIER_2 === premiumType) {
     return obj.PREMIUM_TIER_2;
   }
 };

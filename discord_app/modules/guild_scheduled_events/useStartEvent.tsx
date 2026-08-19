@@ -1,16 +1,16 @@
 // discord_app/modules/guild_scheduled_events/useStartEvent.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
 
-const require = arg1;
+const require = fn;
 let closure_6 = {
   onSuccess() {
 
   },
   permissionOverwrites: []
 };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
 
 export default function useStartEvent() {
   function _startEvent() {

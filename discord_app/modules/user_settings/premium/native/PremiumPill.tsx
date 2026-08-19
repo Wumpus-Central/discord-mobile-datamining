@@ -1,27 +1,26 @@
 // discord_app/modules/user_settings/premium/native/PremiumPill.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_6 = createCacheKey.createStyles((arg0) => {
   const tmp3 = ThemesDefault;
   if (arg0) {
     let WHITE = tmp3.unsafe_rawColors.BLACK;
-    let tmp5 = tmp;
+    let tmp5 = importDefault;
   } else {
     WHITE = tmp3.colors.WHITE;
-    tmp5 = tmp;
+    tmp5 = importDefault;
   }
-  let obj = { pillContainer: null, discountPillText: null };
-  obj = { backgroundColor: WHITE, borderRadius: tmp5(712).radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingVertical: 1 };
+  const obj = { backgroundColor: WHITE, borderRadius: tmp5(712).radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingVertical: 1 };
   obj[0] = obj;
   obj[1] = { textAlign: "center" };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumPill.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumPill.tsx");
 
 export const PremiumPill = (discountOffer) => {
   discountOffer = discountOffer.discountOffer;
@@ -59,11 +58,11 @@ export const PremiumPill = (discountOffer) => {
   const memo = premiumType.useMemo(() => {
     let expiresAt;
     if (trialOffer != null) {
-      expiresAt = tmp.expiresAt;
+      expiresAt = trialOffer.expiresAt;
     }
     let num = NaN;
     if (null != expiresAt) {
-      expiresAt = tmp.expiresAt;
+      expiresAt = trialOffer.expiresAt;
       num = expiresAt.getTime();
     }
     return num;
@@ -95,10 +94,9 @@ export const PremiumPill = (discountOffer) => {
               const intl = discountOffer(flag2[8]).intl;
               obj = { days: null };
               const _Math = Math;
-              obj[0] = Math.max(tmp9.days, 1);
+              obj[0] = Math.max(days.days, 1);
               let formatToPlainStringResult = intl.formatToPlainString(discountOffer(flag2[8]).t["+FgdjP"], obj);
             }
-            tmp9 = days;
           }
           const intl2 = discountOffer(flag2[8]).intl;
           formatToPlainStringResult = intl2.string(discountOffer(flag2[8]).t.qVcfa0);

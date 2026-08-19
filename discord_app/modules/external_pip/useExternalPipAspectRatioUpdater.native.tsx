@@ -1,7 +1,7 @@
 // discord_app/modules/external_pip/useExternalPipAspectRatioUpdater.native.tsx
-import closure_2 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/external_pip/useExternalPipAspectRatioUpdater.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/external_pip/useExternalPipAspectRatioUpdater.native.tsx");
 
 export default function useExternalPipAspectRatioUpdater(arg0, arg1, stateFromStores) {
   closure_0 = arg1;

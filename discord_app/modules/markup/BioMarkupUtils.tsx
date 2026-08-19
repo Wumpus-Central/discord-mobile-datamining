@@ -26,13 +26,8 @@ const items1 = [
     }
   }
 ];
-let obj = {
-  react() {
-    return null;
-  }
-};
 const reactParserForResult1 = importAllResult1.reactParserFor(importDefaultResult2(items1));
-let result = require("set").fileFinishedImporting("modules/markup/BioMarkupUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/markup/BioMarkupUtils.tsx");
 
 export const parseBioReact = reactParserForResult;
 export const getOrParseBioAST = function getOrParseBioAST(arg0) {
@@ -51,10 +46,9 @@ export const parseBioReactWithCachedAST = function parseBioReactWithCachedAST(de
     let value = store.get(description);
     if (null == value) {
       const tmp4 = callback(description, true);
-      const result = obj.set(description, tmp4);
+      const result = store.set(description, tmp4);
       value = tmp4;
     }
-    obj = store;
     const obj2 = tDefault;
     return obj2.reactFor(tDefault.ruleOutput(closure_2, "react"))(value);
   }

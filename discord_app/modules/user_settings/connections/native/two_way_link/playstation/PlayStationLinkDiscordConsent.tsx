@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx
-import closure_2 from "../../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../../_runtime/00019_noop.js";
 import { PlayStationLinkModalScenes as closure_3 } from "PlayStationLinkConstants.tsx";
 import { PlatformTypes } from "../../../../../../Constants.tsx";
 import { PLAYSTATION_CLIENT_SCOPES } from "../../../../../game_console/GameConsoleConstants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx");
 
 export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordConsent(platformType) {
   platformType = platformType.platformType;

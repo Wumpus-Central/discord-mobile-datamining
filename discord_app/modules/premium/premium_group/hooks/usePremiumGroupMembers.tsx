@@ -1,10 +1,10 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import noop from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../PremiumGroupStore.tsx";
+import handleMutationStart from "../PremiumGroupStore.tsx";
 
 const useEffect = noop.useEffect;
-const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
 
 export default function usePremiumGroupMembers(arg0) {
   const _require = arg0;
@@ -33,8 +33,8 @@ export default function usePremiumGroupMembers(arg0) {
       }
       if (!hasFetchedMembersResult) {
         if (null != closure_0) {
-          let obj = flag(flag2[3]);
-          obj = { type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: null };
+          flag(flag2[3]);
+          const obj = { type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: null };
           obj[1] = tmp3;
           obj.dispatch(obj);
         }

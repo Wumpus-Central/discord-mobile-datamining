@@ -1,29 +1,27 @@
 // discord_app/modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import getFriendlyDurationString from "../GuildDisableCommunicationConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: error, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8 } = getFriendlyDurationString);
 ({ AnalyticEvents: c9, Fonts } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
+const createCacheKey = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let closure_12 = createCacheKey.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: createCacheKey });
-const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
 
 export default function GuildEnableCommunicationAlert(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const merged = Object.assign(guildId, Object.create(null));
-  dependencyMap = undefined;
-  closure_3 = undefined;
   function _handleConfirmRemoveTimeout(arg0, arg1) {
     const self = this;
     const tmp = callback(function*() {
@@ -97,8 +95,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
   dependencyMap = tmp2;
   closure_3 = _handleConfirmRemoveTimeout(userId(8200)(userId, guildId), 1)[0];
   userId(4761)(() => {
-    let obj = userId(countdown[11]);
-    obj = { type: closure_1_7, guild_id: guildId, other_user_id: userId };
+    userId(countdown[11]);
+    const obj = { type: closure_1_7, guild_id: guildId, other_user_id: userId };
     obj.track(closure_1_9.OPEN_MODAL, obj);
   });
   let obj = {};
@@ -126,13 +124,9 @@ export default function GuildEnableCommunicationAlert(guildId) {
     }
     return applyArgumentsResult;
   };
-  obj = { style: tmp2.body, children: null };
   obj = { style: tmp2.description, variant: "text-sm/medium", children: null };
   const intl4 = tmp9(1236).intl;
   user = user.getUser(userId);
-  const tmp11 = closure_11;
-  const tmp12 = View;
-  const tmp3 = userId;
   const tmp7 = userId(4763);
   let str = userId(4796).getName(guildId, null, user);
   if (str == null) {
@@ -144,19 +138,19 @@ export default function GuildEnableCommunicationAlert(guildId) {
       let num = 0;
       if (null != closure_3) {
         const _Date = Date;
-        num = new Date(tmp);
+        num = new Date(closure_3);
       }
       return closure_1_10(userId(countdown[19]), { style: countdown.countdown, deadline: num, withUnits: true });
     }
   });
-  const items = [closure_10(guildId(4734).Text, obj), ];
+  const items = [callback(guildId(4734).Text, obj), ];
   let obj2 = { style: items1, variant: "text-sm/medium", children: null };
   items1 = [, ];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
   const intl5 = tmp9(1236).intl;
   obj2[2] = intl5.format(guildId(1236).t.KtENkK, { link: closure_8 });
-  items[1] = closure_10(guildId(4734).Text, obj2);
+  items[1] = callback(guildId(4734).Text, obj2);
   obj[1] = items;
-  obj.children = tmp11(tmp12, obj);
-  return closure_10(tmp7, obj);
+  obj.children = callback2(View, obj);
+  return callback(tmp7, obj);
 };

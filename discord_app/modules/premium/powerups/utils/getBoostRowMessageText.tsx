@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/utils/getBoostRowMessageText.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import messagesProxyDefault from "../GuildPowerups.messages.js";
 import BOOST_EXPIRING_DISPLAY_WINDOW_DAYS from "getBoostLifecyclePhase.tsx";
 
-const result = set.fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");
 
 export default function getBoostRowMessageText(phase) {
   phase = phase.phase;

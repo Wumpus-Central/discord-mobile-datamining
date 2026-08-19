@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/native/useAndroidUnsyncedFilter.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../devtools/dev_settings/DevSettingsStore.tsx";
-import closure_4 from "../../../stores/native/IAPStore.android.tsx";
+import getUserAgnosticState from "../../devtools/dev_settings/DevSettingsStore.tsx";
+import updateProduct from "../../../stores/native/IAPStore.android.tsx";
 
 noop.useCallback;
-const result = set.fileFinishedImporting("modules/collectibles/native/useAndroidUnsyncedFilter.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/native/useAndroidUnsyncedFilter.tsx");
 
 export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
   const items = [closure_4];
@@ -21,7 +21,7 @@ export const useAndroidUnsyncedFilter = function useAndroidUnsyncedFilter() {
       if (!stateFromStores1) {
         found = arr;
         if (!stateFromStores) {
-          found = arr.filter((variants) => callback(table[5]).isGPlaySynced(variants));
+          found = arr.filter((item, index) => callback(table[5]).isGPlaySynced(item));
         }
       }
     }

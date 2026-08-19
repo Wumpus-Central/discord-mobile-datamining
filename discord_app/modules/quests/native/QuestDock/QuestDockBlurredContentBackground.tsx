@@ -29,6 +29,6 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   const style = [StyleSheet.absoluteFillObject, animatedStyle];
   return jsx(str(4724), { nativeID: "quest-dock-blurred-background", tintColor, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor, style, layout });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx");
 
 export default memoResult;

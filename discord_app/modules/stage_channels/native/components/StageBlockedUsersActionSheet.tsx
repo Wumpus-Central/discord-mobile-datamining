@@ -4,21 +4,20 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/RelationshipStore.tsx";
-import closure_7 from "../../StageChannelRoleStore.tsx";
+import markAllUserIdListsStale from "../../../../stores/RelationshipStore.tsx";
+import buildStageChannelUserRoles from "../../StageChannelRoleStore.tsx";
 import { STAGE_BLOCKED_USERS_SHEET_KEY as closure_8 } from "../../StageChannelsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function RestrictedUser(guildId) {
   ({ participant, channelId: require } = guildId);
-  let user;
   const tmp = callback3();
-  user = participant.user;
+  const user = participant.user;
   let speaker = participant.speaker;
   let obj = initialize;
   const items = [closure_7];
@@ -29,18 +28,17 @@ function RestrictedUser(guildId) {
   const avatarSource = user.getAvatarSource(guildId.guildId);
   const intl = getSystemLocale.intl;
   if (speaker) {
-    const intl3 = tmp2(1236).intl;
-    let stringResult = intl3.string(tmp2(1236).t.LqMmG2);
+    const intl3 = getSystemLocale.intl;
+    let stringResult = intl3.string(getSystemLocale.t.LqMmG2);
   } else {
     stringResult = tmp7;
     if (stateFromStores) {
-      const intl2 = tmp2(1236).intl;
-      stringResult = intl2.string(tmp2(1236).t.GMZqSi);
+      const intl2 = getSystemLocale.intl;
+      stringResult = intl2.string(getSystemLocale.t.GMZqSi);
     }
   }
-  obj = { style: tmp.userContainer, children: null };
   obj = { style: tmp.avatarContainer, children: null };
-  obj1 = { source: avatarSource, size: tmp2(1297).AvatarSizes.REFRESH_MEDIUM_32, style: tmp.avatar };
+  obj1 = { source: avatarSource, size: Button.AvatarSizes.REFRESH_MEDIUM_32, style: tmp.avatar };
   const items2 = [callback(Button.CutoutableAvatarImage, obj1), ];
   if (speaker) {
     const obj2 = { style: null, children: null };
@@ -50,12 +48,12 @@ function RestrictedUser(guildId) {
     obj3[0] = tmp.icon;
     obj3[1] = user(8122);
     obj3[2] = user(712).unsafe_rawColors.WHITE;
-    obj2[1] = tmp11(tmp2(1297).Icon, obj3);
-    speaker = tmp11(tmp10, obj2);
+    obj2[1] = callback(Button.Icon, obj3);
+    speaker = callback(View, obj2);
   }
   items2[1] = speaker;
   obj[1] = items2;
-  const items4 = [closure_10(View, obj), ];
+  const items4 = [callback(View, obj), ];
   const obj4 = { style: tmp.flex, children: null };
   const items5 = [callback(Text.Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: str.toString() }), ];
   const user2 = participant.user;
@@ -65,16 +63,16 @@ function RestrictedUser(guildId) {
     const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
     const items6 = ["#", participant.user.discriminator];
     obj6[2] = items6;
-    tmp9Result = tmp9(tmp2(4734).Text, obj6);
+    tmp9Result = callback(Text.Text, obj6);
   }
   items5[1] = tmp9Result;
   obj4[1] = items5;
-  const items7 = [closure_10(View, obj4), ];
+  const items7 = [callback(View, obj4), ];
   const obj7 = { style: tmp.flex, children: null };
   const obj8 = { style: stateFromStores1 ? tmp.blocked : tmp.ignored, children: null };
-  const intl4 = tmp2(1236).intl;
+  const intl4 = getSystemLocale.intl;
   const string = intl4.string;
-  const t = tmp2(1236).t;
+  const t = getSystemLocale.t;
   if (stateFromStores1) {
     let stringResult1 = string(t["4bDptI"]);
   } else {
@@ -84,13 +82,13 @@ function RestrictedUser(guildId) {
   obj8[1] = stringResult1;
   const items8 = [callback(Button.LegacyText, obj8), ];
   const items9 = [" ", "| ", stringResult];
-  items8[1] = closure_10(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: items9 });
+  items8[1] = callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: items9 });
   obj7[1] = items8;
-  items7[1] = closure_10(View, obj7);
+  items7[1] = callback(View, obj7);
   obj9[0] = items7;
-  items4[1] = closure_10(View, obj9);
+  items4[1] = callback(View, obj9);
   obj[1] = items4;
-  return closure_10(View, obj);
+  return callback(View, obj);
 }
 function StageBlockedUsersActionSheetHeader(arg0) {
   ({ blockedUserCount, ignoredUserCount } = arg0);
@@ -154,8 +152,7 @@ function StageBlockedUsersActionSheetHeader(arg0) {
   }
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: { paddingHorizontal: 16 }, header: { padding: 16 }, title: { marginTop: 16, marginBottom: 8, textAlign: "center" }, description: { textAlign: "center", marginBottom: 16 }, buttons: null, userContainer: null, avatarContainer: null, avatar: null, iconContainer: null, icon: null, flex: null, blocked: null, ignored: null };
-createCacheKey = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingVertical: 8 };
+const createCacheKey = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingVertical: 8 };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "flex-start", marginVertical: 8, width: "100%" };
 createCacheKey[6] = { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4, marginEnd: 12 };
@@ -163,18 +160,14 @@ createCacheKey[7] = { opacity: 0.5 };
 createCacheKey[8] = { position: "absolute", top: -4, right: 4, height: 16, width: 16, alignItems: "center", justifyContent: "center", borderRadius: 8, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 createCacheKey[9] = { height: 12, width: 12 };
 createCacheKey[10] = { display: "flex", flexDirection: "row" };
-let obj1 = { position: "absolute", top: -4, right: 4, height: 16, width: 16, alignItems: "center", justifyContent: "center", borderRadius: 8, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 createCacheKey[11] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-let obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 createCacheKey[12] = { color: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { color: ThemesDefault.colors.TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageBlockedUsersActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/StageBlockedUsersActionSheet.tsx");
 
 export default function StageBlockedUsersActionSheet(channel) {
   channel = channel.channel;
   const onAccept = channel.onAccept;
-  dependencyMap = undefined;
   let items1;
   const tmp = callback3();
   const tmp2 = items1(React.useState(0), 2);
@@ -186,7 +179,6 @@ export default function StageBlockedUsersActionSheet(channel) {
   const callback = React.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);
   }, []);
-  obj = { bottom: true, style: tmp.buttons, onLayout: callback, children: null };
   obj = { text: null, onPress: null };
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t.mbD50D);
@@ -213,7 +205,7 @@ export default function StageBlockedUsersActionSheet(channel) {
   const items2 = [items1.length];
   obj3[3] = items2;
   obj3[4] = function renderItem(arg0, arg1) {
-    return closure_1_9(closure_1_12, { participant: items1[arg1], guildId: channel.getGuildId(), channelId: channel.id });
+    return closure_1_9(RestrictedUser, { participant: items1[arg1], guildId: channel.getGuildId(), channelId: channel.id });
   };
   obj3[5] = function itemSize() {
     return 48;

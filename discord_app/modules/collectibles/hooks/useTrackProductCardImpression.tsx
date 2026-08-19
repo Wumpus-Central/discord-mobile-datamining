@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/hooks/useTrackProductCardImpression.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../CollectiblesCategoryStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import updateCategoriesAndProducts from "../CollectiblesCategoryStore.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");
 
 export const useTrackProductCardImpression = function useTrackProductCardImpression(categoryStoreListingId, mobile_home, featured_block) {
   const _require = categoryStoreListingId;
@@ -13,18 +13,15 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
   if (featured_block === undefined) {
     str = "product";
   }
-  let collectiblesAnalyticsContext;
   let stateFromStores;
-  c5 = undefined;
-  closure_6 = undefined;
   let callback;
-  collectiblesAnalyticsContext = _require(str[3]).useCollectiblesAnalyticsContext();
+  const collectiblesAnalyticsContext = _require(str[3]).useCollectiblesAnalyticsContext();
   let obj = _require(str[3]);
   const items = [stateFromStores];
   stateFromStores = _require(str[4]).useStateFromStores(items, () => stateFromStores.getProduct(closure_0));
   let obj2 = _require(str[4]);
   const currentUser = _require(str[5]).useCurrentUser();
-  const obj3 = _require(str[5]);
+  let obj3 = _require(str[5]);
   const canUseShopDiscountsResult = importDefault(str[6]).canUseShopDiscounts(currentUser);
   c5 = canUseShopDiscountsResult;
   closure_6 = collectiblesAnalyticsContext.useRef(null);
@@ -62,16 +59,16 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
     let priceForCollectiblesProduct = null;
     if (null != stateFromStores) {
       let obj = categoryStoreListingId(str[7]);
-      priceForCollectiblesProduct = obj.getPriceForCollectiblesProduct(tmp, _undefined, true);
+      priceForCollectiblesProduct = obj.getPriceForCollectiblesProduct(stateFromStores, _undefined, true);
     }
     let strikeThroughPriceAmountForCollectiblesProduct;
     if (null != stateFromStores) {
-      strikeThroughPriceAmountForCollectiblesProduct = categoryStoreListingId(str[7]).getStrikeThroughPriceAmountForCollectiblesProduct(tmp, _undefined, true);
+      strikeThroughPriceAmountForCollectiblesProduct = categoryStoreListingId(str[7]).getStrikeThroughPriceAmountForCollectiblesProduct(stateFromStores, _undefined, true);
       const obj2 = categoryStoreListingId(str[7]);
     }
     let sessionId;
     if (collectiblesAnalyticsContext != null) {
-      sessionId = tmp10.sessionId;
+      sessionId = collectiblesAnalyticsContext.sessionId;
     }
     obj = { collectibles_shop_session_id: sessionId, sku_id: categoryStoreListingId, display_price: null, display_price_currency: null, display_price_strikethrough: null, position: null, page_type: null, page_category: null, page_section: null, type: null, category_position: null };
     let amount;
@@ -88,27 +85,28 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
     obj[4] = strikeThroughPriceAmountForCollectiblesProduct;
     let tilePosition;
     if (collectiblesAnalyticsContext != null) {
-      tilePosition = tmp10.tilePosition;
+      tilePosition = collectiblesAnalyticsContext.tilePosition;
     }
     obj[5] = tilePosition;
     obj[6] = mobile_home;
     let pageCategory;
     if (collectiblesAnalyticsContext != null) {
-      pageCategory = tmp10.pageCategory;
+      pageCategory = collectiblesAnalyticsContext.pageCategory;
     }
     obj[7] = pageCategory;
     let pageSection;
     if (collectiblesAnalyticsContext != null) {
-      pageSection = tmp10.pageSection;
+      pageSection = collectiblesAnalyticsContext.pageSection;
     }
     obj[8] = pageSection;
     obj[9] = str;
     let categoryPosition;
     if (collectiblesAnalyticsContext != null) {
-      categoryPosition = tmp10.categoryPosition;
+      categoryPosition = collectiblesAnalyticsContext.categoryPosition;
     }
     obj[10] = categoryPosition;
     mobile_home(str[8]).track(_undefined.COLLECTIBLES_TILE_IMPRESSION, obj);
+    const obj3 = mobile_home(str[8]);
   }, items1);
   const items2 = [callback];
   const items3 = [categoryStoreListingId];
@@ -117,22 +115,22 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
     if (arg0) {
       if (null === current) {
         const _setTimeout = setTimeout;
-        tmp.current = setTimeout(() => {
+        ref.current = setTimeout(() => {
           callback();
           closure_6.current = null;
         }, 1000);
       }
     } else if (null !== current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
   }, items2);
   const effect = obj5.useEffect(() => () => {
     if (null !== ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
   }, items3);
   return { handleCardVisibilityChange };

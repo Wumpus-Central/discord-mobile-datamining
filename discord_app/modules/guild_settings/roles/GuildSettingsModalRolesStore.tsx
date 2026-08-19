@@ -5,15 +5,15 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import AccessibilityAnnouncer3 from "../../../design/shared.tsx";
 import calculatePositionDeltasDefault from "../../../utils/DragAndDropUtils.tsx";
-import closure_4 from "../../../stores/GuildRoleStore.tsx";
-import closure_5 from "../../../stores/GuildStore.tsx";
+import createGuildRoleRecordFromRust from "../../../stores/GuildRoleStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
 import { FormStates } from "../../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function handleGuildRoleCreateOrUpdate(arg0) {
   if (c8) {
     const sortedRoles = store.getSortedRoles(tmp);
-    closure_9 = sortedRoles.map((id) => id.id);
+    closure_9 = sortedRoles.map((item, index) => item.id);
   }
 }
 let CLOSED = FormStates.CLOSED;
@@ -34,7 +34,7 @@ prototype["initialize"] = function initialize() {
   this.waitFor(closure_5, closure_4);
 };
 Object.defineProperty(prototype, "submitting", {
-  get: function submitting(arg0) {
+  get: function submitting(dependencyMap) {
     return CLOSED === FormStates.SUBMITTING;
   },
   set: undefined
@@ -42,8 +42,7 @@ Object.defineProperty(prototype, "submitting", {
 prototype["getUpdates"] = function getUpdates() {
   if (null != c9) {
     if (null != _null2) {
-      let obj = calculatePositionDeltasDefault;
-      obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
+      const obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
       obj[0] = store.getSortedRoles(_null2.id);
       obj[1] = store.getManyRoles(_null2.id, c9);
       obj[2] = function idGetter(id) {
@@ -70,13 +69,13 @@ Object.defineProperty(prototype, "guild", {
   set: undefined
 });
 Object.defineProperty(prototype, "role", {
-  get: function role(key10, oldValue10, newValue10) {
+  get: function role(initialAttemptedPlatformType) {
     return c11;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "permissions", {
-  get: function permissions(arg0) {
+  get: function permissions(onPermissionsChange) {
     return c13;
   },
   set: undefined
@@ -93,7 +92,7 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(dispatcher
     guildId = guildId.guildId;
     c8 = true;
     const sortedRoles = store.getSortedRoles(guildId);
-    closure_9 = sortedRoles.map((id) => id.id);
+    closure_9 = sortedRoles.map((item, index) => item.id);
     const guild = store2.getGuild(guildId);
     clearTimeout(c15);
   },
@@ -213,6 +212,6 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(dispatcher
     }, 400);
   }
 });
-let result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsModalRolesStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsModalRolesStore.tsx");
 
 export default guildSettingsModalRolesStore;

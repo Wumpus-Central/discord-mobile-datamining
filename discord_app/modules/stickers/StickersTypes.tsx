@@ -1,10 +1,10 @@
 // discord_app/modules/stickers/StickersTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import TypeTag2 from "../../../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx";
 import MetaStickerType from "../../../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx";
 
 const TypeTag = TypeTag2.TypeTag;
-const result = set.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
 
 export const StickerFormat = MetaStickerType.StickerFormat;
 export const MetaStickerType = MetaStickerType.MetaStickerType;

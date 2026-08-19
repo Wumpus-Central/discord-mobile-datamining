@@ -1,11 +1,11 @@
 // discord_app/actions/CommunicationDisabledActionCreators.tsx
-import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
-const result = require("set").fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
 
 export default {
   setCommunicationDisabledDuration(closure_1_0, c1, value, current) {
-    closure_0 = closure_1_0;
+    closure_0 = importDefault;
     closure_1 = c1;
     const callback = value;
     closure_3 = current;
@@ -41,15 +41,15 @@ export default {
               let toISOStringResult = null;
               if (null != closure_1_2) {
                 obj1 = v0(3975)();
-                toISOStringResult = obj1.add(tmp21, "s").toISOString();
-                const addResult = obj1.add(tmp21, "s");
+                toISOStringResult = obj1.add(closure_1_2, "s").toISOString();
+                const addResult = obj1.add(closure_1_2, "s");
               }
               obj1 = { guildId: null, userId: null, communicationDisabledUntilTimestamp: null, duration: null, reason: null, location: null, moderatorReportId: null };
               obj1[0] = v0;
               obj1[1] = dependencyMap;
               obj1[2] = toISOStringResult;
               obj1[3] = closure_1_2;
-              obj1[4] = closure_1_3;
+              obj1[4] = current;
               obj1[5] = closure_1_4;
               obj1[6] = closure_1_5;
               dependencyMap = 1;

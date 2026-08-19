@@ -1,5 +1,5 @@
 // discord_app/design/void/Form/native/index.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import FormCheckboxRowDefault from "FormCheckboxRow.tsx";
 import _modDef6937 from "FormRow.tsx";
 import contextDefault from "Form.tsx";
@@ -27,7 +27,7 @@ import FormRadioGroupDefault from "FormRadioGroup.tsx";
 import FormSliderRowDefault from "FormSliderRow.tsx";
 import CardSectionDefault from "../../CardSection/native/CardSection.tsx";
 
-const result = set.fileFinishedImporting("design/void/Form/native/index.tsx");
+const result = obj132.fileFinishedImporting("design/void/Form/native/index.tsx");
 
 export const Form = contextDefault;
 export const FormArrow = FormArrowDefault;

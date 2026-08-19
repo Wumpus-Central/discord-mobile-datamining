@@ -2,10 +2,10 @@
 import _modDef38 from "../../_runtime/metro/00038__.js";
 import PQueueDefault from "../../_runtime/01492_PQueue.js";
 import getSrcWithWidthAndHeight from "native/ImageUtils.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import importDefaultResult from "../../_runtime/00012_apply.js";
 
-require = arg1;
+require = fn;
 function fit(minHeight) {
   ({ width, height, maxWidth, maxHeight, minWidth } = minHeight);
   if (minWidth === undefined) {
@@ -68,7 +68,6 @@ function getPalette(width) {
         let tmp13 = data[result1 + 2];
         let tmp14 = data[result1 + 3];
         let tmp15 = undefined === tmp14;
-        let tmp16 = num12;
         if (!tmp15) {
           tmp15 = tmp14 >= 125;
         }
@@ -262,7 +261,7 @@ importDefaultResult.memoize((arg0) => {
     image.src = closure_0;
   });
 });
-let result = require("set").fileFinishedImporting("utils/ImageUtils.tsx");
+let result = require("obj132").fileFinishedImporting("utils/ImageUtils.tsx");
 
 export { fit };
 export const IMAGE_MAX_ZOOM = 2000;
@@ -368,8 +367,8 @@ export { getPalette };
 export const getPaletteForAvatar = function getPaletteForAvatar(closure_0) {
   return getSrcWithWidthAndHeight.default.getPaletteForAvatarMobile(closure_0);
 };
-export const readFileAsBase64 = function readFileAsBase64(arg0) {
-  closure_0 = arg0;
+export const readFileAsBase64 = function readFileAsBase64(result) {
+  closure_0 = result;
   return new Promise((closure_0) => {
     closure_1 = arg1;
     const fileReader = new FileReader();

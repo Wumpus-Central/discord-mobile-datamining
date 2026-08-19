@@ -7,21 +7,21 @@ import fromGuildPropertiesWithAdditionalFields from "../utils/GuildRecordUtils.t
 import applyOverwritesAll from "../utils/PermissionUtils.tsx";
 import doesThreadMembersActionAffectMe from "../modules/threads/ThreadActionUtils.tsx";
 import hasDefault from "../utils/BasicPermissionUtils.tsx";
-import closure_4 from "../modules/impersonate/ImpersonateStore.tsx";
-import closure_5 from "../modules/lurker_mode/LurkingStore.tsx";
-import closure_6 from "../modules/stage_channels/StageInstanceStore.tsx";
-import closure_7 from "../modules/threads/JoinedThreadsStore.tsx";
+import initialize from "../modules/impersonate/ImpersonateStore.tsx";
+import initialize2 from "../modules/lurker_mode/LurkingStore.tsx";
+import handleStageInstanceCreateOrUpdate from "../modules/stage_channels/StageInstanceStore.tsx";
+import storeThread from "../modules/threads/JoinedThreadsStore.tsx";
 import createChannelRecord from "../records/ChannelRecord.tsx";
 import GuildNSFWContentLevel from "../records/GuildRecord.tsx";
-import closure_12 from "../records/UserRecord.tsx";
-import closure_13 from "ChannelStore.tsx";
-import closure_14 from "GuildMemberStore.tsx";
-import closure_15 from "GuildStore.tsx";
-import closure_16 from "UserStore.tsx";
+import createdAt from "../records/UserRecord.tsx";
+import ensureGuildLoaded from "ChannelStore.tsx";
+import trackCommunicationDisabled from "GuildMemberStore.tsx";
+import createGuildRecordFromRust from "GuildStore.tsx";
+import mergeGuildAvatar from "UserStore.tsx";
 import { Permissions } from "../Constants.tsx";
 import { MemberSafetyPagePermissions as closure_18 } from "../modules/guild_mod_dash_member_safety/MemberSafetyConstants.tsx";
 
-require = arg1;
+require = fn;
 function getUncachedChannelPermissions(id, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -70,7 +70,6 @@ function getUncachedChannelPermissions(id, arg1) {
                     obj[2] = true;
                     NONE = applyOverwritesAll.computePermissions(obj);
                     dependencyMap[guildId] = NONE;
-                    const obj3 = applyOverwritesAll;
                   }
                   NONE2 = NONE;
                 }
@@ -86,7 +85,6 @@ function getUncachedChannelPermissions(id, arg1) {
       obj[1] = channel;
       obj[2] = flag;
       NONE2 = applyOverwritesAll.computePermissions(obj);
-      const obj5 = applyOverwritesAll;
     }
   }
 }
@@ -97,15 +95,12 @@ function updateGuildVersion(guildId) {
       num = 0;
     }
     dependencyMap3[guildId] = num + 1;
-    const tmp = dependencyMap3;
   }
 }
 function handleConnectionOpen() {
   closure_19 = {};
   closure_20 = {};
   for (const key10005 in closure_21) {
-    let tmp = key10005;
-    let tmp2 = dependencyMap3;
     dependencyMap3[key10005] = dependencyMap3[key10005] + 1;
     continue;
   }
@@ -115,8 +110,6 @@ function handleGuild() {
   closure_19 = {};
   closure_20 = {};
   for (const key10005 in closure_21) {
-    let tmp = key10005;
-    let tmp2 = dependencyMap3;
     dependencyMap3[key10005] = dependencyMap3[key10005] + 1;
     continue;
   }
@@ -134,8 +127,6 @@ function handleGuildMemberUpdate(user) {
     closure_19 = {};
     closure_20 = {};
     for (const key10015 in closure_21) {
-      let tmp5 = key10015;
-      let tmp6 = dependencyMap3;
       dependencyMap3[key10015] = dependencyMap3[key10015] + 1;
       continue;
     }
@@ -147,11 +138,11 @@ function handleThreadAction() {
 }
 function handleSearchMessagesSuccess(data) {
   data = data.data;
-  return data.some((messages) => {
-    messages = messages.messages;
-    let someResult = messages.threads.length > 0;
+  return data.some((item, index) => {
+    const messages = item.messages;
+    let someResult = item.threads.length > 0;
     if (!someResult) {
-      someResult = messages.some((arr) => arr.some((thread) => null != thread.thread));
+      someResult = messages.some((item, index) => item.some((item, index) => null != item.thread));
     }
     return someResult;
   });
@@ -170,7 +161,6 @@ function handleGuildRole(guildId) {
       num = 0;
     }
     dependencyMap3[guildId] = num + 1;
-    const tmp5 = dependencyMap3;
   }
 }
 function handleStageInstancesChanged(instance) {
@@ -179,8 +169,7 @@ function handleStageInstancesChanged(instance) {
     return false;
   } else {
     const currentUser = authStore.getCurrentUser();
-    let obj = applyOverwritesAll;
-    obj = { user: null, context: null };
+    const obj = { user: null, context: null };
     obj[0] = currentUser;
     obj[1] = channel;
     const permissions = obj.computePermissions(obj);
@@ -206,7 +195,6 @@ function handleImpersonateUpdate(guildId) {
       num = 0;
     }
     dependencyMap3[guildId] = num + 1;
-    const tmp5 = dependencyMap3;
   }
 }
 function computePermissions(context, overwrites, roles, excludeGuildPermissions) {
@@ -215,9 +203,9 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     if (set.has(context.type)) {
       const channel = store.getChannel(context.parent_id);
       if (null == channel) {
-        let NONE4 = tmp(4026).NONE;
+        let NONE4 = applyOverwritesAll.NONE;
       } else {
-        let tmpResult = tmp(4026);
+        let tmpResult = applyOverwritesAll;
         const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
         NONE4 = tmpResult.applyThreadPermissions(context, tmp24, closure_7.hasJoined(context.id), closure_14.isCurrentUserGuest(context.guild_id));
         const hasJoinedResult = closure_7.hasJoined(context.id);
@@ -241,13 +229,13 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       if (null == NONE2) {
         const currentUser = authStore.getCurrentUser();
         if (null == currentUser) {
-          NONE2 = tmp(4026).NONE;
+          NONE2 = applyOverwritesAll.NONE;
         } else {
           const guild = store2.getGuild(id);
           if (null == guild) {
-            let NONE3 = tmp(4026).NONE;
+            let NONE3 = applyOverwritesAll.NONE;
           } else {
-            tmpResult = tmp(4026);
+            tmpResult = applyOverwritesAll;
             obj = { user: null, context: null, checkElevated: null };
             obj[0] = currentUser;
             obj[1] = guild;
@@ -266,6 +254,7 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
   }
   obj = { user: authStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
   NONE = applyOverwritesAll.computePermissions(obj);
+  const tmpResult1 = applyOverwritesAll;
 }
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: c9 } = createChannelRecord);
 ({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: unpackModuleId } = GuildNSFWContentLevel);
@@ -306,8 +295,7 @@ prototype["getGuildPermissions"] = function getGuildPermissions(guild) {
       if (null == guild) {
         let NONE2 = applyOverwritesAll.NONE;
       } else {
-        let obj = applyOverwritesAll;
-        obj = { user: null, context: null, checkElevated: null };
+        const obj = { user: null, context: null, checkElevated: null };
         obj[0] = currentUser;
         obj[1] = guild;
         obj[2] = true;
@@ -343,45 +331,45 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
   if (null == NONE) {
     const currentUser = authStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4026).NONE;
+      NONE = applyOverwritesAll.NONE;
     } else {
       const guild = store2.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4026).NONE;
+        let NONE2 = applyOverwritesAll.NONE;
       } else {
         obj = { user: null, context: null, checkElevated: null };
         obj[0] = currentUser;
         obj[1] = guild;
         obj[2] = true;
-        NONE2 = tmp(4026).computePermissions(obj);
+        NONE2 = applyOverwritesAll.computePermissions(obj);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4026);
+        const tmpResult = applyOverwritesAll;
       }
       NONE = NONE2;
     }
   }
   return obj.hasAny(NONE, closure_18);
 };
-prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
+prototype["canAccessGuildSettings"] = function canAccessGuildSettings(closure_0) {
   let obj = fromStringAll;
-  const id = guild.id;
+  const id = _require.id;
   let NONE = dependencyMap[id];
   if (null == NONE) {
     const currentUser = authStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = tmp(4026).NONE;
+      NONE = applyOverwritesAll.NONE;
     } else {
-      guild = store2.getGuild(id);
+      const guild = store2.getGuild(id);
       if (null == guild) {
-        let NONE2 = tmp(4026).NONE;
+        let NONE2 = applyOverwritesAll.NONE;
       } else {
         obj = { user: null, context: null, checkElevated: null };
         obj[0] = currentUser;
         obj[1] = guild;
         obj[2] = true;
-        NONE2 = tmp(4026).computePermissions(obj);
+        NONE2 = applyOverwritesAll.computePermissions(obj);
         dependencyMap[id] = NONE2;
-        const tmpResult = tmp(4026);
+        const tmpResult = applyOverwritesAll;
       }
       NONE = NONE2;
     }
@@ -408,12 +396,10 @@ prototype["can"] = function can(arg0, arg1, arg2, arg3, arg4) {
 prototype["canBasicChannel"] = function canBasicChannel(VIEW_CHANNEL, basicChannel) {
   if ("basicPermissions" in basicChannel) {
     let hasItem = hasDefault.has(basicChannel.basicPermissions, VIEW_CHANNEL);
-    const obj3 = hasDefault;
   } else {
     const obj = fromStringAll;
     const tmp8 = computePermissions(basicChannel, arg2, arg3, arg4);
     hasItem = obj.has(tmp8, hasDefault.asBigFlag(VIEW_CHANNEL));
-    const obj2 = hasDefault;
   }
   return hasItem;
 };
@@ -425,30 +411,28 @@ prototype["computeBasicPermissions"] = function computeBasicPermissions(basicCha
     let basicPermissions = basicChannel.basicPermissions;
   } else {
     basicPermissions = hasDefault.asBasicFlag(computePermissions(basicChannel));
-    const obj = hasDefault;
   }
   return basicPermissions;
 };
-prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, guild) {
+prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, stateFromStores) {
   let id = user;
   if (user instanceof closure_12) {
     id = user.id;
   }
-  if (callback(guild, id)) {
+  if (callback(stateFromStores, id)) {
     return false;
   } else {
     const self = this;
     const currentUser = authStore.getCurrentUser();
-    if (this.can(BAN_MEMBERS, guild)) {
+    if (this.can(BAN_MEMBERS, stateFromStores)) {
       if (null != currentUser) {
-        const highestRole = applyOverwritesAll.getHighestRole(guild, currentUser.id);
-        const obj = applyOverwritesAll;
+        const highestRole = applyOverwritesAll.getHighestRole(stateFromStores, currentUser.id);
       }
-      const highestRole1 = applyOverwritesAll.getHighestRole(guild, id);
+      const highestRole1 = applyOverwritesAll.getHighestRole(stateFromStores, id);
       let isRoleHigherResult = null != currentUser;
       if (isRoleHigherResult) {
         const tmp8Result = applyOverwritesAll;
-        isRoleHigherResult = tmp8Result.isRoleHigher(guild, currentUser.id, highestRole, highestRole1);
+        isRoleHigherResult = tmp8Result.isRoleHigher(stateFromStores, currentUser.id, highestRole, highestRole1);
       }
       return isRoleHigherResult;
     } else {
@@ -461,7 +445,6 @@ prototype["getHighestRole"] = function getHighestRole(arg0) {
   let highestRole = null;
   if (null != currentUser) {
     highestRole = applyOverwritesAll.getHighestRole(arg0, currentUser.id);
-    const obj = applyOverwritesAll;
   }
   return highestRole;
 };
@@ -545,10 +528,8 @@ const permissionStore = new PermissionStore(dispatcherDefault, {
               num2 = 0;
             }
             dependencyMap3[guildId] = num2 + 1;
-            const tmp10 = dependencyMap3;
           }
         }
-        const obj2 = applyOverwritesAll;
       }
     }
     return false;
@@ -562,29 +543,18 @@ const permissionStore = new PermissionStore(dispatcherDefault, {
     let flag = false;
     const iter = arg0.channels[Symbol.iterator]();
     while (iter !== undefined) {
-      let tmp = store;
       let channel = store.getChannel(iter.next().id);
       let obj = channel;
       if (null != channel) {
-        let tmp18 = channel;
         if (!obj.isPrivate()) {
-          let tmp3 = authStore;
-          let tmp5 = importAll;
-          let tmp6 = dependencyMap;
           let currentUser = authStore.getCurrentUser();
           let obj2 = applyOverwritesAll;
           obj = { user: null, context: null };
           obj[0] = currentUser;
-          let tmp7 = channel;
           obj[1] = obj;
           let permissions = obj2.computePermissions(obj);
-          let tmp10 = dependencyMap2;
           if (dependencyMap2[obj.id] !== permissions) {
-            let tmp11 = dependencyMap2;
-            let tmp12 = channel;
-            let tmp13 = permissions;
             dependencyMap2[obj.id] = tmp9;
-            let tmp14 = updateGuildVersion;
             let tmp15 = updateGuildVersion(obj.getGuildId());
             flag = true;
           }
@@ -601,7 +571,7 @@ const permissionStore = new PermissionStore(dispatcherDefault, {
   },
   LOAD_MESSAGES_SUCCESS: function handleLoadMessagesSuccess(messages) {
     messages = messages.messages;
-    return messages.some((thread) => null != thread.thread);
+    return messages.some((item, index) => null != item.thread);
   },
   SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
@@ -622,7 +592,6 @@ const permissionStore = new PermissionStore(dispatcherDefault, {
         }
         dependencyMap3[guildId] = num + 1;
         flag = true;
-        const tmp3 = dependencyMap3;
       }
     }
     return flag;
@@ -639,7 +608,6 @@ const permissionStore = new PermissionStore(dispatcherDefault, {
         }
         dependencyMap3[guildId] = num + 1;
         flag = true;
-        const tmp2 = dependencyMap3;
       }
     }
     return flag;
@@ -654,7 +622,6 @@ const permissionStore = new PermissionStore(dispatcherDefault, {
         num = 0;
       }
       dependencyMap3[guild_id] = num + 1;
-      const tmp3 = dependencyMap3;
     }
     return false;
   },
@@ -673,6 +640,6 @@ const permissionStore = new PermissionStore(dispatcherDefault, {
   IMPERSONATE_UPDATE: handleImpersonateUpdate,
   IMPERSONATE_STOP: handleImpersonateUpdate
 });
-const result = require("set").fileFinishedImporting("stores/PermissionStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/PermissionStore.tsx");
 
 export default permissionStore;

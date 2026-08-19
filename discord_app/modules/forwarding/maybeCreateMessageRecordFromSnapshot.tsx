@@ -1,8 +1,8 @@
 // discord_app/modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import isForwardMessageDefault from "isForwardMessage.tsx";
 
-const result = set.fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
+const result = obj132.fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
 
 export default function maybeCreateMessageRecordFromSnapshot(merge) {
   let tmp = arg1;

@@ -1,7 +1,7 @@
 // discord_app/lib/hook/Hook.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("lib/hook/Hook.native.tsx");
+const result = obj132.fileFinishedImporting("lib/hook/Hook.native.tsx");
 
 export function isHookModuleTooOld() {
   return true;

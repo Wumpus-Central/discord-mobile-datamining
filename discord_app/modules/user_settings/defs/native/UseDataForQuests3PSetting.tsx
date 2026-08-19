@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import MobileUserSettings2 from "../../core/native/SettingsConstants.tsx";
@@ -16,7 +16,6 @@ function useDataToSupportQuests3PSettingIsDisabled() {
   let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
   const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
   const setting = DropsOptedOut.useSetting();
-  const obj = useAdPersonalizationTogglesDisabled;
   const isParentallyControlled = useParentalControlledExplicitContentSettings.useIsParentallyControlled();
   if (!adPersonalizationTogglesDisabled) {
     adPersonalizationTogglesDisabled = setting;
@@ -57,7 +56,7 @@ obj = {
   useIsDisabled: useDataToSupportQuests3PSettingIsDisabled
 };
 const toggle1 = createToggle.createToggle(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
 
 export default toggle;
 export const UseDataForQuests3PSponsoredContentSetting = toggle1;

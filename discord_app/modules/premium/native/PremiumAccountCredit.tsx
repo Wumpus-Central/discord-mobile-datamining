@@ -1,19 +1,21 @@
 // discord_app/modules/premium/native/PremiumAccountCredit.tsx
+import applyDefault from "../../../../_runtime/00012_apply.js";
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import messagesProxyDefault from "../premium_group/PremiumGroup.messages.js";
 import getPremiumPlanItem from "../../../utils/PremiumUtils.tsx";
 import getPremiumPlanItemDefault from "../../../utils/PremiumUtils.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import GameIcon from "../../game_detection/native/GameIcon.tsx";
 import GameIconDefault from "../../game_detection/native/GameIcon.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../stores/game_store/EntitlementStore.tsx";
+import addEntitlement from "../../../stores/game_store/EntitlementStore.tsx";
 import { SubscriptionStatusTypes } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function AccountCreditTier(arg0) {
   ({ planId, currentSubscription } = arg0);
   ({ months, shouldAddDivider, unconsumedFractionalPremiumUnits, hasPremiumGroup } = arg0);
@@ -24,8 +26,8 @@ function AccountCreditTier(arg0) {
   let obj2 = getPremiumPlanItemDefault;
   const tierDisplayNameByPlanId = obj2.getTierDisplayNameByPlanId(planId);
   if (hasPremiumGroup) {
-    const intl3 = tmp2(1236).intl;
-    let stringResult = intl3.string(tmp4(2917)["5asczk"]);
+    const intl3 = getSystemLocale.intl;
+    let stringResult = intl3.string(messagesProxyDefault["5asczk"]);
   } else {
     if (null != currentSubscription) {
       if (currentSubscription.planId === planId) {
@@ -34,24 +36,24 @@ function AccountCreditTier(arg0) {
             const _Date2 = Date;
             let date = new Date(currentSubscription.pauseEndsAt);
           }
-          let num = tmp2(4039).extendDateWithUnconsumedFractionalPremium(date, unconsumedFractionalPremiumUnits);
-          const intl2 = tmp2(1236).intl;
+          let num = getPremiumPlanItem.extendDateWithUnconsumedFractionalPremium(date, unconsumedFractionalPremiumUnits);
+          const intl2 = getSystemLocale.intl;
           if (num == null) {
             num = 0;
           }
           obj = { date: null };
           obj[0] = num;
-          stringResult = intl2.formatToPlainString(tmp2(1236).t["5CNRRA"], obj);
-          const tmp2Result = tmp2(4039);
+          stringResult = intl2.formatToPlainString(getSystemLocale.t["5CNRRA"], obj);
+          const tmp2Result = getPremiumPlanItem;
         }
         const _Date = Date;
         date = new Date(currentSubscription.currentPeriodEnd);
       }
     }
-    const intl = tmp2(1236).intl;
+    const intl = getSystemLocale.intl;
     obj = { planName: null };
     obj[0] = tierDisplayNameByPlanId;
-    stringResult = intl.formatToPlainString(tmp2(1236).t.eNXZ5O, obj);
+    stringResult = intl.formatToPlainString(getSystemLocale.t.eNXZ5O, obj);
   }
   const items = [tmp.creditItem, ];
   let divider = null;
@@ -64,7 +66,7 @@ function AccountCreditTier(arg0) {
   const items1 = [callback(GameIconDefault, obj2), , ];
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.headerText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl4 = tmp2(1236).intl;
+  const intl4 = getSystemLocale.intl;
   obj4[3] = intl4.format(getSystemLocale.t.LzobT9, { planName: tierDisplayNameByPlanId });
   const items2 = [callback(Text.Text, obj4), ];
   let tmp21Result = !tmp17;
@@ -72,22 +74,21 @@ function AccountCreditTier(arg0) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
     obj5[0] = tmp.subText;
     obj5[3] = stringResult;
-    tmp21Result = tmp21(tmp2(4734).Text, obj5);
+    tmp21Result = callback(Text.Text, obj5);
   }
   items2[1] = tmp21Result;
   obj3[1] = items2;
-  items1[1] = closure_7(View, obj3);
+  items1[1] = callback(View, obj3);
   const obj6 = { style: tmp.timeText, variant: "text-md/medium", color: "text-default", children: null };
-  const intl5 = tmp2(1236).intl;
+  const intl5 = getSystemLocale.intl;
   obj6[3] = intl5.format(getSystemLocale.t["ess/xl"], { count: months });
   items1[2] = callback(Text.Text, obj6);
   obj1[1] = items1;
-  return closure_7(View, obj1);
+  return callback(View, obj1);
 }
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { title: { marginBottom: 12 }, creditList: null, creditItem: null, textContainer: null, headerText: null, subText: null, timeText: null, divider: null, creditDescription: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", padding: 16 };
 createCacheKey[3] = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
@@ -97,13 +98,11 @@ createCacheKey[6] = { lineHeight: 20, alignSelf: "flex-start" };
 createCacheKey[7] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[8] = { marginTop: 8 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/premium/native/PremiumAccountCredit.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/native/PremiumAccountCredit.tsx");
 
 export default function PremiumAccountCredit(currentSubscription) {
   currentSubscription = currentSubscription.currentSubscription;
   ({ entitlements, hasPremiumGroup: importDefault } = currentSubscription);
-  dependencyMap = undefined;
   c3 = undefined;
   ({ style, creditListContainerStyle } = currentSubscription);
   let tmp = callback2();
@@ -113,18 +112,18 @@ export default function PremiumAccountCredit(currentSubscription) {
   if (null != entitlements) {
     if (obj8.hasAccountCredit(entitlements)) {
       const _Array = Array;
-      const tmp11Result = tmp11(12);
-      const found = tmp11(12)(Array.from(entitlements)).filter((subscriptionPlanId) => {
-        let tmp = null != subscriptionPlanId.subscriptionPlanId;
+      const tmp11Result = applyDefault;
+      const found = applyDefault(Array.from(entitlements)).filter((item, index) => {
+        let tmp = null != item.subscriptionPlanId;
         if (tmp) {
-          tmp = null != subscriptionPlanId.parentId;
+          tmp = null != item.parentId;
         }
         if (tmp) {
-          tmp = !subscriptionPlanId.consumed;
+          tmp = !item.consumed;
         }
         return tmp;
       });
-      const tmp11ResultResult = tmp11(12)(Array.from(entitlements));
+      const tmp11ResultResult = applyDefault(Array.from(entitlements));
       const valueResult = found.groupBy((subscriptionPlanId) => subscriptionPlanId.subscriptionPlanId).value();
       c3 = valueResult;
       obj = { style: null, children: null };
@@ -139,9 +138,9 @@ export default function PremiumAccountCredit(currentSubscription) {
       obj1[0] = items2;
       const _Object = Object;
       let keys = Object.keys(valueResult);
-      obj1[1] = keys.map((planId) => {
+      obj1[1] = keys.map((item, index) => {
         const keys = Object.keys(_undefined);
-        return closure_1_6(closure_1_9, { planId, months: _undefined[planId].length, currentSubscription, shouldAddDivider: planId !== keys[Object.keys(Object, _undefined).length - 1], unconsumedFractionalPremiumUnits: closure_2, hasPremiumGroup: closure_1 }, planId);
+        return closure_1_6(AccountCreditTier, { planId: item, months: _undefined[item].length, currentSubscription, shouldAddDivider: item !== keys[Object.keys(Object, _undefined).length - 1], unconsumedFractionalPremiumUnits: closure_2, hasPremiumGroup: closure_1 }, item);
       });
       items1[1] = callback(c3, obj1);
       const obj2 = { style: null, variant: "text-sm/medium", children: null };
@@ -162,10 +161,9 @@ export default function PremiumAccountCredit(currentSubscription) {
       }
       items1[3] = tmp9Result;
       obj[1] = items1;
-      return closure_7(c3, obj);
+      return callback(c3, obj);
     }
     obj8 = getPremiumPlanItemDefault;
-    tmp11 = importDefault;
   }
   return null;
 };

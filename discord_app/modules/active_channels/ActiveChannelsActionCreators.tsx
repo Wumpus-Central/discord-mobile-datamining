@@ -1,8 +1,8 @@
 // discord_app/modules/active_channels/ActiveChannelsActionCreators.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _fetchActiveChannels() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -141,9 +141,9 @@ function _fetchActiveChannels() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/active_channels/ActiveChannelsActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/active_channels/ActiveChannelsActionCreators.tsx");
 
-export const fetchActiveChannels = function fetchActiveChannels(arg0) {
+export const fetchActiveChannels = function fetchActiveChannels(id) {
   const self = this;
   const apply = _fetchActiveChannels.apply;
   if (typeof apply === "unknown") {

@@ -6,9 +6,9 @@ import registerAssetDefault2 from "../../../../../_runtime/09331_registerAsset.j
 import { PremiumTypes } from "../../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
 
 export default function PremiumFeaturesLogo(premiumType) {
   premiumType = premiumType.premiumType;

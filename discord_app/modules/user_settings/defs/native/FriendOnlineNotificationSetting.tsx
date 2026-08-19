@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/FriendOnlineNotificationSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
@@ -23,22 +23,6 @@ const toggle = createToggle.createToggle({
     return apexExperiment.useFriendOnlineNotificationExperiment("tabsV2Settings").showSettingsToggle;
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["uvIi/4"]);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.E6O06k);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableFriendOnlineNotifications.useSetting,
-  onValueChange: onFriendOnlineNotificationSettingsChanged.onFriendOnlineNotificationSettingsChanged,
-  usePredicate: function useExperiment() {
-    return apexExperiment.useFriendOnlineNotificationExperiment("tabsV2Settings").showSettingsToggle;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendOnlineNotificationSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/FriendOnlineNotificationSetting.tsx");
 
 export default toggle;

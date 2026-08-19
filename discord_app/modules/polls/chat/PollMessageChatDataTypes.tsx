@@ -1,7 +1,7 @@
 // discord_app/modules/polls/chat/PollMessageChatDataTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");
 
 export const NativeShadowType = { NONE: 0, [0]: "NONE", LOW: 1, [1]: "LOW", HIGH: 2, [2]: "HIGH" };
 export const PollRadioStyle = { NONE: 0, [0]: "NONE", HOLLOW: 1, [1]: "HOLLOW", FILLED: 2, [2]: "FILLED", CHECKMARK: 3, [3]: "CHECKMARK" };

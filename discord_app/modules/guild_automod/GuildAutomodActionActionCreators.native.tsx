@@ -6,22 +6,16 @@ import _modDef5260 from "../../actions/ModalActionCreators.tsx";
 import AutomodEventType from "Constants.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ AutomodActionType: c3, SUBMIT_FEEDBACK_MODAL_KEY: c4 } = AutomodEventType);
-const result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodActionActionCreators.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_automod/GuildAutomodActionActionCreators.native.tsx");
 
 export const getPromiseableActionHandlers = function getPromiseableActionHandlers() {
   return { [closure_3.BLOCK_MESSAGE]: null, [closure_3.FLAG_TO_CHANNEL]: null, [closure_3.USER_COMMUNICATION_DISABLED]: null };
 };
 export const openSubmitFeedback = function openSubmitFeedback(messageId, content, decisionId, channel) {
   let obj = _modDef5260;
-  obj = {
-    onCloseModal() {
-      callback(table[3]).popWithKey(closure_4);
-    },
-    automodDecision: obj
-  };
   obj = { messageId, messageContent: content, decisionId, channel };
   obj.pushLazy(asyncRequireImpl(11046, dependencyMap.paths), obj, closure_4);
 };
@@ -33,11 +27,10 @@ export function openConfirmRemoveMentionRaid(arg0) {
 }
 export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuarantineAlert(guildId) {
   closure_0 = guildId;
-  let obj = _modDef4656;
-  obj = {
+  let obj = {
     importer() {
-      return guildId(closure_1_2[5])(closure_1_2[7], closure_1_2.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return guildId(dependencyMap[5])(dependencyMap[7], dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);

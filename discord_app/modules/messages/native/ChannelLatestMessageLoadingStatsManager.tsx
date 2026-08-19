@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import isClickstreamEnabled from "../../app_analytics/clickstream/Clickstream.tsx";
-import set from "../../../../_runtime/00002_set.js";
 
 const AnalyticEvents = ME.AnalyticEvents;
 let ChannelLatestMessageLoadingStatsManager;
@@ -28,23 +28,20 @@ prototype["finish"] = function finish(channelId) {
       const diff = Date.now() - latestChannelMessagesLoad.startMs;
       const hasItem = seenChannelIds2.has(channelId.channelId);
       if (!hasItem) {
-        const seenChannelIds = tmp10.seenChannelIds;
+        const seenChannelIds = ChannelLatestMessageLoadingStatsManager.seenChannelIds;
         seenChannelIds.add(channelId.channelId);
       }
-      let obj = isClickstreamEnabled;
-      obj = { load_duration_ms: null, were_messages_cached: null, is_first_load: null };
+      const obj = { load_duration_ms: null, were_messages_cached: null, is_first_load: null };
       obj[0] = diff;
       obj[1] = channelId.areMessagesCached;
       obj[2] = !hasItem;
       obj.trackClickstream(AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, obj);
       tmp.latestChannelMessagesLoad = undefined;
-      tmp10 = ChannelLatestMessageLoadingStatsManager;
-      const tmp12 = !hasItem;
     }
   }
 };
-let set = new Set();
-ChannelLatestMessageLoadingStatsManager.seenChannelIds = set;
-const result = set.fileFinishedImporting("modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx");
+ChannelLatestMessageLoadingStatsManager.seenChannelIds = new Set();
+const set = new Set();
+const result = obj132.fileFinishedImporting("modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx");
 
 export default ChannelLatestMessageLoadingStatsManager;

@@ -1,7 +1,7 @@
 // discord_app/utils/FunctionUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("utils/FunctionUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/FunctionUtils.tsx");
 
 export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, arg1) {
   if (arg0 === arg1) {
@@ -65,7 +65,6 @@ export function cachedFunction(arg0) {
 }
 export const clearObject = function clearObject(obj) {
   for (const key10003 in arg0) {
-    let tmp3 = key10003;
     if (!arg0.hasOwnProperty(key10003)) {
       continue;
     } else {

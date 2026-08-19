@@ -1,10 +1,10 @@
 // discord_app/modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining.tsx";
-import closure_2 from "../../ReferralTrialStore.tsx";
+import emitChanges from "../../ReferralTrialStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");
 
 export const useIsEligibleSenderForReferralProgram = function useIsEligibleSenderForReferralProgram(result) {
   let flag = result;
@@ -12,7 +12,6 @@ export const useIsEligibleSenderForReferralProgram = function useIsEligibleSende
     flag = false;
   }
   const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining.useMaybeFetchReferralsRemaining(flag);
-  const obj = useMaybeFetchReferralsRemaining;
   const items = [closure_2];
   return initialize.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
 };

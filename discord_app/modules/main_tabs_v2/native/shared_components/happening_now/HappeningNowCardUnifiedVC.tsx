@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx
 import noopAll from "../../../../../../_runtime/00019_noop.js";
+import findActivityWithMostParticipantsDefault from "../../../../activities/utils/findActivityWithMostParticipants.tsx";
 import IconOrPreviewDefault from "HappeningNowCardActivity.tsx";
 import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity.tsx";
 import formatVoiceActivityTitleDefault from "HappeningNowCardVoice.tsx";
-import closure_3 from "../../../../activities/EmbeddedActivitiesStore.tsx";
-import closure_4 from "../../../../../stores/ApplicationStreamingStore.tsx";
-import closure_5 from "../../../../../stores/RelationshipStore.tsx";
+import participantFromServer from "../../../../activities/EmbeddedActivitiesStore.tsx";
+import reset from "../../../../../stores/ApplicationStreamingStore.tsx";
+import markAllUserIdListsStale from "../../../../../stores/RelationshipStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
-import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx");
 
 export default function HappeningNowCardUnifiedVC(arg0) {
   ({ guildId, index, voiceState, fullwidth, panelVariant } = arg0);
@@ -27,17 +27,17 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     if (null == channelId) {
       return {};
     } else {
-      const allApplicationStreamsForChannel = closure_1_4.getAllApplicationStreamsForChannel(tmp);
+      const allApplicationStreamsForChannel = closure_1_4.getAllApplicationStreamsForChannel(channelId);
       if (allApplicationStreamsForChannel.length > 0) {
-        const found = allApplicationStreamsForChannel.find((ownerId) => friend.isFriend(ownerId.ownerId));
+        const found = allApplicationStreamsForChannel.find((item, index) => friend.isFriend(item.ownerId));
         if (null != found) {
           let obj = { stream: null };
           obj[0] = found;
           return obj;
         }
       }
-      const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(tmp);
-      const tmp7 = closure_1_1(closure_1_2[9])(embeddedActivitiesForChannel);
+      const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(channelId);
+      const tmp7 = findActivityWithMostParticipantsDefault(embeddedActivitiesForChannel);
       if (null != tmp7) {
         obj = { activity: null };
         obj[0] = tmp7;
@@ -87,21 +87,21 @@ export const useCallActivityData = function useCallActivityData(channel_id) {
   const _require = channel_id;
   const items = [closure_3, closure_4, closure_5];
   const items1 = [channel_id];
-  return _defaultAreStatesEqual.useStateFromStoresObject(items, () => {
+  return require("../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStoresObject(items, () => {
     if (null == channelId) {
       return {};
     } else {
-      const allApplicationStreamsForChannel = closure_1_4.getAllApplicationStreamsForChannel(tmp);
+      const allApplicationStreamsForChannel = closure_1_4.getAllApplicationStreamsForChannel(channelId);
       if (allApplicationStreamsForChannel.length > 0) {
-        const found = allApplicationStreamsForChannel.find((ownerId) => friend.isFriend(ownerId.ownerId));
+        const found = allApplicationStreamsForChannel.find((item, index) => friend.isFriend(item.ownerId));
         if (null != found) {
           let obj = { stream: null };
           obj[0] = found;
           return obj;
         }
       }
-      const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(tmp);
-      const tmp7 = closure_1_1(closure_1_2[9])(embeddedActivitiesForChannel);
+      const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(channelId);
+      const tmp7 = findActivityWithMostParticipantsDefault(embeddedActivitiesForChannel);
       if (null != tmp7) {
         obj = { activity: null };
         obj[0] = tmp7;

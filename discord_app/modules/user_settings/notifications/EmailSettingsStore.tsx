@@ -30,6 +30,6 @@ const emailSettingsStore = new EmailSettingsStore(dispatcherDefault, {
     const merged1 = Object.assign(updates.updates);
   }
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/notifications/EmailSettingsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/notifications/EmailSettingsStore.tsx");
 
 export default emailSettingsStore;

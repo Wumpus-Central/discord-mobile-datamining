@@ -1,10 +1,10 @@
 // discord_app/design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx
 import _mod4115 from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
-import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 let closure_3 = { code: "function CollapsibleFloatingActionButtonStateNativeTsx1({nativeEvent:nativeEvent}){const{initialScrollStart,previousOffset,MINIMUM_SCROLL_DISTANCE_TO_CLOSE,collapseText,SCROLL_OFFSET_THRESHOLD}=this.__closure;if(nativeEvent==null)return;const{contentOffset:{y:currentOffset},contentSize:{height:contentHeight},layoutMeasurement:{height:layoutHeight}}=nativeEvent;if(currentOffset<initialScrollStart)return;const contentHeightAsOffset=currentOffset+layoutHeight;if(contentHeightAsOffset>contentHeight)return;const offsetChanged=currentOffset-previousOffset.get();if(currentOffset<MINIMUM_SCROLL_DISTANCE_TO_CLOSE){collapseText.set(0);}else{if(Math.abs(offsetChanged)>SCROLL_OFFSET_THRESHOLD){collapseText.set(offsetChanged<0?0:1);}}previousOffset.set(currentOffset);}" };
-let result = require("set").fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx");
 
 export const useCollapsibleFloatingActionButtonState = function useCollapsibleFloatingActionButtonState() {
   const obj = { collapseText: _mod4115.useSharedValue(0) };
@@ -16,8 +16,7 @@ export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleF
   if (UNDETERMINED === undefined) {
     num = 0;
   }
-  let sharedValue;
-  sharedValue = collapseText(num[1]).useSharedValue(num);
+  const sharedValue = collapseText(num[1]).useSharedValue(num);
   const fn = function s(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
     if (null != nativeEvent) {
@@ -38,7 +37,6 @@ export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleF
             }
           }
           const result2 = sharedValue.set(y);
-          const obj = sharedValue;
         }
       }
     }

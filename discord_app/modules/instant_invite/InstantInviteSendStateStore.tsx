@@ -1,19 +1,18 @@
 // discord_app/modules/instant_invite/InstantInviteSendStateStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import keys from "../../../_runtime/00644_keys.js";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let obj = keys.create(() => ({}));
-const result = set.fileFinishedImporting("modules/instant_invite/InstantInviteSendStateStore.tsx");
+const result = obj132.fileFinishedImporting("modules/instant_invite/InstantInviteSendStateStore.tsx");
 
 export const setSendState = function setSendState(arg0, arg1, arg2) {
   const _require = arg0;
   dependencyMap = arg1;
   obj = arg2;
   const state = obj.getState();
-  obj = _batchUpdates;
+  obj = batchUpdates;
   obj.batchUpdates(() => {
-    obj = {};
     const merged = Object.assign(table);
     obj = {};
     const merged1 = Object.assign(table[closure_0]);

@@ -2,9 +2,9 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import fetchGuildAffinities from "../actions/GuildAffinitiesActionCreators.tsx";
-import closure_2 from "GuildStore.tsx";
+import createGuildRecordFromRust from "GuildStore.tsx";
 
-require = arg1;
+require = fn;
 let closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildAffinitiesStore extends PersistedStore {
@@ -40,7 +40,6 @@ const guildAffinitiesStore = new GuildAffinitiesStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     if (Date.now() - closure_3.lastFetched > 86400000) {
       const guildAffinities = fetchGuildAffinities.fetchGuildAffinities();
-      const obj = fetchGuildAffinities;
     }
     return false;
   },
@@ -49,9 +48,9 @@ const guildAffinitiesStore = new GuildAffinitiesStore(dispatcherDefault, {
     closure_3.guildAffinities = [];
     closure_3.guildAffinitiesByGuildId = {};
     closure_3.lastFetched = Date.now();
-    const item = guildAffinities.forEach((guild_id, index) => {
-      guild_id = guild_id.guild_id;
-      const obj = { score: guild_id.affinity, guildId: guild_id, index };
+    const item = guildAffinities.forEach((item, index) => {
+      const guild_id = item.guild_id;
+      const obj = { score: item.affinity, guildId: guild_id, index };
       closure_3.guildAffinitiesByGuildId[guild_id] = obj;
       const guildAffinities = closure_3.guildAffinities;
       guildAffinities.push(obj);
@@ -61,6 +60,6 @@ const guildAffinitiesStore = new GuildAffinitiesStore(dispatcherDefault, {
     closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
   }
 });
-const result = require("set").fileFinishedImporting("stores/GuildAffinitiesStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/GuildAffinitiesStore.tsx");
 
 export default guildAffinitiesStore;

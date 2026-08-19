@@ -2,16 +2,15 @@
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import collectGuildAnalyticsMetadataDefault from "../app_analytics/AppAnalyticsUtils.tsx";
 import getProfileProperties from "../user_profile/UserProfileAnalyticsUtils.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesTracking.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/rtc/SecureFramesTracking.tsx");
 
 export const trackRTCPanelViewed = function trackRTCPanelViewed(channelId) {
   channelId = channelId.channelId;
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null, selected_tab: null };
+  const obj = { channel_id: channelId, guild_id: null, selected_tab: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -23,8 +22,7 @@ export const trackRTCPanelViewed = function trackRTCPanelViewed(channelId) {
 };
 export const trackE2EEUserVerificationViewed = function trackE2EEUserVerificationViewed(userId) {
   const channelId = userId.channelId;
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null };
+  const obj = { channel_id: channelId, guild_id: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -37,8 +35,7 @@ export const trackE2EEUserVerificationViewed = function trackE2EEUserVerificatio
 export const trackE2EEUserVerified = function trackE2EEUserVerified(channelId) {
   channelId = channelId.channelId;
   ({ userId, analyticsLocation } = channelId);
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null, location: null };
+  const obj = { channel_id: channelId, guild_id: null, location: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -52,8 +49,7 @@ export const trackE2EEUserVerified = function trackE2EEUserVerified(channelId) {
 export const trackE2EEUserVerificationFailed = function trackE2EEUserVerificationFailed(channelId) {
   channelId = channelId.channelId;
   ({ userId, keyVersion, reason } = channelId);
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null, failure_reason: null, key_version: null };
+  const obj = { channel_id: channelId, guild_id: null, failure_reason: null, key_version: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -67,8 +63,7 @@ export const trackE2EEUserVerificationFailed = function trackE2EEUserVerificatio
 };
 export const trackE2EEUserVerificationShareClicked = function trackE2EEUserVerificationShareClicked(userId) {
   const channelId = userId.channelId;
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null };
+  const obj = { channel_id: channelId, guild_id: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -80,8 +75,7 @@ export const trackE2EEUserVerificationShareClicked = function trackE2EEUserVerif
 };
 export const trackE2EEUserVerificationCopied = function trackE2EEUserVerificationCopied(userId) {
   const channelId = userId.channelId;
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null };
+  const obj = { channel_id: channelId, guild_id: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -93,8 +87,7 @@ export const trackE2EEUserVerificationCopied = function trackE2EEUserVerificatio
 };
 export const trackE2EECallVerificationShareClicked = function trackE2EECallVerificationShareClicked(channelId) {
   channelId = channelId.channelId;
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null };
+  const obj = { channel_id: channelId, guild_id: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -105,8 +98,7 @@ export const trackE2EECallVerificationShareClicked = function trackE2EECallVerif
 };
 export const trackE2EECallVerificationCopied = function trackE2EECallVerificationCopied(channelId) {
   channelId = channelId.channelId;
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null };
+  const obj = { channel_id: channelId, guild_id: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -117,8 +109,7 @@ export const trackE2EECallVerificationCopied = function trackE2EECallVerificatio
 };
 export const trackE2EEStreamVerificationShareClicked = function trackE2EEStreamVerificationShareClicked(channelId) {
   channelId = channelId.channelId;
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null };
+  const obj = { channel_id: channelId, guild_id: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -129,8 +120,7 @@ export const trackE2EEStreamVerificationShareClicked = function trackE2EEStreamV
 };
 export const trackE2EEStreamVerificationCopied = function trackE2EEStreamVerificationCopied(channelId) {
   channelId = channelId.channelId;
-  let obj = collectGuildAnalyticsMetadataDefault;
-  obj = { channel_id: channelId, guild_id: null };
+  const obj = { channel_id: channelId, guild_id: null };
   const channel = store.getChannel(channelId);
   let guild_id;
   if (channel != null) {
@@ -146,7 +136,6 @@ export const trackE2EESettingsDeviceDelete = function trackE2EESettingsDeviceDel
   expandEventPropertiesDefault.track(AnalyticEvents.E2EE_SETTINGS_DEVICE_DELETE);
 };
 export const trackE2EEPublicKeyMismatch = function trackE2EEPublicKeyMismatch(closure_0) {
-  let obj = expandEventPropertiesDefault;
-  obj = { key_version: "" + closure_0 };
+  const obj = { key_version: "" + closure_0 };
   obj.track(AnalyticEvents.E2EE_PUBLIC_KEY_MISMATCH, obj);
 };

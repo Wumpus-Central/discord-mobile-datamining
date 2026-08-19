@@ -1,5 +1,5 @@
 // discord_app/modules/custom_status/Constants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import sum from "../../../discord_common/js/shared/Constants.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import nameFromUser from "../../utils/UserUtils.tsx";
@@ -270,7 +270,7 @@ const items2 = [
     }
   }
 ];
-const result = set.fileFinishedImporting("modules/custom_status/Constants.tsx");
+const result = obj132.fileFinishedImporting("modules/custom_status/Constants.tsx");
 
 export const STATUS_MAX_LENGTH = 128;
 export const ClearAfterValues = frozen;

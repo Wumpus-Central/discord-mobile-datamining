@@ -1,41 +1,34 @@
 // discord_app/modules/guild_settings/audit_log/native/GuildSettingsModalAuditLog.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../../stores/ChannelStore.tsx";
-import closure_9 from "../../../../stores/GuildStore.tsx";
-import closure_10 from "../../../../stores/SelectedChannelStore.tsx";
-import closure_11 from "../../../../stores/UserStore.tsx";
-import closure_12 from "../GuildSettingsAuditLogStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
+import AuditLogActions from "../GuildSettingsAuditLogStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: closure_6, FlatList: error } = get_ActivityIndicator);
 ({ GuildSettingsSections: map1, AuditLogFilterTypes: closure_14 } = ME);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-createCacheKey = { listView: { marginVertical: 12 }, spinner: { marginTop: 40 }, filterTextWrapper: null, filtersWrapper: null, firstAuditRow: null, lastAuditRow: null, filterTrailing: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
+const createCacheKey = { borderRadius: ThemesDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { paddingTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { marginTop: 0 };
 createCacheKey[5] = { marginBottom: 0 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 8 };
 let closure_18 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/guild_settings/audit_log/native/GuildSettingsModalAuditLog.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/audit_log/native/GuildSettingsModalAuditLog.tsx");
 
 export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   guildId = guildId.guildId;
-  closure_1 = undefined;
-  let navigation;
   let stateFromStores;
   actionFilter = undefined;
-  let userIdFilter;
-  let _logs;
-  let stateFromStores1;
   let memo;
   let first;
   closure_10 = undefined;
@@ -43,7 +36,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   const tmp = callback2();
   closure_1 = tmp;
   let obj = guildId(stateFromStores[12]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   obj1 = guildId(stateFromStores[13]);
   let items = [memo, closure_10];
   stateFromStores = obj1.useStateFromStores(items, () => memo.getChannel(channelId.getChannelId()));
@@ -51,12 +44,12 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   const items1 = [closure_12, callback];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => {
     let obj = navigation(stateFromStores[14]);
-    first = obj.ACTION_FILTER_ITEMS().filter((value) => value.value === actionFilter.actionFilter)[0];
+    first = obj.ACTION_FILTER_ITEMS().filter((item, index) => item.value === actionFilter.actionFilter)[0];
     let user = null;
     if (null != userIdFilter.userIdFilter) {
-      user = callback.getUser(tmp3.userIdFilter);
+      user = callback.getUser(userIdFilter.userIdFilter);
     }
-    obj = { isInitialLoading: tmp3.isInitialLoading, isLoading: tmp3.isLoading, isLoadingNextPage: tmp3.isLoadingNextPage, showLoadMore: tmp3.groupedFetchCount > 2, hasError: tmp3.hasError, hasOlderLogs: tmp3.hasOlderLogs, actionFilter: tmp3.actionFilter, actionFilterLabel: null, userIdFilter: null, userIdFilterLabel: null, _logs: null };
+    obj = { isInitialLoading: userIdFilter.isInitialLoading, isLoading: userIdFilter.isLoading, isLoadingNextPage: userIdFilter.isLoadingNextPage, showLoadMore: userIdFilter.groupedFetchCount > 2, hasError: userIdFilter.hasError, hasOlderLogs: userIdFilter.hasOlderLogs, actionFilter: userIdFilter.actionFilter, actionFilterLabel: null, userIdFilter: null, userIdFilterLabel: null, _logs: null };
     let str = "";
     if (null != first) {
       str = first.label;
@@ -64,23 +57,23 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
     obj[7] = str;
     obj[8] = userIdFilter.userIdFilter;
     if (null != user) {
-      let userTag = lib(tmp[15]).getUserTag(user);
-      const obj3 = lib(tmp[15]);
+      let userTag = lib(stateFromStores[15]).getUserTag(user);
+      const obj3 = lib(stateFromStores[15]);
     } else {
-      const intl = guildId(tmp[16]).intl;
-      userTag = intl.string(guildId(tmp[16]).t.ZRFdsL);
+      const intl = guildId(stateFromStores[16]).intl;
+      userTag = intl.string(guildId(stateFromStores[16]).t.ZRFdsL);
     }
     obj[9] = userTag;
     obj[10] = userIdFilter.logs;
     return obj;
   });
   ({ hasError, actionFilter } = stateFromStoresObject);
-  userIdFilter = stateFromStoresObject.userIdFilter;
-  _logs = stateFromStoresObject._logs;
+  const userIdFilter = stateFromStoresObject.userIdFilter;
+  const _logs = stateFromStoresObject._logs;
   ({ isInitialLoading, isLoading, isLoadingNextPage, userIdFilterLabel, actionFilterLabel } = stateFromStoresObject);
   let obj3 = guildId(stateFromStores[13]);
   const items2 = [first];
-  stateFromStores1 = obj3.useStateFromStores(items2, () => first.getGuild(guildId));
+  const stateFromStores1 = obj3.useStateFromStores(items2, () => first.getGuild(guildId));
   const items3 = [_logs, stateFromStores1];
   memo = userIdFilter.useMemo(() => {
     if (null != _logs) {
@@ -96,22 +89,22 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   closure_10 = tmp8[1];
   const items4 = [actionFilter, userIdFilter, navigation];
   callback = userIdFilter.useCallback(() => {
-    let obj = guildId(stateFromStores[17]);
-    obj = { key: "GuildSettingsAuditLogFilter", options: null, hasIcons: false };
-    obj = { label: null, onPress: null };
+    guildId(stateFromStores[17]);
+    let obj = { label: null, onPress: null };
     const intl = guildId(stateFromStores[16]).intl;
     obj[0] = intl.string(guildId(stateFromStores[16]).t["hxnY/q"]);
     obj[1] = function onPress() {
-      const obj = { filterType: closure_1_14.USER, data: closure_1_0(closure_1_3[18]).createAuditLogFilterUserData(closure_5) };
+      const obj = { filterType: closure_1_14.USER, data: guildId(stateFromStores[18]).createAuditLogFilterUserData(closure_5) };
       arr = arr.push(closure_1_13.AUDIT_LOG_FILTER, obj);
+      const obj2 = guildId(stateFromStores[18]);
     };
     const items = [obj, ];
     obj1 = { label: null, onPress: null };
     const intl2 = guildId(stateFromStores[16]).intl;
     obj1[0] = intl2.string(guildId(stateFromStores[16]).t.rautds);
     obj1[1] = function onPress() {
-      const obj = { filterType: closure_1_14.ACTION, data: closure_1_0(closure_1_3[18]).createAuditLogFilterActionData(closure_4) };
-      const obj2 = closure_1_0(closure_1_3[18]);
+      const obj = { filterType: closure_1_14.ACTION, data: guildId(stateFromStores[18]).createAuditLogFilterActionData(closure_4) };
+      const obj2 = guildId(stateFromStores[18]);
     };
     items[1] = obj1;
     obj[1] = items;
@@ -155,9 +148,9 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
     navigation.setOptions({
       headerRight() {
         const obj = { onPress: closure_11, text: null };
-        const intl = closure_1_0(closure_1_3[16]).intl;
-        obj[1] = intl.string(closure_1_0(closure_1_3[16]).t.pEasFX);
-        return closure_1_15(closure_1_0(closure_1_3[20]).HeaderActionButton, obj);
+        const intl = guildId(stateFromStores[16]).intl;
+        obj[1] = intl.string(guildId(stateFromStores[16]).t.pEasFX);
+        return closure_1_15(guildId(stateFromStores[20]).HeaderActionButton, obj);
       }
     });
   }, items6);
@@ -193,7 +186,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
       obj6[1] = tmp14(tmp2(tmp3[24]).Text, obj7);
       items8[1] = tmp14(_logs, obj6);
       obj3[1] = items8;
-      obj1[3] = tmp16(_logs, obj3);
+      obj1[3] = callback(_logs, obj3);
       obj1[4] = callback;
       obj1[5] = tmp14(tmp2(tmp3[25]).TableRowArrow, {});
       obj[1] = tmp14(tmp2(tmp3[23]).TableRow, obj1);
@@ -243,12 +236,12 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
         const obj10 = { children: null };
         items9[2] = tmp24;
         obj10[0] = items9;
-        tmp16Result = tmp16(tmp17, obj10);
+        tmp16Result = callback(closure_17, obj10);
       }
     }
   }
   const obj11 = { children: null };
   const items11 = [tmp16Result, callback(guildId(stateFromStores[28]).NavScrim, {})];
   obj11[0] = items11;
-  return closure_16(closure_17, obj11);
+  return callback(closure_17, obj11);
 };

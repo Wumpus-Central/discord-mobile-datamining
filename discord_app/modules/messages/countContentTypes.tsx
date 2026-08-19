@@ -1,7 +1,7 @@
 // discord_app/modules/messages/countContentTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/messages/countContentTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/countContentTypes.tsx");
 
 export default function countContentTypes(content) {
   let num = 0;

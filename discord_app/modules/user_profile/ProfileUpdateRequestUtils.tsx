@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/ProfileUpdateRequestUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import AssetOriginTypes from "../profile_customization/ProfilePendingImageTypes.tsx";
 import getCurrentUserProfileDefault from "utils/getCurrentUserProfile.tsx";
 
-const result = set.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 
 export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(closure_1_0, id) {
   let obj = {};
@@ -58,7 +58,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   const items = [...collectibles];
   if (undefined !== pendingProfileEffect) {
-    const found = items.filter((type) => type.type !== callback(1949).CollectiblesItemType.PROFILE_EFFECT);
+    const found = items.filter((item, index) => item.type !== callback(1949).CollectiblesItemType.PROFILE_EFFECT);
     let arr3 = found;
     if (null !== pendingProfileEffect) {
       obj = { skuId: null, type: null };
@@ -70,14 +70,14 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   let arr5 = arr3;
   if (undefined !== pendingProfileFrame) {
-    const found1 = arr3.filter((type) => type.type !== callback(1949).CollectiblesItemType.PROFILE_FRAME);
+    const found1 = arr3.filter((item, index) => item.type !== callback(1949).CollectiblesItemType.PROFILE_FRAME);
     arr5 = found1;
     if (null !== pendingProfileFrame) {
       found1.push(pendingProfileFrame);
       arr5 = found1;
     }
   }
-  obj = { collectibles_sku_ids: arr5.map((skuId) => skuId.skuId) };
+  obj = { collectibles_sku_ids: arr5.map((item, index) => item.skuId) };
 };
 export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpdateRequest(closure_1_0) {
   const obj = {};
@@ -137,8 +137,8 @@ export const getGuildMemberChangesForUpdateRequest = function getGuildMemberChan
 };
 export const getPrimaryGuildChangesForUpdateRequest = function getPrimaryGuildChangesForUpdateRequest(closure_1_0) {
   const obj = {};
-  if (undefined !== closure_1_0.pendingPrimaryGuildId) {
-    obj.primaryGuildId = closure_1_0.pendingPrimaryGuildId;
+  if (undefined !== require.pendingPrimaryGuildId) {
+    obj.primaryGuildId = require.pendingPrimaryGuildId;
   }
   return obj;
 };

@@ -3,7 +3,7 @@ import getUnitIdDefault from "../experiments/apex/ApexExperiment.tsx";
 
 const tmp2 = getUnitIdDefault({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting("modules/safety_flows/SafetyFlowsExperiment.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_flows/SafetyFlowsExperiment.tsx");
 
 export default tmp2;
 export const isEligibleForSafetyFlowsExperiment = function isEligibleForSafetyFlowsExperiment(location) {

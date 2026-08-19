@@ -1,12 +1,12 @@
 // discord_app/modules/saved_messages/native/ForLaterCardActionButtons.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_6 = createCacheKey.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
-const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterCardActionButtons.tsx");
+const result = require("obj132").fileFinishedImporting("modules/saved_messages/native/ForLaterCardActionButtons.tsx");
 
 export default function ForLaterCardActionButtons(savedMessage) {
   savedMessage = savedMessage.savedMessage;
@@ -14,25 +14,25 @@ export default function ForLaterCardActionButtons(savedMessage) {
   const items = [savedMessage];
   let obj = { label: null, IconComponent: null, action: null };
   const callback = React.useCallback(() => {
-    let obj = jumpToMessage(closure_1_2[4]);
-    obj = {
+    jumpToMessage(dependencyMap[4]);
+    let obj = {
       createReminder(dueAt) {
-        let obj = closure_1_0(closure_1_2[7]);
-        obj = {};
+        savedMessage(closure_1_2[7]);
+        const obj = {};
         const merged = Object.assign(closure_0.saveData);
         obj.dueAt = dueAt;
-        obj.source = closure_1_0(closure_1_2[8]).SavedMessageSources.FOR_LATER_LIST;
+        obj.source = savedMessage(closure_1_2[8]).SavedMessageSources.FOR_LATER_LIST;
         return obj.addOrUpdateSavedMessage(obj);
       },
       removeReminder() {
-        let obj = closure_1_0(closure_1_2[7]);
-        obj = { channelId: closure_0.saveData.channelId, messageId: closure_0.saveData.messageId, displayToast: true, isReminder: true };
+        savedMessage(closure_1_2[7]);
+        const obj = { channelId: closure_0.saveData.channelId, messageId: closure_0.saveData.messageId, displayToast: true, isReminder: true };
         return obj.removeSavedMessage(obj);
       },
       channelId: savedMessage.saveData.channelId,
       messageId: savedMessage.saveData.messageId
     };
-    return obj.openLazy(savedMessage(closure_1_2[6])(closure_1_2[5], closure_1_2.paths), "MessageReminderDurationActionSheet", obj);
+    return obj.openLazy(savedMessage(dependencyMap[6])(dependencyMap[5], dependencyMap.paths), "MessageReminderDurationActionSheet", obj);
   }, items);
   let intl = savedMessage(1236).intl;
   obj[0] = intl.string(savedMessage(1236).t["+TSRGD"]);
@@ -51,7 +51,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
     label: intl2.string(SvXS1Z),
     IconComponent: tmp3(6368).XSmallIcon,
     action() {
-      return savedMessage(closure_1_2[7]).removeSavedMessage(savedMessage.saveData);
+      return savedMessage(dependencyMap[7]).removeSavedMessage(savedMessage.saveData);
     },
     variant: "destructive"
   };
@@ -88,4 +88,5 @@ export default function ForLaterCardActionButtons(savedMessage) {
     obj2[2] = callback;
     obj2 = items1.unshift(obj2);
   }
+  tmp = callback();
 };

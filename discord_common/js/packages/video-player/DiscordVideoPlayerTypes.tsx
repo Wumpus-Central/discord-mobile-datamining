@@ -1,7 +1,7 @@
 // discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx");
 
 export const DEFAULT_VIDEO_VOLUME = 0.3;
 export const DEFAULT_VIDEO_PLAYER_MIN_WIDTH = 240;

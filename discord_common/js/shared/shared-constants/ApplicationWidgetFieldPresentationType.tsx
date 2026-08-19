@@ -1,6 +1,6 @@
 // discord_common/js/shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx");
 
 export const ApplicationWidgetFieldPresentationType = { TEXT: "text", NUMBER: "number", IMAGE: "image", DURATION: "duration" };

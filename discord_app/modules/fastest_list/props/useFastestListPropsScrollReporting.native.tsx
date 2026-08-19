@@ -1,8 +1,8 @@
 // discord_app/modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 let closure_2 = { code: "function useFastestListPropsScrollReportingNativeTsx1(event){const{scrollPosition,horizontal}=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}}" };
-let result = set.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx");
+let result = obj132.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx");
 
 export default function useFastestListPropsScrollReporting(scrollReporting, horizontal) {
   const _require = horizontal;

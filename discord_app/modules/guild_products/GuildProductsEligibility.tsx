@@ -1,16 +1,15 @@
 // discord_app/modules/guild_products/GuildProductsEligibility.tsx
-import closure_2 from "../../stores/GuildStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 import { GuildFeatures } from "../../Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");
 
 export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuildProducts(id) {
   const _require = id;
   const items = [closure_2];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => {
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
@@ -18,13 +17,12 @@ export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuil
       let tmp4 = null != guild;
       if (tmp4) {
         const features = guild.features;
-        let hasItem = features.has(closure_1_3.COMMUNITY);
+        let hasItem = features.has(GuildFeatures.COMMUNITY);
         if (!hasItem) {
           const features2 = guild.features;
-          hasItem = features2.has(tmp5.GUILD_PRODUCTS);
+          hasItem = features2.has(GuildFeatures.GUILD_PRODUCTS);
         }
         tmp4 = hasItem;
-        tmp5 = closure_1_3;
       }
       return tmp4;
     }
@@ -41,10 +39,9 @@ export const isGuildEligibleForGuildProducts = function isGuildEligibleForGuildP
       let hasItem = features.has(GuildFeatures.COMMUNITY);
       if (!hasItem) {
         const features2 = guild.features;
-        hasItem = features2.has(tmp4.GUILD_PRODUCTS);
+        hasItem = features2.has(GuildFeatures.GUILD_PRODUCTS);
       }
       tmp3 = hasItem;
-      tmp4 = GuildFeatures;
     }
     return tmp3;
   }

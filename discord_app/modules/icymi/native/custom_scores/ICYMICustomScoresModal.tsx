@@ -6,36 +6,19 @@ import createNativeStackNavigator from "../../../../../_runtime/09931_createNati
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createNativeStackNavigator.createNativeStackNavigator();
-createNativeStackNavigator = { header: null };
 createNativeStackNavigator = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createNativeStackNavigator[0] = createNativeStackNavigator;
 let closure_6 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("set").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx");
 
 export default function ICYMICustomScoresModal() {
   const _require = callback3();
-  let obj = _NavigationStack;
+  let obj = NavigationStack;
   closure_1 = obj.useAccessibilityNativeStackOptions();
-  obj = {
-    screenOptions() {
-      let merged = Object.assign(closure_1);
-      return {
-        headerStyle: lib.header,
-        headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
-          const merged1 = Object.assign(merged);
-          return callback2(callback(table[6]).GenericHeaderTitle, { title: children.children });
-        },
-        headerTitleAlign: "center"
-      };
-    },
-    initialRouteName: "default",
-    children: null
-  };
   obj = {
     name: "default",
     options(navigation) {

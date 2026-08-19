@@ -1,8 +1,8 @@
 // discord_app/modules/fastest_list/useFastestListComputedStyles.android.tsx
-import closure_0 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { StyleSheet } from "../../../_runtime/00017_get_ActivityIndicator.js";
 
-const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
+const result = require("obj132").fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
 
 export default function useFastestListComputedStyles(style) {
   style = style.style;
@@ -18,7 +18,7 @@ export default function useFastestListComputedStyles(style) {
     } else {
       obj = { flex: 1 };
     }
-    const flattenResult = closure_1_1.flatten(obj);
+    const flattenResult = StyleSheet.flatten(obj);
     let num;
     if (flattenResult != null) {
       num = flattenResult.marginStart;

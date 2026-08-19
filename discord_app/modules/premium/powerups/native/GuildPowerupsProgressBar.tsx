@@ -1,24 +1,23 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsProgressBar.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import LinearGradientDefault from "../../../../../_runtime/04756_LinearGradient.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../guild_boosting/GuildBoostingProgressBarPersistedStore.tsx";
-import closure_6 from "../../../../stores/GuildStore.tsx";
+import initialize from "../../../guild_boosting/GuildBoostingProgressBarPersistedStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../reanimated/ReanimatedRexport.tsx";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let result = 2 * ThemesDefault.space.PX_4;
 let closure_10 = importDefaultResult.createAnimatedComponent(LinearGradientDefault);
-let obj = { container: null, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, rightContent: null };
-obj = { paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj = { paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-createCacheKey = { height: 30, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };
+const createCacheKey = { height: 30, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };
 obj[1] = createCacheKey;
 let obj2 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -26,13 +25,11 @@ obj2.padding = 2;
 obj[2] = obj2;
 obj[3] = { height: "100%", minWidth: 26, borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: "rgba(255, 115, 250, 0.2)", overflow: "hidden" };
 obj[4] = { shadowColor: "rgba(0, 0, 0, 0.14)", shadowOffset: { width: 0, height: 1 }, shadowOpacity: 1, shadowRadius: 4, elevation: 2 };
-let obj3 = { height: "100%", minWidth: 26, borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: "rgba(255, 115, 250, 0.2)", overflow: "hidden" };
 obj[5] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_12 };
 obj[6] = { flexDirection: "row", alignItems: "center" };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function GuildPowerupsProgressBarTsx1(){const{animatedFillPercent,animatedFillOpacity}=this.__closure;return{width:animatedFillPercent.get()+\"%\",opacity:animatedFillOpacity.get()};}" };
-const obj4 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_12 };
-let result1 = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsProgressBar.tsx");
+let result1 = require("obj132").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsProgressBar.tsx");
 
 export default function GuildPowerupsProgressBar(guildId) {
   guildId = guildId.guildId;
@@ -95,9 +92,9 @@ export default function GuildPowerupsProgressBar(guildId) {
     }
     const result1 = sharedValue1.set(guildId(num[12]).withTiming(num, { duration: 500 }));
     return () => {
-      closure_1_0(closure_1_2[6]).cancelAnimation(closure_4);
-      const obj = closure_1_0(closure_1_2[6]);
-      closure_1_0(closure_1_2[6]).cancelAnimation(closure_5);
+      guildId(num[6]).cancelAnimation(closure_4);
+      const obj = guildId(num[6]);
+      guildId(num[6]).cancelAnimation(closure_5);
     };
   }, items5);
   class O {
@@ -153,11 +150,11 @@ export default function GuildPowerupsProgressBar(guildId) {
   const obj3 = { style: tmp.fillContainer, children: callback(closure_10, obj4) };
   items10[1] = callback(guildId(num[19]).ChevronSmallRightIcon, { size: "sm", color: stateFromStores1(num[5]).colors.TEXT_DEFAULT });
   obj6[1] = items10;
-  items9[1] = closure_8(sharedValue, obj6);
+  items9[1] = callback(sharedValue, obj6);
   obj5[1] = items9;
-  items8[1] = closure_8(sharedValue, obj5);
+  items8[1] = callback(sharedValue, obj5);
   obj2[1] = items8;
-  obj1[4] = closure_8(sharedValue, obj2);
+  obj1[4] = callback(sharedValue, obj2);
   return callback(guildId(num[17]).PressableScale, obj1);
 };
 export const BOOST_PROGRESS_BAR_HEIGHT = result + 30;

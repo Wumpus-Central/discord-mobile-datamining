@@ -1,10 +1,10 @@
 // discord_app/modules/app_database/background_sync/native/BackgroundSyncManager.tsx
 import initializeDefault from "../../../../lib/AutomaticLifecycleManager.tsx";
 import _backgroundSync from "BackgroundSync.tsx";
-import closure_2 from "../../../../stores/AuthenticationStore.tsx";
-import closure_3 from "../../../../stores/UserStore.tsx";
+import fetchFingerprint from "../../../../stores/AuthenticationStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 initializeDefault;
 class BackgroundSyncManager extends tmp2 {
   constructor() {
@@ -34,7 +34,6 @@ prototype["handleMessageCreate"] = function handleMessageCreate(message) {
     }
     if (tmp2) {
       _backgroundSync.backgroundSync({ force: true });
-      const obj2 = _backgroundSync;
     }
   }
 };
@@ -42,6 +41,6 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   _backgroundSync.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
 };
 const backgroundSyncManager = new BackgroundSyncManager();
-const result = require("set").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
 
 export default backgroundSyncManager;

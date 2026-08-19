@@ -1,14 +1,14 @@
 // discord_app/modules/chat_input/native/action_buttons/useChatInputFloatingBounce.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import TextAreaCta from "../ChatInputConstants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: c4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: c5, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: closure_6, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: error } = TextAreaCta);
 let closure_8 = { code: "function useChatInputFloatingBounceTsx1(finished){const{runOnJS,setEnterFinished}=this.__closure;if(finished===true){runOnJS(setEnterFinished)(true);}}" };
 let closure_9 = { code: "function useChatInputFloatingBounceTsx2(finished){const{runOnJS,handleExitFinished}=this.__closure;if(finished===true){runOnJS(handleExitFinished)();}}" };
 let closure_10 = { code: "function useChatInputFloatingBounceTsx3(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
-let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingBounce.tsx");
+let result = require("obj132").fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingBounce.tsx");
 
 export default function useChatInputFloatingBounce(visible) {
   visible = visible.visible;
@@ -65,7 +65,7 @@ export default function useChatInputFloatingBounce(visible) {
   }, items);
   const items1 = [visible, num, sharedValue, sharedValue1];
   const effect1 = obj3.useEffect(() => {
-    function handleExitFinished(arg0) {
+    function handleExitFinished(closure_1_1) {
       const current = ref.current;
       let currentResult;
       if (current != null) {

@@ -6,21 +6,20 @@ import Button from "../../../../design/void/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import registerAssetDefault from "../../../../../_runtime/11640_registerAsset.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../user_settings/ThemeStore.tsx";
-import closure_9 from "../../../../stores/ChannelStore.tsx";
-import closure_10 from "../../../../stores/GuildStore.tsx";
+import handleThemeChange from "../../../user_settings/ThemeStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function Separator() {
   return callback(closure_6, { style: callback2().separator });
 }
 function LegalDisclaimer() {
-  let obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = getSystemLocale.intl;
-  obj = { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS };
+  const obj = { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS };
   obj[2] = intl.format(getSystemLocale.t.FSPTDI, obj);
   return callback(Text.Text, obj);
 }
@@ -46,42 +45,33 @@ function SocialBadge(onPress) {
   }
   items[2] = tmp5Result;
   obj[3] = items;
-  return closure_15(closure_5, obj);
+  return callback(closure_5, obj);
 }
 noopAll;
 ({ ActivityIndicator: c4, TouchableOpacity: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ AnalyticsLocations: unpackModuleId, GuildFeatures: closure_12, MarketingURLs: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-createCacheKey = { container: null, heroImage: null, guildIconContainer: null, guildIcon: null, contentCard: null, loadingContainer: null, socialContainer: null, socialBadge: null, socialBadgeIcon: null, socialBadgeArrow: null, separator: null, moneyBirbPlaceholder: null, gatedChannel: null, gatedChannelIcon: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { aspectRatio: 4, width: "100%" };
 createCacheKey[2] = { borderWidth: 3, borderRadius: ThemesDefault.radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute" };
-let obj1 = { borderWidth: 3, borderRadius: ThemesDefault.radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute" };
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm };
-let obj2 = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[4] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 47, paddingHorizontal: 16, borderTopLeftRadius: ThemesDefault.radii.md, borderTopRightRadius: ThemesDefault.radii.md, marginTop: -15 };
 createCacheKey[5] = { flex: 1, justifyContent: "center", alignItems: "center", paddingBottom: 40 };
 createCacheKey[6] = { flexDirection: "row" };
-let obj3 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 47, paddingHorizontal: 16, borderTopLeftRadius: ThemesDefault.radii.md, borderTopRightRadius: ThemesDefault.radii.md, marginTop: -15 };
 createCacheKey[7] = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.xl, paddingVertical: 4, paddingHorizontal: 8, alignItems: "center" };
 createCacheKey[8] = { height: 24, marginRight: 6 };
-let obj4 = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.xl, paddingVertical: 4, paddingHorizontal: 8, alignItems: "center" };
 createCacheKey[9] = { height: 24, marginLeft: 6, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj5 = { height: 24, marginLeft: 6, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[10] = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 24 };
 createCacheKey[11] = { marginVertical: 64, alignSelf: "center", backgroundColor: "transparent" };
 createCacheKey[12] = { flexDirection: "row", alignItems: "center", marginBottom: -4 };
-let obj6 = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 24 };
 createCacheKey[13] = { tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let obj7 = { tintColor: ThemesDefault.colors.TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePage.tsx");
 
 export default function GuildRoleSubscriptionPurchasePage(guildId) {
   guildId = guildId.guildId;
   const gatedChannelId = guildId.gatedChannelId;
-  importAll = undefined;
   let stateFromStores1;
   closure_4 = undefined;
   let store_page_trailer_url;
@@ -103,7 +93,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
     id = first.id;
   }
   const subscriptionListingsForGroup = obj4.useSubscriptionListingsForGroup(id, { includeUnpublished: false });
-  const mapped = subscriptionListingsForGroup.map((id) => id.id);
+  const mapped = subscriptionListingsForGroup.map((item, index) => item.id);
   if (null != gatedChannelId) {
     let ROLE_SUBSCRIPTIONS_TAB = constants.ROLE_SUBSCRIPTION_GATED_CHANNEL;
   } else {
@@ -139,9 +129,8 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
               const intl2 = tmp5(tmp3[10]).intl;
               obj = { unlockHook: null };
               obj[0] = function unlockHook() {
-                let obj = { style: closure_2.gatedChannel, children: null };
                 const items = [closure_1_14(guildId(stateFromStores1[11]).Spacer, { size: 3 }), , , ];
-                obj = { size: guildId(stateFromStores1[11]).Icon.Sizes.SMALL_20, style: closure_2.gatedChannelIcon, source: guildId(stateFromStores1[22]).getChannelIcon(stateFromStores1) };
+                let obj = { size: guildId(stateFromStores1[11]).Icon.Sizes.SMALL_20, style: closure_2.gatedChannelIcon, source: guildId(stateFromStores1[22]).getChannelIcon(stateFromStores1) };
                 items[1] = closure_1_14(guildId(stateFromStores1[11]).Icon, obj);
                 items[2] = closure_1_14(guildId(stateFromStores1[11]).Spacer, { size: 3 });
                 obj = { variant: "text-xs/semibold", color: "text-default", children: closure_4 };
@@ -184,7 +173,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
               tmp20Result = null != store_page_trailer_url;
             }
             if (tmp20Result) {
-              const items5 = [tmp22(tmp5(tmp3[11]).Spacer, { size: 24 }), ];
+              const items5 = [callback(tmp5(tmp3[11]).Spacer, { size: 24 }), ];
               const obj9 = { style: null, children: null };
               obj9[0] = tmp.socialContainer;
               if (hasItem) {
@@ -192,7 +181,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
                 obj10[0] = tmp2(tmp3[27]);
                 const intl4 = tmp5(tmp3[10]).intl;
                 obj10[1] = intl4.string(tmp5(tmp3[10]).t["2MhjUV"]);
-                hasItem = tmp22(SocialBadge, obj10);
+                hasItem = callback(SocialBadge, obj10);
               }
               const items6 = [hasItem, ];
               let tmp22Result = null != store_page_trailer_url;
@@ -204,17 +193,16 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
                 obj11[2] = function onPress() {
                   return gatedChannelId(stateFromStores1[29]).openURL(store_page_trailer_url);
                 };
-                tmp22Result = tmp22(SocialBadge, obj11);
+                tmp22Result = callback(SocialBadge, obj11);
               }
               const obj12 = { children: null };
               const obj13 = { gap: 8, children: null };
               items6[1] = tmp22Result;
               obj13[1] = items6;
-              obj9[1] = tmp20(tmp5(tmp3[26]).GappedList, obj13);
-              items5[1] = tmp22(tmp23, obj9);
+              obj9[1] = callback(tmp5(tmp3[26]).GappedList, obj13);
+              items5[1] = callback(closure_6, obj9);
               obj12[0] = items5;
-              tmp20Result = tmp20(closure_16, obj12);
-              const tmp26 = closure_16;
+              tmp20Result = callback(closure_16, obj12);
             }
             items4[4] = tmp20Result;
             items4[5] = callback(tmp5(tmp3[11]).Spacer, { size: 16 });
@@ -226,16 +214,16 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
             items4[8] = callback(tmp5(tmp3[9]).Text, obj14);
             items4[9] = callback(tmp5(tmp3[11]).Spacer, { size: 24 });
             const obj15 = { gap: 16, children: null };
-            obj15[1] = mapped.map((listingId) => closure_1_14(gatedChannelId(stateFromStores1[30]), { listingId, guildId }, listingId));
+            obj15[1] = mapped.map((item, index) => closure_1_14(gatedChannelId(stateFromStores1[30]), { listingId: item, guildId }, item));
             items4[10] = callback(tmp5(tmp3[26]).GappedList, obj15);
             obj3[1] = items4;
-            items3[1] = closure_15(closure_6, obj3);
+            items3[1] = callback(closure_6, obj3);
             const obj16 = { source: null, style: null };
             obj16[0] = tmp18;
             obj16[1] = tmp.moneyBirbPlaceholder;
             items3[2] = callback(tmp2(tmp3[23]), obj16);
             obj1[2] = items3;
-            return closure_15(closure_7, obj1);
+            return callback(closure_7, obj1);
           }
           const intl = tmp5(tmp3[10]).intl;
           formatResult = intl.string(tmp5(tmp3[10]).t["mPHb1/"]);

@@ -1,12 +1,12 @@
 // discord_app/modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../../stores/GuildStore.tsx";
-import closure_3 from "../../stores/SelectedGuildStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedGuildStore.tsx";
 import MIDJOURNEY_GUILD_ID from "MidjourneyOnboardingConstants.tsx";
 
-require = arg1;
+require = fn;
 ({ MIDJOURNEY_BOT_ID: c4, MIDJOURNEY_GUILD_ID: c5 } = MIDJOURNEY_GUILD_ID);
-const result = require("set").fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/midjourney_onboarding/MidjourneyOnboardingUtils.tsx");
 
 export const isMidjourneyOnboardingFlow = function isMidjourneyOnboardingFlow() {
   let obj = arg0;
@@ -54,12 +54,12 @@ export const useIsMidjourneyOnboardingFlow = function useIsMidjourneyOnboardingF
   }, []);
 };
 export const isEligibleForMidjourneyRedirect = function isEligibleForMidjourneyRedirect(closure_1_0) {
-  let isDMResult = closure_1_0.isDM();
+  let isDMResult = require.isDM();
   if (isDMResult) {
-    isDMResult = 1 === closure_1_0.rawRecipients.length;
+    isDMResult = 1 === require.rawRecipients.length;
   }
   if (isDMResult) {
-    isDMResult = closure_1_0.rawRecipients[0].id === closure_4;
+    isDMResult = require.rawRecipients[0].id === closure_4;
   }
   if (isDMResult) {
     let guildStore = {}.guildStore;
@@ -86,8 +86,8 @@ export const isEligibleForMidjourneyRedirect = function isEligibleForMidjourneyR
 };
 export const hasRedirectedToGuild = function hasRedirectedToGuild(closure_1_4) {
   closure_0 = closure_1_4;
-  return new Promise((arg0, arg1) => {
-    closure_0 = arg0;
+  return new Promise((fn) => {
+    closure_0 = fn;
     closure_1 = arg1;
     function handleSelectedGuildUpdate() {
       if (closure_2_3.getGuildId() === callback) {
@@ -106,7 +106,7 @@ export const hasRedirectedToGuild = function hasRedirectedToGuild(closure_1_4) {
       }, 3000);
       closure_1_3.addChangeListener(handleSelectedGuildUpdate);
     } else {
-      arg0();
+      fn();
     }
   });
 };

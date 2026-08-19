@@ -6,13 +6,13 @@ import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING from "channel/MessagesItemChannel
 import MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDINGDefault from "channel/MessagesItemChannelBase.tsx";
 import _modDef15305 from "MessagesItemPlaceholder.tsx";
 import toNativeHorizontalOffset from "../../../../../../../_runtime/15306_toNativeHorizontalOffset.js";
-import closure_3 from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../../../../stores/ChannelStore.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 
-require = arg1;
+require = fn;
 let c4 = importAllResult;
 let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
   ({ channelId: require, placeholderHeight } = arg0);
@@ -48,7 +48,7 @@ const memoResult = importAllResult.memo((arg0) => {
   return <closure_7 />;
 });
 const memoResult1 = importAllResult.memo((channelId) => {
-  let obj = _noop;
+  let obj = noop;
   const items = [channelId.channelId];
   const tmp = callback(obj.useRecyclingState(false, items), 2);
   _require = tmp2;
@@ -61,15 +61,14 @@ const memoResult1 = importAllResult.memo((channelId) => {
   return <closure_7 />;
 });
 const memoResult2 = importAllResult.memo((arg0) => {
-  let obj = toNativeHorizontalOffset;
-  obj = {};
+  const obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false), 2);
   const merged = Object.assign(arg0);
   obj.isPressed = tmp2;
   obj.setIsPressed = tmp3;
   return <closure_7 />;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx");
 
 export const getMessagesItemChannelSizes = function getMessagesItemChannelSizes(fontScale) {
   let obj = map;

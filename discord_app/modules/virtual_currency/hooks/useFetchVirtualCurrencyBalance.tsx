@@ -1,10 +1,10 @@
 // discord_app/modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../stores/VirtualCurrencyStore.tsx";
+import redeemError from "../stores/VirtualCurrencyStore.tsx";
 
 const useEffect = noop.useEffect;
-const result = set.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
+const result = obj132.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
 
 export const useFetchVirtualCurrencyBalance = function useFetchVirtualCurrencyBalance(disableFetch) {
   const _require = disableFetch;

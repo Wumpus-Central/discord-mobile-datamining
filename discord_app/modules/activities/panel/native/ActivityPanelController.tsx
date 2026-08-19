@@ -1,18 +1,18 @@
 // discord_app/modules/activities/panel/native/ActivityPanelController.tsx
 import _runPrimaryAppCommandOrJoinEmbeddedActivityAll from "../../EmbeddedActivitiesActionCreators.tsx";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
-import closure_6 from "../../../applications/ApplicationStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import addApplication from "../../../applications/ApplicationStore.tsx";
 import closure_7 from "../../../panels/morphable/AppFreezeStore.tsx";
 import closure_8 from "../../../panels/morphable/native/SafeAreaDisabledStore.tsx";
-import closure_9 from "../../../../stores/ChannelStore.tsx";
-import closure_10 from "../../EmbeddedActivitiesStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import participantFromServer from "../../EmbeddedActivitiesStore.tsx";
 import items3 from "../../Constants.tsx";
 import { ActivityPanelModes } from "../ActivityPanelConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import areArraysShallowlyEqual from "../../../../utils/FunctionUtils.tsx";
 
-const require = arg1;
+const require = fn;
 class BaseActivityPanelController {
   constructor(arg0) {
     ({ orientationLockStateForApp, mode } = global);
@@ -36,12 +36,12 @@ class BaseActivityPanelController {
     tmp3 = require("useSafeAreaInsets")();
     tmp4 = require("useWindowDimensions")();
     tmp5 = closure_0;
-    obj = require("module_4115");
+    obj = require("../../../reanimated/ReanimatedRexport.tsx");
     sharedValue = obj.useSharedValue({ x: -1, y: -1 });
     closure_3 = sharedValue;
     tmp7 = require("usePIPAvoidanceSpecs")(tmp3);
     closure_4 = tmp7;
-    obj2 = require("module_4115");
+    obj2 = require("../../../reanimated/ReanimatedRexport.tsx");
     sharedValue1 = obj2.useSharedValue(closure_16);
     closure_5 = sharedValue1;
     obj3 = closure_5;
@@ -64,7 +64,7 @@ class BaseActivityPanelController {
     tmp14 = require("useHandleOAuthNavigation")();
     tmp5Result2 = require("useNavigatorBackPressHandler");
     navigatorBackPressHandler = tmp5Result2.useNavigatorBackPressHandler(() => {
-      let flag = sharedValue1 === closure_1_14.PANEL;
+      let flag = sharedValue1 === ActivityPanelModes.PANEL;
       if (flag) {
         first(tmp.PIP);
         flag = true;
@@ -83,31 +83,31 @@ class BaseActivityPanelController {
         if (null == ref2.current) {
           if (!isActivityPanelFullscreen(12469)(closure_10.isWindowLandscape, defaultOrientationLockState)) {
             if (!closure_8) {
-              first(closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE);
+              first(ActivityPanelModes.LAUNCHING_WITH_ORIENTATION_CHANGE);
             }
           }
-          first(closure_1_14.PANEL);
+          first(ActivityPanelModes.PANEL);
         }
-        ref2.current = tmp;
+        ref2.current = isActivityPanelFullscreen;
       }
       if (null == isActivityPanelFullscreen) {
         if (null != ref2.current) {
-          first(closure_1_14.DISCONNECTED);
+          first(ActivityPanelModes.DISCONNECTED);
         }
       }
-      let tmp4 = sharedValue1 === closure_1_14.LAUNCHING_WITH_ORIENTATION_CHANGE;
+      let tmp4 = sharedValue1 === ActivityPanelModes.LAUNCHING_WITH_ORIENTATION_CHANGE;
       if (tmp4) {
         tmp4 = isActivityPanelFullscreen(12469)(closure_10.isWindowLandscape, defaultOrientationLockState);
       }
       if (tmp4) {
-        first(closure_1_14.PANEL);
+        first(ActivityPanelModes.PANEL);
       }
     }, items);
     items1 = [, ];
     items1[0] = mode;
     items1[1] = sharedValue1;
     effect1 = obj3.useEffect(() => {
-      let tmp3 = sharedValue1 === closure_1_14.PANEL;
+      let tmp3 = sharedValue1 === ActivityPanelModes.PANEL;
       if (tmp3) {
         tmp3 = ref.current !== tmp2.PANEL;
       }
@@ -135,7 +135,7 @@ class BaseActivityPanelController {
     items2[4] = isVoicePanelFullscreen;
     layoutEffect = obj3.useLayoutEffect(() => {
       if (!first) {
-        if (isActivityPanelFullscreen === closure_1_14.PANEL) {
+        if (isActivityPanelFullscreen === ActivityPanelModes.PANEL) {
           if (sharedValue1) {
             isActivityPanelFullscreen(16228)(dependencyMap);
           }
@@ -192,7 +192,7 @@ class BaseActivityPanelController {
     closure_3 = tmp28;
     id1 = obj3.useId();
     closure_4 = id1;
-    tmp5Result4 = require("module_4115");
+    tmp5Result4 = require("../../../reanimated/ReanimatedRexport.tsx");
     fn = function l() {
       return sharedValue1.get().gestureActive;
     };
@@ -205,7 +205,7 @@ class BaseActivityPanelController {
         const obj = sharedValue1(4115);
       }
     };
-    obj = { runOnJS: require("module_4115").runOnJS, setWrapperGestureInProgress: tmp28 };
+    obj = { runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, setWrapperGestureInProgress: tmp28 };
     fn2.__closure = obj;
     fn2.__workletHash = 5831467313798;
     fn2.__initData = closure_19;
@@ -257,7 +257,7 @@ let closure_17 = areArraysShallowlyEqual.cachedFunction((arg0, arg1, arg2, arg3)
     obj[0] = Math.max(width, height);
     const _Math4 = Math;
     obj[1] = Math.min(height, width);
-  } else if (tmp2.PORTRAIT === arg2) {
+  } else if (constants.PORTRAIT === arg2) {
     if (arg3) {
       if (tmp) {
         obj1 = { width: null, height: null, isLandscape: false, isWindowLandscape: null };
@@ -274,7 +274,7 @@ let closure_17 = areArraysShallowlyEqual.cachedFunction((arg0, arg1, arg2, arg3)
     const _Math2 = Math;
     obj2[1] = Math.max(height, width) - arg1;
   } else {
-    const UNLOCKED = tmp2.UNLOCKED;
+    const UNLOCKED = constants.UNLOCKED;
     obj = { width: null, height: null, isLandscape: null, isWindowLandscape: null };
     obj[0] = width;
     let diff = height;
@@ -289,11 +289,10 @@ let closure_17 = areArraysShallowlyEqual.cachedFunction((arg0, arg1, arg2, arg3)
 });
 let closure_18 = { code: "function ActivityPanelControllerTsx1(){const{wrapperOffset}=this.__closure;return wrapperOffset.get().gestureActive;}" };
 let closure_19 = { code: "function ActivityPanelControllerTsx2(gestureActive,previous){const{runOnJS,setWrapperGestureInProgress}=this.__closure;if(gestureActive===previous)return;runOnJS(setWrapperGestureInProgress)(gestureActive);}" };
-let result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelController.tsx");
+let result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelController.tsx");
 
 export default function ActivityPanelController(children) {
   let mode;
-  let connectedActivityInTextChannelId;
   let obj = mode(589);
   const items = [closure_10, closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
@@ -329,23 +328,23 @@ export default function ActivityPanelController(children) {
     return obj;
   }, []);
   mode = stateFromStoresObject.mode;
-  connectedActivityInTextChannelId = stateFromStoresObject.connectedActivityInTextChannelId;
+  const connectedActivityInTextChannelId = stateFromStoresObject.connectedActivityInTextChannelId;
   const items1 = [mode, connectedActivityInTextChannelId];
   ({ hasConnectedActivity, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
   const effect = React.useEffect(() => {
-    if (mode === closure_1_14.PANEL) {
+    if (mode === ActivityPanelModes.PANEL) {
       const channel = closure_1_9.getChannel(connectedActivityInTextChannelId);
       if (undefined !== channel) {
-        let obj = connectedActivityInTextChannelId(closure_1_3[29]);
-        obj = { guildId: null, channelId: null };
+        connectedActivityInTextChannelId(dependencyMap[29]);
+        const obj = { guildId: null, channelId: null };
         ({ guild_id: obj2[0], id: obj2[1] } = channel);
         const channel1 = obj.selectChannel(obj);
-        mode(closure_1_3[30]).transitionToChannel(channel.id);
-        const obj3 = mode(closure_1_3[30]);
+        mode(dependencyMap[30]).transitionToChannel(channel.id);
+        const obj3 = mode(dependencyMap[30]);
       }
     }
   }, items1);
   obj = { context: connectedActivityInTextChannelId(16234), orientationLockStateForApp, mode, hasConnectedActivity, connectedActivityAppId, currentApp, updateActivityPanelMode: _runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode, children: children.children };
-  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16234)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={_runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode}>{arg0.children}</BaseActivityPanelController>;
+  return <BaseActivityPanelController context={connectedActivityInTextChannelId(16234)} orientationLockStateForApp={orientationLockStateForApp} mode={mode} hasConnectedActivity={hasConnectedActivity} connectedActivityAppId={connectedActivityAppId} currentApp={currentApp} updateActivityPanelMode={_runPrimaryAppCommandOrJoinEmbeddedActivityAll.updateActivityPanelMode}>{children.children}</BaseActivityPanelController>;
 };
 export { BaseActivityPanelController };

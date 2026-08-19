@@ -1,5 +1,5 @@
 // discord_app/modules/media_viewer/native/MediaPlayerMuteManager.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import keys from "../../../../_runtime/00644_keys.js";
 
@@ -23,7 +23,7 @@ prototype["terminate"] = function terminate() {
     muteSubscription.remove();
   }
 };
-const result = set.fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
+const result = obj132.fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
 
 export default Object.create(MediaPlayerMuteManager.prototype);
 export const useMediaPlayerMutedStore = obj;

@@ -12,9 +12,9 @@ import registerAssetDefault2 from "../../../../_runtime/10774_registerAsset.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import OperatorTypes from "../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function PaypalVanityTag(style) {
   const tmp = callback3();
   const obj = { style: items, label: null, textStyle: null };
@@ -35,13 +35,13 @@ function VanityMetric(label) {
   }
   const sum = result + str;
   if (typeof label === "string") {
-    const intl = tmp2(1236).intl;
+    const intl = getSystemLocale.intl;
     obj = { name: null, value: null };
     obj[0] = label;
     obj[1] = sum;
-    let children = intl.format(tmp2(1236).t.HLoinF, obj);
+    let children = intl.format(getSystemLocale.t.HLoinF, obj);
   } else {
-    const intl2 = tmp2(1236).intl;
+    const intl2 = getSystemLocale.intl;
     obj = { value: null };
     obj[0] = sum;
     children = intl2.format(label, obj);
@@ -54,11 +54,10 @@ function VanityItem(style) {
   style = style.style;
   ({ label, imageSrc, imageAlt } = style);
   const tmp = callback3();
-  let obj = { style: items, children: null };
-  items = [, , ];
+  const items = [, , ];
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataItem: arr[1] } = tmp);
   items[2] = style;
-  obj = { source: imageSrc, accessibilityLabel: imageAlt, style: tmp.connectedAccountVanityMetadataItemIcon, disableColor: true };
+  const obj = { source: imageSrc, accessibilityLabel: imageAlt, style: tmp.connectedAccountVanityMetadataItemIcon, disableColor: true };
   const items1 = [callback(Button.Icon, obj), callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style, children: label })];
   obj[1] = items1;
   return callback2(View, obj);
@@ -73,10 +72,9 @@ function VanityTag(arg0) {
 }
 function VanityDate(arg0) {
   ({ date, label, locale, style } = arg0);
-  let obj = { variant: "text-xs/normal", color: "text-muted", style: items, children: null };
-  items = [callback3().connectedAccountVanityMetadata, style];
+  const items = [callback3().connectedAccountVanityMetadata, style];
   const intl = getSystemLocale.intl;
-  obj = { value: null, name: null };
+  const obj = { value: null, name: null };
   const tmp = callback3();
   obj[0] = officialApplicationIds.getCreatedAtDate(date, locale);
   obj[1] = label;
@@ -86,15 +84,12 @@ function VanityDate(arg0) {
 noopAll;
 ({ MetadataFields: c4, MetadataItemTypes: c5 } = OperatorTypes);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 }, connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" }, connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 }, connectedAccountVanityMetadataTag: null, paypalVerifiedTag: null, paypalVerifiedTagText: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND };
-let obj1 = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND };
 createCacheKey[5] = { color: ThemesDefault.colors.WHITE };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { color: ThemesDefault.colors.WHITE };
-let result = require("set").fileFinishedImporting("modules/connections/native/ConnectionMetadataVanityItems.tsx");
+let result = require("obj132").fileFinishedImporting("modules/connections/native/ConnectionMetadataVanityItems.tsx");
 
 export const generateRedditMetadataItems = function generateRedditMetadataItems(metadata, metadataItem) {
   let num = metadata[constants.REDDIT_TOTAL_KARMA];
@@ -108,21 +103,21 @@ export const generateRedditMetadataItems = function generateRedditMetadataItems(
     obj[0] = tmp;
     obj[1] = NumberResult;
     obj[2] = getSystemLocale.t.SbCNox;
-    items.push(callback(VanityMetric, obj, tmp2.REDDIT_TOTAL_KARMA));
+    items.push(callback(VanityMetric, obj, constants.REDDIT_TOTAL_KARMA));
   }
   if ("1" === metadata[constants.REDDIT_GOLD]) {
     obj = { style: null, label: null };
     obj[0] = tmp;
     const intl = getSystemLocale.intl;
     obj[1] = intl.string(getSystemLocale.t["06rDHU"]);
-    items.push(callback(VanityTag, obj, tmp2.REDDIT_GOLD));
+    items.push(callback(VanityTag, obj, constants.REDDIT_GOLD));
   }
   if ("1" === metadata[constants.REDDIT_MOD]) {
     obj = { style: null, label: null };
     obj[0] = tmp;
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t.oWM95M);
-    items.push(callback(VanityTag, obj, tmp2.REDDIT_MOD));
+    items.push(callback(VanityTag, obj, constants.REDDIT_MOD));
   }
   return items;
 };
@@ -132,7 +127,7 @@ export const generateTwitterMetadataItems = function generateTwitterMetadataItem
     num = -1;
   }
   const NumberResult = Number(num);
-  let num2 = metadata[tmp2.TWITTER_FOLLOWERS_COUNT];
+  let num2 = metadata[constants.TWITTER_FOLLOWERS_COUNT];
   if (num2 == null) {
     num2 = -1;
   }
@@ -143,14 +138,14 @@ export const generateTwitterMetadataItems = function generateTwitterMetadataItem
     obj[0] = tmp;
     obj[1] = NumberResult;
     obj[2] = getSystemLocale.t.llwqqe;
-    items.push(callback(VanityMetric, obj, tmp2.TWITTER_STATUSES_COUNT));
+    items.push(callback(VanityMetric, obj, constants.TWITTER_STATUSES_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult1;
     obj[2] = getSystemLocale.t.LMNOUQ;
-    items.push(callback(VanityMetric, obj, tmp2.TWITTER_FOLLOWERS_COUNT));
+    items.push(callback(VanityMetric, obj, constants.TWITTER_FOLLOWERS_COUNT));
   }
   return items;
 };
@@ -160,7 +155,7 @@ export const generateBlueskyMetadataItems = function generateBlueskyMetadataItem
     num = -1;
   }
   const NumberResult = Number(num);
-  let num2 = arg0[tmp2.BLUESKY_FOLLOWERS_COUNT];
+  let num2 = arg0[constants.BLUESKY_FOLLOWERS_COUNT];
   if (num2 == null) {
     num2 = -1;
   }
@@ -171,14 +166,14 @@ export const generateBlueskyMetadataItems = function generateBlueskyMetadataItem
     obj[0] = tmp;
     obj[1] = NumberResult;
     obj[2] = getSystemLocale.t.thA2ir;
-    items.push(callback(VanityMetric, obj, tmp2.BLUESKY_STATUSES_COUNT));
+    items.push(callback(VanityMetric, obj, constants.BLUESKY_STATUSES_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult1;
     obj[2] = getSystemLocale.t.RQath2;
-    items.push(callback(VanityMetric, obj, tmp2.BLUESKY_FOLLOWERS_COUNT));
+    items.push(callback(VanityMetric, obj, constants.BLUESKY_FOLLOWERS_COUNT));
   }
   return items;
 };
@@ -188,12 +183,12 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     num = -1;
   }
   const NumberResult = Number(num);
-  let num2 = metadata[tmp2.STEAM_ITEM_COUNT_DOTA2];
+  let num2 = metadata[constants.STEAM_ITEM_COUNT_DOTA2];
   if (num2 == null) {
     num2 = -1;
   }
   const NumberResult1 = Number(num2);
-  let num3 = metadata[tmp2.STEAM_ITEM_COUNT_TF2];
+  let num3 = metadata[constants.STEAM_ITEM_COUNT_TF2];
   if (num3 == null) {
     num3 = -1;
   }
@@ -204,7 +199,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     obj[0] = tmp;
     obj[1] = NumberResult;
     obj[2] = getSystemLocale.t["ppXMu/"];
-    items.push(callback(VanityMetric, obj, tmp2.STEAM_GAME_COUNT));
+    items.push(callback(VanityMetric, obj, constants.STEAM_GAME_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: null, label: null, imageSrc: null, imageAlt: null };
@@ -216,7 +211,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     obj[2] = registerAssetDefault;
     const intl2 = getSystemLocale.intl;
     obj[3] = intl2.string(getSystemLocale.t.HKUEZo);
-    items.push(callback(VanityItem, obj, tmp2.STEAM_ITEM_COUNT_DOTA2));
+    items.push(callback(VanityItem, obj, constants.STEAM_ITEM_COUNT_DOTA2));
   }
   if (NumberResult2 > -1) {
     obj1 = { style: null, label: null, imageSrc: null, imageAlt: null };
@@ -228,7 +223,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     obj1[2] = registerAssetDefault2;
     const intl4 = getSystemLocale.intl;
     obj1[3] = intl4.string(getSystemLocale.t.C8p1Sh);
-    items.push(callback(VanityItem, obj1, tmp2.STEAM_ITEM_COUNT_TF2));
+    items.push(callback(VanityItem, obj1, constants.STEAM_ITEM_COUNT_TF2));
   }
   return items;
 };
@@ -253,14 +248,14 @@ export const generateEbayMetadataItems = function generateEbayMetadataItems(meta
     obj[0] = tmp;
     obj[1] = NumberResult;
     obj[2] = getSystemLocale.t.YmL22d;
-    items.push(callback(VanityMetric, obj, tmp2.EBAY_POSITIVE_FEEDBACK_PERCENTAGE));
+    items.push(callback(VanityMetric, obj, constants.EBAY_POSITIVE_FEEDBACK_PERCENTAGE));
   }
   if ("1" === metadata[constants.EBAY_TOP_RATED_SELLER]) {
     obj = { style: null, label: null };
     obj[0] = tmp;
     const intl = getSystemLocale.intl;
     obj[1] = intl.string(getSystemLocale.t.TEEYwa);
-    items.push(callback(VanityTag, obj, tmp2.EBAY_TOP_RATED_SELLER));
+    items.push(callback(VanityTag, obj, constants.EBAY_TOP_RATED_SELLER));
   }
   return items;
 };
@@ -270,12 +265,12 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
     num = -1;
   }
   const NumberResult = Number(num);
-  let num2 = metadata[tmp2.TIKTOK_FOLLOWING_COUNT];
+  let num2 = metadata[constants.TIKTOK_FOLLOWING_COUNT];
   if (num2 == null) {
     num2 = -1;
   }
   const NumberResult1 = Number(num2);
-  let num3 = metadata[tmp2.TIKTOK_LIKES_COUNT];
+  let num3 = metadata[constants.TIKTOK_LIKES_COUNT];
   if (num3 == null) {
     num3 = -1;
   }
@@ -286,28 +281,28 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
     obj[0] = tmp;
     obj[1] = NumberResult;
     obj[2] = getSystemLocale.t["Mpm/Bc"];
-    items.push(callback(VanityMetric, obj, tmp2.TIKTOK_FOLLOWER_COUNT));
+    items.push(callback(VanityMetric, obj, constants.TIKTOK_FOLLOWER_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult1;
     obj[2] = getSystemLocale.t.ftf12v;
-    items.push(callback(VanityMetric, obj, tmp2.TIKTOK_FOLLOWING_COUNT));
+    items.push(callback(VanityMetric, obj, constants.TIKTOK_FOLLOWING_COUNT));
   }
   if (NumberResult2 > -1) {
     obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult2;
     obj[2] = getSystemLocale.t.Qwhe5j;
-    items.push(callback(VanityMetric, obj, tmp2.TIKTOK_LIKES_COUNT));
+    items.push(callback(VanityMetric, obj, constants.TIKTOK_LIKES_COUNT));
   }
   if ("1" === metadata[constants.TIKTOK_VERIFIED]) {
     obj1 = { style: null, label: null };
     obj1[0] = tmp;
     const intl = getSystemLocale.intl;
     obj1[1] = intl.string(getSystemLocale.t.QHHwRR);
-    items.push(callback(VanityTag, obj1, tmp2.TIKTOK_VERIFIED));
+    items.push(callback(VanityTag, obj1, constants.TIKTOK_VERIFIED));
   }
   return items;
 };
@@ -337,9 +332,9 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
           try {
             const type = tmp8.type;
             if (constants2.BOOLEAN_EQUAL !== type) {
-              if (tmp10.BOOLEAN_NOT_EQUAL !== type) {
-                if (tmp10.DATETIME_GREATER_THAN_EQUAL !== type) {
-                  if (tmp10.DATETIME_LESS_THAN_EQUAL !== type) {
+              if (constants2.BOOLEAN_NOT_EQUAL !== type) {
+                if (constants2.DATETIME_GREATER_THAN_EQUAL !== type) {
+                  if (constants2.DATETIME_LESS_THAN_EQUAL !== type) {
                     let obj = { style: null, count: null, label: null };
                     obj[0] = tmp;
                     const _Number = Number;
@@ -356,12 +351,12 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
                 items.push(callback(VanityDate, obj, tmp8.key));
               }
             }
-            let tmp22 = tmp8.type === tmp10.BOOLEAN_EQUAL;
+            let tmp22 = tmp8.type === constants2.BOOLEAN_EQUAL;
             if (tmp22) {
               tmp22 = "1" === tmp36;
             }
             if (!tmp22) {
-              let tmp25 = tmp8.type === tmp10.BOOLEAN_NOT_EQUAL;
+              let tmp25 = tmp8.type === constants2.BOOLEAN_NOT_EQUAL;
               if (tmp25) {
                 tmp25 = "1" !== tmp36;
               }
@@ -376,7 +371,6 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
           } catch (err) {
           }
         }
-        const obj4 = applyDefault;
       }
     }
   }

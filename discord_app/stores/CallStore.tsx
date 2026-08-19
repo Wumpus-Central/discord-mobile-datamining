@@ -3,12 +3,12 @@ import applyDefault from "../../_runtime/00012_apply.js";
 import sendRequest from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import closure_3 from "ChannelStore.tsx";
-import closure_4 from "SelectedChannelStore.tsx";
-import closure_5 from "SelectedGuildStore.tsx";
+import ensureGuildLoaded from "ChannelStore.tsx";
+import handleConnectionOpen from "SelectedChannelStore.tsx";
+import handleConnectionOpen2 from "SelectedGuildStore.tsx";
 import { Endpoints } from "../Constants.tsx";
 
-require = arg1;
+require = fn;
 function callConnect() {
   let channelId = arg1;
   if (arg1 === undefined) {
@@ -43,8 +43,6 @@ function callConnect() {
     obj[1] = channelId;
     dispatcherDefault.dispatch(obj);
     flag = true;
-    const obj3 = dispatcherDefault;
-    const tmp7 = dependencyMap;
   }
   return flag;
 }
@@ -77,9 +75,6 @@ prototype["isCallActive"] = function isCallActive(closure_0, closure_1) {
     return tmp;
   } else if (null != closure_1) {
     messageId = messageId.messageId;
-    let tmp3 = messageId === closure_1;
-  } else {
-    tmp3 = null != messageId.region;
   }
 };
 prototype["isCallUnavailable"] = function isCallUnavailable(id) {
@@ -99,9 +94,7 @@ const callStore = new CallStore(dispatcherDefault, {
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(callStoreInternalState) {
     callStoreInternalState = callStoreInternalState.callStoreInternalState;
-    let obj = {};
     const merged = Object.assign(callStoreInternalState.calls);
-    obj = {};
     const merged1 = Object.assign(callStoreInternalState.enqueuedRings);
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
@@ -148,7 +141,6 @@ const callStore = new CallStore(dispatcherDefault, {
     ({ messageId, ongoingRings } = arg0);
     if (tmp2) {
       tmp2 = tmp.regionUpdated || tmp.region !== region;
-      const tmp3 = tmp.regionUpdated || tmp.region !== region;
     }
     const obj = {};
     const merged = Object.assign(dependencyMap[channelId]);
@@ -189,6 +181,6 @@ const callStore = new CallStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("stores/CallStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/CallStore.tsx");
 
 export default callStore;

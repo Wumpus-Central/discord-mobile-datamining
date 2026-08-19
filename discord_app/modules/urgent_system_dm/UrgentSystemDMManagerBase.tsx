@@ -1,13 +1,13 @@
 // discord_app/modules/urgent_system_dm/UrgentSystemDMManagerBase.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import _fetchProfileAll from "../../actions/UserActionCreators.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/SelectedChannelStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { SYSTEM_USER } from "Constants.tsx";
 import { UserFlags } from "../../Constants.tsx";
 
-function maybeShowUrgentMessageModal(arg0) {
+function maybeShowUrgentMessageModal(fn) {
   const currentUser = authStore2.getCurrentUser();
   if (null != currentUser) {
     channelId = channelId.getChannelId();
@@ -16,7 +16,7 @@ function maybeShowUrgentMessageModal(arg0) {
       if (dMFromUserId !== channelId) {
         if (!c7) {
           c7 = true;
-          arg0();
+          fn();
         }
       }
     }
@@ -32,7 +32,6 @@ function maybeShowUrgentMessageModal(arg0) {
     if (hasUrgentMessagesResult) {
       c7 = false;
       _fetchProfileAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
-      const obj5 = _fetchProfileAll;
     }
   }
 }
@@ -49,7 +48,6 @@ function maybeClearUrgentMessage(channelId) {
   if (hasUrgentMessagesResult) {
     c7 = false;
     _fetchProfileAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
-    const obj2 = _fetchProfileAll;
   }
 }
 let c7 = false;
@@ -60,10 +58,10 @@ const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAler
   closure_0 = tmp2;
   tmp2.actions = {
     POST_CONNECTION_OPEN() {
-      closure_1_8(closure_0.handleShowUrgentMessageAlert);
+      maybeShowUrgentMessageModal(closure_0.handleShowUrgentMessageAlert);
     },
     MESSAGE_CREATE() {
-      closure_1_8(closure_0.handleShowUrgentMessageAlert);
+      maybeShowUrgentMessageModal(closure_0.handleShowUrgentMessageAlert);
     },
     CHANNEL_SELECT: maybeClearUrgentMessage
   };
@@ -72,6 +70,6 @@ const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAler
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("set").fileFinishedImporting("modules/urgent_system_dm/UrgentSystemDMManagerBase.tsx");
+const result = require("obj132").fileFinishedImporting("modules/urgent_system_dm/UrgentSystemDMManagerBase.tsx");
 
 export default prototype;

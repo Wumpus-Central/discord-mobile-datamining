@@ -2,16 +2,15 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import contentClassificationToAgeRestrictionConclusion from "../../../discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx";
 import AgeRestrictionStatus from "../../../discord_common/js/shared/shared-constants/AgeRestrictionStatus.tsx";
-import closure_2 from "../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 
-require = arg1;
+require = fn;
 let obj = { DISPLAY: "display", BLOCK_UNDERAGE: "block_underage", BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction" };
-let result = require("set").fileFinishedImporting("modules/content_classification/ContentClassificationVisibility.tsx");
+let result = require("obj132").fileFinishedImporting("modules/content_classification/ContentClassificationVisibility.tsx");
 
 export const ContentClassificationVisibility = obj;
 export const getContentClassificationVisibility = function getContentClassificationVisibility(contentClassification, channel, nsfwAllowed) {
   if (null != contentClassification) {
-    obj = contentClassificationToAgeRestrictionConclusion;
     obj = { type: null, data: null };
     obj[0] = contentClassificationToAgeRestrictionConclusion.ContentClassificationVariant.MINIMAL;
     obj[1] = contentClassification;
@@ -37,10 +36,10 @@ export const useContentClassificationVisibility = function useContentClassificat
   [][0] = closure_2;
   if (null != arg0) {
     obj = { type: null, data: null };
-    obj[0] = tmp(4787).ContentClassificationVariant.MINIMAL;
+    obj[0] = contentClassificationToAgeRestrictionConclusion.ContentClassificationVariant.MINIMAL;
     obj[1] = arg0;
-    const result = tmp(4787).contentClassificationToAgeRestriction(obj);
-    if (result === tmp(4789).AgeRestrictionStatus.ADULT) {
+    const result = contentClassificationToAgeRestrictionConclusion.contentClassificationToAgeRestriction(obj);
+    if (result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT) {
       if (true !== tmp4) {
         let DISPLAY = obj.BLOCK_UNDERAGE;
       } else {

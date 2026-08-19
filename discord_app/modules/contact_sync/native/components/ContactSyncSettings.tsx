@@ -2,13 +2,13 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import handleNameInputScreenOrSuggestions from "../ContactSyncModalActionCreators.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../stores/UserStore.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import setStoredContacts from "../ContactSyncPersistedStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function syncContacts(closure_1, closure_0, arg2) {
   const self = this;
   const apply = _syncContacts.apply;
@@ -267,7 +267,7 @@ noopAll;
 ({ deleteStoredContacts: c5, setStoredContacts: closure_6 } = setStoredContacts);
 ({ AnalyticEvents: error, FriendDiscoveryFlags: closure_8, AnalyticsSections: c9 } = ME);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSettings.tsx");
+let result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSettings.tsx");
 
 export default function ContactSyncSettings() {
   let obj = contactSyncAccount(11853);
@@ -283,14 +283,14 @@ export default function ContactSyncSettings() {
   if (stateFromStores != null) {
     isStaffResult = stateFromStores.isStaff();
   }
-  let tmpResult = tmp(11853);
+  tmp(11853);
   const FriendDiscoverySettings = tmp(4066).FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
-  tmpResult = tmp(1403);
+  const tmpResult = tmp(1403);
   const hasFlagResult = tmpResult.hasFlag(setting, constants2.FIND_BY_PHONE);
   dependencyMap = hasFlagResult;
   const isContactSyncEnabledResult = tmpResult.isContactSyncEnabled(contactSyncAccount);
-  const hasFlagResult1 = contactSyncAccount(1403).hasFlag(setting, constants2.FIND_BY_EMAIL);
+  const tmpResult1 = contactSyncAccount(1403);
   obj = { title: null, children: null };
   const intl = tmp(1236).intl;
   obj[0] = intl.string(contactSyncAccount(1236).t.bGSsnc);
@@ -301,7 +301,7 @@ export default function ContactSyncSettings() {
     obj1[2] = tmp(11853).adminDeleteContactSync;
     const items1 = [callback2(tmp(8083).FormSwitchRow, obj1), callback2(tmp(8083).FormDivider, {})];
     obj[0] = items1;
-    tmp10Result = tmp10(tmp11, obj);
+    tmp10Result = callback(closure_11, obj);
   }
   const items2 = [tmp10Result, , ];
   const obj2 = { label: null, value: null, onValueChange: null };
@@ -310,44 +310,44 @@ export default function ContactSyncSettings() {
   obj2[1] = isContactSyncEnabledResult;
   obj2[2] = function onValueChange(arg0) {
     if (null == contactSyncAccount) {
-      let obj = phone(hasFlagResult[11]);
-      obj = { type: null, location: null };
+      phone(hasFlagResult[11]);
+      const obj = { type: null, location: null };
       obj[0] = closure_1_9.CONTACT_SYNC_MODAL;
       obj[1] = { page: "User Settings" };
       obj.track(closure_1_7.OPEN_MODAL, obj);
       contactSyncAccount(hasFlagResult[12]).openContactSyncModal({}, { page: "User Settings" });
       const obj3 = contactSyncAccount(hasFlagResult[12]);
     } else {
-      closure_1_15(tmp, tmp2, arg0);
+      updateFriendSync(tmp, tmp2, arg0);
     }
   };
   items2[1] = callback2(contactSyncAccount(8083).FormSwitchRow, obj2);
   tmp10Result = null;
   if (null != contactSyncAccount) {
     let obj3 = { children: null };
-    const items3 = [tmp14(tmp(8083).FormDivider, {}), ];
+    const items3 = [callback2(tmp(8083).FormDivider, {}), ];
     const obj4 = { label: null, trailing: null, onPress: null };
     const intl3 = tmp(1236).intl;
     obj4[0] = intl3.string(tmp(1236).t.nAsWKy);
     const obj5 = { label: null };
     obj5[0] = contactSyncAccount.name;
-    obj4[1] = tmp14(tmp(8083).FormRow.Arrow, obj5);
+    obj4[1] = callback2(tmp(8083).FormRow.Arrow, obj5);
     obj4[2] = function onPress() {
       phone(hasFlagResult[11]).track(constants.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
       const obj = phone(hasFlagResult[11]);
       phone(hasFlagResult[17]).pushLazy(contactSyncAccount(hasFlagResult[19])(hasFlagResult[18], hasFlagResult.paths), "Contact Sync Name Update Modal");
     };
-    items3[1] = tmp14(tmp(8083).FormRow, obj4);
+    items3[1] = callback2(tmp(8083).FormRow, obj4);
     obj3[0] = items3;
-    tmp10Result = tmp10(tmp11, obj3);
+    tmp10Result = callback(closure_11, obj3);
   }
   const obj6 = { children: null };
   items2[2] = tmp10Result;
   obj[1] = items2;
-  const items4 = [closure_12(contactSyncAccount(8083).FormSection, obj), , , ];
+  const items4 = [callback(contactSyncAccount(8083).FormSection, obj), , , ];
   const obj7 = { children: null };
   const intl4 = tmp(1236).intl;
-  const tmpResult1 = contactSyncAccount(1403);
+  const hasFlagResult1 = contactSyncAccount(1403).hasFlag(setting, constants2.FIND_BY_EMAIL);
   obj7[0] = intl4.format(contactSyncAccount(1236).t.BoR0dO, { onClick: contactSyncAccount(11853).handleOpenLearnMoreLink });
   items4[1] = callback2(contactSyncAccount(8083).FormHint, obj7);
   const obj9 = { children: null };
@@ -364,8 +364,8 @@ export default function ContactSyncSettings() {
   obj11[1] = intl8.string(contactSyncAccount(1236).t.X7pIKN);
   obj11[2] = hasFlagResult;
   obj11[3] = function onValueChange(phone) {
-    let obj = phone(hasFlagResult[10]);
-    obj = { phone, email: hasFlagResult1 };
+    phone(hasFlagResult[10]);
+    const obj = { phone, email: hasFlagResult1 };
     const result = obj.updateDiscoverability(obj);
   };
   const items5 = [callback2(contactSyncAccount(8083).FormSwitchRow, obj11), callback2(contactSyncAccount(8083).FormDivider, {}), ];
@@ -376,27 +376,25 @@ export default function ContactSyncSettings() {
   obj12[1] = intl10.string(contactSyncAccount(1236).t.ilGsHE);
   obj12[2] = hasFlagResult1;
   obj12[3] = function onValueChange(email) {
-    let obj = phone(hasFlagResult[10]);
-    obj = { phone: closure_2, email };
+    phone(hasFlagResult[10]);
+    const obj = { phone: closure_2, email };
     const result = obj.updateDiscoverability(obj);
   };
   items5[2] = callback2(contactSyncAccount(8083).FormSwitchRow, obj12);
   obj10[1] = items5;
-  items4[3] = closure_12(contactSyncAccount(8083).FormSection, obj10);
+  items4[3] = callback(contactSyncAccount(8083).FormSection, obj10);
   obj6[0] = items4;
-  return closure_12(closure_11, obj6);
+  return callback(closure_11, obj6);
 };
 export { syncContacts };
 export { updateFriendSync };
 export const handleSyncContacts = function handleSyncContacts(localAccount, phone, arg2) {
   if (null == localAccount) {
-    let obj = expandEventPropertiesDefault;
-    obj = { type: null, location: null };
+    const obj = { type: null, location: null };
     obj[0] = constants3.CONTACT_SYNC_MODAL;
     obj[1] = { page: "User Settings" };
     obj.track(constants.OPEN_MODAL, obj);
     handleNameInputScreenOrSuggestions.openContactSyncModal({}, { page: "User Settings" });
-    const obj3 = handleNameInputScreenOrSuggestions;
   } else {
     updateFriendSync(localAccount, phone, arg2);
   }

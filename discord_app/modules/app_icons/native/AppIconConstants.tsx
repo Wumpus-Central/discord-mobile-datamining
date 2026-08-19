@@ -1,5 +1,5 @@
 // discord_app/modules/app_icons/native/AppIconConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import FreemiumAppIconIds from "../AppIconTypes.tsx";
 import registerAssetDefault from "../../../../_runtime/07948_registerAsset.js";
@@ -27,8 +27,6 @@ import registerAssetDefault22 from "../../../../_runtime/07969_registerAsset.js"
 import registerAssetDefault23 from "../../../../_runtime/07970_registerAsset.js";
 import registerAssetDefault24 from "../../../../_runtime/07971_registerAsset.js";
 import registerAssetDefault25 from "../../../../_runtime/07972_registerAsset.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { FreemiumAppIconIds } from "../AppIconTypes.tsx";
 
 let obj = { id: FreemiumAppIconIds.PremiumAppIconIds.IN_RAINBOWS, iconSource: registerAssetDefault2, isPremium: true, name: null };
 let intl = getSystemLocale.intl;
@@ -127,7 +125,7 @@ const intl24 = getSystemLocale.intl;
 obj21[3] = intl24.string(getSystemLocale.t.gnLLSK);
 items[23] = obj21;
 let closure_4 = [];
-const result = set.fileFinishedImporting("modules/app_icons/native/AppIconConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/app_icons/native/AppIconConstants.tsx");
 
 export const getDefaultIcon = function getDefaultIcon() {
   const obj = { id: FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT, iconSource: registerAssetDefault, name: null, isPremium: false };
@@ -144,21 +142,21 @@ export const isIconExpired = function isIconExpired(expiresAt) {
   return tmp;
 };
 export const getOfficialAlternateIcons = function getOfficialAlternateIcons() {
-  return items.filter((expiresAt) => {
-    let tmp = null != expiresAt.expiresAt;
+  return items.filter((item, index) => {
+    let tmp = null != item.expiresAt;
     if (tmp) {
       const _Date = Date;
-      tmp = Date.now() > expiresAt.expiresAt;
+      tmp = Date.now() > item.expiresAt;
     }
     return !tmp;
   });
 };
 export const getLimitedAlternateIcons = function getLimitedAlternateIcons() {
-  return closure_4.filter((expiresAt) => {
-    let tmp = null != expiresAt.expiresAt;
+  return closure_4.filter((item, index) => {
+    let tmp = null != item.expiresAt;
     if (tmp) {
       const _Date = Date;
-      tmp = Date.now() > expiresAt.expiresAt;
+      tmp = Date.now() > item.expiresAt;
     }
     return !tmp;
   });
@@ -169,19 +167,19 @@ export const getIcons = function getIcons() {
   obj[2] = intl.string(getSystemLocale.t.ANxkLy);
   items = [
     obj,
-    ...items.filter((expiresAt) => {
-      let tmp = null != expiresAt.expiresAt;
+    ...items.filter((item, index) => {
+      let tmp = null != item.expiresAt;
       if (tmp) {
         const _Date = Date;
-        tmp = Date.now() > expiresAt.expiresAt;
+        tmp = Date.now() > item.expiresAt;
       }
       return !tmp;
     }),
-    ...closure_4.filter((expiresAt) => {
-      let tmp = null != expiresAt.expiresAt;
+    ...closure_4.filter((item, index) => {
+      let tmp = null != item.expiresAt;
       if (tmp) {
         const _Date = Date;
-        tmp = Date.now() > expiresAt.expiresAt;
+        tmp = Date.now() > item.expiresAt;
       }
       return !tmp;
     })
@@ -190,29 +188,29 @@ export const getIcons = function getIcons() {
 };
 export const getIconById = function getIconById(currentAppIcon) {
   const _require = currentAppIcon;
-  let obj = { id: _FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT, iconSource: registerAssetDefault, name: null, isPremium: false };
-  const intl = _getSystemLocale.intl;
-  obj[2] = intl.string(_getSystemLocale.t.ANxkLy);
+  let obj = { id: require("../AppIconTypes.tsx").FreemiumAppIconIds.DEFAULT, iconSource: registerAssetDefault, name: null, isPremium: false };
+  const intl = require("../../../intl/index.native.tsx").intl;
+  obj[2] = intl.string(require("../../../intl/index.native.tsx").t.ANxkLy);
   items = [
     obj,
-    ...items.filter((expiresAt) => {
-      let tmp = null != expiresAt.expiresAt;
+    ...items.filter((item, index) => {
+      let tmp = null != item.expiresAt;
       if (tmp) {
         const _Date = Date;
-        tmp = Date.now() > expiresAt.expiresAt;
+        tmp = Date.now() > item.expiresAt;
       }
       return !tmp;
     }),
-    ...closure_4.filter((expiresAt) => {
-      let tmp = null != expiresAt.expiresAt;
+    ...closure_4.filter((item, index) => {
+      let tmp = null != item.expiresAt;
       if (tmp) {
         const _Date = Date;
-        tmp = Date.now() > expiresAt.expiresAt;
+        tmp = Date.now() > item.expiresAt;
       }
       return !tmp;
     })
   ];
-  let found = items.find((id) => id.id === closure_0);
+  let found = items.find((item, index) => item.id === closure_0);
   if (null == found) {
     obj = { id: null, iconSource: null, name: null, isPremium: false };
     obj[0] = tmp(7947).FreemiumAppIconIds.DEFAULT;

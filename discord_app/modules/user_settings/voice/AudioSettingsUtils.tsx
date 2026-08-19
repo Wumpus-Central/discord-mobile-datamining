@@ -1,31 +1,32 @@
 // discord_app/modules/user_settings/voice/AudioSettingsUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import MAX_FAVORITES from "../UserSettingsConstants.tsx";
 import BaseConnectionEvent from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import perceptualToAmplitude from "../../../utils/PerceptualVolumeUtils.tsx";
+import AudioSettingsDefaultVolumes from "../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx";
 
 let closure_2 = MAX_FAVORITES.ProtoAudioSettingsContextTypes;
-let result = set.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    USER = tmp(9657).AudioSettingsDefaultVolumes.STREAM;
+    USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
   } else {
-    USER = tmp(9657).AudioSettingsDefaultVolumes.USER;
+    USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
   }
   let tmp3 = USER;
-  let tmpResult = tmp(4782);
+  let tmpResult = perceptualToAmplitude;
   const result = tmpResult.amplitudeToPerceptual(USER);
-  tmpResult = tmp(4782);
+  tmpResult = perceptualToAmplitude;
   if (Math.abs(result - tmpResult.amplitudeToPerceptual(USER)) < 1) {
     tmp3 = USER;
   }
   return tmp3;
 };
-export const coerceAudioContextForProto = function coerceAudioContextForProto(first) {
-  if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === first) {
+export const coerceAudioContextForProto = function coerceAudioContextForProto(arg0) {
+  if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === arg0) {
     return constants.USER;
-  } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === first) {
+  } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === arg0) {
     return constants.STREAM;
   }
-  const tmp = require;
 };

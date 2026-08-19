@@ -1,8 +1,8 @@
 // discord_app/modules/captcha/tooling/CaptchaTestActionCreators.tsx
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _testCaptcha() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -78,7 +78,7 @@ function _testCaptcha() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
 
 export const CaptchaDeciderType = { HCAPTCHA_RQDATA: "hCaptchaRqdata", SMITE_RQDATA: "SmiteRqdata", RECAPTCHA: "Recaptcha", RECAPTCHA_ENTERPRISE: "RecaptchaEnterprise" };
 export const HCaptchaDifficulty = { EASY: 1, [1]: "EASY", MODERATE: 2, [2]: "MODERATE", DIFFICULT: 3, [3]: "DIFFICULT", VERY_DIFFICULT: 4, [4]: "VERY_DIFFICULT" };

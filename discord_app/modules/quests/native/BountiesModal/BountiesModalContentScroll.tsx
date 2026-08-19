@@ -2,10 +2,10 @@
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ThemeContextProvider from "../../../../../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx";
 import items28 from "../../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../BountyStore.tsx";
+import set from "../../BountyStore.tsx";
 import QuestsExperimentLocations from "../../QuestConstants.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
@@ -13,12 +13,11 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import PlatformTypes from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function ItemSeparator(trailingItem) {
   let tmp = null;
   if (null != trailingItem.trailingItem) {
-    let obj = { style: null };
-    obj = { height: null };
+    const obj = { height: null };
     obj[0] = PX_8;
     obj[0] = obj;
     tmp = callback2(closure_6, obj);
@@ -35,7 +34,7 @@ function BountiesScrollVideoItemContainer(index) {
   const scrollY = index.scrollY;
   const isPeekEnabled = index.isPeekEnabled;
   ({ style, children } = index);
-  let obj = index(scrollY[11]);
+  index(scrollY[11]);
   const fn = function c() {
     const result = (scrollY.get() - index * slotHeight) / slotHeight;
     const absolute = Math.abs(result);
@@ -53,7 +52,7 @@ function BountiesScrollVideoItemContainer(index) {
     items = [1, 1, num];
     return obj;
   };
-  obj = { scrollY, index, slotHeight, isPeekEnabled, PEEK_OPACITY: 0.8, interpolate: index(scrollY[11]).interpolate, FADE_DEADBAND: 0.3, Extrapolation: index(scrollY[11]).Extrapolation };
+  let obj = { scrollY, index, slotHeight, isPeekEnabled, PEEK_OPACITY: 0.8, interpolate: index(scrollY[11]).interpolate, FADE_DEADBAND: 0.3, Extrapolation: index(scrollY[11]).Extrapolation };
   fn.__closure = obj;
   fn.__workletHash = 6532652233494;
   fn.__initData = closure_28;
@@ -66,43 +65,10 @@ function BountiesScrollVideoItemContainer(index) {
 function BountiesModalContentScrollInner(arg0) {
   ({ initialBountyId: require, sourceQuestContent } = arg0);
   let width = sourceQuestContent;
-  let height2;
-  let callback;
   let React;
-  let memo;
-  let questHomeBounties;
-  let first;
-  let orbAmount;
   let ownedByVerticalScrollExperiment;
-  let rewardTimerSeconds;
-  ownedByVerticalScrollExperiment = undefined;
-  let callback2;
-  let first1;
-  let height3;
-  c15 = undefined;
-  c16 = undefined;
-  closure_17 = undefined;
-  height3 = undefined;
-  let result1;
   let sum1;
-  let handleRecapMomentumEnd;
-  let first2;
-  closure_23 = undefined;
-  let first3;
-  closure_25 = undefined;
-  c26 = undefined;
-  let callback3;
-  let first4;
-  closure_29 = undefined;
-  let sharedValue;
-  let sharedValue1;
-  let sharedValue2;
-  let hasSingleUseSwipeUpNux;
-  let dismissSingleUseSwipeUpNux;
-  let hasRecurringSwipeUpNux;
-  let dismissRecurringSwipeUpNux;
   closure_37 = undefined;
-  hasRecurringSwipeUpNux = undefined;
   let memo3;
   closure_40 = undefined;
   closure_41 = undefined;
@@ -115,24 +81,21 @@ function BountiesModalContentScrollInner(arg0) {
   let pauseCountdown;
   let resumeCountdown;
   let memo4;
-  callback2 = undefined;
-  callback3 = undefined;
+  let callback3;
   closure_53 = undefined;
   closure_54 = undefined;
   let memo8;
   let derivedValue;
   let tmp = callback3();
-  height2 = tmp;
+  let height2 = tmp;
   const height = width(height2[12])().height;
-  callback = height;
-  let obj = React;
+  let callback = height;
   const ref = React.useRef(null);
   [tmp7, c4] = callback(React.useState(require(height2[14]).BOUNTIES_MODAL_BASE_FOOTER_HEIGHT), 2);
   require = tmp7;
   width = undefined;
   height2 = undefined;
-  callback = undefined;
-  callback = React.useCallback((nativeEvent) => {
+  React.useCallback((nativeEvent) => {
     _undefined(Math.ceil(nativeEvent.nativeEvent.layout.height));
   }, []);
   const size = width(height2[12])();
@@ -143,7 +106,7 @@ function BountiesModalContentScrollInner(arg0) {
   let items = [width, height2, , , , ];
   ({ top: arr[2], left: arr[3], right: arr[4] } = tmp9);
   items[5] = tmp7;
-  memo = React.useMemo(() => {
+  const memo = React.useMemo(() => {
     const rect = closure_3;
     const diff = width - closure_3.left - closure_3.right;
     const diff1 = height2 - closure_3.top - closure_0;
@@ -156,42 +119,42 @@ function BountiesModalContentScrollInner(arg0) {
     return { top: rect.top, left: Math.floor(rect.left + (diff - result1) / 2), width: Math.floor(result1), height: Math.floor(result) };
   }, items);
   obj1 = require(height2[15]);
-  questHomeBounties = obj1.useQuestHomeBounties().questHomeBounties;
-  first = callback(React.useState(() => {
-    const findIndexResult = questHomeBounties.findIndex((id) => id.id === closure_0);
+  const questHomeBounties = obj1.useQuestHomeBounties().questHomeBounties;
+  const first = callback(React.useState(() => {
+    const findIndexResult = questHomeBounties.findIndex((item, index) => item.id === closure_0);
     let tmp2 = questHomeBounties;
     if (findIndexResult > 0) {
       const items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(arr.slice(findIndexResult), 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(arr.slice(0, findIndexResult), arraySpreadResult);
+      let arraySpreadResult = HermesBuiltin.arraySpread(questHomeBounties.slice(findIndexResult), 0);
+      arraySpreadResult = HermesBuiltin.arraySpread(questHomeBounties.slice(0, findIndexResult), arraySpreadResult);
       tmp2 = items;
     }
     return tmp2;
   }), 1)[0];
   let obj2 = require(height2[16]);
   const bountiesExperience = obj2.useBountiesExperience(ownedByVerticalScrollExperiment.VIDEO_MODAL_MOBILE);
-  orbAmount = bountiesExperience.orbAmount;
+  const orbAmount = bountiesExperience.orbAmount;
   ownedByVerticalScrollExperiment = bountiesExperience.ownedByVerticalScrollExperiment;
-  rewardTimerSeconds = bountiesExperience.rewardTimerSeconds;
+  const rewardTimerSeconds = bountiesExperience.rewardTimerSeconds;
   const scrollAffordanceVariant = bountiesExperience.scrollAffordanceVariant;
-  callback2 = tmp12;
+  let callback2 = tmp12;
   let obj3 = require(height2[17]);
   let result = obj3.shouldUseScrollIndicatorOverlay(scrollAffordanceVariant);
   let obj4 = require(height2[18]);
   const items1 = [first];
   const items2 = [first, orbAmount];
   const stateFromStores = obj4.useStateFromStores(items1, () => first.getCompletedBountyCount(first) * orbAmount, items2);
-  first1 = first[0];
+  const first1 = first[0];
   let obj5 = require(height2[18]);
   const items3 = [first];
   const items4 = [first1, rewardTimerSeconds];
-  height3 = memo.height;
+  const height3 = memo.height;
   let sum = height3 + sum1;
   c15 = sum;
   let diff = first.length - 1;
   c16 = diff;
   closure_17 = tmp19;
-  result1 = diff * sum;
+  let result1 = diff * sum;
   sum1 = result1 + height3;
   const items5 = [sum1, result1, height3];
   const stateFromStores1 = obj5.useStateFromStores(items3, () => {
@@ -208,20 +171,20 @@ function BountiesModalContentScrollInner(arg0) {
   }, items4);
   const memo1 = React.useMemo(() => ({ lastBounty: result1, fullRecap: sum1, revealHeight: height3 }), items5);
   let obj6 = require(height2[19]);
-  handleRecapMomentumEnd = obj6.useBountiesRecapScroll({ listRef: ref, enabled: tmp19, offsets: memo1 }).handleRecapMomentumEnd;
+  const handleRecapMomentumEnd = obj6.useBountiesRecapScroll({ listRef: ref, enabled: tmp19, offsets: memo1 }).handleRecapMomentumEnd;
   const items6 = [first, sum1, stateFromStores > 0, sum];
   const memo2 = React.useMemo(() => {
-    const mapped = first.map((arg0, arg1) => arg1 * closure_15);
+    const mapped = first.map((item, index) => index * closure_15);
     if (closure_17) {
       mapped.push(sum1);
     }
     return mapped;
   }, items6);
   const tmp24 = callback(React.useState(false), 2);
-  first2 = tmp24[0];
+  const first2 = tmp24[0];
   closure_23 = tmp26;
   const tmp27 = callback(React.useState(false), 2);
-  first3 = tmp27[0];
+  const first3 = tmp27[0];
   closure_25 = tmp29;
   let tmp6 = callback(React.useState(require(height2[14]).BOUNTIES_MODAL_BASE_FOOTER_HEIGHT), 2);
   [tmp31, tmp32] = callback(React.useState(true), 2);
@@ -230,21 +193,21 @@ function BountiesModalContentScrollInner(arg0) {
   [tmp34, tmp35] = callback(React.useState(false), 2);
   callback3 = tmp35;
   const tmp36 = callback(React.useState(0), 2);
-  first4 = tmp36[0];
+  const first4 = tmp36[0];
   closure_29 = tmp36[1];
   let obj7 = require(height2[11]);
-  sharedValue = obj7.useSharedValue(false);
+  const sharedValue = obj7.useSharedValue(false);
   let obj8 = require(height2[11]);
-  sharedValue1 = obj8.useSharedValue(false);
+  const sharedValue1 = obj8.useSharedValue(false);
   let obj9 = require(height2[11]);
-  sharedValue2 = obj9.useSharedValue(0);
+  const sharedValue2 = obj9.useSharedValue(0);
   let obj10 = require(height2[20]);
-  obj = { isEligible: first.length > 1, location: ownedByVerticalScrollExperiment.VIDEO_MODAL_MOBILE };
+  let obj = { isEligible: first.length > 1, location: ownedByVerticalScrollExperiment.VIDEO_MODAL_MOBILE };
   const bountySwipeUpNux = obj10.useBountySwipeUpNux(obj);
-  hasSingleUseSwipeUpNux = bountySwipeUpNux.hasSingleUseSwipeUpNux;
-  dismissSingleUseSwipeUpNux = bountySwipeUpNux.dismissSingleUseSwipeUpNux;
-  hasRecurringSwipeUpNux = bountySwipeUpNux.hasRecurringSwipeUpNux;
-  dismissRecurringSwipeUpNux = bountySwipeUpNux.dismissRecurringSwipeUpNux;
+  const hasSingleUseSwipeUpNux = bountySwipeUpNux.hasSingleUseSwipeUpNux;
+  const dismissSingleUseSwipeUpNux = bountySwipeUpNux.dismissSingleUseSwipeUpNux;
+  let hasRecurringSwipeUpNux = bountySwipeUpNux.hasRecurringSwipeUpNux;
+  const dismissRecurringSwipeUpNux = bountySwipeUpNux.dismissRecurringSwipeUpNux;
   let tmp44 = tmp43;
   if (0 === first4) {
     tmp44 = hasSingleUseSwipeUpNux;
@@ -316,7 +279,7 @@ function BountiesModalContentScrollInner(arg0) {
   callback2 = obj.useCallback((current) => {
     let MANUAL = arg1;
     if (arg1 === undefined) {
-      MANUAL = tmp7(height2[22]).BountyScrollingType.MANUAL;
+      MANUAL = height2(height2[22]).BountyScrollingType.MANUAL;
     }
     current = ref2.current;
     if (current !== current) {
@@ -328,33 +291,32 @@ function BountiesModalContentScrollInner(arg0) {
       let result = { scrollingType: null, scrollingDirection: null, verticalScrollingPosition: null, scrollSessionId: null, timeWatchedPreScrollMs: null };
       result[0] = MANUAL;
       if (current > current) {
-        let UP = tmp7(height2[22]).VerticalScrollingDirection.DOWN;
+        let UP = height2(height2[22]).VerticalScrollingDirection.DOWN;
       } else {
-        UP = tmp7(height2[22]).VerticalScrollingDirection.UP;
+        UP = height2(height2[22]).VerticalScrollingDirection.UP;
       }
       result[1] = UP;
       result[2] = current;
       result[3] = memo3;
       result[4] = diff;
-      result = tmp7(height2[23]).trackBountyVerticalScroll(result);
-      const obj2 = tmp7(height2[23]);
+      result = height2(height2[23]).trackBountyVerticalScroll(result);
+      const obj2 = height2(height2[23]);
     }
   }, items9);
   const items10 = [takeDidAutoScroll, callback2, first4, hasSingleUseSwipeUpNux, hasRecurringSwipeUpNux, dismissSingleUseSwipeUpNux, dismissRecurringSwipeUpNux];
   callback3 = obj.useCallback((arg0) => {
     callback2(arg0);
-    const BountyScrollingType = tmp7(height2[22]).BountyScrollingType;
+    const BountyScrollingType = hasRecurringSwipeUpNux(height2[22]).BountyScrollingType;
     callback2(arg0, takeDidAutoScroll() ? BountyScrollingType.AUTO : BountyScrollingType.MANUAL);
     if (tmp5) {
       if (hasSingleUseSwipeUpNux) {
         dismissSingleUseSwipeUpNux(ownedByVerticalScrollExperiment.USER_DISMISS);
-      } else {
-        if (hasRecurringSwipeUpNux) {
-          dismissRecurringSwipeUpNux(ownedByVerticalScrollExperiment.USER_DISMISS);
-        }
-        tmp7 = hasRecurringSwipeUpNux;
+      } else if (hasRecurringSwipeUpNux) {
+        dismissRecurringSwipeUpNux(ownedByVerticalScrollExperiment.USER_DISMISS);
       }
     }
+    const tmp = takeDidAutoScroll();
+    tmp5 = 0 === first4 && arg0 > 0;
   }, items10);
   tmp5Result = tmp5(tmp3[25]);
   closure_53 = tmp5Result.useBountiesRecapOrbCount({ scrollY: sharedValue2, lastBountyScrollOffset: result1, recapRevealHeight: height3, targetOrbAmount: stateFromStores, enabled: tmp19 });
@@ -387,8 +349,8 @@ function BountiesModalContentScrollInner(arg0) {
         num2 = 0;
       }
       const result = 1000 * rewardTimerSeconds;
-      let obj = tmp7(height2[23]);
-      obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
+      height2(height2[23]);
+      let obj = { adContentId: null, adCreativeType: null, event: null, properties: null, sourceQuestContent: null };
       obj[0] = tmp2.id;
       obj[1] = height2(height2[27]).AdCreativeType.BOUNTY;
       obj[2] = rewardTimerSeconds.AD_VIDEO_MODAL_CLOSED;
@@ -405,11 +367,12 @@ function BountiesModalContentScrollInner(arg0) {
       const obj5 = height2(height2[29]);
     }
     width(height2[30]).hideModal();
+    const obj6 = width(height2[30]);
   }, items12);
   closure_54 = obj.useCallback(() => {
-    let obj = tmp7(height2[23]);
-    obj = { adContentId: orbAmount, adCreativeType: tmp7(height2[27]).AdCreativeType.BOUNTY, event: rewardTimerSeconds.AD_VIDEO_MODAL_CLOSED, properties: null, sourceQuestContent: null };
-    obj = { content_name: tmp7(height2[22]).getQuestContentName(tmp7(height2[28]).QuestContent.BOUNTIES_END_INTERSTITIAL), content_id: tmp7(height2[28]).QuestContent.BOUNTIES_END_INTERSTITIAL };
+    tmp7(height2[23]);
+    { adContentId: orbAmount, adCreativeType: tmp7(height2[27]).AdCreativeType.BOUNTY, event: rewardTimerSeconds.AD_VIDEO_MODAL_CLOSED, properties: null, sourceQuestContent: null };
+    const obj = { content_name: tmp7(height2[22]).getQuestContentName(tmp7(height2[28]).QuestContent.BOUNTIES_END_INTERSTITIAL), content_id: tmp7(height2[28]).QuestContent.BOUNTIES_END_INTERSTITIAL };
     obj[3] = obj;
     obj[4] = width;
     obj.trackAdContentEvent(obj);
@@ -417,7 +380,6 @@ function BountiesModalContentScrollInner(arg0) {
     width(height2[30]).hideModal();
   }, items13);
   const tmp33 = callback(React.useState(false), 2);
-  const tmp41 = first.length > 1;
   obj1 = { onScroll: null, onBeginDrag: null, onEndDrag: null, onMomentumEnd: null };
   class Tt {
     constructor(arg0) {
@@ -819,8 +781,7 @@ function BountiesModalContentScrollInner(arg0) {
       }
       flag = tmp2;
     }
-    let obj = { index, slotHeight: c15, scrollY: sharedValue2, style: memo8, isPeekEnabled: closure_37, children: null };
-    obj = { bounty: item, sourceQuestContent: width, width: memo.width, height: memo.height, index, isActive: tmp5, isRecapPageRevealed: first2, isRecapPageOnTop: first3, isScrollingInBoundsSharedValue: sharedValue, isScrollIndicatorOverlayEnabled: null, shouldLoadHls: null, scrollAffordance: null, peekScale: null, softDownloadCapsEnabled: null };
+    const obj = { bounty: item, sourceQuestContent: width, width: memo.width, height: memo.height, index, isActive: tmp5, isRecapPageRevealed: first2, isRecapPageOnTop: first3, isScrollingInBoundsSharedValue: sharedValue, isScrollIndicatorOverlayEnabled: null, shouldLoadHls: null, scrollAffordance: null, peekScale: null, softDownloadCapsEnabled: null };
     let tmp6 = hasRecurringSwipeUpNux;
     if (hasRecurringSwipeUpNux) {
       tmp6 = 0 === index;
@@ -828,20 +789,20 @@ function BountiesModalContentScrollInner(arg0) {
     obj[9] = tmp6;
     obj[10] = flag;
     let tmp8;
-    if (closure_12) {
+    if (callback) {
       tmp8 = memo4;
     }
     obj[11] = tmp8;
     let tmp9;
     if (index === first4) {
-      if (tmp7) {
+      if (callback) {
         tmp9 = peekScale;
       }
     }
     obj[12] = tmp9;
     obj[13] = ownedByVerticalScrollExperiment;
-    obj[5] = closure_12(closure_12(height2[31]).BountiesScrollVideoItem, obj, item.id);
-    return closure_12(closure_29, obj);
+    obj[5] = callback(callback(height2[31]).BountiesScrollVideoItem, obj, item.id);
+    return callback(closure_29, obj);
   }, items22);
   [][0] = height3;
   const memo13 = obj.useMemo(() => ({ activeIndex: first4, isRecapPageRevealed: first2, isRecapPageOnTop: first3, width: memo.width, height: memo.height, isPeekEnabled: closure_37, isAutoScrollEnabled: closure_12, canShowScrollIndicatorOverlay: hasRecurringSwipeUpNux, ownedByVerticalScrollExperiment, isSoftCapPreload: ownedByVerticalScrollExperiment }), items23);
@@ -1005,7 +966,7 @@ let closure_45 = { code: "function BountiesModalContentScrollTsx18(){const{scrol
 let closure_46 = { code: "function BountiesModalContentScrollTsx19(){const{interpolate,scrollY,slotHeight,Extrapolation}=this.__closure;return{opacity:interpolate(scrollY.get(),[0,slotHeight],[1,0],Extrapolation.CLAMP)};}" };
 let closure_47 = { code: "function BountiesModalContentScrollTsx20(){const{recapPullProgress,FOOTER_FADE_END_PROGRESS}=this.__closure;return recapPullProgress.get()<FOOTER_FADE_END_PROGRESS;}" };
 let closure_48 = { code: "function BountiesModalContentScrollTsx21(pressable,previousPressable){const{runOnJS,setIsCloseButtonPressable}=this.__closure;if(pressable!==previousPressable){runOnJS(setIsCloseButtonPressable)(pressable);}}" };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalContentScroll.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalContentScroll.tsx");
 
 export default function BountiesModalContentScroll(arg0) {
   ({ bountyId, sourceQuestContent } = arg0);

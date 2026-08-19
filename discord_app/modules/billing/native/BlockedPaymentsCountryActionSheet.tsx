@@ -4,9 +4,9 @@ import Background from "../../../design/components/Sheet/native/BottomSheet.nati
 import BlockedPaymentsCountryDisplayDefault from "BlockedPaymentsCountryDisplay.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryActionSheet.tsx");
 
 export default function BlockedPaymentsCountryActionSheet() {
   return jsx(Background.BottomSheet, { children: jsx(BlockedPaymentsCountryDisplayDefault, {}) });

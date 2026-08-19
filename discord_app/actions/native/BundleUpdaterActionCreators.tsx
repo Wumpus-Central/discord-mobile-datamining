@@ -1,18 +1,17 @@
 // discord_app/actions/native/BundleUpdaterActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import getSystemLocale from "../../intl/index.native.tsx";
-import setDefault from "../AlertActionCreators.tsx";
+import obj132Default from "../AlertActionCreators.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let c4 = false;
-const result = set.fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
 
 export default {
   prepareUpdate(versionRequired) {
     if (versionRequired) {
-      let obj = setDefault;
-      obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+      const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       const intl = getSystemLocale.intl;
       obj[0] = intl.string(getSystemLocale.t.GQZdmI);
       const intl2 = getSystemLocale.intl;

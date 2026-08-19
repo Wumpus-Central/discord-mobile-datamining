@@ -1,12 +1,12 @@
 // discord_app/modules/quests/BountyActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
 import getOrRefreshAdSession from "../analytics_sessions/SessionAdGenerator.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/NetworkStore.tsx";
-import closure_5 from "BountyStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import handleConnectionInfoChange from "../../stores/NetworkStore.tsx";
+import set from "BountyStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function fetchBountiesAndDispatch() {
   const self = this;
   const apply = _fetchBountiesAndDispatch.apply;
@@ -34,7 +34,6 @@ function _fetchBountiesAndDispatch() {
       callback = Date.now();
       yield callback();
       if (1 === tmp8) {
-        c5 = 0;
         c5 = closure_4;
         obj1 = callback(decisions[4]);
         const obj2 = { type: "BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE", placement: null, error: null };
@@ -51,20 +50,20 @@ function _fetchBountiesAndDispatch() {
         const _Map = Map;
         map = new Map();
         decisions = decisions.decisions;
-        closure_4 = decisions.flatMap((creative) => {
-          if (null != creative.creative) {
-            if (creative.creative.creative_type === callback(request_id[5]).AdCreativeType.BOUNTY) {
-              let tmpResult = tmp(tmp2[6]);
-              const bountyFromServerResult = tmpResult.bountyFromServer(creative.creative.creative_content);
-              tmpResult = tmp(tmp2[7]);
+        closure_4 = decisions.flatMap((item, index) => {
+          if (null != item.creative) {
+            if (item.creative.creative_type === callback(request_id[5]).AdCreativeType.BOUNTY) {
+              let tmpResult = callback(request_id[6]);
+              const bountyFromServerResult = tmpResult.bountyFromServer(item.creative.creative_content);
+              tmpResult = callback(request_id[7]);
               let obj = { fetchedAt: null, requestId: null, creative: null };
               obj[0] = closure_1;
               obj[1] = request_id.request_id;
               obj = { type: null, bounty: null };
-              obj[0] = tmp(tmp2[5]).AdCreativeType.BOUNTY;
+              obj[0] = callback(request_id[5]).AdCreativeType.BOUNTY;
               obj[1] = bountyFromServerResult;
               obj[2] = obj;
-              const result = map.set(bountyFromServerResult.id, tmpResult.questAdDecisionFromAdDecision(creative, obj));
+              const result = map.set(bountyFromServerResult.id, tmpResult.questAdDecisionFromAdDecision(item, obj));
               const items = [bountyFromServerResult];
               return items;
             }
@@ -130,9 +129,9 @@ function _fetchQuestHomeBounties() {
               c1 = 1;
               obj1 = { value: null, done: false };
               obj1[0] = closure_1_7(tmp5, closure_1_3(function*() {
-                let uuid = tmp2;
                 let obj5 = closure_1_0(5054);
-                uuid = yield obj5.getSession();
+                yield obj5.getSession();
+                let uuid = body;
                 const uuid2 = closure_1_0(7473).getOrRefreshAdSession();
                 const HTTP = closure_1_0(530).HTTP;
                 const obj3 = { url: null, query: null, rejectWithError: false, context: null };
@@ -149,7 +148,7 @@ function _fetchQuestHomeBounties() {
                 obj5[0] = closure_1_4.getType();
                 obj3[3] = obj5;
                 yield HTTP.get(obj3);
-                return arg1.body;
+                return body.body;
               }));
               return obj1;
             }
@@ -221,8 +220,8 @@ function _fetchBountyPreview() {
                 const _URLSearchParams = URLSearchParams;
                 closure_0 = 0;
                 let items = [];
-                closure_0 = HermesBuiltin.arraySpread(closure_1_0.map((arg0) => {
-                  const items = ["ad_creative_ids", arg0];
+                closure_0 = HermesBuiltin.arraySpread(closure_1_0.map((item, index) => {
+                  const items = ["ad_creative_ids", item];
                   return items;
                 }), closure_0);
                 const _String = String;
@@ -235,7 +234,7 @@ function _fetchBountyPreview() {
                 const _HermesInternal = HermesInternal;
                 obj1[0] = "" + closure_1_6.QUESTS_CREATIVE_PREVIEW + "?" + str2.toString();
                 yield HTTP.get(obj1);
-                return arg1.body;
+                return body.body;
               }));
               return obj1;
             }
@@ -313,7 +312,7 @@ function _claimBountyReward() {
               } else {
                 let obj8 = callback2(closure_1_2[4]);
                 obj1 = { type: "BOUNTIES_CLAIM_REWARD_BEGIN", bountyId: null };
-                obj1[1] = tmp71;
+                obj1[1] = callback;
                 obj8.dispatch(obj1);
                 claimingBountyReward = 1;
                 c6 = 2;
@@ -322,7 +321,6 @@ function _claimBountyReward() {
                 obj2[0] = callback(closure_1_2[9]).getSession();
                 return obj2;
               }
-              tmp71 = callback;
             }
           } else if (1 === tmp7) {
             claimingBountyReward = 0;
@@ -415,7 +413,7 @@ function _claimBountyReward() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/quests/BountyActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/BountyActionCreators.tsx");
 
 export const fetchQuestHomeBounties = function fetchQuestHomeBounties(c3) {
   const self = this;
@@ -446,7 +444,6 @@ export const setBountyVideoProgress = function setBountyVideoProgress(bountyId, 
     obj[1] = bountyId;
     ({ timestampSec: obj4[2], maxTimestampSec: obj4[3], duration: obj4[4] } = arg1);
     dispatcherDefault.dispatch(obj);
-    const obj3 = dispatcherDefault;
   }
 };
 export const claimBountyReward = function claimBountyReward(id, closure_1_1) {

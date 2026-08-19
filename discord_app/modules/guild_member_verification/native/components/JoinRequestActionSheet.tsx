@@ -1,14 +1,14 @@
 // discord_app/modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
-import closure_6 from "../../../../records/UserRecord.tsx";
-import closure_7 from "../../../../stores/UserStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import createdAt from "../../../../records/UserRecord.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 class JoinRequestActionSheet {
   constructor(arg0) {
     joinRequest = global.joinRequest;
@@ -52,8 +52,8 @@ class JoinRequestActionSheet {
     obj3 = guildId;
     ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
     ref = guildId.useRef(null);
-    tmp2Result1 = require("module_4115");
-    sharedValue = require("module_0");
+    tmp2Result1 = require("../../../reanimated/ReanimatedRexport.tsx");
+    sharedValue = require("../../../../index.native.tsx");
     closure_5 = sharedValue;
     items2 = [];
     items2[0] = sharedValue;
@@ -99,8 +99,8 @@ class JoinRequestActionSheet {
     items4[0] = guildId;
     ({ applicationStatus: arr5[1], userId: arr5[2] } = joinRequest);
     effect = obj3.useEffect(() => {
-      let obj = joinRequest(userId[19]);
-      obj = { guildId, applicationStatus: joinRequest.applicationStatus, applicationUserId: joinRequest.userId };
+      joinRequest(userId[19]);
+      const obj = { guildId, applicationStatus: joinRequest.applicationStatus, applicationUserId: joinRequest.userId };
       const result = obj.trackMemberApplicationViewed(obj);
     }, items4);
     items5 = [, ];
@@ -182,7 +182,7 @@ let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 } });
 const memoResult = importAllResult.memo(JoinRequestActionSheet);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx");
 
 export default memoResult;
 export { JoinRequestActionSheet };

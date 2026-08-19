@@ -1,7 +1,7 @@
 // discord_app/modules/replies/didReplyMention.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/replies/didReplyMention.tsx");
+const result = obj132.fileFinishedImporting("modules/replies/didReplyMention.tsx");
 
 export default function didReplyMention(mentions, author) {
   let hasItem = null != author;

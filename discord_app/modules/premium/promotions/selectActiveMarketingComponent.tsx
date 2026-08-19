@@ -1,5 +1,5 @@
 // discord_app/modules/premium/promotions/selectActiveMarketingComponent.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
   effectiveStartDate = effectiveStartDate.effectiveStartDate;
@@ -56,7 +56,7 @@ function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
     }
   }
 }
-const result = set.fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
 
 export default function selectActiveMarketingComponent(arr) {
   closure_0 = arg1;
@@ -66,27 +66,27 @@ export default function selectActiveMarketingComponent(arr) {
       return true;
     };
   }
-  const found = arr.filter((isTimed) => {
-    ({ effectiveStartDate, effectiveEndDate } = isTimed);
+  const found = arr.filter((item, index) => {
+    ({ effectiveStartDate, effectiveEndDate } = item);
     let tmp = null != effectiveStartDate;
     if (tmp) {
-      const time = obj.getTime();
+      const time = store.getTime();
       tmp = time < effectiveStartDate.getTime();
     }
     if (!tmp) {
       let tmp3 = null != effectiveEndDate;
       if (tmp3) {
-        const time1 = obj.getTime();
+        const time1 = store.getTime();
         tmp3 = time1 > effectiveEndDate.getTime();
       }
       tmp = tmp3;
     }
     let tmp5 = !tmp;
     if (tmp5) {
-      isTimed = isTimed.isTimed;
+      const isTimed = item.isTimed;
       let tmp6 = !isTimed;
       if (isTimed) {
-        tmp6 = fn(isTimed);
+        tmp6 = fn(item);
       }
       tmp5 = tmp6;
     }

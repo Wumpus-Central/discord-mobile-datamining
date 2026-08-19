@@ -4,19 +4,18 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import messagesProxyDefault from "../../../report_to_mod/ReportToMod.messages.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 }, paddingHorizontal: { paddingHorizontal: 16 }, divider: null, descriptionText: null, errorText: null };
-createCacheKey = { height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: 16 };
+const createCacheKey = { height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: 16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { lineHeight: 16, textAlign: "center", marginBottom: 12 };
 createCacheKey[4] = { color: ThemesDefault.unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { color: ThemesDefault.unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBottomButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBottomButton.tsx");
 
 export default function InAppReportsBottomButton(button) {
   button = button.button;
@@ -68,7 +67,7 @@ export default function InAppReportsBottomButton(button) {
         obj1 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
         obj1[0] = tmp.descriptionText;
         obj1[3] = tmp3;
-        tmp14Result = tmp14(tmp17(4734).Text, obj1);
+        tmp14Result = callback(tmp17(4734).Text, obj1);
       }
       const items1 = [tmp14Result, , ];
       const obj2 = { disabled: null, onPress: null, text: null, variant: null };
@@ -84,13 +83,13 @@ export default function InAppReportsBottomButton(button) {
         const obj3 = { style: null, children: null };
         obj3[0] = tmp.errorText;
         obj3[1] = string2Result;
-        tmp14Result = tmp14(tmp17(1297).LegacyText, obj3);
+        tmp14Result = callback(tmp17(1297).LegacyText, obj3);
       }
       items1[2] = tmp14Result;
       obj[1] = items1;
-      items[1] = closure_5(View, obj);
+      items[1] = callback(View, obj);
       obj[1] = items;
-      return closure_5(View, obj);
+      return callback(View, obj);
     }
   }
 };

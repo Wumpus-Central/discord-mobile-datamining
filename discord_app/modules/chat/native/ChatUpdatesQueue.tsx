@@ -1,10 +1,10 @@
 // discord_app/modules/chat/native/ChatUpdatesQueue.tsx
-import set2 from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const DCDChatBlockerManager = get_ActivityIndicator.NativeModules.DCDChatBlockerManager;
-const result = set2.fileFinishedImporting("modules/chat/native/ChatUpdatesQueue.tsx");
+const result = obj132.fileFinishedImporting("modules/chat/native/ChatUpdatesQueue.tsx");
 class ChatUpdatesQueue {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -105,11 +105,11 @@ prototype["flush"] = function flush() {
   const self = this;
   this.queueStartTimestamp = null;
   const queue = this.queue;
-  const item = queue.forEach((arg0) => {
-    if (null != arg0) {
+  const item = queue.forEach((item, index) => {
+    if (null != item) {
       const onFlushItem = self.onFlushItem;
       if (onFlushItem != null) {
-        onFlushItem(arg0);
+        onFlushItem(item);
       }
     }
   });

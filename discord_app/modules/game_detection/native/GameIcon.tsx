@@ -8,7 +8,7 @@ import registerAssetDefault4 from "../../../../_runtime/07153_registerAsset.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { PremiumSubscriptionSKUs } from "../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
 class GameIcon {
   constructor(arg0) {
@@ -83,20 +83,15 @@ noopAll;
 let obj = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
 obj = { [obj.SIZE_24]: 24, [obj.SMALL]: 32, [obj.NORMAL]: 48, [obj.LARGE]: 80 };
 obj = { gameIcon: { justifyContent: "center", alignItems: "center" }, size24: { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm }, small: null, normal: null, large: null, placeholder: null, entityWrapper: null };
-createCacheKey = { width: obj.small, height: obj.small, borderRadius: ThemesDefault.radii.sm };
+const createCacheKey = { width: obj.small, height: obj.small, borderRadius: ThemesDefault.radii.sm };
 obj[2] = createCacheKey;
-obj1 = { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm };
 obj[3] = { width: obj.normal, height: obj.normal, borderRadius: ThemesDefault.radii.lg };
-const obj3 = { width: obj.normal, height: obj.normal, borderRadius: ThemesDefault.radii.lg };
 obj[4] = { width: obj.large, height: obj.large, borderRadius: ThemesDefault.radii.sm };
-const obj4 = { width: obj.large, height: obj.large, borderRadius: ThemesDefault.radii.sm };
 obj[5] = { borderRadius: ThemesDefault.radii.none, tintColor: ThemesDefault.colors.ICON_MUTED };
-const obj5 = { borderRadius: ThemesDefault.radii.none, tintColor: ThemesDefault.colors.ICON_MUTED };
 obj[6] = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
 let closure_8 = createCacheKey.createStyles(obj);
 GameIcon.Sizes = obj;
-const obj6 = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
-const result = require("set").fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");
 
 export default GameIcon;
 export const GameIconSizes = obj;

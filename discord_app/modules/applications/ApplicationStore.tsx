@@ -1,9 +1,8 @@
 // discord_app/modules/applications/ApplicationStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../records/ApplicationRecord.tsx";
-import set from "../../../_runtime/00002_set.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import createExecutable from "../../records/ApplicationRecord.tsx";
 
 function addApplication(fromServer) {
   const value = map.get(fromServer.id);
@@ -15,7 +14,6 @@ function addApplication(fromServer) {
   const result2 = map.set(fromServer.id, result1);
   const result3 = map2.set(fromServer.name.toLowerCase(), result1);
   for (const item10031 of tmp5) {
-    let tmp6 = map2;
     let result4 = map2.set(item10031.toLowerCase(), result1);
     continue;
   }
@@ -28,17 +26,12 @@ function addApplication(fromServer) {
       if (null == nextResult.application) {
         continue;
       } else {
-        let tmp14 = nextResult;
-        let obj3 = closure_1;
-        let tmp13 = addApplication;
         if (tmp12.application instanceof closure_1) {
-          let tmp16 = nextResult;
           let application = tmp12.application;
         } else {
-          let tmp15 = nextResult;
-          application = obj3.createFromServer(tmp12.application);
+          application = closure_1.createFromServer(tmp12.application);
         }
-        let tmp13Result = tmp13(application);
+        let tmp13Result = addApplication(application);
       }
     }
   }
@@ -49,7 +42,6 @@ function handleWishlistAction(wishlistData) {
   if (null != applications) {
     if (0 !== applications.length) {
       for (const item10010 of applications) {
-        let tmp3 = addApplication;
         let tmp4 = addApplication(item10010);
         continue;
       }
@@ -83,8 +75,6 @@ function handleApplicationWidgetConfigFetchSuccess(applications) {
     return false;
   } else {
     for (const item10008 of applications) {
-      let tmp3 = addApplication;
-      let tmp4 = closure_1;
       let tmp5 = addApplication(closure_1.createFromServer(item10008));
       continue;
     }
@@ -102,9 +92,6 @@ function handleEntitlementsFetched(arg0) {
       application = sku.application;
     }
     if (null != application) {
-      let tmp3 = addApplication;
-      let tmp4 = closure_1;
-      let tmp5 = sku;
       let tmp6 = addApplication(closure_1.createFromServer(tmp.application));
       flag = true;
     }
@@ -128,7 +115,6 @@ prototype["initialize"] = function initialize(botUserIdToAppUsage) {
   if (null != botUserIdToAppUsage) {
     if (typeof botUserIdToAppUsage.botUserIdToAppUsage === "object") {
       for (const key10002 in arg0.botUserIdToAppUsage) {
-        let tmp3 = key10002;
         ({ applicationId, lastUsedMs } = arg0.botUserIdToAppUsage[key10002]);
         let tmp = typeof applicationId === "string";
         if (typeof applicationId === "string") {
@@ -143,7 +129,6 @@ prototype["initialize"] = function initialize(botUserIdToAppUsage) {
         if (!tmp) {
           continue;
         } else {
-          let tmp2 = closure_9;
           let obj = { applicationId: null, lastUsedMs: null };
           obj[0] = applicationId;
           obj[1] = lastUsedMs;
@@ -166,9 +151,7 @@ prototype["getGuildApplication"] = function getGuildApplication(closure_0, closu
     const values = map.values();
     for (const item10011 of values) {
       if (item10011.guildId === arg0) {
-        let tmp6 = item10011;
         if (tmp5.type === arg1) {
-          let tmp7 = obj;
           obj.return();
           return item10011;
         }
@@ -209,8 +192,8 @@ prototype["getApplicationLastUpdated"] = function getApplicationLastUpdated(arg0
 prototype["isFetchingApplication"] = function isFetchingApplication(id) {
   return true === map4.get(id);
 };
-prototype["isHydrated"] = function isHydrated(id) {
-  return set.has(id);
+prototype["isHydrated"] = function isHydrated(item) {
+  return set.has(item);
 };
 prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(applicationId) {
   return false === map4.get(applicationId);
@@ -242,13 +225,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     const iter = arg0.applications[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp2 = addApplication;
-      let tmp3 = closure_1;
-      let tmp4 = new.target;
-      let tmp5 = new.target;
-      let tmp6 = nextResult;
       let tmp7 = new closure_1(nextResult);
-      let tmp8 = tmp7;
       let tmp9 = addApplication(tmp7);
       continue;
     }
@@ -277,7 +254,6 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     const iter = arg0.applicationIds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp2 = map4;
       let value = map4.get(nextResult);
       let result = map4.set(nextResult, true);
       flag = true !== value;
@@ -291,13 +267,8 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (true === tmp) {
-        let tmp4 = set;
-        let tmp5 = nextResult;
         let addResult = set.add(tmp3.id);
       }
-      let tmp7 = addApplication;
-      let tmp8 = closure_1;
-      let tmp9 = nextResult;
       let tmp10 = addApplication(closure_1.createFromServer(tmp3));
       continue;
     }
@@ -305,7 +276,6 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   APPLICATIONS_FETCH_FAIL: function handleApplicationsFetchFail(arg0) {
     let flag = false;
     for (const item10008 of tmp) {
-      let tmp2 = map4;
       let value = map4.get(item10008);
       let result = map4.set(item10008, false);
       flag = false !== value;
@@ -325,8 +295,6 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let arr = items.push(nextResult.id);
-      let tmp3 = addApplication;
-      let tmp4 = closure_1;
       let tmp5 = addApplication(closure_1.createFromServer(nextResult));
       continue;
     }
@@ -344,13 +312,9 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
       let tmp2 = application;
       let hasItem = null == application;
       if (!hasItem) {
-        let tmp4 = application;
         hasItem = set.has(tmp2.id);
       }
       if (!hasItem) {
-        let tmp5 = addApplication;
-        let tmp6 = closure_1;
-        let tmp7 = application;
         let tmp8 = addApplication(closure_1.createFromServer(tmp2));
       }
       continue;
@@ -393,11 +357,10 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   },
   LIBRARY_FETCH_SUCCESS: function handleLibraryApplicationsFetch(arg0) {
     while (tmp !== undefined) {
-      let tmp3 = addApplication;
-      let tmp4 = closure_1;
       let tmp5 = addApplication(closure_1.createFromServer(tmp2.application));
       continue;
     }
+    tmp = arg0.libraryApplications[Symbol.iterator]();
   },
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetch(storeListing) {
     storeListing = storeListing.storeListing;
@@ -409,12 +372,12 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   },
   LOAD_MESSAGES_SUCCESS: function handleLoadMessages(messages) {
     messages = messages.messages;
-    let item = messages.forEach((attachments) => {
-      attachments = attachments.attachments;
+    let item = messages.forEach((item, index) => {
+      const attachments = item.attachments;
       if (attachments != null) {
-        const item = attachments.forEach((application) => {
-          if (null != application.application) {
-            callback(closure_1.createFromServer(application.application));
+        item = attachments.forEach((item, index) => {
+          if (null != item.application) {
+            callback(closure_1.createFromServer(item.application));
           }
         });
       }
@@ -450,17 +413,11 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult) {
-        let tmp4 = addApplication;
-        let tmp5 = closure_1;
-        let tmp6 = nextResult;
         let tmp7 = addApplication(closure_1.createFromServer(tmp3.application));
         let bot = tmp3.application.bot;
         if (null != bot) {
-          let tmp9 = handleAppWithBot;
           let obj = { userId: null, applicationId: null };
-          let tmp10 = bot;
           obj[0] = tmp8.id;
-          let tmp11 = nextResult;
           obj[1] = tmp3.application.id;
           let tmp12 = handleAppWithBot(obj);
         }
@@ -470,9 +427,9 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   },
   LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: function handleNotificationCenterItemsSuccess(items) {
     items = items.items;
-    const item = items.forEach((application) => {
-      if (null != application.application) {
-        callback(closure_1.createFromServer(application.application));
+    const item = items.forEach((item, index) => {
+      if (null != item.application) {
+        callback(closure_1.createFromServer(item.application));
       }
     });
   },
@@ -495,7 +452,6 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     if (null != applications) {
       if (0 !== applications.length) {
         for (const item10010 of applications) {
-          let tmp3 = addApplication;
           let tmp4 = addApplication(item10010);
           continue;
         }
@@ -507,6 +463,6 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
   APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess
 });
-let result = set.fileFinishedImporting("modules/applications/ApplicationStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/applications/ApplicationStore.tsx");
 
 export default applicationStore;

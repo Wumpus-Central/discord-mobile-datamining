@@ -1,10 +1,10 @@
 // discord_app/modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import int2hslRaw from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 
 const DEFAULT_ROLE_COLOR_HEX = ME.DEFAULT_ROLE_COLOR_HEX;
-const result = set.fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");
 
 export const extractColorStringsFromServerColors = function extractColorStringsFromServerColors(colors) {
   if (0 === colors.primary_color) {
@@ -17,13 +17,11 @@ export const extractColorStringsFromServerColors = function extractColorStringsF
   let int2hexResult1 = null;
   if (null != colors.secondary_color) {
     int2hexResult1 = int2hslRaw.int2hex(colors.secondary_color);
-    const obj3 = int2hslRaw;
   }
   obj[1] = int2hexResult1;
   let int2hexResult2 = null;
   if (null != colors.tertiary_color) {
     int2hexResult2 = int2hslRaw.int2hex(colors.tertiary_color);
-    const obj4 = int2hslRaw;
   }
   obj[2] = int2hexResult2;
   return obj;
@@ -32,7 +30,6 @@ export const getAuthorHasGradientRole = function getAuthorHasGradientRole(colorS
   let tmp = null != colorStrings;
   if (tmp) {
     tmp = null != colorStrings.colorStrings && null != colorStrings.colorStrings.primaryColor && null != colorStrings.colorStrings.secondaryColor;
-    const tmp2 = null != colorStrings.colorStrings && null != colorStrings.colorStrings.primaryColor && null != colorStrings.colorStrings.secondaryColor;
   }
   return tmp;
 };

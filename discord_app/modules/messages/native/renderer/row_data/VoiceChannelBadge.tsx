@@ -1,15 +1,17 @@
 // discord_app/modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import ME from "../../../../../Constants.tsx";
+import shouldShowAgeGateForVoiceChannel from "../../../../age_gate/AgeGateUtils.tsx";
+import getChannelIcon from "../../../../../utils/native/ChannelUtils.tsx";
 import experiment from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
-import closure_3 from "../../../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../../../stores/PermissionStore.tsx";
-import closure_5 from "../../../../../stores/VoiceStateStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import getUncachedChannelPermissions from "../../../../../stores/PermissionStore.tsx";
+import updateVoiceState from "../../../../../stores/VoiceStateStore.tsx";
 
 const Image = get_ActivityIndicator.Image;
 const Permissions = ME.Permissions;
-let result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
+let result = obj132.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
 export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId) {
   let obj = experiment;
@@ -23,24 +25,22 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
         }
         channel = channel.getChannel(channelId);
         if (null != channel) {
-          let tmpResult = tmp(6832);
+          let tmpResult = getChannelIcon;
           const assetSource = Image.resolveAssetSource(tmpResult.getChannelIcon(channel));
           let uri;
           if (assetSource != null) {
             uri = assetSource.uri;
           }
           if (null != uri) {
-            tmpResult = tmp(5252);
+            tmpResult = shouldShowAgeGateForVoiceChannel;
             let result = tmpResult.shouldAgeVerifyForAgeGate();
             if (result) {
-              result = tmp(5252).shouldShowAgeGateForChannelId(channel.id);
-              const tmpResult1 = tmp(5252);
+              result = shouldShowAgeGateForVoiceChannel.shouldShowAgeGateForChannelId(channel.id);
+              const tmpResult1 = shouldShowAgeGateForVoiceChannel;
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {
               isPrivateResult = closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
-              const obj4 = closure_4;
-              const tmp8 = Permissions;
               const tmp9 = closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
             }
             if (!result) {

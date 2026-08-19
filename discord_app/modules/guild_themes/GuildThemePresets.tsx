@@ -1,8 +1,8 @@
 // discord_app/modules/guild_themes/GuildThemePresets.tsx
+import obj132 from "../../../_runtime/00002_obj132.js";
 import sum from "../../../discord_common/js/shared/Constants.tsx";
 import nDefault from "../../../_runtime/00689_n.js";
 import items21 from "../client_themes/CustomThemesRandomUtils.tsx";
-import set from "../../../_runtime/00002_set.js";
 
 const ThemeTypes = sum.ThemeTypes;
 let obj = { TWILIGHT: 1, PLUM: 2, FIRE: 3, GOLD_DUST: 4, MOSS: 5, JADE: 6, OBSIDIAN: 7, OCEAN: 8, DENIM: 9, BLURPLE: 10 };
@@ -31,9 +31,9 @@ const items18 = [{ hex: "#B7D19F", stop: 0 }, { hex: "#B1DCA4", stop: 100 }];
 const items19 = [{ hex: "#297071", stop: 0 }, { hex: "#18203F", stop: 100 }];
 const items20 = [{ hex: "#C5F0D2", stop: 0 }, { hex: "#60ADB2", stop: 100 }];
 let closure_4 = { [obj.TWILIGHT]: obj, [obj.DENIM]: obj, [obj.OCEAN]: { id: obj.OCEAN, darkAppearance: { color: "#245B92", angle: 0, baseMix: 100, colors: items5 }, lightAppearance: { color: "#9ADBF7", angle: 0, baseMix: 100, colors: items6 } }, [obj.BLURPLE]: { id: obj.BLURPLE, darkAppearance: { color: "#533D9E", angle: 0, baseMix: 100, colors: items7 }, lightAppearance: { color: "#C3BFFF", angle: 0, baseMix: 100, colors: items8 } }, [obj.OBSIDIAN]: { id: obj.OBSIDIAN, darkAppearance: { color: "#5E4C85", angle: 0, baseMix: 100, colors: items9 }, lightAppearance: { color: "#B59DF2", angle: 0, baseMix: 100, colors: items10 } }, [obj.PLUM]: { id: obj.PLUM, darkAppearance: { color: "#8A3F7F", angle: 0, baseMix: 100, colors: items11 }, lightAppearance: { color: "#E893FF", angle: 0, baseMix: 100, colors: items12 } }, [obj.FIRE]: { id: obj.FIRE, darkAppearance: { color: "#9B2C2C", angle: 0, baseMix: 50, colors: items13 }, lightAppearance: { color: "#FFEBCA", angle: 0, baseMix: 50, colors: items14 } }, [obj.GOLD_DUST]: { id: obj.GOLD_DUST, darkAppearance: { color: "#6C523D", angle: 0, baseMix: 50, colors: items15 }, lightAppearance: { color: "#FFE7DA", angle: 0, baseMix: 50, colors: items16 } }, [obj.MOSS]: { id: obj.MOSS, darkAppearance: { color: "#58694E", angle: 0, baseMix: 50, colors: items17 }, lightAppearance: { color: "#B7D19F", angle: 0, baseMix: 50, colors: items18 } }, [obj.JADE]: { id: obj.JADE, darkAppearance: { color: "#297071", angle: 0, baseMix: 50, colors: items19 }, lightAppearance: { color: "#C5F0D2", angle: 0, baseMix: 50, colors: items20 } } };
-let set = new Set(Object.values(obj));
-let mapped = items.map((arg0) => dependencyMap[arg0]);
-let result = set.fileFinishedImporting("modules/guild_themes/GuildThemePresets.tsx");
+const set = new Set(Object.values(obj));
+let mapped = items.map((item, index) => dependencyMap[item]);
+let result = obj132.fileFinishedImporting("modules/guild_themes/GuildThemePresets.tsx");
 
 export const GUILD_THEME_PRESET_IDS = obj;
 export const GUILD_THEME_DEFAULT_BASE_MIX = 74;
@@ -56,24 +56,24 @@ export const getGuildThemePreset = function getGuildThemePreset(presetId) {
 export const getDefaultGuildThemePresetSettings = function getDefaultGuildThemePresetSettings() {
   return { presetId: mapped[0].id, customUserThemeSettings: "a" };
 };
-export const getGuildThemePresetAppearance = function getGuildThemePresetAppearance(preset, arg1) {
-  return arg1 === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;
+export const getGuildThemePresetAppearance = function getGuildThemePresetAppearance(preset, closure_1) {
+  return closure_1 === ThemeTypes.LIGHT ? preset.lightAppearance : preset.darkAppearance;
 };
 export const getLinearGradientForGuildThemePreset = function getLinearGradientForGuildThemePreset(lightAppearance) {
   const tmp = arg1 === ThemeTypes.LIGHT ? lightAppearance.lightAppearance : lightAppearance.darkAppearance;
   const colors = tmp.colors;
-  mapped = colors.map((hex) => "" + hex.hex + " " + hex.stop + "%");
+  mapped = colors.map((item, index) => "" + item.hex + " " + item.stop + "%");
   return "linear-gradient(" + tmp.angle + "deg, " + mapped.join(", ") + ")";
 };
-export const getSingleColorGuildThemeGradientColors = function getSingleColorGuildThemeGradientColors(first, theme) {
-  const tmp2 = theme === ThemeTypes.LIGHT ? { minTone: 55, maxTone: 75 } : { minTone: 15, maxTone: 35 };
+export const getSingleColorGuildThemeGradientColors = function getSingleColorGuildThemeGradientColors(arg0, closure_1) {
+  const tmp2 = closure_1 === ThemeTypes.LIGHT ? { minTone: 55, maxTone: 75 } : { minTone: 15, maxTone: 35 };
   const minTone = tmp2.minTone;
-  const obj = nDefault(first);
+  const obj = nDefault(arg0);
   const result = obj.set("hsl.l", (minTone + (Math.max(15, Math.min(75, 100 * obj.get("hsl.l"))) - 15) / 60 * (tmp2.maxTone - minTone)) / 100);
   const hexResult = result.hex();
   const obj3 = nDefault(hexResult);
   let num = -0.2;
-  if (theme === ThemeTypes.LIGHT) {
+  if (closure_1 === ThemeTypes.LIGHT) {
     num = 0.2;
   }
   const items = [hexResult, ];

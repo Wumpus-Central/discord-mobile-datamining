@@ -1,11 +1,11 @@
 // discord_app/modules/favorites/utils/openFavoritesGuildAddChannelModal.native.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import showSearchableDestinationListModalDefault from "../../share/native/showSearchableDestinationListModal.tsx";
 
 const FavoritesGuildAddChannelModal = "FavoritesGuildAddChannelModal";
-const result = set.fileFinishedImporting("modules/favorites/utils/openFavoritesGuildAddChannelModal.native.tsx");
+const result = obj132.fileFinishedImporting("modules/favorites/utils/openFavoritesGuildAddChannelModal.native.tsx");
 
 export default function openFavoritesGuildAddChannelModal(arg0) {
   ({ parentId, source } = arg0);

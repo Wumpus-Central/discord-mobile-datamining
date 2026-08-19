@@ -2,30 +2,26 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { FORUM_GUIDELINES_ACTION_SHEET as closure_6 } from "../ForumConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-createCacheKey = { scrollContainer: { paddingHorizontal: 16 }, header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 }, headerTitle: { marginTop: 8 }, guidelinesContainer: null, footer: null, buttonWrapper: null, buttonPill: null, floatingButtonContainer: null, editButton: null, editText: null, editIcon: null };
-createCacheKey = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
+const createCacheKey = { padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { paddingBottom: 16 };
 createCacheKey[5] = { marginHorizontal: 16 };
 createCacheKey[6] = { borderRadius: ThemesDefault.radii.sm };
-let obj1 = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[7] = { marginTop: 16, position: "absolute", left: 16, right: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[8] = { display: "flex", flexDirection: "row", alignItems: "center", position: "absolute", top: 12, right: 0 };
 createCacheKey[9] = { marginRight: 4 };
-let obj2 = { marginTop: 16, position: "absolute", left: 16, right: 16, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[10] = { color: ThemesDefault.colors.TEXT_BRAND };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { color: ThemesDefault.colors.TEXT_BRAND };
-const result = require("set").fileFinishedImporting("modules/forums/native/ForumGuidelinesActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/ForumGuidelinesActionSheet.tsx");
 
 export default function ForumGuidelinesActionSheet(channel) {
   channel = channel.channel;
@@ -118,6 +114,7 @@ export default function ForumGuidelinesActionSheet(channel) {
       }
     }
     ref.current = false;
+    const obj = channel(bottom[17]);
   }, items4);
   const items5 = [channel.id];
   const callback1 = obj1.useCallback(() => {
@@ -144,7 +141,7 @@ export default function ForumGuidelinesActionSheet(channel) {
     obj6[0] = tmp.editIcon.color;
     items6[1] = tmp21(tmp2(tmp3[23]).PencilIcon, obj6);
     obj4[4] = items6;
-    tmp19Result = tmp19(tmp2(tmp3[21]).PressableOpacity, obj4);
+    tmp19Result = callback(tmp2(tmp3[21]).PressableOpacity, obj4);
   }
   const items7 = [tmp19Result, , ];
   const obj7 = { IconComponent: null };
@@ -156,7 +153,7 @@ export default function ForumGuidelinesActionSheet(channel) {
   obj8[3] = intl4.string(channel(bottom[15]).t["4d4T4l"]);
   items7[2] = callback(channel(bottom[22]).Text, obj8);
   obj3[1] = items7;
-  const items8 = [closure_8(closure_5, obj3), ];
+  const items8 = [callback(closure_5, obj3), ];
   const obj9 = { style: tmp.guidelinesContainer, children: null };
   const obj10 = { variant: "text-md/medium", color: "text-default", children: null };
   tmp5Result = tmp5(tmp3[26]);
@@ -164,7 +161,7 @@ export default function ForumGuidelinesActionSheet(channel) {
   obj9[1] = callback(channel(bottom[22]).Text, obj10);
   items8[1] = callback(closure_5, obj9);
   obj2[4] = items8;
-  obj1[4] = closure_8(channel(bottom[20]).BottomSheetScrollView, obj2);
+  obj1[4] = callback(channel(bottom[20]).BottomSheetScrollView, obj2);
   const children = [callback(channel(bottom[19]).BottomSheet, obj1), ];
   if (tmp21Result) {
     const obj12 = { grow: true, style: null, pillStyle: null, text: null, onPress: null };
@@ -180,11 +177,10 @@ export default function ForumGuidelinesActionSheet(channel) {
     tmp21Result = tmp21(tmp2(tmp3[14]).BaseTextButton, obj12);
   }
   children[1] = tmp21Result;
-  return closure_8(closure_9, { children });
+  return callback(closure_9, { children });
 };
 export const openForumGuidelinesActionSheet = function openForumGuidelinesActionSheet(arg0) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {};
+  const obj = {};
   const merged = Object.assign(arg0);
   obj.openLazy(asyncRequireImpl(10181, dependencyMap.paths), closure_6, obj);
 };

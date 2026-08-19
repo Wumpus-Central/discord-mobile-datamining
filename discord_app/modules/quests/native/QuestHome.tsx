@@ -1,42 +1,40 @@
 // discord_app/modules/quests/native/QuestHome.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
 import useQuests from "../hooks/QuestHooks.tsx";
 import useBountiesExperience from "../experiments/useBountiesExperience.tsx";
 import QuestHomeEmptyStateDefault from "QuestHomeEmptyState.tsx";
 import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet.tsx";
 import EmptyStateDefault from "QuestHomeBounties.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../a11y/AccessibilityStore.tsx";
-import closure_8 from "../QuestHomeNavigationStore.tsx";
-import closure_9 from "../QuestStore.tsx";
-import closure_10 from "../QuestUtmStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import zustandStore from "../QuestHomeNavigationStore.tsx";
+import initializeState from "../QuestStore.tsx";
+import keys from "../QuestUtmStore.tsx";
 import { QuestsExperimentLocations } from "../QuestConstants.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import { createStandardNavigationFactories } from "../../../../_runtime/01501_createStandardNavigationFactories.js";
-import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { isVirtualCurrencyEnabled } from "../../virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx";
-import { apexExperiment } from "../experiments/OrbsHoldoutExperiment.tsx";
 import { useBountiesExperience } from "../experiments/useBountiesExperience.tsx";
 import { useQuests } from "../hooks/QuestHooks.tsx";
 import { getIsEligibleForQuests } from "../lib/QuestsEligibility.tsx";
 import { ListEdgeSpacer } from "QuestHomeOrbShopCarousel.tsx";
 
-require = arg1;
+require = fn;
 function EmptyStateNoQuestsAvailable() {
   let obj = navigation(1500);
   navigation = obj.useNavigation();
   const items = [navigation];
   const callback = importAllResult.useCallback(() => navigation.goBack(), items);
-  obj = { action: null };
   obj = { variant: "secondary", text: null, onPress: null };
   const intl = navigation(1236).intl;
   obj[1] = intl.string(navigation(1236).t["/g10LC"]);
@@ -45,8 +43,7 @@ function EmptyStateNoQuestsAvailable() {
   return callback2(QuestHomeEmptyStateDefault, obj);
 }
 function EmptyStateFiltered(onClearFilters) {
-  let obj = { action: null, title: null, subtitle: null };
-  obj = { variant: "secondary", text: null, onPress: null };
+  const obj = { variant: "secondary", text: null, onPress: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.urZl31);
   obj[2] = onClearFilters.onClearFilters;
@@ -71,9 +68,9 @@ function HeaderPreviewButton() {
     obj[0] = tmp.previewButton;
     obj = { grow: true, onPress: null, variant: "primary", text: null };
     obj[1] = callback;
-    const intl = tmp3(1236).intl;
-    obj[3] = intl.string(tmp3(1236).t.tx5Ax5);
-    obj[1] = callback2(tmp3(4745).Button, obj);
+    const intl = getSystemLocale.intl;
+    obj[3] = intl.string(getSystemLocale.t.tx5Ax5);
+    obj[1] = callback2(Button.Button, obj);
     tmp5 = callback2(closure_5, obj);
   }
   return tmp5;
@@ -91,19 +88,19 @@ function HeaderWithBounties(arg0) {
     ({ sectionHeader: arr2[0], sectionHeaderRow: arr2[1] } = tmp);
     obj[0] = items1;
     obj = { variant: "text-lg/semibold", color: "text-strong", children: null };
-    const intl = tmp2(1236).intl;
-    obj[2] = intl.string(tmp2(1236).t.qetVDw);
-    const items2 = [tmp6(tmp2(4734).Text, obj), ];
+    const intl = getSystemLocale.intl;
+    obj[2] = intl.string(getSystemLocale.t.qetVDw);
+    const items2 = [callback2(Text.Text, obj), ];
     obj1 = { onPress: null, hitSlop: 14, "aria-label": null, accessibilityRole: "button", children: null };
     obj1[0] = openBountiesNuxPromoSheetDefault;
-    const intl2 = tmp2(1236).intl;
-    obj1[2] = intl2.string(tmp2(1236).t.hvVgAZ);
+    const intl2 = getSystemLocale.intl;
+    obj1[2] = intl2.string(getSystemLocale.t.hvVgAZ);
     const obj2 = { size: "xs", color: null };
     obj2[1] = ThemesDefault.colors.ICON_SUBTLE;
-    obj1[4] = tmp6(tmp2(4330).CircleInformationIcon, obj2);
-    items2[1] = tmp6(tmp2(5433).PressableOpacity, obj1);
+    obj1[4] = callback2(CircleInformationIcon.CircleInformationIcon, obj2);
+    items2[1] = callback2(PressableBase.PressableOpacity, obj1);
     obj[1] = items2;
-    tmp4Result = tmp4(closure_5, obj);
+    tmp4Result = callback2(closure_5, obj);
   }
   const obj3 = { children: null };
   items[1] = tmp4Result;
@@ -112,29 +109,26 @@ function HeaderWithBounties(arg0) {
   items3 = [, ];
   ({ sectionHeader: arr4[0], sectionHeaderWithTag: arr4[1] } = tmp);
   const obj5 = { variant: "text-lg/semibold", color: "text-strong", children: null };
-  const intl3 = tmp2(1236).intl;
+  const intl3 = getSystemLocale.intl;
   obj5[2] = intl3.string(getSystemLocale.t.JALI2K);
   obj4[1] = callback2(Text.Text, obj5);
   items[3] = callback2(closure_5, obj4);
   obj3[0] = items;
-  return closure_15(closure_16, obj3);
+  return callback2(closure_16, obj3);
 }
 let c4 = importAllResult;
 ({ View: c5, ActivityIndicator: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, UserSettingsSections: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let obj = { container: { flex: 1 }, loadingContainer: null, sectionHeader: null, sectionHeaderRow: null, previewButton: null, sectionHeaderWithTag: null };
-obj = {};
+let obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.justifyContent = "center";
 obj.alignItems = "center";
 obj[1] = obj;
-createCacheKey = { marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[2] = createCacheKey;
 obj[3] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 obj[4] = { marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: "transparent" };
-let obj3 = { marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: "transparent" };
 obj[5] = { gap: ThemesDefault.space.PX_4 };
 let closure_17 = createCacheKey.createStyles(obj);
 let closure_22 = importAllResult.memo((onLayout) => {
@@ -144,64 +138,43 @@ let closure_22 = importAllResult.memo((onLayout) => {
     obj[0] = tmp;
     obj[1] = tmp2;
     obj[2] = tmp3;
-    let tmp4Result = tmp4(HeaderWithBounties, obj);
+    let tmp4Result = callback(HeaderWithBounties, obj);
   } else {
-    tmp4Result = tmp4(HeaderPreviewButton, {});
+    tmp4Result = callback(HeaderPreviewButton, {});
   }
   obj[1] = tmp4Result;
-  return closure_14(closure_5, obj);
+  return callback(closure_5, obj);
 });
-let obj4 = { gap: ThemesDefault.space.PX_4 };
 const memoResult = importAllResult.memo(function QuestHome(filters) {
   ({ containerStyle, isNavigationComplete, scrollToQuestId } = filters);
   let _require = scrollToQuestId;
   filters = filters.filters;
-  let navigation = filters;
   const sortMethod = filters.sortMethod;
-  dependencyMap = sortMethod;
-  let callback;
   importAllResult = undefined;
-  let first;
-  closure_6 = undefined;
-  let callback5;
-  let stateFromStoresArray;
   closure_9 = undefined;
-  let ref;
-  let callback4;
-  let callback6;
-  let ref1;
-  let verticalScrollEnabled;
-  let previewAdCreativeIds;
   let isLoading;
   let questHomeBounties;
-  let showBounties;
   let products;
   let obtainableOrbRewards;
   let showPlaceholderCarousel;
-  let isFetchingCurrentQuests;
   closure_23 = undefined;
-  let obj = _getIsEligibleForQuests;
+  let obj = getIsEligibleForQuests;
   const isEligibleForQuests = obj.getIsEligibleForQuests();
-  callback = isEligibleForQuests;
   let tmp4 = questHomeBounties();
-  obj1 = _useQuests;
-  let obj2 = importAllResult;
+  obj1 = useQuests;
   const items = [filters, sortMethod];
-  const filteredQuests = obj1.useFilteredQuests(_useQuests.QuestTabs.ALL, importAllResult.useMemo(() => ({ filters: navigation, sortMethod: closure_2 }), items));
+  const filteredQuests = obj1.useFilteredQuests(require("../hooks/QuestHooks.tsx").QuestTabs.ALL, importAllResult.useMemo(() => ({ filters: navigation, sortMethod: closure_2 }), items));
   let quests = filteredQuests.quests;
   importAllResult = quests;
   const excludedQuests = filteredQuests.excludedQuests;
-  first = excludedQuests;
-  isFetchingCurrentQuests = filteredQuests.isFetchingCurrentQuests;
-  closure_6 = isFetchingCurrentQuests;
+  let isFetchingCurrentQuests = filteredQuests.isFetchingCurrentQuests;
   const hasFetched = filteredQuests.hasFetched;
-  callback5 = hasFetched;
-  let obj3 = _initialize;
+  let obj3 = initialize;
   const items1 = [closure_9];
-  stateFromStoresArray = obj3.useStateFromStoresArray(items1, () => {
+  const stateFromStoresArray = obj3.useStateFromStoresArray(items1, () => {
     const quests = ref2.quests;
-    const found = Array.from(quests.values()).filter((arg0) => !callback(table[32]).isQuestExpired(arg0));
-    const mapped = found.map((id) => id.id);
+    const found = Array.from(quests.values()).filter((item, index) => !callback(table[32]).isQuestExpired(item));
+    const mapped = found.map((item, index) => item.id);
     return mapped.sort();
   }, []);
   const items2 = [stateFromStoresArray];
@@ -221,7 +194,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
       callback = result;
       let findIndexResult = null;
       if (null != result) {
-        findIndexResult = closure_4.findIndex((id) => id.id === id.id);
+        findIndexResult = closure_4.findIndex((item, index) => item.id === id.id);
       }
       return findIndexResult;
     }
@@ -230,7 +203,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   const effect1 = importAllResult.useEffect(() => {
     let tmp2 = null != callback;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== callback;
     }
     if (tmp2) {
       tmp2 = callback5;
@@ -240,42 +213,36 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     }
     if (tmp2) {
       let obj = callback(ref[32]);
-      let tmp8 = null == obj.findQuestOrReplacement(tmp, closure_4, first);
+      let tmp8 = null == obj.findQuestOrReplacement(callback, closure_4, first);
       if (tmp8) {
-        tmp8 = ref2.current !== tmp;
+        tmp8 = ref2.current !== callback;
       }
       if (tmp8) {
         obj = { key: "QUEST_HOME_MOBILE_DEEP_LINK_QUEST_NOT_FOUND", content: null, icon: null, toastDurationMs: 5000 };
-        const intl = tmp4(tmp5[20]).intl;
-        obj[1] = intl.string(tmp4(tmp5[20]).t.sIyHuY);
-        obj[2] = navigation(tmp5[36]);
-        navigation(tmp5[35]).open(obj);
-        const obj2 = navigation(tmp5[35]);
+        const intl = callback(ref[20]).intl;
+        obj[1] = intl.string(callback(ref[20]).t.sIyHuY);
+        obj[2] = navigation(ref[36]);
+        navigation(ref[35]).open(obj);
+        const obj2 = navigation(ref[35]);
         obj = { quest_id: null };
-        obj[0] = tmp;
-        navigation(tmp5[37]).track(callback6.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, obj);
-        ref2.current = tmp;
-        const obj4 = navigation(tmp5[37]);
+        obj[0] = callback;
+        navigation(ref[37]).track(callback6.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, obj);
+        ref2.current = callback;
+        const obj4 = navigation(ref[37]);
       }
     }
   }, items4);
   _require = memo;
-  navigation = undefined;
-  dependencyMap = undefined;
-  callback = undefined;
   importAllResult = undefined;
-  first = undefined;
-  closure_6 = undefined;
-  callback5 = undefined;
-  let obj4 = _initialize;
+  let callback5;
+  let obj4 = initialize;
   const items5 = [callback5];
   const stateFromStores = obj4.useStateFromStores(items5, () => callback5.useReducedMotion);
-  navigation = stateFromStores;
-  ref = importAllResult.useRef(null);
+  let navigation = stateFromStores;
+  const ref = importAllResult.useRef(null);
   dependencyMap = ref;
-  ref1 = importAllResult.useRef({ parent: { scrollY: 0 }, children: {} });
-  callback = ref1;
-  callback = importAllResult.useCallback((arg0) => {
+  const ref1 = importAllResult.useRef({ parent: { scrollY: 0 }, children: {} });
+  let callback = importAllResult.useCallback((arg0) => {
     const keys = Object.keys(closure_3.current.children);
     const iter = keys[Symbol.iterator]();
     const nextResult = iter.next();
@@ -283,12 +250,9 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
       let tmp3 = nextResult;
       let tmp4 = null != arg0;
       if (tmp4) {
-        let tmp5 = nextResult;
         tmp4 = tmp3 !== arg0;
       }
       if (!tmp4) {
-        let tmp6 = closure_3;
-        let tmp7 = nextResult;
         let tmp8 = closure_3.current.children[tmp3];
         if (tmp8 != null) {
           let calculateVisibility = tmp8.calculateVisibility;
@@ -312,13 +276,13 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     callback2();
   }, items7);
   const tmp17 = callback(importAllResult.useState(false), 2);
-  first = tmp17[0];
+  const first = tmp17[0];
   closure_6 = tmp17[1];
   const items8 = [callback];
   const callback3 = importAllResult.useCallback(() => {
     callback3(true);
   }, []);
-  callback4 = importAllResult.useCallback((nativeEvent) => {
+  const callback4 = importAllResult.useCallback((nativeEvent) => {
     const obj = {};
     const merged = Object.assign(closure_3.current.children[arg1]);
     obj.layout = nativeEvent.nativeEvent.layout;
@@ -337,7 +301,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     }
   }, items9);
   const items10 = [callback];
-  callback6 = importAllResult.useCallback((nativeEvent) => {
+  const callback6 = importAllResult.useCallback((nativeEvent) => {
     closure_3.current.parent.firstItemOffset = nativeEvent.nativeEvent.layout.height;
     callback2();
   }, items10);
@@ -345,19 +309,19 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   const effect2 = importAllResult.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = -1 !== tmp;
+      tmp2 = -1 !== closure_0;
     }
     if (tmp2) {
       tmp2 = first;
     }
     if (tmp2) {
-      callback5(tmp);
+      callback5(closure_0);
       stateFromStoresArray.setState({ scrollToQuestId: null });
     }
   }, items11);
   const tmp24 = ref((getUtmCurrentContext) => getUtmCurrentContext.getUtmCurrentContext());
-  obj = { name: _encodeProperties.ImpressionNames.QUEST_HOME, type: _encodeProperties.ImpressionTypes.VIEW, properties: null };
-  obj = { utm_source_current: tmp24.utmSourceCurrent, utm_medium_current: tmp24.utmMediumCurrent, utm_campaign_current: tmp24.utmCampaignCurrent, utm_content_current: tmp24.utmContentCurrent, tab: _useQuests.QuestTabs.ALL };
+  { name: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").ImpressionNames.QUEST_HOME, type: require("../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx").ImpressionTypes.VIEW, properties: null };
+  obj = { utm_source_current: tmp24.utmSourceCurrent, utm_medium_current: tmp24.utmMediumCurrent, utm_campaign_current: tmp24.utmCampaignCurrent, utm_content_current: tmp24.utmContentCurrent, tab: require("../hooks/QuestHooks.tsx").QuestTabs.ALL };
   obj[2] = obj;
   navigation(9177)(obj);
   const items12 = [isEligibleForQuests];
@@ -378,21 +342,21 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
       current.scrollToOffset({ offset: 0, animated: false });
     }
   }, items13);
-  let obj7 = _useQuests;
+  let obj7 = useQuests;
   obj1 = { selectedSortMethod: sortMethod, selectedFilters: filters, numQuestsVisible: quests.length };
   const questHomeSortingFilteringAnalytics = obj7.useQuestHomeSortingFilteringAnalytics(obj1);
   const tmp25 = navigation(9177);
   let tmp5 = navigation;
-  showBounties = _isVirtualCurrencyEnabled.useVirtualCurrencyMobileEnabled().enabled;
-  const obj10 = _isVirtualCurrencyEnabled;
-  const bountiesExperience = _useBountiesExperience.useBountiesExperience(callback4.QUEST_HOME_MOBILE);
-  verticalScrollEnabled = bountiesExperience.verticalScrollEnabled;
-  const OrbsHoldoutExperiment = _apexExperiment.OrbsHoldoutExperiment;
-  obj2 = { location: callback4.QUEST_HOME_MOBILE };
-  const obj11 = _useBountiesExperience;
+  let showBounties = require("../../virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx").useVirtualCurrencyMobileEnabled().enabled;
+  const obj10 = isVirtualCurrencyEnabled;
+  const bountiesExperience = require("../experiments/useBountiesExperience.tsx").useBountiesExperience(callback4.QUEST_HOME_MOBILE);
+  const verticalScrollEnabled = bountiesExperience.verticalScrollEnabled;
+  const OrbsHoldoutExperiment = require("../experiments/OrbsHoldoutExperiment.tsx").OrbsHoldoutExperiment;
+  let obj2 = { location: callback4.QUEST_HOME_MOBILE };
+  const obj11 = useBountiesExperience;
   const tmp30 = callback4;
-  const params = _createStandardNavigationFactories.useRoute().params;
-  previewAdCreativeIds = undefined;
+  const params = require("../../../../_runtime/01501_createStandardNavigationFactories.js").useRoute().params;
+  let previewAdCreativeIds;
   if (params != null) {
     previewAdCreativeIds = params.previewAdCreativeIds;
   }
@@ -406,10 +370,10 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
       if (0 !== previewAdCreativeIds.length) {
         if (verticalScrollEnabled) {
           if (!isLoading) {
-            const found = questHomeBounties.find((id) => closure_15.includes(id.id));
+            const found = questHomeBounties.find((item, index) => closure_15.includes(item.id));
             if (null != found) {
-              let obj = navigation(ref[14]);
-              obj = { bountyId: null, sourceQuestContent: null };
+              navigation(ref[14]);
+              const obj = { bountyId: null, sourceQuestContent: null };
               obj[0] = found.id;
               obj[1] = callback(ref[44]).QuestContent.VIDEO_MODAL_MOBILE;
               obj.showModal(obj);
@@ -433,11 +397,11 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   obj3 = { location: tmp30.QUEST_HOME_MOBILE };
   const config = BountiesShopCarouselExperiment.useConfig(obj3);
   ({ enabled, variation } = config);
-  const obj13 = _createStandardNavigationFactories;
+  const obj13 = createStandardNavigationFactories;
   if (enabled) {
     enabled = showBounties;
   }
-  const questHomeOrbShopCarouselData = _ListEdgeSpacer.useQuestHomeOrbShopCarouselData({ enabled, variation });
+  const questHomeOrbShopCarouselData = require("QuestHomeOrbShopCarousel.tsx").useQuestHomeOrbShopCarouselData({ enabled, variation });
   products = questHomeOrbShopCarouselData.products;
   obtainableOrbRewards = questHomeOrbShopCarouselData.obtainableOrbRewards;
   showPlaceholderCarousel = questHomeOrbShopCarouselData.showPlaceholderCarousel;
@@ -449,8 +413,8 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     tmp37 = questHomeBounties.length > 0;
   }
   _require = tmp37;
-  const tmpResult1 = _ListEdgeSpacer;
-  navigation = _useNavigation.useNavigation();
+  const tmpResult1 = ListEdgeSpacer;
+  navigation = require("../../../design/components/Navigator/native/useNavigation.native.tsx").useNavigation();
   dependencyMap = obj2.useRef(false);
   callback = obj2.useRef(false);
   importAllResult = obj2.useRef(false);
@@ -461,8 +425,8 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     }
   }, items15);
   const effect7 = obj2.useEffect(() => {
-    function handleBountiesModalPush(key) {
-      if (key.key === handleBountiesModalPush(closure_1_2[14]).BOUNTIES_MODAL_KEY) {
+    function handleBountiesModalPush(closure_1_2) {
+      if (closure_1_2.key === handleBountiesModalPush(closure_1_2[14]).BOUNTIES_MODAL_KEY) {
         closure_3.current = true;
       }
     }
@@ -514,7 +478,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
       skipRemountKey: true,
       sourceQuestContent: callback(ref[44]).QuestContent.QUEST_HOME_MOBILE,
       children() {
-        return closure_1_14(item(closure_1_2[49]).QuestCard, { quest: item, questContentPosition: index, containerPadding: 0, sourceQuestContent: item(closure_1_2[44]).QuestContent.QUEST_HOME_MOBILE });
+        return verticalScrollEnabled(item(closure_1_2[49]).QuestCard, { quest: item, questContentPosition: index, containerPadding: 0, sourceQuestContent: item(closure_1_2[44]).QuestContent.QUEST_HOME_MOBILE });
       }
     });
   }, items18);
@@ -525,7 +489,7 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     const merged = Object.assign(arg0);
     obj.onLayout = function onLayout(arg0) {
       if (null != closure_1_4[index.index]) {
-        closure_1_11(arg0, tmp.id);
+        callback4(arg0, tmp.id);
       }
       index.onLayout(arg0);
     };
@@ -553,8 +517,8 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
   const items21 = [isEligibleForQuests];
   const effect11 = obj2.useEffect(() => {
     if (closure_3) {
-      let obj = navigation(ref[50]);
-      obj = { includesBounties: null };
+      navigation(ref[50]);
+      const obj = { includesBounties: null };
       obj[0] = ref3.current;
       obj.startTracking(obj);
       return () => {
@@ -569,13 +533,13 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
       tmp = !isFetchingCurrentQuests;
     }
     if (tmp) {
-      let obj = navigation(ref[50]);
-      obj = { includesBounties: null };
+      navigation(ref[50]);
+      const obj = { includesBounties: null };
       obj[0] = ref3.current;
       obj.stopTracking(obj);
     }
   }, items22);
-  _useQuests;
+  useQuests;
   if (!isEligibleForQuests) {
     return null;
   } else if (tmp46) {
@@ -617,9 +581,8 @@ const memoResult = importAllResult.memo(function QuestHome(filters) {
     obj6[10] = callback1;
     obj6[11] = callback3;
     tmp63Result = verticalScrollEnabled(tmp(8029).FlashList, obj6);
-    const tmp63 = verticalScrollEnabled;
   }
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/QuestHome.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/QuestHome.tsx");
 
 export default memoResult;

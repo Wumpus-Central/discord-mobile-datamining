@@ -1,9 +1,9 @@
 // discord_app/modules/custom_status/CustomStatusManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../stores/SelfPresenceStore.tsx";
+import filterPlayingActivities from "../../stores/SelfPresenceStore.tsx";
 import ME from "../../Constants.tsx";
 
-let require = arg1;
+let require = fn;
 ({ AnalyticsObjects: c4, StatusTypes: c5 } = ME);
 const timeout = new require("start").Timeout();
 const timeout1 = new require("start").Timeout();
@@ -60,9 +60,8 @@ let prototype = function CustomStatusManager() {
         }
       }
       if (null != closure_8) {
-        obj.stop();
+        closure_8.stop();
       }
-      obj = closure_8;
     }
   };
   applyArgumentsResult.manageExpiringStatus = function manageExpiringStatus() {
@@ -80,8 +79,7 @@ let prototype = function CustomStatusManager() {
           const diff = time - date1.getTime();
           if (diff > 0) {
             closure_6.start(diff, () => {
-              obj = { nextStatus: constants2.ONLINE, analyticsContext: { location: obj } };
-              obj = { object: constants.CUSTOM_STATUS_MANAGER };
+              const obj = { object: constants.CUSTOM_STATUS_MANAGER };
               callback(table[5])(obj);
             }, true);
           } else {
@@ -149,6 +147,6 @@ let prototype = function CustomStatusManager() {
 class prototype extends tmp6 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
 
 export default prototype;

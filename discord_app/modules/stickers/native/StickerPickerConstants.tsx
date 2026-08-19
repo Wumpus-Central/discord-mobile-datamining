@@ -1,5 +1,5 @@
 // discord_app/modules/stickers/native/StickerPickerConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import StickerFormat from "../StickersTypes.tsx";
 import ExpressionPickerViewType from "../../expression_picker/ExpressionPickerConstants.tsx";
 
@@ -7,7 +7,7 @@ const PADDING_VERTICAL = ExpressionPickerViewType.PADDING_VERTICAL;
 ({ PADDING_HORIZONTAL, MIN_MARGIN } = ExpressionPickerViewType);
 const result = 2 * PADDING_VERTICAL;
 const items = [StickerFormat.StickerFormat.GIF, StickerFormat.StickerFormat.PNG, StickerFormat.StickerFormat.APNG];
-const result1 = set.fileFinishedImporting("modules/stickers/native/StickerPickerConstants.tsx");
+const result1 = obj132.fileFinishedImporting("modules/stickers/native/StickerPickerConstants.tsx");
 
 export { PADDING_HORIZONTAL };
 export { PADDING_VERTICAL };

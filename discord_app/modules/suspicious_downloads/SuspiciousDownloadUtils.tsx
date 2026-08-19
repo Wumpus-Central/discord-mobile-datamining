@@ -1,9 +1,8 @@
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadUtils.tsx
 import isDiscordProxiedAssetUrlDefault from "../../utils/URLUtils.tsx";
 import _modDef8342 from "../../../_runtime/metro/08342__.js";
-import set from "../../../_runtime/00002_set.js";
 
-let set = new Set(_modDef8342);
+const set = new Set(_modDef8342);
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj[0] = regExp;
@@ -11,7 +10,7 @@ const regExp1 = new RegExp("/downloads\\S*/[^/]*");
 obj[1] = regExp1;
 const regExp2 = new RegExp("/downloads\\S*/[^/]*");
 obj[2] = regExp2;
-const result = set.fileFinishedImporting("modules/suspicious_downloads/SuspiciousDownloadUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/suspicious_downloads/SuspiciousDownloadUtils.tsx");
 
 export const isSuspiciousDownload = function isSuspiciousDownload(localUri) {
   obj = isDiscordProxiedAssetUrlDefault;
@@ -43,8 +42,6 @@ export const isSuspiciousDownload = function isSuspiciousDownload(localUri) {
         if (0 <= diff) {
           while (true) {
             let tmp5 = parts[diff];
-            let tmp6 = diff;
-            let tmp7 = num3;
             let sum = num3;
             if ("" !== tmp5) {
               sum = num3;

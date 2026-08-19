@@ -1,8 +1,8 @@
 // discord_app/modules/payments/hooks/useSubscriptionSelection.tsx
-import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
+const result = require("obj132").fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
 
 export default function useSubscriptionSelection() {
   [tmp2, tmp3] = callback(React.useState(undefined), 2);

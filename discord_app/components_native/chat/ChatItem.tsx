@@ -2,16 +2,18 @@
 import set from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
 import isSystemMessageDefault from "../../modules/messages/isSystemMessage.tsx";
 import __INTERNAL_VIEW_CONFIG from "../../../discord_common/js/packages/rtn-codegen/js/AutoModerationSystemMessageViewNativeComponent.tsx";
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00019_noop.js";
+import __INTERNAL_VIEW_CONFIG2 from "../../../discord_common/js/packages/rtn-codegen/js/MessageViewNativeComponent.tsx";
+import __INTERNAL_VIEW_CONFIG3 from "../../../discord_common/js/packages/rtn-codegen/js/SystemMessageViewNativeComponent.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { View } from "../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../modules/a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../modules/a11y/AccessibilityStore.tsx";
 import { MessageTypes } from "../../Constants.tsx";
 import Changeset from "../../modules/messages/native/renderer/RowGeneratorConstants.tsx";
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function DCDChatItem(message) {
   message = message.message;
   const merged = Object.assign(message, Object.create(null));
@@ -24,15 +26,15 @@ function DCDChatItem(message) {
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       obj = {};
       const merged2 = Object.assign(merged);
-      tmp3Result = callback(tmp21(10068).default, obj);
+      tmp3Result = callback(__INTERNAL_VIEW_CONFIG2.default, obj);
     } else if (isSystemMessageDefault(message)) {
       obj1 = {};
       const merged3 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(10069).default, obj1);
+      tmp3Result = callback(__INTERNAL_VIEW_CONFIG3.default, obj1);
     } else {
       obj = {};
       const merged4 = Object.assign(merged);
-      tmp3Result = tmp3(tmp21(10068).default, obj);
+      tmp3Result = callback(__INTERNAL_VIEW_CONFIG2.default, obj);
     }
   }
   return tmp3Result;
@@ -43,7 +45,7 @@ let closure_13 = createCacheKey.createStyles((marginLeft, marginTop) => {
   const offset = { marginTop: -marginTop, marginLeft: -marginLeft };
   return { container: { position: "relative", overflow: "hidden" }, offset, gradient: { position: "absolute", bottom: 0, height: 24, width: "100%" }, itemRow: { backgroundColor: "transparent" } };
 });
-const result = require("set").fileFinishedImporting("components_native/chat/ChatItem.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/chat/ChatItem.tsx");
 
 export default function _default(rowGenerator) {
   rowGenerator = rowGenerator.rowGenerator;
@@ -61,15 +63,11 @@ export default function _default(rowGenerator) {
   }
   const gradientColors = rowGenerator.gradientColors;
   let roleStyle;
-  let first;
-  closure_8 = undefined;
-  roleStyle = undefined;
-  let rawRow;
   let token;
   let obj = messageSizeCacheRef;
   [tmp4, c6] = onLayout(messageSizeCacheRef.useState(0), 2);
   const tmp5 = onLayout(messageSizeCacheRef.useState(undefined), 2);
-  first = tmp5[0];
+  const first = tmp5[0];
   closure_8 = tmp5[1];
   roleStyle = roleStyle.roleStyle;
   let items = [first, roleStyle, message, modifyRow, rowGenerator];
@@ -86,7 +84,7 @@ export default function _default(rowGenerator) {
     obj[1] = JSON.stringify({ index: 0 });
     return obj;
   }, items);
-  rawRow = memo.rawRow;
+  const rawRow = memo.rawRow;
   const items1 = [rawRow.contextType];
   const memo1 = messageSizeCacheRef.useMemo(() => {
     let num = 0;
@@ -113,8 +111,8 @@ export default function _default(rowGenerator) {
     const height = nativeEvent.nativeEvent.layout.height;
     if (height > 0) {
       if (null != messageSizeCacheRef) {
-        if (tmp.current[message.id] !== height) {
-          tmp.current[tmp3.id] = height;
+        if (messageSizeCacheRef.current[message.id] !== height) {
+          messageSizeCacheRef.current[tmp3.id] = height;
         }
       }
       _undefined(height);
@@ -133,7 +131,7 @@ export default function _default(rowGenerator) {
   if (tmp14Result) {
     tmp13 = maxHeight;
   }
-  obj = { style: tmp9.offset, onLayout: callback1, children: rawRow(DCDChatItem, obj) };
+  { style: tmp9.offset, onLayout: callback1, children: rawRow(DCDChatItem, obj) };
   obj = { message, row: memo.row, style: tmp9.itemRow };
   const tmp14 = rawRow;
   const tmp15 = gradientColors;

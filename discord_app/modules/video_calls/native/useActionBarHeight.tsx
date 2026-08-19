@@ -2,17 +2,16 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import useIsFiveButtonLayout from "useIsFiveButtonLayout.tsx";
 import useCanCurrentUserSpeakInChannelDefault from "../../stage_channels/useCanSpeakInChannel.tsx";
-import closure_3 from "../../../stores/MediaEngineStore.tsx";
+import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
 import { InputModes } from "../../../Constants.tsx";
 import { ACTION_SHEET_HANDLE_SPACING as closure_5 } from "../../action_sheet/native/ActionSheetConstants.tsx";
 
-require = arg1;
+require = fn;
 let sum = 2 * require("ActionButton").SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadius + 16 + 16;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");
 
 export default function useActionBarHeight(id) {
   const isFiveButtonLayout = useIsFiveButtonLayout.useIsFiveButtonLayout(id);
-  const obj = useIsFiveButtonLayout;
   const tmp2 = useCanCurrentUserSpeakInChannelDefault(id);
   const items = [closure_3];
   let num = 88;

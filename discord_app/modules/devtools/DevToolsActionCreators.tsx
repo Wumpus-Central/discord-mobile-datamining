@@ -1,12 +1,11 @@
 // discord_app/modules/devtools/DevToolsActionCreators.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_2 from "DevToolsSettingsStore.tsx";
+import initialize from "DevToolsSettingsStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");
 
 export const updateDevToolsSettings = function updateDevToolsSettings(settings) {
-  let obj = dispatcherDefault;
-  obj = { type: "DEV_TOOLS_SETTINGS_UPDATE", settings };
+  const obj = { type: "DEV_TOOLS_SETTINGS_UPDATE", settings };
   obj.dispatch(obj);
 };
 export const toggleDisplayDevTools = function toggleDisplayDevTools() {

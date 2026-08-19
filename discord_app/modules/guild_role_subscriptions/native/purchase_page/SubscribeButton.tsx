@@ -1,16 +1,16 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx
 import Text from "../../../../design/components/Text/native/Text.tsx";
-import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_6 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../../stores/SelectedChannelStore.tsx";
-import closure_9 from "../../GuildRoleSubscriptionsStore.tsx";
+import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
+import makeGroupListingIndexSubscriptionListingTag from "../../GuildRoleSubscriptionsStore.tsx";
 import { AnalyticsLocations } from "../../../../Constants.tsx";
 import { StaticChannelRoute } from "../../../channel/ChannelConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function emphasisHook(children) {
   return callback3(Text.Text, { variant: "text-xs/semibold", color: "text-default", children });
 }
@@ -18,10 +18,9 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(14573);
+  changeToListingId(14573);
   obj1 = activeListingId(3975)(activeSubscription.currentPeriodEnd);
-  obj = { children: null };
-  obj = { variant: "text-xs/normal", color: "text-muted", children: null };
+  let obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1236).intl;
   obj1 = { activeListingName: callback2(obj.useName(activeListingId), 1)[0], billingEndDate: obj1.format("MMMM Do"), emphasisHook };
   obj[2] = intl.format(activeSubscription(1236).t.lA7ztO, obj1);
@@ -30,16 +29,16 @@ function SwitchTiersButton(activeSubscription) {
   const intl2 = activeSubscription(1236).intl;
   obj2[0] = intl2.string(activeSubscription(1236).t.SACegK);
   obj2[1] = function onPress() {
-    let obj = activeListingId(closure_1_3[19]);
-    obj = { activeSubscription, activeListingId, changeToListingId };
-    obj.openLazy(activeSubscription(closure_1_3[21])(closure_1_3[20], closure_1_3.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
+    activeListingId(dependencyMap[19]);
+    const obj = { activeSubscription, activeListingId, changeToListingId };
+    obj.openLazy(activeSubscription(dependencyMap[21])(dependencyMap[20], dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
   };
   items[2] = callback3(activeSubscription(15797).ArrowButton, obj2);
   obj[0] = items;
   return callback4(View, obj);
 }
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx");
 
 export default function SubscribeButton(listingId) {
   listingId = listingId.listingId;
@@ -112,7 +111,7 @@ export default function SubscribeButton(listingId) {
             v0 = 2;
             c4 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0();
+            obj1[0] = createSubscription();
             return obj1;
           }
         } else if (1 === tmp7) {

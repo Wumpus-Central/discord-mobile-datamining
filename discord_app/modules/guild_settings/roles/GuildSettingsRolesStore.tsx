@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesStore.tsx
-import applyDefault from "../../../../_runtime/00012_apply.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import fromStringAll from "../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../Dispatcher.tsx";
@@ -9,12 +9,12 @@ import GuildRoleRecordTypeTag from "../../../records/GuildRoleRecord.tsx";
 import applyOverwritesAll from "../../../utils/PermissionUtils.tsx";
 import calculatePositionDeltasDefault from "../../../utils/DragAndDropUtils.tsx";
 import MAX_SUBCATEGORIES from "../GuildSettingsConstants.tsx";
-import closure_8 from "../../connections/GuildRoleConnectionsConfigurationStore.tsx";
-import closure_10 from "../../../stores/GuildRoleStore.tsx";
-import closure_11 from "../GuildSettingsStore.tsx";
+import map from "../../connections/GuildRoleConnectionsConfigurationStore.tsx";
+import createGuildRoleRecordFromRust from "../../../stores/GuildRoleStore.tsx";
+import handleFormInit from "../GuildSettingsStore.tsx";
 import ME from "../../../Constants.tsx";
 import HOLOGRAPHIC_ROLE_COLORS from "../../premium/powerups/constants/EnhancedRoleColorConstants.tsx";
-import set from "../../../../_runtime/00002_set.js";
+import importDefaultResult from "../../../../_runtime/00012_apply.js";
 
 function handleSetSection(arg0) {
   if (null == closure_4) {
@@ -48,31 +48,30 @@ function handleInit() {
   if (guild != null) {
     id = guild.id;
   }
-  const item = items2.forEach((colors) => {
+  const item = items2.forEach((item, index) => {
     let GRADIENT = closure_1_19.SOLID;
     obj = id(length[9]);
     if (!tmp2) {
-      obj = {};
       obj = { primary_color: null, secondary_color: null, tertiary_color: null };
       obj[0] = closure_1_15;
-      obj[tmp.SOLID] = obj;
+      obj[closure_1_19.SOLID] = obj;
       ({ primary_color: obj4[0], secondary_color: obj4[1] } = closure_1_17);
-      obj[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
+      obj[closure_1_19.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
       ({ primary_color: obj5[0], secondary_color: obj5[1], tertiary_color: obj5[2] } = closure_1_18);
-      obj[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
-      if (null != colors.colors) {
-        let primary_color = colors.colors.primary_color;
+      obj[closure_1_19.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
+      if (null != item.colors) {
+        let primary_color = item.colors.primary_color;
         if (primary_color == null) {
           primary_color = tmp4;
         }
         const obj3 = { primary_color: null, secondary_color: null, tertiary_color: null };
         obj3[0] = primary_color;
-        let secondary_color = colors.colors.secondary_color;
+        let secondary_color = item.colors.secondary_color;
         if (secondary_color == null) {
           secondary_color = null;
         }
         obj3[1] = secondary_color;
-        let tertiary_color = colors.colors.tertiary_color;
+        let tertiary_color = item.colors.tertiary_color;
         if (tertiary_color == null) {
           tertiary_color = null;
         }
@@ -82,24 +81,24 @@ function handleInit() {
       const obj4 = { currentStyle: null, styleColors: null };
       obj4[0] = GRADIENT;
       obj4[1] = obj;
-      const result = closure_1_31.set(colors.id, obj4);
-    } else if (null != colors.colors.tertiary_color) {
-      GRADIENT = tmp.HOLOGRAPHIC;
-    } else if (null != colors.colors.secondary_color) {
-      GRADIENT = tmp.GRADIENT;
+      const result = map2.set(item.id, obj4);
+    } else if (null != item.colors.tertiary_color) {
+      GRADIENT = closure_1_19.HOLOGRAPHIC;
+    } else if (null != item.colors.secondary_color) {
+      GRADIENT = closure_1_19.GRADIENT;
     }
+    tmp2 = null != item.colors && obj.getHasEnhancedRoleColorsForRole(id, item);
   });
   c27 = false;
   if (flag) {
     map1.clear();
-    const item1 = map.forEach((arg0, arg1) => {
-      const items = [...arg0];
-      const result = closure_30.set(arg1, items);
+    const item1 = map.forEach((item, index) => {
+      const items = [...item];
+      const result = closure_30.set(index, items);
     });
   }
 }
 function syncGuildChanges(guildId) {
-  guildId = guildId.guildId;
   guildId = undefined;
   map = undefined;
   const guild = store2.getProps().guild;
@@ -109,13 +108,13 @@ function syncGuildChanges(guildId) {
         const items = [];
         HermesBuiltin.arraySpread(store.getSortedRoles(guild.id), 0);
         guildId = items;
-        const item = set.forEach((arg0) => {
-          guildId = arg0;
-          const found = items1.find((id) => id.id === closure_0);
+        const item = set.forEach((item, index) => {
+          guildId = item;
+          const found = items1.find((item, index) => item.id === closure_0);
           c1 = -1;
-          if (null != guildId.find((id) => {
-            if (id.id === closure_0) {
-              closure_1 = arg1;
+          if (null != guildId.find((item, index) => {
+            if (item.id === closure_0) {
+              closure_1 = index;
               return true;
             }
           })) {
@@ -123,45 +122,44 @@ function syncGuildChanges(guildId) {
               guildId[c1] = found;
             }
           }
-          closure_1_21.delete(arg0);
-          if (0 === closure_1_21.size) {
+          set.delete(item);
+          if (0 === set.size) {
             c23 = false;
           }
         });
         const _Map = Map;
         map = new Map();
-        const item1 = set.forEach((arg0) => {
-          const value = closure_1_31.get(arg0);
+        const item1 = set.forEach((item, index) => {
+          const value = map2.get(item);
           if (null != value) {
-            const result = map.set(arg0, value);
+            const result = map.set(item, value);
           }
         });
         map2.clear();
-        const item2 = items.forEach((colors) => {
+        const item2 = items.forEach((item, index) => {
           let GRADIENT = closure_1_19.SOLID;
           obj = id(length[9]);
           if (!tmp2) {
-            obj = {};
             obj = { primary_color: null, secondary_color: null, tertiary_color: null };
             obj[0] = closure_1_15;
-            obj[tmp.SOLID] = obj;
+            obj[closure_1_19.SOLID] = obj;
             ({ primary_color: obj4[0], secondary_color: obj4[1] } = closure_1_17);
-            obj[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
+            obj[closure_1_19.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
             ({ primary_color: obj5[0], secondary_color: obj5[1], tertiary_color: obj5[2] } = closure_1_18);
-            obj[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
-            if (null != colors.colors) {
-              let primary_color = colors.colors.primary_color;
+            obj[closure_1_19.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
+            if (null != item.colors) {
+              let primary_color = item.colors.primary_color;
               if (primary_color == null) {
                 primary_color = tmp4;
               }
               const obj3 = { primary_color: null, secondary_color: null, tertiary_color: null };
               obj3[0] = primary_color;
-              let secondary_color = colors.colors.secondary_color;
+              let secondary_color = item.colors.secondary_color;
               if (secondary_color == null) {
                 secondary_color = null;
               }
               obj3[1] = secondary_color;
-              let tertiary_color = colors.colors.tertiary_color;
+              let tertiary_color = item.colors.tertiary_color;
               if (tertiary_color == null) {
                 tertiary_color = null;
               }
@@ -171,15 +169,16 @@ function syncGuildChanges(guildId) {
             const obj4 = { currentStyle: null, styleColors: null };
             obj4[0] = GRADIENT;
             obj4[1] = obj;
-            const result = closure_1_31.set(colors.id, obj4);
-          } else if (null != colors.colors.tertiary_color) {
-            GRADIENT = tmp.HOLOGRAPHIC;
-          } else if (null != colors.colors.secondary_color) {
-            GRADIENT = tmp.GRADIENT;
+            const result = map2.set(item.id, obj4);
+          } else if (null != item.colors.tertiary_color) {
+            GRADIENT = closure_1_19.HOLOGRAPHIC;
+          } else if (null != item.colors.secondary_color) {
+            GRADIENT = closure_1_19.GRADIENT;
           }
+          tmp2 = null != item.colors && obj.getHasEnhancedRoleColorsForRole(id, item);
         });
-        const item3 = map.forEach((arg0, arg1) => {
-          const result = closure_31.set(arg1, arg0);
+        const item3 = map.forEach((item, index) => {
+          const result = closure_31.set(index, item);
         });
         c24 = false;
         const items1 = [];
@@ -189,7 +188,6 @@ function syncGuildChanges(guildId) {
   }
   return false;
 }
-let set = isValueEqual.set;
 const isRoleEqual = GuildRoleRecordTypeTag.isRoleEqual;
 const GuildSettingsRoleEditSections = MAX_SUBCATEGORIES.GuildSettingsRoleEditSections;
 ({ GuildSettingsSections: map1, FormStates } = ME);
@@ -197,7 +195,7 @@ const GuildSettingsRoleEditSections = MAX_SUBCATEGORIES.GuildSettingsRoleEditSec
 ({ DEFAULT_GRADIENT_ROLE_COLORS: closure_17, HOLOGRAPHIC_ROLE_COLORS: closure_18 } = HOLOGRAPHIC_ROLE_COLORS);
 let obj = { SOLID: "solid", GRADIENT: "gradient", HOLOGRAPHIC: "holographic" };
 let closure_20 = { [GuildSettingsRoleEditSections.DISPLAY]: ["name", "hoist", "mentionable", "color", "colors", "colorString", "colorStrings"], [GuildSettingsRoleEditSections.PERMISSIONS]: ["permissions"], [GuildSettingsRoleEditSections.MEMBERS]: [], [GuildSettingsRoleEditSections.VERIFICATIONS]: [] };
-set = new Set();
+let set = new Set();
 let CLOSED = FormStates.CLOSED;
 let c23 = false;
 let c24 = false;
@@ -208,12 +206,11 @@ let set1 = new Set();
 let map = new Map();
 map1 = new Map();
 const map2 = new Map();
-let closure_33 = applyDefault.debounce(() => {
+let closure_33 = importDefaultResult.debounce(() => {
   c0 = false;
   if (closure_24) {
     if (null != user) {
       if (null != closure_25) {
-        obj = calculatePositionDeltasDefault;
         obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
         obj[0] = store.getSortedRoles(user.id);
         obj[1] = closure_25;
@@ -233,28 +230,28 @@ let closure_33 = applyDefault.debounce(() => {
     result = [];
   }
   const items = [...set];
-  const item = items.forEach((arg0) => {
-    c0 = arg0;
-    c0 = arg0;
-    const found = closure_1_25.find((id) => id.id === closure_0);
-    if (closure_1_9(found, closure_1_26.find((id) => id.id === c0))) {
-      closure_1_21.delete(arg0);
-      if (0 === closure_1_21.size) {
+  const item = items.forEach((item, index) => {
+    c0 = item;
+    const found = closure_1_25.find((item, index) => item.id === closure_0);
+    if (isRoleEqual(found, closure_1_26.find((item, index) => item.id === c0))) {
+      set.delete(item);
+      if (0 === set.size) {
         c23 = false;
       }
       c0 = true;
     }
   });
   const items1 = [...set1];
-  const item1 = items1.forEach((arg0) => {
-    const value = closure_1_30.get(arg0);
-    if (obj.isEqual(value, closure_1_29.get(arg0))) {
-      closure_1_28.delete(arg0);
-      if (0 === closure_1_28.size) {
+  const item1 = items1.forEach((item, index) => {
+    const value = map1.get(item);
+    if (obj.isEqual(value, map.get(item))) {
+      set1.delete(item);
+      if (0 === set1.size) {
         c27 = false;
       }
       c0 = true;
     }
+    obj = importDefaultResult;
   });
   if (c0) {
     guildSettingsRolesStore.emitChange();
@@ -285,10 +282,9 @@ prototype["hasSectionChanges"] = function hasSectionChanges(id, effectiveSection
     if (null != dependencyMap[effectiveSection]) {
       tmp = null;
       if (0 !== arr.length) {
+        const found = closure_25.find((item, index) => item.id === closure_0);
         closure_0 = id;
-        const found = closure_25.find((id) => id.id === closure_0);
-        closure_0 = id;
-        const found1 = closure_26.find((id) => id.id === c0);
+        const found1 = closure_26.find((item, index) => item.id === c0);
         let tmp6 = null;
         if (null != found) {
           tmp6 = null;
@@ -305,10 +301,8 @@ prototype["hasSectionChanges"] = function hasSectionChanges(id, effectiveSection
     }
     let tmp7 = null != tmp;
     if (tmp7) {
-      const obj2 = applyDefault;
-      const pickResult = applyDefault.pick(tmp.role, tmp.fields);
-      tmp7 = !isRoleEqual(pickResult, applyDefault.pick(tmp.original, tmp.fields));
-      const obj3 = applyDefault;
+      const pickResult = importDefaultResult.pick(tmp.role, tmp.fields);
+      tmp7 = !isRoleEqual(pickResult, importDefaultResult.pick(tmp.original, tmp.fields));
     }
     return tmp7;
   }
@@ -367,7 +361,6 @@ Object.defineProperty(prototype, "formState", {
 prototype["getSortDeltas"] = function getSortDeltas() {
   if (null != user) {
     if (null != closure_25) {
-      obj = calculatePositionDeltasDefault;
       obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
       obj[0] = store.getSortedRoles(user.id);
       obj[1] = closure_25;
@@ -387,7 +380,7 @@ prototype["showNotice"] = function showNotice() {
 };
 prototype["getRole"] = function getRole(arg0) {
   closure_0 = arg0;
-  return closure_25.find((id) => id.id === closure_0);
+  return closure_25.find((item, index) => item.id === closure_0);
 };
 prototype["getPermissionSearchQuery"] = function getPermissionSearchQuery() {
   return closure_5;
@@ -409,9 +402,9 @@ obj = {
         return false;
       }
     }
-    const mapped = roles.map((arg0) => {
-      closure_0 = arg0;
-      return closure_25.find((id) => id.id === closure_0);
+    const mapped = roles.map((item, index) => {
+      closure_0 = item;
+      return closure_25.find((item, index) => item.id === closure_0);
     });
     closure_25 = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     c24 = true;
@@ -419,7 +412,7 @@ obj = {
   },
   GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function handleUpdatePermissions(allow) {
     ({ flag, id: require } = allow);
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     if (null == found) {
       return false;
     } else {
@@ -449,7 +442,7 @@ obj = {
   },
   GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET: function handleUpdatePermissionSet(id) {
     id = id.id;
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
       obj = { permissions: null };
@@ -472,7 +465,7 @@ obj = {
   },
   GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function handleClearRolePermissions(id) {
     id = id.id;
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
       obj = { permissions: null };
@@ -495,7 +488,7 @@ obj = {
   },
   GUILD_SETTINGS_ROLES_UPDATE_NAME: function handleUpdateName(id) {
     id = id.id;
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
       obj = { name: null };
@@ -518,7 +511,7 @@ obj = {
   },
   GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION: function handleUpdateDescription(id) {
     id = id.id;
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
       obj = { description: null };
@@ -546,7 +539,7 @@ obj = {
       obj = id(688);
       int2hexResult = obj.int2hex(color);
     }
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     if (null == found) {
       return false;
     } else {
@@ -592,7 +585,7 @@ obj = {
   },
   GUILD_SETTINGS_ROLES_UPDATE_COLORS: function handleUpdateColors(arg0) {
     ({ id, colors, currentStyle } = arg0);
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     if (null == found) {
       return false;
     } else {
@@ -630,7 +623,7 @@ obj = {
   GUILD_SETTINGS_ROLES_UPDATE_SETTINGS: function handleUpdateSettings(id) {
     id = id.id;
     ({ hoist, mentionable } = id);
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
       obj = { hoist: null, mentionable: null };
@@ -655,7 +648,7 @@ obj = {
   GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON: function handleUpdateRoleIcon(id) {
     id = id.id;
     ({ icon, unicodeEmoji } = id);
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     let tmp2 = null != found;
     if (tmp2) {
       obj = { icon: null, unicodeEmoji: null };
@@ -683,8 +676,8 @@ obj = {
     if (null != dependencyMap[id.section]) {
       tmp = null;
       if (0 !== arr.length) {
-        const found = items.find((id) => id.id === closure_0);
-        const found1 = closure_26.find((id) => id.id === c0);
+        const found = items.find((item, index) => item.id === closure_0);
+        const found1 = closure_26.find((item, index) => item.id === c0);
         let tmp6 = null;
         if (null != found) {
           tmp6 = null;
@@ -703,7 +696,7 @@ obj = {
       return false;
     } else {
       ({ fields, role, original } = tmp);
-      const pickResult = applyDefault.pick(original, fields);
+      const pickResult = importDefaultResult.pick(original, fields);
       const index = items.indexOf(role);
       if (index >= 0) {
         obj = {};
@@ -726,31 +719,30 @@ obj = {
           id = user.id;
         }
         const items1 = [original];
-        const item = items1.forEach((colors) => {
+        const item = items1.forEach((item, index) => {
           let GRADIENT = closure_1_19.SOLID;
           obj = id(length[9]);
           if (!tmp2) {
-            obj = {};
             obj = { primary_color: null, secondary_color: null, tertiary_color: null };
             obj[0] = closure_1_15;
-            obj[tmp.SOLID] = obj;
+            obj[closure_1_19.SOLID] = obj;
             ({ primary_color: obj4[0], secondary_color: obj4[1] } = closure_1_17);
-            obj[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
+            obj[closure_1_19.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
             ({ primary_color: obj5[0], secondary_color: obj5[1], tertiary_color: obj5[2] } = closure_1_18);
-            obj[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
-            if (null != colors.colors) {
-              let primary_color = colors.colors.primary_color;
+            obj[closure_1_19.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
+            if (null != item.colors) {
+              let primary_color = item.colors.primary_color;
               if (primary_color == null) {
                 primary_color = tmp4;
               }
               const obj3 = { primary_color: null, secondary_color: null, tertiary_color: null };
               obj3[0] = primary_color;
-              let secondary_color = colors.colors.secondary_color;
+              let secondary_color = item.colors.secondary_color;
               if (secondary_color == null) {
                 secondary_color = null;
               }
               obj3[1] = secondary_color;
-              let tertiary_color = colors.colors.tertiary_color;
+              let tertiary_color = item.colors.tertiary_color;
               if (tertiary_color == null) {
                 tertiary_color = null;
               }
@@ -760,12 +752,13 @@ obj = {
             const obj4 = { currentStyle: null, styleColors: null };
             obj4[0] = GRADIENT;
             obj4[1] = obj;
-            const result = closure_1_31.set(colors.id, obj4);
-          } else if (null != colors.colors.tertiary_color) {
-            GRADIENT = tmp.HOLOGRAPHIC;
-          } else if (null != colors.colors.secondary_color) {
-            GRADIENT = tmp.GRADIENT;
+            const result = map2.set(item.id, obj4);
+          } else if (null != item.colors.tertiary_color) {
+            GRADIENT = closure_1_19.HOLOGRAPHIC;
+          } else if (null != item.colors.secondary_color) {
+            GRADIENT = closure_1_19.GRADIENT;
           }
+          tmp2 = null != item.colors && obj.getHasEnhancedRoleColorsForRole(id, item);
         });
       }
     }
@@ -792,8 +785,8 @@ obj = {
     if (null != dependencyMap[id.section]) {
       tmp = null;
       if (0 !== arr.length) {
-        const found = closure_25.find((id) => id.id === closure_0);
-        const found1 = closure_26.find((id) => id.id === c0);
+        const found = closure_25.find((item, index) => item.id === closure_0);
+        const found1 = closure_26.find((item, index) => item.id === c0);
         let tmp6 = null;
         if (null != found) {
           tmp6 = null;
@@ -815,9 +808,9 @@ obj = {
       obj = {};
       const merged = Object.assign(tmp.original);
       const merged1 = Object.assign(obj(12).pick(role, tmp.fields));
-      closure_26 = closure_26.map((id) => {
-        let tmp = id;
-        if (id.id === id) {
+      closure_26 = closure_26.map((item, index) => {
+        let tmp = item;
+        if (item.id === id) {
           tmp = obj;
         }
         return tmp;
@@ -828,13 +821,14 @@ obj = {
           c23 = false;
         }
       }
+      const obj3 = obj(12);
     }
   },
   GUILD_SETTINGS_ROLE_SELECT: function handleInsertRole(arg0) {
     ({ role, searchQuery: closure_5 } = arg0);
     if (null != role) {
       const id = role.id;
-      if (null == items1.find((id) => id.id === closure_0)) {
+      if (null == items1.find((item, index) => item.id === closure_0)) {
         const items = [];
         items[HermesBuiltin.arraySpread(items1, 0)] = role;
         items1 = items;
@@ -857,53 +851,47 @@ obj = {
   },
   GUILD_SETTINGS_ROLES_DUPLICATE_SUCCESS: function handleDuplicateSuccess(arg0) {
     ({ role, roles } = arg0);
-    map = new Map(closure_25.map((id) => {
-      const items = [id.id, id];
+    map = new Map(closure_25.map((item, index) => {
+      const items = [item.id, item];
       return items;
     }));
     let result = map.set(role.id, role);
     let id = map;
-    let found1;
-    set1 = undefined;
     let length;
-    const mapped = roles.map((arg0) => id.get(arg0));
+    const mapped = roles.map((item, index) => id.get(item));
     const found = mapped.filter(id(length[10]).isNotNullish);
-    found1 = found;
-    set1 = new Set(roles);
-    const item = map.forEach((arg0, arg1) => {
-      if (!set1.has(arg1)) {
-        found1.push(arg0);
+    new Set(roles);
+    const item = map.forEach((item, index) => {
+      if (!set1.has(index)) {
+        found1.push(item);
       }
     });
-    length = found.length;
-    closure_25 = found.map((arg0, arg1) => {
+    closure_25 = found.map((item, index) => {
       obj = {};
-      const merged = Object.assign(arg0);
-      obj.position = length - 1 - arg1;
+      const merged = Object.assign(item);
+      obj.position = length - 1 - index;
       return obj;
     });
-    map1 = new Map(closure_26.map((id) => {
-      const items = [id.id, id];
+    map1 = new Map(closure_26.map((item, index) => {
+      const items = [item.id, item];
       return items;
     }));
     const result1 = map1.set(role.id, role);
     id = map1;
-    found1 = undefined;
-    set1 = undefined;
     length = undefined;
-    const mapped1 = roles.map((arg0) => id.get(arg0));
-    found1 = mapped1.filter(id(length[10]).isNotNullish);
+    const mapped1 = roles.map((item, index) => id.get(item));
+    const found1 = mapped1.filter(id(length[10]).isNotNullish);
     set1 = new Set(roles);
-    const item1 = map1.forEach((arg0, arg1) => {
-      if (!set1.has(arg1)) {
-        found1.push(arg0);
+    const item1 = map1.forEach((item, index) => {
+      if (!set1.has(index)) {
+        found1.push(item);
       }
     });
     length = found1.length;
-    closure_26 = found1.map((arg0, arg1) => {
+    closure_26 = found1.map((item, index) => {
       obj = {};
-      const merged = Object.assign(arg0);
-      obj.position = length - 1 - arg1;
+      const merged = Object.assign(item);
+      obj.position = length - 1 - index;
       return obj;
     });
     id = undefined;
@@ -911,31 +899,30 @@ obj = {
       id = user.id;
     }
     let items = [role];
-    const item2 = items.forEach((colors) => {
+    const item2 = items.forEach((item, index) => {
       let GRADIENT = closure_1_19.SOLID;
       obj = id(length[9]);
       if (!tmp2) {
-        obj = {};
         obj = { primary_color: null, secondary_color: null, tertiary_color: null };
         obj[0] = closure_1_15;
-        obj[tmp.SOLID] = obj;
+        obj[closure_1_19.SOLID] = obj;
         ({ primary_color: obj4[0], secondary_color: obj4[1] } = closure_1_17);
-        obj[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
+        obj[closure_1_19.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
         ({ primary_color: obj5[0], secondary_color: obj5[1], tertiary_color: obj5[2] } = closure_1_18);
-        obj[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
-        if (null != colors.colors) {
-          let primary_color = colors.colors.primary_color;
+        obj[closure_1_19.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
+        if (null != item.colors) {
+          let primary_color = item.colors.primary_color;
           if (primary_color == null) {
             primary_color = tmp4;
           }
           const obj3 = { primary_color: null, secondary_color: null, tertiary_color: null };
           obj3[0] = primary_color;
-          let secondary_color = colors.colors.secondary_color;
+          let secondary_color = item.colors.secondary_color;
           if (secondary_color == null) {
             secondary_color = null;
           }
           obj3[1] = secondary_color;
-          let tertiary_color = colors.colors.tertiary_color;
+          let tertiary_color = item.colors.tertiary_color;
           if (tertiary_color == null) {
             tertiary_color = null;
           }
@@ -945,17 +932,18 @@ obj = {
         const obj4 = { currentStyle: null, styleColors: null };
         obj4[0] = GRADIENT;
         obj4[1] = obj;
-        const result = closure_1_31.set(colors.id, obj4);
-      } else if (null != colors.colors.tertiary_color) {
-        GRADIENT = tmp.HOLOGRAPHIC;
-      } else if (null != colors.colors.secondary_color) {
-        GRADIENT = tmp.GRADIENT;
+        const result = map2.set(item.id, obj4);
+      } else if (null != item.colors.tertiary_color) {
+        GRADIENT = closure_1_19.HOLOGRAPHIC;
+      } else if (null != item.colors.secondary_color) {
+        GRADIENT = closure_1_19.GRADIENT;
       }
+      tmp2 = null != item.colors && obj.getHasEnhancedRoleColorsForRole(id, item);
     });
   },
   GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE: function handleRoleStyleUpdate(arg0) {
     ({ id, currentStyle } = arg0);
-    const found = items.find((id) => id.id === closure_0);
+    const found = items.find((item, index) => item.id === closure_0);
     if (null == found) {
       return false;
     } else {
@@ -966,7 +954,7 @@ obj = {
         obj = { currentStyle: null, styleColors: null };
         obj[0] = currentStyle;
         obj[1] = value.styleColors;
-        const result = obj3.set(id, obj);
+        const result = map2.set(id, obj);
         const result1 = id(1986).extractColorStringsFromServerColors(tmp19);
         const primary_color = tmp19.primary_color;
         obj = { color: null, colors: null, colorString: null, colorStrings: null };
@@ -988,12 +976,11 @@ obj = {
         }
         return false;
       }
-      obj3 = map2;
     }
   },
   GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function handleFetchRoleConnectionConfigurations(arg0) {
     ({ roleConnectionConfigurations, roleId: require } = arg0);
-    const found = closure_25.find((id) => id.id === closure_0);
+    const found = closure_25.find((item, index) => item.id === closure_0);
     if (null == found) {
       return false;
     } else {
@@ -1002,20 +989,19 @@ obj = {
         return false;
       } else {
         const result = map1.set(found.id, roleConnectionConfigurations);
-        const result1 = obj.set(found.id, roleConnectionConfigurations);
+        const result1 = map.set(found.id, roleConnectionConfigurations);
         set1.delete(found.id);
         if (0 === set1.size) {
           c27 = false;
         }
         callback();
       }
-      obj = map;
-      obj2 = applyDefault;
+      obj2 = importDefaultResult;
     }
   },
   GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function handleUpdateRoleConnectionConfigurations(roleId) {
     roleId = roleId.roleId;
-    const found = closure_25.find((id) => id.id === closure_0);
+    const found = closure_25.find((item, index) => item.id === closure_0);
     if (null == found) {
       return false;
     } else {
@@ -1087,7 +1073,7 @@ obj = {
   }
 };
 const guildSettingsRolesStore = new GuildSettingsRolesStore(dispatcherDefault, obj);
-let result = set.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesStore.tsx");
+let result = obj132.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesStore.tsx");
 
 export default guildSettingsRolesStore;
 export const RoleColorsStyle = obj;

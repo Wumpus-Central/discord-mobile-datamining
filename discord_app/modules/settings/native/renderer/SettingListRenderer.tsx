@@ -5,13 +5,13 @@ import TableRowGroupTitle from "../../../../design/components/TableRow/native/Ta
 import GuildSelectDefaultIcon from "SettingRenderer.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../user_settings/UserSettingSearchStore.tsx";
-import closure_6 from "stores/SettingBlocklistStore.tsx";
+import zustandStore from "../../../user_settings/UserSettingSearchStore.tsx";
+import zustandStore2 from "stores/SettingBlocklistStore.tsx";
 import { ListItemType } from "SettingRendererConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function SearchListSectionLabel(label) {
   label = label.label;
   let obj = { style: callback().spacer, children: null };
@@ -19,7 +19,7 @@ function SearchListSectionLabel(label) {
   if (typeof label === "string") {
     obj = { title: null };
     obj[0] = label;
-    tmpResult = tmp(TableRowGroupTitle.TableRowGroupTitle, obj);
+    tmpResult = jsx(TableRowGroupTitle.TableRowGroupTitle, { title: null });
   }
   obj[1] = tmpResult;
   return <View style={callback().spacer}>{null}</View>;
@@ -30,7 +30,7 @@ function SearchListSectionSubLabel(subLabel) {
   if (typeof subLabel === "string") {
     obj = { variant: "text-xs/normal", color: "text-muted", children: null };
     obj[2] = subLabel;
-    let tmpResult = tmp(Text.Text, obj);
+    let tmpResult = jsx(Text.Text, { variant: "text-xs/normal", color: "text-muted", children: null });
   } else {
     const _Array = Array;
     tmpResult = subLabel;
@@ -41,10 +41,10 @@ function SearchListSectionSubLabel(subLabel) {
 function getItemType(type) {
   type = type.type;
   if (ListItemType.SECTION_HEADER !== type) {
-    if (tmp.SECTION_FOOTER !== type) {
-      if (tmp.SECTION_ROW !== type) {
-        if (tmp.SETTING_SEARCH_RESULT !== type) {
-          return tmp.SECTION_ROW_PLACEHOLDER === type ? type.type : undefined;
+    if (ListItemType.SECTION_FOOTER !== type) {
+      if (ListItemType.SECTION_ROW !== type) {
+        if (ListItemType.SETTING_SEARCH_RESULT !== type) {
+          return ListItemType.SECTION_ROW_PLACEHOLDER === type ? type.type : undefined;
         }
       }
       const _HermesInternal = HermesInternal;
@@ -60,15 +60,15 @@ function renderItem(item) {
     let obj = { label: null };
     obj[0] = item.label;
     return <SearchListSectionLabel label={null} />;
-  } else if (tmp.SECTION_FOOTER === type) {
+  } else if (ListItemType.SECTION_FOOTER === type) {
     obj = { subLabel: null };
     obj[0] = item.label;
     return <SearchListSectionSubLabel subLabel={null} />;
-  } else if (tmp.SETTING_SEARCH_RESULT === type) {
+  } else if (ListItemType.SETTING_SEARCH_RESULT === type) {
     return GuildSelectDefaultIcon.renderSettingSearchResultItem(item);
-  } else if (tmp.SECTION_ROW === type) {
+  } else if (ListItemType.SECTION_ROW === type) {
     return GuildSelectDefaultIcon.renderSettingItem(item);
-  } else if (tmp.SECTION_ROW_PLACEHOLDER === type) {
+  } else if (ListItemType.SECTION_ROW_PLACEHOLDER === type) {
     obj = GuildSelectDefaultIcon;
     return obj.renderSettingSearchResultPlaceholderItem(item);
   }
@@ -76,10 +76,10 @@ function renderItem(item) {
 function keyExtractor(type) {
   type = type.type;
   if (ListItemType.SECTION_HEADER !== type) {
-    if (tmp.SECTION_FOOTER !== type) {
-      if (tmp.SECTION_ROW !== type) {
-        if (tmp.SETTING_SEARCH_RESULT !== type) {
-          if (tmp.SECTION_ROW_PLACEHOLDER === type) {
+    if (ListItemType.SECTION_FOOTER !== type) {
+      if (ListItemType.SECTION_ROW !== type) {
+        if (ListItemType.SETTING_SEARCH_RESULT !== type) {
+          if (ListItemType.SECTION_ROW_PLACEHOLDER === type) {
             const _HermesInternal = HermesInternal;
             return "" + type.type + "-" + arg1;
           }
@@ -96,8 +96,7 @@ function keyExtractor(type) {
   return "" + type.type + "-" + label;
 }
 let c3 = importAllResult;
-let obj = { container: null, contentContainer: null, searchResultsHeader: null, spacer: null, subLabel: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 };
+let obj = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 };
 obj[0] = obj;
 obj[1] = { paddingHorizontal: 16 };
 obj[2] = { paddingBottom: 24 };
@@ -106,15 +105,13 @@ obj[4] = { marginTop: 8 };
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((node) => {
   node = node.node;
-  let field;
   const tmp = callback();
-  field = closure_6.useField("blocklist");
+  const field = closure_6.useField("blocklist");
   const items = [field, node];
-  const memo = importAllResult.useMemo(() => node(closure_1_2[12]).toSettingListItems(node, field), items);
+  const memo = importAllResult.useMemo(() => node(dependencyMap[12]).toSettingListItems(node, field), items);
   const ref = importAllResult.useRef(null);
   let obj = node(15062);
   obj.useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
-  obj = { style: tmp.container, children: null };
   obj = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
   obj1 = {};
   const merged = Object.assign(tmp.contentContainer);
@@ -130,28 +127,23 @@ const memoResult = importAllResult.memo((node) => {
 });
 const memoResult1 = importAllResult.memo((node) => {
   node = node.node;
-  importDefault = undefined;
   let settings;
-  let isLoading;
-  let placeholderCount;
   let state;
   let field;
-  let memo;
-  let memo1;
   let memo2;
   let tmp = memo2();
   importDefault = tmp;
   let obj = node(settings[15]);
   const settingSearchResults = obj.useSettingSearchResults();
   settings = settingSearchResults.settings;
-  isLoading = settingSearchResults.isLoading;
-  placeholderCount = settingSearchResults.placeholderCount;
+  const isLoading = settingSearchResults.isLoading;
+  const placeholderCount = settingSearchResults.placeholderCount;
   state = state.useState((query) => "" === query.query.trim());
   field = field.useField("blocklist");
   const items = [field, node];
-  memo = isLoading.useMemo(() => node(settings[12]).toSettingListItems(node, field), items);
+  const memo = isLoading.useMemo(() => node(settings[12]).toSettingListItems(node, field), items);
   const items1 = [settings, isLoading, placeholderCount];
-  memo1 = isLoading.useMemo(() => node(settings[12]).getScoredSettingListSearchResultItems(settings, isLoading, placeholderCount), items1);
+  const memo1 = isLoading.useMemo(() => node(settings[12]).getScoredSettingListSearchResultItems(settings, isLoading, placeholderCount), items1);
   const items2 = [memo, memo1, state];
   memo2 = isLoading.useMemo(() => state ? memo : memo1, items2);
   const items3 = [tmp.searchResultsHeader, state];
@@ -177,7 +169,6 @@ const memoResult1 = importAllResult.memo((node) => {
     }
     return tmp;
   }, items4);
-  obj = { keyboardShouldPersistTaps: "always", contentContainerStyle: null, ListHeaderComponentStyle: null, ListHeaderComponent: null, ListEmptyComponent: null, onScroll: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
   obj = {};
   const merged = Object.assign(tmp.contentContainer);
   obj.paddingBottom = importDefault(settings[11])().bottom + importDefault(settings[7]).space.PX_16;
@@ -193,7 +184,7 @@ const memoResult1 = importAllResult.memo((node) => {
   obj[10] = getItemType;
   return memo1(node(settings[14]).FlashList, obj);
 });
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingListRenderer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/SettingListRenderer.tsx");
 
 export const SettingsList = memoResult;
 export const SearchableSettingsList = memoResult1;

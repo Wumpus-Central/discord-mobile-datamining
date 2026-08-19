@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRoleConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import applyOverwritesAll from "../../../utils/PermissionUtils.tsx";
 import handleSetSection from "GuildSettingsRolesStore.tsx";
@@ -10,15 +10,13 @@ import unsafe_getRawColor from "../../../../discord_common/js/packages/tokens/sh
 
 const RoleColorsStyle = handleSetSection.RoleColorsStyle;
 ({ Permissions, DEFAULT_ROLE_COLOR } = ME);
-let obj = { COSMETIC: 0, [0]: "COSMETIC", MEMBER: 1, [1]: "MEMBER", MODERATOR: 2, [2]: "MODERATOR", MANAGER: 3, [3]: "MANAGER" };
 ({ DEFAULT_GRADIENT_ROLE_COLORS, HOLOGRAPHIC_ROLE_COLORS } = HOLOGRAPHIC_ROLE_COLORS);
 const removeResult = importAllResult.remove(applyOverwritesAll.DEFAULT, Permissions.MENTION_EVERYONE);
 const combineResult = importAllResult.combine(applyOverwritesAll.DEFAULT, Permissions.VIEW_AUDIT_LOG, Permissions.MANAGE_NICKNAMES, Permissions.KICK_MEMBERS, Permissions.BAN_MEMBERS, Permissions.MANAGE_MESSAGES, Permissions.MUTE_MEMBERS, Permissions.DEAFEN_MEMBERS, Permissions.MOVE_MEMBERS, Permissions.PRIORITY_SPEAKER, Permissions.MODERATE_MEMBERS);
 const importAllResult1 = importAllResult;
 const combineResult1 = importAllResult.combine(combineResult, Permissions.MANAGE_CHANNELS, Permissions.MANAGE_THREADS, Permissions.MANAGE_ROLES, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MANAGE_GUILD, Permissions.MANAGE_WEBHOOKS, Permissions.SEND_TTS_MESSAGES);
 const importAllResult2 = importAllResult;
-obj = {};
-obj = { key: "template_cosmetic", color: null, permissions: null, title: null, description: null, contents: null, contentPreface: null };
+const obj = { key: "template_cosmetic", color: null, permissions: null, title: null, description: null, contents: null, contentPreface: null };
 const importAllResult3 = importAllResult;
 obj[1] = unsafe_getRawColor.unsafe_getRawColor("BRAND_500");
 obj[2] = applyOverwritesAll.NONE;
@@ -123,12 +121,9 @@ obj3[7] = function contentPreface() {
 obj[obj.MANAGER] = obj3;
 const addResult = importAllResult.add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
 let items = [{ id: RoleColorsStyle.SOLID, colors: { primary_color: DEFAULT_ROLE_COLOR, secondary_color: null, tertiary_color: null }, labelString: getSystemLocale.t["8Qyahn"] }, , ];
-const obj4 = { id: RoleColorsStyle.SOLID, colors: { primary_color: DEFAULT_ROLE_COLOR, secondary_color: null, tertiary_color: null }, labelString: getSystemLocale.t["8Qyahn"] };
 items[1] = { id: RoleColorsStyle.GRADIENT, colors: DEFAULT_GRADIENT_ROLE_COLORS, labelString: getSystemLocale.t.XpWmJz };
-const obj5 = { id: RoleColorsStyle.GRADIENT, colors: DEFAULT_GRADIENT_ROLE_COLORS, labelString: getSystemLocale.t.XpWmJz };
 items[2] = { id: RoleColorsStyle.HOLOGRAPHIC, colors: HOLOGRAPHIC_ROLE_COLORS, labelString: getSystemLocale.t.QTKppe };
-const obj6 = { id: RoleColorsStyle.HOLOGRAPHIC, colors: HOLOGRAPHIC_ROLE_COLORS, labelString: getSystemLocale.t.QTKppe };
-const result = set.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRoleConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRoleConstants.tsx");
 
 export const CREATE_ROLE_DESKTOP_MODAL_WIDTH = 440;
 export const DEFAULT_HEADER_HEIGHT_PX = 371;

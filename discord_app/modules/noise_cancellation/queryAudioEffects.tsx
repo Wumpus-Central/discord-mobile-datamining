@@ -1,8 +1,8 @@
 // discord_app/modules/noise_cancellation/queryAudioEffects.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _queryAudioEffects() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -118,7 +118,7 @@ function _queryAudioEffects() {
   return applyArgumentsResult;
 }
 let logger = new require("log").Logger("AudioEffects");
-const result = require("set").fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");
+const result = require("obj132").fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");
 
 export default function queryAudioEffects() {
   const self = this;

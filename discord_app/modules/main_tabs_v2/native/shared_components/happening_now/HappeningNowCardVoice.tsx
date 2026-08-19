@@ -3,17 +3,16 @@ import getSystemLocale from "../../../../../intl/index.native.tsx";
 import getNicknameDefault from "../../../../../utils/NicknameUtils.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../user_affinities/UserAffinitiesV2Store.tsx";
-import closure_6 from "../../../../../stores/UserStore.tsx";
-import closure_7 from "../../../../../stores/VoiceStateStore.tsx";
+import recomputeAffinities from "../../../../user_affinities/UserAffinitiesV2Store.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import updateVoiceState from "../../../../../stores/VoiceStateStore.tsx";
 import { HappeningNowCardTrackingType as closure_8 } from "HappeningNowConstants.tsx";
 import { AnalyticEvents } from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { apexExperiment } from "../../../../user_affinities/VoiceUserAffinityExperiment.tsx";
 
-require = arg1;
+require = fn;
 function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   if (0 === stateFromStoresArray.length) {
     return "";
@@ -23,14 +22,12 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
     const intl = getSystemLocale.intl;
     let obj = { user1: null, user2: null };
     obj[0] = getNicknameDefault.getName(guildId, null, stateFromStoresArray[0]);
-    const obj2 = getNicknameDefault;
     obj[1] = getNicknameDefault.getName(guildId, null, stateFromStoresArray[1]);
     return intl.formatToPlainString(getSystemLocale.t["4SM/RX"], obj);
   } else {
     const intl2 = getSystemLocale.intl;
     obj = { user1: null, user2: null, extras: null };
     obj[0] = getNicknameDefault.getName(guildId, null, stateFromStoresArray[0]);
-    const obj6 = getNicknameDefault;
     obj[1] = getNicknameDefault.getName(guildId, null, stateFromStoresArray[1]);
     obj[2] = stateFromStoresArray.length - 2;
     return intl2.formatToPlainString(getSystemLocale.t.pjxkCI, obj);
@@ -41,25 +38,22 @@ let c3 = importAllResult;
 let closure_12 = createCacheKey.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
-  let voiceState = guildId;
   const index = guildId.index;
   let voiceUserAffinitySortType = index;
-  voiceState = guildId.voiceState;
+  const voiceState = guildId.voiceState;
   let flag = guildId.panelVariant;
   if (flag === undefined) {
     flag = false;
   }
-  let stateFromStoresArray;
   const tmp = callback2();
-  voiceUserAffinitySortType = undefined;
   let obj = voiceState(voiceState[17]);
   voiceUserAffinitySortType = obj.useVoiceUserAffinitySortType("useVoiceChannelUsers");
   obj1 = voiceState(voiceState[18]);
   let items = [closure_7, closure_6, closure_5];
   const items1 = [voiceUserAffinitySortType, voiceState.channelId];
-  stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const voiceStatesForChannel = closure_1_7.getVoiceStatesForChannel(voiceState.channelId);
-    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
+    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((item, index) => user.getUser(item.userId));
     const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);
     const items = [
       (id) => {
@@ -119,26 +113,25 @@ const memoResult = importAllResult.memo((guildId) => {
     obj5[0] = voiceState;
     items4[1] = callback(tmp2(tmp3[16]).HappeningNowVoiceCardSubtitle, obj5);
     obj3[1] = items4;
-    items3[1] = closure_11(View, obj3);
+    items3[1] = callback(View, obj3);
     obj[4] = items3;
-    tmp11Result = tmp11(voiceUserAffinitySortType(tmp3[13]), obj);
-    const tmp12 = voiceUserAffinitySortType;
+    tmp11Result = callback(voiceUserAffinitySortType(tmp3[13]), obj);
     const tmp13 = voiceUserAffinitySortType(tmp3[13]);
   }
   return tmp11Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardVoice.tsx");
 
 export default memoResult;
 export const useVoiceChannelUsers = function useVoiceChannelUsers(channelId) {
   const _require = channelId;
-  const voiceUserAffinitySortType = _apexExperiment.useVoiceUserAffinitySortType("useVoiceChannelUsers");
-  const obj = _apexExperiment;
+  const voiceUserAffinitySortType = require("../../../../user_affinities/VoiceUserAffinityExperiment.tsx").useVoiceUserAffinitySortType("useVoiceChannelUsers");
+  const obj = apexExperiment;
   const items = [closure_7, closure_6, closure_5];
   const items1 = [voiceUserAffinitySortType, channelId.channelId];
-  return _initialize.useStateFromStoresArray(items, () => {
+  return require("../../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStoresArray(items, () => {
     const voiceStatesForChannel = closure_1_7.getVoiceStatesForChannel(voiceState.channelId);
-    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((userId) => user.getUser(userId.userId));
+    const mapped = voiceUserAffinitySortType(voiceState[19])(voiceStatesForChannel).map((item, index) => user.getUser(item.userId));
     const found = mapped.filter(voiceState(voiceState[20]).isNotNullish);
     const items = [
       (id) => {

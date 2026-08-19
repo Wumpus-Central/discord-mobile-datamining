@@ -26,6 +26,6 @@ const channelFollowerStatsStore = new ChannelFollowerStatsStore(dispatcherDefaul
     closure_1[channelId.channelId] = { loadingStatus: constants.FAILED, lastFetched: Date.now(), channelsFollowing: 0, guildMembers: 0, guildsFollowing: 0, usersSeenEver: 0, subscribersGainedSinceLastPost: 0, subscribersLostSinceLastPost: 0 };
   }
 });
-const result = require("set").fileFinishedImporting("stores/ChannelFollowerStatsStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/ChannelFollowerStatsStore.tsx");
 
 export default channelFollowerStatsStore;

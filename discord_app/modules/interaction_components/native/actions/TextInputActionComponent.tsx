@@ -1,9 +1,9 @@
 // discord_app/modules/interaction_components/native/actions/TextInputActionComponent.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo((type) => {
   type = type.type;
@@ -28,7 +28,7 @@ const memoResult = importAllResult.memo((type) => {
   const state = executeStateUpdate.useState(() => {
     type = undefined;
     if (closure_2 != null) {
-      type = iter.type;
+      type = closure_2.type;
     }
     return type === type ? closure_2.value : closure_1;
   });
@@ -41,11 +41,9 @@ const memoResult = importAllResult.memo((type) => {
   obj[4] = obj3.useCallback((value) => executeStateUpdate({ type, value }), items);
   obj[5] = isFirstTextInputInModal;
   if (type(1954).TextInputComponentStyle.SMALL === style) {
-    obj1 = {};
     const merged = Object.assign(obj);
     let tmp7 = jsx(tmp(7338).TextField, {});
   } else if (tmp(1954).TextInputComponentStyle.PARAGRAPH === style) {
-    const obj2 = {};
     const merged1 = Object.assign(obj);
     tmp7 = jsx(tmp(8093).TextAreaField, {});
   }
@@ -60,6 +58,6 @@ const memoResult = importAllResult.memo((type) => {
   }
   return tmp16;
 });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/TextInputActionComponent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/actions/TextInputActionComponent.tsx");
 
 export default memoResult;

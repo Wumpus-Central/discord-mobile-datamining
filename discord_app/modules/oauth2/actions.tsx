@@ -2,12 +2,12 @@
 import getAuthenticationPath from "../../../discord_common/js/shared/utils/PathUtils.tsx";
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import handleLogoutDefault from "../../actions/AuthenticationActionCreators.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import closure_5 from "../../stores/SelectedChannelStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function getLocationContextServer() {
   basicChannel = basicChannel.getBasicChannel(channelId.getChannelId());
   let str;
@@ -488,13 +488,12 @@ function _finishUserCodeTwoWayLinkError() {
   return applyArgumentsResult;
 }
 ({ ChannelTypes: closure_6, Endpoints: error } = ME);
-const result = require("set").fileFinishedImporting("modules/oauth2/actions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/oauth2/actions.tsx");
 
 export { getLocationContextServer };
 export const acceptWhitelist = function acceptWhitelist(token) {
   const HTTP = sendRequest.HTTP;
-  obj = { url: obj.OAUTH2_WHITELIST_ACCEPT, query: obj, oldFormErrors: true, rejectWithError: null };
-  obj = { token };
+  const obj = { token };
   obj[3] = sendRequest.rejectWithMigratedError();
   return HTTP.post(obj);
 };
@@ -538,9 +537,9 @@ export const fetchChannels = function fetchChannels(closure_0) {
   }
   return applyArgumentsResult;
 };
-export const logoutWithRedirect = function logoutWithRedirect(pathname, login_required_account_manager) {
+export const logoutWithRedirect = function logoutWithRedirect(pathname, TTI_test) {
   const obj = handleLogoutDefault;
-  obj.logout(login_required_account_manager, getAuthenticationPath.getLoginPath(pathname.pathname + pathname.search, false));
+  obj.logout(TTI_test, getAuthenticationPath.getLoginPath(pathname.pathname + pathname.search, false));
 };
 export const verifyUserCode = function verifyUserCode(closure_1_0) {
   const self = this;

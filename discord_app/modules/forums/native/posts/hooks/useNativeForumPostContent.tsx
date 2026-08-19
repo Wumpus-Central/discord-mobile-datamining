@@ -1,5 +1,5 @@
 // discord_app/modules/forums/native/posts/hooks/useNativeForumPostContent.tsx
-import set from "../../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../../Constants.tsx";
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import getStickerExtensionFromFormatType from "../../../../stickers/StickersUtils.tsx";
@@ -8,7 +8,7 @@ import createCacheKey from "../../../../../design/components/Styles/native/creat
 
 const MessageFlags = ME.MessageFlags;
 let closure_4 = createCacheKey.createStyles({ italics: { fontStyle: "italic" } });
-const result = set.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostContent.tsx");
+const result = obj132.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostContent.tsx");
 
 export default function useNativeForumPostContent(arg0) {
   ({ message, messageContent, senderModifier } = arg0);
@@ -72,30 +72,29 @@ export default function useNativeForumPostContent(arg0) {
               let stringResult = intl6.string(getSystemLocale.t.mE3KJN);
             } else {
               if (obj5.getMessageStickers(message).length > 0) {
-                const intl5 = tmp28(1236).intl;
-                stringResult = intl5.string(tmp28(1236).t["7K5Lma"]);
+                const intl5 = getSystemLocale.intl;
+                stringResult = intl5.string(getSystemLocale.t["7K5Lma"]);
               } else {
                 if (null != message.interaction) {
                   if ("" === message.content) {
-                    const intl4 = tmp28(1236).intl;
-                    stringResult = intl4.string(tmp28(1236).t["2v7kfl"]);
+                    const intl4 = getSystemLocale.intl;
+                    stringResult = intl4.string(getSystemLocale.t["2v7kfl"]);
                   }
                 }
                 if (message.hasFlag(MessageFlags.IS_VOICE_MESSAGE)) {
-                  const intl3 = tmp28(1236).intl;
-                  stringResult = intl3.string(tmp28(1236).t["6bhHrc"]);
-                } else if (message.hasFlag(tmp14.IS_COMPONENTS_V2)) {
-                  const intl2 = tmp28(1236).intl;
-                  stringResult = intl2.string(tmp28(1236).t.Xxm5i3);
+                  const intl3 = getSystemLocale.intl;
+                  stringResult = intl3.string(getSystemLocale.t["6bhHrc"]);
+                } else if (message.hasFlag(MessageFlags.IS_COMPONENTS_V2)) {
+                  const intl2 = getSystemLocale.intl;
+                  stringResult = intl2.string(getSystemLocale.t.Xxm5i3);
                 } else {
                   stringResult = null;
                   if (tmp15) {
-                    const intl = tmp28(1236).intl;
-                    stringResult = intl.string(tmp28(1236).t.JAKsM8);
+                    const intl = getSystemLocale.intl;
+                    stringResult = intl.string(getSystemLocale.t.JAKsM8);
                   }
                   tmp15 = message.embeds.length > 0 || message.attachments.length > 0;
                 }
-                tmp14 = MessageFlags;
               }
               obj5 = getStickerExtensionFromFormatType;
             }

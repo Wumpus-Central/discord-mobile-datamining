@@ -1,11 +1,11 @@
 // discord_app/modules/directory_channels/GuildDirectoryUtils.tsx
-import set2 from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import applyDefault from "../../../_runtime/00012_apply.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import DirectoryEntryTypes2 from "GuildDirectoryConstants.tsx";
 
 const DirectoryEntryTypes = DirectoryEntryTypes2.DirectoryEntryTypes;
-const result = set2.fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");
 
 export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromServer(entry) {
   if (entry.type === DirectoryEntryTypes.GUILD) {
@@ -69,9 +69,8 @@ export const orderByDateAdded = function orderByDateAdded(reactions) {
   return applyDefault.orderBy(reactions, items, ["desc"]);
 };
 export const rankByDateAdded = function rankByDateAdded(arr) {
-  const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);
+  const found = arr.filter((item, index) => item.featurableInDirectory);
   const items = [(createdAt) => createdAt.createdAt];
-  const obj = applyDefault;
   return applyDefault.orderBy(found, items, ["desc"]).slice(0, 5);
 };
 export const rankGuildEntries = function rankGuildEntries(arr) {

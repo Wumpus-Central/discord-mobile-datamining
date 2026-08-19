@@ -24,7 +24,7 @@ import registerAssetDefault15 from "../../../../../_runtime/12397_registerAsset.
 import SHARE_APPS_KEY from "../InstantInviteConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import isMetaQuest from "../../../device/MetaQuestUtils.android.tsx";
-import set from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 import sendSMS from "../DCDSendUtils.tsx";
 import showInstantInviteActionSheet from "../InstantInviteUtils.tsx";
 
@@ -74,8 +74,7 @@ obj1[4] = function getLabel() {
 obj1[5] = function onPress(code) {
   code = code.code;
   ({ channel, location: _location } = code);
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { link: null, location: null, channel: null };
+  const obj = { link: null, location: null, channel: null };
   const combined = "InstantInviteQRCodeActionSheet-" + code;
   obj[0] = getInviteURLDefault(code);
   obj[1] = _location;
@@ -85,12 +84,12 @@ obj1[5] = function onPress(code) {
 items[2] = obj1;
 let obj2 = { type: obj.MESSAGES, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
 let importDefaultResult;
-if (set.isIOS()) {
+if (obj132.isIOS()) {
   importDefaultResult = registerAssetDefault7;
 }
 obj2[1] = importDefaultResult;
 let importDefaultResult1;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   importDefaultResult1 = registerAssetDefault8;
 }
 obj2[2] = importDefaultResult1;
@@ -113,8 +112,8 @@ obj2[5] = function onPress(channel) {
   obj2 = channel(500);
   tmp(4646).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
-      let obj = code(closure_1_2[21]);
-      obj = { inviteKey: null, channelId: null, messageId: null, location: "SMS Option", overrideProperties: null };
+      code(dependencyMap[21]);
+      let obj = { inviteKey: null, channelId: null, messageId: null, location: "SMS Option", overrideProperties: null };
       obj[0] = code;
       let id;
       if (channel != null) {
@@ -131,22 +130,23 @@ obj2[5] = function onPress(channel) {
     }
     if (arg2) {
       obj1 = { body: null, isDismissable: true };
-      const intl = channel(closure_1_2[6]).intl;
-      obj1[0] = intl.string(channel(closure_1_2[6]).t["1ieAR5"]);
-      code(closure_1_2[22]).show(obj1);
-      const obj4 = code(closure_1_2[22]);
+      const intl = channel(dependencyMap[6]).intl;
+      obj1[0] = intl.string(channel(dependencyMap[6]).t["1ieAR5"]);
+      code(dependencyMap[22]).show(obj1);
+      const obj4 = code(dependencyMap[22]);
     }
   });
+  const tmpResult = tmp(4646);
 };
 items[3] = obj2;
 let obj3 = { type: obj.MAIL, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
 let importDefaultResult2;
-if (set.isIOS()) {
+if (obj132.isIOS()) {
   importDefaultResult2 = registerAssetDefault9;
 }
 obj3[1] = importDefaultResult2;
 let importDefaultResult3;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   importDefaultResult3 = registerAssetDefault3;
 }
 obj3[2] = importDefaultResult3;
@@ -169,8 +169,8 @@ obj3[5] = function onPress(channel) {
   obj2 = channel(500);
   tmp(4646).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
-      let obj = code(closure_1_2[21]);
-      obj = { inviteKey: null, channelId: null, messageId: null, location: "Email Option", overrideProperties: null };
+      code(dependencyMap[21]);
+      let obj = { inviteKey: null, channelId: null, messageId: null, location: "Email Option", overrideProperties: null };
       obj[0] = code;
       let id;
       if (channel != null) {
@@ -187,12 +187,13 @@ obj3[5] = function onPress(channel) {
     }
     if (arg2) {
       obj1 = { body: null, isDismissable: true };
-      const intl = channel(closure_1_2[6]).intl;
-      obj1[0] = intl.string(channel(closure_1_2[6]).t["1ieAR5"]);
-      code(closure_1_2[22]).show(obj1);
-      const obj4 = code(closure_1_2[22]);
+      const intl = channel(dependencyMap[6]).intl;
+      obj1[0] = intl.string(channel(dependencyMap[6]).t["1ieAR5"]);
+      code(dependencyMap[22]).show(obj1);
+      const obj4 = code(dependencyMap[22]);
     }
   });
+  const tmpResult = tmp(4646);
 };
 items[4] = obj3;
 let obj4 = { type: obj.FB_MESSENGER, fullIcon: registerAssetDefault10, isAvailable: null, getLabel: null, onPress: null };
@@ -273,7 +274,7 @@ obj9[4] = function onPress(code) {
 items[10] = obj9;
 const items1 = [, ];
 [arr2[0], arr2[1]] = items;
-const result = set.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/instant_invite/native/components/InstantInviteConstants.tsx");
 
 export const ShareItemType = obj;
 export const SHARE_ITEMS = items;

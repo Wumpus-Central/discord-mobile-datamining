@@ -5,10 +5,10 @@ import useNativeForumPostContentDefault from "hooks/useNativeForumPostContent.ts
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_4 = createCacheKey.createStyles({ text: { alignSelf: "flex-start" } });
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
 
 export default function ForumPostMessageContent(senderModifier) {
   let num = senderModifier.lineClamp;

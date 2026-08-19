@@ -1,7 +1,7 @@
 // discord_common/js/packages/media-engine/native/inject.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/inject.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/native/inject.tsx");
 
 export function inject(arg0) {
   closure_0 = arg0;

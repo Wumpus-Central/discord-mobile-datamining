@@ -2,20 +2,20 @@
 import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import registerAssetDefault from "../../../../_runtime/01902_registerAsset.js";
 import collectGuildAnalyticsMetadata from "../../app_analytics/AppAnalyticsUtils.tsx";
+import ApplicationCommandSectionType from "../../application_commands/ApplicationCommandTypes.tsx";
 import setActiveCommandAll from "../../application_commands/ApplicationCommandActionCreators.tsx";
 import getShelfBadgeTypeIfActive from "../utils/AppLauncherUtils.tsx";
 import Placeholder from "screens/home/FrecencySection.tsx";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../stores/UserStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "AppLauncherNativeConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import { BuiltInSectionId } from "../../application_commands/ApplicationCommandConstants.tsx";
-import { context } from "AppLauncherContext.tsx";
 
-require = arg1;
+require = fn;
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: error, AppLauncherRouteName: closure_8 } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
 export const handleApplicationSelected = function handleApplicationSelected(entrypoint) {
   ({ application, navigation, sectionName, navigates } = entrypoint);
@@ -24,12 +24,11 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     navigates = true;
   }
   entrypoint = entrypoint.entrypoint;
-  let obj = collectGuildAnalyticsMetadata;
-  obj = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
+  let obj = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(5248).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = ApplicationCommandSectionType.ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(5248).ApplicationCommandTriggerSections.APP;
+    APP = ApplicationCommandSectionType.ApplicationCommandTriggerSections.APP;
   }
   obj[1] = APP;
   let id = application.id;
@@ -55,8 +54,7 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
 export const handleViewAllSelected = function handleViewAllSelected(arg0) {
   ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
   ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
-  let obj = collectGuildAnalyticsMetadata;
-  obj = { section_name: sectionName, num: sectionItemType === Placeholder.SectionItemType.APPS ? applications.length : commands.length };
+  const obj = { section_name: sectionName, num: sectionItemType === Placeholder.SectionItemType.APPS ? applications.length : commands.length };
   obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_SECTION_VIEW_MORE, obj);
   navigation.navigate(constants.APP_LIST_VIEW, { analyticsLocation: _location, context, sectionName, sectionOverallPosition, applications, sectionItemType, commands, sectionDescriptors, title, promotedApplicationIds });
 };
@@ -64,8 +62,8 @@ export const handleApplicationCommandSelected = function handleApplicationComman
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
-  let obj = command(5245);
-  obj = { command, location: _location, triggerSection: command(5245).getCommandTriggerSection(section), queryLength: query.length, sectionName, query, searchResultsPosition, source: entrypoint };
+  command(5245);
+  let obj = { command, location: _location, triggerSection: command(5245).getCommandTriggerSection(section), queryLength: query.length, sectionName, query, searchResultsPosition, source: entrypoint };
   obj.trackCommandSelected(obj);
   if (command.type === command(1954).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
     obj = { application: null, context: null, installOnDemand: null, sectionName: null, entrypoint: null };
@@ -78,7 +76,7 @@ export const handleApplicationCommandSelected = function handleApplicationComman
   } else {
     let tmp5 = section;
     if (section.id === BuiltInSectionId.FRECENCY) {
-      const found = sectionDescriptors.find((id) => id.id === command.applicationId);
+      const found = sectionDescriptors.find((item, index) => item.id === command.applicationId);
       tmp5 = section;
       if (null != found) {
         tmp5 = found;
@@ -95,17 +93,16 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       obj1[5] = _location;
       obj1[6] = onCommandExecuted;
       navigation.navigate(constants.COMMAND_VIEW, obj1);
-      const obj4 = setActiveCommandAll;
     }
   }
+  const obj3 = command(5245);
 };
 export const getInitialOptionValues = function getInitialOptionValues(option) {
   option = option.option;
   ({ prefilledValues, roles } = option);
   let found;
-  found = undefined;
   if (prefilledValues != null) {
-    found = prefilledValues.find((name) => name.name === option.name && name.type === tmp.type);
+    found = prefilledValues.find((item, index) => item.name === option.name && item.type === tmp.type);
   }
   const type = option.type;
   if (option(1954).ApplicationCommandOptionType.BOOLEAN === type) {
@@ -205,10 +202,10 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
         return items13;
       } else {
         let choices = option.choices;
-        if (choices.some((value) => value.value === found.value)) {
+        if (choices.some((item, index) => item.value === found.value)) {
           const obj5 = { type: "text", text: null };
           choices = option.choices;
-          obj5[1] = choices.find((value) => value.value === found.value).displayName;
+          obj5[1] = choices.find((item, index) => item.value === found.value).displayName;
           const items14 = [obj5];
           return items14;
         }
@@ -237,15 +234,15 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
 };
 export const useLogAppLauncherEmptyStateView = function useLogAppLauncherEmptyStateView(COMMAND_NOT_FOUND, query) {
   const _require = COMMAND_NOT_FOUND;
-  const entrypoint = _context.useAppLauncherContext().entrypoint;
+  const entrypoint = require("AppLauncherContext.tsx").useAppLauncherContext().entrypoint;
   const items = [COMMAND_NOT_FOUND, query, entrypoint];
   const effect = React.useEffect(() => {
     if (null != COMMAND_NOT_FOUND) {
-      let obj = COMMAND_NOT_FOUND(closure_1_3[6]);
-      obj = { type: null, source: null };
+      COMMAND_NOT_FOUND(dependencyMap[6]);
+      const obj = { type: null, source: null };
       obj[0] = tmp;
       obj[1] = entrypoint;
-      obj.trackWithMetadata(closure_1_9.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj);
+      obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj);
     }
   }, items);
 };
@@ -256,7 +253,6 @@ export const useHandleActivityItemSelected = function useHandleActivityItemSelec
   if (flag === undefined) {
     flag = true;
   }
-  closure_4 = undefined;
   closure_5 = undefined;
   let obj = sectionName(entrypoint[16]);
   const analyticsContext = obj.useAnalyticsContext();
@@ -279,7 +275,7 @@ export const useHandleActivityItemSelected = function useHandleActivityItemSelec
         tmp(obj);
       }
       obj = { location: closure_2, application_id: applicationId, section_name: sectionName, action: closure_4, source: entrypoint };
-      sectionName(entrypoint[6]).trackWithMetadata(closure_1_9.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, obj);
+      sectionName(entrypoint[6]).trackWithMetadata(AnalyticEvents.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, obj);
     },
     launchingComponentId: fetchesApplication.launchingComponentId,
     commandOrigin: sectionName(entrypoint[7]).CommandOrigin.APPLICATION_LAUNCHER,

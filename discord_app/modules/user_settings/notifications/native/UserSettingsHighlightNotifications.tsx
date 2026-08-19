@@ -1,21 +1,21 @@
 // discord_app/modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx
+import _modDef6798 from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
 import GuildIconSizesDefault from "../../../guild/native/GuildIcon.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stores/GuildStore.tsx";
-import closure_5 from "../../../../stores/SortedGuildStore.tsx";
-import closure_6 from "../../../../stores/UserGuildSettingsStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import insertUnsortedGuilds from "../../../../stores/SortedGuildStore.tsx";
+import updateUserGuildSettingsInternal from "../../../../stores/UserGuildSettingsStore.tsx";
 import { HighlightSettings } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function Row(guildId) {
   guildId = guildId.guildId;
   const items = [guildId];
   ({ isStart, isEnd } = guildId);
   const callback = React.useCallback((arg0) => {
-    let obj = closure_1_1(closure_1_2[6]);
-    obj = { notify_highlights: arg0 ? tmp3.ENABLED : tmp3.DISABLED };
-    const NotificationLabel = guildId(closure_1_2[7]).NotificationLabel;
+    const obj = { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED };
+    const NotificationLabel = guildId(dependencyMap[7]).NotificationLabel;
     const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.highlights(!arg0));
   }, items);
   let obj = guildId(589);
@@ -46,7 +46,7 @@ function Row(guildId) {
   }
   tmp2 = guildId;
 }
-let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx");
 
 export default function UserSettingsHighlightNotifications() {
   let obj = stateFromStoresArray(589);

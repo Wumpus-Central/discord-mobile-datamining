@@ -1,7 +1,7 @@
 // discord_app/modules/chat/native/useChatViewPointerEvents.android.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/chat/native/useChatViewPointerEvents.android.tsx");
+const result = obj132.fileFinishedImporting("modules/chat/native/useChatViewPointerEvents.android.tsx");
 
 export default function useChatViewPointerEventsAndroid() {
   return "auto";

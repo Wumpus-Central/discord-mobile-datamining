@@ -2,12 +2,11 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import explicitContentFromProto from "../../modules/user_settings/UserSettings.tsx";
-import closure_5 from "../../modules/user_settings/SelectivelySyncedUserSettingsStore.tsx";
-import closure_6 from "../../modules/user_settings/UserSettingsProtoStore.tsx";
-import closure_7 from "../LibraryApplicationStore.tsx";
-import set from "../../../_runtime/00002_set.js";
+import initialize from "../../modules/user_settings/SelectivelySyncedUserSettingsStore.tsx";
+import handleConnectionClosedOrResumed from "../../modules/user_settings/UserSettingsProtoStore.tsx";
+import setLibraryApplications from "../LibraryApplicationStore.tsx";
 
-require = arg1;
+require = fn;
 function reset() {
   c2 = null;
   c3 = null;
@@ -42,8 +41,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getTestModeApplicationId"] = function getTestModeApplicationId() {
   return closure_2;
 };
-prototype["inTestModeForApplication"] = function inTestModeForApplication(applicationId) {
-  return closure_2 === applicationId;
+prototype["inTestModeForApplication"] = function inTestModeForApplication(closure_0) {
+  return closure_2 === closure_0;
 };
 prototype["inTestModeForEmbeddedApplication"] = function inTestModeForEmbeddedApplication(arg0) {
   let tmp = closure_2 === arg0;
@@ -52,12 +51,12 @@ prototype["inTestModeForEmbeddedApplication"] = function inTestModeForEmbeddedAp
   }
   return tmp;
 };
-prototype["shouldDisplayTestMode"] = function shouldDisplayTestMode(applicationId) {
+prototype["shouldDisplayTestMode"] = function shouldDisplayTestMode(closure_0) {
   const DeveloperMode = explicitContentFromProto.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     const self = this;
-    setting = this.inTestModeForApplication(applicationId);
+    setting = this.inTestModeForApplication(closure_0);
   }
   return setting;
 };
@@ -142,6 +141,6 @@ obj = {
   DEVELOPER_TEST_MODE_RESET: reset
 };
 const testModeStore = new TestModeStore(dispatcherDefault, obj);
-let result = set.fileFinishedImporting("stores/game_store/TestModeStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/game_store/TestModeStore.tsx");
 
 export default testModeStore;

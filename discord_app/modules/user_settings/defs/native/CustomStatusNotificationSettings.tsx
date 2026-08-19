@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
 import expandEventPropertiesDefault from "../../../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
@@ -13,8 +13,7 @@ function onChange(custom_status_push_notifications) {
   const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
   const CustomStatusPushNotificationType = create.CustomStatusPushNotificationType;
   CustomStatusPushNotifications.updateSetting(custom_status_push_notifications ? CustomStatusPushNotificationType.STATUS_PUSH_ENABLED : CustomStatusPushNotificationType.STATUS_PUSH_DISABLED);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants.ACCOUNT, custom_status_push_notifications };
+  const obj = { update_type: constants.ACCOUNT, custom_status_push_notifications };
   obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
 }
 const AnalyticEvents = ME.AnalyticEvents;
@@ -36,24 +35,7 @@ const toggle = createToggle.createToggle({
   },
   onValueChange: onChange
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PTtxi9);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/+OQEs"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue() {
-    const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
-    const setting = CustomStatusPushNotifications.useSetting();
-    return setting !== create.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
-  },
-  onValueChange: onChange
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/CustomStatusNotificationSettings.tsx");
 
 export default toggle;
 export { onChange };

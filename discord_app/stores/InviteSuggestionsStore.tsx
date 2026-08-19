@@ -2,16 +2,15 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import isGuildMember from "../utils/InstantInviteUtils.tsx";
-import closure_8 from "../modules/quickswitcher/QuickSwitcherStore.tsx";
-import closure_9 from "../modules/user_affinities/UserAffinitiesV2Store.tsx";
-import closure_10 from "ChannelStore.tsx";
-import closure_11 from "PermissionStore.tsx";
-import closure_12 from "RelationshipStore.tsx";
+import handleConnectionOpen from "../modules/quickswitcher/QuickSwitcherStore.tsx";
+import recomputeAffinities from "../modules/user_affinities/UserAffinitiesV2Store.tsx";
+import ensureGuildLoaded from "ChannelStore.tsx";
+import getUncachedChannelPermissions from "PermissionStore.tsx";
+import markAllUserIdListsStale from "RelationshipStore.tsx";
 import ME from "../Constants.tsx";
 import { InviteTargetTypes } from "../modules/instant_invite/Constants.tsx";
-import set from "../../_runtime/00002_set.js";
 
-require = arg1;
+require = fn;
 function _computeRows(query) {
   set = new Set();
   if (type != null) {
@@ -44,12 +43,12 @@ function _computeRows(query) {
   set1 = new Set();
   if (closure_7 === InviteTargetTypes.EMBEDDED_APPLICATION) {
     channelHistory = channelHistory.getChannelHistory();
-    const mapped = channelHistory.map((arg0) => channel.getChannel(arg0));
+    const mapped = channelHistory.map((item, index) => channel.getChannel(item));
     const found = mapped.filter(set1(1370).isNotNullish);
-    const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
-    const found2 = found1.filter((arg0) => closure_11.can(constants2.SEND_MESSAGES, arg0));
+    const found1 = found.filter((item, index) => item.type === constants.GUILD_TEXT);
+    const found2 = found1.filter((item, index) => closure_11.can(constants2.SEND_MESSAGES, item));
     const substr = found2.slice(0, 3);
-    const item = substr.forEach((id) => set1.add(id.id));
+    const item = substr.forEach((item, index) => set1.add(item.id));
   }
   const obj2 = set1(8920);
   return set1(8920).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
@@ -75,13 +74,13 @@ prototype["getTotalSuggestionsCount"] = function getTotalSuggestionsCount() {
 prototype["getInitialCounts"] = function getInitialCounts() {
   return closure_19;
 };
-prototype["getSelectedInviteMetadata"] = function getSelectedInviteMetadata(isSuggested) {
-  const value = map.get(isSuggested);
+prototype["getSelectedInviteMetadata"] = function getSelectedInviteMetadata(row) {
+  const value = map.get(row);
   const userAffinities = authStore.getUserAffinities();
   if (null != value) {
     const obj = { rowNum: null, isAffinitySuggestion: null, numTotal: null, numAffinityConnections: null, isFiltered: null };
     obj[0] = value.index;
-    obj[1] = isSuggested.isSuggested;
+    obj[1] = row.isSuggested;
     obj[2] = length.length;
     obj[3] = arr.length;
     obj[4] = closure_3;
@@ -98,8 +97,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(dispatcherDefault, {
     }
     const applicationId = guild.applicationId;
     const blockedOrIgnoredIDs = closure_12.getBlockedOrIgnoredIDs();
-    let obj = isGuildMember;
-    obj = { channel, applicationId, inviteTargetType };
+    const obj = { channel, applicationId, inviteTargetType };
     const usersAlreadyJoined = obj.getUsersAlreadyJoined(obj);
     const items = [...usersAlreadyJoined];
     set = new Set(items);
@@ -107,8 +105,8 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(dispatcherDefault, {
     const tmp5 = _computeRows("");
     const rows = tmp5.rows;
     map = new Map();
-    const item = rows.forEach((arg0, index) => {
-      const result = map.set(arg0, { index });
+    const item = rows.forEach((item, index) => {
+      const result = map.set(item, { index });
     });
     const counts = tmp5.counts;
   },
@@ -127,11 +125,11 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(dispatcherDefault, {
       return num;
     });
     map = new Map();
-    const item = rows.forEach((arg0, index) => {
-      const result = map.set(arg0, { index });
+    const item = rows.forEach((item, index) => {
+      const result = map.set(item, { index });
     });
   }
 });
-let result = set.fileFinishedImporting("stores/InviteSuggestionsStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/InviteSuggestionsStore.tsx");
 
 export default inviteSuggestionsStore;

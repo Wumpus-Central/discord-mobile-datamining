@@ -1,17 +1,16 @@
 // discord_app/components_native/common/TouchableBackground.tsx
 import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import closure_0 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_1 from "../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
 ({ View: obj1, Pressable: c3 } = get_ActivityIndicator);
-createCacheKey = { default: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("components_native/common/TouchableBackground.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/TouchableBackground.tsx");
 
 export default function TouchableBackground(onPressOut) {
   ({ activeBackgroundColor, onPressIn } = onPressOut);

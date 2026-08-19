@@ -2,11 +2,11 @@
 import setParamsDefault from "LazyPromiseInitializer.tsx";
 import emojiTermsImporter from "EmojiTermsImporter.js";
 
-require = arg1;
+require = fn;
 let closure_2 = new setParamsDefault(function loadEmoji(arg0) {
   const tmp = emojiTermsImporter.emojiTermsImporter[arg0];
   if (undefined !== tmp) {
-    let nextPromise = tmp().then((arg0) => arg0.default);
+    let nextPromise = tmp().then((result) => result.default);
     const tmpResult = tmp();
   } else {
     nextPromise = Promise.resolve({});
@@ -30,13 +30,13 @@ const obj = {
 const tmp2 = new setParamsDefault(function loadEmoji(arg0) {
   const tmp = emojiTermsImporter.emojiTermsImporter[arg0];
   if (undefined !== tmp) {
-    let nextPromise = tmp().then((arg0) => arg0.default);
+    let nextPromise = tmp().then((result) => result.default);
     const tmpResult = tmp();
   } else {
     nextPromise = Promise.resolve({});
   }
   return nextPromise;
 });
-const result = require("set").fileFinishedImporting("modules/emoji_terms/EmojiTerms.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emoji_terms/EmojiTerms.tsx");
 
 export default obj;

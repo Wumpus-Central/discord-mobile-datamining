@@ -1,5 +1,5 @@
 // discord_app/modules/stickers/native/StickerPickerStore.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import keys from "../../../../_runtime/00644_keys.js";
 
 let obj = keys.create((arg0) => {
@@ -8,7 +8,7 @@ let obj = keys.create((arg0) => {
     packToScrollTo: null,
     setPackToScrollTo(pack_id) {
       const callback = pack_id;
-      return callback(closure_1_1[1]).batchUpdates(() => {
+      return callback(dependencyMap[1]).batchUpdates(() => {
         pack_id((packToScrollTo) => {
           let tmp = packToScrollTo;
           if (packToScrollTo.packToScrollTo !== closure_0) {
@@ -22,6 +22,6 @@ let obj = keys.create((arg0) => {
     }
   };
 });
-const result = set.fileFinishedImporting("modules/stickers/native/StickerPickerStore.tsx");
+const result = obj132.fileFinishedImporting("modules/stickers/native/StickerPickerStore.tsx");
 
 export const useStickerPickerStore = obj;

@@ -1,17 +1,16 @@
 // discord_app/modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx");
 
 export default function usePreloadedGuildAsset(guildId, icon, asset) {
   importDefault = guildId;
   dependencyMap = icon;
   const callback = asset;
-  let obj = React;
   React = callback(React.useState({}), 2)[1];
-  obj = { guildId, asset, icon, preloading: icon };
+  let obj = { guildId, asset, icon, preloading: icon };
   const ref = React.useRef(obj);
   const effect = React.useEffect(() => () => {
     ref.current.guildId = undefined;
@@ -24,22 +23,22 @@ export default function usePreloadedGuildAsset(guildId, icon, asset) {
     if (guildId === ref.current.guildId) {
       if (null != icon) {
         if (tmp5) {
-          tmp2.current.preloading = tmp3;
+          ref.current.preloading = icon;
           const obj = guildId(icon[3]);
-          guildId(icon[3]).preload(tmp3).then(() => {
+          guildId(icon[3]).preload(icon).then((result) => {
             let tmp2 = ref.current.guildId === closure_0;
             if (tmp2) {
-              tmp2 = tmp.current.preloading === closure_1;
+              tmp2 = ref.current.preloading === closure_1;
             }
             if (tmp2) {
-              tmp.current.icon = closure_1;
-              tmp.current.asset = closure_2;
+              ref.current.icon = closure_1;
+              ref.current.asset = closure_2;
               callback({});
             }
           });
-          const preloadResult = guildId(icon[3]).preload(tmp3);
+          const preloadResult = guildId(icon[3]).preload(icon);
         }
-        tmp5 = tmp3 !== tmp2.current.icon && tmp3 !== tmp2.current.preloading;
+        tmp5 = icon !== ref.current.icon && icon !== ref.current.preloading;
       }
     }
     ref.current.guildId = guildId;

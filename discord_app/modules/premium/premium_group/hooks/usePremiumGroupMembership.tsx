@@ -1,10 +1,10 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import noop from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../PremiumGroupStore.tsx";
+import handleMutationStart from "../PremiumGroupStore.tsx";
 
 const useEffect = noop.useEffect;
-const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembership.tsx");
 
 export default function usePremiumGroupMembership() {
   let obj = arg0;
@@ -30,8 +30,8 @@ export default function usePremiumGroupMembership() {
         hasFetchedMembershipResult = closure_1_4.hasFetchedMembership();
       }
       if (!hasFetchedMembershipResult) {
-        flag2(closure_1_2[3]).dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
-        const obj = flag2(closure_1_2[3]);
+        flag2(dependencyMap[3]).dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" });
+        const obj = flag2(dependencyMap[3]);
       }
     }
   }, items1);

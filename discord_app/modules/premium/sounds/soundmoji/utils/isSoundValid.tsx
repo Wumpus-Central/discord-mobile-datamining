@@ -1,12 +1,12 @@
 // discord_app/modules/premium/sounds/soundmoji/utils/isSoundValid.tsx
 import getPremiumPlanItemDefault from "../../../../../utils/PremiumUtils.tsx";
-import closure_2 from "../../../../../stores/ChannelStore.tsx";
-import closure_3 from "../../../../../stores/PermissionStore.tsx";
-import closure_4 from "../../../../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import getUncachedChannelPermissions from "../../../../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 import { DEFAULT_SOUND_GUILD_ID } from "../../../../soundboard/SoundboardConstants.tsx";
 import { Permissions } from "../../../../../../discord_common/js/shared/Constants.tsx";
 
-let result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");
 
 export default function isSoundValid(guildId) {
   channel = channel.getChannel(arg2);

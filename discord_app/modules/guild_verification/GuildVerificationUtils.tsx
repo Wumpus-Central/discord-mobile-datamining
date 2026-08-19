@@ -2,12 +2,12 @@
 import transitionTo from "../routing/router_utils.tsx";
 import MAX_RESULTS_PER_PAGE from "../guild_member_verification/MemberVerificationTypes.tsx";
 import openMemberVerificationModal from "../guild_member_verification/MemberVerificationModalActionCreators.tsx";
-import closure_2 from "../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import handleGatewayJoinRequestUpdate from "../guild_member_verification/UserGuildJoinRequestStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ GuildFeatures: c3, Routes: c4 } = ME);
-let result = require("set").fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 
 export const inviteGuildHasPendingMemberDisabledVerification = function inviteGuildHasPendingMemberDisabledVerification(guild) {
   const features = guild.features;

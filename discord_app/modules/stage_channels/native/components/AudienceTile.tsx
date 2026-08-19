@@ -3,45 +3,42 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Button from "../../../../design/void/native.tsx";
 import useAudienceRequestToSpeakState from "../../useAudienceRequestToSpeakState.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/GuildMemberStore.tsx";
+import trackCommunicationDisabled from "../../../../stores/GuildMemberStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 function RaisedHandIcon(rtsState) {
   const tmp = styles();
   let activeBackground = rtsState.rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   if (activeBackground) {
     let PRIMARY_800 = unsafe_rawColors.WHITE;
-    let tmp5 = tmp4;
+    let tmp5 = importDefault;
   } else {
     PRIMARY_800 = unsafe_rawColors.PRIMARY_800;
-    tmp5 = tmp4;
+    tmp5 = importDefault;
   }
   const items = [tmp.raisedHandContainer, ];
   if (activeBackground) {
     activeBackground = tmp.activeBackground;
   }
-  let obj = { style: items, children: null };
   items[1] = activeBackground;
-  obj = { style: tmp.raisedHand, source: tmp5(8119), color: PRIMARY_800 };
-  obj[1] = closure_5(Button.Icon, obj);
-  return closure_5(View, obj);
+  const obj = { style: tmp.raisedHand, source: tmp5(8119), color: PRIMARY_800 };
+  obj[1] = callback(Button.Icon, obj);
+  return callback(View, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { touchableContainer: { overflow: "visible" }, container: { alignItems: "center" }, avatarContainer: { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4 }, raisedHandContainer: null, activeBackground: null, raisedHand: null, nameplateContainer: null, usernameText: null, faded: null };
-obj = { position: "absolute", top: -8, right: 0, height: 24, width: 24, alignItems: "center", justifyContent: "center", borderRadius: 12, borderWidth: 2, borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, backgroundColor: ThemesDefault.colors.WHITE };
+let obj = { position: "absolute", top: -8, right: 0, height: 24, width: 24, alignItems: "center", justifyContent: "center", borderRadius: 12, borderWidth: 2, borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, backgroundColor: ThemesDefault.colors.WHITE };
 obj[3] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
+const createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
 obj[4] = createCacheKey;
 obj[5] = { height: 13, width: 13, alignItems: "center", justifyContent: "center", resizeMode: "contain" };
 obj[6] = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
 obj[7] = { fontSize: 14, color: ThemesDefault.colors.WHITE };
 obj[8] = { opacity: 0.5 };
 const styles = createCacheKey.createStyles(obj);
-let obj2 = { fontSize: 14, color: ThemesDefault.colors.WHITE };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   const participant = channel.participant;
@@ -84,8 +81,8 @@ const memoResult = importAllResult.memo((channel) => {
   items2[2] = { width: result1 };
   obj[1] = items2;
   obj[3] = function onPress() {
-    let obj = channel(guildId[15]);
-    obj = { userId: user.id, channelId: channel.id };
+    channel(guildId[15]);
+    const obj = { userId: user.id, channelId: channel.id };
     obj.showUserProfile(obj);
   };
   obj = { style: tmp.avatarContainer, children: null };
@@ -95,23 +92,23 @@ const memoResult = importAllResult.memo((channel) => {
     faded = tmp.faded;
   }
   obj1[3] = faded;
-  const items3 = [closure_5(channel(guildId[7]).CutoutableAvatarImage, obj1), ];
+  const items3 = [callback(channel(guildId[7]).CutoutableAvatarImage, obj1), ];
   if (result) {
     obj2 = { rtsState: null };
     obj2[0] = rtsState;
-    result = tmp14(RaisedHandIcon, obj2);
+    result = callback(RaisedHandIcon, obj2);
   }
   items3[1] = result;
   obj[1] = items3;
-  const items4 = [closure_6(View, obj), ];
+  const items4 = [callback2(View, obj), ];
   const obj3 = { style: items5, children: null };
   items5 = [tmp.nameplateContainer];
   if (blocked) {
-    blocked = tmp14(tmp6(tmp3[16]).BlockedStatus, {});
+    blocked = callback(tmp6(tmp3[16]).BlockedStatus, {});
   }
   const items6 = [blocked, , , ];
   if (ignored) {
-    ignored = tmp14(tmp6(tmp3[16]).IgnoredStatus, {});
+    ignored = callback(tmp6(tmp3[16]).IgnoredStatus, {});
   }
   items6[1] = ignored;
   const items7 = [tmp.usernameText, , ];
@@ -137,29 +134,29 @@ const memoResult = importAllResult.memo((channel) => {
     items7[2] = tmp17;
     obj5[0] = items7;
     obj5[2] = name;
-    items6[2] = tmp14(tmp6(tmp3[7]).LegacyText, obj5);
+    items6[2] = callback(tmp6(tmp3[7]).LegacyText, obj5);
     if (stateFromStores) {
       const obj6 = { source: null, size: null, color: null };
       obj6[0] = tmp2(tmp3[18]);
       obj6[1] = tmp6(tmp3[7]).Icon.Sizes.SMALL;
       obj6[2] = tmp2(tmp3[5]).unsafe_rawColors.GUILD_BOOSTING_PINK;
-      stateFromStores = tmp14(tmp6(tmp3[7]).Icon, obj6);
+      stateFromStores = callback(tmp6(tmp3[7]).Icon, obj6);
     }
     items6[3] = stateFromStores;
     obj3[1] = items6;
-    items4[1] = tmp12(tmp13, obj3);
+    items4[1] = callback2(View, obj3);
     obj[4] = items4;
-    return tmp12(tmp6(tmp3[13]).LegacyPressable, obj);
+    return callback2(tmp6(tmp3[13]).LegacyPressable, obj);
   } else {
     const tmp6Result = tmp6(tmp3[17]);
-    let unsafe_rawColors = tmp2(tmp3[5]).unsafe_rawColors;
+    tmp2(tmp3[5]).unsafe_rawColors;
     const isThemeDarkResult = tmp6(tmp3[17]).isThemeDark(theme);
-    unsafe_rawColors = { color: null };
+    const unsafe_rawColors = { color: null };
     unsafe_rawColors[0] = tmp6(tmp3[17]).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
     const tmp19 = tmp6(tmp3[17]).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   }
 });
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/AudienceTile.tsx");
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/AudienceTile.tsx");
 
 export default memoResult;
 export const useAudienceTileStyles = styles;

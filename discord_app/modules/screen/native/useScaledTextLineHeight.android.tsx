@@ -1,11 +1,11 @@
 // discord_app/modules/screen/native/useScaledTextLineHeight.android.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import getFontScale from "useFontScale.tsx";
 import enforcingDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFontModule.tsx";
 
 const map = new Map();
-let result = set.fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
+let result = obj132.fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
 
 export const scaleLineHeight = function scaleLineHeight(arg0, arg1) {
   let value = map.get(arg0);
@@ -13,7 +13,6 @@ export const scaleLineHeight = function scaleLineHeight(arg0, arg1) {
     const scaledHeightForText = enforcingDefault.getScaledHeightForText(arg0);
     const result = map.set(arg0, scaledHeightForText);
     value = scaledHeightForText;
-    const obj2 = enforcingDefault;
   }
   return value;
 };
@@ -24,7 +23,6 @@ export const scaleTextLineHeight = function scaleTextLineHeight(c10, fontScale) 
     const scaledHeightForText = enforcingDefault.getScaledHeightForText(lineHeight);
     const result = map.set(lineHeight, scaledHeightForText);
     value = scaledHeightForText;
-    const obj2 = enforcingDefault;
   }
   return value;
 };
@@ -36,7 +34,6 @@ export const useScaledTextLineHeight = function useScaledTextLineHeight(c3) {
     const scaledHeightForText = enforcingDefault.getScaledHeightForText(lineHeight);
     const result = map.set(lineHeight, scaledHeightForText);
     value = scaledHeightForText;
-    const obj3 = enforcingDefault;
   }
   return value;
 };

@@ -1,21 +1,21 @@
 // discord_app/modules/headless_tasks/android/DirectReply.tsx
 import timestampDefault from "../../debug/Logger.tsx";
-import closure_2 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { MessageSendLocation } from "../../messages/MessageConstants.tsx";
 
 let closure_5 = new timestampDefault("DirectReply");
 let tmp = new timestampDefault("DirectReply");
-let result = require("set").fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");
+let result = require("obj132").fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
   return new Promise((arg0) => {
     const lib = arg0;
     closure_1_5.log("Executing DirectReply");
-    let PushNotificationAndroid = closure_1_3.PushNotificationAndroid;
+    let PushNotificationAndroid = NativeModules.PushNotificationAndroid;
     let result = PushNotificationAndroid.markNotificationAsDirectReply(lib.channelId);
-    lib(closure_1_1[4]).awaitStorage(() => {
+    lib(dependencyMap[4]).awaitStorage(() => {
       function _sendMessage() {
         const self = this;
         const tmp = closure_3_2((arg0) => {

@@ -1,12 +1,12 @@
 // discord_app/modules/nuf/native/useNotificationPermissionPrompt.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../auth/LoginRequiredActionStore.tsx";
-import closure_5 from "../../gateway/GatewayConnectionStore.tsx";
-import closure_6 from "../../../stores/UserRequiredActionStore.tsx";
-import closure_7 from "../../../stores/native/PushNotificationPermissionStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import handleUpdateUser from "../../auth/LoginRequiredActionStore.tsx";
+import _handleConnectionOpen from "../../gateway/GatewayConnectionStore.tsx";
+import handleRequiredAction from "../../../stores/UserRequiredActionStore.tsx";
+import set from "../../../stores/native/PushNotificationPermissionStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/nuf/native/useNotificationPermissionPrompt.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/nuf/native/useNotificationPermissionPrompt.tsx");
 
 export default function useNotificationPermissionPrompt() {
   const items = [closure_5];
@@ -19,11 +19,11 @@ export default function useNotificationPermissionPrompt() {
     if (stateFromStores) {
       if (!stateFromStores1) {
         if (tmp5) {
-          const permission = tmp3(tmp4[7]).requestPermission();
-          tmp3(tmp4[7]).shouldRequestNotification = false;
-          const tmp3Result = tmp3(tmp4[7]);
+          const permission = stateFromStores1(dependencyMap[7]).requestPermission();
+          stateFromStores1(dependencyMap[7]).shouldRequestNotification = false;
+          const tmp3Result = stateFromStores1(dependencyMap[7]);
         }
-        tmp5 = stateFromStores1(closure_1_2[7]).shouldRequestNotification && !closure_1_7.promptSeen;
+        tmp5 = stateFromStores1(dependencyMap[7]).shouldRequestNotification && !closure_1_7.promptSeen;
       }
     }
   }, items2);

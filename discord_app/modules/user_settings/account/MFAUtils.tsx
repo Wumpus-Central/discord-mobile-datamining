@@ -2,15 +2,15 @@
 import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import _crypto from "../../../utils/MFAUtils.tsx";
-import closure_2 from "../../../stores/GuildStore.tsx";
-import closure_3 from "../../../stores/PermissionStore.tsx";
-import closure_4 from "../../../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 
-require = arg1;
+require = fn;
 ({ GuildFeatures: c5, Permissions: closure_6, UserFlags: error } = ME);
 let obj = { AVAILABLE: "available", UNAVAILABLE_NO_CRYPTO: "unavailable_no_crypto", UNAVAILABLE_UNVERIFIED: "unavailable_unverified" };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");
 
 export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(stateFromStores) {
   let flag = arg1;
@@ -24,18 +24,22 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
       if (stateFromStores.hasFlag(constants.PARTNER)) {
         const intl2 = getSystemLocale.intl;
         const string2 = intl2.string;
+        let t = getSystemLocale.t;
         if (flag) {
-          let string2Result = string2(_9UucjT);
+          t = t["9UucjT"];
+          let string2Result = string2(t);
         } else {
-          string2Result = string2(_9UucjT.Sq6Q1u);
+          string2Result = string2(t.Sq6Q1u);
         }
       } else if (null == stateFromStores.email) {
         const intl = getSystemLocale.intl;
         const string = intl.string;
+        let t1 = getSystemLocale.t;
         if (flag) {
-          let stringResult = string(_9VWpT9);
+          t1 = t1["9VWpT9"];
+          let stringResult = string(t1);
         } else {
-          stringResult = string(_9VWpT9.LfCBZG);
+          stringResult = string(t1.LfCBZG);
         }
       }
     }
@@ -92,9 +96,9 @@ export const use2FARemoveDisableReason = function use2FARemoveDisableReason() {
       hasAnyStaffLevelResult = currentUser.hasAnyStaffLevel();
     }
     if (hasAnyStaffLevelResult) {
-      const intl2 = flag(closure_1_1[4]).intl;
+      const intl2 = flag(dependencyMap[4]).intl;
       const string2 = intl2.string;
-      let hxf9fX = flag(closure_1_1[4]).t;
+      let hxf9fX = flag(dependencyMap[4]).t;
       if (flag) {
         hxf9fX = hxf9fX.hxf9fX;
         let string2Result = string2(hxf9fX);
@@ -103,19 +107,19 @@ export const use2FARemoveDisableReason = function use2FARemoveDisableReason() {
       }
     } else {
       const guildsArray = closure_1_2.getGuildsArray();
-      if (!guildsArray.some((features) => {
-        features = features.features;
+      if (!guildsArray.some((item, index) => {
+        const features = item.features;
         let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
         if (hasItem) {
-          hasItem = closure_3.can(constants2.ADMINISTRATOR, features);
+          hasItem = closure_3.can(constants2.ADMINISTRATOR, item);
         }
         return hasItem;
       })) {
         return null;
       } else {
-        const intl = flag(closure_1_1[4]).intl;
+        const intl = flag(dependencyMap[4]).intl;
         const string = intl.string;
-        let OYTCUh = flag(closure_1_1[4]).t;
+        let OYTCUh = flag(dependencyMap[4]).t;
         if (flag) {
           OYTCUh = OYTCUh.OYTCUh;
           let stringResult = string(OYTCUh);

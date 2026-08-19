@@ -1,7 +1,7 @@
 // discord_app/modules/guild_themes/guildThemeSerialization.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");
 
 export const cloneGuildThemeSettings = function cloneGuildThemeSettings(themeSettings) {
   let tmp = null;

@@ -1,10 +1,9 @@
 // discord_app/modules/activities/utils/CustomActivityLinkUtils.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../stores/CustomActivityLinksStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import getOne from "../stores/CustomActivityLinksStore.tsx";
 import { Endpoints } from "../../../Constants.tsx";
-import set from "../../../../_runtime/00002_set.js";
 
-const require = arg1;
+const require = fn;
 function fetchCustomActivityLink() {
   const self = this;
   const apply = _fetchCustomActivityLink.apply;
@@ -50,26 +49,26 @@ function _fetchCustomActivityLink() {
               return obj;
             } else {
               if (null != callback) {
-                if (null != tmp14) {
-                  const result = callback(table[3]).decodeCustomActivityLink(tmp14);
+                if (null != closure_1) {
+                  const result = callback(table[3]).decodeCustomActivityLink(closure_1);
                   if (null == result) {
                     table = 3;
                     return { value: null, done: true };
                   } else {
                     const type2 = result.type;
-                    if (tmp16(tmp17[3]).CustomLinkType.MANAGED === type2) {
-                      const HTTP2 = tmp16(tmp17[4]).HTTP;
+                    if (callback(tmp17[3]).CustomLinkType.MANAGED === type2) {
+                      const HTTP2 = callback(tmp17[4]).HTTP;
                       obj1 = { url: null, rejectWithError: false };
-                      obj1[0] = closure_1_5.APPLICATION_MANAGED_ACTIVITY_LINK(tmp13, result.decodedLinkId);
+                      obj1[0] = closure_1_5.APPLICATION_MANAGED_ACTIVITY_LINK(callback, result.decodedLinkId);
                       c3 = 1;
                       table = 1;
                       const obj2 = { value: null, done: false };
                       obj2[0] = HTTP2.get(obj1);
                       return obj2;
-                    } else if (tmp16(tmp17[3]).CustomLinkType.QUICK === type2) {
-                      const HTTP = tmp16(tmp17[4]).HTTP;
+                    } else if (callback(tmp17[3]).CustomLinkType.QUICK === type2) {
+                      const HTTP = callback(tmp17[4]).HTTP;
                       const obj3 = { url: null, rejectWithError: false };
-                      obj3[0] = closure_1_5.APPLICATION_QUICK_ACTIVITY_LINK(tmp13, result.decodedLinkId);
+                      obj3[0] = closure_1_5.APPLICATION_QUICK_ACTIVITY_LINK(callback, result.decodedLinkId);
                       c3 = 2;
                       table = 1;
                       const obj4 = { value: null, done: false };
@@ -193,7 +192,7 @@ function _getCustomActivityLinkParams() {
                 c5 = 2;
                 c7 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = v0(tmp21, tmp22);
+                obj5[0] = v0(tmp21, closure_1);
                 return obj5;
               }
               tmp21 = custom_id;
@@ -346,8 +345,8 @@ function _loadCustomActivityLink() {
   }
   return applyArgumentsResult;
 }
-let set = new Set();
-let result = set.fileFinishedImporting("modules/activities/utils/CustomActivityLinkUtils.tsx");
+const set = new Set();
+let result = require("obj132").fileFinishedImporting("modules/activities/utils/CustomActivityLinkUtils.tsx");
 
 export { fetchCustomActivityLink };
 export const getCustomActivityLinkParams = function getCustomActivityLinkParams(closure_0, value, closure_2) {
@@ -375,10 +374,9 @@ export const getOrFetchCustomActivityLink = function getOrFetchCustomActivityLin
     one = null;
     if (!set.has(linkId)) {
       loadCustomActivityLink(id, linkId);
-      obj.add(linkId);
+      set.add(linkId);
       one = null;
     }
-    obj = set;
   }
   return one;
 };

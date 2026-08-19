@@ -1,5 +1,5 @@
 // discord_app/modules/skus/utils/transformSKUTenantMetadata.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 function transformProfileEffectKeyFrameFromServer(src) {
@@ -17,12 +17,12 @@ function transformProfileEffectKeyFrameFromServer(src) {
   ({ loopDelay: obj[6], position: obj[7], zIndex: obj[8], randomizedSources } = src);
   let mapped;
   if (randomizedSources != null) {
-    mapped = randomizedSources.map((src) => ({ src: src.src }));
+    mapped = randomizedSources.map((item, index) => ({ src: item.src }));
   }
   obj[9] = mapped;
   return obj;
 }
-const result = set.fileFinishedImporting("modules/skus/utils/transformSKUTenantMetadata.tsx");
+const result = obj132.fileFinishedImporting("modules/skus/utils/transformSKUTenantMetadata.tsx");
 
 export default function transformSKUTenantMetadata(social_layer) {
   if (null != social_layer) {
@@ -32,7 +32,7 @@ export default function transformSKUTenantMetadata(social_layer) {
       const carousel_items = social_layer.carousel_items;
       let mapped;
       if (carousel_items != null) {
-        mapped = carousel_items.map((thumbnailAssetId) => ({ thumbnailAssetId: thumbnailAssetId.thumbnail_asset_id, assetId: thumbnailAssetId.asset_id, backgroundAssetId: thumbnailAssetId.background_asset_id, youtubeVideoId: thumbnailAssetId.youtube_video_id, label: thumbnailAssetId.label, labelIconAssetId: thumbnailAssetId.label_icon_asset_id, title: thumbnailAssetId.title, description: thumbnailAssetId.description }));
+        mapped = carousel_items.map((item, index) => ({ thumbnailAssetId: item.thumbnail_asset_id, assetId: item.asset_id, backgroundAssetId: item.background_asset_id, youtubeVideoId: item.youtube_video_id, label: item.label, labelIconAssetId: item.label_icon_asset_id, title: item.title, description: item.description }));
       }
       if (mapped == null) {
         mapped = [];
@@ -65,12 +65,11 @@ export default function transformSKUTenantMetadata(social_layer) {
           if (null != assets2) {
             ({ static_image_path: obj8[0], animated_image_path: obj8[1], video_path: obj8[2] } = assets2);
             tmp13 = { staticImagePath: null, animatedImagePath: null, videoPath: null };
-            const obj2 = { staticImagePath: null, animatedImagePath: null, videoPath: null };
           }
           obj1[3] = tmp13;
           obj1[4] = item.label;
           tmp7 = obj1;
-        } else if (tmp8(1949).CollectiblesItemType.NAMEPLATE === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
           const obj3 = { id: null, type: null, asset: null, assets: null, label: null, palette: null };
           ({ id: obj5[0], type: obj5[1], asset: obj5[2], assets } = item);
           let tmp12;
@@ -82,7 +81,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           obj3[3] = tmp12;
           ({ label: obj5[4], palette: obj5[5] } = item);
           tmp7 = obj3;
-        } else if (tmp8(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
           const obj5 = { id: null, type: null, title: null, description: null, accessibilityLabel: null, animationType: null, staticFrameSrc: null, thumbnailPreviewSrc: null, reducedMotionSrc: null, effects: null };
           ({ id: obj4[0], type: obj4[1], title: obj4[2], description: obj4[3], accessibilityLabel: obj4[4], animationType: obj4[5], staticFrameSrc: obj4[6], thumbnailPreviewSrc: obj4[7], reducedMotionSrc: obj4[8], effects } = item);
           let mapped1;
@@ -91,7 +90,7 @@ export default function transformSKUTenantMetadata(social_layer) {
           }
           obj5[9] = mapped1;
           tmp7 = obj5;
-        } else if (tmp8(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+        } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
           const obj6 = { id: null, type: null, label: null, layers: null, innerWidth: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null };
           ({ id: obj10[0], type: obj10[1], label: obj10[2], layers: obj10[3], inner_width: obj10[4], overflow_top: obj10[5], overflow_bottom: obj10[6], overflow_horizontal: obj10[7] } = item);
           tmp7 = obj6;
@@ -120,7 +119,7 @@ export default function transformSKUTenantMetadata(social_layer) {
     const plan_features = social_layer.plan_features;
     let mapped2;
     if (plan_features != null) {
-      mapped2 = plan_features.map((title) => ({ title: title.title, description: title.description }));
+      mapped2 = plan_features.map((item, index) => ({ title: item.title, description: item.description }));
     }
     obj[2] = mapped2;
     return obj;

@@ -1,49 +1,40 @@
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagColorPickerActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import items from "../../guild_tag/GuildTagConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: closure_6, GUILD_TAG_BADGE_PALETTE_PRESETS: error, GuildTagBadgeSize: closure_8 } = items);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const PX_16 = ThemesDefault.space.PX_16;
 let closure_12 = { leading: true, trailing: true };
 let closure_13 = createCacheKey.createStyles((width) => {
-  let obj = { container: null, preview: null, previewChiplet: null, colorTabs: null, saturationValuePicker: null, saturationValueColorBox: null, saturationValueColorBoxInner: null, selector: null, huePicker: null, hueColorBarInner: null, hexInput: null, buttonGroup: null };
-  obj = { paddingHorizontal: PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+  let obj = { paddingHorizontal: PX_16, paddingBottom: ThemesDefault.space.PX_16 };
   obj[0] = obj;
   obj = { alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_24, paddingVertical: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
   obj[1] = obj;
   obj[2] = { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 0, columnGap: ThemesDefault.space.PX_8 };
   obj[3] = { alignSelf: "center", width };
   obj[4] = { alignSelf: "center" };
-  obj1 = { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 0, columnGap: ThemesDefault.space.PX_8 };
   obj[5] = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[6] = { width, minWidth: width, height: 160, minHeight: 160 };
-  const obj2 = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[7] = { width: 16, height: 16, borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.unsafe_rawColors.WHITE };
   obj[8] = { alignSelf: "center" };
   obj[9] = { width, minWidth: width, height: 24 };
-  const obj3 = { width: 16, height: 16, borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.unsafe_rawColors.WHITE };
   obj[10] = { height: 48, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_12, textAlign: "center" };
-  const obj4 = { height: 48, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_12, textAlign: "center" };
   obj[11] = { marginTop: ThemesDefault.space.PX_24 };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorPickerActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorPickerActionSheet.tsx");
 
 export default function GuildSettingsServerTagColorPickerActionSheet(secondaryColor) {
   ({ tag, badge, primaryColor } = secondaryColor);
   secondaryColor = secondaryColor.secondaryColor;
   const onSelectColor = secondaryColor.onSelectColor;
-  let callback;
-  let first;
-  let first1;
-  let table;
   let first2;
   closure_8 = undefined;
   let first3;
@@ -56,7 +47,6 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
   closure_16 = undefined;
   let primary2;
   let secondary;
-  callback = undefined;
   let callback1;
   let callback2;
   let callback3;
@@ -64,13 +54,13 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
   let throttledFunction;
   let callback5;
   const bound = Math.max(240, Math.min(secondaryColor(onSelectColor[9])().width - 2 * closure_11, 358));
-  let tmp4 = sharedValue1(bound);
-  callback = tmp5;
-  first = first2[0];
+  const tmp4 = sharedValue1(bound);
+  let callback = tmp5;
+  const first = first2[0];
   let obj = first;
   const tmp8 = callback(first.useState(primaryColor), 2);
-  first1 = tmp8[0];
-  table = tmp8[1];
+  const first1 = tmp8[0];
+  const table = tmp8[1];
   let tmp10 = null;
   if (table[badge] >= 2) {
     tmp10 = secondaryColor;
@@ -170,11 +160,12 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
       const result1 = sharedValue1.set(hex2rgb2hsvResult.s / 100);
       const result2 = sharedValue2.set(hex2rgb2hsvResult.v / 100);
     }
+    const obj = primaryColor(onSelectColor[8]);
   }, items2);
   const items3 = [sharedValue, sharedValue1, callback2, sharedValue2];
   callback4 = obj.useCallback((colorChannel) => {
-    let value = sharedValue.get();
-    value = sharedValue1.get();
+    sharedValue.get();
+    const value = sharedValue1.get();
     const value1 = sharedValue2.get();
     let obj = primaryColor(onSelectColor[7]);
     const hsvToRgbWorkletResult = obj.hsvToRgbWorklet({ h: value, s: value, v: value1 });
@@ -231,6 +222,7 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
         callback2(first3, combined);
         callback3(combined);
       }
+      obj = primaryColor(onSelectColor[8]);
     }
     combined = first4.toUpperCase();
   }, items9);
@@ -316,15 +308,14 @@ export default function GuildSettingsServerTagColorPickerActionSheet(secondaryCo
       onSelectColor(formatted, tmp7);
       secondaryColor(onSelectColor[14]).hideActionSheet();
       const obj2 = secondaryColor(onSelectColor[14]);
-      const tmp4 = onSelectColor;
     }
+    obj = primaryColor(onSelectColor[8]);
   }, items12);
   if ("" !== tag) {
     str2 = tag;
   }
   const tmp15Result3 = primaryColor(onSelectColor[13]);
   const tmp15Result4 = primaryColor(onSelectColor[8]);
-  obj = { startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
   obj = { title: null };
   let intl = tmp15(tmp2[12]).intl;
   obj[0] = intl.string(primaryColor(onSelectColor[12]).t.T1IxYH);

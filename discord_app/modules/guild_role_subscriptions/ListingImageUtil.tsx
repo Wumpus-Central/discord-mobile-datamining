@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/ListingImageUtil.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import _httpGetWithCountryCodeQuery from "../../utils/StoreUtils.tsx";
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/ListingImageUtil.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/ListingImageUtil.tsx");
 
 export const getSource = function getSource(image_asset) {
   if (null == image_asset.image_asset) {

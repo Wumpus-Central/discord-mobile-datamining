@@ -6,20 +6,19 @@ import getAvatarURLDefault from "../../../../utils/AvatarUtils.tsx";
 import explicitContentFromProto from "../../UserSettings.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
 import getFallbackDoubleTapDisambiguatedEmoji from "../../../double_tap_to_react/native/DoubleTapToReactUtils.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { EmojiIntention } from "../../../emojis/EmojiConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { EMOJI_PICKER_ACTION_SHEET_KEY } from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 
-require = arg1;
+require = fn;
 function SettingsEmoji(emoji) {
   emoji = emoji.emoji;
   if (null != emoji.id) {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, size: 24, animated: false };
+    let obj = { id: null, size: 24, animated: false };
     obj[0] = emoji.id;
     let url = obj.getEmojiURL(obj);
   } else {
@@ -28,17 +27,15 @@ function SettingsEmoji(emoji) {
   obj = { fastImageStyle: { height: 24, width: 24 }, src: url, name: null, adjustsFontSizeToFit: true, textEmojiStyle: null };
   let str = "";
   const tmp = callback2();
-  const tmp4 = jsx;
   if (null == emoji.id) {
     str = emoji.surrogates;
   }
   obj[2] = str;
   obj[4] = tmp.textEmoji;
-  return tmp4(EmojiDefault, obj);
+  return jsx(EmojiDefault, { fastImageStyle: { height: 24, width: 24 }, src: url, name: null, adjustsFontSizeToFit: true, textEmojiStyle: null });
 }
 noopAll;
-createCacheKey = { textEmoji: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const pressable = createToggle.createPressable({
@@ -69,8 +66,8 @@ const pressable = createToggle.createPressable({
     }
   },
   onPress: function onPressSetting() {
-    let obj = _EMOJI_PICKER_ACTION_SHEET_KEY;
-    obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+    EMOJI_PICKER_ACTION_SHEET_KEY;
+    let obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;
       c3 = 0;
@@ -208,8 +205,8 @@ let obj1 = {
     }
   },
   onPress: function onPressSetting() {
-    let obj = _EMOJI_PICKER_ACTION_SHEET_KEY;
-    obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+    EMOJI_PICKER_ACTION_SHEET_KEY;
+    let obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
       closure_0 = arg0;
       c3 = 0;
@@ -319,6 +316,6 @@ let obj1 = {
     return !flag;
   }
 };
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DoubleTapEmojiSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DoubleTapEmojiSetting.tsx");
 
 export default pressable;

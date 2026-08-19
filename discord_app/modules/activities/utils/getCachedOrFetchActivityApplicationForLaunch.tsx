@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../applications/ApplicationStore.tsx";
-import closure_5 from "../../../records/ApplicationRecord.tsx";
-import closure_6 from "../../../stores/ChannelStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import addApplication from "../../applications/ApplicationStore.tsx";
+import createExecutable from "../../../records/ApplicationRecord.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
 
-const require = arg1;
+const require = fn;
 function _getCachedOrFetchActivityApplicationForLaunch() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -91,7 +91,7 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
               if (application != null) {
                 application1 = application.application;
               }
-              if (tmp39(application1)) {
+              if (callback(application1)) {
                 let application2;
                 if (application != null) {
                   application2 = application.application;
@@ -108,7 +108,6 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
                 obj7[0] = obj2.fetchApplication(callback);
                 return obj7;
               }
-              tmp39 = closure_8;
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -144,7 +143,7 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
 function isUsableApplicationRecord(embeddedActivityConfig) {
   return null != embeddedActivityConfig && null != embeddedActivityConfig.embeddedActivityConfig;
 }
-const result = require("set").fileFinishedImporting("modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx");
 
 export default function getCachedOrFetchActivityApplicationForLaunch() {
   const self = this;

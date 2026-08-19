@@ -6,9 +6,9 @@ import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
 import inlineStylesDefault from "../../../../../_runtime/06571_inlineStyles.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupWordmark.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupWordmark.tsx");
 
 export default function PremiumGroupWordmark(arg0) {
   ({ width, height, alwaysWhite } = arg0);

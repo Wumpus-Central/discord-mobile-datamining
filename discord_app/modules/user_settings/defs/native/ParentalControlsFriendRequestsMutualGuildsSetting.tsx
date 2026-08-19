@@ -2,13 +2,13 @@
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import hasFlagAll from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import result2 from "../../family_center/ParentalControlledUserSettings.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../parent_tools/FamilyCenterStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import freshTeenActivityWithMap from "../../../parent_tools/FamilyCenterStore.tsx";
 import { FriendSourceFlags } from "../../../../Constants.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.mozb8f);
@@ -19,7 +19,7 @@ createToggle = {
     const ParentalControlledFriendSourceFlags = controlledSetting(14182).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
-    return React.useMemo(() => controlledSetting(closure_1_2[6]).computeFlags(controlledSetting), items).mutualGuilds;
+    return React.useMemo(() => controlledSetting(dependencyMap[6]).computeFlags(controlledSetting), items).mutualGuilds;
   },
   onValueChange: function onFriendRequestsMutualGuildsSettingValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
@@ -39,6 +39,6 @@ createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsFriendRequestsMutualGuildsSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsFriendRequestsMutualGuildsSetting.tsx");
 
 export default createToggle;

@@ -1,11 +1,10 @@
 // discord_app/modules/device/useThermalState.tsx
-import set from "../../../_runtime/00002_set.js";
-import set2 from "../../utils/PlatformUtils.tsx";
+import obj132 from "../../../_runtime/00002_obj132.js";
+import obj1322 from "../../utils/PlatformUtils.tsx";
 import NativeModulesDefault from "ThermalUtils.native.tsx";
 
-let obj = { UNHANDLED: -1, [-1]: "UNHANDLED", NOMINAL: 0, [0]: "NOMINAL", FAIR: 1, [1]: "FAIR", SERIOUS: 2, [2]: "SERIOUS", CRITICAL: 3, [3]: "CRITICAL" };
-obj = { NONE: 0, [0]: "NONE", LIGHT: 1, [1]: "LIGHT", MODERATE: 2, [2]: "MODERATE", SEVERE: 3, [3]: "SEVERE", CRITICAL: 4, [4]: "CRITICAL", EMERGENCY: 5, [5]: "EMERGENCY", SHUTDOWN: 6, [6]: "SHUTDOWN" };
-const result = set.fileFinishedImporting("modules/device/useThermalState.tsx");
+let obj = { NONE: 0, [0]: "NONE", LIGHT: 1, [1]: "LIGHT", MODERATE: 2, [2]: "MODERATE", SEVERE: 3, [3]: "SEVERE", CRITICAL: 4, [4]: "CRITICAL", EMERGENCY: 5, [5]: "EMERGENCY", SHUTDOWN: 6, [6]: "SHUTDOWN" };
+const result = obj132.fileFinishedImporting("modules/device/useThermalState.tsx");
 
 export default function useThermalState() {
   obj = NativeModulesDefault;
@@ -40,10 +39,9 @@ export default function useThermalState() {
       } else {
         UNHANDLED = obj.UNHANDLED;
       }
-      tmp11Result = tmp11(500);
+      tmp11Result = obj1322;
     }
-    obj3 = set2;
-    tmp11 = require;
+    obj3 = obj1322;
   }
   return UNHANDLED;
 };
@@ -82,10 +80,9 @@ export const getThermalState = function getThermalState() {
       } else {
         UNHANDLED = obj.UNHANDLED;
       }
-      tmp11Result = tmp11(500);
+      tmp11Result = obj1322;
     }
-    obj3 = set2;
-    tmp11 = require;
+    obj3 = obj1322;
   }
   return UNHANDLED;
 };

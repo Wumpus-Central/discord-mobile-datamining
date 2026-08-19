@@ -1,14 +1,14 @@
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _promptForRegisterCredentialDefault from "../NativeCeremonies.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { WebAuthnScreens } from "../../WebAuthnConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function AndroidPasskeyRadioGroup(onChange) {
   onChange = onChange.onChange;
   ({ authenticatorSelection, registering } = onChange);
@@ -38,14 +38,12 @@ function AndroidPasskeyRadioGroup(onChange) {
   return callback(onChange(1297).RadioGroup, obj1);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { flexContainer: { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: 16, marginRight: 16, marginTop: 16 }, centerFlex: { display: "flex", alignItems: "center" }, margin: { marginTop: 16, textAlign: "center" }, radioItem: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md };
 createCacheKey[3] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { PASSKEY_CREDENTIAL_MANAGER: 0, [0]: "PASSKEY_CREDENTIAL_MANAGER", PASSKEY_DEVICE: 1, [1]: "PASSKEY_DEVICE", OTHER_AND_ANDROID_NONDISCOVERABLE: 2, [2]: "OTHER_AND_ANDROID_NONDISCOVERABLE" };
-let obj2 = { [PASSKEY_CREDENTIAL_MANAGER]: _promptForRegisterCredentialDefault.registerPasskey, [PASSKEY_DEVICE]: _promptForRegisterCredentialDefault.registerAndroidDevicePasskey, [OTHER_AND_ANDROID_NONDISCOVERABLE]: _promptForRegisterCredentialDefault.registerSecurityKey };
 ({ PASSKEY_CREDENTIAL_MANAGER, PASSKEY_DEVICE, OTHER_AND_ANDROID_NONDISCOVERABLE } = obj1);
-const result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx");
+const result = require("obj132").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx");
 
 export default function WebAuthnRegisterStep() {
   let obj = navigation(1500);
@@ -66,10 +64,9 @@ export default function WebAuthnRegisterStep() {
     navigation.push(constants.NAME, arg0);
   }, items);
   const items1 = [first];
-  closure_5 = obj1.useMemo(() => closure_1_11[first], items1);
+  closure_5 = obj1.useMemo(() => obj2[first], items1);
   const items2 = [callback, tmp11, tmp8];
   closure_6 = obj1.useMemo(() => ({ onRegisterSuccess: callback, setError: closure_2, setRegistering: closure_1 }), items2);
-  obj = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj = { style: tmp4.centerFlex, children: null };
   const items3 = [callback(navigation(14096).KeyImage, {}), , ];
   obj1 = { style: tmp4.margin, variant: "text-md/normal", children: null };
@@ -91,7 +88,7 @@ export default function WebAuthnRegisterStep() {
   }
   items3[2] = tmp18Result;
   obj[1] = items3;
-  const items4 = [closure_8(closure_5, obj), , ];
+  const items4 = [callback(closure_5, obj), , ];
   let shouldDisplayAndroidFidoSelector = _promptForRegisterCredentialDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     const obj3 = { authenticatorSelection: null, registering: null, onChange: null };
@@ -109,9 +106,8 @@ export default function WebAuthnRegisterStep() {
   } else {
     string2Result = string2(t2.oibaQa);
   }
-  const tmp17 = closure_5;
   const tmp9 = first(callback.useState(""), 2);
   items4[2] = callback(navigation(6687).ButtonGroup, { children: callback(navigation(4745).Button, obj5) });
   obj[4] = items4;
-  return closure_8(navigation(6803).SafeAreaPaddingView, obj);
+  return callback(navigation(6803).SafeAreaPaddingView, obj);
 };

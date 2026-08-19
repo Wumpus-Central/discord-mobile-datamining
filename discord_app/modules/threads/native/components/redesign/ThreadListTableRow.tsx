@@ -1,19 +1,18 @@
 // discord_app/modules/threads/native/components/redesign/ThreadListTableRow.tsx
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 function ThreadListTableRow(thread) {
   thread = thread.thread;
   const onPress = thread.onPress;
   ({ start, end } = thread);
   const items = [onPress, thread.id];
   const memo = importAllResult.useMemo(() => null != onPress ? (() => callback(id.id)) : undefined, items);
-  let obj = { label: thread.name, subLabel: null, onPress: null, start: null, end: null, arrow: true };
-  obj = { style: callback().subLabel, children: jsx(thread(onPress[6]).ThreadSubtext, { thread }) };
+  const obj = { style: callback().subLabel, children: jsx(thread(onPress[6]).ThreadSubtext, { thread }) };
   obj[1] = <View style={callback().subLabel}>{jsx(thread(onPress[6]).ThreadSubtext, { thread })}</View>;
   obj[2] = memo;
   obj[3] = start;
@@ -38,6 +37,6 @@ const memoResult = importAllResult.memo((threadId) => {
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting("modules/threads/native/components/redesign/ThreadListTableRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/threads/native/components/redesign/ThreadListTableRow.tsx");
 
 export default memoResult;

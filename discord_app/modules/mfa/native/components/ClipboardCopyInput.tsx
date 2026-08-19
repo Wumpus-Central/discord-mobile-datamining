@@ -1,15 +1,15 @@
 // discord_app/modules/mfa/native/components/ClipboardCopyInput.tsx
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/native/AppStateStore.tsx";
+import getState from "../../../../stores/native/AppStateStore.tsx";
 import { AppStates } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_9 = createCacheKey.createStyles({ inputContainer: { flexDirection: "column", alignSelf: "stretch" } });
-const result = require("set").fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");
+const result = require("obj132").fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");
 
 export default function ClipboardCopyInput(arg0) {
   ({ label, onChangeCode, autoFocus } = arg0);
@@ -17,12 +17,9 @@ export default function ClipboardCopyInput(arg0) {
   if (autoFocus === undefined) {
     autoFocus = true;
   }
-  let _require;
-  let ref;
   let stateFromStores;
-  closure_3 = undefined;
-  _require = React.useRef(null);
-  ref = React.useRef(null);
+  const _require = React.useRef(null);
+  const ref = React.useRef(null);
   let obj = _require(stateFromStores[7]);
   const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => state.getState());
@@ -39,10 +36,10 @@ export default function ClipboardCopyInput(arg0) {
           HermesBuiltin.throwTypeError();
         } else if (tmp3 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw str;
           } else if (arg0 === 2) {
             let obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = str;
             return obj;
           } else {
             return { value: "HermesInternal", done: "HermesInternal" };
@@ -53,11 +50,11 @@ export default function ClipboardCopyInput(arg0) {
             if (0 === c2) {
               if (arg0 === 1) {
                 v0 = 3;
-                throw arg1;
+                throw str;
               } else if (arg0 === 2) {
                 v0 = 3;
                 obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj[0] = str;
                 return obj;
               } else {
                 closure_1 = tmp4;
@@ -73,11 +70,11 @@ export default function ClipboardCopyInput(arg0) {
             } else if (1 === tmp4) {
               if (arg0 === 1) {
                 v0 = 3;
-                throw arg1;
+                throw str;
               } else if (arg0 === 2) {
                 v0 = 3;
                 const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
+                obj2[0] = str;
                 return obj2;
               } else {
                 promise = new Promise((arg0) => callback(table[9]).runAfterInteractions(arg0));
@@ -90,11 +87,11 @@ export default function ClipboardCopyInput(arg0) {
             } else if (2 === tmp4) {
               if (arg0 === 1) {
                 v0 = 3;
-                throw arg1;
+                throw str;
               } else if (arg0 === 2) {
                 v0 = 3;
                 const obj4 = { value: null, done: true };
-                obj4[0] = arg1;
+                obj4[0] = str;
                 return obj4;
               } else {
                 obj1 = callback(closure_2_2[10]);
@@ -106,14 +103,14 @@ export default function ClipboardCopyInput(arg0) {
               }
             } else if (arg0 === 1) {
               v0 = 3;
-              throw arg1;
+              throw str;
             } else if (arg0 === 2) {
               v0 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = str;
               return obj;
             } else {
-              callback = arg1.trim();
+              callback = str.trim();
               if (callback !== closure_1_0.current) {
                 closure_1_0.current = closure_1_0;
                 if (v0(closure_1_0)) {
@@ -141,7 +138,7 @@ export default function ClipboardCopyInput(arg0) {
       }
       return applyArgumentsResult;
     }
-    if (stateFromStores === closure_1_7.ACTIVE) {
+    if (stateFromStores === AppStates.ACTIVE) {
       (function run() {
         const self = this;
         const apply = _run.apply;

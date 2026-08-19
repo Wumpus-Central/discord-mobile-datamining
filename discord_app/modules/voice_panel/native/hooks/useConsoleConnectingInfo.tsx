@@ -3,12 +3,12 @@ import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/us
 import getConsoleIconDefault from "../../../game_console/native/getConsoleIcon.tsx";
 import useShouldDisplayCancelConsoleTransferDefault from "../../../game_console/native/useShouldDisplayCancelConsoleTransfer.tsx";
 import getConsoleColorDefault from "../../../game_console/native/getConsoleColor.tsx";
-import closure_3 from "../../../game_console/GameConsoleStore.tsx";
-import closure_4 from "../../../../stores/SessionsStore.tsx";
+import set from "../../../game_console/GameConsoleStore.tsx";
+import handleUpdate from "../../../../stores/SessionsStore.tsx";
 import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx");
 
 export default function useConsoleConnectingInfo(arg0) {
   const tmp3 = useVoiceStateForRemoteSessionDefault();
@@ -17,11 +17,11 @@ export default function useConsoleConnectingInfo(arg0) {
   if (tmp3 != null) {
     channelId = tmp3.channelId;
   }
-  let obj = _defaultAreStatesEqual;
+  let obj = defaultAreStatesEqual;
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const items1 = [closure_4];
-  const stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => {
+  const stateFromStores1 = require("../../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items1, () => {
     let str;
     if (sessionId != null) {
       str = sessionId.sessionId;
@@ -46,7 +46,7 @@ export default function useConsoleConnectingInfo(arg0) {
     str = "";
   }
   let channelId1;
-  const obj2 = _defaultAreStatesEqual;
+  const obj2 = defaultAreStatesEqual;
   const tmp5 = _require;
   if (stateFromStores != null) {
     channelId1 = stateFromStores.channelId;

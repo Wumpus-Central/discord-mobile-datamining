@@ -1,5 +1,5 @@
 // discord_app/modules/message_request/MessageRequestModalActionCreators.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
@@ -11,12 +11,11 @@ import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MessageRequestConstants.t
 
 let closure_3 = MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL;
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/message_request/MessageRequestModalActionCreators.native.tsx");
+const result = obj132.fileFinishedImporting("modules/message_request/MessageRequestModalActionCreators.native.tsx");
 
 export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRequestConfirmModal(arg0) {
   ({ channelId, onConfirm, onCancel } = arg0);
-  let obj = expandEventPropertiesDefault;
-  obj = { type: closure_3, channel_id: channelId };
+  let obj = { type: closure_3, channel_id: channelId };
   obj.track(AnalyticEvents.OPEN_MODAL, obj);
   obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null };
   const intl = getSystemLocale.intl;

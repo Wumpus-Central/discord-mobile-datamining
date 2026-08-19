@@ -1,8 +1,8 @@
 // discord_app/utils/StringUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import cssValueToNumber from "../../discord_common/js/shared/utils/StringUtils.tsx";
 
-const result = set.fileFinishedImporting("utils/StringUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/StringUtils.tsx");
 
 export const isNullOrEmpty = function isNullOrEmpty(application_id) {
   let tmp = null == application_id;

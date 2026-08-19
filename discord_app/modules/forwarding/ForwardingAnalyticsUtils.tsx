@@ -1,16 +1,15 @@
 // discord_app/modules/forwarding/ForwardingAnalyticsUtils.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import collectGuildAnalyticsMetadata from "../app_analytics/AppAnalyticsUtils.tsx";
-import closure_3 from "../../../_runtime/00019_noop.js";
-import closure_4 from "../../stores/ChannelStore.tsx";
+import noop from "../../../_runtime/00019_noop.js";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 import { AnalyticEvents } from "../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");
 
 export const trackForwardStart = function trackForwardStart(channel_id, id, source) {
-  let obj = expandEventPropertiesDefault;
-  obj = { channel_id, message_id: id, source };
+  const obj = { channel_id, message_id: id, source };
   obj.track(AnalyticEvents.FORWARD_MESSAGE_STARTED, obj);
 };
 export const trackForwardCancel = function trackForwardCancel(arg0) {
@@ -26,42 +25,39 @@ export const trackForwardSent = function trackForwardSent(arg0) {
     channel = channel.getChannel(channelId);
     obj = { action: "forward", original_message_id: null };
     obj[1] = messageId;
-    const tmp13 = require;
     const tmpResult = expandEventPropertiesDefault;
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
     const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guild_id));
-    const obj5 = collectGuildAnalyticsMetadata;
-    const merged1 = Object.assign(tmp13(5042).collectChannelAnalyticsMetadata(channel));
+    const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel));
     tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj);
-    const tmp13Result = tmp13(5042);
+    const tmp13Result = collectGuildAnalyticsMetadata;
   }
 };
 export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {
-  let obj = expandEventPropertiesDefault;
-  obj = { channel_id, message_id: id };
+  const obj = { channel_id, message_id: id };
   obj.track(AnalyticEvents.FORWARD_COPY_LINK, obj);
 };
 export const useTrackForwardAddRecipientOnce = function useTrackForwardAddRecipientOnce() {
   return React.useMemo(() => callback(table[5]).once((channel_id, message_id, has_query) => {
-    let obj = callback(table[3]);
-    obj = { channel_id, message_id, has_query };
+    callback(table[3]);
+    const obj = { channel_id, message_id, has_query };
     obj.track(constants.FORWARD_ADD_RECIPIENT, obj);
   }), []);
 };
 export const useTrackForwardEditSearchOnce = function useTrackForwardEditSearchOnce() {
   return React.useMemo(() => callback(table[5]).once((channel_id, message_id) => {
-    let obj = callback(table[3]);
-    obj = { channel_id, message_id };
+    callback(table[3]);
+    const obj = { channel_id, message_id };
     obj.track(constants.FORWARD_EDIT_SEARCH, obj);
   }), []);
 };
 export const useTrackForwardEditContextMessageOnce = function useTrackForwardEditContextMessageOnce() {
   return React.useMemo(() => callback(table[5]).once((channel_id, message_id) => {
-    let obj = callback(table[3]);
-    obj = { channel_id, message_id };
+    callback(table[3]);
+    const obj = { channel_id, message_id };
     obj.track(constants.FORWARD_EDIT_CONTEXT_MESSAGE, obj);
   }), []);
 };

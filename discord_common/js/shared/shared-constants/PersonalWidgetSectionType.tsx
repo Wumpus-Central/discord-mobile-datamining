@@ -1,6 +1,6 @@
 // discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx");
 
 export const PersonalWidgetSectionType = { COVER: "cover", FIELDS: "fields" };

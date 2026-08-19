@@ -10,21 +10,20 @@ import getNicknameDefault from "../../../../../utils/NicknameUtils.tsx";
 import preloadDefault from "../../../../../components_native/common/FastImage.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, avatar: null, content: null, contextRow: null };
-createCacheKey = { flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 40, height: 40, borderRadius: 20 };
 createCacheKey[2] = { marginStart: 16 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateRolePreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateRolePreview.tsx");
 
 export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRolePreview(content) {
   content = content.content;
@@ -39,8 +38,7 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj1 = getNicknameDefault;
-  obj = { style: items1, children: null };
-  items1 = [tmp3.container, style];
+  const items1 = [tmp3.container, style];
   const name = obj1.useName(guildId, null, stateFromStores);
   obj = { style: tmp3.avatar, source: { uri: roleImage } };
   const items2 = [callback(preloadDefault, obj), ];

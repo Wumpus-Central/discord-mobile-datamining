@@ -1,14 +1,13 @@
 // discord_app/modules/threads/LazyLoadedThreadManager.tsx
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../gateway/GatewayConnectionStore.tsx";
+import _handleConnectionOpen from "../gateway/GatewayConnectionStore.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import closure_7 from "../../stores/SelectedChannelStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
 import ME from "../../Constants.tsx";
 import { isStaticChannelRoute } from "../channel/ChannelConstants.tsx";
-import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../channel/FakePlaceholderPrivateChannel.tsx";
 
-const require = arg1;
+const require = fn;
 function initialize() {
   if (!c12) {
     c12 = true;
@@ -18,19 +17,19 @@ function initialize() {
       if (tmp2) {
         callback(channelId);
       }
+      tmp2 = null != channelId && null == channel.getChannel(channelId);
     });
-    const obj = dispatcherDefault;
   }
 }
-function dispatchLoadedThread(arg0, arg1) {
-  const tmp = callback(arg0);
+function dispatchLoadedThread(nextResult) {
+  const tmp = callback(nextResult);
   dispatcherDefault.dispatch({ type: "THREAD_CREATE", channel: tmp, messageId: undefined });
 }
 function loadThread(channelId) {
   const _require = channelId;
   if (null == channelId) {
     return Promise.resolve();
-  } else if (channelId === _FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+  } else if (channelId === require("../channel/FakePlaceholderPrivateChannel.tsx").FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
     return Promise.resolve();
   } else if (isStaticChannelRoute(channelId)) {
     return Promise.resolve();
@@ -46,6 +45,7 @@ function loadThread(channelId) {
         if (tmp2) {
           callback(channelId);
         }
+        tmp2 = null != channelId && null == channel.getChannel(channelId);
       });
     }
     if (closure_3.isConnected()) {
@@ -71,8 +71,8 @@ function loadThread(channelId) {
         obj[1] = tmp13Result.rejectWithMigratedError();
         const value = HTTP.get(obj);
         const guildIdResult = RouteParam.guildId();
-        const catchPromise = value.then((body) => {
-          body = body.body;
+        const catchPromise = value.then((result) => {
+          const body = result.body;
           closure_1_11[closure_0] = { type: "LOADED" };
           if (closure_1_5.has(body.type)) {
             let messageId;
@@ -82,17 +82,17 @@ function loadThread(channelId) {
                 messageId = params.messageId;
               }
             }
-            let obj = lib(closure_1_2[6]);
-            obj = { type: "THREAD_CREATE", channel: null, messageId: null };
+            lib(dependencyMap[6]);
+            const obj = { type: "THREAD_CREATE", channel: null, messageId: null };
             obj[1] = closure_1_4(body);
             obj[2] = messageId;
             obj.dispatch(obj);
             const tmp4 = closure_1_4(body);
           }
-        }).catch(() => {
+        }).catch((error) => {
           closure_1_11[closure_0] = { type: "NOT_FOUND" };
-          let obj = lib(closure_1_2[6]);
-          obj = { id: closure_0, guild_id: null, parent_id: "Array" };
+          lib(dependencyMap[6]);
+          const obj = { id: closure_0, guild_id: null, parent_id: "Array" };
           let guildId;
           if (lib != null) {
             const params = lib.params;
@@ -117,7 +117,7 @@ function loadThread(channelId) {
 ({ Endpoints: closure_8, Routes: c9 } = ME);
 let closure_11 = {};
 let c12 = false;
-const result = require("set").fileFinishedImporting("modules/threads/LazyLoadedThreadManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/threads/LazyLoadedThreadManager.tsx");
 
 export default {
   getLoadState(key10013) {
@@ -137,28 +137,15 @@ export default {
       let nextResult = iter.next();
       while (iter !== undefined) {
         let tmp9 = nextResult;
-        let tmp10 = items1;
-        let tmp11 = dependencyMap;
         if (nextResult !== items1(5389).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
-          let tmp12 = isStaticChannelRoute;
-          let tmp13 = nextResult;
           if (!isStaticChannelRoute(tmp9)) {
-            let tmp14 = store;
-            let tmp15 = nextResult;
             if (null == store.getChannel(tmp9)) {
-              let tmp16 = dependencyMap;
-              let tmp17 = nextResult;
               let tmp18 = dependencyMap[tmp9];
               let tmp19 = tmp18;
               if (null == tmp18) {
-                let tmp23 = nextResult;
                 arr = items1.push(tmp9);
-              } else {
-                let tmp20 = tmp18;
-                if ("LOADING" === tmp19.type) {
-                  let tmp21 = tmp18;
-                  arr = items.push(tmp19.promise);
-                }
+              } else if ("LOADING" === tmp19.type) {
+                arr = items.push(tmp19.promise);
               }
             }
           }
@@ -166,7 +153,7 @@ export default {
         continue;
       }
       if (0 === items1.length) {
-        return Promise.all(items).then(() => {
+        return Promise.all(items).then((result) => {
 
         });
       } else {
@@ -179,37 +166,30 @@ export default {
         obj[2] = items1(530).rejectWithMigratedError();
         const obj4 = items1(530);
         const postResult = HTTP.post(obj);
-        const catchPromise = HTTP.post(obj).then((arg0) => {
+        const catchPromise = HTTP.post(obj).then((result) => {
           const set = new Set();
-          const iter = arg0.body.items[Symbol.iterator]();
+          const iter = result.body.items[Symbol.iterator]();
           const nextResult = iter.next();
           while (iter !== undefined) {
             let id = nextResult.id;
             let addResult = set.add(id);
-            let tmp3 = closure_1_11;
             closure_1_11[id] = { type: "LOADED" };
-            let tmp4 = closure_1_14;
-            let tmp5 = closure_1_14(nextResult);
+            let tmp5 = dispatchLoadedThread(nextResult);
             continue;
           }
           for (const item10029 of items1) {
-            let tmp6 = item10029;
             if (!set.has(item10029)) {
-              let tmp7 = closure_1_11;
-              let tmp8 = item10029;
-              closure_1_11[tmp6] = { type: "NOT_FOUND" };
+              closure_1_11[item10029] = { type: "NOT_FOUND" };
             }
             continue;
           }
-        }).catch(() => {
+        }).catch((error) => {
           for (const item10005 of items1) {
-            let tmp3 = closure_1_11;
             delete tmp[tmp2];
             continue;
           }
         });
         for (const item10052 of items1) {
-          let tmp26 = dependencyMap;
           obj = { type: "LOADING", promise: null };
           obj[1] = catchPromise;
           dependencyMap[item10052] = obj;
@@ -219,7 +199,7 @@ export default {
         if (0 !== items.length) {
           const items2 = [];
           items2[HermesBuiltin.arraySpread(items, 0)] = catchPromise;
-          nextPromise1 = Promise.all(items2).then(() => {
+          nextPromise1 = Promise.all(items2).then((result) => {
 
           });
           const allPromises1 = Promise.all(items2);

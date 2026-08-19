@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/utils/getCurrentUserProfile.tsx
-import closure_0 from "../../../stores/UserStore.tsx";
-import closure_1 from "../UserProfileStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
+import createUserWidgetFromServer from "../UserProfileStore.tsx";
 
-const result = require("set").fileFinishedImporting("modules/user_profile/utils/getCurrentUserProfile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/utils/getCurrentUserProfile.tsx");
 
 export default function getCurrentUserProfile(guildId) {
   let id = currentUser.getCurrentUser();

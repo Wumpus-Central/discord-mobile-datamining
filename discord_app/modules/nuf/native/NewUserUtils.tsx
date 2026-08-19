@@ -1,18 +1,21 @@
 // discord_app/modules/nuf/native/NewUserUtils.tsx
 import dispatcherDefault from "../../../Dispatcher.tsx";
+import transitionTo from "../../routing/router_utils.tsx";
+import coerceMainRoute from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import trackNUFStep from "NewUserAnalyticsUtils.tsx";
+import setNewUser from "../NUFActionCreators.tsx";
 import NEW_USER_MODAL_KEY from "components/NewUserModalTypes.tsx";
 import importDefaultResult from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../parent_tools/ParentalConsentStore.tsx";
-import closure_6 from "../../../stores/ConnectedAccountsStore.tsx";
-import closure_7 from "../../../stores/UserStore.tsx";
+import initialize from "../../parent_tools/ParentalConsentStore.tsx";
+import set from "../../../stores/ConnectedAccountsStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import ME from "../../../Constants.tsx";
 import { ContactPermissions } from "../../contact_sync/native/ContactSyncConstants.tsx";
 import { NotificationAuthorizationStatus as closure_11 } from "../../native_permissions/NativePermissionConstants.tsx";
 
-require = arg1;
+require = fn;
 function _shouldSkipContactSyncStep() {
   const self = this;
   const tmp = importDefaultResult(function*() {
@@ -85,17 +88,16 @@ function _shouldSkipContactSyncStep() {
 }
 function lastStepComplete(STEP_GUILD_TEMPLATE) {
   trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
-  const obj = trackNUFStep;
   if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
-    _modDef5260.popWithKey(tmp(16660).NEW_USER_MODAL_KEY);
-    const obj3 = _modDef5260;
+    _modDef5260.popWithKey(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY);
   }
-  let tmpResult = tmp(1222);
+  let tmpResult = transitionTo;
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(11925);
+  tmpResult = setNewUser;
   const result = tmpResult.setNewUserFlowCompleted();
+  obj2 = coerceMainRoute;
 }
-function getNextOnboardingStep(flag, first1, first) {
+function getNextOnboardingStep(flag, first1, arg2) {
   const self = this;
   const apply = _getNextOnboardingStep.apply;
   if (typeof apply === "unknown") {
@@ -272,18 +274,7 @@ function _getNextOnboardingStep() {
 }
 let c3 = importDefaultResult;
 ({ PlatformTypes: closure_8, Routes: c9 } = ME);
-let obj = {
-  key: "choose-avatar",
-  shouldShowStep() {
-    currentUser = currentUser.getCurrentUser();
-    let avatar;
-    if (currentUser != null) {
-      avatar = currentUser.avatar;
-    }
-    return null == avatar;
-  }
-};
-obj = { key: "enable-notification", shouldShowStep: null };
+let obj = { key: "enable-notification", shouldShowStep: null };
 let closure_13 = importDefaultResult(function*() {
   if (table === 2) {
     table = 3;
@@ -312,9 +303,9 @@ let closure_13 = importDefaultResult(function*() {
           return obj;
         } else {
           closure_0 = tmp4;
-          obj1 = closure_1_0(table[9]);
+          obj1 = require(table[9]);
           if (obj1.isIOS()) {
-            const NativePermissionManager = closure_1_4.NativePermissionManager;
+            const NativePermissionManager = NativeModules.NativePermissionManager;
             c1 = 1;
             table = 1;
             obj1 = { value: null, done: false };
@@ -455,7 +446,7 @@ let obj1 = {
     dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
-let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/nuf/native/NewUserUtils.tsx");
 
 export const getKeyForOnboardingStep = function getKeyForOnboardingStep(onboardingStepIndex) {
   let key;
@@ -479,7 +470,7 @@ export const continueToNextStep = function continueToNextStep(onboardingStepInde
       const routes = state.routes;
       if (2 === routes.length) {
         items = [routes[1]];
-        const CommonActions = state(closure_1_2[12]).CommonActions;
+        const CommonActions = state(dependencyMap[12]).CommonActions;
         obj = {};
         const merged = Object.assign(state);
         obj.routes = items;

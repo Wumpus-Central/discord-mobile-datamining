@@ -53,7 +53,7 @@ prototype["getGlobalCatalogState"] = function getGlobalCatalogState() {
 prototype["getGlobalCatalogGame"] = function getGlobalCatalogGame(arg0) {
   closure_0 = arg0;
   const values = Object.values(closure_4.catalog);
-  return values.find((gameId) => gameId.gameId === closure_0);
+  return values.find((item, index) => item.gameId === closure_0);
 };
 prototype["getLowestGameCostForGuild"] = function getLowestGameCostForGuild(closure_0) {
   if (null == closure_0) {
@@ -71,7 +71,7 @@ prototype["getLowestGameCostForGuild"] = function getLowestGameCostForGuild(clos
     if (0 !== values.length) {
       const _Math = Math;
       const items = [];
-      HermesBuiltin.arraySpread(values.map((baseCost) => baseCost.baseCost), 0);
+      HermesBuiltin.arraySpread(values.map((item, index) => item.baseCost), 0);
       const _Math2 = Math;
       applyResult = HermesBuiltin.apply(items, Math);
     }
@@ -237,12 +237,12 @@ const gameServerStore = new GameServerStore(dispatcherDefault, {
     ({ guildId, unlockedGameServers } = arg0);
     const values = Object.values(unlockedGameServers);
     let obj = {};
-    const reduced = values.reduce((arg0, arg1) => {
-      let num = callback(table[0])(arg1);
+    const reduced = values.reduce((acc, item, index) => {
+      let num = callback(table[0])(item);
       if (num == null) {
         num = 0;
       }
-      return arg0 + num;
+      return acc + num;
     }, 0);
     const merged = Object.assign(obj);
     if (null == obj[guildId]) {
@@ -293,8 +293,8 @@ const gameServerStore = new GameServerStore(dispatcherDefault, {
       obj[guildId] = obj;
     }
     closure_0 = tmp2;
-    const found = entitlements.filter((sku) => {
-      sku = sku.sku;
+    const found = entitlements.filter((item, index) => {
+      const sku = item.sku;
       let game_server;
       if (sku != null) {
         const tenant_metadata = sku.tenant_metadata;
@@ -307,17 +307,17 @@ const gameServerStore = new GameServerStore(dispatcherDefault, {
       }
       return null != game_server;
     });
-    const item = found.forEach((id) => {
-      entitlements.entitlements[id.id] = id;
+    const item = found.forEach((item, index) => {
+      entitlements.entitlements[item.id] = item;
     });
     const values = Object.values(tmp2.entitlements);
     obj = {};
-    const reduced = values.reduce((arg0, arg1) => {
-      let num = callback(table[0])(arg1);
+    const reduced = values.reduce((acc, item, index) => {
+      let num = callback(table[0])(item);
       if (num == null) {
         num = 0;
       }
-      return arg0 + num;
+      return acc + num;
     }, 0);
     const merged = Object.assign(obj);
     obj = {};
@@ -337,17 +337,17 @@ const gameServerStore = new GameServerStore(dispatcherDefault, {
       obj[guildId] = obj;
     }
     closure_0 = tmp2;
-    const item = entitlements.forEach((arg0) => {
+    const item = entitlements.forEach((item, index) => {
       delete tmp2[tmp];
     });
     const values = Object.values(tmp2.entitlements);
     obj = {};
-    const reduced = values.reduce((arg0, arg1) => {
-      let num = callback(table[0])(arg1);
+    const reduced = values.reduce((acc, item, index) => {
+      let num = callback(table[0])(item);
       if (num == null) {
         num = 0;
       }
-      return arg0 + num;
+      return acc + num;
     }, 0);
     const merged = Object.assign(obj);
     obj = {};
@@ -356,6 +356,6 @@ const gameServerStore = new GameServerStore(dispatcherDefault, {
     obj[guildId] = obj;
   }
 });
-const result = require("set").fileFinishedImporting("modules/game_server/GameServerStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_server/GameServerStore.tsx");
 
 export default gameServerStore;

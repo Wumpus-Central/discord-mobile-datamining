@@ -1,9 +1,9 @@
 // discord_app/modules/instant_invite/canViewInviteModal.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 
 const Permissions = ME.Permissions;
-const result = set.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
+const result = obj132.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
 
 export const canViewInviteModal = function canViewInviteModal(closure_6, guild, closure_0, stageInstanceByChannel) {
   let tmp = closure_0;
@@ -16,7 +16,6 @@ export const canViewInviteModal = function canViewInviteModal(closure_6, guild, 
   }
   if (!canResult) {
     canResult = null != guild && null != guild.vanityURLCode;
-    const tmp5 = null != guild && null != guild.vanityURLCode;
   }
   if (!canResult) {
     let invite_code;

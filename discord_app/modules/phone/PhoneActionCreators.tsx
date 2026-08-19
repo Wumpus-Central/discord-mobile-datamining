@@ -1,24 +1,22 @@
 // discord_app/modules/phone/PhoneActionCreators.tsx
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/AuthenticationStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PhoneConstants.tsx";
 import { Endpoints } from "../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/phone/PhoneActionCreators.tsx");
 
 export default {
   setCountryCode(countryCode) {
-    let obj = dispatcherDefault;
-    obj = { type: "PHONE_SET_COUNTRY_CODE", countryCode };
+    const obj = { type: "PHONE_SET_COUNTRY_CODE", countryCode };
     obj.dispatch(obj);
   },
   removePhone(password, reason) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.PHONE, body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { password, change_phone_reason: reason };
+    const obj = { password, change_phone_reason: reason };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.del(obj);
   },
@@ -33,50 +31,43 @@ export default {
       obj["X-Fingerprint"] = fingerprint;
     }
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.RESEND_PHONE, headers: obj, body: obj, rejectWithError: null };
     obj = { phone };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   beginAddPhone(combined, closure_1_2) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.PHONE, body: obj, rejectWithError: null };
-    obj = { phone: combined, change_phone_reason: closure_1_2 };
+    const obj = { phone: combined, change_phone_reason: dependencyMap };
     obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   addPhone(closure_0, closure_02, reason) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.PHONE, body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { phone_token: closure_0, password: closure_02, change_phone_reason: reason };
+    const obj = { phone_token: closure_0, password: closure_02, change_phone_reason: reason };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   addPhoneWithoutPassword(closure_0) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.PHONE_VERIFY_NO_PASSWORD, body: obj, rejectWithError: null };
-    obj = { code: closure_0 };
+    const obj = { code: closure_0 };
     obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   beginReverifyPhone(combined, closure_1_2) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.PHONE_REVERIFY, body: obj, rejectWithError: null };
-    obj = { phone: combined, change_phone_reason: closure_1_2 };
+    const obj = { phone: combined, change_phone_reason: dependencyMap };
     obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   reverifyPhone(closure_0, password, USER_ACTION_REQUIRED) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.PHONE_REVERIFY, body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { phone_token: closure_0, password, change_phone_reason: USER_ACTION_REQUIRED };
+    const obj = { phone_token: closure_0, password, change_phone_reason: USER_ACTION_REQUIRED };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   validatePhoneForSupport(token) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.VERIFY_PHONE_FOR_TICKET, body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { token };
+    const obj = { token };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },

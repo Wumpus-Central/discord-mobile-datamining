@@ -1,9 +1,9 @@
 // discord_app/modules/stage_channels/StageInstanceActionCreators.tsx
 import sendRequest from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function _startStageInstance() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3, arg4) => {
@@ -69,7 +69,7 @@ function _updateStageInstance() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
 
 export const startStageInstance = function startStageInstance(channel_id, c4, GUILD_ONLY, flag, c5) {
   const self = this;

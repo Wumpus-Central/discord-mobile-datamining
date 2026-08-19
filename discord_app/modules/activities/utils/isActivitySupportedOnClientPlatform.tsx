@@ -1,16 +1,18 @@
 // discord_app/modules/activities/utils/isActivitySupportedOnClientPlatform.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
+import obj1322 from "../../../utils/PlatformUtils.tsx";
+import PermissionOverwriteType from "../../../flow/Server.tsx";
 
-const result = set.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
 
 export default function isActivitySupportedOnClientPlatform(arr) {
   if (obj.isIOS()) {
-    let IOS = tmp(1954).EmbeddedActivitySupportedPlatforms.IOS;
+    let IOS = PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
-    const tmpResult = tmp(500);
-    const EmbeddedActivitySupportedPlatforms = tmp(1954).EmbeddedActivitySupportedPlatforms;
-    IOS = tmp(500).isAndroid() ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
-    const isAndroidResult = tmp(500).isAndroid();
+    const tmpResult = obj1322;
+    const EmbeddedActivitySupportedPlatforms = PermissionOverwriteType.EmbeddedActivitySupportedPlatforms;
+    IOS = obj1322.isAndroid() ? EmbeddedActivitySupportedPlatforms.ANDROID : EmbeddedActivitySupportedPlatforms.WEB;
+    const isAndroidResult = obj1322.isAndroid();
   }
   let flag;
   if (arr != null) {

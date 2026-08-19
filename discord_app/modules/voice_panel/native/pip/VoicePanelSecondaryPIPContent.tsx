@@ -1,19 +1,19 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../activities/EmbeddedActivitiesStore.tsx";
-import closure_5 from "../../../frames/FramesStore.tsx";
-import closure_6 from "../../../../stores/ChannelStore.tsx";
+import noop from "../../../../../_runtime/00019_noop.js";
+import participantFromServer from "../../../activities/EmbeddedActivitiesStore.tsx";
+import map from "../../../frames/FramesStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
 import { ActivityLayoutMode } from "../../../activities/Constants.tsx";
 import { ActivityPanelModes } from "../../../activities/panel/ActivityPanelConstants.tsx";
 import FrameLayoutModes from "../../../frames/FramesConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ asLaunched: c9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: unpackModuleId } = FrameLayoutModes);
 let closure_13 = createCacheKey.createStyles({ activityContainer: { flex: 1 } });
 let closure_14 = { code: "function VoicePanelSecondaryPIPContentTsx1(){const{getActivityContainerPipStylesSpec,pipState,activePipOrientationLockState,windowDimensions}=this.__closure;const{width:width,height:height,shouldVerticallyCenter:shouldVerticallyCenter,shouldHorizontallyCenter:shouldHorizontallyCenter,marginLeft:marginLeft,marginTop:marginTop}=getActivityContainerPipStylesSpec({pipWidth:pipState.width,pipHeight:pipState.height,pipOrientationLockState:activePipOrientationLockState,isLandscape:windowDimensions.get().landscape});return{width:width,height:height,left:shouldHorizontallyCenter?'50%':'0%',top:shouldVerticallyCenter?'50%':'0%',marginLeft:marginLeft,marginTop:marginTop};}" };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx");
 
 export default function VoicePanelSecondaryPIPContent() {
   let tmp = size;
@@ -109,23 +109,24 @@ export default function VoicePanelSecondaryPIPContent() {
     }
   }
   obj = { style: memo, pointerEvents: "none", children: null };
-  let tmpResult = tmp(obj[17]);
+  tmp(obj[17]);
   obj1 = { style: items4, children: null };
   items4 = [tmp3.activityContainer, animatedStyle];
-  tmpResult = tmp(obj[18]);
+  const tmpResult = tmp(obj[18]);
   if (hasLaunchedFrame) {
     tmp = tmp(obj[19]);
     obj = { layoutMode: null };
     obj[0] = constants.PIP;
-    let tmp13Result = tmp13(tmp, obj);
+    let tmp13Result = <tmp layoutMode={null} />;
   } else {
     obj2 = { channel: null, layoutMode: null };
     obj2[0] = stateFromStores;
     obj2[1] = ActivityLayoutMode.PIP;
-    tmp13Result = tmp13(tmp(obj[20]), obj2);
+    tmp13Result = jsx(tmp(obj[20]), { channel: null, layoutMode: null });
   }
   obj1[1] = tmp13Result;
-  obj1 = tmp13(tmpResult, obj1);
+  obj1 = <tmpResult style={items4}>{null}</tmpResult>;
   obj[2] = obj1;
-  tmp13Result = tmp13(tmpResult, obj);
+  tmp13Result = <tmpResult style={memo} pointerEvents="none">{null}</tmpResult>;
+  const tmp2Result = tmp2(obj[15]);
 };

@@ -2,17 +2,17 @@
 import prototypeDefault from "../RPCError.tsx";
 import canViewInviteModal from "../../instant_invite/canViewInviteModal.tsx";
 import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel.tsx";
-import closure_3 from "../../frames/FramesStore.tsx";
-import closure_4 from "../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../stores/GuildStore.tsx";
-import closure_6 from "../../../stores/PermissionStore.tsx";
+import map from "../../frames/FramesStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
 import { TransportTypes } from "../Constants.tsx";
 import { RPCErrors } from "../../../Constants.tsx";
 import FrameLayoutModes from "../../frames/FramesConstants.tsx";
 
-require = arg1;
+require = fn;
 ({ asLaunched: c9, EmbeddedSurfaceType: c10 } = FrameLayoutModes);
-const result = require("set").fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
+const result = require("obj132").fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
 export const validateOpenInviteDialog = function validateOpenInviteDialog(socket) {
   if (socket.source.type !== TransportTypes.POST_MESSAGE) {
@@ -48,14 +48,14 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       if (null == obj9) {
         const obj3 = { errorCode: null };
         obj3[0] = RPCErrors.INVALID_CHANNEL;
-        const tmp21 = new tmp48(8752)(obj3, "Invalid channel");
+        const tmp21 = new prototypeDefault(obj3, "Invalid channel");
         throw tmp21;
       } else {
         const guild = store.getGuild(obj9.getGuildId());
         if (null == guild) {
           const obj4 = { errorCode: null };
           obj4[0] = RPCErrors.INVALID_CHANNEL;
-          let tmp48Result = tmp48(8752);
+          let tmp48Result = prototypeDefault;
           const _HermesInternal2 = HermesInternal;
           tmp48Result = new tmp48Result(obj4, "Invalid guild " + obj9.getGuildId());
           throw tmp48Result;
@@ -69,7 +69,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
             obj = { errorCode: null };
             obj[0] = RPCErrors.INVALID_PERMISSIONS;
             const _HermesInternal = HermesInternal;
-            let tmp = tmp48(8752);
+            let tmp = prototypeDefault;
             tmp = new tmp(obj, "No invite permissions for " + obj9.id);
             throw tmp;
           }

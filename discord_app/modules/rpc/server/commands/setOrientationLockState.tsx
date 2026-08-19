@@ -2,19 +2,19 @@
 import dispatcherDefault from "../../../../Dispatcher.tsx";
 import prototypeDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
-import closure_2 from "../../../frames/FramesStore.tsx";
+import map from "../../../frames/FramesStore.tsx";
 import { TransportTypes } from "../../Constants.tsx";
 import { OrientationLockState } from "../../../activities/Constants.tsx";
 import sum from "../../../../../discord_common/js/shared/Constants.tsx";
 
 const RPCErrors = sum.RPCErrors;
-const result = require("set").fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");
+const result = require("obj132").fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");
 
 export default {
   [sum.RPCCommands.SET_ORIENTATION_LOCK_STATE]: {
     validation(number) {
-      let obj = createRpcJoiSchemaObjectDefault(number);
-      obj = { lock_state: null, picture_in_picture_lock_state: null, grid_lock_state: null };
+      createRpcJoiSchemaObjectDefault(number);
+      const obj = { lock_state: null, picture_in_picture_lock_state: null, grid_lock_state: null };
       const requiredResult = obj.required();
       let validResult = number.number().valid(OrientationLockState.UNLOCKED, OrientationLockState.PORTRAIT, OrientationLockState.LANDSCAPE);
       obj[0] = validResult.required();
@@ -55,8 +55,7 @@ export default {
             obj1[3] = picture_in_picture_lock_state;
             obj.dispatch(obj1);
           }
-          let obj2 = dispatcherDefault;
-          obj2 = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: null, lockState: null, pictureInPictureLockState: null, gridLockState: null };
+          const obj2 = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId: null, lockState: null, pictureInPictureLockState: null, gridLockState: null };
           obj2[1] = id;
           obj2[2] = lock_state;
           obj2[3] = picture_in_picture_lock_state;

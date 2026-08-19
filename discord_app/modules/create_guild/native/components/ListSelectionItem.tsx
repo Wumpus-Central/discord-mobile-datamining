@@ -3,9 +3,9 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import TableRowInner from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/create_guild/native/components/ListSelectionItem.tsx");
+const result = require("obj132").fileFinishedImporting("modules/create_guild/native/components/ListSelectionItem.tsx");
 
 export default function ListSelectionItem(arg0) {
   ({ Icon, message, onPress } = arg0);

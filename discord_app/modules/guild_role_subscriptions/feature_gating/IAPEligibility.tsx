@@ -1,11 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../../../stores/GuildStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
 
-const require = arg1;
+const require = fn;
 let c4 = "13.2";
 let items = [require("ME").GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
 
 export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guildId) {
   if (obj.isIOS()) {
@@ -24,7 +24,6 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
       if (0 < bound) {
         while (true) {
           let num = mapped[num4];
-          let tmp4 = num4;
           if (num == null) {
             num = 0;
           }
@@ -54,9 +53,9 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
         guild = guild.getGuild(guildId);
         let everyResult = null != guild;
         if (everyResult) {
-          everyResult = items.every((arg0) => {
+          everyResult = items.every((item, index) => {
             const features = guild.features;
-            return features.has(arg0);
+            return features.has(item);
           });
         }
         return everyResult;
@@ -88,7 +87,6 @@ export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIA
       if (0 < bound) {
         while (true) {
           let num6 = mapped[num4];
-          let tmp5 = num4;
           if (num6 == null) {
             num6 = 0;
           }
@@ -125,9 +123,9 @@ export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIA
       guild = closure_1_3.getGuild(guild);
       let everyResult = null != guild;
       if (everyResult) {
-        everyResult = closure_1_5.every((arg0) => {
+        everyResult = items.every((item, index) => {
           const features = guild.features;
-          return features.has(arg0);
+          return features.has(item);
         });
       }
       return everyResult;

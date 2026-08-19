@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx
 import DISCORD_EPOCHDefault from "../../../../../utils/SnowflakeUtils.tsx";
-import closure_2 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../stores/AuthenticationStore.tsx";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import fetchFingerprint from "../../../../../stores/AuthenticationStore.tsx";
 
 function convertNullableArrayToItemAndItemIndex(arg0) {
   const items = [];
@@ -12,7 +12,6 @@ function convertNullableArrayToItemAndItemIndex(arg0) {
     if (null === nextResult) {
       let arr = items1.push(-1);
     } else {
-      let tmp3 = nextResult;
       arr = items.push(tmp2);
       let arr1 = items1.push(items.length - 1);
     }
@@ -67,13 +66,12 @@ function getItemChannelId(channelId) {
   }
   return channelId;
 }
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAnalytics.tsx");
 
 export const getAffinityProperties = function getAffinityProperties(data) {
   id = id.getId();
   let obj = DISCORD_EPOCHDefault;
   if (obj.extractTimestamp(id) % 25 === 0) {
-    obj = {};
     obj = { destination_channel_ids: null, destination_channel_ids_index: null };
     [obj4[0], obj4[1]] = callback(convertNullableArrayToItemAndItemIndex(data.map(getItemChannelId)), 2);
     const merged = Object.assign(obj);

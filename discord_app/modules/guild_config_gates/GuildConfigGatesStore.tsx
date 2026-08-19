@@ -26,6 +26,6 @@ const guildConfigGatesStore = new GuildConfigGatesStore(dispatcherDefault, {
     closure_0 = {};
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_config_gates/GuildConfigGatesStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_config_gates/GuildConfigGatesStore.tsx");
 
 export default guildConfigGatesStore;

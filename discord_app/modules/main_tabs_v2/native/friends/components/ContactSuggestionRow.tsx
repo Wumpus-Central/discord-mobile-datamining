@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../a11y/AccessibilityStore.tsx";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../../a11y/AccessibilityStore.tsx";
 import ME from "../../../../../Constants.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 ({ AnalyticEvents: c5, InstantInviteSources: closure_6, RelationshipTypes: error } = ME);
 let closure_9 = { ADD: "add" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
 
 export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFriend) {
   suggestedFriend = suggestedFriend.suggestedFriend;
@@ -108,8 +108,8 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
     obj2[0] = suggestedFriend.user;
     obj2[1] = sharedValue;
     obj2[2] = function onAddSuggestion(id) {
-      let obj = added(onAddSuggestion[13]);
-      obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
+      added(onAddSuggestion[13]);
+      const obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
       let ADD_FRIENDS_MODAL = merged.location;
       if (ADD_FRIENDS_MODAL == null) {
         ADD_FRIENDS_MODAL = closure_1_6.ADD_FRIENDS_MODAL;

@@ -1,23 +1,22 @@
 // discord_app/modules/user_settings/premium/native/ProfileCustomizationTryItOutSettingScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { PremiumUpsellTypes } from "../../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, ActivityIndicator: c5, StyleSheet } = get_ActivityIndicator);
 ({ AnalyticEvents: error, AnalyticsPages: closure_8 } = ME);
-createCacheKey = { container: null, activityIndicator: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: "100%", alignItems: "center", justifyContent: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/ProfileCustomizationTryItOutSettingScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/ProfileCustomizationTryItOutSettingScreen.tsx");
 
 export default function ProfileCustomizationTryItOutSettingScreen() {
   let tmp = callback();
@@ -35,7 +34,7 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
   const items1 = [stateFromStores];
   const effect = pendingAvatarDecoration.useEffect(() => {
     if (null != stateFromStores) {
-      stateFromStores(categories[13])(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+      stateFromStores(categories[13])(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
       const tmp3 = stateFromStores(categories[13]);
     }
   }, items1);
@@ -61,7 +60,6 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
   const items4 = [sourceAnalyticsLocations];
   const effect3 = pendingAvatarDecoration.useEffect(() => {
     let obj = stateFromStores(categories[19]);
-    obj = { type: closure_1_9.PREMIUM_PROFILE_TRY_IT_OUT, location: obj, location_stack: sourceAnalyticsLocations };
     obj = { page: closure_1_8.USER_SETTINGS };
     obj.track(closure_1_7.PREMIUM_UPSELL_VIEWED, obj);
   }, items4);
@@ -72,7 +70,6 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
     obj[0] = tmp.activityIndicator;
     tmp = visibleFontOrder;
     obj[1] = <visibleFontOrder animating size="large" />;
-    let tmp18 = <setPendingAvatarDecoration style={null}>{null}</setPendingAvatarDecoration>;
   } else if (undefined !== pendingAvatarDecoration) {
     obj = { value: null, children: null };
     obj[0] = analyticsLocations;
@@ -82,6 +79,7 @@ export default function ProfileCustomizationTryItOutSettingScreen() {
     obj2[0] = stateFromStores;
     obj1[1] = jsx(tmp2(tmp3[20]), { currentUser: null, isTryItOut: true });
     obj[1] = <setPendingAvatarDecoration style={null}>{null}</setPendingAvatarDecoration>;
-    tmp18 = jsx(sourceAnalyticsLocations(tmp3[8]).AnalyticsLocationProvider, { value: null, children: null });
+    const tmp18 = jsx(sourceAnalyticsLocations(tmp3[8]).AnalyticsLocationProvider, { value: null, children: null });
   }
+  const tmp4Result = stateFromStores(categories[8])(stateFromStores(categories[9]).USER_SETTINGS_TRY_OUT_PREMIUM);
 };

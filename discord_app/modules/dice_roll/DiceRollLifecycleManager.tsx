@@ -3,14 +3,14 @@ import getSystemLocale from "../../intl/index.native.tsx";
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import trackInviteDefault from "../../actions/MessageActionCreators.tsx";
 import rebuildDefault from "../messages/MessageParser.tsx";
-import closure_3 from "../../stores/ChannelStore.tsx";
-import closure_4 from "../../stores/SelectedChannelStore.tsx";
-import closure_5 from "DiceRollStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import INITIAL_STATE from "DiceRollStore.tsx";
 import { INITIAL_STATE } from "DiceRollStore.tsx";
 import ROLL_DURATION_MS from "DiceRollConstants.tsx";
 import { MessageSendLocation } from "../messages/MessageConstants.tsx";
 
-require = arg1;
+require = fn;
 ({ AFTER_ROLL_DELAY_MS: error, ALLOWED_DICE_SIDES_SET: closure_8, DEFAULT_DICE_SIDES: c9, DISMISS_DELAY_MS: c10, MAX_DICE_COUNT: unpackModuleId, ROLL_DURATION_MS: closure_12 } = ROLL_DURATION_MS);
 initializeDefault;
 class DiceRollLifecycleManager extends tmp3 {
@@ -34,6 +34,7 @@ class DiceRollLifecycleManager extends tmp3 {
         applyArgumentsResult.clearTimers();
         applyArgumentsResult.dismiss();
       }
+      tmp2 = null != state.channelId && state.channelId !== channelId.channelId;
     };
     applyArgumentsResult.handleStartRoll = function handleStartRoll(channelId) {
       channelId = channelId.channelId;
@@ -65,7 +66,7 @@ class DiceRollLifecycleManager extends tmp3 {
           obj[0] = channelId;
           obj[2] = num3;
           obj[3] = tmp4;
-          obj2.setState(obj);
+          closure_1_5.setState(obj);
           items = [];
           for (let num4 = 0; num4 < num3; num4 = num4 + 1) {
             let _Math3 = Math;
@@ -78,7 +79,6 @@ class DiceRollLifecycleManager extends tmp3 {
             channelId.finishRoll(channelId, num3, closure_2, items);
           }, closure_1_12);
         }
-        obj2 = closure_1_5;
       }
     };
     return applyArgumentsResult;
@@ -112,14 +112,14 @@ prototype["sendMessage"] = function sendMessage(arg0, arg1, arg2, arr) {
     obj[1] = arg2;
     const _HermesInternal2 = HermesInternal;
     const combined1 = "[`" + intl.formatToPlainString(getSystemLocale.t.uV5JaG, obj) + "`](" + combined + ")";
-    const reduced = arr.reduce((arg0, arg1) => arg0 + arg1, 0);
+    const reduced = arr.reduce((acc, item, index) => acc + item, 0);
     const intl2 = getSystemLocale.intl;
     obj = { total: null, count: null, sides: null };
     obj[0] = reduced;
     obj[1] = arg1;
     obj[2] = arg2;
     const result = intl2.formatToMarkdownString(getSystemLocale.t.tmSbYW, obj);
-    const mapped = arr.map((arg0) => ":game_die: " + arg0.toString());
+    const mapped = arr.map((item, index) => ":game_die: " + item.toString());
     let str10 = " ";
     const _HermesInternal3 = HermesInternal;
     const combined2 = "-# " + mapped.join(" ");
@@ -130,7 +130,6 @@ prototype["sendMessage"] = function sendMessage(arg0, arg1, arg2, arr) {
       combined3 = "### " + result + ` ` + combined1 + "\n" + combined2;
     }
     str10 = trackInviteDefault;
-    obj1 = rebuildDefault;
     obj1 = { location: null };
     obj1[0] = MessageSendLocation.CHAT_INPUT;
     str10.sendMessage(arg0, obj1.parse(channel, combined3), true, obj1);
@@ -141,7 +140,7 @@ prototype["dismiss"] = function dismiss() {
   store.setState({ dismissing: true });
   this.collapseTimer = setTimeout(() => {
     self.collapseTimer = null;
-    closure_1_5.setState(closure_1_6);
+    closure_1_5.setState(INITIAL_STATE);
   }, closure_10);
 };
 prototype["clearTimers"] = function clearTimers() {
@@ -163,6 +162,6 @@ prototype["clearTimers"] = function clearTimers() {
   }
 };
 const diceRollLifecycleManager = new DiceRollLifecycleManager();
-let result = require("set").fileFinishedImporting("modules/dice_roll/DiceRollLifecycleManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/dice_roll/DiceRollLifecycleManager.tsx");
 
 export default diceRollLifecycleManager;

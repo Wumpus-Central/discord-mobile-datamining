@@ -1,16 +1,18 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemModal.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
+import GiftCodeRedeemStartDefault from "GiftCodeRedeemStart.tsx";
 import useGiftCodeErrorMessageDefault from "useGiftCodeErrorMessage.tsx";
-import closure_3 from "../../../../stores/GiftCodeStore.tsx";
-import closure_4 from "../../../../stores/UserStore.tsx";
+import GiftCodeRedeemSuccessDefault from "GiftCodeRedeemSuccess.tsx";
+import updateGiftCode from "../../../../stores/GiftCodeStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import HeaderBackImage from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 
-const require = arg1;
+const require = fn;
 noopAll;
 let obj = { START: "giftcode-start", SUCCESS: "giftcode-success", ERROR: "giftcode-error" };
 const headerNoTitle = HeaderBackImage.getHeaderNoTitle();
-const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemModal.tsx");
 
 export default function GiftCodeRedeemModal(code) {
   code = code.code;
@@ -36,7 +38,7 @@ export default function GiftCodeRedeemModal(code) {
       obj = {};
       const merged = Object.assign(arg0);
       obj.user = stateFromStores1;
-      return closure_1_5(closure_1_1(closure_1_2[6]), obj);
+      return jsx(GiftCodeRedeemStartDefault, {});
     };
     obj[obj.START] = obj;
     obj1 = { headerTitle: null, headerLeft: null, render: null };
@@ -47,7 +49,7 @@ export default function GiftCodeRedeemModal(code) {
       obj = {};
       const merged = Object.assign(arg0);
       obj.user = stateFromStores1;
-      return closure_1_5(closure_1_1(closure_1_2[7]), obj);
+      return jsx(GiftCodeRedeemSuccessDefault, {});
     };
     obj[obj.SUCCESS] = obj1;
     const obj2 = { headerTitle: null, headerLeft: null, render: null };
@@ -83,7 +85,6 @@ export default function GiftCodeRedeemModal(code) {
       }
       obj3[1] = items3;
       jsx(tmp2(6312).Navigator, { screens: null, initialRouteStack: null });
-      const tmp7 = jsx;
     }
     const tmp2Result1 = tmp2(6314);
   }

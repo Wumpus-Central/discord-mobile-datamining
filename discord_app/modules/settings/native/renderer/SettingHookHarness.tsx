@@ -1,10 +1,10 @@
 // discord_app/modules/settings/native/renderer/SettingHookHarness.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "stores/SettingBlocklistStore.tsx";
+import zustandStore from "stores/SettingBlocklistStore.tsx";
 import { NodeType } from "SettingRendererConstants.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 let closure_6 = [];
 const map = new Map();
@@ -17,11 +17,9 @@ const memoResult = importAllResult.memo(function SettingHookHarness() {
   let num = 0;
   if (0 < entries.length) {
     while (true) {
-      let tmp = callback;
       let tmp2 = callback(entries[num], 2);
       [tmp3, obj2] = tmp2;
       let usePredicate = obj2.usePredicate;
-      let tmp4 = num;
       let predicate;
       if (usePredicate != null) {
         predicate = usePredicate();
@@ -31,16 +29,13 @@ const memoResult = importAllResult.memo(function SettingHookHarness() {
         if (!field.has(tmp3)) {
           let arr = items.push(tmp3);
         }
-        let tmp10 = NodeType;
         if (obj2.type !== NodeType.GUILD_SELECTOR) {
-          let tmp11 = map;
           let result = map.set(tmp3, obj2.useTitle());
           let useSearchTerms = obj2.useSearchTerms;
           let searchTerms;
           if (useSearchTerms != null) {
             searchTerms = useSearchTerms();
           }
-          let tmp14 = map1;
           if (searchTerms == null) {
             searchTerms = closure_6;
           }
@@ -64,16 +59,17 @@ const memoResult = importAllResult.memo(function SettingHookHarness() {
     if (set.length > 0) {
       const _Set = Set;
       set = new Set(closure_1_4.getField("blocklist"));
-      const item = set.forEach((arg0) => set.add(arg0));
-      const item1 = items1.forEach((arg0) => set.delete(arg0));
+      const item = arr.forEach((item, index) => set.add(item));
+      const item1 = items1.forEach((item, index) => set.delete(item));
       const obj = { blocklist: null };
       obj[0] = set;
       closure_1_4.setState(obj);
     }
+    arr = set;
   });
   return null;
 });
-let result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
+let result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/SettingHookHarness.tsx");
 
 export default memoResult;
 export const getCachedSettingTitle = function getCachedSettingTitle(setting) {

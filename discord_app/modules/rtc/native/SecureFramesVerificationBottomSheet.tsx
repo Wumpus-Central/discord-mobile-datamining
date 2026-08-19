@@ -1,16 +1,15 @@
 // discord_app/modules/rtc/native/SecureFramesVerificationBottomSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "../SecureFramesConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ EPOCH_AUTHENTICATOR_CHUNK_SIZE: c5, EPOCH_AUTHENTICATOR_COLUMNS: closure_6, EPOCH_AUTHENTICATOR_LENGTH: error } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { iconContainer: null, icon: null, share: null, content: null, subtitle: null, footer: null };
-createCacheKey = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+const createCacheKey = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 48, width: 48 };
 createCacheKey[2] = { height: 24 };
@@ -18,23 +17,22 @@ createCacheKey[3] = { padding: 16 };
 createCacheKey[4] = { textAlign: "center" };
 createCacheKey[5] = { textAlign: "center", marginTop: 8 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesVerificationBottomSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/rtc/native/SecureFramesVerificationBottomSheet.tsx");
 
 export default function SecureFramesVerificationBottomSheet(onShareClick) {
   onShareClick = onShareClick.onShareClick;
-  let readableSecureFramesFingerprint;
   ({ title, subtitle, footer, epochAuthenticator } = onShareClick);
   const tmp = callback3();
-  let obj = onShareClick(9715);
-  obj = { fingerprintBase64: epochAuthenticator, chunkSize: closure_5, desiredLength: closure_7 };
-  readableSecureFramesFingerprint = obj.useReadableSecureFramesFingerprint(obj);
+  onShareClick(9715);
+  let obj = { fingerprintBase64: epochAuthenticator, chunkSize: closure_5, desiredLength: closure_7 };
+  const readableSecureFramesFingerprint = obj.useReadableSecureFramesFingerprint(obj);
   const items = [readableSecureFramesFingerprint, onShareClick];
   const callback = React.useCallback(() => {
     if (null != readableSecureFramesFingerprint) {
       const joined = readableSecureFramesFingerprint.join(" ");
-      readableSecureFramesFingerprint(closure_1_2[7]).hideActionSheet();
+      readableSecureFramesFingerprint(dependencyMap[7]).hideActionSheet();
       onShareClick(joined);
-      const obj2 = readableSecureFramesFingerprint(closure_1_2[7]);
+      const obj2 = readableSecureFramesFingerprint(dependencyMap[7]);
     }
   }, items);
   const callback1 = React.useCallback(() => {
@@ -59,11 +57,8 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   const items2 = [callback2(onShareClick(4733).Stack, obj5), , ];
   const obj9 = { title: null, trailing: null, chunks: null, columns: null };
   const obj7 = { style: tmp.icon, color: readableSecureFramesFingerprint(712).colors.TEXT_SUBTLE };
-  const obj8 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: subtitle };
   const tmp10 = readableSecureFramesFingerprint;
   const tmp2 = onShareClick;
-  const tmp8 = callback2;
-  const tmp9 = View;
   const intl3 = onShareClick(1236).intl;
   obj9[0] = intl3.string(onShareClick(1236).t.cgBTyO);
   let tmp7Result = null != readableSecureFramesFingerprint;
@@ -78,6 +73,6 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   items2[1] = callback(readableSecureFramesFingerprint(9721), obj9);
   items2[2] = callback(tmp2(4734).Text, { style: tmp.footer, variant: "text-xs/normal", color: "text-muted", children: footer });
   obj4[1] = items2;
-  obj[2] = tmp8(tmp9, obj4);
+  obj[2] = callback2(View, obj4);
   return callback(onShareClick(6950).BottomSheet, obj);
 };

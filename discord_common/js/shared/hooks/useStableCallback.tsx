@@ -1,7 +1,7 @@
 // discord_common/js/shared/hooks/useStableCallback.tsx
-import closure_0 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
 
 export default function useStableCallback(stateFromStores) {
   const React = stateFromStores;

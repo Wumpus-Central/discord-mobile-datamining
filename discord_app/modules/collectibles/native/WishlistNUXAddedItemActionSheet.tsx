@@ -1,41 +1,38 @@
 // discord_app/modules/collectibles/native/WishlistNUXAddedItemActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import { UserProfileSections } from "../../user_profile/Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-let require = arg1;
+let require = fn;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, textContainer: null, subtitle: null };
-createCacheKey = { alignItems: "center", padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
+const createCacheKey = { alignItems: "center", padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { textAlign: "center" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/WishlistNUXAddedItemActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/WishlistNUXAddedItemActionSheet.tsx");
 
 export default function WishlistNUXAddedItemActionSheet(product) {
   product = product.product;
   require = product;
-  let stateFromStores;
   let memo;
   const tmp = callback3();
   let obj = require(memo[8]);
   let items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser(), []);
+  const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser(), []);
   const items1 = [product];
   memo = React.useMemo(() => {
     if (product.type === product(memo[9]).CollectiblesItemType.BUNDLE) {
       let obj = { type: "bundle", items: null, previewAssets: null };
-      ({ items: obj2[1], previewAssets: obj2[2] } = tmp);
+      ({ items: obj2[1], previewAssets: obj2[2] } = product);
       return obj;
     } else {
-      const first = closure_1_3(tmp.items, 1)[0];
+      const first = closure_1_3(product.items, 1)[0];
       let tmp5;
       if (null != first) {
         obj = { type: "single", item: null };
@@ -56,11 +53,11 @@ export default function WishlistNUXAddedItemActionSheet(product) {
     if (null != stateFromStores) {
       obj = { userId: null, sourceAnalyticsLocations: null, initialSection: null };
       obj[0] = tmp4.id;
-      const items = [tmp(tmp2[12]).COLLECTIBLES_SHOP];
+      const items = [stateFromStores(memo[12]).COLLECTIBLES_SHOP];
       obj[1] = items;
-      obj[2] = closure_1_7.WISHLIST;
-      tmp(tmp2[11])(obj);
-      const tmpResult = tmp(tmp2[11]);
+      obj[2] = UserProfileSections.WISHLIST;
+      stateFromStores(memo[11])(obj);
+      const tmpResult = stateFromStores(memo[11]);
     }
   }, items2);
   const callback2 = React.useCallback(() => {
@@ -72,7 +69,6 @@ export default function WishlistNUXAddedItemActionSheet(product) {
     }
     return tmp2;
   }, items3);
-  obj = { children: null };
   obj = { style: tmp.container, children: null };
   const items4 = [callback(stateFromStores(memo[15]), { renderPreview: callback2 }), , ];
   obj1 = { style: tmp.textContainer, children: null };

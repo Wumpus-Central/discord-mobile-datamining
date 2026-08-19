@@ -1,16 +1,17 @@
 // discord_app/actions/native/PushNotificationActionCreators.tsx
 import timestampDefault from "../../modules/debug/Logger.tsx";
+import obj132 from "../../utils/PlatformUtils.tsx";
 import encodeProperties from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../modules/multi_account/MultiAccountStore.tsx";
-import closure_6 from "../../stores/AuthenticationStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import initialize from "../../modules/multi_account/MultiAccountStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
 import ME from "../../Constants.tsx";
 import str2 from "../../modules/push_notifications/PushNotificationConstants.tsx";
 
-require = arg1;
+require = fn;
 function getOrRefreshPushSyncToken() {
   const self = this;
   const apply = _getOrRefreshPushSyncToken.apply;
@@ -60,7 +61,7 @@ function _getOrRefreshPushSyncToken() {
               token = undefined;
               if (null == lib.pushSyncToken) {
                 let obj5 = closure_1_2(closure_1_3[6]);
-                token = obj5.getToken(tmp40.id);
+                token = obj5.getToken(lib.id);
                 if (null == token) {
                   c6 = 3;
                   return { value: null, done: true };
@@ -81,7 +82,7 @@ function _getOrRefreshPushSyncToken() {
               } else {
                 c6 = 3;
                 const obj4 = { value: null, done: true };
-                obj4[0] = tmp40.pushSyncToken;
+                obj4[0] = lib.pushSyncToken;
                 return obj4;
               }
             }
@@ -148,7 +149,6 @@ let obj = {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
     } else {
-      obj = _modDef5227;
       obj = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
       obj[0] = constants.DEVICES;
       if (flag) {
@@ -159,7 +159,7 @@ let obj = {
       obj = { provider: null, token: null, bypass_server_throttling_supported: null, bundle_id: null };
       obj[0] = tmp8;
       obj[1] = token;
-      let isAndroidResult = tmp2(500).isAndroid();
+      let isAndroidResult = obj132.isAndroid();
       if (isAndroidResult) {
         isAndroidResult = !closure_13;
       }
@@ -167,10 +167,10 @@ let obj = {
       obj[3] = closure_10;
       obj[1] = obj;
       obj1 = { event: null };
-      obj1[0] = tmp2(503).NetworkActionNames.USER_REGISTER_DEVICE_TOKEN;
+      obj1[0] = encodeProperties.NetworkActionNames.USER_REGISTER_DEVICE_TOKEN;
       obj[3] = obj1;
       syncDeviceResult = obj.post(obj);
-      const tmp2Result = tmp2(500);
+      const tmp2Result = obj132;
     }
     return syncDeviceResult;
   },
@@ -180,8 +180,7 @@ let obj = {
       flag = false;
     }
     return callback(function*() {
-      let id = tmp2;
-      id = closure_1_6.getId();
+      const id = closure_1_6.getId();
       const validUsers = closure_1_5.getValidUsers();
       const sorted = validUsers.sort((id, id2) => {
         let num = -1;
@@ -208,7 +207,7 @@ let obj = {
           closure_1 = arg1;
           if (closure_1.length >= 1) {
             if (null != closure_1[0]) {
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = token(530).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: false };
               obj3[0] = closure_1_9.DEVICES_SYNC;
               if (closure_1) {
@@ -218,9 +217,9 @@ let obj = {
               }
               const obj4 = { provider: null, token: null, push_sync_tokens: null, bypass_server_throttling_supported: null, bundle_id: null };
               obj4[0] = tmp9;
-              obj4[1] = closure_1_0;
-              obj4[2] = closure_1.filter(closure_1_0(1370).isNotNullish);
-              obj2 = closure_1_0(500);
+              obj4[1] = token;
+              obj4[2] = closure_1.filter(token(1370).isNotNullish);
+              obj2 = token(500);
               let isAndroidResult = obj2.isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_13;
@@ -252,38 +251,32 @@ let obj = {
   },
   unregisterDevice(token) {
     logger.log("Unregistering push notification token: " + token);
-    let obj = _modDef5227;
-    obj = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
-    obj = { provider: callback2(), token };
+    const obj = { provider: callback2(), token };
     obj[1] = obj;
     obj[2] = { event: encodeProperties.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
     return obj.delete(obj);
   }
 };
 const tmp4 = new timestampDefault("PushNotificationActionCreators");
-let result = require("set").fileFinishedImporting("actions/native/PushNotificationActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("actions/native/PushNotificationActionCreators.tsx");
 
 export default obj;
 export const setPushPermissionState = function setPushPermissionState(PROMPT_SEEN) {
   closure_0 = PROMPT_SEEN;
   dispatcherDefault.wait(() => {
-    let obj = closure_1_1(closure_1_3[15]);
-    obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState: closure_0 };
+    const obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState: closure_0 };
     obj.dispatch(obj);
   });
 };
 export const setPushPermissionReactivationSeen = function setPushPermissionReactivationSeen(promptType) {
-  let obj = dispatcherDefault;
-  obj = { type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType };
+  const obj = { type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType };
   obj.dispatch(obj);
 };
 export const setPushNotificationPermissionEligibleForPrompt = function setPushNotificationPermissionEligibleForPrompt(CHANNEL_BANNER) {
-  let obj = dispatcherDefault;
-  obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER };
+  const obj = { type: "PUSH_NOTIFICATION_PERMISSION_SET_ELIGIBLE", promptType: CHANNEL_BANNER };
   obj.dispatch(obj);
 };
 export const updateNotificationAuthorizationStatus = function updateNotificationAuthorizationStatus(closure_0) {
-  let obj = dispatcherDefault;
-  obj = { type: "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE", authorizationStatus: closure_0 };
+  const obj = { type: "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE", authorizationStatus: closure_0 };
   obj.dispatch(obj);
 };

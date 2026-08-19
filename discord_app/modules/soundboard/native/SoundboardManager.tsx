@@ -1,21 +1,22 @@
 // discord_app/modules/soundboard/native/SoundboardManager.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import _initializeDefault from "../BaseSoundboardManager.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../stores/MediaEngineStore.tsx";
-import closure_5 from "../../../stores/SelectedChannelStore.tsx";
-import closure_6 from "../SoundboardStore.tsx";
+import getVolumeForSoundDefault from "../getVolumeForSound.tsx";
+import getSoundboardSoundURLDefault from "../getSoundboardSoundURL.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _detectH265HardwareDecode from "../../../stores/MediaEngineStore.tsx";
+import handleConnectionOpen from "../../../stores/SelectedChannelStore.tsx";
+import handleSoundCreateOrUpdate from "../SoundboardStore.tsx";
 
-const require = arg1;
+const require = fn;
 let map = new Map();
 let closure_8 = new timestampDefault("SoundboardManagerNative");
 _initializeDefault;
 let prototype = function SoundboardManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  closure_0 = applyArgumentsResult;
   applyArgumentsResult._stopAndClearSounds = function _stopAndClearSounds() {
-    const item = map.forEach((stop) => {
-      stop.stop();
+    const item = map.forEach((item, index) => {
+      item.stop();
     });
     map = new Map();
   };
@@ -27,32 +28,30 @@ let prototype = function SoundboardManager() {
     if (closure_1_5.getVoiceChannelId() === arg3) {
       if (!closure_1_4.isDeaf()) {
         if (!closure_1_6.isLocalSoundboardMuted(id)) {
-          const tmp8 = closure_1_1(closure_1_2[6])(num);
+          const tmp8 = getVolumeForSoundDefault(num);
           const _HermesInternal = HermesInternal;
           const combined = "" + id + "-" + soundId;
-          const value = closure_1_7.get(combined);
+          const value = map.get(combined);
           if (null != value) {
             value.stop();
           }
-          const tmp14 = closure_1_1(closure_1_2[7])(soundId);
-          const tmp6 = closure_1_1;
-          const sound = lib(closure_1_2[8]).createSound(tmp14, "soundboard_sound", tmp8);
+          const tmp14 = getSoundboardSoundURLDefault(soundId);
+          const sound = lib(dependencyMap[8]).createSound(tmp14, "soundboard_sound", tmp8);
           sound.volume = tmp8;
-          const result = closure_1_7.set(combined, sound);
-          const obj2 = lib(closure_1_2[8]);
-          const result1 = lib(closure_1_2[9]).reportSoundStartedPlaying(soundId, id);
+          const result = map.set(combined, sound);
+          const obj2 = lib(dependencyMap[8]);
+          const result1 = lib(dependencyMap[9]).reportSoundStartedPlaying(soundId, id);
           const obj = { sound: null, soundKey: null, soundId: null, userId: null };
           obj[0] = sound;
           obj[1] = combined;
           obj[2] = soundId;
           obj[3] = id;
           const result2 = lib._playSoundWithListener(obj);
-          const obj3 = lib(closure_1_2[9]);
+          const obj3 = lib(dependencyMap[9]);
         }
       }
     }
   };
-  closure_0 = undefined;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -174,6 +173,6 @@ class prototype extends tmp4 {
 }
 prototype = new prototype();
 const tmp3 = new timestampDefault("SoundboardManagerNative");
-let result = require("set").fileFinishedImporting("modules/soundboard/native/SoundboardManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/soundboard/native/SoundboardManager.tsx");
 
 export default prototype;

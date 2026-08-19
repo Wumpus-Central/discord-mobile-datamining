@@ -1,15 +1,14 @@
 // discord_app/modules/app_launcher/utils/useLaunchingActivityButtonState.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../activities/EmbeddedActivitiesStore.tsx";
-import closure_5 from "../../frames/FramesStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import participantFromServer from "../../activities/EmbeddedActivitiesStore.tsx";
+import map from "../../frames/FramesStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/utils/useLaunchingActivityButtonState.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/utils/useLaunchingActivityButtonState.tsx");
 
 export default function useLaunchingActivityButtonState(applicationId) {
   applicationId = applicationId.applicationId;
   ({ context: importDefault, onSubmissionComplete } = applicationId);
-  let stateFromStores1;
   closure_4 = undefined;
   let obj = applicationId(onSubmissionComplete[3]);
   const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId);
@@ -24,7 +23,7 @@ export default function useLaunchingActivityButtonState(applicationId) {
   const obj2 = applicationId(onSubmissionComplete[4]);
   let tmp = applicationId;
   const items1 = [closure_5];
-  stateFromStores1 = applicationId(onSubmissionComplete[4]).useStateFromStores(items1, () => {
+  let stateFromStores1 = applicationId(onSubmissionComplete[4]).useStateFromStores(items1, () => {
     const mainFrame = closure_1_5.getMainFrame();
     let state;
     if (mainFrame != null) {
@@ -38,7 +37,6 @@ export default function useLaunchingActivityButtonState(applicationId) {
   });
   if (null == getOrFetchApplication) {
     stateFromStores1 = null != stateFromStores && stateFromStores.isLaunching && stateFromStores.componentId === applicationId.launchingComponentId;
-    const tmp6 = null != stateFromStores && stateFromStores.isLaunching && stateFromStores.componentId === applicationId.launchingComponentId;
   } else {
     const tmpResult = tmp(tmp2[5]);
   }

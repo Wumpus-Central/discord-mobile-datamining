@@ -1,9 +1,9 @@
 // discord_app/hooks/useTimeout.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import noop from "../../_runtime/00019_noop.js";
 
 ({ useEffect: c0, useRef: closure_1 } = noop);
-const result = set.fileFinishedImporting("hooks/useTimeout.tsx");
+const result = obj132.fileFinishedImporting("hooks/useTimeout.tsx");
 
 export default function useTimeout(arg0, arg1) {
   const callback = arg0;

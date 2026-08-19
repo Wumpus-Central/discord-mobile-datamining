@@ -1,22 +1,21 @@
 // discord_app/modules/calls/useHideSelfVideo.tsx
-import closure_3 from "../../stores/AuthenticationStore.tsx";
-import closure_4 from "../../stores/MediaEngineStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import _detectH265HardwareDecode from "../../stores/MediaEngineStore.tsx";
 import { VideoToggleState } from "../../Constants.tsx";
 import DesktopSources from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ MediaEngineContextTypes: closure_6, Features: error } = DesktopSources);
-const result = require("set").fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");
+const result = require("obj132").fileFinishedImporting("modules/calls/useHideSelfVideo.tsx");
 
 export default function useHideSelfVideo(arg0) {
   let DEFAULT = arg1;
   if (arg1 === undefined) {
     DEFAULT = constants.DEFAULT;
   }
-  let stateFromStores;
   const items = [closure_3];
-  stateFromStores = DEFAULT(589).useStateFromStores(items, () => id.getId());
-  const obj = DEFAULT(589);
+  const stateFromStores = DEFAULT(589).useStateFromStores(items, () => id.getId());
+  let obj = DEFAULT(589);
   const items1 = [closure_4];
   const stateFromStores1 = DEFAULT(589).useStateFromStores(items1, () => closure_4.supports(constants.DISABLE_VIDEO));
   const obj2 = DEFAULT(589);
@@ -34,7 +33,8 @@ export default function useHideSelfVideo(arg0) {
     tmp5,
     stateFromStores2,
     (arg0) => {
-      stateFromStores(closure_1_2[5]).setDisableLocalVideo(stateFromStores, arg0 ? closure_1_5.DISABLED : closure_1_5.MANUAL_ENABLED, DEFAULT);
+      stateFromStores(dependencyMap[5]).setDisableLocalVideo(stateFromStores, arg0 ? VideoToggleState.DISABLED : VideoToggleState.MANUAL_ENABLED, DEFAULT);
+      const obj = stateFromStores(dependencyMap[5]);
     }
   ];
   return items4;

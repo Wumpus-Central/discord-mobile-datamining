@@ -1,9 +1,9 @@
 // discord_common/js/packages/rpc-schema/helpers.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import sum from "../../shared/Constants.tsx";
 
 ({ RPCCommands, RPCEvents } = sum);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/helpers.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/rpc-schema/helpers.tsx");
 
 export const RPCCommand = RPCCommands;
 export const RPCEvent = RPCEvents;

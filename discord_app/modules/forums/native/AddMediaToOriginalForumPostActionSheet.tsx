@@ -1,18 +1,18 @@
 // discord_app/modules/forums/native/AddMediaToOriginalForumPostActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
 import { DraftType } from "../../../stores/DraftStore.tsx";
-import closure_9 from "../../../stores/GuildStore.tsx";
-import closure_10 from "../../../stores/MessageStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import reinjectEphemerals from "../../../stores/MessageStore.tsx";
 import ME from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function _upload2() {
   const self = this;
   const tmp = callback2((arg0) => {
@@ -54,7 +54,6 @@ function _upload2() {
               dependencyMap = undefined;
               message = undefined;
               c4 = undefined;
-              onResult = callback;
               ({ threadId: c0, attachments: closure_1, setIsUploading: closure_2, guild: message, analyticsLocations: c4 } = callback);
               c5 = undefined;
               c6 = undefined;
@@ -76,22 +75,16 @@ function _upload2() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              onResult = c4;
-              onResult = c5;
-              onResult = callback2;
-              onResult = dependencyMap;
-              onResult = new.target;
-              onResult = new.target;
-              onResult = new callback2(7583)();
-              onResult = onResult.on("start", () => {
+              const tmp120 = new callback2(7583)();
+              closure_5 = tmp120;
+              closure_5.on("start", () => {
                 dependencyMap(true);
               });
-              onResult = onResult.on("progress", (currentSize) => {
+              closure_5.on("progress", (currentSize) => {
                 let obj = _undefined(4876);
                 const kestrelConfig = obj.getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
                 const maxFileSizeResult = _undefined(4834).maxFileSize(message.id);
                 const obj2 = _undefined(4834);
-                const tmp3 = message;
                 const effectiveKestrelLimit = _undefined(4876).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
                 if (currentSize.currentSize > effectiveKestrelLimit) {
                   _undefined2.cancel();
@@ -101,37 +94,32 @@ function _upload2() {
                   obj[0] = currentSize;
                   obj[1] = effectiveKestrelLimit;
                   obj[2] = maxFileSizeResult;
-                  obj[3] = tmp3.id;
+                  obj[3] = message.id;
                   obj[4] = c4;
                   callback(8468)(obj);
                   const obj4 = callback(4342);
                 }
+                const obj3 = _undefined(4876);
               });
-              onResult = onResult.on("error", () => {
+              closure_5.on("error", () => {
                 dependencyMap(false);
                 callback(4342).hideActionSheet();
               });
-              onResult = onResult.on("complete", () => {
+              closure_5.on("complete", () => {
                 dependencyMap(false);
                 callback(8466).clearAll(c0, ChannelMessage.ChannelMessage);
                 const obj = callback(8466);
                 callback(4342).hideActionSheet();
               });
-              onResult = store;
-              onResult = callback;
               const messages = store.getMessages(callback);
-              onResult = callback2;
-              onResult = dependencyMap;
-              onResult = callback;
               attachments = messages.get(callback2(11).castChannelIdAsMessageId(callback));
-              onResult = attachments;
               if (null != attachments) {
                 attachments = attachments.attachments;
               } else {
                 attachments = [];
               }
               c7 = 1;
-              onResult.uploadFiles(closure_1_1);
+              closure_5.uploadFiles(closure_1_1);
               c8 = 4;
               c9 = 1;
               const obj24 = callback2(11);
@@ -174,17 +162,13 @@ function _upload2() {
               obj5[0] = arg1;
               return obj5;
             } else {
-              onResult = c4;
               c9 = arg1;
               callback2 = 0;
-              onResult = c8;
               items = [];
-              onResult = items;
               callback2 = HermesBuiltin.arraySpread(c8, 0);
-              onResult = c9;
-              onResult = c9.map((closure_0, closure_1) => _undefined(4830).getAttachmentPayload(closure_0, closure_1));
-              dependencyMap = onResult;
-              if (onResult == null) {
+              const mapped = c9.map((item, index) => _undefined(4830).getAttachmentPayload(item, index));
+              dependencyMap = mapped;
+              if (mapped == null) {
                 dependencyMap = [];
               }
               callback2 = HermesBuiltin.arraySpread(dependencyMap, callback2);
@@ -209,20 +193,12 @@ function _upload2() {
                 obj4 = callback2(7427);
                 const result1 = obj4.sendExplicitMediaClydeError(callback, store.attachments, callback(5001).TrackMediaRedactionContext.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED);
               } else {
-                onResult = c5;
-                onResult = callback2;
-                onResult = dependencyMap;
                 const obj7 = { title: null, body: null };
-                onResult = callback;
-                onResult = dependencyMap;
                 const intl = callback(1236).intl;
-                onResult = callback;
-                onResult = dependencyMap;
                 obj7[0] = intl.string(callback(1236).t.B3vFdU);
-                onResult = store;
-                onResult = store.getAnyErrorMessage();
-                message = onResult;
-                if (onResult == null) {
+                const anyErrorMessage = store.getAnyErrorMessage();
+                message = anyErrorMessage;
+                if (anyErrorMessage == null) {
                   message = store.message;
                 }
                 obj7[1] = message;
@@ -272,8 +248,8 @@ function _upload2() {
             c9 = tmp3;
             throw tmp80;
           } else if (tmp2 === tmp82) {
-            c8 = onResult;
-          } else if (onResult === tmp82) {
+            c8 = tmp;
+          } else if (tmp === tmp82) {
             c8 = tmp3;
           } else {
             c8 = tmp6;
@@ -295,8 +271,7 @@ function _upload2() {
 }
 ({ AbortCodes: unpackModuleId, Endpoints: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: null, postContent: null, title: null, description: null, button: null, buttonMargin: null };
-createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, marginBottom: 32, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
+const createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, marginBottom: 32, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: 0, padding: 8 };
 createCacheKey[3] = { textAlign: "center", marginBottom: 8 };
@@ -304,17 +279,14 @@ createCacheKey[4] = { textAlign: "center", marginBottom: 32 };
 createCacheKey[5] = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[6] = { marginBottom: 10 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.sm };
-let result = require("set").fileFinishedImporting("modules/forums/native/AddMediaToOriginalForumPostActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/forums/native/AddMediaToOriginalForumPostActionSheet.tsx");
 
 export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   threadId = threadId.threadId;
   const attachments = threadId.attachments;
   const sendMessage = threadId.sendMessage;
   let callback;
-  let stateFromStores;
   let stateFromStores1;
-  let stateFromStores2;
   let analyticsLocations;
   c8 = undefined;
   const tmp = callback5();
@@ -322,7 +294,7 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   let obj = threadId(sendMessage[28]);
   const items = [analyticsLocations];
   const items1 = [threadId];
-  stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.getChannel(threadId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.getChannel(threadId), items1);
   obj1 = threadId(sendMessage[28]);
   const items2 = [closure_9];
   const items3 = [stateFromStores];
@@ -336,7 +308,7 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   let obj2 = threadId(sendMessage[28]);
   const items4 = [closure_10];
   const items5 = [threadId];
-  stateFromStores2 = obj2.useStateFromStores(items4, () => closure_1_10.getMessage(threadId, attachments(sendMessage[18]).castChannelIdAsMessageId(threadId)), items5);
+  const stateFromStores2 = obj2.useStateFromStores(items4, () => closure_1_10.getMessage(threadId, attachments(sendMessage[18]).castChannelIdAsMessageId(threadId)), items5);
   analyticsLocations = attachments(sendMessage[29])().analyticsLocations;
   const items6 = [stateFromStores, stateFromStores1, stateFromStores2, threadId, attachments, analyticsLocations];
   const items7 = [sendMessage];
@@ -380,7 +352,7 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   const effect = stateFromStores1.useEffect(() => {
     if (null != attachments[0]) {
       const fileInfo = threadId(sendMessage[31]).getFileInfo(tmp[0]);
-      fileInfo.then((uri) => callback(uri.uri));
+      fileInfo.then((result) => callback(result.uri));
       const obj = threadId(sendMessage[31]);
     }
   }, items8);
@@ -389,7 +361,6 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   if (first != null) {
     item = first.item;
   }
-  let tmp16;
   if (null != item) {
     if (null != tmp12) {
       obj = { src: null, width: null, height: null, spoiler: null, alt: null };
@@ -397,7 +368,6 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
       ({ width: obj4[1], height: obj4[2] } = item);
       obj[3] = attachments[0].spoiler;
       obj[4] = attachments[0].description;
-      tmp16 = obj;
     }
   }
   obj = { startExpanded: true, children: null };

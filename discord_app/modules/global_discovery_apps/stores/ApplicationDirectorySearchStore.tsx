@@ -4,7 +4,7 @@ import dispatcherDefault from "../../../Dispatcher.tsx";
 import privDefault from "../../../../_runtime/01405_priv.js";
 import SearchAppsRequestSource from "../../../../discord_common/js/shared/shared-constants/SearchAppsRequestSource.tsx";
 
-require = arg1;
+require = fn;
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_3 = new privDefault({ max: 20 });
 let closure_4 = {};
@@ -64,7 +64,7 @@ obj = {
 };
 const applicationDirectorySearchStore = new ApplicationDirectorySearchStore(dispatcherDefault, obj);
 const tmp2 = new privDefault({ max: 20 });
-const result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx");
 
 export default applicationDirectorySearchStore;
 export const FetchState = obj;

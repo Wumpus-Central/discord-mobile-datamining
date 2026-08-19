@@ -1,5 +1,5 @@
 // discord_app/modules/polls/PollAttachmentUtils.tsx
-import closure_0 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { POLL_ATTACHMENT_FOLDER } from "PollsConstants.tsx";
 
 function _downloadPollGif() {
@@ -33,7 +33,7 @@ function _downloadPollGif() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/polls/PollAttachmentUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/polls/PollAttachmentUtils.tsx");
 
 export const getFileNameFromGifUrl = function getFileNameFromGifUrl(closure_1, closure_2) {
   const parts = decodeURIComponent(closure_2).split("/");

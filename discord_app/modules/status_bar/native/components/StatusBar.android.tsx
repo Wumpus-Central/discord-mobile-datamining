@@ -1,5 +1,5 @@
 // discord_app/modules/status_bar/native/components/StatusBar.android.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import pushStackEntryDefault from "StatusBarManager.android.tsx";
 
@@ -25,6 +25,6 @@ prototype["componentWillUnmount"] = function componentWillUnmount() {
 prototype["render"] = function render() {
   return null;
 };
-const result = set.fileFinishedImporting("modules/status_bar/native/components/StatusBar.android.tsx");
+const result = obj132.fileFinishedImporting("modules/status_bar/native/components/StatusBar.android.tsx");
 
 export default StatusBarAndroid;

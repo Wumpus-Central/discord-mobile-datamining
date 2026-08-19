@@ -1,8 +1,8 @@
 // discord_app/modules/games/hooks/useResolveGame.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
 
 export default function useResolveGame(arg0) {
   ({ applicationId, gameId } = arg0);
@@ -19,10 +19,9 @@ export default function useResolveGame(arg0) {
     if (null == gameId) {
       let canonicalGameId = null;
       if (null != getOrFetchApplication) {
-        canonicalGameId = obj.getCanonicalGameId();
+        canonicalGameId = getOrFetchApplication.getCanonicalGameId();
       }
       tmp = canonicalGameId;
-      obj = getOrFetchApplication;
     }
     return tmp;
   }, items);

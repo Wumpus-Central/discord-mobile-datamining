@@ -1,20 +1,19 @@
 // discord_app/modules/guilds_bar/usePendingFolderGuildIds.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "../guild_member_verification/UserGuildJoinRequestStore.tsx";
-import closure_3 from "../../stores/GuildStore.tsx";
+import handleGatewayJoinRequestUpdate from "../guild_member_verification/UserGuildJoinRequestStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/usePendingFolderGuildIds.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guilds_bar/usePendingFolderGuildIds.tsx");
 
 export default function usePendingFolderGuildIds() {
   let items = [closure_2, closure_3];
   return initialize.useStateFromStoresArray(items, () => {
     const items = [closure_2, closure_3];
     [obj, obj2] = items;
-    let guilds;
     const guildIds = obj.computeGuildIds();
-    guilds = obj2.getGuilds();
-    return guildIds.filter((arg0) => null == table[arg0]);
+    const guilds = obj2.getGuilds();
+    return guildIds.filter((item, index) => null == table[item]);
   });
 };
 export const getPendingFolderGuildIds = function getPendingFolderGuildIds() {
@@ -24,8 +23,7 @@ export const getPendingFolderGuildIds = function getPendingFolderGuildIds() {
     tmp = items;
   }
   [obj, obj2] = tmp;
-  let guilds;
   const guildIds = obj.computeGuildIds();
-  guilds = obj2.getGuilds();
-  return guildIds.filter((arg0) => null == table[arg0]);
+  const guilds = obj2.getGuilds();
+  return guildIds.filter((item, index) => null == table[item]);
 };

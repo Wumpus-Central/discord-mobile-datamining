@@ -1,5 +1,5 @@
 // discord_app/errors/ClientOutdatedAcceptGiftError.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import ME from "../Constants.tsx";
 
 const AbortCodes = ME.AbortCodes;
@@ -10,6 +10,6 @@ const prototype = function ClientOutdatedAcceptGiftError(arg0) {
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("errors/ClientOutdatedAcceptGiftError.tsx");
+const result = obj132.fileFinishedImporting("errors/ClientOutdatedAcceptGiftError.tsx");
 
 export default prototype;

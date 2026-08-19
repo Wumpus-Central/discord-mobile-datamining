@@ -1,12 +1,12 @@
 // discord_app/modules/media_viewer/native/useMediaViewerSyncer.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import THUMBNAIL_MARGIN from "Constants.tsx";
-import set from "../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../utils/PlatformUtils.tsx";
 
-const require = arg1;
+const require = fn;
 ({ THUMBNAIL_MARGIN: c5, THUMBNAIL_HEIGHT: closure_6, THUMBNAIL_MAX_WIDTH: error, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: c9 } = THUMBNAIL_MARGIN);
-let closure_10 = set.isAndroid();
+let closure_10 = obj132.isAndroid();
 let closure_11 = { code: "function useMediaViewerSyncerTsx1(){const{thumbnailsScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');}" };
 let closure_12 = { code: "function useMediaViewerSyncerTsx2(){const{thumbnailsScrolling,SCROLLING_DRAG}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()&~SCROLLING_DRAG);}" };
 let closure_13 = { code: "function useMediaViewerSyncerTsx3(event){const{variableWidthThumbnailsEnabled,thumbnailScrollPositions,thumbnailSize,swipeSource,maxIndex,thumbnailsIndex,thumbnailsAnimateTo,selectedIndex,viewerScrolling,thumbnailsScrolling,runOnJS,onSelectedIndexChange}=this.__closure;let thumbnails=0;if(variableWidthThumbnailsEnabled){if(event.contentOffset.x<0){thumbnails=0;}else if(event.contentOffset.x>=thumbnailScrollPositions[thumbnailScrollPositions.length-1].end){thumbnails=thumbnailScrollPositions.length-1;}else{for(let i=0;i<thumbnailScrollPositions.length;i++){const startPos=thumbnailScrollPositions[i].scrollStart;let endPos=i<thumbnailScrollPositions.length-1?thumbnailScrollPositions[i+1].scrollStart:startPos;if(i===thumbnailScrollPositions.length-1){endPos=thumbnailScrollPositions[i].end;}if(event.contentOffset.x>=startPos&&event.contentOffset.x<endPos){thumbnails=i+(event.contentOffset.x-startPos)/(endPos-startPos);break;}}}}else{thumbnails=event.contentOffset.x/thumbnailSize;}if(swipeSource.get()==='thumbnails'||Math.abs(Math.round(thumbnails)-thumbnails)<0.01){const index=Math.max(0,Math.min(Math.round(thumbnails),maxIndex));thumbnailsIndex.set(index);}if(thumbnailsAnimateTo.get()>=0){if(thumbnailsIndex.get()===thumbnailsAnimateTo.get()){thumbnailsAnimateTo.set(-1);selectedIndex.set(thumbnailsIndex.get());}return;}const wasTouched=viewerScrolling.get()!==0||thumbnailsScrolling.get()!==0;if(wasTouched&&thumbnailsIndex.get()!==selectedIndex.get()){selectedIndex.set(thumbnailsIndex.get());runOnJS(onSelectedIndexChange)();}}" };
@@ -31,7 +31,7 @@ let closure_31 = { code: "function useMediaViewerSyncerTsx22(){const{viewerScrol
 let closure_32 = { code: "function useMediaViewerSyncerTsx23(event){const{contentSizeLastChangedAt,IS_ANDROID,selectedIndex,scrollTo,ref,screenWidth,viewerScrolling,thumbnailsScrolling,thumbnailsAnimateTo,onScrollWorklets}=this.__closure;const contentSizeChangedRecently=Date.now()-contentSizeLastChangedAt.get()<500;if(IS_ANDROID&&contentSizeChangedRecently&&event.contentOffset.x===0&&selectedIndex.get()!==0){scrollTo(ref,selectedIndex.get()*screenWidth,event.contentOffset.y,false);return;}if(viewerScrolling.get()===0&&thumbnailsScrolling.get()===0&&thumbnailsAnimateTo.get()===-1)return;onScrollWorklets.onScroll(event.contentOffset.x/screenWidth);}" };
 let closure_33 = { code: "function useMediaViewerSyncerTsx24(){const{index,selectedIndex}=this.__closure;return index===selectedIndex.get();}" };
 let closure_34 = { code: "function useMediaViewerSyncerTsx25(result,previous){const{runOnJS,setVisible}=this.__closure;if(previous==null||previous===result)return;runOnJS(setVisible)(result);}" };
-let result = set.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSyncer.tsx");
+let result = obj132.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSyncer.tsx");
 
 export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
   sources = sources.sources;
@@ -66,19 +66,11 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
     let num2 = 0;
     if (0 < arr.length) {
       do {
-        let tmp = sources;
-        let tmp2 = onEndReached;
         let obj = sources(onEndReached[9]);
         let size = obj.flattenSource(arr[num]);
-        let tmp3 = num;
-        let tmp4 = num2;
         if (null != size) {
           let _Math = Math;
           let _Math2 = Math;
-          let tmp7 = closure_1_6;
-          let tmp8 = closure_1_7;
-          let tmp9 = closure_1_8;
-          let tmp10 = closure_1_5;
           let sum = num2 + (Math.max(Math.min(size.width * (closure_1_6 / size.height), closure_1_7), closure_1_8) + 2 * closure_1_5);
           let num3 = 0;
           if (0 !== num) {
@@ -137,8 +129,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         let width = size.width;
         const rect = items(selectedIndex[6])();
         let obj2 = arr(selectedIndex[4]);
-        obj = { onBeginDrag: fn, onEndDrag: null, onScroll: null, onMomentumBegin: null, onMomentumEnd: null };
-        fn = function y() {
+        let fn = function y() {
           const result = mapped.set(2 | mapped.get());
           const result1 = store.set("thumbnails");
         };
@@ -238,13 +229,13 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         R.__initData = closure_1_15;
         obj[4] = R;
         items = [animatedRef];
-        const callback = closure_1_4.useCallback((arg0) => {
+        const callback = memo.useCallback((arg0) => {
           if (!diff1.get()) {
             const result = mapped1.set(arg0);
             const result1 = store.set("thumbnails");
           }
         }, []);
-        const callback1 = closure_1_4.useCallback((arg0) => {
+        const callback1 = memo.useCallback((arg0) => {
           arr(selectedIndex[4]).scrollTo(animatedRef, maxIndex[arg0].scrollStart, 0, true);
         }, items);
         let obj6 = arr(selectedIndex[4]);
@@ -260,7 +251,7 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         fn2.__initData = closure_1_16;
         let derivedValue = obj6.useDerivedValue(fn2);
         let items1 = [animatedRef];
-        const callback2 = closure_1_4.useCallback((arg0) => {
+        const callback2 = memo.useCallback((arg0) => {
           const result = arr(selectedIndex[8]).lerpVarWidthThumbnailScrollBounds(closure_1, arg0);
           const obj = arr(selectedIndex[8]);
           arr(selectedIndex[4]).scrollTo(animatedRef, result, 0, false);
@@ -295,9 +286,9 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         Z.__workletHash = 10477949154269;
         Z.__initData = closure_1_17;
         let derivedValue1 = obj8.useDerivedValue(Z);
-        mapped = arr.map((arg0, arg1) => arg1);
-        mapped1 = arr.map((closure_1) => {
-          const size = onSelect(animatedRef[9]).flattenSource(closure_1);
+        mapped = arr.map((item, index) => index);
+        mapped1 = arr.map((item, index) => {
+          const size = onSelect(animatedRef[9]).flattenSource(item);
           let num = 0;
           if (null != size) {
             const _Math = Math;
@@ -353,27 +344,27 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
         ne.__workletHash = 10532164558483;
         ne.__initData = closure_1_20;
         const animatedStyle1 = onSelect(selectedIndex[4]).useAnimatedStyle(ne);
-        const callback3 = closure_1_4.useCallback((width, index) => {
+        const callback3 = memo.useCallback((width, index) => {
           onSelect = index;
-          let obj = onSelect(animatedRef[4]);
+          onSelect(animatedRef[4]);
           const fn = function i() {
             items = [index - 1, index, index + 1];
-            return index(animatedRef[4]).interpolate(closure_1_6.get(), items, [0.4, 1, 0.4], "clamp");
+            return index(animatedRef[4]).interpolate(derivedValue2.get(), items, [0.4, 1, 0.4], "clamp");
           };
-          obj = { interpolate: onSelect(animatedRef[4]).interpolate, viewerPos: derivedValue2, index };
+          let obj = { interpolate: onSelect(animatedRef[4]).interpolate, viewerPos: derivedValue2, index };
           fn.__closure = obj;
           fn.__workletHash = 5784737783661;
           fn.__initData = closure_1_21;
           const derivedValue = obj.useDerivedValue(fn);
           const bound = Math.max(Math.min(width.width * (derivedValue2 / width.height), diff), diff1);
           const fn2 = function l() {
-            if (closure_1_4.get() > 0) {
+            if (mapped.get() > 0) {
               let interpolateResult = diff1;
             } else {
               const obj = index(animatedRef[4]);
               items = [index - 1, index, index + 1];
               const items1 = [diff1, bound, diff1];
-              interpolateResult = obj.interpolate(closure_1_6.get(), items, items1, "clamp");
+              interpolateResult = obj.interpolate(derivedValue2.get(), items, items1, "clamp");
             }
             return interpolateResult;
           };
@@ -571,11 +562,11 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
           onContentSizeChange: callback,
           useItemVisible: closure_1_4.useCallback((index) => {
             closure_0 = index;
-            const tmp = sharedValue(closure_1_4.useState(index === memo.get()), 2);
+            let tmp = sharedValue(closure_1_4.useState(index === memo.get()), 2);
             closure_1 = tmp2;
-            let obj = animatedRef(memo[4]);
+            animatedRef(memo[4]);
             const fn = function o() {
-              return closure_0 === closure_1_2.get();
+              return closure_0 === memo.get();
             };
             fn.__closure = { index, selectedIndex: memo };
             fn.__workletHash = 16337538404179;
@@ -585,8 +576,9 @@ export const useMediaViewerSyncer = function useMediaViewerSyncer(sources) {
                 animatedRef(memo[4]).runOnJS(closure_1)(arg0);
                 const obj = animatedRef(memo[4]);
               }
+              tmp = null != arg1 && arg1 !== arg0;
             };
-            obj = { runOnJS: animatedRef(memo[4]).runOnJS, setVisible: tmp2 };
+            let obj = { runOnJS: animatedRef(memo[4]).runOnJS, setVisible: tmp2 };
             fn2.__closure = obj;
             fn2.__workletHash = 17035713313425;
             fn2.__initData = closure_1_34;

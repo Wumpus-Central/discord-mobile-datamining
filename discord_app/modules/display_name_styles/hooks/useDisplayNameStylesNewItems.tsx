@@ -1,12 +1,12 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import closure_3 from "../DisplayNameStylesSeenStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import set from "../DisplayNameStylesSeenStore.tsx";
 import items3 from "../DisplayNameStylesConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
+const require = fn;
 ({ FLYWHEEL_EFFECTS: c4, FLYWHEEL_FONTS: c5 } = items3);
-let result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx");
+let result = require("obj132").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx");
 
 export const useDisplayNameStylesNewFonts = function useDisplayNameStylesNewFonts(visibleFontOrder) {
   const _require = visibleFontOrder;
@@ -14,10 +14,10 @@ export const useDisplayNameStylesNewFonts = function useDisplayNameStylesNewFont
   const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => seenFonts.getSeenFonts());
   obj = {
-    dotFontIds: React.useMemo(() => new Set(visibleFontOrder.filter((arg0) => {
-      let hasItem = closure_1_5.includes(arg0);
+    dotFontIds: React.useMemo(() => new Set(visibleFontOrder.filter((item, index) => {
+      let hasItem = closure_1_5.includes(item);
       if (hasItem) {
-        hasItem = !set.has(arg0);
+        hasItem = !set.has(item);
       }
       return hasItem;
     })), items1),
@@ -34,10 +34,10 @@ export const useDisplayNameStylesNewEffects = function useDisplayNameStylesNewEf
   const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => seenEffects.getSeenEffects());
   obj = {
-    dotEffectIds: React.useMemo(() => new Set(visibleEffectOrder.filter((arg0) => {
-      let hasItem = closure_1_4.includes(arg0);
+    dotEffectIds: React.useMemo(() => new Set(visibleEffectOrder.filter((item, index) => {
+      let hasItem = closure_1_4.includes(item);
       if (hasItem) {
-        hasItem = !set.has(arg0);
+        hasItem = !set.has(item);
       }
       return hasItem;
     })), items1),
@@ -50,12 +50,12 @@ export const useDisplayNameStylesNewEffects = function useDisplayNameStylesNewEf
 };
 export const useDisplayNameStylesNewFontsBadge = function useDisplayNameStylesNewFontsBadge(visibleFontOrder) {
   const _require = visibleFontOrder;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const items1 = [visibleFontOrder];
   const stateFromStores = obj.useStateFromStores(items, () => newFontsBadgeDismissed.getNewFontsBadgeDismissed());
   obj = {
-    showFontsBadge: React.useMemo(() => visibleFontOrder.some((arg0) => closure_5.includes(arg0)), items1) && !stateFromStores,
+    showFontsBadge: React.useMemo(() => visibleFontOrder.some((item, index) => closure_5.includes(item)), items1) && !stateFromStores,
     dismissFontsBadge: React.useCallback(() => {
       const result = visibleFontOrder(table[4]).markDisplayNameStyleNewFontsBadgeDismissed();
     }, [])
@@ -64,12 +64,12 @@ export const useDisplayNameStylesNewFontsBadge = function useDisplayNameStylesNe
 };
 export const useDisplayNameStylesNewEffectsBadge = function useDisplayNameStylesNewEffectsBadge(visibleEffectOrder) {
   const _require = visibleEffectOrder;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const items1 = [visibleEffectOrder];
   const stateFromStores = obj.useStateFromStores(items, () => newEffectsBadgeDismissed.getNewEffectsBadgeDismissed());
   obj = {
-    showEffectsBadge: React.useMemo(() => visibleEffectOrder.some((arg0) => closure_4.includes(arg0)), items1) && !stateFromStores,
+    showEffectsBadge: React.useMemo(() => visibleEffectOrder.some((item, index) => closure_4.includes(item)), items1) && !stateFromStores,
     dismissEffectsBadge: React.useCallback(() => {
       const result = visibleEffectOrder(table[4]).markDisplayNameStyleNewEffectsBadgeDismissed();
     }, [])

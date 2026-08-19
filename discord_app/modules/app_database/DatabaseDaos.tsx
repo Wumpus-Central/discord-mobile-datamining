@@ -1,12 +1,13 @@
 // discord_app/modules/app_database/DatabaseDaos.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../stores/AuthenticationStore.tsx";
+import databaseNameDefault from "system/DatabaseManager.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
 
-const require = arg1;
-const items = [require("module_1956").TableId.KvCache, "guild_basic_channels"];
+const require = fn;
+const items = [require("../../../discord_common/js/packages/kv-storage/js/index.tsx").TableId.KvCache, "guild_basic_channels"];
 const items1 = [items, ];
-const items2 = [require("module_1956").TableId.KvCache, "basic_channels_stale"];
+const items2 = [require("../../../discord_common/js/packages/kv-storage/js/index.tsx").TableId.KvCache, "basic_channels_stale"];
 items1[1] = items2;
 const Store = initializeDefault.Store;
 class DatabaseDaos extends Store {
@@ -27,8 +28,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.channels = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -43,8 +43,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.channelsTemp = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -59,8 +58,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.basicChannels = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -75,8 +73,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.syncedBasicChannels = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -91,8 +88,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.cache = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -107,8 +103,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.forceResyncVersion = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -123,8 +118,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.emojis = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -139,8 +133,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.guilds = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -155,8 +148,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.guildsRequiringDeletedIdsSync = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -171,8 +163,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.guildsRequiringChannelSync = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -187,8 +178,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.messages = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -203,8 +193,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.stickers = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -219,8 +208,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.guildVersions = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -235,8 +223,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.nonGuildVersions = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -251,8 +238,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.userSettings = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -267,8 +253,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.readStates = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -283,8 +268,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.userGuildSettings = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -299,8 +283,7 @@ class DatabaseDaos extends Store {
     applyArgumentsResult.userSearchItems = (arg0) => {
       let databaseResult = arg0;
       if (arg0 == null) {
-        databaseResult = closure_1_1(closure_1_2[3]).database(closure_1_3.getId());
-        const obj = closure_1_1(closure_1_2[3]);
+        databaseResult = databaseNameDefault.database(closure_1_3.getId());
       }
       let tmp5 = null;
       if (null != databaseResult) {
@@ -372,7 +355,7 @@ DatabaseDaos.prototype["initialize"] = function initialize() {
   this.waitFor(closure_3);
 };
 const databaseDaos = new DatabaseDaos(dispatcherDefault, {});
-let result = require("set").fileFinishedImporting("modules/app_database/DatabaseDaos.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_database/DatabaseDaos.tsx");
 
 export default databaseDaos;
 export const DEPRECATED_KEYSPACES = items1;

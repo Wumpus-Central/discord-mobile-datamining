@@ -1,12 +1,15 @@
 // discord_app/modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx
 import getSystemLocale from "../../../../../intl/index.native.tsx";
+import combinedDefault from "../../../../../utils/HelpdeskUtils.tsx";
 import resultDefault from "../resolveMessageContentColors.tsx";
 import getMessageAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
-import closure_3 from "../../../../applications/ApplicationStore.tsx";
+import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
+import createCommonMessageDefault from "createCommonMessage.tsx";
+import addApplication from "../../../../applications/ApplicationStore.tsx";
 import { HelpdeskArticles } from "../../../../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");
 
 export const createInGameMessageNuxSystemMessage = function createInGameMessageNuxSystemMessage(message) {
   message = message.message;
@@ -27,16 +30,16 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = roleStyle;
-    obj[1] = tmp(8187)(obj);
+    obj[1] = formatUsernameOnClickDefault(obj);
     obj[2] = application.name;
     obj1 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
-    obj1[1] = tmp(1993).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
+    obj1[1] = combinedDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
     obj1[2] = tmp3.linkColor;
     obj[3] = obj1;
     const obj2 = { content: null };
     const intl = getSystemLocale.intl;
     obj2[0] = intl.formatToParts(getSystemLocale.t["92erOB"], obj);
-    const merged = Object.assign(tmp(8188)(message));
+    const merged = Object.assign(createCommonMessageDefault(message));
     return obj2;
   }
   tmp3 = resultDefault(theme);

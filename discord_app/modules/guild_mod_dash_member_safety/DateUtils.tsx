@@ -1,5 +1,5 @@
 // discord_app/modules/guild_mod_dash_member_safety/DateUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import getTimestampStringDefault from "../threads/getTimestampString.tsx";
 
@@ -10,7 +10,7 @@ function getAccountAgeDateFormatter() {
   return { hours: getSystemLocale.t.JZP2Rs, days: getSystemLocale.t["3moSHc"], months: getSystemLocale.t["0Ddwr1"], years: getSystemLocale.t.cR7lcs };
 }
 const obj = { JOINED_AT: 0, [0]: "JOINED_AT", ACCOUNT_AGE: 1, [1]: "ACCOUNT_AGE" };
-const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
 
 export const ACCOUNT_AGE_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };
 export const MEMBER_JOIN_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };

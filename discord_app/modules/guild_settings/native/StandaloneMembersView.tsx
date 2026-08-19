@@ -1,16 +1,14 @@
 // discord_app/modules/guild_settings/native/StandaloneMembersView.tsx
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let closure_5 = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/StandaloneMembersView.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/StandaloneMembersView.tsx");
 
 export default function StandaloneMembersView(guildId) {
   guildId = guildId.guildId;
-  importDefault = undefined;
-  dependencyMap = undefined;
   let obj = guildId(1500);
   importDefault = obj.useNavigation();
   const items = [guildId];
@@ -29,7 +27,7 @@ export default function StandaloneMembersView(guildId) {
       return callback(guildId(6314).NavigatorHeader, obj);
     },
     render() {
-      return closure_1_4(navigation(15825), { guildId });
+      return jsx(navigation(15825), { guildId });
     }
   };
   obj[constants.MAIN] = obj1;
@@ -37,7 +35,7 @@ export default function StandaloneMembersView(guildId) {
     render(arg0) {
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(dependencyMap);
-      return closure_1_4(guildId(11016).GuildSettingsModalMemberEditScene, { guildId });
+      return jsx(guildId(11016).GuildSettingsModalMemberEditScene, { guildId });
     }
   };
   obj[constants.MEMBER_KICK] = {
@@ -47,7 +45,7 @@ export default function StandaloneMembersView(guildId) {
     render(arg0) {
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(dependencyMap);
-      return closure_1_4(navigation(11029), { guildId });
+      return jsx(navigation(11029), { guildId });
     }
   };
   obj[constants.MEMBER_BAN] = {
@@ -57,7 +55,7 @@ export default function StandaloneMembersView(guildId) {
     render(arg0) {
       const merged = Object.assign(arg0);
       const merged1 = Object.assign(dependencyMap);
-      return closure_1_4(navigation(11031), { guildId });
+      return jsx(navigation(11031), { guildId });
     }
   };
   const obj2 = { screens: obj, initialRouteName: constants.MAIN, headerBackTitle: null };

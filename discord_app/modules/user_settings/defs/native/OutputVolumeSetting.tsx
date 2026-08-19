@@ -3,11 +3,11 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import trackDeviceChangedDefault from "../../../../actions/AudioActionCreators.tsx";
 import apexExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
-import closure_3 from "../../../../stores/MediaEngineStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import _detectH265HardwareDecode from "../../../../stores/MediaEngineStore.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.xPHVBs);
@@ -31,6 +31,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
 
 export default createToggle;

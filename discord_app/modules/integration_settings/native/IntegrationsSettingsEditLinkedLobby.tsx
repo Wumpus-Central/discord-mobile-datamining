@@ -1,27 +1,24 @@
 // discord_app/modules/integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { screenContainer: null, header: null, divider: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", marginTop: 8, marginBottom: 32, gap: 12 };
 createCacheKey[2] = { height: 1, width: 48, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: 1, width: 48, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
-const result = require("set").fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx");
+const result = require("obj132").fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx");
 
 export default function EditLinkedLobby(channel) {
   channel = channel.channel;
   const numScreensToPop = channel.numScreensToPop;
   let navigation;
-  let analyticsLocations;
   let linked_at;
   let stateFromStores;
   let callback1;
@@ -30,7 +27,7 @@ export default function EditLinkedLobby(channel) {
   const tmp5 = callback();
   obj1 = channel(navigation[7]);
   navigation = obj1.useNavigation();
-  analyticsLocations = numScreensToPop(navigation[8])(numScreensToPop(navigation[9]).EDIT_CHANNEL_SYNCING).analyticsLocations;
+  const analyticsLocations = numScreensToPop(navigation[8])(numScreensToPop(navigation[9]).EDIT_CHANNEL_SYNCING).analyticsLocations;
   let obj2 = channel(navigation[10]);
   let linkedLobby = channel.linkedLobby;
   let application_id;
@@ -84,13 +81,13 @@ export default function EditLinkedLobby(channel) {
       return null;
     } else {
       const _Date = Date;
-      const date = new Date(tmp);
+      const date = new Date(linked_at);
       if (null != stateFromStores) {
         const intl2 = channel(navigation[15]).intl;
         let obj = { username: null, usernameHook: null, linkedAtDate: null };
         obj[0] = tmp17.username;
         obj[1] = function usernameHook(children) {
-          return closure_1_6(closure_1_0(closure_1_2[16]).Text, { onPress: closure_6, variant: "text-sm/semibold", color: "text-strong", children }, arg1);
+          return callback1(channel(navigation[16]).Text, { onPress: closure_6, variant: "text-sm/semibold", color: "text-strong", children }, arg1);
         };
         obj[2] = date;
         let formatResult = intl2.format(channel(navigation[15]).t.uV2AkA, obj);
@@ -135,11 +132,11 @@ export default function EditLinkedLobby(channel) {
       obj8[2] = memo;
       items5[1] = tmp19(tmp(tmp2[16]).Text, obj8);
       obj6[0] = items5;
-      tmp20Result = tmp20(closure_7, obj6);
+      tmp20Result = callback(closure_7, obj6);
     }
     items4[2] = tmp20Result;
     obj2[1] = items4;
-    const items6 = [closure_8(linked_at, obj2), , ];
+    const items6 = [callback(linked_at, obj2), , ];
     const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
     let intl = tmp(tmp2[15]).intl;
     const obj10 = { channelName: null };
@@ -154,7 +151,7 @@ export default function EditLinkedLobby(channel) {
     obj11[1] = callback1(tmp(tmp2[22]).TableRow, obj12);
     items6[2] = callback1(tmp(tmp2[21]).TableRowGroup, obj11);
     obj[2] = items6;
-    obj[2] = closure_8(tmp(tmp2[18]).Stack, obj);
+    obj[2] = callback(tmp(tmp2[18]).Stack, obj);
     tmp19Result = tmp19(tmp(tmp2[17]).Form, obj);
   }
   return tmp19Result;

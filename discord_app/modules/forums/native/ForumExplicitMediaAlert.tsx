@@ -3,29 +3,24 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, title: null, body: null, buttonContainer: null, text: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16, alignItems: "stretch" };
+const createCacheKey = { padding: ThemesDefault.space.PX_16, alignItems: "stretch" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_16 };
-let obj1 = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_16 };
-let obj2 = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { marginVertical: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { textAlign: "center" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginVertical: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/forums/native/ForumExplicitMediaAlert.tsx");
+let result = require("obj132").fileFinishedImporting("modules/forums/native/ForumExplicitMediaAlert.tsx");
 
 export default function ForumExplicitMediaAlert(arg0) {
   ({ channelId: require, messageId: importDefault, onClose } = arg0);
   const tmp = callback3();
-  let obj = { noDefaultButtons: true, style: tmp.container, onClose, children: null };
-  obj = { accessibilityRole: "header", variant: "heading-md/extrabold", color: "text-default", style: items, children: null };
+  let obj = { accessibilityRole: "header", variant: "heading-md/extrabold", color: "text-default", style: items, children: null };
   items = [, ];
   ({ title: arr[0], text: arr[1] } = tmp);
   const intl = require(onClose[7]).intl;
@@ -49,7 +44,7 @@ export default function ForumExplicitMediaAlert(arg0) {
   obj3[3] = intl4.format(require(onClose[7]).t["APQGZ+"], {
     handleFalsePositiveHook() {
       onClose();
-      const result = closure_1_0(onClose[9]).handleSenderFalsePositiveFlow(closure_0, closure_1);
+      const result = require(onClose[9]).handleSenderFalsePositiveFlow(closure_0, closure_1);
     }
   });
   items1[3] = callback(require(onClose[6]).Text, obj3);

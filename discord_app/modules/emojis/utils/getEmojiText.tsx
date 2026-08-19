@@ -1,7 +1,7 @@
 // discord_app/modules/emojis/utils/getEmojiText.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/emojis/utils/getEmojiText.tsx");
+const result = obj132.fileFinishedImporting("modules/emojis/utils/getEmojiText.tsx");
 
 export default function getEmojiText(id) {
   if (null == id.id) {

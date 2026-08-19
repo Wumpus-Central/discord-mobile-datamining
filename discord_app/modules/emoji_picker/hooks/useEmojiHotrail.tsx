@@ -1,8 +1,8 @@
 // discord_app/modules/emoji_picker/hooks/useEmojiHotrail.tsx
-import closure_0 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { EMOJI_ROW_SIZE } from "../EmojiPickerConstants.tsx";
 
-const result = require("set").fileFinishedImporting("modules/emoji_picker/hooks/useEmojiHotrail.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emoji_picker/hooks/useEmojiHotrail.tsx");
 
 export default function useEmojiHotrail(arg0) {
   const React = arg0;
@@ -10,7 +10,7 @@ export default function useEmojiHotrail(arg0) {
   return React.useMemo(() => {
     ({ topEmojis, newlyAddedEmojis, rowSize } = closure_0);
     if (rowSize === undefined) {
-      rowSize = closure_1_1;
+      rowSize = EMOJI_ROW_SIZE;
     }
     const substr = topEmojis.slice(0, rowSize - newlyAddedEmojis.length);
     return { visibleTopEmojis: substr, visibleNewlyAddedEmojis: newlyAddedEmojis, allEmojis: substr.concat(newlyAddedEmojis) };

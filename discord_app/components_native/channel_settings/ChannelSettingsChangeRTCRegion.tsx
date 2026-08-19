@@ -4,17 +4,16 @@ import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import getSystemLocale from "../../intl/index.native.tsx";
 import Form from "../../design/void/Form/native/index.tsx";
 import TableRadioRow from "../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import closure_3 from "../../../_runtime/00853__toArray.js";
-import closure_4 from "../../stores/ChannelStore.tsx";
-import closure_5 from "../../stores/RegionStore.tsx";
+import _toArray from "../../../_runtime/00853__toArray.js";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import initialize from "../../stores/RegionStore.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importAllResult from "../../../_runtime/00019_noop.js";
 
-require = arg1;
+require = fn;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";
-createCacheKey = { form: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
@@ -36,11 +35,11 @@ class ChannelSettingsChangeRTCRegion extends PureComponent {
       items1 = [];
       num = 0;
       tmp4 = items1;
-      arraySpreadResult = HermesBuiltin.arraySpread(regions.filter((deprecated) => {
-        deprecated = deprecated.deprecated;
+      arraySpreadResult = HermesBuiltin.arraySpread(regions.filter((item, index) => {
+        const deprecated = item.deprecated;
         let tmp = !deprecated;
         if (!deprecated) {
-          tmp = !deprecated.hidden;
+          tmp = !item.hidden;
         }
         return tmp;
       }), 0);
@@ -48,7 +47,7 @@ class ChannelSettingsChangeRTCRegion extends PureComponent {
       tmp7 = items1;
       tmp8 = items;
       applyResult = HermesBuiltin.apply(items1, items);
-      found = regions.find((id) => id.id === applyArgumentsResult.props.channel.rtcRegion);
+      found = regions.find((item, index) => item.id === applyArgumentsResult.props.channel.rtcRegion);
       id = undefined;
       if (found != null) {
         id = found.id;
@@ -65,8 +64,7 @@ class ChannelSettingsChangeRTCRegion extends PureComponent {
 }
 const prototype = ChannelSettingsChangeRTCRegion.prototype;
 prototype["handleSetRegion"] = function handleSetRegion(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   let tmp = arg0;
   c0 = arg0;
   let tmp2 = arg0;
@@ -80,8 +78,8 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
   }
   self(8132).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
-    let obj = self(closure_1_2[9]);
-    obj = { rtcRegion: c0 };
+    self(dependencyMap[9]);
+    const obj = { rtcRegion: c0 };
     obj.saveChannel(self.props.channel.id, obj);
   });
 };
@@ -106,7 +104,7 @@ prototype["render"] = function render() {
   return jsx(Form.Form, { style: callback2(this.context).form, children: this.renderRegions() });
 };
 ChannelSettingsChangeRTCRegion.contextType = require("ManaContext").ThemeContext;
-const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
 
 export default function ConnectedChannelSettingsChangeRTCRegion(channelId) {
   channelId = channelId.channelId;

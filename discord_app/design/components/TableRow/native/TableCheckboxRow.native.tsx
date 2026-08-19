@@ -1,9 +1,9 @@
 // discord_app/design/components/TableRow/native/TableCheckboxRow.native.tsx
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
 
 export const TableCheckboxRow = function TableCheckboxRow(checked) {
   checked = checked.checked;
@@ -13,9 +13,8 @@ export const TableCheckboxRow = function TableCheckboxRow(checked) {
   }
   const onPress = checked.onPress;
   const merged = Object.assign(checked, Object.create(null));
-  let sharedValue;
   let obj = checked(onPress[2]);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
   const items = [sharedValue];
   const items1 = [onPress, sharedValue, checked];
   const callback = sharedValue.useCallback(() => {

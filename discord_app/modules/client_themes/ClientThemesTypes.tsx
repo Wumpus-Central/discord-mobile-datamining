@@ -1,19 +1,18 @@
 // discord_app/modules/client_themes/ClientThemesTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import _modDef1208 from "../../utils/SentryUtils.native.tsx";
 import SystemThemeState from "../user_settings/ThemeConstants.tsx";
 import _mod1350 from "../../../discord_common/js/packages/design/shared.tsx";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 
 let closure_3 = SystemThemeState.PROTO_THEME_MAP_WEB_REFRESH;
-const result = set.fileFinishedImporting("modules/client_themes/ClientThemesTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/client_themes/ClientThemesTypes.tsx");
 
 export const ClientThemeType = _mod1350.ClientThemeType;
 export const getProtoThemeFromBaseTheme = function getProtoThemeFromBaseTheme(arg0) {
   const _require = arg0;
   const entries = Object.entries(closure_3);
-  const found = entries.find((arg0) => {
-    [, tmp] = arg0;
+  const found = entries.find((item, index) => {
+    [, tmp] = item;
     return tmp === closure_0;
   });
   if (undefined === found) {
@@ -21,8 +20,7 @@ export const getProtoThemeFromBaseTheme = function getProtoThemeFromBaseTheme(ar
     const _HermesInternal = HermesInternal;
     error = new Error("No ProtoTheme found for base theme: " + arg0);
     _modDef1208.captureException(error);
-    let UNSET = _create.Theme.UNSET;
-    const obj = _modDef1208;
+    let UNSET = require("../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx").Theme.UNSET;
   } else {
     const _parseInt = parseInt;
     UNSET = parseInt(found[0]);

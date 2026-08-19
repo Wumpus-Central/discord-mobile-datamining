@@ -2,20 +2,19 @@
 import useVoiceStateForRemoteSessionDefault from "../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import useIsInvitedToSpeakDefault from "../../stage_channels/useIsInvitedToSpeak.tsx";
 import useMyCurrentStageChannelDefault from "../../stage_channels/useMyCurrentStageChannel.tsx";
-import closure_3 from "../../../stores/ChannelStore.tsx";
-import closure_4 from "../../../stores/RTCConnectionStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import createRTCConnection from "../../../stores/RTCConnectionStore.tsx";
 import { RTC_PANEL_HEIGHT } from "ConnectivityConstants.tsx";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "../../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/connectivity/native/useGlobalStatusIndicatorState.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/connectivity/native/useGlobalStatusIndicatorState.tsx");
 
 export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorState(flag) {
   if (flag === undefined) {
     flag = false;
   }
   let stateFromStores;
-  importDefault = undefined;
   let obj = stateFromStores(8687);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
@@ -24,7 +23,6 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   const tmp7 = useIsInvitedToSpeakDefault();
   importDefault = tmp7;
   const obj2 = stateFromStores(589);
-  const tmp4 = importDefault;
   const items1 = [closure_3];
   const items2 = [stateFromStores, tmp7];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => {

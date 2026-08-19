@@ -1,10 +1,10 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import nameFromUser from "../../../../utils/UserUtils.tsx";
 import usePremiumGroupMembershipDefault from "usePremiumGroupMembership.tsx";
 import usePremiumGroupMembersDefault from "usePremiumGroupMembers.tsx";
 
-const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 
 export default function usePremiumGroupPrimaryName() {
   let obj = arg0;
@@ -39,7 +39,6 @@ export default function usePremiumGroupPrimaryName() {
       primary1 = premiumGroupMembers.primary;
     }
     nameFromUserResult = nameFromUser.nameFromUser(primary1);
-    const obj2 = nameFromUser;
   }
   return nameFromUserResult;
 };

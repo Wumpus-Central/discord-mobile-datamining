@@ -1,12 +1,12 @@
 // discord_app/modules/panels/morphable/native/MorphablePanelConstants.tsx
-import set from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../utils/PlatformUtils.tsx";
 
-set = set.isIOS();
-const result = set.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelConstants.tsx");
+obj132.isIOS();
+const result = obj132.fileFinishedImporting("modules/panels/morphable/native/MorphablePanelConstants.tsx");
 
 export const MIN_PAN_GESTURE_MOVE = 10;
 export const PANEL_TAP_GESTURE_MAX_DISTANCE = 30;
-export const IS_IOS = set;
+export const IS_IOS = obj132;
 export const PIP_POP_HEIGHT = 140;
 export const PIP_WINDOW_OFFSET = 16;
 export const MIN_PIP_TOSS_VELOCITY = 500;

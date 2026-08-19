@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/GiftCardWallet3dIllustration-2x.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftCardWallet3dIllustration-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftCardWallet3dIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/28806ab227838115d23bdff07c39baf68e2a292c2f3005c0cb916dd866fb7daf.png";
 export const metadata = { fileBytes: 126721 };

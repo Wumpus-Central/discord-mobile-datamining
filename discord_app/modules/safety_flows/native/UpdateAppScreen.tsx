@@ -1,5 +1,5 @@
 // discord_app/modules/safety_flows/native/UpdateAppScreen.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import messagesProxyDefault from "../SafetyFlows.messages.js";
@@ -11,18 +11,15 @@ import createCacheKey from "../../../design/components/Styles/native/createStyle
 
 ({ NativeModules: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let obj = { container: null, buttonContainer: null };
-obj = { flexDirection: "column", justifyContent: "center", gap: ThemesDefault.space.PX_8 };
+let obj = { flexDirection: "column", justifyContent: "center", gap: ThemesDefault.space.PX_8 };
 obj[0] = obj;
 obj[1] = { marginTop: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = { marginTop: ThemesDefault.space.PX_8 };
-const result = set.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
+const result = obj132.fileFinishedImporting("modules/safety_flows/native/UpdateAppScreen.tsx");
 
 export default function UpdateAppScreen() {
   const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { variant: "heading-lg/semibold", children: null };
+  let obj = { variant: "heading-lg/semibold", children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(messagesProxyDefault.yxqMCD);
   const items = [callback(Text.Text, obj), , ];

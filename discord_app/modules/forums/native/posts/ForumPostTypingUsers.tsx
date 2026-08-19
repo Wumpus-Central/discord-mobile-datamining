@@ -3,45 +3,36 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, lastTypingUser: { marginEnd: 0 }, typingUser: null, dots: null, typingText: null, borderColor: null, borderColorPressed: null };
-createCacheKey = { marginEnd: -8, borderWidth: 2, borderRadius: ThemesDefault.radii.round };
+const createCacheKey = { marginEnd: -8, borderWidth: 2, borderRadius: ThemesDefault.radii.round };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: ThemesDefault.space.PX_4, paddingLeft: 4, borderRadius: ThemesDefault.radii.lg, marginStart: -8, borderWidth: 4, marginEnd: 8, marginTop: -1, marginBottom: -1 };
 createCacheKey[4] = { flexShrink: 1 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: ThemesDefault.space.PX_4, paddingLeft: 4, borderRadius: ThemesDefault.radii.lg, marginStart: -8, borderWidth: 4, marginEnd: 8, marginTop: -1, marginBottom: -1 };
 createCacheKey[5] = { color: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
-let obj2 = { color: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
 createCacheKey[6] = { color: ThemesDefault.colors.CARD_PRIMARY_PRESSED_BG };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let closure_7 = { code: "function ForumPostTypingUsersTsx1(){const{forumPostPressedIn,borderColorPressed,borderColor}=this.__closure;return{borderColor:forumPostPressedIn.value?borderColorPressed:borderColor};}" };
-const obj3 = { color: ThemesDefault.colors.CARD_PRIMARY_PRESSED_BG };
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostTypingUsers.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/posts/ForumPostTypingUsers.tsx");
 
 export default function ForumPostTypingUsers(hasUnreads) {
   ({ thread, typingUserIds } = hasUnreads);
-  let _require;
-  let facepileUsers;
   let color;
-  let color2;
-  let forumPostContainerPressedIn;
-  let animatedStyle;
   let guildId;
   const tmp = guildId();
-  _require = tmp;
+  const _require = tmp;
   let obj = _require(color[5]);
-  facepileUsers = obj.useFacepileUsers(thread, typingUserIds);
+  const facepileUsers = obj.useFacepileUsers(thread, typingUserIds);
   obj = { channelId: thread.id, guildId: thread.getGuildId(), typingUserIds };
   color = tmp.borderColor.color;
-  color2 = tmp.borderColorPressed.color;
+  const color2 = tmp.borderColorPressed.color;
   const tmp4 = facepileUsers;
   const tmp5 = facepileUsers(color[6]);
   let obj2 = _require(color[7]);
-  forumPostContainerPressedIn = obj2.useForumPostContainerPressedIn();
+  const forumPostContainerPressedIn = obj2.useForumPostContainerPressedIn();
   const tmp5Result = facepileUsers(color[6])(obj);
   const fn = function _() {
     return { borderColor: forumPostContainerPressedIn.value ? color2 : color };
@@ -49,7 +40,7 @@ export default function ForumPostTypingUsers(hasUnreads) {
   fn.__closure = { forumPostPressedIn: forumPostContainerPressedIn, borderColorPressed: color2, borderColor: color };
   fn.__workletHash = 6320844933544;
   fn.__initData = closure_7;
-  animatedStyle = _require(color[8]).useAnimatedStyle(fn);
+  const animatedStyle = _require(color[8]).useAnimatedStyle(fn);
   let str = "text-muted";
   if (hasUnreads.hasUnreads) {
     str = "text-default";
@@ -62,17 +53,16 @@ export default function ForumPostTypingUsers(hasUnreads) {
       obj = { style: null, children: null };
       obj[0] = tmp.container;
       let items = [
-        facepileUsers.map((getAvatarSource) => {
+        facepileUsers.map((item, index) => {
               const items = [lib.typingUser, animatedStyle, ];
-              let lastTypingUser = arg1 === facepileUsers.length - 1;
+              let lastTypingUser = index === facepileUsers.length - 1;
               if (lastTypingUser) {
                 lastTypingUser = lib.lastTypingUser;
               }
-              let obj = { style: items, children: null };
               items[2] = lastTypingUser;
-              obj = { source: getAvatarSource.getAvatarSource(guildId), size: lib(tmp2[9]).AvatarSizes.SIZE_16 };
+              const obj = { source: item.getAvatarSource(guildId), size: lib(color[9]).AvatarSizes.SIZE_16 };
               obj[1] = forumPostContainerPressedIn(lib(color[9]).Avatar, obj);
-              return forumPostContainerPressedIn(facepileUsers(color[8]).View, obj, getAvatarSource.id);
+              return forumPostContainerPressedIn(facepileUsers(color[8]).View, obj, item.id);
             }),
   ,
 

@@ -1,16 +1,15 @@
 // discord_app/modules/color_picker/native/SaturationValueColorPicker.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import LinearGradientDefault from "../../../../_runtime/04756_LinearGradient.js";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function ColorBox(hue) {
   hue = hue.hue;
-  importDefault = undefined;
   ({ colorBoxStyle, colorBoxInnerStyle } = hue);
   const tmp = callback3();
   const tmp2 = callback(React.useState("rgb(0,0,0)"), 2);
@@ -30,9 +29,9 @@ function ColorBox(hue) {
   const fn = function v(arg0, arg1) {
     if (arg0 !== arg1) {
       const _HermesInternal = HermesInternal;
-      const obj = hue(closure_1_2[6]);
-      hue(closure_1_2[6]).runOnJS(closure_1)("rgb(" + arg0[0] + ", " + arg0[1] + ", " + arg0[2] + ")");
-      const runOnJSResult = hue(closure_1_2[6]).runOnJS(closure_1);
+      const obj = hue(dependencyMap[6]);
+      hue(dependencyMap[6]).runOnJS(closure_1)("rgb(" + arg0[0] + ", " + arg0[1] + ", " + arg0[2] + ")");
+      const runOnJSResult = hue(dependencyMap[6]).runOnJS(closure_1);
     }
   };
   obj = { runOnJS: hue(4115).runOnJS, setColor: tmp3 };
@@ -51,8 +50,7 @@ function ColorBox(hue) {
   return callback2(tmp5, obj1);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { justifyContent: "center", alignItems: "center", position: "relative" }, selector: null, colorBox: null, colorBoxInner: null };
-createCacheKey = { top: 0, left: 0, position: "absolute", width: 24, height: 24, borderRadius: ThemesDefault.radii.md, borderWidth: 2 };
+const createCacheKey = { top: 0, left: 0, position: "absolute", width: 24, height: 24, borderRadius: ThemesDefault.radii.md, borderWidth: 2 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { overflow: "hidden", borderRadius: ThemesDefault.radii.xs };
 createCacheKey[3] = { minHeight: 240, minWidth: 240 };
@@ -62,49 +60,41 @@ let closure_10 = { code: "function SaturationValueColorPickerTsx2(result,previou
 let closure_12 = { code: "function setSatVal_SaturationValueColorPickerTsx3({x:x,y:y}){const{saturation,normalizeValue,width,value,height,onPanUpdate,runOnJS}=this.__closure;saturation.set(normalizeValue(x/width));value.set(1-normalizeValue(y/height));onPanUpdate!=null&&runOnJS(onPanUpdate)();}" };
 let closure_13 = { code: "function SaturationValueColorPickerTsx4(){const{onPanFinalize,runOnJS}=this.__closure;onPanFinalize!=null&&runOnJS(onPanFinalize)();}" };
 let closure_14 = { code: "function SaturationValueColorPickerTsx5(){const{hsvToRgbWorklet,hue,saturation,value,colorBoxWidth,colorBoxHeight}=this.__closure;const rgb=hsvToRgbWorklet({h:hue.get(),s:saturation.get(),v:value.get()});const bgRgb=hsvToRgbWorklet({h:hue.get(),s:0,v:Math.round(1-value.get())});return{backgroundColor:\"rgb(\"+rgb[0]+\", \"+rgb[1]+\", \"+rgb[2]+\")\",transform:[{translateX:colorBoxWidth*saturation.get()},{translateY:colorBoxHeight*(1-value.get())}],borderColor:\"rgb(\"+bgRgb[0]+\", \"+bgRgb[1]+\", \"+bgRgb[2]+\")\"};}" };
-let obj1 = { overflow: "hidden", borderRadius: ThemesDefault.radii.xs };
-let result = require("set").fileFinishedImporting("modules/color_picker/native/SaturationValueColorPicker.tsx");
+let result = require("obj132").fileFinishedImporting("modules/color_picker/native/SaturationValueColorPicker.tsx");
 
 export default function SaturationValueColorPicker(hue) {
   hue = hue.hue;
-  let saturation = hue;
-  saturation = hue.saturation;
   const value = hue.value;
-  let first = value;
   ({ onPanUpdate, onPanFinalize } = hue);
   let first1;
   onPanUpdate = undefined;
-  onPanFinalize = undefined;
-  let callback2;
-  let first2;
   let callback3;
   ({ style, colorBoxStyle, colorBoxInnerStyle, selectorStyle } = hue);
-  let tmp = callback3();
-  let tmp2 = first1(onPanUpdate.useState(0), 2);
-  first = tmp2[0];
+  const tmp = callback3();
+  const tmp2 = first1(onPanUpdate.useState(0), 2);
+  const first = tmp2[0];
   first1 = first;
   onPanUpdate = tmp2[1];
   const tmp4 = first1(onPanUpdate.useState(0), 2);
   first1 = tmp4[0];
   onPanFinalize = first1;
-  callback2 = tmp4[1];
+  const callback2 = tmp4[1];
   const tmp6 = first1(onPanUpdate.useState(0), 2);
-  first2 = tmp6[0];
+  const first2 = tmp6[0];
   callback3 = tmp6[1];
-  saturation = value;
+  const saturation = value;
   let items = [first, first1, saturation, value, onPanUpdate, onPanFinalize];
   const memo = onPanUpdate.useMemo(() => {
     function setSatVal(arg0) {
       ({ x, y } = arg0);
-      const result = closure_0.set(closure_1_0(closure_1_2[7]).normalizeValue(x / closure_2));
-      const obj = closure_1_0(closure_1_2[7]);
-      const tmp = closure_1_0;
-      const tmp2 = closure_1_2;
-      const result1 = closure_1.set(1 - closure_1_0(closure_1_2[7]).normalizeValue(y / closure_3));
+      const result = closure_0.set(saturation(first[7]).normalizeValue(x / closure_2));
+      const obj = saturation(first[7]);
+      const result1 = closure_1.set(1 - saturation(first[7]).normalizeValue(y / closure_3));
       if (null != closure_4) {
-        tmp(tmp2[6]).runOnJS(tmp5)();
-        const tmpResult = tmp(tmp2[6]);
+        saturation(first[6]).runOnJS(tmp5)();
+        const tmpResult = saturation(first[6]);
       }
+      const obj2 = saturation(first[7]);
     }
     let obj = { saturation, normalizeValue: saturation(first[7]).normalizeValue, width: first, value: saturation, height: first1, onPanUpdate, runOnJS: saturation(first[6]).runOnJS };
     setSatVal.__closure = obj;
@@ -115,8 +105,8 @@ export default function SaturationValueColorPicker(hue) {
     const onBeginResult = Gesture.Pan().onBegin(setSatVal);
     const fn = function o() {
       if (null != closure_5) {
-        closure_1_0(closure_1_2[6]).runOnJS(tmp)();
-        const obj = closure_1_0(closure_1_2[6]);
+        saturation(first[6]).runOnJS(tmp)();
+        const obj = saturation(first[6]);
       }
     };
     obj = { onPanFinalize, runOnJS: saturation(first[6]).runOnJS };

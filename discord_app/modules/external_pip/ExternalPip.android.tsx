@@ -1,5 +1,5 @@
 // discord_app/modules/external_pip/ExternalPip.android.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
@@ -65,6 +65,6 @@ prototype["isInPipMode"] = function isInPipMode() {
 let obj = Object.create(ExternalPip.prototype);
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PipAndroid);
 obj.eventEmitter = nativeEventEmitter;
-const result = set.fileFinishedImporting("modules/external_pip/ExternalPip.android.tsx");
+const result = obj132.fileFinishedImporting("modules/external_pip/ExternalPip.android.tsx");
 
 export default obj;

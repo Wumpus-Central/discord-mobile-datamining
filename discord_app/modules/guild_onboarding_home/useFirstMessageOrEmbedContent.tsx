@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");
 
 export default function useFirstMessageOrEmbedContent(content) {
   if (null == content) {
@@ -24,9 +24,7 @@ export default function useFirstMessageOrEmbedContent(content) {
         embeds = content.embeds;
         for (const item10013 of embeds) {
           if (null != item10013.rawDescription) {
-            let tmp6 = item10013;
             if (tmp5.rawDescription.length > 0) {
-              let tmp7 = obj;
               obj.return();
               return item10013.rawDescription;
             }

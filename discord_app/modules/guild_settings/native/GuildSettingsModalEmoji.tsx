@@ -1,18 +1,17 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalEmoji.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../intl/index.native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../stores/GuildStore.tsx";
-import closure_8 from "../GuildSettingsEmojiStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import initialize from "../GuildSettingsEmojiStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../../_runtime/00012_apply.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
 
-require = arg1;
+require = fn;
 function computeEmojiItem(id) {
   return { type: "EMOJI", key: id.id, emoji: id };
 }
@@ -135,7 +134,7 @@ class ManageEmojisModal {
       obj[2] = headerDescription;
       obj[3] = onSelectRolesForEmoji;
       obj[4] = flag;
-      return closure_9(flag(headerDescription[17]).ConnectedHeaderRow, obj);
+      return callback(flag(headerDescription[17]).ConnectedHeaderRow, obj);
     }, items5);
     callback2 = obj3.useCallback(() => {
       const obj = { Illustration: flag(headerDescription[19]).EmptyServerSettingsEmoji, style: store.emptyState, title: null, body: null };
@@ -177,34 +176,32 @@ class ManageEmojisModal {
 ({ View: c5, FlatList: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = importDefaultResult.throttle(require("_updateEmoji").fetchEmoji, 1000);
-let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: null, section: null, titleContainer: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_12 };
+let obj = { paddingHorizontal: ThemesDefault.space.PX_12 };
 obj[2] = obj;
-createCacheKey = { paddingVertical: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingVertical: ThemesDefault.space.PX_16 };
 obj[3] = createCacheKey;
 obj[4] = { paddingLeft: 16, paddingRight: 16 };
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_15 = importDefaultResult.memoize((arr, stateFromStores) => {
   const _require = stateFromStores;
-  const found = arr.filter((roles) => !stateFromStores(closure_1_2[11]).isRoleSubscriptionEmoji(roles, stateFromStores.id));
+  const found = arr.filter((item, index) => !stateFromStores(dependencyMap[11]).isRoleSubscriptionEmoji(item, stateFromStores.id));
   const mapped = found.map(computeEmojiItem);
   const reversed = mapped.reverse();
-  const maxEmojiSlots = _getGuildTierFromGuild.getMaxEmojiSlots(stateFromStores);
-  const obj2 = _getGuildTierFromGuild;
-  const obj3 = importDefaultResult;
+  const maxEmojiSlots = require("../../../utils/GuildBoostingUtils.tsx").getMaxEmojiSlots(stateFromStores);
+  const obj2 = getGuildTierFromGuild;
   [arr2, arr3] = callback(importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
-  const intl = _getSystemLocale.intl;
+  const intl = require("../../../intl/index.native.tsx").intl;
   const tmp3 = callback(importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
   const bound = Math.max(maxEmojiSlots - arr2.length, 0);
-  const intl2 = _getSystemLocale.intl;
-  const stringResult = intl.string(_getSystemLocale.t.sMOuuS);
-  const formatted = "" + intl.string(_getSystemLocale.t.sMOuuS) + " - " + intl2.formatToPlainString(_getSystemLocale.t.sgL8sI, { count: bound }).toUpperCase();
-  const intl3 = _getSystemLocale.intl;
-  const str = "" + intl.string(_getSystemLocale.t.sMOuuS) + " - " + intl2.formatToPlainString(_getSystemLocale.t.sgL8sI, { count: bound });
+  const intl2 = require("../../../intl/index.native.tsx").intl;
+  const stringResult = intl.string(require("../../../intl/index.native.tsx").t.sMOuuS);
+  const formatted = "" + intl.string(require("../../../intl/index.native.tsx").t.sMOuuS) + " - " + intl2.formatToPlainString(require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound }).toUpperCase();
+  const intl3 = require("../../../intl/index.native.tsx").intl;
+  const str = "" + intl.string(require("../../../intl/index.native.tsx").t.sMOuuS) + " - " + intl2.formatToPlainString(require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound });
   const bound1 = Math.max(maxEmojiSlots - arr3.length, 0);
-  const intl4 = _getSystemLocale.intl;
-  const stringResult1 = intl3.string(_getSystemLocale.t.wWjQye);
-  const formatted1 = "" + intl3.string(_getSystemLocale.t.wWjQye) + " - " + intl4.formatToPlainString(_getSystemLocale.t.sgL8sI, { count: bound1 }).toUpperCase();
+  const intl4 = require("../../../intl/index.native.tsx").intl;
+  const stringResult1 = intl3.string(require("../../../intl/index.native.tsx").t.wWjQye);
+  const formatted1 = "" + intl3.string(require("../../../intl/index.native.tsx").t.wWjQye) + " - " + intl4.formatToPlainString(require("../../../intl/index.native.tsx").t.sgL8sI, { count: bound1 }).toUpperCase();
   if (arr2.length > 0) {
     const items = [{ type: "SECTION", key: formatted, section: formatted }];
     HermesBuiltin.arraySpread(arr2, 1);
@@ -224,20 +221,18 @@ let closure_15 = importDefaultResult.memoize((arr, stateFromStores) => {
   return items2;
 });
 const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji.tsx");
 
 export default function GuildSettingsModalEmoji(contentContainerStyle) {
   ({ guildId: require, isLandingScreen } = contentContainerStyle);
   let stateFromStores;
-  let navigation;
-  let React;
   let obj = require(stateFromStores[13]);
   const items = [closure_7];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(closure_0));
   obj1 = require(stateFromStores[22]);
-  navigation = obj1.useNavigation();
+  const navigation = obj1.useNavigation();
   const tmp5 = callback4();
-  React = tmp5;
+  const React = tmp5;
   const items1 = [navigation, stateFromStores, isLandingScreen, tmp5];
   const layoutEffect = React.useLayoutEffect(() => {
     let tmp = isLandingScreen;
@@ -247,7 +242,7 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
     if (tmp) {
       let obj = { headerTitle: null };
       obj[0] = function headerTitle() {
-        obj = { style: titleContainer.titleContainer, children: closure_1_9(closure_1_0(closure_1_2[23]).NavigatorHeader, obj) };
+        { style: titleContainer.titleContainer, children: closure_1_9(closure_1_0(stateFromStores[23]).NavigatorHeader, obj) };
         obj = { title: name.name };
         return closure_1_9(closure_1_5, obj);
       };
@@ -257,17 +252,17 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const maxEmojiSlots = tmp(tmp2[12]).getMaxEmojiSlots(stateFromStores);
-    const intl = tmp(tmp2[10]).intl;
+    const maxEmojiSlots = require(tmp2[12]).getMaxEmojiSlots(stateFromStores);
+    const intl = require(tmp2[10]).intl;
     obj = { count: null };
     obj[0] = maxEmojiSlots;
     obj = { children: null };
     obj1 = { guild: null, headerDescription: null, computeEmojiItems: null, contentContainerStyle: null };
     obj1[0] = stateFromStores;
-    obj1[1] = intl.formatToPlainString(tmp(tmp2[10]).t.TA1BR0, obj);
+    obj1[1] = intl.formatToPlainString(require(tmp2[10]).t.TA1BR0, obj);
     obj1[2] = closure_15;
     obj1[3] = contentContainerStyle.contentContainerStyle;
-    const items2 = [callback2(ManageEmojisModal, obj1), callback2(tmp(tmp2[21]).NavScrim, {})];
+    const items2 = [callback2(ManageEmojisModal, obj1), callback2(require(tmp2[21]).NavScrim, {})];
     obj[0] = items2;
     return callback3(closure_11, obj);
   }

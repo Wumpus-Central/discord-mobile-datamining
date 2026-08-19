@@ -1,16 +1,19 @@
 // discord_app/components_native/App.tsx
 import serializeDefault from "../modules/tti_analytics/TTITracker.tsx";
+import enforcingDefault from "../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import handleLogoutDefault from "../actions/AuthenticationActionCreators.tsx";
 import setLevelsDefault from "../modules/app_startup/StartupProfiler.tsx";
+import _getKeyForFileIdDefault from "../modules/local_message_caching/LocalMessageCacheManager.native.tsx";
 import GestureWrapperDefault from "AppContainer.tsx";
 import getAuthComponentDefault from "../modules/main_tabs_v2/native/MainNavigator.tsx";
-import closure_3 from "../../_runtime/00019_noop.js";
+import noop from "../../_runtime/00019_noop.js";
 import { NativeModules } from "../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../modules/mobile_native_updater/MobileNativeUpdateStore.tsx";
-import closure_6 from "../stores/AuthenticationStore.tsx";
+import checkForNewerBuild from "../modules/mobile_native_updater/MobileNativeUpdateStore.tsx";
+import fetchFingerprint from "../stores/AuthenticationStore.tsx";
 import nativeEventEmitter from "../modules/voice_calls/native/AudioManagerStore.android.tsx";
 import updateState from "../modules/connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import showReviewRequestModal from "../modules/feedback/native/RequestReviewStore.tsx";
-import set from "../modules/local_push_notification/native/LocalPushNotificationStore.tsx";
+import "set";
 import createEmptyPromotionsByType from "../modules/premium/promotions/PromotionsStore.tsx";
 import bitrate from "../stores/BitRateStore.tsx";
 import handleTokenUpdated from "../stores/native/ShareStore.tsx";
@@ -25,11 +28,11 @@ import "map";
 import ApexExperiment from "../modules/memory/MemoryExperiment.tsx";
 import { jsx } from "../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 if (global.__DEV__) {
   require("reactNativeCorePlugins");
 }
-let result = set.fileFinishedImporting("components_native/App.tsx");
+let result = require("obj132").fileFinishedImporting("components_native/App.tsx");
 
 export default function App() {
   const renderApp = serializeDefault.renderApp;
@@ -37,7 +40,6 @@ export default function App() {
   const effect = React.useEffect(() => {
     callback(13810).init();
     let obj = callback(13810);
-    const tmp = callback;
     callback(4719).initialize();
     let obj2 = callback(4719);
     callback(13816).initialize();
@@ -87,13 +89,12 @@ export default function App() {
     const obj24 = callback(4651);
     callback(13913).initialize();
     const obj25 = callback(13913);
-    const tmp29 = shouldUseAltGateway;
     if (obj26.isIOS()) {
-      tmp(4861).initialize();
-      const tmpResult = tmp(4861);
+      callback(4861).initialize();
+      const tmpResult = callback(4861);
     }
     obj26 = shouldUseAltGateway(500);
-    const result = tmp29(12633).initializeRouteManagerIfNeeded();
+    const result = shouldUseAltGateway(12633).initializeRouteManagerIfNeeded();
     return () => {
       callback2(13818).terminate();
       const obj = callback2(13818);
@@ -132,7 +133,6 @@ export default function App() {
   let obj = shouldUseAltGateway(589);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => closure_6.isAuthenticated());
-  shouldUseAltGateway = stateFromStores;
   const items1 = [stateFromStores];
   const effect1 = React.useEffect(() => {
     if (shouldUseAltGateway) {
@@ -142,12 +142,10 @@ export default function App() {
         error = new Error("Authenticated without a token");
         throw error;
       } else {
-        closure_1_1(closure_1_2[52]).startSession(token);
-        const obj = closure_1_1(closure_1_2[52]);
-        closure_1_1(closure_1_2[53]).initialize();
-        const obj2 = closure_1_1(closure_1_2[53]);
+        handleLogoutDefault.startSession(token);
+        _getKeyForFileIdDefault.initialize();
         if (obj3.isAndroid()) {
-          const NativePermissionManager = closure_1_4.NativePermissionManager;
+          const NativePermissionManager = NativeModules.NativePermissionManager;
           const notificationAuthorization = NativePermissionManager.requestNotificationAuthorization();
         }
         return () => {
@@ -161,16 +159,15 @@ export default function App() {
   }, []);
   shouldUseAltGateway = undefined;
   const isChannelMetadataObfuscationEnabled = shouldUseAltGateway(13225).useIsChannelMetadataObfuscationEnabled("App");
-  shouldUseAltGateway = isChannelMetadataObfuscationEnabled;
   const items2 = [isChannelMetadataObfuscationEnabled];
   const effect3 = React.useEffect(() => {
     if (obj.isAndroid()) {
-      const result = closure_1_1(closure_1_2[56]).setUseChannelObfuscation(shouldUseAltGateway);
-      const obj2 = closure_1_1(closure_1_2[56]);
+      const result = enforcingDefault.setUseChannelObfuscation(shouldUseAltGateway);
     } else {
-      const DCDFastConnectManager = closure_1_4.DCDFastConnectManager;
+      const DCDFastConnectManager = NativeModules.DCDFastConnectManager;
       const result1 = DCDFastConnectManager.setUseChannelObfuscation(shouldUseAltGateway);
     }
+    obj = shouldUseAltGateway(dependencyMap[48]);
   }, items2);
   shouldUseAltGateway = undefined;
   let obj2 = shouldUseAltGateway(13225);
@@ -178,12 +175,12 @@ export default function App() {
   const items3 = [shouldUseAltGateway];
   const effect4 = React.useEffect(() => {
     if (obj.isAndroid()) {
-      closure_1_1(closure_1_2[56]).setUseAltGateway(shouldUseAltGateway);
-      const obj2 = closure_1_1(closure_1_2[56]);
+      enforcingDefault.setUseAltGateway(shouldUseAltGateway);
     } else {
-      const DCDFastConnectManager = closure_1_4.DCDFastConnectManager;
+      const DCDFastConnectManager = NativeModules.DCDFastConnectManager;
       DCDFastConnectManager.setUseAltGateway(shouldUseAltGateway);
     }
+    obj = shouldUseAltGateway(dependencyMap[48]);
   }, items3);
   const effect5 = React.useEffect(() => {
     const renderAppEffect = callback(9).renderAppEffect;
@@ -193,7 +190,6 @@ export default function App() {
   let obj3 = shouldUseAltGateway(13917);
   obj[0] = shouldUseAltGateway(10725).Profiles.App;
   obj = { appEntryKey: "main", children: null };
-  const tmp11 = setLevelsDefault;
   obj[1] = jsx(getAuthComponentDefault, {});
   obj[1] = jsx(GestureWrapperDefault, { appEntryKey: "main", children: null });
   return <tmp11 appEntryKey="main">{null}</tmp11>;

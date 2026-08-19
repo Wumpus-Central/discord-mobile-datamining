@@ -4,23 +4,23 @@ import getSrcWithWidthAndHeightDefault from "../../../../utils/native/ImageUtils
 import hexToRgba from "../../../../utils/ColorUtils.tsx";
 import createMinimalMessageRecord from "../../MessageRecordUtils.tsx";
 import useCanManageGuildOfficialMessages from "../../GuildOfficialMessageUtils.tsx";
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
-import closure_4 from "../../../../stores/ChannelStore.tsx";
-import closure_5 from "../../../../stores/GuildStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
 import MESSAGE_GROUP_SPACING from "../../MessageConstants.tsx";
 import { SwipeActionsType } from "RowGeneratorConstants.tsx";
 import ME from "../../../../Constants.tsx";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import set from "../../../../../_runtime/00002_set.js";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: error } = MESSAGE_GROUP_SPACING);
 ({ MessageFlags: c9, MessageTypes: c10 } = ME);
 const result = createCacheKey.experimental_createToken(() => hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BRAND_500, 0.1));
 createCacheKey = { ephemeralBackgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, ephemeralGutterColor: ThemesDefault.colors.BACKGROUND_BRAND, giftIntentEphemeralBackgroundColor: result, mentionedBackgroundColor: ThemesDefault.colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT, mentionedGutterColor: ThemesDefault.unsafe_rawColors.YELLOW_300, automodBlockedBackgroundColor: ThemesDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, automodBlockedGutterColor: ThemesDefault.unsafe_rawColors.RED_345, editingColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT };
-createCacheKey = createCacheKey.createNativeStyleProperties(createCacheKey);
+createCacheKey.createNativeStyleProperties(createCacheKey);
 const MediaManager = require("get ActivityIndicator").NativeModules.MediaManager;
-let set = new Set(MediaManager.getConstants().supportedExtensions);
+const set = new Set(MediaManager.getConstants().supportedExtensions);
 createCacheKey = {
   getImageSrc(proxy_url, width, height) {
     const endsWithResult = proxy_url.endsWith(".webp");
@@ -63,7 +63,7 @@ createCacheKey = {
             guild_id = channel.guild_id;
           }
           guild = guild.getGuild(guild_id);
-          let tmp3Result = tmp3(7232);
+          let tmp3Result = useCanManageGuildOfficialMessages;
           if (tmp3Result.isGuildOfficialMessagesEnabled(guild, "RowGeneratorUtils")) {
             let officialMessageColor;
             if (guild != null) {
@@ -75,7 +75,7 @@ createCacheKey = {
             if (message.mentioned) {
               let ephemeralGutterColor = tmp.mentionedGutterColor;
             } else {
-              tmp3Result = tmp3(4803);
+              tmp3Result = createMinimalMessageRecord;
               if (tmp3Result.hasEphemeralAppearance(message)) {
                 ephemeralGutterColor = tmp.ephemeralGutterColor;
               }
@@ -104,11 +104,11 @@ createCacheKey = {
   },
   createSwipeActions(canReply, arg1) {
     if (!canReply) {
-      return tmp.NONE;
+      return SwipeActionsType.NONE;
     }
   }
 };
-const result1 = set.fileFinishedImporting("modules/messages/native/renderer/RowGeneratorUtils.tsx");
+const result1 = require("obj132").fileFinishedImporting("modules/messages/native/renderer/RowGeneratorUtils.tsx");
 
 export default createCacheKey;
 export const InviteEmbedBackground = { dark: "#313339", light: "#fafafa" };

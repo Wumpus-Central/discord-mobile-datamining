@@ -1,15 +1,12 @@
 // discord_app/modules/search/native/hooks/usePlaceholderStyles.tsx
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import closure_3 from "../../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "../../SearchConstants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_5 = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
-const result = require("set").fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
 
 export const useFullscreenPlaceholderCount = function useFullscreenPlaceholderCount(arg0) {
   ({ placeholderHeight, numColumns } = arg0);
@@ -17,7 +14,7 @@ export const useFullscreenPlaceholderCount = function useFullscreenPlaceholderCo
 };
 export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(visible) {
   const _require = visible;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   class A {
@@ -76,9 +73,9 @@ export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(
       return tmp5;
     }
   }
-  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _ReanimatedRexport.withRepeat, withSequence: _ReanimatedRexport.withSequence, withTiming: _CONFIG_NEVER_ANIMATE_TIMING.withTiming, STANDARD_EASING: _Button.STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
+  obj = { useReducedMotion: stateFromStores, visible, withRepeat: require("../../../reanimated/ReanimatedRexport.tsx").withRepeat, withSequence: require("../../../reanimated/ReanimatedRexport.tsx").withSequence, withTiming: require("../../../../design/animation/reanimated/timing/timing.tsx").withTiming, STANDARD_EASING: require("../../../../design/void/native.tsx").STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
   A.__closure = obj;
   A.__workletHash = 9750536800906;
   A.__initData = closure_5;
-  return _ReanimatedRexport.useAnimatedStyle(A);
+  return require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedStyle(A);
 };

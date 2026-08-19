@@ -1,20 +1,17 @@
 // discord_app/modules/rpc/server/events/VoiceSettingsEventsFactory.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
 import RPC_SCOPE_CONFIG from "../../Constants.tsx";
-import { set } from "../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 
 ({ RPC_SCOPE_CONFIG: c3, RPC_LOCAL_SCOPE: c4 } = RPC_SCOPE_CONFIG);
 const RPCEvents = ME.RPCEvents;
-const result = set.fileFinishedImporting("modules/rpc/server/events/VoiceSettingsEventsFactory.tsx");
+const result = obj132.fileFinishedImporting("modules/rpc/server/events/VoiceSettingsEventsFactory.tsx");
 
 export default function createVoiceSettingsEventHandlers(arg0, arg1) {
   const _require = arg0;
   closure_1 = arg1;
-  let obj = {};
-  obj = { scope: null, handler: null };
-  obj = {};
-  const items = [_set.OAuth2Scopes.RPC, _set.OAuth2Scopes.RPC_VOICE_READ];
+  const obj = {};
+  const items = [require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC, require("../../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx").OAuth2Scopes.RPC_VOICE_READ];
   obj[constants.ANY] = items;
   obj[0] = obj;
   obj[1] = function handler() {

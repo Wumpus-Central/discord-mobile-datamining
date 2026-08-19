@@ -1,12 +1,12 @@
 // discord_app/modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import getAvatarURL from "../../../utils/AvatarUtils.tsx";
 import handleImageLoad from "../../image_upload/ImageLoaderUtils.tsx";
 
 const Endpoints = ME.Endpoints;
 ({ API_ENDPOINT: c3, CDN_HOST: c4 } = window.GLOBAL_ENV);
-const result = set.fileFinishedImporting("modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx");
+const result = obj132.fileFinishedImporting("modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx");
 
 export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0) {
   ({ itemId, hash, containerWidth } = arg0);
@@ -16,7 +16,6 @@ export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0
   let obj = handleImageLoad;
   let str = obj.getBestMediaProxySize(containerWidth * handleImageLoad.getDevicePixelRatio());
   obj = { size: str.toString() };
-  const obj2 = handleImageLoad;
   str = new URLSearchParams(obj).toString();
   let str3 = "png";
   if (getAvatarURL.SUPPORTS_WEBP) {
@@ -24,7 +23,7 @@ export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0
   }
   if (null != closure_4) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "https://" + tmp2 + "/app-assets/application-directory/collection-items/" + itemId + "/" + hash + "." + str3 + "?" + str;
+    let combined = "https://" + closure_4 + "/app-assets/application-directory/collection-items/" + itemId + "/" + hash + "." + str3 + "?" + str;
   } else {
     const _location = location;
     const _HermesInternal = HermesInternal;

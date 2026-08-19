@@ -1,7 +1,7 @@
 // discord_app/modules/media_uploads/buildFileSizeLimitEventProperties.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
+const result = obj132.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
 
 export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {
   ({ guildId, channelId } = arg0);

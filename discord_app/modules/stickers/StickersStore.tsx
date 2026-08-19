@@ -1,13 +1,13 @@
 // discord_app/modules/stickers/StickersStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/GuildMembershipStore.tsx";
-import closure_5 from "../../stores/GuildStore.tsx";
-import closure_6 from "GuildStickersStore.tsx";
-import closure_7 from "StickersPackStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import allGuildIds from "../../stores/GuildMembershipStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import parseServerGuildSticker from "GuildStickersStore.tsx";
+import parseServerPackSticker from "StickersPackStore.tsx";
 
-const require = arg1;
+const require = fn;
 function loadSavedGuildStickers() {
   const self = this;
   const apply = _loadSavedGuildStickers.apply;
@@ -177,7 +177,7 @@ obj = {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
     if (0 === guilds.unavailableGuilds.length) {
-      if (guilds.every((stickers) => "full_sync" === stickers.stickers.op)) {
+      if (guilds.every((item, index) => "full_sync" === item.stickers.op)) {
         Unloaded = obj.Loaded;
       }
     }
@@ -188,6 +188,6 @@ obj = {
   }
 };
 const stickersStore = new StickersStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/stickers/StickersStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stickers/StickersStore.tsx");
 
 export default stickersStore;

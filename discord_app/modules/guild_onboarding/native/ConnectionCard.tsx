@@ -6,7 +6,7 @@ import { OnboardingConnectionType } from "../GuildOnboardingPromptsConstants.tsx
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");
 
 export default function ConnectionCard(arg0) {
   ({ connection, guildId, location: _location } = arg0);

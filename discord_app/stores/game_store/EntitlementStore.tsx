@@ -3,14 +3,13 @@ import applyDefault from "../../../_runtime/00012_apply.js";
 import initializeAll from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import getComboId from "../../utils/LibraryApplicationUtils.tsx";
-import closure_3 from "../../records/EntitlementRecord.tsx";
-import closure_4 from "../LibraryApplicationStore.tsx";
-import closure_5 from "SKUStore.tsx";
+import createFromServer from "../../records/EntitlementRecord.tsx";
+import setLibraryApplications from "../LibraryApplicationStore.tsx";
+import addSku from "SKUStore.tsx";
 import ME from "../../Constants.tsx";
 import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "../../modules/premium/PremiumConstants.tsx";
-import set from "../../../_runtime/00002_set.js";
 
-require = arg1;
+require = fn;
 function addEntitlement(entitlement) {
   closure_9[entitlement.id] = closure_3.createFromServer(entitlement);
   if (null == dependencyMap2[entitlement.sku_id]) {
@@ -27,10 +26,9 @@ function addEntitlement(entitlement) {
     if (null == dependencyMap4[entitlement.subscription_id]) {
       const _Set3 = Set;
       const set2 = new Set();
-      tmp13[entitlement.subscription_id] = set2;
+      dependencyMap4[entitlement.subscription_id] = set2;
     }
     dependencyMap4[entitlement.subscription_id].add(entitlement.id);
-    const obj = dependencyMap4[entitlement.subscription_id];
   }
   dependencyMap3[entitlement.application_id].add(entitlement.id);
   dependencyMap2[entitlement.sku_id].add(entitlement.id);
@@ -40,10 +38,10 @@ function addGiftEntitlement(id) {
 }
 function handlePurchaseSuccess(arg0) {
   while (tmp !== undefined) {
-    let tmp3 = addEntitlement;
     let tmp4 = addEntitlement(tmp2);
     continue;
   }
+  tmp = arg0.entitlements[Symbol.iterator]();
 }
 function handleEntitlementUpdate(entitlement) {
   addEntitlement(entitlement.entitlement);
@@ -80,7 +78,6 @@ prototype["getForApplication"] = function getForApplication(arg0) {
     const _Set = Set;
     set = new Set();
     for (const item10014 of tmp) {
-      let tmp8 = dependencyMap;
       let addResult = set.add(dependencyMap[item10014]);
       continue;
     }
@@ -94,7 +91,6 @@ prototype["getForSku"] = function getForSku(arg0) {
     const _Set = Set;
     set = new Set();
     for (const item10014 of tmp) {
-      let tmp8 = dependencyMap;
       let addResult = set.add(dependencyMap[item10014]);
       continue;
     }
@@ -162,28 +158,23 @@ prototype["getForSubscription"] = function getForSubscription(arg0) {
     const _Set = Set;
     set = new Set();
     for (const item10014 of tmp) {
-      let tmp8 = dependencyMap;
       let addResult = set.add(dependencyMap[item10014]);
       continue;
     }
     return set;
   }
 };
-prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationId) {
-  let tmp = arg3;
-  if (arg3 === undefined) {
+prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationId, item) {
+  let tmp = item;
+  if (item === undefined) {
     tmp = null;
   }
   if (null != dependencyMap2[arg1]) {
     for (const item10011 of tmp2) {
-      let tmp5 = dependencyMap;
       let tmp6 = dependencyMap[item10011];
       let obj2 = tmp6;
       if (null != tmp6) {
-        let tmp7 = tmp6;
-        let tmp8 = closure_5;
         if (obj2.isValid(arg0, closure_5, tmp)) {
-          let tmp9 = obj;
           obj.return();
           let flag = true;
           return true;
@@ -203,7 +194,6 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationI
     let tmp13 = null == libraryApplication || libraryApplication.sku.id !== arg1;
     if (!tmp13) {
       tmp13 = !getComboId.isUserEntitledToLibraryApplication(libraryApplication);
-      const obj3 = getComboId;
     }
     let tmp16 = !tmp13;
     if (tmp13) {
@@ -213,7 +203,7 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationI
   }
 };
 prototype["hasFetchedForApplicationIds"] = function hasFetchedForApplicationIds(items) {
-  return items.every((arg0) => set.has(arg0));
+  return items.every((item, index) => set.has(item));
 };
 prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
   let obj = arg0;
@@ -228,17 +218,16 @@ prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let date;
   const items = [];
-  date = new Date();
+  const date = new Date();
   const forApplication = this.getForApplication(closure_8);
   if (forApplication != null) {
-    const item = forApplication.forEach((endsAt) => {
-      let tmp = null != endsAt.endsAt;
+    const item = forApplication.forEach((item, index) => {
+      let tmp = null != item.endsAt;
       if (tmp) {
-        tmp = endsAt.endsAt < date;
+        tmp = item.endsAt < date;
       }
-      let tmp4 = endsAt.type !== closure_1_7.FRACTIONAL_REDEMPTION;
+      let tmp4 = item.type !== closure_1_7.FRACTIONAL_REDEMPTION;
       if (!tmp4) {
         if (tmp) {
           tmp = !flag;
@@ -249,8 +238,9 @@ prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
         tmp4 = tmp3;
       }
       if (!tmp4) {
-        items.push(endsAt);
+        items.push(item);
       }
+      tmp3 = item.sourceType === closure_1_6.REVERSE_TRIAL && flag2;
     });
   }
   return items;
@@ -270,11 +260,12 @@ prototype["getUnactivatedFractionalPremiumUnits"] = function getUnactivatedFract
   const items = [];
   const forApplication = this.getForApplication(closure_8);
   if (forApplication != null) {
-    const item = forApplication.forEach((skuId) => {
-      const ACTIVE_FRACTIONAL_PREMIUM_SKUS = items(closure_1_2[8]).FractionalPremiumSKUsSets.ACTIVE_FRACTIONAL_PREMIUM_SKUS;
+    const item = forApplication.forEach((item, index) => {
+      const ACTIVE_FRACTIONAL_PREMIUM_SKUS = items(dependencyMap[8]).FractionalPremiumSKUsSets.ACTIVE_FRACTIONAL_PREMIUM_SKUS;
       if (tmp) {
-        items.push(skuId);
+        items.push(item);
       }
+      tmp = ACTIVE_FRACTIONAL_PREMIUM_SKUS.has(item.skuId) && !item.consumed;
     });
   }
   return items;
@@ -292,8 +283,6 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       if (true !== nextResult.consumed) {
-        let tmp5 = addEntitlement;
-        let tmp6 = nextResult;
         let tmp7 = addEntitlement(tmp4);
       }
       continue;
@@ -314,12 +303,8 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       if (null != nextResult.entitlements) {
-        let tmp3 = nextResult;
         let entitlements = tmp2.entitlements;
-        let tmp4 = entitlements;
-        let tmp5 = entitlements;
         for (const item10018 of entitlements) {
-          let tmp6 = addEntitlement;
           let tmp7 = addEntitlement(item10018);
           continue;
         }
@@ -362,10 +347,10 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
     c13 = false;
     closure_15 = !excludeEnded.excludeEnded;
     while (tmp !== undefined) {
-      let tmp3 = addEntitlement;
       let tmp4 = addEntitlement(tmp2);
       continue;
     }
+    tmp = excludeEnded.entitlements[Symbol.iterator]();
   },
   ENTITLEMENTS_FETCH_FOR_USER_FAIL: function handleUserEntitlementsFail() {
     c14 = false;
@@ -373,6 +358,6 @@ const entitlementStore = new EntitlementStore(dispatcherDefault, {
     c15 = false;
   }
 });
-const result = set.fileFinishedImporting("stores/game_store/EntitlementStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/game_store/EntitlementStore.tsx");
 
 export default entitlementStore;

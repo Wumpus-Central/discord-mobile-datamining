@@ -1,5 +1,5 @@
 // discord_app/modules/expression_picker/native/useExpressionPickerListWidth.native.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ExpressionPickerViewType from "../ExpressionPickerConstants.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
@@ -7,7 +7,7 @@ import ACTION_SHEET_START_HEIGHT_RATIO from "../../action_sheet/native/ActionShe
 
 const PADDING_HORIZONTAL = ExpressionPickerViewType.PADDING_HORIZONTAL;
 const ACTION_SHEET_MAX_WIDTH = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_MAX_WIDTH;
-const result = set.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerListWidth.native.tsx");
+const result = obj132.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerListWidth.native.tsx");
 
 export default function useExpressionPickerListWidth(arg0) {
   const rect = useSafeAreaInsetsDefault();

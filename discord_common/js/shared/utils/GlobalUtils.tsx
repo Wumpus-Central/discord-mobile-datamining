@@ -1,7 +1,7 @@
 // discord_common/js/shared/utils/GlobalUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
 
 export const getGlobalObject = function getGlobalObject() {
   if (typeof globalThis !== "undefined") {

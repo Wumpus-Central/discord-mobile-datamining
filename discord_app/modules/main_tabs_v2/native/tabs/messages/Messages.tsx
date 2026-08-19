@@ -2,17 +2,16 @@
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../a11y/AccessibilityStore.tsx";
-import closure_6 from "../../../../gateway/GatewayConnectionStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../../a11y/AccessibilityStore.tsx";
+import _handleConnectionOpen from "../../../../gateway/GatewayConnectionStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
-  let obj = { container: null };
-  obj = { flex: 1, backgroundColor: ThemesDefault.colors.PANEL_BG };
+  const obj = { flex: 1, backgroundColor: ThemesDefault.colors.PANEL_BG };
   obj[0] = obj;
   return obj;
 });
@@ -52,22 +51,22 @@ const memoResult = importAllResult.memo(function Messages(style) {
     if (null != dataKey) {
       if (!obj7.isAndroid()) {
         if (!closure_1_5.useReducedMotion) {
-          let tmp5Result = tmp5(tmp6[21]);
+          let tmp5Result = sharedValue(sections[21]);
           const rootNavigationRef = tmp5Result.getRootNavigationRef();
           let tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
           if (tmp2) {
-            tmp5Result = tmp5(tmp6[22]);
-            const rootNavigationRef1 = tmp5(tmp6[21]).getRootNavigationRef();
+            tmp5Result = sharedValue(sections[22]);
+            const rootNavigationRef1 = sharedValue(sections[21]).getRootNavigationRef();
             let currentRoute;
             if (rootNavigationRef1 != null) {
               currentRoute = rootNavigationRef1.getCurrentRoute();
             }
             tmp2 = null != tmp5Result.coerceGuildsRoute(currentRoute);
-            const tmp5Result1 = tmp5(tmp6[21]);
+            const tmp5Result1 = sharedValue(sections[21]);
           }
           if (tmp2) {
-            const result = tmp5(tmp6[23]).DeprecatedLayoutAnimation();
-            const tmp5Result2 = tmp5(tmp6[23]);
+            const result = sharedValue(sections[23]).DeprecatedLayoutAnimation();
+            const tmp5Result2 = sharedValue(sections[23]);
           }
         }
       }
@@ -77,7 +76,7 @@ const memoResult = importAllResult.memo(function Messages(style) {
   const layoutEffect = externalScrollEventHandler.useLayoutEffect(() => {
     sharedValue(sections[24]).trackAppUIViewed();
     const obj = sharedValue(sections[24]);
-    const reduced = sections.reduce((arg0, arg1) => arg0 + arg1, 0);
+    const reduced = sections.reduce((acc, item, index) => acc + item, 0);
     dataKey(sections[25]).recordRender(reduced, closure_1_6.isConnected());
   });
   const tmp18 = dataKey(sections[19])("Messages");
@@ -113,7 +112,7 @@ const memoResult = importAllResult.memo(function Messages(style) {
   obj2 = { backgroundColor: tmp.container.backgroundColor, children: null };
   const items2 = [callback(dataKey(sections[29]), { height: headerSize, scrollPosition: sharedValue }), , ];
   if (tmp11.showFullscreenEmptyState) {
-    let tmp23Result = tmp23(tmp2(tmp3[30]), {});
+    let tmp23Result = callback(tmp2(tmp3[30]), {});
   } else {
     if ("legend" === list) {
       let tmp26 = tmp3[31];
@@ -123,16 +122,16 @@ const memoResult = importAllResult.memo(function Messages(style) {
     obj3 = { ref: null };
     obj3[0] = ref;
     const merged = Object.assign(obj);
-    tmp23Result = tmp23(tmp2(tmp26), obj3);
+    tmp23Result = callback(tmp2(tmp26), obj3);
     const tmp2Result = tmp2(tmp26);
   }
   items2[1] = tmp23Result;
   items2[2] = callback(tmp5(sections[34]).TTIFirstContentfulPaint, { label: "messages_tabs" });
   obj2[1] = items2;
-  obj1[1] = closure_8(sharedValue(sections[28]).CutoutBackgroundProvider, obj2);
+  obj1[1] = callback(sharedValue(sections[28]).CutoutBackgroundProvider, obj2);
   obj[1] = callback(View, obj1);
   return callback(sharedValue(sections[7]).AnalyticsLocationProvider, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/Messages.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/Messages.tsx");
 
 export default memoResult;

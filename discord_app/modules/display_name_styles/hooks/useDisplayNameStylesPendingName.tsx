@@ -1,20 +1,18 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx
 import nameFromUserDefault from "../../../utils/UserUtils.tsx";
-import closure_3 from "../../user_profile/UserProfileSettingsStore.tsx";
-import closure_4 from "../../../stores/GuildMemberStore.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import handleFormOpen from "../../user_profile/UserProfileSettingsStore.tsx";
+import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx");
 
 export const useDisplayNameStylesPendingName = function useDisplayNameStylesPendingName(stateFromStores, guildId) {
   const _require = stateFromStores;
   importDefault = guildId;
   const name = nameFromUserDefault.useName(stateFromStores);
-  const obj = nameFromUserDefault;
   const items = [closure_3, closure_4];
   const items1 = [guildId, stateFromStores];
-  let str = _initialize.useStateFromStores(items, () => {
+  let str = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const pendingChanges = closure_1_3.getPendingChanges(closure_1);
     if (null != closure_1) {
       let pendingNickname = pendingChanges.pendingNickname;

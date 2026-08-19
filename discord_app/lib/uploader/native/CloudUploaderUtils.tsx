@@ -1,24 +1,24 @@
 // discord_app/lib/uploader/native/CloudUploaderUtils.tsx
 import applyDefault from "../../../../_runtime/00012_apply.js";
 import expandEventPropertiesDefault from "../../../utils/AnalyticsUtils.tsx";
-import closure_3 from "../../../modules/user_settings/LocaleStore.tsx";
-import closure_4 from "../../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../../stores/DeveloperOptionsStore.tsx";
+import _getSystemLocale from "../../../modules/user_settings/LocaleStore.tsx";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import refreshSourceMapCookie from "../../../stores/DeveloperOptionsStore.tsx";
 
-const require = arg1;
+const require = fn;
 function getUploadPayload(closure_0) {
-  const obj = { filename: closure_0.filename, file_size: closure_0.currentSize, id: applyDefault.uniqueId(), original_content_type: "Array" };
+  const obj = { filename: _require.filename, file_size: _require.currentSize, id: applyDefault.uniqueId(), original_content_type: "Array" };
   return obj;
 }
-let result = require("set").fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");
+let result = require("obj132").fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");
 
 export default { getUploadPayload };
 export const prepareMessagePayload = function prepareMessagePayload(arg0, arr) {
   const items = [];
-  const item = arr.forEach((closure_0, closure_1) => {
-    let obj = items(closure_1_2[3]);
-    obj = {};
-    const merged = Object.assign(obj.getAttachmentPayload(closure_0, closure_1));
+  const item = arr.forEach((item, index) => {
+    items(dependencyMap[3]);
+    const obj = {};
+    const merged = Object.assign(obj.getAttachmentPayload(item, index));
     items.push(obj);
   });
   if (null != arg3) {
@@ -27,9 +27,7 @@ export const prepareMessagePayload = function prepareMessagePayload(arg0, arr) {
       let merged = Object.assign(arg2);
       const items1 = [];
       HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(applyDefault.get(obj, arg3, []), 0));
-      const obj3 = applyDefault;
       let result = applyDefault.set(obj, arg3, items1);
-      const obj4 = applyDefault;
     }
     obj = { Authorization: null, "X-Debug-Options": null, "Accept-Language": null };
     obj[0] = arg0;

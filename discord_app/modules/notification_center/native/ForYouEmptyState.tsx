@@ -7,17 +7,16 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ image: { marginBottom: 16 }, container: { paddingHorizontal: 48, alignItems: "center", justifyContent: "center" }, headerText: { fontSize: 18, marginTop: 16, marginBottom: 8 }, text: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouEmptyState.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notification_center/native/ForYouEmptyState.tsx");
 
 export const ForYouEmptyState = function ForYouEmptyState(height) {
   const tmp = callback3();
-  let obj = { style: items, children: null };
-  items = [tmp.container, { height: height.height }];
-  obj = { style: tmp.image, children: callback(AccountAgeTier10LargeBadge.MailboxSpotIllustration, { scale: 0.75 }) };
+  const items = [tmp.container, { height: height.height }];
+  let obj = { style: tmp.image, children: callback(AccountAgeTier10LargeBadge.MailboxSpotIllustration, { scale: 0.75 }) };
   const items1 = [callback(View, obj), , ];
   obj = { accessibilityRole: "header", color: "mobile-text-heading-primary", variant: "heading-md/bold", style: items2, children: null };
   items2 = [, ];

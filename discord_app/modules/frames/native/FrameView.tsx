@@ -1,13 +1,13 @@
 // discord_app/modules/frames/native/FrameView.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../FramesStore.tsx";
+import map from "../FramesStore.tsx";
 import FrameLayoutModes from "../FramesConstants.tsx";
 import { ActivityPlatform } from "../../activities/Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function FrameViewInner(frame) {
   frame = frame.frame;
   const layoutMode = frame.layoutMode;
@@ -21,8 +21,8 @@ function FrameViewInner(frame) {
   const items = [layoutMode, , ];
   ({ applicationId: arr[1], id: arr[2] } = frame);
   const layoutEffect = importAllResult.useLayoutEffect(() => {
-    let obj = layoutMode(setIsResetting[7]);
-    obj = { type: "FRAME_UPDATE_LAYOUT_MODE", layoutMode, applicationId: frame.applicationId, frameId: frame.id };
+    layoutMode(setIsResetting[7]);
+    const obj = { type: "FRAME_UPDATE_LAYOUT_MODE", layoutMode, applicationId: frame.applicationId, frameId: frame.id };
     obj.dispatch(obj);
   }, items);
   const items1 = [frame.id];
@@ -37,7 +37,6 @@ function FrameViewInner(frame) {
   let tmpResult = tmp(tmp2[10]);
   const baseActivityView = tmpResult.useBaseActivityView({ orientationLockState: orientationLock, showLoadingIndicator: first, setShowLoadingStateForLockingOrientation: tmp3[1], application: data, setOrientationLockState: callback1 });
   setIsResetting = baseActivityView.setIsResetting;
-  obj = { instance_id: "example-cl-instance", platform: ActivityPlatform.MOBILE, discord_proxy_ticket: frame.data.proxyTicket };
   ({ isResetting, isLandscape } = baseActivityView);
   obj = { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null };
   obj1 = {
@@ -97,7 +96,7 @@ const memoResult = importAllResult.memo(function FrameViewGate(arg0) {
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting("modules/frames/native/FrameView.tsx");
+const result = require("obj132").fileFinishedImporting("modules/frames/native/FrameView.tsx");
 
 export default memoResult;
 export const FrameView = memoResult;

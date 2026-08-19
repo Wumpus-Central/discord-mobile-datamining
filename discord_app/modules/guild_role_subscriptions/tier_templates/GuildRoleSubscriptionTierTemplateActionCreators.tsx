@@ -1,9 +1,9 @@
 // discord_app/modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx
 import dispatcherDefault from "../../../Dispatcher.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { Endpoints } from "../../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 function _getTemplates() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -86,11 +86,10 @@ function _getTemplates() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
 
 export const stashTemplateChannels = function stashTemplateChannels(selectedTemplate, guildId) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId };
+  const obj = { type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId };
   obj.dispatch(obj);
 };
 export const getTemplates = function getTemplates() {

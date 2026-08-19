@@ -1,10 +1,9 @@
 // discord_common/js/shared/shared-constants/TwoWayLinkType.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const obj = { ALL: null };
-let set = new Set(["desktop", "device_code", "mobile", "web"]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/TwoWayLinkType.tsx");
+const obj = { ALL: new Set(["desktop", "device_code", "mobile", "web"]) };
+const set = new Set(["desktop", "device_code", "mobile", "web"]);
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/TwoWayLinkType.tsx");
 
 export const TwoWayLinkType = { MOBILE: "mobile", DESKTOP: "desktop", WEB: "web", DEVICE_CODE: "device_code" };
 export const TwoWayLinkTypeSets = obj;

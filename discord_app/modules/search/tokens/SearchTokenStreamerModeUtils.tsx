@@ -1,9 +1,9 @@
 // discord_app/modules/search/tokens/SearchTokenStreamerModeUtils.tsx
 import SearchTokenTypes from "../SearchUtils.tsx";
-import closure_2 from "../../../stores/StreamerModeStore.tsx";
+import initialize from "../../../stores/StreamerModeStore.tsx";
 import ME from "../../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function getValidOrderedFilterTokens(closure_0, items) {
   [tmp] = items;
   items = [tmp];
@@ -14,10 +14,9 @@ function getValidOrderedFilterTokens(closure_0, items) {
   }
   const items2 = [tmp];
   [tmp5] = items2;
-  let result = SearchTokenTypes.isGuildLikeSearchContext(closure_0);
+  let result = SearchTokenTypes.isGuildLikeSearchContext(_require);
   if (!result) {
-    result = closure_0.type === constants2.DMS && !tmp5.hidePersonalInformation;
-    const tmp8 = closure_0.type === constants2.DMS && !tmp5.hidePersonalInformation;
+    result = _require.type === constants2.DMS && !tmp5.hidePersonalInformation;
   }
   if (result) {
     items1.push(constants.FILTER_IN);
@@ -26,7 +25,7 @@ function getValidOrderedFilterTokens(closure_0, items) {
   const items3 = [tmp];
   [tmp13] = items3;
   if (!tmp13.hidePersonalInformation) {
-    items1.push(tmp11.FILTER_MENTIONS);
+    items1.push(constants.FILTER_MENTIONS);
   }
   items1.push(constants.FILTER_ON);
   items1.push(constants.FILTER_BEFORE);
@@ -35,7 +34,7 @@ function getValidOrderedFilterTokens(closure_0, items) {
   return items1;
 }
 ({ SearchTokenTypes: c3, SearchTypes: c4 } = ME);
-let result = require("set").fileFinishedImporting("modules/search/tokens/SearchTokenStreamerModeUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/tokens/SearchTokenStreamerModeUtils.tsx");
 
 export const isFromUserFilterSupported = function isFromUserFilterSupported() {
   let tmp = arg0;
@@ -65,7 +64,6 @@ export const isInChannelFilterSupported = function isInChannelFilterSupported(se
   let result = SearchTokenTypes.isGuildLikeSearchContext(selectedSearchContext);
   if (!result) {
     result = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;
-    const tmp6 = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;
   }
   return result;
 };

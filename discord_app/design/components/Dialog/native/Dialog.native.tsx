@@ -1,11 +1,11 @@
 // discord_app/design/components/Dialog/native/Dialog.native.tsx
 import AccessibilityView from "../../AccessibilityView/AccessibilityView.native.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { StyleSheet } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("design/components/Dialog/native/Dialog.native.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("design/components/Dialog/native/Dialog.native.tsx");
 
 export const Dialog = function Dialog(dialogKey) {
   dialogKey = dialogKey.dialogKey;

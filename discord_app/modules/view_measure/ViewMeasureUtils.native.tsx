@@ -1,7 +1,7 @@
 // discord_app/modules/view_measure/ViewMeasureUtils.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/view_measure/ViewMeasureUtils.native.tsx");
+const result = obj132.fileFinishedImporting("modules/view_measure/ViewMeasureUtils.native.tsx");
 
 export const measureView = function measureView(arg0) {
   closure_0 = arg0;

@@ -1,5 +1,5 @@
 // discord_app/modules/search/managers/SearchTokensManager.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import _setAppLocale from "../../../intl/IntlLoaderStore.tsx";
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
 import SearchTokenTypes from "../SearchUtils.tsx";
@@ -25,6 +25,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const searchTokensManager = new SearchTokensManager();
-let result = set.fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
+let result = obj132.fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
 
 export default searchTokensManager;

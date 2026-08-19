@@ -1,11 +1,11 @@
 // discord_app/modules/voice_panel/native/hooks/useControlsTranslation.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { MODE_CHANGE_PHYSICS } from "../../VoicePanelConstants.tsx";
 import { CALL_TILE_GUTTER } from "../card/VoicePanelCardConstants.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_6 = { code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}" };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useControlsTranslation.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useControlsTranslation.tsx");
 
 export default function useControlsTranslation(arg0, wrapperSpecs, viewHeight) {
   const _require = wrapperSpecs;

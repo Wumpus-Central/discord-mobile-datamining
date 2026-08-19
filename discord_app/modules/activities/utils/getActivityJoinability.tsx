@@ -1,11 +1,12 @@
 // discord_app/modules/activities/utils/getActivityJoinability.tsx
-import set from "../../../../_runtime/00002_set.js";
-import set2 from "../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../_runtime/00002_obj132.js";
+import obj1322 from "../../../utils/PlatformUtils.tsx";
 import hasFlagDefault from "hasFlag.tsx";
 import useIsActivitiesEnabledForCurrentPlatform from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
 import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability.tsx";
 import getEmbeddedActivityJoinabilityDefault from "getEmbeddedActivityJoinability.tsx";
 import getPartySize from "getPartySize.tsx";
+import isPartyFull from "isPartyFull.tsx";
 import getIsInParty from "getIsInParty.tsx";
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity.tsx";
 import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform.tsx";
@@ -13,7 +14,7 @@ import ME from "../../../Constants.tsx";
 
 ({ ActivityFlags: c3, ChannelTypes: c4, GuildFeatures: c5 } = ME);
 let obj = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" };
-const result = set.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
 
 export default function getActivityJoinability(arg0) {
   ({ user, activity, channelId, isEmbedded, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, EmbeddedActivitiesStore } = arg0);
@@ -40,13 +41,11 @@ export default function getActivityJoinability(arg0) {
           obj[2] = channelId;
           obj[3] = tmp2;
           obj[4] = tmp;
-          const tmp45 = getEmbeddedActivityJoinabilityDefault;
           obj[5] = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
           obj[6] = ChannelStore;
           obj[7] = VoiceStateStore;
           obj[8] = tmp3;
           obj[9] = GuildStore;
-          const obj8 = useIsActivitiesEnabledForCurrentPlatform;
           if (tmp45Result === getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN) {
             let CANNOT_JOIN2 = obj.CAN_JOIN;
           } else {
@@ -64,13 +63,11 @@ export default function getActivityJoinability(arg0) {
       }
       if (!isEmbedded) {
         if (isActivityJoinableOnCurrentPlatformDefault(activity)) {
-          const obj2 = set2;
+          obj1322;
         }
         return obj.CANNOT_JOIN;
       }
       const partySize = getPartySize.getPartySize(activity);
-      const obj3 = getPartySize;
-      const tmp27 = require;
       if (obj4.hasPartySize(partySize)) {
         if (!tmp27Result.isPartyFull(partySize)) {
           if (hasFlagDefault(activity, constants.PARTY_PRIVACY_FRIENDS)) {
@@ -78,7 +75,7 @@ export default function getActivityJoinability(arg0) {
               return obj.CAN_JOIN;
             }
           }
-          if (tmp30(7260)(activity, tmp31.PARTY_PRIVACY_VOICE_CHANNEL)) {
+          if (hasFlagDefault(activity, constants.PARTY_PRIVACY_VOICE_CHANNEL)) {
             const channel = ChannelStore.getChannel(SelectedChannelStore.getVoiceChannelId());
             if (null != channel) {
               if (VoiceStateStore.isInChannel(channel.id, user.id)) {
@@ -109,10 +106,8 @@ export default function getActivityJoinability(arg0) {
           } else {
             return obj.CANNOT_JOIN;
           }
-          tmp30 = importDefault;
-          tmp31 = constants;
         }
-        tmp27Result = tmp27(10920);
+        tmp27Result = isPartyFull;
       }
       return obj.CANNOT_JOIN;
     }
@@ -127,7 +122,6 @@ export default function getActivityJoinability(arg0) {
       obj = getIsInParty;
       isInParty = obj.getIsInParty(tmp8Result, activity);
     }
-    const tmp8 = getCurrentUserPresenceActivityDefault;
   }
   return obj.JOINED;
 };

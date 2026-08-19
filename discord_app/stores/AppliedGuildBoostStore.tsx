@@ -35,7 +35,7 @@ prototype["getCurrentUserAppliedBoosts"] = function getCurrentUserAppliedBoosts(
 };
 prototype["getAppliedGuildBoost"] = function getAppliedGuildBoost(arg0) {
   closure_0 = arg0;
-  return closure_2.find((id) => id.id === closure_0);
+  return closure_2.find((item, index) => item.id === closure_0);
 };
 Object.defineProperty(prototype, "isModifyingAppliedBoost", {
   get: function isModifyingAppliedBoost() {
@@ -56,7 +56,7 @@ Object.defineProperty(prototype, "unapplyBoostError", {
   set: undefined
 });
 Object.defineProperty(prototype, "cooldownEndsAt", {
-  get: function cooldownEndsAt(arg0) {
+  get: function cooldownEndsAt(dependencyMap) {
     return c1;
   },
   set: undefined
@@ -83,9 +83,8 @@ const appliedGuildBoostStore = new AppliedGuildBoostStore(dispatcherDefault, {
   GUILD_APPLY_BOOST_START: handleModifyingAppliedBoostStart,
   GUILD_APPLY_BOOST_SUCCESS: function handleApplyBoostSuccess(appliedGuildBoost) {
     appliedGuildBoost = appliedGuildBoost.appliedGuildBoost;
-    let set;
-    set = new Set(appliedGuildBoost.map((id) => id.id));
-    items = [...appliedGuildBoost, ...items.filter((id) => !set.has(id.id))];
+    const set = new Set(appliedGuildBoost.map((item, index) => item.id));
+    items = [...appliedGuildBoost, ...items.filter((item, index) => !set.has(item.id))];
     c5 = null;
     c4 = false;
   },
@@ -95,7 +94,7 @@ const appliedGuildBoostStore = new AppliedGuildBoostStore(dispatcherDefault, {
   },
   GUILD_UNAPPLY_BOOST_SUCCESS: function handleUnapplyBoostSuccess(boostId) {
     boostId = boostId.boostId;
-    closure_2 = closure_2.filter((id) => id.id !== boostId);
+    closure_2 = closure_2.filter((item, index) => item.id !== boostId);
     c4 = false;
   },
   GUILD_UNAPPLY_BOOST_FAIL: function handleUnapplyBoostFail(error) {
@@ -106,6 +105,6 @@ const appliedGuildBoostStore = new AppliedGuildBoostStore(dispatcherDefault, {
     c3 = true;
   }
 });
-const result = require("set").fileFinishedImporting("stores/AppliedGuildBoostStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/AppliedGuildBoostStore.tsx");
 
 export default appliedGuildBoostStore;

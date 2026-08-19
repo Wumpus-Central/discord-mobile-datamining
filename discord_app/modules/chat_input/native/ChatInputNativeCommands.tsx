@@ -1,10 +1,8 @@
 // discord_app/modules/chat_input/native/ChatInputNativeCommands.tsx
-import set2 from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import __INTERNAL_VIEW_CONFIG from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
-import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
-import { snowflakeSequence } from "../../messages/createNonce.tsx";
 
-let result = set2.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
+let result = obj132.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
 
 export default {
   backspace(arg0) {
@@ -37,12 +35,12 @@ export default {
     if (null == arg0) {
       return null;
     } else {
-      const nonce = _snowflakeSequence.createNonce();
+      const nonce = require("../../messages/createNonce.tsx").createNonce();
       const result = set.set(nonce, (arg0) => {
         set.delete(nonce);
         callback(arg0);
       });
-      const Commands = ___INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = require("../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx").Commands;
       Commands.flushText(arg0, nonce);
     }
   },
@@ -82,7 +80,6 @@ export default {
       const _JSON = JSON;
       const json = JSON.stringify(arg1);
       Commands.updateTextBlocks(arg0, json, arg2);
-      const tmp2 = arg2;
     }
   },
   replaceRange(arg0, keepCursorPosition) {

@@ -1,14 +1,14 @@
 // discord_app/modules/game_profile/GameProfileHttpUtils.tsx
 import failsDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import setDefault from "../../utils/Durations.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../user_settings/LocaleStore.tsx";
+import obj132Default from "../../utils/Durations.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import _getSystemLocale from "../user_settings/LocaleStore.tsx";
 import importDefaultResult from "GameProfileStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
 import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_7 } from "../../../discord_common/js/shared/shared-constants/SimilarGamesConstants.tsx";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
+const require = fn;
 function _getShopCollection() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -41,7 +41,7 @@ function _getShopCollection() {
         throw body;
       } else if (arg0 !== 2) {
         const products = body.body.products;
-        callback2 = products.flatMap((sku_ids) => sku_ids.sku_ids);
+        callback2 = products.flatMap((item, index) => item.sku_ids);
         const obj = callback2(709);
         const obj6 = { type: "GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS", collectionId: null, skuIds: null };
         obj6[1] = callback;
@@ -121,10 +121,10 @@ function _fetchSimilarGames() {
             if (similar_games == null) {
               lib = [];
             }
-            lib = lib.filter((arg0) => {
-              let tmp = arg0 !== closure_0;
+            lib = lib.filter((item, index) => {
+              let tmp = item !== closure_0;
               if (tmp) {
-                tmp = !closure_1_7.has(arg0);
+                tmp = !closure_1_7.has(item);
               }
               return tmp;
             });
@@ -226,48 +226,17 @@ function _getGameAnnouncements() {
 }
 let c5 = importDefaultResult;
 initialize = {
-  getQueryId(arg0, arg1) {
-    let combined = null;
-    if (arg1) {
-      const _HermesInternal = HermesInternal;
-      combined = "similar-games:" + arg0;
-    }
-    return combined;
-  },
-  get(arg0) {
-    let similarGames = importDefaultResult.getSimilarGames(arg0);
-    if (similarGames == null) {
-      similarGames = null;
-    }
-    return similarGames;
-  },
-  load(arg0) {
-    return (function fetchSimilarGames(arg0) {
-      const self = this;
-      const apply = closure_9.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })(arg0);
-  },
-  retryConfig: initialize,
-  failureStaleAfter: setDefault.Seconds.MINUTE
-};
-initialize = {
   backoff() {
     let tmp = failsDefault;
-    const result = 5 * setDefault.Millis.SECOND;
-    tmp = new tmp(result, 5 * setDefault.Millis.MINUTE);
+    const result = 5 * obj132Default.Millis.SECOND;
+    tmp = new tmp(result, 5 * obj132Default.Millis.MINUTE);
     return tmp;
   }
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, initialize);
-let result = require("set").fileFinishedImporting("modules/game_profile/GameProfileHttpUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/game_profile/GameProfileHttpUtils.tsx");
 
-export const getShopCollection = function getShopCollection(arg0) {
+export const getShopCollection = function getShopCollection(closure_0) {
   const self = this;
   const apply = _getShopCollection.apply;
   if (typeof apply === "unknown") {
@@ -278,7 +247,7 @@ export const getShopCollection = function getShopCollection(arg0) {
   return applyArgumentsResult;
 };
 export const useSimilarGameIds = fetchStore;
-export const getGameAnnouncements = function getGameAnnouncements(arg0, arg1) {
+export const getGameAnnouncements = function getGameAnnouncements(closure_0, arg1) {
   const self = this;
   const apply = _getGameAnnouncements.apply;
   if (typeof apply === "unknown") {

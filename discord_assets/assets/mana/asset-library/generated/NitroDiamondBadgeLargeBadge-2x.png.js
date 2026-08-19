@@ -1,7 +1,7 @@
 // discord_assets/assets/mana/asset-library/generated/NitroDiamondBadgeLargeBadge-2x.png.js
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroDiamondBadgeLargeBadge-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroDiamondBadgeLargeBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/1c8a8ef5e38d46b3d6eb47bdd8d733fa0d46eb88808192a29d8ff21a80520cb8.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/NitroDiamondBadgeLargeBadge-2x.png";

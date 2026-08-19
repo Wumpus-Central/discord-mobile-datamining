@@ -3,10 +3,10 @@ import noopAll from "../../../../_runtime/00019_noop.js";
 import inlineStyles from "../../../../_runtime/06571_inlineStyles.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/markup/native/SpoilerIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/markup/native/SpoilerIcon.tsx");
 
 export default function Spoiler(width) {
   let num = width.width;

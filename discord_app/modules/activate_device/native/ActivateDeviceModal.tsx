@@ -1,10 +1,10 @@
 // discord_app/modules/activate_device/native/ActivateDeviceModal.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let closure_5 = { ACTIVATE_DEVICE: "activate-device" };
-const result = require("set").fileFinishedImporting("modules/activate_device/native/ActivateDeviceModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activate_device/native/ActivateDeviceModal.tsx");
 
 export default function ActivateDeviceModal(userCode) {
   userCode = userCode.userCode;

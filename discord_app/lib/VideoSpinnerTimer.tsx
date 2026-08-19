@@ -2,16 +2,16 @@
 import timestampDefault from "../modules/debug/Logger.tsx";
 import expandEventPropertiesDefault from "../utils/AnalyticsUtils.tsx";
 import sleep from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import closure_3 from "../stores/AuthenticationStore.tsx";
-import closure_4 from "../stores/ChannelStore.tsx";
-import closure_5 from "../stores/NetworkStore.tsx";
-import closure_6 from "../stores/RTCConnectionStore.tsx";
-import closure_7 from "../stores/VoiceStateStore.tsx";
+import fetchFingerprint from "../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../stores/ChannelStore.tsx";
+import handleConnectionInfoChange from "../stores/NetworkStore.tsx";
+import createRTCConnection from "../stores/RTCConnectionStore.tsx";
+import updateVoiceState from "../stores/VoiceStateStore.tsx";
 import { AnalyticEvents } from "../Constants.tsx";
 
-require = arg1;
+require = fn;
 const map = new Map();
-let result = require("set").fileFinishedImporting("lib/VideoSpinnerTimer.tsx");
+let result = require("obj132").fileFinishedImporting("lib/VideoSpinnerTimer.tsx");
 class VideoSpinnerTimer {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -24,7 +24,6 @@ const prototype = VideoSpinnerTimer.prototype;
 prototype["onSpinnerStarted"] = function onSpinnerStarted() {
   if (null == this.spinnerVisibleStart) {
     tmp.spinnerVisibleStart = sleep.now();
-    const obj = sleep;
   }
 };
 prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerContext, userId, arg2) {
@@ -80,9 +79,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
       obj[10] = store.getEffectiveConnectionSpeed();
       obj[11] = store.getServiceProvider();
       expandEventPropertiesDefault.track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
-      const obj2 = expandEventPropertiesDefault;
     }
-    const obj4 = map;
   }
 };
 

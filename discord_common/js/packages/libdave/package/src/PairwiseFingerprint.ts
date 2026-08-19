@@ -1,8 +1,8 @@
 // discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts
-import closure_2 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import closure_3 from "../../../../../../_runtime/00036__arrayLikeToArray.js";
 
-const require = arg1;
+const require = fn;
 function compareArrays(arg0, arg1) {
   if (0 < arg0.length) {
     let num2 = 0;
@@ -55,9 +55,9 @@ function _generatePairwiseFingerprint() {
   return applyArgumentsResult;
 }
 let closure_4 = { N: 16384, r: 8, p: 2, dkLen: 64 };
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts");
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts");
 
-export const generatePairwiseFingerprint = function generatePairwiseFingerprint(callback1, uint8Array, arg2, uint8Array1, arg4) {
+export const generatePairwiseFingerprint = function generatePairwiseFingerprint(callback1, uint8Array, arg2, uint8Array1, closure_2) {
   const self = this;
   const apply = _generatePairwiseFingerprint.apply;
   if (typeof apply === "unknown") {

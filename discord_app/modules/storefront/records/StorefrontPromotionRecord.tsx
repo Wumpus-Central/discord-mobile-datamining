@@ -1,6 +1,6 @@
 // discord_app/modules/storefront/records/StorefrontPromotionRecord.tsx
 import toJSDefault from "../../../lib/Record.tsx";
-import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 
 function parseSkuIds(sku_ids) {
   if (null == sku_ids) {
@@ -11,7 +11,6 @@ function parseSkuIds(sku_ids) {
     const entries = Object.entries(sku_ids);
     const tmp4 = entries[Symbol.iterator]();
     while (tmp4 !== undefined) {
-      let tmp8 = callback;
       let tmp9 = callback(tmp6, 2);
       obj = { priceTiers: null };
       obj[0] = tmp9[1].price_tiers;
@@ -22,8 +21,7 @@ function parseSkuIds(sku_ids) {
   }
 }
 toJSDefault;
-let prototype;
-prototype = function StorefrontPromotionRecord(arg0) {
+const prototype = function StorefrontPromotionRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, applicationId: tmp.applicationId, name: tmp.name, displayName: tmp.displayName, rewardType: tmp.rewardType, rewardStatus: tmp.rewardStatus, rewardConfig: tmp.rewardConfig, skuIds: tmp.skuIds, appliesToAllSkus: tmp.appliesToAllSkus, includeBundles: tmp.includeBundles, startsAt: tmp.startsAt, endsAt: tmp.endsAt, tenantMetadata: tmp.tenantMetadata } = arg0);
@@ -193,6 +191,6 @@ prototype["createFromServer"] = function createFromServer(display_name) {
   tmp32.tenantMetadata = tmp21;
   return tmp32;
 };
-const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontPromotionRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/storefront/records/StorefrontPromotionRecord.tsx");
 
 export default prototype;

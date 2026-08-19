@@ -2,14 +2,13 @@
 import noopAll from "../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx");
+const result = require("obj132").fileFinishedImporting("modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx");
 
 export default function VoicePanelSpoilerAlert(channelId) {
   channelId = channelId.channelId;
-  closure_1 = undefined;
   let obj = channelId(4660);
   closure_1 = obj.useDismissModalCallback();
   obj = { title: null, content: null, actions: null };
@@ -21,9 +20,9 @@ export default function VoicePanelSpoilerAlert(channelId) {
   obj1 = {
     variant: "primary",
     onPress() {
-      callback(closure_1_2[5]).spoilerAgree(channelId);
-      const obj = callback(closure_1_2[5]);
-      const voiceChannel = callback(closure_1_2[6]).selectVoiceChannel(channelId);
+      callback(dependencyMap[5]).spoilerAgree(channelId);
+      const obj = callback(dependencyMap[5]);
+      const voiceChannel = callback(dependencyMap[6]).selectVoiceChannel(channelId);
       callback();
     },
     text: null

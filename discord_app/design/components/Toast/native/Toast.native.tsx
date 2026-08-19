@@ -1,7 +1,7 @@
 // discord_app/design/components/Toast/native/Toast.native.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("design/components/Toast/native/Toast.native.tsx");
+const result = obj132.fileFinishedImporting("design/components/Toast/native/Toast.native.tsx");
 
 export function Toast() {
   return null;

@@ -2,19 +2,18 @@
 import getSystemLocale from "../../../intl/index.native.tsx";
 import Button from "../../../design/components/Button/native/Button.native.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { UserSettingsSections } from "../../../Constants.tsx";
 import { AccountSettingsTabs } from "../../user_settings/account/native/SettingsAccountConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");
 
 export default function QuestAccessSuspendedBottomSheet() {
   const callback = React.useCallback(() => {
     let obj = callback2(4342);
     obj.hideActionSheet(callback(14470).ACTION_SHEET_KEY);
-    obj = { screen: constants.ACCOUNT, params: obj };
     obj = { initialTab: constants2.STANDING };
     callback(7360).openUserSettings(obj);
   }, []);

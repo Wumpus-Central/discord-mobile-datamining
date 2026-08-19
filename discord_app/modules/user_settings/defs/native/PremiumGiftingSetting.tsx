@@ -3,13 +3,13 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import isPremiumGiftingSupported from "../../../device/BillingPlatformUtils.tsx";
 import useEligibleActiveOutboundPromotions from "../../../premium/promotions/PromotionsHooks.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { GiftingSectionTitle } from "../../premium/native/UserSettingsPremiumGifting.tsx";
 
-require = arg1;
-createToggle = {
+require = fn;
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["jcSP+g"]);
@@ -42,10 +42,10 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_GIFTING,
   getComponent() {
-    return GiftingSectionTitle.default;
+    return GiftingSectionTitle /* GiftingSectionTitle */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");
 
 export default createToggle;

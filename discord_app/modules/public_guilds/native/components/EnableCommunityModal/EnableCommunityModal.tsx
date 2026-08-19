@@ -5,10 +5,10 @@ import HeaderBackImage from "../../../../../design/components/Navigator/native/N
 import useNavigatorBackPressHandler from "../../../../../design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx";
 import _modDef16882 from "../../EnableCommunityModalActionCreators.tsx";
 import EnableCommunityModalSteps from "EnableCommunitySharedNavigation.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function onModalClose() {
   _modDef16882.close();
 }
@@ -17,11 +17,10 @@ function HeaderBackButton(arg0) {
     callback(table[2]).close();
     return true;
   });
-  const obj = useNavigatorBackPressHandler;
   const intl = getSystemLocale.intl;
   return HeaderBackImage.getHeaderTextButton(intl.string(getSystemLocale.t["13/7kX"]), onModalClose)(arg0);
 }
-const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
 
 export default function EnableCommunityModal() {
   const memo = React.useMemo(() => {
@@ -32,25 +31,6 @@ export default function EnableCommunityModal() {
       return callback3(callback(5432).HeaderActionButton, obj);
     }
     let obj = {
-      headerRight,
-      headerLeft: closure_6,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return callback3(callback2(16885), {});
-      }
-    };
-    obj = {
-      headerRight,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return callback3(callback2(16897), {});
-      }
-    };
-    obj = {
       headerRight,
       headerTitle() {
         return null;

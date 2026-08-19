@@ -1,20 +1,20 @@
 // discord_app/modules/share/native/ShareScreenModal.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import closure_6 from "../../../stores/ChannelStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
 import { SHARE_SCREEN_MODAL_KEY } from "ShareScreenConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-let require = arg1;
+let require = fn;
 function onClose() {
   _modDef5260.popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
 let closure_9 = new timestampDefault("ShareScreenModal");
 const tmp2 = new timestampDefault("ShareScreenModal");
-const result = require("set").fileFinishedImporting("modules/share/native/ShareScreenModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/share/native/ShareScreenModal.tsx");
 
 export default function ShareScreenModal(text) {
   text = text.text;
@@ -25,8 +25,6 @@ export default function ShareScreenModal(text) {
   let first;
   let React;
   let stateFromStores;
-  closure_7 = undefined;
-  let first1;
   let obj = React;
   let tmp = first(React.useState(null), 2);
   first = tmp[0];
@@ -229,7 +227,7 @@ export default function ShareScreenModal(text) {
       return applyArgumentsResult;
     })();
   }, items2);
-  first1 = stateFromStores;
+  let first1 = stateFromStores;
   if (stateFromStores == null) {
     first1 = tmp6[0];
   }
@@ -242,29 +240,29 @@ export default function ShareScreenModal(text) {
     }
     obj[1] = items;
     if (null != first1) {
-      if (tmp.type !== text(shareId[11]).ChannelTypes.DM) {
+      if (first1.type !== text(shareId[11]).ChannelTypes.DM) {
         obj.targetChannelId = channelId;
       } else {
-        let isArray = tmp;
-        if (tmp) {
-          isArray = "recipients" in tmp;
+        let isArray = first1;
+        if (first1) {
+          isArray = "recipients" in first1;
         }
         if (isArray) {
           const _Array = Array;
-          isArray = Array.isArray(tmp.recipients);
+          isArray = Array.isArray(first1.recipients);
         }
         if (isArray) {
-          obj.targetUserId = tmp.recipients[0];
+          obj.targetUserId = first1.recipients[0];
         } else {
-          let tmp4 = tmp;
-          if (tmp) {
-            tmp4 = "recipient" in tmp;
+          let tmp4 = first1;
+          if (first1) {
+            tmp4 = "recipient" in first1;
           }
           if (tmp4) {
-            tmp4 = "id" in tmp.recipient;
+            tmp4 = "id" in first1.recipient;
           }
           if (tmp4) {
-            const recipient = tmp.recipient;
+            const recipient = first1.recipient;
             let id;
             if (recipient != null) {
               id = recipient.id;

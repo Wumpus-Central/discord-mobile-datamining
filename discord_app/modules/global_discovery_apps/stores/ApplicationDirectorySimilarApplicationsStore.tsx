@@ -51,7 +51,7 @@ obj = {
 };
 const applicationDirectorySimilarApplicationsStore = new ApplicationDirectorySimilarApplicationsStore(dispatcherDefault, obj);
 const tmp2 = new privDefault({ max: 20 });
-let result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySimilarApplicationsStore.tsx");
 
 export default applicationDirectorySimilarApplicationsStore;
 export const FetchState = obj;

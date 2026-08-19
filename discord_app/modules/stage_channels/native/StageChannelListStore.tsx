@@ -1,26 +1,26 @@
 // discord_app/modules/stage_channels/native/StageChannelListStore.tsx
 import isIterable from "../../../../_runtime/04006_isIterable.js";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import identity from "../../../../_runtime/00700_identity.js";
 
-require = arg1;
+require = fn;
 let closure_4 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   return {
     showActiveSpeakerPill: false,
     setShowActiveSpeakerPill(arg0) {
       const callback = arg0;
-      return callback(closure_1_1[3]).batchUpdates(() => callback({ showActiveSpeakerPill: callback }));
+      return callback(dependencyMap[3]).batchUpdates(() => callback({ showActiveSpeakerPill: callback }));
     },
     listRef: null,
     setListRef(arg0) {
       const callback = arg0;
-      return callback(closure_1_1[3]).batchUpdates(() => callback({ listRef: callback }));
+      return callback(dependencyMap[3]).batchUpdates(() => callback({ listRef: callback }));
     }
   };
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/StageChannelListStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/StageChannelListStore.tsx");
 
 export const useActiveSpeakerPillScrollHandler = function useActiveSpeakerPillScrollHandler() {
   const tmp = callback(callback2((arg0) => {

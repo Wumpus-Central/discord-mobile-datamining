@@ -16,9 +16,9 @@ import renderComponents from "renderComponents.tsx";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import { InteractionModalState } from "../InteractionModalStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function onClose() {
   return _modDef5260.popWithKey(interaction_modal);
 }
@@ -107,26 +107,19 @@ noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const interaction_modal = "interaction_modal";
-createCacheKey = { modal: null, scroll: null, modalContent: null, header: null, titleView: null, icon: null, footer: null, closeButton: null, closeIcon: null, error: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-let obj1 = { flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { flexDirection: "row", marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { flex: 1 };
-let obj2 = { flexDirection: "row", marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { marginRight: ThemesDefault.space.PX_8 };
-let obj3 = { marginRight: ThemesDefault.space.PX_8 };
 createCacheKey[6] = { marginTop: "auto", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[7] = { marginLeft: "auto" };
-let obj4 = { marginTop: "auto", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[8] = { color: ThemesDefault.colors.TEXT_MUTED };
-let obj5 = { color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[9] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/InteractionModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/InteractionModal.tsx");
 
 export default InteractionModal;
 export const openInteractionModal = function openInteractionModal(closure_0) {

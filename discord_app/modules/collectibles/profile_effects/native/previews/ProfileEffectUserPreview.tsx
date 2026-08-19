@@ -4,9 +4,9 @@ import getSystemLocale from "../../../../../intl/index.native.tsx";
 import filterLayerDefault from "../../../../user_profile/native/UserProfilePreview.tsx";
 import { jsx } from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
 
 export default function ProfileEffectUserPreview(profileEffect) {
   profileEffect = profileEffect.profileEffect;

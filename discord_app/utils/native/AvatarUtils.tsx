@@ -1,4 +1,5 @@
 // discord_app/utils/native/AvatarUtils.tsx
+import obj132 from "../../../_runtime/00002_obj132.js";
 import registerAssetDefault from "../../../_runtime/01439_registerAsset.js";
 import registerAssetDefault2 from "../../../_runtime/01440_registerAsset.js";
 import registerAssetDefault3 from "../../../_runtime/01441_registerAsset.js";
@@ -29,7 +30,6 @@ import registerAssetDefault27 from "../../../_runtime/01465_registerAsset.js";
 import registerAssetDefault28 from "../../../_runtime/01466_registerAsset.js";
 import registerAssetDefault29 from "../../../_runtime/01468_registerAsset.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import set from "../../../_runtime/00002_set.js";
 import { registerAsset } from "../../../_runtime/01467_registerAsset.js";
 
 function ensureAvatarSource(source) {
@@ -47,16 +47,15 @@ const items1 = [registerAssetDefault7, registerAssetDefault8, registerAssetDefau
 const items2 = [registerAssetDefault13, registerAssetDefault14, registerAssetDefault15, registerAssetDefault16, registerAssetDefault17, registerAssetDefault18];
 const items3 = [registerAssetDefault19, registerAssetDefault20, registerAssetDefault21, registerAssetDefault22, registerAssetDefault23, registerAssetDefault24, registerAssetDefault25, registerAssetDefault26];
 const MediaManager = NativeModules.MediaManager;
-let set = new Set(MediaManager.getConstants().supportedExtensions);
-let obj = { DEFAULT_AVATARS: items, DEFAULT_AVATARS_SMALL: items1, DEFAULT_AVATARS_SMALL_MAX_SIZE: 24, DEFAULT_PROVISIONAL_AVATARS: items2, DEFAULT_GROUP_DM_AVATARS: items3, BOT_AVATARS: null, DEFAULT_CHANNEL_ICON: null, ensureAvatarSource: null, canUseWebp: null };
-obj = { clyde: registerAssetDefault27, nitro_wumpus: registerAssetDefault28 };
+const set = new Set(MediaManager.getConstants().supportedExtensions);
+const obj = { clyde: registerAssetDefault27, nitro_wumpus: registerAssetDefault28 };
 obj[5] = obj;
 obj[6] = registerAssetDefault29;
 obj[7] = ensureAvatarSource;
 obj[8] = function canUseWebp() {
   return set.has("webp");
 };
-const result = set.fileFinishedImporting("utils/native/AvatarUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/native/AvatarUtils.tsx");
 
 export default obj;
 export const DEFAULT_AVATARS = items;

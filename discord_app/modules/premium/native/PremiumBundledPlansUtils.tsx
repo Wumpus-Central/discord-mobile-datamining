@@ -1,10 +1,9 @@
 // discord_app/modules/premium/native/PremiumBundledPlansUtils.tsx
 import SubscriptionPlans from "ProductIds.android.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import GuildFeatures from "../PremiumConstants.tsx";
-import { SubscriptionPlans } from "ProductIds.android.tsx";
 
-require = arg1;
+require = fn;
 function getPremiumBundledItemsFromProductId(productId) {
   if (productId in SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems) {
     return SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems[productId];
@@ -14,7 +13,6 @@ function getPremiumBundledItemsFromProductId(productId) {
     error = new Error("Invalid bundled product ID " + productId);
     throw error;
   }
-  const tmp = require;
 }
 function isValidBundleProductId(productIdFromSubscription) {
   let tmp = null != productIdFromSubscription;
@@ -56,7 +54,6 @@ function aggregateQuantitiesByPlanId(subscriptionItemsForProduct) {
     if (num == null) {
       num = 0;
     }
-    let tmp2 = quantity;
     let result = map.set(planId, num + quantity);
     continue;
   }
@@ -68,10 +65,8 @@ function planQuantityMapsEqual(size, size2) {
   } else {
     const obj = size[Symbol.iterator]();
     while (obj !== undefined) {
-      let tmp5 = callback;
       let tmp6 = callback(tmp3, 2);
       if (size2.get(tmp6[0]) !== tmp6[1]) {
-        let tmp7 = obj;
         obj.return();
         let flag = false;
         return false;
@@ -83,12 +78,7 @@ function planQuantityMapsEqual(size, size2) {
 function getProductIdFromSubscriptionItems(subscriptionItemsForProduct) {
   const keys = Object.keys(SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems);
   for (const item10018 of keys) {
-    let tmp3 = item10018;
-    let tmp4 = planQuantityMapsEqual;
-    let tmp5 = aggregateQuantitiesByPlanId;
-    let tmp6 = getSubscriptionItemsForProduct;
     if (planQuantityMapsEqual(tmp, aggregateQuantitiesByPlanId(getSubscriptionItemsForProduct(item10018)))) {
-      let tmp7 = obj;
       obj.return();
       return item10018;
     }
@@ -97,7 +87,7 @@ function getProductIdFromSubscriptionItems(subscriptionItemsForProduct) {
   throw error;
 }
 ({ PREMIUM_GUILD_SUBSCRIPTION_PLANS: c3, PremiumTypes: c4, SubscriptionIntervalTypes: c5, SubscriptionPlans: closure_6 } = GuildFeatures);
-let result = require("set").fileFinishedImporting("modules/premium/native/PremiumBundledPlansUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/native/PremiumBundledPlansUtils.tsx");
 
 export const getPremiumBundlesWithPredicate = function getPremiumBundlesWithPredicate(fn) {
   const values = Object.values(SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems);
@@ -109,14 +99,14 @@ export const getPremiumBundleWithPredicate = function getPremiumBundleWithPredic
 };
 export { getPremiumBundledItemsFromProductId };
 export const getToggledIntervalProduct = function getToggledIntervalProduct(productId) {
-  if (productId in _SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems) {
+  if (productId in require("ProductIds.android.tsx").AppStorePremiumProductIdsToPremiumBundledItems) {
     const tmp8 = tmp(5322).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     _require = tmp8;
     let tmp11 = null;
     if (tmp8.premiumTier !== closure_4.TIER_1) {
       const _Object = Object;
       const values = Object.values(tmp(5322).AppStorePremiumProductIdsToPremiumBundledItems);
-      const found = values.find((numPremiumGuild) => numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild && numPremiumGuild.premiumTier === numPremiumGuild.premiumTier && numPremiumGuild.interval !== numPremiumGuild.interval && !numPremiumGuild.isDeprecated);
+      const found = values.find((item, index) => item.numPremiumGuild === numPremiumGuild.numPremiumGuild && item.premiumTier === numPremiumGuild.premiumTier && item.interval !== numPremiumGuild.interval && !item.isDeprecated);
       productId = undefined;
       if (found != null) {
         productId = found.productId;
@@ -132,7 +122,7 @@ export const getToggledIntervalProduct = function getToggledIntervalProduct(prod
   }
 };
 export const getProductIdsForBothIntervals = function getProductIdsForBothIntervals(productIdFromSubscription) {
-  if (productIdFromSubscription in _SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems) {
+  if (productIdFromSubscription in require("ProductIds.android.tsx").AppStorePremiumProductIdsToPremiumBundledItems) {
     const tmp8 = tmp(5322).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
     _require = undefined;
     if (productIdFromSubscription in tmp(5322).AppStorePremiumProductIdsToPremiumBundledItems) {
@@ -142,7 +132,7 @@ export const getProductIdsForBothIntervals = function getProductIdsForBothInterv
       if (tmp14.premiumTier !== closure_4.TIER_1) {
         const _Object = Object;
         const values = Object.values(tmp(5322).AppStorePremiumProductIdsToPremiumBundledItems);
-        const found = values.find((numPremiumGuild) => numPremiumGuild.numPremiumGuild === numPremiumGuild.numPremiumGuild && numPremiumGuild.premiumTier === numPremiumGuild.premiumTier && numPremiumGuild.interval !== numPremiumGuild.interval && !numPremiumGuild.isDeprecated);
+        const found = values.find((item, index) => item.numPremiumGuild === numPremiumGuild.numPremiumGuild && item.premiumTier === numPremiumGuild.premiumTier && item.interval !== numPremiumGuild.interval && !item.isDeprecated);
         let productId;
         if (found != null) {
           productId = found.productId;
@@ -159,11 +149,10 @@ export const getProductIdsForBothIntervals = function getProductIdsForBothInterv
         }
         obj = { monthly: null, yearly: null };
         obj[0] = tmp22;
-        if (tmp8.interval === tmp21.YEAR) {
+        if (tmp8.interval === constants.YEAR) {
           tmp17 = productIdFromSubscription;
         }
         obj[1] = tmp17;
-        tmp21 = constants;
       }
       return obj;
     } else {
@@ -179,30 +168,30 @@ export const getProductIdsForBothIntervals = function getProductIdsForBothInterv
     throw error1;
   }
 };
-export const productsHaveSamePerks = function productsHaveSamePerks(productId, arg1) {
+export const productsHaveSamePerks = function productsHaveSamePerks(productId, closure_1_7) {
   let tmp = null != productId;
   if (tmp) {
     tmp = productId in SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems;
   }
   if (tmp) {
-    let tmp4 = null != arg1;
+    let tmp4 = null != getPremiumBundledItemsFromProductId;
     if (tmp4) {
-      tmp4 = arg1 in SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems;
+      tmp4 = getPremiumBundledItemsFromProductId in SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems;
     }
     if (tmp4) {
       if (null != productId) {
-        if (null != arg1) {
-          if (productId === arg1) {
+        if (null != getPremiumBundledItemsFromProductId) {
+          if (productId === getPremiumBundledItemsFromProductId) {
             return true;
           } else if (productId in SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems) {
-            const tmp12 = tmp20(5322).AppStorePremiumProductIdsToPremiumBundledItems[productId];
-            if (arg1 in tmp20(5322).AppStorePremiumProductIdsToPremiumBundledItems) {
-              const tmp18 = tmp20(5322).AppStorePremiumProductIdsToPremiumBundledItems[arg1];
+            const tmp12 = SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems[productId];
+            if (getPremiumBundledItemsFromProductId in SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems) {
+              const tmp18 = SubscriptionPlans.AppStorePremiumProductIdsToPremiumBundledItems[getPremiumBundledItemsFromProductId];
               return tmp12.numPremiumGuild === tmp18.numPremiumGuild && tmp12.premiumTier === tmp18.premiumTier;
             } else {
               const _Error2 = Error;
               const _HermesInternal2 = HermesInternal;
-              error = new Error("Invalid bundled product ID " + arg1);
+              error = new Error("Invalid bundled product ID " + getPremiumBundledItemsFromProductId);
               throw error;
             }
           } else {
@@ -213,10 +202,10 @@ export const productsHaveSamePerks = function productsHaveSamePerks(productId, a
           }
         }
       }
-      return productId === arg1;
+      return productId === getPremiumBundledItemsFromProductId;
     }
   }
-  return productId === arg1;
+  return productId === getPremiumBundledItemsFromProductId;
 };
 export { isValidBundleProductId };
 export const shouldAlwaysExcludeFromPlanSelect = function shouldAlwaysExcludeFromPlanSelect(isDeprecated, flag2) {
@@ -252,14 +241,14 @@ export const getModifySubscriptionItemsForProduct = function getModifySubscripti
         const itemsWithUpsertedPremiumPlanId = tmpResult.getItemsWithUpsertedPremiumPlanId(closure_0, tmp8.basePlanId);
         const reversed = itemsWithUpsertedPremiumPlanId.reverse();
         const additionalPlans = tmp8.additionalPlans;
-        found = additionalPlans.find((planId) => set.has(planId.planId));
+        found = additionalPlans.find((item, index) => set.has(item.planId));
         let mapped = reversed;
         if (null != found) {
-          mapped = reversed.map((planId) => {
-            let tmp = planId;
-            if (closure_1_3.has(planId.planId)) {
+          mapped = reversed.map((item, index) => {
+            let tmp = item;
+            if (closure_1_3.has(item.planId)) {
               const obj = {};
-              const merged = Object.assign(planId);
+              const merged = Object.assign(item);
               ({ planId: obj.planId, quantity: obj.quantity } = found);
               tmp = obj;
             }
@@ -318,7 +307,6 @@ export const getProductIdFromSubscription = function getProductIdFromSubscriptio
       items1 = subscription.items;
     }
     let tmp20Result = getProductIdFromSubscriptionItems(items1);
-    const tmp20 = getProductIdFromSubscriptionItems;
   } else {
     let paymentGatewayPlanId1 = null;
     if (arg1) {

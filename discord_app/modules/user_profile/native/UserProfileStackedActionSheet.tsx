@@ -1,26 +1,26 @@
 // discord_app/modules/user_profile/native/UserProfileStackedActionSheet.tsx
 import noopAll from "../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
+import PressableBase from "../../../design/void/Pressables/native/Pressables.tsx";
+import ArrowLargeLeftIcon from "../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
 import Background from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { header: null, headerSpacer: null, list: null, contentContainer: null, divider: null };
-createCacheKey = { flexDirection: "row", marginHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { flexDirection: "row", marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: ThemesDefault.space.PX_24, height: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { flex: 1 };
-let obj1 = { width: ThemesDefault.space.PX_24, height: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { marginLeft: 64 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { marginHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");
 
 export default function UserProfileStackedActionSheet(onBack) {
   onBack = onBack.onBack;
@@ -39,28 +39,27 @@ export default function UserProfileStackedActionSheet(onBack) {
   items[1] = { justifyContent: str };
   if (tmp4Result) {
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = tmp5(1236).intl;
-    obj[1] = intl.string(tmp5(1236).t["13/7kX"]);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t["13/7kX"]);
     obj[2] = onBack;
-    obj[3] = tmp4(tmp5(6316).ArrowLargeLeftIcon, { size: "md" });
-    tmp4Result = tmp4(tmp5(5433).PressableOpacity, obj);
+    obj[3] = callback(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" });
+    tmp4Result = callback(PressableBase.PressableOpacity, obj);
   }
-  const items1 = [tmp4Result, closure_4(Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
+  const items1 = [tmp4Result, callback(Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
   if (tmp4Result) {
     obj1 = { style: null };
     obj1[0] = tmp2.headerSpacer;
-    tmp4Result = tmp4(tmp9, obj1);
+    tmp4Result = callback(View, obj1);
   }
   items1[2] = tmp4Result;
   obj[1] = items1;
-  obj.header = closure_5(View, obj);
+  obj.header = callback2(View, obj);
   obj.children = children;
-  return closure_4(Background.BottomSheet, obj);
+  return callback(Background.BottomSheet, obj);
 };
 export const UserProfileStackedActionSheetList = function UserProfileStackedActionSheetList(data) {
   data = data.data;
   const renderItem = data.renderItem;
-  dependencyMap = undefined;
   const merged = Object.assign(data, Object.create(null));
   const tmp2 = callback2();
   dependencyMap = tmp2;
@@ -83,11 +82,10 @@ export const UserProfileStackedActionSheetList = function UserProfileStackedActi
     index = index.index;
     return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
   };
-  return closure_4(data(6952).BottomSheetFlatList, obj);
+  return callback(data(6952).BottomSheetFlatList, obj);
 };
 export const UserProfileStackedActionSheetSectionList = function UserProfileStackedActionSheetSectionList(renderItem) {
   renderItem = renderItem.renderItem;
-  closure_1 = undefined;
   const merged = Object.assign(renderItem, Object.create(null));
   closure_1 = callback2();
   const obj = {};
@@ -98,7 +96,7 @@ export const UserProfileStackedActionSheetSectionList = function UserProfileStac
     return renderItem({ item: index.item, start: 0 === index, end: index === index.section.data.length - 1 });
   };
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
-    return closure_1_4(renderItem(closure_1_2[7]).FormDivider, { style: divider.divider });
+    return closure_1_4(renderItem(dependencyMap[7]).FormDivider, { style: divider.divider });
   };
   return callback(renderItem(6952).BottomSheetSectionList, obj);
 };

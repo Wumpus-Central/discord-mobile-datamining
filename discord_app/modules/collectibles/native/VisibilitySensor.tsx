@@ -1,37 +1,32 @@
 // discord_app/modules/collectibles/native/VisibilitySensor.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import noop from "../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import noop2 from "../../../../_runtime/00019_noop.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
 ({ useEffect: obj1, useRef: c3 } = noop);
 const View = get_ActivityIndicator.View;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = set.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/native/VisibilitySensor.tsx");
 
 export default function _default(onChange) {
   onChange = onChange.onChange;
-  dependencyMap = undefined;
-  let callback;
   let width;
-  let height;
-  closure_5 = undefined;
-  callback = undefined;
   function stopWatching(closure_5, arg1) {
     if (null !== ref.current) {
       const _clearInterval = clearInterval;
-      clearInterval(tmp.current);
-      tmp.current = null;
+      clearInterval(ref.current);
+      ref.current = null;
     }
   }
   ({ children, resetKey } = onChange);
   let tmp = width(null);
   dependencyMap = tmp;
-  callback = width(false);
+  let callback = width(false);
   const size = onChange(1494)();
   width = size.width;
-  height = size.height;
+  const height = size.height;
   closure_5 = width(null);
   const items = [resetKey];
   callback(() => {

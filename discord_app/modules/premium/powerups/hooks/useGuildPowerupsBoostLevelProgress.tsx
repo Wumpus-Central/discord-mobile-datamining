@@ -1,19 +1,19 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx
 import useGuildAppliedBoostCount from "useGuildPowerupsBoostCount.tsx";
 import useGuildAppliedBoostCountDefault from "useGuildPowerupsBoostCount.tsx";
-import closure_3 from "../../../../stores/GuildStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
 import ME from "../../../../Constants.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-require = arg1;
+require = fn;
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c4, BoostedGuildTiers: c5, GuildFeatures: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");
 
 export default function useGuildPowerupBoostLevelProgress(arg0) {
   const _require = arg0;
   const tmp = useGuildAppliedBoostCountDefault(arg0);
   const items = [closure_3];
-  const stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     const guild = closure_1_3.getGuild(closure_0);
     let premiumTier;
     if (guild != null) {
@@ -24,7 +24,7 @@ export default function useGuildPowerupBoostLevelProgress(arg0) {
     }
     return premiumTier;
   });
-  const obj = _initialize;
+  const obj = initialize;
   const items1 = [closure_3];
   let num = 0;
   if (!obj2.useStateFromStores(items1, () => {

@@ -1,7 +1,7 @@
 // discord_app/modules/markup/MarkupRulesUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
 
 export const smartOutput = function smartOutput(node, output, state) {
   if (typeof node.content !== "string") {

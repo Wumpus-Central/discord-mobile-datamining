@@ -1,14 +1,13 @@
 // discord_app/modules/client_themes/CustomThemesRandomUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
 let items = ["#94E0CF", "#9AF0B1", "#9A90FF", "#9A53FF", "#FDA6E4", "#FFE6C0", "#EFB4AA", "#56B69F", "#29C566", "#5348CA", "#6D24D4", "#CA48C8", "#F0AE29", "#DF4232"];
 let closure_3 = [0, 45, 90, 135, 180, 225, 270, 315];
 let closure_4 = [20, 40, 60, 80];
-let obj = { SOLID: "solid", GRADIENT: "gradient" };
-obj = { TWO_COLOR: "two-color", ANALOGOUS: "analogous", COMPLEMENTARY: "complementary", SPLIT_COMPLEMENTARY: "split-complementary", TRIADIC: "triadic" };
+let obj = { TWO_COLOR: "two-color", ANALOGOUS: "analogous", COMPLEMENTARY: "complementary", SPLIT_COMPLEMENTARY: "split-complementary", TRIADIC: "triadic" };
 let items1 = [, , , ];
 ({ ANALOGOUS: arr2[0], COMPLEMENTARY: arr2[1], SPLIT_COMPLEMENTARY: arr2[2], TRIADIC: arr2[3] } = obj);
-const result = set.fileFinishedImporting("modules/client_themes/CustomThemesRandomUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/client_themes/CustomThemesRandomUtils.tsx");
 
 export const COLOR_PALETTE = items;
 export const ColorType = obj;
@@ -32,7 +31,6 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
       do {
         let _Math5 = Math;
         let _Math6 = Math;
-        let tmp6 = items;
         rounded1 = Math.floor(Math.random() * items.length);
         tmp3 = items;
       } while (rounded1 === rounded);
@@ -53,54 +51,59 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
     const tmp11 = items1[Math.floor(Math, Math.random(Math) * items1.length)];
     obj = { type: null, colors: null, angle: null, intensity: null, gradientType: null };
     obj[0] = obj.GRADIENT;
-    obj[1] = (function generateColorHarmony(gradientSecondaryBackground, arg1) {
+    obj[1] = (function generateColorHarmony(items, items1) {
       try {
-        obj = callback(table[0])(gradientSecondaryBackground);
+        obj = callback(table[0])(items);
         let value = obj.get("hsl.h");
         value = obj.get("hsl.s");
         const value1 = obj.get("hsl.l");
-        if (constants.ANALOGOUS === arg1) {
-          return (function generateAnalogousColors(gradientSecondaryBackground, value, value1, value2) {
+        if (constants.ANALOGOUS === items1) {
+          return (function generateAnalogousColors(items, value, value1, value2) {
             obj = callback(689);
-            items = [callback(689).hsl(value2 - 30, value, value1).hex(), gradientSecondaryBackground, ];
+            items = [callback(689).hsl(value2 - 30, value, value1).hex(), , ];
+            items[1] = items;
             const hslResult = callback(689).hsl(value2 - 30, value, value1);
             const obj3 = callback(689);
             items[2] = callback(689).hsl(value2 + 30, value, value1).hex();
             return items;
-          })(gradientSecondaryBackground, value, value1, value);
-        } else if (tmp8.COMPLEMENTARY === arg1) {
-          return (function generateComplementaryColors(gradientSecondaryBackground, value, value1, value2) {
+          })(items, value, value1, value);
+        } else if (constants.COMPLEMENTARY === items1) {
+          return (function generateComplementaryColors(items, value, value1, value2) {
             obj = callback(689);
             const hexResult = callback(689).hsl((value2 + 180) % 360, value, value1).hex();
-            items = [gradientSecondaryBackground, , ];
+            items = [, , ];
+            items[0] = items;
             const hslResult = callback(689).hsl((value2 + 180) % 360, value, value1);
             const obj3 = callback(689);
-            items[1] = callback(689).mix(gradientSecondaryBackground, hexResult, 0.5).hex();
+            items[1] = callback(689).mix(items, hexResult, 0.5).hex();
             items[2] = hexResult;
             return items;
-          })(gradientSecondaryBackground, value, value1, value);
-        } else if (tmp8.SPLIT_COMPLEMENTARY === arg1) {
-          return (function generateSplitComplementaryColors(gradientSecondaryBackground, value, value1, value2) {
-            items = [gradientSecondaryBackground, , ];
+          })(items, value, value1, value);
+        } else if (constants.SPLIT_COMPLEMENTARY === items1) {
+          return (function generateSplitComplementaryColors(items, value, value1, value2) {
+            items = [, , ];
+            items[0] = items;
             obj = callback(689);
             items[1] = callback(689).hsl((value2 + 150) % 360, value, value1).hex();
             const hslResult = callback(689).hsl((value2 + 150) % 360, value, value1);
             const obj3 = callback(689);
             items[2] = callback(689).hsl((value2 + 210) % 360, value, value1).hex();
             return items;
-          })(gradientSecondaryBackground, value, value1, value);
-        } else if (tmp8.TRIADIC === arg1) {
-          return (function generateTriadicColors(gradientSecondaryBackground, value, value1, value2) {
-            items = [gradientSecondaryBackground, , ];
+          })(items, value, value1, value);
+        } else if (constants.TRIADIC === items1) {
+          return (function generateTriadicColors(items, value, value1, value2) {
+            items = [, , ];
+            items[0] = items;
             obj = callback(689);
             items[1] = callback(689).hsl((value2 + 120) % 360, value, value1).hex();
             const hslResult = callback(689).hsl((value2 + 120) % 360, value, value1);
             const obj3 = callback(689);
             items[2] = callback(689).hsl((value2 + 240) % 360, value, value1).hex();
             return items;
-          })(gradientSecondaryBackground, value, value1, value);
+          })(items, value, value1, value);
         } else {
-          items = [gradientSecondaryBackground];
+          items = [];
+          items[0] = items;
           return items;
         }
       } catch (err) {

@@ -1,6 +1,6 @@
 // discord_app/modules/markup/TimestampUtils.tsx
-import set from "../../../_runtime/00002_set.js";
-import setDefault from "../../utils/Durations.tsx";
+import obj132 from "../../../_runtime/00002_obj132.js";
+import obj132Default from "../../utils/Durations.tsx";
 import tDefault from "../../../_runtime/03975_t.js";
 import resetCache from "../../utils/DateUtils.tsx";
 
@@ -31,29 +31,24 @@ let obj = {
   },
   R(toDate) {
     const result = tDefault.relativeTimeThreshold("s");
-    obj = tDefault;
     const result1 = tDefault.relativeTimeThreshold("s", 60);
-    const obj2 = tDefault;
     const result2 = tDefault.relativeTimeThreshold("ss");
-    const obj3 = tDefault;
     const result3 = tDefault.relativeTimeThreshold("ss", -1);
-    const obj4 = tDefault;
     const result4 = tDefault.relativeTimeThreshold("m");
-    const obj5 = tDefault;
     const result5 = tDefault.relativeTimeThreshold("m", 60);
     try {
-      let tmpResult = tmp(3975);
+      let tmpResult = tDefault;
       let fromNowResult = tmpResult(toDate.toDate()).fromNow();
-      tmpResult = tmp(3975);
+      tmpResult = tDefault;
       const result6 = tmpResult.relativeTimeThreshold("s", result);
       const tmpResultResult = tmpResult(toDate.toDate());
-      const result7 = tmp(3975).relativeTimeThreshold("ss", result2);
-      const tmpResult1 = tmp(3975);
-      const result8 = tmp(3975).relativeTimeThreshold("m", result4);
+      const result7 = tDefault.relativeTimeThreshold("ss", result2);
+      const tmpResult1 = tDefault;
+      const result8 = tDefault.relativeTimeThreshold("m", result4);
       if (fromNowResult == null) {
-        const tmpResult3 = tmp(3975);
-        fromNowResult = tmp(3975)(toDate.toDate()).fromNow();
-        const tmpResult4Result = tmp(3975)(toDate.toDate());
+        const tmpResult3 = tDefault;
+        fromNowResult = tDefault(toDate.toDate()).fromNow();
+        const tmpResult4Result = tDefault(toDate.toDate());
       }
       return fromNowResult;
     } catch (err) {
@@ -63,7 +58,7 @@ let obj = {
 Object.setPrototypeOf(obj, null);
 const keys = Object.keys(obj);
 const regExp = new RegExp("^<t:(-?\\d{1,17})(?::(" + keys.join("|") + "))?>");
-let result = set.fileFinishedImporting("modules/markup/TimestampUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/markup/TimestampUtils.tsx");
 
 export const TIMESTAMP_FORMATS = obj;
 export const DEFAULT_TIMESTAMP_FORMAT = "f";
@@ -71,7 +66,7 @@ export const TIMESTAMP_REGEX = regExp;
 export const formatTimestampMention = function formatTimestampMention(arg0) {
   ({ timestamp, format } = arg0);
   const tmp = tDefault;
-  const tmpResult = tmp(Number(timestamp) * setDefault.Millis.SECOND);
+  const tmpResult = tmp(Number(timestamp) * obj132Default.Millis.SECOND);
   if (tmpResult.isValid()) {
     let f;
     if (null != format) {
@@ -94,7 +89,7 @@ export const formatTimestampMention = function formatTimestampMention(arg0) {
 };
 export const parseTimestamp = function parseTimestamp(arg0, arg1) {
   const tmp = tDefault;
-  const tmpResult = tmp(Number(arg0) * setDefault.Millis.SECOND);
+  const tmpResult = tmp(Number(arg0) * obj132Default.Millis.SECOND);
   let tmp3 = null;
   if (tmpResult.isValid()) {
     let f;

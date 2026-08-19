@@ -1,9 +1,9 @@
 // discord_app/modules/guild_badge/BadgeCategory.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import GuildVisibility from "GuildTraits.tsx";
 
 const obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };
-const result = set.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
 
 export const BadgeCategory = obj;
 export const getBadgeCategory = function getBadgeCategory(guildTraits) {
@@ -25,7 +25,7 @@ export const getBadgeCategory = function getBadgeCategory(guildTraits) {
           DISCOVERABLE = obj.DISCOVERABLE;
         }
       }
-      DISCOVERABLE = guildTraits.community ? tmp3.COMMUNITY : tmp3.NONE;
+      DISCOVERABLE = guildTraits.community ? obj.COMMUNITY : obj.NONE;
     }
   }
   return DISCOVERABLE;

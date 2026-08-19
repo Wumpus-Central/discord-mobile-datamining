@@ -1,11 +1,11 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelAnimatedActivityCard.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ManaContext from "../../../../../discord_common/js/packages/design/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../activities/EmbeddedActivitiesStore.tsx";
-import closure_6 from "../../../video_calls/native/ChannelCallLifecycleStore.tsx";
-import closure_7 from "../../../../stores/ChannelStore.tsx";
+import participantFromServer from "../../../activities/EmbeddedActivitiesStore.tsx";
+import initialize from "../../../video_calls/native/ChannelCallLifecycleStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
 import VoicePanelModes from "../../VoicePanelConstants.tsx";
 import { VoicePanelControlsModes } from "../controls/VoicePanelControlsConstants.tsx";
 import { ThemeTypes } from "../../../../Constants.tsx";
@@ -13,21 +13,12 @@ import items3 from "../../../activities/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function VoicePanelAnimatedActivityCardInner(applicationId) {
   applicationId = applicationId.applicationId;
   const sharedVisible = applicationId.sharedVisible;
-  dependencyMap = undefined;
   let channelId;
   let focused;
-  let layoutManager;
-  let mode;
-  let windowDimensions;
-  let hideControls;
-  let controlsSpecs;
-  closure_10 = undefined;
-  let stateFromStores;
-  let guild_id;
   let first;
   let gridOrientationLockState;
   let focusedOrientationLockState;
@@ -47,18 +38,18 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   const context = focused.useContext(sharedVisible(11439));
   channelId = context.channelId;
   focused = context.focused;
-  layoutManager = context.layoutManager;
-  mode = context.mode;
-  windowDimensions = context.windowDimensions;
-  hideControls = context.hideControls;
-  controlsSpecs = context.controlsSpecs;
+  const layoutManager = context.layoutManager;
+  let mode = context.mode;
+  const windowDimensions = context.windowDimensions;
+  const hideControls = context.hideControls;
+  const controlsSpecs = context.controlsSpecs;
   const tmp7 = sharedVisible(16184)();
   closure_10 = tmp7;
   obj1 = applicationId(589);
   const items = [windowDimensions];
-  stateFromStores = obj1.useStateFromStores(items, () => windowDimensions.getChannel(channelId));
+  const stateFromStores = obj1.useStateFromStores(items, () => windowDimensions.getChannel(channelId));
   const items1 = [stateFromStores];
-  guild_id = undefined;
+  let guild_id;
   const memo = focused.useMemo(() => ({ channel: stateFromStores, type: "channel" }), items1);
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -74,8 +65,8 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   const activityShelfItemData = tmp8Result.useActivityShelfItemData(guild_id1, applicationId);
   const items2 = [guild_id];
   const effect = obj.useEffect(() => {
-    let obj = applicationId(8701);
-    obj = { guildId: guild_id };
+    applicationId(8701);
+    const obj = { guildId: guild_id };
     const shelf = obj.fetchShelf(obj);
   }, items2);
   const items3 = [applicationId];
@@ -91,12 +82,12 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   const items6 = [layoutManager];
   const stateFromStores1 = applicationId(589).useStateFromStores(items6, () => {
     const embeddedActivitiesForChannel = layoutManager.getEmbeddedActivitiesForChannel(channelId);
-    return embeddedActivitiesForChannel.find((applicationId) => {
+    return embeddedActivitiesForChannel.find((item, index) => {
       let id;
       if (id != null) {
         id = id.id;
       }
-      return applicationId.applicationId === id;
+      return item.applicationId === id;
     });
   });
   let tmp4Result = tmp4(7139);
@@ -115,7 +106,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
     if (stateFromStores1 != null) {
       const participants = stateFromStores1.participants;
       if (participants != null) {
-        found = participants.find((userId) => applicationId(13445).isActivityParticipantCurrentUserCurrentSession(userId));
+        found = participants.find((item, index) => applicationId(13445).isActivityParticipantCurrentUserCurrentSession(item));
       }
     }
     tmp21 = null != found;
@@ -213,15 +204,14 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
     if (arg2) {
       if (gridOrientationLockState.LANDSCAPE === arg1) {
         layoutManager.setTargetAspectRatio(applicationId, "landscape");
-      } else if (tmp5.PORTRAIT === arg1) {
+      } else if (gridOrientationLockState.PORTRAIT === arg1) {
         layoutManager.setTargetAspectRatio(applicationId, "portrait");
-      } else if (tmp5.UNLOCKED === arg1) {
+      } else if (gridOrientationLockState.UNLOCKED === arg1) {
         let str2 = "portrait";
         if (arg0) {
           str2 = "landscape";
         }
         layoutManager.setTargetAspectRatio(applicationId, str2);
-        const tmp9 = applicationId;
       }
     } else {
       layoutManager.setTargetAspectRatio(applicationId, "square");
@@ -257,6 +247,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       const obj = applicationId(4115);
     }
     applicationId(4115).runOnJS(callback2)();
+    const obj2 = applicationId(4115);
   }
   const tmp8Result6 = applicationId(4115);
   ve.__closure = { runOnJS: applicationId(4115).runOnJS, handleTargetAspectRatioParams: callback1, gridOrientationLockState, hasJoined: tmp21, updateNotJoinedActivityDimensions: callback2 };
@@ -266,7 +257,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   const tmp39 = !sharedVisible(8676)();
   closure_24 = tmp39;
   backgroundColor = tmp.activityContainerBackground.backgroundColor;
-  const obj2 = { runOnJS: applicationId(4115).runOnJS, handleTargetAspectRatioParams: callback1, gridOrientationLockState, hasJoined: tmp21, updateNotJoinedActivityDimensions: callback2 };
+  let obj2 = { runOnJS: applicationId(4115).runOnJS, handleTargetAspectRatioParams: callback1, gridOrientationLockState, hasJoined: tmp21, updateNotJoinedActivityDimensions: callback2 };
   class Te {
     constructor() {
       num = 0;
@@ -333,7 +324,6 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   Te.__workletHash = 12598621298206;
   Te.__initData = closure_24;
   const animatedStyle = applicationId(4115).useAnimatedStyle(Te);
-  const obj3 = { IS_IOS: hideControls, animatedKeyboardHeight: tmp7, windowDimensions, shouldLetterboxOrientationLock: tmp39, focusedOrientationLockState, OrientationLockState: gridOrientationLockState, ACTIVITY_PORTRAIT_ASPECT_RATIO: guild_id, isActivityFocused: first1, backgroundColor };
   const tmp8Result7 = applicationId(4115);
   const items11 = [mode];
   const items12 = [controlsSpecs, first1, hideControls];
@@ -375,7 +365,6 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj4[1] = closure_16(tmp4Result, obj5);
       tmp47Result = tmp47(tmp8(6377).GestureDetector, obj4);
       let tmp44 = tmp47;
-      const tmp48 = closure_16;
       const tmp4Result1 = tmp4(16360);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: null, application: null };
@@ -407,8 +396,7 @@ let c4 = importAllResult;
 ({ IS_IOS: closure_8, VoicePanelModes: c9 } = VoicePanelModes);
 ({ ACTIVITY_PORTRAIT_ASPECT_RATIO: closure_12, ActivityLayoutMode: map1, OrientationLockState: closure_14 } = items3);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let obj = { activityContainerBackground: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
 let closure_17 = createCacheKey.createStyles(obj);
 let closure_18 = { code: "function VoicePanelAnimatedActivityCardTsx1(){const{sharedVisible,mode}=this.__closure;return{visible:sharedVisible.get(),mode:mode.get()};}" };
@@ -420,12 +408,11 @@ let closure_23 = { code: "function VoicePanelAnimatedActivityCardTsx6(windowDime
 let closure_24 = { code: "function VoicePanelAnimatedActivityCardTsx7(){const{IS_IOS,animatedKeyboardHeight,windowDimensions,shouldLetterboxOrientationLock,focusedOrientationLockState,OrientationLockState,ACTIVITY_PORTRAIT_ASPECT_RATIO,isActivityFocused,backgroundColor}=this.__closure;const keyboardHeight=IS_IOS?animatedKeyboardHeight.get():0;const isScreenLandscape=windowDimensions.get().landscape;const screenWidth=windowDimensions.get().width;const screenHeight=windowDimensions.get().height;const shouldLetterBox=shouldLetterboxOrientationLock&&focusedOrientationLockState===OrientationLockState.LANDSCAPE&&!isScreenLandscape;const shouldPillarBox=shouldLetterboxOrientationLock&&focusedOrientationLockState===OrientationLockState.PORTRAIT&&isScreenLandscape;let containerPaddingVertical=0;let containerPaddingHorizontal=0;if(shouldLetterBox){containerPaddingVertical=(screenHeight-screenWidth*ACTIVITY_PORTRAIT_ASPECT_RATIO)/2;}else if(shouldPillarBox){containerPaddingHorizontal=(screenWidth-screenHeight*ACTIVITY_PORTRAIT_ASPECT_RATIO)/2;}return{flex:isActivityFocused?0:1,backgroundColor:backgroundColor,paddingVertical:containerPaddingVertical,paddingHorizontal:containerPaddingHorizontal,width:isActivityFocused?screenWidth:'auto',height:isActivityFocused?screenHeight-keyboardHeight:'auto',maxHeight:'100%',maxWidth:'100%'};}" };
 let closure_25 = { code: "function VoicePanelAnimatedActivityCardTsx8(event,manager){const{controlsSpecs,VoicePanelControlsModes,runOnJS,hideControls}=this.__closure;manager.fail();if(controlsSpecs.get().mode!==VoicePanelControlsModes.HIDDEN){runOnJS(hideControls)({debounce:true});}}" };
 const memoResult = importAllResult.memo(function VoicePanelAnimatedActivityCard(arg0) {
-  let obj = { theme: ThemeTypes.DARK, children: null };
-  obj = {};
+  const obj = {};
   const merged = Object.assign(arg0);
   obj[1] = callback(VoicePanelAnimatedActivityCardInner, obj);
   return callback(ManaContext.ThemeContextProvider, obj);
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelAnimatedActivityCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelAnimatedActivityCard.tsx");
 
 export default memoResult;

@@ -1,11 +1,11 @@
 // discord_app/modules/polls/PollsConstants.tsx
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ExpressionPickerViewType from "../expression_picker/ExpressionPickerConstants.tsx";
-import set from "../../../_runtime/00002_set.js";
 
 const items = [, ];
 ({ GIF: arr[0], EMOJI: arr[1] } = ExpressionPickerViewType.ExpressionPickerViewType);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/polls/PollsConstants.tsx");
+const set = new Set(items);
+const result = obj132.fileFinishedImporting("modules/polls/PollsConstants.tsx");
 
 export const POLL_ATTACHMENT_FOLDER = "polls";
 export const POLL_CREATION_MODAL_KEY = "POLL_CREATION_MODAL_KEY";

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx
-import closure_3 from "../../parent_tools/FamilyCenterControlledSettingsStore.tsx";
+import getSettings from "../../parent_tools/FamilyCenterControlledSettingsStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx");
 
 export const defineParentalControlledSetting = function defineParentalControlledSetting(privacy, defaultGuildsRestricted, explicitContentFromProto, explicitContentToProto, arg4) {
   closure_0 = privacy;
@@ -27,7 +27,7 @@ export const defineParentalControlledSetting = function defineParentalControlled
         tmp3 = tmp5[closure_1];
       }
     }
-    return closure_2(tmp3);
+    return explicitContentFromProto(tmp3);
   }
   obj = {
     getControlledSetting,
@@ -42,14 +42,13 @@ export const defineParentalControlledSetting = function defineParentalControlled
           }
         }
         tmp = fn(explicitContentFromProto(tmp4));
-        const tmp11 = explicitContentFromProto;
       }
       closure_0 = tmp;
       if (null == arg0) {
         let resolved = Promise.resolve();
       } else {
         resolved = defaultGuildsRestricted(explicitContentFromProto[1]).updateTeenSettings(arg0, closure_0, (arg0) => {
-          arg0[closure_1_1] = closure_1_3(closure_0, arg0[closure_1_1]);
+          arg0[defaultGuildsRestricted] = explicitContentToProto(closure_0, arg0[defaultGuildsRestricted]);
         });
         const obj = defaultGuildsRestricted(explicitContentFromProto[1]);
       }
@@ -60,14 +59,14 @@ export const defineParentalControlledSetting = function defineParentalControlled
       const items = [closure_3];
       const items1 = [arg0];
       return privacy(explicitContentFromProto[2]).useStateFromStores(items, () => {
-        const settings = closure_1_3.getSettings(closure_0);
+        const settings = explicitContentToProto.getSettings(closure_0);
         let tmp3;
         if (settings != null) {
           if (settings[closure_0] != null) {
-            tmp3 = tmp5[closure_1_1];
+            tmp3 = tmp5[defaultGuildsRestricted];
           }
         }
-        return closure_1_2(tmp3);
+        return explicitContentFromProto(tmp3);
       }, items1, fn);
     }
   };
@@ -88,9 +87,7 @@ export const wrapParentalControlledSettingWithExperimentDefaults = function wrap
           tmp2();
         }
         if (callback()) {
-          let tmp5 = callback2();
-        } else {
-          tmp5 = closure_4;
+          const tmp5 = callback2();
         }
       }
     },
@@ -103,9 +100,7 @@ export const wrapParentalControlledSettingWithExperimentDefaults = function wrap
           callback3();
         }
         if (tmp2) {
-          let tmp4 = callback2();
-        } else {
-          tmp4 = closure_4;
+          const tmp4 = callback2();
         }
       }
     },

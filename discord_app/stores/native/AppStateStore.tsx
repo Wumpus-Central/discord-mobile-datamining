@@ -1,5 +1,5 @@
 // discord_app/stores/native/AppStateStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import ME from "../../Constants.tsx";
@@ -21,8 +21,8 @@ prototype["getLastActiveTime"] = function getLastActiveTime() {
   return c2;
 };
 AppStateStore.displayName = "AppStateStore";
-require("expandEventProperties").then((addExtraAnalyticsDecorator) => {
-  const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator((arg0) => {
+require("expandEventProperties").then((result) => {
+  result = result.addExtraAnalyticsDecorator((arg0) => {
     arg0.client_app_state = closure_1;
   });
 });
@@ -39,19 +39,6 @@ const appStateStore = new AppStateStore(dispatcherDefault, {
     }
   }
 });
-const obj = {
-  APP_STATE_UPDATE: function handleAppStateUpdate(state) {
-    if (state === state.state) {
-      return false;
-    } else {
-      state = state.state;
-      if (state === AppStates.ACTIVE) {
-        const _Date = Date;
-        closure_2 = Date.now();
-      }
-    }
-  }
-};
-let result = set.fileFinishedImporting("stores/native/AppStateStore.tsx");
+let result = obj132.fileFinishedImporting("stores/native/AppStateStore.tsx");
 
 export default appStateStore;

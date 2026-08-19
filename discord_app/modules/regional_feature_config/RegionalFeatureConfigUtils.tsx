@@ -1,10 +1,9 @@
 // discord_app/modules/regional_feature_config/RegionalFeatureConfigUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
-import closure_2 from "RegionalFeatureConfigStore.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import getRegionalFeatureConfig from "RegionalFeatureConfigStore.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");
 
 export const isFeatureAgeGated = function isFeatureAgeGated(arg0) {
   return closure_2.isFeatureAgeGated(arg0);
@@ -12,7 +11,7 @@ export const isFeatureAgeGated = function isFeatureAgeGated(arg0) {
 export const useIsFeatureAgeGated = function useIsFeatureAgeGated(AGE_GATED_SPACES) {
   const _require = AGE_GATED_SPACES;
   const items = [closure_2];
-  return _initialize.useStateFromStores(items, () => closure_1_2.isFeatureAgeGated(closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.isFeatureAgeGated(closure_0));
 };
 export const isSettingTeenByDefault = function isSettingTeenByDefault(arg0) {
   return closure_2.isSettingTeenByDefault(arg0);
@@ -20,7 +19,7 @@ export const isSettingTeenByDefault = function isSettingTeenByDefault(arg0) {
 export const useIsSettingTeenByDefault = function useIsSettingTeenByDefault(GUILD_ACTIVITY_STATUS) {
   const _require = GUILD_ACTIVITY_STATUS;
   const items = [closure_2];
-  return _initialize.useStateFromStores(items, () => closure_1_2.isSettingTeenByDefault(closure_0));
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_2.isSettingTeenByDefault(closure_0));
 };
 export const hasAgeGatedFeatures = function hasAgeGatedFeatures() {
   return closure_2.hasAgeGatedFeatures();

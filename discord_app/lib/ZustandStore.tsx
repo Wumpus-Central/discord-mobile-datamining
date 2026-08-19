@@ -1,17 +1,16 @@
 // discord_app/lib/ZustandStore.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import { identity } from "../../_runtime/00700_identity.js";
-import { createJSONStorage } from "../../_runtime/04242_createJSONStorage.js";
 
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;
 }
-const result = set.fileFinishedImporting("lib/ZustandStore.tsx");
+const result = obj132.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
   const _require = arg0;
-  let obj = _identity;
-  dependencyMap = obj.createWithEqualityFn(_createJSONStorage.subscribeWithSelector((arg0, arg1, arg2) => {
+  let obj = identity;
+  dependencyMap = obj.createWithEqualityFn(require("../../_runtime/04242_createJSONStorage.js").subscribeWithSelector((arg0, arg1, arg2) => {
     let callback = arg0;
     return callback((arg0) => {
       const callback = arg0;
@@ -30,11 +29,11 @@ export const createZustandStore = function createZustandStore(arg0) {
       }
       return store(arg0, tmp);
     },
-    getState(arg0) {
+    getState(fn) {
       const state = store.getState();
       let tmp2 = state;
-      if (null != arg0) {
-        tmp2 = arg0(state);
+      if (null != fn) {
+        tmp2 = fn(state);
       }
       return tmp2;
     },

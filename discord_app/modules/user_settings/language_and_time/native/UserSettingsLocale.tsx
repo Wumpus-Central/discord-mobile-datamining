@@ -1,18 +1,15 @@
 // discord_app/modules/user_settings/language_and_time/native/UserSettingsLocale.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { setAppLocale } from "../../../../intl/IntlLoaderStore.tsx";
-import closure_7 from "../../LocaleStore.tsx";
+import _getSystemLocale from "../../LocaleStore.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-const require = arg1;
+const require = fn;
 function handleLanguageChange() {
   const self = this;
   const apply = _handleLanguageChange.apply;
@@ -95,34 +92,33 @@ function _handleLanguageChange() {
   return applyArgumentsResult;
 }
 ({ Image: c4, ScrollView: c5 } = get_ActivityIndicator);
-let obj = { content: null, flagImage: null };
-obj = { padding: ThemesDefault.space.PX_16 };
+let obj = { padding: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 obj[1] = { width: 27, height: 18 };
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function UserSettingsLocale() {
   const tmp = callback2();
   const _require = tmp;
-  let obj = _initialize;
+  initialize;
   const items = [closure_7];
-  obj = { contentContainerStyle: tmp.content, children: null };
+  let obj = { contentContainerStyle: tmp.content, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   obj = { bottom: true, children: null };
   obj1 = { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null };
-  const availableLocales = _getSystemLocale.getAvailableLocales();
-  obj1[3] = availableLocales.map((localizedName) => {
-    ({ name, value } = localizedName);
+  const availableLocales = require("../../../../intl/index.native.tsx").getAvailableLocales();
+  obj1[3] = availableLocales.map((item, index) => {
+    ({ name, value } = item);
     let obj = { value, label: name, subLabel: null, icon: null };
-    const intl = lib(closure_1_2[12]).intl;
-    obj[2] = intl.string(localizedName.localizedName);
-    obj = { style: lib.flagImage, source: lib(closure_1_2[14]).flags[value] };
-    obj[3] = closure_1_8(closure_1_4, obj);
-    return closure_1_8(lib(closure_1_2[13]).TableRadioRow, obj, name);
+    const intl = lib(dependencyMap[12]).intl;
+    obj[2] = intl.string(item.localizedName);
+    obj = { style: lib.flagImage, source: lib(dependencyMap[14]).flags[value] };
+    obj[3] = <closure_1_4 style={lib.flagImage} source={lib(dependencyMap[14]).flags[value]} />;
+    return jsx(lib(dependencyMap[13]).TableRadioRow, { style: lib.flagImage, source: lib(dependencyMap[14]).flags[value] }, name);
   });
-  obj[1] = jsx(_context.TableRadioGroup, { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null });
-  obj[1] = jsx(_SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, children: null });
+  obj[1] = jsx(require("../../../../design/components/TableRow/native/TableRadioGroup.native.tsx").TableRadioGroup, { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null });
+  obj[1] = jsx(require("../../../../components_native/common/SafeAreaView.tsx").SafeAreaPaddingView, { bottom: true, children: null });
   return <closure_5 bottom>{null}</closure_5>;
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/language_and_time/native/UserSettingsLocale.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/language_and_time/native/UserSettingsLocale.tsx");
 
 export default memoResult;

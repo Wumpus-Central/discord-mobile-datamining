@@ -1,15 +1,15 @@
 // discord_app/modules/activities/useIsActivitiesAvailableInShelf.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { useIsActivitiesEnabledForCurrentPlatform } from "useIsActivitiesEnabledForCurrentPlatform.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
 
 export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
   const _require = arg0;
-  const isActivitiesEnabledForCurrentPlatform = _useIsActivitiesEnabledForCurrentPlatform.useIsActivitiesEnabledForCurrentPlatform();
+  const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform.tsx").useIsActivitiesEnabledForCurrentPlatform();
   let tmp3 = null != arg0;
-  let obj = _useIsActivitiesEnabledForCurrentPlatform;
+  let obj = useIsActivitiesEnabledForCurrentPlatform;
   if (tmp3) {
     tmp3 = "" !== arg0;
   }
@@ -24,8 +24,8 @@ export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
       tmp = isActivitiesEnabledForCurrentPlatform;
     }
     if (tmp) {
-      let obj = callback(table[3]);
-      obj = { guildId: null };
+      callback(table[3]);
+      const obj = { guildId: null };
       obj[0] = callback;
       const shelf = obj.fetchShelf(obj);
     }

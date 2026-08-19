@@ -4,16 +4,16 @@ import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { isAvatarDecorationRecord, isNameplateRecord } from "../../../../../collectibles/records/AvatarDecorationRecord.tsx";
 import jsxProd from "../../../../../../../_runtime/react/00021_jsxProd.js";
+import "createCacheKey";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { card: null, overlayContainer: null, selected: null, claimed: null, checkmark: null, checkmarkContainer: null, textContainer: null };
-obj = { height: 178, width: 150, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderColor: ThemesDefault.colors.BORDER_SUBTLE, margin: ThemesDefault.space.PX_4 };
+let obj = { height: 178, width: 150, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderColor: ThemesDefault.colors.BORDER_SUBTLE, margin: ThemesDefault.space.PX_4 };
 obj[0] = obj;
 obj[1] = { position: "absolute", top: 10, zIndex: 2, display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
-createCacheKey = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let createCacheKey = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
 obj[2] = createCacheKey;
 obj[3] = { opacity: 0.4 };
 obj[4] = { position: "absolute", opacity: 1, fontWeight: "bold" };
@@ -23,10 +23,9 @@ let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = importAllResult.memo((rewardSkuId) => {
   rewardSkuId = rewardSkuId.rewardSkuId;
   ({ claimed, onSelect: importDefault, isSelected } = rewardSkuId);
-  let currentUser;
   const tmp = callback2();
   let obj = rewardSkuId(isSelected[7]);
-  currentUser = obj.useCurrentUser();
+  const currentUser = obj.useCurrentUser();
   obj1 = rewardSkuId(isSelected[8]);
   const radioA11yNative = obj1.useRadioA11yNative({ selected: isSelected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
@@ -63,34 +62,34 @@ let closure_10 = importAllResult.memo((rewardSkuId) => {
       obj1 = { item: null, animate: null };
       obj1[0] = first;
       obj1[1] = isSelected;
-      let tmp7Result = tmp7(importDefault(tmp3[11]), obj1);
+      let tmp7Result = callback(importDefault(isSelected[11]), obj1);
     } else if (isAvatarDecorationRecord(first)) {
       obj2 = { item: null, size: 100, animate: null, avatarSource: null };
       obj2[0] = first;
       obj2[2] = isSelected;
       obj2[3] = tmp6;
-      tmp7Result = tmp7(importDefault(tmp3[12]), obj2);
+      tmp7Result = callback(importDefault(isSelected[12]), obj2);
     }
     obj[1] = tmp7Result;
-    const items3 = [closure_7(View, obj), , ];
+    const items3 = [callback(View, obj), , ];
     tmp7Result = claimed;
     if (claimed) {
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.checkmarkContainer;
       const obj4 = { size: "lg", style: null };
       obj4[1] = tmp.checkmark;
-      obj3[1] = tmp7(tmp2(tmp3[13]).CheckmarkLargeBoldIcon, obj4);
-      tmp7Result = tmp7(tmp8, obj3);
+      obj3[1] = callback(tmp2(isSelected[13]).CheckmarkLargeBoldIcon, obj4);
+      tmp7Result = callback(View, obj3);
     }
     items3[1] = tmp7Result;
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.textContainer;
     const obj6 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", lineClamp: 1, accessibilityRole: "header", children: null };
     obj6[4] = product.name;
-    const items4 = [closure_7(tmp2(tmp3[14]).Text, obj6), ];
-    const intl = tmp2(tmp3[15]).intl;
+    const items4 = [callback(tmp2(isSelected[14]).Text, obj6), ];
+    const intl = tmp2(isSelected[15]).intl;
     const string = intl.string;
-    const t = tmp2(tmp3[15]).t;
+    const t = tmp2(isSelected[15]).t;
     if (claimed) {
       let stringResult = string(t["6cfuDj"]);
     } else {
@@ -98,24 +97,23 @@ let closure_10 = importAllResult.memo((rewardSkuId) => {
     }
     const obj7 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
     obj7[3] = stringResult;
-    items4[1] = closure_7(tmp2(tmp3[14]).Text, obj7);
+    items4[1] = callback(tmp2(isSelected[14]).Text, obj7);
     obj5[1] = items4;
-    items3[2] = closure_8(View, obj5);
+    items3[2] = callback2(View, obj5);
     obj[6] = items3;
-    return closure_8(tmp2(tmp3[10]).PressableOpacity, obj);
+    return callback2(tmp2(isSelected[10]).PressableOpacity, obj);
   }
 });
 let closure_11 = createCacheKey.createStyles({ grid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
-let obj2 = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "flex-start" };
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
 
 export default function GiftingSKUCardsGrid(arg0) {
   ({ rewardsToDisplay, claimableRewards: require, onSelect: importDefault, highlightedSkuId: dependencyMap } = arg0);
   return callback(View, {
     style: callback3().grid,
-    children: rewardsToDisplay.map((rewardSkuId) => {
-      closure_0 = rewardSkuId;
-      return closure_1_7(closure_1_10, { rewardSkuId, claimed: !closure_0.some((arg0) => arg0 === closure_0), isSelected: closure_2 === rewardSkuId, onSelect: closure_1 }, rewardSkuId);
+    children: rewardsToDisplay.map((item, index) => {
+      closure_0 = item;
+      return closure_1_7(closure_1_10, { rewardSkuId: item, claimed: !closure_0.some((item, index) => item === closure_0), isSelected: closure_2 === item, onSelect: closure_1 }, item);
     })
   });
 };

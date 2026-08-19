@@ -1,18 +1,18 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems.tsx";
 
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
+const result = obj132.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
 
 export const useCreatorMonetizationIneligibleReasons = function useCreatorMonetizationIneligibleReasons(eligibility) {
   const obj = useCreatorMonetizationEligibilityItemsDefault(eligibility);
   let flatMapResult;
   if (obj != null) {
-    flatMapResult = obj.flatMap((checked) => {
-      if (checked.checked) {
+    flatMapResult = obj.flatMap((item, index) => {
+      if (item.checked) {
         let items = [];
       } else {
-        items = [checked.key];
+        items = [item.key];
       }
       return items;
     });

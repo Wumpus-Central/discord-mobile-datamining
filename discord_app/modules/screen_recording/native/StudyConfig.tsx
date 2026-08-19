@@ -1,8 +1,8 @@
 // discord_app/modules/screen_recording/native/StudyConfig.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 const obj = {};
-const result = set.fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");
+const result = obj132.fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");
 
 export const SURVEY_CONFIGS = obj;
 export const getSurveyConfig = function getSurveyConfig(closure_0) {
@@ -28,5 +28,5 @@ export const getSurveyConfigSafe = function getSurveyConfigSafe(arg0) {
 };
 export const getAvailableSurveys = function getAvailableSurveys() {
   const values = Object.values(obj);
-  return values.filter((predicate) => predicate.predicate());
+  return values.filter((item, index) => item.predicate());
 };

@@ -1,11 +1,11 @@
 // discord_app/modules/search/native/components/list/rows/GenericTextRow.tsx
-import closure_2 from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import importAllResult from "../../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-let require = arg1;
+let require = fn;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles({ title: { flexDirection: "row" }, container: { padding: 10 } });
 const memoResult = importAllResult.memo(function GenericTextRow(text) {
@@ -15,7 +15,6 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
   ({ trailing, accessibilityActions, onAccessibilityAction } = text);
   const tmp = callback2();
   const items = [onPress, text];
-  let obj = { style: tmp.title, children: null };
   onPress = importAllResult.useCallback(callback(function*() {
     if (c0 === 2) {
       c0 = 3;
@@ -67,15 +66,15 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
       }
     }
   }), items);
-  obj = { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text };
+  let obj = { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text };
   obj[1] = jsx(require(onPress[5]).Text, { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text });
   const label = <View lineClamp={1} variant="text-md/medium" color="mobile-text-heading-primary" style={tmp.container}>{text}</View>;
   icon = null != icon;
   if (icon) {
-    icon = tmp3(icon, { size: "sm", color: "mobile-text-heading-primary" });
+    icon = <icon size="sm" color="mobile-text-heading-primary" />;
   }
   return jsx(require(onPress[6]).SearchListRow, { icon, label, onPress, trailing, accessibilityActions, onAccessibilityAction });
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
 
 export default memoResult;

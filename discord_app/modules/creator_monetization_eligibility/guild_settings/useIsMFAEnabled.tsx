@@ -1,11 +1,11 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx
 import defaultAreStatesEqual from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import closure_2 from "../../guild_settings/GuildSettingsStore.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
+import handleFormInit from "../../guild_settings/GuildSettingsStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import { MFALevels } from "../../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
 
 export const useIsMFAEnabled = function useIsMFAEnabled() {
   let obj = defaultAreStatesEqual;

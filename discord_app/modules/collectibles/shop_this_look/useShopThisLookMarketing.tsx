@@ -2,10 +2,10 @@
 import DismissibleContent from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import useEquippedCollectibleSkuIds from "../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
 
 export const useShopThisLookMarketing = function useShopThisLookMarketing(id, guildId, isShopThisLookMobileEnabled) {
   let obj = useEquippedCollectibleSkuIds;
@@ -20,4 +20,5 @@ export const useShopThisLookMarketing = function useShopThisLookMarketing(id, gu
     obj[1] = tmp8[1];
     return obj;
   }
+  tmp3 = obj.useEquippedCollectibleSkuIds(id, guildId).length > 0;
 };

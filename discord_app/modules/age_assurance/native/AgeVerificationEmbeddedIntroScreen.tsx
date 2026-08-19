@@ -2,18 +2,17 @@
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import messagesProxyDefault from "../AgeAssurance.messages.js";
 import useAgeVerificationMethodsDefault from "../hooks/useAgeVerificationMethods.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { HelpdeskArticles } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { header: { textAlign: "center" }, helpLink: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_16, textAlign: "center" };
+const createCacheKey = { marginTop: ThemesDefault.space.PX_16, textAlign: "center" };
 createCacheKey[1] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationEmbeddedIntroScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/age_assurance/native/AgeVerificationEmbeddedIntroScreen.tsx");
 
 export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   ({ entryPoint, navigation } = arg0);
@@ -23,9 +22,8 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   const items = [navigation];
   const isSuspendedUser = obj.useIsSuspendedUser();
   const callback = React.useCallback(() => {
-    navigation.navigate(navigation(closure_1_2[6]).AgeVerificationGetStartedModalScenes.GOOGLE_WALLET_VERIFICATION);
+    navigation.navigate(navigation(dependencyMap[6]).AgeVerificationGetStartedModalScenes.GOOGLE_WALLET_VERIFICATION);
   }, items);
-  obj = { children: null };
   obj = { children: null };
   obj1 = { align: "center", justify: "center", spacing: 24, children: null };
   const obj2 = { align: "center", justify: "center", spacing: 16, children: null };

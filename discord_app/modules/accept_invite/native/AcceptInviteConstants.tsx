@@ -1,6 +1,6 @@
 // discord_app/modules/accept_invite/native/AcceptInviteConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/accept_invite/native/AcceptInviteConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/accept_invite/native/AcceptInviteConstants.tsx");
 
 export const ACCEPT_INVITE_MODAL_KEY = "accept-invite";

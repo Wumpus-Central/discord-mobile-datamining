@@ -1,11 +1,11 @@
 // discord_common/js/packages/flux/useStateFromStores.tsx
 import shallowEqual from "../shallow-equal/shallowEqual.tsx";
 import shallowEqualDefault from "../shallow-equal/shallowEqual.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import noop from "../../../../_runtime/00019_noop.js";
 import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
 
-require = arg1;
+require = fn;
 function defaultAreStatesEqual(arg0, arg1) {
   return arg0 === arg1;
 }
@@ -42,7 +42,7 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
     tmp7 = null != state && tmp(state, tmp6);
   } else {
     tmp5 = state;
-    const obj2 = _shallowEqual;
+    const obj2 = shallowEqual;
   }
   callback3(() => {
     current.getStateFromStores = closure_1;
@@ -54,9 +54,10 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
     batchedStoreListener = new items(items1[3]).BatchedStoreListener(batchedStoreListener, () => {
       stateFromStores = stateFromStores.getStateFromStores();
       if (!callback(stateFromStores.state, stateFromStores)) {
-        stateFromStores.state = stateFromStores;
+        tmp.state = stateFromStores;
         callback2({});
       }
+      tmp = stateFromStores;
     });
     batchedStoreListener.attach("useStateFromStores");
     return () => batchedStoreListener.detach();
@@ -64,7 +65,7 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
   return tmp5;
 }
 ({ useState: c4, useRef: c5, useInsertionEffect: closure_6 } = noop);
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
 
 export function statesWillNeverBeEqual() {
   return false;

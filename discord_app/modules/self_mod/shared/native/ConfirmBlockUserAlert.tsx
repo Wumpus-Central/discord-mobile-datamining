@@ -1,23 +1,20 @@
 // discord_app/modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../../stores/UserStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import { LOCATION_CONTEXT_MOBILE } from "../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { header: null, text: null, buttonsContainer: null };
-createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
+const createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_4, textAlign: "center" };
-let obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_4, textAlign: "center" };
 createCacheKey[2] = { gap: ThemesDefault.space.PX_12, marginBottom: -ThemesDefault.space.PX_8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { gap: ThemesDefault.space.PX_12, marginBottom: -ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx");
+let result = require("obj132").fileFinishedImporting("modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx");
 
 export default function ConfirmBlockUserAlert(userId) {
   userId = userId.userId;
@@ -27,23 +24,21 @@ export default function ConfirmBlockUserAlert(userId) {
   const onBlockAndReport = userId.onBlockAndReport;
   const onBlock = userId.onBlock;
   let str = userId.blockButtonVariant;
-  let lastChannelMessage;
   let callback;
-  closure_8 = undefined;
   const tmp = callback();
   let obj = userId(onCancel[7]);
   const items = [onBlock];
   const stateFromStores = obj.useStateFromStores(items, () => onBlock.getUser(userId));
   obj1 = userId(onCancel[8]);
-  lastChannelMessage = obj1.useLastChannelMessage(channelId);
+  const lastChannelMessage = obj1.useLastChannelMessage(channelId);
   let obj2 = channelId(onCancel[9]);
   const name = obj2.useName(stateFromStores);
   const items1 = [userId, channelId];
   callback = onClose.useCallback(() => {
-    let obj = channelId(onCancel[10]);
-    obj = { location: lastChannelMessage };
-    obj.blockUser(userId, obj).then(() => {
-      const result = closure_1_1(closure_1_2[11]).showBlockSuccessToast(closure_0, closure_1);
+    channelId(onCancel[10]);
+    const obj = { location: lastChannelMessage };
+    obj.blockUser(userId, obj).then((result) => {
+      result = channelId(onCancel[11]).showBlockSuccessToast(closure_0, closure_1);
     });
   }, items1);
   const items2 = [onClose, onCancel];
@@ -66,15 +61,6 @@ export default function ConfirmBlockUserAlert(userId) {
       onBlockAndReport();
     }
   }, items4);
-  obj = {
-    renderConfirmButton() {
-      const obj = { size: "lg", onPress: closure_8, text: null, variant: "secondary" };
-      const intl = userId(onCancel[15]).intl;
-      obj[2] = intl.string(userId(onCancel[15]).t["ETE/oC"]);
-      return callback(userId(onCancel[14]).Button, obj);
-    },
-    children: null
-  };
   obj = { style: tmp.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   let intl = userId(onCancel[15]).intl;
   obj[3] = intl.format(userId(onCancel[15]).t.x5pOn9, { name });

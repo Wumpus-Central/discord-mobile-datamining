@@ -1,15 +1,14 @@
 // discord_app/modules/forums/native/ForumPostPlaceholder.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
-let obj = { postPlaceholder: null };
-obj = { height: 2 * ThemesDefault.space.PX_64, marginBottom: ThemesDefault.space.PX_12 };
+let obj = { height: 2 * ThemesDefault.space.PX_64, marginBottom: ThemesDefault.space.PX_12 };
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 let c8 = 0.55;
@@ -19,8 +18,7 @@ const memoResult = importAllResult.memo(() => {
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const timingConfig = callback(importAllResult.useState(() => {
-    let obj = { timingConfig: null };
-    obj = { duration: 1000 + 500 * Math.random(), easing: null };
+    const obj = { duration: 1000 + 500 * Math.random(), easing: null };
     const Easing = stateFromStores(4115).Easing;
     obj[1] = Easing.inOut(stateFromStores(4115).Easing.sin);
     obj[0] = obj;
@@ -33,14 +31,14 @@ const memoResult = importAllResult.memo(() => {
       obj[0] = closure_1_8;
       let tmp6 = obj;
     } else {
-      const obj2 = stateFromStores(closure_1_2[7]);
-      const obj3 = stateFromStores(closure_1_2[7]);
-      const obj4 = stateFromStores(closure_1_2[7]);
-      const obj5 = stateFromStores(closure_1_2[8]);
-      const withTimingResult = stateFromStores(closure_1_2[8]).withTiming(closure_1_8, timingConfig);
-      obj[0] = obj2.withDelay(1000, obj3.withRepeat(obj4.withSequence(withTimingResult, stateFromStores(closure_1_2[8]).withTiming(1, timingConfig)), -1, true));
+      const obj2 = stateFromStores(dependencyMap[7]);
+      const obj3 = stateFromStores(dependencyMap[7]);
+      const obj4 = stateFromStores(dependencyMap[7]);
+      const obj5 = stateFromStores(dependencyMap[8]);
+      const withTimingResult = stateFromStores(dependencyMap[8]).withTiming(closure_1_8, timingConfig);
+      obj[0] = obj2.withDelay(1000, obj3.withRepeat(obj4.withSequence(withTimingResult, stateFromStores(dependencyMap[8]).withTiming(1, timingConfig)), -1, true));
       tmp6 = obj;
-      const obj6 = stateFromStores(closure_1_2[8]);
+      const obj6 = stateFromStores(dependencyMap[8]);
     }
     return tmp6;
   };
@@ -53,6 +51,6 @@ const memoResult = importAllResult.memo(() => {
   obj1 = { variant: "secondary", style: callback2().postPlaceholder };
   return jsx(timingConfig(4115).View, { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(6292).Card, { variant: "secondary", style: callback2().postPlaceholder }) });
 });
-const result = require("set").fileFinishedImporting("modules/forums/native/ForumPostPlaceholder.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/ForumPostPlaceholder.tsx");
 
 export default memoResult;

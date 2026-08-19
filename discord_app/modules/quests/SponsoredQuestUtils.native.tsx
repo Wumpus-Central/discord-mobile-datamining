@@ -1,7 +1,7 @@
 // discord_app/modules/quests/SponsoredQuestUtils.native.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/quests/SponsoredQuestUtils.native.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/SponsoredQuestUtils.native.tsx");
 
 export const createGameSheetHook = function createGameSheetHook(arg0) {
   ({ quest, sourceQuestContent, applications, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed } = arg0);

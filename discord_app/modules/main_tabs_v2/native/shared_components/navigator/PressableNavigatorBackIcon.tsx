@@ -3,19 +3,18 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import Button from "../../../../../design/void/native.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../../stores/ChannelStore.tsx";
-import closure_7 from "../../../../../stores/GuildReadStateStore.tsx";
-import closure_8 from "../../../../../stores/SelectedChannelStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
+import updateGuildUnreadSentinel from "../../../../../stores/GuildReadStateStore.tsx";
+import handleConnectionOpen from "../../../../../stores/SelectedChannelStore.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 let c3 = importAllResult;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles((arg0) => {
-  let obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
-  obj = { position: "absolute", minWidth: Button.BADGE_SIZE, height: Button.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
+  let obj = { position: "absolute", minWidth: Button.BADGE_SIZE, height: Button.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.PANEL_BG };
   obj[1] = obj;
@@ -74,9 +73,8 @@ const forwardRefResult = importAllResult.forwardRef((navigation, ref) => {
   callback = obj1.useCallback(() => {
     if (null == onPress) {
       if (navigation != null) {
-        obj.goBack();
+        navigation.goBack();
       }
-      obj = navigation;
     } else {
       tmp();
     }
@@ -98,7 +96,7 @@ const forwardRefResult = importAllResult.forwardRef((navigation, ref) => {
   obj.style = tmp4.actionButtonPressable;
   obj1 = { source: tmp2(tmp3[15]), style: obj2 };
   obj2 = { tintColor: tmp4.actionButtonIcon.tintColor };
-  const items3 = [closure_9(closure_5, obj1), ];
+  const items3 = [callback(closure_5, obj1), ];
   let tmp9Result = null;
   if (stateFromStores > 0) {
     const obj3 = { style: null, children: null };
@@ -107,15 +105,15 @@ const forwardRefResult = importAllResult.forwardRef((navigation, ref) => {
     obj4[0] = stateFromStores;
     obj4[2] = backgroundColor;
     obj4[4] = memo;
-    obj3[1] = tmp9(tmp2(tmp3[16]), obj4);
-    tmp9Result = tmp9(tmp14, obj3);
+    obj3[1] = callback(tmp2(tmp3[16]), obj4);
+    tmp9Result = callback(closure_4, obj3);
   }
   const obj5 = { children: null };
   items3[1] = tmp9Result;
-  obj.children = closure_10(closure_4, { children: items3 });
-  obj5[0] = closure_9(navigation(stateFromStores[13]).PressableOpacity, obj);
-  return closure_9(onPress(stateFromStores[12]), obj5);
+  obj.children = callback2(closure_4, { children: items3 });
+  obj5[0] = callback(navigation(stateFromStores[13]).PressableOpacity, obj);
+  return callback(onPress(stateFromStores[12]), obj5);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorBackIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorBackIcon.tsx");
 
 export const PressableNavigatorBackIcon = forwardRefResult;

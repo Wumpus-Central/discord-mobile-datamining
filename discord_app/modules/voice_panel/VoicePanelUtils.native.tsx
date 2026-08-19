@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/VoicePanelUtils.native.tsx
 import defaultAreStatesEqual from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import useIsStageVoicePanelEnabled from "../stage_channels/StageVoicePanelExperiment.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/RTCConnectionStore.tsx";
-import closure_4 from "VoicePanelStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import createRTCConnection from "../../stores/RTCConnectionStore.tsx";
+import withEqualityFn from "VoicePanelStore.tsx";
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
 
 export const isVoicePanelEnabled = function isVoicePanelEnabled(channel2) {
   const result = useIsStageVoicePanelEnabled.isStageVoicePanelEnabled("voice_panel_utils");

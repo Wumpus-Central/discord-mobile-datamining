@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
@@ -10,13 +10,11 @@ const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
 const sm = ThemesDefault.radii.sm;
 let closure_5 = createCacheKey.createStyles((width, borderRadius) => {
-  obj = { appIcon: obj, entityWrapper: null };
-  obj = { width, height: width, borderRadius };
-  obj = { padding: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", borderRadius: borderRadius + 1 };
+  const obj = { padding: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", borderRadius: borderRadius + 1 };
   obj[1] = obj;
   return obj;
 });
-const result = set.fileFinishedImporting("modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx");
+const result = obj132.fileFinishedImporting("modules/app_launcher/native/base_components/EntityBorderAppIcon.tsx");
 
 export default function EntityBorderAppIcon(iconSize) {
   let num = iconSize.iconSize;

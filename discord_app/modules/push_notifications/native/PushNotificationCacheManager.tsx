@@ -1,7 +1,7 @@
 // discord_app/modules/push_notifications/native/PushNotificationCacheManager.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import closure_2 from "../../multi_account/MultiAccountStore.tsx";
-import closure_3 from "../../../stores/UserStore.tsx";
+import initialize from "../../multi_account/MultiAccountStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 
 initializeDefault;
 let prototype = function PushNotificationCacheManager() {
@@ -32,7 +32,7 @@ let prototype = function PushNotificationCacheManager() {
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
-    obj = obj(11579);
+    obj(11579);
     obj = undefined;
     if (obj.canUseMultiAccountNotifications) {
       const validUsers = obj.getValidUsers();
@@ -40,9 +40,9 @@ let prototype = function PushNotificationCacheManager() {
         obj = {};
       } else {
         obj = {};
-        const item = validUsers.forEach((id) => {
+        const item = validUsers.forEach((item, index) => {
           obj = obj(closure_1_1[2]);
-          obj[id.id] = obj.getUserTag(id, { identifiable: "always" });
+          obj[item.id] = obj.getUserTag(item, { identifiable: "always" });
         });
       }
     } else {
@@ -51,7 +51,7 @@ let prototype = function PushNotificationCacheManager() {
     obj.setMultiAccountUsers(obj);
   };
   applyArgumentsResult.handleLogout = function handleLogout() {
-    const result = applyArgumentsResult(closure_1_1[4]).clearPushNotificationLogs();
+    const result = applyArgumentsResult(dependencyMap[4]).clearPushNotificationLogs();
     applyArgumentsResult.handleUserUpdate();
   };
   return applyArgumentsResult;
@@ -59,6 +59,6 @@ let prototype = function PushNotificationCacheManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/push_notifications/native/PushNotificationCacheManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/push_notifications/native/PushNotificationCacheManager.tsx");
 
 export default prototype;

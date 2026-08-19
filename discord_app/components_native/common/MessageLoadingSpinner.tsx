@@ -4,16 +4,16 @@ import ThemesDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import map from "../../design/tokens/native/useToken.tsx";
 import ActivityIndicator from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import { jsx } from "../../../_runtime/react/00021_jsxProd.js";
-import set from "../../utils/PlatformUtils.tsx";
+import obj132 from "../../utils/PlatformUtils.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 let result = null;
-if (!set.isAndroid()) {
+if (!obj132.isAndroid()) {
   result = require("get ActivityIndicator").requireNativeComponent("DCDMessageLoadingSpinner");
 }
 let c4 = result;
-const result1 = set.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
+const result1 = obj132.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
 
 export default function MessageLoadingSpinner(color) {
   let obj = map;

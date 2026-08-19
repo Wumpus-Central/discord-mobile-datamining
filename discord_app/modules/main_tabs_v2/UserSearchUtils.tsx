@@ -1,16 +1,15 @@
 // discord_app/modules/main_tabs_v2/UserSearchUtils.tsx
 import isNullOrEmpty from "../../utils/StringUtils.tsx";
 import nameFromUserDefault from "../../utils/UserUtils.tsx";
-import closure_3 from "../friend_suggestions/FriendSuggestionStore.tsx";
-import closure_4 from "../../stores/GuildMemberStore.tsx";
-import closure_5 from "../../stores/RelationshipStore.tsx";
+import initialize from "../friend_suggestions/FriendSuggestionStore.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
+import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
 import { RelationshipTypes } from "../../Constants.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");
 
 export const cleanString = function cleanString(toLocaleLowerCase) {
-  const obj = isNullOrEmpty;
   return isNullOrEmpty.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
 };
 export const getRelationshipType = function getRelationshipType(id) {
@@ -41,18 +40,17 @@ export const getNames = function getNames(user) {
     const str5 = names(1903).stripDiacritics(globalName.toLocaleLowerCase()).trim();
   }
   const username = user.username;
-  const obj4 = nameFromUserDefault;
   tmp4 = null != globalName && null == names[globalName];
   const obj7 = names(1903);
   const str7 = names(1903).stripDiacritics(username.toLocaleLowerCase());
   names[user.username] = names(1903).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
   nicknames = nicknames.getNicknames(user.id);
-  const item = nicknames.forEach((toLocaleLowerCase) => {
-    if (null == names[toLocaleLowerCase]) {
-      const obj = names(closure_1_2[4]);
-      const str = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase());
-      tmp[toLocaleLowerCase] = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim().split(" ");
-      const str2 = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
+  const item = nicknames.forEach((item, index) => {
+    if (null == names[item]) {
+      const obj = names(dependencyMap[4]);
+      const str = names(dependencyMap[4]).stripDiacritics(item.toLocaleLowerCase());
+      tmp[item] = names(dependencyMap[4]).stripDiacritics(item.toLocaleLowerCase()).trim().split(" ");
+      const str2 = names(dependencyMap[4]).stripDiacritics(item.toLocaleLowerCase()).trim();
     }
   });
   return { names, nick };

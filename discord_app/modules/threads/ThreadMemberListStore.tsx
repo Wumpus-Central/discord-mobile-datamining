@@ -5,16 +5,16 @@ import dispatcherDefault from "../../Dispatcher.tsx";
 import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
 import nameFromUserDefault from "../../utils/UserUtils.tsx";
-import closure_4 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/GuildMemberStore.tsx";
-import closure_7 from "../../stores/GuildSubscriptionsStore.tsx";
-import closure_8 from "../../stores/PresenceStore.tsx";
-import closure_9 from "../../stores/SelfPresenceStore.tsx";
-import closure_10 from "../../stores/UserStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import trackCommunicationDisabled from "../../stores/GuildMemberStore.tsx";
+import handleConnectionOpenOrResumed from "../../stores/GuildSubscriptionsStore.tsx";
+import sortActivity from "../../stores/PresenceStore.tsx";
+import filterPlayingActivities from "../../stores/SelfPresenceStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 function handleUserUpdate(user) {
   const id = user.user.id;
   let flag = false;
@@ -25,8 +25,6 @@ function handleUserUpdate(user) {
     if (keys !== undefined) {
       flag3 = flag2;
       while (keys[tmp] !== undefined) {
-        let tmp6 = tmp5;
-        let tmp7 = dependencyMap;
         let obj = dependencyMap[tmp5];
         if (!obj.updateUserId(id)) {
           continue;
@@ -48,12 +46,9 @@ function handleGuildRoleUpdateOrDelete(arg0) {
   if (keys !== undefined) {
     flag2 = flag;
     while (keys[tmp] !== undefined) {
-      let tmp8 = tmp5;
-      let tmp9 = dependencyMap;
       if (dependencyMap[tmp5].guildId !== tmp2) {
         continue;
       } else {
-        let tmp6 = dependencyMap;
         let obj = dependencyMap[tmp5];
         let rebuildResult = obj.rebuild();
         flag = true;
@@ -73,15 +68,14 @@ class MemberList {
     set = new Set();
     obj[2] = set;
     obj.guildId = global;
-    obj.parentId = arg1;
+    obj.parentId = fn;
     obj.threadId = importDefault;
     return obj;
   }
 }
 const prototype = MemberList.prototype;
 prototype["rebuild"] = function rebuild(items) {
-  let self = this;
-  self = this;
+  const self = this;
   this.version = this.version + 1;
   this.sections = {};
   if (null != items) {
@@ -91,30 +85,29 @@ prototype["rebuild"] = function rebuild(items) {
   }
   const channel = store.getChannel(self.parentId);
   const tmp7 = self(12);
-  const mapped = self(12)(Array.from(self.allUserIds)).map((userId) => {
-    const tmp = closure_1_4(self.calculateNewState(userId, closure_0), 3);
-    return { userId, sectionId: tmp[0], displayName: tmp[1], canViewChannel: tmp[2] };
+  const mapped = self(12)(Array.from(self.allUserIds)).map((item, index) => {
+    const tmp = closure_1_4(self.calculateNewState(item, closure_0), 3);
+    return { userId: item, sectionId: tmp[0], displayName: tmp[1], canViewChannel: tmp[2] };
   });
   const sorted = mapped.sort((userId, userId2) => self(table[9]).compare(userId.userId, userId2.userId));
   const tmp7Result = self(12)(Array.from(self.allUserIds));
-  const item = sorted.sortBy((displayName) => displayName.displayName).forEach((userId) => {
-    self.addUser(userId.userId, userId.sectionId, userId.displayName, userId.canViewChannel, true);
+  const item = sorted.sortBy((displayName) => displayName.displayName).forEach((item, index) => {
+    self.addUser(item.userId, item.sectionId, item.displayName, item.canViewChannel, true);
   });
 };
 prototype["updateMultipleUserIds"] = function updateMultipleUserIds(mapped, guildId) {
-  let self = this;
-  self = this;
+  const self = this;
   if (!(null == guildId || self.guildId === guildId)) {
     return tmp;
   } else {
-    const found = mapped.filter((arg0) => {
+    const found = mapped.filter((item, index) => {
       const allUserIds = self.allUserIds;
-      return allUserIds.has(arg0);
+      return allUserIds.has(item);
     });
     let flag = 0 !== found.length;
     if (flag) {
       if (found.length <= 50) {
-        const item = found.forEach((id) => self.updateUserId(id));
+        const item = found.forEach((item, index) => self.updateUserId(item));
         flag = true;
       }
     }
@@ -144,17 +137,16 @@ prototype["addUserId"] = function addUserId(userId) {
   const tmp = callback(this.calculateNewState(userId, store.getChannel(this.parentId)), 3);
   this.addUser(userId, tmp[0], tmp[1], tmp[2]);
 };
-prototype["removeUserId"] = function removeUserId(id, first) {
+prototype["removeUserId"] = function removeUserId(item, key10011) {
   const self = this;
   const allUserIds = this.allUserIds;
-  allUserIds.delete(id);
-  if (null != first) {
-    if (self.removeUserIdFromSection(id, first)) {
+  allUserIds.delete(item);
+  if (null != key10011) {
+    if (self.removeUserIdFromSection(item, key10011)) {
       return true;
     }
   }
   for (const key10011 in self.sections) {
-    let tmp2 = key10011;
     if (!self.removeUserIdFromSection(arg0, key10011)) {
       continue;
     } else {
@@ -203,7 +195,6 @@ prototype["findUserIdSortedPosition"] = function findUserIdSortedPosition(sum, a
     while (true) {
       let tmp2 = userIds[num];
       let displayName = tmp[tmp2].displayName;
-      let tmp3 = num;
       if (displayName === arg2) {
         if (arg1 < tmp2) {
           return num;
@@ -223,17 +214,17 @@ prototype["findUserIdSortedPosition"] = function findUserIdSortedPosition(sum, a
   }
   return userIds.length;
 };
-prototype["removeUserIdFromSection"] = function removeUserIdFromSection(id, key10011) {
+prototype["removeUserIdFromSection"] = function removeUserIdFromSection(item, key10011) {
   const self = this;
-  closure_0 = id;
+  closure_0 = item;
   let tmp4 = null != key10011;
   if (tmp4) {
-    let flag = id in tmp3.usersById;
+    let flag = item in tmp3.usersById;
     if (flag) {
       const usersById = tmp3.usersById;
       delete tmp[tmp2];
       const userIds = tmp3.userIds;
-      tmp3.userIds = userIds.filter((arg0) => arg0 !== closure_0);
+      tmp3.userIds = userIds.filter((item, index) => item !== closure_0);
       self.version = self.version + 1;
       flag = true;
     }
@@ -243,7 +234,6 @@ prototype["removeUserIdFromSection"] = function removeUserIdFromSection(id, key1
 };
 prototype["findOldState"] = function findOldState(id) {
   for (const key10004 in this.sections) {
-    let tmp2 = key10004;
     let tmp3 = tmp.sections[key10004];
     if (!(arg0 in tmp3.usersById)) {
       continue;
@@ -256,9 +246,9 @@ prototype["findOldState"] = function findOldState(id) {
   const items1 = [undefined, undefined, false];
   return items1;
 };
-prototype["calculateNewState"] = function calculateNewState(userId, channel) {
-  member = member.getMember(this.guildId, userId);
-  const user = authStore.getUser(userId);
+prototype["calculateNewState"] = function calculateNewState(item, channel) {
+  member = member.getMember(this.guildId, item);
+  const user = authStore.getUser(item);
   const currentUser = authStore.getCurrentUser();
   let id;
   if (user != null) {
@@ -271,12 +261,11 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
   if (id === id1) {
     let status = status2.getStatus();
   } else {
-    status = status.getStatus(userId, this.guildId);
+    status = status.getStatus(item, this.guildId);
   }
   let canResult = null != user && null != channel;
   if (canResult) {
-    let obj = applyOverwritesAll;
-    obj = { permission: null, user: null, context: null };
+    const obj = { permission: null, user: null, context: null };
     obj[0] = constants2.VIEW_CHANNEL;
     obj[1] = user;
     obj[2] = channel;
@@ -302,7 +291,6 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
   }
   if (nick == null) {
     nick = nameFromUserDefault.getName(user);
-    const obj3 = nameFromUserDefault;
   }
   const items = [str, , ];
   let formatted;
@@ -328,11 +316,9 @@ prototype2["initialize"] = function initialize() {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        let tmp8 = tmp6;
         if (subscribedThreadIds.has(tmp6)) {
           continue;
         } else {
-          let tmp7 = closure_13;
           delete tmp2[tmp3];
           flag = true;
           continue;
@@ -357,8 +343,6 @@ prototype2["initialize"] = function initialize() {
       if (keys !== undefined) {
         flag3 = flag2;
         while (keys[tmp] !== undefined) {
-          let tmp8 = tmp7;
-          let tmp9 = table;
           let obj = table[tmp7];
           if (!obj.updateUserId(id)) {
             continue;
@@ -416,11 +400,11 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
     if (id.id in closure_13) {
       const addedMembers = id.addedMembers;
       if (addedMembers != null) {
-        const item = addedMembers.forEach((userId) => closure_1_13[user.id].addUserId(userId.userId));
+        const item = addedMembers.forEach((item, index) => closure_1_13[user.id].addUserId(item.userId));
       }
       const removedMemberIds = id.removedMemberIds;
       if (removedMemberIds != null) {
-        const item1 = removedMemberIds.forEach((id) => closure_1_13[user.id].removeUserId(id));
+        const item1 = removedMemberIds.forEach((item, index) => closure_1_13[user.id].removeUserId(item));
       }
     } else {
       return false;
@@ -458,12 +442,9 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        let tmp7 = tmp4;
-        let tmp8 = dependencyMap;
         if (!set.has(dependencyMap[tmp4].parentId)) {
           continue;
         } else {
-          let tmp5 = dependencyMap;
           let obj2 = dependencyMap[tmp4];
           let rebuildResult = obj2.rebuild();
           flag = true;
@@ -495,16 +476,14 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
       obj.threadId = threadId;
       dependencyMap[threadId] = obj;
       obj = dependencyMap[threadId];
-      obj.rebuild(members.map((user_id) => user_id.user_id));
-      const tmp11 = dependencyMap;
-      const tmp12 = MemberList;
+      obj.rebuild(members.map((item, index) => item.user_id));
     }
   },
   USER_UPDATE: handleUserUpdate,
   PRESENCE_UPDATES: function handleUserUpdates(updates) {
     updates = updates.updates;
-    const mapped = updates.map((user) => {
-      const id = user.user.id;
+    const mapped = updates.map((item, index) => {
+      const id = item.user.id;
       let flag = false;
       if (null != id) {
         let flag2 = false;
@@ -513,8 +492,6 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
         if (keys !== undefined) {
           flag3 = flag2;
           while (keys[tmp] !== undefined) {
-            let tmp6 = tmp5;
-            let tmp7 = table;
             let obj = table[tmp5];
             if (!obj.updateUserId(id)) {
               continue;
@@ -529,14 +506,14 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
       }
       return flag;
     });
-    return mapped.some((arg0) => arg0);
+    return mapped.some((item, index) => item);
   },
   GUILD_MEMBER_ADD: handleUserUpdate,
   GUILD_MEMBER_UPDATE: handleUserUpdate,
   GUILD_MEMBER_REMOVE: handleUserUpdate,
   PRESENCES_REPLACE: function handlePresenceReplace(presences) {
-    const mapped = applyDefault(presences.presences).map((user) => {
-      user = user.user;
+    const mapped = applyDefault(presences.presences).map((item, index) => {
+      const user = item.user;
       let id;
       if (user != null) {
         id = user.id;
@@ -552,8 +529,6 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        let tmp6 = tmp5;
-        let tmp7 = dependencyMap;
         let obj2 = dependencyMap[tmp5];
         if (!obj2.updateMultipleUserIds(valueResult)) {
           continue;
@@ -570,14 +545,9 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
     let flag = false;
     for (const item10009 of tmp) {
       ({ guildId, members } = item10009);
-      let mapped = members.map((user) => user.user.id);
-      let tmp3 = dependencyMap;
+      let mapped = members.map((item, index) => item.user.id);
       for (const key10018 in closure_13) {
-        let tmp4 = key10018;
-        let tmp5 = dependencyMap;
         let obj = dependencyMap[key10018];
-        let tmp6 = mapped;
-        let tmp7 = guildId;
         if (!obj.updateMultipleUserIds(mapped, guildId)) {
           continue;
         } else {
@@ -594,8 +564,8 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
   GUILD_ROLE_DELETE: handleGuildRoleUpdateOrDelete,
   PASSIVE_UPDATE_V2: function handlePassiveUpdateV2(members) {
     members = members.members;
-    return members.reduce((arg0, user) => {
-      const id = user.user.id;
+    return members.reduce((acc, item, index) => {
+      const id = item.user.id;
       let flag = false;
       if (null != id) {
         let flag2 = false;
@@ -604,8 +574,6 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
         if (keys !== undefined) {
           flag3 = flag2;
           while (keys[tmp] !== undefined) {
-            let tmp6 = tmp5;
-            let tmp7 = table;
             let obj = table[tmp5];
             if (!obj.updateUserId(id)) {
               continue;
@@ -619,12 +587,12 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
         flag = flag3;
       }
       if (!flag) {
-        flag = arg0;
+        flag = acc;
       }
       return flag;
     }, false);
   }
 });
-const result = require("set").fileFinishedImporting("modules/threads/ThreadMemberListStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/threads/ThreadMemberListStore.tsx");
 
 export default threadMemberListStore;

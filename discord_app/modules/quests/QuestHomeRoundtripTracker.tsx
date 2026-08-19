@@ -1,9 +1,9 @@
 // discord_app/modules/quests/QuestHomeRoundtripTracker.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import setDefault from "../monitoring/MonitoringAgent.tsx";
-import set2 from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import _modDef10501 from "../app_state/DiscordAppState.native.tsx";
 
 const AnalyticEvents = ME.AnalyticEvents;
@@ -20,12 +20,11 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
   }
 };
 prototype["sendMetric"] = function sendMetric(timeout, duration) {
-  let obj = expandEventPropertiesDefault;
-  obj = { timeout, duration };
+  let obj = { timeout, duration };
   obj.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, obj);
   if (Math.random() <= 0.1) {
     obj = { name: null, tags: null };
-    obj[0] = set2.MetricEvents.QUEST_HOME_ROUNDTRIP;
+    obj[0] = set.MetricEvents.QUEST_HOME_ROUNDTRIP;
     const _HermesInternal = HermesInternal;
     const items = ["includes_bounties:" + arg2, ];
     const _HermesInternal2 = HermesInternal;
@@ -36,8 +35,7 @@ prototype["sendMetric"] = function sendMetric(timeout, duration) {
   }
 };
 prototype["startTracking"] = function startTracking() {
-  let self = this;
-  self = this;
+  const self = this;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -87,6 +85,6 @@ prototype["clearTracking"] = function clearTracking() {
   this.clearTimeoutTimer();
   this.startTime = null;
 };
-const result = set.fileFinishedImporting("modules/quests/QuestHomeRoundtripTracker.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/QuestHomeRoundtripTracker.tsx");
 
 export default Object.create(QuestHomeRoundtripTracker.prototype);

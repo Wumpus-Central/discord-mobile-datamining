@@ -9,7 +9,7 @@ import registerAssetDefault4 from "../../../../_runtime/08552_registerAsset.js";
 import { GuildFeatures } from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function getGuildBadgeSource(guild, flag) {
   let has = guild;
   let NONE = obj.NONE;
@@ -99,7 +99,7 @@ let obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", PARTNE
 obj = { [VERIFIED]: registerAssetDefault, [PARTNERED]: registerAssetDefault2, [VERIFIED_BLACK]: registerAssetDefault3, [PARTNERED_BLACK]: registerAssetDefault4, [obj.NONE]: null };
 ({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
 GuildBadge.Sizes = require("Button").Icon.Sizes;
-const result = require("set").fileFinishedImporting("modules/guild/native/GuildBadge.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild/native/GuildBadge.tsx");
 
 export default GuildBadge;
 export { getGuildBadgeSource };

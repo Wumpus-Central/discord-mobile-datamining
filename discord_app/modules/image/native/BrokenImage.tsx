@@ -4,9 +4,9 @@ import inlineStyles from "../../../../_runtime/06571_inlineStyles.js";
 import inlineStylesDefault from "../../../../_runtime/06571_inlineStyles.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/image/native/BrokenImage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/image/native/BrokenImage.tsx");
 
 export default function BrokenImage(arg0) {
   const obj = { width: 24, height: 24, fill: "hsl(217, 7.6%, 33.5%)" };

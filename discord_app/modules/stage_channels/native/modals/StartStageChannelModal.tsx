@@ -3,6 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
+import Text from "../../../../design/components/Text/native/Text.tsx";
 import _modDef5260 from "../../../../actions/ModalActionCreators.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconSizes from "../../../guild/native/GuildIcon.tsx";
@@ -11,18 +12,18 @@ import HotspotStore2 from "../../../hotspot/index.tsx";
 import StageSparkleInnerDefault from "../components/StageSparkle.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import registerAssetDefault from "../../../../../_runtime/08176_registerAsset.js";
-import closure_4 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_9 from "../../StageInstanceStore.tsx";
+import handleStageInstanceCreateOrUpdate from "../../StageInstanceStore.tsx";
 import MAX_STAGE_TOPIC_LENGTH from "../../StageChannelsConstants.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { GuildScheduledEventPrivacyLevel as closure_13 } from "../../../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function closeModal() {
   _modDef5260.popWithKey(closure_11);
 }
@@ -55,7 +56,6 @@ function HeaderIcon(guild) {
     obj[1] = GuildIconSizes.GuildIconSizes.LARGE;
     obj[2] = guild;
     tmp7 = callback2(GuildIconSizesDefault, obj);
-    const tmp5 = GuildIconSizesDefault;
   }
   return tmp7;
 }
@@ -104,34 +104,27 @@ class NotificationToggle {
 ({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: unpackModuleId } = MAX_STAGE_TOPIC_LENGTH);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let obj = { keyboardAwareView: { flex: 1 }, closeButtonContainer: { right: 10 }, container: null, contentContainer: null, contentTopSpacing: null, header: null, headerTitle: null, headerSubtitle: null, textInput: null, startButton: null, error: null, optionExplanation: null, guildIcon: null, label: null, pill: null, pillLabel: null, notificationToggle: null, ageVerificationNotice: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[2] = obj;
 obj[3] = { paddingHorizontal: 16 };
 obj[4] = { paddingTop: 16 };
 obj[5] = { alignItems: "center", paddingBottom: 24 };
 obj[6] = { marginTop: 16, marginBottom: 8 };
 obj[7] = { textAlign: "center" };
-createCacheKey = { padding: 12, width: "100%", borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
+const createCacheKey = { padding: 12, width: "100%", borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
 obj[8] = createCacheKey;
 obj[9] = { marginTop: 16 };
 obj[10] = { paddingTop: 8 };
 obj[11] = { lineHeight: 16, paddingTop: 8 };
 obj[12] = { borderRadius: ThemesDefault.radii.md };
 obj[13] = { display: "flex", alignItems: "center", flexDirection: "row" };
-let obj2 = { borderRadius: ThemesDefault.radii.md };
 obj[14] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, paddingHorizontal: 4, paddingVertical: 2, marginStart: 8, borderRadius: ThemesDefault.radii.xs };
 obj[15] = { textTransform: "uppercase" };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, paddingHorizontal: 4, paddingVertical: 2, marginStart: 8, borderRadius: ThemesDefault.radii.xs };
 obj[16] = { marginTop: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
-let obj4 = { marginTop: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
 obj[17] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_16 = createCacheKey.createStyles(obj);
-let obj5 = { marginBottom: ThemesDefault.space.PX_16 };
 const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   ({ guild, onStageStarted: require, onClose: importDefault } = channel);
-  let first;
-  let memo;
   let first1;
   let callback;
   let first2;
@@ -142,7 +135,6 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   let first3;
   closure_12 = undefined;
   let constants;
-  let obj;
   closure_15 = undefined;
   let callback3;
   function _handleSave() {
@@ -188,14 +180,14 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                     c4 = 3;
                     c5 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = closure_1_2(8062).editStage(closure_1_2, tmp76, tmp47);
+                    obj1[0] = closure_1_2(8062).editStage(closure_1_2, tmp76, closure_1_6);
                     return obj1;
                   } else {
                     const obj5 = closure_1_2(8062);
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = obj5.startStage(closure_1_2, tmp76, tmp47, closure_1_11);
+                    obj2[0] = obj5.startStage(closure_1_2, tmp76, closure_1_6, closure_1_11);
                     return obj2;
                   }
                 }
@@ -273,22 +265,22 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     return applyArgumentsResult;
   }
   let tmp = callback3();
-  obj = first2;
+  let obj = first2;
   const imperativeHandle = first2.useImperativeHandle(ref, () => ({
     renderRightButton: function RightButton() {
       obj = { style: closure_1_16().closeButtonContainer, accessibilityRole: "button", accessibilityLabel: null, source: null, onPress: null, disableColor: true };
       const tmp = closure_1_16();
-      const intl = closure_1_0(closure_1_3[13]).intl;
-      obj[2] = intl.string(closure_1_0(closure_1_3[13]).t.cpT0Cq);
-      obj[3] = closure_1_1(closure_1_3[15]);
+      const intl = closure_1_0(memo[13]).intl;
+      obj[2] = intl.string(closure_1_0(memo[13]).t.cpT0Cq);
+      obj[3] = closure_1_1(memo[15]);
       obj[4] = closure_1;
-      return closure_1_14(closure_1_1(closure_1_3[22]), obj);
+      return closure_1_14(closure_1_1(memo[22]), obj);
     }
   }));
   const tmp4 = callback(first2.useState(channel.channel), 2);
-  first = tmp4[0];
+  const first = tmp4[0];
   const items = [first.id];
-  memo = first2.useMemo(() => _undefined.getStageInstanceByChannel(first.id), items);
+  const memo = first2.useMemo(() => _undefined.getStageInstanceByChannel(first.id), items);
   let str;
   if (memo != null) {
     str = memo.topic;
@@ -351,7 +343,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     if (privacy_level == null) {
       privacy_level = current.privacyDefault;
     }
-    closure_7(privacy_level);
+    callback(privacy_level);
     if (null != stageInstance) {
       callback2(stageInstance.topic);
     }
@@ -359,7 +351,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const tmp16Result = require(memo[18]);
   ({ helpText, publicDisabled: c16 } = importDefault(memo[24])(first, memo, first2));
   importDefault(memo[25])(() => {
-    obj = closure_1_1(memo[26]);
+    obj = importDefault(memo[26]);
     let id;
     if (memo != null) {
       id = memo.id;
@@ -371,21 +363,21 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const items3 = [obj(HeaderIcon, { guild }), , ];
   obj1 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   if (null == memo) {
-    const intl2 = tmp16(tmp17[13]).intl;
-    let stringResult = intl2.string(tmp16(tmp17[13]).t.DDF0cJ);
+    const intl2 = require(tmp17[13]).intl;
+    let stringResult = intl2.string(require(tmp17[13]).t.DDF0cJ);
   } else {
-    let intl = tmp16(tmp17[13]).intl;
-    stringResult = intl.string(tmp16(tmp17[13]).t["5BKP4y"]);
+    let intl = require(tmp17[13]).intl;
+    stringResult = intl.string(require(tmp17[13]).t["5BKP4y"]);
   }
   obj1[4] = stringResult;
   items3[1] = obj(require(memo[21]).Text, obj1);
   obj2 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   if (null == memo) {
-    const intl4 = tmp16(tmp17[13]).intl;
-    let stringResult1 = intl4.string(tmp16(tmp17[13]).t.bqQIwa);
+    const intl4 = require(tmp17[13]).intl;
+    let stringResult1 = intl4.string(require(tmp17[13]).t.bqQIwa);
   } else {
-    const intl3 = tmp16(tmp17[13]).intl;
-    stringResult1 = intl3.string(tmp16(tmp17[13]).t["I+9bLx"]);
+    const intl3 = require(tmp17[13]).intl;
+    stringResult1 = intl3.string(require(tmp17[13]).t["I+9bLx"]);
   }
   obj2[3] = stringResult1;
   items3[2] = obj(require(memo[21]).Text, obj2);
@@ -401,12 +393,12 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   obj3[4] = items4;
   const items5 = [tmp29Result, , , , , , , , ];
   const obj4 = { children: null };
-  let tmp26Result = tmp26(tmp17[31]);
-  const intl5 = tmp16(tmp17[13]).intl;
+  let tmp26Result = importDefault(tmp17[31]);
+  const intl5 = require(tmp17[13]).intl;
   obj4[0] = intl5.string(require(memo[13]).t["5FPBOB"]);
   items5[1] = obj(tmp26Result, obj4);
   let obj5 = { style: tmp.textInput, showBorder: false, showTopContainer: false, multiline: false, maxLength: canSendStageStartNotification, value: first1, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
-  const intl6 = tmp16(tmp17[13]).intl;
+  const intl6 = require(tmp17[13]).intl;
   obj5[6] = intl6.string(require(memo[13]).t.ZwWruY);
   obj5[7] = tmp3Result[1];
   obj5[9] = require(memo[14]).ClearButtonVisibility.WITH_CONTENT;
@@ -416,7 +408,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     const obj6 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
     obj6[0] = tmp.optionExplanation;
     obj6[3] = helpText;
-    tmp31Result = tmp31(tmp16(tmp17[21]).Text, obj6);
+    tmp31Result = tmp31(require(tmp17[21]).Text, obj6);
   }
   items5[3] = tmp31Result;
   tmp31Result = null != guild;
@@ -425,7 +417,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     obj7[0] = guild;
     obj7[1] = first;
     obj7[2] = tmp4[1];
-    tmp31Result = tmp31(tmp26(tmp17[32]), obj7);
+    tmp31Result = tmp31(importDefault(tmp17[32]), obj7);
   }
   items5[4] = tmp31Result;
   let tmp31Result1 = null;
@@ -445,16 +437,16 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     const obj10 = { style: null, variant: "text-xs/medium", color: "text-feedback-critical", children: null };
     obj10[0] = tmp.error;
     obj10[3] = obj1.getAnyErrorMessage();
-    tmp31Result2 = tmp31(tmp16(tmp17[21]).Text, obj10);
+    tmp31Result2 = tmp31(require(tmp17[21]).Text, obj10);
   }
   items5[7] = tmp31Result2;
   const obj11 = { style: tmp.startButton, children: null };
   if (null == memo) {
-    const intl8 = tmp16(tmp17[13]).intl;
-    let stringResult2 = intl8.string(tmp16(tmp17[13]).t.s8mM8A);
+    const intl8 = require(tmp17[13]).intl;
+    let stringResult2 = intl8.string(require(tmp17[13]).t.s8mM8A);
   } else {
-    const intl7 = tmp16(tmp17[13]).intl;
-    stringResult2 = intl7.string(tmp16(tmp17[13]).t.K344S7);
+    const intl7 = require(tmp17[13]).intl;
+    stringResult2 = intl7.string(require(tmp17[13]).t.K344S7);
   }
   obj11[1] = obj(require(memo[34]).Button, {
     text: stringResult2,
@@ -482,15 +474,15 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     obj14[0] = tmp.keyboardAwareView;
     const obj15 = { guild: null };
     obj15[0] = guild;
-    tmp26Result = tmp26(tmp17[36]);
+    tmp26Result = importDefault(tmp17[36]);
     const items6 = [tmp31(NavigationBar, obj15), tmp29Result];
     obj14[1] = items6;
     obj13[3] = tmp29(tmp26Result, obj14);
-    tmp31Result3 = tmp31(tmp16(tmp17[35]).SafeAreaPaddingView, obj13);
+    tmp31Result3 = tmp31(require(tmp17[35]).SafeAreaPaddingView, obj13);
   }
   return tmp31Result3;
 });
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/modals/StartStageChannelModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/modals/StartStageChannelModal.tsx");
 
 export default forwardRefResult;
 export { NotificationToggle };

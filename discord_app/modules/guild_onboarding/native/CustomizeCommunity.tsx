@@ -1,38 +1,40 @@
 // discord_app/modules/guild_onboarding/native/CustomizeCommunity.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../utils/AvatarUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import ConnectionCardDefault from "ConnectionCard.tsx";
+import QUICK_SWITCHERDefault from "../../app_analytics/AnalyticsLocation.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../emojis/EmojiStore.tsx";
-import closure_8 from "../../../stores/GuildStore.tsx";
-import closure_9 from "../../../stores/ReadStateStore.tsx";
-import closure_10 from "../../../stores/SelectedGuildStore.tsx";
-import closure_11 from "../GuildOnboardingPromptsStore.tsx";
+import getEmojiToGroupId from "../../emojis/EmojiStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import generateOldThreadCutoff from "../../../stores/ReadStateStore.tsx";
+import handleConnectionOpen from "../../../stores/SelectedGuildStore.tsx";
+import handleUpdate from "../GuildOnboardingPromptsStore.tsx";
 import serverPromptToClientPrompt from "../GuildOnboardingPromptsConstants.tsx";
 import { EMOJI_URL_BASE_SIZE } from "../../emojis/EmojiConstants.tsx";
 import { ReadStateTypes } from "../../read_states/ReadStateConstants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../rebrand/native/TextStyles.tsx";
 
-require = arg1;
+require = fn;
 function EmptyCustomizeCommunity(setTab) {
   setTab = setTab.setTab;
-  importDefault = undefined;
   const tmp = callback3();
-  let obj = setTab(1364);
+  setTab(1364);
   obj1 = setTab(589);
   const items = [closure_10];
   importDefault = obj1.useStateFromStores(items, () => guildId.getGuildId());
-  obj = { style: tmp.emptyContainer, children: null };
+  let obj = { style: tmp.emptyContainer, children: null };
   obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 10743 : 10744) };
-  const items1 = [closure_16(closure_5, obj), , ];
+  const items1 = [callback(closure_5, obj), , ];
   obj1 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1236).intl;
   obj1[1] = intl.string(setTab(1236).t.leKHQz);
-  items1[1] = closure_16(setTab(1297).LegacyText, obj1);
+  items1[1] = callback(setTab(1297).LegacyText, obj1);
   const obj2 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl2 = tmp2(1236).intl;
   obj2[2] = intl2.format(setTab(1236).t["jH+ktB"], {
@@ -42,9 +44,9 @@ function EmptyCustomizeCommunity(setTab) {
       }
     }
   });
-  items1[2] = closure_16(setTab(4734).Text, obj2);
+  items1[2] = callback(setTab(4734).Text, obj2);
   obj[1] = items1;
-  return closure_17(closure_4, obj);
+  return callback2(closure_4, obj);
 }
 function PromptTitle(item) {
   item = item.item;
@@ -54,11 +56,11 @@ function PromptTitle(item) {
   if (item.required) {
     obj = { variant: "text-md/bold", color: "text-feedback-critical", children: null };
     obj[2] = [" ", "*"];
-    tmp3Result = tmp3(Text.Text, obj);
+    tmp3Result = callback2(Text.Text, obj);
   }
   items[1] = tmp3Result;
-  obj[1] = closure_17(Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items });
-  return closure_16(closure_4, obj);
+  obj[1] = callback2(Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items });
+  return callback(closure_4, obj);
 }
 function PromptHelpText(arg0) {
   ({ guildId: require, prompt: _prompt, selectedOptionIds: importDefault } = arg0);
@@ -70,15 +72,15 @@ function PromptHelpText(arg0) {
   if (_prompt != null) {
     const options = _prompt.options;
     if (options != null) {
-      found = options.filter((id) => closure_1.includes(id.id));
+      found = options.filter((item, index) => closure_1.includes(item.id));
     }
   }
   const items1 = [found];
   const items2 = [found];
   const memo = React.useMemo(() => {
     if (null != found) {
-      let selectedRoleIds = closure_1_0(found[23]).getSelectedRoleIds(tmp);
-      const obj = closure_1_0(found[23]);
+      let selectedRoleIds = require(found[23]).getSelectedRoleIds(tmp);
+      const obj = require(found[23]);
     } else {
       const _Set = Set;
       selectedRoleIds = new Set();
@@ -87,8 +89,8 @@ function PromptHelpText(arg0) {
   }, items1);
   const memo1 = React.useMemo(() => {
     if (null != found) {
-      let selectedChannelIds = closure_1_0(found[23]).getSelectedChannelIds(tmp);
-      const obj = closure_1_0(found[23]);
+      let selectedChannelIds = require(found[23]).getSelectedChannelIds(tmp);
+      const obj = require(found[23]);
     } else {
       const _Set = Set;
       selectedChannelIds = new Set();
@@ -105,14 +107,13 @@ function PromptHelpText(arg0) {
     }
   };
   const tmp = callback3();
-  const tmp2 = require;
   ({ helpText, helpTextAdditional } = importDefault(found[24])(obj));
   if ("" !== helpText) {
     obj = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
     obj[0] = tmp.helpText;
     const items3 = [helpText, " ", helpTextAdditional];
     obj[3] = items3;
-    let tmp9 = callback2(tmp2(tmp3[22]).Text, obj);
+    let tmp9 = callback2(require(tmp3[22]).Text, obj);
   } else {
     tmp9 = null;
   }
@@ -139,9 +140,9 @@ function ConnectionsPrompt(guildId) {
     items1[1] = callback(tmp2(4734).Text, obj1);
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.connectionsContainer;
-    obj2[1] = stateFromStores.map((connection) => {
-      const obj = { connection, guildId, location: closure_1_1(closure_1_2[26]).CHANNELS_AND_ROLES };
-      return closure_1_16(closure_1_1(closure_1_2[25]), obj, arg1);
+    obj2[1] = stateFromStores.map((item, index) => {
+      const obj = { connection: item, guildId, location: QUICK_SWITCHERDefault.CHANNELS_AND_ROLES };
+      return closure_1_16(ConnectionCardDefault, obj, index);
     });
     items1[2] = callback(closure_4, obj2);
     obj[1] = items1;
@@ -196,8 +197,8 @@ function DropdownOption(option) {
       const obj2 = { id: null, animated: null, size: null };
       ({ id: obj6[0], animated: obj6[1] } = stateFromStores);
       obj2[2] = EMOJI_URL_BASE_SIZE;
-      emojiURL = tmp11(1435).getEmojiURL(obj2);
-      const tmp11Result = tmp11(1435);
+      emojiURL = getAvatarURLDefault.getEmojiURL(obj2);
+      const tmp11Result = getAvatarURLDefault;
     }
     obj1[2] = emojiURL;
     const emoji3 = option.emoji;
@@ -210,46 +211,39 @@ function DropdownOption(option) {
     }
     obj1[3] = str;
     obj[1] = callback(EmojiDefault, obj1);
-    tmp10Result = tmp10(tmp9, obj);
-    tmp11 = importDefault;
-    const tmp12 = EmojiDefault;
+    tmp10Result = callback(closure_4, obj);
   }
   const items1 = [tmp10Result, callback(option(4734).Text, { variant: "text-md/semibold", children: option.title })];
   obj[1] = items1;
-  return closure_17(closure_4, obj);
+  return callback2(closure_4, obj);
 }
 function DropdownPrompt(guildId) {
   guildId = guildId.guildId;
   const _prompt = guildId.prompt;
-  let isNew;
-  let stateFromStoresArray;
-  let token;
-  let handleSelectOption;
   const tmp = callback3();
-  isNew = _prompt.isNew;
+  const isNew = _prompt.isNew;
   let obj = guildId(isNew[17]);
   const items = [closure_11];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => closure_1_11.getOnboardingResponsesForPrompt(guildId, _prompt.id));
-  const mapped = stateFromStoresArray.map((arg0) => {
-    closure_0 = arg0;
+  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => closure_1_11.getOnboardingResponsesForPrompt(guildId, _prompt.id));
+  const mapped = stateFromStoresArray.map((item, index) => {
+    closure_0 = item;
     const options = _prompt.options;
-    return options.find((id) => id.id === closure_0);
+    return options.find((item, index) => item.id === closure_0);
   });
   const found = mapped.filter(guildId(isNew[34]).isNotNullish);
   obj1 = guildId(isNew[35]);
-  token = obj1.useToken(_prompt(isNew[13]).colors.BACKGROUND_BRAND);
+  const token = obj1.useToken(_prompt(isNew[13]).colors.BACKGROUND_BRAND);
   let obj2 = guildId(isNew[36]);
   const fn = function c() {
     if (isNew) {
-      let combined = concat(tmp, "FF");
-      let tmp3 = tmp;
+      let combined = concat(token, "FF");
+      let tmp3 = token;
     } else {
-      combined = concat(tmp, "00");
-      tmp3 = tmp;
+      combined = concat(token, "00");
+      tmp3 = token;
     }
-    let obj = { borderColor: null };
     const obj2 = guildId(isNew[36]);
-    obj = { duration: 1, easing: null };
+    let obj = { duration: 1, easing: null };
     const Easing = guildId(isNew[36]).Easing;
     obj[1] = Easing.in(guildId(isNew[36]).Easing.ease);
     const obj3 = guildId(isNew[37]);
@@ -267,11 +261,11 @@ function DropdownPrompt(guildId) {
   fn.__workletHash = 16609373875235;
   fn.__initData = closure_25;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  handleSelectOption = _prompt(isNew[38])(guildId).handleSelectOption;
+  const handleSelectOption = _prompt(isNew[38])(guildId).handleSelectOption;
   const items1 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = stateFromStoresArray.useCallback(() => {
-    let obj = _prompt(isNew[39]);
-    obj = {
+    _prompt(isNew[39]);
+    const obj = {
       guildId,
       promptId: _prompt.id,
       onSelect(arg0, arg1) {
@@ -287,9 +281,7 @@ function DropdownPrompt(guildId) {
           if (flag == null) {
             flag = false;
           }
-          closure_5(required, arg0, flag);
-          const tmp3 = closure_5;
-          const tmp4 = required;
+          callback(required, arg0, flag);
         }
       },
       canBeNew: !_prompt.isNew,
@@ -318,41 +310,36 @@ function DropdownPrompt(guildId) {
     obj3[3] = intl2.string(tmp2(tmp3[21]).t.GmSvdA);
     tmp10Result = tmp10(tmp2(tmp3[22]).Text, obj3);
   }
-  const items4 = [tmp10Result, found.map((id) => callback(closure_24, { option: id }, id.id)), ];
+  const items4 = [tmp10Result, found.map((item, index) => callback(closure_24, { option: item }, item.id)), ];
   const obj4 = { style: tmp.dropdownIconContainer, children: callback(handleSelectOption, { style: tmp.dropdownIcon, source: _prompt(isNew[43]) }) };
   items4[2] = callback(token, obj4);
   obj2[2] = items4;
-  items3[2] = closure_17(guildId(isNew[42]).PressableHighlight, obj2);
+  items3[2] = callback2(guildId(isNew[42]).PressableHighlight, obj2);
   items3[3] = callback(PromptHelpText, { guildId, prompt: _prompt, selectedOptionIds: stateFromStoresArray });
   obj[1] = items3;
-  return closure_17(_prompt(isNew[36]).View, obj);
+  return callback2(_prompt(isNew[36]).View, obj);
 }
 function MultipleChoicePrompt(guildId) {
   guildId = guildId.guildId;
   const _prompt = guildId.prompt;
-  let isNew;
-  let stateFromStoresArray;
-  let handleSelectOption;
-  let token;
   const tmp = callback3();
-  isNew = _prompt.isNew;
+  const isNew = _prompt.isNew;
   let obj = guildId(isNew[17]);
   const items = [closure_11];
-  stateFromStoresArray = obj.useStateFromStoresArray(items, () => closure_1_11.getOnboardingResponsesForPrompt(guildId, _prompt.id));
-  handleSelectOption = _prompt(isNew[38])(guildId).handleSelectOption;
+  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => closure_1_11.getOnboardingResponsesForPrompt(guildId, _prompt.id));
+  const handleSelectOption = _prompt(isNew[38])(guildId).handleSelectOption;
   obj1 = guildId(isNew[35]);
-  token = obj1.useToken(_prompt(isNew[13]).colors.BACKGROUND_BRAND);
+  const token = obj1.useToken(_prompt(isNew[13]).colors.BACKGROUND_BRAND);
   const fn = function p() {
     if (isNew) {
-      let combined = concat(tmp, "FF");
-      let tmp3 = tmp;
+      let combined = concat(token, "FF");
+      let tmp3 = token;
     } else {
-      combined = concat(tmp, "00");
-      tmp3 = tmp;
+      combined = concat(token, "00");
+      tmp3 = token;
     }
-    let obj = { borderColor: null };
     const obj2 = guildId(isNew[36]);
-    obj = { duration: 1, easing: null };
+    let obj = { duration: 1, easing: null };
     const Easing = guildId(isNew[36]).Easing;
     obj[1] = Easing.in(guildId(isNew[36]).Easing.ease);
     const obj3 = guildId(isNew[37]);
@@ -383,86 +370,70 @@ function MultipleChoicePrompt(guildId) {
   }
   const items2 = [isNew2, callback(PromptTitle, { item: _prompt }), , ];
   const options = _prompt.options;
-  items2[2] = options.map((id) => {
-    closure_0 = id;
+  items2[2] = options.map((item, index) => {
+    closure_0 = item;
     const obj = {
       guildId: closure_0,
-      option: id,
-      selected: stateFromStoresArray.includes(id.id),
+      option: item,
+      selected: stateFromStoresArray.includes(item.id),
       onSelect(arg0) {
         let flag = arg0;
         let required = !arg0;
         if (!arg0) {
-          required = closure_1_1.required;
+          required = _prompt.required;
         }
         if (required) {
-          required = 1 === closure_1_3.length;
+          required = 1 === stateFromStoresArray.length;
         }
         if (!required) {
           if (flag == null) {
             flag = false;
           }
-          closure_1_4(closure_1_1, closure_0, flag);
-          const tmp4 = closure_1_4;
-          const tmp5 = closure_1_1;
+          handleSelectOption(_prompt, closure_0, flag);
         }
       },
       suppressMemberCount: true,
       canBeNew: !_prompt.isNew
     };
-    return closure_1_16(_prompt(isNew[44]), obj, id.id);
+    return closure_1_16(_prompt(isNew[44]), obj, item.id);
   });
   items2[3] = callback(PromptHelpText, { guildId, prompt: _prompt, selectedOptionIds: stateFromStoresArray });
   obj[1] = items2;
-  return closure_17(_prompt(isNew[36]).View, obj);
+  return callback2(_prompt(isNew[36]).View, obj);
 }
 ({ View: c4, Image: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ GuildOnboardingTab: closure_12, OnboardingPromptType: map1 } = serverPromptToClientPrompt);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-createCacheKey = { container: null, sheetTitle: null, promptContainer: null, titleContainer: null, badge: null, badgeText: null, dropdownContainer: null, emptyDropdownText: null, dropdownPill: null, emojiContainer: null, dropdownIconContainer: null, dropdownIcon: null, optionTextEmoji: null, optionImageEmoji: null, helpText: null, sectionSeparator: null, emptyContainer: null, emptyContainerImage: null, emptyContainerHeader: null, connectionsContainer: null, connectionsPromptContainer: null, connectionsTitle: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16 };
-let obj1 = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderStyle: "solid" };
-let obj2 = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderStyle: "solid" };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_12 };
 createCacheKey[4] = { position: "absolute", top: -6, right: -6 };
 createCacheKey[5] = { fontWeight: "bold" };
-let obj3 = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_12 };
 createCacheKey[6] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_32, minHeight: 48, marginBottom: ThemesDefault.space.PX_12, display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", position: "relative" };
-let obj4 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, padding: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_32, minHeight: 48, marginBottom: ThemesDefault.space.PX_12, display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", position: "relative" };
 createCacheKey[7] = { marginVertical: ThemesDefault.space.PX_12, marginLeft: ThemesDefault.space.PX_4 };
-let obj5 = { marginVertical: ThemesDefault.space.PX_12, marginLeft: ThemesDefault.space.PX_4 };
 createCacheKey[8] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 6, marginRight: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, display: "flex", flexDirection: "row", alignItems: "center" };
 createCacheKey[9] = { display: "flex", alignItems: "center" };
-let obj6 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 6, marginRight: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, display: "flex", flexDirection: "row", alignItems: "center" };
 createCacheKey[10] = { position: "absolute", right: ThemesDefault.space.PX_4, top: ThemesDefault.space.PX_12 };
 createCacheKey[11] = { height: 32, width: 32 };
 createCacheKey[12] = { fontSize: 18, lineHeight: 22, marginRight: 6 };
 createCacheKey[13] = { height: 22, width: 22, marginRight: 6 };
-let obj7 = { position: "absolute", right: ThemesDefault.space.PX_4, top: ThemesDefault.space.PX_12 };
 createCacheKey[14] = { marginTop: ThemesDefault.space.PX_4 };
-let obj8 = { marginTop: ThemesDefault.space.PX_4 };
 createCacheKey[15] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[16] = { height: 400, display: "flex", alignItems: "center", justifyContent: "center" };
-let obj9 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[17] = { width: 120, height: 80, marginBottom: ThemesDefault.space.PX_16 };
 let obj11 = {};
-let obj10 = { width: 120, height: 80, marginBottom: ThemesDefault.space.PX_16 };
 const merged = Object.assign(importDefaultResult(require("ME").Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
 obj11.marginBottom = ThemesDefault.space.PX_4;
 createCacheKey[18] = obj11;
 createCacheKey[19] = { marginTop: ThemesDefault.space.PX_12 };
-const obj12 = { marginTop: ThemesDefault.space.PX_12 };
 createCacheKey[20] = { marginTop: ThemesDefault.space.PX_12 };
-const obj13 = { marginTop: ThemesDefault.space.PX_12 };
 createCacheKey[21] = { marginBottom: ThemesDefault.space.PX_4 };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
 let closure_25 = { code: "function CustomizeCommunityTsx1(){const{isNew,brandColor,withSequence,withTiming,Easing,withDelay}=this.__closure;const rawBorderColor=isNew?brandColor+\"FF\":brandColor+\"00\";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+\"00\",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};}" };
 let closure_27 = { code: "function CustomizeCommunityTsx2(){const{isNew,brandColor,withSequence,withTiming,Easing,withDelay}=this.__closure;const rawBorderColor=isNew?brandColor+\"FF\":brandColor+\"00\";const borderColor=withSequence(withTiming(rawBorderColor,{duration:1,easing:Easing.in(Easing.ease)}),withDelay(500,withTiming(brandColor+\"00\",{duration:300,easing:Easing.out(Easing.ease)})));return{borderColor:borderColor};}" };
-const obj14 = { marginBottom: ThemesDefault.space.PX_4 };
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/CustomizeCommunity.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/CustomizeCommunity.tsx");
 
 export default function CustomizeCommunity(guildId) {
   guildId = guildId.guildId;
@@ -471,7 +442,7 @@ export default function CustomizeCommunity(guildId) {
   const bottom = stateFromStores(1629)().bottom;
   let obj = guildId(589);
   const items = [closure_9];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_9.hasUnread(guildId, closure_1_15.GUILD_ONBOARDING_QUESTION));
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_9.hasUnread(guildId, ReadStateTypes.GUILD_ONBOARDING_QUESTION));
   obj1 = guildId(589);
   const items1 = [closure_8];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
@@ -489,19 +460,19 @@ export default function CustomizeCommunity(guildId) {
   const effect = React.useEffect(() => {
     let tmp2 = null != guildId;
     if (tmp2) {
-      tmp2 = closure_1_11.shouldFetchPrompts(tmp) || stateFromStores;
-      const tmp4 = closure_1_11.shouldFetchPrompts(tmp) || stateFromStores;
+      tmp2 = closure_1_11.shouldFetchPrompts(guildId) || stateFromStores;
+      const tmp4 = closure_1_11.shouldFetchPrompts(guildId) || stateFromStores;
     }
     if (tmp2) {
-      const onboardingPrompts = guildId(closure_1_2[29]).fetchOnboardingPrompts(tmp);
-      const obj = guildId(closure_1_2[29]);
+      const onboardingPrompts = guildId(dependencyMap[29]).fetchOnboardingPrompts(guildId);
+      const obj = guildId(dependencyMap[29]);
     }
   }, items2);
   const items3 = [guildId];
   const effect1 = React.useEffect(() => null != guildId ? (() => {
-    closure_1_0(closure_1_2[30]).ackGuildFeature(closure_0, closure_1_15.GUILD_ONBOARDING_QUESTION, closure_1_11.ackIdForGuild(closure_0));
-    const obj = closure_1_0(closure_1_2[30]);
-    const result = closure_1_1(closure_1_2[31]).updateOnboardingResponses(closure_0);
+    guildId(closure_1_2[30]).ackGuildFeature(closure_0, closure_1_15.GUILD_ONBOARDING_QUESTION, closure_1_11.ackIdForGuild(closure_0));
+    const obj = guildId(closure_1_2[30]);
+    const result = stateFromStores(closure_1_2[31]).updateOnboardingResponses(closure_0);
   }) : undefined, items3);
   const items4 = [guildId];
   const callback = React.useCallback((type) => {
@@ -510,12 +481,12 @@ export default function CustomizeCommunity(guildId) {
       let obj = { guildId: null, prompt: null };
       obj[0] = guildId;
       obj[1] = type;
-      return closure_1_16(closure_1_28, obj, type.id);
+      return closure_1_16(MultipleChoicePrompt, obj, type.id);
     } else if (tmp.DROPDOWN === type) {
       obj = { guildId: null, prompt: null };
       obj[0] = guildId;
       obj[1] = type;
-      return closure_1_16(closure_1_26, obj, type.id);
+      return closure_1_16(DropdownPrompt, obj, type.id);
     }
   }, items4);
   if (0 === onboardingPromptsRaw.length) {
@@ -548,7 +519,7 @@ export default function CustomizeCommunity(guildId) {
       obj7[0] = tmp.sectionSeparator;
       items5[3] = callback(closure_4, obj7);
       obj4[0] = items5;
-      tmp24Result = tmp24(closure_18, obj4);
+      tmp24Result = callback2(closure_18, obj4);
     }
     const items6 = [tmp24Result, , ];
     tmp24Result = onboardingPrompts.length > 0;
@@ -565,15 +536,14 @@ export default function CustomizeCommunity(guildId) {
       items7[1] = callback(tmp4(4734).Text, obj10);
       items7[2] = onboardingPrompts.map(callback);
       obj8[0] = items7;
-      tmp24Result = tmp24(closure_18, obj8);
+      tmp24Result = callback2(closure_18, obj8);
     }
     items6[1] = tmp24Result;
     const obj11 = { guildId: null };
     obj11[0] = guildId;
     items6[2] = callback(ConnectionsPrompt, obj11);
     obj2[2] = items6;
-    tmp24Result1 = tmp24(closure_6, obj2);
-    const tmp25 = closure_6;
+    tmp24Result1 = callback2(closure_6, obj2);
   }
   return tmp24Result1;
 };

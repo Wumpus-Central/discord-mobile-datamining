@@ -2,14 +2,15 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
 import create from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import isDiscordFrontendDevelopment from "../utils/GlobalUtils.tsx";
 import getFavoritesAwareGuildName from "../modules/favorites/FavoritesUtils.tsx";
-import closure_2 from "../modules/user_settings/UserSettingsProtoStore.tsx";
-import closure_3 from "ChannelStore.tsx";
-import closure_4 from "GuildAvailabilityStore.tsx";
-import closure_5 from "GuildChannelStore.tsx";
+import handleConnectionClosedOrResumed from "../modules/user_settings/UserSettingsProtoStore.tsx";
+import ensureGuildLoaded from "ChannelStore.tsx";
+import handleConnectionOpen from "GuildAvailabilityStore.tsx";
+import comparator from "GuildChannelStore.tsx";
 import { ChannelTypes } from "../Constants.tsx";
 
-require = arg1;
+require = fn;
 function incrementVersion() {
   closure_8 = closure_8 + 1;
 }
@@ -29,19 +30,14 @@ function syncFavoriteCategoryCollapse() {
       let flag = flag4;
       flag2 = flag4;
       while (keys[tmp] !== undefined) {
-        let tmp12 = tmp5;
         let tmp13 = favoriteChannels[tmp5];
-        let tmp14 = require;
-        let tmp15 = dependencyMap;
         flag4 = flag;
         if (tmp13.type !== create.FavoriteChannelType.CATEGORY) {
           continue;
         } else {
-          let tmp6 = dependencyMap;
           let tmp7 = dependencyMap[tmp5];
           if (tmp13.collapsed) {
             if (!tmp7) {
-              let tmp9 = dependencyMap;
               dependencyMap[tmp5] = true;
               flag = true;
             }
@@ -49,7 +45,6 @@ function syncFavoriteCategoryCollapse() {
           } else {
             flag3 = flag;
             if (tmp7) {
-              let tmp8 = dependencyMap;
               delete tmp3[tmp2];
               flag3 = true;
             }
@@ -71,13 +66,9 @@ class CategoryCollapseStore extends PersistedStore {
 const prototype = CategoryCollapseStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const self = this;
-  let obj = arg0;
   this.waitFor(closure_3, closure_4, closure_5, closure_2);
   this.removeChangeListener(incrementVersion);
   this.addChangeListener(incrementVersion);
-  if (arg0 == null) {
-    obj = {};
-  }
   const items = [closure_2];
   self.syncWith(items, syncFavoriteCategoryCollapse);
 };
@@ -118,13 +109,8 @@ const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       if (null != nextResult.channel_overrides) {
-        let tmp5 = nextResult;
         let channel_overrides = tmp4.channel_overrides;
-        let tmp6 = channel_overrides;
-        let tmp7 = channel_overrides;
         for (const item10023 of channel_overrides) {
-          let tmp8 = item10023;
-          let tmp9 = item10023;
           if (item10023.collapsed) {
             closure_7[item10023.channel_id] = true;
           } else {
@@ -139,10 +125,8 @@ const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
   },
   USER_GUILD_SETTINGS_FULL_UPDATE: function handleUserGuildSettingsFullUpdate(userGuildSettings) {
     userGuildSettings = userGuildSettings.userGuildSettings;
-    const mapped = userGuildSettings.map((guild_id) => guild_id.guild_id);
+    const mapped = userGuildSettings.map((item, index) => item.guild_id);
     for (const key10023 in closure_7) {
-      let tmp10 = key10023;
-      let tmp11 = channel;
       let channel = channel.getChannel(key10023);
       let hasItem = null != channel;
       if (hasItem) {
@@ -154,7 +138,6 @@ const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
       if (!hasItem) {
         continue;
       } else {
-        let tmp4 = closure_7;
         let id = channel.id;
         delete tmp2[tmp];
         continue;
@@ -164,18 +147,15 @@ const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
     const iter = userGuildSettings[Symbol.iterator]();
     while (iter !== undefined) {
       let channel_overrides = iter.next().channel_overrides;
-      let tmp5 = channel_overrides;
-      let tmp6 = channel_overrides;
       for (const item10040 of channel_overrides) {
         if (item10040.collapsed) {
-          let tmp8 = closure_7;
-          let tmp9 = item10040;
           closure_7[tmp7.channel_id] = true;
         }
         continue;
       }
       continue;
     }
+    const set = new Set(mapped.filter(isDiscordFrontendDevelopment.isNotNullish));
   },
   CATEGORY_COLLAPSE: function handleCategoryCollapse(id) {
     id = id.id;
@@ -197,7 +177,6 @@ const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
         dependencyMap[id] = true;
       }
       tmp5 = !dependencyMap[id];
-      const tmp8 = !dependencyMap[id];
     }
     return tmp5;
   },
@@ -229,12 +208,13 @@ const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
     if (obj.isFavoritesGuildId(guildId)) {
       return false;
     } else {
-      const item = store.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY].forEach((channel) => {
-        channel = channel.channel;
+      const item = store.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY].forEach((item, index) => {
+        const channel = item.channel;
         if ("null" !== channel.id) {
           closure_7[channel.id] = true;
         }
       });
+      const arr = store.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY];
     }
     obj = getFavoritesAwareGuildName;
   },
@@ -243,9 +223,10 @@ const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
     if (obj.isFavoritesGuildId(guildId)) {
       return false;
     } else {
-      const item = store.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY].forEach((arg0) => {
+      const item = store.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY].forEach((item, index) => {
         delete tmp2[tmp];
       });
+      const arr = store.getChannels(guildId)[ChannelTypes.GUILD_CATEGORY];
     }
     obj = getFavoritesAwareGuildName;
   },
@@ -256,6 +237,6 @@ const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
     return false;
   }
 });
-const result = require("set").fileFinishedImporting("stores/CategoryCollapseStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/CategoryCollapseStore.tsx");
 
 export default categoryCollapseStore;

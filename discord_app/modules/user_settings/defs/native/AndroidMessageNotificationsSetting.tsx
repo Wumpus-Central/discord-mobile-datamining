@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
-import set2 from "../../../../utils/PlatformUtils.tsx";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
+import obj1322 from "../../../../utils/PlatformUtils.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import MobileUserSettings from "../../core/native/SettingsConstants.tsx";
 import _initializeAndroidNotificationSettingsStore from "../../notifications/native/stores/AndroidNotificationSettingsStore.tsx";
@@ -15,7 +15,7 @@ function useAndroidMessageNotificationsSettingValue() {
 }
 function useHasAndroidMessageNotificationsSetting() {
   const tmp = callback();
-  let isAndroidResult = set2.isAndroid();
+  let isAndroidResult = obj1322.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != tmp;
   }
@@ -32,17 +32,7 @@ const toggle = createToggle.createToggle({
   onValueChange: setAndroidMessageNotificationsEnabled,
   usePredicate: useHasAndroidMessageNotificationsSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["zViLy+"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: useAndroidMessageNotificationsSettingValue,
-  onValueChange: setAndroidMessageNotificationsEnabled,
-  usePredicate: useHasAndroidMessageNotificationsSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx");
 
 export default toggle;
 export { useAndroidMessageNotificationsSettingValue };

@@ -1,5 +1,5 @@
 // discord_app/modules/game_server/GameServerConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import Environments from "../user/UserStoreConstants.tsx";
 import GameServerProviderType from "../../../discord_common/js/shared/shared-constants/GameServerProviderType.tsx";
 
@@ -58,7 +58,7 @@ if (window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.Environments.STAGING) {
 }
 const obj1 = {};
 obj1[GameServerProviderType.GameServerProviderType.SHOCKBYTE] = str13;
-const result = set.fileFinishedImporting("modules/game_server/GameServerConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/game_server/GameServerConstants.tsx");
 
 export const GameServerSetupStep = obj;
 export const GAME_SERVER_DEFAULT_STEP_CONFIG = { steps: { [obj.SELECT_GAME]: { onBack: { type: "close" }, onNext: obj }, [obj.SERVER_SETTINGS]: { onBack: obj, onNext: { type: "save" } } } };

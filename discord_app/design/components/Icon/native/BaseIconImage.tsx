@@ -4,10 +4,10 @@ import map from "../../../tokens/native/useToken.tsx";
 import { Image } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "r", height: "accessibilityRole" }, refresh_sm: { width: 18, height: 18 } };
-const result = require("set").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
 export const BaseIconImage = function BaseIconImage(source) {
   let str = source.size;
@@ -32,5 +32,5 @@ export const BaseIconImage = function BaseIconImage(source) {
   }
   style = [table[str], tmp3, ];
   style[2] = style;
-  return <Image fadeDuration={0} source={arg0.source} resizeMode={resizeMode} style={style} accessible={accessible} accessibilityLabel={accessibilityLabel} />;
+  return <Image fadeDuration={0} source={source.source} resizeMode={resizeMode} style={style} accessible={accessible} accessibilityLabel={accessibilityLabel} />;
 };

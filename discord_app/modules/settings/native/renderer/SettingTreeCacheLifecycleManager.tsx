@@ -18,6 +18,6 @@ let prototype = function SettingTreeManagerLifecycleManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx");
 
 export default prototype;

@@ -1,12 +1,12 @@
 // discord_app/modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { PremiumTypes } from "../../PremiumConstants.tsx";
 import { AnalyticEvents } from "../../../../Constants.tsx";
 import { ContentDismissActionType } from "../../../dismissible_content/DismissibleContentConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx");
 
 export default function _default(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -19,44 +19,44 @@ export default function _default(markAsDismissed) {
   analyticsLocations = userTrialOffer(analyticsLocations[5])(userTrialOffer(analyticsLocations[6]).PREMIUM_TRIAL_OFFER_ACTION_SHEET).analyticsLocations;
   const effect = React.useEffect(() => {
     if (null != userTrialOffer) {
-      let obj = userTrialOffer(analyticsLocations[7]);
-      obj = { location: null, trial_id: null };
+      userTrialOffer(analyticsLocations[7]);
+      const obj = { location: null, trial_id: null };
       obj[0] = analyticsLocations;
-      obj[1] = tmp.trialId;
-      obj.track(closure_1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_VIEWED, obj);
-      const result = userTrialOffer(analyticsLocations[8]).acknowledgeUserTrialOffer(tmp);
+      obj[1] = userTrialOffer.trialId;
+      obj.track(AnalyticEvents.PREMIUM_TRIAL_OFFER_ACTION_SHEET_VIEWED, obj);
+      const result = userTrialOffer(analyticsLocations[8]).acknowledgeUserTrialOffer(userTrialOffer);
       const obj3 = userTrialOffer(analyticsLocations[8]);
     }
   }, []);
   const items = [userTrialOffer, markAsDismissed];
   const effect1 = React.useEffect(() => {
     if (null == userTrialOffer) {
-      markAsDismissed(closure_1_6.AUTO_DISMISS);
+      markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items);
   const items1 = [analyticsLocations, markAsDismissed, userTrialOffer];
   const items2 = [analyticsLocations, markAsDismissed, userTrialOffer];
   const callback = React.useCallback(() => {
-    let obj = userTrialOffer(analyticsLocations[7]);
-    obj = { location: analyticsLocations, trial_id: null };
+    userTrialOffer(analyticsLocations[7]);
+    const obj = { location: analyticsLocations, trial_id: null };
     let trialId;
     if (userTrialOffer != null) {
       trialId = userTrialOffer.trialId;
     }
     obj[1] = trialId;
-    obj.track(closure_1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_DISMISSED, obj);
-    markAsDismissed(closure_1_6.USER_DISMISS);
+    obj.track(AnalyticEvents.PREMIUM_TRIAL_OFFER_ACTION_SHEET_DISMISSED, obj);
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items1);
   const callback1 = React.useCallback(() => {
-    let obj = userTrialOffer(analyticsLocations[7]);
-    obj = { location: analyticsLocations, trial_id: null };
+    userTrialOffer(analyticsLocations[7]);
+    const obj = { location: analyticsLocations, trial_id: null };
     let trialId;
     if (userTrialOffer != null) {
       trialId = userTrialOffer.trialId;
     }
     obj[1] = trialId;
-    obj.track(closure_1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_CTA_CLICKED, obj);
-    markAsDismissed(closure_1_6.TAKE_ACTION);
+    obj.track(AnalyticEvents.PREMIUM_TRIAL_OFFER_ACTION_SHEET_CTA_CLICKED, obj);
+    markAsDismissed(ContentDismissActionType.TAKE_ACTION);
     userTrialOffer(analyticsLocations[9])({ analyticsLocations });
   }, items2);
   markAsDismissed(analyticsLocations[10]);

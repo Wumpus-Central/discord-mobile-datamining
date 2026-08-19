@@ -2,66 +2,59 @@
 import _modDef4975 from "../../actions/SelectedChannelActionCreators.tsx";
 import openStageChannelSettingsAll from "StageChannelActionCreatorExtras.native.tsx";
 import _initializeDefault from "StageChannelNewUserManager.tsx";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../stores/ApplicationStreamingStore.tsx";
-import closure_6 from "../../stores/ChannelStore.tsx";
-import closure_7 from "../../stores/GuildStore.tsx";
-import closure_8 from "../../stores/PermissionStore.tsx";
-import closure_9 from "../../stores/SelectedChannelStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import reset from "../../stores/ApplicationStreamingStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
 import { watchStream } from "../../actions/StreamActionCreators.tsx";
 import { shouldShowVoiceChannelChangeConfirmation } from "../channel/shouldShowVoiceChannelChangeConfirmation.tsx";
-import { Permissions } from "StageChannelPermissions.tsx";
 
-const require = arg1;
+const require = fn;
 function connectToStage(channel, flag) {
   if (flag === undefined) {
     flag = false;
   }
   if (!flag) {
     const _require = channel;
-    const canResult = closure_8.can(_Permissions.JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
+    const canResult = closure_8.can(require("StageChannelPermissions.tsx").JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     let tmp6 = !canResult;
     if (canResult) {
       let num = openStageChannelSettingsAll.shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = tmp7(8058).openStageBlockedUsersSheet(channel, () => {
-          closure_1_11(closure_0, true);
+        const result = openStageChannelSettingsAll.openStageBlockedUsersSheet(channel, () => {
+          connectAndOpen(closure_0, true);
         });
         num = 1;
-        const tmp7Result = tmp7(8058);
+        const tmp7Result = openStageChannelSettingsAll;
       }
       tmp6 = num;
-      const obj2 = openStageChannelSettingsAll;
-      tmp7 = importAll;
     }
     if (tmp6) {
       return false;
     }
   }
   _initializeDefault.initialize();
-  const obj = closure_9;
-  const obj4 = _initializeDefault;
   const voiceChannel = _modDef4975.selectVoiceChannel(channel.id);
-  if (obj.getVoiceChannelId() !== channel.id) {
+  if (voiceChannelId.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
     allApplicationStreamsForChannel = allApplicationStreamsForChannel.getAllApplicationStreamsForChannel(channel.id);
-    const found = allApplicationStreamsForChannel.find((currentUserActiveStream) => !streamMarkedFull.isStreamMarkedFull(channel(table[13]).encodeStreamKey(currentUserActiveStream)));
+    const found = allApplicationStreamsForChannel.find((item, index) => !streamMarkedFull.isStreamMarkedFull(channel(table[13]).encodeStreamKey(item)));
     if (null != found) {
-      _watchStream.watchStream(found, { noFocus: true });
-      const obj6 = _watchStream;
+      require("../../actions/StreamActionCreators.tsx").watchStream(found, { noFocus: true });
+      const obj6 = watchStream;
     }
     return true;
   }
-  const obj5 = _modDef4975;
 }
-function connectAndOpen(channel, flag) {
+function connectAndOpen(channel, flag, flag2, arg3) {
   const _require = channel;
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = arg2;
-  if (arg2 === undefined) {
+  if (flag2 === undefined) {
     flag2 = false;
   }
   let flag3 = arg3;
@@ -74,12 +67,12 @@ function connectAndOpen(channel, flag) {
     result = voiceChannelId !== channel.id;
   }
   if (result) {
-    result = _shouldShowVoiceChannelChangeConfirmation.shouldShowVoiceChannelChangeConfirmation(channel);
-    const obj = _shouldShowVoiceChannelChangeConfirmation;
+    result = require("../channel/shouldShowVoiceChannelChangeConfirmation.tsx").shouldShowVoiceChannelChangeConfirmation(channel);
+    const obj = shouldShowVoiceChannelChangeConfirmation;
   }
   if (result) {
     result = flag2(8058).showChannelChangeConfirmationAlert(channel, () => {
-      closure_1_11(closure_0, flag, flag2, true);
+      connectAndOpen(closure_0, flag, flag2, true);
     });
     const obj2 = flag2(8058);
   }
@@ -90,14 +83,13 @@ function connectAndOpen(channel, flag) {
     }
   }
 }
-let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelModalActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelModalActionCreators.tsx");
 
 export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure_1, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  closure_0 = undefined;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
     c3 = 0;
@@ -133,13 +125,13 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
               const callback2 = tmp2;
               let channel = closure_2_6.getChannel(closure_1_1);
               if (null != channel) {
-                closure_2_10(channel, closure_1_2);
+                connectToStage(channel, flag);
                 c4 = 3;
                 obj1 = { value: null, done: true };
-                obj1[0] = tmp26(channel);
+                obj1[0] = callback(channel);
                 return obj1;
               } else {
-                let obj4 = callback(closure_2_3[8]);
+                let obj4 = callback(dependencyMap[8]);
                 const items = [callback];
                 c3 = 1;
                 c4 = 1;
@@ -147,7 +139,6 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
                 obj2[0] = obj4.stopLurkingAll(items);
                 return obj2;
               }
-              tmp26 = callback;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -159,7 +150,7 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback2(closure_2_3[9]);
+              obj1 = callback2(dependencyMap[9]);
               c3 = 2;
               c4 = 1;
               obj4 = { value: null, done: false };

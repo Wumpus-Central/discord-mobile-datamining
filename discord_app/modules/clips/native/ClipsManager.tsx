@@ -1,5 +1,5 @@
 // discord_app/modules/clips/native/ClipsManager.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 import dispatcherDefault from "../../toast/native/ToastActionCreators.tsx";
 import result2 from "../ClipsConstants.tsx";
@@ -11,8 +11,7 @@ class ClipsManager extends tmp2 {
 }
 const prototype = ClipsManager.prototype;
 prototype["showClipsToast"] = function showClipsToast() {
-  let obj = dispatcherDefault;
-  obj = { key: "CLIPS_IN_CALL_WARNING", content: null, toastDurationMs: null };
+  const obj = { key: "CLIPS_IN_CALL_WARNING", content: null, toastDurationMs: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["d+41qJ"]);
   obj[2] = CLIPS_TOAST_DURATION;
@@ -34,6 +33,6 @@ prototype["handleStreamEnded"] = function handleStreamEnded(arg0) {
 
 };
 const clipsManager = new ClipsManager();
-const result = set.fileFinishedImporting("modules/clips/native/ClipsManager.tsx");
+const result = obj132.fileFinishedImporting("modules/clips/native/ClipsManager.tsx");
 
 export default clipsManager;

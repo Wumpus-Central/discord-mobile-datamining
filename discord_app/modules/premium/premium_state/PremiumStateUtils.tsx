@@ -1,7 +1,7 @@
 // discord_app/modules/premium/premium_state/PremiumStateUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/premium/premium_state/PremiumStateUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/premium_state/PremiumStateUtils.tsx");
 
 export const parseServerPremiumState = function parseServerPremiumState(premium_state) {
   let tmp = null;

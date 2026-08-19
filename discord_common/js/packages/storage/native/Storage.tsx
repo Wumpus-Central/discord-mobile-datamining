@@ -1,10 +1,10 @@
 // discord_common/js/packages/storage/native/Storage.tsx
-import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_3 from "../../rtn-codegen/js/NativeCacheModule.tsx";
-import set from "../../../../../_runtime/00002_set.js";
+import enforcing from "../../rtn-codegen/js/NativeCacheModule.tsx";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-let set = importDefault;
+let obj132 = importDefault;
 function parseValue(arg0) {
   let parsed = arg0;
   if (null != arg0) {
@@ -35,8 +35,7 @@ class ProxyAsyncStorage {
 }
 const prototype = ProxyAsyncStorage.prototype;
 prototype["refresh"] = function refresh() {
-  let self = this;
-  self = this;
+  const self = this;
   let items = arg0;
   if (arg0 === undefined) {
     items = [];
@@ -51,30 +50,26 @@ prototype["refresh"] = function refresh() {
   if (DCDStrongboxManager != null) {
     const items2 = [];
     HermesBuiltin.arraySpread(self.secureKeys, 0);
-    refreshResult = obj.refresh(items2);
+    refreshResult = DCDStrongboxManager.refresh(items2);
   }
   items1[1] = refreshResult;
-  obj = DCDStrongboxManager;
   const set1 = new Set();
-  return Promise.all(items1).then((arg0) => {
-    [tmp2, tmp3] = arg0;
-    self(closure_1_1[3]).mark("\u{1F4BE}", "Storage.refresh() Promise Resolved");
+  return Promise.all(items1).then((result) => {
+    [tmp2, tmp3] = result;
+    self(dependencyMap[3]).mark("\u{1F4BE}", "Storage.refresh() Promise Resolved");
     let num = 0;
     let num2 = 0;
     const keys = Object.keys();
     if (keys !== undefined) {
       num2 = num;
       while (keys[tmp] !== undefined) {
-        let tmp12 = tmp7;
         let length = tmp2[tmp7].length;
         let sum = num + length;
         num = sum;
         if (length <= 10000) {
           continue;
         } else {
-          let tmp8 = self;
-          let tmp9 = closure_1_1;
-          let obj2 = self(closure_1_1[3]);
+          let obj2 = self(dependencyMap[3]);
           let addDetailResult = obj2.addDetail(tmp7, length);
           num = sum;
           continue;
@@ -82,16 +77,15 @@ prototype["refresh"] = function refresh() {
         continue;
       }
     }
-    const obj = self(closure_1_1[3]);
-    self(closure_1_1[3]).addDetail("TotalStorageSize", num2);
+    const obj = self(dependencyMap[3]);
+    self(dependencyMap[3]).addDetail("TotalStorageSize", num2);
     self.hasLoaded = true;
     const items = [tmp2, tmp3];
     return items;
   });
 };
 prototype["parse"] = function parse(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   [tmp, tmp2] = arg0;
   self(598)(tmp2, (rawData) => {
     self.storage[arg1] = { parsed: false, rawData };
@@ -101,9 +95,9 @@ prototype["parse"] = function parse(arg0) {
     const secureKeys = _self.secureKeys;
     if (secureKeys.has(arg1)) {
       _self = arg1;
-      const result = closure_1_4.setItem(arg1, rawData);
-      result.then((arg0) => {
-        if (arg0) {
+      const result = DCDStrongboxManager.setItem(arg1, rawData);
+      result.then((result) => {
+        if (result) {
           closure_1_3.removeItem(closure_0);
         }
       });
@@ -129,10 +123,10 @@ prototype["get"] = function get(key10009) {
   }
 };
 prototype["getAfterRefresh"] = function getAfterRefresh(closure_1_13) {
-  closure_0 = closure_1_13;
+  closure_0 = map1;
   const self = this;
   return callback(function*() {
-    yield parsePromise.then(() => c1.get(c0));
+    yield parsePromise.then((result) => c1.get(c0));
     return arg1;
   })();
 };
@@ -144,11 +138,11 @@ prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1) {
   const secureKeys = this.secureKeys;
   if (secureKeys.has(ContactSyncDMListCTADismissed)) {
     let value = DCDStrongboxManager.getItem(ContactSyncDMListCTADismissed);
-    value.then((arg0) => {
-      if (null != arg0) {
+    value.then((result) => {
+      if (null != result) {
         const _Date = Date;
         const timestamp = Date.now();
-        const tmp7 = closure_1_5(arg0);
+        const tmp7 = parseValue(result);
         const obj = { parsed: true, value: null };
         obj[1] = tmp7;
         self.storage[tmp] = obj;
@@ -164,11 +158,11 @@ prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1) {
     });
   } else {
     value = self.getItem(ContactSyncDMListCTADismissed);
-    value.then((arg0) => {
-      if (null != arg0) {
+    value.then((result) => {
+      if (null != result) {
         const _Date = Date;
         const timestamp = Date.now();
-        const tmp7 = closure_1_5(arg0);
+        const tmp7 = parseValue(result);
         const obj = { parsed: true, value: null };
         obj[1] = tmp7;
         self.storage[tmp] = obj;
@@ -224,9 +218,9 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
             }
             secureKeys = secureKeys.secureKeys;
             if (secureKeys.has(closure_1_0)) {
-              let value = closure_1_4.getItem(tmp20);
+              let value = closure_1_4.getItem(closure_1_0);
             } else {
-              value = item.getItem(tmp20);
+              value = item.getItem(closure_1_0);
             }
             secureKeys = 1;
             item = 1;
@@ -321,14 +315,16 @@ prototype["clear"] = function clear() {
     DCDStrongboxManager.clear(items);
   }
 };
-set = Object.create(ProxyAsyncStorage.prototype);
-set.parsePromise = new Promise((parseResolve) => {
+obj132 = Object.create(ProxyAsyncStorage.prototype);
+obj132.parsePromise = new Promise((parseResolve) => {
   obj.parseResolve = parseResolve;
 });
-set.storage = {};
-set = new Set();
-set.secureKeys = set;
-set.hasLoaded = false;
-let result = set.fileFinishedImporting("../discord_common/js/packages/storage/native/Storage.tsx");
+obj132.storage = {};
+let promise = new Promise((parseResolve) => {
+  obj.parseResolve = parseResolve;
+});
+obj132.secureKeys = new Set();
+obj132.hasLoaded = false;
+let result = obj132.fileFinishedImporting("../discord_common/js/packages/storage/native/Storage.tsx");
 
-export const impl = set;
+export const impl = obj132;

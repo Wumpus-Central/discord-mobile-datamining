@@ -1,12 +1,13 @@
 // discord_app/modules/safety_hub/hooks/useSafetyHubClassifications.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../SafetyHubStore.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
+import handleSafetyHubRequestAgeVerificationResetModalAction from "../SafetyHubStore.tsx";
 import { ViolationType } from "../SafetyHubConstants.tsx";
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import { parseMessageEmbedForProps } from "../SafetyHubUtils.tsx";
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
 
 export const useSafetyHubClassifications = function useSafetyHubClassifications() {
   const items = [closure_5];
@@ -19,19 +20,19 @@ export const useSafetyHubClassifications = function useSafetyHubClassifications(
 };
 export const useSafetyHubClassification = function useSafetyHubClassification(classificationId) {
   const _require = classificationId;
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getClassification(closure_0));
   const items1 = [closure_5];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => closure_1_5.getClassificationRequestState(closure_0));
-  const obj2 = _initialize;
+  const stateFromStores1 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items1, () => closure_1_5.getClassificationRequestState(closure_0));
+  const obj2 = initialize;
   let tmp = _require;
   const items2 = [closure_5];
-  const stateFromStores2 = _initialize.useStateFromStores(items2, () => store.getIsDsaEligible());
-  const obj3 = _initialize;
+  const stateFromStores2 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items2, () => store.getIsDsaEligible());
+  const obj3 = initialize;
   const items3 = [closure_5];
-  let stateFromStores3 = _initialize.useStateFromStores(items3, () => store.getIsAppealEligible());
-  const obj4 = _initialize;
+  let stateFromStores3 = require("../../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items3, () => store.getIsAppealEligible());
+  const obj4 = initialize;
   if (obj5.isGuildClassification(stateFromStores)) {
     const guild_metadata = stateFromStores.guild_metadata;
     let member_type;
@@ -51,8 +52,8 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
         tmp = null == stateFromStores1;
       }
       if (tmp) {
-        const safetyHubDataForClassification = stateFromStores1(closure_1_3[7]).getSafetyHubDataForClassification(closure_0);
-        const obj = stateFromStores1(closure_1_3[7]);
+        const safetyHubDataForClassification = stateFromStores1(dependencyMap[7]).getSafetyHubDataForClassification(closure_0);
+        const obj = stateFromStores1(dependencyMap[7]);
       }
     }, items4);
     obj = { classification: null, classificationRequestState: null, isDsaEligible: null, isAppealEligible: null, violationType: null };
@@ -69,6 +70,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     obj[4] = ViolationType.USER;
     return obj;
   }
+  obj5 = parseMessageEmbedForProps;
 };
 export const useActiveSafetyHubClassifications = function useActiveSafetyHubClassifications() {
   const items = [closure_5];
@@ -79,8 +81,8 @@ export const useActiveSafetyHubClassifications = function useActiveSafetyHubClas
     return extractTimestampResult - callback(11).extractTimestamp(id.id);
   });
   date = new Date();
-  return sorted.filter((max_expiration_time) => {
-    date = new Date(max_expiration_time.max_expiration_time);
+  return sorted.filter((item, index) => {
+    date = new Date(item.max_expiration_time);
     return date > date;
   });
 };
@@ -93,8 +95,8 @@ export const useExpiredSafetyHubClassifications = function useExpiredSafetyHubCl
     return extractTimestampResult - callback(11).extractTimestamp(id.id);
   });
   date = new Date();
-  return sorted.filter((max_expiration_time) => {
-    date = new Date(max_expiration_time.max_expiration_time);
+  return sorted.filter((item, index) => {
+    date = new Date(item.max_expiration_time);
     return date <= date;
   });
 };

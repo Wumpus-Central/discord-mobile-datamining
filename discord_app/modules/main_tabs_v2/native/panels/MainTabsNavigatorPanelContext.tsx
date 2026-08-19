@@ -6,10 +6,10 @@ import createFakeSharedValue from "../../../reanimated/ReanimatedHelperTypes.tsx
 const obj = { gesture: null, disallowGesture: null, translateX: null };
 obj[0] = Gesture.Pan();
 obj[1] = createFakeSharedValue.createFakeSharedValue(false);
-obj[2] = require("module_0");
+obj[2] = require("../../../../index.native.tsx");
 const context = importAllResult.createContext(obj);
 const context1 = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanelContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanelContext.tsx");
 
 export default context;
 export const MainTabsChannelScreenStackContext = context1;

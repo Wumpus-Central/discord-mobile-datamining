@@ -1,5 +1,5 @@
 // discord_common/js/packages/flux/LoggingUtils.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import log from "../logger/Logger.tsx";
 import EventEmitter2 from "../../../../_runtime/00652_EventEmitter.js";
 
@@ -23,16 +23,15 @@ class ActionLogger extends EventEmitter {
   }
 }
 const prototype = ActionLogger.prototype;
-prototype["log"] = function log(action) {
-  let self = this;
-  self = this;
+prototype["log"] = function log(action, fn) {
+  const self = this;
   const _require = action;
   const tmp6 = new ActionLog(action);
   closure_0 = tmp6;
   let _performance = _require(self[2]).performance;
   tmp6.startTime = _performance.now();
   try {
-    arg1((name) => {
+    fn((name, fn) => {
       const obj = { name, time: -1 };
       const _performance = action(self[2]).performance;
       try {
@@ -43,7 +42,7 @@ prototype["log"] = function log(action) {
           traces.push(obj);
         }
         self.emit("trace", action.type, name, obj.time);
-        return arg1();
+        return fn();
       } catch (tmp18) {
         const _performance3 = tmp4(tmp2[2]).performance;
         tmp.time = _performance3.now() - tmp3;
@@ -104,20 +103,14 @@ prototype["getSlowestActions"] = function getSlowestActions(arg0) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (null == arg0) {
-      let tmp4 = nextResult;
       let traces = tmp2.traces;
-      let tmp5 = traces;
-      let tmp6 = traces;
       for (const item10021 of traces) {
         let items1 = [item10021.name, , ];
-        let tmp7 = nextResult;
         items1[1] = tmp2.name;
         items1[2] = item10021.time;
         let arr = items.push(items1);
         continue;
       }
-    } else {
-      let tmp3 = nextResult;
     }
     continue;
   }
@@ -127,8 +120,8 @@ prototype["getSlowestActions"] = function getSlowestActions(arg0) {
   }
   c1 = 0;
   c2 = 0;
-  const mapped = items.map((arg0) => {
-    [tmp, tmp2, tmp3] = arg0;
+  const mapped = items.map((item, index) => {
+    [tmp, tmp2, tmp3] = item;
     const combined = "" + tmp;
     let sum = combined;
     if (null == closure_0) {
@@ -139,8 +132,8 @@ prototype["getSlowestActions"] = function getSlowestActions(arg0) {
     const items = [sum, tmp3];
     return items;
   });
-  const mapped1 = mapped.map((arg0) => {
-    [obj, tmp] = arg0;
+  const mapped1 = mapped.map((item, index) => {
+    [obj, tmp] = item;
     closure_2 = closure_2 + tmp;
     return "" + obj.padEnd(c1 + 1, " ") + " - " + tmp + "ms";
   });
@@ -180,13 +173,8 @@ prototype["getLastActionMetrics"] = function getLastActionMetrics(arg0) {
   const obj = {};
   for (const item10009 of tmp) {
     let traces = item10009.traces;
-    let tmp3 = traces;
-    let tmp4 = traces;
     for (const item10016 of traces) {
-      let items = [item10016.name, , ];
-      let tmp5 = item10009;
-      items[1] = tmp2.name;
-      items[2] = item10016.time;
+      let items = [item10016.name, tmp2.name, item10016.time];
       obj[item10016.name] = items;
       continue;
     }
@@ -199,14 +187,14 @@ prototype["getLastActionMetrics"] = function getLastActionMetrics(arg0) {
   }
   _global = 0;
   c1 = 0;
-  const mapped = values.map((arg0) => {
-    [arr, , tmp] = arg0;
+  const mapped = values.map((item, index) => {
+    [arr, , tmp] = item;
     closure_0 = Math.max(arr.length, closure_0);
     const items = [arr, tmp];
     return items;
   });
-  const mapped1 = mapped.map((arg0) => {
-    [obj, tmp] = arg0;
+  const mapped1 = mapped.map((item, index) => {
+    [obj, tmp] = item;
     closure_1 = closure_1 + tmp;
     return "" + obj.padEnd(c0 + 1, " ") + " - " + tmp + "ms";
   });
@@ -263,7 +251,7 @@ prototype2["toJSON"] = function toJSON() {
     return obj;
   }
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/flux/LoggingUtils.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/flux/LoggingUtils.tsx");
 
 export { ActionLogger };
 export { ActionLog };

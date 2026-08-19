@@ -1,13 +1,13 @@
 // discord_app/modules/autocompleter/createAutocompleterResultForChannelId.tsx
 import computeChannelName from "../channel/useChannelName.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
-import closure_3 from "../../stores/RelationshipStore.tsx";
-import closure_4 from "../../stores/UserStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import markAllUserIdListsStale from "../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { ChannelTypes } from "../../Constants.tsx";
 
-require = arg1;
+require = fn;
 require("HeaderRecord").AutocompleterResultTypes;
-const result = require("set").fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
+const result = require("obj132").fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
 
 export default function createAutocompleterResultForChannelId(arg0, arg1, closure_9, closure_7) {
   let obj = arg1;
@@ -39,15 +39,15 @@ export default function createAutocompleterResultForChannelId(arg0, arg1, closur
         tmp6 = obj;
       }
       return tmp6;
-    } else if (tmp11.GROUP_DM === type) {
+    } else if (ChannelTypes.GROUP_DM === type) {
       obj = { type: null, record: null, score: 0, comparator: null };
       obj[0] = AutocompleterResultTypes.GROUP_DM;
       obj[1] = channel;
       obj[3] = channelName;
       return obj;
     } else {
-      if (tmp11.GUILD_VOICE !== type) {
-        if (tmp11.GUILD_STAGE_VOICE !== type) {
+      if (ChannelTypes.GUILD_VOICE !== type) {
+        if (ChannelTypes.GUILD_STAGE_VOICE !== type) {
           obj1 = { type: null, record: null, score: 0, comparator: null };
           obj1[0] = AutocompleterResultTypes.TEXT_CHANNEL;
           obj1[1] = channel;
@@ -61,6 +61,5 @@ export default function createAutocompleterResultForChannelId(arg0, arg1, closur
       obj2[3] = channelName;
       return obj2;
     }
-    const obj8 = computeChannelName;
   }
 };

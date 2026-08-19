@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../../stage_channels/StageChannelParticipantStore.tsx";
-import closure_5 from "../../../../../stores/ChannelStore.tsx";
+import noop from "../../../../../../_runtime/00019_noop.js";
+import getActiveStageChannelIds from "../../../../stage_channels/StageChannelParticipantStore.tsx";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx");
 
 export const useLiveStageData = function useLiveStageData(stage) {
   const _require = stage;
@@ -13,23 +13,23 @@ export const useLiveStageData = function useLiveStageData(stage) {
   const items1 = [stage.channel_id];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     const mutableParticipants = memo1.getMutableParticipants(stage.channel_id, stage(stateFromStoresArray1[4]).StageChannelParticipantNamedIndex.FRIEND);
-    const found = mutableParticipants.filter((type) => type.type === callback(table[4]).StageChannelParticipantTypes.VOICE);
-    return found.map((user) => user.user);
+    const found = mutableParticipants.filter((item, index) => item.type === callback(table[4]).StageChannelParticipantTypes.VOICE);
+    return found.map((item, index) => item.user);
   }, items1);
   const items2 = [memo1];
   const items3 = [stage.channel_id];
   stateFromStoresArray1 = _require(stateFromStoresArray1[3]).useStateFromStoresArray(items2, () => {
     const mutableParticipants = memo1.getMutableParticipants(stage.channel_id, stage(stateFromStoresArray1[4]).StageChannelParticipantNamedIndex.SPEAKER);
-    const found = mutableParticipants.filter((type) => type.type === callback(table[4]).StageChannelParticipantTypes.VOICE);
-    return found.map((user) => user.user);
+    const found = mutableParticipants.filter((item, index) => item.type === callback(table[4]).StageChannelParticipantTypes.VOICE);
+    return found.map((item, index) => item.user);
   }, items3);
   const obj2 = _require(stateFromStoresArray1[3]);
   const items4 = [memo1];
   const items5 = [stage.channel_id];
   const stateFromStoresArray2 = _require(stateFromStoresArray1[3]).useStateFromStoresArray(items4, () => {
     const mutableParticipants = memo1.getMutableParticipants(stage.channel_id, stage(stateFromStoresArray1[4]).StageChannelParticipantNamedIndex.AUDIENCE);
-    const found = mutableParticipants.filter((type) => type.type === callback(table[4]).StageChannelParticipantTypes.VOICE);
-    return found.map((user) => user.user);
+    const found = mutableParticipants.filter((item, index) => item.type === callback(table[4]).StageChannelParticipantTypes.VOICE);
+    return found.map((item, index) => item.user);
   }, items5);
   const items6 = [stateFromStoresArray, stateFromStoresArray1];
   const items7 = [stateFromStoresArray, stateFromStoresArray1];

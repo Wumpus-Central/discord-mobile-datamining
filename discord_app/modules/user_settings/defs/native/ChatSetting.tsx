@@ -1,27 +1,18 @@
 // discord_app/modules/user_settings/defs/native/ChatSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ME from "../../../../Constants.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import ImageTextIcon from "../../../../design/components/Icon/native/redesign/generated/ImageTextIcon.tsx";
 import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
 import { VideoUploadQualityNitroUpsell } from "../../chat/native/SettingsChatScreen.tsx";
 
-obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/VQax8"]);
-  },
-  parent: null,
-  IconComponent: ImageTextIcon.ImageTextIcon,
-  screen: obj
-};
-obj = {
+const obj = {
   route: ME.UserSettingsSections.TEXT,
   getComponent() {
-    return VideoUploadQualityNitroUpsell.default;
+    return VideoUploadQualityNitroUpsell /* VideoUploadQualityNitroUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChatSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/ChatSetting.tsx");
 
 export default route;

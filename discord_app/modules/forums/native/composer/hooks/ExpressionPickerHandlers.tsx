@@ -1,7 +1,7 @@
 // discord_app/modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx
-import closure_0 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
 
 export const usePressEmojiHandler = function usePressEmojiHandler(selection) {
   selection = selection.selection;
@@ -9,7 +9,6 @@ export const usePressEmojiHandler = function usePressEmojiHandler(selection) {
   const handleTextChange = selection.handleTextChange;
   const focusTextInput = selection.focusTextInput;
   const setSelection = selection.setSelection;
-  closure_5 = undefined;
   closure_5 = selection.useRef({ selection, draftContent, handleTextChange, focusTextInput, setSelection });
   const effect = selection.useEffect(() => {
     closure_5.current = { selection, draftContent, handleTextChange, focusTextInput, setSelection };
@@ -65,11 +64,11 @@ export const usePressGIFHandler = function usePressGIFHandler(selection) {
     }
     const substr1 = draftContent.substring(start);
     if (substr.endsWith(" ")) {
-      tmp4(substr + url + substr1);
+      handleTextChange(substr + url + substr1);
       let length = substr + url.length;
     } else {
       const _HermesInternal = HermesInternal;
-      tmp4(substr + " " + url + substr1);
+      handleTextChange(substr + " " + url + substr1);
       const _HermesInternal2 = HermesInternal;
       length = substr + " " + url.length;
     }

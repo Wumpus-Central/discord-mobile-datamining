@@ -2,18 +2,18 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Stack from "../../Stack/native/Stack.native.tsx";
+import TableRowGroupTitle from "../../TableRow/native/TableRowGroup.native.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { overflow: "hidden" }, content: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 createCacheKey[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/RowGroup/native/RowGroup.native.tsx");
 
 export const RowGroup = function RowGroup(children) {
   ({ title, trailing } = children);
@@ -25,15 +25,14 @@ export const RowGroup = function RowGroup(children) {
     if (tmp7) {
       obj = { title: null };
       obj[0] = title;
-      tmp7 = callback(tmp5(6286).TableRowGroupTitle, obj);
+      tmp7 = callback(TableRowGroupTitle.TableRowGroupTitle, obj);
     }
     obj = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];
     obj[2] = items;
-    tmp2Result = tmp2(Stack.Stack, obj);
-    tmp5 = require;
+    tmp2Result = callback(Stack.Stack, obj);
   }
   const items1 = [tmp2Result, callback(View, { style: tmp.content, children: children.children })];
   obj[1] = items1;
-  return closure_4(View, obj);
+  return callback(View, obj);
 };

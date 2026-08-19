@@ -1,6 +1,6 @@
 // discord_app/modules/remote_auth/RemoteAuthCrypto.android.tsx
 import enforcingDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeRemoteAuthCryptoModule.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_3 = {};
 class AndroidRemoteAuthCrypto {
@@ -23,27 +23,26 @@ prototype["publicKeyFingerprint"] = function publicKeyFingerprint(c3) {
 prototype["decryptEncodedCiphertext"] = function decryptEncodedCiphertext(closure_0, closure_02) {
   closure_0 = closure_02;
   return callback(function*() {
-    closure_0 = tmp2;
-    const obj3 = closure_1_0(table[1]);
-    closure_0 = yield obj3.decrypt(closure_1_0);
+    const obj2 = closure_1_0(table[1]);
+    closure_0 = yield obj2.decrypt(closure_1_0);
     const _Uint8Array = Uint8Array;
     const _atob = atob;
     const _TextDecoder = TextDecoder;
-    const textDecoder = new TextDecoder();
-    return textDecoder.decode(closure_1);
+    const decoder = new TextDecoder();
+    return decoder.decode(closure_1);
   })();
 };
-prototype["decryptNonce"] = function decryptNonce(arg0, encrypted_nonce) {
+prototype["decryptNonce"] = function decryptNonce(keyPair, encrypted_nonce) {
   closure_0 = encrypted_nonce;
   return callback(function*() {
     const obj2 = v0(table[1]);
-    yield obj2.decrypt(v0).then((str) => str.replace(/\//g, "_").replace(/\+/g, "-"));
+    yield obj2.decrypt(v0).then((result) => result.replace(/\//g, "_").replace(/\+/g, "-"));
     return arg1;
   })();
 };
 prototype["release"] = function release() {
   enforcingDefault.releaseKeyPair();
 };
-const result = require("set").fileFinishedImporting("modules/remote_auth/RemoteAuthCrypto.android.tsx");
+const result = require("obj132").fileFinishedImporting("modules/remote_auth/RemoteAuthCrypto.android.tsx");
 
 export default Object.create(AndroidRemoteAuthCrypto.prototype);

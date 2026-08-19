@@ -4,12 +4,12 @@ import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import codegenNativeCommandsDefault from "../../../../_runtime/00113_codegenNativeCommands.js";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx";
 import noop from "../../../../_runtime/00019_noop.js";
-import closure_2 from "../../../../_runtime/00019_noop.js";
-import set from "../../../utils/PlatformUtils.tsx";
+import noop2 from "../../../../_runtime/00019_noop.js";
+import obj132 from "../../../utils/PlatformUtils.tsx";
 
 ({ useEffect: c0, useRef: closure_1 } = noop);
 let jsx = jsxProd.jsx;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   let importDefaultResult = __INTERNAL_VIEW_CONFIGDefault;
 } else {
   importDefaultResult = get_ActivityIndicator.requireNativeComponent("NativeLottieNode");
@@ -17,7 +17,7 @@ if (set.isAndroid()) {
 let c4 = importDefaultResult;
 let closure_5 = codegenNativeCommandsDefault({ supportedCommands: ["setup"] });
 let obj = { LOOP: 0, [0]: "LOOP", STILL: 1, [1]: "STILL", ONCE: 2, [2]: "ONCE" };
-const result = set.fileFinishedImporting("modules/stickers/native/NativeLottieView.tsx");
+const result = obj132.fileFinishedImporting("modules/stickers/native/NativeLottieView.tsx");
 
 export default function NativeLottieView(accessibilityLabel) {
   ({ width, height, opacity } = accessibilityLabel);
@@ -33,10 +33,8 @@ export default function NativeLottieView(accessibilityLabel) {
   if (flag === undefined) {
     flag = true;
   }
-  let ref;
   obj = undefined;
-  jsx = undefined;
-  ref = obj.useRef(null);
+  const ref = obj.useRef(null);
   obj = { asset, url, width, height, animating: flag, accessibilityLabel: accessibilityLabel.accessibilityLabel };
   jsx = ref(obj);
   LOOP(() => {
@@ -53,7 +51,7 @@ export default function NativeLottieView(accessibilityLabel) {
       tmp2 = 0 !== height;
     }
     if (tmp2) {
-      closure_1_5.setup(ref.current, asset, url, width, height, tmp, animating, accessibilityLabel);
+      closure_1_5.setup(ref.current, asset, url, width, height, LOOP, animating, accessibilityLabel);
     }
   }, items);
   return <closure_4 ref={ref} style={{ width, height, opacity }} />;

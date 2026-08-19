@@ -4,12 +4,12 @@ import useAlertStore from "../../../design/components/AlertModal/native/useAlert
 import _modDef5260 from "../../../actions/ModalActionCreators.tsx";
 import trackForwardStart from "../ForwardingAnalyticsUtils.tsx";
 import showSearchableDestinationListModalDefault from "../../share/native/showSearchableDestinationListModal.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 let c5 = "forward-modal";
-const result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardModalUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forwarding/native/ForwardModalUtils.tsx");
 
 export const FORWARD_MODAL_KEY = "forward-modal";
 export const openForwardModal = function openForwardModal(arg0) {
@@ -19,7 +19,6 @@ export const openForwardModal = function openForwardModal(arg0) {
   }
   ({ forwardOptions, customSendHandler } = arg0);
   trackForwardStart.trackForwardStart(message.channel_id, message.id, source);
-  const obj = trackForwardStart;
   showSearchableDestinationListModalDefault(asyncRequireImpl(9079, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
 };
 export const closeForwardModal = function closeForwardModal() {

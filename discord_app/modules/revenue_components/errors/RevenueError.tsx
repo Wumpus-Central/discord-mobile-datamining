@@ -1,5 +1,5 @@
 // discord_app/modules/revenue_components/errors/RevenueError.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
 const prototype = function RevenueError(errorHandlingBehavior) {
   ({ message, extraSentryInformation } = errorHandlingBehavior);
@@ -24,6 +24,6 @@ const prototype = function RevenueError(errorHandlingBehavior) {
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
+const result = obj132.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
 
 export const RevenueError = prototype;

@@ -5,9 +5,9 @@ import BaseIconImage from "../../BaseIconImage.tsx";
 import registerAsset from "../../../../../../../_runtime/08608_registerAsset.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/EyeIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/EyeIcon.tsx");
 
 export const EyeIcon = function EyeIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

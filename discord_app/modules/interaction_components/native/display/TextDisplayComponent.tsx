@@ -3,15 +3,15 @@ import noopAll from "../../../../../_runtime/00019_noop.js";
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import get_defaultRulesDefault from "../../../markup/MarkupUtils.tsx";
 import __INTERNAL_VIEW_CONFIGDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/TextDisplayComponentViewNativeComponent.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../a11y/AccessibilityStore.tsx";
-import closure_5 from "../../../../stores/SelectedChannelStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import handleConnectionOpen from "../../../../stores/SelectedChannelStore.tsx";
 import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_6 } from "../../InteractionComponentConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");
+let result = require("obj132").fileFinishedImporting("modules/interaction_components/native/display/TextDisplayComponent.tsx");
 
 export default function TextDisplayComponent(content) {
   let obj = channelId(8326);
@@ -44,7 +44,7 @@ export default function TextDisplayComponent(content) {
   obj2 = { containerId: componentContainerId, shouldAnimateEmoji: setting, shouldShowLinkDecorations: tmp7, shouldShowRoleDot: "dot" === tmp6, shouldShowRoleOnName: "username" === tmp6 };
   obj[1] = obj2;
   obj[2] = function onTapLink(nativeEvent) {
-    const result = channelId(closure_1_2[13]).handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
+    const result = channelId(dependencyMap[13]).handleMessagesTapURLLink(nativeEvent.nativeEvent.data, channelId);
   };
   obj[3] = channelId(10783).contentHandlers.onLongPressLink;
   obj[4] = channelId(10783).contentHandlers.onTapAttachmentLink;

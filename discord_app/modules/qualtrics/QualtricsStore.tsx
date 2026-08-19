@@ -23,6 +23,6 @@ obj = {
 };
 const qualtricsStore = new QualtricsStore(dispatcherDefault, obj);
 const map = new Map();
-let result = require("set").fileFinishedImporting("modules/qualtrics/QualtricsStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/qualtrics/QualtricsStore.tsx");
 
 export default qualtricsStore;

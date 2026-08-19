@@ -1,11 +1,12 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateUtils.tsx
 import timestampDefault from "../debug/Logger.tsx";
+import obj132 from "../../utils/PlatformUtils.tsx";
 import keys from "../../ConstantsIOS.tsx";
 import _mod4090 from "../../lib/native/Linking.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { UPDATE_CONFIG } from "MobileNativeUpdateConstants.tsx";
 
-require = arg1;
+require = fn;
 function _checkForNewerBuild() {
   const self = this;
   const tmp = callback(function*() {
@@ -114,13 +115,14 @@ function openBuildInstallerUrl(install) {
       } else {
         openURLExternally(str.toString());
       }
+      obj = obj132;
     }
   } catch (err) {
   }
 }
 let closure_4 = new timestampDefault("MobileNativeUpdateUtils");
 const tmp2 = new timestampDefault("MobileNativeUpdateUtils");
-const result = require("set").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");
 
 export const checkForNewerBuild = function checkForNewerBuild() {
   const self = this;

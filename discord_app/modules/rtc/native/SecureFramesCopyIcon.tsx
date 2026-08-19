@@ -1,15 +1,14 @@
 // discord_app/modules/rtc/native/SecureFramesCopyIcon.tsx
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesCopyIcon.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/rtc/native/SecureFramesCopyIcon.tsx");
 
 export default function SecureFramesCopyIcon(chunks) {
   chunks = chunks.chunks;
-  let memo;
   const items = [chunks];
-  memo = React.useMemo(() => chunks.join(" "), items);
+  const memo = React.useMemo(() => chunks.join(" "), items);
   const items1 = [memo];
   const callback = React.useCallback(() => {
     const result = chunks(memo[2]).presentCopiedToClipboard();

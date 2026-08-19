@@ -1,44 +1,44 @@
 // discord_app/modules/icymi/native/info_modal/ICYMITopicsScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../global_discovery_servers/GuildDiscoveryCategoryStore.tsx";
+import getPrimaryCategories from "../../../global_discovery_servers/GuildDiscoveryCategoryStore.tsx";
 import { GuildPrimaryCategory } from "../../../guild_settings/discovery/GuildSettingsDiscoveryConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function WordTopic(categoryid) {
   categoryid = categoryid.categoryid;
   ({ selected, handlePress: importDefault } = categoryid);
   if (GuildPrimaryCategory.GAMING === categoryid) {
     let tmp2 = callback2(categoryid(9430).GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.ENTERTAINMENT === categoryid) {
+  } else if (GuildPrimaryCategory.ENTERTAINMENT === categoryid) {
     tmp2 = callback2(categoryid(9899).TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.GENERAL_CHATTING === categoryid) {
+  } else if (GuildPrimaryCategory.GENERAL_CHATTING === categoryid) {
     tmp2 = callback2(categoryid(6883).ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.SCIENCE_AND_TECH === categoryid) {
+  } else if (GuildPrimaryCategory.SCIENCE_AND_TECH === categoryid) {
     tmp2 = callback2(categoryid(15734).ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.MUSIC === categoryid) {
+  } else if (GuildPrimaryCategory.MUSIC === categoryid) {
     tmp2 = callback2(categoryid(9904).MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.EDUCATION === categoryid) {
+  } else if (GuildPrimaryCategory.EDUCATION === categoryid) {
     tmp2 = callback2(categoryid(6871).BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.CREATIVE_ARTS === categoryid) {
+  } else if (GuildPrimaryCategory.CREATIVE_ARTS === categoryid) {
     tmp2 = callback2(categoryid(8005).PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.FINANCE === categoryid) {
+  } else if (GuildPrimaryCategory.FINANCE === categoryid) {
     tmp2 = callback2(categoryid(11112).PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.BOTS === categoryid) {
+  } else if (GuildPrimaryCategory.BOTS === categoryid) {
     tmp2 = callback2(categoryid(9832).RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.SPORTS === categoryid) {
+  } else if (GuildPrimaryCategory.SPORTS === categoryid) {
     tmp2 = callback2(categoryid(15735).MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.TRAVEL_AND_FOOD === categoryid) {
+  } else if (GuildPrimaryCategory.TRAVEL_AND_FOOD === categoryid) {
     tmp2 = callback2(categoryid(9428).FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.FASHION_AND_BEAUTY === categoryid) {
+  } else if (GuildPrimaryCategory.FASHION_AND_BEAUTY === categoryid) {
     tmp2 = callback2(categoryid(15737).PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
-  } else if (tmp.FITNESS_AND_HEALTH === categoryid) {
+  } else if (GuildPrimaryCategory.FITNESS_AND_HEALTH === categoryid) {
     tmp2 = callback2(categoryid(9431).BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
     tmp2 = callback2(categoryid(10445).PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
@@ -61,29 +61,21 @@ function WordTopic(categoryid) {
     };
     obj[5] = tmp2;
     tmp48Result = callback2(categoryid(4745).Button, obj);
-    const tmp48 = callback2;
   }
   return tmp48Result;
 }
 ({ View: closure_6, ScrollView: error, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, footer: null, title: null, subtitle: null, separator: null, topicsContainer: null, scrollContentContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
-let obj1 = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
-let obj2 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_24 };
-let obj3 = { marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj4 = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[5] = { flex: 1, marginHorizontal: ThemesDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: ThemesDefault.space.PX_12 };
-let obj5 = { flex: 1, marginHorizontal: ThemesDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: ThemesDefault.space.PX_12 };
 createCacheKey[6] = { paddingTop: ThemesDefault.space.PX_24 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { paddingTop: ThemesDefault.space.PX_24 };
-let result = require("set").fileFinishedImporting("modules/icymi/native/info_modal/ICYMITopicsScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/icymi/native/info_modal/ICYMITopicsScreen.tsx");
 
 export default function ICYMITopicsScreen() {
   const tmp = callback3();
@@ -96,7 +88,7 @@ export default function ICYMITopicsScreen() {
   let obj = first(1500);
   const navigation = obj.useNavigation();
   const items = [navigation, first];
-  callback = React.useCallback(navigation(function*() {
+  React.useCallback(navigation(function*() {
     if (arr === 2) {
       arr = 3;
       HermesBuiltin.throwTypeError();
@@ -129,7 +121,7 @@ export default function ICYMITopicsScreen() {
             v0 = 1;
             arr = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(v0[28])(v0[27], v0.paths);
+            obj1[0] = first(v0[28])(v0[27], v0.paths);
             return obj1;
           }
         } else if (1 === tmp4) {
@@ -164,8 +156,8 @@ export default function ICYMITopicsScreen() {
           } else {
             obj = closure_1_1(v0[30]);
             const obj5 = { key: "ICYMIInfoModal", content: null };
-            const intl = closure_1_0(v0[31]).intl;
-            obj5[1] = intl.string(closure_1_0(v0[31]).t.CG4Hks);
+            const intl = first(v0[31]).intl;
+            obj5[1] = intl.string(first(v0[31]).t.CG4Hks);
             obj.open(obj5);
           }
           const _setTimeout = setTimeout;
@@ -186,16 +178,17 @@ export default function ICYMITopicsScreen() {
     const ICYMIAnalytics = first(table[33]).ICYMIAnalytics;
     const result = ICYMIAnalytics.trackFeedOnboardingCategoryToggled({ categoryId, toggled: !categoryId.has(categoryId) });
     if (categoryId.has(categoryId)) {
-      tmp2((items) => {
+      callback((items) => {
         items.delete(closure_0);
         return new Set(items);
       });
     } else {
-      tmp2((add) => {
+      callback((add) => {
         add.add(closure_0);
         return new Set(add);
       });
     }
+    const obj = { categoryId, toggled: !categoryId.has(categoryId) };
   }, items2);
   obj = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1236).intl;
@@ -210,10 +203,7 @@ export default function ICYMITopicsScreen() {
   let obj2 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: obj3, children: null };
   obj3 = { bottom: 72 + bottom };
   const set = new Set();
-  const tmp10 = closure_12;
-  const tmp11 = closure_11;
-  const tmp13 = closure_6;
-  obj2[4] = callback2(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => closure_1_10(closure_1_14, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress: closure_4 }, categoryId.categoryId)) });
+  obj2[4] = callback2(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((item, index) => closure_1_10(WordTopic, { selected: first.has(item.categoryId), topic: item.name, categoryid: item.categoryId, handlePress: closure_4 }, item.categoryId)) });
   children[3] = callback2(closure_7, obj2);
   let tmp12Result = first.size > 0;
   if (tmp12Result) {
@@ -227,9 +217,9 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1236).intl;
     obj7[2] = intl3.string(tmp7(1236).t.PDTjLN);
     obj7[3] = callback;
-    obj5[1] = tmp12(tmp7(4745).Button, obj7);
-    tmp12Result = tmp12(tmp13, obj5);
+    obj5[1] = callback2(tmp7(4745).Button, obj7);
+    tmp12Result = callback2(closure_6, obj5);
   }
   children[4] = tmp12Result;
-  return tmp10(tmp11, { children });
+  return callback(closure_11, { children });
 };

@@ -1,7 +1,7 @@
 // discord_common/js/packages/rpc-schema/rpc-schema.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
 
 export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;

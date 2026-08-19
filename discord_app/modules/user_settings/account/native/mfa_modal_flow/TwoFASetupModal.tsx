@@ -3,21 +3,20 @@ import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/n
 import getSystemLocale from "../../../../../intl/index.native.tsx";
 import NavigationStack from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
 import useInitialValueDefault from "../../../../../hooks/useInitialValue.tsx";
-import closure_3 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { TwoFAModalSetupSections } from "TwoFAConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, floatingButton: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", bottom: 12, left: 12, right: 12 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = { [TwoFAModalSetupSections.LANDING]: 1, [TwoFAModalSetupSections.SCAN]: 2, [TwoFAModalSetupSections.ENTER_CODE]: 3 };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupModal.tsx");
 
 export default function TwoFASetupModal(initialRouteName) {
   let LANDING = initialRouteName.initialRouteName;
@@ -29,7 +28,6 @@ export default function TwoFASetupModal(initialRouteName) {
     screens: useInitialValueDefault(() => {
       let obj = callback(8588);
       callback = obj.generateTotpSecret();
-      obj = {};
       obj = {
         headerLeft: callback(6314).getHeaderCloseButton(callback2(14138).close),
         headerTitle() {
@@ -77,12 +75,11 @@ export default function TwoFASetupModal(initialRouteName) {
 };
 export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
   let navigation;
-  let name;
   const tmp = callback2();
   let i4jeWR = dependencyMap;
   let obj = navigation(1500);
   navigation = obj.useNavigation();
-  name = navigation.getState().routes[navigation.getState(navigation).routes.length - 1].name;
+  const name = navigation.getState().routes[navigation.getState(navigation).routes.length - 1].name;
   const items = [navigation, name];
   obj = { style: tmp.container, children: null };
   const items1 = [children.children, ];
@@ -104,8 +101,8 @@ export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
       stringResult = intl.string(tmp2(1236).t.XiOHRX);
     }
     obj1[1] = stringResult;
-    obj1 = tmp8(tmp2(4745).Button, obj1);
+    obj1 = callback(tmp2(4745).Button, obj1);
     obj[2] = obj1;
-    closure_6(tmp2(6803).SafeAreaPaddingView, obj);
+    callback(tmp2(6803).SafeAreaPaddingView, obj);
   }
 };

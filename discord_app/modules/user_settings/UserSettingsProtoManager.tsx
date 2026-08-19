@@ -5,10 +5,10 @@ import MAX_FAVORITESDefault from "UserSettingsMigrationsByType.tsx";
 import updateUserGuildSettings from "UserSettingsProtoActionCreators.tsx";
 import migrateHotspotLocationDefault from "PreloadedUserSettingsMigrations.tsx";
 import readFavoriteGIFsDefault from "FrecencySettingsMigrations.tsx";
-import closure_3 from "UserSettingsProtoStore.tsx";
+import handleConnectionClosedOrResumed from "UserSettingsProtoStore.tsx";
 import { UserSettingsTypes } from "UserSettingsConstants.tsx";
 
-require = arg1;
+require = fn;
 function handleConnectionOpen() {
   fullState = fullState.getFullState();
   if (fullState[UserSettingsTypes.PRELOADED_USER_SETTINGS].editInfo.triggeredMigrations) {
@@ -43,23 +43,17 @@ function handleAppStateUpdate(state) {
         persistChanges.persistChanges();
       }
     });
-    const arr = applyDefault;
   }
 }
-let result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsProtoManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/UserSettingsProtoManager.tsx");
 
 export default {
   init() {
     MAX_FAVORITESDefault[UserSettingsTypes.PRELOADED_USER_SETTINGS] = migrateHotspotLocationDefault;
-    const tmp = MAX_FAVORITESDefault;
     MAX_FAVORITESDefault[UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = readFavoriteGIFsDefault;
-    const tmp2 = MAX_FAVORITESDefault;
     const subscription = dispatcherDefault.subscribe("CONNECTION_OPEN", handleConnectionOpen);
-    const obj = dispatcherDefault;
     const subscription1 = dispatcherDefault.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", handleUserSettingsProtoEnqueueUpdate);
-    const obj2 = dispatcherDefault;
     const subscription2 = dispatcherDefault.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", handleUserSettingsProtoLoadIfNecessary);
-    const obj3 = dispatcherDefault;
     const subscription3 = dispatcherDefault.subscribe("APP_STATE_UPDATE", handleAppStateUpdate);
   }
 };

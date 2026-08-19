@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCardConstants.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 
-const result = set.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardConstants.tsx");
 
 export const CARD_SIZE = 165;
 export const CALL_TILE_GUTTER = 12;

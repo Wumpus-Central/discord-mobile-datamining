@@ -4,15 +4,14 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AccessibilityAnnouncer from "../../../shared.tsx";
 import { Switch } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { switch: { marginVertical: -5 }, track: null };
-createCacheKey = { color: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+const createCacheKey = { color: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 createCacheKey[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormSwitch.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormSwitch.tsx");
 
 export default function FormSwitch(value) {
   value = value.value;

@@ -1,10 +1,10 @@
 // discord_app/modules/rpc/helpers/stripSensitiveLoggingData.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 
 const RPCCommands = ME.RPCCommands;
 let c1 = "<removed>";
-const result = set.fileFinishedImporting("modules/rpc/helpers/stripSensitiveLoggingData.tsx");
+const result = obj132.fileFinishedImporting("modules/rpc/helpers/stripSensitiveLoggingData.tsx");
 
 export default function stripSensitiveLoggingData(arg0) {
   let obj = {};
@@ -42,7 +42,6 @@ export default function stripSensitiveLoggingData(arg0) {
     const cmd = obj.cmd;
     if (RPCCommands.AUTHENTICATE !== cmd) {
       if (RPCCommands.GET_PROVIDER_ACCESS_TOKEN !== cmd) {
-        let obj2 = {};
         const merged4 = Object.assign(obj);
       }
     }
@@ -53,6 +52,5 @@ export default function stripSensitiveLoggingData(arg0) {
     obj = c1;
     obj4.access_token = c1;
     obj3.args = obj4;
-    obj2 = obj3;
   }
 };

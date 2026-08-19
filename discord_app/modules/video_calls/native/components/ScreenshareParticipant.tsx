@@ -1,21 +1,20 @@
 // discord_app/modules/video_calls/native/components/ScreenshareParticipant.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, image: null, title: null, description: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 12 };
 createCacheKey[2] = { textAlign: "center", marginBottom: 8 };
 createCacheKey[3] = { lineHeight: 18, textAlign: "center", marginBottom: 16 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ScreenshareParticipant.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/ScreenshareParticipant.tsx");
 
 export default function ScreenshareParticipant(participant) {
   participant = participant.participant;
@@ -38,10 +37,9 @@ export default function ScreenshareParticipant(participant) {
     return tmpResult;
   }, items1);
   const tmp4 = callback3();
-  let obj = { gesture: onSingleTap(onDoubleTap[5])({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
-  obj = { style: items2, children: null };
-  items2 = [tmp4.container, participant.containerStyle];
-  obj = { source: onSingleTap(onDoubleTap[7]), style: tmp4.image };
+  { gesture: onSingleTap(onDoubleTap[5])({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
+  const items2 = [tmp4.container, participant.containerStyle];
+  const obj = { source: onSingleTap(onDoubleTap[7]), style: tmp4.image };
   const items3 = [callback(closure_5, obj), , , ];
   obj1 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = participant(onDoubleTap[9]).intl;

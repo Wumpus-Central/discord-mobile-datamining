@@ -1,64 +1,51 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx
 import ThemesDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import getAvatarURLDefault from "../../../../../utils/AvatarUtils.tsx";
+import combinedDefault from "../../../../../utils/HelpdeskUtils.tsx";
+import parseRawEmojiObjectDefault from "../../../../emojis/UnicodeEmojis.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import EmojiDefault from "../../../../emojis/native/Emoji.tsx";
 import useInitialValueDefault from "../../../../../hooks/useInitialValue.tsx";
 import _calculateScrollOffsetDefault from "../../../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../../_runtime/metro/00032__slicedToArray.js";
+import StickerDefault from "../../../../stickers/native/Sticker.tsx";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../../../../emojis/EmojiStore.tsx";
-import closure_9 from "../../../../stickers/StickersStore.tsx";
+import getEmojiToGroupId from "../../../../emojis/EmojiStore.tsx";
+import loadSavedGuildStickers from "../../../../stickers/StickersStore.tsx";
 import ME from "../../../../../Constants.tsx";
-import set from "../../../../emojis/EmojiConstants.tsx";
 import { MAX_STICKER_FILE_SIZE } from "../../../../stickers/StickersConstants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
+import set from "../../../../emojis/EmojiConstants.tsx";
 
-const require = arg1;
+const require = fn;
 let c5 = importAllResult;
 ({ Image: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ HelpdeskArticles: c10, UPLOAD_STICKER_SIZE: unpackModuleId } = ME);
-({ EMOJI_URL_BASE_SIZE: closure_12, EmojiIntention: map1 } = set);
+({ EMOJI_URL_BASE_SIZE: closure_12, EmojiIntention: map1 } = require("set"));
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-let obj = { container: null, title: null, description: null, help: null, stack: null, emojiPreview: null, stickerPreviewLabel: null, stickerPreview: null, stickerPreviewImage: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
+const createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
 obj[2] = { marginBottom: ThemesDefault.space.PX_16 };
-let obj2 = { marginBottom: ThemesDefault.space.PX_16 };
 obj[3] = { marginBottom: ThemesDefault.space.PX_16 };
-let obj3 = { marginBottom: ThemesDefault.space.PX_16 };
 obj[4] = { marginTop: ThemesDefault.space.PX_8 };
-let obj4 = { marginTop: ThemesDefault.space.PX_8 };
 obj[5] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-let obj5 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 obj[6] = { marginTop: ThemesDefault.space.PX_8 };
-let obj6 = { marginTop: ThemesDefault.space.PX_8 };
 obj[7] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginBottom: ThemesDefault.space.PX_8, height: 2 * ThemesDefault.space.PX_64, width: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center" };
-let obj7 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginBottom: ThemesDefault.space.PX_8, height: 2 * ThemesDefault.space.PX_64, width: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center" };
 obj[8] = { width: ThemesDefault.space.PX_96, height: ThemesDefault.space.PX_96 };
 let closure_18 = createCacheKey.createStyles(obj);
-let obj8 = { width: ThemesDefault.space.PX_96, height: ThemesDefault.space.PX_96 };
-let result = set.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx");
-
-export default importAllResult.forwardRef((stickerId, ref) => {
+const forwardRefResult = importAllResult.forwardRef((stickerId, ref) => {
   stickerId = stickerId.stickerId;
   ({ guildId: importDefault, onFinish: dependencyMap } = stickerId);
-  ref = undefined;
-  let ref1;
   let ref2;
   c6 = undefined;
-  c7 = undefined;
   c8 = undefined;
-  let stickerById;
-  let first;
-  closure_11 = undefined;
   c12 = undefined;
   c13 = undefined;
-  let first1;
-  let callback;
   closure_16 = undefined;
   closure_17 = undefined;
   function hasUnsavedChanges(arg0) {
@@ -66,10 +53,10 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     if (arg0 === undefined) {
       flag = true;
     }
-    if (null != closure_16) {
-      let tmp12 = null != c6 && tmp11 !== tmp.name;
+    if (null != user) {
+      let tmp12 = null != _undefined && tmp11 !== user.name;
       if (!tmp12) {
-        let tmp14 = null != c8 && tmp13 !== tmp.description;
+        let tmp14 = null != c8 && tmp13 !== user.description;
         if (!tmp14) {
           let tmp16 = null == first1;
           if (!tmp16) {
@@ -81,12 +68,12 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       }
       let tmp2 = tmp12;
     } else {
-      let tmp7 = null != c6;
+      let tmp7 = null != _undefined;
       if (flag) {
         if (tmp7) {
           let length;
-          if (arr != null) {
-            length = arr.length;
+          if (_undefined != null) {
+            length = _undefined.length;
           }
           tmp7 = length > 0;
         }
@@ -104,8 +91,8 @@ export default importAllResult.forwardRef((stickerId, ref) => {
         tmp2 = tmp7;
         if (tmp7) {
           let length1;
-          if (arr != null) {
-            length1 = arr.length;
+          if (_undefined != null) {
+            length1 = _undefined.length;
           }
           tmp2 = length1 > 0;
         }
@@ -286,7 +273,6 @@ export default importAllResult.forwardRef((stickerId, ref) => {
                     const obj3 = { name: null, tags: null, description: null };
                     obj3[0] = tmp39;
                     const obj10 = closure_1_0(closure_1_2[18]);
-                    const tmp43 = closure_1_1;
                     obj3[1] = closure_1_0(closure_1_2[19]).getStickerTagForEmoji(tmp40);
                     c1 = closure_1_8;
                     if (closure_1_8 == null) {
@@ -296,7 +282,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
                     c3 = 3;
                     c6 = 1;
                     let obj4 = { value: null, done: false };
-                    obj4[0] = obj10.updateGuildSticker(tmp43, tmp38, obj3);
+                    obj4[0] = obj10.updateGuildSticker(closure_1_1, tmp38, obj3);
                     return obj4;
                   }
                 }
@@ -366,25 +352,24 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   let tmp = hasUnsavedChanges();
   let obj = ref2;
   ref = ref2.useRef(null);
-  ref1 = ref2.useRef(null);
+  const ref1 = ref2.useRef(null);
   ref2 = ref2.useRef(null);
   [c6, tmp6] = ref1(ref2.useState(undefined), 2);
   c7 = tmp6;
   const tmp5 = ref1(ref2.useState(undefined), 2);
   [c8, tmp8] = ref1(ref2.useState(undefined), 2);
-  stickerById = tmp8;
   const tmp9 = ref1(ref2.useState(undefined), 2);
-  first = tmp9[0];
+  const first = tmp9[0];
   closure_11 = tmp9[1];
   let tmp7 = ref1(ref2.useState(undefined), 2);
   [c12, c13] = ref1(ref2.useState(undefined), 2);
   let tmp12 = ref1(ref2.useState(undefined), 2);
-  first1 = tmp12[0];
-  callback = tmp12[1];
+  const first1 = tmp12[0];
+  let callback = tmp12[1];
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   const items = [{ ref: ref1, offset: { type: "toRef", ref: ref2 } }, { ref: ref2, offset: { type: "toBottom" } }];
   const onFocus = _calculateScrollOffsetDefault({ insets, inputs: items, scrollViewRef: ref }).onFocus;
-  stickerById = undefined;
+  let stickerById;
   const tmp11 = ref1(ref2.useState(undefined), 2);
   if (null != stickerId) {
     stickerById = stickerById.getStickerById(stickerId);
@@ -413,9 +398,8 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       } else if (null == tags.tags) {
         let tmp8;
         if (null != undefined) {
-          const byName = closure_1_1(closure_1_2[15]).getByName(undefined);
+          const byName = parseRawEmojiObjectDefault.getByName(undefined);
           tmp8 = byName;
-          const obj3 = closure_1_1(closure_1_2[15]);
         }
         let tmp12;
         if (null != tmp8) {
@@ -425,12 +409,11 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       } else {
         if (obj.hasSurrogates(tags.tags)) {
           tags = tags.tags;
-          let tags2 = closure_1_1(closure_1_2[15]).convertSurrogateToName(tags, false);
-          const obj2 = closure_1_1(closure_1_2[15]);
+          let tags2 = parseRawEmojiObjectDefault.convertSurrogateToName(tags, false);
         } else {
           tags2 = tags.tags;
         }
-        obj = closure_1_1(closure_1_2[15]);
+        obj = parseRawEmojiObjectDefault;
       }
     }
   });
@@ -440,19 +423,19 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   const effect = obj.useEffect(() => {
     let tmp = null != stickerId;
     if (tmp) {
-      tmp = null != closure_16;
+      tmp = null != user;
     }
     if (tmp) {
       callback(closure_17);
-      _undefined(closure_16.name);
-      _undefined3(closure_16.description);
+      _undefined(user.name);
+      _undefined3(user.description);
       const current = ref1.current;
       if (current != null) {
-        current.setText(tmp7.name);
+        current.setText(user.name);
       }
       const current2 = ref2.current;
       if (current2 != null) {
-        let str = tmp7.description;
+        let str = user.description;
         if (str == null) {
           str = "";
         }
@@ -460,8 +443,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       }
     }
   }, items1);
-  obj = { ref, style: tmp.container, keyboardShouldPersistTaps: "always", contentContainerStyle: null, children: null };
-  obj = { paddingHorizontal: tmp14(712).space.PX_16, paddingBottom: tmp14(712).space.PX_16 + insets.bottom };
+  obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 + insets.bottom };
   obj[3] = obj;
   let tmp23Result = null;
   if (null == stickerId) {
@@ -482,7 +464,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj4[2] = tmp.help;
     const intl3 = stickerId(1236).intl;
     let obj5 = { articleUrl: null };
-    let tmp14Result = tmp14(1993);
+    let tmp14Result = combinedDefault;
     obj5[0] = tmp14Result.getArticleURL(first.STICKERS_UPLOAD);
     obj4[3] = intl3.format(stickerId(1236).t.UBj0aX, obj5);
     items2[2] = callback(stickerId(4734).Text, obj4);
@@ -499,8 +481,6 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     items2[3] = callback(stickerId(4745).Button, obj6);
     obj7[0] = items2;
     tmp23Result = tmp23(closure_16, obj7);
-    const tmp26 = closure_16;
-    const tmp27 = callback;
   }
   const items3 = [tmp23Result, ];
   const obj8 = { style: tmp.stack, children: null };
@@ -514,8 +494,8 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   if (null != tmp16Result) {
     const obj11 = { sticker: null, size: null, animated: true };
     obj11[0] = tmp16Result;
-    tmp14Result = tmp14(10119);
-    obj11[1] = tmp14(712).space.PX_96;
+    tmp14Result = StickerDefault;
+    obj11[1] = ThemesDefault.space.PX_96;
     let tmp32Result = tmp32(tmp14Result, obj11);
   } else if (null != first) {
     const obj12 = { source: null, style: null, resizeMode: "contain" };
@@ -536,8 +516,8 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   const obj15 = {
     style: tmp.emojiPreview,
     onPress() {
-      let obj = stickerId(closure_1_2[29]);
-      obj = { pickerIntention: _undefined4.GUILD_STICKER_RELATED_EMOJI, guildId: closure_1, onPressEmoji: closure_15 };
+      stickerId(dependencyMap[29]);
+      const obj = { pickerIntention: _undefined4.GUILD_STICKER_RELATED_EMOJI, guildId: closure_1, onPressEmoji: closure_15 };
       const result = obj.openEmojiPickerActionSheet(obj);
     },
     children: null
@@ -551,12 +531,12 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       const obj17 = { id: null, animated: null, size: null };
       ({ id: obj23[0], animated: obj23[1] } = first1);
       obj17[2] = c12;
-      emojiURL = tmp14(1435).getEmojiURL(obj17);
-      const tmp14Result2 = tmp14(1435);
+      emojiURL = getAvatarURLDefault.getEmojiURL(obj17);
+      const tmp14Result2 = getAvatarURLDefault;
     }
     obj16[2] = emojiURL;
-    tmp32Result = tmp32(tmp14(6930), obj16);
-    const tmp14Result1 = tmp14(6930);
+    tmp32Result = tmp32(EmojiDefault, obj16);
+    const tmp14Result1 = EmojiDefault;
   } else {
     tmp32Result = tmp32(tmp31(7939).ReactionIcon, { size: "md", color: "text-subtle" });
   }
@@ -627,3 +607,6 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   obj[4] = items3;
   return closure_17(c7, obj);
 });
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx");
+
+export default forwardRefResult;

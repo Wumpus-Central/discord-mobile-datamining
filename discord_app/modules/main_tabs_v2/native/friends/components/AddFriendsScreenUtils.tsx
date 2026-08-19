@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx
 import handleRelationshipAddErrorDefault from "../../../../../actions/RelationshipActionCreators.tsx";
 import _modDef9887 from "../../../../people/PeopleUtils.tsx";
-import closure_3 from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../stores/ChannelStore.tsx";
+import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
+import ensureGuildLoaded from "../../../../../stores/ChannelStore.tsx";
 import { AnalyticsSections } from "../../../../../Constants.tsx";
 import { MessageSendLocation } from "../../../../messages/MessageConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function _sendWave() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -169,18 +169,16 @@ function _sendWave() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9887;
-  obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
+  const obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   ({ userId, applicationId } = arg0);
-  let obj = _modDef9887;
-  obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
+  const obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };
 export const sendWave = function sendWave(id, arg1, arg2) {
@@ -195,7 +193,6 @@ export const sendWave = function sendWave(id, arg1, arg2) {
 };
 export const addContactSuggestion = function addContactSuggestion(user) {
   let obj = handleRelationshipAddErrorDefault;
-  obj = { userId: user.id, context: obj, type: "HermesInternal", fromFriendSuggestion: null };
   obj = { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.addRelationship(obj);
 };

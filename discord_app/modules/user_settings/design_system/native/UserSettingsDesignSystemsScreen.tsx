@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx
 import _modDef13991 from "../../../settings/native/renderer/SettingLayout.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { MobileUserSettings } from "../../core/native/SettingsConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx");
 
 export default function SettingsDesignSystemsScreen() {
   const node = React.useMemo(() => {

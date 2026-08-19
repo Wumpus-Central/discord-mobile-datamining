@@ -4,20 +4,19 @@ import getSystemLocale from "../../../../intl/index.native.tsx";
 import Button from "../../../../design/void/native.tsx";
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import PressableBase from "../../../../design/void/Pressables/native/Pressables.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { Fonts } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 import importDefaultResult from "../../../rebrand/native/TextStyles.tsx";
 
-require = arg1;
+require = fn;
 function keyExtractor(item) {
   return item.item.id;
 }
 function FriendsEmptyComponent() {
   const tmp = callback3();
-  let obj = { children: null };
-  obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
+  let obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.dz4UlO);
   const intl2 = getSystemLocale.intl;
@@ -53,8 +52,7 @@ function FriendsEmptyComponent() {
   return callback2(closure_5, obj);
 }
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
 createCacheKey.textTransform = "none";
 createCacheKey.lineHeight = 24;
@@ -67,7 +65,7 @@ createCacheKey[1] = obj1;
 createCacheKey[2] = { textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteFriendsList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteFriendsList.tsx");
 
 export default function InstantInviteFriendsList(code) {
   code = code.code;
@@ -80,8 +78,7 @@ export default function InstantInviteFriendsList(code) {
     index = index.index;
     return source(onPressAvatar(onInviteSent[12]), { start: 0 === index, end: index === data.length - 1, row: index.item, onPressAvatar, onInviteSent, code, source });
   }, items);
-  let obj = { contentContainerStyle: null, bounces: false, renderItem: null, data: null, keyExtractor: null, keyboardShouldPersistTaps: "always", ListEmptyComponent: null };
-  obj = { paddingBottom: onPressAvatar(onInviteSent[5]).space.PX_16 + onPressAvatar(onInviteSent[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom, paddingHorizontal: onPressAvatar(onInviteSent[5]).space.PX_12 };
+  const obj = { paddingBottom: onPressAvatar(onInviteSent[5]).space.PX_16 + onPressAvatar(onInviteSent[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom, paddingHorizontal: onPressAvatar(onInviteSent[5]).space.PX_12 };
   obj[0] = obj;
   obj[2] = callback;
   obj[3] = data;

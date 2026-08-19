@@ -1,15 +1,15 @@
 // discord_app/modules/user_profile/native/EditProfileFrameActionSheet.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../collectibles/CollectiblesPurchaseStore.tsx";
+import map from "../../collectibles/CollectiblesPurchaseStore.tsx";
 import { isProfileFrameRecord } from "../../collectibles/records/ProfileFrameRecord.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function EditProfileFrameInner(user) {
   user = user.user;
   ({ selectedProfileFrame, setSelectedProfileFrame } = user);
@@ -43,9 +43,10 @@ function EditProfileFrameInner(user) {
   const items1 = [user];
   const effect = React.useEffect(() => {
     if (!tmp) {
-      setSelectedProfileFrame(guildId[23])(obj.id, obj.getAvatarURL(null, 80), { withMutualGuilds: true, dispatchWait: true });
+      setSelectedProfileFrame(guildId[23])(user.id, user.getAvatarURL(null, 80), { withMutualGuilds: true, dispatchWait: true });
       const tmp4 = setSelectedProfileFrame(guildId[23]);
     }
+    tmp = null == user || user.isNonUserBot();
   }, items1);
   const items2 = [setSelectedProfileFrame, guildId];
   let skuId;
@@ -56,13 +57,9 @@ function EditProfileFrameInner(user) {
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const items3 = [closure_9(ProfileFrameSectionPreview, { previewSkuId: skuId, user, guildId }), , ];
+  const items3 = [callback(ProfileFrameSectionPreview, { previewSkuId: skuId, user, guildId }), , ];
   obj = { user, previewSkuId: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
   let skuId1;
-  const tmp13 = closure_10;
-  const tmp14 = closure_11;
-  const tmp16 = ProfileFrameSectionPreview;
-  const tmp5 = setSelectedProfileFrame;
   const tmp6 = setSelectedProfileFrame(guildId[21])();
   if (profilePreviewValue != null) {
     skuId1 = profilePreviewValue.skuId;
@@ -72,7 +69,7 @@ function EditProfileFrameInner(user) {
   obj[2] = intl.string(user(guildId[17]).t["JvNv+a"]);
   const intl2 = tmp(tmp2[17]).intl;
   obj[3] = intl2.string(user(guildId[17]).t.hR2psy);
-  items3[1] = closure_9(setSelectedProfileFrame(guildId[25]), obj);
+  items3[1] = callback(setSelectedProfileFrame(guildId[25]), obj);
   obj1 = { sections: tmp6, selectedSkuId: null, renderRow: null, isFetching: null };
   let skuId2;
   if (selectedProfileFrame != null) {
@@ -82,12 +79,11 @@ function EditProfileFrameInner(user) {
   obj1[1] = skuId2;
   obj1[2] = callback;
   obj1[3] = stateFromStores;
-  items3[2] = closure_9(user(guildId[26]).EditCollectiblesPickerList, obj1);
+  items3[2] = callback(user(guildId[26]).EditCollectiblesPickerList, obj1);
   obj2[0] = items3;
-  return tmp13(tmp14, obj2);
+  return callback2(closure_11, obj2);
 }
 function ProfileFrameSectionPreview(arg0) {
-  c0 = undefined;
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = callback3();
@@ -96,7 +92,6 @@ function ProfileFrameSectionPreview(arg0) {
   c0 = product;
   purchase = tmp2.purchase;
   const items = [purchase, product];
-  let obj = { style: tmp.previewContainer, children: null };
   const memo = React.useMemo(() => {
     let first;
     if (_undefined != null) {
@@ -110,13 +105,13 @@ function ProfileFrameSectionPreview(arg0) {
       first = first1;
     }
     let tmp3 = null;
-    if (closure_1_7(first)) {
+    if (isProfileFrameRecord(first)) {
       tmp3 = first;
     }
     return tmp3;
   }, items);
   const items1 = [callback(purchase(9570), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
-  obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
+  const obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj[3] = items2;
   items1[1] = callback(purchase(4756), obj);
@@ -125,8 +120,7 @@ function ProfileFrameSectionPreview(arg0) {
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, bounceOffset: null, title: null, previewContainer: null, previewGradient: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", top: -250, height: 250, right: 0, left: 0 };
 createCacheKey[2] = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
@@ -137,8 +131,7 @@ obj2.bottom = -1;
 obj2.color = ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND;
 createCacheKey[4] = obj2;
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/EditProfileFrameActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/EditProfileFrameActionSheet.tsx");
 
 export default function EditProfileFrameActionSheet(arg0) {
   ({ user, currentProfileFrame, guildId } = arg0);
@@ -154,7 +147,7 @@ export default function EditProfileFrameActionSheet(arg0) {
   importDefault = tmp4Result;
   const tmp6 = memo(React.useState(currentProfileFrame), 2);
   first = tmp6[0];
-  let obj = guildId(tmp3[10]);
+  guildId(tmp3[10]);
   let tmp2Result = tmp2(tmp3[11]);
   const analyticsLocations = tmp2Result(tmp2(tmp3[12]).EDIT_PROFILE_FRAME_SHEET).analyticsLocations;
   const items = [guildId, tmp4Result];
@@ -163,8 +156,8 @@ export default function EditProfileFrameActionSheet(arg0) {
     let tmp = null != callback;
     if (tmp) {
       let result;
-      if (obj2 != null) {
-        result = obj2.hasPremiumCustomization();
+      if (callback != null) {
+        result = callback.hasPremiumCustomization();
       }
       tmp = result;
     }
@@ -174,15 +167,15 @@ export default function EditProfileFrameActionSheet(arg0) {
   const items1 = [memo];
   const items2 = [first, guildId];
   const callback = React.useCallback(() => {
-    let obj = callback(first[13]);
-    obj = {};
+    callback(first[13]);
+    const obj = {};
     const merged = Object.assign(memo);
     obj.is_fullscreen = true;
-    obj.track(closure_1_8.OPEN_POPOUT, obj);
+    obj.track(AnalyticEvents.OPEN_POPOUT, obj);
   }, items1);
   const callback1 = React.useCallback(() => {
-    let obj = guildId(first[14]);
-    obj = { guildId, profileFrame: null };
+    guildId(first[14]);
+    const obj = { guildId, profileFrame: null };
     let tmp = first;
     if (first == null) {
       tmp = null;
@@ -190,7 +183,7 @@ export default function EditProfileFrameActionSheet(arg0) {
     obj[1] = tmp;
     obj.setPendingChanges(obj);
   }, items2);
-  obj = { value: analyticsLocations, children: null };
+  let obj = { value: analyticsLocations, children: null };
   obj = { scrollable: true, ref: obj.useBottomSheetRef().bottomSheetRef, onExpand: callback, startExpanded: true, children: null };
   obj1 = { style: tmp.container, children: null };
   const items3 = [callback(closure_5, { style: tmp.bounceOffset }), , ];

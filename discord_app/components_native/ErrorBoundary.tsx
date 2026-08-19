@@ -6,16 +6,16 @@ import Button from "../design/void/native.tsx";
 import Text from "../design/components/Text/native/Text.tsx";
 import Button2 from "../design/components/Button/native/Button.native.tsx";
 import getAppCrashSource from "../design/components/Illustration/native/redesign/generated/AppCrash.tsx";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
-import closure_8 from "../modules/build_overrides/BuildOverrideStore.tsx";
+import getCurrentBuildOverride from "../modules/build_overrides/BuildOverrideStore.tsx";
 import jsxProd from "../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
 
-require = arg1;
+require = fn;
 function MaybeClearBuildOverride() {
   function _clearOverride() {
     const self = this;
@@ -49,7 +49,7 @@ function MaybeClearBuildOverride() {
   }
   let tmp = callback(importAllResult.useState(false), 2);
   const _require = tmp[1];
-  let obj = _initialize;
+  let obj = initialize;
   const items = [closure_8];
   if (null == obj.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -103,7 +103,6 @@ prototype["triggerSoftCrash"] = function triggerSoftCrash(error, extra) {
   this.setState(obj);
   obj = { extra };
   _modDef1208.captureCrash(error, obj);
-  const obj2 = _modDef1208;
   dispatcherDefault.dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
 };
 prototype["handleReload"] = function handleReload() {
@@ -158,26 +157,26 @@ prototype["render"] = function render() {
       str = "Unknown Error";
     }
     obj[3] = str;
-    const items = [closure_9(Text.Text, obj), , ];
+    const items = [callback(Text.Text, obj), , ];
     obj = { style: null, children: null };
     obj[0] = tmp.buttons;
-    const items1 = [closure_9(MaybeClearBuildOverride, {}), ];
+    const items1 = [callback(MaybeClearBuildOverride, {}), ];
     obj1 = { text: null, onPress: null };
-    const intl3 = tmp3(1236).intl;
+    const intl3 = getSystemLocale.intl;
     obj1[0] = intl3.string(getSystemLocale.t["4n8OJn"]);
     obj1[1] = self.handleReload;
-    items1[1] = closure_9(Button2.Button, obj1);
+    items1[1] = callback(Button2.Button, obj1);
     obj[1] = items1;
-    items[1] = closure_10(closure_7, obj);
+    items[1] = callback2(closure_7, obj);
     items[2] = null;
     obj[5] = items;
-    let children = tmp2(Button.EmptyState, obj);
+    let children = callback2(Button.EmptyState, obj);
   } else {
     children = self.props.children;
   }
   return children;
 };
 ErrorBoundary.contextType = require("ManaContext").ThemeContext;
-const result = require("set").fileFinishedImporting("components_native/ErrorBoundary.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/ErrorBoundary.tsx");
 
 export default ErrorBoundary;

@@ -1,28 +1,26 @@
 // discord_app/modules/video_calls/native/components/ChannelCallNavigator.tsx
 import contextDefault from "../../../guild_themes/native/GuildThemeGuildIdOverrideContext.tsx";
-import closure_3 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import closure_8 from "../../../panels/morphable/native/SafeAreaDisabledStore.tsx";
 import { ChannelCallScreens } from "../ChannelCallConstants.tsx";
 import { ComponentActions } from "../../../../Constants.tsx";
 import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_11 } from "../../../oauth2/native/Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import "createCacheKey";
 import { context } from "../../../voice_chat/native/VoiceChatModalContext.tsx";
 
-const require = arg1;
+const require = fn;
 function CallWithVoiceChat(channel) {
   channel = channel.channel;
-  let _require;
   let translateX;
   dependencyMap = undefined;
   let tmp = callback3();
   const result = 2 * translateX(1494)().width;
-  _require = result;
-  let obj = _context;
+  const _require = result;
+  let obj = context;
   const voiceChatNavigationContext = obj.useVoiceChatNavigationContext();
   translateX = undefined;
   if (voiceChatNavigationContext != null) {
@@ -101,7 +99,7 @@ function CallWithVoiceChat(channel) {
   fn4.__closure = obj;
   fn4.__workletHash = 661145094859;
   fn4.__initData = closure_18;
-  const animatedReaction = _ReanimatedRexport.useAnimatedReaction(fn3, fn4);
+  const animatedReaction = require("../../../reanimated/ReanimatedRexport.tsx").useAnimatedReaction(fn3, fn4);
   obj1 = { style: items, children: null };
   items = [tmp.textInVoiceContainer, animatedStyle];
   const obj2 = { style: tmp.voiceContainer, children: null };
@@ -115,26 +113,25 @@ function CallWithVoiceChat(channel) {
   const items2 = [animatedStyle1, StyleSheet.absoluteFill];
   items1[1] = callback2(translateX(4115).View, { pointerEvents: "box-none", style: items2 });
   obj2[1] = items1;
-  const items3 = [closure_13(closure_6, obj2), ];
+  const items3 = [callback2(closure_6, obj2), ];
   const obj4 = { style: tmp.textContainer, children: null };
   let tmp18Result = null;
   if (tmp11[0]) {
     const obj5 = { channel: null };
     obj5[0] = channel;
-    tmp18Result = tmp18(tmp2(10009), obj5);
+    tmp18Result = callback2(tmp2(10009), obj5);
   }
   obj4[1] = tmp18Result;
   items3[1] = callback2(closure_6, obj4);
   obj1[1] = items3;
-  return closure_13(translateX(4115).View, obj1);
+  return callback2(translateX(4115).View, obj1);
 }
 function MainCallScreen(channel) {
   channel = channel.channel;
   let isConnectedToVoiceChannel;
-  let id;
   let obj = isConnectedToVoiceChannel(8675);
   isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
-  id = React.useId();
+  const id = React.useId();
   const items = [isConnectedToVoiceChannel, id];
   const effect = React.useEffect(() => {
     let state = closure_1_8.getState();
@@ -275,12 +272,11 @@ function MainCallScreen(channel) {
     if (channel.isGuildStageVoice()) {
       let obj2 = { channel: null };
       obj2[0] = channel;
-      tmp14Result = tmp14(id(12486), obj2);
+      tmp14Result = callback2(id(12486), obj2);
     }
     obj1[1] = tmp14Result;
-    tmp14Result = tmp14(closure_6, obj1);
-    tmp11 = tmp14;
-    const tmp15 = closure_6;
+    tmp14Result = callback2(closure_6, obj1);
+    tmp11 = callback2;
   }
   tmp = callback3();
   const tmp21 = id(4225)();
@@ -291,8 +287,7 @@ function MainCallScreen(channel) {
 }
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { flex: { flex: 1, alignSelf: "stretch" }, textInVoiceContainer: null, voiceContainer: null, textContainer: null };
-createCacheKey = {};
+const createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.right = undefined;
 createCacheKey[1] = createCacheKey;
@@ -309,7 +304,7 @@ let closure_15 = { code: "function ChannelCallNavigatorTsx1(){const{width,transl
 let closure_16 = { code: "function ChannelCallNavigatorTsx2(){const{interpolate,translateX,width}=this.__closure;var _translateX$get,_translateX;return{backgroundColor:'black',opacity:interpolate((_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0,[-width,0],[0.9,0])};}" };
 let closure_17 = { code: "function ChannelCallNavigatorTsx3(){const{translateX}=this.__closure;var _translateX$get,_translateX;return Math.abs((_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0)>0;}" };
 let closure_18 = { code: "function ChannelCallNavigatorTsx4(isMoving,previous){const{runOnJS,setShouldRenderChat}=this.__closure;if(!isMoving||isMoving===previous)return;runOnJS(setShouldRenderChat)(true);}" };
-let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigator.tsx");
+let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigator.tsx");
 
 export default function ChannelCallNavigator(channel) {
   channel = channel.channel;
@@ -317,15 +312,15 @@ export default function ChannelCallNavigator(channel) {
   if (guild_id == null) {
     guild_id = null;
   }
-  obj = { value: guild_id, children: tmp2(channel(6312).Navigator, { screens: { [ChannelCallScreens.MAIN_CALL_SCREEN]: obj }, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN }) };
+  { value: guild_id, children: callback(channel(6312).Navigator, { screens: { [ChannelCallScreens.MAIN_CALL_SCREEN]: obj }, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN }) };
   obj = {
     headerShown: false,
     ignoreKeyboard: true,
     gestureEnabled: false,
     title: "",
     render() {
-      return closure_1_12(closure_1_20, { channel });
+      return closure_1_12(MainCallScreen, { channel });
     }
   };
-  return closure_12(contextDefault.Provider, obj);
+  return callback(contextDefault.Provider, obj);
 };

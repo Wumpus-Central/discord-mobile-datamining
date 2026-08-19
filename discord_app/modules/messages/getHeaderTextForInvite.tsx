@@ -1,8 +1,8 @@
 // discord_app/modules/messages/getHeaderTextForInvite.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 
-const result = set.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
 export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);

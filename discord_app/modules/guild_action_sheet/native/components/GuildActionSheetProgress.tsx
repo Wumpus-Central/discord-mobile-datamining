@@ -5,17 +5,15 @@ import PressableCard from "../../../../design/components/Card/native/Card.native
 import useIOSCompletionStates from "../../../guild_progress/native/GuildProgressUtils.tsx";
 import GuildProgressOverviewViewDefault from "../../../guild_progress/native/components/GuildProgressOverview.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { title: null, cardStyle: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
+const createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginHorizontal: ThemesDefault.space.PX_16, padding: 0, marginBottom: ThemesDefault.space.PX_24 };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginHorizontal: ThemesDefault.space.PX_16, padding: 0, marginBottom: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx");
 
 export default function GuildActionSheetProgress(guild) {
   guild = guild.guild;

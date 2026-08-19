@@ -1,9 +1,9 @@
 // discord_app/design/components/TextField/native/useTextField.native.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("design/components/TextField/native/useTextField.native.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("design/components/TextField/native/useTextField.native.tsx");
 
 export const useTextFieldState = function useTextFieldState(onClear) {
   ({ value, onChange } = onClear);
@@ -43,12 +43,10 @@ export const useTextFieldState = function useTextFieldState(onClear) {
   return obj;
 };
 export const useTextField = function useTextField(onClear, ref) {
-  onChange = onClear;
-  let obj = callback1;
   ref = callback1.useRef(null);
   onClear = ref;
   const items = [ref, onClear.onClear];
-  obj = {};
+  let obj = {};
   const callback = callback1.useCallback(() => {
     const current = onClear.current;
     if (current != null) {
@@ -63,7 +61,6 @@ export const useTextField = function useTextField(onClear, ref) {
   const merged = Object.assign(onClear);
   obj.onClear = callback;
   onChange = undefined;
-  onClear = undefined;
   obj = undefined;
   callback1 = undefined;
   ({ value, onChange } = obj);

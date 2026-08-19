@@ -1,12 +1,12 @@
 // discord_app/actions/native/CreateChannelModalActionCreators.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
 import _modDef5260 from "../ModalActionCreators.tsx";
-import closure_4 from "../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 
 let closure_3 = createChannelRecord.CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES;
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-const result = set.fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/native/CreateChannelModalActionCreators.tsx");
 
 export default {
   CREATE_CHANNEL_MODAL_KEY: "CREATE_CHANNEL_MODAL_KEY",
@@ -28,13 +28,11 @@ export default {
           hasItem = closure_1_3.has(channel.type);
         }
         if (hasItem) {
-          self(closure_1_2[2]).transitionToChannel(id);
-          const obj = self(closure_1_2[2]);
+          self(dependencyMap[2]).transitionToChannel(id);
+          const obj = self(dependencyMap[2]);
         }
       };
       obj2.pushLazy(self(2007)(8845, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
-      const tmp2 = arg2;
-      const tmp3 = arg3;
       const tmp9 = self(2007)(8845, dependencyMap.paths);
     }
   },

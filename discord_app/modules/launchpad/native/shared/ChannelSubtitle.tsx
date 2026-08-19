@@ -1,12 +1,13 @@
 // discord_app/modules/launchpad/native/shared/ChannelSubtitle.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import Text from "../../../../design/components/Text/native/Text.tsx";
+import getOrParseMessagePreviewMarkupAST from "../../../message_previews/native/MessagePreviewMarkup.tsx";
 import getChannelSubtitleData from "../../../channel/native/getChannelSubtitleData.tsx";
 import getLayoutStyleDefault from "getLayoutStyles.tsx";
 import { SUBTITLE_OPACITY_NORMAL } from "../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function ChannelSubtitle(arg0) {
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, subtitle } = arg0);
@@ -15,7 +16,6 @@ function ChannelSubtitle(arg0) {
   if (null == channelSubtitleData) {
     return null;
   } else {
-    obj = {};
     const merged = Object.assign(textProps);
     obj = { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null };
     obj[0] = channelSubtitleData.subtitle;
@@ -32,12 +32,12 @@ function ChannelSubtitle(arg0) {
       str = "text-muted";
     }
     obj[5] = str;
-    obj.children = tmp(10053).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4734).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
+    obj.children = getOrParseMessagePreviewMarkupAST.renderMessagePreviewMarkup(obj);
+    return jsx(Text.Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
   }
 }
 noopAll;
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/ChannelSubtitle.tsx");
+const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/ChannelSubtitle.tsx");
 
 export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
   ({ subtitle, muted } = arg0);

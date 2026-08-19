@@ -64,6 +64,6 @@ prototype["getApproximateDiscountAmountOff"] = function getApproximateDiscountAm
   }
   return rounded;
 };
-const result = require("set").fileFinishedImporting("modules/billing/records/DiscountRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/billing/records/DiscountRecord.tsx");
 
 export default DiscountRecord;

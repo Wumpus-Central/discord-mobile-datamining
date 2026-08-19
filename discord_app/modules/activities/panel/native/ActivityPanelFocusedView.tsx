@@ -1,18 +1,18 @@
 // discord_app/modules/activities/panel/native/ActivityPanelFocusedView.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import importAllResult from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../../a11y/AccessibilityStore.tsx";
-import closure_5 from "../../../../stores/ChannelStore.tsx";
-import closure_6 from "../../EmbeddedActivitiesStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
+import ensureGuildLoaded from "../../../../stores/ChannelStore.tsx";
+import participantFromServer from "../../EmbeddedActivitiesStore.tsx";
 import { ActivityLayoutMode } from "../../Constants.tsx";
 import ActivityPanelModes from "../ActivityPanelConstants.tsx";
 import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "ActivityPanelNativeConstants.tsx";
 import { ThemeTypes } from "../../../../Constants.tsx";
 import { IS_IOS } from "../../../voice_panel/VoicePanelConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 class BaseActivityPanelFocusedView {
   constructor(arg0) {
     transitionState = global.transitionState;
@@ -51,14 +51,14 @@ class BaseActivityPanelFocusedView {
     tmp7 = require("useAnimatedKeyboardHeight")();
     closure_10 = tmp7;
     lg = require("Themes").radii.lg;
-    obj3 = require("module_4115");
+    obj3 = require("../../../reanimated/ReanimatedRexport.tsx");
     fn = function _() {
       let num = 0;
       if (!wrapperDimensions.isWindowLandscape) {
         num = lg;
       }
       let num2 = 0;
-      if (closure_1_15) {
+      if (IS_IOS) {
         num2 = store.get();
       }
       let num3 = 0;
@@ -71,7 +71,7 @@ class BaseActivityPanelFocusedView {
       if (shown.get()) {
         let height = wrapperOffset.get().y;
       } else {
-        height = tmp3.height;
+        height = styles.height;
       }
       function transitionComplete() {
         let flag = arg0;
@@ -79,11 +79,11 @@ class BaseActivityPanelFocusedView {
           flag = false;
         }
         if (flag) {
-          flag = closure_0 === closure_1_0(closure_1_2[19]).TransitionStates.YEETED;
+          flag = closure_0 === transitionState(updateActivityPanelModeToPIP[19]).TransitionStates.YEETED;
         }
         if (flag) {
-          closure_1_0(closure_1_2[18]).runOnJS(closure_1)();
-          const obj = closure_1_0(closure_1_2[18]);
+          transitionState(updateActivityPanelModeToPIP[18]).runOnJS(closure_1)();
+          const obj = transitionState(updateActivityPanelModeToPIP[18]);
         }
       }
       obj = { transitionState, TransitionStates: transitionState(updateActivityPanelModeToPIP[19]).TransitionStates, runOnJS: transitionState(updateActivityPanelModeToPIP[18]).runOnJS, transitionCleanUp };
@@ -94,12 +94,12 @@ class BaseActivityPanelFocusedView {
       if (stateFromStores) {
         num4 = 0;
         if (obj.get()) {
-          num4 = 1 - wrapperOffset.get().y / tmp3.height;
+          num4 = 1 - wrapperOffset.get().y / styles.height;
         }
       }
       let num6 = 1;
       if (stateFromStores) {
-        let tmp9Result = tmp9(tmp10[20]);
+        let tmp9Result = transitionState(updateActivityPanelModeToPIP[20]);
         let str2 = "animate-always";
         if (obj.get()) {
           str2 = "animate-always";
@@ -107,7 +107,7 @@ class BaseActivityPanelFocusedView {
             str2 = "animate-never";
           }
         }
-        num6 = tmp9Result.withTiming(num4, tmp13, str2, transitionComplete);
+        num6 = tmp9Result.withTiming(num4, closure_1_18, str2, transitionComplete);
       }
       obj = { opacity: num6, transform: null, top: null, width: null, height: null, borderTopStartRadius: null, borderTopEndRadius: null };
       if (stateFromStores) {
@@ -116,7 +116,7 @@ class BaseActivityPanelFocusedView {
         const items = [obj1];
         obj[1] = items;
         let num7 = 0;
-        if (!tmp.isWindowLandscape) {
+        if (!wrapperDimensions.isWindowLandscape) {
           num7 = closure_6.top;
         }
         obj[2] = num7;
@@ -126,7 +126,7 @@ class BaseActivityPanelFocusedView {
         obj[6] = num;
         return obj;
       } else {
-        tmp9Result = tmp9(tmp10[21]);
+        tmp9Result = transitionState(updateActivityPanelModeToPIP[21]);
         if (!wrapperOffset.get().gestureActive) {
           let tmp21 = shown;
           tmp9Result.withSpring(height, tmp21, "animate-always", transitionComplete);
@@ -134,13 +134,13 @@ class BaseActivityPanelFocusedView {
         tmp21 = wrapperOffset;
       }
     };
-    obj = { wrapperDimensions, lg, IS_IOS, animatedKeyboardHeight: tmp7, windowDimensions: tmp3, safeArea: tmp4, shown, wrapperOffset, transitionState, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("module_4115").runOnJS, transitionCleanUp, reduceMotion: stateFromStores, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, REDUCED_MOTION_TIMING: closure_18, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperOffset, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
+    obj = { wrapperDimensions, lg, IS_IOS, animatedKeyboardHeight: tmp7, windowDimensions: tmp3, safeArea: tmp4, shown, wrapperOffset, transitionState, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("../../../reanimated/ReanimatedRexport.tsx").runOnJS, transitionCleanUp, reduceMotion: stateFromStores, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, REDUCED_MOTION_TIMING: closure_18, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, ACTIVITY_LAYOUT_PHYSICS_GESTURE: wrapperOffset, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: shown };
     fn.__closure = obj;
     fn.__workletHash = 3642447648301;
     fn.__initData = closure_20;
     animatedStyle = obj3.useAnimatedStyle(fn);
     closure_12 = animatedStyle;
-    obj5 = require("module_4115");
+    obj5 = require("../../../reanimated/ReanimatedRexport.tsx");
     class T {
       constructor() {
         obj = wrapperOffset;
@@ -173,7 +173,7 @@ class BaseActivityPanelFocusedView {
       const items = [closure_4.wrapper, animatedStyle];
       return items;
     }, items1);
-    obj7 = require("module_4115");
+    obj7 = require("../../../reanimated/ReanimatedRexport.tsx");
     class A {
       constructor() {
         num = 0;
@@ -201,7 +201,7 @@ class BaseActivityPanelFocusedView {
     items3[0] = tmp2.shade;
     items3[1] = animatedStyle1;
     items4 = [, ];
-    items4[0] = jsx(require("module_4115").View, { style: items3, pointerEvents: "none" });
+    items4[0] = jsx(require("../../../reanimated/ReanimatedRexport.tsx").View, { style: items3, pointerEvents: "none" });
     obj3 = { style: memo, nativeID: "activity-panel-focused-view", accessibilityViewIsModal: true, onAccessibilityEscape: callback, children: null };
     obj4 = { style: animatedStyle2, children: null };
     tmp15 = null;
@@ -213,7 +213,7 @@ class BaseActivityPanelFocusedView {
     }
     obj4[1] = tmp15;
     items5 = [, ];
-    items5[0] = tmp14(require("module_4115").View, obj4);
+    items5[0] = tmp14(require("../../../reanimated/ReanimatedRexport.tsx").View, obj4);
     items5[1] = header;
     obj3[4] = items5;
     items4[1] = tmp13(require("AccessibilityView").AccessibilityViewAnimated, obj3);
@@ -226,10 +226,9 @@ let c3 = importAllResult;
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: unpackModuleId, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = { duration: 300 };
-let obj = { wrapper: null, shade: null };
-obj = { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = ThemesDefault.colors.BLACK;
 obj[1] = createCacheKey;
@@ -242,9 +241,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   transitionState = transitionState.transitionState;
   let _require = transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
-  let isWindowLandscape = transitionCleanUp;
   let channel;
-  let hasActivity;
   closure_4 = undefined;
   let memo;
   let memo1;
@@ -258,9 +255,9 @@ const memoResult = importAllResult.memo((transitionState) => {
     return obj;
   }, []);
   channel = stateFromStoresObject.channel;
-  hasActivity = stateFromStoresObject.hasActivity;
+  const hasActivity = stateFromStoresObject.hasActivity;
   _require = undefined;
-  isWindowLandscape = undefined;
+  let isWindowLandscape;
   let obj = _require(channel[14]);
   const tmp3 = isWindowLandscape(channel[13])();
   _require = tmp3;
@@ -276,7 +273,6 @@ const memoResult = importAllResult.memo((transitionState) => {
     if (isWindowLandscape) {
       let obj = closure_1_13;
     } else {
-      obj = { right: null };
       obj = { disable: false, override: null };
       const _Math = Math;
       obj[1] = Math.max(64, lib.right);
@@ -291,16 +287,15 @@ const memoResult = importAllResult.memo((transitionState) => {
   }, []);
   const items2 = [transitionState, transitionCleanUp, callback, hasActivity, memo1, channel, tmp5, memo];
   return hasActivity.useMemo(() => {
-    obj = { transitionState: closure_0, transitionCleanUp: isWindowLandscape, updateActivityPanelModeToPIP: callback, hasActivity, context: isWindowLandscape(channel[25]), header: memo1, children: closure_1_16(isWindowLandscape(channel[28]), obj) };
+    { transitionState: closure_0, transitionCleanUp: isWindowLandscape, updateActivityPanelModeToPIP: callback, hasActivity, context: isWindowLandscape(channel[25]), header: memo1, children: closure_1_16(isWindowLandscape(channel[28]), obj) };
     obj = { channel, layoutMode: callback.FOCUSED, portraitSafeAreasConfig: closure_4, landscapeSafeAreasConfig: memo };
-    return closure_1_16(closure_1_24, obj);
+    return closure_1_16(BaseActivityPanelFocusedView, obj);
   }, items2);
 });
-let result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelFocusedView.tsx");
+let result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelFocusedView.tsx");
 
 export default memoResult;
 export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocusedView(context) {
-  closure_0 = undefined;
   let isWindowLandscape;
   const tmp = isWindowLandscape(1629)();
   closure_0 = tmp;
@@ -317,7 +312,6 @@ export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocu
       if (isWindowLandscape) {
         let obj = closure_1_13;
       } else {
-        obj = { right: null };
         obj = { disable: false, override: null };
         const _Math = Math;
         obj[1] = Math.max(64, lib.right);

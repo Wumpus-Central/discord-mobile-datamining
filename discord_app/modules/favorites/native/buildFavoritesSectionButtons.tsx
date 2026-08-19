@@ -1,5 +1,6 @@
 // discord_app/modules/favorites/native/buildFavoritesSectionButtons.tsx
 import getSystemLocale from "../../../intl/index.native.tsx";
+import Button from "../../../design/void/native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02007_asyncRequireImpl.js";
 import messagesProxyDefault from "../intl/FavoritesGuild.messages.js";
 import ACTION_SHEET_HEIGHT_HALFDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -7,10 +8,10 @@ import NitroWheelIcon from "../../../design/components/Icon/native/redesign/gene
 import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import StarOutlineIcon from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
 import openFavoritesGuildLimitUpsell from "../utils/openFavoritesGuildLimitUpsell.native.tsx";
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 function _addChannelToFavorites() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -156,7 +157,7 @@ function openNoAccessUpsell() {
   const obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj.openLazy(asyncRequireImpl(9983, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
-let result = require("set").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
+let result = require("obj132").fileFinishedImporting("modules/favorites/native/buildFavoritesSectionButtons.tsx");
 
 export default function buildFavoritesSectionButtons(isExperimentEnabled) {
   ({ channelId: require, dismissBetaTag: importDefault } = isExperimentEnabled);
@@ -188,36 +189,31 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
             return applyArgumentsResult;
           })(closure_0);
         };
-        let tmp11 = obj;
-      } else {
-        tmp11 = null;
-        if (!tmp4) {
-          obj = { label: null, IconComponent: null, trailing: null, onPress: null };
-          const intl2 = getSystemLocale.intl;
-          obj[0] = intl2.string(messagesProxyDefault.G9fGlP);
-          obj[1] = StarOutlineIcon.StarOutlineIcon;
-          let tmp15;
-          if (tmp5) {
-            obj1 = { size: null };
-            obj1[0] = tmp12(1297).BetaSizes.SMALL;
-            tmp15 = jsx(tmp12(1297).BetaTag, { size: null });
-          }
-          obj[2] = tmp15;
-          obj[3] = function onPress() {
-            callback();
-            (function addChannelToFavorites(closure_0) {
-              const self = this;
-              const apply = closure_5.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            })(closure_0);
-          };
-          tmp11 = obj;
+      } else if (!tmp4) {
+        obj = { label: null, IconComponent: null, trailing: null, onPress: null };
+        const intl2 = getSystemLocale.intl;
+        obj[0] = intl2.string(messagesProxyDefault.G9fGlP);
+        obj[1] = StarOutlineIcon.StarOutlineIcon;
+        let tmp15;
+        if (tmp5) {
+          obj1 = { size: null };
+          obj1[0] = Button.BetaSizes.SMALL;
+          tmp15 = jsx(Button.BetaTag, { size: null });
         }
+        obj[2] = tmp15;
+        obj[3] = function onPress() {
+          callback();
+          (function addChannelToFavorites(closure_0) {
+            const self = this;
+            const apply = closure_5.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })(closure_0);
+        };
       }
     }
   }

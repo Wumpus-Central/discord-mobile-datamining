@@ -1,6 +1,6 @@
 // discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryFeature.tsx");
 
 export const ContentInventoryFeature = { INBOX: "inbox", GAME_PROFILE: "game_profile", RECENT_ACTIVITY: "recent_activity", OVERLAY_INVITES: "overlay_invites", ADMIN: "admin" };

@@ -1,8 +1,8 @@
 // discord_app/modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");
 
 export const useMediaKeyboardItemsPerRow = function useMediaKeyboardItemsPerRow() {
   const tmp2 = itemsPageSizeRef(4233)();

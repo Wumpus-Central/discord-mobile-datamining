@@ -4,7 +4,7 @@ import inlineStyles from "../../../../../_runtime/06571_inlineStyles.js";
 import getTransformedBadgeColors from "GuildBadgeUtils.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = ["#003E22", "#027D46", "#14A95C"];
@@ -13,7 +13,7 @@ let items = [{ base: 5, tint: 1 }, { base: 3, tint: 1 }, { base: 3, tint: 1 }];
 let closure_7 = ["#FD7531", "#FFAE49", "#FFC781"];
 let closure_8 = [0.45, 0.6, 0.75];
 const items1 = [{ base: 5, tint: 1 }, { base: 3, tint: 1 }, { base: 3, tint: 1 }];
-const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgePottedPlant.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgePottedPlant.tsx");
 
 export const GuildBadgePottedPlant = function GuildBadgePottedPlant(width) {
   let num = width.width;
@@ -26,8 +26,7 @@ export const GuildBadgePottedPlant = function GuildBadgePottedPlant(width) {
   }
   ({ primaryTintColor, secondaryTintColor } = width);
   const merged = Object.assign(width, Object.create(null));
-  let obj = getTransformedBadgeColors;
-  obj = { primaryBaseColors: closure_4, primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items, secondaryBaseColors: closure_7, secondaryTintColor, secondaryTintLuminances: closure_8, secondaryLuminanceWeights: items1 };
+  let obj = { primaryBaseColors: closure_4, primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items, secondaryBaseColors: closure_7, secondaryTintColor, secondaryTintLuminances: closure_8, secondaryLuminanceWeights: items1 };
   const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
   obj = {};
@@ -64,5 +63,5 @@ export const GuildBadgePottedPlant = function GuildBadgePottedPlant(width) {
   items[8] = callback(inlineStyles.Path, { d: "M12 14v1H4v-1h8ZM13 14h-1v-2h1v2Z", fill: str3 });
   items[9] = callback(inlineStyles.Path, { d: "M12 15v1H4v-1h8ZM4 15h-1v-1h1v1ZM13 15h-1v-1h1v1ZM7 9h2V6h4v1H10v2h4v5h-1V10H3v4H2V9h4v-2H3v-1h4v3ZM3 6H2v-1h1v1ZM14 6h-1v-1h1v1ZM2 5H1v-1h1v1ZM15 5h-1v-1h1v1ZM1 4H0V2h1v2ZM9 4h-2v-1h2v1ZM16 4h-1V2h1v2ZM7 3h-1V2h1v1ZM10 3h-1V2h1v1ZM2 2H1V1h1v1ZM6 2h-1V1h1v1ZM11 2h-1V1h1v1ZM15 2h-1V1h1v1ZM5 1H2V0h3v1ZM14 1H11V0h3v1Z", fill: "black" });
   obj.children = items;
-  return closure_3(inlineStyles.Svg, obj);
+  return callback(inlineStyles.Svg, obj);
 };

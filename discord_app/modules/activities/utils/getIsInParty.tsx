@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/getIsInParty.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");
 
 export const getIsInParty = function getIsInParty(tmp8Result, activity) {
   let id;
@@ -21,7 +21,6 @@ export const getIsInParty = function getIsInParty(tmp8Result, activity) {
       }
     }
     tmp2 = null != id1 && tmp8Result.party.id === activity.party.id;
-    const tmp5 = null != id1 && tmp8Result.party.id === activity.party.id;
   }
   return tmp2;
 };

@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx
 import useInitialValueDefault from "../../../../../../../hooks/useInitialValue.tsx";
-import closure_2 from "../../../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../../../_runtime/00019_noop.js";
 
 let closure_3 = function SearchFetchPendingManager() {
   const obj = Object.create(new.target.prototype);
@@ -30,15 +30,15 @@ let closure_3 = function SearchFetchPendingManager() {
   };
   return obj;
 }.prototype;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx");
 
 export const useSearchFetchPendingManager = function useSearchFetchPendingManager(searchContext) {
   importDefault = searchContext;
   const tmp = useInitialValueDefault(() => {
-    if (typeof closure_3 !== "function") {
+    if (typeof ctor !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(closure_3.prototype);
+    const obj = Object.create(ctor.prototype);
     obj.pending = new Set();
     obj.add = function add(arg0) {
       const pending = obj.pending;

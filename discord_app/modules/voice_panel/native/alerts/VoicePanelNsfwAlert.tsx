@@ -1,18 +1,17 @@
 // discord_app/modules/voice_panel/native/alerts/VoicePanelNsfwAlert.tsx
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import { isGuildNSFW } from "../../../../records/GuildRecord.tsx";
-import closure_4 from "../../../../stores/GuildStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNsfwAlert.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNsfwAlert.tsx");
 
 export default function VoicePanelNsfwAlert(guildId) {
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
-  dependencyMap = undefined;
   let obj = guildId(4660);
   dependencyMap = obj.useDismissModalCallback();
   const tmp3 = isGuildNSFW(guild.getGuild(guildId));
@@ -47,7 +46,7 @@ export default function VoicePanelNsfwAlert(guildId) {
   };
   const intl3 = tmp(1236).intl;
   obj1[2] = intl3.string(guildId(1236).t.wVq7uo);
-  const items = [closure_5(guildId(4660).AlertActionButton, obj1, "confirm"), ];
+  const items = [callback(guildId(4660).AlertActionButton, obj1, "confirm"), ];
   const obj2 = {
     variant: "secondary",
     onPress() {
@@ -58,9 +57,9 @@ export default function VoicePanelNsfwAlert(guildId) {
   };
   const intl4 = tmp(1236).intl;
   obj2[2] = intl4.string(guildId(1236).t["/g10LC"]);
-  items[1] = closure_5(guildId(4660).AlertActionButton, obj2, "add-profile-picture");
+  items[1] = callback(guildId(4660).AlertActionButton, obj2, "add-profile-picture");
   obj[0] = items;
   obj[2] = callback(guildId(4660).AlertActions, obj);
-  return closure_5(guildId(4660).AlertModal, obj);
+  return callback(guildId(4660).AlertModal, obj);
 };
 export const VOICE_PANEL_NSFW_KEY = "voice-panel-nsfw";

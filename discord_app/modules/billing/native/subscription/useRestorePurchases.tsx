@@ -1,12 +1,12 @@
 // discord_app/modules/billing/native/subscription/useRestorePurchases.tsx
 import timestampDefault from "../../../debug/Logger.tsx";
-import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 
 let closure_5 = new timestampDefault("useRestorePurchases");
 const tmp2 = new timestampDefault("useRestorePurchases");
-const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useRestorePurchases.tsx");
+const result = require("obj132").fileFinishedImporting("modules/billing/native/subscription/useRestorePurchases.tsx");
 
 export default function useRestorePurchases() {
   let obj = arg0;
@@ -17,8 +17,6 @@ export default function useRestorePurchases() {
   if (flag === undefined) {
     flag = true;
   }
-  closure_1 = undefined;
-  closure_2 = undefined;
   function _restore(closure_4, arg1) {
     const self = this;
     const tmp = callback(function*() {

@@ -1,8 +1,8 @@
 // discord_app/modules/emojis/native/utils/EmojiSourceUtils.tsx
-import closure_2 from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import { NativeModules } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 
-const require = arg1;
+const require = fn;
 function _getEmojiSource() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -123,7 +123,7 @@ function _getEmojiSource() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/emojis/native/utils/EmojiSourceUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emojis/native/utils/EmojiSourceUtils.tsx");
 
 export const getEmojiSource = function getEmojiSource(emoji) {
   const self = this;

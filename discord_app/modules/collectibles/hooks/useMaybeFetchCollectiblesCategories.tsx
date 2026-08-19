@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories.mobile.tsx";
 
-const result = set.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.tsx");
 
 export default useMaybeFetchCollectiblesCategoriesDefault;

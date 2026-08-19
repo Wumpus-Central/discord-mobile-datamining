@@ -1,7 +1,7 @@
 // discord_app/lib/openURL.tsx
-import closure_2 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
+const require = fn;
 function _openURL() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -76,7 +76,7 @@ function _openURL() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("lib/openURL.tsx");
+const result = require("obj132").fileFinishedImporting("lib/openURL.tsx");
 
 export default function openURL() {
   const self = this;

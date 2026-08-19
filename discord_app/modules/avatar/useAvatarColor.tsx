@@ -1,12 +1,11 @@
 // discord_app/modules/avatar/useAvatarColor.tsx
-import closure_3 from "../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../../_runtime/00019_noop.js";
-import closure_6 from "../a11y/AccessibilityStore.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../_runtime/00019_noop.js";
+import maybeApplyNoTextColorForLightCustomTheme from "../a11y/AccessibilityStore.tsx";
 import keys from "../../../_runtime/00644_keys.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
+const require = fn;
 function hasFetchedColors(game_name) {
   return null != keys.getState().palette[game_name];
 }
@@ -42,15 +41,12 @@ function _maybeFetchColors() {
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
-            } else {
-              if (!closure_1_8(closure_0)) {
-                c2 = 1;
-                c1 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_10(tmp5);
-                return obj1;
-              }
-              tmp5 = closure_0;
+            } else if (!closure_1_8(closure_0)) {
+              c2 = 1;
+              c1 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_10(closure_0);
+              return obj1;
             }
           } else if (arg0 === 1) {
             c1 = 3;
@@ -129,8 +125,7 @@ function _fetchColors() {
               dependencyMap = undefined;
               if (!closure_1_7.getState().fetching[callback]) {
                 callback(closure_1_2[5]).batchUpdates(() => closure_1_7.setState((fetching) => {
-                  let obj = { fetching: null };
-                  obj = {};
+                  const obj = {};
                   const merged = Object.assign(fetching.fetching);
                   obj[closure_0] = true;
                   obj[0] = obj;
@@ -141,17 +136,15 @@ function _fetchColors() {
                 c5 = 2;
                 c6 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = callback(closure_1_2[6]).getPaletteForAvatar(tmp35);
+                obj1[0] = callback(closure_1_2[6]).getPaletteForAvatar(callback);
                 return obj1;
               }
-              tmp35 = callback;
             }
           } else {
             if (1 === tmp7) {
               c4 = 0;
               callback(705).batchUpdates(() => closure_1_7.setState((fetching) => {
-                let obj = { fetching: null };
-                obj = {};
+                const obj = {};
                 const merged = Object.assign(fetching.fetching);
                 obj[closure_0] = false;
                 obj[0] = obj;
@@ -168,8 +161,7 @@ function _fetchColors() {
               obj1 = callback(705);
               obj1.batchUpdates(() => {
                 closure_1_7.setState((fetching) => {
-                  let obj = { fetching: null, palette: null };
-                  obj = {};
+                  let obj = {};
                   const merged = Object.assign(fetching.fetching);
                   obj[closure_0] = false;
                   obj[0] = obj;
@@ -212,7 +204,7 @@ function _fetchColors() {
   return applyArgumentsResult;
 }
 keys = keys.create(() => ({ palette: {}, fetching: {} }));
-const result = require("set").fileFinishedImporting("modules/avatar/useAvatarColor.tsx");
+const result = require("obj132").fileFinishedImporting("modules/avatar/useAvatarColor.tsx");
 
 export default function useAvatarColor(arg0, arg1) {
   let flag = arg2;
@@ -223,8 +215,6 @@ export default function useAvatarColor(arg0, arg1) {
   if (flag === undefined) {
     flag = true;
   }
-  dependencyMap = undefined;
-  let stateFromStores;
   const tmp = keys((arg0) => {
     let tmp2;
     if (null != closure_0) {
@@ -234,7 +224,7 @@ export default function useAvatarColor(arg0, arg1) {
   });
   dependencyMap = tmp;
   const items = [closure_6];
-  stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;
@@ -251,20 +241,20 @@ export default function useAvatarColor(arg0, arg1) {
       tmp2 = null == closure_2;
     }
     if (tmp2) {
-      closure_1_10(closure_0);
+      fetchColors(closure_0);
     }
   }, items1);
   const items2 = [tmp, stateFromStores];
   let memo = React.useMemo(() => {
     let mapped;
     if (closure_2 != null) {
-      mapped = closure_2.map((arg0) => {
-        [tmp, tmp2, tmp3] = arg0;
-        let obj = closure_1_1(closure_1_2[9])({ r: tmp, g: tmp2, b: tmp3 });
+      mapped = closure_2.map((item, index) => {
+        [tmp, tmp2, tmp3] = item;
+        let obj = flag(closure_1_2[9])({ r: tmp, g: tmp2, b: tmp3 });
         ({ h, s, l } = obj.toHsl());
         obj = { h, s: s * closure_3, l };
         const toHslResult = obj.toHsl();
-        return closure_1_1(closure_1_2[9])(obj).toHexString();
+        return flag(closure_1_2[9])(obj).toHexString();
       });
     }
     return mapped;
@@ -303,8 +293,6 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
   if (arg2 === undefined) {
     flag = true;
   }
-  dependencyMap = undefined;
-  let stateFromStores;
   const tmp = keys((arg0) => {
     let tmp2;
     if (null != closure_0) {
@@ -314,7 +302,7 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
   });
   dependencyMap = tmp;
   const items = [closure_6];
-  stateFromStores = _initialize.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;
@@ -331,20 +319,20 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
       tmp2 = null == closure_2;
     }
     if (tmp2) {
-      closure_1_10(closure_0);
+      fetchColors(closure_0);
     }
   }, items1);
   const items2 = [tmp, stateFromStores];
   let memo = React.useMemo(() => {
     let mapped;
     if (closure_2 != null) {
-      mapped = closure_2.map((arg0) => {
-        [tmp, tmp2, tmp3] = arg0;
-        let obj = closure_1_1(closure_1_2[9])({ r: tmp, g: tmp2, b: tmp3 });
+      mapped = closure_2.map((item, index) => {
+        [tmp, tmp2, tmp3] = item;
+        let obj = flag(closure_1_2[9])({ r: tmp, g: tmp2, b: tmp3 });
         ({ h, s, l } = obj.toHsl());
         obj = { h, s: s * closure_3, l };
         const toHslResult = obj.toHsl();
-        return closure_1_1(closure_1_2[9])(obj).toHexString();
+        return flag(closure_1_2[9])(obj).toHexString();
       });
     }
     return mapped;

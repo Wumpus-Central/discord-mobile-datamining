@@ -1,11 +1,11 @@
 // discord_app/modules/keyboard/native/KeyboardAwareView.tsx
-import closure_2 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import importAllResult from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "subscribeToKeyboardUIStore.tsx";
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
 const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
@@ -41,13 +41,13 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
   closure_5 = tmp6[1];
   const items = [num];
   const effect = obj.useEffect(() => ref(() => {
-    let systemKeyboardHeight = closure_1_0(closure_1_1[5]).getSystemKeyboardHeight();
+    let systemKeyboardHeight = style(flag[5]).getSystemKeyboardHeight();
     if (0 === systemKeyboardHeight) {
-      let tmp2Result = tmp2(tmp3[6]);
+      let tmp2Result = style(flag[6]);
       const keyboardType = tmp2Result.getKeyboardType();
       num = 0;
-      if (keyboardType !== tmp2(tmp3[7]).KeyboardTypes.SYSTEM) {
-        tmp2Result = tmp2(tmp3[8]);
+      if (keyboardType !== style(flag[7]).KeyboardTypes.SYSTEM) {
+        tmp2Result = style(flag[8]);
         num = tmp2Result.getCustomKeyboardHeight();
       }
       systemKeyboardHeight = num;
@@ -57,6 +57,7 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
       ref.current = bound;
       callback(bound);
     }
+    const obj = style(flag[5]);
   }), items);
   closure_6 = obj.useRef(false);
   const items1 = [flag, first];
@@ -68,11 +69,10 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
         tmp5 = keyboardDuration > 0;
       }
       if (tmp5) {
-        const result = tmp2(tmp3[10]).DeprecatedLayoutAnimationKeyboard(keyboardDuration);
-        const tmp2Result = tmp2(tmp3[10]);
+        const result = style(tmp3[10]).DeprecatedLayoutAnimationKeyboard(keyboardDuration);
+        const tmp2Result = style(tmp3[10]);
       }
       const obj = style(flag[9]);
-      tmp2 = style;
       tmp3 = flag;
     } else {
       tmp.current = true;
@@ -122,6 +122,6 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
     }
   }, items2)} pointerEvents={pointerEvents}>{children}</first>;
 });
-let result = require("set").fileFinishedImporting("modules/keyboard/native/KeyboardAwareView.tsx");
+let result = require("obj132").fileFinishedImporting("modules/keyboard/native/KeyboardAwareView.tsx");
 
 export default memoResult;

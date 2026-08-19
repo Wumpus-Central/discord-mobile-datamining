@@ -1,7 +1,7 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsStore.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import AccessibilityAnnouncer2 from "../../design/shared.tsx";
 import ParticipantTypes from "../calls/CallConstants.tsx";
@@ -13,7 +13,7 @@ let closure_5 = [];
 let closure_6 = {};
 let closure_7 = [];
 let closure_8 = [];
-let closure_9 = 10 * setDefault.Millis.SECOND;
+let closure_9 = 10 * obj132Default.Millis.SECOND;
 let closure_10 = apply.debounce(() => {
   const effectAnnouncement = VoiceChannelEffectAnimationType.getEffectAnnouncement(closure_7);
   const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
@@ -67,7 +67,6 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(dispatcherDefault,
       if (uniqByResult.length > closure_4 + 1) {
         arr = arr.pop();
       }
-      const obj = apply;
     }
   },
   VOICE_CHANNEL_EFFECT_SEND: function handleReceivedVoiceChannelEffect(arg0) {
@@ -86,6 +85,7 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(dispatcherDefault,
       items[HermesBuiltin.arraySpread(items, 0)] = obj;
       callback();
     }
+    tmp = null != emoji && null != animationType;
   },
   VOICE_CHANNEL_EFFECT_SENT_LOCAL: function handleVoiceChannelEffectSentLocal() {
     const date = new Date();
@@ -98,20 +98,18 @@ const voiceChannelEffectsStore = new VoiceChannelEffectsStore(dispatcherDefault,
         const _Date = Date;
         const date1 = new Date(date.getTime() + tmp4 - diff);
       }
-      const obj2 = substr[substr.length - 1];
     }
   },
   VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: function handleTimestampUpdate(cooldownEndsAtMs) {
     const date = new Date(Date.now() + cooldownEndsAtMs.cooldownEndsAtMs);
   }
 });
-const result = set.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsStore.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsStore.tsx");
 
 export default voiceChannelEffectsStore;
 export const clearVoiceChannelEffectForUser = function clearVoiceChannelEffectForUser(arg0) {
   if (null != arg0) {
-    let obj = dispatcherDefault;
-    obj = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: null };
+    const obj = { type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: null };
     obj[1] = arg0;
     obj.dispatch(obj);
   }

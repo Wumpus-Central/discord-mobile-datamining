@@ -8,17 +8,15 @@ import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ container: { padding: 12 }, marginTop: { marginTop: 8 }, button: { marginTop: 8, marginBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
 
 export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const tmp = callback3();
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj = { variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.vytvJF);
   const items = [callback(Text.Text, obj), , ];

@@ -1,22 +1,21 @@
 // discord_app/modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx
-import closure_2 from "../../../stores/PermissionStore.tsx";
+import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
 import ME from "../../../Constants.tsx";
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 
-const require = arg1;
+const require = fn;
 ({ Permissions: c3, GuildFeatures: c4 } = ME);
-let result = require("set").fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
+let result = require("obj132").fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopPreviewVisible.tsx");
 
 export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(features) {
   const _require = features;
-  const result = _UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(_DismissibleContent.DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
-  const obj = _UNSAFE_isDismissibleContentDismissed;
+  const result = require("../../dismissible_content/DismissibleContentUnsafeUtils.tsx").useIsDismissibleContentDismissed_UNSAFE(require("../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx").DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW);
+  const obj = UNSAFE_isDismissibleContentDismissed;
   const tmp = _require;
   const items = [closure_2];
   let flag;
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => {
+  const stateFromStores = require("../../../../discord_common/js/packages/flux/useStateFromStores.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
       canResult = closure_1_2.can(closure_1_3.ADMINISTRATOR, tmp);
@@ -30,7 +29,7 @@ export const useGuildShopPreviewVisible = function useGuildShopPreviewVisible(fe
   if (flag == null) {
     flag = false;
   }
-  const obj2 = _defaultAreStatesEqual;
+  const obj2 = defaultAreStatesEqual;
   let id;
   if (features != null) {
     id = features.id;

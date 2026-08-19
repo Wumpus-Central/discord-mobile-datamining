@@ -4,20 +4,19 @@ import useIsMobileVisualRefreshExperimentEnabledDefault from "../../../themes/ex
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import result4 from "../../../../design/migrations/native/LegacyTokens.tsx";
 import apexExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import { createElement } from "../../../../../_runtime/00019_noop.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 function AnimatedContainer(scale) {
   scale = scale.scale;
   const translateX = scale.translateX;
   const translateY = scale.translateY;
   const animateOnMount = scale.animateOnMount;
-  let stateFromStores;
   let sharedValue;
   let sharedValue1;
   let sharedValue2;
@@ -26,7 +25,7 @@ function AnimatedContainer(scale) {
   const tmp3 = callback2(translateX(translateY[7])("GroupAvatar"));
   let obj = scale(translateY[10]);
   let items = [sharedValue1];
-  stateFromStores = obj.useStateFromStores(items, () => sharedValue1.useReducedMotion);
+  const stateFromStores = obj.useStateFromStores(items, () => sharedValue1.useReducedMotion);
   let num = 1;
   if (animateOnMount) {
     num = 0;
@@ -120,7 +119,6 @@ function GroupMemberCount(count) {
   let obj = apexExperiment;
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GroupAvatar");
   const tmp3 = callback2(useIsMobileVisualRefreshExperimentEnabledDefault("GroupAvatar"));
-  obj = { style: tmp3.avatarWrapper, children: null };
   obj = { style: tmp3.overflowCount, children: null };
   let str = "text-sm/semibold";
   if (manaTypeConsolidationExperiment) {
@@ -130,9 +128,9 @@ function GroupMemberCount(count) {
     }
   }
   const items = ["+", count];
-  obj[1] = closure_7(Text.Text, { variant: str, children: items });
-  obj[1] = closure_6(View, obj);
-  return closure_6(View, obj);
+  obj[1] = callback2(Text.Text, { variant: str, children: items });
+  obj[1] = callback(View, obj);
+  return callback(View, obj);
 }
 function GroupMemberAvatar(guildId) {
   guildId = guildId.guildId;
@@ -163,11 +161,10 @@ let c9 = 38;
 let closure_10 = { damping: 30, stiffness: 400 };
 let closure_11 = { damping: 30, stiffness: 400 };
 let closure_12 = createCacheKey.createStyles((arg0) => {
-  let obj = { groupContainer: { position: "relative" }, shadowContainer: null, shadowContainerBackground: null, shadowContainerBackgroundLight: null, shadowContainerBackgroundDark: null, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, shadow: null, avatar: null, avatarWrapper: null, overflowCount: null };
-  obj = { borderRadius: ThemesDefault.radii.sm, shadowColor: null, shadowOffset: null, shadowRadius: null, shadowOpacity: null, elevation: null };
+  let obj = { borderRadius: ThemesDefault.radii.sm, shadowColor: null, shadowOffset: null, shadowRadius: null, shadowOpacity: null, elevation: null };
   let BLACK;
   if (!arg0) {
-    BLACK = tmp(712).colors.BLACK;
+    BLACK = ThemesDefault.colors.BLACK;
   }
   obj[1] = BLACK;
   obj = undefined;
@@ -181,42 +178,42 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   obj[1] = obj;
   let prop;
   if (!arg0) {
-    prop = tmp(712).colors.CARD_BACKGROUND_DEFAULT;
+    prop = ThemesDefault.colors.CARD_BACKGROUND_DEFAULT;
   }
   obj[2] = { backgroundColor: prop };
   let WHITE;
   if (!arg0) {
-    WHITE = tmp(712).colors.WHITE;
+    WHITE = ThemesDefault.colors.WHITE;
   }
   obj[3] = { backgroundColor: WHITE, opacity: 0.4 };
   let WHITE1;
   if (!arg0) {
-    WHITE1 = tmp(712).colors.WHITE;
+    WHITE1 = ThemesDefault.colors.WHITE;
   }
   obj[4] = { backgroundColor: WHITE1, opacity: 0.15 };
   obj1 = { width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: ThemesDefault.radii.sm, backgroundColor: null };
   let prop1;
   if (!arg0) {
-    prop1 = tmp(712).colors.CARD_BACKGROUND_DEFAULT;
+    prop1 = ThemesDefault.colors.CARD_BACKGROUND_DEFAULT;
   }
   obj1[4] = prop1;
   obj[5] = obj1;
   let prop2;
   if (!arg0) {
-    prop2 = tmp(712).colors.BACKGROUND_MOD_SUBTLE;
+    prop2 = ThemesDefault.colors.BACKGROUND_MOD_SUBTLE;
   }
   obj[6] = { position: "absolute", left: 0, top: 0, right: 0, bottom: 0, backgroundColor: prop2 };
   const obj2 = { width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: null, position: "absolute" };
   let BORDER_SUBTLE;
   if (!arg0) {
-    BORDER_SUBTLE = tmp(712).colors.BORDER_SUBTLE;
+    BORDER_SUBTLE = ThemesDefault.colors.BORDER_SUBTLE;
   }
   obj2[4] = BORDER_SUBTLE;
   obj[7] = obj2;
   obj[8] = { position: "absolute", top: "50%", left: "50%", width: c9, height: c9, marginTop: -19, marginLeft: -19 };
   let BLACK1;
   if (!arg0) {
-    BLACK1 = tmp(712).colors.BLACK;
+    BLACK1 = ThemesDefault.colors.BLACK;
   }
   const obj4 = { shadowColor: BLACK1, shadowOpacity: null, shadowOffset: null, shadowRadius: null };
   let DARK_03_LIGHT_02;
@@ -235,12 +232,12 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   const obj6 = { position: "absolute", width: c9, height: c9, justifyContent: "center", alignItems: "center", borderRadius: 19, backgroundColor: null };
   let prop3;
   if (!arg0) {
-    prop3 = tmp(712).colors.BACKGROUND_BASE_LOWER;
+    prop3 = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
   }
   obj6[6] = prop3;
   obj[11] = obj6;
   const obj7 = { width: c9, height: c9, position: "absolute", borderRadius: 19, backgroundColor: null, display: "flex", alignItems: "center", justifyContent: "center" };
-  const colors = tmp(712).colors;
+  const colors = ThemesDefault.colors;
   obj7[4] = arg0 ? colors.BACKGROUND_MOD_SUBTLE : colors.BACKGROUND_BASE_LOWER;
   obj[12] = obj7;
   return obj;
@@ -254,17 +251,14 @@ items1[2] = items3;
 const items4 = [{ translateY: -14, translateX: -14, scale: 0.875 }, { translateY: 14, translateX: 14, scale: 0.875 }, { translateY: -18, translateX: 18, scale: 0.625 }, { translateY: 18, translateX: -18, scale: 0.625 }];
 items1[3] = items4;
 let closure_14 = { code: "function GroupAvatarTsx1(){const{withTiming,opacityAnimation,useReducedMotion,translateXAnimation,withSpring,SPRING_OPTIONS_POSITION,translateYAnimation,scaleAnimation,SPRING_OPTIONS_SCALE}=this.__closure;return{opacity:withTiming(opacityAnimation.get()),transform:[{translateX:useReducedMotion?translateXAnimation.get():withSpring(translateXAnimation.get(),SPRING_OPTIONS_POSITION)},{translateY:useReducedMotion?translateYAnimation.get():withSpring(translateYAnimation.get(),SPRING_OPTIONS_POSITION)},{scale:useReducedMotion?scaleAnimation.get():withSpring(scaleAnimation.get(),SPRING_OPTIONS_SCALE)}]};}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx");
 
 export default function GroupAvatar(users) {
   users = users.users;
   const guildId = users.guildId;
   let ref;
   let React;
-  c4 = undefined;
-  let num;
-  closure_6 = undefined;
-  let tmp3 = callback2(guildId(ref[7])("GroupAvatar"));
+  const tmp3 = callback2(guildId(ref[7])("GroupAvatar"));
   let obj = users(ref[8]);
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme } = themeContext);
@@ -277,19 +271,15 @@ export default function GroupAvatar(users) {
   React = users.length > 4;
   const diff = users.length - 3;
   c4 = diff;
-  num = 2;
-  if (10 <= diff) {
-    num = 1;
-  }
   closure_6 = guildId(ref[9])(ref);
   obj = { style: tmp3.groupContainer, children: null };
   const items = [tmp3.shadowContainer, ];
-  const mapped = items1[Math.max(Math, 0, Math.min(Math, items1.length - 1, users.length - 1))].map((arg0, arg1) => {
-    if (null == users[arg1]) {
+  const mapped = items1[Math.max(Math, 0, Math.min(Math, items1.length - 1, users.length - 1))].map((item, index) => {
+    if (null == users[index]) {
       return null;
     } else {
       let obj = {};
-      const merged = Object.assign(arg0);
+      const merged = Object.assign(item);
       obj.key = tmp.id;
       obj.animateOnMount = callback;
       obj.shadow = arr.length >= 2;
@@ -297,14 +287,12 @@ export default function GroupAvatar(users) {
         obj = { guildId: null, user: null };
         obj[0] = guildId;
         obj[1] = tmp;
-        let tmp13 = callback(closure_1_17, obj);
-        tmp3(tmp4, obj, tmp13);
+        let tmp13 = callback(GroupMemberAvatar, obj);
+        <AnimatedContainer guildId={null} user={null}>{tmp13}</AnimatedContainer>;
       }
       obj = { count: null };
       obj[0] = c4;
-      tmp13 = callback(closure_1_16, obj);
-      tmp3 = closure_1_8;
-      tmp4 = closure_1_15;
+      tmp13 = callback(GroupMemberCount, obj);
     }
   });
   if (null == primaryColor) {
@@ -322,7 +310,7 @@ export default function GroupAvatar(users) {
   obj1[1] = tmp11Result;
   items1 = [closure_6(c4, obj1), closure_6(c4, { style: tmp3.gradientImageBorder })];
   obj[1] = items1;
-  const items2 = [closure_7(c4, obj), mapped];
+  const items2 = [callback2(c4, obj), mapped];
   obj[1] = items2;
-  return closure_7(c4, obj);
+  return callback2(c4, obj);
 };

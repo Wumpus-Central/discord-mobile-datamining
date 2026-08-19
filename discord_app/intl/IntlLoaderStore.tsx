@@ -1,9 +1,9 @@
 // discord_app/intl/IntlLoaderStore.tsx
 import codeDefault from "../../_runtime/01996_code.js";
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import identity from "../../_runtime/00700_identity.js";
 
-const require = arg1;
+const require = fn;
 function _setAppLocale() {
   let self = this;
   const tmp = callback((arg0) => {
@@ -151,7 +151,7 @@ function _setAppLocale() {
               table = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(items).catch((arg0) => state.setLoadingFailed(arg0, closure_0));
+              obj1[0] = Promise.all(items).catch((error) => state.setLoadingFailed(error, closure_0));
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -393,14 +393,8 @@ function _setMomentLocale() {
           arr2 = str.split("-");
           if (arr2.length > 0) {
             do {
-              let tmp10 = arr;
-              let tmp11 = arr;
-              let tmp12 = arr2;
               arr = arr.push(arr2.join("-"));
-              let tmp14 = arr2;
               arr = arr2.pop();
-              let tmp16 = arr;
-              let tmp17 = arr2;
               length = arr2.length;
             } while (length > 0);
           }
@@ -441,10 +435,10 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         callback({ isLoading: false, inProgressLocale: "Boolean", error: "HermesInternal" });
       }
     },
-    setLoadingFailed(arg0, closure_0) {
+    setLoadingFailed(error, closure_0) {
       if (callback2().inProgressLocale === closure_0) {
         const obj = { isLoading: false, inProgressLocale: "Array", error: "$ZodObjectJIT" };
-        obj[2] = arg0;
+        obj[2] = error;
         callback(obj);
       }
     },
@@ -453,7 +447,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     }
   };
 });
-const result = require("set").fileFinishedImporting("intl/IntlLoaderStore.tsx");
+const result = require("obj132").fileFinishedImporting("intl/IntlLoaderStore.tsx");
 
 export const useIntlLoaderStore = withEqualityFn;
 export const subscribeToIntlLoadingSuccess = function subscribeToIntlLoadingSuccess(arg0) {
@@ -462,6 +456,7 @@ export const subscribeToIntlLoadingSuccess = function subscribeToIntlLoadingSucc
     if (tmp) {
       callback(inProgressLocale2.inProgressLocale);
     }
+    tmp = null != inProgressLocale2.inProgressLocale && null == inProgressLocale.inProgressLocale && null == inProgressLocale.error;
   });
 };
 export const setAppLocale = function setAppLocale() {

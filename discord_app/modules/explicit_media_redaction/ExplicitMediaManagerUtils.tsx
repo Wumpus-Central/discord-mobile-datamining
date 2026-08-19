@@ -1,7 +1,7 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
 
 export const hasAttachmentsEmbedsComponentsOrSnapshots = function hasAttachmentsEmbedsComponentsOrSnapshots(message) {
   if (null == message) {
@@ -31,8 +31,8 @@ export const hasAttachmentsEmbedsComponentsOrSnapshots = function hasAttachments
       if (tmp4) {
         let someResult;
         if (obj != null) {
-          someResult = obj.some((message) => {
-            message = message.message;
+          someResult = obj.some((item, index) => {
+            const message = item.message;
             let tmp = null != message.attachments;
             if (tmp) {
               tmp = message.attachments.length > 0;

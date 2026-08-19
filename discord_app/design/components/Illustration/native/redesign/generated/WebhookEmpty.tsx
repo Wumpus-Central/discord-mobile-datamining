@@ -5,13 +5,12 @@ import getIllustrationSource from "../../index.tsx";
 import { Image } from "../../../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/WebhookEmpty.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/WebhookEmpty.tsx");
 
 export const getWebhookEmptySource = function getWebhookEmptySource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
       return callback(16063);
     },
@@ -25,8 +24,7 @@ export const getWebhookEmptySource = function getWebhookEmptySource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useWebhookEmptySource = function useWebhookEmptySource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
       return callback(16063);
     },
@@ -40,19 +38,7 @@ export const useWebhookEmptySource = function useWebhookEmptySource() {
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const WebhookEmpty = function WebhookEmpty(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
-    dark() {
-      return callback(16063);
-    },
-    darker() {
-      return callback(16064);
-    },
-    light() {
-      return callback(16065);
-    }
-  };
-  obj = {};
+  const obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

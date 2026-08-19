@@ -4,10 +4,10 @@ import inlineStyles from "../../../../../../_runtime/06571_inlineStyles.js";
 import inlineStylesDefault from "../../../../../../_runtime/06571_inlineStyles.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/icons/SkipBackwardIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/icons/SkipBackwardIcon.tsx");
 
 export const SkipBackwardIcon = function SkipBackwardIcon(width) {
   let num = width.width;

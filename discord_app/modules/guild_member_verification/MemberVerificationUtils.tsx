@@ -1,12 +1,13 @@
 // discord_app/modules/guild_member_verification/MemberVerificationUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
+import isDiscordFrontendDevelopment from "../../utils/GlobalUtils.tsx";
 import MAX_RESULTS_PER_PAGE from "MemberVerificationTypes.tsx";
 import items from "MemberVerificationConstants.tsx";
 
 ({ AUTOMATIC_APPROVAL_FORM_FIELDS: obj1, MANUAL_APPROVAL_FORM_FIELDS: c3 } = items);
 const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
 
 export const isValidFormResponse = function isValidFormResponse(required) {
   ({ response, field_type } = required);
@@ -15,13 +16,13 @@ export const isValidFormResponse = function isValidFormResponse(required) {
       return false;
     } else {
       if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS !== field_type) {
-        if (tmp4(4200).VerificationFormFieldTypes.VERIFICATION !== field_type) {
-          if (tmp4(4200).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
-            if (tmp4(4200).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
-              if (tmp4(4200).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+        if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION !== field_type) {
+          if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
+            if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.PARAGRAPH !== field_type) {
+              if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
                 return typeof response === "number";
               } else {
-                return tmp4(1370).assertNever(field_type);
+                return isDiscordFrontendDevelopment.assertNever(field_type);
               }
             }
           }
@@ -40,7 +41,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
   }
 };
 export const removeInternalFields = function removeInternalFields(arr) {
-  return arr.filter((field_type) => field_type.field_type !== callback(table[2]).VerificationFormFieldTypes.VERIFICATION);
+  return arr.filter((item, index) => item.field_type !== callback(table[2]).VerificationFormFieldTypes.VERIFICATION);
 };
 export const isAutomaticApprovalFormField = function isAutomaticApprovalFormField(field_type) {
   field_type = undefined;

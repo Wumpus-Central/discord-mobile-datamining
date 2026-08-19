@@ -1,12 +1,13 @@
 // discord_app/design/void/Form/native/FormSelect.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { Fonts } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import "createCacheKey";
 import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
 
-let require = arg1;
+let require = fn;
 function OptionButton(item) {
   item = item.item;
   ({ selected, onPress } = item);
@@ -35,31 +36,26 @@ function OptionButton(item) {
   obj[3] = items1;
   obj[4] = callback;
   obj = { variant: "text-sm/semibold", style: selected ? tmp.labelSelected : tmp.label, children: str.toUpperCase() };
-  obj[5] = closure_5(item(onPress[8]).Text, obj);
-  return closure_5(item(onPress[7]).PressableOpacity, obj);
+  obj[5] = callback(item(onPress[8]).Text, obj);
+  return callback(item(onPress[7]).PressableOpacity, obj);
 }
 function extractKey(value) {
   return "" + value.value;
 }
 ({ View: c3, FlatList: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { button: null, buttonSelected: null, label: null, labelSelected: null };
-createCacheKey = { minWidth: 95, height: 36, margin: 4, borderRadius: 3, justifyContent: "center", alignItems: "center", paddingHorizontal: 10, borderWidth: StyleSheet.hairlineWidth, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.12, shadowRadius: 6, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let createCacheKey = { minWidth: 95, height: 36, margin: 4, borderRadius: 3, justifyContent: "center", alignItems: "center", paddingHorizontal: 10, borderWidth: StyleSheet.hairlineWidth, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.12, shadowRadius: 6, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-const obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[2] = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, color: ThemesDefault.colors.TEXT_MUTED };
-const obj2 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[3] = { color: ThemesDefault.unsafe_rawColors.BRAND_100 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const obj4 = { row: { paddingVertical: 12, paddingHorizontal: 16 }, label: null, optionsWrapper: null, optionsContainer: null };
-const obj3 = { color: ThemesDefault.unsafe_rawColors.BRAND_100 };
 obj4[1] = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: ThemesDefault.colors.TEXT_MUTED };
 obj4[2] = { marginHorizontal: -16, paddingTop: 20, marginTop: -20, paddingBottom: 8, marginBottom: -8 };
 obj4[3] = { paddingHorizontal: 12 };
 let closure_9 = createCacheKey.createStyles(obj4);
-const obj5 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: ThemesDefault.colors.TEXT_MUTED };
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormSelect.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormSelect.tsx");
 
 export default function FormSelect(onChange) {
   ({ label, value } = onChange);
@@ -83,7 +79,7 @@ export default function FormSelect(onChange) {
     extraData: value,
     keyExtractor: extractKey,
     renderItem(item) {
-      return closure_1_5(closure_1_8, {
+      return closure_1_5(OptionButton, {
         item: item.item,
         selected: item.item.value === closure_0,
         onPress(value) {
@@ -101,5 +97,5 @@ export default function FormSelect(onChange) {
   };
   items[1] = callback(closure_4, obj);
   obj[1] = items;
-  return closure_6(closure_3, obj);
+  return callback2(closure_3, obj);
 };

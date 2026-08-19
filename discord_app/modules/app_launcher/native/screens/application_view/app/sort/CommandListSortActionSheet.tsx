@@ -9,15 +9,13 @@ import ArrowsUpDownIcon from "../../../../../../../design/components/Icon/native
 import { CommandListSortOrder } from "../../../../../AppLauncherConstants.tsx";
 import { jsx } from "../../../../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx");
 
 export default function CommandListSortActionSheet(sortOrder) {
   ({ onClose: require, onSortOptionPress: importDefault } = sortOrder);
-  let obj = { startExpanded: true, header: null, children: null };
-  obj = { leading: null, title: null };
-  obj = { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT };
+  const obj = { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT };
   obj[0] = jsx(ArrowsUpDownIcon.ArrowsUpDownIcon, { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT });
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.yeYaHf);
@@ -41,9 +39,9 @@ export default function CommandListSortActionSheet(sortOrder) {
   obj3[0] = intl3.string(getSystemLocale.t.m8xsti);
   obj3[1] = CommandListSortOrder.ALPHABETICAL;
   items[1] = obj3;
-  obj1[3] = items.map((label) => {
-    const value = label.value;
-    return callback3(callback(table[9]).TableRadioRow, { label: label.label, value }, value);
+  obj1[3] = items.map((item, index) => {
+    const value = item.value;
+    return callback3(callback(table[9]).TableRadioRow, { label: item.label, value }, value);
   });
   obj[2] = jsx(context.TableRadioGroup, {
     hasIcons: false,

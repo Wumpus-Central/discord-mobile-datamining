@@ -9,15 +9,15 @@ import FormSeparatorDefault from "FormSeparator.tsx";
 import useRoleSubscriptionSettingsDisabled from "../../RoleSubscriptionSettingsDisabledContext.tsx";
 import pickImage from "FormImagePicker.tsx";
 import HeaderDefault from "GuildRoleSubscriptionTierEditStep.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../RoleTierEditStore.tsx";
+import usePriceTiers from "../RoleTierEditStore.tsx";
 import MAX_SUBSCRIPTION_TIERS from "../../GuildRoleSubscriptionsConstants.tsx";
 import { UPLOAD_BANNER_SIZE } from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 class Content {
   constructor(arg0) {
     ({ cover, setCover, description, setDescription } = global);
@@ -63,7 +63,7 @@ noopAll;
 ({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: error } = MAX_SUBSCRIPTION_TIERS);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: 16 }, paddedContainer: { paddingHorizontal: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx");
 
 export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   [tmp2, tmp3] = callback(closure_5.useGroupCoverState(), 2);

@@ -4,34 +4,26 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Text from "../../../components/Text/native/Text.tsx";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { base: null, danger: null, info: null, brand: null, expressive: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4, paddingVertical: 2 };
+let createCacheKey = { borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 4, paddingVertical: 2 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
-const obj1 = { backgroundColor: ThemesDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_260 };
-const obj3 = { backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_260 };
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
 const obj5 = { text: { textAlign: "center", textTransform: "uppercase" }, dangerText: null, infoText: null, brandText: null, expressiveText: null };
-const obj4 = { backgroundColor: ThemesDefault.colors.CONTROL_EXPRESSIVE_BACKGROUND_DEFAULT };
 obj5[1] = { color: ThemesDefault.colors.WHITE };
 createCacheKey = { color: ThemesDefault.colors.WHITE };
 obj5[2] = createCacheKey;
-const obj6 = { color: ThemesDefault.colors.WHITE };
 obj5[3] = { color: ThemesDefault.unsafe_rawColors.BRAND_560 };
-const obj8 = { color: ThemesDefault.unsafe_rawColors.BRAND_560 };
 obj5[4] = { color: ThemesDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
 let closure_5 = createCacheKey.createStyles(obj5);
 const obj10 = { DANGER: "danger", INFO: "info", BRAND: "brand", EXPRESSIVE: "expressive", NORMAL: "normal" };
-const obj9 = { color: ThemesDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("design/void/Badges/native/Badges.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Badges/native/Badges.tsx");
 
 export const BadgeColors = obj10;
 export const TextBadge = function TextBadge(color) {

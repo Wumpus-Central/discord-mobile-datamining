@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import closure_3 from "../../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../../_runtime/00019_noop.js";
 import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkConstants.tsx";
 import { jsx } from "../../../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_6 = createCacheKey.createStyles({ image: { width: 231, height: 160 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx");
 
 export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(platformType) {
   let navigation;

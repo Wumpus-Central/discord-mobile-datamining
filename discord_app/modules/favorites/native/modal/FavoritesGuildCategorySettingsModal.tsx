@@ -1,32 +1,26 @@
 // discord_app/modules/favorites/native/modal/FavoritesGuildCategorySettingsModal.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../FavoriteStore.tsx";
+import initializeFromUserSettings from "../../FavoriteStore.tsx";
 import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_7 } from "../../FavoritesConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function FavoritesGuildCategorySettings(categoryId) {
   categoryId = categoryId.categoryId;
   const onGoBack = categoryId.onGoBack;
   let navigation;
-  let stateFromStores;
-  let stateFromStores1;
-  c5 = undefined;
   let trimmed;
-  closure_7 = undefined;
-  let callback;
-  callback = undefined;
   let callback1;
   const tmp = callback1();
   let obj = categoryId(navigation[8]);
   navigation = obj.useNavigation();
   obj1 = categoryId(navigation[9]);
   const items = [trimmed];
-  stateFromStores = obj1.useStateFromStores(items, () => {
+  const stateFromStores = obj1.useStateFromStores(items, () => {
     let str = trimmed.getNickname(categoryId);
     if (str == null) {
       str = "";
@@ -35,7 +29,7 @@ function FavoritesGuildCategorySettings(categoryId) {
   });
   let obj2 = categoryId(navigation[9]);
   const items1 = [trimmed];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => null != trimmed.getCategoryRecord(categoryId));
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => null != trimmed.getCategoryRecord(categoryId));
   let obj3 = stateFromStores1;
   [str, tmp8] = stateFromStores(stateFromStores1.useState(stateFromStores), 2);
   c5 = tmp8;
@@ -47,9 +41,9 @@ function FavoritesGuildCategorySettings(categoryId) {
   const tmp7 = stateFromStores(stateFromStores1.useState(stateFromStores), 2);
   const tmp11 = categoryId(navigation[10]).isFavoritesGuildCategoryNameValid(str) && trimmed !== stateFromStores;
   closure_7 = tmp11;
-  callback = obj3.useRef(false);
+  obj3.useRef(false);
   const items3 = [onGoBack];
-  callback = obj3.useCallback(() => {
+  const callback = obj3.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
       onGoBack();
@@ -75,19 +69,18 @@ function FavoritesGuildCategorySettings(categoryId) {
       headerRight(arg0) {
         const obj = {};
         const merged = Object.assign(arg0);
-        const intl = closure_1_0(closure_1_2[13]).intl;
-        obj.label = intl.string(closure_1_0(closure_1_2[13]).t["R3BPH+"]);
+        const intl = categoryId(navigation[13]).intl;
+        obj.label = intl.string(categoryId(navigation[13]).t["R3BPH+"]);
         obj.onPress = closure_10;
         obj.disabled = !closure_7;
-        return closure_1_8(closure_1_0(closure_1_2[12]).HeaderTextButton, obj);
+        return closure_1_8(categoryId(navigation[12]).HeaderTextButton, obj);
       }
     });
   }, items6);
   const items7 = [categoryId, callback, stateFromStores];
-  obj = { style: tmp.container, contentContainerStyle: tmp.content, keyboardShouldPersistTaps: "handled", children: null };
   const callback2 = obj3.useCallback(() => {
-    let obj = onGoBack(navigation[14]);
-    obj = { title: null, body: null, confirmText: null, confirmColor: null, cancelText: null, onConfirm: null };
+    onGoBack(navigation[14]);
+    let obj = { title: null, body: null, confirmText: null, confirmColor: null, cancelText: null, onConfirm: null };
     const intl = categoryId(navigation[13]).intl;
     obj[0] = intl.string(categoryId(navigation[13]).t["4VpUw8"]);
     const intl2 = categoryId(navigation[13]).intl;
@@ -99,7 +92,7 @@ function FavoritesGuildCategorySettings(categoryId) {
     const intl4 = categoryId(navigation[13]).intl;
     obj[4] = intl4.string(categoryId(navigation[13]).t["ETE/oC"]);
     obj[5] = function onConfirm() {
-      const result = closure_1_0(closure_1_2[11]).removeFavoriteCategory(closure_0);
+      const result = categoryId(navigation[11]).removeFavoriteCategory(closure_0);
       callback();
     };
     obj.show(obj);
@@ -128,13 +121,11 @@ function FavoritesGuildCategorySettings(categoryId) {
   return callback(c5, obj);
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, content: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { padding: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildCategorySettingsModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildCategorySettingsModal.tsx");
 
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
@@ -144,7 +135,7 @@ export default function FavoritesGuildCategorySettingsModal(categoryId) {
   const intl = categoryId(1236).intl;
   obj[1] = intl.string(categoryId(1236).t["/uELTj"]);
   obj[2] = function render() {
-    return closure_1_8(closure_1_11, { categoryId, onGoBack });
+    return closure_1_8(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
   return callback(onGoBack(9930), obj);
 };

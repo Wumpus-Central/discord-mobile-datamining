@@ -1,31 +1,28 @@
 // discord_app/modules/guild_onboarding_home/native/ResourceChannelButtons.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { wrapper: null, buttonWrapper: null, spacer: null, iconColor: null };
-createCacheKey = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { width: 8 };
 createCacheKey[3] = { color: ThemesDefault.colors.WHITE };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
 
 export default function ResourceChannelButtons(channel) {
   channel = channel.channel;
-  let navigation;
   let first;
   let callback;
   let React;
   let obj = channel(first[6]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const tmp4 = callback3();
   obj1 = channel(first[7]);
   const tmp5 = callback(obj1.usePreviousAndNextResourceChannel(channel.guild_id, channel.id), 2);
@@ -53,14 +50,14 @@ export default function ResourceChannelButtons(channel) {
         return callback(first.channelId);
       };
       obj[1] = callback2(tmp(tmp2[9]).Button, obj1);
-      tmp11 = callback2(tmp10, obj);
+      tmp11 = callback2(View, obj);
     }
     const items1 = [tmp11, , ];
     let tmp14 = null != first && null != tmp7;
     if (tmp14) {
       const obj3 = { style: null };
       obj3[0] = tmp4.spacer;
-      tmp14 = callback2(tmp10, obj3);
+      tmp14 = callback2(View, obj3);
     }
     items1[1] = tmp14;
     let tmp16 = null != tmp7;
@@ -77,12 +74,11 @@ export default function ResourceChannelButtons(channel) {
         return callback(channelId.channelId);
       };
       obj4[1] = callback2(tmp(tmp2[9]).Button, obj5);
-      tmp16 = callback2(tmp10, obj4);
+      tmp16 = callback2(View, obj4);
     }
     items1[2] = tmp16;
     obj[1] = items1;
-    let tmp9Result = closure_7(tmp10, obj);
-    const tmp9 = closure_7;
+    let tmp9Result = callback(View, obj);
   } else {
     tmp9Result = null;
   }

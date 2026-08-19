@@ -1,11 +1,11 @@
 // discord_app/modules/guild_config_gates/GuildConfigGates.tsx
 import importDefaultResult1 from "GuildConfigGatesStore.tsx";
 import { Endpoints } from "../../Constants.tsx";
-import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import "initialize";
 import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = arg1;
-initialize = {
+const require = fn;
+const initialize = {
   getQueryId(arg0) {
     let tmp = arg0;
     if (arg0 == null) {
@@ -18,10 +18,9 @@ initialize = {
     if (null != arg0) {
       let gates = null;
       if (importDefaultResult1.hasLoaded(arg0)) {
-        gates = obj.getGates(arg0);
+        gates = importDefaultResult1.getGates(arg0);
       }
       tmp = gates;
-      obj = importDefaultResult1;
     }
     return tmp;
   },
@@ -62,7 +61,7 @@ let closure_3 = importDefaultResult((arg0) => {
             closure_3 = tmp2;
             let lib;
             if (null != callback) {
-              const HTTP = callback(closure_1_2[4]).HTTP;
+              const HTTP = callback(dependencyMap[4]).HTTP;
               c5 = 1;
               c6 = 1;
               obj1 = { value: null, done: false };
@@ -116,7 +115,7 @@ initialize[2] = function() {
   return applyArgumentsResult;
 };
 let closure_6 = initialize.createFetchStore(importDefaultResult1, initialize);
-const result = require("set").fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
 
 export const useGuildVerificationRoleEnabled = function useGuildVerificationRoleEnabled(arg0) {
   const data = callback(arg0).data;

@@ -1,5 +1,5 @@
 // discord_app/modules/saved_messages/ForLaterExperiment.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import hasForLaterPremiumType2 from "hasForLaterPremiumType.tsx";
 import hasForLaterPremiumTypeDefault from "hasForLaterPremiumType.tsx";
@@ -13,8 +13,8 @@ let closure_5 = ApexExperiment.createApexExperiment({ name: "2026-03-message-boo
 class ForLaterFreemiumConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
-    tmp2 = require("module_38")(null != require.b, "Config is missing bookmark limit");
-    tmp3 = require("module_38")(null != require.r, "Config is missing reminder limit");
+    tmp2 = require("../../../_runtime/metro/00038__.js")(null != require.b, "Config is missing bookmark limit");
+    tmp3 = require("../../../_runtime/metro/00038__.js")(null != require.r, "Config is missing reminder limit");
     obj.enabled = global;
     ({ b: tmp.bookmarkLimit, r: tmp.reminderLimit } = require);
     return obj;
@@ -57,7 +57,7 @@ obj2[2] = (arg0) => {
 };
 obj[3] = obj2;
 let closure_7 = ApexExperiment.createApexExperiment(obj);
-const result = set.fileFinishedImporting("modules/saved_messages/ForLaterExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/saved_messages/ForLaterExperiment.tsx");
 
 export const useIsForLaterExperimentOn = function useIsForLaterExperimentOn(LongPressMessageActionSheet) {
   let obj = { location: LongPressMessageActionSheet };
@@ -68,12 +68,12 @@ export const useIsForLaterExperimentOn = function useIsForLaterExperimentOn(Long
   }
   return enabled;
 };
-export const isForLaterExperimentOn = function isForLaterExperimentOn(MessageRemindersNotificationManager) {
-  let obj = { location: MessageRemindersNotificationManager };
+export const isForLaterExperimentOn = function isForLaterExperimentOn(callback) {
+  let obj = { location: callback };
   let enabled = store2.getConfig(obj).enabled;
   if (!enabled) {
     obj = { location: null };
-    obj[0] = MessageRemindersNotificationManager;
+    obj[0] = callback;
     enabled = store.getConfig(obj).enabled;
   }
   return enabled;
@@ -82,8 +82,7 @@ export const isForLaterFreemiumExperimentOn = function isForLaterFreemiumExperim
   return store2.getConfig({ location }).enabled;
 };
 export const useHasForLaterAccess = function useHasForLaterAccess(ForLaterOpenActionButton) {
-  let obj = { location: ForLaterOpenActionButton };
-  obj = { location: ForLaterOpenActionButton };
+  const obj = { location: ForLaterOpenActionButton };
   let enabled = store2.useConfig(obj).enabled;
   if (!enabled) {
     let enabled1 = store.useConfig(obj).enabled;
@@ -95,8 +94,7 @@ export const useHasForLaterAccess = function useHasForLaterAccess(ForLaterOpenAc
   return enabled;
 };
 export const hasForLaterAccess = function hasForLaterAccess(addOrUpdateSavedMessage) {
-  let obj = { location: addOrUpdateSavedMessage };
-  obj = { location: addOrUpdateSavedMessage };
+  const obj = { location: addOrUpdateSavedMessage };
   let enabled = store2.getConfig(obj).enabled;
   if (!enabled) {
     let enabled1 = store.getConfig(obj).enabled;

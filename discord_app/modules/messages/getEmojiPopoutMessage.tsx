@@ -1,12 +1,12 @@
 // discord_app/modules/messages/getEmojiPopoutMessage.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import getEmojiSourceData from "../emojis/records/ExpressionSourceRecord.tsx";
 
 const EmojiSourceDataTypes = getEmojiSourceData.EmojiSourceDataTypes;
 let closure_3 = { DEFAULT: "Custom Emoji Popout", CROSS_SERVER: "Custom Emoji Popout (Cross-Server)", UPSELL_CURRENT_SERVER_JOINED: "Custom Emoji Popout (Upsell Joined Current-Server)", UPSELL_CROSS_SERVER_JOINED: "Custom Emoji Popout (Upsell Joined Cross-Server)", UPSELL_CROSS_SERVER_JOINABLE: "Custom Emoji Popout (Upsell Not-Joined Cross-Server)", UPSELL_CROSS_SERVER_UNJOINABLE: "Custom Emoji Popout (Soft Upsell)" };
 let obj = { GET_PREMIUM: "GET_PREMIUM", JOIN_GUILD: "JOIN_GUILD", UNAVAILABLE: "UNAVAILABLE" };
-const result = set.fileFinishedImporting("modules/messages/getEmojiPopoutMessage.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/getEmojiPopoutMessage.tsx");
 
 export const EmojiPopoutType = obj;
 export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
@@ -25,7 +25,7 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
     if (isPremium2) {
       if (!hasJoinedEmojiSourceGuild2) {
         if (isDiscoverable2) {
-          let DEFAULT = tmp57.CROSS_SERVER;
+          let DEFAULT = constants.CROSS_SERVER;
         }
         ({ isPremium: isPremium3, hasJoinedEmojiSourceGuild: hasJoinedEmojiSourceGuild3 } = sourceType);
         let isDiscoverable3 = !hasJoinedEmojiSourceGuild3;
@@ -60,7 +60,7 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
     if (!isPremium2) {
       if (hasJoinedEmojiSourceGuild2) {
         if (!isUnusableRoleSubscriptionEmoji2) {
-          DEFAULT = emojiComesFromCurrentGuild2 ? tmp57.UPSELL_CURRENT_SERVER_JOINED : tmp57.UPSELL_CROSS_SERVER_JOINED;
+          DEFAULT = emojiComesFromCurrentGuild2 ? constants.UPSELL_CURRENT_SERVER_JOINED : constants.UPSELL_CROSS_SERVER_JOINED;
         }
       }
     }
@@ -76,12 +76,8 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
       const t = getSystemLocale.t;
       if (isDiscoverable) {
         let string2Result = string2(t.xE9WGt);
-        let tmp26 = tmp24;
-        let tmp27 = tmp23;
       } else {
         string2Result = string2(t["0LMpW+"]);
-        tmp26 = tmp24;
-        tmp27 = tmp23;
       }
     }
     if (!isRoleSubscriptionEmoji) {
@@ -90,12 +86,8 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
       const t2 = getSystemLocale.t;
       if (emojiComesFromCurrentGuild) {
         let string3Result = string3(t2.hU4kIe);
-        let tmp31 = tmp29;
-        let tmp32 = tmp28;
       } else {
         string3Result = string3(t2.GM0xaX);
-        tmp31 = tmp29;
-        tmp32 = tmp28;
       }
     }
     if (!shouldHideRoleSubscriptionCTA) {
@@ -106,23 +98,15 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
         if (userIsRoleSubscriber) {
           vLklfF2 = vLklfF2.vLklfF;
           let string4Result = string4(vLklfF2);
-          let tmp39 = tmp34;
-          let tmp40 = tmp33;
         } else {
           string4Result = string4(vLklfF2["g8i/bf"]);
-          tmp39 = tmp34;
-          tmp40 = tmp33;
         }
       } else {
         let string4Result1 = string4(vLklfF2.Eoynp0);
-        let tmp36 = tmp34;
-        let tmp37 = tmp33;
       }
     }
     const intl7 = getSystemLocale.intl;
     string4Result1 = intl7.string(getSystemLocale.t.xFb68j);
-    tmp36 = dependencyMap;
-    tmp37 = require;
   } else if (hasJoinedEmojiSourceGuild) {
     if (!shouldHideRoleSubscriptionCTA) {
       const intl2 = getSystemLocale.intl;
@@ -132,37 +116,27 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
         if (userIsRoleSubscriber) {
           vLklfF = vLklfF.vLklfF;
           let stringResult = string(vLklfF);
-          let tmp13 = tmp8;
-          let tmp14 = tmp7;
         } else {
           stringResult = string(vLklfF["g8i/bf"]);
-          tmp13 = tmp8;
-          tmp14 = tmp7;
         }
       } else if (emojiComesFromCurrentGuild) {
         let stringResult1 = string(vLklfF.ICPhqa);
-        let tmp10 = tmp8;
-        let tmp11 = tmp7;
       } else {
         stringResult1 = string(vLklfF.jQy3aM);
-        tmp10 = tmp8;
-        tmp11 = tmp7;
       }
     }
     const intl3 = getSystemLocale.intl;
     stringResult1 = intl3.string(getSystemLocale.t.xFb68j);
-    tmp10 = dependencyMap;
-    tmp11 = require;
   } else {
     const intl = getSystemLocale.intl;
     if (isDiscoverable) {
-      formatToPlainStringResult = intl.string(tmp2(1236).t.FJ6Z01);
-      tmp6 = tmp2;
+      formatToPlainStringResult = intl.string(getSystemLocale.t.FJ6Z01);
+      tmp6 = require;
     } else {
       obj = { openPremiumSettings: null };
       obj[0] = onOpenPremiumSettings;
-      formatToPlainStringResult = intl.format(tmp2(1236).t.U6vLcA, obj);
-      tmp6 = tmp2;
+      formatToPlainStringResult = intl.format(getSystemLocale.t.U6vLcA, obj);
+      tmp6 = require;
     }
   }
 };

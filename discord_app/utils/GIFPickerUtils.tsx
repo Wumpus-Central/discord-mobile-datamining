@@ -1,10 +1,10 @@
 // discord_app/utils/GIFPickerUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 import ME from "../Constants.tsx";
 import GIF_PROVIDER from "../modules/gif_picker/GifProvider.tsx";
 
 const SearchTypes = ME.SearchTypes;
-const result = set.fileFinishedImporting("utils/GIFPickerUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/GIFPickerUtils.tsx");
 
 export const isKlipyProvider = function isKlipyProvider(arg0) {
   return arg0 === GIF_PROVIDER.GIF_PROVIDER_EMBED_NAME;

@@ -1,18 +1,18 @@
 // discord_app/modules/reactions/ReactionActionCreators.tsx
-import setDefault from "../../utils/Durations.tsx";
+import obj132Default from "../../utils/Durations.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import ComponentDispatcher from "../../utils/ComponentDispatchUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
-import setDefault2 from "../../actions/AlertActionCreators.tsx";
+import obj132Default2 from "../../actions/AlertActionCreators.tsx";
 import ReactionTypes2 from "../messages/MessageReactionsTypes.tsx";
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../stores/AuthenticationStore.tsx";
-import closure_5 from "../../stores/ChannelStore.tsx";
-import closure_6 from "../../stores/MessageStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
+import reinjectEphemerals from "../../stores/MessageStore.tsx";
 import ME from "../../Constants.tsx";
 
-require = arg1;
-function checkReactionResponse(arg0, arg1, isRetry) {
+require = fn;
+function checkReactionResponse(arg0, fn, isRetry) {
   ({ status, body } = arg0);
   if (429 === status) {
     if (isRetry.isRetry) {
@@ -23,7 +23,7 @@ function checkReactionResponse(arg0, arg1, isRetry) {
       const _isNaN = isNaN;
       if (!isNaN(parsed)) {
         const _setTimeout = setTimeout;
-        const timerId = setTimeout(arg1, parsed * setDefault.Millis.SECOND);
+        const timerId = setTimeout(fn, parsed * obj132Default.Millis.SECOND);
       }
       return false;
     }
@@ -34,7 +34,6 @@ function checkReactionResponse(arg0, arg1, isRetry) {
         code = body.code;
       }
       if (constants.TOO_MANY_REACTIONS === code) {
-        obj = setDefault2;
         obj = { title: null, body: null, confirmText: null };
         const intl = getSystemLocale.intl;
         obj[0] = intl.string(getSystemLocale.t.lFddsR);
@@ -48,14 +47,13 @@ function checkReactionResponse(arg0, arg1, isRetry) {
         ComponentDispatch.dispatch(constants2.SHAKE_APP, { duration: 200, intensity: 2 });
       }
     } else if (!isRetry.isRetry) {
-      arg1();
+      fn();
       return false;
     }
     return true;
   }
 }
 function optimisticDispatch(type, channelId, messageId, arg3, userId) {
-  obj = dispatcherDefault;
   obj = { type, channelId, messageId, userId: null, emoji: null, optimistic: true, colors: null, reactionType: null };
   userId = userId.userId;
   if (userId == null) {
@@ -90,9 +88,9 @@ function makeURL(type) {
   if (null == userId) {
     let REACTIONSResult = closure_10.REACTIONS(channelId, messageId, name);
   } else if (useTypeEndpoint) {
-    REACTIONSResult = obj.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
+    REACTIONSResult = closure_10.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
   } else {
-    REACTIONSResult = obj.REACTION(channelId, messageId, name, userId);
+    REACTIONSResult = closure_10.REACTION(channelId, messageId, name, userId);
   }
   return REACTIONSResult;
 }
@@ -157,9 +155,9 @@ function _getReactors() {
             } else {
               if (c5 === callback(7510).ReactionTypes.VOTE) {
                 let tmp28 = (function makeURLForVoteReactors(c0, c1, c2) {
-                  let name = c2.id;
+                  let name = _undefined.id;
                   if (name == null) {
-                    name = c2.name;
+                    name = _undefined.name;
                   }
                   return closure_10.POLL_ANSWER_VOTERS(c0, c1, name);
                 })(callback, callback2, dependencyMap);
@@ -380,7 +378,7 @@ function _addReaction() {
             obj = callback(530);
             obj8[3] = obj.rejectWithMigratedError();
             HTTP = put(obj8);
-            put = HTTP.then(() => {
+            put = HTTP.then((result) => {
               if ("Message Shortcut" === MESSAGE) {
                 const channel = burst.getChannel(callback);
                 obj = { channel_id: null, guild_id: null, original_message_id: null, emoji_id: null, action: "react" };
@@ -423,7 +421,7 @@ function _addReaction() {
                 const merged2 = Object.assign(user);
                 obj2.animated = false;
                 obj1[2] = obj2;
-                const result = callback2(user[16]).triggerFullscreenAnimation(obj1);
+                result = callback2(user[16]).triggerFullscreenAnimation(obj1);
                 const obj5 = callback2(user[16]);
               } else {
                 const obj3 = { name: null };
@@ -452,28 +450,28 @@ function _addReaction() {
                   colors = [];
                 }
                 obj[6] = colors;
-                const ReactionTypes = callback(tmp6[10]).ReactionTypes;
+                const ReactionTypes = callback(user[10]).ReactionTypes;
                 if (obj.burst) {
                   let NORMAL = ReactionTypes.BURST;
-                  let tmp10 = tmp9;
+                  let tmp10 = callback;
                 } else {
                   NORMAL = ReactionTypes.NORMAL;
-                  tmp10 = tmp9;
+                  tmp10 = callback;
                 }
                 obj[7] = NORMAL;
                 obj2.dispatch(obj);
-                const AccessibilityAnnouncer = tmp10(tmp6[15]).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = tmp10(user[15]).AccessibilityAnnouncer;
                 const announce = AccessibilityAnnouncer.announce;
-                const intl = tmp10(tmp6[7]).intl;
+                const intl = tmp10(user[7]).intl;
                 const formatToPlainString = intl.formatToPlainString;
-                const t = tmp10(tmp6[7]).t;
+                const t = tmp10(user[7]).t;
                 if (burst) {
                   obj1 = { name: null };
-                  obj1[0] = tmp3.name;
+                  obj1[0] = user.name;
                   announce(formatToPlainString(t.fJeu87, obj1));
                 } else {
                   obj2 = { name: null };
-                  obj2[0] = tmp3.name;
+                  obj2[0] = user.name;
                   announce(formatToPlainString(t["UUn5V+"], obj2));
                 }
               }
@@ -572,8 +570,8 @@ function _removeAllReactions() {
             obj2[0] = closure_10.REMOVE_REACTIONS(callback, callback2);
             obj2[2] = callback(isRetry[11]).rejectWithMigratedError();
             const obj7 = callback(isRetry[11]);
-            HTTP.del(obj2).catch((arg0) => {
-              closure_1_12(arg0, () => closure_1_18(closure_0, closure_1, { isRetry: true }), { isRetry });
+            HTTP.del(obj2).catch((error) => {
+              closure_1_12(error, () => closure_1_18(closure_0, closure_1, { isRetry: true }), { isRetry });
             });
             c6 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
@@ -674,8 +672,8 @@ function _removeEmojiReactions() {
             obj[0] = closure_10.REMOVE_EMOJI_REACTIONS(callback, callback2, name);
             obj1 = callback(user[11]);
             obj[2] = obj1.rejectWithMigratedError();
-            HTTP.del(obj).catch((arg0) => {
-              closure_1_12(arg0, () => closure_1_20(closure_0, closure_1, closure_2, { isRetry: true }), { isRetry });
+            HTTP.del(obj).catch((error) => {
+              closure_1_12(error, () => closure_1_20(closure_0, closure_1, closure_2, { isRetry: true }), { isRetry });
             });
             c7 = 3;
             const delResult = HTTP.del(obj);
@@ -825,7 +823,7 @@ function _removeReaction() {
             obj5 = callback(530);
             obj[3] = obj5.rejectWithMigratedError();
             HTTP = del(obj);
-            del = HTTP.then(() => {
+            del = HTTP.then((result) => {
               burst = undefined;
               if (burst != null) {
                 burst = burst.burst;
@@ -987,7 +985,7 @@ function hasUserAlreadyReacted(arg0, arg1, arg2, arg3) {
 }
 ({ AbortCodes: error, AnalyticEvents: closure_8, ComponentActions: c9, Endpoints: c10 } = ME);
 let obj = { MESSAGE: "Message", FORUM_TOOLBAR: "Forum Toolbar", MOBILE_MEDIA_VIEWER: "Mobile Media Viewer", MESSAGE_HOVER_BAR: "Message Hover Bar", MESSAGE_INLINE_BUTTON: "Message Inline Button", MESSAGE_CONTEXT_MENU: "Message Context Menu", MESSAGE_REACTION_PICKER: "Message Reaction Picker", MESSAGE_SHORTCUT: "Message Shortcut", DOUBLE_TAP: "Double Tap", IN_APP_NOTIFICATION: "In App Notification" };
-let result = require("set").fileFinishedImporting("modules/reactions/ReactionActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/reactions/ReactionActionCreators.tsx");
 
 export const ReactionLocations = obj;
 export const getReactors = function getReactors(arg0) {

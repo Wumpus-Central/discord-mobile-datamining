@@ -5,9 +5,9 @@ import BaseIconImage from "../../../../design/components/Icon/native/BaseIconIma
 import registerAsset from "../../../../../_runtime/14456_registerAsset.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/WreathIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/WreathIcon.tsx");
 
 export default function WreathIcon(color) {
   let INTERACTIVE_TEXT_DEFAULT = color.color;

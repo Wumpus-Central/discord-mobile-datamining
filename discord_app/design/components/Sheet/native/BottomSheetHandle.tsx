@@ -1,7 +1,7 @@
 // discord_app/design/components/Sheet/native/BottomSheetHandle.tsx
-import closure_0 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");
 
 export const useBottomSheetImperativeHandle = function useBottomSheetImperativeHandle(ref, ref) {
   const React = ref;
@@ -36,10 +36,10 @@ export const useBottomSheetImperativeHandle = function useBottomSheetImperativeH
         current.collapse();
       }
     },
-    snapToIndex(current, items) {
-      current = closure_0.current;
+    snapToIndex(collapse, items) {
+      const current = closure_0.current;
       if (current != null) {
-        current.snapToIndex(current);
+        current.snapToIndex(collapse);
       }
     }
   }), items);

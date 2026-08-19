@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesModalTiming.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
 
-const require = arg1;
+const require = fn;
 let obj = { END_CARD: "END_CARD", END_CARD_WITH_CTA: "END_CARD_WITH_CTA", LOOP: "LOOP" };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalTiming.tsx");
 
 export const BountyVideoEndMode = obj;
 export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
@@ -165,6 +165,6 @@ export const useBountiesModalTiming = function useBountiesModalTiming(endMode) {
   if (isCompleted) {
     isCompleted = !tmp21;
   }
-  obj = { isCtaVisible: isCompleted, isEndCardVisible: tmp4, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback3, handleVideoResumed: callback4, handleReplay: callback2, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp8, maxVideoProgressSeconds: tmp10, videoDuration: tmp12 };
+  obj = { isCtaVisible: isCompleted, isEndCardVisible: tmp4, handleVideoEnd: callback1, handleVideoProgress: callback, handleVideoPaused: callback3, handleVideoResumed: callback4, handleReplay: callback2, rewardRemainingSeconds: num5, rewardTotalSeconds: result1, normalizedProgress: tmp6, maxVideoProgressSeconds: tmp10, videoDuration: tmp12 };
   return obj;
 };

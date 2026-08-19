@@ -5,33 +5,33 @@ import Text from "../../../design/components/Text/native/Text.tsx";
 import parseMessageEmbedForProps from "../SafetyHubUtils.tsx";
 import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import renderDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
+import ChevronSmallDownIcon2 from "../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import useSafetyHubClassifications from "../hooks/useSafetyHubClassifications.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import ChevronSmallUpIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../SafetyHubStore.tsx";
+import handleSafetyHubRequestAgeVerificationResetModalAction from "../SafetyHubStore.tsx";
 import SafetyHubView from "../SafetyHubConstants.tsx";
 import { AnalyticEvents } from "../../../Constants.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function SafetyHubViolationsHeader(count) {
   ({ onClick, opened, status } = count);
   const tmp = callback3();
-  let obj = { onPress: onClick, style: items, children: null };
-  items = [tmp.header];
-  obj = { style: items1, children: null };
-  items1 = [tmp.iconBackground];
+  const items = [tmp.header];
+  const items1 = [tmp.iconBackground];
   const colors = ThemesDefault.colors;
-  obj = { color: tmp8 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_MUTED, size: "xs" };
-  obj[1] = closure_11(WarningIcon.WarningIcon, obj);
-  const items2 = [closure_11(closure_6, obj), , ];
+  const obj = { color: tmp8 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_MUTED, size: "xs" };
+  obj[1] = callback(WarningIcon.WarningIcon, obj);
+  const items2 = [callback(closure_6, obj), , ];
   obj1 = { style: items3, children: null };
   items3 = [tmp.headerTextContainer];
-  const intl = tmp7(1236).intl;
+  const intl = getSystemLocale.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp7(1236).t;
+  const t = getSystemLocale.t;
   if ("active" === status) {
     const obj2 = { count: null };
     obj2[0] = str.toString();
@@ -41,27 +41,27 @@ function SafetyHubViolationsHeader(count) {
     obj3[0] = str.toString();
     formatToPlainStringResult = formatToPlainString(t.fZAHBT, obj3);
   }
-  const items4 = [closure_11(Text.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
-  const intl2 = tmp7(1236).intl;
+  const items4 = [callback(Text.Text, { variant: "heading-sm/semibold", children: formatToPlainStringResult }), ];
+  const intl2 = getSystemLocale.intl;
   const string = intl2.string;
-  const t2 = tmp7(1236).t;
+  const t2 = getSystemLocale.t;
   if ("active" === status) {
     let stringResult = string(t2.XJ2YVR);
   } else {
     stringResult = string(t2.SzGV0g);
   }
-  items4[1] = closure_11(Text.Text, { variant: "text-xxs/normal", color: "text-muted", children: stringResult });
+  items4[1] = callback(Text.Text, { variant: "text-xxs/normal", color: "text-muted", children: stringResult });
   obj1[1] = items4;
-  items2[1] = closure_12(closure_6, obj1);
+  items2[1] = callback2(closure_6, obj1);
   if (opened) {
-    let ChevronSmallDownIcon = tmp7(13006).ChevronSmallUpIcon;
+    let ChevronSmallDownIcon = ChevronSmallUpIcon.ChevronSmallUpIcon;
   } else {
-    ChevronSmallDownIcon = tmp7(9464).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = ChevronSmallDownIcon2.ChevronSmallDownIcon;
   }
   const items5 = [tmp.chevron];
-  items2[2] = closure_11(ChevronSmallDownIcon, { size: "md", style: items5 });
+  items2[2] = callback(ChevronSmallDownIcon, { size: "md", style: items5 });
   obj[2] = items2;
-  return closure_12(renderDefault, obj);
+  return callback2(renderDefault, obj);
 }
 function EmptyActiveState() {
   let obj = { style: null, children: null };
@@ -89,17 +89,16 @@ function EmptyExpiredState() {
   return callback(closure_6, obj);
 }
 function RelativeIncidentTime(timestamp) {
-  let obj = { style: callback3().incidentDate, children: null };
-  obj = { variant: "text-xs/medium", children: parseMessageEmbedForProps.getClassificationRelativeIncidentTime(timestamp.timestamp) };
+  { style: callback3().incidentDate, children: null };
+  const obj = { variant: "text-xs/medium", children: parseMessageEmbedForProps.getClassificationRelativeIncidentTime(timestamp.timestamp) };
   obj[1] = callback(Text.Text, obj);
   return callback(closure_6, obj);
 }
 function NewBadge() {
   const tmp = callback3();
-  let obj = { style: items, children: null };
-  items = [, ];
+  const items = [, ];
   ({ incidentDate: arr[0], incidentDateNew: arr[1] } = tmp);
-  obj = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp.newText, children: null };
+  const obj = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp.newText, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.QKMRC4);
   obj[1] = callback(Text.Text, obj);
@@ -107,13 +106,10 @@ function NewBadge() {
 }
 function ClassificationDetail(classification) {
   classification = classification.classification;
-  let id;
-  let description;
-  let guild_metadata;
   const tmp = callback3();
-  id = classification.id;
-  description = classification.description;
-  guild_metadata = classification.guild_metadata;
+  const id = classification.id;
+  const description = classification.description;
+  const guild_metadata = classification.guild_metadata;
   let obj = description(guild_metadata[16]);
   obj1 = id(guild_metadata[17]);
   const isNewClassification = obj1.useIsNewClassification(classification);
@@ -128,8 +124,8 @@ function ClassificationDetail(classification) {
     let tmp4 = null;
     if (null != guild_metadata) {
       let member_type;
-      if (tmp3 != tmp4) {
-        member_type = tmp3.member_type;
+      if (guild_metadata != tmp4) {
+        member_type = guild_metadata.member_type;
       }
       let Lb0HVv = id;
       name = guild_metadata;
@@ -138,10 +134,10 @@ function ClassificationDetail(classification) {
         Lb0HVv = Lb0HVv(name[12]).t.Lb0HVv;
         name = {};
         const merged = Object.assign(name);
-        tmp4 = tmp3 == tmp4;
+        tmp4 = guild_metadata == tmp4;
         name = undefined;
         if (!tmp4) {
-          name = tmp3.name;
+          name = guild_metadata.name;
         }
         name.guildName = name;
         let formatResult = intl3.format(Lb0HVv, name);
@@ -151,8 +147,8 @@ function ClassificationDetail(classification) {
         obj[0] = tmp2;
         obj[1] = hook;
         name = undefined;
-        if (tmp3 != tmp4) {
-          name = tmp3.name;
+        if (guild_metadata != tmp4) {
+          name = guild_metadata.name;
         }
         obj[2] = name;
         formatResult = intl2.format(Lb0HVv(name[12]).t.rmpEPD, obj);
@@ -165,12 +161,11 @@ function ClassificationDetail(classification) {
   if (isNewClassification) {
     prop = tmp.detailContainerOuterNew;
   }
-  obj = { style: items1, children: null };
   items1[1] = prop;
   obj = {
     onPress() {
-      let obj = description(guild_metadata[19]);
-      obj = { classificationId: id, source: closure_1_8.StandingTab };
+      description(guild_metadata[19]);
+      const obj = { classificationId: id, source: closure_1_8.StandingTab };
       obj.pushLazy(id(guild_metadata[21])(guild_metadata[20], guild_metadata.paths), obj);
     },
     children: null
@@ -178,20 +173,19 @@ function ClassificationDetail(classification) {
   obj1 = { style: items2, children: null };
   items2 = [tmp.detailContainerInner];
   const extractTimestampResult = obj.extractTimestamp(id);
-  const tmp2 = description;
   const tmp5 = id;
   if (isNewClassification) {
-    let tmp8Result = tmp8(NewBadge, {});
+    let tmp8Result = callback(NewBadge, {});
   } else {
     const obj2 = { timestamp: null };
     obj2[0] = extractTimestampResult;
-    tmp8Result = tmp8(RelativeIncidentTime, obj2);
+    tmp8Result = callback(RelativeIncidentTime, obj2);
   }
-  const items3 = [tmp8Result, closure_11(tmp5(guild_metadata[11]).Text, { variant: "heading-md/normal", children: memo })];
+  const items3 = [tmp8Result, callback(tmp5(guild_metadata[11]).Text, { variant: "heading-md/normal", children: memo })];
   obj1[1] = items3;
-  obj[1] = closure_12(closure_6, obj1);
-  obj[1] = closure_11(description(guild_metadata[9]), obj);
-  return closure_11(closure_6, obj);
+  obj[1] = callback2(closure_6, obj1);
+  obj[1] = callback(description(guild_metadata[9]), obj);
+  return callback(closure_6, obj);
 }
 class SafetyHubViolationsContainer {
   constructor(arg0) {
@@ -209,7 +203,7 @@ class SafetyHubViolationsContainer {
     first = tmp2[0];
     closure_1 = first;
     closure_2 = tmp2[1];
-    tmp4 = closure_3(require("module_3"), 2);
+    tmp4 = closure_3(require("../../debug/Logger.tsx"), 2);
     first1 = tmp4[0];
     closure_3 = first1;
     closure_4 = tmp4[1];
@@ -235,14 +229,14 @@ class SafetyHubViolationsContainer {
     items2[3] = stateFromStores;
     effect = closure_4.useEffect(() => {
       if (first) {
-        let obj = first(698);
-        obj = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
+        first(698);
+        const obj = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: false, is_dsa_eligible: null };
         obj[0] = closure_1_9.ViewViolationsDropdown;
         obj[1] = safetyHubAccountStanding.state;
-        obj[2] = memo.map((id) => Number(id.id));
+        obj[2] = memo.map((item, index) => Number(item.id));
         obj[3] = num.StandingTab;
         obj[5] = stateFromStores;
-        obj.track(closure_1_10.SAFETY_HUB_ACTION, obj);
+        obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj);
       }
     }, items2);
     num = 3;
@@ -274,7 +268,7 @@ class SafetyHubViolationsContainer {
       items6 = [, , , , ];
       items6[0] = tmp13(tmp12, obj2);
       num2 = 0;
-      tmp14 = memo.length > 0 && memo.map((classification) => callback2(closure_20, { classification }, classification.id));
+      tmp14 = memo.length > 0 && memo.map((item, index) => callback2(closure_20, { classification: item }, item.id));
       items6[1] = tmp14;
       tmp11Result = memo.length < classifications.length;
       if (tmp11Result) {
@@ -342,37 +336,25 @@ class SafetyHubViolationsContainer {
 ({ Pressable: c5, View: closure_6 } = get_ActivityIndicator);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: c9 } = SafetyHubView);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-createCacheKey = { connectedContainer: null, container: null, header: null, detailContainerOuter: null, detailContainerOuterNew: null, detailContainerInner: null, iconBackground: null, chevron: null, incidentDate: null, incidentDateNew: null, newText: null, emptyState: null, separator: null, moreButtonContainer: null, moreButton: null, headerTextContainer: null };
-createCacheKey = { display: "flex", marginTop: ThemesDefault.space.PX_12, marginBottom: 36, gap: ThemesDefault.space.PX_12 };
+const createCacheKey = { display: "flex", marginTop: ThemesDefault.space.PX_12, marginBottom: 36, gap: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_8, width: "100%" };
-let obj1 = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_8, width: "100%" };
 createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16, width: "100%" };
-let obj2 = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16, width: "100%" };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12, marginTop: 10 };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.md, padding: ThemesDefault.space.PX_12, marginTop: 10 };
 createCacheKey[4] = { borderColor: ThemesDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
-let obj4 = { borderColor: ThemesDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, borderWidth: 1, borderStyle: "solid" };
 createCacheKey[5] = { display: "flex", gap: ThemesDefault.space.PX_8 };
-let obj5 = { display: "flex", gap: ThemesDefault.space.PX_8 };
 createCacheKey[6] = { display: "flex", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
 createCacheKey[7] = { marginLeft: "auto" };
-let obj6 = { display: "flex", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", padding: 6 };
 createCacheKey[8] = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj7 = { alignSelf: "flex-start", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[9] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
 createCacheKey[10] = { textTransform: "capitalize" };
-let obj8 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
 createCacheKey[11] = { display: "flex", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.md, gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24 };
-const obj9 = { display: "flex", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.md, gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24 };
 createCacheKey[12] = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 10 };
 createCacheKey[13] = { display: "flex", alignItems: "center", justifyContent: "center" };
-const obj10 = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 10 };
 createCacheKey[14] = { display: "flex", alignItems: "center", justifyContent: "center", borderBottomEndRadius: ThemesDefault.radii.xs, borderBottomStartRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 29, width: 207 };
 createCacheKey[15] = { flexShrink: 0, flexGrow: 1, gap: 2 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-const obj11 = { display: "flex", alignItems: "center", justifyContent: "center", borderBottomEndRadius: ThemesDefault.radii.xs, borderBottomStartRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 29, width: 207 };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/SafetyHubViolationsContainer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/native/SafetyHubViolationsContainer.tsx");
 
 export default SafetyHubViolationsContainer;
 export const ConnectedSafetyHubViolationsContainer = function ConnectedSafetyHubViolationsContainer() {

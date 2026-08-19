@@ -1,14 +1,14 @@
 // discord_app/modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../stores/billing/GuildBoostSlotStore.tsx";
+import handleGuildBoostsUpdate from "../../../stores/billing/GuildBoostSlotStore.tsx";
 import ME from "../../../Constants.tsx";
 import { PremiumGuildSubscribeModalScenes as closure_11 } from "../../../components_native/premium/premium_guild_subscribe_modal/PremiumGuildSubscribeConstants.tsx";
 import { FractionalPremiumStates } from "../../premium/PremiumConstants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function _handleBoostPress() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -94,7 +94,7 @@ function _handleBoostPress() {
   return applyArgumentsResult;
 }
 ({ AnalyticsObjects: error, AnalyticsObjectTypes: closure_8, AnalyticsPages: c9, NOOP: c10 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
 
 export default function GuildBoostingSubscribeButton(guild) {
   guild = guild.guild;
@@ -112,7 +112,7 @@ export default function GuildBoostingSubscribeButton(guild) {
   let items = [closure_6];
   const stateFromStores = guild(analyticsSection[14]).useStateFromStores(items, () => {
     const keys = Object.keys(boostSlots.boostSlots);
-    return keys.some((arg0) => null == boostSlots.boostSlots[arg0].premiumGuildSubscription && !boostSlots.boostSlots[arg0].isOnCooldown());
+    return keys.some((item, index) => null == boostSlots.boostSlots[item].premiumGuildSubscription && !boostSlots.boostSlots[item].isOnCooldown());
   });
   const items1 = [navigation, analyticsSection, onAvailableSlotPress, intent, guild.onResult];
   const callback = intent.useCallback((arg0, arg1) => {
@@ -171,7 +171,6 @@ export default function GuildBoostingSubscribeButton(guild) {
     }
     return tmp8;
   }, items2);
-  obj = { style: styles, children: null };
   obj = {
     loading: tmp3,
     variant: "primary",

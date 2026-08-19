@@ -1,22 +1,21 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx
 import initializeDefault from "../../../lib/AutomaticLifecycleManager.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_5 from "../../impersonate/ImpersonateStore.tsx";
-import closure_6 from "../../../stores/AuthenticationStore.tsx";
-import closure_7 from "../../../stores/ChannelStore.tsx";
-import closure_8 from "../../../stores/GuildMemberStore.tsx";
-import closure_9 from "../../../stores/GuildStore.tsx";
-import closure_10 from "../../../stores/SelectedGuildStore.tsx";
-import closure_11 from "../GuildOnboardingHomeSettingsStore.tsx";
-import closure_12 from "../GuildOnboardingMemberActionStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import initialize from "../../impersonate/ImpersonateStore.tsx";
+import fetchFingerprint from "../../../stores/AuthenticationStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import handleConnectionOpen from "../../../stores/SelectedGuildStore.tsx";
+import handleSettingsLoadSuccess from "../GuildOnboardingHomeSettingsStore.tsx";
+import set from "../GuildOnboardingMemberActionStore.tsx";
 import { GuildMemberFlags } from "../../guild_member/GuildMemberConstants.tsx";
 
-const require = arg1;
+const require = fn;
 initializeDefault;
 let prototype = function GuildOnboardingHomeManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  closure_0 = applyArgumentsResult;
   applyArgumentsResult.onboardingCompleteGuilds = new Set();
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
@@ -41,12 +40,8 @@ let prototype = function GuildOnboardingHomeManager() {
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
     const guilds = closure_1_9.getGuilds();
     for (const key10007 in guilds) {
-      let tmp8 = key10007;
-      let tmp9 = closure_1_8;
       let selfMember = closure_1_8.getSelfMember(key10007);
-      let tmp11 = lib;
-      let tmp12 = closure_1_2;
-      let obj = lib(closure_1_2[12]);
+      let obj = lib(dependencyMap[12]);
       let num;
       if (selfMember != null) {
         num = selfMember.flags;
@@ -54,11 +49,9 @@ let prototype = function GuildOnboardingHomeManager() {
       if (num == null) {
         num = 0;
       }
-      let tmp2 = closure_1_13;
-      if (!obj.hasFlag(num, closure_1_13.COMPLETED_HOME_ACTIONS)) {
+      if (!obj.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
         continue;
       } else {
-        let tmp3 = lib;
         let onboardingCompleteGuilds = lib.onboardingCompleteGuilds;
         let addResult = onboardingCompleteGuilds.add(key10007);
         continue;
@@ -75,12 +68,12 @@ let prototype = function GuildOnboardingHomeManager() {
     if (user.user.id === closure_1_6.getId()) {
       const onboardingCompleteGuilds2 = lib.onboardingCompleteGuilds;
       if (!onboardingCompleteGuilds2.has(guildId)) {
-        let obj = lib(closure_1_2[12]);
+        let obj = lib(dependencyMap[12]);
         if (flags == null) {
           flags = 0;
         }
-        if (obj.hasFlag(flags, closure_1_13.COMPLETED_HOME_ACTIONS)) {
-          const onboardingCompleteGuilds = tmp7.onboardingCompleteGuilds;
+        if (obj.hasFlag(flags, GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
+          const onboardingCompleteGuilds = lib.onboardingCompleteGuilds;
           onboardingCompleteGuilds.add(guildId);
           const newMemberActions = closure_1_11.getNewMemberActions(guildId);
           let num;
@@ -91,27 +84,24 @@ let prototype = function GuildOnboardingHomeManager() {
             num = 0;
           }
           if (0 !== num) {
-            const obj2 = applyArgumentsResult(tmp2[13]);
-            const tmp9 = tmp(tmp2[15])(tmp2[14], tmp2.paths);
+            const obj2 = applyArgumentsResult(dependencyMap[13]);
+            const tmp9 = lib(dependencyMap[15])(dependencyMap[14], dependencyMap.paths);
             obj = { initialPercent: null, numActions: null };
             obj[0] = (num - 1) / num;
             obj[1] = num;
             obj = { animation: null };
-            obj[0] = tmp(tmp2[17]).ModalAnimation.FADE;
-            obj2.pushLazy(tmp9, obj, tmp(tmp2[16]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj);
+            obj[0] = lib(dependencyMap[17]).ModalAnimation.FADE;
+            obj2.pushLazy(tmp9, obj, lib(dependencyMap[16]).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj);
           }
         }
       }
-      tmp7 = lib;
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
     const onboardingCompleteGuilds = lib.onboardingCompleteGuilds;
     onboardingCompleteGuilds.delete(guild.guild.id);
   };
-  closure_0 = undefined;
-  importDefault = applyArgumentsResult;
-  closure_0 = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
@@ -186,7 +176,7 @@ let prototype = function GuildOnboardingHomeManager() {
               completedActions = closure_2.completedActions;
               found = undefined;
               if (memberActions != null) {
-                found = arr.find((channelId) => channelId.channelId === c1);
+                found = arr.find((item, index) => item.channelId === c1);
               }
               let tmp10;
               if (completedActions != null) {
@@ -279,9 +269,7 @@ let prototype = function GuildOnboardingHomeManager() {
       lib._completeChatAction(channel.guild_id, channel.parent_id);
     }
   };
-  closure_0 = undefined;
-  importDefault = applyArgumentsResult;
-  closure_0 = callback((arg0, arg1) => {
+  callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
     c4 = 0;
@@ -339,7 +327,7 @@ let prototype = function GuildOnboardingHomeManager() {
             completedActions = closure_2.completedActions;
             let found;
             if (memberActions != null) {
-              found = memberActions.find((channelId) => channelId.channelId === closure_1);
+              found = memberActions.find((item, index) => item.channelId === closure_1);
             }
             actionType = found;
             let tmp10;
@@ -377,9 +365,8 @@ let prototype = function GuildOnboardingHomeManager() {
     }
     return applyArgumentsResult;
   };
-  closure_0 = undefined;
   importDefault = applyArgumentsResult;
-  closure_0 = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c3 = 0;
     c4 = 0;
@@ -416,7 +403,6 @@ let prototype = function GuildOnboardingHomeManager() {
               dependencyMap = undefined;
               const obj10 = callback(closure_1_2[19]);
               const tmp24 = callback;
-              const tmp25 = closure_1_2;
               if (!canSeeOnboardingHomeResult) {
                 if (!closure_1_5.isFullServerPreview(callback)) {
                   c4 = 3;
@@ -435,7 +421,7 @@ let prototype = function GuildOnboardingHomeManager() {
                   obj2[0] = Promise.all(items);
                   return obj2;
                 }
-                tmp24Result = tmp24(tmp25[20]);
+                tmp24Result = tmp24(closure_1_2[20]);
               }
               c4 = 3;
               const obj3 = { value: null, done: true };
@@ -478,7 +464,7 @@ let prototype = function GuildOnboardingHomeManager() {
     }
     return applyArgumentsResult;
   };
-  closure_0 = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c2 = 0;
     c3 = 0;
@@ -606,7 +592,7 @@ let prototype = function GuildOnboardingHomeManager() {
                 tmp5 = completedActions;
                 if (!tmp20) {
                   obj1 = callback(closure_1_2[12]);
-                  const flags = tmp17.flags;
+                  flags = flags.flags;
                   c2 = flags;
                   if (flags == null) {
                     c2 = 0;
@@ -616,15 +602,11 @@ let prototype = function GuildOnboardingHomeManager() {
                     c4 = 1;
                     c3 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = tmp6(tmp7[18]).fetchNewMemberActions(tmp16);
+                    obj1[0] = callback(closure_1_2[18]).fetchNewMemberActions(callback);
                     return obj1;
                   }
-                  tmp6 = callback;
-                  tmp7 = closure_1_2;
                 }
               }
-              tmp16 = callback;
-              tmp17 = closure_1;
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -664,6 +646,6 @@ let prototype = function GuildOnboardingHomeManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx");
 
 export default prototype;

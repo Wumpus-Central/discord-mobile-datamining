@@ -1,22 +1,20 @@
 // discord_app/modules/guild_settings/native/MembersPruneActionSheet.tsx
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import CACHE_TTL_MS from "../../guild_mod_dash_member_safety/PrunePreviewStore.tsx";
-import closure_8 from "../../../stores/GuildStore.tsx";
-import closure_9 from "../../../stores/PermissionStore.tsx";
-import closure_10 from "../../../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import getUncachedChannelPermissions from "../../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function MembersPruneActionSheetContent(guild) {
   guild = guild.guild;
-  let id;
-  let first;
   let callback;
   let num;
-  id = guild.id;
+  const id = guild.id;
   let tmp = callback(num.useState(7), 2);
-  first = tmp[0];
+  const first = tmp[0];
   callback = tmp[1];
   const tmp3 = callback2(guild.id, first, []);
   num = tmp3.count;
@@ -42,8 +40,7 @@ function MembersPruneActionSheetContent(guild) {
       const obj = id(first[8]);
     }
   }, items1);
-  let obj = { header: null, children: null };
-  obj = { title: null };
+  let obj = { title: null };
   const intl = guild(first[11]).intl;
   obj[0] = intl.string(guild(first[11]).t.zbyz7p);
   obj[0] = callback3(guild(first[10]).BottomSheetTitleHeader, obj);
@@ -101,23 +98,22 @@ function MembersPruneActionSheetContent(guild) {
 }
 ({ usePrunePreview: c5, setPrunePreview: closure_6, clearAllPrunePreviews: error } = CACHE_TTL_MS);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/MembersPruneActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/MembersPruneActionSheet.tsx");
 
 export default function MembersPruneActionSheet(guild) {
   guild = guild.guild;
-  let stateFromStores;
   let obj = guild(589);
   const items = [closure_8, closure_9, closure_10];
   const items1 = [guild];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     guild = closure_1_8.getGuild(guild.id);
-    return guild(closure_1_2[18]).canPruneGuildMembers(guild, closure_1_10.getCurrentUser(), closure_1_9);
+    return guild(dependencyMap[18]).canPruneGuildMembers(guild, closure_1_10.getCurrentUser(), closure_1_9);
   }, items1);
   const items2 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (!stateFromStores) {
-      stateFromStores(closure_1_2[16]).hideActionSheet();
-      const obj = stateFromStores(closure_1_2[16]);
+      stateFromStores(dependencyMap[16]).hideActionSheet();
+      const obj = stateFromStores(dependencyMap[16]);
     }
   }, items2);
   let tmp3 = null;

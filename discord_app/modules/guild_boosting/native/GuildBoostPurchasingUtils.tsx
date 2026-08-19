@@ -1,10 +1,10 @@
 // discord_app/modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../stores/billing/SubscriptionStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import reset from "../../../stores/billing/SubscriptionStore.tsx";
 import ME from "../../../Constants.tsx";
 import GuildFeatures from "../../premium/PremiumConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function _launchGuildBoostFlowOrAlert() {
   const self = this;
   let tmp = callback((arg0) => {
@@ -73,8 +73,8 @@ function _launchGuildBoostFlowOrAlert() {
                 externalManagementMessage = obj3.getExternalManagementMessage(premiumTypeSubscription);
                 if (null != externalManagementMessage) {
                   (function alertUnableToManageSub(closure_7, c0) {
-                    let obj = _null(_undefined2[4]);
-                    obj = { title: null, body: null };
+                    _null(_undefined2[4]);
+                    let obj = { title: null, body: null };
                     const intl = _undefined(_undefined2[5]).intl;
                     obj[0] = intl.string(_undefined(_undefined2[5]).t["8P7MX0"]);
                     obj[1] = closure_7;
@@ -190,7 +190,7 @@ function _launchGuildBoostFlowOrAlert() {
 }
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: error, PremiumTypes: closure_8, SubscriptionIntervalTypes: c9 } = GuildFeatures);
-let result = require("set").fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");
 
 export const launchGuildBoostFlowOrAlert = function launchGuildBoostFlowOrAlert(arg0) {
   const self = this;

@@ -1,24 +1,21 @@
 // discord_app/modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx
-import closure_2 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
-import closure_4 from "../../BountyStore.tsx";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
+import set from "../../BountyStore.tsx";
 import { QuestsExperimentLocations } from "../../QuestConstants.tsx";
 
-const require = arg1;
+const require = fn;
 let closure_6 = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useBountyVideoProgressPersistence.tsx");
 
 export const useBountyVideoProgressPersistence = function useBountyVideoProgressPersistence(bountyId) {
   bountyId = bountyId.bountyId;
   const endMode = bountyId.endMode;
-  let callback;
   let React;
-  closure_4 = undefined;
   QuestsExperimentLocations = undefined;
-  closure_6 = undefined;
   let obj = bountyId(endMode[4]);
   const bountiesExperience = obj.useBountiesExperience(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
-  callback = tmp2;
+  const callback = tmp2;
   const first = callback(React.useState(() => {
     if (closure_2) {
       let bountyVideoProgress = ref2.getBountyVideoProgress(bountyId);
@@ -52,8 +49,8 @@ export const useBountyVideoProgressPersistence = function useBountyVideoProgress
       }
       if (tmp) {
         ref.current = current3 + 1;
-        let obj = bountyId(endMode[6]);
-        obj = { timestampSec: null, maxTimestampSec: null, duration: null };
+        bountyId(endMode[6]);
+        const obj = { timestampSec: null, maxTimestampSec: null, duration: null };
         obj[0] = current3;
         obj[1] = current;
         obj[2] = current2;
@@ -62,8 +59,8 @@ export const useBountyVideoProgressPersistence = function useBountyVideoProgress
     }, items),
     flushProgress: React.useCallback(() => {
       if (closure_2) {
-        let obj = bountyId(endMode[6]);
-        obj = { timestampSec: null, maxTimestampSec: null, duration: null };
+        bountyId(endMode[6]);
+        const obj = { timestampSec: null, maxTimestampSec: null, duration: null };
         obj[0] = ref2.current;
         obj[1] = ref3.current;
         obj[2] = ref4.current;

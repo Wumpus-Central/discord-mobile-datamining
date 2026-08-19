@@ -1,18 +1,18 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { ScrollView } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/GuildStore.tsx";
-import closure_7 from "../../../../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 import ME from "../../../../Constants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-const require = arg1;
+const require = fn;
 ({ AnalyticEvents: closure_8, AnalyticsPages: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ wrapper: { paddingBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
 
 export default function GuildBoostingMarketingOverview(guildId) {
   guildId = guildId.guildId;
@@ -71,8 +71,8 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items2);
   const items3 = [guildId, analyticsLocations, tmp11];
   const effect = obj3.useEffect(() => () => {
-    let obj = closure_1_1(closure_1_2[15]);
-    obj = { type: closure_1_9.PREMIUM_GUILD_USER_MODAL, location_stack: closure_4, guild_id: closure_0, duration_open_ms: Date.now() - closure_9 };
+    guildBoostSlots(stateFromStores[15]);
+    const obj = { type: closure_1_9.PREMIUM_GUILD_USER_MODAL, location_stack: closure_4, guild_id: closure_0, duration_open_ms: Date.now() - closure_9 };
     obj.track(closure_1_8.MODAL_DISMISSED, obj);
   }, items3);
   const effect1 = obj3.useEffect(() => {
@@ -84,7 +84,6 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, []);
   let tmp18 = null;
   if (null != stateFromStores) {
-    obj = { children: null };
     obj = { contentContainerStyle: null, onScroll: null, scrollEventThrottle: 16, children: null };
     obj[0] = tmp.wrapper;
     obj[1] = function onScroll(nativeEvent) {
@@ -97,8 +96,8 @@ export default function GuildBoostingMarketingOverview(guildId) {
         tmp3 = sum >= tmp.height - guildId(stateFromStores[19]).VISIBILITY_OFFSET;
       }
       if (tmp3) {
-        let obj = guildBoostSlots(stateFromStores[15]);
-        obj = { type: null, location_stack: null, guild_id: null };
+        guildBoostSlots(stateFromStores[15]);
+        const obj = { type: null, location_stack: null, guild_id: null };
         obj[0] = constants.PREMIUM_GUILD_USER_MODAL;
         obj[1] = analyticsLocations;
         obj[2] = stateFromStores.id;

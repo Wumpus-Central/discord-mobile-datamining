@@ -1,21 +1,20 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModal.tsx
 import _modDef8874 from "../GuildSettingsActionCreators.tsx";
 import dispatcherDefault from "../GuildSettingsModalChannelsActionCreators.tsx";
-import closure_3 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../_runtime/00019_noop.js";
-import closure_5 from "../../../stores/GuildStore.tsx";
-import closure_6 from "../GuildSettingsStore.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
+import handleFormInit from "../GuildSettingsStore.tsx";
 import ME from "../../../Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
+const require = fn;
 function close() {
   dispatcherDefault.terminate();
-  const obj = dispatcherDefault;
   _modDef8874.close();
 }
 ({ GuildSettingsSections: error, WebhookTypes: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");
 
 export default function GuildSettingsModal() {
   let bottom = importDefault(stateFromStores[49])().bottom;
@@ -29,7 +28,6 @@ export default function GuildSettingsModal() {
     let tmp2;
     if (null != obj) {
       bottom = tmp;
-      obj = { contentContainerStyle: null };
       obj = { paddingBottom: null };
       obj[0] = 16 + bottom;
       obj[0] = obj;
@@ -39,11 +37,11 @@ export default function GuildSettingsModal() {
       const intl = bottom(stateFromStores[9]).intl;
       obj1[1] = intl.string(bottom(stateFromStores[9]).t["154/bL"]);
       let obj4 = bottom(stateFromStores[10]);
-      obj1[2] = obj4.getHeaderCloseButton(closure_1_10);
+      obj1[2] = obj4.getHeaderCloseButton(close);
       obj1[3] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[11]), obj);
+        return closure_1_9(obj(stateFromStores[11]), obj);
       };
       obj[closure_1_7.LANDING] = obj1;
       const obj2 = { impressionName: null, title: null, render: null };
@@ -53,7 +51,7 @@ export default function GuildSettingsModal() {
       obj2[2] = function render() {
         obj = {};
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[12]), obj);
+        return closure_1_9(obj(stateFromStores[12]), obj);
       };
       obj[closure_1_7.OVERVIEW] = obj2;
       const obj3 = { impressionName: null, title: null, render: null };
@@ -63,7 +61,7 @@ export default function GuildSettingsModal() {
       obj3[2] = function render() {
         obj = {};
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[13]), obj);
+        return closure_1_9(obj(stateFromStores[13]), obj);
       };
       obj[closure_1_7.MODERATION] = obj3;
       obj4 = { impressionName: null, title: null, postponeRender: true, render: null };
@@ -73,7 +71,7 @@ export default function GuildSettingsModal() {
       obj4[3] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[14]), obj);
+        return closure_1_9(obj(stateFromStores[14]), obj);
       };
       obj[closure_1_7.AUDIT_LOG] = obj4;
       const obj5 = { title: null, render: null };
@@ -83,7 +81,7 @@ export default function GuildSettingsModal() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[15]), obj);
+        return closure_1_9(obj(stateFromStores[15]), obj);
       };
       obj[closure_1_7.AUDIT_LOG_FILTER] = obj5;
       const obj6 = { impressionName: null, title: null, render: null };
@@ -93,7 +91,7 @@ export default function GuildSettingsModal() {
       obj6[2] = function render() {
         obj = {};
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[16]), obj);
+        return closure_1_9(obj(stateFromStores[16]), obj);
       };
       obj[closure_1_7.INTEGRATIONS] = obj6;
       const obj7 = { impressionName: null, title: null, postponeRender: true, render: null };
@@ -103,7 +101,7 @@ export default function GuildSettingsModal() {
       obj7[3] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[17]), obj);
+        return closure_1_9(obj(stateFromStores[17]), obj);
       };
       obj[closure_1_7.EMOJI] = obj7;
       const obj8 = { impressionName: null, title: null, postponeRender: true, render: null };
@@ -113,7 +111,7 @@ export default function GuildSettingsModal() {
       obj8[3] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[18]), obj);
+        return closure_1_9(obj(stateFromStores[18]), obj);
       };
       obj[closure_1_7.STICKERS] = obj8;
       const obj9 = { impressionName: null, title: null, render: null };
@@ -123,7 +121,7 @@ export default function GuildSettingsModal() {
       obj9[2] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[19]), obj);
+        return closure_1_9(obj(stateFromStores[19]), obj);
       };
       obj[closure_1_7.TAG] = obj9;
       const obj10 = { title: null, render: null };
@@ -132,7 +130,7 @@ export default function GuildSettingsModal() {
       obj10[1] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[20]), obj);
+        return closure_1_9(obj(stateFromStores[20]), obj);
       };
       obj[closure_1_7.TAG_CUSTOMIZE] = obj10;
       const obj11 = { impressionName: null, title: null, render: null };
@@ -142,7 +140,7 @@ export default function GuildSettingsModal() {
       obj11[2] = function render() {
         obj = { guildId: closure_0, webhookType: closure_1_8.INCOMING };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[21]), obj);
+        return closure_1_9(obj(stateFromStores[21]), obj);
       };
       obj[closure_1_7.WEBHOOKS] = obj11;
       const obj12 = { title: null, render: null };
@@ -152,7 +150,7 @@ export default function GuildSettingsModal() {
         obj = {};
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[22]), obj);
+        return closure_1_9(obj(stateFromStores[22]), obj);
       };
       obj[closure_1_7.EDIT_WEBHOOK] = obj12;
       const obj13 = { impressionName: null, title: null, render: null };
@@ -162,7 +160,7 @@ export default function GuildSettingsModal() {
       obj13[2] = function render() {
         obj = { guildId: closure_0, webhookType: closure_1_8.CHANNEL_FOLLOWER };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[21]), obj);
+        return closure_1_9(obj(stateFromStores[21]), obj);
       };
       obj[closure_1_7.CHANNELS_FOLLOWED] = obj13;
       const obj14 = { impressionName: null, title: null, render: null };
@@ -173,7 +171,7 @@ export default function GuildSettingsModal() {
         obj = {};
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[23]), obj);
+        return closure_1_9(obj(stateFromStores[23]), obj);
       };
       obj[closure_1_7.INTEGRATION_SETTINGS] = obj14;
       const obj15 = { title: null, render: null };
@@ -184,7 +182,7 @@ export default function GuildSettingsModal() {
         const merged = Object.assign(arg0);
         obj.closeGuildSettings = closure_1_10;
         const merged1 = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[24]), obj);
+        return closure_1_9(obj(stateFromStores[24]), obj);
       };
       obj[closure_1_7.INTEGRATION_PLATFORM] = obj15;
       const obj16 = { title: null, render: null };
@@ -193,7 +191,7 @@ export default function GuildSettingsModal() {
       obj16[1] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[25]), obj);
+        return closure_1_9(obj(stateFromStores[25]), obj);
       };
       obj[closure_1_7.LOBBIES_LINKED] = obj16;
       const obj17 = { title: null, render: null };
@@ -203,7 +201,7 @@ export default function GuildSettingsModal() {
         obj = {};
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[26]), obj);
+        return closure_1_9(obj(stateFromStores[26]), obj);
       };
       obj[closure_1_7.EDIT_LINKED_LOBBY] = obj17;
       const obj18 = { impressionName: null, title: null, postponeRender: true, render: null };
@@ -211,9 +209,9 @@ export default function GuildSettingsModal() {
       const intl18 = bottom(stateFromStores[9]).intl;
       obj18[1] = intl18.string(bottom(stateFromStores[9]).t.OGiMXJ);
       obj18[3] = function render() {
-        obj = { guildId: closure_0, onDone: obj(closure_1_2[6]).stopReordering };
+        obj = { guildId: closure_0, onDone: obj(stateFromStores[6]).stopReordering };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[27]), obj);
+        return closure_1_9(obj(stateFromStores[27]), obj);
       };
       obj[closure_1_7.CHANNELS] = obj18;
       const obj19 = { impressionName: null, title: null, render: null };
@@ -223,7 +221,7 @@ export default function GuildSettingsModal() {
       obj19[2] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[28]), obj);
+        return closure_1_9(obj(stateFromStores[28]), obj);
       };
       obj[closure_1_7.SECURITY] = obj19;
       const obj20 = { impressionName: null, title: null, render: null };
@@ -233,7 +231,7 @@ export default function GuildSettingsModal() {
       obj20[2] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[29]), obj);
+        return closure_1_9(obj(stateFromStores[29]), obj);
       };
       obj[closure_1_7.ROLES] = obj20;
       const obj21 = { title: null, render: null };
@@ -243,7 +241,7 @@ export default function GuildSettingsModal() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[30]), obj);
+        return closure_1_9(obj(stateFromStores[30]), obj);
       };
       obj[closure_1_7.ROLE_EDIT_REFRESH] = obj21;
       const obj22 = { title: null, render: null };
@@ -252,7 +250,7 @@ export default function GuildSettingsModal() {
       obj22[1] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[31]), obj);
+        return closure_1_9(obj(stateFromStores[31]), obj);
       };
       obj[closure_1_7.VANITY_URL] = obj22;
       const obj23 = { impressionName: null, title: null, postponeRender: true, render: null };
@@ -262,7 +260,7 @@ export default function GuildSettingsModal() {
       obj23[3] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[32]), obj);
+        return closure_1_9(obj(stateFromStores[32]), obj);
       };
       obj[closure_1_7.INSTANT_INVITES] = obj23;
       const obj24 = { impressionName: null, title: null, postponeRender: true, render: null };
@@ -272,7 +270,7 @@ export default function GuildSettingsModal() {
       obj24[3] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[33]), obj);
+        return closure_1_9(obj(stateFromStores[33]), obj);
       };
       obj[closure_1_7.MEMBERS] = obj24;
       const obj25 = { render: null };
@@ -280,7 +278,7 @@ export default function GuildSettingsModal() {
         obj = { guildId: tmp };
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(obj);
-        return closure_1_9(tmp(closure_1_2[34]).GuildSettingsModalMemberEditScene, obj);
+        return closure_1_9(tmp(stateFromStores[34]).GuildSettingsModalMemberEditScene, obj);
       };
       obj[closure_1_7.MEMBER_EDIT] = obj25;
       const obj26 = { headerTitle: null, render: null };
@@ -291,7 +289,7 @@ export default function GuildSettingsModal() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[35]), obj);
+        return closure_1_9(obj(stateFromStores[35]), obj);
       };
       obj[closure_1_7.MEMBER_KICK] = obj26;
       const obj27 = { headerTitle: null, render: null };
@@ -302,7 +300,7 @@ export default function GuildSettingsModal() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[36]), obj);
+        return closure_1_9(obj(stateFromStores[36]), obj);
       };
       obj[closure_1_7.MEMBER_BAN] = obj27;
       const obj28 = { impressionName: null, title: null, postponeRender: true, render: null };
@@ -312,7 +310,7 @@ export default function GuildSettingsModal() {
       obj28[3] = function render() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[37]), obj);
+        return closure_1_9(obj(stateFromStores[37]), obj);
       };
       obj[closure_1_7.BANS] = obj28;
       const obj29 = { impressionName: null, title: null, postponeRender: true, render: null };
@@ -323,7 +321,7 @@ export default function GuildSettingsModal() {
         obj = {};
         const merged = Object.assign(arg0);
         obj.guildId = closure_0;
-        return closure_1_9(obj(closure_1_2[38]), obj);
+        return closure_1_9(obj(stateFromStores[38]), obj);
       };
       obj[closure_1_7.COMMUNITY] = obj29;
       const obj30 = { impressionName: null, title: null, render: null };
@@ -334,7 +332,7 @@ export default function GuildSettingsModal() {
         obj = { guildId: closure_0 };
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(obj);
-        return closure_1_9(obj(closure_1_2[39]), obj);
+        return closure_1_9(obj(stateFromStores[39]), obj);
       };
       obj[closure_1_7.COMMUNITY_INTRO] = obj30;
       const obj31 = { title: null, render: null };
@@ -342,7 +340,7 @@ export default function GuildSettingsModal() {
       obj31[0] = intl28.string(bottom(stateFromStores[9]).t["KzCF/6"]);
       obj31[1] = function render() {
         obj = { guildId: closure_0 };
-        return closure_1_9(obj(closure_1_2[40]), obj);
+        return closure_1_9(obj(stateFromStores[40]), obj);
       };
       obj[closure_1_7.ROLE_SUBSCRIPTIONS] = obj31;
       const obj32 = { title: null, render: null };
@@ -350,7 +348,7 @@ export default function GuildSettingsModal() {
       obj32[0] = intl29.string(bottom(stateFromStores[9]).t["KzCF/6"]);
       obj32[1] = function render() {
         obj = { guildId: closure_0 };
-        return closure_1_9(obj(closure_1_2[41]), obj);
+        return closure_1_9(obj(stateFromStores[41]), obj);
       };
       obj[closure_1_7.ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION] = obj32;
       const obj33 = { title: null, render: null };
@@ -358,7 +356,7 @@ export default function GuildSettingsModal() {
       obj33[0] = intl30.string(bottom(stateFromStores[9]).t["/CfKoD"]);
       obj33[1] = function render() {
         obj = { guildId: closure_0 };
-        return closure_1_9(obj(closure_1_2[42]), obj);
+        return closure_1_9(obj(stateFromStores[42]), obj);
       };
       obj[closure_1_7.ROLE_SUBSCRIPTIONS_BASIC] = obj33;
       const obj34 = { title: null, render: null };
@@ -366,7 +364,7 @@ export default function GuildSettingsModal() {
       obj34[0] = intl31.string(bottom(stateFromStores[9]).t.pXbGYc);
       obj34[1] = function render() {
         obj = { guildId: closure_0 };
-        return closure_1_9(obj(closure_1_2[43]), obj);
+        return closure_1_9(obj(stateFromStores[43]), obj);
       };
       obj[closure_1_7.ROLE_SUBSCRIPTIONS_TIERS] = obj34;
       const obj35 = { title: null, render: null };
@@ -376,7 +374,7 @@ export default function GuildSettingsModal() {
         obj = {};
         const merged = Object.assign(arg0);
         obj.guildId = closure_0;
-        return closure_1_9(obj(closure_1_2[44]), obj);
+        return closure_1_9(obj(stateFromStores[44]), obj);
       };
       obj[closure_1_7.ROLE_SUBSCRIPTIONS_TIER_EDIT] = obj35;
       const obj36 = { title: null, render: null };
@@ -384,7 +382,7 @@ export default function GuildSettingsModal() {
       obj36[0] = intl33.string(bottom(stateFromStores[9]).t.p2Rsdl);
       obj36[1] = function render() {
         obj = { guildId: closure_0 };
-        return closure_1_9(obj(closure_1_2[45]), obj);
+        return closure_1_9(obj(stateFromStores[45]), obj);
       };
       obj[closure_1_7.ROLE_SUBSCRIPTIONS_PAYMENTS] = obj36;
       const obj37 = { title: null, render: null };
@@ -392,7 +390,7 @@ export default function GuildSettingsModal() {
       obj37[0] = intl34.string(bottom(stateFromStores[9]).t.C5Dbwn);
       obj37[1] = function render() {
         obj = { guildId: closure_0 };
-        return closure_1_9(obj(closure_1_2[46]), obj);
+        return closure_1_9(obj(stateFromStores[46]), obj);
       };
       obj[closure_1_7.ROLE_SUBSCRIPTIONS_EMOJIS] = obj37;
       const obj38 = { title: null, render: null };
@@ -402,7 +400,7 @@ export default function GuildSettingsModal() {
         obj = {};
         const merged = Object.assign(arg0);
         obj.guildId = closure_0;
-        return closure_1_9(obj(closure_1_2[47]), obj);
+        return closure_1_9(obj(stateFromStores[47]), obj);
       };
       obj[closure_1_7.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION] = obj38;
       const obj39 = { title: null, render: null };
@@ -410,7 +408,7 @@ export default function GuildSettingsModal() {
       obj39[0] = intl36.string(bottom(stateFromStores[9]).t.xHEzFh);
       obj39[1] = function render() {
         obj = { guildId: closure_0 };
-        return closure_1_9(obj(closure_1_2[48]), obj);
+        return closure_1_9(obj(stateFromStores[48]), obj);
       };
       obj[closure_1_7.OFFICIAL_MESSAGES] = obj39;
       tmp2 = obj;
@@ -445,7 +443,6 @@ export default function GuildSettingsModal() {
     obj[2] = tmp13;
     obj[3] = memo;
     tmp10Result = jsx(bottom(stateFromStores[52]).Navigator, { onWillFocus: null, initialRouteName: null, initialRouteState: null, screens: null });
-    const tmp10 = jsx;
   }
   return tmp10Result;
 };

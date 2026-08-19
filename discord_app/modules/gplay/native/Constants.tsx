@@ -1,7 +1,7 @@
 // discord_app/modules/gplay/native/Constants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/gplay/native/Constants.tsx");
+const result = obj132.fileFinishedImporting("modules/gplay/native/Constants.tsx");
 
 export const GPlayConnectionState = { DISCONNECTED: 0, [0]: "DISCONNECTED", CONNECTING: 1, [1]: "CONNECTING", CONNECTED: 2, [2]: "CONNECTED", ERROR: 3, [3]: "ERROR" };
 export const GPlayDowngradeCommand = { EXECUTE: 0, [0]: "EXECUTE", CLEAR: 1, [1]: "CLEAR" };

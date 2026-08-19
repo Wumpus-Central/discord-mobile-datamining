@@ -1,34 +1,31 @@
 // discord_app/modules/stage_channels/native/components/SpeakerPulse.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../a11y/AccessibilityStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../../a11y/AccessibilityStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let c9 = 0.16;
-createCacheKey = { pulse: null, border: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.WHITE };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.STATUS_SPEAKING };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { code: "function SpeakerPulseTsx1(){const{animatedInnerOpacity}=this.__closure;return{opacity:animatedInnerOpacity.get()};}" };
 let closure_12 = { code: "function SpeakerPulseTsx2(){const{animatedOuterOpacity}=this.__closure;return{opacity:animatedOuterOpacity.get()};}" };
-const obj1 = { backgroundColor: ThemesDefault.colors.STATUS_SPEAKING };
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
 
 export default function SpeakerPulse(style) {
   style = style.style;
   let stateFromStores;
-  let sharedValue;
   let sharedValue1;
   const tmp = callback3();
   let obj = stateFromStores(sharedValue1[6]);
   const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => !useReducedMotion.useReducedMotion, []);
-  sharedValue = stateFromStores(sharedValue1[7]).useSharedValue(c9);
+  const sharedValue = stateFromStores(sharedValue1[7]).useSharedValue(c9);
   let obj2 = stateFromStores(sharedValue1[7]);
   sharedValue1 = stateFromStores(sharedValue1[7]).useSharedValue(c9);
   const items1 = [stateFromStores, sharedValue, sharedValue1];

@@ -16,32 +16,37 @@ import RedesignBottomSheetTitleHeaderBase from "../../../../../design/components
 import ActionSheet from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import _activityFromSetting from "../../../../custom_status/utils/userSettingToActivity.tsx";
+import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import TableRadioRow from "../../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import context from "../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
+import registerAssetDefault from "../../../../../../_runtime/08176_registerAsset.js";
+import useGameMentionsAsPlainText from "../../../../game_mentions/hooks/useGameMentionsAsPlainText.tsx";
+import ActivityEmojiDefault from "../../../../activity_status/native/ActivityEmoji.tsx";
 import BellSlashIcon from "../../../../../design/components/Icon/native/redesign/generated/BellSlashIcon.tsx";
 import useFocusModeEnabled from "../../../../notifications/FocusModeUtils.tsx";
+import ThemeDarkIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx";
+import validateMultiAccountTokensAll from "../../../../multi_account/MultiAccountActionCreators.tsx";
 import DevToolsContentSortButtonsDefault from "../../../../devtools/native/components/DevToolsContent.tsx";
 import ThemeLightIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeLightIcon.tsx";
 import ThemeMidnightIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeMidnightIcon.tsx";
+import ThemeGrayIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeGrayIcon.tsx";
 import importAllResult from "../../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_7 from "../../../../multi_account/MultiAccountStore.tsx";
 import { MultiAccountTokenStatus } from "../../../../multi_account/MultiAccountStore.tsx";
-import closure_9 from "../../../../user_settings/ThemeStore.tsx";
-import closure_10 from "../../../../../records/UserRecord.tsx";
-import closure_11 from "../../../../../stores/DeveloperExperimentStore.tsx";
-import closure_12 from "../../../../../stores/StreamerModeStore.tsx";
-import closure_13 from "../../../../../stores/UserStore.tsx";
+import handleThemeChange from "../../../../user_settings/ThemeStore.tsx";
+import createdAt from "../../../../../records/UserRecord.tsx";
+import init from "../../../../../stores/DeveloperExperimentStore.tsx";
+import initialize2 from "../../../../../stores/StreamerModeStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
 import ME from "../../../../../Constants.tsx";
 import { MultiAccountSwitchLocation as closure_18 } from "../../../../multi_account/Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function YouStatusRadioGroup() {
   const memo = importAllResult.useMemo(() => {
-    let obj = { icon: null, value: null };
-    obj = { source: callback(13476), variant: "text-status-online" };
+    let obj = { source: callback(13476), variant: "text-status-online" };
     obj[0] = callback2(setting(6296).TableRowIcon, obj);
     obj[1] = constants.ONLINE;
     const items = [obj, , , ];
@@ -65,34 +70,34 @@ function YouStatusRadioGroup() {
   closure_1 = StatusExpiresAtSetting.useSetting();
   let items = [setting];
   const callback = importAllResult.useCallback((nextStatus) => {
-    callback(closure_1_3[19])({ prevStatus: setting, nextStatus });
-    callback(closure_1_3[20]).hideActionSheet();
+    callback(dependencyMap[19])({ prevStatus: setting, nextStatus });
+    callback(dependencyMap[20]).hideActionSheet();
   }, items);
   let obj = { title: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
   let intl = setting(1236).intl;
   obj[0] = intl.string(setting(1236).t["0DPAZH"]);
   obj[1] = callback;
   obj[2] = setting;
-  obj[4] = memo.map((value) => {
+  obj[4] = memo.map((item, index) => {
     let obj = {};
-    const merged = Object.assign(value);
-    obj.label = setting(closure_1_3[24]).getStatusLabel(value.value);
+    const merged = Object.assign(item);
+    obj.label = setting(dependencyMap[24]).getStatusLabel(item.value);
     let formatToPlainStringResult;
-    if (value.value === setting) {
+    if (item.value === setting) {
       if (null != closure_1) {
-        if ("0" !== tmp6) {
-          const intl = tmp2(tmp3[22]).intl;
+        if ("0" !== closure_1) {
+          const intl = setting(dependencyMap[22]).intl;
           obj = { endTime: null };
           const _Date = Date;
           const _Number = Number;
-          const date = new Date(Number(tmp6));
-          obj[0] = date.toLocaleString(tmp2(tmp3[22]).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-          formatToPlainStringResult = intl.formatToPlainString(tmp2(tmp3[22]).t.BWD8fs, obj);
+          const date = new Date(Number(closure_1));
+          obj[0] = date.toLocaleString(setting(dependencyMap[22]).intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+          formatToPlainStringResult = intl.formatToPlainString(setting(dependencyMap[22]).t.BWD8fs, obj);
         }
       }
     }
     obj.subLabel = formatToPlainStringResult;
-    return closure_1_19(setting(closure_1_3[23]).TableRadioRow, obj, value.value);
+    return closure_1_19(setting(dependencyMap[23]).TableRadioRow, obj, item.value);
   });
   return callback(setting(8101).TableRadioGroup, obj);
 }
@@ -121,23 +126,23 @@ function ThemeRadioGroup() {
   let tmp6Result = tmp2;
   if (tmp2) {
     obj1 = { icon: null, label: null, value: null };
-    obj1[0] = tmp6(tmp3(15632).ThemeGrayIcon, {});
-    let tmp3Result = tmp3(1347);
-    obj1[1] = tmp3Result.getThemeName(tmp9.DARK, true);
-    obj1[2] = tmp9.DARK;
-    tmp6Result = tmp6(tmp3(8100).TableRadioRow, obj1);
+    obj1[0] = tmp6(ThemeGrayIcon.ThemeGrayIcon, {});
+    let tmp3Result = getThemeForColor;
+    obj1[1] = tmp3Result.getThemeName(constants.DARK, true);
+    obj1[2] = constants.DARK;
+    tmp6Result = tmp6(TableRadioRow.TableRadioRow, obj1);
   }
   let obj2 = { children: null };
   items1[1] = tmp6Result;
-  obj3 = { icon: tmp6(tmp3(10523).ThemeDarkIcon, {}), label: null, value: null };
-  tmp3Result = tmp3(1347);
+  obj3 = { icon: tmp6(ThemeDarkIcon.ThemeDarkIcon, {}), label: null, value: null };
+  tmp3Result = getThemeForColor;
   obj3[1] = tmp3Result.getThemeName(constants.DARKER, tmp2);
   obj3[2] = constants.DARKER;
   items1[2] = callback(TableRadioRow.TableRadioRow, obj3);
   const obj4 = { icon: callback(ThemeMidnightIcon.ThemeMidnightIcon, {}), label: getThemeForColor.getThemeName(constants.MIDNIGHT, tmp2), value: constants.MIDNIGHT };
   items1[3] = callback(TableRadioRow.TableRadioRow, obj4);
   obj[4] = items1;
-  obj2[0] = closure_20(context.TableRadioGroup, obj);
+  obj2[0] = callback2(context.TableRadioGroup, obj);
   return callback(closure_5, obj2);
 }
 function YouAccountRadioGroup() {
@@ -148,14 +153,12 @@ function YouAccountRadioGroup() {
   multiAccountUsers = stateFromStores;
   obj1 = multiAccountUsers(15217);
   multiAccountUsers = obj1.useMultiAccountUsers().multiAccountUsers;
-  let stateFromStores1 = multiAccountUsers;
-  stateFromStores1 = undefined;
   let obj2 = multiAccountUsers(589);
   const items1 = [closure_12];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => obj.hidePersonalInformation);
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => obj.hidePersonalInformation);
   const items2 = [multiAccountUsers, stateFromStores1];
-  const memo = importAllResult.useMemo(() => multiAccountUsers.map((id) => {
-    let obj = new closure_1_10(id);
+  const memo = importAllResult.useMemo(() => multiAccountUsers.map((item, index) => {
+    let obj = new closure_1_10(item);
     let combined = null;
     if (!closure_1) {
       combined = null;
@@ -168,9 +171,9 @@ function YouAccountRadioGroup() {
     if (closure_1) {
       str2 = "never";
     }
-    obj = { label: closure_1_1(closure_1_3[35]).getUserTag(obj, { mode: "username", identifiable: str2 }), value: id.id, subLabel: combined, icon: null };
-    obj = { user: obj, guildId: "Array", size: closure_1_0(tmp4[36]).AvatarSizes.REFRESH_MEDIUM_32 };
-    obj[3] = closure_1_19(closure_1_0(closure_1_3[36]).Avatar, obj);
+    obj = { label: stateFromStores1(closure_1_3[35]).getUserTag(obj, { mode: "username", identifiable: str2 }), value: item.id, subLabel: combined, icon: null };
+    obj = { user: obj, guildId: "Array", size: multiAccountUsers(closure_1_3[36]).AvatarSizes.REFRESH_MEDIUM_32 };
+    obj[3] = closure_1_19(multiAccountUsers(closure_1_3[36]).Avatar, obj);
     return obj;
   }), items2);
   const items3 = [multiAccountUsers, ];
@@ -197,22 +200,21 @@ function YouAccountRadioGroup() {
     obj2[1] = str;
     const intl = tmp4(1236).intl;
     obj2[2] = intl.string(tmp4(1236).t.HxrBOZ);
-    obj1[1] = closure_19(tmp4(4734).Text, obj2);
-    obj[1] = closure_19(tmp4(5433).PressableOpacity, obj1);
-    const items4 = [closure_19(closure_5, obj), ];
+    obj1[1] = callback(tmp4(4734).Text, obj2);
+    obj[1] = callback(tmp4(5433).PressableOpacity, obj1);
+    const items4 = [callback(closure_5, obj), ];
     const obj3 = { title: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
     const intl2 = tmp4(1236).intl;
     obj3[0] = intl2.string(tmp4(1236).t.oMNyYN);
     obj3[1] = tmp8;
     obj3[2] = stateFromStores.id;
-    obj3[4] = memo.map((value) => {
-      const merged = Object.assign(value);
-      return callback(multiAccountUsers(8100).TableRadioRow, {}, value.value);
+    obj3[4] = memo.map((item, index) => {
+      const merged = Object.assign(item);
+      return callback(multiAccountUsers(8100).TableRadioRow, {}, item.value);
     });
-    items4[1] = closure_19(tmp4(8101).TableRadioGroup, obj3);
+    items4[1] = callback(tmp4(8101).TableRadioGroup, obj3);
     obj[1] = items4;
-    tmp10Result = closure_20(tmp11, obj);
-    const tmp10 = closure_20;
+    tmp10Result = callback2(closure_5, obj);
   }
   return tmp10Result;
 }
@@ -259,9 +261,9 @@ function FocusModeSetting() {
       let stringResult = intl4.string(getSystemLocale.t.i0nsoY);
       obj1 = { hasIcons: true, children: null };
       tmp5Result[6] = stringResult;
-      tmp5Result = tmp5(TableSwitchRow.TableSwitchRow, tmp5Result);
+      tmp5Result = callback(TableSwitchRow.TableSwitchRow, tmp5Result);
       obj1[1] = tmp5Result;
-      tmp5Result = tmp5(TableRowGroupTitle.TableRowGroup, obj1);
+      tmp5Result = callback(TableRowGroupTitle.TableRowGroup, obj1);
     }
     const intl5 = getSystemLocale.intl;
     let obj2 = { endTime: null };
@@ -274,6 +276,7 @@ function FocusModeSetting() {
     obj2[0] = toLocaleStringResult;
     stringResult = intl5.formatToPlainString(getSystemLocale.t.BWD8fs, obj2);
   }
+  tmp = callback2();
 }
 function CustomStatus() {
   const tmp = callback2();
@@ -296,21 +299,20 @@ function CustomStatus() {
     }
     tmp8 = null != emoji;
   }
-  let tmp2Result = tmp2(9287);
+  let tmp2Result = useGameMentionsAsPlainText;
   let state1;
   if (customStatusActivity != null) {
     state1 = customStatusActivity.state;
   }
   let gameMentionsAsPlainText = tmp2Result.useGameMentionsAsPlainText(state1);
   const tmp12 = useIsMobileVisualRefreshExperimentEnabledDefault("CustomStatus");
-  tmp2Result = tmp2(4097);
-  const token1 = tmp2Result.useToken(tmp5(712).modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
-  const token2 = map.useToken(tmp5(712).modules.mobile.TABLE_ROW_LABEL_COLOR);
-  obj = { shadow: "none", border: "none", style: tmp.customStatusRow, children: null };
+  tmp2Result = map;
+  const token1 = tmp2Result.useToken(ThemesDefault.modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
+  const token2 = map.useToken(ThemesDefault.modules.mobile.TABLE_ROW_LABEL_COLOR);
   obj = { style: tmp.customStatusEditButton, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
-  const intl = tmp2(1236).intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = tmp2(1236).t;
+  const t = getSystemLocale.t;
   if (tmp8) {
     let stringResult = string(t["2p9FMw"]);
   } else {
@@ -319,7 +321,7 @@ function CustomStatus() {
   obj[2] = stringResult;
   let formatToPlainStringResult;
   if (tmp8) {
-    const intl2 = tmp2(1236).intl;
+    const intl2 = getSystemLocale.intl;
     emoji = customStatusActivity.emoji;
     let str2;
     if (emoji != null) {
@@ -331,7 +333,7 @@ function CustomStatus() {
     obj1 = { emoji: null, status: null };
     obj1[0] = str2;
     obj1[1] = gameMentionsAsPlainText;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.GE7QzY, obj1);
+    formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.GE7QzY, obj1);
   }
   obj[3] = formatToPlainStringResult;
   obj[4] = function onPress() {
@@ -350,11 +352,11 @@ function CustomStatus() {
     const obj2 = { emoji: null, size: null };
     obj2[0] = customStatusActivity.emoji;
     obj2[1] = token;
-    let tmp15Result = tmp15(tmp5(9541), obj2);
+    let tmp15Result = callback(ActivityEmojiDefault, obj2);
   } else {
     const obj3 = { size: "md", style: null };
     obj3[1] = tmp.leadingIcon;
-    tmp15Result = tmp15(tmp2(7939).ReactionIcon, obj3);
+    tmp15Result = callback(ReactionIcon.ReactionIcon, obj3);
   }
   let items = [tmp15Result, ];
   let str3 = "text-md/semibold";
@@ -369,13 +371,13 @@ function CustomStatus() {
   obj4[1] = str4;
   obj4[3] = tmp.customStatusText;
   if (!tmp8) {
-    const intl3 = tmp2(1236).intl;
-    gameMentionsAsPlainText = intl3.string(tmp2(1236).t["/UonHN"]);
+    const intl3 = getSystemLocale.intl;
+    gameMentionsAsPlainText = intl3.string(getSystemLocale.t["/UonHN"]);
   }
   obj4[4] = gameMentionsAsPlainText;
-  items[1] = closure_19(Text.Text, obj4);
+  items[1] = callback(Text.Text, obj4);
   obj[5] = items;
-  const items1 = [closure_20(PressableBase.PressableOpacity, obj), ];
+  const items1 = [callback2(PressableBase.PressableOpacity, obj), ];
   tmp15Result = null;
   if (null != customStatusActivity) {
     const obj5 = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, style: null, children: null };
@@ -383,35 +385,32 @@ function CustomStatus() {
       stopPropagation.stopPropagation();
       callback2(9297)();
     };
-    const intl4 = tmp2(1236).intl;
-    obj5[2] = intl4.string(tmp2(1236).t.wfYTHe);
+    const intl4 = getSystemLocale.intl;
+    obj5[2] = intl4.string(getSystemLocale.t.wfYTHe);
     obj5[3] = tmp.customStatusRemoveButton;
     const obj6 = { style: null, source: null };
     obj6[0] = tmp.trailingIcon;
-    obj6[1] = tmp5(8176);
-    obj5[4] = tmp15(closure_6, obj6);
-    tmp15Result = tmp15(tmp2(5433).PressableOpacity, obj5);
+    obj6[1] = registerAssetDefault;
+    obj5[4] = callback(closure_6, obj6);
+    tmp15Result = callback(PressableBase.PressableOpacity, obj5);
   }
   const tmp2Result1 = map;
   items1[1] = tmp15Result;
   obj[3] = items1;
-  return closure_19(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: closure_20(PressableCard.Card, obj) });
+  return callback(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: callback2(PressableCard.Card, obj) });
 }
 let c4 = importAllResult;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_14, AuthStates: closure_15, StatusTypes: closure_16, ThemeTypes: closure_17 } = ME);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-let obj = { account: { position: "relative" }, manage: { position: "absolute", right: 0, zIndex: 100 }, leadingIcon: { width: 24, height: 24, margin: 4 }, trailingIcon: null, customStatusRow: null, customStatusEditButton: null, customStatusRemoveButton: null, customStatusText: null };
-obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 16, height: 16 };
+let obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 16, height: 16 };
 obj[3] = obj;
-createCacheKey = { padding: 0, flexDirection: "row", alignItems: "center", gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+const createCacheKey = { padding: 0, flexDirection: "row", alignItems: "center", gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 obj[4] = createCacheKey;
 obj[5] = { minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-let obj2 = { minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 obj[6] = { height: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
 obj[7] = { flexShrink: 1 };
 let closure_21 = createCacheKey.createStyles(obj);
-let obj3 = { height: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
 const memoResult = importAllResult.memo((statusOnly) => {
   let flag = statusOnly.statusOnly;
   if (flag === undefined) {
@@ -434,18 +433,18 @@ const memoResult = importAllResult.memo((statusOnly) => {
   } else {
     stringResult = string(t["qP/i6k"]);
   }
-  obj[1] = closure_19(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: stringResult });
+  obj[1] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: stringResult });
   let tmp7Result = tmp5;
   if (tmp5) {
-    tmp7Result = tmp7(ThemeRadioGroup, {});
+    tmp7Result = callback(ThemeRadioGroup, {});
   }
-  const items2 = [tmp7Result, closure_19(YouStatusRadioGroup, {}), closure_19(FocusModeSetting, {}), closure_19(CustomStatus, {}), , ];
+  const items2 = [tmp7Result, callback(YouStatusRadioGroup, {}), callback(FocusModeSetting, {}), callback(CustomStatus, {}), , ];
   tmp7Result = !flag;
   if (!flag) {
     tmp7Result = stateFromStores;
   }
   if (tmp7Result) {
-    tmp7Result = tmp7(YouAccountRadioGroup, {});
+    tmp7Result = callback(YouAccountRadioGroup, {});
   }
   items2[4] = tmp7Result;
   let tmp7Result1 = !flag;
@@ -453,12 +452,12 @@ const memoResult = importAllResult.memo((statusOnly) => {
     tmp7Result1 = stateFromStores1;
   }
   if (tmp7Result1) {
-    tmp7Result1 = tmp7(DevToolsContentSortButtonsDefault, { title: "Developer Tools", embedded: true });
+    tmp7Result1 = callback(DevToolsContentSortButtonsDefault, { title: "Developer Tools", embedded: true });
   }
   items2[5] = tmp7Result1;
-  obj[3] = closure_20(Stack.Stack, { spacing: 24, children: items2 });
-  return closure_19(ActionSheet.ActionSheet, obj);
+  obj[3] = callback2(Stack.Stack, { spacing: 24, children: items2 });
+  return callback(ActionSheet.ActionSheet, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouAccountActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouAccountActionSheet.tsx");
 
 export default memoResult;

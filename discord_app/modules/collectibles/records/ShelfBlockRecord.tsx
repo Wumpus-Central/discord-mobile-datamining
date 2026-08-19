@@ -1,9 +1,8 @@
 // discord_app/modules/collectibles/records/ShelfBlockRecord.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 
-let prototype;
-prototype = function ShelfBlockRecord(show_button) {
+const prototype = function ShelfBlockRecord(show_button) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.SHELF;
   ({ name: tmp.name, ranked_sku_ids: tmp.rankedSkuIds, category_sku_id } = show_button);
@@ -68,6 +67,6 @@ prototype["fromServer"] = function fromServer(show_button) {
   obj.mobileBackgroundImage = prop1;
   return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/ShelfBlockRecord.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/records/ShelfBlockRecord.tsx");
 
 export const ShelfBlockRecord = prototype;

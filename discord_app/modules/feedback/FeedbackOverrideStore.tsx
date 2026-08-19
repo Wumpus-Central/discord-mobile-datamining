@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import dispatcherDefault from "../../Dispatcher.tsx";
 import optOutEligibilityCheck from "FeedbackManager.tsx";
 
-require = arg1;
+require = fn;
 let closure_2 = {};
 const Store = initializeDefault.Store;
 class HotspotStore extends Store {
@@ -31,6 +31,6 @@ const hotspotStore = new HotspotStore(dispatcherDefault, {
     delete tmp[tmp2];
   }
 });
-const result = require("set").fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
 
 export default hotspotStore;

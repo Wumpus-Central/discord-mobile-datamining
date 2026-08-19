@@ -3,13 +3,12 @@ import ThemesDefault from "../../../../../discord_common/js/packages/tokens/nati
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import useGameConsoleAccountsDefault from "../../../game_console/useGameConsoleAccounts.tsx";
 import getConsoleIconDefault from "../../../game_console/native/getConsoleIcon.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { PlatformTypes } from "../../../../Constants.tsx";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
-import { Button } from "../../../../design/void/native.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function getConsoleInfo(type) {
   type = type.type;
   if (PlatformTypes.XBOX === type) {
@@ -34,13 +33,11 @@ function getConsoleInfo(type) {
     return null;
   }
 }
-createCacheKey = { consoleIconContainer: null, consoleIcon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { borderRadius: ThemesDefault.radii.round, padding: 8, margin: -3, borderWidth: 3, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.WHITE };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { tintColor: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx");
 
 export default function VoicePanelConsoleFacepile() {
   const tmp = callback();
@@ -50,16 +47,15 @@ export default function VoicePanelConsoleFacepile() {
   let items = [tmp2];
   const items1 = [tmp];
   items = React.useMemo(() => {
-    const mapped = lib2.map(closure_1_7);
-    return mapped.filter(lib(closure_1_2[8]).isNotNullish);
+    const mapped = lib2.map(getConsoleInfo);
+    return mapped.filter(lib(dependencyMap[8]).isNotNullish);
   }, items);
   const renderItem = React.useCallback((backgroundColor) => {
-    let obj = { style: items, children: null };
-    items = [lib.consoleIconContainer, { backgroundColor: backgroundColor.color }];
-    obj = { style: lib.consoleIcon, size: lib(closure_1_2[10]).Icon.Sizes.MEDIUM, source: backgroundColor.icon };
-    obj[1] = closure_1_5(lib(closure_1_2[10]).Icon, obj);
-    return closure_1_5(lib2(closure_1_2[9]), obj);
+    const items = [lib.consoleIconContainer, { backgroundColor: backgroundColor.color }];
+    const obj = { style: lib.consoleIcon, size: lib(dependencyMap[10]).Icon.Sizes.MEDIUM, source: backgroundColor.icon };
+    obj[1] = jsx(lib(dependencyMap[10]).Icon, { style: lib.consoleIcon, size: lib(dependencyMap[10]).Icon.Sizes.MEDIUM, source: backgroundColor.icon });
+    return jsx(lib2(dependencyMap[9]), { style: lib.consoleIcon, size: lib(dependencyMap[10]).Icon.Sizes.MEDIUM, source: backgroundColor.icon });
   }, items1);
-  return jsx(_Button.SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
+  return jsx(require("../../../../design/void/native.tsx").SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
 };
 export { getConsoleInfo };

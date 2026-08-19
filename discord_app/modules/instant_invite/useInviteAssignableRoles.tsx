@@ -1,28 +1,28 @@
 // discord_app/modules/instant_invite/useInviteAssignableRoles.tsx
-import closure_3 from "../../../_runtime/00019_noop.js";
+import noop from "../../../_runtime/00019_noop.js";
 import { isEveryoneRole } from "../../records/GuildRoleRecord.tsx";
-import closure_5 from "../../stores/GuildRoleStore.tsx";
-import closure_6 from "../../stores/PermissionStore.tsx";
-import closure_7 from "../../stores/UserStore.tsx";
+import createGuildRoleRecordFromRust from "../../stores/GuildRoleStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
+import mergeGuildAvatar from "../../stores/UserStore.tsx";
 import { Permissions } from "../../Constants.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
 
 export default function useInviteAssignableRoles(arg0) {
   const _require = arg0;
   const items = [closure_5, closure_7, closure_6];
   const items1 = [arg0];
   const stateFromStoresObject = _require(currentUser[6]).useStateFromStoresObject(items, () => {
-    if (null != closure_0) {
-      sortedRoles = closure_1_5.getSortedRoles(tmp.id);
+    if (null != id) {
+      sortedRoles = closure_1_5.getSortedRoles(id.id);
     } else {
       sortedRoles = [];
     }
     const obj = { sortedRoles, currentUser: closure_1_7.getCurrentUser(), canManageRoles: null };
-    let canResult = null != tmp;
+    let canResult = null != id;
     if (canResult) {
-      canResult = closure_1_6.can(closure_1_8.MANAGE_ROLES, tmp);
+      canResult = closure_1_6.can(Permissions.MANAGE_ROLES, id);
     }
     obj[2] = canResult;
     return obj;
@@ -36,14 +36,14 @@ export default function useInviteAssignableRoles(arg0) {
       if (null != currentUser) {
         if (canManageRoles) {
           highestRole = sortedRoles(currentUser[7]).getHighestRole(tmp, tmp2.id);
-          return sortedRoles.filter((managed) => {
-            const tmp = closure_2_4(managed);
+          return sortedRoles.filter((item, index) => {
+            const tmp = isEveryoneRole(item);
             let tmp2 = !tmp;
             if (!tmp) {
-              managed = managed.managed;
+              const managed = item.managed;
               let tmp3 = !managed;
               if (!managed) {
-                const tags = managed.tags;
+                const tags = item.tags;
                 let guild_connections;
                 if (tags != null) {
                   guild_connections = tags.guild_connections;
@@ -51,7 +51,7 @@ export default function useInviteAssignableRoles(arg0) {
                 let isRoleHigherResult = undefined === guild_connections;
                 if (isRoleHigherResult) {
                   const obj = sortedRoles(currentUser[7]);
-                  isRoleHigherResult = obj.isRoleHigher(closure_0, closure_1_2.id, closure_0, managed);
+                  isRoleHigherResult = obj.isRoleHigher(closure_0, closure_1_2.id, closure_0, item);
                 }
                 tmp3 = isRoleHigherResult;
               }

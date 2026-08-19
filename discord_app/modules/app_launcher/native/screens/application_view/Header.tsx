@@ -5,42 +5,36 @@ import _modDef4115 from "../../../../reanimated/ReanimatedRexport.tsx";
 import hasFetchedColorsDefault from "../../../../avatar/useAvatarColor.tsx";
 import AppLauncherBackButtonDefault from "../../base_components/AppLauncherBackButton.tsx";
 import { View } from "../../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../../stores/UserStore.tsx";
-import closure_5 from "../../../AppLauncherStore.tsx";
+import mergeGuildAvatar from "../../../../../stores/UserStore.tsx";
+import handleDismissWithDismissed from "../../../AppLauncherStore.tsx";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "../../AppLauncherNativeConstants.tsx";
 import ME from "../../../../../Constants.tsx";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ DEFAULT_CONTENT_PADDING, SCREEN_BACKGROUND_COLOR } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
 ({ AnalyticEvents: closure_6, ApplicationFlags: error } = ME);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 const xl = ThemesDefault.radii.xl;
 let c11 = 105;
-createCacheKey = { headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 }, expandedHeaderBanner: { height: 105 }, appIconMask: null, collapsedHeaderBanner: null, collapsedHeaderBannerOverlay: null, loadingIcon: null, actionsWrapper: null };
-createCacheKey = { position: "absolute", padding: 4, bottom: -40, left: 16, backgroundColor: SCREEN_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xl + 4 };
+const createCacheKey = { position: "absolute", padding: 4, bottom: -40, left: 16, backgroundColor: SCREEN_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xl + 4 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { height: 56, justifyContent: "space-between", alignItems: "center", position: "absolute", top: 0, left: 0, right: 0, flexDirection: "row", paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: 16, paddingBottom: ThemesDefault.space.PX_12 };
 createCacheKey[4] = { backgroundColor: "black", position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
-let obj1 = { height: 56, justifyContent: "space-between", alignItems: "center", position: "absolute", top: 0, left: 0, right: 0, flexDirection: "row", paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: 16, paddingBottom: ThemesDefault.space.PX_12 };
 createCacheKey[5] = { height: 72, width: 72, borderRadius: xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-let obj2 = { height: 72, width: 72, borderRadius: xl, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[6] = { flexDirection: "row", display: "flex", gap: ThemesDefault.space.PX_16, position: "absolute", right: ThemesDefault.space.PX_12, top: ThemesDefault.space.PX_12, alignItems: "center", justifyContent: "center" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
 let closure_13 = { code: "function HeaderTsx1(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,-HEADER_SCROLL_RANGE],'clamp')}]};}" };
 let closure_14 = { code: "function HeaderTsx2(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[0,HEADER_SCROLL_RANGE],[0,HEADER_SCROLL_RANGE],'clamp')}]};}" };
 let closure_15 = { code: "function HeaderTsx3(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{transform:[{translateY:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[16,0],'clamp')}],opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,1],'clamp')};}" };
 let closure_16 = { code: "function HeaderTsx4(){const{interpolate,scrollOffsetY,HEADER_SCROLL_RANGE}=this.__closure;return{opacity:interpolate(scrollOffsetY.get(),[HEADER_SCROLL_RANGE*0.5,HEADER_SCROLL_RANGE],[0,0.5],'clamp')};}" };
-let obj3 = { flexDirection: "row", display: "flex", gap: ThemesDefault.space.PX_16, position: "absolute", right: ThemesDefault.space.PX_12, top: ThemesDefault.space.PX_12, alignItems: "center", justifyContent: "center" };
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/Header.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/application_view/Header.tsx");
 
 export default function Header(application) {
   application = application.application;
-  let scrollOffsetY = application;
-  scrollOffsetY = application.scrollOffsetY;
-  importDefault = undefined;
+  const scrollOffsetY = application.scrollOffsetY;
   dependencyMap = undefined;
   let currentUser2;
   ({ onPressBack, onAddAppMenuClick } = application);
@@ -79,10 +73,8 @@ export default function Header(application) {
     tmp12 = callback(currentUser2, obj);
     tmp13 = callback;
   }
-  const tmp6 = hasFetchedColorsDefault;
   const fn = function n() {
-    let obj = { transform: null };
-    obj = { translateY: scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items, [0, -105], "clamp") };
+    const obj = { translateY: scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items, [0, -105], "clamp") };
     items = [0, closure_1_11];
     const items1 = [obj];
     obj[0] = items1;
@@ -95,8 +87,7 @@ export default function Header(application) {
   const animatedStyle = tmpResult1.useAnimatedStyle(fn);
   obj1 = { interpolate: scrollOffsetY(4115).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   const fn2 = function n() {
-    let obj = { transform: null };
-    obj = { translateY: scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items, items1, "clamp") };
+    const obj = { translateY: scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items, items1, "clamp") };
     items = [0, closure_1_11];
     items1 = [0, closure_1_11];
     const items2 = [obj];
@@ -110,8 +101,7 @@ export default function Header(application) {
   const animatedStyle1 = tmpResult2.useAnimatedStyle(fn2);
   const obj2 = { interpolate: scrollOffsetY(4115).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE: c11 };
   const fn3 = function o() {
-    let obj = { transform: null, opacity: null };
-    obj = { translateY: scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items, [16, 0], "clamp") };
+    const obj = { translateY: scrollOffsetY(_undefined[9]).interpolate(scrollOffsetY.get(), items, [16, 0], "clamp") };
     items = [52.5, closure_1_11];
     const items1 = [obj];
     obj[0] = items1;
@@ -175,13 +165,13 @@ export default function Header(application) {
       const obj11 = { size: "sm", variant: "secondary-overlay", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
       obj11[2] = tmp5(4319);
       obj11[3] = function onPress() {
-        let obj = callback(_undefined[22]);
-        obj = { application_id: scrollOffsetY.id, source: callback };
+        callback(_undefined[22]);
+        let obj = { application_id: scrollOffsetY.id, source: callback };
         obj.track(closure_1_6.APP_LAUNCHER_APPLICATION_LINK_COPIED, obj);
         const obj4 = scrollOffsetY(_undefined[24]);
         if (_undefined) {
           obj = { applicationId: null, referrerId: null };
-          obj[0] = tmp2.id;
+          obj[0] = scrollOffsetY.id;
           let id;
           if (id != null) {
             id = id.id;
@@ -190,14 +180,15 @@ export default function Header(application) {
           let activityLaunchURL = obj4.getActivityLaunchURL(obj);
         } else {
           obj1 = { id: null };
-          obj1[0] = tmp2.id;
-          let tmp4Result = tmp4(tmp[15]);
-          const merged = Object.assign(tmp4Result.getInstallAppProps(tmp2));
+          obj1[0] = scrollOffsetY.id;
+          let tmp4Result = scrollOffsetY(_undefined[15]);
+          const merged = Object.assign(tmp4Result.getInstallAppProps(scrollOffsetY));
           activityLaunchURL = obj4.getApplicationInstallURL(obj1);
         }
         scrollOffsetY(_undefined[23]).copy(activityLaunchURL);
-        tmp4Result = tmp4(tmp[25]);
+        tmp4Result = scrollOffsetY(_undefined[25]);
         tmp4Result.presentLinkCopied();
+        const obj3 = scrollOffsetY(_undefined[23]);
       };
       const intl = tmp(1236).intl;
       obj11[4] = intl.string(tmp(1236).t.XWDihq);
@@ -207,7 +198,7 @@ export default function Header(application) {
       obj12[1] = onAddAppMenuClick;
       items7[1] = tmp13(tmp5(11311), obj12);
       obj10[1] = items7;
-      tmp22Result = tmp22(tmp23, obj10);
+      tmp22Result = callback2(tmp23, obj10);
     }
     tmpResult7 = tmp(8447);
   }

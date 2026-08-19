@@ -3,24 +3,23 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import set from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
-import closure_2 from "../../../../_runtime/00019_noop.js";
+import computeChannelName from "../../channel/useChannelName.tsx";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../a11y/AccessibilityStore.tsx";
-import closure_5 from "../../../stores/RelationshipStore.tsx";
-import closure_6 from "../../../stores/UserStore.tsx";
+import maybeApplyNoTextColorForLightCustomTheme from "../../a11y/AccessibilityStore.tsx";
+import markAllUserIdListsStale from "../../../stores/RelationshipStore.tsx";
+import mergeGuildAvatar from "../../../stores/UserStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function LocationText(channel) {
   channel = channel.channel;
   const parentChannel = channel.parentChannel;
-  let str = channel.color;
-  let React;
-  str = undefined;
+  let str;
   ({ author, location: _location } = channel);
   const tmp = callback2();
-  React = tmp;
+  const React = tmp;
   if (str == null) {
     str = "text-muted";
   }
@@ -40,14 +39,14 @@ function LocationText(channel) {
       }
       return element;
     } else {
-      if (tmp.type !== tmp3(tmp3Result[10]).ChannelTypes.PUBLIC_THREAD) {
-        tmp3Result = tmp3(tmp3Result[13]);
-        const simpleChannelIconComponent = tmp3Result.getSimpleChannelIconComponent(tmp);
+      if (channel.type !== channel(tmp3Result[10]).ChannelTypes.PUBLIC_THREAD) {
+        tmp3Result = channel(tmp3Result[13]);
+        const simpleChannelIconComponent = tmp3Result.getSimpleChannelIconComponent(channel);
       }
-      if (null == tmp2) {
-        const ThreadIcon = tmp3(tmp3Result[12]).ThreadIcon;
+      if (null == parentChannel) {
+        const ThreadIcon = channel(tmp3Result[12]).ThreadIcon;
       }
-      tmp3Result = tmp3(tmp3Result[11]);
+      tmp3Result = channel(tmp3Result[11]);
       const ChatIcon = tmp3Result.ChatIcon;
     }
   }, items);
@@ -61,11 +60,10 @@ function LocationText(channel) {
   obj = { variant: "text-md/semibold", color: str, lineClamp: 1, style: tmp.secondaryText, children: _location };
   items1[2] = callback(channel(parentChannel[8]).Text, obj);
   obj[1] = items1;
-  return closure_8(str, obj);
+  return callback2(str, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, headerContent: null, primaryText: null, secondaryTextContainer: null, separator: null, icon: null, secondaryText: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+const createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center" };
 createCacheKey[2] = { flexShrink: 1, marginRight: 2 };
@@ -74,7 +72,7 @@ createCacheKey[4] = { marginHorizontal: 2 };
 createCacheKey[5] = { width: 16, height: 16 };
 createCacheKey[6] = { flex: 1 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/MessageNotificationHeader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/MessageNotificationHeader.tsx");
 
 export default function MessageNotificationHeader(locationTextColor) {
   ({ channel, parentChannel, guild, author } = locationTextColor);
@@ -94,22 +92,22 @@ export default function MessageNotificationHeader(locationTextColor) {
     obj[0] = tmp5;
     const tmp6 = obj;
   }
-  let tmp2Result = tmp2(4984);
+  let tmp2Result = computeChannelName;
   const channelName = tmp2Result.computeChannelName(channel, closure_6, closure_5);
   const type = channel.type;
   let tmp10 = channelName;
   if (set.ChannelTypes.GROUP_DM !== type) {
-    if (tmp2(692).ChannelTypes.GUILD_FORUM !== type) {
-      if (tmp2(692).ChannelTypes.GUILD_TEXT !== type) {
-        if (tmp2(692).ChannelTypes.GUILD_ANNOUNCEMENT !== type) {
-          if (tmp2(692).ChannelTypes.ANNOUNCEMENT_THREAD !== type) {
-            if (tmp2(692).ChannelTypes.PUBLIC_THREAD !== type) {
+    if (set.ChannelTypes.GUILD_FORUM !== type) {
+      if (set.ChannelTypes.GUILD_TEXT !== type) {
+        if (set.ChannelTypes.GUILD_ANNOUNCEMENT !== type) {
+          if (set.ChannelTypes.ANNOUNCEMENT_THREAD !== type) {
+            if (set.ChannelTypes.PUBLIC_THREAD !== type) {
               tmp10 = null;
             }
           }
           let channelName1 = null;
           if (null != parentChannel) {
-            tmp2Result = tmp2(4984);
+            tmp2Result = computeChannelName;
             channelName1 = tmp2Result.computeChannelName(parentChannel, closure_6, closure_5);
           }
           if (null != channelName1) {
@@ -141,7 +139,7 @@ export default function MessageNotificationHeader(locationTextColor) {
     const items1 = [tmp.primaryText, tmp6];
     obj2[3] = items1;
     obj2[4] = author.nick;
-    tmp17Result = tmp17(tmp2(4734).Text, obj2);
+    tmp17Result = callback(Text.Text, obj2);
   }
   const items2 = [tmp17Result, ];
   tmp17Result = null != tmp10;
@@ -152,12 +150,12 @@ export default function MessageNotificationHeader(locationTextColor) {
     obj3[2] = parentChannel;
     obj3[3] = author;
     obj3[4] = locationTextColor.locationTextColor;
-    tmp17Result = tmp17(LocationText, obj3);
+    tmp17Result = callback(LocationText, obj3);
   }
   items2[1] = tmp17Result;
   obj1[1] = items2;
-  obj[1] = closure_8(View, obj1);
-  return closure_7(View, obj);
+  obj[1] = callback2(View, obj1);
+  return callback(View, obj);
 };
 export const SimpleNotificationHeader = function SimpleNotificationHeader(secondaryText) {
   secondaryText = secondaryText.secondaryText;
@@ -172,15 +170,15 @@ export const SimpleNotificationHeader = function SimpleNotificationHeader(second
     obj[0] = tmp.secondaryTextContainer;
     obj = { variant: "text-md/bold", color: "text-muted", maxFontSizeMultiplier: 1.75, style: null, children: "\u00B7" };
     obj[3] = tmp.separator;
-    const items2 = [tmp4(tmp5(4734).Text, obj), ];
+    const items2 = [callback(Text.Text, obj), ];
     obj1 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: null, children: null };
     obj1[3] = tmp.secondaryText;
     obj1[4] = secondaryText;
-    items2[1] = tmp4(tmp5(4734).Text, obj1);
+    items2[1] = callback(Text.Text, obj1);
     obj[1] = items2;
-    tmp2Result = tmp2(tmp3, obj);
+    tmp2Result = callback2(View, obj);
   }
   items1[1] = tmp2Result;
   obj[1] = items1;
-  return closure_8(View, obj);
+  return callback2(View, obj);
 };

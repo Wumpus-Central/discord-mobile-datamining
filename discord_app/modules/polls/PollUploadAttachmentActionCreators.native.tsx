@@ -1,9 +1,9 @@
 // discord_app/modules/polls/PollUploadAttachmentActionCreators.native.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import { DraftType } from "../../stores/DraftStore.tsx";
 import { POLL_ATTACHMENT_FOLDER } from "PollsConstants.tsx";
 
-const require = arg1;
+const require = fn;
 function _handlePollGifAttachmentAdd() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -245,7 +245,7 @@ function _removeAllPollUploadAttachments() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 
 export const handlePollGifAttachmentAdd = function handlePollGifAttachmentAdd(closure_0, localCreationAnswerId, closure_2) {
   const self = this;

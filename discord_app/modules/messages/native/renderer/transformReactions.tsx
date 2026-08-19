@@ -1,17 +1,18 @@
 // discord_app/modules/messages/native/renderer/transformReactions.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
+import obj1322 from "../../../../utils/PlatformUtils.tsx";
+import MAX_REACTIONS from "../../../reactions/ReactionUtils.tsx";
 import apexExperiment from "../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
+import buildPlatformedThemedEmojiColorPalette from "../../../emojis/utils/EmojiColorUtils.tsx";
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
 
 export default function transformReactions(arg0) {
   ({ reactions, animateEmoji: require } = arg0);
-  closure_1 = undefined;
   closure_1 = apexExperiment.shouldSkipAccessibilityLabels();
-  let obj = apexExperiment;
-  return reactions.flatMap((emoji) => {
-    emoji = emoji.emoji;
-    const merged = Object.assign(emoji, Object.create(null));
+  return reactions.flatMap((item, index) => {
+    const emoji = item.emoji;
+    const merged = Object.assign(item, Object.create(null));
     const count_details = merged.count_details;
     let vote;
     if (count_details != null) {
@@ -25,11 +26,11 @@ export default function transformReactions(arg0) {
         animated = emoji.animated;
       }
       if (null == emoji.id) {
-        let obj2 = callback(closure_1_2[1]);
+        let obj2 = callback(dependencyMap[1]);
         let uRL = obj2.getURL(emoji.name);
       } else {
-        let obj = callback(closure_1_2[2]);
-        obj = { id: null, animated: null, size: 48 };
+        callback(dependencyMap[2]);
+        let obj = { id: null, animated: null, size: 48 };
         obj[0] = emoji.id;
         obj[1] = animated;
         uRL = obj.getEmojiURL(obj);
@@ -41,7 +42,7 @@ export default function transformReactions(arg0) {
         }
         let accessibleEmojiDisplayName = str;
       } else {
-        const obj4 = closure_1_0(closure_1_2[3]);
+        const obj4 = MAX_REACTIONS;
         accessibleEmojiDisplayName = obj4.getAccessibleEmojiDisplayName(merged.me, merged.count, emoji, merged.burst_count > 0);
       }
       let combined = null;
@@ -63,20 +64,19 @@ export default function transformReactions(arg0) {
         if (obj.burst_colors.length > 0) {
           obj2 = { colors: null, shouldProcessMobileColors: null };
           obj2[0] = obj.burst_colors;
-          obj2[1] = closure_1_0(closure_1_2[5]).isIOS();
-          obj.themedBurstColors = closure_1_0(closure_1_2[4]).buildPlatformedThemedEmojiColorPalette(obj2);
-          const obj8 = closure_1_0(closure_1_2[5]);
+          obj2[1] = obj1322.isIOS();
+          obj.themedBurstColors = buildPlatformedThemedEmojiColorPalette.buildPlatformedThemedEmojiColorPalette(obj2);
         }
       }
       return obj;
     }
-  }).map((burst_count) => {
-    burst_count = burst_count.burst_count;
-    const merged = Object.assign(burst_count, Object.create(null));
+  }).map((item, index) => {
+    const burst_count = item.burst_count;
+    const merged = Object.assign(item, Object.create(null));
     let num = burst_count;
     if (null === burst_count) {
-      let obj = callback(table[6]);
-      obj = { burst_count: null };
+      callback(table[6]);
+      let obj = { burst_count: null };
       obj[0] = burst_count;
       const merged1 = Object.assign(merged);
       const _HermesInternal = HermesInternal;

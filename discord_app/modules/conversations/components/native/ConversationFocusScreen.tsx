@@ -1,21 +1,19 @@
 // discord_app/modules/conversations/components/native/ConversationFocusScreen.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_2 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../ConversationsStore.tsx";
+import removePendingListFetch from "../../ConversationsStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ ActivityIndicator: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, pendingContent: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", gap: ThemesDefault.space.PX_32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", gap: ThemesDefault.space.PX_32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
 
 export default function ConversationFocusScreen() {
   let container = callback2();
@@ -117,9 +115,7 @@ export default function ConversationFocusScreen() {
     }
     items7[1] = tmp12Result;
     obj2[1] = items7;
-    closure_8(closure_5, obj2);
-    const tmp10 = closure_8;
-    const tmp11 = closure_5;
+    callback(closure_5, obj2);
     tmp12 = callback;
   }
 };

@@ -2,12 +2,11 @@
 import dispatcherDefault from "../../Dispatcher.tsx";
 import _modDef5227 from "../../utils/TrackedHTTPUtils.tsx";
 import importDefaultResult from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "GuildDirectorySearchStore.tsx";
+import getSearchState from "GuildDirectorySearchStore.tsx";
 import { DirectoryEntryCategories } from "GuildDirectoryConstants.tsx";
 import { Endpoints } from "../../Constants.tsx";
 import importDefaultResult1 from "../../../_runtime/00636_debounce.js";
 
-let closure_0 = arg1;
 function _addDirectoryGuildEntry() {
   const self = this;
   const tmp = importDefaultResult((arg0, arg1, arg2) => {
@@ -277,8 +276,7 @@ function _fetchGuildEntriesForIds() {
   return applyArgumentsResult;
 }
 let c3 = importDefaultResult;
-closure_0 = undefined;
-closure_0 = importDefaultResult((arg0, arg1) => {
+importDefaultResult((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   c6 = 0;
@@ -287,8 +285,8 @@ closure_0 = importDefaultResult((arg0, arg1) => {
   return (function*(arg0, arg1) {
     closure_3 = tmp3;
     c5 = 1;
-    lib(closure_1_2[5]).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
-    const HTTP = callback(closure_1_2[6]).HTTP;
+    lib(dependencyMap[5]).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
+    const HTTP = callback(dependencyMap[6]).HTTP;
     obj1 = { url: null, query: null, rejectWithError: true };
     obj1[0] = c6.DIRECTORY_CHANNEL_ENTRIES(callback);
     const obj2 = { category_id: null };
@@ -297,7 +295,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
     yield HTTP.get(obj1);
     if (1 === tmp7) {
       c5 = 0;
-      const obj3 = lib(closure_1_2[5]);
+      const obj3 = lib(dependencyMap[5]);
       obj3.dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
       c7 = 3;
     } else if (arg0 === 1) {
@@ -305,7 +303,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
       throw arg1;
     } else if (arg0 !== 2) {
       lib = arg1;
-      const obj = lib(closure_1_2[5]);
+      const obj = lib(dependencyMap[5]);
       const obj4 = { type: "GUILD_DIRECTORY_FETCH_SUCCESS", channelId: null, entries: null };
       obj4[1] = callback;
       obj4[2] = lib.body;
@@ -316,7 +314,6 @@ closure_0 = importDefaultResult((arg0, arg1) => {
     return arg1;
   })();
 });
-closure_0 = undefined;
 const importDefaultResult1Result = importDefaultResult1(function() {
   const self = this;
   const apply = closure_0.apply;
@@ -327,7 +324,7 @@ const importDefaultResult1Result = importDefaultResult1(function() {
   }
   return applyArgumentsResult;
 }, 200);
-closure_0 = importDefaultResult((arg0) => {
+importDefaultResult((arg0) => {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
@@ -335,7 +332,7 @@ closure_0 = importDefaultResult((arg0) => {
   return (function*(arg0) {
     closure_2 = tmp3;
     c4 = 1;
-    const HTTP = callback(closure_1_2[6]).HTTP;
+    const HTTP = callback(dependencyMap[6]).HTTP;
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = c6.DIRECTORY_CHANNEL_CATEGORY_COUNTS(callback);
     yield HTTP.get(obj1);
@@ -347,7 +344,7 @@ closure_0 = importDefaultResult((arg0) => {
       throw arg1;
     } else if (arg0 !== 2) {
       const body = arg1;
-      const obj = closure_1_1(closure_1_2[5]);
+      const obj = dispatcherDefault;
       const obj3 = { type: "GUILD_DIRECTORY_COUNTS_FETCH_SUCCESS", channelId: null, counts: null };
       obj3[1] = callback;
       obj3[2] = body.body;
@@ -359,7 +356,6 @@ closure_0 = importDefaultResult((arg0) => {
   })();
 });
 const importDefaultResult2 = importDefaultResult1;
-closure_0 = undefined;
 const importDefaultResult2Result = importDefaultResult1(function() {
   const self = this;
   const apply = closure_0.apply;
@@ -370,7 +366,7 @@ const importDefaultResult2Result = importDefaultResult1(function() {
   }
   return applyArgumentsResult;
 }, 200);
-closure_0 = importDefaultResult((arg0, arg1) => {
+let closure_0 = importDefaultResult((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   c6 = 0;
@@ -408,16 +404,16 @@ closure_0 = importDefaultResult((arg0, arg1) => {
             body = undefined;
             if (closure_1_4.shouldFetch(callback, callback2)) {
               c5 = 1;
-              let obj6 = callback2(closure_1_2[5]);
+              let obj6 = callback2(dependencyMap[5]);
               obj1 = { type: "GUILD_DIRECTORY_SEARCH_START", channelId: null, query: null };
-              obj1[1] = tmp38;
-              obj1[2] = tmp39;
+              obj1[1] = callback;
+              obj1[2] = callback2;
               obj6.dispatch(obj1);
-              const HTTP = callback(closure_1_2[6]).HTTP;
+              const HTTP = callback(dependencyMap[6]).HTTP;
               const obj2 = { url: null, query: null, rejectWithError: true };
-              obj2[0] = c6.DIRECTORY_ENTRIES_SEARCH(tmp38);
+              obj2[0] = c6.DIRECTORY_ENTRIES_SEARCH(callback);
               let obj3 = { query: null };
-              obj3[0] = tmp39;
+              obj3[0] = callback2;
               obj2[1] = obj3;
               c6 = 2;
               c7 = 1;
@@ -425,24 +421,24 @@ closure_0 = importDefaultResult((arg0, arg1) => {
               obj4[0] = HTTP.get(obj2);
               return obj4;
             } else {
-              obj4 = callback2(closure_1_2[5]);
+              obj4 = callback2(dependencyMap[5]);
               const obj5 = { type: "GUILD_DIRECTORY_CACHED_SEARCH", channelId: null, query: null };
-              obj5[1] = tmp38;
-              obj5[2] = tmp39;
+              obj5[1] = callback;
+              obj5[2] = callback2;
               obj4.dispatch(obj5);
             }
           }
         } else {
           if (1 === tmp7) {
             c5 = 0;
-            obj3 = callback2(closure_1_2[5]);
+            obj3 = callback2(dependencyMap[5]);
             obj3.dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
           } else if (arg0 === 1) {
             c7 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
             body = arg1;
-            obj = callback2(closure_1_2[5]);
+            obj = callback2(dependencyMap[5]);
             obj6 = { type: "GUILD_DIRECTORY_SEARCH_SUCCESS", channelId: null, query: null, results: null };
             obj6[1] = callback;
             obj6[2] = callback2;
@@ -480,7 +476,7 @@ const importDefaultResult3Result = importDefaultResult1(function() {
   }
   return applyArgumentsResult;
 }, 200);
-const result = require("set").fileFinishedImporting("modules/directory_channels/GuildDirectoryActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/directory_channels/GuildDirectoryActionCreators.tsx");
 
 export const fetchDirectoryEntries = importDefaultResult1Result;
 export const fetchDirectoryCounts = importDefaultResult2Result;
@@ -495,17 +491,15 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry(c0, id, c3
   return applyArgumentsResult;
 };
 export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
-  let obj = _modDef5227;
-  obj = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
-  obj = { event: callback(503).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: obj1 };
+  { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
+  const obj = { event: callback(503).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: obj1 };
   obj[1] = obj;
   obj.delete(obj);
   dispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
 };
 export const searchDirectoryEntries = importDefaultResult3Result;
 export const clearDirectorySearch = function clearDirectorySearch(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_DIRECTORY_SEARCH_CLEAR", channelId: id };
+  const obj = { type: "GUILD_DIRECTORY_SEARCH_CLEAR", channelId: id };
   obj.dispatch(obj);
 };
 export const updateDirectoryEntry = function updateDirectoryEntry(channelId, guildId, closure_0, closure_1) {
@@ -519,11 +513,10 @@ export const updateDirectoryEntry = function updateDirectoryEntry(channelId, gui
   return applyArgumentsResult;
 };
 export const selectDirectoryCategory = function selectDirectoryCategory(id, value) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_DIRECTORY_CATEGORY_SELECT", channelId: id, categoryId: value };
+  const obj = { type: "GUILD_DIRECTORY_CATEGORY_SELECT", channelId: id, categoryId: value };
   obj.dispatch(obj);
 };
-export const fetchGuildEntriesForIds = function fetchGuildEntriesForIds(c1, closure_1_4) {
+export const fetchGuildEntriesForIds = function fetchGuildEntriesForIds(c1, arg1) {
   const self = this;
   const apply = _fetchGuildEntriesForIds.apply;
   if (typeof apply === "unknown") {

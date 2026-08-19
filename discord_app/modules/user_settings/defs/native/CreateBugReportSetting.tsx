@@ -3,11 +3,11 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import setDeveloperOptionSettings2 from "../../../../actions/DeveloperOptionsActionCreators.tsx";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import showNotificationDefault from "../../../bug_reporter/native/BugReportManager.tsx";
-import closure_3 from "../../../../stores/DeveloperOptionsStore.tsx";
-import createToggle from "../../../settings/native/renderer/SettingBuilders.tsx";
+import refreshSourceMapCookie from "../../../../stores/DeveloperOptionsStore.tsx";
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.aIkGJD);
@@ -19,11 +19,9 @@ createToggle = {
     if (arg0) {
       const result = setDeveloperOptionSettings({ bugReporterEnabled: true });
       showNotificationDefault.initialize();
-      const obj2 = showNotificationDefault;
     } else {
       const result1 = setDeveloperOptionSettings({ bugReporterEnabled: false });
       showNotificationDefault.terminate(true);
-      const obj = showNotificationDefault;
     }
   },
   useValue: function useCreateBugReportSettingToggleValue() {
@@ -36,6 +34,6 @@ createToggle = {
   usePredicate: require("useBugReporterExperimentSettingPredicate").useBugReporterExperimentSettingPredicate
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");
 
 export default createToggle;

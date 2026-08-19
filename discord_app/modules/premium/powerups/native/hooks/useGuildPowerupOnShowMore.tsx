@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx
-import closure_2 from "../../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../../_runtime/00019_noop.js";
 
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");
 
 export default function useGuildPowerupOnShowMore(arg0, arg1) {
   closure_0 = arg0;

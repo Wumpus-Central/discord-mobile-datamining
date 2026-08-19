@@ -1,5 +1,5 @@
 // discord_app/modules/create_guild/CreateGuildConstants.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import fromStringAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import getSystemLocale from "../../intl/index.native.tsx";
 import applyOverwritesAll from "../../utils/PermissionUtils.tsx";
@@ -7,7 +7,7 @@ import ME from "../../Constants.tsx";
 
 ({ ChannelTypes: c3, Permissions: c4 } = ME);
 let obj = { CREATE: "CREATE", GAMING: "GAMING", FRIENDS: "FRIENDS", STUDY: "STUDY", CLUBS: "CLUBS", CREATORS: "CREATORS", LOCAL_COMMUNITY: "LOCAL_COMMUNITY", SCHOOL_CLUB: "SCHOOL_CLUB" };
-const result = set.fileFinishedImporting("modules/create_guild/CreateGuildConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/create_guild/CreateGuildConstants.tsx");
 
 export const GuildTemplateId = obj;
 export const getGuildTemplatesMap = function getGuildTemplatesMap() {
@@ -393,7 +393,6 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   obj62[3] = items6;
   const items7 = [{ id: "00", name: "@everyone", permissions: applyOverwritesAll.DEFAULT }, ];
   const obj76 = { id: "01", name: "officers (example)", mentionable: true, hoist: true, permissions: null, color: 3066993 };
-  const obj75 = { id: "00", name: "@everyone", permissions: applyOverwritesAll.DEFAULT };
   obj76[4] = fromStringAll.combine(applyOverwritesAll.DEFAULT, constants2.MANAGE_ROLES, constants2.MANAGE_CHANNELS, constants2.KICK_MEMBERS, constants2.BAN_MEMBERS, constants2.MANAGE_NICKNAMES, constants2.MANAGE_GUILD_EXPRESSIONS, constants2.MANAGE_MESSAGES, constants2.SEND_TTS_MESSAGES);
   items7[1] = obj76;
   obj62[4] = items7;

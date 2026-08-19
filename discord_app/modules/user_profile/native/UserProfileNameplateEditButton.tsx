@@ -1,28 +1,24 @@
 // discord_app/modules/user_profile/native/UserProfileNameplateEditButton.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../stores/GuildMemberStore.tsx";
+import trackCommunicationDisabled from "../../../stores/GuildMemberStore.tsx";
 import { COLLECTIBLES_PREVIEW_SIZE } from "Constants.tsx";
 import { NOOP } from "../../../../discord_common/js/shared/Constants.tsx";
 import { jsx } from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
-createCacheKey = { previewContainer: null, noneIcon: null };
-createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+const createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileNameplateEditButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileNameplateEditButton.tsx");
 
 export default function UserProfileNameplateEditButton(user) {
   user = user.user;
   ({ pendingNameplate, guildId } = user);
-  dependencyMap = undefined;
-  let nameplate;
   const tmp = callback();
   dependencyMap = tmp2;
   let obj = user(589);
@@ -37,7 +33,7 @@ export default function UserProfileNameplateEditButton(user) {
   obj1 = user(8376);
   obj = { pendingValue: pendingNameplate, userValue: null, guildValue: null, guildId: null };
   const collectibles = user.collectibles;
-  nameplate = undefined;
+  let nameplate;
   if (collectibles != null) {
     nameplate = collectibles.nameplate;
   }
@@ -120,16 +116,17 @@ export default function UserProfileNameplateEditButton(user) {
           obj4[0] = tmp.previewContainer;
           const obj5 = { nameplate: null, fullOpacity: true, isSquarePreview: true };
           obj5[0] = nameplateData;
-          obj4[1] = tmp15(guildId(9221), obj5);
-          let tmp15Result = tmp15(closure_5, obj4);
+          obj4[1] = jsx(guildId(9221), { nameplate: null, fullOpacity: true, isSquarePreview: true });
+          let tmp15Result = <closure_5 style={null}>{null}</closure_5>;
         }
         obj2[4] = tmp15Result;
-        return tmp15(tmp3(14036).UserProfileEditFormButton, obj2);
+        return jsx(tmp3(14036).UserProfileEditFormButton, obj2);
       }
     }
     const obj6 = { source: null, style: null };
     obj6[0] = guildId(8397);
     obj6[1] = tmp.noneIcon;
-    tmp15Result = tmp15(tmp3(1297).Icon, obj6);
+    tmp15Result = jsx(tmp3(1297).Icon, { source: null, style: null });
   }
+  const tmp3Result = user(14056);
 };

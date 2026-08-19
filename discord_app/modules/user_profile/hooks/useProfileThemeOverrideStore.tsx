@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/hooks/useProfileThemeOverrideStore.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import ME from "../../../Constants.tsx";
 import AccessibilityAnnouncer from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
@@ -21,7 +21,7 @@ let tmp2 = keys.create()((arg0) => {
   };
 });
 let closure_4 = tmp2;
-const result = set.fileFinishedImporting("modules/user_profile/hooks/useProfileThemeOverrideStore.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/hooks/useProfileThemeOverrideStore.tsx");
 
 export const useProfileThemeOverrideStore = tmp2;
 export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
@@ -71,18 +71,17 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       tmp5 = null;
     }
     if (themeType !== ThemeTypes.DARK) {
-      let isThemeLightResult = themeType === tmp11.DARK;
+      let isThemeLightResult = themeType === ThemeTypes.DARK;
       if (isThemeLightResult) {
         isThemeLightResult = AccessibilityAnnouncer.isThemeLight(tmp3);
-        const obj3 = AccessibilityAnnouncer;
       }
       let DARKER = themeType;
       if (isThemeLightResult) {
-        DARKER = tmp11.DARKER;
+        DARKER = ThemeTypes.DARKER;
       }
     } else {
+      AccessibilityAnnouncer;
       DARKER = tmp3;
-      const obj2 = AccessibilityAnnouncer;
     }
     obj = { theme: null, primaryColor: null, secondaryColor: null };
     obj[0] = DARKER;

@@ -1,33 +1,32 @@
 // discord_app/modules/stage_channels/LiveStageNotificationsUtils.tsx
-import closure_2 from "../../stores/GuildMemberCountStore.tsx";
-import closure_3 from "../../stores/PermissionStore.tsx";
+import handleInviteData from "../../stores/GuildMemberCountStore.tsx";
+import getUncachedChannelPermissions from "../../stores/PermissionStore.tsx";
 import { Permissions } from "../../../discord_common/js/shared/Constants.tsx";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
 
-export const useCanSendStageStartNotification = function useCanSendStageStartNotification(first) {
-  const _require = first;
+export const useCanSendStageStartNotification = function useCanSendStageStartNotification(arg0) {
+  const _require = arg0;
   const items = [closure_3];
-  const items1 = [first];
-  return _initialize.useStateFromStores(items, () => {
+  const items1 = [arg0];
+  return require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_3.can(closure_1_4.MENTION_EVERYONE, tmp);
+      canResult = closure_1_3.can(Permissions.MENTION_EVERYONE, tmp);
     }
     return canResult;
   }, items1);
 };
-export const useDefaultSendStartStageNotificationToggle = function useDefaultSendStartStageNotificationToggle(first) {
-  let guild_id;
-  if (first != null) {
-    guild_id = first.guild_id;
+export const useDefaultSendStartStageNotificationToggle = function useDefaultSendStartStageNotificationToggle(guild_id) {
+  guild_id = undefined;
+  if (guild_id != null) {
+    guild_id = guild_id.guild_id;
   }
   const items = [closure_2];
   const items1 = [guild_id];
   const stateFromStores = guild_id(589).useStateFromStores(items, () => closure_1_2.getMemberCount(guild_id), items1);
-  let tmp3 = null == first;
+  let tmp3 = null == guild_id;
   if (!tmp3) {
     let tmp4 = null == stateFromStores;
     if (!tmp4) {

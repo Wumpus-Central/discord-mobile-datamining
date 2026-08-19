@@ -1,7 +1,7 @@
 // discord_app/modules/webauthn/WebAuthnSignalManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
-import closure_2 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_3 from "../../stores/AuthenticationStore.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
 
 initializeDefault;
 class WebAuthnSignalManager extends tmp2 {
@@ -179,6 +179,6 @@ prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
   })();
 };
 const webAuthnSignalManager = new WebAuthnSignalManager();
-const result = require("set").fileFinishedImporting("modules/webauthn/WebAuthnSignalManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/webauthn/WebAuthnSignalManager.tsx");
 
 export default webAuthnSignalManager;

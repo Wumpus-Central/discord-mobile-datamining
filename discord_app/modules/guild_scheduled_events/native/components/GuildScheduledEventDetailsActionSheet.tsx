@@ -1,23 +1,22 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_4 from "../../../../../_runtime/00019_noop.js";
+import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_6 from "../../../../stores/GuildStore.tsx";
-import closure_7 from "../../GuildScheduledEventStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import scheduledEventSort from "../../GuildScheduledEventStore.tsx";
 import GUILD_EVENT_MAX_NAME_LENGTH from "../../GuildScheduledEventsConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ EventDetailSections: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: c9 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { segmentedControl: null, header: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12 };
+const createCacheKey = { paddingTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "column" };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx");
 
 export default function GuildScheduledEventDetailsActionSheet(eventId) {
   eventId = eventId.eventId;
@@ -71,7 +70,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     let num = 0;
     if (tmp2) {
       const _Math = Math;
-      num = Math.max(tmp - length, 0);
+      num = Math.max(closure_3 - length, 0);
     }
     let tmp4 = arr;
     if (num > 0) {
@@ -89,11 +88,11 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
   let tmp5Result = tmp5(tmp2(tmp3[15])(() => {
     let id;
     if (stateFromStores != null) {
-      id = tmp.id;
+      id = stateFromStores.id;
     }
     let guild_id;
     if (stateFromStores != null) {
-      guild_id = tmp.guild_id;
+      guild_id = stateFromStores.guild_id;
     }
     return event(stateFromStores[16]).getGuildEventUsers(id, null, guild_id);
   }), 2);
@@ -129,11 +128,11 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
       }
       _undefined2(arg0);
     },
-    items: items4.map((arg0) => {
-      if (items4.EVENT_INFO === arg0) {
+    items: items4.map((item, index) => {
+      if (items4.EVENT_INFO === item) {
         const intl3 = eventId(stateFromStores[9]).intl;
         let id = intl3.string(eventId(stateFromStores[9]).t.iW6Xuo);
-      } else if (tmp2.RSVP_LIST === arg0) {
+      } else if (tmp2.RSVP_LIST === item) {
         const intl2 = eventId(stateFromStores[9]).intl;
         const obj = { userCount: null };
         obj[0] = tmp;
@@ -160,8 +159,8 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
       obj2[0] = tmp.segmentedControl;
       const obj3 = { state: null };
       obj3[0] = tmp28;
-      obj2[1] = tmp35(tmp8(tmp3[20]).SegmentedControl, obj3);
-      tmp35Result = tmp35(tmp34, obj2);
+      obj2[1] = callback2(tmp8(tmp3[20]).SegmentedControl, obj3);
+      tmp35Result = callback2(tmp34, obj2);
     }
     items5[1] = tmp35Result;
     obj[2] = items5;
@@ -169,7 +168,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     obj4[0] = tmp4(event(stateFromStores[11]).GUILD_EVENT_MODAL).analyticsLocations;
     const obj5 = { scrollable: true, startExpanded: true, onDismiss: null, header: null, children: null };
     obj5[2] = onCloseActionSheet;
-    obj5[3] = closure_11(c5, obj);
+    obj5[3] = callback(c5, obj);
     if (tmp31 === tmp25.EVENT_INFO) {
       const obj6 = { children: null };
       const obj7 = { guildEvent: null, safeBottomPadding: null, onCloseActionSheet: null, onLayout: null, recurrenceId: null, onRecurrencePress: null };
@@ -179,8 +178,8 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
       obj7[3] = callback;
       obj7[4] = first;
       obj7[5] = tmp6[1];
-      obj6[0] = tmp35(tmp2(tmp3[23]), obj7);
-      tmp35Result = tmp35(tmp8(tmp3[22]).BottomSheetScrollView, obj6);
+      obj6[0] = callback2(tmp2(tmp3[23]), obj7);
+      tmp35Result = callback2(tmp8(tmp3[22]).BottomSheetScrollView, obj6);
     } else {
       const obj8 = { userListItems: null, guildId: null, loading: null, error: null, contentHeight: null, safeBottomPadding: null };
       obj8[0] = memo;
@@ -189,7 +188,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
       obj8[3] = error;
       obj8[4] = tmp22 - bottom;
       obj8[5] = bottom;
-      tmp35Result = tmp35(tmp2(tmp3[24]), obj8);
+      tmp35Result = callback2(tmp2(tmp3[24]), obj8);
     }
     obj5[4] = tmp35Result;
     obj4[1] = callback2(tmp8(tmp3[21]).BottomSheet, obj5);

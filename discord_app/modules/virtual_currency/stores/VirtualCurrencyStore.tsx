@@ -77,13 +77,13 @@ Object.defineProperty(prototype, "redeemingSkuId", {
   set: undefined
 });
 Object.defineProperty(prototype, "entitlements", {
-  get: function entitlements(preorder_release_at) {
+  get: function entitlements(closure_2) {
     return this._entitlements;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "balance", {
-  get: function balance(arg0) {
+  get: function balance(onTrackPress) {
     return this._balance;
   },
   set: undefined
@@ -178,7 +178,6 @@ function handleOnboardingModalReset(arg0) {
 }
 prototype["handleOnboardingModalReset"] = handleOnboardingModalReset;
 VirtualCurrencyStore.displayName = "VirtualCurrencyStore";
-object = undefined;
 object = new Object(dispatcherDefault, {
   VIRTUAL_CURRENCY_REDEEM_START(skuId) {
     return obj.handleRedeemVirtualCurrencyStart(skuId);
@@ -224,6 +223,6 @@ object._fetchBalanceError = null;
 object._isFetchingBalance = false;
 object._onboardingModalOpenedPrior = false;
 object._balancePillOverlay = false;
-let result = require("set").fileFinishedImporting("modules/virtual_currency/stores/VirtualCurrencyStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/virtual_currency/stores/VirtualCurrencyStore.tsx");
 
 export default object;

@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/account/native/handleDisableAccount.tsx
-import setDefault from "../../../../actions/AlertActionCreators.tsx";
+import obj132Default from "../../../../actions/AlertActionCreators.tsx";
 import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert.tsx";
-import closure_3 from "../../../../stores/GuildStore.tsx";
-import closure_4 from "../../../../stores/UserStore.tsx";
+import createGuildRecordFromRust from "../../../../stores/GuildStore.tsx";
+import mergeGuildAvatar from "../../../../stores/UserStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/handleDisableAccount.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/handleDisableAccount.tsx");
 
 export default function handleDisableAccount() {
   let flag = arg0;
@@ -16,7 +16,7 @@ export default function handleDisableAccount() {
   let someResult = null != currentUser;
   if (someResult) {
     guildsArray = guildsArray.getGuildsArray();
-    someResult = guildsArray.some((ownerId) => ownerId.ownerId === currentUser.id);
+    someResult = guildsArray.some((item, index) => item.ownerId === currentUser.id);
   }
   const intl = currentUser(1236).intl;
   const string = intl.string;
@@ -28,8 +28,7 @@ export default function handleDisableAccount() {
     let obj = { title: null, body: null };
     obj[0] = stringResult;
     obj[1] = stringResult1;
-    setDefault.show(obj);
-    const obj3 = setDefault;
+    obj132Default.show(obj);
   } else {
     const formatted = string(t["CIGa+7"]).toUpperCase();
     obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };

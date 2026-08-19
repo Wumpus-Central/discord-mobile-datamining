@@ -1,25 +1,25 @@
 // discord_app/modules/premium/UserTrialActionCreators.android.tsx
-import closure_3 from "../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../user_offers/records/UserTrialOfferRecord.tsx";
+import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
+import createFromServer from "../user_offers/records/UserTrialOfferRecord.tsx";
 import ME from "../../Constants.tsx";
 
-const require = arg1;
+const require = fn;
 ({ Endpoints: c5, PaymentGateways: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/UserTrialActionCreators.android.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/UserTrialActionCreators.android.tsx");
 
 export default {
-  acknowledgeUserTrialOffer(arg0) {
-    closure_0 = arg0;
+  acknowledgeUserTrialOffer(userTrialOffer) {
+    closure_0 = userTrialOffer;
     return callback(function*() {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = body;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -30,25 +30,25 @@ export default {
           if (0 === c4) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw body;
             } else if (arg0 === 2) {
               c5 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = body;
               return obj;
             } else {
               closure_1 = tmp3;
-              let body = tmp7;
+              body = tmp7;
               body = undefined;
-              if (null == closure_1_0.expiresAt) {
+              if (null == userTrialOffer.expiresAt) {
                 c3 = 1;
-                const HTTP = closure_1_0(closure_1_2[3]).HTTP;
+                const HTTP = userTrialOffer(closure_1_2[3]).HTTP;
                 obj1 = { url: null, body: null, rejectWithError: null };
                 obj1[0] = c5.USER_TRIAL_OFFER_ACKNOWLEDGED(tmp39.id);
                 const obj2 = { payment_gateway: null };
                 obj2[0] = closure_1_6.GOOGLE;
                 obj1[1] = obj2;
-                obj1[2] = closure_1_0(closure_1_2[3]).rejectWithMigratedError();
+                obj1[2] = userTrialOffer(closure_1_2[3]).rejectWithMigratedError();
                 c4 = 2;
                 c5 = 1;
                 let obj3 = { value: null, done: false };
@@ -65,9 +65,9 @@ export default {
               }
             } else if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw body;
             } else if (arg0 !== 2) {
-              body = arg1.body;
+              body = body.body;
               obj = closure_1_1(closure_1_2[4]);
               let fromServer = null;
               if (null != body) {
@@ -81,7 +81,7 @@ export default {
             c3 = 0;
             c5 = 3;
             const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
+            obj5[0] = body;
             return obj5;
           }
           c5 = 3;

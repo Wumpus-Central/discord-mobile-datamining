@@ -4,17 +4,18 @@ import ThemesDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import getSystemLocale from "../intl/index.native.tsx";
 import PressableBase from "../design/void/Pressables/native/Pressables.tsx";
 import useFetchStreamPreviewDefault from "../modules/go_live/useFetchStreamPreview.tsx";
+import registerAssetDefault from "../../_runtime/12617_registerAsset.js";
+import registerAssetDefault2 from "../../_runtime/12618_registerAsset.js";
 import importAllResult from "../../_runtime/00019_noop.js";
 import get_ActivityIndicator from "../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../modules/user_settings/ThemeStore.tsx";
+import handleThemeChange from "../modules/user_settings/ThemeStore.tsx";
 import jsxProd from "../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ Image: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { wrapper: null, text: null, fallbackImage: null };
-createCacheKey = {};
+let createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.alignItems = "center";
 createCacheKey.justifyContent = "center";
@@ -29,16 +30,15 @@ class DefaultFallback extends PureComponent {
 }
 DefaultFallback.prototype["render"] = function render() {
   const tmp = callback3(this.context);
-  let obj = { style: tmp.wrapper, children: null };
-  obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
+  const obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = tmp6(12617);
+    let tmp6Result = registerAssetDefault;
   } else {
-    tmp6Result = tmp6(12618);
+    tmp6Result = registerAssetDefault2;
   }
   obj[2] = tmp6Result;
-  obj[1] = closure_6(closure_3, obj);
-  return closure_6(closure_4, obj);
+  obj[1] = callback(closure_3, obj);
+  return callback(closure_4, obj);
 };
 DefaultFallback.contextType = require("ManaContext").ThemeContext;
 const obj2 = { touchable: null, imageContainer: null, image: null };
@@ -122,18 +122,16 @@ StreamPreview.defaultProps = {
       stringResult = string(t.uQZTBV);
     }
     obj[1] = stringResult;
-    return closure_6(DefaultFallback, obj);
+    return callback(DefaultFallback, obj);
   }
 };
-let obj1 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: ThemesDefault.colors.TEXT_MUTED };
-const result = require("set").fileFinishedImporting("components_native/StreamPreview.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/StreamPreview.tsx");
 
 export default function ConnectedStreamPreview(stream) {
   ({ guildId, channelId, ownerId } = stream.stream);
   ({ previewUrl, isLoading } = useFetchStreamPreviewDefault(guildId, channelId, ownerId));
-  let obj = initialize;
   const items = [closure_5];
-  obj = {};
+  const obj = {};
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   const merged = Object.assign(stream);
   obj.url = previewUrl;

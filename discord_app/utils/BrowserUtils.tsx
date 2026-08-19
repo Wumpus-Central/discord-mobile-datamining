@@ -7,13 +7,12 @@ if (str == null) {
 }
 const str2 = str.toLowerCase();
 let num = -1;
-let num2 = -1;
 if ("chrome" === str2.toLowerCase()) {
   let str3 = formatDefault.version;
   if (str3 == null) {
     str3 = "";
   }
-  num2 = parseInt(str3, 10);
+  const num2 = parseInt(str3, 10);
 }
 let parsed = num;
 if ("electron" === str2.toLowerCase()) {
@@ -77,7 +76,7 @@ function isSafari() {
   }
   return tmp2;
 }
-const result = require("set").fileFinishedImporting("utils/BrowserUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/BrowserUtils.tsx");
 
 export { getChromeVersion };
 export { getElectronVersion };

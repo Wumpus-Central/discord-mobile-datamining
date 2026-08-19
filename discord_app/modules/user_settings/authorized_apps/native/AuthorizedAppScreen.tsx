@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { jsx } from "../../../../../_runtime/react/00021_jsxProd.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/authorized_apps/native/AuthorizedAppScreen.tsx");
 
 export default function AuthorizedAppScreen() {
   let obj = settingNavigationRoute(7385);

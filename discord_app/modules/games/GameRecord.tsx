@@ -2,12 +2,12 @@
 import getAvatarURL from "../../utils/AvatarUtils.tsx";
 import toJSDefault from "../../lib/Record.tsx";
 import getGameMediaRefURLDefault from "getGameMediaRefURL.tsx";
-import closure_3 from "../../records/ApplicationRecord.tsx";
+import createExecutable from "../../records/ApplicationRecord.tsx";
 import { createExecutable } from "../../records/ApplicationRecord.tsx";
 
-require = arg1;
+require = fn;
 toJSDefault;
-const result = require("set").fileFinishedImporting("modules/games/GameRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
   constructor(arg0) {
     tmp5 = new GameRecord(tmp4, tmp3, tmp2, tmp, new.target, new.target);
@@ -118,7 +118,7 @@ prototype["getOfficialApplicationId"] = function getOfficialApplicationId() {
   const linkedApplications = this.linkedApplications;
   let id;
   if (linkedApplications != null) {
-    const found = linkedApplications.find((type) => type.type === callback(table[2]).GameLinkTypes.OFFICIAL);
+    const found = linkedApplications.find((item, index) => item.type === callback(table[2]).GameLinkTypes.OFFICIAL);
     if (found != null) {
       id = found.id;
     }
@@ -163,7 +163,7 @@ prototype["getArtworkURLs"] = function getArtworkURLs() {
   if (artwork == null) {
     artwork = [];
   }
-  const mapped = artwork.map((arg0) => closure_1_1(closure_1_2[3])(self.id, arg0, { keepAspectRatio: true }));
+  const mapped = artwork.map((item, index) => getGameMediaRefURLDefault(self.id, item, { keepAspectRatio: true }));
   return mapped.filter(self(1370).isNotNullish);
 };
 prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
@@ -171,8 +171,8 @@ prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
   const companies = this.companies;
   let found;
   if (companies != null) {
-    found = companies.filter((roles) => {
-      roles = roles.roles;
+    found = companies.filter((item, index) => {
+      const roles = item.roles;
       return roles.includes(closure_0);
     });
   }

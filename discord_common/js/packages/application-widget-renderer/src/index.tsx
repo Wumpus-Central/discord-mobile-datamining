@@ -1,32 +1,27 @@
 // discord_common/js/packages/application-widget-renderer/src/index.tsx
-import set from "../../../../../_runtime/00002_set.js";
 import isVisualUnfurledMedia from "resolvedValuesFromUserApplicationIdentityProfile.tsx";
 import isVisualUnfurledMediaDefault from "resolvedValuesFromUserApplicationIdentityProfile.tsx";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
 for (const key10018 in require("toAsciiDigits")) {
-  let tmp3 = key10018;
   arg5[key10018] = require("toAsciiDigits")[key10018];
   continue;
 }
 for (const key10022 in require("resolveTextComponentValues")) {
-  let tmp4 = key10022;
   arg5[key10022] = require("resolveTextComponentValues")[key10022];
   continue;
 }
 for (const key10026 in require("resolveFieldValue")) {
-  let tmp5 = key10026;
   arg5[key10026] = require("resolveFieldValue")[key10026];
   continue;
 }
 for (const key10030 in require("applicationWidgetStaticFieldConfigSchema")) {
-  let tmp6 = key10030;
   arg5[key10030] = require("applicationWidgetStaticFieldConfigSchema")[key10030];
   continue;
 }
-for (const key10034 in require("set")) {
-  let tmp7 = key10034;
-  arg5[key10034] = require("set")[key10034];
+for (const key10034 in require("obj132")) {
+  arg5[key10034] = require("obj132")[key10034];
   continue;
 }
 

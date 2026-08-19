@@ -1,12 +1,12 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx
-import closure_3 from "../../../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../../../_runtime/00019_noop.js";
-import closure_6 from "../../../stores/billing/GuildBoostSlotStore.tsx";
-import closure_7 from "../../../stores/native/AppStateStore.tsx";
+import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../../../_runtime/00019_noop.js";
+import handleGuildBoostsUpdate from "../../../stores/billing/GuildBoostSlotStore.tsx";
+import getState from "../../../stores/native/AppStateStore.tsx";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");
 
 export default function useFetchGuildBoostSlots() {
   let tmp = callback(React.useState(true), 2);

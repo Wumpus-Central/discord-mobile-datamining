@@ -1,8 +1,8 @@
 // discord_app/stores/native/NUFStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import closure_0 from "../GuildStore.tsx";
-import closure_1 from "../RelationshipStore.tsx";
+import createGuildRecordFromRust from "../GuildStore.tsx";
+import markAllUserIdListsStale from "../RelationshipStore.tsx";
 
 function handleCacheOrSocketLoaded() {
   let flag = false;
@@ -71,6 +71,6 @@ const nUFStore = new NUFStore(dispatcherDefault, {
   CACHE_LOADED_LAZY: handleCacheOrSocketLoaded,
   CONNECTION_OPEN: handleCacheOrSocketLoaded
 });
-const result = require("set").fileFinishedImporting("stores/native/NUFStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/native/NUFStore.tsx");
 
 export default nUFStore;

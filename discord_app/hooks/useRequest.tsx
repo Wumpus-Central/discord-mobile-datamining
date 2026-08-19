@@ -1,10 +1,10 @@
 // discord_app/hooks/useRequest.tsx
-import closure_3 from "../../_runtime/00005_asyncGeneratorStep.js";
-import closure_4 from "../../_runtime/metro/00032__slicedToArray.js";
-import closure_5 from "../../_runtime/00019_noop.js";
+import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
+import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
+import noop from "../../_runtime/00019_noop.js";
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("hooks/useRequest.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("hooks/useRequest.tsx");
 
 export default function useRequest(arg0) {
   closure_0 = arg0;
@@ -93,7 +93,6 @@ export default function useRequest(arg0) {
                   tmp37 = new closure_1_1(closure_1_2[4])(lib);
                 }
                 closure_1_2(tmp37);
-                const tmp26 = closure_1_2;
               }
             } else if (arg0 === 1) {
               c6 = 3;

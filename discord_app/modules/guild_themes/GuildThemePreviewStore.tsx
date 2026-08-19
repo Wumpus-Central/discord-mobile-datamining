@@ -3,10 +3,10 @@ import apply from "../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
 import cloneGuildThemeSettings from "guildThemeSerialization.tsx";
-import closure_3 from "../../stores/AuthenticationStore.tsx";
+import fetchFingerprint from "../../stores/AuthenticationStore.tsx";
 import GuildThemePreviewOrigin from "GuildThemePreviewConstants.tsx";
 
-require = arg1;
+require = fn;
 function handleEnd() {
   let tmp = null == closure_5.guildId;
   if (tmp) {
@@ -61,7 +61,7 @@ Object.defineProperty(prototype, "originalEnabled", {
   set: undefined
 });
 Object.defineProperty(prototype, "origin", {
-  get: function origin(keys, arg1) {
+  get: function origin(arg0) {
     return closure_5.origin;
   },
   set: undefined
@@ -102,7 +102,6 @@ prototype["hasChanges"] = function hasChanges() {
     let tmp4 = closure_5.draftEnabled !== closure_5.originalEnabled;
     if (!tmp4) {
       tmp4 = !apply.isEqual(closure_5.draft, closure_5.original);
-      const obj = apply;
     }
     tmp = tmp4;
   }
@@ -115,7 +114,6 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     ({ guildId, draft, original, draftEnabled, originalEnabled, origin } = owner);
     timeout.stop();
     const obj = { guildId, draft: cloneGuildThemeSettings.cloneGuildThemeSettings(draft), original: null, draftEnabled: null, originalEnabled: null, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
-    const obj2 = cloneGuildThemeSettings;
     obj[2] = cloneGuildThemeSettings.cloneGuildThemeSettings(original);
     obj[3] = draftEnabled;
     obj[4] = originalEnabled;
@@ -154,7 +152,6 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
     if (null == obj.guildId) {
       return false;
     } else {
-      obj = { presetId: "Array", customUserThemeSettings: 0 };
       obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
       const items = [];
       HermesBuiltin.arraySpread(colors, 0);
@@ -225,7 +222,6 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
         obj = {};
         const merged = Object.assign(obj);
         obj.draft = cloneGuildThemeSettings.cloneGuildThemeSettings(themeSettings);
-        const obj2 = cloneGuildThemeSettings;
         obj.original = cloneGuildThemeSettings.cloneGuildThemeSettings(themeSettings);
         obj.draftEnabled = flag;
         obj.originalEnabled = flag;
@@ -373,8 +369,8 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
         }
         let isEqualResult = flag === closure_5.originalEnabled;
         if (isEqualResult) {
-          isEqualResult = tmp7(12).isEqual(themeSettings, closure_5.original);
-          const tmp7Result = tmp7(12);
+          isEqualResult = apply.isEqual(themeSettings, closure_5.original);
+          const tmp7Result = apply;
         }
         let flag2 = isEqualResult;
         if (flag2) {
@@ -390,8 +386,6 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
           }
         }
         tmp6 = flag2;
-        const obj = cloneGuildThemeSettings;
-        tmp7 = require;
       }
       tmp5 = tmp6;
     }
@@ -399,7 +393,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
   },
   LOGOUT: handleEnd
 });
-const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemePreviewStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_themes/GuildThemePreviewStore.tsx");
 
 export default guildThemePreviewStore;
 export { GuildThemePreviewOrigin };

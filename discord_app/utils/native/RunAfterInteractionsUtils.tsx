@@ -1,7 +1,6 @@
 // discord_app/utils/native/RunAfterInteractionsUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import get_ActivityIndicator from "../../../_runtime/00017_get_ActivityIndicator.js";
-import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
 
 function runAfterInteractions(arg0, MINUTE) {
   const _require = arg0;
@@ -9,13 +8,12 @@ function runAfterInteractions(arg0, MINUTE) {
   if (MINUTE === undefined) {
     num = 2000;
   }
-  dependencyMap = undefined;
   let delayedCall;
   dependencyMap = delayedCall.runAfterInteractions(() => {
     delayedCall.cancel();
     callback();
   });
-  delayedCall = new _start.DelayedCall(num, () => {
+  delayedCall = new require("../../../discord_common/js/packages/timers/Timers.tsx").DelayedCall(num, () => {
     closure_1.cancel();
     callback();
   });
@@ -28,7 +26,7 @@ function runAfterInteractions(arg0, MINUTE) {
   };
 }
 const InteractionManager = get_ActivityIndicator.InteractionManager;
-const result = set.fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
 
 export default { runAfterInteractions };
 export { runAfterInteractions };

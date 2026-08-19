@@ -1,16 +1,14 @@
 // discord_app/modules/notifications/FocusModeUtils.tsx
 import expandEventPropertiesDefault from "../../utils/AnalyticsUtils.tsx";
 import explicitContentFromProto from "../user_settings/UserSettings.tsx";
-import setDefault from "../../actions/AlertActionCreators.tsx";
-import closure_3 from "../../stores/SelfPresenceStore.tsx";
+import obj132Default from "../../actions/AlertActionCreators.tsx";
+import filterPlayingActivities from "../../stores/SelfPresenceStore.tsx";
 import { NotificationSettingsUpdateType as closure_4 } from "NotificationConstants.tsx";
 import ME from "../../Constants.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
-require = arg1;
+require = fn;
 ({ AnalyticEvents: c5, StatusTypes: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
 
 export const useFocusModeEnabled = function useFocusModeEnabled() {
   const FocusMode = explicitContentFromProto.FocusMode;
@@ -54,11 +52,11 @@ export const getFocusModeEnabled = function getFocusModeEnabled() {
 export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
   const _require = quiet_mode_enabled;
   importDefault = arg1;
-  const FocusMode = _explicitContentFromProto.FocusMode;
+  const FocusMode = require("../user_settings/UserSettings.tsx").FocusMode;
   const setting = FocusMode.getSetting();
-  const PreloadedUserSettingsActionCreators = _updateUserGuildSettings.PreloadedUserSettingsActionCreators;
+  const PreloadedUserSettingsActionCreators = require("../user_settings/UserSettingsProtoActionCreators.tsx").PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("notifications", (arg0) => {
-    const BoolValue = quiet_mode_enabled(closure_1_2[5]).BoolValue;
+    const BoolValue = quiet_mode_enabled(dependencyMap[5]).BoolValue;
     arg0.quietMode = BoolValue.create({ value: quiet_mode_enabled });
     let str = "0";
     if (quiet_mode_enabled) {
@@ -70,9 +68,8 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
       }
     }
     arg0.focusModeExpiresAtMs = str;
-  }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
+  }, require("../user_settings/UserSettingsProtoActionCreators.tsx").UserSettingsDelay.INFREQUENT_USER_ACTION);
+  let obj = { update_type: constants.ACCOUNT, quiet_mode_enabled, quiet_mode_enabled_old: setting };
   obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
   let tmp7 = status.getStatus() === constants3.DND && quiet_mode_enabled;
   if (tmp7) {
@@ -91,7 +88,7 @@ export const setFocusMode = function setFocusMode(quiet_mode_enabled, arg1) {
     obj[4] = function onConfirm() {
       callback(table[9])({ nextStatus: constants.ONLINE });
     };
-    setDefault.show(obj);
-    const tmp5Result = setDefault;
+    obj132Default.show(obj);
+    const tmp5Result = obj132Default;
   }
 };

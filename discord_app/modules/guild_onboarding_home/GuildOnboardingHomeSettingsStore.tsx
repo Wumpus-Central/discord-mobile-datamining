@@ -1,7 +1,6 @@
 // discord_app/modules/guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../Dispatcher.tsx";
-import set from "../../../_runtime/00002_set.js";
 
 function handleSettingsLoadSuccess(arg0) {
   ({ homeSettings, guildId } = arg0);
@@ -23,7 +22,7 @@ function handleSettingsLoadSuccess(arg0) {
 let obj = { enabled: false };
 let closure_1 = [];
 let closure_2 = {};
-let set = new Set();
+const set = new Set();
 let closure_4 = {};
 const Store = initializeDefault.Store;
 class GuildOnboardingHomeSettingsStore extends Store {
@@ -59,13 +58,10 @@ prototype["getNewMemberActions"] = function getNewMemberActions(closure_0) {
         }
         tmp = null;
         if (!tmp10) {
-          tmp5[closure_0] = newMemberActions1;
-          tmp = tmp5[closure_0];
+          dependencyMap2[closure_0] = newMemberActions1;
+          tmp = dependencyMap2[closure_0];
         }
-        let tmp6 = tmp;
         tmp10 = tmp == newMemberActions1;
-      } else {
-        tmp6 = tmp5[closure_0];
       }
     }
   }
@@ -80,7 +76,7 @@ prototype["getActionForChannel"] = function getActionForChannel(c0, c1) {
     if (newMemberActions == null) {
       newMemberActions = [];
     }
-    found = newMemberActions.find((channelId) => channelId.channelId === closure_0);
+    found = newMemberActions.find((item, index) => item.channelId === closure_0);
   }
   return found;
 };
@@ -106,7 +102,7 @@ prototype["getResourceForChannel"] = function getResourceForChannel(closure_0, c
     const resourceChannels = this.getResourceChannels(closure_0);
     let found = null;
     if (resourceChannels !== closure_1) {
-      found = resourceChannels.find((channelId) => channelId.channelId === closure_0);
+      found = resourceChannels.find((item, index) => item.channelId === closure_0);
     }
     return found;
   }
@@ -158,7 +154,7 @@ prototype["getNewMemberAction"] = function getNewMemberAction(arg0, arg1) {
       if (dependencyMap[arg0] != null) {
         const newMemberActions = tmp3.newMemberActions;
         if (newMemberActions != null) {
-          found = newMemberActions.find((channelId) => channelId.channelId === closure_0);
+          found = newMemberActions.find((item, index) => item.channelId === closure_0);
         }
       }
       if (found == null) {
@@ -197,7 +193,7 @@ obj = {
       }
       tmp.resourceChannels = resourceChannels;
       resourceChannels = tmp.resourceChannels;
-      const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === resourceChannel.channelId);
+      const findIndexResult = resourceChannels.findIndex((item, index) => item.channelId === resourceChannel.channelId);
       let flag = -1 !== findIndexResult;
       if (flag) {
         obj = {};
@@ -219,7 +215,7 @@ obj = {
       }
       tmp.newMemberActions = newMemberActions;
       newMemberActions = tmp.newMemberActions;
-      const findIndexResult = newMemberActions.findIndex((channelId) => channelId.channelId === action.channelId);
+      const findIndexResult = newMemberActions.findIndex((item, index) => item.channelId === action.channelId);
       let flag = -1 !== findIndexResult;
       if (flag) {
         obj = {};
@@ -243,7 +239,7 @@ obj = {
   }
 };
 const guildOnboardingHomeSettingsStore = new GuildOnboardingHomeSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx");
 
 export default guildOnboardingHomeSettingsStore;
 export const NO_SETTINGS = obj;

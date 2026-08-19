@@ -1,8 +1,7 @@
 // discord_app/stores/ExpandedGuildFolderStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../Dispatcher.tsx";
-import closure_0 from "../modules/user_settings/UserSettingsProtoStore.tsx";
-import set from "../../_runtime/00002_set.js";
+import handleConnectionClosedOrResumed from "../modules/user_settings/UserSettingsProtoStore.tsx";
 
 let set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
@@ -53,7 +52,7 @@ const expandedGuildFolderStore = new ExpandedGuildFolderStore(dispatcherDefault,
     } else {
       function _loop(iter) {
         guildFolders = iter;
-        if (!guildFolders.some((folderId) => folderId.folderId === closure_0)) {
+        if (!guildFolders.some((item, index) => item.folderId === closure_0)) {
           const _Set = Set;
           set = new Set(set);
           set.delete(iter);
@@ -77,6 +76,6 @@ const expandedGuildFolderStore = new ExpandedGuildFolderStore(dispatcherDefault,
     }
   }
 });
-const result = set.fileFinishedImporting("stores/ExpandedGuildFolderStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/ExpandedGuildFolderStore.tsx");
 
 export default expandedGuildFolderStore;

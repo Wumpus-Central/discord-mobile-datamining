@@ -1,7 +1,7 @@
 // discord_app/modules/media/native/IosImageTypesManager.tsx
 import timestampDefault from "../../debug/Logger.tsx";
 import initializeDefault from "../../../lib/LifecycleManager.tsx";
-import closure_0 from "../../../../_runtime/metro/00032__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import { NativeModules } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 
 let closure_2 = new timestampDefault("IosImageTypesManager");
@@ -35,7 +35,6 @@ prototype["initializeSupportedImageTypes"] = function initializeSupportedImageTy
       const entries = Object.entries(supportedImageTypes);
       const tmp14 = entries[Symbol.iterator]();
       while (tmp14 !== undefined) {
-        let tmp18 = callback;
         let tmp19 = callback(tmp16, 2);
         [r10040, tmp20] = tmp19;
         let extension = tmp20.extension;
@@ -43,23 +42,16 @@ prototype["initializeSupportedImageTypes"] = function initializeSupportedImageTy
         let mimeType = tmp20.mimeType;
         let tmp22 = null != extension;
         if (tmp22) {
-          let tmp23 = extension;
           tmp22 = "" !== tmp21;
         }
         if (tmp22) {
-          let tmp24 = set;
-          let tmp25 = extension;
           let addResult = obj2.add(tmp21);
         }
-        let tmp27 = mimeType;
         let tmp28 = null != mimeType;
         if (tmp28) {
-          let tmp29 = mimeType;
           tmp28 = "" !== mimeType;
         }
         if (tmp28) {
-          let tmp30 = set1;
-          let tmp31 = mimeType;
           let addResult1 = obj3.add(mimeType);
         }
         continue;
@@ -104,28 +96,28 @@ prototype["getAnimatedExtensions"] = function getAnimatedExtensions() {
   return c6;
 };
 prototype["isExtensionSupported"] = function isExtensionSupported(arg0) {
-  let hasItem = null !== c4;
+  let hasItem = null !== _null;
   if (hasItem) {
-    hasItem = c4.has(arg0);
+    hasItem = _null.has(arg0);
   }
   return hasItem;
 };
 prototype["isMimeTypeSupported"] = function isMimeTypeSupported(arg0) {
-  let hasItem = null !== c5;
+  let hasItem = null !== _null2;
   if (hasItem) {
-    hasItem = c5.has(arg0);
+    hasItem = _null2.has(arg0);
   }
   return hasItem;
 };
 prototype["isExtensionAnimated"] = function isExtensionAnimated(formatted) {
-  let hasItem = null !== c6;
+  let hasItem = null !== _null3;
   if (hasItem) {
-    hasItem = c6.has(formatted);
+    hasItem = _null3.has(formatted);
   }
   return hasItem;
 };
 const iosImageTypesManager = new IosImageTypesManager();
 let tmp2 = new timestampDefault("IosImageTypesManager");
-let result = require("set").fileFinishedImporting("modules/media/native/IosImageTypesManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/media/native/IosImageTypesManager.tsx");
 
 export default iosImageTypesManager;

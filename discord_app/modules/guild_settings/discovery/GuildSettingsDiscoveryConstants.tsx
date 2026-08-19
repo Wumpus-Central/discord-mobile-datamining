@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/discovery/GuildSettingsDiscoveryConstants.tsx
-import set from "../../../../_runtime/00002_set.js";
+import obj132 from "../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../intl/index.native.tsx";
 
 let obj = { GENERAL_CHATTING: 14, [14]: "GENERAL_CHATTING", GAMING: 1, [1]: "GAMING", MUSIC: 2, [2]: "MUSIC", ENTERTAINMENT: 3, [3]: "ENTERTAINMENT", CREATIVE_ARTS: 4, [4]: "CREATIVE_ARTS", SCIENCE_AND_TECH: 5, [5]: "SCIENCE_AND_TECH", EDUCATION: 6, [6]: "EDUCATION", SPORTS: 7, [7]: "SPORTS", FASHION_AND_BEAUTY: 8, [8]: "FASHION_AND_BEAUTY", RELATIONSHIPS_AND_IDENTITY: 9, [9]: "RELATIONSHIPS_AND_IDENTITY", TRAVEL_AND_FOOD: 10, [10]: "TRAVEL_AND_FOOD", FITNESS_AND_HEALTH: 11, [11]: "FITNESS_AND_HEALTH", FINANCE: 12, [12]: "FINANCE", OTHER: 13, [13]: "OTHER", EMOJI: 43, [43]: "EMOJI", BOTS: 49, [49]: "BOTS" };
@@ -608,14 +608,14 @@ const items15 = [
   }
 ];
 let closure_2 = ["en-GB"];
-const result = set.fileFinishedImporting("modules/guild_settings/discovery/GuildSettingsDiscoveryConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_settings/discovery/GuildSettingsDiscoveryConstants.tsx");
 
 export const GuildPrimaryCategory = obj;
 export const SUGGESTED_TAGS_FOR_CATEGORIES = { [obj.GENERAL_CHATTING]: items, [obj.GAMING]: items1, [obj.MUSIC]: items2, [obj.ENTERTAINMENT]: items3, [obj.CREATIVE_ARTS]: items4, [obj.SCIENCE_AND_TECH]: items5, [obj.EDUCATION]: items6, [obj.SPORTS]: items7, [obj.FASHION_AND_BEAUTY]: items8, [obj.RELATIONSHIPS_AND_IDENTITY]: items9, [obj.TRAVEL_AND_FOOD]: items10, [obj.FITNESS_AND_HEALTH]: items11, [obj.FINANCE]: items12, [obj.OTHER]: items13, [obj.EMOJI]: items14, [obj.BOTS]: items15 };
 export const calculateLocaleOptions = function calculateLocaleOptions() {
   const availableLocales = getSystemLocale.getAvailableLocales();
-  const mapped = availableLocales.map((value) => {
-    value = value.value;
+  const mapped = availableLocales.map((item, index) => {
+    const value = item.value;
     if ("en-US" === value) {
       let obj = { id: null, value: null, label: null, image: "Array" };
       obj[0] = value;
@@ -630,5 +630,5 @@ export const calculateLocaleOptions = function calculateLocaleOptions() {
     }
     return obj;
   });
-  return mapped.filter((value) => !closure_2.includes(value.value));
+  return mapped.filter((item, index) => !closure_2.includes(item.value));
 };

@@ -1,17 +1,17 @@
 // discord_app/utils/MemoizerUtils.tsx
-import set from "../../_runtime/00002_set.js";
+import obj132 from "../../_runtime/00002_obj132.js";
 
-let result = set.fileFinishedImporting("utils/MemoizerUtils.tsx");
+let result = obj132.fileFinishedImporting("utils/MemoizerUtils.tsx");
 
 export default {
   makeMemoizer(getURL) {
     closure_0 = getURL;
     const map = new Map();
-    return (arg0) => {
-      let value = map.get(arg0);
+    return (name) => {
+      let value = map.get(name);
       if (undefined === value) {
-        const tmp3 = getURL(arg0);
-        const result = map.set(arg0, tmp3);
+        const tmp3 = getURL(name);
+        const result = map.set(name, tmp3);
         value = tmp3;
       }
       return value;

@@ -13,6 +13,6 @@ const prototype = function UploaderError(body) {
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("set").fileFinishedImporting("modules/errors/UploaderError.tsx");
+const result = require("obj132").fileFinishedImporting("modules/errors/UploaderError.tsx");
 
 export default prototype;

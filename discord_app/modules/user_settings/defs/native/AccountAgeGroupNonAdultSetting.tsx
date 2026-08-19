@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import getSystemLocale from "../../../../intl/index.native.tsx";
 import isFeatureAgeGated from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import useAgeVerificationRunner from "../../../age_assurance/AgeVerificationUtils.tsx";
@@ -19,22 +19,19 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     let stringResult = intl.string(getSystemLocale.t.lKDPGA);
     if (isAgeVerified) {
-      const intl2 = tmp(1236).intl;
-      stringResult = intl2.string(tmp(1236).t.sK0dmH);
+      const intl2 = getSystemLocale.intl;
+      stringResult = intl2.string(getSystemLocale.t.sK0dmH);
     }
     return stringResult;
   },
   onPress: function onAccountAgeGroupNonAdultSettingPress() {
-    let obj = openIncodeAgeVerificationModalDefault;
-    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
+    const obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
   withArrow: true,
   usePredicate: function AccountAgeGroupNonAdultSettingPredicate() {
     const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-    const obj = useAgeVerificationRunner;
     const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
-    const obj2 = useAgeVerificationRunner;
     let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
     if (hasTeenDefaults) {
       let tmp4 = !isAgeVerified;
@@ -46,44 +43,6 @@ const pressable = createToggle.createPressable({
     return hasTeenDefaults;
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/52UYy"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  useTrailing: function useAccountAgeGroupNonAdultSettingTrailing() {
-    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t.lKDPGA);
-    if (isAgeVerified) {
-      const intl2 = tmp(1236).intl;
-      stringResult = intl2.string(tmp(1236).t.sK0dmH);
-    }
-    return stringResult;
-  },
-  onPress: function onAccountAgeGroupNonAdultSettingPress() {
-    let obj = openIncodeAgeVerificationModalDefault;
-    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
-  },
-  withArrow: true,
-  usePredicate: function AccountAgeGroupNonAdultSettingPredicate() {
-    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
-    const obj = useAgeVerificationRunner;
-    const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
-    const obj2 = useAgeVerificationRunner;
-    let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
-    if (hasTeenDefaults) {
-      let tmp4 = !isAgeVerified;
-      if (isAgeVerified) {
-        tmp4 = isVerifiedTeen;
-      }
-      hasTeenDefaults = tmp4;
-    }
-    return hasTeenDefaults;
-  }
-};
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx");
+let result = obj132.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx");
 
 export default pressable;

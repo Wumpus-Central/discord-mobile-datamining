@@ -1,13 +1,13 @@
 // discord_app/modules/icymi/native/ICYMIForumThreadRow.tsx
 import ThemesDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import closure_3 from "../../../../_runtime/00019_noop.js";
+import noop from "../../../../_runtime/00019_noop.js";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_5 from "../../../stores/ChannelStore.tsx";
-import closure_6 from "../../../stores/GuildStore.tsx";
+import ensureGuildLoaded from "../../../stores/ChannelStore.tsx";
+import createGuildRecordFromRust from "../../../stores/GuildStore.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createICYMIStyles from "createICYMIStyles.tsx";
 
-const require = arg1;
+const require = fn;
 class ICYMIForumThreadRow {
   constructor(arg0) {
     channel = global.channel;
@@ -44,12 +44,12 @@ class ICYMIForumThreadRow {
     effect = author.useEffect(() => {
       let id;
       if (stateFromStores != null) {
-        id = tmp.id;
+        id = stateFromStores.id;
       }
       if (null != id) {
         let id1;
-        if (tmp != null) {
-          id1 = tmp.id;
+        if (stateFromStores != null) {
+          id1 = stateFromStores.id;
         }
         const items = [author.id];
         const membersById = message(stateFromStores[8]).requestMembersById(id1, items);
@@ -73,6 +73,7 @@ class ICYMIForumThreadRow {
         channel(stateFromStores[10]).navigateToPost(channel.id, stateFromStores.id, message.id);
         const obj4 = channel(stateFromStores[10]);
       }
+      const obj2 = message(stateFromStores[9]);
     }, items3);
     items4 = [, ];
     items4[0] = channel.parent_id;
@@ -165,16 +166,14 @@ class ICYMIForumThreadRow {
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
-  obj = { pressable: obj, container: obj, subtitle: null, footer: null, threadAsComments: null, ICYMICardInteractionRow: null };
-  obj = { flex: 1, paddingLeft: marginHorizontal.inset };
-  obj = { marginHorizontal: marginHorizontal.margin };
+  const obj = { marginHorizontal: marginHorizontal.margin };
   obj[2] = { marginTop: ThemesDefault.space.PX_8, marginBottom: marginHorizontal.margin };
   obj[3] = { justifyContent: "flex-end", paddingLeft: marginHorizontal.inset, marginTop: marginHorizontal.margin, gap: marginHorizontal.margin };
   obj[4] = { marginHorizontal: marginHorizontal.margin };
   obj[5] = { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIForumThreadRow.tsx");
+let result = require("obj132").fileFinishedImporting("modules/icymi/native/ICYMIForumThreadRow.tsx");
 
 export default function ForumThreadRowWrapper(message) {
   return callback(ICYMIForumThreadRow, { message: message.message, channel: message.threadChannel, visible: message.visible });

@@ -1,19 +1,18 @@
 // discord_app/modules/stage_channels/StageMusicManager.tsx
 import initializeDefault from "../../lib/AutomaticLifecycleManager.tsx";
 import sortKey from "StageChannelParticipants.tsx";
-import closure_2 from "../../stores/ChannelStore.tsx";
+import ensureGuildLoaded from "../../stores/ChannelStore.tsx";
 import importDefaultResult from "../../stores/MediaEngineStore.tsx";
-import closure_4 from "../../stores/SelectedChannelStore.tsx";
-import closure_5 from "../../stores/VoiceStateStore.tsx";
-import closure_6 from "StageChannelParticipantStore.tsx";
-import closure_7 from "StageInstanceStore.tsx";
-import closure_8 from "StageMusicStore.tsx";
+import handleConnectionOpen from "../../stores/SelectedChannelStore.tsx";
+import updateVoiceState from "../../stores/VoiceStateStore.tsx";
+import getActiveStageChannelIds from "StageChannelParticipantStore.tsx";
+import handleStageInstanceCreateOrUpdate from "StageInstanceStore.tsx";
+import initialize from "StageMusicStore.tsx";
 import createSoundForPack from "../sound_playback/SoundUtils.tsx";
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { sortKey } from "StageChannelParticipants.tsx";
 import { useStageParticipants } from "StageChannelParticipantStoreHooks.tsx";
 
-require = arg1;
+require = fn;
 function checkVoiceStates() {
   const voiceChannelId = store2.getVoiceChannelId();
   if (null == voiceChannelId) {
@@ -29,41 +28,38 @@ function checkVoiceStates() {
       if (importDefaultResult.isSelfDeaf()) {
         closure_10.stop();
         c9 = false;
+      } else if (closure_8.shouldPlay()) {
+        closure_10.volume = importDefaultResult.getOutputVolume() / 400;
+        closure_10.loop();
+        c9 = true;
+      } else if (closure_7.isLive(voiceChannelId)) {
+        closure_10.stop();
+        c9 = false;
+      } else if (closure_8.isMuted()) {
+        closure_10.pause();
+        c9 = false;
       } else {
-        if (closure_8.shouldPlay()) {
-          closure_10.volume = obj.getOutputVolume() / 400;
-          closure_10.loop();
-          c9 = true;
-        } else if (closure_7.isLive(voiceChannelId)) {
-          closure_10.stop();
-          c9 = false;
-        } else if (obj2.isMuted()) {
-          closure_10.pause();
-          c9 = false;
-        } else {
-          const _Object = Object;
-          const values = Object.values(voiceStatesForChannel.getVoiceStatesForChannel(voiceChannelId));
-          const tmp8 = null != values.find((suppress) => {
-            suppress = suppress.suppress;
-            let tmp = !suppress;
-            if (!suppress) {
-              tmp = !suppress.isVoiceMuted();
-            }
-            return tmp;
-          });
-          if (!tmp8) {
-            if (!c9) {
-              closure_10.volume = obj.getOutputVolume() / 400;
-              closure_10.loop();
-              c9 = true;
-            }
+        const _Object = Object;
+        const values = Object.values(voiceStatesForChannel.getVoiceStatesForChannel(voiceChannelId));
+        const tmp8 = null != values.find((item, index) => {
+          const suppress = item.suppress;
+          let tmp = !suppress;
+          if (!suppress) {
+            tmp = !item.isVoiceMuted();
           }
-          if (tmp8) {
-            closure_10.pause();
-            c9 = false;
+          return tmp;
+        });
+        if (!tmp8) {
+          if (!c9) {
+            closure_10.volume = importDefaultResult.getOutputVolume() / 400;
+            closure_10.loop();
+            c9 = true;
           }
         }
-        obj2 = closure_8;
+        if (tmp8) {
+          closure_10.pause();
+          c9 = false;
+        }
       }
     } else {
       closure_10.stop();
@@ -132,18 +128,18 @@ prototype["handleToggleSelfDeaf"] = function handleToggleSelfDeaf() {
   checkVoiceStates();
 };
 const stageMusicManager = new StageMusicManager();
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageMusicManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageMusicManager.tsx");
 
 export default stageMusicManager;
 export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(channelId) {
   const _require = channelId;
   const items = [closure_4];
-  let stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.getVoiceChannelId() === closure_0);
-  const obj = _initialize;
-  const stageParticipants = _useStageParticipants.useStageParticipants(channelId, _sortKey.StageChannelParticipantNamedIndex.SPEAKER);
-  const obj2 = _useStageParticipants;
-  const tmp2 = null != stageParticipants.find((voiceState) => {
-    voiceState = voiceState.voiceState;
+  let stateFromStores = require("../../../discord_common/js/packages/flux/index.tsx").useStateFromStores(items, () => closure_1_4.getVoiceChannelId() === closure_0);
+  const obj = initialize;
+  const stageParticipants = require("StageChannelParticipantStoreHooks.tsx").useStageParticipants(channelId, require("StageChannelParticipants.tsx").StageChannelParticipantNamedIndex.SPEAKER);
+  const obj2 = useStageParticipants;
+  const tmp2 = null != stageParticipants.find((item, index) => {
+    const voiceState = item.voiceState;
     return !voiceState.isVoiceMuted();
   });
   const items1 = [closure_7];

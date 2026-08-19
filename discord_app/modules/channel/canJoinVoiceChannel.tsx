@@ -1,11 +1,11 @@
 // discord_app/modules/channel/canJoinVoiceChannel.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import ME from "../../Constants.tsx";
 import createChannelRecord from "../../records/ChannelRecord.tsx";
 
 const isPrivate = createChannelRecord.isPrivate;
 const BasicPermissions = ME.BasicPermissions;
-const result = set.fileFinishedImporting("modules/channel/canJoinVoiceChannel.tsx");
+const result = obj132.fileFinishedImporting("modules/channel/canJoinVoiceChannel.tsx");
 
 export default function canJoinVoiceChannel(type, canBasicChannel) {
   let canBasicChannelResult = isPrivate(type.type);

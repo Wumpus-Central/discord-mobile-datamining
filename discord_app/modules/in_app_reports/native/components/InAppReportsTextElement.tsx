@@ -1,15 +1,15 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsTextElement.tsx
 import Text from "../../../../design/components/Text/native/Text.tsx";
 import createRulesAll from "../../../markup/CustomMarkup.native.tsx";
-import closure_3 from "../../../../../_runtime/00019_noop.js";
+import noop from "../../../../../_runtime/00019_noop.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
 
-require = arg1;
+require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { marginBottom: 16, paddingHorizontal: 16 }, header: { marginBottom: 8 }, body: { marginBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsTextElement.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsTextElement.tsx");
 
 export default function TextElement(element) {
   const data = element.element.data;
@@ -38,9 +38,7 @@ export default function TextElement(element) {
       }
       items[1] = tmp10;
       obj[1] = items;
-      let tmp5Result = closure_6(View, obj);
-      const tmp5 = closure_6;
-      const tmp6 = View;
+      let tmp5Result = callback(View, obj);
     } else {
       tmp5Result = null;
     }

@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/stores/SearchHistoryStore.tsx
-import set from "../../../../../_runtime/00002_set.js";
+import obj132 from "../../../../../_runtime/00002_obj132.js";
 import apply from "../../../../../_runtime/00012_apply.js";
 import initializeDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
 import dispatcherDefault from "../../../../Dispatcher.tsx";
@@ -17,14 +17,14 @@ const prototype = SearchHistory.prototype;
 prototype["deserialize"] = function deserialize(arr) {
   this.items = arr.slice(0, 3);
   const items = this.items;
-  this.items = items.filter((type) => {
-    let everyResult = type.type !== constants.TEXT;
+  this.items = items.filter((item, index) => {
+    let everyResult = item.type !== constants.TEXT;
     if (!everyResult) {
-      everyResult = null == type.tags;
+      everyResult = null == item.tags;
     }
     if (!everyResult) {
-      const tags = type.tags;
-      everyResult = tags.every((key10009) => callback(table[1]).hasOwnProperty(key10009, "type"));
+      const tags = item.tags;
+      everyResult = tags.every((item, index) => callback(table[1]).hasOwnProperty(item, "type"));
     }
     return everyResult;
   });
@@ -36,7 +36,6 @@ prototype["add"] = function add(type) {
   let tmp = type.type === SearchHistoryItemTypes.TEXT;
   if (tmp) {
     tmp = "" === type.text.trim();
-    const str = type.text;
   }
   if (tmp) {
     let tmp3 = null == type.tags;
@@ -57,7 +56,7 @@ prototype["add"] = function add(type) {
 prototype["remove"] = function remove(arg0) {
   closure_0 = arg0;
   const items = this.items;
-  this.items = items.filter((arg0) => !callback(closure_1_1[2]).isEqual(arg0, callback));
+  this.items = items.filter((item, index) => !callback(dependencyMap[2]).isEqual(item, callback));
 };
 let closure_4 = {};
 ({ NATIVE_SEARCH_HISTORY_STORAGE_KEY, NATIVE_SEARCH_HISTORY_STORE_DISPLAY_NAME } = MessageEmbedTypes);
@@ -68,10 +67,10 @@ const prototype2 = SearchHistoryStore.prototype;
 prototype2["getState"] = function getState() {
   const searchHistories = {};
   const entries = Object.entries(closure_4);
-  const item = entries.forEach((arg0) => {
-    [tmp, obj] = arg0;
-    if (null != obj) {
-      searchHistories[tmp] = obj.serialize();
+  const item = entries.forEach((item, index) => {
+    [tmp, serializer] = item;
+    if (null != serializer) {
+      searchHistories[tmp] = serializer.serialize();
     }
   });
   return { searchHistories };
@@ -83,29 +82,28 @@ prototype2["initialize"] = function initialize(searchHistories) {
   }
   if (null != searchHistories) {
     closure_4 = apply.mapValues(searchHistories, (arg0) => {
-      if (typeof closure_3 !== "function") {
+      if (typeof ctor !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      const obj = Object.create(closure_3.prototype);
-      obj[0] = [];
-      obj.deserialize(arg0);
-      return obj;
+      const deserializer = Object.create(ctor.prototype);
+      deserializer[0] = [];
+      deserializer.deserialize(arg0);
+      return deserializer;
     });
-    let obj = apply;
   }
 };
 prototype2["getSearchHistory"] = function getSearchHistory(handleChange) {
-  let obj = dependencyMap[handleChange];
-  if (obj == null) {
+  let serializer = dependencyMap[handleChange];
+  if (serializer == null) {
     if (typeof SearchHistory !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    obj = Object.create(SearchHistory.prototype);
+    const obj = Object.create(SearchHistory.prototype);
     obj[0] = [];
-    const tmp = SearchHistory;
+    serializer = obj;
   }
-  dependencyMap[handleChange] = obj;
-  return obj.serialize();
+  dependencyMap[handleChange] = serializer;
+  return serializer.serialize();
 };
 SearchHistoryStore.displayName = NATIVE_SEARCH_HISTORY_STORE_DISPLAY_NAME;
 SearchHistoryStore.persistKey = NATIVE_SEARCH_HISTORY_STORAGE_KEY;
@@ -122,7 +120,6 @@ const searchHistoryStore = new SearchHistoryStore(dispatcherDefault, {
       }
       obj = Object.create(SearchHistory.prototype);
       obj[0] = [];
-      const tmp = SearchHistory;
     }
     dependencyMap[id] = obj;
     obj.remove(id.item);
@@ -136,12 +133,11 @@ const searchHistoryStore = new SearchHistoryStore(dispatcherDefault, {
       }
       obj = Object.create(SearchHistory.prototype);
       obj[0] = [];
-      const tmp = SearchHistory;
     }
     dependencyMap[id] = obj;
     obj.add(id.item);
   }
 });
-const result = set.fileFinishedImporting("modules/search/native/stores/SearchHistoryStore.tsx");
+const result = obj132.fileFinishedImporting("modules/search/native/stores/SearchHistoryStore.tsx");
 
 export default searchHistoryStore;

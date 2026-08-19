@@ -1,7 +1,7 @@
 // discord_app/modules/notification_center/NotificationCenterItemsTypes.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 
-const result = set.fileFinishedImporting("modules/notification_center/NotificationCenterItemsTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/notification_center/NotificationCenterItemsTypes.tsx");
 
 export const NotificationCenterScenes = { LANDING: "notification_center_landing" };
 export const ItemEnum = { UPDATE_PROFILE: 0, [0]: "UPDATE_PROFILE", FIND_FRIENDS: 1, [1]: "FIND_FRIENDS", ADD_FRIEND: 2, [2]: "ADD_FRIEND", FIRST_MESSAGE: 3, [3]: "FIRST_MESSAGE" };

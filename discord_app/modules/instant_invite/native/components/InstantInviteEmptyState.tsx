@@ -2,20 +2,20 @@
 import noopAll from "../../../../../_runtime/00019_noop.js";
 import ThemesDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ClearButtonDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
+import isGuildMemberDefault from "../../../../utils/InstantInviteUtils.tsx";
 import registerAssetDefault from "../../../../../_runtime/12367_registerAsset.js";
 import { View } from "../../../../../_runtime/00017_get_ActivityIndicator.js";
-import closure_4 from "../../../../stores/CreateInviteModalStore.tsx";
+import updateWithLatestInvite from "../../../../stores/CreateInviteModalStore.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, emptyStateContainer: { padding: 0, marginBottom: 16 }, emptyStateArt: { marginBottom: 16 }, emptyStateTitle: { marginBottom: 4 }, linkContainer: { maxWidth: "100%", flexDirection: "row", marginBottom: 8, gap: 8 }, inviteInput: { flexShrink: 1 }, expireCaption: { marginBottom: 16 }, settingsButton: null };
-createCacheKey = { width: 48, height: 48, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs };
+const createCacheKey = { width: 48, height: 48, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[7] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteEmptyState.tsx");
+const result = require("obj132").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteEmptyState.tsx");
 
 export default function _default(link) {
   let str = link.link;
@@ -25,7 +25,6 @@ export default function _default(link) {
   let obj = stateFromStores(589);
   const items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
-  obj = { style: tmp.container, children: null };
   obj = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: registerAssetDefault, title: null, body: null };
   const intl = stateFromStores(1236).intl;
   obj[4] = intl.string(stateFromStores(1236).t.tQc0l8);
@@ -49,20 +48,20 @@ export default function _default(link) {
   obj3[4] = callback(stateFromStores(7355).SettingsIcon, {});
   items2[1] = callback(stateFromStores(5433).PressableOpacity, obj3);
   obj1[1] = items2;
-  items1[1] = closure_6(View, obj1);
+  items1[1] = callback(View, obj1);
   const obj4 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
   if (null == stateFromStores) {
     obj4[3] = null;
-    items1[2] = tmp7(tmp10, obj4);
+    items1[2] = callback(tmp10, obj4);
     const obj5 = { text: null, onPress: null };
     const intl5 = tmp2(1236).intl;
     obj5[0] = intl5.string(tmp2(1236).t.Ej3B3Y);
     obj5[1] = onShare;
-    items1[3] = tmp7(tmp2(4745).Button, obj5);
+    items1[3] = callback(tmp2(4745).Button, obj5);
     obj[1] = items1;
-    return tmp5(tmp6, obj);
+    return callback(View, obj);
   } else {
-    const maxAgeOptionByValue = tmp8(8920).getMaxAgeOptionByValue(stateFromStores.maxAge);
+    const maxAgeOptionByValue = isGuildMemberDefault.getMaxAgeOptionByValue(stateFromStores.maxAge);
     let str2 = "";
     let str3 = "";
     if (null != maxAgeOptionByValue) {
@@ -72,8 +71,8 @@ export default function _default(link) {
       }
       str3 = descriptiveLabel;
     }
-    const getMaxUsesOptions = tmp8(8920).getMaxUsesOptions;
-    const found = getMaxUsesOptions.find((value) => value.value === stateFromStores.maxUses);
+    const getMaxUsesOptions = isGuildMemberDefault.getMaxUsesOptions;
+    const found = getMaxUsesOptions.find((item, index) => item.value === stateFromStores.maxUses);
     if (null != found) {
       str2 = found.descriptiveLabel;
     }
@@ -87,6 +86,6 @@ export default function _default(link) {
     obj6[0] = str3;
     obj6[1] = str2;
     intl4.format(dqPWMN, obj6);
-    const tmp8Result = tmp8(8920);
+    const tmp8Result = isGuildMemberDefault;
   }
 };

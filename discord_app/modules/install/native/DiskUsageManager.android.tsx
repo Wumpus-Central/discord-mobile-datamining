@@ -22,6 +22,6 @@ prototype["_terminate"] = function _terminate() {
 
 };
 const diskUsageManager = new DiskUsageManager();
-const result = require("set").fileFinishedImporting("modules/install/native/DiskUsageManager.android.tsx");
+const result = require("obj132").fileFinishedImporting("modules/install/native/DiskUsageManager.android.tsx");
 
 export default diskUsageManager;

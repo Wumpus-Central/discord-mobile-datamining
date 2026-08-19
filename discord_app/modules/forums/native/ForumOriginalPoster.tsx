@@ -5,9 +5,9 @@ import getSystemLocale from "../../../intl/index.native.tsx";
 import Text from "../../../design/components/Text/native/Text.tsx";
 import { View } from "../../../../_runtime/00017_get_ActivityIndicator.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
-import createCacheKey from "../../../design/components/Styles/native/createStyles.tsx";
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class ForumOriginalPoster {
   constructor() {
     tmp = closure_5();
@@ -31,13 +31,12 @@ class ForumOriginalPoster {
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, opIcon: null, opIconBackground: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
+const createCacheKey = { borderRadius: ThemesDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: require("result").DARK_BRAND_260_LIGHT_BRAND_200 };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { backgroundColor: require("result").DARK_BRAND_260_LIGHT_BRAND_200 };
-const result = require("set").fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");
 
 export default ForumOriginalPoster;
 export const getForumOriginalPoster = function getForumOriginalPoster() {

@@ -1,9 +1,9 @@
 // discord_app/modules/i18n/CountryCodeUtils.tsx
-import set from "../../../_runtime/00002_set.js";
+import obj132 from "../../../_runtime/00002_obj132.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import getSystemLocale from "../../intl/index.native.tsx";
 import itemsDefault from "../../../discord_common/js/shared/Countries.tsx";
-import set2 from "../../../discord_common/js/shared/shared-constants/CountryCodes.tsx";
+import set from "../../../discord_common/js/shared/shared-constants/CountryCodes.tsx";
 import CountryCodesISO3to2 from "../../../discord_common/js/shared/shared-constants/CountryCodesISO3to2.tsx";
 
 let c3 = "United States";
@@ -1029,32 +1029,30 @@ let closure_4 = {
     return intl.string(getSystemLocale.t.kQ6oLs);
   }
 };
-const result = set.fileFinishedImporting("modules/i18n/CountryCodeUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/i18n/CountryCodeUtils.tsx");
 
 export const DEFAULT_COUNTRY_CODE_NAME = "United States";
 export const getCountryCodeByCountryName = function getCountryCodeByCountryName(arg0) {
   closure_0 = arg0;
-  const found = itemsDefault.find((name) => name.name === closure_0);
+  const found = itemsDefault.find((item, index) => item.name === closure_0);
   if (null != found) {
     const obj = { name: null, code: null, alpha2: null };
     ({ name: obj[0], phoneCountryCode: obj[1], alpha2: obj[2] } = found);
     return obj;
   }
-  const arr = itemsDefault;
 };
 export const getCountryCodeByAlpha2 = function getCountryCodeByAlpha2(countryCode) {
   closure_0 = countryCode;
-  const found = itemsDefault.find((alpha2) => alpha2.alpha2 === closure_0);
+  const found = itemsDefault.find((item, index) => item.alpha2 === closure_0);
   if (null != found) {
     const obj = { name: null, code: null, alpha2: null };
     ({ name: obj[0], phoneCountryCode: obj[1], alpha2: obj[2] } = found);
     return obj;
   }
-  const arr = itemsDefault;
 };
 export const getDefaultCountryCode = function getDefaultCountryCode() {
   closure_0 = c3;
-  const found = itemsDefault.find((name) => name.name === closure_0);
+  const found = itemsDefault.find((item, index) => item.name === closure_0);
   let tmp4;
   if (null != found) {
     const obj = { name: null, code: null, alpha2: null };
@@ -1076,7 +1074,7 @@ export const getI18NCountryNameSafe = function getI18NCountryNameSafe(arg0) {
 };
 export const convertToAlpha2 = function convertToAlpha2(countryCode) {
   if (2 === countryCode.length) {
-    const tmp17 = set2.CountryCodes[countryCode];
+    const tmp17 = set.CountryCodes[countryCode];
     if (null == tmp17) {
       const _Error3 = Error;
       const _HermesInternal3 = HermesInternal;
