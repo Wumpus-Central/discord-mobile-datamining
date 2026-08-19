@@ -1,0 +1,7 @@
+// === Module 2070: registerAsset ===
+
+// Module 2070 (registerAsset)
+import registerAsset from "registerAsset" /* 1241 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hZHM=", scales: [1], hash: "b994eaf560e7431878fd3c925b5700be", name: "zh-CN.messages.b994eaf560e7431878fd3c925b5700be.compiled.messages", type: "jsona" });

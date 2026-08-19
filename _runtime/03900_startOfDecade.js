@@ -1,0 +1,31 @@
+// === Module 3900: startOfDecade ===
+
+// Module 3900 (startOfDecade)
+import _typeof from "_typeof" /* 3472 */;
+import requiredArgs from "requiredArgs" /* 3473 */;
+
+if (!_typeof) {
+  let obj = { default: null };
+  obj[0] = _typeof;
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+if (!requiredArgs) {
+  obj = { default: null };
+  obj[0] = requiredArgs;
+  let tmp5 = obj;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function startOfDecade(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  defaultResult1.setFullYear(10 * Math.floor(defaultResult1.getFullYear() / 10), 0, 1);
+  defaultResult1.setHours(0, 0, 0, 0);
+  return defaultResult1;
+};
+export default exports.default;

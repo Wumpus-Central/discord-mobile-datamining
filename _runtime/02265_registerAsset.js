@@ -1,0 +1,7 @@
+// === Module 2265: registerAsset ===
+
+// Module 2265 (registerAsset)
+import registerAsset from "registerAsset" /* 1241 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==", scales: [1], hash: "e8bc3eacd9ac0ecedc39dc1c90ee6055", name: "vi.messages.e8bc3eacd9ac0ecedc39dc1c90ee6055.compiled.messages", type: "jsona" });

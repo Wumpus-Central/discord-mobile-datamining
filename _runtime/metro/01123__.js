@@ -1,0 +1,4 @@
+// === Module 1123: ? ===
+
+// Module 1123
+arg5.MAX_PROFILE_DURATION_MS = 30000;

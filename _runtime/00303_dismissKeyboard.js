@@ -1,0 +1,11 @@
+// === Module 303: dismissKeyboard ===
+
+// Module 303 (dismissKeyboard)
+import set from "set" /* 144 */;
+
+require = arg1;
+const dependencyMap = arg6;
+arg5.default = function dismissKeyboard() {
+  const _default = set.default;
+  _default.blurTextInput(set.default.currentlyFocusedInput());
+};

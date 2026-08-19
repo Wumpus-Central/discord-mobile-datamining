@@ -1,0 +1,7 @@
+// === Module 3202: registerAsset ===
+
+// Module 3202 (registerAsset)
+import registerAsset from "registerAsset" /* 1241 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJ0bmVyX3BlcmtzL3hib3gvcGFydG5lcl9wYXNz", scales: [1], hash: "46e20b935bbd20f7babc42002eb35571", name: "uk.messages.46e20b935bbd20f7babc42002eb35571.compiled.messages", type: "jsona" });
