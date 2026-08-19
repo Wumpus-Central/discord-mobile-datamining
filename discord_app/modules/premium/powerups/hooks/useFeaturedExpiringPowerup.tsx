@@ -1,12 +1,12 @@
 // === Module 11675: useFeaturedExpiringPowerup ===
 
 // Module 11675 (useFeaturedExpiringPowerup)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4282 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
+import noop from "noop" /* 19 */;
+import handleGameServerInstanceCreated from "handleGameServerInstanceCreated" /* 4282 */;
+import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");
 
 export default function useFeaturedExpiringPowerup(arg0) {
   const _require = arg0;
@@ -22,7 +22,7 @@ export default function useFeaturedExpiringPowerup(arg0) {
     if (expiringPowerupCoachmarkEnabled) {
       let unlockedPowerups;
       if (stateFromStores != null) {
-        unlockedPowerups = tmp2.unlockedPowerups;
+        unlockedPowerups = stateFromStores.unlockedPowerups;
       }
       if (unlockedPowerups == null) {
         unlockedPowerups = {};
@@ -37,10 +37,10 @@ export default function useFeaturedExpiringPowerup(arg0) {
         entitlements = {};
       }
       arraySpreadResult = HermesBuiltin.arraySpread(Object.values(entitlements), arraySpreadResult);
-      const found = items.filter((ends_at) => {
-        let tmp = null != ends_at.ends_at;
+      const found = items.filter((item, index) => {
+        let tmp = null != item.ends_at;
         if (tmp) {
-          const metadata = ends_at.metadata;
+          const metadata = item.metadata;
           let num;
           if (metadata != null) {
             num = metadata.num_expiring_boosts;
@@ -53,16 +53,16 @@ export default function useFeaturedExpiringPowerup(arg0) {
         return tmp;
       });
       if (0 !== found.length) {
-        const reduced = found.reduce((ends_at, ends_at2) => {
-          let tmp = ends_at;
-          if (ends_at2.ends_at > ends_at.ends_at) {
-            tmp = ends_at2;
+        const reduced = found.reduce((acc, item, index) => {
+          let tmp = acc;
+          if (item.ends_at > acc.ends_at) {
+            tmp = item;
           }
           return tmp;
         });
         let title;
-        if (tmp2 != null) {
-          if (tmp2.allPowerups[reduced.sku_id] != null) {
+        if (stateFromStores != null) {
+          if (stateFromStores.allPowerups[reduced.sku_id] != null) {
             title = tmp9.title;
           }
         }

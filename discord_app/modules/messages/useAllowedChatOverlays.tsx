@@ -4,12 +4,12 @@
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
 import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 8724 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { ChatOverlays } from "ChatOverlays" /* 10634 */;
 import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
 
-require = arg1;
+require = fn;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: items };
 items = [, , ];
@@ -27,7 +27,7 @@ obj[ActivityPanelModes.PIP] = items3;
 const items4 = [, , ];
 ({ NEW_MESSAGES: arr5[0], OPT_IN_CHANNEL: arr5[1], SUMMARIES: arr5[2] } = ChatOverlays);
 obj[ActivityPanelModes.ACTIVITY_POPOUT_WINDOW] = items4;
-const result = require("set").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
 export default function useAllowedChatOverlays() {
   obj = defaultAreStatesEqual;

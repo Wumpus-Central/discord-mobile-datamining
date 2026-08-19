@@ -3,7 +3,7 @@
 // Module 1974 (_tryLoadAsync)
 import timestampDefault from "timestamp" /* 3 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _tryLoadAsync() {
   const self = this;
@@ -197,11 +197,11 @@ function _tryLoadOrResetCacheGatewayAsync() {
 }
 let closure_3 = new timestampDefault("TryLoad");
 const tmp2 = new timestampDefault("TryLoad");
-const result = require("set").fileFinishedImporting("modules/app_database/app/TryLoad.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_database/app/TryLoad.tsx");
 
-export const tryLoad = function tryLoad(arg0) {
+export const tryLoad = function tryLoad(fn) {
   try {
-    return arg0();
+    return fn();
   } catch (tmp2) {
     logger.log("database load failed.", tmp2);
     return null;
@@ -217,9 +217,9 @@ export const tryLoadAsync = function tryLoadAsync(arg0) {
   }
   return applyArgumentsResult;
 };
-export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(arg0, arg1, ensureGuildLoaded) {
+export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(arg0, fn, ensureGuildLoaded) {
   try {
-    return arg1();
+    return fn();
   } catch (tmp2) {
     let tmp4 = ensureGuildLoaded;
     const _HermesInternal = HermesInternal;

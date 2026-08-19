@@ -6,11 +6,10 @@ import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles(() => {
-  let obj = { placeholder: null };
-  obj = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  const obj = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[0] = obj;
   return obj;
 });
@@ -23,23 +22,15 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const listRefHappeningNow = listItemHeight.listRefHappeningNow;
   const listTop = listItemHeight.listTop;
   const scrollPosition = listItemHeight.scrollPosition;
-  closure_8 = undefined;
-  let channels;
-  let channelFavorites;
-  let friendSuggestions;
-  let renderHeader;
-  let renderFooter;
-  let setAddedFriendSuggestions;
-  ref = undefined;
   ({ accessibilityLabel, handleScrollAnimated, insetEnd, scrollIndicatorInsetBottom } = listItemHeight);
   let tmp = listRefHappeningNow();
   closure_8 = tmp;
-  channels = data.channels;
-  channelFavorites = data.channelFavorites;
-  friendSuggestions = data.friendSuggestions;
-  renderHeader = data.renderHeader;
-  renderFooter = data.renderFooter;
-  setAddedFriendSuggestions = data.setAddedFriendSuggestions;
+  const channels = data.channels;
+  const channelFavorites = data.channelFavorites;
+  const friendSuggestions = data.friendSuggestions;
+  const renderHeader = data.renderHeader;
+  const renderFooter = data.renderFooter;
+  const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ref = listItemSuggestedFriendHeight.useRef(null);
   const imperativeHandle = listItemSuggestedFriendHeight.useImperativeHandle(ref, () => ({
     scrollToTop() {
@@ -63,28 +54,28 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
       obj[0] = channelFavorites[arg1].channelId;
       obj[1] = listItemHeight;
       obj[2] = arg1;
-      return listLeft(tmp(tmp2[5]).MessagesItemChannelFast, obj);
-    } else if (tmp(tmp2[4]).MessagesDataSections.Channels === arg0) {
+      return listLeft(isRefreshEnabled(listItemSizes[5]).MessagesItemChannelFast, obj);
+    } else if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.Channels === arg0) {
       obj = { channelId: null, placeholderHeight: null, row: null };
       obj[0] = channels[arg1].channelId;
       obj[1] = listItemHeight;
       obj[2] = arg1;
-      return listLeft(tmp(tmp2[5]).MessagesItemChannelFast, obj);
-    } else if (tmp(tmp2[4]).MessagesDataSections.Separator === arg0) {
-      return listLeft(listItemHeight(tmp2[6]), {});
-    } else if (tmp(tmp2[4]).MessagesDataSections.SuggestedFriends === arg0) {
+      return listLeft(isRefreshEnabled(listItemSizes[5]).MessagesItemChannelFast, obj);
+    } else if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.Separator === arg0) {
+      return listLeft(listItemHeight(listItemSizes[6]), {});
+    } else if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.SuggestedFriends === arg0) {
       obj1 = { suggestedFriend: null, onAddFriendSuggestions: null };
       obj1[0] = friendSuggestions[arg1];
       obj1[1] = setAddedFriendSuggestions;
       const obj2 = { height: null };
       obj2[0] = listItemSuggestedFriendHeight;
       const merged = Object.assign(obj1);
-      return listLeft(tmp(tmp2[7]).MessagesItemSuggestedFriendFast, obj2);
-    } else if (tmp(tmp2[4]).MessagesDataSections.Placeholders === arg0) {
+      return listLeft(isRefreshEnabled(listItemSizes[7]).MessagesItemSuggestedFriendFast, obj2);
+    } else if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.Placeholders === arg0) {
       obj = { row: null, height: null };
       obj[0] = arg1;
       obj[1] = listItemHeight;
-      return listLeft(listItemHeight(tmp2[8]), obj);
+      return listLeft(listItemHeight(listItemSizes[8]), obj);
     } else {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
@@ -95,13 +86,13 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const memo = listItemSuggestedFriendHeight.useMemo(() => ({
     getComponent(arg0, arg1, arg2) {
       let tmp2 = null;
-      if (arg0 === closure_1_0(closure_1_2[4]).MessagesDataSections.SuggestedFriends) {
+      if (arg0 === isRefreshEnabled(listItemSizes[4]).MessagesDataSections.SuggestedFriends) {
         const obj = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
         obj[0] = closure_7;
         obj[1] = arg2;
         obj[2] = closure_6;
         obj[3] = closure_4;
-        tmp2 = closure_1_4(closure_1_1(closure_1_2[9]), obj);
+        tmp2 = listLeft(listItemHeight(listItemSizes[9]), obj);
       }
       return tmp2;
     },
@@ -116,27 +107,24 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const items2 = [renderHeader, isRefreshEnabled, listRefHappeningNow];
   const memo1 = listItemSuggestedFriendHeight.useMemo(() => ({
     getComponent() {
-      if (closure_1_0(closure_1_2[4]).MessagesDataHeader.HappeningNow === closure_12) {
+      if (isRefreshEnabled(listItemSizes[4]).MessagesDataHeader.HappeningNow === closure_12) {
         const obj = { listRef: null };
         obj[0] = closure_5;
-        return closure_1_4(closure_1_1(tmp3[10]), obj);
-      } else if (tmp2(tmp3[4]).MessagesDataHeader.EmptyState === tmp) {
-        return closure_1_4(closure_1_1(tmp3[11]), {});
+        return listLeft(listItemHeight(listItemSizes[10]), obj);
+      } else if (isRefreshEnabled(listItemSizes[4]).MessagesDataHeader.EmptyState === closure_12) {
+        return listLeft(listItemHeight(listItemSizes[11]), {});
       } else {
         return null;
       }
-      tmp = closure_12;
-      tmp2 = closure_1_0;
     },
     getSize() {
-      if (closure_1_0(closure_1_2[4]).MessagesDataHeader.HappeningNow === closure_12) {
-        return tmp2(tmp3[10]).getMessagesItemHappeningNowHeight(closure_0);
-      } else if (tmp2(tmp3[4]).MessagesDataHeader.EmptyState === tmp) {
-        return tmp2(tmp3[11]).MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
+      if (isRefreshEnabled(listItemSizes[4]).MessagesDataHeader.HappeningNow === closure_12) {
+        return isRefreshEnabled(listItemSizes[10]).getMessagesItemHappeningNowHeight(closure_0);
+      } else if (isRefreshEnabled(listItemSizes[4]).MessagesDataHeader.EmptyState === closure_12) {
+        return isRefreshEnabled(listItemSizes[11]).MESSAGES_ITEM_EMPTY_STATE_HEIGHT;
       } else {
         return 0;
       }
-      tmp = closure_12;
     }
   }), items2);
   const items3 = [renderFooter];
@@ -144,14 +132,14 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
     getComponent() {
       let tmp = null;
       if (closure_13) {
-        tmp = closure_1_4(closure_1_1(closure_1_2[12]), {});
+        tmp = listLeft(listItemHeight(listItemSizes[12]), {});
       }
       return tmp;
     },
     getSize() {
       let num = 0;
       if (closure_13) {
-        num = closure_1_0(closure_1_2[12]).MESSAGES_ITEM_ADD_FRIENDS_WIDGET_HEIGHT;
+        num = isRefreshEnabled(listItemSizes[12]).MESSAGES_ITEM_ADD_FRIENDS_WIDGET_HEIGHT;
       }
       return num;
     }
@@ -160,12 +148,12 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const items5 = [channels, channelFavorites];
   const callback1 = listItemSuggestedFriendHeight.useCallback((arg0) => {
     if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.FavoriteChannels !== arg0) {
-      if (tmp(tmp2[4]).MessagesDataSections.Channels !== arg0) {
-        if (tmp(tmp2[4]).MessagesDataSections.Placeholders !== arg0) {
-          if (tmp(tmp2[4]).MessagesDataSections.SuggestedFriends === arg0) {
+      if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.Channels !== arg0) {
+        if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.Placeholders !== arg0) {
+          if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.SuggestedFriends === arg0) {
             return listItemSuggestedFriendHeight;
-          } else if (tmp(tmp2[4]).MessagesDataSections.Separator === arg0) {
-            return tmp(tmp2[6]).MESSAGES_ITEM_SEPERATOR_HEIGHT;
+          } else if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.Separator === arg0) {
+            return isRefreshEnabled(listItemSizes[6]).MESSAGES_ITEM_SEPERATOR_HEIGHT;
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
@@ -180,21 +168,19 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const items6 = [tmp, listItemSizes];
   const callback2 = listItemSuggestedFriendHeight.useCallback((arg0, arg1, arg2) => {
     if (listItemHeight(listItemSizes[13]).SECTION_HEADER !== arg0) {
-      if (tmp(tmp2[13]).SECTION_FOOTER !== arg0) {
-        if (tmp(tmp2[13]).ITEM === arg0) {
-          if (isRefreshEnabled(tmp2[4]).MessagesDataSections.FavoriteChannels === arg1) {
+      if (listItemHeight(listItemSizes[13]).SECTION_FOOTER !== arg0) {
+        if (listItemHeight(listItemSizes[13]).ITEM === arg0) {
+          if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.FavoriteChannels === arg1) {
             return channelFavorites[arg2].channelId;
-          } else if (tmp5(tmp2[4]).MessagesDataSections.Channels === arg1) {
+          } else if (isRefreshEnabled(listItemSizes[4]).MessagesDataSections.Channels === arg1) {
             return channels[arg2].channelId;
           }
-          tmp5 = isRefreshEnabled;
         }
       }
     }
   }, items5);
   const memo3 = listItemSuggestedFriendHeight.useMemo(() => {
-    let obj = { listHeader: null, sectionItem: null };
-    obj = { type: isRefreshEnabled(listItemSizes[14]).FastestListPropsPlaceholderType.SHAPE, colorHex: closure_8.placeholder.backgroundColor, shape: "rect", borderRadius: listItemHeight(listItemSizes[3]).radii.lg, paddingHorizontal: listItemHeight(listItemSizes[3]).space.PX_8, paddingVertical: listItemHeight(listItemSizes[3]).space.PX_4 };
+    let obj = { type: isRefreshEnabled(listItemSizes[14]).FastestListPropsPlaceholderType.SHAPE, colorHex: closure_8.placeholder.backgroundColor, shape: "rect", borderRadius: listItemHeight(listItemSizes[3]).radii.lg, paddingHorizontal: listItemHeight(listItemSizes[3]).space.PX_8, paddingVertical: listItemHeight(listItemSizes[3]).space.PX_4 };
     obj[0] = obj;
     obj = { type: isRefreshEnabled(listItemSizes[14]).FastestListPropsPlaceholderType.FEED_ITEM, colorHex: closure_8.placeholder.backgroundColor, labelPadding: listItemHeight(listItemSizes[3]).space.PX_4, labelSize: listItemSizes.label, labelSecondarySize: listItemSizes.labelSecondary, padding: listItemHeight(listItemSizes[3]).space.PX_16, shape: "circle", shapeSize: listItemSizes.avatar };
     obj[1] = obj;
@@ -202,6 +188,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   }, items6);
   return listLeft(listItemHeight(listItemSizes[15]), { insetEnd, accessibilityLabel, estimatedListSize: "windowSize", keyExtractor: callback2, itemSize: callback1, listId: "dm-messages-list", listFooterSize: memo2.getSize, listFooterAlwaysMounted: true, listHeaderSize: memo1.getSize, listHeaderAlwaysMounted: true, placeholderConfig: memo3, ref, renderItem: callback, renderListFooter: memo2.getComponent, renderListHeader: memo1.getComponent, renderSectionHeader: memo.getComponent, scrollIndicatorInsetEnd: scrollIndicatorInsetBottom, scrollReporting: "animatedCallbacks", scrollHandlerAnimated: handleScrollAnimated, sections: data.sections, sectionHeaderSize: memo.getSize });
 }));
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFastestList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFastestList.tsx");
 
 export default memoResult;

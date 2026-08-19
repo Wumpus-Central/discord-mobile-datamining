@@ -1,11 +1,11 @@
 // === Module 11232: getPreviewVideoAssetUrl ===
 
 // Module 11232 (getPreviewVideoAssetUrl)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/activities/utils/getPreviewVideoAssetUrl.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getPreviewVideoAssetUrl.tsx");
 
 export default function getPreviewVideoAssetUrl(closure_7, banner_asset_id) {
   if (null != CDN_HOST) {

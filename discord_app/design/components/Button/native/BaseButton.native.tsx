@@ -1,7 +1,7 @@
 // === Module 4752: BaseButton ===
 
 // Module 4752 (BaseButton)
-import closure_3 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE" /* 4753 */;
@@ -9,7 +9,7 @@ import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = arg1;
+const require = fn;
 let closure_2 = ["style"];
 let c4 = importAllResult;
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
@@ -46,7 +46,6 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   let obj = flag2(accessibilityState[7]);
   const buttonPressAnimationProps = obj.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
   if (null == pressed) {
-    obj = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
     obj = { onLayout: null, onPressIn: null, onPressOut: null };
     obj[0] = onLayout;
     obj[1] = onPressIn;
@@ -67,7 +66,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     obj.busy = flag2;
     return obj;
   }, items);
-  let tmp4Result = tmp4(tmp5[5]);
+  let tmp4Result = tmp4(accessibilityState[5]);
   let str = "light";
   if ("primary-overlay" !== variant) {
     let str3;
@@ -83,7 +82,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     const obj2 = { theme: null, children: null };
     obj2[0] = str;
     obj2[1] = children;
-    tmp11 = jsx(tmp4(tmp5[5]).ThemeContextProvider, { theme: null, children: null });
+    tmp11 = jsx(tmp4(accessibilityState[5]).ThemeContextProvider, { theme: null, children: null });
   }
   const items1 = [disabled.style, , , ];
   if (flag) {
@@ -121,7 +120,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     let str5 = "";
     if (!accessibilityElementsHidden) {
       const items2 = [accessibilityLabel, accessibilityHint];
-      const found = items2.filter(tmp4(tmp5[9]).isNotNullish);
+      const found = items2.filter(tmp4(accessibilityState[9]).isNotNullish);
       str5 = found.join(", ");
     }
     const obj4 = {};
@@ -129,7 +128,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     obj4.ref = ref;
     let isAndroidResult = accessible;
     if (accessible == null) {
-      tmp4Result = tmp4(tmp5[10]);
+      tmp4Result = tmp4(accessibilityState[10]);
       isAndroidResult = tmp4Result.isAndroid();
     }
     obj4.accessible = !isAndroidResult;
@@ -158,6 +157,6 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   }
   tmp = callback();
 });
-const result = require("set").fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
 
 export const BaseButton = forwardRefResult;

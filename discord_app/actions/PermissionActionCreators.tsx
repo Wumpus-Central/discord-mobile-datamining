@@ -1,10 +1,10 @@
 // === Module 16134: dispatcher ===
 
 // Module 16134 (dispatcher)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = set.fileFinishedImporting("actions/PermissionActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/PermissionActionCreators.tsx");
 
 export default {
   clearVADWarning() {
@@ -21,16 +21,14 @@ export default {
     dispatcherDefault.dispatch({ type: "PERMISSION_CLEAR_PTT_ADMIN_WARNING" });
   },
   requestElevatedProcess(pid) {
-    let obj = dispatcherDefault;
-    obj = { type: "PERMISSION_REQUEST_ELEVATED_PROCESS", pid };
+    const obj = { type: "PERMISSION_REQUEST_ELEVATED_PROCESS", pid };
     obj.dispatch(obj);
   },
   clearElevatedProcess() {
     dispatcherDefault.dispatch({ type: "PERMISSION_CLEAR_ELEVATED_PROCESS" });
   },
   continueNonelevatedProcess(pid) {
-    let obj = dispatcherDefault;
-    obj = { type: "PERMISSION_CONTINUE_NONELEVATED_PROCESS", pid };
+    const obj = { type: "PERMISSION_CONTINUE_NONELEVATED_PROCESS", pid };
     obj.dispatch(obj);
   }
 };

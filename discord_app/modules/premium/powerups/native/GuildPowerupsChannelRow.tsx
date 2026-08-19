@@ -2,16 +2,18 @@
 
 // Module 15478 (GuildPowerupsChannelRowIndicator)
 import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
 import add from "add" /* 7128 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
 import GUILD_POWERUP_NOTIFICATION_COOLDOWN from "GUILD_POWERUP_NOTIFICATION_COOLDOWN" /* 11664 */;
 import SidebarCoachmarkOverlayLayer from "SidebarCoachmarkOverlayLayer" /* 15277 */;
 import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 15433 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function GuildPowerupsChannelRowIndicator(indicator) {
   indicator = indicator.indicator;
   if (null == indicator) {
@@ -21,11 +23,11 @@ function GuildPowerupsChannelRowIndicator(indicator) {
     if (GUILD_POWERUP_NOTIFICATION_COOLDOWN.GuildPowerupNotificationIndicatorType.WARNING === type) {
       let obj = { color: null, size: "sm" };
       obj[0] = ThemesDefault.colors.STATUS_WARNING;
-      return callback(tmp4(8074).CircleErrorIcon, obj);
-    } else if (tmp4(11664).GuildPowerupNotificationIndicatorType.UNREAD === type) {
+      return callback(CircleErrorIcon.CircleErrorIcon, obj);
+    } else if (GUILD_POWERUP_NOTIFICATION_COOLDOWN.GuildPowerupNotificationIndicatorType.UNREAD === type) {
       obj = { value: null, isMentionLowImportance: true };
       obj[0] = indicator.count;
-      return callback(tmp4(1297).Badge, obj);
+      return callback(Button.Badge, obj);
     } else {
       return null;
     }
@@ -50,11 +52,10 @@ function GuildPowerupsCoachmark(arg0) {
   return tmp4Result;
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+const createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsChannelRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsChannelRow.tsx");
 
 export default function GuildPowerupsChannelRow(guildId) {
   guildId = guildId.guildId;
@@ -92,21 +93,17 @@ export default function GuildPowerupsChannelRow(guildId) {
   const items = [guildId, dismissNewBadgeIfShown];
   const callback = obj.useCallback(() => {
     dismissNewBadgeIfShown();
-    const obj = { guildId, analyticsLocation: dismissNewBadgeIfShown(closure_1_2[16]).GUILD_POWERUPS_CHANNEL_LIST_ROW };
-    dismissNewBadgeIfShown(closure_1_2[15])(obj);
+    const obj = { guildId, analyticsLocation: dismissNewBadgeIfShown(dependencyMap[16]).GUILD_POWERUPS_CHANNEL_LIST_ROW };
+    dismissNewBadgeIfShown(dependencyMap[15])(obj);
   }, items);
-  obj = { ref, collapsable: false, children: null };
   obj = { targetRef: ref, guildId, popout: null };
   let popout1;
   if (tmp5 != null) {
     popout1 = tmp5.popout;
   }
   obj[2] = popout1;
-  const items1 = [closure_5(GuildPowerupsCoachmark, obj), ];
+  const items1 = [callback(GuildPowerupsCoachmark, obj), ];
   obj1 = { onPress: callback, style: tmp.container, accessible: true, mode: DEFAULT, unread: true === showUnread, accessibilityLabel: null, accessibilityState: null, name: null, icon: null, channelInfo: null };
-  const tmp17 = closure_6;
-  const tmp18 = View;
-  const tmp19 = GuildPowerupsCoachmark;
   const tmp6 = dismissNewBadgeIfShown(11679);
   const intl = tmp14(1236).intl;
   obj1[5] = intl.string(dismissNewBadgeIfShown(2367).yv3DJJ);
@@ -115,11 +112,11 @@ export default function GuildPowerupsChannelRow(guildId) {
   const intl2 = tmp14(1236).intl;
   obj2[0] = intl2.string(dismissNewBadgeIfShown(2367).yv3DJJ);
   obj2[1] = DEFAULT;
-  obj1[7] = closure_5(tmp14(11553).BaseChannelName, obj2);
+  obj1[7] = callback(tmp14(11553).BaseChannelName, obj2);
   const tmp3Result = dismissNewBadgeIfShown(11553);
-  obj1[8] = closure_5(tmp14(11553).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(15479).BoostTier2Icon });
+  obj1[8] = callback(tmp14(11553).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(15479).BoostTier2Icon });
   if (tmp6Result.showNewBadgeOnRow) {
-    let tmp16Result = tmp16(tmp14(11458).NewBadge, {});
+    let tmp16Result = callback(tmp14(11458).NewBadge, {});
   } else {
     let indicator1;
     if (tmp5 != null) {
@@ -127,13 +124,12 @@ export default function GuildPowerupsChannelRow(guildId) {
     }
     const obj4 = { indicator: null };
     obj4[0] = indicator1;
-    tmp16Result = tmp16(GuildPowerupsChannelRowIndicator, obj4);
-    const tmp22 = GuildPowerupsChannelRowIndicator;
+    tmp16Result = callback(GuildPowerupsChannelRowIndicator, obj4);
   }
   const obj5 = { zIndex: 1, children: null };
   obj1[9] = tmp16Result;
-  items1[1] = closure_5(tmp3Result, obj1);
+  items1[1] = callback(tmp3Result, obj1);
   obj[2] = items1;
-  obj5[1] = tmp17(tmp18, obj);
-  return closure_5(tmp14(7126).LayerScope, obj5);
+  obj5[1] = callback2(View, obj);
+  return callback(tmp14(7126).LayerScope, obj5);
 };

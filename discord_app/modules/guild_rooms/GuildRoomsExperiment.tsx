@@ -1,12 +1,12 @@
 // === Module 9882: experiment ===
 
 // Module 9882 (experiment)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import createExperiment from "createExperiment" /* 4286 */;
 
 const items = [{ id: 1, label: "Enable Guild Rooms in this guild", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 2, label: "Enable Guild Rooms without Interactions", config: { enabled: true, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 3, label: "Enable Guild Rooms with Room Variants", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }, { id: 4, label: "Enable Guild Rooms without Postures", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: false } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-06_guild_rooms", label: "Guild Rooms", defaultConfig: { enabled: false, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/guild_rooms/GuildRoomsExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_rooms/GuildRoomsExperiment.tsx");
 
 export default experiment;
 export const GUILD_ROOMS_EXPERIMENT_ID = "2026-06_guild_rooms";

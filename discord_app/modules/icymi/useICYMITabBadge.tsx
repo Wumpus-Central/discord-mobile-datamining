@@ -2,10 +2,10 @@
 
 // Module 15647 (useICYMITabBadge)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "filterStaffGuild" /* 9044 */;
+import filterStaffGuild from "filterStaffGuild" /* 9044 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
 
 export default function useICYMITabBadge() {
   const obj = { value: 0, showDot: initialize.useStateFromStores(items, () => closure_2.hasNewContent(), []) };

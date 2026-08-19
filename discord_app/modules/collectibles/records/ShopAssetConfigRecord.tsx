@@ -1,7 +1,7 @@
 // === Module 5314: fromServer ===
 
 // Module 5314 (fromServer)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let AssetDisplayConfigRecord;
 class AssetDisplayConfigRecord {
@@ -49,6 +49,6 @@ prototype["toMobileStyles"] = function toMobileStyles() {
   }
   return tmp;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/ShopAssetConfigRecord.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/records/ShopAssetConfigRecord.tsx");
 
 export { AssetDisplayConfigRecord };

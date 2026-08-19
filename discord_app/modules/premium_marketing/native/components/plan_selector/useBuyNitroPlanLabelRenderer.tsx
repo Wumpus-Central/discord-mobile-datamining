@@ -2,24 +2,22 @@
 
 // Module 12840 (useBuyNitroPlanLabelRenderer)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ DISCOUNTS: closure_6, SubscriptionPlans: error } = GuildFeatures);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { labelRow: null, discountBadge: null, discountBadgeText: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+const createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { textTransform: "uppercase" };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanLabelRenderer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanLabelRenderer.tsx");
 
 export const useBuyNitroPlanLabelRenderer = function useBuyNitroPlanLabelRenderer() {
   const tmp = callback();
@@ -57,22 +55,21 @@ export const useBuyNitroPlanLabelRenderer = function useBuyNitroPlanLabelRendere
       let tmp21Result = null != stringResult;
       if (tmp21Result) {
         obj1 = { style: null, children: null };
-        obj1[0] = tmp20.discountBadge;
+        obj1[0] = lib.discountBadge;
         const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
-        obj2[2] = tmp20.discountBadgeText;
+        obj2[2] = lib.discountBadgeText;
         obj2[3] = stringResult;
-        obj1[1] = tmp21(lib(token1[10]).Text, obj2);
-        tmp21Result = tmp21(tmp19, obj1);
+        obj1[1] = closure_1_8(lib(token1[10]).Text, obj2);
+        tmp21Result = closure_1_8(View, obj1);
       }
       items[1] = tmp21Result;
       obj[1] = items;
-      return closure_1_9(closure_1_4, obj);
+      return closure_1_9(View, obj);
     }
     if (tmp2) {
       if (null != discounted.percentOff) {
         const intl2 = lib(token1[8]).intl;
-        let obj3 = { discount: null };
-        obj3 = lib(token1[9]);
+        const obj3 = lib(token1[9]);
         obj3[0] = obj3.formatPercent(closure_1_5.locale, discounted.percentOff / 100);
         stringResult = intl2.format(lib(token1[8]).t.IAybsG, obj3);
       }

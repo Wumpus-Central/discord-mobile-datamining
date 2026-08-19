@@ -2,21 +2,22 @@
 
 // Module 11309 (AppLauncherBackButton)
 import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
 import IconButton from "IconButton" /* 8035 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherBackButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherBackButton.tsx");
 
 export default function AppLauncherBackButton(onPress) {
   let obj = createStandardNavigationFactories;
   const navigation = obj.useNavigation();
   const canGoBackResult = navigation.canGoBack();
   obj = { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6317 : 6369), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
-  const intl = tmp(1236).intl;
-  const t = tmp(1236).t;
+  const intl = getSystemLocale.intl;
+  const t = getSystemLocale.t;
   obj[4] = intl.string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq);
   return jsx(IconButton.IconButton, { size: "sm", variant: "secondary-overlay", icon: importDefault(canGoBackResult ? 6317 : 6369), onPress: onPress.onPress, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 });
 };

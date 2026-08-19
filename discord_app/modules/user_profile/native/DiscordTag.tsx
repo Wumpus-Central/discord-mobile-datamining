@@ -7,16 +7,15 @@ import Text from "Text" /* 4734 */;
 import getBotLabelDefault from "getBotLabel" /* 9462 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { flexGrow: 1, alignItems: "center", flexDirection: "row" }, botTag: null };
-createCacheKey = { marginLeft: ThemesDefault.space.PX_4 };
+const createCacheKey = { marginLeft: ThemesDefault.space.PX_4 };
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/DiscordTag.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/DiscordTag.tsx");
 
 export default function DiscordTag(arg0) {
   ({ user, nick, hideBotTag } = arg0);
@@ -44,12 +43,11 @@ export default function DiscordTag(arg0) {
         obj1[2] = discriminatorStyle;
         const items1 = ["#", user.discriminator];
         obj1[3] = items1;
-        tmp2Result = tmp2(tmp4(4734).Text, obj1);
+        tmp2Result = callback(Text.Text, obj1);
       }
       items[1] = tmp2Result;
       obj[4] = items;
-      tmp2Result = tmp2(Text.Text, obj);
-      tmp4 = require;
+      tmp2Result = callback(Text.Text, obj);
     }
   }
   const items2 = [tmp2Result, ];
@@ -65,10 +63,9 @@ export default function DiscordTag(arg0) {
       obj2[0] = tmp.botTag;
       obj2[1] = user.isVerifiedBot();
       tmp13 = callback(getBotLabelDefault, obj2);
-      const tmp17 = getBotLabelDefault;
     }
   }
   items2[1] = tmp13;
   obj[1] = items2;
-  return closure_5(View, obj);
+  return callback(View, obj);
 };

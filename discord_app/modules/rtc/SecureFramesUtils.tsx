@@ -2,29 +2,29 @@
 
 // Module 9708 (getCurrentUserSigningKey)
 import byteLengthDefault from "byteLength" /* 206 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1993 */;
 import tDefault from "t" /* 3975 */;
 import nameFromUserDefault from "nameFromUser" /* 4219 */;
 import getNicknameDefault from "getNickname" /* 4796 */;
-import setDefault2 from "set" /* 4827 */;
-import set from "set" /* 9693 */;
+import obj132Default2 from "obj132" /* 4827 */;
+import obj132 from "obj132" /* 9693 */;
 import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9711 */;
 import _modDef9712 from "module_9712" /* 9712 */;
 import trackRTCPanelViewed from "trackRTCPanelViewed" /* 9717 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "initialize" /* 4558 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
-import closure_10 from "items" /* 9709 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import initialize from "initialize" /* 4558 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import items from "items" /* 9709 */;
 import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function getCurrentUserSigningKey() {
   const self = this;
   const apply = _getCurrentUserSigningKey.apply;
@@ -328,15 +328,12 @@ function _ensureCurrentUserPublicKey() {
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
-            } else {
-              if (!closure_1_24(closure_0)) {
-                c2 = 1;
-                c1 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_22(tmp5);
-                return obj1;
-              }
-              tmp5 = closure_0;
+            } else if (!closure_1_24(closure_0)) {
+              c2 = 1;
+              c1 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_22(closure_0);
+              return obj1;
             }
           } else if (arg0 === 1) {
             c1 = 3;
@@ -408,13 +405,13 @@ function _isCurrentUserPublicKeyMatch() {
                 closure_3 = 2;
                 c4 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_17(tmp29);
+                obj1[0] = closure_1_17(callback);
                 return obj1;
               } else {
                 closure_3 = 1;
                 c4 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_22(tmp29);
+                obj2[0] = closure_1_22(callback);
                 return obj2;
               }
             }
@@ -498,31 +495,21 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
       while (iter !== undefined) {
         let tmp7 = nextResult;
         if (obj2.isUserConnected(nextResult, userId)) {
-          let tmp8 = secureFramesRosterMapEntry;
-          let tmp9 = nextResult;
           let secureFramesRosterMapEntry1 = secureFramesRosterMapEntry.getSecureFramesRosterMapEntry(tmp7, userId);
           if (null == secureFramesRosterMapEntry1) {
-            let tmp22 = iter;
             iter.return();
             let flag3 = true;
             return true;
           } else {
             let _Uint8Array = Uint8Array;
-            let tmp12 = secureFramesRosterMapEntry1;
-            let tmp13 = new.target;
-            let tmp14 = new.target;
             let uint8Array1 = new Uint8Array(tmp11);
             let num = 0;
             if (0 < uint8Array.length) {
-              let tmp17 = num;
-              let tmp18 = uint8Array1;
               while (uint8Array[num] === tmp16[num]) {
-                let tmp19 = num;
                 let sum = num + 1;
                 num = sum;
                 continue;
               }
-              let tmp21 = iter;
               iter.return();
               let flag2 = true;
               return true;
@@ -540,7 +527,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
 }
 ({ AnalyticsSecureFramesUserVerification: unpackModuleId, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = ME);
-let result = require("set").fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
 
 export const getSecureFramesHelpdeskArticle = function getSecureFramesHelpdeskArticle() {
   return combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
@@ -565,28 +552,24 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const obj2 = set;
-    const serializeKeyResult = set.serializeKey(uint8Array);
+    const serializeKeyResult = obj132.serializeKey(uint8Array);
     const result = savePersistentCodesEnabledDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
-    const obj3 = savePersistentCodesEnabledDefault;
   } else {
     const result1 = savePersistentCodesEnabledDefault.deleteSecureFramesTransientKey(userId);
-    const obj = savePersistentCodesEnabledDefault;
   }
 };
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
   importDefault = verifiedKey;
-  let obj = _modDef9712;
-  obj = { title: null, subtitle: null, onConfirm: null };
+  let obj = { title: null, subtitle: null, onConfirm: null };
   const intl = _require(1236).intl;
   obj[0] = intl.string(_require(1236).t.hdL152);
   const intl2 = _require(1236).intl;
   obj[1] = intl2.string(_require(1236).t["8VGYKg"]);
   obj[2] = function onConfirm() {
-    const result = verifiedKey(closure_1_2[11]).deleteSecureFramesVerifiedKey(userId, verifiedKey);
-    const obj = verifiedKey(closure_1_2[11]);
-    const result1 = userId(closure_1_2[12]).trackE2EESettingsDeviceDelete();
+    const result = verifiedKey(dependencyMap[11]).deleteSecureFramesVerifiedKey(userId, verifiedKey);
+    const obj = verifiedKey(dependencyMap[11]);
+    const result1 = userId(dependencyMap[12]).trackE2EESettingsDeviceDelete();
   };
   let result = obj.openSecureFramesUpdateConfirmation(obj);
 };
@@ -601,53 +584,52 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
   const intl2 = _require(1236).intl;
   obj[1] = intl2.string(_require(1236).t.F1BQK3);
   obj[2] = function onConfirm() {
-    const result = closure_1_1(closure_1_2[11]).deleteSecureFramesUserVerifiedKeys(userId);
-    const obj = closure_1_1(closure_1_2[11]);
-    const result1 = userId(closure_1_2[12]).trackE2EESettingsUserDelete();
+    const result = savePersistentCodesEnabledDefault.deleteSecureFramesUserVerifiedKeys(userId);
+    const result1 = userId(dependencyMap[12]).trackE2EESettingsUserDelete();
   };
   let result = _modDef9712.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
   let obj = tDefault();
   const diffResult = obj.diff(tDefault(timestamp), "s");
-  if (diffResult > 12 * setDefault.Seconds.DAYS_30) {
+  if (diffResult > 12 * obj132Default.Seconds.DAYS_30) {
     const _Math6 = Math;
-    const rounded = Math.round(diffResult / (12 * tmp(687).Seconds.DAYS_30));
+    const rounded = Math.round(diffResult / (12 * obj132Default.Seconds.DAYS_30));
     const intl7 = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = rounded;
     return intl7.formatToPlainString(getSystemLocale.t.F1wqkD, obj);
-  } else if (diffResult > tmp(687).Seconds.DAYS_30) {
+  } else if (diffResult > obj132Default.Seconds.DAYS_30) {
     const _Math5 = Math;
-    const rounded1 = Math.round(diffResult / tmp(687).Seconds.DAYS_30);
+    const rounded1 = Math.round(diffResult / obj132Default.Seconds.DAYS_30);
     const intl6 = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = rounded1;
     return intl6.formatToPlainString(getSystemLocale.t["iT+b+2"], obj);
-  } else if (diffResult > 7 * tmp(687).Seconds.DAY) {
+  } else if (diffResult > 7 * obj132Default.Seconds.DAY) {
     const _Math4 = Math;
-    const rounded2 = Math.round(diffResult / (7 * tmp(687).Seconds.DAY));
+    const rounded2 = Math.round(diffResult / (7 * obj132Default.Seconds.DAY));
     const intl5 = getSystemLocale.intl;
     obj1 = { count: null };
     obj1[0] = rounded2;
     return intl5.formatToPlainString(getSystemLocale.t.dLurKZ, obj1);
-  } else if (diffResult > tmp(687).Seconds.DAY) {
+  } else if (diffResult > obj132Default.Seconds.DAY) {
     const _Math3 = Math;
-    const rounded3 = Math.round(diffResult / tmp(687).Seconds.DAY);
+    const rounded3 = Math.round(diffResult / obj132Default.Seconds.DAY);
     const intl4 = getSystemLocale.intl;
     const obj2 = { count: null };
     obj2[0] = rounded3;
     return intl4.formatToPlainString(getSystemLocale.t.LE8a2H, obj2);
-  } else if (diffResult > tmp(687).Seconds.HOUR) {
+  } else if (diffResult > obj132Default.Seconds.HOUR) {
     const _Math2 = Math;
-    const rounded4 = Math.round(diffResult / tmp(687).Seconds.HOUR);
+    const rounded4 = Math.round(diffResult / obj132Default.Seconds.HOUR);
     const intl3 = getSystemLocale.intl;
     const obj3 = { count: null };
     obj3[0] = rounded4;
     return intl3.formatToPlainString(getSystemLocale.t.KULxVS, obj3);
-  } else if (diffResult > tmp(687).Seconds.MINUTE) {
+  } else if (diffResult > obj132Default.Seconds.MINUTE) {
     const _Math = Math;
-    const rounded5 = Math.round(diffResult / tmp(687).Seconds.MINUTE);
+    const rounded5 = Math.round(diffResult / obj132Default.Seconds.MINUTE);
     const intl2 = getSystemLocale.intl;
     const obj4 = { count: null };
     obj4[0] = rounded5;
@@ -660,8 +642,8 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
   }
   const tmp3 = tDefault(timestamp);
 };
-export const getUserVerificationDeeplink = function getUserVerificationDeeplink(arg0, arg1) {
-  return "" + location.protocol + "//" + location.host + closure_14.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) + "?userId=" + arg0 + "&fingerprint=" + encodeURIComponent(arg1);
+export const getUserVerificationDeeplink = function getUserVerificationDeeplink(userId, arg1) {
+  return "" + location.protocol + "//" + location.host + closure_14.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) + "?userId=" + userId + "&fingerprint=" + encodeURIComponent(arg1);
 };
 export const getUserVerifyStateText = function getUserVerifyStateText(memo, name) {
   if (constants.OTHER_USER_DISCONNECTED === memo) {
@@ -672,13 +654,13 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     obj[0] = name;
     items[1] = intl14.format(getSystemLocale.t["+rIdOd"], obj);
     return items;
-  } else if (tmp.CURRENT_USER_DISCONNECTED === memo) {
+  } else if (constants.CURRENT_USER_DISCONNECTED === memo) {
     const intl11 = getSystemLocale.intl;
     const items1 = [intl11.string(getSystemLocale.t["5ICxE6"]), ];
     const intl12 = getSystemLocale.intl;
     items1[1] = intl12.string(getSystemLocale.t["v1eXp/"]);
     return items1;
-  } else if (tmp.UNABLE_TO_VERIFY === memo) {
+  } else if (constants.UNABLE_TO_VERIFY === memo) {
     const intl9 = getSystemLocale.intl;
     const items2 = [intl9.string(getSystemLocale.t["+no/a7"]), ];
     const intl10 = getSystemLocale.intl;
@@ -686,7 +668,7 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     obj[0] = name;
     items2[1] = intl10.format(getSystemLocale.t.Mft7iJ, obj);
     return items2;
-  } else if (tmp.FINGERPRINT_MISMATCH === memo) {
+  } else if (constants.FINGERPRINT_MISMATCH === memo) {
     const intl7 = getSystemLocale.intl;
     const items3 = [intl7.string(getSystemLocale.t.HTJ76H), ];
     const intl8 = getSystemLocale.intl;
@@ -694,7 +676,7 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     obj1[0] = name;
     items3[1] = intl8.format(getSystemLocale.t.tc6aAc, obj1);
     return items3;
-  } else if (tmp.OTHER_USER_ALREADY_VERIFIED === memo) {
+  } else if (constants.OTHER_USER_ALREADY_VERIFIED === memo) {
     const intl5 = getSystemLocale.intl;
     const items4 = [intl5.string(getSystemLocale.t["9lw+J+"]), ];
     const intl6 = getSystemLocale.intl;
@@ -702,7 +684,7 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     obj2[0] = name;
     items4[1] = intl6.format(getSystemLocale.t.TvBS1w, obj2);
     return items4;
-  } else if (tmp.MATCH === memo) {
+  } else if (constants.MATCH === memo) {
     const intl3 = getSystemLocale.intl;
     const items5 = [intl3.string(getSystemLocale.t["xyE+Dn"]), ];
     const intl4 = getSystemLocale.intl;
@@ -710,7 +692,7 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     obj3[0] = name;
     items5[1] = intl4.format(getSystemLocale.t.znsPl5, obj3);
     return items5;
-  } else if (tmp.OTHER_USER_INCONSISTENT_KEYS === memo) {
+  } else if (constants.OTHER_USER_INCONSISTENT_KEYS === memo) {
     const intl = getSystemLocale.intl;
     const items6 = [intl.string(getSystemLocale.t.im1uUi), ];
     const intl2 = getSystemLocale.intl;
@@ -728,7 +710,6 @@ export const getUserVerificationFooterText = function getUserVerificationFooterT
       let obj = { helpArticle: null };
       obj[0] = combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
       let formatResult = intl2.format(getSystemLocale.t["FJN+kh"], obj);
-      const obj8 = combinedDefault;
     }
     return formatResult;
   }
@@ -740,12 +721,10 @@ export const getUserVerificationFooterText = function getUserVerificationFooterT
     obj[0] = otherUserNickname;
     obj[1] = combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
     formatResult = format(t["p/9PGp"], obj);
-    const obj6 = combinedDefault;
   } else if (isOtherUserKeyPersistent) {
     obj1 = { helpArticle: null };
     obj1[0] = combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
     formatResult = format(t.qT5z87, obj1);
-    const obj4 = combinedDefault;
   } else {
     obj = { helpArticle: null };
     obj1 = combinedDefault;
@@ -778,15 +757,14 @@ export const isCurrentUserPublicKeyMatch = function isCurrentUserPublicKeyMatch(
 export { getIsSecureFramesKeyInconsistent };
 export const showSecureFramesKeyInconsistentAlert = function showSecureFramesKeyInconsistentAlert(arg0) {
   ({ userId, channelId, nickname } = arg0);
-  let obj = trackRTCPanelViewed;
-  obj = { userId, channelId, keyVersion: closure_12, reason: constants.OTHER_USER_INCONSISTENT_KEYS };
+  let obj = { userId, channelId, keyVersion: closure_12, reason: constants.OTHER_USER_INCONSISTENT_KEYS };
   const result = obj.trackE2EEUserVerificationFailed(obj);
   obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.mznLyR);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.format(getSystemLocale.t.WY6IKb, { username: nickname });
-  setDefault2.show(obj);
+  obj132Default2.show(obj);
 };
 export const validateSecureFramesKeyConsistent = function validateSecureFramesKeyConsistent(guildId) {
   ({ userId, channelId } = guildId);
@@ -809,7 +787,7 @@ export const validateSecureFramesKeyConsistent = function validateSecureFramesKe
     obj1 = { username: null };
     obj1[0] = name;
     obj[1] = intl2.format(getSystemLocale.t.WY6IKb, obj1);
-    setDefault2.show(obj);
+    obj132Default2.show(obj);
     return false;
   } else {
     return true;

@@ -5,17 +5,14 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7589 */;
 
-require = arg1;
+require = fn;
 let closure_2 = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ICYMIFiltersStore extends DeviceSettingsStore {
 }
 const prototype = ICYMIFiltersStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
-  if (arg0 == null) {
-    obj = {};
-  }
+
 };
 prototype["filterStaffContent"] = function filterStaffContent() {
   return true === closure_2.filterStaffContent;
@@ -40,6 +37,6 @@ const iCYMIFiltersStore = new ICYMIFiltersStore(dispatcherDefault, {
     filters = filters.filters;
   }
 });
-const result = require("set").fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
 
 export default iCYMIFiltersStore;

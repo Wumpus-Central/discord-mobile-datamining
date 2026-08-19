@@ -1,10 +1,10 @@
 // === Module 9523: useResolveGame ===
 
 // Module 9523 (useResolveGame)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
 
 export default function useResolveGame(arg0) {
   ({ applicationId, gameId } = arg0);
@@ -21,10 +21,9 @@ export default function useResolveGame(arg0) {
     if (null == gameId) {
       let canonicalGameId = null;
       if (null != getOrFetchApplication) {
-        canonicalGameId = obj.getCanonicalGameId();
+        canonicalGameId = getOrFetchApplication.getCanonicalGameId();
       }
       tmp = canonicalGameId;
-      obj = getOrFetchApplication;
     }
     return tmp;
   }, items);

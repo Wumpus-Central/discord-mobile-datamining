@@ -7,9 +7,9 @@ import useChatViewPointerEventsAndroidDefault from "useChatViewPointerEventsAndr
 import StickyWrapper from "StickyWrapper" /* 10566 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
+const result = require("obj132").fileFinishedImporting("modules/chat/native/ChatViewWrapperBase.tsx");
 
 export default function ChatViewWrapperBase(arg0) {
   ({ channelId, children, stickyHeader, style } = arg0);

@@ -3,12 +3,12 @@
 // Module 14727 (radio)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
-import createToggle from "createToggle" /* 10669 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.R5nQkS);
@@ -41,6 +41,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AnimateStickersSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AnimateStickersSetting.tsx");
 
 export default createToggle;

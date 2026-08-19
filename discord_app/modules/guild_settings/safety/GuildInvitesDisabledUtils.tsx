@@ -1,13 +1,13 @@
 // === Module 11545: useInvitesDisabledPermission ===
 
 // Module 11545 (useInvitesDisabledPermission)
-import closure_2 from "computeAlertSettings" /* 10014 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import computeAlertSettings from "computeAlertSettings" /* 10014 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
 
 export const useInvitesDisabledPermission = function useInvitesDisabledPermission(guild) {
   const _require = guild;

@@ -2,12 +2,12 @@
 
 // Module 11066 (useSafetyHubClassifications)
 import initialize from "initialize" /* 589 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import noop from "noop" /* 19 */;
+import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
 import { ViolationType } from "SafetyHubView" /* 5438 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
 
 export const useSafetyHubClassifications = function useSafetyHubClassifications() {
   const items = [closure_5];
@@ -52,8 +52,8 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
         tmp = null == stateFromStores1;
       }
       if (tmp) {
-        const safetyHubDataForClassification = stateFromStores1(closure_1_3[7]).getSafetyHubDataForClassification(closure_0);
-        const obj = stateFromStores1(closure_1_3[7]);
+        const safetyHubDataForClassification = stateFromStores1(dependencyMap[7]).getSafetyHubDataForClassification(closure_0);
+        const obj = stateFromStores1(dependencyMap[7]);
       }
     }, items4);
     obj = { classification: null, classificationRequestState: null, isDsaEligible: null, isAppealEligible: null, violationType: null };
@@ -70,6 +70,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     obj[4] = ViolationType.USER;
     return obj;
   }
+  obj5 = _require(5437);
 };
 export const useActiveSafetyHubClassifications = function useActiveSafetyHubClassifications() {
   const items = [closure_5];
@@ -80,8 +81,8 @@ export const useActiveSafetyHubClassifications = function useActiveSafetyHubClas
     return extractTimestampResult - callback(11).extractTimestamp(id.id);
   });
   date = new Date();
-  return sorted.filter((max_expiration_time) => {
-    date = new Date(max_expiration_time.max_expiration_time);
+  return sorted.filter((item, index) => {
+    date = new Date(item.max_expiration_time);
     return date > date;
   });
 };
@@ -94,8 +95,8 @@ export const useExpiredSafetyHubClassifications = function useExpiredSafetyHubCl
     return extractTimestampResult - callback(11).extractTimestamp(id.id);
   });
   date = new Date();
-  return sorted.filter((max_expiration_time) => {
-    date = new Date(max_expiration_time.max_expiration_time);
+  return sorted.filter((item, index) => {
+    date = new Date(item.max_expiration_time);
     return date <= date;
   });
 };

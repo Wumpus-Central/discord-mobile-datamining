@@ -1,12 +1,12 @@
 // === Module 13334: ActivateDeviceModal ===
 
 // Module 13334 (ActivateDeviceModal)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_5 = { ACTIVATE_DEVICE: "activate-device" };
-const result = require("set").fileFinishedImporting("modules/activate_device/native/ActivateDeviceModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activate_device/native/ActivateDeviceModal.tsx");
 
 export default function ActivateDeviceModal(userCode) {
   userCode = userCode.userCode;

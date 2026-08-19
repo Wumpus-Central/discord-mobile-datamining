@@ -1,6 +1,7 @@
 // === Module 11021: items ===
 
 // Module 11021 (items)
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
@@ -10,16 +11,16 @@ import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAwar
 import TextArea from "TextArea" /* 8092 */;
 import context from "context" /* 8101 */;
 import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 9444 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getFriendlyDurationString from "getFriendlyDurationString" /* 1992 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 let c5 = importAllResult;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ DisableCommunicationDuration, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8, SET_COMMUNICATION_DISABLED_MODAL_NAME: c9 } = getFriendlyDurationString);
@@ -70,12 +71,10 @@ let items = [
   }
 ];
 obj = { container: { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW }, reasonTextArea: null, buttonContainer: null };
-createCacheKey = { marginVertical: ThemesDefault.space.PX_16 };
+const createCacheKey = { marginVertical: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[2] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_15 = createCacheKey.createStyles(obj);
-let obj3 = { marginBottom: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0) {
   ({ user: require, guildId: importDefault, onClose: dependencyMap } = arg0);
   c3 = undefined;
@@ -168,12 +167,10 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
   items = [{ ref: ref1, offset: { type: "toBottom" } }];
   _calculateScrollOffsetDefault({ insets, inputs: items, scrollViewRef: ref });
   useMountLayoutEffectDefault(() => {
-    let obj = closure_1_1(closure_1_2[13]);
-    obj = { type: closure_1_9, guild_id: closure_1, other_user_id: lib.id };
-    obj.track(closure_1_10.OPEN_MODAL, obj);
+    const obj = { type: closure_1_9, guild_id: closure_1, other_user_id: lib.id };
+    obj.track(AnalyticEvents.OPEN_MODAL, obj);
   });
-  let obj = { style: tmp.container, ref, contentContainerStyle: null, children: null };
-  obj = { paddingHorizontal: ThemesDefault.space.PX_12, paddingBottom: insets.bottom };
+  let obj = { paddingHorizontal: ThemesDefault.space.PX_12, paddingBottom: insets.bottom };
   obj[2] = obj;
   obj = { children: null };
   obj1 = { style: null, variant: "heading-md/semibold", children: null };
@@ -188,7 +185,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
   obj4[2] = function onChange(arg0) {
     _undefined2(arg0);
   };
-  obj4[4] = items.map((getLabel, value) => callback(lib(table[20]).TableRadioRow, { value, label: getLabel.getLabel() }, value));
+  obj4[4] = items.map((item, index) => callback(lib(table[20]).TableRadioRow, { value: index, label: item.getLabel() }, index));
   items1[1] = callback2(context.TableRadioGroup, obj4);
   const obj5 = { ref: ref1, containerStyle: tmp.reasonTextArea, placeholder: null, label: null, maxLength: 512, onChange: null };
   const intl3 = getSystemLocale.intl;
@@ -219,6 +216,6 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
   obj[3] = callback3(closure_12, obj);
   return callback2(closure_7, obj);
 });
-const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunication.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunication.tsx");
 
 export default memoResult;

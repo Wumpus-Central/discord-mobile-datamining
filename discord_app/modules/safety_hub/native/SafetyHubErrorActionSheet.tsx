@@ -11,19 +11,17 @@ import CircleXIcon from "CircleXIcon" /* 7341 */;
 import useIsSafetyHubLoadingDefault from "useIsSafetyHubLoading" /* 14107 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { errorContainer: null, redesignErrorIconContainer: null, redesignErrorIcon: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16, minHeight: 120 };
+const createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16, minHeight: 120 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", justifyContent: "center", alignItems: "center", height: 40, width: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[2] = { height: 50, width: 50 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", justifyContent: "center", alignItems: "center", height: 40, width: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/SafetyHubErrorActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/native/SafetyHubErrorActionSheet.tsx");
 
 export default function SafetyHubErrorActionSheet(arg0) {
   if (arg0 == null) {
@@ -31,8 +29,7 @@ export default function SafetyHubErrorActionSheet(arg0) {
   } else {
     const tmp3 = callback3();
     const tmp6 = useIsSafetyHubLoadingDefault();
-    let obj = { children: null };
-    obj = { style: null, children: null };
+    let obj = { style: null, children: null };
     const items = [tmp3.errorContainer];
     obj[0] = items;
     obj = { style: null, children: null };

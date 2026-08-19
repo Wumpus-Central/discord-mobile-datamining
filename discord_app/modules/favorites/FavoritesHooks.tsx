@@ -7,13 +7,13 @@ import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
 import isPremiumAtLeastDefault from "isPremiumAtLeast" /* 1945 */;
 import FREE_FAVORITE_LIMIT from "FREE_FAVORITE_LIMIT" /* 9980 */;
 import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 9981 */;
-import closure_3 from "handleConnectionOpen" /* 4197 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "initializeFromUserSettings" /* 1394 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import initializeFromUserSettings from "initializeFromUserSettings" /* 1394 */;
 import { MAX_FAVORITE_CHANNELS } from "date" /* 1429 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
-require = arg1;
+require = fn;
 function useFavoritesAccess(FavoritesGuildActionSheet) {
   let str = FavoritesGuildActionSheet;
   if (FavoritesGuildActionSheet === undefined) {
@@ -24,8 +24,6 @@ function useFavoritesAccess(FavoritesGuildActionSheet) {
   ({ enabled, isFreemium } = favoritesGuildConfig);
   const items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = initialize;
-  const tmp = require;
   const isPremiumExactlyResult = isPremiumAtLeastDefault.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2);
   let tmp6 = enabled;
   if (enabled) {
@@ -50,15 +48,9 @@ function useFavoritesAccess(FavoritesGuildActionSheet) {
     obj[4] = enabled;
     return obj;
   } else if (isPremiumExactlyResult) {
-    let num = MAX_FAVORITE_CHANNELS;
-  } else {
-    num = 0;
-    if (isFreemium) {
-      num = FREE_FAVORITE_LIMIT.FREE_FAVORITE_LIMIT;
-    }
   }
 }
-let result = require("set").fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
+let result = require("obj132").fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
 
 export { useFavoritesAccess };
 export const getFavoritesAccess = function getFavoritesAccess() {
@@ -89,12 +81,6 @@ export const getFavoritesAccess = function getFavoritesAccess() {
     obj[4] = enabled;
     return obj;
   } else if (isPremiumExactlyResult) {
-    let num = MAX_FAVORITE_CHANNELS;
-  } else {
-    num = 0;
-    if (isFreemium) {
-      num = FREE_FAVORITE_LIMIT.FREE_FAVORITE_LIMIT;
-    }
   }
 };
 export const useFavoritesLimitUpsell = function useFavoritesLimitUpsell() {
@@ -120,7 +106,6 @@ export const useFavorite = function useFavorite(arg0) {
 export const useFavoritedChannelIds = function useFavoritedChannelIds() {
   const items = [closure_5];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
-  const obj = initialize;
   return DISCORD_EPOCHDefault.keys(stateFromStoresObject);
 };
 export const getFavoritesCategories = function getFavoritesCategories(favoriteChannels) {
@@ -129,10 +114,7 @@ export const getFavoritesCategories = function getFavoritesCategories(favoriteCh
   }
   const items = [{ id: null, name: "" }];
   for (const key10010 in favoriteChannels) {
-    let tmp5 = key10010;
     let tmp6 = favoriteChannels[key10010];
-    let tmp7 = favoriteChannels;
-    let tmp8 = dependencyMap;
     if (tmp6.type !== favoriteChannels(1306).FavoriteChannelType.CATEGORY) {
       continue;
     } else {
@@ -169,7 +151,6 @@ export const getFavoritesCategories = function getFavoritesCategories(favoriteCh
 export const useIsFavoritesGuildSelected = function useIsFavoritesGuildSelected() {
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId());
-  const obj = initialize;
   return getFavoritesAwareGuildName.isFavoritesGuildId(stateFromStores);
 };
 export const useFavoritesAwareChannel = function useFavoritesAwareChannel(arg0, FavoritesGuildActionSheet) {

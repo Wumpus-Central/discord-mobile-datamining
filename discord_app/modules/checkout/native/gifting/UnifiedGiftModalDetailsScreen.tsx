@@ -2,69 +2,59 @@
 
 // Module 9596
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { container: null, scrollView: null, sectionHeader: null };
-obj = { flex: 1, paddingTop: ThemesDefault.space.PX_12, alignItems: "stretch" };
+let obj = { flex: 1, paddingTop: ThemesDefault.space.PX_12, alignItems: "stretch" };
 obj[0] = obj;
-createCacheKey = { paddingBottom: ThemesDefault.space.PX_24 };
+const createCacheKey = { paddingBottom: ThemesDefault.space.PX_24 };
 obj[1] = createCacheKey;
 obj[2] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, textTransform: "capitalize" };
 let closure_10 = createCacheKey.createStyles(obj);
-let obj2 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, textTransform: "capitalize" };
 const memoResult = importAllResult.memo((skuId) => {
   skuId = skuId.skuId;
   const applicationId = skuId.applicationId;
   const recipientUser = skuId.recipientUser;
   const validateRecipient = skuId.validateRecipient;
-  let navigation;
   c5 = undefined;
-  closure_6 = undefined;
-  let analyticsLocations;
-  let callback;
-  let memo;
   let first;
-  let ref;
-  let first1;
-  let first2;
   ({ setRecipientUser, lockedRecipient, renderProductDetails, renderPurchaseSection } = skuId);
   const tmp = first();
   let obj = skuId(recipientUser[7]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   [tmp6, c5] = validateRecipient(navigation.useState(true), 2);
   const tmp7 = validateRecipient(navigation.useState(false), 2);
   closure_6 = tmp7[1];
   const items = [navigation];
-  callback = navigation.useCallback(() => {
+  navigation.useCallback(() => {
     navigation.navigate(skuId(recipientUser[8]).UnifiedGiftModalScreens.RECIPENT_SELECT);
   }, items);
-  analyticsLocations = applicationId(recipientUser[9])().analyticsLocations;
+  const analyticsLocations = applicationId(recipientUser[9])().analyticsLocations;
   const tmp10 = applicationId(recipientUser[10])(() => skuId(recipientUser[11]).v4());
-  callback = tmp10;
+  const callback = tmp10;
   const items1 = [analyticsLocations, skuId, applicationId, tmp10];
-  memo = navigation.useMemo(() => ({ is_gift: true, location_stack: analyticsLocations, payment_type: "sku", sku_id: skuId, application_id: applicationId, load_id: closure_8 }), items1);
+  const memo = navigation.useMemo(() => ({ is_gift: true, location_stack: analyticsLocations, payment_type: "sku", sku_id: skuId, application_id: applicationId, load_id: closure_8 }), items1);
   const items2 = [recipientUser, skuId, validateRecipient];
   const effect = navigation.useEffect(() => {
     _undefined(true);
     if (null != recipientUser) {
       callback(true);
       const promise = validateRecipient(tmp2.id);
-      validateRecipient(tmp2.id).then((arg0) => {
-        callback(arg0);
+      validateRecipient(tmp2.id).then((result) => {
+        callback(result);
       }).finally(() => {
         callback2(false);
       });
-      const nextPromise = validateRecipient(tmp2.id).then((arg0) => {
-        callback(arg0);
+      const nextPromise = validateRecipient(tmp2.id).then((result) => {
+        callback(result);
       });
     }
   }, items2);
@@ -80,11 +70,11 @@ const memoResult = importAllResult.memo((skuId) => {
   obj1 = skuId(recipientUser[13]);
   const tmp14 = validateRecipient(navigation.useState(obj1.useGiftStyles()[0]), 2);
   first = tmp14[0];
-  ref = navigation.useRef(null);
+  const ref = navigation.useRef(null);
   const tmp17 = validateRecipient(navigation.useState(0), 2);
-  first1 = tmp17[0];
+  const first1 = tmp17[0];
   const tmp19 = validateRecipient(navigation.useState(undefined), 2);
-  first2 = tmp19[0];
+  const first2 = tmp19[0];
   const items4 = [first1];
   const items5 = [first, recipientUser, first2];
   const callback1 = navigation.useCallback(() => {
@@ -99,7 +89,6 @@ const memoResult = importAllResult.memo((skuId) => {
       return scrollToResult;
     }, 100);
   }, items4);
-  obj = { style: tmp.container, children: null };
   obj = { ref, contentContainerStyle: tmp.scrollView, showsVerticalScrollIndicator: false, children: null };
   const memo1 = navigation.useMemo(() => {
     const obj = { gift_style: first, recipient_id: null, custom_message: null };
@@ -150,6 +139,6 @@ const memoResult = importAllResult.memo((skuId) => {
   }
   tmp26Result = tmp26(tmp9(tmp3[18]), { selectedUser: recipientUser, onPress: callback, setSelectedUser: setRecipientUser });
 });
-const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalDetailsScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalDetailsScreen.tsx");
 
 export default memoResult;

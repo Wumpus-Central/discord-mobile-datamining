@@ -1,9 +1,9 @@
 // === Module 15567: isGuildsBarGuildLabelEqual ===
 
 // Module 15567 (isGuildsBarGuildLabelEqual)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildLabelEqual.tsx");
+const result = obj132.fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildLabelEqual.tsx");
 
 export default function isGuildsBarGuildLabelEqual(count, count2) {
   let tmp = count.count === count2.count;

@@ -5,10 +5,10 @@ import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 let closure_5 = { CANCEL_SUBSCRIPTION: "CANCEL_SUBSCRIPTION" };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/CancelSubscriptionModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/CancelSubscriptionModal.tsx");
 
 export default function CancelSubscriptionModal(onClose) {
   onClose = onClose.onClose;
@@ -19,12 +19,10 @@ export default function CancelSubscriptionModal(onClose) {
     const screens = {};
     let obj = {
       render(arg0) {
-        obj = { style: obj, children: null };
-        obj = { paddingBottom: closure_2, flex: 1 };
-        obj = {};
+        const obj = {};
         const merged = Object.assign(arg0);
         obj.onClose = closure_0;
-        obj[1] = closure_1_4(closure_1_1(closure_1_2[5]), obj);
+        obj[1] = closure_1_4(closure_1_1(bottom[5]), obj);
         return closure_1_4(closure_1_3, obj);
       },
       title: "Subscriptions",

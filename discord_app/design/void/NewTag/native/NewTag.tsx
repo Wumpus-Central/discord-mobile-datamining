@@ -9,17 +9,16 @@ import LinearGradientDefault from "LinearGradient" /* 4756 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { HorizontalGradient } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ View: c3, Platform } = get_ActivityIndicator);
-createCacheKey = { tagContainer: null, tagText: null };
-createCacheKey = { height: "auto", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, justifyContent: "center", alignItems: "center", paddingHorizontal: 4, marginBottom: 2, borderRadius: ThemesDefault.radii.round };
+const createCacheKey = { height: "auto", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, justifyContent: "center", alignItems: "center", paddingHorizontal: 4, marginBottom: 2, borderRadius: ThemesDefault.radii.round };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textTransform: "uppercase" };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/NewTag/native/NewTag.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/NewTag/native/NewTag.tsx");
 
 export default function NewTag(color) {
   ({ containerStyle, textStyle, variant } = color);
@@ -46,8 +45,7 @@ export default function NewTag(color) {
   const merged = Object.assign(color, Object.create(null));
   const tmp6 = callback();
   if (flag) {
-    let obj = { style: null, start: null, end: null, colors: null, children: null };
-    obj = { borderRadius: null, marginLeft: null };
+    let obj = { borderRadius: null, marginLeft: null };
     obj[0] = sm;
     obj[1] = ThemesDefault.space.PX_4;
     obj[0] = obj;
@@ -64,10 +62,9 @@ export default function NewTag(color) {
     obj2.style = items2;
     const intl2 = getSystemLocale.intl;
     obj2.children = intl2.string(getSystemLocale.t.y2b7CA);
-    obj1[1] = tmp7(Text.Text, obj2);
-    obj[4] = tmp7(closure_3, obj1);
-    let tmp7Result = tmp7(LinearGradientDefault, obj);
-    const tmp17 = LinearGradientDefault;
+    obj1[1] = jsx(Text.Text, { variant: null, color: null });
+    obj[4] = <closure_3 style={null}>{null}</closure_3>;
+    let tmp7Result = jsx(LinearGradientDefault, { borderRadius: null, marginLeft: null });
   } else {
     obj = { style: null, children: null };
     const items3 = [tmp6.tagContainer, containerStyle];
@@ -80,8 +77,8 @@ export default function NewTag(color) {
     obj3.style = items4;
     const intl = getSystemLocale.intl;
     obj3.children = intl.string(getSystemLocale.t.y2b7CA);
-    obj[1] = tmp7(Text.Text, obj3);
-    tmp7Result = tmp7(closure_3, obj);
+    obj[1] = jsx(Text.Text, { variant: null, color: null });
+    tmp7Result = <closure_3 style={null}>{null}</closure_3>;
   }
   return tmp7Result;
 };

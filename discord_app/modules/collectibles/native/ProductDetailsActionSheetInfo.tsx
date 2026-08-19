@@ -1,9 +1,10 @@
 // === Module 9578: ProductNameAndDescription ===
 
 // Module 9578 (ProductNameAndDescription)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 import Text from "Text" /* 4734 */;
 import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
@@ -16,8 +17,7 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 function ProductNameAndDescription(product) {
   product = product.product;
   const tmp = callback3();
-  let obj = getBundleDescription;
-  obj = { style: tmp.description, children: null };
+  let obj = { style: tmp.description, children: null };
   const productDescription = obj.useProductDescription(product);
   obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: product.name };
   const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
@@ -32,24 +32,24 @@ function ProductPurchaseStatus(product) {
   const productPurchaseState = obj1.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl2 = tmp(1236).intl;
-    obj[2] = intl2.string(tmp(1236).t["6cfuDj"]);
-    let children = tmp6(tmp(4734).Text, obj);
+    const intl2 = getSystemLocale.intl;
+    obj[2] = intl2.string(getSystemLocale.t["6cfuDj"]);
+    let children = callback(Text.Text, obj);
   } else if (tmp5) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
-    const intl = tmp(1236).intl;
-    obj[2] = intl.string(tmp(1236).t.BEjTij);
-    children = tmp6(tmp(4734).Text, obj);
+    const intl = getSystemLocale.intl;
+    obj[2] = intl.string(getSystemLocale.t.BEjTij);
+    children = callback(Text.Text, obj);
   } else {
     children = !result;
     if (!result) {
       obj1 = { product: null, onTrackPress: null };
       obj1[0] = product;
       obj1[1] = product.onTrackPress;
-      children = tmp6(PriceTagDefault, obj1);
+      children = callback(PriceTagDefault, obj1);
     }
   }
-  return closure_4(View, { children });
+  return callback(View, { children });
 }
 function BundleProductDetailsActionSheetInfo(arg0) {
   ({ product, onTrackPress } = arg0);
@@ -60,13 +60,12 @@ function BundleProductDetailsActionSheetInfo(arg0) {
 }
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { title: { marginBottom: 2 }, body: null, bundleBody: null, description: null };
-obj = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16, flexDirection: "column", gap: 20 };
+let obj = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16, flexDirection: "column", gap: 20 };
 obj[1] = obj;
 obj[2] = { marginTop: 0 };
 obj[3] = { flexDirection: "column", gap: 6 };
 let closure_6 = createCacheKey.createStyles(obj);
-let result = set.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetInfo.tsx");
+let result = obj132.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetInfo.tsx");
 
 export default function ProductDetailsActionSheetInfo(arg0) {
   ({ product, onTrackPress } = arg0);

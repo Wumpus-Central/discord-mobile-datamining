@@ -14,16 +14,16 @@ import _modDef15921 from "module_15921" /* 15921 */;
 import _modDef15923 from "module_15923" /* 15923 */;
 import _modDef15930 from "module_15930" /* 15930 */;
 import InitialPinsScreenDefault from "InitialPinsScreen" /* 15937 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { SearchTabs } from "MessageEmbedTypes" /* 8507 */;
 import { SearchTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 function SearchTabsPage(selectMediaTab) {
   ({ tab, searchContext } = selectMediaTab);
   ({ isFocused, width } = selectMediaTab);
@@ -37,8 +37,8 @@ function SearchTabsPage(selectMediaTab) {
   let obj = searchContext(589);
   const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    if (searchContext.type === closure_1_8.GUILD_CHANNEL) {
-      const channelId = tmp2.channelId;
+    if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
+      const channelId = searchContext.channelId;
     }
     return closure_1_6.getChannel(channelId);
   });
@@ -65,50 +65,50 @@ function SearchTabsPage(selectMediaTab) {
       obj1[1] = searchContext;
       obj1[2] = width;
       return jsx(ClearAllHistoryDefault, { onJumpToMedia: null, searchContext: null, width: null });
-    } else if (tmp11.PEOPLE === tab) {
+    } else if (SearchTabs.PEOPLE === tab) {
       const obj2 = { searchContext: null };
       obj2[0] = searchContext;
       return jsx(_modDef15906, { searchContext: null });
-    } else if (tmp11.MEMBERS === tab) {
+    } else if (SearchTabs.MEMBERS === tab) {
       const obj3 = { searchContext: null };
       obj3[0] = searchContext;
       return jsx(SearchableMembersScreenDefault, { searchContext: null });
-    } else if (tmp11.GUILD_CHANNELS === tab) {
+    } else if (SearchTabs.GUILD_CHANNELS === tab) {
       const obj4 = { searchContext: null };
       obj4[0] = searchContext;
       return jsx(_modDef15912, { searchContext: null });
-    } else if (tmp11.MEDIA === tab) {
+    } else if (SearchTabs.MEDIA === tab) {
       const obj5 = { tab: null, searchContext: null, isFocused: null, width: null };
       obj5[0] = tab;
       obj5[1] = searchContext;
       obj5[2] = isFocused;
       obj5[3] = width;
       return jsx(_modDef15913, { tab: null, searchContext: null, isFocused: null, width: null });
-    } else if (tmp11.FILES === tab) {
+    } else if (SearchTabs.FILES === tab) {
       const obj6 = { tab: null, searchContext: null, isFocused: null, width: null };
       obj6[0] = tab;
       obj6[1] = searchContext;
       obj6[2] = isFocused;
       obj6[3] = width;
       return jsx(_modDef15921, { tab: null, searchContext: null, isFocused: null, width: null });
-    } else if (tmp11.LINKS === tab) {
+    } else if (SearchTabs.LINKS === tab) {
       const obj7 = { tab: null, searchContext: null, isFocused: null, width: null };
       obj7[0] = tab;
       obj7[1] = searchContext;
       obj7[2] = isFocused;
       obj7[3] = width;
       return jsx(_modDef15923, { tab: null, searchContext: null, isFocused: null, width: null });
-    } else if (tmp11.THREADS === tab) {
+    } else if (SearchTabs.THREADS === tab) {
       const obj8 = { searchContext: null };
       obj8[0] = searchContext;
-      return jsx(tmp4(15924).SearchTabsThreadScreen, { searchContext: null });
-    } else if (tmp11.MESSAGES === tab) {
+      return jsx(searchContext(15924).SearchTabsThreadScreen, { searchContext: null });
+    } else if (SearchTabs.MESSAGES === tab) {
       const obj9 = { tab: null, searchContext: null, isFocused: null };
       obj9[0] = tab;
       obj9[1] = searchContext;
       obj9[2] = isFocused;
       return jsx(_modDef15930, { tab: null, searchContext: null, isFocused: null });
-    } else if (tmp11.PINS === tab) {
+    } else if (SearchTabs.PINS === tab) {
       const obj10 = { tab: null, searchContext: null, isFocused: null };
       obj10[0] = tab;
       obj10[1] = searchContext;
@@ -121,20 +121,19 @@ function SearchTabsPage(selectMediaTab) {
     return null;
   }
   const tmp = callback(importAllResult.useState(isFocused), 2);
-  tmp4 = searchContext;
 }
 let c4 = importAllResult;
 let closure_10 = createCacheKey.createStyles({ container: { flex: 1 } });
 let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/SearchTabsPage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/SearchTabsPage.tsx");
 
 export default function ConnectedSearchTabsPage(tab) {
   tab = tab.tab;
   ({ searchContext, width } = tab);
   context = importAllResult.useContext(context);
   _modDef38(null != context, "[SearchTabsPageContext] Context should not be null.");
-  let obj = { style: callback2().container, children: null };
-  obj = { isFocused: mapDefault(context.selectedTab) === tab, selectMediaTab: context.selectMediaTab, tab, searchContext, width };
+  { style: callback2().container, children: null };
+  const obj = { isFocused: mapDefault(context.selectedTab) === tab, selectMediaTab: context.selectMediaTab, tab, searchContext, width };
   obj[1] = <SearchTabsPage isFocused={mapDefault(context.selectedTab) === tab} selectMediaTab={context.selectMediaTab} tab={tab} searchContext={searchContext} width={width} />;
   return <View isFocused={mapDefault(context.selectedTab) === tab} selectMediaTab={context.selectMediaTab} tab={tab} searchContext={searchContext} width={width} />;
 };

@@ -1,7 +1,7 @@
 // === Module 8234: DATE_CONFIG ===
 
 // Module 8234 (DATE_CONFIG)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import tDefault from "t" /* 3975 */;
 import GuildIncidentActionSources from "GuildIncidentActionSources" /* 8236 */;
@@ -9,7 +9,7 @@ import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8235 
 
 ({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: c4, getTimeframes: c5 } = GUILD_REPORT_RAID_MOBILE_KEY);
 let obj = { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" };
-const result = set.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidUtils.tsx");
 
 export const DATE_CONFIG = obj;
 export const hasDetectedActivity = function hasDetectedActivity(incidentsData) {
@@ -139,7 +139,7 @@ export const initialLockdownDurationHours = function initialLockdownDurationHour
   if (null == prop) {
     prop = closure_4;
   } else {
-    obj = callback();
+    callback();
   }
   return prop;
 };

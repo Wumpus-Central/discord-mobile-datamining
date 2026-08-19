@@ -6,21 +6,21 @@ import encodeProperties from "encodeProperties" /* 503 */;
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 1982 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "trackCommunicationDisabled" /* 1990 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "handleFormInit" /* 8875 */;
+import _modDef7286 from "module_7286" /* 7286 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import initialize from "initialize" /* 1982 */;
+import initialize2 from "initialize" /* 4022 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import handleFormInit from "handleFormInit" /* 8875 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ Endpoints: c10, Layers, GuildSettingsSubsections: unpackModuleId, GuildSettingsSections: closure_12, GuildFeatures: map1, Routes: closure_14 } = ME);
 let closure_15 = new timestampDefault("GuildSettingsActionCreators");
 let obj = {
   init(guildId, section, location, subsection) {
-    obj = dispatcherDefault;
     obj = { type: "GUILD_SETTINGS_INIT", guildId, section, subsection, location };
     obj.dispatch(obj);
   },
@@ -63,11 +63,11 @@ let obj = {
             }
             if (hasItem) {
               if (SAFETY === closure_1_12.GUILD_AUTOMOD) {
-                SAFETY = tmp7.SAFETY;
+                SAFETY = closure_1_12.SAFETY;
                 let SAFETY_AUTOMOD = closure_1_11.SAFETY_AUTOMOD;
               }
               if (SAFETY === closure_1_12.MEMBER_VERIFICATION) {
-                SAFETY = tmp7.SAFETY;
+                SAFETY = closure_1_12.SAFETY;
                 SAFETY_AUTOMOD = closure_1_11.SAFETY_DM_AND_SPAM_PROTECTION;
               }
             }
@@ -96,7 +96,6 @@ let obj = {
     dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
   },
   saveRouteStack(state) {
-    obj = dispatcherDefault;
     obj = { type: "GUILD_SETTINGS_SAVE_ROUTE_STACK", state };
     obj.dispatch(obj);
   },
@@ -115,17 +114,16 @@ let obj = {
       if (hasItem) {
         let SAFETY = arg0;
         if (arg0 === constants2.GUILD_AUTOMOD) {
-          SAFETY = tmp7.SAFETY;
+          SAFETY = constants2.SAFETY;
           SAFETY_DM_AND_SPAM_PROTECTION = constants.SAFETY_AUTOMOD;
         }
         if (SAFETY === constants2.MEMBER_VERIFICATION) {
-          SAFETY = tmp7.SAFETY;
+          SAFETY = constants2.SAFETY;
           SAFETY_DM_AND_SPAM_PROTECTION = constants.SAFETY_DM_AND_SPAM_PROTECTION;
         }
         tmp5 = SAFETY_DM_AND_SPAM_PROTECTION;
         tmp6 = SAFETY;
       }
-      obj = dispatcherDefault;
       obj = { type: "GUILD_SETTINGS_SET_SECTION", section: null, subsection: null };
       obj[1] = tmp6;
       obj[2] = tmp5;
@@ -133,23 +131,20 @@ let obj = {
     }
   },
   setSearchQuery(searchQuery) {
-    obj = dispatcherDefault;
     obj = { type: "GUILD_SETTINGS_SET_SEARCH_QUERY", searchQuery };
     obj.dispatch(obj);
   },
   selectRole(hideActionSheet) {
-    obj = dispatcherDefault;
     obj = { type: "GUILD_SETTINGS_ROLE_SELECT", roleId: hideActionSheet, searchQuery: arg1 };
     return obj.dispatch(obj);
   },
   updateEmbed(arg0, enabled, channel_id) {
     const _require = arg0;
     const HTTP = _require(530).HTTP;
-    obj = { url: closure_10.GUILD_WIDGET(arg0), body: obj, oldFormErrors: true, rejectWithError: true };
+    { url: closure_10.GUILD_WIDGET(arg0), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { enabled, channel_id };
-    return HTTP.patch(obj).then((body) => {
-      obj = closure_1_1(closure_1_2[9]);
-      obj = { type: "GUILD_SETTINGS_SET_WIDGET", guildId: closure_0, enabled: body.body.enabled, channelId: body.body.channel_id };
+    return HTTP.patch(obj).then((result) => {
+      obj = { type: "GUILD_SETTINGS_SET_WIDGET", guildId: closure_0, enabled: result.body.enabled, channelId: result.body.channel_id };
       obj.dispatch(obj);
     });
   },
@@ -157,10 +152,9 @@ let obj = {
     ({ guildId, level } = updateMFALevelResult);
     const HTTP = sendRequest.HTTP;
     obj = { url: closure_10.GUILD_MFA(guildId), body: { level }, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
-    const obj2 = sendRequest;
-    return HTTP.post(obj).then((body) => {
-      obj = callback(table[9]);
-      obj = { type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: body.body.level };
+    return HTTP.post(obj).then((result) => {
+      callback(table[9]);
+      obj = { type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: result.body.level };
       return obj.dispatch(obj);
     });
   },
@@ -168,23 +162,22 @@ let obj = {
     const _require = c2;
     closure_1 = base64;
     const HTTP = _require(530).HTTP;
-    obj = { url: closure_10.GUILD(c2), body: obj, oldFormErrors: true, rejectWithError: null };
+    { url: closure_10.GUILD(c2), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { icon: base64 };
     obj[3] = _require(530).rejectWithMigratedError();
     const obj3 = _require(530);
-    HTTP.patch(obj).then(() => {
-      obj = base64(closure_1_2[9]);
+    HTTP.patch(obj).then((result) => {
+      base64(dependencyMap[9]);
       obj = { type: "GUILD_SETTINGS_UPDATE", icon: base64 };
       obj.dispatch(obj);
-      const result = base64(closure_1_2[11]).checkGuildTemplateDirty(closure_0);
+      result = base64(dependencyMap[11]).checkGuildTemplateDirty(closure_0);
     }, (body) => {
-      obj = base64(table[9]);
+      base64(table[9]);
       obj = { type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: body.body };
       return obj.dispatch(obj);
     });
   },
   cancelChanges(id) {
-    obj = dispatcherDefault;
     obj = { type: "GUILD_SETTINGS_CANCEL_CHANGES", guildId: id };
     obj.dispatch(obj);
   },
@@ -211,7 +204,6 @@ let obj = {
     dispatcherDefault.dispatch(obj);
   },
   updateGuildProfile(guildId, arg1) {
-    obj = dispatcherDefault;
     obj = { type: "GUILD_SETTINGS_PROFILE_UPDATE", guildId };
     const merged = Object.assign(arg1);
     obj.dispatch(obj);
@@ -252,13 +244,13 @@ let obj = {
     obj1 = { [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash };
     obj2[5] = _require(530).rejectWithMigratedError();
     const obj10 = _require(530);
-    return HTTP.patch(obj2).then((body) => {
-      obj = obj(closure_1_2[9]);
-      obj = { type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: body.body };
+    return HTTP.patch(obj2).then((result) => {
+      obj(dependencyMap[9]);
+      obj = { type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: result.body };
       obj.dispatch(obj);
-      const result = obj(closure_1_2[11]).checkGuildTemplateDirty(closure_0);
+      result = obj(dependencyMap[11]).checkGuildTemplateDirty(closure_0);
     }, (errors) => {
-      obj = obj(closure_1_2[9]);
+      obj(dependencyMap[9]);
       obj = { type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: errors.body };
       obj.dispatch(obj);
       obj = { errors: errors.body };
@@ -271,29 +263,24 @@ let obj = {
   updateGuildModeration(id, verificationLevel) {
     const _require = id;
     const HTTP = _require(530).HTTP;
-    obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, rejectWithError: null };
+    { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { verification_level: verificationLevel.verificationLevel, explicit_content_filter: verificationLevel.explicitContentFilter };
     obj[3] = _require(530).rejectWithMigratedError();
     const obj3 = _require(530);
-    return HTTP.patch(obj).then((arg0) => {
-      const result = closure_1_1(closure_1_2[11]).checkGuildTemplateDirty(closure_0);
-      return arg0;
+    return HTTP.patch(obj).then((result) => {
+      result = _modDef7286.checkGuildTemplateDirty(closure_0);
+      return result;
     });
   },
   transferOwnership(id, id2, EMAIL, closure_0) {
-    let tmp = EMAIL;
-    if (EMAIL === undefined) {
-      tmp = null;
-    }
     let tmp2 = closure_0;
     if (closure_0 === undefined) {
       tmp2 = null;
     }
     obj = _modDef5227;
-    obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { owner_id: id2, code: tmp2 };
     obj[3] = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
-    obj1 = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
     obj[4] = sendRequest.rejectWithMigratedError();
     return obj.patch(obj);
   },
@@ -302,8 +289,7 @@ let obj = {
     if (arg1 === undefined) {
       flag = false;
     }
-    obj = _modDef5227;
-    obj = { url: closure_10.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    { url: closure_10.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: obj1 };
     obj[2] = obj;
     obj[3] = sendRequest.rejectWithMigratedError();
@@ -312,8 +298,7 @@ let obj = {
   deleteGuild(arg0) {
     const HTTP = sendRequest.HTTP;
     obj = { url: closure_10.GUILD_DELETE(arg0), oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
-    const obj2 = sendRequest;
-    return HTTP.post(obj).then(() => {
+    return HTTP.post(obj).then((result) => {
       closure_16.close();
     });
   },
@@ -353,24 +338,24 @@ let obj = {
               closure_1 = tmp3;
               c0 = tmp2;
               c0 = undefined;
-              const isLurkingResult = closure_1_5.isLurking(closure_1_0);
+              const isLurkingResult = closure_1_5.isLurking(id);
               c0 = isLurkingResult;
-              const HTTP = closure_1_0(530).HTTP;
+              const HTTP = id(530).HTTP;
               obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = closure_1_10.GUILD_LEAVE(closure_1_0);
+              obj1[0] = closure_1_10.GUILD_LEAVE(id);
               let isCurrentUserGuestResult = isLurkingResult;
               if (!isLurkingResult) {
-                isCurrentUserGuestResult = closure_1_7.isCurrentUserGuest(closure_1_0);
+                isCurrentUserGuestResult = closure_1_7.isCurrentUserGuest(id);
               }
               const obj2 = { lurking: null };
               obj2[0] = isCurrentUserGuestResult;
               obj1[1] = obj2;
-              let obj3 = closure_1_0(530);
+              let obj3 = id(530);
               obj1[3] = obj3.rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               obj3 = { value: null, done: false };
-              obj3[0] = HTTP.del(obj1).then(() => {
+              obj3[0] = HTTP.del(obj1).then((result) => {
                 const AccessibilityAnnouncer = _undefined(1350).AccessibilityAnnouncer;
                 const intl = _undefined(1236).intl;
                 AccessibilityAnnouncer.announce(intl.string(_undefined(1236).t["7iPyVW"]));
@@ -389,10 +374,10 @@ let obj = {
             closure_1_16.close();
             let tmp10 = closure_1;
             if (closure_1) {
-              tmp10 = closure_1_0;
+              tmp10 = id;
             }
             if (tmp10) {
-              obj = closure_1_0(1222);
+              obj = id(1222);
               obj.transitionTo(closure_1_14.GUILD_DISCOVERY);
             }
             c3 = 3;
@@ -442,7 +427,7 @@ let obj = {
               c0 = 0;
               if (closure_1_4.isFullServerPreview(closure_1_0)) {
                 if (closure_1_1 === closure_1_6.getId()) {
-                  const result = closure_1_0(6792).updateImpersonatedRoles(tmp29, dependencyMap);
+                  const result = closure_1_0(6792).updateImpersonatedRoles(closure_1_0, dependencyMap);
                   c3 = 3;
                   const obj6 = closure_1_0(6792);
                 }
@@ -465,14 +450,14 @@ let obj = {
             c3 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            const item = c3.forEach((roleId) => {
-              obj = v0(709);
-              obj = { type: "GUILD_ROLE_MEMBER_ADD", guildId: c0, roleId, userId: v0 };
+            const item = c3.forEach((item, index) => {
+              v0(709);
+              obj = { type: "GUILD_ROLE_MEMBER_ADD", guildId: c0, roleId: item, userId: v0 };
               return obj.dispatch(obj);
             });
-            const item1 = closure_4.forEach((roleId) => {
-              obj = v0(709);
-              obj = { type: "GUILD_ROLE_MEMBER_REMOVE", guildId: c0, roleId, userId: v0 };
+            const item1 = closure_4.forEach((item, index) => {
+              v0(709);
+              obj = { type: "GUILD_ROLE_MEMBER_REMOVE", guildId: c0, roleId: item, userId: v0 };
               return obj.dispatch(obj);
             });
           }
@@ -491,19 +476,19 @@ let obj = {
     const _require = id;
     closure_1 = id2;
     const HTTP = _require(530).HTTP;
-    obj = { url: closure_10.GUILD_ROLE_MEMBERS(id, id2), body: obj, rejectWithError: null };
+    { url: closure_10.GUILD_ROLE_MEMBERS(id, id2), body: obj, rejectWithError: null };
     obj = { member_ids: keys };
     obj[2] = _require(530).rejectWithMigratedError();
     const obj3 = _require(530);
-    return HTTP.patch(obj).then((added) => {
-      obj = id2(closure_1_2[9]);
-      obj = { type: "GUILD_ROLE_MEMBER_BULK_ADD", guildId: closure_0, roleId: id2, added: added.body };
+    return HTTP.patch(obj).then((result) => {
+      id2(dependencyMap[9]);
+      obj = { type: "GUILD_ROLE_MEMBER_BULK_ADD", guildId: closure_0, roleId: id2, added: result.body };
       obj.dispatch(obj);
     });
   },
   enableIntegration(id, type, id2) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_10.GUILD_INTEGRATIONS(id), body: obj, oldFormErrors: true, rejectWithError: null };
+    { url: closure_10.GUILD_INTEGRATIONS(id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { type, id: id2 };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
@@ -515,7 +500,7 @@ let obj = {
   },
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_10.GUILD_INTEGRATION(guildId, id), body: obj, oldFormErrors: true, rejectWithError: null };
+    { url: closure_10.GUILD_INTEGRATION(guildId, id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { expire_behavior, expire_grace_period, enable_emoticons };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.patch(obj);
@@ -526,7 +511,7 @@ let obj = {
     HTTP.post(obj);
   },
   migratePinPermission(closure_1_0) {
-    closure_0 = closure_1_0;
+    closure_0 = require;
     return callback(function*() {
       if (v0 === 2) {
         v0 = 3;
@@ -560,8 +545,8 @@ let obj = {
               c1 = 1;
               v0 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1).then(() => {
-                obj = v1(closure_1_2[9]);
+              obj2[0] = HTTP.post(obj1).then((result) => {
+                v1(closure_1_2[9]);
                 obj = { type: "GUILD_SETTINGS_PIN_PERMISSION_MIGRATED", guildId: c0 };
                 return obj.dispatch(obj);
               });
@@ -620,8 +605,8 @@ let obj = {
               c1 = 1;
               v0 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1).then(() => {
-                obj = v1(closure_1_2[9]);
+              obj2[0] = HTTP.post(obj1).then((result) => {
+                v1(closure_1_2[9]);
                 obj = { type: "GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED", guildId: c0 };
                 return obj.dispatch(obj);
               });
@@ -724,6 +709,6 @@ let obj = {
   }
 };
 const tmp3 = new timestampDefault("GuildSettingsActionCreators");
-let result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/GuildSettingsActionCreators.tsx");
 
 export default obj;

@@ -3,13 +3,13 @@
 // Module 10880 (_savedMessageJumpToMessage)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import tDefault from "t" /* 3975 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 import { UnknownChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function _savedMessageJumpToMessage() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -53,12 +53,12 @@ function _savedMessageJumpToMessage() {
                 type = lib.type;
               }
               if (type === constants.UNKNOWN) {
-                if (null == tmp43.saveData.guildId) {
+                if (null == closure_0.saveData.guildId) {
                   c5 = 1;
                   c6 = 2;
                   constants = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = lib(closure_1_2[8]).fetchChannel(tmp43.saveData.channelId);
+                  obj1[0] = lib(closure_1_2[8]).fetchChannel(closure_0.saveData.channelId);
                   return obj1;
                 }
               }
@@ -91,7 +91,7 @@ function _savedMessageJumpToMessage() {
                 c6 = 3;
                 constants = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = obj1.ensurePrivateChannel(recipients.map((id) => id.id));
+                obj3[0] = obj1.ensurePrivateChannel(recipients.map((item, index) => item.id));
                 return obj3;
               }
             }
@@ -137,7 +137,7 @@ function _savedMessageJumpToMessage() {
 }
 ({ ChannelTypes: error, Routes: closure_8 } = ME);
 let obj = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
-const result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessageUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/saved_messages/SavedMessageUtils.tsx");
 
 export const DueInStringTypes = obj;
 export const useDueInString = function useDueInString(arg0) {
@@ -152,20 +152,18 @@ export const useDueInString = function useDueInString(arg0) {
       tmp = require;
       H4gnX9 = getSystemLocale.t.H4gnX9;
     }
-    if (type === tmp8.LONG) {
-      Uq7Y_7 = tmp(1236).t.haia16;
+    if (type === tmp9.LONG) {
+      let haia16 = tmp(1236).t.haia16;
     } else {
-      Uq7Y_7 = tmp(1236).t["Uq7Y+7"];
+      haia16 = tmp(1236).t["Uq7Y+7"];
     }
     if (now > dueAt) {
-      H4gnX9 = Uq7Y_7;
+      H4gnX9 = haia16;
     }
-    obj = { dueInText: null, isOverdue: null };
     const intl = tmp(1236).intl;
     obj = { duration: null };
     const time = dueAt.getTime();
-    const obj3 = tDefault;
-    tmp8 = obj;
+    tmp9 = obj;
     obj[0] = tDefault.duration(time - now.getTime(), "millisecond").humanize();
     obj[0] = intl.formatToPlainString(H4gnX9, obj);
     obj[1] = now > dueAt;
@@ -183,12 +181,12 @@ export const useSavedMessageChannel = function useSavedMessageChannel(savedMessa
       let tmp9;
       if (null != savedMessage.message) {
         obj = { id: null, guild_id: null, type: null, name: null };
-        obj[0] = tmp10.saveData.channelId;
-        obj[1] = tmp10.saveData.guildId;
+        obj[0] = savedMessage.saveData.channelId;
+        obj[1] = savedMessage.saveData.guildId;
         obj[2] = closure_1_7.UNKNOWN;
-        const intl = savedMessage(closure_1_2[5]).intl;
-        obj[3] = intl.string(savedMessage(closure_1_2[5]).t.J90oLW);
-        tmp9 = new closure_1_5(obj);
+        const intl = savedMessage(dependencyMap[5]).intl;
+        obj[3] = intl.string(savedMessage(dependencyMap[5]).t.J90oLW);
+        tmp9 = new UnknownChannelRecord(obj);
       }
       tmp = tmp9;
     }

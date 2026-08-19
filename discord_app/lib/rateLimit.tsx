@@ -1,9 +1,9 @@
 // === Module 13229: rateLimit ===
 
 // Module 13229 (rateLimit)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/rateLimit.tsx");
+const result = obj132.fileFinishedImporting("lib/rateLimit.tsx");
 
 export default function rateLimit(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -39,7 +39,7 @@ export default function rateLimit(arg0, arg1, arg2) {
       HermesBuiltin.apply(items1, undefined);
     } else {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(() => closure_1_5(...items), arr2[0] - timestamp);
+      timeout = setTimeout(() => wrapper(...items), arr2[0] - timestamp);
     }
   }
   return wrapper;

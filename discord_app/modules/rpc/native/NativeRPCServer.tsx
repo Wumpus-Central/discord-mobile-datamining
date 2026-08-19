@@ -4,8 +4,8 @@
 import root from "root" /* 8754 */;
 import registerTransportDefault from "registerTransport" /* 13892 */;
 
-require = arg1;
+require = fn;
 const tmp2 = new registerTransportDefault(() => Promise.resolve(root));
-const result = require("set").fileFinishedImporting("modules/rpc/native/NativeRPCServer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/rpc/native/NativeRPCServer.tsx");
 
 export default tmp2;

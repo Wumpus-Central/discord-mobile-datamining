@@ -1,14 +1,14 @@
 // === Module 11104: useFamilyCenterActions ===
 
 // Module 11104 (useFamilyCenterActions)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "freshTeenActivityWithMap" /* 5296 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
 import { UserLinkStatus } from "items" /* 5297 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActions.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActions.tsx");
 
 export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
   let obj = arg0;
@@ -54,8 +54,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     tmp17 = first3;
   }
   first3 = tmp17;
-  closure_0 = undefined;
-  closure_0 = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -90,12 +89,12 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               closure_2 = tmp4;
               closure_1 = tmp8;
               let aPIError;
-              if (closure_1_14) {
+              if (first3) {
                 c6 = 3;
               } else {
                 closure_1_2(true);
                 c4 = 2;
-                obj1 = callback(closure_2_2[5]);
+                obj1 = callback(dependencyMap[5]);
                 c5 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -107,7 +106,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             if (2 === tmp8) {
               c4 = 1;
               closure_1 = closure_3;
-              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
+              aPIError = new callback(dependencyMap[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -122,8 +121,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              if (closure_1_1 != null) {
-                closure_1_1();
+              if (onSuccess != null) {
+                onSuccess();
               }
               c4 = 1;
             }
@@ -148,8 +147,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     })();
   });
   const items = [tmp17, onError, onSuccess];
-  closure_0 = undefined;
-  callback = obj2.useCallback(function() {
+  callback = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -159,7 +157,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
     return applyArgumentsResult;
   }, items);
-  closure_0 = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -194,12 +192,12 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               closure_2 = tmp4;
               closure_1 = tmp8;
               let aPIError;
-              if (closure_1_14) {
+              if (first3) {
                 c6 = 3;
               } else {
                 closure_1_3(true);
                 c4 = 2;
-                obj1 = callback(closure_2_2[5]);
+                obj1 = callback(dependencyMap[5]);
                 c5 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -211,7 +209,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             if (2 === tmp8) {
               c4 = 1;
               closure_1 = closure_3;
-              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
+              aPIError = new callback(dependencyMap[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -226,8 +224,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              if (closure_1_1 != null) {
-                closure_1_1();
+              if (onSuccess != null) {
+                onSuccess();
               }
               c4 = 1;
             }
@@ -252,8 +250,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     })();
   });
   const items1 = [tmp17, onError, onSuccess];
-  closure_0 = undefined;
-  const callback1 = obj2.useCallback(function() {
+  const callback1 = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -263,7 +260,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
     return applyArgumentsResult;
   }, items1);
-  closure_0 = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -298,12 +295,12 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               closure_2 = tmp4;
               closure_1 = tmp8;
               let aPIError;
-              if (closure_1_14) {
+              if (first3) {
                 c6 = 3;
               } else {
                 v0(true);
                 v0 = 2;
-                obj1 = callback(closure_2_2[5]);
+                obj1 = callback(dependencyMap[5]);
                 c5 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -315,7 +312,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             if (2 === tmp8) {
               v0 = 1;
               closure_1 = closure_3;
-              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
+              aPIError = new callback(dependencyMap[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -330,8 +327,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              if (closure_1_1 != null) {
-                closure_1_1();
+              if (onSuccess != null) {
+                onSuccess();
               }
               v0 = 1;
             }
@@ -356,8 +353,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     })();
   });
   const items2 = [tmp17, onError, onSuccess];
-  closure_0 = undefined;
-  callback2 = obj2.useCallback(function() {
+  callback2 = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -367,7 +363,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
     return applyArgumentsResult;
   }, items2);
-  closure_0 = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -402,12 +398,12 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               closure_2 = tmp4;
               closure_1 = tmp8;
               let aPIError;
-              if (closure_1_14) {
+              if (first3) {
                 c6 = 3;
               } else {
                 v0(true);
                 c4 = 2;
-                obj1 = callback(closure_2_2[5]);
+                obj1 = callback(dependencyMap[5]);
                 v0 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -419,7 +415,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             if (2 === tmp8) {
               c4 = 1;
               closure_1 = closure_3;
-              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
+              aPIError = new callback(dependencyMap[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -434,8 +430,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              if (closure_1_1 != null) {
-                closure_1_1();
+              if (onSuccess != null) {
+                onSuccess();
               }
               c4 = 1;
             }
@@ -460,7 +456,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     })();
   });
   const items3 = [tmp17, onError, onSuccess];
-  const callback3 = obj2.useCallback(function() {
+  const callback3 = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -471,8 +467,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     return applyArgumentsResult;
   }, items3);
   const items4 = [first, onError, onSuccess];
-  closure_0 = undefined;
-  const callback4 = obj2.useCallback(callback(function*() {
+  const callback4 = React.useCallback(callback(function*() {
     if (c5 === 2) {
       c5 = 3;
       HermesBuiltin.throwTypeError();
@@ -502,7 +497,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             let callback = tmp4;
             let aPIError = tmp8;
             aPIError = undefined;
-            if (closure_1_6) {
+            if (first) {
               c5 = 3;
             } else {
               closure_1_7(true);
@@ -558,7 +553,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
       }
     }
   }), items4);
-  closure_0 = callback((arg0) => {
+  callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -593,12 +588,12 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               closure_2 = tmp4;
               closure_1 = tmp8;
               let aPIError;
-              if (closure_1_10) {
+              if (first2) {
                 c6 = 3;
               } else {
                 closure_1_11(true);
                 c4 = 2;
-                obj1 = onSuccess(closure_2_2[5]);
+                obj1 = onSuccess(dependencyMap[5]);
                 c5 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -610,7 +605,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             if (2 === tmp8) {
               c4 = 1;
               closure_1 = closure_3;
-              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
+              aPIError = new callback(dependencyMap[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -651,8 +646,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     })();
   });
   const items5 = [first2, onError, onSuccess];
-  closure_0 = undefined;
-  const callback5 = obj2.useCallback(function() {
+  const callback5 = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -662,7 +656,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
     return applyArgumentsResult;
   }, items5);
-  closure_0 = callback((arg0, arg1) => {
+  callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
     c6 = 0;
@@ -698,12 +692,12 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               closure_3 = tmp4;
               closure_2 = tmp8;
               let aPIError;
-              if (closure_1_8) {
+              if (first1) {
                 c7 = 3;
               } else {
                 closure_1_9(true);
                 c5 = 2;
-                obj1 = onSuccess(closure_2_2[5]);
+                obj1 = onSuccess(dependencyMap[5]);
                 c6 = 3;
                 c7 = 1;
                 obj1 = { value: null, done: false };
@@ -715,7 +709,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             if (2 === tmp8) {
               c5 = 1;
               const callback2 = closure_4;
-              aPIError = new callback(closure_2_2[6]).APIError(callback2);
+              aPIError = new callback(dependencyMap[6]).APIError(callback2);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -756,8 +750,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     })();
   });
   const items6 = [first1, onError, onSuccess];
-  closure_0 = undefined;
-  const callback6 = obj2.useCallback(function() {
+  const callback6 = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -805,12 +798,12 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               const actionsForDisplayType = first.getActionsForDisplayType(aPIError);
               const startId = first.getStartId();
               const selectedTeenId = first.getSelectedTeenId();
-              if (!closure_1_12) {
+              if (!first3) {
                 if (null != startId) {
                   if (null != selectedTeenId) {
                     closure_1_13(true);
                     c4 = 2;
-                    obj1 = onSuccess(closure_2_2[5]);
+                    obj1 = onSuccess(dependencyMap[5]);
                     c5 = 3;
                     c6 = 1;
                     obj1 = { value: null, done: false };
@@ -825,7 +818,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             if (2 === tmp8) {
               c4 = 1;
               closure_1 = closure_3;
-              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
+              aPIError = new callback(dependencyMap[6]).APIError(closure_1);
               if (callback != null) {
                 tmp23(callback);
               }
@@ -871,7 +864,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     selectTeenUser: callback5,
     getLinkCode: callback4,
     requestLink: callback6,
-    loadMore: obj2.useCallback(function() {
+    loadMore: React.useCallback(function() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

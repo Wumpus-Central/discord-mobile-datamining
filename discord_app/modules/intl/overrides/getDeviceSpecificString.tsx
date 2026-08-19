@@ -1,10 +1,10 @@
 // === Module 7571: getDeviceSpecificString ===
 
 // Module 7571 (getDeviceSpecificString)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = set.fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
+const result = obj132.fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
 
 export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2Yp7dF) {
   let str = null;

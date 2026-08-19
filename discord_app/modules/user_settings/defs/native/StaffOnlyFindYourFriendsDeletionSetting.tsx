@@ -2,13 +2,13 @@
 
 // Module 14198 (setFindYourFriendsDeletionIsLoading)
 import isIterable from "isIterable" /* 4006 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import identity from "identity" /* 700 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = arg1;
+require = fn;
 function setFindYourFriendsDeletionIsLoading(arg0) {
   const _require = arg0;
   _require(705).batchUpdates(() => closure_1_6.setState({ isLoading: closure_0 }));
@@ -141,6 +141,6 @@ identity = {
   }
 };
 identity = createToggle.createPressable(identity);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx");
 
 export default identity;

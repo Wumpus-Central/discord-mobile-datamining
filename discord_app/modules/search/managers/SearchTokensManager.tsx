@@ -1,7 +1,7 @@
 // === Module 16699: _initialize ===
 
 // Module 16699 (_initialize)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _setAppLocale from "_setAppLocale" /* 1995 */;
 import initializeDefault from "initialize" /* 5038 */;
 import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
@@ -27,6 +27,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const searchTokensManager = new SearchTokensManager();
-let result = set.fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
+let result = obj132.fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
 
 export default searchTokensManager;

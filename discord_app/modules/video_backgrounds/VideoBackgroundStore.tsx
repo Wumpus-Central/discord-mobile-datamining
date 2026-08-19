@@ -5,12 +5,12 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
 import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9661 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
+require = fn;
 function handleSyncedStoresUpdate() {
   if (voiceChannelId !== store.getVoiceChannelId()) {
     c8 = false;
@@ -26,7 +26,7 @@ function handleSyncedStoresUpdate() {
       prop = voiceAndVideo.videoBackgroundFilterDesktop;
     }
     const videoBackgroundOptionFromProto = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-    let isVideoEnabledResult = null != obj.getVoiceChannelId();
+    let isVideoEnabledResult = null != store.getVoiceChannelId();
     if (isVideoEnabledResult) {
       isVideoEnabledResult = closure_3.isVideoEnabled();
     }
@@ -34,12 +34,11 @@ function handleSyncedStoresUpdate() {
       isVideoEnabledResult = null != videoBackgroundOptionFromProto;
     }
     flag2 = isVideoEnabledResult;
-    const obj2 = isAnimatedBackgroundOption;
   }
   if (flag2) {
     c8 = true;
   }
-  voiceChannelId = obj.getVoiceChannelId();
+  voiceChannelId = store.getVoiceChannelId();
 }
 let c6 = false;
 let c7 = null;
@@ -90,10 +89,9 @@ VideoBackgroundStore.displayName = "VideoBackgroundStore";
 const videoBackgroundStore = new VideoBackgroundStore(dispatcherDefault, {
   VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function handleVideoFilterAssetFetchSuccess(assets) {
     assets = assets.assets;
-    const obj = {};
-    const item = assets.forEach((id) => {
-      obj[id.id] = id;
-      return id;
+    const item = assets.forEach((item, index) => {
+      obj[item.id] = item;
+      return item;
     });
   },
   VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: function handleAddBackground(videoFilterAsset) {
@@ -120,7 +118,6 @@ const videoBackgroundStore = new VideoBackgroundStore(dispatcherDefault, {
           prop = voiceAndVideo.videoBackgroundFilterDesktop;
         }
         backgroundOption = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-        const obj = isAnimatedBackgroundOption;
       }
       let isVideoEnabledResult = null != store.getVoiceChannelId();
       if (isVideoEnabledResult) {
@@ -161,6 +158,6 @@ const videoBackgroundStore = new VideoBackgroundStore(dispatcherDefault, {
     c11 = false;
   }
 });
-const result = require("set").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundStore.tsx");
 
 export default videoBackgroundStore;

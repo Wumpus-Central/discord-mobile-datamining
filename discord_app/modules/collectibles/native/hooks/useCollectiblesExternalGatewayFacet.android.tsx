@@ -1,12 +1,12 @@
 // === Module 9278: useCollectiblesExternalGatewayFacet ===
 
 // Module 9278 (useCollectiblesExternalGatewayFacet)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
 const useMemo = noop.useMemo;
-const result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx");
 
 export default function useCollectiblesExternalGatewayFacet(arg0) {
   const _require = arg0;
@@ -17,7 +17,6 @@ export default function useCollectiblesExternalGatewayFacet(arg0) {
     let obj = callback(stateFromStores[3]);
     const collectibleGoogleSkuId = obj.getCollectibleGoogleSkuId(callback, stateFromStores);
     if (null != collectibleGoogleSkuId) {
-      obj = { line_items: null };
       obj = { external_product_id: null };
       obj[0] = collectibleGoogleSkuId;
       const items = [obj];

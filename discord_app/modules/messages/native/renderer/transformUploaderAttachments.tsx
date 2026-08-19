@@ -1,11 +1,11 @@
 // === Module 8426: createUploaderAttachments ===
 
 // Module 8426 (createUploaderAttachments)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import Changeset from "Changeset" /* 8158 */;
 
 const AttachmentType = Changeset.AttachmentType;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/transformUploaderAttachments.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/transformUploaderAttachments.tsx");
 
 export default function createUploaderAttachments(uploaderFile) {
   uploaderFile = uploaderFile.uploaderFile;
@@ -13,22 +13,22 @@ export default function createUploaderAttachments(uploaderFile) {
   const items = uploaderFile.items;
   let mapped;
   if (items != null) {
-    mapped = items.map((filename) => {
-      let str = filename.filename;
+    mapped = items.map((item, index) => {
+      let str = item.filename;
       if (str == null) {
         str = "";
       }
-      const item = filename.item;
+      item = item.item;
       let str2 = item.originalUri;
       if (str2 == null) {
         str2 = "";
       }
-      let obj = uploaderFile(closure_1_1[1]);
+      let obj = uploaderFile(dependencyMap[1]);
       const isImageFileResult = obj.isImageFile(str);
-      const isVideoFileResult = uploaderFile(closure_1_1[1]).isVideoFile(str);
-      const obj2 = uploaderFile(closure_1_1[1]);
+      const isVideoFileResult = uploaderFile(dependencyMap[1]).isVideoFile(str);
+      const obj2 = uploaderFile(dependencyMap[1]);
       let num = item.progress;
-      const obj3 = uploaderFile(closure_1_1[1]);
+      const obj3 = uploaderFile(dependencyMap[1]);
       if (num == null) {
         num = 0;
       }
@@ -53,13 +53,12 @@ export default function createUploaderAttachments(uploaderFile) {
         tmp8 = str2;
       }
       obj[1] = tmp8;
-      const isAudioFileResult = uploaderFile(closure_1_1[1]).isAudioFile(str);
-      const merged = Object.assign(uploaderFile(closure_1_1[2]).getAttachmentObscurityDefaults());
+      const isAudioFileResult = uploaderFile(dependencyMap[1]).isAudioFile(str);
+      const merged = Object.assign(uploaderFile(dependencyMap[2]).getAttachmentObscurityDefaults());
       obj.filename = str;
       let str3 = "";
       if (null != item.size) {
         str3 = item.size.toString();
-        const str4 = item.size;
       }
       obj.size = str3;
       obj.showDescription = false;
@@ -79,18 +78,18 @@ export default function createUploaderAttachments(uploaderFile) {
         }
       }
       obj.height = num6;
-      const intl = tmp(tmp2[3]).intl;
+      const intl = uploaderFile(dependencyMap[3]).intl;
       const string = intl.string;
-      const t = tmp(tmp2[3]).t;
+      const t = uploaderFile(dependencyMap[3]).t;
       if (isVideoFileResult) {
         let stringResult = string(t["BEWw/7"]);
       } else {
         stringResult = string(t.IPzNKE);
       }
       obj.hint = stringResult;
-      const intl2 = tmp(tmp2[3]).intl;
+      const intl2 = uploaderFile(dependencyMap[3]).intl;
       const string2 = intl2.string;
-      const t2 = tmp(tmp2[3]).t;
+      const t2 = uploaderFile(dependencyMap[3]).t;
       if (isVideoFileResult) {
         let string2Result = string2(t2["/SCpvi"]);
       } else {
@@ -98,24 +97,24 @@ export default function createUploaderAttachments(uploaderFile) {
       }
       obj.role = string2Result;
       if (isImageFileResult) {
-        let VIDEO = tmp13.IMAGE;
+        let VIDEO = AttachmentType.IMAGE;
       } else if (isVideoFileResult) {
-        VIDEO = tmp13.VIDEO;
+        VIDEO = AttachmentType.VIDEO;
       } else {
-        VIDEO = isAudioFileResult ? tmp13.AUDIO : tmp13.OTHER;
+        VIDEO = isAudioFileResult ? AttachmentType.AUDIO : AttachmentType.OTHER;
       }
       obj.attachmentType = VIDEO;
       obj.progress = tmp7;
       obj.uploaderId = uploaderFile.id;
-      let str5 = filename.id;
+      let str5 = item.id;
       if (str5 == null) {
         str5 = "";
       }
       obj.uploaderItemId = str5;
       ({ durationSecs: obj4.durationSecs, waveform: obj4.waveform } = item);
       let uniqueId;
-      if (filename instanceof uploaderFile(closure_1_1[4]).CloudUpload) {
-        uniqueId = filename.uniqueId;
+      if (item instanceof uploaderFile(dependencyMap[4]).CloudUpload) {
+        uniqueId = item.uniqueId;
       }
       obj.id = uniqueId;
       return obj;

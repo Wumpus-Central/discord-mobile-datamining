@@ -1,10 +1,10 @@
 // === Module 8718: getPlatform ===
 
 // Module 8718 (getPlatform)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
 
 export default function getPlatform(arg0) {
   if ("android" === arg0) {

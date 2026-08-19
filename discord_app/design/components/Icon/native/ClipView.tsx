@@ -8,7 +8,7 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-require = arg1;
+require = fn;
 function SolidCutout(arg0) {
   ({ backgroundColor, cutout } = arg0);
   const style = [closure_10.solidCutout];
@@ -37,21 +37,19 @@ function SolidCutout(arg0) {
 }
 function SolidCutoutOverlay(arg0) {
   ({ backgroundColor: require, cutouts } = arg0);
-  return callback(closure_3, { pointerEvents: "none", style: closure_10.solidCutoutContainer, children: cutouts.map((cutout) => closure_1_4(closure_1_8, { backgroundColor: closure_0, cutout }, arg1)) });
+  return callback(closure_3, { pointerEvents: "none", style: closure_10.solidCutoutContainer, children: cutouts.map((item, index) => closure_1_4(SolidCutout, { backgroundColor: closure_0, cutout: item }, index)) });
 }
 noopAll;
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { Circle: "circle", RoundedRect: "rounded-rect" };
 let closure_7 = [];
-obj = { solidCutoutContainer: null, solidCutout: null };
-obj = {};
+let obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[0] = obj;
 obj[1] = { position: "absolute" };
 const styles = StyleSheet.create(obj);
 const animatedComponent = importDefaultResult.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
-const result = require("set").fileFinishedImporting("design/components/Icon/native/ClipView.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Icon/native/ClipView.tsx");
 
 export default function ClipView(cutouts) {
   cutouts = cutouts.cutouts;
@@ -75,7 +73,6 @@ export default function ClipView(cutouts) {
     }
     tmp4 = tmp8;
     tmp5 = closure_7;
-    const tmp6 = closure_7;
   }
   obj = {};
   const merged1 = Object.assign(merged);

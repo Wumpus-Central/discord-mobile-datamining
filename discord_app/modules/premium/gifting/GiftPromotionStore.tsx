@@ -19,8 +19,8 @@ prototype["initialize"] = function initialize(giftOptionsReceiptMap) {
 prototype["getState"] = function getState() {
   return closure_0;
 };
-prototype["getGiftOptionsForKey"] = function getGiftOptionsForKey(v3Result) {
-  return closure_0.giftOptionsReceiptMap[v3Result];
+prototype["getGiftOptionsForKey"] = function getGiftOptionsForKey(closure_3) {
+  return closure_0.giftOptionsReceiptMap[closure_3];
 };
 GiftPromotionStore.displayName = "GiftPromotionStore";
 GiftPromotionStore.persistKey = "GiftPromotionStore";
@@ -51,6 +51,6 @@ const giftPromotionStore = new GiftPromotionStore(dispatcherDefault, {
     delete tmp[tmp2];
   }
 });
-const result = require("set").fileFinishedImporting("modules/premium/gifting/GiftPromotionStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/gifting/GiftPromotionStore.tsx");
 
 export default giftPromotionStore;

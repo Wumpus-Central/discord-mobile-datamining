@@ -1,11 +1,11 @@
 // === Module 7410: useCountdown ===
 
 // Module 7410 (useCountdown)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
 
 noop.useCallback;
-const result = set.fileFinishedImporting("hooks/useCountdown.tsx");
+const result = obj132.fileFinishedImporting("hooks/useCountdown.tsx");
 
 export default function useCountdown(closure_0) {
   const _require = closure_0;
@@ -18,21 +18,22 @@ export default function useCountdown(closure_0) {
   if (arg3 === undefined) {
     flag = false;
   }
-  let forceUpdate;
-  const obj = _require(flag[1]);
-  let diffAsUnitsResult = _require(flag[1]).diffAsUnits(Date.now(), closure_0);
-  forceUpdate = _require(flag[2]).useForceUpdate();
+  let obj = _require(flag[1]);
+  const diffAsUnitsResult = _require(flag[1]).diffAsUnits(Date.now(), closure_0);
+  const forceUpdate = _require(flag[2]).useForceUpdate();
   const items = [closure_0, flag, forceUpdate, arg2];
   const obj2 = _require(flag[2]);
   let tmp5 = null;
   const tmp3 = forceUpdate(() => {
-    const diffAsUnitsResult = callback(flag[1]).diffAsUnits(Date.now(), callback);
-    if (!tmp2) {
+    const time = callback(flag[1]).diffAsUnits(Date.now(), callback);
+    if (!tmp) {
       forceUpdate();
       if (callback2 != null) {
         callback2();
       }
     }
+    const obj = callback(flag[1]);
+    tmp = 0 === time.days && 0 === time.hours && 0 === time.minutes && 0 === time.seconds || flag;
   }, items);
   if (!flag) {
     tmp5 = num;

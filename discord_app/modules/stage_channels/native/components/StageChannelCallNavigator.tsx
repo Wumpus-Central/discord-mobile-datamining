@@ -6,18 +6,17 @@ import _modDef4115 from "module_4115" /* 4115 */;
 import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 12505 */;
 import JoinStageViewDefault from "JoinStageView" /* 12537 */;
 import RootThemeContextProvider from "RootThemeContextProvider" /* 12631 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function ModeratorViewOverlay(channel) {
   channel = channel.channel;
   let first;
-  importDefault = undefined;
   let first1;
   let callback;
   let obj = first(first1[5]);
@@ -72,14 +71,12 @@ function ModeratorViewOverlay(channel) {
   return tmp10;
 }
 function JoinStageOverlay(channel) {
-  let first;
-  importDefault = undefined;
   const tmp = callback(React.useState(false), 2);
-  first = tmp[0];
+  const first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(4115);
+  first(4115);
   const fn = function s() {
-    let obj = first(closure_1_2[7]);
+    let obj = first(dependencyMap[7]);
     let num = 0;
     if (first) {
       num = 1;
@@ -87,7 +84,7 @@ function JoinStageOverlay(channel) {
     obj = { opacity: obj.withSpring(num, closure_1_11) };
     return obj;
   };
-  obj = { withSpring: first(4744).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
+  let obj = { withSpring: first(4744).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
   fn.__closure = obj;
   fn.__workletHash = 1929951426580;
   fn.__initData = closure_15;
@@ -119,11 +116,10 @@ let closure_11 = { mass: 0.5, stiffness: 600, damping: 30, overshootClamping: fa
 let closure_12 = { fullScreen: { flex: 1 } };
 let closure_13 = { code: "function StageChannelCallNavigatorTsx1(){const{withSpring,showStartStageView,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showStartStageView?1:0,viewAnimationConfig)};}" };
 let closure_15 = { code: "function StageChannelCallNavigatorTsx2(){const{withSpring,showOverlay,viewAnimationConfig}=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};}" };
-createCacheKey = { startStagePrompt: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallNavigator.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallNavigator.tsx");
 
 export default function StageChannelCallNavigator(channel) {
   channel = channel.channel;
@@ -154,8 +150,8 @@ export default function StageChannelCallNavigator(channel) {
   const items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const effect = obj1.useEffect(() => {
-    let obj = callback(first[14]);
-    obj = { guildId: channel.guild_id, channelId: channel.id };
+    callback(first[14]);
+    const obj = { guildId: channel.guild_id, channelId: channel.id };
     const messages = obj.fetchMessages(obj);
   }, items);
   closure_6 = obj1.useRef(channel.id);
@@ -183,44 +179,42 @@ export default function StageChannelCallNavigator(channel) {
       callback2();
     }
   }, items2);
-  obj = { actionBar: callback2(importDefault(tmp2[17]), { channel }), expandedControls: callback2(importDefault(tmp2[18]), { channel }), isTouchingLeftScreenEdge: true, channel };
+  { actionBar: callback2(importDefault(tmp2[17]), { channel }), expandedControls: callback2(importDefault(tmp2[18]), { channel }), isTouchingLeftScreenEdge: true, channel };
   obj = { theme: ThemeTypes.DARK, children: null };
   if (null != tmp11) {
     obj1 = { style: null, children: null };
     obj1[0] = fullScreen.fullScreen;
     obj2 = { channel: null, children: null };
     obj2[0] = channel;
-    let tmp10Result = tmp10(tmp2[20]);
+    tmp10(tmp2[20]);
     const obj3 = { children: null };
-    tmp10Result = tmp10(tmp2[21]);
+    const tmp10Result = tmp10(tmp2[21]);
     const obj4 = { channel: null, selectedParticipant: null };
     obj4[0] = channel;
     obj4[1] = tmp11;
-    obj3[0] = tmp18(tmp(tmp2[22]).ChannelCallSingleController, obj4);
-    const items3 = [tmp18(tmp10Result, obj3), , ];
+    obj3[0] = callback2(tmp(tmp2[22]).ChannelCallSingleController, obj4);
+    const items3 = [callback2(tmp10Result, obj3), , ];
     const obj5 = { header: null };
     const obj6 = { channel: null, fullscreenStream: true, onOpenRTCDebugOverlay: null };
     obj6[0] = channel;
-    obj6[2] = function onOpenRTCDebugOverlay(arg0) {
+    obj6[2] = function onOpenRTCDebugOverlay(stateFromStores) {
       return _undefined(true);
     };
-    obj5[0] = tmp18(tmp10(tmp2[24]), obj6);
+    obj5[0] = callback2(tmp10(tmp2[24]), obj6);
     const merged = Object.assign(obj);
-    items3[1] = tmp18(tmp10(tmp2[23]), obj5);
+    items3[1] = callback2(tmp10(tmp2[23]), obj5);
     if (tmp18Result) {
       const obj7 = { onClose: null };
       obj7[0] = function onClose() {
         return _undefined(false);
       };
-      tmp18Result = tmp18(tmp10(tmp2[25]), obj7);
+      tmp18Result = callback2(tmp10(tmp2[25]), obj7);
     }
     items3[2] = tmp18Result;
     obj2[1] = items3;
-    obj1[1] = closure_9(tmp10Result, obj2);
-    tmp18Result = tmp18(closure_6, obj1);
+    obj1[1] = callback(tmp10Result, obj2);
+    tmp18Result = callback2(closure_6, obj1);
     const tmp10Result1 = tmp10(tmp2[23]);
-    const tmp26 = closure_6;
-    const tmp28 = closure_9;
   } else {
     if (first) {
       let tmp10Result2 = ModeratorViewOverlay;
@@ -236,15 +230,15 @@ export default function StageChannelCallNavigator(channel) {
     }
     const obj8 = { channel: null };
     obj8[0] = channel;
-    const items4 = [tmp18(tmp10Result2, obj8), ];
+    const items4 = [callback2(tmp10Result2, obj8), ];
     const obj9 = { header: null };
     const obj10 = { channel: null };
     obj10[0] = channel;
-    obj9[0] = tmp18(tmp10(first ? tmp2[27] : tmp2[24]), obj10);
+    obj9[0] = callback2(tmp10(first ? tmp2[27] : tmp2[24]), obj10);
     const merged1 = Object.assign(obj);
     const obj11 = { channel: null };
     obj11[0] = channel;
-    const items5 = [tmp18(tmp10(tmp2[28]), obj11), ];
+    const items5 = [callback2(tmp10(tmp2[28]), obj11), ];
     if (isModerator) {
       isModerator = !callback(React.useState(isLive), 1)[0];
     }
@@ -254,16 +248,15 @@ export default function StageChannelCallNavigator(channel) {
     if (isModerator) {
       const obj12 = { channel: null };
       obj12[0] = channel;
-      isModerator = tmp18(StagePromptWrapper, obj12);
+      isModerator = callback2(StagePromptWrapper, obj12);
     }
     const obj13 = { children: null };
     items5[1] = isModerator;
     obj9.children = items5;
-    items4[1] = closure_9(tmp10(tmp2[23]), obj9);
+    items4[1] = callback(tmp10(tmp2[23]), obj9);
     obj13[0] = items4;
-    tmp18Result = tmp35(closure_10, obj13);
+    tmp18Result = callback(closure_10, obj13);
     const tmp10Result3 = tmp10(tmp2[23]);
-    const tmp36 = closure_10;
   }
   obj[1] = tmp18Result;
   return callback2(channel(first[19]).ThemeContextProvider, obj);

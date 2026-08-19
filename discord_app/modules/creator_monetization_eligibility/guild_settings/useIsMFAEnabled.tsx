@@ -2,12 +2,12 @@
 
 // Module 16909 (useIsMFAEnabled)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import closure_2 from "handleFormInit" /* 8875 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import handleFormInit from "handleFormInit" /* 8875 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { MFALevels } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
 
 export const useIsMFAEnabled = function useIsMFAEnabled() {
   let obj = defaultAreStatesEqual;

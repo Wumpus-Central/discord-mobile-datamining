@@ -1,10 +1,10 @@
 // === Module 11772: getMutualGuildsLabel ===
 
 // Module 11772 (getMutualGuildsLabel)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = set.fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
 
 export default function getMutualGuildsLabel(arg0) {
   if (undefined === arg0) {

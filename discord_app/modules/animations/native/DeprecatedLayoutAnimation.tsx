@@ -1,22 +1,22 @@
 // === Module 5443: LayoutAnimation ===
 
 // Module 5443 (LayoutAnimation)
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import obj132 from "obj132" /* 2 */;
+import obj1322 from "obj132" /* 500 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import "module_150";
 import obj from "module_150" /* 150 */;
 
 ({ Keyboard: obj1, LayoutAnimation } = get_ActivityIndicator);
-const result = set.fileFinishedImporting("modules/animations/native/DeprecatedLayoutAnimation.tsx");
+const result = obj132.fileFinishedImporting("modules/animations/native/DeprecatedLayoutAnimation.tsx");
 
 export const CONFIG_GUILD_FOLDER_OPACITY = obj;
 export const CONFIG_GUILD_FOLDER_SCALEXY = obj;
 export const DeprecatedLayoutAnimation = function DeprecatedLayoutAnimation(duration) {
   let useReducedMotion = closure_4.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = set2.isAndroid();
-    const obj = set2;
+    useReducedMotion = obj1322.isAndroid();
   }
   if (!useReducedMotion) {
     if (null != duration) {
@@ -32,7 +32,7 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
     flag = false;
   }
   if (flag) {
-    let obj = set2;
+    let obj = obj1322;
     if (!obj.isAndroid()) {
       obj = { duration: null };
       obj[0] = keyboardDuration;
@@ -42,10 +42,10 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
   obj = { duration: keyboardDuration, update: obj1 };
   let useReducedMotion = closure_4.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = set2.isAndroid();
-    const obj6 = set2;
+    useReducedMotion = obj1322.isAndroid();
   }
   if (!useReducedMotion) {
     LayoutAnimation.configureNext(obj);
   }
+  obj1 = { duration: keyboardDuration, type: LayoutAnimation.Types.keyboard };
 };

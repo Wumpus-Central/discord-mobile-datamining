@@ -5,11 +5,11 @@ import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createUserWidgetFromServer" /* 5365 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
 
-require = arg1;
+require = fn;
 let c6 = null;
 let c7 = null;
 let c8 = false;
@@ -30,24 +30,23 @@ prototype["getPendingWidgets"] = function getPendingWidgets() {
 prototype["getSaveablePendingWidgets"] = function getSaveablePendingWidgets() {
   let found1 = null;
   if (null != _null) {
-    const mapped = _null.map((isUpdatable) => {
-      let tmp = isUpdatable;
-      closure_0 = isUpdatable;
-      if (!isUpdatable.isUpdatable()) {
+    const mapped = _null.map((item, index) => {
+      let tmp = item;
+      closure_0 = item;
+      if (!item.isUpdatable()) {
         let found;
         if (closure_7 != null) {
-          found = arr.find((getUniqueKey) => {
-            const uniqueKey = getUniqueKey.getUniqueKey();
-            return uniqueKey === isUpdatable.getUniqueKey();
+          found = closure_7.find((item, index) => {
+            const uniqueKey = item.getUniqueKey();
+            return uniqueKey === item.getUniqueKey();
           });
         }
         tmp = found;
-        arr = closure_7;
       }
       return tmp;
     });
     let found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
-    found1 = found.filter((isDiscardable) => !isDiscardable.isDiscardable());
+    found1 = found.filter((item, index) => !item.isDiscardable());
   }
   return found1;
 };
@@ -57,7 +56,6 @@ prototype["hasPendingChanges"] = function hasPendingChanges() {
     let tmp3 = null === c7;
     if (!tmp3) {
       tmp3 = !applyDefault.isEqual(c6, c7);
-      const obj = applyDefault;
     }
     tmp = tmp3;
   }
@@ -68,41 +66,35 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
   if (null != changedWidgets) {
     if (null != _null2) {
       const _Map = Map;
-      const map = new Map(_null2.map((id) => {
-        const items = [id.id, id];
+      const map = new Map(_null2.map((item, index) => {
+        const items = [item.id, item];
         return items;
       }));
       const _Map2 = Map;
-      map1 = new Map(changedWidgets.map((id) => {
-        const items = [id.id, id];
+      map1 = new Map(changedWidgets.map((item, index) => {
+        const items = [item.id, item];
         return items;
       }));
       let items = [];
       const items1 = [];
       const tmp37 = map1[Symbol.iterator]();
       while (tmp37 !== undefined) {
-        let tmp4 = callback;
         let tmp5 = callback(tmp2, 2);
         let obj = tmp5[1];
         let value = map.get(tmp5[0]);
         let isEqualResult = null != value;
         if (isEqualResult) {
-          let tmp9 = obj;
-          let tmp10 = value;
           isEqualResult = obj.isEqual(tmp7);
         }
         if (!isEqualResult) {
-          let tmp11 = obj;
           let arr = items.push(obj);
         }
         continue;
       }
       for (const item10029 of tmp32) {
-        let tmp15 = callback;
         let tmp16 = callback(item10029, 2);
         let tmp17 = tmp16[1];
         if (!map1.has(tmp16[0])) {
-          let tmp18 = tmp17;
           arr = items1.push(tmp17);
         }
         continue;
@@ -112,12 +104,10 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
       if (0 < changedWidgets.length) {
         while (true) {
           let tmp20 = changedWidgets[num];
-          let tmp21 = num;
           let id;
           if (tmp20 != null) {
             id = tmp20.id;
           }
-          let tmp23 = _null2;
           let tmp24 = _null2[num];
           let id1;
           if (tmp24 != null) {
@@ -169,7 +159,7 @@ prototype["canSaveChanges"] = function canSaveChanges() {
   const saveablePendingWidgets = this.getSaveablePendingWidgets();
   let everyResult = null != saveablePendingWidgets;
   if (everyResult) {
-    everyResult = saveablePendingWidgets.every((isValid) => isValid.isValid());
+    everyResult = saveablePendingWidgets.every((item, index) => item.isValid());
   }
   return everyResult;
 };
@@ -254,11 +244,11 @@ const widgetStore = new WidgetStore(dispatcherDefault, {
   WIDGET_SUGGESTED_REMOVE_GAME: function handleRemoveApplicationIdFromSuggestedGames(applicationId) {
     applicationId = applicationId.applicationId;
     const suggestedGamesIds = closure_9.suggestedGamesIds;
-    closure_9.suggestedGamesIds = suggestedGamesIds.filter((arg0) => arg0 !== applicationId);
+    closure_9.suggestedGamesIds = suggestedGamesIds.filter((item, index) => item !== applicationId);
     const prop = closure_9.suggestedWishlistGamesIds;
-    closure_9.suggestedWishlistGamesIds = prop.filter((arg0) => arg0 !== applicationId);
+    closure_9.suggestedWishlistGamesIds = prop.filter((item, index) => item !== applicationId);
   }
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/WidgetStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/WidgetStore.tsx");
 
 export default widgetStore;

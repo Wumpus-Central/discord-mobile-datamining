@@ -2,12 +2,12 @@
 
 // Module 10928 (fetchJoinSecret)
 import _modDef4090 from "module_4090" /* 4090 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 import { ActivityIntent } from "items3" /* 4481 */;
 import { MAIN_SURFACE } from "FrameLayoutModes" /* 8709 */;
 
-const require = arg1;
+const require = fn;
 function fetchJoinSecret(application) {
   const _require = arg1;
   ({ channelId, messageId } = application);
@@ -28,15 +28,15 @@ function fetchJoinSecret(application) {
   const HTTP = _require(530).HTTP;
   obj = { url: closure_4.USER_ACTIVITY_JOIN(userId, sessionId, id), retries: 3, query: tmp2, oldFormErrors: true, rejectWithError: true };
   const value = HTTP.get(obj);
-  return value.then((arg0) => f120160(arg0), () => {
-    let obj = id(application[7]);
-    obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
+  return value.then((result) => f120160(result), () => {
+    id(application[7]);
+    const obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
     obj.dispatch(obj);
     return false;
   });
 }
 ({ Endpoints: c4, DiscordConnectDeeplinks: c5, WebBrowserType: closure_6, ActivityFlags: error } = ME);
-const result = require("set").fileFinishedImporting("actions/GamesActionCreators.native.tsx");
+const result = require("obj132").fileFinishedImporting("actions/GamesActionCreators.native.tsx");
 
 export default {
   addGame() {
@@ -101,14 +101,14 @@ export default {
               if (undefined === locationObject) {
                 locationObject = {};
               }
-              let analyticsLocations = tmp25.analyticsLocations;
+              let analyticsLocations = closure_1_0.analyticsLocations;
               if (undefined === analyticsLocations) {
                 analyticsLocations = [];
               }
               if (embedded) {
                 let obj2 = closure_1_0(table[9]);
                 if (obj2.canLaunchFrame(application)) {
-                  let tmp14Result = tmp14(tmp13[10]);
+                  let tmp14Result = closure_1_1(tmp13[10]);
                   obj1 = { applicationId: null, surface: null };
                   obj1[0] = application.id;
                   obj1[1] = closure_1_9;
@@ -121,7 +121,7 @@ export default {
                   let obj3 = { applicationId: null, activityChannelId: null, source: null, locationObject: null, analyticsLocations: null };
                   obj3[0] = application.id;
                   c1 = channelId;
-                  tmp14Result = tmp14(tmp13[11]);
+                  tmp14Result = closure_1_1(tmp13[11]);
                   if (channelId == null) {
                     c1 = undefined;
                   }
@@ -136,7 +136,7 @@ export default {
                   return obj4;
                 }
               } else if (null != tmp7) {
-                let tmp9 = closure_1_10(tmp25, () => true);
+                let tmp9 = closure_1_10(closure_1_0, () => true);
               } else {
                 tmp9 = (function joinViaDeeplink(application) {
                   let f120160 = application;
@@ -153,9 +153,9 @@ export default {
                     }
                     return resolved;
                   }
-                  f120160 = (body) => {
-                    const join_url = body.body.join_url;
-                    const secret = body.body.secret;
+                  f120160 = (application) => {
+                    const join_url = application.body.join_url;
+                    const secret = application.body.secret;
                     if (null != join_url) {
                       id(application[6]).openURL(join_url, closure_1_6.SAFARI);
                       const obj3 = id(application[6]);
@@ -171,32 +171,29 @@ export default {
                       id(application[7]).dispatch(obj);
                       let flag2 = true;
                       const obj4 = id(application[7]);
+                    } else if (null == id) {
+                      id(application[7]);
+                      obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: null };
+                      obj[1] = application.id;
+                      obj.dispatch(obj);
+                      flag2 = false;
                     } else {
-                      if (null == id) {
-                        obj = id(application[7]);
-                        obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: null };
-                        obj[1] = application.id;
-                        obj.dispatch(obj);
-                        flag2 = false;
-                      } else {
-                        const _HermesInternal = HermesInternal;
-                        const combined = "" + str.replace(/\/+$/, "") + closure_1_5.GAME_INVITE_FRAGMENT + secret;
-                        id(application[6]).openURL(combined, closure_1_6.SAFARI);
-                        const obj6 = id(application[6]);
-                        obj1 = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
-                        ({ id: obj8[1], parent_id: obj8[2] } = application);
-                        obj1[3] = secret;
-                        obj1[4] = closure_1_8.PLAY;
-                        let flag = f120160.embedded;
-                        if (flag == null) {
-                          flag = false;
-                        }
-                        obj1[5] = flag;
-                        id(application[7]).dispatch(obj1);
-                        flag2 = true;
-                        const obj7 = id(application[7]);
+                      const _HermesInternal = HermesInternal;
+                      const combined = "" + id.replace(/\/+$/, "") + closure_1_5.GAME_INVITE_FRAGMENT + secret;
+                      id(application[6]).openURL(combined, closure_1_6.SAFARI);
+                      const obj6 = id(application[6]);
+                      obj1 = { type: "ACTIVITY_JOIN", applicationId: null, parentApplicationId: null, secret: null, intent: null, embedded: null };
+                      ({ id: obj8[1], parent_id: obj8[2] } = application);
+                      obj1[3] = secret;
+                      obj1[4] = closure_1_8.PLAY;
+                      let flag = f120160.embedded;
+                      if (flag == null) {
+                        flag = false;
                       }
-                      str = id;
+                      obj1[5] = flag;
+                      id(application[7]).dispatch(obj1);
+                      flag2 = true;
+                      const obj7 = id(application[7]);
                     }
                     return flag2;
                   };
@@ -218,13 +215,14 @@ export default {
                   const HTTP = tmp(tmp2[8]).HTTP;
                   obj = { url: closure_4.USER_ACTIVITY_JOIN(userId, sessionId, id), retries: 3, query: tmp8, oldFormErrors: true, rejectWithError: true };
                   const value = HTTP.get(obj);
-                  resolved = value.then((arg0) => f120160(arg0), () => {
-                    let obj = id(application[7]);
-                    obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
+                  resolved = value.then((result) => f120160(result), () => {
+                    id(application[7]);
+                    const obj = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
                     obj.dispatch(obj);
                     return false;
                   });
-                })(tmp25);
+                  const obj2 = id(application[7]);
+                })(closure_1_0);
               }
             }
           } else {

@@ -21,10 +21,10 @@ import create16 from "create" /* 7652 */;
 import create17 from "create" /* 7653 */;
 import create18 from "create" /* 7654 */;
 import create19 from "create" /* 7655 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
-require = arg1;
+require = fn;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
     items = [, , , , , , , , , , , , , , , , , , , , , ];
@@ -208,9 +208,8 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { properties: { oneofKind: "r" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
+  const obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -224,9 +223,9 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.isDefaultBase = pos.bool();
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = callback(pos.tag(), 2);
+    const tmp3 = callback(pos.tag(), 2);
   }
   return obj;
 };
@@ -368,6 +367,6 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
   return tag;
 };
 const premiumMarketingComponentPropertiesType = new PremiumMarketingComponentProperties$Type();
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx");
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx");
 
 export const PremiumMarketingComponentProperties = premiumMarketingComponentPropertiesType;

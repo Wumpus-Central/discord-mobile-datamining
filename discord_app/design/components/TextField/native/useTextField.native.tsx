@@ -1,11 +1,11 @@
 // === Module 7339: useTextFieldState ===
 
 // Module 7339 (useTextFieldState)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("design/components/TextField/native/useTextField.native.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("design/components/TextField/native/useTextField.native.tsx");
 
 export const useTextFieldState = function useTextFieldState(onClear) {
   ({ value, onChange } = onClear);
@@ -45,12 +45,10 @@ export const useTextFieldState = function useTextFieldState(onClear) {
   return obj;
 };
 export const useTextField = function useTextField(onClear, ref) {
-  onChange = onClear;
-  let obj = callback1;
   ref = callback1.useRef(null);
   onClear = ref;
   const items = [ref, onClear.onClear];
-  obj = {};
+  let obj = {};
   const callback = callback1.useCallback(() => {
     const current = onClear.current;
     if (current != null) {
@@ -65,7 +63,6 @@ export const useTextField = function useTextField(onClear, ref) {
   const merged = Object.assign(onClear);
   obj.onClear = callback;
   onChange = undefined;
-  onClear = undefined;
   obj = undefined;
   callback1 = undefined;
   ({ value, onChange } = obj);

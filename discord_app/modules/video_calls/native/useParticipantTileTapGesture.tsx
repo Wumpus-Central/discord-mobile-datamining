@@ -1,10 +1,10 @@
 // === Module 12436: useParticipantTileTapGesture ===
 
 // Module 12436 (useParticipantTileTapGesture)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
 
-const result = set.fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");
+const result = obj132.fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");
 
 export default function useParticipantTileTapGesture(arg0) {
   ({ onSingleTapStart, onDoubleTapStart } = arg0);

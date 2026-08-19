@@ -1,7 +1,7 @@
 // === Module 16283: withEqualityFn ===
 
 // Module 16283 (withEqualityFn)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ExpressionPickerViewType2 from "ExpressionPickerViewType" /* 1338 */;
 import uniqueIdDefault from "uniqueId" /* 5261 */;
 import identity from "identity" /* 700 */;
@@ -19,7 +19,7 @@ obj = {
 };
 const withEqualityFnResult = identity(createJSONStorage.persist(() => closure_3, obj));
 let c4 = withEqualityFnResult;
-const result = set.fileFinishedImporting("modules/expression_picker/ExpressionPickerStore.tsx");
+const result = obj132.fileFinishedImporting("modules/expression_picker/ExpressionPickerStore.tsx");
 
 export const openExpressionPicker = function openExpressionPicker(arg0, arg1, arg2) {
   const _require = arg0;
@@ -32,7 +32,6 @@ export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) 
   let tmp2 = undefined !== arg0 && arg0 !== state.activeViewType;
   if (!tmp2) {
     tmp2 = undefined !== arg1 && arg1 !== state.activeChannelId;
-    const tmp4 = undefined !== arg1 && arg1 !== state.activeChannelId;
   }
   if (!tmp2) {
     if (null !== state.activeView) {
@@ -89,6 +88,7 @@ export const toggleExpressionPicker = function toggleExpressionPicker(arg0, arg1
   dependencyMap = arg1;
   closure_2 = arg2;
   _require(705).batchUpdates(() => closure_1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: closure_1_4.getState().activeView }));
+  const obj2 = _require(705);
 };
 export const setExpressionPickerView = function setExpressionPickerView(arg0) {
   const _require = arg0;

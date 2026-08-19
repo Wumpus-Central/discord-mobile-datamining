@@ -1,11 +1,11 @@
 // === Module 6708: useStageParticipants ===
 
 // Module 6708 (useStageParticipants)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getActiveStageChannelIds" /* 4989 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import getActiveStageChannelIds from "getActiveStageChannelIds" /* 4989 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipantStoreHooks.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelParticipantStoreHooks.tsx");
 
 export const useStageParticipants = function useStageParticipants(id, SPEAKER) {
   const _require = id;
@@ -38,7 +38,7 @@ export const useActualStageSpeakerCount = function useActualStageSpeakerCount(id
   const items = [closure_3];
   const items1 = [id];
   return _require(589).useStateFromStores(items, () => {
-    const mutableParticipants = closure_1_3.getMutableParticipants(id, id(closure_1_1[4]).StageChannelParticipantNamedIndex.SPEAKER);
-    return mutableParticipants.filter((type) => type.type === callback(table[4]).StageChannelParticipantTypes.VOICE).length;
+    const mutableParticipants = closure_1_3.getMutableParticipants(id, id(dependencyMap[4]).StageChannelParticipantNamedIndex.SPEAKER);
+    return mutableParticipants.filter((item, index) => item.type === callback(table[4]).StageChannelParticipantTypes.VOICE).length;
   }, items1);
 };

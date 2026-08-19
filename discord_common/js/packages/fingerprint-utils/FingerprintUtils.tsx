@@ -1,9 +1,9 @@
 // === Module 513: extractId ===
 
 // Module 513 (extractId)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx");
 
 export const extractId = function extractId(fingerprint) {
   return fingerprint.split(".")[0];

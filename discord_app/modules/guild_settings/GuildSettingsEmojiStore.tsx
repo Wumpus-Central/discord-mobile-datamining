@@ -2,17 +2,17 @@
 
 // Module 16783 (initialize)
 import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "prototype" /* 16784 */;
-import closure_1 from "handleConnectionOpen" /* 4197 */;
+import prototype2 from "prototype" /* 16784 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
 import importDefaultResult from "priv" /* 1405 */;
 
 let closure_2 = {};
 let closure_3 = {};
 let c4 = 0;
 let obj = { max: 5, maxAge: null };
-obj[1] = setDefault.Millis.HOUR;
+obj[1] = obj132Default.Millis.HOUR;
 importDefaultResult = new importDefaultResult(obj);
 let c5 = importDefaultResult;
 const Store = initializeDefault.Store;
@@ -42,11 +42,11 @@ GuildSettingsEmojiStore.displayName = "GuildSettingsEmojiStore";
 obj = {
   EMOJI_DELETE: function handleEmojiDelete(arg0) {
     ({ guildId, emojiId: closure_0 } = arg0);
-    dependencyMap2[guildId] = dependencyMap2[guildId].filter((id) => id.id !== closure_0);
+    dependencyMap2[guildId] = dependencyMap2[guildId].filter((item, index) => item.id !== closure_0);
   },
   EMOJI_FETCH_SUCCESS: function handleFetchSuccess(emojis) {
     emojis = emojis.emojis;
-    closure_3[emojis.guildId] = emojis.map((arg0) => new closure_0(arg0));
+    closure_3[emojis.guildId] = emojis.map((item, index) => new closure_0(item));
   },
   EMOJI_FETCH_FAILURE: function handleFetchFailure(guildId) {
     closure_3[guildId.guildId] = [];
@@ -70,6 +70,6 @@ obj = {
   }
 };
 const guildSettingsEmojiStore = new GuildSettingsEmojiStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsEmojiStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/GuildSettingsEmojiStore.tsx");
 
 export default guildSettingsEmojiStore;

@@ -4,9 +4,9 @@
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
+require = fn;
 let c3 = 86400000;
 let c4 = null;
 let c5 = null;
@@ -28,7 +28,7 @@ Object.defineProperty(prototype, "loading", {
   set: undefined
 });
 Object.defineProperty(prototype, "methods", {
-  get: function methods(arg0) {
+  get: function methods(initiateAgeVerification) {
     return c4;
   },
   set: undefined
@@ -65,9 +65,9 @@ prototype["getReactiveCheckPassed"] = function getReactiveCheckPassed() {
 prototype["shouldCallReactiveCheck"] = function shouldCallReactiveCheck() {
   let tmp2 = "passed" !== unchecked;
   if (tmp2) {
-    let tmp3 = "suppress" !== tmp;
+    let tmp3 = "suppress" !== unchecked;
     if (tmp3) {
-      let tmp4 = "miss" === tmp;
+      let tmp4 = "miss" === unchecked;
       if (tmp4) {
         tmp4 = null != c9;
       }
@@ -196,6 +196,6 @@ const ageVerificationStore = new AgeVerificationStore(dispatcherDefault, {
     c6 = null;
   }
 });
-let result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/age_assurance/AgeVerificationStore.tsx");
 
 export default ageVerificationStore;

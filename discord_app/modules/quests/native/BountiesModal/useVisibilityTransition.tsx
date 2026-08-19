@@ -1,13 +1,13 @@
 // === Module 14364: useVisibilityTransition ===
 
 // Module 14364 (useVisibilityTransition)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_4 = { code: "function useVisibilityTransitionTsx1(){const{withTiming,visibility,visible,entranceTiming,exitTiming,runOnJS,animationCallbackJSThread}=this.__closure;return{opacity:withTiming(visibility,visible?entranceTiming:exitTiming,'respect-motion-settings',function(){'worklet';runOnJS(animationCallbackJSThread)();})};}" };
 let closure_5 = { code: "function useVisibilityTransitionTsx2(){const{runOnJS,animationCallbackJSThread}=this.__closure;runOnJS(animationCallbackJSThread)();}" };
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useVisibilityTransition.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useVisibilityTransition.tsx");
 
 export const useVisibilityTransition = function useVisibilityTransition(visible) {
   visible = visible.visible;
@@ -33,14 +33,12 @@ export const useVisibilityTransition = function useVisibilityTransition(visible)
   if (visible) {
     num = 1;
   }
-  obj = { opacityStyle: null, shouldRender: null };
   let fn = function k() {
-    let obj = visible(entranceTiming[3]);
-    obj = { opacity: null };
+    visible(entranceTiming[3]);
     const fn = function n() {
-      closure_1_0(closure_1_1[2]).runOnJS(closure_4)();
+      visible(entranceTiming[2]).runOnJS(closure_4)();
     };
-    obj = { runOnJS: visible(entranceTiming[2]).runOnJS, animationCallbackJSThread: callback };
+    const obj = { runOnJS: visible(entranceTiming[2]).runOnJS, animationCallbackJSThread: callback };
     fn.__closure = obj;
     fn.__workletHash = 11904317879470;
     fn.__initData = num;

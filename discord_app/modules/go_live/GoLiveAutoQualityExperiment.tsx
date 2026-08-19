@@ -2,15 +2,15 @@
 
 // Module 10936 (getGoLiveAutoQualityExperimentConfig)
 import Storage3 from "Storage" /* 595 */;
-import closure_2 from "initialize" /* 1212 */;
-import closure_3 from "ApplicationStreamPresets" /* 4562 */;
+import watchStream from "watchStream" /* 9860 */;
+import initialize from "initialize" /* 1212 */;
+import ApplicationStreamPresets from "ApplicationStreamPresets" /* 4562 */;
 import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4524 */;
 import importDefaultResult from "getUnitId" /* 1368 */;
 
-require = arg1;
+require = fn;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
-obj = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
 obj = { 1: null, 2: null };
 const obj1 = {};
 const merged = Object.assign(obj);
@@ -24,7 +24,7 @@ obj2.defaultAutoQuality = true;
 obj[2] = obj2;
 obj[3] = obj;
 let closure_6 = importDefaultResult(obj);
-let result = require("set").fileFinishedImporting("modules/go_live/GoLiveAutoQualityExperiment.tsx");
+let result = require("obj132").fileFinishedImporting("modules/go_live/GoLiveAutoQualityExperiment.tsx");
 
 export const getGoLiveAutoQualityExperimentConfig = function getGoLiveAutoQualityExperimentConfig(location) {
   return store.getConfig({ location: location.location });
@@ -47,10 +47,10 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
         const obj = { preset: null, resolution: null, frameRate: null, soundshareEnabled: null, noTrack: true };
         obj[0] = tmp9.PRESET_AUTO;
         ({ resolution: obj2[1], fps: obj2[2], soundshareEnabled: obj2[3] } = state);
-        tmp(9860).updateStreamSettings(obj);
-        const Storage2 = tmp(595).Storage;
+        watchStream.updateStreamSettings(obj);
+        const Storage2 = Storage3.Storage;
         const result = Storage2.set(GoLiveAutoQualityMigrationVersion, 1);
-        const tmpResult = tmp(9860);
+        const tmpResult = watchStream;
       }
     }
   }

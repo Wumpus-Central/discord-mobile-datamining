@@ -3,12 +3,12 @@
 // Module 1994 (_getSystemLocale)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { setAppLocale } from "_setAppLocale" /* 1995 */;
-import closure_5 from "handleConnectionClosedOrResumed" /* 1340 */;
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
 import { systemLocale } from "getSystemLocale" /* 1236 */;
 
-const require = arg1;
+const require = fn;
 function _getSystemLocale() {
   const self = this;
   const tmp = callback(function*() {
@@ -50,15 +50,14 @@ function _getSystemLocale() {
               }
             }
             if (null != prop) {
-              const app2 = tmp23(4004).app;
+              const app2 = closure_1_1(4004).app;
               const preferredSystemLanguages = app2.getPreferredSystemLanguages();
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = preferredSystemLanguages.then((arg0) => arg0[0]);
+              obj1[0] = preferredSystemLanguages.then((result) => result[0]);
               return obj1;
             }
-            tmp23 = closure_1_1;
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -130,8 +129,8 @@ let currentLocale = require("getSystemLocale").intl.currentLocale;
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-})().then((arg0) => {
-  closure_8 = arg0;
+})().then((result) => {
+  closure_8 = result;
 });
 const Store = initializeDefault.Store;
 class LocaleStore extends Store {
@@ -182,16 +181,6 @@ const localeStore = new LocaleStore(dispatcherDefault, {
     setAppLocale(locale);
   }
 });
-let obj = {
-  OVERLAY_INITIALIZE: handleUpdate,
-  CACHE_LOADED: handleUpdate,
-  CONNECTION_OPEN: handleUpdate,
-  USER_SETTINGS_PROTO_UPDATE: handleUpdate,
-  USER_SETTINGS_LOCALE_OVERRIDE: function handleLocaleOverride(locale) {
-    locale = locale.locale;
-    setAppLocale(locale);
-  }
-};
 const promise = (function getSystemLocale() {
   const self = this;
   const apply = _getSystemLocale.apply;
@@ -202,6 +191,6 @@ const promise = (function getSystemLocale() {
   }
   return applyArgumentsResult;
 })();
-const result = require("set").fileFinishedImporting("modules/user_settings/LocaleStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/LocaleStore.tsx");
 
 export default localeStore;

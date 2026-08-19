@@ -1,12 +1,11 @@
 // === Module 1402: set ===
 
 // Module 1402 (set)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const obj = { ALL: null };
-let set = new Set(["match_all", "match_some"]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx");
+const obj = { ALL: new Set(["match_all", "match_some"]) };
+const set = new Set(["match_all", "match_some"]);
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx");
 
 export const ThreadSearchTagSetting = { MATCH_ALL: "match_all", MATCH_SOME: "match_some" };
 export const ThreadSearchTagSettingSets = obj;

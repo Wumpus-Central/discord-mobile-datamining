@@ -8,7 +8,7 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 function handleWebhookCreateUpdate(arg0) {
   ({ guildId, webhook } = arg0);
   if (null == dependencyMap[guildId]) {
-    tmp[guildId] = {};
+    dependencyMap[guildId] = {};
   }
   dependencyMap[guildId][webhook.id] = webhook;
 }
@@ -23,23 +23,22 @@ prototype["isFetching"] = function isFetching(arg0, arg1) {
   if (null == arg1) {
     str = "guild";
   }
-  return null != closure_4["" + arg0 + ":" + str];
+  return null != table["" + arg0 + ":" + str];
 };
-prototype["getWebhooksForGuild"] = function getWebhooksForGuild(arg0) {
-  if (null == dependencyMap[arg0]) {
-    tmp[arg0] = {};
+prototype["getWebhooksForGuild"] = function getWebhooksForGuild(id) {
+  if (null == dependencyMap[id]) {
+    dependencyMap[id] = {};
   }
-  return applyDefault.values(dependencyMap[arg0]);
+  return applyDefault.values(dependencyMap[id]);
 };
-prototype["getWebhooksForChannel"] = function getWebhooksForChannel(arg0, arg1) {
+prototype["getWebhooksForChannel"] = function getWebhooksForChannel(id, arg1) {
   importDefault = arg1;
-  if (null == dependencyMap[arg0]) {
-    tmp2[arg0] = {};
+  if (null == dependencyMap[id]) {
+    dependencyMap[id] = {};
   }
-  const tmp = applyDefault;
-  const values = applyDefault(dependencyMap[arg0]).values();
-  const tmpResult = applyDefault(dependencyMap[arg0]);
-  return values.filter((channel_id) => channel_id.channel_id === closure_0).value();
+  const values = applyDefault(dependencyMap[id]).values();
+  const tmpResult = applyDefault(dependencyMap[id]);
+  return values.filter((item, index) => item.channel_id === closure_0).value();
 };
 Object.defineProperty(prototype, "error", {
   get: function error() {
@@ -58,20 +57,20 @@ const webhooksStore = new WebhooksStore(dispatcherDefault, {
       let items = [];
       if (null != channelId) {
         if (null == dependencyMap[guildId]) {
-          tmp16[guildId] = {};
+          dependencyMap[guildId] = {};
         }
         const tmp15 = channelId(obj[1]);
         const values = channelId(obj[1])(dependencyMap[guildId]).values();
         const tmp15Result = channelId(obj[1])(dependencyMap[guildId]);
-        items = values.filter((channel_id) => channel_id.channel_id !== channelId).value();
-        const iter = values.filter((channel_id) => channel_id.channel_id !== channelId);
+        items = values.filter((item, index) => item.channel_id !== channelId).value();
+        const iter = values.filter((item, index) => item.channel_id !== channelId);
       }
       obj = {};
       dependencyMap[guildId] = obj;
       const combined = items.concat(webhooks);
-      const item = combined.forEach((id) => {
-        obj[id.id] = id;
-        return id;
+      const item = combined.forEach((item, index) => {
+        obj[item.id] = item;
+        return item;
       });
       let str4 = channelId;
       if (null == channelId) {
@@ -118,6 +117,6 @@ const webhooksStore = new WebhooksStore(dispatcherDefault, {
     delete tmp[tmp2];
   }
 });
-const result = require("set").fileFinishedImporting("stores/WebhooksStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/WebhooksStore.tsx");
 
 export default webhooksStore;

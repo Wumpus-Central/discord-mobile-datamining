@@ -2,27 +2,27 @@
 
 // Module 12603 (useActiveSpeakerPillScrollHandler)
 import isIterable from "isIterable" /* 4006 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import identity from "identity" /* 700 */;
 
-require = arg1;
+require = fn;
 let closure_4 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   return {
     showActiveSpeakerPill: false,
     setShowActiveSpeakerPill(arg0) {
       const callback = arg0;
-      return callback(closure_1_1[3]).batchUpdates(() => callback({ showActiveSpeakerPill: callback }));
+      return callback(dependencyMap[3]).batchUpdates(() => callback({ showActiveSpeakerPill: callback }));
     },
     listRef: null,
     setListRef(arg0) {
       const callback = arg0;
-      return callback(closure_1_1[3]).batchUpdates(() => callback({ listRef: callback }));
+      return callback(dependencyMap[3]).batchUpdates(() => callback({ listRef: callback }));
     }
   };
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/StageChannelListStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/StageChannelListStore.tsx");
 
 export const useActiveSpeakerPillScrollHandler = function useActiveSpeakerPillScrollHandler() {
   const tmp = callback(callback2((arg0) => {

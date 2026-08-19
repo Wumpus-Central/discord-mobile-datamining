@@ -2,14 +2,14 @@
 
 // Module 8268 (getPremiumGroupInviteEmbedText)
 import messagesProxyDefault from "messagesProxy" /* 2917 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
+import obj132 from "obj132" /* 2 */;
 
-const require = arg1;
+const require = fn;
 ({ getPremiumGroupProductName: c4, HELP_CENTER_LINK: c5 } = SubscriptionStatusTypes);
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.native.tsx");
 for (const key10025 in require("getPriceString")) {
-  let tmp4 = key10025;
   arg5[key10025] = require("getPriceString")[key10025];
   continue;
 }
@@ -23,7 +23,7 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
       const recipients = channel.recipients;
       let found;
       if (recipients != null) {
-        found = recipients.find((arg0) => arg0 !== sender.id);
+        found = recipients.find((item, index) => item !== sender.id);
       }
       user = user.getUser(found);
       let nameFromUserResult = null;
@@ -35,9 +35,8 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
     }
     let tmp15 = null;
     if (null != tmp8) {
-      let obj = { message: null, header: null, body: null };
       const intl4 = sender(1236).intl;
-      obj = { receiverName: null, premiumGroupProductName: null };
+      let obj = { receiverName: null, premiumGroupProductName: null };
       obj[0] = tmp8;
       obj[1] = tmp;
       obj[0] = intl4.format(messagesProxyDefault.MkcFjx, obj);

@@ -1,20 +1,20 @@
 // === Module 11051: useCurrentUserHasAutomodQuarantinedProfile ===
 
 // Module 11051 (useCurrentUserHasAutomodQuarantinedProfile)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 9537 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "handleConnectionOpen" /* 4197 */;
+import noop from "noop" /* 19 */;
+import zustandStore from "zustandStore" /* 9537 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
 import ME from "ME" /* 676 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 import { ProfileCustomizationSubsection as closure_12 } from "MAX_FAVORITES" /* 685 */;
 
-const require = arg1;
+const require = fn;
 ({ Permissions: c9, UserSettingsSections: c10 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");
 
 export const useCurrentUserHasAutomodQuarantinedProfile = function useCurrentUserHasAutomodQuarantinedProfile(arg0) {
   const _require = arg0;
@@ -25,7 +25,7 @@ export const useCurrentUserHasAutomodQuarantinedProfile = function useCurrentUse
       return false;
     } else {
       const id = closure_1_4.getId();
-      return callback(closure_1_1[11]).hasAutomodQuarantinedProfile(closure_1_5.getMember(tmp, id));
+      return callback(dependencyMap[11]).hasAutomodQuarantinedProfile(closure_1_5.getMember(tmp, id));
     }
   }, items1);
 };
@@ -47,32 +47,31 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
         if (member != null) {
           flags = member.flags;
         }
-        const automodQuarantinedProfileFlags = id(closure_1_1[11]).getAutomodQuarantinedProfileFlags(flags);
+        const automodQuarantinedProfileFlags = id(dependencyMap[11]).getAutomodQuarantinedProfileFlags(flags);
         if (0 !== automodQuarantinedProfileFlags.size) {
-          if (!automodQuarantinedProfileFlags.has(closure_1_11.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
-            if (automodQuarantinedProfileFlags.has(tmp9.AUTOMOD_QUARANTINED_BIO)) {
-              const intl3 = tmp7(tmp8[12]).intl;
-              const items = [intl3.string(tmp7(tmp8[12]).t.dZh1vz)];
+          if (!automodQuarantinedProfileFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
+            if (automodQuarantinedProfileFlags.has(GuildMemberFlags.AUTOMOD_QUARANTINED_BIO)) {
+              const intl3 = id(dependencyMap[12]).intl;
+              const items = [intl3.string(id(dependencyMap[12]).t.dZh1vz)];
               obj.bio = items;
             }
           } else {
             if (null == id) {
-              const intl2 = tmp7(tmp8[12]).intl;
+              const intl2 = id(dependencyMap[12]).intl;
               let str = guild.name;
               if (str == null) {
                 str = "";
               }
               obj = { guildName: null };
               obj[0] = str;
-              guild = [intl2.formatToPlainString(tmp7(tmp8[12]).t.WBUh3O, obj)];
+              guild = [intl2.formatToPlainString(id(dependencyMap[12]).t.WBUh3O, obj)];
               let items1 = guild;
             } else {
-              const intl = tmp7(tmp8[12]).intl;
-              items1 = [intl.string(tmp7(tmp8[12]).t.EPZCrM)];
+              const intl = id(dependencyMap[12]).intl;
+              items1 = [intl.string(id(dependencyMap[12]).t.EPZCrM)];
             }
             obj.nick = items1;
           }
-          tmp9 = closure_1_11;
         }
         return obj;
       }
@@ -83,15 +82,13 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
 export const useOpenFixQuarantinedProfileModal = function useOpenFixQuarantinedProfileModal(guildId) {
   guildId = guildId.guildId;
   const scrollPosition = guildId.scrollPosition;
-  let stateFromStores;
-  let stateFromStores1;
   const items = [closure_6];
   const items1 = [guildId];
-  stateFromStores = guildId(scrollPosition[10]).useStateFromStores(items, () => closure_1_6.getGuild(guildId), items1);
+  const stateFromStores = guildId(scrollPosition[10]).useStateFromStores(items, () => closure_1_6.getGuild(guildId), items1);
   let obj = guildId(scrollPosition[10]);
   const items2 = [closure_7];
   const items3 = [stateFromStores];
-  stateFromStores1 = guildId(scrollPosition[10]).useStateFromStores(items2, () => {
+  const stateFromStores1 = guildId(scrollPosition[10]).useStateFromStores(items2, () => {
     let canResult = null != stateFromStores;
     if (canResult) {
       canResult = closure_1_7.can(closure_1_9.CHANGE_NICKNAME, tmp);

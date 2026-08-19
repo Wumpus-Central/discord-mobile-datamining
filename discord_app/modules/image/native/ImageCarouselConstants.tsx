@@ -1,9 +1,9 @@
 // === Module 10266: IMAGE_CAROUSEL_TILE_HEIGHT ===
 
 // Module 10266 (IMAGE_CAROUSEL_TILE_HEIGHT)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/image/native/ImageCarouselConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/image/native/ImageCarouselConstants.tsx");
 
 export const IMAGE_CAROUSEL_TILE_HEIGHT = 60;
 export const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = 6;

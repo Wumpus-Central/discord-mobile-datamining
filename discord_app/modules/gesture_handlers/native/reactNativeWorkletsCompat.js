@@ -1,10 +1,10 @@
 // === Module 4114: ? ===
 
 // Module 4114
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _mod4115 from "module_4115" /* 4115 */;
 
-const result = set.fileFinishedImporting("modules/gesture_handlers/native/reactNativeWorkletsCompat.js");
+const result = obj132.fileFinishedImporting("modules/gesture_handlers/native/reactNativeWorkletsCompat.js");
 
 export default {
   scheduleOnUI(fn) {

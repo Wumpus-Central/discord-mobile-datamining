@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-require = arg1;
+require = fn;
 const MaintenanceStore = "MaintenanceStore";
 let c3 = null;
 let c4 = null;
@@ -43,8 +43,8 @@ prototype["getScheduledMaintenance"] = function getScheduledMaintenance() {
         const _Date = Date;
         const _Date2 = Date;
         const timestamp = Date.now();
-        const date = new Date(scheduled_until);
         tmp3 = null;
+        const date = new Date(scheduled_until);
       }
     }
   }
@@ -71,6 +71,6 @@ const maintenanceStore = new MaintenanceStore(dispatcherDefault, {
     }
   }
 });
-let result = require("set").fileFinishedImporting("stores/StatusPageStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/StatusPageStore.tsx");
 
 export default maintenanceStore;

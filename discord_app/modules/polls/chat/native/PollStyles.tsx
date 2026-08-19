@@ -1,7 +1,7 @@
 // === Module 8433: normal ===
 
 // Module 8433 (normal)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import NativeShadowType from "NativeShadowType" /* 8435 */;
 
 function normal(border) {
@@ -21,9 +21,8 @@ function normalVote(border, arg1) {
   if (typeof normal !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let obj = {};
   const _require = border;
-  obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
+  const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
   const match = _require(4486).match(arg1);
   const str = _require(4486);
   obj[3] = match.with(_require(8434).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => border.colors.WHITE).otherwise(() => border.colors.TEXT_DEFAULT);
@@ -52,15 +51,14 @@ function victorNotSelected(colors) {
   obj.radioStyle = NativeShadowType.PollRadioStyle.NONE;
   return obj;
 }
-const result = set.fileFinishedImporting("modules/polls/chat/native/PollStyles.tsx");
+const result = obj132.fileFinishedImporting("modules/polls/chat/native/PollStyles.tsx");
 
 export const pollStyleSets = {
   loserSelected(colors) {
     if (typeof notVoted !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = {};
-    obj = {};
+    const obj = {};
     const merged = Object.assign(normalVote(colors, arg1));
     obj.answerFill = colors.colors.INTERACTIVE_BACKGROUND_ACTIVE;
     obj.radioStyle = NativeShadowType.PollRadioStyle.NONE;
@@ -72,14 +70,14 @@ export const pollStyleSets = {
   },
   normal,
   notVoted,
-  selected(guild, arg1, selected) {
+  selected(iconBackground, arg1, selected) {
     const obj = {};
-    const merged = Object.assign(normalVote(guild, arg1));
-    obj.border = guild.colors.BACKGROUND_BRAND;
+    const merged = Object.assign(normalVote(iconBackground, arg1));
+    obj.border = iconBackground.colors.BACKGROUND_BRAND;
     obj.borderWidth = 1;
     obj.radioStyle = NativeShadowType.PollRadioStyle.FILLED;
-    obj.radioBackground = guild.colors.REDESIGN_INPUT_CONTROL_SELECTED;
-    obj.radioForeground = guild.colors.STATUS_POSITIVE_TEXT;
+    obj.radioBackground = iconBackground.colors.REDESIGN_INPUT_CONTROL_SELECTED;
+    obj.radioForeground = iconBackground.colors.STATUS_POSITIVE_TEXT;
     return obj;
   },
   victorNotSelected,
@@ -87,8 +85,7 @@ export const pollStyleSets = {
     if (typeof victorNotSelected !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = {};
-    obj = {};
+    const obj = {};
     const merged = Object.assign(normalVote(colors, arg1));
     obj.border = colors.colors.STATUS_POSITIVE;
     obj.borderWidth = 1;

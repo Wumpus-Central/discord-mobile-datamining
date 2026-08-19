@@ -3,8 +3,8 @@
 // Module 13306 (handleUserStoreUpdates)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "comparator" /* 1980 */;
-import closure_1 from "mergeGuildAvatar" /* 1922 */;
+import comparator from "comparator" /* 1980 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { MFALevels } from "ME" /* 676 */;
 
 function handleUserStoreUpdates() {
@@ -46,6 +46,6 @@ const guildMFAWarningStore = new GuildMFAWarningStore(dispatcherDefault, {
     return true;
   }
 });
-let result = require("set").fileFinishedImporting("stores/channel_notices/GuildMFAWarningStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/channel_notices/GuildMFAWarningStore.tsx");
 
 export default guildMFAWarningStore;

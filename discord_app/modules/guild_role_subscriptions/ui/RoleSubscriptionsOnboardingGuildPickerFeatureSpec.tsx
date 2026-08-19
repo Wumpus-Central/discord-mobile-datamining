@@ -3,11 +3,11 @@
 // Module 13351
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "getHash" /* 4288 */;
+import getHash from "getHash" /* 4288 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");
 
 export default {
   title() {
@@ -24,8 +24,8 @@ export default {
     return initialize.useStateFromStores(items, () => (id) => {
       let result = callback2(id, arg1);
       if (result) {
-        let obj = callback(7226);
-        obj = { guild: null, isOwner: true, canManageGuildRoleSubscriptions: true, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
+        callback(7226);
+        const obj = { guild: null, isOwner: true, canManageGuildRoleSubscriptions: true, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
         obj[0] = id;
         obj[3] = callback(7227).isUserInCreatorMonetizationEligibleCountry();
         const obj3 = callback(7227);

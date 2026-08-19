@@ -3,7 +3,6 @@
 // Module 4800 (processChannel)
 import clearAllDefault from "clearAll" /* 1220 */;
 import prototype from "ensureGuildLoaded" /* 1391 */;
-import set from "set" /* 2 */;
 
 function processChannel(isSpam) {
   isSpam = isSpam.isSpam;
@@ -39,8 +38,8 @@ function handleConnectionOpen() {
   set.clear();
   set1.clear();
   const values = Object.values(prototype.getMutablePrivateChannels());
-  const item = values.forEach((arg0) => {
-    callback(arg0);
+  const item = values.forEach((item, index) => {
+    callback(item);
   });
   c3 = true;
 }
@@ -52,10 +51,10 @@ function handleChannelCreate(channel) {
 }
 function handleChannelUpdates(arg0) {
   while (tmp !== undefined) {
-    let tmp3 = processChannel;
     let tmp4 = processChannel(tmp2);
     continue;
   }
+  tmp = arg0.channels[Symbol.iterator]();
 }
 function handleChannelDelete(channel) {
   channel = channel.channel;
@@ -136,6 +135,6 @@ obj[5] = handleChannelDelete;
 obj[6] = handleSpamAcceptOptimistic;
 prototype = new prototype(obj, tmp2, tmp, Object, defineProperty, CACHE_LOADED_LAZY, handleChannelCreate, handleChannelUpdates, handleChannelDelete);
 // ThrowIfThisInitialized (0x7c)
-const result = set.fileFinishedImporting("modules/message_request/SpamMessageRequestStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/message_request/SpamMessageRequestStore.tsx");
 
 export default prototype;

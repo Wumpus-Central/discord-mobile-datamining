@@ -5,17 +5,17 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _modDef4656 from "module_4656" /* 4656 */;
 import Text from "Text" /* 4734 */;
 import PressableBase from "PressableBase" /* 5433 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "handleSetLocationMetadata" /* 8581 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
+import handleSetLocationMetadata from "handleSetLocationMetadata" /* 8581 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import { AuthStates } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 class LinkButton {
   constructor(arg0) {
     str = global.variant;
@@ -34,8 +34,7 @@ class LinkButton {
   }
 }
 function handlePressPasswordManagerHint() {
-  let obj = _modDef4656;
-  obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+  let obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.lzsy7t);
   const intl2 = getSystemLocale.intl;
@@ -49,6 +48,7 @@ function handlePressPasswordManagerHint() {
       const result = callback2(table[14]).openAccessibilitySettings();
       const obj2 = callback2(table[14]);
     }
+    obj = callback(table[13]);
   };
   obj.show(obj);
 }
@@ -62,7 +62,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   obj[5] = { marginTop: 32, marginBottom: num };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/auth/native/components/Login.tsx");
+let result = require("obj132").fileFinishedImporting("modules/auth/native/components/Login.tsx");
 
 export default function Login(isMultiAccount) {
   let flag = isMultiAccount.isMultiAccount;
@@ -72,18 +72,11 @@ export default function Login(isMultiAccount) {
   let _require = flag;
   let navigation;
   let ref;
-  let callback;
   let callback2;
   let React;
-  let first;
   closure_7 = undefined;
   c8 = undefined;
-  let first1;
-  let callback3;
-  closure_11 = undefined;
-  callback = undefined;
-  closure_13 = undefined;
-  let callback1;
+  let callback;
   const tmp3 = callback(navigation(ref[15])());
   let obj = _require(ref[16]);
   navigation = obj.useNavigation();
@@ -98,13 +91,13 @@ export default function Login(isMultiAccount) {
   const tmp10 = callback2(React.useState(false), 2);
   [tmp13, c5] = callback2(React.useState({}), 2);
   const tmp14 = callback2(React.useState(""), 2);
-  first = tmp14[0];
+  const first = tmp14[0];
   closure_7 = tmp14[1];
   const tmp12 = callback2(React.useState({}), 2);
   [c8, tmp17] = callback2(React.useState(""), 2);
   const tmp18 = callback2(React.useState(false), 2);
-  first1 = tmp18[0];
-  callback3 = tmp18[1];
+  const first1 = tmp18[0];
+  const callback3 = tmp18[1];
   closure_11 = React.useRef(undefined);
   const effect = React.useEffect(() => () => {
     clearTimeout(ref.current);
@@ -164,7 +157,7 @@ export default function Login(isMultiAccount) {
             v0 = 3;
             v02 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = obj3.forgotPassword(closure_1_6);
+            obj1[0] = obj3.forgotPassword(first);
             return obj1;
           }
         } else if (1 === tmp8) {
@@ -228,7 +221,6 @@ export default function Login(isMultiAccount) {
       }
     }
   }), items1);
-  _require = undefined;
   _require = callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -334,7 +326,7 @@ export default function Login(isMultiAccount) {
     return iter;
   });
   const items2 = [callback, flag];
-  callback1 = React.useCallback(function() {
+  const callback1 = React.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -375,9 +367,9 @@ export default function Login(isMultiAccount) {
             let message = tmp4;
             c0 = tmp8;
             c0 = undefined;
-            if (!closure_1_9) {
+            if (!first1) {
               if (!closure_1_8.getIsPasswordlessActive()) {
-                let obj3 = closure_1_1(closure_1_2[24]);
+                let obj3 = navigation(ref[24]);
                 const passkeyAuthenticator = obj3.getPasskeyAuthenticator();
                 v0(true);
                 v02({});
@@ -387,7 +379,7 @@ export default function Login(isMultiAccount) {
                 v0 = 3;
                 v02 = 1;
                 let obj2 = { value: null, done: false };
-                obj2[0] = closure_1_1(closure_1_2[19]).authenticatePasswordless(obj1);
+                obj2[0] = navigation(ref[19]).authenticatePasswordless(obj1);
                 return obj2;
               }
             }
@@ -397,11 +389,11 @@ export default function Login(isMultiAccount) {
           if (2 === tmp8) {
             c3 = 1;
             message = closure_2;
-            if (message instanceof callback(closure_1_2[25]).APIError) {
-              obj2 = callback(closure_1_2[23]);
-              callback = obj2.getAuthenticationErrorsFromAPIError(closure_1_1);
+            if (message instanceof callback(ref[25]).APIError) {
+              obj2 = callback(ref[23]);
+              callback = obj2.getAuthenticationErrorsFromAPIError(navigation);
               callback2(callback);
-            } else if (!(closure_1_1 instanceof callback(closure_1_2[26]).IgnorableWebAuthnError)) {
+            } else if (!(navigation instanceof callback(ref[26]).IgnorableWebAuthnError)) {
               obj3 = { message: null };
               obj3[0] = message.message;
               v02(obj3);
@@ -458,7 +450,6 @@ export default function Login(isMultiAccount) {
     obj[4] = intl.string(tmp4(tmp2[12]).t.EiwJkN);
     obj[5] = callback2;
     tmp30Result = callback3(tmp4(tmp2[31]).Button, obj);
-    const tmp30 = callback3;
   }
   let tmp4Result = tmp4(tmp2[33]);
   if (tmp4Result.isMetaQuest()) {

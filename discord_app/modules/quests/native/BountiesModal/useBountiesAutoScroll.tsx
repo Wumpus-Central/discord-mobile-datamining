@@ -1,15 +1,14 @@
 // === Module 14368: set ===
 
 // Module 14368 (set)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { AppState } from "get ActivityIndicator" /* 17 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
-import set from "set" /* 2 */;
 
-const require = arg1;
-let set = new Set();
-let result = set.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesAutoScroll.tsx");
+const require = fn;
+const set = new Set();
+let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesAutoScroll.tsx");
 
 export const AUTO_SCROLL_PEEK_SCALE = 0.83;
 export const AUTO_SCROLL_PEEK_TOP_OFFSET = 54;
@@ -24,31 +23,9 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
   const activeBountyId = listRef.activeBountyId;
   const slotHeight = listRef.slotHeight;
   const onCountdownCancelled = listRef.onCountdownCancelled;
-  let ctaTimerMilliSeconds;
-  c8 = undefined;
-  c9 = undefined;
-  let first;
   c11 = undefined;
-  closure_12 = undefined;
   c13 = undefined;
   c14 = undefined;
-  closure_15 = undefined;
-  closure_16 = undefined;
-  closure_17 = undefined;
-  closure_18 = undefined;
-  closure_19 = undefined;
-  closure_20 = undefined;
-  closure_21 = undefined;
-  closure_22 = undefined;
-  closure_23 = undefined;
-  closure_24 = undefined;
-  let sharedValue;
-  closure_26 = undefined;
-  let callback;
-  let callback1;
-  let callback2;
-  let callback3;
-  let callback4;
   let callback5;
   let callback6;
   let callback7;
@@ -60,12 +37,12 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
   const BountiesVerticalScrollExperiment = listRef(enabled[4]).BountiesVerticalScrollExperiment;
   let obj = { location: slotHeight.VIDEO_MODAL_MOBILE };
   const config = BountiesVerticalScrollExperiment.useConfig(obj);
-  ctaTimerMilliSeconds = config.ctaTimerMilliSeconds;
+  const ctaTimerMilliSeconds = config.ctaTimerMilliSeconds;
   let result = config.autoScrollLeadMs / 1000;
   c8 = result;
   const sum = result + config.autoScrollEndCardMs / 1000;
   c9 = sum;
-  first = mode(listRef(enabled[5]).useForceBountiesSwipeUpNux(), 1)[0];
+  const first = mode(listRef(enabled[5]).useForceBountiesSwipeUpNux(), 1)[0];
   const obj2 = listRef(enabled[5]);
   [tmp6, c11] = mode(activeIndex.useState(false), 2);
   const tmp7 = mode(activeIndex.useState(false), 2);
@@ -85,25 +62,25 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
   closure_23 = activeIndex.useRef(false);
   closure_24 = activeIndex.useRef(false);
   const tmp10 = mode(activeIndex.useState(false), 2);
-  sharedValue = listRef(enabled[6]).useSharedValue(1);
+  const sharedValue = listRef(enabled[6]).useSharedValue(1);
   closure_26 = activeIndex.useRef(sum);
-  callback = activeIndex.useCallback(() => {
+  const callback = activeIndex.useCallback(() => {
     if (null != ref.current) {
       const _clearInterval = clearInterval;
-      clearInterval(tmp.current);
-      tmp.current = null;
+      clearInterval(ref.current);
+      ref.current = null;
     }
     closure_22.current = null;
   }, []);
-  callback1 = activeIndex.useCallback(() => {
+  const callback1 = activeIndex.useCallback(() => {
     if (null != ref2.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref2.current);
+      ref2.current = null;
     }
   }, []);
   const items = [first];
-  callback2 = activeIndex.useCallback((arg0) => {
+  const callback2 = activeIndex.useCallback((arg0) => {
     let tmp = first;
     if (!first) {
       tmp = null == arg0;
@@ -113,7 +90,7 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
     }
   }, items);
   const items1 = [first];
-  callback3 = activeIndex.useCallback((arg0) => {
+  const callback3 = activeIndex.useCallback((arg0) => {
     let hasItem = !first;
     if (!first) {
       hasItem = null != arg0;
@@ -123,7 +100,7 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
     }
     return hasItem;
   }, items1);
-  callback4 = activeIndex.useCallback(() => {
+  const callback4 = activeIndex.useCallback(() => {
     _undefined(false);
     callback(false);
     _undefined2(0);
@@ -189,7 +166,7 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
           current = ref2.current;
         }
         if (!current) {
-          const result = closure_25.set(closure_1_0(closure_1_1[7]).withTiming(0.83, closure_1_0(closure_1_1[8]).timingSlow));
+          const result = closure_25.set(listRef(enabled[7]).withTiming(0.83, listRef(enabled[8]).timingSlow));
           callback(true);
           const _setTimeout = setTimeout;
           closure_20.current = setTimeout(() => {
@@ -202,7 +179,7 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
               callback(true);
             }
           }, 500);
-          const obj = closure_1_0(closure_1_1[7]);
+          const obj = listRef(enabled[7]);
         }
       }, num);
       flag = true;
@@ -237,7 +214,7 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
         const _Date = Date;
         const timestamp = Date.now();
         if (null != ref4.current) {
-          ref3.current = ref3.current + (timestamp - tmp4.current);
+          ref3.current = ref3.current + (timestamp - ref4.current);
         }
         ref4.current = timestamp;
         const current = ref6.current;
@@ -326,8 +303,8 @@ export const useBountiesAutoScroll = function useBountiesAutoScroll(listRef) {
   }, items12);
   const items13 = [callback11, callback12];
   const effect3 = obj3.useEffect(() => {
-    closure_0 = activeBountyId.addEventListener("change", (arg0) => {
-      if ("active" === arg0) {
+    closure_0 = activeBountyId.addEventListener("change", (event) => {
+      if ("active" === event) {
         callback3();
       } else {
         callback2();

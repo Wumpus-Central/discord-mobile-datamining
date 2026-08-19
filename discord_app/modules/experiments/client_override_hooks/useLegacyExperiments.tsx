@@ -1,17 +1,16 @@
 // === Module 10681: parseRegisteredExperiments ===
 
 // Module 10681 (parseRegisteredExperiments)
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
-import closure_5 from "getHash" /* 4288 */;
+import getHash from "getHash" /* 4288 */;
 import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
 
-const require = arg1;
+const require = fn;
 function parseRegisteredExperiments(registeredExperiments) {
-  let obj = {};
   function _loop(type) {
     closure_0 = type;
-    obj = { system: obj(closure_1_2[5]).ExperimentSystem.LEGACY, kind: null, name: null, title: null, variants: null };
+    obj = { system: obj(dependencyMap[5]).ExperimentSystem.LEGACY, kind: null, name: null, title: null, variants: null };
     let str = "guild";
     if (type.type === closure_1_7.USER) {
       str = "user";
@@ -19,19 +18,19 @@ function parseRegisteredExperiments(registeredExperiments) {
     obj[1] = str;
     obj[2] = closure_1;
     ({ title: obj[3], buckets } = type);
-    obj[4] = buckets.map((bucket) => {
-      obj = { id: bucket.valueOf(), label: null, shortLabel: null, type: null };
+    obj[4] = buckets.map((item, index) => {
+      obj = { id: item.valueOf(), label: null, shortLabel: null, type: null };
       if (typeof type.description === "object") {
-        let experimentBucketName = tmp.description[arg1];
+        let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1_1(closure_1_2[6]).getExperimentBucketName(bucket);
+        experimentBucketName = closure_1_1(closure_1_2[6]).getExperimentBucketName(item);
         const obj3 = closure_1_1(closure_1_2[6]);
       }
       obj[1] = experimentBucketName;
-      obj[2] = closure_1_1(closure_1_2[6]).getExperimentBucketName(bucket);
-      if (bucket === closure_1_6.CONTROL) {
+      obj[2] = closure_1_1(closure_1_2[6]).getExperimentBucketName(item);
+      if (item === closure_1_6.CONTROL) {
         let TREATMENT = type(closure_1_2[4]).Variation_Type.CONTROL;
-      } else if (bucket === tmp4.NOT_ELIGIBLE) {
+      } else if (item === tmp4.NOT_ELIGIBLE) {
         TREATMENT = type(closure_1_2[4]).Variation_Type.UNSPECIFIED;
       } else {
         TREATMENT = type(closure_1_2[4]).Variation_Type.TREATMENT;
@@ -43,19 +42,17 @@ function parseRegisteredExperiments(registeredExperiments) {
   }
   const entries = Object.entries(registeredExperiments);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
     closure_1 = tmp5[0];
     let _loopResult = _loop(tmp5[1]);
     continue;
   }
-  return obj;
+  return {};
 }
 function getLegacyOverridesInfo(allExperimentOverrideDescriptors) {
   let obj = {};
   const entries = Object.entries(allExperimentOverrideDescriptors);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     obj = { experimentId: null, variantId: null, originalDescriptor: null };
@@ -69,7 +66,7 @@ function getLegacyOverridesInfo(allExperimentOverrideDescriptors) {
   return obj;
 }
 ({ ExperimentBuckets: closure_6, ExperimentTypes: error } = ExperimentBuckets);
-const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useLegacyExperiments.tsx");
+const result = require("obj132").fileFinishedImporting("modules/experiments/client_override_hooks/useLegacyExperiments.tsx");
 
 export { parseRegisteredExperiments };
 export { getLegacyOverridesInfo };
@@ -87,7 +84,7 @@ export const useLegacyExperiments = function useLegacyExperiments() {
   stateFromStoresObject = obj.useStateFromStoresObject(items, () => store.getRegisteredExperiments());
   const items1 = [closure_5];
   const stateFromStoresObject1 = stateFromStoresObject(589).useStateFromStoresObject(items1, () => store.getAllExperimentOverrideDescriptors());
-  obj = { experiments: useMemo(() => closure_1_8(stateFromStoresObject), items2), overridesInfo: useMemo(() => closure_1_9(stateFromStoresObject1), items3) };
+  obj = { experiments: useMemo(() => parseRegisteredExperiments(stateFromStoresObject), items2), overridesInfo: useMemo(() => getLegacyOverridesInfo(stateFromStoresObject1), items3) };
   items2 = [stateFromStoresObject];
   items3 = [stateFromStoresObject1];
   return obj;

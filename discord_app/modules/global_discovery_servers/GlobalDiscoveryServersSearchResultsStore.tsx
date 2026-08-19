@@ -1,7 +1,7 @@
 // === Module 13254: map ===
 
 // Module 13254 (map)
-import set2 from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
@@ -41,7 +41,7 @@ prototype["handleSearchSuccess"] = function handleSearchSuccess(arg0) {
     self.total = total;
   }
   items = [...self.guildIds];
-  const item = guilds.forEach((id) => items.push(id.id));
+  const item = guilds.forEach((item, index) => items.push(item.id));
   self.guildIds = items;
   self.offset = items.length;
 };
@@ -153,7 +153,6 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
       obj[0] = [];
       obj.query = query;
       value = obj;
-      const tmp8 = SearchState;
     }
     const result = obj.set(joined, value);
     value.handleSearchStart();
@@ -172,12 +171,11 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
       obj[0] = [];
       obj.query = query;
       value = obj;
-      const tmp2 = SearchState;
     }
     let result = obj.set(joined, value);
     value.handleSearchSuccess({ total: total.total, guilds });
-    const item = guilds.forEach((id) => {
-      const result = closure_6.set(id.id, id);
+    const item = guilds.forEach((item, index) => {
+      const result = closure_6.set(item.id, item);
     });
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function handleGlobalDiscoveryServersSearchFailure(query) {
@@ -194,18 +192,16 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
       obj[0] = [];
       obj.query = query;
       value = obj;
-      const tmp2 = SearchState;
     }
     const result = obj.set(joined, value);
     value.handleSearchFailure(query.error);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    let set;
-    set = new Set(ignoreQueries.ignoreQueries);
-    const item = map.forEach((query) => {
-      if (null != query.query) {
-        if (!set.has(query.query)) {
-          closure_1_5.delete(arg1);
+    const set = new Set(ignoreQueries.ignoreQueries);
+    const item = map.forEach((item, index) => {
+      if (null != item.query) {
+        if (!set.has(item.query)) {
+          map.delete(index);
         }
       }
     });
@@ -233,109 +229,6 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
     }
   }
 });
-let obj = {
-  CONNECTION_OPEN: function handleConnectionOpen() {
-    map.clear();
-    map1.clear();
-  },
-  GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function handleGlobalDiscoveryServersSearchStart(reset) {
-    ({ query, categoryId, languageCode } = reset);
-    const items = [closure_2, query, closure_3, categoryId, closure_4, languageCode];
-    if (reset.reset) {
-      map.delete(tmp4);
-    }
-    const items1 = [closure_2, query, closure_3, categoryId, closure_4, languageCode];
-    const joined = items1.join("-");
-    let obj = map;
-    let value = map.get(joined);
-    if (value == null) {
-      if (typeof SearchState !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      obj = Object.create(SearchState.prototype);
-      obj[0] = [];
-      obj.query = query;
-      value = obj;
-      const tmp8 = SearchState;
-    }
-    const result = obj.set(joined, value);
-    value.handleSearchStart();
-  },
-  GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function handleGlobalDiscoveryServersSearchSuccess(total) {
-    ({ query, guilds } = total);
-    const items = [closure_2, query, closure_3, total.categoryId, closure_4, total.languageCode];
-    const joined = items.join("-");
-    let obj = map;
-    let value = map.get(joined);
-    if (value == null) {
-      if (typeof SearchState !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      obj = Object.create(SearchState.prototype);
-      obj[0] = [];
-      obj.query = query;
-      value = obj;
-      const tmp2 = SearchState;
-    }
-    let result = obj.set(joined, value);
-    value.handleSearchSuccess({ total: total.total, guilds });
-    const item = guilds.forEach((id) => {
-      const result = closure_6.set(id.id, id);
-    });
-  },
-  GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function handleGlobalDiscoveryServersSearchFailure(query) {
-    query = query.query;
-    const items = [closure_2, query, closure_3, query.categoryId, closure_4, query.languageCode];
-    const joined = items.join("-");
-    let obj = map;
-    let value = map.get(joined);
-    if (value == null) {
-      if (typeof SearchState !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      obj = Object.create(SearchState.prototype);
-      obj[0] = [];
-      obj.query = query;
-      value = obj;
-      const tmp2 = SearchState;
-    }
-    const result = obj.set(joined, value);
-    value.handleSearchFailure(query.error);
-  },
-  GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    let set;
-    set = new Set(ignoreQueries.ignoreQueries);
-    const item = map.forEach((query) => {
-      if (null != query.query) {
-        if (!set.has(query.query)) {
-          closure_1_5.delete(arg1);
-        }
-      }
-    });
-  },
-  GUILD_PROFILE_FETCH_SUCCESS: function handleGuildProfileFetchSuccess(arg0) {
-    ({ guildId, profile } = arg0);
-    let obj = map1;
-    const value = map1.get(guildId);
-    if (null == value) {
-      return false;
-    } else {
-      obj = {};
-      const merged = Object.assign(value);
-      let memberCount = profile.memberCount;
-      if (memberCount == null) {
-        memberCount = value.memberCount;
-      }
-      obj.memberCount = memberCount;
-      let presenceCount = profile.onlineCount;
-      if (presenceCount == null) {
-        presenceCount = value.presenceCount;
-      }
-      obj.presenceCount = presenceCount;
-      const result = obj.set(guildId, obj);
-    }
-  }
-};
-let result = set2.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx");
+let result = obj132.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx");
 
 export default globalDiscoveryServersSearchResultsStore;

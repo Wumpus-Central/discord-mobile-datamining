@@ -10,14 +10,13 @@ import { HelpdeskArticles } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_5 = createCacheKey.createStyles({ header: { alignSelf: "center" } });
-const result = require("set").fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");
+const result = require("obj132").fileFinishedImporting("modules/provisional_accounts/native/ProvisionalAccountNoCallAllowed.tsx");
 
 export default function ProvisionalAccountNoCallAllowed() {
-  let obj = { header: null, title: null, content: null, actions: null };
-  obj = { size: "lg", style: callback().header };
+  let obj = { size: "lg", style: callback().header };
   obj[0] = jsx(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: callback().header });
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["vh+Zpq"]);

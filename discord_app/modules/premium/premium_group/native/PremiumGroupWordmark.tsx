@@ -8,9 +8,9 @@ import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupWordmark.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupWordmark.tsx");
 
 export default function PremiumGroupWordmark(arg0) {
   ({ width, height, alwaysWhite } = arg0);

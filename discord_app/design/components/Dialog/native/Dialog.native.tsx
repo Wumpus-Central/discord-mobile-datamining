@@ -2,12 +2,12 @@
 
 // Module 4716 (Dialog)
 import AccessibilityView from "AccessibilityView" /* 4717 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("design/components/Dialog/native/Dialog.native.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("design/components/Dialog/native/Dialog.native.tsx");
 
 export const Dialog = function Dialog(dialogKey) {
   dialogKey = dialogKey.dialogKey;

@@ -1,11 +1,11 @@
 // === Module 8459: ROLL_DURATION_MS ===
 
 // Module 8459 (ROLL_DURATION_MS)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 const items = [4, 6, 8, 10, 12, 20];
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/dice_roll/DiceRollConstants.tsx");
+const set = new Set(items);
+const result = obj132.fileFinishedImporting("modules/dice_roll/DiceRollConstants.tsx");
 
 export const ROLL_DURATION_MS = 1500;
 export const AFTER_ROLL_DELAY_MS = 2000;

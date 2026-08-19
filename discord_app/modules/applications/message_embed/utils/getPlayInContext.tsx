@@ -1,11 +1,11 @@
 // === Module 11129: usePlayInContext ===
 
 // Module 11129 (usePlayInContext)
-import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
 
 export const usePlayInContext = function usePlayInContext(arg0) {
   const _require = arg0;
@@ -18,7 +18,7 @@ export const usePlayInContext = function usePlayInContext(arg0) {
       return null;
     } else {
       const embeddedActivitiesForChannel = closure_1_2.getEmbeddedActivitiesForChannel(tmp);
-      const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
+      const found = embeddedActivitiesForChannel.filter((item, index) => item.applicationId === closure_0);
       let first;
       if (found.length > 0) {
         first = found[0];
@@ -70,7 +70,7 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       NO_CHANNEL = _require(11130).EmbeddedActivityLaunchability.NO_CHANNEL;
     }
     embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channelId);
-    const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
+    const found = embeddedActivitiesForChannel.filter((item, index) => item.applicationId === closure_0);
     let first;
     if (found.length > 0) {
       first = found[0];

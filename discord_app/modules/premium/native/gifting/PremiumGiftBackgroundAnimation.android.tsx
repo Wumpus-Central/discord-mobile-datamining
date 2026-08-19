@@ -1,49 +1,41 @@
 // === Module 9599: PremiumGiftBackgroundAnimation ===
 
 // Module 9599 (PremiumGiftBackgroundAnimation)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { display: "flex", alignItems: "flex-end", justifyContent: "center", flexDirection: "row" }, consistentHeight: { height: 300 }, animation: { maxWidth: 375, width: "100%", height: "auto" }, baseAnimation: { position: "absolute", bottom: 0 }, lottie: { height: 275 } });
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundAnimation.android.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundAnimation.android.tsx");
 
 export default function PremiumGiftBackgroundAnimation(giftStyle) {
   giftStyle = giftStyle.giftStyle;
   let consistentHeight = giftStyle.withConsistentHeight;
-  let stateFromStores;
   let ref;
-  let ref1;
   let first;
-  closure_5 = undefined;
   let first1;
-  closure_7 = undefined;
-  let first2;
   let callback;
-  let first3;
-  closure_11 = undefined;
   const tmp = callback();
   let obj = giftStyle(ref[6]);
   const items = [first1];
-  stateFromStores = obj.useStateFromStores(items, () => first1.useReducedMotion);
+  const stateFromStores = obj.useStateFromStores(items, () => first1.useReducedMotion);
   ref = first.useRef(null);
-  ref1 = first.useRef(null);
-  let tmp7 = ref1(first.useState(giftStyle(ref[7]).AnimationState.ACTION), 2);
+  const ref1 = first.useRef(null);
+  const tmp7 = ref1(first.useState(giftStyle(ref[7]).AnimationState.ACTION), 2);
   first = tmp7[0];
   closure_5 = tmp7[1];
   const tmp9 = ref1(first.useState(undefined), 2);
   first1 = tmp9[0];
   closure_7 = tmp9[1];
   const tmp11 = ref1(first.useState(undefined), 2);
-  first2 = tmp11[0];
-  callback = tmp11[1];
+  const first2 = tmp11[0];
   const tmp13 = ref1(first.useState(false), 2);
-  first3 = tmp13[0];
+  const first3 = tmp13[0];
   closure_11 = tmp13[1];
   const items1 = [giftStyle];
   const items2 = [giftStyle];
@@ -59,11 +51,8 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       if (tmp8) {
         tmp8 = null != first2;
       }
-      closure_11(tmp8);
+      callback(tmp8);
       callback(giftStyle(ref[7]).AnimationState.ACTION);
-      const tmp4 = closure_11;
-      const tmp6 = giftStyle;
-      const tmp7 = ref;
     }
   }, items3);
   const items4 = [first, first3];
@@ -73,8 +62,8 @@ export default function PremiumGiftBackgroundAnimation(giftStyle) {
       callback4(false);
     } else {
       if (!tmp4) {
-        callback3(tmp2(tmp3[7]).AnimationState.ACTION);
-        callback(tmp2(tmp3[7]).AnimationState.LOOP);
+        callback3(giftStyle(ref[7]).AnimationState.ACTION);
+        callback(giftStyle(ref[7]).AnimationState.LOOP);
       }
       tmp4 = first === giftStyle(ref[7]).AnimationState.LOOP || arg0;
     }

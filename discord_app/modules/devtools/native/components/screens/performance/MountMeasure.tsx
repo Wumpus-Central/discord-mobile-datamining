@@ -6,9 +6,9 @@ import useMountLayoutEffect from "useMountLayoutEffect" /* 4761 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");
+const result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");
 
 export default function MountMeasure(arg0) {
   ({ batchKey: require, onMeasure: dependencyMap, onCancel: View } = arg0);

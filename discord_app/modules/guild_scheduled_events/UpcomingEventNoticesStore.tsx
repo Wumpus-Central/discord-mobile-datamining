@@ -4,11 +4,11 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getNextShownUpcomingEventNoticeType from "getNextShownUpcomingEventNoticeType" /* 8893 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "scheduledEventSort" /* 4370 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import scheduledEventSort from "scheduledEventSort" /* 4370 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
-require = arg1;
+require = fn;
 ({ GuildScheduledEventStatus: c4, UpcomingGuildEventNoticeTypes: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
 let closure_6 = {};
 let closure_7 = {};
@@ -97,6 +97,6 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefaul
     obj[guildEventId.guildEventId] = Date.now();
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
 
 export default upcomingEventNoticesStore;

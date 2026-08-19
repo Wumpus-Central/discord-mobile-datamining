@@ -5,28 +5,27 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
 import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
 import pushLayer from "pushLayer" /* 5353 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getUserAgnosticState" /* 4737 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "updateCategoriesAndProducts" /* 5301 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import getUserAgnosticState from "getUserAgnosticState" /* 4737 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
 import { addDebugLog } from "useCollectiblesDebugStore" /* 5323 */;
-import closure_8 from "map" /* 5324 */;
-import closure_9 from "items" /* 5325 */;
+import map from "map" /* 5324 */;
+import items from "items" /* 5325 */;
 import { CollectiblesCategoriesRecord as closure_10, CollectiblesMarketingsRecord as closure_11, CollectiblesShopHomeRecord as closure_14 } from "fromServer" /* 5326 */;
-import closure_12 from "fromServer" /* 5303 */;
-import closure_13 from "fromServer" /* 5336 */;
+import fromServer from "fromServer" /* 5303 */;
+import fromServer2 from "fromServer" /* 5336 */;
 import { CollectiblesMobileShopScreen as closure_15 } from "items" /* 678 */;
 import ME from "ME" /* 676 */;
 import getMarketingBySurface from "getMarketingBySurface" /* 5351 */;
 import "map";
 
-require = arg1;
+require = fn;
 function openCollectiblesShop(arg0) {
   openCollectiblesShopMobile(Object.assign(arg0, Object.create(null)));
 }
 function openCollectiblesShopMobile(screen) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SHOP_OPEN" };
+  let obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(screen);
   obj.dispatch(obj);
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
@@ -62,12 +61,11 @@ function openCollectiblesShopMobile(screen) {
 }
 function closeCollectiblesShop() {
   dispatcherDefault.dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
-  const obj = dispatcherDefault;
   pushLayer.popLayer();
 }
 function _fetchCollectiblesCategories() {
   const self = this;
-  let tmp = callback((arg0, arg1, arg2) => {
+  const tmp = callback((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
     closure_2 = arg2;
@@ -77,8 +75,6 @@ function _fetchCollectiblesCategories() {
     return (function*(arg0, arg1, arg2) {
       let aPIError = tmp3;
       closure_4 = tmp5;
-      let tmp = callback;
-      tmp = closure_2;
       closure_3 = lib;
       if (lib == null) {
         closure_3 = {};
@@ -87,33 +83,33 @@ function _fetchCollectiblesCategories() {
       obj1[1] = closure_3;
       callback(closure_2[17]).dispatch(obj1);
       const obj17 = callback(closure_2[17]);
-      const fetchCollectiblesOptionsQuery = lib(closure_2[19]).buildFetchCollectiblesOptionsQuery(tmp97);
+      const fetchCollectiblesOptionsQuery = lib(closure_2[19]).buildFetchCollectiblesOptionsQuery(lib);
       const value = closure_1_4.get("shop_show_debug_overlay");
       closure_3 = value;
       if (lib != null) {
-        const logPerf = tmp97.logPerf;
+        const logPerf = lib.logPerf;
       }
       if (logPerf) {
         let sessionId;
-        if (tmp99 != null) {
-          sessionId = tmp99.sessionId;
+        if (closure_2 != null) {
+          sessionId = closure_2.sessionId;
         }
         let obj2 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
         obj2[0] = sessionId;
         obj2[1] = lib(closure_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_STARTED;
         let tab;
-        if (tmp99 != null) {
-          tab = tmp99.tab;
+        if (closure_2 != null) {
+          tab = closure_2.tab;
         }
         obj2[2] = tab;
         let includeUnpublished;
-        if (tmp97 != null) {
-          includeUnpublished = tmp97.includeUnpublished;
+        if (lib != null) {
+          includeUnpublished = lib.includeUnpublished;
         }
         obj2[3] = includeUnpublished;
         let noCache;
-        if (tmp97 != null) {
-          noCache = tmp97.noCache;
+        if (lib != null) {
+          noCache = lib.noCache;
         }
         obj2[4] = noCache;
         lib(closure_2[20]).trackShopPerf(obj2);
@@ -473,16 +469,15 @@ function _maybeFetchCollectiblesProduct() {
               obj1 = closure_1_6;
               let isFetchingProductResult = closure_1_6.isFetchingProduct(closure_0);
               if (!isFetchingProductResult) {
-                isFetchingProductResult = obj1.isProductFetchBackedOff(tmp5);
+                isFetchingProductResult = obj1.isProductFetchBackedOff(closure_0);
               }
               if (!isFetchingProductResult) {
                 c3 = 1;
                 c2 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_21(tmp5, tmp6);
+                obj1[0] = closure_1_21(closure_0, closure_1);
                 return obj1;
               }
-              tmp6 = closure_1;
             }
           } else if (arg0 === 1) {
             c2 = 3;
@@ -967,31 +962,31 @@ function _fetchCollectiblesShopHome() {
       obj1[2] = body;
       lib(closure_2[17]).dispatch(obj1);
       const obj8 = callback(closure_2[19]);
-      const fetchCollectiblesOptionsQuery = obj8.buildFetchCollectiblesOptionsQuery(tmp81, callback);
+      const fetchCollectiblesOptionsQuery = obj8.buildFetchCollectiblesOptionsQuery(lib, callback);
       if (lib != null) {
-        const logPerf = tmp81.logPerf;
+        const logPerf = lib.logPerf;
       }
       if (logPerf) {
         let sessionId;
-        if (tmp82 != null) {
-          sessionId = tmp82.sessionId;
+        if (closure_2 != null) {
+          sessionId = closure_2.sessionId;
         }
         let obj2 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
         obj2[0] = sessionId;
         obj2[1] = callback(closure_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_STARTED;
         let tab;
-        if (tmp82 != null) {
-          tab = tmp82.tab;
+        if (closure_2 != null) {
+          tab = closure_2.tab;
         }
         obj2[2] = tab;
         let includeUnpublished;
-        if (tmp81 != null) {
-          includeUnpublished = tmp81.includeUnpublished;
+        if (lib != null) {
+          includeUnpublished = lib.includeUnpublished;
         }
         obj2[3] = includeUnpublished;
         let noCache;
-        if (tmp81 != null) {
-          noCache = tmp81.noCache;
+        if (lib != null) {
+          noCache = lib.noCache;
         }
         obj2[4] = noCache;
         callback(closure_2[20]).trackShopPerf(obj2);
@@ -1322,7 +1317,7 @@ function _maybeFetchCollectiblesShopTabLayout() {
   return applyArgumentsResult;
 }
 ({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = ME);
-let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
 export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesPurchases, fetchCollectiblesProduct, claimPremiumCollectiblesProduct };
 export { openCollectiblesShop };
@@ -1332,10 +1327,10 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {
-    isCollectiblesShopRoute = function isCollectiblesShopRoute(nextResult) {
-      let flag = "settings" !== nextResult.name;
+    isCollectiblesShopRoute = function isCollectiblesShopRoute(dependencyMap) {
+      let flag = "settings" !== dependencyMap.name;
       if (!flag) {
-        const params = nextResult.params;
+        const params = dependencyMap.params;
         let screen;
         if (params != null) {
           screen = params.screen;
@@ -1359,10 +1354,7 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp2 = nextResult;
-          let tmp3 = isCollectiblesShopRoute;
-          let tmp4 = nextResult;
           if (isCollectiblesShopRoute(nextResult)) {
-            let tmp11 = iter;
             iter.return();
             return tmp2;
           } else {
@@ -1372,12 +1364,8 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
               routes = state.routes;
             }
             if (routes) {
-              let tmp6 = searchRoutes;
-              let tmp7 = nextResult;
               let tmp8 = searchRoutes(tmp2.state.routes);
-              let tmp9 = tmp8;
               if (tmp8) {
-                let tmp10 = iter;
                 iter.return();
                 return tmp8;
               }
@@ -1394,15 +1382,13 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
   return tmp2;
 };
 export const dispatchOpenCollectiblesShop = function dispatchOpenCollectiblesShop(arg0) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SHOP_OPEN" };
+  const obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(arg0);
   obj.dispatch(obj);
 };
 export { closeCollectiblesShop };
 export const productDetailsOpened = function productDetailsOpened(skuId) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId };
+  const obj = { type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId };
   obj.dispatch(obj);
 };
 export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4, closure_12) {
@@ -1534,13 +1520,9 @@ export const seedCollectiblesProductFromStandaloneLoad = function seedCollectibl
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp4 = nextResult;
-    let tmp5 = product;
     if (null == product.getProduct(nextResult.skuId)) {
-      let tmp6 = importDefault;
-      let tmp7 = dependencyMap;
       let obj2 = dispatcherDefault;
       obj = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
-      let tmp8 = nextResult;
       obj[1] = tmp4.skuId;
       obj[2] = tmp4;
       obj[3] = timestamp;
@@ -1550,7 +1532,7 @@ export const seedCollectiblesProductFromStandaloneLoad = function seedCollectibl
   }
 };
 export { claimPremiumCollectiblesProduct };
-export const validateCollectiblesRecipient = function validateCollectiblesRecipient(arg0, arg1) {
+export const validateCollectiblesRecipient = function validateCollectiblesRecipient(arg0, skuId) {
   const self = this;
   const apply = _validateCollectiblesRecipient.apply;
   if (typeof apply === "unknown") {
@@ -1591,18 +1573,15 @@ export const fetchCollectiblesShopHome = function fetchCollectiblesShopHome(clos
   return applyArgumentsResult;
 };
 export const setShopHomeConfigOverride = function setShopHomeConfigOverride(shopHomeConfigOverride) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride };
+  const obj = { type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride };
   obj.dispatch(obj);
 };
 export const setShopLayoutUrlOverride = function setShopLayoutUrlOverride(shopLayoutUrlOverride) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride };
+  const obj = { type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride };
   obj.dispatch(obj);
 };
 export const setSkipNumCategories = function setSkipNumCategories(skipNumCategories) {
-  let obj = dispatcherDefault;
-  obj = { type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories };
+  const obj = { type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories };
   obj.dispatch(obj);
 };
 export const claimCollectiblesCategoryReward = function claimCollectiblesCategoryReward() {

@@ -1,7 +1,7 @@
 // === Module 15503: ScreenAlignedThemedGradient ===
 
 // Module 15503 (ScreenAlignedThemedGradient)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import useActiveThemeType from "useActiveThemeType" /* 8503 */;
 import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
@@ -12,17 +12,15 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
 let closure_6 = createCacheKey.createStyles((arg0, arg1) => {
-  let obj = { container: null };
-  obj = {};
   const merged = Object.assign(closure_3.absoluteFillObject);
-  obj = { translateX: tDefault(-arg0) };
+  const obj = { translateX: tDefault(-arg0) };
   const items = [obj, { translateY: tDefault(-arg1) }];
   obj.transform = items;
   obj[0] = obj;
   return obj;
 });
 let closure_7 = { code: "function ScreenAlignedThemedGradientTsx1(){const{roundToNearestPixel,offsetX,panelSpringTranslateX,offsetY}=this.__closure;return{transform:[{translateX:roundToNearestPixel(-offsetX-panelSpringTranslateX.get())},{translateY:roundToNearestPixel(-offsetY)}]};}" };
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx");
+const result = obj132.fileFinishedImporting("modules/channel_list_v2/native/ScreenAlignedThemedGradient.tsx");
 
 export default function ScreenAlignedThemedGradient(arg0) {
   ({ offsetX, offsetY } = arg0);
@@ -40,8 +38,7 @@ export const ScreenAlignedThemedGradientSliding = function ScreenAlignedThemedGr
   panelSpringTranslateX = offsetX(panelSpringTranslateX[6]).useHomeDrawerState().panelSpringTranslateX;
   const obj2 = offsetX(panelSpringTranslateX[6]);
   const fn = function o() {
-    let obj = { transform: null };
-    obj = { translateX: offsetY(panelSpringTranslateX[3])(-offsetX - panelSpringTranslateX.get()) };
+    let obj = { translateX: offsetY(panelSpringTranslateX[3])(-offsetX - panelSpringTranslateX.get()) };
     const items = [obj, ];
     obj = { translateY: offsetY(panelSpringTranslateX[3])(-offsetY) };
     items[1] = obj;

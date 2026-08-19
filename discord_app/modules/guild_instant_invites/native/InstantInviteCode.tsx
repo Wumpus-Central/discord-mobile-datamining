@@ -2,20 +2,23 @@
 
 // Module 9964 (InstantInviteDetails)
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ClockIcon from "ClockIcon" /* 4338 */;
 import Stack from "Stack" /* 4733 */;
 import Text from "Text" /* 4734 */;
 import computeChannelName from "computeChannelName" /* 4984 */;
 import getChannelIcon from "getChannelIcon" /* 6832 */;
+import TextIcon2 from "TextIcon" /* 6876 */;
 import componentDidMountDefault from "componentDidMount" /* 9946 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord" /* 1395 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class InstantInviteDetails {
   constructor(arg0) {
     ({ channel, expiresAt } = global);
@@ -61,19 +64,17 @@ class InstantInviteDetails {
   }
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, channel: { flex: 0 }, time: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
+const createCacheKey = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 createCacheKey[2] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCode.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCode.tsx");
 
 export default function InstantInviteCode(invite) {
   invite = invite.invite;
   const items = [invite.channel];
-  let obj = { style: callback3().flex, children: null };
+  { style: callback3().flex, children: null };
   const memo = React.useMemo(() => closure_1_5(invite.channel), items);
-  obj = { children: null };
-  obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
+  const obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
   const items1 = [callback(invite(4734).Text, obj), ];
   const tmp = callback3();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });

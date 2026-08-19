@@ -1,10 +1,10 @@
 // === Module 4983: MAX_THUMBNAIL_COUNT ===
 
 // Module 4983 (MAX_THUMBNAIL_COUNT)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
 
-const result = set.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 
 export const MAX_THUMBNAIL_COUNT = 4;
 export const getEmbedPreviewImageUrl = function getEmbedPreviewImageUrl(arg0) {
@@ -31,8 +31,8 @@ export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) 
     const _HermesInternal = HermesInternal;
     let combined = "" + coverImage + "?format=webp";
   } else {
+    urlMatchesFileExtension;
     combined = coverImage;
-    const tmpResult = urlMatchesFileExtension;
   }
   return combined;
 };

@@ -3,13 +3,13 @@
 // Module 8537 (_fetchGuildJoinRequests)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import trackMemberApplicationViewed from "trackMemberApplicationViewed" /* 7607 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1395 */;
-import closure_5 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
+import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
 import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4198 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function _fetchGuildJoinRequests() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -498,23 +498,24 @@ function _updateGuildJoinRequest() {
               c7 = 2;
               c8 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = HTTP.patch(obj3).catch((body) => {
-                if (body) {
-                  body = body.body;
+              obj5[0] = HTTP.patch(obj3).catch((error) => {
+                let body = error;
+                if (error) {
+                  body = error.body;
                 }
                 if (body) {
-                  body = body.body.code === constants.REQUEST_TO_JOIN_USER_INELIGIBLE;
+                  body = error.body.code === constants.REQUEST_TO_JOIN_USER_INELIGIBLE;
                 }
                 if (body) {
-                  let obj = callback2(4827);
-                  obj = { title: null, body: null };
+                  callback2(4827);
+                  const obj = { title: null, body: null };
                   const intl = callback(1236).intl;
                   obj[0] = intl.string(callback(1236).t.DxJj4e);
                   const intl2 = callback(1236).intl;
                   obj[1] = intl2.string(callback(1236).t.rSAOk9);
                   obj.show(obj);
                 }
-                return Promise.reject(body);
+                return Promise.reject(error);
               });
               return obj5;
             }
@@ -731,13 +732,12 @@ function _fetchJoinRequestForInterview() {
     c4 = 0;
     return (function*(arg0) {
       const table = tmp2;
-      let callback = tmp5;
       const HTTP = lib(closure_1_2[7]).HTTP;
       obj1 = { url: null, rejectWithError: null };
       obj1[0] = closure_1_8.JOIN_REQUEST(lib);
       obj1[1] = lib(closure_1_2[7]).rejectWithMigratedError();
       lib = yield HTTP.get(obj1);
-      callback = callback2(lib.body);
+      const callback = callback2(lib.body);
       const obj = callback(table[6]);
       const obj4 = { type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: null };
       obj4[1] = callback;
@@ -862,7 +862,7 @@ function _createOrEnterJoinRequestInterview() {
   return applyArgumentsResult;
 }
 ({ AbortCodes: error, Endpoints: closure_8 } = ME);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestActionCreators.tsx");
 
 export default {
   fetchGuildJoinRequests(arg0) {
@@ -936,19 +936,16 @@ export default {
     return applyArgumentsResult;
   },
   setSelectedApplicationTab(guildId, applicationTab) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB", guildId, applicationTab };
+    const obj = { type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB", guildId, applicationTab };
     obj.dispatch(obj);
   },
   setSelectedSortOrder(guildId, sortOrder, applicationStatus) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER", guildId, sortOrder, applicationStatus };
+    const obj = { type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER", guildId, sortOrder, applicationStatus };
     obj.dispatch(obj);
   },
   setSelectedGuildJoinRequest(guildId, request) {
     if (null != request) {
-      let obj = trackMemberApplicationViewed;
-      obj = { guildId: null, applicationStatus: null, applicationUserId: null };
+      let obj = { guildId: null, applicationStatus: null, applicationUserId: null };
       obj[0] = guildId;
       ({ applicationStatus: obj2[1], userId: obj2[2] } = request);
       const result = obj.trackMemberApplicationViewed(obj);

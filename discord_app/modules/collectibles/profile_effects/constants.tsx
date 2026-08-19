@@ -1,9 +1,9 @@
 // === Module 9212: PROFILE_EFFECT_INTRO_MINIMUM_DELAY ===
 
 // Module 9212 (PROFILE_EFFECT_INTRO_MINIMUM_DELAY)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");
 
 export const PROFILE_EFFECT_INTRO_MINIMUM_DELAY = 0.1;
 export const PROFILE_EFFECT_INTRO_DELAY = 500;

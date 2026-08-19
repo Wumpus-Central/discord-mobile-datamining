@@ -1,13 +1,13 @@
 // === Module 15197: ? ===
 
 // Module 15197
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import useVisualEffectViewOverrides from "useVisualEffectViewOverrides" /* 4726 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ getVisualEffectViewOverrides: c4, setVisualEffectViewOverides: c5 } = useVisualEffectViewOverrides);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
@@ -31,7 +31,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurEffectName() {
     obj.blurEffectNameOverride = blurEffectNameOverride;
     callback(obj);
   }, []);
-  obj = { style: items, label: "Blur Effect Name", disabled: !first1, leadingStyle: visualEffectViewOverrideSharedStyles.enabledSwitchStyle, leading: callback(_require(visualEffectViewOverrideSharedStyles[7]).FormSwitch, obj), subLabel: null };
+  { style: items, label: "Blur Effect Name", disabled: !first1, leadingStyle: visualEffectViewOverrideSharedStyles.enabledSwitchStyle, leading: callback(_require(visualEffectViewOverrideSharedStyles[7]).FormSwitch, obj), subLabel: null };
   items = [visualEffectViewOverrideSharedStyles.zeroPaddingVertical];
   obj = {
     value: first1,
@@ -41,7 +41,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurEffectName() {
       if (arg0) {
         tmp3 = closure_6;
       }
-      closure_8(tmp3);
+      callback2(tmp3);
     }
   };
   obj1 = { children: null };
@@ -57,31 +57,31 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurEffectName() {
         if ("Dark" === first) {
           str = "Light";
         }
-        closure_3(str);
+        callback(str);
       }
     }),
 
   ];
   const BLUR_EFFECT_NAMES = _require(visualEffectViewOverrideSharedStyles[8]).BLUR_EFFECT_NAMES;
-  const found = BLUR_EFFECT_NAMES.filter((arr) => -1 !== arr.indexOf(first));
-  items1[1] = found.map((str) => {
-    const lib = str;
+  const found = BLUR_EFFECT_NAMES.filter((item, index) => -1 !== item.indexOf(first));
+  items1[1] = found.map((item, index) => {
+    const lib = item;
     const items = [visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal, { opacity: 1 }];
     return closure_1_6(lib(visualEffectViewOverrideSharedStyles[6]).FormRadioRow, {
-      label: str.replace(first, ""),
+      label: item.replace(first, ""),
       labelStyle: lib.radio,
       style: items,
-      selected: str === closure_6,
+      selected: item === closure_6,
       disabled: !first1,
       onPress() {
         closure_1_8(closure_0);
       }
-    }, arg1);
+    }, index);
   });
   obj1[0] = items1;
   obj[5] = callback2(closure_7, obj1);
   return callback(_require(visualEffectViewOverrideSharedStyles[6]).FormRow, obj);
 });
-const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurEffectName.tsx");
+const result = require("obj132").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurEffectName.tsx");
 
 export default memoResult;

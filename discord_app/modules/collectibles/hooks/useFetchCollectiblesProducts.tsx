@@ -1,77 +1,61 @@
 // === Module 12010: useFetchCollectiblesProducts ===
 
 // Module 12010 (useFetchCollectiblesProducts)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
-import closure_4 from "addSku" /* 4521 */;
-import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
+import addSku from "addSku" /* 4521 */;
+import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
 import { SKUProductLines } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProducts.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProducts.tsx");
 
-export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(first) {
-  const _require = first;
+export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(gameProfileShopCollection) {
+  const _require = gameProfileShopCollection;
   dependencyMap = arg1;
   const items = [stateFromStoresArray2];
-  const stateFromStoresArray = _require(647).useStateFromStoresArray(items, () => lib.map((arg0) => closure_4.get(arg0)));
+  const stateFromStoresArray = _require(647).useStateFromStoresArray(items, () => gameProfileShopCollection.map((item, index) => closure_4.get(item)));
   let obj = _require(647);
   const items1 = [stateFromStoresArray3];
-  const stateFromStoresArray1 = _require(647).useStateFromStoresArray(items1, () => lib.map((arg0) => product.getProduct(arg0)));
+  const stateFromStoresArray1 = _require(647).useStateFromStoresArray(items1, () => gameProfileShopCollection.map((item, index) => product.getProduct(item)));
   const obj2 = _require(647);
   const items2 = [stateFromStoresArray3];
-  stateFromStoresArray2 = _require(647).useStateFromStoresArray(items2, () => lib.map((closure_0) => productFetch.getProductFetch(closure_0)));
+  stateFromStoresArray2 = _require(647).useStateFromStoresArray(items2, () => gameProfileShopCollection.map((item, index) => productFetch.getProductFetch(item)));
   const obj4 = _require(647);
   const items3 = [stateFromStoresArray3];
-  stateFromStoresArray3 = _require(647).useStateFromStoresArray(items3, () => lib.map((closure_0) => productFetchBackedOff.isProductFetchBackedOff(closure_0)));
-  const items4 = [first, stateFromStoresArray, stateFromStoresArray2, stateFromStoresArray1, arg1, stateFromStoresArray3];
+  stateFromStoresArray3 = _require(647).useStateFromStoresArray(items3, () => gameProfileShopCollection.map((item, index) => productFetchBackedOff.isProductFetchBackedOff(item)));
+  const items4 = [gameProfileShopCollection, stateFromStoresArray, stateFromStoresArray2, stateFromStoresArray1, arg1, stateFromStoresArray3];
   stateFromStoresArray1(() => {
-    const entries = lib.entries();
+    const entries = gameProfileShopCollection.entries();
     while (tmp2 !== undefined) {
-      let tmp4 = stateFromStoresArray;
       let tmp5 = stateFromStoresArray(tmp3, 2);
       [tmp6, tmp8] = tmp5;
-      let tmp9 = stateFromStoresArray;
       let tmp10 = stateFromStoresArray[tmp6];
-      let tmp11 = stateFromStoresArray1;
       let tmp12 = stateFromStoresArray1[tmp6];
-      let tmp13 = stateFromStoresArray2;
       let tmp14 = stateFromStoresArray2[tmp6];
       let tmp16 = true === dependencyMap;
-      let tmp7 = tmp6;
-      let tmp15 = dependencyMap;
       if (tmp16) {
-        let tmp17 = tmp12;
         let type;
         if (tmp12 != null) {
           type = tmp12.type;
         }
-        let tmp19 = lib;
-        let tmp20 = dependencyMap;
-        tmp16 = type === lib(1949).CollectiblesItemType.BUNDLE;
+        tmp16 = type === gameProfileShopCollection(1949).CollectiblesItemType.BUNDLE;
       }
       if (tmp16) {
-        let tmp21 = tmp12;
         tmp16 = 0 === tmp12.items.length;
       }
-      let tmp23 = tmp12;
       let tmp24 = null != tmp12;
       if (tmp24) {
-        let tmp25 = tmp16;
         tmp24 = !tmp22;
       }
       if (!tmp24) {
-        let tmp26 = tmp10;
         let tmp27 = null != tmp10;
         if (tmp27) {
-          let tmp28 = tmp10;
-          let tmp29 = closure_1_6;
-          tmp27 = tmp10.productLine !== closure_1_6.COLLECTIBLES;
+          tmp27 = tmp10.productLine !== SKUProductLines.COLLECTIBLES;
         }
         tmp24 = tmp27;
       }
       if (!tmp24) {
-        let tmp30 = tmp14;
         let state;
         if (tmp14 != null) {
           state = tmp14.state;
@@ -79,33 +63,29 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
         tmp24 = "fetching" === state;
       }
       if (!tmp24) {
-        let tmp32 = stateFromStoresArray3;
-        let tmp33 = tmp6;
-        tmp24 = stateFromStoresArray3[tmp7];
+        tmp24 = stateFromStoresArray3[tmp6];
       }
       if (!tmp24) {
-        let tmp34 = lib;
-        let tmp35 = dependencyMap;
-        let obj = lib(5300);
-        let tmp36 = tmp8;
-        obj = { includeBundles: null };
-        obj[0] = tmp15;
+        gameProfileShopCollection(5300);
+        let obj = { includeBundles: null };
+        obj[0] = dependencyMap;
         let collectiblesProduct = obj.fetchCollectiblesProduct(tmp8, obj);
       }
       continue;
     }
+    tmp2 = entries[Symbol.iterator]();
   }, items4);
-  return stateFromStoresArray1.some((arg0, arg1) => {
+  return stateFromStoresArray1.some((item, index) => {
     let state;
-    if (stateFromStoresArray2[arg1] != null) {
+    if (stateFromStoresArray2[index] != null) {
       state = tmp2.state;
     }
     let tmp4 = "fetching" === state;
     if (!tmp4) {
-      let tmp6 = null == arg0;
+      let tmp6 = null == item;
       if (tmp6) {
         let state1;
-        if (stateFromStoresArray2[arg1] != null) {
+        if (stateFromStoresArray2[index] != null) {
           state1 = tmp7.state;
         }
         tmp6 = "error" !== state1;

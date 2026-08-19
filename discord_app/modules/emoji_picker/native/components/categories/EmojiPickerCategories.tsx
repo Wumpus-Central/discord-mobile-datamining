@@ -9,12 +9,11 @@ import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ AnalyticEvents: c5, AnalyticsPages: closure_6, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, listPlaceholder: null, item: null, keyboardItem: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 obj[1] = obj;
 obj[2] = { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" };
 obj[3] = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE };
@@ -43,10 +42,6 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
     isSearching = false;
   }
   const onClearSearch = bottomSheetRef.onClearSearch;
-  ExpressionPickerViewType = undefined;
-  let sharedValue;
-  closure_10 = undefined;
-  let ref;
   let callback;
   let derivedValue;
   closure_14 = undefined;
@@ -56,9 +51,9 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
   const tmp = callback();
   ExpressionPickerViewType = tmp;
   let obj = bottomSheetRef(categories[7]);
-  sharedValue = obj.useSharedValue(undefined);
+  const sharedValue = obj.useSharedValue(undefined);
   closure_10 = categoryIndexActive.useRef(undefined);
-  ref = categoryIndexActive.useRef(null);
+  const ref = categoryIndexActive.useRef(null);
   let items = [categories];
   const memo = categoryIndexActive.useMemo(() => {
     let arr = categories;
@@ -66,7 +61,7 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
     if (0 < categories.length) {
       while (categories[num].type !== emojiPickerListRef.UNICODE) {
         num = num + 1;
-        arr = arr2;
+        arr = categories;
       }
       const obj = { sections: null, firstUnicodeCategory: null, firstUnicodeCategoryIndex: null };
       const items = [categories.length];
@@ -207,8 +202,8 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
     if (!isSearching) {
       if (ref3.current) {
         if (null != ref2.current) {
-          const current = tmp2.current;
-          tmp2.current = undefined;
+          const current = ref2.current;
+          ref2.current = undefined;
           tmp.current = false;
           const result = categoryIndexActive.set(current);
           const current2 = emojiPickerListRef.current;
@@ -226,9 +221,8 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
     if (type.type === emojiPickerListRef.GUILD) {
       const guild = type.guild;
       if (null != guild) {
-        let obj = bottomSheetIndex(categories[8]);
-        obj = { location: null, tab: null, guild_id: null };
-        obj = { page: null };
+        bottomSheetIndex(categories[8]);
+        const obj = { page: null };
         obj[0] = isSearching.EXPRESSION_PICKER;
         obj[0] = obj;
         obj[1] = closure_8.EMOJI;
@@ -238,6 +232,7 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
     }
     callback2(arg0);
     const result = bottomSheetRef(categories[9]).triggerHapticFeedback(bottomSheetIndex(categories[10]).IMPACT_LIGHT);
+    const obj4 = bottomSheetRef(categories[9]);
   }, items4);
   const items5 = [callback3, callback];
   const items6 = [sharedValue];
@@ -247,7 +242,7 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
   }, items5);
   const items7 = [categories, categoryIndexActive, callback3, tmp];
   const callback5 = categoryIndexActive.useCallback((nativeEvent) => {
-    closure_10.current = nativeEvent.nativeEvent.layout.width;
+    ref.current = nativeEvent.nativeEvent.layout.width;
     const value = sharedValue.get();
     let num;
     if (value != null) {
@@ -264,7 +259,7 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
     if (num2 == null) {
       num2 = 0;
     }
-    obj[1] = num2 + closure_10.current;
+    obj[1] = num2 + ref.current;
     const result = sharedValue.set(obj);
   }, items6);
   const callback6 = categoryIndexActive.useCallback((arg0, index) => sharedValue(bottomSheetIndex(categories[11]), { category: categories[index], categoryIndexActive, index, handlePressCategory: callback3, loadingStyle: closure_8.listPlaceholder, locked: categories[index].isNitroLocked, style: closure_8.item }), items7);
@@ -301,6 +296,6 @@ const memoResult = importAllResult.memo(function EmojiPickerCategories(bottomShe
   obj1[2] = tmp22(tmp23, { children: items8 });
   return sharedValue(tmp21, obj1);
 });
-let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategories.tsx");
+let result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategories.tsx");
 
 export default memoResult;

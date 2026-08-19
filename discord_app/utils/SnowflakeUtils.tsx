@@ -1,12 +1,12 @@
 // === Module 11: DISCORD_EPOCH ===
 
 // Module 11 (DISCORD_EPOCH)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import extractTimestamp from "extractTimestamp" /* 13 */;
 import extractTimestampAll from "extractTimestamp" /* 13 */;
 
-const result = set.fileFinishedImporting("utils/SnowflakeUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/SnowflakeUtils.tsx");
 
 export default {
   age(arg0) {
@@ -37,9 +37,8 @@ export default {
     importDefault = arg1;
     const item = applyDefault.forEach(arg0, (arg0, arg1) => callback(arg0, arg1));
   },
-  forEachKey(recurrenceCounts, arg1) {
+  forEachKey(recurrenceCounts, fn) {
     for (const key10004 in arg0) {
-      let tmp = key10004;
       let tmp2 = arg1(key10004);
       continue;
     }

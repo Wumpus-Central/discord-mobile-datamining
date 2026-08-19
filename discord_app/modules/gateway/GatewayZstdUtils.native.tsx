@@ -1,17 +1,16 @@
 // === Module 13205: supportsZstd ===
 
 // Module 13205 (supportsZstd)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import enforcingDefault from "enforcing" /* 13206 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
 export const supportsZstd = function supportsZstd() {
   if (obj.isAndroid()) {
     let flag = enforcingDefault.getConstants().supportsZstd;
-    const obj2 = enforcingDefault;
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;

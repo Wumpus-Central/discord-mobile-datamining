@@ -7,13 +7,13 @@ import create from "create" /* 1306 */;
 import getThemeForColor from "getThemeForColor" /* 1347 */;
 import isPerModeThemingActive from "isPerModeThemingActive" /* 1366 */;
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import closure_6 from "initialize" /* 1303 */;
-import closure_7 from "handleThemeChange" /* 1302 */;
-import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
+import initialize from "initialize" /* 1303 */;
+import handleThemeChange from "handleThemeChange" /* 1302 */;
+import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
-require = arg1;
+require = fn;
 function reset() {
   c3 = undefined;
   c4 = undefined;
@@ -39,9 +39,7 @@ function loadFromProtoSettings() {
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      const obj = getThemeForColor;
       dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-      const obj2 = dispatcherDefault;
     }
   }
 }
@@ -59,9 +57,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      const obj = getThemeForColor;
       dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-      const obj2 = dispatcherDefault;
     }
   }
 }
@@ -92,18 +88,17 @@ prototype["initialize"] = function initialize(arg0) {
       }
     }
     const customThemeBaseTheme = getThemeForColor.getCustomThemeBaseTheme(customTheme.theme);
-    const obj = getThemeForColor;
   }
 };
 prototype["getState"] = function getState() {
-  let tmp2 = null != closure_3 && null != tmp;
+  let tmp2 = null != closure_3 && null != colors;
   if (tmp2) {
-    tmp2 = tmp.colors.length > 0;
+    tmp2 = colors.colors.length > 0;
   }
   if (tmp2) {
     let obj = { theme: null, customTheme: null };
     obj[0] = closure_3;
-    obj[1] = closure_4;
+    obj[1] = colors;
   } else {
     obj = { theme: "r", customTheme: "accessibilityRole" };
   }
@@ -194,8 +189,8 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       if (null == prop) {
         let theme = obj.theme;
       } else {
-        theme = tmp10(1347).getCustomThemeBaseTheme(obj.theme);
-        const tmp10Result = tmp10(1347);
+        theme = getThemeForColor.getCustomThemeBaseTheme(obj.theme);
+        const tmp10Result = getThemeForColor;
       }
       obj = { baseTheme: null, customTheme: null };
       obj[0] = theme;
@@ -218,7 +213,6 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       return tmp9;
     }
     obj5 = isPerModeThemingActive;
-    tmp10 = require;
   }
 };
 prototype["hasCustomTheme"] = function hasCustomTheme() {
@@ -298,14 +292,12 @@ const customThemeMobileStore = new CustomThemeMobileStore(dispatcherDefault, {
         if (clientThemeSettings != null) {
           prop = clientThemeSettings.customUserThemeSettings;
         }
-        const obj = getThemeForColor;
         dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-        const obj2 = dispatcherDefault;
       }
     }
   },
   LOGOUT: reset
 });
-const result = require("set").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileStore.tsx");
 
 export default customThemeMobileStore;

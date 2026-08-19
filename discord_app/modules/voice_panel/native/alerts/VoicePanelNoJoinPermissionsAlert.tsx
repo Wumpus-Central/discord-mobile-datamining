@@ -7,13 +7,12 @@ import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 16401 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");
 
 export default function VoicePanelNoJoinPermissionsAlert() {
-  let obj = getAlertModalItemKey;
-  obj = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
+  let obj = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["7/2/3M"]);
   const intl2 = getSystemLocale.intl;

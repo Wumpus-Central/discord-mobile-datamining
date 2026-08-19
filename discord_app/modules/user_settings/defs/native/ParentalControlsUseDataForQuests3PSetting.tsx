@@ -4,11 +4,11 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSelectedTeen from "useSelectedTeen" /* 7623 */;
 import result2 from "result" /* 14182 */;
-import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
-import createToggle from "createToggle" /* 10669 */;
+import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.CyLYKZ);
@@ -32,6 +32,6 @@ createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataForQuests3PSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataForQuests3PSetting.tsx");
 
 export default createToggle;

@@ -20,8 +20,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getState"] = function getState() {
   return obj;
 };
-prototype["getTopEmojiIdsByGuildId"] = function getTopEmojiIdsByGuildId(guildId) {
-  return obj.topEmojisByGuildId[guildId];
+prototype["getTopEmojiIdsByGuildId"] = function getTopEmojiIdsByGuildId(closure_0) {
+  return obj.topEmojisByGuildId[closure_0];
 };
 prototype["getIsFetching"] = function getIsFetching(arg0) {
   return table[arg0];
@@ -38,11 +38,11 @@ obj = {
   },
   TOP_EMOJIS_FETCH_SUCCESS: function handleTopEmojisLoaded(arg0) {
     ({ guildId, topEmojisMetadata } = arg0);
-    obj.topEmojisByGuildId[guildId] = topEmojisMetadata.map((emojiId) => emojiId.emojiId);
+    obj.topEmojisByGuildId[guildId] = topEmojisMetadata.map((item, index) => item.emojiId);
     closure_2[guildId] = false;
   }
 };
 const topEmojiStore = new TopEmojiStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojiStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emojis/top_emojis/TopEmojiStore.tsx");
 
 export default topEmojiStore;

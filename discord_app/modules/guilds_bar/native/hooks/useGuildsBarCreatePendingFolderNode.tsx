@@ -1,13 +1,14 @@
 // === Module 15620: useGuildsBarCreatePendingFolderNode ===
 
 // Module 15620 (useGuildsBarCreatePendingFolderNode)
+import _fetchGuildJoinRequestsDefault from "_fetchGuildJoinRequests" /* 8537 */;
 import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9535 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_5 from "set" /* 5079 */;
+import noop from "noop" /* 19 */;
+import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import set from "set" /* 5079 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx");
 
 export default function useGuildsBarCreatePendingFolderNode() {
   let obj = stateFromStores(589);
@@ -19,8 +20,7 @@ export default function useGuildsBarCreatePendingFolderNode() {
   const items2 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (!stateFromStores) {
-      const requestToJoinGuilds = closure_1_1(closure_1_2[6]).fetchRequestToJoinGuilds();
-      const obj = closure_1_1(closure_1_2[6]);
+      const requestToJoinGuilds = _fetchGuildJoinRequestsDefault.fetchRequestToJoinGuilds();
     }
   }, items2);
   if (arr2.length > 0) {
@@ -33,10 +33,6 @@ export default function useGuildsBarCreatePendingFolderNode() {
     const folderNode = tmp2(5080).createFolderNode(obj);
     for (const item10054 of arr2) {
       let children = folderNode.children;
-      let tmp13 = stateFromStores;
-      let tmp14 = stateFromStores;
-      let tmp15 = dependencyMap;
-      let tmp16 = dependencyMap;
       let obj5 = stateFromStores(5080);
       let arr = children.push(obj5.createGuildNode(item10054, folderNode.id));
       continue;
@@ -49,6 +45,4 @@ export default function useGuildsBarCreatePendingFolderNode() {
     return { expanded: false, pendingFolderNode: null };
   }
   const obj2 = stateFromStores(589);
-  const tmp = stateFromStores;
-  const tmp3 = dependencyMap;
 };

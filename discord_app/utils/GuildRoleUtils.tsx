@@ -1,7 +1,7 @@
 // === Module 1987: compareGuildRoles ===
 
 // Module 1987 (compareGuildRoles)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import fromServerArrayAll from "fromServerArray" /* 1985 */;
@@ -13,7 +13,6 @@ function compareGuildRoles(guildId, id) {
     let num2 = 1;
     if (id.id === guildId) {
       num2 = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-      const obj2 = DISCORD_EPOCHDefault;
     }
     let num = num2;
   } else {
@@ -23,13 +22,12 @@ function compareGuildRoles(guildId, id) {
         let diff = id.position - guildId.position;
       } else {
         diff = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-        const obj = DISCORD_EPOCHDefault;
       }
     }
   }
   return num;
 }
-let result = set.fileFinishedImporting("utils/GuildRoleUtils.tsx");
+let result = obj132.fileFinishedImporting("utils/GuildRoleUtils.tsx");
 
 export const sortGuildRoleRecords = function sortGuildRoleRecords(arr) {
   const sorted = arr.sort(compareGuildRoles);
@@ -42,7 +40,6 @@ export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
     let num2 = 1;
     if (id.id === guildId) {
       num2 = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-      const obj2 = DISCORD_EPOCHDefault;
     }
     let num = num2;
   } else {
@@ -52,7 +49,6 @@ export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
         let diff = id.position - guildId.position;
       } else {
         diff = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-        const obj = DISCORD_EPOCHDefault;
       }
     }
   }
@@ -63,7 +59,6 @@ export const sortInviteRoles = function sortInviteRoles(position, position2) {
     let diff = position2.position - position.position;
   } else {
     diff = DISCORD_EPOCHDefault.compare(position.id, position2.id);
-    const obj = DISCORD_EPOCHDefault;
   }
   return diff;
 };
@@ -72,13 +67,11 @@ export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) 
   let int2hexResult = null;
   if (0 !== id.color) {
     int2hexResult = int2hslRaw.int2hex(id.color);
-    const obj2 = int2hslRaw;
   }
   obj[3] = int2hexResult;
   let result = null;
   if (null != id.colors) {
     result = extractColorStringsFromServerColors.extractColorStringsFromServerColors(id.colors);
-    const obj3 = extractColorStringsFromServerColors;
   }
   obj[4] = result;
   let icon = id.icon;
@@ -114,8 +107,6 @@ export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRol
       }
     }
     for (const item10018 of items) {
-      let tmp7 = importAll;
-      let tmp8 = dependencyMap;
       obj = fromServerArrayAll;
       obj[item10018.id] = obj.fromServer(arg0, item10018);
       continue;

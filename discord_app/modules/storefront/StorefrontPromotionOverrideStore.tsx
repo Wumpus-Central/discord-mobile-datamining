@@ -20,6 +20,6 @@ const storefrontPromotionOverrideStore = new StorefrontPromotionOverrideStore(di
     promotionIdOverride = promotionIdOverride.promotionIdOverride;
   }
 });
-const result = require("set").fileFinishedImporting("modules/storefront/StorefrontPromotionOverrideStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/storefront/StorefrontPromotionOverrideStore.tsx");
 
 export default storefrontPromotionOverrideStore;

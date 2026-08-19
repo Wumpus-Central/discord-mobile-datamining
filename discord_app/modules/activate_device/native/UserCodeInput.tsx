@@ -2,17 +2,17 @@
 
 // Module 13341 (UserCodeInput)
 import innerContentDefault from "innerContent" /* 13344 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { OAuthConstants } from "OAuthConstants" /* 13342 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ text: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/activate_device/native/UserCodeInput.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activate_device/native/UserCodeInput.tsx");
 
 export const UserCodeInput = function UserCodeInput(prefilledUserCode) {
   let str = prefilledUserCode.prefilledUserCode;
@@ -25,7 +25,6 @@ export const UserCodeInput = function UserCodeInput(prefilledUserCode) {
   [arr, c0] = callback(React.useState(str), 2);
   let obj = _require(13343);
   const userCodeSubmit = obj.useUserCodeSubmit(arr, onUserCodeAccepted, onClose);
-  obj = { children: null };
   obj = { style: innerContentDefault.innerContent, children: null };
   ({ manualSubmit, error, submitting } = userCodeSubmit);
   obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };

@@ -1,11 +1,11 @@
 // === Module 11587: isStaff ===
 
 // Module 11587 (isStaff)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const UserFlags = ME.UserFlags;
-const result = set.fileFinishedImporting("modules/user/isStaffFromRawUser.tsx");
+const result = obj132.fileFinishedImporting("modules/user/isStaffFromRawUser.tsx");
 
 export default function isStaff(flags) {
   let num = flags.flags;

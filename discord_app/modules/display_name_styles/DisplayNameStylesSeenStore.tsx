@@ -3,11 +3,9 @@
 // Module 14687 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
 
-let obj = { seenFontIds: null, seenEffectIds: null, newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };
+let obj = { seenFontIds: new Set(), seenEffectIds: null, newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };
 let set = new Set();
-obj[0] = set;
 obj[1] = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
 class DisplayNameStylesSeenStore extends PersistedStore {
@@ -127,6 +125,7 @@ obj = {
   }
 };
 const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesSeenStore.tsx");
+const set1 = new Set();
+const result = require("obj132").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesSeenStore.tsx");
 
 export default displayNameStylesSeenStore;

@@ -1,10 +1,10 @@
 // === Module 16388: useShouldDisplayCancelConsoleTransfer ===
 
 // Module 16388 (useShouldDisplayCancelConsoleTransfer)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/game_console/native/useShouldDisplayCancelConsoleTransfer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_console/native/useShouldDisplayCancelConsoleTransfer.tsx");
 
 export default function useShouldDisplayCancelConsoleTransfer(arg0) {
   const callback = arg0;
@@ -35,7 +35,7 @@ export default function useShouldDisplayCancelConsoleTransfer(arg0) {
             const _Date = Date;
             tmp3 = Date.now() - tmp2.startedAt > 6000;
           }
-          return closure_1(tmp3);
+          return callback(tmp3);
         }, 6000 - (Date.now() - tmp.startedAt));
         return () => {
           clearTimeout(closure_0);

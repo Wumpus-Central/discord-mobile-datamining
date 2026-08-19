@@ -1,9 +1,9 @@
 // === Module 9445: measureView ===
 
 // Module 9445 (measureView)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/view_measure/ViewMeasureUtils.native.tsx");
+const result = obj132.fileFinishedImporting("modules/view_measure/ViewMeasureUtils.native.tsx");
 
 export const measureView = function measureView(arg0) {
   closure_0 = arg0;

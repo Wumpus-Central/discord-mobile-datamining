@@ -6,15 +6,15 @@ import DequeDefault from "Deque" /* 8 */;
 
 let closure_2 = new timestampDefault("Queue");
 const tmp2 = new timestampDefault("Queue");
-const result = require("set").fileFinishedImporting("utils/Queue.tsx");
+const result = require("obj132").fileFinishedImporting("utils/Queue.tsx");
 class Queue {
   constructor() {
     tmp = global;
     if (global === undefined) {
       tmp = closure_2;
     }
-    num = arg1;
-    if (arg1 === undefined) {
+    num = fn;
+    if (fn === undefined) {
       num = 100;
     }
     obj = Object.create(new.target.prototype);
@@ -38,8 +38,7 @@ Object.defineProperty(prototype, "length", {
   set: undefined
 });
 prototype["_drainIfNecessary"] = function _drainIfNecessary() {
-  let self = this;
-  self = this;
+  const self = this;
   if (null === this.timeout) {
     if (0 !== self.queue.length) {
       if (true !== self.draining) {
@@ -66,14 +65,14 @@ prototype["_drainIfNecessary"] = function _drainIfNecessary() {
           } else {
             let defaultRetryAfter = retryAfter.retryAfter;
             if (defaultRetryAfter == null) {
-              defaultRetryAfter = tmp2.defaultRetryAfter;
+              defaultRetryAfter = self.defaultRetryAfter;
             }
-            const logger2 = tmp2.logger;
+            const logger2 = self.logger;
             const _HermesInternal = HermesInternal;
-            logger2.info("Rate limited. Delaying draining of queue for " + defaultRetryAfter + " ms. LogId:" + tmp3 + " QueueLength: " + tmp2.queue.length);
-            tmp2.pendingRetryItem = arr;
+            logger2.info("Rate limited. Delaying draining of queue for " + defaultRetryAfter + " ms. LogId:" + logId + " QueueLength: " + self.queue.length);
+            self.pendingRetryItem = arr;
             const _setTimeout = setTimeout;
-            tmp2.timeout = setTimeout(() => {
+            self.timeout = setTimeout(() => {
               closure_3.pendingRetryItem = null;
               const queue = closure_3.queue;
               queue.unshift(closure_1);
@@ -94,14 +93,14 @@ prototype["clear"] = function clear() {
   this.draining = false;
   this.pendingRetryItem = null;
 };
-prototype["remove"] = function remove(arg0) {
+prototype["remove"] = function remove(fn) {
   const self = this;
   const items = [];
   if (this.queue.length > 0) {
     do {
       let queue = self.queue;
       let arr = queue.shift();
-      if (!arg0(arr.message)) {
+      if (!fn(arr.message)) {
         arr = items.push(arr);
       }
     } while (self.queue.length > 0);

@@ -1,17 +1,16 @@
 // === Module 14508: useVideoQuestClickCtaAndMaybeCloseModal ===
 
 // Module 14508 (useVideoQuestClickCtaAndMaybeCloseModal)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx");
 
 export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestClickCtaAndMaybeCloseModal(quest) {
   quest = quest.quest;
   const onClose = quest.onClose;
   const sourceQuestContent = quest.sourceQuestContent;
-  let getQuestImpressionId;
-  getQuestImpressionId = quest(sourceQuestContent[1]).useGetQuestImpressionId();
+  const getQuestImpressionId = quest(sourceQuestContent[1]).useGetQuestImpressionId();
   const items = [quest, getQuestImpressionId, sourceQuestContent, onClose];
   return getQuestImpressionId.useCallback(() => {
     let obj = onClose(sourceQuestContent[2]);
@@ -19,8 +18,8 @@ export const useVideoQuestClickCtaAndMaybeCloseModal = function useVideoQuestCli
       onClose();
     }
     obj2 = quest(sourceQuestContent[3]);
-    const tmp3 = quest;
-    obj = { content: tmp2(tmp[5]).QuestContent.VIDEO_MODAL_MOBILE, ctaContent: tmp2(tmp[6]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
-    quest(sourceQuestContent[4]).openGameLinkDirectly(tmp3, obj);
+    obj = { content: quest(sourceQuestContent[5]).QuestContent.VIDEO_MODAL_MOBILE, ctaContent: quest(sourceQuestContent[6]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
+    quest(sourceQuestContent[4]).openGameLinkDirectly(quest, obj);
+    const tmp2Result = quest(sourceQuestContent[4]);
   }, items);
 };

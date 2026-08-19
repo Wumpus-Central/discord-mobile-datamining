@@ -2,10 +2,10 @@
 
 // Module 8455 (useNSFWAllowed)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useNSFWAllowed.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/content_and_social/useNSFWAllowed.tsx");
 
 export const useNSFWAllowed = function useNSFWAllowed() {
   const items = [closure_2];

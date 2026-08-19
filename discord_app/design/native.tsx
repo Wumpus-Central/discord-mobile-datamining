@@ -1,7 +1,7 @@
 // === Module 13492: AccessibilityAnnouncer ===
 
 // Module 13492 (AccessibilityAnnouncer)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1351 */;
 import updateAccessibilityAnnouncerLiveRegionMessage from "updateAccessibilityAnnouncerLiveRegionMessage" /* 1352 */;
 import context from "context" /* 1356 */;
@@ -99,7 +99,7 @@ import StickyWrapper from "StickyWrapper" /* 10566 */;
 import ModalFooter from "ModalFooter" /* 11114 */;
 import Modal from "Modal" /* 11115 */;
 import defaultCountFormatter from "defaultCountFormatter" /* 11783 */;
-import SegmentedControlPage from "SegmentedControlPage" /* 11785 */;
+import SegmentedControlPagesNative from "SegmentedControlPagesNative" /* 11785 */;
 import GuildIconPile from "GuildIconPile" /* 11787 */;
 import Pile from "Pile" /* 11788 */;
 import map2 from "map" /* 11789 */;
@@ -136,7 +136,7 @@ import ContextMenuItem from "ContextMenuItem" /* 13530 */;
 import getItemKey from "getItemKey" /* 13531 */;
 import Toast from "Toast" /* 13533 */;
 import GhostInput from "GhostInput" /* 13534 */;
-import set2 from "set" /* 13535 */;
+import obj1322 from "obj132" /* 13535 */;
 import useAccessibilityNativeStackFocusTracking from "useAccessibilityNativeStackFocusTracking" /* 13536 */;
 import AccessibleNativeStackNavigator from "AccessibleNativeStackNavigator" /* 13537 */;
 import AccessibleNativeStackNavigatorDefault from "AccessibleNativeStackNavigator" /* 13537 */;
@@ -146,7 +146,7 @@ import ModalDisclaimer from "ModalDisclaimer" /* 13540 */;
 import AvatarDuoPile from "AvatarDuoPile" /* 13541 */;
 import Slider from "Slider" /* 13542 */;
 
-const result = set.fileFinishedImporting("design/native.tsx");
+const result = obj132.fileFinishedImporting("design/native.tsx");
 
 export const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
 export const AccessibilityAnnouncerLiveRegion = updateAccessibilityAnnouncerLiveRegionMessage.AccessibilityAnnouncerLiveRegion;
@@ -336,8 +336,8 @@ export const Card = PressableCard.Card;
 export const CardProps = PressableCard.CardProps;
 export const SegmentedControl = SegmentedControl.SegmentedControl;
 export const SegmentedControlProps = SegmentedControl.SegmentedControlProps;
-export const SegmentedControlPages = SegmentedControlPage.SegmentedControlPages;
-export const SegmentedControlPagesProps = SegmentedControlPage.SegmentedControlPagesProps;
+export const SegmentedControlPages = SegmentedControlPagesNative.SegmentedControlPages;
+export const SegmentedControlPagesProps = SegmentedControlPagesNative.SegmentedControlPagesProps;
 export const useSegmentedControlState = useSegmentedControlState.useSegmentedControlState;
 export const SegmentedControlState = useSegmentedControlState.SegmentedControlState;
 export const SegmentedControlItem = useSegmentedControlState.SegmentedControlItem;
@@ -374,7 +374,7 @@ export const SplitTextInputProps = SplitTextInput.SplitTextInputProps;
 export const useTooltip = useTooltip.useTooltip;
 export const BaseTooltipProps = tooltipEnterExitAnimation.BaseTooltipProps;
 export const useCoachmark = useCoachmark.useCoachmark;
-export const BaseCoachmarkProps = set2.BaseCoachmarkProps;
+export const BaseCoachmarkProps = obj1322.BaseCoachmarkProps;
 export const ExpressiveGradient = ExpressiveGradient.ExpressiveGradient;
 export const LayerContext = add.LayerContext;
 export const LayerScope = Layer.LayerScope;

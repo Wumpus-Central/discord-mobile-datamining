@@ -1,12 +1,12 @@
 // === Module 501: PlatformTypes ===
 
 // Module 501 (PlatformTypes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let obj = { WINDOWS: "WINDOWS", OSX: "OSX", LINUX: "LINUX", WEB: "WEB" };
 let c1 = true;
 const android = "android";
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/PlatformUtils.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/PlatformUtils.tsx");
 
 export const PlatformTypes = obj;
 export const isPlatformEmbedded = true;
@@ -30,7 +30,6 @@ export const isAndroidChrome = function isAndroidChrome() {
   if (tmp) {
     const _navigator = navigator;
     tmp = null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile");
-    const str = navigator.userAgent;
     const str2 = navigator.userAgent.toLowerCase();
   }
   return tmp;
@@ -93,7 +92,7 @@ export function getPlatformName() {
 }
 export function getNativePlatform() {
   if ("ios" !== android) {
-    if ("android" !== tmp) {
+    if ("android" !== android) {
       return "web";
     }
   }

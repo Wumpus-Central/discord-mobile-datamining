@@ -1,12 +1,12 @@
 // === Module 16012: trackYouTabAvatarPress ===
 
 // Module 16012 (trackYouTabAvatarPress)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");
+const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");
 
 export const trackYouTabAvatarPress = function trackYouTabAvatarPress() {
   expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_AVATAR_PRESS);

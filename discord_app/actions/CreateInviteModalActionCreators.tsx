@@ -4,11 +4,11 @@
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8042 */;
-import closure_3 from "updateWithLatestInvite" /* 8919 */;
+import updateWithLatestInvite from "updateWithLatestInvite" /* 8919 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("actions/CreateInviteModalActionCreators.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("actions/CreateInviteModalActionCreators.tsx");
 
 export default {
   init(guildId, channelId, location) {
@@ -17,8 +17,7 @@ export default {
       str = "";
     }
     ({ targetType, targetUserId, targetApplicationId, skipCreateInvite } = location);
-    let obj = dispatcherDefault;
-    obj = { type: "CREATE_INVITE_MODAL_INIT", guildId, channelId, targetType, targetUserId, targetApplicationId };
+    const obj = { type: "CREATE_INVITE_MODAL_INIT", guildId, channelId, targetType, targetUserId, targetApplicationId };
     obj.dispatch(obj);
     if (!skipCreateInvite) {
       const self = this;
@@ -27,8 +26,7 @@ export default {
   },
   openSettings(guildId, channelId, source, onClose) {
     const inviteSettings = store.getInviteSettings();
-    let obj = dispatcherDefault;
-    obj = { type: "CREATE_INVITE_MODAL_OPEN" };
+    let obj = { type: "CREATE_INVITE_MODAL_OPEN" };
     const merged = Object.assign(inviteSettings);
     obj.guildId = guildId;
     obj.channelId = channelId;
@@ -38,8 +36,7 @@ export default {
     expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, obj);
   },
   updateSettings(settings) {
-    let obj = dispatcherDefault;
-    obj = { type: "CREATE_INVITE_MODAL_UPDATE_SETTINGS", settings };
+    const obj = { type: "CREATE_INVITE_MODAL_UPDATE_SETTINGS", settings };
     obj.dispatch(obj);
   },
   resetSettings() {
@@ -60,8 +57,6 @@ export default {
           code = invite.code;
         }
       }
-      const obj4 = dispatcherDefault;
-      const tmp7 = importDefault;
       obj = { temporary: null, validate: null, max_age: null, max_uses: null, target_type: null, target_user_id: null, target_application_id: null, flags: null, role_ids: null };
       obj[0] = temporary;
       obj[1] = code;
@@ -75,13 +70,12 @@ export default {
       obj[7] = flags;
       obj[8] = roleIds;
       const invite1 = generateAcceptInviteOptionsDefault.createInvite(channelId, obj, arg0);
-      invite1.then(() => {
-        let obj = closure_1_1(closure_1_2[2]);
-        obj = { type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId };
+      invite1.then((result) => {
+        const obj = { type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId };
         obj.dispatch(obj);
       }, (message) => {
         const intl = channelId(1236).intl;
-        message = intl.string(channelId(1236).t.WB1ip6);
+        intl.string(channelId(1236).t.WB1ip6);
         message = undefined;
         if (message != null) {
           message = message.message;
@@ -90,6 +84,7 @@ export default {
           message = message.message;
         }
         callback(709).dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
+        const obj = callback(709);
       });
       const tmp7Result = generateAcceptInviteOptionsDefault;
     }

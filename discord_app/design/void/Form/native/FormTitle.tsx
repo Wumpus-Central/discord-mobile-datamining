@@ -6,28 +6,27 @@ import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ View: obj1, Platform } = get_ActivityIndicator);
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let num = 58;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   num = 48;
 }
 let num2 = 48;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   num2 = 56;
 }
-set = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: null, error: null };
-set = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: ThemesDefault.colors.TEXT_SUBTLE };
-set[3] = set;
-set = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-set[4] = set;
-let closure_5 = createCacheKey.createStyles(set);
-const result = set.fileFinishedImporting("design/void/Form/native/FormTitle.tsx");
+obj132 = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: ThemesDefault.colors.TEXT_SUBTLE };
+obj132[3] = obj132;
+obj132 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
+obj132[4] = obj132;
+let closure_5 = createCacheKey.createStyles(obj132);
+const result = obj132.fileFinishedImporting("design/void/Form/native/FormTitle.tsx");
 
 export default function FormTitle(thinTitle) {
   ({ title, uppercaseTitle } = thinTitle);
@@ -72,9 +71,9 @@ export default function FormTitle(thinTitle) {
     formatted = title.toUpperCase();
   }
   obj[3] = formatted;
-  const items2 = [closure_3(Button.LegacyText, obj), icon];
+  const items2 = [callback(Button.LegacyText, obj), icon];
   obj[1] = items2;
-  return closure_4(closure_2, obj);
+  return callback2(closure_2, obj);
 };
 export const FORM_TITLE_HEIGHT = num;
 export const THIN_FORM_TITLE_HEIGHT = num2;

@@ -1,14 +1,14 @@
 // === Module 4967: getRelativeTimestamp ===
 
 // Module 4967 (getRelativeTimestamp)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import NotificationCenterScenes from "NotificationCenterScenes" /* 4802 */;
 import getDurationString from "getDurationString" /* 4968 */;
 import getDurationStringDefault from "getDurationString" /* 4968 */;
 
-const result = set.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 
 export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult, flag) {
   if (flag === undefined) {
@@ -25,7 +25,6 @@ export const isRemoteAcked = function isRemoteAcked(addResult, closure_1) {
     let tmp4 = closure_1 !== explicitContentFromProto.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET;
     if (tmp4) {
       tmp4 = DISCORD_EPOCHDefault.compare(closure_1, addResult.id) >= 0;
-      const obj = DISCORD_EPOCHDefault;
     }
     acked = tmp4;
   }

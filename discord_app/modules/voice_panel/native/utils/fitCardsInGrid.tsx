@@ -1,7 +1,7 @@
 // === Module 11446: isNewLayoutBetter ===
 
 // Module 11446 (isNewLayoutBetter)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 function isNewLayoutBetter(unusedSpace, unusedSpace2) {
   if (0 !== unusedSpace2.unusedSpace) {
@@ -45,7 +45,7 @@ function isNewLayoutBetter(unusedSpace, unusedSpace2) {
   }
   return false;
 }
-let result = set.fileFinishedImporting("modules/voice_panel/native/utils/fitCardsInGrid.tsx");
+let result = obj132.fileFinishedImporting("modules/voice_panel/native/utils/fitCardsInGrid.tsx");
 
 export default function fitCardsInGrid(arg0) {
   ({ cardCount, gutterSize, availableWidth, availableHeight } = arg0);
@@ -58,8 +58,6 @@ export default function fitCardsInGrid(arg0) {
       let _Math = Math;
       let diff1 = availableWidth - diff * gutterSize;
       let result = cardCount % num;
-      let tmp6 = num;
-      let tmp7 = obj;
       let num2 = 0;
       let rounded = Math.floor(cardCount / num);
       if (0 < result) {
@@ -74,7 +72,6 @@ export default function fitCardsInGrid(arg0) {
       obj[2] = availableHeight - sum1;
       obj[3] = sum;
       obj[4] = result1;
-      let tmp11 = isNewLayoutBetter;
       let tmp12 = obj;
       if (isNewLayoutBetter(obj, obj)) {
         tmp12 = obj;
@@ -84,14 +81,12 @@ export default function fitCardsInGrid(arg0) {
         let result2 = (availableHeight - (obj.rows - 1) * gutterSize) / obj.rows;
         let sum2 = result2 * obj.rows + (obj.rows - 1) * gutterSize;
         obj = {};
-        let tmp16 = obj;
-        let tmp17 = obj;
         let merged = Object.assign(obj);
         obj.unusedSpace = availableWidth * availableHeight - (result2 * obj.columns + (obj.columns - 1) * gutterSize) * sum2;
         obj.overscroll = availableHeight - sum2;
         obj.cardSize = result2;
         tmp13 = tmp12;
-        if (tmp11(obj, tmp12)) {
+        if (isNewLayoutBetter(obj, tmp12)) {
           tmp13 = obj;
         }
       }

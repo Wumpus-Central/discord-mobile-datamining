@@ -1,7 +1,7 @@
 // === Module 16257: BaseActivityPanelSystemUIManager ===
 
 // Module 16257 (BaseActivityPanelSystemUIManager)
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import componentDidMountDefault from "componentDidMount" /* 8032 */;
 import pushStackEntryDefault from "pushStackEntry" /* 8680 */;
 import useActivityWebViewLockDefault from "useActivityWebViewLock" /* 16234 */;
@@ -9,13 +9,13 @@ import importAllResult from "noop" /* 19 */;
 import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 class BaseActivityPanelSystemUIManager {
   constructor(arg0) {
     ({ mode, isWindowLandscape } = global);
     tmp = mode === ActivityPanelModes.PANEL;
     tmp2 = closure_2;
-    obj = require("set");
+    obj = require("obj132");
     tmp3 = obj.isIOS() && tmp;
     tmp7Result = null;
     tmp4 = jsxs;
@@ -51,7 +51,7 @@ const memoResult = importAllResult.memo(() => {
   const context = importAllResult.useContext(useActivityWebViewLockDefault);
   return callback(BaseActivityPanelSystemUIManager, { mode: context.mode, isWindowLandscape: context.wrapperDimensions.isWindowLandscape });
 });
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelSystemUIManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelSystemUIManager.tsx");
 
 export default memoResult;
 export { BaseActivityPanelSystemUIManager };

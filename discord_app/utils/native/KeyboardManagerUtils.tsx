@@ -1,12 +1,13 @@
 // === Module 1892: dismissGlobalKeyboard ===
 
 // Module 1892 (dismissGlobalKeyboard)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import obj1322 from "obj132" /* 500 */;
 import enforcingDefault from "enforcing" /* 1893 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
-let result = set.fileFinishedImporting("utils/native/KeyboardManagerUtils.tsx");
+let result = obj132.fileFinishedImporting("utils/native/KeyboardManagerUtils.tsx");
 
 export const dismissGlobalKeyboard = function dismissGlobalKeyboard() {
   if (obj.isAndroid()) {
@@ -18,6 +19,7 @@ export const dismissGlobalKeyboard = function dismissGlobalKeyboard() {
     const KeyboardManager = NativeModules.KeyboardManager;
     const result1 = KeyboardManager.dismissGlobalKeyboard();
   }
+  obj = obj1322;
 };
 export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAndDismissKeyboard() {
   if (obj.isAndroid()) {
@@ -26,6 +28,7 @@ export const clearCurrentFocusAndDismissKeyboard = function clearCurrentFocusAnd
       const result = obj2.clearCurrentFocusAndDismissKeyboard();
     }
   }
+  obj = obj1322;
 };
 export const onKeyboardChanged = function onKeyboardChanged(open) {
   if (obj.isAndroid()) {
@@ -41,4 +44,5 @@ export const onKeyboardChanged = function onKeyboardChanged(open) {
       onKeyboardChanged(globalThis.open);
     }
   }
+  obj = obj1322;
 };

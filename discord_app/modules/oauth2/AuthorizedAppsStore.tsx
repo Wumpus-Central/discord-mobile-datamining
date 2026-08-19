@@ -4,15 +4,15 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "isConnected" /* 5290 */;
-import closure_5 from "reinjectEphemerals" /* 4994 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import isConnected from "isConnected" /* 5290 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 
-require = arg1;
+require = fn;
 function recomputeFromAppTokens() {
   const items = [...map.values()];
-  closure_9 = items.filter((application) => null == application.application.parent_id);
+  closure_9 = items.filter((item, index) => null == item.application.parent_id);
 }
 function updateFetchStates(FETCHED, applicationIds) {
   if (null == applicationIds) {
@@ -22,7 +22,6 @@ function updateFetchStates(FETCHED, applicationIds) {
   } else {
     const tmp2 = applicationIds[Symbol.iterator]();
     while (tmp2 !== undefined) {
-      let tmp6 = map1;
       let result = map1.set(tmp4, FETCHED);
       continue;
     }
@@ -90,12 +89,8 @@ obj = {
   USER_AUTHORIZED_APPS_REQUEST_CANCELLED: function handleUserAuthorizedAppsRequestCancelled(arg0) {
     let flag = false;
     for (const item10008 of tmp) {
-      obj = map1;
-      let tmp2 = item10008;
-      let tmp3 = obj;
-      if (map1.get(item10008) === obj.FETCHING) {
-        let tmp4 = item10008;
-        let deleteResult = obj.delete(tmp2);
+      if (map1.get(item10008) === map1.FETCHING) {
+        let deleteResult = map1.delete(item10008);
         flag = true;
       }
       continue;
@@ -114,7 +109,7 @@ obj = {
   USER_AUTHORIZED_APPS_UPDATE: function handleAuthorizedAppsUpdate(isFullFetch) {
     const FETCHED = obj.FETCHED;
     if (isFullFetch.isFullFetch) {
-      tmp(FETCHED);
+      updateFetchStates(FETCHED);
       const _Map = Map;
       const _Object3 = Object;
       const entries = Object.entries(isFullFetch.tokens);
@@ -122,22 +117,16 @@ obj = {
       recomputeFromAppTokens();
     } else {
       const _Object = Object;
-      tmp(FETCHED, Object.keys(isFullFetch.tokens));
+      updateFetchStates(FETCHED, Object.keys(isFullFetch.tokens));
       const _Object2 = Object;
       const entries1 = Object.entries(isFullFetch.tokens);
       const tmp5 = entries1[Symbol.iterator]();
       while (tmp5 !== undefined) {
-        let tmp10 = callback;
         let tmp11 = callback(tmp8, 2);
         [tmp12, tmp13] = tmp11;
         if (null == tmp13) {
-          let tmp19 = map;
-          let tmp20 = tmp12;
           let deleteResult = map.delete(tmp12);
         } else {
-          let tmp15 = map;
-          let tmp16 = tmp12;
-          let tmp17 = tmp13;
           let result = map.set(tmp12, tmp14);
         }
         continue;
@@ -149,7 +138,7 @@ obj = {
     application = application.application;
     const result = map.set(application.id, { id: application.id, application, scopes: application.scopes });
     const items = [...map.values()];
-    closure_9 = items.filter((application) => null == application.application.parent_id);
+    closure_9 = items.filter((item, index) => null == item.application.parent_id);
   },
   OAUTH2_TOKEN_DELETE: function handleOAuth2TokenDelete(applicationId) {
     const value = map.get(applicationId.applicationId);
@@ -158,7 +147,7 @@ obj = {
         map.delete(value.application.id);
         const items = [];
         HermesBuiltin.arraySpread(map.values(), 0);
-        closure_9 = items.filter((application) => null == application.application.parent_id);
+        closure_9 = items.filter((item, index) => null == item.application.parent_id);
       }
     }
     return false;
@@ -173,7 +162,7 @@ obj = {
   }
 };
 const authorizedAppsStore = new AuthorizedAppsStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("modules/oauth2/AuthorizedAppsStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/oauth2/AuthorizedAppsStore.tsx");
 
 export default authorizedAppsStore;
 export const FetchState = obj;

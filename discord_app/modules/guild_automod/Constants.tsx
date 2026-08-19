@@ -1,13 +1,13 @@
 // === Module 11042: AutomodEventType ===
 
 // Module 11042 (AutomodEventType)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import AutomodTriggerType from "AutomodTriggerType" /* 11043 */;
 import AutomodEventType from "AutomodEventType" /* 11044 */;
 import AutomodActionType from "AutomodActionType" /* 11045 */;
 
 const items = [AutomodTriggerType.AutomodTriggerType.USER_PROFILE, AutomodTriggerType.AutomodTriggerType.SERVER_POLICY, AutomodTriggerType.AutomodTriggerType.MENTION_SPAM, AutomodTriggerType.AutomodTriggerType.ML_SPAM, AutomodTriggerType.AutomodTriggerType.DEFAULT_KEYWORD_LIST, AutomodTriggerType.AutomodTriggerType.KEYWORD];
-const result = set.fileFinishedImporting("modules/guild_automod/Constants.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_automod/Constants.tsx");
 
 export const AutomodEventType = AutomodEventType.AutomodEventType;
 export const AutomodTriggerType = AutomodTriggerType.AutomodTriggerType;

@@ -2,20 +2,22 @@
 
 // Module 10986 (ExperimentOverrideActionSheet)
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import closure_3 from "noop" /* 19 */;
+import registerAssetDefault from "registerAsset" /* 10987 */;
+import registerAssetDefault2 from "registerAsset" /* 10988 */;
+import registerAssetDefault3 from "registerAsset" /* 10990 */;
+import noop from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import { ExperimentEmbedType } from "ExperimentBuckets" /* 4289 */;
 import { InviteTypes } from "InviteSendStates" /* 4371 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function ExperimentOverrideActionSheet(override) {
   const id = override.id;
   const experiment = override.experiment;
-  let memo;
   let items = [experiment];
-  memo = React.useMemo(() => {
+  const memo = React.useMemo(() => {
     if (null != experiment) {
       let experimentVariantsForDevTools = id(memo[16]).getExperimentVariantsForDevTools(tmp);
       const obj = id(memo[16]);
@@ -31,26 +33,26 @@ function ExperimentOverrideActionSheet(override) {
     } else {
       const _Map = Map;
       const map = new Map();
-      const item = memo.forEach((id) => {
-        const result = map.set(id.id, id);
+      const item = memo.forEach((item, index) => {
+        const result = map.set(item.id, item);
       });
       items = [];
-      const item1 = map.forEach((label) => {
-        closure_0 = label;
+      const item1 = map.forEach((item, index) => {
+        closure_0 = item;
         items.push({
-          label: label.label,
+          label: item.label,
           onPress() {
-            items(closure_2_2[17]).hideActionSheet("ExperimentOverrideSheet");
-            const obj = items(closure_2_2[17]);
-            map(closure_2_2[18]).overrideBucket(closure_1_1.system, label, label.id);
+            items(memo[17]).hideActionSheet("ExperimentOverrideSheet");
+            const obj = items(memo[17]);
+            map(memo[18]).overrideBucket(closure_1_1.system, item, item.id);
           }
         });
       });
       let obj = { label: "Clear Override", isDestructive: true, onPress: null };
       obj[2] = function onPress() {
-        items(closure_1_2[17]).hideActionSheet("ExperimentOverrideSheet");
-        const obj = items(closure_1_2[17]);
-        map(closure_1_2[18]).overrideBucket(items.system, map, null);
+        items(memo[17]).hideActionSheet("ExperimentOverrideSheet");
+        const obj = items(memo[17]);
+        map(memo[18]).overrideBucket(items.system, map, null);
       };
       items.push(obj);
       return items;
@@ -59,27 +61,23 @@ function ExperimentOverrideActionSheet(override) {
   const callback = React.useCallback(() => {
     experiment(memo[17]).hideActionSheet("ExperimentOverrideSheet");
   }, []);
-  let obj = { header: null, children: null };
-  obj = { title: experiment.title, subtitle: id };
+  let obj = { title: experiment.title, subtitle: id };
   obj[0] = jsx(id(memo[20]).BottomSheetTitleHeader, { title: experiment.title, subtitle: id });
   obj[1] = jsx(id(memo[21]).ExperimentDetails, { experiment, override: override.override, id, options: memo1, onCopyLink: callback });
   return jsx(id(memo[19]).BottomSheet, { title: experiment.title, subtitle: id });
 }
-let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/ExperimentEmbed.tsx");
+let result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/ExperimentEmbed.tsx");
 
 export default function ConnectedExperimentOverrideActionSheet(id) {
   id = id.id;
-  let experiments;
   let overridesInfo;
-  let experiments2;
-  let overridesInfo2;
   let obj = id(overridesInfo[8]);
   const legacyExperiments = obj.useLegacyExperiments();
-  experiments = legacyExperiments.experiments;
+  const experiments = legacyExperiments.experiments;
   overridesInfo = legacyExperiments.overridesInfo;
   const apexExperiments = id(overridesInfo[9]).useApexExperiments();
-  experiments2 = apexExperiments.experiments;
-  overridesInfo2 = apexExperiments.overridesInfo;
+  const experiments2 = apexExperiments.experiments;
+  const overridesInfo2 = apexExperiments.overridesInfo;
   const items = [experiments, experiments2, id];
   const memo = experiments2.useMemo(() => {
     let tmp2 = experiments[id];
@@ -146,7 +144,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
       }
       let tmp4Result = tmp4(4364);
       const experimentBuckets = tmp4Result.getExperimentBuckets(tmp10);
-      const iter = experimentBuckets.find((value) => value.value === experimentTreatmentFromEmbedURL);
+      const iter = experimentBuckets.find((item, index) => item.value === experimentTreatmentFromEmbedURL);
       if (null != iter) {
         let EXPERIMENT = ExperimentEmbedType.EXPERIMENT_TREATMENT;
         let tmp13 = ExperimentEmbedType;
@@ -172,7 +170,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
         obj.titleColor = colors.titleColor;
         obj.subtitle = label;
         obj.subtitleColor = colors.subtitleColor;
-        obj.thumbnailUrl = tmp4(8171).getAssetUriForEmbed(tmp(10990));
+        obj.thumbnailUrl = tmp4(8171).getAssetUriForEmbed(registerAssetDefault3);
         obj.thumbnailBackgroundColor = colors.backgroundColor;
         obj.acceptLabelColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedColor : colors.acceptLabelGreenColor;
         obj.acceptLabelBackgroundColor = null != tmp12 && null != iter && tmp12.variantId === iter.value ? colors.clearLabelRedBackgroundColor : colors.acceptLabelGreenBackgroundColor;
@@ -201,7 +199,7 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
         }
         obj.subtitle = combined1;
         obj.subtitleColor = colors.subtitleColor;
-        obj.thumbnailUrl = tmp4(8171).getAssetUriForEmbed(tmp(10990));
+        obj.thumbnailUrl = tmp4(8171).getAssetUriForEmbed(registerAssetDefault3);
         ({ backgroundColor: obj13.thumbnailBackgroundColor, acceptLabelGreenColor: obj13.acceptLabelColor, acceptLabelGreenBackgroundColor: obj13.acceptLabelBackgroundColor } = colors);
         obj.acceptLabelText = "View Experiment Details";
         obj.embedCanBeTapped = true;
@@ -226,9 +224,9 @@ export const createExperimentEmbed = function createExperimentEmbed(url, closure
   obj1.bodyTextColor = colors.bodyTextColor;
   const obj4 = experimentTreatmentFromEmbedURL(10682);
   if (tmp4Result4.isThemeDark(closure_2)) {
-    let tmpResult = tmp(10987);
+    let tmpResult = registerAssetDefault;
   } else {
-    tmpResult = tmp(10988);
+    tmpResult = registerAssetDefault2;
   }
   obj1.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   obj1.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

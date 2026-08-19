@@ -1,11 +1,11 @@
 // === Module 5076: LIMITED_GUILD_MEMBER_THRESHOLD ===
 
 // Module 5076 (LIMITED_GUILD_MEMBER_THRESHOLD)
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "handleInviteData" /* 4295 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import handleInviteData from "handleInviteData" /* 4295 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
 
 export const LIMITED_GUILD_MEMBER_THRESHOLD = 10000;
 export const isLimitedChannel = function isLimitedChannel(basicChannel) {

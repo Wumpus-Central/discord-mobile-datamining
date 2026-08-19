@@ -1,11 +1,11 @@
 // === Module 12782: getApplicationFromMessage ===
 
 // Module 12782 (getApplicationFromMessage)
-import closure_0 from "createExecutable" /* 4479 */;
+import createExecutable from "createExecutable" /* 4479 */;
 import { SpotifyApplication } from "getIconURL" /* 12779 */;
 import { isSpotifyParty } from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/getApplicationFromMessage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/getApplicationFromMessage.tsx");
 
 export const getApplicationFromMessage = function getApplicationFromMessage(application) {
   if (null != application.application) {

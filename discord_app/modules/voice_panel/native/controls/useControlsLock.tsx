@@ -1,9 +1,9 @@
 // === Module 16314: useControlsLock ===
 
 // Module 16314 (useControlsLock)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useControlsLock.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/useControlsLock.tsx");
 
 export default function useControlsLock(arg0) {
   importDefault = arg0;

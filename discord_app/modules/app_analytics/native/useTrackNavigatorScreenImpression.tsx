@@ -1,11 +1,11 @@
 // === Module 13922: useTrackNavigatorScreenImpression ===
 
 // Module 13922 (useTrackNavigatorScreenImpression)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import trackImpressionDefault from "trackImpression" /* 9177 */;
 
-const result = set.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
+const result = obj132.fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 
 export const useTrackNavigatorScreenImpression = function useTrackNavigatorScreenImpression(impressionProperties, params) {
   impressionProperties = impressionProperties.impressionProperties;

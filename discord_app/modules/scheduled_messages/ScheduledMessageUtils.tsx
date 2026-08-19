@@ -9,27 +9,25 @@ import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
 import tDefault from "t" /* 3975 */;
 import regExp from "regExp" /* 7437 */;
 import regExpDefault from "regExp" /* 7437 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "hasFlag" /* 4031 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { MessageFlags } from "ME" /* 676 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 11170 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import "ApexExperiment";
 
-require = arg1;
+require = fn;
 ({ MAX_SCHEDULED_MESSAGES_PER_USER: closure_8, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c9 } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
 class ScheduledMessagesConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
-    tmp2 = require("module_38")(null != arg1.limit, "Config is missing scheduled message limit");
+    tmp2 = require("module_38")(null != fn.limit, "Config is missing scheduled message limit");
     obj.enabled = global;
-    obj.limit = arg1.limit;
+    obj.limit = fn.limit;
     return obj;
   }
 }
-ApexExperiment = { name: "2026-08-scheduled-messages", kind: "user", defaultConfig: null, variations: null };
-ApexExperiment = Object.create(ScheduledMessagesConfig.prototype);
+const ApexExperiment = Object.create(ScheduledMessagesConfig.prototype);
 _modDef38(true, "Config is missing scheduled message limit");
 ApexExperiment.enabled = false;
 ApexExperiment.limit = 0;
@@ -62,7 +60,7 @@ obj1[2] = (arg0) => {
 ApexExperiment[3] = obj1;
 let closure_11 = ApexExperiment.createApexExperiment(ApexExperiment);
 const tmp3 = new timestampDefault("Scheduled Messages");
-const result = require("set").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageUtils.tsx");
 
 export const scheduledMessageLogger = tmp3;
 export const parseContentAndFlagsForSilentMessage = function parseContentAndFlagsForSilentMessage(arg0) {
@@ -76,7 +74,6 @@ export const parseContentAndFlagsForSilentMessage = function parseContentAndFlag
     }
     items[1] = hasFlag.addFlag(flags, MessageFlags.SUPPRESS_NOTIFICATIONS);
     let tmp4 = items;
-    const obj = hasFlag;
   } else {
     items[0] = content;
     let num = flags;
@@ -118,8 +115,7 @@ export const getDefaultScheduledTime = function getDefaultScheduledTime() {
   return addResult2;
 };
 export const getScheduledMessagesLimit = function getScheduledMessagesLimit(location) {
-  let obj = isPremiumAtLeast;
-  obj = { location };
+  const obj = { location };
   const config = store.getConfig(obj);
   if (!config.enabled) {
     return 0;
@@ -134,14 +130,13 @@ export const useScheduledMessagesLimit = function useScheduledMessagesLimit(loca
   }
 };
 export const convertServerScheduledMessageSend = function convertServerScheduledMessageSend(body) {
-  obj = { userId: body.user_id, scheduledMessageId: body.scheduled_message_id, sendAtTimestamp: body.send_at_timestamp, scheduledMessage: obj, state: body.state, attachmentUploads: null, record: null };
   const scheduled_message = body.scheduled_message;
-  obj = { channelId: scheduled_message.channel_id, content: scheduled_message.content, type: scheduled_message.type, flags: scheduled_message.flags, messageReference: scheduled_message.message_reference };
+  let obj = { channelId: scheduled_message.channel_id, content: scheduled_message.content, type: scheduled_message.type, flags: scheduled_message.flags, messageReference: scheduled_message.message_reference };
   let attachment_uploads = body.attachment_uploads;
   if (attachment_uploads == null) {
     attachment_uploads = [];
   }
-  obj[5] = attachment_uploads.map((filename) => ({ filename: filename.filename, uploadedFilename: filename.uploaded_filename, description: filename.description, title: filename.title }));
+  obj[5] = attachment_uploads.map((item, index) => ({ filename: item.filename, uploadedFilename: item.uploaded_filename, description: item.description, title: item.title }));
   obj = { id: body.scheduled_message_id, content: body.scheduled_message.content, author: authStore.getUser(body.user_id), timestamp: tDefault(body.send_at_timestamp).toDate(), channel_id: body.scheduled_message.channel_id };
   const obj4 = tDefault(body.send_at_timestamp);
   obj[6] = new closure_4(obj);

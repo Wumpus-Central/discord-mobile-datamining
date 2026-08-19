@@ -21,17 +21,17 @@ const prototype = CollectiblesShopHomesStore.prototype;
 prototype["getLastSuccessfulFetch"] = function getLastSuccessfulFetch(closure_0) {
   return map.get(closure_0);
 };
-prototype["getLastErrorTimestamp"] = function getLastErrorTimestamp(arg0) {
-  return map1.get(arg0);
+prototype["getLastErrorTimestamp"] = function getLastErrorTimestamp(closure_0) {
+  return map1.get(closure_0);
 };
-prototype["getLastFetchOptions"] = function getLastFetchOptions(arg0) {
-  return map2.get(arg0);
+prototype["getLastFetchOptions"] = function getLastFetchOptions(closure_0) {
+  return map2.get(closure_0);
 };
-prototype["getFetchShopHomeError"] = function getFetchShopHomeError(arg0) {
-  return map3.get(arg0);
+prototype["getFetchShopHomeError"] = function getFetchShopHomeError(closure_0) {
+  return map3.get(closure_0);
 };
-prototype["getIsFetchingShopHome"] = function getIsFetchingShopHome(arg0) {
-  return map4.get(arg0);
+prototype["getIsFetchingShopHome"] = function getIsFetchingShopHome(closure_0) {
+  return map4.get(closure_0);
 };
 prototype["getShopBlocks"] = function getShopBlocks(closure_0) {
   let value = map6.get(closure_0);
@@ -40,8 +40,8 @@ prototype["getShopBlocks"] = function getShopBlocks(closure_0) {
   }
   return value;
 };
-prototype["getHasKnownStaleData"] = function getHasKnownStaleData(arg0) {
-  return map5.get(arg0);
+prototype["getHasKnownStaleData"] = function getHasKnownStaleData(closure_0) {
+  return map5.get(closure_0);
 };
 prototype["getShopHomeConfigOverride"] = function getShopHomeConfigOverride() {
   return c8;
@@ -92,6 +92,6 @@ const collectiblesShopHomesStore = new CollectiblesShopHomesStore(dispatcherDefa
     c9 = undefined;
   }
 });
-let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesShopHomeStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/CollectiblesShopHomeStore.tsx");
 
 export default collectiblesShopHomesStore;

@@ -3,10 +3,10 @@
 // Module 4234 (useBaseAppContainerDimensions)
 import useWindowDimensions from "useWindowDimensions" /* 1494 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");
 
 export default function useBaseAppContainerDimensions() {
   const size = height(left[1])();

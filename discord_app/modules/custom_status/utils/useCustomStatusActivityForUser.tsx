@@ -1,12 +1,12 @@
 // === Module 9449: useCustomStatusActivityForUser ===
 
 // Module 9449 (useCustomStatusActivityForUser)
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "sortActivity" /* 4559 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import sortActivity from "sortActivity" /* 4559 */;
 import { ActivityTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/custom_status/utils/useCustomStatusActivityForUser.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/custom_status/utils/useCustomStatusActivityForUser.tsx");
 
 export default function useCustomStatusActivityForUser(arg0) {
   const _require = arg0;

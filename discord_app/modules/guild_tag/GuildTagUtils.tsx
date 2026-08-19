@@ -2,15 +2,15 @@
 
 // Module 8375 (guildHasTag)
 import GuildMemberFlags from "GuildMemberFlags" /* 4027 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import items from "items" /* 8168 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ GuildTagBadgeMediaProxySizes, GuildTagBadgeMediaProxySizesMobile: c5, GuildTagBadgeSize: closure_6 } = items);
-let result = require("set").fileFinishedImporting("modules/guild_tag/GuildTagUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_tag/GuildTagUtils.tsx");
 
 export const guildHasTag = function guildHasTag(guild) {
   let tag;
@@ -111,7 +111,7 @@ export const useShouldDisplayGuildTag = function useShouldDisplayGuildTag(arg0, 
   }
   obj = {};
 };
-export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, merged) {
+export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, guildId) {
   let tmp = arg2;
   user = user.getUser(id);
   if (undefined === arg2) {
@@ -128,10 +128,9 @@ export const shouldDisplayGuildTag = function shouldDisplayGuildTag(id, merged) 
     }
     let tmp5 = null != obj.guildId && null != obj.tag;
     if (tmp5) {
-      let result = null != merged && null != id;
+      let result = null != guildId && null != id;
       if (result) {
-        result = GuildMemberFlags.hasAutomodQuarantinedProfile(member.getMember(merged, id));
-        const obj3 = GuildMemberFlags;
+        result = GuildMemberFlags.hasAutomodQuarantinedProfile(member.getMember(guildId, id));
       }
       tmp5 = !result;
     }

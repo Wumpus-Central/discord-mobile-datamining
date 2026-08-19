@@ -1,9 +1,9 @@
 // === Module 1900: parseSkuIdFromServerData ===
 
 // Module 1900 (parseSkuIdFromServerData)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/utils/mappers.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/utils/mappers.tsx");
 
 export const parseSkuIdFromServerData = function parseSkuIdFromServerData(skuId) {
   if (typeof skuId.skuId !== "string") {

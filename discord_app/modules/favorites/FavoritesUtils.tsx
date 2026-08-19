@@ -1,14 +1,14 @@
 // === Module 1913: getFavoritesAwareGuildName ===
 
 // Module 1913 (getFavoritesAwareGuildName)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import date from "date" /* 1429 */;
 
 const FAVORITES_RAW_GUILD_ID = date.FAVORITES_RAW_GUILD_ID;
 const FAVORITES = ME.FAVORITES;
-const result = set.fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
 
 export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(guild) {
   if (null != guild) {
@@ -34,7 +34,7 @@ export function isFavoritesGuildId(guildId) {
   return tmp;
 }
 export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(closure_0) {
-  return "" !== closure_0.trim();
+  return "" !== _require.trim();
 };
 export const isFavoritableChannel = function isFavoritableChannel(record) {
   return !record.isCategory();

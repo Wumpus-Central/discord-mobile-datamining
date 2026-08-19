@@ -3,19 +3,19 @@
 // Module 12920 (handleMutationStart)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "reset" /* 4045 */;
+import reset from "reset" /* 4045 */;
 import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
 import { NOOP_NULL } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function handleMutationStart() {
   closure_7.membersData.isUpdating = true;
 }
 function handleMutationSuccess(subscriptionId) {
   subscriptionId = subscriptionId.subscriptionId;
   dispatcherDefault.wait(() => {
-    const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
-    return subscriptionGroupMembers.catch(closure_1_6);
+    const subscriptionGroupMembers = subscriptionId(dependencyMap[4]).fetchSubscriptionGroupMembers(subscriptionId);
+    return subscriptionGroupMembers.catch(NOOP_NULL);
   });
   closure_7.membersData.isUpdating = false;
 }
@@ -78,11 +78,10 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
     let flag = !isFetching;
     if (!isFetching) {
       dispatcherDefault.wait(() => {
-        const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(closure_1_6);
+        const subscriptionGroupMembers = subscriptionId(dependencyMap[4]).fetchSubscriptionGroupMembers(subscriptionId);
+        return subscriptionGroupMembers.catch(NOOP_NULL);
       });
       flag = true;
-      const obj = dispatcherDefault;
     }
     return flag;
   },
@@ -105,7 +104,6 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
         return premiumGroupMembership.catch(closure_6);
       });
       flag = true;
-      const obj = dispatcherDefault;
     }
     return flag;
   },
@@ -137,8 +135,8 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
     subscriptionId = subscriptionId.subscriptionId;
     if (subscriptionId.errorCode === constants.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED) {
       dispatcherDefault.wait(() => {
-        const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(closure_1_6);
+        const subscriptionGroupMembers = subscriptionId(dependencyMap[4]).fetchSubscriptionGroupMembers(subscriptionId);
+        return subscriptionGroupMembers.catch(NOOP_NULL);
       });
       closure_7.membersData.isUpdating = false;
       return true;
@@ -150,6 +148,6 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
     closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
   }
 });
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/PremiumGroupStore.tsx");
 
 export default premiumGroupStore;

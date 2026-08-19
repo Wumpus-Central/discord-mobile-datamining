@@ -1,18 +1,17 @@
 // === Module 9343: useNativeAndroidEmojiPickerEnabled ===
 
 // Module 9343 (useNativeAndroidEmojiPickerEnabled)
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import databaseNameDefault from "databaseName" /* 1971 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx");
 
 export default function useNativeAndroidEmojiPickerEnabled() {
-  let isAndroidResult = set.isAndroid();
+  let isAndroidResult = obj132.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != databaseNameDefault.database(id.getId());
-    const obj2 = databaseNameDefault;
   }
   return isAndroidResult;
 };

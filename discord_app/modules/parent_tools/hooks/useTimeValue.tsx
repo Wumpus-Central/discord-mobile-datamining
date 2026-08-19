@@ -1,9 +1,9 @@
 // === Module 14292: useTimeValue ===
 
 // Module 14292 (useTimeValue)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
 
 export default function useTimeValue(arg0) {
   ({ initial: closure_0, defaultValue: closure_1 } = arg0);

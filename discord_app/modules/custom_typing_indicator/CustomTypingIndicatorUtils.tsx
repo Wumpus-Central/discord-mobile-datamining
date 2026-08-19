@@ -4,9 +4,9 @@
 import messagesProxyDefault from "messagesProxy" /* 3403 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
 import CustomTypingIndicatorAnimation from "CustomTypingIndicatorAnimation" /* 14707 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
-require = arg1;
+require = fn;
 function getRandomCustomTypingIndicatorEmojis() {
   const items = [...closure_6];
   const items1 = [];
@@ -15,9 +15,6 @@ function getRandomCustomTypingIndicatorEmojis() {
       while (true) {
         let _Math = Math;
         let _Math2 = Math;
-        let tmp = callback;
-        let tmp2 = importDefault;
-        let tmp3 = dependencyMap;
         obj = parseRawEmojiObjectDefault;
         let byName = obj.getByName(callback(items.splice(Math.floor(Math.random() * items.length), 1), 1)[0]);
         let surrogates;
@@ -29,7 +26,6 @@ function getRandomCustomTypingIndicatorEmojis() {
           obj[0] = byName.surrogates;
           let arr = items1.push(obj);
         }
-        let tmp7 = require;
         if (items1.length >= CustomTypingIndicatorAnimation.CUSTOM_TYPING_INDICATOR_EMOJI_COUNT) {
           break;
         } else if (items.length <= 0) {
@@ -57,7 +53,7 @@ obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BA
 obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BABBLING] = messagesProxyDefault.AoBaEw;
 obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.DAYDREAMING] = messagesProxyDefault["3hOLod"];
 let closure_6 = ["eyes", "100", "sparkling_heart", "star_struck", "heart", "laughing", "thumbsup", "watermelon", "yum", "books"];
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx");
 
 export { getRandomCustomTypingIndicatorEmojis };
 export const getRandomCustomTypingIndicatorAnimation = function getRandomCustomTypingIndicatorAnimation() {

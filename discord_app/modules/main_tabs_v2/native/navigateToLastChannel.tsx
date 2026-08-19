@@ -1,12 +1,12 @@
 // === Module 9568: navigateToLastChannel ===
 
 // Module 9568 (navigateToLastChannel)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import coerceMainRoute from "coerceMainRoute" /* 4229 */;
 import transitionToChannel from "transitionToChannel" /* 4768 */;
 import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 9569 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
+const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 
 export default function navigateToLastChannel() {
   const coerceGuildsRouteResult = coerceMainRoute.coerceGuildsRoute(getNavigatorCurrentRouteDefault());

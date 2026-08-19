@@ -1,17 +1,18 @@
 // === Module 11359: RoleIcon ===
 
 // Module 11359 (RoleIcon)
+import _fetchMemberCountsFromBackendAll from "_fetchMemberCountsFromBackend" /* 6929 */;
 import ShieldUserIcon from "ShieldUserIcon" /* 8859 */;
 import stylesDefault from "styles" /* 11357 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "getRoleMemberCount" /* 6928 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import getRoleMemberCount from "getRoleMemberCount" /* 6928 */;
 import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_8 from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
 import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 class RoleIcon {
   constructor(arg0) {
     role = global.role;
@@ -61,7 +62,7 @@ class RoleRow {
     items1[0] = guildId;
     tmp5 = isEveryoneRole(guildRole);
     effect = closure_5.useEffect(() => {
-      const memberCounts = closure_1_2(closure_1_3[10]).fetchMemberCounts(guildId);
+      const memberCounts = _fetchMemberCountsFromBackendAll.fetchMemberCounts(guildId);
     }, items1);
     tmp7 = jsx;
     obj = { label: jsx(require("Text").Text, obj1), icon: jsx(RoleIcon, { role: guildRole }), trailing: null };
@@ -88,36 +89,30 @@ class RoleRow {
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const AppLauncherRoleListActionSheet = "AppLauncherRoleListActionSheet";
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx");
 
 export default function AppLauncherRoleListActionSheet(channel) {
   ({ onRolePress: require, onActionSheetDismiss } = channel);
-  let guild_id;
-  let first;
   let callback;
   let ref;
-  let stateFromStores;
-  let memo;
-  guild_id = channel.channel.guild_id;
+  const guild_id = channel.channel.guild_id;
   let tmp = callback(ref.useState(""), 2);
-  first = tmp[0];
+  const first = tmp[0];
   callback = tmp[1];
   ref = ref.useRef(null);
   let obj = require(first[9]);
   const items = [closure_8];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getSortedRoles(guild_id));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getSortedRoles(guild_id));
   const items1 = [stateFromStores, first];
-  memo = ref.useMemo(() => stateFromStores.filter((id) => {
-    let tmp = closure_3 === id.id;
+  const memo = ref.useMemo(() => stateFromStores.filter((item, index) => {
+    let tmp = closure_3 === item.id;
     if (!tmp) {
       const trimmed = closure_3.trim();
-      tmp = closure_1_1(closure_1_3[14])(trimmed, id.name.toLowerCase());
-      const str2 = id.name;
-      const tmp4 = closure_1_1(closure_1_3[14]);
+      tmp = onActionSheetDismiss(first[14])(trimmed, item.name.toLowerCase());
+      const tmp4 = onActionSheetDismiss(first[14]);
     }
     return tmp;
   }), items1);
-  obj = { option: channel.option, onDismiss: onActionSheetDismiss, children: null };
   obj = {
     onChange(str) {
       callback(str.toLowerCase());
@@ -129,7 +124,7 @@ export default function AppLauncherRoleListActionSheet(channel) {
   };
   const items2 = [callback2(require(first[17]).AppLauncherListSearchBar, obj), ];
   if (0 === memo.length) {
-    let tmp8Result = tmp8(tmp4(tmp5[17]).AppLauncherListEmptyState, {});
+    let tmp8Result = callback2(require(tmp5[17]).AppLauncherListEmptyState, {});
   } else {
     obj1 = { ref: null, data: null, renderItem: null };
     obj1[0] = ref;
@@ -137,23 +132,23 @@ export default function AppLauncherRoleListActionSheet(channel) {
     obj1[2] = function renderItem(item) {
       item = item.item;
       const index = item.index;
-      return closure_1_10(closure_1_14, {
+      return closure_1_10(RoleRow, {
         guildId: guild_id,
         guildRole: item,
         onPress() {
           item({ role: item });
-          closure_1_1(closure_1_3[15]).hideActionSheet(closure_1_12);
-          closure_1_1();
+          onActionSheetDismiss(first[15]).hideActionSheet(closure_1_12);
+          onActionSheetDismiss();
         },
         start: 0 === index,
         end: index === memo.length - 1
       });
     };
-    tmp8Result = tmp8(tmp4(tmp5[17]).AppLauncherList, obj1);
+    tmp8Result = callback2(require(tmp5[17]).AppLauncherList, obj1);
   }
   items2[1] = tmp8Result;
   obj[2] = items2;
-  return closure_11(require(first[16]).AppLauncherCommandOptionActionSheet, obj);
+  return callback2(require(first[16]).AppLauncherCommandOptionActionSheet, obj);
 };
 export const APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY = "AppLauncherRoleListActionSheet";
 export { RoleIcon };

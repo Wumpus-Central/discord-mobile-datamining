@@ -1,7 +1,7 @@
 // === Module 13297: getApplicationIdForActivity ===
 
 // Module 13297 (getApplicationIdForActivity)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import items3 from "items3" /* 4481 */;
 import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 7261 */;
 import _isStreamingDefault from "_isStreaming" /* 8411 */;
@@ -14,7 +14,7 @@ const SpotifyApplication = getIconURL.SpotifyApplication;
 let closure_3 = getIconURL2.TWITCH_APPLICATION_ID_PREFIX;
 let closure_4 = getIconURL3.XBOX_APPLICATION_ID_PREFIX;
 let closure_5 = items3.XBOX_ACTIVITY_APPLICATION_ID;
-const result = set.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
+const result = obj132.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
 
 export default function getApplicationIdForActivity(party) {
   if (isListeningOnSpotifyDefault(party)) {

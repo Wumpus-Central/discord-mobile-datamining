@@ -10,11 +10,11 @@ import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ slider: { marginTop: 4 }, text: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsSoundboardVolume.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsSoundboardVolume.tsx");
 
 export default function SoundboardVolume() {
   const tmp = callback3();

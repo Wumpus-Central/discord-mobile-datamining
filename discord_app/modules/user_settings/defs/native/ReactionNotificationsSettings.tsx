@@ -1,7 +1,7 @@
 // === Module 14795: onChange ===
 
 // Module 14795 (onChange)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1306 */;
 import MAX_REACTIONS from "MAX_REACTIONS" /* 4032 */;
@@ -41,34 +41,7 @@ const radio = createToggle.createRadio({
     return items;
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Rq0NFs);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.ReactionNotifications.useSetting,
-  onValueChange: onChange,
-  useOptions() {
-    let obj = { label: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t["9x/RtT"]);
-    obj[1] = create.ReactionNotificationType.NOTIFICATIONS_ENABLED;
-    const items = [obj, , ];
-    obj = { label: null, value: null };
-    const intl2 = getSystemLocale.intl;
-    obj[0] = intl2.string(getSystemLocale.t.fJAbQd);
-    obj[1] = create.ReactionNotificationType.ONLY_DMS;
-    items[1] = obj;
-    obj = { label: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t["xu+UDU"]);
-    obj[1] = create.ReactionNotificationType.NOTIFICATIONS_DISABLED;
-    items[2] = obj;
-    return items;
-  }
-};
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/ReactionNotificationsSettings.tsx");
+let result = obj132.fileFinishedImporting("modules/user_settings/defs/native/ReactionNotificationsSettings.tsx");
 
 export default radio;
 export { onChange };

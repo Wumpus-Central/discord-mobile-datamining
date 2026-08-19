@@ -1,7 +1,7 @@
 // === Module 5434: getStyleProp ===
 
 // Module 5434 (getStyleProp)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 function getStyleProp(style, borderRadius) {
   if (null != borderRadius) {
@@ -24,6 +24,6 @@ function getStyleProp(style, borderRadius) {
     }
   }
 }
-const result = set.fileFinishedImporting("utils/native/StyleSheetUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/native/StyleSheetUtils.tsx");
 
 export default { getStyleProp };

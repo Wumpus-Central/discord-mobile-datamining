@@ -2,11 +2,11 @@
 
 // Module 10968 (setBuildOverrideForBranch)
 import BundleUpdaterManagerDefault from "BundleUpdaterManager" /* 10970 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getCurrentBuildOverride" /* 10638 */;
-import set from "set" /* 500 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import getCurrentBuildOverride from "getCurrentBuildOverride" /* 10638 */;
+import obj132 from "obj132" /* 500 */;
 
-const require = arg1;
+const require = fn;
 function setBuildOverrideForBranch(id) {
   setBuildOverride({ type: "branch", id });
 }
@@ -251,7 +251,6 @@ function _toggleOverride() {
                   }
                 }
                 obj10 = lib(closure_1_2[6]);
-                const tmp39 = lib;
                 c3 = 1;
                 currentBuildOverride = 1;
                 obj1 = { value: null, done: false };
@@ -259,7 +258,6 @@ function _toggleOverride() {
                 return obj1;
               }
               currentBuildOverride = 3;
-              const obj9 = currentBuildOverride;
             }
           } else if (arg0 === 1) {
             currentBuildOverride = 3;
@@ -360,8 +358,6 @@ function _setBuildOverrideFromLink() {
                 }
               }
               currentBuildOverride = 3;
-              const obj9 = currentBuildOverride;
-              const tmp34 = lib;
             }
           } else if (arg0 === 1) {
             currentBuildOverride = 3;
@@ -399,10 +395,10 @@ function _setBuildOverrideFromLink() {
   return applyArgumentsResult;
 }
 let str = "discord_ios";
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   str = "discord_android";
 }
-let result = set.fileFinishedImporting("modules/build_overrides/native/BuildOverrideUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/build_overrides/native/BuildOverrideUtils.tsx");
 
 export const DEVICE_FIELD = str;
 export { setBuildOverrideForBranch };

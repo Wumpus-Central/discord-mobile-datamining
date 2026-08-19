@@ -1,25 +1,24 @@
 // === Module 17016: AdvancedInstantInvite ===
 
 // Module 17016 (AdvancedInstantInvite)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { flexGrow: 1 } });
-const result = require("set").fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
 
 export default function AdvancedInstantInvite(maxAge) {
   ({ channel, guild } = maxAge);
-  let maxUses = guild;
   maxAge = maxAge.maxAge;
   const onChangeMaxAge = maxAge.onChangeMaxAge;
   const maxUsesOptions = maxAge.maxUsesOptions;
-  maxUses = maxAge.maxUses;
+  let maxUses = maxAge.maxUses;
   const onChangeMaxUses = maxAge.onChangeMaxUses;
   ({ onChangeTemporary, flags } = maxAge);
   ({ onChangeFlags: closure_7, roleIds } = maxAge);
@@ -60,8 +59,8 @@ export default function AdvancedInstantInvite(maxAge) {
       tmp = null != onChangeRoleIds;
     }
     if (tmp) {
-      let obj = maxAge(onChangeMaxAge[11]);
-      obj = { assignableRoles: null, selectedRoleIds: null, onSave: null };
+      maxAge(onChangeMaxAge[11]);
+      const obj = { assignableRoles: null, selectedRoleIds: null, onSave: null };
       obj[0] = closure_11;
       obj[1] = roleIds;
       obj[2] = onChangeRoleIds;
@@ -71,9 +70,9 @@ export default function AdvancedInstantInvite(maxAge) {
   const items2 = [maxUses, maxUsesOptions, onChangeMaxUses];
   const callback1 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxAge) {
-      let obj = maxAge(onChangeMaxAge[11]);
+      maxAge(onChangeMaxAge[11]);
       const tmp5 = maxUses(onChangeMaxAge[13])(onChangeMaxAge[14], onChangeMaxAge.paths);
-      obj = { title: null, options: null, value: null, onChange: null };
+      const obj = { title: null, options: null, value: null, onChange: null };
       const intl = maxUses(onChangeMaxAge[15]).intl;
       obj[0] = intl.string(maxUses(onChangeMaxAge[15]).t.gKmKP0);
       obj[1] = maxAgeOptions;
@@ -85,9 +84,9 @@ export default function AdvancedInstantInvite(maxAge) {
   const items3 = [tmp16Result, roleIds];
   const callback2 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxUses) {
-      let obj = maxAge(onChangeMaxAge[11]);
+      maxAge(onChangeMaxAge[11]);
       const tmp5 = maxUses(onChangeMaxAge[13])(onChangeMaxAge[14], onChangeMaxAge.paths);
-      obj = { title: null, options: null, value: null, onChange: null };
+      const obj = { title: null, options: null, value: null, onChange: null };
       const intl = maxUses(onChangeMaxAge[15]).intl;
       obj[0] = intl.string(maxUses(onChangeMaxAge[15]).t["+3vH1h"]);
       obj[1] = maxUsesOptions;
@@ -97,8 +96,8 @@ export default function AdvancedInstantInvite(maxAge) {
     }
   }, items2);
   const memo = maxUsesOptions.useMemo(() => {
-    const set = new Set(closure_11.map((id) => id.id));
-    return roleIds.filter((arg0) => set.has(arg0)).length;
+    const set = new Set(closure_11.map((item, index) => item.id));
+    return roleIds.filter((item, index) => set.has(item)).length;
   }, items3);
   if (0 !== memo) {
     let intl = tmp11(tmp12[15]).intl;
@@ -107,12 +106,12 @@ export default function AdvancedInstantInvite(maxAge) {
     const formatToPlainStringResult = intl.formatToPlainString(tmp11(tmp12[15]).t["eXU3/V"], obj);
   }
   maxUses = maxAge;
-  const found = maxAgeOptions.find((value) => value.value === maxUses);
+  const found = maxAgeOptions.find((item, index) => item.value === maxUses);
   let label;
   if (found != null) {
     label = found.label;
   }
-  const found1 = maxUsesOptions.find((value) => value.value === maxUses);
+  const found1 = maxUsesOptions.find((item, index) => item.value === maxUses);
   let label1;
   if (found1 != null) {
     label1 = found1.label;

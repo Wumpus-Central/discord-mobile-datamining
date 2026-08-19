@@ -6,22 +6,22 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
 import SvgComponentDefault from "SvgComponent" /* 14070 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 16, alignItems: "center" }, image: { marginBottom: 16, marginTop: 64, textAlign: "center" }, header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 }, createButton: { marginTop: 16, marginBottom: 12 } });
-let result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
 
 export default function GuildProfileEmptyState() {
   const tmp = callback4();
   let obj = { contentContainerStyle: tmp.container, children: null };
-  obj = { style: tmp.image, children: callback2(SvgComponentDefault, obj) };
+  { style: tmp.image, children: callback2(SvgComponentDefault, obj) };
   obj = { style: tmp.image };
   const items = [callback2(closure_5, obj), , , , ];
   obj1 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };

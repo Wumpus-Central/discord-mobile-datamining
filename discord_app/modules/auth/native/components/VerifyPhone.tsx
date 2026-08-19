@@ -1,37 +1,34 @@
 // === Module 15240: VerifyPhone ===
 
 // Module 15240 (VerifyPhone)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15212 */;
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
 import { Links } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ authStateToRegisterTransitionStep: error, RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: c9 } = RegistrationTransitionActionTypes);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/VerifyPhone.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/components/VerifyPhone.tsx");
 
 export default function VerifyPhone(phone) {
   phone = phone.phone;
   let _require = phone;
   const onPhoneTokenReceived = phone.onPhoneTokenReceived;
   ({ onClose: dependencyMap, onBail } = phone);
-  let callback;
   let React;
   c6 = undefined;
-  let callback2;
-  let context;
-  callback = undefined;
+  let callback;
   ({ title, description, sourceState } = phone);
   const tmp = callback(React.useState(false), 2);
   callback = tmp[1];
   [tmp3, c5] = callback(React.useState(null), 2);
   let tmp2 = callback(React.useState(null), 2);
   [tmp5, c6] = callback(React.useState(false), 2);
-  callback2 = React.useRef(false);
-  context = React.useContext(_require(15210).TrackRegistrationContext);
+  const callback2 = React.useRef(false);
+  const context = React.useContext(_require(15210).TrackRegistrationContext);
   const tmp4 = callback(React.useState(false), 2);
   onPhoneTokenReceived(15228)(callback2(sourceState));
   const items = [context];
@@ -50,8 +47,7 @@ export default function VerifyPhone(phone) {
     }
     return tmpResult;
   });
-  _require = undefined;
-  _require = onBail((arg0) => {
+  onBail((arg0) => {
     closure_0 = arg0;
     c5 = 0;
     c6 = 0;
@@ -66,7 +62,7 @@ export default function VerifyPhone(phone) {
         obj1[1] = callback.SUBMITTED;
         closure_1_8(obj1);
       }
-      let obj4 = onPhoneTokenReceived(closure_2_2[10]);
+      let obj4 = onPhoneTokenReceived(dependencyMap[10]);
       yield obj4.verifyPhone(callback, token, false);
       if (1 === tmp7) {
         v0 = 0;
@@ -85,14 +81,13 @@ export default function VerifyPhone(phone) {
           message = body.message;
         }
         if (!message) {
-          const intl = callback(closure_2_2[11]).intl;
+          const intl = callback(dependencyMap[11]).intl;
           obj4 = { statusPageURL: null };
-          obj4[0] = closure_2_10.STATUS;
-          message = intl.format(callback(closure_2_2[11]).t.aTVNes, obj4);
+          obj4[0] = Links.STATUS;
+          message = intl.format(callback(dependencyMap[11]).t.aTVNes, obj4);
         }
         c5(message);
         v02 = 3;
-        const tmp28 = c5;
       } else if (arg0 === 1) {
         v02 = 3;
         throw token;
@@ -117,7 +112,6 @@ export default function VerifyPhone(phone) {
     }
     return applyArgumentsResult;
   }, items1);
-  _require = undefined;
   _require = onBail((arg0) => {
     closure_0 = arg0;
     c2 = 0;
@@ -154,7 +148,7 @@ export default function VerifyPhone(phone) {
               c2 = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_9(closure_0);
+              obj1[0] = callback(closure_0);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -195,7 +189,7 @@ export default function VerifyPhone(phone) {
     if (null != onBail) {
       const obj = { onBail: null };
       obj[0] = tmp;
-      tmp2 = closure_1_11(onPhoneTokenReceived(closure_1_2[13]), obj);
+      tmp2 = jsx(onPhoneTokenReceived(dependencyMap[13]), { onBail: null });
     }
     return tmp2;
   }, items3);

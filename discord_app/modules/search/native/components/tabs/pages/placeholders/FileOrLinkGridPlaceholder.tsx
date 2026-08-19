@@ -2,16 +2,15 @@
 
 // Module 15890 (FileOrLinkGridPlaceholderItem)
 import _modDef4115 from "module_4115" /* 4115 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
 
 export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
   let width;
-  importDefault = undefined;
   let obj = width(15870);
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   width = imageStyle.width;

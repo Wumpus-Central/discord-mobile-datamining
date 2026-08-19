@@ -2,8 +2,8 @@
 
 // Module 17021 (prototype)
 import initializeDefault from "initialize" /* 5038 */;
-import closure_0 from "createRTCConnection" /* 4539 */;
-import closure_1 from "withEqualityFn" /* 8664 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import withEqualityFn from "withEqualityFn" /* 8664 */;
 
 initializeDefault;
 let prototype = function VoicePanelManager() {
@@ -35,6 +35,6 @@ let prototype = function VoicePanelManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/VoicePanelManager.native.tsx");
 
 export default prototype;

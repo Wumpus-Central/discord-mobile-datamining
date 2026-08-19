@@ -2,15 +2,14 @@
 
 // Module 13863 (transformSubscriptionListingToSku)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 
 function transformSubscriptionListingToSku(id) {
   return { id: id.id, type: constants2.SUBSCRIPTION, application_id: id.application_id, product_line: constants.APPLICATION, name: id.name, summary: "", description: id.description, flags: id.sku_flags, manifests: [], available_regions: [], legal_notice: "", deleted: id.soft_deleted, price_tier: 0, show_age_gate: false, restricted: false };
 }
 function transformSubscriptionListingToStoreListing(id) {
-  obj = { id: id.id, sku: obj, summary: id.description, description: id.description, benefits: null, thumbnail: null, published: null };
-  obj = { id: id.id, type: constants2.SUBSCRIPTION, application_id: id.application_id, product_line: constants.APPLICATION, name: id.name, summary: "", description: id.description, flags: id.sku_flags, manifests: [], available_regions: [], legal_notice: "", deleted: id.soft_deleted, price_tier: 0, show_age_gate: false, restricted: false };
+  const obj = { id: id.id, type: constants2.SUBSCRIPTION, application_id: id.application_id, product_line: constants.APPLICATION, name: id.name, summary: "", description: id.description, flags: id.sku_flags, manifests: [], available_regions: [], legal_notice: "", deleted: id.soft_deleted, price_tier: 0, show_age_gate: false, restricted: false };
   let prop = id.store_listing_benefits;
   if (prop == null) {
     prop = [];
@@ -20,22 +19,19 @@ function transformSubscriptionListingToStoreListing(id) {
   return obj;
 }
 function dispatchCompat(arr) {
-  let obj = dispatcherDefault;
-  obj = { type: "SKUS_FETCH_SUCCESS", skus: arr.map(transformSubscriptionListingToSku) };
+  let obj = { type: "SKUS_FETCH_SUCCESS", skus: arr.map(transformSubscriptionListingToSku) };
   obj.dispatch(obj);
   obj = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: arr.map(transformSubscriptionListingToStoreListing) };
   dispatcherDefault.dispatch(obj);
   const iter = arr[Symbol.iterator]();
-  const obj3 = dispatcherDefault;
   while (iter !== undefined) {
-    let tmp4 = importDefault;
-    let tmp5 = dependencyMap;
     let obj5 = dispatcherDefault;
     obj1 = { type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: null, subscriptionPlans: null };
     ({ id: obj6[1], subscription_plans: obj6[2] } = nextResult);
     let dispatchResult2 = obj5.dispatch(obj1);
     continue;
   }
+  nextResult = iter.next();
 }
 function _fetchAllSubscriptionListingsDataForApplication() {
   const self = this;
@@ -51,7 +47,6 @@ function _fetchAllSubscriptionListingsDataForApplication() {
       obj1[1] = callback;
       obj1[2] = lib;
       callback(closure_1_2[2]).dispatch(obj1);
-      c6 = 1;
       const obj10 = callback(closure_1_2[2]);
       yield lib(closure_1_2[3]).getApplicationSubscriptionGroupListingsForApplication(callback, lib);
       c6 = 0;
@@ -100,8 +95,8 @@ function _fetchEntitlementsForGuild() {
       yield closure_1_1(closure_1_2[3]).getEntitlementsForGuild(callback);
       if (1 === tmp7) {
         c4 = 0;
-        let obj3 = callback(709);
-        obj3 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE", guildId: null };
+        callback(709);
+        const obj3 = { type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE", guildId: null };
         obj3[1] = callback;
         obj3.dispatch(obj3);
         c6 = 3;
@@ -249,10 +244,10 @@ function _fetchSubscriptionListingForPlan() {
               c7 = 4;
               v0 = 1;
               const obj7 = { value: null, done: false };
-              obj7[0] = Promise.all(closure_3.map((id) => {
-                if (id.subscription_plans[0].id === closure_0) {
+              obj7[0] = Promise.all(closure_3.map((item, index) => {
+                if (item.subscription_plans[0].id === closure_0) {
                   const obj = num13(table[4]);
-                  return obj.fetchSubscriptionPlansForSKU(id.id, undefined, undefined, true);
+                  return obj.fetchSubscriptionPlansForSKU(item.id, undefined, undefined, true);
                 }
               }));
               return obj7;
@@ -308,7 +303,7 @@ function _fetchSubscriptionListingForPlan() {
   return applyArgumentsResult;
 }
 ({ SKUProductLines: c4, SKUTypes: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsActionCreators.tsx");
 
 export const fetchAllSubscriptionListingsDataForApplication = function fetchAllSubscriptionListingsDataForApplication(closure_0, id) {
   const self = this;
@@ -331,8 +326,7 @@ export const fetchEntitlementsForGuild = function fetchEntitlementsForGuild() {
   return applyArgumentsResult;
 };
 export const dismissApplicationSubscriptionExpirationNotice = function dismissApplicationSubscriptionExpirationNotice(guildId) {
-  let obj = dispatcherDefault;
-  obj = { type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED", guildId };
+  const obj = { type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED", guildId };
   obj.dispatch(obj);
 };
 export { fetchSubscriptionListingForPlan };

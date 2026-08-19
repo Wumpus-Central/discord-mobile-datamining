@@ -6,7 +6,7 @@ import { jsx } from "jsxProd" /* 21 */;
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(null);
-const result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesAnalyticsContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/CollectiblesAnalyticsContext.tsx");
 
 export const CollectiblesAnalyticsContext = context;
 export const useCollectiblesAnalyticsContext = function useCollectiblesAnalyticsContext() {

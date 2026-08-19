@@ -1,16 +1,16 @@
 // === Module 11387: useRenderPollAnswerImage ===
 
 // Module 11387 (useRenderPollAnswerImage)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
 import { DraftType } from "handleChanged" /* 4825 */;
-import closure_7 from "map" /* 4824 */;
+import map from "map" /* 4824 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");
 
 export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentState) {
   const _require = arg0;
@@ -35,28 +35,27 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
   obj = {
     renderImage: React.useMemo(() => {
       if (closure_7) {
-        return closure_1_9(stateFromStores, {});
+        return <stateFromStores />;
       } else if (null != stateFromStores) {
         let tmp14 = closure_3;
         if (closure_3 == null) {
           tmp14 = first;
         }
-        let obj = { style: null, source: null };
-        obj = { width: null, height: null };
+        let obj = { width: null, height: null };
         obj[0] = tmp14;
         obj[1] = tmp14;
         obj[0] = obj;
         obj1 = { uri: null };
         obj1[0] = stateFromStores.item.uri;
         obj[1] = obj1;
-        return closure_1_9(callback2(mediaAttachmentState[9]), obj);
+        return jsx(callback2(mediaAttachmentState[9]), { width: null, height: null });
       } else {
         let emoji;
         if (mediaAttachmentState != null) {
-          emoji = tmp20.emoji;
+          emoji = mediaAttachmentState.emoji;
         }
         if (null != emoji) {
-          emoji = tmp20.emoji;
+          emoji = mediaAttachmentState.emoji;
           obj = { fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
           const obj2 = { width: null, height: null };
           obj2[0] = closure_4;
@@ -75,11 +74,11 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
             obj3 = callback2(mediaAttachmentState[12]);
             const obj4 = { id: null, animated: null, size: null };
             ({ id: obj5[0], animated: obj5[1] } = emoji);
-            obj4[2] = closure_1_8;
+            obj4[2] = EMOJI_URL_BASE_SIZE;
             emojiURL = obj3.getEmojiURL(obj4);
           }
           obj[3] = emojiURL;
-          return closure_1_9(callback2(mediaAttachmentState[10]), obj);
+          return jsx(callback2(mediaAttachmentState[10]), { fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
         }
       }
     }, items1),

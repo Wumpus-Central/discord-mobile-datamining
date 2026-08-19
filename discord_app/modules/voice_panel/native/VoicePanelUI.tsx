@@ -1,25 +1,25 @@
-// === Module 16312: NOOP ===
+// === Module 16312: VoicePanelUI ===
 
-// Module 16312 (NOOP)
+// Module 16312 (VoicePanelUI)
 import timestampDefault from "timestamp" /* 3 */;
 import ThemesDefault from "Themes" /* 712 */;
 import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getParticipants" /* 4773 */;
+import getParticipants from "getParticipants" /* 4773 */;
 import closure_8 from "module_9010" /* 9010 */;
-import closure_9 from "withEqualityFn" /* 8664 */;
+import withEqualityFn from "withEqualityFn" /* 8664 */;
 import VoicePanelModes from "VoicePanelModes" /* 11440 */;
 import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
 import { isActivityParticipant } from "ParticipantTypes" /* 4544 */;
 import { POP_RESISTANCE } from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-require = arg1;
+require = fn;
 function NOOP() {
 
 }
@@ -29,36 +29,24 @@ function log() {
 }
 function AnimatedWrapper(children) {
   const wrapperOffset = children.wrapperOffset;
-  let height;
-  dependencyMap = undefined;
-  let wrapperDimensions;
   let connected;
-  let controlsSpecs;
-  let focused;
-  let mode;
-  let preJoinContentSize;
-  let safeArea;
-  let windowDimensions;
-  let useReducedMotion;
-  let derivedValue;
-  let pIPState;
   let animatedStyle;
   let animatedStyle1;
   obj = wrapperOffset(12495);
-  height = obj.useGlobalStatusIndicatorState().height;
-  const tmp3 = callback3();
+  const height = obj.useGlobalStatusIndicatorState().height;
+  let tmp3 = callback3();
   dependencyMap = tmp3;
   obj1 = connected;
   const context = connected.useContext(height(11439));
-  wrapperDimensions = context.wrapperDimensions;
+  const wrapperDimensions = context.wrapperDimensions;
   connected = context.connected;
-  controlsSpecs = context.controlsSpecs;
-  focused = context.focused;
-  mode = context.mode;
-  preJoinContentSize = context.preJoinContentSize;
-  safeArea = context.safeArea;
-  windowDimensions = context.windowDimensions;
-  useReducedMotion = context.useReducedMotion;
+  const controlsSpecs = context.controlsSpecs;
+  const focused = context.focused;
+  const mode = context.mode;
+  const preJoinContentSize = context.preJoinContentSize;
+  const safeArea = context.safeArea;
+  const windowDimensions = context.windowDimensions;
+  const useReducedMotion = context.useReducedMotion;
   obj2 = wrapperOffset(4115);
   const fn = function o() {
     return controlsSpecs.get().height;
@@ -66,9 +54,9 @@ function AnimatedWrapper(children) {
   fn.__closure = { controlsSpecs };
   fn.__workletHash = 6243014585347;
   fn.__initData = closure_55;
-  derivedValue = obj2.useDerivedValue(fn);
+  const derivedValue = obj2.useDerivedValue(fn);
   let obj3 = wrapperOffset(16311);
-  pIPState = obj3.usePIPState();
+  const pIPState = obj3.usePIPState();
   let obj4 = wrapperOffset(4115);
   const fn2 = function l() {
     return { modeToSet: mode.get(), connected: connected.get(), windowWidth: windowDimensions.get().width, windowHeight: windowDimensions.get().height, safeArea: safeArea.get(), focused: focused.get(), pipState: pIPState, controlsHeight: derivedValue.get(), preJoinContentSize: preJoinContentSize.get(), globalStatusIndicatorHeight: height };
@@ -78,62 +66,62 @@ function AnimatedWrapper(children) {
   fn2.__initData = closure_56;
   const fn3 = function s(safeAreaState, windowHeight) {
     obj = wrapperOffset(closure_2[20]);
-    if (!obj.cheapWorkletShallowEqual(safeAreaState, windowHeight)) {
+    if (!obj.cheapWorkletShallowEqual(safeAreaState, tmp3)) {
       ({ modeToSet, connected, windowWidth, windowHeight, safeArea } = safeAreaState);
       if (modeToSet !== animatedStyle1.PIP) {
         let tmp9 = null == windowHeight;
         if (!tmp9) {
           tmp9 = windowHeight === windowHeight.windowHeight && windowWidth === windowHeight.windowWidth && safeArea.top === windowHeight.safeArea.top && safeArea.bottom === windowHeight.safeArea.bottom && safeArea.left === windowHeight.safeArea.left && safeArea.right === windowHeight.safeArea.right;
-          const tmp10 = windowHeight === windowHeight.windowHeight && windowWidth === windowHeight.windowWidth && safeArea.top === windowHeight.safeArea.top && safeArea.bottom === windowHeight.safeArea.bottom && safeArea.left === windowHeight.safeArea.left && safeArea.right === windowHeight.safeArea.right;
         }
         const value = wrapperDimensions.get();
         ({ drawerX, drawerY } = value);
         const diff = windowHeight - tmp7;
-        if (modeToSet === tmp8.PANEL) {
+        if (modeToSet === animatedStyle1.PANEL) {
           if (connected) {
             obj = { drawerWidth: null, drawerHeight: null, drawerX: 0, drawerY: 0, animated: null, mode: null };
             obj[0] = windowWidth;
             obj[1] = diff;
             obj[4] = tmp9;
             obj[5] = modeToSet;
-            height(tmp2[21])(tmp11, obj);
-            height(tmp2[21])(wrapperOffset, { gestureActive: false });
+            height(closure_2[21])(wrapperDimensions, obj);
+            height(closure_2[21])(wrapperOffset, { gestureActive: false });
           } else {
-            let tmpResult = tmp(tmp2[29]);
+            let tmpResult = wrapperOffset(closure_2[29]);
             obj = { windowWidth: null, connected: null, safeAreaLeft: null, safeAreaRight: null };
             obj[0] = windowWidth;
             obj[1] = connected;
             ({ left: obj5[2], right: obj5[3] } = safeArea);
             const maxPanelWidth = tmpResult.getMaxPanelWidth(obj);
-            tmpResult = tmp(tmp2[29]);
+            tmpResult = wrapperOffset(closure_2[29]);
             const panelX = tmpResult.getPanelX(windowWidth, maxPanelWidth);
             const _Math = Math;
-            const tmp20 = height(tmp2[30]);
+            const tmp20 = height(closure_2[30]);
             obj1 = { drawerWidth: null, drawerHeight: null, drawerX: null, drawerY: null, animated: null, mode: null };
             obj1[0] = maxPanelWidth;
             obj1[1] = diff;
             obj1[2] = panelX;
-            obj1[3] = height(tmp2[30])(Math.max(diff - tmp6 - tmp5 - safeArea.bottom, diff - 0.8 * diff));
+            obj1[3] = height(closure_2[30])(Math.max(diff - tmp6 - tmp5 - safeArea.bottom, diff - 0.8 * diff));
             obj1[4] = tmp9;
             obj1[5] = modeToSet;
-            height(tmp2[21])(tmp11, obj1);
-            const tmp20Result = height(tmp2[30])(Math.max(diff - tmp6 - tmp5 - safeArea.bottom, diff - 0.8 * diff));
+            height(closure_2[21])(wrapperDimensions, obj1);
+            const tmp20Result = height(closure_2[30])(Math.max(diff - tmp6 - tmp5 - safeArea.bottom, diff - 0.8 * diff));
           }
-        } else if (modeToSet === tmp8.DISMISSED) {
-          const tmp29 = height(tmp2[21]);
+        } else if (modeToSet === animatedStyle1.DISMISSED) {
+          const tmp29 = height(closure_2[21]);
           if (connected) {
             obj2 = { mode: null };
             obj2[0] = modeToSet;
-            tmp29(tmp11, obj2);
+            tmp29(wrapperDimensions, obj2);
           } else {
             const obj3 = { drawerY: null, mode: null };
             obj3[0] = windowDimensions.get().height + 60;
             obj3[1] = modeToSet;
-            tmp29(tmp11, obj3);
+            tmp29(wrapperDimensions, obj3);
           }
         }
       }
     }
+    tmp3 = windowHeight;
   };
   obj = { cheapWorkletShallowEqual: wrapperOffset(8692).cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10561), wrapperOffset, getMaxPanelWidth: wrapperOffset(16299).getMaxPanelWidth, getPanelX: wrapperOffset(16299).getPanelX, roundToNearestPixel: height(11259), windowDimensions };
   fn3.__closure = obj;
@@ -317,9 +305,9 @@ function AnimatedWrapper(children) {
   const memo = obj1.useMemo(() => ({ wrapperRootStyles: closure_2.wrapper, wrapperTransformStyles: animatedStyle, wrapperSurfaceStyles: animatedStyle1 }), items);
   ({ wrapperRootStyles, wrapperTransformStyles, wrapperSurfaceStyles } = memo);
   obj6 = { style: wrapperRootStyles, pointerEvents: "box-none", children: null };
-  let tmp4Result = tmp4(8125);
+  tmp4(8125);
   const obj7 = { style: wrapperTransformStyles, pointerEvents: "box-none", children: null };
-  tmp4Result = tmp4(8125);
+  const tmp4Result = tmp4(8125);
   obj8 = { style: wrapperSurfaceStyles, layout: layoutTransition, children: children.children };
   obj7[2] = callback2(height(8125), obj8);
   obj6[2] = callback2(tmp4Result, obj7);
@@ -337,13 +325,9 @@ let closure_17 = VoicePanelModes.DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE;
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let closure_24 = new timestampDefault("VoicePanelUI");
 function layoutTransition(originX) {
-  obj = { animations: null, initialValues: null };
   obj = { originX: CONFIG_NEVER_ANIMATE.withSpring(originX.targetOriginX, LAYOUT_PHYSICS, "animate-always"), originY: null, width: null, height: null };
-  const obj3 = CONFIG_NEVER_ANIMATE;
   obj[1] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetOriginY, LAYOUT_PHYSICS, "animate-always");
-  const obj4 = CONFIG_NEVER_ANIMATE;
   obj[2] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetWidth, LAYOUT_PHYSICS, "animate-always");
-  const obj5 = CONFIG_NEVER_ANIMATE;
   obj[3] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetHeight, LAYOUT_PHYSICS, "animate-always");
   obj[0] = obj;
   obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
@@ -357,13 +341,9 @@ obj = {};
 let merged = Object.assign(LAYOUT_PHYSICS);
 obj.damping = 0;
 function scrollViewLayoutTransition(originX) {
-  obj = { animations: null, initialValues: null };
   obj = { originX: CONFIG_NEVER_ANIMATE.withSpring(originX.targetOriginX, LAYOUT_PHYSICS, "animate-always"), originY: null, width: null, height: null };
-  const obj3 = CONFIG_NEVER_ANIMATE;
   obj[1] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetOriginY, LAYOUT_PHYSICS, "animate-always");
-  const obj4 = CONFIG_NEVER_ANIMATE;
   obj[2] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetWidth, obj, "animate-always");
-  const obj5 = CONFIG_NEVER_ANIMATE;
   obj[3] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetHeight, obj, "animate-always");
   obj[0] = obj;
   obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
@@ -399,7 +379,7 @@ let obj5 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
 obj5.overflow = "hidden";
 obj4[0] = obj5;
-createCacheKey = {};
+const createCacheKey = {};
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.alignItems = "flex-start";
 createCacheKey.zIndex = 1;
@@ -412,11 +392,9 @@ obj8.borderTopLeftRadius = DEFAULT_BORDER_RADIUS;
 obj8.borderTopRightRadius = DEFAULT_BORDER_RADIUS;
 obj4[3] = obj8;
 obj4[4] = { flexGrow: 1, flexShrink: 0 };
-let obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj4[5] = { backgroundColor: ThemesDefault.colors.MOBILE_VOICE_PANEL_BACKGROUND, zIndex: 0 };
 obj4[6] = { flexGrow: 1 };
 let closure_31 = createCacheKey.createStyles(obj4);
-let obj9 = { backgroundColor: ThemesDefault.colors.MOBILE_VOICE_PANEL_BACKGROUND, zIndex: 0 };
 let closure_32 = importDefaultResult.createAnimatedComponent(ScrollView);
 let closure_33 = isMetaQuest.isMetaQuest();
 let closure_34 = { code: "function VoicePanelUITsx4(){const{gestureState,connected,mode}=this.__closure;return{gestureActive:gestureState.get().active,connected:connected.get(),mode:mode.get()};}" };
@@ -468,9 +446,9 @@ let closure_67 = { code: "function VoicePanelUITsx35(){const{withSpring,opacity,
 let closure_68 = importAllResult.memo((onPress) => {
   const opacity = onPress.opacity;
   const tmp = callback3();
-  obj = opacity(4115);
+  opacity(4115);
   const fn = function o() {
-    obj = { opacity: opacity(closure_1_2[12]).withSpring(opacity.get(), closure_1_66), pointerEvents: null };
+    obj = { opacity: opacity(dependencyMap[12]).withSpring(opacity.get(), closure_1_66), pointerEvents: null };
     let str = "auto";
     if (0 === opacity.get()) {
       str = "none";
@@ -494,26 +472,26 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
   scrollPosition = channelId;
   const tmp6 = callback(callback2.useState(false), 2);
   dragScrolling = tmp6[1];
-  callback = callback2.useRef(-1);
+  callback2.useRef(-1);
   const items = [channelId];
-  callback = callback2.useCallback((arg0) => {
+  callback2.useCallback((arg0) => {
     closure_0 = arg0;
     clearTimeout(callback.current);
     scrollPosition(callback[36]).batchUpdates(() => {
       if (closure_0) {
         const _setTimeout = setTimeout;
-        closure_1_2.current = setTimeout(() => {
-          const state = closure_2_9.getState();
+        callback.current = setTimeout(() => {
+          const state = dismissToPIPGestureRef.getState();
           const result = state.setChannelPanelFullscreen(closure_1_0, closure_0);
-          const state1 = closure_2_8.getState();
+          const state1 = dismissPanel.getState();
           const freezeLock = state1.requestFreezeLock({ lockEnabled: closure_0, key: "voice-panel-freeze-" + closure_1_0 });
         }, 1000);
       } else {
         let state = dismissToPIPGestureRef.getState();
-        let result = state.setChannelPanelFullscreen(closure_0, tmp);
+        let result = state.setChannelPanelFullscreen(closure_0, closure_0);
         let state1 = dismissPanel.getState();
         obj = { lockEnabled: null, key: null };
-        obj[0] = tmp;
+        obj[0] = closure_0;
         const _HermesInternal = HermesInternal;
         obj[1] = "voice-panel-freeze-" + closure_0;
         let freezeLock = state1.requestFreezeLock(obj);
@@ -534,71 +512,45 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
     state.setChannelPanelPIP(scrollPosition, arg0);
   }, items2);
   callback = callback1;
-  let channelId2;
-  let connected;
-  let controlsSpecs;
-  let dismissPanel;
-  let dismissToPIPGestureRef;
-  let focused;
-  let hideControls;
-  let isFocusedVideoZoomed;
-  let mode;
-  let safeArea;
-  let setMode;
-  let showControls;
-  let windowDimensions;
-  let wrapperDimensions;
-  let wrapperOffset;
-  closure_20 = undefined;
-  let sharedValue;
-  let sharedValue1;
-  let sharedValue2;
-  let sharedValue3;
-  let first;
-  closure_26 = undefined;
-  let memo;
-  let animatedRef;
-  let sharedValue4;
-  let callback3;
   token = undefined;
   const context1 = callback2.useContext(dragScrolling(callback[17]));
-  channelId2 = context1.channelId;
-  connected = context1.connected;
-  controlsSpecs = context1.controlsSpecs;
-  dismissPanel = context1.dismissPanel;
-  dismissToPIPGestureRef = context1.dismissToPIPGestureRef;
-  focused = context1.focused;
-  hideControls = context1.hideControls;
-  isFocusedVideoZoomed = context1.isFocusedVideoZoomed;
-  mode = context1.mode;
-  safeArea = context1.safeArea;
-  setMode = context1.setMode;
-  showControls = context1.showControls;
-  windowDimensions = context1.windowDimensions;
-  wrapperDimensions = context1.wrapperDimensions;
-  wrapperOffset = context1.wrapperOffset;
+  const channelId2 = context1.channelId;
+  const connected = context1.connected;
+  const controlsSpecs = context1.controlsSpecs;
+  const dismissPanel = context1.dismissPanel;
+  const dismissToPIPGestureRef = context1.dismissToPIPGestureRef;
+  const focused = context1.focused;
+  const hideControls = context1.hideControls;
+  const isFocusedVideoZoomed = context1.isFocusedVideoZoomed;
+  let mode = context1.mode;
+  const safeArea = context1.safeArea;
+  const setMode = context1.setMode;
+  const showControls = context1.showControls;
+  const windowDimensions = context1.windowDimensions;
+  const wrapperDimensions = context1.wrapperDimensions;
+  const wrapperOffset = context1.wrapperOffset;
   let tmp12 = dragScrolling(callback[18])();
   closure_20 = tmp12;
   obj = scrollPosition(callback[15]);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
   obj1 = scrollPosition(callback[15]);
-  sharedValue1 = obj1.useSharedValue(false);
+  const sharedValue1 = obj1.useSharedValue(false);
   obj2 = scrollPosition(callback[15]);
-  sharedValue2 = obj2.useSharedValue(false);
+  const sharedValue2 = obj2.useSharedValue(false);
   let obj3 = scrollPosition(callback[15]);
   obj = { start: 0, end: safeArea };
-  sharedValue3 = obj3.useSharedValue(obj);
+  const sharedValue3 = obj3.useSharedValue(obj);
   const tmp18 = callback(callback2.useState(true), 2);
-  first = tmp18[0];
+  let first = tmp18[0];
   closure_26 = tmp18[1];
-  memo = callback2.useMemo(() => {
+  const memo = callback2.useMemo(() => {
     const Gesture = scrollPosition(callback[19]).Gesture;
     return Gesture.Native();
   }, []);
   let obj5 = scrollPosition(callback[15]);
-  animatedRef = obj5.useAnimatedRef();
+  const animatedRef = obj5.useAnimatedRef();
   let obj6 = scrollPosition(callback[15]);
-  sharedValue4 = obj6.useSharedValue({ absoluteXStart: 0, absoluteYStart: 0, cancel: false, active: false, requiresPop: false });
+  const sharedValue4 = obj6.useSharedValue({ absoluteXStart: 0, absoluteYStart: 0, cancel: false, active: false, requiresPop: false });
   let obj7 = scrollPosition(callback[15]);
   let fn = function f() {
     return { gestureActive: sharedValue4.get().active, connected: connected.get(), mode: mode.get() };
@@ -607,34 +559,35 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
   fn.__workletHash = 5596084348360;
   fn.__initData = closure_34;
   let fn2 = function h(mode, current) {
-    if (!obj.cheapWorkletShallowEqual(mode, current)) {
+    if (!obj.cheapWorkletShallowEqual(mode, tmp)) {
       mode = mode.mode;
       if (mode.connected) {
         if (!mode.gestureActive) {
           if (mode === setMode.PANEL) {
-            let tmp2Result = tmp2(tmp3[15]);
+            let tmp2Result = scrollPosition(callback[15]);
             tmp2Result.runOnJS(callback)(true);
           }
           if (mode === setMode.PANEL) {
-            tmp2Result = tmp2(tmp3[15]);
+            tmp2Result = scrollPosition(callback[15]);
             tmp2Result.runOnJS(closure_3)(true);
           } else {
-            tmp2(tmp3[15]).runOnJS(closure_3)(false);
-            const tmp2Result1 = tmp2(tmp3[15]);
+            scrollPosition(callback[15]).runOnJS(closure_3)(false);
+            const tmp2Result1 = scrollPosition(callback[15]);
           }
-          if (mode === tmp9.PIP) {
-            tmp2(tmp3[15]).runOnJS(callback2)(true);
-            const tmp2Result2 = tmp2(tmp3[15]);
+          if (mode === setMode.PIP) {
+            scrollPosition(callback[15]).runOnJS(callback2)(true);
+            const tmp2Result2 = scrollPosition(callback[15]);
           } else {
-            tmp2(tmp3[15]).runOnJS(callback2)(false);
-            const tmp2Result3 = tmp2(tmp3[15]);
+            scrollPosition(callback[15]).runOnJS(callback2)(false);
+            const tmp2Result3 = scrollPosition(callback[15]);
           }
-          tmp9 = setMode;
         }
       }
-      tmp2(tmp3[15]).runOnJS(callback)(false);
-      const tmp2Result4 = tmp2(tmp3[15]);
+      scrollPosition(callback[15]).runOnJS(callback)(false);
+      const tmp2Result4 = scrollPosition(callback[15]);
     }
+    obj = scrollPosition(callback[20]);
+    tmp = current;
   };
   obj = { cheapWorkletShallowEqual: scrollPosition(callback[20]).cheapWorkletShallowEqual, VoicePanelModes: setMode, runOnJS: scrollPosition(callback[15]).runOnJS, setPanelFullscreen: callback, setPanelOpen: callback1, setPanelPIP: callback2 };
   fn2.__closure = obj;
@@ -642,7 +595,7 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
   fn2.__initData = closure_35;
   const animatedReaction = obj7.useAnimatedReaction(fn, fn2);
   const items3 = [channelId2];
-  callback3 = callback2.useCallback((arg0) => {
+  const callback3 = callback2.useCallback((arg0) => {
     let tmp = null != arg0;
     if (tmp) {
       tmp = wrapperOffset(controlsSpecs.getParticipant(channelId2, arg0));
@@ -692,13 +645,13 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
     const enabledResult = Gesture2.Tap().hitSlop(obj).enabled(first);
     const fn = function h() {
       if (store2.get()) {
-        if (store4.get() !== closure_1_15.PIP) {
-          if (store3.get().mode === closure_1_18.HIDDEN) {
-            closure_1_0(closure_1_2[15]).runOnJS(closure_16)({ debounce: true });
-            obj2 = closure_1_0(closure_1_2[15]);
+        if (store4.get() !== setMode.PIP) {
+          if (store3.get().mode === wrapperDimensions.HIDDEN) {
+            scrollPosition(callback[15]).runOnJS(closure_16)({ debounce: true });
+            obj2 = scrollPosition(callback[15]);
           } else {
-            closure_1_0(closure_1_2[15]).runOnJS(closure_11)({ debounce: true });
-            obj = closure_1_0(closure_1_2[15]);
+            scrollPosition(callback[15]).runOnJS(closure_11)({ debounce: true });
+            obj = scrollPosition(callback[15]);
           }
         }
       }
@@ -714,7 +667,6 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
     const enabledResult1 = Gesture3.Pan().enabled(first);
     const manualActivationResult = Gesture3.Pan().enabled(first).manualActivation(true);
     const maxPointersResult = Gesture3.Pan().enabled(first).manualActivation(true).maxPointers(1);
-    obj1 = { left: -1 * closure_20.left, right: -1 * closure_20.right };
     const hitSlopResult1 = Gesture3.Pan().enabled(first).manualActivation(true).maxPointers(1).hitSlop({ left: -1 * closure_20.left, right: -1 * closure_20.right });
     let result = Gesture3.Pan().enabled(first).manualActivation(true).maxPointers(1).hitSlop({ left: -1 * closure_20.left, right: -1 * closure_20.right }).withRef(dismissToPIPGestureRef).shouldCancelWhenOutside(false);
     let result1 = result.simultaneousWithExternalGesture(memo);
@@ -767,17 +719,16 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
     S.__closure = { IS_IOS: mode, windowDimensions, safeArea, gestureState: sharedValue4, isFocusedVideoZoomed, mode, VoicePanelModes: setMode, controlsSpecs, VoicePanelControlsModes: wrapperDimensions };
     S.__workletHash = 13538548264193;
     S.__initData = closure_1_45;
-    obj2 = { IS_IOS: mode, windowDimensions, safeArea, gestureState: sharedValue4, isFocusedVideoZoomed, mode, VoicePanelModes: setMode, controlsSpecs, VoicePanelControlsModes: wrapperDimensions };
     const withRefResult = Gesture3.Pan().enabled(first).manualActivation(true).maxPointers(1).hitSlop({ left: -1 * closure_20.left, right: -1 * closure_20.right }).withRef(dismissToPIPGestureRef);
     const fn2 = function u(arg0) {
       obj = store9;
       if (!store9.get().cancel) {
-        closure_1_1(closure_1_2[21])(closure_19, { x: 0, y: 0 });
+        dragScrolling(callback[21])(closure_19, { x: 0, y: 0 });
         obj = { absoluteXStart: null, absoluteYStart: null, active: false, cancel: false, requiresPop: null };
         ({ absoluteX: obj2[0], absoluteY: obj2[1] } = arg0);
         let value = store2.get();
         if (value) {
-          value = store4.get() === closure_1_15.PANEL;
+          value = store4.get() === setMode.PANEL;
         }
         obj[4] = value;
         const result = obj.set(obj);
@@ -789,12 +740,12 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
     fn2.__initData = closure_1_44;
     let obj3 = { gestureState: sharedValue4, updateSharedValueIfChanged: dragScrolling(callback[21]), wrapperOffset, connected, mode, VoicePanelModes: setMode };
     const fn3 = function c(state, fail) {
-      if (state.state === closure_1_0(closure_1_2[19]).State.BEGAN) {
+      if (state.state === scrollPosition(callback[19]).State.BEGAN) {
         if (!store9.get().active) {
-          if (!obj5.get().cancel) {
+          if (!store9.get().cancel) {
             ({ absoluteY, absoluteX } = state.changedTouches[0]);
-            const diff = obj5.get().absoluteYStart - absoluteY;
-            const diff1 = obj5.get().absoluteXStart - absoluteX;
+            const diff = store9.get().absoluteYStart - absoluteY;
+            const diff1 = store9.get().absoluteXStart - absoluteX;
             const _Math = Math;
             const _Math2 = Math;
             const _Math3 = Math;
@@ -808,7 +759,7 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
               tmp9 = diff > 0;
             }
             obj = store4;
-            if (store4.get() === closure_1_15.PANEL) {
+            if (store4.get() === setMode.PANEL) {
               const _Math6 = Math;
               if (diff < 0) {
                 if (Math.floor(store.get()) <= 0) {
@@ -837,26 +788,26 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
               }
               flag = false;
               if (tmp12) {
-                closure_1_0(tmp2[15]).runOnJS(closure_1_1(tmp2[22]))();
+                scrollPosition(callback[15]).runOnJS(dragScrolling(callback[22]))();
                 flag = true;
-                const tmpResult = closure_1_0(tmp2[15]);
+                const tmpResult = scrollPosition(callback[15]);
               }
             }
-            const tmp25 = closure_1_1(tmp2[21]);
+            const tmp25 = dragScrolling(callback[21]);
             if (flag) {
               tmp25(closure_19, { gestureActive: true });
               obj = { absoluteXStart: null, absoluteYStart: null, cancel: false, active: true, requiresPop: null };
               obj[0] = absoluteX;
               obj[1] = absoluteY + store.get();
-              obj[4] = obj5.get().requiresPop;
-              const result = obj5.set(obj);
+              obj[4] = store9.get().requiresPop;
+              const result = store9.set(obj);
               const result1 = store8.set(true);
               fail.activate();
             } else {
               obj = { absoluteYStart: null, absoluteXStart: null };
               obj[0] = absoluteY;
               obj[1] = absoluteX;
-              tmp25(obj5, obj);
+              tmp25(store9, obj);
             }
           }
         }
@@ -871,7 +822,7 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
       obj = store9;
       if (!store9.get().cancel) {
         let merged = store4.get();
-        if (merged !== closure_1_15.PIP) {
+        if (merged !== setMode.PIP) {
           const result = -1 * (obj.get().absoluteYStart - absoluteY.absoluteY);
           let tmp12 = store2.get() && !obj.get().requiresPop;
           if (tmp12) {
@@ -885,13 +836,13 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
           }
           if (store8.get()) {
             if (result < 0) {
-              const result2 = obj4.set(false);
+              const result2 = store8.set(false);
             }
             let diff = result;
             if (!obj.get().requiresPop) {
               obj = { y: null, x: 0 };
               obj[0] = diff;
-              closure_1_1(closure_1_2[21])(closure_19, obj);
+              dragScrolling(callback[21])(closure_19, obj);
             } else {
               const _Math = Math;
               merged = Math.max(result, 0);
@@ -900,29 +851,29 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
                 merged = Object.assign(obj.get());
                 obj1.requiresPop = false;
                 const result3 = obj.set(obj1);
-                const obj6 = closure_1_0(closure_1_2[15]);
-                closure_1_0(closure_1_2[15]).runOnJS(closure_1_0(closure_1_2[23]).triggerHapticFeedback)(closure_1_0(closure_1_2[23]).HapticFeedbackTypes.IMPACT_MEDIUM);
+                const obj6 = scrollPosition(callback[15]);
+                scrollPosition(callback[15]).runOnJS(scrollPosition(callback[23]).triggerHapticFeedback)(scrollPosition(callback[23]).HapticFeedbackTypes.IMPACT_MEDIUM);
                 diff = result;
-                const runOnJSResult = closure_1_0(closure_1_2[15]).runOnJS(closure_1_0(closure_1_2[23]).triggerHapticFeedback);
+                const runOnJSResult = scrollPosition(callback[15]).runOnJS(scrollPosition(callback[23]).triggerHapticFeedback);
               }
             }
             diff = merged - merged * closure_1_20;
           }
-          const value = obj4.get();
+          const value = store8.get();
           let tmp16 = !value;
           if (!value) {
             merged = store;
             tmp16 = store.get() <= 0;
           }
           if (tmp16) {
-            const result4 = obj4.set(true);
+            const result4 = store8.set(true);
           }
         } else {
           obj2 = { x: null, y: null };
           obj2[0] = -1 * (obj.get().absoluteXStart - absoluteY.absoluteX);
           obj2[1] = -1 * (obj.get().absoluteYStart - absoluteY.absoluteY);
-          closure_1_1(closure_1_2[21])(closure_19, obj2);
-          const tmp7 = closure_1_1(closure_1_2[21]);
+          dragScrolling(callback[21])(closure_19, obj2);
+          const tmp7 = dragScrolling(callback[21]);
         }
       }
     };
@@ -933,8 +884,8 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
     let obj5 = { gestureState: sharedValue4, mode, VoicePanelModes: setMode, connected, lockScrolling: sharedValue1, scrollPosition, POP_RESISTANCE: closure_20, PIP_POP_HEIGHT: 180, runOnJS: scrollPosition(callback[15]).runOnJS, triggerHapticFeedback: scrollPosition(callback[23]).triggerHapticFeedback, HapticFeedbackTypes: scrollPosition(callback[23]).HapticFeedbackTypes, updateSharedValueIfChanged: dragScrolling(callback[21]), wrapperOffset };
     const fn5 = function s() {
       const result = store8.set(false);
-      closure_1_1(closure_1_2[21])(closure_29, { cancel: false, active: false });
-      closure_1_1(closure_1_2[21])(closure_19, { gestureActive: false });
+      dragScrolling(callback[21])(closure_29, { cancel: false, active: false });
+      dragScrolling(callback[21])(closure_19, { gestureActive: false });
     };
     const onChangeResult = onTouchesMoveResult.onChange(fn4);
     fn5.__closure = { lockScrolling: sharedValue1, updateSharedValueIfChanged: dragScrolling(callback[21]), gestureState: sharedValue4, wrapperOffset };
@@ -946,7 +897,7 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
       if (!store9.get().cancel) {
         velocityY = velocityY.velocityY;
         ({ velocityX, absoluteX, absoluteY } = velocityY);
-        if (store4.get() === closure_1_15.PIP) {
+        if (store4.get() === setMode.PIP) {
           obj = { velocityX: null, velocityY: null, absoluteX: null, absoluteY: null, windowDimensions: null, safeArea: null };
           obj[0] = velocityX;
           obj[1] = velocityY;
@@ -954,42 +905,41 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
           obj[3] = absoluteY;
           obj[4] = store6.get();
           obj[5] = store5.get();
-          const result = closure_1_0(closure_1_2[24]).calculatePIPPositionFromVelocity(obj);
+          const result = scrollPosition(callback[24]).calculatePIPPositionFromVelocity(obj);
           ({ pipX, pipY } = result);
           obj = { pipX: null, pipY: null };
           obj[0] = pipX;
           obj[1] = pipY;
-          closure_1_1(closure_1_2[21])(store7, obj);
-          closure_1_1(closure_1_2[21])(closure_19, { gestureActive: false });
-          const obj5 = closure_1_0(closure_1_2[24]);
-        } else if (obj2.get() === tmp2.PANEL) {
+          dragScrolling(callback[21])(store7, obj);
+          dragScrolling(callback[21])(closure_19, { gestureActive: false });
+          const obj5 = scrollPosition(callback[24]);
+        } else if (store4.get() === setMode.PANEL) {
           if (velocityY > 0) {
             if (store2.get()) {
               if (obj.get().requiresPop) {
-                closure_1_1(closure_1_2[21])(closure_19, { gestureActive: false, x: 0, y: 0 });
+                dragScrolling(callback[21])(closure_19, { gestureActive: false, x: 0, y: 0 });
                 const result1 = store8.set(false);
               } else {
-                closure_1_0(closure_1_2[15]).runOnJS(closure_15)(tmp2.PIP);
-                closure_1_1(closure_1_2[21])(closure_19, { gestureActive: false, x: 0, y: 0 });
-                const obj4 = closure_1_0(closure_1_2[15]);
+                scrollPosition(callback[15]).runOnJS(closure_15)(setMode.PIP);
+                dragScrolling(callback[21])(closure_19, { gestureActive: false, x: 0, y: 0 });
+                const obj4 = scrollPosition(callback[15]);
               }
             } else {
               const diff = store7.get().drawerHeight - store7.get().drawerY;
               if (closure_19.get().y > 0.2 * diff) {
-                closure_1_1(closure_1_2[21])(tmp12, { gestureActive: false });
-                closure_1_0(closure_1_2[15]).runOnJS(closure_8)();
-                const obj3 = closure_1_0(closure_1_2[15]);
+                dragScrolling(callback[21])(closure_19, { gestureActive: false });
+                scrollPosition(callback[15]).runOnJS(closure_8)();
+                const obj3 = scrollPosition(callback[15]);
               } else {
-                closure_1_1(closure_1_2[21])(tmp12, { gestureActive: false, x: 0, y: 0 });
+                dragScrolling(callback[21])(closure_19, { gestureActive: false, x: 0, y: 0 });
                 const result2 = store8.set(false);
               }
             }
           } else {
-            closure_1_1(closure_1_2[21])(closure_19, { gestureActive: false, x: 0, y: 0 });
+            dragScrolling(callback[21])(closure_19, { gestureActive: false, x: 0, y: 0 });
             const result3 = store8.set(false);
           }
         }
-        obj2 = store4;
       }
     };
     const onTouchesCancelledResult = onChangeResult.onTouchesCancelled(fn5);
@@ -998,7 +948,7 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
     fn6.__initData = closure_1_40;
     const obj7 = { gestureState: sharedValue4, mode, VoicePanelModes: setMode, calculatePIPPositionFromVelocity: scrollPosition(callback[24]).calculatePIPPositionFromVelocity, windowDimensions, safeArea, updateSharedValueIfChanged: dragScrolling(callback[21]), wrapperDimensions, wrapperOffset, connected, runOnJS: scrollPosition(callback[15]).runOnJS, setMode, lockScrolling: sharedValue1, MIN_DISMISS_MOVE_PERCENTAGE: 0.2, dismissPanel };
     const fn7 = function t() {
-      closure_1_1(closure_1_2[21])(closure_29, { cancel: false, active: false });
+      dragScrolling(callback[21])(closure_29, { cancel: false, active: false });
     };
     const onEndResult = onTouchesCancelledResult.onEnd(fn6);
     fn7.__closure = { updateSharedValueIfChanged: dragScrolling(callback[21]), gestureState: sharedValue4 };
@@ -1256,7 +1206,7 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
     const obj8 = { style: null, nativeID: null, accessibilityViewIsModal: true, layout: null, onAccessibilityEscape: null, children: null };
     obj8[0] = tmp.accessibilityView;
     let _HermesInternal = HermesInternal;
-    let tmp2Result = tmp2(tmp3[40]);
+    tmp2(tmp3[40]);
     obj8[1] = "voice-panel-ui-" + channelId;
     obj8[3] = closure_26;
     obj8[4] = tmp2(tmp3[41]);
@@ -1275,7 +1225,7 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
     const obj13 = { style: null, layout: null, collapsable: false, children: null };
     obj13[0] = channelId2.absoluteFill;
     obj13[1] = closure_26;
-    tmp2Result = tmp2(tmp3[33]);
+    let tmp2Result = tmp2(tmp3[33]);
     obj14 = { gesture: null, children: null };
     obj14[0] = memo;
     obj15 = { layout: null, ref: null, onScroll: null, onMomentumScrollEnd: null, animatedProps: null, style: null, onContentSizeChange: null, contentContainerStyle: null, scrollEventThrottle: 8.333333333333334, children: null };
@@ -1309,7 +1259,7 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
   }
   return tmp36;
 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelUI.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/VoicePanelUI.tsx");
 
 export default memoResult;
 export const REDUCED_MOTION_OPACITY_PHYSICS = obj3;

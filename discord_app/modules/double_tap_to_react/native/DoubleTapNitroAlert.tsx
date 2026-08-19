@@ -4,7 +4,7 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY" /* 8193 */;
 import { UserSettingsSections } from "ME" /* 676 */;
@@ -12,27 +12,25 @@ import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
-const result = require("set").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
+const result = require("obj132").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
 
 export default function DoubleTapNitroAlert(emojiName) {
   const callback = React.useCallback(() => {
     let obj = callback(7360);
-    obj = { screen: constants.TEXT, params: obj };
     obj = { initialSetting: constants2.DOUBLE_TAP_EMOJI };
     obj.openUserSettings(obj);
   }, []);
   const callback1 = React.useCallback(() => {
-    let obj = callback(7360);
-    obj = { screen: constants.PREMIUM };
+    callback(7360);
+    const obj = { screen: constants.PREMIUM };
     obj.openUserSettings(obj, () => {
       callback(table[8]).dismissAlert(closure_4);
     });
   }, []);
-  let obj = { header: null, title: null, content: null, actions: null };
-  obj = { style: callback3().icon, children: callback(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
+  let obj = { style: callback3().icon, children: callback(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
   obj[0] = callback(View, obj);
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.HRAWfC);

@@ -1,7 +1,7 @@
 // === Module 10814: shuffleProblems ===
 
 // Module 10814 (shuffleProblems)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
@@ -11,12 +11,12 @@ import FeedbackRating from "FeedbackRating" /* 10811 */;
 
 ({ ConnectionFeedbackOption: c3, AudioFeedbackOption: c4, VideoFeedbackOption: c5, VideoBackgroundFeedbackOption: closure_6, StreamFeedbackOption: error, FeedbackOptionVariant: closure_8, FeedbackType: c9, MAX_REPRESENTABLE_DATE: c10, PeopleFeedbackOption: unpackModuleId } = FeedbackRating);
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/feedback/FeedbackUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/feedback/FeedbackUtils.tsx");
 
-export const shuffleProblems = function shuffleProblems(closure_1_7, otherKey) {
+export const shuffleProblems = function shuffleProblems(reasons, otherKey) {
   closure_0 = otherKey;
-  const shuffleResult = applyDefault.shuffle(closure_1_7);
-  const findIndexResult = shuffleResult.findIndex((value) => value.value === closure_0);
+  const shuffleResult = applyDefault.shuffle(reasons);
+  const findIndexResult = shuffleResult.findIndex((item, index) => item.value === closure_0);
   if (findIndexResult > -1) {
     shuffleResult.splice(findIndexResult, 1);
     shuffleResult.push(shuffleResult[findIndexResult]);
@@ -25,14 +25,12 @@ export const shuffleProblems = function shuffleProblems(closure_1_7, otherKey) {
 };
 export const processOptOut = function processOptOut(feedbackType) {
   feedbackType = feedbackType.feedbackType;
-  let obj = expandEventPropertiesDefault;
-  obj = { feedback_type: table[feedbackType], opted_out_until: closure_10 };
+  let obj = { feedback_type: table[feedbackType], opted_out_until: closure_10 };
   obj.track(AnalyticEvents.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, obj);
   const InAppFeedbackStates = feedbackType(4066).InAppFeedbackStates;
   InAppFeedbackStates.updateSetting((arg0) => {
-    let obj = {};
     const merged = Object.assign(arg0);
-    obj = {};
+    const obj = {};
     const merged1 = Object.assign(arg0[feedbackType]);
     obj.optOutExpiryTime = closure_1_10;
     obj[feedbackType] = obj;
@@ -64,8 +62,8 @@ export const getConnectionFeedbackOptions = function getConnectionFeedbackOption
   const intl6 = getSystemLocale.intl;
   obj3[2] = intl6.string(messagesProxyDefault.K5vYQA);
   items[5] = obj3;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((arg0) => Object.assign(arg0, Object.create(null)));
+  const found = items.filter((item, index) => !item.disabled);
+  return found.map((item, index) => Object.assign(item, Object.create(null)));
 };
 export const getAudioFeedbackOptions = function getAudioFeedbackOptions(isMobile) {
   let obj = { value: constants2.NO_AUDIO, variant: constants6.SELF, label: null };
@@ -121,8 +119,8 @@ export const getAudioFeedbackOptions = function getAudioFeedbackOptions(isMobile
   const intl13 = getSystemLocale.intl;
   obj10[2] = intl13.string(messagesProxyDefault["2IG95D"]);
   items[12] = obj10;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((arg0) => Object.assign(arg0, Object.create(null)));
+  const found = items.filter((item, index) => !item.disabled);
+  return found.map((item, index) => Object.assign(item, Object.create(null)));
 };
 export const getVideoFeedbackOptions = function getVideoFeedbackOptions() {
   let obj = { value: constants3.NO_VIDEO, variant: constants6.SELF, label: null };
@@ -149,8 +147,8 @@ export const getVideoFeedbackOptions = function getVideoFeedbackOptions() {
   const intl6 = getSystemLocale.intl;
   obj3[2] = intl6.string(messagesProxyDefault.vRDE5O);
   items[5] = obj3;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((arg0) => Object.assign(arg0, Object.create(null)));
+  const found = items.filter((item, index) => !item.disabled);
+  return found.map((item, index) => Object.assign(item, Object.create(null)));
 };
 export const getVideoBackgroundFeedbackOptions = function getVideoBackgroundFeedbackOptions() {
   let obj = { value: constants4.OUTLINE_FUZZY_OR_HALO, variant: constants6.SELF, label: null };
@@ -169,8 +167,8 @@ export const getVideoBackgroundFeedbackOptions = function getVideoBackgroundFeed
   const intl4 = getSystemLocale.intl;
   obj1[2] = intl4.string(messagesProxyDefault["Gg/Y1X"]);
   items[3] = obj1;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((arg0) => Object.assign(arg0, Object.create(null)));
+  const found = items.filter((item, index) => !item.disabled);
+  return found.map((item, index) => Object.assign(item, Object.create(null)));
 };
 export const getStreamFeedbackOptions = function getStreamFeedbackOptions(isStreamer) {
   isStreamer = isStreamer.isStreamer;
@@ -269,14 +267,14 @@ export const getStreamFeedbackOptions = function getStreamFeedbackOptions(isStre
   obj16[2] = intl19.string(messagesProxyDefault.JfAvQp);
   obj16[3] = isStreamer;
   items[18] = obj16;
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((arg0) => Object.assign(arg0, Object.create(null)));
+  const found = items.filter((item, index) => !item.disabled);
+  return found.map((item, index) => Object.assign(item, Object.create(null)));
 };
 export const getPeopleFeedbackOptions = function getPeopleFeedbackOptions() {
   const obj = { value: constants7.TOXIC_OR_INAPPROPRIATE, variant: constants6.OTHERS, label: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.PLBRzF);
   const items = [obj];
-  const found = items.filter((disabled) => !disabled.disabled);
-  return found.map((arg0) => Object.assign(arg0, Object.create(null)));
+  const found = items.filter((item, index) => !item.disabled);
+  return found.map((item, index) => Object.assign(item, Object.create(null)));
 };

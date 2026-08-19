@@ -2,17 +2,21 @@
 
 // Module 15238 (UsernameStatusMessage)
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
 import NameValidationState from "NameValidationState" /* 14116 */;
 import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15230 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4115" /* 4115 */;
 
-require = arg1;
+require = fn;
 function UsernameStatusMessage(arg0) {
   ({ usernameStatus, isUsernameFocused } = arg0);
   const tmp = callback5();
@@ -21,26 +25,25 @@ function UsernameStatusMessage(arg0) {
     type = usernameStatus.type;
   }
   if (type === NameValidationState.NameValidationState.ERROR) {
-    let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
-    obj = { size: "xs", color: null };
+    let obj = { size: "xs", color: null };
     obj[1] = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
-    const items = [callback3(tmp3(8074).CircleErrorIcon, obj), ];
+    const items = [callback3(CircleErrorIcon.CircleErrorIcon, obj), ];
     obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null };
     obj1[2] = tmp.status;
     const merged = Object.assign(createCacheKey);
     const merged1 = Object.assign(createCacheKey);
     obj1.animated = true;
     obj1.children = usernameStatus.message;
-    items[1] = callback3(tmp3(4734).Text, obj1);
+    items[1] = callback3(Text.Text, obj1);
     obj[3] = items;
-    let tmp6 = callback4(tmp3(4733).Stack, obj);
+    let tmp6 = callback4(Stack.Stack, obj);
   } else {
     if (isUsernameFocused) {
       let type1;
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(14116).NameValidationState.AVAILABLE) {
+      if (type1 === NameValidationState.NameValidationState.AVAILABLE) {
         const obj2 = {};
         const merged2 = Object.assign(createCacheKey);
         const merged3 = Object.assign(createCacheKey);
@@ -49,8 +52,8 @@ function UsernameStatusMessage(arg0) {
         obj2.animated = true;
         const obj3 = { variant: "text-xs/medium", color: "text-feedback-positive", children: null };
         obj3[2] = usernameStatus.message;
-        obj2.children = callback3(tmp3(4734).Text, obj3);
-        tmp6 = callback3(tmp3(4734).Text, obj2);
+        obj2.children = callback3(Text.Text, obj3);
+        tmp6 = callback3(Text.Text, obj2);
       }
     }
     tmp6 = null;
@@ -62,9 +65,9 @@ function UsernameStatusMessage(arg0) {
       obj.variant = "text-xs/medium";
       obj.color = "text-muted";
       obj.animated = true;
-      const intl = tmp3(1236).intl;
-      obj.children = intl.string(tmp3(1236).t.y7LSyU);
-      tmp6 = callback3(tmp3(4734).Text, obj);
+      const intl = getSystemLocale.intl;
+      obj.children = intl.string(getSystemLocale.t.y7LSyU);
+      tmp6 = callback3(Text.Text, obj);
     }
   }
   return tmp6;
@@ -79,17 +82,16 @@ createCacheKey[1] = require("module_300");
 createCacheKey = { layout: null };
 createCacheKey[0] = require("module_300");
 const easingResult = LinearTransition.easing(Easing.inOut(require("module_4115").Easing.quad));
-const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
 export const RegisterUsernameInput = function RegisterUsernameInput(setUsername) {
   setUsername = setUsername.setUsername;
   ({ usernameStatus, autoFocus } = setUsername);
   importDefault = undefined;
   dependencyMap = undefined;
-  let obj = React;
   ({ username, onSubmitEditing, submitBehavior } = setUsername);
   const ref = React.useRef(null);
-  obj = { inputRef: ref, enabled: null };
+  let obj = { inputRef: ref, enabled: null };
   if (autoFocus == null) {
     autoFocus = false;
   }
@@ -103,8 +105,8 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   const items1 = [tmp5[1]];
   callback = obj.useCallback((str) => {
     if (null != user.username) {
-      const username = tmp.username;
-      closure_1_7(closure_1_4(tmp, closure_1_3));
+      const username = user.username;
+      closure_1_7(closure_1_4(user, closure_1_3));
     }
     setUsername(str.toLowerCase());
   }, items);
@@ -121,10 +123,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   const intl2 = setUsername(1236).intl;
   obj[2] = intl2.string(setUsername(1236).t["47dcUZ"]);
   obj[3] = callback;
-  const tmp11 = closure_10;
-  const tmp12 = closure_11;
   const tmp14 = setUsername;
-  const tmp3 = useFocusRefOnNavigationDefault;
   obj[5] = setUsername(500).isAndroid();
   const obj4 = setUsername(500);
   let str = "default";
@@ -147,7 +146,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   obj1 = { children: null };
   obj[16] = str2;
   obj[17] = submitBehavior;
-  const items3 = [closure_9(setUsername(8071).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [callback(setUsername(8071).TextInput, obj), callback(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj1[0] = items3;
-  return tmp11(tmp12, obj1);
+  return callback2(closure_11, obj1);
 };

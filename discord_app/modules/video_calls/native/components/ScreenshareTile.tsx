@@ -12,20 +12,19 @@ import registerAssetDefault from "registerAsset" /* 12437 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { NOOP } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, image: null, label: null, liveContainer: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BLACK, overflow: "hidden", flex: 1 };
+const createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BLACK, overflow: "hidden", flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 8, width: 60, height: 40 };
 createCacheKey[2] = { lineHeight: 18, textAlign: "center" };
 createCacheKey[3] = { position: "absolute", top: 8, right: 8, zIndex: 2 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ScreenshareTile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/ScreenshareTile.tsx");
 
 export default function ScreenShareTile(onSingleTap) {
   onSingleTap = onSingleTap.onSingleTap;
@@ -37,9 +36,8 @@ export default function ScreenShareTile(onSingleTap) {
     onDoubleTap = NOOP;
   }
   const tmp = callback3();
-  let obj = { gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }), children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.liveContainer, children: callback(Button.LiveTag, {}) };
+  { gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }), children: null };
+  const obj = { style: tmp.liveContainer, children: callback(Button.LiveTag, {}) };
   const items = [callback(closure_3, obj), , ];
   const tmp2 = useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
   items[1] = callback(closure_4, { source: registerAssetDefault, style: tmp.image, resizeMode: "contain" });

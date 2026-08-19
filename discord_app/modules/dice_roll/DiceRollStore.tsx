@@ -1,12 +1,11 @@
 // === Module 11146: INITIAL_STATE ===
 
 // Module 11146 (INITIAL_STATE)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import keys from "keys" /* 644 */;
 
-let obj = { channelId: null, rolling: false, dismissing: false, diceCount: 1, diceSides: 6, results: null };
-obj = keys.create(() => obj);
-const result = set.fileFinishedImporting("modules/dice_roll/DiceRollStore.tsx");
+const obj = keys.create(() => obj);
+const result = obj132.fileFinishedImporting("modules/dice_roll/DiceRollStore.tsx");
 
 export default obj;
 export const INITIAL_STATE = obj;

@@ -1,15 +1,15 @@
 // === Module 10517: useReactionPermissions ===
 
 // Module 10517 (useReactionPermissions)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "initialize" /* 4022 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "recomputeGuild" /* 4977 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import initialize from "initialize" /* 4022 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import recomputeGuild from "recomputeGuild" /* 4977 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
 
 export default function useReactionPermissions(guild_id) {
   const _require = guild_id;
@@ -53,7 +53,7 @@ export default function useReactionPermissions(guild_id) {
   const stateFromStores3 = _require(stateFromStores[6]).useStateFromStores(items6, () => {
     let canResult = stateFromStores;
     if (stateFromStores) {
-      canResult = closure_1_7.can(closure_1_8.ADD_REACTIONS, closure_0);
+      canResult = closure_1_7.can(Permissions.ADD_REACTIONS, closure_0);
     }
     return canResult;
   }, items7);
@@ -64,7 +64,6 @@ export default function useReactionPermissions(guild_id) {
   if (null == guild_id) {
     obj = { disableReactionReads: true, disableReactionCreates: true, disableReactionUpdates: true, isLurking: false, isGuest: false, isPendingMember: false };
   } else {
-    obj = {};
     obj = { channel: null, canChat: null, renderReactions: true, canAddNewReactions: null, isLurking: null, communicationDisabled: null, isActiveChannelOrUnarchivableThread: null, isAutomodQuarantined: null };
     obj[0] = guild_id;
     obj[1] = stateFromStores;

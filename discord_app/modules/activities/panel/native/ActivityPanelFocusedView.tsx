@@ -3,18 +3,18 @@
 // Module 16242 (BaseActivityPanelFocusedView)
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "participantFromServer" /* 1390 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
 import { ActivityLayoutMode } from "items3" /* 4481 */;
 import ActivityPanelModes from "ActivityPanelModes" /* 8703 */;
 import DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG from "DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG" /* 16237 */;
 import { ThemeTypes } from "ME" /* 676 */;
 import { IS_IOS } from "VoicePanelModes" /* 11440 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 class BaseActivityPanelFocusedView {
   constructor(arg0) {
     transitionState = global.transitionState;
@@ -60,7 +60,7 @@ class BaseActivityPanelFocusedView {
         num = lg;
       }
       let num2 = 0;
-      if (closure_1_15) {
+      if (IS_IOS) {
         num2 = store.get();
       }
       let num3 = 0;
@@ -73,7 +73,7 @@ class BaseActivityPanelFocusedView {
       if (shown.get()) {
         let height = wrapperOffset.get().y;
       } else {
-        height = tmp3.height;
+        height = styles.height;
       }
       function transitionComplete() {
         let flag = arg0;
@@ -81,11 +81,11 @@ class BaseActivityPanelFocusedView {
           flag = false;
         }
         if (flag) {
-          flag = closure_0 === closure_1_0(closure_1_2[19]).TransitionStates.YEETED;
+          flag = closure_0 === transitionState(updateActivityPanelModeToPIP[19]).TransitionStates.YEETED;
         }
         if (flag) {
-          closure_1_0(closure_1_2[18]).runOnJS(closure_1)();
-          const obj = closure_1_0(closure_1_2[18]);
+          transitionState(updateActivityPanelModeToPIP[18]).runOnJS(closure_1)();
+          const obj = transitionState(updateActivityPanelModeToPIP[18]);
         }
       }
       obj = { transitionState, TransitionStates: transitionState(updateActivityPanelModeToPIP[19]).TransitionStates, runOnJS: transitionState(updateActivityPanelModeToPIP[18]).runOnJS, transitionCleanUp };
@@ -96,12 +96,12 @@ class BaseActivityPanelFocusedView {
       if (stateFromStores) {
         num4 = 0;
         if (obj.get()) {
-          num4 = 1 - wrapperOffset.get().y / tmp3.height;
+          num4 = 1 - wrapperOffset.get().y / styles.height;
         }
       }
       let num6 = 1;
       if (stateFromStores) {
-        let tmp9Result = tmp9(tmp10[20]);
+        let tmp9Result = transitionState(updateActivityPanelModeToPIP[20]);
         let str2 = "animate-always";
         if (obj.get()) {
           str2 = "animate-always";
@@ -109,7 +109,7 @@ class BaseActivityPanelFocusedView {
             str2 = "animate-never";
           }
         }
-        num6 = tmp9Result.withTiming(num4, tmp13, str2, transitionComplete);
+        num6 = tmp9Result.withTiming(num4, closure_1_18, str2, transitionComplete);
       }
       obj = { opacity: num6, transform: null, top: null, width: null, height: null, borderTopStartRadius: null, borderTopEndRadius: null };
       if (stateFromStores) {
@@ -118,7 +118,7 @@ class BaseActivityPanelFocusedView {
         const items = [obj1];
         obj[1] = items;
         let num7 = 0;
-        if (!tmp.isWindowLandscape) {
+        if (!wrapperDimensions.isWindowLandscape) {
           num7 = closure_6.top;
         }
         obj[2] = num7;
@@ -128,7 +128,7 @@ class BaseActivityPanelFocusedView {
         obj[6] = num;
         return obj;
       } else {
-        tmp9Result = tmp9(tmp10[21]);
+        tmp9Result = transitionState(updateActivityPanelModeToPIP[21]);
         if (!wrapperOffset.get().gestureActive) {
           let tmp21 = shown;
           tmp9Result.withSpring(height, tmp21, "animate-always", transitionComplete);
@@ -228,10 +228,9 @@ let c3 = importAllResult;
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: unpackModuleId, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = { duration: 300 };
-let obj = { wrapper: null, shade: null };
-obj = { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = ThemesDefault.colors.BLACK;
 obj[1] = createCacheKey;
@@ -244,9 +243,7 @@ const memoResult = importAllResult.memo((transitionState) => {
   transitionState = transitionState.transitionState;
   let _require = transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
-  let isWindowLandscape = transitionCleanUp;
   let channel;
-  let hasActivity;
   closure_4 = undefined;
   let memo;
   let memo1;
@@ -260,9 +257,9 @@ const memoResult = importAllResult.memo((transitionState) => {
     return obj;
   }, []);
   channel = stateFromStoresObject.channel;
-  hasActivity = stateFromStoresObject.hasActivity;
+  const hasActivity = stateFromStoresObject.hasActivity;
   _require = undefined;
-  isWindowLandscape = undefined;
+  let isWindowLandscape;
   let obj = _require(channel[14]);
   const tmp3 = isWindowLandscape(channel[13])();
   _require = tmp3;
@@ -278,7 +275,6 @@ const memoResult = importAllResult.memo((transitionState) => {
     if (isWindowLandscape) {
       let obj = closure_1_13;
     } else {
-      obj = { right: null };
       obj = { disable: false, override: null };
       const _Math = Math;
       obj[1] = Math.max(64, lib.right);
@@ -293,16 +289,15 @@ const memoResult = importAllResult.memo((transitionState) => {
   }, []);
   const items2 = [transitionState, transitionCleanUp, callback, hasActivity, memo1, channel, tmp5, memo];
   return hasActivity.useMemo(() => {
-    obj = { transitionState: closure_0, transitionCleanUp: isWindowLandscape, updateActivityPanelModeToPIP: callback, hasActivity, context: isWindowLandscape(channel[25]), header: memo1, children: closure_1_16(isWindowLandscape(channel[28]), obj) };
+    { transitionState: closure_0, transitionCleanUp: isWindowLandscape, updateActivityPanelModeToPIP: callback, hasActivity, context: isWindowLandscape(channel[25]), header: memo1, children: closure_1_16(isWindowLandscape(channel[28]), obj) };
     obj = { channel, layoutMode: callback.FOCUSED, portraitSafeAreasConfig: closure_4, landscapeSafeAreasConfig: memo };
-    return closure_1_16(closure_1_24, obj);
+    return closure_1_16(BaseActivityPanelFocusedView, obj);
   }, items2);
 });
-let result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelFocusedView.tsx");
+let result = require("obj132").fileFinishedImporting("modules/activities/panel/native/ActivityPanelFocusedView.tsx");
 
 export default memoResult;
 export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocusedView(context) {
-  closure_0 = undefined;
   let isWindowLandscape;
   const tmp = isWindowLandscape(1629)();
   closure_0 = tmp;
@@ -319,7 +314,6 @@ export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocu
       if (isWindowLandscape) {
         let obj = closure_1_13;
       } else {
-        obj = { right: null };
         obj = { disable: false, override: null };
         const _Math = Math;
         obj[1] = Math.max(64, lib.right);

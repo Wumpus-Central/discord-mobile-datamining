@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const require = arg1;
+const require = fn;
 function handleReset() {
   map = new Map();
 }
@@ -39,21 +39,22 @@ const searchRecentMessageStore = new SearchRecentMessageStore(dispatcherDefault,
       HermesBuiltin.arraySpread(items, 0);
       const _Set = Set;
       set = new Set(items);
-      let item = data.forEach((messages) => {
-        messages = messages.messages;
-        const item = messages.forEach((arg0) => {
-          [tmp] = arg0;
-          const messageRecord = closure_1_0(closure_1_1[0]).createMessageRecord(tmp);
+      let item = data.forEach((item, index) => {
+        const messages = item.messages;
+        item = messages.forEach((item, index) => {
+          [tmp] = item;
+          const messageRecord = closure_1_0(items[0]).createMessageRecord(tmp);
           const hasItem = set.has(messageRecord.author.id);
           let tmp4 = !hasItem;
           if (!hasItem) {
-            tmp4 = obj2.size < 15;
+            tmp4 = set.size < 15;
           }
           if (tmp4) {
-            obj2.add(messageRecord.author.id);
+            set.add(messageRecord.author.id);
             arr = arr.push(messageRecord.author.id);
             c0 = true;
           }
+          const obj = closure_1_0(items[0]);
         });
       });
       if (c0) {
@@ -65,6 +66,6 @@ const searchRecentMessageStore = new SearchRecentMessageStore(dispatcherDefault,
   SEARCH_RECENT_MESSAGES_CLEAR: handleReset,
   CONNECTION_OPEN: handleReset
 });
-let result = require("set").fileFinishedImporting("modules/search/SearchRecentMessageStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/SearchRecentMessageStore.tsx");
 
 export default searchRecentMessageStore;

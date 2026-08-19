@@ -1,11 +1,11 @@
 // === Module 15759: sendMessageWithEmbed ===
 
 // Module 15759 (sendMessageWithEmbed)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import trackInviteDefault from "trackInvite" /* 7427 */;
 import rebuildDefault from "rebuild" /* 7436 */;
 
-const result = set.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
 
 export const sendMessageWithEmbed = function sendMessageWithEmbed(channel) {
   channel = channel.channel;

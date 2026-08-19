@@ -2,14 +2,14 @@
 
 // Module 12034 (apexExperiment)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import "ApexExperiment";
 
-require = arg1;
-ApexExperiment = { 1: null };
+require = fn;
+const ApexExperiment = { 1: null };
 ApexExperiment[1] = { enabled: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: ApexExperiment });
-const result = require("set").fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
+const result = require("obj132").fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
 
 export default apexExperiment;
 export const usePlaygroundAccessExperiment = function usePlaygroundAccessExperiment(design_systems_settings) {

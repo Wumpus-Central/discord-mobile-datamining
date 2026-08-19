@@ -6,11 +6,11 @@ import DetectableAppNames from "DetectableAppNames" /* 13259 */;
 import GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT from "GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT" /* 13261 */;
 import DETECTABLE_GAME_TO_APPLICATION_ID_MAP from "DETECTABLE_GAME_TO_APPLICATION_ID_MAP" /* 15075 */;
 import fetchMobileGameCommunitiesAll from "fetchMobileGameCommunities" /* 15529 */;
-import closure_3 from "initialize" /* 13258 */;
-import closure_4 from "set" /* 15074 */;
+import initialize from "initialize" /* 13258 */;
+import set from "set" /* 15074 */;
 import { MAX_DISPLAYED_UPSELL_GUILDS as closure_5 } from "MAX_DISPLAYED_UPSELL_GUILDS" /* 15528 */;
 
-require = arg1;
+require = fn;
 initializeDefault;
 class MobileGameCommunitiesManager extends tmp2 {
   constructor() {
@@ -36,7 +36,6 @@ prototype["_fetchGameCommunities"] = function _fetchGameCommunities(result) {
     const dismissedGuildIds = store.getDismissedGuildIds();
     const _Array = Array;
     const mobileGameCommunities = fetchMobileGameCommunitiesAll.fetchMobileGameCommunities(gameIdsForDetectedGames, Array.from(dismissedGuildIds), closure_5);
-    const obj3 = fetchMobileGameCommunitiesAll;
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
@@ -45,17 +44,16 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     if (0 === store.getLastFetchedAt()) {
       const _Object = Object;
       const values = Object.values(closure_3.getUserAgnosticState().apps);
-      if (values.some((lastScannedAt) => {
-        lastScannedAt = undefined;
-        if (lastScannedAt != null) {
-          lastScannedAt = lastScannedAt.lastScannedAt;
+      if (values.some((item, index) => {
+        let lastScannedAt;
+        if (item != null) {
+          lastScannedAt = item.lastScannedAt;
         }
         return null != lastScannedAt;
       })) {
         const obj = {};
         const ALL_DETECTABLE_APP_NAMES = DetectableAppNames.ALL_DETECTABLE_APP_NAMES;
         for (const item10021 of ALL_DETECTABLE_APP_NAMES) {
-          let tmp6 = closure_3;
           obj[item10021] = closure_3.isAppInstalled(item10021);
           continue;
         }
@@ -73,6 +71,6 @@ prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionC
   }
 };
 const mobileGameCommunitiesManager = new MobileGameCommunitiesManager();
-let result = require("set").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx");
 
 export default mobileGameCommunitiesManager;

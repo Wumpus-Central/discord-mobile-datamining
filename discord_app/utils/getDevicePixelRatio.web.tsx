@@ -1,9 +1,9 @@
 // === Module 9514: getDevicePixelRatio ===
 
 // Module 9514 (getDevicePixelRatio)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/getDevicePixelRatio.web.tsx");
+const result = obj132.fileFinishedImporting("utils/getDevicePixelRatio.web.tsx");
 
 export default function getDevicePixelRatio() {
   let num = window.devicePixelRatio;

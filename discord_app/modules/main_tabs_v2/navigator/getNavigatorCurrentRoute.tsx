@@ -1,16 +1,15 @@
 // === Module 9569: getNavigatorCurrentRoute ===
 
 // Module 9569 (getNavigatorCurrentRoute)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");
+const result = obj132.fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");
 
 export default function getNavigatorCurrentRoute() {
   let rootNavigationRef = arg0;
   if (arg0 === undefined) {
     rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
-    const obj2 = getRootNavigationRef;
   }
   let isReadyResult;
   if (rootNavigationRef != null) {

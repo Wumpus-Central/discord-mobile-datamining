@@ -2,8 +2,8 @@
 
 // Module 7585 (enqueue)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import obj132 from "obj132" /* 2 */;
 
 let closure_1 = new timestampDefault("UploaderQueue.tsx");
 class UploaderQueue {
@@ -14,10 +14,10 @@ class UploaderQueue {
   }
 }
 const prototype = UploaderQueue.prototype;
-prototype["enqueue"] = function enqueue(props) {
+prototype["enqueue"] = function enqueue(headerResult) {
   const self = this;
   const queue = this.queue;
-  queue.unshift(props);
+  queue.unshift(headerResult);
   let str = "no";
   if (this.drainingQueue) {
     str = "yes";
@@ -59,24 +59,24 @@ prototype["drainQueue"] = function drainQueue() {
             closure_1 = tmp3;
             closure_0 = tmp7;
             closure_0 = undefined;
-            closure_1_0.drainingQueue = true;
+            self.drainingQueue = true;
             const _HermesInternal2 = HermesInternal;
-            closure_1_1.log("drainQueue() - starting, queue length: " + closure_1_0.queue.length);
-            const queue = closure_1_0.queue;
+            closure_1_1.log("drainQueue() - starting, queue length: " + self.queue.length);
+            const queue = self.queue;
             const arr = queue.pop();
             if (null == arr) {
               closure_1_1.log("drainQueue() - No uploads left, setting drainingQueue to false");
-              closure_1_0.drainingQueue = false;
+              self.drainingQueue = false;
               c5 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               c3 = 1;
               closure_1_1.log("drainQueue() - start uploader");
               closure_0 = arr();
-              const promise = new Promise((arg0) => {
-                const _aborted = arg0;
+              const promise = new Promise((fn) => {
+                const _aborted = fn;
                 if (tmp) {
-                  arg0();
+                  fn();
                 }
                 _aborted.addListener("complete", () => callback());
                 _aborted.addListener("error", () => callback());
@@ -121,8 +121,8 @@ prototype["drainQueue"] = function drainQueue() {
     }
   })();
 };
-let set = Object.create(UploaderQueue.prototype);
-set[0] = [];
-const result = set.fileFinishedImporting("lib/uploader/UploaderQueue.tsx");
+let obj132 = Object.create(UploaderQueue.prototype);
+obj132[0] = [];
+const result = obj132.fileFinishedImporting("lib/uploader/UploaderQueue.tsx");
 
-export default set;
+export default obj132;

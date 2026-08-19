@@ -3,13 +3,13 @@
 // Module 13352
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "getHash" /* 4288 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import getHash from "getHash" /* 4288 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx");
 
 export default {
   title() {

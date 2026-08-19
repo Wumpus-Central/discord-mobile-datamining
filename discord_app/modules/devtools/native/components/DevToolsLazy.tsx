@@ -2,22 +2,22 @@
 
 // Module 13944 (NativeModules)
 import enforcingDefault from "enforcing" /* 13945 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "init" /* 7472 */;
-import closure_6 from "initialize" /* 7471 */;
+import init from "init" /* 7472 */;
+import initialize from "initialize" /* 7471 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 
-const require = arg1;
-if (set.isAndroid()) {
+const require = fn;
+if (obj132.isAndroid()) {
   let keyModifierControl = enforcingDefault.getConstants().keyModifierControl;
   const importDefaultResult = enforcingDefault;
 } else {
   keyModifierControl = NativeModules.KeyCommandsView.keyModifierControl;
 }
-set = {
+obj132 = {
   input: "o",
   modifierFlags: keyModifierControl,
   eventName: "keyCommandShowDevTools",
@@ -29,10 +29,10 @@ set = {
         HermesBuiltin.throwTypeError();
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw navigateToDevTools;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = navigateToDevTools;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -43,11 +43,11 @@ set = {
           if (0 === paths) {
             if (arg0 === 1) {
               v0 = 3;
-              throw arg1;
+              throw navigateToDevTools;
             } else if (arg0 === 2) {
               v0 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = navigateToDevTools;
               return obj;
             } else {
               paths = 1;
@@ -58,14 +58,14 @@ set = {
             }
           } else if (arg0 === 1) {
             v0 = 3;
-            throw arg1;
+            throw navigateToDevTools;
           } else if (arg0 === 2) {
             v0 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = navigateToDevTools;
             return obj;
           } else {
-            arg1.navigateToDevTools();
+            navigateToDevTools.navigateToDevTools();
             v0 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -77,13 +77,13 @@ set = {
     })();
   }
 };
-let items = [set];
-let result = set.fileFinishedImporting("modules/devtools/native/components/DevToolsLazy.tsx");
+let items = [obj132];
+let result = obj132.fileFinishedImporting("modules/devtools/native/components/DevToolsLazy.tsx");
 
 export default function DevToolsLazy() {
   items = [closure_5];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => isDeveloper.isDeveloper);
-  const obj = stateFromStores(589);
+  let obj = stateFromStores(589);
   const tmp = stateFromStores;
   const items1 = [closure_6];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => showDevWidget.showDevWidget);
@@ -96,6 +96,7 @@ export default function DevToolsLazy() {
         }
       });
     }
+    obj = stateFromStores(dependencyMap[6]);
   });
   const obj2 = stateFromStores(589);
   const keyCommands = stateFromStores(13940).useKeyCommands(stateFromStores ? items : []);

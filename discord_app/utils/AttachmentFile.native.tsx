@@ -3,9 +3,9 @@
 // Module 4837 (_getAttachmentFile)
 import timestampDefault from "timestamp" /* 3 */;
 import openImagePickerUnhandled from "openImagePickerUnhandled" /* 4838 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
+require = fn;
 function _getAttachmentFile() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -208,9 +208,9 @@ function _cancelGetAttachmentFile() {
 }
 let closure_4 = new timestampDefault("AttachmentFile");
 const tmp2 = new timestampDefault("AttachmentFile");
-const result = require("set").fileFinishedImporting("utils/AttachmentFile.native.tsx");
+const result = require("obj132").fileFinishedImporting("utils/AttachmentFile.native.tsx");
 
-export const getAttachmentFile = function getAttachmentFile(arg0, c0) {
+export const getAttachmentFile = function getAttachmentFile(closure_1_0, c0) {
   const self = this;
   const apply = _getAttachmentFile.apply;
   if (typeof apply === "unknown") {

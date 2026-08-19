@@ -1,17 +1,17 @@
 // === Module 15680: getNotificationCenterItemBody ===
 
 // Module 15680 (getNotificationCenterItemBody)
-import closure_3 from "scheduledEventSort" /* 4370 */;
+import scheduledEventSort from "scheduledEventSort" /* 4370 */;
 import { isGuildEventEnded } from "scheduledEventSort" /* 4370 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: c9 } = ME);
 const re10 = /[\\`*_~|<>[\]:]/g;
-const result = require("set").fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
 
 export default function getNotificationCenterItemBody(arg0) {
   ({ item, renderApplication } = arg0);
@@ -148,7 +148,6 @@ export default function getNotificationCenterItemBody(arg0) {
       str9 = "";
     }
     formatResult = str9;
-    const tmp28 = isGuildEventEnded;
     tmp28Result = isGuildEventEnded(guildScheduledEvent);
   } else if (tmp7(4802).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS === type) {
     if (null != applicationId) {

@@ -3,7 +3,7 @@
 // Module 7515 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
 let closure_1 = {};
 const Store = initializeDefault.Store;
@@ -66,7 +66,7 @@ const forumSearchStore = new ForumSearchStore(dispatcherDefault, {
       const results = tmp2.results;
       let found;
       if (results != null) {
-        found = results.filter((arg0) => channel.id !== arg0);
+        found = results.filter((item, index) => channel.id !== item);
       }
       obj.results = found;
       dependencyMap[parent_id] = obj;
@@ -159,6 +159,6 @@ const forumSearchStore = new ForumSearchStore(dispatcherDefault, {
     return tmp4;
   }
 });
-const result = require("set").fileFinishedImporting("modules/forums/ForumSearchStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/ForumSearchStore.tsx");
 
 export default forumSearchStore;

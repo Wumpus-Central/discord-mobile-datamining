@@ -9,15 +9,14 @@ import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBa
 import Background from "Background" /* 6950 */;
 import useMessagePreviewHeightStore from "useMessagePreviewHeightStore" /* 10729 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { container: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
+const createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
 
 export default function MediaViewerAltTextSheet(children) {
   let obj = useMessagePreviewHeightStore;
@@ -27,9 +26,8 @@ export default function MediaViewerAltTextSheet(children) {
   if (!obj2.useIsScreenLandscape()) {
     num = messagePreviewCollapsedheight + 20 + 50;
   }
-  obj = { header: null, contentStyles: null, children: null };
   obj = { title: null };
-  const intl = tmp2(1236).intl;
+  const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.J3IOO1);
   obj[0] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null });
   const items = [tmp.container, { minHeight: num }];

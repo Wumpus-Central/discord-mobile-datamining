@@ -5,10 +5,10 @@ import extractId from "extractId" /* 513 */;
 import v1 from "v1" /* 514 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "init" /* 7472 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import init from "init" /* 7472 */;
 
-require = arg1;
+require = fn;
 let c4 = 0;
 let closure_5 = [];
 let c6 = 0;
@@ -57,7 +57,6 @@ const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
       obj[2] = tmp2;
       if (null != fingerprint) {
         let extractIdResult = extractId.extractId(fingerprint);
-        const obj2 = extractId;
       } else {
         extractIdResult = id.getId();
       }
@@ -95,7 +94,6 @@ const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
       obj[7] = date;
       items[arraySpreadResult] = obj;
       isDeveloper = items.length > 500;
-      const obj2 = v1;
     }
     if (isDeveloper) {
       items.shift();
@@ -110,6 +108,6 @@ const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
     closure_7 = [];
   }
 });
-const result = require("set").fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
 
 export default analyticsLogStore;

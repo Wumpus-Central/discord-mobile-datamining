@@ -8,17 +8,16 @@ import Text from "Text" /* 4734 */;
 import TrophyIcon from "TrophyIcon" /* 8010 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
-createCacheKey = { flexDirection: "row", backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, alignItems: "center", gap: ThemesDefault.space.PX_4 };
+const createCacheKey = { flexDirection: "row", backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, alignItems: "center", gap: ThemesDefault.space.PX_4 };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileRankPill.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_profile/native/components/GameProfileRankPill.tsx");
 
 export default function GameProfileRankPill(arg0) {
   ({ rank, compact } = arg0);
@@ -26,9 +25,7 @@ export default function GameProfileRankPill(arg0) {
     compact = false;
   }
   const tmp = callback2();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.gameRankPill, children: null };
-  obj = { size: "xxs", color: ThemesDefault.colors.BLACK };
+  const obj = { size: "xxs", color: ThemesDefault.colors.BLACK };
   const items = [callback(TrophyIcon.TrophyIcon, obj), ];
   const intl = getSystemLocale.intl;
   const formatToPlainString = intl.formatToPlainString;
@@ -44,6 +41,6 @@ export default function GameProfileRankPill(arg0) {
   }
   items[1] = callback(Text.Text, { variant: "text-xs/bold", color: "text-overlay-dark", children: str.toUpperCase() });
   obj[1] = items;
-  obj[1] = closure_5(View, obj);
+  obj[1] = callback(View, obj);
   return callback(View, obj);
 };

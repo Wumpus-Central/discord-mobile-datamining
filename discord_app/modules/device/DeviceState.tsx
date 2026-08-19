@@ -1,11 +1,11 @@
 // === Module 7497: DeviceState ===
 
 // Module 7497 (DeviceState)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _getDeviceState from "_getDeviceState" /* 7498 */;
 import ThermalState from "ThermalState" /* 7499 */;
 
-const result = set.fileFinishedImporting("modules/device/DeviceState.tsx");
+const result = obj132.fileFinishedImporting("modules/device/DeviceState.tsx");
 
 export const DeviceState = ThermalState.DeviceState;
 export const ThermalState = ThermalState.ThermalState;

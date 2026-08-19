@@ -5,13 +5,14 @@ import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import map from "map" /* 4097 */;
 import Text from "Text" /* 4734 */;
+import TableRowDivider from "TableRowDivider" /* 6287 */;
 import context from "context" /* 6290 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class TableRowGroupTitle {
   constructor(arg0) {
     ({ title, style, lineClamp } = global);
@@ -38,16 +39,14 @@ class TableRowGroupTitle {
   }
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flexShrink: 0 }, content: null, title: null, description: null, hasTrailingText: null, helperText: null };
-createCacheKey = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
+const createCacheKey = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: 8 };
 createCacheKey[3] = { marginBottom: 8 };
 createCacheKey[4] = { borderBottomLeftRadius: ThemesDefault.radii.none, borderBottomRightRadius: ThemesDefault.radii.none };
 createCacheKey[5] = { marginTop: 8 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderBottomLeftRadius: ThemesDefault.radii.none, borderBottomRightRadius: ThemesDefault.radii.none };
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
 
 export { TableRowGroupTitle };
 export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
@@ -59,7 +58,6 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   if (str === undefined) {
     str = "none";
   }
-  importDefault = undefined;
   const tmp = callback();
   let obj = map;
   importDefault = false;
@@ -69,15 +67,13 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     if (null == arg0) {
       return null;
     } else if (c1) {
-      let obj = { children: null };
-      obj = { adjustSpacingForIcon: null };
+      const obj = { adjustSpacingForIcon: null };
       obj[0] = closure_0;
-      const items = [closure_1_5(closure_1_0(closure_1_2[8]).TableRowDivider, obj), arg0];
+      const items = [closure_1_5(TableRowDivider.TableRowDivider, obj), arg0];
       obj[0] = items;
-      let tmp2 = closure_1_7(closure_1_6, obj);
+      const tmp2 = closure_1_7(closure_1_6, obj);
     } else {
       c1 = true;
-      tmp2 = arg0;
     }
   });
   obj = { style: tmp.container, children: null };
@@ -85,7 +81,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   if (tmp6Result) {
     obj = { title: null };
     obj[0] = title;
-    tmp6Result = tmp6(TableRowGroupTitle, obj);
+    tmp6Result = callback(TableRowGroupTitle, obj);
   }
   let items = [tmp6Result, , , ];
   tmp6Result = null != description;
@@ -93,7 +89,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     obj1 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
     obj1[2] = tmp.description;
     obj1[3] = description;
-    tmp6Result = tmp6(tmp2(4734).Text, obj1);
+    tmp6Result = callback(Text.Text, obj1);
   }
   items[1] = tmp6Result;
   const items1 = [tmp.content, ];
@@ -102,16 +98,16 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
     hasTrailingText = tmp.hasTrailingText;
   }
   items1[1] = hasTrailingText;
-  items[2] = closure_5(View, { style: items1, accessibilityRole: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: mapped });
+  items[2] = callback(View, { style: items1, accessibilityRole: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: mapped });
   let tmp6Result1 = null != helperText;
   if (tmp6Result1) {
     const obj2 = { variant: null, color: "text-muted", style: null, children: null };
     obj2[0] = token;
     obj2[2] = tmp.helperText;
     obj2[3] = helperText;
-    tmp6Result1 = tmp6(tmp2(4734).Text, obj2);
+    tmp6Result1 = callback(Text.Text, obj2);
   }
   items[3] = tmp6Result1;
   obj[1] = items;
-  return closure_5(context.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
+  return callback(context.TableRowGroupContext.Provider, { value: true, children: callback2(View, obj) });
 };

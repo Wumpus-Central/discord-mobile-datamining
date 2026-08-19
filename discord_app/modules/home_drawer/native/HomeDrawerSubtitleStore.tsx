@@ -1,7 +1,7 @@
 // === Module 15290: keys ===
 
 // Module 15290 (keys)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import keys from "keys" /* 644 */;
 
 let c0 = null;
@@ -20,7 +20,7 @@ const obj = keys.create((arg0, arg1) => {
         if ("voice" === callback().currentType) {
           str = "activity";
         }
-        closure_0({ currentType: str });
+        callback({ currentType: str });
       }, 3500);
     },
     stopTimer() {
@@ -33,6 +33,6 @@ const obj = keys.create((arg0, arg1) => {
     }
   };
 });
-const result = set.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
+const result = obj132.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
 
 export default obj;

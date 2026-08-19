@@ -4,14 +4,14 @@
 import ThemesDefault from "Themes" /* 712 */;
 import _modDef4115 from "module_4115" /* 4115 */;
 import getSavedMessagesForTypeDefault from "getSavedMessagesForType" /* 12721 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getTimeSafe" /* 10850 */;
+import getTimeSafe from "getTimeSafe" /* 10850 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function keyExtractor(saveData) {
   return saveData.saveData.messageId;
 }
@@ -64,7 +64,7 @@ function ForLaterPage(type) {
   first = tmp17[0];
   importDefault = tmp17[1];
   const effect = importAllResult.useEffect(() => {
-    const interval = setInterval(() => callback(new Date()), callback(closure_1_2[17]).Millis.MINUTE);
+    const interval = setInterval(() => callback(new Date()), callback(dependencyMap[17]).Millis.MINUTE);
     return () => {
       clearInterval(closure_0);
     };
@@ -95,23 +95,20 @@ function ForLaterPage(type) {
       const obj6 = { isReminder: null, isAtLimit: null };
       obj6[0] = tmp5;
       obj6[1] = tmp8;
-      tmp25Result = tmp25(tmp2(12734), obj6);
+      tmp25Result = callback2(tmp2(12734), obj6);
     }
     items2[1] = tmp25Result;
     obj3[1] = items2;
-    tmp24Result = closure_8(tmp4(7139).AnalyticsLocationProvider, obj3);
-    const tmp24 = closure_8;
-    tmp25 = callback2;
+    tmp24Result = callback(tmp4(7139).AnalyticsLocationProvider, obj3);
   }
   return tmp24Result;
 }
 let c4 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const ForLaterScreen = "ForLaterScreen";
-let obj = { container: null, headerBorder: null, cardContainer: null, listContainer: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 };
 obj[0] = obj;
-createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+const createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[1] = createCacheKey;
 obj[2] = { paddingHorizontal: 16, paddingVertical: 8 };
 obj[3] = { flex: 1 };
@@ -128,7 +125,8 @@ const memoResult = importAllResult.memo((type) => {
     if (nativeEvent.nativeEvent.contentOffset.y > 8) {
       num = 1;
     }
-    const result = sharedValue.set(sharedValue(closure_1_2[8]).withSpring(num));
+    const result = sharedValue.set(sharedValue(dependencyMap[8]).withSpring(num));
+    const obj = sharedValue(dependencyMap[8]);
   }, items);
   const fn = function s() {
     return { opacity: sharedValue.get() };
@@ -143,6 +141,6 @@ const memoResult = importAllResult.memo((type) => {
   obj[1] = items2;
   return callback3(View, obj);
 });
-let result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/saved_messages/native/ForLaterScreen.tsx");
 
 export default memoResult;

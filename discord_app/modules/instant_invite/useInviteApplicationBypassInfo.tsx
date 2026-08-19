@@ -1,12 +1,12 @@
 // === Module 17017: useInviteApplicationBypassInfo ===
 
 // Module 17017 (useInviteApplicationBypassInfo)
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ GuildFeatures: c3, Permissions: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/instant_invite/useInviteApplicationBypassInfo.tsx");
+const result = require("obj132").fileFinishedImporting("modules/instant_invite/useInviteApplicationBypassInfo.tsx");
 
 export const useInviteApplicationBypassInfo = function useInviteApplicationBypassInfo(guild) {
   const _require = guild;

@@ -1,16 +1,15 @@
 // === Module 16193: useSimpleGuildSize ===
 
 // Module 16193 (useSimpleGuildSize)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");
+const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");
 
 export default function useSimpleGuildSize(size) {
   size = size.size;
   const style = size.style;
-  let num;
   let memo;
-  num = 48;
+  let num = 48;
   if (null != size) {
     num = size;
   }

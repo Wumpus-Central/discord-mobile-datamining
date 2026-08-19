@@ -4,13 +4,14 @@
 import getAvatarURL from "getAvatarURL" /* 1435 */;
 import getSoundmojiRenderingExperiment from "getSoundmojiRenderingExperiment" /* 6821 */;
 import isSoundValidDefault from "isSoundValid" /* 6822 */;
+import getSoundFromSoundsDefault from "getSoundFromSounds" /* 6823 */;
 import getSoundStringDefault from "getSoundString" /* 6825 */;
-import closure_3 from "handleSoundCreateOrUpdate" /* 4780 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
+import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate" /* 4780 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 import { MessageStates } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");
 
 export default function getSoundmojiASTFromString(soundId, guildId) {
   ({ channelId, messageId, soundboardSounds } = guildId);
@@ -21,7 +22,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     const tmp9 = isSoundValidDefault(soundById, guildId.guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = tmp8(6823)(channelId, messageId, tmp2, soundboardSounds);
+        const tmp16 = getSoundFromSoundsDefault(channelId, messageId, tmp2, soundboardSounds);
         tmp5 = tmp16;
         if (tmp9) {
           tmp5 = tmp16;
@@ -46,7 +47,6 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
       }
       tmp5 = tmp11;
     }
-    tmp8 = importDefault;
   }
   if (null == tmp5) {
     obj = { type: "text", content: null };
@@ -93,7 +93,6 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
     obj[8] = emojiURL;
     return obj;
   }
-  const tmp3 = require;
 };
 export const soundmojiRawFormatRegex = /^<sound:(\d+):(\d+)>/;
 export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {
@@ -102,7 +101,7 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
     const tmp9 = isSoundValidDefault(soundById, guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = tmp8(6823)(channelId, messageId, soundId, arg4);
+        const tmp16 = getSoundFromSoundsDefault(channelId, messageId, soundId, arg4);
         if (tmp9) {
           if (null == tmp16) {
             const message = store2.getMessage(channelId, messageId);
@@ -125,6 +124,6 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
       }
       return tmp11;
     }
-    tmp8 = importDefault;
   }
+  obj = getSoundmojiRenderingExperiment;
 };

@@ -1,7 +1,7 @@
 // === Module 16826: MAX_SUBCATEGORIES ===
 
 // Module 16826 (MAX_SUBCATEGORIES)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
 const obj = {
@@ -22,7 +22,7 @@ const obj = {
     return intl.string(getSystemLocale.t.NASFnq);
   }
 };
-const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
 
 export const MAX_SUBCATEGORIES = 5;
 export const MAX_KEYWORDS = 10;

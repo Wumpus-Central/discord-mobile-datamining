@@ -1,14 +1,14 @@
 // === Module 16837: batchChannelUpdate ===
 
 // Module 16837 (batchChannelUpdate)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
 function batchChannelUpdate(closure_1_0) {
   if (arg1.length > 0) {
-    function onEnd() {
+    function onEnd(result) {
       return callback(table[1]).dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS" });
     }
     let obj = dispatcherDefault;
@@ -23,7 +23,7 @@ function batchChannelUpdate(closure_1_0) {
 }
 function batchRoleUpdate(closure_1_0) {
   if (arg1.length > 0) {
-    function onEnd() {
+    function onEnd(result) {
       return callback(table[1]).dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS" });
     }
     let obj = dispatcherDefault;
@@ -37,7 +37,7 @@ function batchRoleUpdate(closure_1_0) {
   }
 }
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("actions/native/GuildActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/native/GuildActionCreators.tsx");
 
 export default { batchChannelUpdate, batchRoleUpdate };
 export { batchChannelUpdate };

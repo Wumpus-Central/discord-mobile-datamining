@@ -1,7 +1,7 @@
 // === Module 5438: SafetyHubView ===
 
 // Module 5438 (SafetyHubView)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 import ME from "ME" /* 676 */;
 
@@ -9,7 +9,6 @@ const AnalyticsSections = ME.AnalyticsSections;
 let obj = { SETTINGS: "SETTINGS", ACCOUNT_STANDING: "ACCOUNT_STANDING", GUILD_SETTINGS: "GUILD_SETTINGS", ENCRYPTION: "ENCRYPTION", CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL", DATA_PRIVACY: "DATA_PRIVACY" };
 const items = [, , ];
 ({ SETTINGS: arr[0], ACCOUNT_STANDING: arr[1], ENCRYPTION: arr[2] } = obj);
-obj = { SPEED_BUMP: AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP, COLLECT_SIGNAL: AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL, CONFIRM_SUBMISSION: AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION, REQUEST_SENT: AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT, THANKS: AnalyticsSections.APPEAL_INGESTION_THANKS, SPAM: AnalyticsSections.APPEAL_INGESTION_SPAM };
 obj = { DIDNT_VIOLATE_POLICY: 0, [0]: "DIDNT_VIOLATE_POLICY", TOO_STRICT_UNFAIR: 1, [1]: "TOO_STRICT_UNFAIR", DONT_AGREE_PENALTY: 2, [2]: "DONT_AGREE_PENALTY", SOMETHING_ELSE: 3, [3]: "SOMETHING_ELSE" };
 const items1 = [, , , ];
 ({ DIDNT_VIOLATE_POLICY: arr2[0], TOO_STRICT_UNFAIR: arr2[1], DONT_AGREE_PENALTY: arr2[2], SOMETHING_ELSE: arr2[3] } = obj);
@@ -17,7 +16,7 @@ const obj1 = { impression_group: null };
 const frozen = Object.freeze(obj);
 obj1[0] = encodeProperties.ImpressionGroups.APPEAL_INGESTION;
 const obj2 = { SPEED_BUMP: "speed-bump", COLLECT_SIGNAL: "collect-signal", CONFIRM_SUBMISSION: "confirm-submission", REQUEST_SENT: "request-sent", THANKS: "thanks" };
-const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/safety_hub/SafetyHubConstants.tsx");
 const prototype = function SafetyHubLinks() {
   return Object.create(new.target.prototype);
 }.prototype;

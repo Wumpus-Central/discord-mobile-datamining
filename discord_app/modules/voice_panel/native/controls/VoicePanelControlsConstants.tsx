@@ -1,9 +1,9 @@
 // === Module 11438: VoicePanelControlsModes ===
 
 // Module 11438 (VoicePanelControlsModes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx");
 
 export const VoicePanelControlsModes = { FLOATING_DEFAULT: "floating-default", DRAWER: "drawer", HIDDEN: "hidden", RESET: "reset" };
 export const CONTROLS_HEIGHT_PTT = 112;

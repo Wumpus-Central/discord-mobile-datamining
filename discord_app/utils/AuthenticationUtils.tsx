@@ -1,11 +1,11 @@
 // === Module 1371: getToken ===
 
 // Module 1371 (getToken)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
 import registerAsset from "registerAsset" /* 1372 */;
 
-const result = set.fileFinishedImporting("utils/AuthenticationUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/AuthenticationUtils.tsx");
 
 export const getToken = function getToken() {
   return setSecondaryTokenAll.getToken();

@@ -1,8 +1,8 @@
 // === Module 15621: SpecialGuildsNodeIds ===
 
 // Module 15621 (SpecialGuildsNodeIds)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guilds_bar/GuildsBarTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/guilds_bar/GuildsBarTypes.tsx");
 
 export const SpecialGuildsNodeIds = { PENDING_JOIN_REQUESTS_FOLDER: 1, [1]: "PENDING_JOIN_REQUESTS_FOLDER" };

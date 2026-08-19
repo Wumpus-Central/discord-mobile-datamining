@@ -2,12 +2,12 @@
 
 // Module 7400 (getOrders)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { OrderStatus } from "CustomCheckoutFlow" /* 4357 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
-function getOrders() {
+const require = fn;
+function getOrders(arg0) {
   const self = this;
   const apply = _getOrders.apply;
   if (typeof apply === "unknown") {
@@ -56,40 +56,40 @@ function _getOrders() {
               c4 = 1;
               let status;
               if (callback != null) {
-                status = tmp40.status;
+                status = callback.status;
               }
               obj1 = {};
               if (null != status) {
-                const items = [tmp40.status];
+                const items = [callback.status];
                 obj1.statuses = items;
               }
               let skuId;
               if (callback != null) {
-                skuId = tmp40.skuId;
+                skuId = callback.skuId;
               }
               if (null != skuId) {
-                obj1.sku_id = tmp40.skuId;
+                obj1.sku_id = callback.skuId;
               }
               let createdAfter;
               if (callback != null) {
-                createdAfter = tmp40.createdAfter;
+                createdAfter = callback.createdAfter;
               }
               if (null != createdAfter) {
-                obj1.created_after = tmp40.createdAfter;
+                obj1.created_after = callback.createdAfter;
               }
               let isGift;
               if (callback != null) {
-                isGift = tmp40.isGift;
+                isGift = callback.isGift;
               }
               if (null != isGift) {
-                obj1.is_gift = tmp40.isGift;
+                obj1.is_gift = callback.isGift;
               }
               let paymentGateway;
               if (callback != null) {
-                paymentGateway = tmp40.paymentGateway;
+                paymentGateway = callback.paymentGateway;
               }
               if (null != paymentGateway) {
-                obj1.payment_gateway = tmp40.paymentGateway;
+                obj1.payment_gateway = callback.paymentGateway;
               }
               const HTTP = callback(closure_1_2[4]).HTTP;
               const obj2 = { url: null, query: null, rejectWithError: true };
@@ -211,7 +211,6 @@ function _createOrder() {
               constants = undefined;
               logger = undefined;
               c7 = undefined;
-              let dispatchResult = callback;
               ({ orderLineItems: c0, paymentGateway: c1, recipientUserId: c2, isGift: c3, giftInfo: c4, subscriptionFacet: c5, externalGatewayFacet: c6, countryCode: c7 } = callback);
               let obj2;
               let obj3;
@@ -230,12 +229,8 @@ function _createOrder() {
               obj1[0] = body;
               return obj1;
             } else {
-              dispatchResult = callback2;
-              dispatchResult = dependencyMap;
-              dispatchResult = callback2(709).dispatch({ type: "ORDER_CREATE_START" });
-              dispatchResult = callback2;
+              callback2(709).dispatch({ type: "ORDER_CREATE_START" });
               c4 = 1;
-              dispatchResult = c3;
               if (c3) {
                 obj2 = { recipient_id: null };
                 obj2[0] = dependencyMap;
@@ -387,7 +382,7 @@ function _createOrder() {
             logger = tmp2;
             throw tmp78;
           } else {
-            constants = dispatchResult;
+            constants = tmp;
           }
         }
       }
@@ -1147,10 +1142,10 @@ function _cancelSigningAndDiscardOrder() {
       if (1 === tmp7) {
         c4 = 0;
         closure_1 = closure_3;
-        let obj3 = callback(table[5]);
+        callback(table[5]);
         const obj2 = { tags: null, extra: null };
         obj2[0] = { source: "OrderActionCreators_cancelSigningAndDiscardOrder" };
-        obj3 = { orderId: null };
+        const obj3 = { orderId: null };
         obj3[0] = callback;
         obj2[1] = obj3;
         const result = obj3.captureBillingException(closure_1, obj2);
@@ -1498,7 +1493,7 @@ function _cancelOrderSigning() {
               const value = closure_1_20.get(closure_0);
               if (null != value) {
                 obj1 = { orderId: null };
-                obj1[0] = tmp16;
+                obj1[0] = closure_0;
                 closure_1_6.info("cancel signing already in progress for order, awaiting existing promise", obj1);
                 c2 = 1;
                 c1 = 1;
@@ -1654,14 +1649,13 @@ function _cancelOrderSigning() {
                     }
                   }
                 })();
-                let result = obj10.set(tmp16, tmp6);
+                let result = closure_1_20.set(closure_0, tmp6);
                 c2 = 2;
                 c1 = 1;
                 let obj3 = { value: null, done: false };
                 obj3[0] = tmp6;
                 return obj3;
               }
-              obj10 = closure_1_20;
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {
@@ -1712,7 +1706,7 @@ const tmp2 = new timestampDefault("OrderActionCreators");
 let closure_6 = tmp2;
 let c11 = null;
 const map = new Map();
-let result = require("set").fileFinishedImporting("modules/payments/native/OrderActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/payments/native/OrderActionCreators.tsx");
 
 export const logger = tmp2;
 export const DRAFT_ORDER_LOOKBACK_DAYS = 3;

@@ -3,23 +3,23 @@
 // Module 15211 (headerTitle)
 import noopAll from "noop" /* 19 */;
 import encodeProperties from "encodeProperties" /* 503 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isRateLimited" /* 14119 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import isRateLimited from "isRateLimited" /* 14119 */;
 import { usePromoEmailConsentStore } from "setPromoEmailConsentState" /* 5257 */;
 import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
 import { AuthStates } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function headerTitle() {
   return null;
 }
 function getNextAuthState(closure_0) {
   const index = items.indexOf(closure_0);
   if (-1 !== index) {
-    if (index !== arr.length - 1) {
-      return arr[index + 1];
+    if (index !== items.length - 1) {
+      return items[index + 1];
     }
   }
 }
@@ -62,17 +62,17 @@ function _handleNextOrSubmitRegistration() {
               const tmp23 = closure_1_18(callback);
               if (null != tmp23) {
                 obj1 = { step: null, toStep: null, actionType: null };
-                obj1[0] = closure_1_10(tmp18);
+                obj1[0] = closure_1_10(callback);
                 obj1[1] = closure_1_10(tmp23);
                 obj1[2] = closure_1_13.SUCCESS;
-                tmp19(obj1);
+                table(obj1);
                 const StackActions = callback(table[24]).StackActions;
-                obj6.dispatch(StackActions.push(tmp23));
+                closure_1.dispatch(StackActions.push(tmp23));
               } else {
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_20(tmp18, obj6, tmp19);
+                obj2[0] = closure_1_20(callback, closure_1, table);
                 return obj2;
               }
             }
@@ -142,7 +142,6 @@ function _handleRegistrationSubmit() {
       let obj3 = callback(15223);
       yield obj3.registerFull(obj1);
       if (1 === tmp7) {
-        v0 = 0;
         v0 = closure_5;
         v02(false);
         if (v0 instanceof callback(4273).APIError) {
@@ -192,14 +191,13 @@ noopAll;
 ({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: unpackModuleId, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationTransitionActionTypes);
 const items = [, , , , ];
 ({ WELCOME: arr[0], REGISTER_IDENTITY: arr[1], REGISTER_DISPLAY_NAME: arr[2], REGISTER_ACCOUNT_INFORMATION: arr[3], AGE_GATE: arr[4] } = AuthStates);
-let result = require("set").fileFinishedImporting("modules/auth/native/RegistrationStepsUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/auth/native/RegistrationStepsUtils.tsx");
 
 export function getRegistrationSteps() {
   return items;
 }
 export const getAllAuthScreens = function getAllAuthScreens() {
-  let obj = {};
-  obj = {
+  let obj = {
     ignoreKeyboard: true,
     fullscreen: true,
     impressionName: encodeProperties.ImpressionNames.USER_WELCOME,
@@ -231,7 +229,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
         tmp6 = callback3(tmp5);
       }
       obj.destinationStep = tmp6;
-      return closure_15(callback(15220).BackButtonWithTracking, obj);
+      return callback(callback(15220).BackButtonWithTracking, obj);
     },
     render() {
       return callback4(callback(15221).RegisterIdentity, {});
@@ -239,7 +237,6 @@ export const getAllAuthScreens = function getAllAuthScreens() {
   };
   obj[AuthStates.REGISTER_IDENTITY] = obj;
   const obj2 = { ignoreKeyboard: true, fullscreen: true, impressionName: encodeProperties.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
-  obj1 = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.IDENTITY };
   obj2[3] = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
   obj2[4] = headerTitle;
   obj2[5] = function headerLeft(arg0) {
@@ -257,14 +254,13 @@ export const getAllAuthScreens = function getAllAuthScreens() {
       tmp6 = callback3(tmp5);
     }
     obj.destinationStep = tmp6;
-    return closure_15(callback(15220).BackButtonWithTracking, obj);
+    return callback(callback(15220).BackButtonWithTracking, obj);
   };
   obj2[6] = function render() {
     return callback4(callback2(15233), {});
   };
   obj[AuthStates.REGISTER_DISPLAY_NAME] = obj2;
   const obj4 = { ignoreKeyboard: true, fullscreen: true, impressionName: encodeProperties.ImpressionNames.USER_REGISTRATION, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
-  const obj3 = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.DISPLAY_NAME };
   obj4[3] = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
   obj4[4] = headerTitle;
   obj4[5] = function headerLeft(arg0) {
@@ -282,14 +278,13 @@ export const getAllAuthScreens = function getAllAuthScreens() {
       tmp6 = callback3(tmp5);
     }
     obj.destinationStep = tmp6;
-    return closure_15(callback(15220).BackButtonWithTracking, obj);
+    return callback(callback(15220).BackButtonWithTracking, obj);
   };
   obj4[6] = function render() {
     return callback4(callback2(15234), {});
   };
   obj[AuthStates.REGISTER_ACCOUNT_INFORMATION] = obj4;
   const obj6 = { ignoreKeyboard: true, impressionName: encodeProperties.ImpressionNames.USER_VERIFY_PHONE, impressionProperties: null, headerTitle: null, headerLeft: null, render: null };
-  const obj5 = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW, step: constants.ACCOUNT_INFORMATION };
   obj6[2] = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW };
   obj6[3] = headerTitle;
   obj6[4] = function headerLeft(arg0) {
@@ -304,7 +299,6 @@ export const getAllAuthScreens = function getAllAuthScreens() {
   };
   obj[AuthStates.VERIFY_PHONE] = obj6;
   const obj8 = { ignoreKeyboard: true, fullscreen: true, impressionName: encodeProperties.ImpressionNames.USER_LOGIN, impressionProperties: null, headerTitle: null, render: null };
-  const obj7 = { impression_group: encodeProperties.ImpressionGroups.USER_REGISTRATION_FLOW };
   obj8[3] = { impression_group: encodeProperties.ImpressionGroups.USER_LOGIN_FLOW };
   obj8[4] = headerTitle;
   obj8[5] = function render() {
@@ -352,7 +346,6 @@ export const getAllAuthScreens = function getAllAuthScreens() {
       return callback4(callback2(15247), {});
     }
   };
-  const obj9 = { impression_group: encodeProperties.ImpressionGroups.USER_LOGIN_FLOW };
   obj[AuthStates.AGE_GATE] = {
     ignoreKeyboard: true,
     fullscreen: true,
@@ -373,33 +366,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
         tmp6 = callback3(tmp5);
       }
       obj.destinationStep = tmp6;
-      return closure_15(callback(15220).BackButtonWithTracking, obj);
-    },
-    render() {
-      return callback4(callback2(15248), {});
-    }
-  };
-  const obj10 = {
-    ignoreKeyboard: true,
-    fullscreen: true,
-    impressionName: encodeProperties.ImpressionNames.USER_AGE_GATE,
-    headerTitle,
-    headerLeft(arg0) {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      const index = closure_16.indexOf(constants2.AGE_GATE);
-      let tmp5;
-      if (-1 !== index) {
-        if (0 !== index) {
-          tmp5 = closure_16[index - 1];
-        }
-      }
-      let tmp6;
-      if (null != tmp5) {
-        tmp6 = callback3(tmp5);
-      }
-      obj.destinationStep = tmp6;
-      return closure_15(callback(15220).BackButtonWithTracking, obj);
+      return callback(callback(15220).BackButtonWithTracking, obj);
     },
     render() {
       return callback4(callback2(15248), {});
@@ -447,20 +414,19 @@ export const getPreviousRegistrationTransitionStep = function getPreviousRegistr
   let tmp3;
   if (-1 !== index) {
     if (0 !== index) {
-      tmp3 = tmp[index - 1];
+      tmp3 = items[index - 1];
     }
   }
   if (null != tmp3) {
     return callback2(tmp3);
   }
-  tmp = items;
 };
 export const getNextRegistrationTransitionStep = function getNextRegistrationTransitionStep(closure_0) {
   const index = items.indexOf(closure_0);
   let tmp2;
   if (-1 !== index) {
-    if (index !== arr.length - 1) {
-      tmp2 = arr[index + 1];
+    if (index !== items.length - 1) {
+      tmp2 = items[index + 1];
     }
   }
   if (null != tmp2) {

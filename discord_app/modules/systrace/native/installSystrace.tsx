@@ -1,11 +1,12 @@
 // === Module 13767: installSystrace ===
 
 // Module 13767 (installSystrace)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import obj1322 from "obj132" /* 500 */;
 
 const Systrace = get_ActivityIndicator.Systrace;
-const result = set.fileFinishedImporting("modules/systrace/native/installSystrace.tsx");
+const result = obj132.fileFinishedImporting("modules/systrace/native/installSystrace.tsx");
 
 export const installSystrace = function installSystrace() {
   if (obj.isAndroid()) {
@@ -72,4 +73,5 @@ export const installSystrace = function installSystrace() {
       }
     };
   }
+  obj = obj1322;
 };

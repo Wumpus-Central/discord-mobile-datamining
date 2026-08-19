@@ -1,9 +1,9 @@
 // === Module 4028: doesThreadMembersActionAffectMe ===
 
 // Module 4028 (doesThreadMembersActionAffectMe)
-import closure_0 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 
-const result = require("set").fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
 
 export const doesThreadMembersActionAffectMe = function doesThreadMembersActionAffectMe(removedMemberIds) {
   id = id.getId();
@@ -19,7 +19,7 @@ export const doesThreadMembersActionAffectMe = function doesThreadMembersActionA
       const addedMembers = removedMemberIds.addedMembers;
       let someResult;
       if (addedMembers != null) {
-        someResult = addedMembers.some((userId) => userId.userId === id);
+        someResult = addedMembers.some((item, index) => item.userId === id);
       }
       tmp5 = someResult;
     }

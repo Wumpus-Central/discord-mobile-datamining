@@ -1,18 +1,20 @@
 // === Module 7417: useShouldShowPremiumTrialUserSettingsAvatarBadge ===
 
 // Module 7417 (useShouldShowPremiumTrialUserSettingsAvatarBadge)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
 import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
+import apexExperiment from "apexExperiment" /* 7612 */;
 
 let closure_2 = GuildFeatures.PremiumSubscriptionSKUToPremiumType;
-let result = set.fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
 
 export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
-  const obj = usePremiumTrialOffer;
   let tmp3 = null != premiumTrialOffer;
   const result = UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
   if (tmp3) {
@@ -48,18 +50,18 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    let tmpResult = tmp(7612);
+    let tmpResult = apexExperiment;
     obj = { location: null };
     obj[0] = user_profile_premium_upsell_card;
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj)) {
-      tmpResult = tmp(4039);
+      tmpResult = getPremiumPlanItem;
       obj = { intervalType: null, intervalCount: null };
       ({ interval: obj3[0], intervalCount: obj3[1] } = subscriptionTrial);
       const result = tmpResult.formatIntervalDuration(obj);
-      const intl = tmp(1236).intl;
+      const intl = getSystemLocale.intl;
       obj1 = { duration: null };
       obj1[0] = result;
-      return intl.formatToPlainString(tmp(1236).t["6xpY54"], obj1);
+      return intl.formatToPlainString(getSystemLocale.t["6xpY54"], obj1);
     } else {
       return null;
     }

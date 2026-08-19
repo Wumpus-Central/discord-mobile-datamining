@@ -1,10 +1,10 @@
 // === Module 12901: useScheduledForcedUpdate ===
 
 // Module 12901 (useScheduledForcedUpdate)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/hooks/useScheduledForcedUpdate.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/hooks/useScheduledForcedUpdate.tsx");
 
 export default function useScheduledForcedUpdate(delay) {
   delay = delay.delay;
@@ -12,8 +12,7 @@ export default function useScheduledForcedUpdate(delay) {
   if (flag === undefined) {
     flag = false;
   }
-  let forceUpdate;
-  forceUpdate = delay(flag[1]).useForceUpdate();
+  const forceUpdate = delay(flag[1]).useForceUpdate();
   const items = [delay, flag, forceUpdate];
   const effect = forceUpdate.useEffect(() => {
     if (timeout > 0) {

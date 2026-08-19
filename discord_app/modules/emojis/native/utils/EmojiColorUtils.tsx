@@ -2,7 +2,7 @@
 
 // Module 15341 (_getEmojiCacheKey)
 import privDefault from "priv" /* 1405 */;
-import closure_0 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
 function _getEmojiCacheKey(name) {
@@ -235,7 +235,7 @@ function _getEmojiDominantColors() {
 }
 let closure_2 = new privDefault(100);
 const tmp2 = new privDefault(100);
-let result = require("set").fileFinishedImporting("modules/emojis/native/utils/EmojiColorUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/emojis/native/utils/EmojiColorUtils.tsx");
 
 export const getEmojiDominantColors = function getEmojiDominantColors(arg0) {
   const self = this;

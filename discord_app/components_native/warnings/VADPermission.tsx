@@ -6,7 +6,7 @@ import componentDidMountDefault from "componentDidMount" /* 4763 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 const Component = importAllResult.Component;
 class VADPermission extends Component {
   constructor() {
@@ -26,6 +26,6 @@ VADPermission.prototype["render"] = function render() {
   obj[2] = this.close;
   return jsx(componentDidMountDefault, { title: null, body: null, onConfirm: null });
 };
-const result = require("set").fileFinishedImporting("components_native/warnings/VADPermission.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/warnings/VADPermission.tsx");
 
 export default VADPermission;

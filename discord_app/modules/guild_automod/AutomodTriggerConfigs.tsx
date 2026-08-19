@@ -3,16 +3,13 @@
 // Module 16764 (AutomodTriggerType)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isInMentionRaidExperiment from "isInMentionRaidExperiment" /* 10035 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import AutomodEventType from "AutomodEventType" /* 11042 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = AutomodEventType);
 let closure_4 = AutomodEventType.MENTION_SPAM_LIMIT_DEFAULT;
-let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
-obj = {};
-obj = {
+let obj = {
   getDefaultRuleName() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.ffR2cM);
@@ -20,12 +17,11 @@ obj = {
   type: AutomodTriggerType.SPAM_LINK,
   eventType: AutomodEventType.MESSAGE_SEND,
   perGuildMaxCount: 0,
-  availableActionTypes: null,
+  availableActionTypes: new Set(),
   flags: null,
   defaultActionTypes: null
 };
-let set = new Set();
-obj[4] = set;
+const set = new Set();
 obj[5] = new Set();
 const set1 = new Set();
 obj[6] = new Set();
@@ -165,7 +161,8 @@ const obj7 = { MEMBERS: "members", CONTENT: "content" };
 const obj8 = { [obj7.MEMBERS]: items12, [obj7.CONTENT]: items13 };
 items12 = [obj[AutomodTriggerType.USER_PROFILE]];
 items13 = [obj[AutomodTriggerType.SERVER_POLICY], obj[AutomodTriggerType.MENTION_SPAM], obj[AutomodTriggerType.ML_SPAM], obj[AutomodTriggerType.DEFAULT_KEYWORD_LIST], obj[AutomodTriggerType.KEYWORD]];
-const result = set.fileFinishedImporting("modules/guild_automod/AutomodTriggerConfigs.tsx");
+const set20 = new Set();
+const result = require("obj132").fileFinishedImporting("modules/guild_automod/AutomodTriggerConfigs.tsx");
 
 export const AutomodTriggerConfigFlags = obj;
 export const triggerConfigs = obj;
@@ -181,12 +178,11 @@ export const getAvailableActionTypes = function getAvailableActionTypes(arg0) {
 export const validateRuleByTriggerConfigOrThrow = function validateRuleByTriggerConfigOrThrow(actions, arr) {
   ({ id: require, triggerType } = actions);
   actions = actions.actions;
-  closure_2 = undefined;
   closure_2 = tmp;
-  if (arr.filter((id) => {
-    let tmp = closure_0 !== id.id;
+  if (arr.filter((item, index) => {
+    let tmp = closure_0 !== item.id;
     if (tmp) {
-      tmp = id.triggerType === triggerType;
+      tmp = item.triggerType === triggerType;
     }
     return tmp;
   }).length > obj[triggerType].perGuildMaxCount) {
@@ -194,9 +190,9 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
     const _HermesInternal = HermesInternal;
     error = new Error("You have exceeded the maximum number of rules of type " + triggerType);
     throw error;
-  } else if (actions.some((type) => {
+  } else if (actions.some((item, index) => {
     availableActionTypes = availableActionTypes.availableActionTypes;
-    return !availableActionTypes.has(type.type);
+    return !availableActionTypes.has(item.type);
   })) {
     const _Error2 = Error;
     const error1 = new Error("You have provided an action that is not available for this trigger type");
@@ -211,25 +207,25 @@ export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) 
   isUserProfileRuleEnabled = isUserProfileRuleEnabled(16049).useIsUserProfileRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled];
   return React.useMemo(() => {
-    const keys = Object.keys(closure_1_7);
-    return keys.reduce((arg0, arg1) => {
-      const found = closure_1_7[arg1].filter((type) => {
-        let tmp2 = type.type !== closure_1_3.SERVER_POLICY;
+    const keys = Object.keys(obj8);
+    return keys.reduce((acc, item, index) => {
+      const found = closure_1_7[item].filter((item, index) => {
+        let tmp2 = item.type !== closure_1_3.SERVER_POLICY;
         if (tmp2) {
-          let tmp3 = type.type === tmp.USER_PROFILE;
+          let tmp3 = item.type === tmp.USER_PROFILE;
           if (tmp3) {
             tmp3 = !closure_0;
           }
           let tmp5 = !tmp3;
           if (!tmp3) {
-            tmp5 = type.perGuildMaxCount > 0;
+            tmp5 = item.perGuildMaxCount > 0;
           }
           tmp2 = tmp5;
         }
         return tmp2;
       });
-      arg0[arg1] = found.map((type) => type.type);
-      return arg0;
+      acc[item] = found.map((item, index) => item.type);
+      return acc;
     }, { [closure_1_6.MEMBERS]: [], [closure_1_6.CONTENT]: [] });
   }, items);
 };
@@ -241,15 +237,15 @@ export const getDefaultTriggerMetadataForTriggerType = function getDefaultTrigge
     obj[1] = [];
     return obj;
   } else {
-    if (tmp3.USER_PROFILE !== arg0) {
-      if (tmp3.KEYWORD !== arg0) {
-        if (tmp3.MENTION_SPAM === arg0) {
+    if (AutomodTriggerType.USER_PROFILE !== arg0) {
+      if (AutomodTriggerType.KEYWORD !== arg0) {
+        if (AutomodTriggerType.MENTION_SPAM === arg0) {
           obj = { mentionTotalLimit: null, mentionRaidProtectionEnabled: null };
           obj[0] = closure_4;
           obj[1] = tmp2;
           return obj;
-        } else if (tmp3.ML_SPAM !== arg0) {
-          const SERVER_POLICY = tmp3.SERVER_POLICY;
+        } else if (AutomodTriggerType.ML_SPAM !== arg0) {
+          const SERVER_POLICY = AutomodTriggerType.SERVER_POLICY;
         }
       }
     }

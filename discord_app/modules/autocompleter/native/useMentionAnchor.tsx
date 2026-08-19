@@ -1,12 +1,12 @@
 // === Module 11563: useMentionAnchor ===
 
 // Module 11563 (useMentionAnchor)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_4 = { kind: "idle" };
-const result = require("set").fileFinishedImporting("modules/autocompleter/native/useMentionAnchor.tsx");
+const result = require("obj132").fileFinishedImporting("modules/autocompleter/native/useMentionAnchor.tsx");
 
 export default function useMentionAnchor(c22) {
   const _require = arg2;
@@ -101,12 +101,6 @@ export default function useMentionAnchor(c22) {
             const obj2 = { kind: "pending", anchor: null, seenText: null };
             obj2[1] = anchor2;
             obj2[2] = c22;
-            let tmp12 = obj2;
-          } else {
-            tmp12 = anchor;
-            if (seenText !== c22) {
-              tmp12 = tmp;
-            }
           }
         }
       }
@@ -123,9 +117,6 @@ export default function useMentionAnchor(c22) {
         anchor = tmp10.anchor;
         tmp22 = anchor.anchor === anchor;
       }
-      let tmp21 = tmp22;
-    } else {
-      tmp21 = "pending" === tmp10.kind && anchor.anchor === tmp10.anchor && anchor.seenText === tmp10.seenText;
     }
   }
   if (!tmp19) {

@@ -1,10 +1,10 @@
 // === Module 8779: isChangelogChannel ===
 
 // Module 8779 (isChangelogChannel)
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { SYSTEM_UPDATES_USER_ID } from "CHANGELOG_MODAL_KEY" /* 1978 */;
 
-const result = require("set").fileFinishedImporting("modules/changelog/utils/isChangelogChannel.tsx");
+const result = require("obj132").fileFinishedImporting("modules/changelog/utils/isChangelogChannel.tsx");
 
 export default function isChangelogChannel(arg0) {
   let tmp = null != arg0;

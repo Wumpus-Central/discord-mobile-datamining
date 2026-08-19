@@ -1,20 +1,19 @@
 // === Module 13934: RootThemeContextProvider ===
 
 // Module 13934 (RootThemeContextProvider)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "handleThemeChange" /* 1302 */;
+import noop from "noop" /* 19 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import handleThemeChange from "handleThemeChange" /* 1302 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/themes/RootThemeContextProvider.native.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/themes/RootThemeContextProvider.native.tsx");
 
 export const RootThemeContextProvider = function RootThemeContextProvider(children) {
   let enabled;
   let chatInputFloating;
   let chatInputLegacySendButton;
-  let manaTypeConsolidationExperiment;
   let obj = enabled(chatInputLegacySendButton[5]);
   let items = [closure_4, closure_5];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ saturation: closure_4.saturation, contrast: closure_4.contrast, theme: theme.theme }));
@@ -25,7 +24,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   chatInputFloating = mobileVisualRefreshConfig.chatInputFloating;
   chatInputLegacySendButton = mobileVisualRefreshConfig.chatInputLegacySendButton;
   const obj2 = enabled(chatInputLegacySendButton[7]);
-  manaTypeConsolidationExperiment = enabled(chatInputLegacySendButton[8]).useManaTypeConsolidationExperiment("RootThemeContextProvider");
+  const manaTypeConsolidationExperiment = enabled(chatInputLegacySendButton[8]).useManaTypeConsolidationExperiment("RootThemeContextProvider");
   const obj3 = enabled(chatInputLegacySendButton[8]);
   const items1 = [enabled, chatInputFloating, chatInputLegacySendButton, manaTypeConsolidationExperiment];
   const plainTextExperiment = enabled(chatInputLegacySendButton[9]).usePlainTextExperiment("RootThemeContextProvider");
@@ -63,4 +62,5 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
     setThemeFlagResult1 = tmp(tmp2[10]).setThemeFlag(0, tmp(tmp2[10]).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
     const tmpResult2 = tmp(tmp2[10]);
   }
+  const obj4 = enabled(chatInputLegacySendButton[9]);
 };

@@ -3,13 +3,13 @@
 // Module 16275 (trackActivityThermalStateNoticeShown)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "participantFromServer" /* 1390 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
 
 export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();

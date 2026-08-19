@@ -6,9 +6,9 @@ import ThemesDefault from "Themes" /* 712 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6933 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
 
 export default function RowCheckmark(selected) {
   let tmp = null;

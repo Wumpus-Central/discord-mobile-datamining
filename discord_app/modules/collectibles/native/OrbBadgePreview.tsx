@@ -10,18 +10,16 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_5 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
 
 export const OrbBadgePreview = function OrbBadgePreview() {
-  let obj = useCurrentUser;
-  obj = { style: callback().container, children: null };
+  let obj = { style: callback().container, children: null };
   const currentUser = obj.useCurrentUser();
   obj = { compact: true, user: currentUser, additionalBadges: null, accessibilityLabel: null };
   const tmp = callback();
-  const tmp3 = filterLayerDefault;
   const items = [hasAtLeastOneGPlaySynced.createOrbProfileBadge()];
   obj[2] = items;
   const intl = getSystemLocale.intl;

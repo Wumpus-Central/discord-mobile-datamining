@@ -4,28 +4,25 @@
 import noopAll from "noop" /* 19 */;
 import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 15400 */;
 import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 15401 */;
-import closure_3 from "initializeFromUserSettings" /* 1394 */;
+import initializeFromUserSettings from "initializeFromUserSettings" /* 1394 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/favorites/native/FavoritesGuildActionSheet.tsx");
 
 export default function FavoritesGuildActionSheet(onClose) {
   onClose = onClose.onClose;
-  importDefault = undefined;
-  dependencyMap = undefined;
   const tmp2 = useFavoritesGuildHideActionDefault();
   importDefault = tmp2;
   const tmp3 = useFavoritesGuildResetActionDefault();
   dependencyMap = tmp3;
-  let obj = onClose(9979);
+  onClose(9979);
   obj1 = onClose(589);
   const items = [closure_3];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_3.hasStoredFavorites());
-  obj = { header: null, children: null };
-  obj = { title: null };
+  const obj = { title: null };
   const intl = onClose(1236).intl;
   obj[0] = intl.string(onClose(1236).t.wMWyci);
   obj[0] = callback(onClose(6949).BottomSheetTitleHeader, obj);
@@ -39,13 +36,13 @@ export default function FavoritesGuildActionSheet(onClose) {
       obj2[0] = intl2.string(tmp4(1236).t["0dOFq+"]);
       const obj3 = { IconComponent: null };
       obj3[0] = tmp4(11329).ArrowsUpDownIcon;
-      obj2[1] = tmp7(tmp4(7177).ActionSheetRow.Icon, obj3);
+      obj2[1] = callback(tmp4(7177).ActionSheetRow.Icon, obj3);
       obj2[2] = function onPress() {
         onClose();
         lib(closure_2[12])();
       };
-      obj1[1] = tmp7(tmp4(7177).ActionSheetRow, obj2);
-      tmp7Result = tmp7(tmp4(7177).ActionSheetRow.Group, obj1);
+      obj1[1] = callback(tmp4(7177).ActionSheetRow, obj2);
+      tmp7Result = callback(tmp4(7177).ActionSheetRow.Group, obj1);
     }
   }
   const items1 = [tmp7Result, ];
@@ -72,15 +69,15 @@ export default function FavoritesGuildActionSheet(onClose) {
     ({ label: obj9[0], subLabel: obj9[1] } = tmp3);
     const obj6 = { IconComponent: null };
     obj6[0] = tmp4(4333).TrashIcon;
-    obj5[2] = tmp7(tmp4(7177).ActionSheetRow.Icon, obj6);
+    obj5[2] = callback(tmp4(7177).ActionSheetRow.Icon, obj6);
     obj5[4] = function onPress() {
       onClose();
       closure_2.perform();
     };
-    tmp7Result = tmp7(tmp4(7177).ActionSheetRow, obj5);
+    tmp7Result = callback(tmp4(7177).ActionSheetRow, obj5);
   }
   items2[1] = tmp7Result;
-  items1[1] = closure_5(onClose(7177).ActionSheetRow.Group, { hasIcons: true, children: items2 });
+  items1[1] = callback(onClose(7177).ActionSheetRow.Group, { hasIcons: true, children: items2 });
   obj[1] = items1;
-  return closure_5(onClose(7175).ActionSheet, obj);
+  return callback(onClose(7175).ActionSheet, obj);
 };

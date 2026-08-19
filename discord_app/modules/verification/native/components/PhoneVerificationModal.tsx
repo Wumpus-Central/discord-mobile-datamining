@@ -2,20 +2,20 @@
 
 // Module 8626 (PhoneVerificationModal)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import AddPhoneDefault from "AddPhone" /* 8628 */;
+import VerifyPhoneDefault from "VerifyPhone" /* 8655 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { VerificationModalScenes } from "ME" /* 676 */;
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
 
 export default function PhoneVerificationModal(onClose) {
-  let obj = { screens: null, initialRouteName: null, headerBackTitle: null };
   const _require = onClose;
-  obj = {};
-  obj = { headerTitle: _require(6314).getHeaderNoTitle(), headerLeft: null, render: null };
+  let obj = { headerTitle: _require(6314).getHeaderNoTitle(), headerLeft: null, render: null };
   const obj4 = _require(6314);
   obj[1] = _require(6314).getHeaderCloseButton(onClose.onClose);
   obj[2] = function render(reason) {
@@ -32,7 +32,7 @@ export default function PhoneVerificationModal(onClose) {
     }
     obj.reason = reason;
     obj.onComplete = function onComplete(phone) {
-      return arr.push(closure_2_4.VERIFY_PHONE, {
+      return arr.push(VerificationModalScenes.VERIFY_PHONE, {
         phone,
         onVerified(arg0) {
           closure_0 = arg0;
@@ -46,7 +46,7 @@ export default function PhoneVerificationModal(onClose) {
       };
     }
     obj.onDeletePhone = fn;
-    return closure_1_6(closure_1_1(closure_1_2[6]), obj);
+    return jsx(AddPhoneDefault, {});
   };
   obj[VerificationModalScenes.ADD_PHONE] = obj;
   obj1 = { headerTitle: null, impressionName: null, render: null };
@@ -148,9 +148,9 @@ export default function PhoneVerificationModal(onClose) {
       obj[2] = function onSuccess() {
         callback(table[8]).popWithKey(closure_5);
       };
-      arr = arr.push(closure_2_4.VERIFY_PASSWORD, obj);
+      arr = arr.push(VerificationModalScenes.VERIFY_PASSWORD, obj);
     };
-    return closure_1_6(closure_1_1(closure_1_2[10]), obj);
+    return jsx(VerifyPhoneDefault, {});
   };
   obj[VerificationModalScenes.VERIFY_PHONE] = obj1;
   let obj2 = { headerTitle: null, render: null };

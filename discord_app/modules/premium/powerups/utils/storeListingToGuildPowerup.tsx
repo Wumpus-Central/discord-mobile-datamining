@@ -1,15 +1,15 @@
 // === Module 11659: storeListingToGuildPowerup ===
 
 // Module 11659 (storeListingToGuildPowerup)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1925 */;
+import obj132 from "obj132" /* 2 */;
+import set from "set" /* 1925 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 ({ DEFAULT_SOUND_SLOTS: c0, DEFAULT_STICKER_SLOTS: closure_1 } = GuildFeatures);
 const GuildPowerupType = BoostedGuildTiers.GuildPowerupType;
-const DEFAULT_EMOJI_SLOTS = set2.DEFAULT_EMOJI_SLOTS;
-const result = set.fileFinishedImporting("modules/premium/powerups/utils/storeListingToGuildPowerup.tsx");
+const DEFAULT_EMOJI_SLOTS = set.DEFAULT_EMOJI_SLOTS;
+const result = obj132.fileFinishedImporting("modules/premium/powerups/utils/storeListingToGuildPowerup.tsx");
 
 export default function storeListingToGuildPowerup(arr, powerup_metadata) {
   powerup_metadata = powerup_metadata.powerup_metadata;
@@ -82,10 +82,7 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
           let tmp25 = sum;
           if (null != dependent_sku_id) {
             do {
-              let found = arr.find((sku) => dependent_sku_id === sku.sku.id);
-              let tmp13 = sum2;
-              let tmp14 = sum1;
-              let tmp15 = tmp22;
+              let found = arr.find((item, index) => dependent_sku_id === item.sku.id);
               let num;
               if (found != null) {
                 let sku = found.sku;
@@ -160,9 +157,9 @@ export default function storeListingToGuildPowerup(arr, powerup_metadata) {
           const merged1 = Object.assign(obj);
           return obj;
         }
-      } else if (tmp7.PERK === category_type) {
+      } else if (GuildPowerupType.PERK === category_type) {
         obj = { type: null, description: null };
-        obj[0] = tmp7.PERK;
+        obj[0] = GuildPowerupType.PERK;
         let str = powerup_metadata.description;
         if (str == null) {
           str = "";

@@ -3,10 +3,10 @@
 // Module 11666 (useGuildPowerupRollbackNotificationConfig)
 import messagesProxyDefault from "messagesProxy" /* 2367 */;
 import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 11669 */;
-import closure_3 from "calculateAppliedBoosts" /* 4261 */;
+import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx");
 
 export default function useGuildPowerupRollbackNotificationConfig(guildId, location) {
   const _require = guildId;

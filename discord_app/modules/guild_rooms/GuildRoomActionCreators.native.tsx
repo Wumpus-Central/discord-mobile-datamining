@@ -1,7 +1,8 @@
 // === Module 9862: _guildRoomConnect ===
 
 // Module 9862 (_guildRoomConnect)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import obj132 from "obj132" /* 2 */;
 
 function _guildRoomConnect() {
   const self = this;
@@ -73,9 +74,8 @@ function _guildRoomUpdate() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.native.tsx");
 for (const key10024 in require("_guildRoomConnect")) {
-  let tmp3 = key10024;
   arg5[key10024] = require("_guildRoomConnect")[key10024];
   continue;
 }

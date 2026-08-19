@@ -4,11 +4,11 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useSecureFramesVerifiedUserIds from "useSecureFramesVerifiedUserIds" /* 14991 */;
-import closure_2 from "items" /* 9709 */;
+import items from "items" /* 9709 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.x8U2eC);
@@ -34,7 +34,7 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EncryptionSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/EncryptionSetting.tsx");
 
 export default createToggle;
 export const SecureFramesEncryptionSetting = createToggle;

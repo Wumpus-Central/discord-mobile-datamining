@@ -1,16 +1,14 @@
 // === Module 8507: MessageEmbedTypes ===
 
 // Module 8507 (MessageEmbedTypes)
+import obj132 from "obj132" /* 2 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4071 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
 ({ MessageEmbedTypes, SearchTypes } = ME);
-let obj = { Messages: 0, [0]: "Messages", Media: 1, [1]: "Media", Link: 2, [2]: "Link", File: 3, [3]: "File", Pins: 4, [4]: "Pins" };
-obj = { RECENT: "recent", MEMBERS: "members", PEOPLE: "people", MEDIA: "media", PINS: "pins", MESSAGES: "messages", LINKS: "links", FILES: "files", GUILD_CHANNELS: "guild_channels", THREADS: "threads" };
+let obj = { RECENT: "recent", MEMBERS: "members", PEOPLE: "people", MEDIA: "media", PINS: "pins", MESSAGES: "messages", LINKS: "links", FILES: "files", GUILD_CHANNELS: "guild_channels", THREADS: "threads" };
 const items = [, , , , ];
 ({ MESSAGES: arr[0], MEDIA: arr[1], PINS: arr[2], LINKS: arr[3], FILES: arr[4] } = obj);
-let set = new Set(items);
 const items1 = [, , ];
 ({ MEDIA: arr2[0], LINKS: arr2[1], FILES: arr2[2] } = obj);
 const items2 = [, , , ];
@@ -38,7 +36,9 @@ const items12 = [, , , , , ];
 ({ MEMBERS: arr13[0], MESSAGES: arr13[1], MEDIA: arr13[2], PINS: arr13[3], LINKS: arr13[4], FILES: arr13[5] } = obj);
 const items13 = [, , ];
 ({ IMAGE: arr14[0], VIDEO: arr14[1], GIFV: arr14[2] } = MessageEmbedTypes);
-const result = set.fileFinishedImporting("modules/search/SearchConstants.tsx");
+const set = new Set(items);
+const set1 = new Set(items13);
+const result = obj132.fileFinishedImporting("modules/search/SearchConstants.tsx");
 
 export const SearchAutocompleteSelectAnalyticsActions = { KEY_PRESS: "key_press", CLICK: "click" };
 export const WEB_SEARCH_HISTORY_STORAGE_KEY = "SearchStore";
@@ -89,4 +89,4 @@ export const SearchFileTypes = { AUDIO: "audio", MEDIA_ATTACHMENT: "media_attach
 export const SEARCH_BAR_HEIGHT = 40;
 export const SearchQueryTagTypes = { COMPLETE: "complete", PREFIX: "prefix", ANSWER: "answer" };
 export const SearchQuerySource = { SEARCH_TEXT_INPUT: "search_text_input", SEARCH_POPOUT: "search_popout", SEARCH_FILTERS_MODAL: "search_filters_modal", SEARCH_XDM_SETTINGS: "search_xdm_settings" };
-export const EMBED_TYPES_WITHOUT_DESCRIPTION = new Set(items13);
+export const EMBED_TYPES_WITHOUT_DESCRIPTION = set1;

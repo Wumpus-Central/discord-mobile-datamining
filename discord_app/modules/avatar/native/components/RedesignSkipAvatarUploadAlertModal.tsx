@@ -6,10 +6,10 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/avatar/native/components/RedesignSkipAvatarUploadAlertModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/avatar/native/components/RedesignSkipAvatarUploadAlertModal.tsx");
 
 export default function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   let obj = { title: null, content: null, actions: null };
@@ -17,7 +17,6 @@ export default function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   obj[0] = intl.string(getSystemLocale.t.DnKHuV);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t["1EPySE"]);
-  obj = { children: null };
   obj = { onPress: onConfirm.onConfirm, text: null };
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t.nhJ8OC);

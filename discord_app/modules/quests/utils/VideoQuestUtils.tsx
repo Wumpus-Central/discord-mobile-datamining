@@ -7,14 +7,14 @@ import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" 
 import trackQuestEvent from "trackQuestEvent" /* 7470 */;
 import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
 import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10477 */;
-import closure_2 from "handleConnectionInfoChange" /* 4564 */;
-import closure_3 from "initializeState" /* 7453 */;
-import closure_4 from "_toPropertyKey" /* 7455 */;
+import handleConnectionInfoChange from "handleConnectionInfoChange" /* 4564 */;
+import initializeState from "initializeState" /* 7453 */;
+import _toPropertyKey from "_toPropertyKey" /* 7455 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 const portrait = "portrait";
-const result = require("set").fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
 export const getVideoQuestWatchCtaText = require("formatWatchRemainingDurationShort").getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
@@ -57,48 +57,48 @@ export const getVideoOrientation = function getVideoOrientation(assets) {
 };
 export const getVideoQuestProgressRemainingAccessibilityLabel = function getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, arg1) {
   if (arg1) {
-    const intl5 = tmp(1236).intl;
-    return intl5.string(tmp(1236).t["ij5E/5"]);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t["ij5E/5"]);
   } else {
-    const remainingTaskTime = tmp(7476).getRemainingTaskTime(questTaskDetails);
+    const remainingTaskTime = getApplicationIdsByTaskTypes.getRemainingTaskTime(questTaskDetails);
     ({ minutes, seconds } = remainingTaskTime);
     if (minutes > 0) {
       if (seconds > 0) {
-        const intl3 = tmp(1236).intl;
+        const intl3 = getSystemLocale.intl;
         let obj = { minutes: null, seconds: null };
         obj[0] = minutes;
         obj[1] = seconds;
-        let formatToPlainStringResult = intl3.formatToPlainString(tmp(1236).t["lW/66D"], obj);
+        let formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t["lW/66D"], obj);
       }
-      const intl4 = tmp(1236).intl;
+      const intl4 = getSystemLocale.intl;
       obj = { remainingTime: null };
       obj[0] = formatToPlainStringResult;
-      return intl4.formatToPlainString(tmp(1236).t.nzYZrt, obj);
+      return intl4.formatToPlainString(getSystemLocale.t.nzYZrt, obj);
     }
     if (minutes > 0) {
-      const intl2 = tmp(1236).intl;
+      const intl2 = getSystemLocale.intl;
       obj1 = { count: null };
       obj1[0] = minutes;
-      formatToPlainStringResult = intl2.formatToPlainString(tmp(1236).t["SxnF/O"], obj1);
+      formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["SxnF/O"], obj1);
     } else {
-      const intl = tmp(1236).intl;
+      const intl = getSystemLocale.intl;
       const obj2 = { count: null };
       obj2[0] = seconds;
-      formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t["0BZpdi"], obj2);
+      formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["0BZpdi"], obj2);
     }
-    const tmpResult = tmp(7476);
+    const tmpResult = getApplicationIdsByTaskTypes;
   }
 };
-export const formatVideoProgressRatio = function formatVideoProgressRatio(bound, current) {
+export const formatVideoProgressRatio = function formatVideoProgressRatio(maxVideoProgressSeconds, current) {
   let num = 0;
-  if (bound > 0) {
+  if (maxVideoProgressSeconds > 0) {
     num = 0;
     if (current > 0) {
       let num3 = 1;
-      if (bound < current) {
+      if (maxVideoProgressSeconds < current) {
         const _Math = Math;
         const _Math2 = Math;
-        num3 = Math.min(1, Math.round(bound / current * 100) / 100);
+        num3 = Math.min(1, Math.round(maxVideoProgressSeconds / current * 100) / 100);
       }
       num = num3;
     }
@@ -158,10 +158,9 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
         isQuestExpiredResult = null != completedAt1;
       }
       if (!isQuestExpiredResult) {
-        tmp6(10477).updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
-        const tmp6Result = tmp6(10477);
+        _manuallyStartConsoleQuest.updateVideoProgress(quest.id, videoProgress.maxTimestampSec);
+        const tmp6Result = _manuallyStartConsoleQuest;
       }
-      tmp6 = require;
     }
     ({ maxTimestampSec, duration } = videoProgress);
     let num2 = 0;
@@ -187,7 +186,6 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
     obj[2] = obj;
     obj[3] = sourceQuestContent;
     trackQuestEvent.trackQuestEvent(obj);
-    const obj5 = trackQuestEvent;
     obj1 = { questId: null, event: null, properties: null, sourceQuestContent: null };
     obj1[0] = questId;
     obj1[1] = AnalyticEvents.QUEST_VIDEO_MODAL_CLOSED;
@@ -198,7 +196,6 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
     obj1[2] = obj2;
     obj1[3] = sourceQuestContent;
     trackQuestEvent.trackQuestEvent(obj1);
-    const obj8 = trackQuestEvent;
   }
 };
 export const getVideoQuestModalKey = function getVideoQuestModalKey(questId) {
@@ -213,10 +210,10 @@ export const computeMaxSeekableTime = function computeMaxSeekableTime(arg0, arg1
   return bound;
 };
 export const isVideoQuestProgressing = function isVideoQuestProgressing(closure_0) {
-  let isModalOpenResult = getApplicationIdsByTaskTypes.hasWatchVideoTasks(closure_0);
+  let isModalOpenResult = getApplicationIdsByTaskTypes.hasWatchVideoTasks(_require);
   if (isModalOpenResult) {
     const _HermesInternal = HermesInternal;
-    isModalOpenResult = coerceMainRoute.isModalOpen("VIDEO-QUEST-" + closure_0.id);
+    isModalOpenResult = coerceMainRoute.isModalOpen("VIDEO-QUEST-" + _require.id);
   }
   return isModalOpenResult;
 };

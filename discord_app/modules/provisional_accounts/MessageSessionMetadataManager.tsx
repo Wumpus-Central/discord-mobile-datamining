@@ -1,7 +1,7 @@
 // === Module 16591: handleMessageCreate ===
 
 // Module 16591 (handleMessageCreate)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import initializeDefault from "initialize" /* 5038 */;
@@ -39,8 +39,7 @@ prototype["_getAuthorizedApplicationIds"] = function _getAuthorizedApplicationId
 };
 prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExists(message) {
   if (null != message.session_metadata) {
-    let obj = expandEventPropertiesDefault;
-    obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
+    const obj = { message_id: null, channel_id: null, author_id: null, authorized_application_ids: null };
     ({ id: obj2[0], channel_id: obj2[1], author } = message);
     let id;
     if (author != null) {
@@ -53,6 +52,6 @@ prototype["_trackIfSessionMetadataExists"] = function _trackIfSessionMetadataExi
   }
 };
 const messageSessionMetadataManager = new MessageSessionMetadataManager();
-let result = set.fileFinishedImporting("modules/provisional_accounts/MessageSessionMetadataManager.tsx");
+let result = obj132.fileFinishedImporting("modules/provisional_accounts/MessageSessionMetadataManager.tsx");
 
 export default messageSessionMetadataManager;

@@ -2,14 +2,14 @@
 
 // Module 11771 (useUserProfileMutuals)
 import usePrevValueDefault from "usePrevValue" /* 8902 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
-import closure_6 from "insertUnsortedGuilds" /* 5078 */;
-import closure_7 from "createUserWidgetFromServer" /* 5365 */;
+import recomputeAffinities from "recomputeAffinities" /* 5407 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
+import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileMutuals.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useUserProfileMutuals.tsx");
 
 export default function useUserProfileMutuals(arg0) {
   const _require = arg0;
@@ -29,11 +29,11 @@ export default function useUserProfileMutuals(arg0) {
   const stateFromStores1 = _require(589).useStateFromStores(items2, () => flattenedGuildIds.getFlattenedGuildIds());
   const items3 = [tmp3, stateFromStores];
   let tmp7 = stateFromStores1(() => {
-    let sortByResult = closure_1;
-    if (null != closure_1) {
-      sortByResult = arr;
-      if (arr.length >= 2) {
-        sortByResult = lib(12).sortBy(arr, (user) => {
+    let sortByResult = tmp3;
+    if (null != tmp3) {
+      sortByResult = tmp3;
+      if (tmp3.length >= 2) {
+        sortByResult = lib(12).sortBy(tmp3, (user) => {
           const value = closure_3.get(user.user.id);
           let num;
           if (value != null) {
@@ -52,16 +52,16 @@ export default function useUserProfileMutuals(arg0) {
   const items4 = [tmp[2], stateFromStores1];
   let tmp8 = stateFromStores1(() => {
     if (null != dependencyMap) {
-      if (arr.length >= 2) {
+      if (dependencyMap.length >= 2) {
         const _Object = Object;
-        const lib = Object.fromEntries(stateFromStores1.map((arg0, arg1) => {
-          const items = [arg0, arg1];
+        const lib = Object.fromEntries(stateFromStores1.map((item, index) => {
+          const items = [item, index];
           return items;
         }));
-        return lib(12).sortBy(arr, (arg0) => {
+        return lib(12).sortBy(dependencyMap, (arg0) => {
           let length = table[arg0.guild.id];
           if (length == null) {
-            length = closure_1_4.length;
+            length = stateFromStores1.length;
           }
           return length;
         });

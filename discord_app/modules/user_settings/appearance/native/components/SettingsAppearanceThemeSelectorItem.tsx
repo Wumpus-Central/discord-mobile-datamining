@@ -4,6 +4,7 @@
 import noopAll from "noop" /* 19 */;
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import ClientThemeType from "ClientThemeType" /* 1349 */;
 import isThemeLight from "isThemeLight" /* 1364 */;
@@ -16,13 +17,14 @@ import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
 import registerAssetDefault from "registerAsset" /* 14620 */;
 import SynchronizeIconDefault from "SynchronizeIcon" /* 14621 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
+import handleThemeChange from "handleThemeChange" /* 1302 */;
 import importDefaultResult from "THEME_ITEM_WIDTH" /* 14618 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
+import "createCacheKey";
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function GradientThemeBackground(arg0) {
   ({ item, isThemeLocked } = arg0);
   let obj = isThemeLight;
@@ -40,16 +42,16 @@ function GradientThemeBackground(arg0) {
   obj1[0] = obj2;
   obj1[1] = item;
   obj1[3] = isThemeDarkResult ? closure_10 : closure_11;
-  const items1 = [closure_6(getMixedGradientColorDefault, obj1), ];
+  const items1 = [callback(getMixedGradientColorDefault, obj1), ];
   if (isThemeLocked) {
     const obj3 = { source: null, style: null };
     obj3[0] = registerAssetDefault;
     obj3[1] = tmp4.lock;
-    isThemeLocked = tmp7(Button.Icon, obj3);
+    isThemeLocked = callback(Button.Icon, obj3);
   }
   items1[1] = isThemeLocked;
   obj[1] = items1;
-  return closure_7(View, obj);
+  return callback2(View, obj);
 }
 function DefaultThemeBackground(item) {
   item = item.item;
@@ -61,11 +63,10 @@ function DefaultThemeBackground(item) {
   } else {
     theme = item.theme;
   }
-  let tmpResult = tmp(4097);
+  let tmpResult = map;
   const token = tmpResult.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWER, theme);
-  tmpResult = tmp(4097);
+  tmpResult = map;
   const token1 = tmpResult.useToken(ThemesDefault.colors.BORDER_STRONG, theme);
-  obj = { style: null, children: null };
   obj = { width: "100%", height: "100%", backgroundColor: token, borderColor: token1, borderWidth: 1, borderRadius: null };
   const token2 = map.useToken(ThemesDefault.colors.ICON_STRONG, theme);
   obj[5] = ThemesDefault.radii.sm;
@@ -76,11 +77,11 @@ function DefaultThemeBackground(item) {
     obj1[0] = { alignSelf: "center", justifyContent: "center", flex: 1 };
     const obj2 = { fill: null };
     obj2[0] = token2;
-    obj1[1] = tmp9(SynchronizeIconDefault, obj2);
-    tmp9Result = tmp9(tmp10, obj1);
+    obj1[1] = callback(SynchronizeIconDefault, obj2);
+    tmp9Result = callback(View, obj1);
   }
   obj[1] = tmp9Result;
-  return closure_6(View, obj);
+  return callback(View, obj);
 }
 function CustomThemeBackground(arg0) {
   ({ item, isThemeLocked } = arg0);
@@ -95,25 +96,23 @@ function CustomThemeBackground(arg0) {
   obj = { style: items, children: null };
   items[1] = obj;
   obj1 = { componentStyles: { borderRadius: ThemesDefault.radii.sm }, mix: true, mixColorOverride: isThemeDarkResult ? closure_10 : closure_11, customTheme: item };
-  const items1 = [closure_6(getMixedGradientColor.CustomThemedGradient, obj1), ];
+  const items1 = [callback(getMixedGradientColor.CustomThemedGradient, obj1), ];
   if (isThemeLocked) {
     const obj3 = { source: null, style: null };
     obj3[0] = registerAssetDefault;
     obj3[1] = tmp4.lock;
-    isThemeLocked = tmp7(tmp(1297).Icon, obj3);
+    isThemeLocked = callback(Button.Icon, obj3);
   }
   items1[1] = isThemeLocked;
   obj[1] = items1;
-  return closure_7(View, obj);
+  return callback2(View, obj);
 }
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { rippleColor: null, themeSelectorItemContainer: null, themeSelectorItem: null, newRedCircle: null };
-createCacheKey = { color: ThemesDefault.unsafe_rawColors.TRANSPARENT };
+let createCacheKey = { color: ThemesDefault.unsafe_rawColors.TRANSPARENT };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.sm, padding: importDefaultResult.THEME_ITEM_PADDING };
-let obj1 = { borderRadius: ThemesDefault.radii.sm, padding: importDefaultResult.THEME_ITEM_PADDING };
 createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_430, width: 12, height: 12, borderRadius: ThemesDefault.radii.sm, position: "absolute", top: 0, right: 0 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = createCacheKey.createStyles((arg0) => {
@@ -121,19 +120,18 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   const internal = ThemesDefault.internal;
   const resolveSemanticColor = internal.resolveSemanticColor;
   if (arg0) {
-    let semanticColor = resolveSemanticColor(tmp3.DARKER, tmp(712).colors.INTERACTIVE_TEXT_DEFAULT);
+    let semanticColor = resolveSemanticColor(ThemeTypes.DARKER, ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   } else {
-    semanticColor = resolveSemanticColor(tmp3.LIGHT, tmp(712).colors.INTERACTIVE_TEXT_DEFAULT);
+    semanticColor = resolveSemanticColor(ThemeTypes.LIGHT, ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   }
   obj[1] = { position: "absolute", alignSelf: "center", opacity: 0.6, tintColor: semanticColor };
   return obj;
 });
-let obj2 = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_430, width: 12, height: 12, borderRadius: ThemesDefault.radii.sm, position: "absolute", top: 0, right: 0 };
 let closure_10 = new hslToRgbDefault(0, 0, 0, 0.2);
 const tmp5 = new hslToRgbDefault(0, 0, 0, 0.2);
 let closure_11 = new hslToRgbDefault(255, 255, 255, 0.5);
 const tmp6 = new hslToRgbDefault(255, 255, 255, 0.5);
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeSelectorItem.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeSelectorItem.tsx");
 
 export default function ThemeSelectorItem(onPress) {
   ({ themePreset, isPreview, isSelected, isNew } = onPress);
@@ -146,7 +144,7 @@ export default function ThemeSelectorItem(onPress) {
     obj[0] = themePreset;
     let tmp8 = callback(DefaultThemeBackground, obj);
     let tmp9 = callback;
-  } else if (themePreset.type === tmp4(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+  } else if (themePreset.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     obj = { item: null, isThemeLocked: null };
     obj[0] = themePreset;
     obj[1] = isPreview;
@@ -164,8 +162,8 @@ export default function ThemeSelectorItem(onPress) {
   obj1 = { style: tmp.themeSelectorItemContainer, androidRippleConfig: tmp.rippleColor, onPress: onPress.onPress, accessibilityRole, accessibilityLabel: themePreset.getName(), accessibilityState, accessibilityHint: null, children: null };
   let stringResult;
   if (isPreview) {
-    const intl = tmp4(1236).intl;
-    stringResult = intl.string(tmp4(1236).t.VqGKm0);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t.VqGKm0);
   }
   obj1[6] = stringResult;
   const obj2 = { style: tmp.themeSelectorItem, children: null };
@@ -176,10 +174,10 @@ export default function ThemeSelectorItem(onPress) {
   if (isNew) {
     const obj3 = { style: null };
     obj3[0] = tmp.newRedCircle;
-    isNew = tmp9(tmp17, obj3);
+    isNew = tmp9(View, obj3);
   }
   items[1] = isNew;
   obj2[1] = items;
-  obj1[7] = closure_7(View, obj2);
+  obj1[7] = callback2(View, obj2);
   return tmp9(PressableBase.PressableOpacity, obj1);
 };

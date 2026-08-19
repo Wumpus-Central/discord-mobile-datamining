@@ -1,15 +1,15 @@
 // === Module 5282: useOptInEnabledForGuild ===
 
 // Module 5282 (useOptInEnabledForGuild)
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ GuildFeatures: closure_6, Permissions: error } = ME);
-const result = require("set").fileFinishedImporting("modules/opt_in_channels/isOptInEnabled.tsx");
+const result = require("obj132").fileFinishedImporting("modules/opt_in_channels/isOptInEnabled.tsx");
 
 export const useOptInEnabledForGuild = function useOptInEnabledForGuild(id) {
   const _require = id;

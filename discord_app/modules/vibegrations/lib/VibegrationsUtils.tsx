@@ -2,13 +2,13 @@
 
 // Module 7214 (vibegrationsAppIdFromTopic)
 import useIsVibegrationsGuildEnabled from "useIsVibegrationsGuildEnabled" /* 7215 */;
-import closure_2 from "comparator" /* 1980 */;
+import comparator from "comparator" /* 1980 */;
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator" /* 1980 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function vibegrationsAppIdFromTopic(topic) {
   if (null != topic) {
     if (topic.startsWith(c9)) {
@@ -23,12 +23,12 @@ function vibegrationsAppIdFromTopic(topic) {
   return null;
 }
 function vibegrationsTextChannelsIn(arg0) {
-  return channels.getChannels(arg0)[closure_3].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
+  return channels.getChannels(arg0)[closure_3].filter((item, index) => item.channel.type === constants.GUILD_TEXT);
 }
 ({ Permissions: closure_6, ChannelTypes: error, GuildFeatures: closure_8 } = ME);
 let c9 = "vibegrations_application_id=";
 const re10 = /^\d{17,20}$/;
-let result = require("set").fileFinishedImporting("modules/vibegrations/lib/VibegrationsUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/vibegrations/lib/VibegrationsUtils.tsx");
 
 export { vibegrationsAppIdFromTopic };
 export const vibegrationsTopicForApp = function vibegrationsTopicForApp(arg0) {
@@ -40,7 +40,6 @@ export const isVibegrationsProjectInGuild = function isVibegrationsProjectInGuil
     let tmp3 = guild_id.guild_id === arg1 || guild_id.preview_guild_id === arg1;
     if (!tmp3) {
       tmp3 = null == guild_id.guild_id && null == guild_id.preview_guild_id;
-      const tmp4 = null == guild_id.guild_id && null == guild_id.preview_guild_id;
     }
     tmp = tmp3;
   }
@@ -50,10 +49,7 @@ export { vibegrationsTextChannelsIn };
 export const findVibegrationChannelId = function findVibegrationChannelId(arg0, arg1) {
   for (const item10009 of tmp) {
     let channel = item10009.channel;
-    let tmp2 = channel;
-    let tmp3 = vibegrationsAppIdFromTopic;
     if (vibegrationsAppIdFromTopic(channel.topic) === arg1) {
-      let tmp4 = obj;
       obj.return();
       return channel.id;
     }
@@ -61,8 +57,7 @@ export const findVibegrationChannelId = function findVibegrationChannelId(arg0, 
   return null;
 };
 export const canManageVibegrations = function canManageVibegrations(closure_2, isAccessibleChannelOrThreadPath) {
-  let obj = useIsVibegrationsGuildEnabled;
-  obj = { guildId: closure_2.id, location: isAccessibleChannelOrThreadPath };
+  const obj = { guildId: closure_2.id, location: isAccessibleChannelOrThreadPath };
   let result = obj.isVibegrationsGuildEnabled(obj);
   if (result) {
     result = closure_5.can(constants.MANAGE_CHANNELS, closure_2);

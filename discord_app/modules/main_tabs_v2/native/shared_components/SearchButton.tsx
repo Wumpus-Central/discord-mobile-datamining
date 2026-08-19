@@ -8,20 +8,18 @@ import Text from "Text" /* 4734 */;
 import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7351 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { searchButton: null, roundedCorners: null, roundedCornersAlt: null, text: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: 20 };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.round };
 createCacheKey[3] = { marginLeft: 8 };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderRadius: ThemesDefault.radii.round };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchButton.tsx");
 
 export const SEARCH_BAR_HEIGHT = 40;
 export const SearchButtonContent = function SearchButtonContent(panelVariant) {
@@ -37,5 +35,5 @@ export const SearchButtonContent = function SearchButtonContent(panelVariant) {
   obj[4] = intl.string(getSystemLocale.t["5h0QOP"]);
   items1[1] = callback(Text.Text, obj);
   obj.children = items1;
-  return closure_4(Pressable, obj);
+  return callback(Pressable, obj);
 };

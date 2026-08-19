@@ -1,15 +1,15 @@
 // === Module 16941: useRoleSubscriptionFormat ===
 
 // Module 16941 (useRoleSubscriptionFormat)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { hasPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { GuildRoleSubscriptionFormat as closure_6 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 import { Permissions } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
 
 export default function useRoleSubscriptionFormat(arg0) {
   const _require = arg0;
@@ -26,7 +26,7 @@ export default function useRoleSubscriptionFormat(arg0) {
   const items1 = [stateFromStores];
   const memo = React.useMemo(() => {
     if (null != stateFromStores) {
-      if (!closure_1_3(tmp, closure_1_7.VIEW_CHANNEL)) {
+      if (!hasPermission(tmp, Permissions.VIEW_CHANNEL)) {
         let SOME_CHANNELS = closure_1_6.ALL_CHANNELS;
       }
       return SOME_CHANNELS;

@@ -6,7 +6,7 @@ import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-require = arg1;
+require = fn;
 let MobileCacheSnapshotStore;
 const Store = initializeDefault.Store;
 class MobileCacheSnapshotStore extends Store {
@@ -23,7 +23,7 @@ class MobileCacheSnapshotStore extends Store {
       obj.save();
       return false;
     };
-    tmp2 = new tmp2(tmp3, obj, arg1, new.target, tmp2, tmp3, obj, new.target, undefined, tmp, global, closure_1);
+    tmp2 = new tmp2(tmp3, obj, fn, new.target, tmp2, tmp3, obj, new.target, undefined, tmp, global, closure_1);
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp2;
     tmp5 = require("module_38");
@@ -38,7 +38,7 @@ class MobileCacheSnapshotStore extends Store {
 const prototype = MobileCacheSnapshotStore.prototype;
 MobileCacheSnapshotStore["clearAll"] = function clearAll() {
   const allStores = MobileCacheSnapshotStore.allStores;
-  const item = allStores.forEach((clear) => clear.clear());
+  const item = allStores.forEach((item, index) => item.clear());
 };
 Object.defineProperty(prototype, "persistKey", {
   get: function persistKey() {
@@ -70,6 +70,6 @@ prototype["getClass"] = function getClass() {
   return this.constructor;
 };
 MobileCacheSnapshotStore.allStores = [];
-let result = require("set").fileFinishedImporting("stores/MobileCacheSnapshotStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/MobileCacheSnapshotStore.tsx");
 
 export default MobileCacheSnapshotStore;

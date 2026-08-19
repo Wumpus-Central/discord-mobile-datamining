@@ -1,12 +1,12 @@
 // === Module 10702: useMediaModalFooterActionStore ===
 
 // Module 10702 (useMediaModalFooterActionStore)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import keys from "keys" /* 644 */;
 
 const obj = keys.create(() => ({}));
-const result = set.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
+const result = obj132.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
 
 export const useMediaModalFooterActionStore = obj;
 export const setMediaModalFooterAction = function setMediaModalFooterAction(arg0) {

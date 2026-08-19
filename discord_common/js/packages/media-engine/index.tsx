@@ -1,7 +1,7 @@
 // === Module 4569: BaseConnectionEvent ===
 
 // Module 4569 (BaseConnectionEvent)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import destroy from "destroy" /* 4570 */;
 import destroy2 from "destroy" /* 4580 */;
 import Video from "Video" /* 4640 */;
@@ -9,7 +9,7 @@ import MediaEngineEvent from "MediaEngineEvent" /* 4641 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
 
 let closure_2 = DesktopSources.MediaEngineImplementations;
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/index.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/index.tsx");
 
 export const BaseConnectionEvent = destroy2.BaseConnectionEvent;
 export const MediaEngineEvent = MediaEngineEvent.MediaEngineEvent;
@@ -20,20 +20,20 @@ export const FilterSettingsGraph = { NONE: "", BACKGROUND_BLUR: "background_blur
 export const FilterSettingsKey = { CAMERA_BACKGROUND_PREVIEW: "cameraBackgroundPreview", CAMERA_BACKGROUND_LIVE: "cameraBackgroundLive" };
 export const determineMediaEngine = function determineMediaEngine() {
   const items = [, ];
-  ({ NATIVE: arr[0], WEBRTC: arr[1] } = closure_2);
-  let DUMMY = items.find((arg0) => {
-    if (constants.NATIVE === arg0) {
+  ({ NATIVE: arr[0], WEBRTC: arr[1] } = constants);
+  let DUMMY = items.find((item, index) => {
+    if (constants.NATIVE === item) {
       let _default = callback(4570).default;
     } else {
-      if (tmp.WEBRTC !== arg0) {
-        const DUMMY = tmp.DUMMY;
+      if (constants.WEBRTC !== item) {
+        const DUMMY = constants.DUMMY;
       }
       _default = callback(4640).default;
     }
     return _default.supported();
   });
   if (DUMMY == null) {
-    DUMMY = closure_2.DUMMY;
+    DUMMY = constants.DUMMY;
   }
   return DUMMY;
 };
@@ -41,8 +41,8 @@ export const initializeMediaEngine = function initializeMediaEngine(BaseConnecti
   if (constants.NATIVE === BaseConnectionEvent) {
     let _default = destroy.default;
   } else {
-    if (tmp.WEBRTC !== BaseConnectionEvent) {
-      const DUMMY = tmp.DUMMY;
+    if (constants.WEBRTC !== BaseConnectionEvent) {
+      const DUMMY = constants.DUMMY;
     }
     _default = Video.default;
   }

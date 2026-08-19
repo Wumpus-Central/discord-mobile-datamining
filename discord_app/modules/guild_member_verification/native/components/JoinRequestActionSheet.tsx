@@ -3,14 +3,14 @@
 // Module 15835 (JoinRequestActionSheet)
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "createdAt" /* 1930 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import createdAt from "createdAt" /* 1930 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 class JoinRequestActionSheet {
   constructor(arg0) {
     joinRequest = global.joinRequest;
@@ -101,8 +101,8 @@ class JoinRequestActionSheet {
     items4[0] = guildId;
     ({ applicationStatus: arr5[1], userId: arr5[2] } = joinRequest);
     effect = obj3.useEffect(() => {
-      let obj = joinRequest(userId[19]);
-      obj = { guildId, applicationStatus: joinRequest.applicationStatus, applicationUserId: joinRequest.userId };
+      joinRequest(userId[19]);
+      const obj = { guildId, applicationStatus: joinRequest.applicationStatus, applicationUserId: joinRequest.userId };
       const result = obj.trackMemberApplicationViewed(obj);
     }, items4);
     items5 = [, ];
@@ -184,7 +184,7 @@ let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 } });
 const memoResult = importAllResult.memo(JoinRequestActionSheet);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx");
 
 export default memoResult;
 export { JoinRequestActionSheet };

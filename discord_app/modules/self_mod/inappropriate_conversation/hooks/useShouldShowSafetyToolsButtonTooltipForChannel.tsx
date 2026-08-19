@@ -1,29 +1,27 @@
 // === Module 10607: useSafetyToolsButtonTooltipForChannel ===
 
 // Module 10607 (useSafetyToolsButtonTooltipForChannel)
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
+import obj132 from "obj132" /* 2 */;
+import obj132Default from "obj132" /* 687 */;
 import handleConnectionOpen from "handleConnectionOpen" /* 9921 */;
 import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10574 */;
 import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10608 */;
+import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 10609 */;
 import getSafetyAlertsSettingOrDefault from "getSafetyAlertsSettingOrDefault" /* 10610 */;
 
 const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
-const HOUR = setDefault.Millis.HOUR;
-let closure_4 = 12 * setDefault.Millis.HOUR;
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx");
+const HOUR = obj132Default.Millis.HOUR;
+let closure_4 = 12 * obj132Default.Millis.HOUR;
+const result = obj132.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx");
 
 export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButtonTooltipForChannel(channelId) {
   const inappropriateConversationSafetyToolsWarningForChannel = useInappropriateConversationSafetyToolsWarningForChannel.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
-  const obj = useInappropriateConversationSafetyToolsWarningForChannel;
-  const tmp = require;
   const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);
-  const obj2 = useInappropriateConversationWarningsForChannel;
   if (null != inappropriateConversationSafetyToolsWarningForChannel) {
     if (!obj3.useShouldShowInitialSafetyToolsButtonTooltip(channelId)) {
       if (!tmpResult.shouldShowTakeoverForWarnings(inappropriateConversationWarningsForChannel)) {
-        const someResult = inappropriateConversationWarningsForChannel.some((type) => type.type === closure_2.INAPPROPRIATE_CONVERSATION_TIER_1);
-        const found = inappropriateConversationWarningsForChannel.filter((dismiss_timestamp) => null != dismiss_timestamp.dismiss_timestamp);
+        const someResult = inappropriateConversationWarningsForChannel.some((item, index) => item.type === closure_2.INAPPROPRIATE_CONVERSATION_TIER_1);
+        const found = inappropriateConversationWarningsForChannel.filter((item, index) => null != item.dismiss_timestamp);
         const sorted = found.sort((dismiss_timestamp, dismiss_timestamp2) => {
           let num = 1;
           if (dismiss_timestamp2.dismiss_timestamp < dismiss_timestamp.dismiss_timestamp) {
@@ -39,7 +37,7 @@ export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButt
           }
           if (null == dismiss_timestamp) {
             {
-              const found1 = inappropriateConversationWarningsForChannel.filter((dismiss_timestamp) => null == dismiss_timestamp.dismiss_timestamp);
+              const found1 = inappropriateConversationWarningsForChannel.filter((item, index) => null == item.dismiss_timestamp);
               let findLastResult = found1.findLast((type) => type.type === closure_2.INAPPROPRIATE_CONVERSATION_TIER_1);
               if (findLastResult == null) {
                 findLastResult = found1.findLast((type) => type.type === closure_2.INAPPROPRIATE_CONVERSATION_TIER_2);
@@ -60,4 +58,5 @@ export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButt
       tmpResult = getSafetyAlertsSettingOrDefault;
     }
   }
+  obj3 = useShouldShowInitialSafetyToolsButtonTooltip;
 };

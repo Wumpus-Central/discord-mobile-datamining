@@ -1,7 +1,7 @@
 // === Module 13545: Fonts ===
 
 // Module 13545 (Fonts)
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
@@ -9,34 +9,30 @@ import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import Text from "Text" /* 4734 */;
 import CircleXIcon from "CircleXIcon" /* 7341 */;
 import BottomSheetTextInputDefault from "BottomSheetTextInput" /* 11351 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { Fonts } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["numberOfLines", "disableConstantNumberOfLines", "inputTextColor", "placeholder", "placeholderTextColor", "editable", "large", "accessibilityHint", "maxLength", "inActionSheet", "trailingButton", "clearButtonVisibility", "disabled", "style", "inputTextStyle", "onChangeText", "onFocus", "value"];
 ({ View: c5, Pressable: closure_6, TouchableWithoutFeedback: error, Platform } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" }, inputViewTitle: { marginRight: 5 }, inputViewError: null, inputBorder: null, inputView: null, inputViewBorder: null, inputViewBorderActive: null, inputContainer: null, bottomContainer: null, charactersLength: null, closeIcon: null, clearButton: null, required: null };
-createCacheKey = { fontSize: 10, color: ThemesDefault.unsafe_rawColors.RED_400 };
+const createCacheKey = { fontSize: 10, color: ThemesDefault.unsafe_rawColors.RED_400 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { backgroundColor: ThemesDefault.colors.TEXT_MUTED };
-let obj1 = { backgroundColor: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[5] = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 createCacheKey[6] = { marginTop: 8, height: 2 };
 let obj2 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 createCacheKey[7] = { backgroundColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
 createCacheKey[8] = { flexDirection: "row", alignItems: "center", position: "relative" };
 createCacheKey[9] = { marginTop: 5 };
-let obj3 = { backgroundColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
 createCacheKey[10] = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: require("result").DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 let obj4 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: require("result").DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 createCacheKey[11] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[12] = { position: "absolute", right: 6 };
-let obj5 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[13] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 let closure_11 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const obj7 = { NEVER: "never", WITH_CONTENT: "with-content", ALWAYS: "always" };
@@ -169,7 +165,7 @@ prototype["renderBorder"] = function renderBorder() {
     obj = { style: null };
     items[2] = inputViewBorderActive;
     obj[0] = items;
-    return closure_9(closure_5, obj);
+    return callback(closure_5, obj);
   } else {
     return null;
   }
@@ -212,7 +208,6 @@ prototype["renderTopContainer"] = function renderTopContainer() {
     obj[2] = items2;
     obj[3] = title;
     tmp12Result = callback2(Text.Text, obj);
-    const tmp12 = callback2;
   }
   let tmp15 = null != helpText;
   if (tmp15) {
@@ -277,9 +272,8 @@ prototype["renderTrailingButton"] = function renderTrailingButton() {
         clearButtonAccessibilityLabel = intl.string(getSystemLocale.t.VkKicb);
       }
       obj[5] = clearButtonAccessibilityLabel;
-      obj[6] = closure_9(CircleXIcon.CircleXIcon, { size: "sm" });
-      let tmp3Result = tmp3(closure_6, obj);
-      const tmp4 = closure_6;
+      obj[6] = callback(CircleXIcon.CircleXIcon, { size: "sm" });
+      let tmp3Result = callback(closure_6, obj);
     } else {
       tmp3Result = null;
       if (clearButtonVisibility === tmp9.WITH_CONTENT) {
@@ -360,12 +354,13 @@ prototype["renderTextView"] = function renderTextView() {
     obj5[13] = maxLength;
     obj5[14] = joined;
     const merged = Object.assign(tmp2);
-    return closure_9(TextInput, obj5);
+    return callback(TextInput, obj5);
   } else {
     obj6 = AccessibilityAnnouncer;
     const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
     const isThemeDarkResult = obj6.isThemeDark(self.context.theme);
   }
+  const tmp = callback4(this.context);
 };
 prototype["render"] = function render() {
   const self = this;
@@ -390,28 +385,23 @@ prototype["render"] = function render() {
   items2 = [tmp.inputContainer, props.inputContainerStyle];
   const items3 = [self.renderTextView(), self.renderTrailingButton()];
   obj[1] = items3;
-  items1[1] = closure_10(closure_5, obj);
-  const obj4 = set;
-  const tmp2 = closure_9;
-  const tmp3 = closure_7;
-  const tmp6 = require;
-  items1[2] = set.isAndroid() && self.renderBorder();
+  items1[1] = callback2(closure_5, obj);
+  items1[2] = obj132.isAndroid() && self.renderBorder();
   items1[3] = self.renderBottomContainer();
-  const tmp8 = set.isAndroid() && self.renderBorder();
-  const isAndroidResult = set.isAndroid();
+  const tmp8 = obj132.isAndroid() && self.renderBorder();
+  const isAndroidResult = obj132.isAndroid();
   let renderBorderResult = !isAndroidResult;
   if (!isAndroidResult) {
     renderBorderResult = self.renderBorder();
   }
   items1[4] = renderBorderResult;
   obj[2] = items1;
-  obj[2] = closure_10(closure_5, obj);
-  return tmp2(tmp3, obj);
+  obj[2] = callback2(closure_5, obj);
+  return callback(closure_7, obj);
 };
 InputView.contextType = require("ManaContext").ThemeContext;
 InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };
-let obj6 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-const result = require("set").fileFinishedImporting("design/void/InputView/native/InputView.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/InputView/native/InputView.tsx");
 
 export default InputView;
 export const ClearButtonVisibility = obj7;

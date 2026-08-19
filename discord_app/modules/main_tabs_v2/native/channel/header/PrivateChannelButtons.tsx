@@ -4,13 +4,13 @@
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getParticipants" /* 4773 */;
+import getParticipants from "getParticipants" /* 4773 */;
 import { NO_PARTICIPANTS } from "getParticipants" /* 4773 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "updateVoiceState" /* 4542 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 import { setIsChannelDetailsSearchActive as closure_12 } from "useChannelDetailsStore" /* 8505 */;
 import ME from "ME" /* 676 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
@@ -20,7 +20,7 @@ import { Features } from "DesktopSources" /* 4529 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14, ChannelTypes: closure_15 } = ME);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
@@ -43,9 +43,6 @@ let closure_24 = createCacheKey.createStyles((arg0) => {
 const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId) {
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
-  dependencyMap = undefined;
-  let stateFromStores;
-  let recipientId;
   let inappropriateConversationSafetyToolsWarningForChannel;
   closure_6 = undefined;
   let callParticipants;
@@ -60,8 +57,8 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
   dependencyMap = tmp3;
   obj = channelId(589);
   const items = [callParticipants];
-  stateFromStores = obj.useStateFromStores(items, () => callParticipants.getChannel(channelId));
-  recipientId = undefined;
+  const stateFromStores = obj.useStateFromStores(items, () => callParticipants.getChannel(channelId));
+  let recipientId;
   if (stateFromStores != null) {
     recipientId = stateFromStores.getRecipientId();
   }
@@ -91,7 +88,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     if (tmp2) {
       let isBlockedResult = totalParticipantCount.isBlocked(recipientId);
       if (!isBlockedResult) {
-        user = user.getUser(tmp5);
+        user = user.getUser(recipientId);
         let isProvisional;
         if (user != null) {
           isProvisional = user.isProvisional;
@@ -99,7 +96,6 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
         isBlockedResult = true === isProvisional;
       }
       tmp2 = isBlockedResult;
-      tmp5 = recipientId;
     }
     return tmp2;
   });
@@ -140,7 +136,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
   let obj8 = stateFromStores;
   const items6 = [callParticipants];
   const memo = stateFromStores.useMemo(() => {
-    const found = callParticipants.filter((type) => type.type === constants.USER);
+    const found = callParticipants.filter((item, index) => item.type === constants.USER);
     return { visibleParticipants: found.slice(0, 5), totalParticipantCount: found.length };
   }, items6);
   visibleParticipants = memo.visibleParticipants;
@@ -163,15 +159,14 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
       flag = false;
     }
     if (null != stateFromStores) {
-      if (obj.isPrivate()) {
-        const obj2 = screenIndex(closure_2[23])(obj, flag);
+      if (stateFromStores.isPrivate()) {
+        const obj2 = screenIndex(closure_2[23])(stateFromStores, flag);
         if (obj2.inCall) {
           obj2.onPress();
         } else {
-          channelId(tmp2[24]).confirmStartCall(obj2.onPress);
-          const obj3 = channelId(tmp2[24]);
+          channelId(closure_2[24]).confirmStartCall(obj2.onPress);
+          const obj3 = channelId(closure_2[24]);
         }
-        tmp2 = closure_2;
       }
     }
   }, items7);
@@ -189,15 +184,15 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
     const result = obj.navigateToChannelDetails(channelId, screenIndex, "private-channel-search-button");
     callback(channelId, true, "action");
     if (null != stateFromStores) {
-      const guildId = obj2.getGuildId();
-      const isThreadResult = obj2.isThread();
-      const channelDetailsSearchContext = channelId(tmp2[26]).getChannelDetailsSearchContext(channelId, guildId, isThreadResult);
-      const tmpResult = channelId(tmp2[26]);
+      const guildId = stateFromStores.getGuildId();
+      const isThreadResult = stateFromStores.isThread();
+      const channelDetailsSearchContext = channelId(closure_2[26]).getChannelDetailsSearchContext(channelId, guildId, isThreadResult);
+      const tmpResult = channelId(closure_2[26]);
       obj = { searchContext: null, searchLocation: null };
       obj[0] = channelDetailsSearchContext;
       obj[1] = closure_1_18.INDIVIDUAL_DM;
-      screenIndex(tmp2[27]).trackSearchOpened(obj);
-      const obj4 = screenIndex(tmp2[27]);
+      screenIndex(closure_2[27]).trackSearchOpened(obj);
+      const obj4 = screenIndex(closure_2[27]);
     }
   }, items10);
   const items11 = [recipientId, stateFromStores, application];
@@ -212,7 +207,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
       tmp2 = null != application;
     }
     if (tmp2) {
-      obj = screenIndex(closure_2[28]);
+      screenIndex(closure_2[28]);
       obj = { settings_type: "user", destination_pane: null, source_page: "app_dm_settings", application_id: null };
       obj[1] = callback2.SETTINGS_APP_DMS_MENU;
       obj[3] = application.id;
@@ -240,7 +235,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
       obj[0] = channelId;
       obj[1] = recipientId;
       ({ id: obj2[2], type: obj2[3] } = inappropriateConversationSafetyToolsWarningForChannel);
-      let tmpResult = tmp(tmp2(tmp3[35]).SafetyToolsButton, obj);
+      let tmpResult = closure_1_20(channelId(closure_2[35]).SafetyToolsButton, obj);
     } else {
       obj = { style: null, onPress: null, accessibilityLabel: null, accessibilityRole: "button", children: null };
       obj[0] = closure_2.button;
@@ -248,7 +243,7 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
       const intl = channelId(closure_2[33]).intl;
       obj[2] = intl.string(channelId(closure_2[33]).t["5h0QOP"]);
       obj[4] = closure_1_20(channelId(closure_2[34]).MagnifyingGlassIcon, { size: "sm" });
-      tmpResult = tmp(tmp2(tmp3[32]).PressableOpacity, obj);
+      tmpResult = closure_1_20(channelId(closure_2[32]).PressableOpacity, obj);
     }
     return tmpResult;
   }, items12);
@@ -330,11 +325,10 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
       };
       obj4[4] = stateFromStores2;
       if (tmp15) {
-        let unsafe_rawColors = tmp(712).unsafe_rawColors;
-        unsafe_rawColors = { size: "sm", color: null };
+        tmp(712).unsafe_rawColors;
+        let unsafe_rawColors = { size: "sm", color: null };
         unsafe_rawColors[1] = stateFromStores1 ? unsafe_rawColors.GREEN_360 : unsafe_rawColors.BRAND_400;
         let tmp29Result = tmp29(tmp4(6896).VoiceNormalIcon, unsafe_rawColors);
-        const tmp33 = stateFromStores1 ? unsafe_rawColors.GREEN_360 : unsafe_rawColors.BRAND_400;
       } else {
         if (stateFromStores1) {
           const obj6 = { size: "sm", color: null };
@@ -353,19 +347,16 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
         }
         const items15 = [
           tmp29Result,
-          visibleParticipants.map((user) => {
+          visibleParticipants.map((item, index) => {
                   const diff = visibleParticipants.length - 1;
                   let num = -6;
-                  if (0 === arg1) {
-                    num = screenIndex(tmp4[17]).space.PX_4;
+                  if (0 === index) {
+                    num = screenIndex(closure_2[17]).space.PX_4;
                   }
-                  obj = { style: { marginLeft: num }, user: user.user, guildId: "r", size: 0, cutout: "absolute" };
+                  obj = { style: { marginLeft: num }, user: item.user, guildId: "r", size: 0, cutout: "absolute" };
                   obj[3] = channelId(closure_2[15]).AvatarSizes.XSMALL;
-                  if (arg1 !== diff) {
-                    const tmp7 = closure_1_23;
-                  }
-                  obj[4] = tmp7;
-                  return closure_1_20(channelId(closure_2[15]).CutoutableAvatarImage, obj, user.id);
+                  obj[4] = closure_1_23;
+                  return closure_1_20(channelId(closure_2[15]).CutoutableAvatarImage, obj, item.id);
                 }),
 
         ];
@@ -417,6 +408,6 @@ const memoResult = importAllResult.memo(function PrivateChannelButtons(channelId
   }
   return tmp24Result;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/PrivateChannelButtons.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/PrivateChannelButtons.tsx");
 
 export default memoResult;

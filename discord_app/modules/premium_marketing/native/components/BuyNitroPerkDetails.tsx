@@ -2,16 +2,20 @@
 
 // Module 8016 (openBuyNitroPerkDetails)
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import Stack from "Stack" /* 4733 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
 import PremiumTypes from "PremiumTypes" /* 7933 */;
+import PromoSheet from "PromoSheet" /* 8017 */;
+import BuyNitroPlanPriceDetailsDefault from "BuyNitroPlanPriceDetails" /* 8020 */;
 import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 8021 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const BuyNitroPerkDetailsActionSheet = "BuyNitroPerkDetailsActionSheet";
 let closure_7 = createCacheKey.createStyles({ illustration: { width: "100%", height: 180 } });
@@ -25,7 +29,7 @@ let closure_8 = importAllResult.memo((perk) => {
   if (null != detail) {
     obj = { title: null, description: null, illustration: null, actions: null };
     obj[0] = perk.label;
-    const intl = tmp2(1236).intl;
+    const intl = getSystemLocale.intl;
     obj[1] = intl.string(detail.description);
     obj = { source: null, style: null, resizeMode: "contain" };
     obj[0] = detail.image;
@@ -38,7 +42,7 @@ let closure_8 = importAllResult.memo((perk) => {
       const obj2 = { planSelection: null, item: null, centered: true };
       obj2[0] = buyNitroPlanSelection;
       obj2[1] = buyNitroPlanSelection.selection.item;
-      tmp6Result = tmp6(tmp9(8020), obj2);
+      tmp6Result = callback(BuyNitroPlanPriceDetailsDefault, obj2);
     }
     const items = [tmp6Result, ];
     const obj3 = { planSelection: null, location: null, sourceAnalyticsLocations: null, applicationId: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
@@ -53,19 +57,16 @@ let closure_8 = importAllResult.memo((perk) => {
     obj3[6] = onPaymentDismiss;
     items[1] = callback(BuyNitroPurchaseButtonDefault, obj3);
     obj1[1] = items;
-    obj[3] = closure_5(tmp2(4733).Stack, obj1);
-    tmp6Result = tmp6(tmp2(8017).PromoSheet, obj);
-    const tmp8 = closure_5;
+    obj[3] = callback(Stack.Stack, obj1);
+    tmp6Result = callback(PromoSheet.PromoSheet, obj);
     const tmp9Result = BuyNitroPurchaseButtonDefault;
   }
   return tmp6Result;
 });
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
 
 export const openBuyNitroPerkDetails = function openBuyNitroPerkDetails(perk, arg1) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
-  obj = { content: null, key: null };
-  obj = { perk };
+  const obj = { perk };
   const merged = Object.assign(arg1);
   obj[0] = callback(closure_8, obj);
   obj[1] = BuyNitroPerkDetailsActionSheet;

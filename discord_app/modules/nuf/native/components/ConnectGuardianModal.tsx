@@ -2,43 +2,33 @@
 
 // Module 16666 (ConnectGuardianModal)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { FamilyCenterAction } from "items" /* 5297 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, centered: null, header: null, title: null, description: null, cardSection: null, scanPrompt: null, grow: null, footer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj1 = { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_40 };
-let obj2 = { marginBottom: ThemesDefault.space.PX_40 };
 createCacheKey[3] = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
-let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[4] = { paddingHorizontal: ThemesDefault.space.PX_16, textAlign: "center" };
 createCacheKey[5] = { alignItems: "center" };
-let obj4 = { paddingHorizontal: ThemesDefault.space.PX_16, textAlign: "center" };
 createCacheKey[6] = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_24, textAlign: "center" };
 createCacheKey[7] = { flexGrow: 1 };
-let obj5 = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_24, textAlign: "center" };
 createCacheKey[8] = { paddingHorizontal: ThemesDefault.space.PX_16 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { paddingHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/ConnectGuardianModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/ConnectGuardianModal.tsx");
 
 export default function ConnectGuardianModal(route) {
-  let onComplete;
-  let connectGuardianGate;
-  dependencyMap = undefined;
-  onComplete = route.route.params.onComplete;
+  const onComplete = route.route.params.onComplete;
   const tmp = callback3();
   let obj = onComplete(16667);
-  connectGuardianGate = obj.useConnectGuardianGate();
+  const connectGuardianGate = obj.useConnectGuardianGate();
   dependencyMap = React.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
   const effect = React.useEffect(() => {
@@ -48,10 +38,10 @@ export default function ConnectGuardianModal(route) {
     }
     if (!current) {
       ref.current = true;
-      let obj = connectGuardianGate(ref[9]);
-      obj = { action: null, source: "NUF Connect Guardian" };
-      obj[0] = closure_1_6.NufConsentGateLinkCodeError;
-      obj.track(closure_1_5.FAMILY_CENTER_ACTION, obj);
+      connectGuardianGate(ref[9]);
+      const obj = { action: null, source: "NUF Connect Guardian" };
+      obj[0] = FamilyCenterAction.NufConsentGateLinkCodeError;
+      obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
       if (onComplete != null) {
         onComplete(true);
       }
@@ -115,7 +105,6 @@ export default function ConnectGuardianModal(route) {
     items3[3] = callback(View, obj8);
     obj[1] = items3;
     tmp9 = callback2(View, obj);
-    const obj6 = { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null };
   }
   return tmp9;
 };

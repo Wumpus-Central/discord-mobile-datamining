@@ -9,7 +9,6 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 
 let obj = { EXTRA_SMALL_10: "extraSmall10", EXTRA_SMALL: "extraSmall", SMALL: "small", SMALL_20: "small20", MEDIUM: "medium", LARGE: "large", CUSTOM: "custom", REFRESH_SMALL_16: "refreshSmall16", SMALL_14: "small14" };
 let closure_5 = createCacheKey.createStyles(() => {
-  obj = { iconColor: null };
   obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   obj[0] = obj;
   return obj;
@@ -76,26 +75,26 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((size) => {
 }));
 memoResult.displayName = "Icon";
 memoResult.Sizes = obj;
-const result = require("set").fileFinishedImporting("design/void/Icon/native/Icon.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Icon/native/Icon.tsx");
 
 export default memoResult;
 export const IconSizes = obj;
 export const getIconSize = function getIconSize(arg0) {
   if (obj.EXTRA_SMALL_10 === arg0) {
     return 10;
-  } else if (tmp.EXTRA_SMALL === arg0) {
+  } else if (obj.EXTRA_SMALL === arg0) {
     return 12;
-  } else if (tmp.SMALL === arg0) {
+  } else if (obj.SMALL === arg0) {
     return 18;
-  } else if (tmp.SMALL_14 === arg0) {
+  } else if (obj.SMALL_14 === arg0) {
     return 14;
-  } else if (tmp.SMALL_20 === arg0) {
+  } else if (obj.SMALL_20 === arg0) {
     return 20;
-  } else if (tmp.MEDIUM === arg0) {
+  } else if (obj.MEDIUM === arg0) {
     return 24;
-  } else if (tmp.LARGE === arg0) {
+  } else if (obj.LARGE === arg0) {
     return 32;
-  } else if (tmp.REFRESH_SMALL_16 === arg0) {
+  } else if (obj.REFRESH_SMALL_16 === arg0) {
     return 16;
   }
 };
@@ -103,20 +102,20 @@ export const getIconStyle = function getIconStyle(MEDIUM) {
   let width = 10;
   if (obj.EXTRA_SMALL_10 !== MEDIUM) {
     width = 12;
-    if (tmp.EXTRA_SMALL !== MEDIUM) {
+    if (obj.EXTRA_SMALL !== MEDIUM) {
       width = 18;
-      if (tmp.SMALL !== MEDIUM) {
+      if (obj.SMALL !== MEDIUM) {
         width = 14;
-        if (tmp.SMALL_14 !== MEDIUM) {
+        if (obj.SMALL_14 !== MEDIUM) {
           width = 20;
-          if (tmp.SMALL_20 !== MEDIUM) {
+          if (obj.SMALL_20 !== MEDIUM) {
             width = 24;
-            if (tmp.MEDIUM !== MEDIUM) {
+            if (obj.MEDIUM !== MEDIUM) {
               width = 32;
-              if (tmp.LARGE !== MEDIUM) {
+              if (obj.LARGE !== MEDIUM) {
                 width = 16;
-                if (tmp.REFRESH_SMALL_16 !== MEDIUM) {
-                  const CUSTOM = tmp.CUSTOM;
+                if (obj.REFRESH_SMALL_16 !== MEDIUM) {
+                  const CUSTOM = obj.CUSTOM;
                 }
               }
             }

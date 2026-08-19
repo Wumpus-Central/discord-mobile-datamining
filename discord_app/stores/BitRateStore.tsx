@@ -1,7 +1,7 @@
 // === Module 4537: bitrate ===
 
 // Module 4537 (bitrate)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
@@ -22,6 +22,6 @@ const bitRateStore = new BitRateStore(dispatcherDefault, {
     bitrate = bitrate.bitrate;
   }
 });
-const result = set.fileFinishedImporting("stores/BitRateStore.tsx");
+const result = obj132.fileFinishedImporting("stores/BitRateStore.tsx");
 
 export default bitRateStore;

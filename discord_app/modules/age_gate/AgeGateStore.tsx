@@ -1,7 +1,7 @@
 // === Module 15215: isUnderageAnonymous ===
 
 // Module 15215 (isUnderageAnonymous)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import result2 from "result" /* 1221 */;
@@ -24,6 +24,6 @@ const ageGateStore = new AgeGateStore(dispatcherDefault, {
     c0 = false;
   }
 });
-const result = set.fileFinishedImporting("modules/age_gate/AgeGateStore.tsx");
+const result = obj132.fileFinishedImporting("modules/age_gate/AgeGateStore.tsx");
 
 export default ageGateStore;

@@ -1,13 +1,13 @@
 // === Module 650: setDisplayName ===
 
 // Module 650 (setDisplayName)
+import obj132 from "obj132" /* 2 */;
 import log from "log" /* 4 */;
 import _modDef38 from "module_38" /* 38 */;
 import loggerDefault from "logger" /* 593 */;
 import addAll from "add" /* 594 */;
 import logger2 from "logger" /* 651 */;
 import DepGraph from "DepGraph" /* 656 */;
-import set from "set" /* 2 */;
 
 function setDisplayName(arg0, displayName) {
   arg0.displayName = displayName;
@@ -45,7 +45,6 @@ prototype["register"] = function register(name, obj, storeDidChange, band, token
   _modDef38(isIntegerResult, "band must be a non-negative integer.");
   obj = {};
   for (const key10024 in arg1) {
-    let tmp9 = key10024;
     closure_0 = arg1[key10024];
     function wrapper(arg0) {
       return callback(arg0);
@@ -124,7 +123,6 @@ prototype["_computeOrderedActionHandlers"] = function _computeOrderedActionHandl
     let _dependencyGraph = self._dependencyGraph;
     let nodeData = _dependencyGraph.getNodeData(prop[num]);
     let tmp4 = nodeData.actionHandler[type];
-    let tmp5 = num;
     if (null != tmp4) {
       let obj = { name: null, actionHandler: null, storeDidChange: null };
       obj[0] = tmp2;
@@ -137,8 +135,7 @@ prototype["_computeOrderedActionHandlers"] = function _computeOrderedActionHandl
   return items;
 };
 prototype["_computeOrderedCallbackTokens"] = function _computeOrderedCallbackTokens() {
-  let self = this;
-  self = this;
+  const self = this;
   try {
     let _dependencyGraph = self._dependencyGraph;
     const overallOrderResult = _dependencyGraph.overallOrder();
@@ -147,9 +144,9 @@ prototype["_computeOrderedCallbackTokens"] = function _computeOrderedCallbackTok
   } catch (tmp2) {
     if (null != tmp2.cyclePath) {
       const cyclePath = tmp2.cyclePath;
-      const mapped = cyclePath.map((arg0) => {
+      const mapped = cyclePath.map((item, index) => {
         const _dependencyGraph = self._dependencyGraph;
-        return "" + _dependencyGraph.getNodeData(arg0).name + "(" + arg0 + ")";
+        return "" + _dependencyGraph.getNodeData(item).name + "(" + item + ")";
       });
       const _Error = Error;
       const _HermesInternal = HermesInternal;
@@ -160,7 +157,7 @@ prototype["_computeOrderedCallbackTokens"] = function _computeOrderedCallbackTok
     }
   }
 };
-let result = set.fileFinishedImporting("../discord_common/js/packages/flux/Dispatcher.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/packages/flux/Dispatcher.tsx");
 class Dispatcher {
   constructor() {
     num = global;
@@ -221,10 +218,10 @@ prototype2["dispatch"] = function dispatch(arg0) {
     _waitQueue.push(() => {
       try {
         if (null == lib2.functionCache[lib.type]) {
-          tmp.functionCache[tmp2.type] = (type) => closure_1._dispatchWithDevtools(type);
-          closure_2_7(tmp.functionCache[tmp2.type], "dispatch_" + tmp2.type);
+          lib2.functionCache[lib.type] = (type) => closure_1._dispatchWithDevtools(type);
+          setDisplayName(lib2.functionCache[lib.type], "dispatch_" + lib.type);
         }
-        const functionCache = tmp.functionCache;
+        const functionCache = lib2.functionCache;
         functionCache[lib.type](lib);
         lib();
       } catch (tmp9) {
@@ -240,15 +237,15 @@ prototype2["dispatchForStoreTest"] = function dispatchForStoreTest(type) {
     ({ actionHandler, storeDidChange } = item10019);
     let tmp3 = item10019.name === arg1;
     if (tmp3) {
-      let tmp4 = actionHandler;
       tmp3 = false !== actionHandler(arg0);
     }
     if (tmp3) {
-      let tmp5 = storeDidChange;
       let storeDidChangeResult = storeDidChange(arg0);
     }
     continue;
   }
+  const _actionHandlers = this._actionHandlers;
+  const orderedActionHandlers = this._actionHandlers.getOrderedActionHandlers(type);
 };
 prototype2["flushWaitQueue"] = function flushWaitQueue() {
   const self = this;
@@ -256,7 +253,6 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
     try {
       self._processingWaitQueue = true;
       let tmp4 = importDefault;
-      let tmp6 = dependencyMap;
       loggerDefault.isDispatching = true;
       let num2 = 0;
       if (self._waitQueue.length > 0) {
@@ -270,14 +266,12 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
               length = self._waitQueue.length;
             } while (length > 0);
           }
-          let tmp10 = importDefault;
           tmp4 = importDefault;
-          let tmp11 = dependencyMap;
-          tmp6 = dependencyMap;
           let obj = loggerDefault;
           let emitResult = obj.emit();
         }
-        const serializeResult = addAll.serialize();
+        const serializer = addAll;
+        const serializeResult = serializer.serialize();
         logger.error("LastFewActions", serializeResult);
         const _sentryUtils = self._sentryUtils;
         if (_sentryUtils != null) {
@@ -312,16 +306,15 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
     logger.log("Dispatching " + type.type);
   }
   const tmp2 = self(38);
-  const tmp3 = null == this._currentDispatchActionType;
   const tmp8 = _require;
   _require(655).mark(type.type);
   const obj = _require(655);
   addAll.add(type.type);
   const actionLogger = this.actionLogger;
-  const logResult1 = actionLogger.log(type, (arg0) => {
+  const logResult1 = actionLogger.log(type, (fn) => {
     try {
       self._currentDispatchActionType = type.type;
-      self._dispatch(type, arg0);
+      self._dispatch(type, fn);
       self._currentDispatchActionType = null;
     } catch (tmp8) {
       self._currentDispatchActionType = null;
@@ -335,25 +328,25 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   try {
     const _HermesInternal3 = HermesInternal;
     tmp8(655).measure("DISPATCH[" + type.type + "]", type.type);
+    const tmp8Result = tmp8(655);
   } catch (err) {
   }
 };
-prototype2["_dispatch"] = function _dispatch(closure_0, arg1) {
+prototype2["_dispatch"] = function _dispatch(closure_0, fn) {
   let sum;
   const self = this;
-  closure_1 = arg1;
+  closure_1 = fn;
   for (const item10008 of tmp) {
     if (item10008(arg0)) {
-      let tmp2 = obj;
       obj.return();
       let flag = false;
       return false;
     }
   }
-  const orderedActionHandlers = self._actionHandlers.getOrderedActionHandlers(closure_0);
   c3 = 0;
+  const length = self._actionHandlers.getOrderedActionHandlers(_require).length;
   let num = 0;
-  if (0 < orderedActionHandlers.length) {
+  if (0 < length) {
     do {
       let tmp3 = (function _loop() {
         if (false !== callback(orderedActionHandlers[c3].name, () => actionHandler(actionHandler))) {
@@ -366,11 +359,13 @@ prototype2["_dispatch"] = function _dispatch(closure_0, arg1) {
     } while (sum < length);
   }
   closure_4 = tmp5;
-  if (null != self._subscriptions[closure_0.type]) {
-    arg1("__subscriptions", () => {
-      const item = closure_4.forEach((arg0) => arg0(closure_0));
+  if (null != self._subscriptions[_require.type]) {
+    fn("__subscriptions", () => {
+      const item = closure_4.forEach((item, index) => item(closure_0));
     });
   }
+  const _actionHandlers = self._actionHandlers;
+  const orderedActionHandlers = self._actionHandlers.getOrderedActionHandlers(_require);
 };
 prototype2["addInterceptor"] = function addInterceptor(handleAction) {
   const _interceptors = this._interceptors;

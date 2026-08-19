@@ -3,12 +3,12 @@
 // Module 10854 (isMessagePinnable)
 import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
 import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ ChannelTypes: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
 
 export default function isMessagePinnable(arg0, isSystemDM) {
   const isSystemDMResult = isSystemDM.isSystemDM();
@@ -25,7 +25,6 @@ export default function isMessagePinnable(arg0, isSystemDM) {
   }
   if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(isSystemDM);
-    const obj2 = useCanUnarchiveThread;
   }
   if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = isSystemDM.type !== constants.GUILD_VOICE;

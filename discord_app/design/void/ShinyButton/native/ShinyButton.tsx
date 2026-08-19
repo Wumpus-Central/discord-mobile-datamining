@@ -1,18 +1,18 @@
 // === Module 13449: ShinyButton ===
 
 // Module 13449 (ShinyButton)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { AppState } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let items = [{ rotate: "30deg" }];
 let closure_8 = createCacheKey.createStyles({ shinyButton: { overflow: "hidden" }, shineContainer: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, shine: { width: 56, height: "500%", transform: items, backgroundColor: "rgba(255,255,255,0.1)", top: "-100%", alignItems: "center" }, shineInner: { width: 16, height: "100%", backgroundColor: "rgba(255,255,255,0.1)" } });
 let closure_9 = { code: "function ShinyButtonTsx1(){const{width,OFFSCREEN_OFFSET,withRepeat,withSequence,withTiming,withDelay,INITIAL_ANIMATION_DELAY,ANIMATION_DURATION}=this.__closure;if(width==null){return{transform:[{translateX:-OFFSCREEN_OFFSET}]};}return{transform:[{translateX:withRepeat(withSequence(withTiming(-OFFSCREEN_OFFSET,{duration:0},'animate-always'),withDelay(INITIAL_ANIMATION_DELAY,withTiming(width+OFFSCREEN_OFFSET,{duration:ANIMATION_DURATION},'animate-always'))),-1)}]};}" };
-const result = require("set").fileFinishedImporting("design/void/ShinyButton/native/ShinyButton.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/ShinyButton/native/ShinyButton.tsx");
 
 export default function ShinyButton(disabled) {
   disabled = disabled.disabled;
@@ -22,28 +22,24 @@ export default function ShinyButton(disabled) {
   }
   ({ shineStyle: closure_3, shineInnerStyle: closure_4 } = disabled);
   const merged = Object.assign(disabled, Object.create(null));
-  AppState = undefined;
-  let first;
-  jsx = undefined;
   let callback2;
   c9 = undefined;
   c10 = undefined;
-  closure_11 = undefined;
   function handleLayout(nativeEvent) {
     callback(nativeEvent.nativeEvent.layout.width);
   }
   const tmp2 = callback2();
   AppState = tmp2;
   const tmp3 = callback(React.useState(null), 2);
-  first = tmp3[0];
+  const first = tmp3[0];
   jsx = tmp3[1];
   let obj = disabled(shineDisabled[6]);
   let items = [first];
   callback2 = obj.useStateFromStores(items, () => first.useReducedMotion, []);
   [c9, c10] = callback(React.useState("active" === AppState.currentState), 2);
   const effect = React.useEffect(() => {
-    closure_0 = closure_5.addEventListener("change", (arg0) => {
-      callback("active" === arg0);
+    closure_0 = closure_5.addEventListener("change", (event) => {
+      callback("active" === event);
     });
     return () => {
       closure_0.remove();
@@ -56,7 +52,6 @@ export default function ShinyButton(disabled) {
       const items = [{ translateX: -100 }];
       obj[0] = items;
     } else {
-      obj = { transform: null };
       obj = { translateX: null };
       const obj4 = disabled(shineDisabled[7]);
       const obj5 = disabled(shineDisabled[7]);
@@ -102,9 +97,9 @@ export default function ShinyButton(disabled) {
               obj = { style: null };
               const items2 = [closure_5.shineInner, closure_4];
               obj[0] = items2;
-              obj[1] = callback(closure_1_1(shineDisabled[7]).View, obj);
-              obj[2] = callback(closure_1_1(shineDisabled[7]).View, obj);
-              tmp = callback(closure_1_1(shineDisabled[7]).View, obj);
+              obj[1] = callback(importDefault(shineDisabled[7]).View, obj);
+              obj[2] = callback(importDefault(shineDisabled[7]).View, obj);
+              tmp = callback(importDefault(shineDisabled[7]).View, obj);
             }
           }
         }

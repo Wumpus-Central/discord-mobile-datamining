@@ -1,7 +1,7 @@
 // === Module 1624: DRAG_HANDLE ===
 
 // Module 1624 (DRAG_HANDLE)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 
@@ -18,7 +18,7 @@ if (isMetaQuest.isMetaQuest()) {
   obj[3] = ThemesDefault.space.PX_4;
   obj[4] = ThemesDefault.space.PX_4;
 }
-const result = set.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
 
 export const DRAG_HANDLE = obj;
 export const HEADER_HANDLE_HEIGHT = obj.slotHeight;

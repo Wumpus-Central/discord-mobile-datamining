@@ -2,10 +2,10 @@
 
 // Module 6827 (staticRouteToTranslation)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");
 
 export const staticRouteToTranslation = function staticRouteToTranslation(arg0) {
   if ("home" !== arg0) {

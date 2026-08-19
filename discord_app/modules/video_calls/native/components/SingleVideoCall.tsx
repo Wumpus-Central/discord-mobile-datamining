@@ -1,23 +1,22 @@
 // === Module 12586: SingleVideoCall ===
 
 // Module 12586 (SingleVideoCall)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ resetFocus: c4, toggleFocus: c5 } = VoiceChatDrawerState);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/SingleVideoCall.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/SingleVideoCall.tsx");
 
 export default function SingleVideoCall(channel) {
   channel = channel.channel;
   let bottom;
   let right;
-  let analyticsLocations;
   const rect = bottom(right[3])();
   bottom = rect.bottom;
   right = rect.right;
-  analyticsLocations = bottom(right[4])().analyticsLocations;
+  const analyticsLocations = bottom(right[4])().analyticsLocations;
   const items = [right, bottom];
   const memo = analyticsLocations.useMemo(() => ({ marginRight: right, marginBottom: bottom }), items);
   const obj = {

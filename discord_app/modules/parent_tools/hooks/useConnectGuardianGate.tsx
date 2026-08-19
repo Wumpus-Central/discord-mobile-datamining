@@ -3,12 +3,12 @@
 // Module 16667 (useConnectGuardianGate)
 import initialize from "initialize" /* 589 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
 
 export const useConnectGuardianGate = function useConnectGuardianGate() {
   let obj = initialize;
@@ -32,14 +32,14 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
     ref.current = sum;
     const callback = sum;
     callback(false);
-    const linkCodeForCurrentUser = closure_1_0(ref[4]).getLinkCodeForCurrentUser();
-    const obj = closure_1_0(ref[4]);
-    linkCodeForCurrentUser.then(() => {
+    const linkCodeForCurrentUser = require(ref[4]).getLinkCodeForCurrentUser();
+    const obj = require(ref[4]);
+    linkCodeForCurrentUser.then((result) => {
       if (closure_0 === closure_1_2.current) {
         sum(false);
         closure_1_1(true);
       }
-    }).catch(() => {
+    }).catch((error) => {
       if (closure_0 === closure_1_2.current) {
         const linkCodeExpiresAt = closure_2_5.getLinkCodeExpiresAt();
         if (null != closure_2_5.getLinkCode()) {

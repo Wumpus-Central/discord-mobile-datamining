@@ -1,28 +1,32 @@
 // === Module 16213: user ===
 
 // Module 16213 (user)
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import _modDef4770 from "module_4770" /* 4770 */;
 import _isStreamingDefault from "_isStreaming" /* 8411 */;
 import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 15606 */;
 import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
+import itemsDefault from "items" /* 16197 */;
 import renderChannelWrapperDefault from "renderChannelWrapper" /* 16198 */;
 import _modDef16200 from "module_16200" /* 16200 */;
 import ChannelContentDefault from "ChannelContent" /* 16201 */;
 import renderChannelBadgeDefault from "renderChannelBadge" /* 16203 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "sortActivity" /* 4559 */;
-import closure_8 from "handleTypingStart" /* 11152 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import sortActivity from "sortActivity" /* 4559 */;
+import handleTypingStart from "handleTypingStart" /* 11152 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
 import { StatusTypes } from "ME" /* 676 */;
 import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function UserResult(user) {
   user = user.user;
   ({ comparator, channel, lastMessage, unread } = user);
@@ -46,7 +50,7 @@ function UserResult(user) {
   let items = [user.id];
   const callback = importAllResult.useCallback(() => {
     const items = [user.id];
-    closure_1_1(closure_1_2[13]).openPrivateChannel({ recipientIds: items });
+    _modDef4770.openPrivateChannel({ recipientIds: items });
   }, items);
   let obj = user(4751);
   const fontScale = obj.useFontScale();
@@ -63,7 +67,7 @@ function UserResult(user) {
   let extractTimestampResult;
   ({ isMobileOnline, isVROnline, activities } = stateFromStoresObject);
   if (null != lastMessage) {
-    let tmp2Result = tmp2(11);
+    let tmp2Result = DISCORD_EPOCHDefault;
     extractTimestampResult = tmp2Result.extractTimestamp(lastMessage.id);
   }
   let relativeTimestamp = null;
@@ -78,9 +82,8 @@ function UserResult(user) {
       str = "text-default";
     }
   }
-  tmp2Result = tmp2(16197);
-  obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
-  items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
+  tmp2Result = itemsDefault;
+  const items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
   const items5 = [callback(_modDef16200, obj), , ];
   obj1 = { user, guildId: "e", isMobileOnline: true, isVROnline: null, status: false, streaming: false, style: null, size: null, animate: null, typing: null, autoStatusCutout: null };
@@ -108,13 +111,10 @@ function UserResult(user) {
   obj1[8] = tmp21;
   obj1[9] = flag2;
   items5[1] = callback(user(1297).Avatar, obj1);
-  const tmp16 = closure_14;
-  const tmp17 = closure_13;
-  const tmp18 = UnreadSetting;
   const tmp2Result1 = renderChannelWrapperDefault;
   if (comparator == null) {
-    comparator = tmp2(4219).getUserTag(user);
-    const tmp2Result3 = tmp2(4219);
+    comparator = nameFromUserDefault.getUserTag(user);
+    const tmp2Result3 = nameFromUserDefault;
   }
   obj2 = { name: comparator, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, mentionCount: null, mentionBadge: null };
   let tmp14Result;
@@ -132,14 +132,14 @@ function UserResult(user) {
   const obj4 = { children: null };
   obj2[1] = tmp14Result;
   obj2[2] = unread;
-  obj2[3] = tmp18.ALL_MESSAGES;
+  obj2[3] = UnreadSetting.ALL_MESSAGES;
   obj2[4] = flag;
   obj2[5] = relativeTimestamp;
   obj2[6] = num;
   obj2[7] = renderChannelBadgeDefault({ mentionCount: num, locale: stateFromStores });
   items5[2] = ChannelContentDefault(obj2);
   obj4[0] = items5;
-  obj[3] = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
+  obj[3] = tmp2Result1(callback(closure_13, obj4), { fontScale });
   return tmp2Result(callback(user(5433).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {
@@ -149,11 +149,9 @@ function UserResultWithChannel(arg0) {
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.isChannelMuted(undefined, channel.id));
   const baseChannelUnreadBadgeState = useChannelUnreadBadgeState.useBaseChannelUnreadBadgeState(channel, stateFromStores);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const obj2 = useChannelUnreadBadgeState;
   const items1 = [closure_8];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_1_8.isTyping(channel.id, id.id));
   obj = {};
-  const obj3 = initialize;
   const merged = Object.assign(arg0);
   obj.channel = channel;
   obj.lastMessage = channel(14663)(channel, { unread });
@@ -165,8 +163,7 @@ function UserResultWithChannel(arg0) {
 }
 let c3 = importAllResult;
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-let obj = { pressable: { flex: 1 }, pressableUnderlayColor: null };
-obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+let obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[1] = obj;
 let closure_15 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((user) => {
@@ -188,6 +185,6 @@ const memoResult = importAllResult.memo((user) => {
   }
   return tmp7;
 });
-const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadSearchResultUser.tsx");
+const result = require("obj132").fileFinishedImporting("modules/launchpad/native/LaunchPadSearchResultUser.tsx");
 
 export default memoResult;

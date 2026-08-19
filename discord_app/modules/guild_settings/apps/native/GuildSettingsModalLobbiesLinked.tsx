@@ -2,16 +2,15 @@
 
 // Module 16822 (SyncingToGamesItem)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { GuildSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function SyncingToGamesItem(channels) {
   channels = channels.channels;
   const isOnlySection = channels.isOnlySection;
-  dependencyMap = undefined;
   let obj = channels(1500);
   dependencyMap = obj.useNavigation();
   const getOrFetchApplication = channels(7145).useGetOrFetchApplication(channels.applicationId);
@@ -23,35 +22,34 @@ function SyncingToGamesItem(channels) {
     }
     obj = { title: null, hasIcons: true, children: null };
     obj[0] = name;
-    obj[2] = channels.map((id) => {
-      closure_0 = id;
-      let obj = { label: channels(4984).computeChannelName(id, closure_1_4, closure_1_3), icon: null, arrow: true, onPress: null };
-      obj = { IconComponent: null };
+    obj[2] = channels.map((item, index) => {
+      closure_0 = item;
+      { label: channels(4984).computeChannelName(item, closure_1_4, closure_1_3), icon: null, arrow: true, onPress: null };
+      let obj = { IconComponent: null };
       const obj2 = channels(4984);
-      obj[0] = channels(6832).getChannelIconComponent(id);
+      obj[0] = channels(6832).getChannelIconComponent(item);
       obj[1] = closure_1_6(channels(6291).TableRow.Icon, obj);
       obj[3] = function onPress() {
-        const obj = { channel: length, numScreensToPop: null };
+        const obj = { channel: item, numScreensToPop: null };
         let num = 1;
-        if (closure_1_1) {
+        if (isOnlySection) {
           num = 1;
-          if (1 === length.length) {
+          if (1 === item.length) {
             num = 2;
           }
         }
         obj[1] = num;
-        closure_1_2.push(closure_2_5.EDIT_LINKED_LOBBY, obj);
+        closure_1_2.push(GuildSettingsSections.EDIT_LINKED_LOBBY, obj);
       };
-      return closure_1_6(channels(6291).TableRow, obj, id.id);
+      return closure_1_6(channels(6291).TableRow, obj, item.id);
     });
-    tmp5Result = closure_6(channels(6286).TableRowGroup, obj);
-    const tmp5 = closure_6;
+    tmp5Result = callback(channels(6286).TableRowGroup, obj);
   }
   return tmp5Result;
 }
 noopAll;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_settings/apps/native/GuildSettingsModalLobbiesLinked.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/apps/native/GuildSettingsModalLobbiesLinked.tsx");
 
 export default function GuildSettingsModalLobbiesLinked(arg0) {
   let _require;
@@ -72,12 +70,11 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   });
   _require = groupByResult;
   keys = Object.keys(groupByResult);
-  obj = { children: null };
   obj = { contentContainerStyle: null, children: null };
   obj1 = { paddingTop: keys(712).space.PX_16 };
   const items = [obj1, contentContainerStyle];
   obj[0] = items;
-  obj2 = { style: { paddingHorizontal: token }, spacing: keys(712).space.PX_24, children: keys.map((applicationId) => closure_1_6(closure_1_9, { applicationId, channels: _undefined[applicationId], isOnlySection: 1 === keys.length }, applicationId)) };
+  obj2 = { style: { paddingHorizontal: token }, spacing: keys(712).space.PX_24, children: keys.map((item, index) => closure_1_6(SyncingToGamesItem, { applicationId: item, channels: _undefined[item], isOnlySection: 1 === keys.length }, item)) };
   obj[1] = callback(_require(4733).Stack, obj2);
   const items1 = [callback(_require(8083).Form, obj), callback(_require(6550).NavScrim, {})];
   obj[0] = items1;

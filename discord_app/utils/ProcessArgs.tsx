@@ -1,16 +1,15 @@
 // === Module 4842: get ===
 
 // Module 4842 (get)
-import set from "set" /* 2 */;
-import setDefault from "set" /* 4004 */;
+import obj132 from "obj132" /* 2 */;
+import obj132Default from "obj132" /* 4004 */;
 
-let prototype;
-prototype = function ProcessArgs() {
+const prototype = function ProcessArgs() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["get"] = function get() {
   if (null == prototype.cached) {
-    const tmp4 = setDefault;
+    const tmp4 = obj132Default;
     let mainArgvSync;
     if (tmp4 != null) {
       const processUtils = tmp4.processUtils;
@@ -31,7 +30,7 @@ prototype["get"] = function get() {
     if (mainArgvSync == null) {
       mainArgvSync = [];
     }
-    tmp.cached = mainArgvSync;
+    prototype.cached = mainArgvSync;
   }
   return prototype.cached;
 };
@@ -40,10 +39,10 @@ prototype["contains"] = function contains(arg0) {
   return value.includes(arg0);
 };
 prototype["isEnvVariableTrue"] = function isEnvVariableTrue(DISCORD_DISALLOW_POPUPS) {
-  if (undefined === setDefault) {
+  if (undefined === obj132Default) {
     return false;
   } else {
-    const tmpResult = setDefault;
+    const tmpResult = obj132Default;
     let tmp5;
     if (tmpResult != null) {
       const _process = tmpResult.process;
@@ -61,7 +60,6 @@ prototype["isEnvVariableTrue"] = function isEnvVariableTrue(DISCORD_DISALLOW_POP
     }
     return true;
   }
-  const tmp = importDefault;
 };
 prototype["isDisallowPopupsSet"] = function isDisallowPopupsSet() {
   const hasItem = prototype.contains("--disallow-popups");
@@ -77,6 +75,6 @@ prototype["isDiscordTestSet"] = function isDiscordTestSet() {
 prototype["isDiscordGatewayPlaintextSet"] = function isDiscordGatewayPlaintextSet() {
   return false;
 };
-const result = set.fileFinishedImporting("utils/ProcessArgs.tsx");
+const result = obj132.fileFinishedImporting("utils/ProcessArgs.tsx");
 
 export const ProcessArgs = prototype;

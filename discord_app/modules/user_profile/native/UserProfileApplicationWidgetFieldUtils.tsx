@@ -8,25 +8,24 @@ import Text from "Text" /* 4734 */;
 import ImageSkeleton from "ImageSkeleton" /* 12278 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { fieldTextRow: null, fieldIcon: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+const createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 16, height: 16 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
 
-export const formatDurationNarrow = function formatDurationNarrow(arg0) {
+export const formatDurationNarrow = function formatDurationNarrow(value) {
   let num = 0;
-  if (Number.isFinite(arg0)) {
+  if (Number.isFinite(value)) {
     const _Math = Math;
     const _Math2 = Math;
-    num = Math.max(0, Math.floor(arg0));
+    num = Math.max(0, Math.floor(value));
   }
   const rounded = Math.floor(num / 3600000);
   const result = Math.floor(num / 60000) % 60;
@@ -82,13 +81,10 @@ export const FieldText = function FieldText(arg0) {
       obj2[0] = field.icon.url;
       obj[0] = obj2;
       obj[1] = tmp.fieldIcon;
-      tmp11Result = tmp11(closure_2, obj);
+      tmp11Result = callback(closure_2, obj);
     }
     items[1] = tmp11Result;
     obj[1] = items;
-    tmp9Result = closure_5(closure_3, obj);
-    const tmp10 = closure_3;
-    tmp11 = callback;
-    const tmp9 = closure_5;
+    tmp9Result = callback(closure_3, obj);
   }
 };

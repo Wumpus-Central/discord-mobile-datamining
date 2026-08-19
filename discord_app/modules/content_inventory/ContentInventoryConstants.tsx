@@ -1,9 +1,9 @@
 // === Module 9064: ContentInventoryFeedKey ===
 
 // Module 9064 (ContentInventoryFeedKey)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/content_inventory/ContentInventoryConstants.tsx");
 
 export const ContentInventoryFeedKey = { GLOBAL_FEED: "global feed", GAME_PROFILE_FEED: "game profile feed" };
 export const ContentInventorySurfaceTypes = { GUILD_MEMBER_LIST: 1, [1]: "GUILD_MEMBER_LIST" };

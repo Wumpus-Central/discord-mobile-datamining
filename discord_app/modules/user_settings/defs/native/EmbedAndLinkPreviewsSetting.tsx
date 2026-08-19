@@ -1,7 +1,7 @@
 // === Module 14775: toggle ===
 
 // Module 14775 (toggle)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import MobileUserSettings from "MobileUserSettings" /* 8198 */;
@@ -16,15 +16,6 @@ const toggle = createToggle.createToggle({
   useValue: explicitContentFromProto.RenderEmbeds.useSetting,
   onValueChange: explicitContentFromProto.RenderEmbeds.updateSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["5bK9vw"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue: explicitContentFromProto.RenderEmbeds.useSetting,
-  onValueChange: explicitContentFromProto.RenderEmbeds.updateSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/EmbedAndLinkPreviewsSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/EmbedAndLinkPreviewsSetting.tsx");
 
 export default toggle;

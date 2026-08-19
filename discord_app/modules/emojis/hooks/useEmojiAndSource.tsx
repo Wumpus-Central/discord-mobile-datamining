@@ -1,17 +1,17 @@
 // === Module 9407: useEmojiAndSource ===
 
 // Module 9407 (useEmojiAndSource)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getEmojiToGroupId" /* 6727 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
 import getEmojiSourceData from "getEmojiSourceData" /* 7189 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ ExpressionSourceGuildRecord: error, EmojiSourceDataTypes: closure_8, getEmojiSourceData: c9 } = getEmojiSourceData);
-const result = require("set").fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
 
 export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
   emojiId = emojiId.emojiId;
@@ -40,7 +40,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
       if (customEmojiById != null) {
         guildId = customEmojiById.guildId;
       }
-      obj[1] = c5.getGuild(guildId);
+      obj[1] = _undefined.getGuild(guildId);
     } else {
       obj = { emoji: null, joinedEmojiSourceGuildRecord: null };
     }

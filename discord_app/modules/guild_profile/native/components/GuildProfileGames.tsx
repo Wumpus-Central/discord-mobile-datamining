@@ -4,16 +4,15 @@
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
 import useGuildProfileGamesDefault from "useGuildProfileGames" /* 9528 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function ClickableGameIcon(game) {
   game = game.game;
   ({ enabled, onPressFallback } = game);
-  dependencyMap = undefined;
   enabled = undefined;
   ({ style, activityLevel } = game);
   const obj = { gameId: game.id, source: game(9101).GameProfileSources.GuildProfileGames, trackEntryPointImpression: enabled };
@@ -37,9 +36,9 @@ function ClickableGameIcon(game) {
 function FavoriteGame(game) {
   game = game.game;
   ({ activityLevel, clickable } = game);
-  let obj = { style: createCacheKey().favoriteGame, children: null };
+  { style: createCacheKey().favoriteGame, children: null };
   const items = [callback(ClickableGameIcon, { game, activityLevel, enabled: clickable }), ];
-  obj = { variant: "text-sm/medium", color: "text-subtle", children: game.name };
+  const obj = { variant: "text-sm/medium", color: "text-subtle", children: game.name };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
@@ -48,16 +47,13 @@ function GuildProfileGamesContent(profile) {
   profile = profile.profile;
   ({ gamesToDisplay, lastGameToDisplay } = profile);
   const remainingGames = profile.remainingGames;
-  let React;
-  let gameActivity;
-  let enabled;
   closure_6 = undefined;
   createCacheKey = undefined;
   let tmp = createCacheKey();
-  React = tmp;
-  gameActivity = profile.gameActivity;
+  const React = tmp;
+  const gameActivity = profile.gameActivity;
   let obj = profile(remainingGames[10]);
-  enabled = obj.useGuildProfileGameProfilesExperiment({ location: "guild_profile_games" }).enabled;
+  const enabled = obj.useGuildProfileGameProfilesExperiment({ location: "guild_profile_games" }).enabled;
   let iconURL;
   if (lastGameToDisplay != null) {
     iconURL = lastGameToDisplay.getIconURL(24);
@@ -76,7 +72,7 @@ function GuildProfileGamesContent(profile) {
         tmp = gameActivity[tmp.id];
         obj[1] = tmp;
         obj[2] = enabled;
-        let tmp9 = enabled(closure_1_8, obj);
+        let tmp9 = enabled(ClickableGameIcon, obj);
       } else {
         obj = { style: null, children: null };
         obj[0] = closure_3.lastItem;
@@ -102,8 +98,8 @@ function GuildProfileGamesContent(profile) {
     return tmp2;
   }, items);
   createCacheKey = React.useCallback((content) => {
-    let obj = lastGameToDisplay(remainingGames[11]);
-    obj = { key: "profile-game-" + content.id, content: content.name };
+    lastGameToDisplay(remainingGames[11]);
+    const obj = { key: "profile-game-" + content.id, content: content.name };
     obj.open(obj);
   }, []);
   [][0] = profile;
@@ -120,26 +116,25 @@ function GuildProfileGamesContent(profile) {
     obj1 = { style: null, onPress: null, children: null };
     obj1[0] = tmp.container;
     obj1[1] = tmp8;
-    const items1 = [gamesToDisplay.map((game) => enabled(lastGameToDisplay(remainingGames[7]), { game, activityLevel: gameActivity[game.id] }, game.id)), memo];
+    const items1 = [gamesToDisplay.map((item, index) => enabled(lastGameToDisplay(remainingGames[7]), { game: item, activityLevel: gameActivity[item.id] }, item.id)), memo];
     obj1[2] = items1;
     tmp14Result = tmp14(profile(remainingGames[15]).PressableHighlight, obj1);
   } else {
     let obj2 = { style: null, children: null };
     obj2[0] = tmp.container;
-    const items2 = [gamesToDisplay.map((game) => enabled(closure_1_8, { game, activityLevel: gameActivity[game.id], enabled, onPressFallback: closure_7 }, game.id)), memo];
+    const items2 = [gamesToDisplay.map((item, index) => enabled(ClickableGameIcon, { game: item, activityLevel: gameActivity[item.id], enabled, onPressFallback: closure_7 }, item.id)), memo];
     obj2[1] = items2;
     tmp14Result = tmp14(gameActivity, obj2);
   }
   return tmp14Result;
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, borderRadius: ThemesDefault.radii.xs };
+let createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { position: "absolute" };
 createCacheKey[5] = { display: "flex", justifyContent: "center", alignItems: "center", width: 32, height: 32 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGames.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGames.tsx");
 
 export default function GuildProfileGames(profile) {
   profile = profile.profile;

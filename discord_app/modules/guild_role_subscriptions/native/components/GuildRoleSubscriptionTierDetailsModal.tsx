@@ -6,18 +6,21 @@ import Button from "Button" /* 1297 */;
 import Form from "Form" /* 8083 */;
 import FormHeaderDefault from "FormHeader" /* 8913 */;
 import stylesDefault from "styles" /* 13358 */;
+import useFetchListingsForGuild from "useFetchListingsForGuild" /* 14558 */;
 import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
+import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 16945 */;
 import pickImage from "pickImage" /* 16951 */;
+import pickImageDefault from "pickImage" /* 16951 */;
 import HeaderDefault from "Header" /* 16954 */;
 import useEditStateContext from "useEditStateContext" /* 16962 */;
 import FormPriceTierDefault from "FormPriceTier" /* 16991 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 function Content() {
   const tmp3 = stylesDefault();
   let obj = useEditStateContext;
@@ -40,23 +43,23 @@ function Content() {
     obj[0] = tmp10;
     tmp17 = obj;
   }
-  let tmp4Result = tmp4(14558);
+  let tmp4Result = useFetchListingsForGuild;
   const subscriptionListing = tmp4Result.useSubscriptionListing(editStateId);
   let published;
   if (subscriptionListing != null) {
     published = subscriptionListing.published;
   }
   let tmp20 = true === published;
-  tmp4Result = tmp4(16945);
+  tmp4Result = useRoleSubscriptionSettingsDisabled;
   const roleSubscriptionSettingsDisabled = tmp4Result.useRoleSubscriptionSettingsDisabled();
   obj = { style: tmp3.header, children: null };
-  let tmpResult = tmp(8913);
-  const intl = tmp4(1236).intl;
+  let tmpResult = FormHeaderDefault;
+  const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["6XpbbR"]);
   const items = [callback2(tmpResult, obj), , , , , , , ];
   obj1 = { description: null, image: null, imageUploadSize: null, previewShape: null, setImage: null, disabled: null };
-  tmpResult = tmp(16951);
-  const intl2 = tmp4(1236).intl;
+  tmpResult = pickImageDefault;
+  const intl2 = getSystemLocale.intl;
   obj1[0] = intl2.string(getSystemLocale.t.pNZfgG);
   obj1[1] = tmp17;
   obj1[2] = UPLOAD_MEDIUM_SIZE;
@@ -68,14 +71,11 @@ function Content() {
   items[1] = callback2(tmpResult, obj1);
   obj2 = { style: tmp3.header, children: null };
   const tmp14 = callback(obj4.useDescription(editStateId), 2);
-  const tmp22 = closure_11;
-  const tmp23 = closure_10;
-  const tmp24 = callback2;
-  const intl3 = tmp4(1236).intl;
+  const intl3 = getSystemLocale.intl;
   obj2[1] = intl3.string(getSystemLocale.t.rJ6Oad);
   items[2] = callback2(FormHeaderDefault, obj2);
   obj3 = { style: tmp3.textInput, showTopContainer: false, multiline: false, maxLength: closure_7, value: tmp7, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null, disabled: null };
-  const intl4 = tmp4(1236).intl;
+  const intl4 = getSystemLocale.intl;
   obj3[5] = intl4.string(getSystemLocale.t["i4/g+E"]);
   obj3[6] = tmp8;
   obj3[8] = Button.ClearButtonVisibility.WITH_CONTENT;
@@ -83,18 +83,18 @@ function Content() {
   items[3] = callback2(Form.FormInput, obj3);
   obj4 = { style: tmp3.header, children: null };
   const tmpResult1 = FormHeaderDefault;
-  const intl5 = tmp4(1236).intl;
+  const intl5 = getSystemLocale.intl;
   obj4[1] = intl5.string(getSystemLocale.t["74JctW"]);
   items[4] = callback2(FormHeaderDefault, obj4);
   const obj5 = { style: tmp3.textInput, showTopContainer: false, multiline: true, maxLength: closure_6, numberOfLines: 3, value: tmp15, placeholder: null, onChange: null, disabled: null };
-  const intl6 = tmp4(1236).intl;
+  const intl6 = getSystemLocale.intl;
   obj5[6] = intl6.string(getSystemLocale.t["3YHwoG"]);
   obj5[7] = tmp16;
   obj5[8] = roleSubscriptionSettingsDisabled;
   items[5] = callback2(Form.FormInput, obj5);
   const obj6 = { style: tmp3.header, children: null };
   const tmpResult2 = FormHeaderDefault;
-  const intl7 = tmp4(1236).intl;
+  const intl7 = getSystemLocale.intl;
   obj6[1] = intl7.string(getSystemLocale.t.CrRVAx);
   items[6] = callback2(FormHeaderDefault, obj6);
   const tmpResult3 = FormHeaderDefault;
@@ -103,14 +103,14 @@ function Content() {
   }
   const obj7 = { disabled: tmp20, guildId: editStateContext.guildId, price: tmp12, onChange: tmp13 };
   const obj8 = { children: null };
-  items[7] = tmp24(FormPriceTierDefault, obj7);
+  items[7] = callback2(FormPriceTierDefault, obj7);
   obj8[0] = items;
-  return tmp22(tmp23, obj8);
+  return callback(closure_10, obj8);
 }
 ({ GuildRoleSubscriptionsTierScenes: c5, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_6, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: error } = MAX_SUBSCRIPTION_TIERS);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 const memoResult = importAllResult.memo(() => callback2(Content, {}));
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDetailsModal.tsx");
 
 export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   let obj = useEditStateContext;
@@ -130,9 +130,9 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   }
   obj = { title: null, description: null, canProceedToNextStep: null, nextStep: null, scrollable: false };
   obj5 = getRoleEmojisAll;
-  const intl = tmp(1236).intl;
+  const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.o3pHas);
-  const intl2 = tmp(1236).intl;
+  const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.oOOME5);
   obj[2] = tmp3;
   obj[3] = constants.CHANNEL_BENEFITS;

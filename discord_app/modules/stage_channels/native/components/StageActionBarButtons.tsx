@@ -6,31 +6,35 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import _modDef4115 from "module_4115" /* 4115 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
 import PressableBase from "PressableBase" /* 5433 */;
+import openStageChannelSettings from "openStageChannelSettings" /* 8058 */;
 import registerAssetDefault from "registerAsset" /* 8069 */;
 import Form from "Form" /* 8083 */;
 import registerAssetDefault2 from "registerAsset" /* 8118 */;
 import ActionButtonAll from "ActionButton" /* 8694 */;
 import registerAssetDefault3 from "registerAsset" /* 11640 */;
 import registerAssetDefault4 from "registerAsset" /* 12507 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import shouldShowEndStageModalDefault from "shouldShowEndStageModal" /* 12516 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_8 from "generateOldThreadCutoff" /* 4772 */;
-import closure_9 from "initialize" /* 12506 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import initialize from "initialize" /* 12506 */;
 import { REQUEST_TO_SPEAK_SHEET_KEY as closure_10 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
 import { NOOP } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class AgeVerificationSpeakerActionSheet {
   constructor(arg0) {
     onClose = global.onClose;
     handleDismiss = function handleDismiss() {
       onClose();
-      closure_1_1(closure_1_3[30]).hideActionSheet();
+      ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
     };
     tmp = closure_15();
     obj = { startExpanded: true, onDismiss: handleDismiss, contentStyles: { paddingBottom: require("useSafeAreaInsets")().bottom }, header: null, children: null };
@@ -54,11 +58,10 @@ class AgeVerificationSpeakerActionSheet {
     obj6 = {
       size: "lg",
       onPress() {
-            let obj = closure_1_1(closure_1_3[40]);
-            obj = { entryPoint: onClose(closure_1_3[41]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT };
+            const obj = { entryPoint: onClose(dependencyMap[41]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT };
             const result = obj.showAgeVerificationGetStartedModal(obj);
             onClose();
-            closure_1_1(closure_1_3[30]).hideActionSheet();
+            ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
           },
       text: null
     };
@@ -88,7 +91,7 @@ class AnimatedPrompt {
     stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     obj2 = require("module_4115");
     fn = function c() {
-      let obj = show(closure_1_3[54]);
+      let obj = show(dependencyMap[54]);
       let num = 20;
       if (show) {
         num = 0;
@@ -98,7 +101,7 @@ class AnimatedPrompt {
       if (show) {
         num2 = 1;
       }
-      obj[1] = show(closure_1_3[54]).withSpring(num2, closure_1_17);
+      obj[1] = show(dependencyMap[54]).withSpring(num2, closure_1_17);
       return obj;
     };
     obj = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, show, actionBarAnimationConfig: closure_17 };
@@ -125,8 +128,7 @@ class StartStagePrompt {
     obj = {
       onPress() {
             if (!isLive) {
-              const result = closure_1_0(closure_1_3[25]).openStageChannelSettings(closure_0);
-              const obj = closure_1_0(closure_1_3[25]);
+              const result = openStageChannelSettings.openStageChannelSettings(closure_0);
             }
           },
       iconSource: require("registerAsset"),
@@ -146,33 +148,26 @@ class StartStagePrompt {
   }
 }
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { actionBarCTAContainer: { position: "relative" }, imageStyle: null, iconStyle: null, iconContainerStyle: null, continueContainer: null, continueText: null, continueIcon: null };
-createCacheKey = { tintColor: ThemesDefault.colors.WHITE };
+let createCacheKey = { tintColor: ThemesDefault.colors.WHITE };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20 };
-let obj1 = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20 };
 createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, borderRadius: ThemesDefault.radii.lg, padding: 4 };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", justifyContent: "center", padding: 16 };
-let obj2 = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360, borderRadius: ThemesDefault.radii.lg, padding: 4 };
 createCacheKey[5] = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontSize: 14, lineHeight: 18 };
-let obj3 = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontSize: 14, lineHeight: 18 };
 createCacheKey[6] = { tintColor: ThemesDefault.unsafe_rawColors.BLUE_345 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj5 = { container: null, header: null, content: null, title: null, body: null, footer: null };
-let obj4 = { tintColor: ThemesDefault.unsafe_rawColors.BLUE_345 };
 obj5[0] = { paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_24 };
 obj5[1] = { alignItems: "center" };
 createCacheKey = { gap: ThemesDefault.space.PX_8 };
 obj5[2] = createCacheKey;
 obj5[3] = { textAlign: "center" };
 obj5[4] = { textAlign: "center" };
-let obj6 = { paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_24 };
 obj5[5] = { gap: ThemesDefault.space.PX_12 };
 let closure_15 = createCacheKey.createStyles(obj5);
 let closure_17 = { mass: 1, stiffness: 100, damping: 30, overshootClamping: false, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
 let closure_18 = { code: "function StageActionBarButtonsTsx1(){const{withSpring,show,actionBarAnimationConfig}=this.__closure;return{marginTop:withSpring(show?0:20,actionBarAnimationConfig),opacity:withSpring(show?1:0,actionBarAnimationConfig)};}" };
-const obj8 = { gap: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageActionBarButtons.tsx");
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/StageActionBarButtons.tsx");
 
 export const MoveToAudienceButton = function MoveToAudienceButton(channel) {
   channel = channel.channel;
@@ -181,7 +176,7 @@ export const MoveToAudienceButton = function MoveToAudienceButton(channel) {
   obj[0] = intl.string(channel(1236).t.ezLpY6);
   obj[1] = registerAssetDefault4;
   obj[2] = function onPress() {
-    const result = channel(closure_1_3[14]).audienceAckRequestToSpeak(channel, true);
+    const result = channel(dependencyMap[14]).audienceAckRequestToSpeak(channel, true);
   };
   obj[3] = channel.isSmallSize;
   return callback2(ActionButtonAll.ActionButton, obj);
@@ -218,12 +213,12 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
     imageStyle = imageStyle.imageStyle;
     obj[3] = imageStyle;
     obj[4] = function onPress() {
-      return stateFromStores(closure_1_3[21]).updateStageMusicMuted(!stateFromStores);
+      return stateFromStores(dependencyMap[21]).updateStageMusicMuted(!stateFromStores);
     };
     obj[5] = isSmallSize;
-    closure_12(ActionButtonAll.ActionButton, obj);
-    const tmp4 = closure_12;
+    callback(ActionButtonAll.ActionButton, obj);
   }
+  obj2 = stateFromStores(12508);
 };
 export const DisconnectStageButton = function DisconnectStageButton(channel) {
   channel = channel.channel;
@@ -233,12 +228,12 @@ export const DisconnectStageButton = function DisconnectStageButton(channel) {
   obj[1] = registerAssetDefault2;
   obj[2] = channel(12514).DoorExitIcon;
   obj[3] = function onPress() {
-    if (closure_1_1(closure_1_3[24])(channel)) {
-      let tmp3Result = tmp3(tmp[25]);
-      tmp3Result.openEndStageModal(tmp2);
+    if (shouldShowEndStageModalDefault(channel)) {
+      let tmp3Result = channel(dependencyMap[25]);
+      tmp3Result.openEndStageModal(channel);
     } else {
-      tmp3Result = tmp3(tmp[26]);
-      tmp3Result.handleDisconnect(tmp2);
+      tmp3Result = channel(dependencyMap[26]);
+      tmp3Result.handleDisconnect(channel);
     }
   };
   obj[4] = channel.isSmallSize;
@@ -249,15 +244,14 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
   const isSmallSize = channel.isSmallSize;
   let analyticsLocations;
   function handleOpenAudienceList() {
-    let obj = analyticsLocations(closure_1_3[30]);
-    obj = { channelId: channel.id, analyticsLocations };
-    obj.openLazy(channel(closure_1_3[32])(closure_1_3[31], closure_1_3.paths), closure_1_10, obj);
+    analyticsLocations(dependencyMap[30]);
+    const obj = { channelId: channel.id, analyticsLocations };
+    obj.openLazy(channel(dependencyMap[32])(dependencyMap[31], dependencyMap.paths), closure_1_10, obj);
   }
   analyticsLocations = analyticsLocations(7139)().analyticsLocations;
   let obj = channel(6708);
   const stageParticipantsCount = obj.useStageParticipantsCount(channel.id, channel(6703).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
   if (stageParticipantsCount > 0) {
-    obj = { accessibilityLabel: null, source: null, imageStyle: null, IconComponent: null, onPress: null, notifications: null, isSmallSize: null };
     const intl = tmp3(1236).intl;
     obj = { count: null };
     obj[0] = stageParticipantsCount;
@@ -291,7 +285,6 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
   channel = channel.channel;
   let _require;
   let first;
-  importAll = undefined;
   let shouldAgeVerifyToSpeakForCurrentUser;
   let shouldShowAgeVerificationPopover;
   [tmp4, c0] = shouldShowAgeVerificationPopover(first(shouldAgeVerifyToSpeakForCurrentUser[42])(channel), 2);
@@ -311,13 +304,12 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
       tmp = !first;
     }
     if (tmp) {
-      let obj = _undefined(shouldAgeVerifyToSpeakForCurrentUser[30]);
-      obj = { content: null, key: "AgeVerificationSpeakerActionSheet" };
-      obj = { onClose: null };
+      _undefined(shouldAgeVerifyToSpeakForCurrentUser[30]);
+      const obj = { onClose: null };
       obj[0] = function onClose() {
         return callback(true);
       };
-      obj[0] = closure_1_12(closure_1_16, obj);
+      obj[0] = closure_1_12(AgeVerificationSpeakerActionSheet, obj);
       obj.showActionSheet(obj);
     }
   }, items);
@@ -344,8 +336,8 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
   obj[3] = HandRequestSpeakIcon;
   obj[4] = tmp13 ? NOOP : (() => {
     if (shouldAgeVerifyToSpeakForCurrentUser) {
-      let obj = first(shouldAgeVerifyToSpeakForCurrentUser[40]);
-      obj = { entryPoint: null };
+      first(shouldAgeVerifyToSpeakForCurrentUser[40]);
+      const obj = { entryPoint: null };
       obj[0] = _undefined(shouldAgeVerifyToSpeakForCurrentUser[41]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
       const result = obj.showAgeVerificationGetStartedModal(obj);
     } else {
@@ -354,23 +346,21 @@ export const RequestToSpeakButton = function RequestToSpeakButton(channel) {
   });
   obj[5] = tmp13;
   obj[6] = channel.isSmallSize;
-  return closure_12(importAll(shouldAgeVerifyToSpeakForCurrentUser[11]).ToggledActionButton, obj);
+  return callback(importAll(shouldAgeVerifyToSpeakForCurrentUser[11]).ToggledActionButton, obj);
 };
 export const ChatButton = function ChatButton(channel) {
   channel = channel.channel;
   const isSmallSize = channel.isSmallSize;
-  let isVoiceChannelLocked;
-  let openChat;
   let obj = channel(589);
   const items = [closure_8];
   const items1 = [channel.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ unreadCount: closure_1_8.getUnreadCount(channel.id), mentionCount: closure_1_8.getMentionCount(channel.id) }), items1);
   ({ unreadCount, mentionCount } = stateFromStoresObject);
   obj1 = channel(12535);
-  isVoiceChannelLocked = obj1.useIsVoiceChannelLocked(channel);
+  const isVoiceChannelLocked = obj1.useIsVoiceChannelLocked(channel);
   let obj2 = channel(10010);
   const voiceChatNavigationContext = obj2.useVoiceChatNavigationContext();
-  openChat = undefined;
+  let openChat;
   if (voiceChatNavigationContext != null) {
     openChat = voiceChatNavigationContext.openChat;
   }
@@ -383,7 +373,6 @@ export const ChatButton = function ChatButton(channel) {
   }
   if (mentionCount <= 0) {
     if (unreadCount <= 0) {
-      obj = { imageStyle: null, accessibilityLabel: null, IconComponent: null, source: null, onPress: null, appearsDisabled: null, isSmallSize: null };
       obj = { tintColor: null };
       obj[0] = isVoiceChannelLocked(712).unsafe_rawColors.WHITE;
       obj[0] = obj;
@@ -417,16 +406,13 @@ export { AnimatedPrompt };
 export const AnimatedStartStagePrompt = function AnimatedStartStagePrompt(channel) {
   channel = channel.channel;
   let isLive;
-  let first;
-  closure_2 = undefined;
   let first1;
   let callback;
   let first2;
-  closure_6 = undefined;
   let obj = isLive(first1[55]);
   isLive = obj.useStageChannelStartEvent(channel.id).isLive;
   let tmp = callback(first2.useState(false), 2);
-  first = tmp[0];
+  const first = tmp[0];
   closure_2 = tmp[1];
   const tmp3 = callback(first2.useState(false), 2);
   first1 = tmp3[0];
@@ -493,7 +479,7 @@ export const JoinStagePrompt = function JoinStagePrompt(channel) {
   channel = channel.channel;
   const obj = {
     onPress() {
-      channel(closure_1_3[58]).connectAndOpen(channel);
+      channel(dependencyMap[58]).connectAndOpen(channel);
     },
     iconSource: registerAssetDefault,
     iconStyle: null,
@@ -511,9 +497,7 @@ export const JoinStagePrompt = function JoinStagePrompt(channel) {
 };
 export const ContinueToStagePrompt = function ContinueToStagePrompt(onContinue) {
   const tmp = callback4();
-  let obj = { accessibilityRole: "button", onPress: onContinue.onContinue, children: null };
-  obj = { style: tmp.continueContainer, children: null };
-  obj = { children: null };
+  const obj = { children: null };
   obj1 = { style: tmp.continueText, children: null };
   const intl = getSystemLocale.intl;
   obj1[1] = intl.string(getSystemLocale.t["jMLfp/"]);

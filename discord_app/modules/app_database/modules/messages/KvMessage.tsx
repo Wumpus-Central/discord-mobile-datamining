@@ -1,13 +1,12 @@
 // === Module 5081: fromMessage ===
 
 // Module 5081 (fromMessage)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "trackCommunicationDisabled" /* 1990 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 
-let prototype;
-prototype = function KvMessage() {
+const prototype = function KvMessage() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromMessage"] = function fromMessage(c0, closure_1, nextResult, result) {
@@ -30,7 +29,7 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
   const mentions = author.mentions;
   let mapped;
   if (mentions != null) {
-    mapped = mentions.map((id) => id.id);
+    mapped = mentions.map((item, index) => item.id);
   }
   if (mapped == null) {
     mapped = [];
@@ -39,26 +38,17 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
   const items1 = [];
   const items2 = [];
   for (const item10035 of set) {
-    let tmp5 = item10035;
     if (null != item10035) {
-      let tmp6 = user;
-      let tmp7 = item10035;
-      let user = user.getUser(tmp5);
+      let user = user.getUser(item10035);
       let tmp10 = arg0;
-      let tmp9 = trueMember;
       if (arg0 == null) {
         tmp10 = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      let tmp11 = item10035;
-      let trueMember = trueMember.getTrueMember(tmp10, tmp5);
-      let tmp13 = user;
+      let trueMember = trueMember.getTrueMember(tmp10, item10035);
       if (null != user) {
-        let tmp14 = user;
         let arr = items2.push(user);
       }
-      let tmp16 = trueMember;
       if (null != trueMember) {
-        let tmp17 = trueMember;
         arr = items1.push(trueMember);
       }
     }
@@ -67,6 +57,6 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
   const items3 = [items1, items2];
   return items3;
 };
-const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/KvMessage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_database/modules/messages/KvMessage.tsx");
 
 export const KvMessage = prototype;

@@ -1,11 +1,11 @@
 // === Module 7699: useTimeout ===
 
 // Module 7699 (useTimeout)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
 
 ({ useEffect: c0, useRef: closure_1 } = noop);
-const result = set.fileFinishedImporting("hooks/useTimeout.tsx");
+const result = obj132.fileFinishedImporting("hooks/useTimeout.tsx");
 
 export default function useTimeout(arg0, arg1) {
   const callback = arg0;

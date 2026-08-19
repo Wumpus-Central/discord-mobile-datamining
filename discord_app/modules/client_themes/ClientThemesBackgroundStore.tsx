@@ -9,17 +9,19 @@ import DismissibleContent from "DismissibleContent" /* 1377 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
-import closure_5 from "initialize" /* 1303 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
-import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_8 from "handleConnectionClosedOrResumed" /* 1340 */;
+import nameFromUser from "nameFromUser" /* 4219 */;
+import setSystemTheme from "setSystemTheme" /* 4222 */;
+import initialize from "initialize" /* 1303 */;
+import handleThemeChange from "handleThemeChange" /* 1302 */;
+import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
 import { isGuildTextChannelType } from "createChannelRecord" /* 1395 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "ThemeTypes" /* 1348 */;
 import { SystemThemeState } from "SystemThemeState" /* 1305 */;
 
-require = arg1;
+require = fn;
 function isSyncedModeThemesEnabled() {
   return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
@@ -38,7 +40,6 @@ function handleUserStoreChange() {
     closure_14 = tmp;
     c16 = false;
   }
-  const obj = getPremiumPlanItemDefault;
 }
 function handleSelectivelySyncedStoreChange() {
   const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
@@ -69,11 +70,11 @@ function handleUserSettingsProtoStoreUpdate() {
     result = null == backgroundGradientPresetId;
   }
   if (!result) {
-    let tmpResult = tmp(1366);
+    let tmpResult = require(1366) /* isPerModeThemingActive */;
     result = tmpResult.isPerModeThemingActive(isSyncedModeThemesEnabled);
   }
   if (!result) {
-    tmpResult = tmp(4222);
+    tmpResult = setSystemTheme;
     tmpResult.setUseSystemTheme(SystemThemeState.OFF);
   }
   if (null != backgroundGradientPresetId) {
@@ -180,7 +181,6 @@ prototype["getLinearGradient"] = function getLinearGradient() {
   let linearGradientForBackgroundGradient = null;
   if (null != this.gradientPreset) {
     linearGradientForBackgroundGradient = getThemeForColor.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
-    const obj = getThemeForColor;
   }
   return linearGradientForBackgroundGradient;
 };
@@ -242,10 +242,9 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
               c15 = true;
             }
           }
-          tmp6Result = tmp6(4219);
+          tmp6Result = nameFromUser;
         }
         obj2 = UNSAFE_isDismissibleContentDismissed;
-        tmp6 = require;
       }
     }
   },
@@ -261,6 +260,6 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDe
   SET_SAME_AS_DEVICE_THEME_ENABLED: handleSameAsDeviceThemeToggle,
   CLEAR_SYNCED_CLIENT_THEMES: handleSameAsDeviceThemeToggle
 });
-let result = require("set").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundStore.tsx");
 
 export default clientThemesBackgroundStore;

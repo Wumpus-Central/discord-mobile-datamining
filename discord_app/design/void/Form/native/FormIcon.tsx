@@ -6,10 +6,10 @@ import Button from "Button" /* 1297 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_3 = createCacheKey.createStyles({ icon: { opacity: 0.6 } });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormIcon.tsx");
 
 export default function FormIcon(color) {
   ({ style, themedColor } = color);

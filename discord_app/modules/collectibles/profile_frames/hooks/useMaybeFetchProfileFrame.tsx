@@ -3,10 +3,10 @@
 // Module 8945 (useMaybeFetchProfileFrame)
 import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8946 */;
 import useProfileFrameDefault from "useProfileFrame" /* 8957 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
 
 export default function useMaybeFetchProfileFrame(arg0, location) {
   const _require = arg0;
@@ -17,8 +17,8 @@ export default function useMaybeFetchProfileFrame(arg0, location) {
   const items = [null == tmp && isProfileFramesEnabled && null != arg0 && null == tmp3, arg0];
   const effect = React.useEffect(() => {
     if (closure_1) {
-      const result = callback(closure_1_2[4]).maybeFetchCollectiblesProduct(callback);
-      const obj = callback(closure_1_2[4]);
+      const result = callback(dependencyMap[4]).maybeFetchCollectiblesProduct(callback);
+      const obj = callback(dependencyMap[4]);
     }
   }, items);
   if (tmp == null) {

@@ -1,9 +1,9 @@
 // === Module 13347: metadata ===
 
 // Module 13347 (metadata)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/images/consoles/mobile_background.jpg.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/images/consoles/mobile_background.jpg.js");
 
 export default "https://cdn.discordapp.com/assets/content/d9cf6b91365ad4ae12ccf7a06339af14feb61c71b75a681f0fec51604cad3c7a.jpg";
 export const metadata = { fileBytes: 76282 };

@@ -1,10 +1,10 @@
 // === Module 8647: useFastestListPropsScrollReporting ===
 
 // Module 8647 (useFastestListPropsScrollReporting)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let closure_2 = { code: "function useFastestListPropsScrollReportingNativeTsx1(event){const{scrollPosition,horizontal}=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}}" };
-let result = set.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx");
+let result = obj132.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx");
 
 export default function useFastestListPropsScrollReporting(scrollReporting, horizontal) {
   const _require = horizontal;

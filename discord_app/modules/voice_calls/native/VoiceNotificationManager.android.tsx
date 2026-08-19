@@ -3,20 +3,22 @@
 // Module 13828 (processColor)
 import ThemesDefault from "Themes" /* 712 */;
 import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import initializeDefault2 from "initialize" /* 7504 */;
+import _modDef12598 from "module_12598" /* 12598 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { processColor } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "addApplication" /* 4478 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import addApplication from "addApplication" /* 4478 */;
+import reset from "reset" /* 4652 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { InputModes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-let set = arg1;
+let obj132 = fn;
 let closure_13 = processColor(ThemesDefault.unsafe_rawColors.BRAND_500);
 let closure_14 = processColor(ThemesDefault.unsafe_rawColors.RED_NEW_46);
 class VoiceNotificationManager {
@@ -130,8 +132,8 @@ class VoiceNotificationManager {
         ({ connectionState, selfMute, deafened, isStreaming } = connectionState);
         const channel = closure_1_7.getChannel(connectionState.channelId);
         if (null != channel) {
-          let tmp16 = closure_1_1;
-          let updateServiceHandler = closure_1_2;
+          let tmp16 = importDefault;
+          let updateServiceHandler = dependencyMap;
           let str2 = "";
           if (null != embeddedActivity3) {
             let applicationId;
@@ -147,7 +149,7 @@ class VoiceNotificationManager {
             str2 = " - " + tmp16(updateServiceHandler[15])(name);
             const tmp16Result = tmp16(updateServiceHandler[15]);
           }
-          const obj3 = closure_1_1(closure_1_2[14]);
+          const obj3 = _modDef12598;
           obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null };
           const channelName = obj(updateServiceHandler[16]).computeChannelName(channel, closure_1_11, closure_1_10);
           const intl = obj(updateServiceHandler[17]).intl;
@@ -188,8 +190,7 @@ class VoiceNotificationManager {
           updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
           const obj4 = obj(updateServiceHandler[16]);
         } else {
-          closure_1_1(closure_1_2[13]).removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);
-          const obj2 = closure_1_1(closure_1_2[13]);
+          initializeDefault2.removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);
         }
         const tmp6 = closure_1_3(obj.getIcon(connectionState), 2);
       } else {
@@ -197,7 +198,7 @@ class VoiceNotificationManager {
       }
     };
     obj.createAction = function createAction(channel, Disconnect, intl2) {
-      obj = { tag: "" + Disconnect + channel.id, taskName: Disconnect, title: intl2, data: obj };
+      { tag: "" + Disconnect + channel.id, taskName: Disconnect, title: intl2, data: obj };
       obj = { channelId: channel.id };
       return obj;
     };
@@ -217,10 +218,10 @@ prototype["terminate"] = function terminate() {
   closure_4.removeChangeListener(this.handleEmbeddedActivityStateChange);
   closure_6.removeChangeListener(this.handleApplicationStreamStateChange);
 };
-set = Object.create(VoiceNotificationManager.prototype);
-set.voiceServiceHandlerId = 9000;
-set.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: null, isPushToTalk: "RCTView", embeddedActivity: "face_with_spiral_eyes", isStreaming: "woozy_face" };
-set.handleVoiceStateChange = function handleVoiceStateChange() {
+obj132 = Object.create(VoiceNotificationManager.prototype);
+obj132.voiceServiceHandlerId = 9000;
+obj132.state = { channelId: "flex", connectionState: "context", selfMute: false, deafened: null, isPushToTalk: "RCTView", embeddedActivity: "face_with_spiral_eyes", isStreaming: "woozy_face" };
+obj132.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = closure_1_9.getChannelId();
   const state = closure_1_9.getState();
   if (!tmp3) {
@@ -231,7 +232,7 @@ set.handleVoiceStateChange = function handleVoiceStateChange() {
     obj.handleUpdate(obj);
   }
 };
-set.handleMediaEngineStateChange = function handleMediaEngineStateChange() {
+obj132.handleMediaEngineStateChange = function handleMediaEngineStateChange() {
   obj = closure_1_8;
   const tmp = closure_1_8.isSelfMute() || obj.isSelfMutedTemporarily();
   const tmp2 = obj.isSelfDeaf() || obj.isDeaf();
@@ -252,7 +253,7 @@ set.handleMediaEngineStateChange = function handleMediaEngineStateChange() {
     obj2.handleUpdate(obj);
   }
 };
-set.handleEmbeddedActivityStateChange = function handleEmbeddedActivityStateChange() {
+obj132.handleEmbeddedActivityStateChange = function handleEmbeddedActivityStateChange() {
   if (null != obj.state.channelId) {
     obj = {};
     const currentEmbeddedActivity = closure_1_4.getCurrentEmbeddedActivity();
@@ -261,7 +262,7 @@ set.handleEmbeddedActivityStateChange = function handleEmbeddedActivityStateChan
     obj.handleUpdate(obj);
   }
 };
-set.handleApplicationStreamStateChange = function handleApplicationStreamStateChange() {
+obj132.handleApplicationStreamStateChange = function handleApplicationStreamStateChange() {
   const tmp = null != closure_1_6.getCurrentUserActiveStream();
   if (obj.state.isStreaming !== tmp) {
     obj = {};
@@ -270,7 +271,7 @@ set.handleApplicationStreamStateChange = function handleApplicationStreamStateCh
     obj.handleUpdate(obj);
   }
 };
-set.getIcon = function getIcon(state) {
+obj132.getIcon = function getIcon(state) {
   ({ deafened, selfMute, isPushToTalk } = state);
   const ServiceNotificationIcon = obj(table[12]).ServiceNotificationIcon;
   if (deafened) {
@@ -287,7 +288,7 @@ set.getIcon = function getIcon(state) {
   }
   return items3;
 };
-set.handleUpdate = function handleUpdate(connectionState) {
+obj132.handleUpdate = function handleUpdate(connectionState) {
   if (null != connectionState.connectionState) {
     let updateServiceHandlerResult = obj;
     [tmp4, tmp5] = closure_1_3(obj.getIcon(obj.state), 2);
@@ -325,8 +326,8 @@ set.handleUpdate = function handleUpdate(connectionState) {
     ({ connectionState, selfMute, deafened, isStreaming } = connectionState);
     const channel = closure_1_7.getChannel(connectionState.channelId);
     if (null != channel) {
-      let tmp16 = closure_1_1;
-      let updateServiceHandler = closure_1_2;
+      let tmp16 = importDefault;
+      let updateServiceHandler = dependencyMap;
       let str2 = "";
       if (null != embeddedActivity3) {
         let applicationId;
@@ -342,7 +343,7 @@ set.handleUpdate = function handleUpdate(connectionState) {
         str2 = " - " + tmp16(updateServiceHandler[15])(name);
         const tmp16Result = tmp16(updateServiceHandler[15]);
       }
-      const obj3 = closure_1_1(closure_1_2[14]);
+      const obj3 = _modDef12598;
       obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null };
       const channelName = obj(updateServiceHandler[16]).computeChannelName(channel, closure_1_11, closure_1_10);
       const intl = obj(updateServiceHandler[17]).intl;
@@ -383,16 +384,15 @@ set.handleUpdate = function handleUpdate(connectionState) {
       updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
       const obj4 = obj(updateServiceHandler[16]);
     } else {
-      closure_1_1(closure_1_2[13]).removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);
-      const obj2 = closure_1_1(closure_1_2[13]);
+      initializeDefault2.removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);
     }
     const tmp6 = closure_1_3(obj.getIcon(connectionState), 2);
   } else {
     obj.state = connectionState;
   }
 };
-set.createAction = function createAction(channel, Disconnect, intl2) {
-  obj = { tag: "" + Disconnect + channel.id, taskName: Disconnect, title: intl2, data: obj };
+obj132.createAction = function createAction(channel, Disconnect, intl2) {
+  { tag: "" + Disconnect + channel.id, taskName: Disconnect, title: intl2, data: obj };
   obj = { channelId: channel.id };
   return obj;
 };
@@ -401,12 +401,12 @@ class VoiceNotificationLifecycleManager extends tmp3 {
 }
 const prototype2 = VoiceNotificationLifecycleManager.prototype;
 prototype2["_initialize"] = function _initialize() {
-  set.initialize();
+  obj132.initialize();
 };
 prototype2["_terminate"] = function _terminate() {
-  set.terminate();
+  obj132.terminate();
 };
 const voiceNotificationLifecycleManager = new VoiceNotificationLifecycleManager();
-const result = set.fileFinishedImporting("modules/voice_calls/native/VoiceNotificationManager.android.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_calls/native/VoiceNotificationManager.android.tsx");
 
 export default voiceNotificationLifecycleManager;

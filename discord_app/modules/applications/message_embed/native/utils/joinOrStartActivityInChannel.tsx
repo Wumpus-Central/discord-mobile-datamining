@@ -1,12 +1,12 @@
 // === Module 11132: _joinOrStartActivityInChannel ===
 
 // Module 11132 (_joinOrStartActivityInChannel)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1390 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 
-const require = arg1;
+const require = fn;
 function _joinOrStartActivityInChannel() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -92,7 +92,7 @@ function _joinOrStartActivityInChannel() {
                 }
               }
               const embeddedActivitiesForChannel = store.getEmbeddedActivitiesForChannel(callback2);
-              length = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === c0);
+              length = embeddedActivitiesForChannel.filter((item, index) => item.applicationId === c0);
               compositeInstanceId = undefined;
               if (length.length > 0) {
                 compositeInstanceId = length[0].compositeInstanceId;
@@ -144,7 +144,7 @@ function _joinOrStartActivityInChannel() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/applications/message_embed/native/utils/joinOrStartActivityInChannel.tsx");
+const result = require("obj132").fileFinishedImporting("modules/applications/message_embed/native/utils/joinOrStartActivityInChannel.tsx");
 
 export const joinOrStartActivityInChannel = function joinOrStartActivityInChannel(arg0) {
   const self = this;

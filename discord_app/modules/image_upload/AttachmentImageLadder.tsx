@@ -1,10 +1,10 @@
 // === Module 1471: items ===
 
 // Module 1471 (items)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 const items = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];
-let result = set.fileFinishedImporting("modules/image_upload/AttachmentImageLadder.tsx");
+let result = obj132.fileFinishedImporting("modules/image_upload/AttachmentImageLadder.tsx");
 
 export const ATTACHMENT_LADDER = items;
 export const ATTACHMENT_LADDER_MAX_UPSCALE = 1.1;
@@ -17,15 +17,14 @@ export const getSnapDownMaxUpscale = function getSnapDownMaxUpscale(minSnapDownD
 };
 export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) {
   ({ targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale } = arg0);
-  let bound;
-  bound = Math.max(targetWidth, targetHeight);
+  const bound = Math.max(targetWidth, targetHeight);
   if (bound <= 0) {
     let obj = { width: null, height: null };
     obj[0] = targetWidth;
     obj[1] = targetHeight;
     return obj;
   } else {
-    let found = bound.find((arg0) => bound <= arg0);
+    let found = bound.find((item, index) => bound <= item);
     if (found == null) {
       found = arr[arr.length - 1];
     }
@@ -41,24 +40,19 @@ export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) 
         tmp5 = found;
         if (!tmp4) {
           for (const item10027 of arr) {
-            let tmp8 = item10027;
             if (item10027 <= bound) {
-              let tmp = item10027;
               continue;
             } else {
-              let tmp9 = obj;
               obj.return();
               break;
             }
-            let tmp10 = tmp;
-            let tmp11 = null != tmp;
+            let tmp11 = null != item10027;
             if (tmp11) {
-              let tmp12 = tmp;
-              tmp11 = bound <= tmp * maxUpscale;
+              tmp11 = bound <= item10027 * maxUpscale;
             }
             tmp5 = found;
             if (tmp11) {
-              tmp5 = tmp;
+              tmp5 = item10027;
             }
           }
         }

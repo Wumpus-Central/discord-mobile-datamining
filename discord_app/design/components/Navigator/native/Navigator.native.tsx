@@ -2,15 +2,16 @@
 
 // Module 6312 (NavigationStack)
 import ThemesDefault from "Themes" /* 712 */;
+import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing" /* 1209 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
 import useNavigationTheme from "useNavigationTheme" /* 6552 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function NavigationStack(screens) {
   screens = screens.screens;
   const onWillFocus = screens.onWillFocus;
@@ -29,35 +30,28 @@ function NavigationStack(screens) {
   const headerBackTitle = screens.headerBackTitle;
   const hideTitle = screens.hideTitle;
   const disableHeaderAnimation = screens.disableHeaderAnimation;
-  closure_18 = undefined;
-  let styles;
-  let token;
-  let navigatorShouldCrossfade;
-  let first;
-  let top;
-  closure_24 = undefined;
   ({ initialRouteName, detachInactiveScreens } = screens);
   const tmp = cardShadowEnabled();
   closure_18 = tmp;
   let obj = screens(onDidFocus[7]);
-  styles = obj.useStyles();
-  token = screens(onDidFocus[8]).useToken(onWillFocus(onDidFocus[5]).colors.NAVIGATOR_HEADER_TINT);
+  const styles = obj.useStyles();
+  const token = screens(onDidFocus[8]).useToken(onWillFocus(onDidFocus[5]).colors.NAVIGATOR_HEADER_TINT);
   const obj2 = screens(onDidFocus[8]);
-  navigatorShouldCrossfade = screens(onDidFocus[6]).useNavigatorShouldCrossfade();
-  first = gestureResponseDistance(gestureDirection.useState(() => screens(onDidFocus[9]).createStackNavigator()), 1)[0];
-  top = onWillFocus(onDidFocus[10])().top;
+  const navigatorShouldCrossfade = screens(onDidFocus[6]).useNavigatorShouldCrossfade();
+  const first = gestureResponseDistance(gestureDirection.useState(() => screens(onDidFocus[9]).createStackNavigator()), 1)[0];
+  const top = onWillFocus(onDidFocus[10])().top;
   let items = [onWillFocus, onDidFocus];
   closure_24 = gestureDirection.useCallback((arg0) => {
     closure_0 = arg0;
     return {
       focus() {
-        if (closure_1_1 != null) {
+        if (onWillFocus != null) {
           tmp(closure_0);
         }
       },
       transitionEnd(data) {
         if (!data.data.closing) {
-          if (closure_1_2 != null) {
+          if (onDidFocus != null) {
             tmp(closure_0);
           }
         }
@@ -121,8 +115,8 @@ function NavigationStack(screens) {
       if (headerBackTitle == null) {
         let stringResult;
         if (1 === routes.length) {
-          const intl = tmp3(tmp4[11]).intl;
-          stringResult = intl.string(tmp3(tmp4[11]).t["13/7kX"]);
+          const intl = screens(onDidFocus[11]).intl;
+          stringResult = intl.string(screens(onDidFocus[11]).t["13/7kX"]);
         }
         tmp5 = stringResult;
       }
@@ -139,20 +133,19 @@ function NavigationStack(screens) {
       obj[19] = tmp7;
       if (navigatorShouldCrossfade) {
         let fn2 = (current) => {
-          let obj = { cardStyle: null };
-          obj = { opacity: progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1] }) };
+          const obj = { opacity: progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1] }) };
           progress = current.current.progress;
           obj[0] = obj;
           return obj;
         };
       } else {
-        fn2 = tmp3(tmp4[9]).CardStyleInterpolators.forHorizontalIOS;
+        fn2 = screens(onDidFocus[9]).CardStyleInterpolators.forHorizontalIOS;
       }
       obj[20] = fn2;
       if (disableHeaderAnimation) {
-        let fn3 = tmp3(tmp4[9]).HeaderStyleInterpolators.forNoAnimation;
-      } else if (tmp2) {
-        fn3 = tmp3(tmp4[9]).HeaderStyleInterpolators.forFade;
+        let fn3 = screens(onDidFocus[9]).HeaderStyleInterpolators.forNoAnimation;
+      } else if (navigatorShouldCrossfade) {
+        fn3 = screens(onDidFocus[9]).HeaderStyleInterpolators.forFade;
       } else {
         fn3 = (arg0) => {
           ({ current, next, layouts, direction } = arg0);
@@ -170,9 +163,9 @@ function NavigationStack(screens) {
   };
   const obj3 = screens(onDidFocus[6]);
   const keys = onWillFocus(onDidFocus[12]).keys(screens);
-  obj[3] = keys.map((name) => {
+  obj[3] = keys.map((item, index) => {
     let obj = {};
-    let merged = Object.assign(obj[name]);
+    let merged = Object.assign(obj[item]);
     let fullscreen = obj.fullscreen;
     if (!fullscreen) {
       fullscreen = null != obj.customNavbar;
@@ -189,7 +182,7 @@ function NavigationStack(screens) {
       obj.headerStyle = items;
     }
     obj = {
-      name,
+      name: item,
       initialParams: obj.initialParams,
       listeners: closure_24,
       options: obj,
@@ -200,7 +193,7 @@ function NavigationStack(screens) {
         return cardOverlayEnabled(screens(onDidFocus[13]).NavigatorScreen, obj);
       }
     };
-    return cardOverlayEnabled(first.Screen, obj, name);
+    return cardOverlayEnabled(first.Screen, obj, item);
   });
   return cardOverlayEnabled(first.Navigator, obj);
 }
@@ -208,9 +201,8 @@ function WrappedNavigationStack(arg0) {
   ({ initialRouteStack: require, initialRouteState, navigationTheme } = arg0);
   ({ initialRouteName, onStateChange } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let navigationContainerRef;
   let obj = createStandardNavigationFactories;
-  navigationContainerRef = obj.createNavigationContainerRef();
+  const navigationContainerRef = obj.createNavigationContainerRef();
   const first = callback(React.useState(() => {
     let tmp2;
     if (null != closure_0) {
@@ -233,7 +225,7 @@ function WrappedNavigationStack(arg0) {
   obj = { children: null };
   obj[2] = initialRouteState;
   obj[3] = function onReady() {
-    const routingInstrumentation = closure_1_0(closure_1_2[17]).routingInstrumentation;
+    const routingInstrumentation = _maybeBackfillMissingBreadcrumbsFromTelemetryRing.routingInstrumentation;
     const result = routingInstrumentation.registerNavigationContainer(navigationContainerRef);
   };
   obj[4] = onStateChange;
@@ -244,8 +236,7 @@ function WrappedNavigationStack(arg0) {
   return jsx(createStandardNavigationFactories.NavigationIndependentTree, { children: null });
 }
 ({ StyleSheet, View: c5 } = get_ActivityIndicator);
-createCacheKey = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
-createCacheKey = {};
+const createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
 createCacheKey[0] = createCacheKey;
@@ -253,8 +244,7 @@ createCacheKey[1] = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundCol
 createCacheKey[2] = { paddingLeft: 16, marginRight: -16 };
 createCacheKey[3] = { paddingRight: 16, marginLeft: -16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };
-let result = require("set").fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
 
 export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDateLabel, items) {
   return React.useMemo(getNextRenewalDateLabel, items);

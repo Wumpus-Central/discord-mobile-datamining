@@ -1,9 +1,10 @@
 // === Module 10691: apexExperiment ===
 
 // Module 10691 (apexExperiment)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getQuestOrbMultiplierEligibilityForUser from "getQuestOrbMultiplierEligibilityForUser" /* 10493 */;
 import items from "items" /* 10494 */;
+import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 10692 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let obj = { 1: null };
@@ -33,7 +34,7 @@ const obj10 = { CONTROL: 0, [0]: "CONTROL", NEW_LAYOUT_WITH_SEARCH: 1, [1]: "NEW
 const apexExperiment9 = ApexExperiment.createApexExperiment({ name: "2026-05-bounty-stale-refresh-quest-home", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const apexExperiment10 = ApexExperiment.createApexExperiment({ name: "2026-06-quest-home-layout-visual-tweaks", kind: "user", defaultConfig: { enabled: false, variant: obj10.CONTROL }, variations: { 0: { enabled: false, variant: obj10.CONTROL }, 1: { enabled: true, variant: obj10.NEW_LAYOUT_WITH_SEARCH }, 2: { enabled: true, variant: obj10.LARGE_MASK_MARGIN }, 3: { enabled: true, variant: obj10.REMOVE_QUEST_TITLE_SUFFIX }, 4: { enabled: true, variant: obj10.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER } } });
 const apexExperiment11 = ApexExperiment.createApexExperiment({ name: "2026-07-quest-bar-secondary-cta", kind: "user", defaultConfig: { enabled: false, showPlayInstantlyLabel: false }, variations: { 0: { enabled: false, showPlayInstantlyLabel: false }, 1: { enabled: true, showPlayInstantlyLabel: false }, 2: { enabled: true, showPlayInstantlyLabel: true } } });
-const result = set.fileFinishedImporting("modules/quests/experiments/index.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
 export const AppStoreBottomSheetOverlayFeatureGate = apexExperiment1;
@@ -44,8 +45,7 @@ export const MutedVideoQuestNewDefaultsExperiment = apexExperiment4;
 export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMarketing(location) {
   let obj = { location };
   const questOrbMultiplierEligibility = getQuestOrbMultiplierEligibilityForUser.useQuestOrbMultiplierEligibility();
-  const obj2 = getQuestOrbMultiplierEligibilityForUser;
-  obj = { shouldShowBonusOrbsUX: questOrbMultiplierEligibility !== items.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== items.QuestOrbMultiplierEligibilityType.CREPE && closure_2.useConfig(obj).enabled, multiplier: tmp(10692).QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100 };
+  obj = { shouldShowBonusOrbsUX: questOrbMultiplierEligibility !== items.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== items.QuestOrbMultiplierEligibilityType.CREPE && closure_2.useConfig(obj).enabled, multiplier: QuestOrbsMultiplier.QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100 };
   return obj;
 };
 export const VideoQuestPlayerRefactorExperiment = apexExperiment5;

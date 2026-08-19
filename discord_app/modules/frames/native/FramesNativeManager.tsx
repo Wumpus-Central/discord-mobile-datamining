@@ -8,9 +8,10 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import _modDef4656 from "module_4656" /* 4656 */;
 import enforcingDefault from "enforcing" /* 8714 */;
+import _modDef8748 from "module_8748" /* 8748 */;
 import leaveFrameDefault from "leaveFrame" /* 8767 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 8708 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import map from "map" /* 8708 */;
 import { isLaunched } from "FrameLayoutModes" /* 8709 */;
 import { ComponentActions } from "ME" /* 676 */;
 import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "items3" /* 4481 */;
@@ -18,7 +19,7 @@ import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
 import WebView from "WebView" /* 6304 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
-require = arg1;
+require = fn;
 function postMessageToWebView() {
   const self = this;
   const apply = _postMessageToWebView.apply;
@@ -103,36 +104,34 @@ class FramesNativeManager extends tmp5 {
         const managedFrame = self.getManagedFrame();
         let tmp9 = typeof parsed === "object";
         if (typeof parsed === "object") {
-          tmp9 = closure_1_5(managedFrame);
+          tmp9 = isLaunched(managedFrame);
         }
         if (tmp9) {
           tmp9 = null != managedFrame.data.iframeId;
         }
         if (tmp9) {
-          let obj = closure_1_1(closure_1_2[13]);
+          let obj = _modDef8748;
           obj = { type: null, origin: null, iframeId: null };
-          obj[0] = closure_1_8.POST_MESSAGE;
+          obj[0] = TransportTypes.POST_MESSAGE;
           obj[1] = managedFrame.data.url;
           obj[2] = managedFrame.data.iframeId;
-          obj.handleMessage(parsed, obj, closure_1_11);
+          obj.handleMessage(tmp5, obj, postMessageToWebView);
         }
+        tmp5 = parsed;
       } catch (tmp18) {
         const _SyntaxError = SyntaxError;
         if (tmp18 instanceof SyntaxError) {
           if (tmp2.data === closure_1_7) {
             const managedFrame1 = self.getManagedFrame();
             if (null != managedFrame1) {
-              obj3.leaveFrame(managedFrame1.id);
+              self.leaveFrame(managedFrame1.id);
               obj = { body: null, confirmText: null };
-              const intl = self(closure_1_2[15]).intl;
-              obj[0] = intl.string(self(closure_1_2[15]).t.tYBBWz);
-              const intl2 = self(closure_1_2[15]).intl;
-              obj[1] = intl2.string(self(closure_1_2[15]).t.BddRzS);
-              closure_1_1(closure_1_2[14]).show(obj);
-              const obj4 = closure_1_1(closure_1_2[14]);
+              const intl = self(dependencyMap[15]).intl;
+              obj[0] = intl.string(self(dependencyMap[15]).t.tYBBWz);
+              const intl2 = self(dependencyMap[15]).intl;
+              obj[1] = intl2.string(self(dependencyMap[15]).t.BddRzS);
+              _modDef4656.show(obj);
             }
-            obj3 = self;
-            const tmp23 = self;
           }
         } else {
           throw tmp18;
@@ -171,8 +170,7 @@ class FramesNativeManager extends tmp5 {
 const prototype = FramesNativeManager.prototype;
 prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason) {
   ({ code, message } = reason);
-  let obj = _modDef4656;
-  obj = { title: null, body: null };
+  const obj = { title: null, body: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });
   obj[1] = message;
@@ -215,7 +213,7 @@ prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
 };
 FramesNativeManager.displayName = "FramesNativeManager";
 const framesNativeManager = new FramesNativeManager();
-const result = require("set").fileFinishedImporting("modules/frames/native/FramesNativeManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/frames/native/FramesNativeManager.tsx");
 
 export default framesNativeManager;
 export const FRAME_WEB_VIEW_KEY = "FRAME_WEB_VIEW_KEY";

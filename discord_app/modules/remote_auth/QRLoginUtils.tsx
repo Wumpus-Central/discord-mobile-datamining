@@ -1,11 +1,11 @@
 // === Module 4487: findRemoteAuthFingerprint ===
 
 // Module 4487 (findRemoteAuthFingerprint)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
 
 const re2 = /^\/ra\/([\w-]+)$/;
-const result = set.fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");
 
 export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host, pathname) {
   if (null != host) {

@@ -4,16 +4,15 @@
 import initialize from "initialize" /* 589 */;
 import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 4787 */;
 import AgeRestrictionStatus from "AgeRestrictionStatus" /* 4789 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
+require = fn;
 let obj = { DISPLAY: "display", BLOCK_UNDERAGE: "block_underage", BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction" };
-let result = require("set").fileFinishedImporting("modules/content_classification/ContentClassificationVisibility.tsx");
+let result = require("obj132").fileFinishedImporting("modules/content_classification/ContentClassificationVisibility.tsx");
 
 export const ContentClassificationVisibility = obj;
 export const getContentClassificationVisibility = function getContentClassificationVisibility(contentClassification, channel, nsfwAllowed) {
   if (null != contentClassification) {
-    obj = contentClassificationToAgeRestrictionConclusion;
     obj = { type: null, data: null };
     obj[0] = contentClassificationToAgeRestrictionConclusion.ContentClassificationVariant.MINIMAL;
     obj[1] = contentClassification;
@@ -39,10 +38,10 @@ export const useContentClassificationVisibility = function useContentClassificat
   [][0] = closure_2;
   if (null != arg0) {
     obj = { type: null, data: null };
-    obj[0] = tmp(4787).ContentClassificationVariant.MINIMAL;
+    obj[0] = contentClassificationToAgeRestrictionConclusion.ContentClassificationVariant.MINIMAL;
     obj[1] = arg0;
-    const result = tmp(4787).contentClassificationToAgeRestriction(obj);
-    if (result === tmp(4789).AgeRestrictionStatus.ADULT) {
+    const result = contentClassificationToAgeRestrictionConclusion.contentClassificationToAgeRestriction(obj);
+    if (result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT) {
       if (true !== tmp4) {
         let DISPLAY = obj.BLOCK_UNDERAGE;
       } else {

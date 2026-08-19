@@ -4,22 +4,21 @@
 import timestampDefault from "timestamp" /* 3 */;
 import getSoundPackDefault from "getSoundPack" /* 10043 */;
 import _createSound from "_createSound" /* 10044 */;
-import closure_3 from "Soundpacks" /* 10041 */;
-import closure_4 from "initialize" /* 4220 */;
+import Soundpacks from "Soundpacks" /* 10041 */;
+import initialize from "initialize" /* 4220 */;
 import { SoundOutputChannel } from "SoundOutputChannel" /* 9655 */;
 
-require = arg1;
+require = fn;
 let closure_6 = new timestampDefault("SoundUtils");
 const tmp2 = new timestampDefault("SoundUtils");
-const result = require("set").fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
 
-export const createSoundForPack = function createSoundForPack(call_calling, soundpack) {
-  let num = arg2;
-  if (arg2 === undefined) {
+export const createSoundForPack = function createSoundForPack(call_calling, soundpack, _volume, DEFAULT) {
+  let num = _volume;
+  if (_volume === undefined) {
     num = 1;
   }
-  let DEFAULT = arg3;
-  if (arg3 === undefined) {
+  if (DEFAULT === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
   let tmp3 = getSoundPackDefault(soundpack)[call_calling];
@@ -35,25 +34,23 @@ export const createSoundForPack = function createSoundForPack(call_calling, soun
   const mobileAudioSound = new _createSound.MobileAudioSound(tmp3, call_calling, num, DEFAULT, false);
   return mobileAudioSound;
 };
-export const createSound = function createSound(stage_waiting, soundboard_sound, arg2) {
-  let num = arg2;
-  if (arg2 === undefined) {
+export const createSound = function createSound(stage_waiting, soundboard_sound, _volume, DEFAULT, flag) {
+  let num = _volume;
+  if (_volume === undefined) {
     num = 1;
   }
-  let DEFAULT = arg3;
-  if (arg3 === undefined) {
+  if (DEFAULT === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
-  let flag = arg4;
-  if (arg4 === undefined) {
+  if (flag === undefined) {
     flag = false;
   }
   const mobileAudioSound = new _createSound.MobileAudioSound(stage_waiting, soundboard_sound, num, DEFAULT, flag);
   return mobileAudioSound;
 };
-export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChannel) {
-  let num = arg1;
-  if (arg1 === undefined) {
+export const playSound = function playSound(name, _volume, arg2, arg3, outputChannel) {
+  let num = _volume;
+  if (_volume === undefined) {
     num = 1;
   }
   const _require = arg2;
@@ -67,9 +64,9 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
       const _HermesInternal = HermesInternal;
       logger.log("Unable to find sound for pack name: " + arg3);
     }
-    let tmp13 = tmp4Result[arg0];
+    let tmp13 = tmp4Result[name];
     if (tmp13 == null) {
-      tmp13 = arg0;
+      tmp13 = name;
     }
     outputChannel = undefined;
     if (outputChannel != null) {
@@ -94,10 +91,10 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
     if (flag === undefined) {
       flag = false;
     }
-    const mobileAudioSound = new _require(10044).MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
+    const mobileAudioSound = new _require(10044).MobileAudioSound(tmp13, name, num, outputChannel, flag);
     if (null != arg2) {
-      mobileAudioSound.playWithListener().then((arg0) => {
-        if (arg0) {
+      mobileAudioSound.playWithListener().then((result) => {
+        if (result) {
           callback();
         }
       });

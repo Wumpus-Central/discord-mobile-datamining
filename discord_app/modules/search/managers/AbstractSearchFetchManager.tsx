@@ -1,9 +1,9 @@
 // === Module 11520: cleanUp ===
 
 // Module 11520 (cleanUp)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/search/managers/AbstractSearchFetchManager.tsx");
+let result = obj132.fileFinishedImporting("modules/search/managers/AbstractSearchFetchManager.tsx");
 class AbstractSearchFetchManager {
   constructor() {
     obj = Object.create(new.target.prototype);

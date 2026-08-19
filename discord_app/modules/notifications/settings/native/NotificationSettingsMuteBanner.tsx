@@ -8,22 +8,20 @@ import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { card: null };
-createCacheKey = { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: ThemesDefault.radii.lg + 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+const createCacheKey = { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: ThemesDefault.radii.lg + 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
 
 export const NotificationSettingsMuteBanner = function NotificationSettingsMuteBanner(children) {
   let obj = { style: null, children: null };
   const items = [children.style, callback3().card];
   obj[0] = items;
-  obj = { style: { flex: 1, marginRight: 8 }, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: children.title };
   const items1 = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-xs/medium", color: "text-overlay-light", children: children.subtitle })];
   obj[1] = items1;

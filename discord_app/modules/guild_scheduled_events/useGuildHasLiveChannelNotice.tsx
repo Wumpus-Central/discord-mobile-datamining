@@ -1,19 +1,19 @@
 // === Module 15445: useGuildHasLiveChannelNotice ===
 
 // Module 15445 (useGuildHasLiveChannelNotice)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getActiveStageChannelIds" /* 4989 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "getVoiceStatesForGuild" /* 4545 */;
-import closure_10 from "initialize" /* 15446 */;
+import noop from "noop" /* 19 */;
+import getActiveStageChannelIds from "getActiveStageChannelIds" /* 4989 */;
+import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import reset from "reset" /* 4652 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import getVoiceStatesForGuild from "getVoiceStatesForGuild" /* 4545 */;
+import initialize from "initialize" /* 15446 */;
 import { GuildScheduledEventEntityTypes as closure_11 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { Permissions } from "sum" /* 505 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx");
 
 export const useGuildHasLiveChannelNotice = function useGuildHasLiveChannelNotice(id) {
   const first = stateFromStores(guildActiveEvent[10])(id)[0];
@@ -62,7 +62,7 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
   const stateFromStores = activeEventOrStageInstanceChannel(stateFromStores2[11]).useStateFromStores(items, () => {
     let canResult = null != activeEventOrStageInstanceChannel;
     if (canResult) {
-      canResult = closure_1_8.can(closure_1_12.CONNECT, tmp);
+      canResult = closure_1_8.can(Permissions.CONNECT, tmp);
     }
     return canResult;
   });
@@ -86,7 +86,7 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
   const tmp8 = activeEventOrStageInstanceChannel(stateFromStores2[14]).useActualStageSpeakerCount(id) > 0;
   let tmpResult = tmp(tmp2[11]);
   const items3 = [closure_9];
-  stateFromStores2 = tmpResult.useStateFromStores(items3, () => {
+  tmpResult.useStateFromStores(items3, () => {
     let tmp2 = null != activeEventOrStageInstanceChannel;
     if (tmp2) {
       tmp2 = closure_1_9.getVoiceStatesForChannel(tmp).length > 0;
@@ -128,4 +128,6 @@ export const useGuildLiveChannelNoticeInfo = function useGuildLiveChannelNoticeI
   if (tmp10) {
     flag = stateFromStores2;
   }
+  const obj5 = activeEventOrStageInstanceChannel(stateFromStores2[14]);
+  tmp10 = null != activeEventOrStageInstanceChannel && null != guildActiveEvent;
 };

@@ -1,13 +1,13 @@
 // === Module 9186: get ===
 
 // Module 9186 (get)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
 import fromServer from "fromServer" /* 9187 */;
-import closure_5 from "fromServer" /* 9187 */;
+import fromServer2 from "fromServer" /* 9187 */;
 
 ({ getWishlistSkuIds: c3, wishlistHasSkuId: c4 } = fromServer);
 let closure_6 = {};
@@ -54,8 +54,8 @@ prototype["hasError"] = function hasError(arg0) {
 prototype["getError"] = function getError(arg0) {
   return this.get(arg0).error;
 };
-prototype["getUpdatedAt"] = function getUpdatedAt(arg0) {
-  return this.get(arg0).updatedAt;
+prototype["getUpdatedAt"] = function getUpdatedAt(wishlistId) {
+  return this.get(wishlistId).updatedAt;
 };
 prototype["getLastFetchedAt"] = function getLastFetchedAt(arg0) {
   return this.get(arg0).lastFetchedAt;
@@ -127,7 +127,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
       obj[0] = tmp2.data.id;
       obj[1] = tmp2.data.userId;
       const items = tmp2.data.items;
-      obj[2] = items.filter((skuId) => skuId.skuId !== closure_0);
+      obj[2] = items.filter((item, index) => item.skuId !== closure_0);
       obj[3] = tmp2.data.applications;
       const tmp7 = new closure_5(obj);
       tmp2.data = tmp7;
@@ -222,8 +222,9 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
     if (tmp2) {
       dependencyMap[firstWishlistId].updatedAt = undefined;
     }
+    const _default = createUserWidgetFromServer.default;
   }
 });
-const result = set.fileFinishedImporting("modules/wishlists/WishlistStore.tsx");
+const result = obj132.fileFinishedImporting("modules/wishlists/WishlistStore.tsx");
 
 export default wishlistStore;

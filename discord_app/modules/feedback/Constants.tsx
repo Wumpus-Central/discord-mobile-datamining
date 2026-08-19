@@ -1,20 +1,20 @@
 // === Module 10811: FeedbackRating ===
 
 // Module 10811 (FeedbackRating)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import create from "create" /* 1306 */;
 
 let obj = { BAD: "bad", NEUTRAL: "neutral", GOOD: "good" };
 const items = [create.InAppFeedbackType.VIDEO_BACKGROUND, create.InAppFeedbackType.STREAM, create.InAppFeedbackType.ACTIVITY, create.InAppFeedbackType.VOICE, create.InAppFeedbackType.IN_APP_REPORTS, create.InAppFeedbackType.SEARCH_RESULTS, create.InAppFeedbackType.VIBEGRATIONS];
 const items1 = [, , ];
 ({ BAD: arr2[0], NEUTRAL: arr2[1], GOOD: arr2[2] } = obj);
-const reduced = items.reduce((arg0, arg1, arg2) => {
+const reduced = items.reduce((acc, item, index) => {
   const obj = {};
-  const merged = Object.assign(arg0);
-  obj[arg1] = arg2;
+  const merged = Object.assign(acc);
+  obj[item] = index;
   return obj;
 }, {});
-const result = set.fileFinishedImporting("modules/feedback/Constants.tsx");
+const result = obj132.fileFinishedImporting("modules/feedback/Constants.tsx");
 
 export const FeedbackRating = obj;
 export const FEEDBACK_FREEFORM_LENGTH = 1024;

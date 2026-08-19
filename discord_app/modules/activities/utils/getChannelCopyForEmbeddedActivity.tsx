@@ -1,10 +1,10 @@
 // === Module 9908: getChannelCopyForEmbeddedActivity ===
 
 // Module 9908 (getChannelCopyForEmbeddedActivity)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
 
 export default function getChannelCopyForEmbeddedActivity(arg0) {
   let stringResult = arg0;

@@ -3,23 +3,23 @@
 // Module 12766 (createEmbeddedActivityInviteEmbed)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "participantFromServer" /* 1390 */;
-import closure_6 from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
 import { FetchState } from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
-import closure_8 from "addApplication" /* 4478 */;
-import closure_9 from "fetchFingerprint" /* 1218 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "updateInvite" /* 4359 */;
-import closure_12 from "markAllUserIdListsStale" /* 4030 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import addApplication from "addApplication" /* 4478 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import updateInvite from "updateInvite" /* 4359 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10510 */;
 import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
 
-const require = arg1;
+const require = fn;
 let closure_16 = ["embedded_cover"];
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");
 
 export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivityInviteEmbed(inviteCode) {
   let id;
@@ -31,8 +31,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
     if (invite.target_type === InviteTargetTypes.EMBEDDED_APPLICATION) {
       if (null != target_application) {
         if (null == application.getApplication(target_application.id)) {
-          let obj = dispatcherDefault;
-          obj = { type: "APPLICATION_UPDATE", application: null };
+          let obj = { type: "APPLICATION_UPDATE", application: null };
           obj[1] = target_application;
           obj.dispatch(obj);
         }
@@ -94,7 +93,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           let tmp30 = null != id;
           if (tmp30) {
             embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(id);
-            const found = embeddedActivitiesForChannel.find((applicationId) => applicationId.applicationId === id);
+            const found = embeddedActivitiesForChannel.find((item, index) => item.applicationId === id);
             let hasItem;
             if (found != null) {
               const userIds = found.userIds;

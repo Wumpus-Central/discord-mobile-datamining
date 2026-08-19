@@ -1,18 +1,16 @@
 // === Module 17035: apexExperiment ===
 
 // Module 17035 (apexExperiment)
-import set from "set" /* 2 */;
-import setDefault from "set" /* 687 */;
+import obj132 from "obj132" /* 2 */;
+import obj132Default from "obj132" /* 687 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
-let obj = { questFetchJitterMs: 5 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 5 * setDefault.Millis.SECOND };
-obj = { name: "2026-06-quest-fetch-reconnect-jitter", kind: "user", defaultConfig: obj, variations: null };
+let obj = { questFetchJitterMs: 5 * obj132Default.Millis.SECOND, questHomeHeroJitterMs: 5 * obj132Default.Millis.SECOND };
 obj = { 1: null };
-obj[1] = { questFetchJitterMs: 60 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 60 * setDefault.Millis.SECOND };
+obj[1] = { questFetchJitterMs: 60 * obj132Default.Millis.SECOND, questHomeHeroJitterMs: 60 * obj132Default.Millis.SECOND };
 obj[3] = obj;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const obj1 = { questFetchJitterMs: 60 * setDefault.Millis.SECOND, questHomeHeroJitterMs: 60 * setDefault.Millis.SECOND };
-const result = set.fileFinishedImporting("modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx");
 
 export default apexExperiment;
 export const DEFAULT_QUEST_FETCH_JITTER_CONFIG = obj;

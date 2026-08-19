@@ -3,17 +3,17 @@
 // Module 16542 (_initialize)
 import initializeDefault from "initialize" /* 5038 */;
 import importDefaultResult from "Soundpacks" /* 10041 */;
-import closure_3 from "callConnect" /* 4496 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "DesktopNotificationTypes" /* 10015 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "initialize" /* 4220 */;
-import closure_8 from "updateVoiceState" /* 4542 */;
-import closure_9 from "getVoiceStatesForGuild" /* 4545 */;
-import closure_10 from "getParticipants" /* 4773 */;
+import callConnect from "callConnect" /* 4496 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import DesktopNotificationTypes from "DesktopNotificationTypes" /* 10015 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import initialize from "initialize" /* 4220 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
+import getVoiceStatesForGuild from "getVoiceStatesForGuild" /* 4545 */;
+import getParticipants from "getParticipants" /* 4773 */;
 import createSoundForPack from "createSoundForPack" /* 10040 */;
 
-let require = arg1;
+let require = fn;
 let closure_11 = createSoundForPack.createSoundForPack("call_calling", importDefaultResult.getSoundpack());
 initializeDefault;
 // CreatePrivateName (0x9e)
@@ -70,36 +70,36 @@ class ChannelCallManager extends tmp2 {
           guild_id = null;
         }
         const calls = closure_1_3.getCalls();
-        let someResult = calls.some((ringing) => {
-          let tmp = ringing.ringing.length > 0;
+        let someResult = calls.some((item, index) => {
+          let tmp = item.ringing.length > 0;
           if (tmp) {
-            tmp = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null) === ringing.channelId;
+            tmp = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null) === item.channelId;
           }
           return tmp;
         });
         if (!someResult) {
           // GetOwnPrivateBySym (0x65)
-          someResult = closure_1_12.size > 0;
+          someResult = importDefault.size > 0;
         }
         applyArgumentsResult._handleRing(someResult, guild_id);
       };
       applyArgumentsResult.handleGuildRingStart = function handleGuildRingStart(arg0) {
         ({ ringing, guildId } = arg0);
-        const item = ringing.forEach((arg0) => {
+        const item = ringing.forEach((item, index) => {
           // GetOwnPrivateBySym (0x65)
-          obj.add(arg0);
+          obj.add(item);
         });
         // GetOwnPrivateBySym (0x65)
-        applyArgumentsResult._handleRing(closure_1_12.size > 0, guildId);
+        applyArgumentsResult._handleRing(importDefault.size > 0, guildId);
       };
       applyArgumentsResult.handleGuildRingStop = function handleGuildRingStop(arg0) {
         ({ ringing, guildId } = arg0);
-        const item = ringing.forEach((arg0) => {
+        const item = ringing.forEach((item, index) => {
           // GetOwnPrivateBySym (0x65)
-          obj.delete(arg0);
+          obj.delete(item);
         });
         // GetOwnPrivateBySym (0x65)
-        applyArgumentsResult._handleRing(closure_1_12.size > 0, guildId);
+        applyArgumentsResult._handleRing(importDefault.size > 0, guildId);
       };
       applyArgumentsResult.handleChannelRTCStoreChange = function handleChannelRTCStoreChange() {
         const voiceChannelId = closure_1_6.getVoiceChannelId();
@@ -117,7 +117,7 @@ class ChannelCallManager extends tmp2 {
             // GetOwnPrivateBySym (0x65)
             const items = [];
             HermesBuiltin.arraySpread(tmp2, 0);
-            const set1 = new Set(items.filter((arg0) => !set.has(arg0)));
+            const set1 = new Set(items.filter((item, index) => !set.has(item)));
             if (set1.size > 0) {
               const forEach = set1.forEach;
               const item = forEach((arg0) => {
@@ -143,6 +143,6 @@ ChannelCallManager.prototype["_initialize"] = function _initialize() {
   this.stores = result4.set(closure_2, this.handleSoundpackUpdate);
 };
 const channelCallManager = new ChannelCallManager();
-let result = require("set").fileFinishedImporting("modules/calls/ChannelCallManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/calls/ChannelCallManager.tsx");
 
 export default channelCallManager;

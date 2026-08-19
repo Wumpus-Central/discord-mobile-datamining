@@ -7,16 +7,16 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 11330 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx");
 
-export const ArrowsUpDownIcon = function ArrowsUpDownIcon(color) {
-  let INTERACTIVE_ICON_DEFAULT = color.color;
+export const ArrowsUpDownIcon = function ArrowsUpDownIcon(tmp5Result) {
+  let INTERACTIVE_ICON_DEFAULT = tmp5Result.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
     INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(tmp5Result, Object.create(null));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: INTERACTIVE_ICON_DEFAULT, style: tmp5Result.style });
 };

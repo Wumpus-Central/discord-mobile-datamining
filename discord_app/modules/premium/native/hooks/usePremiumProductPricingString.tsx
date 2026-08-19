@@ -1,11 +1,11 @@
 // === Module 10305: usePremiumProductPricingString ===
 
 // Module 10305 (usePremiumProductPricingString)
-import closure_2 from "updateProduct" /* 5319 */;
+import updateProduct from "updateProduct" /* 5319 */;
 import { PRICE_PLACEHOLDER } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 
 export default function usePremiumProductPricingString(closure_0, c3) {
   const planIdForPremiumType = _require(4039).getPlanIdForPremiumType(closure_0, c3);

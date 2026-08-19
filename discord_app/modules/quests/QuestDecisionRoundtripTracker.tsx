@@ -7,12 +7,12 @@ import isForegrounded from "isForegrounded" /* 5055 */;
 import getDeviceMetadataDefault from "getDeviceMetadata" /* 7431 */;
 import result2 from "result" /* 7468 */;
 import AdCreativeType from "AdCreativeType" /* 7469 */;
-import closure_3 from "handleConnectionInfoChange" /* 4564 */;
-import closure_4 from "initializeState" /* 7453 */;
+import handleConnectionInfoChange from "handleConnectionInfoChange" /* 4564 */;
+import initializeState from "initializeState" /* 7453 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-require = arg1;
+require = fn;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
   if (Math.random() <= 0.1) {
     let diff = null;
@@ -58,7 +58,6 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     obj.previous_fetched_at = fetchedAt;
     obj.transition_case = transition_case;
     const obj2 = expandEventPropertiesDefault;
-    const tmp2 = require;
     obj.is_foregrounded = isForegrounded.isForegrounded();
     obj2.track(AnalyticEvents.QUEST_DECISION_ROUNDTRIP, obj);
     const tmp2Result = isForegrounded;
@@ -96,7 +95,7 @@ prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endp
     const pendingRequests = self.pendingRequests;
     const value = pendingRequests.get(closure_0);
     if (null != value) {
-      closure_1_6(value, "timeout", null);
+      trackRoundtrip(value, "timeout", null);
       const pendingRequests2 = self.pendingRequests;
       pendingRequests2.delete(closure_0);
     }
@@ -142,8 +141,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str4 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type) {
           str4 = "bounty";
-          if (tmp8(7469).AdCreativeType.BOUNTY !== type) {
-            if (tmp8(7469).AdCreativeType.QUEST_HOME_HERO === type) {
+          if (AdCreativeType.AdCreativeType.BOUNTY !== type) {
+            if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type) {
               str4 = "quest_home_hero";
             }
           }
@@ -160,8 +159,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         let str7 = "quest";
         if (AdCreativeType.AdCreativeType.QUEST !== type2) {
           str7 = "bounty";
-          if (tmp10(7469).AdCreativeType.BOUNTY !== type2) {
-            if (tmp10(7469).AdCreativeType.QUEST_HOME_HERO === type2) {
+          if (AdCreativeType.AdCreativeType.BOUNTY !== type2) {
+            if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type2) {
               str7 = "quest_home_hero";
             }
           }
@@ -176,8 +175,6 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         creative = previousAdDecision.creative;
       }
       const deliveredAdCreativeId = result2.getDeliveredAdCreativeId(creative);
-      const obj3 = result2;
-      const tmp14 = require;
       let creative1;
       if (tmp7 != tmp5) {
         creative1 = tmp7.creative;
@@ -204,8 +201,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
     pendingRequests2.delete(arg0);
   }
 };
-let set = Object.create(QuestDecisionRoundtripTracker.prototype);
-set[0] = new Map();
-let result = set.fileFinishedImporting("modules/quests/QuestDecisionRoundtripTracker.tsx");
+let obj132 = Object.create(QuestDecisionRoundtripTracker.prototype);
+obj132[0] = new Map();
+let result = obj132.fileFinishedImporting("modules/quests/QuestDecisionRoundtripTracker.tsx");
 
-export default set;
+export default obj132;

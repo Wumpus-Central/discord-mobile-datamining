@@ -5,12 +5,11 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 8167 */;
-import closure_3 from "isSubscriptionGated" /* 1981 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import set from "set" /* 2 */;
+import isSubscriptionGated from "isSubscriptionGated" /* 1981 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
-require = arg1;
+require = fn;
 let set = new Set();
 const Store = initializeDefault.Store;
 class MediaPostSharePromptStore extends Store {
@@ -43,7 +42,6 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(dispatcherDefaul
             if (null != channel.parent_id) {
               if (channelGated.isChannelGated(channel.guild_id, channel.parent_id)) {
                 set.add(DISCORD_EPOCHDefault.castMessageIdAsChannelId(isPushNotification.message.id));
-                const obj = DISCORD_EPOCHDefault;
               }
             }
           }
@@ -59,6 +57,6 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(dispatcherDefaul
     set.clear();
   }
 });
-const result = set.fileFinishedImporting("modules/media_channel/MediaPostSharePromptStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_channel/MediaPostSharePromptStore.tsx");
 
 export default mediaPostSharePromptStore;

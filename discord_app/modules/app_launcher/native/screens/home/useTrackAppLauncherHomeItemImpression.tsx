@@ -1,10 +1,10 @@
 // === Module 11277: useTrackAppLauncherHomeItemImpression ===
 
 // Module 11277 (useTrackAppLauncherHomeItemImpression)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
 
 export const useTrackAppLauncherHomeItemImpression = function useTrackAppLauncherHomeItemImpression() {
   let obj = trackAppLauncherItemImpressionOnFirstView(11278);
@@ -12,22 +12,22 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
   obj = {
     trackAppLauncherHomeItemImpression: React.useCallback((viewableItems) => {
       viewableItems = viewableItems.viewableItems;
-      let item = viewableItems.forEach((item) => {
+      let item = viewableItems.forEach((item, index) => {
         item = item.item;
-        if (item.type === closure_1_0(closure_1_2[2]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
+        if (item.type === trackAppLauncherItemImpressionOnFirstView(closure_1_2[2]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
           shelfItem1SectionPosition = item.sectionPosition;
           applicationId = item.application.id;
-          let tmpResult = tmp(tmp2[3]);
+          let tmpResult = trackAppLauncherItemImpressionOnFirstView(closure_1_2[3]);
           let flags = tmpResult.getApplicationFlags(item.application);
-        } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD) {
+        } else if (item.type === trackAppLauncherItemImpressionOnFirstView(closure_1_2[2]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD) {
           shelfItem1SectionPosition = item.sectionPosition;
           applicationId = item.item.application.id;
-          tmpResult = tmp(tmp2[3]);
+          tmpResult = trackAppLauncherItemImpressionOnFirstView(closure_1_2[3]);
           flags = tmpResult.getApplicationFlags(item.item.application);
-        } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.SHELF_ITEM) {
+        } else if (item.type === trackAppLauncherItemImpressionOnFirstView(closure_1_2[2]).AppLauncherHomeListItemType.SHELF_ITEM) {
           ({ sectionPosition: shelfItem1SectionPosition, applicationId } = item);
           flags = item.section.application.flags;
-        } else if (item.type === tmp(tmp2[2]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE) {
+        } else if (item.type === trackAppLauncherItemImpressionOnFirstView(closure_1_2[2]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE) {
           ({ shelfItem1SectionPosition, shelfItem2SectionPosition } = item);
           applicationId = item.shelfItem1.application.id;
           const shelfItem2 = item.shelfItem2;
@@ -52,12 +52,14 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
           obj[4] = id;
           let asUintNResult;
           if (null != flags2) {
-            asUintNResult = closure_1_1(tmp2[4]).asUintN(32, flags2);
-            const tmp5Result = closure_1_1(tmp2[4]);
+            asUintNResult = closure_1_1(closure_1_2[4]).asUintN(32, flags2);
+            const tmp5Result = closure_1_1(closure_1_2[4]);
           }
           obj[5] = asUintNResult;
           callback(obj);
         }
+        const obj4 = closure_1_1(closure_1_2[4]);
+        tmp7 = null != id && null != shelfItem2SectionPosition;
       });
     }, items)
   };

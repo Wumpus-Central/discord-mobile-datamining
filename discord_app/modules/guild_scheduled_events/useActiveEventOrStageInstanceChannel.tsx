@@ -3,10 +3,10 @@
 // Module 15448 (useActiveEventOrStageInstanceChannel)
 import useGuildEvents from "useGuildEvents" /* 8891 */;
 import useLiveStageChannelsDefault from "useLiveStageChannels" /* 15447 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
 
 export const useActiveEventOrStageInstanceChannel = function useActiveEventOrStageInstanceChannel(id) {
   let firstActiveEventChannel = useGuildEvents.useFirstActiveEventChannel(id);

@@ -3,49 +3,49 @@
 // Module 17020 (InviteSelectActionSheet)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
 import Background from "Background" /* 6950 */;
 import context from "context" /* 8101 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { content: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx");
 
 export default function InviteSelectActionSheet(arg0) {
   ({ options, onChange: require } = arg0);
   ({ title, value } = arg0);
-  let obj = { contentStyles: callback().content, header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title }), children: null };
-  obj = {
+  { contentStyles: callback().content, header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title }), children: null };
+  const obj = {
     value,
     onChange(arg0) {
       callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((item, index) => callback2(callback(table[8]).TableRadioRow, { value: item.value, label: item.label, accessibilityHint: item.descriptiveLabel }, "" + item.value))
   };
   obj[2] = jsx(context.TableRadioGroup, {
     value,
     onChange(arg0) {
       callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((item, index) => callback2(callback(table[8]).TableRadioRow, { value: item.value, label: item.label, accessibilityHint: item.descriptiveLabel }, "" + item.value))
   });
   return jsx(Background.BottomSheet, {
     value,
     onChange(arg0) {
       callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((item, index) => callback2(callback(table[8]).TableRadioRow, { value: item.value, label: item.label, accessibilityHint: item.descriptiveLabel }, "" + item.value))
   });
 };

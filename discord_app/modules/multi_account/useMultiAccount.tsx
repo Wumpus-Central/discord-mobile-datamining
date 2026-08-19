@@ -2,13 +2,12 @@
 
 // Module 15217 (useMultiAccountUsers)
 import initialize from "initialize" /* 589 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "initialize" /* 11585 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { MultiAccountTokenStatus } from "initialize" /* 11585 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
 
 export const useMultiAccountUsers = function useMultiAccountUsers() {
   let items = [closure_6, closure_5];
@@ -17,7 +16,7 @@ export const useMultiAccountUsers = function useMultiAccountUsers() {
     users = users.getUsers();
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      if (!users.some((id) => id.id === currentUser.id)) {
+      if (!users.some((item, index) => item.id === currentUser.id)) {
         obj = { isLoading: null, multiAccountUsers: null };
         obj[0] = obj.getIsValidatingUsers();
         obj = { id: null, avatar: null, username: null, discriminator: null, tokenStatus: null, pushSyncToken: null };
@@ -30,6 +29,7 @@ export const useMultiAccountUsers = function useMultiAccountUsers() {
       return obj;
     }
     obj = { isLoading: obj.getIsValidatingUsers(), multiAccountUsers: users };
+    obj1 = { isLoading: obj.getIsValidatingUsers(), multiAccountUsers: users };
   });
   const effect = React.useEffect(() => {
     callback(table[4]).wait(() => {

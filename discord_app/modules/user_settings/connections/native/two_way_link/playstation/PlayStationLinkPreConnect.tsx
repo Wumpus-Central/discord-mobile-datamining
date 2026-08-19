@@ -1,14 +1,14 @@
 // === Module 9785: PlayStationLinkPreConnect ===
 
 // Module 9785 (PlayStationLinkPreConnect)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes" /* 9782 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_6 = createCacheKey.createStyles({ image: { width: 231, height: 160 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx");
 
 export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(platformType) {
   let navigation;

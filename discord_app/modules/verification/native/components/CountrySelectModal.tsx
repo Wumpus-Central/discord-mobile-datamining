@@ -2,16 +2,15 @@
 
 // Module 8631 (CountrySelectModal)
 import NavigationStack from "NavigationStack" /* 6312 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/verification/native/components/CountrySelectModal.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/verification/native/components/CountrySelectModal.tsx");
 
 export default function CountrySelectModal() {
   const screens = React.useMemo(() => {
-    let obj = { COUNTRY_SELECT: null };
-    obj = { title: null, headerLeft: null, render: null };
+    const obj = { title: null, headerLeft: null, render: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.gzXECH);
     obj[1] = callback(6314).getHeaderCloseButton(callback2(5260).pop);

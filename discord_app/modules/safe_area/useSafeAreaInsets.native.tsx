@@ -1,11 +1,11 @@
 // === Module 1629: useSafeAreaInsets ===
 
 // Module 1629 (useSafeAreaInsets)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import context from "context" /* 1497 */;
 import _modDef1630 from "module_1630" /* 1630 */;
 
-const result = set.fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");
+const result = obj132.fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");
 
 export default function useSafeAreaInsets() {
   _require = _require(1497).useAppEntryKey();

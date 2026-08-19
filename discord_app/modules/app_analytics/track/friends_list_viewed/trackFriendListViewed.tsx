@@ -1,20 +1,19 @@
 // === Module 15968: trackFriendsListViewed ===
 
 // Module 15968 (trackFriendsListViewed)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import isClickstreamEnabled from "isClickstreamEnabled" /* 5057 */;
 import getTrackFriendsListViewedDataDefault from "getTrackFriendsListViewedData" /* 15969 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");
+const result = obj132.fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");
 
 export default function trackFriendsListViewed(source) {
   let str = source.tab_opened;
   const tmp = getTrackFriendsListViewedDataDefault();
-  let obj = expandEventPropertiesDefault;
-  obj = { tab_opened: str, source: source.source };
+  let obj = { tab_opened: str, source: source.source };
   const merged = Object.assign(tmp);
   obj.track(AnalyticEvents.FRIENDS_LIST_VIEWED, obj);
   if (str == null) {

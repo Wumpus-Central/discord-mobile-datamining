@@ -3,11 +3,11 @@
 // Module 5002 (getFpMessageInfo)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const require = arg1;
-let closure_3 = 14 * setDefault.Millis.DAY;
+const require = fn;
+let closure_3 = 14 * obj132Default.Millis.DAY;
 let closure_4 = Object.freeze([]);
 let c5;
 let closure_6 = {};
@@ -33,7 +33,6 @@ prototype["canSubmitFpReport"] = function canSubmitFpReport(closure_1) {
     let tmp3 = !reportSubmit;
     if (!reportSubmit) {
       tmp3 = DISCORD_EPOCHDefault.age(tmp.messageId) < closure_3;
-      const obj = DISCORD_EPOCHDefault;
     }
     tmp2 = tmp3;
   }
@@ -86,11 +85,11 @@ const explicitMediaStore = new ExplicitMediaStore(dispatcherDefault, {
     messageId = messageId.messageId;
     const channelId = messageId.channelId;
     if (null != dependencyMap2[channelId]) {
-      dependencyMap2[channelId] = arr.map((messageId) => {
-        let tmp = messageId;
-        if (messageId.messageId === messageId) {
+      dependencyMap2[channelId] = arr.map((item, index) => {
+        let tmp = item;
+        if (item.messageId === messageId) {
           const obj = {};
-          const merged = Object.assign(messageId);
+          const merged = Object.assign(item);
           obj.reportSubmit = true;
           tmp = obj;
         }
@@ -103,6 +102,6 @@ const explicitMediaStore = new ExplicitMediaStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaStore.tsx");
 
 export default explicitMediaStore;

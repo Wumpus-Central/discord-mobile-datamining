@@ -1,25 +1,24 @@
 // === Module 7138: ApplicationConnectionCard ===
 
 // Module 7138 (ApplicationConnectionCard)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "addApplication" /* 4478 */;
+import noop from "noop" /* 19 */;
+import addApplication from "addApplication" /* 4478 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
 
 export default function ApplicationConnectionCard(connection) {
   connection = connection.connection;
   const guildId = connection.guildId;
   const _location = connection.location;
-  let stateFromStores;
   let analyticsLocations;
   let startAuthorization;
   let obj = connection(_location[4]);
   const items = [analyticsLocations];
   const items1 = [connection.application_id];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     let application = null;
     if (null != connection.application_id) {
       application = analyticsLocations.getApplication(tmp.application_id);
@@ -41,7 +40,7 @@ export default function ApplicationConnectionCard(connection) {
     }
     if (!result) {
       const application = connection(_location[6]).fetchApplication(connection.application_id);
-      application.catch(() => {
+      application.catch((error) => {
 
       });
       const obj = connection(_location[6]);
@@ -58,13 +57,13 @@ export default function ApplicationConnectionCard(connection) {
   const tmp7 = guildId(_location[8])(stateFromStores);
   startAuthorization = tmp7.startAuthorization;
   ({ hasAlreadyLinked, canStartAuthorization, fetched } = tmp7);
-  obj = { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL };
+  { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL };
   const items3 = [startAuthorization, guildId, connection.application_id, _location, analyticsLocations];
   const obj2 = stateFromStores;
   const tmp4Result = guildId(_location[9]);
   const callback = obj2.useCallback(() => {
-    let obj = guildId(_location[10]);
-    obj = {};
+    guildId(_location[10]);
+    let obj = {};
     const merged = Object.assign(connection(_location[11]).collectGuildAnalyticsMetadata(guildId));
     obj.connection_type = "application";
     const application_id = connection.application_id;

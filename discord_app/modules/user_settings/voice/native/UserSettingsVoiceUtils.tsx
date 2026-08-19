@@ -3,27 +3,24 @@
 // Module 12557 (handleAutomaticGainControlChange)
 import initialize from "initialize" /* 589 */;
 import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ AnalyticsPages: c4, AnalyticsSections: c5 } = ME);
 let obj = { NONE: "NONE", STANDARD: "STANDARD", KRISP: "KRISP" };
-let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceUtils.tsx");
 
 export const handleAutomaticGainControlChange = function handleAutomaticGainControlChange(arg0) {
-  obj = trackDeviceChangedDefault;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   const result = obj.setAutomaticGainControl(arg0, obj);
 };
 export const handleEchoCancellationChange = function handleEchoCancellationChange(arg0) {
-  obj = trackDeviceChangedDefault;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setEchoCancellation(arg0, obj);
 };
 export const handleNoiseSuppressionChange = function handleNoiseSuppressionChange(arg0) {
   ({ KRISP, STANDARD } = obj);
-  obj = trackDeviceChangedDefault;
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
   obj.setNoiseCancellation(arg0 === KRISP, obj);
   obj = { page: constants.USER_SETTINGS, section: constants2.SETTINGS_VOICE_AND_VIDEO };
@@ -49,9 +46,10 @@ export const useSelectedNoiseSuppressionOption = function useSelectedNoiseSuppre
     const noiseSuppression = store.getNoiseSuppression();
     const noiseCancellation = store.getNoiseCancellation();
     if (noiseCancellation) {
-      obj.getNoiseCancellationDeferredToSystem(store) ? tmp3.NONE : tmp3.KRISP;
+      obj.getNoiseCancellationDeferredToSystem(store) ? constants.NONE : constants.KRISP;
     } else {
-      return noiseSuppression ? tmp3.STANDARD : tmp3.NONE;
+      return noiseSuppression ? constants.STANDARD : constants.NONE;
     }
+    obj = callback(table[3]);
   });
 };

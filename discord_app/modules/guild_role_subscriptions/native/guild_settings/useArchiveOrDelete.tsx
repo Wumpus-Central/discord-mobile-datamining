@@ -2,13 +2,13 @@
 
 // Module 16958 (useArchiveOrDelete)
 import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 ({ useEffect: closure_6, useRef: error } = noop);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx");
 
 export default function useArchiveOrDelete(guildId, groupListingId, editStateId) {
   const _require = guildId;
@@ -134,7 +134,6 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
   let obj = _require(14558);
   const subscriptionListing = obj.useSubscriptionListing(editStateId);
   const removeEditStateId = getRoleEmojisAll.useEditStateIds(groupListingId, guildId).removeEditStateId;
-  let obj2 = getRoleEmojisAll;
   const deleteSubscriptionListing = _require(14558).useDeleteSubscriptionListing();
   ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
   let obj3 = _require(14558);

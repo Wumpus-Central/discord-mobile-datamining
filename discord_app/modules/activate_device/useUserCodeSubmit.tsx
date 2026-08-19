@@ -1,13 +1,13 @@
 // === Module 13343: useUserCodeSubmit ===
 
 // Module 13343 (useUserCodeSubmit)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { OAuthConstants } from "OAuthConstants" /* 13342 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activate_device/useUserCodeSubmit.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activate_device/useUserCodeSubmit.tsx");
 
 export const useUserCodeSubmit = function useUserCodeSubmit(arr, onUserCodeAccepted, onClose) {
   closure_0 = arr;
@@ -22,8 +22,8 @@ export const useUserCodeSubmit = function useUserCodeSubmit(arr, onUserCodeAccep
     let lib = tmp3;
     let v0 = 1;
     v0(true);
-    const obj2 = closure_1_0(closure_1_1[5]);
-    yield obj2.verifyUserCode(closure_1_0);
+    const obj2 = arr(onUserCodeAccepted[5]);
+    yield obj2.verifyUserCode(arr);
     if (1 === tmp7) {
       v0 = 0;
       lib = closure_2;
@@ -49,14 +49,13 @@ export const useUserCodeSubmit = function useUserCodeSubmit(arr, onUserCodeAccep
       })(status));
       v0(false);
       let status1;
-      if (closure_1_1 != null) {
-        status1 = closure_1_1.status;
+      if (onUserCodeAccepted != null) {
+        status1 = onUserCodeAccepted.status;
       }
       if (401 === status1) {
-        closure_1_2();
+        onClose();
       }
       c5 = 3;
-      const tmp22 = c4;
     } else if (arg0 === 1) {
       c5 = 3;
       throw arg1;

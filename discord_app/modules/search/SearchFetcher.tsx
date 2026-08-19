@@ -3,17 +3,17 @@
 // Module 11521 (fetch)
 import sendRequest from "sendRequest" /* 530 */;
 import parseDefault from "parse" /* 1484 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ SearchTypes: c5, Endpoints: closure_6 } = ME);
 class SearchFetcher {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);
     obj.searchId = global;
-    obj.searchType = arg1;
+    obj.searchType = fn;
     obj.query = importDefault;
     return obj;
   }
@@ -55,12 +55,12 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             let callback = tmp7;
             let lib;
             callback = undefined;
-            if (!closure_1_3.isCanceled) {
+            if (!self.isCanceled) {
               c4 = 1;
               c5 = 2;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = closure_1_3.makeRequest({ rejectWithError: false });
+              obj1[0] = self.makeRequest({ rejectWithError: false });
               return obj1;
             }
           }
@@ -114,7 +114,6 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                   closure_3.retryDelay = num2;
                   closure_3.retryLater(lib, callback, dependencyMap);
                   callback(closure_1_0);
-                  const tmp71 = closure_3;
                 }
               }
               c4 = 0;
@@ -153,7 +152,7 @@ prototype["retryLater"] = function retryLater(c0, closure_1, closure_2) {
   const _fetch = self.fetch;
   self.indexingPollId = setTimeout(_fetch.bind(self, c0, closure_1, closure_2), self.retryDelay);
 };
-const result = require("set").fileFinishedImporting("modules/search/SearchFetcher.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/SearchFetcher.tsx");
 class SearchFetcherImpl extends SearchFetcher {
 }
 const prototype2 = SearchFetcherImpl.prototype;
@@ -166,7 +165,7 @@ prototype2["getEndpoint"] = function getEndpoint() {
         return closure_6.SEARCH_GUILD(self.searchId);
       }
     }
-  } else if (tmp.GUILD_CHANNEL === searchType) {
+  } else if (constants.GUILD_CHANNEL === searchType) {
     if (null != self.searchId) {
       if ("" !== self.searchId) {
         channel = channel.getChannel(self.searchId);
@@ -179,7 +178,7 @@ prototype2["getEndpoint"] = function getEndpoint() {
         }
       }
     }
-  } else if (tmp.CHANNEL === searchType) {
+  } else if (constants.CHANNEL === searchType) {
     if (null != self.searchId) {
       if ("" !== self.searchId) {
         return closure_6.SEARCH_CHANNEL(self.searchId);
@@ -202,13 +201,12 @@ prototype2["makeRequest"] = function makeRequest(rejectWithError) {
     obj[1] = parseDefault.stringify(this.query);
     obj[3] = rejectWithError.rejectWithError;
     value = HTTP.get(obj);
-    const obj2 = parseDefault;
   }
   return value;
 };
 class SearchTabFetcherImpl extends SearchFetcher {
   constructor(arg0, arg1, arg2, arg3) {
-    tmp = new tmp(global, arg1, importDefault, new.target);
+    tmp = new tmp(global, fn, importDefault, new.target);
     // ThrowIfThisInitialized (0x7c)
     tmp.payload = importAll;
     return tmp;
@@ -221,10 +219,10 @@ prototype3["getEndpoint"] = function getEndpoint() {
   if (constants.DMS === searchType) {
     return closure_6.SEARCH_TABS_DMS;
   } else {
-    if (tmp.GUILD_CHANNEL !== searchType) {
-      if (tmp.GUILD !== searchType) {
-        if (tmp.THREAD !== searchType) {
-          if (tmp.CHANNEL === searchType) {
+    if (constants.GUILD_CHANNEL !== searchType) {
+      if (constants.GUILD !== searchType) {
+        if (constants.THREAD !== searchType) {
+          if (constants.CHANNEL === searchType) {
             if (null != self.searchId) {
               if ("" !== self.searchId) {
                 return closure_6.SEARCH_TABS_CHANNEL(self.searchId);

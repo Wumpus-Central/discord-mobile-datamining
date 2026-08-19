@@ -2,26 +2,16 @@
 
 // Module 4476 (performRedirect)
 import _validatePaymentSourceBillingAddress from "_validatePaymentSourceBillingAddress" /* 4467 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 import { PaymentSourceTypes } from "sum" /* 505 */;
 
-require = arg1;
+require = fn;
 ({ Endpoints: c4, REDIRECTED_PAYMENT_SOURCES: c5 } = ME);
-obj = { [PaymentSourceTypes.GIROPAY]: obj, [PaymentSourceTypes.SOFORT]: obj, [PaymentSourceTypes.PRZELEWY24]: obj1, [PaymentSourceTypes.BANCONTACT]: obj2, [PaymentSourceTypes.EPS]: obj3, [PaymentSourceTypes.IDEAL]: obj4 };
-obj = {
-  confirmationType: "stripe_redirect_confirmation",
-  constructStripeConfirmPaymentHandler(name) {
-    obj = { name: name.paymentSource.billingAddress.name };
-    obj = { stripeConfirmPayment: name.stripe.confirmGiropayPayment, paymentMethod: { billing_details: obj } };
-    return obj;
-  }
-};
-obj = {
+let obj = {
   confirmationType: "stripe_redirect_confirmation",
   constructStripeConfirmPaymentHandler(paymentSource) {
     paymentSource = paymentSource.paymentSource;
-    obj = { country: paymentSource.billingAddress.country };
     obj = { name: paymentSource.billingAddress.name, email: paymentSource.email };
     obj = { stripeConfirmPayment: paymentSource.stripe.confirmSofortPayment, paymentMethod: { sofort: obj, billing_details: obj } };
     return obj;
@@ -32,16 +22,16 @@ class PaymentConfirmationHandler {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     obj.paymentSource = global;
-    obj.payment = arg1;
+    obj.payment = fn;
     obj.paymentSourceType = global.type;
-    obj.paymentId = arg1.payment_id;
+    obj.paymentId = fn.payment_id;
     return obj;
   }
 }
 PaymentConfirmationHandler.prototype["performRedirect"] = function performRedirect(arg0) {
   window.open(arg0);
 };
-const result = require("set").fileFinishedImporting("modules/billing/actions/HandleConfirmPaymentRegistry.tsx");
+const result = require("obj132").fileFinishedImporting("modules/billing/actions/HandleConfirmPaymentRegistry.tsx");
 class StripePaymentConfirmationHandler extends PaymentConfirmationHandler {
   constructor(arg0, arg1) {
     if (null == global) {
@@ -51,13 +41,13 @@ class StripePaymentConfirmationHandler extends PaymentConfirmationHandler {
       str2 = "Payment source cannot be null on a redirect.";
       throw obj2.dispatchConfirmationError("Payment source cannot be null on a redirect.");
     } else {
-      tmp9 = arg1;
+      tmp9 = fn;
       tmp10 = new.target;
       tmp11 = StripePaymentConfirmationHandler;
       tmp12 = new.target;
       tmp13 = new.target;
       tmp14 = global;
-      tmp15 = new StripePaymentConfirmationHandler(global, arg1, global);
+      tmp15 = new StripePaymentConfirmationHandler(global, fn, global);
       tmp16 = tmp15;
       // ThrowIfThisInitialized (0x7c)
       tmp15.stripe = null;
@@ -93,10 +83,10 @@ prototype["getStripe"] = function getStripe() {
       HermesBuiltin.throwTypeError();
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw stripe;
       } else if (arg0 === 2) {
         obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj[0] = stripe;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -107,16 +97,16 @@ prototype["getStripe"] = function getStripe() {
         if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw stripe;
           } else if (arg0 === 2) {
             c3 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = stripe;
             return obj;
           } else {
             closure_1 = tmp4;
-            if (null == closure_1_0.stripe) {
-              closure_0 = closure_1_0;
+            if (null == self.stripe) {
+              closure_0 = self;
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -126,17 +116,17 @@ prototype["getStripe"] = function getStripe() {
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw stripe;
         } else if (arg0 === 2) {
           c3 = 3;
           obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = stripe;
           return obj;
         } else {
-          closure_0.stripe = arg1;
+          closure_0.stripe = stripe;
         }
         if (null == closure_0.stripe) {
-          let obj2 = closure_1_0(4467);
+          let obj2 = self(4467);
           throw obj2.dispatchConfirmationError("Stripe cannot be null on a redirect.");
         } else {
           c3 = 3;
@@ -155,11 +145,11 @@ prototype["getPaymentIntentInfo"] = function getPaymentIntentInfo() {
   const self = this;
   return callback(function*() {
     let body = tmp4;
-    const HTTP = closure_1_0(table[5]).HTTP;
+    const HTTP = self(table[5]).HTTP;
     obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-    obj1[0] = closure_1_4.BILLING_STRIPE_PAYMENT_INTENTS(closure_1_0.paymentId);
+    obj1[0] = closure_1_4.BILLING_STRIPE_PAYMENT_INTENTS(self.paymentId);
     yield HTTP.get(obj1);
-    body = arg1.body;
+    body = body.body;
     obj = { clientSecret: null, paymentMethodId: null };
     obj[0] = body.stripe_payment_intent_client_secret;
     obj[1] = body.stripe_payment_intent_payment_method_id;
@@ -376,7 +366,7 @@ prototype["confirmPayment"] = function confirmPayment() {
             paymentMethodId = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0.getPaymentIntentInfo();
+            obj1[0] = self.getPaymentIntentInfo();
             return obj1;
           }
         } else if (1 === tmp5) {
@@ -461,13 +451,13 @@ class AdyenPaymentConfirmationHandler extends PaymentConfirmationHandler {
       str = "Payment source cannot be null on a redirect.";
       throw obj.dispatchConfirmationError("Payment source cannot be null on a redirect.");
     } else {
-      tmp = arg1;
+      tmp = fn;
       tmp2 = new.target;
       tmp3 = AdyenPaymentConfirmationHandler;
       tmp4 = new.target;
       tmp5 = new.target;
       tmp6 = global;
-      tmp7 = new AdyenPaymentConfirmationHandler(global, arg1, global);
+      tmp7 = new AdyenPaymentConfirmationHandler(global, fn, global);
       // ThrowIfThisInitialized (0x7c)
       tmp8 = tmp7;
       return tmp7;

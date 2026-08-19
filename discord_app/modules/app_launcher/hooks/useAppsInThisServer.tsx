@@ -1,13 +1,13 @@
 // === Module 11299: useAppsInThisServer ===
 
 // Module 11299 (useAppsInThisServer)
-import closure_4 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { useGuildIndexState } from "getIndexKey" /* 8448 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_7 } from "TRUE_OPTION_NAME" /* 5246 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 
 export default function useAppsInThisServer(context) {
   context = context.context;
@@ -36,8 +36,7 @@ export default function useAppsInThisServer(context) {
     }
     return nsfwAllowed;
   });
-  obj1 = commandsByActiveSection(memo[5]);
-  obj = { context, filters: null, options: null, allowFetch: true };
+  commandsByActiveSection(memo[5]);
   obj = { commandTypes: null };
   const items1 = [_require(memo[6]).ApplicationCommandType.CHAT, _require(memo[6]).ApplicationCommandType.PRIMARY_ENTRY_POINT];
   obj[0] = items1;
@@ -47,11 +46,11 @@ export default function useAppsInThisServer(context) {
   const discovery = obj1.useDiscovery(obj);
   commandsByActiveSection = discovery.commandsByActiveSection;
   const items2 = [commandsByActiveSection];
-  memo = sortApplicationsViaFrecency.useMemo(() => commandsByActiveSection.reduce((add, data) => {
-    if (data.data.length > 0) {
-      add.add(tmp.id);
+  memo = sortApplicationsViaFrecency.useMemo(() => commandsByActiveSection.reduce((acc, item, index) => {
+    if (item.data.length > 0) {
+      acc.add(tmp.id);
     }
-    return add;
+    return acc;
   }, new Set()), items2);
   let result = tmp2Result.result;
   let sections;
@@ -69,33 +68,29 @@ export default function useAppsInThisServer(context) {
       sections = {};
     }
     const values = Object.values(sections);
-    const mapped = values.map((descriptor) => descriptor.descriptor);
-    return mapped.filter((id) => {
-      let hasItem = !(id.id in closure_1_0(closure_1_3[7]).BUILT_IN_SECTIONS);
+    const mapped = values.map((item, index) => item.descriptor);
+    return mapped.filter((item, index) => {
+      let hasItem = !(item.id in closure_1_0(memo[7]).BUILT_IN_SECTIONS);
       if (hasItem) {
-        hasItem = set.has(id.id);
+        hasItem = set.has(item.id);
       }
       return hasItem;
     });
   }, items3);
   sortApplicationsViaFrecency = _require(memo[8]).useSortApplicationsViaFrecency(memo1);
-  const obj6 = sortApplicationsViaFrecency;
-  const tmp2 = useGuildIndexState;
-  const tmp5 = _require;
   const tmp5Result = _require(memo[8]);
-  const tmp6 = memo;
   const items4 = [stateFromStores, sortApplicationsViaFrecency];
   return {
     appsInThisServer: sortApplicationsViaFrecency.useMemo(() => {
       const obj = stateFromStores(memo[9]);
-      const found = stateFromStores(memo[9]).compact(sortApplicationsViaFrecency.map((application) => application.application)).filter((id) => {
+      const found = stateFromStores(memo[9]).compact(sortApplicationsViaFrecency.map((item, index) => item.application)).filter((item, index) => {
         let tmp = false === closure_1;
         if (tmp) {
-          tmp = closure_1_1(closure_1_3[10])(id.id);
+          tmp = stateFromStores(memo[10])(item.id);
         }
         return !tmp;
       });
-      return found.map((application) => ({ application }));
+      return found.map((item, index) => ({ application: item }));
     }, items4),
     isLoading: tmp13
   };

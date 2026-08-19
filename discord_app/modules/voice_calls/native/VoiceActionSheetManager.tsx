@@ -1,11 +1,12 @@
 // === Module 12645: _initialize ===
 
 // Module 12645 (_initialize)
+import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 
-let require = arg1;
+let require = fn;
 initializeDefault;
 class VoiceActionSheetManager extends tmp2 {
   constructor() {
@@ -15,14 +16,14 @@ class VoiceActionSheetManager extends tmp2 {
     applyArgumentsResult.handleOpenChannelCallModal = function handleOpenChannelCallModal() {
       channel = channel.channel;
       if (null != channel) {
-        closure_1_1(closure_1_2[3]).wait(() => {
+        dispatcherDefault.wait(() => {
           const result = channel(closure_1_2[4]).dismissVoiceChannelScreens(channel);
           const obj = channel(closure_1_2[4]);
           channel(closure_1_2[4]).openChannelCallModal(channel);
         });
-        channel.terminate();
-        const obj2 = closure_1_1(closure_1_2[3]);
+        obj.terminate();
       }
+      obj = channel;
     };
     return applyArgumentsResult;
   }
@@ -38,6 +39,6 @@ prototype["_terminate"] = function _terminate() {
   closure_3.removeChangeListener(this.handleOpenChannelCallModal);
 };
 const voiceActionSheetManager = new VoiceActionSheetManager();
-let result = require("set").fileFinishedImporting("modules/voice_calls/native/VoiceActionSheetManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_calls/native/VoiceActionSheetManager.tsx");
 
 export default voiceActionSheetManager;

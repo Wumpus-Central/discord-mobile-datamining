@@ -18,7 +18,7 @@ prototype["getCategories"] = function getCategories() {
 };
 prototype["getCategory"] = function getCategory(arg0) {
   closure_0 = arg0;
-  return closure_0.find((id) => id.id === closure_0);
+  return closure_0.find((item, index) => item.id === closure_0);
 };
 ApplicationDirectoryCategoriesStore.displayName = "ApplicationDirectoryCategoriesStore";
 const applicationDirectoryCategoriesStore = new ApplicationDirectoryCategoriesStore(dispatcherDefault, {
@@ -27,6 +27,6 @@ const applicationDirectoryCategoriesStore = new ApplicationDirectoryCategoriesSt
     closure_1 = Date.now();
   }
 });
-const result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCategoriesStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCategoriesStore.tsx");
 
 export default applicationDirectoryCategoriesStore;

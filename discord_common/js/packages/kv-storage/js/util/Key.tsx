@@ -1,10 +1,10 @@
 // === Module 1961: combineKey ===
 
 // Module 1961 (combineKey)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import TableId from "TableId" /* 1962 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/util/Key.tsx");
 
 export const combineKey = function combineKey(prefix, key) {
   if (Array.isArray(key)) {

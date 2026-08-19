@@ -1,11 +1,11 @@
 // === Module 7145: useGetOrFetchApplications ===
 
 // Module 7145 (useGetOrFetchApplications)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "addApplication" /* 4478 */;
+import noop from "noop" /* 19 */;
+import addApplication from "addApplication" /* 4478 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
 
 export default function useGetOrFetchApplications(arg0) {
   const _require = arg0;
@@ -13,7 +13,6 @@ export default function useGetOrFetchApplications(arg0) {
   if (arg1 === undefined) {
     flag = true;
   }
-  dependencyMap = undefined;
   dependencyMap = React.useRef([]);
   const items = [arg0, flag];
   const effect = React.useEffect(() => {
@@ -32,10 +31,10 @@ export default function useGetOrFetchApplications(arg0) {
     }
   }, items);
   const items1 = [closure_4];
-  return _require(589).useStateFromStoresArray(items1, () => items1.map((arg0) => {
+  return _require(589).useStateFromStoresArray(items1, () => items1.map((item, index) => {
     let application;
-    if (null != arg0) {
-      application = application.getApplication(arg0);
+    if (null != item) {
+      application = application.getApplication(item);
     }
     return application;
   }));
@@ -54,7 +53,6 @@ export const useGetOrFetchApplication = function useGetOrFetchApplication(applic
   if (flag === undefined) {
     flag = true;
   }
-  dependencyMap = undefined;
   dependencyMap = React.useRef([]);
   const items2 = [items1, flag];
   const effect = React.useEffect(() => {
@@ -73,10 +71,10 @@ export const useGetOrFetchApplication = function useGetOrFetchApplication(applic
     }
   }, items2);
   const items3 = [closure_4];
-  return items1(589).useStateFromStoresArray(items3, () => items1.map((arg0) => {
+  return items1(589).useStateFromStoresArray(items3, () => items1.map((item, index) => {
     let application;
-    if (null != arg0) {
-      application = application.getApplication(arg0);
+    if (null != item) {
+      application = application.getApplication(item);
     }
     return application;
   }))[0];

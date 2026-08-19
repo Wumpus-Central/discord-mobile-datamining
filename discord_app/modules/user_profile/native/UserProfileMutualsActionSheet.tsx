@@ -2,6 +2,8 @@
 
 // Module 11777 (MutualFriendRow)
 import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
 import getNicknameDefault from "getNickname" /* 4796 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import GuildIconSizes from "GuildIconSizes" /* 7188 */;
@@ -9,15 +11,17 @@ import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
 import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 9450 */;
 import ActivityStatusDefault from "ActivityStatus" /* 9893 */;
 import useUserProfileMutualsDefault from "useUserProfileMutuals" /* 11771 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import getMutualGuildsLabelDefault from "getMutualGuildsLabel" /* 11772 */;
+import getMutualFriendsLabelDefault from "getMutualFriendsLabel" /* 11778 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "sortActivity" /* 4559 */;
+import sortActivity from "sortActivity" /* 4559 */;
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function MutualFriendRow(mutualFriend) {
   const user = mutualFriend.mutualFriend.user;
   const guildId = mutualFriend.guildId;
@@ -28,7 +32,6 @@ function MutualFriendRow(mutualFriend) {
   const items = [closure_7];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ status: closure_1_7.getStatus(user.id), isMobileOnline: closure_1_7.isMobileOnline(user.id), isVROnline: closure_1_7.isVROnline(user.id) }));
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { onPress, icon: null, label: null, subLabel: null, start: null, end: null };
   obj = { user, size: user(1297).AvatarSizes.REFRESH_MEDIUM_32, avatarDecoration, status, guildId, isMobileOnline, isVROnline, autoStatusCutout: true };
   obj[1] = callback2(user(1297).Avatar, obj);
   const tmp = callback4();
@@ -91,37 +94,32 @@ class MutualGuildRow {
 }
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, loadingState: null, emptyState: null, activityStatusText: null, mutualGuildSubLabel: null };
-createCacheKey = { flex: 1, gap: 20, paddingTop: ThemesDefault.space.PX_8 };
+const createCacheKey = { flex: 1, gap: 20, paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_8, alignItems: "center" };
 createCacheKey[2] = { alignItems: "center" };
-let obj1 = { paddingTop: ThemesDefault.space.PX_8, alignItems: "center" };
 createCacheKey[3] = { color: ThemesDefault.colors.TEXT_SUBTLE };
-let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileMutualsActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileMutualsActionSheet.tsx");
 
 export default function UserProfileMutualsActionSheet(user) {
   user = user.user;
   ({ guildId: importDefault, onPressMutualFriend: dependencyMap, onPressMutualGuild: closure_3 } = user);
   let React;
   const tmp = callback4();
-  let obj = React;
   const tmp2 = callback(React.useState(0), 2);
   React = tmp2[1];
   ({ mutualFriends, mutualGuilds } = useUserProfileMutualsDefault(user));
   obj1 = user(8799);
-  obj = { pageWidth: tmp2[0], defaultIndex: null, items: null };
+  let obj = { pageWidth: tmp2[0], defaultIndex: null, items: null };
   let num = 0;
   if (user.section === UserProfileSections.MUTUAL_GUILDS) {
     num = 1;
   }
   obj[1] = num;
   let length;
-  let tmp3Result = tmp3(11778);
+  let tmp3Result = getMutualFriendsLabelDefault;
   if (mutualFriends != null) {
     length = mutualFriends.length;
   }
@@ -147,7 +145,7 @@ export default function UserProfileMutualsActionSheet(user) {
     };
     obj3[2] = function renderItem(item) {
       item = item.item;
-      return closure_1_9(closure_1_12, {
+      return closure_1_9(MutualFriendRow, {
         mutualFriend: item,
         guildId: closure_1,
         onPress() {
@@ -162,7 +160,7 @@ export default function UserProfileMutualsActionSheet(user) {
   obj[2] = tmp10;
   const items = [obj, ];
   let length1;
-  tmp3Result = tmp3(11772);
+  tmp3Result = getMutualGuildsLabelDefault;
   if (mutualGuilds != null) {
     length1 = mutualGuilds.length;
   }
@@ -185,7 +183,7 @@ export default function UserProfileMutualsActionSheet(user) {
     };
     obj7[2] = function renderItem(item) {
       item = item.item;
-      return closure_1_9(closure_1_13, {
+      return closure_1_9(MutualGuildRow, {
         user: item,
         mutualGuild: item,
         onPress() {

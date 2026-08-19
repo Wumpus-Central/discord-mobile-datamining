@@ -3,12 +3,12 @@
 // Module 8667 (isVoicePanelEnabled)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import useIsStageVoicePanelEnabled from "useIsStageVoicePanelEnabled" /* 8665 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "withEqualityFn" /* 8664 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import withEqualityFn from "withEqualityFn" /* 8664 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
 
 export const isVoicePanelEnabled = function isVoicePanelEnabled(channel2) {
   const result = useIsStageVoicePanelEnabled.isStageVoicePanelEnabled("voice_panel_utils");

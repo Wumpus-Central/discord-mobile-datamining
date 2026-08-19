@@ -2,12 +2,12 @@
 
 // Module 9857 (_transferToXbox)
 import noopAll from "noop" /* 19 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Linking } from "get ActivityIndicator" /* 17 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function _transferToXbox() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -124,8 +124,8 @@ function _transferToXbox() {
           } else {
             const obj10 = { importer: null };
             obj10[0] = function importer() {
-              return callback(paths[10])(paths[9], paths.paths).then((arg0) => {
-                closure_0 = arg0.default;
+              return callback(paths[10])(paths[9], paths.paths).then((result) => {
+                closure_0 = result.default;
                 return () => { ... };
               });
             };
@@ -151,7 +151,7 @@ function _transferToXbox() {
   return applyArgumentsResult;
 }
 noopAll;
-const result = require("set").fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");
 
 export default function transferToXbox() {
   const self = this;

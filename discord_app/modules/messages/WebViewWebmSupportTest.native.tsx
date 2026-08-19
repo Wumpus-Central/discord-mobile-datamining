@@ -1,12 +1,12 @@
 // === Module 4812: isIOSWithWebM ===
 
 // Module 4812 (isIOSWithWebM)
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import obj132 from "obj132" /* 2 */;
+import obj1322 from "obj132" /* 500 */;
 import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
 
 const ARM64_ = "ARM64_";
-const result = set.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
 
 export const isIOSWithWebM = function isIOSWithWebM() {
   if (obj.isIOS()) {
@@ -40,6 +40,5 @@ export const isIOSWithWebM = function isIOSWithWebM() {
   } else {
     return false;
   }
-  obj = set2;
-  const tmp = require;
+  obj = obj1322;
 };

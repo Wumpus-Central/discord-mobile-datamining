@@ -4,20 +4,20 @@
 import timestampDefault from "timestamp" /* 3 */;
 import fromStringAll from "fromString" /* 506 */;
 import itemsDefault from "items" /* 1955 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "_handleConnectionOpen" /* 4495 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
 import { createChannelRecordFromServer as closure_7 } from "createChannelRecord" /* 1395 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { ChannelLoader } from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_14 from "hasChannel" /* 1392 */;
-import set from "set" /* 2 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import hasChannel from "hasChannel" /* 1392 */;
+import obj132 from "obj132" /* 2 */;
 
-let set = arg1;
+let obj132 = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
   let tmp = null == basicChannel || basicChannel.type !== nextResult.type || basicChannel.parent_id !== nextResult.parent_id;
   if (!tmp) {
@@ -78,15 +78,13 @@ prototype["getAsync"] = function getAsync(arg0) {
   closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    closure_1 = tmp3;
-    closure_0 = tmp2;
     const _performance2 = performance;
     closure_0 = performance.now();
-    const obj7 = closure_1_1(c3[11]);
-    let items = [closure_1_1(c3[11]).basicChannels(closure_1_0).getKvEntries(), ];
-    const basicChannelsResult = closure_1_1(c3[11]).basicChannels(closure_1_0);
-    const obj9 = closure_1_1(c3[11]);
-    items[1] = closure_1_1(c3[11]).syncedBasicChannels(closure_1_0).getKvEntries();
+    const obj7 = self(c3[11]);
+    let items = [self(c3[11]).basicChannels(closure_1_0).getKvEntries(), ];
+    const basicChannelsResult = self(c3[11]).basicChannels(closure_1_0);
+    const obj9 = self(c3[11]);
+    items[1] = self(c3[11]).syncedBasicChannels(closure_1_0).getKvEntries();
     closure_1 = yield Promise.all(items);
     closure_4 = 5;
     const _performance = performance;
@@ -95,14 +93,12 @@ prototype["getAsync"] = function getAsync(arg0) {
       const items = [];
       const items1 = [];
       while (tmp !== undefined) {
-        let tmp3 = callback;
         let tmp4 = callback(tmp2, 2);
         let first = tmp4[0];
         let arr3 = items1;
         if (tmp4[1]) {
           arr3 = items;
         }
-        let tmp6 = first;
         let arr = arr3.push(first);
         continue;
       }
@@ -113,15 +109,15 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_8 = 32;
     const length = 5;
     const _Set = Set;
-    set = new Set(closure_8);
+    const set = new Set(closure_8);
     closure_1.synced = set;
     const _HermesInternal = HermesInternal;
     closure_1_15.verbose("loaded in " + closure_5 + "ms (guilds: " + c3.length + ", synced: " + set.size + " unsynced: " + length.length + ")");
     const obj3 = { all: null, stale: null, channels: null };
     obj3[0] = c3;
     obj3[1] = length;
-    obj3[2] = c3.filter((arg0) => {
-      [tmp, ] = arg0;
+    obj3[2] = c3.filter((item, index) => {
+      [tmp, ] = item;
       return set.has(tmp);
     });
     return obj3;
@@ -142,15 +138,12 @@ prototype["handleChannelDelete"] = function handleChannelDelete(channel, closure
 prototype["handleChannelUpdates"] = function handleChannelUpdates(channels, closure_0) {
   const self = this;
   channels = channels.channels;
-  const found = channels.filter((guild_id) => null != guild_id.guild_id);
+  const found = channels.filter((item, index) => null != item.guild_id);
   const iter = found[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp4 = hasBasicChannelChanged;
-    let tmp5 = store;
     let tmp3 = nextResult;
     if (hasBasicChannelChanged(store.getBasicChannel(nextResult.id), nextResult)) {
-      let tmp6 = nextResult;
       let unsyncResult = self.unsync(tmp3.guild_id, closure_0);
     }
     continue;
@@ -168,7 +161,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
         const channels = iter.partial_updates.channels;
         let mapped;
         if (channels != null) {
-          mapped = channels.map((arg0) => closure_1_7(arg0, iter.id));
+          mapped = channels.map((item, index) => closure_1_7(item, iter.id));
         }
         if (mapped == null) {
           mapped = [];
@@ -178,7 +171,6 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
           deleted_channel_ids = [];
         }
         self.onGuildUpdate(id, mapped, deleted_channel_ids, closure_0);
-        const tmp4 = self;
       } else {
         self.onGuildSync(iter.id, closure_0);
       }
@@ -235,14 +227,14 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
             closure_0 = closure_1_6.lastTimeConnectedChanged();
             const databaseResult = closure_1_1(closure_1_3[11]).database();
             guildIds = databaseResult;
-            if (null != closure_1_0.synced) {
+            if (null != self.synced) {
               if (null != databaseResult) {
                 if (obj7.isCacheEnabled()) {
                   guildIds = closure_1_12.getGuildIds();
                   let _HermesInternal = HermesInternal;
-                  closure_1_15.verbose("scheduling basic_channel optimstic writes (guilds: " + guildIds.filter((arg0) => {
+                  closure_1_15.verbose("scheduling basic_channel optimstic writes (guilds: " + guildIds.filter((item, index) => {
                     synced = synced.synced;
-                    return !synced.has(arg0);
+                    return !synced.has(item);
                   }).length + ")");
                   iter3 = function _loop2(arg0) {
                     closure_0 = arg0;
@@ -382,7 +374,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                     const tmp71 = iter3(next);
                   }
                 }
-                obj7 = closure_1_0(closure_1_3[12]);
+                obj7 = self(closure_1_3[12]);
               }
             }
             c10 = 3;
@@ -520,9 +512,8 @@ prototype["handleGuildRoleUpdate"] = function handleGuildRoleUpdate(role, closur
   role = role.getRole(role.guildId, role.id);
   let equalsResult = null != role;
   if (equalsResult) {
-    const obj = fromStringAll;
-    equalsResult = obj.equals(fromStringAll.deserialize(role.permissions), role.permissions);
-    const obj2 = fromStringAll;
+    const deserializer = fromStringAll;
+    equalsResult = fromStringAll.equals(deserializer.deserialize(role.permissions), role.permissions);
   }
   if (!equalsResult) {
     const self = this;
@@ -544,12 +535,12 @@ prototype["resetInMemoryState"] = function resetInMemoryState() {
 prototype["onGuildUpdate"] = function onGuildUpdate(id, mapped, deleted_channel_ids, closure_0) {
   let someResult = deleted_channel_ids.length > 0;
   if (!someResult) {
-    someResult = mapped.some((id) => {
-      basicChannel = basicChannel.getBasicChannel(id.id);
-      let tmp2 = null == basicChannel || basicChannel.type !== id.type || basicChannel.parent_id !== id.parent_id;
+    someResult = mapped.some((item, index) => {
+      basicChannel = basicChannel.getBasicChannel(item.id);
+      let tmp2 = null == basicChannel || basicChannel.type !== item.type || basicChannel.parent_id !== item.parent_id;
       if (!tmp2) {
         const basicPermissions = closure_13.computeBasicPermissions(basicChannel);
-        tmp2 = basicPermissions !== closure_13.computeBasicPermissions(id);
+        tmp2 = basicPermissions !== closure_13.computeBasicPermissions(item);
       }
       return tmp2;
     });
@@ -566,7 +557,6 @@ prototype["delete"] = function delete(guild_id, database) {
   this.unsync(guild_id, database);
   const result = itemsDefault.basicChannelsTransaction(database);
   result.delete(guild_id);
-  const obj = itemsDefault;
   const result1 = itemsDefault.syncedBasicChannelsTransaction(database);
   result1.delete(guild_id);
 };
@@ -577,7 +567,6 @@ prototype["unsync"] = function unsync(guild_id, closure_0) {
   }
   const result = itemsDefault.basicChannelsTransaction(closure_0);
   result.delete(guild_id);
-  const obj = itemsDefault;
   const result1 = itemsDefault.syncedBasicChannelsTransaction(closure_0);
   result1.put(guild_id, false);
   closure_14.invalidate(guild_id);
@@ -591,10 +580,8 @@ prototype["sync"] = function sync(database) {
   const nowResult = performance.now();
   while (tmp4 !== undefined) {
     if (self.syncOne(tmp5, database)) {
-      let tmp7 = num;
       num = num + 1;
     } else {
-      let tmp6 = num2;
       num2 = num2 + 1;
     }
     continue;
@@ -620,21 +607,19 @@ prototype["syncOne"] = function syncOne(closure_0, database) {
     const result = itemsDefault.basicChannelsTransaction(database);
     const _Object = Object;
     const values = Object.values(store.getMutableGuildChannelsForGuild(closure_0));
-    result.put(closure_0, values.map((id) => {
-      const obj = { id: id.id, type: id.type, guild_id: id.guild_id, parent_id: id.parent_id, basicPermissions: callback(table[14]).asBasicFlag(closure_13.computePermissions(id)) };
+    result.put(closure_0, values.map((item, index) => {
+      const obj = { id: item.id, type: item.type, guild_id: item.guild_id, parent_id: item.parent_id, basicPermissions: callback(table[14]).asBasicFlag(closure_13.computePermissions(item)) };
       return obj;
     }));
-    let obj = itemsDefault;
     const result1 = itemsDefault.syncedBasicChannelsTransaction(database);
     result1.put(closure_0, true);
     flag = true;
-    const obj3 = itemsDefault;
   }
   return flag;
 };
-set = Object.create(GuildBasicChannels.prototype);
-set.synced = null;
-set.actions = {
+obj132 = Object.create(GuildBasicChannels.prototype);
+obj132.synced = null;
+obj132.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -672,6 +657,6 @@ set.actions = {
     return obj.handleWriteCaches(arg0, arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/GuildBasicChannels.tsx");
+let result = obj132.fileFinishedImporting("modules/app_database/modules/GuildBasicChannels.tsx");
 
-export default set;
+export default obj132;

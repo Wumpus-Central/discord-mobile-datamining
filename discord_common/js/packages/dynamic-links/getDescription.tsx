@@ -1,9 +1,9 @@
-// === Module 12835: set ===
+// === Module 12835: obj132 ===
 
-// Module 12835 (set)
-import set from "set" /* 2 */;
+// Module 12835 (obj132)
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/dynamic-links/getDescription.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/dynamic-links/getDescription.tsx");
 
 export default function _default() {
   return "";

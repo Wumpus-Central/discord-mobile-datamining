@@ -6,30 +6,27 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import Text from "Text" /* 4734 */;
 import Button2 from "Button" /* 4745 */;
+import _promptForRegisterCredentialDefault from "_promptForRegisterCredential" /* 8586 */;
 import TwoFAModalSetupSections from "TwoFAModalSetupSections" /* 14139 */;
 import registerAsset from "registerAsset" /* 14149 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ View: closure_6, Image: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: null, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
-createCacheKey = { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: ThemesDefault.colors.TEXT_STRONG };
+const createCacheKey = { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: ThemesDefault.colors.TEXT_STRONG };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { height: 2, width: 48, margin: 32, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[6] = { alignSelf: "stretch", margin: 16, marginTop: 0 };
-let obj1 = { height: 2, width: 48, margin: 32, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[7] = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: ThemesDefault.colors.TEXT_STRONG };
-let obj2 = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: ThemesDefault.colors.TEXT_STRONG };
 createCacheKey[8] = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupSuccess.tsx");
 
 export default function TwoFASetupSuccess() {
   let tmp = callback3();
@@ -141,8 +138,7 @@ export default function TwoFASetupSuccess() {
       return applyArgumentsResult;
     }
     callback("");
-    let obj = closure_1_1(closure_1_2[10]);
-    obj = {
+    let obj = {
       setRegistering: _onRegisterSuccess,
       setError: callback,
       onRegisterSuccess(arg0) {
@@ -158,8 +154,7 @@ export default function TwoFASetupSuccess() {
     };
     obj.registerPasskey(obj);
   }, []);
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.flex };
+  let obj = { style: tmp.flex };
   const items = [callback2(closure_6, obj), , , , , , , ];
   obj = { source: registerAsset, style: tmp.image };
   items[1] = callback2(closure_7, obj);
@@ -191,14 +186,14 @@ export default function TwoFASetupSuccess() {
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.errorText;
     obj6[1] = tmp5;
-    tmp7Result = tmp7(Button.LegacyText, obj6);
+    tmp7Result = callback2(Button.LegacyText, obj6);
   }
   const obj7 = { children: null };
   items1[1] = tmp7Result;
   obj5[1] = items1;
-  items[6] = closure_9(closure_6, obj5);
+  items[6] = callback(closure_6, obj5);
   items[7] = callback2(closure_6, { style: tmp.flex });
   obj[1] = items;
-  obj7[0] = closure_9(closure_6, obj);
+  obj7[0] = callback(closure_6, obj);
   return callback2(TwoFAModalSetupSections.TwoFASetupModalScreen, obj7);
 };

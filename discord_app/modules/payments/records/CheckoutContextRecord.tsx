@@ -4,9 +4,9 @@
 import toJSDefault from "toJS" /* 1931 */;
 import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
 import addDefault from "add" /* 5318 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
-require = arg1;
+require = fn;
 toJSDefault;
 let AvailablePlanRecord;
 class AvailablePlanRecord extends tmp2 {
@@ -55,7 +55,6 @@ prototype["getPlanQuantities"] = function getPlanQuantities() {
     if (num == null) {
       num = 0;
     }
-    let tmp3 = nextResult;
     let result = map.set(nextResult.id, num + tmp2.quantity);
     continue;
   }
@@ -69,10 +68,8 @@ prototype["matchesItems"] = function matchesItems(closure_0) {
     } else {
       const obj = planQuantities[Symbol.iterator]();
       while (obj !== undefined) {
-        let tmp5 = callback;
         let tmp6 = callback(tmp3, 2);
         if (size2.get(tmp6[0]) !== tmp6[1]) {
-          let tmp7 = obj;
           obj.return();
           let flag = false;
           return false;
@@ -82,14 +79,13 @@ prototype["matchesItems"] = function matchesItems(closure_0) {
     }
   })(planQuantities, (function toQuantitiesByPlanId(closure_0) {
     const map = new Map();
-    const iter = closure_0[Symbol.iterator]();
+    const iter = dependencyMap[Symbol.iterator]();
     while (iter !== undefined) {
       ({ planId, quantity } = nextResult);
       let num = map.get(planId);
       if (num == null) {
         num = 0;
       }
-      let tmp2 = quantity;
       let result = map.set(planId, num + quantity);
       continue;
     }
@@ -111,7 +107,7 @@ prototype["getAddOnPrice"] = function getAddOnPrice() {
     const obj = { majorUnits: null, currency: null };
     const exponent = price.exponent;
     const addOnPlans = self.addOnPlans;
-    const reduced = addOnPlans.reduce((arg0, price) => arg0 + price.price.amount * price.quantity, 0);
+    const reduced = addOnPlans.reduce((acc, item, index) => acc + item.price.amount * item.quantity, 0);
     const obj2 = new addDefault(reduced);
     obj[0] = obj2.dividedBy(10 ** exponent).toNumber();
     obj[1] = price.currency;
@@ -198,13 +194,13 @@ CheckoutContextRecord["createFromOrder"] = function createFromOrder(checkout_con
 CheckoutContextRecord.prototype["getAvailablePlanForItems"] = function getAvailablePlanForItems(subscriptionItemsForProduct) {
   closure_0 = subscriptionItemsForProduct;
   const availablePlans = this.availablePlans;
-  let found = availablePlans.find((matchesItems) => matchesItems.matchesItems(closure_0));
+  let found = availablePlans.find((item, index) => item.matchesItems(closure_0));
   if (found == null) {
     found = null;
   }
   return found;
 };
-let result = require("set").fileFinishedImporting("modules/payments/records/CheckoutContextRecord.tsx");
+let result = require("obj132").fileFinishedImporting("modules/payments/records/CheckoutContextRecord.tsx");
 
 export default CheckoutContextRecord;
 export { AvailablePlanRecord };

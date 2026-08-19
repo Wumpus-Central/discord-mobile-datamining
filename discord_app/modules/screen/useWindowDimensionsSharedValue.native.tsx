@@ -1,7 +1,7 @@
 // === Module 11155: mutable ===
 
 // Module 11155 (mutable)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import uDefault from "u" /* 10561 */;
 import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11156 */;
 import module_4115 from "module_4115" /* 4115 */;
@@ -32,7 +32,7 @@ function getWindowDimensionsWorklet(arg0) {
 getWindowDimensionsWorklet.__closure = { windowDimensionsSharedValueIgnoringKeyboard: mutable1, windowDimensionsSharedValue: mutable };
 getWindowDimensionsWorklet.__workletHash = 17271034964949;
 getWindowDimensionsWorklet.__initData = { code: "function getWindowDimensionsWorklet_useWindowDimensionsSharedValueNativeTsx1(params=undefined){const{windowDimensionsSharedValueIgnoringKeyboard,windowDimensionsSharedValue}=this.__closure;return(params===null||params===void 0?void 0:params.ignoreKeyboard)===true?windowDimensionsSharedValueIgnoringKeyboard.get():windowDimensionsSharedValue.get();}" };
-const result = set.fileFinishedImporting("modules/screen/useWindowDimensionsSharedValue.native.tsx");
+const result = obj132.fileFinishedImporting("modules/screen/useWindowDimensionsSharedValue.native.tsx");
 
 export default function useWindowDimensionsSharedValue() {
   let ignoreKeyboard;

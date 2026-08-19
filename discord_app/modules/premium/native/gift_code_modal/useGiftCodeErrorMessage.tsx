@@ -1,12 +1,12 @@
 // === Module 10647: useGiftCodeErrorMessage ===
 
 // Module 10647 (useGiftCodeErrorMessage)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "map" /* 5324 */;
-import closure_4 from "updateGiftCode" /* 10641 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import map from "map" /* 5324 */;
+import updateGiftCode from "updateGiftCode" /* 10641 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
 
 export default function useGiftCodeErrorMessage(arg0, id) {
   const _require = arg0;

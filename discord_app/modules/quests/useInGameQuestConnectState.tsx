@@ -1,9 +1,9 @@
 // === Module 10956: useInGameQuestConnectState ===
 
 // Module 10956 (useInGameQuestConnectState)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/useInGameQuestConnectState.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/useInGameQuestConnectState.tsx");
 
 export function useInGameQuestConnectState(quest) {
 

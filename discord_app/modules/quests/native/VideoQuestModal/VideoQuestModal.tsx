@@ -2,21 +2,20 @@
 
 // Module 14477 (VideoQuestModalSteps)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
-let obj = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-obj = { root: { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM }, pillarboxed: { alignSelf: "center" }, wrapper: { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 }, contentWrapper: { flex: 1 }, contentBackground: null, modalContentWrapper: null, backgroundWrapper: null };
-createCacheKey = {};
+let obj = { root: { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM }, pillarboxed: { alignSelf: "center" }, wrapper: { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 }, contentWrapper: { flex: 1 }, contentBackground: null, modalContentWrapper: null, backgroundWrapper: null };
+const createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.borderRadius = ThemesDefault.radii.lg;
 createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOWEST;
@@ -61,13 +60,13 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
       }
       callback2(arg0);
       obj = initialStep(quest[9]);
-      obj = { questId: quest.id, event: arg0 ? tmp5.QUEST_VIDEO_FULLSCREEN_ENTERED : tmp5.QUEST_VIDEO_FULLSCREEN_EXITED, properties: obj, sourceQuestContent };
       obj = { video_session_id: videoSessionId };
       obj.trackQuestEvent(obj);
+      const tmp = initialStep(quest[8]);
     }, items);
     const tmp15 = sharedValue();
     closure_9 = tmp15;
-    const tmp17 = sourceQuestContent(tmp2[11])(obj1.useContext(tmp(tmp2[10]).QuestDockGestureContext).windowDimensions);
+    const tmp17 = sourceQuestContent(tmp2[11])(obj1.useContext(initialStep(tmp2[10]).QuestDockGestureContext).windowDimensions);
     ({ width, height } = tmp17);
     let bound = null;
     if (tmp17.landscape) {
@@ -108,13 +107,13 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
       callback(false);
       callback(bound.POST_WATCH_VIDEO);
     }, items3);
-    let tmpResult = tmp(tmp2[12]);
+    let tmpResult = initialStep(tmp2[12]);
     let num3 = 0;
     if (first === bound.POST_WATCH_VIDEO) {
       num3 = 1;
     }
     sharedValue = tmpResult.useSharedValue(num3);
-    tmpResult = tmp(tmp2[12]);
+    tmpResult = initialStep(tmp2[12]);
     class L {
       constructor() {
         obj = { opacity: null, transform: null };
@@ -132,11 +131,11 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
       }
     }
     obj = { withSpring: null, clamp: null, postWatchAnimationState: null, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: null, interpolate: null, CLOUDS_BACKGROUND_INVISIBLE_OFFSET_Y: -100 };
-    obj[0] = tmp(tmp2[13]).withSpring;
-    obj[1] = tmp(tmp2[12]).clamp;
+    obj[0] = initialStep(tmp2[13]).withSpring;
+    obj[1] = initialStep(tmp2[12]).clamp;
     obj[2] = sharedValue;
     obj[3] = closure_9;
-    obj[4] = tmp(tmp2[12]).interpolate;
+    obj[4] = initialStep(tmp2[12]).interpolate;
     L.__closure = obj;
     L.__workletHash = 11571705142399;
     L.__initData = closure_12;
@@ -163,8 +162,8 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
       }
     }
     obj = { withSpring: null, interpolate: null, postWatchAnimationState: null, safeAreaInsets: null, BACKGROUND_ENTRANCE_ANIMATION_SPRING_CONFIG: null };
-    obj[0] = tmp(tmp2[13]).withSpring;
-    obj[1] = tmp(tmp2[12]).interpolate;
+    obj[0] = initialStep(tmp2[13]).withSpring;
+    obj[1] = initialStep(tmp2[12]).interpolate;
     obj[2] = sharedValue;
     obj[3] = tmp29;
     obj[4] = closure_9;
@@ -172,7 +171,7 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
     U.__workletHash = 9769051401109;
     U.__initData = closure_13;
     const items4 = [sharedValue, first];
-    const animatedStyle1 = tmp(tmp2[12]).useAnimatedStyle(U);
+    const animatedStyle1 = initialStep(tmp2[12]).useAnimatedStyle(U);
     const effect = obj1.useEffect(() => {
       let num = 0;
       if (first === bound.POST_WATCH_VIDEO) {
@@ -191,7 +190,7 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
     obj4[0] = height;
     items6[1] = obj4;
     obj3[0] = items6;
-    let tmp16Result = tmp16(tmp2[15]);
+    tmp16(tmp2[15]);
     let obj5 = { style: null };
     const items7 = [tmp15.contentBackground, ];
     const obj6 = { top: null };
@@ -205,7 +204,7 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
     items8[1] = callback(sourceQuestContent(tmp2[15]), obj7);
     const obj8 = { style: null, children: null };
     obj8[0] = animatedStyle;
-    tmp16Result = tmp16(tmp2[15]);
+    const tmp16Result = tmp16(tmp2[15]);
     obj8[1] = callback(sourceQuestContent(tmp2[16]), { align: "top" });
     items8[2] = callback(tmp16Result, obj8);
     obj3[1] = items8;
@@ -246,14 +245,13 @@ let closure_14 = importAllResult.memo((sourceQuestContent) => {
     items12[1] = tmp33Result;
     obj11[1] = items12;
     obj9[2] = callback(first, obj11);
-    items10[1] = callback(tmp(tmp2[17]).SafeAreaPaddingView, obj9);
+    items10[1] = callback(initialStep(tmp2[17]).SafeAreaPaddingView, obj9);
     obj2[1] = items10;
     obj1[1] = callback(tmp16Result, obj2);
     return callback(first, obj1);
   }
 });
 const watch_mobile_video_quest = "watch_mobile_video_quest";
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };
 const memoResult = importAllResult.memo(function VideoQuestModal(questContentPosition) {
   questContentPosition = questContentPosition.questContentPosition;
   const onClose = questContentPosition.onClose;
@@ -271,18 +269,15 @@ const memoResult = importAllResult.memo(function VideoQuestModal(questContentPos
   const memo = sourceQuestContent.useMemo(() => {
     let tmp = null;
     if (null != nonNullableQuest) {
-      obj = {};
       obj = { fullscreen: true, headerLeft: null, render: null };
       obj[1] = function headerLeft() {
         return null;
       };
       obj[2] = function render() {
-        obj = { value: obj, children: null };
-        obj = { quest: closure_5, videoSessionId: closure_2 };
         obj = {
-          children: closure_1_7(closure_1_0(closure_1_2[22]).BillableAdPlacementImpressionTrackerNative, {
+          children: closure_1_7(questContentPosition(videoSessionId[22]).BillableAdPlacementImpressionTrackerNative, {
             overrideVisibility: true,
-            questContent: closure_1_0(closure_1_2[23]).QuestContent.VIDEO_MODAL_MOBILE,
+            questContent: questContentPosition(videoSessionId[23]).QuestContent.VIDEO_MODAL_MOBILE,
             questOrQuests: closure_5,
             questContentPosition: closure_0,
             sourceQuestContent: closure_4,
@@ -291,10 +286,10 @@ const memoResult = importAllResult.memo(function VideoQuestModal(questContentPos
             }
           })
         };
-        obj[1] = closure_1_7(closure_1_0(closure_1_2[10]).QuestDockGestureContextProvider, obj);
-        return closure_1_7(closure_1_1(closure_1_2[7]).Provider, obj);
+        obj[1] = closure_1_7(questContentPosition(videoSessionId[10]).QuestDockGestureContextProvider, obj);
+        return closure_1_7(onClose(videoSessionId[7]).Provider, obj);
       };
-      obj[closure_1_15] = obj;
+      obj[watch_mobile_video_quest] = obj;
       tmp = obj;
     }
     return tmp;
@@ -315,7 +310,7 @@ const memoResult = importAllResult.memo(function VideoQuestModal(questContentPos
   }
   return tmp7;
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModal.tsx");
 
 export default memoResult;
 export const VideoQuestModalSteps = obj;

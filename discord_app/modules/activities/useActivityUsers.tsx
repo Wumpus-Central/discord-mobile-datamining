@@ -1,11 +1,11 @@
 // === Module 16365: useActivityUsers ===
 
 // Module 16365 (useActivityUsers)
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "participantFromServer" /* 1390 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useActivityUsers.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/useActivityUsers.tsx");
 
 export default function useActivityUsers(arg0, arg1) {
   const _require = arg0;
@@ -17,13 +17,13 @@ export default function useActivityUsers(arg0, arg1) {
       return [];
     } else {
       const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(tmp);
-      const found = embeddedActivitiesForChannel.find((applicationId) => applicationId.applicationId === closure_0);
+      const found = embeddedActivitiesForChannel.find((item, index) => item.applicationId === closure_0);
       if (null == found) {
         let items = [];
       } else {
         const _Array = Array;
-        const mapped = Array.from(found.userIds).map((arg0) => user.getUser(arg0));
-        items = mapped.filter((arg0) => null != arg0);
+        const mapped = Array.from(found.userIds).map((item, index) => user.getUser(item));
+        items = mapped.filter((item, index) => null != item);
         const arr = Array.from(found.userIds);
       }
       return items;

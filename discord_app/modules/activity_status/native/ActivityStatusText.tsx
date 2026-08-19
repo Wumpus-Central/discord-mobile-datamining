@@ -6,10 +6,10 @@ import Text from "Text" /* 4734 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_3 = createCacheKey.createStyles({ text: { flexShrink: 1 } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
 
 export default function ActivityStatusText(variant) {
   let str = variant.variant;

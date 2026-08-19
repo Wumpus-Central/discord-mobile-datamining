@@ -1,7 +1,7 @@
 // === Module 13103: mode ===
 
 // Module 13103 (mode)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -11,7 +11,7 @@ const Store = initializeDefault.Store;
 class VideoQualityModeStore extends Store {
 }
 Object.defineProperty(VideoQualityModeStore.prototype, "mode", {
-  get: function mode(activeIndex, arg1) {
+  get: function mode(closure_3, arg1) {
     return AUTO;
   },
   set: undefined
@@ -22,6 +22,6 @@ const videoQualityModeStore = new VideoQualityModeStore(dispatcherDefault, {
     mode = mode.mode;
   }
 });
-const result = set.fileFinishedImporting("stores/VideoQualityModeStore.tsx");
+const result = obj132.fileFinishedImporting("stores/VideoQualityModeStore.tsx");
 
 export default videoQualityModeStore;

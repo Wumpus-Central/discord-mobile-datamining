@@ -1,16 +1,16 @@
 // === Module 11925: setNewUser ===
 
 // Module 11925 (setNewUser)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = set.fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
 
 export const setNewUser = function setNewUser(ORGANIC_REGISTERED) {
   importDefault = ORGANIC_REGISTERED;
   dispatcherDefault.wait(() => {
-    let obj = ORGANIC_REGISTERED(closure_1_1[0]);
-    obj = { type: "NUF_NEW_USER", newUserType: ORGANIC_REGISTERED };
+    ORGANIC_REGISTERED(dependencyMap[0]);
+    const obj = { type: "NUF_NEW_USER", newUserType: ORGANIC_REGISTERED };
     return obj.dispatch(obj);
   });
 };

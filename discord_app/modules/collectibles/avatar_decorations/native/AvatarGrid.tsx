@@ -5,12 +5,12 @@ import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_4 from "sortActivity" /* 4559 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import sortActivity from "sortActivity" /* 4559 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function GridAvatar(user) {
   user = user.user;
   ({ guildId, pendingAvatarSrc, pendingAvatarDecoration } = user);
@@ -44,22 +44,19 @@ function GridAvatar(user) {
     obj1[1] = guildId;
     const merged1 = Object.assign(obj);
   }
-  return closure_5(user(1297).Avatar, obj1);
+  return callback(user(1297).Avatar, obj1);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" }, avatarStatusStyle: null, gridContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 108, height: 108, justifyContent: "space-around", marginLeft: 28 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarGrid.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarGrid.tsx");
 
 export default function AvatarGrid(arg0) {
   const tmp = callback3();
-  let obj = { style: tmp.gridContainer, children: null };
-  obj = { style: tmp.avatarRow, children: null };
-  obj = { size: Button.AvatarSizes.NORMAL };
+  const obj = { size: Button.AvatarSizes.NORMAL };
   const merged = Object.assign(arg0);
   const items = [callback(GridAvatar, obj), ];
   const merged1 = Object.assign(arg0);
@@ -67,10 +64,8 @@ export default function AvatarGrid(arg0) {
   obj[1] = items;
   const items1 = [callback2(View, obj), ];
   const obj2 = { style: tmp.avatarRow, children: null };
-  obj1 = { size: Button.AvatarSizes.NORMAL, showStatus: true };
   const merged2 = Object.assign(arg0);
   const items2 = [callback(GridAvatar, { size: Button.AvatarSizes.REFRESH_MEDIUM_32 }), ];
-  const obj3 = { size: Button.AvatarSizes.REFRESH_MEDIUM_32 };
   const merged3 = Object.assign(arg0);
   items2[1] = callback(GridAvatar, { size: Button.AvatarSizes.REFRESH_MEDIUM_32, showStatus: true });
   obj2[1] = items2;

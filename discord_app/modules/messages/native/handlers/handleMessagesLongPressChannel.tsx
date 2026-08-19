@@ -1,11 +1,11 @@
 // === Module 10780: handleMessagesLongPressChannel ===
 
 // Module 10780 (handleMessagesLongPressChannel)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import allowChannelAccess from "allowChannelAccess" /* 4979 */;
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10781 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
 
 export const handleMessagesLongPressChannel = function handleMessagesLongPressChannel(data) {
   ({ guildId, channelId, messageId, originalLink } = data.data);

@@ -3,17 +3,17 @@
 // Module 16119 (LeftAlignedHeaderTitle)
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 1994 */;
-import closure_7 from "zustandStore" /* 13993 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import zustandStore from "zustandStore" /* 13993 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function LeftAlignedHeaderTitle(children) {
   const tmp = callback3();
   return callback(Text.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: callback3().headerContainer, children: children.title });
@@ -22,12 +22,11 @@ let c4 = importAllResult;
 ({ AnalyticsPages: closure_8, UserSettingsSections: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createNativeStackNavigator.createNativeStackNavigator();
-let obj = { statusBarSpacer: null, headerContainer: null, backIcon: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[0] = obj;
 createNativeStackNavigator = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8 };
 obj[1] = createNativeStackNavigator;
-createCacheKey = { borderRadius: ThemesDefault.radii.round, marginTop: ThemesDefault.space.PX_8 };
+const createCacheKey = { borderRadius: ThemesDefault.radii.round, marginTop: ThemesDefault.space.PX_8 };
 obj[2] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
@@ -60,7 +59,6 @@ const memoResult = importAllResult.memo(() => {
   const items = [screen];
   const effect = importAllResult.useEffect(() => {
     obj = callback(params[14]);
-    obj = { destinationPane: screen, source: obj };
     obj = { page: constants.USER_SETTINGS };
     const result = obj.trackUserSettingsPaneViewed(obj);
   }, items);
@@ -95,7 +93,6 @@ const memoResult = importAllResult.memo(() => {
   closure_7 = importAllResult.useCallback((arg0) => {
     closure_0 = arg0;
     return () => {
-      obj = { collapsable: false, children: null };
       obj = {
         onPress() {
           return navigation.goBack();
@@ -149,8 +146,8 @@ const memoResult = importAllResult.memo(() => {
     style: tmp.statusBarSpacer,
     accessible: false,
     onAccessibilityEscape() {
-      if (closure_4.canGoBack()) {
-        closure_4.goBack();
+      if (navigation.canGoBack()) {
+        navigation.goBack();
       }
     },
     children: null
@@ -183,8 +180,8 @@ const memoResult = importAllResult.memo(() => {
         return callback(params[29]).default;
       }
     }),
-    memo.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    memo.map((item, index) => {
+      [tmp, tmp2] = item;
       obj = {
         name: tmp2.route,
         options(navigation) {
@@ -223,6 +220,6 @@ const memoResult = importAllResult.memo(() => {
   obj[1] = items5;
   return callback2(_require(params[16]).AnalyticsLocationProvider, obj);
 });
-let result = require("set").fileFinishedImporting("modules/user_settings/core/native/SettingsNavigator.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/core/native/SettingsNavigator.tsx");
 
 export default memoResult;

@@ -6,20 +6,19 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import Text from "Text" /* 4734 */;
 import PressableBase from "PressableBase" /* 5433 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { Fonts } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = arg1;
+require = fn;
 function keyExtractor(item) {
   return item.item.id;
 }
 function FriendsEmptyComponent() {
   const tmp = callback3();
-  let obj = { children: null };
-  obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
+  let obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.dz4UlO);
   const intl2 = getSystemLocale.intl;
@@ -55,8 +54,7 @@ function FriendsEmptyComponent() {
   return callback2(closure_5, obj);
 }
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
 createCacheKey.textTransform = "none";
 createCacheKey.lineHeight = 24;
@@ -69,7 +67,7 @@ createCacheKey[1] = obj1;
 createCacheKey[2] = { textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 const importDefaultResult1 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteFriendsList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteFriendsList.tsx");
 
 export default function InstantInviteFriendsList(code) {
   code = code.code;
@@ -82,8 +80,7 @@ export default function InstantInviteFriendsList(code) {
     index = index.index;
     return source(onPressAvatar(onInviteSent[12]), { start: 0 === index, end: index === data.length - 1, row: index.item, onPressAvatar, onInviteSent, code, source });
   }, items);
-  let obj = { contentContainerStyle: null, bounces: false, renderItem: null, data: null, keyExtractor: null, keyboardShouldPersistTaps: "always", ListEmptyComponent: null };
-  obj = { paddingBottom: onPressAvatar(onInviteSent[5]).space.PX_16 + onPressAvatar(onInviteSent[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom, paddingHorizontal: onPressAvatar(onInviteSent[5]).space.PX_12 };
+  const obj = { paddingBottom: onPressAvatar(onInviteSent[5]).space.PX_16 + onPressAvatar(onInviteSent[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom, paddingHorizontal: onPressAvatar(onInviteSent[5]).space.PX_12 };
   obj[0] = obj;
   obj[2] = callback;
   obj[3] = data;

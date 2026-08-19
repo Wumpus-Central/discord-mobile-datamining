@@ -4,14 +4,14 @@
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import closure_3 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
+import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { MessageTypes } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");
 
 export const createJoinRequestNotificationSystemMessage = function createJoinRequestNotificationSystemMessage(message) {
   message = message.message;
@@ -59,7 +59,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
     obj[1] = name;
     stringResult = intl6.formatToParts(getSystemLocale.t.EloBG4, obj);
   } else {
-    if (tmp13.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION === type) {
+    if (MessageTypes.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION === type) {
       if (null != username) {
         if (null != name) {
           const intl4 = getSystemLocale.intl;
@@ -74,7 +74,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
       formatToPartsResult = intl3.string(getSystemLocale.t.FVF6qU);
     } else {
       str = "";
-      if (tmp13.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION === type) {
+      if (MessageTypes.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION === type) {
         if (null != username) {
           if (null != name) {
             const intl2 = getSystemLocale.intl;

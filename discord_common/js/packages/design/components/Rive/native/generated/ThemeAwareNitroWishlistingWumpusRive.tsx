@@ -3,11 +3,11 @@
 // Module 4191 (ThemeAwareNitroWishlistingWumpusRive)
 import BaseRive from "BaseRive" /* 4109 */;
 import getDerivedStateFromError from "getDerivedStateFromError" /* 4164 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let c5 = importAllResult;
 let closure_7 = { "Nitro Wishlist": { reducedMotion: "boolean", logoColor: "color" } };
@@ -16,7 +16,6 @@ let closure_9 = {
   "Nitro Wishlist": function NitroWishlistBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let logoColor;
     if (dataBinding != null) {
       logoColor = dataBinding.logoColor;
@@ -50,7 +49,7 @@ let closure_10 = importAllResult.forwardRef(function ThemeAwareNitroWishlistingW
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = closure_1_6(tmp, obj);
+      tmp2 = <tmp />;
     }
     return tmp2;
   }, items);
@@ -59,12 +58,11 @@ let closure_10 = importAllResult.forwardRef(function ThemeAwareNitroWishlistingW
   return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 });
 const forwardRefResult = importAllResult.forwardRef(function ThemeAwareNitroWishlistingWumpusRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
+  const obj = { ref };
   const merged = Object.assign(fallback);
-  obj[1] = <closure_10 ref={arg1} />;
+  obj[1] = <closure_10 ref={ref} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/ThemeAwareNitroWishlistingWumpusRive.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/ThemeAwareNitroWishlistingWumpusRive.tsx");
 
 export const ThemeAwareNitroWishlistingWumpusRive = forwardRefResult;

@@ -1,10 +1,10 @@
 // === Module 10609: useShouldShowInitialSafetyToolsButtonTooltip ===
 
 // Module 10609 (useShouldShowInitialSafetyToolsButtonTooltip)
-import closure_2 from "handleConnectionOpen" /* 9921 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 9921 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowInitialSafetyToolsButtonTooltip.tsx");
 
 export const useShouldShowInitialSafetyToolsButtonTooltip = function useShouldShowInitialSafetyToolsButtonTooltip(channelId) {
   const _require = channelId;

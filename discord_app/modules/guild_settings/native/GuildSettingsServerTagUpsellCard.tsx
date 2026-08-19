@@ -4,13 +4,14 @@
 import ThemesDefault from "Themes" /* 712 */;
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
 import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 11689 */;
-import closure_3 from "noop" /* 19 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 11692 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "calculateAppliedBoosts" /* 4261 */;
+import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = { x: 0, y: 0.5 };
@@ -18,8 +19,7 @@ let closure_9 = { x: 1, y: 0.5 };
 let closure_10 = ["rgba(88, 101, 242, 0.3)", "rgba(22, 26, 138, 0.3)"];
 let closure_11 = ["rgba(151, 151, 159, 0.04)", "rgba(151, 151, 159, 0.04)"];
 let c12 = "#29292D";
-createCacheKey = { card: null, imageContainer: null, textBlock: null, centerText: null, body: null, backgroundLayer: null, powerupImage: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: "#29292D", overflow: "hidden", paddingHorizontal: ThemesDefault.space.PX_24, paddingTop: ThemesDefault.space.PX_20, paddingBottom: ThemesDefault.space.PX_24 };
+const createCacheKey = { borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: "#29292D", overflow: "hidden", paddingHorizontal: ThemesDefault.space.PX_24, paddingTop: ThemesDefault.space.PX_20, paddingBottom: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 104, justifyContent: "center" };
 createCacheKey[2] = { alignItems: "center" };
@@ -28,7 +28,7 @@ createCacheKey[4] = { maxWidth: 320 };
 createCacheKey[5] = StyleSheet.absoluteFillObject;
 createCacheKey[6] = { width: "92%" };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx");
 
 export default function GuildSettingsServerTagUpsellCard(guildId) {
   guildId = guildId.guildId;
@@ -40,7 +40,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
     const stateForGuild = closure_1_5.getStateForGuild(guildId);
     let tmp2;
     if (stateForGuild != null) {
-      tmp2 = stateForGuild.allPowerups[guildId(undefined, closure_1_2[7]).GUILD_POWERUP_TAG_SKU_ID];
+      tmp2 = stateForGuild.allPowerups[guildId(undefined, dependencyMap[7]).GUILD_POWERUP_TAG_SKU_ID];
     }
     return tmp2;
   }, items1);
@@ -48,11 +48,10 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   const items2 = [guildId];
   const effect = React.useEffect(() => {
     if (closure_1_5.shouldFetchCatalogForGuild(guildId)) {
-      const powerupCatalogForGuild = guildId(closure_1_2[9]).fetchPowerupCatalogForGuild(guildId);
-      const obj = guildId(closure_1_2[9]);
+      const powerupCatalogForGuild = guildId(dependencyMap[9]).fetchPowerupCatalogForGuild(guildId);
+      const obj = guildId(dependencyMap[9]);
     }
   }, items2);
-  obj = { style: tmp.card, children: null };
   obj = { style: tmp.backgroundLayer, colors: items3, locations: [0, 0.7], start: { x: 0.5, y: 0 }, end: { x: 0.5, y: 1 }, pointerEvents: "none" };
   items3 = ["rgba(41, 41, 45, 0)", c12];
   const items4 = [callback(LinearGradientDefault, obj), callback(LinearGradientDefault, { style: tmp.backgroundLayer, colors: closure_10, start: closure_8, end: closure_9, pointerEvents: "none" }), callback(LinearGradientDefault, { style: tmp.backgroundLayer, colors: closure_11, start: closure_8, end: closure_9, pointerEvents: "none" }), ];
@@ -63,7 +62,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
     const obj5 = { imageUrl: null, style: null };
     obj5[0] = tmp6;
     obj5[1] = tmp.powerupImage;
-    tmp10Result = tmp10(tmp5(11692), obj5);
+    tmp10Result = callback(GuildPowerupsImageDefault, obj5);
   }
   obj4[3] = tmp10Result;
   const items5 = [callback(closure_4, obj4), , ];
@@ -79,7 +78,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   obj8[3] = intl2.string(guildId(1236).t.Tg0fDm);
   items6[1] = callback(guildId(4734).Text, obj8);
   obj6[2] = items6;
-  items5[1] = closure_7(guildId(4733).Stack, obj6);
+  items5[1] = callback(guildId(4733).Stack, obj6);
   const obj9 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1236).intl;
   obj9[2] = intl3.string(guildId(1236).t.kMRDWs);
@@ -87,7 +86,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   obj9[5] = guildId.onUnlockPress;
   items5[2] = callback(guildId(4745).Button, obj9);
   obj3[1] = items5;
-  items4[3] = closure_7(guildId(4733).Stack, obj3);
+  items4[3] = callback(guildId(4733).Stack, obj3);
   obj[1] = items4;
-  return closure_7(closure_4, obj);
+  return callback(closure_4, obj);
 };

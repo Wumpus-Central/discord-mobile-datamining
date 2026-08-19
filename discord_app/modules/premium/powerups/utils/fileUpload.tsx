@@ -2,11 +2,11 @@
 
 // Module 11667 (useShouldShowFileUploadRollback)
 import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
-import closure_3 from "calculateAppliedBoosts" /* 4261 */;
+import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
 import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4262 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/fileUpload.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/utils/fileUpload.tsx");
 
 export const useShouldShowFileUploadRollback = function useShouldShowFileUploadRollback(guildId, location) {
   const _require = guildId;

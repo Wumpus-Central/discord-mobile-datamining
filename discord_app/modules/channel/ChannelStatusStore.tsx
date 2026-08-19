@@ -4,17 +4,16 @@
 import initializeDefault from "initialize" /* 589 */;
 import set2 from "set" /* 692 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "_handleConnectionOpen" /* 4495 */;
-import set from "set" /* 2 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
 
-require = arg1;
+require = fn;
 function handleConnectionReset() {
   set.clear();
 }
 function handleGuildReset(guild) {
   set.delete(guild.guild.id);
 }
-let set = new Set();
+const set = new Set();
 let closure_4 = {};
 const Store = initializeDefault.Store;
 class ChannelStatusStore extends Store {
@@ -47,7 +46,7 @@ const channelStatusStore = new ChannelStatusStore(dispatcherDefault, {
   CONNECTION_OPEN: handleConnectionReset,
   VOICE_CHANNEL_STATUS_UPDATE: function handleVoiceChannelStatusUpdate(guildId) {
     if (null == dependencyMap[guildId.guildId]) {
-      tmp[guildId.guildId] = {};
+      dependencyMap[guildId.guildId] = {};
     }
     dependencyMap[guildId.guildId][guildId.id] = guildId.status;
   },
@@ -55,7 +54,6 @@ const channelStatusStore = new ChannelStatusStore(dispatcherDefault, {
     ({ guildId, channels } = arg0);
     dependencyMap[guildId] = {};
     for (const item10009 of channels) {
-      let tmp = dependencyMap;
       dependencyMap[guildId][item10009.id] = item10009.status;
       continue;
     }
@@ -64,6 +62,6 @@ const channelStatusStore = new ChannelStatusStore(dispatcherDefault, {
     set.add(guildId.guildId);
   }
 });
-const result = set.fileFinishedImporting("modules/channel/ChannelStatusStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel/ChannelStatusStore.tsx");
 
 export default channelStatusStore;

@@ -6,7 +6,7 @@ import importAllResult from "noop" /* 19 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
   const node = importAllResult.useMemo(() => {
@@ -16,6 +16,6 @@ const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
   }, []);
   return jsx(_modDef13991, { node });
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
 
 export default memoResult;

@@ -31,6 +31,6 @@ const alertStore = new AlertStore(dispatcherDefault, {
     c2 = null;
   }
 });
-const result = require("set").fileFinishedImporting("stores/native/AlertStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/native/AlertStore.tsx");
 
 export default alertStore;

@@ -1,11 +1,11 @@
 // === Module 12473: useIframeLifecycle ===
 
 // Module 12473 (useIframeLifecycle)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { ComponentActions } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useIframeLifecycle.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/useIframeLifecycle.tsx");
 
 export default function useIframeLifecycle(arg0) {
   closure_0 = arg0;
@@ -23,10 +23,6 @@ export default function useIframeLifecycle(arg0) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  closure_5 = undefined;
-  closure_6 = undefined;
-  closure_7 = undefined;
-  closure_8 = undefined;
   closure_5 = onIframeUnmount.useRef(onIframeMount);
   closure_6 = onIframeUnmount.useRef(onIframeUnmount);
   closure_7 = onIframeUnmount.useRef(flag);
@@ -46,21 +42,19 @@ export default function useIframeLifecycle(arg0) {
       ComponentDispatch.dispatch(flag.IFRAME_MOUNT, obj);
       let current = ref.current;
       if (current != null) {
-        current(tmp4);
+        current(callback);
       }
-      tmp4 = callback;
     }
     return () => {
       if (ref2.current) {
-        const ComponentDispatch = closure_1_0(closure_1_1[2]).ComponentDispatch;
+        const ComponentDispatch = closure_1_0(onIframeMount[2]).ComponentDispatch;
         const obj = { id: null };
         obj[0] = closure_0;
-        ComponentDispatch.dispatch(closure_1_3.IFRAME_UNMOUNT, obj);
+        ComponentDispatch.dispatch(flag.IFRAME_UNMOUNT, obj);
         const current = ref.current;
         if (current != null) {
-          current(tmp4);
+          current(closure_0);
         }
-        tmp4 = closure_0;
       }
     };
   }, items);

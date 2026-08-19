@@ -7,9 +7,8 @@ import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
-let obj = { content: null, body: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_16 };
+require = fn;
+let obj = { paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 obj[1] = { gap: 24 };
 let closure_3 = createCacheKey.createStyles(obj);
@@ -19,6 +18,6 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   ({ content: obj.contentStyles, body: obj.bodyStyles } = callback());
   return jsx(Background.BottomSheet, { ref });
 });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheet.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/ActionSheet.native.tsx");
 
 export const ActionSheet = forwardRefResult;

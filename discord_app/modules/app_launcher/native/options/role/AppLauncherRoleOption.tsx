@@ -1,40 +1,36 @@
 // === Module 11361: AppLauncherRoleOption ===
 
 // Module 11361 (AppLauncherRoleOption)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx");
 
 export default function AppLauncherRoleOption(option) {
   option = option.option;
   ({ initialValue: importDefault, onRolePress } = option);
   ({ onActionSheetDismiss: closure_3, channel } = option);
   const onPress = option.onPress;
-  let guild_id;
-  let first;
-  closure_8 = undefined;
-  let stateFromStores;
-  guild_id = channel.guild_id;
+  const guild_id = channel.guild_id;
   ({ style, autoFocus, hasError } = option);
   let tmp = callback(channel.useState(() => {
     let roleId = null;
     if (null != closure_1) {
       roleId = null;
-      if ("roleMention" === tmp.type) {
-        roleId = tmp.roleId;
+      if ("roleMention" === closure_1.type) {
+        roleId = closure_1.roleId;
       }
     }
     return roleId;
   }), 2);
-  first = tmp[0];
+  const first = tmp[0];
   closure_8 = tmp[1];
   let obj = option(onRolePress[4]);
   const items = [onPress];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != first) {
       let role;
       if (null != guild_id) {
@@ -63,8 +59,8 @@ export default function AppLauncherRoleOption(option) {
     if (onPress != null) {
       tmp();
     }
-    let obj = closure_1_1(onRolePress[6]);
-    obj = {
+    importDefault(onRolePress[6]);
+    const obj = {
       option,
       channel,
       onRolePress(role) {

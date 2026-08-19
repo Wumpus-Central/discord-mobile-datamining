@@ -3,11 +3,11 @@
 // Module 16724 (updateVoiceSettings)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "bitrate" /* 4537 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "mode" /* 13103 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import bitrate from "bitrate" /* 4537 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import mode from "mode" /* 13103 */;
 import { VideoQualityMode } from "ME" /* 676 */;
 
 function updateVoiceSettings() {
@@ -19,7 +19,6 @@ function updateVoiceSettings() {
       obj = { type: "SET_CHANNEL_BITRATE", bitrate: null };
       obj[1] = channel.bitrate;
       dispatcherDefault.dispatch(obj);
-      const obj2 = dispatcherDefault;
     }
     tmp5 = null != channel && tmp2 !== channel.bitrate;
   }
@@ -35,25 +34,23 @@ function updateVoiceSettings() {
         obj = { type: "SET_CHANNEL_VIDEO_QUALITY_MODE", mode: null };
         obj[1] = AUTO;
         dispatcherDefault.dispatch(obj);
-        const obj4 = dispatcherDefault;
       }
     }
   }
 }
 function handleChannelUpdates(arg0) {
   while (tmp !== undefined) {
-    let tmp3 = store2;
     if (store2.getVoiceChannelId() === tmp2.id) {
-      let tmp4 = updateVoiceSettings;
       let tmp5 = updateVoiceSettings();
     }
     continue;
   }
+  tmp = arg0.channels[Symbol.iterator]();
 }
 function handleVoiceStateUpdates(voiceStates) {
   voiceStates = voiceStates.voiceStates;
-  const item = voiceStates.forEach((sessionId) => {
-    if (sessionId.getSessionId() === sessionId.sessionId) {
+  const item = voiceStates.forEach((item, index) => {
+    if (sessionId.getSessionId() === item.sessionId) {
       callback();
     }
   });
@@ -67,6 +64,6 @@ let prototype = function VoiceChannelSettingsManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("stores/VoiceChannelSettingsManager.tsx");
+const result = require("obj132").fileFinishedImporting("stores/VoiceChannelSettingsManager.tsx");
 
 export default prototype;

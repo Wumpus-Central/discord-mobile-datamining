@@ -1,14 +1,14 @@
 // === Module 8059: setIsOnStartStageScreen ===
 
 // Module 8059 (setIsOnStartStageScreen)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import noop from "noop" /* 19 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 import keys from "keys" /* 644 */;
 
-const require = arg1;
+const require = fn;
 keys = keys.create(() => ({ isOnStartStageScreen: true }));
-const result = require("set").fileFinishedImporting("modules/stage_channels/useIsOnStartStageScreenStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/useIsOnStartStageScreenStore.tsx");
 
 export default keys;
 export const setIsOnStartStageScreen = function setIsOnStartStageScreen(arg0) {
@@ -31,13 +31,13 @@ export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartSt
   const items3 = [stateFromStores, tmp3];
   const effect = React.useEffect(() => {
     if (stateFromStores) {
-      if (!tmp) {
+      if (!dependencyMap) {
         id = false;
         id(705).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
         const obj2 = id(705);
       }
     } else {
-      id = tmp;
+      id = dependencyMap;
       id(705).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
       const obj = id(705);
     }

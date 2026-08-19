@@ -1,7 +1,7 @@
 // === Module 1946: getNameplateData ===
 
 // Module 1946 (getNameplateData)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import sum from "sum" /* 505 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import fromServer from "fromServer" /* 1947 */;
@@ -10,7 +10,7 @@ import decodeImageDefault from "decodeImage" /* 1952 */;
 
 const isNameplateRecord = fromServer.isNameplateRecord;
 const ThemeTypes = sum.ThemeTypes;
-const result = set.fileFinishedImporting("modules/collectibles/nameplates/utils.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/nameplates/utils.tsx");
 
 export const getNameplateData = function getNameplateData(nameplate) {
   let tmp = null;
@@ -19,11 +19,10 @@ export const getNameplateData = function getNameplateData(nameplate) {
     ({ skuId: obj[0], asset: obj[1], label: obj[2] } = nameplate);
     let INVALID_NAMEPLATE_PALETTE = NAMEPLATE_PALETTES.NAMEPLATE_PALETTES[nameplate.palette];
     if (INVALID_NAMEPLATE_PALETTE == null) {
-      INVALID_NAMEPLATE_PALETTE = tmp2(1950).INVALID_NAMEPLATE_PALETTE;
+      INVALID_NAMEPLATE_PALETTE = NAMEPLATE_PALETTES.INVALID_NAMEPLATE_PALETTE;
     }
     obj[3] = INVALID_NAMEPLATE_PALETTE;
     tmp = obj;
-    tmp2 = require;
   }
   return tmp;
 };
@@ -40,11 +39,10 @@ export const getNameplateDataFromProductRecord = function getNameplateDataFromPr
         ({ skuId: obj[0], asset: obj[1], label: obj[2], palette } = first);
         let INVALID_NAMEPLATE_PALETTE = NAMEPLATE_PALETTES.NAMEPLATE_PALETTES[palette];
         if (INVALID_NAMEPLATE_PALETTE == null) {
-          INVALID_NAMEPLATE_PALETTE = tmp2(1950).INVALID_NAMEPLATE_PALETTE;
+          INVALID_NAMEPLATE_PALETTE = NAMEPLATE_PALETTES.INVALID_NAMEPLATE_PALETTE;
         }
         obj[3] = INVALID_NAMEPLATE_PALETTE;
         tmp = obj;
-        tmp2 = require;
       }
       tmp4 = tmp;
     }
@@ -60,7 +58,6 @@ export const getBackgroundGradientColors = function getBackgroundGradientColors(
       let isMatch = obj.test(palette.darkBackground);
       if (isMatch) {
         isMatch = /^#([0-9a-fA-F]{6})$/.test(palette.lightBackground);
-        const obj2 = /^#([0-9a-fA-F]{6})$/;
       }
       tmp4 = isMatch;
     }
@@ -75,7 +72,6 @@ export const getBackgroundGradientColors = function getBackgroundGradientColors(
     obj[1] = "" + tmp8 + "4D";
     return obj;
   }
-  const tmp = require;
 };
 export const isValidPalette = function isValidPalette(name) {
   let tmp3 = name.name !== NAMEPLATE_PALETTES.INVALID_PALETTE_KEY;
@@ -85,10 +81,8 @@ export const isValidPalette = function isValidPalette(name) {
       let isMatch = /^#([0-9a-fA-F]{6})$/.test(name.darkBackground);
       if (isMatch) {
         isMatch = /^#([0-9a-fA-F]{6})$/.test(name.lightBackground);
-        const obj2 = /^#([0-9a-fA-F]{6})$/;
       }
       tmp4 = isMatch;
-      const obj = /^#([0-9a-fA-F]{6})$/;
     }
     tmp3 = tmp4;
   }
@@ -102,10 +96,10 @@ export const getNameplatePalette = function getNameplatePalette(arg0) {
   return INVALID_NAMEPLATE_PALETTE;
 };
 export const parseFirstFrame = function parseFirstFrame(arg0) {
-  const size = decodeImageDefault.decode(arg0);
-  const obj = decodeImageDefault;
+  const decoder = decodeImageDefault;
+  const size = decoder.decode(arg0);
   const element = <canvas />;
-  ({ width: obj3.width, height: obj3.height } = size);
+  ({ width: obj2.width, height: obj2.height } = size);
   const context = element.getContext("2d");
   const uint8ClampedArray = new Uint8ClampedArray(decodeImageDefault.toRGBA8(size)[0]);
   const imageData = new globalThis.ImageData(uint8ClampedArray, size.width, size.height);
@@ -113,8 +107,7 @@ export const parseFirstFrame = function parseFirstFrame(arg0) {
   return element.toDataURL("image/png");
 };
 export const getNameplateSampleUsers = function getNameplateSampleUsers() {
-  let obj = { mallow: null, phibi: null, locke: null, cherry: null, boom: null };
-  obj = { name: null, avatarSrc: "https://cdn.discordapp.com/assets/content/6dcafe1231097505560fd098f0e6698990f0082369d34c35d8c3ee9615709f84.png" };
+  let obj = { name: null, avatarSrc: "https://cdn.discordapp.com/assets/content/6dcafe1231097505560fd098f0e6698990f0082369d34c35d8c3ee9615709f84.png" };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.SbKDHi);
   obj[0] = obj;

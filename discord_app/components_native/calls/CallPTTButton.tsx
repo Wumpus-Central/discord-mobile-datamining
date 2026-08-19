@@ -2,25 +2,24 @@
 
 // Module 10544 (CallPTTButtonLooks)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
 import { InputModes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import hexToRgba from "hexToRgba" /* 4223 */;
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
-let obj = { BRAND: "brand", BLUR: "blur" };
-obj = { button: { margin: 13 }, container: null, buttonBlur: null, buttonBlurPressed: null, textStyle: null, brandButtonContainer: null };
+let obj = { button: { margin: 13 }, container: null, buttonBlur: null, buttonBlurPressed: null, textStyle: null, brandButtonContainer: null };
 let obj1 = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: null };
 obj1[2] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.24);
 obj[1] = obj1;
 obj[2] = { backgroundColor: "transparent" };
-createCacheKey = { backgroundColor: null };
+const createCacheKey = { backgroundColor: null };
 createCacheKey[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.6);
 obj[3] = createCacheKey;
 obj[4] = { fontSize: 16 };
@@ -28,14 +27,12 @@ obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function CallPTTButtonTsx1(){const{runOnJS,setDragging}=this.__closure;runOnJS(setDragging)(false);}" };
 let closure_13 = { code: "function CallPTTButtonTsx2(){const{runOnJS,setDragging,setPressed,setIsSwipeToChatDisabled}=this.__closure;runOnJS(setDragging)(true);runOnJS(setPressed)(false);if(setIsSwipeToChatDisabled!=null){runOnJS(setIsSwipeToChatDisabled)(false);}}" };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo((look) => {
   let BRAND = look.look;
   if (BRAND === undefined) {
     BRAND = obj.BRAND;
   }
   ({ style, sendCallback } = look);
-  const stopCallback = look.stopCallback;
   let stateFromStores1;
   let first;
   importAllResult = undefined;
@@ -70,13 +67,13 @@ const memoResult = importAllResult.memo((look) => {
     isGuildStageVoiceResult = !tmp5;
   }
   ref = obj5.useRef(false);
-  tmp5 = stopCallback(stateFromStores1[11])(stateFromStores1);
+  tmp5 = look.stopCallback(stateFromStores1[11])(stateFromStores1);
   const voiceChatNavigationContext = sendCallback(onTouchStart[12]).useVoiceChatNavigationContext();
   prop = undefined;
   if (voiceChatNavigationContext != null) {
     prop = voiceChatNavigationContext.setIsSwipeToChatDisabled;
   }
-  const items4 = [ref, first, first1, sendCallback, stopCallback];
+  const items4 = [ref, first, first1, sendCallback, look.stopCallback];
   const effect = obj5.useEffect(() => {
     let tmp = first;
     if (!first) {
@@ -95,7 +92,7 @@ const memoResult = importAllResult.memo((look) => {
     }
     ref.current = tmp;
   }, items4);
-  const Gesture = tmp2(onTouchStart[14]).Gesture;
+  const Gesture = sendCallback(onTouchStart[14]).Gesture;
   const tmp2Result = sendCallback(onTouchStart[12]);
   class F {
     constructor() {
@@ -112,7 +109,7 @@ const memoResult = importAllResult.memo((look) => {
       return;
     }
   }
-  obj = { runOnJS: tmp2(onTouchStart[15]).runOnJS, setDragging: tmp11, setPressed: tmp8, setIsSwipeToChatDisabled: prop };
+  obj = { runOnJS: sendCallback(onTouchStart[15]).runOnJS, setDragging: tmp11, setPressed: tmp8, setIsSwipeToChatDisabled: prop };
   F.__closure = obj;
   F.__workletHash = 10056118853836;
   F.__initData = closure_13;
@@ -124,7 +121,7 @@ const memoResult = importAllResult.memo((look) => {
       return;
     }
   }
-  obj = { runOnJS: tmp2(onTouchStart[15]).runOnJS, setDragging: tmp11 };
+  obj = { runOnJS: sendCallback(onTouchStart[15]).runOnJS, setDragging: tmp11 };
   N.__closure = obj;
   N.__workletHash = 8439106360958;
   N.__initData = closure_12;
@@ -156,13 +153,13 @@ const memoResult = importAllResult.memo((look) => {
         View = View(onTouchStart[15]).View;
         obj2 = { style: null, children: null };
         obj2[0] = items7;
-        style = tmp2(onTouchStart[16]).Button;
+        style = sendCallback(onTouchStart[16]).Button;
         const obj3 = { style: null, textStyle: null, text: null, onTouchStart: null, onTouchEnd: null, darkenOnPress: true };
         obj3[0] = buttonBlurPressed;
         obj3[1] = string.textStyle;
-        const intl = tmp2(onTouchStart[17]).intl;
+        const intl = sendCallback(onTouchStart[17]).intl;
         string = intl.string;
-        obj3[2] = string(tmp2(onTouchStart[17]).t.Q8gkVL);
+        obj3[2] = string(sendCallback(onTouchStart[17]).t.Q8gkVL);
         onTouchStart = function onTouchStart() {
           callback(true);
           mode(false);
@@ -180,13 +177,13 @@ const memoResult = importAllResult.memo((look) => {
         obj2[1] = <style style={null} textStyle={null} text={null} onTouchStart={null} onTouchEnd={null} darkenOnPress />;
         onEndResult = <View style={null}>{null}</View>;
         obj1[1] = onEndResult;
-        jsx(tmp2(onTouchStart[14]).GestureDetector, { gesture: null, children: null });
+        jsx(sendCallback(onTouchStart[14]).GestureDetector, { gesture: null, children: null });
       }
     }
   }
   return tmp18;
 });
-const result = require("set").fileFinishedImporting("components_native/calls/CallPTTButton.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/calls/CallPTTButton.tsx");
 
 export default memoResult;
 export const CallPTTButtonLooks = obj;

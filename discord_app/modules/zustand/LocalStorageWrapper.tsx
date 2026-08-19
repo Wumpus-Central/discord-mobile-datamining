@@ -1,7 +1,7 @@
 // === Module 7457: frozen ===
 
 // Module 7457 (frozen)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import Storage2 from "Storage" /* 595 */;
 
 const frozen = Object.freeze({
@@ -22,6 +22,6 @@ const frozen = Object.freeze({
     return Storage.remove(arg0);
   }
 });
-const result = set.fileFinishedImporting("modules/zustand/LocalStorageWrapper.tsx");
+const result = obj132.fileFinishedImporting("modules/zustand/LocalStorageWrapper.tsx");
 
 export default frozen;

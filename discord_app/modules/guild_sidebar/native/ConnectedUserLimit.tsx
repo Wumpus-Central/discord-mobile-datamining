@@ -7,7 +7,7 @@ import _modDef15382 from "module_15382" /* 15382 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
 
 export const ConnectedUserLimit = function ConnectedUserLimit(users) {
   ({ channel, video } = users);
@@ -29,7 +29,6 @@ export const ConnectedUserLimit = function ConnectedUserLimit(users) {
     }
     total = bound;
     videoLimit = num < 0 || limit < num;
-    const tmp4 = num < 0 || limit < num;
   }
   return jsx(_modDef15382, { users: users.userCount, total, videoLimit });
 };

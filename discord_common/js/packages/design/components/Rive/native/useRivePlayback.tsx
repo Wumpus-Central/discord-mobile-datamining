@@ -1,26 +1,16 @@
 // === Module 4161: useRivePlayback ===
 
 // Module 4161 (useRivePlayback)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { AppState } from "get ActivityIndicator" /* 17 */;
 
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/useRivePlayback.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/useRivePlayback.tsx");
 
 export const useRivePlayback = function useRivePlayback(riveViewRef, isReady) {
   const React = riveViewRef;
   isReady = isReady.isReady;
   const appStatePlaybackEnabled = isReady.appStatePlaybackEnabled;
   const shouldShortLoopForReducedMotion = isReady.shouldShortLoopForReducedMotion;
-  closure_4 = undefined;
-  closure_5 = undefined;
-  closure_6 = undefined;
-  closure_7 = undefined;
-  closure_8 = undefined;
-  closure_9 = undefined;
-  let callback;
-  let pause;
-  let callback2;
-  let play;
   closure_4 = React.useRef(false);
   closure_5 = React.useRef("background" === isReady.currentState);
   closure_6 = React.useRef(false);
@@ -33,15 +23,15 @@ export const useRivePlayback = function useRivePlayback(riveViewRef, isReady) {
       closure_9.current = false;
     };
   }, []);
-  callback = React.useCallback(() => {
+  const callback = React.useCallback(() => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
   }, []);
   const items = [callback, riveViewRef];
-  pause = React.useCallback(() => {
+  const pause = React.useCallback(() => {
     callback();
     if (closure_0 != null) {
       closure_0.pause();
@@ -49,7 +39,7 @@ export const useRivePlayback = function useRivePlayback(riveViewRef, isReady) {
     closure_4.current = false;
   }, items);
   const items1 = [callback, shouldShortLoopForReducedMotion, pause];
-  callback2 = React.useCallback(() => {
+  const callback2 = React.useCallback(() => {
     callback();
     if (shouldShortLoopForReducedMotion) {
       const _setTimeout = setTimeout;
@@ -57,7 +47,7 @@ export const useRivePlayback = function useRivePlayback(riveViewRef, isReady) {
     }
   }, items1);
   const items2 = [riveViewRef, callback2];
-  play = React.useCallback(() => {
+  const play = React.useCallback(() => {
     if (closure_0 != null) {
       closure_0.play();
     }
@@ -79,11 +69,10 @@ export const useRivePlayback = function useRivePlayback(riveViewRef, isReady) {
             }
           }
           if (closure_0 != null) {
-            obj.playIfNeeded();
+            closure_0.playIfNeeded();
           }
           closure_4.current = true;
           callback();
-          obj = closure_0;
         }
       });
     }
@@ -103,8 +92,8 @@ export const useRivePlayback = function useRivePlayback(riveViewRef, isReady) {
   const items6 = [appStatePlaybackEnabled, isReady, play, pause];
   const effect3 = React.useEffect(() => {
     if (appStatePlaybackEnabled) {
-      closure_0 = isReady.addEventListener("change", (arg0) => {
-        if ("background" === arg0) {
+      closure_0 = isReady.addEventListener("change", (event) => {
+        if ("background" === event) {
           closure_5.current = true;
           let current2 = closure_1;
           if (closure_1) {
@@ -114,7 +103,7 @@ export const useRivePlayback = function useRivePlayback(riveViewRef, isReady) {
             ref2.current = true;
             callback();
           }
-        } else if ("active" === arg0) {
+        } else if ("active" === event) {
           closure_5.current = false;
           let current = closure_1;
           if (closure_1) {

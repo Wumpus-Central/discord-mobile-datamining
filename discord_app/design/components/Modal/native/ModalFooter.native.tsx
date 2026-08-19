@@ -8,8 +8,8 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 
 noopAll;
 let closure_2 = createCacheKey.createStyles({ footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 } });
-const result = require("set").fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Modal/native/ModalFooter.native.tsx");
 
 export const ModalFooter = function ModalFooter(children) {
-  return <View style={callback().footer}>{arg0.children}</View>;
+  return <View style={callback().footer}>{children.children}</View>;
 };

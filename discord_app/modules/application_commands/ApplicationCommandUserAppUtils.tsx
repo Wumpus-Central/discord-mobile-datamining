@@ -1,14 +1,13 @@
 // === Module 8298: getEphemeralReasonMessage ===
 
 // Module 8298 (getEphemeralReasonMessage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import EphemeralMessageReason from "EphemeralMessageReason" /* 8299 */;
 
-const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 
 export const getEphemeralReasonMessage = function getEphemeralReasonMessage(ephemerality_reason1) {
-  const tmp = require;
   if (EphemeralMessageReason.EphemeralMessageReason.FEATURE_LIMITED === ephemerality_reason1) {
     const intl19 = getSystemLocale.intl;
     return intl19.string(getSystemLocale.t.WCvmrR);

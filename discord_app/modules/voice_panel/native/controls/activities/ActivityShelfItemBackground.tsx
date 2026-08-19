@@ -1,9 +1,9 @@
 // === Module 16363: ? ===
 
 // Module 16363
-import setDefault from "set" /* 7190 */;
+import obj132Default from "obj132" /* 7190 */;
 import BrokenImageDefault from "BrokenImage" /* 11261 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
@@ -16,7 +16,6 @@ let closure_6 = createCacheKey.createStyles((aspectRatio) => {
 });
 const memoResult = importAllResult.memo(function ActivityShelfItemBackground(aspectRatio) {
   ({ imageBackground, accessibilityLabel } = aspectRatio);
-  importDefault = undefined;
   const tmp = callback2(aspectRatio.aspectRatio);
   const tmp2 = callback(importAllResult.useState(false), 2);
   importDefault = tmp2[1];
@@ -39,20 +38,18 @@ const memoResult = importAllResult.memo(function ActivityShelfItemBackground(asp
           }
           obj[4] = accessibilityLabel;
           obj[1] = <Image onError={null} source={null} style={null} accessibilityRole="image" accessibilityLabel={null} />;
-          let tmp9Result = tmp9(setDefault, obj);
-          const tmp12 = setDefault;
-          const tmp13 = Image;
+          let tmp9Result = jsx(obj132Default, { onError: null, source: null, style: null, accessibilityRole: "image", accessibilityLabel: null });
         }
       }
       obj = { style: null };
       obj[0] = tmp.previewImage;
-      tmp9Result = jsx(setDefault, { style: null });
+      tmp9Result = jsx(obj132Default, { style: null });
     }
     return tmp9Result;
   }
   const obj2 = { style: tmp.previewImage, children: jsx(BrokenImageDefault, {}) };
-  tmp9Result = jsx(setDefault, { style: tmp.previewImage, children: jsx(BrokenImageDefault, {}) });
+  tmp9Result = jsx(obj132Default, { style: tmp.previewImage, children: jsx(BrokenImageDefault, {}) });
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx");
 
 export default memoResult;

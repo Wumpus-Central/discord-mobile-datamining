@@ -4,6 +4,8 @@
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import combinedDefault from "combined" /* 1993 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
 import getFontScale from "getFontScale" /* 4751 */;
 import preloadDefault from "preload" /* 5449 */;
 import registerAssetDefault from "registerAsset" /* 12854 */;
@@ -24,21 +26,20 @@ import registerAssetDefault15 from "registerAsset" /* 12868 */;
 import registerAssetDefault16 from "registerAsset" /* 12869 */;
 import metadataDefault from "metadata" /* 12870 */;
 import PillTextDefault from "PillText" /* 12871 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE as closure_6 } from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ HelpdeskArticles: error, UserSettingsSections: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { NARROW: 0, [0]: "NARROW", WIDE: 1, [1]: "WIDE" };
 const frozen = Object.freeze({ [obj.NARROW]: { width: 300, height: 364, scaledFontHeight: 440 }, [obj.WIDE]: { width: 320, height: 364, scaledFontHeight: 440 } });
 let closure_13 = createCacheKey.createStyles((arg0) => {
-  obj = { container: null, headerComponent: null, image: null, title: null, description: null, button: null, imageContainer: null, imageOverlayText: null, imageOverlayTextContainer: null, pillTextContainer: null };
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, width: frozen[arg0].width };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
   obj[0] = obj;
@@ -54,17 +55,12 @@ let closure_13 = createCacheKey.createStyles((arg0) => {
   obj[4] = { marginTop: 8, marginHorizontal: 16, marginBottom: num };
   obj[5] = { marginTop: "auto", marginHorizontal: 16, marginBottom: 16 };
   obj[6] = { position: "relative", alignItems: "center", justifyContent: "center" };
-  obj1 = { width: "100%", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
-  const obj2 = { marginTop: 8, marginHorizontal: 16, marginBottom: num };
-  const tmp4 = obj;
-  const tmp5 = arg0 === obj.NARROW && { height: "100%" };
   obj[7] = { color: ThemesDefault.colors.WHITE, fontSize: 14 };
-  const obj3 = { color: ThemesDefault.colors.WHITE, fontSize: 14 };
   obj[8] = { position: "absolute", bottom: "10%", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, paddingHorizontal: 12, paddingVertical: 4, justifyContent: "center", alignItems: "center" };
   obj[9] = { position: "absolute", width: "auto", top: -8, left: 10 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPerkCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/PremiumPerkCard.tsx");
 
 export default function PremiumPerkCard(variant) {
   ({ description, bodyComponent, headerComponent, imageSrc, imageStyle, buttonOnPress, cta } = variant);
@@ -96,7 +92,7 @@ export default function PremiumPerkCard(variant) {
       obj2[0] = tmp4.imageOverlayText;
       imageStyle = imageOverlayText.toUpperCase();
       obj2[2] = imageStyle;
-      imageSrc = callback(tmp6(4734).Text, obj2);
+      imageSrc = callback(Text.Text, obj2);
       obj1[1] = imageSrc;
       items1[1] = callback(closure_4, obj1);
       obj[1] = items1;
@@ -119,7 +115,7 @@ export default function PremiumPerkCard(variant) {
     if (null != description) {
       const obj4 = { variant: "text-sm/normal", children: null };
       obj4[1] = description;
-      let tmp21 = callback(tmp6(4734).Text, obj4);
+      let tmp21 = callback(Text.Text, obj4);
     } else {
       tmp21 = null;
       if (null != bodyComponent) {
@@ -127,7 +123,7 @@ export default function PremiumPerkCard(variant) {
       }
     }
     const items3 = [tmp4.container, , ];
-    let tmp25 = WIDE === obj.NARROW;
+    let tmp25 = WIDE === tmp5.NARROW;
     if (tmp25) {
       const obj5 = { height: null };
       obj5[0] = tmp9;
@@ -149,7 +145,7 @@ export default function PremiumPerkCard(variant) {
     const items5 = [tmp4.title, titleStyle];
     obj8[0] = items5;
     obj8[3] = title;
-    items4[2] = callback(tmp6(4734).Text, obj8);
+    items4[2] = callback(Text.Text, obj8);
     const obj9 = { style: null, children: null };
     obj9[0] = tmp4.description;
     obj9[1] = tmp21;
@@ -161,13 +157,14 @@ export default function PremiumPerkCard(variant) {
       const obj11 = { size: "sm", variant: "secondary", text: null, onPress: null };
       obj11[2] = cta;
       obj11[3] = buttonOnPress;
-      obj10[1] = tmp29(tmp6(4745).Button, obj11);
-      tmp29Result = tmp29(tmp24, obj10);
+      obj10[1] = callback(Button.Button, obj11);
+      tmp29Result = callback(closure_4, obj10);
     }
     items4[4] = tmp29Result;
     obj6[1] = items4;
     return callback2(closure_4, obj6);
   }
+  tmp5 = obj;
 };
 export const PerkCardTypes = { CUSTOM_PROFILE: "customProfile", CLIENT_THEMES: "clientThemes", SERVER_BOOSTS: "serverBoosts", GREYED_SERVER_BOOSTS: "greyServerBoosts", CUSTOM_APP_ICONS: "customAppIcons", EMOJI: "emoji", CUSTOM_SOUNDS: "customSounds", STICKER: "sticker", EARLY_ACCESS: "earlyAccess", MEMBER_PRICING: "memberPricing", LARGE_UPLOADS: "largeUploads", HD_VIDEO: "hdVideo", SUPER_REACTIONS: "superReactions", ENTRACE_SOUNDS: "entranceSounds", BADGE: "badge", GREYED_BADGE: "greyBadge", XBOX_GAME_PASS: "xboxGamePass" };
 export const PerkCardVariant = obj;
@@ -181,33 +178,30 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj1 = subscriptionPlansLoaded(4269);
   const formatSizeResult = obj1.formatSize(closure_6 / 1024, { useKibibytes: true });
   const callback = React.useCallback(() => {
-    obj = subscriptionPlansLoaded(7360);
-    obj = { screen: constants.COLLECTIBLES_SHOP, params: null };
+    subscriptionPlansLoaded(7360);
     obj = { analyticsSource: callback(7159).PREMIUM_MARKETING_PERK_CARD };
     obj[1] = obj;
     obj.openUserSettings(obj);
   }, []);
   const callback1 = React.useCallback(() => {
-    obj = subscriptionPlansLoaded(7360);
+    subscriptionPlansLoaded(7360);
     obj = { screen: constants.PROFILE_CUSTOMIZATION };
     obj.openUserSettings(obj);
   }, []);
   const items = [subscriptionPlansLoaded];
   const callback2 = React.useCallback(() => {
-    obj = subscriptionPlansLoaded(7360);
+    subscriptionPlansLoaded(7360);
     obj = { screen: constants.APPEARANCE_THEME_PICKER };
     obj.openUserSettings(obj);
   }, []);
   const callback3 = React.useCallback(() => {
-    obj = subscriptionPlansLoaded(closure_1_2[8]);
-    obj = { screen: closure_1_8.GUILD_BOOSTING, params: obj };
+    obj = subscriptionPlansLoaded(dependencyMap[8]);
     obj = { shouldFetchSubscriptionPlans: !subscriptionPlansLoaded };
     obj.openUserSettings(obj);
   }, items);
-  obj = { customProfile: null, clientThemes: null, serverBoosts: null, greyServerBoosts: null, customAppIcons: null, emoji: null, customSounds: null, sticker: null, earlyAccess: null, memberPricing: null, largeUploads: null, hdVideo: null, superReactions: null, entranceSounds: null, badge: null, greyBadge: null, xboxGamePass: null };
   obj = { title: null, description: null, imageSrc: null, buttonOnPress: null };
   const callback4 = React.useCallback(() => {
-    obj = subscriptionPlansLoaded(7360);
+    subscriptionPlansLoaded(7360);
     obj = { screen: constants.APP_ICONS };
     obj.openUserSettings(obj);
   }, []);
@@ -339,7 +333,6 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   const obj18 = { variant: "text-sm/normal", children: null };
   const intl36 = subscriptionPlansLoaded(1236).intl;
   const obj19 = { termsLink: null };
-  const obj17 = { uri: metadataDefault };
   obj19[0] = combinedDefault.getArticleURL(NITRO_2_POINT_0.NITRO_2_POINT_0);
   obj18[1] = intl36.format(subscriptionPlansLoaded(1236).t["9Wv+8h"], obj19);
   obj16[3] = callback(subscriptionPlansLoaded(4734).Text, obj18);

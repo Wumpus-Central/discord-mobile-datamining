@@ -2,22 +2,21 @@
 
 // Module 15068 (SettingSegmentedControl)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "zustandStore" /* 13993 */;
+import zustandStore from "zustandStore" /* 13993 */;
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { controlContainer: null, pageContainer: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/SettingSegmentedControlRenderer.tsx");
 
 export default function SettingSegmentedControl(node) {
   let _require;
@@ -36,11 +35,8 @@ export default function SettingSegmentedControl(node) {
       } else {
         const ancestors = settings(_undefined[8]).getAncestors(field);
         for (const item10020 of ancestors) {
-          let tmp9 = settings;
           let index1 = settings.indexOf(item10020);
-          let tmp11 = index1;
           if (-1 !== index1) {
-            let tmp12 = obj2;
             obj2.return();
             return index1;
           }
@@ -56,15 +52,15 @@ export default function SettingSegmentedControl(node) {
   }, []);
   const memo = React.useMemo(() => {
     const items = [];
-    const item = settings.forEach((closure_0) => {
-      const tmp = items(closure_1_2[9]).SETTING_RENDERER_CONFIG[closure_0];
-      closure_1_1(closure_1_2[10])(tmp.type === closure_1_7.ROUTE, "Invalid setting type for segmented control: " + closure_0);
+    const item = settings.forEach((item, index) => {
+      const tmp = items(closure_1_2[9]).SETTING_RENDERER_CONFIG[item];
+      settings(closure_1_2[10])(tmp.type === closure_1_7.ROUTE, "Invalid setting type for segmented control: " + item);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
-      const tmp2 = closure_1_1(closure_1_2[10]);
-      obj[0] = items(closure_1_2[11]).getSettingTitle(closure_0);
-      obj[1] = closure_0;
+      const tmp2 = settings(closure_1_2[10]);
+      obj[0] = items(closure_1_2[11]).getSettingTitle(item);
+      obj[1] = item;
       obj[2] = closure_1_8(component, {});
       items.push(obj);
     });
@@ -72,7 +68,6 @@ export default function SettingSegmentedControl(node) {
   }, items);
   let obj = _require(8799);
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp3, defaultIndex: tmp5 });
-  obj = { children: null };
   obj = { style: tmp.controlContainer, onLayout: callback, children: callback2(_require(10096).SegmentedControl, { state: segmentedControlState }) };
   const items1 = [callback2(View, obj), ];
   const tmp4 = callback(React.useState(() => {
@@ -84,11 +79,8 @@ export default function SettingSegmentedControl(node) {
       } else {
         const ancestors = settings(_undefined[8]).getAncestors(field);
         for (const item10020 of ancestors) {
-          let tmp9 = settings;
           let index1 = settings.indexOf(item10020);
-          let tmp11 = index1;
           if (-1 !== index1) {
-            let tmp12 = obj2;
             obj2.return();
             return index1;
           }

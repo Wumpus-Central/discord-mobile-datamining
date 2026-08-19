@@ -2,10 +2,10 @@
 
 // Module 14843 (toggleLabFeature)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "getUserAgnosticState" /* 9059 */;
+import getUserAgnosticState from "getUserAgnosticState" /* 9059 */;
 
 let closure_3 = {};
-const result = require("set").fileFinishedImporting("modules/labs/LabFeatureActions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/labs/LabFeatureActions.tsx");
 
 export const toggleLabFeature = function toggleLabFeature(ICYMI_LAB_FEATURE, arg1) {
   let tmp = arg1;
@@ -16,7 +16,6 @@ export const toggleLabFeature = function toggleLabFeature(ICYMI_LAB_FEATURE, arg
   if (enabled === undefined) {
     enabled = !closure_2.get(ICYMI_LAB_FEATURE);
   }
-  let obj = dispatcherDefault;
-  obj = { type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled };
+  const obj = { type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled };
   obj.dispatch(obj);
 };

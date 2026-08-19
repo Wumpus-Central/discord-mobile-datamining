@@ -1,13 +1,13 @@
 // === Module 11950: SpecialNavigationPath ===
 
 // Module 11950 (SpecialNavigationPath)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import _extends from "_extends" /* 4208 */;
 
 const Routes = ME.Routes;
 let obj = { FRIENDS: 0, [0]: "FRIENDS" };
-const result = set.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
 
 export const SpecialNavigationPath = obj;
 export const getSelectedSpecialNavigationPath = function getSelectedSpecialNavigationPath(pathname) {

@@ -1,9 +1,9 @@
 // === Module 7456: DEFAULT_VIDEO_VOLUME ===
 
 // Module 7456 (DEFAULT_VIDEO_VOLUME)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx");
 
 export const DEFAULT_VIDEO_VOLUME = 0.3;
 export const DEFAULT_VIDEO_PLAYER_MIN_WIDTH = 240;

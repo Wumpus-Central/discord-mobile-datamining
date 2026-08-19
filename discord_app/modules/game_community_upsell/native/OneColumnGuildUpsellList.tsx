@@ -1,31 +1,28 @@
 // === Module 15530: OneColumnGuildUpsellList ===
 
 // Module 15530 (OneColumnGuildUpsellList)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "set" /* 15074 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import set from "set" /* 15074 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_7 = { itemVisiblePercentThreshold: 50, minimumViewTime: 500 };
 let c8 = 0;
 let closure_9 = createCacheKey.createStyles({ hidden: { opacity: 0 } });
-const result = require("set").fileFinishedImporting("modules/game_community_upsell/native/OneColumnGuildUpsellList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_community_upsell/native/OneColumnGuildUpsellList.tsx");
 
 export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAction) {
   cardAction = cardAction.cardAction;
-  let stateFromStoresObject = cardAction;
   const onDismiss = cardAction.onDismiss;
   let analyticsLocations = onDismiss;
-  dependencyMap = undefined;
   let first;
   let React;
-  stateFromStoresObject = undefined;
+  let stateFromStoresObject;
   ({ suggestedGuilds, contentContainerStyle, subheader } = cardAction);
   const callback = React.useCallback((id) => id.id, []);
   const ref = React.useRef(null);
-  dependencyMap = ref;
   const tmp4 = first(React.useState(() => closure_8 > 0), 2);
   first = tmp4[0];
   React = tmp4[1];
@@ -68,7 +65,6 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
   let tmp = callback();
   analyticsLocations = analyticsLocations(7139)(analyticsLocations(7159).GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT).analyticsLocations;
   const items3 = [onDismiss, stateFromStoresObject, cardAction];
-  dependencyMap = undefined;
   const callback3 = React.useCallback((item) => {
     item = item.item;
     let tmp = null;
@@ -77,7 +73,7 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
       tmp = analyticsLocations;
     }
     obj[3] = tmp;
-    return closure_1_6(analyticsLocations(ref[11]), obj, item.id);
+    return jsx(analyticsLocations(ref[11]), { guild: item, gameId: stateFromStoresObject[item.id], cardAction: stateFromStoresObject, onDismiss: null }, item.id);
   }, items3);
   const tmp10 = analyticsLocations(7139);
   dependencyMap = React.useRef(new Set());
@@ -89,7 +85,7 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
   const items4 = [stateFromStoresObject, analyticsLocations];
   const callback4 = React.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
-    let item = viewableItems.forEach((item) => {
+    let item = viewableItems.forEach((item, index) => {
       item = item.item;
       if (null != item) {
         let hasItem = null == item.id;
@@ -100,10 +96,10 @@ export const OneColumnGuildUpsellList = function OneColumnGuildUpsellList(cardAc
         if (!hasItem) {
           const current2 = ref.current;
           current2.add(item.id);
-          let obj = closure_1_0(closure_1_2[5]);
-          obj = { type: null, name: null, properties: null };
-          obj[0] = closure_1_0(closure_1_2[6]).ImpressionTypes.PANE;
-          obj[1] = closure_1_0(closure_1_2[6]).ImpressionNames.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD;
+          stateFromStoresObject(closure_1_2[5]);
+          let obj = { type: null, name: null, properties: null };
+          obj[0] = stateFromStoresObject(closure_1_2[6]).ImpressionTypes.PANE;
+          obj[1] = stateFromStoresObject(closure_1_2[6]).ImpressionNames.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD;
           obj = { game_id: null, guild_id: null, location_stack: null };
           obj[0] = table[item.id];
           obj[1] = item.id;

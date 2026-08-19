@@ -4,15 +4,15 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import createToggle from "createToggle" /* 10669 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import "createToggle";
 
-require = arg1;
+require = fn;
 function useEnableSwitchIconsSettingValue() {
   const items = [closure_3];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
-createToggle = {
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["S3z+pV"]);
@@ -26,7 +26,7 @@ createToggle = {
   hasIcon: true
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
 
 export default createToggle;
 export { useEnableSwitchIconsSettingValue };

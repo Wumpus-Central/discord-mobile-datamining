@@ -3,10 +3,10 @@
 // Module 5264 (_fetchWebAuthnConditionalChallenge)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function _fetchWebAuthnConditionalChallenge() {
   const self = this;
   const tmp = callback(function*() {
@@ -16,7 +16,7 @@ function _fetchWebAuthnConditionalChallenge() {
     obj1[0] = closure_1_4.WEBAUTHN_CONDITIONAL_UI_CHALLENGE;
     obj1[1] = { authorization: "" };
     yield HTTP.post(obj1);
-    body = arg1.body;
+    body = body.body;
     const obj = { challenge: null, ticket: null };
     obj[0] = body.challenge;
     obj[1] = body.ticket;
@@ -39,7 +39,7 @@ function _fetchWebAuthnPasswordlessChallenge() {
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = closure_1_4.WEBAUTHN_PASSWORDLESS_CHALLENGE;
     yield HTTP.post(obj1);
-    body = arg1.body;
+    body = body.body;
     const obj = { challenge: null, ticket: null };
     obj[0] = body.challenge;
     obj[1] = body.ticket;
@@ -64,9 +64,9 @@ function _deleteWebAuthnCredential() {
       const HTTP = lib(table[2]).HTTP;
       obj1 = { url: null, rejectWithError: true };
       obj1[0] = closure_1_4.MFA_WEBAUTHN_CREDENTIAL(lib.id);
-      yield HTTP.del(obj1).then(() => {
-        let obj = v3(table[3]);
-        obj = { type: "AUTHENTICATOR_DELETE", credential: closure_0 };
+      yield HTTP.del(obj1).then((result) => {
+        v3(table[3]);
+        const obj = { type: "AUTHENTICATOR_DELETE", credential: closure_0 };
         obj.dispatch(obj);
       });
       return arg1;
@@ -186,7 +186,7 @@ function _startRegisterWebAuthnCredential() {
     obj1[0] = closure_1_4.MFA_WEBAUTHN_CREDENTIALS;
     obj1[1] = {};
     yield HTTP.post(obj1);
-    body = arg1.body;
+    body = body.body;
     const obj = { ticket: null, challenge: null };
     obj[0] = body.ticket;
     obj[1] = body.challenge;
@@ -292,7 +292,7 @@ function _finishRegisterWebAuthnCredential() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/webauthn/WebAuthnActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/webauthn/WebAuthnActionCreators.tsx");
 
 export const fetchWebAuthnConditionalChallenge = function fetchWebAuthnConditionalChallenge() {
   const self = this;
@@ -317,22 +317,22 @@ export const fetchWebAuthnPasswordlessChallenge = function fetchWebAuthnPassword
 export const fetchWebAuthnCredentials = function fetchWebAuthnCredentials() {
   const HTTP = sendRequest.HTTP;
   const value = HTTP.get({ url: Endpoints.MFA_WEBAUTHN_CREDENTIALS, rejectWithError: true });
-  value.then((body) => {
-    if (null != body.body) {
-      body = body.body;
-      const mapped = body.map((last_used) => {
+  value.then((result) => {
+    if (null != result.body) {
+      const body = result.body;
+      const mapped = body.map((item, index) => {
         let date = null;
-        if (null != last_used.last_used) {
+        if (null != item.last_used) {
           const _Date = Date;
-          date = new Date(last_used.last_used);
+          date = new Date(item.last_used);
         }
         const obj = {};
-        const merged = Object.assign(last_used);
+        const merged = Object.assign(item);
         obj.last_used = date;
         return obj;
       });
-      let obj = callback(table[3]);
-      obj = { type: "MFA_WEBAUTHN_CREDENTIALS_LOADED", credentials: null };
+      callback(table[3]);
+      let obj = { type: "MFA_WEBAUTHN_CREDENTIALS_LOADED", credentials: null };
       obj[1] = mapped;
       obj.dispatch(obj);
     }
@@ -348,7 +348,7 @@ export const deleteWebAuthnCredential = function deleteWebAuthnCredential(creden
   }
   return applyArgumentsResult;
 };
-export const editWebAuthnCredential = function editWebAuthnCredential(id, first) {
+export const editWebAuthnCredential = function editWebAuthnCredential(id, arg1) {
   const self = this;
   const apply = _editWebAuthnCredential.apply;
   if (typeof apply === "unknown") {

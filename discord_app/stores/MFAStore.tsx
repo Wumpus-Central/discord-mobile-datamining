@@ -42,7 +42,6 @@ const mFAStore = new MFAStore(dispatcherDefault, {
     token = token.token;
     if (undefined !== token) {
       setSecondaryTokenAll.setToken(token);
-      const obj = setSecondaryTokenAll;
     }
     const codes = token.codes;
   },
@@ -72,6 +71,6 @@ const mFAStore = new MFAStore(dispatcherDefault, {
 
   }
 });
-const result = require("set").fileFinishedImporting("stores/MFAStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/MFAStore.tsx");
 
 export default mFAStore;

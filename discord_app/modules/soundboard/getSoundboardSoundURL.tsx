@@ -1,11 +1,11 @@
 // === Module 13906: getSoundboardSoundURL ===
 
 // Module 13906 (getSoundboardSoundURL)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/soundboard/getSoundboardSoundURL.tsx");
+const result = obj132.fileFinishedImporting("modules/soundboard/getSoundboardSoundURL.tsx");
 
 export default function getSoundboardSoundURL(arg0) {
   if ("development" !== window.GLOBAL_ENV.PROJECT_ENV) {

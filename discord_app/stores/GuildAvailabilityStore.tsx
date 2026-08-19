@@ -4,11 +4,10 @@
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createGuildRecordFromRust" /* 1910 */;
-import set from "set" /* 2 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 
 function handleConnectionOpen(unavailableGuilds) {
-  set = new Set(unavailableGuilds.unavailableGuilds);
+  new Set(unavailableGuilds.unavailableGuilds);
   if (unavailableGuilds.unavailableGuilds.length > 0) {
     const _HermesInternal = HermesInternal;
     logger.warn("" + unavailableGuilds.unavailableGuilds.length + " guilds are unavailable on connection open: " + unavailableGuilds.unavailableGuilds);
@@ -24,7 +23,7 @@ function handleGuild(guild) {
   }
 }
 let closure_1 = new timestampDefault("GuildAvailabilityStore");
-let set = new Set();
+const set = new Set();
 const Store = initializeDefault.Store;
 class GuildAvailabilityStore extends Store {
 }
@@ -73,6 +72,7 @@ const guildAvailabilityStore = new GuildAvailabilityStore(dispatcherDefault, {
       const _HermesInternal = HermesInternal;
       logger.warn("Guild has gone unavailable: " + guildId.guildId + " (" + str + ")");
       set.add(guildId.guildId);
+      tmp4 = null != guild && null != guild.name;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -90,6 +90,7 @@ const guildAvailabilityStore = new GuildAvailabilityStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("stores/GuildAvailabilityStore.tsx");
+const tmp2 = new timestampDefault("GuildAvailabilityStore");
+const result = require("obj132").fileFinishedImporting("stores/GuildAvailabilityStore.tsx");
 
 export default guildAvailabilityStore;

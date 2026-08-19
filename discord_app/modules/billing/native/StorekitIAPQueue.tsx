@@ -2,17 +2,17 @@
 
 // Module 7725 (productSK2ToIAPProduct)
 import CurrencyCodes from "CurrencyCodes" /* 5317 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-require = arg1;
+require = fn;
 function productSK2ToIAPProduct(subscription) {
   let items = [];
   if (null != subscription.subscription.promotionalOffers) {
     const promotionalOffers = subscription.subscription.promotionalOffers;
-    items = promotionalOffers.map((identifier) => {
-      const paymentMode = identifier.paymentMode;
+    items = promotionalOffers.map((item, index) => {
+      const paymentMode = item.paymentMode;
       if ("freeTrial" === paymentMode) {
         let str2 = "FREETRIAL";
       } else if ("payAsYouGo" === paymentMode) {
@@ -23,7 +23,7 @@ function productSK2ToIAPProduct(subscription) {
           str2 = "";
         }
       }
-      return { identifier: identifier.id, type: "SUBSCRIPTION", numberOfPeriods: str4.toString(), price: str5.toString(), localizedPrice: identifier.displayPrice, paymentMode: str2, subscriptionPeriod: str6.toUpperCase() };
+      return { identifier: item.id, type: "SUBSCRIPTION", numberOfPeriods: str4.toString(), price: str5.toString(), localizedPrice: item.displayPrice, paymentMode: str2, subscriptionPeriod: str6.toUpperCase() };
     });
   }
   if (null == subscription.subscription.introductoryOffer) {
@@ -55,9 +55,6 @@ function productSK2ToIAPProduct(subscription) {
       introductoryOffer = introductoryOffer.period.unit.toUpperCase();
       obj[6] = introductoryOffer;
       tmp6(obj);
-      const str4 = introductoryOffer.period.value;
-      const str5 = introductoryOffer.price;
-      const str6 = introductoryOffer.period.unit;
     } else if ("payAsYouGo" !== paymentMode) {
       str2 = "PAYUPFRONT";
       if ("payUpFront" !== paymentMode) {
@@ -94,15 +91,15 @@ prototype["fetchSubscriptions"] = function fetchSubscriptions(arg0) {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw arr;
       } else if (arg0 !== 2) {
-        const found = arg1.filter((subscription) => null != subscription.subscription);
+        const found = arr.filter((item, index) => null != item.subscription);
         const callback = found.map(closure_2_5);
         callback(callback);
         c3 = 0;
       }
       c3 = 0;
-      return arg1;
+      return arr;
     }));
   });
 };
@@ -117,13 +114,13 @@ prototype["fetchProducts"] = function fetchProducts(arg0) {
     _queue.push(closure_1_2(function*() {
       dependencyMap = tmp3;
       c3 = 1;
-      obj1 = callback(7706);
+      callback(7706);
       obj1 = { skus: null };
       obj1[0] = closure_1_0;
       const products = obj1.getProducts(obj1);
-      yield products.then((arr) => {
-        const found = arr.filter((type) => "iap" === type.type);
-        return found.map((countryCode) => (function mapToIAPProduct() { ... })(countryCode));
+      yield products.then((result) => {
+        const found = result.filter((item, index) => "iap" === item.type);
+        return found.map((item, index) => (function mapToIAPProduct() { ... })(item));
       });
       if (1 === tmp7) {
         c3 = 0;
@@ -174,12 +171,12 @@ prototype["processQueue"] = function processQueue() {
             closure_1 = tmp3;
             let lib = tmp7;
             lib = undefined;
-            if (closure_1_0._processingQueue) {
+            if (self._processingQueue) {
               c5 = 3;
             } else {
-              closure_1_0._processingQueue = true;
+              self._processingQueue = true;
               c3 = 1;
-              if (closure_1_0._queue.length <= 0) {
+              if (self._queue.length <= 0) {
                 c3 = 0;
                 lib._processingQueue = false;
               }
@@ -219,8 +216,8 @@ prototype["processQueue"] = function processQueue() {
     }
   })();
 };
-let set = Object.create(StorekitIAPQueueClass.prototype);
-set[0] = [];
-const result = set.fileFinishedImporting("modules/billing/native/StorekitIAPQueue.tsx");
+let obj132 = Object.create(StorekitIAPQueueClass.prototype);
+obj132[0] = [];
+const result = obj132.fileFinishedImporting("modules/billing/native/StorekitIAPQueue.tsx");
 
-export default set;
+export default obj132;

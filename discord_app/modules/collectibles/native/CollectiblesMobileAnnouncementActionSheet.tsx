@@ -4,15 +4,15 @@
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
 import metadataDefault from "metadata" /* 16165 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function CatEarsBackdrop() {
   const tmp = callback3();
   const width = top(1494)().width;
@@ -24,8 +24,7 @@ function CatEarsBackdrop() {
   const result1 = bound / 1200;
   obj1 = animatedPosition(4115);
   const fn = function t() {
-    let obj = { transform: null };
-    obj = { translateY: animatedPosition.get() + top - 60 };
+    const obj = { translateY: animatedPosition.get() + top - 60 };
     const items = [obj];
     obj[0] = items;
     return obj;
@@ -34,8 +33,7 @@ function CatEarsBackdrop() {
   fn.__workletHash = 6274760278164;
   fn.__initData = closure_12;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: items, children: null };
-  items = [tmp.mascotContainer, { left: result, right: result }, animatedStyle];
+  let items = [tmp.mascotContainer, { left: result, right: result }, animatedStyle];
   obj = { style: items1, children: null };
   items1 = [tmp.mascotLayer, ];
   obj1 = { top: -138 * result1, left: tmp6, right: tmp6 };
@@ -48,17 +46,15 @@ function CatEarsBackdrop() {
 function FeatureRow(arg0) {
   ({ icon, text } = arg0);
   const tmp = callback3();
-  let obj = { style: tmp.featureRow, children: null };
   const items = [icon, ];
-  obj = { variant: "text-sm/medium", color: "text-subtle", style: tmp.featureText, children: text };
+  const obj = { variant: "text-sm/medium", color: "text-subtle", style: tmp.featureText, children: text };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(closure_5, obj);
 }
 ({ Image: c4, StyleSheet, View: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { mascotContainer: null, mascotLayer: null, mascotImage: null, framePreviewImage: null, container: null, headerText: null, featureRow: null, featureText: null, featureRows: null };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.pointerEvents = "none";
 createCacheKey[0] = createCacheKey;
@@ -68,16 +64,12 @@ createCacheKey[2] = { width: "100%", aspectRatio: 1.8324022346368716 };
 createCacheKey[3] = { width: "100%", aspectRatio: 3.25, resizeMode: "contain" };
 createCacheKey[4] = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { textAlign: "center" };
-let obj1 = {};
-let obj2 = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[7] = { flex: 1 };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[8] = { gap: ThemesDefault.space.PX_32 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { code: "function CollectiblesMobileAnnouncementActionSheetTsx1(){const{animatedPosition,safeAreaTop,MASCOT_SAFE_AREA_NUDGE}=this.__closure;return{transform:[{translateY:animatedPosition.get()+safeAreaTop-MASCOT_SAFE_AREA_NUDGE}]};}" };
-let obj4 = { gap: ThemesDefault.space.PX_32 };
-let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx");
 
 export default function CollectiblesMobileAnnouncementActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -122,17 +114,16 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const items2 = [markAsDismissed];
   const callback = React.useCallback(() => {
     callback.current = true;
-    markAsDismissed(closure_1_8.PRIMARY);
-    let obj = markAsDismissed(5300);
-    obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(7159).ACTION_SHEET };
+    markAsDismissed(ContentDismissActionType.PRIMARY);
+    markAsDismissed(5300);
+    const obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(7159).ACTION_SHEET };
     const result = obj.openCollectiblesShopMobile(obj);
   }, items1);
   const callback1 = React.useCallback(() => {
     closure_1.current = true;
-    markAsDismissed(closure_1_8.USER_DISMISS);
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items2);
   const memo = React.useMemo(() => callback2(closure_13, {}), []);
-  obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   obj = { style: tmp.container, children: null };
   obj1 = { source: { uri: metadataDefault }, style: tmp.framePreviewImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const items3 = [callback(closure_4, obj1), , , ];
@@ -145,7 +136,6 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const intl4 = tmp2(1236).intl;
   obj5[1] = intl4.string(markAsDismissed(1236).t["6ZWB0C"]);
   const items4 = [callback(FeatureRow, obj5), , ];
-  const obj2 = { uri: metadataDefault };
   items4[1] = callback(FeatureRow, { icon: callback(markAsDismissed(5447).HeartIllocon, { size: 32 }), text: stringResult });
   const obj6 = { icon: callback(markAsDismissed(5447).HeartIllocon, { size: 32 }), text: stringResult };
   items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(5447).ShopIllocon, { size: 32 }), text: string2Result });

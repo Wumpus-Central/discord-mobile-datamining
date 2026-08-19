@@ -4,7 +4,7 @@
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(importAllResult.forwardRef(function MessagesLegendList(listItemHeight, ref) {
   ({ data, insetEnd } = listItemHeight);
@@ -15,24 +15,16 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const listTop = listItemHeight.listTop;
   const scrollIndicatorInsetBottom = listItemHeight.scrollIndicatorInsetBottom;
   const scrollPosition = listItemHeight.scrollPosition;
-  let friendSuggestions;
-  let renderHeader;
-  let renderFooter;
-  let setAddedFriendSuggestions;
-  ref = undefined;
-  let friendsHeaderIndex;
-  let friendsHeaderOffset;
-  let estimatedHeaderSize;
-  friendSuggestions = data.friendSuggestions;
-  renderHeader = data.renderHeader;
-  renderFooter = data.renderFooter;
-  setAddedFriendSuggestions = data.setAddedFriendSuggestions;
+  const friendSuggestions = data.friendSuggestions;
+  const renderHeader = data.renderHeader;
+  const renderFooter = data.renderFooter;
+  const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ({ accessibilityLabel, handleScrollAnimated, isRefreshEnabled, recycleItems } = listItemHeight);
   ref = listLeft.useRef(null);
   data = estimatedItemSize(listItemSuggestedFriendHeight[2])(data, { listItemHeight: estimatedItemSize, isRefreshEnabled });
-  friendsHeaderIndex = data.friendsHeaderIndex;
-  friendsHeaderOffset = data.friendsHeaderOffset;
-  estimatedHeaderSize = data.listHeaderHeight;
+  const friendsHeaderIndex = data.friendsHeaderIndex;
+  const friendsHeaderOffset = data.friendsHeaderOffset;
+  const estimatedHeaderSize = data.listHeaderHeight;
   let items = [estimatedHeaderSize];
   const imperativeHandle = listLeft.useImperativeHandle(ref, () => ({
     scrollToTop() {
@@ -133,14 +125,12 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
     if (insetEnd(listItemSuggestedFriendHeight[8]).MessagesDataHeader.HappeningNow === renderHeader) {
       const obj = { listRef: null };
       obj[0] = listRefHappeningNow;
-      return listRefHappeningNow(estimatedItemSize(tmp3[9]), obj);
-    } else if (tmp2(tmp3[8]).MessagesDataHeader.EmptyState === tmp) {
-      return listRefHappeningNow(estimatedItemSize(tmp3[10]), {});
+      return listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[9]), obj);
+    } else if (insetEnd(listItemSuggestedFriendHeight[8]).MessagesDataHeader.EmptyState === renderHeader) {
+      return listRefHappeningNow(estimatedItemSize(listItemSuggestedFriendHeight[10]), {});
     } else {
       return null;
     }
-    tmp = renderHeader;
-    tmp2 = insetEnd;
   }, items4);
   const items6 = [friendsHeaderIndex];
   const ListFooterComponent = listLeft.useMemo(() => {
@@ -164,6 +154,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const scrollIndicatorInsets = listLeft.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
   return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[12]).AnimatedLegendList, { ref, accessibilityLabel, contentContainerStyle, data: data.listData, estimatedHeaderSize, estimatedItemSize, getFixedItemSize, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onScroll, recycleItems, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
 }));
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
 
 export default memoResult;

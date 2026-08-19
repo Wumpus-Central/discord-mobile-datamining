@@ -2,15 +2,18 @@
 
 // Module 15223 (_scorePassword)
 import encodeProperties from "encodeProperties" /* 503 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
+import tDefault from "t" /* 3975 */;
 import _modDef5227 from "module_5227" /* 5227 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15225 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import initialize from "initialize" /* 15224 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
 import result from "result" /* 1221 */;
 
-require = arg1;
+require = fn;
 function _scorePassword() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -242,13 +245,13 @@ function registerFull(giftCodeSKUId) {
   let obj = dispatcherDefault;
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
-    tmp4(15225)(birthday, constants2.REGISTER);
-    let tmp4Result = tmp4(698);
+    trackAgeGateSubmittedDefault(birthday, constants2.REGISTER);
+    let tmp4Result = expandEventPropertiesDefault;
     obj = { source: null, action: null };
     obj[0] = constants5.REGISTER;
     obj[1] = constants4.AGE_GATE_SUBMITTED;
     tmp4Result.track(constants.AGE_GATE_ACTION, obj);
-    const diffResult = tmp4(3975)().diff(birthday, "years");
+    const diffResult = tDefault().diff(birthday, "years");
     if (diffResult >= 13) {
       if (diffResult < 13) {
         let str3 = "23+";
@@ -262,13 +265,12 @@ function registerFull(giftCodeSKUId) {
       } else {
         str = "13-17";
       }
-      tmp4Result = tmp4(698);
+      tmp4Result = expandEventPropertiesDefault;
       obj = { age_bucket: null };
       obj[0] = str;
-      tmp4Result.track(tmp14.USER_AGE_SUBMITTED, obj);
+      tmp4Result.track(constants.USER_AGE_SUBMITTED, obj);
     }
-    const obj11 = tmp4(3975)();
-    tmp14 = constants;
+    const obj11 = tDefault();
   }
   obj1 = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
   let obj2 = { fingerprint: fingerprint.getFingerprint(), email, username, global_name: globalName, password, invite, consent, phone_token: phoneToken, date_of_birth: null, gift_code_sku_id: null, guild_template_code: null, promotional_email_opt_in: null };
@@ -300,11 +302,11 @@ function registerFull(giftCodeSKUId) {
   obj3[1] = obj4;
   obj1[2] = obj3;
   const tmp4Result1 = _modDef5227;
-  return _modDef5227.post(obj1).then((body) => {
-    let obj = callback2(709);
-    obj = { type: "REGISTER_SUCCESS", token: body.body.token };
+  return _modDef5227.post(obj1).then((result) => {
+    callback2(709);
+    let obj = { type: "REGISTER_SUCCESS", token: result.body.token };
     obj.dispatch(obj);
-    obj = { type: "GUARDIAN_CONNECT_REQUIRED", shouldShowGuardianConnect: true === body.body.show_guardian_connect };
+    obj = { type: "GUARDIAN_CONNECT_REQUIRED", shouldShowGuardianConnect: true === result.body.show_guardian_connect };
     callback2(709).dispatch(obj);
     const obj3 = callback2(709);
     callback2(698).track(constants.AGE_GATE_ACTION, { source: constants3.REGISTER, action: constants2.AGE_GATE_SUCCESS });
@@ -338,7 +340,7 @@ function registerFull(giftCodeSKUId) {
 }
 ({ AnalyticEvents: closure_6, AnalyticsSections: error, Endpoints: closure_8 } = ME);
 ({ AgeGateAnalyticAction: c9, AgeGateSource: c10 } = result);
-result = require("set").fileFinishedImporting("modules/auth/register.tsx");
+result = require("obj132").fileFinishedImporting("modules/auth/register.tsx");
 
 export default function register(invite) {
   invite = invite.invite;

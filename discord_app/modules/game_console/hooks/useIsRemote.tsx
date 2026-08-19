@@ -2,10 +2,10 @@
 
 // Module 7235 (useIsRemote)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "set" /* 4540 */;
+import set from "set" /* 4540 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_console/hooks/useIsRemote.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_console/hooks/useIsRemote.tsx");
 
 export default function useIsRemote() {
   const items = [closure_2];

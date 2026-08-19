@@ -3,9 +3,9 @@
 // Module 11235 (useCurrentEmbeddedApplication)
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7145 */;
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11234 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
 
 export default function useCurrentEmbeddedApplication() {
   let obj = arg0;

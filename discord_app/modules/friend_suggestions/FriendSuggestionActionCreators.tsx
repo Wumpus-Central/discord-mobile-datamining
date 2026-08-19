@@ -2,11 +2,11 @@
 
 // Module 5411
 import sendRequest from "sendRequest" /* 530 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
 
 export default {
   fetch() {

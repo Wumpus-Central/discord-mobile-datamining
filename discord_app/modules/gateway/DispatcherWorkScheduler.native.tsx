@@ -1,7 +1,7 @@
 // === Module 13198: _queueIdleCallback ===
 
 // Module 13198 (_queueIdleCallback)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _trackAppBackgrounded from "_trackAppBackgrounded" /* 13199 */;
@@ -25,8 +25,7 @@ class DispatcherWorkScheduler extends BasicWorkScheduler {
 }
 const prototype = DispatcherWorkScheduler.prototype;
 prototype["_queueIdleCallback"] = function _queueIdleCallback() {
-  let self = this;
-  self = this;
+  const self = this;
   if (this._enableRequestIdleCallback) {
     if (!self._criticalWorkScheduled) {
       const _performance = performance;
@@ -48,7 +47,7 @@ prototype["_clearIdleCallback"] = function _clearIdleCallback() {
     self._flushIdleHandler = null;
   }
 };
-let result = set.fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
+let result = obj132.fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
 
 export const createDispatcherWorkScheduler = function createDispatcherWorkScheduler() {
   if (typeof DispatcherWorkScheduler !== "function") {

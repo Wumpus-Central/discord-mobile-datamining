@@ -1,7 +1,7 @@
 // === Module 10478: prototype ===
 
 // Module 10478 (prototype)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 10480 */;
 import useCaptchaStore from "useCaptchaStore" /* 10479 */;
 
@@ -14,12 +14,11 @@ const prototype = function CaptchaCancelError() {
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("modules/captcha/SharedCaptchaUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/captcha/SharedCaptchaUtils.tsx");
 
 export const CaptchaError = { CANCEL: "cancel", ERROR: "error", EXPIRED: "expired" };
 export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromResponse(body) {
-  let obj = { captchaService: body.captcha_service, sitekey: body.captcha_sitekey, captchaSessionId: body.captcha_session_id, options: null };
-  obj = { rqdata: body.captcha_rqdata, rqtoken: body.captcha_rqtoken, serveInvisible: null, userflow: null };
+  const obj = { rqdata: body.captcha_rqdata, rqtoken: body.captcha_rqtoken, serveInvisible: null, userflow: null };
   let flag = body.should_serve_invisible;
   if (flag == null) {
     flag = false;

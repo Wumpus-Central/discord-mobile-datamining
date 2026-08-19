@@ -1,7 +1,7 @@
 // === Module 12303: UserProfilePrivateInfoBanner ===
 
 // Module 12303 (UserProfilePrivateInfoBanner)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ThemesDefault from "Themes" /* 712 */;
@@ -11,11 +11,10 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
-let obj = { banner: null };
-obj = { padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj = { padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateInfoBanner.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateInfoBanner.tsx");
 
 export default function UserProfilePrivateInfoBanner(username) {
   const containerBackground = username.containerBackground;
@@ -26,7 +25,6 @@ export default function UserProfilePrivateInfoBanner(username) {
     obj[0] = containerBackground;
     tmp3 = obj;
   }
-  obj = { style: items, children: null };
   items[1] = tmp3;
   obj = { variant: "text-sm/normal", children: null };
   const intl = getSystemLocale.intl;

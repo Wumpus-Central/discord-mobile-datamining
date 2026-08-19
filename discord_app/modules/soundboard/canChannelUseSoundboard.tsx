@@ -1,14 +1,14 @@
 // === Module 7335: canChannelUseSoundboard ===
 
 // Module 7335 (canChannelUseSoundboard)
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ ChannelTypesSets: c5, Permissions: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");
 
 export default function canChannelUseSoundboard(type) {
   if (null == type) {
@@ -45,14 +45,14 @@ export const useCanChannelUseSoundboard = function useCanChannelUseSoundboard(ar
   const items1 = [arg0];
   return _require(589).useStateFromStores(items, () => {
     let flag = false;
-    if (null != closure_0) {
+    if (null != guildVoiceOrThread) {
       const CALLABLE = closure_1_5.CALLABLE;
       flag = true;
-      if (!CALLABLE.has(obj.type)) {
-        const canResult = closure_1_3.can(closure_1_6.USE_SOUNDBOARD, obj);
-        const canResult1 = closure_1_3.can(closure_1_6.SPEAK, obj);
-        flag = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
-        const tmp6 = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
+      if (!CALLABLE.has(guildVoiceOrThread.type)) {
+        const canResult = closure_1_3.can(closure_1_6.USE_SOUNDBOARD, guildVoiceOrThread);
+        const canResult1 = closure_1_3.can(closure_1_6.SPEAK, guildVoiceOrThread);
+        flag = guildVoiceOrThread.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, guildVoiceOrThread);
+        const tmp6 = guildVoiceOrThread.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, guildVoiceOrThread);
       }
     }
     return flag;

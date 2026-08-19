@@ -4,13 +4,13 @@
 import goBack from "goBack" /* 15657 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import handleConnectionOpen2 from "handleConnectionOpen" /* 4197 */;
 import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 9588 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
 
-require = arg1;
+require = fn;
 function getGuildsComponent() {
   return require(15279).default;
 }
@@ -59,9 +59,9 @@ const memoResult = importAllResult.memo(function YouBarStackNavigator() {
       screenOptions: memo,
       children: obj.useMemo(() => {
         let obj = {
-          name: closure_1_8.GUILDS,
+          name: YouBarNavigatorScreens.GUILDS,
           initialParams: current,
-          getComponent: closure_1_13,
+          getComponent: getGuildsComponent,
           options() {
             const merged = Object.assign(closure_2);
             return {};
@@ -71,19 +71,19 @@ const memoResult = importAllResult.memo(function YouBarStackNavigator() {
         let tmp3Result = null;
         if (iCYMIEnabled) {
           obj = { name: null, getComponent: null, options: null };
-          obj[0] = tmp5.ICYMI;
-          obj[1] = closure_1_15;
+          obj[0] = YouBarNavigatorScreens.ICYMI;
+          obj[1] = getICYMIComponent;
           obj[2] = function options() {
             const merged = Object.assign(closure_2);
             return {};
           };
-          tmp3Result = tmp3(tmp4.Screen, obj);
+          tmp3Result = closure_1_9(closure_1_12.Screen, obj);
         }
         obj = { children: null };
         items[1] = tmp3Result;
         items[2] = closure_1_9(closure_1_12.Screen, {
-          name: closure_1_8.NOTIFICATIONS,
-          getComponent: closure_1_14,
+          name: YouBarNavigatorScreens.NOTIFICATIONS,
+          getComponent: getNotificationsComponent,
           options() {
             const merged = Object.assign(closure_2);
             return {};
@@ -98,6 +98,6 @@ const memoResult = importAllResult.memo(function YouBarStackNavigator() {
   obj[1] = callback(current(accessibilityNativeStackOptions[14]).LayerScope, obj1);
   return callback(closure_5, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");
 
 export default memoResult;

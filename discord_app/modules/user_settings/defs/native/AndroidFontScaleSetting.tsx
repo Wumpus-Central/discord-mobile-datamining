@@ -2,14 +2,14 @@
 
 // Module 14657 (slider)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { useFontScaleStore } from "DEFAULT_FONT_SCALE_STORE_STATE" /* 14609 */;
 import { FontScales } from "MAX_FAVORITES" /* 685 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.i19n5L);
@@ -29,18 +29,18 @@ createToggle = {
     const items = [index, callback, tmp.fontScale];
     return callback.useMemo(() => {
       const text = `${closure_0.fontScale * 100}%`;
-      const obj = { value: index, minimumValue: 0, maximumValue: closure_1_4.length - 1, step: 1, onValueChange: callback, startIcon: closure_1_5(lib(index[6]).CircleMinusIcon, {}), endIcon: closure_1_5(lib(index[7]).CirclePlusIcon, {}), accessibilityLabel: null, accessibilityValue: null, valueLabel: null, defaultValue: null };
+      const obj = { value: index, minimumValue: 0, maximumValue: FontScales.length - 1, step: 1, onValueChange: callback, startIcon: jsx(lib(index[6]).CircleMinusIcon, {}), endIcon: jsx(lib(index[7]).CirclePlusIcon, {}), accessibilityLabel: null, accessibilityValue: null, valueLabel: null, defaultValue: null };
       const intl = lib(index[8]).intl;
       obj[7] = intl.string(lib(index[8]).t.i19n5L);
       obj[8] = { text };
       obj[9] = text;
-      obj[10] = closure_1_4.indexOf(1);
+      obj[10] = FontScales.indexOf(1);
       return obj;
     }, items);
   },
-  usePredicate: require("set").isAndroid
+  usePredicate: require("obj132").isAndroid
 };
 createToggle = createToggle.createSlider(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AndroidFontScaleSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AndroidFontScaleSetting.tsx");
 
 export default createToggle;

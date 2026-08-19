@@ -1,9 +1,9 @@
 // === Module 13062: isOverlayCurrentlyVisibleAndUnlocked ===
 
 // Module 13062 (isOverlayCurrentlyVisibleAndUnlocked)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/overlay/OverlayVisibility.native.tsx");
+const result = obj132.fileFinishedImporting("modules/overlay/OverlayVisibility.native.tsx");
 
 export function isOverlayCurrentlyVisibleAndUnlocked() {
   return false;

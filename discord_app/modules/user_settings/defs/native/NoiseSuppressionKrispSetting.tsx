@@ -5,11 +5,11 @@ import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 12557 */;
 import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 12558 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import createToggle from "createToggle" /* 10669 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.t8Qhib);
@@ -50,6 +50,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx");
 
 export default createToggle;

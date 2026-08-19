@@ -3,21 +3,21 @@
 // Module 12504 (ScheduleEventPrompt)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Form from "Form" /* 8083 */;
+import openCreateOrEditGuildEventModal from "openCreateOrEditGuildEventModal" /* 8804 */;
 import canManageResource from "canManageResource" /* 8839 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { actionBarCTAContainer: { marginVertical: 4 }, iconStyle: null, iconContainerStyle: null, greenIcon: null };
-createCacheKey = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20 };
+const createCacheKey = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, padding: 4 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, padding: 4 };
 createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildScheduledEventPrompts.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildScheduledEventPrompts.tsx");
 
 export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
   ({ guild: require, channel } = isLive);
@@ -28,18 +28,17 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
     obj = { style: null, onPress: null, iconSource: null, iconStyle: null, iconContainerStyle: null, completed: null, title: null, subtitle: null };
     obj[0] = tmp.actionBarCTAContainer;
     obj[1] = function onPress() {
-      let obj = closure_1_0(closure_1_2[6]);
-      obj = { channel };
+      const obj = { channel };
       const result = obj.openCreateOrEditGuildEventModal(closure_0, obj);
     };
     obj[2] = channel(8896);
     ({ iconStyle: obj2[3], iconContainerStyle: obj2[4] } = tmp);
     obj[5] = isLive.isLive;
-    const intl = tmp2(1236).intl;
-    obj[6] = intl.string(tmp2(1236).t["60lJ0C"]);
-    const intl2 = tmp2(1236).intl;
-    obj[7] = intl2.string(tmp2(1236).t["EYn7/y"]);
-    tmp4 = jsx(tmp2(8083).FormCTA, { style: null, onPress: null, iconSource: null, iconStyle: null, iconContainerStyle: null, completed: null, title: null, subtitle: null });
+    const intl = getSystemLocale.intl;
+    obj[6] = intl.string(getSystemLocale.t["60lJ0C"]);
+    const intl2 = getSystemLocale.intl;
+    obj[7] = intl2.string(getSystemLocale.t["EYn7/y"]);
+    tmp4 = jsx(Form.FormCTA, { style: null, onPress: null, iconSource: null, iconStyle: null, iconContainerStyle: null, completed: null, title: null, subtitle: null });
   }
   return tmp4;
 };
@@ -55,7 +54,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
     obj = { style: null, onPress: null, iconSource: null, iconStyle: null, iconContainerStyle: null, completed: null, title: null, subtitle: null };
     obj[0] = tmp.actionBarCTAContainer;
     obj[1] = function onPress() {
-      const result = event(closure_1_2[6]).openStartGuildEventModal(event, recurrenceId);
+      const result = event(dependencyMap[6]).openStartGuildEventModal(event, recurrenceId);
     };
     obj[2] = recurrenceId(8896);
     obj[3] = tmp.iconStyle;

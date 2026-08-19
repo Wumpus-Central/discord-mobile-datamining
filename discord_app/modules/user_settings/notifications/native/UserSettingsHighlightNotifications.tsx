@@ -1,23 +1,23 @@
 // === Module 14830: Row ===
 
 // Module 14830 (Row)
+import _modDef6798 from "module_6798" /* 6798 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "insertUnsortedGuilds" /* 5078 */;
-import closure_6 from "updateUserGuildSettingsInternal" /* 5043 */;
+import noop from "noop" /* 19 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
 import { HighlightSettings } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function Row(guildId) {
   guildId = guildId.guildId;
   const items = [guildId];
   ({ isStart, isEnd } = guildId);
   const callback = React.useCallback((arg0) => {
-    let obj = closure_1_1(closure_1_2[6]);
-    obj = { notify_highlights: arg0 ? tmp3.ENABLED : tmp3.DISABLED };
-    const NotificationLabel = guildId(closure_1_2[7]).NotificationLabel;
+    const obj = { notify_highlights: arg0 ? HighlightSettings.ENABLED : HighlightSettings.DISABLED };
+    const NotificationLabel = guildId(dependencyMap[7]).NotificationLabel;
     const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.highlights(!arg0));
   }, items);
   let obj = guildId(589);
@@ -48,7 +48,7 @@ function Row(guildId) {
   }
   tmp2 = guildId;
 }
-let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/notifications/native/UserSettingsHighlightNotifications.tsx");
 
 export default function UserSettingsHighlightNotifications() {
   let obj = stateFromStoresArray(589);

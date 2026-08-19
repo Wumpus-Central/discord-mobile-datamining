@@ -3,7 +3,7 @@
 // Module 5268 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 
 let closure_1 = { users: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
@@ -74,6 +74,6 @@ const channelSpoilerAgreeStore = new ChannelSpoilerAgreeStore(dispatcherDefault,
     return tmp4;
   }
 });
-const result = require("set").fileFinishedImporting("modules/spoiler_channels/ChannelSpoilerAgreeStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/spoiler_channels/ChannelSpoilerAgreeStore.tsx");
 
 export default channelSpoilerAgreeStore;

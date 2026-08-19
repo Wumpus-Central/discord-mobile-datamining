@@ -4,18 +4,18 @@
 import noopAll from "noop" /* 19 */;
 import _modDef4115 from "module_4115" /* 4115 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { EMBEDDED_ACTIVITIES_BLOG_POST_URL as closure_5 } from "items3" /* 4481 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 let closure_7 = { duration: 500 };
 let items = [{ rotateZ: "225deg" }];
 let closure_8 = createCacheKey.createStyles({ arrow: { marginLeft: 200, top: 9, position: "relative", borderTopWidth: 0, borderRightWidth: 0, borderBottomWidth: 16, borderLeftWidth: 16, transform: items }, tooltip: { padding: 16 }, tooltipContainer: { position: "absolute", width: 280, zIndex: 2, right: -48, top: -8 }, tooltipText: { textAlign: "center", fontSize: 14 }, closeButtonWrapper: { marginTop: 14 } });
 let closure_9 = { code: "function ActivitiesPrivateChannelCallTooltipTsx1(){const{withRepeat,withSequence,withTiming,OFFSET,translateBounceOffset,TIMING_CONFIG}=this.__closure;return{transform:[{translateY:withRepeat(withSequence(withTiming(OFFSET,{duration:0}),withTiming(OFFSET+translateBounceOffset,TIMING_CONFIG),withTiming(OFFSET,TIMING_CONFIG)),10)}]};}" };
-const result = require("set").fileFinishedImporting("modules/activities/native/ActivitiesPrivateChannelCallTooltip.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/native/ActivitiesPrivateChannelCallTooltip.tsx");
 
 export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   let num;

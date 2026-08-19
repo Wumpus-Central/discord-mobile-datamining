@@ -10,17 +10,17 @@ import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10158 
 import NotificationAvatarDefault from "NotificationAvatar" /* 10521 */;
 import _modDef10522 from "module_10522" /* 10522 */;
 import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 10525 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 10046 */;
-import set from "set" /* 10030 */;
+import initialize from "initialize" /* 10046 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import { Easing } from "module_4115" /* 4115 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 10030 */;
 
-require = arg1;
+require = fn;
 function NotificationWrapper(notification) {
   notification = notification.notification;
   const type = notification.type;
@@ -28,34 +28,34 @@ function NotificationWrapper(notification) {
     obj = { notification: null };
     obj[0] = notification;
     return jsx(_modDef10047, { notification: null });
-  } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
+  } else if (constants.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
     return jsx(_modDef10122, { notification: null });
-  } else if (tmp.FORUM_THREAD_CREATED === type) {
+  } else if (constants.FORUM_THREAD_CREATED === type) {
     obj1 = { notification: null };
     obj1[0] = notification;
     return jsx(ForumThreadCreatedNotificationDefault, { notification: null });
-  } else if (tmp.BUG_REPORTER === type) {
+  } else if (constants.BUG_REPORTER === type) {
     const obj2 = { notification: null };
     obj2[0] = notification;
     return jsx(BugReporterNotification.BugReporterNotification, { notification: null });
-  } else if (tmp.ALERT === type) {
+  } else if (constants.ALERT === type) {
     const obj3 = { notification: null };
     obj3[0] = notification;
     return jsx(AlertNotificationDefault, { notification: null });
-  } else if (tmp.REACTION === type) {
+  } else if (constants.REACTION === type) {
     const obj4 = { notification: null };
     obj4[0] = notification;
     return jsx(ReactionNotificationBodyDefault, { notification: null });
-  } else if (tmp.MESSAGE_REMINDER === type) {
+  } else if (constants.MESSAGE_REMINDER === type) {
     const obj5 = { notification: null };
     obj5[0] = notification;
     return jsx(NotificationAvatarDefault, { notification: null });
   } else {
-    if (tmp.RESTRICTED_HOURS_WARNING !== type) {
-      if (tmp.RESTRICTED_SCHEDULE_UPDATED !== type) {
-        if (tmp.MESSAGE_REQUEST === type) {
+    if (constants.RESTRICTED_HOURS_WARNING !== type) {
+      if (constants.RESTRICTED_SCHEDULE_UPDATED !== type) {
+        if (constants.MESSAGE_REQUEST === type) {
           obj = { notification: null };
           obj[0] = notification;
           return jsx(MessageRequestInAppNotificationDefault, { notification: null });
@@ -69,7 +69,7 @@ function NotificationWrapper(notification) {
     return jsx(_modDef10522, { notification: null });
   }
 }
-({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);
+({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = require("set"));
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = ME);
 let obj = { duration: 200, easing: null };
 obj[1] = Easing.in(require("module_4115").Easing.ease);
@@ -81,43 +81,32 @@ let closure_21 = { code: "function InAppNotificationContainerTsx4(event){const{s
 let closure_22 = { code: "function InAppNotificationContainerTsx5(){const{startY,notificationGestureY,velocityY,runOnJS,setPanning}=this.__closure;startY.set(notificationGestureY.get());velocityY.set(0);runOnJS(setPanning)(true);}" };
 let closure_23 = { code: "function InAppNotificationContainerTsx6(finished){const{runOnJS,handleDismissNotification}=this.__closure;if(finished){runOnJS(handleDismissNotification)('swipe');}}" };
 let closure_24 = { code: "function InAppNotificationContainerTsx7(){const{notificationGestureY,scale,initialized,interpolate,PAN_INPUT_RANGE,extrapolateConfig}=this.__closure;const gestureY=notificationGestureY.get();const scaleValue=scale.get();const scaleTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0.3,1,0.3],extrapolateConfig):scaleValue;const opacityTransform=initialized?interpolate(gestureY,PAN_INPUT_RANGE,[0,1,0],extrapolateConfig):scaleValue;return{transform:[{translateY:gestureY},{scale:scaleTransform}],opacity:opacityTransform};}" };
-let result = set.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationContainer.tsx");
+let result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationContainer.tsx");
 
 export default function InAppNotificationContainer(notification) {
   notification = notification.notification;
-  let guildId;
-  let channelId;
-  let messageId;
   let channelType;
-  let sharedValue;
-  let sharedValue1;
-  let sharedValue2;
-  let sharedValue3;
-  let first;
-  closure_10 = undefined;
-  let first1;
-  closure_12 = undefined;
   let callback;
   const tmp = callback();
   let items = [notification];
   const memo = channelType.useMemo(() => notification(channelId[18]).extractMetadataFromNotification(notification), items);
-  guildId = memo.guildId;
-  channelId = memo.channelId;
-  messageId = memo.messageId;
+  const guildId = memo.guildId;
+  const channelId = memo.channelId;
+  const messageId = memo.messageId;
   channelType = memo.channelType;
   obj = notification(channelId[7]);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
   obj1 = notification(channelId[7]);
-  sharedValue1 = obj1.useSharedValue(0);
+  const sharedValue1 = obj1.useSharedValue(0);
   let obj2 = notification(channelId[7]);
-  sharedValue2 = obj2.useSharedValue(0);
+  const sharedValue2 = obj2.useSharedValue(0);
   let obj3 = notification(channelId[7]);
-  sharedValue3 = obj3.useSharedValue(0);
+  const sharedValue3 = obj3.useSharedValue(0);
   const tmp9 = messageId(channelType.useState(false), 2);
-  first = tmp9[0];
+  let first = tmp9[0];
   closure_10 = tmp9[1];
   const tmp11 = messageId(channelType.useState(false), 2);
-  first1 = tmp11[0];
+  const first1 = tmp11[0];
   closure_12 = tmp13;
   let obj4 = notification(channelId[19]);
   const items1 = [sharedValue1];
@@ -125,7 +114,7 @@ export default function InAppNotificationContainer(notification) {
   const stateFromStores = obj4.useStateFromStores(items1, () => sharedValue1.isOpen());
   callback = channelType.useCallback((arg0) => {
     if (null != arg0) {
-      obj = notification(channelId[18]);
+      notification(channelId[18]);
       obj = { type: null, guildId: null, channelId: null, dismissReason: null, inAppNotificationId: null, messageId: null };
       obj[0] = notification.type;
       obj[1] = guildId;
@@ -141,21 +130,21 @@ export default function InAppNotificationContainer(notification) {
     }
   }, items2);
   guildId(channelId[20])(() => {
-    obj = notification(channelId[21]);
+    notification(channelId[21]);
     const fn = function t() {
-      return closure_1_0(closure_1_2[7]).runOnJS(closure_10)(true);
+      return notification(channelId[7]).runOnJS(closure_10)(true);
     };
     obj = { runOnJS: notification(channelId[7]).runOnJS, setInitialized: closure_10 };
     fn.__closure = obj;
     fn.__workletHash = 16158991995287;
     fn.__initData = closure_1_18;
     const result = sharedValue3.set(obj.withTiming(1, closure_1_15, "respect-motion-settings", fn));
-    return () => closure_1_0(closure_1_2[7]).cancelAnimation(closure_8);
+    return () => notification(channelId[7]).cancelAnimation(closure_8);
   });
   const items3 = [first, notification.type, guildId, channelId, notification.inAppNotificationId, messageId, channelType];
   const effect = channelType.useEffect(() => {
     if (first) {
-      obj = guildId(channelId[22]);
+      guildId(channelId[22]);
       obj = { type: null, guild_id: null, channel_id: null, in_app_notification_id: null, message_id: null, channel_type: null };
       obj[0] = notification.type;
       obj[1] = guildId;
@@ -207,8 +196,8 @@ export default function InAppNotificationContainer(notification) {
         }
         const fn = function n(arg0) {
           if (arg0) {
-            closure_1_0(closure_1_2[7]).runOnJS(closure_13)("swipe");
-            obj = closure_1_0(closure_1_2[7]);
+            notification(channelId[7]).runOnJS(closure_13)("swipe");
+            obj = notification(channelId[7]);
           }
         };
         obj = { runOnJS: null, handleDismissNotification: null };
@@ -219,7 +208,6 @@ export default function InAppNotificationContainer(notification) {
         fn.__workletHash = 3243235500892;
         fn.__initData = closure_1_23;
         const result = sharedValue.set(obj5.withTiming(first, sharedValue2, "animate-always", fn));
-        const tmp5 = notification;
       }
     } else {
       const _Math = Math;
@@ -228,6 +216,7 @@ export default function InAppNotificationContainer(notification) {
     const obj2 = notification(channelId[7]);
     obj = { damping: 10, mass: 1, stiffness: 100, velocity: obj.get() };
     const result1 = sharedValue.set(notification(channelId[24]).withSpring(0, obj, "animate-always"));
+    const obj3 = notification(channelId[24]);
   };
   obj = { velocityY: sharedValue1, MIN_SWIPE_VELOCITY: closure_10, MIN_SWIPE_DISTANCE: first, notificationGestureY: sharedValue, withTiming: notification(channelId[21]).withTiming, PAN_INPUT_RANGE: first1, DEFAULT_ANIMATION_TIMING: sharedValue2, runOnJS: notification(channelId[7]).runOnJS, handleDismissNotification: callback, setPanning: tmp13, withSpring: notification(channelId[24]).withSpring };
   fn.__closure = obj;

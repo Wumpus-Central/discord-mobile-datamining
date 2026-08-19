@@ -3,10 +3,10 @@
 // Module 14788 (_initializeAndroidNotificationSettingsStore)
 import isIterable from "isIterable" /* 4006 */;
 import NativeModulesDefault from "NativeModules" /* 11579 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import identity from "identity" /* 700 */;
 
-require = arg1;
+require = fn;
 function _initializeAndroidNotificationSettingsStore() {
   const self = this;
   const tmp = callback(function*() {
@@ -150,7 +150,7 @@ function _initializeAndroidNotificationSettingsStore() {
   return applyArgumentsResult;
 }
 let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "flex", isSoundsEnabled: "y", isNotifyEveryTime: "HermesInternal" }));
-let result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 
 export const initializeAndroidNotificationSettingsStore = function initializeAndroidNotificationSettingsStore() {
   const self = this;

@@ -2,13 +2,16 @@
 
 // Module 12656 (NUFVoiceChannelsTemplate)
 import noopAll from "noop" /* 19 */;
+import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1892 */;
+import _modDef4975 from "module_4975" /* 4975 */;
+import _initializeDefault from "_initialize" /* 12646 */;
 import NUFActionSheetTemplateDefault from "NUFActionSheetTemplate" /* 12657 */;
 import registerAssetDefault from "registerAsset" /* 12658 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx");
+let result = require("obj132").fileFinishedImporting("modules/nuf_channels/native/components/NUFVoiceChannelsTemplate.tsx");
 
 export default function NUFVoiceChannelsTemplate(channel) {
   channel = channel.channel;
@@ -21,11 +24,9 @@ export default function NUFVoiceChannelsTemplate(channel) {
   const intl3 = channel(1236).intl;
   obj[3] = intl3.string(channel(1236).t.eIi3Om);
   obj[4] = function onCTAPress() {
-    const result = closure_1_1(closure_1_3[5]).handleVoiceChannelsOnboard();
-    const obj = closure_1_1(closure_1_3[5]);
-    const result1 = closure_1_2(closure_1_3[6]).dismissGlobalKeyboard();
-    const obj2 = closure_1_2(closure_1_3[6]);
-    const voiceChannel = closure_1_1(closure_1_3[7]).selectVoiceChannel(channel.id);
+    const result = _initializeDefault.handleVoiceChannelsOnboard();
+    const result1 = dismissGlobalKeyboardAll.dismissGlobalKeyboard();
+    const voiceChannel = _modDef4975.selectVoiceChannel(channel.id);
   };
   return jsx(NUFActionSheetTemplateDefault, { title: null, description: null, imageSrc: null, CTALabel: null, onCTAPress: null });
 };

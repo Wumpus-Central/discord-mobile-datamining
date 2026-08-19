@@ -4,13 +4,13 @@
 import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 11178 */;
 import GIFIconDefault from "GIFIcon" /* 11182 */;
 import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 11193 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
 import { useForumChannelStore } from "set" /* 11177 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 function ForumPostGrid(arg0) {
   ({ hasUnreads, thread } = arg0);
   const obj = { children: null };
@@ -52,12 +52,12 @@ function ConnectedForumPost(arg0) {
   const stateFromStoresObject = require(firstMessage[8]).useStateFromStoresObject(items2, () => {
     let isBlockedForMessageResult = null != firstMessage;
     if (isBlockedForMessageResult) {
-      isBlockedForMessageResult = closure_1_4.isBlockedForMessage(tmp);
+      isBlockedForMessageResult = closure_1_4.isBlockedForMessage(firstMessage);
     }
     const obj = { isBlocked: isBlockedForMessageResult, isIgnored: null };
-    let isIgnoredForMessageResult = null != tmp;
+    let isIgnoredForMessageResult = null != firstMessage;
     if (isIgnoredForMessageResult) {
-      isIgnoredForMessageResult = closure_1_4.isIgnoredForMessage(tmp);
+      isIgnoredForMessageResult = closure_1_4.isIgnoredForMessage(firstMessage);
     }
     obj[1] = isIgnoredForMessageResult;
     return obj;
@@ -116,12 +116,13 @@ function ConnectedForumPost(arg0) {
       isNew = "blocked";
     }
     obj4[9] = isNew;
-    tmp = tmp16(tmp3, obj4);
+    tmp = callback(tmp3, obj4);
     obj3[2] = tmp;
-    tmp16Result = tmp16(ForumPostPressableContainer, obj3);
+    tmp16Result = callback(ForumPostPressableContainer, obj3);
   } else {
     return callback(tmp3(tmp[15]), {});
   }
+  const obj8 = require(firstMessage[8]);
 }
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 const memoResult = importAllResult.memo((arg0) => {
@@ -136,16 +137,15 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   return tmp;
 });
-const result = require("set").fileFinishedImporting("modules/forums/native/ForumPost.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/ForumPost.tsx");
 
 export default memoResult;
 export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   threadId = threadId.threadId;
-  let stateFromStores;
   ({ style, localDeviceMedia } = threadId);
   let obj = threadId(589);
   const items = [closure_3];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(threadId));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(threadId));
   let tmp5 = null;
   stateFromStores(38)(null != stateFromStores, "[Forum Post] The thread should not be null here. A store must have missed an update.");
   const items1 = [closure_3];

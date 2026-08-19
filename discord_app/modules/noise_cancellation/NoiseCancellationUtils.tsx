@@ -3,10 +3,10 @@
 // Module 12558 (getNoiseCancellationDeferredToSystem)
 import initialize from "initialize" /* 589 */;
 import setDefault from "set" /* 12559 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
 
 export const getNoiseCancellationDeferredToSystem = function getNoiseCancellationDeferredToSystem(closure_3) {
   let obj = closure_3;

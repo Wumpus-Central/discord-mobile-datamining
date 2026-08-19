@@ -2,11 +2,11 @@
 
 // Module 8200 (useUserCommunicationDisabled)
 import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/useUserCommunicationDisabled.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_communication_disabled/useUserCommunicationDisabled.tsx");
 
 export default function useUserCommunicationDisabled(arg0, arg1) {
   const _require = arg0;
@@ -17,8 +17,8 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
     let member = null;
     if (null != closure_1) {
       member = null;
-      if (null != tmp) {
-        member = closure_1_2.getMember(tmp2, tmp);
+      if (null != id) {
+        member = closure_1_2.getMember(tmp2, id);
       }
     }
     return member;
@@ -32,7 +32,6 @@ export default function useUserCommunicationDisabled(arg0, arg1) {
   }
   const items2 = [prop, ];
   const obj = _require(589);
-  const tmp = _require;
   items2[1] = _require(4010).isMemberCommunicationDisabled(stateFromStores);
   return items2;
 };
@@ -51,8 +50,8 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
     let member = null;
     if (null != closure_1) {
       member = null;
-      if (null != tmp) {
-        member = closure_1_2.getMember(tmp2, tmp);
+      if (null != id) {
+        member = closure_1_2.getMember(tmp2, id);
       }
     }
     return member;
@@ -74,7 +73,7 @@ export const userCommunicationDisabled = function userCommunicationDisabled(id, 
   if (null != guildId) {
     member = null;
     if (null != id) {
-      member = closure_2.getMember(guildId, id);
+      member = member.getMember(guildId, id);
     }
   }
   let prop;

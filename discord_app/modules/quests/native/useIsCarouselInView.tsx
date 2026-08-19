@@ -1,10 +1,10 @@
 // === Module 14432: useIsCarouselInView ===
 
 // Module 14432 (useIsCarouselInView)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/quests/native/useIsCarouselInView.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/useIsCarouselInView.tsx");
 
 export default function useIsCarouselInView() {
   const containerRef = React.useRef(null);

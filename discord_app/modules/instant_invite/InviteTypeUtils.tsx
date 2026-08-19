@@ -1,7 +1,7 @@
 // === Module 4369: InviteTypes ===
 
 // Module 4369 (InviteTypes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import scheduledEventSort from "scheduledEventSort" /* 4370 */;
 import getEstablishedDate from "getEstablishedDate" /* 4372 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
@@ -11,7 +11,7 @@ const isEventUpcoming = scheduledEventSort.isEventUpcoming;
 ({ isGuildVocalChannelType: c3, isMultiUserDM: c4 } = createChannelRecord);
 ({ InviteTargetTypes: c5, InviteTypes: closure_6 } = InviteSendStates);
 let obj = { EVENT: "event", APPLICATION: "application", PROFILE: "profile", DEFAULT: "default", VOICE_CHANNEL: "voice_channel" };
-const result = set.fileFinishedImporting("modules/instant_invite/InviteTypeUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/instant_invite/InviteTypeUtils.tsx");
 
 export const InviteTypes = InviteSendStates.InviteTypes;
 export const isGroupDMInvite = function isGroupDMInvite(invite) {
@@ -47,17 +47,16 @@ export const isFriendInvite = function isFriendInvite(invite) {
   let tmp = invite.type === constants2.FRIEND;
   if (!tmp) {
     tmp = null == invite.guild && null != invite.inviter;
-    const tmp3 = null == invite.guild && null != invite.inviter;
   }
   return tmp;
 };
 export const isEmbeddedApplicationInvite = function isEmbeddedApplicationInvite(invite) {
   return invite.target_type === constants.EMBEDDED_APPLICATION;
 };
-export const isVoiceChannelInvite = function isVoiceChannelInvite(addResult) {
-  let tmp = null != addResult.channel;
+export const isVoiceChannelInvite = function isVoiceChannelInvite(channel) {
+  let tmp = null != channel.channel;
   if (tmp) {
-    tmp = callback(addResult.channel.type);
+    tmp = callback(channel.channel.type);
   }
   return tmp;
 };
@@ -74,14 +73,13 @@ export const getInviteType = function getInviteType(body) {
       tmp4 = tmp2;
     }
     if (tmp4) {
-      GROUP_DM = tmp8.GROUP_DM;
+      GROUP_DM = constants2.GROUP_DM;
     } else {
-      let tmp5 = body.type === tmp8.FRIEND;
+      let tmp5 = body.type === constants2.FRIEND;
       if (!tmp5) {
         tmp5 = null == body.guild && null != body.inviter;
-        const tmp7 = null == body.guild && null != body.inviter;
       }
-      GROUP_DM = tmp5 ? tmp8.FRIEND : tmp8.GUILD;
+      GROUP_DM = tmp5 ? constants2.FRIEND : constants2.GUILD;
     }
   }
   return GROUP_DM;

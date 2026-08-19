@@ -1,30 +1,38 @@
 // === Module 16834: GuildSettingsRoleTemplate ===
 
 // Module 16834 (GuildSettingsRoleTemplate)
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import _mod4115 from "module_4115" /* 4115 */;
 import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4721 */;
+import Text from "Text" /* 4734 */;
+import Button2 from "Button" /* 4745 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import PressableBase from "PressableBase" /* 5433 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7925 */;
 import _getRequireWildcardCacheDefault from "_getRequireWildcardCache" /* 8105 */;
 import PaginationDefault from "Pagination" /* 10311 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import registerAssetDefault from "registerAsset" /* 10756 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import title from "title" /* 16830 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ View: c5, Dimensions, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ PermissionTemplateTypes: c9, PermissionTemplates: c10, DEFAULT_TEMPLATE_TYPE: unpackModuleId } = title);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
-createCacheKey = { container: null, carousel: null, cardWrapper: null, card: null, templateTitle: null, templateSubtitle: null, templateContentWrapper: null, templateContent: null, templateContentText: null, templateButton: null, sliderContainer: null, slider: null, sliderLabels: null, sliderLabel: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { width: 300, alignSelf: "center", paddingHorizontal: 10, flex: 1 };
@@ -41,35 +49,27 @@ createCacheKey[12] = { alignItems: "center", flexDirection: "row", justifyConten
 createCacheKey[13] = { marginHorizontal: 0, width: "25%", textAlign: "center", alignItems: "center" };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
 let closure_18 = { code: "function GuildSettingsRoleTemplateTsx1(value){const{interpolate,sheetWidth,parallaxScrollingOffset,Extrapolation,inactiveOpacity}=this.__closure;const translate=interpolate(value,[-1,0,1],[-sheetWidth+parallaxScrollingOffset,0,sheetWidth-parallaxScrollingOffset]);const zIndex=Math.round(interpolate(value,[-1,0,1],[0,sheetWidth,0],Extrapolation.CLAMP));return{transform:[{translateX:translate}],opacity:interpolate(value,[-1,0,1],[inactiveOpacity,1,inactiveOpacity],Extrapolation.CLAMP),zIndex:zIndex};}" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm, borderStyle: "solid", borderWidth: 1, flex: 1, flexDirection: "column", marginVertical: 16, padding: 16, paddingTop: 20 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleTemplate.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleTemplate.tsx");
 
 export default function GuildSettingsRoleTemplate(arg0) {
   ({ onSelect: require, location: importDefault, guildId: dependencyMap } = arg0);
-  let callback;
   let ref;
-  let ref1;
-  let first;
-  closure_7 = undefined;
-  let first1;
-  let constants;
-  let num;
   let bound;
   let tmp = callback4();
-  callback = tmp;
+  let callback = tmp;
   const size = useWindowDimensionsDefault();
   const height = size.height;
   let obj = ref;
   ref = ref.useRef(null);
-  ref1 = ref.useRef(null);
+  const ref1 = ref.useRef(null);
   const tmp7 = callback(ref.useState(bound), 2);
-  first = tmp7[0];
+  const first = tmp7[0];
   closure_7 = tmp7[1];
-  let tmp9 = callback(ref.useState(width), 2);
-  first1 = tmp9[0];
-  constants = tmp9[1];
+  const tmp9 = callback(ref.useState(width), 2);
+  const first1 = tmp9[0];
+  const constants = tmp9[1];
   obj1 = SCREEN_READER_ENABLED_GETTER;
-  num = 0.7;
+  let num = 0.7;
   const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   if (tmp4) {
     num = 0.3;
@@ -134,7 +134,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
       return obj;
     }
   }
-  obj = { interpolate: tmp11(4115).interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: tmp11(4115).Extrapolation, inactiveOpacity: num };
+  obj = { interpolate: _mod4115.interpolate, sheetWidth: first1, parallaxScrollingOffset: bound, Extrapolation: _mod4115.Extrapolation, inactiveOpacity: num };
   V.__closure = obj;
   V.__workletHash = 1786335394860;
   V.__initData = closure_18;
@@ -148,29 +148,13 @@ export default function GuildSettingsRoleTemplate(arg0) {
   let obj2 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: callback2(_getRequireWildcardCacheDefault, obj3) };
   items2[1] = callback2(ref1, {
     style: tmp.sliderLabels,
-    children: values.map((title) => {
-      title = title.title;
-      closure_0 = arg1;
+    children: values.map((item, index) => {
+      const title = item.title;
+      closure_0 = index;
       let obj = { style: closure_3.sliderLabel, children: null };
-      obj = {
-        accessibilityRole: "button",
-        accessibilityState: obj,
-        onPress() {
-          const rounded = Math.round(closure_0);
-          closure_1_7(rounded);
-          const current = closure_1_5.current;
-          if (current != null) {
-            const obj = { index: null, animated: null };
-            obj[0] = rounded;
-            obj[1] = !closure_1_7.useReducedMotion;
-            current.scrollTo(obj);
-          }
-        },
-        children: null
-      };
-      obj = { selected: first === arg1 };
-      obj[3] = closure_1_14(closure_1_0(closure_1_2[18]).Text, { variant: "text-sm/medium", children: title() });
-      obj[1] = closure_1_14(closure_1_0(closure_1_2[17]).PressableOpacity, obj);
+      obj = { selected: first === index };
+      obj[3] = closure_1_14(Text.Text, { variant: "text-sm/medium", children: title() });
+      obj[1] = closure_1_14(PressableBase.PressableOpacity, obj);
       return closure_1_14(ref1, obj, title());
     })
   });
@@ -178,29 +162,13 @@ export default function GuildSettingsRoleTemplate(arg0) {
   let items3 = [callback3(ref1, obj1), ];
   let obj4 = {
     style: tmp.sliderLabels,
-    children: values.map((title) => {
-      title = title.title;
-      closure_0 = arg1;
+    children: values.map((item, index) => {
+      const title = item.title;
+      closure_0 = index;
       let obj = { style: closure_3.sliderLabel, children: null };
-      obj = {
-        accessibilityRole: "button",
-        accessibilityState: obj,
-        onPress() {
-          const rounded = Math.round(closure_0);
-          closure_1_7(rounded);
-          const current = closure_1_5.current;
-          if (current != null) {
-            const obj = { index: null, animated: null };
-            obj[0] = rounded;
-            obj[1] = !closure_1_7.useReducedMotion;
-            current.scrollTo(obj);
-          }
-        },
-        children: null
-      };
-      obj = { selected: first === arg1 };
-      obj[3] = closure_1_14(closure_1_0(closure_1_2[18]).Text, { variant: "text-sm/medium", children: title() });
-      obj[1] = closure_1_14(closure_1_0(closure_1_2[17]).PressableOpacity, obj);
+      obj = { selected: first === index };
+      obj[3] = closure_1_14(Text.Text, { variant: "text-sm/medium", children: title() });
+      obj[1] = closure_1_14(PressableBase.PressableOpacity, obj);
       return closure_1_14(ref1, obj, title());
     })
   };

@@ -1,20 +1,20 @@
-// === Module 4070: defineProtoSetting ===
+// === Module 4070: obj100 ===
 
-// Module 4070 (defineProtoSetting)
-import closure_3 from "initialize" /* 1303 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
+// Module 4070 (obj100)
+import initialize from "initialize" /* 1303 */;
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
 import { UserSettingsDelay } from "MAX_FAVORITES" /* 685 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingDefinitions.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/UserSettingDefinitions.tsx");
 
-export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, set) {
+export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, arg4) {
   let getSetting = textAndImages;
   let f74454 = activityRestrictedGuildIds;
   closure_2 = explicitContentFromProto;
   closure_3 = explicitContentToProto;
-  let obj = set;
-  if (set === undefined) {
+  let obj = arg4;
+  if (arg4 === undefined) {
     obj = {};
   }
   let INFREQUENT_USER_ACTION = obj.delay;
@@ -32,7 +32,7 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
     if (INFREQUENT_USER_ACTION.settings[getSetting] != null) {
       tmp3 = tmp2[f74454];
     }
-    return closure_2(tmp3);
+    return explicitContentFromProto(tmp3);
   };
   obj = {
     getSetting,
@@ -52,16 +52,14 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
     closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[3]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, (arg0) => {
-      arg0[closure_1_1] = closure_1_3(closure_0, arg0[closure_1_1]);
+      arg0[closure_1_1] = explicitContentToProto(closure_0, arg0[closure_1_1]);
     }, INFREQUENT_USER_ACTION);
   };
   return obj;
 };
-export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animateEmoji) {
-  let getSetting = defineProtoSetting;
-  let f74458 = text;
+export function wrapSettingWithSelectiveSyncing(arg0, text, animateEmoji) {
   closure_2 = animateEmoji;
-  getSetting = function getSetting() {
+  function getSetting() {
     const tmp = closure_1_3.getState()[f74458];
     let setting;
     if (tmp != null) {
@@ -71,14 +69,13 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
       setting = getSetting.getSetting();
     }
     return setting;
-  };
-  f74458 = (arg0) => {
+  }
+  const f74458 = (arg0) => {
     if (closure_1_3.shouldSync(f74458)) {
       let updateSettingResult = getSetting.updateSetting(arg0);
     } else {
-      let obj = f74458(animateEmoji[5]);
-      obj = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
-      obj = {};
+      f74458(animateEmoji[5]);
+      const obj = {};
       obj1 = { settings: null };
       const obj2 = {};
       obj2[animateEmoji] = arg0;
@@ -117,19 +114,17 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
     }
   };
 }
-export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, arg3) {
-  let getSetting = defineProtoSetting;
-  let f74461 = animateEmoji;
+export function wrapSettingWithOverride(arg0, animateEmoji, arg2, arg3) {
   closure_2 = arg2;
   closure_3 = arg3;
-  getSetting = function getSetting() {
+  function getSetting() {
     let setting = dependencyMap();
     if (setting == null) {
       setting = getSetting.getSetting();
     }
     return setting;
-  };
-  f74461 = (arg0) => {
+  }
+  const f74461 = (arg0) => {
     const items = [f74461];
     f74461(709).dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
     return getSetting.updateSetting(arg0);
@@ -153,8 +148,8 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
     }
   };
 }
-export const wrapSettingWithExperimentDefaults = function wrapSettingWithExperimentDefaults(set) {
-  ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: closure_3, ineligibleDefault: closure_4, onUseDefault: UserSettingsDelay } = set);
+export const wrapSettingWithExperimentDefaults = function wrapSettingWithExperimentDefaults(arg0) {
+  ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: closure_3, ineligibleDefault: closure_4, onUseDefault: UserSettingsDelay } = arg0);
   return {
     getSetting() {
       const setting = closure_0.getSetting();
@@ -165,9 +160,7 @@ export const wrapSettingWithExperimentDefaults = function wrapSettingWithExperim
           tmp2();
         }
         if (callback()) {
-          let tmp5 = callback2();
-        } else {
-          tmp5 = closure_4;
+          const tmp5 = callback2();
         }
       }
     },
@@ -180,9 +173,7 @@ export const wrapSettingWithExperimentDefaults = function wrapSettingWithExperim
           callback3();
         }
         if (tmp2) {
-          let tmp4 = callback2();
-        } else {
-          tmp4 = closure_4;
+          const tmp4 = callback2();
         }
       }
     },

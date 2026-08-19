@@ -7,7 +7,7 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ section: { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", textTransform: "none", paddingTop: require("MessageEmbedTypes").SEARCH_LIST_SECTION_TOP_PADDING, paddingHorizontal: 16, paddingBottom: 8 } });
 const memoResult = importAllResult.memo((arg0) => {
@@ -17,6 +17,6 @@ const memoResult = importAllResult.memo((arg0) => {
   obj[1] = items;
   return callback2(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/list/SearchListSection.tsx");
 
 export default memoResult;

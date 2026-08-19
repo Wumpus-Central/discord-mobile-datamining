@@ -2,15 +2,15 @@
 
 // Module 9783 (PlayStationLinkLanding)
 import combinedDefault from "combined" /* 1993 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes" /* 9782 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_7 = createCacheKey.createStyles({ image: { width: 230, height: 160 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx");
 
 export const PlayStationLinkLanding = function PlayStationLinkLanding(platformType) {
   let navigation;
@@ -19,7 +19,6 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   const tmp = callback();
   const articleURL = combinedDefault.getArticleURL(HelpdeskArticles.PS_CONNECTION);
   let intl = navigation(1236).intl;
-  const obj2 = combinedDefault;
   let items = [navigation];
   const memo = React.useMemo(() => {
     let obj = { label: null, subLabel: null, icon: null };

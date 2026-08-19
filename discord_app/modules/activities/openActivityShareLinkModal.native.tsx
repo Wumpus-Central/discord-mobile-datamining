@@ -1,13 +1,13 @@
 // === Module 13853: ACTIVITY_SHARE_LINK_MODAL ===
 
 // Module 13853 (ACTIVITY_SHARE_LINK_MODAL)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import getBestActiveInput from "getBestActiveInput" /* 4237 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
 const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
-const result = set.fileFinishedImporting("modules/activities/openActivityShareLinkModal.native.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/openActivityShareLinkModal.native.tsx");
 
 export const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 export const openActivityShareLinkModal = function openActivityShareLinkModal(arg0) {

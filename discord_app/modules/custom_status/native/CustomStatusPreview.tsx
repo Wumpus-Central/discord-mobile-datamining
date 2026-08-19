@@ -2,13 +2,13 @@
 
 // Module 9447 (CustomStatusPreview)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: c5, UserProfileThemeTypes: closure_6 } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
@@ -16,10 +16,10 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   const colors = ThemesDefault.colors;
   if (arg0) {
     let BACKGROUND_SURFACE_HIGH = colors.BORDER_MUTED;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_SURFACE_HIGH;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   obj = { profileContainer: null, profileEffect: null };
   obj[6] = BACKGROUND_SURFACE_HIGH;
@@ -29,7 +29,7 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[1] = { zIndex: 1 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/custom_status/native/CustomStatusPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/custom_status/native/CustomStatusPreview.tsx");
 
 export default function CustomStatusPreview(user) {
   user = user.user;
@@ -51,7 +51,6 @@ export default function CustomStatusPreview(user) {
     obj = { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji };
     pendingStatusText(pendingStatusEmoji[12]).openLazy(user(pendingStatusEmoji[14])(pendingStatusEmoji[13], pendingStatusEmoji.paths), "UserProfileCustomStatusActionSheet", obj, "stack");
   }, items);
-  obj = { theme, primaryColor, secondaryColor, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp7.profileContainer];
   const items2 = [callback(pendingStatusText(pendingStatusEmoji[16]), { user, displayProfile: tmp3, bannerHeight: 132, disableInteraction: true }), , ];
@@ -88,9 +87,9 @@ export default function CustomStatusPreview(user) {
   obj4[4] = containerBackground;
   items5[1] = callback(tmpResult, obj4);
   obj1[4] = items5;
-  items3[1] = closure_8(pendingStatusText(pendingStatusEmoji[18]), obj1);
+  items3[1] = callback(pendingStatusText(pendingStatusEmoji[18]), obj1);
   obj5[0] = items3;
-  items2[1] = closure_8(View, obj5);
+  items2[1] = callback(View, obj5);
   let profileEffect;
   if (tmp3 != null) {
     profileEffect = tmp3.profileEffect;
@@ -109,6 +108,6 @@ export default function CustomStatusPreview(user) {
   }
   items2[2] = tmp11Result;
   obj[1] = items2;
-  obj[3] = closure_8(View, obj);
+  obj[3] = callback(View, obj);
   return callback(user(pendingStatusEmoji[15]).ThemeContextProvider, obj);
 };

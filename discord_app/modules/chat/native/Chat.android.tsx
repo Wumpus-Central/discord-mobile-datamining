@@ -8,19 +8,18 @@ import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10474 */;
 import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11074 */;
 import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11075 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function DCDChatList() {
-  let obj = useIsMobileVisualRefreshExperimentEnabled;
   const memo = importAllResult.useMemo(() => {
     const Gesture = callback(table[5]).Gesture;
     const NativeResult = Gesture.Native();
     return Gesture.Native().disallowInterruption(true).shouldCancelWhenOutside(false);
   }, []);
-  obj = { gesture: memo, children: null };
+  let obj = { gesture: memo, children: null };
   obj = { style: callback3().chatList, floatingChatInputEnabled: obj.useMobileVisualRefreshConfig({ location: "DCDChatList" }).chatInputFloating, children: null };
   const tmp = callback3();
   obj[2] = callback(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
@@ -42,6 +41,6 @@ const forwardRefResult = importAllResult.forwardRef((children, ref) => {
   obj.children = items1;
   return callback2(__INTERNAL_VIEW_CONFIGDefault, obj);
 });
-const result = require("set").fileFinishedImporting("modules/chat/native/Chat.android.tsx");
+const result = require("obj132").fileFinishedImporting("modules/chat/native/Chat.android.tsx");
 
 export default forwardRefResult;

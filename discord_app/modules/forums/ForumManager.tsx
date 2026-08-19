@@ -3,10 +3,10 @@
 // Module 16578 (handleChannelPreload)
 import initializeDefault from "initialize" /* 5038 */;
 import loadForumPostData from "loadForumPostData" /* 7269 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { isStaticChannelRoute } from "set" /* 1398 */;
 
-require = arg1;
+require = fn;
 initializeDefault;
 class ForumManager extends tmp2 {
   constructor() {
@@ -21,12 +21,11 @@ ForumManager.prototype["handleChannelPreload"] = function handleChannelPreload(c
     channel = channel.getChannel(channelId);
     if (tmp3) {
       loadForumPostData.preloadForumThreads(channel);
-      const obj2 = loadForumPostData;
     }
     tmp3 = null != channel && channel.isForumLikeChannel();
   }
 };
 const forumManager = new ForumManager();
-const result = require("set").fileFinishedImporting("modules/forums/ForumManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/ForumManager.tsx");
 
 export default forumManager;

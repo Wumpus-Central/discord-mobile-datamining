@@ -1,11 +1,11 @@
 // === Module 11727: useGetExpiringGuildPowerups ===
 
 // Module 11727 (useGetExpiringGuildPowerups)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "calculateAppliedBoosts" /* 4261 */;
+import noop from "noop" /* 19 */;
+import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGetExpiringGuildPowerups.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGetExpiringGuildPowerups.tsx");
 
 export default function useGetExpiringGuildPowerups(arg0) {
   const _require = arg0;
@@ -16,10 +16,10 @@ export default function useGetExpiringGuildPowerups(arg0) {
     if (null == stateFromStores) {
       return [];
     } else {
-      const allPowerups = tmp.allPowerups;
+      const allPowerups = stateFromStores.allPowerups;
       const _Object = Object;
-      const expiringGuildEntitlements = callback(stateFromStores[3]).getExpiringGuildEntitlements(Object.values(tmp.unlockedPowerups));
-      const mapped = expiringGuildEntitlements.map((arg0) => allPowerups[arg0.sku_id]);
+      const expiringGuildEntitlements = callback(stateFromStores[3]).getExpiringGuildEntitlements(Object.values(stateFromStores.unlockedPowerups));
+      const mapped = expiringGuildEntitlements.map((item, index) => allPowerups[item.sku_id]);
       return mapped.filter(callback(stateFromStores[4]).isNotNullish);
     }
   }, items1);

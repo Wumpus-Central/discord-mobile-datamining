@@ -1,7 +1,7 @@
 // === Module 7403: items ===
 
 // Module 7403 (items)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
@@ -20,15 +20,15 @@ obj[4] = items4;
 obj[5] = ["#3736BB", "#4670E8", "#8377EB", "#E782F1", "#DF90AF"];
 const items5 = [ThemesDefault.unsafe_rawColors.BLURPLE_50, ThemesDefault.unsafe_rawColors.PINK_60];
 obj[6] = items5;
-const result = set.fileFinishedImporting("modules/colors/native/ColorConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/colors/native/ColorConstants.tsx");
 
 export const Gradients = obj;
 export const getPremiumGradientColor = function getPremiumGradientColor(premiumType) {
   if (PremiumTypes.TIER_0 === premiumType) {
     return obj.PREMIUM_TIER_0;
-  } else if (tmp.TIER_1 === premiumType) {
+  } else if (PremiumTypes.TIER_1 === premiumType) {
     return obj.PREMIUM_TIER_1;
-  } else if (tmp.TIER_2 === premiumType) {
+  } else if (PremiumTypes.TIER_2 === premiumType) {
     return obj.PREMIUM_TIER_2;
   }
 };

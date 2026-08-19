@@ -5,14 +5,14 @@ import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import map from "map" /* 4097 */;
 import createCardShadowToken from "createCardShadowToken" /* 6293 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "noop" /* 19 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-require = arg1;
+require = fn;
 class Card {
   constructor(arg0) {
     flag = global.start;
@@ -87,7 +87,6 @@ function PressableCard(start) {
     const radius2 = start.radius;
     sharedValue = radius2;
     const isRefreshEnabled2 = start.isRefreshEnabled;
-    obj = {};
     const merged = Object.assign(start, Object.create(null));
     let items = [start2, end2, radius2];
     const memo = React.useMemo(() => {
@@ -109,9 +108,6 @@ function PressableCard(start) {
     ({ radius, start, end } = start);
     ({ children, style, variant, isRefreshEnabled } = start);
     const merged2 = Object.assign(start, Object.create(null));
-    sharedValue = undefined;
-    let backgroundColor;
-    let backgroundColorPressed;
     let tmpResult = tmp(tmp2[4]);
     sharedValue = tmpResult.useSharedValue(0);
     const items1 = [sharedValue, onPressIn];
@@ -129,8 +125,8 @@ function PressableCard(start) {
       }
     }, items2);
     const tmp11 = callback2(variant, isRefreshEnabled);
-    backgroundColor = tmp11.backgroundColor;
-    backgroundColorPressed = tmp11.backgroundColorPressed;
+    const backgroundColor = tmp11.backgroundColor;
+    const backgroundColorPressed = tmp11.backgroundColorPressed;
     tmpResult = tmp(tmp2[4]);
     class B {
       constructor() {
@@ -274,7 +270,7 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4, arg5
   return { card, spacing: { padding: 16 } };
 });
 let closure_12 = { code: "function CardNativeTsx1(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;const pressedColor=withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always');return{backgroundColor:pressedColor};}" };
-let result = require("set").fileFinishedImporting("design/components/Card/native/Card.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Card/native/Card.native.tsx");
 
 export { Card };
 export const InternalCard = Card;

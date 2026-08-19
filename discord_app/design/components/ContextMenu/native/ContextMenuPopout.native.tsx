@@ -2,33 +2,33 @@
 
 // Module 13532 (ContextMenuDivider)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
+import "createCacheKey";
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 function ContextMenuDivider() {
   return callback(closure_5, { style: callback2().divider });
 }
 function ContextMenuBackdrop(onDismiss) {
   const visible = onDismiss.visible;
-  let obj = visible(4115);
+  visible(4115);
   const fn = function n() {
     const obj = { opacity: null };
     const value = visible.get();
-    obj[0] = visible(closure_1_2[12]).withSpring(value, visible(closure_1_2[6]).CONTEXT_MENU_SPRING);
+    obj[0] = visible(dependencyMap[12]).withSpring(value, visible(dependencyMap[6]).CONTEXT_MENU_SPRING);
     return obj;
   };
-  obj = { withSpring: visible(4744).withSpring, visible, CONTEXT_MENU_SPRING: visible(9960).CONTEXT_MENU_SPRING };
+  let obj = { withSpring: visible(4744).withSpring, visible, CONTEXT_MENU_SPRING: visible(9960).CONTEXT_MENU_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 6862317967896;
   fn.__initData = closure_16;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { blur: "none", style: animatedStyle, accessibleDismissStyle: callback3().accessibleDismiss, onDismiss: onDismiss.onPress, accessibilityLabel: null };
   const tmp = callback3();
-  const tmp3 = closure_6;
   const obj4 = visible(500);
   const intl = visible(1236).intl;
   const string = intl.string;
@@ -39,12 +39,11 @@ function ContextMenuBackdrop(onDismiss) {
     stringResult = string(t.xs0juG);
   }
   obj[4] = stringResult;
-  return tmp3(visible(4723).Backdrop, obj);
+  return callback(visible(4723).Backdrop, obj);
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, titleContainer: null, divider: null };
-createCacheKey = { position: "absolute", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, minWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_MIN_WIDTH };
+let createCacheKey = { position: "absolute", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg, minWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_MIN_WIDTH };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_ITEM_PADDING };
@@ -63,19 +62,13 @@ obj3[0] = obj4;
 let closure_15 = createCacheKey.createStyles(obj3);
 let closure_16 = { code: "function ContextMenuPopoutNativeTsx5(){const{withSpring,visible,CONTEXT_MENU_SPRING}=this.__closure;return{opacity:withSpring(visible.get(),CONTEXT_MENU_SPRING)};}" };
 let obj2 = { borderBottomWidth: require("CONTEXT_MENU_LONG_PRESS_DURATION_MS").CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-let result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuPopout.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuPopout.native.tsx");
 
 export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   ({ menu, transitionState } = cleanUp);
   items = transitionState;
   cleanUp = cleanUp.cleanUp;
   title = cleanUp;
-  state = undefined;
-  let callback2;
-  let dividerIndexes;
-  state = undefined;
-  let requestClose;
-  let onClose;
   let sharedValue;
   let diff2;
   let first;
@@ -83,12 +76,12 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   ({ x, positionX } = menu);
   state = positionX;
   const positionY = menu.positionY;
-  callback2 = positionY;
+  let callback2 = positionY;
   const height = menu.height;
-  dividerIndexes = height;
+  let dividerIndexes = height;
   ({ items, state } = menu);
-  requestClose = menu.requestClose;
-  onClose = menu.onClose;
+  const requestClose = menu.requestClose;
+  const onClose = menu.onClose;
   ({ title, keyboardShouldPersistTaps } = menu);
   let str = "handled";
   if (undefined !== keyboardShouldPersistTaps) {
@@ -154,13 +147,13 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       fn = function t(arg0) {
         let tmp = arg0;
         if (arg0) {
-          tmp = closure_0 === closure_1_0(closure_1_2[8]).TransitionStates.YEETED;
+          tmp = closure_0 === items(state[8]).TransitionStates.YEETED;
         }
         if (tmp) {
-          closure_1_0(closure_1_2[7]).runOnJS(closure_1)();
-          const obj = closure_1_0(closure_1_2[7]);
-          closure_1_0(closure_1_2[7]).runOnJS(closure_7)();
-          const obj2 = closure_1_0(closure_1_2[7]);
+          items(state[7]).runOnJS(closure_1)();
+          const obj = items(state[7]);
+          items(state[7]).runOnJS(closure_7)();
+          const obj2 = items(state[7]);
         }
       };
       obj = { transitionState: items, TransitionStates: tmp2(tmp3[8]).TransitionStates, runOnJS: tmp2(tmp3[7]).runOnJS, cleanUp: title, onClose };
@@ -212,7 +205,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   let items2 = [diff2];
   const memo = obj1.useMemo(() => {
     function update(absoluteX) {
-      const result = closure_1_0(closure_1_2[13]).updateContextMenuState(absoluteX.absoluteX, absoluteX.absoluteY, closure_5);
+      const result = items(state[13]).updateContextMenuState(absoluteX.absoluteX, absoluteX.absoluteY, closure_5);
     }
     let obj = { updateContextMenuState: items(state[13]).updateContextMenuState, state };
     update.__closure = obj;
@@ -225,7 +218,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     const fn = function t() {
       activeIndex = activeIndex.activeIndex;
       const value = activeIndex.get();
-      closure_1_0(closure_1_2[7]).runOnJS(closure_6)(-1 === value);
+      items(state[7]).runOnJS(closure_6)(-1 === value);
     };
     obj = { state, runOnJS: items(state[7]).runOnJS, requestClose };
     fn.__closure = obj;
@@ -264,9 +257,9 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   const obj7 = { children: null };
   const items8 = [tmp20Result, ];
   dividerIndexes = menu.dividerIndexes;
-  items8[1] = items.map((arg0, index) => {
-    ({ label, action: items } = arg0);
-    ({ iconSource, IconComponent, trailingIndicator, variant, accessibilityRole } = arg0);
+  items8[1] = items.map((item, index) => {
+    ({ label, action: items } = item);
+    ({ iconSource, IconComponent, trailingIndicator, variant, accessibilityRole } = item);
     const diff = items.length - 1;
     let obj = { index, label, start: null, end: null, lastInSection: null, iconSource: null, IconComponent: null, trailingIndicator: null, state: null, onPress: null, variant: null, accessibilityRole: null };
     let tmp3 = 0 === index;
@@ -289,9 +282,10 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       if (isAndroidResult) {
         callback();
       }
-      if (closure_1_3 != null) {
+      if (callback2 != null) {
         tmp6(arg0);
       }
+      const obj = items(state[11]);
     };
     obj[10] = variant;
     obj[11] = accessibilityRole;
@@ -300,7 +294,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     if (dividerIndexes.includes(index)) {
       obj = { children: null };
       const _HermesInternal = HermesInternal;
-      items = [tmp2(closure_1_14, {}, "divider-" + index), tmp2Result];
+      items = [requestClose(ContextMenuDivider, {}, "divider-" + index), tmp2Result];
       obj[0] = items;
       tmp7 = sharedValue(onClose, obj);
     }

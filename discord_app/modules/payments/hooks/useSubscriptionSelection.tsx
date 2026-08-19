@@ -1,10 +1,10 @@
 // === Module 9586: useSubscriptionSelection ===
 
 // Module 9586 (useSubscriptionSelection)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
+const result = require("obj132").fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
 
 export default function useSubscriptionSelection() {
   [tmp2, tmp3] = callback(React.useState(undefined), 2);

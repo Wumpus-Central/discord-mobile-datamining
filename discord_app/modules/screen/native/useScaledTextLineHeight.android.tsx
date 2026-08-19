@@ -1,13 +1,13 @@
 // === Module 9288: map ===
 
 // Module 9288 (map)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import Text from "Text" /* 4734 */;
 import getFontScale from "getFontScale" /* 4751 */;
 import enforcingDefault from "enforcing" /* 9289 */;
 
 const map = new Map();
-let result = set.fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
+let result = obj132.fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
 
 export const scaleLineHeight = function scaleLineHeight(arg0, arg1) {
   let value = map.get(arg0);
@@ -15,7 +15,6 @@ export const scaleLineHeight = function scaleLineHeight(arg0, arg1) {
     const scaledHeightForText = enforcingDefault.getScaledHeightForText(arg0);
     const result = map.set(arg0, scaledHeightForText);
     value = scaledHeightForText;
-    const obj2 = enforcingDefault;
   }
   return value;
 };
@@ -26,7 +25,6 @@ export const scaleTextLineHeight = function scaleTextLineHeight(c10, fontScale) 
     const scaledHeightForText = enforcingDefault.getScaledHeightForText(lineHeight);
     const result = map.set(lineHeight, scaledHeightForText);
     value = scaledHeightForText;
-    const obj2 = enforcingDefault;
   }
   return value;
 };
@@ -38,7 +36,6 @@ export const useScaledTextLineHeight = function useScaledTextLineHeight(c3) {
     const scaledHeightForText = enforcingDefault.getScaledHeightForText(lineHeight);
     const result = map.set(lineHeight, scaledHeightForText);
     value = scaledHeightForText;
-    const obj3 = enforcingDefault;
   }
   return value;
 };

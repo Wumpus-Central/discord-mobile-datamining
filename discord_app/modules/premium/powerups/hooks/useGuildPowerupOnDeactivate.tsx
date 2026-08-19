@@ -1,9 +1,9 @@
 // === Module 11710: useGuildPowerupOnDeactivate ===
 
 // Module 11710 (useGuildPowerupOnDeactivate)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnDeactivate.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnDeactivate.tsx");
 
 export default function useGuildPowerupOnDeactivate(arg0, arg1) {
   const tmp = onToggle(11705)(arg0, arg1);

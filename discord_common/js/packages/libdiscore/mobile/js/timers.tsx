@@ -1,7 +1,7 @@
 // === Module 1921: setTimeout ===
 
 // Module 1921 (setTimeout)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import typedGlobal from "typedGlobal" /* 1919 */;
 
 function setTimeout(arg0, arg1) {
@@ -51,7 +51,7 @@ let closure_3 = LIBDISCORE_JSI.makeTimerManager(function expirationCallback(arg0
     }
   }
 });
-let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/timers.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/timers.tsx");
 
 export function setTimersMonitorCallback(onTimersDelayCallback) {
   closure_1 = onTimersDelayCallback;

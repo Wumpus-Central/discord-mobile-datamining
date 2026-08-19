@@ -1,9 +1,9 @@
 // === Module 588: getFieldMessage ===
 
 // Module 588 (getFieldMessage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
 class APIError {
   constructor(arg0, arg1) {
     str = importDefault;

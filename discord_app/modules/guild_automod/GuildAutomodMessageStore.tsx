@@ -7,17 +7,16 @@ import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
 import items from "items" /* 5040 */;
 import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 5232 */;
 import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7608 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function handleMessageSendFailedAutomod(messageData) {
   messageData = messageData.messageData;
   let obj = items;
   const failedMessageId = obj.getFailedMessageId(messageData);
   obj = { id: failedMessageId, isBlockedEdit: items.isMessageDataEdit(messageData), messageData, errorMessage: null };
-  const obj3 = items;
   obj[3] = getAutomodErrorMessageFromErrorResponse.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
   closure_8[failedMessageId] = obj;
   closure_9 = closure_9 + 1;
@@ -33,30 +32,30 @@ function handleLoadMessages(messages) {
   if (null == guildId) {
     return false;
   } else {
-    const reduced = messages.reduce((arg0, type) => {
-      if (type.type === constants.AUTO_MODERATION_ACTION) {
-        const embeds = type.embeds;
+    const reduced = messages.reduce((acc, item, index) => {
+      if (item.type === constants.AUTO_MODERATION_ACTION) {
+        const embeds = item.embeds;
         let someResult;
         if (embeds != null) {
-          someResult = embeds.some((type) => type.type === constants.AUTO_MODERATION_NOTIFICATION);
+          someResult = embeds.some((item, index) => item.type === constants.AUTO_MODERATION_NOTIFICATION);
         }
-        let tmp3 = arg0;
+        let tmp3 = acc;
         if (someResult) {
-          if (null == arg0) {
-            const id = type.id;
+          if (null == acc) {
+            const id = item.id;
           } else {
-            const obj = callback(table[7]);
+            callback(table[7]);
           }
           tmp3 = id;
         }
         return tmp3;
       } else {
-        return arg0;
+        return acc;
       }
     }, dependencyMap2[guildId]);
-    let flag = null != reduced && tmp2[guildId] !== reduced;
+    let flag = null != reduced && dependencyMap2[guildId] !== reduced;
     if (flag) {
-      tmp2[guildId] = reduced;
+      dependencyMap2[guildId] = reduced;
       flag = true;
     }
     return flag;
@@ -130,17 +129,15 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault,
       return false;
     } else {
       const messageRecord = createMinimalMessageRecord.createMessageRecord(message);
-      const obj = createMinimalMessageRecord;
-      const tmp = require;
       let result = getDecisionOutcomeFromMessage.isAutomodMessageRecord(messageRecord);
       if (result) {
-        let flag = tmp(5232).isAutomodNotification(messageRecord);
+        let flag = getDecisionOutcomeFromMessage.isAutomodNotification(messageRecord);
         if (flag) {
           closure_11[guildId] = messageRecord.id;
           flag = true;
         }
         result = flag;
-        const tmpResult = tmp(5232);
+        const tmpResult = getDecisionOutcomeFromMessage;
       }
       return result;
     }
@@ -186,6 +183,6 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault,
     return true;
   }
 });
-let result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStore.tsx");
 
 export default guildAutomodMessageStore;

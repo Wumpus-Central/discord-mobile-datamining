@@ -7,13 +7,12 @@ import getIllustrationSource from "getIllustrationSource" /* 7907 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx");
 
 export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTier1Source(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
       return callback(7908);
     },
@@ -27,8 +26,7 @@ export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTi
   return obj.getIllustrationSource(theme, obj);
 };
 export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTier1Source() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
       return callback(7908);
     },
@@ -42,19 +40,7 @@ export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTi
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const WhatYouLoseProfileTier1 = function WhatYouLoseProfileTier1(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
-    dark() {
-      return callback(7908);
-    },
-    darker() {
-      return callback(7909);
-    },
-    light() {
-      return callback(7910);
-    }
-  };
-  obj = {};
+  const obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

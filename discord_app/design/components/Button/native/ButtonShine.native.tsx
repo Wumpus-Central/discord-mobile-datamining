@@ -2,11 +2,11 @@
 
 // Module 4755 (useShineEffectStyles)
 import _modDef4115 from "module_4115" /* 4115 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function useShineEffectStyles(width, variant) {
   const _require = width;
   let obj = _require(4750);
@@ -25,21 +25,21 @@ function useShineEffectStyles(width, variant) {
       obj = { transform: null };
       obj1 = { translateX: null };
       if (enabled) {
-        obj1[0] = (tmp - 56) / 2;
+        obj1[0] = (width - 56) / 2;
         const items1 = [obj1];
         obj[0] = items1;
         tmp5 = obj;
       } else {
-        obj = width(closure_1_2[6]);
-        obj1 = width(closure_1_2[6]);
-        const obj3 = width(closure_1_2[7]);
-        const withTimingResult = width(closure_1_2[7]).withTiming(-120, { duration: 0 }, "animate-always");
-        const obj4 = width(closure_1_2[6]);
-        obj1[0] = obj.withRepeat(obj1.withSequence(withTimingResult, obj4.withDelay(750, width(closure_1_2[7]).withTiming(tmp + 120, { duration: 2000 }, "animate-always"))), -1);
+        obj = width(dependencyMap[6]);
+        obj1 = width(dependencyMap[6]);
+        const obj3 = width(dependencyMap[7]);
+        const withTimingResult = width(dependencyMap[7]).withTiming(-120, { duration: 0 }, "animate-always");
+        const obj4 = width(dependencyMap[6]);
+        obj1[0] = obj.withRepeat(obj1.withSequence(withTimingResult, obj4.withDelay(750, width(dependencyMap[7]).withTiming(width + 120, { duration: 2000 }, "animate-always"))), -1);
         const items2 = [obj1];
         obj[0] = items2;
         tmp5 = obj;
-        const obj5 = width(closure_1_2[7]);
+        const obj5 = width(dependencyMap[7]);
       }
     }
     return tmp5;
@@ -57,24 +57,16 @@ function useShineEffectStyles(width, variant) {
   return obj;
 }
 let closure_6 = { code: "function ButtonShineNativeTsx1(){const{width,SHINE_OFFSCREEN_OFFSET,useReducedMotion,SHINE_WIDTH,withRepeat,withSequence,withTiming,withDelay,SHINE_INITIAL_ANIMATION_DELAY,SHINE_ANIMATION_DURATION}=this.__closure;if(width==null){return{transform:[{translateX:-SHINE_OFFSCREEN_OFFSET}]};}if(useReducedMotion){const centerOffset=(width-SHINE_WIDTH)/2;return{transform:[{translateX:centerOffset}]};}return{transform:[{translateX:withRepeat(withSequence(withTiming(-SHINE_OFFSCREEN_OFFSET,{duration:0},'animate-always'),withDelay(SHINE_INITIAL_ANIMATION_DELAY,withTiming(width+SHINE_OFFSCREEN_OFFSET,{duration:SHINE_ANIMATION_DURATION},'animate-always'))),-1)}]};}" };
-const result = require("set").fileFinishedImporting("design/components/Button/native/ButtonShine.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Button/native/ButtonShine.native.tsx");
 
 export { useShineEffectStyles };
 export const ButtonShine = function ButtonShine(variant) {
-  closure_0 = undefined;
   const tmp = callback(React.useState(null), 2);
   closure_0 = tmp[1];
   const tmp2 = useShineEffectStyles(tmp[0], variant.variant);
   const shineStyles = tmp2.shineStyles;
-  let obj = {
-    onLayout(nativeEvent) {
-      return callback(nativeEvent.nativeEvent.layout.width);
-    },
-    style: items,
-    children: null
-  };
-  items = [shineStyles.shineContainer, tmp2.shineAnimatedStyle];
-  obj = {
+  const items = [shineStyles.shineContainer, tmp2.shineAnimatedStyle];
+  {
     style: shineStyles.shine,
     children: jsx(_modDef4115.View, {
       onLayout(nativeEvent) {
@@ -84,7 +76,7 @@ export const ButtonShine = function ButtonShine(variant) {
       children: null
     })
   };
-  obj = { style: shineStyles.shineInner };
+  const obj = { style: shineStyles.shineInner };
   obj[2] = jsx(_modDef4115.View, { style: shineStyles.shineInner });
   return jsx(_modDef4115.View, { style: shineStyles.shineInner });
 };

@@ -4,14 +4,14 @@
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
 import _generateAnimationSource from "_generateAnimationSource" /* 7531 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_5 = createCacheKey.createStyles({ content: { width: "100%" } });
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
 
 export default function BurstReactionAnimation(arg0) {
   ({ onComplete, withFadeOut } = arg0);

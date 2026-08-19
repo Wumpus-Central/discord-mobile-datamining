@@ -8,9 +8,9 @@ import isInteractionComponent from "isInteractionComponent" /* 8326 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
 
 export default function LabelLayoutComponent(arg0) {
   ({ component, renderComponent } = arg0);

@@ -5,17 +5,16 @@ import ThemesDefault from "Themes" /* 712 */;
 import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9653 */;
 import useCanCurrentUserSpeakInChannelDefault from "useCanCurrentUserSpeakInChannel" /* 10526 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import reset from "reset" /* 4652 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import hexToRgba from "hexToRgba" /* 4223 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-let obj = { container: null };
-obj = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
+const require = fn;
+let obj = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
 obj[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.24);
 obj[1] = ThemesDefault.radii.sm;
 obj[0] = obj;
@@ -24,7 +23,6 @@ const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   importDefault = undefined;
   const tmp = callback();
-  const tmp2 = importDefault;
   let obj = channel(8675);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   obj1 = channel(589);
@@ -54,7 +52,7 @@ const memoResult = importAllResult.memo((channel) => {
     obj[0] = channel;
     let tmp12 = stateFromStoresArray.length > 0;
     if (tmp12) {
-      tmp12 = null == stateFromStoresArray.find((ownerId) => ownerId.ownerId === closure_1);
+      tmp12 = null == stateFromStoresArray.find((item, index) => item.ownerId === closure_1);
     }
     if (!tmp12) {
       let reachedLimit = !stageHasMedia;
@@ -64,14 +62,14 @@ const memoResult = importAllResult.memo((channel) => {
       tmp12 = reachedLimit;
     }
     obj[1] = tmp12;
-    items5.push(tmp9(tmp5(12575).ScreenshareButton, obj));
+    items5.push(jsx(tmp5(12575).ScreenshareButton, { channel: null, disabled: null }));
   }
   obj = { channelId: channel.id, isConnectedToVoiceChannel };
   items5.push(jsx(channel(12575).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
   items5.push(jsx(channel(12575).DeafenButton, { channel }));
-  obj1 = { style: tmp.container, children: items5.map((children) => callback(closure_3, { children }, arg1)) };
-  return <View style={tmp.container}>{items5.map((children) => callback(closure_3, { children }, arg1))}</View>;
+  obj1 = { style: tmp.container, children: items5.map((item, index) => callback(closure_3, { children: item }, index)) };
+  return <View style={tmp.container}>{items5.map((item, index) => callback(closure_3, { children: item }, index))}</View>;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelExpandedControls.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/StageChannelExpandedControls.tsx");
 
 export default memoResult;

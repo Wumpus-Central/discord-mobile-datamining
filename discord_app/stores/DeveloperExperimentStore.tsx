@@ -4,12 +4,12 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import validatePremiumType from "validatePremiumType" /* 1928 */;
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { ExperimentBuckets } from "ExperimentBuckets" /* 4289 */;
 import { Environments } from "Environments" /* 1929 */;
 
-require = arg1;
+require = fn;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {
   const _window = window;
@@ -51,6 +51,6 @@ prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {
 };
 DeveloperExperimentStore.displayName = "DeveloperExperimentStore";
 const developerExperimentStore = new DeveloperExperimentStore(dispatcherDefault, { CONNECTION_OPEN: init, OVERLAY_INITIALIZE: init, CURRENT_USER_UPDATE: init });
-const result = require("set").fileFinishedImporting("stores/DeveloperExperimentStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/DeveloperExperimentStore.tsx");
 
 export default developerExperimentStore;

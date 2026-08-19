@@ -1,12 +1,12 @@
 // === Module 14056: useFetchNameplate ===
 
 // Module 14056 (useFetchNameplate)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getNameplateData from "getNameplateData" /* 1946 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10376 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
 
 export const useFetchNameplate = function useFetchNameplate(skuId) {
   let obj = useFetchCollectiblesProduct;

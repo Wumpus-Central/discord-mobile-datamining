@@ -1,9 +1,9 @@
 // === Module 5392: actions ===
 
 // Module 5392 (actions)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
+const result = obj132.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
 class Entry {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);

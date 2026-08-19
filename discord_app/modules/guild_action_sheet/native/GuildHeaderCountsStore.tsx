@@ -3,11 +3,11 @@
 // Module 13431 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "getMemberListId" /* 7249 */;
-import closure_1 from "ensureGuildLoaded" /* 1391 */;
-import closure_2 from "handleInviteData" /* 4295 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import getMemberListId from "getMemberListId" /* 7249 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import handleInviteData from "handleInviteData" /* 4295 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 
 let obj = {};
 const PersistedStore = initializeDefault.PersistedStore;
@@ -75,6 +75,6 @@ obj = {
   }
 };
 const guildHeaderCountsStore = new GuildHeaderCountsStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
 
 export default guildHeaderCountsStore;

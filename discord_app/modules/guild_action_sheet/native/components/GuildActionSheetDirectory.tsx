@@ -10,17 +10,16 @@ import HideMutedChannelsOption from "HideMutedChannelsOption" /* 13370 */;
 import CommunityPillDefault from "CommunityPill" /* 13427 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, actions: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: 16, gap: 24 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx");
 
 export default function GuildActionSheetDirectory(arg0) {
   ({ guild, expanded } = arg0);
@@ -28,10 +27,9 @@ export default function GuildActionSheetDirectory(arg0) {
     expanded = false;
   }
   const tmp = callback3();
-  let obj = { scrollable: true, startExpanded: expanded, children: null };
-  obj = { scrollsToTop: false, style: tmp.container, contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
+  { scrollsToTop: false, style: tmp.container, contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const items = [callback(CommunityPillDefault, { guild }), ];
-  obj = { style: tmp.actions, children: null };
+  const obj = { style: tmp.actions, children: null };
   const items1 = [callback(HideMutedChannelsOption.GuildActionSheetDirectoryActions, { guild }), callback(HideMutedChannelsOption.GuildDeveloperOptionAction, { guild })];
   obj[1] = items1;
   items[1] = callback2(View, obj);

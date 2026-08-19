@@ -1,12 +1,12 @@
 // === Module 1895: useSystemKeyboardHeight ===
 
 // Module 1895 (useSystemKeyboardHeight)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import context from "context" /* 1497 */;
 import computeEntryStateDefault from "computeEntryState" /* 1498 */;
 
 let closure_3 = { excludeSafeAreaInsets: false };
-const result = set.fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
+const result = obj132.fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
 
 export default function useSystemKeyboardHeight() {
   let tmp = arg0;
@@ -17,7 +17,6 @@ export default function useSystemKeyboardHeight() {
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = undefined;
   importDefault = flag(1497).useAppEntryKey();
   return computeEntryStateDefault((arg0) => flag ? arg0.byAppEntry[closure_1].keyboardHeightExcludingSafeAreaInsets : arg0.byAppEntry[closure_1].keyboardHeight);
 };

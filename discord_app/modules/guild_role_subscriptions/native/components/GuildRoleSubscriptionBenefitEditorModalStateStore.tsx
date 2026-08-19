@@ -1,7 +1,7 @@
 // === Module 16973: resetImperatively ===
 
 // Module 16973 (resetImperatively)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import isIterable from "isIterable" /* 4006 */;
 import identity from "identity" /* 700 */;
 
@@ -12,30 +12,30 @@ let closure_3 = identity.createWithEqualityFn((arg0) => {
   const merged = Object.assign(closure_2);
   obj.setEmojiId = function setEmojiId(emoji_id) {
     const callback = emoji_id;
-    callback(closure_1_1[1]).batchUpdates(() => emoji_id({ emojiId: emoji_id }));
+    callback(dependencyMap[1]).batchUpdates(() => emoji_id({ emojiId: emoji_id }));
   };
   obj.setEmojiName = function setEmojiName(emoji_name) {
     const callback = emoji_name;
-    callback(closure_1_1[1]).batchUpdates(() => emoji_name({ emojiName: emoji_name }));
+    callback(dependencyMap[1]).batchUpdates(() => emoji_name({ emojiName: emoji_name }));
   };
   obj.setName = function setName(arg0) {
     const callback = arg0;
-    callback(closure_1_1[1]).batchUpdates(() => callback({ name: callback }));
+    callback(dependencyMap[1]).batchUpdates(() => callback({ name: callback }));
   };
   obj.setDescription = function setDescription(description) {
     const callback = description;
-    callback(closure_1_1[1]).batchUpdates(() => description({ description }));
+    callback(dependencyMap[1]).batchUpdates(() => description({ description }));
   };
   obj.setRefId = function setRefId(ref_id) {
     const callback = ref_id;
-    callback(closure_1_1[1]).batchUpdates(() => callback({ refId: callback }));
+    callback(dependencyMap[1]).batchUpdates(() => callback({ refId: callback }));
   };
   obj.reset = function reset() {
-    callback(closure_1_1[1]).batchUpdates(() => callback(closure_1_2));
+    callback(dependencyMap[1]).batchUpdates(() => callback(closure_1_2));
   };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
 
 export const resetImperatively = function resetImperatively() {
   const state = store.getState();

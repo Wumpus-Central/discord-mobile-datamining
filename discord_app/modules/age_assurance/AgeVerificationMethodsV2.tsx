@@ -1,10 +1,10 @@
 // === Module 6567: _fetchAgeVerificationMethodsV ===
 
 // Module 6567 (_fetchAgeVerificationMethodsV)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _fetchAgeVerificationMethodsV() {
   const self = this;
   const tmp = callback(function*() {
@@ -13,16 +13,16 @@ function _fetchAgeVerificationMethodsV() {
     obj1 = { url: null, rejectWithError: true };
     obj1[0] = obj.AGE_VERIFICATION_METHODS_V2;
     yield HTTP.get(obj1);
-    let body = arg1.body;
+    body = body.body;
     const methods = body.methods;
-    obj[0] = methods.map((method) => {
-      let obj = { method: method.method, vendor: method.vendor, title: method.title, description: method.description, providedBy: null, icon: null };
-      let provided_by = method.provided_by;
+    obj[0] = methods.map((item, index) => {
+      let obj = { method: item.method, vendor: item.vendor, title: item.title, description: item.description, providedBy: null, icon: null };
+      let provided_by = item.provided_by;
       if (provided_by == null) {
         provided_by = null;
       }
       obj[4] = provided_by;
-      let icon = method.icon;
+      let icon = item.icon;
       if (icon == null) {
         icon = null;
       }
@@ -30,10 +30,10 @@ function _fetchAgeVerificationMethodsV() {
       if (null != icon) {
         obj = { paths: null };
         const paths = icon.paths;
-        obj[0] = paths.map((d) => {
-          const obj = { d: d.d, fillRule: null };
+        obj[0] = paths.map((item, index) => {
+          const obj = { d: item.d, fillRule: null };
           let str;
-          if ("evenodd" === d.fill_rule) {
+          if ("evenodd" === item.fill_rule) {
             str = "evenodd";
           }
           obj[1] = str;
@@ -61,7 +61,7 @@ function _fetchAgeVerificationMethodsV() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationMethodsV2.tsx");
+const result = require("obj132").fileFinishedImporting("modules/age_assurance/AgeVerificationMethodsV2.tsx");
 
 export const fetchAgeVerificationMethodsV2 = function fetchAgeVerificationMethodsV2() {
   const self = this;

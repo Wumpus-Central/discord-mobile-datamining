@@ -4,28 +4,23 @@
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { ShopCtaEnum } from "items" /* 678 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ memo, useCallback: c4, useLayoutEffect: c5, useMemo: closure_6, useState: error } = noop);
 ({ Pressable: closure_8, ScrollView: c9, View: c10 } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { previewContainer: null, bundleThumbnail: null, selectedRing: null, bundleThumbnailRow: null, bundleContainer: null, bundleInfoContainer: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 56, height: 56, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, overflow: "hidden" };
-let obj1 = { width: 56, height: 56, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, overflow: "hidden" };
 createCacheKey[2] = { position: "absolute", top: -2, left: -2, right: -2, bottom: -2, borderRadius: ThemesDefault.radii.sm + 2, borderWidth: 2, borderColor: ThemesDefault.colors.BORDER_STRONG };
-const obj2 = { position: "absolute", top: -2, left: -2, right: -2, bottom: -2, borderRadius: ThemesDefault.radii.sm + 2, borderWidth: 2, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[3] = { flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: 2 };
-let obj3 = { flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: 2 };
 createCacheKey[4] = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-const obj4 = { paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { gap: ThemesDefault.space.PX_8 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
 let closure_15 = memo((index) => {
@@ -36,19 +31,19 @@ let closure_15 = memo((index) => {
   const items = [setSelected, index, onTrackPress, trackedSkuId];
   ({ item, label } = index);
   const tmp2 = callback8();
-  let obj = {
+  {
     role: "radio",
     "aria-checked": isSelected,
     onPress: callback2(() => {
       if (onTrackPress != null) {
-        tmp(closure_1_11.BUNDLE_VIEW_PRODUCT, trackedSkuId);
+        tmp(ShopCtaEnum.BUNDLE_VIEW_PRODUCT, trackedSkuId);
       }
       setSelected(index);
     }, items),
     "aria-label": label,
     children: null
   };
-  obj = { style: tmp2.bundleThumbnail, children: callback6(setSelected(trackedSkuId[7]), { item, size: 56 }) };
+  let obj = { style: tmp2.bundleThumbnail, children: callback6(setSelected(trackedSkuId[7]), { item, size: 56 }) };
   const items1 = [callback6(closure_10, obj), ];
   if (isSelected) {
     obj = { style: null, pointerEvents: "none" };
@@ -57,21 +52,20 @@ let closure_15 = memo((index) => {
   }
   items1[1] = isSelected;
   obj[4] = items1;
-  return closure_13(closure_8, obj);
+  return callback(closure_8, obj);
 });
 let closure_16 = memo((arg0) => {
   ({ items, bundledProducts: require, activeIndex: importDefault, onSelect: dependencyMap, onTrackPress: closure_3 } = arg0);
   let obj = LegacyBaseButton;
   const nativeGesture = obj.useNativeGesture({ disallowInterruption: true });
-  obj = { gesture: nativeGesture, children: null };
   obj = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: callback8().bundleThumbnailRow, role: "radiogroup", "aria-label": null, children: null };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.cTbdgu);
   obj[5] = items.map((item, index) => {
     const obj = { item, index, isSelected: index === closure_1, setSelected: closure_2, label: null, trackedSkuId: null, onTrackPress: null };
     let name;
-    if (closure_0 != null) {
-      if (tmp3[index] != null) {
+    if (dependencyMap != null) {
+      if (dependencyMap[index] != null) {
         name = tmp5.name;
       }
     }
@@ -80,8 +74,8 @@ let closure_16 = memo((arg0) => {
     }
     obj[4] = name;
     let skuId;
-    if (closure_0 != null) {
-      if (tmp3[index] != null) {
+    if (dependencyMap != null) {
+      if (dependencyMap[index] != null) {
         skuId = tmp7.skuId;
       }
     }
@@ -95,8 +89,7 @@ let closure_16 = memo((arg0) => {
   obj[1] = callback6(closure_9, obj);
   return callback6(LegacyBaseButton.GestureDetector, obj);
 });
-let obj5 = { gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/BundleProductDetailsActionSheetPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/BundleProductDetailsActionSheetPreview.tsx");
 
 export default function BundleProductDetailsActionSheetPreview(arg0) {
   ({ product, onTrackPress, onActiveItemChange } = arg0);
@@ -133,8 +126,6 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   let obj = onActiveItemChange(5313);
   const collectibleTypeLabel = obj.getCollectibleTypeLabel(tmp8.type);
   const items1 = [items[num]];
-  obj = { style: tmp.previewContainer, children: null };
-  const tmp12 = onActiveItemChange;
   tmp4 = callback(callback5(product.skuId), 2);
   const items2 = [
     callback6(onActiveItemChange(9282).IndividualProductPreview, {
@@ -165,7 +156,7 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
     obj6[2] = " - " + collectibleTypeLabel;
-    tmp18Result = callback6(tmp12(4734).Text, obj6);
+    tmp18Result = callback6(onActiveItemChange(4734).Text, obj6);
   }
   items6[1] = tmp18Result;
   items5[1] = callback7(onActiveItemChange(4734).Text, { variant: "text-sm/medium", color: "text-default", children: items6 });

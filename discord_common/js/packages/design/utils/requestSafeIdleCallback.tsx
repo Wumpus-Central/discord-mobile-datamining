@@ -1,11 +1,11 @@
 // === Module 696: setOriginWindow ===
 
 // Module 696 (setOriginWindow)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getGlobalObject from "getGlobalObject" /* 697 */;
 
 const globalObject = getGlobalObject.getGlobalObject();
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx");
 
 export function setOriginWindow(arg0) {
   closure_0 = arg0;
@@ -18,7 +18,7 @@ export const requestSafeIdleCallback = function requestSafeIdleCallback(arg0, ti
       if (null != obj.cancelIdleCallback) {
         c2 = false;
         timeout = null;
-        closure_4 = obj.requestIdleCallback(function runOnce(arg0) {
+        closure_4 = obj.requestIdleCallback(function runOnce(fn) {
           if (!c2) {
             c2 = true;
             if (null != c3) {

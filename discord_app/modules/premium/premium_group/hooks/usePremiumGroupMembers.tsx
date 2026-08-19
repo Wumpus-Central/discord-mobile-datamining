@@ -1,12 +1,12 @@
 // === Module 12923: usePremiumGroupMembers ===
 
 // Module 12923 (usePremiumGroupMembers)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "handleMutationStart" /* 12920 */;
+import handleMutationStart from "handleMutationStart" /* 12920 */;
 
 const useEffect = noop.useEffect;
-const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
 
 export default function usePremiumGroupMembers(arg0) {
   const _require = arg0;
@@ -35,8 +35,8 @@ export default function usePremiumGroupMembers(arg0) {
       }
       if (!hasFetchedMembersResult) {
         if (null != closure_0) {
-          let obj = flag(flag2[3]);
-          obj = { type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: null };
+          flag(flag2[3]);
+          const obj = { type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: null };
           obj[1] = tmp3;
           obj.dispatch(obj);
         }

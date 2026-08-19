@@ -3,12 +3,12 @@
 // Module 11632
 import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfileQuarantine(guildId) {
   guildId = guildId.guildId;
@@ -23,11 +23,11 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
       return set;
     } else {
       const id = closure_1_4.getId();
-      return guildId(closure_1_2[6]).getAutomodQuarantinedGuildMemberFlags(closure_1_5.getMember(tmp, id));
+      return guildId(dependencyMap[6]).getAutomodQuarantinedGuildMemberFlags(closure_1_5.getMember(tmp, id));
     }
   }, items1);
   const callback = importAllResult.useCallback(() => {
-    const result = guildId(closure_1_2[7]).openAutomodProfileQuarantineAlert(guildId);
+    const result = guildId(dependencyMap[7]).openAutomodProfileQuarantineAlert(guildId);
   }, items2);
   const automodReason = guildId(4027).getAutomodReason(stateFromStores);
   if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
@@ -37,7 +37,7 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
     const intl = tmp(1236).intl;
     stringResult = intl.string(tmp(1236).t["/PGQf0"]);
   }
-  if (automodReason === tmp6.AUTOMOD_QUARANTINED_SERVER_TAG) {
+  if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
     const intl4 = tmp(1236).intl;
     let stringResult1 = intl4.string(tmp(1236).t.ml72ZU);
   } else {
@@ -46,11 +46,10 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
   }
   obj = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
   const obj2 = guildId(4027);
-  tmp6 = GuildMemberFlags;
   obj[3] = jsx(guildId(11633).ChatXIcon, {});
   obj[4] = stringResult1;
   return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });
-let result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx");
+let result = require("obj132").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx");
 
 export default memoResult;

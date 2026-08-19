@@ -1,9 +1,9 @@
 // === Module 11567: ICON_SIZE ===
 
 // Module 11567 (ICON_SIZE)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategoriesConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategoriesConstants.tsx");
 
 export const ICON_SIZE = 24;
 export const NODE_SIZE = 32;

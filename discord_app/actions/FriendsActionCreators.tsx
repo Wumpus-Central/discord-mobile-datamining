@@ -1,14 +1,14 @@
 // === Module 16693: ? ===
 
 // Module 16693
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import transitionTo from "transitionTo" /* 1222 */;
 import trackFriendsListClickedDefault from "trackFriendsListClicked" /* 15971 */;
 
 const Routes = ME.Routes;
-const result = set.fileFinishedImporting("actions/FriendsActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/FriendsActionCreators.tsx");
 
 export default {
   transitionToSection(PENDING, arg1) {
@@ -25,8 +25,6 @@ export default {
       const tmpResult = transitionTo;
     }
     obj2 = transitionTo;
-    const tmp = require;
-    const tmp5 = importDefault;
     obj = { type: "FRIENDS_SET_SECTION", section: PENDING };
     dispatcherDefault.dispatch(obj);
     if (flag) {
@@ -36,13 +34,11 @@ export default {
     }
   },
   setSection(section) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRIENDS_SET_SECTION", section };
+    const obj = { type: "FRIENDS_SET_SECTION", section };
     obj.dispatch(obj);
   },
   setInitialSection(section) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
+    const obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
     obj.dispatch(obj);
   }
 };

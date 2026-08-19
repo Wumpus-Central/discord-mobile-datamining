@@ -2,11 +2,11 @@
 
 // Module 10736 (isAlertOrActionSheetOpen)
 import useAlertStore2 from "useAlertStore" /* 4657 */;
-import closure_2 from "setContent" /* 4086 */;
-import closure_3 from "getAlert" /* 10737 */;
+import setContent from "setContent" /* 4086 */;
+import getAlert from "getAlert" /* 10737 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");
 
 export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(selectedChannelId) {
   let obj = arg1;

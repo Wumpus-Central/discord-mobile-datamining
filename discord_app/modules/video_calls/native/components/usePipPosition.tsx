@@ -1,12 +1,12 @@
 // === Module 8684: usePipPosition ===
 
 // Module 8684 (usePipPosition)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 const CameraPreviewPosition = "CameraPreviewPosition";
-let result = require("set").fileFinishedImporting("modules/video_calls/native/components/usePipPosition.tsx");
+let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/usePipPosition.tsx");
 
 export default function usePipPosition() {
   const tmp = callback(React.useState(() => {
@@ -17,8 +17,8 @@ export default function usePipPosition() {
   const items = [
     tmp[0],
     React.useCallback((arg0) => {
-      const Storage = callback(closure_1_1[2]).Storage;
-      const result = Storage.set(closure_1_4, arg0);
+      const Storage = callback(dependencyMap[2]).Storage;
+      const result = Storage.set(CameraPreviewPosition, arg0);
       callback(arg0);
     }, [])
   ];

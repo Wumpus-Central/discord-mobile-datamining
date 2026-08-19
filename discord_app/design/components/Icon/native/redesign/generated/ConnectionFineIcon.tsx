@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 15656 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx");
 
 export const ConnectionFineIcon = function ConnectionFineIcon(color) {
   let ICON_FEEDBACK_POSITIVE = color.color;

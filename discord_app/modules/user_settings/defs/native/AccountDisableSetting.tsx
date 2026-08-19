@@ -1,7 +1,7 @@
 // === Module 14169: pressable ===
 
 // Module 14169 (pressable)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import MobileUserSettings from "MobileUserSettings" /* 8198 */;
 import handleDisableAccountDefault from "handleDisableAccount" /* 14168 */;
@@ -17,16 +17,6 @@ const pressable = createToggle.createPressable({
     handleDisableAccountDefault(false);
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jf5GGb);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  onPress: function onAccountDisablePress() {
-    handleDisableAccountDefault(false);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountDisableSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/AccountDisableSetting.tsx");
 
 export default pressable;

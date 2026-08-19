@@ -1,10 +1,10 @@
 // === Module 16763: set ===
 
 // Module 16763 (set)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-let set = new Set(["1030554520465440818"]);
-const result = set.fileFinishedImporting("modules/guild_automod/SystemRulesUtils.tsx");
+const set = new Set(["1030554520465440818"]);
+const result = obj132.fileFinishedImporting("modules/guild_automod/SystemRulesUtils.tsx");
 
 export const isDefaultRuleId = function isDefaultRuleId(id) {
   let hasItem = null != id;

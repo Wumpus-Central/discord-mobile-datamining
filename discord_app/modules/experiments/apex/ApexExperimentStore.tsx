@@ -5,11 +5,11 @@ import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _toPropertyKeyDefault from "_toPropertyKey" /* 1213 */;
 import Version from "Version" /* 4290 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 _toPropertyKeyDefault;
 class ApexExperimentStore extends tmp2 {
   constructor() {
@@ -88,8 +88,7 @@ prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEv
     if (0 !== variantId) {
       if (variantId !== self.lastEmittedDebugVariantId) {
         self.lastEmittedDebugVariantId = variantId;
-        let obj = expandEventPropertiesDefault;
-        obj = { experiment: "2026-03-debug-experiment", apex_debug_variant: null, experiment_location: "apex_assignments_received" };
+        const obj = { experiment: "2026-03-debug-experiment", apex_debug_variant: null, experiment_location: "apex_assignments_received" };
         obj[1] = variantId;
         obj.track(AnalyticEvents.EXPERIMENT_APEX_DEBUGGING_EVENT, obj);
       }
@@ -99,11 +98,11 @@ prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEv
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(guilds) {
   guilds = guilds.guilds;
-  return this.setExperimentAssignments(guilds.apexExperiments, guilds.reduce((arg0, experiments) => {
-    if (null != experiments.experiments) {
-      arg0[experiments.id] = experiments.experiments;
+  return this.setExperimentAssignments(guilds.apexExperiments, guilds.reduce((acc, item, index) => {
+    if (null != item.experiments) {
+      acc[item.id] = item.experiments;
     }
-    return arg0;
+    return acc;
   }, {}));
 };
 prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
@@ -118,7 +117,7 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   }
 };
 const apexExperimentStore = new ApexExperimentStore();
-const result = require("set").fileFinishedImporting("modules/experiments/apex/ApexExperimentStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/experiments/apex/ApexExperimentStore.tsx");
 
 export default apexExperimentStore;
 export const ExperimentAssignment = require("_toPropertyKey").ExperimentAssignment;

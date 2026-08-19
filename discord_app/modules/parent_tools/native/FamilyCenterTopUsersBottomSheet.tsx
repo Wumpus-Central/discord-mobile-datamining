@@ -11,11 +11,11 @@ import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import ActionSheet from "ActionSheet" /* 7175 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function UserRow(userActivity) {
   userActivity = userActivity.userActivity;
   user = user.getUser(userActivity.user_id);
@@ -37,16 +37,15 @@ function UserRow(userActivity) {
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ header: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
 
 export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   topUserActivities = topUserActivities.topUserActivities;
-  let obj = { children: null };
-  obj = { variant: "text-md/bold", style: callback3().header, children: null };
+  let obj = { variant: "text-md/bold", style: callback3().header, children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.BxbvS7);
   const items = [callback(Text.Text, obj), ];
-  obj = { hasIcons: true, children: topUserActivities.map((userActivity) => callback(closure_7, { userActivity }, userActivity.user_id)) };
+  obj = { hasIcons: true, children: topUserActivities.map((item, index) => callback(closure_7, { userActivity: item }, item.user_id)) };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
   obj[0] = items;
   return callback2(ActionSheet.ActionSheet, obj);

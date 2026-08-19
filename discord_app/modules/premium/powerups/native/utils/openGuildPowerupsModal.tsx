@@ -1,12 +1,12 @@
 // === Module 11648: openGuildPowerupsModal ===
 
 // Module 11648 (openGuildPowerupsModal)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
 let c3 = 0;
-const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
 
 export default function openGuildPowerupsModal(navigationParams) {
   const merged = Object.assign(navigationParams, Object.create(null));

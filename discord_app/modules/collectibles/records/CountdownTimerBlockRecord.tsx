@@ -1,11 +1,10 @@
 // === Module 5338: fromServer ===
 
 // Module 5338 (fromServer)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ShopBlockType from "ShopBlockType" /* 5339 */;
 
-let prototype;
-prototype = function CountdownTimerBlockRecord(end_time) {
+const prototype = function CountdownTimerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.COUNTDOWN_TIMER;
   ({ title: tmp.title, body: tmp.body, banner_url: tmp.bannerUrl } = end_time);
@@ -24,6 +23,6 @@ prototype["fromServer"] = function fromServer(end_time) {
   obj.textColor = end_time.text_color;
   return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/CountdownTimerBlockRecord.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/records/CountdownTimerBlockRecord.tsx");
 
 export const CountdownTimerBlockRecord = prototype;

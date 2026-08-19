@@ -1,9 +1,9 @@
 // === Module 13224: getClientCapabilities ===
 
 // Module 13224 (getClientCapabilities)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/GatewayCapabilities.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/GatewayCapabilities.tsx");
 
 export const getClientCapabilities = function getClientCapabilities(useChannelObfuscation) {
   let num = 1734655;

@@ -1,7 +1,7 @@
 // === Module 16132: getStores ===
 
 // Module 16132 (getStores)
-import set2 from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 class ModalRegistry {
   constructor(arg0) {
@@ -12,8 +12,6 @@ class ModalRegistry {
       const iter = modals[Symbol.iterator]();
       while (iter !== undefined) {
         let stores = iter.next().stores;
-        let tmp = stores;
-        let tmp2 = stores;
         for (const item10016 of stores) {
           let addResult = set.add(item10016);
           continue;
@@ -31,7 +29,7 @@ prototype["getStores"] = function getStores() {
 };
 prototype["getOpenModal"] = function getOpenModal() {
   const modals = this.modals;
-  const findIndexResult = modals.findIndex((isOpen) => isOpen.isOpen());
+  const findIndexResult = modals.findIndex((item, index) => item.isOpen());
   if (-1 === findIndexResult) {
     return null;
   } else {
@@ -54,6 +52,6 @@ prototype["getOpenModal"] = function getOpenModal() {
     return obj;
   }
 };
-const result = set2.fileFinishedImporting("lib/ModalRegistry.tsx");
+const result = obj132.fileFinishedImporting("lib/ModalRegistry.tsx");
 
 export default ModalRegistry;

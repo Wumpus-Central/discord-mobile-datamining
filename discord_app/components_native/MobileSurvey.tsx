@@ -1,16 +1,16 @@
 // === Module 16138: MobileSurvey ===
 
 // Module 16138 (MobileSurvey)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "fetchSurveyIfNeeded" /* 9874 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
+import fetchSurveyIfNeeded from "fetchSurveyIfNeeded" /* 9874 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_8 = createCacheKey.createStyles({ confirmIcon: { marginLeft: 4 } });
-const result = require("set").fileFinishedImporting("components_native/MobileSurvey.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/MobileSurvey.tsx");
 
 export default function MobileSurvey() {
   const _require = callback();
@@ -82,10 +82,10 @@ export default function MobileSurvey() {
         }
         return applyArgumentsResult;
       }
-      let obj = stateFromStores(closure_1_2[7]);
-      obj = { type: "survey", promotion_id: null };
+      stateFromStores(dependencyMap[7]);
+      let obj = { type: "survey", promotion_id: null };
       obj[1] = tmp.id;
-      obj.track(closure_1_6.OPEN_MODAL, obj);
+      obj.track(AnalyticEvents.OPEN_MODAL, obj);
       (function setSurveySeen() {
         const self = this;
         const apply = _setSurveySeen.apply;
@@ -105,15 +105,15 @@ export default function MobileSurvey() {
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t.f3Pet9);
     obj[3] = function onConfirm() {
-      stateFromStores(closure_1_2[11]).openURL(stateFromStores.url);
-      const obj = stateFromStores(closure_1_2[11]);
-      lib(closure_1_2[8]).surveyHide(stateFromStores.key, false);
+      stateFromStores(dependencyMap[11]).openURL(stateFromStores.url);
+      const obj = stateFromStores(dependencyMap[11]);
+      lib(dependencyMap[8]).surveyHide(stateFromStores.key, false);
     };
     obj[4] = function onCancel() {
-      return lib(closure_1_2[8]).surveyHide(stateFromStores.key, true);
+      return lib(dependencyMap[8]).surveyHide(stateFromStores.key, true);
     };
     obj[5] = function renderConfirmRightIcon() {
-      return closure_1_7(lib(closure_1_2[12]).Icon, { style: lib.confirmIcon, color: stateFromStores(closure_1_2[13]).unsafe_rawColors.WHITE, size: lib(closure_1_2[12]).Icon.Sizes.SMALL, source: stateFromStores(closure_1_2[14]) });
+      return jsx(lib(dependencyMap[12]).Icon, { style: lib.confirmIcon, color: stateFromStores(dependencyMap[13]).unsafe_rawColors.WHITE, size: lib(dependencyMap[12]).Icon.Sizes.SMALL, source: stateFromStores(dependencyMap[14]) });
     };
     tmp5 = jsx(stateFromStores(4763), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
     const tmp8 = stateFromStores(4763);

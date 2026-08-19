@@ -1,7 +1,7 @@
 // === Module 9010: ? ===
 
 // Module 9010
-import set2 from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import keys from "keys" /* 644 */;
 
 let obj = keys.create((arg0) => {
@@ -10,7 +10,7 @@ let obj = keys.create((arg0) => {
     lockKeys: new Set(),
     requestFreezeLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      callback(closure_1_1[1]).batchUpdates(() => {
+      callback(dependencyMap[1]).batchUpdates(() => {
         closure_1_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
           const hasItem = lockKeys.has(closure_0);
@@ -20,7 +20,7 @@ let obj = keys.create((arg0) => {
               let obj = {};
               const merged = Object.assign(lockKeys);
               const _Set2 = Set;
-              const items = [tmp];
+              const items = [closure_0];
               const _Array = Array;
               HermesBuiltin.arraySpread(Array.from(lockKeys.lockKeys), 1);
               const set = new Set(items);
@@ -31,7 +31,7 @@ let obj = keys.create((arg0) => {
           } else if (hasItem) {
             const _Set = Set;
             const set1 = new Set(lockKeys);
-            set1.delete(tmp);
+            set1.delete(closure_0);
             obj = {};
             const merged1 = Object.assign(lockKeys);
             obj.lockKeys = set1;
@@ -45,6 +45,6 @@ let obj = keys.create((arg0) => {
   };
   return obj;
 });
-const result = set2.fileFinishedImporting("modules/panels/morphable/AppFreezeStore.tsx");
+const result = obj132.fileFinishedImporting("modules/panels/morphable/AppFreezeStore.tsx");
 
 export default obj;

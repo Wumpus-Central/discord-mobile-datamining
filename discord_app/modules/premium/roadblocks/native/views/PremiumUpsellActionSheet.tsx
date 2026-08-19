@@ -1,35 +1,38 @@
 // === Module 8480: AlwaysCompressImagesSwitch ===
 
 // Module 8480 (AlwaysCompressImagesSwitch)
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
 import preloadDefault from "preload" /* 5449 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
 import useAPNGPlayerControls from "useAPNGPlayerControls" /* 9217 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "handleThemeChange" /* 1302 */;
-import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
-import closure_9 from "handleConnectionOpen" /* 4197 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import handleThemeChange from "handleThemeChange" /* 1302 */;
+import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
 import { ApplicationStreamFPS } from "RESOLUTION_720" /* 4524 */;
 import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 8481 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function AlwaysCompressImagesSwitch(isKestrelTreatment) {
   const tmp = callback3();
   let obj = initialize;
   const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   const callback = React.useCallback((dataSavingMode) => {
-    let obj = callback(table[35]);
-    obj = { dataSavingMode };
+    callback(table[35]);
+    const obj = { dataSavingMode };
     const result = obj.updatedUnsyncedSettings(obj);
   }, []);
   let tmp6 = null;
@@ -39,16 +42,16 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       obj = { style: null, children: null };
       obj[0] = tmp.compressionContainer;
       obj = { start: true, end: true, label: null, value: null, onValueChange: null, subLabel: null };
-      const intl = tmp2(1236).intl;
-      obj[2] = intl.string(tmp2(1236).t.ix8XIj);
+      const intl = getSystemLocale.intl;
+      obj[2] = intl.string(getSystemLocale.t.ix8XIj);
       obj[3] = stateFromStores;
       obj[4] = callback;
       obj1 = { style: null, variant: "text-xs/normal", children: null };
       obj1[0] = tmp.compressionHint;
-      const intl2 = tmp2(1236).intl;
-      obj1[2] = intl2.string(tmp2(1236).t["wC0+Ph"]);
-      obj[5] = callback2(tmp2(4734).Text, obj1);
-      obj[1] = callback2(tmp2(7178).TableSwitchRow, obj);
+      const intl2 = getSystemLocale.intl;
+      obj1[2] = intl2.string(getSystemLocale.t["wC0+Ph"]);
+      obj[5] = callback2(Text.Text, obj1);
+      obj[1] = callback2(TableSwitchRow.TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }
@@ -56,7 +59,7 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
 }
 function PremiumUpsellImage(arg0) {
   ({ image, style, useReducedMotion } = arg0);
-  let obj = set;
+  let obj = obj132;
   if (obj.isAndroid()) {
     if (!useReducedMotion) {
       if (null != image.uri) {
@@ -75,27 +78,20 @@ function PremiumUpsellImage(arg0) {
 ({ AnalyticEvents: closure_14, AnalyticsPages: closure_15, HelpdeskArticles: closure_16, ThemeTypes: closure_17 } = ME);
 ({ SAVED_BOOKMARKS_MAX: closure_19, SAVED_REMINDERS_MAX: closure_20 } = SAVED_BOOKMARKS_MAX);
 ({ Fragment: closure_21, jsx: closure_22, jsxs: closure_23 } = jsxProd);
-createCacheKey = { image: null, text: null, betaTag: null, description: null, textContainer: null, buttonContainer: null, compressionContainer: null, compressionHint: null, imageGradientBackgroundContainer: null, imageGradientBackground: null, imageInGradientBackground: null };
-createCacheKey = { alignSelf: "center", marginTop: ThemesDefault.space.PX_16, width: 240, height: 144 };
+const createCacheKey = { alignSelf: "center", marginTop: ThemesDefault.space.PX_16, width: 240, height: 144 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", textAlign: "center" };
 createCacheKey[2] = { marginLeft: 0 };
 createCacheKey[3] = { marginHorizontal: ThemesDefault.space.PX_16 };
-let obj1 = { marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_8, alignItems: "center", gap: ThemesDefault.space.PX_8 };
-let obj2 = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_8, alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { marginTop: ThemesDefault.space.PX_32, gap: ThemesDefault.space.PX_8 };
-let obj3 = { marginTop: ThemesDefault.space.PX_32, gap: ThemesDefault.space.PX_8 };
 createCacheKey[6] = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[7] = { marginTop: 2 };
 createCacheKey[8] = { display: "flex", width: "100%", justifyContent: "center", alignItems: "center" };
-let obj4 = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[9] = { width: "100%", marginHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.space.PX_12 };
-let obj5 = { width: "100%", marginHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.space.PX_12 };
 createCacheKey[10] = { marginTop: ThemesDefault.space.PX_32, marginBottom: ThemesDefault.space.PX_32 };
 let closure_24 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { marginTop: ThemesDefault.space.PX_32, marginBottom: ThemesDefault.space.PX_32 };
-let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellActionSheet.tsx");
 
 export default function PremiumUpsellActionSheet(arg0) {
   ({ featureName, legacyProps } = arg0);
@@ -163,7 +159,6 @@ export default function PremiumUpsellActionSheet(arg0) {
     const tmp2Result8 = tmp2(stringResult3[21]);
   }
   const tmp19 = tmp17 ? closure_20 : closure_19;
-  obj = {};
   obj = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
   const intl = tmp2(stringResult3[22]).intl;
   obj[0] = intl.string(tmp2(stringResult3[22]).t.jGDYF0);
@@ -197,7 +192,7 @@ export default function PremiumUpsellActionSheet(arg0) {
     enabled1 = kestrelConfig.enabled;
   }
   obj4[2] = true === enabled1;
-  const obj3 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
+  let obj3 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
   const obj5 = { guildId: stateFromStores2, maxSize: effectiveKestrelLimit, hideLearnMore: null, onClick: null };
   let isGA;
   if (kestrelConfig != null) {
@@ -209,7 +204,7 @@ export default function PremiumUpsellActionSheet(arg0) {
     const obj = analyticsLocations2(useTier0UpsellContent[23]);
     obj.openURL(analyticsLocations2(useTier0UpsellContent[24]).getArticleURL(constants.NITRO_FAQ));
   };
-  obj4[3] = closure_22(closure_21, { children: tmp2(stringResult3[19]).fileUploadLimitRoadblockDescription(obj5) });
+  obj4[3] = callback(closure_21, { children: tmp2(stringResult3[19]).fileUploadLimitRoadblockDescription(obj5) });
   obj4[4] = constants2.PREMIUM_UPSELL_FILE_UPLOAD;
   obj4[5] = constants.LARGER_FILE_UPLOAD_UPSELL;
   const obj6 = { children: tmp2(stringResult3[19]).fileUploadLimitRoadblockDescription(obj5) };
@@ -271,7 +266,7 @@ export default function PremiumUpsellActionSheet(arg0) {
       lib(useTier0UpsellContent[29]).showForLaterModal(lib ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
     };
     obj14[0] = intl14.format(tmp17 ? t2.NRF0Wh : t2.o5OLyw, obj15);
-    stringResult1 = tmp24(tmp25, obj14);
+    stringResult1 = callback(closure_21, obj14);
   }
   obj13[2] = stringResult1;
   obj13[3] = constants2.PREMIUM_UPSELL_FOR_LATER;
@@ -286,7 +281,6 @@ export default function PremiumUpsellActionSheet(arg0) {
   obj16[2] = constants2.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
   obj16[3] = constants.STREAM_QUALITY_UPSELL;
   obj16[4] = string(stringResult3[32]);
-  const obj17 = { fps: ApplicationStreamFPS.FPS_60 };
   const obj9 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
   const items3 = [token, token1];
   obj16[5] = { colors: items3, start: tmp2(stringResult3[33]).HorizontalGradient.START, end: tmp2(stringResult3[33]).HorizontalGradient.END };
@@ -313,6 +307,7 @@ export default function PremiumUpsellActionSheet(arg0) {
     obj.location_stack = analyticsLocations2;
     obj.sku_id = lib(useTier0UpsellContent[16]).castPremiumSubscriptionAsSkuId(useTier0UpsellContent ? closure_1_11.TIER_0 : closure_1_11.TIER_2);
     obj.track(closure_1_14.PREMIUM_UPSELL_VIEWED, obj);
+    const obj3 = lib(useTier0UpsellContent[16]);
   }, items5);
   const tmp32 = string(stringResult3[45])(useTier0UpsellContent, onViewAllPerks, obj[featureName].analyticsPage, undefined, tmp5);
   const loading = tmp32.loading;
@@ -328,27 +323,27 @@ export default function PremiumUpsellActionSheet(arg0) {
       const obj20 = { size: null, gradient: true, style: null };
       obj20[0] = tmp2(stringResult3[49]).BetaSizes.SMALL;
       obj20[2] = tmp.betaTag;
-      tmp24Result = tmp24(string(stringResult3[49]), obj20);
+      tmp24Result = callback(string(stringResult3[49]), obj20);
       const stringResult2 = string(stringResult3[49]);
     }
     const items7 = [tmp24Result, , ];
     const obj21 = { style: null, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
     obj21[0] = tmp.text;
     obj21[3] = tmp29.title;
-    items7[1] = tmp24(tmp2(stringResult3[37]).Text, obj21);
+    items7[1] = callback(tmp2(stringResult3[37]).Text, obj21);
     const obj22 = { style: null, variant: "text-sm/normal", children: null };
     const items8 = [, ];
     ({ text: arr10[0], description: arr10[1] } = tmp);
     obj22[0] = items8;
     obj22[2] = tmp29.description;
-    items7[2] = tmp24(tmp2(stringResult3[37]).Text, obj22);
+    items7[2] = callback(tmp2(stringResult3[37]).Text, obj22);
     obj19[1] = items7;
-    items6[1] = tmp35(tmp36, obj19);
+    items6[1] = callback2(View, obj19);
     tmp24Result = null;
     if (featureName === tmp2(stringResult3[17]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
       const obj23 = { isKestrelTreatment: null };
       obj23[0] = true === tmp29.isKestrelRaisedCap;
-      tmp24Result = tmp24(AlwaysCompressImagesSwitch, obj23);
+      tmp24Result = callback(AlwaysCompressImagesSwitch, obj23);
     }
     items6[2] = tmp24Result;
     let obj24 = { style: null, children: null };
@@ -374,23 +369,23 @@ export default function PremiumUpsellActionSheet(arg0) {
     obj25[2] = string2Result;
     obj25[3] = string(stringResult3[51]);
     obj25 = [, ];
-    obj25[0] = tmp24(Button, obj25);
+    obj25[0] = callback(Button, obj25);
     const obj27 = { variant: "secondary", text: null, onPress: null };
     intl18 = tmp2(stringResult3[22]).intl;
     string = intl18.string;
     stringResult3 = string(tmp2(stringResult3[22]).t.PcTCB7);
     obj27[1] = stringResult3;
     obj27[2] = tmp33;
-    Button = tmp24(tmp2(stringResult3[50]).Button, obj27);
+    Button = callback(tmp2(stringResult3[50]).Button, obj27);
     obj25[1] = Button;
     obj24[1] = obj25;
-    obj24 = tmp35(tmp36, obj24);
+    obj24 = callback2(View, obj24);
     items6[3] = obj24;
     obj26[0] = items6;
-    string2 = tmp35(tmp36, obj26);
+    string2 = callback2(View, obj26);
     t[1] = string2;
-    tmp24(tmp34, t);
-    const tmp24Result1 = tmp24(Button, obj25);
+    callback(tmp34, t);
+    const tmp24Result1 = callback(Button, obj25);
   } else if (null != tmp29.imageGradientBackground) {
     const obj28 = { style: null, children: null };
     obj28[0] = tmp.imageGradientBackgroundContainer;
@@ -405,15 +400,16 @@ export default function PremiumUpsellActionSheet(arg0) {
     ({ image: arr7[0], imageInGradientBackground: arr7[1] } = tmp);
     obj30[1] = items9;
     obj30[2] = stateFromStores3;
-    obj29[4] = tmp24(PremiumUpsellImage, obj30);
-    obj28[1] = tmp24(string(stringResult3[48]), obj29);
-    let tmp24Result3 = tmp24(tmp36, obj28);
+    obj29[4] = callback(PremiumUpsellImage, obj30);
+    obj28[1] = callback(string(stringResult3[48]), obj29);
+    let tmp24Result3 = callback(View, obj28);
     const stringResult4 = string(stringResult3[48]);
   } else {
     const obj31 = { image: null, style: null, useReducedMotion: null };
     obj31[0] = tmp29.image;
     obj31[1] = tmp.image;
     obj31[2] = stateFromStores3;
-    tmp24Result3 = tmp24(PremiumUpsellImage, obj31);
+    tmp24Result3 = callback(PremiumUpsellImage, obj31);
   }
+  const tmp2Result10 = tmp2(stringResult3[34]);
 };

@@ -3,11 +3,11 @@
 // Module 7527 (handleInit)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "handlePermissionsChange" /* 4970 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import handlePermissionsChange from "handlePermissionsChange" /* 4970 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 
-const require = arg1;
+const require = fn;
 function handleInit() {
   closure_5 = {};
   return true;
@@ -63,8 +63,8 @@ function handleSetActiveCommand(arg0) {
     }
     if (null != options) {
       const options1 = command.options;
-      const item = options1.forEach((name) => {
-        obj[name.name] = { isActive: false, hasValue: false, lastValidationResult: null, optionValue: null };
+      const item = options1.forEach((item, index) => {
+        obj[item.name] = { isActive: false, hasValue: false, lastValidationResult: null, optionValue: null };
       });
     }
     tmp2.optionStates = obj;
@@ -90,87 +90,62 @@ function handleUpdateOptionStates(channelId) {
   const merged = Object.assign(tmp.optionStates);
   const entries = Object.entries(channelId.changedOptionStates);
   while (tmp4 !== undefined) {
-    let tmp6 = callback;
     let tmp7 = callback(tmp5, 2);
     let first = tmp7[0];
     let tmp9 = first;
     let arr = tmp7[1];
     if (first in tmp.optionStates) {
-      let tmp10 = arr;
       if (undefined !== arr.hasValue) {
-        let tmp12 = arr;
         let hasValue = arr.hasValue;
       } else {
-        let tmp11 = first;
         hasValue = obj[tmp9].hasValue;
       }
-      let tmp13 = first;
       if (hasValue) {
         let arr2 = obj[tmp9];
-        let tmp14 = arr;
         if (undefined !== arr.isActive) {
-          let tmp16 = arr;
           let isActive = arr.isActive;
         } else {
-          let tmp15 = arr2;
           isActive = arr2.isActive;
         }
         obj = { hasValue: true, isActive: null, lastValidationResult: null, optionValue: null, location: null, length: null };
         obj[1] = isActive;
-        let tmp17 = arr;
         if (undefined !== arr.lastValidationResult) {
-          let tmp19 = arr;
           let lastValidationResult = arr.lastValidationResult;
         } else {
-          let tmp18 = arr2;
           lastValidationResult = arr2.lastValidationResult;
         }
         obj[2] = lastValidationResult;
-        let tmp20 = arr;
         let optionValue = arr.optionValue;
         if (optionValue == null) {
-          let tmp21 = arr2;
           optionValue = arr2.optionValue;
         }
         obj[3] = optionValue;
-        let tmp22 = arr;
         let _location = arr.location;
         if (_location == null) {
-          let tmp23 = arr2;
           _location = arr2.location;
         }
         obj[4] = _location;
-        let tmp24 = arr;
         let length = arr.length;
         if (length == null) {
-          let tmp25 = arr2;
           length = arr2.length;
         }
         obj[5] = length;
         obj[tmp9] = obj;
-        let tmp26 = arr;
         if (undefined !== arr.isActive) {
-          let tmp27 = arr;
           if (arr.isActive) {
             let tmp29 = null != tmp.activeOptionName;
             if (tmp29) {
-              let tmp30 = first;
               tmp29 = tmp.activeOptionName !== tmp9;
             }
             if (tmp29) {
               obj = {};
-              let tmp31 = obj;
               let merged1 = Object.assign(obj[tmp.activeOptionName]);
               obj[tmp.activeOptionName] = obj;
               obj[tmp.activeOptionName].isActive = false;
             }
-            let tmp33 = first;
             tmp.activeOptionName = tmp9;
-          } else {
-            let tmp28 = first;
-            if (tmp9 === tmp.activeOptionName) {
-              tmp.activeOptionName = null;
-            }
+          } else if (tmp9 === tmp.activeOptionName) {
+            tmp.activeOptionName = null;
           }
         }
       } else {
@@ -255,7 +230,7 @@ prototype["getActiveOption"] = function getActiveOption(channelId) {
   if (activeCommand != null) {
     const options = activeCommand.options;
     if (options != null) {
-      found = options.find((name) => name.name === activeOptionName.activeOptionName);
+      found = options.find((item, index) => item.name === activeOptionName.activeOptionName);
     }
   }
   if (found == null) {
@@ -321,7 +296,7 @@ prototype["getOption"] = function getOption(arg0) {
   if (activeCommand != null) {
     const options = activeCommand.options;
     if (options != null) {
-      found = options.find((name) => name.name === closure_0);
+      found = options.find((item, index) => item.name === closure_0);
     }
   }
   return found;
@@ -420,6 +395,6 @@ const applicationCommandStore = new ApplicationCommandStore(dispatcherDefault, {
     return flag;
   }
 });
-const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_commands/ApplicationCommandStore.tsx");
 
 export default applicationCommandStore;

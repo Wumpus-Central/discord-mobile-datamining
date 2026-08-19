@@ -1,17 +1,17 @@
 // === Module 15222: useIdentityRegistrationStep ===
 
 // Module 15222 (useIdentityRegistrationStep)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
 import { AbortCodes } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ setRegistrationErrors: closure_6, updateRegistrationOptions: error, useRegistrationUIStore: closure_8 } = useRegistrationUIStore);
 ({ authStateToRegisterTransitionStep: c9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: unpackModuleId } = RegistrationTransitionActionTypes);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
 
 export const useIdentityRegistrationStep = function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
   let _require = REGISTER_IDENTITY;
@@ -19,7 +19,6 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
   let obj = _require(navigation[6]);
   navigation = obj.useNavigation();
   const context = React.useContext(_require(navigation[7]).TrackRegistrationContext);
-  let callback = context;
   const tmp4 = callback2(React.useState(""), 2);
   const first = tmp4[0];
   callback2 = first;
@@ -27,14 +26,13 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
   const tmp6 = callback2(React.useState(""), 2);
   const first1 = tmp6[0];
   closure_7 = tmp6[1];
-  callback = React.useCallback((arg0, current) => {
+  const callback = React.useCallback((arg0, current) => {
     callback2(arg0);
     closure_5.current = current;
   }, []);
   const tmp9 = callback3((errors) => errors.errors);
   callback3 = tmp9;
   let items = [tmp9];
-  _require = undefined;
   const memo = React.useMemo(() => {
     const intl = callback(navigation[8]).intl;
     return intl.string(callback(navigation[8]).t.F8UYVY);
@@ -71,11 +69,11 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               obj[0] = arg1;
               return obj;
             } else {
-              c3 = tmp3;
+              let error_code = tmp3;
               closure_2 = tmp5;
               closure_1 = undefined;
               closure_2 = undefined;
-              c3 = undefined;
+              error_code = undefined;
               c4 = undefined;
               const sum = ref.current + c6;
               closure_1 = sum;
@@ -104,9 +102,9 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               first1(authenticationErrorsFromAPIError);
               const _Object = Object;
               const keys = Object.keys(authenticationErrorsFromAPIError);
-              const length = keys.filter((arg0) => {
+              const length = keys.filter((item, index) => {
                 const items = ["phone"];
-                return items.includes(arg0);
+                return items.includes(item);
               });
               if (length.length <= 0) {
                 let tmp30 = null != authenticationErrorsFromAPIError.error_code;
@@ -118,7 +116,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
                   obj4[0] = closure_2;
                   obj4[1] = closure_2_11.RESPONSE_ERROR;
                   obj3 = callback(navigation[12]);
-                  let items = [obj3.getCommonErrorDetails(c3.error_code)];
+                  let items = [obj3.getCommonErrorDetails(error_code.error_code)];
                   obj4[2] = items;
                   closure_1_3(obj4);
                 }
@@ -166,12 +164,12 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               obj[1] = closure_1;
               obj[2] = arg0;
               v3(obj);
-              obj = { step: closure_2_10.PHONE_VERIFICATION, toStep: callback(closure_2_2[14]).getNextRegistrationTransitionStep(callback), actionType: closure_2_11.SUCCESS };
+              obj = { step: closure_2_10.PHONE_VERIFICATION, toStep: callback(navigation[14]).getNextRegistrationTransitionStep(callback), actionType: closure_2_11.SUCCESS };
               _undefined(obj);
-              const obj3 = callback(closure_2_2[14]);
-              const nextAuthState = callback(closure_2_2[14]).getNextAuthState(callback);
-              const obj4 = callback(closure_2_2[14]);
-              arr.dispatch(callback(closure_2_2[15]).StackActions.replace(nextAuthState));
+              const obj3 = callback(navigation[14]);
+              const nextAuthState = callback(navigation[14]).getNextAuthState(callback);
+              const obj4 = callback(navigation[14]);
+              arr.dispatch(callback(navigation[15]).StackActions.replace(nextAuthState));
             };
             obj7[5] = function onBail(arg0) {
               v3("");
@@ -235,8 +233,8 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
     validateEmail: obj2.useCallback(() => {
       let stringResult = null;
       if (!obj.isEmail(closure_4)) {
-        const intl = callback(tmp[8]).intl;
-        stringResult = intl.string(callback(tmp[8]).t.nr0MVZ);
+        const intl = callback(navigation[8]).intl;
+        stringResult = intl.string(callback(navigation[8]).t.nr0MVZ);
       }
       return stringResult;
     }, items3)

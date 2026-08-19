@@ -1,12 +1,12 @@
 // === Module 12339: SHOP_THIS_LOOK_ACTION_SHEET_KEY ===
 
 // Module 12339 (SHOP_THIS_LOOK_ACTION_SHEET_KEY)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 
 let c3 = "Shop This Look";
-const result = set.fileFinishedImporting("modules/collectibles/shop_this_look/native/openShopThisLookActionSheet.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/shop_this_look/native/openShopThisLookActionSheet.tsx");
 
 export const SHOP_THIS_LOOK_ACTION_SHEET_KEY = "Shop This Look";
 export const openShopThisLookActionSheet = function openShopThisLookActionSheet(arg0) {

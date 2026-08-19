@@ -7,18 +7,16 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
-createCacheKey = { container: null, noDivider: null, text: null };
-createCacheKey = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 12, marginBottom: 8, paddingHorizontal: 24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+const createCacheKey = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: 12, marginBottom: 8, paddingHorizontal: 24, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderTopWidth: 0, marginTop: 0 };
 createCacheKey[2] = { marginTop: ThemesDefault.space.PX_16 };
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginTop: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx");
 
 export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   showDivider = showDivider.showDivider;
@@ -28,9 +26,8 @@ export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   if (!showDivider) {
     noDivider = tmp.noDivider;
   }
-  let obj = { style: items, children: null };
   items[1] = noDivider;
-  obj = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
+  const obj = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["1uAmCw"]);
   obj[1] = jsx(Text.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });

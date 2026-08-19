@@ -1,10 +1,9 @@
 // === Module 9844: _beginConsoleTransfer ===
 
 // Module 9844 (_beginConsoleTransfer)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+const require = fn;
 function _beginConsoleTransfer() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -47,13 +46,11 @@ function _beginConsoleTransfer() {
                 set = 1;
                 c5 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = lib(closure_1_2[2]).fetchDevices(tmp44);
+                obj1[0] = lib(closure_1_2[2]).fetchDevices(callback);
                 return obj1;
               } else {
-                callback(closure_1_2[8])(tmp43);
+                callback(closure_1_2[8])(lib);
               }
-              tmp43 = lib;
-              tmp44 = callback;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -118,7 +115,7 @@ function _beginConsoleTransfer() {
 const items = [, ];
 ({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1] } = require("ME").PlatformTypes);
 let set = new Set(items);
-const result = set.fileFinishedImporting("modules/game_console/native/beginConsoleTransfer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_console/native/beginConsoleTransfer.tsx");
 
 export const beginConsoleTransfer = function beginConsoleTransfer(channel, type) {
   const self = this;

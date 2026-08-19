@@ -1,11 +1,11 @@
 // === Module 8600: PhoneOrEmailSelectorForceMode ===
 
 // Module 8600 (PhoneOrEmailSelectorForceMode)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let obj = { PHONE: "phone", EMAIL: "email" };
 const re1 = /^[-() \d]+$/;
-const result = set.fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");
 
 export const PhoneOrEmailSelectorForceMode = obj;
 export const shouldShowCountryCodeSelector = function shouldShowCountryCodeSelector(forceMode, value) {

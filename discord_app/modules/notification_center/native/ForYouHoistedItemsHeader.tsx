@@ -5,14 +5,13 @@ import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
 noopAll;
-createCacheKey = { container: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
+const createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_2 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouHoistedItemsHeader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notification_center/native/ForYouHoistedItemsHeader.tsx");
 
 export const ForYouHoistedItemsHeader = function ForYouHoistedItemsHeader() {
   return <View style={callback().container} />;

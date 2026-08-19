@@ -4,19 +4,21 @@
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import ManaContext from "ManaContext" /* 4104 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
+import Text from "Text" /* 4734 */;
 import useProfileThemeValues from "useProfileThemeValues" /* 7161 */;
+import Divider from "Divider" /* 7693 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" }, title: { flexDirection: "row" }, section: { marginHorizontal: 12, marginTop: 12, marginBottom: 8 }, contentContainer: null };
-createCacheKey = { borderWidth: 1, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+const createCacheKey = { borderWidth: 1, borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[3] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileSection.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileSection.tsx");
 
 export default function UserProfileSection(title) {
   title = title.title;
@@ -32,8 +34,8 @@ export default function UserProfileSection(title) {
   const merged1 = Object.assign(tmp2.contentContainer);
   if (null != primaryColor) {
     if (null != profileThemeValues) {
-      let borderColor = tmp3(4223).hexOpacityToRgba(tmp3(7693).DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
-      const tmp3Result = tmp3(4223);
+      let borderColor = hexToRgba.hexOpacityToRgba(Divider.DIVIDER_COLORS[theme], profileThemeValues.dividerOpacity);
+      const tmp3Result = hexToRgba;
     }
     obj.borderColor = borderColor;
     obj = { style: null };
@@ -48,11 +50,11 @@ export default function UserProfileSection(title) {
       obj2[0] = tmp2.title;
       const obj3 = { variant: "eyebrow", accessibilityRole: "header", children: null };
       obj3[2] = title;
-      const items1 = [callback(tmp3(4734).Text, obj3), headerIcon];
+      const items1 = [callback(Text.Text, obj3), headerIcon];
       obj2[1] = items1;
-      const items2 = [tmp8(tmp9, obj2), trailingIcon];
+      const items2 = [callback(View, obj2), trailingIcon];
       obj1[1] = items2;
-      tmp8Result = tmp8(tmp9, obj1);
+      tmp8Result = callback(View, obj1);
     }
     const items3 = [tmp8Result, ];
     let tmp16 = null;
@@ -64,7 +66,7 @@ export default function UserProfileSection(title) {
     obj4[1] = children;
     items3[1] = callback(View, obj4);
     obj.children = items3;
-    return closure_4(View, obj);
+    return callback(View, obj);
   }
   borderColor = tmp2.contentContainer.borderColor;
 };

@@ -1,19 +1,20 @@
 // === Module 7930: claimedOutboundPromotionCodeFromServer ===
 
 // Module 7930 (claimedOutboundPromotionCodeFromServer)
-import set2 from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1379 */;
+import hasFlag from "hasFlag" /* 1403 */;
 import CountryListMode from "CountryListMode" /* 7656 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "createFromServer" /* 7629 */;
-import closure_6 from "createEmptyPromotionsByType" /* 7628 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import createFromServer from "createFromServer" /* 7629 */;
+import createEmptyPromotionsByType from "createEmptyPromotionsByType" /* 7628 */;
 import { PromotionFlags } from "GuildFeatures" /* 1924 */;
 import ME from "ME" /* 676 */;
 import { ActivityPlatform } from "items3" /* 4481 */;
 
-require = arg1;
+require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
   return { code: code.code, userId: code.user_id, claimedAt: code.claimed_at, promotion: closure_5.createFromServer(code.promotion) };
 }
@@ -96,9 +97,9 @@ function _claimOutboundPromotion() {
             closure_4 = arg1;
             body = closure_4.body;
             if (obj9.isIOS()) {
-              let ANDROID = tmp39.IOS;
+              let ANDROID = constants.IOS;
             } else {
-              ANDROID = tmp39.ANDROID;
+              ANDROID = constants.ANDROID;
             }
             c6 = ANDROID;
             obj = callback2(698);
@@ -140,7 +141,7 @@ function _claimOutboundPromotion() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: closure_8, Endpoints: c9, Platforms: c10 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");
 
 export const getPromotionImageURL = function getPromotionImageURL(id, arg1) {
   let str = "logo-light";
@@ -174,7 +175,6 @@ export const getOutboundPromotionRedemptionUrl = function getOutboundPromotionRe
     if ("" !== outboundPromotion.outboundRedemptionUrlFormat) {
       const _encodeURIComponent = encodeURIComponent;
       let str2 = outboundPromotion.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(arg0));
-      const str3 = outboundPromotion.outboundRedemptionUrlFormat;
     }
     return str2;
   }
@@ -185,17 +185,16 @@ export const getOutboundPromotionRedemptionUrl = function getOutboundPromotionRe
 };
 export const getNextUnseenOutboundPromotionId = function getNextUnseenOutboundPromotionId() {
   ({ outboundPromotions, consumedInboundPromotionId: require } = closure_6);
-  const found = outboundPromotions.filter((id) => {
-    let tmp = id.id !== closure_0;
+  const found = outboundPromotions.filter((item, index) => {
+    let tmp = item.id !== closure_0;
     if (tmp) {
-      tmp = !closure_1_0(closure_1_2[11]).hasFlag(id.flags, closure_1_7.SUPPRESS_NOTIFICATION);
-      const obj = closure_1_0(closure_1_2[11]);
+      tmp = !hasFlag.hasFlag(item.flags, PromotionFlags.SUPPRESS_NOTIFICATION);
     }
     if (tmp) {
-      let hasItem = null != id.partnerId;
+      let hasItem = null != item.partnerId;
       if (hasItem) {
-        const DEDICATED_SURFACE_PARTNER_IDS = closure_1_0(closure_1_2[15]).DEDICATED_SURFACE_PARTNER_IDS;
-        hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(id.partnerId);
+        const DEDICATED_SURFACE_PARTNER_IDS = CountryListMode.DEDICATED_SURFACE_PARTNER_IDS;
+        hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(item.partnerId);
       }
       tmp = !hasItem;
     }
@@ -211,7 +210,7 @@ export const getNextUnseenOutboundPromotionId = function getNextUnseenOutboundPr
   }
   let found1 = found;
   if (null != prop) {
-    found1 = found.filter((id) => 1 === prop(closure_1_2[13]).compare(id.id, prop));
+    found1 = found.filter((item, index) => 1 === prop(dependencyMap[13]).compare(item.id, prop));
   }
   let id = null;
   if (0 !== found1.length) {
@@ -228,17 +227,16 @@ export const getNextUnseenOutboundPromotionId = function getNextUnseenOutboundPr
 };
 export const shouldShowOutboundPromotionNotice = function shouldShowOutboundPromotionNotice() {
   ({ outboundPromotions, consumedInboundPromotionId: require } = closure_6);
-  const found = outboundPromotions.filter((id) => {
-    let tmp = id.id !== closure_0;
+  const found = outboundPromotions.filter((item, index) => {
+    let tmp = item.id !== closure_0;
     if (tmp) {
-      tmp = !closure_1_0(closure_1_2[11]).hasFlag(id.flags, closure_1_7.SUPPRESS_NOTIFICATION);
-      const obj = closure_1_0(closure_1_2[11]);
+      tmp = !hasFlag.hasFlag(item.flags, PromotionFlags.SUPPRESS_NOTIFICATION);
     }
     if (tmp) {
-      let hasItem = null != id.partnerId;
+      let hasItem = null != item.partnerId;
       if (hasItem) {
-        const DEDICATED_SURFACE_PARTNER_IDS = closure_1_0(closure_1_2[15]).DEDICATED_SURFACE_PARTNER_IDS;
-        hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(id.partnerId);
+        const DEDICATED_SURFACE_PARTNER_IDS = CountryListMode.DEDICATED_SURFACE_PARTNER_IDS;
+        hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(item.partnerId);
       }
       tmp = !hasItem;
     }
@@ -254,7 +252,7 @@ export const shouldShowOutboundPromotionNotice = function shouldShowOutboundProm
   }
   let found1 = found;
   if (null != prop) {
-    found1 = found.filter((id) => 1 === prop(closure_1_2[13]).compare(id.id, prop));
+    found1 = found.filter((item, index) => 1 === prop(dependencyMap[13]).compare(item.id, prop));
   }
   let id = null;
   if (0 !== found1.length) {
@@ -270,7 +268,6 @@ export const shouldShowOutboundPromotionNotice = function shouldShowOutboundProm
   let tmp6 = null != id;
   if (tmp6) {
     tmp6 = !addVersionedDismissedContent.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(DismissibleContent.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, { cooldownDurationMs: 259200000 });
-    let obj = addVersionedDismissedContent;
   }
   return tmp6;
 };
@@ -283,7 +280,7 @@ export const isDedicatedSurfacePromotion = function isDedicatedSurfacePromotion(
   return hasItem;
 };
 export const shouldShowOutboundPromotionOnPlatform = function shouldShowOutboundPromotionOnPlatform(promotion) {
-  const isIOSResult = set2.isIOS();
+  const isIOSResult = obj132.isIOS();
   let tmp2 = !isIOSResult;
   if (isIOSResult) {
     tmp2 = !promotion.hasFlag(PromotionFlags.IS_BLOCKED_IOS);
@@ -301,30 +298,30 @@ export const getClaimedOutboundPromotionCodeMap = function getClaimedOutboundPro
   return obj;
 };
 export const getClaimedEndedOutboundPromotions = function getClaimedEndedOutboundPromotions(arr, arr2) {
-  const set = new Set(arr2.map((id) => id.id));
-  return arr.filter((promotion) => {
-    promotion = promotion.promotion;
+  const set = new Set(arr2.map((item, index) => item.id));
+  return arr.filter((item, index) => {
+    const promotion = item.promotion;
     const hasItem = set.has(promotion.id);
     let tmp2 = !hasItem;
     if (!hasItem) {
-      tmp2 = promotion.promotionType !== set(closure_1_2[15]).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
+      tmp2 = promotion.promotionType !== set(dependencyMap[15]).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
     }
     if (tmp2) {
       let hasItem1 = null != promotion.partnerId;
       if (hasItem1) {
-        const DEDICATED_SURFACE_PARTNER_IDS = set(closure_1_2[15]).DEDICATED_SURFACE_PARTNER_IDS;
+        const DEDICATED_SURFACE_PARTNER_IDS = set(dependencyMap[15]).DEDICATED_SURFACE_PARTNER_IDS;
         hasItem1 = DEDICATED_SURFACE_PARTNER_IDS.has(promotion.partnerId);
       }
       tmp2 = !hasItem1;
     }
     if (tmp2) {
-      const isIOSResult = set(closure_1_2[9]).isIOS();
+      const isIOSResult = set(dependencyMap[9]).isIOS();
       let tmp12 = !isIOSResult;
       if (isIOSResult) {
-        tmp12 = !promotion.hasFlag(closure_1_7.IS_BLOCKED_IOS);
+        tmp12 = !promotion.hasFlag(PromotionFlags.IS_BLOCKED_IOS);
       }
       tmp2 = tmp12;
-      const obj = set(closure_1_2[9]);
+      const obj = set(dependencyMap[9]);
     }
     return tmp2;
   });

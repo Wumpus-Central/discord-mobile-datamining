@@ -2,46 +2,41 @@
 
 // Module 15781 (NotificationNudgeBottomSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import EventActionType from "EventActionType" /* 11582 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ EventActionType: c5, NotificationNudgeAnalyticsAction: closure_6 } = EventActionType);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, illustration: null, title: null, body: null, buttonsContainer: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_24, alignItems: "center" };
+const createCacheKey = { marginHorizontal: ThemesDefault.space.PX_24, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginVertical: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { textAlign: "center" };
-const obj1 = { marginVertical: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
-const obj2 = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_8, width: "100%" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_8, width: "100%" };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/NotificationNudgeBottomSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/notification/NotificationNudgeBottomSheet.tsx");
 
 export default function NotificationNudgeBottomSheet(actionLocation) {
   actionLocation = actionLocation.actionLocation;
   const surface = actionLocation.surface;
   const markAsDismissed = actionLocation.markAsDismissed;
   const onHide = actionLocation.onHide;
-  let callback;
   ({ title, body } = actionLocation);
   const tmp = callback3();
   const items = [surface];
   const effect = onHide.useEffect(() => {
-    let obj = surface(markAsDismissed[8]);
-    obj = { action: closure_1_6.IMPRESSION, prompt_type: surface };
-    obj.track(closure_1_7.CONTEXTUAL_REMINDER_ACTION, obj);
+    surface(markAsDismissed[8]);
+    const obj = { action: closure_1_6.IMPRESSION, prompt_type: surface };
+    obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj);
   }, items);
   const items1 = [onHide];
-  callback = onHide.useCallback(() => {
+  const callback = onHide.useCallback(() => {
     surface(markAsDismissed[9]).hideActionSheet();
     if (onHide != null) {
       onHide();
@@ -50,22 +45,20 @@ export default function NotificationNudgeBottomSheet(actionLocation) {
   const items2 = [surface, actionLocation, callback, markAsDismissed];
   const items3 = [surface, callback, markAsDismissed];
   const callback1 = onHide.useCallback(() => {
-    let obj = surface(markAsDismissed[8]);
-    obj = { action: closure_1_6.ACCEPT, prompt_type: surface };
-    obj.track(closure_1_7.CONTEXTUAL_REMINDER_ACTION, obj);
-    markAsDismissed(closure_1_8.USER_DISMISS);
+    surface(markAsDismissed[8]);
+    const obj = { action: closure_1_6.ACCEPT, prompt_type: surface };
+    obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj);
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
     const pushNotificationPermission = actionLocation(markAsDismissed[10]).requestPushNotificationPermission(closure_1_5.ALLOW_TO_REQUEST, actionLocation, callback);
   }, items2);
   const callback2 = onHide.useCallback(() => {
-    let obj = surface(markAsDismissed[8]);
-    obj = { action: closure_1_6.DISMISS, prompt_type: surface };
-    obj.track(closure_1_7.CONTEXTUAL_REMINDER_ACTION, obj);
-    markAsDismissed(closure_1_8.USER_DISMISS);
+    surface(markAsDismissed[8]);
+    const obj = { action: closure_1_6.DISMISS, prompt_type: surface };
+    obj.track(AnalyticEvents.CONTEXTUAL_REMINDER_ACTION, obj);
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
     callback();
   }, items3);
-  let obj = { children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.illustration, children: callback(actionLocation(markAsDismissed[12]).BellSpotIllustration, { scale: 0.8 }) };
+  let obj = { style: tmp.illustration, children: callback(actionLocation(markAsDismissed[12]).BellSpotIllustration, { scale: 0.8 }) };
   const items4 = [callback(callback, obj), callback(actionLocation(markAsDismissed[13]).Text, { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: title }), callback(actionLocation(markAsDismissed[13]).Text, { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: body }), ];
   const obj3 = { style: tmp.buttonsContainer, children: null };
   const obj4 = { children: null };

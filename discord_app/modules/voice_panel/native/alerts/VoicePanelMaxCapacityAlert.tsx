@@ -3,12 +3,12 @@
 // Module 16403 (VoicePanelMaxCapacityAlert)
 import noopAll from "noop" /* 19 */;
 import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 16401 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelMaxCapacityAlert.tsx");
 
 export default function VoicePanelMaxCapacityAlert(channelId) {
   channelId = channelId.channelId;

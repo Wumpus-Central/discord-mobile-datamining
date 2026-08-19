@@ -1,9 +1,9 @@
 // === Module 11851: ContactSyncLandingPage ===
 
 // Module 11851 (ContactSyncLandingPage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/contact_sync/native/ContactSyncConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/contact_sync/native/ContactSyncConstants.tsx");
 
 export const ContactSyncLandingPage = { DEFAULT: 0, [0]: "DEFAULT", UPSELL_ACTION_SHEET: 1, [1]: "UPSELL_ACTION_SHEET" };
 export const ContactSyncScenes = { WELCOME: "WELCOME", NAME_INPUT: "NAME_INPUT", SUGGESTIONS: "SUGGESTIONS", ADD_PHONE: "ADD_PHONE", VERIFY_PHONE: "VERIFY_PHONE", VERIFY_PASSWORD: "VERIFY_PASSWORD" };

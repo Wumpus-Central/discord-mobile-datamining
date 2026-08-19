@@ -2,10 +2,10 @@
 
 // Module 11988 (useVirtualCurrencyBalance)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "redeemError" /* 9254 */;
+import redeemError from "redeemError" /* 9254 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx");
 
 export const useVirtualCurrencyBalance = function useVirtualCurrencyBalance() {
   const items = [closure_2];

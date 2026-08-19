@@ -9,9 +9,9 @@ import TwinButtons from "TwinButtons" /* 8811 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const md = require("getIconSize").ICON_SIZE.md;
 const result = (ThemesDefault.space.PX_32 - md) / 2;
@@ -19,12 +19,10 @@ const TEXT_DEFAULT = ThemesDefault.colors.TEXT_DEFAULT;
 let obj = { shape: require("SolidCutout").CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [obj];
 obj = { container: { borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, marginHorizontal: ThemesDefault.space.PX_4, flexDirection: "column", alignItems: "center", padding: result }, label: null, dot: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_4 };
+const createCacheKey = { marginTop: ThemesDefault.space.PX_4 };
 obj[1] = createCacheKey;
-let obj1 = { borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, marginHorizontal: ThemesDefault.space.PX_4, flexDirection: "column", alignItems: "center", padding: result };
 obj[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: ThemesDefault.radii.round, height: 8, width: 8, position: "absolute", right: 0, top: 0 };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: ThemesDefault.radii.round, height: 8, width: 8, position: "absolute", right: 0, top: 0 };
 const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) => {
   ({ accessibilityLabel, label, showRedDot } = arg0);
   ({ onPress, IconComponent } = arg0);
@@ -36,14 +34,13 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   const tmp3 = callback(IconComponent, obj);
   let tmp4 = tmp3;
   if (showRedDot) {
-    obj = { children: null };
     obj = { cutouts: null, children: null };
     obj[0] = items;
     obj[1] = tmp3;
-    items = [tmp2(SolidCutoutDefault, obj), ];
+    items = [callback(SolidCutoutDefault, obj), ];
     obj1 = { style: null };
     obj1[0] = tmp.dot;
-    items[1] = tmp2(View, obj1);
+    items[1] = callback(View, obj1);
     obj[0] = items;
     tmp4 = callback2(View, obj);
   }
@@ -65,6 +62,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   obj3[7] = items1;
   return callback2(TwinButtons.PressableScale, obj3);
 }));
-const result1 = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx");
+const result1 = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx");
 
 export default memoResult;

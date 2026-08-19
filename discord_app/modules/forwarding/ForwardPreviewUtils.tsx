@@ -1,17 +1,16 @@
 // === Module 12040: useForwardPreviewContent ===
 
 // Module 12040 (useForwardPreviewContent)
-import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
 
 export const useForwardPreviewContent = function useForwardPreviewContent(message) {
   message = message.message;
   ({ channel: dependencyMap, forwardOptions } = message);
-  let onlyAttachmentIds;
   let onlyEmbedIndices;
-  onlyAttachmentIds = undefined;
+  let onlyAttachmentIds;
   if (forwardOptions != null) {
     onlyAttachmentIds = forwardOptions.onlyAttachmentIds;
   }
@@ -27,7 +26,7 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
   let attachments = message.attachments;
   if (null != onlyAttachmentIds) {
     const attachments1 = message.attachments;
-    attachments = attachments1.filter((id) => onlyAttachmentIds.includes(id.id));
+    attachments = attachments1.filter((item, index) => onlyAttachmentIds.includes(item.id));
   } else if (null != onlyEmbedIndices) {
     attachments = [];
   }
@@ -37,12 +36,12 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
   if (obj.useStateFromStores(items1, () => {
     let shouldStripEmbedsResult = null != closure_1;
     if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = !message(closure_1_1[2]).canEmbedLinks(tmp, onlyAttachmentIds);
-      const obj = message(closure_1_1[2]);
+      shouldStripEmbedsResult = !message(dependencyMap[2]).canEmbedLinks(tmp, onlyAttachmentIds);
+      const obj = message(dependencyMap[2]);
     }
     if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = message(closure_1_1[2]).shouldStripEmbeds(message);
-      const obj2 = message(closure_1_1[2]);
+      shouldStripEmbedsResult = message(dependencyMap[2]).shouldStripEmbeds(message);
+      const obj2 = message(dependencyMap[2]);
     }
     return shouldStripEmbedsResult;
   })) {
@@ -56,7 +55,7 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
     }
     let result = message;
     if (tmp6) {
-      const mapped = items.map((url) => url.url);
+      const mapped = items.map((item, index) => item.url);
       result = message.set("content", mapped.join("\n"));
     }
     let tmp8 = "" === result.content;
@@ -82,7 +81,7 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
     let embeds = message.embeds;
     if (null != onlyEmbedIndices) {
       const embeds1 = message.embeds;
-      embeds = embeds1.filter((arg0, arg1) => onlyEmbedIndices.includes(arg1));
+      embeds = embeds1.filter((item, index) => onlyEmbedIndices.includes(index));
     } else if (null != onlyAttachmentIds) {
       embeds = [];
     }

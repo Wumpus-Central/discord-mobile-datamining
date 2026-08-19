@@ -1,16 +1,16 @@
 // === Module 17097: AgeVerificationScreen ===
 
 // Module 17097 (AgeVerificationScreen)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_8 = createCacheKey.createStyles({ helpLink: { textAlign: "center" } });
-let result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
 
 export default function AgeVerificationScreen() {
   const memo = React.useMemo(() => memo(stateFromStores[6]).v4(), []);

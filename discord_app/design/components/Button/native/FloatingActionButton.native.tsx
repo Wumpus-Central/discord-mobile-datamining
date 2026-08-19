@@ -3,18 +3,17 @@
 // Module 8818 (styles)
 import ThemesDefault from "Themes" /* 712 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 const styles = createCacheKey.createStyles(() => {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = { button: null, iconButtonPill: null };
-  obj = {};
+  let obj = {};
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
   obj[0] = obj;
   obj = { minWidth: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, minHeight: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, padding: 0 };
@@ -31,7 +30,7 @@ const styles = createCacheKey.createStyles(() => {
 });
 let closure_6 = { mass: 0.5, damping: 80, stiffness: 320 };
 let closure_7 = { code: "function FloatingActionButtonNativeTsx1(){const{withSpring,positionBottom,DEFAULT_POSITION_OFFSET,SPRING_CONFIG,positionRight}=this.__closure;var _positionBottom,_positionRight;return{position:'absolute',bottom:withSpring((_positionBottom=positionBottom)!==null&&_positionBottom!==void 0?_positionBottom:DEFAULT_POSITION_OFFSET,SPRING_CONFIG),right:withSpring((_positionRight=positionRight)!==null&&_positionRight!==void 0?_positionRight:DEFAULT_POSITION_OFFSET,SPRING_CONFIG)};}" };
-const result = require("set").fileFinishedImporting("design/components/Button/native/FloatingActionButton.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Button/native/FloatingActionButton.native.tsx");
 
 export const DEFAULT_POSITION_OFFSET = 16;
 export const useStyles = styles;

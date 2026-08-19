@@ -1,9 +1,9 @@
 // === Module 11582: EventActionType ===
 
 // Module 11582 (EventActionType)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/nuf/native/components/notification/NotificationPermissionConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/nuf/native/components/notification/NotificationPermissionConstants.tsx");
 
 export const EventActionType = { SKIP_STEP: "skip_step", ALLOW_TO_REQUEST: "allow_to_request", REQUEST: "request", TO_SETTINGS: "to_settings", REQUEST_PROVISIONAL: "request_provisional", DISMISS: "dismiss" };
 export const EventActionLocation = { ALERT: "alert", AUTO_PROMPT: "auto_prompt", NAV: "nav", FOOTER: "footer", CTA: "cta", DM_LIST: "dm_list", MESSAGE_SENT: "message_sent", USER_SETTING: "user_setting", NOTIFICATION_SETTING: "notification_setting", INVITE_ACCEPTED: "invite_accepted", FRIEND_REQUEST_SENT: "friend_request_sent", FRIEND_REQUEST_ACCEPTED: "friend_request_accepted", NOTIFICATION_CENTER: "notification_center", CHANNEL_BANNER: "channel_banner", POST_REACTION: "post_reaction", GUILD_OPEN: "guild_open", CALL_DISCONNECT: "call_disconnect" };

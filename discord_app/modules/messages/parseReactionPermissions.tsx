@@ -1,9 +1,9 @@
 // === Module 10518: parseReactionPermissions ===
 
 // Module 10518 (parseReactionPermissions)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
 
 export default function parseReactionPermissions(arg0) {
   ({ channel, canChat, isLurking, isActiveChannelOrUnarchivableThread, renderReactions, canAddNewReactions, communicationDisabled, isAutomodQuarantined } = arg0);
@@ -25,7 +25,6 @@ export default function parseReactionPermissions(arg0) {
   }
   if (!tmp4) {
     tmp4 = !((true === canAddNewReactions || isPrivateResult) && !isSystemDMResult && isActiveChannelOrUnarchivableThread && !isMediaThreadResult);
-    const tmp5 = (true === canAddNewReactions || isPrivateResult) && !isSystemDMResult && isActiveChannelOrUnarchivableThread && !isMediaThreadResult;
   }
   obj[1] = tmp4;
   if (!isLurking) {

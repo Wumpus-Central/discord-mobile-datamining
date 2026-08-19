@@ -1,9 +1,9 @@
 // === Module 13536: useAccessibilityNativeStackFocusTracking ===
 
 // Module 13536 (useAccessibilityNativeStackFocusTracking)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx");
 
 export const useAccessibilityNativeStackFocusTracking = function useAccessibilityNativeStackFocusTracking() {
   return React.useMemo(() => {

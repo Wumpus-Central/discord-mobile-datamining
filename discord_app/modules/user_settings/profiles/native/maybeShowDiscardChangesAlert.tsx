@@ -1,11 +1,11 @@
 // === Module 9446: maybeShowDiscardChangesAlert ===
 
 // Module 9446 (maybeShowDiscardChangesAlert)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _modDef4656 from "module_4656" /* 4656 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
 
 export default function maybeShowDiscardChangesAlert(onHasEdits) {
   ({ resetPending: require, onConfirm } = onHasEdits);
@@ -14,8 +14,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     if (onHasEdits != null) {
       onHasEdits();
     }
-    let obj = onConfirm(4656);
-    obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
+    onConfirm(4656);
+    const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t.pvRCSu);
     const intl2 = getSystemLocale.intl;
@@ -39,8 +39,7 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
 };
 export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
   ({ onConfirm, onCancel } = arg0);
-  let obj = _modDef4656;
-  obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
+  const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.pvRCSu);
   const intl2 = getSystemLocale.intl;

@@ -6,12 +6,12 @@ import Pile from "Pile" /* 11788 */;
 import map from "map" /* 11789 */;
 import getListSummaryLabel from "getListSummaryLabel" /* 11790 */;
 import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 12125 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
 
 export const AvatarPile = function AvatarPile(arg0) {
   ({ totalCount, children } = arg0);
@@ -36,5 +36,5 @@ export const AvatarPile = function AvatarPile(arg0) {
   }
   items[1] = tmp6;
   obj[5] = items;
-  return closure_4(Pile.Pile, obj);
+  return callback(Pile.Pile, obj);
 };

@@ -9,18 +9,16 @@ import Text from "Text" /* 4734 */;
 import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 5437 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { sectionTitle: { marginBottom: 8 }, policy: { marginBottom: 16 }, borderColor: null, userContainer: null };
-createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 18 };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 18 };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionPolicySummary.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/native/AppealIngestionPolicySummary.tsx");
 
 export default function AppealIngestionPolicySummary(classification) {
   classification = classification.classification;
@@ -31,10 +29,9 @@ export default function AppealIngestionPolicySummary(classification) {
     description = classification.description;
   }
   const capitalizeTextResult = obj.capitalizeText(description);
-  obj = { style: tmp.policy, children: null };
   const tmp2Result = hexToRgba;
   obj = { style: tmp.sectionTitle, variant: "text-sm/bold", children: null };
-  const intl = tmp2(1236).intl;
+  const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.xsdcxh);
   const items = [callback(Text.Text, obj), ];
   const hexWithOpacityResult = hexToRgba.hexWithOpacity(tmp.borderColor.color, 0.08);

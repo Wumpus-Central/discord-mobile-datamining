@@ -1,7 +1,7 @@
 // === Module 4564: handleConnectionInfoChange ===
 
 // Module 4564 (handleConnectionInfoChange)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import awaitOnlineDefault from "awaitOnline" /* 1474 */;
@@ -22,8 +22,7 @@ function handleConnectionInfoChange(type) {
 }
 const NetworkConnectionTypes = ME.NetworkConnectionTypes;
 const NetworkConnectionSpeeds = ME.NetworkConnectionSpeeds;
-let UNKNOWN = NetworkConnectionTypes.UNKNOWN;
-UNKNOWN = NetworkConnectionSpeeds.UNKNOWN;
+let UNKNOWN = NetworkConnectionSpeeds.UNKNOWN;
 let c6 = null;
 const Store = initializeDefault.Store;
 class NetworkStoreClass extends Store {
@@ -32,7 +31,6 @@ const prototype = NetworkStoreClass.prototype;
 prototype["initialize"] = function initialize() {
   const networkInformation = awaitOnlineDefault.getNetworkInformation();
   networkInformation.then(handleConnectionInfoChange);
-  const obj = awaitOnlineDefault;
   awaitOnlineDefault.addChangeCallback(handleConnectionInfoChange);
 };
 prototype["getType"] = function getType() {
@@ -46,6 +44,6 @@ prototype["getServiceProvider"] = function getServiceProvider() {
 };
 NetworkStoreClass.displayName = "NetworkStore";
 const networkStoreClass = new NetworkStoreClass(dispatcherDefault, {});
-const result = set.fileFinishedImporting("stores/NetworkStore.tsx");
+const result = obj132.fileFinishedImporting("stores/NetworkStore.tsx");
 
 export default networkStoreClass;

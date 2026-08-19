@@ -1,11 +1,11 @@
 // === Module 4020: createFavoritesGuildChannelRecord ===
 
 // Module 4020 (createFavoritesGuildChannelRecord)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const ChannelTypes = ME.ChannelTypes;
-const result = set.fileFinishedImporting("modules/favorites/utils/createFavoritesGuildChannelRecord.tsx");
+const result = obj132.fileFinishedImporting("modules/favorites/utils/createFavoritesGuildChannelRecord.tsx");
 
 export const createFavoritesGuildChannelRecord = function createFavoritesGuildChannelRecord(arg0, order, toJS) {
   const constructor = new toJS.constructor(toJS.toJS());

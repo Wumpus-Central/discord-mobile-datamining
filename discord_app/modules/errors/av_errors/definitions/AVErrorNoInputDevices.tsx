@@ -3,12 +3,12 @@
 // Module 17056 (AVErrorNoInputDevicesDefinition)
 import mapped from "mapped" /* 9668 */;
 import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17055 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoInputDevices.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoInputDevices.tsx");
 
 export const AVErrorNoInputDevicesDefinition = {
   getActiveErrors(voiceState) {

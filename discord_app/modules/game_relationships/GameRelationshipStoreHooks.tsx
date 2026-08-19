@@ -1,12 +1,12 @@
 // === Module 12172: useGameRelationshipsByType ===
 
 // Module 12172 (useGameRelationshipsByType)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "recountRelationshipTypes" /* 5406 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import recountRelationshipTypes from "recountRelationshipTypes" /* 5406 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");
 
 export const useGameRelationshipsByType = function useGameRelationshipsByType(FRIEND) {
   const _require = FRIEND;

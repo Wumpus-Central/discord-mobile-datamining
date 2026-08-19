@@ -3,19 +3,18 @@
 // Module 5049 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
 
 let obj = {};
 let closure_1 = {};
-let set = new Set();
+const set = new Set();
 const Store = initializeDefault.Store;
 class GuildOnboardingMemberActionStore extends Store {
 }
 const prototype = GuildOnboardingMemberActionStore.prototype;
-prototype["getCompletedActions"] = function getCompletedActions(closure_0) {
+prototype["getCompletedActions"] = function getCompletedActions(guildId) {
   let tmp = null;
-  if (null != closure_0) {
-    tmp = dependencyMap[closure_0];
+  if (null != guildId) {
+    tmp = dependencyMap[guildId];
   }
   return tmp;
 };
@@ -81,7 +80,7 @@ obj = {
   }
 };
 const guildOnboardingMemberActionStore = new GuildOnboardingMemberActionStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingMemberActionStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingMemberActionStore.tsx");
 
 export default guildOnboardingMemberActionStore;
 export const NO_ACTIONS = obj;

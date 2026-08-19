@@ -1,9 +1,9 @@
 // === Module 7438: FSI ===
 
 // Module 7438 (FSI)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/bidi/IsolateString.tsx");
+const result = obj132.fileFinishedImporting("modules/bidi/IsolateString.tsx");
 
 export const FSI = "\u2068";
 export const PDI = "\u2069";

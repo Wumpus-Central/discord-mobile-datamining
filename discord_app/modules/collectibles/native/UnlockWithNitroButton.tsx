@@ -3,17 +3,19 @@
 // Module 11997 (UnlockWithNitroButton)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
 import CollapsingText from "CollapsingText" /* 4746 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
 import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 9581 */;
-import closure_3 from "updateProduct" /* 5319 */;
-import closure_4 from "map" /* 5324 */;
+import updateProduct from "updateProduct" /* 5319 */;
+import map from "map" /* 5324 */;
 import { ShopCtaEnum } from "items" /* 678 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");
 
 export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink) {
   let flag = shouldShrink.shouldShrink;
@@ -21,7 +23,6 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     flag = false;
   }
   ({ onTrackPress: require, text } = shouldShrink);
-  importDefault = undefined;
   let obj = initialize;
   const items = [closure_4, closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -33,14 +34,14 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   });
   importDefault = useOpenNitroSubscribeActionSheetDefault();
   if (text == null) {
-    const intl = tmp(1236).intl;
-    text = intl.string(tmp(1236).t.sEAnVH);
+    const intl = getSystemLocale.intl;
+    text = intl.string(getSystemLocale.t.sEAnVH);
   }
   let tmp4Result;
   if (flag) {
     obj = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: null };
     obj[3] = text;
-    tmp4Result = tmp4(tmp(4734).Text, obj);
+    tmp4Result = jsx(Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: null });
   }
   obj = { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null };
   let tmp6;
@@ -57,7 +58,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   obj[6] = jsx(NitroWheelIcon.NitroWheelIcon, { size: "sm", color: "white" });
   obj[7] = function onPress() {
     if (closure_0 != null) {
-      tmp(closure_1_5.UNLOCK_WITH_NITRO);
+      tmp(ShopCtaEnum.UNLOCK_WITH_NITRO);
     }
     callback2();
   };

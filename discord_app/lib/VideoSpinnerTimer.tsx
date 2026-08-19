@@ -4,16 +4,16 @@
 import timestampDefault from "timestamp" /* 3 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import sleep from "sleep" /* 4548 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionInfoChange" /* 4564 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "updateVoiceState" /* 4542 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import handleConnectionInfoChange from "handleConnectionInfoChange" /* 4564 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 const map = new Map();
-let result = require("set").fileFinishedImporting("lib/VideoSpinnerTimer.tsx");
+let result = require("obj132").fileFinishedImporting("lib/VideoSpinnerTimer.tsx");
 class VideoSpinnerTimer {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -26,7 +26,6 @@ const prototype = VideoSpinnerTimer.prototype;
 prototype["onSpinnerStarted"] = function onSpinnerStarted() {
   if (null == this.spinnerVisibleStart) {
     tmp.spinnerVisibleStart = sleep.now();
-    const obj = sleep;
   }
 };
 prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerContext, userId, arg2) {
@@ -82,9 +81,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
       obj[10] = store.getEffectiveConnectionSpeed();
       obj[11] = store.getServiceProvider();
       expandEventPropertiesDefault.track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
-      const obj2 = expandEventPropertiesDefault;
     }
-    const obj4 = map;
   }
 };
 

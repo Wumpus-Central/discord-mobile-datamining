@@ -1,7 +1,7 @@
 // === Module 7429: handleGuildTemplateResolveSuccess ===
 
 // Module 7429 (handleGuildTemplateResolveSuccess)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import createResolvedGuildTemplateDefault from "createResolvedGuildTemplate" /* 7288 */;
@@ -22,7 +22,6 @@ function handleGuildTemplateResolveSuccess(guildTemplate) {
     }
     const tmp7 = createResolvedGuildTemplateDefault(guildTemplate);
     for (const key10019 in tmp7) {
-      let tmp17 = key10019;
       obj[key10019] = tmp7[key10019];
       continue;
     }
@@ -69,18 +68,12 @@ prototype["getForGuild"] = function getForGuild(arg0) {
   const keys = map.keys();
   const obj = keys[Symbol.iterator]();
   while (obj !== undefined) {
-    let tmp3 = map;
     let value = map.get(tmp2);
     let tmp5 = value;
     if (null != value) {
-      let tmp6 = value;
       if ("sourceGuildId" in tmp5) {
-        let tmp7 = value;
         if (tmp5.sourceGuildId === arg0) {
-          let tmp8 = value;
-          let tmp9 = GuildTemplateStates;
           if (tmp5.state !== GuildTemplateStates.EXPIRED) {
-            let tmp10 = obj;
             obj.return();
             return value;
           }
@@ -105,8 +98,8 @@ const guildTemplateStore = new GuildTemplateStore(dispatcherDefault, {
   GUILD_TEMPLATE_RESOLVE_SUCCESS: handleGuildTemplateResolveSuccess,
   GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS: function handleGuildTemplateLoadForGuildSuccess(guildTemplates) {
     guildTemplates = guildTemplates.guildTemplates;
-    const item = guildTemplates.forEach((code) => {
-      code = code.code;
+    const item = guildTemplates.forEach((item, index) => {
+      const code = item.code;
       if (null != code) {
         const value = map.get(code);
         if (null != value) {
@@ -117,9 +110,8 @@ const guildTemplateStore = new GuildTemplateStore(dispatcherDefault, {
           obj[0] = code;
           obj[1] = constants.RESOLVING;
         }
-        const tmp7 = callback(table[1])(code);
+        const tmp7 = callback(table[1])(item);
         for (const key10018 in tmp7) {
-          let tmp17 = key10018;
           obj[key10018] = tmp7[key10018];
           continue;
         }
@@ -199,6 +191,6 @@ const guildTemplateStore = new GuildTemplateStore(dispatcherDefault, {
     c4 = null;
   }
 });
-let result = set.fileFinishedImporting("modules/guild_templates/GuildTemplateStore.tsx");
+let result = obj132.fileFinishedImporting("modules/guild_templates/GuildTemplateStore.tsx");
 
 export default guildTemplateStore;

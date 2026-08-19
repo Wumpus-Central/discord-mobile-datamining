@@ -4,29 +4,28 @@
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { GuildTagBadgeSize } from "items" /* 8168 */;
 import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let num = 10;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   num = 14;
 }
-set = { gapContainer: { height: num }, tagContainer: null, tag: null };
-set = { alignItems: "center", justifyContent: "center", flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, marginVertical: (num - 16) / 2, height: 16, gap: 2 };
+obj132 = { alignItems: "center", justifyContent: "center", flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, marginVertical: (num - 16) / 2, height: 16, gap: 2 };
 let num2 = 16;
-set[1] = set;
-if (set.isAndroid()) {
+obj132[1] = obj132;
+if (obj132.isAndroid()) {
   num2 = 13;
 }
-set[2] = { lineHeight: num2 };
-let closure_7 = createCacheKey.createStyles(set);
-const result = set.fileFinishedImporting("modules/guild_tag/native/VoiceGuildTag.tsx");
+obj132[2] = { lineHeight: num2 };
+let closure_7 = createCacheKey.createStyles(obj132);
+const result = obj132.fileFinishedImporting("modules/guild_tag/native/VoiceGuildTag.tsx");
 
 export default function VoiceGuildTagChiplet(userId) {
   userId = userId.userId;

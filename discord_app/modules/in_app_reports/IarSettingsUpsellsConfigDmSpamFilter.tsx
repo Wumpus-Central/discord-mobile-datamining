@@ -1,8 +1,8 @@
 // === Module 8149: items ===
 
 // Module 8149 (items)
-import set from "set" /* 2 */;
-import set2 from "set" /* 692 */;
+import obj132 from "obj132" /* 2 */;
+import set from "set" /* 692 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1306 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
@@ -28,7 +28,7 @@ const obj = {
 };
 const items = [ReportNames.ReportSubType.SUB_SPAM];
 obj[3] = items;
-const items1 = [set2.ChannelTypes.DM, set2.ChannelTypes.GROUP_DM];
+const items1 = [set.ChannelTypes.DM, set.ChannelTypes.GROUP_DM];
 obj[4] = items1;
 obj[5] = function onApply() {
   const DmSpamFilterV2 = explicitContentFromProto.DmSpamFilterV2;
@@ -39,6 +39,6 @@ obj[6] = function predicate() {
   const setting = DmSpamFilterV2.getSetting();
   return setting === create.DmSpamFilterV2.DISABLED;
 };
-const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx");
+const result = obj132.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx");
 
 export default obj;

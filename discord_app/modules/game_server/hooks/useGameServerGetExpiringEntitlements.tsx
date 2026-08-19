@@ -1,11 +1,11 @@
 // === Module 11728: useGameServerGetExpiringEntitlements ===
 
 // Module 11728 (useGameServerGetExpiringEntitlements)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleGameServerInstanceCreated" /* 4282 */;
+import noop from "noop" /* 19 */;
+import handleGameServerInstanceCreated from "handleGameServerInstanceCreated" /* 4282 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
 
 export default function useGameServerGetExpiringEntitlements(arg0) {
   const _require = arg0;

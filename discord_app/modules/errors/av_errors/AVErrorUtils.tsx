@@ -1,13 +1,13 @@
 // === Module 17058: getReportInboundErrors ===
 
 // Module 17058 (getReportInboundErrors)
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 12450 */;
-import closure_2 from "updateAveragedStatsHelper" /* 4557 */;
+import updateAveragedStatsHelper from "updateAveragedStatsHelper" /* 4557 */;
 
-require = arg1;
-let closure_3 = 10 * setDefault.Millis.SECOND;
-let result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorUtils.tsx");
+require = fn;
+let closure_3 = 10 * obj132Default.Millis.SECOND;
+let result = require("obj132").fileFinishedImporting("modules/errors/av_errors/AVErrorUtils.tsx");
 
 export const getReportInboundErrors = function getReportInboundErrors() {
   const WindowVisibilityVideoManager = isIncomingVideoEnabled.WindowVisibilityVideoManager;

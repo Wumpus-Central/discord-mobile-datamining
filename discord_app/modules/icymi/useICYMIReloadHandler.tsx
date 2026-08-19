@@ -1,11 +1,11 @@
 // === Module 15743: useICYMIReloadHandler ===
 
 // Module 15743 (useICYMIReloadHandler)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/icymi/useICYMIReloadHandler.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/icymi/useICYMIReloadHandler.tsx");
 
 export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
   closure_0 = showDot;
@@ -38,9 +38,9 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             return obj;
           } else {
             closure_0 = tmp2;
-            const ICYMIAnalytics = closure_1_0(9065).ICYMIAnalytics;
+            const ICYMIAnalytics = showDot(9065).ICYMIAnalytics;
             let str = "NoDotShown";
-            if (closure_1_0) {
+            if (showDot) {
               str = "DotShown";
             }
             obj1 = { variant: null, homeSessionId: "gravity_refresh" };

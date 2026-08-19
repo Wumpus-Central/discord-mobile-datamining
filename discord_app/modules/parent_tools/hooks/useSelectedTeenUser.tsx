@@ -2,12 +2,12 @@
 
 // Module 14250 (useSelectedTeenUser)
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "getSettings" /* 5299 */;
-import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import getSettings from "getSettings" /* 5299 */;
+import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
 
 export const useSelectedTeenUser = function useSelectedTeenUser() {
   const _require = useIsInAdultAgeGroupDefault();

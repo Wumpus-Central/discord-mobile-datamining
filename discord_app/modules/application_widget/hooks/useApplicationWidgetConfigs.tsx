@@ -1,12 +1,12 @@
 // === Module 12287: useApplicationWidgetConfigs ===
 
 // Module 12287 (useApplicationWidgetConfigs)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateApplicationConfigs" /* 12288 */;
+import noop from "noop" /* 19 */;
+import updateApplicationConfigs from "updateApplicationConfigs" /* 12288 */;
 import { FetchState } from "updateApplicationConfigs" /* 12288 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
 
 export default function useApplicationWidgetConfigs(arg0) {
   const _require = arg0;
@@ -19,16 +19,16 @@ export default function useApplicationWidgetConfigs(arg0) {
   stateFromStores1 = _require(setting[3]).useStateFromStores(items1, () => stateFromStores1.getDeveloperFetchState());
   const obj2 = _require(setting[3]);
   const items2 = [stateFromStores1];
-  const stateFromStoresArray = _require(setting[3]).useStateFromStoresArray(items2, () => lib.filter((arg0) => fetchState.getFetchState(arg0) === constants.NOT_FETCHED));
+  const stateFromStoresArray = _require(setting[3]).useStateFromStoresArray(items2, () => lib.filter((item, index) => fetchState.getFetchState(item) === constants.NOT_FETCHED));
   const obj3 = _require(setting[3]);
   const items3 = [stateFromStores1];
   const stateFromStoresArray1 = _require(setting[3]).useStateFromStoresArray(items3, () => {
-    const mapped = lib.map((arg0) => config.getConfig(arg0));
+    const mapped = lib.map((item, index) => config.getConfig(item));
     return mapped.filter(lib(setting[4]).isNotNullish);
   });
   const effect = stateFromStores.useEffect(() => {
     const featuredWidgetConfigs = lib(setting[5]).fetchFeaturedWidgetConfigs();
-    featuredWidgetConfigs.catch(() => {
+    featuredWidgetConfigs.catch((error) => {
 
     });
   }, []);
@@ -36,7 +36,7 @@ export default function useApplicationWidgetConfigs(arg0) {
   const effect1 = stateFromStores.useEffect(() => {
     if (setting) {
       const developerWidgetConfigs = lib(setting[5]).fetchDeveloperWidgetConfigs();
-      developerWidgetConfigs.catch(() => {
+      developerWidgetConfigs.catch((error) => {
 
       });
       const obj = lib(setting[5]);
@@ -45,14 +45,12 @@ export default function useApplicationWidgetConfigs(arg0) {
   const items5 = [stateFromStores1, stateFromStores, stateFromStoresArray, setting];
   const effect2 = stateFromStores.useEffect(() => {
     if (stateFromStores !== stateFromStoresArray.NOT_FETCHED) {
-      if (tmp !== tmp2.FETCHING) {
+      if (tmp !== stateFromStoresArray.FETCHING) {
         if (!setting) {
           for (const item10012 of stateFromStoresArray) {
-            let tmp7 = lib;
-            let tmp8 = setting;
             let obj = lib(setting[5]);
             let widgetConfigs = obj.fetchWidgetConfigs(item10012);
-            let catchPromise = widgetConfigs.catch(() => {
+            let catchPromise = widgetConfigs.catch((error) => {
 
             });
             continue;

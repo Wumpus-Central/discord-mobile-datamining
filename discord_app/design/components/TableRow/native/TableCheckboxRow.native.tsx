@@ -1,11 +1,11 @@
 // === Module 8558: TableCheckboxRow ===
 
 // Module 8558 (TableCheckboxRow)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
 
 export const TableCheckboxRow = function TableCheckboxRow(checked) {
   checked = checked.checked;
@@ -15,9 +15,8 @@ export const TableCheckboxRow = function TableCheckboxRow(checked) {
   }
   const onPress = checked.onPress;
   const merged = Object.assign(checked, Object.create(null));
-  let sharedValue;
   let obj = checked(onPress[2]);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
   const items = [sharedValue];
   const items1 = [onPress, sharedValue, checked];
   const callback = sharedValue.useCallback(() => {

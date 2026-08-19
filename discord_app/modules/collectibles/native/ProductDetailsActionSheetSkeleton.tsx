@@ -3,33 +3,26 @@
 // Module 12002 (ProductDetailsActionSheetSkeleton)
 import ThemesDefault from "Themes" /* 712 */;
 import _modDef4115 from "module_4115" /* 4115 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { flex: 1 }, scrollArea: { flex: 1 }, block: null, preview: null, info: null, title: null, description: null, price: null, purchaseSection: null, purchaseButton: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginTop: ThemesDefault.space.PX_12, marginHorizontal: ThemesDefault.space.PX_16, height: 280, borderRadius: ThemesDefault.radii.md };
-let obj1 = { marginTop: ThemesDefault.space.PX_12, marginHorizontal: ThemesDefault.space.PX_16, height: 280, borderRadius: ThemesDefault.radii.md };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
-const obj2 = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { height: 24, width: "60%", borderRadius: ThemesDefault.radii.xs };
-const obj3 = { height: 24, width: "60%", borderRadius: ThemesDefault.radii.xs };
 createCacheKey[6] = { height: 16, width: "90%", borderRadius: ThemesDefault.radii.xs };
-const obj4 = { height: 16, width: "90%", borderRadius: ThemesDefault.radii.xs };
 createCacheKey[7] = { marginTop: ThemesDefault.space.PX_12, height: 20, width: "30%", borderRadius: ThemesDefault.radii.xs };
-const obj5 = { marginTop: ThemesDefault.space.PX_12, height: 20, width: "30%", borderRadius: ThemesDefault.radii.xs };
 createCacheKey[8] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16 };
-const obj6 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[9] = { height: require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT, borderRadius: ThemesDefault.radii.round };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const obj7 = { height: require("MINIMUM_HIT_AREA").LARGE_BUTTON_HEIGHT, borderRadius: ThemesDefault.radii.round };
-let result = require("set").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetSkeleton.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetSkeleton.tsx");
 
 export default function ProductDetailsActionSheetSkeleton() {
   const tmp = callback3();
@@ -38,8 +31,8 @@ export default function ProductDetailsActionSheetSkeleton() {
   sharedValue = obj.useSharedValue(0.3);
   const items = [sharedValue];
   const effect = React.useEffect(() => {
-    const obj = sharedValue(closure_1_2[6]);
-    const result = sharedValue.set(obj.withRepeat(sharedValue(closure_1_2[7]).withTiming(1, { duration: 650 }), -1, true));
+    const obj = sharedValue(dependencyMap[6]);
+    const result = sharedValue.set(obj.withRepeat(sharedValue(dependencyMap[7]).withTiming(1, { duration: 650 }), -1, true));
   }, items);
   obj1 = sharedValue(4115);
   const fn = function o() {
@@ -49,7 +42,6 @@ export default function ProductDetailsActionSheetSkeleton() {
   fn.__workletHash = 4141895524740;
   fn.__initData = closure_8;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: tmp.container, children: null };
   obj = { style: tmp.scrollArea, children: null };
   const items1 = [, , ];
   ({ block: arr2[0], preview: arr2[1] } = tmp);

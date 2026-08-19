@@ -1,10 +1,10 @@
 // === Module 15973: useOnMessageSend ===
 
 // Module 15973 (useOnMessageSend)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { MessageStates } from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/useOnMessageSend.tsx");
 
 export default function useOnMessageSend(arg0) {
   closure_0 = arg0;

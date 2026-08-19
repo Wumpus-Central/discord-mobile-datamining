@@ -1,9 +1,9 @@
 // === Module 5995: vanityUrl ===
 
 // Module 5995 (vanityUrl)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroRubyBadgeSmallBadge-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroRubyBadgeSmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/638a53c8048d2b3847dc6feb48aca4cf9ba28aa97207729b9505b758956f8671.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/NitroRubyBadgeSmallBadge-2x.png";

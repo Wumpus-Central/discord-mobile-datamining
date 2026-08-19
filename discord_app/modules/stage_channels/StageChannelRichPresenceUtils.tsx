@@ -1,11 +1,11 @@
 // === Module 7254: unpackStageChannelParty ===
 
 // Module 7254 (unpackStageChannelParty)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "fetchFingerprint" /* 1218 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "buildStageChannelUserRoles" /* 4990 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import buildStageChannelUserRoles from "buildStageChannelUserRoles" /* 4990 */;
 import { STAGE_APPLICATION_ID } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
@@ -36,7 +36,7 @@ function unpackStageChannelParty(c17) {
   }
 }
 let c7 = "stage:";
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRichPresenceUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelRichPresenceUtils.tsx");
 
 export const packStageChannelPartyId = function packStageChannelPartyId(channel, stageInstanceByChannel) {
   let num = 0;
@@ -53,11 +53,10 @@ export const packStageChannelPartyId = function packStageChannelPartyId(channel,
     }
     const features2 = guild.features;
     let tmp4 = tmp3;
-    if (features2.has(tmp2.VERIFIED)) {
+    if (features2.has(GuildFeatures.VERIFIED)) {
       tmp4 = tmp3 | 4;
     }
     str = tmp4;
-    tmp2 = GuildFeatures;
   }
   return "" + c7 + channel.guild_id + ":" + channel.id + ":" + str.toString(16) + ":" + stageInstanceByChannel.id;
 };

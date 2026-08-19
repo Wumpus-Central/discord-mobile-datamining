@@ -1,24 +1,23 @@
 // === Module 10278: ? ===
 
 // Module 10278
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos" /* 10279 */;
 import keys from "keys" /* 644 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = keys.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));
-const result = set.fileFinishedImporting("modules/device/native/DeviceMedia.tsx");
+const result = obj132.fileFinishedImporting("modules/device/native/DeviceMedia.tsx");
 
 export default {
   getNextAssetPage(arg0) {
-    let assets;
-    let lastAssetIndex;
     dependencyMap = undefined;
     ({ batchSize, extensions } = arg0);
     state = state.getState();
-    assets = state.assets;
-    lastAssetIndex = state.lastAssetIndex;
+    const assets = state.assets;
+    const lastAssetIndex = state.lastAssetIndex;
     if (null != assets) {
       if (!state.hasReachedEnd) {
         if (assets.edges[assets.edges.length - 1] != null) {
@@ -91,7 +90,8 @@ export default {
               const tmp9Result = assets(tmp10[3]);
             }
             obj = { page: table, has_reached_end: tmp12 };
-            lastAssetIndex(table[2]).track(closure_1_3.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
+            lastAssetIndex(table[2]).track(AnalyticEvents.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
+            const obj3 = lastAssetIndex(table[2]);
           };
           lastAssetIndex(10279)(obj);
         }
@@ -108,10 +108,10 @@ export default {
         let num;
         if (edges != null) {
           edges = edges.edges;
-          num = edges.filter((node) => {
+          num = edges.filter((item, index) => {
             let uri;
-            if (node != null) {
-              node = node.node;
+            if (item != null) {
+              const node = item.node;
               if (node != null) {
                 const image = node.image;
                 if (image != null) {
@@ -122,8 +122,8 @@ export default {
             let tmp2 = null == uri;
             if (!tmp2) {
               let uri1;
-              if (node != null) {
-                const node2 = node.node;
+              if (item != null) {
+                const node2 = item.node;
                 if (node2 != null) {
                   const image2 = node2.image;
                   if (image2 != null) {
@@ -140,8 +140,7 @@ export default {
           num = 0;
         }
         if (num > 0) {
-          let obj = closure_1_1(closure_1_2[2]);
-          obj = { num_broken_assets: null, num_assets: null, location: "DeviceMedia.applyStateUpdate" };
+          let obj = { num_broken_assets: null, num_assets: null, location: "DeviceMedia.applyStateUpdate" };
           obj[0] = num;
           let length;
           if (edges != null) {
@@ -151,21 +150,21 @@ export default {
             }
           }
           obj[1] = length;
-          obj.track(closure_1_3.MEDIA_PICKER_ASSETS_DEBUG, obj);
+          obj.track(AnalyticEvents.MEDIA_PICKER_ASSETS_DEBUG, obj);
         }
-        batchSize(closure_1_2[3]).batchUpdates(() => {
-          const obj = { assets: closure_0, page: 0, lastAssetIndex: closure_0, endCursor: null, hasReachedEnd: null };
+        batchSize(dependencyMap[3]).batchUpdates(() => {
+          const obj = { assets: edges, page: 0, lastAssetIndex: edges, endCursor: null, hasReachedEnd: null };
           let end_cursor;
-          if (closure_0 != null) {
-            const page_info = tmp2.page_info;
+          if (edges != null) {
+            const page_info = edges.page_info;
             if (page_info != null) {
               end_cursor = page_info.end_cursor;
             }
           }
           obj[3] = end_cursor;
           let num;
-          if (closure_0 != null) {
-            const page_info2 = tmp2.page_info;
+          if (edges != null) {
+            const page_info2 = edges.page_info;
             if (page_info2 != null) {
               num = page_info2.has_next_page;
             }
@@ -176,6 +175,7 @@ export default {
           obj[4] = !num;
           closure_2_4.setState(obj);
         });
+        const obj3 = batchSize(dependencyMap[3]);
       }
     });
   },

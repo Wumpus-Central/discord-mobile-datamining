@@ -4,22 +4,22 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import NotificationCenterScenes from "NotificationCenterScenes" /* 4802 */;
-import closure_3 from "getHash" /* 4288 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import getHash from "getHash" /* 4288 */;
 import { isGuildEventEnded } from "scheduledEventSort" /* 4370 */;
-import closure_5 from "hasFlag" /* 4031 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import hasFlag from "hasFlag" /* 4031 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { RelationshipTypes } from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function _validate(id) {
   return null != id.id && null != id.type;
 }
 function toNotificationCenterItem(item_enum) {
   let tmp3 = item_enum.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
   if (tmp3) {
-    tmp3 = item_enum.type === tmp(4802).NotificationCenterItems.LIFECYCLE_ITEM;
+    tmp3 = item_enum.type === NotificationCenterScenes.NotificationCenterItems.LIFECYCLE_ITEM;
   }
   if (tmp3) {
     item_enum.deeplink = "https://discord.com/feature/composeMessage";
@@ -29,8 +29,8 @@ function toNotificationCenterItem(item_enum) {
   obj.kind = "notification-center-item";
   let messageRecord;
   if (null != item_enum.message) {
-    messageRecord = tmp(4803).createMessageRecord(item_enum.message);
-    const tmpResult = tmp(4803);
+    messageRecord = createMinimalMessageRecord.createMessageRecord(item_enum.message);
+    const tmpResult = createMinimalMessageRecord;
   }
   obj.message = messageRecord;
   let id;
@@ -45,7 +45,7 @@ function handleAddItem(type) {
     const item2 = type.item;
     let tmp3 = item2.item_enum === NotificationCenterScenes.ItemEnum.FIRST_MESSAGE;
     if (tmp3) {
-      tmp3 = item2.type === tmp(4802).NotificationCenterItems.LIFECYCLE_ITEM;
+      tmp3 = item2.type === NotificationCenterScenes.NotificationCenterItems.LIFECYCLE_ITEM;
     }
     if (tmp3) {
       item2.deeplink = "https://discord.com/feature/composeMessage";
@@ -55,8 +55,8 @@ function handleAddItem(type) {
     obj.kind = "notification-center-item";
     let messageRecord;
     if (null != item2.message) {
-      messageRecord = tmp(4803).createMessageRecord(item2.message);
-      const tmpResult = tmp(4803);
+      messageRecord = createMinimalMessageRecord.createMessageRecord(item2.message);
+      const tmpResult = createMinimalMessageRecord;
     }
     obj.message = messageRecord;
     let id;
@@ -109,7 +109,7 @@ function handleRelationshipAddOrUpdate(relationship) {
       }
     }
   }
-  let tmp11 = type !== tmp2.FRIEND;
+  let tmp11 = type !== RelationshipTypes.FRIEND;
   if (!tmp11) {
     tmp11 = null == relationship.user;
   }
@@ -118,24 +118,24 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   if (!tmp11) {
     const prop = obj.notifCenterLocalItems;
-    obj.notifCenterLocalItems = prop.map((type) => {
-      let tmp4 = type.type === relationship(user[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
+    obj.notifCenterLocalItems = prop.map((item, index) => {
+      let tmp4 = item.type === relationship(user[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
       if (tmp4) {
-        const other_user = type.other_user;
+        const other_user = item.other_user;
         let id;
         if (other_user != null) {
           id = other_user.id;
         }
         tmp4 = id === tmp3;
       }
-      let tmp7 = type;
+      let tmp7 = item;
       if (tmp4) {
         obj = {};
-        const merged = Object.assign(type);
+        const merged = Object.assign(item);
         obj.acked = true;
         obj.forceUnacked = false;
         const _HermesInternal = HermesInternal;
-        obj.local_id = "incoming_friend_requests_accepted_" + user.id + "_" + type.id;
+        obj.local_id = "incoming_friend_requests_accepted_" + user.id + "_" + item.id;
         obj.type = relationship(user[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
         tmp7 = obj;
       }
@@ -144,60 +144,58 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   if (tmp14) {
     const prop1 = obj.notifCenterLocalItems;
-    obj.notifCenterLocalItems = prop1.filter((type) => {
-      let tmp4 = type.type === relationship(user[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
+    obj.notifCenterLocalItems = prop1.filter((item, index) => {
+      let tmp4 = item.type === relationship(user[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
       if (tmp4) {
-        const other_user = type.other_user;
+        const other_user = item.other_user;
         let id;
         if (other_user != null) {
           id = other_user.id;
         }
-        tmp4 = id === tmp3;
+        tmp4 = id === c1;
       }
       if (!tmp4) {
-        let tmp7 = type.type === tmp(tmp2[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
+        let tmp7 = item.type === relationship(user[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
         if (tmp7) {
-          const other_user2 = type.other_user;
+          const other_user2 = item.other_user;
           let id1;
           if (other_user2 != null) {
             id1 = other_user2.id;
           }
-          tmp7 = id1 === tmp3;
+          tmp7 = id1 === c1;
         }
         tmp4 = tmp7;
       }
       if (!tmp4) {
-        let tmp10 = type.type === tmp(tmp2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
+        let tmp10 = item.type === relationship(user[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
         if (tmp10) {
-          const other_user3 = type.other_user;
+          const other_user3 = item.other_user;
           let id2;
           if (other_user3 != null) {
             id2 = other_user3.id;
           }
-          tmp10 = id2 === tmp3;
+          tmp10 = id2 === c1;
         }
         tmp4 = tmp10;
       }
       if (!tmp4) {
-        let tmp13 = type.type === tmp(tmp2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
+        let tmp13 = item.type === relationship(user[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
         if (tmp13) {
-          const other_user4 = type.other_user;
+          const other_user4 = item.other_user;
           let id3;
           if (other_user4 != null) {
             id3 = other_user4.id;
           }
-          tmp13 = id3 === tmp3;
+          tmp13 = id3 === c1;
         }
         tmp4 = tmp13;
       }
       return !tmp4;
     });
   }
+  tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
-let set = new Set();
-obj[6] = set;
-obj[7] = [];
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
@@ -206,12 +204,12 @@ prototype["initialize"] = function initialize(notifCenterItems) {
   this.waitFor(closure_7, closure_6, closure_3);
   if (null != notifCenterItems) {
     notifCenterItems = notifCenterItems.notifCenterItems;
-    const mapped = notifCenterItems.map((message) => {
+    const mapped = notifCenterItems.map((item, index) => {
       obj = {};
-      const merged = Object.assign(message);
+      const merged = Object.assign(item);
       let tmp2;
-      if (null != message.message) {
-        tmp2 = new closure_5(message.message);
+      if (null != item.message) {
+        tmp2 = new closure_5(item.message);
       }
       obj.message = tmp2;
       return obj;
@@ -227,12 +225,12 @@ prototype["initialize"] = function initialize(notifCenterItems) {
   }
 };
 prototype["getState"] = function getState() {
-  function pack(message) {
+  function pack(item, index) {
     obj = {};
-    const merged = Object.assign(message);
+    const merged = Object.assign(item);
     let toJSResult;
-    if (null != message.message) {
-      message = message.message;
+    if (null != item.message) {
+      const message = item.message;
       toJSResult = message.toJS();
     }
     obj.message = toJSResult;
@@ -283,7 +281,7 @@ Object.defineProperty(prototype, "errored", {
   set: undefined
 });
 Object.defineProperty(prototype, "active", {
-  get: function active(arg0) {
+  get: function active(BRAND_500) {
     return obj.notifCenterActive;
   },
   set: undefined
@@ -307,12 +305,12 @@ obj = {
     const items = [];
     const set = new Set();
     relationships = relationships.relationships;
-    let item = relationships.forEach((arg0) => {
-      ({ id, since, user_ignored, type, is_spam_request, origin_application_id } = arg0);
+    let item = relationships.forEach((item, index) => {
+      ({ id, since, user_ignored, type, is_spam_request, origin_application_id } = item);
       if (user_ignored) {
         set.add(id);
       }
-      if (type === closure_1_8.PENDING_INCOMING) {
+      if (type === RelationshipTypes.PENDING_INCOMING) {
         if (!is_spam_request) {
           if (!user_ignored) {
             if (null != since) {
@@ -320,7 +318,8 @@ obj = {
               if (null == user) {
                 return null;
               } else {
-                items.push(items(closure_1_2[8]).incomingFriendRequestLocalItem(user, since, origin_application_id));
+                items.push(items(dependencyMap[8]).incomingFriendRequestLocalItem(user, since, origin_application_id));
+                obj = items(dependencyMap[8]);
               }
             }
           }
@@ -329,32 +328,32 @@ obj = {
       return null;
     });
     const gameRelationships = relationships.gameRelationships;
-    const item1 = gameRelationships.forEach((id) => {
-      id = id.id;
-      if (id.type === closure_1_8.PENDING_INCOMING) {
+    const item1 = gameRelationships.forEach((item, index) => {
+      const id = item.id;
+      if (item.type === RelationshipTypes.PENDING_INCOMING) {
         if (!set.has(id)) {
           const user = closure_1_7.getUser(id);
           if (null != user) {
-            items.push(items(closure_1_2[8]).incomingGameFriendRequestLocalItem(user, tmp2, tmp));
-            obj = items(closure_1_2[8]);
+            items.push(items(dependencyMap[8]).incomingGameFriendRequestLocalItem(user, tmp2, tmp));
+            obj = items(dependencyMap[8]);
           }
         }
       }
     });
     const guilds = relationships.guilds;
-    const item2 = guilds.forEach((guild_scheduled_events) => {
-      const prop = guild_scheduled_events.guild_scheduled_events;
-      const item = prop.forEach((arg0) => {
-        closure_0 = arg0;
-        if (callback(arg0)) {
+    const item2 = guilds.forEach((item, index) => {
+      const prop = item.guild_scheduled_events;
+      item = prop.forEach((item, index) => {
+        closure_0 = item;
+        if (callback(item)) {
           notifCenterItems = notifCenterItems.notifCenterItems;
-          notifCenterItems.notifCenterItems = notifCenterItems.map((type) => {
-            let tmp = type;
-            if (type.type === lib(closure_1_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
-              tmp = type;
-              if (type.guild_scheduled_event_id === lib.id) {
+          notifCenterItems.notifCenterItems = notifCenterItems.map((item, index) => {
+            let tmp = item;
+            if (item.type === item(closure_1_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
+              tmp = item;
+              if (item.guild_scheduled_event_id === item.id) {
                 obj = {};
-                const merged = Object.assign(type);
+                const merged = Object.assign(item);
                 obj.disable_action = true;
                 tmp = obj;
               }
@@ -383,11 +382,11 @@ obj = {
     ids = ids.ids;
     c1 = true;
     const notifCenterItems = obj.notifCenterItems;
-    const mapped = notifCenterItems.map((id) => {
-      let tmp = id;
-      if (ids.includes(id.id)) {
+    const mapped = notifCenterItems.map((item, index) => {
+      let tmp = item;
+      if (ids.includes(item.id)) {
         obj = {};
-        const merged = Object.assign(id);
+        const merged = Object.assign(item);
         obj.acked = c1;
         tmp = obj;
       }
@@ -399,11 +398,11 @@ obj = {
     ids = ids.ids;
     c1 = false;
     const notifCenterItems = obj.notifCenterItems;
-    const mapped = notifCenterItems.map((id) => {
-      let tmp = id;
-      if (ids.includes(id.id)) {
+    const mapped = notifCenterItems.map((item, index) => {
+      let tmp = item;
+      if (ids.includes(item.id)) {
         obj = {};
-        const merged = Object.assign(id);
+        const merged = Object.assign(item);
         obj.acked = c1;
         tmp = obj;
       }
@@ -415,13 +414,13 @@ obj = {
     guildScheduledEvent = guildScheduledEvent.guildScheduledEvent;
     if (isGuildEventEnded(guildScheduledEvent)) {
       const notifCenterItems = obj.notifCenterItems;
-      obj.notifCenterItems = notifCenterItems.map((type) => {
-        let tmp = type;
-        if (type.type === lib(closure_1_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
-          tmp = type;
-          if (type.guild_scheduled_event_id === lib.id) {
+      obj.notifCenterItems = notifCenterItems.map((item, index) => {
+        let tmp = item;
+        if (item.type === item(closure_1_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
+          tmp = item;
+          if (item.guild_scheduled_event_id === item.id) {
             obj = {};
-            const merged = Object.assign(type);
+            const merged = Object.assign(item);
             obj.disable_action = true;
             tmp = obj;
           }
@@ -438,7 +437,7 @@ obj = {
       const notifCenterIds2 = obj.notifCenterIds;
       notifCenterIds2.delete(id);
       const notifCenterItems = obj.notifCenterItems;
-      obj.notifCenterItems = notifCenterItems.filter((id) => id.id !== id);
+      obj.notifCenterItems = notifCenterItems.filter((item, index) => item.id !== id);
     } else {
       return false;
     }
@@ -475,22 +474,20 @@ obj = {
           tmp12 = cursor;
         }
         obj.paginationCursor = tmp12;
-        const tmp11 = obj;
-        const tmp9 = obj;
       }
       items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterItems, 0);
       const mapped = items.map(toNotificationCenterItem);
-      arraySpreadResult = HermesBuiltin.arraySpread(mapped.filter((id) => {
+      arraySpreadResult = HermesBuiltin.arraySpread(mapped.filter((item, index) => {
         const notifCenterIds = closure_9.notifCenterIds;
-        return !notifCenterIds.has(id.id);
+        return !notifCenterIds.has(item.id);
       }), arraySpreadResult);
       obj.notifCenterItems = items;
       const notifCenterItems = obj.notifCenterItems;
       const sorted = notifCenterItems.sort((id, id2) => callback(table[9]).compare(id2.id, id.id));
-      const item = items.forEach((id) => {
+      const item = items.forEach((item, index) => {
         const notifCenterIds = closure_9.notifCenterIds;
-        return notifCenterIds.add(id.id);
+        return notifCenterIds.add(item.id);
       });
     }
   },
@@ -518,10 +515,10 @@ obj = {
   RELATIONSHIP_REMOVE: function handleRelationshipRemove(arg0) {
     closure_0 = arg0;
     const prop = obj.notifCenterLocalItems;
-    obj.notifCenterLocalItems = prop.filter((type) => {
-      let tmp4 = type.type === callback(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
+    obj.notifCenterLocalItems = prop.filter((item, index) => {
+      let tmp4 = item.type === callback(dependencyMap[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
       if (tmp4) {
-        const other_user = type.other_user;
+        const other_user = item.other_user;
         let id;
         if (other_user != null) {
           id = other_user.id;
@@ -530,9 +527,9 @@ obj = {
       }
       let tmp7 = !tmp4;
       if (!tmp4) {
-        let tmp9 = type.type === callback(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
+        let tmp9 = item.type === callback(dependencyMap[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
         if (tmp9) {
-          const other_user2 = type.other_user;
+          const other_user2 = item.other_user;
           let id1;
           if (other_user2 != null) {
             id1 = other_user2.id;
@@ -546,9 +543,8 @@ obj = {
   },
   GAME_RELATIONSHIP_ADD: function handleGameRelationshipAddOrUpdate(gameRelationship) {
     gameRelationship = gameRelationship.gameRelationship;
-    let id;
     applicationId = undefined;
-    id = gameRelationship.id;
+    let id = gameRelationship.id;
     ({ type, since, applicationId } = gameRelationship);
     if (blockedOrIgnored.isBlockedOrIgnored(id)) {
       return false;
@@ -566,10 +562,10 @@ obj = {
       return false;
     } else {
       const prop = obj.notifCenterLocalItems;
-      obj.notifCenterLocalItems = prop.map((type) => {
-        let tmp5 = type.type === id(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
+      obj.notifCenterLocalItems = prop.map((item, index) => {
+        let tmp5 = item.type === id(dependencyMap[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
         if (tmp5) {
-          const other_user = type.other_user;
+          const other_user = item.other_user;
           id = undefined;
           if (other_user != null) {
             id = other_user.id;
@@ -577,17 +573,17 @@ obj = {
           tmp5 = id === tmp3;
         }
         if (tmp5) {
-          tmp5 = type.applicationId === applicationId;
+          tmp5 = item.applicationId === applicationId;
         }
-        let tmp8 = type;
+        let tmp8 = item;
         if (tmp5) {
           obj = {};
-          const merged = Object.assign(type);
+          const merged = Object.assign(item);
           obj.acked = true;
           obj.forceUnacked = false;
           const _HermesInternal = HermesInternal;
-          obj.local_id = "incoming_game_friend_requests_accepted_" + tmp3 + "_" + type.id;
-          obj.type = id(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
+          obj.local_id = "incoming_game_friend_requests_accepted_" + tmp3 + "_" + item.id;
+          obj.type = id(dependencyMap[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
           tmp8 = obj;
         }
         return tmp8;
@@ -597,32 +593,32 @@ obj = {
   GAME_RELATIONSHIP_REMOVE: function handleGameRelationshipRemove(arg0) {
     ({ userId: require, applicationId: importDefault } = arg0);
     const prop = obj.notifCenterLocalItems;
-    obj.notifCenterLocalItems = prop.filter((type) => {
-      let tmp5 = type.type === closure_1_0(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
+    obj.notifCenterLocalItems = prop.filter((item, index) => {
+      let tmp5 = item.type === NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
       if (tmp5) {
-        const other_user = type.other_user;
+        const other_user = item.other_user;
         let id;
         if (other_user != null) {
           id = other_user.id;
         }
-        tmp5 = id === tmp3;
+        tmp5 = id === closure_0;
       }
       if (tmp5) {
-        tmp5 = type.applicationId === tmp4;
+        tmp5 = item.applicationId === closure_1;
       }
       let tmp8 = !tmp5;
       if (!tmp5) {
-        let tmp9 = type.type === closure_1_0(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
+        let tmp9 = item.type === NotificationCenterScenes.NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
         if (tmp9) {
-          const other_user2 = type.other_user;
+          const other_user2 = item.other_user;
           let id1;
           if (other_user2 != null) {
             id1 = other_user2.id;
           }
-          tmp9 = id1 === tmp3;
+          tmp9 = id1 === closure_0;
         }
         if (tmp9) {
-          tmp9 = type.applicationId === tmp4;
+          tmp9 = item.applicationId === closure_1;
         }
         tmp8 = !tmp9;
       }
@@ -632,11 +628,11 @@ obj = {
   NOTIFICATION_CENTER_ITEM_COMPLETED: function handleCompleted(item_enum) {
     item_enum = item_enum.item_enum;
     const notifCenterItems = obj.notifCenterItems;
-    const mapped = notifCenterItems.map((item_enum) => {
-      let tmp = item_enum;
-      if (item_enum.item_enum === item_enum) {
+    const mapped = notifCenterItems.map((item, index) => {
+      let tmp = item;
+      if (item.item_enum === item_enum) {
         obj = {};
-        const merged = Object.assign(item_enum);
+        const merged = Object.assign(item);
         obj.completed = true;
         obj.acked = true;
         tmp = obj;
@@ -666,10 +662,10 @@ obj = {
       const result = obj.mobileNativeUpdateAvailableLocalItem(newBuild);
       _require = result;
       const prop = obj.notifCenterLocalItems;
-      if (undefined === prop.find((local_id) => local_id.local_id === _undefined.local_id)) {
+      if (undefined === prop.find((item, index) => item.local_id === _undefined.local_id)) {
         const prop1 = obj.notifCenterLocalItems;
         const items = [];
-        items[HermesBuiltin.arraySpread(prop1.filter((type) => type.type !== _undefined.type), 0)] = result;
+        items[HermesBuiltin.arraySpread(prop1.filter((item, index) => item.type !== _undefined.type), 0)] = result;
         obj.notifCenterLocalItems = items;
       }
     }
@@ -681,10 +677,10 @@ obj = {
       const _Set = Set;
       set = new Set(unknownApplicationIds);
       const prop = obj.notifCenterLocalItems;
-      obj.notifCenterLocalItems = prop.filter((applicationId) => {
-        let tmp = null == applicationId.applicationId;
+      obj.notifCenterLocalItems = prop.filter((item, index) => {
+        let tmp = null == item.applicationId;
         if (!tmp) {
-          tmp = !set.has(applicationId.applicationId);
+          tmp = !set.has(item.applicationId);
         }
         return tmp;
       });
@@ -692,6 +688,7 @@ obj = {
   }
 };
 const notificationCenterItemsStore = new NotificationCenterItemsStore(dispatcherDefault, obj);
-let result = set.fileFinishedImporting("modules/notification_center/NotificationCenterItemsStore.tsx");
+let set = new Set();
+let result = require("obj132").fileFinishedImporting("modules/notification_center/NotificationCenterItemsStore.tsx");
 
 export default notificationCenterItemsStore;

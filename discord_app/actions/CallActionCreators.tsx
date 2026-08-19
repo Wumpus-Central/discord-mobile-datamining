@@ -5,24 +5,23 @@ import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef4975 from "module_4975" /* 4975 */;
 import useCanRingToGuildVoiceChannel from "useCanRingToGuildVoiceChannel" /* 9730 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ Endpoints: closure_6, AnalyticEvents: error, ChannelTypesSets: closure_8, ChannelTypes: c9 } = ME);
-let result = require("set").fileFinishedImporting("actions/CallActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("actions/CallActionCreators.tsx");
 
 export default {
-  call(id, c1) {
-    let self = this;
-    self = this;
+  call(id, c1, arg2, arg3, fn) {
+    const self = this;
     importDefault = id;
     dependencyMap = c1;
     closure_3 = arg2;
     const blocked = arg3;
-    const user = arg4;
+    const user = fn;
     if (null != arg3) {
       if (!blocked.isBlocked(arg3)) {
         const _require = user.getUser(arg3);
@@ -30,18 +29,19 @@ export default {
         let obj = { url: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = self.CALL(id);
         const value = HTTP.get(obj);
-        value.then((body) => {
+        value.then((result) => {
           let ringable = closure_3;
           if (closure_3) {
-            ringable = body.body.ringable;
+            ringable = result.body.ringable;
           }
           const voiceChannel = id(4975).selectVoiceChannel(id, dependencyMap);
           if (ringable) {
-            self.ring(tmp2);
+            self.ring(id);
           }
           if (callback != null) {
-            callback(tmp2);
+            callback(id);
           }
+          const obj = id(4975);
         }, () => {
           let obj = id(698);
           obj.track(closure_1_7.OPEN_POPOUT, { type: "Not Friend", source: "Call" });
@@ -54,16 +54,17 @@ export default {
             str = lib.username;
           }
           obj[1] = intl2.format(lib(1236).t.IdKo2z, { username: str });
-          const intl3 = tmp3(1236).intl;
+          const intl3 = lib(1236).intl;
           obj[2] = intl3.string(lib(1236).t["PMsq/b"]);
-          const intl4 = tmp3(1236).intl;
+          const intl4 = lib(1236).intl;
           obj[3] = intl4.string(lib(1236).t.BddRzS);
           obj[4] = function onConfirm() {
-            let obj = closure_1_1(closure_1_2[9]);
-            obj = { userId: closure_4, context: { location: "Call" } };
+            id(closure_1_2[9]);
+            const obj = { userId: closure_4, context: { location: "Call" } };
             obj.addRelationship(obj);
           };
           id(4827).show(obj);
+          const obj2 = id(4827);
         });
       }
     } else {
@@ -72,8 +73,8 @@ export default {
       if (arg2) {
         self.ring(id);
       }
-      if (arg4 != null) {
-        arg4(id);
+      if (fn != null) {
+        fn(id);
       }
     }
   },
@@ -84,7 +85,7 @@ export default {
       const CALLABLE = constants.CALLABLE;
       const result = obj.canRingUsersInChannel(channel);
       if (result) {
-        const HTTP = tmp3(530).HTTP;
+        const HTTP = sendRequest.HTTP;
         obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = closure_6.CALL_RING(channelId);
         obj = { recipients: null, analytics_location: null };
@@ -97,8 +98,8 @@ export default {
           obj1[1] = items;
           obj1[2] = channel.guild_id;
           dispatcherDefault.dispatch(obj1);
-          const obj6 = dispatcherDefault;
         }
+        tmp14 = channel.type === constants2.GUILD_VOICE && null != items;
       } else if (tmp7) {
         obj1 = dispatcherDefault;
         const obj2 = { type: "CALL_ENQUEUE_RING", channelId: null, recipients: null };
@@ -106,12 +107,11 @@ export default {
         obj2[2] = items;
         obj1.dispatch(obj2);
       }
-      tmp3 = require;
     }
   },
   stopRinging(channelId, items) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_6.CALL_STOP_RINGING(channelId), body: obj, oldFormErrors: true, rejectWithError: true };
+    { url: closure_6.CALL_STOP_RINGING(channelId), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { recipients: items };
     return HTTP.post(obj);
   }

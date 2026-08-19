@@ -4,7 +4,7 @@
 import Storage2 from "Storage" /* 595 */;
 import initializeDefault from "initialize" /* 5038 */;
 
-require = arg1;
+require = fn;
 const formGuidelinesStorageKey = "formGuidelinesStorageKey";
 initializeDefault;
 class ForumGuidelinesManager extends tmp2 {
@@ -41,6 +41,6 @@ prototype["hasSeen"] = function hasSeen(arg0) {
   return seenForumGuidelines.has(arg0);
 };
 const forumGuidelinesManager = new ForumGuidelinesManager();
-let result = require("set").fileFinishedImporting("modules/forums/ForumGuidelinesManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/forums/ForumGuidelinesManager.tsx");
 
 export default forumGuidelinesManager;

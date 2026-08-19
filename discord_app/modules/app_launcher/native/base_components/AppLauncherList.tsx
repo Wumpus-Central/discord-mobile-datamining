@@ -13,7 +13,7 @@ import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_5 = createCacheKey.createStyles({ searchBarContainer: { marginBottom: 16 }, emptyState: { backgroundColor: "transparent", justifyContent: "flex-start" }, emptyStateImage: { flex: 0 } });
 const forwardRefResult = importAllResult.forwardRef((contentContainerStyle) => {
   const bottom = useSafeAreaInsetsDefault().bottom;
@@ -30,7 +30,7 @@ const forwardRefResult = importAllResult.forwardRef((contentContainerStyle) => {
   ({ onScroll: obj2.animatedOnScroll, gestureRef: obj2.simultaneousHandlers, animatedProps: obj2.animatedProps } = appLauncherFlashListProps);
   return jsx(useAppLauncherFlashListPropsDefault, { contentContainerStyle: items, scrollIndicatorInsets: { bottom }, ref: null });
 });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherList.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherList.tsx");
 
 export const AppLauncherList = forwardRefResult;
 export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
@@ -43,8 +43,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   return jsx(Button.EmptyState, { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: registerAssetDefault, darkSource: registerAssetDefault, title: null, body: null });
 };
 export const AppLauncherListSearchBar = function AppLauncherListSearchBar(arg0) {
-  let obj = { style: callback().searchBarContainer, children: null };
-  obj = { size: "md" };
+  { style: callback().searchBarContainer, children: null };
+  const obj = { size: "md" };
   const merged = Object.assign(arg0);
   obj[1] = jsx(SearchField.SearchField, { size: "md" });
   return <View size="md" />;

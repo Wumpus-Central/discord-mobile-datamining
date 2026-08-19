@@ -7,13 +7,13 @@ import matchPath from "matchPath" /* 4202 */;
 import RouteParam5 from "RouteParam" /* 4215 */;
 import useChatLayout from "useChatLayout" /* 4232 */;
 import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4235 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "initialize" /* 4201 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import initialize from "initialize" /* 4201 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function getInitialGuildState(closure_6, channelId, flag, flag2) {
   flag = flag2;
   if (flag2 === undefined) {
@@ -29,7 +29,6 @@ function getInitialGuildState(closure_6, channelId, flag, flag2) {
       if (!isChatLockedOpen) {
         if (!flag) {
           let items = [true, ];
-          obj = { index: 0, routes: null };
           obj = { name: "tabs", state: null };
           obj1 = { routes: null, index: 0 };
           const obj2 = { name: "guilds", params: null };
@@ -81,10 +80,10 @@ function computeInitialNavigationStateWithoutLogging() {
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       obj = { path: null };
-      const RouteParam3 = tmp(4215).RouteParam;
-      const tmpResult = tmp(4202);
-      const RouteParam4 = tmp(4215).RouteParam;
-      obj[0] = obj5.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
+      const RouteParam3 = RouteParam5.RouteParam;
+      const tmpResult = matchPath;
+      const RouteParam4 = RouteParam5.RouteParam;
+      obj[0] = closure_7.CHANNEL(RouteParam3.guildId(), RouteParam4.channelId({ optional: true }), ":messageId?");
       let matchPathResult1 = tmpResult.matchPath(lastNonVoiceRoute.lastNonVoiceRoute, obj);
       let flag = false;
       const guildIdResult1 = RouteParam3.guildId();
@@ -138,7 +137,6 @@ function computeInitialNavigationStateWithoutLogging() {
       return items2;
     }
     const guildIdResult = RouteParam.guildId();
-    obj5 = closure_7;
   } else {
     const items3 = [{ page: "other" }, ];
     obj = { routes: null, index: 0 };
@@ -151,21 +149,22 @@ function computeInitialNavigationStateWithoutLogging() {
 ({ ME: closure_6, Routes: error } = ME);
 let closure_8 = new timestampDefault("getInitialNavigationState");
 const tmp3 = new timestampDefault("getInitialNavigationState");
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/getInitialNavigationState.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/getInitialNavigationState.tsx");
 
 export default function getInitialNavigationState(arr) {
   const tmp = computeInitialNavigationStateWithoutLogging()[1];
   closure_0 = tmp;
   if (null != arr) {
-    const item = arr.forEach((arg0) => {
+    const item = arr.forEach((item, index) => {
       routes = routes.routes;
-      return routes.push(arg0);
+      return routes.push(item);
     });
   }
   return tmp;
 };
 export const wrapRouteForRootNavigator = function wrapRouteForRootNavigator(items) {
-  items = [{ name: "main", state: { routes: items, index: items.length - 1 } }];
+  items = [];
+  items[0] = { name: "main", state: { routes: items, index: items.length - 1 } };
   return items;
 };
 export function getInitialAuthState() {

@@ -3,19 +3,18 @@
 // Module 9874 (fetchSurveyIfNeeded)
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import tDefault from "t" /* 3975 */;
 import overrideSurvey from "overrideSurvey" /* 9875 */;
-import closure_4 from "handleInviteData" /* 4295 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import handleInviteData from "handleInviteData" /* 4295 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function fetchSurveyIfNeeded() {
   let tmp = c18;
   if (!c18) {
@@ -54,15 +53,15 @@ function setSurvey(survey) {
   }
   if (tmp3) {
     tmp3 = (function meetsGuildRequirements(c17) {
-      let guild_requirements = c17.guild_requirements;
+      let guild_requirements = _null.guild_requirements;
       if (undefined === guild_requirements) {
         guild_requirements = [];
       }
-      let guild_size = c17.guild_size;
+      let guild_size = _null.guild_size;
       if (undefined === guild_size) {
         guild_size = [null, null];
       }
-      let guild_permissions = c17.guild_permissions;
+      let guild_permissions = _null.guild_permissions;
       if (undefined === guild_permissions) {
         guild_permissions = [];
       }
@@ -70,12 +69,10 @@ function setSurvey(survey) {
         return true;
       } else {
         for (const item10017 of guild_requirements) {
-          let tmp2 = set;
           if (set.has(item10017)) {
             continue;
           } else {
-            let tmp3 = obj3;
-            obj3.return();
+            obj2.return();
             let flag = false;
             return false;
           }
@@ -88,8 +85,6 @@ function setSurvey(survey) {
         while (iter !== undefined) {
           let tmp14 = nextResult;
           if (hasItem) {
-            let tmp17 = memberCount;
-            let tmp18 = nextResult;
             memberCount = memberCount.getMemberCount(tmp14.id);
             let tmp20 = memberCount;
             if (null == memberCount) {
@@ -97,114 +92,70 @@ function setSurvey(survey) {
               continue;
             } else {
               if (null != guild_size[0]) {
-                let tmp21 = memberCount;
                 if (tmp20 < guild_size[0]) {
                   flag3 = false;
                   continue;
                 }
               }
               if (null != guild_size[1]) {
-                let tmp22 = memberCount;
                 if (tmp20 > guild_size[1]) {
                   flag3 = false;
                   continue;
                 }
               }
             }
-          } else {
-            let tmp15 = constants3;
-            let tmp16 = constants3;
           }
-          let tmp23 = constants3;
-          let tmp24 = constants3;
           if (!guild_requirements.includes(constants3.IS_COMMUNITY)) {
-            let tmp27 = tmp23;
-            if (!guild_requirements.includes(tmp24.IS_HUB)) {
-              let tmp30 = tmp23;
-              if (!guild_requirements.includes(tmp24.GUILD_PERMISSIONS)) {
-                let tmp40 = currentUser;
+            if (!guild_requirements.includes(constants3.IS_HUB)) {
+              if (!guild_requirements.includes(constants3.GUILD_PERMISSIONS)) {
                 currentUser = currentUser.getCurrentUser();
                 let id;
                 if (currentUser != null) {
                   id = currentUser.id;
                 }
-                let tmp43 = nextResult;
-                let tmp44 = id === tmp14.ownerId;
-                let tmp45 = closure_6;
-                let tmp46 = constants2;
                 let canResult = closure_6.can(constants2.ADMINISTRATOR, tmp14);
-                let tmp48 = constants3;
-                let tmp49 = constants3;
                 if (!guild_requirements.includes(constants3.IS_OWNER)) {
-                  let tmp51 = tmp48;
-                  if (!guild_requirements.includes(tmp49.IS_ADMIN)) {
+                  if (!guild_requirements.includes(constants3.IS_ADMIN)) {
                     if (obj == null) {
                       obj = {};
                     }
-                    if (null == obj[c17.key]) {
-                      let tmp53 = obj;
-                      obj[c17.key] = c17;
+                    if (null == obj[_null.key]) {
+                      obj[_null.key] = _null;
                     }
-                    let tmp54 = guildId;
                     guildId = guildId.getGuildId();
                     let tmp57 = null != guildId;
                     if (tmp57) {
-                      let tmp58 = guildId;
-                      let tmp59 = nextResult;
                       tmp57 = tmp56 === tmp14.id;
                     }
-                    let tmp61 = tmp48;
-                    let tmp60 = tmp57;
-                    if (!guild_requirements.includes(tmp49.IS_VIEWING)) {
+                    if (!guild_requirements.includes(constants3.IS_VIEWING)) {
                       if (!hasItem) {
-                        let tmp63 = iter;
                         iter.return();
                         return true;
                       }
-                    } else {
-                      let tmp62 = tmp57;
                     }
-                  } else {
-                    let tmp52 = canResult;
                   }
-                } else {
-                  let tmp50 = tmp44;
                 }
               } else if (0 === guild_permissions.length) {
                 continue;
               } else {
                 let flag5 = false;
-                let tmp65 = guild_permissions;
-                let tmp31 = guild_permissions;
                 for (const item10086 of guild_permissions) {
-                  let tmp33 = callback;
-                  let tmp34 = table;
-                  let tmp32 = item10086;
-                  obj = callback(table[8]);
-                  let tmp35 = item10086;
-                  let tmp36 = closure_6;
-                  let tmp37 = nextResult;
-                  if (closure_6.can(obj.deserialize(tmp32), tmp14)) {
+                  let deserializer = callback(table[8]);
+                  if (closure_6.can(deserializer.deserialize(item10086), tmp14)) {
                     flag5 = true;
-                    let tmp38 = obj4;
-                    obj4.return();
+                    obj3.return();
                     break;
                   }
                   continue;
                 }
-                let tmp39 = flag5;
                 continue;
               }
               continue;
             } else {
-              let tmp28 = nextResult;
               let features2 = tmp14.features;
-              let tmp29 = constants;
             }
           } else {
-            let tmp25 = nextResult;
             let features = tmp14.features;
-            let tmp26 = constants;
           }
           continue;
         }
@@ -246,15 +197,15 @@ function setSurvey(survey) {
 function handleSelectedGuildChange() {
   if (null != c17) {
     let flag = (function meetsGuildRequirements(c17) {
-      let guild_requirements = c17.guild_requirements;
+      let guild_requirements = _null.guild_requirements;
       if (undefined === guild_requirements) {
         guild_requirements = [];
       }
-      let guild_size = c17.guild_size;
+      let guild_size = _null.guild_size;
       if (undefined === guild_size) {
         guild_size = [null, null];
       }
-      let guild_permissions = c17.guild_permissions;
+      let guild_permissions = _null.guild_permissions;
       if (undefined === guild_permissions) {
         guild_permissions = [];
       }
@@ -262,12 +213,10 @@ function handleSelectedGuildChange() {
         return true;
       } else {
         for (const item10017 of guild_requirements) {
-          let tmp2 = set;
           if (set.has(item10017)) {
             continue;
           } else {
-            let tmp3 = obj3;
-            obj3.return();
+            obj2.return();
             let flag = false;
             return false;
           }
@@ -280,8 +229,6 @@ function handleSelectedGuildChange() {
         while (iter !== undefined) {
           let tmp14 = nextResult;
           if (hasItem) {
-            let tmp17 = memberCount;
-            let tmp18 = nextResult;
             memberCount = memberCount.getMemberCount(tmp14.id);
             let tmp20 = memberCount;
             if (null == memberCount) {
@@ -289,114 +236,70 @@ function handleSelectedGuildChange() {
               continue;
             } else {
               if (null != guild_size[0]) {
-                let tmp21 = memberCount;
                 if (tmp20 < guild_size[0]) {
                   flag3 = false;
                   continue;
                 }
               }
               if (null != guild_size[1]) {
-                let tmp22 = memberCount;
                 if (tmp20 > guild_size[1]) {
                   flag3 = false;
                   continue;
                 }
               }
             }
-          } else {
-            let tmp15 = constants3;
-            let tmp16 = constants3;
           }
-          let tmp23 = constants3;
-          let tmp24 = constants3;
           if (!guild_requirements.includes(constants3.IS_COMMUNITY)) {
-            let tmp27 = tmp23;
-            if (!guild_requirements.includes(tmp24.IS_HUB)) {
-              let tmp30 = tmp23;
-              if (!guild_requirements.includes(tmp24.GUILD_PERMISSIONS)) {
-                let tmp40 = currentUser;
+            if (!guild_requirements.includes(constants3.IS_HUB)) {
+              if (!guild_requirements.includes(constants3.GUILD_PERMISSIONS)) {
                 currentUser = currentUser.getCurrentUser();
                 let id;
                 if (currentUser != null) {
                   id = currentUser.id;
                 }
-                let tmp43 = nextResult;
-                let tmp44 = id === tmp14.ownerId;
-                let tmp45 = closure_6;
-                let tmp46 = constants2;
                 let canResult = closure_6.can(constants2.ADMINISTRATOR, tmp14);
-                let tmp48 = constants3;
-                let tmp49 = constants3;
                 if (!guild_requirements.includes(constants3.IS_OWNER)) {
-                  let tmp51 = tmp48;
-                  if (!guild_requirements.includes(tmp49.IS_ADMIN)) {
+                  if (!guild_requirements.includes(constants3.IS_ADMIN)) {
                     if (obj == null) {
                       obj = {};
                     }
-                    if (null == obj[c17.key]) {
-                      let tmp53 = obj;
-                      obj[c17.key] = c17;
+                    if (null == obj[_null.key]) {
+                      obj[_null.key] = _null;
                     }
-                    let tmp54 = guildId;
                     guildId = guildId.getGuildId();
                     let tmp57 = null != guildId;
                     if (tmp57) {
-                      let tmp58 = guildId;
-                      let tmp59 = nextResult;
                       tmp57 = tmp56 === tmp14.id;
                     }
-                    let tmp61 = tmp48;
-                    let tmp60 = tmp57;
-                    if (!guild_requirements.includes(tmp49.IS_VIEWING)) {
+                    if (!guild_requirements.includes(constants3.IS_VIEWING)) {
                       if (!hasItem) {
-                        let tmp63 = iter;
                         iter.return();
                         return true;
                       }
-                    } else {
-                      let tmp62 = tmp57;
                     }
-                  } else {
-                    let tmp52 = canResult;
                   }
-                } else {
-                  let tmp50 = tmp44;
                 }
               } else if (0 === guild_permissions.length) {
                 continue;
               } else {
                 let flag5 = false;
-                let tmp65 = guild_permissions;
-                let tmp31 = guild_permissions;
                 for (const item10086 of guild_permissions) {
-                  let tmp33 = callback;
-                  let tmp34 = table;
-                  let tmp32 = item10086;
-                  obj = callback(table[8]);
-                  let tmp35 = item10086;
-                  let tmp36 = closure_6;
-                  let tmp37 = nextResult;
-                  if (closure_6.can(obj.deserialize(tmp32), tmp14)) {
+                  let deserializer = callback(table[8]);
+                  if (closure_6.can(deserializer.deserialize(item10086), tmp14)) {
                     flag5 = true;
-                    let tmp38 = obj4;
-                    obj4.return();
+                    obj3.return();
                     break;
                   }
                   continue;
                 }
-                let tmp39 = flag5;
                 continue;
               }
               continue;
             } else {
-              let tmp28 = nextResult;
               let features2 = tmp14.features;
-              let tmp29 = constants;
             }
           } else {
-            let tmp25 = nextResult;
             let features = tmp14.features;
-            let tmp26 = constants;
           }
           continue;
         }
@@ -422,15 +325,15 @@ function handleSelectedGuildChange() {
   const first = Object.values(obj)[0];
   if (null != first) {
     if ((function meetsGuildRequirements(c17) {
-      let guild_requirements = c17.guild_requirements;
+      let guild_requirements = _null.guild_requirements;
       if (undefined === guild_requirements) {
         guild_requirements = [];
       }
-      let guild_size = c17.guild_size;
+      let guild_size = _null.guild_size;
       if (undefined === guild_size) {
         guild_size = [null, null];
       }
-      let guild_permissions = c17.guild_permissions;
+      let guild_permissions = _null.guild_permissions;
       if (undefined === guild_permissions) {
         guild_permissions = [];
       }
@@ -438,12 +341,10 @@ function handleSelectedGuildChange() {
         return true;
       } else {
         for (const item10017 of guild_requirements) {
-          let tmp2 = set;
           if (set.has(item10017)) {
             continue;
           } else {
-            let tmp3 = obj3;
-            obj3.return();
+            obj2.return();
             let flag = false;
             return false;
           }
@@ -456,8 +357,6 @@ function handleSelectedGuildChange() {
         while (iter !== undefined) {
           let tmp14 = nextResult;
           if (hasItem) {
-            let tmp17 = memberCount;
-            let tmp18 = nextResult;
             memberCount = memberCount.getMemberCount(tmp14.id);
             let tmp20 = memberCount;
             if (null == memberCount) {
@@ -465,114 +364,70 @@ function handleSelectedGuildChange() {
               continue;
             } else {
               if (null != guild_size[0]) {
-                let tmp21 = memberCount;
                 if (tmp20 < guild_size[0]) {
                   flag3 = false;
                   continue;
                 }
               }
               if (null != guild_size[1]) {
-                let tmp22 = memberCount;
                 if (tmp20 > guild_size[1]) {
                   flag3 = false;
                   continue;
                 }
               }
             }
-          } else {
-            let tmp15 = constants3;
-            let tmp16 = constants3;
           }
-          let tmp23 = constants3;
-          let tmp24 = constants3;
           if (!guild_requirements.includes(constants3.IS_COMMUNITY)) {
-            let tmp27 = tmp23;
-            if (!guild_requirements.includes(tmp24.IS_HUB)) {
-              let tmp30 = tmp23;
-              if (!guild_requirements.includes(tmp24.GUILD_PERMISSIONS)) {
-                let tmp40 = currentUser;
+            if (!guild_requirements.includes(constants3.IS_HUB)) {
+              if (!guild_requirements.includes(constants3.GUILD_PERMISSIONS)) {
                 currentUser = currentUser.getCurrentUser();
                 let id;
                 if (currentUser != null) {
                   id = currentUser.id;
                 }
-                let tmp43 = nextResult;
-                let tmp44 = id === tmp14.ownerId;
-                let tmp45 = closure_6;
-                let tmp46 = constants2;
                 let canResult = closure_6.can(constants2.ADMINISTRATOR, tmp14);
-                let tmp48 = constants3;
-                let tmp49 = constants3;
                 if (!guild_requirements.includes(constants3.IS_OWNER)) {
-                  let tmp51 = tmp48;
-                  if (!guild_requirements.includes(tmp49.IS_ADMIN)) {
+                  if (!guild_requirements.includes(constants3.IS_ADMIN)) {
                     if (obj == null) {
                       obj = {};
                     }
-                    if (null == obj[c17.key]) {
-                      let tmp53 = obj;
-                      obj[c17.key] = c17;
+                    if (null == obj[_null.key]) {
+                      obj[_null.key] = _null;
                     }
-                    let tmp54 = guildId;
                     guildId = guildId.getGuildId();
                     let tmp57 = null != guildId;
                     if (tmp57) {
-                      let tmp58 = guildId;
-                      let tmp59 = nextResult;
                       tmp57 = tmp56 === tmp14.id;
                     }
-                    let tmp61 = tmp48;
-                    let tmp60 = tmp57;
-                    if (!guild_requirements.includes(tmp49.IS_VIEWING)) {
+                    if (!guild_requirements.includes(constants3.IS_VIEWING)) {
                       if (!hasItem) {
-                        let tmp63 = iter;
                         iter.return();
                         return true;
                       }
-                    } else {
-                      let tmp62 = tmp57;
                     }
-                  } else {
-                    let tmp52 = canResult;
                   }
-                } else {
-                  let tmp50 = tmp44;
                 }
               } else if (0 === guild_permissions.length) {
                 continue;
               } else {
                 let flag5 = false;
-                let tmp65 = guild_permissions;
-                let tmp31 = guild_permissions;
                 for (const item10086 of guild_permissions) {
-                  let tmp33 = callback;
-                  let tmp34 = table;
-                  let tmp32 = item10086;
-                  obj = callback(table[8]);
-                  let tmp35 = item10086;
-                  let tmp36 = closure_6;
-                  let tmp37 = nextResult;
-                  if (closure_6.can(obj.deserialize(tmp32), tmp14)) {
+                  let deserializer = callback(table[8]);
+                  if (closure_6.can(deserializer.deserialize(item10086), tmp14)) {
                     flag5 = true;
-                    let tmp38 = obj4;
-                    obj4.return();
+                    obj3.return();
                     break;
                   }
                   continue;
                 }
-                let tmp39 = flag5;
                 continue;
               }
               continue;
             } else {
-              let tmp28 = nextResult;
               let features2 = tmp14.features;
-              let tmp29 = constants;
             }
           } else {
-            let tmp25 = nextResult;
             let features = tmp14.features;
-            let tmp26 = constants;
           }
           continue;
         }
@@ -594,16 +449,15 @@ function handleSelectedGuildChange() {
   }
 }
 ({ GuildFeatures: c9, Permissions: c10, FIRST_RUN_DATE_KEY: unpackModuleId } = ME);
-let obj = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: null, lastActionTriggered: null };
 let c14 = false;
 let c15 = false;
 let closure_16 = {};
 let c17 = null;
 let c18 = false;
-const DAY = setDefault.Millis.DAY;
-const result = 10 * setDefault.Millis.HOUR;
-obj = { IS_OWNER: "is_owner", IS_ADMIN: "is_admin", IS_COMMUNITY: "is_community", GUILD_SIZE: "guild_size", IS_HUB: "is_hub", IS_VIEWING: "is_viewing", GUILD_PERMISSIONS: "guild_permissions", GUILD_SIZE_ALL: "guild_size_all" };
-let set = new Set(Object.values(obj));
+const DAY = obj132Default.Millis.DAY;
+const result = 10 * obj132Default.Millis.HOUR;
+let obj = { IS_OWNER: "is_owner", IS_ADMIN: "is_admin", IS_COMMUNITY: "is_community", GUILD_SIZE: "guild_size", IS_HUB: "is_hub", IS_VIEWING: "is_viewing", GUILD_PERMISSIONS: "guild_permissions", GUILD_SIZE_ALL: "guild_size_all" };
+const set = new Set(Object.values(obj));
 const PersistedStore = initializeDefault.PersistedStore;
 class SurveyStore extends PersistedStore {
 }
@@ -718,7 +572,7 @@ obj = {
   }
 };
 const surveyStore = new SurveyStore(dispatcherDefault, obj);
-const result1 = set.fileFinishedImporting("stores/SurveyStore.tsx");
+const result1 = require("obj132").fileFinishedImporting("stores/SurveyStore.tsx");
 
 export default surveyStore;
 export const SURVEY_REFETCH_INTERVAL = DAY;

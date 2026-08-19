@@ -4,10 +4,10 @@
 import sendRequest from "sendRequest" /* 530 */;
 import handleLogoutDefault from "handleLogout" /* 5256 */;
 import MessageRequestConsentStatusTypes from "MessageRequestConsentStatusTypes" /* 10000 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function _acceptMessageRequest() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -88,9 +88,9 @@ function _acceptMessageRequest() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/message_request/MessageRequestActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/message_request/MessageRequestActionCreators.tsx");
 
-export const acceptMessageRequest = function acceptMessageRequest(arg0) {
+export const acceptMessageRequest = function acceptMessageRequest(id) {
   const self = this;
   const apply = _acceptMessageRequest.apply;
   if (typeof apply === "unknown") {
@@ -102,16 +102,16 @@ export const acceptMessageRequest = function acceptMessageRequest(arg0) {
 };
 export const clearMessageRequestState = function clearMessageRequestState(id) {
   const HTTP = sendRequest.HTTP;
-  let obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: null, rejectWithError: null };
-  obj = { consent_status: MessageRequestConsentStatusTypes.MessageRequestConsentStatusTypes.UNSPECIFIED };
+  { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: null, rejectWithError: null };
+  const obj = { consent_status: MessageRequestConsentStatusTypes.MessageRequestConsentStatusTypes.UNSPECIFIED };
   obj[1] = obj;
   obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.put(obj);
 };
 export const markAsMessageRequest = function markAsMessageRequest(id) {
   const HTTP = sendRequest.HTTP;
-  let obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: null, rejectWithError: null };
-  obj = { consent_status: MessageRequestConsentStatusTypes.MessageRequestConsentStatusTypes.PENDING };
+  { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: null, rejectWithError: null };
+  const obj = { consent_status: MessageRequestConsentStatusTypes.MessageRequestConsentStatusTypes.PENDING };
   obj[1] = obj;
   obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.put(obj);
@@ -123,7 +123,7 @@ export const rejectMessageRequest = function rejectMessageRequest(closure_0) {
 };
 export const rejectMessageRequestBatch = function rejectMessageRequestBatch(closure_0) {
   const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(), body: obj, rejectWithError: null };
+  { url: Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(), body: obj, rejectWithError: null };
   obj = { channel_ids: closure_0 };
   obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.put(obj);

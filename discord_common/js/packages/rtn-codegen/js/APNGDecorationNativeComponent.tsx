@@ -1,13 +1,12 @@
 // === Module 8406: __INTERNAL_VIEW_CONFIG ===
 
 // Module 8406 (__INTERNAL_VIEW_CONFIG)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
-let obj = { uiViewClassName: "APNGDecorationView", directEventTypes: { topLoad: { registrationName: "onLoad" } }, validAttributes: null };
-obj = { url: true, autoplay: true };
+let obj = { url: true, autoplay: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onLoad: true }));
 obj[2] = obj;
 obj = {
@@ -23,7 +22,7 @@ obj = {
   }
 };
 const value = setRuntimeConfigProvider.get("APNGDecorationView", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx");
 
 export default value;
 export const __INTERNAL_VIEW_CONFIG = obj;

@@ -3,12 +3,12 @@
 // Module 1991 (DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY)
 import identity from "identity" /* 700 */;
 import isIterable from "isIterable" /* 4006 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "getFriendlyDurationString" /* 1992 */;
 import keys from "keys" /* 645 */;
 import { Storage } from "Storage" /* 595 */;
 
-require = arg1;
+require = fn;
 let closure_4 = keys.createStore((arg0, arg1) => {
   const _require = arg0;
   dependencyMap = arg1;
@@ -23,7 +23,7 @@ let closure_4 = keys.createStore((arg0, arg1) => {
       const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
       notificationDismissedInGuilds.add(arg0);
       const Storage = callback(595).Storage;
-      const result = Storage.set(closure_1_3, notificationDismissedInGuilds);
+      const result = Storage.set(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, notificationDismissedInGuilds);
       callback(705).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
     },
     resetNotification(arg0) {
@@ -31,7 +31,7 @@ let closure_4 = keys.createStore((arg0, arg1) => {
       if (notificationDismissedInGuilds.has(arg0)) {
         notificationDismissedInGuilds.delete(arg0);
         const Storage = callback(595).Storage;
-        const result = Storage.set(closure_1_3, notificationDismissedInGuilds);
+        const result = Storage.set(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, notificationDismissedInGuilds);
         callback(705).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
         const obj = callback(705);
       }
@@ -46,7 +46,7 @@ Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, (arg0
     return closure_1_4.setState(obj);
   });
 });
-let result = require("set").fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
 
 export const useCommunicationDisabledNoticeStore = function useCommunicationDisabledNoticeStore(arg0) {
   const tmp = callback(identity.useStoreWithEqualityFn(closure_4, (arg0) => {

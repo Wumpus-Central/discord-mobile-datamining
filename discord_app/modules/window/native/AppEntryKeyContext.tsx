@@ -10,7 +10,7 @@ const main = "main";
 let context = importAllResult.createContext(undefined);
 let c4 = false;
 const tmp2 = new timestampDefault("AppEntryKeyContext");
-const result = require("set").fileFinishedImporting("modules/window/native/AppEntryKeyContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/window/native/AppEntryKeyContext.tsx");
 
 export const DEFAULT_APP_ENTRY_KEY = "main";
 export const AppEntryKeyContext = context;
@@ -22,6 +22,7 @@ export const useAppEntryKey = function useAppEntryKey() {
       c4 = true;
       closure_1_1.warn("AppEntryKey context was not provided; falling back to default entry key \"main\".");
     }
+    tmp = undefined !== context || c4;
   }, items);
   if (context == null) {
     context = main;

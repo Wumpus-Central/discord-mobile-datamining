@@ -1,14 +1,14 @@
 // === Module 8457: useTopCommands ===
 
 // Module 8457 (useTopCommands)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange" /* 8450 */;
-import closure_5 from "handleUserSettingsProtoStoreChange" /* 8450 */;
+import handleUserSettingsProtoStoreChange2 from "handleUserSettingsProtoStoreChange" /* 8450 */;
 import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
-const require = arg1;
+const require = fn;
 ({ getFilteredTopCommands: c3, getTopRealCommands: c4 } = handleUserSettingsProtoStoreChange);
-const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyHooks.tsx");
 
 export const useTopCommands = function useTopCommands(commandContext) {
   const _require = commandContext;

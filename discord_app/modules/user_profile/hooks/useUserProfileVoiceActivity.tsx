@@ -2,11 +2,11 @@
 
 // Module 12145 (useUserProfileVoiceActivity)
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
-import closure_3 from "sortActivity" /* 4559 */;
-import closure_4 from "updateVoiceState" /* 4542 */;
+import sortActivity from "sortActivity" /* 4559 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileVoiceActivity.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useUserProfileVoiceActivity.tsx");
 
 export default function useUserProfileVoiceActivity(guildId) {
   const userId = guildId.userId;
@@ -23,9 +23,9 @@ export default function useUserProfileVoiceActivity(guildId) {
     voiceActivity: userId(589).useStateFromStores(items, () => {
       if (null != userId) {
         if (null != id) {
-          const findActivityResult = closure_1_3.findActivity(tmp, (session_id) => {
+          return closure_1_3.findActivity(tmp, (session_id) => {
             const voiceStateForSession = closure_1_4.getVoiceStateForSession(closure_0, session_id.session_id);
-            let tmp3 = closure_1_1(closure_1_2[2])(session_id);
+            let tmp3 = id(closure_1_2[2])(session_id);
             if (tmp3) {
               let channelId;
               if (voiceStateForSession != null) {
@@ -35,7 +35,6 @@ export default function useUserProfileVoiceActivity(guildId) {
             }
             return tmp3;
           });
-          return findActivityResult;
         }
       }
     })

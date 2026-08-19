@@ -3,26 +3,25 @@
 // Module 10309 (AnimatedImage)
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function AnimatedImage(arg0) {
   ({ imageUrl, style, shouldAnimate } = arg0);
   if (shouldAnimate === undefined) {
     shouldAnimate = true;
   }
-  let stateFromStores;
   let aPNGPlayerControls;
   let first;
   let React;
   let obj = shouldAnimate(aPNGPlayerControls[7]);
   const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let num = null;
   const ref = React.useRef(null);
   aPNGPlayerControls = shouldAnimate(aPNGPlayerControls[8]).useAPNGPlayerControls(ref);
@@ -44,6 +43,7 @@ function AnimatedImage(arg0) {
         aPNGPlayerControls.stop();
       }
     }
+    const obj = shouldAnimate(aPNGPlayerControls[9]);
   }, items1);
   const obj2 = shouldAnimate(aPNGPlayerControls[8]);
   const tmp9 = stateFromStores;
@@ -67,18 +67,18 @@ function AnimatedImage(arg0) {
     return tmp13;
   }
   tmp13 = callback(tmp9(tmp2[11]), { style, resizeMode: "contain", source: { uri: imageUrl } });
+  tmpResult = shouldAnimate(aPNGPlayerControls[9]);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
-  let obj = { container: null, image: null, textContainer: null };
-  obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+  let obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
   obj[0] = obj;
   obj = { width: ThemesDefault.space.PX_40, height: ThemesDefault.space.PX_40, borderRadius: ThemesDefault.radii.xs };
   obj[1] = obj;
   obj[2] = { flex: 1 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
 
 export default function PremiumGiftPromotionDetails(imageUrl) {
   imageUrl = imageUrl.imageUrl;
@@ -98,7 +98,7 @@ export default function PremiumGiftPromotionDetails(imageUrl) {
   obj = { style: tmp.textContainer, children: null };
   const items2 = [callback(Text.Text, { variant: "text-md/bold", color: "text-default", children: title }), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: subtitle })];
   obj[1] = items2;
-  items1[1] = closure_8(View, obj);
+  items1[1] = callback(View, obj);
   obj[1] = items1;
-  return closure_8(View, obj);
+  return callback(View, obj);
 };

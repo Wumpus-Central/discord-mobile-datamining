@@ -1,14 +1,13 @@
 // === Module 16549: experiment ===
 
 // Module 16549 (experiment)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
 import createExperiment from "createExperiment" /* 4286 */;
 
 const items = [{ id: 1, label: "Show past VC activity messages in system channel", config: { enabled: true } }];
 const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-02_past_vc_activity_messages", label: "Past VC Activity Messages", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: items });
-const obj = { kind: "guild", id: "2026-02_past_vc_activity_messages", label: "Past VC Activity Messages", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: items };
-const result = set.fileFinishedImporting("modules/voice_calls/PastVcActivityMessagesExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_calls/PastVcActivityMessagesExperiment.tsx");
 
 export default experiment;
 export const isPastVcActivityMessagesEnabled = function isPastVcActivityMessagesEnabled(id, GuildSettingsModalOverview) {

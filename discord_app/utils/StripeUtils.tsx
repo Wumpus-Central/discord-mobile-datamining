@@ -4,22 +4,21 @@
 import timestampDefault from "timestamp" /* 3 */;
 import initialize from "initialize" /* 589 */;
 import _typeof from "_typeof" /* 4473 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_getSystemLocale" /* 1994 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function getStripe() {
   if (null != closure_2) {
     let resolved = Promise.resolve(closure_2);
   } else {
     const stripe = _typeof.loadStripe(constants.STRIPE.KEY);
-    resolved = stripe.then((arg0) => {
-      closure_2 = arg0;
-      return arg0;
+    resolved = stripe.then((result) => {
+      closure_2 = result;
+      return result;
     });
-    const obj = _typeof;
   }
   return resolved;
 }
@@ -245,8 +244,8 @@ function _authenticatePaymentIntentForPaymentId() {
 let closure_8 = new timestampDefault("StripeUtils");
 let closure_9 = { REQUIRES_PAYMENT_METHOD: "requires_payment_method", REQUIRES_CONFIRMATION: "requires_confirmation", REQUIRES_ACTION: "requires_action", PROCESSING: "processing", CANCELED: "canceled", SUCCEEDED: "succeeded" };
 let closure_12 = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
-let tmp3 = new timestampDefault("StripeUtils");
-const result = require("set").fileFinishedImporting("utils/StripeUtils.tsx");
+const tmp3 = new timestampDefault("StripeUtils");
+const result = require("obj132").fileFinishedImporting("utils/StripeUtils.tsx");
 
 export const validateExpiry = function validateExpiry(arg0) {
   try {
@@ -257,8 +256,8 @@ export const validateExpiry = function validateExpiry(arg0) {
         let _HermesInternal = HermesInternal;
         let combined = "You passed an invalid expiration date " + str + "" + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
       }
-      const mapped = parts.map((joined) => {
-        const parsed = parseInt(joined);
+      const mapped = parts.map((item, index) => {
+        const parsed = parseInt(item);
         if (isNaN(parsed)) {
           const _HermesInternal = HermesInternal;
           let str3 = "" + parts + " is not a number.";
@@ -267,7 +266,6 @@ export const validateExpiry = function validateExpiry(arg0) {
           }
           const _HermesInternal2 = HermesInternal;
           const combined = "You passed an invalid expiration date " + closure_0 + str3 + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
-          const tmp3 = closure_0;
         }
         if (parsed < 1) {
           const _HermesInternal3 = HermesInternal;
@@ -278,7 +276,6 @@ export const validateExpiry = function validateExpiry(arg0) {
           }
           const _HermesInternal4 = HermesInternal;
           const combined2 = "You passed an invalid expiration date " + closure_0 + str8 + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`";
-          const tmp7 = closure_0;
         }
         return parsed;
       });
@@ -321,16 +318,16 @@ export const validateExpiry = function validateExpiry(arg0) {
 export { getStripe };
 export const getStripeClientMode = function getStripeClientMode() {
   if (null == constants.STRIPE.KEY) {
-    logger.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", tmp.STRIPE.KEY);
+    logger.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", constants.STRIPE.KEY);
     let str2 = "unknown";
   } else {
-    const KEY = tmp.STRIPE.KEY;
+    const KEY = constants.STRIPE.KEY;
     str2 = "live";
     if (!KEY.startsWith("pk_live")) {
-      const KEY2 = tmp.STRIPE.KEY;
+      const KEY2 = constants.STRIPE.KEY;
       let str4 = "test";
       if (!KEY2.startsWith("pk_test")) {
-        logger.warn("Unexpected value for Stripe public key: ", tmp.STRIPE.KEY);
+        logger.warn("Unexpected value for Stripe public key: ", constants.STRIPE.KEY);
         str4 = "unknown";
       }
       str2 = str4;
@@ -383,8 +380,7 @@ export const parseStripePaymentMethod = function parseStripePaymentMethod(billin
   return obj;
 };
 export const parseBillingAddressInfoToStripeBillingDetails = function parseBillingAddressInfoToStripeBillingDetails(closure_2) {
-  obj = { name: closure_2.name, address: obj };
-  obj = { line1: closure_2.line1, line2: closure_2.line2, city: closure_2.city, state: closure_2.state, postal_code: closure_2.postalCode, country: closure_2.country };
+  const obj = { line1: closure_2.line1, line2: closure_2.line2, city: closure_2.city, state: closure_2.state, postal_code: closure_2.postalCode, country: closure_2.country };
   return obj;
 };
 export const authenticatePaymentIntentForPaymentId = function authenticatePaymentIntentForPaymentId() {

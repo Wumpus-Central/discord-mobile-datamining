@@ -1,10 +1,10 @@
 // === Module 9136: calculateSteamReviewScoreDescription ===
 
 // Module 9136 (calculateSteamReviewScoreDescription)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import GameTheme from "GameTheme" /* 4511 */;
 
-const result = set.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
+const result = obj132.fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 
 export const calculateSteamReviewScoreDescription = function calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating) {
   let num = 50;

@@ -1,9 +1,9 @@
 // === Module 8308: smartOutput ===
 
 // Module 8308 (smartOutput)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
 
 export const smartOutput = function smartOutput(node, output, state) {
   if (typeof node.content !== "string") {

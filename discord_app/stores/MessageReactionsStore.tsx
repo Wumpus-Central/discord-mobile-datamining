@@ -4,10 +4,10 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import checkReactionResponseAll from "checkReactionResponse" /* 7511 */;
-import closure_2 from "initialize" /* 4022 */;
-import closure_3 from "createdAt" /* 1930 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import initialize from "initialize" /* 4022 */;
+import createdAt from "createdAt" /* 1930 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
 function reactionKey(arg0, arg1, item10022) {
   ({ name, id } = arg1);
@@ -32,8 +32,7 @@ function handleReaction(userId) {
 }
 let closure_6 = {};
 const items = [require("ReactionTypes").ReactionTypes.NORMAL, require("ReactionTypes").ReactionTypes.BURST];
-let prototype;
-prototype = function Reaction() {
+const prototype = function Reaction() {
   const obj = Object.create(new.target.prototype);
   obj.fetched = false;
   obj.users = new Map();
@@ -56,7 +55,6 @@ prototype["ensure"] = function ensure(messageId, emoji, reactionType) {
     const map = new Map();
     obj.users = map;
     tmp3 = obj;
-    const tmp4 = prototype;
   }
   dependencyMap[combined] = tmp3;
   return tmp3;
@@ -72,19 +70,11 @@ prototype2["getKnownReactorIds"] = function getKnownReactorIds(arg0, arg1) {
   const set = new Set();
   const iter = arg1[Symbol.iterator]();
   while (iter !== undefined) {
-    let tmp3 = items;
-    let tmp4 = items;
     for (const item10022 of items) {
-      let tmp5 = dependencyMap;
-      let tmp6 = reactionKey;
-      let tmp7 = nextResult;
       let tmp8 = dependencyMap[reactionKey(0, arg0, tmp2, item10022)];
       if (null != tmp8) {
-        let tmp10 = tmp8;
         let users = tmp9.users;
         let keys = users.keys();
-        let tmp12 = keys;
-        let tmp13 = keys;
         for (const item10037 of keys) {
           let addResult = set.add(item10037);
           continue;
@@ -112,7 +102,6 @@ prototype2["getReactions"] = function getReactions(channelId, messageId, emoji, 
     obj[4] = VOTE;
     const reactors = checkReactionResponseAll.getReactors(obj);
     ensureResult.fetched = true;
-    const obj2 = checkReactionResponseAll;
   }
   return ensureResult.users;
 };
@@ -125,14 +114,13 @@ const messageReactionsStore = new MessageReactionsStore(dispatcherDefault, {
   MESSAGE_REACTION_REMOVE: handleReaction,
   MESSAGE_REACTION_ADD_USERS: function handleAddUserReactions(users) {
     users = users.users;
-    closure_0 = undefined;
     closure_0 = prototype.ensure(users.messageId, users.emoji, users.reactionType);
-    const item = users.forEach((id) => {
+    const item = users.forEach((item, index) => {
       users = users.users;
-      return users.set(id.id, new closure_1_3(id));
+      return users.set(item.id, new closure_1_3(item));
     });
   }
 });
-let result = require("set").fileFinishedImporting("stores/MessageReactionsStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/MessageReactionsStore.tsx");
 
 export default messageReactionsStore;

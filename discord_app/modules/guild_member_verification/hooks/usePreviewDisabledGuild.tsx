@@ -1,12 +1,13 @@
 // === Module 8528: usePreviewDisabledGuild ===
 
 // Module 8528 (usePreviewDisabledGuild)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "get" /* 6801 */;
+import _fetchVerificationFormDefault from "_fetchVerificationForm" /* 6906 */;
+import noop from "noop" /* 19 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import get from "get" /* 6801 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx");
 
 export default function usePreviewDisabledGuild(arg0) {
   const _require = arg0;
@@ -26,8 +27,7 @@ export default function usePreviewDisabledGuild(arg0) {
   const items2 = [arg0];
   const effect = React.useEffect(() => {
     if (null != closure_0) {
-      const verificationForm = closure_1_1(closure_1_2[4]).fetchVerificationForm(tmp);
-      const obj = closure_1_1(closure_1_2[4]);
+      const verificationForm = _fetchVerificationFormDefault.fetchVerificationForm(tmp);
     }
   }, items2);
   if (stateFromStores == null) {

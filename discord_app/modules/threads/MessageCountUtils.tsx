@@ -1,7 +1,7 @@
 // === Module 8170: _formatMessageCountLabel ===
 
 // Module 8170 (_formatMessageCountLabel)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AbortCodes from "AbortCodes" /* 1235 */;
@@ -36,7 +36,7 @@ function _formatMessageCountLabel(count, iTS3Xe, id) {
   return stringResult;
 }
 ({ MAX_THREAD_MESSAGE_COUNT: c3, MAX_THREAD_MESSAGE_COUNT_OLD: c4 } = AbortCodes);
-const result = set.fileFinishedImporting("modules/threads/MessageCountUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/threads/MessageCountUtils.tsx");
 
 export const shouldUseOldMaxMessageCount = function shouldUseOldMaxMessageCount(arg0) {
   return DISCORD_EPOCHDefault.compare("992549565104128000", arg0) > -1;

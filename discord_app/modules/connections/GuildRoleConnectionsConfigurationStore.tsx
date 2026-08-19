@@ -3,7 +3,7 @@
 // Module 16832 (map)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "createGuildRecordFromRust" /* 1910 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;
@@ -22,6 +22,6 @@ const guildRoleConnectionsConfigurationStore = new GuildRoleConnectionsConfigura
     const result = map.set(roleId.roleId, roleId.roleConnectionConfigurations);
   }
 });
-let result = require("set").fileFinishedImporting("modules/connections/GuildRoleConnectionsConfigurationStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/connections/GuildRoleConnectionsConfigurationStore.tsx");
 
 export default guildRoleConnectionsConfigurationStore;

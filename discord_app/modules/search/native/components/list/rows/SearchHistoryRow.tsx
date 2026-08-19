@@ -2,40 +2,38 @@
 
 // Module 15878 (SearchHistoryRemoveIcon)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "generateOldThreadCutoff" /* 4772 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { SearchHistoryItemTypes } from "MessageEmbedTypes" /* 8507 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function SearchHistoryRemoveIcon(searchContext) {
   searchContext = searchContext.searchContext;
   const searchHistoryItem = searchContext.searchHistoryItem;
   const items = [searchContext, searchHistoryItem];
   const callback = importAllResult.useCallback(() => {
-    const result = searchHistoryItem(closure_1_2[10]).removeSearchHistoryItem(searchContext, searchHistoryItem);
+    const result = searchHistoryItem(dependencyMap[10]).removeSearchHistoryItem(searchContext, searchHistoryItem);
   }, items);
   return callback2(searchContext(5433).PressableHighlight, { onPress: callback, accessibilityRole: "button", unstable_pressDelay: 130, style: { marginLeft: 16 }, hitSlop: { bottom: 16, left: 16, right: 16, top: 16 }, children: callback2(searchContext(6368).XSmallIcon, { size: "sm", color: "interactive-text-default" }) });
 }
 function SearchHistoryTextRow(searchContext) {
   searchContext = searchContext.searchContext;
   const searchHistoryItem = searchContext.searchHistoryItem;
-  dependencyMap = undefined;
-  let onPressSearchHistoryText;
   const tmp = callback3();
   dependencyMap = tmp;
   let obj = searchContext(15866);
-  onPressSearchHistoryText = obj.useOnPressSearchHistoryText({ searchContext });
+  const onPressSearchHistoryText = obj.useOnPressSearchHistoryText({ searchContext });
   const items = [onPressSearchHistoryText, searchContext, , , ];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
   const callback = importAllResult.useCallback(() => {
-    let obj = searchHistoryItem(tag[14]);
-    obj = { searchContext, searchHistoryItemType: searchHistoryItem.type };
+    searchHistoryItem(tag[14]);
+    const obj = { searchContext, searchHistoryItemType: searchHistoryItem.type };
     const result = obj.trackSearchHistoryClicked(obj);
     onPressSearchHistoryText(searchHistoryItem.text, searchHistoryItem.tags);
   }, items);
@@ -43,27 +41,26 @@ function SearchHistoryTextRow(searchContext) {
   const tags = searchHistoryItem.tags;
   let mapped;
   if (tags != null) {
-    mapped = tags.map((children) => {
-      obj = { accessibilityRole: "button", style: tag.tag, children: closure_1_10(searchContext(tag[16]).Text, obj) };
-      obj = { lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: children.text };
-      return closure_1_10(closure_1_5, obj, children.text);
+    mapped = tags.map((item, index) => {
+      { accessibilityRole: "button", style: tag.tag, children: closure_1_10(searchContext(tag[16]).Text, obj) };
+      obj = { lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: item.text };
+      return closure_1_10(View, obj, item.text);
     });
   }
   obj = { label: null, onPress: null, trailing: null, iconContainerStyle: null, icon: null };
-  const items1 = [mapped, closure_10(searchContext(4734).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text })];
+  const items1 = [mapped, callback(searchContext(4734).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text })];
   obj[1] = items1;
-  obj[0] = closure_11(View, obj);
+  obj[0] = callback2(View, obj);
   obj[1] = callback;
-  obj[2] = closure_10(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
+  obj[2] = callback(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
   obj[3] = tmp.textIconContainer;
-  obj[4] = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7351).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
-  return closure_10(searchContext(15876).SearchListRow, obj);
+  obj[4] = callback(View, { style: tmp.iconContainer, children: callback(searchContext(7351).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
+  return callback(searchContext(15876).SearchListRow, obj);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;
   const searchHistoryItem = searchContext.searchHistoryItem;
   let stateFromStores;
-  let onPressGroupDMItem;
   let obj = searchContext(stateFromStores[18]);
   const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(searchHistoryItem.channelId));
@@ -74,11 +71,11 @@ function SearchHistoryGroupDMRow(searchContext) {
       const obj = searchHistoryItem(stateFromStores[10]);
     }
   }, items1);
-  onPressGroupDMItem = searchContext(stateFromStores[13]).useOnPressGroupDMItem({ searchContext });
+  const onPressGroupDMItem = searchContext(stateFromStores[13]).useOnPressGroupDMItem({ searchContext });
   const items2 = [onPressGroupDMItem, searchContext, searchHistoryItem.type];
   const callback = importAllResult.useCallback((channelId) => {
-    let obj = searchHistoryItem(stateFromStores[14]);
-    obj = { searchContext, channelId, searchHistoryItemType: searchHistoryItem.type };
+    searchHistoryItem(stateFromStores[14]);
+    const obj = { searchContext, channelId, searchHistoryItemType: searchHistoryItem.type };
     const result = obj.trackSearchHistoryClicked(obj);
     onPressGroupDMItem(channelId);
   }, items2);
@@ -104,7 +101,7 @@ function SearchHistoryGroupDMRow(searchContext) {
     obj[2] = memo;
     obj[3] = callback1;
     obj[4] = tmp9;
-    tmp8Result = closure_10(searchHistoryItem(stateFromStores[19]), obj);
+    tmp8Result = callback(searchHistoryItem(stateFromStores[19]), obj);
   }
   return tmp8Result;
 }
@@ -120,7 +117,6 @@ function SearchHistoryDMRow(searchContext) {
     const user = searchContext(onPressDMItem[20]).getUser(searchHistoryItem.userId);
   }, items1);
   onPressDMItem = searchContext(onPressDMItem[13]).useOnPressDMItem({ searchContext });
-  searchContext = undefined;
   searchContext = callback((arg0) => {
     closure_0 = arg0;
     c3 = 0;
@@ -221,7 +217,7 @@ function SearchHistoryDMRow(searchContext) {
     obj[2] = memo;
     obj[3] = callback1;
     obj[4] = tmp9;
-    tmp8Result = closure_10(searchHistoryItem(onPressDMItem[22]), obj);
+    tmp8Result = callback(searchHistoryItem(onPressDMItem[22]), obj);
   }
   return tmp8Result;
 }
@@ -229,7 +225,6 @@ function SearchHistoryGuildVoiceChannelRow(searchContext) {
   searchContext = searchContext.searchContext;
   const searchHistoryItem = searchContext.searchHistoryItem;
   let stateFromStores;
-  let onPressGuildVoiceChannel;
   let obj = searchContext(stateFromStores[18]);
   const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(searchHistoryItem.channelId));
@@ -240,7 +235,7 @@ function SearchHistoryGuildVoiceChannelRow(searchContext) {
       const obj = searchHistoryItem(stateFromStores[10]);
     }
   }, items1);
-  onPressGuildVoiceChannel = searchContext(stateFromStores[13]).useOnPressGuildVoiceChannel({ searchContext });
+  const onPressGuildVoiceChannel = searchContext(stateFromStores[13]).useOnPressGuildVoiceChannel({ searchContext });
   const items2 = [onPressGuildVoiceChannel, searchContext, searchHistoryItem.type];
   let tmp6 = null;
   if (null != stateFromStores) {
@@ -262,7 +257,6 @@ function SearchHistoryGuildTextChannelRow(searchContext) {
   searchContext = searchContext.searchContext;
   const searchHistoryItem = searchContext.searchHistoryItem;
   let stateFromStores;
-  let onPressGuildTextChannel;
   let obj = searchContext(stateFromStores[18]);
   let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(searchHistoryItem.channelId));
@@ -290,11 +284,11 @@ function SearchHistoryGuildTextChannelRow(searchContext) {
   });
   const obj2 = searchContext(stateFromStores[18]);
   const tmp = stateFromStores;
-  onPressGuildTextChannel = searchContext(stateFromStores[13]).useOnPressGuildTextChannel({ searchContext });
+  const onPressGuildTextChannel = searchContext(stateFromStores[13]).useOnPressGuildTextChannel({ searchContext });
   const items3 = [onPressGuildTextChannel, searchContext, searchHistoryItem.type];
   const callback = importAllResult.useCallback((channelId) => {
-    let obj = searchHistoryItem(stateFromStores[14]);
-    obj = { searchContext, channelId, searchHistoryItemType: searchHistoryItem.type };
+    searchHistoryItem(stateFromStores[14]);
+    const obj = { searchContext, channelId, searchHistoryItemType: searchHistoryItem.type };
     const result = obj.trackSearchHistoryClicked(obj);
     onPressGuildTextChannel(channelId);
   }, items3);
@@ -321,19 +315,18 @@ function SearchHistoryGuildTextChannelRow(searchContext) {
     obj[3] = memo;
     obj[4] = callback1;
     obj[5] = tmp10;
-    tmp9Result = closure_10(searchHistoryItem(tmp[24]), obj);
+    tmp9Result = callback(searchHistoryItem(tmp[24]), obj);
   }
   return tmp9Result;
 }
 let c4 = importAllResult;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { iconContainer: null, text: null, textContainer: null, textIconContainer: null, tag: null };
-obj = { height: 48, width: 48, borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
+let obj = { height: 48, width: 48, borderRadius: ThemesDefault.radii.xl, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
 obj[0] = obj;
 obj[1] = { flexShrink: 1 };
 obj[2] = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 2 };
 obj[3] = { alignSelf: "flex-start" };
-createCacheKey = { paddingHorizontal: 8, paddingVertical: 4, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", margin: 2, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const createCacheKey = { paddingHorizontal: 8, paddingVertical: 4, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", margin: 2, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 obj[4] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_17 = [];
@@ -346,22 +339,22 @@ const memoResult = importAllResult.memo((searchHistoryItem) => {
     const merged1 = Object.assign(merged);
     obj.searchHistoryItem = searchHistoryItem;
     return callback2(SearchHistoryGroupDMRow, obj);
-  } else if (tmp2.DM === type) {
+  } else if (SearchHistoryItemTypes.DM === type) {
     obj = {};
     const merged2 = Object.assign(merged);
     obj.searchHistoryItem = searchHistoryItem;
     return callback2(SearchHistoryDMRow, obj);
-  } else if (tmp2.TEXT === type) {
+  } else if (SearchHistoryItemTypes.TEXT === type) {
     obj1 = {};
     const merged3 = Object.assign(merged);
     obj1.searchHistoryItem = searchHistoryItem;
     return callback2(SearchHistoryTextRow, obj1);
-  } else if (tmp2.GUILD_TEXT_CHANNEL === type) {
+  } else if (SearchHistoryItemTypes.GUILD_TEXT_CHANNEL === type) {
     const obj2 = {};
     const merged4 = Object.assign(merged);
     obj2.searchHistoryItem = searchHistoryItem;
     return callback2(SearchHistoryGuildTextChannelRow, obj2);
-  } else if (tmp2.GUILD_VOICE_CHANNEL === type) {
+  } else if (SearchHistoryItemTypes.GUILD_VOICE_CHANNEL === type) {
     obj = {};
     const merged5 = Object.assign(merged);
     obj.searchHistoryItem = searchHistoryItem;
@@ -370,6 +363,6 @@ const memoResult = importAllResult.memo((searchHistoryItem) => {
     return null;
   }
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/SearchHistoryRow.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/native/components/list/rows/SearchHistoryRow.tsx");
 
 export default memoResult;

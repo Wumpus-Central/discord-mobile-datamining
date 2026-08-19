@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
 
-require = arg1;
+require = fn;
 function handleSubscribeFailure(error) {
   error = error.error;
 }
@@ -68,6 +68,6 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(dispatcherDefault,
     return false;
   }
 });
-const result = require("set").fileFinishedImporting("stores/PremiumPaymentModalStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/PremiumPaymentModalStore.tsx");
 
 export default premiumPaymentModalStore;

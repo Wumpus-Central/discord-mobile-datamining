@@ -8,21 +8,20 @@ import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
 import Background from "Background" /* 6950 */;
 import getIsScreenLandscape from "getIsScreenLandscape" /* 8944 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import ME from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ GuildSettingsSections: error, GuildSettingsSubsections: closure_8 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-createCacheKey = { container: null, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = { marginTop: 16, alignItems: "center" };
@@ -31,8 +30,7 @@ createCacheKey[4] = { marginTop: 12, textAlign: "center" };
 createCacheKey[5] = { marginTop: 32 };
 createCacheKey[6] = { marginBottom: 8 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
 
 export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
@@ -47,7 +45,6 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const items1 = [markAsDismissed];
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = React.useEffect(() => () => callback(closure_1_9.UNKNOWN), items1);
-  obj = { startExpanded: true, children: null };
   obj = {
     style: tmp.container,
     onLayout(nativeEvent) {
@@ -56,7 +53,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
       if (closure_3) {
         result = diff / 2;
       }
-      c2(result);
+      _undefined(result);
     },
     children: null
   };
@@ -84,7 +81,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   obj8[0] = intl4.string(getSystemLocale.t.BQq86h);
   obj8[1] = function onPress() {
     markAsDismissed(_undefined[16]).open(closure_0, closure_1_7.ROLE_SUBSCRIPTIONS_TIERS, undefined, closure_1_8.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
-    markAsDismissed(closure_1_9.UNKNOWN);
+    markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
   obj7[1] = callback2(Button.Button, obj8);
   const items5 = [callback2(View, obj7), ];

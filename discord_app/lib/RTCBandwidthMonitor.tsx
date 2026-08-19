@@ -1,7 +1,7 @@
 // === Module 5065: create ===
 
 // Module 5065 (create)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 
 let closure_2 = [];
@@ -14,26 +14,15 @@ class RTCBandwidthMonitor {
     obj.record = function record(rtp) {
       if (null != rtp) {
         for (const key10007 in arg0.rtp.inbound) {
-          let tmp27 = key10007;
           let tmp28 = arg0.rtp.inbound[key10007];
-          let tmp29 = tmp28;
-          let tmp = tmp28;
           for (const item10009 of tmp28) {
             let _HermesInternal = HermesInternal;
-            let tmp2 = item10009;
             let combined = "inbound-" + key10007 + "-" + item10009.type;
             let tmp4 = combined;
-            let tmp5 = obj;
-            let tmp6 = obj;
             if (!(combined in obj.bytes)) {
-              let tmp7 = tmp5;
-              let tmp8 = combined;
-              tmp6.bytes[tmp4] = 0;
+              obj.bytes[tmp4] = 0;
             }
-            let tmp9 = tmp5;
-            let tmp10 = combined;
-            let tmp11 = item10009;
-            tmp6.bytes[tmp4] = tmp2.bytesReceived;
+            obj.bytes[tmp4] = item10009.bytesReceived;
             continue;
           }
         }
@@ -45,17 +34,10 @@ class RTCBandwidthMonitor {
           let tmp16 = nextResult;
           let combined1 = "outbound-" + nextResult.type;
           let tmp18 = combined1;
-          let tmp19 = obj;
-          let tmp20 = obj;
           if (!(combined1 in obj.bytes)) {
-            let tmp21 = tmp19;
-            let tmp22 = combined1;
-            tmp20.bytes[tmp18] = 0;
+            obj.bytes[tmp18] = 0;
           }
-          let tmp23 = tmp19;
-          let tmp24 = combined1;
-          let tmp25 = nextResult;
-          tmp20.bytes[tmp18] = tmp16.bytesSent;
+          obj.bytes[tmp18] = tmp16.bytesSent;
           continue;
         }
       }
@@ -72,26 +54,15 @@ RTCBandwidthMonitor["create"] = function create() {
   obj.record = function record(rtp) {
     if (null != rtp) {
       for (const key10007 in arg0.rtp.inbound) {
-        let tmp27 = key10007;
         let tmp28 = arg0.rtp.inbound[key10007];
-        let tmp29 = tmp28;
-        let tmp = tmp28;
         for (const item10009 of tmp28) {
           let _HermesInternal = HermesInternal;
-          let tmp2 = item10009;
           let combined = "inbound-" + key10007 + "-" + item10009.type;
           let tmp4 = combined;
-          let tmp5 = obj;
-          let tmp6 = obj;
           if (!(combined in obj.bytes)) {
-            let tmp7 = tmp5;
-            let tmp8 = combined;
-            tmp6.bytes[tmp4] = 0;
+            obj.bytes[tmp4] = 0;
           }
-          let tmp9 = tmp5;
-          let tmp10 = combined;
-          let tmp11 = item10009;
-          tmp6.bytes[tmp4] = tmp2.bytesReceived;
+          obj.bytes[tmp4] = item10009.bytesReceived;
           continue;
         }
       }
@@ -103,17 +74,10 @@ RTCBandwidthMonitor["create"] = function create() {
         let tmp16 = nextResult;
         let combined1 = "outbound-" + nextResult.type;
         let tmp18 = combined1;
-        let tmp19 = obj;
-        let tmp20 = obj;
         if (!(combined1 in obj.bytes)) {
-          let tmp21 = tmp19;
-          let tmp22 = combined1;
-          tmp20.bytes[tmp18] = 0;
+          obj.bytes[tmp18] = 0;
         }
-        let tmp23 = tmp19;
-        let tmp24 = combined1;
-        let tmp25 = nextResult;
-        tmp20.bytes[tmp18] = tmp16.bytesSent;
+        obj.bytes[tmp18] = tmp16.bytesSent;
         continue;
       }
     }
@@ -123,9 +87,9 @@ RTCBandwidthMonitor["create"] = function create() {
 RTCBandwidthMonitor.prototype["getTotalBytes"] = function getTotalBytes() {
   return applyDefault.sum(Object.values(this.bytes));
 };
-const result = set.fileFinishedImporting("lib/RTCBandwidthMonitor.tsx");
+const result = obj132.fileFinishedImporting("lib/RTCBandwidthMonitor.tsx");
 
 export default RTCBandwidthMonitor;
 export const getRTCTotalBytes = function getRTCTotalBytes() {
-  return applyDefault.sum(arr.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
+  return applyDefault.sum(arr.map((item, index) => item.getTotalBytes()));
 };

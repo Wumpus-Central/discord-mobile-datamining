@@ -2,11 +2,11 @@
 
 // Module 16671 (onPostConnectionOpen)
 import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-let require = arg1;
+let require = fn;
 let c6 = 26;
 let c7 = 2;
 let c8 = false;
@@ -60,11 +60,11 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
                 if (obj.isMetaQuest()) {
                   return false;
                 } else {
-                  let tmpResult = tmp(tmp2[4]);
+                  let tmpResult = v3(table[4]);
                   if (tmpResult.getIsRunningOnSimulator()) {
                     return false;
                   } else {
-                    tmpResult = tmp(tmp2[4]);
+                    tmpResult = v3(table[4]);
                     const parts = tmpResult.getSystemVersion().split(".");
                     const _parseInt = parseInt;
                     const parsed = parseInt(parts[0], 10);
@@ -130,15 +130,14 @@ prototype["performAgeCheck"] = function performAgeCheck(arg0) {
   return callback(function*() {
     closure_1 = tmp3;
     c3 = 1;
-    yield closure_1_1.collectAgeSignal();
+    yield self.collectAgeSignal();
     if (1 === tmp7) {
-      c3 = 0;
       c3 = closure_2;
       let obj2 = { tags: null };
       obj2[0] = { source: "parental_consent_manager", step: "perform_age_check" };
-      closure_1_1(closure_1_2[11]).captureException(c3, obj2);
+      self(closure_1_2[11]).captureException(c3, obj2);
       let constants = 3;
-      const obj11 = closure_1_1(closure_1_2[11]);
+      const obj11 = self(closure_1_2[11]);
     } else if (2 === tmp7) {
       if (arg0 === 1) {
         constants = 3;
@@ -182,7 +181,7 @@ prototype["performAgeCheck"] = function performAgeCheck(arg0) {
       throw arg1;
     } else if (arg0 !== 2) {
       closure_2 = arg1;
-      const obj = closure_1_1(closure_1_2[10]);
+      const obj = self(closure_1_2[10]);
       obj7 = { should_block: null, platform: null };
       obj7[0] = closure_2;
       obj2 = closure_1_0(closure_1_2[5]);
@@ -278,6 +277,6 @@ prototype["collectAgeSignal"] = function collectAgeSignal() {
   })();
 };
 const parentalConsentManager = new ParentalConsentManager();
-let result = require("set").fileFinishedImporting("modules/age_assurance/native/ParentalConsentManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/age_assurance/native/ParentalConsentManager.tsx");
 
 export default parentalConsentManager;

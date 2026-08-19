@@ -1,11 +1,11 @@
 // === Module 7222: _updateGuildRoleSubscriptionGroupListing ===
 
 // Module 7222 (_updateGuildRoleSubscriptionGroupListing)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 import { PriceTierTypes } from "sum" /* 505 */;
 
-const require = arg1;
+const require = fn;
 function _updateGuildRoleSubscriptionGroupListing() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -1698,7 +1698,7 @@ function _fetchHighlightedCreatorGuildDetails() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHttpApi.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHttpApi.tsx");
 
 export const updateGuildRoleSubscriptionGroupListing = function updateGuildRoleSubscriptionGroupListing(closure_0, closure_1, closure_2) {
   const self = this;

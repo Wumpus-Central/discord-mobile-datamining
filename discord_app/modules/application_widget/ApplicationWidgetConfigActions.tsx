@@ -1,15 +1,15 @@
 // === Module 12289: getApplicationsFromConfigs ===
 
 // Module 12289 (getApplicationsFromConfigs)
-import setDefault from "set" /* 687 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateApplicationConfigs" /* 12288 */;
+import obj132Default from "obj132" /* 687 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import updateApplicationConfigs from "updateApplicationConfigs" /* 12288 */;
 import { FetchState } from "updateApplicationConfigs" /* 12288 */;
 import { Endpoints } from "ME" /* 676 */;
 import importDefaultResult from "fails" /* 584 */;
 import importDefaultResult1 from "dispatcher" /* 709 */;
 
-const require = arg1;
+const require = fn;
 function getApplicationsFromConfigs(arg0) {
   const map = new Map();
   const iter = arg0[Symbol.iterator]();
@@ -17,7 +17,6 @@ function getApplicationsFromConfigs(arg0) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (null != nextResult.application) {
-      let tmp3 = nextResult;
       let result = map.set(tmp2.application.id, tmp2.application);
     }
     continue;
@@ -84,7 +83,7 @@ function _fetchFeaturedWidgetConfigsFromApi() {
           obj1.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" });
           if (!closure_9.pending) {
             closure_9.fail(() => {
-              closure_8.one(undefined, closure_10).catch(() => {
+              closure_8.one(undefined, closure_10).catch((error) => {
 
               });
             });
@@ -335,13 +334,13 @@ function _fetchWidgetConfigsFromApi() {
   }
   return applyArgumentsResult;
 }
-let promiseDeduper = new require("areArraysShallowlyEqual").PromiseDeduper();
-importDefaultResult = new importDefaultResult(setDefault.Millis.SECOND, setDefault.Millis.MINUTE, true);
+new require("areArraysShallowlyEqual").PromiseDeduper();
+importDefaultResult = new importDefaultResult(obj132Default.Millis.SECOND, obj132Default.Millis.MINUTE, true);
 let c9 = importDefaultResult;
 const subscription = importDefaultResult1.subscribe("LOGOUT", () => importDefaultResult.succeed());
-promiseDeduper = new require("areArraysShallowlyEqual").PromiseDeduper();
+const promiseDeduper = new require("areArraysShallowlyEqual").PromiseDeduper();
 const promiseDeduper1 = new require("areArraysShallowlyEqual").PromiseDeduper();
-let result = require("set").fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigActions.tsx");
+let result = require("obj132").fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigActions.tsx");
 
 export const fetchFeaturedWidgetConfigs = function fetchFeaturedWidgetConfigs() {
   let obj = arg0;

@@ -1,14 +1,14 @@
 // === Module 10808: openGuildHighlightNotificationForPush ===
 
 // Module 10808 (openGuildHighlightNotificationForPush)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import NotificationUserFeedbackReasons from "NotificationUserFeedbackReasons" /* 10809 */;
 
 let closure_3 = NotificationUserFeedbackReasons.NotificationUserFeedbackReasons;
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx");
 
 export const openGuildHighlightNotificationForPush = function openGuildHighlightNotificationForPush(guildId, arg1, TRENDING_CONTENT_PUSH, NOTIFICATION_CENTER, arg4) {
   const _require = guildId;
@@ -16,9 +16,7 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
   dependencyMap = TRENDING_CONTENT_PUSH;
   const constants = NOTIFICATION_CENTER;
   closure_4 = arg4;
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { guildId, feedbackSettings: null };
-  obj = { reasons: null, onFeedbackShown: null, onFeedbackCompleted: null };
+  let obj = { reasons: null, onFeedbackShown: null, onFeedbackCompleted: null };
   obj1 = { value: constants.TOO_MANY, label: null };
   const intl = _require(1236).intl;
   obj1[1] = intl.string(_require(1236).t.pLeQp0);
@@ -41,14 +39,14 @@ export const openGuildHighlightNotificationForPush = function openGuildHighlight
   items[4] = obj5;
   obj[0] = items;
   obj[1] = function onFeedbackShown() {
-    let obj = lib(TRENDING_CONTENT_PUSH[6]);
-    obj = { type: TRENDING_CONTENT_PUSH, location: closure_3, guild_id: closure_0, channel_id: lib.channel_id, message_id: lib.id };
+    lib(TRENDING_CONTENT_PUSH[6]);
+    const obj = { type: TRENDING_CONTENT_PUSH, location: closure_3, guild_id: closure_0, channel_id: lib.channel_id, message_id: lib.id };
     const merged = Object.assign(constants);
     obj.track(constants.FEEDBACK_FORM_VIEWED, obj);
   };
   obj[2] = function onFeedbackCompleted(rating) {
-    let obj = lib(TRENDING_CONTENT_PUSH[6]);
-    obj = { type: TRENDING_CONTENT_PUSH, location: closure_3, rating: rating.rating, reason: null, guild_id: null, channel_id: null, message_id: null };
+    lib(TRENDING_CONTENT_PUSH[6]);
+    const obj = { type: TRENDING_CONTENT_PUSH, location: closure_3, rating: rating.rating, reason: null, guild_id: null, channel_id: null, message_id: null };
     let value;
     if (rating.reason != null) {
       value = iter.value;

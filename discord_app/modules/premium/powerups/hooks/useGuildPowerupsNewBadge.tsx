@@ -2,24 +2,23 @@
 
 // Module 11679 (useGuildPowerupsNewBadge)
 import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 11672 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "calculateAppliedBoosts" /* 4261 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
 import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "BoostedGuildTiers" /* 4262 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
-const require = arg1;
+const require = fn;
 let closure_8 = require("DismissibleContent").DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
-let result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx");
 
 export default function useGuildPowerupsNewBadge(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let _require;
   importDefault = undefined;
-  _require = arg0;
+  let _require = arg0;
   let obj = _require(589);
   const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
@@ -28,8 +27,6 @@ export default function useGuildPowerupsNewBadge(arg0) {
   if (tmp4Result >= constants.GUILD_THEME) {
     num = tmp4Result;
   }
-  const tmp = _require;
-  const tmp4 = useGuildPowerupNewPerkMarketingVersionDefault;
   let tmp6 = null;
   if (num > 0) {
     tmp6 = null;
@@ -46,7 +43,7 @@ export default function useGuildPowerupsNewBadge(arg0) {
     dismissNewBadgeIfShown: React.useCallback(() => {
       let TAKE_ACTION = arg0;
       if (arg0 === undefined) {
-        TAKE_ACTION = closure_1_7.TAKE_ACTION;
+        TAKE_ACTION = ContentDismissActionType.TAKE_ACTION;
       }
       if (closure_1) {
         callback(TAKE_ACTION);
@@ -68,9 +65,9 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
   const items1 = [num, guildId];
   const effect = React.useEffect(() => {
     if (num > 0) {
-      let obj = guildId(closure_1_2[9]);
-      obj = { dismissAction: null, guildId: null };
-      obj[0] = closure_1_7.AUTO_DISMISS;
+      guildId(dependencyMap[9]);
+      const obj = { dismissAction: null, guildId: null };
+      obj[0] = ContentDismissActionType.AUTO_DISMISS;
       obj[1] = guildId;
       const result = obj.markVersionedDismissibleContentAsDismissed(closure_1_8, tmp, obj);
     }

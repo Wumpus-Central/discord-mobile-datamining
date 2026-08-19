@@ -2,16 +2,16 @@
 
 // Module 11386 (ImageInput)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { DraftType } from "handleChanged" /* 4825 */;
 import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
 import { EmojiIntention } from "set" /* 1925 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function ImageInput(openImageInputActionSheet) {
   ({ channelId, localCreationAnswerId, image } = openImageInputActionSheet);
   ({ openExpressionPicker, emojiSize } = openImageInputActionSheet);
@@ -21,21 +21,20 @@ function ImageInput(openImageInputActionSheet) {
   ({ imageSize, answerIndex } = openImageInputActionSheet);
   openImageInputActionSheet = openImageInputActionSheet.openImageInputActionSheet;
   let upload;
-  let setUploadSize;
   const tmp3 = answerIndex(upload[9])(channelId, localCreationAnswerId, image, imageSize, emojiSize);
   upload = tmp3.upload;
-  setUploadSize = tmp3.setUploadSize;
+  const setUploadSize = tmp3.setUploadSize;
   const items = [image, upload, answerIndex];
   const items1 = [setUploadSize];
   const memo = setUploadSize.useMemo(() => {
     let emoji;
     if (image != null) {
-      emoji = tmp.emoji;
+      emoji = image.emoji;
     }
     if (null != emoji) {
       const intl3 = image(upload[10]).intl;
       let obj = { imageName: null, answerNumber: null };
-      obj[0] = tmp.emoji.name;
+      obj[0] = image.emoji.name;
       obj[1] = answerIndex + 1;
       return intl3.formatToPlainString(image(upload[10]).t.vcC7Qn, obj);
     } else if (null != upload) {
@@ -84,60 +83,56 @@ function ImageInput(openImageInputActionSheet) {
   if (tmp6) {
     obj = { children: null };
     obj[0] = tmp3.renderImage;
-    let tmp9Result = tmp9(closure_6, obj);
+    let tmp9Result = callback(closure_6, obj);
   } else {
     obj = { source: null };
     obj[0] = openImageInputActionSheet.iconSrc;
-    tmp9Result = tmp9(image(tmp2[13]).Icon, obj);
+    tmp9Result = callback(image(tmp2[13]).Icon, obj);
   }
   obj[6] = tmp9Result;
-  return closure_12(image(upload[12]).PressableOpacity, obj);
+  return callback(image(upload[12]).PressableOpacity, obj);
 }
 ({ Keyboard: c4, TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
 ({ MAX_POLL_ANSWER_LENGTH: c9, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: c10 } = POLL_ATTACHMENT_FOLDER);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { defaultContainer: { flexDirection: "row", alignItems: "center" }, defaultImageAndTextContainer: null, cannotRemove: null, defaultImageContainer: null, pollAnswerTextInput: null, defaultRemoveButtonContainer: null, uploadContainer: null, errorInput: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg, flex: 1, overflow: "hidden" };
+const createCacheKey = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg, flex: 1, overflow: "hidden" };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginRight: 30 };
 createCacheKey[3] = { width: 60, height: 48, justifyContent: "center", alignItems: "center" };
 createCacheKey[4] = { flex: 1, paddingStart: 0 };
 createCacheKey[5] = { paddingLeft: 6, height: 48, justifyContent: "center", color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[6] = { alignItems: "flex-start" };
-let obj1 = { paddingLeft: 6, height: 48, justifyContent: "center", color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[7] = { borderColor: ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL, borderWidth: 2 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { borderColor: ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL, borderWidth: 2 };
-let result = require("set").fileFinishedImporting("modules/polls/native/PollAnswerInput.tsx");
+let result = require("obj132").fileFinishedImporting("modules/polls/native/PollAnswerInput.tsx");
 
 export default function PollAnswerInput(answer) {
   answer = answer.answer;
   const index = answer.index;
   const channelId = answer.channelId;
   ({ onAnswerTextChange: closure_3, onAnswerEmojiSelect: closure_4, canRemoveAnswer, onRemoveAnswer: closure_5, onRemoveAnswerImage: closure_6, error } = answer);
-  let localCreationAnswerId;
   function openExpressionPicker() {
     const channel = localCreationAnswerId.getChannel(channelId);
     if (null != channel) {
       closure_1_4.dismiss();
-      let obj = answer(channelId[14]);
-      obj = { channel: null, onPressEmoji: null, pickerIntention: null, startExpanded: false, autoFocus: false };
+      answer(channelId[14]);
+      const obj = { channel: null, onPressEmoji: null, pickerIntention: null, startExpanded: false, autoFocus: false };
       obj[0] = channel;
       obj[1] = function onPressEmoji(arg0) {
         callback(arg0, closure_1);
       };
-      obj[2] = closure_1_11.POLLS;
+      obj[2] = EmojiIntention.POLLS;
       const result = obj.openEmojiPickerActionSheet(obj);
     }
   }
   function handleSaveAltText(description) {
-    let obj = index(channelId[15]);
-    obj = { description };
+    index(channelId[15]);
+    const obj = { description };
     obj.update(channelId, answer.localCreationAnswerId, openExpressionPicker.Poll, obj);
   }
   ({ inputRef, onSubmitEditing } = answer);
   const tmp = callback2();
-  localCreationAnswerId = answer.localCreationAnswerId;
+  const localCreationAnswerId = answer.localCreationAnswerId;
   let tmp6Result = null != error;
   if (tmp6Result) {
     tmp6Result = error.length > 0;
@@ -154,7 +149,6 @@ export default function PollAnswerInput(answer) {
   if (tmp6Result) {
     errorInput = tmp.errorInput;
   }
-  obj = { style: items1, children: null };
   items1[1] = errorInput;
   obj = {
     channelId,
@@ -162,8 +156,8 @@ export default function PollAnswerInput(answer) {
     image: answer.image,
     openExpressionPicker,
     openImageInputActionSheet() {
-      let obj = index(channelId[16]);
-      obj = { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage: closure_6, openExpressionPicker };
+      index(channelId[16]);
+      const obj = { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage: closure_6, openExpressionPicker };
       obj.openLazy(answer(channelId[18])(channelId[17], channelId.paths), closure_1_10, obj);
     },
     iconSrc: index(channelId[19]),
@@ -194,7 +188,7 @@ export default function PollAnswerInput(answer) {
   obj1[16] = error;
   items2[1] = callback(answer(channelId[20]).FormInput, obj1);
   obj[1] = items2;
-  const items3 = [closure_13(closure_6, obj), ];
+  const items3 = [callback2(closure_6, obj), ];
   if (canRemoveAnswer) {
     const obj4 = { onPress: null, accessibilityRole: "button", style: null, accessibilityLabel: null, children: null };
     obj4[0] = function onPress() {
@@ -209,17 +203,17 @@ export default function PollAnswerInput(answer) {
     obj6[0] = tmp9(tmp8[13]).Icon.Sizes.MEDIUM;
     obj6[1] = tmp7(tmp8[21]);
     obj6[2] = tmp.defaultRemoveButtonContainer.color;
-    obj4[4] = tmp6(tmp9(tmp8[13]).Icon, obj6);
-    canRemoveAnswer = tmp6(closure_5, obj4);
+    obj4[4] = callback(tmp9(tmp8[13]).Icon, obj6);
+    canRemoveAnswer = callback(closure_5, obj4);
   }
   items3[1] = canRemoveAnswer;
   obj[1] = items3;
-  const children = [closure_13(closure_6, obj), ];
+  const children = [callback2(closure_6, obj), ];
   if (tmp6Result) {
     const obj7 = { message: null };
     obj7[0] = error;
-    tmp6Result = tmp6(tmp7(tmp8[22]), obj7);
+    tmp6Result = callback(tmp7(tmp8[22]), obj7);
   }
   children[1] = tmp6Result;
-  return closure_13(closure_14, { children });
+  return callback2(closure_14, { children });
 };

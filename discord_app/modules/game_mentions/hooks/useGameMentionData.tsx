@@ -3,12 +3,12 @@
 // Module 6898 (getGameMentionData)
 import shallowEqualDefault from "shallowEqual" /* 643 */;
 import useGameProfileObscured from "useGameProfileObscured" /* 6901 */;
-import closure_3 from "handleLoadMessages" /* 4505 */;
-import closure_4 from "set" /* 6899 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import handleLoadMessages from "handleLoadMessages" /* 4505 */;
+import set from "set" /* 6899 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
 
 export const getGameMentionData = function getGameMentionData(closure_0) {
   currentUser = currentUser.getCurrentUser();
@@ -54,7 +54,7 @@ export const useGameMentionData = function useGameMentionData(gameId) {
       }
       if (!obj2.isGameProfileObscured(game, nsfwAllowed)) {
         let obj = { gameId: null, gameName: null, gameIcon: null };
-        obj[0] = tmp;
+        obj[0] = gameId;
         ({ name: obj3[1], media } = game);
         let icon;
         if (media != null) {
@@ -63,10 +63,10 @@ export const useGameMentionData = function useGameMentionData(gameId) {
         obj[2] = icon;
         let tmp5 = obj;
       }
-      obj2 = gameId(closure_1_2[3]);
+      obj2 = gameId(dependencyMap[3]);
     } else if (null != gameById) {
       obj = { gameId: null, gameName: null, gameIcon: null };
-      obj[0] = tmp;
+      obj[0] = gameId;
       ({ name: obj[1], icon: obj[2] } = gameById);
       tmp5 = obj;
     }

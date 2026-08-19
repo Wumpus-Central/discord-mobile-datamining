@@ -3,13 +3,15 @@
 // Module 8191 (MessageAccessibilityAction)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_2 from "recomputeGuild" /* 4977 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji" /* 8192 */;
+import useCanReplyToMessage from "useCanReplyToMessage" /* 8199 */;
+import recomputeGuild from "recomputeGuild" /* 4977 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 let obj = { VIEW_PROFILE: "view_profile", ADD_REACTION: "add_reaction", ADD_QUICK_REACTION: "add_quick_reaction", REPLY: "reply", MESSAGE_ACTIONS_MENU: "message_actions_menu", EDIT_GDM: "edit_gdm", OPEN_PINS: "open_pins", JUMP_TO_MESSAGE: "jump_to_message" };
-let result = require("set").fileFinishedImporting("modules/messages/native/MessageAccessibilityActions.tsx");
+let result = require("obj132").fileFinishedImporting("modules/messages/native/MessageAccessibilityActions.tsx");
 
 export const MessageAccessibilityAction = obj;
 export const getMessageAccessibilityActionFromLabel = function getMessageAccessibilityActionFromLabel(action) {
@@ -37,17 +39,17 @@ export const getMessageAccessibilityActionFromLabel = function getMessageAccessi
   let formatToPlainStringResult = null;
   if (true !== disableDoubleTap) {
     if (null != setting) {
-      const result = tmp(8192).disambiguatedEmojiFromSettingsValue(setting);
+      const result = getFallbackDoubleTapDisambiguatedEmoji.disambiguatedEmojiFromSettingsValue(setting);
       if (null != result) {
-        const intl9 = tmp(1236).intl;
+        const intl9 = getSystemLocale.intl;
         obj = { emojiName: null };
         obj[0] = result.name;
-        formatToPlainStringResult = intl9.formatToPlainString(tmp(1236).t.eQIttH, obj);
+        formatToPlainStringResult = intl9.formatToPlainString(getSystemLocale.t.eQIttH, obj);
       }
-      const tmpResult = tmp(8192);
+      const tmpResult = getFallbackDoubleTapDisambiguatedEmoji;
     }
-    const intl8 = tmp(1236).intl;
-    formatToPlainStringResult = intl8.formatToPlainString(tmp(1236).t.eQIttH, { emojiName: "heart" });
+    const intl8 = getSystemLocale.intl;
+    formatToPlainStringResult = intl8.formatToPlainString(getSystemLocale.t.eQIttH, { emojiName: "heart" });
   }
   if (null != formatToPlainStringResult) {
     obj[formatToPlainStringResult] = obj.ADD_QUICK_REACTION;
@@ -76,11 +78,11 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
     const items = [obj];
     if (canChatInGuildResult) {
       obj = { label: null, name: null };
-      const intl2 = tmp5(1236).intl;
-      obj[0] = intl2.string(tmp5(1236).t.lfIHs4);
+      const intl2 = getSystemLocale.intl;
+      obj[0] = intl2.string(getSystemLocale.t.lfIHs4);
       obj[1] = tmp7.ADD_REACTION;
       items.push(obj);
-      const DoubleTapReactionEmoji = tmp5(4066).DoubleTapReactionEmoji;
+      const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
       const setting = DoubleTapReactionEmoji.getSetting();
       let disableDoubleTap;
       if (setting != null) {
@@ -89,17 +91,17 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
       let formatToPlainStringResult = null;
       if (true !== disableDoubleTap) {
         if (null != setting) {
-          let tmp5Result = tmp5(8192);
+          let tmp5Result = getFallbackDoubleTapDisambiguatedEmoji;
           const result = tmp5Result.disambiguatedEmojiFromSettingsValue(setting);
           if (null != result) {
-            const intl4 = tmp5(1236).intl;
+            const intl4 = getSystemLocale.intl;
             obj = { emojiName: null };
             obj[0] = result.name;
-            formatToPlainStringResult = intl4.formatToPlainString(tmp5(1236).t.eQIttH, obj);
+            formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t.eQIttH, obj);
           }
         }
-        const intl3 = tmp5(1236).intl;
-        formatToPlainStringResult = intl3.formatToPlainString(tmp5(1236).t.eQIttH, { emojiName: "heart" });
+        const intl3 = getSystemLocale.intl;
+        formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.eQIttH, { emojiName: "heart" });
       }
       if (null != formatToPlainStringResult) {
         obj1 = { label: null, name: null };
@@ -108,16 +110,16 @@ export const createMessageAccessibilityActions = function createMessageAccessibi
         items.push(obj1);
       }
     }
-    tmp5Result = tmp5(8199);
+    tmp5Result = useCanReplyToMessage;
     if (tmp5Result.canReplyToMessage(channel, message)) {
       const obj2 = { label: null, name: null };
-      const intl5 = tmp5(1236).intl;
-      obj2[0] = intl5.string(tmp5(1236).t["5IEsGx"]);
+      const intl5 = getSystemLocale.intl;
+      obj2[0] = intl5.string(getSystemLocale.t["5IEsGx"]);
       obj2[1] = tmp7.REPLY;
       items.push(obj2);
     }
     const obj3 = { label: null, name: null };
-    const intl6 = tmp5(1236).intl;
+    const intl6 = getSystemLocale.intl;
     obj3[0] = intl6.string(getSystemLocale.t.ChPNkN);
     obj3[1] = obj.MESSAGE_ACTIONS_MENU;
     items.push(obj3);

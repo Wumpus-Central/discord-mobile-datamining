@@ -2,7 +2,7 @@
 
 // Module 7610 (createFromServer)
 import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "createFromServer" /* 7422 */;
+import createFromServer from "createFromServer" /* 7422 */;
 
 toJSDefault;
 let UserDiscountOfferRecord;
@@ -92,6 +92,6 @@ prototype["isDeleted"] = function isDeleted() {
 prototype["hasAcknowledged"] = function hasAcknowledged() {
   return null != this.expiresAt;
 };
-const result = require("set").fileFinishedImporting("modules/user_offers/records/UserDiscountOfferRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_offers/records/UserDiscountOfferRecord.tsx");
 
 export default UserDiscountOfferRecord;

@@ -1,9 +1,9 @@
 // === Module 13286: GdmWarningMedium ===
 
 // Module 13286 (GdmWarningMedium)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");
 
 export const GdmWarningMedium = { BANNER: "BANNER", MODAL: "MODAL", ACTION_SHEET: "ACTION_SHEET" };
 export const BlockWarningEngagements = { CLICK_TO_STAY: "click_to_stay", CLICK_TO_LEAVE: "click_to_leave", CLICK_TO_JOIN: "click_to_join", DISMISS: "dismiss" };

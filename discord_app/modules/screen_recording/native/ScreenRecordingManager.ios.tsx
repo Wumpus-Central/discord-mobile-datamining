@@ -1,11 +1,11 @@
 // === Module 15201: get ActivityIndicator ===
 
 // Module 15201 (get ActivityIndicator)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const DCDScreenRecordingManager = get_ActivityIndicator.NativeModules.DCDScreenRecordingManager;
-const result = set.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
+const result = obj132.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
 
 export default {
   requestPermissions() {

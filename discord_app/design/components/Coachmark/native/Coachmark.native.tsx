@@ -3,15 +3,15 @@
 // Module 9316 (Coachmark)
 import ThemesDefault from "Themes" /* 712 */;
 import ManaContext from "ManaContext" /* 4104 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import importDefaultResult from "module_4115" /* 4115 */;
 
-require = arg1;
+require = fn;
 class Coachmark {
   constructor(arg0) {
     ({ targetMeasurements, surfaceMeasurements, offsetY } = global);
@@ -63,8 +63,8 @@ class Coachmark {
         const items = [closure_3.bottomMargin];
         obj[0] = items;
         obj = {};
-        const merged = Object.assign(tmp);
-        let str = tmp.aspectRatio;
+        const merged = Object.assign(graphic);
+        let str = graphic.aspectRatio;
         if (str == null) {
           str = "1/1";
         }
@@ -82,7 +82,7 @@ class Coachmark {
           obj = { source: null, style: null };
           obj[0] = tmp3;
           obj[1] = closure_3.image;
-          tmp2 = closure_1_10(closure_1_9, obj);
+          tmp2 = closure_1_10(Image, obj);
         }
         let tmp7 = null;
         if (null != tmp2) {
@@ -104,8 +104,8 @@ class Coachmark {
       style: tmp.center,
       accessible: true,
       onLayout() {
-            let obj = graphic(renderImgComponent[12]);
-            obj = { ref, delay: 100 };
+            graphic(renderImgComponent[12]);
+            const obj = { ref, delay: 100 };
             const result = obj.setAccessibilityFocus(obj);
           },
       children: null
@@ -242,7 +242,7 @@ class Coachmark {
     };
     items10 = [, , ];
     items10[0] = tmp.container;
-    tmp8Result = require("set");
+    tmp8Result = require("obj132");
     shadow = undefined;
     if (tmp8Result.isIOS()) {
       shadow = tmp.shadow;
@@ -271,7 +271,7 @@ class Coachmark {
     obj17.onPress = onDismiss;
     items12 = [, ];
     items12[0] = tmp.body;
-    tmp8Result1 = require("set");
+    tmp8Result1 = require("obj132");
     if (tmp8Result1.isAndroid()) {
       items13 = [, ];
       items13[0] = tmp.shadow;
@@ -303,9 +303,8 @@ function Cursor(arg0) {
   if ("top" === position) {
     str = "column-reverse";
   }
-  let obj = { style: items, children: null };
-  items = [tmp.cursorContainer, "top" === position ? { marginTop: -6 } : { marginBottom: -6 }, { flexDirection: str, left: -adjustmentX }];
-  obj = { style: tmp.cursorHead };
+  const items = [tmp.cursorContainer, "top" === position ? { marginTop: -6 } : { marginBottom: -6 }, { flexDirection: str, left: -adjustmentX }];
+  let obj = { style: tmp.cursorHead };
   const items1 = [callback2(closure_7, obj), ];
   obj = { style: tmp.cursorSpine };
   items1[1] = callback2(closure_7, obj);
@@ -317,47 +316,35 @@ let closure_3 = ["style"];
 const Image = get_ActivityIndicator.Image;
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let closure_13 = importDefaultResult.createAnimatedComponent(Pressable);
-let obj = { container: { position: "absolute", alignItems: "center" }, shadow: null, body: null, textGap: null, textOnlyPadding: null, bodyBgColor: null, gradient: null, bodyContainer: null, center: null, buttonSpacing: null, text: null, cursorContainer: null, cursorHead: null, cursorSpine: null, image: null, bottomMargin: null, closeButton: null };
-obj = {};
+let obj = {};
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_BUTTON_OVERLAY);
 obj[1] = obj;
-createCacheKey = { width: ThemesDefault.modules.mobile.COACHMARK_BODY_WIDTH, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", zIndex: 1 };
+const createCacheKey = { width: ThemesDefault.modules.mobile.COACHMARK_BODY_WIDTH, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", zIndex: 1 };
 obj[2] = createCacheKey;
 obj[3] = { gap: 4 };
 obj[4] = { paddingHorizontal: ThemesDefault.space.PX_24 };
-let obj2 = { paddingHorizontal: ThemesDefault.space.PX_24 };
 obj[5] = { borderWidth: 1, borderColor: ThemesDefault.colors.MOBILE_COACHMARK_BORDER_DEFAULT, backgroundColor: ThemesDefault.colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg };
-let obj3 = { borderWidth: 1, borderColor: ThemesDefault.colors.MOBILE_COACHMARK_BORDER_DEFAULT, backgroundColor: ThemesDefault.colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg };
 obj[6] = { borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
-let obj4 = { borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 obj[7] = { padding: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj[8] = { alignItems: "center", justifyContent: "center" };
-let obj5 = { padding: ThemesDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj[9] = { height: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
 obj[10] = { maxWidth: 200, textAlign: "center" };
 obj[11] = { alignItems: "center", zIndex: 0 };
-let obj6 = { height: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
 obj[12] = { height: 8, width: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: 2, backgroundColor: "transparent", borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let obj7 = { height: 8, width: 8, borderRadius: ThemesDefault.radii.xs, borderWidth: 2, backgroundColor: "transparent", borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[13] = { width: 2, height: 16, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[14] = { height: 40, width: 40 };
-let obj8 = { width: 2, height: 16, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[15] = { marginBottom: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
-let obj9 = { marginBottom: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
 obj[16] = { position: "absolute", top: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING, right: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
 let closure_14 = createCacheKey.createStyles(obj);
 let closure_15 = { "21/9": 90, "16/9": 90, "6/4": 60, "2/1": 40, "1/1": 40 };
-let obj10 = { position: "absolute", top: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING, right: ThemesDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
-let result = require("set").fileFinishedImporting("design/components/Coachmark/native/Coachmark.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Coachmark/native/Coachmark.native.tsx");
 
 export { Coachmark };
 export const CoachmarkContainer = function CoachmarkContainer(experimental_withBlurBackground) {
   let obj = ManaContext;
-  let str = "dark";
   if (!experimental_withBlurBackground.experimental_withBlurBackground) {
-    str = obj.useThemeContext().theme;
+    const str = obj.useThemeContext().theme;
   }
-  obj = { theme: str, children: null };
   obj = {};
   const merged = Object.assign(experimental_withBlurBackground);
   obj[1] = callback2(Coachmark, obj);

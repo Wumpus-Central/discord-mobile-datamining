@@ -9,16 +9,15 @@ import getGuildThemeNameDefault from "getGuildThemeName" /* 4225 */;
 import GenericHeaderTitle from "GenericHeaderTitle" /* 8492 */;
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 8495 */;
 import registerAssetDefault from "registerAsset" /* 11765 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function RequestsSettingsModalButton(onPress) {
-  let obj = { isModal: true, children: null };
-  obj = { source: registerAssetDefault, onPress: onPress.onPress, accessibilityLabel: null };
+  const obj = { source: registerAssetDefault, onPress: onPress.onPress, accessibilityLabel: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["3D5yo/"]);
   obj[1] = callback(GenericHeaderTitle.HeaderIconButton, obj);
@@ -29,49 +28,6 @@ function FriendsNavigator() {
   const layoutEffect = React.useLayoutEffect(() => lib(5066).trackAppUIViewed(), []);
   let obj = _require(6312);
   closure_1 = obj.useAccessibilityNativeStackOptions();
-  obj = {
-    screenOptions(arg0) {
-      ({ navigation, route } = arg0);
-      const params = route.params;
-      if (params != null) {
-        let presentation = params.presentation;
-      }
-      const obj = {
-        headerStyle: lib.header,
-        headerShadowVisible: false,
-        headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
-          const merged1 = Object.assign(merged);
-          return callback2(callback(table[7]).GenericHeaderTitle, { title: children.children });
-        },
-        headerTitleAlign: "center",
-        headerLeft: null,
-        fullScreenGestureEnabled: null
-      };
-      if (navigation.getState().routes[0].key === route.key) {
-        const params2 = route.params;
-        presentation = undefined;
-        if (params2 != null) {
-          presentation = params2.presentation;
-        }
-        if ("card" !== presentation) {
-          let renderModalCloseImage = lib(closure_1_2[7]).getRenderModalCloseImage(navigation);
-          const obj3 = lib(closure_1_2[7]);
-        }
-        obj[4] = renderModalCloseImage;
-        const params3 = route.params;
-        let presentation1;
-        if (params3 != null) {
-          presentation1 = params3.presentation;
-        }
-        obj[5] = "card" === presentation1 || "card" === presentation;
-        let merged = Object.assign(closure_1);
-        return obj;
-      }
-      renderModalCloseImage = lib(closure_1_2[7]).getRenderModalBackImage(navigation);
-    },
-    children: null
-  };
   obj = {
     name: "root",
     options(navigation) {
@@ -97,7 +53,7 @@ function FriendsNavigator() {
   };
   const items = [callback(closure_7.Screen, obj), , , , , , , , , , ];
   obj1 = { name: "new-message", options: null, getComponent: null };
-  const obj2 = { title: null };
+  let obj2 = { title: null };
   let intl = _require(1236).intl;
   obj2[0] = intl.string(_require(1236).t.jD1qzM);
   obj1[1] = obj2;
@@ -202,20 +158,18 @@ function FriendsNavigator() {
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createNativeStackNavigator.createNativeStackNavigator();
-createNativeStackNavigator = { container: null, header: null };
 createNativeStackNavigator = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createNativeStackNavigator[0] = createNativeStackNavigator;
-createCacheKey = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, shadowColor: "transparent" };
+const createCacheKey = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, shadowColor: "transparent" };
 createNativeStackNavigator[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/FriendsNavigator.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/FriendsNavigator.tsx");
 
 export default function ThemedFriendsNavigator() {
   const tmp = getGuildThemeNameDefault();
   ({ left, right } = useSafeAreaInsetsDefault());
   const tmp2 = useSafeAreaInsetsDefault();
-  let obj = { gradient: tmp, children: null };
-  obj = { style: items, children: callback(FriendsNavigator, {}) };
+  const obj = { style: items, children: callback(FriendsNavigator, {}) };
   items = [callback3().container, { paddingLeft: left, paddingRight: right }];
   obj[1] = callback(View, obj);
   return callback(ManaContext.ThemeContextProvider, obj);

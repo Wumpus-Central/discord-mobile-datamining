@@ -6,9 +6,9 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import rebuildDefault from "rebuild" /* 7436 */;
 import createEmptyState from "createEmptyState" /* 7439 */;
-import closure_3 from "reinjectEphemerals" /* 4994 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 
-require = arg1;
+require = fn;
 let closure_4 = {};
 let closure_5 = {};
 const Store = initializeDefault.Store;
@@ -60,7 +60,7 @@ prototype["getEditingMessage"] = function getEditingMessage(id) {
   return message;
 };
 prototype["getEditActionSource"] = function getEditActionSource(closure_1_0) {
-  return table[closure_1_0];
+  return table[require];
 };
 EditMessageStore.displayName = "EditMessageStore";
 const editMessageStore = new EditMessageStore(dispatcherDefault, {
@@ -116,6 +116,6 @@ const editMessageStore = new EditMessageStore(dispatcherDefault, {
     closure_5 = {};
   }
 });
-const result = require("set").fileFinishedImporting("stores/EditMessageStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/EditMessageStore.tsx");
 
 export default editMessageStore;

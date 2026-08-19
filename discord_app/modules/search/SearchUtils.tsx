@@ -1,6 +1,7 @@
 // === Module 11511: SearchTokenTypes ===
 
 // Module 11511 (SearchTokenTypes)
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import handleConnectionOpenDefault from "handleConnectionOpen" /* 1979 */;
@@ -11,16 +12,16 @@ import getShortcuts from "getShortcuts" /* 11512 */;
 import getShortcutsDefault from "getShortcuts" /* 11512 */;
 import getMatchDefault from "getMatch" /* 11517 */;
 import _modDef11518 from "module_11518" /* 11518 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "comparator" /* 1980 */;
-import closure_6 from "initialize" /* 5253 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import comparator from "comparator" /* 1980 */;
+import initialize from "initialize" /* 5253 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { SearchTabs } from "MessageEmbedTypes" /* 8507 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 handleConnectionOpenDefault;
 ({ SearchTypes: c10, SearchTokenTypes } = ME);
 ({ SearchPopoutModes: closure_12, IS_SEARCH_ANSWER_TOKEN: map1, IS_SEARCH_FILTER_TOKEN: closure_14, SearchModes: closure_15, ME } = ME);
@@ -31,17 +32,17 @@ let closure_19 = new getMatchDefault();
 let tmp4 = new getMatchDefault();
 let closure_20 = new getMatchDefault();
 let tmp5 = new getMatchDefault();
-let result = require("set").fileFinishedImporting("modules/search/SearchUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/SearchUtils.tsx");
 
 export const getSearchContextId = function getSearchContextId(searchContext) {
   const type = searchContext.type;
   if (constants.GUILD === type) {
     return searchContext.guildId;
   } else {
-    if (tmp.GUILD_CHANNEL !== type) {
-      if (tmp.CHANNEL !== type) {
-        if (tmp.THREAD !== type) {
-          return tmp.DMS === type ? searchContext.type : undefined;
+    if (constants.GUILD_CHANNEL !== type) {
+      if (constants.CHANNEL !== type) {
+        if (constants.THREAD !== type) {
+          return constants.DMS === type ? searchContext.type : undefined;
         }
       }
     }
@@ -53,10 +54,10 @@ export const getSearchHistoryStateId = function getSearchHistoryStateId(type) {
   if (constants.GUILD === type) {
     let channelId = type.guildId;
   } else {
-    if (tmp.GUILD_CHANNEL !== type) {
-      if (tmp.CHANNEL !== type) {
-        if (tmp.THREAD !== type) {
-          if (tmp.DMS === type) {
+    if (constants.GUILD_CHANNEL !== type) {
+      if (constants.CHANNEL !== type) {
+        if (constants.THREAD !== type) {
+          if (constants.DMS === type) {
             channelId = type.type;
           }
         }
@@ -67,20 +68,20 @@ export const getSearchHistoryStateId = function getSearchHistoryStateId(type) {
   return channelId;
 };
 export const getSearchTabFetchId = function getSearchTabFetchId(closure_0, closure_1, searchResultsQuery) {
-  const type = closure_0.type;
+  const type = _require.type;
   if (constants.GUILD === type) {
-    let channelId = closure_0.guildId;
+    let channelId = _require.guildId;
   } else {
-    if (tmp.GUILD_CHANNEL !== type) {
-      if (tmp.CHANNEL !== type) {
-        if (tmp.THREAD !== type) {
-          if (tmp.DMS === type) {
-            channelId = closure_0.type;
+    if (constants.GUILD_CHANNEL !== type) {
+      if (constants.CHANNEL !== type) {
+        if (constants.THREAD !== type) {
+          if (constants.DMS === type) {
+            channelId = _require.type;
           }
         }
       }
     }
-    channelId = closure_0.channelId;
+    channelId = _require.channelId;
   }
   return "" + channelId + "-" + closure_1 + "-" + searchResultsQuery;
 };
@@ -135,7 +136,7 @@ export const getIndexingErrorText = function getIndexingErrorText(searchContext)
   if (constants.CHANNEL === type) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.Q0JJjv);
-  } else if (tmp.DMS === type) {
+  } else if (constants.DMS === type) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t.Br0xJA);
   } else {
@@ -146,9 +147,9 @@ export const getIndexingErrorText = function getIndexingErrorText(searchContext)
 export const getGuildIdFromSearchContext = function getGuildIdFromSearchContext(searchContext) {
   const type = searchContext.type;
   if (constants.GUILD_CHANNEL !== type) {
-    if (tmp.GUILD !== type) {
-      if (tmp.THREAD !== type) {
-        if (tmp.CHANNEL === type) {
+    if (constants.GUILD !== type) {
+      if (constants.THREAD !== type) {
+        if (constants.CHANNEL === type) {
           channel = channel.getChannel(searchContext.channelId);
           let guild_id;
           if (channel != null) {
@@ -172,43 +173,43 @@ export const isGuildLikeSearchContext = function isGuildLikeSearchContext(search
 export const getChannelIdFromSearchContext = function getChannelIdFromSearchContext(searchContext) {
   const type = searchContext.type;
   if (constants.GUILD_CHANNEL !== type) {
-    if (tmp.CHANNEL !== type) {
-      if (tmp.THREAD !== type) {
+    if (constants.CHANNEL !== type) {
+      if (constants.THREAD !== type) {
         return null;
       }
     }
   }
   return searchContext.channelId;
 };
-export const getTabTitle = function getTabTitle(tab) {
-  if (SearchTabs.RECENT === tab) {
+export const getTabTitle = function getTabTitle(item) {
+  if (SearchTabs.RECENT === item) {
     const intl10 = getSystemLocale.intl;
     return intl10.string(getSystemLocale.t.tWnHcL);
-  } else if (tmp.MESSAGES === tab) {
+  } else if (SearchTabs.MESSAGES === item) {
     const intl9 = getSystemLocale.intl;
     return intl9.string(getSystemLocale.t.dvZAkp);
-  } else if (tmp.PEOPLE === tab) {
+  } else if (SearchTabs.PEOPLE === item) {
     const intl8 = getSystemLocale.intl;
     return intl8.string(getSystemLocale.t["GFd/I5"]);
-  } else if (tmp.MEDIA === tab) {
+  } else if (SearchTabs.MEDIA === item) {
     const intl7 = getSystemLocale.intl;
     return intl7.string(getSystemLocale.t["Aw9+/M"]);
-  } else if (tmp.PINS === tab) {
+  } else if (SearchTabs.PINS === item) {
     const intl6 = getSystemLocale.intl;
     return intl6.string(getSystemLocale.t["/MoGoB"]);
-  } else if (tmp.LINKS === tab) {
+  } else if (SearchTabs.LINKS === item) {
     const intl5 = getSystemLocale.intl;
     return intl5.string(getSystemLocale.t.DFSvTt);
-  } else if (tmp.FILES === tab) {
+  } else if (SearchTabs.FILES === item) {
     const intl4 = getSystemLocale.intl;
     return intl4.string(getSystemLocale.t["WgVYR/"]);
-  } else if (tmp.GUILD_CHANNELS === tab) {
+  } else if (SearchTabs.GUILD_CHANNELS === item) {
     const intl3 = getSystemLocale.intl;
     return intl3.string(getSystemLocale.t.OGiMXJ);
-  } else if (tmp.MEMBERS === tab) {
+  } else if (SearchTabs.MEMBERS === item) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t["9Oq93m"]);
-  } else if (tmp.THREADS === tab) {
+  } else if (SearchTabs.THREADS === item) {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.B2panI);
   }
@@ -216,10 +217,10 @@ export const getTabTitle = function getTabTitle(tab) {
 export const searchModeToSearchQueryParams = function searchModeToSearchQueryParams(searchMode) {
   if (constants3.MOST_RELEVANT === searchMode) {
     return { sort_by: "relevance", sort_order: "desc" };
-  } else if (tmp.OLDEST === searchMode) {
+  } else if (constants3.OLDEST === searchMode) {
     return { sort_by: "timestamp", sort_order: "asc" };
   } else {
-    const NEWEST = tmp.NEWEST;
+    const NEWEST = constants3.NEWEST;
     return { sort_by: "timestamp", sort_order: "desc" };
   }
 };
@@ -242,32 +243,32 @@ export const getSearchOptionAnswer = function getSearchOptionAnswer(arg0) {
   if (SearchTokenTypes.FILTER_FROM === arg0) {
     const intl10 = getSystemLocale.intl;
     return intl10.string(getSystemLocale.t.E466pL);
-  } else if (tmp.FILTER_MENTIONS === arg0) {
+  } else if (SearchTokenTypes.FILTER_MENTIONS === arg0) {
     const intl9 = getSystemLocale.intl;
     return intl9.string(getSystemLocale.t.BYvFWl);
-  } else if (tmp.FILTER_HAS === arg0) {
+  } else if (SearchTokenTypes.FILTER_HAS === arg0) {
     const intl8 = getSystemLocale.intl;
     return intl8.string(getSystemLocale.t.bhSYbc);
   } else {
-    if (tmp.FILTER_BEFORE !== arg0) {
-      if (tmp.FILTER_ON !== arg0) {
-        if (tmp.FILTER_AFTER !== arg0) {
-          if (tmp.FILTER_IN === arg0) {
+    if (SearchTokenTypes.FILTER_BEFORE !== arg0) {
+      if (SearchTokenTypes.FILTER_ON !== arg0) {
+        if (SearchTokenTypes.FILTER_AFTER !== arg0) {
+          if (SearchTokenTypes.FILTER_IN === arg0) {
             const intl6 = getSystemLocale.intl;
             return intl6.string(getSystemLocale.t["GpM+/7"]);
-          } else if (tmp.FILTER_LINK_FROM === arg0) {
+          } else if (SearchTokenTypes.FILTER_LINK_FROM === arg0) {
             const intl5 = getSystemLocale.intl;
             return intl5.string(getSystemLocale.t.FdDTni);
-          } else if (tmp.FILTER_FILE_TYPE === arg0) {
+          } else if (SearchTokenTypes.FILTER_FILE_TYPE === arg0) {
             const intl4 = getSystemLocale.intl;
             return intl4.string(getSystemLocale.t.FXcAFe);
-          } else if (tmp.FILTER_FILE_NAME === arg0) {
+          } else if (SearchTokenTypes.FILTER_FILE_NAME === arg0) {
             const intl3 = getSystemLocale.intl;
             return intl3.string(getSystemLocale.t.uAbFDM);
-          } else if (tmp.FILTER_PINNED === arg0) {
+          } else if (SearchTokenTypes.FILTER_PINNED === arg0) {
             const intl2 = getSystemLocale.intl;
             return intl2.string(getSystemLocale.t.UJxL3V);
-          } else if (tmp.FILTER_AUTHOR_TYPE === arg0) {
+          } else if (SearchTokenTypes.FILTER_AUTHOR_TYPE === arg0) {
             const intl = getSystemLocale.intl;
             return intl.string(getSystemLocale.t.qCQzBl);
           }
@@ -284,18 +285,17 @@ export const setIncludeNSFW = function setIncludeNSFW(arg0, guildIdFromSearchCon
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
       arg0.include_nsfw = null == currentUser.nsfwAllowed || currentUser.nsfwAllowed;
-      const tmp4 = null == currentUser.nsfwAllowed || currentUser.nsfwAllowed;
     }
   }
 };
 export const getSearchQueryFromTokens = function getSearchQueryFromTokens(tokenizeQueryResult) {
   obj = {};
-  const item = tokenizeQueryResult.forEach((type) => {
-    type = type.type;
+  const item = tokenizeQueryResult.forEach((item, index) => {
+    const type = item.type;
     if (!closure_1_14.test(type)) {
-      if (closure_1_11.ANSWER_BEFORE !== type) {
-        if (tmp.ANSWER_ON !== type) {
-          if (tmp.ANSWER_AFTER !== type) {
+      if (SearchTokenTypes.ANSWER_BEFORE !== type) {
+        if (SearchTokenTypes.ANSWER_ON !== type) {
+          if (SearchTokenTypes.ANSWER_AFTER !== type) {
             const tmp27 = (function getQueryKey(type) {
               const tmp = callback(table[11])[type];
               let str = null;
@@ -312,13 +312,13 @@ export const getSearchQueryFromTokens = function getSearchQueryFromTokens(tokeni
               const set = new Set();
               tmp28[tmp27] = set;
             }
-            if (tmp.ANSWER_USERNAME_FROM !== type) {
-              if (tmp.ANSWER_USERNAME_MENTIONS !== type) {
-                if (tmp.ANSWER_LINK_FROM !== type) {
-                  if (tmp.ANSWER_FILE_TYPE !== type) {
-                    if (tmp.ANSWER_FILE_NAME !== type) {
-                      if (tmp.ANSWER_IN === type) {
-                        let data = type.getData("channelIds");
+            if (SearchTokenTypes.ANSWER_USERNAME_FROM !== type) {
+              if (SearchTokenTypes.ANSWER_USERNAME_MENTIONS !== type) {
+                if (SearchTokenTypes.ANSWER_LINK_FROM !== type) {
+                  if (SearchTokenTypes.ANSWER_FILE_TYPE !== type) {
+                    if (SearchTokenTypes.ANSWER_FILE_NAME !== type) {
+                      if (SearchTokenTypes.ANSWER_IN === type) {
+                        let data = item.getData("channelIds");
                         if (data == null) {
                           data = [];
                         }
@@ -326,49 +326,44 @@ export const getSearchQueryFromTokens = function getSearchQueryFromTokens(tokeni
                           let addResult = obj.add(item10045);
                           continue;
                         }
-                      } else if (tmp.ANSWER_HAS === type) {
-                        obj.add(type.getData("has"));
-                      } else if (tmp.ANSWER_PINNED === type) {
-                        obj.add(type.getData("pinned"));
-                      } else if (tmp.ANSWER_AUTHOR_TYPE === type) {
-                        obj.add(type.getData("author_type"));
+                      } else if (SearchTokenTypes.ANSWER_HAS === type) {
+                        obj.add(item.getData("has"));
+                      } else if (SearchTokenTypes.ANSWER_PINNED === type) {
+                        obj.add(item.getData("pinned"));
+                      } else if (SearchTokenTypes.ANSWER_AUTHOR_TYPE === type) {
+                        obj.add(item.getData("author_type"));
                       } else {
-                        obj.add(type.getFullMatch().trim());
-                        let str = type.getFullMatch();
+                        obj.add(item.getFullMatch().trim());
+                        let str = item.getFullMatch();
                       }
                     }
                   }
                 }
-                obj.add(type.getMatch(1));
+                obj.add(item.getMatch(1));
               }
             }
-            obj[tmp27].add(type.getData("userId"));
+            obj[tmp27].add(item.getData("userId"));
           }
         }
       }
-      const data1 = type.getData("start");
-      const data2 = type.getData("end");
+      const data1 = item.getData("start");
+      const data2 = item.getData("end");
       if (data1) {
-        obj.min_id = closure_1_1(closure_1_2[12]).fromTimestamp(data1);
-        const obj2 = closure_1_1(closure_1_2[12]);
+        obj.min_id = DISCORD_EPOCHDefault.fromTimestamp(data1);
       }
       if (data2) {
-        const fromTimestampResult = closure_1_1(closure_1_2[12]).fromTimestamp(data2);
+        const fromTimestampResult = DISCORD_EPOCHDefault.fromTimestamp(data2);
         obj.max_id = fromTimestampResult;
-        const obj3 = closure_1_1(closure_1_2[12]);
       }
     }
   });
   const entries = Object.entries(obj);
   while (tmp5 !== undefined) {
-    let tmp7 = callback;
     let tmp8 = callback(tmp6, 2);
     [tmp9, tmp10] = tmp8;
     let _Set = Set;
     if (tmp10 instanceof Set) {
-      let tmp12 = tmp9;
       let _Array = Array;
-      let tmp13 = tmp10;
       obj[tmp9] = Array.from(tmp11);
     }
     continue;
@@ -395,8 +390,8 @@ export const getQueryContentString = function getQueryContentString(searchQueryF
       if (searchQueryFromTokens != null) {
         const contents1 = searchQueryFromTokens.contents;
         if (contents1 != null) {
-          const mapped = contents1.map((str) => {
-            const parts = str.split("|");
+          const mapped = contents1.map((item, index) => {
+            const parts = item.split("|");
             const substr = parts.slice(1);
             return substr.join("|");
           });
@@ -412,10 +407,10 @@ export const getQueryContentString = function getQueryContentString(searchQueryF
   }
 };
 export const getNonTokenQuery = function getNonTokenQuery(arr) {
-  const mapped = arr.map((type) => {
+  const mapped = arr.map((item, index) => {
     let str = "";
-    if (type.type === callback(table[13]).NON_TOKEN_TYPE) {
-      str = type.getFullMatch();
+    if (item.type === callback(table[13]).NON_TOKEN_TYPE) {
+      str = item.getFullMatch();
     }
     return str;
   });
@@ -425,14 +420,14 @@ export const getSelectionScope = function getSelectionScope(tokenizeQueryResult,
   closure_0 = tokenizeQueryResult;
   closure_1 = arg1;
   closure_2 = arg2;
-  const found = tokenizeQueryResult.find((start) => {
-    if (closure_1 >= start.start) {
-      if (tmp <= start.end) {
-        if (closure_2 >= start.start) {
-          if (tmp2 <= start.end) {
+  const found = tokenizeQueryResult.find((item, index) => {
+    if (closure_1 >= item.start) {
+      if (tmp <= item.end) {
+        if (closure_2 >= item.start) {
+          if (tmp2 <= item.end) {
             let flag = true;
-            if (null != tokenizeQueryResult[arg1 + 1]) {
-              closure_4 = tmp4[arg1 + 1];
+            if (null != tokenizeQueryResult[index + 1]) {
+              closure_4 = tmp4[index + 1];
               flag = true;
             }
           }
@@ -440,7 +435,7 @@ export const getSelectionScope = function getSelectionScope(tokenizeQueryResult,
         }
       }
     }
-    closure_3 = start;
+    closure_3 = item;
     flag = false;
   });
   let tmp2 = null;
@@ -502,15 +497,13 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
       }
     }
     let tmp4;
-    if (currentToken.type === tmp3(11517).NON_TOKEN_TYPE) {
+    if (currentToken.type === getMatchDefault.NON_TOKEN_TYPE) {
       tmp4 = currentToken;
     }
     obj4 = { type: null, filter: null, token: null };
     obj4[0] = constants2.FILTER_ALL;
     obj4[2] = tmp4;
     obj9 = getShortcuts;
-    const tmp10 = require;
-    tmp3 = importDefault;
   }
 };
 export const quoteChannelName = function quoteChannelName(channelName) {
@@ -524,15 +517,15 @@ export const quoteChannelName = function quoteChannelName(channelName) {
 export const getFlattenedAutocompleteResults = function getFlattenedAutocompleteResults(arg0, arg1) {
   closure_0 = arg1;
   importDefault = [];
-  const item = applyDefault(arg0).forEach((results) => {
-    closure_0 = results;
-    if (null != results) {
-      if (0 !== results.results.length) {
-        let group = results.group;
-        results = results.results;
-        group = group.concat(results.map((result) => {
+  const item = applyDefault(arg0).forEach((item, index) => {
+    closure_0 = item;
+    if (null != item) {
+      if (0 !== item.results.length) {
+        let group = item.group;
+        const results = item.results;
+        group = group.concat(results.map((item, index) => {
           let tmp = str;
-          if (null != result.channel) {
+          if (null != item.channel) {
             let combined = str;
             if (null != str.match(/([\\" ])/g)) {
               const _HermesInternal = HermesInternal;
@@ -541,9 +534,9 @@ export const getFlattenedAutocompleteResults = function getFlattenedAutocomplete
             tmp = combined;
           }
           let combined1 = tmp;
-          if (closure_0.type === closure_2_12.FILTER_ALL) {
-            const group = result.group;
-            const tmp8 = callback(closure_2_2[11])[group];
+          if (item.type === closure_2_12.FILTER_ALL) {
+            const group = item.group;
+            const tmp8 = callback(dependencyMap[11])[group];
             let key;
             if (tmp8 != null) {
               key = tmp8.key;
@@ -562,24 +555,24 @@ export const getFlattenedAutocompleteResults = function getFlattenedAutocomplete
               combined1 = "" + tmp8.key + " " + tmp;
             }
           }
-          return { result, group: closure_0.group, resultText: combined1 };
+          return { result: item, group: item.group, resultText: combined1 };
         }));
       }
     }
   });
-  return importDefault.filter((resultText) => "" !== resultText.resultText);
+  return importDefault.filter((item, index) => "" !== item.resultText);
 };
 export const getQueryFromTokens = function getQueryFromTokens(tokens) {
   let str = "";
   if (null != tokens) {
-    const mapped = tokens.map((getFullMatch) => getFullMatch.getFullMatch());
+    const mapped = tokens.map((item, index) => item.getFullMatch());
     str = mapped.join("");
   }
   return str;
 };
 export const queryHasFilter = function queryHasFilter(errorcode) {
   closure_0 = arg1;
-  return navigation.tokenize(errorcode).some((type) => type.type === closure_0);
+  return navigation.tokenize(errorcode).some((item, index) => item.type === closure_0);
 };
 export const tokenizeQuery = function tokenizeQuery(searchQueryString) {
   return navigation.tokenize(searchQueryString);
@@ -610,8 +603,6 @@ export const filterHasAnswer = function filterHasAnswer(type, type2) {
 export const refreshSearchTokens = function refreshSearchTokens() {
   const result = getShortcuts.rebuildSearchTokenConfigs();
   navigation.reset();
-  obj = getShortcuts;
-  const tmp3 = applyDefault;
   applyDefault(getShortcutsDefault).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return closure_19.addRule({ type });
@@ -619,7 +610,6 @@ export const refreshSearchTokens = function refreshSearchTokens() {
   navigation2.reset();
   const tmp3Result = applyDefault(getShortcutsDefault);
   const crossDMSearchTokensConfig = getShortcuts.buildCrossDMSearchTokensConfig();
-  const obj3 = getShortcuts;
   applyDefault(crossDMSearchTokensConfig).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return closure_20.addRule({ type });
@@ -628,16 +618,15 @@ export const refreshSearchTokens = function refreshSearchTokens() {
   const result1 = _modDef11518.markSearchTokensRefreshed();
 };
 export const getChannelDisplayName = function getChannelDisplayName(isDM) {
-  const channelName = computeChannelName.computeChannelName(isDM, closure_8, closure_7);
+  const channelName = computeChannelName.computeChannelName(isDM, user, closure_7);
   if (isDM.isDM()) {
-    const user = closure_8.getUser(isDM.getRecipientId());
+    user = user.getUser(isDM.getRecipientId());
     const userTag = nameFromUserDefault.getUserTag(user);
     let flag = false;
     let str = userTag;
     if (null == userTag) {
       return null;
     }
-    const obj3 = nameFromUserDefault;
   } else {
     flag = false;
     str = channelName;
@@ -682,21 +671,21 @@ export const getChannelPlaceholderName = function getChannelPlaceholderName(isGr
     }
     if (name == null) {
       name = computeChannelName.computeChannelName(isGroupDM, authStore, closure_7);
-      obj = computeChannelName;
     }
     return name;
   }
 };
 export const removeInvalidPrivateChannelSearchTokens = function removeInvalidPrivateChannelSearchTokens(errorcode) {
   const items = [];
-  const item = navigation2.tokenize(errorcode).forEach((type) => {
+  const item = navigation2.tokenize(errorcode).forEach((item, index) => {
     if (!tmp2) {
-      items.push(type);
+      items.push(item);
     }
+    tmp2 = item.type === SearchTokenTypes.FILTER_IN || item.type === tmp.ANSWER_IN;
   });
   importDefault = "";
-  const item1 = items.forEach((getFullMatch) => {
-    closure_1 = closure_1 + getFullMatch.getFullMatch();
+  const item1 = items.forEach((item, index) => {
+    closure_1 = closure_1 + item.getFullMatch();
   });
   return importDefault.trim();
 };

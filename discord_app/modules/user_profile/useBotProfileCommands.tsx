@@ -2,10 +2,10 @@
 
 // Module 9554 (useBotProfileCommands)
 import findCommandInSectionAll from "findCommandInSection" /* 9555 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
 
 export default function useBotProfileCommands(channel) {
   let obj = findCommandInSectionAll;
@@ -16,14 +16,14 @@ export default function useBotProfileCommands(channel) {
     commands: React.useMemo(() => {
       let found;
       if (commands != null) {
-        found = commands.filter((nsfw) => {
-          let tmp = true !== nsfw.nsfw;
+        found = commands.filter((item, index) => {
+          let tmp = true !== item.nsfw;
           if (tmp) {
-            const options = nsfw.options;
+            const options = item.options;
             let found;
             if (options != null) {
-              found = options.find((type) => {
-                type = type.type;
+              found = options.find((item, index) => {
+                const type = item.type;
                 return type === callback(table[2]).ApplicationCommandOptionType.SUB_COMMAND || type === callback(table[2]).ApplicationCommandOptionType.SUB_COMMAND_GROUP;
               });
             }

@@ -3,13 +3,13 @@
 // Module 15540 (fetchChannelAffinitiesV2)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "hasConsented" /* 5258 */;
-import closure_4 from "map" /* 15538 */;
+import hasConsented from "hasConsented" /* 5258 */;
+import map from "map" /* 15538 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ Endpoints: c5, Consents: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2ActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2ActionCreators.tsx");
 
 export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
   let flag = arg0;
@@ -29,13 +29,13 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
       }
       obj[1] = num;
       const value = HTTP.get(obj);
-      let nextPromise = value.then((body) => {
-        let obj = callback(709);
-        obj = {
+      let nextPromise = value.then((result) => {
+        callback(709);
+        let obj = {
           type: "LOAD_CHANNEL_AFFINITIES_V2_SUCCESS",
-          affineChannels: channel_affinities.map((channelId) => {
-            const obj = { channelId: channelId.channel_id, score: null };
-            let num = channelId.score;
+          affineChannels: channel_affinities.map((item, index) => {
+            const obj = { channelId: item.channel_id, score: null };
+            let num = item.score;
             if (num == null) {
               num = 0;
             }
@@ -43,7 +43,7 @@ export const fetchChannelAffinitiesV2 = function fetchChannelAffinitiesV2() {
             return obj;
           })
         };
-        channel_affinities = body.body.channel_affinities;
+        channel_affinities = result.body.channel_affinities;
         obj.dispatch(obj);
       }, () => {
         callback(709).dispatch({ type: "LOAD_CHANNEL_AFFINITIES_V2_FAILURE" });

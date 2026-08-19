@@ -3,26 +3,21 @@
 // Module 14378 (BountyVideo)
 import ThemesDefault from "Themes" /* 712 */;
 import BountiesModalProgress from "BountiesModalProgress" /* 14379 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
 import jsxProd from "jsxProd" /* 21 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 ({ View: c5, StyleSheet: closure_6, ActivityIndicator: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let num = 0;
-if (PlatformTypes.isAndroid()) {
-  num = 150;
-}
 let closure_13 = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = ThemesDefault.radii.lg;
 let closure_15 = createCacheKey.createStyles(() => {
-  let obj = { videoContainer: null, leftRow: null, progress: null, poster: null };
-  obj = {};
+  let obj = {};
   const merged = Object.assign(closure_6.absoluteFillObject);
   obj.overflow = "hidden";
   obj.borderRadius = lg;
@@ -41,7 +36,7 @@ let closure_15 = createCacheKey.createStyles(() => {
 let closure_16 = { code: "function BountyVideoTsx1(){const{posterOpacity}=this.__closure;return{opacity:posterOpacity.get()};}" };
 let closure_17 = { code: "function BountyVideoTsx2(){const{isScrollingInBoundsSharedValue,withTiming,isActive,timingStandard}=this.__closure;var _isScrollingInBoundsS;const isScrollingInBounds=((_isScrollingInBoundsS=isScrollingInBoundsSharedValue)===null||_isScrollingInBoundsS===void 0?void 0:_isScrollingInBoundsS.get())===true;return{opacity:withTiming(isActive&&!isScrollingInBounds?1:0,timingStandard)};}" };
 let closure_18 = { code: "function BountyVideoTsx3(){const{peekScale,AUTO_SCROLL_PEEK_SCALE,height,AUTO_SCROLL_PEEK_TOP_OFFSET}=this.__closure;if(peekScale==null){return{};}const scale=peekScale.get();const scaleProgress=(1-scale)/(1-AUTO_SCROLL_PEEK_SCALE);const centerPivotCompensation=height*(1-scale)/2;return{transform:[{translateY:scaleProgress*AUTO_SCROLL_PEEK_TOP_OFFSET-centerPivotCompensation},{scale:scale}]};}" };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountyVideo.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountyVideo.tsx");
 
 export const BountyVideo = function BountyVideo(bounty) {
   bounty = bounty.bounty;
@@ -69,12 +64,11 @@ export const BountyVideo = function BountyVideo(bounty) {
   if (flag3 === undefined) {
     flag3 = false;
   }
-  let callback;
   let first;
   closure_11 = undefined;
   closure_12 = undefined;
   let sharedValue;
-  callback = undefined;
+  let callback;
   const tmp = callback2();
   let obj = bounty(handleVideoError[10]);
   const bountiesExperience = obj.useBountiesExperience(peekScale.VIDEO_MODAL_MOBILE);
@@ -94,8 +88,8 @@ export const BountyVideo = function BountyVideo(bounty) {
   sharedValue = tmp2Result.useSharedValue(1);
   let items = [bounty, width, height];
   const memo = flag.useMemo(() => {
-    let obj = bounty(handleVideoError[6]);
-    obj = { assetUrl: bounty.videoHls, width, height };
+    bounty(handleVideoError[6]);
+    const obj = { assetUrl: bounty.videoHls, width, height };
     return obj.getScaledFirstFrameImageUrl(obj);
   }, items);
   tmp2Result = tmp2(tmp3[13]);
@@ -111,8 +105,8 @@ export const BountyVideo = function BountyVideo(bounty) {
   const effect = obj2.useEffect(() => () => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
   }, items1);
   const items2 = [first, sharedValue];
@@ -125,8 +119,8 @@ export const BountyVideo = function BountyVideo(bounty) {
   callback = obj2.useCallback(() => {
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = null;
+      clearTimeout(ref.current);
+      ref.current = null;
     }
     callback(true);
   }, []);
@@ -138,7 +132,7 @@ export const BountyVideo = function BountyVideo(bounty) {
     }
     if (null != ref.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp3.current);
+      clearTimeout(ref.current);
     }
     ref.current = setTimeout(() => {
       callback(true);
@@ -288,7 +282,6 @@ export const BountyVideo = function BountyVideo(bounty) {
     obj3[22] = repeat;
     obj3[24] = onPlayerStateChange;
     tmp35Result = callback(tmp2(tmp3[17]).AdVideoPlayer, obj3);
-    const tmp35 = callback;
   }
   const items7 = [tmp35Result, , , , ];
   if (null != memo) {

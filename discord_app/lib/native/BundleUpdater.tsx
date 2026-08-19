@@ -3,18 +3,17 @@
 // Module 10970 (BundleUpdaterManager)
 import timestampDefault from "timestamp" /* 3 */;
 import t from "t" /* 4486 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
 let closure_5 = new timestampDefault("BundleUpdater");
 const BundleUpdaterManager = NativeModules.BundleUpdaterManager;
 const nativeEventEmitter = new NativeEventEmitter(BundleUpdaterManager);
 let closure_8 = { downloaded: "BundleDownloaded", otaUpdateChecked: "OtaUpdateChecked" };
-let prototype;
-prototype = function BundleUpdater() {
+const prototype = function BundleUpdater() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["getInitialBundleDownloaded"] = function getInitialBundleDownloaded() {
@@ -82,12 +81,11 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
               table = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = tmp14(tmp15[6])(tmp15[5], tmp15.paths);
+              obj1[0] = closure_1_0(tmp15[6])(tmp15[5], tmp15.paths);
               return obj1;
             } else {
               c3 = 3;
             }
-            tmp14 = closure_1_0;
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -125,24 +123,23 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
 };
 prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
   const match = t.match(item10010);
-  const str = t;
   const withResult = match.with({ type: "OtaCheckAttempt" }, (result) => {
     closure_5.verbose("OTA check attempt", result);
-    let obj = callback(698);
-    obj = { result: result.result, duration_seconds: result.durationSeconds, bytes_received: result.bytesReceived, error: result.error, used_streaming: result.usedStreaming };
+    callback(698);
+    const obj = { result: result.result, duration_seconds: result.durationSeconds, bytes_received: result.bytesReceived, error: result.error, used_streaming: result.usedStreaming };
     obj.track(constants.MOBILE_OTA_CHECK_ATTEMPT, obj);
     return callback(5006).increment(closure_9.prepareOtaMetricForDatadog(result, ["result"]));
   });
   match.with({ type: "OtaCheckAttempt" }, (result) => {
     closure_5.verbose("OTA check attempt", result);
-    let obj = callback(698);
-    obj = { result: result.result, duration_seconds: result.durationSeconds, bytes_received: result.bytesReceived, error: result.error, used_streaming: result.usedStreaming };
+    callback(698);
+    const obj = { result: result.result, duration_seconds: result.durationSeconds, bytes_received: result.bytesReceived, error: result.error, used_streaming: result.usedStreaming };
     obj.track(constants.MOBILE_OTA_CHECK_ATTEMPT, obj);
     return callback(5006).increment(closure_9.prepareOtaMetricForDatadog(result, ["result"]));
   }).with({ type: "OtaAssetDownloadAttempt" }, (result) => {
     closure_5.verbose("OTA asset download attempt", result);
-    let obj = callback(698);
-    obj = { result: result.result, duration_seconds: result.durationSeconds, error: result.error, url: result.url, status_code: result.statusCode, bytes_received: result.bytesReceived };
+    callback(698);
+    const obj = { result: result.result, duration_seconds: result.durationSeconds, error: result.error, url: result.url, status_code: result.statusCode, bytes_received: result.bytesReceived };
     obj.track(constants.MOBILE_OTA_ASSET_DOWNLOAD_ATTEMPT, obj);
     return callback(5006).increment(closure_9.prepareOtaMetricForDatadog(result, ["result", "statusCode"]));
   }).exhaustive();
@@ -153,9 +150,9 @@ prototype["prepareOtaMetricForDatadog"] = function prepareOtaMetricForDatadog(na
   if (arg1 === undefined) {
     items = [];
   }
-  return { name: name.type, tags: items.map((arg0) => "" + arg0 + ":" + name[arg0]) };
+  return { name: name.type, tags: items.map((item, index) => "" + item + ":" + name[item]) };
 };
 const tmp3 = new timestampDefault("BundleUpdater");
-let result = require("set").fileFinishedImporting("lib/native/BundleUpdater.tsx");
+let result = require("obj132").fileFinishedImporting("lib/native/BundleUpdater.tsx");
 
 export default prototype;

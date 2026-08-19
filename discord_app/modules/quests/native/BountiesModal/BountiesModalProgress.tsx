@@ -2,18 +2,17 @@
 
 // Module 14379 (BountiesModalProgress)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
-  let obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
-  obj = {};
+  let obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj.borderRadius = ThemesDefault.radii.round;
   obj.backgroundColor = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
@@ -26,15 +25,14 @@ let closure_9 = createCacheKey.createStyles(() => {
 });
 let closure_10 = { code: "function BountiesModalProgressTsx1(){const{withTiming,visible,timingFast}=this.__closure;return{opacity:withTiming(visible?1:0,timingFast)};}" };
 let closure_11 = { code: "function BountiesModalProgressTsx2(){const{withTiming,progress,shouldSkipAnimation,timingNone,timingFast}=this.__closure;return{width:withTiming(progress*100+\"%\",shouldSkipAnimation?timingNone:timingFast,'animate-always')};}" };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalProgress.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalProgress.tsx");
 
 export default function BountiesModalProgress(progress) {
   progress = progress.progress;
   const visible = progress.visible;
-  let first;
   const tmp = callback4();
   let tmp2 = callback(React.useState(false), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   const tmp4 = callback(React.useState(progress), 2);
   const first1 = tmp4[0];
   if (progress !== first1) {

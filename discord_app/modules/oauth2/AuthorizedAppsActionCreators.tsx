@@ -2,17 +2,17 @@
 
 // Module 7147 (tokensToAppTokensMap)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "recomputeFromAppTokens" /* 5289 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import recomputeFromAppTokens from "recomputeFromAppTokens" /* 5289 */;
 import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function tokensToAppTokensMap(arg0, arr) {
   let mapped;
   if (arr != null) {
-    mapped = arr.map((arg0) => {
-      const items = [arg0, null];
+    mapped = arr.map((item, index) => {
+      const items = [item, null];
       return items;
     });
   }
@@ -81,9 +81,9 @@ function _fetchAuthorizedApps() {
               table = 1;
               c1 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = value.then((body) => {
-                let obj = v3(709);
-                obj = { type: "USER_AUTHORIZED_APPS_UPDATE", isFullFetch: null == closure_0, tokens: closure_1_8(body.body, closure_0) };
+              obj3[0] = value.then((result) => {
+                v3(709);
+                const obj = { type: "USER_AUTHORIZED_APPS_UPDATE", isFullFetch: null == closure_0, tokens: closure_1_8(result.body, closure_0) };
                 return obj.dispatch(obj);
               }, () => {
                 let request = v3(709);
@@ -130,13 +130,11 @@ let obj = {
     return store.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },
   onQueued(applicationIds) {
-    let request = dispatcherDefault;
-    request = { type: "partial", applicationIds };
+    const request = { type: "partial", applicationIds };
     return request.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request });
   },
   onCancelled(applicationIds) {
-    let obj = dispatcherDefault;
-    obj = { type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds };
+    const obj = { type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds };
     return obj.dispatch(obj);
   }
 };
@@ -145,16 +143,15 @@ obj = {
   fetch(arg0) {
     if (store.getFetchState() !== FetchState.FETCHING) {
       if (null != arg0) {
-        batchInvocationManager.queue(arg0).catch((arg0) => {
-          if (!(arg0 instanceof callback(table[3]).BatchInvocationManagerResetError)) {
-            throw arg0;
+        batchInvocationManager.queue(arg0).catch((error) => {
+          if (!(error instanceof callback(table[3]).BatchInvocationManagerResetError)) {
+            throw error;
           }
         });
         const queueResult = batchInvocationManager.queue(arg0);
       } else {
         batchInvocationManager.reset();
-        let obj = dispatcherDefault;
-        obj = { type: "USER_AUTHORIZED_APPS_REQUEST", request: null };
+        const obj = { type: "USER_AUTHORIZED_APPS_REQUEST", request: null };
         obj[1] = { type: "full" };
         obj.dispatch(obj);
         fetchAuthorizedApps();
@@ -165,11 +162,11 @@ obj = {
     const self = this;
     const HTTP = self(530).HTTP;
     const obj = { url: Endpoints.OAUTH2_TOKEN(arg0), oldFormErrors: true, rejectWithError: true };
-    HTTP.del({ url: Endpoints.OAUTH2_TOKEN(arg0), oldFormErrors: true, rejectWithError: true }).then(() => {
+    HTTP.del({ url: Endpoints.OAUTH2_TOKEN(arg0), oldFormErrors: true, rejectWithError: true }).then((result) => {
       const response = self.fetch();
     });
   }
 };
-const result = require("set").fileFinishedImporting("modules/oauth2/AuthorizedAppsActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/oauth2/AuthorizedAppsActionCreators.tsx");
 
 export default obj;

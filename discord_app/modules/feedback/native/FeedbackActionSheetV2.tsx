@@ -3,29 +3,30 @@
 // Module 16566 (closeActionSheet)
 import applyDefault from "apply" /* 12 */;
 import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
+import _modDef5260 from "module_5260" /* 5260 */;
 import usePreviousDefault from "usePrevious" /* 6701 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import RatingSelectorDefault from "RatingSelector" /* 10815 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { FeedbackRating } from "FeedbackRating" /* 10811 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function closeActionSheet() {
   ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
 }
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, ratingsBody: null, problemsList: null };
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
+const createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackActionSheetV2.tsx");
+const result = require("obj132").fileFinishedImporting("modules/feedback/native/FeedbackActionSheetV2.tsx");
 
 export default function FeedbackActionSheetV2(optionsTree) {
   ({ headerLabel, ratingBody, hideDontShowAgainCheckbox, initialRating } = optionsTree);
@@ -36,13 +37,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
   optionsTree = optionsTree.optionsTree;
   ({ onMount: importDefault, trackOpen: dependencyMap, trackReport: closure_3 } = optionsTree);
   let ref;
-  closure_5 = undefined;
-  let first;
-  let callback2;
-  let first1;
-  let callback3;
   let first2;
-  closure_11 = undefined;
   let first4;
   closure_13 = undefined;
   let first5;
@@ -51,45 +46,46 @@ export default function FeedbackActionSheetV2(optionsTree) {
   c17 = undefined;
   closure_18 = undefined;
   closure_19 = undefined;
-  let tmp = first2();
+  const tmp = first2();
   let obj = ref;
   ref = ref.useRef(null);
   const tmp5 = usePreviousDefault(optionsTree);
   closure_5 = tmp5;
   obj1 = applyDefault;
-  const tmp7 = callback(ref.useState(obj1.shuffle(optionsTree.map((problemOptions) => {
+  const tmp7 = callback(ref.useState(obj1.shuffle(optionsTree.map((item, index) => {
     const obj = {};
-    const merged = Object.assign(problemOptions);
+    const merged = Object.assign(item);
     const obj2 = callback(table[8]);
-    let freeformConfig = problemOptions.freeformConfig;
+    let freeformConfig = item.freeformConfig;
     if (freeformConfig == null) {
       freeformConfig = [];
     }
-    obj.problemOptions = callback(table[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
+    obj.problemOptions = callback(table[8]).shuffle(item.problemOptions).concat(freeformConfig);
     return obj;
   }))), 2);
-  first = tmp7[0];
-  callback2 = tmp7[1];
+  const first = tmp7[0];
+  const callback2 = tmp7[1];
   const items = [optionsTree, tmp5];
   const effect = ref.useEffect(() => {
     if (!obj.isEqual(closure_5, optionsTree)) {
-      callback2(closure_1_1(closure_1_2[8]).shuffle(optionsTree.map((problemOptions) => {
+      callback2(applyDefault.shuffle(optionsTree.map((item, index) => {
         const obj = {};
-        const merged = Object.assign(problemOptions);
+        const merged = Object.assign(item);
         const obj2 = callback(table[8]);
-        let freeformConfig = problemOptions.freeformConfig;
+        let freeformConfig = item.freeformConfig;
         if (freeformConfig == null) {
           freeformConfig = [];
         }
-        obj.problemOptions = callback(table[8]).shuffle(problemOptions.problemOptions).concat(freeformConfig);
+        obj.problemOptions = callback(table[8]).shuffle(item.problemOptions).concat(freeformConfig);
         return obj;
       })));
-      const tmpResult = closure_1_1(closure_1_2[8]);
+      const tmpResult = applyDefault;
     }
+    obj = applyDefault;
   }, items);
   const tmp9 = callback(ref.useState(false), 2);
-  first1 = tmp9[0];
-  callback3 = tmp9[1];
+  const first1 = tmp9[0];
+  const callback3 = tmp9[1];
   let tmp11 = callback(ref.useState(initialRating), 2);
   first2 = tmp11[0];
   closure_11 = tmp11[1];
@@ -116,9 +112,9 @@ export default function FeedbackActionSheetV2(optionsTree) {
       let obj = { rating: null, category: null, reason: null, dontShowAgain: null };
       obj[0] = first2;
       let value;
-      const obj2 = closure_1_1(closure_1_2[11]);
+      const obj2 = _modDef5260;
       if (first4 != null) {
-        value = iter.value;
+        value = first4.value;
       }
       obj = { result: null, trackReport: null, titleLabel: null, descriptionLabel: null, hideHelpdeskLink: null };
       obj[1] = value;
@@ -132,25 +128,25 @@ export default function FeedbackActionSheetV2(optionsTree) {
           str = "";
         }
         obj[4] = str;
-        closure_3(obj);
+        callback(obj);
       };
       let problemsHeader;
       if (first4 != null) {
-        problemsHeader = iter.problemsHeader;
+        problemsHeader = first4.problemsHeader;
       }
       obj[2] = problemsHeader;
-      const intl = tmp10(tmp9[14]).intl;
-      obj[3] = intl.string(optionsTree(closure_1_2[14]).t.h95hcn);
+      const intl = optionsTree(dependencyMap[14]).intl;
+      obj[3] = intl.string(optionsTree(dependencyMap[14]).t.h95hcn);
       let hideHelpdeskLink;
       if (first4 != null) {
-        const freeformConfig = iter.freeformConfig;
+        const freeformConfig = first4.freeformConfig;
         if (freeformConfig != null) {
           hideHelpdeskLink = freeformConfig.hideHelpdeskLink;
         }
       }
       obj[4] = hideHelpdeskLink;
-      obj2.pushLazy(optionsTree(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), obj);
-      const tmp11 = optionsTree(closure_1_2[13])(closure_1_2[12], closure_1_2.paths);
+      obj2.pushLazy(optionsTree(dependencyMap[13])(dependencyMap[12], dependencyMap.paths), obj);
+      const tmp11 = optionsTree(dependencyMap[13])(dependencyMap[12], dependencyMap.paths);
     } else {
       obj = { rating: null, category: null, reason: null, dontShowAgain: null, feedback: "" };
       obj[0] = first2;
@@ -164,8 +160,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
       obj[1] = value;
       obj[2] = first5;
       obj[3] = first1;
-      closure_3(obj);
-      const tmp = closure_3;
+      callback(obj);
     }
   });
   callback = obj.useCallback((arg0) => {
@@ -174,8 +169,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
       callback5(null);
       callback6(null);
       _undefined(false);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
-      const obj = closure_1_1(closure_1_2[7]);
+      ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
     } else {
       const current = ref.current;
       if (current != null) {
@@ -203,7 +197,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
         if (value === value.value) {
           _undefined(true);
         }
-        closure_1_1(closure_1_2[7]).hideActionSheet();
+        ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
       }
     }
     _undefined(false);
@@ -221,7 +215,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
     obj[0] = ratingOptions;
     obj[1] = first2;
     obj[2] = callback;
-    items2[1] = callback2(tmp3(10815), obj);
+    items2[1] = callback2(RatingSelectorDefault, obj);
     let tmp37Result = null;
     if (!hideDontShowAgainCheckbox) {
       obj1 = { start: true, end: true, checked: null, label: null, onPress: null };
@@ -238,8 +232,6 @@ export default function FeedbackActionSheetV2(optionsTree) {
     obj2[0] = items2;
     let tmp33Result = callback3(first1, obj2);
     let problemsHeader = headerLabel;
-    const tmp33 = callback3;
-    const tmp34 = first1;
     tmp37 = callback2;
   } else {
     if (first2 !== first.GOOD) {
@@ -248,15 +240,15 @@ export default function FeedbackActionSheetV2(optionsTree) {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.problemsList;
         const obj5 = { hasIcons: false, children: null };
-        obj5[1] = first.map((label) => {
-          closure_0 = label;
-          return callback2(optionsTree(closure_1_2[19]).TableRow, {
-            label: label.label,
+        obj5[1] = first.map((item, index) => {
+          closure_0 = item;
+          return callback2(optionsTree(dependencyMap[19]).TableRow, {
+            label: item.label,
             labelLineClamp: 2,
             onPress() {
               return closure_1_18(closure_0);
             }
-          }, arg1);
+          }, index);
         });
         obj4[1] = callback2(tmp20(6286).TableRowGroup, obj5);
         const items3 = [callback2(closure_5, obj4), ];
@@ -280,15 +272,15 @@ export default function FeedbackActionSheetV2(optionsTree) {
       obj8[0] = tmp.problemsList;
       const obj9 = { hasIcons: false, children: null };
       const problemOptions = first4.problemOptions;
-      obj9[1] = problemOptions.map((label) => {
-        closure_0 = label;
-        return callback2(optionsTree(closure_1_2[19]).TableRow, {
-          label: label.label,
+      obj9[1] = problemOptions.map((item, index) => {
+        closure_0 = item;
+        return callback2(optionsTree(dependencyMap[19]).TableRow, {
+          label: item.label,
           labelLineClamp: 2,
           onPress() {
             return closure_1_19(closure_0);
           }
-        }, arg1);
+        }, index);
       });
       obj8[1] = callback2(tmp20(6286).TableRowGroup, obj9);
       const items4 = [callback2(closure_5, obj8), ];
@@ -309,7 +301,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
     }
     tmp23 = null != first4 && null == first5;
   }
-  const bottom = tmp3(1629)().bottom;
+  const bottom = useSafeAreaInsetsDefault().bottom;
   let num = 48;
   if (hideDontShowAgainCheckbox) {
     num = 0;

@@ -1,9 +1,9 @@
 // === Module 16308: useExternalPipAspectRatioUpdater ===
 
 // Module 16308 (useExternalPipAspectRatioUpdater)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/external_pip/useExternalPipAspectRatioUpdater.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/external_pip/useExternalPipAspectRatioUpdater.native.tsx");
 
 export default function useExternalPipAspectRatioUpdater(arg0, arg1, stateFromStores) {
   closure_0 = arg1;

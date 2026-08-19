@@ -3,15 +3,13 @@
 // Module 15925 (ThreadListSection)
 import Text from "Text" /* 4734 */;
 import ThreadListTableRowDefault from "ThreadListTableRow" /* 15926 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function ThreadListSection(title) {
-  const str = title.title;
   const tmp = callback();
   return jsx(Text.Text, { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: title.title.toUpperCase() });
 }
@@ -48,19 +46,18 @@ function EnterExitCrossFadeContainer(cleanUp) {
   }
   sharedValue = obj.useSharedValue(num);
   let fn = function p() {
-    let obj = { opacity: null };
     const value = sharedValue.get();
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = closure_1 === closure_1_0(closure_1_2[7]).TransitionStates.YEETED;
+        tmp = closure_1 === cleanUp(sharedValue[7]).TransitionStates.YEETED;
       }
       if (tmp) {
-        closure_1_0(closure_1_2[6]).runOnJS(closure_0)();
-        const obj = closure_1_0(closure_1_2[6]);
+        cleanUp(sharedValue[6]).runOnJS(closure_0)();
+        const obj = cleanUp(sharedValue[6]);
       }
     };
-    obj = { state, TransitionStates: cleanUp(sharedValue[7]).TransitionStates, runOnJS: cleanUp(sharedValue[6]).runOnJS, cleanUp };
+    let obj = { state, TransitionStates: cleanUp(sharedValue[7]).TransitionStates, runOnJS: cleanUp(sharedValue[6]).runOnJS, cleanUp };
     fn.__closure = obj;
     fn.__workletHash = 2519144051135;
     fn.__initData = closure_1_13;
@@ -89,39 +86,31 @@ function getThreadListStateKey(arg0) {
 }
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 let closure_7 = createCacheKey.createStyles({ container: { flex: 1, flexGrow: 1 }, center: { justifyContent: "center", alignItems: "center" }, header: { marginTop: 24, marginBottom: 10 }, footer: { marginVertical: 16, justifyContent: "center", alignItems: "center" }, section: { marginTop: 16, marginBottom: 8 } });
-let set = new Set();
+const set = new Set();
 let closure_12 = { code: "function ThreadListTsx1(){const{withSpring,opacity,springStandard,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}" };
 let closure_13 = { code: "function ThreadListTsx2(finished){const{state,TransitionStates,runOnJS,cleanUp}=this.__closure;if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}" };
 let closure_15 = { LIST: "list", EMPTY: "empty", LOADING: "loading" };
-let result = set.fileFinishedImporting("modules/threads/native/components/redesign/ThreadList.tsx");
+let result = require("obj132").fileFinishedImporting("modules/threads/native/components/redesign/ThreadList.tsx");
 
 export default function ThreadList(onCreateThreadPress) {
   ({ channel, onThreadPress } = onCreateThreadPress);
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const contentContainerStyle = onCreateThreadPress.contentContainerStyle;
-  let React;
-  let joinedThreadIds;
-  let unjoinedThreadIds;
-  let threadIds;
   let canLoadMore;
   let loadMore;
-  let loading;
-  let callback;
-  let memo;
-  let memo2;
   let tmp = canLoadMore();
-  React = tmp;
+  const React = tmp;
   let obj = onThreadPress(contentContainerStyle[10]);
   const activeThreads = obj.useActiveThreads(channel);
-  joinedThreadIds = activeThreads.joinedThreadIds;
-  unjoinedThreadIds = activeThreads.unjoinedThreadIds;
+  const joinedThreadIds = activeThreads.joinedThreadIds;
+  const unjoinedThreadIds = activeThreads.unjoinedThreadIds;
   const archivedThreads = onThreadPress(contentContainerStyle[10]).useArchivedThreads(channel, onThreadPress(contentContainerStyle[11]).ThreadSortOrder.LATEST_ACTIVITY, loadMore, onThreadPress(contentContainerStyle[12]).ThreadSearchTagSetting.MATCH_SOME);
-  threadIds = archivedThreads.threadIds;
+  const threadIds = archivedThreads.threadIds;
   canLoadMore = archivedThreads.canLoadMore;
   loadMore = archivedThreads.loadMore;
-  loading = archivedThreads.loading;
+  const loading = archivedThreads.loading;
   let items = [loading, canLoadMore, loadMore];
-  callback = React.useCallback(() => {
+  const callback = React.useCallback(() => {
     let tmp = !loading;
     if (!loading) {
       tmp = canLoadMore;
@@ -131,33 +120,32 @@ export default function ThreadList(onCreateThreadPress) {
     }
   }, items);
   let items1 = [threadIds, joinedThreadIds, onThreadPress, unjoinedThreadIds];
-  memo = React.useMemo(() => {
+  const memo = React.useMemo(() => {
     const items = [];
     let arr1 = joinedThreadIds;
     if (joinedThreadIds.length > 0) {
-      let obj = { type: "section", title: null };
       const intl2 = onThreadPress(contentContainerStyle[13]).intl;
-      obj = { count: null };
+      let obj = { count: null };
       obj[0] = arr1.length;
       obj[1] = intl2.formatToPlainString(onThreadPress(contentContainerStyle[13]).t.fcXlhe, obj);
       items.push(obj);
-      const item = arr1.forEach((threadId) => items.push({ type: "thread", threadId, start: 0 === arg1, end: arg1 === closure_1_4.length - 1, onPress: items }));
+      const item = arr1.forEach((item, index) => items.push({ type: "thread", threadId: item, start: 0 === index, end: index === joinedThreadIds.length - 1, onPress: items }));
     }
     if (unjoinedThreadIds.length > 0) {
       obj1 = { type: "section", title: null };
       const intl3 = onThreadPress(contentContainerStyle[13]).intl;
       const obj2 = { count: null };
-      obj2[0] = arr3.length;
+      obj2[0] = unjoinedThreadIds.length;
       obj1[1] = intl3.formatToPlainString(onThreadPress(contentContainerStyle[13]).t.GHY7yQ, obj2);
       items.push(obj1);
-      const item1 = arr3.forEach((threadId) => items.push({ type: "thread", threadId, start: 0 === arg1, end: arg1 === closure_1_5.length - 1, onPress: items }));
+      const item1 = unjoinedThreadIds.forEach((item, index) => items.push({ type: "thread", threadId: item, start: 0 === index, end: index === unjoinedThreadIds.length - 1, onPress: items }));
     }
     if (threadIds.length > 0) {
       obj = { type: "section", title: null };
       const intl = onThreadPress(contentContainerStyle[13]).intl;
       obj[1] = intl.string(onThreadPress(contentContainerStyle[13]).t.XsgrjS);
       arr1 = items.push(obj);
-      const item2 = threadIds.forEach((threadId) => items.push({ type: "thread", threadId, start: 0 === arg1, end: arg1 === closure_1_6.length - 1, onPress: items }));
+      const item2 = threadIds.forEach((item, index) => items.push({ type: "thread", threadId: item, start: 0 === index, end: index === threadIds.length - 1, onPress: items }));
     }
     return items;
   }, items1);
@@ -178,11 +166,10 @@ export default function ThreadList(onCreateThreadPress) {
       items2 = [closure_1_15.LIST];
     }
   }, items2);
-  memo2 = React.useMemo(() => {
+  const memo2 = React.useMemo(() => {
     let tmp2 = null;
     if (null != onCreateThreadPress) {
-      let obj = { icon: null, onPress: null, label: null, start: true, end: true, arrow: true };
-      obj = { IconComponent: null };
+      const obj = { IconComponent: null };
       obj[0] = onThreadPress(contentContainerStyle[16]).ThreadPlusIcon;
       obj[0] = threadIds(onThreadPress(contentContainerStyle[15]).RowButton.Icon, obj);
       obj[1] = tmp;
@@ -209,8 +196,8 @@ export default function ThreadList(onCreateThreadPress) {
       obj = { onCreateThreadPress: null };
       obj[0] = onCreateThreadPress;
       obj[3] = threadIds(onCreateThreadPress(contentContainerStyle[17]), obj);
-      return threadIds(closure_1_14, obj, arg0);
-    } else if (tmp.LOADING === arg1) {
+      return threadIds(EnterExitCrossFadeContainer, obj, arg0);
+    } else if (closure_1_15.LOADING === arg1) {
       obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
       const items = [, ];
       ({ container: arr[0], center: arr[1] } = closure_3);
@@ -218,8 +205,8 @@ export default function ThreadList(onCreateThreadPress) {
       obj1[1] = arg2;
       obj1[2] = arg3;
       obj1[3] = threadIds(onCreateThreadPress(contentContainerStyle[18]), {});
-      return threadIds(closure_1_14, obj1, arg0);
-    } else if (tmp.LIST === arg1) {
+      return threadIds(EnterExitCrossFadeContainer, obj1, arg0);
+    } else if (closure_1_15.LIST === arg1) {
       obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
       obj[0] = closure_3.container;
       obj[1] = arg2;
@@ -245,7 +232,7 @@ export default function ThreadList(onCreateThreadPress) {
       obj2[9] = footer;
       obj2[10] = contentContainerStyle;
       obj[3] = threadIds(onThreadPress(contentContainerStyle[19]).AnimatedFlashList, obj2);
-      return threadIds(closure_1_14, obj, arg0);
+      return threadIds(EnterExitCrossFadeContainer, obj, arg0);
     }
   }, items4);
   obj = { items: memo1, renderItem: callback1, getItemKey: getThreadListStateKey };

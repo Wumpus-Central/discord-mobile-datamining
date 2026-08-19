@@ -1,14 +1,14 @@
 // === Module 1375: getProtoFieldClass ===
 
 // Module 1375 (getProtoFieldClass)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import b64ToProto from "b64ToProto" /* 1342 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 
 export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSettings, closure_0) {
   const fields = PreloadedUserSettings.fields;
-  const found = fields.find((localName) => localName.localName === closure_0);
+  const found = fields.find((item, index) => item.localName === closure_0);
   if (null == found) {
     const _Error = Error;
     const _String = String;
@@ -20,12 +20,12 @@ export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSetti
 };
 export const createModifiedProto = function createModifiedProto(closure_1, c2, closure_0, PreloadedUserSettings, closure_02) {
   if (null != closure_1) {
-    let fromBinaryResult = closure_0.fromBinary(closure_0.toBinary(closure_1), b64ToProto.BINARY_READ_OPTIONS);
-    const toBinaryResult = closure_0.toBinary(closure_1);
+    let fromBinaryResult = _require.fromBinary(_require.toBinary(closure_1), b64ToProto.BINARY_READ_OPTIONS);
+    const toBinaryResult = _require.toBinary(closure_1);
   } else {
-    fromBinaryResult = closure_0.create();
+    fromBinaryResult = _require.create();
   }
-  if (false === c2(fromBinaryResult)) {
+  if (false === callback(fromBinaryResult)) {
     return null;
   } else {
     const obj = PreloadedUserSettings.create();

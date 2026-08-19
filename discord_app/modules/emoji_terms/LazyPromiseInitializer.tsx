@@ -1,9 +1,9 @@
 // === Module 6735: setParams ===
 
 // Module 6735 (setParams)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
+const result = obj132.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
 class LazyPromiseInitializer {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -25,18 +25,17 @@ prototype["get"] = function get() {
   return this.val;
 };
 prototype["ensureLoaded"] = function ensureLoaded() {
-  let self = this;
-  self = this;
+  const self = this;
   if (!this.loaded) {
     if (!self.loading) {
       if (undefined !== self.param) {
         const param = self.param;
         self.loading = true;
-        self.loader(param).then((arg0) => {
+        self.loader(param).then((result) => {
           if (param === self.param) {
-            tmp.val = arg0;
-            tmp.loading = false;
-            tmp.loaded = true;
+            self.val = result;
+            self.loading = false;
+            self.loaded = true;
           }
         });
         const loaderResult = self.loader(param);

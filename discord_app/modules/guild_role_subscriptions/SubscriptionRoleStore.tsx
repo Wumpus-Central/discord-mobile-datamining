@@ -1,17 +1,17 @@
 // === Module 6728: computeRolesForGuild ===
 
 // Module 6728 (computeRolesForGuild)
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
 import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1984 */;
 import isSubscriptionRole from "isSubscriptionRole" /* 4012 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
 function computeRolesForGuild(guildId) {
   const currentUser = authStore.getCurrentUser();
@@ -41,32 +41,22 @@ function computeRolesForGuild(guildId) {
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp15 = nextResult;
-          let tmp16 = require;
-          let tmp17 = dependencyMap;
           let obj2 = isSubscriptionRole;
           if (obj2.isSubscriptionRole(nextResult)) {
-            let tmp18 = nextResult;
             let addResult = set.add(tmp15.id);
-            let tmp16Result = tmp16(4012);
+            let tmp16Result = isSubscriptionRole;
             if (tmp16Result.isSubscriptionRoleAvailableForPurchase(tmp15)) {
-              let tmp20 = nextResult;
               let addResult1 = set1.add(tmp15.id);
               if (set3.has(tmp15.id)) {
-                let tmp22 = nextResult;
                 let addResult2 = set2.add(tmp15.id);
               }
             }
           }
-          let tmp24 = nextResult;
           let hasItem = set3.has(tmp15.id);
           if (hasItem) {
-            let tmp26 = hasPermission;
-            let tmp27 = nextResult;
-            let tmp28 = constants;
             hasItem = hasPermission(tmp15, constants.ADMINISTRATOR);
           }
           if (hasItem) {
-            let tmp29 = map3;
             let result1 = map3.set(guildId, true);
           }
           continue;
@@ -150,11 +140,8 @@ prototype["getGuildIdsWithPurchasableRoles"] = function getGuildIdsWithPurchasab
       set = new Set();
       for (const item10014 of guildsArray) {
         let features = item10014.features;
-        let tmp3 = constants;
-        let tmp2 = item10014;
         if (features.has(constants.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) {
-          let tmp4 = item10014;
-          let addResult = set.add(tmp2.id);
+          let addResult = set.add(item10014.id);
         }
         continue;
       }
@@ -244,6 +231,6 @@ const subscriptionRoleStore = new SubscriptionRoleStore(dispatcherDefault, {
     return tmp5;
   }
 });
-let result = set.fileFinishedImporting("modules/guild_role_subscriptions/SubscriptionRoleStore.tsx");
+let result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/SubscriptionRoleStore.tsx");
 
 export default subscriptionRoleStore;

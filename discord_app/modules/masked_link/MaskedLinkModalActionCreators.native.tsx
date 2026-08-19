@@ -2,11 +2,11 @@
 
 // Module 12423
 import useAlertStore from "useAlertStore" /* 4657 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/masked_link/MaskedLinkModalActionCreators.native.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/masked_link/MaskedLinkModalActionCreators.native.tsx");
 
 export default {
   show(onCancel) {

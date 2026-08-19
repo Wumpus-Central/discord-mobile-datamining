@@ -1,9 +1,9 @@
 // === Module 10037: getGuildSafetyAlertsChannelId ===
 
 // Module 10037 (getGuildSafetyAlertsChannelId)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_antiraid/getGuildSafetyAlertsChannelId.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_antiraid/getGuildSafetyAlertsChannelId.tsx");
 
 export default function getGuildSafetyAlertsChannelId(safetyAlertsChannelId) {
   let publicUpdatesChannelId = safetyAlertsChannelId.safetyAlertsChannelId;

@@ -5,10 +5,10 @@ import _mod1307 from "module_1307" /* 1307 */;
 import create from "create" /* 7633 */;
 import create2 from "create" /* 7641 */;
 import create3 from "create" /* 7643 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
-require = arg1;
+require = fn;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", NORMAL: 1, [1]: "NORMAL", LARGE_TILTED: 2, [2]: "LARGE_TILTED" };
 class GiftPlanSelectionCardBanner$Type extends MessageType {
   constructor() {
@@ -107,7 +107,6 @@ class GiftPlanSelectionCardBanner$Type extends MessageType {
 }
 const prototype = GiftPlanSelectionCardBanner$Type.prototype;
 prototype["create"] = function create(arr) {
-  obj = { header: "", desktopBody: "", mobileBody: "", bannerAssetUrl: "", backgroundAssetUrl: "", cardAssetUrl: "", assetVariant: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
@@ -223,7 +222,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
   return tag;
 };
 const giftPlanSelectionCardBannerType = new GiftPlanSelectionCardBanner$Type();
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_plan_selection_card_banner.tsx");
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_plan_selection_card_banner.tsx");
 
 export const GiftPlanSelectionCardBanner_AssetVariant = obj;
 export const GiftPlanSelectionCardBanner = giftPlanSelectionCardBannerType;

@@ -13,20 +13,18 @@ import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ body: { display: "flex", flexDirection: "row", alignItems: "flex-start" }, contentContainer: { flex: 1 }, thumbnailContainer: { marginLeft: 12 }, details: { flexDirection: "row", alignItems: "center", marginBottom: 6 }, newTagContainer: { marginEnd: 8 } });
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/posts/list/ForumPostListBody.tsx");
 
 export default function ForumPostListBody(arg0) {
   ({ thread, firstMessage, hasUnreads, isNew, media } = arg0);
   ({ containerStyle, firstMessageLoaded, messageContent, isEmbed, isLocalDeviceMedia, senderModifier } = arg0);
   const tmp = callback2();
-  let obj = { style: items, children: null };
-  items = [tmp.body, containerStyle];
-  obj = { style: tmp.contentContainer, children: null };
-  obj = { style: tmp.details, children: null };
+  const items = [tmp.body, containerStyle];
+  const obj = { style: tmp.details, children: null };
   if (isNew) {
     obj1 = { containerStyle: null };
     obj1[0] = tmp.newTagContainer;
@@ -34,9 +32,9 @@ export default function ForumPostListBody(arg0) {
   }
   const items1 = [isNew, callback(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), callback(ForumPostTimestampDefault, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO })];
   obj[1] = items1;
-  const items2 = [closure_6(View, obj), callback(ForumPostTitleDefault, { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads }), callback(ForumPostMessageContentDefault, { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier })];
+  const items2 = [callback(View, obj), callback(ForumPostTitleDefault, { title: thread.name, lineClamp: 2, ellipsizeMode: "tail", hasUnreads }), callback(ForumPostMessageContentDefault, { messageContent, message: firstMessage, isMessageDeleted: false, messageLoaded: firstMessageLoaded, hasUnreads, senderModifier })];
   obj[1] = items2;
-  const items3 = [closure_6(View, obj), ];
+  const items3 = [callback(View, obj), ];
   let blocked;
   if (firstMessage != null) {
     blocked = firstMessage.blocked;
@@ -61,5 +59,5 @@ export default function ForumPostListBody(arg0) {
   }
   items3[1] = tmp7Result;
   obj[1] = items3;
-  return closure_6(View, obj);
+  return callback(View, obj);
 };

@@ -1,10 +1,10 @@
 // === Module 6736: emojiTermsImporter ===
 
 // Module 6736 (emojiTermsImporter)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 
-const result = set.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
+const result = obj132.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
 
 export const emojiTermsImporter = {
   bg() {

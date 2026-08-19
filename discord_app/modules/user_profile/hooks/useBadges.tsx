@@ -1,13 +1,14 @@
 // === Module 8983: useBadges ===
 
 // Module 8983 (useBadges)
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_2 from "initialize" /* 4220 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import initialize from "initialize" /* 4220 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
+require = fn;
 const legacy_username = "legacy_username";
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useBadges.tsx");
 
 export default function useBadges(getBadges) {
   const LegacyUsernameDisabled = explicitContentFromProto.LegacyUsernameDisabled;
@@ -15,10 +16,10 @@ export default function useBadges(getBadges) {
   if (undefined !== arg1) {
     setting = arg1;
   }
-  let tmpResult = tmp(647);
+  let tmpResult = defaultAreStatesEqual;
   const items = [closure_3];
   const stateFromStores = tmpResult.useStateFromStores(items, () => currentUser.getCurrentUser());
-  tmpResult = tmp(647);
+  tmpResult = defaultAreStatesEqual;
   [][0] = closure_2;
   if (null == getBadges) {
     return [];
@@ -32,18 +33,18 @@ export default function useBadges(getBadges) {
     }
     let found = badges;
     if (tmp7) {
-      found = badges.filter((id) => id.id !== closure_4);
+      found = badges.filter((item, index) => item.id !== closure_4);
     }
     let mapped = found;
     if (tmp6) {
-      mapped = found.map((id) => {
+      mapped = found.map((item, index) => {
         const obj = {};
-        const merged = Object.assign(id);
-        if (id.id === closure_4) {
+        const merged = Object.assign(item);
+        if (item.id === closure_4) {
           const intl = callback(1236).intl;
           let description = intl.string(callback(1236).t.Br1ls3);
         } else {
-          description = id.description;
+          description = item.description;
         }
         obj.description = description;
         return obj;

@@ -1,29 +1,29 @@
 // === Module 12433: areParticipantsEqual ===
 
 // Module 12433 (areParticipantsEqual)
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
 import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 8686 */;
 import usePipDimensionsDefault from "usePipDimensions" /* 8689 */;
 import useIsViewingActivity from "useIsViewingActivity" /* 8690 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "getParticipants" /* 4773 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_10 from "handleConnectionOpen" /* 1979 */;
-import closure_11 from "anyoneHasFlagInContext" /* 4774 */;
-import closure_12 from "initialize" /* 8683 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import getParticipants from "getParticipants" /* 4773 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import anyoneHasFlagInContext from "anyoneHasFlagInContext" /* 4774 */;
+import initialize from "initialize" /* 8683 */;
 import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import Button from "Button" /* 1297 */;
 
-require = arg1;
+require = fn;
 function areParticipantsEqual(arg0, arg1) {
   [, , tmp] = arg0;
   [, , tmp2] = arg1;
@@ -36,7 +36,7 @@ let obj = { elevationShadow: null, background: null, backgroundPipFab: null, pip
 obj[0] = Button.generateBoxShadowStyle(require("Button").EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj = { backgroundColor: ThemesDefault.colors.BLACK, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[1] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.colors.BLACK, borderRadius: ThemesDefault.radii.lg };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BLACK, borderRadius: ThemesDefault.radii.lg };
 obj[2] = createCacheKey;
 obj[3] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 Button = { borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
@@ -44,7 +44,6 @@ obj[4] = Button;
 obj[5] = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" };
 obj[6] = { flex: 1, width: "100%" };
 obj[7] = { width: 22, height: 22, backgroundColor: "rgba(78, 80, 88, 0.48)", borderRadius: 11, justifyContent: "center", alignItems: "center", position: "absolute", top: 6, left: 6 };
-let obj2 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[8] = { width: 14, height: 14, color: ThemesDefault.colors.WHITE };
 let closure_19 = createCacheKey.createStyles(obj);
 let closure_20 = importAllResult.memo((channel) => {
@@ -103,8 +102,8 @@ let closure_20 = importAllResult.memo((channel) => {
     }
   }
   if (ParticipantTypes.HIDDEN_STREAM !== type1) {
-    if (tmp8.STREAM !== type1) {
-      if (tmp8.USER === type1) {
+    if (ParticipantTypes.STREAM !== type1) {
+      if (ParticipantTypes.USER === type1) {
         let tmp15 = null;
         if (tmp6(tmp2[25])(pipParticipant)) {
           tmp15 = null;
@@ -122,7 +121,7 @@ let closure_20 = importAllResult.memo((channel) => {
         let tmp14 = tmp15;
       } else {
         tmp14 = null;
-        if (tmp8.ACTIVITY === type1) {
+        if (ParticipantTypes.ACTIVITY === type1) {
           obj = { participant: null, channel: null, onSingleTap: null };
           obj[0] = pipParticipant;
           obj[1] = channel;
@@ -160,7 +159,7 @@ let closure_20 = importAllResult.memo((channel) => {
       const obj2 = { children: null };
       const items2 = [tmp24, tmp14];
       obj2[0] = items2;
-      return closure_18(closure_17, obj2);
+      return callback2(closure_17, obj2);
     }
   }
   if (pipParticipant.user.id === id.getId()) {
@@ -194,6 +193,7 @@ let closure_20 = importAllResult.memo((channel) => {
     callback3(tmp6(tmp2[23]), obj4);
     const tmp6Result2 = tmp6(tmp2[23]);
   }
+  const tmpResult = channel(openVoice[20]);
 });
 let closure_22 = importAllResult.memo((arg0) => {
   ({ channel, selfParticipant } = arg0);
@@ -227,10 +227,10 @@ let closure_22 = importAllResult.memo((arg0) => {
     let found = null;
     if (null != selfParticipant) {
       const speakers = closure_1_11.getSpeakers();
-      found = speakers.find((c12) => {
-        let isSpeakingResult = c12 !== user.user.id;
+      found = speakers.find((item, index) => {
+        let isSpeakingResult = item !== user.user.id;
         if (isSpeakingResult) {
-          isSpeakingResult = closure_1_11.isSpeaking(c12);
+          isSpeakingResult = closure_1_11.isSpeaking(item);
         }
         return isSpeakingResult;
       });
@@ -240,7 +240,7 @@ let closure_22 = importAllResult.memo((arg0) => {
   let obj4 = id(leadingEdgeDebounce[29]);
   leadingEdgeDebounce = obj4.useLeadingEdgeDebounce(stateFromStores1, 1000);
   if (null != leadingEdgeDebounce) {
-    let found = arr5.find((id) => id.id === leadingEdgeDebounce);
+    let found = arr5.find((item, index) => item.id === leadingEdgeDebounce);
     if (null != found) {
       let tmp14 = found;
     }
@@ -261,7 +261,6 @@ let closure_22 = importAllResult.memo((arg0) => {
         }
         tmp25 = selfVideo;
       }
-      obj = { style: null, children: null };
       const items6 = [tmp.avatarContainer, ];
       obj = { backgroundColor: null };
       obj[0] = tmp23;
@@ -274,8 +273,8 @@ let closure_22 = importAllResult.memo((arg0) => {
           obj1[0] = tmp14;
           obj1[1] = tmp2(tmp3[14]).AvatarSizes.PROFILE;
           obj1[2] = tmp2(tmp3[24]).ResizeMode.COVER;
-          let tmp30 = callback3(tmp20(tmp3[26]), obj1);
-          const tmp20Result = tmp20(tmp3[26]);
+          let tmp30 = callback3(selfParticipant(tmp3[26]), obj1);
+          const tmp20Result = selfParticipant(tmp3[26]);
         }
         const items7 = [tmp30, ];
         let tmp28Result = null;
@@ -284,14 +283,14 @@ let closure_22 = importAllResult.memo((arg0) => {
           obj2[0] = tmp.thermalAlertIconContainer;
           obj3 = { style: null, source: null, color: null };
           obj3[0] = tmp.thermalAlertIcon;
-          obj3[1] = tmp20(tmp3[32]);
+          obj3[1] = selfParticipant(tmp3[32]);
           obj3[2] = tmp.thermalAlertIcon.color;
           obj2[1] = tmp28(tmp2(tmp3[14]).Icon, obj3);
-          tmp28Result = tmp28(tmp27, obj2);
+          tmp28Result = tmp28(closure_5, obj2);
         }
         items7[1] = tmp28Result;
         obj[1] = items7;
-        return tmp26(tmp27, obj);
+        return tmp26(closure_5, obj);
       }
       obj4 = { size: null, channel: null, guildId: null, user: null, speaking: null };
       obj4[0] = tmp2(tmp3[14]).AvatarSizes.LARGE_48;
@@ -326,13 +325,15 @@ let closure_22 = importAllResult.memo((arg0) => {
       }
     }
   }
+  const tmp8 = callback(obj2.useStateFromStores(items2, () => {
+    const items = [closure_1_7.getParticipants(id), closure_1_7.getVideoParticipants(id), closure_1_7.getParticipantsVersion(id)];
+    return items;
+  }, items3, areParticipantsEqual), 2);
 });
-let obj4 = { width: 14, height: 14, color: ThemesDefault.colors.WHITE };
 const memoResult = importAllResult.memo((arg0) => {
   ({ channel, pipParticipant, selfParticipant } = arg0);
   const tmp = callback4();
-  let obj = useIsViewingActivity;
-  obj = { channelId: channel.id };
+  let obj = { channelId: channel.id };
   const isViewingActivity = obj.useIsViewingActivity(obj);
   let obj2 = useShouldForcePipOrientation;
   const shouldForcePipOrientation = obj2.useShouldForcePipOrientation({ channel });
@@ -341,7 +342,6 @@ const memoResult = importAllResult.memo((arg0) => {
   obj1 = { style: isViewingActivity ? tmp.backgroundPipFab : tmp.background, children: null };
   const items = [isViewingActivity ? tmp.pipFab : tmp.pip, , , ];
   ({ width, height } = useWindowDimensionsDefault());
-  const tmp10 = closure_4;
   const tmp7 = useWindowDimensionsDefault();
   let elevationShadow;
   if (tmp2Result.isAndroid()) {
@@ -363,21 +363,21 @@ const memoResult = importAllResult.memo((arg0) => {
     obj4[0] = channel;
     obj4[1] = pipParticipant;
     obj4[2] = selfParticipant;
-    obj3[2] = tmp8(closure_22, obj4);
-    let tmp8Result = tmp8(tmp9, obj3);
+    obj3[2] = callback(closure_22, obj4);
+    let tmp8Result = callback(closure_5, obj3);
   } else {
     const obj5 = { channel: null, pipParticipant: null, selfParticipant: null };
     obj5[0] = channel;
     obj5[1] = pipParticipant;
     obj5[2] = selfParticipant;
-    tmp8Result = tmp8(closure_20, obj5);
+    tmp8Result = callback(closure_20, obj5);
   }
-  tmp2Result = set;
+  tmp2Result = obj132;
   obj2[1] = tmp8Result;
-  obj1[1] = closure_16(tmp10, { activeOpacity: 0.7, children: closure_16(closure_5, obj2) });
-  return closure_16(closure_5, obj1);
+  obj1[1] = callback(closure_4, { activeOpacity: 0.7, children: callback(closure_5, obj2) });
+  return callback(closure_5, obj1);
 });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/PictureInPictureVideo.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/PictureInPictureVideo.tsx");
 
 export default memoResult;
 export { areParticipantsEqual };

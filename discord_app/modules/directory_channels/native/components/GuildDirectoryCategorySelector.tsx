@@ -2,22 +2,21 @@
 
 // Module 11937 (GuildDirectoryCategorySelector)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "isFetching" /* 11479 */;
+import isFetching from "isFetching" /* 11479 */;
 import DirectoryEntryTypes from "DirectoryEntryTypes" /* 11472 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ DirectoryEntryCategories: closure_8, getHubCategories: c9 } = DirectoryEntryTypes);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { categoriesListWrapper: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 12 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 12 };
 createCacheKey[0] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCategorySelector.tsx");
+const result = require("obj132").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryCategorySelector.tsx");
 
 export default function GuildDirectoryCategorySelector(channel) {
   channel = channel.channel;
@@ -25,7 +24,6 @@ export default function GuildDirectoryCategorySelector(channel) {
   const allEntriesCount = channel.allEntriesCount;
   let callback;
   let stateFromStores;
-  let memo;
   const tmp = callback4();
   [tmp3, c4] = callback(stateFromStores.useState(0), 2);
   callback = stateFromStores.useCallback((nativeEvent) => {
@@ -35,7 +33,7 @@ export default function GuildDirectoryCategorySelector(channel) {
   let items = [closure_7];
   stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getCurrentCategoryId(channel.id));
   const items1 = [channel.id];
-  memo = stateFromStores.useMemo(() => {
+  const memo = stateFromStores.useMemo(() => {
     const obj = { value: closure_1_8.ALL, label: null, idealSize: 70 };
     const intl = channel(allEntriesCount[8]).intl;
     obj[1] = intl.string(channel(allEntriesCount[8]).t.hEAa2a);
@@ -44,18 +42,18 @@ export default function GuildDirectoryCategorySelector(channel) {
   }, items1);
   const items2 = [memo, categoryCounts, allEntriesCount];
   const items3 = [memo, stateFromStores];
-  const memo1 = stateFromStores.useMemo(() => memo.map((label) => {
-    const obj = { label: label.label, id: String(label.value), count: null, page: null };
-    if (label.value === closure_1_8.ALL) {
+  const memo1 = stateFromStores.useMemo(() => memo.map((item, index) => {
+    const obj = { label: item.label, id: String(item.value), count: null, page: null };
+    if (item.value === closure_1_8.ALL) {
       let tmp3 = closure_3;
     } else if (closure_2 != null) {
-      tmp3 = tmp[label.value];
+      tmp3 = tmp[item.value];
     }
     obj[2] = tmp3;
     return obj;
   }), items2);
   const memo2 = stateFromStores.useMemo(() => {
-    const findIndexResult = memo.findIndex((value) => value.value === closure_5);
+    const findIndexResult = memo.findIndex((item, index) => item.value === closure_5);
     let num = 0;
     if (-1 !== findIndexResult) {
       num = findIndexResult;

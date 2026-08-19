@@ -1,11 +1,11 @@
 // === Module 510: generate ===
 
 // Module 510 (generate)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import IntegerDefault from "Integer" /* 14 */;
 import Buffer from "Buffer" /* 511 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
 class IdGenerator {
   constructor() {
     obj = Object.create(new.target.prototype);

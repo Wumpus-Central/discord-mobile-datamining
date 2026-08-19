@@ -1,12 +1,12 @@
 // === Module 16280: useChannelFloatingCTAContent ===
 
 // Module 16280 (useChannelFloatingCTAContent)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
+import noop from "noop" /* 19 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/useChannelFloatingCTAContent.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/useChannelFloatingCTAContent.tsx");
 
 export default function useChannelFloatingCTAContent(arg0) {
   const _require = arg0;
@@ -32,7 +32,7 @@ export default function useChannelFloatingCTAContent(arg0) {
     if (stateFromStores) {
       items.push(callback(stateFromStores[5]).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
     }
-    if (closure_1.some((twoWayLink) => twoWayLink.twoWayLink)) {
+    if (closure_1.some((item, index) => item.twoWayLink)) {
       items.push(callback(stateFromStores[5]).DismissibleContent.DONUT_MOBILE_NUX);
     }
     return items;

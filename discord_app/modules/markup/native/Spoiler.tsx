@@ -7,19 +7,18 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { EMOJI_CHAT_SIZE } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 
-let require = arg1;
+let require = fn;
 ({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
 let str = "transparent";
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   str = "rgba(0,0,0,0.0019607844)";
 }
-createCacheKey = { spoiler: null, placeholder: null, spoilerRevealed: null, muted: null };
 createCacheKey = { color: str, backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 createCacheKey[0] = createCacheKey;
-set = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND };
-createCacheKey[1] = set;
+obj132 = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND };
+createCacheKey[1] = obj132;
 createCacheKey[2] = { color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.SPOILER_REVEALED_BACKGROUND };
 createCacheKey[3] = { opacity: require("hairlineWidth").MUTED_OPACITY_CONTENT };
 let closure_6 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
@@ -42,7 +41,7 @@ class Spoiler extends PureComponent {
 }
 Spoiler.prototype["render"] = function render() {
   const self = this;
-  let tmp = callback(this.context);
+  const tmp = callback(this.context);
   const _require = tmp;
   const revealed = this.state.revealed;
   const children = this.props.children;
@@ -56,7 +55,7 @@ Spoiler.prototype["render"] = function render() {
   if (0 === Children.count(children)) {
     return null;
   } else {
-    Children = tmp4.Children;
+    Children = importAllResult.Children;
     let mapped = Children.map(children, (type) => {
       let map = closure_1_2;
       if (!closure_1_2.isValidElement(type)) {
@@ -66,7 +65,6 @@ Spoiler.prototype["render"] = function render() {
           if (!revealed) {
             let obj = { style: null };
             obj[0] = placeholder.placeholder;
-            let tmp7 = closure_1_5(closure_1_3, obj);
           }
         } else {
           const props = type.props;
@@ -90,7 +88,7 @@ Spoiler.prototype["render"] = function render() {
                   flattenResult = closure_1_4.flatten(style);
                 }
                 const obj = { children: null, style: null, onPress: "Array" };
-                ({ Children, cloneElement } = tmp);
+                ({ Children, cloneElement } = closure_1_2);
                 obj[0] = Children.map(props.props.children, (props) => {
                   if (closure_1_2.isValidElement(props)) {
                     const style = props.props.style;
@@ -100,7 +98,7 @@ Spoiler.prototype["render"] = function render() {
                       flattenResult = closure_1_4.flatten(style);
                     }
                     const obj = { children: null, style: null, onPress: "Array" };
-                    ({ Children, cloneElement } = tmp);
+                    ({ Children, cloneElement } = closure_1_2);
                     obj[0] = Children.map(props.props.children, (props) => {
                       if (closure_1_2.isValidElement(props)) {
                         const style = props.props.style;
@@ -110,7 +108,7 @@ Spoiler.prototype["render"] = function render() {
                           flattenResult = closure_1_4.flatten(style);
                         }
                         const obj = { children: null, style: null, onPress: "Array" };
-                        ({ Children, cloneElement } = tmp);
+                        ({ Children, cloneElement } = closure_1_2);
                         obj[0] = Children.map(props.props.children, () => { ... });
                         const items = [flattenResult, spoiler.spoiler];
                         obj[1] = items;
@@ -118,7 +116,6 @@ Spoiler.prototype["render"] = function render() {
                       } else {
                         return props;
                       }
-                      tmp = closure_1_2;
                     });
                     const items = [flattenResult, spoiler.spoiler];
                     obj[1] = items;
@@ -126,7 +123,6 @@ Spoiler.prototype["render"] = function render() {
                   } else {
                     return props;
                   }
-                  tmp = closure_1_2;
                 });
                 const items = [flattenResult, spoiler.spoiler];
                 obj[1] = items;
@@ -134,11 +130,9 @@ Spoiler.prototype["render"] = function render() {
               } else {
                 return props;
               }
-              tmp = closure_1_2;
             });
           }
         }
-        tmp7 = mapped;
       }
     });
     const items2 = [items1, ];
@@ -157,9 +151,8 @@ Spoiler.prototype["render"] = function render() {
     obj[3] = mapped;
     return jsx(_require(revealed[9]).LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
-  tmp4 = importAllResult;
 };
 Spoiler.contextType = require("ManaContext").ThemeContext;
-const result = set.fileFinishedImporting("modules/markup/native/Spoiler.tsx");
+const result = obj132.fileFinishedImporting("modules/markup/native/Spoiler.tsx");
 
 export default Spoiler;

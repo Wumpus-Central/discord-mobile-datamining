@@ -1,16 +1,14 @@
 // === Module 14058: useNameplateSections ===
 
 // Module 14058 (useNameplateSections)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { useMemo } from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
-import closure_5 from "map" /* 5324 */;
+import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
+import map from "map" /* 5324 */;
 
-const require = arg1;
-let obj = { PURCHASE: "purchase", PREMIUM_PURCHASE: "premium_purchase", PREVIEW: "preview" };
-obj = { skuId: "None" };
-obj = { skuId: "Shop" };
-let result = require("set").fileFinishedImporting("modules/collectibles/nameplates/useNameplateSections.tsx");
+const require = fn;
+let obj = { skuId: "Shop" };
+let result = require("obj132").fileFinishedImporting("modules/collectibles/nameplates/useNameplateSections.tsx");
 
 export default function useNameplateSections() {
   let items = [closure_5];
@@ -28,15 +26,15 @@ export default function useNameplateSections() {
   return useMemo(() => {
     obj = stateFromStores(first[5]);
     const nameplates = obj.getNameplates(stateFromStores, first);
-    const reduced = nameplates.reduce((premium_purchase, skuId) => {
-      let value = closure_0.get(skuId.skuId);
-      value = closure_2.get(skuId.skuId);
+    const reduced = nameplates.reduce((acc, item, index) => {
+      closure_0.get(item.skuId);
+      const value = closure_2.get(item.skuId);
       if (null != value) {
-        let result = closure_1_0(closure_1_1[5]).isPremiumCollectiblesPurchase(value);
-        const obj2 = closure_1_0(closure_1_1[5]);
+        let result = stateFromStores(first[5]).isPremiumCollectiblesPurchase(value);
+        const obj2 = stateFromStores(first[5]);
       } else {
-        result = closure_1_0(closure_1_1[5]).isPremiumCollectiblesProduct(value);
-        obj = closure_1_0(closure_1_1[5]);
+        result = stateFromStores(first[5]).isPremiumCollectiblesProduct(value);
+        obj = stateFromStores(first[5]);
       }
       let flag;
       if (value != null) {
@@ -46,16 +44,16 @@ export default function useNameplateSections() {
         flag = false;
       }
       if (result) {
-        premium_purchase = premium_purchase.premium_purchase;
-        premium_purchase.push(skuId);
+        const premium_purchase = acc.premium_purchase;
+        premium_purchase.push(item);
       } else if (null != value) {
-        const purchase = premium_purchase.purchase;
-        purchase.push(skuId);
+        const purchase = acc.purchase;
+        purchase.push(item);
       } else if (!flag) {
-        const preview = premium_purchase.preview;
-        preview.push(skuId);
+        const preview = acc.preview;
+        preview.push(item);
       }
-      return premium_purchase;
+      return acc;
     }, { purchase: [], premium_purchase: [], preview: [] });
     obj = { section: closure_1_6.PURCHASE, items, height: 12, header: null };
     items = [closure_1_7, closure_1_8, ...reduced.purchase];
@@ -70,7 +68,7 @@ export default function useNameplateSections() {
     const intl3 = stateFromStores(first[6]).intl;
     obj1[3] = intl3.string(stateFromStores(first[6]).t["1vbbee"]);
     items1[2] = obj1;
-    return items1.filter((items) => items.items.length > 0);
+    return items1.filter((item, index) => item.items.length > 0);
   }, items2);
 };
 export const Section = obj;

@@ -2,22 +2,21 @@
 
 // Module 16216 (StyleSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { FamilyCenterSubPages } from "items" /* 5297 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ Pressable: c4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 ({ AnalyticEvents: closure_8, UserSettingsSections: c9, VerticalGradient: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = 28 + ThemesDefault.space.PX_16;
 let closure_15 = [0.5875, 1];
-createCacheKey = { strip: null, pressable: null, label: null, link: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -30,15 +29,13 @@ createCacheKey[1] = obj1;
 createCacheKey[2] = { paddingRight: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { textDecorationLine: "underline" };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingRight: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningBanner.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningBanner.tsx");
 
 export default function ParentalConsentWarningBanner(children) {
-  let _require;
   let token;
   let daysRemaining;
   const tmp = callback();
-  _require = tmp;
+  const _require = tmp;
   let Gfqlpa = token;
   let obj = daysRemaining;
   const tmp2 = token(daysRemaining[7])();
@@ -81,28 +78,28 @@ export default function ParentalConsentWarningBanner(children) {
   const items1 = [daysRemaining];
   const sum = tmp2.top + closure_14;
   const items2 = [tmp.link];
-  callback = obj7.useCallback(() => {
-    let obj = token(daysRemaining[14]);
-    obj = { days_remaining: daysRemaining };
+  callback = React.useCallback(() => {
+    token(daysRemaining[14]);
+    let obj = { days_remaining: daysRemaining };
     obj.track(closure_1_8.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, obj);
-    const tab = token(daysRemaining[15]).selectTab(closure_1_7.REQUESTS);
+    const tab = token(daysRemaining[15]).selectTab(FamilyCenterSubPages.REQUESTS);
     const obj3 = token(daysRemaining[15]);
     obj = { screen: closure_1_9.FAMILY_CENTER };
     lib(daysRemaining[16]).openUserSettings(obj);
   }, items1);
-  const callback1 = obj7.useCallback((children) => closure_1_11(lib(daysRemaining[17]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, children }, arg1), items2);
+  const callback1 = React.useCallback((children) => closure_1_11(lib(daysRemaining[17]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, children }, arg1), items2);
   const items3 = [StyleSheet.absoluteFill, ];
   let num2 = 0;
   if (isOnMainSurface) {
     num2 = closure_14;
   }
   items3[1] = { marginTop: num2 };
-  children = [closure_11(View, { style: items3, children: children.children }), ];
+  children = [, ];
+  children[0] = callback(View, { style: items3, children: children.children });
   let tmp18 = null;
   if (isOnMainSurface) {
     tmp18 = null;
     if (null != daysRemaining) {
-      obj = { style: null, pointerEvents: "box-none", children: null };
       const items5 = [tmp.strip, ];
       obj = { height: null };
       obj[0] = sum;
@@ -113,7 +110,7 @@ export default function ParentalConsentWarningBanner(children) {
       obj1[2] = memo;
       obj1[3] = closure_15;
       ({ START: obj10[4], END: obj10[5] } = closure_10);
-      const items6 = [tmp15(Gfqlpa(obj[18]), obj1), ];
+      const items6 = [callback(Gfqlpa(obj[18]), obj1), ];
       obj2 = { accessibilityRole: "button", accessibilityHint: null, onPress: null, style: null, children: null };
       const intl2 = intl(obj[19]).intl;
       obj2[1] = intl2.string(Gfqlpa(obj[20]).O2HKdA);
@@ -139,15 +136,14 @@ export default function ParentalConsentWarningBanner(children) {
         formatResult = intl3.format(Gfqlpa(obj[20]).ZBK5mM, obj5);
       }
       obj4[4] = formatResult;
-      obj4 = tmp15(intl(obj[17]).Text, obj4);
+      obj4 = callback(intl(obj[17]).Text, obj4);
       obj2[4] = obj4;
-      obj2 = tmp15(closure_4, obj2);
+      obj2 = callback(closure_4, obj2);
       items6[1] = obj2;
       obj[2] = items6;
-      tmp13(tmp16, obj);
-      const tmp21 = closure_4;
+      callback2(View, obj);
     }
   }
   children[1] = tmp18;
-  return closure_12(closure_13, { children });
+  return callback2(closure_13, { children });
 };

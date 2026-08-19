@@ -4,26 +4,27 @@
 import noopAll from "noop" /* 19 */;
 import useNavigation from "useNavigation" /* 1500 */;
 import PlaceholderDefault from "Placeholder" /* 16901 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import ApplicationStatusNoticeDefault from "ApplicationStatusNotice" /* 16902 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   guild = guild.guild;
   let obj = useNavigation;
   const str = obj.useNavigation();
   if (tmp3.loading) {
-    let tmp7 = jsx(tmp2(16901), {});
+    let tmp7 = jsx(PlaceholderDefault, {});
   } else {
     const features = guild.features;
     if (!features.has(constants.CREATOR_MONETIZABLE)) {
       const features2 = guild.features;
-      if (!features2.has(tmp5.CREATOR_MONETIZABLE_PROVISIONAL)) {
+      if (!features2.has(constants.CREATOR_MONETIZABLE_PROVISIONAL)) {
         obj = { guild: null };
         obj[0] = guild;
-        tmp7 = jsx(tmp2(16902), { guild: null });
+        tmp7 = jsx(ApplicationStatusNoticeDefault, { guild: null });
       }
     }
     if (null == tmp4) {
@@ -33,13 +34,12 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
       const replaced1 = str.replace(constants2.ROLE_SUBSCRIPTIONS_TIERS);
       tmp7 = null;
     }
-    tmp5 = constants;
   }
   return tmp7;
 }
 noopAll;
 ({ GuildFeatures: c4, GuildSettingsSections: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx");
 
 export default function GuildSettingsRoleSubscriptionsEmpty(guildId) {
   guildId = guildId.guildId;

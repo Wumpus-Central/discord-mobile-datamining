@@ -1,12 +1,12 @@
 // === Module 9306: useTopAndNewlyAddedEmojis ===
 
 // Module 9306 (useTopAndNewlyAddedEmojis)
-import closure_2 from "getEmojiToGroupId" /* 6727 */;
+import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
 import { EmojiIntention } from "set" /* 1925 */;
 
-const require = arg1;
+const require = fn;
 let closure_4 = [];
-const result = require("set").fileFinishedImporting("modules/emoji_picker/hooks/useTopAndNewlyAddedEmojis.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emoji_picker/hooks/useTopAndNewlyAddedEmojis.tsx");
 
 export default function useTopAndNewlyAddedEmojis(arg0, arg1) {
   const _require = arg0;
@@ -16,15 +16,15 @@ export default function useTopAndNewlyAddedEmojis(arg0, arg1) {
   return _require(647).useStateFromStoresObject(items, () => {
     let obj = closure_1_2;
     if (closure_1_2 !== undefined) {
-      if (tmp2 !== closure_1_3.REACTION) {
-        let topEmoji = obj.getTopEmoji(tmp);
+      if (closure_1 !== EmojiIntention.REACTION) {
+        let topEmoji = obj.getTopEmoji(closure_0);
       } else {
         topEmoji = closure_1_4;
       }
       obj = { topEmojis: null, newlyAddedEmojis: null };
       obj[0] = topEmoji;
-      if (tmp2 !== closure_1_3.REACTION) {
-        let newlyAddedEmoji = obj.getNewlyAddedEmoji(tmp);
+      if (closure_1 !== EmojiIntention.REACTION) {
+        let newlyAddedEmoji = obj.getNewlyAddedEmoji(closure_0);
       } else {
         newlyAddedEmoji = closure_1_4;
       }

@@ -3,12 +3,12 @@
 // Module 14092 (useAuthSessions)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import tDefault from "t" /* 3975 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "handleInit" /* 14093 */;
+import noop from "noop" /* 19 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import handleInit from "handleInit" /* 14093 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
 
 export const useAuthSessions = function useAuthSessions() {
   const items = [closure_5];
@@ -19,7 +19,7 @@ export const useAuthSessions = function useAuthSessions() {
     authSessionIdHash = closure_1_4.getAuthSessionIdHash();
     let currentSession = null;
     if (null != authSessionIdHash) {
-      const findIndexResult = otherSessions.findIndex((id_hash) => id_hash.id_hash === authSessionIdHash);
+      const findIndexResult = otherSessions.findIndex((item, index) => item.id_hash === authSessionIdHash);
       currentSession = null;
       if (findIndexResult >= 0) {
         currentSession = otherSessions.splice(findIndexResult, 1)[0];

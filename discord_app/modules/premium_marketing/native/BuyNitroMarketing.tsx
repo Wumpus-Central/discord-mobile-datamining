@@ -2,45 +2,39 @@
 
 // Module 7923 (BuyNitroMarketing)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { container: null, list: null, listContent: null, listHeader: null, sectionHeader: null, disabled: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { gap: ThemesDefault.space.PX_24 };
-let obj2 = { gap: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { pointerEvents: "none" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketing.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/BuyNitroMarketing.tsx");
 
 export default function BuyNitroMarketing(onPaymentDismiss) {
   ({ onClose, applicationId } = onPaymentDismiss);
   ({ initialLoadCompleted, initialTier, onPaymentSuccess } = onPaymentDismiss);
   onPaymentDismiss = onPaymentDismiss.onPaymentDismiss;
-  let React;
-  let nativeStackNavigation;
   let buyNitroPlanSelection;
   closure_6 = undefined;
   let onSelectNitroTier;
   let locationStackFromLocationContext;
   let callback;
   const tmp = callback();
-  React = tmp;
+  const React = tmp;
   let obj = applicationId(onPaymentDismiss[6]);
   const youBarSettingsCustomHeaderPaddingTop = obj.useYouBarSettingsCustomHeaderPaddingTop();
   obj1 = applicationId(onPaymentDismiss[7]);
-  nativeStackNavigation = obj1.useNativeStackNavigation();
+  const nativeStackNavigation = obj1.useNativeStackNavigation();
   let obj2 = applicationId(onPaymentDismiss[8]);
   const buyNitroMarketingLifecycleHooks = obj2.useBuyNitroMarketingLifecycleHooks(nativeStackNavigation, initialLoadCompleted);
   let obj3 = applicationId(onPaymentDismiss[9]);
@@ -66,8 +60,8 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
   const promotionMarketingComponent = applicationId(onPaymentDismiss[13]).usePromotionMarketingComponent(tmp2(tmp3[14]).MarketingComponentType.MARKETING_PAGE_BANNER);
   const items1 = [locationStackFromLocationContext, applicationId, onPaymentSuccess, onPaymentDismiss];
   callback = React.useCallback((perk) => {
-    let obj = applicationId(onPaymentDismiss[15]);
-    obj = { selectedTier: ref.current.selection.tier, selectedProductId: ref.current.selection.productId, analyticsLocations: locationStackFromLocationContext, applicationId, onPaymentSuccess, onPaymentDismiss };
+    applicationId(onPaymentDismiss[15]);
+    const obj = { selectedTier: ref.current.selection.tier, selectedProductId: ref.current.selection.productId, analyticsLocations: locationStackFromLocationContext, applicationId, onPaymentSuccess, onPaymentDismiss };
     const result = obj.openBuyNitroPerkDetails(perk, obj);
   }, items1);
   const items2 = [buyNitroPlanSelection.selection.tier, tmp.sectionHeader, callback, onSelectNitroTier];
@@ -81,7 +75,7 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
       obj[1] = item.title;
       obj[2] = true === item.highlightNitro;
       obj[3] = function onPress() {
-        return callback(closure_1_5.TIER_2);
+        return callback(buyNitroPlanSelection.TIER_2);
       };
       let tmp6 = ref(onPaymentSuccess(onPaymentDismiss[16]), obj);
     } else {

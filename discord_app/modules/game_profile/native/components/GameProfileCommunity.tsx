@@ -2,47 +2,33 @@
 
 // Module 9149 (GameProfileCommunityServer)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "allGuildIds" /* 1393 */;
+import allGuildIds from "allGuildIds" /* 1393 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, headerText: null, card: null, guildContent: null, guildHeaderRow: null, guildIcon: null, guildIconImage: null, guildInfo: null, guildNameDescriptionContainer: null, guildNameRow: null, memberCountsContainer: null, memberCountContainer: null, onlineEllipse: null, membersEllipse: null };
-createCacheKey = { gap: ThemesDefault.space.PX_8 };
+const createCacheKey = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8 };
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let obj2 = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[3] = { flexDirection: "column", padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-let obj3 = { flexDirection: "column", padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { flexDirection: "row", gap: ThemesDefault.space.PX_16 };
-let obj4 = { flexDirection: "row", gap: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { width: 56, height: 56, borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: ThemesDefault.space.PX_4, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginLeft: -ThemesDefault.space.PX_4 };
-let obj5 = { width: 56, height: 56, borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: ThemesDefault.space.PX_4, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginLeft: -ThemesDefault.space.PX_4 };
 createCacheKey[6] = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.none };
-let obj6 = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.none };
 createCacheKey[7] = { flex: 1, gap: ThemesDefault.space.PX_16 };
-let obj7 = { flex: 1, gap: ThemesDefault.space.PX_16 };
 createCacheKey[8] = { gap: ThemesDefault.space.PX_4 };
-let obj8 = { gap: ThemesDefault.space.PX_4 };
 createCacheKey[9] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-let obj9 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[10] = { flexDirection: "row", gap: ThemesDefault.space.PX_16 };
-let obj10 = { flexDirection: "row", gap: ThemesDefault.space.PX_16 };
 createCacheKey[11] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-let obj11 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[12] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
-let obj12 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
 createCacheKey[13] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj13 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileCommunity.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_profile/native/components/GameProfileCommunity.tsx");
 
 export default function GameProfileCommunityServer(game) {
   game = game.game;
@@ -51,7 +37,6 @@ export default function GameProfileCommunityServer(game) {
   const closeModal = game.closeModal;
   let first;
   let React;
-  closure_6 = undefined;
   let memo;
   let stateFromStores;
   let tmp = callback2();
@@ -74,7 +59,7 @@ export default function GameProfileCommunityServer(game) {
     if (game != null) {
       const websites = game.websites;
       if (websites != null) {
-        found = websites.find((category) => category.category === callback(table[8]).ThirdPartyGameApplicationWebsiteCategory.DISCORD);
+        found = websites.find((item, index) => item.category === callback(table[8]).ThirdPartyGameApplicationWebsiteCategory.DISCORD);
       }
     }
     return found;
@@ -119,12 +104,12 @@ export default function GameProfileCommunityServer(game) {
                   obj1 = lib(closure_2_2[9]);
                   const findCodedLinkResult = obj1.findCodedLink(tmp36.url);
                   if (null != findCodedLinkResult) {
-                    if (findCodedLinkResult.type === tmp20(tmp21[10]).CodedLinkType.INVITE) {
+                    if (findCodedLinkResult.type === tmp20(closure_2_2[10]).CodedLinkType.INVITE) {
                       banned = 1;
                       c3 = 2;
                       c4 = 1;
                       obj1 = { value: null, done: false };
-                      obj1[0] = closure_2_1(tmp21[11])(findCodedLinkResult.code, "game_profile");
+                      obj1[0] = closure_2_1(closure_2_2[11])(findCodedLinkResult.code, "game_profile");
                       return obj1;
                     }
                   }
@@ -198,14 +183,14 @@ export default function GameProfileCommunityServer(game) {
   stateFromStores = obj1.useStateFromStores(items3, () => {
     let id;
     if (first != null) {
-      const guild = tmp.guild;
+      const guild = first.guild;
       if (guild != null) {
         id = guild.id;
       }
     }
     let isMemberResult = null != id;
     if (isMemberResult) {
-      isMemberResult = memo.isMember(tmp.guild.id);
+      isMemberResult = memo.isMember(first.guild.id);
     }
     return isMemberResult;
   });
@@ -280,7 +265,7 @@ export default function GameProfileCommunityServer(game) {
         obj15[2] = intl2.formatToPlainString(tmp8(tmp9[18]).t["LC+S+m"], obj16);
         items10[1] = tmp14(tmp8(tmp9[17]).Text, obj15);
         obj13[1] = items10;
-        tmp12Result = tmp12(tmp13, obj13);
+        tmp12Result = callback(tmp13, obj13);
       }
       const items11 = [tmp12Result, ];
       tmp12Result = null;
@@ -297,7 +282,7 @@ export default function GameProfileCommunityServer(game) {
         obj19[2] = intl3.formatToPlainString(tmp8(tmp9[18]).t.zRl6XR, obj20);
         items12[1] = tmp14(tmp8(tmp9[17]).Text, obj19);
         obj17[1] = items12;
-        tmp12Result = tmp12(tmp13, obj17);
+        tmp12Result = callback(tmp13, obj17);
       }
       items11[1] = tmp12Result;
       obj12[1] = items11;

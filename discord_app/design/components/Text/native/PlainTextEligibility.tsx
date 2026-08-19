@@ -1,11 +1,11 @@
 // === Module 4742: set ===
 
 // Module 4742 (set)
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 2 */;
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-let set = new Set(["accessibilityActions", "accessibilityElementsHidden", "accessibilityHint", "accessibilityIgnoresInvertColors", "accessibilityLabel", "accessibilityLabelledBy", "accessibilityLanguage", "accessibilityLargeContentTitle", "accessibilityLiveRegion", "accessibilityRespondsToUserInteraction", "accessibilityRole", "accessibilityShowsLargeContentViewer", "accessibilityState", "accessibilityValue", "accessibilityViewIsModal", "accessible", "allowFontScaling", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-hidden", "aria-label", "aria-labelledby", "aria-live", "aria-modal", "aria-selected", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "id", "importantForAccessibility", "maxFontSizeMultiplier", "nativeID", "onAccessibilityAction", "onAccessibilityEscape", "onAccessibilityTap", "onMagicTap", "role", "screenReaderFocusable", "testID"]);
+const set = new Set(["accessibilityActions", "accessibilityElementsHidden", "accessibilityHint", "accessibilityIgnoresInvertColors", "accessibilityLabel", "accessibilityLabelledBy", "accessibilityLanguage", "accessibilityLargeContentTitle", "accessibilityLiveRegion", "accessibilityRespondsToUserInteraction", "accessibilityRole", "accessibilityShowsLargeContentViewer", "accessibilityState", "accessibilityValue", "accessibilityViewIsModal", "accessible", "allowFontScaling", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-hidden", "aria-label", "aria-labelledby", "aria-live", "aria-modal", "aria-selected", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "id", "importantForAccessibility", "maxFontSizeMultiplier", "nativeID", "onAccessibilityAction", "onAccessibilityEscape", "onAccessibilityTap", "onMagicTap", "role", "screenReaderFocusable", "testID"]);
 const set1 = new Set(["fontVariant", "textDecorationColor", "textDecorationStyle", "textShadowColor", "textShadowOffset", "textShadowRadius", "userSelect", "writingDirection"]);
 let closure_3 = { eligible: false, reason: "animated" };
 let closure_4 = { eligible: false, reason: "experiment-disabled" };
@@ -14,7 +14,7 @@ let closure_6 = { eligible: false, reason: "nested-text" };
 let closure_7 = { eligible: false, reason: "non-string-children" };
 let closure_8 = { eligible: false, reason: "non-ios" };
 let closure_9 = { eligible: false, reason: "ref" };
-const result = set.fileFinishedImporting("design/components/Text/native/PlainTextEligibility.tsx");
+const result = obj132.fileFinishedImporting("design/components/Text/native/PlainTextEligibility.tsx");
 
 export const isPlainTextEligible = function isPlainTextEligible(plainTextEligibility) {
   return !("eligible" in plainTextEligibility);
@@ -34,18 +34,14 @@ export const getPlainTextEligibility = function getPlainTextEligibility(enabled)
         return closure_7;
       } else {
         for (const key10010 in arg0.props) {
-          let tmp10 = key10010;
           if (null == arg0.props[key10010]) {
             continue;
+          } else if (set.has(key10010)) {
+            continue;
           } else {
-            let tmp3 = set;
-            if (set.has(key10010)) {
-              continue;
-            } else {
-              let obj = { eligible: false, reason: "unsupported-prop", unsupportedName: null };
-              obj[2] = key10010;
-              return obj;
-            }
+            let obj = { eligible: false, reason: "unsupported-prop", unsupportedName: null };
+            obj[2] = key10010;
+            return obj;
           }
           continue;
         }
@@ -59,15 +55,12 @@ export const getPlainTextEligibility = function getPlainTextEligibility(enabled)
           }
           delete tmp[tmp2];
           for (const item10016 of closure_2) {
-            let tmp5 = item10016;
             if (null != flattenResult[item10016]) {
               let obj = { eligible: false, reason: "unsupported-style", unsupportedName: null };
               obj[2] = item10016;
-              let tmp7 = obj;
               obj.return();
               return obj;
             } else {
-              let tmp6 = item10016;
               delete tmp[tmp3];
               continue;
             }

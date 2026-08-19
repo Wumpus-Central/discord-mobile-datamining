@@ -1,10 +1,10 @@
 // === Module 1894: readWindowSizeForAppEntry ===
 
 // Module 1894 (readWindowSizeForAppEntry)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import enforcingDefault from "enforcing" /* 671 */;
 
-const result = set.fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");
+const result = obj132.fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");
 
 export const readWindowSizeForAppEntry = function readWindowSizeForAppEntry(appEntryKey) {
   const obj = enforcingDefault;

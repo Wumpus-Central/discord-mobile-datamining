@@ -1,18 +1,17 @@
 // === Module 15516: useIsEligibleForTierTemplateUpsell ===
 
 // Module 15516 (useIsEligibleForTierTemplateUpsell)
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/useIsEligibleForTierTemplateUpsell.tsx");
 
 export default function useIsEligibleForTierTemplateUpsell(guildId) {
   const _require = guildId;
   const items = [closure_2];
   const stateFromStores = _require(589).useStateFromStores(items, () => closure_1_2.getGuild(closure_0));
   const obj = _require(589);
-  const tmp = _require;
   let hasItem;
   const guildEligibleForTierTemplates = _require(13353).useGuildEligibleForTierTemplates(guildId);
   if (stateFromStores != null) {

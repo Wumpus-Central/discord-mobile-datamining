@@ -3,13 +3,13 @@
 // Module 8098 (FormSwitchRow)
 import context from "context" /* 6939 */;
 import TableSwitchRow from "TableSwitchRow" /* 7178 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function FormSwitchRow(onValueChange) {
   onValueChange = onValueChange.onValueChange;
   const value = onValueChange.value;
@@ -51,7 +51,7 @@ function FormSwitchRow(onValueChange) {
   obj = { style: tmp2.trailing, children: null };
   const items1 = [callback2(importDefault(first[7]), { numberOfLines, text: label }), null != trailing && trailing];
   obj[1] = items1;
-  obj.label = closure_7(View, obj);
+  obj.label = callback2(View, obj);
   obj.subLabel = subLabel;
   obj.disabled = flag;
   let fn;
@@ -82,15 +82,13 @@ function FormSwitchRow(onValueChange) {
   obj.accessibilityHint = accessibilityHint;
   obj1 = { disabled: flag, value, onValueChange };
   const tmp14 = importDefault(first[6]);
-  const tmp16 = closure_7;
-  const tmp17 = View;
   const merged2 = Object.assign(switchProps);
   obj.trailing = callback2(tmp13(first[8]), obj1);
   return callback2(tmp14, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormSwitchRow.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormSwitchRow.tsx");
 
 export default function FormSwitchRowContainer(DEPRECATED_style) {
   if (React.useContext(context.RedesignCompatContext)) {
@@ -99,12 +97,12 @@ export default function FormSwitchRowContainer(DEPRECATED_style) {
     obj = { value: null, onValueChange: null };
     ({ value: obj3[0], onValueChange: obj3[1] } = DEPRECATED_style);
     const merged = Object.assign(DEPRECATED_style);
-    obj[1] = tmp3(TableSwitchRow.TableSwitchRow, obj);
-    let tmp3Result = tmp3(View, obj);
+    obj[1] = callback(TableSwitchRow.TableSwitchRow, obj);
+    let tmp3Result = callback(View, obj);
   } else {
     obj = {};
     const merged1 = Object.assign(DEPRECATED_style);
-    tmp3Result = tmp3(FormSwitchRow, obj);
+    tmp3Result = callback(FormSwitchRow, obj);
   }
   return tmp3Result;
 };

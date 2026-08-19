@@ -2,20 +2,19 @@
 
 // Module 11839 (GatedContent)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: null, title: null, description: null, buttonGroup: null };
-createCacheKey = { flex: 1, padding: 20, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, textAlign: "center" };
+const createCacheKey = { flex: 1, padding: 20, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { width: "100%", maxWidth: 400 };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("components_native/warnings/GatedContent.tsx");
+let result = require("obj132").fileFinishedImporting("components_native/warnings/GatedContent.tsx");
 
 export default function GatedContent(onAgree) {
   ({ agreement, agreementButtonVariant } = onAgree);
@@ -51,9 +50,7 @@ export default function GatedContent(onAgree) {
       onAgree();
     }
   }, items2);
-  let obj = { spacing: 16, style: tmp.container, children: null };
-  obj = { align: "center", children: null };
-  obj = { variant: "heading-xxl/bold", maxFontSizeMultiplier: 2, style: tmp.title, children: title };
+  const obj = { variant: "heading-xxl/bold", maxFontSizeMultiplier: 2, style: tmp.title, children: title };
   const items3 = [channelId(onAgree(onDisagree[6]).Text, obj), subtitle, channelId(onAgree(onDisagree[6]).Text, { color: "text-muted", variant: "text-md/medium", style: tmp.description, maxFontSizeMultiplier: 2, children: description })];
   obj[1] = items3;
   const items4 = [guildId(onAgree(onDisagree[5]).Stack, obj), ];

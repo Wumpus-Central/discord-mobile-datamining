@@ -5,13 +5,13 @@ import sendRequest from "sendRequest" /* 530 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 
 ({ Endpoints: c4, PaymentGateways: c5, PaymentSourceTypes: closure_6 } = ME);
 let c7 = null;
 let c8 = null;
 let c9 = null;
-if (set.isDesktop()) {
+if (obj132.isDesktop()) {
   let _window = window;
   let obj = { getReturnUrlPrefix: null, open: null };
   obj[0] = function getReturnUrlPrefix() {
@@ -84,6 +84,6 @@ obj = {
   }
 };
 const braintreeStore = new BraintreeStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("stores/billing/BraintreeStore.tsx");
+const result = obj132.fileFinishedImporting("stores/billing/BraintreeStore.tsx");
 
 export default braintreeStore;

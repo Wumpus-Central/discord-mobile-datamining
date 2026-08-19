@@ -3,7 +3,6 @@
 // Module 7364 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
 
 let closure_0 = {};
 let set = new Set();
@@ -48,6 +47,6 @@ const walletBalanceStore = new WalletBalanceStore(dispatcherDefault, {
     set = new Set();
   }
 });
-const result = set.fileFinishedImporting("modules/billing/stores/WalletBalanceStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/billing/stores/WalletBalanceStore.tsx");
 
 export default walletBalanceStore;

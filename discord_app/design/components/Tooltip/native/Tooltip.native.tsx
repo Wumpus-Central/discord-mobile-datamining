@@ -2,17 +2,16 @@
 
 // Module 9272 (Tooltip)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
-createCacheKey = { container: { position: "absolute", alignItems: "center" }, textContainer: null, text: null, arrow: null, bottomArrow: null, topArrow: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm, maxWidth: 150, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm, maxWidth: 150, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND };
@@ -21,15 +20,13 @@ createCacheKey[5] = { borderLeftWidth: 6, borderRightWidth: 6, borderBottomWidth
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function TooltipNativeTsx1(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always')};}" };
 let closure_11 = { code: "function TooltipNativeTsx2(){const{withSpring,interpolateColor,pressed,backgroundColor,backgroundColorPressed,ON_PRESS_SPRING}=this.__closure;return{borderTopColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always'),borderBottomColor:withSpring(interpolateColor(pressed.get(),[0,1],[backgroundColor,backgroundColorPressed]),ON_PRESS_SPRING,'animate-always')};}" };
-let obj1 = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND };
-let result = require("set").fileFinishedImporting("design/components/Tooltip/native/Tooltip.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Tooltip/native/Tooltip.native.tsx");
 
 export const Tooltip = function Tooltip(targetMeasurements) {
   ({ surfaceMeasurements, label, position, onPress } = targetMeasurements);
   let sharedValue;
   let token;
   let token1;
-  let callback;
   const tmp = callback3();
   let obj = sharedValue(token1[6]);
   let num = 0;
@@ -40,7 +37,7 @@ export const Tooltip = function Tooltip(targetMeasurements) {
   token1 = obj2.useToken(token(token1[5]).colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE);
   let items = [sharedValue];
   let items1 = [sharedValue];
-  callback = React.useCallback(() => {
+  const callback = React.useCallback(() => {
     const result = sharedValue.set(1);
   }, items);
   const callback1 = React.useCallback(() => {
@@ -126,9 +123,6 @@ export const Tooltip = function Tooltip(targetMeasurements) {
   }
   const items4 = [tmp17, , ];
   const tmp12 = token(token1[8])(tmp11, surfaceMeasurements, targetMeasurements.targetMeasurements, position, 4);
-  const tmp15 = closure_7;
-  const tmp16 = Pressable;
-  const tmp19 = callback2;
   const items5 = [tmp.textContainer, animatedStyle];
   obj5 = { style: tmp.text, variant: "text-xs/bold", color: "text-overlay-light", children: label };
   items4[1] = callback2(token(token1[6]).View, { style: items5, children: callback2(tmp2(token1[10]).Text, obj5) });
@@ -142,9 +136,9 @@ export const Tooltip = function Tooltip(targetMeasurements) {
     items6[2] = obj7;
     items6[3] = animatedStyle1;
     obj6[0] = items6;
-    tmp19Result = tmp19(tmp5(tmp3[6]).View, obj6);
+    tmp19Result = callback2(tmp5(tmp3[6]).View, obj6);
   }
   items4[2] = tmp19Result;
   obj1[8] = items4;
-  return tmp15(tmp16, obj1);
+  return callback(Pressable, obj1);
 };

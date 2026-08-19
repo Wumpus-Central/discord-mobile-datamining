@@ -1,10 +1,10 @@
 // === Module 11324: getItemSubtitleForMaxPlayers ===
 
 // Module 11324 (getItemSubtitleForMaxPlayers)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
 
 export default function getItemSubtitleForMaxPlayers(arg0) {
   if (arg0 > 0) {

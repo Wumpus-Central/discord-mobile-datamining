@@ -6,20 +6,20 @@ import ThemesDefault from "Themes" /* 712 */;
 import _modDef4115 from "module_4115" /* 4115 */;
 import _modDef4656 from "module_4656" /* 4656 */;
 import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "_handleConnectionOpen" /* 4495 */;
-import closure_8 from "reinjectEphemerals" /* 4994 */;
-import closure_9 from "handleConnectionOpen" /* 1979 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
-import closure_11 from "getState" /* 7383 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import getState from "getState" /* 7383 */;
 import { AppStates } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function openLoadingIndicatorDebugBody() {
   currentUser = currentUser.getCurrentUser();
   let isStaffResult;
@@ -36,8 +36,8 @@ function openLoadingIndicatorDebugBody() {
   if (isStaffResult) {
     let obj = { importer: null, isDismissable: true };
     obj[0] = function importer() {
-      return callback(paths[15])(paths[14], paths.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return callback(paths[15])(paths[14], paths.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
@@ -48,13 +48,11 @@ function openLoadingIndicatorDebugBody() {
       });
     };
     _modDef4656.openLazy(obj);
-    const obj2 = _modDef4656;
   }
 }
 let c4 = importAllResult;
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
-obj = { height: 8, width: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj = { height: 8, width: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 obj[1] = obj;
 let closure_16 = createCacheKey.createStyles(obj);
 let closure_18 = importAllResult.memo(() => {
@@ -89,16 +87,16 @@ let closure_18 = importAllResult.memo(() => {
     str4 = "true";
   }
   obj[2] = str4;
-  items1[3] = closure_13(Text.Text, obj);
+  items1[3] = callback(Text.Text, obj);
   let tmp4Result = null;
   if (messagesCached !== false) {
     obj = { variant: "text-md/normal", color: "text-muted", children: null };
     const items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
     obj[2] = items2;
-    tmp4Result = tmp4(tmp(4734).Text, obj);
+    tmp4Result = callback2(Text.Text, obj);
   }
   items1[4] = tmp4Result;
-  const items3 = [closure_14(closure_15, { children: items1 }), "\n", , , , , ];
+  const items3 = [callback2(closure_15, { children: items1 }), "\n", , , , , ];
   const items4 = ["messages.ready", ":", " ", , ];
   let str6 = str;
   if (messagesReady) {
@@ -110,16 +108,16 @@ let closure_18 = importAllResult.memo(() => {
     str7 = "true";
   }
   obj1[2] = str7;
-  items4[3] = closure_13(Text.Text, obj1);
+  items4[3] = callback(Text.Text, obj1);
   tmp4Result = null;
   if (messagesReady !== true) {
     const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj2[2] = items5;
-    tmp4Result = tmp4(tmp(4734).Text, obj2);
+    tmp4Result = callback2(Text.Text, obj2);
   }
   items4[4] = tmp4Result;
-  items3[2] = closure_14(closure_15, { children: items4 });
+  items3[2] = callback2(closure_15, { children: items4 });
   items3[3] = "\n";
   const items6 = ["connected", ":", " ", , ];
   let str10 = str;
@@ -132,16 +130,16 @@ let closure_18 = importAllResult.memo(() => {
     str11 = "true";
   }
   obj3[2] = str11;
-  items6[3] = closure_13(Text.Text, obj3);
+  items6[3] = callback(Text.Text, obj3);
   let tmp4Result1 = null;
   if (connected !== true) {
     const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj4[2] = items7;
-    tmp4Result1 = tmp4(tmp(4734).Text, obj4);
+    tmp4Result1 = callback2(Text.Text, obj4);
   }
   items6[4] = tmp4Result1;
-  items3[4] = closure_14(closure_15, { children: items6 });
+  items3[4] = callback2(closure_15, { children: items6 });
   items3[5] = "\n";
   if (!messagesCached) {
     messagesCached = !messagesReady;
@@ -158,15 +156,15 @@ let closure_18 = importAllResult.memo(() => {
     str3 = "true";
   }
   obj5[2] = str3;
-  items8[3] = closure_13(Text.Text, obj5);
+  items8[3] = callback(Text.Text, obj5);
   const obj6 = { variant: "text-md/normal", color: "text-default", children: null };
   items8[4] = null;
-  items3[6] = closure_14(closure_15, { children: items8 });
+  items3[6] = callback2(closure_15, { children: items8 });
   obj6[2] = items3;
-  return closure_14(Text.Text, obj6);
+  return callback2(Text.Text, obj6);
 });
 let closure_19 = { code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}" };
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
+const result = require("obj132").fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
 
 export const useShouldChannelShowLoadingIndicator = function useShouldChannelShowLoadingIndicator(channelId) {
   const _require = channelId;
@@ -177,7 +175,7 @@ export const useShouldChannelShowLoadingIndicator = function useShouldChannelSho
     if (enabled) {
       if (null == closure_0) {
         return false;
-      } else if (closure_1_11.getState() !== closure_1_12.ACTIVE) {
+      } else if (closure_1_11.getState() !== AppStates.ACTIVE) {
         return false;
       } else {
         const messages = closure_1_8.getMessages(tmp);
@@ -241,24 +239,23 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
       obj[0] = [];
       let tmp7 = obj;
     } else {
-      obj = { scale: null };
-      const obj3 = stateFromStores(closure_1_2[19]);
-      const obj4 = stateFromStores(closure_1_2[19]);
-      const obj5 = stateFromStores(closure_1_2[20]);
-      const withTimingResult = stateFromStores(closure_1_2[20]).withTiming(1, { duration: 0 });
+      const obj3 = stateFromStores(dependencyMap[19]);
+      const obj4 = stateFromStores(dependencyMap[19]);
+      const obj5 = stateFromStores(dependencyMap[20]);
+      const withTimingResult = stateFromStores(dependencyMap[20]).withTiming(1, { duration: 0 });
       obj = { duration: 1500, easing: null };
-      const Easing = stateFromStores(closure_1_2[19]).Easing;
+      const Easing = stateFromStores(dependencyMap[19]).Easing;
       obj[1] = Easing.bezier(0.4, 0, 0.2, 1);
-      const obj6 = stateFromStores(closure_1_2[20]);
-      const withTimingResult1 = stateFromStores(closure_1_2[20]).withTiming(0.5, obj);
+      const obj6 = stateFromStores(dependencyMap[20]);
+      const withTimingResult1 = stateFromStores(dependencyMap[20]).withTiming(0.5, obj);
       obj1 = { duration: 1500, easing: null };
-      const Easing2 = stateFromStores(closure_1_2[19]).Easing;
+      const Easing2 = stateFromStores(dependencyMap[19]).Easing;
       obj1[1] = Easing2.bezier(0.4, 0, 0.2, 1);
-      obj[0] = obj3.withRepeat(obj4.withSequence(withTimingResult, withTimingResult1, stateFromStores(closure_1_2[20]).withTiming(1, obj1)), -1);
+      obj[0] = obj3.withRepeat(obj4.withSequence(withTimingResult, withTimingResult1, stateFromStores(dependencyMap[20]).withTiming(1, obj1)), -1);
       const items = [obj];
       obj[0] = items;
       tmp7 = obj;
-      const obj8 = stateFromStores(closure_1_2[20]);
+      const obj8 = stateFromStores(dependencyMap[20]);
     }
     return tmp7;
   };

@@ -73,15 +73,15 @@ const dimensionStore = new DimensionStore(dispatcherDefault, {
     if (null == dependencyMap2[guildId]) {
       const obj = { guildId: null, scrollTop: null, scrollTo: null };
       obj[0] = guildId;
-      tmp[guildId] = obj;
+      dependencyMap2[guildId] = obj;
     }
     if (undefined !== scrollTop) {
-      tmp[guildId].scrollTop = scrollTop;
+      dependencyMap2[guildId].scrollTop = scrollTop;
     }
     let flag = false;
     if (undefined !== scrollTo) {
-      flag = tmp[guildId].scrollTo !== scrollTo;
-      tmp[guildId].scrollTo = scrollTo;
+      flag = dependencyMap2[guildId].scrollTo !== scrollTo;
+      dependencyMap2[guildId].scrollTo = scrollTo;
     }
     return null != scrollTo || flag;
   },
@@ -99,6 +99,6 @@ const dimensionStore = new DimensionStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("stores/DimensionStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/DimensionStore.tsx");
 
 export default dimensionStore;

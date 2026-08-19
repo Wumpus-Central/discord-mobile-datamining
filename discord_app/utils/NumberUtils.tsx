@@ -1,11 +1,11 @@
 // === Module 1898: shortenAndLocalizeNumber ===
 
 // Module 1898 (shortenAndLocalizeNumber)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
 let c2 = 1000000;
-let result = set.fileFinishedImporting("utils/NumberUtils.tsx");
+let result = obj132.fileFinishedImporting("utils/NumberUtils.tsx");
 
 export const shortenAndLocalizeNumber = function shortenAndLocalizeNumber(count) {
   if (count < c2) {

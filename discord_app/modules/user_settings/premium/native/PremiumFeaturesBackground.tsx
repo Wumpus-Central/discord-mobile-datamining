@@ -2,20 +2,20 @@
 
 // Module 8400 (PremiumFeaturesBackground)
 import noopAll from "noop" /* 19 */;
+import nDefault from "n" /* 689 */;
 import ThemesDefault from "Themes" /* 712 */;
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
 import { Gradients } from "items" /* 7403 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
-createCacheKey = { cardContainer: null };
-createCacheKey = { display: "flex", borderRadius: ThemesDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
+const createCacheKey = { display: "flex", borderRadius: ThemesDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
 
 export default function PremiumFeaturesBackground(opacity) {
   let num = opacity.opacity;
@@ -31,9 +31,9 @@ export default function PremiumFeaturesBackground(opacity) {
   }
   let mapped = PREMIUM_TIER_0;
   if (num < 1) {
-    mapped = PREMIUM_TIER_0.map((arg0) => {
-      const obj = closure_1_1(closure_1_2[6])(arg0);
-      return closure_1_1(closure_1_2[6])(arg0).alpha(num).hex();
+    mapped = PREMIUM_TIER_0.map((item, index) => {
+      const obj = nDefault(item);
+      return nDefault(item).alpha(num).hex();
     });
   }
   let obj = { style: items, colors: mapped, start: null, end: null };

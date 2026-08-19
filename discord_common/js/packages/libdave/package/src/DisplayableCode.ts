@@ -1,9 +1,9 @@
 // === Module 9695: generateDisplayableCode ===
 
 // Module 9695 (generateDisplayableCode)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");
 
 export const generateDisplayableCode = function generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize) {
   if (toByteArrayResult.byteLength < desiredLength) {
@@ -28,14 +28,10 @@ export const generateDisplayableCode = function generateDisplayableCode(toByteAr
       while (true) {
         let _BigInt = BigInt;
         let BigIntResult = BigInt(0);
-        let tmp2 = num;
-        let tmp3 = str2;
         let tmp4 = BigIntResult;
         let diff = chunkSize;
         if (chunkSize > 0) {
           let tmp6 = toByteArrayResult[num + (chunkSize - diff)];
-          let tmp7 = diff;
-          let tmp8 = BigIntResult;
           while (undefined !== tmp6) {
             let _BigInt2 = BigInt;
             let tmp9 = BigIntResult << 8n;
@@ -45,11 +41,7 @@ export const generateDisplayableCode = function generateDisplayableCode(toByteAr
             continue;
           }
           let _Error = Error;
-          let tmp10 = new.target;
-          let str4 = "Out of bounds access from data array";
-          let tmp11 = new.target;
           let error3 = new Error("Out of bounds access from data array");
-          let tmp13 = error3;
           throw error3;
         }
         let str = tmp4 % tmp32;

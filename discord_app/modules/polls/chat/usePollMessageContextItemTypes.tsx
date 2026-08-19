@@ -2,12 +2,12 @@
 
 // Module 10853 (usePollMessageContextItemTypes)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 
-require = arg1;
+require = fn;
 let obj = { END_EARLY: 0, [0]: "END_EARLY" };
 let closure_4 = [];
-const result = require("set").fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
+const result = require("obj132").fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
 
 export default function usePollMessageContextItemTypes(poll) {
   obj = initialize;

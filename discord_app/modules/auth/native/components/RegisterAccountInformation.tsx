@@ -3,15 +3,19 @@
 // Module 15234 (RegisterAccountInformation)
 import ThemesDefault from "Themes" /* 712 */;
 import _modDef4115 from "module_4115" /* 4115 */;
+import _modDef6551 from "module_6551" /* 6551 */;
+import LabelDefault from "Label" /* 8579 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
+import AuthFormViewDefault from "AuthFormView" /* 8609 */;
 import useInitialRegistrationStepDefault from "useInitialRegistrationStep" /* 15227 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import useAuthFlowBackHandlerDefault from "useAuthFlowBackHandler" /* 15228 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "hasConsented" /* 5258 */;
-import closure_9 from "updateInvite" /* 4359 */;
-import closure_10 from "getDisplayedInviteCode" /* 8923 */;
+import hasConsented from "hasConsented" /* 5258 */;
+import updateInvite from "updateInvite" /* 4359 */;
+import getDisplayedInviteCode from "getDisplayedInviteCode" /* 8923 */;
 import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
 import { AuthStates } from "ME" /* 676 */;
@@ -19,14 +23,13 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import { LinearTransition, Easing } from "module_4115" /* 4115 */;
 
-const require = arg1;
+const require = fn;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ setRegistrationErrors: unpackModuleId, updateRegistrationOptions: closure_12, useRegistrationUIStore: map1 } = useRegistrationUIStore);
 ({ RegisterTransitionSteps: closure_14, RegistrationTransitionActionTypes: closure_15 } = RegistrationTransitionActionTypes);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, password: null, button: null, errors: null, page: null };
-  obj = { marginTop: ThemesDefault.space.PX_24 };
+  const obj = { marginTop: ThemesDefault.space.PX_24 };
   obj[0] = obj;
   obj[1] = { marginTop: 24 };
   let num = 50;
@@ -41,7 +44,7 @@ let closure_19 = createCacheKey.createStyles((arg0) => {
 createCacheKey = { layout: null };
 createCacheKey[0] = require("module_300");
 const easingResult = LinearTransition.easing(Easing.inOut(require("module_4115").Easing.quad));
-let result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterAccountInformation.tsx");
+let result = require("obj132").fileFinishedImporting("modules/auth/native/components/RegisterAccountInformation.tsx");
 
 export default function RegisterAccountInformation() {
   function _handleSubmit() {
@@ -157,7 +160,6 @@ export default function RegisterAccountInformation() {
   }
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = callback4(tmp3);
-  let obj = React;
   context = React.useContext(context(15210).TrackRegistrationContext);
   let tmp8 = callback2((submitting) => submitting.submitting);
   const tmp7 = callback2((registrationOptions) => registrationOptions.registrationOptions);
@@ -175,14 +177,14 @@ export default function RegisterAccountInformation() {
     }
     return invite;
   });
-  const ref = React.useRef(null);
+  const tmp9 = callback(React.useState(false), 2);
   let obj3 = context(15235);
   const passwordRegistrationStep = obj3.usePasswordRegistrationStep();
   ({ password, validatePassword: closure_4, setPassword, passwordScore, preventSubmitPassword } = passwordRegistrationStep);
   let obj4 = context(15237);
   const usernameRegistrationStep = obj4.useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   ({ transitionToNextStepOrSubmit: closure_5, username, preventSubmitUsername, validateUsername: closure_6 } = usernameRegistrationStep);
-  obj = {};
+  let obj = {};
   ({ usernameStatus, setUsername } = usernameRegistrationStep);
   const merged = Object.assign(tmp7);
   obj.username = username;
@@ -216,8 +218,8 @@ export default function RegisterAccountInformation() {
     }
     return applyArgumentsResult;
   }
-  let tmpResult = tmp(15228);
-  const tmp9 = callback(React.useState(false), 2);
+  let tmpResult = useAuthFlowBackHandlerDefault;
+  const ref = React.useRef(null);
   tmpResult(context(15211).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
   useInitialRegistrationStepDefault(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
@@ -231,7 +233,7 @@ export default function RegisterAccountInformation() {
     }
   }, []);
   obj1 = { headerText: null, children: null };
-  tmpResult = tmp(8609);
+  tmpResult = AuthFormViewDefault;
   const intl2 = tmp5(1236).intl;
   obj1[0] = intl2.string(context(1236).t.jec90v);
   obj2 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
@@ -265,21 +267,21 @@ export default function RegisterAccountInformation() {
       const obj8 = { style: null, children: null };
       obj8[0] = tmp4.errors;
       obj8[1] = tmp11.message;
-      tmp27Result = tmp27(tmp(8579), obj8);
+      tmp27Result = callback3(LabelDefault, obj8);
     }
   }
   items5[1] = tmp27Result;
   obj6.children = items5;
-  items4[2] = closure_18(_modDef4115.View, obj6);
+  items4[2] = callback(_modDef4115.View, obj6);
   obj2[2] = items4;
-  obj1[1] = closure_18(obj, obj2);
-  tmp27Result = tmp27(tmpResult, obj1);
+  obj1[1] = callback(obj, obj2);
+  tmp27Result = callback3(tmpResult, obj1);
   let tmp27Result1 = tmp27Result;
   if (!tmp3) {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp4.page;
     obj9[1] = tmp27Result;
-    tmp27Result1 = tmp27(tmp(6551), obj9);
+    tmp27Result1 = callback3(_modDef6551, obj9);
   }
   return tmp27Result1;
 };

@@ -1,8 +1,9 @@
 // === Module 591: initialize ===
 
 // Module 591 (initialize)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import isTracingDefault from "isTracing" /* 10 */;
+import _modDef38 from "module_38" /* 38 */;
 import loggerDefault from "logger" /* 593 */;
 
 let closure_4 = [];
@@ -14,7 +15,7 @@ const promise = new Promise((arg0) => {
     c3 = null;
   };
 });
-let result = set.fileFinishedImporting("../discord_common/js/packages/flux/Store.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/packages/flux/Store.tsx");
 class Store {
   constructor(arg0, arg1, arg2) {
     obj = require;
@@ -36,11 +37,8 @@ class Store {
         hasAnyResult = obj._syncWiths.length > 0;
       }
       if (hasAnyResult) {
-        closure_1_1(closure_1_2[1]).markChanged(obj);
-        const obj2 = closure_1_1(closure_1_2[1]);
-        const tmp2 = closure_1_1;
-        const tmp3 = closure_1_2;
-        let isPaused = closure_1_1(closure_1_2[1]).getIsPaused();
+        loggerDefault.markChanged(obj);
+        let isPaused = loggerDefault.getIsPaused();
         if (isPaused) {
           isPaused = null != obj._mustEmitChanges;
         }
@@ -48,11 +46,11 @@ class Store {
           isPaused = obj._mustEmitChanges(closure_0);
         }
         if (isPaused) {
-          tmp2(tmp3[1]).resume(false);
-          const tmp2Result = tmp2(tmp3[1]);
+          loggerDefault.resume(false);
+          const tmp2Result = loggerDefault;
         }
-        const obj3 = closure_1_1(closure_1_2[1]);
       }
+      const _changeCallbacks = obj._changeCallbacks;
     };
     obj.addChangeListener = obj._changeCallbacks.add;
     obj.removeChangeListener = obj._changeCallbacks.remove;
@@ -77,7 +75,7 @@ class Store {
 const prototype = Store.prototype;
 Store["initialize"] = function initialize() {
   c5 = true;
-  const item = arr.forEach((initializeIfNeeded) => initializeIfNeeded.initializeIfNeeded());
+  const item = arr.forEach((item, index) => item.initializeIfNeeded());
   if (null != c3) {
     if (typeof c3 !== "function") {
       HermesBuiltin.throwTypeError();
@@ -94,8 +92,8 @@ Store["getAll"] = function getAll() {
   return closure_4;
 };
 Store["removeAllConditionalListeners"] = function removeAllConditionalListeners() {
-  const item = arr.forEach((_changeCallbacks) => {
-    _changeCallbacks._changeCallbacks.removeAllConditional();
+  const item = arr.forEach((item, index) => {
+    item._changeCallbacks.removeAllConditional();
   });
 };
 prototype["registerActionHandlers"] = function registerActionHandlers(arg0, arg1) {
@@ -120,7 +118,6 @@ prototype["initializeIfNeeded"] = function initializeIfNeeded() {
     const diff = Date.now() - timestamp;
     if (diff > 5) {
       isTracingDefault.mark("\u{1F9A5}", `${self.getName()}.initialize()`, diff);
-      const obj = isTracingDefault;
     }
   }
 };
@@ -143,12 +140,12 @@ prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreCha
         }
         const tmpResult = wrapper(_null[1]);
       }
+      obj = wrapper(_null[1]);
     };
     closure_0 = wrapper;
     if (num == null) {
       num = 0;
     }
-    closure_0 = num;
     c2 = null;
     closure_0 = 0 === num ? (() => {
       clearImmediate(immediate);
@@ -167,10 +164,10 @@ prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreCha
         }, closure_0);
       }
     });
-    const item = items.forEach((addChangeListener) => addChangeListener.addChangeListener(closure_0));
+    const item = items.forEach((item, index) => item.addChangeListener(closure_0));
   } else {
-    const item1 = items.forEach((_syncWiths) => {
-      _syncWiths = _syncWiths._syncWiths;
+    const item1 = items.forEach((item, index) => {
+      const _syncWiths = item._syncWiths;
       _syncWiths.push({ func: wrapper, store: self });
     });
   }
@@ -178,18 +175,18 @@ prototype["syncWith"] = function syncWith(items, handleUserSettingsProtoStoreCha
 prototype["waitFor"] = function waitFor() {
   const self = this;
   const items = [...arguments];
-  const mapped = items.map((_dispatcher) => {
+  const mapped = items.map((item, index) => {
     let dispatchToken = null;
-    closure_1_1(closure_1_2[3])(null != _dispatcher, "Store.waitFor(...) called with null Store at index " + arg1 + " for store " + self.getName());
-    if (null != _dispatcher._dispatcher) {
-      closure_1_1(closure_1_2[3])(_dispatcher._dispatcher === self._dispatcher, "Stores belong to two separate dispatchers.");
-      dispatchToken = _dispatcher.getDispatchToken();
+    _modDef38(null != item, "Store.waitFor(...) called with null Store at index " + index + " for store " + self.getName());
+    if (null != item._dispatcher) {
+      _modDef38(item._dispatcher === self._dispatcher, "Stores belong to two separate dispatchers.");
+      dispatchToken = item.getDispatchToken();
     }
     return dispatchToken;
   });
   const _dispatcher = this._dispatcher;
   let dispatchToken = this.getDispatchToken();
-  _dispatcher.addDependencies(dispatchToken, mapped.filter((arg0) => null != arg0));
+  _dispatcher.addDependencies(dispatchToken, mapped.filter((item, index) => null != item));
 };
 prototype["emitChange"] = function emitChange() {
   loggerDefault.markChanged(this);

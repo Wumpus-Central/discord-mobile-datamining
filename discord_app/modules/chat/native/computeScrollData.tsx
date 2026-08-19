@@ -1,21 +1,21 @@
 // === Module 10472: computeScrollData ===
 
 // Module 10472 (computeScrollData)
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import Changeset from "Changeset" /* 8158 */;
 
-const require = arg1;
+const require = fn;
 ({ RowType: c3, SeparatorType: c4 } = Changeset);
-const result = require("set").fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
+const result = require("obj132").fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
 
 export default function computeScrollData(shouldInitialScroll) {
   ({ rows, scrollToMessageId, jumpTargetId, animated, scrollPosition, focusTargetId, jumpType } = shouldInitialScroll);
   if (shouldInitialScroll.shouldInitialScroll) {
     if (null == jumpTargetId) {
-      const findIndexResult = rows.findIndex((type) => {
-        let tmp = type.type === constants.SEPARATOR;
+      const findIndexResult = rows.findIndex((item, index) => {
+        let tmp = item.type === constants.SEPARATOR;
         if (tmp) {
-          tmp = type.id === constants2.UNREAD;
+          tmp = item.id === constants2.UNREAD;
         }
         return tmp;
       });
@@ -39,10 +39,10 @@ export default function computeScrollData(shouldInitialScroll) {
   let tmp4;
   if (null != scrollToMessageId) {
     focusTargetId = scrollToMessageId;
-    const findIndexResult1 = rows.findIndex((message) => {
-      let tmp = null != message.message;
+    const findIndexResult1 = rows.findIndex((item, index) => {
+      let tmp = null != item.message;
       if (tmp) {
-        tmp = message.message.id === focusTargetId;
+        tmp = item.message.id === focusTargetId;
       }
       return tmp;
     });
@@ -71,10 +71,10 @@ export default function computeScrollData(shouldInitialScroll) {
   if (null == tmp4) {
     let tmp11;
     if (null != focusTargetId) {
-      const findIndexResult2 = rows.findIndex((message) => {
-        let tmp = null != message.message;
+      const findIndexResult2 = rows.findIndex((item, index) => {
+        let tmp = null != item.message;
         if (tmp) {
-          tmp = message.message.id === focusTargetId;
+          tmp = item.message.id === focusTargetId;
         }
         return tmp;
       });
@@ -95,10 +95,10 @@ export default function computeScrollData(shouldInitialScroll) {
 };
 export const findMessageRowIndex = function findMessageRowIndex(previousRows, ChatTTITracker) {
   closure_0 = ChatTTITracker;
-  const findIndexResult = previousRows.findIndex((message) => {
-    let tmp = null != message.message;
+  const findIndexResult = previousRows.findIndex((item, index) => {
+    let tmp = null != item.message;
     if (tmp) {
-      tmp = message.message.id === focusTargetId;
+      tmp = item.message.id === focusTargetId;
     }
     return tmp;
   });

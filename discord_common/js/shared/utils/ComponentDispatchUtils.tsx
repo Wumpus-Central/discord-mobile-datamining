@@ -1,10 +1,10 @@
 // === Module 1233: safeDispatch ===
 
 // Module 1233 (safeDispatch)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import EventEmitter from "EventEmitter" /* 652 */;
 
-let result = set.fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
 class ComponentDispatcher {
   constructor() {
     obj = global;
@@ -113,8 +113,8 @@ prototype["_checkSavedDispatches"] = function _checkSavedDispatches(arg0) {
   const self = this;
   closure_0 = arg0;
   if (null != this._savedDispatches[arg0]) {
-    const item = arr.forEach((arg0) => {
-      self.dispatch(closure_0, arg0);
+    const item = arr.forEach((item, index) => {
+      self.dispatch(closure_0, item);
     });
     tmp._savedDispatches[arg0] = undefined;
   }

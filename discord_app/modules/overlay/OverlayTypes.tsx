@@ -1,9 +1,9 @@
 // === Module 4522: DevToolsFocusedPidsTrackMode ===
 
 // Module 4522 (DevToolsFocusedPidsTrackMode)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");
 
 export const DevToolsFocusedPidsTrackMode = { TRACK_FOCUS: "track_focus", UNTRACK_FOCUS: "untrack_focus" };
 export const OverlayForcedRenderMode = { UNSET: "UNSET", IN_PROCESS_V2: "IN_PROCESS_V2", OUT_OF_PROCESS_V3: "OUT_OF_PROCESS_V3", OUT_OF_PROCESS_V3_LIMITED_INTERACTION: "OUT_OF_PROCESS_V3_LIMITED_INTERACTION" };

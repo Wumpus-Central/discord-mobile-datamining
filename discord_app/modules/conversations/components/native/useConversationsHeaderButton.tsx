@@ -1,14 +1,14 @@
 // === Module 12681: useConversationsHeaderButton ===
 
 // Module 12681 (useConversationsHeaderButton)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "removePendingListFetch" /* 5014 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
+import removePendingListFetch from "removePendingListFetch" /* 5014 */;
 import CONVERSATION_COLORS from "CONVERSATION_COLORS" /* 5016 */;
 
-const require = arg1;
+const require = fn;
 ({ CONVERSATION_HAS_MORE_EXPIRATION_MS: c5, MOBILE_FETCH_LIMIT: closure_6, MOBILE_PREVIEW_MESSAGE_COUNT: error } = CONVERSATION_COLORS);
-let result = require("set").fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");
+let result = require("obj132").fileFinishedImporting("modules/conversations/components/native/useConversationsHeaderButton.tsx");
 
 export const useConversationsHeaderButton = function useConversationsHeaderButton(channel) {
   let _require = channel;
@@ -16,11 +16,9 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
   if (isTopicalNavEnabled) {
     isTopicalNavEnabled = channel.type === tmp(tmp2[5]).ChannelTypes.GUILD_TEXT;
   }
-  fetchPage = isTopicalNavEnabled;
   let tmpResult = tmp(tmp2[6]);
   const items = [channel.id];
   const conversationBackoffRef = tmpResult.useConversationBackoffRef(items);
-  _require = undefined;
   fetchPage = function fetchPage() {
     const self = this;
     const apply = closure_0.apply;
@@ -187,11 +185,11 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
       obj[2] = function onPress() {
         const current = ref.current;
         current.cancel();
-        const ConversationsAnalytics = closure_1_0(closure_1_1[10]).ConversationsAnalytics;
+        const ConversationsAnalytics = closure_1_0(fetchPage[10]).ConversationsAnalytics;
         let obj = { channelId: user.id, conversationIds: [], isFocusMode: false };
         const result = ConversationsAnalytics.trackTopicsUnitImpression(obj);
         obj = { channelId: user.id, guildId: user.guild_id };
-        const result1 = closure_1_0(closure_1_1[11]).openConversationNavigator(obj);
+        const result1 = closure_1_0(fetchPage[11]).openConversationNavigator(obj);
       };
       const intl = lib(fetchPage[12]).intl;
       obj[3] = intl.string(lib(fetchPage[12]).t.u54FxB);

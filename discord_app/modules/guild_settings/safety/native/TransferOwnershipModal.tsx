@@ -2,46 +2,44 @@
 
 // Module 11025 (closeModal)
 import _modDef11024 from "module_11024" /* 11024 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 import TransferOwnershipModalScenes from "TransferOwnershipModalScenes" /* 11026 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function closeModal() {
   _modDef11024.close();
 }
 ({ TransferOwnershipModalScenes: c5, TransferOwnershipVerificationTypes: closure_6 } = TransferOwnershipModalScenes);
-let result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModal.tsx");
 
 export default function TransferOwnershipModal(guild) {
   guild = guild.guild;
   const toUser = guild.toUser;
   const items = [guild, toUser];
   const memo = React.useMemo(() => {
-    let obj = { impression_group: guild(closure_1_2[5]).ImpressionGroups.GUILD_TRANSFER_OWNERSHIP_FLOW };
-    obj = {};
-    obj = { headerTitle: null, headerLeft: null, impressionName: null, impressionProperties: null, render: null };
-    let intl = guild(closure_1_2[6]).intl;
-    obj[0] = intl.string(guild(closure_1_2[6]).t.Z5s7PM);
-    obj[1] = guild(closure_1_2[7]).getHeaderCloseButton(closure_1_8);
-    obj[2] = guild(closure_1_2[5]).ImpressionNames.GUILD_TRANSFER_OWNERSHIP;
+    { impression_group: guild(dependencyMap[5]).ImpressionGroups.GUILD_TRANSFER_OWNERSHIP_FLOW };
+    let obj = { headerTitle: null, headerLeft: null, impressionName: null, impressionProperties: null, render: null };
+    let intl = guild(dependencyMap[6]).intl;
+    obj[0] = intl.string(guild(dependencyMap[6]).t.Z5s7PM);
+    obj[1] = guild(dependencyMap[7]).getHeaderCloseButton(closeModal);
+    obj[2] = guild(dependencyMap[5]).ImpressionNames.GUILD_TRANSFER_OWNERSHIP;
     obj[3] = obj;
     obj[4] = function render() {
       return closure_1_7(callback2(closure_1_2[8]), { guild: closure_0, toUser: callback2 });
     };
     obj[closure_1_5.TRANFSER_OWNERSHIP] = obj;
     obj1 = { headerTitle: null, headerLeft: null, impressionName: null, impressionProperties: null, render: null };
-    let intl2 = guild(closure_1_2[6]).intl;
-    obj1[0] = intl2.string(guild(closure_1_2[6]).t.Z5s7PM);
-    const obj4 = guild(closure_1_2[7]);
-    obj1[1] = guild(closure_1_2[7]).getHeaderCloseButton(closure_1_8);
-    obj1[2] = guild(closure_1_2[5]).ImpressionNames.GUILD_TRANSFER_OWNERSHIP_CONFIRM_EMAIL_CODE;
+    let intl2 = guild(dependencyMap[6]).intl;
+    obj1[0] = intl2.string(guild(dependencyMap[6]).t.Z5s7PM);
+    const obj4 = guild(dependencyMap[7]);
+    obj1[1] = guild(dependencyMap[7]).getHeaderCloseButton(closeModal);
+    obj1[2] = guild(dependencyMap[5]).ImpressionNames.GUILD_TRANSFER_OWNERSHIP_CONFIRM_EMAIL_CODE;
     obj1[3] = obj;
     obj1[4] = function render() {
       let obj = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
-      let callback;
-      callback = closure_1_3((arg0) => {
+      const callback = closure_1_3((arg0) => {
         closure_0 = arg0;
         c2 = 0;
         c1 = 0;

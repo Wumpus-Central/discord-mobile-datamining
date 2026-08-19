@@ -6,13 +6,13 @@ import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038
 import Text from "Text" /* 4734 */;
 import preloadDefault from "preload" /* 5449 */;
 import styles from "styles" /* 9402 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function Emoji(surrogate) {
   surrogate = surrogate.surrogate;
   let obj = {};
@@ -28,26 +28,24 @@ function Emoji(surrogate) {
     obj1 = { uri: null };
     obj1[0] = uRL;
     obj[2] = obj1;
-    let tmp7Result = tmp7(preloadDefault, obj);
+    let tmp7Result = callback(preloadDefault, obj);
   } else {
     obj2 = { style: null, variant: "text-md/medium", children: null };
     obj2[0] = obj.emojiSurrogate;
     obj2[2] = surrogate;
-    tmp7Result = tmp7(Text.Text, obj2);
+    tmp7Result = callback(Text.Text, obj2);
   }
   obj[1] = tmp7Result;
-  return closure_6(View, obj);
+  return callback(View, obj);
 }
 ({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { emojiSurrogate: { lineHeight: 48, fontSize: 40, margin: 8 }, ctaContainer: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_4 };
+const createCacheKey = { paddingTop: ThemesDefault.space.PX_4 };
 createCacheKey[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/emoji/StandardEmojiContent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/emoji/StandardEmojiContent.tsx");
 
 export default function StandardEmojiContent(nonce) {
   const emojiNode = nonce.emojiNode;
-  let memo;
   let isFavoriteEmoji;
   let obj = {};
   const merged = Object.assign(callback3());
@@ -57,10 +55,9 @@ export default function StandardEmojiContent(nonce) {
   let obj2 = emojiNode(isFavoriteEmoji[10]);
   const trackOpenPopout = obj2.useTrackOpenPopout({ currentGuildId: guildId, nonce: nonce.nonce });
   const items = [emojiNode.surrogate];
-  memo = React.useMemo(() => memo(isFavoriteEmoji[11]).convertSurrogateToBase(emojiNode.surrogate), items);
+  const memo = React.useMemo(() => memo(isFavoriteEmoji[11]).convertSurrogateToBase(emojiNode.surrogate), items);
   let obj3 = emojiNode(isFavoriteEmoji[12]);
   isFavoriteEmoji = obj3.useIsFavoriteEmoji(guildId, memo);
-  obj = { style: obj.emojiContainer, children: null };
   obj = { surrogate: emojiNode.surrogate };
   const items1 = [callback(Emoji, obj), ];
   obj1 = { style: obj.emojiDescriptionWrapper, children: null };

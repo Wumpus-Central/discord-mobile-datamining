@@ -1,15 +1,15 @@
 // === Module 9387: noop ===
 
 // Module 9387 (noop)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { RefreshControl } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function noop() {
 
 }
-const result = require("set").fileFinishedImporting("modules/keyboard/native/useModalDismissGuardRefreshControl.tsx");
+const result = require("obj132").fileFinishedImporting("modules/keyboard/native/useModalDismissGuardRefreshControl.tsx");
 
 export const useModalDismissGuardRefreshControl = function useModalDismissGuardRefreshControl() {
   isPortalKeyboardInModal = isPortalKeyboardInModal(9388).useIsPortalKeyboardInModal();
@@ -17,11 +17,11 @@ export const useModalDismissGuardRefreshControl = function useModalDismissGuardR
   return React.useMemo(() => {
     let tmp;
     if (isPortalKeyboardInModal) {
-      let obj = isPortalKeyboardInModal(closure_1_1[4]);
+      let obj = isPortalKeyboardInModal(dependencyMap[4]);
       if (obj.isIOS()) {
         obj = { refreshing: false, onRefresh: null, tintColor: "transparent" };
-        obj[1] = closure_1_5;
-        tmp = closure_1_4(closure_1_3, obj);
+        obj[1] = noop;
+        tmp = <RefreshControl refreshing={false} onRefresh={null} tintColor="transparent" />;
       }
     }
     return tmp;

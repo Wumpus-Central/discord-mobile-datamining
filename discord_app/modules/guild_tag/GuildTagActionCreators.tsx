@@ -1,11 +1,11 @@
 // === Module 13374: _adoptGuildIdentity ===
 
 // Module 13374 (_adoptGuildIdentity)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _adoptGuildIdentity() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -109,7 +109,7 @@ function _adoptGuildIdentity() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_tag/GuildTagActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_tag/GuildTagActionCreators.tsx");
 
 export const adoptGuildIdentity = function adoptGuildIdentity(closure_1_0, arg1) {
   const self = this;

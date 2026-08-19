@@ -1,11 +1,11 @@
 // === Module 8944: getIsScreenLandscape ===
 
 // Module 8944 (getIsScreenLandscape)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "getDimensionsStoreStateForEntry" /* 1495 */;
+import noop from "noop" /* 19 */;
+import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry" /* 1495 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
 
 export const getIsScreenLandscape = function getIsScreenLandscape() {
   let str = arg0;

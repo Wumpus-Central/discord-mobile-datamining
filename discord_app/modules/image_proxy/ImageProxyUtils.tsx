@@ -1,9 +1,9 @@
 // === Module 4508: isImageProxyURL ===
 
 // Module 4508 (isImageProxyURL)
+import obj132 from "obj132" /* 2 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
-import set from "set" /* 2 */;
 
 let parts;
 if (window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS != null) {
@@ -20,16 +20,16 @@ function isImageProxyURL(hostname) {
   }
   return startsWithResult;
 }
-const mapped = parts.map((str) => str.substring(2));
-const mapped1 = mapped.map(function getHostWithoutPort(arg0) {
+const mapped = parts.map((item, index) => item.substring(2));
+const mapped1 = mapped.map(function getHostWithoutPort(item, index) {
   let first;
-  if (arg0 != null) {
-    first = arg0.split(":")[0];
+  if (item != null) {
+    first = item.split(":")[0];
   }
   return first;
 });
-let set = new Set(mapped1.filter(Boolean));
-let result = set.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx");
+const set = new Set(mapped1.filter(Boolean));
+let result = obj132.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx");
 
 export { isImageProxyURL };
 export const getSizedImageProxyURL = function getSizedImageProxyURL(value, arg1) {
@@ -50,7 +50,6 @@ export const getSizedImageProxyURL = function getSizedImageProxyURL(value, arg1)
         const result = searchParams.set("width", StringResult);
         const searchParams2 = str.searchParams;
         const result1 = searchParams2.set("height", StringResult);
-        const obj3 = handleImageLoad;
       }
       if (null != keepAspectRatio) {
         const searchParams3 = str.searchParams;

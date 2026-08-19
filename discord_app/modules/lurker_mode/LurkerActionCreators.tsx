@@ -1,12 +1,12 @@
 // === Module 7284: stopLurkingAll ===
 
 // Module 7284 (stopLurkingAll)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "initialize" /* 4022 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import initialize from "initialize" /* 4022 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function stopLurkingAll(items) {
   const self = this;
   const apply = _stopLurkingAll.apply;
@@ -50,17 +50,17 @@ function _stopLurkingAll() {
               obj[0] = arg1;
               return obj;
             } else {
-              const found = closure_1_5.lurkingGuildIds().filter((arg0) => !closure_0.includes(arg0));
+              const found = closure_1_5.lurkingGuildIds().filter((item, index) => !closure_0.includes(item));
               if (0 !== found.length) {
                 const _Map = Map;
-                const map = new Map(found.map((closure_0) => {
-                  const items = [closure_0, lurkingSourceForGuild.getLurkingSourceForGuild(closure_0)];
+                const map = new Map(found.map((item, index) => {
+                  const items = [item, lurkingSourceForGuild.getLurkingSourceForGuild(item)];
                   return items;
                 }));
                 v0 = map;
                 obj1 = v0(table[4]);
                 obj1 = { type: "GUILD_STOP_LURKING", ignoredGuildIds: null };
-                obj1[1] = tmp19;
+                obj1[1] = closure_0;
                 obj1.dispatch(obj1);
                 table = 1;
                 v0 = 1;
@@ -87,7 +87,6 @@ function _stopLurkingAll() {
                 return obj2;
               }
               const lurkingGuildIdsResult = closure_1_5.lurkingGuildIds();
-              tmp19 = closure_0;
             }
           } else if (arg0 === 1) {
             v0 = 3;
@@ -150,14 +149,14 @@ function _stopLurking() {
               return obj;
             } else {
               let table = tmp4;
-              closure_1 = 0;
+              let length = 0;
               let callback;
               let tmp19 = callback;
               if (callback === undefined) {
                 tmp19 = null;
               }
               callback = tmp19;
-              closure_1 = undefined;
+              length = undefined;
               table = undefined;
               c3 = 1;
               guildId = 1;
@@ -174,8 +173,8 @@ function _stopLurking() {
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                closure_1 = closure_5.lurkingGuildIds();
-                if (0 !== closure_1.length) {
+                length = closure_5.lurkingGuildIds();
+                if (0 !== length.length) {
                   const items = [callback, guildId.getGuildId()];
                   table = items.filter(callback(table[6]).isNotNullish);
                   c3 = 2;
@@ -215,7 +214,7 @@ function _stopLurking() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
 
 export { stopLurkingAll };
 export const stopLurking = function stopLurking(guildId) {

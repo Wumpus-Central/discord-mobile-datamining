@@ -1,7 +1,7 @@
 // === Module 11524: SEARCH_TEXT_INPUT_DEBOUNCE_TIME ===
 
 // Module 11524 (SEARCH_TEXT_INPUT_DEBOUNCE_TIME)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import LINKING_WHITELIST from "LINKING_WHITELIST" /* 4091 */;
 import FacebookNeutralIcon from "FacebookNeutralIcon" /* 8311 */;
 import InstagramNeutralIcon from "InstagramNeutralIcon" /* 8313 */;
@@ -16,10 +16,8 @@ items[1] = obj;
 obj = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.instagram.regex, Icon: InstagramNeutralIcon.InstagramNeutralIcon };
 items[2] = obj;
 items[3] = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.facebook.regex, Icon: FacebookNeutralIcon.FacebookNeutralIcon };
-const obj1 = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.facebook.regex, Icon: FacebookNeutralIcon.FacebookNeutralIcon };
 items[4] = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.youtube.regex, Icon: YoutubeNeutralIcon.YoutubeNeutralIcon };
-const obj2 = { REGEX: LINKING_WHITELIST.LINKING_WHITELIST.youtube.regex, Icon: YoutubeNeutralIcon.YoutubeNeutralIcon };
-const result = set.fileFinishedImporting("modules/search/native/SearchPlatformConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/search/native/SearchPlatformConstants.tsx");
 
 export const SEARCH_TEXT_INPUT_DEBOUNCE_TIME = 500;
 export const EMPTY_MEDIA_RESULTS = [];

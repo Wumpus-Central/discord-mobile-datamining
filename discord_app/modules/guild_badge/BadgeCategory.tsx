@@ -1,11 +1,11 @@
 // === Module 9154: BadgeCategory ===
 
 // Module 9154 (BadgeCategory)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import GuildVisibility from "GuildVisibility" /* 9155 */;
 
 const obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };
-const result = set.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
 
 export const BadgeCategory = obj;
 export const getBadgeCategory = function getBadgeCategory(guildTraits) {
@@ -27,7 +27,7 @@ export const getBadgeCategory = function getBadgeCategory(guildTraits) {
           DISCOVERABLE = obj.DISCOVERABLE;
         }
       }
-      DISCOVERABLE = guildTraits.community ? tmp3.COMMUNITY : tmp3.NONE;
+      DISCOVERABLE = guildTraits.community ? obj.COMMUNITY : obj.NONE;
     }
   }
   return DISCOVERABLE;

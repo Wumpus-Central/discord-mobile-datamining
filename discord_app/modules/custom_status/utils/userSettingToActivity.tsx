@@ -1,16 +1,16 @@
 // === Module 7256: _activityFromSetting ===
 
 // Module 7256 (_activityFromSetting)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
 import ME from "ME" /* 676 */;
 import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
+import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
 
-function _activityFromSetting(emojiName) {
-  if (null != arg1) {
+function _activityFromSetting(emojiName, stateFromStores) {
+  if (null != stateFromStores) {
     let obj = { id: null, name: null, animated: null };
-    ({ id: obj2[0], name: obj2[1], animated: obj2[2] } = arg1);
+    ({ id: obj2[0], name: obj2[1], animated: obj2[2] } = stateFromStores);
     let tmp = obj;
   } else {
     tmp = null;
@@ -26,7 +26,6 @@ function _activityFromSetting(emojiName) {
           tmp2 = obj;
         }
         tmp = tmp2;
-        const obj6 = parseRawEmojiObjectDefault;
       }
     }
   }
@@ -55,7 +54,7 @@ function _activityFromSetting(emojiName) {
 }
 const useMemo = noop.useMemo;
 const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/custom_status/utils/userSettingToActivity.tsx");
+const result = obj132.fileFinishedImporting("modules/custom_status/utils/userSettingToActivity.tsx");
 
 export const getActivityFromCustomStatus = function getActivityFromCustomStatus(setting) {
   const emojiId = setting.emojiId;
@@ -81,8 +80,8 @@ export const useCustomStatusActivity = function useCustomStatusActivity() {
     let usableCustomEmojiById = null;
     if (null != emojiId) {
       usableCustomEmojiById = null;
-      if ("0" !== tmp) {
-        usableCustomEmojiById = closure_1_4.getUsableCustomEmojiById(tmp);
+      if ("0" !== emojiId) {
+        usableCustomEmojiById = closure_1_4.getUsableCustomEmojiById(emojiId);
       }
     }
     return usableCustomEmojiById;
@@ -91,7 +90,7 @@ export const useCustomStatusActivity = function useCustomStatusActivity() {
   return useMemo(() => {
     let tmp2 = null;
     if (null != setting) {
-      tmp2 = closure_1_6(tmp, stateFromStores);
+      tmp2 = _activityFromSetting(tmp, stateFromStores);
     }
     return tmp2;
   }, items2);

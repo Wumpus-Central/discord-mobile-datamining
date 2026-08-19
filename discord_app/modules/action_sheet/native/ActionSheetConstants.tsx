@@ -1,9 +1,9 @@
 // === Module 6951: ACTION_SHEET_START_HEIGHT_RATIO ===
 
 // Module 6951 (ACTION_SHEET_START_HEIGHT_RATIO)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/action_sheet/native/ActionSheetConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/action_sheet/native/ActionSheetConstants.tsx");
 
 export const ACTION_SHEET_START_HEIGHT_RATIO = 0.6;
 export const ACTION_SHEET_MAX_DYNAMIC_CONTENT_SIZE_RATIO = 0.85;

@@ -1,10 +1,10 @@
 // === Module 11160: ? ===
 
 // Module 11160
-import set2 from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 11161 */;
 
-let result = set2.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
+let result = obj132.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
 
 export default {
   backspace(arg0) {
@@ -82,7 +82,6 @@ export default {
       const _JSON = JSON;
       const json = JSON.stringify(arg1);
       Commands.updateTextBlocks(arg0, json, arg2);
-      const tmp2 = arg2;
     }
   },
   replaceRange(arg0, keepCursorPosition) {

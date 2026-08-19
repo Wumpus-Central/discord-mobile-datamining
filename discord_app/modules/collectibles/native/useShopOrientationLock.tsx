@@ -1,10 +1,10 @@
 // === Module 14950: useShopOrientationLock ===
 
 // Module 14950 (useShopOrientationLock)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");
 
 export const useShopOrientationLock = function useShopOrientationLock() {
   const effect = React.useEffect(() => {

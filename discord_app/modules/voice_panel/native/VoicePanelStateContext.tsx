@@ -6,7 +6,6 @@ import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
 import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
 import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
 import importAllResult from "noop" /* 19 */;
-import set from "set" /* 2 */;
 
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsModes);
 let obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "M14 14H12V15H14V14Z", showControls: null, showFloatingCTA: "", streamOutputSinkStack: "", windowDimensions: null, wrapperDimensions: "default", useReducedMotion: false, wrapperOffset: false, panelCardStillInPIP: false };
@@ -33,8 +32,8 @@ obj[13] = createFakeSharedValue.createFakeSharedValue(false);
 obj[14] = new getTargetCardSizeDefault("invalid");
 obj[15] = createFakeSharedValue.createFakeSharedValue(VoicePanelModes.PANEL);
 obj[16] = createFakeSharedValue.createFakeSharedValue(require("MIN_PAN_GESTURE_MOVE").MorphablePanelModes.PANEL);
-let set = new Set();
-obj[17] = set;
+const tmp3 = new getTargetCardSizeDefault("invalid");
+obj[17] = new Set();
 obj[18] = createFakeSharedValue.createFakeSharedValue({ top: 0, bottom: 0 });
 obj[19] = require("module_0");
 obj[20] = createFakeSharedValue.createFakeSharedValue(require("EMPTY_SAFE_AREA_INSETS").EMPTY_SAFE_AREA_INSETS);
@@ -71,6 +70,7 @@ obj[32] = createFakeSharedValue.createFakeSharedValue(false);
 obj[33] = createFakeSharedValue.createFakeSharedValue({ gestureActive: false, x: 0, y: 0 });
 obj[34] = createFakeSharedValue.createFakeSharedValue(false);
 const context = importAllResult.createContext(obj);
-const result = set.fileFinishedImporting("modules/voice_panel/native/VoicePanelStateContext.tsx");
+const set = new Set();
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/VoicePanelStateContext.tsx");
 
 export default context;

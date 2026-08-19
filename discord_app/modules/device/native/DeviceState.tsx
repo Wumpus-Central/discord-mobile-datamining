@@ -2,10 +2,10 @@
 
 // Module 7498 (_getDeviceState)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
-const require = arg1;
+const require = fn;
 function _getDeviceState() {
   const self = this;
   const tmp = callback(() => {
@@ -119,7 +119,7 @@ function _getDeviceState() {
 }
 const tmp2 = new timestampDefault("native/DeviceState.tsx");
 let closure_4 = tmp2;
-const result = require("set").fileFinishedImporting("modules/device/native/DeviceState.tsx");
+const result = require("obj132").fileFinishedImporting("modules/device/native/DeviceState.tsx");
 
 export const logger = tmp2;
 export const getDeviceState = function getDeviceState(arg0) {

@@ -1,7 +1,7 @@
 // === Module 10650: prototype ===
 
 // Module 10650 (prototype)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 const prototype = function RevenueError(errorHandlingBehavior) {
   ({ message, extraSentryInformation } = errorHandlingBehavior);
@@ -26,6 +26,6 @@ const prototype = function RevenueError(errorHandlingBehavior) {
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
+const result = obj132.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
 
 export const RevenueError = prototype;

@@ -12,25 +12,23 @@ import NotificationSettingsMockChannelsDefault from "NotificationSettingsMockCha
 import { View } from "get ActivityIndicator" /* 17 */;
 import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { sheet: null, header: null, content: null, form: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 24, paddingTop: 0 };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
 createCacheKey[3] = { marginTop: 8, marginBottom: 16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadActionSheet.tsx");
 
 export default function NotificationSettingsMessageUnreadActionSheet(defaultValue) {
   const tmp = callback3();
   let obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
-  obj = { style: tmp.header, children: callback(NotificationSettingsMockChannelsDefault, obj) };
+  { style: tmp.header, children: callback(NotificationSettingsMockChannelsDefault, obj) };
   obj = { unreadSetting: defaultValue.value };
   const items = [callback(View, obj), ];
   obj1 = { style: tmp.content, children: null };

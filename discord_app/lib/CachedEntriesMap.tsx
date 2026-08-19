@@ -1,9 +1,9 @@
 // === Module 4510: keys ===
 
 // Module 4510 (keys)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-let result = set.fileFinishedImporting("lib/CachedEntriesMap.tsx");
+let result = obj132.fileFinishedImporting("lib/CachedEntriesMap.tsx");
 class CachedEntriesMap {
   constructor() {
     obj = Object.create(new.target.prototype);

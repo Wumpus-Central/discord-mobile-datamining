@@ -5,21 +5,20 @@ import noopAll from "noop" /* 19 */;
 import { QuestTaskPlatform } from "QuestsExperimentLocations" /* 6716 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetTaskSelect.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetTaskSelect.tsx");
 
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
-  let obj = { hasIcons: true, children: null };
-  obj = { arrow: true, icon: callback(onTaskSelect(12015).ScreenIcon, {}), label: null, onPress: null };
+  let obj = { arrow: true, icon: callback(onTaskSelect(12015).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1236).intl;
   obj[2] = intl.string(onTaskSelect(1236).t["QXc01+"]);
   obj[3] = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
-      tmpResult = tmp(closure_1_2.DESKTOP);
+      tmpResult = tmp(QuestTaskPlatform.DESKTOP);
     }
     return tmpResult;
   };
@@ -30,7 +29,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   obj[3] = function onPress() {
     let tmpResult;
     if (onTaskSelect != null) {
-      tmpResult = tmp(closure_1_2.CONSOLE);
+      tmpResult = tmp(QuestTaskPlatform.CONSOLE);
     }
     return tmpResult;
   };

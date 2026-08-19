@@ -2,17 +2,19 @@
 
 // Module 16214
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
 import _modDef10785 from "module_10785" /* 10785 */;
 import _modDef11364 from "module_11364" /* 11364 */;
 import _modDef15910 from "module_15910" /* 15910 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_7 = createCacheKey.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const memoResult = importAllResult.memo(function LaunchPadMembers() {
   const tmp = callback();
@@ -74,13 +76,13 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     obj5[0] = tmp.emptyWrapper;
     const obj6 = { style: null, variant: "text-md/semibold", children: null };
     obj6[0] = tmp.emptyText;
-    const intl = tmp2(1236).intl;
-    obj6[2] = intl.string(tmp2(1236).t["+7wtJq"]);
-    obj5[1] = jsx(tmp2(4734).Text, { style: null, variant: "text-md/semibold", children: null });
+    const intl = getSystemLocale.intl;
+    obj6[2] = intl.string(getSystemLocale.t["+7wtJq"]);
+    obj5[1] = jsx(Text.Text, { style: null, variant: "text-md/semibold", children: null });
     tmp8 = <View style={null}>{null}</View>;
   }
   return tmp8;
 });
-const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
+const result = require("obj132").fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
 
 export default memoResult;

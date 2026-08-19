@@ -1,15 +1,16 @@
 // === Module 12111: getActivityHeader ===
 
 // Module 12111 (getActivityHeader)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import unpackStageChannelParty from "unpackStageChannelParty" /* 7254 */;
 import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12112 */;
 import PlatformTypesDefault from "PlatformTypes" /* 12113 */;
+import getActivityPlatformDisplayNameDefault from "getActivityPlatformDisplayName" /* 12116 */;
 import ME from "ME" /* 676 */;
 
 ({ ActivityTypes: c3, PlatformTypes: c4 } = ME);
-const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityHeader.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/utils/getActivityHeader.tsx");
 
 export default function getActivityHeader(session_id) {
   const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
@@ -30,9 +31,8 @@ export default function getActivityHeader(session_id) {
       type = tmp4.type;
     }
     if (type === constants2.XBOX) {
-      let obj = { text: null, platformIcon: null, platformLabel: null };
       const intl21 = getSystemLocale.intl;
-      obj = { platform: null };
+      let obj = { platform: null };
       const intl22 = getSystemLocale.intl;
       obj[0] = intl22.string(getSystemLocale.t.Nfvo72);
       obj[0] = intl21.formatToPlainString(getSystemLocale.t.A17aM8, obj);
@@ -142,15 +142,15 @@ export default function getActivityHeader(session_id) {
   }
   if (null != tmp3) {
     type = session_id.type;
-    if (tmp5.PLAYING === type) {
+    if (constants.PLAYING === type) {
       let Dzgz4u = getSystemLocale.t.A17aM8;
-    } else if (tmp5.WATCHING === type) {
+    } else if (constants.WATCHING === type) {
       Dzgz4u = getSystemLocale.t.ENbTKQ;
-    } else if (tmp5.LISTENING === type) {
+    } else if (constants.LISTENING === type) {
       Dzgz4u = getSystemLocale.t.EcHzWI;
-    } else if (tmp5.COMPETING === type) {
+    } else if (constants.COMPETING === type) {
       Dzgz4u = getSystemLocale.t.ikpHeS;
-    } else if (tmp5.STREAMING === type) {
+    } else if (constants.STREAMING === type) {
       Dzgz4u = getSystemLocale.t.Dzgz4u;
     }
     if (undefined !== Dzgz4u) {
@@ -163,7 +163,7 @@ export default function getActivityHeader(session_id) {
       obj11[2] = str;
       return obj11;
     }
-    tmp35 = tmp(12116)(tmp3, session_id);
+    tmp35 = getActivityPlatformDisplayNameDefault(tmp3, session_id);
   }
   if (session_id.type === constants.PLAYING) {
     const obj13 = { text: null, platformIcon: null, platformLabel: null };
@@ -172,7 +172,7 @@ export default function getActivityHeader(session_id) {
     obj13[1] = icon;
     obj13[2] = str;
     obj = obj13;
-  } else if (session_id.type === tmp5.STREAMING) {
+  } else if (session_id.type === constants.STREAMING) {
     const obj14 = { text: null, platformIcon: null, platformLabel: null };
     const intl8 = getSystemLocale.intl;
     obj14[0] = intl8.string(getSystemLocale.t["Jpkr/q"]);
@@ -182,68 +182,68 @@ export default function getActivityHeader(session_id) {
   } else {
     if (obj29.isStageActivity(session_id)) {
       const obj15 = { text: null };
-      const intl7 = tmp37(1236).intl;
+      const intl7 = getSystemLocale.intl;
       const obj16 = { name: null };
       obj16[0] = session_id.name;
-      obj15[0] = intl7.formatToPlainString(tmp37(1236).t.pW3Ip3, obj16);
+      obj15[0] = intl7.formatToPlainString(getSystemLocale.t.pW3Ip3, obj16);
       obj = obj15;
     } else {
-      if (session_id.type === tmp5.LISTENING) {
+      if (session_id.type === constants.LISTENING) {
         if (null != session_id.details) {
           const obj17 = { text: null, platformIcon: null, platformLabel: null };
-          const intl6 = tmp37(1236).intl;
+          const intl6 = getSystemLocale.intl;
           const obj18 = { name: null };
           obj18[0] = session_id.name;
-          obj17[0] = intl6.formatToPlainString(tmp37(1236).t["b+lA5+"], obj18);
+          obj17[0] = intl6.formatToPlainString(getSystemLocale.t["b+lA5+"], obj18);
           obj17[1] = icon;
           obj17[2] = str;
           obj = obj17;
         }
       }
-      if (session_id.type === tmp5.LISTENING) {
+      if (session_id.type === constants.LISTENING) {
         const obj19 = { text: null, platformIcon: null, platformLabel: null };
-        const intl5 = tmp37(1236).intl;
-        obj19[0] = intl5.string(tmp37(1236).t.dBISa6);
+        const intl5 = getSystemLocale.intl;
+        obj19[0] = intl5.string(getSystemLocale.t.dBISa6);
         obj19[1] = icon;
         obj19[2] = str;
         obj = obj19;
       } else {
-        if (session_id.type === tmp5.WATCHING) {
+        if (session_id.type === constants.WATCHING) {
           if (null != session_id.details) {
             const obj20 = { text: null, platformIcon: null, platformLabel: null };
-            const intl4 = tmp37(1236).intl;
+            const intl4 = getSystemLocale.intl;
             const obj21 = { name: null };
             obj21[0] = session_id.name;
-            obj20[0] = intl4.formatToPlainString(tmp37(1236).t.mqdfDc, obj21);
+            obj20[0] = intl4.formatToPlainString(getSystemLocale.t.mqdfDc, obj21);
             obj20[1] = icon;
             obj20[2] = str;
             obj = obj20;
           }
         }
-        if (session_id.type === tmp5.WATCHING) {
+        if (session_id.type === constants.WATCHING) {
           const obj22 = { text: null, platformIcon: null, platformLabel: null };
-          const intl3 = tmp37(1236).intl;
-          obj22[0] = intl3.string(tmp37(1236).t.GpNXjC);
+          const intl3 = getSystemLocale.intl;
+          obj22[0] = intl3.string(getSystemLocale.t.GpNXjC);
           obj22[1] = icon;
           obj22[2] = str;
           obj = obj22;
         } else {
-          if (session_id.type === tmp5.COMPETING) {
+          if (session_id.type === constants.COMPETING) {
             if (null != session_id.details) {
               const obj23 = { text: null, platformIcon: null, platformLabel: null };
-              const intl2 = tmp37(1236).intl;
+              const intl2 = getSystemLocale.intl;
               const obj24 = { name: null };
               obj24[0] = session_id.name;
-              obj23[0] = intl2.formatToPlainString(tmp37(1236).t.oHF7Ch, obj24);
+              obj23[0] = intl2.formatToPlainString(getSystemLocale.t.oHF7Ch, obj24);
               obj23[1] = icon;
               obj23[2] = str;
               obj = obj23;
             }
           }
-          if (session_id.type === tmp5.COMPETING) {
+          if (session_id.type === constants.COMPETING) {
             const obj25 = { text: null, platformIcon: null, platformLabel: null };
-            const intl = tmp37(1236).intl;
-            obj25[0] = intl.string(tmp37(1236).t.OzCsIA);
+            const intl = getSystemLocale.intl;
+            obj25[0] = intl.string(getSystemLocale.t.OzCsIA);
             obj25[1] = icon;
             obj25[2] = str;
             obj = obj25;

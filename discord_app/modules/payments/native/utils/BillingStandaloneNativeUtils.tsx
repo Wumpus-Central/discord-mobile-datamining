@@ -1,14 +1,14 @@
 // === Module 7375: emitMWRCSentryErrorOnFailure ===
 
 // Module 7375 (emitMWRCSentryErrorOnFailure)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import ME from "ME" /* 676 */;
 import CustomCheckoutFlow2 from "CustomCheckoutFlow" /* 4357 */;
 import MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG from "MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG" /* 4489 */;
 
-function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
-  [tmp4, tmp5] = arg0;
+function emitMWRCSentryErrorOnFailure(items, source, load_id) {
+  [tmp4, tmp5] = items;
   let obj = { destination_url: tmp5, load_id };
   try {
     const _HermesInternal = HermesInternal;
@@ -28,22 +28,21 @@ function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
     obj1 = { extra: null };
     obj1[0] = tmp3;
     const result1 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG.captureMobileWebRedirectCheckoutSentryError(error1, tmp2, obj1);
-    const obj5 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG;
   }
 }
 let CustomCheckoutFlow = CustomCheckoutFlow2.CustomCheckoutFlow;
 const Routes = ME.Routes;
 let closure_5 = new timestampDefault("BillingStandaloneNativeUtils");
 const tmp2 = new timestampDefault("BillingStandaloneNativeUtils");
-let result = set.fileFinishedImporting("modules/payments/native/utils/BillingStandaloneNativeUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/payments/native/utils/BillingStandaloneNativeUtils.tsx");
 
 export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalonePremiumCheckoutFromMobileApp(premium_nitro_marketing_page, arg1, arg2, arg3) {
   const _require = premium_nitro_marketing_page;
   closure_1 = arg1;
   dependencyMap = arg2;
   CustomCheckoutFlow = arg3;
-  let obj = _require(7376);
-  obj = {};
+  _require(7376);
+  const obj = {};
   const obj2 = _require(1625);
   const tmp = _require;
   const merged = Object.assign(arg1);
@@ -61,7 +60,7 @@ export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalon
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
-    closure_1_6(items, closure_0, lib.loadId);
+    emitMWRCSentryErrorOnFailure(items, closure_0, lib.loadId);
     callback(...items);
   });
 };
@@ -73,9 +72,9 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
   const obj = _require(7376);
   const tmp = _require;
   if (obj2.isMetaQuest()) {
-    let result = obj3.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT, loadId);
+    let result = Routes.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT, loadId);
   } else {
-    result = obj3.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(tmp(691).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT, loadId);
+    result = Routes.BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK(tmp(691).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT, loadId);
   }
   return obj.goToBillingStandalonePageWithHandoff(result, (body, searchParams) => {
     searchParams = searchParams.searchParams;
@@ -84,7 +83,7 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
-    closure_1_6(items, closure_0, loadId);
+    emitMWRCSentryErrorOnFailure(items, closure_0, loadId);
     callback(...items);
   });
 };
@@ -110,7 +109,7 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
-    closure_1_6(items, closure_0, closure_1);
+    emitMWRCSentryErrorOnFailure(items, closure_0, closure_1);
     callback(...items);
   });
 };

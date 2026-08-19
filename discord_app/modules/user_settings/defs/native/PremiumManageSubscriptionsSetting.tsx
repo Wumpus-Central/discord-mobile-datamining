@@ -3,11 +3,11 @@
 // Module 14343 (route)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["z5YcJ+"]);
@@ -27,7 +27,6 @@ createToggle = {
   },
   usePredicate: function useShowManageSubscriptionsSetting() {
     let hasPremiumSubscriptionToDisplay = getPremiumPlanItem.useHasPremiumSubscriptionToDisplay();
-    const obj = getPremiumPlanItem;
     if (hasPremiumSubscriptionToDisplay) {
       hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });
     }
@@ -42,6 +41,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx");
 
 export default createToggle;

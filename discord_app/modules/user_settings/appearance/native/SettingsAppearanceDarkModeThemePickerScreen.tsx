@@ -7,9 +7,9 @@ import ThemeTypesDefault from "ThemeTypes" /* 14612 */;
 import { SystemTheme } from "SystemThemeState" /* 1305 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx");
 
 export default function SettingsAppearanceDarkModeThemePickerScreen() {
   const obj = { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null };

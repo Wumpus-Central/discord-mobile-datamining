@@ -2,28 +2,28 @@
 
 // Module 14402 (BountiesAutoScrollOverlayNuxGradient)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 const BRAND_500 = ThemesDefault.unsafe_rawColors.BRAND_500;
 let closure_8 = { code: "function BountiesAutoScrollOverlayNuxGradientTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx");
 
 export default function BountiesAutoScrollOverlayNuxGradient(active) {
   active = active.active;
-  let sharedValue;
   let obj = active(4115);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
   const items = [active, sharedValue];
   const effect = React.useEffect(() => {
     let num = 0;
     if (active) {
       num = 1;
     }
-    const result = sharedValue.set(active(closure_1_2[5]).withTiming(num, active(closure_1_2[6]).timingSlow));
+    const result = sharedValue.set(active(dependencyMap[5]).withTiming(num, active(dependencyMap[6]).timingSlow));
+    const obj = active(dependencyMap[5]);
   }, items);
   obj1 = active(4115);
   const fn = function _() {
@@ -33,8 +33,7 @@ export default function BountiesAutoScrollOverlayNuxGradient(active) {
   fn.__workletHash = 17406907036861;
   fn.__initData = closure_8;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  obj = { style: items1, pointerEvents: "none", children: null };
-  items1 = [StyleSheet.absoluteFillObject, animatedStyle];
+  const items1 = [StyleSheet.absoluteFillObject, animatedStyle];
   obj = { style: StyleSheet.absoluteFillObject, colors: null, locations: null, start: null, end: null };
   const items2 = ["" + BRAND_500 + "80", "" + BRAND_500 + "00"];
   obj[1] = items2;

@@ -1,10 +1,10 @@
 // === Module 4102: useFocus ===
 
 // Module 4102 (useFocus)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("design/utils/native/useFocus.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/utils/native/useFocus.native.tsx");
 
 export const useFocus = function useFocus() {
   const tmp = callback(React.useState(false), 2);

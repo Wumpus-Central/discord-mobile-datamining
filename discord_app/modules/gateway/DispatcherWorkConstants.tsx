@@ -1,10 +1,10 @@
 // === Module 13197: DISPATCHER_STANDARD_TIMEOUT_MS ===
 
 // Module 13197 (DISPATCHER_STANDARD_TIMEOUT_MS)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let c0 = 2.0833333333333335;
-const result = set.fileFinishedImporting("modules/gateway/DispatcherWorkConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/DispatcherWorkConstants.tsx");
 class WorkIdleDeadline {
   constructor(arg0) {
     flag = require;

@@ -1,7 +1,7 @@
 // === Module 13776: ApexExperiment ===
 
 // Module 13776 (ApexExperiment)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const obj = { 1: null };
@@ -20,4 +20,4 @@ const interval = setInterval(() => {
     clearInterval(closure_1);
   }
 }, 60000);
-const result = set.fileFinishedImporting("modules/memory/MemoryExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/memory/MemoryExperiment.tsx");

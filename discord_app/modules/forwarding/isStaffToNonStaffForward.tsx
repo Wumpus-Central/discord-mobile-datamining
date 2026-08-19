@@ -1,12 +1,12 @@
 // === Module 9082: isStaffToNonStaffForward ===
 
 // Module 9082 (isStaffToNonStaffForward)
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
-import closure_1 from "createGuildRecordFromRust" /* 1910 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
 
 export default function isStaffToNonStaffForward(channel_id, arr) {
   currentUser = currentUser.getCurrentUser();
@@ -20,8 +20,8 @@ export default function isStaffToNonStaffForward(channel_id, arr) {
     if (tmp4) {
       if (channel.isPrivate()) {
         let recipients = channel.recipients;
-        let everyResult = recipients.every((arg0) => {
-          user = user.getUser(arg0);
+        let everyResult = recipients.every((item, index) => {
+          user = user.getUser(item);
           return null != user && user.isStaff();
         });
       } else {
@@ -34,8 +34,8 @@ export default function isStaffToNonStaffForward(channel_id, arr) {
       }
       let someResult = everyResult;
       if (someResult) {
-        someResult = arr.some((arg0) => {
-          let every = channel.getChannel(arg0);
+        someResult = arr.some((item, index) => {
+          let every = channel.getChannel(item);
           let tmp = null != every;
           if (tmp) {
             const isPrivateResult = every.isPrivate();
@@ -44,8 +44,8 @@ export default function isStaffToNonStaffForward(channel_id, arr) {
             } else if (every.isPrivate()) {
               const recipients = every.recipients;
               every = recipients.every;
-              let everyResult = every((arg0) => {
-                user = user.getUser(arg0);
+              let everyResult = every((item, index) => {
+                user = user.getUser(item);
                 return null != user && user.isStaff();
               });
             } else {

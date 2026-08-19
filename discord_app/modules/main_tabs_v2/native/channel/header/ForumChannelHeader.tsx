@@ -9,7 +9,7 @@ import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_5 = createCacheKey.createStyles({ search: { flex: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", paddingStart: 4, height: require("MIN_HEADER_HEIGHT").MIN_HEADER_HEIGHT } });
 const memoResult = importAllResult.memo((arg0) => {
   ({ channelId, guildId } = arg0);
@@ -22,8 +22,8 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[0] = channelId;
     obj[1] = guildId;
     obj[2] = searchPlaceholder;
-    obj[1] = tmp4(ForumChannelCloseSearchButton.ForumChannelSearchInput, obj);
-    let tmp4Result = tmp4(View, obj);
+    obj[1] = jsx(ForumChannelCloseSearchButton.ForumChannelSearchInput, { channelId: null, guildId: null, placeholder: null });
+    let tmp4Result = <View channelId={null} guildId={null} placeholder={null} />;
   } else {
     obj1 = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null };
     obj1[0] = channelId;
@@ -32,10 +32,10 @@ const memoResult = importAllResult.memo((arg0) => {
     obj1[3] = isGuildMemberCountVisible;
     obj1[4] = isNavigationScreen;
     obj1[5] = screenIndex;
-    tmp4Result = tmp4(GuildChannelMemberCountDefault, obj1);
+    tmp4Result = jsx(GuildChannelMemberCountDefault, { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null });
   }
   return tmp4Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx");
 
 export default memoResult;

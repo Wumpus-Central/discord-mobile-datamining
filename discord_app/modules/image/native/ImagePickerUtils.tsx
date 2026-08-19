@@ -1,10 +1,10 @@
 // === Module 4852: isActionPickSupported ===
 
 // Module 4852 (isActionPickSupported)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 
-const result = set.fileFinishedImporting("modules/image/native/ImagePickerUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/image/native/ImagePickerUtils.tsx");
 
 export const isActionPickSupported = function isActionPickSupported() {
   return !isMetaQuest.isMetaQuest();

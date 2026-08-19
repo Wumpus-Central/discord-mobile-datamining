@@ -1,19 +1,19 @@
 // === Module 15919: SearchIndexingScreen ===
 
 // Module 15919 (SearchIndexingScreen)
+import _modDef11531 from "module_11531" /* 11531 */;
 import _modDef15862 from "module_15862" /* 15862 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");
 
 export default function SearchIndexingScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const items = [searchContext];
   const effect = React.useEffect(() => {
-    let obj = closure_1_1(closure_1_2[2]);
-    obj = { searchContext };
+    const obj = { searchContext };
     obj.trackSearchIndexing(obj);
   }, items);
   const text = searchContext(11511).getIndexingErrorText(searchContext);

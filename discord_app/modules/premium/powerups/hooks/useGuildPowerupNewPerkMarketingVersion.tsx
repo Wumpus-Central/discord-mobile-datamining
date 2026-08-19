@@ -1,16 +1,16 @@
 // === Module 11672: useGuildPowerupNewPerkMarketingVersion ===
 
 // Module 11672 (useGuildPowerupNewPerkMarketingVersion)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import noop from "noop" /* 19 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ GuildPowerupNewPerkMarketingVersion: c5, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: closure_6 } = BoostedGuildTiers);
 ({ GuildFeatures: error, Permissions: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
 
 export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
   const _require = guildId;
@@ -42,13 +42,13 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
   return gameServerEnabled.useMemo(() => {
     let tmp2;
     if (dependencyMap != null) {
-      const allPowerups = tmp.allPowerups;
+      const allPowerups = dependencyMap.allPowerups;
       if (allPowerups != null) {
         tmp2 = allPowerups[guildId(undefined, 4265).GUILD_POWERUP_TAG_SKU_ID];
       }
     }
     if (dependencyMap != null) {
-      let unlockedPowerups = tmp.unlockedPowerups;
+      let unlockedPowerups = dependencyMap.unlockedPowerups;
       if (unlockedPowerups != null) {
         const tmp6 = unlockedPowerups[guildId(undefined, 4265).GUILD_POWERUP_TAG_SKU_ID];
       }
@@ -65,13 +65,13 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
     }
     let tmp14;
     if (dependencyMap != null) {
-      const allPowerups2 = tmp.allPowerups;
+      const allPowerups2 = dependencyMap.allPowerups;
       if (allPowerups2 != null) {
         tmp14 = allPowerups2[guildId(undefined, 4265).GUILD_POWERUP_GUILD_THEME_SKU_ID];
       }
     }
     if (dependencyMap != null) {
-      const unlockedPowerups2 = tmp.unlockedPowerups;
+      const unlockedPowerups2 = dependencyMap.unlockedPowerups;
       if (unlockedPowerups2 != null) {
         const tmp18 = unlockedPowerups2[guildId(undefined, 4265).GUILD_POWERUP_GUILD_THEME_SKU_ID];
       }
@@ -85,13 +85,13 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
     }
     let tmp22;
     if (dependencyMap != null) {
-      const allPowerups3 = tmp.allPowerups;
+      const allPowerups3 = dependencyMap.allPowerups;
       if (allPowerups3 != null) {
         tmp22 = allPowerups3[guildId(undefined, 4265).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
       }
     }
     if (dependencyMap != null) {
-      const unlockedPowerups3 = tmp.unlockedPowerups;
+      const unlockedPowerups3 = dependencyMap.unlockedPowerups;
       if (unlockedPowerups3 != null) {
         const tmp26 = unlockedPowerups3[guildId(undefined, 4265).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
       }
@@ -102,12 +102,12 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
       }
     }
     let someResult = globalThis;
-    if (!arr.some((arg0) => {
+    if (!arr.some((item, index) => {
       let tmp;
       if (closure_1 != null) {
         const unlockedPowerups = closure_1.unlockedPowerups;
         if (unlockedPowerups != null) {
-          tmp = unlockedPowerups[arg0];
+          tmp = unlockedPowerups[item];
         }
       }
       return null != tmp;
@@ -123,14 +123,13 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
     arr = Array.from(closure_1_6[stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_TWO]);
     tmp17 = null != tmp14;
     tmp25 = null != tmp22;
-    const tmp31 = closure_1_6;
     tmp5 = null != tmp2;
-    someResult = _Array.from(closure_1_6[stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_ONE]).some((arg0) => {
+    someResult = _Array.from(closure_1_6[stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_ONE]).some((item, index) => {
       let tmp;
       if (closure_1 != null) {
         const unlockedPowerups = closure_1.unlockedPowerups;
         if (unlockedPowerups != null) {
-          tmp = unlockedPowerups[arg0];
+          tmp = unlockedPowerups[item];
         }
       }
       return null != tmp;
@@ -140,5 +139,6 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
       num = stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_ONE;
     }
     GAME_SERVER_HOSTING = num;
+    const fromResult = _Array.from(closure_1_6[stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_ONE]);
   }, items2);
 };

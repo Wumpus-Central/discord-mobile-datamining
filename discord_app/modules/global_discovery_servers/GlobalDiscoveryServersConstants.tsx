@@ -1,20 +1,19 @@
 // === Module 8876: DEFAULT_DISCOVERY_CATEGORY_ID ===
 
 // Module 8876 (DEFAULT_DISCOVERY_CATEGORY_ID)
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 let obj = { FEATURED: "featured", GAMING: "gaming", MUSIC: "music", ENTERTAINMENT: "entertainment", TECH: "tech", EDUCATION: "education", HUBS: "hubs" };
 const items = [obj.HUBS];
-let set = new Set(items);
 obj = { Clans: -3, [-3]: "Clans", Hub: -2, [-2]: "Hub", Communities: -1, [-1]: "Communities", Activity: 1, [1]: "Activity", Music: 2, [2]: "Music", Television: 3, [3]: "Television", Science: 5, [5]: "Science", Education: 6, [6]: "Education" };
 const items1 = [, , , , ];
 ({ Activity: arr2[0], Music: arr2[1], Television: arr2[2], Science: arr2[3], Education: arr2[4] } = obj);
 let closure_2 = ["en-GB"];
-const result = 10 * setDefault.Millis.MINUTE;
-const result1 = set.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersConstants.tsx");
+const result = 10 * obj132Default.Millis.MINUTE;
+const set = new Set(items);
+const result1 = require("obj132").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersConstants.tsx");
 
 export const DEFAULT_DISCOVERY_CATEGORY_ID = 0;
 export const OTHER_DISCOVERY_CATEGORY_ID = 13;
@@ -35,12 +34,12 @@ export const CategoryId = obj;
 export const DISCOVERY_SIDEBAR_CATEGORIES = items1;
 export const getLanguageOptions = function getLanguageOptions() {
   const languages = getSystemLocale.getLanguages();
-  const found = languages.filter((code) => !closure_2.includes(code.code));
-  return found.map((code) => {
-    let tmp = code;
-    if ("en-US" === code.code) {
+  const found = languages.filter((item, index) => !closure_2.includes(item.code));
+  return found.map((item, index) => {
+    let tmp = item;
+    if ("en-US" === item.code) {
       const obj = {};
-      const merged = Object.assign(code);
+      const merged = Object.assign(item);
       const intl = callback(1236).intl;
       obj.name = intl.string(callback(1236).t.LQLMGP);
       tmp = obj;

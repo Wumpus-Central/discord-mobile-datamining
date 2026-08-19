@@ -3,15 +3,15 @@
 // Module 9501 (CoachmarkImg)
 import preloadDefault from "preload" /* 5449 */;
 import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 9470 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function CoachmarkImg(badge) {
   badge = badge.badge;
   const tmp = callback2();
@@ -39,7 +39,7 @@ function CoachmarkImg(badge) {
   return tmp5;
 }
 let closure_9 = createCacheKey.createStyles({ image: { width: "100%", height: "100%" }, imageContainer: { width: 110, height: 72, marginTop: 16 } });
-const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeCoachmark.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeCoachmark.tsx");
 
 export default function TieredTenureBadgeCoachmark(arg0) {
   let tieredTenureBadgeData;
@@ -78,8 +78,8 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     };
     obj[7] = function onButtonPress() {
       callback(closure_1_7.TAKE_ACTION);
-      let obj = closure_1_0(closure_1_2[13]);
-      obj = { screen: closure_1_6.PREMIUM };
+      tieredTenureBadgeData(closure_1_2[13]);
+      const obj = { screen: closure_1_6.PREMIUM };
       obj.openUserSettings(obj);
     };
     const intl3 = tieredTenureBadgeData(1236).intl;

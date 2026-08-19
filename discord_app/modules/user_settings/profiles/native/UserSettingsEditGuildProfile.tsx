@@ -2,21 +2,20 @@
 
 // Module 14066 (UserSettingsEditGuildProfile)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleFormOpen" /* 8370 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import handleFormOpen from "handleFormOpen" /* 8370 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { guildSelector: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.none, borderTopWidth: StyleSheet.hairlineWidth, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden" };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.none, borderTopWidth: StyleSheet.hairlineWidth, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx");
 
 export default function UserSettingsEditGuildProfile() {
   function onSelectGuild(id) {
@@ -70,12 +69,12 @@ export default function UserSettingsEditGuildProfile() {
               tmp2 = null != closure_1;
             }
             if (tmp2) {
-              let obj = closure_1_1(closure_1_2[17]);
-              obj = { user: null, selectedGuild: null, onSelectGuild: null };
+              guild(resetPending[17]);
+              const obj = { user: null, selectedGuild: null, onSelectGuild: null };
               obj[0] = closure_0;
               obj[1] = closure_1;
               obj[2] = closure_4;
-              obj.openLazy(closure_1_0(closure_1_2[19])(closure_1_2[18], closure_1_2.paths), "GuildSelectComponentActionSheet", obj);
+              obj.openLazy(stateFromStores(resetPending[19])(resetPending[18], resetPending.paths), "GuildSelectComponentActionSheet", obj);
             }
           },
           hasEdits: closure_3,

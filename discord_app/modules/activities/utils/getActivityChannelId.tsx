@@ -1,13 +1,13 @@
 // === Module 12130: getActivityChannelId ===
 
 // Module 12130 (getActivityChannelId)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_1 from "ensureGuildLoaded" /* 1391 */;
-import closure_2 from "updateVoiceState" /* 4542 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 
 const isTextChannel = createChannelRecord.isTextChannel;
-const result = set.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");
 
 export default function getActivityChannelId(userId) {
   ({ channelId, activity } = userId);

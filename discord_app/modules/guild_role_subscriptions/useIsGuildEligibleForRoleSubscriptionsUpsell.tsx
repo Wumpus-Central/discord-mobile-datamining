@@ -1,15 +1,15 @@
 // === Module 15515: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
 // Module 15515 (useIsGuildEligibleForRoleSubscriptionsUpsell)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
 const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
 const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx");
 
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   const _require = arg0;
@@ -22,7 +22,6 @@ export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
     tmp6 = isGuildOwner(stateFromStores, tmp5);
   }
   const obj = _require(589);
-  const tmp = _require;
   const isUserInCreatorMonetizationEligibleCountry = _require(7227).useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;

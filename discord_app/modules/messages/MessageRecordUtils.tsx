@@ -6,19 +6,20 @@ import tDefault from "t" /* 3975 */;
 import trimTrailingPunctuationDefault from "trimTrailingPunctuation" /* 4358 */;
 import _resolveGiftCode from "_resolveGiftCode" /* 4381 */;
 import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
+import isMentioned from "isMentioned" /* 4819 */;
 import isMentionedDefault from "isMentioned" /* 4819 */;
 import transformMessagePollDefault from "transformMessagePoll" /* 4820 */;
 import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
-import closure_3 from "createFromServer" /* 4804 */;
+import createFromServer from "createFromServer" /* 4804 */;
 import hasFlag from "hasFlag" /* 4031 */;
-import closure_6 from "hasFlag" /* 4031 */;
+import hasFlag2 from "hasFlag" /* 4031 */;
 import importDefaultResult from "createdAt" /* 1930 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "markAllUserIdListsStale" /* 4030 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function createMinimalMessageRecord(timestamp) {
   const obj = {};
   let tmp = closure_5;
@@ -40,7 +41,7 @@ function createMinimalMessageRecord(timestamp) {
     let items = [];
   } else {
     const embeds = timestamp.embeds;
-    const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
+    const mapped = embeds.map((item, index) => message2(dependencyMap[15]).sanitizeEmbed(message2.channel_id, message2.id, item));
     items = _require(4821).mergeEmbedsOnURL(mapped);
     const obj2 = _require(4821);
   }
@@ -71,7 +72,7 @@ function createMessageRecord(message, message) {
   const mentions = message.mentions;
   let mapped;
   if (mentions != null) {
-    mapped = mentions.map((id) => id.id);
+    mapped = mentions.map((item, index) => item.id);
   }
   if (mapped == null) {
     mapped = [];
@@ -144,14 +145,14 @@ function createMessageRecord(message, message) {
   obj.webhookId = message.webhook_id;
   let isBlockedForMessageResult = blockedForMessage.isBlockedForMessage(message);
   if (!isBlockedForMessageResult) {
-    isBlockedForMessageResult = null != tmp15 && obj8.isBlocked(tmp15);
-    const tmp28 = null != tmp15 && obj8.isBlocked(tmp15);
+    isBlockedForMessageResult = null != tmp15 && blockedForMessage.isBlocked(tmp15);
+    const tmp28 = null != tmp15 && blockedForMessage.isBlocked(tmp15);
   }
   obj.blocked = isBlockedForMessageResult;
-  let isIgnoredForMessageResult = obj8.isIgnoredForMessage(message);
+  let isIgnoredForMessageResult = blockedForMessage.isIgnoredForMessage(message);
   if (!isIgnoredForMessageResult) {
-    isIgnoredForMessageResult = null != tmp15 && obj8.isIgnored(tmp15);
-    const tmp30 = null != tmp15 && obj8.isIgnored(tmp15);
+    isIgnoredForMessageResult = null != tmp15 && blockedForMessage.isIgnored(tmp15);
+    const tmp30 = null != tmp15 && blockedForMessage.isIgnored(tmp15);
   }
   obj.ignored = isIgnoredForMessageResult;
   obj.mentionEveryone = message.mention_everyone;
@@ -159,7 +160,7 @@ function createMessageRecord(message, message) {
   obj.mentionRoles = mention_roles;
   obj.mentionChannels = mention_channels;
   obj.messageReference = message.message_reference;
-  let tmp9Result = tmp9(4819);
+  let tmp9Result = isMentioned;
   obj1 = { userId: store.getId(), channelId: message.channel_id, mentionEveryone: null, mentionUsers: null, mentionRoles: null };
   let flag = message.mention_everyone;
   if (flag == null) {
@@ -169,7 +170,7 @@ function createMessageRecord(message, message) {
   obj1[3] = mapped;
   obj1[4] = mention_roles;
   obj.mentioned = tmp9Result.isMentioned(obj1);
-  tmp9Result = tmp9(4381);
+  tmp9Result = _resolveGiftCode;
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
   const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {
@@ -193,12 +194,10 @@ function createMessageRecord(message, message) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
       tmp39Result = tDefault(date);
-      const tmp39 = tDefault;
     }
     let durationResult = null;
     if (null != tmp39Result) {
       durationResult = tDefault.duration(tmp39Result.diff(tmp35));
-      const obj12 = tDefault;
     }
     obj2 = { participants: null, endedTimestamp: null, duration: null };
     obj2[0] = call.participants;
@@ -211,9 +210,9 @@ function createMessageRecord(message, message) {
     let items = [];
   } else {
     const message_snapshots = message.message_snapshots;
-    items = message_snapshots.map((message) => {
-      const obj = { message: callback(message.message), moderator_report: message.moderator_report };
-      return new closure_4({ message: callback(message.message), moderator_report: message.moderator_report });
+    items = message_snapshots.map((item, index) => {
+      const obj = { message: callback(item.message), moderator_report: item.moderator_report };
+      return new closure_4({ message: callback(item.message), moderator_report: item.moderator_report });
     });
   }
   obj.messageSnapshots = items;
@@ -257,12 +256,10 @@ function createMessageRecord(message, message) {
     results = poll.results;
     if (results != null) {
       const answer_counts = results.answer_counts;
-      mapped1 = answer_counts.map((me_vote) => {
-        obj = { count_details: obj, me_vote: me_vote.me_voted, emoji: null, me: false, me_burst: false, count: null, burst_count: 0 };
-        obj = { vote: me_vote.count };
-        obj = { id: str.toString(), name: "", animated: false };
+      mapped1 = answer_counts.map((item, index) => {
+        const obj = { id: str.toString(), name: "", animated: false };
         obj[2] = obj;
-        obj[5] = me_vote.count;
+        obj[5] = item.count;
         return obj;
       });
     }
@@ -275,9 +272,9 @@ function createMessageRecord(message, message) {
     mapped1 = [];
   }
   HermesBuiltin.arraySpread(mapped1, tmp48);
-  items1 = items2.map((arg0) => {
+  items1 = items2.map((item, index) => {
     const obj = {};
-    const merged = Object.assign(arg0);
+    const merged = Object.assign(item);
     if (null != obj.count_details) {
       let num = obj.count_details.burst;
       if (num == null) {
@@ -298,12 +295,13 @@ function createMessageRecord(message, message) {
     }
     return obj;
   });
+  const tmp9Result1 = _resolveGiftCode;
 }
 ({ MessageSnapshotRecord: c4, MinimalMessageRecord: c5 } = hasFlag);
 const error = importDefaultResult;
 ({ MessageFlags: unpackModuleId, MessageTypes: closure_12, MessageTypesSets: map1 } = ME);
 importDefaultResult = new importDefaultResult({ id: "???", username: "???" });
-let result = require("set").fileFinishedImporting("modules/messages/MessageRecordUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/messages/MessageRecordUtils.tsx");
 
 export { createMessageRecord };
 export const updateServerMessage = function updateServerMessage(message, message2) {
@@ -334,7 +332,6 @@ export const updateMessageRecord = function updateMessageRecord(message, message
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
           tmp = tDefault(date);
-          const tmp4 = tDefault;
         }
         let durationResult = null;
         if (null != tmp) {
@@ -402,7 +399,7 @@ export const updateMessageRecord = function updateMessageRecord(message, message
           let result11 = result10;
           if (null != message2.mentions) {
             const mentions = message2.mentions;
-            result11 = result10.set("mentions", mentions.map((id) => id.id));
+            result11 = result10.set("mentions", mentions.map((item, index) => item.id));
             flag = true;
           }
           let result12 = result11;
@@ -421,7 +418,6 @@ export const updateMessageRecord = function updateMessageRecord(message, message
             obj1[0] = result13;
             obj1[1] = store.getId();
             result14 = result13.set("mentioned", isMentionedDefault(obj1));
-            const tmp43 = isMentionedDefault;
           }
           return result14;
         } else {
@@ -438,9 +434,9 @@ export const updateMessageRecord = function updateMessageRecord(message, message
             const items1 = [];
             let arraySpreadResult = HermesBuiltin.arraySpread(reactions, 0);
             arraySpreadResult = HermesBuiltin.arraySpread([], arraySpreadResult);
-            items = items1.map((arg0) => {
+            items = items1.map((item, index) => {
               const obj = {};
-              const merged = Object.assign(arg0);
+              const merged = Object.assign(item);
               if (null != obj.count_details) {
                 let num = obj.count_details.burst;
                 if (num == null) {
@@ -471,9 +467,9 @@ export const updateMessageRecord = function updateMessageRecord(message, message
           let items2 = [];
         } else {
           const message_snapshots = message2.message_snapshots;
-          items2 = message_snapshots.map((message) => {
-            const obj = { message: callback(message.message), moderator_report: message.moderator_report };
-            return new closure_4({ message: callback(message.message), moderator_report: message.moderator_report });
+          items2 = message_snapshots.map((item, index) => {
+            const obj = { message: callback(item.message), moderator_report: item.moderator_report };
+            return new closure_4({ message: callback(item.message), moderator_report: item.moderator_report });
           });
         }
         const result16 = result4.set("messageSnapshots", items2);
@@ -484,7 +480,7 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         let items3 = [];
       } else {
         const embeds = message2.embeds;
-        const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
+        const mapped = embeds.map((item, index) => message2(dependencyMap[15]).sanitizeEmbed(message2.channel_id, message2.id, item));
         items3 = _require(4821).mergeEmbedsOnURL(mapped);
         const obj9 = _require(4821);
       }

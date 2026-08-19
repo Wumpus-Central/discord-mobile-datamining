@@ -3,16 +3,15 @@
 // Module 13235 (resetAllState)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "handleConnectionOpen" /* 4197 */;
-import closure_2 from "updateVoiceState" /* 4542 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 
 function resetAllState() {
   (function clearAllTimers() {
     const keys = Object.keys(table);
     for (const item10009 of keys) {
       let _clearTimeout = clearTimeout;
-      let tmp2 = table;
       let clearTimeoutResult = clearTimeout(table[item10009]);
       continue;
     }
@@ -48,7 +47,7 @@ function updateChannelAnimationState(arg0, arg1) {
           const merged = Object.assign(tmp4);
           obj.style = closure_1_3.GENTLE_AMBIENT;
           closure_1_4[tmp3] = obj;
-          closure_1_9.emitChange();
+          voiceChannelAnimationStateStoreClass.emitChange();
         }
         delete tmp[tmp2];
       }, 2000);
@@ -75,7 +74,7 @@ function updateChannelAnimationState(arg0, arg1) {
           const merged = Object.assign(tmp4);
           obj.style = closure_1_3.GENTLE_AMBIENT;
           closure_1_4[tmp3] = obj;
-          closure_1_9.emitChange();
+          voiceChannelAnimationStateStoreClass.emitChange();
         }
         delete tmp[tmp2];
       }, 2000);
@@ -106,7 +105,6 @@ function handleConnectionOpenOrLogout() {
     const keys = Object.keys(table);
     for (const item10009 of keys) {
       let _clearTimeout = clearTimeout;
-      let tmp2 = table;
       let clearTimeoutResult = clearTimeout(table[item10009]);
       continue;
     }
@@ -160,18 +158,14 @@ obj = {
     while (iter !== undefined) {
       let tmp5 = nextResult;
       if (nextResult.guildId === guildId) {
-        let tmp6 = nextResult;
         if (null != tmp5.oldChannelId) {
-          let tmp7 = nextResult;
           let num = obj[tmp5.oldChannelId];
           if (num == null) {
             num = 0;
           }
           obj[tmp5.oldChannelId] = num - 1;
         }
-        let tmp8 = nextResult;
         if (null != tmp5.channelId) {
-          let tmp9 = nextResult;
           let num2 = obj[tmp5.channelId];
           if (num2 == null) {
             num2 = 0;
@@ -184,9 +178,7 @@ obj = {
     let flag = false;
     const entries = Object.entries(obj);
     while (tmp11 !== undefined) {
-      let tmp13 = callback;
       let tmp14 = callback(tmp12, 2);
-      let tmp15 = updateChannelAnimationState;
       if (updateChannelAnimationState(tmp14[0], tmp14[1])) {
         flag = true;
       }
@@ -210,7 +202,6 @@ obj = {
       while (iter !== undefined) {
         let tmp4 = nextResult;
         if (null != nextResult.channelId) {
-          let tmp5 = nextResult;
           let num = obj[tmp4.channelId];
           if (num == null) {
             num = 0;
@@ -223,16 +214,11 @@ obj = {
       const entries = Object.entries(obj);
       const tmp8 = entries[Symbol.iterator]();
       while (tmp8 !== undefined) {
-        let tmp12 = callback;
         let tmp13 = callback(tmp10, 2);
         [tmp14, tmp15] = tmp13;
         if (tmp15 > 0) {
-          let tmp17 = closure_4;
-          let tmp18 = tmp14;
           obj = { style: null, userCount: null };
-          let tmp19 = obj;
           obj[0] = obj.GENTLE_AMBIENT;
-          let tmp20 = tmp15;
           obj[1] = tmp16;
           closure_4[tmp14] = obj;
         }
@@ -245,7 +231,7 @@ obj = {
   LOGOUT: handleConnectionOpenOrLogout
 };
 const voiceChannelAnimationStateStoreClass = new VoiceChannelAnimationStateStoreClass(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/channel/VoiceChannelAnimationStateStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel/VoiceChannelAnimationStateStore.tsx");
 
 export default voiceChannelAnimationStateStoreClass;
 export const AnimationStyle = obj;

@@ -2,13 +2,13 @@
 
 // Module 7481 (getAdUser)
 import _fetchAdUser from "_fetchAdUser" /* 7484 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "adUser" /* 7482 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import adUser from "adUser" /* 7482 */;
 import { DEFAULT_TIMEOUT_MS } from "DEFAULT_TIMEOUT_MS" /* 7483 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");
 
 export const getAdUser = function getAdUser(questContentName) {
   let adUser = closure_4.adUser;
@@ -16,7 +16,6 @@ export const getAdUser = function getAdUser(questContentName) {
     if (!closure_4.hasFetchFailed) {
       if (!closure_4.isFetching) {
         adUser = _fetchAdUser.fetchAdUser(questContentName);
-        const obj = _fetchAdUser;
       }
       let resolved = new Promise((arg0) => {
         closure_0 = arg0;
@@ -26,10 +25,11 @@ export const getAdUser = function getAdUser(questContentName) {
               c1 = true;
               const _clearTimeout = clearTimeout;
               clearTimeout(closure_2);
-              obj.removeChangeListener(handleUpdate);
+              closure_1_4.removeChangeListener(handleUpdate);
               callback(tmp2);
             }
           }
+          tmp = null != closure_1_4.adUser || closure_1_4.hasFetchFailed;
         }
         c1 = false;
         const timeout = setTimeout(() => {
@@ -56,8 +56,9 @@ export const useAdUser = function useAdUser(profile_badge) {
   const effect = React.useEffect(() => {
     function handleStoreChange() {
       if (tmp2) {
-        callback(tmp.adUser);
+        callback(closure_1_4.adUser);
       }
+      tmp2 = null != closure_1_4.adUser || closure_1_4.hasFetchFailed;
     }
     let hasFetchFailed = null != closure_1_4.adUser;
     if (!hasFetchFailed) {

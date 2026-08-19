@@ -1,9 +1,9 @@
 // === Module 5005: isCurrentUserTeen ===
 
 // Module 5005 (isCurrentUserTeen)
-import closure_0 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-const result = require("set").fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");
 
 export const isCurrentUserTeen = function isCurrentUserTeen() {
   currentUser = currentUser.getCurrentUser();

@@ -1,9 +1,9 @@
 // === Module 4084: _openURL ===
 
 // Module 4084 (_openURL)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+const require = fn;
 function _openURL() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -78,7 +78,7 @@ function _openURL() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("lib/openURL.tsx");
+const result = require("obj132").fileFinishedImporting("lib/openURL.tsx");
 
 export default function openURL() {
   const self = this;

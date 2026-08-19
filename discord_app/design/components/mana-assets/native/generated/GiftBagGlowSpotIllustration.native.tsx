@@ -1,13 +1,13 @@
 // === Module 5830: GiftBagGlowSpotIllustration ===
 
 // Module 5830 (GiftBagGlowSpotIllustration)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import metadataDefault from "metadata" /* 5831 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftBagGlowSpotIllustration.native.tsx");
+const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/GiftBagGlowSpotIllustration.native.tsx");
 
 export const GiftBagGlowSpotIllustration = function GiftBagGlowSpotIllustration(width) {
   let num = width.width;
@@ -23,8 +23,7 @@ export const GiftBagGlowSpotIllustration = function GiftBagGlowSpotIllustration(
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
+  let obj = { uri: metadataDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];

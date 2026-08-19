@@ -2,14 +2,14 @@
 
 // Module 8416 (useDisplayProfile)
 import premiumSinceDefault from "premiumSince" /* 8420 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "createUserWidgetFromServer" /* 5365 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
 import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
 
-const require = arg1;
+const require = fn;
 let closure_6 = areArraysShallowlyEqual.cachedFunction((arg0, arg1) => new premiumSinceDefault(arg0, arg1));
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
 
 export default function useDisplayProfile(arg0, arg1) {
   const _require = arg0;
@@ -21,9 +21,9 @@ export default function useDisplayProfile(arg0, arg1) {
       const items = [closure_1_4, closure_1_5];
       [obj, obj2] = items;
       let tmp6 = null;
-      if (null !== tmp) {
-        const user = obj.getUser(tmp);
-        const userProfile = obj2.getUserProfile(tmp);
+      if (null !== closure_0) {
+        const user = obj.getUser(closure_0);
+        const userProfile = obj2.getUserProfile(closure_0);
         let tmp10 = null;
         if (null != user) {
           tmp10 = null;
@@ -39,13 +39,12 @@ export default function useDisplayProfile(arg0, arg1) {
   });
 };
 export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFetchEffect(arg0, arg1) {
-  let _require = arg0;
-  closure_1 = arg1;
   let items = [arg1, arg0];
   const effect = React.useEffect(() => {
-    callback(closure_1_2[4])(closure_0, undefined, { guildId: callback });
+    callback(dependencyMap[4])(closure_0, undefined, { guildId: callback });
+    const tmp = callback(dependencyMap[4]);
   }, items);
-  _require = arg0;
+  const _require = arg0;
   closure_1 = arg1;
   const items1 = [closure_4, closure_5];
   return _require(589).useStateFromStores(items1, () => {
@@ -54,9 +53,9 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
       const items = [closure_1_4, closure_1_5];
       [obj, obj2] = items;
       let tmp6 = null;
-      if (null !== tmp) {
-        const user = obj.getUser(tmp);
-        const userProfile = obj2.getUserProfile(tmp);
+      if (null !== closure_0) {
+        const user = obj.getUser(closure_0);
+        const userProfile = obj2.getUserProfile(closure_0);
         let tmp10 = null;
         if (null != user) {
           tmp10 = null;
@@ -71,7 +70,7 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
     return tmp2;
   });
 };
-export const getDisplayProfile = function getDisplayProfile(id, arg1) {
+export const getDisplayProfile = function getDisplayProfile(id, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
     const items = [closure_4, closure_5];

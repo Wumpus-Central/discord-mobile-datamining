@@ -2,17 +2,17 @@
 
 // Module 8817 (CollapsableButton)
 import ThemesDefault from "Themes" /* 712 */;
+import CollapsingText from "CollapsingText" /* 4746 */;
 import styles2 from "styles" /* 8818 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function CollapsableButton(arg0) {
   ({ state, style } = arg0);
-  let collapseText;
-  collapseText = state.collapseText;
+  const collapseText = state.collapseText;
   const merged = Object.assign(arg0, Object.create(null));
   let obj = collapseText(4115);
   class B {
@@ -46,7 +46,7 @@ function CollapsableButton(arg0) {
 const buttonPadding = MINIMUM_HIT_AREA.getButtonPadding(require("MINIMUM_HIT_AREA").FAB_BUTTON_SIZE, require("MINIMUM_HIT_AREA").FAB_BUTTON_ICON_SIZE);
 let closure_6 = createCacheKey.createStyles({ textButtonPill: { paddingHorizontal: 20, paddingVertical: buttonPadding } });
 let closure_7 = { code: "function CollapsibleFloatingActionButtonNativeTsx1(){const{FAB_BUTTON_SIZE,withSpring,interpolate,collapseText,FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL,SUBTLE_SPRING}=this.__closure;return{minWidth:FAB_BUTTON_SIZE,minHeight:FAB_BUTTON_SIZE,paddingHorizontal:withSpring(interpolate(collapseText.get(),[0,1],[FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL]),SUBTLE_SPRING,'animate-always'),paddingVertical:FAB_PADDING_VERTICAL};}" };
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButton.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButton.native.tsx");
 
 export const CollapsibleFloatingActionButton = function CollapsibleFloatingActionButton(arg0) {
   ({ icon, positionBottom, positionRight, text, state } = arg0);
@@ -62,11 +62,11 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   }
   const items = [styles.button, ];
   if (positionRight == null) {
-    positionRight = tmp3(8818).DEFAULT_POSITION_OFFSET;
+    positionRight = styles2.DEFAULT_POSITION_OFFSET;
   }
   obj = { position: "absolute", right: positionRight, bottom: null };
   if (positionBottom == null) {
-    positionBottom = tmp3(8818).DEFAULT_POSITION_OFFSET;
+    positionBottom = styles2.DEFAULT_POSITION_OFFSET;
   }
   obj[2] = positionBottom;
   items[1] = obj;
@@ -88,7 +88,7 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
     obj2.icon = cloneElementResult;
     obj2.style = items;
     obj2.pillStyle = tmp2.textButtonPill;
-    tmp12 = jsx(tmp3(4746).BaseTextButton, {});
+    tmp12 = jsx(CollapsingText.BaseTextButton, {});
   }
   return tmp12;
 };

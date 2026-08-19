@@ -1,17 +1,17 @@
 // === Module 8184: createAddRecipientSystemMessage ===
 
 // Module 8184 (createAddRecipientSystemMessage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
 import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
 const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/AddRecipientSystemMessage.tsx");
 
 export const createAddRecipientSystemMessage = function createAddRecipientSystemMessage(message) {
   ({ message, roleStyle } = message);

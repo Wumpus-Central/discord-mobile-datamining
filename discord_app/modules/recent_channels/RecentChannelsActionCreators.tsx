@@ -1,10 +1,10 @@
 // === Module 10752: _bulkClearRecents ===
 
 // Module 10752 (_bulkClearRecents)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _bulkClearRecents() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -85,7 +85,7 @@ function _bulkClearRecents() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/recent_channels/RecentChannelsActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/recent_channels/RecentChannelsActionCreators.tsx");
 
 export const bulkClearRecents = function bulkClearRecents(closure_0, closure_1) {
   const self = this;

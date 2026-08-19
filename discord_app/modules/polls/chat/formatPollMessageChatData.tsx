@@ -4,40 +4,36 @@
 import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
 import GuildMemberFlags from "GuildMemberFlags" /* 4027 */;
 import formatExpirationLabel from "formatExpirationLabel" /* 8431 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_4 from "getEmojiToGroupId" /* 6727 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { getPollState } from "useMessagePollInteractions" /* 8430 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
-require = arg1;
-function reactionForId(reactions, first) {
+require = fn;
+function reactionForId(reactions, arg1) {
   const iter = reactions[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (typeof nextResult.emoji.id === "number") {
-      let tmp3 = nextResult;
       let _HermesInternal = HermesInternal;
       let id = "" + tmp2.emoji.id;
     } else {
-      let tmp5 = nextResult;
       id = tmp2.emoji.id;
     }
-    if (id === first) {
-      let tmp4 = iter;
+    if (id === arg1) {
       iter.return();
       return nextResult;
     }
   }
 }
-function computeBasicPollChatData(message) {
-  obj = arg2;
-  if (arg2 === undefined) {
+function computeBasicPollChatData(message, arg1, Image) {
+  obj = Image;
+  if (Image === undefined) {
     obj = {};
   }
   let formattedExpirationLabel = obj.formattedExpirationLabel;
@@ -47,7 +43,6 @@ function computeBasicPollChatData(message) {
     if (message.state === MessageStates.SENT) {
       if (formattedExpirationLabel == null) {
         formattedExpirationLabel = formatExpirationLabel.formatExpirationLabel(poll.expiry);
-        const obj2 = formatExpirationLabel;
       }
       str = formattedExpirationLabel;
     }
@@ -80,7 +75,7 @@ function computeBasicPollChatData(message) {
       obj3 = reactions;
       flag = tmp12;
     }
-    const someResult = obj3.some((me_vote) => true === me_vote.me_vote);
+    const someResult = obj3.some((item, index) => true === item.me_vote);
     let tmp16 = !editing;
     if (!editing) {
       tmp16 = someResult;
@@ -119,7 +114,6 @@ function computeBasicPollChatData(message) {
       selfMember = selfMember.getSelfMember(guildId);
     }
     const result = GuildMemberFlags.hasAutomodQuarantinedProfile(selfMember);
-    const obj4 = GuildMemberFlags;
     obj = { poll: null, canTapAnswers: null, canRemoveVote: null, canShowVoteCounts: null, canSubmitVote: null, expirationLabel: null, hasSelectedAnswer: null, hasVoted: null, hasVoteRecorded: null, isEditingVote: null, isExpired: null, isInteractive: null, isSent: null, reactions: null, selectedAnswerIds: null, submitting: null, tapShouldOpenVotersModal: null, showResults: null };
     obj[0] = poll;
     obj[1] = tmp19;
@@ -167,14 +161,13 @@ function computeBasicPollChatData(message) {
   }
 }
 const MessageStates = ME.MessageStates;
-let obj = { channelId: ME.EMPTY_STRING_SNOWFLAKE_ID, selectedAnswerIds: null, submitting: false, editing: false, showResults: false };
-let set = new Set();
-obj[1] = set;
-let result = set.fileFinishedImporting("modules/polls/chat/formatPollMessageChatData.tsx");
+let obj = { channelId: ME.EMPTY_STRING_SNOWFLAKE_ID, selectedAnswerIds: new Set(), submitting: false, editing: false, showResults: false };
+const set = new Set();
+let result = require("obj132").fileFinishedImporting("modules/polls/chat/formatPollMessageChatData.tsx");
 
-export default function formatPollMessageChatData(poll, arg1, maxSettingsForPreset) {
-  obj = maxSettingsForPreset;
-  if (maxSettingsForPreset === undefined) {
+export default function formatPollMessageChatData(poll, arg1, Image) {
+  obj = Image;
+  if (Image === undefined) {
     obj = {};
   }
   let flag = obj.animateEmoji;
@@ -239,8 +232,8 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
         computeBasicPollChatData = intl2.formatToPlainString(tmp4(tmp5[16]).t.XRkuof, obj);
         let _Math = Math;
         const items = [];
-        HermesBuiltin.arraySpread(answers.map((answer_id) => {
-          const tmp = totalVotes(reactions, "" + answer_id.answer_id);
+        HermesBuiltin.arraySpread(answers.map((item, index) => {
+          const tmp = totalVotes(reactions, "" + item.answer_id);
           let num;
           if (tmp != null) {
             const count_details = tmp.count_details;
@@ -255,8 +248,8 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
         }), 0);
         const _Math2 = Math;
         closure_14 = HermesBuiltin.apply(items, Math);
-        const mapped = answers.map((answer_id) => {
-          const combined = "" + answer_id.answer_id;
+        const mapped = answers.map((item, index) => {
+          const combined = "" + item.answer_id;
           const tmp2 = totalVotes(reactions, combined);
           let num;
           if (tmp2 != null) {
@@ -288,7 +281,6 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
           let tmp7 = isExpired;
           const match = flag(layout_type[8]).match(obj);
           const str = flag(layout_type[8]);
-          const tmp5 = hasVoted;
           const withResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected");
           const withResult1 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected");
           const withResult2 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected");
@@ -296,9 +288,8 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
           const withResult4 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted");
           const withResult5 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted");
           const withResult6 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted").with({ isSelected: true }, () => "selected");
-          obj = { answerId: combined, pollMedia: null, isSelected: null, isVictor: null, didSelfVote: null, style: null, shouldAnimateTransition: null, votesPercentage: null, votes: null };
-          obj = { text: answer_id.poll_media.text, emoji: null, stickerId: null, attachmentIds: null };
-          let name = answer_id.poll_media.emoji;
+          obj = { text: item.poll_media.text, emoji: null, stickerId: null, attachmentIds: null };
+          let name = item.poll_media.emoji;
           obj1 = { animateEmoji: num };
           let flag2 = obj1.animateEmoji;
           const withResult7 = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted").with({ isSelected: true }, () => "selected").with({ isExpired: false, showResults: true }, () => "notVoted");
@@ -311,8 +302,8 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
           }
           if (null == name) {
             obj[1] = undefined;
-            obj[2] = answer_id.poll_media.sticker_id;
-            obj[3] = answer_id.poll_media.attachment_ids;
+            obj[2] = item.poll_media.sticker_id;
+            obj[3] = item.poll_media.attachment_ids;
             obj[1] = obj;
             obj[2] = hasItem;
             if (tmp7) {
@@ -328,11 +319,11 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
             obj[6] = tmp20;
             const _Math = Math;
             obj[7] = Math.round(100 * num2);
-            const match1 = tmp8(tmp9[8]).match(layout_type);
-            const str2 = tmp8(tmp9[8]);
-            obj[8] = match1.with(tmp8(tmp9[18]).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
-              const intl = num(closure_1_2[16]).intl;
-              return intl.formatToPlainString(num(closure_1_2[16]).t.XRkuof, { count: num });
+            const match1 = tmp8(layout_type[8]).match(layout_type);
+            const str2 = tmp8(layout_type[8]);
+            obj[8] = match1.with(tmp8(layout_type[18]).PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")").otherwise(() => {
+              const intl = num(layout_type[16]).intl;
+              return intl.formatToPlainString(num(layout_type[16]).t.XRkuof, { count: num });
             });
             return obj;
           } else {
@@ -363,28 +354,29 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
             obj2[0] = combined1;
             obj2[1] = name.name;
             if (null == name.id) {
-              let name2 = useReducedMotion(tmp9[9]).convertSurrogateToName(name.name);
-              const obj15 = useReducedMotion(tmp9[9]);
+              let name2 = useReducedMotion(layout_type[9]).convertSurrogateToName(name.name);
+              const obj15 = useReducedMotion(layout_type[9]);
             } else {
               name2 = name.name;
             }
             obj2[2] = name2;
             if (null == name.id) {
               name = name.name;
-              let uRL = useReducedMotion(tmp9[10]).getURL(name);
-              const obj18 = useReducedMotion(tmp9[10]);
+              let uRL = useReducedMotion(layout_type[10]).getURL(name);
+              const obj18 = useReducedMotion(layout_type[10]);
             } else {
               const obj3 = { id: null, animated: null, size: null };
               obj3[0] = name.id;
               obj3[1] = flag2;
               obj3[2] = num3;
-              uRL = useReducedMotion(tmp9[11]).getEmojiURL(obj3);
-              const obj16 = useReducedMotion(tmp9[11]);
+              uRL = useReducedMotion(layout_type[11]).getEmojiURL(obj3);
+              const obj16 = useReducedMotion(layout_type[11]);
             }
             obj2[3] = uRL;
             obj2[4] = flag2;
             tmp11 = null == flag3 && null != name.id;
           }
+          otherwiseResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected").with({ isExpired: true, isLeader: true, didSelfVote: false }, () => "victorNotSelected").with({ isExpired: true, didSelfVote: true }, () => "loserSelected").with({ isExpired: true }, () => "notVoted").with({ didSelfVote: true, isExpired: false }, () => "voted").with({ hasVoted: true, isExpired: false }, () => "notVoted").with({ isSelected: true }, () => "selected").with({ isExpired: false, showResults: true }, () => "notVoted").otherwise(() => "normalVote");
         });
         obj1 = { isExpired: null, canSubmitVote: null, hasVoted: null, isEditingVote: null, canRemoveVote: null, isInteractive: null, showResults: null };
         obj1[0] = isExpired;
@@ -453,7 +445,7 @@ export default function formatPollMessageChatData(poll, arg1, maxSettingsForPres
           return obj;
         });
         tmp4Result = tmp4(tmp5[19]);
-        const otherwiseResult = match.with({ isInteractive: false }, () => {
+        let otherwiseResult = match.with({ isInteractive: false }, () => {
 
         }).with({ isExpired: true }, () => {
 

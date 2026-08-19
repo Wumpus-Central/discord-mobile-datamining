@@ -2,46 +2,46 @@
 
 // Module 16410 (VideoButtonRive)
 import ManaContext from "ManaContext" /* 4104 */;
-import closure_3 from "noop" /* 19 */;
+import VideoIcon from "VideoIcon" /* 7998 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 12149 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 8683 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
+import initialize from "initialize" /* 8683 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import { Features } from "DesktopSources" /* 4529 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function VideoButtonRive(arg0) {
   ({ isVideoEnabled, color } = arg0);
-  let obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
-  obj = { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null };
+  const obj = { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null };
   let str = "CamOff";
   if (isVideoEnabled) {
     str = "CamOn";
   }
   obj[1] = str;
   if (isVideoEnabled) {
-    let VideoSlashIcon = tmp3(7998).VideoIcon;
+    let VideoSlashIcon = VideoIcon.VideoIcon;
   } else {
-    VideoSlashIcon = tmp3(12149).VideoSlashIcon;
+    VideoSlashIcon = VideoSlashIcon2.VideoSlashIcon;
   }
   obj[2] = <VideoSlashIcon color={color} />;
   obj[1] = jsx(ManaContext.CameraRive, { dataBinding: { fill: color, on: isVideoEnabled }, defaultViewModelInstance: null, fallback: null });
   return <View dataBinding={{ fill: color, on: isVideoEnabled }} defaultViewModelInstance={null} fallback={null} />;
 }
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");
 
 export default function VideoButton(arg0) {
-  let channelId;
   let stateFromStores;
   let stateFromStores1;
   let stateFromStores2;
   let color;
   let obj = stateFromStores2;
   ({ props, wrapperSpecs } = arg0);
-  channelId = stateFromStores2.useContext(stateFromStores(stateFromStores1[9])).channelId;
+  const channelId = stateFromStores2.useContext(stateFromStores(stateFromStores1[9])).channelId;
   const voicePanelButtonStyles = channelId(stateFromStores1[10]).useVoicePanelButtonStyles(wrapperSpecs);
   let obj2 = channelId(stateFromStores1[10]);
   let tmp = stateFromStores;
@@ -89,7 +89,8 @@ export default function VideoButton(arg0) {
     obj[3] = stringResult;
     obj[4] = stateFromStores1 ? voicePanelButtonStyles.iconBgSelected : voicePanelButtonStyles.iconBg;
     const items4 = [color, stateFromStores1];
-    obj[5] = obj.useMemo(() => closure_1_11(closure_1_12, { isVideoEnabled: stateFromStores1, color }), items4);
+    obj[5] = obj.useMemo(() => <VideoButtonRive isVideoEnabled={stateFromStores1} color={color} />, items4);
     return jsx(tmp(tmp2[17]), { onPress: null, disabled: null, props: null, accessibilityLabel: null, style: null, children: null });
   }
+  const obj5 = channelId(stateFromStores1[11]);
 };

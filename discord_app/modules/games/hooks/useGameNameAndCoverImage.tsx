@@ -1,10 +1,11 @@
 // === Module 12183: useGameNameAndCoverImage ===
 
 // Module 12183 (useGameNameAndCoverImage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import importDefaultResult1 from "importDefaultResult1" /* 5378 */;
 
-const result = set.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
+const result = obj132.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
 export default function useGameNameAndCoverImage(arg0, arg1, size) {
   let obj = importDefaultResult1;
@@ -23,8 +24,8 @@ export default function useGameNameAndCoverImage(arg0, arg1, size) {
     name = arg1;
   }
   if (name == null) {
-    const intl = tmp(1236).intl;
-    name = intl.string(tmp(1236).t.GIWFlF);
+    const intl = getSystemLocale.intl;
+    name = intl.string(getSystemLocale.t.GIWFlF);
   }
   obj[1] = name;
   obj[2] = game.isLoading;

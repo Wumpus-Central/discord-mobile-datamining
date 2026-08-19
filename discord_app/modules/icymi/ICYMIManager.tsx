@@ -1,12 +1,13 @@
 // === Module 13909: _initialize ===
 
 // Module 13909 (_initialize)
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
 import _modDef9057 from "module_9057" /* 9057 */;
 import apexExperiment from "apexExperiment" /* 9058 */;
 
-require = arg1;
+require = fn;
 let c3 = null;
 initializeDefault;
 class ICYMIManager extends tmp2 {
@@ -54,18 +55,21 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               clearTimeout(timeout);
             }
             timeout = setTimeout(() => { ... }, 15 * callback(table[1]).Millis.MINUTE);
+            let obj = callback(table[0]);
           }, 15 * callback(table[1]).Millis.MINUTE);
+          let obj = callback(table[0]);
         }, 15 * callback(table[1]).Millis.MINUTE);
+        let obj = callback(table[0]);
       }, 15 * callback(table[1]).Millis.MINUTE);
-    }, 15 * tmp2(687).Millis.MINUTE);
-    let tmp2Result = tmp2(9057);
+      let obj = callback(table[0]);
+    }, 15 * obj132Default.Millis.MINUTE);
+    let tmp2Result = _modDef9057;
     const guildChannelScores = tmp2Result.getGuildChannelScores();
-    tmp2Result = tmp2(9057);
+    tmp2Result = _modDef9057;
     const recommendedGuilds = tmp2Result.getRecommendedGuilds();
-    const obj2 = _modDef9057;
   }
 };
 const iCYMIManager = new ICYMIManager();
-const result = require("set").fileFinishedImporting("modules/icymi/ICYMIManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/ICYMIManager.tsx");
 
 export default iCYMIManager;

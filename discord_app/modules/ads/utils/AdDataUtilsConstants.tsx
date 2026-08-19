@@ -1,8 +1,8 @@
 // === Module 7483: DEFAULT_TIMEOUT_MS ===
 
 // Module 7483 (DEFAULT_TIMEOUT_MS)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/ads/utils/AdDataUtilsConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/ads/utils/AdDataUtilsConstants.tsx");
 
 export const DEFAULT_TIMEOUT_MS = 5000;

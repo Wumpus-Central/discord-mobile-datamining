@@ -1,15 +1,17 @@
 // === Module 8678: useRevealProviderValue ===
 
 // Module 8678 (useRevealProviderValue)
+import componentDidMountDefault from "componentDidMount" /* 8032 */;
 import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 8673 */;
 import useIsActivityFocusedDefault from "useIsActivityFocused" /* 8679 */;
+import pushStackEntryDefault from "pushStackEntry" /* 8680 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "setContent" /* 4086 */;
-import closure_5 from "set" /* 4540 */;
+import setContent from "setContent" /* 4086 */;
+import set from "set" /* 4540 */;
 import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function useRevealProviderValue(arg0, channel) {
   let tmp = arg0;
   const items = [closure_4];
@@ -47,7 +49,7 @@ let c3 = importAllResult;
 ({ useChannelCallStore: closure_6, focusTimeout: error, resetFocusTimer: closure_8, useIsVoiceChatFocused: c9 } = VoiceChatDrawerState);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const context = importAllResult.createContext({ reveal: true });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/RevealProvider.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/RevealProvider.tsx");
 
 export default function RevealProvider(showStatus) {
   let flag = showStatus.showStatus;
@@ -59,7 +61,6 @@ export default function RevealProvider(showStatus) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  closure_0 = undefined;
   const tmp = callback((focus) => focus.focus);
   closure_0 = tmp;
   const tmp2 = useRevealProviderValue(tmp, channel);
@@ -81,19 +82,19 @@ export default function RevealProvider(showStatus) {
   }
   const obj = { value: tmp2, children: null };
   let tmp10 = !reveal;
-  let tmp4Result = tmp4(8032);
+  let tmp4Result = componentDidMountDefault;
   if (!reveal) {
     tmp10 = !flag;
   }
-  const items1 = [closure_10(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children, ];
+  const items1 = [callback(tmp4Result, { hidden: tmp10, animated: true, barStyle: str }), children, ];
   let tmp12 = !reveal;
-  tmp4Result = tmp4(8680);
+  tmp4Result = pushStackEntryDefault;
   if (!reveal) {
     tmp12 = !prefersDeferringSystemGestures;
   }
-  items1[2] = closure_10(tmp4Result, { prefersHidden: tmp12, prefersDeferringSystemGestures });
+  items1[2] = callback(tmp4Result, { prefersHidden: tmp12, prefersDeferringSystemGestures });
   obj[1] = items1;
-  return closure_11(context.Provider, obj);
+  return callback2(context.Provider, obj);
 };
 export const RevealContext = context;
 export { useRevealProviderValue };

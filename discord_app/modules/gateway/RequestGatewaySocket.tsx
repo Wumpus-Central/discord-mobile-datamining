@@ -1,27 +1,27 @@
 // === Module 675: setRequestedBy ===
 
 // Module 675 (setRequestedBy)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function setRequestedBy(closure_0) {
   c6 = false;
   let num = map.get(closure_0);
   if (num == null) {
     num = 0;
   }
-  const result = obj.set(closure_0, num + 1);
+  const result = map.set(closure_0, num + 1);
   const combined = "BRIDGE:" + closure_0;
-  let num2 = obj.get(combined);
+  let num2 = map.get(combined);
   if (num2 == null) {
     num2 = 0;
   }
   const diff = num2 - 1;
   if (diff <= 0) {
-    obj.delete(combined);
+    map.delete(combined);
   } else {
-    const result1 = obj.set(combined, diff);
+    const result1 = map.set(combined, diff);
   }
 }
 function stopRequest(closure_0) {
@@ -32,9 +32,9 @@ function stopRequest(closure_0) {
   }
   const diff = num - 1;
   if (diff <= 0) {
-    obj.delete(closure_0);
+    map.delete(closure_0);
   } else {
-    const result = obj.set(closure_0, diff);
+    const result = map.set(closure_0, diff);
   }
 }
 function _withRequest() {
@@ -128,7 +128,7 @@ function _withRequest() {
 let closure_5 = ["COLD_START"];
 let c6 = true;
 const map = new Map();
-let result = require("set").fileFinishedImporting("modules/gateway/RequestGatewaySocket.tsx");
+let result = require("obj132").fileFinishedImporting("modules/gateway/RequestGatewaySocket.tsx");
 
 export const isRequested = function isRequested() {
   return map.size > 0 || c6;
@@ -156,27 +156,28 @@ export const startBridgeTo = function startBridgeTo(arg0) {
   }
   let result = map.set(combined, num + 1);
   combined(696).requestSafeIdleCallback(() => {
-    let obj = closure_1_7;
-    if (closure_1_7.has(combined)) {
+    let obj = map;
+    if (map.has(combined)) {
       obj = { bridge_token: null, cleared_after: null };
-      obj[0] = tmp;
+      obj[0] = combined;
       const _performance = performance;
       obj[1] = performance.now() - callback;
-      callback(closure_1_2[3]).track(closure_1_4.GATEWAY_BRIDGE_TIMEOUT, obj);
-      const obj2 = callback(closure_1_2[3]);
+      callback(dependencyMap[3]).track(AnalyticEvents.GATEWAY_BRIDGE_TIMEOUT, obj);
+      const obj2 = callback(dependencyMap[3]);
     }
     c6 = false;
-    let num = obj.get(tmp);
+    let num = obj.get(combined);
     if (num == null) {
       num = 0;
     }
     const diff = num - 1;
     if (diff <= 0) {
-      obj.delete(tmp);
+      obj.delete(combined);
     } else {
-      const result = obj.set(tmp, diff);
+      const result = obj.set(combined, diff);
     }
   }, { timeout: 5000 });
+  let obj2 = combined(696);
 };
 export { stopRequest };
 export const withRequest = function withRequest(combined, arg1) {

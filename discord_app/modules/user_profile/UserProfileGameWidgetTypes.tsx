@@ -1,7 +1,7 @@
 // === Module 5367: items ===
 
 // Module 5367 (items)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import WidgetType from "WidgetType" /* 5366 */;
 import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5368 */;
 import findGameWidget from "findGameWidget" /* 5369 */;
@@ -20,8 +20,7 @@ class BaseGameWidget {
 }
 const prototype = BaseGameWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
-  let obj = { id: this.id, data: null };
-  obj = { type: this.type, games: games.map((gameId) => ({ game_id: gameId.gameId, comment: gameId.comment, tags: gameId.tags })) };
+  const obj = { type: this.type, games: games.map((item, index) => ({ game_id: item.gameId, comment: item.comment, tags: item.tags })) };
   games = this.games;
   obj[1] = obj;
   return obj;
@@ -47,7 +46,6 @@ prototype["isEqual"] = function isEqual(type) {
     let areWidgetGamesEqualResult = type.type === this.type;
     if (areWidgetGamesEqualResult) {
       areWidgetGamesEqualResult = findGameWidget.areWidgetGamesEqual(self.games, type.games, self.type);
-      const obj = findGameWidget;
     }
     tmp = areWidgetGamesEqualResult;
   }
@@ -62,7 +60,7 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type };
 };
-const result = set.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTypes.tsx");
 
 export const GAME_WIDGET_TYPES = items;
 export const isGameWidgetType = function isGameWidgetType(arg0) {

@@ -2,10 +2,10 @@
 
 // Module 7703 (useResubscribeSubscriptionParams)
 import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 7701 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useResubscribeSubscriptionParams.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/billing/native/subscription/useResubscribeSubscriptionParams.tsx");
 
 export default function useResubscribeSubscriptionParams(arg0) {
   closure_0 = arg0;
@@ -18,10 +18,10 @@ export default function useResubscribeSubscriptionParams(arg0) {
       tmp2 = null;
       if (null != closure_1) {
         const obj = { requestIdentifier: null, subscriptionId: null };
-        obj[0] = callback(closure_1_2[2]).v4();
+        obj[0] = callback(dependencyMap[2]).v4();
         obj[1] = tmp;
         tmp2 = obj;
-        const obj2 = callback(closure_1_2[2]);
+        const obj2 = callback(dependencyMap[2]);
       }
     }
     return tmp2;

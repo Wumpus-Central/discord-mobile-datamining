@@ -2,14 +2,14 @@
 
 // Module 14060 (UserProfileTypingIndicatorEditButton)
 import messagesProxyDefault from "messagesProxy" /* 3403 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 require("noop").useCallback;
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/UserProfileTypingIndicatorEditButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/custom_typing_indicator/native/UserProfileTypingIndicatorEditButton.tsx");
 
 export default function UserProfileTypingIndicatorEditButton() {
   let obj = nativeStackNavigation(1500);
@@ -27,8 +27,8 @@ export default function UserProfileTypingIndicatorEditButton() {
   const intl2 = nativeStackNavigation(1236).intl;
   obj[2] = intl2.string(nativeStackNavigation(1236).t.PoWNfe);
   obj[3] = useCallback(() => {
-    nativeStackNavigation.navigate(closure_1_5.TYPING_INDICATOR);
-    callback(closure_1_6.TAKE_ACTION);
+    nativeStackNavigation.navigate(UserSettingsSections.TYPING_INDICATOR);
+    callback(ContentDismissActionType.TAKE_ACTION);
   }, items1);
   return jsx(nativeStackNavigation(14036).UserProfileEditFormButton, { showPremiumIcon: true, showNewBadge: tmp2[0] === nativeStackNavigation(1377).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE });
 };

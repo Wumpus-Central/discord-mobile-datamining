@@ -6,7 +6,7 @@ import Button from "Button" /* 1297 */;
 import { jsxs } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 const PureComponent = importAllResult.PureComponent;
 class Timer extends PureComponent {
   constructor(arg0) {
@@ -14,7 +14,7 @@ class Timer extends PureComponent {
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp6;
     tmp6._incrementSecond = function _incrementSecond() {
-      const state = closure_0.state;
+      state = state.state;
       ({ minutes, hours } = state);
       let num = state.seconds + 1;
       let tmp = hours;
@@ -30,11 +30,11 @@ class Timer extends PureComponent {
         tmp = sum;
         tmp2 = num2;
       }
-      closure_0.setState({ seconds: num, minutes: tmp2, hours: tmp });
+      state.setState({ seconds: num, minutes: tmp2, hours: tmp });
     };
     tmp6._decrementSecond = function _decrementSecond() {
-      let obj = closure_0;
-      const state = closure_0.state;
+      let obj = state;
+      state = state.state;
       ({ minutes, hours } = state);
       let num = state.seconds - 1;
       if (num >= 1) {
@@ -54,15 +54,12 @@ class Timer extends PureComponent {
           obj.setState(obj);
         }
       } else if (minutes >= 1) {
-        let num2 = minutes - 1;
         num = 59;
         let diff = hours;
       } else {
         diff = hours;
-        num2 = minutes;
         if (tmp) {
           diff = hours - 1;
-          num2 = 59;
           num = 59;
         }
         tmp = minutes < 1 && hours >= 1;
@@ -133,7 +130,6 @@ prototype["render"] = function render() {
     const _String = String;
     const _HermesInternal = HermesInternal;
     let str = "" + applyDefault.padStart(String(hours), 2, "0") + ":";
-    const obj = applyDefault;
   } else {
     str = "";
   }
@@ -141,14 +137,12 @@ prototype["render"] = function render() {
     const _String2 = String;
     const _HermesInternal2 = HermesInternal;
     let str5 = "" + applyDefault.padStart(String(minutes), 2, "0") + ":";
-    const obj2 = applyDefault;
   } else {
     str5 = "";
   }
   if (str.length > 0) {
     const _String3 = String;
     let padStartResult = applyDefault.padStart(String(seconds), 2, "0");
-    const obj3 = applyDefault;
   } else {
     padStartResult = seconds;
   }
@@ -156,6 +150,6 @@ prototype["render"] = function render() {
   return jsxs(Button.LegacyText, { style, accessibilityRole: "timer", children });
 };
 Timer.defaultProps = { hideMinutes: false, hideHours: false };
-let result = require("set").fileFinishedImporting("modules/voice_calls/native/components/Timer.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_calls/native/components/Timer.tsx");
 
 export default Timer;

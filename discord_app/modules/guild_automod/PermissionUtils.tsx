@@ -1,13 +1,13 @@
 // === Module 16049: canCurrentUserManageMessageFilters ===
 
 // Module 16049 (canCurrentUserManageMessageFilters)
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_automod/PermissionUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_automod/PermissionUtils.tsx");
 
 export const canCurrentUserManageMessageFilters = function canCurrentUserManageMessageFilters(guild_id) {
   let tmp = null != guild_id;
@@ -15,10 +15,9 @@ export const canCurrentUserManageMessageFilters = function canCurrentUserManageM
     const guild = store.getGuild(guild_id);
     let canResult = null != guild;
     if (canResult) {
-      canResult = obj.can(constants.MANAGE_GUILD, guild);
+      canResult = closure_3.can(constants.MANAGE_GUILD, guild);
     }
     tmp = canResult;
-    obj = closure_3;
   }
   return tmp;
 };
@@ -36,11 +35,11 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
   const items1 = [arg0];
   return _require(589).useStateFromStores(items, () => {
     if (closure_1_2 !== undefined) {
-      if (obj2 !== undefined) {
+      if (closure_1_3 !== undefined) {
         const guild = closure_1_2.getGuild(tmp);
         let canResult = null != guild;
         if (canResult) {
-          canResult = obj2.can(closure_1_5.MANAGE_GUILD, guild);
+          canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, guild);
         }
         return canResult;
       }

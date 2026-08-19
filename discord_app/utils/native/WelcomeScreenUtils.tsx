@@ -3,15 +3,15 @@
 // Module 11826 (useShowWelcomeModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 11827 */;
+import noop from "noop" /* 19 */;
+import handleInviteData from "handleInviteData" /* 11827 */;
 import { NO_WELCOME_SCREEN } from "handleInviteData" /* 11827 */;
-import closure_6 from "comparator" /* 1980 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import comparator from "comparator" /* 1980 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 
-require = arg1;
+require = fn;
 let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "Array" };
-const result = require("set").fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
 
 export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channelId) {
   const _require = guildId;
@@ -36,7 +36,7 @@ export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channel
         tmp14 = null != value;
       }
       if (tmp14) {
-        tmp14 = value !== closure_1_5;
+        tmp14 = value !== NO_WELCOME_SCREEN;
       }
       if (tmp14) {
         tmp14 = !isFetchingResult;

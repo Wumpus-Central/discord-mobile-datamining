@@ -2,10 +2,10 @@
 
 // Module 7282 (_createHandoffToken)
 import v1 from "v1" /* 514 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function _createHandoffToken() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -90,7 +90,7 @@ function _createHandoffToken() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/mobile_web_handoff/MobileWebHandoffUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/mobile_web_handoff/MobileWebHandoffUtils.tsx");
 
 export default {
   generateNonce() {

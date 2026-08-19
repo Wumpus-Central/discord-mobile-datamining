@@ -37,11 +37,10 @@ obj = {
   APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: function handleFetchAppDirectoryCollectionsSuccess(collections) {
     collections = collections.collections;
     const combined = "surface:" + collections.surface + " activeState:" + collections.activeState;
-    const mapped = collections.map((application_directory_collection_items) => {
-      application_directory_collection_items.application_directory_collection_items = callback(table[0]).sortBy(application_directory_collection_items.application_directory_collection_items, ["position", "id"]);
-      return application_directory_collection_items;
+    const mapped = collections.map((item, index) => {
+      item.application_directory_collection_items = callback(table[0]).sortBy(item.application_directory_collection_items, ["position", "id"]);
+      return item;
     });
-    obj = applyDefault;
     obj = {};
     const merged = Object.assign(obj);
     obj[combined] = obj.sortBy(mapped, ["position", "id"]);
@@ -61,7 +60,7 @@ obj = {
   }
 };
 const applicationDirectoryCollectionsStore = new ApplicationDirectoryCollectionsStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectoryCollectionsStore.tsx");
 
 export default applicationDirectoryCollectionsStore;
 export const FetchState = obj;

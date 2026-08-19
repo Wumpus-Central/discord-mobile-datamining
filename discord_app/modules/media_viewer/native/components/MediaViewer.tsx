@@ -2,28 +2,20 @@
 
 // Module 12076 (MediaViewer)
 import MediaViewerDimensionsProvider from "MediaViewerDimensionsProvider" /* 9013 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 
-require = arg1;
+require = fn;
 function MediaViewer(arg0) {
   ({ onClose, syncer } = arg0);
   ({ index, sources } = syncer);
-  let _require;
   height = undefined;
-  dependencyMap = undefined;
   let sharedValue;
   let sharedValue1;
-  let animatedRef;
-  closure_6 = undefined;
   translatePos = undefined;
-  let isClosing;
-  let isInteracting;
-  let overlayEnabled;
-  let absoluteFillObject;
   closure_12 = undefined;
   let callback;
   closure_14 = undefined;
@@ -33,7 +25,7 @@ function MediaViewer(arg0) {
   let tmp = height;
   const tmp3 = height(7139);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
-  _require = tmp6;
+  const _require = tmp6;
   let obj = _require(9013);
   const mediaViewerDimensions = obj.useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
@@ -44,17 +36,17 @@ function MediaViewer(arg0) {
   let obj2 = _require(4115);
   sharedValue1 = obj2.useSharedValue(false);
   let obj3 = _require(4115);
-  animatedRef = obj3.useAnimatedRef();
+  const animatedRef = obj3.useAnimatedRef();
   closure_6 = tmp13;
   const viewerProps = useViewerProps();
   ({ ref, onScroll, onContentSizeChange, useItemVisible } = viewerProps);
   let obj4 = _require(12077);
   const mediaViewerPanGestureConfig = obj4.useMediaViewerPanGestureConfig(tmp9, swipeVelocityThreshold, onClose);
   ({ dismiss, translatePos } = mediaViewerPanGestureConfig);
-  isClosing = mediaViewerPanGestureConfig.isClosing;
-  isInteracting = mediaViewerPanGestureConfig.isInteracting;
-  overlayEnabled = mediaViewerPanGestureConfig.overlayEnabled;
-  absoluteFillObject = closure_6.absoluteFillObject;
+  const isClosing = mediaViewerPanGestureConfig.isClosing;
+  const isInteracting = mediaViewerPanGestureConfig.isInteracting;
+  const overlayEnabled = mediaViewerPanGestureConfig.overlayEnabled;
+  const absoluteFillObject = closure_6.absoluteFillObject;
   let obj5 = _require(4115);
   class M {
     constructor() {
@@ -248,7 +240,7 @@ function MediaViewer(arg0) {
 let c4 = importAllResult;
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = set.isAndroid();
+let closure_9 = obj132.isAndroid();
 let closure_10 = { code: "function MediaViewerTsx1(){const{zoomed,pinching}=this.__closure;return!zoomed.get()&&!pinching.get();}" };
 let closure_11 = { code: "function MediaViewerTsx2(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };
 let closure_12 = importAllResult.memo((entranceAnimationDriver) => {
@@ -262,12 +254,11 @@ let closure_12 = importAllResult.memo((entranceAnimationDriver) => {
   const windowWidth = entranceAnimationDriver.windowWidth;
   const windowHeight = entranceAnimationDriver.windowHeight;
   const zoomed = entranceAnimationDriver.zoomed;
-  let sharedValue;
   let derivedValue;
   let panGestureGenerator;
   ({ onContentSizeChange, onScroll, ref, index } = entranceAnimationDriver);
   let obj = entranceAnimationDriver(originLayout[5]);
-  sharedValue = obj.useSharedValue(false);
+  const sharedValue = obj.useSharedValue(false);
   class T {
     constructor() {
       value = zoomed.get();
@@ -304,7 +295,7 @@ let closure_12 = importAllResult.memo((entranceAnimationDriver) => {
   H.__initData = derivedValue;
   const animatedProps = entranceAnimationDriver(originLayout[5]).useAnimatedProps(H);
   const obj4 = entranceAnimationDriver(originLayout[5]);
-  obj = { gesture: mediaViewerPanGesture.nativeGesture, children: windowWidth(entranceAnimationDriver(originLayout[10]).AnimatedFastList, obj) };
+  { gesture: mediaViewerPanGesture.nativeGesture, children: windowWidth(entranceAnimationDriver(originLayout[10]).AnimatedFastList, obj) };
   obj = { ref, style: useItemVisible.absoluteFill, sections: items3, onTouchStart: callback, onTouchEnd: callback1, onTouchCancel: callback1, initialScrollItem: onLongPress(originLayout[8])(index), automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, itemSize: windowWidth, renderItem: callback2, onContentSizeChange, pagingEnabled: true, onScroll, scrollEventThrottle: 16, animatedProps, disableLegacyGestureHandling: true, chunkBase: windowWidth, horizontal: true };
   items3 = [sources.length];
   return windowWidth(entranceAnimationDriver(originLayout[9]).GestureDetector, obj);
@@ -314,11 +305,10 @@ let closure_14 = { code: "function MediaViewerTsx4(){const{isClosing,hideRelayou
 let closure_15 = { code: "function MediaViewerTsx5(){const{runOnJS,setShowHeader}=this.__closure;runOnJS(setShowHeader)(false);}" };
 let closure_16 = { code: "function MediaViewerTsx6(){const{overlayEnabled,isInteracting,runOnJS,setShowHeader}=this.__closure;if(overlayEnabled.get()&&!isInteracting.get()){runOnJS(setShowHeader)(true);}}" };
 let closure_17 = { code: "function MediaViewerTsx7(){const{absoluteFillObject,translatePos,hideRelayoutSharedValue,withTiming,Easing}=this.__closure;return{...absoluteFillObject,alignItems:'center',justifyContent:'center',transform:[{translateY:translatePos.get()}],opacity:hideRelayoutSharedValue.get()?0:withTiming(1,{easing:Easing.linear,duration:75})};}" };
-let result = set.fileFinishedImporting("modules/media_viewer/native/components/MediaViewer.tsx");
+let result = obj132.fileFinishedImporting("modules/media_viewer/native/components/MediaViewer.tsx");
 
 export default importAllResult.memo((arg0) => {
-  let obj = { children: null };
-  obj = {};
+  const obj = {};
   const merged = Object.assign(arg0);
   obj[0] = callback(MediaViewer, obj);
   return callback(MediaViewerDimensionsProvider.MediaViewerDimensionsProvider, obj);

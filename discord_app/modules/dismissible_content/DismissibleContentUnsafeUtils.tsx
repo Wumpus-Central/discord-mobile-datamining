@@ -2,18 +2,20 @@
 
 // Module 4196 (UNSAFE_isDismissibleContentDismissed)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
+import hasBit from "hasBit" /* 1376 */;
 import isSingleUseDismissibleContent from "isSingleUseDismissibleContent" /* 1378 */;
+import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1379 */;
 import useNewUserDismissibleContent from "useNewUserDismissibleContent" /* 4218 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
-import closure_5 from "handleConnectionOpen" /* 4197 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
 
-require = arg1;
+require = fn;
 class UNSAFE_isDismissibleContentDismissed {
   constructor(arg0) {
-    obj = arg1;
-    if (arg1 === undefined) {
+    obj = fn;
+    if (fn === undefined) {
       obj = {};
     }
     flag = obj.bypassNewUserCheck;
@@ -24,7 +26,7 @@ class UNSAFE_isDismissibleContentDismissed {
     if (WEEK === undefined) {
       tmp = closure_1;
       tmp2 = closure_2;
-      WEEK = require("set").Millis.WEEK;
+      WEEK = require("obj132").Millis.WEEK;
     }
     guildId = obj.guildId;
     if (!flag) {
@@ -471,17 +473,13 @@ function _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/dismissible_content/DismissibleContentUnsafeUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/dismissible_content/DismissibleContentUnsafeUtils.tsx");
 
 export { UNSAFE_isDismissibleContentDismissed };
 export const useIsDismissibleContentDismissed_UNSAFE = function useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, arg1) {
   const _require = APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER;
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
   const items = [closure_4, closure_5];
-  return _require(589).useStateFromStores(items, () => closure_1_6(closure_0, obj));
+  return _require(589).useStateFromStores(items, () => UNSAFE_isDismissibleContentDismissed(closure_0, obj));
 };
 export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDismissibleContentAsDismissed(DONUT_MOBILE_NUX, arg1) {
   const self = this;
@@ -508,7 +506,6 @@ export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed = function UNSAF
     let tmp6 = null != prop;
     if (tmp6) {
       tmp6 = 1 !== DISCORD_EPOCHDefault.compare(promotionId, prop);
-      const obj2 = DISCORD_EPOCHDefault;
     }
     obj = { isDismissed: null, lastDismissedSnowflakeId: null };
     obj[0] = tmp6;
@@ -536,7 +533,7 @@ export const UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed = functi
   }
   return applyArgumentsResult;
 };
-export const UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed = function UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(arg0, closure_0, closure_1, arg3) {
+export const UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed = function UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed(closure_3, closure_0, closure_1, arg3) {
   const self = this;
   const apply = _UNSAFE_markSnowflakeBoundGuildDismissibleContentAsDismissed.apply;
   if (typeof apply === "unknown") {

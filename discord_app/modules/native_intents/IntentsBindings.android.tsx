@@ -1,9 +1,9 @@
-// === Module 17081: set ===
+// === Module 17081: obj132 ===
 
-// Module 17081 (set)
-import set from "set" /* 2 */;
+// Module 17081 (obj132)
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
+const result = obj132.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
 
 export default {
   hasSearch() {

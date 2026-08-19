@@ -1,14 +1,14 @@
 // === Module 11302: getCollectionItemAssetUrl ===
 
 // Module 11302 (getCollectionItemAssetUrl)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
 import handleImageLoad from "handleImageLoad" /* 1469 */;
 
 const Endpoints = ME.Endpoints;
 ({ API_ENDPOINT: c3, CDN_HOST: c4 } = window.GLOBAL_ENV);
-const result = set.fileFinishedImporting("modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx");
+const result = obj132.fileFinishedImporting("modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx");
 
 export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0) {
   ({ itemId, hash, containerWidth } = arg0);
@@ -18,7 +18,6 @@ export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0
   let obj = handleImageLoad;
   let str = obj.getBestMediaProxySize(containerWidth * handleImageLoad.getDevicePixelRatio());
   obj = { size: str.toString() };
-  const obj2 = handleImageLoad;
   str = new URLSearchParams(obj).toString();
   let str3 = "png";
   if (getAvatarURL.SUPPORTS_WEBP) {
@@ -26,7 +25,7 @@ export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0
   }
   if (null != closure_4) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "https://" + tmp2 + "/app-assets/application-directory/collection-items/" + itemId + "/" + hash + "." + str3 + "?" + str;
+    let combined = "https://" + closure_4 + "/app-assets/application-directory/collection-items/" + itemId + "/" + hash + "." + str3 + "?" + str;
   } else {
     const _location = location;
     const _HermesInternal = HermesInternal;

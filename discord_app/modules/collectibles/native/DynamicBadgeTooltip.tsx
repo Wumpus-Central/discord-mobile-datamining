@@ -1,13 +1,13 @@
 // === Module 9277: DynamicBadgeTooltip ===
 
 // Module 9277 (DynamicBadgeTooltip)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let closure_5 = { top: 14, bottom: 14, left: 14, right: 14 };
-const result = require("set").fileFinishedImporting("modules/collectibles/native/DynamicBadgeTooltip.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/DynamicBadgeTooltip.tsx");
 
 export const DynamicBadgeTooltip = function DynamicBadgeTooltip(tooltipPosition) {
   let str = tooltipPosition.tooltipPosition;
@@ -15,14 +15,11 @@ export const DynamicBadgeTooltip = function DynamicBadgeTooltip(tooltipPosition)
   if (str === undefined) {
     str = "bottom";
   }
-  let first;
-  let callback;
   let React;
-  callback = undefined;
+  let callback;
   const ref = React.useRef(null);
   const tmp2 = callback(React.useState(false), 2);
-  first = tmp2[0];
-  callback = tmp2[1];
+  const first = tmp2[0];
   const intl = str(first[3]).intl;
   const stringResult = intl.string(str(first[3]).t.dCou7i);
   React = stringResult;

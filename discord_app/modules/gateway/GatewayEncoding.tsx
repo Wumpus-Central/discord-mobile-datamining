@@ -1,7 +1,7 @@
 // === Module 13189: pack ===
 
 // Module 13189 (pack)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get from "get" /* 4842 */;
 import getErlpackEncoding from "getErlpackEncoding" /* 13190 */;
 
@@ -40,6 +40,6 @@ const ProcessArgs = get.ProcessArgs;
 if (ProcessArgs.isDiscordGatewayPlaintextSet()) {
   tmp3 = JSONEncoding;
 }
-const result = set.fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
 
 export default tmp3;

@@ -3,12 +3,13 @@
 // Module 16527 (handleAppStateUpdate)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import fetchCurrentAppIconDefault from "fetchCurrentAppIcon" /* 7945 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { getIconById } from "items" /* 7946 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-let require = arg1;
+let require = fn;
 let closure_7 = new timestampDefault("AppIconPremiumManager");
 const DEFAULT = require("FreemiumAppIconIds").FreemiumAppIconIds.DEFAULT;
 let closure_9 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost" };
@@ -73,7 +74,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
             c1 = undefined;
             id = undefined;
             premiumType = currentUser.getCurrentUser();
-            let obj2 = closure_1_0(closure_1_2[8]);
+            let obj2 = self(closure_1_2[8]);
             currentUser = 1;
             v0 = 1;
             obj1 = { value: null, done: false };
@@ -96,13 +97,13 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
               const _HermesInternal2 = HermesInternal;
               closure_1_7.info("Icon " + closure_1_1 + " is no longer available, resetting to default");
               premiumType = undefined;
-              if (closure_1_0 != null) {
-                premiumType = closure_1_0.premiumType;
+              if (self != null) {
+                premiumType = self.premiumType;
               }
               if (premiumType == null) {
                 premiumType = undefined;
               }
-              closure_1_0.resetIcon(closure_1_1, premiumType, closure_1_9.ORPHANED);
+              self.resetIcon(closure_1_1, premiumType, closure_1_9.ORPHANED);
               v0 = 3;
               obj = { value: null, done: true };
               obj[0] = undefined;
@@ -124,8 +125,7 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
                 if (premiumType1 == null) {
                   c1 = undefined;
                 }
-                closure_1_0.resetIcon(c1, c1, closure_1_9.PREMIUM_LOST);
-                const tmp15 = c1;
+                self.resetIcon(c1, c1, closure_1_9.PREMIUM_LOST);
               }
               const obj7 = closure_1_1(closure_1_2[9]);
             }
@@ -140,21 +140,20 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
     }
   })();
 };
-prototype["resetIcon"] = function resetIcon(arg0, c0, ORPHANED) {
-  const _require = arg0;
+prototype["resetIcon"] = function resetIcon(closure_1_1, c0, ORPHANED) {
+  const _require = importDefault;
   closure_1 = ORPHANED;
-  let obj = _require(7945);
-  const setAppIconResult = _require(7945).setAppIcon(DEFAULT, c0);
-  _require(7945).setAppIcon(DEFAULT, c0).then(() => {
-    let obj = ORPHANED(closure_1_2[10]);
-    obj = { previous_icon_id: closure_0, reset_to_icon_id: closure_1_8, reset_reason: ORPHANED };
-    obj.track(closure_1_6.APP_ICON_AUTO_RESET, obj);
-  }).catch((arg0) => {
-    logger.error("Failed to reset app icon:", arg0);
+  const setAppIconResult = fetchCurrentAppIconDefault.setAppIcon(DEFAULT, c0);
+  fetchCurrentAppIconDefault.setAppIcon(DEFAULT, c0).then((result) => {
+    ORPHANED(dependencyMap[10]);
+    const obj = { previous_icon_id: closure_0, reset_to_icon_id: DEFAULT, reset_reason: ORPHANED };
+    obj.track(AnalyticEvents.APP_ICON_AUTO_RESET, obj);
+  }).catch((error) => {
+    logger.error("Failed to reset app icon:", error);
   });
 };
 const appIconPremiumManager = new AppIconPremiumManager();
 const tmp2 = new timestampDefault("AppIconPremiumManager");
-let result = require("set").fileFinishedImporting("modules/app_icons/native/AppIconPremiumManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_icons/native/AppIconPremiumManager.tsx");
 
 export default appIconPremiumManager;

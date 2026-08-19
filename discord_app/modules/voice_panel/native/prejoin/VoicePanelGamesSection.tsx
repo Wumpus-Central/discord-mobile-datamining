@@ -10,7 +10,7 @@ import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 16376 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 function GameRow(gameId) {
   gameId = gameId.gameId;
   let _require;
@@ -50,8 +50,6 @@ function GameRow(gameId) {
     }
     return jsx(tmp(6291).TableRow, obj2);
   }
-  const tmp3 = importDefault;
-  const tmp4 = useOpenGameProfileModalDefault;
 }
 const memoResult = importAllResult.memo(function VoicePanelGamesSection(arg0) {
   ({ members, guildId } = arg0);
@@ -64,12 +62,12 @@ const memoResult = importAllResult.memo(function VoicePanelGamesSection(arg0) {
       const obj = { title: null, hasIcons: true, children: null };
       const intl = getSystemLocale.intl;
       obj[0] = intl.string(getSystemLocale.t.crRMpG);
-      obj[2] = arr.map((gameId) => callback(closure_4, { gameId }, gameId));
+      obj[2] = arr.map((item, index) => callback(closure_4, { gameId: item }, item));
       tmp3 = jsx(VoiceBadges.VoicePanelFormSection, { title: null, hasIcons: true, children: null });
     }
   }
   return tmp3;
 });
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelGamesSection.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelGamesSection.tsx");
 
 export default memoResult;

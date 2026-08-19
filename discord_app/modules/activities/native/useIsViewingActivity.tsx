@@ -3,10 +3,10 @@
 // Module 8690 (useIsViewingActivity)
 import ChannelCallCameraPreviewDefault from "ChannelCallCameraPreview" /* 8668 */;
 import useIsActivityFocusedDefault from "useIsActivityFocused" /* 8679 */;
-import closure_3 from "getParticipants" /* 4773 */;
+import getParticipants from "getParticipants" /* 4773 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/native/useIsViewingActivity.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/native/useIsViewingActivity.tsx");
 
 export const useIsViewingActivity = function useIsViewingActivity(channelId) {
   channelId = channelId.channelId;

@@ -1,7 +1,7 @@
 // === Module 677: INVITE ===
 
 // Module 677 (INVITE)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import items2 from "items" /* 678 */;
 import CONFERENCE_MODE_ENABLED from "CONFERENCE_MODE_ENABLED" /* 683 */;
 import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID" /* 684 */;
@@ -238,13 +238,13 @@ obj[38] = function INVITE_LOGIN(arg0) {
 obj[39] = function INVITE_REGISTER(arg0) {
   return "/invite/" + arg0 + "/register";
 };
-obj[40] = function INVITE_PROXY(arg0, targetMessageId) {
+obj[40] = function INVITE_PROXY(targetChannelId, targetMessageId) {
   if (null != targetMessageId) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "/invite-proxy/" + arg0 + "?messageId=" + targetMessageId;
+    let combined = "/invite-proxy/" + targetChannelId + "?messageId=" + targetMessageId;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "/invite-proxy/" + arg0;
+    combined = "/invite-proxy/" + targetChannelId;
   }
   return combined;
 };
@@ -558,8 +558,8 @@ obj[131] = function COLLECTIBLES_SHOP_PRODUCT_DETAIL(arg0) {
 obj[132] = function COLLECTIBLES_SHOP_LAYOUT(arg0) {
   return "/shop/layout/" + arg0;
 };
-obj[135] = function CHANNEL_SUMMARIES(arg0) {
-  return "/channels/" + arg0 + "/summaries";
+obj[135] = function CHANNEL_SUMMARIES(callback) {
+  return "/channels/" + callback + "/summaries";
 };
 obj[136] = function CHANNEL_SUMMARY(channelId, id) {
   return "/channels/" + channelId + "/summaries/" + id;
@@ -587,7 +587,7 @@ obj[145] = function QUEST_PREVIEW_TOOL_2(arg0) {
 };
 const frozen = Object.freeze(obj);
 const wrapPathsResult = getAuthenticationPath.wrapPaths(frozen, [":", "?", "@"]);
-const result = set.fileFinishedImporting("modules/routing/RouteConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/routing/RouteConstants.tsx");
 
 export const ME = "@me";
 export const FAVORITES = "@favorites";

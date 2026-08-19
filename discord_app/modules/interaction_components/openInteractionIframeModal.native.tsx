@@ -1,10 +1,10 @@
 // === Module 16612: _openInteractionIframeModal ===
 
 // Module 16612 (_openInteractionIframeModal)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { INTERACTION_IFRAME_MODAL_KEY as closure_4 } from "INTERACTION_IFRAME_MODAL_KEY" /* 16613 */;
 
-const require = arg1;
+const require = fn;
 function _openInteractionIframeModal() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -57,7 +57,7 @@ function _openInteractionIframeModal() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
 
 export default function openInteractionIframeModal() {
   const self = this;

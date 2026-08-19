@@ -1,14 +1,13 @@
 // === Module 8582: useWideAuthView ===
 
 // Module 8582 (useWideAuthView)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7925 */;
 
-const result = set.fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
+const result = obj132.fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
 
 export default function useWideAuthView() {
   const tmp = useIsWindowLargeDefault();
-  const obj = isMetaQuest;
   return isMetaQuest.isMetaQuest() || tmp;
 };

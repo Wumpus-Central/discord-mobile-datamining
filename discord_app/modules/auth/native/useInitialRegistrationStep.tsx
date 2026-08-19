@@ -1,13 +1,13 @@
 // === Module 15227: useInitialRegistrationStep ===
 
 // Module 15227 (useInitialRegistrationStep)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "hasConsented" /* 5258 */;
+import noop from "noop" /* 19 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import hasConsented from "hasConsented" /* 5258 */;
 import { resetRegistration } from "useRegistrationUIStore" /* 15212 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
 
 export default function useInitialRegistrationStep(arg0) {
   const _require = arg0;
@@ -15,14 +15,15 @@ export default function useInitialRegistrationStep(arg0) {
   const stateFromStores = _require(589).useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
   const items1 = [stateFromStores, arg0];
   const effect = React.useEffect(() => {
-    let tmp2 = callback === callback(closure_1_2[4]).getRegistrationSteps()[1];
+    let tmp2 = callback === callback(dependencyMap[4]).getRegistrationSteps()[1];
     if (tmp2) {
       tmp2 = null == stateFromStores;
     }
     if (tmp2) {
-      const locationMetadata = stateFromStores(closure_1_2[6]).getLocationMetadata();
-      const obj2 = stateFromStores(closure_1_2[6]);
+      const locationMetadata = stateFromStores(dependencyMap[6]).getLocationMetadata();
+      const obj2 = stateFromStores(dependencyMap[6]);
     }
+    const obj = callback(dependencyMap[4]);
   }, items1);
   const items2 = [arg0];
   const effect1 = React.useEffect(() => {
@@ -35,6 +36,6 @@ export default function useInitialRegistrationStep(arg0) {
         }
       };
     }
-    obj = callback(closure_1_2[4]);
+    obj = callback(dependencyMap[4]);
   }, items2);
 };

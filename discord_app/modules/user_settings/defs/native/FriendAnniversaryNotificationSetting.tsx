@@ -1,7 +1,7 @@
 // === Module 14806: toggle ===
 
 // Module 14806 (toggle)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import MobileUserSettings from "MobileUserSettings" /* 8198 */;
@@ -25,22 +25,6 @@ const toggle = createToggle.createToggle({
     return apexExperimentDefault.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BVO96v);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableFriendAnniversaryNotifications.useSetting,
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["00TNo7"]);
-  },
-  onValueChange: onFriendAnniversaryNotificationSettingsChanged.onFriendAnniversaryNotificationSettingsChanged,
-  usePredicate() {
-    return apexExperimentDefault.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx");
 
 export default toggle;

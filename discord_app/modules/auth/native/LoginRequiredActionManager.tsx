@@ -3,11 +3,11 @@
 // Module 16626 (handleConnectionOpen)
 import initializeDefault from "initialize" /* 5038 */;
 import handleLogoutDefault from "handleLogout" /* 5256 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "handleUpdateUser" /* 1384 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import handleUpdateUser from "handleUpdateUser" /* 1384 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ LoginRequiredActions: c5, Routes: closure_6, UserSettingsSections: error } = ME);
 initializeDefault;
 class LoginRequiredActionManager extends tmp3 {
@@ -31,8 +31,7 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
         obj[2] = function onClose() {
           const items = [closure_1_5.UPDATE_PASSWORD];
           if (closure_1_4.requiredActionsIncludes(currentUser.id, items)) {
-            closure_1_1(closure_1_2[5]).logout("login_required_account_manager", closure_1_6.LOGIN);
-            const obj = closure_1_1(closure_1_2[5]);
+            handleLogoutDefault.logout("login_required_account_manager", closure_1_6.LOGIN);
           }
         };
         currentUser(7360).openUserSettings(obj);
@@ -46,6 +45,6 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
   }
 };
 const loginRequiredActionManager = new LoginRequiredActionManager();
-let result = require("set").fileFinishedImporting("modules/auth/native/LoginRequiredActionManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/auth/native/LoginRequiredActionManager.tsx");
 
 export default loginRequiredActionManager;

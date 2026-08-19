@@ -3,12 +3,12 @@
 // Module 8462 (useMessageMaxLength)
 import initialize from "initialize" /* 589 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ MAX_MESSAGE_LENGTH_PREMIUM: c4, MAX_MESSAGE_LENGTH: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/useMessageMaxLength.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/useMessageMaxLength.tsx");
 
 export default function useMessageMaxLength() {
   const items = [closure_3];

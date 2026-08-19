@@ -17,7 +17,6 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 prototype["initialize"] = function initialize(toggleStates) {
   for (const key10005 in obj) {
-    let tmp2 = key10005;
     let flag;
     if (arg0 != null) {
       toggleStates = arg0.toggleStates;
@@ -31,7 +30,6 @@ prototype["initialize"] = function initialize(toggleStates) {
     if (!flag) {
       continue;
     } else {
-      let tmp = closure_1;
       closure_1[key10005] = flag;
       continue;
     }
@@ -51,12 +49,12 @@ prototype["enabled"] = function enabled() {
 prototype["allByCategory"] = function allByCategory(PREMIUM) {
   closure_0 = PREMIUM;
   const entries = Object.entries(closure_0);
-  const found = entries.filter((arg0) => {
-    [, tmp] = arg0;
+  const found = entries.filter((item, index) => {
+    [, tmp] = item;
     return tmp.category === closure_0;
   });
-  return found.map((arg0) => {
-    [tmp, tmp2] = arg0;
+  return found.map((item, index) => {
+    [tmp, tmp2] = item;
     const items = [tmp, , ];
     let flag = table[tmp];
     if (flag == null) {
@@ -79,7 +77,7 @@ const devSettingsStore = new DevSettingsStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/devtools/dev_settings/DevSettingsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/devtools/dev_settings/DevSettingsStore.tsx");
 
 export default devSettingsStore;
 export const DevSettingsCategory = obj;

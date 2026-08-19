@@ -3,9 +3,8 @@
 // Module 5275 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
 
-let set = new Set();
+const set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
 class RecentlyActiveCollapseStore extends PersistedStore {
 }
@@ -14,7 +13,7 @@ prototype["initialize"] = function initialize(guilds) {
   set.clear();
   if (guilds != null) {
     guilds = guilds.guilds;
-    const item = guilds.forEach((arg0) => set.add(arg0));
+    const item = guilds.forEach((item, index) => set.add(item));
   }
 };
 prototype["isCollapsed"] = function isCollapsed(arg0) {
@@ -29,12 +28,12 @@ const recentlyActiveCollapseStore = new RecentlyActiveCollapseStore(dispatcherDe
   SET_RECENTLY_ACTIVE_COLLAPSED: function handleSetRecentlyActiveCollapsed(guildId) {
     guildId = guildId.guildId;
     if (guildId.collapsed) {
-      obj.add(guildId);
+      set.add(guildId);
     } else {
-      obj.delete(guildId);
+      set.delete(guildId);
     }
   }
 });
-const result = set.fileFinishedImporting("modules/opt_in_channels/RecentlyActiveCollapseStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/opt_in_channels/RecentlyActiveCollapseStore.tsx");
 
 export default recentlyActiveCollapseStore;

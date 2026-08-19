@@ -1,12 +1,12 @@
 // === Module 15062: useAutoScrollToSearchResultSetting ===
 
 // Module 15062 (useAutoScrollToSearchResultSetting)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "zustandStore" /* 13993 */;
+import noop from "noop" /* 19 */;
+import zustandStore from "zustandStore" /* 13993 */;
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
 export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearchResultSetting(ref, memo, scrollTarget) {
   const _require = ref;
@@ -34,7 +34,7 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   const effect = navigation.useEffect(() => {
     closure_0 = navigation.addListener("transitionEnd", () => {
       if (closure_5) {
-        let obj = ref(closure_1_1[4]);
+        let obj = ref(memo[4]);
         const initialScrollIndex = obj.getInitialScrollIndex(closure_4, closure_1);
         if (null != initialScrollIndex) {
           if (ref != null) {

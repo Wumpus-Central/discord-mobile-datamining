@@ -1,7 +1,7 @@
 // === Module 1959: prefix ===
 
 // Module 1959 (prefix)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1960 */;
 import TableId from "TableId" /* 1962 */;
 
@@ -97,12 +97,12 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof closure_1_2 !== "function") {
+    if (typeof DaoTransaction !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(closure_1_2.prototype);
+    const obj = Object.create(DaoTransaction.prototype);
     obj.transaction = transaction;
-    return closure_0(obj);
+    return callback(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
@@ -161,7 +161,7 @@ prototype2["delete"] = function delete(arg0) {
   }
   return deleteResult;
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Dao.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Dao.tsx");
 
 export { Dao };
 export { DaoTransaction };

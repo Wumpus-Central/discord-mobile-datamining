@@ -3,14 +3,14 @@
 // Module 7521 (collectThreadMetadata)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import transitionTo from "transitionTo" /* 1222 */;
-import closure_3 from "updateFromGuild" /* 7517 */;
-import closure_4 from "updateState" /* 7271 */;
+import updateFromGuild from "updateFromGuild" /* 7517 */;
+import updateState from "updateState" /* 7271 */;
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");
 
 export const collectThreadMetadata = function collectThreadMetadata(channel, arg1) {
   let flag = arg1;
@@ -58,7 +58,6 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
       obj[7] = closure_6.can(Permissions.SEND_MESSAGES, channel);
       obj[8] = channel.parentChannelThreadType;
       tmp = obj;
-      const obj3 = DISCORD_EPOCHDefault;
     }
   }
   return tmp;

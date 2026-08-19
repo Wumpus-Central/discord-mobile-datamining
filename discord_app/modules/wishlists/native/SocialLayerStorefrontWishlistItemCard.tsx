@@ -2,23 +2,22 @@
 
 // Module 10371 (SocialLayerStorefrontWishlistItemCard)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "addApplication" /* 4478 */;
-import closure_5 from "initialize" /* 10369 */;
+import noop from "noop" /* 19 */;
+import addApplication from "addApplication" /* 4478 */;
+import initialize from "initialize" /* 10369 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { applicationIcon: null, nestedCard: null };
-createCacheKey = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8, width: 24, height: 24, borderRadius: ThemesDefault.radii.sm, zIndex: 1 };
+const createCacheKey = { position: "absolute", top: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8, width: 24, height: 24, borderRadius: ThemesDefault.radii.sm, zIndex: 1 };
 createCacheKey[0] = createCacheKey;
 const obj1 = { shadowColor: "Array", shadowOffset: 0, shadowOpacity: 0, shadowRadius: 0, elevation: "visible", overflow: null, borderRadius: "\u{1F9DB}\u{1F3FB}\u200D\u2642\uFE0F" };
 obj1[1] = { width: 0, height: 0 };
 obj1[6] = ThemesDefault.radii.none;
 createCacheKey[1] = obj1;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/wishlists/native/SocialLayerStorefrontWishlistItemCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/wishlists/native/SocialLayerStorefrontWishlistItemCard.tsx");
 
 export default function SocialLayerStorefrontWishlistItemCard(sku) {
   sku = sku.sku;
@@ -29,14 +28,12 @@ export default function SocialLayerStorefrontWishlistItemCard(sku) {
   const wishlistOwnerId = sku.wishlistOwnerId;
   const size = sku.size;
   const merged = Object.assign(sku, Object.create(null));
-  let applicationId;
   let stateFromStores1;
   let memo;
-  closure_6 = undefined;
   let obj = sku(size[6]);
   const items = [memo];
   const items1 = [sku.id, wishlistOwnerId];
-  applicationId = sku.applicationId;
+  const applicationId = sku.applicationId;
   const stateFromStores = obj.useStateFromStores(items, () => {
     let hasSentGiftResult = null != wishlistOwnerId;
     if (hasSentGiftResult) {

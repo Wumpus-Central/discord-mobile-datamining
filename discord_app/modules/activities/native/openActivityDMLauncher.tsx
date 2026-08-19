@@ -1,10 +1,10 @@
 // === Module 13439: _openActivityDMLauncher ===
 
 // Module 13439 (_openActivityDMLauncher)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 
-const require = arg1;
+const require = fn;
 function _openActivityDMLauncher() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
@@ -190,7 +190,7 @@ function _openActivityDMLauncher() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
 
 export default function openActivityDMLauncher() {
   const self = this;

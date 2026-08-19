@@ -1,12 +1,14 @@
 // === Module 11726: useGuildPowerupExpiringNotificationsConfig ===
 
 // Module 11726 (useGuildPowerupExpiringNotificationsConfig)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2367 */;
+import messagesProxyDefault2 from "messagesProxy" /* 2757 */;
 import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 11727 */;
 import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 11728 */;
 
-const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
 
 export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
   let arr = useGetExpiringGuildPowerupsDefault(arg0);
@@ -15,10 +17,10 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     let stringResult;
     if (arr2.length > 0) {
       const intl = getSystemLocale.intl;
-      stringResult = intl.string(tmp(2757)["B3OfL/"]);
+      stringResult = intl.string(messagesProxyDefault2["B3OfL/"]);
     }
     const items = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(arr.map((title) => title.title), 0);
+    let arraySpreadResult = HermesBuiltin.arraySpread(arr.map((item, index) => item.title), 0);
     if (null != stringResult) {
       const items1 = [stringResult];
       let items2 = items1;
@@ -27,13 +29,13 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     }
     arraySpreadResult = HermesBuiltin.arraySpread(items2, arraySpreadResult);
     const items3 = [];
-    if (arr.some((skuId) => skuId.skuId === callback(table[4]).VANITY_URL_POWERUP_SKU_ID)) {
+    if (arr.some((item, index) => item.skuId === callback(table[4]).VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = getSystemLocale.intl;
-      arr = items3.push(intl2.string(tmp(2367).Sfr0Jw));
+      arr = items3.push(intl2.string(messagesProxyDefault.Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = getSystemLocale.intl;
-      arr = items3.push(intl3.string(tmp(2757).wiungr));
+      arr = items3.push(intl3.string(messagesProxyDefault2.wiungr));
     }
     let obj = { shouldShow: null, expiringPowerups: null, expiringPowerupNames: null, warnings: null };
     obj[0] = tmp3;

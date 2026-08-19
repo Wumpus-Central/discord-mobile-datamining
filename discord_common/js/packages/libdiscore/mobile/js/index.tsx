@@ -1,7 +1,7 @@
 // === Module 1918: LIBDISCORE_JSI ===
 
 // Module 1918 (LIBDISCORE_JSI)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import typedGlobal from "typedGlobal" /* 1919 */;
 
@@ -19,7 +19,7 @@ if (NativeModules.LibDiscoreModule) {
 }
 LibDiscoreModule.bridgeJSIFunctions();
 const LIBDISCORE_JSI = typedGlobal.typedGlobal.LIBDISCORE_JSI;
-let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
 const prototype = function BlockedDomainsStore() {
   return Object.create(new.target.prototype);
 }.prototype;

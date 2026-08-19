@@ -1,8 +1,8 @@
 // === Module 9657: AudioSettingsDefaultVolumes ===
 
 // Module 9657 (AudioSettingsDefaultVolumes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx");
 
 export const AudioSettingsDefaultVolumes = { USER: 100, [100]: "USER", STREAM: 18, [18]: "STREAM" };

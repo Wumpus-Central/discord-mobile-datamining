@@ -3,32 +3,32 @@
 // Module 5301 (updateCategoriesAndProducts)
 import failsDefault from "fails" /* 584 */;
 import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "fromServer" /* 5302 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import fromServer from "fromServer" /* 5302 */;
 
-const require = arg1;
+const require = fn;
 function updateCategoriesAndProducts(map) {
   let items = [...closure_14.values()];
-  map = new Map(items.map((storeListingId) => {
-    const items = [storeListingId.storeListingId, storeListingId];
+  map = new Map(items.map((item, index) => {
+    const items = [item.storeListingId, item];
     return items;
   }));
   const productsFromCategories = map1(5313).getProductsFromCategories(map, true);
-  map1 = new Map(productsFromCategories.map((skuId) => {
-    const items = [skuId.skuId, skuId];
+  map1 = new Map(productsFromCategories.map((item, index) => {
+    const items = [item.skuId, item];
     return items;
   }));
-  const item = map1.forEach((skuId) => {
-    if (!map1.has(skuId.skuId)) {
-      const result = map1.set(skuId.skuId, skuId);
+  const item = map1.forEach((item, index) => {
+    if (!map1.has(item.skuId)) {
+      const result = map1.set(item.skuId, item);
     }
   });
   const obj = map1(5313);
   const productsFromCategories1 = map1(5313).getProductsFromCategories(map, false);
-  map2 = new Map(productsFromCategories1.map((storeListingId) => {
-    const items = [storeListingId.storeListingId, storeListingId];
+  map2 = new Map(productsFromCategories1.map((item, index) => {
+    const items = [item.storeListingId, item];
     return items;
   }));
   closure_11 = [...map2.values()];
@@ -40,15 +40,15 @@ function reset() {
   c16 = false;
   closure_13 = {};
   const values = Object.values(closure_12);
-  const item = values.forEach((cancel) => cancel.cancel());
+  const item = values.forEach((item, index) => item.cancel());
   closure_12 = {};
   c17 = undefined;
   c19 = undefined;
   closure_20 = {};
   c21 = 0;
 }
-let closure_5 = 10 * setDefault.Millis.SECOND;
-let closure_6 = 10 * setDefault.Millis.MINUTE;
+let closure_5 = 10 * obj132Default.Millis.SECOND;
+let closure_6 = 10 * obj132Default.Millis.MINUTE;
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
@@ -129,7 +129,7 @@ Object.defineProperty(prototype, "categories", {
   set: undefined
 });
 Object.defineProperty(prototype, "products", {
-  get: function products(arg0) {
+  get: function products(dependencyMap) {
     return map1;
   },
   set: undefined
@@ -161,8 +161,8 @@ prototype["getProduct"] = function getProduct(arg0) {
   return value;
 };
 prototype["getProductsBySkus"] = function getProductsBySkus(arr) {
-  const mapped = arr.map((arg0) => closure_9.get(arg0));
-  return mapped.filter((arg0) => null != arg0);
+  const mapped = arr.map((item, index) => closure_9.get(item));
+  return mapped.filter((item, index) => null != item);
 };
 prototype["getProductFetch"] = function getProductFetch(closure_0) {
   let tmp;
@@ -217,27 +217,27 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
       if (!obj.isEqual(items, mapped)) {
         if (!categories.noOp) {
           const _Map = Map;
-          map = new Map(mapped.map((skuId) => {
-            const items = [skuId.skuId, skuId];
+          map = new Map(mapped.map((item, index) => {
+            const items = [item.skuId, item];
             return items;
           }));
           const _Date = Date;
-          const date = new Date();
-          const item = map.forEach((unpublishedAt) => {
-            const hasItem = map.has(arg1);
+          const item = map.forEach((item, index) => {
+            const hasItem = map.has(index);
             let tmp2 = !hasItem;
             if (!hasItem) {
-              let tmp4 = null == unpublishedAt.unpublishedAt;
+              let tmp4 = null == item.unpublishedAt;
               if (!tmp4) {
-                tmp4 = unpublishedAt.unpublishedAt > date;
+                tmp4 = item.unpublishedAt > date;
               }
               tmp2 = tmp4;
             }
             if (tmp2) {
-              const result = map.set(arg1, unpublishedAt);
+              const result = map.set(index, item);
             }
           });
           updateCategoriesAndProducts(map);
+          const date = new Date();
         }
       }
     }
@@ -268,26 +268,22 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
           if (null != product.bundledProducts) {
             const _Map = Map;
             let bundledProducts = value.bundledProducts;
-            map = new Map(bundledProducts.map((arg0) => {
+            map = new Map(bundledProducts.map((item, index) => {
               const items = [, ];
-              ({ skuId: arr[0], prices: arr[1] } = arg0);
+              ({ skuId: arr[0], prices: arr[1] } = item);
               return items;
             }));
             bundledProducts = product.bundledProducts;
             for (const item10012 of bundledProducts) {
-              let tmp3 = item10012;
               value = map.get(item10012.skuId);
               let tmp6 = null != value;
               let tmp5 = value;
               if (tmp6) {
                 let _Object = Object;
-                let tmp7 = item10012;
-                tmp6 = 0 === Object.keys(tmp3.prices).length;
+                tmp6 = 0 === Object.keys(item10012.prices).length;
               }
               if (tmp6) {
-                let tmp8 = item10012;
-                let tmp9 = value;
-                tmp3.prices = tmp5;
+                item10012.prices = tmp5;
               }
               continue;
             }
@@ -321,8 +317,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
     }
     if (!obj.pending) {
       obj.fail(() => {
-        let obj = closure_1_1(closure_1_2[4]);
-        obj = { type: "COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED", skuId };
+        const obj = { type: "COLLECTIBLES_PRODUCT_FETCH_BACKOFF_EXPIRED", skuId };
         return obj.dispatch(obj);
       });
     }
@@ -336,8 +331,8 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
     if (0 !== shopHome.shopHome.categories.length) {
       const _Map = Map;
       const categories = shopHome.shopHome.categories;
-      map = new Map(categories.map((skuId) => {
-        const items = [skuId.skuId, skuId];
+      map = new Map(categories.map((item, index) => {
+        const items = [item.skuId, item];
         return items;
       }));
       const _Map2 = Map;
@@ -352,6 +347,6 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(dispatcherDefaul
   },
   LOGOUT: reset
 });
-let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesCategoryStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/CollectiblesCategoryStore.tsx");
 
 export default collectiblesCategoryStore;

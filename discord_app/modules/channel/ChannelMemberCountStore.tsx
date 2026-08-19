@@ -4,8 +4,8 @@
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "_handleConnectionOpen" /* 4495 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
 let closure_4 = Object.freeze({ online: null, total: null });
 let closure_5 = {};
@@ -47,8 +47,8 @@ const channelMemberCountStore = new ChannelMemberCountStore(dispatcherDefault, {
       const channelMemberCount = socket.requestChannelMemberCount(_null.guildId, _null.channelId);
     }
     const keys = DISCORD_EPOCHDefault.keys(closure_6);
-    const item = keys.forEach((arg0) => {
-      if (null == channel.getChannel(arg0)) {
+    const item = keys.forEach((item, index) => {
+      if (null == channel.getChannel(item)) {
         delete tmp[tmp2];
       }
     });
@@ -68,6 +68,6 @@ const channelMemberCountStore = new ChannelMemberCountStore(dispatcherDefault, {
     return true;
   }
 });
-const result = require("set").fileFinishedImporting("modules/channel/ChannelMemberCountStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel/ChannelMemberCountStore.tsx");
 
 export default channelMemberCountStore;

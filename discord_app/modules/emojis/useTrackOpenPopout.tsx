@@ -1,16 +1,18 @@
 // === Module 9403: useTrackOpenPopout ===
 
 // Module 9403 (useTrackOpenPopout)
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import toggleGuildExpandedState from "toggleGuildExpandedState" /* 9299 */;
+import noop from "noop" /* 19 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 import { EmojiInteractionPoint } from "set" /* 1925 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
 
 export const useTrackOpenPopout = (emojiId) => {
   ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = emojiId);
@@ -18,8 +20,8 @@ export const useTrackOpenPopout = (emojiId) => {
   let merged = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channelId.getChannelId(currentGuildId))));
   current = current.useRef({ guild_id: currentGuildId, emoji_id: emojiId.emojiId }).current;
   useMountLayoutEffectDefault(() => {
-    let obj = closure_1_0(closure_1_2[7]);
-    const result = obj.initiateEmojiInteraction(closure_1_6.TrackOpenPopoutUsed);
+    let obj = toggleGuildExpandedState;
+    const result = obj.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
     if (!closure_2) {
       let str;
       if (analyticsType != null) {
@@ -32,8 +34,7 @@ export const useTrackOpenPopout = (emojiId) => {
       obj[0] = str;
       obj[1] = closure_1;
       const merged = Object.assign(current);
-      closure_1_1(closure_1_2[8]).track(closure_1_7.OPEN_POPOUT, obj);
-      const obj2 = closure_1_1(closure_1_2[8]);
+      expandEventPropertiesDefault.track(AnalyticEvents.OPEN_POPOUT, obj);
     }
   });
   return current;

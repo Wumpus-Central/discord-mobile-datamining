@@ -3,18 +3,19 @@
 // Module 10081 (ConnectedInAppNotificationSettingsScreen)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import computeChannelName from "computeChannelName" /* 4984 */;
+import _modDef6798 from "module_6798" /* 6798 */;
 import Form from "Form" /* 8083 */;
 import ChannelSettingsNotificationsGuardDefault from "ChannelSettingsNotificationsGuard" /* 10082 */;
 import importAllResult from "noop" /* 19 */;
 import { isMultiUserDM } from "createChannelRecord" /* 1395 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function ConnectedInAppNotificationSettingsScreen(channel) {
   channel = channel.channel;
   let obj = channel(589);
@@ -24,8 +25,8 @@ function ConnectedInAppNotificationSettingsScreen(channel) {
     isMuted: obj.useStateFromStores(items, () => {
       let isChannelMutedResult;
       if (null != channel) {
-        if (closure_1_4(obj.type)) {
-          isChannelMutedResult = closure_1_7.isChannelMuted(obj.getGuildId(), obj.id);
+        if (isMultiUserDM(channel.type)) {
+          isChannelMutedResult = closure_1_7.isChannelMuted(channel.getGuildId(), channel.id);
         }
       }
       return isChannelMutedResult;
@@ -44,17 +45,16 @@ class InAppNotificationSettingsScreen extends PureComponent {
     applyArgumentsResult.handleGroupDMMute = function handleGroupDMMute() {
       ({ channel, isMuted } = applyArgumentsResult.props);
       if (null != channel) {
-        let obj = closure_1_1(closure_1_2[8]);
         const guildId = channel.getGuildId();
-        obj = { muted: null };
+        const obj = { muted: null };
         obj[0] = !isMuted;
-        const NotificationLabel = applyArgumentsResult(closure_1_2[9]).NotificationLabel;
+        const NotificationLabel = applyArgumentsResult(dependencyMap[9]).NotificationLabel;
         const result = obj.updateChannelOverrideSettings(guildId, channel.id, obj, NotificationLabel.muted(!isMuted));
       }
     };
     applyArgumentsResult.handleOpenUserSettings = function handleOpenUserSettings() {
-      let obj = applyArgumentsResult(table[14]);
-      obj = { screen: constants.NOTIFICATIONS };
+      applyArgumentsResult(table[14]);
+      const obj = { screen: constants.NOTIFICATIONS };
       obj.openUserSettings(obj);
     };
     return applyArgumentsResult;
@@ -68,7 +68,6 @@ prototype["renderGroupDMNotificationSettings"] = function renderGroupDMNotificat
   } else {
     let obj = computeChannelName;
     const channelName = obj.computeChannelName(channel, closure_8, closure_6);
-    obj = { children: null };
     obj = { label: null, value: null, onValueChange: null };
     const intl = getSystemLocale.intl;
     obj1 = { name: null };
@@ -100,8 +99,8 @@ prototype["renderChannelNotificationSettings"] = function renderChannelNotificat
     if (constants.GROUP_DM === type) {
       return self.renderGroupDMNotificationSettings();
     } else {
-      if (tmp.GUILD_TEXT !== type) {
-        if (tmp.GUILD_ANNOUNCEMENT !== type) {
+      if (constants.GUILD_TEXT !== type) {
+        if (constants.GUILD_ANNOUNCEMENT !== type) {
           return null;
         }
       }
@@ -110,9 +109,8 @@ prototype["renderChannelNotificationSettings"] = function renderChannelNotificat
   }
 };
 prototype["render"] = function render() {
-  let obj = { children: null };
   const items = [this.renderChannelNotificationSettings(), , ];
-  obj = { title: null, children: null };
+  let obj = { title: null, children: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.clE4PU);
   obj = { label: null, onPress: null, trailing: null };
@@ -135,8 +133,7 @@ const memoResult = importAllResult.memo((channelId) => {
   const items = [channelId, onClose];
   const screens = importAllResult.useMemo(() => {
     channel = closure_1_5.getChannel(channel);
-    let obj = { IN_APP_NOTIFICATION_SETTINGS: null };
-    obj = {
+    let obj = {
       headerTitle() {
         const obj = { title: null, subtitle: null };
         const intl = callback(closure_1_2[12]).intl;
@@ -144,12 +141,12 @@ const memoResult = importAllResult.memo((channelId) => {
         let channelName = null;
         if (null != callback) {
           const tmp3Result = callback(closure_1_2[10]);
-          channelName = tmp3Result.computeChannelName(tmp, closure_1_8, closure_1_6, true);
+          channelName = tmp3Result.computeChannelName(callback, closure_1_8, closure_1_6, true);
         }
         obj[1] = channelName;
         return closure_1_11(callback(closure_1_2[16]).NavigatorHeader, obj);
       },
-      headerLeft: channelId(closure_1_2[16]).getHeaderCloseButton(onClose),
+      headerLeft: channelId(dependencyMap[16]).getHeaderCloseButton(onClose),
       render() {
         return closure_1_11(closure_1_14, { channel: closure_0 });
       }
@@ -159,6 +156,6 @@ const memoResult = importAllResult.memo((channelId) => {
   }, items);
   return callback(channelId(6312).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });
-let result = require("set").fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
+let result = require("obj132").fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
 
 export default memoResult;

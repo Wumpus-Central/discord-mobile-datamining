@@ -3,19 +3,18 @@
 // Module 11876 (AddPhoneScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import AddPhoneDefault from "AddPhone" /* 8628 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { useContactSyncModalStore } from "ContactSyncModes" /* 11850 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, redesignContainer: null, header: null, title: null, subtitle: null };
-createCacheKey = { paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
+const createCacheKey = { paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
 createCacheKey[2] = { alignItems: "center" };
@@ -23,13 +22,12 @@ createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32 };
-let result = require("set").fileFinishedImporting("modules/contact_sync/native/components/AddPhoneScreens.tsx");
+let result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/AddPhoneScreens.tsx");
 
 export const AddPhoneScreen = function AddPhoneScreen() {
   let obj = _require(1500);
   _require = obj.useNavigation();
   const tmp = callback4();
-  obj = { style: tmp.header, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = _require(1236).intl;
   obj[4] = intl.string(_require(1236).t.Xgb497);
@@ -44,7 +42,7 @@ export const AddPhoneScreen = function AddPhoneScreen() {
   obj2[1] = _require(8629).ChangePhoneReason.CONTACT_SYNC;
   obj2[2] = tmp2;
   obj2[3] = function onComplete(arg0) {
-    return callback(closure_1_2[15]).submitPhone(arg0, callback);
+    return callback(dependencyMap[15]).submitPhone(arg0, callback);
   };
   return callback2(AddPhoneDefault, obj2);
 };
@@ -56,14 +54,12 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
       c3 = 0;
       c4 = 0;
       return (function*(arg0) {
-        let addedPhone = tmp5;
-        let codeIntercepted = tmp2;
         lib(true);
         closure_1_1(undefined);
         const obj2 = lib(closure_1_2[15]);
         lib = yield obj2.verifyPhone(lib);
-        codeIntercepted = lib.codeIntercepted;
-        addedPhone = lib.addedPhone;
+        const codeIntercepted = lib.codeIntercepted;
+        const addedPhone = lib.addedPhone;
         codeIntercepted(error);
         let tmp7 = addedPhone;
         if (addedPhone) {
@@ -105,15 +101,15 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
   const effect = React.useEffect(() => {
     c0 = null;
     if (null != stateFromStores) {
-      const result = closure_1_0(navigation[15]).handlePhoneVerificationComplete(tmp, navigation);
-      result.then(() => {
-        closure_0 = closure_2_0(navigation[17]).runAfterInteractions(() => callback(false));
+      const result = require(navigation[15]).handlePhoneVerificationComplete(tmp, navigation);
+      result.then((result) => {
+        closure_0 = require(navigation[17]).runAfterInteractions(() => callback(false));
       });
-      const obj = closure_1_0(navigation[15]);
+      const obj = require(navigation[15]);
     }
     return () => {
-      if (c0 != null) {
-        c0.cancel();
+      if (_null != null) {
+        _null.cancel();
       }
     };
   }, items1);
@@ -135,7 +131,7 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
       return applyArgumentsResult;
     },
     onVerified(arg0) {
-      const result = closure_1_0(navigation[15]).verifyPhoneWithPassword(arg0, navigation);
+      const result = require(navigation[15]).verifyPhoneWithPassword(arg0, navigation);
     }
   };
   return callback2(importDefault(navigation[19]), obj);
@@ -161,14 +157,14 @@ export const VerifyPasswordScreen = function VerifyPasswordScreen() {
     c0 = null;
     if (null != stateFromStores) {
       const result = callback(phoneToken[15]).handlePhoneVerificationComplete(tmp, navigation);
-      result.then(() => {
+      result.then((result) => {
         _null = _null(phoneToken[17]).runAfterInteractions(() => callback(false));
       });
       const obj = callback(phoneToken[15]);
     }
     return () => {
-      if (c0 != null) {
-        c0.cancel();
+      if (_null != null) {
+        _null.cancel();
       }
     };
   }, items1);

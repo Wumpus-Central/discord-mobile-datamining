@@ -4,12 +4,12 @@
 import noopAll from "noop" /* 19 */;
 import itemsDefault from "items" /* 15757 */;
 import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 15766 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/icymi/native/ContentInventoryEntryRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/native/ContentInventoryEntryRow.tsx");
 
 export default function ContentInventoryEntryRow(content) {
   content = content.content;

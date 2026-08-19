@@ -1,14 +1,14 @@
 // === Module 12503: set ===
 
 // Module 12503 (set)
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
 
 const StorageKeys = ME.StorageKeys;
-let set = new Set();
+const set = new Set();
 const set1 = new Set();
 const Store = initializeDefault.Store;
 class TooltipStore extends Store {
@@ -49,16 +49,16 @@ const tooltipStore = new TooltipStore(dispatcherDefault, {
     if (!set.has(tooltip)) {
       if (!set1.has(tooltip)) {
         if (!ignoreMaxShownLimit) {
-          ignoreMaxShownLimit = obj.size < 1;
+          ignoreMaxShownLimit = set.size < 1;
         }
         if (ignoreMaxShownLimit) {
-          obj.add(tooltip);
+          set.add(tooltip);
         }
       }
     }
     return false;
   }
 });
-let result = set.fileFinishedImporting("modules/tooltip/TooltipStore.tsx");
+let result = obj132.fileFinishedImporting("modules/tooltip/TooltipStore.tsx");
 
 export default tooltipStore;

@@ -2,29 +2,27 @@
 
 // Module 9510 (GuildProfileActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleUpdateStart" /* 8854 */;
+import handleUpdateStart from "handleUpdateStart" /* 8854 */;
 import { GuildProfileFetchStatus } from "handleUpdateStart" /* 8854 */;
 import { INVALID_ACCESS_ERROR_CODE } from "BannerPalettePresets" /* 9511 */;
 import { VerticalGradient } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { loadingContainer: { paddingTop: 40 }, footerContainer: { paddingHorizontal: 16, paddingVertical: 40 }, scrollView: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[2] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileActionSheet.tsx");
 
 export default function GuildProfileActionSheet(guildId) {
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
   let analyticsLocations;
-  let token1;
   ({ context, inviteKey } = guildId);
   const tmp = callback3();
   let obj = guildId(analyticsLocations[9]);
@@ -42,7 +40,7 @@ export default function GuildProfileActionSheet(guildId) {
   const tmp4 = fetchGuildProfile(analyticsLocations[8])();
   analyticsLocations = fetchGuildProfile(analyticsLocations[13])(fetchGuildProfile(analyticsLocations[14]).GUILD_PROFILE).analyticsLocations;
   let obj4 = guildId(analyticsLocations[11]);
-  token1 = obj4.useToken(fetchGuildProfile(analyticsLocations[7]).colors.BACKGROUND_BASE_LOW);
+  const token1 = obj4.useToken(fetchGuildProfile(analyticsLocations[7]).colors.BACKGROUND_BASE_LOW);
   let obj5 = token1;
   const items1 = [guildId, analyticsLocations];
   const effect = token1.useEffect(() => {
@@ -124,4 +122,5 @@ export default function GuildProfileActionSheet(guildId) {
   tmp19 = callback(closure_4, { style: tmp.loadingContainer, children: callback(closure_5, { animating: true, size: "large" }) });
   tmp18 = null;
   tmp20 = callback;
+  const obj9 = { style: tmp.loadingContainer, children: callback(closure_5, { animating: true, size: "large" }) };
 };

@@ -1,13 +1,12 @@
 // === Module 13191: createWebSocket ===
 
 // Module 13191 (createWebSocket)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");
 
-export default function createWebSocket(url) {
-  obj = { headers: obj };
-  obj = { Origin: window.GLOBAL_ENV.NATIVE_WEBSOCKET_ORIGIN };
-  const webSocket = new WebSocket(url, arg1, obj);
+export default function createWebSocket(dependencyMap) {
+  const obj = { Origin: window.GLOBAL_ENV.NATIVE_WEBSOCKET_ORIGIN };
+  const webSocket = new WebSocket(dependencyMap, arg1, obj);
   return webSocket;
 };

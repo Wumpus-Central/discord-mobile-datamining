@@ -1,13 +1,13 @@
 // === Module 6066: PrivacyShieldWithLaptopBannerSpotIllustration ===
 
 // Module 6066 (PrivacyShieldWithLaptopBannerSpotIllustration)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import metadataDefault from "metadata" /* 6067 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/PrivacyShieldWithLaptopBannerSpotIllustration.native.tsx");
+const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/PrivacyShieldWithLaptopBannerSpotIllustration.native.tsx");
 
 export const PrivacyShieldWithLaptopBannerSpotIllustration = function PrivacyShieldWithLaptopBannerSpotIllustration(width) {
   let num = width.width;
@@ -23,8 +23,7 @@ export const PrivacyShieldWithLaptopBannerSpotIllustration = function PrivacyShi
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
+  let obj = { uri: metadataDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];

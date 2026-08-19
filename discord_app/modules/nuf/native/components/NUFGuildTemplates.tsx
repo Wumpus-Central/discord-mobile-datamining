@@ -3,16 +3,16 @@
 // Module 11879 (onCreateGuild)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import NavigationStack from "NavigationStack" /* 6312 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 import { Keyboard } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 4201 */;
+import initialize from "initialize" /* 4201 */;
 import ME from "ME" /* 676 */;
 import { GuildTemplateId } from "GuildTemplateId" /* 11880 */;
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 8617 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function onCreateGuild() {
   const self = this;
   const apply = _onCreateGuild.apply;
@@ -144,11 +144,11 @@ function _onCreateServer() {
                 c4 = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_15(tmp14);
+                obj1[0] = closure_1_15(closure_1);
                 return obj1;
               } else {
                 const obj2 = { guildId: null };
-                obj2[0] = tmp14;
+                obj2[0] = closure_1;
                 arr = arr.push(closure_1_11.CHANNEL_PROMPT, obj2);
               }
             }
@@ -182,12 +182,11 @@ function _onCreateServer() {
 ({ AnalyticEvents: error, AnalyticsSections: closure_8, NOOP: c9 } = ME);
 ({ CreateGuildModalStates: unpackModuleId, GuildTemplateTriggers: closure_12, NUXGuildTemplatesAnalytics: map1 } = NUXGuildTemplatesAnalytics);
 let obj = { impression_group: require("encodeProperties").ImpressionGroups.GUILD_ADD_FLOW };
-let result = require("set").fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");
+let result = require("obj132").fileFinishedImporting("modules/nuf/native/components/NUFGuildTemplates.tsx");
 
 export default function NUFGuildTemplates() {
   obj = {
     screens: React.useMemo(() => {
-      obj = {};
       obj = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_LANDING,
         impressionProperties: closure_18,
@@ -370,7 +369,6 @@ export default function NUFGuildTemplates() {
   obj[3] = constants.GUILD_TEMPLATES;
   return jsx(NavigationStack.Navigator, {
     screens: React.useMemo(() => {
-      obj = {};
       obj = {
         impressionName: callback(503).ImpressionNames.GUILD_ADD_LANDING,
         impressionProperties: closure_18,

@@ -3,21 +3,21 @@
 // Module 13360 (getAttachmentsRestriction)
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 9080 */;
 import { UserRowModes } from "UserRowModes" /* 9081 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import "createCacheKey";
+import obj132 from "obj132" /* 500 */;
 
-require = arg1;
+require = fn;
 function getAttachmentsRestriction(type) {
   if (type instanceof closure_7) {
     if (callback2(type.type)) {
@@ -35,56 +35,51 @@ function getAttachmentsRestriction(type) {
 ({ ChannelRecordBase: error, isGuildChannelType: closure_8 } = createChannelRecord);
 ({ AnalyticEvents: unpackModuleId, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = ME);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-createCacheKey = { container: null, headerLeftContainer: null, headerRightContainer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 let num = 0;
-if (set.isIOS()) {
+if (obj132.isIOS()) {
   num = ThemesDefault.space.PX_16;
 }
 createCacheKey[1] = { paddingLeft: num };
 let num2 = 0;
-if (set.isIOS()) {
+if (obj132.isIOS()) {
   num2 = ThemesDefault.space.PX_16;
 }
 createCacheKey[2] = { paddingRight: num2 };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/share/native/ShareScreen.tsx");
+const result = obj132.fileFinishedImporting("modules/share/native/ShareScreen.tsx");
 
 export default function ShareScreen(sharedContent) {
   sharedContent = sharedContent.sharedContent;
   const onClose = sharedContent.onClose;
-  let first;
-  let callback;
   let length;
   let React;
   c6 = undefined;
-  closure_7 = undefined;
   let first1;
   let embed;
   let isLoading;
-  let tmp = callback3();
+  const tmp = callback3();
   let obj = React;
   let items = [sharedContent];
   const tmp3 = length(React.useState(React.useMemo(() => {
     const items = [];
     if (null != sharedContent.targetUserId) {
       let obj = { type: "user", id: null };
-      obj[1] = tmp.targetUserId;
+      obj[1] = sharedContent.targetUserId;
       items.push(obj);
     }
     if (null != sharedContent.targetChannelId) {
       obj = { type: "channel", id: null };
-      obj[1] = tmp.targetChannelId;
+      obj[1] = sharedContent.targetChannelId;
       items.push(obj);
     }
     return items;
   }, items)), 2);
-  first = tmp3[0];
-  callback = tmp3[1];
+  const first = tmp3[0];
   length = first.length;
   React = tmp4;
-  callback = React.useCallback((arg0) => {
+  let callback = React.useCallback((arg0) => {
     callback(arg0);
   }, []);
   [tmp7, c6] = length(React.useState(false), 2);
@@ -119,10 +114,10 @@ export default function ShareScreen(sharedContent) {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw arr;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj[0] = arr;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -130,14 +125,14 @@ export default function ShareScreen(sharedContent) {
     } else {
       try {
         React = 2;
-        if (0 === closure_4) {
+        if (0 === c4) {
           if (arg0 === 1) {
             React = 3;
-            throw arg1;
+            throw arr;
           } else if (arg0 === 2) {
             React = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = arr;
             return obj;
           } else {
             c1 = tmp3;
@@ -146,17 +141,16 @@ export default function ShareScreen(sharedContent) {
             c1 = undefined;
             c2 = undefined;
             c3 = undefined;
-            closure_4 = undefined;
+            c4 = undefined;
             React = undefined;
             let callback;
-            let tmp = closure_1_7;
             if (closure_1_7.current) {
               React = 3;
             } else {
               closure_1_7.current = true;
               closure_1_6(true);
               c3 = 1;
-              closure_4 = 2;
+              c4 = 2;
               React = 1;
               obj1 = { value: null, done: false };
               obj1[0] = Promise.all(closure_2.map(lib(closure_2[16]).getOrResolveChannelIdFromDestinationId));
@@ -171,22 +165,17 @@ export default function ShareScreen(sharedContent) {
         } else if (2 === tmp7) {
           if (arg0 === 1) {
             React = 3;
-            throw arg1;
+            throw arr;
           } else if (arg0 === 2) {
             c3 = 0;
             closure_1_6(false);
             closure_1_7.current = false;
             React = 3;
             let obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            obj2[0] = arr;
             return obj2;
           } else {
-            tmp = lib;
-            tmp = c1;
-            tmp = lib;
-            tmp = closure_2;
-            lib = arg1.filter(lib(closure_2[17]).isNotNullish);
-            tmp = lib;
+            lib = arr.filter(lib(closure_2[17]).isNotNullish);
             if (0 === lib.length) {
               let obj11 = lib(closure_2[18]);
               const intl3 = lib(closure_2[14]).intl;
@@ -199,26 +188,18 @@ export default function ShareScreen(sharedContent) {
               obj3[0] = undefined;
               return obj3;
             } else {
-              tmp = lib;
-              tmp = c1;
-              tmp = lib;
               const attachments = lib.attachments;
-              tmp = attachments;
-              closure_2 = attachments.map((mimeType) => {
-                let str = mimeType.mimeType;
+              closure_2 = attachments.map((item, index) => {
+                let str = item.mimeType;
                 if (str == null) {
                   str = "unknown";
                 }
                 return str;
               });
-              tmp = attachments;
-              tmp = closure_2;
-              tmp = lib;
-              tmp = attachments(closure_2[19]);
-              closure_4 = 3;
+              c4 = 3;
               React = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = tmp(lib.map((() => {
+              obj4[0] = attachments(closure_2[19])(lib.map((() => {
                 closure_0 = dependencyMap((arg0) => {
                   closure_0 = arg0;
                   c3 = 0;
@@ -313,20 +294,19 @@ export default function ShareScreen(sharedContent) {
         } else if (3 === tmp7) {
           if (arg0 === 1) {
             React = 3;
-            throw arg1;
+            throw arr;
           } else if (arg0 === 2) {
             c3 = 0;
             closure_1_6(false);
             closure_1_7.current = false;
             React = 3;
             const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
+            obj5[0] = arr;
             return obj5;
           } else {
-            closure_3 = arg1;
-            tmp = c1;
-            if (!closure_3.every((status) => "fulfilled" === status.status)) {
-              React = closure_2.filter((arg0, arg1) => "rejected" === dependencyMap[arg1].status);
+            closure_3 = arr;
+            if (!closure_3.every((item, index) => "fulfilled" === item.status)) {
+              React = closure_2.filter((item, index) => "rejected" === dependencyMap[index].status);
               callback = React.lazy(() => _undefined(_undefined2[25])(_undefined2[24], _undefined2.paths));
               obj3 = lib(closure_2[26]);
               let obj6 = { title: null, content: null, failedDestinations: null };
@@ -345,17 +325,17 @@ export default function ShareScreen(sharedContent) {
           }
         } else if (arg0 === 1) {
           React = 3;
-          throw arg1;
+          throw arr;
         } else if (arg0 === 2) {
           c3 = 0;
           closure_1_6(false);
           closure_1_7.current = false;
           React = 3;
           const obj8 = { value: null, done: true };
-          obj8[0] = arg1;
+          obj8[0] = arr;
           return obj8;
         } else {
-          lib(closure_2[22]).transitionToChannel(closure_4, { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
+          lib(closure_2[22]).transitionToChannel(c4, { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
           const obj18 = lib(closure_2[22]);
           if (obj19.isAndroid()) {
             obj = attachments(closure_2[23]);
@@ -370,11 +350,11 @@ export default function ShareScreen(sharedContent) {
           obj9[0] = undefined;
           return obj9;
         }
-        closure_4 = lib[0];
+        c4 = lib[0];
         obj6 = attachments(closure_2[21]);
         const obj10 = { channelId: null };
-        obj10[0] = closure_4;
-        closure_4 = 4;
+        obj10[0] = c4;
+        c4 = 4;
         React = 1;
         obj11 = { value: null, done: false };
         obj11[0] = obj6.fetchMessages(obj10);
@@ -385,7 +365,7 @@ export default function ShareScreen(sharedContent) {
           React = tmp2;
           throw tmp80;
         } else {
-          closure_4 = tmp;
+          c4 = tmp;
         }
       }
     }
@@ -399,7 +379,6 @@ export default function ShareScreen(sharedContent) {
       if (tmp != null) {
         embed = tmp.embed;
       }
-      obj = { children: null };
       obj = { embed: null, isLoadingEmbed: null, isRevamp: true };
       obj[0] = embed;
       obj[1] = isLoading;
@@ -407,9 +386,6 @@ export default function ShareScreen(sharedContent) {
       obj[0] = items;
       let tmp4Result = closure_1_18(closure_1_17, obj);
       const tmp10 = onClose(first[28]);
-      const tmp4 = closure_1_18;
-      const tmp5 = closure_1_17;
-      const tmp6 = closure_1_16;
     } else {
       tmp4Result = null;
     }
@@ -425,7 +401,7 @@ export default function ShareScreen(sharedContent) {
       let obj = { limit: null };
       obj[0] = closure_1_13;
       let subtitle = intl2.formatToPlainString(sharedContent(first[14]).t["qqyp/e"], obj);
-    } else if (length >= closure_1_14) {
+    } else if (length >= MAX_DESTINATION_COUNT) {
       const intl = sharedContent(first[14]).intl;
       obj = { count: null };
       obj[0] = tmp2;
@@ -441,16 +417,14 @@ export default function ShareScreen(sharedContent) {
   }
   obj1[3] = headerCloseButton;
   ({ headerLeftContainer: obj4[4], headerRightContainer: obj4[5] } = tmp);
-  const tmp2 = length;
-  const tmp21 = closure_18;
   const tmp22 = c6;
-  let tmp6 = length(React.useState(false), 2);
+  const tmp6 = length(React.useState(false), 2);
   let PX_8;
   if (tmp11Result1.isIOS()) {
     PX_8 = tmp16(tmp9[12]).space.PX_8;
   }
   obj1[6] = PX_8;
-  const items3 = [closure_16(tmp11(tmp9[29]).Header, obj1), , ];
+  const items3 = [callback(tmp11(tmp9[29]).Header, obj1), , ];
   let obj2 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations: first, onSelectedDestinationChange: callback, getRowIsUnavailable: null, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: null, disableLongPress: null };
   let tmp26;
   let tmp16Result = tmp16(tmp9[33]);
@@ -461,7 +435,7 @@ export default function ShareScreen(sharedContent) {
   obj2[7] = length >= MAX_DESTINATION_COUNT || sharedContent.attachments.length > closure_13;
   tmp11Result1 = tmp11(tmp9[13]);
   obj2[8] = tmp11(tmp9[13]).isAndroid();
-  items3[1] = closure_16(tmp16Result, obj2);
+  items3[1] = callback(tmp16Result, obj2);
   let obj3 = { text: first1, setText: tmp2Result[1], preview: memo, sendLabel: stringResult, canSend: null, isSending: null, onSend: null, disabled: null, appEntryKey: null };
   let tmp28 = length > 0;
   tmp16Result = tmp16(tmp9[34]);
@@ -474,8 +448,8 @@ export default function ShareScreen(sharedContent) {
   obj3[6] = callback1;
   obj3[7] = sharedContent.attachments.length > closure_13;
   obj3[8] = sharedContent.appEntryKey;
-  items3[2] = closure_16(tmp16Result, obj3);
+  items3[2] = callback(tmp16Result, obj3);
   obj[1] = items3;
-  obj4[0] = tmp21(tmp22, obj);
-  return closure_16(tmp11(tmp9[29]).SafeAreaProviderCompat, obj4);
+  obj4[0] = callback2(tmp22, obj);
+  return callback(tmp11(tmp9[29]).SafeAreaProviderCompat, obj4);
 };

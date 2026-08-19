@@ -2,15 +2,15 @@
 
 // Module 8915 (DeleteEventAlert)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "scheduledEventSort" /* 4370 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import scheduledEventSort from "scheduledEventSort" /* 4370 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 let closure_6 = createCacheKey.createStyles({ contentText: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx");
 
 export default function DeleteEventAlert(eventException) {
   ({ eventId: require, guildId: importDefault, recurrenceId } = eventException);
@@ -109,9 +109,9 @@ export default function DeleteEventAlert(eventException) {
     recurrence_rule = stateFromStores.recurrence_rule;
   }
   closure_4 = tmp7;
-  const intl = tmp2(tmp3[9]).intl;
+  const intl = require(recurrenceId[9]).intl;
   const string = intl.string;
-  const t = tmp2(tmp3[9]).t;
+  const t = require(recurrenceId[9]).t;
   if (null != recurrenceId) {
     let stringResult = string(t.tqClly);
   } else if (tmp6) {
@@ -120,7 +120,7 @@ export default function DeleteEventAlert(eventException) {
     stringResult = string(t.B9sJLX);
   }
   obj = { title: stringResult, content: null, extraContent: null, actions: null };
-  const intl2 = tmp2(tmp3[9]).intl;
+  const intl2 = require(recurrenceId[9]).intl;
   obj[1] = intl2.string(require(recurrenceId[9]).t.v2GWNQ);
   let tmp8Result = null;
   if (null != recurrence_rule) {
@@ -128,9 +128,9 @@ export default function DeleteEventAlert(eventException) {
     if (!tmp7) {
       obj = { variant: "text-md/medium", color: "text-default", style: null, children: null };
       obj[2] = tmp.contentText;
-      const intl3 = tmp2(tmp3[9]).intl;
-      obj[3] = intl3.format(tmp2(tmp3[9]).t.ZcpcyO, {});
-      tmp8Result = tmp8(tmp2(tmp3[10]).Text, obj);
+      const intl3 = require(recurrenceId[9]).intl;
+      obj[3] = intl3.format(require(recurrenceId[9]).t.ZcpcyO, {});
+      tmp8Result = tmp8(require(recurrenceId[10]).Text, obj);
     }
   }
   obj[2] = tmp8Result;
@@ -150,18 +150,19 @@ export default function DeleteEventAlert(eventException) {
   };
   if (null != recurrence_rule) {
     if (!tmp7) {
-      const intl4 = tmp2(tmp3[9]).intl;
-      let stringResult1 = intl4.string(tmp2(tmp3[9]).t["8ZsNv5"]);
+      const intl4 = require(recurrenceId[9]).intl;
+      let stringResult1 = intl4.string(require(recurrenceId[9]).t["8ZsNv5"]);
     }
     obj1[2] = stringResult1;
     const items1 = [tmp8(tmp11, obj1, "delete"), ];
     let obj2 = { variant: "secondary", text: null };
-    const intl6 = tmp2(tmp3[9]).intl;
-    obj2[1] = intl6.string(tmp2(tmp3[9]).t.oEAioF);
-    items1[1] = tmp8(tmp2(tmp3[8]).AlertActionButton, obj2, "cancel");
+    const intl6 = require(recurrenceId[9]).intl;
+    obj2[1] = intl6.string(require(recurrenceId[9]).t.oEAioF);
+    items1[1] = tmp8(require(recurrenceId[8]).AlertActionButton, obj2, "cancel");
     obj[3] = items1;
-    return tmp8(tmp2(tmp3[8]).AlertModal, obj);
+    return tmp8(require(recurrenceId[8]).AlertModal, obj);
   }
-  const intl5 = tmp2(tmp3[9]).intl;
-  stringResult1 = intl5.string(tmp2(tmp3[9]).t.B9sJLX);
+  const intl5 = require(recurrenceId[9]).intl;
+  stringResult1 = intl5.string(require(recurrenceId[9]).t.B9sJLX);
+  tmp = callback();
 };

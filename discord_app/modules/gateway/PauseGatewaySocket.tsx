@@ -1,10 +1,10 @@
 // === Module 13223: getIsPaused ===
 
 // Module 13223 (getIsPaused)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let c0 = false;
-const result = set.fileFinishedImporting("modules/gateway/PauseGatewaySocket.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/PauseGatewaySocket.tsx");
 
 export function getIsPaused() {
   return c0;

@@ -2,9 +2,8 @@
 
 // Module 10969 (_applyStaffBuildOverride)
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 
-let closure_0 = arg1;
 function _applyStaffBuildOverride() {
   const self = this;
   const tmp = importDefaultResult((arg0) => {
@@ -260,7 +259,7 @@ function _clearBuildOverride() {
 }
 let c3 = importDefaultResult;
 let c5 = "/__development/build_overrides";
-closure_0 = importDefaultResult((arg0) => {
+let closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c2 = 0;
   c1 = 0;
@@ -326,7 +325,7 @@ const f86855 = function() {
   }
   return applyArgumentsResult;
 };
-const result = require("set").fileFinishedImporting("modules/build_overrides/ApplyBuildOverrideUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/build_overrides/ApplyBuildOverrideUtils.tsx");
 
 export const applyStaffBuildOverride = function applyStaffBuildOverride(arg0) {
   const self = this;
@@ -367,7 +366,7 @@ export const getPublicBuildOverrideLink = function getPublicBuildOverrideLink(ar
   }
   obj[2] = { Authorization: str };
   const obj2 = callback(4290);
-  return HTTP.post(obj).then((body) => ({ url: body.body.url, error: false }), (status) => {
+  return HTTP.post(obj).then((result) => ({ url: result.body.url, error: false }), (status) => {
     if (400 === status.status) {
       let obj = { url: false, error: null };
       obj[1] = status.body;

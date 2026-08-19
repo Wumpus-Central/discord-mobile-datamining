@@ -1,10 +1,10 @@
 // === Module 7907: getIllustrationSource ===
 
 // Module 7907 (getIllustrationSource)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ManaContext from "ManaContext" /* 4104 */;
 
-const result = set.fileFinishedImporting("design/components/Illustration/native/index.tsx");
+const result = obj132.fileFinishedImporting("design/components/Illustration/native/index.tsx");
 
 export const getIllustrationSource = function getIllustrationSource(theme, light) {
   if ("light" === theme) {
@@ -29,6 +29,6 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
   }
   return lightResult;
 };
-export const useIllustrationSource = function useIllustrationSource(arg0) {
-  return arg0(ManaContext.useThemeContext().theme);
+export const useIllustrationSource = function useIllustrationSource(fn) {
+  return fn(ManaContext.useThemeContext().theme);
 };

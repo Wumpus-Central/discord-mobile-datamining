@@ -4,17 +4,20 @@
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import registerAssetDefault from "registerAsset" /* 4311 */;
 import frozen from "frozen" /* 8171 */;
 import _sendGiftMessage from "_sendGiftMessage" /* 8294 */;
-import closure_3 from "getCurrentTime" /* 8290 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import registerAssetDefault2 from "registerAsset" /* 8295 */;
+import registerAssetDefault3 from "registerAsset" /* 8296 */;
+import getCurrentTime from "getCurrentTime" /* 8290 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { GiftIntentType } from "GuildFeatures" /* 1924 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
-createCacheKey = { headerTextColor: ThemesDefault.colors.TEXT_STRONG, subHeaderTextColor: ThemesDefault.colors.TEXT_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_MUTED };
+require = fn;
+const createCacheKey = { headerTextColor: ThemesDefault.colors.TEXT_STRONG, subHeaderTextColor: ThemesDefault.colors.TEXT_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_MUTED };
 let closure_6 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
 
 export const createGiftIntentEmbed = function createGiftIntentEmbed(message, theme) {
   const giftingPrompt = message.giftingPrompt;
@@ -31,7 +34,6 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         let obj = { headerText: null, subHeaderParts: null };
         const intl = getSystemLocale.intl;
         obj[0] = intl.string(getSystemLocale.t.CeQIwZ);
-        obj = { text: null };
         const intl2 = getSystemLocale.intl;
         obj = { numberOfYears: null };
         obj[0] = tmp12;
@@ -44,7 +46,6 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         if (tmp13.UNSPECIFIED !== giftIntentType) {
           _sendGiftMessage.unhandledGiftIntent(giftIntentType);
           tmp = null;
-          const obj11 = _sendGiftMessage;
         }
       }
       if (null == tmp) {
@@ -67,18 +68,15 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj1[6] = giftIntentType;
         ({ headerTextColor: obj4[7], subHeaderTextColor: obj4[8], backgroundColor: obj4[9], borderColor: obj4[10] } = callback(theme));
         const tmp6 = callback(theme);
-        obj1[11] = frozen.getAssetUriForEmbed(tmp8(4311));
+        obj1[11] = frozen.getAssetUriForEmbed(registerAssetDefault);
         const intl3 = getSystemLocale.intl;
         obj1[12] = intl3.string(getSystemLocale.t.ilhtIa);
-        const obj5 = frozen;
-        obj1[13] = frozen.getAssetUriForEmbed(tmp8(8295));
-        const obj6 = frozen;
-        obj1[14] = frozen.getAssetUriForEmbed(tmp8(8296));
+        obj1[13] = frozen.getAssetUriForEmbed(registerAssetDefault2);
+        obj1[14] = frozen.getAssetUriForEmbed(registerAssetDefault3);
         const intl4 = getSystemLocale.intl;
         obj1[15] = intl4.string(getSystemLocale.t.I5gL2H);
         return obj1;
       }
-      const obj10 = nameFromUserDefault;
     }
     obj8 = user;
   }

@@ -1,14 +1,13 @@
 // === Module 8404: flattenColorOverOpaqueBackground ===
 
 // Module 8404 (flattenColorOverOpaqueBackground)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import nDefault from "n" /* 689 */;
 
-const result = set.fileFinishedImporting("design/utils/shared/colors.tsx");
+const result = obj132.fileFinishedImporting("design/utils/shared/colors.tsx");
 
 export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(token, context) {
   const obj = nDefault(token);
-  const tmp = importDefault;
   const rgbaResult = obj.rgba();
   const rgbaResult1 = nDefault(context).rgba();
   if (1 !== rgbaResult1[3]) {

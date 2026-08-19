@@ -1,10 +1,11 @@
 // === Module 14007: createPendingImage ===
 
 // Module 14007 (createPendingImage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import AssetOriginTypes from "AssetOriginTypes" /* 8385 */;
 
-const result = set.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
 
 export const createPendingImage = function createPendingImage(assetOrigin) {
   let NEW_ASSET = assetOrigin.assetOrigin;
@@ -20,7 +21,7 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[3] = description;
     obj[5] = originalMd5;
     return obj;
-  } else if (tmp3(8385).AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (AssetOriginTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET === NEW_ASSET) {
     obj = { assetOrigin: null, imageUri: null, staticImageUri: null, description: null, originalAsset: null, originalMd5: null };
     obj[0] = NEW_ASSET;
     obj[1] = imageUri;
@@ -29,13 +30,14 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[4] = originalAsset;
     obj[5] = originalMd5;
     return obj;
-  } else if (tmp3(8385).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
+  } else if (AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
     obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: true };
     obj1[0] = NEW_ASSET;
     obj1[1] = imageUri;
     obj1[3] = originalAsset;
     return obj1;
   } else {
-    tmp3(1370).assertNever(NEW_ASSET);
+    isDiscordFrontendDevelopment.assertNever(NEW_ASSET);
+    const tmp3Result = isDiscordFrontendDevelopment;
   }
 };

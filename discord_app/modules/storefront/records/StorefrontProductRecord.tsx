@@ -1,11 +1,10 @@
 // === Module 5329: fromServer ===
 
 // Module 5329 (fromServer)
-import closure_0 from "fromServer" /* 5328 */;
-import closure_1 from "createFromServer" /* 4515 */;
+import fromServer from "fromServer" /* 5328 */;
+import createFromServer from "createFromServer" /* 4515 */;
 
-let prototype;
-prototype = function StorefrontProductRecord(arg0) {
+const prototype = function StorefrontProductRecord(arg0) {
   ({ id: tmp.id, skuIds: tmp.skuIds, name: tmp.name, summary: tmp.summary, options: tmp.options, createdAt: tmp.createdAt, updatedAt: tmp.updatedAt, skus: tmp.skus, primaryCollectionId: tmp.primaryCollectionId, primaryCollectionStyles: tmp.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp.primaryCollectionWillUnpublishAt, gameApplicationId: tmp.gameApplicationId } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
@@ -14,11 +13,11 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   let obj = {};
   const merged = Object.assign(Object.assign(sku_ids, Object.create(null)));
   obj.skuIds = sku_ids.sku_ids;
-  obj.options = options.map((name) => ({ name: name.name, optionValues: name.option_values }));
+  obj.options = options.map((item, index) => ({ name: item.name, optionValues: item.option_values }));
   obj.createdAt = new Date(created_at);
   const date = new Date(created_at);
   obj.updatedAt = new Date(updated_at);
-  obj.skus = skus.map((arg0) => closure_1.createFromServer(arg0));
+  obj.skus = skus.map((item, index) => closure_1.createFromServer(item));
   const collectibles = tenant_metadata.collectibles;
   let prop;
   if (collectibles != null) {
@@ -64,10 +63,10 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  obj = Object.create(tmp.prototype);
+  obj = Object.create(prototype.prototype);
   ({ id: tmp15.id, skuIds: tmp15.skuIds, name: tmp15.name, summary: tmp15.summary, options: tmp15.options, createdAt: tmp15.createdAt, updatedAt: tmp15.updatedAt, skus: tmp15.skus, primaryCollectionId: tmp15.primaryCollectionId, primaryCollectionStyles: tmp15.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp15.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp15.primaryCollectionWillUnpublishAt, gameApplicationId: tmp15.gameApplicationId } = obj);
   return obj;
 };
-const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontProductRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/storefront/records/StorefrontProductRecord.tsx");
 
 export default prototype;

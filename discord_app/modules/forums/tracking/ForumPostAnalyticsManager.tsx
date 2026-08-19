@@ -1,12 +1,13 @@
 // === Module 7520: handleThreadCreate ===
 
 // Module 7520 (handleThreadCreate)
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "handleThreadCreateOrUpdate" /* 4969 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate" /* 4969 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
-let require = arg1;
+let require = fn;
 initializeDefault;
 class ForumPostAnalyticsManager extends tmp2 {
   constructor() {
@@ -34,12 +35,13 @@ class ForumPostAnalyticsManager extends tmp2 {
     };
     applyArgumentsResult.processForumChannel = function processForumChannel(guild_id, channelId) {
       const threadsForParent = closure_1_3.getThreadsForParent(guild_id, channelId);
-      const keys = closure_1_1(closure_1_2[4]).keys(threadsForParent);
-      const item = keys.forEach((arg0) => {
-        const forumPostReadStatesById = closure_1_0(closure_1_2[5]).getForumPostReadStatesById(arg0);
+      const keys = DISCORD_EPOCHDefault.keys(threadsForParent);
+      const item = keys.forEach((item, index) => {
+        const forumPostReadStatesById = closure_1_0(closure_1_2[5]).getForumPostReadStatesById(item);
         if (null != forumPostReadStatesById) {
-          readStateSnapshots.readStateSnapshots[arg0] = forumPostReadStatesById;
+          readStateSnapshots.readStateSnapshots[item] = forumPostReadStatesById;
         }
+        const obj = closure_1_0(closure_1_2[5]);
       });
     };
     applyArgumentsResult.getReadStateSnapshotAnalytics = function getReadStateSnapshotAnalytics(id) {
@@ -60,6 +62,6 @@ ForumPostAnalyticsManager.prototype["handleThreadCreate"] = function handleThrea
   }
 };
 const forumPostAnalyticsManager = new ForumPostAnalyticsManager();
-const result = require("set").fileFinishedImporting("modules/forums/tracking/ForumPostAnalyticsManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/tracking/ForumPostAnalyticsManager.tsx");
 
 export default forumPostAnalyticsManager;

@@ -1,7 +1,7 @@
 // === Module 14822: toggle ===
 
 // Module 14822 (toggle)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import MobileUserSettings from "MobileUserSettings" /* 8198 */;
@@ -24,22 +24,6 @@ const toggle = createToggle.createToggle({
     return false;
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xEqC6q);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.KmVXll);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableSummaryReminderNotifications.useSetting,
-  onValueChange: onSummaryReminderNotificationSettingsChanged.onSummaryReminderNotificationSettingsChanged,
-  usePredicate() {
-    return false;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
 
 export default toggle;

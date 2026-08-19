@@ -5,25 +5,25 @@ import fromStringAll from "fromString" /* 506 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
 import set from "set" /* 4375 */;
 import keysSorter from "keysSorter" /* 4376 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "handleConnectionOpen" /* 4197 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ EMPTY_NUX_SERVER: c5, FAVORITES: closure_6, ME: error } = ME);
-const result = require("set").fileFinishedImporting("modules/oauth2/Authorize.tsx");
+const result = require("obj132").fileFinishedImporting("modules/oauth2/Authorize.tsx");
 
 export const filterScopes = function filterScopes(items) {
-  const found = items.filter((arg0) => {
+  const found = items.filter((item, index) => {
     const RemovedScopes = callback(table[3]).RemovedScopes;
-    return !RemovedScopes.includes(arg0);
+    return !RemovedScopes.includes(item);
   });
   let hasItem = found.includes(set.OAuth2Scopes.BOT);
   if (hasItem) {
-    hasItem = !found.includes(tmp(4375).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    hasItem = !found.includes(set.OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   if (hasItem) {
-    found.push(tmp(4375).OAuth2Scopes.APPLICATIONS_COMMANDS);
+    found.push(set.OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
   return found;
 };
@@ -32,6 +32,7 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
   const parsed = obj.parse(query, { arrayFormat: "bracket" });
   const NONE = applyOverwritesAll.NONE;
   try {
+    const deserializer = fromStringAll;
     let str2 = "0";
     if (null != parsed.permissions) {
       str2 = "0";
@@ -40,7 +41,6 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
       }
     }
     ({ channel_id, guild_id } = parsed);
-    const tmp3Result = fromStringAll;
     if (guild_id == null) {
       channel = channel.getChannel(channel_id);
       guild_id = undefined;
@@ -52,7 +52,7 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
       guild_id = guildId.getGuildId();
     }
     let str4 = parsed.client_id;
-    const deserializeResult = fromStringAll.deserialize(str2);
+    const deserializeResult = deserializer.deserialize(str2);
     if (str4 == null) {
       str4 = "";
     }
@@ -69,8 +69,8 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
       }
     })(guild_id);
     const parts = str5.replace(/\+/g, " ").split(" ");
-    obj[1] = parts.filter((arg0) => arg0.length > 0);
-    ({ response_type: obj3[2], redirect_uri: obj3[3], code_challenge: obj3[4], code_challenge_method: obj3[5], state: obj3[6] } = parsed);
+    obj[1] = parts.filter((item, index) => item.length > 0);
+    ({ response_type: obj2[2], redirect_uri: obj2[3], code_challenge: obj2[4], code_challenge_method: obj2[5], state: obj2[6] } = parsed);
     obj[7] = deserializeResult;
     obj[8] = channel_id;
     obj[9] = tmp11;

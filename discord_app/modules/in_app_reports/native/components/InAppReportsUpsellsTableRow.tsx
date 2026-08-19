@@ -5,9 +5,9 @@ import noopAll from "noop" /* 19 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
 
 export default function InAppReportsUpsellsTableRow(disabled) {
   ({ title, disabledTitle, variant } = disabled);

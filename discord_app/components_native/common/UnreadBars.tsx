@@ -5,21 +5,21 @@ import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
+import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4344 */;
 import _toPropertyKey from "_toPropertyKey" /* 11595 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import hexToRgba from "hexToRgba" /* 4223 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = arg1;
+require = fn;
 let c3 = importAllResult;
 ({ View: c4, Animated: c5, TouchableWithoutFeedback: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { unreadText: null, unread: null, mention: null };
-createCacheKey = {};
+const createCacheKey = {};
 let merged = Object.assign(importDefaultResult(require("ME").Fonts.DISPLAY_SEMIBOLD, ThemesDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
 createCacheKey[0] = createCacheKey;
 let obj1 = { margin: 8, height: 24, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md, backgroundColor: null };
@@ -39,7 +39,7 @@ class UnreadBar extends PureComponent {
     applyArgumentsResult.animation = value;
     applyArgumentsResult.handlePress = function handlePress() {
       ({ item, onPress } = applyArgumentsResult.props);
-      const result = applyArgumentsResult(closure_1_2[10]).triggerHapticFeedback(closure_1_1(closure_1_2[11]).IMPACT_LIGHT);
+      const result = applyArgumentsResult(dependencyMap[10]).triggerHapticFeedback(IMPACT_LIGHTDefault.IMPACT_LIGHT);
       applyArgumentsResult.hide();
       onPress(item);
     };
@@ -128,8 +128,8 @@ prototype["render"] = function render() {
   const tmp = callback2(this.context);
   const props = this.props;
   ({ mention, section } = props.item);
-  let obj = { accessibilityRole: "button", onPress: this.handlePress, onPressIn: this.handlePressIn, onPressOut: this.handlePressOut, testID: "unread-bar-touchable-" + mention + "-" + section, children: null };
-  obj = { style: this.getAnimatedStyle(), nativeID: "unread-bar-animated-view-" + mention + "-" + section, children: null };
+  { accessibilityRole: "button", onPress: this.handlePress, onPressIn: this.handlePressIn, onPressOut: this.handlePressOut, testID: "unread-bar-touchable-" + mention + "-" + section, children: null };
+  let obj = { style: this.getAnimatedStyle(), nativeID: "unread-bar-animated-view-" + mention + "-" + section, children: null };
   const items = [tmp.unread, ];
   mention = undefined;
   if (mention) {
@@ -149,14 +149,14 @@ prototype["render"] = function render() {
     stringResult = string(t.FCRiT3);
   }
   obj1[2] = stringResult;
-  obj[2] = closure_8(Button.LegacyText, obj1);
-  obj[2] = closure_8(closure_4, obj);
-  obj[5] = closure_8(RN.View, obj);
-  return closure_8(closure_6, obj);
+  obj[2] = callback(Button.LegacyText, obj1);
+  obj[2] = callback(closure_4, obj);
+  obj[5] = callback(RN.View, obj);
+  return callback(closure_6, obj);
 };
 UnreadBar.defaultProps = { bottom: false };
 UnreadBar.contextType = require("ManaContext").ThemeContext;
-let result = require("set").fileFinishedImporting("components_native/common/UnreadBars.tsx");
+let result = require("obj132").fileFinishedImporting("components_native/common/UnreadBars.tsx");
 
 export default function UnreadBars(contentInset) {
   ({ scrollToLocation: require, beforeItem, afterItem, compact } = contentInset);
@@ -197,5 +197,5 @@ export default function UnreadBars(contentInset) {
   }
   items1[1] = tmp6;
   obj[1] = items1;
-  return closure_9(_toPropertyKey.TransitionGroup, obj);
+  return callback2(_toPropertyKey.TransitionGroup, obj);
 };

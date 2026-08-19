@@ -3,16 +3,16 @@
 // Module 10536
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("actions/ChannelFollowerActionCreators.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("actions/ChannelFollowerActionCreators.tsx");
 
 export default {
   createChannelFollower(webhook_channel_id, closure_1) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.CHANNEL_FOLLOWERS(closure_1), body: obj, oldFormErrors: true, rejectWithError: null };
+    { url: Endpoints.CHANNEL_FOLLOWERS(closure_1), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { webhook_channel_id };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
@@ -53,13 +53,11 @@ export default {
     })();
   },
   dismissPublishBump(messageId) {
-    let obj = dispatcherDefault;
-    obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED", messageId };
+    const obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED", messageId };
     obj.dispatch(obj);
   },
   permanentlyHidePublishBump(channelId) {
-    let obj = dispatcherDefault;
-    obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY", channelId };
+    const obj = { type: "CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY", channelId };
     obj.dispatch(obj);
   }
 };

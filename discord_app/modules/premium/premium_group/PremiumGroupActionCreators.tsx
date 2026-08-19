@@ -1,12 +1,12 @@
 // === Module 12921: _fetchPremiumGroupMembership ===
 
 // Module 12921 (_fetchPremiumGroupMembership)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createdAt" /* 1930 */;
-import closure_5 from "createFromServer" /* 12922 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import createdAt from "createdAt" /* 1930 */;
+import createFromServer from "createFromServer" /* 12922 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _fetchPremiumGroupMembership() {
   const self = this;
   const tmp = callback(function*() {
@@ -15,10 +15,10 @@ function _fetchPremiumGroupMembership() {
       HermesBuiltin.throwTypeError();
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw body;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj[0] = body;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -29,15 +29,15 @@ function _fetchPremiumGroupMembership() {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw body;
           } else if (arg0 === 2) {
             c5 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = body;
             return obj;
           } else {
             const callback = tmp3;
-            let body = tmp7;
+            body = tmp7;
             body = undefined;
             closure_1_1(closure_1_2[4]).dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_START" });
             c3 = 1;
@@ -58,15 +58,15 @@ function _fetchPremiumGroupMembership() {
           return { value: null, done: true };
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
           const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          obj3[0] = body;
           return obj3;
         } else {
-          body = arg1.body;
+          body = body.body;
           if (null != body) {
             obj1 = callback(709);
             const obj4 = { type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS", membership: null };
@@ -136,13 +136,13 @@ function _fetchEligibleUsers() {
       ineligible_users = body.ineligible_users;
       closure_5 = 0;
       const items = [];
-      closure_5 = HermesBuiltin.arraySpread(users.map((arg0) => Object.assign(new c4(arg0), { eligible: true })), closure_5);
+      closure_5 = HermesBuiltin.arraySpread(users.map((item, index) => Object.assign(new c4(item), { eligible: true })), closure_5);
       closure_6 = ineligible_users;
       if (ineligible_users == null) {
         closure_6 = [];
       }
       const obj = { users: null, nextIndex: null };
-      closure_5 = HermesBuiltin.arraySpread(closure_6.map((arg0) => Object.assign(new c4(arg0), { eligible: false })), closure_5);
+      closure_5 = HermesBuiltin.arraySpread(closure_6.map((item, index) => Object.assign(new c4(item), { eligible: false })), closure_5);
       obj[0] = items;
       obj[1] = next_index;
       return obj;
@@ -429,15 +429,15 @@ function _fetchSubscriptionGroupMembers() {
           } else {
             body = body.body;
             lib = body.map(createFromServer.createFromServer);
-            lib2 = lib.find((isPrimary) => isPrimary.isPrimary());
+            lib2 = lib.find((item, index) => item.isPrimary());
             lib2(38)(null != lib2, "Primary member not found in premium group");
             const obj5 = { type: "PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS", members: null };
             const obj6 = { primary: null, members: null, invitedUsers: null };
             obj6[0] = lib2.user;
-            const found = lib.filter((isMember) => isMember.isMember());
-            obj6[1] = found.map((user) => user.user);
-            const found1 = lib.filter((isInvited) => isInvited.isInvited());
-            obj6[2] = found1.map((user) => user.user);
+            const found = lib.filter((item, index) => item.isMember());
+            obj6[1] = found.map((item, index) => item.user);
+            const found1 = lib.filter((item, index) => item.isInvited());
+            obj6[2] = found1.map((item, index) => item.user);
             obj5[1] = obj6;
             lib2(709).dispatch(obj5);
             c4 = 0;
@@ -704,9 +704,9 @@ function _fetchPremiumGroupInvites() {
       c5 = 3;
     } else if (arg0 === 1) {
       c5 = 3;
-      throw arg1;
+      throw body;
     } else if (arg0 !== 2) {
-      const body = arg1.body;
+      body = body.body;
       const obj = callback(709);
       obj3 = { type: "PREMIUM_GROUP_INVITES_FETCH_SUCCESS", invites: null };
       obj3[1] = body;
@@ -714,7 +714,7 @@ function _fetchPremiumGroupInvites() {
       c3 = 0;
     }
     c3 = 0;
-    return arg1;
+    return body;
   });
   closure_14 = tmp;
   const apply = tmp.apply;
@@ -784,7 +784,7 @@ function _fetchPremiumGroupInvite() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/PremiumGroupActionCreators.tsx");
 
 export const fetchPremiumGroupMembership = function fetchPremiumGroupMembership() {
   const self = this;

@@ -2,12 +2,12 @@
 
 // Module 649 (connectStores)
 import _objectWithoutPropertiesDefault from "_objectWithoutProperties" /* 109 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 _objectWithoutPropertiesDefault;
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/connectStores.tsx");
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/flux/connectStores.tsx");
 
 export default function connectStores(items, arg1) {
   if (null != arg2) {
@@ -90,13 +90,13 @@ export default function connectStores(items, arg1) {
               const cachedResult = memoizedGetStateFromStores.getCachedResult(closure_0.props.childProps);
               let tmp6Result = null != cachedResult;
               if (tmp6Result) {
-                const memoizedGetStateFromStores2 = obj.memoizedGetStateFromStores;
+                const memoizedGetStateFromStores2 = closure_0.memoizedGetStateFromStores;
                 memoizedGetStateFromStores2.clear();
-                tmp6Result = _null(_null2[4])(obj.memoizedGetStateFromStores(obj.props.childProps), cachedResult);
+                tmp6Result = _null(_null2[4])(closure_0.memoizedGetStateFromStores(closure_0.props.childProps), cachedResult);
                 const tmp6 = _null(_null2[4]);
               }
               if (!tmp6Result) {
-                obj.forceUpdate();
+                closure_0.forceUpdate();
               }
             });
             applyArgumentsResult.listener = batchedStoreListener;
@@ -119,10 +119,10 @@ export default function connectStores(items, arg1) {
           const result = this.memoizedGetStateFromStores(childProps);
           const merged = Object.assign(childProps);
           const merged1 = Object.assign(result);
-          return closure_2_4(closure_0, { ref: forwardedConnectStoresRef });
+          return <closure_0 ref={forwardedConnectStoresRef} />;
         };
         FluxContainer.displayName = combined;
-        const forwardRefResult = closure_1_3.forwardRef((childProps, forwardedConnectStoresRef) => closure_2_4(FluxContainer, { childProps, forwardedConnectStoresRef }));
+        const forwardRefResult = closure_1_3.forwardRef((childProps, forwardedConnectStoresRef) => <FluxContainer childProps={childProps} forwardedConnectStoresRef={forwardedConnectStoresRef} />);
         forwardRefResult.displayName = "ForwardRef(" + combined + ")";
         return forwardRefResult;
       };
@@ -207,13 +207,13 @@ export default function connectStores(items, arg1) {
           const cachedResult = memoizedGetStateFromStores.getCachedResult(lib.props);
           let tmp6Result = null != cachedResult;
           if (tmp6Result) {
-            const memoizedGetStateFromStores2 = obj.memoizedGetStateFromStores;
+            const memoizedGetStateFromStores2 = lib.memoizedGetStateFromStores;
             memoizedGetStateFromStores2.clear();
-            tmp6Result = _null(_null2[4])(obj.memoizedGetStateFromStores(obj.props), cachedResult);
+            tmp6Result = _null(_null2[4])(lib.memoizedGetStateFromStores(lib.props), cachedResult);
             const tmp6 = _null(_null2[4]);
           }
           if (!tmp6Result) {
-            obj.forceUpdate();
+            lib.forceUpdate();
           }
         });
         applyArgumentsResult.listener = batchedStoreListener;
@@ -235,7 +235,7 @@ export default function connectStores(items, arg1) {
       const result = this.memoizedGetStateFromStores(this.props);
       const merged = Object.assign(this.props);
       const merged1 = Object.assign(result);
-      return closure_2_4(closure_0, {});
+      return <closure_0 />;
     };
     FluxContainer.displayName = combined;
     return FluxContainer;

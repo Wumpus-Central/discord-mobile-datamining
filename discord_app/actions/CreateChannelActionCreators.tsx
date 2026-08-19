@@ -4,13 +4,13 @@
 import encodeProperties from "encodeProperties" /* 503 */;
 import sendRequest from "sendRequest" /* 530 */;
 import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
 import ME from "ME" /* 676 */;
 import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 685 */;
 
-require = arg1;
+require = fn;
 ({ BITRATE_DEFAULT: c4, ChannelTypes: c5, Endpoints: closure_6 } = ME);
-let result = require("set").fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
 
 export default {
   createChannel(guildId) {
@@ -48,7 +48,7 @@ export default {
       tmp7 = availableTags.length > 0;
     }
     if (tmp7) {
-      obj.available_tags = availableTags.map((name) => ({ name: name.name, emoji_id: name.emojiId, emoji_name: name.emojiName, moderated: name.moderated }));
+      obj.available_tags = availableTags.map((item, index) => ({ name: item.name, emoji_id: item.emojiId, emoji_name: item.emojiName, moderated: item.moderated }));
     }
     if (null != gameId) {
       obj.game_id = gameId;
@@ -64,13 +64,12 @@ export default {
       }
     }
     obj = { url: closure_6.GUILD_CHANNELS(guildId), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    const tmp = permissionOverwrites;
     const tmpResult = permissionOverwrites(5227);
     obj[3] = {
       event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
-        let obj = guildId(closure_1_2[6]);
-        obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
+        guildId(dependencyMap[6]);
+        const obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
         if (body != null) {
           body = body.body;
@@ -93,8 +92,8 @@ export default {
     obj1 = {
       event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
-        let obj = guildId(closure_1_2[6]);
-        obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
+        guildId(dependencyMap[6]);
+        const obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
         if (body != null) {
           body = body.body;
@@ -116,50 +115,27 @@ export default {
     };
     obj[4] = guildId(530).rejectWithMigratedError();
     const obj6 = guildId(530);
-    return tmpResult.post(obj).then((body) => {
+    return tmpResult.post(obj).then((result) => {
       if (closure_1_3.isOptInEnabled(guildId)) {
-        let obj = permissionOverwrites(closure_1_2[8]);
-        obj = { flags: null };
+        permissionOverwrites(dependencyMap[8]);
+        const obj = { flags: null };
         obj[0] = closure_1_7.OPT_IN_ENABLED;
-        const result = obj.updateChannelOverrideSettings(tmp, body.body.id, obj, guildId(closure_1_2[9]).NotificationLabels.OptedIn);
+        result = obj.updateChannelOverrideSettings(guildId, result.body.id, obj, guildId(dependencyMap[9]).NotificationLabels.OptedIn);
       }
-      const result1 = permissionOverwrites(closure_1_2[10]).checkGuildTemplateDirty(tmp);
-      return body;
+      const result1 = permissionOverwrites(dependencyMap[10]).checkGuildTemplateDirty(guildId);
+      return result;
     }, (body) => {
-      let obj = permissionOverwrites(table[3]);
-      obj = { type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: body.body };
+      permissionOverwrites(table[3]);
+      const obj = { type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: body.body };
       obj.dispatch(obj);
       throw body;
     });
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
     let obj = _modDef5227;
-    obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, type, topic };
     obj[3] = {
-      event: encodeProperties.NetworkActionNames.CHANNEL_CREATE,
-      properties(body) {
-        let obj = callback(table[6]);
-        let id;
-        if (body != null) {
-          body = body.body;
-          if (body != null) {
-            id = body.id;
-          }
-        }
-        obj = { is_private: true, channel_id: id, channel_type: null };
-        let type;
-        if (body != null) {
-          const body2 = body.body;
-          if (body2 != null) {
-            type = body2.type;
-          }
-        }
-        obj[2] = type;
-        return obj.exact(obj);
-      }
-    };
-    obj1 = {
       event: encodeProperties.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = callback(table[6]);

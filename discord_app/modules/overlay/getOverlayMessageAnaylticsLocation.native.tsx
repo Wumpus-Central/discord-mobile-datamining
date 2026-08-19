@@ -1,9 +1,9 @@
 // === Module 5051: getOverlayMessageAnalyticsLocation ===
 
 // Module 5051 (getOverlayMessageAnalyticsLocation)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx");
+const result = obj132.fileFinishedImporting("modules/overlay/getOverlayMessageAnaylticsLocation.native.tsx");
 
 export default function getOverlayMessageAnalyticsLocation() {
   return null;

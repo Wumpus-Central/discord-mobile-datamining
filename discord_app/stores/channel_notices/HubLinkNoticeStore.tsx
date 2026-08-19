@@ -3,8 +3,8 @@
 // Module 13307 (checkGuildIsHub)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "set" /* 7194 */;
-import closure_1 from "createGuildRecordFromRust" /* 1910 */;
+import set from "set" /* 7194 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
 function checkGuildIsHub(id) {
@@ -47,9 +47,7 @@ const hubLinkNoticeStore = new HubLinkNoticeStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(arg0) {
     const obj = arg0.guilds[Symbol.iterator]();
     while (obj !== undefined) {
-      let tmp2 = checkGuildIsHub;
       if (checkGuildIsHub(tmp.id)) {
-        let tmp3 = obj;
         obj.return();
         let flag = true;
         return true;
@@ -72,6 +70,6 @@ const hubLinkNoticeStore = new HubLinkNoticeStore(dispatcherDefault, {
     return tmp2;
   }
 });
-const result = require("set").fileFinishedImporting("stores/channel_notices/HubLinkNoticeStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/channel_notices/HubLinkNoticeStore.tsx");
 
 export default hubLinkNoticeStore;

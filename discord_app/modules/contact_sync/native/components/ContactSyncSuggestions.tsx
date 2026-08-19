@@ -3,15 +3,15 @@
 // Module 11871 (SuggestedFriendsSectionHeader)
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { SuggestedFriendSource } from "SuggestedFriendSource" /* 11872 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function SuggestedFriendsSectionHeader(children) {
   return callback(View, { style: callback3().sectionHeader, children: callback(Text.Text, { color: "text-muted", variant: "text-sm/semibold", children: children.label }) });
 }
@@ -35,7 +35,6 @@ function SuggestionRow(suggestion) {
   }
   obj1 = onSelect(1435);
   const userAvatarSource = obj1.getUserAvatarSource(suggestion.suggested_user);
-  obj = { start, end, icon: null, checked: null, label: null, subLabel: null, onPress: null };
   obj = { source: userAvatarSource, size: tmp3(1297).AvatarSizes.REFRESH_MEDIUM_32 };
   obj[2] = callback(suggestion(1297).Avatar, obj);
   obj[3] = selected;
@@ -48,47 +47,39 @@ function SuggestionRow(suggestion) {
     const obj2 = { count: null };
     obj2[0] = suggestion.mutual_friends_count;
     obj1[2] = intl.format(tmp3(1236).t.z7y34b, obj2);
-    tmp8Result = tmp8(tmp3(4734).Text, obj1);
+    tmp8Result = callback(tmp3(4734).Text, obj1);
   }
   items[1] = tmp8Result;
-  obj[5] = closure_10(closure_9, { children: items });
+  obj[5] = callback(closure_9, { children: items });
   obj[6] = function onPress() {
     return onSelect(suggestion.suggested_user.id);
   };
   return callback(suggestion(8558).TableCheckboxRow, obj);
 }
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, header: null, title: null, subtitle: null, list: null, divider: null, linearGradient: null, redesignButton: null, sectionHeader: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32, justifyContent: "center" };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT + 32, justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
 createCacheKey[2] = { marginBottom: 8, textAlign: "center" };
 createCacheKey[3] = { lineHeight: 18, textAlign: "center" };
-let obj1 = { alignItems: "center", paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { flex: 1, marginTop: ThemesDefault.space.PX_12 };
-let obj2 = { flex: 1, marginTop: ThemesDefault.space.PX_12 };
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[6] = { position: "absolute", width: "100%", bottom: 0, minHeight: 136 };
-let obj3 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[7] = { position: "absolute", width: "100%", bottom: 0, padding: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
-let obj4 = { position: "absolute", width: "100%", bottom: 0, padding: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
 createCacheKey[8] = { marginBottom: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { marginBottom: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSuggestions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSuggestions.tsx");
 
 export default function ContactSyncSuggestions(friendSuggestions) {
   friendSuggestions = friendSuggestions.friendSuggestions;
   const onSubmit = friendSuggestions.onSubmit;
-  dependencyMap = undefined;
   let first;
   let React;
-  let callback;
   const tmp = callback3();
   dependencyMap = tmp;
-  const reduced = friendSuggestions.reduce((arg0, suggested_user) => {
-    arg0[suggested_user.suggested_user.id] = true;
-    return arg0;
+  const reduced = friendSuggestions.reduce((acc, item, index) => {
+    acc[item.suggested_user.id] = true;
+    return acc;
   }, {});
   let obj = friendSuggestions(4097);
   const token = obj.useToken(onSubmit(712).colors.BACKGROUND_BASE_LOW);
@@ -104,7 +95,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   const sum = onSubmit(712).space.PX_16 + onSubmit(712).space.PX_32 + 40;
   let items1 = [first];
   const sum1 = sum + Math.max(18 * Math.min(fontScale, 2) - 18, 0);
-  callback = React.useCallback((arg0) => {
+  const callback = React.useCallback((arg0) => {
     const obj = {};
     const merged = Object.assign(first);
     obj[arg0] = !first[arg0];
@@ -119,19 +110,17 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   const memo = React.useMemo(() => {
     const items = [];
     items.push({ type: "header" });
-    const item = items.forEach((friendSuggestion) => {
-      items.push({ type: "suggestedFriend", props: { friendSuggestion, selected: closure_1_3[friendSuggestion.suggested_user.id] } });
+    const item = items.forEach((item, index) => {
+      items.push({ type: "suggestedFriend", props: { friendSuggestion: item, selected: first[item.suggested_user.id] } });
     });
     return items;
   }, items2);
-  obj = { style: items4, children: null };
-  items4 = [, ];
+  const items4 = [, ];
   ({ container: arr6[0], list: arr6[1] } = tmp);
   const callback1 = React.useCallback((arg0) => {
     ({ item, index } = arg0);
     if ("header" === item.type) {
-      let obj = { children: null };
-      obj = { style: null, children: null };
+      let obj = { style: null, children: null };
       obj[0] = closure_2.header;
       obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
       obj1[0] = closure_2.title;
@@ -148,7 +137,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
       const obj3 = { label: null };
       const intl3 = friendSuggestions(closure_2[15]).intl;
       obj3[0] = intl3.string(friendSuggestions(closure_2[15]).t["1uAmCw"]);
-      items1[1] = closure_1_8(closure_1_12, obj3);
+      items1[1] = closure_1_8(SuggestedFriendsSectionHeader, obj3);
       obj[0] = items1;
       return closure_1_10(closure_1_9, obj);
     } else {
@@ -159,7 +148,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
       obj4[2] = friendSuggestion;
       obj4[3] = item.props.selected;
       obj4[4] = callback;
-      const items2 = [closure_1_8(closure_1_13, obj4), ];
+      const items2 = [closure_1_8(SuggestionRow, obj4), ];
       let tmp5 = null;
       if (index < friendSuggestions.length) {
         obj = { iconPush: true, style: null };
@@ -179,7 +168,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj[2] = callback1;
   const items5 = [callback(friendSuggestions(8029).FlashList, obj), , ];
   obj2 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
-  const someResult = keys.some((arg0) => first[arg0]);
+  const someResult = keys.some((item, index) => first[item]);
   obj2[1] = friendSuggestions(691).VerticalGradient.START;
   obj2[2] = friendSuggestions(691).VerticalGradient.END;
   obj2[4] = items;
@@ -190,11 +179,11 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj4[2] = intl.string(friendSuggestions(1236).t["J5/69j"]);
   obj4[3] = function onPress() {
     const keys = onSubmit(closure_2[18]).keys(first);
-    const found = keys.filter((arg0) => table2[arg0]);
+    const found = keys.filter((item, index) => table2[item]);
     onSubmit(found);
-    const item = found.forEach((suggested_user_id) => {
-      let obj = callback(table[24]);
-      obj = { suggested_user_id, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" };
+    const item = found.forEach((item, index) => {
+      callback(table[24]);
+      const obj = { suggested_user_id: item, suggestion_source: constants2.USER_SUGGESTIONS, location: "Contact Sync Suggestions" };
       obj.track(constants.FRIEND_SUGGESTION_ADDED, obj);
     });
   };

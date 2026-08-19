@@ -3,10 +3,10 @@
 // Module 4045 (reset)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "setPremiumTypeActual" /* 1923 */;
+import setPremiumTypeActual from "setPremiumTypeActual" /* 1923 */;
 import { isNoneSubscription } from "createFromServer" /* 4040 */;
 import { SubscriptionRecord } from "createSubscriptionItemFromServer" /* 4046 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import ME from "ME" /* 676 */;
 
 function reset() {
@@ -69,9 +69,7 @@ prototype["getPremiumSubscription"] = function getPremiumSubscription(arg0) {
       if (keys !== undefined) {
         tmp4 = null;
         while (keys[tmp] !== undefined) {
-          let tmp13 = tmp9;
           let tmp14 = tmp5[tmp9];
-          let tmp15 = store2;
           tmp4 = null;
           if (tmp14.userId !== store2.getId()) {
             break;
@@ -79,9 +77,7 @@ prototype["getPremiumSubscription"] = function getPremiumSubscription(arg0) {
             if (tmp14.type !== PREMIUM) {
               continue;
             } else {
-              let tmp10 = isNoneSubscription;
               let tmp11 = isNoneSubscription(tmp14.planId);
-              let tmp12 = !tmp11;
               tmp4 = tmp14;
               if (!tmp11) {
                 break;
@@ -115,9 +111,7 @@ prototype["getPremiumTypeSubscription"] = function getPremiumTypeSubscription(ar
       if (keys !== undefined) {
         tmp4 = null;
         while (keys[tmp] !== undefined) {
-          let tmp10 = tmp9;
           let tmp11 = tmp5[tmp9];
-          let tmp12 = store2;
           tmp4 = null;
           if (tmp11.userId !== store2.getId()) {
             break;
@@ -135,7 +129,7 @@ prototype["getPremiumTypeSubscription"] = function getPremiumTypeSubscription(ar
   }
   return tmp4;
 };
-prototype["getSubscriptions"] = function getSubscriptions(arg0) {
+prototype["getSubscriptions"] = function getSubscriptions() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -160,16 +154,15 @@ prototype["getSubscriptionForPlanIds"] = function getSubscriptionForPlanIds(item
   if (arg1 === undefined) {
     flag = true;
   }
-  let set;
-  set = new Set(items);
+  const set = new Set(items);
   const tmp2 = flag ? c7 : c6;
   let tmp3 = null;
   if (null != tmp2) {
     const _Object = Object;
     const values = Object.values(tmp2);
-    let found = values.find((items) => {
-      items = items.items;
-      return items.some((planId) => set.has(planId.planId));
+    let found = values.find((item, index) => {
+      const items = item.items;
+      return items.some((item, index) => set.has(item.planId));
     });
     if (found == null) {
       found = null;
@@ -200,15 +193,13 @@ prototype["getPremiumGroupSubscription"] = function getPremiumGroupSubscription(
   const PREMIUM = constants2.PREMIUM;
   if (PREMIUM !== constants2.PREMIUM) {
     let tmp3 = null;
-    if (null != c7) {
+    if (null != _null) {
       tmp3 = null;
       const keys = Object.keys();
       if (keys !== undefined) {
         tmp3 = null;
         while (keys[tmp] !== undefined) {
-          let tmp10 = tmp8;
-          let tmp11 = tmp4[tmp8];
-          let tmp12 = store2;
+          let tmp11 = _null[tmp8];
           tmp3 = null;
           if (tmp11.userId !== store2.getId()) {
             break;
@@ -236,21 +227,18 @@ SubscriptionStore.displayName = "SubscriptionStore";
 const subscriptionStore = new SubscriptionStore(dispatcherDefault, {
   BILLING_SUBSCRIPTION_FETCH_SUCCESS: function handleSubscriptionsFetch(subscriptions) {
     subscriptions = subscriptions.subscriptions;
-    let id;
-    let obj = {};
-    obj = {};
     const items = [];
     const items1 = [];
-    id = items1.getId();
-    const item = subscriptions.forEach((user_id) => {
-      if (user_id.user_id === constants) {
-        const fromServer = items.createFromServer(user_id);
+    const id = items1.getId();
+    const item = subscriptions.forEach((item, index) => {
+      if (item.user_id === constants) {
+        const fromServer = items.createFromServer(item);
         obj[fromServer.id] = fromServer;
         if (fromServer.status !== constants.UNPAID) {
           obj[fromServer.id] = fromServer;
           let tmp3 = fromServer.type === closure_1_5.GUILD;
           if (tmp3) {
-            tmp3 = fromServer.status !== tmp12.ENDED;
+            tmp3 = fromServer.status !== constants.ENDED;
           }
           if (tmp3) {
             items.push(fromServer);
@@ -258,8 +246,7 @@ const subscriptionStore = new SubscriptionStore(dispatcherDefault, {
           if (tmp6) {
             items1.push(fromServer);
           }
-          const tmp2 = closure_1_5;
-          tmp6 = fromServer.type === closure_1_5.APPLICATION && fromServer.status !== tmp12.ENDED;
+          tmp6 = fromServer.type === closure_1_5.APPLICATION && fromServer.status !== constants.ENDED;
         }
       }
     });
@@ -287,15 +274,15 @@ const subscriptionStore = new SubscriptionStore(dispatcherDefault, {
           tmp19 = fromServer.type === constants2.APPLICATION;
         }
         if (tmp19) {
-          const findIndexResult = _null.findIndex((id) => id.id === fromServer.id);
+          const findIndexResult = _null.findIndex((item, index) => item.id === fromServer.id);
           if (-1 === findIndexResult) {
             let items = [fromServer];
-            HermesBuiltin.arraySpread(tmp21, 1);
+            HermesBuiltin.arraySpread(_null, 1);
             let tmp27 = items;
           } else {
             items = [];
-            HermesBuiltin.arraySpread(tmp21, 0);
-            if (fromServer.status === tmp36.UNPAID) {
+            HermesBuiltin.arraySpread(_null, 0);
+            if (fromServer.status === constants.UNPAID) {
               items.splice(findIndexResult, 1);
               tmp27 = items;
             }
@@ -305,7 +292,7 @@ const subscriptionStore = new SubscriptionStore(dispatcherDefault, {
           items1 = tmp27;
         }
       } else {
-        const findIndexResult1 = items1.findIndex((id) => id.id === fromServer.id);
+        const findIndexResult1 = items1.findIndex((item, index) => item.id === fromServer.id);
         if (-1 === findIndexResult1) {
           items1 = [fromServer];
           HermesBuiltin.arraySpread(tmp8, 1);
@@ -313,7 +300,7 @@ const subscriptionStore = new SubscriptionStore(dispatcherDefault, {
         } else {
           items1 = [];
           HermesBuiltin.arraySpread(tmp8, 0);
-          if (fromServer.status === tmp36.UNPAID) {
+          if (fromServer.status === constants.UNPAID) {
             items1.splice(findIndexResult1, 1);
             tmp14 = items1;
           }
@@ -374,10 +361,10 @@ const subscriptionStore = new SubscriptionStore(dispatcherDefault, {
   },
   LOGOUT: reset
 });
-const result = require("set").fileFinishedImporting("stores/billing/SubscriptionStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/billing/SubscriptionStore.tsx");
 
 export default subscriptionStore;
-export const getSubscriptionOfType = function getSubscriptionOfType(arg0, arg1) {
+export const getSubscriptionOfType = function getSubscriptionOfType(arg0, fn) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -392,9 +379,7 @@ export const getSubscriptionOfType = function getSubscriptionOfType(arg0, arg1) 
     return null;
   } else {
     for (const key10014 in tmp3) {
-      let tmp5 = key10014;
       let tmp6 = tmp3[key10014];
-      let tmp7 = store2;
       if (tmp6.userId !== store2.getId()) {
         return null;
       } else {

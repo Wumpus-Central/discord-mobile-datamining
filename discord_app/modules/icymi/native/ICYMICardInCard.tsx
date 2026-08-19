@@ -7,21 +7,19 @@ import GuildIconSizes from "GuildIconSizes" /* 7188 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
 import SolidCutout from "SolidCutout" /* 8402 */;
 import SolidCutoutDefault from "SolidCutout" /* 8402 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-require = arg1;
+require = fn;
 function CutoutGuildIconWithUserCustom(guild) {
   guild = guild.guild;
-  let obj = { style: { width: 40, height: 40 }, children: null };
-  obj = { cutouts: null, children: null };
-  obj = { shape: null, x: 18, y: 18, size: 24 };
+  const obj = { shape: null, x: 18, y: 18, size: 24 };
   const tmp = callback3();
   obj[0] = SolidCutout.CutoutShape.Circle;
   const items = [obj];
@@ -31,37 +29,30 @@ function CutoutGuildIconWithUserCustom(guild) {
   obj1[1] = GuildIconSizes.GuildIconSizes.SMALL_32;
   obj[1] = callback(GuildIconSizesDefault, obj1);
   const items1 = [callback(tmp2, obj), ];
-  const tmp3 = GuildIconSizesDefault;
   items1[1] = callback(Button.Avatar, { animate: true, style: tmp.authorAvatar, guildId: guild.id, user: guild.author, size: Button.AvatarSizes.XSMALL_20 });
   obj[1] = items1;
   return callback2(View, obj);
 }
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
-  obj = { container: obj, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: null, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
-  obj = { marginTop: marginHorizontal.margin };
-  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
+  const obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
   obj[2] = obj;
   obj[3] = { flexDirection: "column", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
   obj[4] = { flexDirection: "row", flexGrow: 1 };
-  obj1 = { flexDirection: "column", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
   obj[5] = { flexGrow: 1, flexShrink: 1, marginLeft: ThemesDefault.space.PX_12 };
   obj[6] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 2 };
   obj[7] = { flexShrink: 1, flexGrow: 0, flexDirection: "row", alignItems: "center", gap: 6 };
-  const obj2 = { flexGrow: 1, flexShrink: 1, marginLeft: ThemesDefault.space.PX_12 };
   obj[8] = { flexDirection: "row", justifyContent: "space-between", borderRadius: ThemesDefault.radii.sm };
   obj[9] = { flexShrink: 1, flexGrow: 0, width: "100%" };
   obj[10] = { flexDirection: "row", alignItems: "center", gap: 2 };
   obj[11] = { flexDirection: "row", alignItems: "center", gap: 2, flex: 1 };
   obj[12] = { paddingVertical: 1 };
-  const obj3 = { flexDirection: "row", justifyContent: "space-between", borderRadius: ThemesDefault.radii.sm };
   obj[13] = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-  const obj4 = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
   obj[14] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_STRONG, flexShrink: 0 };
   obj[15] = { position: "absolute", right: 0, bottom: 0 };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMICardInCard.tsx");
+let result = require("obj132").fileFinishedImporting("modules/icymi/native/ICYMICardInCard.tsx");
 
 export default function ICYMICardInCard(message) {
   message = message.message;
@@ -79,10 +70,6 @@ export default function ICYMICardInCard(message) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  closure_7 = undefined;
-  let fontScale;
-  let stateFromStores;
-  let guild_id;
   let stateFromStores1;
   let stateFromStores2;
   let displayNameStylesFont;
@@ -91,12 +78,12 @@ export default function ICYMICardInCard(message) {
   const tmp = stateFromStores2();
   closure_7 = tmp;
   let obj = message(id[12]);
-  fontScale = obj.useFontScale();
+  const fontScale = obj.useFontScale();
   obj1 = message(id[13]);
   let items = [channelId];
   let items1 = [channelId];
-  stateFromStores = obj1.useStateFromStores(items, () => channelId.getChannel(channelId), items1);
-  guild_id = undefined;
+  const stateFromStores = obj1.useStateFromStores(items, () => channelId.getChannel(channelId), items1);
+  let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
@@ -123,11 +110,11 @@ export default function ICYMICardInCard(message) {
       if (null != guild_id) {
         id = undefined;
         if (message != null) {
-          id = tmp3.author.id;
+          id = message.author.id;
         }
         member = null;
         if (null != id) {
-          member = flag2.getMember(tmp2, tmp3.author.id);
+          member = flag2.getMember(tmp2, message.author.id);
         }
       }
     }
@@ -182,31 +169,31 @@ export default function ICYMICardInCard(message) {
     } else {
       if (!flag2) {
         let obj = { guild: null, size: null };
-        obj[0] = tmp;
+        obj[0] = stateFromStores1;
         obj[1] = message(id[10]).GuildIconSizes.NORMAL;
         let tmp10 = stateFromStores(actionLabel(id[10]), obj);
         const tmp8 = actionLabel(id[10]);
       } else {
-        let author = message;
-        author = undefined;
+        let author;
         if (message != null) {
           author = author.author;
         }
       }
       obj = { guild: null, author: null };
-      obj[0] = tmp;
+      obj[0] = stateFromStores1;
       author = author.author;
       obj[1] = author;
       tmp10 = stateFromStores(displayNameStylesFont, obj);
     }
+    tmp2 = null == stateFromStores1;
   }, items6);
   const memo1 = obj5.useMemo(() => {
     let tmp2 = null;
     if (null != stateFromStores1) {
       const obj = { style: null, lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj[0] = { maxWidth: 225 };
-      obj[4] = tmp.name;
-      tmp2 = stateFromStores(message(id[17]).Text, obj, tmp.id);
+      obj[4] = stateFromStores1.name;
+      tmp2 = stateFromStores(message(id[17]).Text, obj, stateFromStores1.id);
     }
     return tmp2;
   }, items7);
@@ -237,7 +224,7 @@ export default function ICYMICardInCard(message) {
       if (null != author) {
         if (null != guild_id) {
           if (null != stateFromStores) {
-            if (null != c14) {
+            if (null != _undefined) {
               let colorString;
               if (stateFromStores2 != null) {
                 colorString = stateFromStores2.colorString;
@@ -261,10 +248,10 @@ export default function ICYMICardInCard(message) {
               const obj2 = { variant: "text-sm/semibold", style: null, children: null };
               items[1] = tmp42;
               obj2[1] = items;
-              let combined = arr;
-              if (arr.length > 20) {
+              let combined = _undefined;
+              if (_undefined.length > 20) {
                 const _HermesInternal = HermesInternal;
-                combined = "" + arr.slice(0, 17) + "...";
+                combined = "" + _undefined.slice(0, 17) + "...";
               }
               obj2[2] = combined;
               const items1 = [stateFromStores(message(id[17]).Text, obj2), , ];
@@ -291,7 +278,7 @@ export default function ICYMICardInCard(message) {
     }
     if (null != stateFromStores) {
       obj = message(id[19]);
-      let TextIcon = obj.getIconForChannel(tmp5);
+      let TextIcon = obj.getIconForChannel(stateFromStores);
     } else {
       TextIcon = message(id[21]).TextIcon;
     }
@@ -330,8 +317,8 @@ export default function ICYMICardInCard(message) {
       tmp2 = null != stateFromStores;
     }
     if (tmp2) {
-      let obj = message(id[22]);
-      obj = { guildId: null, channelId: null, id: null, type: null };
+      message(id[22]);
+      const obj = { guildId: null, channelId: null, id: null, type: null };
       obj[0] = stateFromStores1.id;
       obj[1] = stateFromStores.id;
       obj[2] = id;
@@ -339,7 +326,6 @@ export default function ICYMICardInCard(message) {
       const result = obj.openDetailsActionSheet(obj);
     }
   }, items9);
-  obj = { style: tmp.container, children: null };
   const memo3 = obj5.useMemo(() => {
     if (fontScale > 1.8) {
       let channelNameAndAccessory = guild.channelNameAndAccessoryLarge;

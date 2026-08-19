@@ -3,21 +3,24 @@
 // Module 12803 (WidgetPreview)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import items3 from "items" /* 5367 */;
 import isFieldEmpty from "isFieldEmpty" /* 5375 */;
 import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
+import WidgetRenderer from "WidgetRenderer" /* 12174 */;
 import PersonalWidgetTextDefault from "PersonalWidgetText" /* 12291 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND };
 createCacheKey[2] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx");
 
 export default function WidgetPreview(arg0) {
   ({ widget, userId } = arg0);
@@ -40,10 +43,10 @@ export default function WidgetPreview(arg0) {
         obj[1] = widget;
         const items1 = [tmp4.card, tmp.card];
         obj[3] = items1;
-        tmp6 = callback(tmp5(12174).WidgetSection, obj);
+        tmp6 = callback(WidgetRenderer.WidgetSection, obj);
       }
     }
-    tmp5Result = tmp5(5367);
+    tmp5Result = items3;
   }
   let tmp9 = null;
   if (null !== tmp6) {
@@ -51,12 +54,12 @@ export default function WidgetPreview(arg0) {
     obj1[0] = tmp.container;
     const obj2 = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     obj2[0] = tmp.title;
-    const intl = tmp5(1236).intl;
-    obj2[3] = intl.string(tmp5(1236).t.SpsnDY).toUpperCase();
-    const items2 = [callback(tmp5(4734).Text, obj2), tmp6];
+    const intl = getSystemLocale.intl;
+    obj2[3] = intl.string(getSystemLocale.t.SpsnDY).toUpperCase();
+    const items2 = [callback(Text.Text, obj2), tmp6];
     obj1[1] = items2;
     tmp9 = callback2(View, obj1);
-    const str = intl.string(tmp5(1236).t.SpsnDY);
+    const str = intl.string(getSystemLocale.t.SpsnDY);
   }
   return tmp9;
 };

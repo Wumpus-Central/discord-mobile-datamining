@@ -52,12 +52,10 @@ const consentStore = new ConsentStore(dispatcherDefault, {
     }
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(consents) {
-    const obj = {};
     const merged = Object.assign(consents.consents);
     c0 = true;
   },
   UPDATE_CONSENTS: function handleUpdateConsents(consents) {
-    const obj = {};
     const merged = Object.assign(consents.consents);
     c0 = true;
   },
@@ -68,6 +66,6 @@ const consentStore = new ConsentStore(dispatcherDefault, {
     c3 = null;
   }
 });
-const result = require("set").fileFinishedImporting("stores/ConsentStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/ConsentStore.tsx");
 
 export default consentStore;

@@ -7,16 +7,15 @@ import Text from "Text" /* 4734 */;
 import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
 import Background from "Background" /* 6950 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function TermsAndConditionsActionSheet(termsAndConditions) {
-  let obj = { header: null, children: null };
-  obj = { title: null };
+  let obj = { title: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.PdKWVT);
   obj[0] = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
@@ -28,8 +27,7 @@ function TermsAndConditionsActionSheet(termsAndConditions) {
 }
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { card: null, mainContainer: null, textContainer: null, imageContainer: null, image: null, title: null, subText: null, claimButton: null, moreDetails: null, termsAndConditionsText: null, buttonContainer: null };
-createCacheKey = { flex: 1, flexDirection: "column", paddingHorizontal: require("ME").USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: 8 };
+const createCacheKey = { flex: 1, flexDirection: "column", paddingHorizontal: require("ME").USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: 8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[2] = { flexDirection: "row", flexShrink: 1, alignItems: "center" };
@@ -43,7 +41,7 @@ createCacheKey[9] = { paddingHorizontal: 16, paddingTop: 16 };
 createCacheKey[10] = { flexGrow: 1, flexDirection: "row", marginLeft: 4, justifyContent: "flex-end" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { width: 32, height: 32, marginRight: 8, borderRadius: ThemesDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: require("result").DARK_BLACK_500_LIGHT_PRIMARY_100 };
-const result = require("set").fileFinishedImporting("components_native/premium/OutboundPromotionCard.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/premium/OutboundPromotionCard.tsx");
 
 export default function OutboundPromotionCard(outboundPromotion) {
   outboundPromotion = outboundPromotion.outboundPromotion;
@@ -80,11 +78,11 @@ export default function OutboundPromotionCard(outboundPromotion) {
   const items = [first, code, outboundPromotion];
   const layoutEffect = React.useLayoutEffect(() => {
     if (first) {
-      let obj = code(first[16]);
-      obj = { importer: null };
+      code(first[16]);
+      let obj = { importer: null };
       obj[0] = function importer() {
-        return closure_1_0(closure_1_2[18])(closure_1_2[17], closure_1_2.paths).then((arg0) => {
-          closure_0 = arg0.default;
+        return outboundPromotion(first[18])(first[17], first.paths).then((result) => {
+          closure_0 = result.default;
           return (arg0) => {
             const obj = {};
             const merged = Object.assign(arg0);
@@ -111,8 +109,6 @@ export default function OutboundPromotionCard(outboundPromotion) {
   items1[1] = callback2(closure_5, obj5);
   const obj9 = { style: tmp.buttonContainer, children: null };
   const obj3 = { style: tmp.imageContainer, children: callback2(closure_6, obj4) };
-  const obj7 = { style: tmp.title, accessibilityRole: "header", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: outboundPromotion.outboundTitle };
-  const obj8 = { style: tmp.subText, variant: "text-sm/medium", color: "text-default", children: formatToPlainStringResult };
   obj9[1] = callback2(closure_5, { style: tmp.claimButton, children: callback2(outboundPromotion(first[20]).Button, obj11) });
   items1[2] = callback2(closure_5, obj9);
   obj2[1] = items1;

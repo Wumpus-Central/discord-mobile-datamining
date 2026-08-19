@@ -1,12 +1,12 @@
 // === Module 10170: FormSubmitErrorType ===
 
 // Module 10170 (FormSubmitErrorType)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7608 */;
 
 let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", EmptyTags: 2, [2]: "EmptyTags", ApiValidation: 3, [3]: "ApiValidation" };
-const result = set.fileFinishedImporting("modules/forums/FormError.tsx");
+const result = obj132.fileFinishedImporting("modules/forums/FormError.tsx");
 
 export const FormSubmitErrorType = obj;
 export const makeEmptyTitleError = function makeEmptyTitleError() {
@@ -69,10 +69,9 @@ export const renderError = function renderError(type, content) {
     if (type.type === obj.EmptyContent) {
       if (null != content.content) {
         tmp = null;
-        const str = content.content;
       }
     }
-    if (type.type === tmp3.EmptyTags) {
+    if (type.type === obj.EmptyTags) {
       if (null != content.tags) {
         tmp = null;
       }
@@ -82,7 +81,6 @@ export const renderError = function renderError(type, content) {
       message = null;
     }
     tmp = message;
-    tmp3 = obj;
   }
   return tmp;
 };

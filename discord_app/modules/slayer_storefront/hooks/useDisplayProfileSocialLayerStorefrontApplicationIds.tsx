@@ -1,28 +1,27 @@
 // === Module 9197: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
 // Module 9197 (useDisplayProfileSocialLayerStorefrontApplicationIds)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUserSettingsStoreUpdate" /* 7202 */;
+import noop from "noop" /* 19 */;
+import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate" /* 7202 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx");
 
 export default function useDisplayProfileSocialLayerStorefrontApplicationIds(userId) {
-  let _require;
   let usersPlayingStorefrontEnabledGamesApplicationIds;
   let usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds;
   let areUsersInSocialLayerStorefrontMutualGuildsApplicationIds;
   let stateFromStoresArray;
   const tmp = usersPlayingStorefrontEnabledGamesApplicationIds(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[2])(userId.userId);
-  _require = tmp;
+  const _require = tmp;
   let items = [tmp];
   const memo = areUsersInSocialLayerStorefrontMutualGuildsApplicationIds.useMemo(() => {
     let userId;
     if (closure_0 != null) {
-      userId = tmp.userId;
+      userId = closure_0.userId;
     }
     if (null != userId) {
-      const items = [tmp.userId];
+      const items = [closure_0.userId];
       let items1 = items;
     } else {
       items1 = [];
@@ -55,24 +54,17 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
         widgets1 = [];
       }
       for (const item10011 of widgets1) {
-        let tmp5 = item10011;
-        let tmp6 = lib;
-        let tmp7 = usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds;
-        let tmp8 = item10011;
         if (item10011 instanceof lib(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[5]).BaseGameWidget) {
-          let games = tmp5.games;
-          let item = games.forEach((gameId) => {
-            const applicationIdFromDetectableId = closure_1_4.getApplicationIdFromDetectableId(gameId.gameId);
+          let games = item10011.games;
+          let item = games.forEach((item, index) => {
+            const applicationIdFromDetectableId = stateFromStoresArray.getApplicationIdFromDetectableId(item.gameId);
             if (null != applicationIdFromDetectableId) {
               set.add(applicationIdFromDetectableId);
             }
           });
-        } else if (tmp5 instanceof tmp6(tmp7[6]).ApplicationWidget) {
-          let tmp9 = stateFromStoresArray;
-          let tmp10 = item10011;
-          let applicationIdFromDetectableId = stateFromStoresArray.getApplicationIdFromDetectableId(tmp5.applicationId);
+        } else if (item10011 instanceof lib(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[6]).ApplicationWidget) {
+          let applicationIdFromDetectableId = stateFromStoresArray.getApplicationIdFromDetectableId(item10011.applicationId);
           if (null != applicationIdFromDetectableId) {
-            let tmp13 = applicationIdFromDetectableId;
             let addResult = set.add(tmp12);
           }
         }

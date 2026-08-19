@@ -3,9 +3,9 @@
 // Module 10172 (parsedItemUsesEveryoneRole)
 import _modDef38 from "module_38" /* 38 */;
 import rebuildDefault from "rebuild" /* 7436 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getMemberListId" /* 7249 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import getMemberListId from "getMemberListId" /* 7249 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
 function parsedItemUsesEveryoneRole(content) {
@@ -28,11 +28,8 @@ function parsedItemUsesEveryoneRole(content) {
       content = content.content;
       const obj = content[Symbol.iterator]();
       while (obj !== undefined) {
-        let tmp6 = parsedItemUsesEveryoneRole;
         let tmp7 = parsedItemUsesEveryoneRole(tmp4);
-        let tmp8 = tmp7;
         if (null != tmp7) {
-          let tmp9 = obj;
           obj.return();
           return tmp7;
         }
@@ -44,7 +41,7 @@ function parsedItemUsesEveryoneRole(content) {
 }
 ({ Permissions: c5, StatusTypes: closure_6 } = ME);
 const regExp = new RegExp(/@(:?everyone|here)/);
-const result = require("set").fileFinishedImporting("utils/MentionGuardUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/MentionGuardUtils.tsx");
 
 export default {
   shouldShowEveryoneGuard(extractEveryoneRoleResult, getGuildId) {
@@ -60,13 +57,13 @@ export default {
       let tmp5 = num;
     } else {
       const groups = store.getProps(getGuildId.getGuildId(), getGuildId.id).groups;
-      const item = groups.forEach((id) => {
+      const item = groups.forEach((item, index) => {
         let tmp = "@everyone" !== closure_0;
         if (tmp) {
-          tmp = id.id === closure_1_6.OFFLINE;
+          tmp = item.id === closure_1_6.OFFLINE;
         }
         if (!tmp) {
-          closure_1 = closure_1 + id.count;
+          closure_1 = closure_1 + item.count;
         }
       });
       tmp5 = dependencyMap;
@@ -88,13 +85,13 @@ export default {
       let tmp3 = num;
     } else {
       const groups = store.getProps(isThread.getGuildId(), isThread.id).groups;
-      const item = groups.forEach((id) => {
+      const item = groups.forEach((item, index) => {
         let tmp = "@everyone" !== closure_0;
         if (tmp) {
-          tmp = id.id === closure_1_6.OFFLINE;
+          tmp = item.id === closure_1_6.OFFLINE;
         }
         if (!tmp) {
-          closure_1 = closure_1 + id.count;
+          closure_1 = closure_1 + item.count;
         }
       });
       tmp3 = c1;
@@ -102,14 +99,10 @@ export default {
     return tmp3;
   },
   extractEveryoneRole(arg0, getGuildId) {
-    const obj = rebuildDefault;
     const obj2 = rebuildDefault.parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
     while (obj2 !== undefined) {
-      let tmp3 = parsedItemUsesEveryoneRole;
       let tmp4 = parsedItemUsesEveryoneRole(tmp2);
-      let tmp5 = tmp4;
       if (null != tmp4) {
-        let tmp6 = obj2;
         obj2.return();
         return tmp4;
       }

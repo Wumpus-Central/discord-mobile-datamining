@@ -2,12 +2,12 @@
 
 // Module 14594 (pressable)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
 import { InputModes } from "DesktopSources" /* 4529 */;
-import createToggle from "createToggle" /* 10669 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["pS+K2L"]);
@@ -16,11 +16,11 @@ createToggle = {
   useTrailing: function useInputModeSettingTrailing() {
     const items = [closure_2];
     if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
-      const intl2 = tmp(1236).intl;
-      let stringResult = intl2.string(tmp(1236).t.Q8gkVL);
+      const intl2 = getSystemLocale.intl;
+      let stringResult = intl2.string(getSystemLocale.t.Q8gkVL);
     } else {
-      const intl = tmp(1236).intl;
-      stringResult = intl.string(tmp(1236).t.cHCEOJ);
+      const intl = getSystemLocale.intl;
+      stringResult = intl.string(getSystemLocale.t.cHCEOJ);
     }
     return stringResult;
   },
@@ -32,6 +32,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InputModeSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/InputModeSetting.tsx");
 
 export default createToggle;

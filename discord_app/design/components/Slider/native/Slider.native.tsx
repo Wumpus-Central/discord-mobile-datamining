@@ -2,24 +2,20 @@
 
 // Module 13542 (Slider)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { flex: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: null, maximumTrackTintColor: null, startIcon: null, endIcon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.SLIDER_TRACK_BACKGROUND };
-let obj1 = { backgroundColor: ThemesDefault.colors.SLIDER_TRACK_BACKGROUND };
 createCacheKey[4] = { marginRight: ThemesDefault.space.PX_8 };
-const obj2 = { marginRight: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { marginLeft: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { marginLeft: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("design/components/Slider/native/Slider.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/Slider/native/Slider.native.tsx");
 
 export const Slider = function Slider(step) {
   ({ startIcon, endIcon, onValueChange } = step);
@@ -31,8 +27,8 @@ export const Slider = function Slider(step) {
   let tmp6 = null;
   const callback = React.useCallback((arg0) => {
     if (null != step) {
-      const result = onValueChange(closure_1_2[5]).triggerHapticFeedback(step(closure_1_2[6]).IMPACT_LIGHT);
-      const obj = onValueChange(closure_1_2[5]);
+      const result = onValueChange(dependencyMap[5]).triggerHapticFeedback(step(dependencyMap[6]).IMPACT_LIGHT);
+      const obj = onValueChange(dependencyMap[5]);
     }
     if (onValueChange != null) {
       tmp5(arg0);
@@ -42,7 +38,7 @@ export const Slider = function Slider(step) {
     obj = { style: null, children: null };
     obj[0] = tmp2.startIcon;
     obj[1] = startIcon;
-    tmp6 = callback(tmp5, obj);
+    tmp6 = callback(View, obj);
   }
   const items1 = [tmp6, , ];
   obj = {};
@@ -60,9 +56,9 @@ export const Slider = function Slider(step) {
     obj1 = { style: null, children: null };
     obj1[0] = tmp2.endIcon;
     obj1[1] = endIcon;
-    tmp8Result = callback(tmp5, obj1);
+    tmp8Result = callback(View, obj1);
   }
   items1[2] = tmp8Result;
   obj[1] = items1;
-  return closure_6(View, obj);
+  return callback(View, obj);
 };

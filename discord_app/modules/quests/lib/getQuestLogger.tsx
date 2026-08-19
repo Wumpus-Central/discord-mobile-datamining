@@ -2,10 +2,10 @@
 
 // Module 7459 (getQuestLogger)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "refreshSourceMapCookie" /* 706 */;
+import refreshSourceMapCookie from "refreshSourceMapCookie" /* 706 */;
 import { NOOP } from "sum" /* 505 */;
 
-const result = require("set").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 
 export const getQuestLogger = function getQuestLogger(getQuestLogger) {
   let obj = getQuestLogger;

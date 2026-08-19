@@ -1,7 +1,7 @@
 // === Module 4116: REAWorkaroundView ===
 
 // Module 4116 (REAWorkaroundView)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4117 */;
@@ -17,6 +17,6 @@ const forwardRefResult = noop.forwardRef((entering, ref) => {
   return <closure_1 />;
 });
 forwardRefResult.displayName = "REAWorkaroundView";
-const result = set.fileFinishedImporting("modules/reanimated/native/REAWorkaroundView.tsx");
+const result = obj132.fileFinishedImporting("modules/reanimated/native/REAWorkaroundView.tsx");
 
 export default forwardRefResult;

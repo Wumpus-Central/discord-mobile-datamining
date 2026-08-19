@@ -2,22 +2,21 @@
 
 // Module 7160 (GuildOnboardingCompleted)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "handleUpdate" /* 6788 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import handleUpdate from "handleUpdate" /* 6788 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let c12 = 400;
-createCacheKey = { screen: { flex: 1, position: "relative" }, container: { backgroundColor: "rgba(0, 0, 0, 0.5)", paddingHorizontal: 24, display: "flex", justifyContent: "center", flexGrow: 1 }, containerWithoutSplash: null, backgroundImage: null, title: null, subtitle: null, card: null, username: null, rolesHeader: null, roles: null, role: null, roleOverflow: null, animation: null, wave: null, animationText: null, getStartedButton: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { position: "absolute", width: "100%", height: "100%" };
 createCacheKey[4] = {};
@@ -27,9 +26,7 @@ createCacheKey[7] = { marginTop: 16 };
 createCacheKey[8] = { marginTop: 8 };
 createCacheKey[9] = { marginTop: 12, display: "flex", flexDirection: "row", flexWrap: "wrap" };
 createCacheKey[10] = { marginRight: 8 };
-let obj1 = { marginTop: 24, padding: 16, paddingBottom: 32, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[11] = { paddingHorizontal: 8, height: 28, borderRadius: ThemesDefault.radii.xs, display: "flex", justifyContent: "center", borderWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj2 = { paddingHorizontal: 8, height: 28, borderRadius: ThemesDefault.radii.xs, display: "flex", justifyContent: "center", borderWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[12] = { marginTop: 24, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: ThemesDefault.radii.sm, padding: 12, display: "flex", flexDirection: "row", alignItems: "center" };
 let items = [{ translateX: 24 }, { rotate: "5deg" }];
 createCacheKey[13] = { transform: items };
@@ -37,17 +34,12 @@ createCacheKey[14] = { flexGrow: 1, marginLeft: 8 };
 createCacheKey[15] = { marginTop: 24 };
 let closure_13 = createCacheKey.createStyles(createCacheKey);
 let closure_14 = { code: "function GuildOnboardingCompletedTsx1(){const{withSequence,withTiming,withDelay,ANIMATION_DURATION,Easing,useReducedMotion}=this.__closure;const opacity=withSequence(withTiming(0,{duration:0}),withDelay(ANIMATION_DURATION,withTiming(0.5,{duration:ANIMATION_DURATION})),withTiming(1,{duration:ANIMATION_DURATION,easing:Easing.out(Easing.ease)}));const scale=withSequence(withTiming(1,{duration:0}),withDelay(ANIMATION_DURATION,withTiming(1.5,{duration:ANIMATION_DURATION,easing:Easing.out(Easing.ease)})),withTiming(1,{duration:useReducedMotion?1:ANIMATION_DURATION,easing:Easing.out(Easing.ease)}));const rawRotation=withSequence(withTiming('0deg',{duration:0}),withDelay(ANIMATION_DURATION,withTiming('-2deg',{duration:ANIMATION_DURATION})),withTiming('-5deg',{duration:ANIMATION_DURATION}));return{opacity:opacity,transform:[{rotate:rawRotation},{scale:scale}]};}" };
-let obj3 = { marginTop: 24, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 2, borderRadius: ThemesDefault.radii.sm, padding: 12, display: "flex", flexDirection: "row", alignItems: "center" };
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingCompleted.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingCompleted.tsx");
 
 export default function GuildOnboardingCompleted(guildId) {
   guildId = guildId.guildId;
   ({ prompts, completeOnboarding } = guildId);
   const onClose = guildId.onClose;
-  let React;
-  let navigation;
-  let stateFromStores1;
-  closure_6 = undefined;
   closure_7 = undefined;
   let found;
   allSelectedRoleIds = undefined;
@@ -55,15 +47,15 @@ export default function GuildOnboardingCompleted(guildId) {
   closure_11 = undefined;
   let stateFromStores2;
   const tmp = callback();
-  React = tmp;
+  const React = tmp;
   let obj = guildId(onClose[10]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   obj1 = guildId(onClose[11]);
   let items = [found];
   const stateFromStores = obj1.useStateFromStores(items, () => found.getCurrentUser());
   let obj2 = guildId(onClose[11]);
   const items1 = [closure_7];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => closure_7.getGuild(guildId));
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => closure_7.getGuild(guildId));
   const tmp8 = completeOnboarding(onClose[12])(guildId);
   closure_6 = tmp8;
   let obj3 = guildId(onClose[13]);
@@ -84,11 +76,11 @@ export default function GuildOnboardingCompleted(guildId) {
   const items2 = [allSelectedRoleIds];
   const items3 = [guildId];
   closure_7 = tmp2Result.useStateFromStoresArray(items2, () => allSelectedRoleIds.getOnboardingResponses(guildId), items3);
-  let mapped = prompts.map((options) => options.options);
-  found = mapped.flat().filter((id) => closure_7.includes(id.id));
+  let mapped = prompts.map((item, index) => item.options);
+  found = mapped.flat().filter((item, index) => closure_7.includes(item.id));
   const items4 = [tmp8, found];
   const memo = React.useMemo(() => {
-    const mapped = found.map((roleIds) => roleIds.roleIds);
+    const mapped = found.map((item, index) => item.roleIds);
     allSelectedRoleIds = mapped.flat().filter(guildId(onClose[17]).isNotNullish);
     let numSharedRoleMembers = 0;
     if (null != closure_6) {
@@ -96,8 +88,8 @@ export default function GuildOnboardingCompleted(guildId) {
       if (allSelectedRoleIds.length > 0) {
         const _Math = Math;
         const items = [];
-        HermesBuiltin.arraySpread(allSelectedRoleIds.map((arg0) => {
-          let num = table[arg0];
+        HermesBuiltin.arraySpread(allSelectedRoleIds.map((item, index) => {
+          let num = table[item];
           if (num == null) {
             num = 0;
           }
@@ -149,11 +141,11 @@ export default function GuildOnboardingCompleted(guildId) {
   stateFromStores2 = guildId(onClose[11]).useStateFromStores(items9, () => stateFromStores1.useReducedMotion);
   guildId(onClose[19]);
   const fn = function k() {
-    let obj = guildId(onClose[19]);
+    guildId(onClose[19]);
     obj1 = guildId(onClose[20]);
     let obj2 = guildId(onClose[19]);
     let obj3 = guildId(onClose[20]);
-    obj = { duration: stateFromStores2 };
+    let obj = { duration: stateFromStores2 };
     const withTimingResult = obj1.withTiming(0, { duration: 0 });
     const withDelayResult = obj2.withDelay(stateFromStores2, obj3.withTiming(0.5, obj));
     obj = { duration: stateFromStores2, easing: null };
@@ -172,16 +164,16 @@ export default function GuildOnboardingCompleted(guildId) {
     const withDelayResult1 = obj10.withDelay(stateFromStores2, guildId(onClose[20]).withTiming(1.5, obj1));
     let num = 1;
     if (!stateFromStores2) {
-      num = tmp4;
+      num = stateFromStores2;
     }
     obj2 = { duration: num, easing: null };
-    const Easing3 = tmp(tmp2[19]).Easing;
+    const Easing3 = guildId(onClose[19]).Easing;
     obj2[1] = Easing3.out(guildId(onClose[19]).Easing.ease);
     obj3 = { opacity: withSequenceResult, transform: null };
     const obj4 = { rotate: null };
     const obj13 = guildId(onClose[20]);
-    let tmpResult = tmp(tmp2[19]);
-    tmpResult = tmp(tmp2[20]);
+    guildId(onClose[19]);
+    const tmpResult = guildId(onClose[20]);
     const withSequenceResult1 = obj8.withSequence(withTimingResult1, withDelayResult1, guildId(onClose[20]).withTiming(1, obj2));
     const withTimingResult2 = tmpResult.withTiming("0deg", { duration: 0 });
     const tmpResult1 = guildId(onClose[19]);
@@ -265,10 +257,10 @@ export default function GuildOnboardingCompleted(guildId) {
       obj12[0] = tmp.roles;
       const substr = stateFromStoresArray.slice(0, 3);
       const items14 = [
-        substr.map((id) => {
-              obj = { style: role.role, children: isScreenReaderEnabled(guildId(onClose[26]).RoleItem, obj) };
-              obj = { role: id, guildId: stateFromStores1.id, disableInteraction: true };
-              return isScreenReaderEnabled(navigation, obj, id.id);
+        substr.map((item, index) => {
+              { style: role.role, children: isScreenReaderEnabled(guildId(onClose[26]).RoleItem, obj) };
+              obj = { role: item, guildId: stateFromStores1.id, disableInteraction: true };
+              return isScreenReaderEnabled(navigation, obj, item.id);
             }),
 
       ];

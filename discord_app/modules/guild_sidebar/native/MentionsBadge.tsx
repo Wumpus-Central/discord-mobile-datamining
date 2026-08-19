@@ -5,9 +5,9 @@ import noopAll from "noop" /* 19 */;
 import Button from "Button" /* 1297 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/MentionsBadge.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/MentionsBadge.tsx");
 
 export default function MentionsBadge(arg0) {
   ({ mentionsCount, isMentionLowImportance } = arg0);

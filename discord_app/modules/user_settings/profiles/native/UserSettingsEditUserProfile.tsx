@@ -2,13 +2,14 @@
 
 // Module 14001 (UserSettingsEditUserProfile)
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
 import EditUserProfileBannerDefault from "EditUserProfileBanner" /* 14002 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx");
 
 export default function UserSettingsEditUserProfile(arg0) {
   let obj = stateFromStores(589);
@@ -17,8 +18,7 @@ export default function UserSettingsEditUserProfile(arg0) {
   const items1 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (null != stateFromStores) {
-      closure_1_1(closure_1_2[6])(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
-      const tmp3 = closure_1_1(closure_1_2[6]);
+      maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
     }
   }, items1);
   let tmp7 = null;

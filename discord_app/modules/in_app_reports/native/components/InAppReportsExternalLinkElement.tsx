@@ -1,9 +1,10 @@
 // === Module 12819: ExternalLinkItem ===
 
 // Module 12819 (ExternalLinkItem)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef4090 from "module_4090" /* 4090 */;
 import Text from "Text" /* 4734 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
@@ -20,7 +21,7 @@ function ExternalLinkItem(data) {
     obj[0] = url(12820).LinkExternalMediumIcon;
     obj[2] = callback(url(6296).TableRowIcon, obj);
     obj[3] = function onPress() {
-      closure_1_1(closure_1_2[8]).openURL(url);
+      _modDef4090.openURL(url);
     };
     tmp3 = callback(url(8086).RowButton, obj);
   }
@@ -29,15 +30,15 @@ function ExternalLinkItem(data) {
 const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ linksContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 }, headerText: { marginBottom: 8 } });
-const result = set.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx");
+const result = obj132.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx");
 
 export default function ExternalLinksElement(elements) {
   elements = elements.elements;
   const tmp = callback2();
   if (null != elements) {
     if (0 !== elements.length) {
-      if (null != elements.find((data) => data.data.is_localized)) {
-        const someResult = elements.some((data) => data.data.is_header_hidden);
+      if (null != elements.find((item, index) => item.data.is_localized)) {
+        const someResult = elements.some((item, index) => item.data.is_header_hidden);
         let obj = { style: null, children: null };
         obj[0] = tmp.linksContainer;
         let tmp5 = !someResult;
@@ -49,9 +50,9 @@ export default function ExternalLinksElement(elements) {
           tmp5 = callback(Text.Text, obj);
           const str = intl.string(getSystemLocale.t.hvVgAZ);
         }
-        const items = [tmp5, elements.map((data) => callback(closure_7, { data: data.data }, "external-link-" + arg1))];
+        const items = [tmp5, elements.map((item, index) => callback(closure_7, { data: item.data }, "external-link-" + index))];
         obj[1] = items;
-        return closure_5(View, obj);
+        return callback(View, obj);
       }
     }
   }

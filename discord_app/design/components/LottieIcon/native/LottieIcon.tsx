@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((color, ref) => {
   ({ animation: require, size } = color);
@@ -22,9 +22,6 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
   }
   ({ markers, layers } = color);
   autoPlay = color.autoPlay;
-  let start;
-  c4 = undefined;
-  let num2;
   let sum1;
   ref = undefined;
   let enabled;
@@ -32,12 +29,12 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
   let callback;
   ({ width, height, useLottieDefaultColors } = color);
   let tmp5 = require(autoPlay[4]).ICON_SIZE[size];
-  const found = markers.find((name) => name.name === closure_0);
-  start = found.start;
+  const found = markers.find((item, index) => item.name === closure_0);
+  const start = found.start;
   const sum = start + found.duration;
   c4 = sum;
-  const found1 = markers.find((name) => "easteregg" === name.name);
-  num2 = undefined;
+  const found1 = markers.find((item, index) => "easteregg" === item.name);
+  let num2;
   if (found1 != null) {
     num2 = found1.start;
   }
@@ -54,7 +51,7 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
   sum1 = num2 + num3;
   let obj = start;
   ref = start.useRef(null);
-  enabled = start.useContext(tmp3(tmp4[5]).AccessibilityPreferencesContext).reducedMotion.enabled;
+  enabled = start.useContext(require(tmp4[5]).AccessibilityPreferencesContext).reducedMotion.enabled;
   let tmp12 = tmp5;
   if ("custom" === size) {
     tmp12 = width;
@@ -70,7 +67,7 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
   const memo = obj.useMemo(() => {
     let mapped;
     if (null != token) {
-      mapped = layers.map((keypath) => ({ keypath, color: closure_9 }));
+      mapped = layers.map((item, index) => ({ keypath: item, color: closure_9 }));
     }
     return mapped;
   }, items);
@@ -127,6 +124,6 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
   obj[1] = num2(layers(autoPlay[7]), obj1);
   return num2(tmp19, obj);
 });
-const result = require("set").fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
 
 export const LottieIcon = forwardRefResult;

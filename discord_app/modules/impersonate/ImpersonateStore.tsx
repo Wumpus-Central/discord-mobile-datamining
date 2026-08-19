@@ -4,14 +4,15 @@
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
+import hasFlagAll from "hasFlag" /* 1403 */;
 import ImpersonateType from "ImpersonateType" /* 1988 */;
 import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { GuildSettingsSections } from "ME" /* 676 */;
 import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 685 */;
 
-require = arg1;
+require = fn;
 let closure_8 = {};
 const Store = initializeDefault.Store;
 class ImpersonateStore extends Store {
@@ -146,8 +147,8 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
   } else {
     const type = tmp6.type;
     if (ImpersonateType.ImpersonateType.ROLES !== type) {
-      if (tmp7(1988).ImpersonateType.SERVER_SHOP !== type) {
-        if (tmp7(1988).ImpersonateType.NEW_MEMBER === type) {
+      if (ImpersonateType.ImpersonateType.SERVER_SHOP !== type) {
+        if (ImpersonateType.ImpersonateType.NEW_MEMBER === type) {
           return GuildSettingsSections.ONBOARDING;
         } else {
           return GuildSettingsSections.ROLES;
@@ -198,16 +199,17 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
               optInChannels = new Set();
             }
             const keys = optInChannels(11).keys(overrides);
-            const item = keys.forEach((arg0) => {
-              let num = overrides[arg0].flags;
+            const item = keys.forEach((item, index) => {
+              let num = overrides[item].flags;
               if (num == null) {
                 num = 0;
               }
               if (obj.hasFlag(num, closure_1_7.OPT_IN_ENABLED)) {
-                obj2.add(arg0);
+                optInChannels.add(item);
               } else {
-                obj2.delete(arg0);
+                optInChannels.delete(item);
               }
+              obj = hasFlagAll;
             });
             tmp6.optInChannels = optInChannels;
             return true;
@@ -235,7 +237,7 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
               tmp5 = removedOptionIds.length > 0;
             }
             if (tmp5) {
-              const item = removedOptionIds.forEach((arg0) => onboardingResponses.delete(arg0));
+              const item = removedOptionIds.forEach((item, index) => onboardingResponses.delete(item));
             }
             if (tmp) {
               onboardingResponses.add(optionId);
@@ -260,12 +262,12 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
       let flag = null != tmp2;
       if (flag) {
         if (null != roles) {
-          tmp2.roles = roles.reduce((arg0, arg1) => {
-            const role = closure_1_4.getRole(guildId, arg1);
+          tmp2.roles = roles.reduce((acc, item, index) => {
+            const role = closure_1_4.getRole(guildId, item);
             if (null != role) {
-              arg0[arg1] = role;
+              acc[item] = role;
             }
-            return arg0;
+            return acc;
           }, {});
         }
         let tmp3 = null != flags;
@@ -282,6 +284,6 @@ const impersonateStore = new ImpersonateStore(dispatcherDefault, {
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/impersonate/ImpersonateStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/impersonate/ImpersonateStore.tsx");
 
 export default impersonateStore;

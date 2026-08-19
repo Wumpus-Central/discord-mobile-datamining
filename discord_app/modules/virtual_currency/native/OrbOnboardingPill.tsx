@@ -8,9 +8,9 @@ import Text from "Text" /* 4734 */;
 import PressableBase from "PressableBase" /* 5433 */;
 import OrbsIcon from "OrbsIcon" /* 9238 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class OrbOnboardingPill {
   constructor(arg0) {
     flag = global.accessible;
@@ -40,11 +40,10 @@ class OrbOnboardingPill {
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 OrbOnboardingPill.displayName = "OrbOnboardingPill";
-createCacheKey = { container: null };
-createCacheKey = { height: 36, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
+const createCacheKey = { height: 36, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbOnboardingPill.tsx");
+const result = require("obj132").fileFinishedImporting("modules/virtual_currency/native/OrbOnboardingPill.tsx");
 
 export default OrbOnboardingPill;
 export { OrbOnboardingPill };

@@ -8,10 +8,10 @@ import FormCheckboxDefault from "FormCheckbox" /* 6946 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_4 = createCacheKey.createStyles({ checkboxWrapperStyle: { flexShrink: 0 } });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormCheckboxRow.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormCheckboxRow.tsx");
 
 export default function FormCheckboxRow(selected) {
   selected = selected.selected;

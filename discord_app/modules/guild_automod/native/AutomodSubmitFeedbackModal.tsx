@@ -10,19 +10,17 @@ import Feedback from "Feedback" /* 5242 */;
 import HeaderActionButton from "HeaderActionButton" /* 5432 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
 import registerAssetDefault from "registerAsset" /* 8143 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function Navbar(onClose) {
   const tmp = callback4();
-  let obj = { top: true, style: tmp.header, children: null };
-  obj = { style: tmp.closeButtonContainer, children: null };
-  obj = { accessibilityLabel: null, onPress: null, source: null };
+  const obj = { accessibilityLabel: null, onPress: null, source: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.cpT0Cq);
   obj[1] = onClose.onClose;
@@ -33,13 +31,10 @@ function Navbar(onClose) {
 }
 function SubmitFeedbackScreen(onSubmit) {
   ({ feedback: require, onChange: importDefault } = onSubmit);
-  dependencyMap = undefined;
-  let feedbackOptions;
   const tmp = callback4();
   dependencyMap = tmp;
   let obj = Feedback;
-  feedbackOptions = obj.generateFeedbackOptions();
-  obj = { style: tmp.container, children: null };
+  const feedbackOptions = obj.generateFeedbackOptions();
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["7bdzNo"]);
@@ -50,21 +45,14 @@ function SubmitFeedbackScreen(onSubmit) {
   items[1] = callback2(Text.Text, obj1);
   items[2] = callback2(View, {
     style: tmp.formBody,
-    children: feedbackOptions.map((children) => {
-      const value = children.value;
+    children: feedbackOptions.map((item, index) => {
+      const value = item.value;
       closure_0 = value;
-      let obj = {
-        onPress() {
-          return closure_1_1(closure_0);
-        },
-        trailing: null,
-        label: null
-      };
-      obj = { active: closure_0 === value, style: closure_2.radioIndicator };
-      obj[1] = closure_1_7(closure_1_0(closure_2[15]).RadioIndicator, obj);
-      obj = { style: closure_2.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: children.name };
-      obj[2] = closure_1_7(closure_1_0(closure_2[13]).Text, obj);
-      children = [closure_1_7(closure_1_0(closure_2[14]).FormRow, obj), arg1 < feedbackOptions.length - 1 && closure_1_7(closure_1_0(closure_2[14]).FormDivider, {})];
+      let obj = { active: closure_0 === value, style: closure_2.radioIndicator };
+      obj[1] = closure_1_7(require(closure_2[15]).RadioIndicator, obj);
+      obj = { style: closure_2.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: item.name };
+      obj[2] = closure_1_7(require(closure_2[13]).Text, obj);
+      const children = [closure_1_7(require(closure_2[14]).FormRow, obj), index < feedbackOptions.length - 1 && closure_1_7(require(closure_2[14]).FormDivider, {})];
       return closure_1_8(closure_1_4.Fragment, { children }, value);
     })
   });
@@ -72,21 +60,14 @@ function SubmitFeedbackScreen(onSubmit) {
   items1 = [tmp.submitButtonContainer, ];
   const obj2 = {
     style: tmp.formBody,
-    children: feedbackOptions.map((children) => {
-      const value = children.value;
+    children: feedbackOptions.map((item, index) => {
+      const value = item.value;
       closure_0 = value;
-      let obj = {
-        onPress() {
-          return closure_1_1(closure_0);
-        },
-        trailing: null,
-        label: null
-      };
-      obj = { active: closure_0 === value, style: closure_2.radioIndicator };
-      obj[1] = closure_1_7(closure_1_0(closure_2[15]).RadioIndicator, obj);
-      obj = { style: closure_2.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: children.name };
-      obj[2] = closure_1_7(closure_1_0(closure_2[13]).Text, obj);
-      children = [closure_1_7(closure_1_0(closure_2[14]).FormRow, obj), arg1 < feedbackOptions.length - 1 && closure_1_7(closure_1_0(closure_2[14]).FormDivider, {})];
+      let obj = { active: closure_0 === value, style: closure_2.radioIndicator };
+      obj[1] = closure_1_7(require(closure_2[15]).RadioIndicator, obj);
+      obj = { style: closure_2.formRow, variant: "text-md/semibold", color: "interactive-text-active", children: item.name };
+      obj[2] = closure_1_7(require(closure_2[13]).Text, obj);
+      const children = [closure_1_7(require(closure_2[14]).FormRow, obj), index < feedbackOptions.length - 1 && closure_1_7(require(closure_2[14]).FormDivider, {})];
       return closure_1_8(closure_1_4.Fragment, { children }, value);
     })
   };
@@ -102,22 +83,18 @@ function SubmitFeedbackScreen(onSubmit) {
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
-createCacheKey = { container: null, header: null, headerTitle: null, headerSubtitle: null, closeButtonContainer: null, formBody: null, formRow: null, radioIndicator: null, submitButtonContainer: null };
-createCacheKey = { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 };
+const createCacheKey = { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 16, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { textAlign: "center", marginTop: 8 };
 createCacheKey[4] = { marginVertical: 14 };
-let obj1 = { flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 16, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[5] = { marginTop: 24, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[6] = { paddingVertical: 2 };
 createCacheKey[7] = { marginRight: 0 };
-let obj2 = { marginTop: 24, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[8] = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-const result = require("set").fileFinishedImporting("modules/guild_automod/native/AutomodSubmitFeedbackModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_automod/native/AutomodSubmitFeedbackModal.tsx");
 
 export default function AutomodSubmitFeedbackModal(onCloseModal) {
   onCloseModal = onCloseModal.onCloseModal;
@@ -134,8 +111,8 @@ export default function AutomodSubmitFeedbackModal(onCloseModal) {
       onSubmit(arg0);
     };
     function onSubmit() {
-      let obj = callback(onChange[17]);
-      obj = { feedback_type: onChange, message_id: closure_1.messageId, content: closure_1.messageContent, decision_id: closure_1.decisionId };
+      callback(onChange[17]);
+      const obj = { feedback_type: onChange, message_id: closure_1.messageId, content: closure_1.messageContent, decision_id: closure_1.decisionId };
       obj.trackWithMetadata(closure_1_6.GUILD_AUTOMOD_FEEDBACK, obj);
       ({ messageId, channel } = closure_1);
       callback(onChange[18]).executeAlertAction(messageId, channel, callback(onChange[19]).AutomodAlertActionType.SUBMIT_FEEDBACK);

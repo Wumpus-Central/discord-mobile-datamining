@@ -1,12 +1,12 @@
 // === Module 16567: shouldShowLogUploadForCategory ===
 
 // Module 16567 (shouldShowLogUploadForCategory)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import FeedbackRating2 from "FeedbackRating" /* 10811 */;
 
 const FeedbackRating = FeedbackRating2.FeedbackRating;
 let closure_1 = {};
-const result = set.fileFinishedImporting("modules/feedback/shouldShowLogUploadForCategory.tsx");
+const result = obj132.fileFinishedImporting("modules/feedback/shouldShowLogUploadForCategory.tsx");
 
 export const shouldShowLogUploadForCategory = function shouldShowLogUploadForCategory(rating, category, reason) {
   if (rating !== FeedbackRating.BAD) {

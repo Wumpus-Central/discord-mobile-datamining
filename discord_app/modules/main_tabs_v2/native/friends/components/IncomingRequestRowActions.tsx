@@ -1,12 +1,12 @@
 // === Module 15990: IncomingRequestRowActions ===
 
 // Module 15990 (IncomingRequestRowActions)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row" } });
 let closure_8 = { code: "function IncomingRequestRowActionsTsx1(){const{animate,pressed,withTiming}=this.__closure;return{position:'absolute',right:0,flexDirection:'row',opacity:!animate?!pressed.get()?1:0:withTiming(!pressed.get()?1:0,{duration:150}),pointerEvents:!pressed.get()?'auto':'none'};}" };
@@ -14,7 +14,7 @@ let closure_9 = { code: "function IncomingRequestRowActionsTsx2(){const{buttonWi
 let closure_10 = { code: "function IncomingRequestRowActionsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}" };
 let closure_11 = { code: "function IncomingRequestRowActionsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}" };
 let closure_12 = { code: "function IncomingRequestRowActionsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx");
 
 export const IncomingRequestRowActions = function IncomingRequestRowActions(user) {
   user = user.user;
@@ -23,19 +23,15 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   const onAcceptIncomingRequest = user.onAcceptIncomingRequest;
   const onDeclineIncomingRequest = user.onDeclineIncomingRequest;
   const animate = user.animate;
-  let sharedValue;
-  let sharedValue1;
-  let sharedValue2;
-  let sharedValue3;
   ({ acceptRequestAccessibilityLabel, ignoreRequestAccessibilityLabel } = user);
   let obj = user(pressed[4]);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
   obj1 = user(pressed[4]);
-  sharedValue1 = obj1.useSharedValue(-1);
+  const sharedValue1 = obj1.useSharedValue(-1);
   let obj2 = user(pressed[4]);
-  sharedValue2 = obj2.useSharedValue(-1);
+  const sharedValue2 = obj2.useSharedValue(-1);
   let obj3 = user(pressed[4]);
-  sharedValue3 = obj3.useSharedValue(-1);
+  const sharedValue3 = obj3.useSharedValue(-1);
   let obj4 = user(pressed[4]);
   class E {
     constructor() {
@@ -73,9 +69,9 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   const animatedStyle = obj4.useAnimatedStyle(E);
   let obj6 = user(pressed[4]);
   const fn = function q() {
-    let value = sharedValue1.get();
+    sharedValue1.get();
     let obj = pressed;
-    value = sharedValue.get();
+    const value = sharedValue.get();
     let num = 0.5;
     if (pressed.get()) {
       num = 1;
@@ -125,8 +121,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   const animatedStyle1 = obj6.useAnimatedStyle(fn);
   let obj8 = user(pressed[4]);
   const fn2 = function x() {
-    let obj = { transform: null };
-    obj = { translateX: sharedValue2.get() / 2 };
+    let obj = { translateX: sharedValue2.get() / 2 };
     const items = [obj, ];
     obj = { translateY: sharedValue3.get() / 2 };
     items[1] = obj;
@@ -186,16 +181,16 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   const items1 = [applicationId, onDeclineIncomingRequest, user];
   const callback = onAcceptIncomingRequest.useCallback(() => {
     const result = pressed.set(true);
-    let obj = user(pressed[6]);
-    obj = { userId: user.id, applicationId };
+    user(pressed[6]);
+    const obj = { userId: user.id, applicationId };
     const result1 = obj.acceptIncomingRequest(obj);
     onAcceptIncomingRequest(user.id, applicationId);
   }, items);
   const items2 = [user];
   const callback1 = onAcceptIncomingRequest.useCallback(() => {
     onDeclineIncomingRequest(user.id, applicationId);
-    let obj = user(pressed[6]);
-    obj = { userId: user.id, applicationId };
+    user(pressed[6]);
+    const obj = { userId: user.id, applicationId };
     const result = obj.dismissIncomingRequest(obj);
   }, items1);
   obj2 = { style: tmp.container, children: null };

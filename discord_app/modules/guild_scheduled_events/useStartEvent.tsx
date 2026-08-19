@@ -1,18 +1,18 @@
 // === Module 8906: useStartEvent ===
 
 // Module 8906 (useStartEvent)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_6 = {
   onSuccess() {
 
   },
   permissionOverwrites: []
 };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
 
 export default function useStartEvent() {
   function _startEvent() {

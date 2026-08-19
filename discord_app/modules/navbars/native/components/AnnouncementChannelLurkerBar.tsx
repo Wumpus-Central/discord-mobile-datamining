@@ -5,9 +5,9 @@ import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 class AnnouncementChannelLurkerBar {
   constructor(arg0) {
     channel = global.channel;
@@ -22,8 +22,8 @@ class AnnouncementChannelLurkerBar {
       onPress() {
             const guildId = channel.getGuildId();
             if (null != guildId) {
-              const result = channel(closure_1_1[8]).showChannelFollowingActionSheet(channel.id, guildId);
-              const obj = channel(closure_1_1[8]);
+              const result = channel(dependencyMap[8]).showChannelFollowingActionSheet(channel.id, guildId);
+              const obj = channel(dependencyMap[8]);
             }
           },
       text: null,
@@ -40,12 +40,11 @@ class AnnouncementChannelLurkerBar {
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { wrapper: null, text: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginBottom: 8 };
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/navbars/native/components/AnnouncementChannelLurkerBar.tsx");
+let result = require("obj132").fileFinishedImporting("modules/navbars/native/components/AnnouncementChannelLurkerBar.tsx");
 
 export default AnnouncementChannelLurkerBar;
 export { AnnouncementChannelLurkerBar };

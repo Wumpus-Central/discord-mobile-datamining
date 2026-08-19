@@ -59,26 +59,21 @@ const storefrontPromotionStore = new StorefrontPromotionStore(dispatcherDefault,
     const iter = arg0.applicationIds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp2 = dependencyMap;
       let tmp3 = dependencyMap[nextResult];
       let state;
       let tmp4 = tmp3;
-      let tmp5 = dependencyMap;
       if (tmp3 != null) {
         state = tmp3.state;
       }
       let tmp7;
       if ("success" === state) {
-        let tmp8 = tmp3;
         let items = [];
-        let tmp9 = items;
-        let num = 0;
         let arraySpreadResult = HermesBuiltin.arraySpread(tmp4.promotions, 0);
         tmp7 = items;
       }
       let obj = { state: "loading", promotions: null };
       obj[1] = tmp7;
-      tmp5[nextResult] = obj;
+      dependencyMap[nextResult] = obj;
       continue;
     }
   },
@@ -106,9 +101,7 @@ const storefrontPromotionStore = new StorefrontPromotionStore(dispatcherDefault,
         state = tmp6.state;
       }
       if ("success" === state) {
-        let tmp8 = applicationId;
         promotions = obj[tmp5].promotions;
-        let tmp9 = nextResult;
         let arr = promotions.push(tmp4);
       }
       continue;
@@ -116,7 +109,6 @@ const storefrontPromotionStore = new StorefrontPromotionStore(dispatcherDefault,
   },
   STOREFRONT_PROMOTIONS_FETCH_FAIL: function handleFetchFail(arg0) {
     for (const item10010 of tmp) {
-      let tmp3 = closure_0;
       let obj = { state: "error", fetchedAt: null };
       obj[1] = tmp2;
       closure_0[item10010] = obj;
@@ -125,6 +117,6 @@ const storefrontPromotionStore = new StorefrontPromotionStore(dispatcherDefault,
   },
   STOREFRONT_PROMOTION_ID_OVERRIDE_SET: handleReset
 });
-const result = require("set").fileFinishedImporting("modules/storefront/StorefrontPromotionStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/storefront/StorefrontPromotionStore.tsx");
 
 export default storefrontPromotionStore;

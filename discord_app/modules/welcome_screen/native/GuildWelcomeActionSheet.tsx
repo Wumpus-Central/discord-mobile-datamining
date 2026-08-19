@@ -2,23 +2,23 @@
 
 // Module 11830 (WelcomeChannelRow)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getEmojiToGroupId" /* 6727 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "handleInviteData" /* 11827 */;
+import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import handleInviteData from "handleInviteData" /* 11827 */;
 import { NO_WELCOME_SCREEN } from "handleInviteData" /* 11827 */;
 import { WELCOME_SCREEN_TYPE } from "WELCOME_SCREEN_TYPE" /* 11831 */;
 import ME from "ME" /* 676 */;
 import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
 import { Permissions } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-const require = arg1;
+const require = fn;
 class WelcomeChannelRow {
   constructor(arg0) {
     welcomeChannel = global.welcomeChannel;
@@ -40,7 +40,7 @@ class WelcomeChannelRow {
     stateFromStores1 = obj2.useStateFromStores(items1, () => {
       let canResult = null != stateFromStores;
       if (canResult) {
-        canResult = closure_1_9.can(closure_1_16.VIEW_CHANNEL, tmp);
+        canResult = closure_1_9.can(Permissions.VIEW_CHANNEL, tmp);
       }
       return canResult;
     });
@@ -126,12 +126,10 @@ class WelcomeChannelRow {
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: map1, Fonts, Routes: closure_14 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-createCacheKey = { container: null, guildIcon: null, header: null, headerGuildName: null, guildDescription: null, welcomeChannel: null, channelsTitle: null, emoji: null, placeholderEmojiWrapper: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", paddingHorizontal: 16, width: "100%", paddingVertical: 32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { alignItems: "center", justifyContent: "center", paddingHorizontal: 16, width: "100%", paddingVertical: 32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.sm, width: 64, height: 64, marginBottom: 16 };
 let obj2 = {};
-let obj1 = { borderRadius: ThemesDefault.radii.sm, width: 64, height: 64, marginBottom: 16 };
 const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.TEXT_SUBTLE, 24));
 obj2.marginBottom = 8;
 obj2.textAlign = "center";
@@ -144,20 +142,13 @@ const importDefaultResult1 = importDefaultResult;
 createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 8, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[6] = { alignSelf: "flex-start" };
 createCacheKey[7] = { width: 24, height: 24 };
-let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 8, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[8] = { padding: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs };
 let closure_19 = createCacheKey.createStyles(createCacheKey);
-let obj5 = { padding: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs };
-const result = require("set").fileFinishedImporting("modules/welcome_screen/native/GuildWelcomeActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/welcome_screen/native/GuildWelcomeActionSheet.tsx");
 
 export default function GuildWelcomeActionSheet(guildId) {
   guildId = guildId.guildId;
   const onHide = guildId.onHide;
-  dependencyMap = undefined;
-  let welcomeScreen;
-  let fetching;
-  let hasError;
-  closure_6 = undefined;
   let tmp = callback3();
   dependencyMap = tmp;
   let obj = guildId(589);
@@ -166,13 +157,13 @@ export default function GuildWelcomeActionSheet(guildId) {
   obj1 = guildId(589);
   let items1 = [closure_10];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ welcomeScreen: closure_1_10.get(guildId), fetching: closure_1_10.isFetching(), hasError: closure_1_10.hasError() }));
-  welcomeScreen = stateFromStoresObject.welcomeScreen;
-  fetching = stateFromStoresObject.fetching;
-  hasError = stateFromStoresObject.hasError;
+  const welcomeScreen = stateFromStoresObject.welcomeScreen;
+  const fetching = stateFromStoresObject.fetching;
+  const hasError = stateFromStoresObject.hasError;
   const items2 = [guildId, welcomeScreen];
   const effect = welcomeScreen.useEffect(() => {
     if (null == welcomeScreen) {
-      onHide(headerGuildName[26]).wait(() => closure_1_0(closure_1_2[27]).fetchWelcomeScreen(closure_0));
+      onHide(headerGuildName[26]).wait(() => guildId(closure_1_2[27]).fetchWelcomeScreen(closure_0));
       const obj = onHide(headerGuildName[26]);
     }
   }, items2);
@@ -190,21 +181,21 @@ export default function GuildWelcomeActionSheet(guildId) {
   const items4 = [guildId, welcomeScreen];
   const effect2 = welcomeScreen.useEffect(() => {
     if (null != welcomeScreen) {
-      onHide(headerGuildName[26]).wait(() => closure_1_0(closure_1_2[27]).welcomeScreenViewed(closure_0));
+      onHide(headerGuildName[26]).wait(() => guildId(closure_1_2[27]).welcomeScreenViewed(closure_0));
       const obj = onHide(headerGuildName[26]);
     }
   }, items4);
   const items5 = [welcomeScreen];
   const effect3 = welcomeScreen.useEffect(() => {
-    if (welcomeScreen === closure_1_11) {
+    if (welcomeScreen === NO_WELCOME_SCREEN) {
       onHide(headerGuildName[18]).hideActionSheet();
       const obj = onHide(headerGuildName[18]);
     }
   }, items5);
   const items6 = [guildId];
   const effect4 = welcomeScreen.useEffect(() => {
-    let obj = onHide(headerGuildName[28]);
-    obj = { type: closure_1_12, guild_id: guildId };
+    onHide(headerGuildName[28]);
+    const obj = { type: WELCOME_SCREEN_TYPE, guild_id: guildId };
     obj.track(closure_1_13.OPEN_MODAL, obj);
   }, items6);
   const items7 = [onHide];
@@ -219,21 +210,21 @@ export default function GuildWelcomeActionSheet(guildId) {
       const items = [];
       const items1 = [];
       c2 = false;
-      const welcome_channels = tmp.welcome_channels;
-      const item = welcome_channels.forEach((description) => {
-        items.push(description.description);
-        items1.push(description.channel_id);
-        if (null != description.emoji_id) {
+      const welcome_channels = welcomeScreen.welcome_channels;
+      const item = welcome_channels.forEach((item, index) => {
+        items.push(item.description);
+        items1.push(item.channel_id);
+        if (null != item.emoji_id) {
           c2 = true;
         }
       });
-      let obj = onHide(headerGuildName[28]);
-      obj = { index: null, guild_id: null, options: null, options_channel_ids: null, guild_description: null, has_custom_emojis: null };
+      onHide(headerGuildName[28]);
+      const obj = { index: null, guild_id: null, options: null, options_channel_ids: null, guild_description: null, has_custom_emojis: null };
       obj[0] = arg0;
       obj[1] = items;
       obj[2] = items;
       obj[3] = items1;
-      obj[4] = tmp.description;
+      obj[4] = welcomeScreen.description;
       obj[5] = c2;
       obj.track(closure_1_13.GUILD_WELCOME_SCREEN_OPTION_SELECTED, obj);
     }
@@ -242,7 +233,6 @@ export default function GuildWelcomeActionSheet(guildId) {
   if (null != stateFromStores) {
     tmp12 = null;
     if (null != welcomeScreen) {
-      obj = { startExpanded: true, children: null };
       obj = { contentContainerStyle: null, children: null };
       obj[0] = tmp.container;
       obj1 = { style: null, guild: null, size: null, textScale: 2 };
@@ -271,14 +261,14 @@ export default function GuildWelcomeActionSheet(guildId) {
       obj5[3] = intl2.string(tmp2(1236).t["haj5+i"]).toUpperCase();
       items9[3] = callback(tmp2(4734).Text, obj5);
       let welcome_channels = welcomeScreen.welcome_channels;
-      items9[4] = welcome_channels.map((welcomeChannel) => {
-        closure_0 = arg1;
-        return closure_1_17(closure_1_20, {
-          welcomeChannel,
-          trackOptionSelect(arg0) {
+      items9[4] = welcome_channels.map((item, index) => {
+        closure_0 = index;
+        return closure_1_17(WelcomeChannelRow, {
+          welcomeChannel: item,
+          trackOptionSelect(stateFromStores) {
             return closure_1_6(closure_0);
           }
-        }, arg1);
+        }, index);
       });
       obj[1] = items9;
       obj[1] = callback2(hasError, obj);

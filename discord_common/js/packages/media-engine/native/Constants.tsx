@@ -1,11 +1,11 @@
 // === Module 4571: AudioSubsystems ===
 
 // Module 4571 (AudioSubsystems)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
 
 const InputModes = DesktopSources.InputModes;
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Constants.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Constants.tsx");
 
 export const AudioSubsystems = DesktopSources.AudioSubsystems;
 export const DeviceTypes = DesktopSources.DeviceTypes;

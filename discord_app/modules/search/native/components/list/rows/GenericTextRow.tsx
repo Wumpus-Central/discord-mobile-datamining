@@ -1,13 +1,13 @@
 // === Module 15904: ? ===
 
 // Module 15904
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-let require = arg1;
+let require = fn;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles({ title: { flexDirection: "row" }, container: { padding: 10 } });
 const memoResult = importAllResult.memo(function GenericTextRow(text) {
@@ -17,7 +17,6 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
   ({ trailing, accessibilityActions, onAccessibilityAction } = text);
   const tmp = callback2();
   const items = [onPress, text];
-  let obj = { style: tmp.title, children: null };
   onPress = importAllResult.useCallback(callback(function*() {
     if (c0 === 2) {
       c0 = 3;
@@ -69,15 +68,15 @@ const memoResult = importAllResult.memo(function GenericTextRow(text) {
       }
     }
   }), items);
-  obj = { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text };
+  let obj = { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text };
   obj[1] = jsx(require(onPress[5]).Text, { lineClamp: 1, variant: "text-md/medium", color: "mobile-text-heading-primary", style: tmp.container, children: text });
   const label = <View lineClamp={1} variant="text-md/medium" color="mobile-text-heading-primary" style={tmp.container}>{text}</View>;
   icon = null != icon;
   if (icon) {
-    icon = tmp3(icon, { size: "sm", color: "mobile-text-heading-primary" });
+    icon = <icon size="sm" color="mobile-text-heading-primary" />;
   }
   return jsx(require(onPress[6]).SearchListRow, { icon, label, onPress, trailing, accessibilityActions, onAccessibilityAction });
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/list/rows/GenericTextRow.tsx");
 
 export default memoResult;

@@ -1,14 +1,14 @@
 // === Module 7261: isListeningOnSpotify ===
 
 // Module 7261 (isListeningOnSpotify)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
 import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
 import ME from "ME" /* 676 */;
 
 ({ ActivityTypes: obj1, PlatformTypes: c3 } = ME);
 const isSpotifyParty = SPOTIFY_APP_PROTOCOL.isSpotifyParty;
-const result = set.fileFinishedImporting("modules/activities/utils/isListeningOnSpotify.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/isListeningOnSpotify.tsx");
 
 export default function isListeningOnSpotify(type) {
   let tmp = null != type;
@@ -17,7 +17,6 @@ export default function isListeningOnSpotify(type) {
   }
   if (tmp) {
     tmp = type.name === getPlatformUserUrlDefault.get(constants2.SPOTIFY).name;
-    const obj = getPlatformUserUrlDefault;
   }
   if (tmp) {
     tmp = null != type.party;

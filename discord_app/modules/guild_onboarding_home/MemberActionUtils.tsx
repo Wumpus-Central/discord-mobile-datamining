@@ -2,13 +2,13 @@
 
 // Module 11455 (useMemberActionsForChannel)
 import useIsNewMemberDefault from "useIsNewMember" /* 5284 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "handleSettingsLoadSuccess" /* 5048 */;
-import closure_5 from "set" /* 5049 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import handleSettingsLoadSuccess from "handleSettingsLoadSuccess" /* 5048 */;
+import set from "set" /* 5049 */;
 import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
 
 export const useMemberActionsForChannel = function useMemberActionsForChannel(guild_id, channel) {
   const _require = guild_id;
@@ -23,7 +23,7 @@ export const useMemberActionsForChannel = function useMemberActionsForChannel(gu
   if (tmp) {
     let num;
     if (stateFromStores != null) {
-      num = stateFromStores.findIndex((channelId) => channelId.channelId === id.id);
+      num = stateFromStores.findIndex((item, index) => item.channelId === id.id);
     }
     if (num == null) {
       num = 0;
@@ -62,14 +62,14 @@ export const useNextMemberAction = function useNextMemberAction(guild_id, channe
   dependencyMap = _require(647).useStateFromStores(items1, () => closure_1_5.getCompletedActions(closure_0));
   let found;
   if (stateFromStores != null) {
-    found = stateFromStores.find((channelId) => {
+    found = stateFromStores.find((item, index) => {
       let tmp2;
       if (closure_2 != null) {
-        tmp2 = tmp[channelId.channelId];
+        tmp2 = tmp[item.channelId];
       }
       let tmp3 = true !== tmp2;
       if (tmp3) {
-        tmp3 = channelId.channelId !== closure_1;
+        tmp3 = item.channelId !== closure_1;
       }
       return tmp3;
     });

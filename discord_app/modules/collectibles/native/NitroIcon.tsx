@@ -6,9 +6,9 @@ import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/NitroIcon.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/NitroIcon.tsx");
 
 export default function NitroIcon(width) {
   let num = width.width;

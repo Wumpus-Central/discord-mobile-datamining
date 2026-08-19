@@ -1,26 +1,26 @@
 // === Module 15291: items ===
 
 // Module 15291 (items)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_5 from "withEqualityFn" /* 15289 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import withEqualityFn from "withEqualityFn" /* 15289 */;
 import { ME } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { Easing } from "module_4115" /* 4115 */;
 
-const require = arg1;
+const require = fn;
 let c8 = 2000;
 let closure_9 = Easing.inOut(require("module_4115").Easing.cubic);
 let closure_10 = [];
 let items = [require("DismissibleContent").DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
 let closure_12 = { code: "function useHomeDrawerPeekHintTsx1(){const{gestureState,panelX,PEEK_HINT_DRAWER_DRAG_THRESHOLD}=this.__closure;return gestureState.get().active&&panelX.get()>PEEK_HINT_DRAWER_DRAG_THRESHOLD;}" };
 let closure_13 = { code: "function useHomeDrawerPeekHintTsx2(isDragged,wasDragged){const{isPeekGranted,runOnJS,handleDrawerDragged}=this.__closure;if(!isPeekGranted||wasDragged==null)return;if(isDragged&&!wasDragged){runOnJS(handleDrawerDragged)();}}" };
-let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerPeekHint.tsx");
+let result = require("obj132").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerPeekHint.tsx");
 
 export const PEEK_HINT_DISTANCE = 40;
-export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, sharedValue2) {
-  let tmp = enableHome;
+export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enablePeekHint, sharedValue2) {
+  let tmp = enablePeekHint;
   const _require = sharedValue2;
   const tmp2 = noteInteraction();
   const panelX = tmp2.panelX;
@@ -30,7 +30,7 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, 
   noteInteraction = tmp2.noteInteraction;
   let obj = _require(panelX[8]);
   const isFocused = obj.useIsFocused();
-  const drawerOpen = _require(panelX[9]).useDrawerOpen(enableHome);
+  const drawerOpen = _require(panelX[9]).useDrawerOpen(enablePeekHint);
   const obj2 = _require(panelX[9]);
   items = [isPanelTouchActive];
   const stateFromStores = _require(panelX[10]).useStateFromStores(items, () => isPanelTouchActive.useReducedMotion);
@@ -38,7 +38,7 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, 
   const first = gestureState(_require(panelX[11]).useGuildsRouteGuildAndChannelId(), 1)[0];
   const obj4 = _require(panelX[11]);
   const obj5 = _require(panelX[12]);
-  if (enableHome) {
+  if (enablePeekHint) {
     tmp = isFocused;
   }
   if (tmp) {
@@ -83,22 +83,23 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, 
     const callback = obj6.useCallback(() => {
       if (null != ref2.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref2.current);
+        ref2.current = null;
       }
       closure_14.current = true;
-      let obj = sharedValue2(panelX[14]);
-      obj = { duration: 1500, easing: first1 };
+      sharedValue2(panelX[14]);
+      let obj = { duration: 1500, easing: first1 };
       let result = sharedValue2.set(obj.withTiming(40, obj));
       closure_13.current = setTimeout(() => {
         closure_13.current = null;
         closure_14.current = false;
-        const result = closure_0.set(closure_1_0(closure_1_1[15]).withSpring(0, closure_1_0(closure_1_1[16]).HOME_DRAWER_FLING_PHYSICS));
+        const result = closure_0.set(sharedValue2(panelX[15]).withSpring(0, sharedValue2(panelX[16]).HOME_DRAWER_FLING_PHYSICS));
         const current = ref.current;
         if (current != null) {
           current(closure_1_7.AUTO_DISMISS);
         }
         callback(false);
+        const obj = sharedValue2(panelX[15]);
       }, 2500);
     }, items1);
     const tmp25 = tmp8Result[0] === tmp3(tmp4[7]).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX;
@@ -118,13 +119,13 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, 
     const callback1 = obj6.useCallback(() => {
       if (null != ref2.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref2.current);
+        ref2.current = null;
       }
       if (null != ref3.current) {
         const _clearTimeout2 = clearTimeout;
-        clearTimeout(tmp4.current);
-        tmp4.current = null;
+        clearTimeout(ref3.current);
+        ref3.current = null;
       }
       if (ref4.current) {
         tmp7.current = false;
@@ -141,8 +142,8 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, 
             const _setTimeout = setTimeout;
             function checkIdle() {
               closure_1_12.current = null;
-              let diff = closure_8 - (Date.now() - closure_1_3.current);
-              if (!closure_1_4.get()) {
+              let diff = closure_8 - (Date.now() - lastInteractionAt.current);
+              if (!isPanelTouchActive.get()) {
                 if (0 >= diff) {
                   closure_1_10(true);
                 }
@@ -156,8 +157,8 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, 
             return () => {
               if (null != ref.current) {
                 const _clearTimeout = clearTimeout;
-                clearTimeout(tmp.current);
-                tmp.current = null;
+                clearTimeout(ref.current);
+                ref.current = null;
               }
             };
           }
@@ -220,7 +221,7 @@ export const useHomeDrawerPeekHint = function useHomeDrawerPeekHint(enableHome, 
           tmp = null != sharedValue2;
         }
         if (tmp) {
-          tmp = enableHome;
+          tmp = enablePeekHint;
         }
         if (tmp) {
           tmp = !sharedValue2;

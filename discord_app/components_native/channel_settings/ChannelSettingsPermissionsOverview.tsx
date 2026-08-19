@@ -9,39 +9,39 @@ import TableRowInner from "TableRowInner" /* 6291 */;
 import memoResult1Default from "memoResult1" /* 9965 */;
 import RoleLabel from "RoleLabel" /* 10184 */;
 import CircleMinusIcon from "CircleMinusIcon" /* 14658 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "markAllUserIdListsStale" /* 4030 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function ChannelPermissionSyncModule(channel) {
   channel = channel.channel;
   const category = channel.category;
   const items = [channel, category];
   const callback = React.useCallback(() => {
-    let obj = category(closure_1_3[14]);
-    obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-    const intl = channel(closure_1_3[15]).intl;
-    obj[0] = intl.string(channel(closure_1_3[15]).t.YWMtRe);
-    const intl2 = channel(closure_1_3[15]).intl;
-    obj = { channelName: channel(closure_1_3[16]).computeChannelName(closure_0, closure_1_13, closure_1_12, true), categoryName: null };
-    let obj4 = channel(closure_1_3[16]);
-    obj[1] = channel(closure_1_3[16]).computeChannelName(category, closure_1_13, closure_1_12);
-    obj[1] = intl2.format(channel(closure_1_3[15]).t["iKW+jY"], obj);
-    const intl3 = channel(closure_1_3[15]).intl;
-    obj[2] = intl3.string(channel(closure_1_3[15]).t.eW8Gy4);
-    const intl4 = channel(closure_1_3[15]).intl;
-    obj[3] = intl4.string(channel(closure_1_3[15]).t.s4uM3b);
+    category(dependencyMap[14]);
+    let obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+    const intl = channel(dependencyMap[15]).intl;
+    obj[0] = intl.string(channel(dependencyMap[15]).t.YWMtRe);
+    const intl2 = channel(dependencyMap[15]).intl;
+    obj = { channelName: channel(dependencyMap[16]).computeChannelName(closure_0, closure_1_13, closure_1_12, true), categoryName: null };
+    let obj4 = channel(dependencyMap[16]);
+    obj[1] = channel(dependencyMap[16]).computeChannelName(category, closure_1_13, closure_1_12);
+    obj[1] = intl2.format(channel(dependencyMap[15]).t["iKW+jY"], obj);
+    const intl3 = channel(dependencyMap[15]).intl;
+    obj[2] = intl3.string(channel(dependencyMap[15]).t.eW8Gy4);
+    const intl4 = channel(dependencyMap[15]).intl;
+    obj[3] = intl4.string(channel(dependencyMap[15]).t.s4uM3b);
     closure_0 = closure_1_5(function*() {
       if (c3 === 2) {
         c3 = 3;
@@ -101,7 +101,7 @@ function ChannelPermissionSyncModule(channel) {
             if (arg1) {
               obj = callback(closure_2_3[19]);
               obj4 = { permissionOverwrites: null };
-              obj2 = closure_2_1(closure_2_3[20]);
+              obj2 = category(closure_2_3[20]);
               obj4[0] = obj2.values(obj1);
               obj.saveChannel(closure_1_0.id, obj4);
             }
@@ -142,13 +142,13 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj1);
   }
   let obj2 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj3 = { icon: closure_16(channel(13952).RefreshIcon, {}), label: null, onPress: null };
+  let obj3 = { icon: callback(channel(13952).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1236).intl;
   obj3[1] = intl2.string(channel(1236).t.NVwuHq);
   obj3[2] = callback;
-  obj2[2] = closure_16(channel(6291).TableRow, obj3);
-  obj[1] = closure_16(channel(6286).TableRowGroup, obj2);
-  return closure_16(View, obj);
+  obj2[2] = callback(channel(6291).TableRow, obj3);
+  obj[1] = callback(channel(6286).TableRowGroup, obj2);
+  return callback(View, obj);
 }
 function CategorySync(category) {
   category = category.category;
@@ -210,9 +210,9 @@ function RoleRow(onDelete) {
     if (!tmp) {
       obj = { color: null, accessibilityLabel: null };
       obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
-      const intl = tmp3(1236).intl;
-      obj[1] = intl.string(tmp3(1236).t.N86XcP);
-      tmp2Result = tmp2(tmp3(14658).CircleMinusIcon, obj);
+      const intl = getSystemLocale.intl;
+      obj[1] = intl.string(getSystemLocale.t.N86XcP);
+      tmp2Result = callback(CircleMinusIcon.CircleMinusIcon, obj);
     }
   }
   obj[2] = tmp2Result;
@@ -229,39 +229,37 @@ function RoleRow(onDelete) {
 function RoleOverwrites(guild) {
   guild = guild.guild;
   ({ isEditing: importDefault, onSelectRow: importAll, onDeleteRow: dependencyMap } = guild);
-  let obj;
-  obj = guild(589);
+  let obj = guild(589);
   const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getSortedRoles(guild.id));
   obj = {};
   const merged = Object.assign(guild.channel.permissionOverwrites);
   if (null == obj[guild.id]) {
     obj[guild.id] = applyOverwritesAll.makeEveryoneOverwrite(guild.id);
-    const obj3 = applyOverwritesAll;
   }
-  const found = stateFromStores.filter((arg0) => {
+  const found = stateFromStores.filter((item, index) => {
     let type;
-    if (obj[arg0.id] != null) {
+    if (obj[item.id] != null) {
       type = tmp.type;
     }
-    return type === guild(closure_1_3[29]).PermissionOverwriteType.ROLE;
+    return type === guild(dependencyMap[29]).PermissionOverwriteType.ROLE;
   });
   obj = { style: callback3().tableRowGroupContainer, children: null };
   obj1 = { title: null, hasIcons: true, children: null };
   const intl = tmp2(1236).intl;
   obj1[0] = intl.string(guild(1236).t["LPJmL/"]);
-  obj1[2] = found.map((id) => {
-    closure_0 = id;
-    return closure_1_16(closure_1_22, {
-      role: id,
+  obj1[2] = found.map((item, index) => {
+    closure_0 = item;
+    return closure_1_16(RoleRow, {
+      role: item,
       isEditing: closure_1,
       onSelect() {
-        return closure_1_2(user.id);
+        return closure_1_2(item.id);
       },
       onDelete() {
-        return closure_1_3(user.id);
+        return closure_1_3(item.id);
       }
-    }, id.id);
+    }, item.id);
   });
   obj[1] = callback(guild(6286).TableRowGroup, obj1);
   return callback(View, obj);
@@ -281,18 +279,18 @@ function MemberRow(arg0) {
     obj[0] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
     const intl = getSystemLocale.intl;
     obj[1] = intl.string(getSystemLocale.t.N86XcP);
-    tmpResult = tmp(CircleMinusIcon.CircleMinusIcon, obj);
+    tmpResult = callback(CircleMinusIcon.CircleMinusIcon, obj);
   }
   obj[4] = tmpResult;
-  return closure_16(memoResult1Default, obj);
+  return callback(memoResult1Default, obj);
 }
 function MemberOverwrites(channel) {
   channel = channel.channel;
   const guild_id = channel.guild_id;
   ({ isEditing: importDefault, onSelectRow: importAll, onDeleteRow: dependencyMap } = channel);
   const tmp = callback3();
-  const found = applyDefault(channel.permissionOverwrites).filter((type) => type.type === guild_id(table[29]).PermissionOverwriteType.MEMBER);
-  const mapped = found.map((id) => user.getUser(id.id));
+  const found = applyDefault(channel.permissionOverwrites).filter((item, index) => item.type === guild_id(table[29]).PermissionOverwriteType.MEMBER);
+  const mapped = found.map((item, index) => user.getUser(item.id));
   const found1 = mapped.filter(guild_id(1370).isNotNullish);
   const arr = applyDefault(channel.permissionOverwrites);
   const valueResult = found1.sortBy((username) => username.username.toLowerCase()).value();
@@ -303,19 +301,19 @@ function MemberOverwrites(channel) {
     obj = { title: null, hasIcons: true, children: null };
     const intl = tmp3(1236).intl;
     obj[0] = intl.string(tmp3(1236).t["9Oq93m"]);
-    obj[2] = valueResult.map((id) => {
-      closure_0 = id;
-      return closure_1_16(closure_1_24, {
+    obj[2] = valueResult.map((item, index) => {
+      closure_0 = item;
+      return closure_1_16(MemberRow, {
         guildId: closure_0,
-        user: id,
+        user: item,
         isEditing: closure_1,
         onSelect() {
-          return closure_1_2(user.id);
+          return closure_1_2(item.id);
         },
         onDelete() {
-          return closure_1_3(user.id);
+          return closure_1_3(item.id);
         }
-      }, id.id);
+      }, item.id);
     });
     obj[1] = callback(tmp3(6286).TableRowGroup, obj);
     tmp4 = callback(View, obj);
@@ -324,24 +322,16 @@ function MemberOverwrites(channel) {
 }
 ({ PermissionOverrideType: closure_14, ChannelSettingsSections: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-createCacheKey = { tableRowGroupContainer: null, tableContainer: null };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
+const createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginHorizontal: ThemesDefault.space.PX_12 };
 let closure_18 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginHorizontal: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverview.tsx");
+let result = require("obj132").fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverview.tsx");
 
 export default function ChannelSettingsPermissionsOverview(channelId) {
   channelId = channelId.channelId;
-  let navigation;
-  let stateFromStores;
   let stateFromStores1;
-  let stateFromStores2;
-  closure_5 = undefined;
   let first;
-  closure_7 = undefined;
-  let callback;
   function handleClearPermissionOverwrite(arg0) {
     closure_0 = arg0;
     let tmp;
@@ -354,8 +344,8 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
     } else if (user != null) {
       username = user.username;
     }
-    let obj = navigation(stateFromStores1[14]);
-    obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
+    navigation(stateFromStores1[14]);
+    const obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
     const intl = channelId(stateFromStores1[15]).intl;
     obj[0] = intl.formatToPlainString(channelId(stateFromStores1[15]).t.txPV7k, { name: username });
     const intl2 = channelId(stateFromStores1[15]).intl;
@@ -370,11 +360,11 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
     obj.show(obj);
   }
   let obj = channelId(stateFromStores1[24]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   obj1 = channelId(stateFromStores1[28]);
   const items = [handleClearPermissionOverwrite];
   const items1 = [channelId];
-  stateFromStores = obj1.useStateFromStores(items, () => handleClearPermissionOverwrite.getChannel(channelId), items1);
+  const stateFromStores = obj1.useStateFromStores(items, () => handleClearPermissionOverwrite.getChannel(channelId), items1);
   let obj2 = channelId(stateFromStores1[28]);
   const items2 = [handleClearPermissionOverwrite];
   stateFromStores1 = obj2.useStateFromStores(items2, () => {
@@ -386,7 +376,7 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
   });
   let obj3 = channelId(stateFromStores1[28]);
   const items3 = [closure_11];
-  stateFromStores2 = obj3.useStateFromStores(items3, () => {
+  const stateFromStores2 = obj3.useStateFromStores(items3, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
@@ -414,7 +404,7 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
   const tmp7 = stateFromStores2(first.useState(false), 2);
   first = tmp7[0];
   closure_7 = tmp7[1];
-  callback = first.useCallback(() => {
+  const callback = first.useCallback(() => {
     callback((arg0) => !arg0);
     const result = channelId(stateFromStores1[32]).DeprecatedLayoutAnimation();
   }, []);
@@ -425,16 +415,16 @@ export default function ChannelSettingsPermissionsOverview(channelId) {
         const obj = {};
         const merged = Object.assign(arg0);
         obj.onPress = closure_8;
-        const intl = closure_1_0(closure_1_3[15]).intl;
+        const intl = channelId(stateFromStores1[15]).intl;
         const string = intl.string;
-        const t = closure_1_0(closure_1_3[15]).t;
+        const t = channelId(stateFromStores1[15]).t;
         if (closure_6) {
           let stringResult = string(t.i4jeWR);
         } else {
           stringResult = string(t.bt75uw);
         }
         obj.label = stringResult;
-        return closure_1_16(closure_1_0(closure_1_3[33]).HeaderTextButton, obj);
+        return closure_1_16(channelId(stateFromStores1[33]).HeaderTextButton, obj);
       }
     });
   }, items6);

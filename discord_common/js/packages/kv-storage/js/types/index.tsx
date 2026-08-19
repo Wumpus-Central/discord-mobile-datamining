@@ -1,9 +1,9 @@
 // === Module 1962: TableId ===
 
 // Module 1962 (TableId)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/types/index.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/types/index.tsx");
 
 export const TableId = { Kv: "kv", KvCache: "kv_cache", Messages: "messages" };
 export const MAXIMUM_KEY_BITS = 5;

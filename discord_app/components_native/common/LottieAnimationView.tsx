@@ -2,7 +2,7 @@
 
 // Module 7130 (play)
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 7131 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
@@ -61,8 +61,7 @@ prototype["render"] = function render() {
     obj[0] = source.w / source.h;
     tmp4 = obj;
   }
-  obj = { style: items, collapsable: props.collapsable, children: null };
-  items = [tmp4, style];
+  const items = [tmp4, style];
   obj = { ref: this.setRef, source, style: items1 };
   items1 = [tmp4, style];
   const tmp = callback(props, closure_2);
@@ -71,6 +70,6 @@ prototype["render"] = function render() {
   return <View ref={this.setRef} source={source} style={items1} />;
 };
 LottieAnimationView.defaultProps = { autoPlay: true, loop: true, collapsable: false };
-const result = require("set").fileFinishedImporting("components_native/common/LottieAnimationView.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/LottieAnimationView.tsx");
 
 export default LottieAnimationView;

@@ -1,10 +1,10 @@
 // === Module 4471: _createStripeSetupIntent ===
 
 // Module 4471 (_createStripeSetupIntent)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _createStripeSetupIntent() {
   const self = this;
   const tmp = callback(() => {
@@ -195,7 +195,7 @@ function _createSetupIntentForPaymentElements() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/billing/actions/StripeActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/billing/actions/StripeActionCreators.tsx");
 
 export const createStripeSetupIntent = function createStripeSetupIntent() {
   const self = this;

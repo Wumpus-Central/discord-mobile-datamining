@@ -1,13 +1,13 @@
 // === Module 9722: SecureFramesStreamVerificationBottomSheet ===
 
 // Module 9722 (SecureFramesStreamVerificationBottomSheet)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 4558 */;
+import noop from "noop" /* 19 */;
+import initialize from "initialize" /* 4558 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx");
 
 export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   channelId = channelId.channelId;
@@ -24,11 +24,11 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
     return epochAuthenticator;
   });
   const callback = React.useCallback((message) => {
-    let obj = channelId(closure_1_2[5]);
-    obj = { channelId };
+    channelId(dependencyMap[5]);
+    let obj = { channelId };
     const result = obj.trackE2EEStreamVerificationShareClicked(obj);
     obj = { message };
-    channelId(closure_1_2[6]).showShareActionSheet(obj, closure_1_5.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
+    channelId(dependencyMap[6]).showShareActionSheet(obj, AnalyticsSections.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
   }, items1);
   obj = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   const intl = channelId(1236).intl;

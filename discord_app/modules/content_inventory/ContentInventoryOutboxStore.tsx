@@ -4,9 +4,8 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isMatchingListeningActivity from "isMatchingListeningActivity" /* 9046 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 let map = new Map();
 let set = new Set();
 let c4 = null;
@@ -91,7 +90,7 @@ const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDe
     } else {
       const entries = value.entries;
       const obj = {};
-      const found = entries.filter((id) => id.id !== id.id);
+      const found = entries.filter((item, index) => item.id !== id.id);
       const merged = Object.assign(value);
       obj.entries = found;
       const result = map.set(userId, obj);
@@ -107,6 +106,6 @@ const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDe
     c5 = false;
   }
 });
-let result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryOutboxStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/content_inventory/ContentInventoryOutboxStore.tsx");
 
 export default contentInventoryOutboxStore;

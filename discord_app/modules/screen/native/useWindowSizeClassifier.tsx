@@ -1,12 +1,12 @@
 // === Module 4233: useWindowSizeClassifier ===
 
 // Module 4233 (useWindowSizeClassifier)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4234 */;
 import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4234 */;
 
 let obj = { SMALL: 0, [0]: "SMALL", NORMAL: 1, [1]: "NORMAL", LARGE: 2, [2]: "LARGE", XLARGE: 3, [3]: "XLARGE" };
-const result = set.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
+const result = obj132.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
 
 export default function useWindowSizeClassifier() {
   const width = useBaseAppContainerDimensionsDefault().width;

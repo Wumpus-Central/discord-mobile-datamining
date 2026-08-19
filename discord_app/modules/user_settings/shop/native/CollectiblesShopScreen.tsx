@@ -10,16 +10,14 @@ import CollectiblesShopInternal from "CollectiblesShopInternal" /* 14951 */;
 import { CollectiblesMobileShopScreen as closure_3 } from "items" /* 678 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
 export default function CollectiblesShopScreen() {
   let obj = useSettingNavigationRoute;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
-  const obj2 = useShopOrientationLock;
-  const tmp = require;
   const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
   let screen;

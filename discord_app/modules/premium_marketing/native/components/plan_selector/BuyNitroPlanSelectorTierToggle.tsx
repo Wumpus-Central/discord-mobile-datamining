@@ -3,13 +3,13 @@
 // Module 12842 (items)
 import ThemesDefault from "Themes" /* 712 */;
 import importDefaultResult from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c3 = importDefaultResult;
 ({ Pressable: c5, StyleSheet, View: closure_6 } = get_ActivityIndicator);
 ({ PREMIUM_TYPE_DISPLAY_NAME: error, PremiumTypes: closure_8 } = GuildFeatures);
@@ -17,12 +17,10 @@ let c3 = importDefaultResult;
 [tmp7, tmp8] = importDefaultResult(require("items").Gradients.PREMIUM_TIER_2, 2);
 let items = [tmp7, tmp8, tmp7, tmp8, tmp7];
 let closure_12 = [0, 0.25, 0.5, 0.75, 1];
-createCacheKey = { pill: null, tab: null, indicator: null, gradientLayer: null, gradientTrack: null, gradientFill: null, tabText: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, padding: ThemesDefault.space.PX_4 };
+const createCacheKey = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, padding: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
 const importDefaultResultResult = importDefaultResult(require("items").Gradients.PREMIUM_TIER_2, 2);
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4 };
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4 };
 createCacheKey[2] = { position: "absolute", left: 0, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, overflow: "hidden" };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[3] = {};
@@ -37,15 +35,11 @@ let closure_13 = createCacheKey.createStyles(createCacheKey);
 let closure_14 = { code: "function BuyNitroPlanSelectorTierToggleTsx1(){const{nitroProgress}=this.__closure;return{opacity:nitroProgress.get()};}" };
 let closure_15 = { code: "function BuyNitroPlanSelectorTierToggleTsx2(){const{gradientFlowX}=this.__closure;return{transform:[{translateX:gradientFlowX.get()}]};}" };
 let closure_16 = { code: "function BuyNitroPlanSelectorTierToggleTsx3(){const{indicatorX,indicatorWidth}=this.__closure;return{transform:[{translateX:indicatorX.get()}],width:indicatorWidth.get()};}" };
-let obj2 = { position: "absolute", left: 0, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, overflow: "hidden" };
-let obj3 = {};
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/BuyNitroPlanSelectorTierToggle.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/BuyNitroPlanSelectorTierToggle.tsx");
 
 export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   selectedTier = selectedTier.selectedTier;
-  let _require = selectedTier;
   ({ setSelectedTier: sharedValue, disabled: sharedValue1 } = selectedTier);
-  importDefaultResult = undefined;
   let React;
   closure_5 = undefined;
   let ref;
@@ -55,10 +49,9 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   closure_10 = undefined;
   const tmp = callback();
   importDefaultResult = tmp;
-  _require = undefined;
   sharedValue = undefined;
   sharedValue1 = undefined;
-  _require = tmp2;
+  const _require = tmp2;
   let obj = _require(sharedValue1[8]);
   let num = 0;
   if (selectedTier !== sharedValue2.TIER_0) {
@@ -72,6 +65,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
       num = 1;
     }
     const result = sharedValue.set(callback(sharedValue1[9]).withTiming(num, callback(sharedValue1[10]).timingStandard));
+    const obj = callback(sharedValue1[9]);
   }, items);
   let tmp3Result = tmp3(tmp4[8]);
   sharedValue1 = tmp3Result.useSharedValue(0);
@@ -79,12 +73,12 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   const effect1 = React.useEffect(() => {
     const accessibilityPreferencesSharedValue = callback(sharedValue1[11]).accessibilityPreferencesSharedValue;
     if (!accessibilityPreferencesSharedValue.get().reduceMotion) {
-      let tmpResult = tmp(tmp2[8]);
-      tmpResult = tmp(tmp2[9]);
+      callback(sharedValue1[8]);
+      const tmpResult = callback(sharedValue1[9]);
       const obj = { duration: 5000, easing: null };
-      obj[1] = tmp(tmp2[8]).Easing.linear;
+      obj[1] = callback(sharedValue1[8]).Easing.linear;
       const result = sharedValue1.set(tmpResult.withRepeat(tmpResult.withTiming(-120, obj), -1, false));
-      return () => closure_1_0(closure_1_2[8]).cancelAnimation(closure_2);
+      return () => closure_1_0(sharedValue1[8]).cancelAnimation(closure_2);
     }
   }, items1);
   tmp3Result = tmp3(tmp4[8]);
@@ -96,8 +90,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   fn.__initData = closure_14;
   const animatedStyle = tmp3Result.useAnimatedStyle(fn);
   const fn2 = function c() {
-    let obj = { transform: null };
-    obj = { translateX: sharedValue1.get() };
+    const obj = { translateX: sharedValue1.get() };
     items = [obj];
     obj[0] = items;
     return obj;
@@ -121,17 +114,16 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
     let current = ref.current;
     if (null != current) {
       current = ref.current;
-      const item = current.forEach((measureLayout) => {
-        closure_0 = arg1;
-        measureLayout.measureLayout(closure_0, (arg0, arg1, arg2, arg3) => {
+      const item = current.forEach((item, index) => {
+        closure_0 = index;
+        item.measureLayout(closure_0, (arg0, arg1, arg2, arg3) => {
           closure_0 = arg0;
           closure_1 = arg1;
           closure_2 = arg2;
           closure_3 = arg3;
           closure_1_4((arg0) => {
-            let obj = {};
             const merged = Object.assign(arg0);
-            obj = { x: closure_0, y: closure_1, width: closure_2, height: closure_3 };
+            const obj = { x: closure_0, y: closure_1, width: closure_2, height: closure_3 };
             obj[closure_0] = obj;
             return obj;
           });
@@ -141,23 +133,22 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
   }, []);
   const items2 = [tmp11[0][selectedTier], sharedValue2, sharedValue3];
   const layoutEffect1 = React.useLayoutEffect(() => {
-    if (null != closure_5) {
+    if (null != styles) {
       if (ref2.current) {
-        const result = sharedValue2.set(callback(sharedValue1[9]).withTiming(tmp.x, { duration: 220 }));
+        const result = sharedValue2.set(callback(sharedValue1[9]).withTiming(styles.x, { duration: 220 }));
         const obj = callback(sharedValue1[9]);
-        const result1 = sharedValue3.set(callback(sharedValue1[9]).withTiming(tmp.width, { duration: 220 }));
+        const result1 = sharedValue3.set(callback(sharedValue1[9]).withTiming(styles.width, { duration: 220 }));
         const obj2 = callback(sharedValue1[9]);
       } else {
         tmp12.current = true;
-        const result2 = sharedValue2.set(tmp.x);
-        const result3 = sharedValue3.set(tmp.width);
+        const result2 = sharedValue2.set(styles.x);
+        const result3 = sharedValue3.set(styles.width);
       }
     }
   }, items2);
   _require(sharedValue1[8]);
   const fn3 = function k() {
-    let obj = { transform: null, width: null };
-    obj = { translateX: sharedValue2.get() };
+    const obj = { translateX: sharedValue2.get() };
     items = [obj];
     obj[0] = items;
     obj[1] = sharedValue3.get();
@@ -191,49 +182,30 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
     obj2[1] = sharedValue3(sharedValue(tmp4[8]).View, obj3);
     obj[2] = sharedValue3(sharedValue(tmp4[8]).View, obj2);
     tmp23 = sharedValue3(sharedValue(tmp4[8]).View, obj);
-    obj1 = { top: null, height: null };
     const tmp26 = sharedValue(tmp4[12]);
   }
   const items6 = [tmp23, ];
   const NITRO_PLAN_TIERS = tmp3(tmp4[14]).NITRO_PLAN_TIERS;
-  items6[1] = NITRO_PLAN_TIERS.map((arg0) => {
-    const callback = arg0;
+  items6[1] = NITRO_PLAN_TIERS.map((item, index) => {
+    const callback = item;
     let str = "text-muted";
-    if (arg0 === callback) {
+    if (item === callback) {
       let str2 = "interactive-text-active";
-      if (arg0 !== tmp3) {
+      if (item !== tmp3) {
         str2 = "text-overlay-light";
       }
       str = str2;
     }
-    obj = {
-      ref(arg0) {
-        if (null != arg0) {
-          const current = closure_1_7.current;
-          const result = current.set(closure_0, arg0);
-        }
-      },
-      style: closure_3.tab,
-      disabled: sharedValue1,
-      onPress() {
-        const result = callback(sharedValue1[15]).triggerHapticFeedback(sharedValue(sharedValue1[16]).SELECTION);
-        closure_1_1(callback);
-      },
-      accessibilityRole: "tab",
-      accessibilityState: obj,
-      children: null
-    };
-    obj = { selected: tmp, disabled: sharedValue1 };
-    obj = { variant: "heading-sm/extrabold", color: str, style: closure_3.tabText, children: null };
+    const obj = { variant: "heading-sm/extrabold", color: str, style: closure_3.tabText, children: null };
     const intl = callback(sharedValue1[18]).intl;
-    if (arg0 === sharedValue2.TIER_0) {
+    if (item === sharedValue2.TIER_0) {
       let tUbSDK = callback(sharedValue1[18]).t.tUbSDK;
     } else {
-      tUbSDK = ref[arg0];
+      tUbSDK = ref[item];
     }
     obj[3] = intl.string(tUbSDK).toUpperCase();
     obj[6] = sharedValue3(callback(sharedValue1[17]).Text, obj);
-    return sharedValue3(closure_5, obj, arg0);
+    return sharedValue3(closure_5, obj, item);
   });
   obj[3] = items6;
   return closure_10(ref, obj);

@@ -2,16 +2,15 @@
 
 // Module 15807 (OnboardingHomeScrollView)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-createCacheKey = { guildFeedBackground: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeScrollView.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeScrollView.tsx");
 
 export default function OnboardingHomeScrollView(children) {
   ({ guildId, headerOffset } = children);
@@ -20,17 +19,14 @@ export default function OnboardingHomeScrollView(children) {
   }
   const scrollValue = children.scrollValue;
   let React;
-  let ref;
-  let bottom;
-  let callback;
   React = React.useRef(false);
-  ref = React.useRef(null);
-  bottom = headerOffset(scrollValue[5])().bottom;
+  const ref = React.useRef(null);
+  const bottom = headerOffset(scrollValue[5])().bottom;
   const items = [guildId];
   const effect = React.useEffect(() => {
     closure_2.current = false;
   }, items);
-  callback = React.useRef(true);
+  const callback = React.useRef(true);
   const items1 = [guildId];
   const effect1 = React.useEffect(() => {
     let current = null == ref.current;

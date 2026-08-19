@@ -2,13 +2,13 @@
 
 // Module 9541 (ActivityEmoji)
 import EmojiDefault from "Emoji" /* 6930 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_5 = createCacheKey.createStyles({ emoji: { flexShrink: 0, width: "100%", height: "100%" }, text: { textAlign: "center", fontFamily: "System" } });
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityEmoji.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activity_status/native/ActivityEmoji.tsx");
 
 export default function ActivityEmoji(emoji) {
   emoji = emoji.emoji;
@@ -46,12 +46,12 @@ export default function ActivityEmoji(emoji) {
   const memo = React.useMemo(() => {
     let id;
     if (emoji != null) {
-      id = tmp.id;
+      id = emoji.id;
     }
     if (null != id) {
-      let obj = _undefined(closure_1_2[4]);
-      obj = { id: null, size: 48, animated: null };
-      obj[0] = tmp.id;
+      _undefined(dependencyMap[4]);
+      const obj = { id: null, size: 48, animated: null };
+      obj[0] = emoji.id;
       obj[2] = _undefined;
       return obj.getEmojiURL(obj);
     }

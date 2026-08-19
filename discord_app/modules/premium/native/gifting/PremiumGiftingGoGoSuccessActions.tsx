@@ -2,34 +2,32 @@
 
 // Module 10387 (PremiumGiftingGoGoSuccessActions)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createEmptyPromotionsByType" /* 7628 */;
+import noop from "noop" /* 19 */;
+import createEmptyPromotionsByType from "createEmptyPromotionsByType" /* 7628 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles(() => {
-  let obj = { promoDetails: null };
-  obj = { marginBottom: ThemesDefault.space.PX_6, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+  const obj = { marginBottom: ThemesDefault.space.PX_6, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
   obj[0] = obj;
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx");
 
 export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   giftCode = giftCode.giftCode;
   let onClose;
-  let prePurchaseGiftingBadgeProgress;
   let navigation;
   let enabled;
   let giftCodeURL;
   let obj = onClose(navigation[7]);
   const nativeGiftContext = obj.useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
-  prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
+  const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
   obj1 = onClose(navigation[8]);
   let items = [giftCodeURL];
   const stateFromStores = obj1.useStateFromStores(items, () => {
@@ -69,9 +67,9 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   }, items1);
   const items3 = [onClose];
   const callback1 = enabled.useCallback(() => {
-    let obj = onClose(navigation[15]);
-    obj = { url: giftCodeURL };
-    obj.showShareActionSheet(obj, closure_1_5.PREMIUM_GIFT_SUCCESS_MODAL);
+    onClose(navigation[15]);
+    let obj = { url: giftCodeURL };
+    obj.showShareActionSheet(obj, AnalyticsSections.PREMIUM_GIFT_SUCCESS_MODAL);
     let tmp4 = enabled;
     if (enabled) {
       tmp4 = null != prePurchaseGiftingBadgeProgress;
@@ -85,8 +83,8 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   let tmp16 = null != stateFromStores;
   callback2 = enabled.useCallback(() => {
     onClose();
-    let obj = onClose(navigation[16]);
-    obj = { analyticsSource: prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL, analyticsLocations: null, screen: null };
+    onClose(navigation[16]);
+    const obj = { analyticsSource: prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL, analyticsLocations: null, screen: null };
     const items = [prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL];
     obj[1] = items;
     obj[2] = closure_1_6.ORBS;
@@ -127,9 +125,9 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
       let obj3 = obj1;
     }
     obj2 = { children: null };
-    items4[2] = callback(tmp22, obj3);
+    items4[2] = tmp21(tmp22, obj3);
     obj2[0] = items4;
-    return closure_9(closure_8, obj2);
+    return callback(closure_8, obj2);
   }
   let str = "secondary";
   if (null == giftCode) {
@@ -139,4 +137,6 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   const intl4 = tmp2(tmp3[19]).intl;
   obj3[2] = intl4.string(onClose(navigation[19]).t.fYfGgK);
   obj3[3] = callback2;
+  const obj5 = prePurchaseGiftingBadgeProgress(navigation[12]);
+  tmp21 = callback;
 };

@@ -5,34 +5,29 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import dispatcherDefault from "dispatcher" /* 4094 */;
 import registerAssetDefault from "registerAsset" /* 8555 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getRoleMemberCount" /* 6928 */;
+import getRoleMemberCount from "getRoleMemberCount" /* 6928 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function onMembersLoadFail() {
-  let obj = dispatcherDefault;
-  obj = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: registerAssetDefault, content: null };
+  const obj = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: registerAssetDefault, content: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.fEptJP);
   obj.open(obj);
 }
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, containerSearchBar: null, missingMembers: null, missingMembersText: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12, flex: 1 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingBottom: ThemesDefault.space.PX_12 };
-let obj1 = { paddingBottom: ThemesDefault.space.PX_12 };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, marginBottom: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-let obj2 = { borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, marginBottom: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 createCacheKey[3] = { marginLeft: ThemesDefault.space.PX_8, flex: 1 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginLeft: ThemesDefault.space.PX_8, flex: 1 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleMembers.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleMembers.tsx");
 
 export default function GuildSettingsRoleMembers(guild) {
   guild = guild.guild;
@@ -40,7 +35,6 @@ export default function GuildSettingsRoleMembers(guild) {
   const locked = guild.locked;
   let formatted;
   let found;
-  let callback;
   closure_6 = undefined;
   const tmp = callback2();
   [str, tmp3] = formatted(found.useState(""), 2);
@@ -50,12 +44,12 @@ export default function GuildSettingsRoleMembers(guild) {
   const queryGuildMembers = obj.useQueryGuildMembers(guild.id, formatted);
   obj1 = guild(locked[11]);
   const guildRoleMembers = obj1.useGuildRoleMembers(guild.id, role.id, onMembersLoadFail);
-  found = guildRoleMembers.filter((name) => {
-    formatted = name.name.toLowerCase();
+  found = guildRoleMembers.filter((item, index) => {
+    formatted = item.name.toLowerCase();
     return formatted.includes(formatted);
   });
   let obj2 = guild(locked[12]);
-  obj = { [guild.id]: guildRoleMembers.map((id) => id.id) };
+  obj = { [guild.id]: guildRoleMembers.map((item, index) => item.id) };
   const subscribeGuildMembers = obj2.useSubscribeGuildMembers(obj, "GuildSettingsRoleMembers");
   let obj4 = guild(locked[13]);
   let items = [closure_6];
@@ -63,12 +57,12 @@ export default function GuildSettingsRoleMembers(guild) {
   const items2 = [guild.id, , ];
   ({ id: arr5[1], name: arr5[2] } = role);
   const str2 = str.trim();
-  callback = found.useCallback((name, arr) => {
+  const callback = found.useCallback((name, arr) => {
     closure_0 = name;
-    found = arr.filter((arg0) => arg0 !== found.id);
+    found = arr.filter((item, index) => item !== found.id);
     if (found.length !== arr.length) {
-      let obj = role(locked[14]);
-      obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, confirmColor: null };
+      role(locked[14]);
+      let obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, confirmColor: null };
       let intl = guild(locked[10]).intl;
       obj[0] = intl.string(guild(locked[10]).t["7sFNfW"]);
       const intl2 = guild(locked[10]).intl;
@@ -83,9 +77,9 @@ export default function GuildSettingsRoleMembers(guild) {
       obj[4] = function onConfirm() {
         const items = [found.id];
         let obj = role(locked[15]);
-        role(locked[15]).updateMemberRoles(name.id, name.id, found, [], items).catch(() => {
-          let obj = callback2(4094);
-          obj = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
+        role(locked[15]).updateMemberRoles(name.id, name.id, found, [], items).catch((error) => {
+          callback2(4094);
+          const obj = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
           const intl = callback(1236).intl;
           obj[1] = intl.string(callback(1236).t.fEptJP);
           obj[2] = callback2(8555);
@@ -100,7 +94,7 @@ export default function GuildSettingsRoleMembers(guild) {
   const items4 = [callback, guild.id, locked, found];
   const callback1 = found.useCallback(() => {
     let obj = role(locked[17]);
-    obj.track(closure_1_7.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
+    obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
     const obj2 = role(locked[18]);
     obj = { guild, role };
     obj2.openLazy(guild(locked[20])(locked[19], locked.paths), "role-add-members-" + guild.id + "-" + role.id, obj);
@@ -119,13 +113,13 @@ export default function GuildSettingsRoleMembers(guild) {
     let tmpResult = null;
     if (!locked) {
       obj = { icon: null, accessibilityLabel: null, accessibilityRole: "button", onPress: null, variant: "icon-only" };
-      obj[0] = tmp(guild(tmp2[23]).CircleXIcon, {});
-      const intl = guild(tmp2[10]).intl;
-      obj[1] = intl.string(guild(tmp2[10]).t["7sFNfW"]);
+      obj[0] = closure_1_8(guild(locked[23]).CircleXIcon, {});
+      const intl = guild(locked[10]).intl;
+      obj[1] = intl.string(guild(locked[10]).t["7sFNfW"]);
       obj[3] = function onPress() {
-        return closure_1_5(item, item.roles);
+        return callback(item, item.roles);
       };
-      tmpResult = tmp(guild(tmp2[22]).IconButton, obj);
+      tmpResult = closure_1_8(guild(locked[22]).IconButton, obj);
     }
     obj[4] = tmpResult;
     return closure_1_8(role(locked[21]), obj, item.id);
@@ -147,7 +141,7 @@ export default function GuildSettingsRoleMembers(guild) {
     obj5[2] = intl.string(tmp5(tmp6[10]).t.RQxHZ8);
     items6[1] = tmp14(tmp5(tmp6[26]).Text, obj5);
     obj3[1] = items6;
-    tmp12Result = tmp12(tmp13, obj3);
+    tmp12Result = callback(tmp13, obj3);
   }
   const items7 = [tmp12Result, , ];
   let tmp14Result = null;
@@ -163,7 +157,7 @@ export default function GuildSettingsRoleMembers(guild) {
   items7[1] = tmp14Result;
   items7[2] = found.map((item, index) => roleMemberCount({ item, index }));
   obj2[1] = items7;
-  items5[1] = closure_9(callback, obj2);
+  items5[1] = callback(callback, obj2);
   obj[1] = items5;
-  return closure_9(callback, obj);
+  return callback(callback, obj);
 };

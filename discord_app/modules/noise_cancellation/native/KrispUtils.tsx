@@ -1,18 +1,18 @@
 // === Module 13086: getKrispModel ===
 
 // Module 13086 (getKrispModel)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");
 
 export const getKrispModel = function getKrispModel() {
-  return new Promise((arg0) => {
-    const callback = arg0;
+  return new Promise((fn) => {
+    const callback = fn;
     const voiceEngine = callback(table[0]).getVoiceEngine();
     if (null != voiceEngine.getNcModelFilename) {
       const ncModelFilename = voiceEngine.getNcModelFilename((arg0) => callback(arg0));
     } else {
-      arg0(null);
+      fn(null);
     }
   });
 };

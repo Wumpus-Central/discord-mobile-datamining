@@ -1,13 +1,14 @@
 // === Module 7389: useGeoForUser ===
 
 // Module 7389 (useGeoForUser)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "handlePaymentSourceCreateEnd" /* 4041 */;
-import closure_6 from "updateProduct" /* 5319 */;
+import _deletePaymentSourceAll from "_deletePaymentSource" /* 4466 */;
+import noop from "noop" /* 19 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd" /* 4041 */;
+import updateProduct from "updateProduct" /* 5319 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/hooks/useGeoForUser.native.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/hooks/useGeoForUser.native.tsx");
 
 export default function useGeoForUser() {
   let obj = stateFromStores2(589);
@@ -32,8 +33,7 @@ export default function useGeoForUser() {
       tmp = !closure_1_5.ipLocationLoaded;
     }
     if (tmp) {
-      const ipLocation = closure_1_1(closure_1_2[6]).fetchIpLocation();
-      const obj = closure_1_1(closure_1_2[6]);
+      const ipLocation = _deletePaymentSourceAll.fetchIpLocation();
     }
   }, items3);
   obj = { defaultBillingCountryCode: stateFromStores, ipCountryCode: null, ipSubdivisionCode: null };

@@ -3,9 +3,8 @@
 // Module 1393 (allGuildIds)
 import initializeDefault from "initialize" /* 589 */;
 import importDefaultResult from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
 
-let closure_0 = arg1;
+let closure_0 = fn;
 const Store = initializeDefault.Store;
 class GuildMembershipStore extends Store {
   constructor() {
@@ -54,7 +53,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGui
 };
 prototype["handleCacheLoaded"] = function handleCacheLoaded(guilds) {
   guilds = guilds.guilds;
-  this.guildIds = new Set(guilds.map((id) => id.id));
+  this.guildIds = new Set(guilds.map((item, index) => item.id));
 };
 prototype["handleCacheLoadedLazy"] = function handleCacheLoadedLazy(arg0) {
   for (const item10007 of tmp) {
@@ -96,8 +95,8 @@ let obj = {
 tmp = new tmp(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, GuildMembershipStore, tmp, importDefaultResult, obj, new.target, undefined, handleGuildDelete, globalThis);
 // ThrowIfThisInitialized (0x7c)
 closure_0 = tmp;
-let set = new Set();
-tmp.guildIds = set;
-const result = set.fileFinishedImporting("stores/GuildMembershipStore.tsx");
+tmp.guildIds = new Set();
+const set = new Set();
+const result = require("obj132").fileFinishedImporting("stores/GuildMembershipStore.tsx");
 
 export default tmp;

@@ -1,17 +1,18 @@
 // === Module 7290: getPreviousSafeRouteForNsfwReturn ===
 
 // Module 7290 (getPreviousSafeRouteForNsfwReturn)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME2 from "ME" /* 676 */;
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
+import isChannelSpoilerGated from "isChannelSpoilerGated" /* 5267 */;
 import getIdFromHistoryItem from "getIdFromHistoryItem" /* 7291 */;
-import closure_5 from "getIdFromHistoryItem" /* 7291 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "comparator" /* 1980 */;
+import getIdFromHistoryItem2 from "getIdFromHistoryItem" /* 7291 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import comparator from "comparator" /* 1980 */;
 
 ({ CHANNEL_PREFIX: obj1, GUILD_PREFIX: c3, getIdFromHistoryItem: c4 } = getIdFromHistoryItem);
 const ME = ME2.ME;
-const result = set.fileFinishedImporting("modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx");
+const result = obj132.fileFinishedImporting("modules/age_gate/getPreviousSafeRouteForNsfwReturn.native.tsx");
 
 export default function getPreviousSafeRouteForNsfwReturn() {
   let defaultChannel;
@@ -21,19 +22,13 @@ export default function getPreviousSafeRouteForNsfwReturn() {
   if (0 <= diff) {
     while (true) {
       let obj = history[diff];
-      let tmp2 = callback;
       tmp3 = callback(obj);
-      let tmp4 = closure_2;
-      let tmp5 = diff;
       if (obj.startsWith(closure_2)) {
-        let tmp9 = channel;
         channel = channel.getChannel(tmp3);
         if (null != channel) {
-          let tmp11 = require;
-          let tmp12 = dependencyMap;
           let obj4 = shouldShowAgeGateForVoiceChannel;
           if (!obj4.isChannelContentGated(channel)) {
-            let tmp11Result = tmp11(5267);
+            let tmp11Result = isChannelSpoilerGated;
             if (!tmp11Result.isChannelSpoilerGated(channel)) {
               let guild_id = channel.guild_id;
               if (guild_id == null) {
@@ -46,20 +41,14 @@ export default function getPreviousSafeRouteForNsfwReturn() {
             }
           }
         }
-      } else {
-        let tmp6 = closure_3;
-        if (obj.startsWith(closure_3)) {
-          let tmp7 = defaultChannel;
-          defaultChannel = defaultChannel.getDefaultChannel(tmp3);
-          if (null != defaultChannel) {
-            let tmp13 = require;
-            let tmp14 = dependencyMap;
-            let obj7 = shouldShowAgeGateForVoiceChannel;
-            if (!obj7.isChannelContentGated(defaultChannel)) {
-              let tmp13Result = tmp13(5267);
-              if (!tmp13Result.isChannelSpoilerGated(defaultChannel)) {
-                break;
-              }
+      } else if (obj.startsWith(closure_3)) {
+        defaultChannel = defaultChannel.getDefaultChannel(tmp3);
+        if (null != defaultChannel) {
+          let obj7 = shouldShowAgeGateForVoiceChannel;
+          if (!obj7.isChannelContentGated(defaultChannel)) {
+            let tmp13Result = isChannelSpoilerGated;
+            if (!tmp13Result.isChannelSpoilerGated(defaultChannel)) {
+              break;
             }
           }
         }

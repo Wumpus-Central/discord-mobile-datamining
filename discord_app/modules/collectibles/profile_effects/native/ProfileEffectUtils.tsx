@@ -1,26 +1,26 @@
 // === Module 9213: shouldAnimate ===
 
 // Module 9213 (shouldAnimate)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import DEFAULT_PROFILE_EFFECT_WH_RATIO from "DEFAULT_PROFILE_EFFECT_WH_RATIO" /* 9214 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 
-export const shouldAnimate = function shouldAnimate(start, current) {
-  if (current >= start.start) {
-    if (!start.loop) {
-      if (current > start.duration + start.start) {
+export const shouldAnimate = function shouldAnimate(aPNGPlayerControls, current) {
+  if (current >= aPNGPlayerControls.start) {
+    if (!aPNGPlayerControls.loop) {
+      if (current > aPNGPlayerControls.duration + aPNGPlayerControls.start) {
         return false;
       }
     }
-    if (start.loop) {
-      if (undefined !== start.loopDelay) {
-        if (start.loopDelay > 0) {
+    if (aPNGPlayerControls.loop) {
+      if (undefined !== aPNGPlayerControls.loopDelay) {
+        if (aPNGPlayerControls.loopDelay > 0) {
           let loopDelay;
-          if (start != null) {
-            loopDelay = start.loopDelay;
+          if (aPNGPlayerControls != null) {
+            loopDelay = aPNGPlayerControls.loopDelay;
           }
-          if ((current - start.start) % (start.duration + loopDelay) > start.duration) {
+          if ((current - aPNGPlayerControls.start) % (aPNGPlayerControls.duration + loopDelay) > aPNGPlayerControls.duration) {
             return false;
           }
         }

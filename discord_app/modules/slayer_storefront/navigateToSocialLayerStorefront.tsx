@@ -4,12 +4,12 @@
 import transitionTo from "transitionTo" /* 1222 */;
 import getPrice from "getPrice" /* 7200 */;
 import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8041 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "handleUserSettingsStoreUpdate" /* 7202 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate" /* 7202 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function navigateToSocialLayerStorefrontWithGuildPreview(arg0) {
   const self = this;
   const apply = _navigateToSocialLayerStorefrontWithGuildPreview.apply;
@@ -169,7 +169,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
   return applyArgumentsResult;
 }
 ({ GuildFeatures: closure_6, Routes: error } = ME);
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/navigateToSocialLayerStorefront.tsx");
+const result = require("obj132").fileFinishedImporting("modules/slayer_storefront/navigateToSocialLayerStorefront.tsx");
 
 export default function navigateToSocialLayerStorefront(arg0) {
   ({ applicationId, guildId, pageIndex, invite, skuId, slug } = arg0);
@@ -192,7 +192,6 @@ export default function navigateToSocialLayerStorefront(arg0) {
   }
   if (null != applicationIdFromGuildId) {
     resolved = Promise.resolve(transitionTo.transitionTo(closure_7.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)));
-    const obj3 = transitionTo;
   } else {
     obj = { guildId: null, pageIndex: null, invite: null, skuId: null, slug: null };
     obj[0] = socialLayerStorefrontGuildId;
@@ -214,8 +213,7 @@ export const eagerNavigateToSocialLayerStorefront = function eagerNavigateToSoci
     guildId = id;
   }
   if (null != guildId) {
-    let obj = _fetchSocialLayerStorefront;
-    obj = { eager: true, forceFetch: null };
+    const obj = { eager: true, forceFetch: null };
     obj[1] = forceFetch.forceFetch;
     const socialLayerStorefront = obj.fetchSocialLayerStorefront(guildId, obj);
   }

@@ -1,11 +1,11 @@
 // === Module 8788: getChannelFromEvent ===
 
 // Module 8788 (getChannelFromEvent)
-import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
 ({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: obj1 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");
 
 export const getChannelFromEvent = function getChannelFromEvent(entity_type) {
   let tmp2 = entity_type.entity_type in closure_2;

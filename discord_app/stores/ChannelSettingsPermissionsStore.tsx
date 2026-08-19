@@ -6,14 +6,13 @@ import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_6 from "normalizeChannelPropertyForCompare" /* 8133 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8133 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import ME from "ME" /* 676 */;
 import { ADVANCED_MODE_ON_KEY } from "RowType" /* 8064 */;
 import { Storage } from "Storage" /* 595 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function init() {
   const _null2 = store.getChannel();
   const category = store.getCategory();
@@ -34,6 +33,7 @@ function init() {
     c13 = false;
     CLOSED = FormStates.CLOSED;
     set.clear();
+    tmp = null != guildId1 && null == obj[guildId1];
   }
 }
 function syncChannelUpdates(id) {
@@ -56,9 +56,9 @@ function syncChannelUpdates(id) {
             obj[guildId1] = obj.makeEveryoneOverwrite(guildId1);
           }
           obj = {};
-          const item = set.forEach((arg0) => {
+          const item = set.forEach((item, index) => {
             if (null != obj1) {
-              obj[arg0] = obj1[arg0];
+              obj[item] = obj1[item];
             }
           });
           let tmp6 = null == obj[guildId];
@@ -67,7 +67,6 @@ function syncChannelUpdates(id) {
           }
           if (tmp6) {
             obj[guildId] = applyOverwritesAll.makeEveryoneOverwrite(guildId);
-            const obj3 = applyOverwritesAll;
           }
           obj1 = {};
           const merged1 = Object.assign(channel.permissionOverwrites);
@@ -93,7 +92,7 @@ function syncChannelUpdates(id) {
   return false;
 }
 ({ ChannelSettingsSections: closure_8, FormStates } = ME);
-let set = new Set();
+const set = new Set();
 let CLOSED = FormStates.CLOSED;
 let c13 = false;
 let c14 = null;
@@ -160,13 +159,13 @@ Object.defineProperty(prototype, "locked", {
   set: undefined
 });
 Object.defineProperty(prototype, "channel", {
-  get: function channel(channel, arg1) {
+  get: function channel(dependencyMap, arg1) {
     return c16;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "category", {
-  get: function category(arg0) {
+  get: function category(closure_2) {
     return c17;
   },
   set: undefined
@@ -207,7 +206,6 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
         set.add(id);
         const OPEN = FormStates.OPEN;
         closure_13 = !applyDefault.isEqual(obj, c15);
-        const obj3 = applyDefault;
         closure_4 = applyOverwritesAll.areChannelsLocked(c16, c17);
       }
     }
@@ -243,7 +241,6 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
       let flag2 = false;
       const tmp2 = channels[Symbol.iterator]();
       while (tmp2 !== undefined) {
-        let tmp6 = syncChannelUpdates;
         if (false !== syncChannelUpdates(tmp4.id)) {
           flag2 = true;
         }
@@ -257,9 +254,9 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
   },
   CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function handleSaveSuccess(silent) {
     if (silent.silent) {
-      CLOSED = tmp.OPEN;
+      CLOSED = FormStates.OPEN;
     } else {
-      CLOSED = tmp.CLOSED;
+      CLOSED = FormStates.CLOSED;
       init();
     }
   },
@@ -269,6 +266,7 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(disp
     const result = Storage.set(ADVANCED_MODE_ON_KEY, advancedMode);
   }
 });
-let result = set.fileFinishedImporting("stores/ChannelSettingsPermissionsStore.tsx");
+const tmp4 = Storage.get(ADVANCED_MODE_ON_KEY) || false;
+let result = require("obj132").fileFinishedImporting("stores/ChannelSettingsPermissionsStore.tsx");
 
 export default channelSettingsPermissionsStore;

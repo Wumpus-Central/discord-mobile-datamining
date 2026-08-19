@@ -2,14 +2,14 @@
 
 // Module 10469 (MessagePreviewReactions)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "removePendingListFetch" /* 5014 */;
-import closure_4 from "messages" /* 9066 */;
+import removePendingListFetch from "removePendingListFetch" /* 5014 */;
+import messages from "messages" /* 9066 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 let closure_6 = [];
-const result = require("set").fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
 
 export default function MessagePreviewReactions(emoji) {
   ({ channelId, messageId } = emoji);
@@ -30,9 +30,9 @@ export default function MessagePreviewReactions(emoji) {
     obj[1] = messageId;
     obj[2] = emoji.emoji;
     obj[3] = stateFromStores;
-    let tmp4Result = tmp4(tmp(10458).MessageReactionsContent, obj);
+    let tmp4Result = jsx(channelId(10458).MessageReactionsContent, { channelId: null, messageId: null, emoji: null, reactions: null });
   } else {
-    tmp4Result = tmp4(tmp(10458).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(10458).MessageReactionsEmpty, {});
   }
   obj[1] = tmp4Result;
   return jsx(channelId(7139).AnalyticsLocationProvider, { value: messageId(7139)(messageId(7159).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });

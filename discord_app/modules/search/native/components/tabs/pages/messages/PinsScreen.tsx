@@ -3,32 +3,28 @@
 // Module 15937 (InitialPinsScreen)
 import _modDef15930 from "module_15930" /* 15930 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "handleChannelDelete" /* 10865 */;
+import handleChannelDelete from "handleChannelDelete" /* 10865 */;
 import { FetchState } from "handleChannelDelete" /* 10865 */;
-import closure_6 from "handleReaction" /* 4971 */;
-import closure_7 from "prototype" /* 11510 */;
+import handleReaction from "handleReaction" /* 4971 */;
+import prototype from "prototype" /* 11510 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 import { SearchResultContentEntityTypes as closure_11 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
 import { SearchTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function InitialPinsScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const isFocused = searchContext.isFocused;
   let stateFromStores;
-  let fullscreenPlaceholderCount;
-  let items;
-  let showLoading;
-  let onPressMessageItem;
   let callback;
   closure_8 = undefined;
   let obj = searchContext(stateFromStores[8]);
-  items = [callback];
+  let items = [callback];
   const items1 = [searchContext];
   stateFromStores = obj.useStateFromStores(items, () => callback.isInitialSearchQuery(searchContext), items1);
   obj = { placeholderHeight: closure_8, numColumns: 1 };
-  fullscreenPlaceholderCount = searchContext(stateFromStores[9]).useFullscreenPlaceholderCount(obj);
+  const fullscreenPlaceholderCount = searchContext(stateFromStores[9]).useFullscreenPlaceholderCount(obj);
   const items2 = [isFocused, stateFromStores, searchContext.channelId];
   const effect = fullscreenPlaceholderCount.useEffect(() => {
     let tmp = stateFromStores;
@@ -57,15 +53,15 @@ function InitialPinsScreen(searchContext) {
     return obj;
   });
   items = stateFromStoresObject.items;
-  showLoading = stateFromStoresObject.showLoading;
+  const showLoading = stateFromStoresObject.showLoading;
   const obj4 = searchContext(stateFromStores[8]);
-  onPressMessageItem = searchContext(stateFromStores[11]).useOnPressMessageItem({ searchContext });
+  const onPressMessageItem = searchContext(stateFromStores[11]).useOnPressMessageItem({ searchContext });
   const items4 = [onPressMessageItem, searchContext];
   callback = fullscreenPlaceholderCount.useCallback((arg0, arg1) => {
     ({ channelId, messageId } = arg0);
     const message = onPressMessageItem.getMessage(messageId);
-    let obj = isFocused(stateFromStores[12]);
-    obj = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
+    isFocused(stateFromStores[12]);
+    const obj = { searchContext, channelId, messageId, userId: null, index: null, entityType: null };
     let id;
     if (message != null) {
       const author = message.author;
@@ -84,11 +80,10 @@ function InitialPinsScreen(searchContext) {
   const memo = fullscreenPlaceholderCount.useMemo(() => {
     items = [];
     if (items != null) {
-      const item = items.forEach((message) => {
-        items = arg1;
-        obj = { type: closure_2_9.MESSAGE, props: obj };
-        obj = {
-          message: message.message,
+      const item = items.forEach((item, index) => {
+        items = index;
+        const obj = {
+          message: item.message,
           onPress(channelId) {
             return closure_1_7({ channelId: channelId.channelId, messageId: channelId.messageId }, closure_0);
           },
@@ -99,18 +94,12 @@ function InitialPinsScreen(searchContext) {
       });
     }
     if (showLoading) {
-      let num = 0;
-      if (0 < fullscreenPlaceholderCount) {
-        do {
-          let obj = { type: null, key: null };
-          let tmp4 = closure_1_9;
-          obj[0] = closure_1_9.MESSAGE_PLACEHOLDER;
-          let _HermesInternal = HermesInternal;
-          obj[1] = "message-placeholder-" + num;
-          let arr = items.push(obj);
-          num = num + 1;
-          let tmp6 = fullscreenPlaceholderCount;
-        } while (num < fullscreenPlaceholderCount);
+      for (let num = 0; num < fullscreenPlaceholderCount; num = num + 1) {
+        let obj = { type: null, key: null };
+        obj[0] = closure_1_9.MESSAGE_PLACEHOLDER;
+        let _HermesInternal = HermesInternal;
+        obj[1] = "message-placeholder-" + num;
+        let arr = items.push(obj);
       }
     }
     return items;
@@ -129,6 +118,7 @@ function InitialPinsScreen(searchContext) {
         }
       }
       const pins = isFocused(stateFromStores[10]).fetchPins(searchContext.channelId, { before: pinnedAt });
+      const obj = isFocused(stateFromStores[10]);
     },
     ItemSeparatorComponent: null
   };
@@ -146,6 +136,7 @@ function InitialPinsScreen(searchContext) {
         }
       }
       const pins = isFocused(stateFromStores[10]).fetchPins(searchContext.channelId, { before: pinnedAt });
+      const obj = isFocused(stateFromStores[10]);
     },
     ItemSeparatorComponent: null
   });
@@ -173,6 +164,6 @@ const memoResult = importAllResult.memo(function PinsScreen(searchContext) {
   }
   return tmp5;
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/PinsScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/PinsScreen.tsx");
 
 export default memoResult;

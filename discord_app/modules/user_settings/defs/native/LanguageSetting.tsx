@@ -2,11 +2,11 @@
 
 // Module 14728 (route)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "_getSystemLocale" /* 1994 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.IHMsPn);
@@ -19,7 +19,7 @@ createToggle = {
     const obj = _require(589);
     const tmp = _require;
     const availableLocales = _require(1236).getAvailableLocales();
-    const found = availableLocales.find((value) => value.value === closure_0);
+    const found = availableLocales.find((item, index) => item.value === closure_0);
     let stringResult = null;
     if (null != found) {
       const intl = tmp(1236).intl;
@@ -36,6 +36,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/LanguageSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/LanguageSetting.tsx");
 
 export default createToggle;

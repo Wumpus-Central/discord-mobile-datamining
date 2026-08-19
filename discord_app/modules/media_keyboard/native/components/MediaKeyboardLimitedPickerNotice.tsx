@@ -1,15 +1,15 @@
 // === Module 10291: MediaKeyboardLimitedPickerNotice ===
 
 // Module 10291 (MediaKeyboardLimitedPickerNotice)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "row", paddingHorizontal: 16, paddingVertical: 16, alignItems: "center" }, absoluteContainer: { position: "absolute" }, text: { flex: 1 }, button: { marginLeft: 16 } });
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardLimitedPickerNotice.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardLimitedPickerNotice.tsx");
 
 export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   onHeightChange = onHeightChange.onHeightChange;
@@ -25,9 +25,8 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   if (null != onHeightChange) {
     absoluteContainer = tmp.absoluteContainer;
   }
-  let obj = { style: items1, onLayout: callback, children: null };
   items1[1] = absoluteContainer;
-  obj = { style: tmp.text, variant: "text-sm/normal", children: null };
+  let obj = { style: tmp.text, variant: "text-sm/normal", children: null };
   const intl = onHeightChange(1236).intl;
   obj[2] = intl.string(onHeightChange(1236).t["5g7NcN"]);
   const items2 = [callback(onHeightChange(4734).Text, obj), ];
@@ -39,5 +38,5 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   obj[1] = callback(onHeightChange(4745).Button, obj1);
   items2[1] = callback(View, obj);
   obj[2] = items2;
-  return closure_5(View, obj);
+  return callback(View, obj);
 };

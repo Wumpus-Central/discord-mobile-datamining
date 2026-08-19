@@ -6,13 +6,13 @@ import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import useCurrentUserHasAutomodQuarantinedProfile from "useCurrentUserHasAutomodQuarantinedProfile" /* 11051 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = arg1;
+require = fn;
 noopAll;
-createToggle = {
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.IEpCBQ);
@@ -49,6 +49,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");
 
 export default createToggle;

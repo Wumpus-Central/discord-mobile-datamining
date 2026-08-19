@@ -1,16 +1,17 @@
 // === Module 11692: GuildPowerupsImage ===
 
 // Module 11692 (GuildPowerupsImage)
+import PlatformTypes from "PlatformTypes" /* 501 */;
 import initialize from "initialize" /* 589 */;
 import preloadDefault from "preload" /* 5449 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8406 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 let closure_5 = createCacheKey.createStyles({ image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" } });
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsImage.tsx");
 
 export default function GuildPowerupsImage(style) {
   ({ imageUrl, isAnimated } = style);
@@ -36,4 +37,5 @@ export default function GuildPowerupsImage(style) {
   }
   const items2 = [tmp.image, style];
   tmp6 = jsx(preloadDefault, { style: items2, source: { uri: imageUrl } });
+  obj2 = PlatformTypes;
 };

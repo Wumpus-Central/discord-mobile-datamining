@@ -3,15 +3,19 @@
 // Module 8248 (createStageRaiseHandSystemMessage)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
 import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
-import closure_3 from "getActiveStageChannelIds" /* 4989 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import getActiveStageChannelIds from "getActiveStageChannelIds" /* 4989 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ HelpdeskArticles: closure_6, MessageFlags: error, MessageTypes: closure_8, Permissions: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx");
 
 export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -38,36 +42,35 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
     if (participant != null) {
       rtsState = participant.rtsState;
     }
-    canResult = rtsState === tmp(4981).RequestToSpeakStates.REQUESTED_TO_SPEAK;
+    canResult = rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK;
   }
   if (canResult) {
     canResult = toISOStringResult === toISOStringResult1;
   }
-  obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
-  const intl = tmp(1236).intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(8187)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  const intl = getSystemLocale.intl;
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
-  const intl2 = tmp(1236).intl;
+  const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(getSystemLocale.t.f0T7hI);
   let tmp10;
   if (message.hasFlag(constants2.EPHEMERAL)) {
     if (message.type === constants3.STAGE_RAISE_HAND) {
       obj1 = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
-      const intl3 = tmp(1236).intl;
+      const intl3 = getSystemLocale.intl;
       const obj2 = { handleDelete: null };
       const obj3 = { action: "bindDismissMessage", message: null };
       obj3[1] = message;
       obj2[0] = obj3;
-      obj1[0] = intl3.formatToParts(tmp(1236).t["qDAX++"], obj2);
-      obj1[1] = tmp6(1993).getArticleURL(constants.EPHEMERAL_MESSAGES);
-      const intl4 = tmp(1236).intl;
-      obj1[2] = intl4.string(tmp(1236).t.htHOrp);
+      obj1[0] = intl3.formatToParts(getSystemLocale.t["qDAX++"], obj2);
+      obj1[1] = combinedDefault.getArticleURL(constants.EPHEMERAL_MESSAGES);
+      const intl4 = getSystemLocale.intl;
+      obj1[2] = intl4.string(getSystemLocale.t.htHOrp);
       tmp10 = obj1;
-      const tmp6Result = tmp6(1993);
+      const tmp6Result = combinedDefault;
     }
   }
   obj[3] = tmp10;
-  const merged = Object.assign(tmp6(8188)(roleStyle));
+  const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return obj;
 };

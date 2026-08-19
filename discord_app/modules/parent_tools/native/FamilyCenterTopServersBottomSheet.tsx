@@ -8,11 +8,11 @@ import Text from "Text" /* 4734 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
 import ActionSheet from "ActionSheet" /* 7175 */;
 import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
-import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
+import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function GuildRow(guildActivity) {
   guildActivity = guildActivity.guildActivity;
   let obj = guildActivity(589);
@@ -34,20 +34,18 @@ function GuildRow(guildActivity) {
   tmp = callback3();
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { header: { textAlign: "center" }, guildIcon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const createCacheKey = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopServersBottomSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopServersBottomSheet.tsx");
 
 export default function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   topGuildActivities = topGuildActivities.topGuildActivities;
-  let obj = { children: null };
-  obj = { variant: "text-md/bold", style: callback3().header, children: null };
+  let obj = { variant: "text-md/bold", style: callback3().header, children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.Lq9Set);
   const items = [callback(Text.Text, obj), ];
-  obj = { hasIcons: true, children: topGuildActivities.map((guildActivity) => callback(closure_7, { guildActivity }, guildActivity.guild_id)) };
+  obj = { hasIcons: true, children: topGuildActivities.map((item, index) => callback(closure_7, { guildActivity: item }, item.guild_id)) };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
   obj[0] = items;
   return callback2(ActionSheet.ActionSheet, obj);

@@ -1,7 +1,7 @@
 // === Module 8032: componentDidMount ===
 
 // Module 8032 (componentDidMount)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import pushStackEntryDefault from "pushStackEntry" /* 8033 */;
 
@@ -27,6 +27,6 @@ prototype["componentWillUnmount"] = function componentWillUnmount() {
 prototype["render"] = function render() {
   return null;
 };
-const result = set.fileFinishedImporting("modules/status_bar/native/components/StatusBar.android.tsx");
+const result = obj132.fileFinishedImporting("modules/status_bar/native/components/StatusBar.android.tsx");
 
 export default StatusBarAndroid;

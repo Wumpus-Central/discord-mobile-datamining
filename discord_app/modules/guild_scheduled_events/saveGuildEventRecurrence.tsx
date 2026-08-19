@@ -1,12 +1,12 @@
 // === Module 8806: saveGuildEventRecurrence ===
 
 // Module 8806 (saveGuildEventRecurrence)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import _modDef8783 from "module_8783" /* 8783 */;
 import getRRule from "getRRule" /* 8785 */;
 
-let result = set.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
+let result = obj132.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
 export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_exception_id) {
   let obj = getRRule;
@@ -15,13 +15,13 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
   if (!obj2.areDatesIdentical(baseScheduleForRecurrence.startDate, startDate.startDate)) {
     startDate = startDate.startDate;
   }
-  let tmpResult = tmp(8785);
+  let tmpResult = getRRule;
   let endDate = null;
   if (!tmpResult.areDatesIdentical(baseScheduleForRecurrence.endDate, startDate.endDate)) {
     endDate = startDate.endDate;
   }
   if (null != event_exception_id) {
-    tmpResult = tmp(8785);
+    tmpResult = getRRule;
     const result = tmpResult.areSchedulesIdentical(startDate, baseScheduleForRecurrence);
     const obj5 = _modDef8783;
     if (result) {
@@ -44,7 +44,6 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
     return result1;
   } else {
     const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(c2);
-    const obj7 = DISCORD_EPOCHDefault;
     obj = { original_scheduled_start_time: null, scheduled_start_time: null, scheduled_end_time: null, is_canceled: false };
     const _Date = Date;
     const date = new Date(extractTimestampResult);

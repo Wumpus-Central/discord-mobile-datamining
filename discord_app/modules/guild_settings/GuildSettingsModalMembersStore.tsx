@@ -3,7 +3,7 @@
 // Module 11017 (handleStopEditingRoles)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "trackCommunicationDisabled" /* 1990 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
 import { FormStates } from "ME" /* 676 */;
 
 function handleStopEditingRoles() {
@@ -82,7 +82,7 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispat
       items[HermesBuiltin.arraySpread(arr, 0)] = roleId;
       found = items;
     } else {
-      found = arr.filter((arg0) => arg0 !== roleId);
+      found = arr.filter((item, index) => item !== roleId);
     }
   },
   GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE: function handleSaveRoles() {
@@ -94,6 +94,6 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispat
     error = error.error;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
 
 export default guildSettingsModalMembersStore;

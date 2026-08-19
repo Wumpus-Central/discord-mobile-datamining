@@ -2,11 +2,11 @@
 
 // Module 15370 (useFavoritesGuildCategoryLongPress)
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
 
 export default function useFavoritesGuildCategoryLongPress(getGuildId) {
   let isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(getGuildId.getGuildId());
@@ -20,10 +20,10 @@ export default function useFavoritesGuildCategoryLongPress(getGuildId) {
     let tmp = null;
     if (closure_0) {
       const obj = { label: null, perform: null };
-      const intl = isFavoritesGuildIdResult(closure_1_2[3]).intl;
-      obj[0] = intl.string(isFavoritesGuildIdResult(closure_1_2[3]).t.Xm41aV);
+      const intl = isFavoritesGuildIdResult(dependencyMap[3]).intl;
+      obj[0] = intl.string(isFavoritesGuildIdResult(dependencyMap[3]).t.Xm41aV);
       obj[1] = function perform() {
-        return closure_1_1(closure_1_2[4])(closure_1);
+        return id(closure_1_2[4])(closure_1);
       };
       tmp = obj;
     }

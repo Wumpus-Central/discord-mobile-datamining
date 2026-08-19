@@ -3,10 +3,10 @@
 // Module 7640 (create)
 import _mod1307 from "module_1307" /* 1307 */;
 import create from "create" /* 7641 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { MessageType } from "module_1307" /* 1307 */;
 
-require = arg1;
+require = fn;
 class GiftIcon$Type extends MessageType {
   constructor() {
     items = [, , , ];
@@ -28,9 +28,8 @@ class GiftIcon$Type extends MessageType {
 }
 let prototype = GiftIcon$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { boxAnimationUrl: "", trinketAnimationUrl: "", trinketGlowAnimationUrl: "" };
   const _Object = Object;
-  obj = { enumerable: false, value: this };
+  const obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
     const result = _mod1307.reflectionMergePartial(this, obj, arr);
@@ -47,7 +46,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
       let tmp4 = callback(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
@@ -57,41 +55,21 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (3 === tmp5) {
         obj.trinketGlowAnimationUrl = pos.string();
       } else if (4 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
         let Gradient = create.Gradient;
-        let tmp24 = Gradient;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
         obj.gradient = Gradient.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.gradient);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
-          let tmp15 = globalThis;
           let _globalThis = globalThis;
           let _HermesInternal = HermesInternal;
-          let str = ") for ";
-          let str2 = " (wire type ";
-          let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
-          let tmp18 = new.target;
-          let tmp19 = new.target;
           error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1307.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -142,8 +120,8 @@ let items = [
     }
   }
 ];
-prototype = new prototype("discord_protos.premium_marketing.v1.GiftIcon", items, tmp, GiftIcon$Type, prototype, items, arg1);
+prototype = new prototype("discord_protos.premium_marketing.v1.GiftIcon", items, tmp, GiftIcon$Type, prototype, items, fn);
 // ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon.tsx");
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon.tsx");
 
 export const GiftIcon = prototype;

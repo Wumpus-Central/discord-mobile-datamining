@@ -1,17 +1,17 @@
 // === Module 8987: UserProfileBanner ===
 
 // Module 8987 (UserProfileBanner)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { BANNER_HEIGHT } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ bannerContainer: { position: "relative" }, gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" } });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileBanner.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileBanner.tsx");
 
 export default function UserProfileBanner(displayProfile) {
   displayProfile = displayProfile.displayProfile;
@@ -27,8 +27,6 @@ export default function UserProfileBanner(displayProfile) {
   if (disableInteraction === undefined) {
     disableInteraction = false;
   }
-  first = undefined;
-  closure_7 = undefined;
   closure_8 = undefined;
   let source;
   const tmp = source();
@@ -93,7 +91,7 @@ export default function UserProfileBanner(displayProfile) {
     if (displayProfile != null) {
       banner = displayProfile.banner;
     }
-    return closure_7(closure_1_1(bannerSafeArea[9]), obj, banner);
+    return callback(importDefault(bannerSafeArea[9]), obj, banner);
   }
   obj1 = { style: tmp.bannerContainer, children: null };
   if (tmp2Result1.isAnimatedImageURL(bannerURL)) {
@@ -115,11 +113,11 @@ export default function UserProfileBanner(displayProfile) {
         items[1] = tmp12Result;
         obj2[3] = items;
         let renderBannerResult = closure_8(tmp2(tmp3[10]).PressableOpacity, obj2);
-        const tmp14 = closure_8;
       }
       obj1[1] = renderBannerResult;
       return tmp12(tmp13, obj1);
     }
   }
   renderBannerResult = renderBanner();
+  tmp2Result1 = displayProfile(bannerSafeArea[8]);
 };

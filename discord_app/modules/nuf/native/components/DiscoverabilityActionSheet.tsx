@@ -2,27 +2,24 @@
 
 // Module 11928 (DiscoverabilityActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ContactSyncModes from "ContactSyncModes" /* 11850 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ useContactSyncModalStore: c4, setAllowSync: c5, setAllowPhone: closure_6, setAllowEmail: error } = ContactSyncModes);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, formRow: null, syncRow: null, formText: null, info: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: 8, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[2] = { marginTop: 24 };
-let obj1 = { marginTop: 8, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[3] = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let obj2 = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[4] = { marginTop: 8, fontSize: 14, lineHeight: 18, paddingHorizontal: 16, color: ThemesDefault.colors.TEXT_SUBTLE };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: 8, fontSize: 14, lineHeight: 18, paddingHorizontal: 16, color: ThemesDefault.colors.TEXT_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/DiscoverabilityActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/DiscoverabilityActionSheet.tsx");
 
 export default function DiscoverabilityActionSheet() {
   const tmp = callback4();
@@ -43,14 +40,12 @@ export default function DiscoverabilityActionSheet() {
   const callback1 = allowEmail.useCallback(() => {
     closure_1_6(!allowPhone);
   }, items1);
-  let obj = { style: tmp.container, children: null };
   const callback2 = allowEmail.useCallback(() => {
     closure_1_7(!allowEmail);
   }, items2);
-  obj = { DEPRECATED_style: items3, label: null, onPress: null, trailing: null };
-  items3 = [, ];
+  const items3 = [, ];
   ({ formRow: arr4[0], syncRow: arr4[1] } = tmp);
-  obj = { style: tmp.formText, text: null };
+  const obj = { style: tmp.formText, text: null };
   const intl = allowPhone(allowEmail[8]).intl;
   obj[1] = intl.string(allowPhone(allowEmail[8]).t.gMUgpv);
   obj[1] = callback2(allowPhone(allowEmail[7]).FormRow.Label, obj);

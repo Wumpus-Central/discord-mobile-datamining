@@ -2,20 +2,19 @@
 
 // Module 10680 (canSeeExperimentEmbeds)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "getHash" /* 4288 */;
-import closure_6 from "initialize" /* 1212 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import getHash from "getHash" /* 4288 */;
 
-require = arg1;
+require = fn;
 let closure_7 = {};
 let closure_8 = {};
 let closure_9 = {};
 let closure_10 = {};
 let closure_11 = {};
 let closure_12 = { legacyExperiments: {}, legacyOverridesInfo: {}, apexExperiments: {}, apexOverridesInfo: {} };
-const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
+const result = require("obj132").fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
 
 export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
   let tmp = arg0;

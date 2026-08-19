@@ -8,17 +8,16 @@ import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4814 *
 import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6814 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "trackCommunicationDisabled" /* 1990 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "updateState" /* 7271 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import updateState from "updateState" /* 7271 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function MessageContent(arg0) {
   ({ thread, message } = arg0);
-  importDefault = undefined;
   dependencyMap = undefined;
   c3 = undefined;
   c4 = undefined;
@@ -42,12 +41,10 @@ function MessageContent(arg0) {
   ({ nick: c2, colorString: c3, colorStrings: c4 } = useNullableMessageAuthorDefault(message));
   let tmp4 = useNullableMessageAuthorDefault(message);
   const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message.id);
-  const obj4 = DISCORD_EPOCHDefault;
   const timestampString = message(7528).getTimestampString(extractTimestampResult);
   const obj5 = message(7528);
   const timestampAccessibilityLabel = message(7528).getTimestampAccessibilityLabel(extractTimestampResult);
   closure_5 = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
-  obj = { user: stateFromStores, timestamp: timestampString, accessibilityLabel: timestampAccessibilityLabel, children: null };
   obj = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = message(1236).intl;
   obj1 = {
@@ -69,7 +66,7 @@ function MessageContent(arg0) {
       }
       obj[3] = tmp6;
       obj[4] = "dot" === closure_1 && null != c3;
-      return closure_1_9(closure_1_17, obj, arg1);
+      return closure_1_9(Username, obj, arg1);
     },
     messageTextHook(arg0, arg1) {
       return closure_1_9(message(_undefined[21]).LegacyText, { children: callback(_undefined[22])(message, { formatInline: true, allowGameMentions: true }).content }, arg1);
@@ -113,7 +110,6 @@ function SubstringRow(arg0) {
 function Username(usernameColor) {
   usernameColor = usernameColor.usernameColor;
   ({ roleColors, shouldShowRoleDot } = usernameColor);
-  closure_1 = undefined;
   ({ nickname, roleColor } = usernameColor);
   const tmp = callback3();
   closure_1 = tmp;
@@ -150,38 +146,34 @@ function Username(usernameColor) {
   obj = { children: null };
   items1[1] = callback(usernameColor(4734).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", gradientColors: tmp10, style: memo, children: nickname });
   obj[0] = items1;
-  return closure_10(closure_11, obj);
+  return callback(closure_11, obj);
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let items = [, ];
 ({ CHANNEL_NAME_CHANGE: arr[0], THREAD_STARTER_MESSAGE: arr[1] } = require("ME").MessageTypes);
-let obj = { row: { flexDirection: "row" }, subtextContent: { lineHeight: 18, flexShrink: 1 }, timestamp: { lineHeight: 18 }, username: null, dividerDot: null };
-obj = { fontSize: 14, lineHeight: 18, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj = { fontSize: 14, lineHeight: 18, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.TEXT_SUBTLE };
 obj[3] = obj;
-createCacheKey = { width: 4, height: 4, marginHorizontal: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignSelf: "center" };
+const createCacheKey = { width: 4, height: 4, marginHorizontal: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignSelf: "center" };
 obj[4] = createCacheKey;
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_14 = importAllResult.memo((thread) => {
   thread = thread.thread;
   const accessibilityLabel = thread.accessibilityLabel;
-  let stateFromStores;
   let stateFromStores1;
-  importAllResult = undefined;
-  let colorString;
   let colorStrings;
   closure_6 = undefined;
   closure_7 = undefined;
   let obj = thread(stateFromStores1[11]);
   items = [closure_7];
-  stateFromStores = obj.useStateFromStores(items, () => ref.getUser(thread.ownerId));
+  const stateFromStores = obj.useStateFromStores(items, () => ref.getUser(thread.ownerId));
   obj1 = thread(stateFromStores1[11]);
   const items1 = [closure_6];
   stateFromStores1 = obj1.useStateFromStores(items1, () => member.getMember(thread.guild_id, thread.ownerId));
   const tmp = callback3();
   const items2 = [colorStrings];
   importAllResult = thread(stateFromStores1[11]).useStateFromStores(items2, () => colorStrings.roleStyle);
-  colorString = undefined;
+  let colorString;
   if (stateFromStores1 != null) {
     colorString = stateFromStores1.colorString;
   }
@@ -214,7 +206,6 @@ let closure_14 = importAllResult.memo((thread) => {
       const obj = stateFromStores(stateFromStores1[14]);
     }
   }, items3);
-  obj = { user: stateFromStores, timestamp: thread.timestamp, accessibilityLabel, children: null };
   obj = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, accessibilityLabel, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = tmp2(tmp3[16]).intl;
   obj1 = {
@@ -243,19 +234,18 @@ let closure_14 = importAllResult.memo((thread) => {
       }
       obj[3] = tmp9;
       obj[4] = "dot" === closure_3 && null != colorString;
-      return closure_1_9(closure_1_17, obj, arg1);
+      return closure_1_9(Username, obj, arg1);
     }
   };
   obj[7] = intl.format(thread(stateFromStores1[16]).t.imPXd5, obj1);
   obj[3] = callback(thread(stateFromStores1[15]).Text, obj);
   return callback(SubstringRow, obj);
 });
-const result = require("set").fileFinishedImporting("modules/threads/native/components/ThreadBrowserRowSubtext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/threads/native/components/ThreadBrowserRowSubtext.tsx");
 
 export const ThreadSubtext = function ThreadSubtext(thread) {
   thread = thread.thread;
-  let id;
-  id = thread.id;
+  const id = thread.id;
   let obj = id(589);
   items = [closure_8];
   const items1 = [id];

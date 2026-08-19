@@ -3,11 +3,11 @@
 // Module 4177 (CheckpointKnickKnacksRive)
 import BaseRive from "BaseRive" /* 4109 */;
 import getDerivedStateFromError from "getDerivedStateFromError" /* 4164 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let c5 = importAllResult;
 let closure_7 = { Preview: { reducedMotion: "boolean", iconColor: "color" }, Friends: { reducedMotion: "boolean", iconColor: "color" }, Globe: { reducedMotion: "boolean", iconColor: "color" }, "Globe Single Line": {}, Emojis: { reducedMotion: "boolean", iconColor: "color" }, "Wave Line": { reducedMotion: "boolean", iconColor: "color" }, Games: { reducedMotion: "boolean", iconColor: "color" }, Voice: { reducedMotion: "boolean", iconColor: "color" }, "Looping Checkboard": { reducedMotion: "boolean", iconColor: "color" }, CheckRow: { reducedMotion: "boolean", iconColor: "color" }, Quests: { reducedMotion: "boolean", iconColor: "color" }, Entry: { reducedMotion: "boolean", iconColor: "color" }, Messages: { reducedMotion: "boolean", iconColor: "color" }, Servers: { reducedMotion: "boolean", iconColor: "color" } };
@@ -16,7 +16,6 @@ let closure_9 = {
   Preview: function PreviewBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -31,7 +30,6 @@ let closure_9 = {
   Friends: function FriendsBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -46,7 +44,6 @@ let closure_9 = {
   Globe: function GlobeBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -61,7 +58,6 @@ let closure_9 = {
   Emojis: function EmojisBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -76,7 +72,6 @@ let closure_9 = {
   "Wave Line": function WaveLineBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -91,7 +86,6 @@ let closure_9 = {
   Games: function GamesBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -106,7 +100,6 @@ let closure_9 = {
   Voice: function VoiceBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -121,7 +114,6 @@ let closure_9 = {
   "Looping Checkboard": function LoopingCheckboardBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -136,7 +128,6 @@ let closure_9 = {
   CheckRow: function CheckRowBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -151,7 +142,6 @@ let closure_9 = {
   Quests: function QuestsBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -166,7 +156,6 @@ let closure_9 = {
   Entry: function EntryBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -181,7 +170,6 @@ let closure_9 = {
   Messages: function MessagesBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -196,7 +184,6 @@ let closure_9 = {
   Servers: function ServersBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let iconColor;
     if (dataBinding != null) {
       iconColor = dataBinding.iconColor;
@@ -230,7 +217,7 @@ let closure_10 = importAllResult.forwardRef(function CheckpointKnickKnacksRiveIn
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = closure_1_6(tmp, obj);
+      tmp2 = <tmp />;
     }
     return tmp2;
   }, items);
@@ -239,12 +226,11 @@ let closure_10 = importAllResult.forwardRef(function CheckpointKnickKnacksRiveIn
   return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 });
 const forwardRefResult = importAllResult.forwardRef(function CheckpointKnickKnacksRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
+  const obj = { ref };
   const merged = Object.assign(fallback);
-  obj[1] = <closure_10 ref={arg1} />;
+  obj[1] = <closure_10 ref={ref} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointKnickKnacksRive.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointKnickKnacksRive.tsx");
 
 export const CheckpointKnickKnacksRive = forwardRefResult;

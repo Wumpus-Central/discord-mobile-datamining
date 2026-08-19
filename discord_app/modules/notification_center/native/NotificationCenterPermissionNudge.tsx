@@ -1,29 +1,28 @@
 // === Module 15666: NotificationCenterBannerImpl ===
 
 // Module 15666 (NotificationCenterBannerImpl)
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
 import apexExperimentDefault from "apexExperiment" /* 14789 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import EventActionType from "EventActionType" /* 11582 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function NotificationCenterBannerImpl(onDismiss) {
   onDismiss = onDismiss.onDismiss;
   const tmp = callback6();
   callback3(() => {
-    let obj = callback(698);
-    obj = { action: constants4.IMPRESSION, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
+    callback(698);
+    const obj = { action: constants4.IMPRESSION, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
     obj.track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
   }, []);
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.iconContainer, children: null };
-  obj = { size: "md", color: ThemesDefault.colors.ICON_STRONG };
+  let obj = { size: "md", color: ThemesDefault.colors.ICON_STRONG };
   obj[1] = callback4(onDismiss(10001).BellSlashIcon, obj);
   const items = [callback4(View, obj), , ];
   obj1 = { style: tmp.contentContainer, children: null };
@@ -51,8 +50,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   items[1] = callback5(View, obj1);
   const obj7 = {
     onPress() {
-      let obj = closure_1_1(closure_1_2[9]);
-      obj = { action: closure_1_12.DISMISS, prompt_type: closure_1_13.NOTIFICATION_CENTER_BANNER };
+      const obj = { action: closure_1_12.DISMISS, prompt_type: closure_1_13.NOTIFICATION_CENTER_BANNER };
       obj.track(closure_1_7.CONTEXTUAL_REMINDER_ACTION, obj);
       onDismiss();
     },
@@ -72,16 +70,13 @@ function NotificationCenterBannerImpl(onDismiss) {
 ({ AnalyticEvents: error, NOOP: closure_8 } = ME);
 ({ EventActionType: c10, EventActionLocation: unpackModuleId, NotificationNudgeAnalyticsAction: closure_12, NotificationNudgeSurface: map1 } = EventActionType);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { container: null, contentContainer: null, iconContainer: null, ctaButton: null };
-createCacheKey = { flexDirection: "row", paddingLeft: 24, paddingRight: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", borderBottomWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, gap: 16 };
+const createCacheKey = { flexDirection: "row", paddingLeft: 24, paddingRight: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", borderBottomWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, gap: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignItems: "center", justifyContent: "center" };
-let obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignItems: "center", justifyContent: "center" };
 createCacheKey[3] = { alignSelf: "flex-start", marginTop: ThemesDefault.space.PX_12 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { alignSelf: "flex-start", marginTop: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/notification_center/native/NotificationCenterPermissionNudge.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notification_center/native/NotificationCenterPermissionNudge.tsx");
 
 export default function NotificationCenterPermissionNudge() {
   let obj = apexExperimentDefault;

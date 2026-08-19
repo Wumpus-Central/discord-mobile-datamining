@@ -3,11 +3,11 @@
 // Module 15670 (_fetchNotificationCenterItems)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import getRelativeTimestamp from "getRelativeTimestamp" /* 4967 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_validate" /* 4801 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _validate from "_validate" /* 4801 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function _fetchNotificationCenterItems() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -84,9 +84,9 @@ function _fetchNotificationCenterItems() {
                 if (!items) {
                   items = [];
                 }
-                const mapped = items.map((type) => type.type);
-                let obj = callback(table[6]);
-                obj = { page: table, items: mapped, item_count: mapped.length };
+                const mapped = items.map((item, index) => item.type);
+                callback(table[6]);
+                const obj = { page: table, items: mapped, item_count: mapped.length };
                 return obj.exact(obj);
               };
               obj3[1] = obj4;
@@ -242,20 +242,20 @@ function _bulkMarkNotificationCenterItemsAcked() {
     c4 = 0;
     return (function*(arg0) {
       const table = tmp3;
-      mapped = mapped.map((id) => id.id);
+      mapped = mapped.map((item, index) => item.id);
       c4 = 1;
       obj1 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
       obj1[2] = mapped;
       closure_1_1(closure_1_2[3]).dispatch(obj1);
-      const found = mapped.filter((local_id) => {
-        let isMentionItemResult = null == local_id.local_id;
+      const found = mapped.filter((item, index) => {
+        let isMentionItemResult = null == item.local_id;
         if (!isMentionItemResult) {
-          isMentionItemResult = mapped(tmp3[7]).isMentionItem(local_id);
+          isMentionItemResult = mapped(tmp3[7]).isMentionItem(item);
           const obj = mapped(tmp3[7]);
         }
         return isMentionItemResult;
       });
-      const mapped1 = found.map((id) => id.id);
+      const mapped1 = found.map((item, index) => item.id);
       const HTTP = callback(closure_1_2[8]).HTTP;
       const obj2 = { url: null, query: null, rejectWithError: true };
       obj2[0] = constants.NOTIF_CENTER_ITEMS_BULK_ACK;
@@ -400,16 +400,14 @@ function _deleteNotificationCenterItem() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/notification_center/NotificationCenterItemsActions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notification_center/NotificationCenterItemsActions.tsx");
 
 export const setNotificationCenterActive = function setNotificationCenterActive(active) {
-  let obj = dispatcherDefault;
-  obj = { type: "NOTIFICATION_CENTER_SET_ACTIVE", active };
+  const obj = { type: "NOTIFICATION_CENTER_SET_ACTIVE", active };
   obj.dispatch(obj);
 };
-export const setNotificationCenterTabFocused = function setNotificationCenterTabFocused(focused) {
-  let obj = dispatcherDefault;
-  obj = { type: "NOTIFICATION_CENTER_TAB_FOCUSED", focused };
+export const setNotificationCenterTabFocused = function setNotificationCenterTabFocused(isFocused) {
+  const obj = { type: "NOTIFICATION_CENTER_TAB_FOCUSED", focused: isFocused };
   obj.dispatch(obj);
 };
 export const resetNotificationCenter = function resetNotificationCenter() {
@@ -431,7 +429,6 @@ export const markNotificationCenterItemAcked = function markNotificationCenterIt
     let obj = { type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: null };
     obj[1] = items;
     dispatcherDefault.dispatch(obj);
-    const obj4 = dispatcherDefault;
   } else {
     obj = getRelativeTimestamp;
     if (obj.isMentionItem(local_id)) {
@@ -439,15 +436,13 @@ export const markNotificationCenterItemAcked = function markNotificationCenterIt
       const items1 = [local_id.id];
       obj[2] = items1;
       dispatcherDefault.dispatch(obj);
-      const obj2 = dispatcherDefault;
     } else {
       markNotificationCenterRemoteItemAcked(local_id.id);
     }
   }
 };
 export const markNotificationCenterLocalItemsAcked = function markNotificationCenterLocalItemsAcked(found) {
-  let obj = dispatcherDefault;
-  obj = { type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: found };
+  const obj = { type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK", localIds: found };
   obj.dispatch(obj);
 };
 export { markNotificationCenterRemoteItemAcked };
@@ -455,7 +450,7 @@ export const markNotificationCenterMentionAcked = function markNotificationCente
   const items = [arg0];
   dispatcherDefault.dispatch({ type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: items });
 };
-export const bulkMarkNotificationCenterItemsAcked = function bulkMarkNotificationCenterItemsAcked(arr) {
+export const bulkMarkNotificationCenterItemsAcked = function bulkMarkNotificationCenterItemsAcked(arg0) {
   const self = this;
   const apply = _bulkMarkNotificationCenterItemsAcked.apply;
   if (typeof apply === "unknown") {

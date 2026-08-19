@@ -1,12 +1,12 @@
 // === Module 15394: useChannelListSpecs ===
 
 // Module 15394 (useChannelListSpecs)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import hairlineWidth from "hairlineWidth" /* 10055 */;
 
-const require = arg1;
+const require = fn;
 ({ STICKY_BANNER_ASPECT_RATIO: c4, BANNER_MAX_HEIGHT_PERCENTAGE: c5 } = hairlineWidth);
-const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default function useChannelListSpecs(banner) {
   redesignGuildHeaderHeight = redesignGuildHeaderHeight(15395).useRedesignGuildHeaderHeight(banner);

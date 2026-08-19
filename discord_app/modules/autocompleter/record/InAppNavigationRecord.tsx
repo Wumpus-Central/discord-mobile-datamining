@@ -7,11 +7,10 @@ import { Routes } from "ME" /* 676 */;
 import { RewardFilterTypes } from "QuestsExperimentLocations" /* 6716 */;
 import { UserSettingsPath } from "MAX_FAVORITES" /* 685 */;
 
-require = arg1;
+require = fn;
 toJSDefault;
 let obj = { SHOP: "SHOP", SHOP_ORBS_TAB: "SHOP_ORBS_TAB", NITRO_HOME: "NITRO_HOME", QUEST_HOME: "QUEST_HOME", QUEST_ORBS: "QUEST_ORBS", APPS_HOME: "APPS_HOME", SETTINGS: "SETTINGS", PLAYGROUND: "PLAYGROUND" };
-let prototype;
-prototype = function InAppNavigationRecord(collectionId) {
+const prototype = function InAppNavigationRecord(collectionId) {
   const tmp3 = new prototype(tmp2, tmp);
   // ThrowIfThisInitialized (0x7c)
   if (null != collectionId.collectionId) {
@@ -32,7 +31,7 @@ prototype["fromType"] = function fromType(arg0) {
     obj[0] = Routes.COLLECTIBLES_SHOP;
     obj[1] = tmp7.SHOP;
     if (typeof prototype !== "function") {
-      let throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      HermesBuiltin.throwTypeError();
     }
     const tmp96 = new prototype("Trying to call a non-function", tmp6, tmp5);
     // ThrowIfThisInitialized (0x7c)
@@ -50,7 +49,7 @@ prototype["fromType"] = function fromType(arg0) {
     obj[0] = Routes.NITRO_HOME;
     obj[1] = tmp7.NITRO_HOME;
     if (typeof prototype !== "function") {
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      HermesBuiltin.throwTypeError();
     }
     const tmp86 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
     // ThrowIfThisInitialized (0x7c)
@@ -68,7 +67,7 @@ prototype["fromType"] = function fromType(arg0) {
     obj1[0] = Routes.QUEST_HOME;
     obj1[1] = tmp7.QUEST_HOME;
     if (typeof prototype !== "function") {
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      HermesBuiltin.throwTypeError();
     }
     const tmp76 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
     // ThrowIfThisInitialized (0x7c)
@@ -86,7 +85,7 @@ prototype["fromType"] = function fromType(arg0) {
     obj2[0] = Routes.GLOBAL_DISCOVERY_APPS;
     obj2[1] = tmp7.APPS_HOME;
     if (typeof prototype !== "function") {
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      HermesBuiltin.throwTypeError();
     }
     const tmp66 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
     // ThrowIfThisInitialized (0x7c)
@@ -101,7 +100,6 @@ prototype["fromType"] = function fromType(arg0) {
     return tmp66;
   } else {
     let settingsPathToRouteResult = arg1;
-    throwTypeErrorResult = arg2;
     if (tmp7.SETTINGS === arg0) {
       if (settingsPathToRouteResult == null) {
         obj2 = settingsPathToRoute;
@@ -112,7 +110,7 @@ prototype["fromType"] = function fromType(arg0) {
       obj3[1] = arg2;
       obj3[2] = tmp7.SETTINGS;
       if (typeof prototype !== "function") {
-        throwTypeErrorResult = HermesBuiltin.throwTypeError();
+        HermesBuiltin.throwTypeError();
       }
       const tmp57 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
       // ThrowIfThisInitialized (0x7c)
@@ -132,7 +130,7 @@ prototype["fromType"] = function fromType(arg0) {
       }
       const PLAYGROUND = tmp7.PLAYGROUND;
       if (typeof prototype !== "function") {
-        throwTypeErrorResult = HermesBuiltin.throwTypeError();
+        HermesBuiltin.throwTypeError();
       }
       const tmp42 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3);
       // ThrowIfThisInitialized (0x7c)
@@ -153,9 +151,9 @@ prototype["fromType"] = function fromType(arg0) {
       obj4[0] = Routes.COLLECTIBLES_SHOP;
       obj4[1] = tmp7.SHOP_ORBS_TAB;
       if (typeof prototype !== "function") {
-        throwTypeErrorResult = HermesBuiltin.throwTypeError();
+        HermesBuiltin.throwTypeError();
       }
-      const tmp30 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3, tmp2, throwTypeErrorResult);
+      const tmp30 = new prototype("Trying to call a non-function", tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
       // ThrowIfThisInitialized (0x7c)
       if (null != obj4.collectionId) {
         const _HermesInternal3 = HermesInternal;
@@ -174,7 +172,7 @@ prototype["fromType"] = function fromType(arg0) {
       obj[0] = "" + QUEST_HOME + "?filter=" + VIRTUAL_CURRENCY;
       obj[1] = tmp7.QUEST_ORBS;
       if (typeof prototype !== "function") {
-        throwTypeErrorResult = HermesBuiltin.throwTypeError();
+        HermesBuiltin.throwTypeError();
       }
       const tmp21 = new prototype("Trying to call a non-function", tmp6, tmp5, "", tmp3, QUEST_HOME, VIRTUAL_CURRENCY);
       // ThrowIfThisInitialized (0x7c)
@@ -194,7 +192,7 @@ prototype["fromType"] = function fromType(arg0) {
     }
   }
 };
-const result = require("set").fileFinishedImporting("modules/autocompleter/record/InAppNavigationRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/autocompleter/record/InAppNavigationRecord.tsx");
 
 export default prototype;
 export const InAppNavigationRecord = prototype;

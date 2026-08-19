@@ -1,12 +1,12 @@
 // === Module 11833: getClass ===
 
 // Module 11833 (getClass)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/StylesheetUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/StylesheetUtils.tsx");
 
 export const getClass = function getClass(arg0, arg1) {
   const substr = [...arguments].slice();
-  const tmp = arg0["" + arg1 + substr.reduce(substr, (arg0, arg1) => arg0 + callback(table[0]).upperCaseFirstChar(arg1), "")];
+  const tmp = arg0["" + arg1 + substr.reduce(substr, (acc, item, index) => acc + callback(table[0]).upperCaseFirstChar(item), "")];
   return null != tmp ? tmp : undefined;
 };

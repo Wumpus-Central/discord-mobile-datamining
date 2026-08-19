@@ -2,7 +2,7 @@
 
 // Module 13055 (componentDidMount)
 import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 7131 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
@@ -45,7 +45,6 @@ prototype["playScene"] = function playScene(nextScene) {
   let tmp3 = null == this.animationRef;
   if (!tmp3) {
     tmp3 = nextScene !== self.currentScene && tmp.BEG === tmp2.BEG && tmp.END === tmp2.END;
-    const tmp4 = nextScene !== self.currentScene && tmp.BEG === tmp2.BEG && tmp.END === tmp2.END;
   }
   if (!tmp3) {
     const animationRef = self.animationRef;
@@ -69,8 +68,7 @@ prototype["render"] = function render() {
     obj[0] = source.w / source.h;
     tmp4 = obj;
   }
-  obj = { style: items, children: null };
-  items = [tmp4, style];
+  const items = [tmp4, style];
   obj = { source, style: items1 };
   items1 = [tmp4, style];
   const tmp = callback(props, closure_2);
@@ -80,6 +78,6 @@ prototype["render"] = function render() {
   return <View source={source} style={items1} />;
 };
 SequencedLottieAnimationView.defaultProps = { autoPlay: true };
-const result = require("set").fileFinishedImporting("components_native/common/SequencedLottieAnimationView.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/SequencedLottieAnimationView.tsx");
 
 export default SequencedLottieAnimationView;

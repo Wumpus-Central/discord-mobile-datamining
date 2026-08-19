@@ -1,7 +1,7 @@
 // === Module 7376: goToStandalonePremiumCheckout ===
 
 // Module 7376 (goToStandalonePremiumCheckout)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import v1 from "v1" /* 514 */;
 import sendRequest from "sendRequest" /* 530 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
@@ -12,9 +12,8 @@ function goToStandalonePremiumCheckout(planId, arg1, arg2) {
   require = result;
   importDefault = arg1;
   dependencyMap = arg2;
-  let uRL;
   let obj = isDiscordProxiedAssetUrlDefault;
-  uRL = new URL(obj.makeUrl(closure_4.BILLING_LOGIN_HANDOFF, false));
+  const uRL = new URL(obj.makeUrl(closure_4.BILLING_LOGIN_HANDOFF, false));
   const v4Result = v1.v4();
   const searchParams = uRL.searchParams;
   searchParams.append("handoff_key", v4Result);
@@ -22,11 +21,10 @@ function goToStandalonePremiumCheckout(planId, arg1, arg2) {
   searchParams2.append("redirect_to", result);
   const HTTP = sendRequest.HTTP;
   obj = { url: uRL.HANDOFF, body: { key: v4Result }, oldFormErrors: true, rejectWithError: false };
-  const obj2 = v1;
-  return HTTP.post(obj).then((arg0) => callback(arg0, uRL), (arg0) => callback2(arg0, closure_0));
+  return HTTP.post(obj).then((result) => callback(result, uRL), (arg0) => callback2(arg0, closure_0));
 }
 ({ Endpoints: c3, Routes: c4 } = ME);
-let result = set.fileFinishedImporting("modules/payments/utils/BillingStandaloneUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/payments/utils/BillingStandaloneUtils.tsx");
 
 export const goToBillingStandalonePageWithHandoff = function goToBillingStandalonePageWithHandoff(Routes, arg1, arg2) {
   const _require = Routes;
@@ -42,7 +40,7 @@ export const goToBillingStandalonePageWithHandoff = function goToBillingStandalo
   const HTTP = _require(530).HTTP;
   obj = { url: uRL.HANDOFF, body: { key: v4Result }, oldFormErrors: true, rejectWithError: false };
   const obj2 = _require(514);
-  return HTTP.post(obj).then((arg0) => callback(arg0, uRL), (arg0) => callback2(arg0, closure_0));
+  return HTTP.post(obj).then((result) => callback(result, uRL), (arg0) => callback2(arg0, closure_0));
 };
 export { goToStandalonePremiumCheckout };
 export const goToStandalonePremiumCheckoutWeb = function goToStandalonePremiumCheckoutWeb(planId) {

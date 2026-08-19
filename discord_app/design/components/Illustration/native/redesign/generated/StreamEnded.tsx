@@ -7,13 +7,12 @@ import getIllustrationSource from "getIllustrationSource" /* 7907 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamEnded.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamEnded.tsx");
 
 export const getStreamEndedSource = function getStreamEndedSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
       return callback(12443);
     },
@@ -24,8 +23,7 @@ export const getStreamEndedSource = function getStreamEndedSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useStreamEndedSource = function useStreamEndedSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
       return callback(12443);
     },
@@ -36,16 +34,7 @@ export const useStreamEndedSource = function useStreamEndedSource() {
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const StreamEnded = function StreamEnded(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
-    dark() {
-      return callback(12443);
-    },
-    darker() {
-      return callback(12444);
-    }
-  };
-  obj = {};
+  const obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

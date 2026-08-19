@@ -7,18 +7,16 @@ import preloadDefault from "preload" /* 5449 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { image: { width: "100%" }, content: null, description: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16, flex: 1 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginBottom: ThemesDefault.space.PX_16, flex: 1 };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx");
 
 export default function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -27,16 +25,6 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   let obj = markAsDismissed(7688);
   bottomSheetRef = obj.useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
-  obj = {
-    ref: bottomSheetRef,
-    startExpanded: true,
-    onDismiss() {
-      return markAsDismissed(closure_1_4.UNKNOWN);
-    },
-    handleDisabled: true,
-    header: null,
-    children: null
-  };
   obj = { children: null };
   const items = [callback(preloadDefault, { source: imageSource, style: tmp.image }), callback(markAsDismissed(7124).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
   obj[0] = items;

@@ -1,10 +1,10 @@
 // === Module 12035: useAutocompleter ===
 
 // Module 12035 (useAutocompleter)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/share/useAutocompleter.tsx");
+const result = require("obj132").fileFinishedImporting("modules/share/useAutocompleter.tsx");
 
 export default function useAutocompleter(searchOptions) {
   searchOptions = searchOptions.searchOptions;
@@ -26,10 +26,10 @@ export default function useAutocompleter(searchOptions) {
   const effect1 = React.useEffect(() => {
     let tmp2 = null != searchOptions;
     if (tmp2) {
-      tmp2 = tmp !== options.options;
+      tmp2 = searchOptions !== options.options;
     }
     if (tmp2) {
-      options.setOptions(tmp);
+      options.setOptions(searchOptions);
     }
   }, items1);
   let tmp = callback(React.useState({ results: [], query: "" }), 2);
@@ -40,17 +40,17 @@ export default function useAutocompleter(searchOptions) {
       ({ query, resultTypes } = arg0);
       let tmp = null != options.resultTypes;
       if (tmp) {
-        const resultTypes2 = obj.resultTypes;
-        tmp = resultTypes.length === resultTypes2.size && resultTypes.every((arg0) => resultTypes2.has(arg0));
-        const tmp2 = resultTypes.length === resultTypes2.size && resultTypes.every((arg0) => resultTypes2.has(arg0));
+        const resultTypes2 = options.resultTypes;
+        tmp = resultTypes.length === resultTypes2.size && resultTypes.every((item, index) => resultTypes2.has(item));
+        const tmp2 = resultTypes.length === resultTypes2.size && resultTypes.every((item, index) => resultTypes2.has(item));
       }
       if (!tmp) {
-        obj.setResultTypes(resultTypes);
+        options.setResultTypes(resultTypes);
         let num = 20;
         if (1 === resultTypes.length) {
           num = 50;
         }
-        obj.setLimit(num);
+        options.setLimit(num);
       }
       let str = "";
       if ("" !== query.trim()) {

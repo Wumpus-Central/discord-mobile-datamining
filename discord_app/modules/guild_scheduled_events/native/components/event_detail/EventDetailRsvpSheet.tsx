@@ -10,14 +10,14 @@ import Form from "Form" /* 8083 */;
 import registerAssetDefault from "registerAsset" /* 12408 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4559 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import sortActivity from "sortActivity" /* 4559 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { Fonts } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = arg1;
+require = fn;
 function EmptyDisplay(arg0) {
   ({ children, style } = arg0);
   let obj = { style: null, children: null };
@@ -29,16 +29,14 @@ function EmptyDisplay(arg0) {
   return callback2(View, obj);
 }
 function FetchErrorDisplay(style) {
-  let obj = { style: style.style, children: null };
-  obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.obChXk);
   obj[1] = callback(Text.Text, obj);
   return callback(EmptyDisplay, obj);
 }
 function NoUsersDisplay(style) {
-  let obj = { style: style.style, children: null };
-  obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.hW0mBR);
   obj[1] = callback(Text.Text, obj);
@@ -46,9 +44,7 @@ function NoUsersDisplay(style) {
 }
 function RemainingUsersRow(remainingUsersGroup) {
   const tmp = callback3();
-  let obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
-  obj = { style: tmp.remainingUsersIconContainer, children: null };
-  obj = { source: registerAssetDefault, style: tmp.remainingUsersIcon };
+  const obj = { source: registerAssetDefault, style: tmp.remainingUsersIcon };
   obj[1] = callback(preloadDefault, obj);
   obj[1] = callback(View, obj);
   const intl = getSystemLocale.intl;
@@ -86,16 +82,16 @@ class EventDetailRsvpSheet {
     items[0] = guildId;
     callback = closure_3.useCallback((item) => {
       item = item.item;
-      let obj = guildId(closure_1_2[21]);
+      let obj = guildId(dependencyMap[21]);
       if (obj.isRemainingUsersGroup(item)) {
         obj = { remainingUsersGroup: null };
         obj[0] = item;
-        let tmpResult = tmp(closure_1_13, obj);
+        let tmpResult = closure_1_7(RemainingUsersRow, obj);
       } else {
         obj = { eventUser: null, guildId: null };
         obj[0] = item;
         obj[1] = guildId;
-        tmpResult = tmp(closure_1_14, obj);
+        tmpResult = closure_1_7(closure_1_14, obj);
       }
       return tmpResult;
     }, items);
@@ -208,17 +204,15 @@ class EventDetailRsvpSheet {
 }
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { staticMessageContentContainer: { flex: 1, padding: 16 }, userList: { paddingTop: 16 }, userListRow: { paddingVertical: 8 }, userName: null, emptyDisplayContainer: null, staticMessageContent: null, emptyDisplayTitle: null, remainingUsersIcon: null, remainingUsersIconContainer: null };
-obj = { color: ThemesDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 };
+let obj = { color: ThemesDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 };
 obj[3] = obj;
 obj[4] = { alignItems: "center", justifyContent: "center", minHeight: 200 };
 obj[5] = { height: "100%" };
-createCacheKey = { paddingTop: 24 };
+const createCacheKey = { paddingTop: 24 };
 const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 20, { marginBottom: 8 }));
 createCacheKey.textAlign = "center";
 obj[6] = createCacheKey;
 obj[7] = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 18, width: 18 };
-let obj2 = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, height: 18, width: 18 };
 obj[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((eventUser) => {
@@ -244,7 +238,7 @@ const memoResult = importAllResult.memo((eventUser) => {
     obj[3] = isVROnline;
     obj[4] = status;
     obj[5] = tmp4(1297).AvatarSizes.REFRESH_MEDIUM_32;
-    tmp7Result = tmp7(tmp4(1297).Avatar, obj);
+    tmp7Result = callback(tmp4(1297).Avatar, obj);
   }
   obj[1] = tmp7Result;
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
@@ -260,15 +254,14 @@ const memoResult = importAllResult.memo((eventUser) => {
   }
   obj1[1] = nick;
   ({ userName: obj5[2], userName: obj5[3] } = tmp);
-  obj[2] = closure_7(tmp2Result, obj1);
+  obj[2] = callback(tmp2Result, obj1);
   obj[3] = function onPress() {
-    analyticsLocations(closure_1_2[20])({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
+    analyticsLocations(dependencyMap[20])({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8083).FormRow, obj, eventUser.user_id);
+  return callback(eventUser(8083).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 16, height: 32, width: 32, alignItems: "center", justifyContent: "center" };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailRsvpSheet.tsx");
 
 export default EventDetailRsvpSheet;
 export const UserRow = memoResult;

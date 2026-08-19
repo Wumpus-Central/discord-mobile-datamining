@@ -6,7 +6,7 @@ import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 *
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function onPress() {
   ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14314, dependencyMap.paths), "AddConnection");
 }
@@ -35,6 +35,6 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
   }, items);
   return jsx(tmp(14315).UserSettingsConnections, { selectedPlatformType });
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
 
 export default memoResult;

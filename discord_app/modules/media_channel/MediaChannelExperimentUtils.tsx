@@ -1,11 +1,11 @@
 // === Module 8846: useGuildEligibleForMediaChannels ===
 
 // Module 8846 (useGuildEligibleForMediaChannels)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");
 
 export const useGuildEligibleForMediaChannels = function useGuildEligibleForMediaChannels(stateFromStores) {
   let id;

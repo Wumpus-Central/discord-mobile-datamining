@@ -3,17 +3,17 @@
 // Module 8604 (SplitTextField)
 import useTextFieldState from "useTextFieldState" /* 7339 */;
 import useInputClearButton from "useInputClearButton" /* 7340 */;
+import InputAttachmentContainer from "InputAttachmentContainer" /* 7344 */;
 import useInputStyles from "useInputStyles" /* 7345 */;
 import BaseTextField from "BaseTextField" /* 7347 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 ({ Pressable: obj1, View: c3 } = get_ActivityIndicator);
 const forwardRefResult = importAllResult.forwardRef((size, ref) => {
-  let obj = useInputStyles;
-  obj = { size: size.size, isRound: size.isRound };
+  let obj = { size: size.size, isRound: size.isRound };
   const inputStyles = obj.useInputStyles(obj);
   let obj2 = useTextFieldState;
   const textField = obj2.useTextField(size, ref);
@@ -26,7 +26,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
     ({ content: obj5[0], pressableProps: obj5[1] } = inputClearButtonConfig);
     tmp6 = obj;
   }
-  let tmpResult = tmp(7344);
+  let tmpResult = InputAttachmentContainer;
   const inputAttachments = tmpResult.useInputAttachments(size, tmp6);
   let tmp8 = null;
   ({ trailing, inputStyle } = inputAttachments);
@@ -45,7 +45,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
         return items;
       };
       const merged = Object.assign(size.leadingPressableProps);
-      tmpResult = tmp(7344);
+      tmpResult = InputAttachmentContainer;
       obj2.children = tmpResult.renderInputAttachment(undefined, size.leadingText, inputStyles.text);
       obj1[1] = <closure_2 style={null} />;
       tmp8 = <closure_3 style={null}>{null}</closure_3>;
@@ -59,6 +59,6 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   obj3.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
 });
-const result = require("set").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 
 export const SplitTextField = forwardRefResult;

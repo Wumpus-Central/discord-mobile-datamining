@@ -1,13 +1,13 @@
 // === Module 7927: usePromotionMarketingComponent ===
 
 // Module 7927 (usePromotionMarketingComponent)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "emitChanges" /* 7421 */;
-import closure_5 from "createEmptyPromotionsByType" /* 7628 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import emitChanges from "emitChanges" /* 7421 */;
+import createEmptyPromotionsByType from "createEmptyPromotionsByType" /* 7628 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
 
 export const usePromotionMarketingComponent = function usePromotionMarketingComponent(PREMIUM_TAB) {
   const _require = PREMIUM_TAB;
@@ -20,7 +20,7 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
     if (null == marketingComponentByType) {
       return null;
     } else {
-      const promotionByTypeAndId = obj.getPromotionByTypeAndId(PREMIUM_TAB(stateFromStores[6]).PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
+      const promotionByTypeAndId = closure_1_5.getPromotionByTypeAndId(PREMIUM_TAB(stateFromStores[6]).PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
       let trialId;
       if (promotionByTypeAndId != null) {
         trialId = promotionByTypeAndId.trialId;
@@ -31,7 +31,6 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
       }
       return marketingComponentByType;
     }
-    obj = closure_1_5;
   });
   const obj2 = _require(stateFromStores[5]);
   const items1 = [closure_5];
@@ -51,9 +50,9 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
   }
   const obj3 = _require(stateFromStores[5]);
   [tmp6, closure_3] = endDate(React.useState(false), 2);
-  closure_4 = obj.useRef(null);
+  closure_4 = React.useRef(null);
   const items2 = [endDate];
-  const effect1 = obj.useEffect(() => {
+  const effect1 = React.useEffect(() => {
     if (null != endDate) {
       const _Date = Date;
       const time = endDate.getTime();

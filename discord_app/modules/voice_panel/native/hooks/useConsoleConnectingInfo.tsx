@@ -5,11 +5,11 @@ import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession"
 import getConsoleIconDefault from "getConsoleIcon" /* 9884 */;
 import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 16388 */;
 import getConsoleColorDefault from "getConsoleColor" /* 16390 */;
-import closure_3 from "set" /* 4540 */;
-import closure_4 from "handleUpdate" /* 4541 */;
+import set from "set" /* 4540 */;
+import handleUpdate from "handleUpdate" /* 4541 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx");
 
 export default function useConsoleConnectingInfo(arg0) {
   const tmp3 = useVoiceStateForRemoteSessionDefault();

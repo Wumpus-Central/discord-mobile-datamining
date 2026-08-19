@@ -3,16 +3,16 @@
 // Module 12508 (checkVoiceStates)
 import initializeDefault from "initialize" /* 5038 */;
 import sortKey from "sortKey" /* 6703 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import importDefaultResult from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
-import closure_6 from "getActiveStageChannelIds" /* 4989 */;
-import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
-import closure_8 from "initialize" /* 12506 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
+import getActiveStageChannelIds from "getActiveStageChannelIds" /* 4989 */;
+import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import initialize from "initialize" /* 12506 */;
 import createSoundForPack from "createSoundForPack" /* 10040 */;
 
-require = arg1;
+require = fn;
 function checkVoiceStates() {
   const voiceChannelId = store2.getVoiceChannelId();
   if (null == voiceChannelId) {
@@ -28,41 +28,38 @@ function checkVoiceStates() {
       if (importDefaultResult.isSelfDeaf()) {
         closure_10.stop();
         c9 = false;
+      } else if (closure_8.shouldPlay()) {
+        closure_10.volume = importDefaultResult.getOutputVolume() / 400;
+        closure_10.loop();
+        c9 = true;
+      } else if (closure_7.isLive(voiceChannelId)) {
+        closure_10.stop();
+        c9 = false;
+      } else if (closure_8.isMuted()) {
+        closure_10.pause();
+        c9 = false;
       } else {
-        if (closure_8.shouldPlay()) {
-          closure_10.volume = obj.getOutputVolume() / 400;
-          closure_10.loop();
-          c9 = true;
-        } else if (closure_7.isLive(voiceChannelId)) {
-          closure_10.stop();
-          c9 = false;
-        } else if (obj2.isMuted()) {
-          closure_10.pause();
-          c9 = false;
-        } else {
-          const _Object = Object;
-          const values = Object.values(voiceStatesForChannel.getVoiceStatesForChannel(voiceChannelId));
-          const tmp8 = null != values.find((suppress) => {
-            suppress = suppress.suppress;
-            let tmp = !suppress;
-            if (!suppress) {
-              tmp = !suppress.isVoiceMuted();
-            }
-            return tmp;
-          });
-          if (!tmp8) {
-            if (!c9) {
-              closure_10.volume = obj.getOutputVolume() / 400;
-              closure_10.loop();
-              c9 = true;
-            }
+        const _Object = Object;
+        const values = Object.values(voiceStatesForChannel.getVoiceStatesForChannel(voiceChannelId));
+        const tmp8 = null != values.find((item, index) => {
+          const suppress = item.suppress;
+          let tmp = !suppress;
+          if (!suppress) {
+            tmp = !item.isVoiceMuted();
           }
-          if (tmp8) {
-            closure_10.pause();
-            c9 = false;
+          return tmp;
+        });
+        if (!tmp8) {
+          if (!c9) {
+            closure_10.volume = importDefaultResult.getOutputVolume() / 400;
+            closure_10.loop();
+            c9 = true;
           }
         }
-        obj2 = closure_8;
+        if (tmp8) {
+          closure_10.pause();
+          c9 = false;
+        }
       }
     } else {
       closure_10.stop();
@@ -131,7 +128,7 @@ prototype["handleToggleSelfDeaf"] = function handleToggleSelfDeaf() {
   checkVoiceStates();
 };
 const stageMusicManager = new StageMusicManager();
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageMusicManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageMusicManager.tsx");
 
 export default stageMusicManager;
 export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(channelId) {
@@ -141,8 +138,8 @@ export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(
   const obj = _require(589);
   const stageParticipants = _require(6708).useStageParticipants(channelId, _require(6703).StageChannelParticipantNamedIndex.SPEAKER);
   const obj2 = _require(6708);
-  const tmp2 = null != stageParticipants.find((voiceState) => {
-    voiceState = voiceState.voiceState;
+  const tmp2 = null != stageParticipants.find((item, index) => {
+    const voiceState = item.voiceState;
     return !voiceState.isVoiceMuted();
   });
   const items1 = [closure_7];

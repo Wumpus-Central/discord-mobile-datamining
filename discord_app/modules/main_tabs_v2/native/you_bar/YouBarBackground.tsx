@@ -14,19 +14,17 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 function YouBarMaskedBackground(barWidth) {
   barWidth = barWidth.barWidth;
   ({ avatarSize, backgroundColor } = barWidth);
   const diff = avatarSize - 4;
   let obj = { style: { position: "absolute" }, maskElement: null, children: null };
-  obj = { style: obj, children: null };
   obj = { width: barWidth, height: YOU_BAR_HEIGHT, backgroundColor: "transparent" };
   obj1 = { position: "absolute", top: 0, left: 0, right: 0, bottom: YOU_BAR_HEIGHT / 2 - 1, backgroundColor: "black" };
   const tmp = callback3();
   const items = [callback(View, { style: obj1 }), callback(View, { style: { position: "absolute", top: YOU_BAR_HEIGHT / 2, left: diff - 1, right: 0, bottom: 0, backgroundColor: "black" } }), ];
   const obj3 = { style: obj4, colors: null, start: null, end: null, locations: null, pointerEvents: "none" };
-  const obj2 = { position: "absolute", top: YOU_BAR_HEIGHT / 2, left: diff - 1, right: 0, bottom: 0, backgroundColor: "black" };
   obj4 = { position: "absolute", top: YOU_BAR_HEIGHT / 2, width: 8, left: diff - 8, height: YOU_BAR_HEIGHT / 2 };
   const tmp3 = _isNativeReflectConstructDefault;
   const tmp4 = LinearGradientDefault;
@@ -45,7 +43,6 @@ function YouBarMaskedBackground(barWidth) {
 }
 function YouBarAnimatedBackground(arg0) {
   let _require;
-  importDefault = undefined;
   ({ barWidth, backgroundColor } = arg0);
   let obj = _require(4097);
   const token = obj.useToken(ThemesDefault.modules.mobile.YOU_BAR_BORDER_RADIUS);
@@ -55,11 +52,11 @@ function YouBarAnimatedBackground(arg0) {
   importDefault = tmp4;
   const tmp = callback3();
   const fn = function u() {
-    const obj = { borderTopRightRadius: store(closure_1_2[12]).withSpring(store.get(), closure_1_5), borderTopLeftRadius: null, borderBottomLeftRadius: null };
-    const obj2 = store(closure_1_2[12]);
-    obj[1] = store(closure_1_2[12]).withSpring(store.get(), closure_1_5);
-    const obj3 = store(closure_1_2[12]);
-    obj[2] = store(closure_1_2[12]).withSpring(closure_1.get(), closure_1_5);
+    const obj = { borderTopRightRadius: store(dependencyMap[12]).withSpring(store.get(), YOU_BAR_SPRING_CONFIG), borderTopLeftRadius: null, borderBottomLeftRadius: null };
+    const obj2 = store(dependencyMap[12]);
+    obj[1] = store(dependencyMap[12]).withSpring(store.get(), YOU_BAR_SPRING_CONFIG);
+    const obj3 = store(dependencyMap[12]);
+    obj[2] = store(dependencyMap[12]).withSpring(closure_1.get(), YOU_BAR_SPRING_CONFIG);
     return obj;
   };
   obj = { withSpring: _require(4744).withSpring, questDockAnimatedBorderRadius: tmp3, YOU_BAR_SPRING_CONFIG, questDockAnimatedBottomLeftRadius: tmp4 };
@@ -73,8 +70,7 @@ function YouBarAnimatedBackground(arg0) {
 const YOU_BAR_HEIGHT = CONNECTION_BANNER_HEIGHT.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = CONNECTION_BANNER_HEIGHT.YOU_BAR_SPRING_CONFIG;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { youRowFloating: null };
-obj = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.modules.mobile.YOU_BAR_BORDER_RADIUS, borderTopLeftRadius: YOU_BAR_HEIGHT / 2, borderBottomLeftRadius: YOU_BAR_HEIGHT / 2 };
+let obj = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.modules.mobile.YOU_BAR_BORDER_RADIUS, borderTopLeftRadius: YOU_BAR_HEIGHT / 2, borderBottomLeftRadius: YOU_BAR_HEIGHT / 2 };
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function YouBarBackgroundTsx1(){const{withSpring,questDockAnimatedBorderRadius,YOU_BAR_SPRING_CONFIG,questDockAnimatedBottomLeftRadius}=this.__closure;return{borderTopRightRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderTopLeftRadius:withSpring(questDockAnimatedBorderRadius.get(),YOU_BAR_SPRING_CONFIG),borderBottomLeftRadius:withSpring(questDockAnimatedBottomLeftRadius.get(),YOU_BAR_SPRING_CONFIG)};}" };
@@ -91,15 +87,15 @@ const memoResult = importAllResult.memo(function YouBarBackground(barWidth) {
     obj[0] = barWidth;
     obj[1] = token;
     obj[2] = avatarSize;
-    let tmp2Result = tmp2(YouBarMaskedBackground, obj);
+    let tmp2Result = callback(YouBarMaskedBackground, obj);
   } else {
     obj = { barWidth: null, backgroundColor: null };
     obj[0] = barWidth;
     obj[1] = token;
-    tmp2Result = tmp2(YouBarAnimatedBackground, obj);
+    tmp2Result = callback(YouBarAnimatedBackground, obj);
   }
   return tmp2Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarBackground.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarBackground.tsx");
 
 export default memoResult;

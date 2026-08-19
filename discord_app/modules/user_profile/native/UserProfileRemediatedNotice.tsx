@@ -4,26 +4,25 @@
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
+const createCacheKey = { padding: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileRemediatedNotice.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileRemediatedNotice.tsx");
 
 export default function RemediatedUserNotice(user) {
   user = user.user;
   const tmp = callback2();
   let obj = user(647);
   const items = [closure_4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isPendingIncoming: closure_1_4.getRelationshipType(user.id) === closure_1_5.PENDING_INCOMING, isBlocked: closure_1_4.isBlocked(user.id), isIgnored: closure_1_4.isIgnored(user.id) }));
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isPendingIncoming: closure_1_4.getRelationshipType(user.id) === RelationshipTypes.PENDING_INCOMING, isBlocked: closure_1_4.isBlocked(user.id), isIgnored: closure_1_4.isIgnored(user.id) }));
   ({ isBlocked, isIgnored } = stateFromStoresObject);
   if (isBlocked) {
     obj = { style: null, children: null };
@@ -45,7 +44,7 @@ export default function RemediatedUserNotice(user) {
       const intl3 = tmp4(1236).intl;
       const obj3 = { unignoreHook: null };
       obj3[0] = function unignoreHook(children) {
-        return closure_1_6(user(closure_1_2[9]).Text, {
+        return closure_1_6(user(dependencyMap[9]).Text, {
           role: "button",
           variant: "heading-sm/medium",
           color: "text-link",
@@ -57,12 +56,11 @@ export default function RemediatedUserNotice(user) {
       };
       items3[2] = intl3.format(tmp4(1236).t.PrtAqy, obj3);
       obj1[0] = items3;
-      isIgnored = tmp8(closure_7, obj1);
+      isIgnored = callback(closure_7, obj1);
     }
     items2[1] = isIgnored;
     obj[1] = items2;
-    let tmp8Result = tmp8(View, obj);
-    const tmp9 = View;
+    let tmp8Result = callback(View, obj);
   } else {
     tmp8Result = null;
     if (isIgnored) {

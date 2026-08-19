@@ -1,7 +1,7 @@
 // === Module 14203: pressable ===
 
 // Module 14203 (pressable)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
@@ -20,7 +20,6 @@ const pressable = createToggle.createPressable({
   parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
     expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
-    const obj = expandEventPropertiesDefault;
     _modDef5260.pushLazy(asyncRequireImpl(14202, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
@@ -28,22 +27,6 @@ const pressable = createToggle.createPressable({
     return null != _uploadContacts.useContactSyncAccount();
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.nAsWKy);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  onPress: function onContactSyncNamePress() {
-    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
-    const obj = expandEventPropertiesDefault;
-    _modDef5260.pushLazy(asyncRequireImpl(14202, dependencyMap.paths), "Contact Sync Name Update Modal");
-  },
-  withArrow: true,
-  usePredicate: function useHasContactSyncAccount() {
-    return null != _uploadContacts.useContactSyncAccount();
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SyncContactsNameSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/SyncContactsNameSetting.tsx");
 
 export default pressable;

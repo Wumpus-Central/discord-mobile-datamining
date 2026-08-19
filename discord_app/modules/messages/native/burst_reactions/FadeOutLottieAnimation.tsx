@@ -1,27 +1,25 @@
 // === Module 7574: FadeOutLottieAnimation ===
 
 // Module 7574 (FadeOutLottieAnimation)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_7 = createCacheKey.createStyles({ content: { width: "100%" } });
 let closure_8 = { code: "function FadeOutLottieAnimationTsx1(){const{isAnimationComplete,isFadeOut,withTiming,runOnJS,setIsFadeOut}=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(setIsFadeOut)(false);})};}return{opacity:0};}" };
 let closure_9 = { code: "function FadeOutLottieAnimationTsx2(finished){const{runOnJS,setIsFadeOut}=this.__closure;if(finished)runOnJS(setIsFadeOut)(false);}" };
-const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx");
 
 export default function FadeOutLottieAnimation(onComplete) {
   onComplete = onComplete.onComplete;
   const merged = Object.assign(onComplete, Object.create(null));
-  let first;
-  dependencyMap = undefined;
   let first1;
   let React;
   const tmp3 = first1(React.useState(false), 2);
-  first = tmp3[0];
+  const first = tmp3[0];
   dependencyMap = tmp3[1];
   const tmp5 = first1(React.useState(true), 2);
   first1 = tmp5[0];
@@ -44,8 +42,8 @@ export default function FadeOutLottieAnimation(onComplete) {
           obj3 = onComplete(closure_2[7]);
           fn = function t(arg0) {
             if (arg0) {
-              closure_1_0(closure_1_2[6]).runOnJS(closure_4)(false);
-              const obj = closure_1_0(closure_1_2[6]);
+              onComplete(closure_1_2[6]).runOnJS(closure_4)(false);
+              const obj = onComplete(closure_1_2[6]);
             }
           };
           obj1 = { runOnJS: null, setIsFadeOut: null };
@@ -94,7 +92,7 @@ export default function FadeOutLottieAnimation(onComplete) {
     };
     const merged1 = Object.assign(merged);
     obj[1] = jsx(first(7130), { style: null, speed: null, onAnimationFinish: null });
-    let tmp14Result = tmp14(first(4115).View, obj);
+    let tmp14Result = jsx(first(4115).View, { style: null, children: null });
     const tmp16 = first(7130);
   } else {
     tmp14Result = null;

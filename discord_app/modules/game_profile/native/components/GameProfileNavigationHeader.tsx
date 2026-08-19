@@ -2,35 +2,30 @@
 
 // Module 12033 (StyleSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ Image: c4, View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { headerContainer: null, headerRow: null, icon: null, titleContainer: null, headerRight: null, rankPillContainer: null };
-createCacheKey = { height: 56, paddingHorizontal: ThemesDefault.space.PX_16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", justifyContent: "center" };
+const createCacheKey = { height: 56, paddingHorizontal: ThemesDefault.space.PX_16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
-let obj2 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[3] = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, minWidth: 0 };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[5] = { flex: 1, flexDirection: "row", alignItems: "center" };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function GameProfileNavigationHeaderTsx1(){const{headerRightProgress}=this.__closure;return{opacity:headerRightProgress.get()};}" };
 let closure_11 = { code: "function GameProfileNavigationHeaderTsx2(){const{headerRightProgress}=this.__closure;return{opacity:1-headerRightProgress.get()};}" };
-let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, minWidth: 0 };
-let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileNavigationHeader.tsx");
+let result = require("obj132").fileFinishedImporting("modules/game_profile/native/components/GameProfileNavigationHeader.tsx");
 
 export default function GameProfileNavigationHeader(game) {
   game = game.game;
   const application = game.application;
   const headerRight = game.headerRight;
-  dependencyMap = undefined;
   let sharedValue;
   const tmp = callback2();
   dependencyMap = tmp2;
@@ -47,6 +42,7 @@ export default function GameProfileNavigationHeader(game) {
       num = 1;
     }
     const result = sharedValue.set(game(4664).withTiming(num, { duration: 200 }));
+    const obj = game(4664);
   }, items);
   let tmp3Result = tmp3(4115);
   const fn = function x() {
@@ -81,10 +77,9 @@ export default function GameProfileNavigationHeader(game) {
         if (game(1435).SUPPORTS_WEBP) {
           str2 = "webp";
         }
-        iconURL1 = obj2.getIconURL(32, str2);
+        iconURL1 = application.getIconURL(32, str2);
       }
       iconURL = iconURL1;
-      obj2 = application;
     }
     if (iconURL == null) {
       iconURL = null;
@@ -112,11 +107,11 @@ export default function GameProfileNavigationHeader(game) {
     let tmp15Result = null != memo;
     if (tmp15Result) {
       obj1 = { source: null, style: null };
-      let obj2 = { uri: null };
+      const obj2 = { uri: null };
       obj2[0] = memo;
       obj1[0] = obj2;
       obj1[1] = tmp.icon;
-      tmp15Result = tmp15(closure_4, obj1);
+      tmp15Result = callback(closure_4, obj1);
     }
     const items3 = [tmp15Result, , ];
     const obj3 = { style: null, children: null };
@@ -134,33 +129,33 @@ export default function GameProfileNavigationHeader(game) {
       obj5[0] = tmp.rankPillContainer;
       const obj6 = { rank: null, compact: true };
       obj6[0] = game.l30Rank;
-      const items5 = [tmp15(application(9132), obj6), ];
+      const items5 = [callback(application(9132), obj6), ];
       const obj7 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj7[0] = items6;
       const obj8 = { rank: null };
       obj8[0] = game.l30Rank;
-      obj7[1] = tmp15(application(9132), obj8);
-      items5[1] = tmp15(application(4115).View, obj7);
+      obj7[1] = callback(application(9132), obj8);
+      items5[1] = callback(application(4115).View, obj7);
       obj5[1] = items5;
-      tmp13Result = tmp13(tmp14, obj5);
+      tmp13Result = callback(closure_5, obj5);
     }
     items4[1] = tmp13Result;
     obj3[1] = items4;
-    items3[1] = closure_8(closure_5, obj3);
+    items3[1] = callback(closure_5, obj3);
     tmp15Result = null != headerRight;
     if (tmp15Result) {
       const obj9 = { style: null, children: null };
       const items7 = [tmp.headerRight, animatedStyle];
       obj9[0] = items7;
       obj9[1] = headerRight();
-      tmp15Result = tmp15(application(4115).View, obj9);
+      tmp15Result = callback(application(4115).View, obj9);
     }
     items3[2] = tmp15Result;
     obj[1] = items3;
-    items2[1] = closure_8(closure_5, obj);
+    items2[1] = callback(closure_5, obj);
     obj[1] = items2;
-    tmp13Result = tmp13(tmp14, obj);
+    tmp13Result = callback(closure_5, obj);
   }
   return tmp13Result;
 };

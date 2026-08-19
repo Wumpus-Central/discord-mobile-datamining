@@ -2,18 +2,17 @@
 
 // Module 12347 (UserProfileIncomingFriendRequest)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: null };
-createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
+const createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[3] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileIncomingFriendRequest.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileIncomingFriendRequest.tsx");
 
 export default function UserProfileIncomingFriendRequest(style) {
   ({ user, isGameRelationship } = style);
@@ -22,12 +21,8 @@ export default function UserProfileIncomingFriendRequest(style) {
     isGameRelationship = false;
   }
   ({ applicationId, showUserProfile } = style);
-  let items4;
   let trackUserProfileAction;
-  let acceptFriendRequest;
-  let cancelFriendRequest;
-  let getOrFetchApplication;
-  items4 = callback();
+  let items4 = callback();
   let tmp = items4;
   let userResult = trackUserProfileAction;
   let obj = isGameRelationship(trackUserProfileAction[6]);
@@ -35,8 +30,8 @@ export default function UserProfileIncomingFriendRequest(style) {
   obj1 = isGameRelationship(trackUserProfileAction[8]);
   obj = { userId: user.id, applicationId, isGameRelationship, location: items4(trackUserProfileAction[7])().newestAnalyticsLocation, onConfirm: showUserProfile, onCancel: showUserProfile };
   const friendRequestActions = obj1.useFriendRequestActions(obj);
-  acceptFriendRequest = friendRequestActions.acceptFriendRequest;
-  cancelFriendRequest = friendRequestActions.cancelFriendRequest;
+  const acceptFriendRequest = friendRequestActions.acceptFriendRequest;
+  const cancelFriendRequest = friendRequestActions.cancelFriendRequest;
   let obj3 = items4(trackUserProfileAction[9]);
   let name = obj3.useName(guildId, channelId, user);
   const items = [acceptFriendRequest, isGameRelationship, trackUserProfileAction];
@@ -59,7 +54,7 @@ export default function UserProfileIncomingFriendRequest(style) {
     trackUserProfileAction({ action: str });
   }, items1);
   let obj4 = isGameRelationship(trackUserProfileAction[10]);
-  getOrFetchApplication = obj4.useGetOrFetchApplication(applicationId);
+  const getOrFetchApplication = obj4.useGetOrFetchApplication(applicationId);
   if (null != applicationId) {
     if (tmp8 == getOrFetchApplication) {
       return null;
@@ -85,13 +80,12 @@ export default function UserProfileIncomingFriendRequest(style) {
     obj2[2] = function applicationIcon() {
       let tmp2 = null;
       if (null != getOrFetchApplication) {
-        let obj = { source: null, size: null, style: null };
-        obj = { id: null, icon: null };
-        ({ id: obj3[0], icon: obj3[1] } = tmp);
+        const obj = { id: null, icon: null };
+        ({ id: obj3[0], icon: obj3[1] } = getOrFetchApplication);
         obj[0] = items4(trackUserProfileAction[14]).getApplicationIconSource(obj);
         obj[1] = isGameRelationship(trackUserProfileAction[13]).AvatarSizes.XXSMALL;
         obj[2] = items4.gameIcon;
-        tmp2 = getOrFetchApplication(isGameRelationship(trackUserProfileAction[13]).Avatar, obj, tmp.id);
+        tmp2 = getOrFetchApplication(isGameRelationship(trackUserProfileAction[13]).Avatar, obj, getOrFetchApplication.id);
         const obj2 = items4(trackUserProfileAction[14]);
       }
       return tmp2;
@@ -123,8 +117,9 @@ export default function UserProfileIncomingFriendRequest(style) {
   tmp = tmp14(Button, obj7);
   items4[1] = tmp;
   obj5[1] = items4;
-  Text = tmp12(tmp13, obj5);
+  Text = callback(tmp13, obj5);
   items3[2] = Text;
   obj[1] = items3;
-  closure_6(cancelFriendRequest, obj);
+  callback(cancelFriendRequest, obj);
+  const tmp3 = items4(trackUserProfileAction[5])();
 };

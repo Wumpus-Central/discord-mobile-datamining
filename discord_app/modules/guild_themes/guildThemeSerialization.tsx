@@ -1,9 +1,9 @@
 // === Module 1909: cloneGuildThemeSettings ===
 
 // Module 1909 (cloneGuildThemeSettings)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");
 
 export const cloneGuildThemeSettings = function cloneGuildThemeSettings(themeSettings) {
   let tmp = null;

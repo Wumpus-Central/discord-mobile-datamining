@@ -1,7 +1,7 @@
 // === Module 8413: useDominantRGBFromImage ===
 
 // Module 8413 (useDominantRGBFromImage)
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
@@ -9,7 +9,7 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "apply" /* 12 */;
 
-const require = arg1;
+const require = fn;
 function useDominantRGBFromImage(arg0, arg1) {
   const _require = arg0;
   let first = arg1;
@@ -18,7 +18,7 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  let tmp5 = first(8414)();
+  const tmp5 = first(8414)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
@@ -38,36 +38,34 @@ function useDominantRGBFromImage(arg0, arg1) {
     }
     if (tmp2) {
       if (null == first(table[8]).cachedDominantColors[closure_0]) {
-        if (typeof tmp === "number") {
+        if (typeof first === "number") {
           const ImageManager = closure_1_6.ImageManager;
-          let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(closure_1_7.resolveAssetSource(tmp));
+          let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(closure_1_7.resolveAssetSource(first));
         } else {
           const ImageManager2 = closure_1_6.ImageManager;
-          dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_7.resolveAssetSource(tmp));
+          dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_7.resolveAssetSource(first));
         }
-        dominantColorsLocalAsset.then((arg0) => {
+        dominantColorsLocalAsset.then((result) => {
           if (callback()) {
             const obj = { r: null, g: null, b: null };
-            [obj[0], obj[1], obj[2]] = closure_1_3(arg0[0], 3);
+            [obj[0], obj[1], obj[2]] = closure_1_3(result[0], 3);
             callback2(obj);
-            closure_1_1(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
-            const tmp3 = closure_1_3(arg0[0], 3);
+            first(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
+            const tmp3 = closure_1_3(result[0], 3);
           }
         }).catch(closure_1_9);
-        const nextPromise = dominantColorsLocalAsset.then((arg0) => {
+        const nextPromise = dominantColorsLocalAsset.then((result) => {
           if (callback()) {
             const obj = { r: null, g: null, b: null };
-            [obj[0], obj[1], obj[2]] = closure_1_3(arg0[0], 3);
+            [obj[0], obj[1], obj[2]] = closure_1_3(result[0], 3);
             callback2(obj);
-            closure_1_1(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
-            const tmp3 = closure_1_3(arg0[0], 3);
+            first(closure_1_2[8]).cachedDominantColors[closure_0] = obj;
+            const tmp3 = closure_1_3(result[0], 3);
           }
         });
       } else {
-        callback(tmp4(tmp5[8]).cachedDominantColors[tmp6]);
+        callback(first(table[8]).cachedDominantColors[tmp6]);
       }
-      tmp4 = first;
-      tmp5 = table;
     }
   }, items);
   return tmp8[0];
@@ -249,7 +247,7 @@ const memoizeResult = importDefaultResult.memoize((num) => {
 });
 VideoBackground.AvatarSizes = require("Button").AvatarSizes;
 const memoResult = importAllResult.memo(VideoBackground);
-const result = require("set").fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
+const result = require("obj132").fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
 
 export default memoResult;
 export const AvatarSizes = require("Button").AvatarSizes;

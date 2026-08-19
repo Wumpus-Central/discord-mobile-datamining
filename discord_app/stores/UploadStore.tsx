@@ -3,7 +3,7 @@
 // Module 7582 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "reinjectEphemerals" /* 4994 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;
@@ -74,7 +74,7 @@ const uploadStore = new UploadStore(dispatcherDefault, {
           const items1 = file.items;
           let mapped;
           if (items1 != null) {
-            mapped = items1.map((item) => {
+            mapped = items1.map((item, index) => {
               item = item.item;
               let num = item.width;
               if (num == null) {
@@ -104,21 +104,19 @@ const uploadStore = new UploadStore(dispatcherDefault, {
             mapped = [];
           }
           closure_8[id] = mapped;
-          const tmp11 = closure_8;
         }
-        const tmp = dependencyMap;
       }
     }
   },
   UPLOAD_COMPRESSION_PROGRESS: function handleUploadCompressionProgress(arg0) {
     ({ channelId, file } = arg0);
     if (null != dependencyMap[channelId]) {
-      tmp[channelId] = arr.map((id) => {
-        let tmp2 = id;
-        if (id.id === file.id) {
+      tmp[channelId] = arr.map((item, index) => {
+        let tmp2 = item;
+        if (item.id === file.id) {
           const obj = {};
-          const merged = Object.assign(id);
-          const merged1 = Object.assign(tmp);
+          const merged = Object.assign(item);
+          const merged1 = Object.assign(file);
           tmp2 = obj;
         }
         return tmp2;
@@ -138,12 +136,12 @@ const uploadStore = new UploadStore(dispatcherDefault, {
   UPLOAD_PROGRESS: function handleUploadProgress(arg0) {
     ({ channelId, file } = arg0);
     if (null != dependencyMap[channelId]) {
-      tmp[channelId] = arr.map((id) => {
-        let tmp2 = id;
-        if (id.id === file.id) {
+      tmp[channelId] = arr.map((item, index) => {
+        let tmp2 = item;
+        if (item.id === file.id) {
           const obj = {};
-          const merged = Object.assign(id);
-          const merged1 = Object.assign(tmp);
+          const merged = Object.assign(item);
+          const merged1 = Object.assign(file);
           tmp2 = obj;
         }
         return tmp2;
@@ -165,10 +163,10 @@ const uploadStore = new UploadStore(dispatcherDefault, {
     const id = channelId.file.id;
     let tmp5 = null != arr;
     if (tmp5) {
-      tmp4[channelId] = arr.filter((id) => id.id !== id);
+      dependencyMap[channelId] = arr.filter((item, index) => item.id !== id);
       delete tmp3[tmp2];
       delete tmp[tmp2];
-      tmp5 = arr.length !== tmp4[channelId].length;
+      tmp5 = arr.length !== dependencyMap[channelId].length;
     }
     return tmp5;
   },
@@ -177,15 +175,14 @@ const uploadStore = new UploadStore(dispatcherDefault, {
     const id = channelId.file.id;
     let tmp5 = null != arr;
     if (tmp5) {
-      tmp4[channelId] = arr.filter((id) => id.id !== id);
+      dependencyMap[channelId] = arr.filter((item, index) => item.id !== id);
       delete tmp3[tmp2];
       delete tmp[tmp2];
-      tmp5 = arr.length !== tmp4[channelId].length;
+      tmp5 = arr.length !== dependencyMap[channelId].length;
     }
     return tmp5;
   },
   UPLOAD_CANCEL_REQUEST: function handleUploadCancel(arg0) {
-    closure_0 = undefined;
     closure_0 = tmp;
     if (null == dependencyMap2[arg0.file.id]) {
       return false;
@@ -203,7 +200,6 @@ const uploadStore = new UploadStore(dispatcherDefault, {
   },
   UPLOAD_ITEM_CANCEL_REQUEST: function handleUploadItemCancel(itemId) {
     itemId = itemId.itemId;
-    closure_1 = undefined;
     closure_1 = tmp;
     if (null == dependencyMap2[itemId.file.id]) {
       return false;
@@ -222,7 +218,7 @@ const uploadStore = new UploadStore(dispatcherDefault, {
       const items = file.items;
       let mapped;
       if (items != null) {
-        mapped = items.map((item) => {
+        mapped = items.map((item, index) => {
           item = item.item;
           let num = item.width;
           if (num == null) {
@@ -252,15 +248,14 @@ const uploadStore = new UploadStore(dispatcherDefault, {
         mapped = [];
       }
       closure_8[id] = mapped;
-      const tmp3 = closure_8;
     }
     if (null != dependencyMap[channelId]) {
-      tmp4[channelId] = arr3.map((id) => {
-        let tmp2 = id;
-        if (id.id === file.id) {
+      tmp4[channelId] = arr3.map((item, index) => {
+        let tmp2 = item;
+        if (item.id === file.id) {
           const obj = {};
-          const merged = Object.assign(id);
-          const merged1 = Object.assign(tmp);
+          const merged = Object.assign(item);
+          const merged1 = Object.assign(file);
           tmp2 = obj;
         }
         return tmp2;
@@ -281,6 +276,6 @@ const uploadStore = new UploadStore(dispatcherDefault, {
     closure_7[messageId.messageId] = messageId.file;
   }
 });
-const result = require("set").fileFinishedImporting("stores/UploadStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/UploadStore.tsx");
 
 export default uploadStore;

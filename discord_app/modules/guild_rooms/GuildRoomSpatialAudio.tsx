@@ -1,17 +1,16 @@
 // === Module 16588: computeLivingRoomWorldPoints ===
 
 // Module 16588 (computeLivingRoomWorldPoints)
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "resolveCreatingNotes" /* 9864 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import resolveCreatingNotes from "resolveCreatingNotes" /* 9864 */;
 import items from "items" /* 9867 */;
 
-const require = arg1;
+const require = fn;
 function computeLivingRoomWorldPoints(channelId) {
   ({ users, currentUserId } = channelId);
-  let position;
   let aspectRatio;
   const value = users.get(currentUserId);
-  position = undefined;
+  let position;
   if (value != null) {
     position = value.position;
   }
@@ -28,10 +27,10 @@ function computeLivingRoomWorldPoints(channelId) {
   }
   aspectRatio = table[background].aspectRatio;
   let items = [...users.values()];
-  const found = items.filter((userId) => userId.userId !== currentUserId);
-  return Object.fromEntries(found.map((position) => {
-    position = position.position;
-    const items = [position.userId, ];
+  const found = items.filter((item, index) => item.userId !== currentUserId);
+  return Object.fromEntries(found.map((item, index) => {
+    position = item.position;
+    const items = [item.userId, ];
     let point = position;
     if (position == null) {
       point = closure_1_7;
@@ -42,7 +41,7 @@ function computeLivingRoomWorldPoints(channelId) {
 }
 ({ GUILD_ROOM_BACKGROUND_CONFIG: c5, GUILD_ROOM_SPATIAL_AUDIO_MODE: closure_6 } = items);
 let closure_7 = { x: 50, y: 50 };
-const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomSpatialAudio.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_rooms/GuildRoomSpatialAudio.tsx");
 
 export { computeLivingRoomWorldPoints };
 export const livingRoomWorldPointToMediaEnginePoint = function livingRoomWorldPointToMediaEnginePoint(worldX) {
@@ -51,11 +50,10 @@ export const livingRoomWorldPointToMediaEnginePoint = function livingRoomWorldPo
 export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(channelId) {
   channelId = channelId.channelId;
   const guildId = channelId.guildId;
-  let stateFromStores;
   dependencyMap = undefined;
   let obj = channelId(589);
   const items = [closure_3];
-  stateFromStores = obj.useStateFromStores(items, () => id.getId());
+  const stateFromStores = obj.useStateFromStores(items, () => id.getId());
   let interactionsEnabled = stateFromStores(9882).useExperiment({ guildId, location: "SpatialAudioPanel" }).interactionsEnabled;
   if (interactionsEnabled) {
     interactionsEnabled = null != guildId;
@@ -67,17 +65,16 @@ export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(channe
   dependencyMap = tmp5;
   obj = { available: interactionsEnabled, worldPoints: null };
   const obj2 = stateFromStores(9882);
-  const tmp = channelId;
   const items1 = [closure_4];
   const items2 = [tmp5, channelId, stateFromStores];
   obj[1] = channelId(589).useStateFromStores(items1, () => {
     if (closure_2) {
       if (null != channelId) {
         const obj = { users: null, currentUserId: null, channelId: null };
-        obj[0] = closure_1_4.getRoomUsers(tmp);
+        obj[0] = closure_1_4.getRoomUsers(channelId);
         obj[1] = stateFromStores;
-        obj[2] = tmp;
-        closure_1_8(obj);
+        obj[2] = channelId;
+        computeLivingRoomWorldPoints(obj);
       }
       return {};
     }

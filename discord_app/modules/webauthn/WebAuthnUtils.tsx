@@ -1,9 +1,9 @@
 // === Module 5266: encodeUserIdForWebAuthn ===
 
 // Module 5266 (encodeUserIdForWebAuthn)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");
 
 export const encodeUserIdForWebAuthn = function encodeUserIdForWebAuthn(c1) {
   const uint8Array = new Uint8Array(16);

@@ -4,7 +4,7 @@
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = { code: "function RadioGroupActionComponentTsx1(){const{withSpring,hasValue,SUBTLE_SPRING}=this.__closure;return{maxHeight:withSpring(hasValue?60:0,SUBTLE_SPRING),marginTop:withSpring(hasValue?8:0,SUBTLE_SPRING),opacity:withSpring(hasValue?1:0,SUBTLE_SPRING)};}" };
@@ -17,7 +17,7 @@ const memoResult = importAllResult.memo((type) => {
   const items = [options];
   const memo = ref.useMemo(() => {
     let value;
-    const iter = options.find((arg0) => arg0.default);
+    const iter = options.find((item, index) => item.default);
     if (iter != null) {
       value = iter.value;
     }
@@ -38,11 +38,11 @@ const memoResult = importAllResult.memo((type) => {
   const memo1 = obj.useMemo(() => {
     type = undefined;
     if (state != null) {
-      type = iter.type;
+      type = state.type;
     }
     let value = null;
     if (type === type) {
-      value = iter.value;
+      value = state.value;
     }
     return value;
   }, items1);
@@ -53,14 +53,14 @@ const memoResult = importAllResult.memo((type) => {
     if (closure_7) {
       num = 60;
     }
-    obj = { maxHeight: obj.withSpring(num, tmp(tmp2[5]).SUBTLE_SPRING), marginTop: null, opacity: null };
-    let tmpResult = tmp(tmp2[4]);
+    obj = { maxHeight: obj.withSpring(num, type(required[5]).SUBTLE_SPRING), marginTop: null, opacity: null };
+    let tmpResult = type(required[4]);
     let num2 = 0;
     if (closure_7) {
       num2 = 8;
     }
     obj[1] = tmpResult.withSpring(num2, type(required[5]).SUBTLE_SPRING);
-    tmpResult = tmp(tmp2[4]);
+    tmpResult = type(required[4]);
     let num3 = 0;
     if (closure_7) {
       num3 = 1;
@@ -99,7 +99,7 @@ const memoResult = importAllResult.memo((type) => {
       }
     },
     groupRef: ref,
-    children: options.map((label) => state(type(required[7]).TableRadioRow, { label: label.label, subLabel: label.description, value: label.value }, label.value))
+    children: options.map((item, index) => state(type(required[7]).TableRadioRow, { label: item.label, subLabel: item.description, value: item.value }, item.value))
   };
   const children = [state(type(required[6]).TableRadioGroup, obj1), ];
   let tmp12Result = !required;
@@ -131,6 +131,6 @@ const memoResult = importAllResult.memo((type) => {
   children[1] = tmp12Result;
   return memo1(executeStateUpdate, { children });
 });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/RadioGroupActionComponent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/actions/RadioGroupActionComponent.tsx");
 
 export default memoResult;

@@ -1,14 +1,14 @@
 // === Module 15063: useSettingSearchResults ===
 
 // Module 15063 (useSettingSearchResults)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "zustandStore" /* 13993 */;
-import closure_6 from "zustandStore" /* 13994 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import zustandStore from "zustandStore" /* 13993 */;
+import zustandStore2 from "zustandStore" /* 13994 */;
 
-const require = arg1;
+const require = fn;
 let closure_7 = [];
-const result = require("set").fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
+const result = require("obj132").fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
@@ -26,8 +26,8 @@ export const useSettingSearchResults = function useSettingSearchResults() {
   memo1 = memo1.useMemo(() => callback(636)((arg0) => {
     let scoredSearchResults = closure_1_6.getField("blocklist");
     scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
-    const found = scoredSearchResults.filter((setting) => {
-      setting = setting.setting;
+    const found = scoredSearchResults.filter((item, index) => {
+      const setting = item.setting;
       const isBlockedResult = closure_1_1(closure_1_2[4]).isBlocked(setting, callback);
       let tmp3 = !isBlockedResult;
       if (!isBlockedResult) {
@@ -60,7 +60,7 @@ export const useSettingSearchResults = function useSettingSearchResults() {
     });
     return () => {
       callback();
-      const cancel = closure_1_4.cancel;
+      const cancel = memo1.cancel;
       if (cancel != null) {
         cancel();
       }

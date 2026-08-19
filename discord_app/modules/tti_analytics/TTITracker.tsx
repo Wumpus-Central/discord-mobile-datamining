@@ -1,13 +1,13 @@
 // === Module 9: serialize ===
 
 // Module 9 (serialize)
-import setAll from "set" /* 2 */;
+import obj132All from "obj132" /* 2 */;
 import isTracingDefault from "isTracing" /* 10 */;
 import DISCORD_EPOCH from "DISCORD_EPOCH" /* 11 */;
 import apply from "apply" /* 12 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
+require = fn;
 function serialize(arg0, arg1) {
   if (0 !== arg1) {
     if (null != arg1) {
@@ -33,7 +33,7 @@ class TTITimer {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     obj.emoji = global;
-    obj.name = arg1;
+    obj.name = fn;
     return obj;
   }
 }
@@ -66,7 +66,7 @@ prototype["recordStart"] = function recordStart() {
 };
 prototype["recordStart_"] = function recordStart_() {
   this.start_ = Date.now();
-  this.startNumImports = setAll.size();
+  this.startNumImports = obj132All.size();
   this.startImportTime = callback2();
 };
 prototype["recordEnd"] = function recordEnd() {
@@ -76,7 +76,6 @@ prototype["recordEnd"] = function recordEnd() {
       self.recordEnd_();
       const _HermesInternal = HermesInternal;
       isTracingDefault.mark(self.emoji, "Finish " + self.name, self.end_ - self.start_);
-      const obj2 = isTracingDefault;
     }
     loggerCallback();
   }
@@ -84,7 +83,7 @@ prototype["recordEnd"] = function recordEnd() {
 };
 prototype["recordEnd_"] = function recordEnd_() {
   this.end_ = Date.now();
-  this.endNumImports = setAll.size();
+  this.endNumImports = obj132All.size();
   this.endImportTime = callback2();
 };
 prototype["set"] = function set(start_) {
@@ -92,9 +91,8 @@ prototype["set"] = function set(start_) {
   if (0 === this.start_) {
     self.start_ = start_;
     self.end_ = start_ + arg1;
-    self.endNumImports = setAll.size();
+    self.endNumImports = obj132All.size();
     self.endImportTime = callback2();
-    const obj = setAll;
   }
   isTracingDefault.mark(self.emoji, self.name, arg1);
   loggerCallback();
@@ -143,7 +141,6 @@ prototype["measure"] = function measure(arg0) {
     return isTracingDefault.time(self.emoji, self.name, arg0);
   } else {
     self.recordStart_();
-    const obj = isTracingDefault;
     self.recordEnd_();
     loggerCallback();
     return isTracingDefault.time(self.emoji, self.name, arg0);
@@ -155,12 +152,12 @@ prototype["measureAsync"] = function measureAsync(closure_1_5) {
   return callback(function*() {
     closure_1 = tmp5;
     closure_0 = tmp2;
-    if (closure_1_1.start_ > 0) {
-      return v0(closure_1_4[1]).timeAsync(closure_1_1.emoji, closure_1_1.name, closure_1_0);
+    if (self.start_ > 0) {
+      return v0(closure_1_4[1]).timeAsync(self.emoji, self.name, closure_1_0);
     }
-    closure_1_1.recordStart_();
+    self.recordStart_();
     const obj2 = v0(closure_1_4[1]);
-    closure_0 = yield obj2.timeAsync(closure_1_1.emoji, closure_1_1.name, closure_1_0);
+    closure_0 = yield obj2.timeAsync(self.emoji, self.name, closure_1_0);
     closure_1.recordEnd_();
     closure_1_6();
     return closure_0;
@@ -172,15 +169,15 @@ prototype["measureAsyncWithoutNesting"] = function measureAsyncWithoutNesting(ar
   return callback(function*() {
     closure_1 = tmp5;
     closure_0 = tmp2;
-    if (closure_1_1.start_ > 0) {
+    if (self.start_ > 0) {
       const obj3 = v0(closure_1_4[1]);
-      return obj3.timeAsync(closure_1_1.emoji, closure_1_1.name, closure_1_0);
+      return obj3.timeAsync(self.emoji, self.name, closure_1_0);
     }
-    closure_1_1.recordStart_();
+    self.recordStart_();
     const _Date2 = Date;
     closure_0 = Date.now();
     const _HermesInternal2 = HermesInternal;
-    v0(closure_1_4[1]).mark(closure_1_1.emoji, "Start " + closure_1_1.name);
+    v0(closure_1_4[1]).mark(self.emoji, "Start " + self.name);
     closure_1 = yield closure_1_0();
     const _HermesInternal = HermesInternal;
     const _Date = Date;
@@ -203,7 +200,7 @@ class TTIEvent {
     }
     obj = Object.create(new.target.prototype);
     obj.emoji = global;
-    obj.name = arg1;
+    obj.name = fn;
     obj.onlyOnce = flag;
     obj.alwaysRecord = flag2;
     return obj;
@@ -230,16 +227,14 @@ prototype2["record"] = function record(timestamp) {
       loggerCallback();
     } else {
       isTracingDefault.mark(self.emoji, self.name);
-      const obj = isTracingDefault;
     }
   }
   loggerCallback();
 };
 prototype2["recordState_"] = function recordState_(timestamp) {
   this.time_ = timestamp;
-  this.numImports = setAll.size();
+  this.numImports = obj132All.size();
   this.importTime = callback2();
-  const obj = setAll;
   isTracingDefault.mark(this.emoji, this.name);
 };
 prototype2["hasData"] = function hasData() {
@@ -279,82 +274,81 @@ prototype3["record"] = function record() {
   }
 };
 const prototype4 = function TTITrackers() {
-  const tmp = TTITimer;
   if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let obj = Object.create(new.target.prototype);
-  obj = Object.create(tmp.prototype);
+  Object.create(new.target.prototype);
+  let obj = Object.create(TTITimer.prototype);
   obj.emoji = "\u2757";
   obj.name = "Load index.tsx";
   obj[0] = obj;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  obj1 = Object.create(tmp.prototype);
+  obj1 = Object.create(TTITimer.prototype);
   obj1.emoji = "\u{1F4BE}";
   obj1.name = "Load fast_connect native module";
   obj[1] = obj1;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj2 = Object.create(tmp.prototype);
+  const obj2 = Object.create(TTITimer.prototype);
   obj2.emoji = "\u{1F310}";
   obj2.name = "Fast Connect IDENTIFY";
   obj[2] = obj2;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj3 = Object.create(tmp.prototype);
+  const obj3 = Object.create(TTITimer.prototype);
   obj3.emoji = "\u{1F3C3}";
   obj3.name = "Load Imports";
   obj[3] = obj3;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj4 = Object.create(tmp.prototype);
+  const obj4 = Object.create(TTITimer.prototype);
   obj4.emoji = "\u{1F3C3}";
   obj4.name = "Initial Initialization";
   obj[4] = obj4;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj5 = Object.create(tmp.prototype);
+  const obj5 = Object.create(TTITimer.prototype);
   obj5.emoji = "\u{1F4BE}";
   obj5.name = "Load Storage";
   obj[5] = obj5;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj6 = Object.create(tmp.prototype);
+  const obj6 = Object.create(TTITimer.prototype);
   obj6.emoji = "\u{1F4BE}";
   obj6.name = "Parse Storage";
   obj[6] = obj6;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj7 = Object.create(tmp.prototype);
+  const obj7 = Object.create(TTITimer.prototype);
   obj7.emoji = "\u{1F4BE}";
   obj7.name = "Load Mini Cache";
   obj[7] = obj7;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj8 = Object.create(tmp.prototype);
+  const obj8 = Object.create(TTITimer.prototype);
   obj8.emoji = "\u{1F4BE}";
   obj8.name = "Fetch Guild Cache";
   obj[8] = obj8;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj9 = Object.create(tmp.prototype);
+  const obj9 = Object.create(TTITimer.prototype);
   obj9.emoji = "\u{1F4BE}";
   obj9.name = "Fetch Initial Guild Channels Cache";
   obj[9] = obj9;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj10 = Object.create(tmp.prototype);
+  const obj10 = Object.create(TTITimer.prototype);
   obj10.emoji = "\u{1F4BE}";
   obj10.name = "Load Cached Messages";
   obj[10] = obj10;
@@ -403,10 +397,10 @@ const prototype4 = function TTITrackers() {
   obj15.onlyOnce = true;
   obj15.alwaysRecord = false;
   obj[15] = obj15;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj16 = Object.create(tmp.prototype);
+  const obj16 = Object.create(TTITimer.prototype);
   obj16.emoji = "\u{1F3A8}";
   obj16.name = "RowGenerator.generate()";
   obj[16] = obj16;
@@ -446,129 +440,129 @@ const prototype4 = function TTITrackers() {
   obj20.onlyOnce = false;
   obj20.alwaysRecord = false;
   obj[20] = obj20;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj21 = Object.create(tmp.prototype);
+  const obj21 = Object.create(TTITimer.prototype);
   obj21.emoji = "\u{1F310}";
   obj21.name = "Initial Guild";
   obj[21] = obj21;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj22 = Object.create(tmp.prototype);
+  const obj22 = Object.create(TTITimer.prototype);
   obj22.emoji = "\u{1F4BE}";
   obj22.name = "Load Lazy Cache";
   obj[22] = obj22;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj23 = Object.create(tmp.prototype);
+  const obj23 = Object.create(TTITimer.prototype);
   obj23.emoji = "\u{1F4BE}";
   obj23.name = "Fetch Lazy Cache";
   obj[23] = obj23;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj24 = Object.create(tmp.prototype);
+  const obj24 = Object.create(TTITimer.prototype);
   obj24.emoji = "\u{1F4BE}";
   obj24.name = "Parse Lazy Cache";
   obj[24] = obj24;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj25 = Object.create(tmp.prototype);
+  const obj25 = Object.create(TTITimer.prototype);
   obj25.emoji = "\u{1F4BE}";
   obj25.name = "Fetch Stale Channels";
   obj[25] = obj25;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj26 = Object.create(tmp.prototype);
+  const obj26 = Object.create(TTITimer.prototype);
   obj26.emoji = "\u{1F4BE}";
   obj26.name = "Deserialize Cache";
   obj[26] = obj26;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj27 = Object.create(tmp.prototype);
+  const obj27 = Object.create(TTITimer.prototype);
   obj27.emoji = "\u{1F4BE}";
   obj27.name = "Dispatch Lazy Cache";
   obj[27] = obj27;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj28 = Object.create(tmp.prototype);
+  const obj28 = Object.create(TTITimer.prototype);
   obj28.emoji = "\u{1F310}";
   obj28.name = "Parse READY";
   obj[28] = obj28;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj29 = Object.create(tmp.prototype);
+  const obj29 = Object.create(TTITimer.prototype);
   obj29.emoji = "\u{1F310}";
   obj29.name = "READY";
   obj[29] = obj29;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj30 = Object.create(tmp.prototype);
+  const obj30 = Object.create(TTITimer.prototype);
   obj30.emoji = "\u{1F310}";
   obj30.name = "Hydrate READY";
   obj[30] = obj30;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj31 = Object.create(tmp.prototype);
+  const obj31 = Object.create(TTITimer.prototype);
   obj31.emoji = "\u{1F310}";
   obj31.name = "Dispatch READY";
   obj[31] = obj31;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj32 = Object.create(tmp.prototype);
+  const obj32 = Object.create(TTITimer.prototype);
   obj32.emoji = "\u{1F310}";
   obj32.name = "Parse READY Supplemental";
   obj[32] = obj32;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj33 = Object.create(tmp.prototype);
+  const obj33 = Object.create(TTITimer.prototype);
   obj33.emoji = "\u{1F310}";
   obj33.name = "READY Supplemental";
   obj[33] = obj33;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj34 = Object.create(tmp.prototype);
+  const obj34 = Object.create(TTITimer.prototype);
   obj34.emoji = "\u{1F310}";
   obj34.name = "Hydrate READY Supplemental";
   obj[34] = obj34;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj35 = Object.create(tmp.prototype);
+  const obj35 = Object.create(TTITimer.prototype);
   obj35.emoji = "\u{1F310}";
   obj35.name = "Dispatch READY Supplemental";
   obj[35] = obj35;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj36 = Object.create(tmp.prototype);
+  const obj36 = Object.create(TTITimer.prototype);
   obj36.emoji = "\u{1F310}";
   obj36.name = "Fetch messages";
   obj[36] = obj36;
-  if (typeof tmp !== "function") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj37 = Object.create(tmp.prototype);
+  const obj37 = Object.create(TTITimer.prototype);
   obj37.emoji = "\u{1F310}";
   obj37.name = "Dispatch messages";
   obj[37] = obj37;
   if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  obj = { polyfillsEnd: Object.create(tmp42.prototype), sentryEnd: null, appStateChangeStart: null, appStateChangeEnd: null, loadMiniCacheStart: null, loadStorageStart: null, loadStorageEnd: null };
+  obj = { polyfillsEnd: Object.create(TTIImportEvent.prototype), sentryEnd: null, appStateChangeStart: null, appStateChangeEnd: null, loadMiniCacheStart: null, loadStorageStart: null, loadStorageEnd: null };
   if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -687,22 +681,21 @@ prototype5["recordRender"] = function recordRender(length, closure_1_6) {
   const self = this;
   const renderMessages = this.renderMessages;
   renderMessages.record();
-  let tmp2 = closure_1_6;
-  if (!closure_1_6) {
+  let tmp2 = loggerCallback;
+  if (!loggerCallback) {
     tmp2 = length > 0;
   }
   if (tmp2) {
     const renderMessagesWithCache = self.renderMessagesWithCache;
     renderMessagesWithCache.record();
   }
-  if (closure_1_6) {
+  if (loggerCallback) {
     const renderLatestMessages = self.renderLatestMessages;
     renderLatestMessages.record();
   }
 };
 prototype5["recordMessageRender"] = function recordMessageRender(channelId, mapped, hasFetched, hasMoreAfter) {
-  let self = this;
-  self = this;
+  const self = this;
   const _default = DISCORD_EPOCH.default;
   const renderLatestMessages = this.renderLatestMessages;
   if (!renderLatestMessages.hasData()) {
@@ -730,11 +723,11 @@ prototype5["recordMessageRender"] = function recordMessageRender(channelId, mapp
               const sorted1 = mapped.sort(_default.compare);
               const _Math = Math;
               self.messageCacheAgeSeconds = Math.floor((_default.extractTimestamp(sorted1.reverse()[0]) - _default.extractTimestamp(sorted.reverse()[0])) / 1000);
-              const length = mapped.filter((arg0) => {
+              const length = mapped.filter((item, index) => {
                 const cachedMessageIds = self.cachedMessageIds;
                 let hasItem;
                 if (cachedMessageIds != null) {
-                  hasItem = cachedMessageIds.includes(arg0);
+                  hasItem = cachedMessageIds.includes(item);
                 }
                 return hasItem;
               }).length;
@@ -780,12 +773,11 @@ prototype5["getStartTime"] = function getStartTime(arg0) {
     start = self.loadIndex.start;
   }
 };
-prototype5["processNativeLogs"] = function processNativeLogs(nativeLogs, closure_2) {
+prototype5["processNativeLogs"] = function processNativeLogs(result, closure_2) {
   const startTime = this.getStartTime(closure_2);
-  const iter = nativeLogs[Symbol.iterator]();
+  const iter = result[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = nextResult;
     let label = nextResult.label;
   }
 };
@@ -802,13 +794,12 @@ prototype5["serializeWebPerfStartupMetrics"] = function serializeWebPerfStartupM
 prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
   const self = this;
   const startTime = this.getStartTime(c3);
-  const tmp2 = apply;
-  const found = apply(isTracingDefault.logGroups[0].logs).filter((log) => {
-    log = log.log;
+  const found = apply(isTracingDefault.logGroups[0].logs).filter((item, index) => {
+    const log = item.log;
     return log.startsWith("Require ");
   });
-  const mapped = found.map((delta) => {
-    let num = delta.delta;
+  const mapped = found.map((item, index) => {
+    let num = item.delta;
     if (num == null) {
       num = 0;
     }
@@ -1072,6 +1063,6 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
   return obj;
 };
 const tTITracker = new TTITracker();
-let result = require("set").fileFinishedImporting("modules/tti_analytics/TTITracker.tsx");
+let result = require("obj132").fileFinishedImporting("modules/tti_analytics/TTITracker.tsx");
 
 export default tTITracker;

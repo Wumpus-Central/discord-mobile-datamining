@@ -7,21 +7,18 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import preloadDefault from "preload" /* 5449 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
 import getApplicationCommandsIconSource from "getApplicationCommandsIconSource" /* 11392 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
-createCacheKey = { commandIcon: null, loadingIcon: null, loadingName: null };
-createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg };
+require = fn;
+const createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
-const obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 24, borderRadius: ThemesDefault.radii.md };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: 24, borderRadius: ThemesDefault.radii.md };
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandItem.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandItem.tsx");
 
 export default function ContextMenuCommandItem(item) {
   item = item.item;
@@ -35,12 +32,12 @@ export default function ContextMenuCommandItem(item) {
   items[1] = name;
   const memo = React.useMemo(() => {
     const type = item.type;
-    const intl = tmp2(tmp3[7]).intl;
+    const intl = item(dependencyMap[7]).intl;
     let name;
     if (section != null) {
       name = section.name;
     }
-    return intl.formatToPlainString(item(closure_1_2[7]).t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
+    return intl.formatToPlainString(item(dependencyMap[7]).t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
   }, items);
   let obj = item(11392);
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
@@ -50,7 +47,7 @@ export default function ContextMenuCommandItem(item) {
     obj = { style: null, source: null };
     obj[0] = tmp.commandIcon;
     obj[1] = applicationCommandsIconSource;
-    tmp8Result = tmp8(section(5449), obj);
+    tmp8Result = jsx(section(5449), { style: null, source: null });
   }
   obj[3] = tmp8Result;
   obj[4] = jsx(item(4320).SendMessageIcon, {});
@@ -61,10 +58,8 @@ export default function ContextMenuCommandItem(item) {
 export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingItem(arg0) {
   ({ start, end } = arg0);
   const tmp = callback();
-  let obj = { label: null, icon: null, start: null, end: null };
-  obj = { style: null };
   const items = [tmp.loadingName, ];
-  obj = { width: "" + applyDefault.random(60, 80) + "%" };
+  const obj = { width: "" + applyDefault.random(60, 80) + "%" };
   items[1] = obj;
   obj[0] = items;
   obj[0] = <View width={"" + applyDefault.random(60, 80) + "%"} />;
@@ -98,7 +93,7 @@ export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(sect
     obj = { style: null, source: null };
     obj[0] = tmp.commandIcon;
     obj[1] = applicationCommandsIconSource;
-    tmp4Result = tmp4(preloadDefault, obj);
+    tmp4Result = jsx(preloadDefault, { style: null, source: null });
   }
   obj[2] = tmp4Result;
   obj[3] = start;

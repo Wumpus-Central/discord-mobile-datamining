@@ -1,25 +1,24 @@
 // === Module 11986: useOrbCheckoutModalContextProvider ===
 
 // Module 11986 (useOrbCheckoutModalContextProvider)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import noop from "noop" /* 19 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "addSku" /* 4521 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import addSku from "addSku" /* 4521 */;
 import v1 from "v1" /* 514 */;
 
 function useOrbCheckoutModalContextProvider(value) {
   const skuId = value.skuId;
   const loadId = value.loadId;
   const onCheckoutSuccess = value.onCheckoutSuccess;
-  let stateFromStores;
   let sKUOrbPrice;
   let callback2;
   let redeemVirtualCurrency;
   ({ onSignFailure, order } = value);
   let obj = skuId(onCheckoutSuccess[5]);
   const items = [redeemVirtualCurrency];
-  stateFromStores = obj.useStateFromStores(items, () => loadId(onCheckoutSuccess[6]).canUseShopDiscounts(redeemVirtualCurrency.getCurrentUser()));
+  const stateFromStores = obj.useStateFromStores(items, () => loadId(onCheckoutSuccess[6]).canUseShopDiscounts(redeemVirtualCurrency.getCurrentUser()));
   obj1 = skuId(onCheckoutSuccess[5]);
   const items1 = [closure_7];
   const items2 = [skuId];
@@ -47,7 +46,7 @@ function useOrbCheckoutModalContextProvider(value) {
       obj[0] = tmp.amount;
       return obj;
     } else if (null != c5) {
-      obj = skuId(onCheckoutSuccess[10]);
+      skuId(onCheckoutSuccess[10]);
       obj = { product: null, hasShopDiscount: null };
       obj[0] = tmp2;
       obj[1] = stateFromStores;
@@ -68,7 +67,6 @@ function useOrbCheckoutModalContextProvider(value) {
     orbPriceAmount = tmp8.orbPriceAmount;
   }
   if (null == orbPriceAmount) {
-    obj = { tags: null };
     obj = { sku_id: null };
     obj[0] = skuId;
     obj[0] = obj;
@@ -89,7 +87,7 @@ function useOrbCheckoutModalContextProvider(value) {
     onRedeemVirtualCurrency: sKUOrbPrice((arg0) => {
       closure_0 = arg0;
       redeemVirtualCurrency(closure_0, loadId, (arg0) => {
-        if (closure_1_2 != null) {
+        if (onCheckoutSuccess != null) {
           const obj = { entitlements: null, skuId: null };
           obj[0] = arg0;
           obj[1] = callback;
@@ -112,7 +110,7 @@ obj[9] = function onRedeemVirtualCurrency() {
 
 };
 let closure_9 = createContext(obj);
-let result = set.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutModalContext.tsx");
+let result = obj132.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutModalContext.tsx");
 
 export { useOrbCheckoutModalContextProvider };
 export const OrbCheckoutModalContextProvider = function OrbCheckoutModalContextProvider(onCheckoutSuccess) {

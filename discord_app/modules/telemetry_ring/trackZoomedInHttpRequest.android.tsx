@@ -1,12 +1,12 @@
 // === Module 16498: trackZoomedInHttpRequest ===
 
 // Module 16498 (trackZoomedInHttpRequest)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import shouldRunDefault from "shouldRun" /* 13558 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx");
+const result = obj132.fileFinishedImporting("modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx");
 
 export default function trackZoomedInHttpRequest(arg0) {
   try {

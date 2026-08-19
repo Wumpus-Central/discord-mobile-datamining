@@ -2,29 +2,25 @@
 
 // Module 11557 (DiceRollBar)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { useDiceRollState } from "INITIAL_STATE" /* 11146 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { animatedContainer: { overflow: "hidden" }, container: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, gap: 12, borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createCacheKey = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, gap: 12, borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function DiceRollBarTsx1(){const{useReducedMotion,height,opacity,withTiming,ANIMATION_DURATION_MS,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:height.get(),opacity:opacity.get()};}return{height:withTiming(height.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING}),opacity:withTiming(opacity.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING})};}" };
 let closure_11 = { code: "function DiceRollBarTsx2(){const{rotation}=this.__closure;return{transform:[{rotate:rotation.get()+\"deg\"}]};}" };
-let result = require("set").fileFinishedImporting("modules/dice_roll/native/DiceRollBar.tsx");
+let result = require("obj132").fileFinishedImporting("modules/dice_roll/native/DiceRollBar.tsx");
 
 export default function DiceRollBar(channelId) {
   let stateFromStores;
-  let sharedValue;
   let sharedValue1;
-  let sharedValue2;
-  closure_4 = undefined;
   let flag;
   const tmp = callback3();
   const tmp2 = useDiceRollState(channelId.channelId);
@@ -32,11 +28,11 @@ export default function DiceRollBar(channelId) {
   let items = [flag];
   stateFromStores = obj.useStateFromStores(items, () => flag.useReducedMotion);
   obj1 = stateFromStores(sharedValue1[8]);
-  sharedValue = obj1.useSharedValue(0);
+  const sharedValue = obj1.useSharedValue(0);
   let obj2 = stateFromStores(sharedValue1[8]);
   sharedValue1 = obj2.useSharedValue(0);
   let obj3 = stateFromStores(sharedValue1[8]);
-  sharedValue2 = obj3.useSharedValue(0);
+  const sharedValue2 = obj3.useSharedValue(0);
   closure_4 = tmp9;
   flag = undefined;
   if (tmp2 != null) {
@@ -62,8 +58,8 @@ export default function DiceRollBar(channelId) {
   const effect1 = sharedValue2.useEffect(() => {
     if (flag) {
       if (!stateFromStores) {
-        let obj = stateFromStores(sharedValue1[8]);
-        obj = { duration: 800, easing: null };
+        stateFromStores(sharedValue1[8]);
+        const obj = { duration: 800, easing: null };
         obj[1] = stateFromStores(sharedValue1[8]).Easing.linear;
         const result = sharedValue2.set(obj.withRepeat(stateFromStores(sharedValue1[9]).withTiming(360, obj), -1, false));
         const obj2 = stateFromStores(sharedValue1[9]);
@@ -100,8 +96,7 @@ export default function DiceRollBar(channelId) {
   const animatedStyle = tmp3Result.useAnimatedStyle(fn);
   tmp3Result = tmp3(tmp4[8]);
   const fn2 = function p() {
-    let obj = { transform: null };
-    obj = { rotate: "" + sharedValue2.get() + "deg" };
+    const obj = { rotate: "" + sharedValue2.get() + "deg" };
     const items = [obj];
     obj[0] = items;
     return obj;

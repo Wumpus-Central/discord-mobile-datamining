@@ -1,7 +1,7 @@
 // === Module 13264: handleSetLocationMetadata ===
 
 // Module 13264 (handleSetLocationMetadata)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
@@ -26,6 +26,6 @@ LocationMetadataStore.prototype["getCountryCode"] = function getCountryCode() {
 };
 LocationMetadataStore.displayName = "LocationMetadataStore";
 const locationMetadataStore = new LocationMetadataStore(dispatcherDefault, { CONNECTION_OPEN: handleSetLocationMetadata, SET_LOCATION_METADATA: handleSetLocationMetadata });
-const result = set.fileFinishedImporting("modules/location_metadata/stores/LocationMetadataStore.tsx");
+const result = obj132.fileFinishedImporting("modules/location_metadata/stores/LocationMetadataStore.tsx");
 
 export default locationMetadataStore;

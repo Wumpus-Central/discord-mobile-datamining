@@ -2,22 +2,21 @@
 
 // Module 14552 (useUserRoleSubscriptionRelationship)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "computeRolesForGuild" /* 6728 */;
+import computeRolesForGuild from "computeRolesForGuild" /* 6728 */;
 import { UserGuildRoleSubscriptionRelationship as closure_3 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");
 
 export default function useUserRoleSubscriptionRelationship() {
   let items = [closure_2];
   return initialize.useStateFromStores(items, () => {
     const items = [closure_2];
     [obj] = items;
-    c1 = undefined;
     const guildIdsWithPurchasableRoles = obj.getGuildIdsWithPurchasableRoles();
     c1 = false;
-    const item = guildIdsWithPurchasableRoles.forEach((guildId) => {
-      if (userSubscriptionRoles.getUserSubscriptionRoles(guildId).size > 0) {
+    const item = guildIdsWithPurchasableRoles.forEach((item, index) => {
+      if (userSubscriptionRoles.getUserSubscriptionRoles(item).size > 0) {
         c1 = true;
       }
     });
@@ -38,11 +37,10 @@ export const getUserRoleSubscriptionRelationship = function getUserRoleSubscript
     tmp = items;
   }
   [obj] = tmp;
-  c1 = undefined;
   const guildIdsWithPurchasableRoles = obj.getGuildIdsWithPurchasableRoles();
   c1 = false;
-  const item = guildIdsWithPurchasableRoles.forEach((guildId) => {
-    if (userSubscriptionRoles.getUserSubscriptionRoles(guildId).size > 0) {
+  const item = guildIdsWithPurchasableRoles.forEach((item, index) => {
+    if (userSubscriptionRoles.getUserSubscriptionRoles(item).size > 0) {
       c1 = true;
     }
   });

@@ -2,22 +2,21 @@
 
 // Module 9725 (SecureFramesUserVerificationBottomSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
 import { AnalyticsLocations } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ AnalyticsSecureFramesUserVerification: c9, SECURE_FRAMES_PUBLIC_KEY_VERSION: c10, USER_VERIFIED_TOAST_KEY: unpackModuleId } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
-createCacheKey = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, marginBottom: 16 };
+const createCacheKey = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, marginBottom: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 48, width: 48 };
 createCacheKey[2] = { padding: 16, justifyContent: "center", alignItems: "center" };
@@ -25,47 +24,36 @@ createCacheKey[3] = { textAlign: "center", marginTop: 8, marginBottom: 40 };
 createCacheKey[4] = { marginTop: 40 };
 createCacheKey[5] = { marginTop: 16 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationBottomSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationBottomSheet.tsx");
 
 export default function SecureFramesUserVerificationBottomSheet(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
   const fingerprint = userId.fingerprint;
-  let callback;
-  let userKey;
-  let fingerprint2;
-  let isSecureFramesUIEnabled;
-  let isUserSecureFramesVerified;
-  let isOtherUserKeyPersistent;
-  let stateFromStores;
-  let stateFromStores1;
-  let isSecureFramesKeyInconsistent;
-  let memo;
-  let name;
   const tmp = callback2();
-  callback = tmp;
+  let callback = tmp;
   let obj = userId(fingerprint[10]);
   const secureFramesPairwiseFingerprint = obj.useSecureFramesPairwiseFingerprint({ userId });
-  userKey = secureFramesPairwiseFingerprint.userKey;
-  fingerprint2 = secureFramesPairwiseFingerprint.fingerprint;
+  const userKey = secureFramesPairwiseFingerprint.userKey;
+  const fingerprint2 = secureFramesPairwiseFingerprint.fingerprint;
   obj1 = userId(fingerprint[11]);
-  isSecureFramesUIEnabled = obj1.useIsSecureFramesUIEnabled({ channelId });
+  const isSecureFramesUIEnabled = obj1.useIsSecureFramesUIEnabled({ channelId });
   let obj2 = userId(fingerprint[12]);
-  isUserSecureFramesVerified = obj2.useIsUserSecureFramesVerified({ userId, channelId });
+  const isUserSecureFramesVerified = obj2.useIsUserSecureFramesVerified({ userId, channelId });
   let obj3 = userId(fingerprint[13]);
   const isPersistentSecureFramesFingerprint = obj3.useIsPersistentSecureFramesFingerprint({ userId });
-  isOtherUserKeyPersistent = isPersistentSecureFramesFingerprint.isOtherUserKeyPersistent;
+  const isOtherUserKeyPersistent = isPersistentSecureFramesFingerprint.isOtherUserKeyPersistent;
   let loading = isPersistentSecureFramesFingerprint.loading;
   let obj4 = userId(fingerprint[14]);
   const items = [isUserSecureFramesVerified];
-  stateFromStores = obj4.useStateFromStores(items, () => isUserSecureFramesVerified.isConnected());
+  const stateFromStores = obj4.useStateFromStores(items, () => isUserSecureFramesVerified.isConnected());
   let obj5 = userId(fingerprint[14]);
   const items1 = [isUserSecureFramesVerified];
-  stateFromStores1 = obj5.useStateFromStores(items1, () => isUserSecureFramesVerified.isUserConnected(userId));
+  const stateFromStores1 = obj5.useStateFromStores(items1, () => isUserSecureFramesVerified.isUserConnected(userId));
   let obj6 = userId(fingerprint[15]);
-  isSecureFramesKeyInconsistent = obj6.useIsSecureFramesKeyInconsistent({ userId });
+  const isSecureFramesKeyInconsistent = obj6.useIsSecureFramesKeyInconsistent({ userId });
   const items2 = [fingerprint, channelId, fingerprint2, stateFromStores, isSecureFramesKeyInconsistent, stateFromStores1, isSecureFramesUIEnabled, isUserSecureFramesVerified];
-  memo = userKey.useMemo(() => {
+  const memo = userKey.useMemo(() => {
     if (null != channelId) {
       if (stateFromStores) {
         if (!stateFromStores1) {
@@ -95,18 +83,18 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   const items4 = [isOtherUserKeyPersistent];
   const stateFromStores2 = obj7.useStateFromStores(items4, () => isOtherUserKeyPersistent.getUser(userId));
   let obj8 = channelId(fingerprint[17]);
-  name = obj8.useName(userId.guildId, channelId, stateFromStores2);
+  const name = obj8.useName(userId.guildId, channelId, stateFromStores2);
   const items5 = [memo, name];
   const items6 = [channelId, memo, userId];
   [tmp17, tmp18] = callback(userKey.useMemo(() => userId(fingerprint[18]).getUserVerifyStateText(memo, name), items5), 2);
   const effect1 = userKey.useEffect(() => {
     if (stateFromStores.OTHER_USER_ALREADY_VERIFIED !== memo) {
-      if (stateFromStores.MATCH !== tmp) {
-        let obj = userId(fingerprint[19]);
-        obj = { channelId: null, userId: null, reason: null, keyVersion: null };
+      if (stateFromStores.MATCH !== memo) {
+        userId(fingerprint[19]);
+        const obj = { channelId: null, userId: null, reason: null, keyVersion: null };
         obj[0] = channelId;
         obj[1] = userId;
-        obj[2] = tmp;
+        obj[2] = memo;
         obj[3] = stateFromStores1;
         const result = obj.trackE2EEUserVerificationFailed(obj);
       }
@@ -136,7 +124,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     }
     if (tmp2) {
       let obj = userId(fingerprint[18]);
-      obj.addVerification(userId, userKey, isOtherUserKeyPersistent, tmp, memo.DEEP_LINK);
+      obj.addVerification(userId, userKey, isOtherUserKeyPersistent, channelId, memo.DEEP_LINK);
       channelId(fingerprint[22]).hideActionSheet();
       const obj2 = channelId(fingerprint[22]);
       obj = { key: null, iconColor: "text-feedback-positive", IconComponent: null, content: null };
@@ -150,7 +138,6 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
       const obj3 = channelId(fingerprint[23]);
     }
   }, items8);
-  obj = { startExpanded: true, header: null, children: null };
   obj = { title: null, leading: name(userId(fingerprint[28]).ActionSheetCloseButton, { onPress: callback }) };
   obj[1] = name(userId(fingerprint[27]).BottomSheetTitleHeader, obj);
   obj1 = { style: tmp.content, children: null };
@@ -169,7 +156,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     obj5[0] = tmp.helpMessage;
     obj5[1] = userId;
     obj5[2] = userKey;
-    items9[3] = tmp23(channelId(tmp3[30]), obj5);
+    items9[3] = tmp23(tmp14(tmp3[30]), obj5);
     obj6 = { spacing: 12, style: null, children: null };
     obj6[1] = tmp.buttons;
     obj7 = { variant: "primary", onPress: null, text: null, disabled: null };
@@ -187,10 +174,12 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     obj8[2] = intl2.string(tmp2(tmp3[25]).t["ETE/oC"]);
     items10[1] = tmp23(tmp2(tmp3[32]).Button, obj8);
     obj6[2] = items10;
-    items9[4] = tmp24(tmp2(tmp3[31]).Stack, obj6);
+    items9[4] = callback(tmp2(tmp3[31]).Stack, obj6);
     obj1[1] = items9;
-    obj[2] = tmp24(tmp25, obj1);
+    obj[2] = callback(tmp25, obj1);
     return tmp23(userId(fingerprint[26]).BottomSheet, obj);
   }
   memo1 = tmp23(fingerprint2, {});
+  tmp14 = channelId;
+  const tmp16 = callback(userKey.useMemo(() => userId(fingerprint[18]).getUserVerifyStateText(memo, name), items5), 2);
 };

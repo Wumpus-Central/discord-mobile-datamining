@@ -3,10 +3,10 @@
 // Module 13251 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "recomputeAffinities" /* 5407 */;
-import closure_1 from "hasConsented" /* 5258 */;
-import closure_2 from "markAllUserIdListsStale" /* 4030 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import recomputeAffinities from "recomputeAffinities" /* 5407 */;
+import hasConsented from "hasConsented" /* 5258 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
 let closure_4 = [];
 let c5 = false;
@@ -32,19 +32,19 @@ prototype["getGroups"] = function getGroups() {
 };
 prototype["getGroup"] = function getGroup(arg0) {
   closure_0 = arg0;
-  let found = arr.find((id) => id.id === closure_0);
+  let found = arr.find((item, index) => item.id === closure_0);
   if (found == null) {
     found = null;
   }
   return found;
 };
 prototype["getGroupIds"] = function getGroupIds() {
-  return arr.map((id) => id.id);
+  return arr.map((item, index) => item.id);
 };
 prototype["getUserGroups"] = function getUserGroups(arg0) {
   closure_0 = arg0;
-  return arr.filter((userIds) => {
-    userIds = userIds.userIds;
+  return arr.filter((item, index) => {
+    const userIds = item.userIds;
     return userIds.includes(closure_0);
   });
 };
@@ -76,7 +76,7 @@ const friendGroupsStore = new FriendGroupsStore(dispatcherDefault, {
   },
   CREATE_FRIEND_GROUP: function handleCreateFriendGroup(groupId) {
     groupId = groupId.groupId;
-    const someResult = arr.some((id) => id.id === groupId);
+    const someResult = arr.some((item, index) => item.id === groupId);
     let flag = !someResult;
     if (!someResult) {
       const obj = { id: null, name: null, userIds: null };
@@ -90,7 +90,7 @@ const friendGroupsStore = new FriendGroupsStore(dispatcherDefault, {
   },
   UPDATE_FRIEND_GROUP: function handleUpdateFriendGroup(groupId) {
     groupId = groupId.groupId;
-    const findIndexResult = arr.findIndex((id) => id.id === groupId);
+    const findIndexResult = arr.findIndex((item, index) => item.id === groupId);
     let flag = -1 !== findIndexResult;
     if (flag) {
       const obj = {};
@@ -103,19 +103,18 @@ const friendGroupsStore = new FriendGroupsStore(dispatcherDefault, {
   },
   DELETE_FRIEND_GROUP: function handleDeleteFriendGroup(groupId) {
     groupId = groupId.groupId;
-    found = found.filter((id) => id.id !== groupId);
+    found = found.filter((item, index) => item.id !== groupId);
     return found.length !== found.length;
   },
   REORDER_FRIEND_GROUPS: function handleReorderFriendGroups(arg0) {
     let items = [];
-    const map = new Map(items.map((id) => {
-      items = [id.id, id];
+    const map = new Map(items.map((item, index) => {
+      items = [item.id, item];
       return items;
     }));
     while (tmp !== undefined) {
       let value = map.get(tmp2);
       if (null != value) {
-        let tmp5 = value;
         let arr = items.push(tmp4);
       }
       continue;
@@ -129,13 +128,13 @@ const friendGroupsStore = new FriendGroupsStore(dispatcherDefault, {
   ADD_USERS_TO_GROUP: function handleAddUsersToGroup(arg0) {
     ({ groupId: closure_0, userIds } = arg0);
     let set;
-    const findIndexResult = arr.findIndex((id) => id.id === closure_0);
+    const findIndexResult = arr.findIndex((item, index) => item.id === closure_0);
     if (-1 === findIndexResult) {
       return false;
     } else {
       const _Set = Set;
       set = new Set(tmp11.userIds);
-      const found = userIds.filter((arg0) => !set.has(arg0));
+      const found = userIds.filter((item, index) => !set.has(item));
       let flag = 0 !== found.length;
       if (flag) {
         const obj = {};
@@ -152,14 +151,14 @@ const friendGroupsStore = new FriendGroupsStore(dispatcherDefault, {
   REMOVE_USERS_FROM_GROUP: function handleRemoveUsersFromGroup(arg0) {
     ({ groupId: closure_0, userIds } = arg0);
     let set;
-    const findIndexResult = arr.findIndex((id) => id.id === closure_0);
+    const findIndexResult = arr.findIndex((item, index) => item.id === closure_0);
     if (-1 === findIndexResult) {
       return false;
     } else {
       const _Set = Set;
       set = new Set(userIds);
       userIds = tmp3.userIds;
-      const found = userIds.filter((arg0) => !set.has(arg0));
+      const found = userIds.filter((item, index) => !set.has(item));
       let flag = found.length !== tmp3.userIds.length;
       if (flag) {
         const obj = {};
@@ -172,6 +171,6 @@ const friendGroupsStore = new FriendGroupsStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/friend_groups/FriendGroupsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/friend_groups/FriendGroupsStore.tsx");
 
 export default friendGroupsStore;

@@ -1,24 +1,22 @@
 // === Module 8689: usePipDimensions ===
 
 // Module 8689 (usePipDimensions)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let c4 = 0.5625;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
 
 export default function usePipDimensions(channelId) {
   let forcedOrientation = channelId.forcedOrientation;
   if (forcedOrientation === undefined) {
     forcedOrientation = null;
   }
-  let isViewingActivity;
   let width;
-  let height;
-  isViewingActivity = forcedOrientation(width[1]).useIsViewingActivity({ channelId: channelId.channelId });
+  const isViewingActivity = forcedOrientation(width[1]).useIsViewingActivity({ channelId: channelId.channelId });
   const size = isViewingActivity(width[2])();
   width = size.width;
-  height = size.height;
+  let height = size.height;
   const items = [height, width, forcedOrientation, isViewingActivity];
   return height.useMemo(() => {
     let tmp3 = width > height;

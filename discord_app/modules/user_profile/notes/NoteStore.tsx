@@ -1,7 +1,7 @@
 // === Module 12160: getNote ===
 
 // Module 12160 (getNote)
-import set2 from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import identity from "identity" /* 1911 */;
 import items from "items" /* 1914 */;
 import isValueEqual from "isValueEqual" /* 1431 */;
@@ -46,7 +46,7 @@ const noteStore = new NoteStore({
     const result = set.set(userId.userId, callback(Note, { loading: true, note: null }));
   }
 }, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
-let result = set2.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
+let result = obj132.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
 
 export default noteStore;
 export const NoteRecordTypeTag = "Note";

@@ -1,13 +1,13 @@
 // === Module 11805: JoinRequestRejectionReasonActionSheet ===
 
 // Module 11805 (JoinRequestRejectionReasonActionSheet)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 class JoinRequestRejectionReasonActionSheet {
   constructor(arg0) {
     ({ joinRequest, onError } = global);
@@ -65,11 +65,11 @@ class JoinRequestRejectionReasonActionSheet {
               closure_0 = tmp4;
               v0(true);
               c3 = 2;
-              const obj8 = closure_1_1(closure_1_2[6]);
+              const obj8 = userId(guildId[6]);
               c4 = 3;
               v0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj8.updateGuildJoinRequest(closure_1_2, closure_1_1, c3, closure_1_0(closure_1_2[7]).GuildJoinRequestApplicationStatuses.REJECTED, c4);
+              obj1[0] = obj8.updateGuildJoinRequest(guildId, userId, c3, onError(guildId[7]).GuildJoinRequestApplicationStatuses.REJECTED, c4);
               return obj1;
             }
           } else if (1 === tmp8) {
@@ -79,7 +79,7 @@ class JoinRequestRejectionReasonActionSheet {
           } else {
             if (2 === tmp8) {
               c3 = 1;
-              closure_1_0();
+              onError();
               c3 = 0;
               v0(false);
               v0 = 3;
@@ -88,16 +88,16 @@ class JoinRequestRejectionReasonActionSheet {
               throw arg1;
             } else if (arg0 !== 2) {
               const obj2 = { key: "JOIN_REQUEST_REJECT", content: null, icon: null };
-              const intl = closure_1_0(closure_1_2[9]).intl;
-              obj2[1] = intl.string(closure_1_0(closure_1_2[9]).t["TQY/Rd"]);
+              const intl = onError(guildId[9]).intl;
+              obj2[1] = intl.string(onError(guildId[9]).t["TQY/Rd"]);
               obj2[2] = function icon() {
                 return callback(tmp4(tmp24[10]).CircleXIcon, { color: tmp42(tmp24[11]).colors.BACKGROUND_FEEDBACK_CRITICAL, secondaryColor: tmp42(tmp24[11]).colors.ICON_FEEDBACK_CRITICAL });
               };
-              closure_1_1(closure_1_2[8]).open(obj2);
-              const obj5 = closure_1_1(closure_1_2[8]);
-              closure_1_1(closure_1_2[12]).hideAllActionSheets();
+              userId(guildId[8]).open(obj2);
+              const obj5 = userId(guildId[8]);
+              userId(guildId[12]).hideAllActionSheets();
               c3 = 1;
-              const obj7 = closure_1_1(closure_1_2[12]);
+              const obj7 = userId(guildId[12]);
             }
             c3 = 0;
             v0(false);
@@ -153,7 +153,7 @@ let c5 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
 const memoResult = importAllResult.memo(JoinRequestRejectionReasonActionSheet);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestRejectionReasonActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestRejectionReasonActionSheet.tsx");
 
 export default memoResult;
 export { JoinRequestRejectionReasonActionSheet };

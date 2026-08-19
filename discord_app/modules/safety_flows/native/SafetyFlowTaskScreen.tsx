@@ -6,15 +6,17 @@ import Stack from "Stack" /* 4733 */;
 import Text from "Text" /* 4734 */;
 import ModalScreen from "ModalScreen" /* 5440 */;
 import ModalContent from "ModalContent" /* 5445 */;
+import ModalFooter from "ModalFooter" /* 11114 */;
+import ModalActionButton from "ModalActionButton" /* 11964 */;
 import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17091 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ header: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
 
 export default function SafetyFlowTaskScreen(action) {
   ({ ImageComponent, subtitle, subtitleColor } = action);
@@ -43,16 +45,16 @@ export default function SafetyFlowTaskScreen(action) {
     obj[1] = subtitleColor;
     obj[2] = tmp2.header;
     obj[3] = subtitle;
-    tmp7Result = tmp7(tmp4(4734).Text, obj);
+    tmp7Result = callback(Text.Text, obj);
   }
   obj = { children: null };
   items[2] = tmp7Result;
-  const items1 = [closure_4(Stack.Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
+  const items1 = [callback(Stack.Stack, { align: "center", justify: "center", spacing: 8, children: items }), children];
   obj[0] = items1;
-  children = [closure_4(ModalContent.ModalContent, obj), ];
+  children = [callback(ModalContent.ModalContent, obj), ];
   if (undefined === footer) {
     if (withLogout) {
-      withLogout = tmp7(LogOutDisclaimerDefault, {});
+      withLogout = callback(LogOutDisclaimerDefault, {});
     }
     const items3 = [withLogout, ];
     tmp7Result = null != action;
@@ -61,13 +63,13 @@ export default function SafetyFlowTaskScreen(action) {
       obj1[1] = action;
       obj1[2] = onAction;
       obj1[3] = submitting;
-      tmp7Result = tmp7(tmp4(11964).ModalActionButton, obj1);
+      tmp7Result = callback(ModalActionButton.ModalActionButton, obj1);
     }
     const obj2 = { children: null };
     items3[1] = tmp7Result;
     obj2[0] = items3;
-    footer = tmp3(tmp4(11114).ModalFooter, obj2);
+    footer = callback(ModalFooter.ModalFooter, obj2);
   }
   children[1] = footer;
-  return closure_4(ModalScreen.ModalScreen, { children });
+  return callback(ModalScreen.ModalScreen, { children });
 };

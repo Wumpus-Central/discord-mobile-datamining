@@ -11,7 +11,7 @@ import Input from "Input" /* 8072 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_4 = createCacheKey.createStyles(() => {
   let str = arg0;
@@ -33,11 +33,10 @@ let closure_4 = createCacheKey.createStyles(() => {
   input.minWidth = 48;
   return { input, centeredContainerStyle: { alignItems: "center" } };
 });
-const result = require("set").fileFinishedImporting("design/components/TextInput/native/GhostInput.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/TextInput/native/GhostInput.native.tsx");
 
 export const GhostInput = function GhostInput(size) {
-  let obj = useInputStyles;
-  obj = { size: size.size };
+  let obj = { size: size.size };
   const inputStyles = obj.useInputStyles(obj);
   const tmp4 = callback(size.size, size.status);
   const isCentered = size.isCentered;

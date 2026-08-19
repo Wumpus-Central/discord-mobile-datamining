@@ -1,7 +1,7 @@
 // === Module 7383: getState ===
 
 // Module 7383 (getState)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
@@ -23,8 +23,8 @@ prototype["getLastActiveTime"] = function getLastActiveTime() {
   return c2;
 };
 AppStateStore.displayName = "AppStateStore";
-require("expandEventProperties").then((addExtraAnalyticsDecorator) => {
-  const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator((arg0) => {
+require("expandEventProperties").then((result) => {
+  result = result.addExtraAnalyticsDecorator((arg0) => {
     arg0.client_app_state = closure_1;
   });
 });
@@ -41,19 +41,6 @@ const appStateStore = new AppStateStore(dispatcherDefault, {
     }
   }
 });
-const obj = {
-  APP_STATE_UPDATE: function handleAppStateUpdate(state) {
-    if (state === state.state) {
-      return false;
-    } else {
-      state = state.state;
-      if (state === AppStates.ACTIVE) {
-        const _Date = Date;
-        closure_2 = Date.now();
-      }
-    }
-  }
-};
-let result = set.fileFinishedImporting("stores/native/AppStateStore.tsx");
+let result = obj132.fileFinishedImporting("stores/native/AppStateStore.tsx");
 
 export default appStateStore;

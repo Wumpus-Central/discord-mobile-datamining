@@ -4,10 +4,10 @@
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 
-require = arg1;
+require = fn;
 const hideSuppressWarning = "hideSuppressWarning";
 let c7 = false;
 let c8 = true;
@@ -55,20 +55,20 @@ const permissionSpeakStore = new PermissionSpeakStore(dispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((arg0, sessionId) => {
-      let flag = arg0;
-      if (closure_2 === sessionId.sessionId) {
-        if (suppress !== sessionId.suppress) {
-          suppress = sessionId.suppress;
+    return voiceStates.reduce((acc, item, index) => {
+      let flag = acc;
+      if (closure_2 === item.sessionId) {
+        if (suppress !== item.suppress) {
+          suppress = item.suppress;
           c8 = !suppress;
         }
-        if (channelId !== sessionId.channelId) {
-          channelId = sessionId.channelId;
+        if (channelId !== item.channelId) {
+          channelId = item.channelId;
           c8 = !suppress;
         }
         let tmp4 = closure_9;
         if (!closure_9) {
-          tmp4 = null == sessionId.channelId;
+          tmp4 = null == item.channelId;
         }
         flag = true;
         if (tmp4) {
@@ -88,6 +88,6 @@ const permissionSpeakStore = new PermissionSpeakStore(dispatcherDefault, {
     }
   }
 });
-let result = require("set").fileFinishedImporting("stores/PermissionSpeakStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/PermissionSpeakStore.tsx");
 
 export default permissionSpeakStore;

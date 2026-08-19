@@ -1,12 +1,12 @@
 // === Module 8855: useGuildProfile ===
 
 // Module 8855 (useGuildProfile)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateStart" /* 8854 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
+import handleUpdateStart from "handleUpdateStart" /* 8854 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfile.tsx");
 
 export const useGuildProfile = function useGuildProfile(guildId) {
   const _require = guildId;

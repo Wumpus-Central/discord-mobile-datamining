@@ -5,20 +5,18 @@ import batchUpdates from "batchUpdates" /* 705 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import areParticipantStatesEqualDefault from "areParticipantStatesEqual" /* 8673 */;
 import useSelectedParticipantDefault from "useSelectedParticipant" /* 8674 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "participantFromServer" /* 1390 */;
+import noop from "noop" /* 19 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
 import { OrientationLockState } from "items3" /* 4481 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
 import keys from "keys" /* 644 */;
 import importDefaultResult from "apply" /* 12 */;
 
-require = arg1;
+require = fn;
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = BOX_MODE_ACTIONSHEET_WIDTH);
 const timeout = new require("start").Timeout();
-let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
-obj = {};
-obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
+let obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
 obj[4] = obj;
@@ -27,18 +25,18 @@ let obj2 = keys.create(() => closure_9);
 const obj1 = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
 const throttleResult = importDefaultResult.throttle(() => {
   const pipFocus = obj2.getState().pipFocus;
-  pipFocus(705).batchUpdates(() => closure_1_10.setState({ pipFocus: !pipFocus }));
+  pipFocus(705).batchUpdates(() => obj2.setState({ pipFocus: !pipFocus }));
 }, 300);
-let result = require("set").fileFinishedImporting("modules/video_calls/native/ChannelCallStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/video_calls/native/ChannelCallStore.tsx");
 
 export const focusTimeout = timeout;
 export const setFocus = function setFocus(arg0) {
   const _require = arg0;
-  _require(705).batchUpdates(() => closure_1_10.setState({ focus: closure_0 }));
+  _require(705).batchUpdates(() => obj2.setState({ focus: closure_0 }));
 };
 export const toggleFocus = function toggleFocus() {
   const focus = obj2.getState().focus;
-  focus(705).batchUpdates(() => closure_1_10.setState({ focus: !focus, pipFocus: false }));
+  focus(705).batchUpdates(() => obj2.setState({ focus: !focus, pipFocus: false }));
 };
 export const resetFocusTimer = function resetFocusTimer() {
   timeout.stop();
@@ -54,7 +52,6 @@ export const resetFocus = function resetFocus() {
     });
   } else {
     batchUpdates.batchUpdates(() => state.setState({ focus: true }));
-    const obj = batchUpdates;
   }
 };
 export const clearFocusTimer = function clearFocusTimer() {
@@ -64,10 +61,11 @@ export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embedded
   const _require = embeddedActivityLocationChannelId;
   importDefault = CLOSED;
   if (!tmp) {
-    dispatcherDefault.wait(() => CLOSED(closure_1_2[10]).updateChatOpen(closure_0, CLOSED === closure_1_5.OPEN));
-    const obj = dispatcherDefault;
+    dispatcherDefault.wait(() => CLOSED(dependencyMap[10]).updateChatOpen(closure_0, CLOSED === VoiceChatDrawerState.OPEN));
   }
-  _require(705).batchUpdates(() => closure_1_10.setState({ voiceChatDrawerState: closure_1 }));
+  _require(705).batchUpdates(() => obj2.setState({ voiceChatDrawerState: closure_1 }));
+  obj2 = _require(705);
+  tmp = CLOSED !== VoiceChatDrawerState.OPEN && CLOSED !== VoiceChatDrawerState.CLOSED;
 };
 export const togglePipFocus = throttleResult;
 export const useIsVoiceChatFocused = function useIsVoiceChatFocused() {
@@ -96,7 +94,6 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
     applicationId = currentEmbeddedActivity.applicationId;
   }
   obj = _require(8675);
-  const tmp7 = _require;
   const tmp8 = applicationId;
   const items = [tmp8];
   const items1 = [applicationId];
@@ -104,11 +101,11 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
     if (null != applicationId) {
       let UNLOCKED2 = applicationId.getOrientationLockStateForApp(tmp);
       if (UNLOCKED2 == null) {
-        UNLOCKED2 = closure_1_6.UNLOCKED;
+        UNLOCKED2 = OrientationLockState.UNLOCKED;
       }
       let UNLOCKED = UNLOCKED2;
     } else {
-      UNLOCKED = closure_1_6.UNLOCKED;
+      UNLOCKED = OrientationLockState.UNLOCKED;
     }
     return UNLOCKED;
   }, items1);
@@ -118,16 +115,16 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
     if (!closure_2) {
       if (!closure_3) {
         if (null != callback2) {
-          if (tmp2.type === closure_1_7.ACTIVITY) {
-            if (tmp2.applicationId === applicationId) {
+          if (callback2.type === ParticipantTypes.ACTIVITY) {
+            if (callback2.applicationId === applicationId) {
               if (callback2(isGuildStageVoiceResult[16])()) {
-                if (closure_1_6.UNLOCKED === stateFromStores) {
+                if (OrientationLockState.UNLOCKED === stateFromStores) {
                   callback(isGuildStageVoiceResult[6]).unlockOrientation({ unlockAfterRotatingToPreviousLock: true });
                   const obj3 = callback(isGuildStageVoiceResult[6]);
-                } else if (tmp14.PORTRAIT === tmp13) {
+                } else if (OrientationLockState.PORTRAIT === stateFromStores) {
                   callback(isGuildStageVoiceResult[6]).lockOrientation("PORTRAIT", true);
                   obj2 = callback(isGuildStageVoiceResult[6]);
-                } else if (tmp14.LANDSCAPE === tmp13) {
+                } else if (OrientationLockState.LANDSCAPE === stateFromStores) {
                   callback(isGuildStageVoiceResult[6]).lockOrientation("LANDSCAPE", true);
                   const obj6 = callback(isGuildStageVoiceResult[6]);
                 }
@@ -146,6 +143,7 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
     callback(isGuildStageVoiceResult[6]).unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
     const obj4 = callback(isGuildStageVoiceResult[6]);
     const result1 = callback(isGuildStageVoiceResult[6]).lockOrientationForiOS("PORTRAIT");
+    const obj5 = callback(isGuildStageVoiceResult[6]);
   }, items2);
 };
 export const resetChannelCallStore = function resetChannelCallStore() {

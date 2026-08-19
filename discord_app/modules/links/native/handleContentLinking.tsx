@@ -1,10 +1,10 @@
 // === Module 10782: _handleContentLinking ===
 
 // Module 10782 (_handleContentLinking)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Routes } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _handleContentLinking() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -174,7 +174,7 @@ function _handleContentLinking() {
 }
 require("processCallbacks").addPostConnectionCallback;
 let c6 = null;
-const result = require("set").fileFinishedImporting("modules/links/native/handleContentLinking.tsx");
+const result = require("obj132").fileFinishedImporting("modules/links/native/handleContentLinking.tsx");
 
 export default function handleContentLinking() {
   const self = this;

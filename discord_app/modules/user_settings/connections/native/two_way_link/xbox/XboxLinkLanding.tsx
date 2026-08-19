@@ -2,16 +2,16 @@
 
 // Module 9753 (XboxLinkLanding)
 import combinedDefault from "combined" /* 1993 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9752 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ HelpdeskArticles: c5, PlatformTypes: closure_6 } = ME);
 let closure_8 = createCacheKey.createStyles({ image: { width: 230, height: 160 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkLanding.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkLanding.tsx");
 
 export default function XboxLinkLanding() {
   let obj = navigation(1500);
@@ -19,7 +19,6 @@ export default function XboxLinkLanding() {
   const tmp = callback();
   const articleURL = combinedDefault.getArticleURL(constants.XBOX_CONNECTION);
   let intl = navigation(1236).intl;
-  const obj2 = combinedDefault;
   let items = [navigation];
   const memo = React.useMemo(() => {
     let obj = { label: null, icon: null };
@@ -45,7 +44,7 @@ export default function XboxLinkLanding() {
     return items;
   }, []);
   callback = React.useCallback(() => {
-    navigation.push(closure_1_4.PRE_CONNECT);
+    navigation.push(XboxLinkModalScenes.PRE_CONNECT);
   }, items);
   const memo1 = React.useMemo(() => ({ uri: callback(9754) }), []);
   obj = { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };

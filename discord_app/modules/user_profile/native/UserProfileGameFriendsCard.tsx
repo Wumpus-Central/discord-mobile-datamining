@@ -7,20 +7,18 @@ import DividerDefault from "Divider" /* 7185 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 let closure_4 = createCacheKey.createStyles({ card: { flexDirection: "column" } });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendsCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendsCard.tsx");
 
 export default function UserProfileGameFriendsCard(arg0) {
-  let found;
   importDefault = undefined;
   dependencyMap = undefined;
   jsx = undefined;
   ({ applicationIds, style } = arg0);
   const tmp = callback();
-  const tmp2 = importDefault;
-  found = useGetOrFetchApplicationsDefault(applicationIds).filter((arg0) => null != arg0);
+  const found = useGetOrFetchApplicationsDefault(applicationIds).filter((item, index) => null != item);
   if (0 === found.length) {
     return null;
   } else {
@@ -49,8 +47,8 @@ export default function UserProfileGameFriendsCard(arg0) {
       jsx = found.slice(0, -1);
       const intl4 = found(1236).intl;
       obj = { applications: null, applicationNameLast: null };
-      obj[0] = function applications(arg0) {
-        return lib.map((application) => closure_1_3(closure_1_1(closure_1_2[5]), { application, useComma: true, textVariant: closure_1, iconSize: 16 }, application.id));
+      obj[0] = function applications(closure_2) {
+        return lib.map((item, index) => closure_1_3(closure_1_1(closure_1_2[5]), { application: item, useComma: true, textVariant: closure_1, iconSize: 16 }, item.id));
       };
       obj[1] = function applicationNameLast() {
         return lib(textmdnormal(11799), { application: dependencyMap, textVariant: textmdnormal, iconSize: 16 });

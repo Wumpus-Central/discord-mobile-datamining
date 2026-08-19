@@ -4,11 +4,11 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 3079 */;
 import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { Routes } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx");
 
 export default function useFavoritesGuildHeaderAction() {
   let obj = useFavoritesAccess;

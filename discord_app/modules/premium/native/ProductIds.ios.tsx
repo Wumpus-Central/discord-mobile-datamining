@@ -1,7 +1,7 @@
 // === Module 7386: SubscriptionPlans ===
 
 // Module 7386 (SubscriptionPlans)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import AppleProductIds from "AppleProductIds" /* 7387 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
@@ -10,7 +10,6 @@ let obj = { PREMIUM_MONTH_TIER_1: "premium_month_tier_1.1", PREMIUM_YEAR_TIER_1:
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID, PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID, PREMIUM_TIER_2_REFERRAL_TRIAL_ID, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID, PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID } = GuildFeatures);
 const frozen = Object.freeze(obj);
 const items = [AppleProductIds.AppleProductIds.GENERIC_SUBSCRIPTION, AppleProductIds.AppleProductIds.GENERIC_CONSUMABLE];
-obj = { [SubscriptionPlans.PREMIUM_MONTH_TIER_0]: frozen.PREMIUM_TIER_0_MONTHLY, [SubscriptionPlans.PREMIUM_MONTH_TIER_1]: frozen.PREMIUM_TIER_1_MONTHLY, [SubscriptionPlans.PREMIUM_MONTH_TIER_2]: frozen.PREMIUM_TIER_2_MONTHLY, [SubscriptionPlans.PREMIUM_MONTH_GUILD]: frozen.PREMIUM_GUILD_1_MONTHLY, [SubscriptionPlans.PREMIUM_YEAR_TIER_0]: frozen.PREMIUM_TIER_0_YEARLY, [SubscriptionPlans.PREMIUM_YEAR_TIER_1]: frozen.PREMIUM_TIER_1_YEARLY, [SubscriptionPlans.PREMIUM_YEAR_TIER_2]: frozen.PREMIUM_TIER_2_YEARLY };
 obj = { productId: frozen.PREMIUM_MONTH_TIER_1, interval: SubscriptionIntervalTypes.MONTH, numPremiumGuild: 0, premiumTier: PremiumTypes.TIER_1, basePlanId: SubscriptionPlans.PREMIUM_MONTH_TIER_1, additionalPlans: [], isDeprecated: true };
 const items1 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
 const items2 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
@@ -31,7 +30,7 @@ const items16 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
 const items17 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
 const items18 = [{ quantity: 2, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
 const frozen1 = Object.freeze(obj);
-const result = set.fileFinishedImporting("modules/premium/native/ProductIds.ios.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/native/ProductIds.ios.tsx");
 
 export const ProductIds = frozen;
 export const GenericProductIds = items;
@@ -45,15 +44,15 @@ export const BOGO_OFFER_ID = "premium-tier-2-monthly-bogo";
 export const getProductIdForGift = function getProductIdForGift(arg0) {
   if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === arg0) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_0;
-  } else if (tmp.PREMIUM_YEAR_TIER_0 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_0;
-  } else if (tmp.PREMIUM_MONTH_TIER_1 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 === arg0) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_1;
-  } else if (tmp.PREMIUM_YEAR_TIER_1 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 === arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_1;
-  } else if (tmp.PREMIUM_MONTH_TIER_2 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 === arg0) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_2;
-  } else if (tmp.PREMIUM_YEAR_TIER_2 === arg0) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_2;
   } else {
     const _Error = Error;
@@ -64,15 +63,15 @@ export const getProductIdForGift = function getProductIdForGift(arg0) {
 export const getPlanIdForGift = function getPlanIdForGift(arg0) {
   if (frozen.PREMIUM_GIFT_MONTH_TIER_0 === arg0) {
     return SubscriptionPlans.PREMIUM_MONTH_TIER_0;
-  } else if (tmp.PREMIUM_GIFT_YEAR_TIER_0 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_YEAR_TIER_0 === arg0) {
     return SubscriptionPlans.PREMIUM_YEAR_TIER_0;
-  } else if (tmp.PREMIUM_GIFT_MONTH_TIER_1 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_MONTH_TIER_1 === arg0) {
     return SubscriptionPlans.PREMIUM_MONTH_TIER_1;
-  } else if (tmp.PREMIUM_GIFT_YEAR_TIER_1 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_YEAR_TIER_1 === arg0) {
     return SubscriptionPlans.PREMIUM_YEAR_TIER_1;
-  } else if (tmp.PREMIUM_GIFT_MONTH_TIER_2 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_MONTH_TIER_2 === arg0) {
     return SubscriptionPlans.PREMIUM_MONTH_TIER_2;
-  } else if (tmp.PREMIUM_GIFT_YEAR_TIER_2 === arg0) {
+  } else if (frozen.PREMIUM_GIFT_YEAR_TIER_2 === arg0) {
     return SubscriptionPlans.PREMIUM_YEAR_TIER_2;
   } else {
     const _Error = Error;

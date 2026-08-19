@@ -1,10 +1,10 @@
 // === Module 5398: getAll ===
 
 // Module 5398 (getAll)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import obj132 from "obj132" /* 2 */;
 
-let set = importDefault;
+let obj132 = importDefault;
 class GuildsRequiringDeletedIdsSync {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -60,7 +60,7 @@ prototype["getAll"] = function getAll() {
             const result = closure_1_0(table[1]).guildsRequiringDeletedIdsSync();
             if (null == result) {
               const _Set2 = Set;
-              set = new Set();
+              const set = new Set();
               c2 = 3;
               obj1 = { value: null, done: true };
               obj1[0] = set;
@@ -85,7 +85,7 @@ prototype["getAll"] = function getAll() {
         } else {
           closure_0 = arg1;
           const _Set = Set;
-          const set1 = new Set(closure_0.map((id) => id.id));
+          const set1 = new Set(closure_0.map((item, index) => item.id));
           c2 = 3;
           obj = { value: null, done: true };
           obj[0] = set1;
@@ -100,28 +100,28 @@ prototype["getAll"] = function getAll() {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(guilds, database) {
   guilds = guilds.guilds;
-  const found = guilds.filter((unableToSyncDeletes) => unableToSyncDeletes.unableToSyncDeletes);
-  const mapped = found.map((id) => ({ id: id.id }));
+  const found = guilds.filter((item, index) => item.unableToSyncDeletes);
+  const mapped = found.map((item, index) => ({ id: item.id }));
   if (mapped.length > 0) {
-    const result = set(1955).guildsRequiringDeletedIdsSyncTransaction(database);
+    const result = obj132(1955).guildsRequiringDeletedIdsSyncTransaction(database);
     result.putAll(mapped);
-    const obj = set(1955);
+    const obj = obj132(1955);
   }
 };
 prototype["handleBackgroundSync"] = function handleBackgroundSync(guilds, database) {
   guilds = guilds.guilds;
-  const found = guilds.filter((data_mode) => "partial" === data_mode.data_mode && data_mode.unable_to_sync_deletes);
-  const mapped = found.map((id) => ({ id: id.id }));
+  const found = guilds.filter((item, index) => "partial" === item.data_mode && item.unable_to_sync_deletes);
+  const mapped = found.map((item, index) => ({ id: item.id }));
   if (mapped.length > 0) {
-    const result = set(1955).guildsRequiringDeletedIdsSyncTransaction(database);
+    const result = obj132(1955).guildsRequiringDeletedIdsSyncTransaction(database);
     result.putAll(mapped);
-    const obj = set(1955);
+    const obj = obj132(1955);
   }
 };
 prototype["handleGuildCreate"] = function handleGuildCreate(guild, database) {
   guild = guild.guild;
   if (guild.unableToSyncDeletes) {
-    let obj = set(1955);
+    let obj = obj132(1955);
     const result = obj.guildsRequiringDeletedIdsSyncTransaction(database);
     obj = { id: null };
     obj[0] = guild.id;
@@ -129,14 +129,14 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild, database) {
   }
 };
 prototype["handleDeletedEntityIds"] = function handleDeletedEntityIds(guild_id, database) {
-  const result = set(1955).guildsRequiringDeletedIdsSyncTransaction(database);
+  const result = obj132(1955).guildsRequiringDeletedIdsSyncTransaction(database);
   result.delete(guild_id.guild_id);
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {
 
 };
-set = Object.create(GuildsRequiringDeletedIdsSync.prototype);
-set.actions = {
+obj132 = Object.create(GuildsRequiringDeletedIdsSync.prototype);
+obj132.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -150,6 +150,6 @@ set.actions = {
     return obj.handleDeletedEntityIds(arg0, arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/GuildsRequiringDeletedIdsSync.tsx");
+let result = obj132.fileFinishedImporting("modules/app_database/modules/GuildsRequiringDeletedIdsSync.tsx");
 
-export default set;
+export default obj132;

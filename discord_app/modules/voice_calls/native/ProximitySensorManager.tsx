@@ -1,24 +1,24 @@
 // === Module 16688: handleChange ===
 
 // Module 16688 (handleChange)
-import set2 from "set" /* 500 */;
+import obj1322 from "obj132" /* 500 */;
 import initializeDefault from "initialize" /* 5038 */;
 import RouteTypes from "RouteTypes" /* 9649 */;
 import enforcingDefault from "enforcing" /* 16689 */;
-import closure_2 from "participantFromServer" /* 1390 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "handleAudioRouteChanged" /* 9648 */;
-import set from "set" /* 500 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import reset from "reset" /* 4652 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import handleAudioRouteChanged from "handleAudioRouteChanged" /* 9648 */;
+import obj132 from "obj132" /* 500 */;
 
-require = arg1;
+require = fn;
 function handleChange() {
   currentRouteType = currentRouteType.getCurrentRouteType();
   const tmp3 = null != currentEmbeddedActivity.getCurrentEmbeddedActivity();
   const isConnectedResult = connected.isConnected();
   let tmp8 = currentRouteType === RouteTypes.RouteTypes.RECEIVER && isConnectedResult;
   if (tmp8) {
-    let isIOSResult = set2.isIOS();
+    let isIOSResult = obj1322.isIOS();
     if (!isIOSResult) {
       let tmp10 = !tmp3;
       if (!tmp3) {
@@ -27,11 +27,12 @@ function handleChange() {
       isIOSResult = tmp10;
     }
     tmp8 = isIOSResult;
-    const tmp6Result = set2;
+    const tmp6Result = obj1322;
   }
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
+  tmp4 = allActiveStreams.getAllActiveStreams().length > 0;
 }
-if (set.isIOS()) {
+if (obj132.isIOS()) {
   let ProximitySensorManager = require("get ActivityIndicator").NativeModules.ProximitySensorManager;
 } else {
   ProximitySensorManager = enforcingDefault;
@@ -46,6 +47,6 @@ let prototype = function ProximitySensorManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = set.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
+let result = obj132.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
 
 export default prototype;

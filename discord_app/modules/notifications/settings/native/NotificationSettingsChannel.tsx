@@ -3,19 +3,18 @@
 // Module 10089 (NotificationSettingsChannel)
 import ThemesDefault from "Themes" /* 712 */;
 import computeChannelNameDefault from "computeChannelName" /* 4984 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { screenContainer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16 };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16 };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannel.tsx");
+let result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannel.tsx");
 
 export default function NotificationSettingsChannel(channel) {
   const _require = channel;
@@ -27,11 +26,10 @@ export default function NotificationSettingsChannel(channel) {
   obj1 = _require(1500);
   const React = obj1.useNavigation();
   const layoutEffect = React.useLayoutEffect(() => {
-    let obj = options;
-    obj = {
+    let obj = {
       title: "" + closure_1 + " (" + dependencyMap + ")",
       headerTitle() {
-        return closure_1_6(closure_1_0(closure_1_2[10]).NavigatorHeader, { title: closure_1, subtitle: closure_2 });
+        return closure_1_6(channel(closure_1_2[10]).NavigatorHeader, { title: closure_1, subtitle: closure_2 });
       }
     };
     options.setOptions(obj);
@@ -92,5 +90,5 @@ export default function NotificationSettingsChannel(channel) {
   }
   items3[5] = tmp11Result;
   obj[1] = items3;
-  return closure_7(_require(8083).Form, obj);
+  return callback(_require(8083).Form, obj);
 };

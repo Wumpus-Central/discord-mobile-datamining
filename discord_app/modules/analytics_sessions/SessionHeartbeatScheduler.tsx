@@ -4,22 +4,22 @@
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import isForegrounded2 from "isForegrounded" /* 5055 */;
 import isActiveUserRoute2 from "isActiveUserRoute" /* 5056 */;
 import result2 from "result" /* 5063 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
 import importDefaultResult from "fetchFingerprint" /* 1218 */;
-import closure_6 from "checkIdleAFK" /* 4974 */;
+import checkIdleAFK from "checkIdleAFK" /* 4974 */;
 import importDefaultResult1 from "createRTCConnection" /* 4539 */;
 import ME from "ME" /* 676 */;
 import isForegrounded from "isForegrounded" /* 5055 */;
 import isActiveUserRoute from "isActiveUserRoute" /* 5056 */;
 
-require = arg1;
+require = fn;
 function trackHeartbeat() {
   const self = this;
   const apply = _trackHeartbeat.apply;
@@ -156,8 +156,7 @@ function isActive() {
   return items.length > 0;
 }
 function scheduleHeartbeatTracking() {
-  let obj = _modDef1208;
-  obj = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` };
+  let obj = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` };
   obj.addBreadcrumb(obj);
   const items = [];
   if (tmp4) {
@@ -227,6 +226,7 @@ function scheduleHeartbeatTracking() {
     obj2[2] = items1;
     const result = socket.handleActiveStateChange(obj2);
   }
+  tmp4 = null != closure_24 && closure_23;
 }
 function validateClientSession(version) {
   let tmp = null;
@@ -234,11 +234,10 @@ function validateClientSession(version) {
     let tmp4 = version;
     if (version.version !== result2.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(5063).CLIENT_SESSION_STORAGE_VERSION);
+      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + result2.CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
     }
     tmp = tmp4;
-    tmp2 = require;
   }
   return tmp;
 }
@@ -376,7 +375,6 @@ function handleAppStateUpdate(state) {
 function handleFluxInitialized() {
   const state = importDefaultResult1.getState();
   closure_22 = isForegrounded2.isForegrounded();
-  const obj = isForegrounded2;
   closure_23 = isActiveUserRoute2.isActiveUserRoute();
   handleAuthenticationChange();
 }
@@ -577,8 +575,8 @@ function _getSession() {
 }
 let c5 = importDefaultResult;
 ({ AnalyticEvents: closure_8, AppStates: c9, RTCConnectionStates: c10 } = ME);
-let closure_11 = 15 * setDefault.Millis.MINUTE;
-const SECOND = setDefault.Millis.SECOND;
+let closure_11 = 15 * obj132Default.Millis.MINUTE;
+const SECOND = obj132Default.Millis.SECOND;
 const LAST_CLIENT_HEARTBEAT_SESSION = "LAST_CLIENT_HEARTBEAT_SESSION";
 const user = "user";
 let closure_15 = new timestampDefault("SessionHeartbeatScheduler");
@@ -592,7 +590,7 @@ let closure_22 = isForegrounded.isForegrounded();
 let closure_23 = isActiveUserRoute.isActiveUserRoute();
 let token = importDefaultResult.getToken();
 const tmp3 = new timestampDefault("SessionHeartbeatScheduler");
-let result = require("set").fileFinishedImporting("modules/analytics_sessions/SessionHeartbeatScheduler.tsx");
+let result = require("obj132").fileFinishedImporting("modules/analytics_sessions/SessionHeartbeatScheduler.tsx");
 
 export const initSessionHeartbeatScheduler = function initSessionHeartbeatScheduler() {
   let obj = _modDef1208;
@@ -600,12 +598,8 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
   importDefaultResult1.addChangeListener(handleRTCStateChange);
   importDefaultResult.addChangeListener(handleAuthenticationChange);
   const subscription = dispatcherDefault.subscribe("WINDOW_FOCUS", handleWindowFocus);
-  let obj2 = dispatcherDefault;
-  const tmp = importDefault;
   const subscription1 = dispatcherDefault.subscribe("APP_STATE_UPDATE", handleAppStateUpdate);
-  const obj3 = dispatcherDefault;
   const subscription2 = dispatcherDefault.subscribe("CONNECTION_OPEN", forceDispatchSessionIdUpdate);
-  const obj4 = dispatcherDefault;
   let result = isActiveUserRoute2.subscribeToLocationChanges(handleLocationChange);
   scheduleHeartbeatTracking();
   if (null == obj) {
@@ -637,9 +631,9 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     let tmp7 = null;
     if (null != value) {
       let tmp8 = value;
-      if (value.version !== tmp2(5063).CLIENT_SESSION_STORAGE_VERSION) {
+      if (value.version !== result2.CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(5063).CLIENT_SESSION_STORAGE_VERSION);
+        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + result2.CLIENT_SESSION_STORAGE_VERSION);
         tmp8 = null;
       }
       tmp7 = tmp8;

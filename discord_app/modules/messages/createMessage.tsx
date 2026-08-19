@@ -3,15 +3,15 @@
 // Module 7500 (createMessage)
 import _modDef38 from "module_38" /* 38 */;
 import snowflakeSequence from "snowflakeSequence" /* 7501 */;
-import closure_3 from "processMessage" /* 5013 */;
+import processMessage from "processMessage" /* 5013 */;
 import { ReferencedMessageState } from "processMessage" /* 5013 */;
-import closure_5 from "createdAt" /* 1930 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import createdAt from "createdAt" /* 1930 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ MessageStates: error, MessageTypes: closure_8, LOCAL_BOT_ID: c9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/createMessage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/createMessage.tsx");
 
 export default function createMessage(tts) {
   let flag = tts.tts;
@@ -53,7 +53,6 @@ export default function createMessage(tts) {
   _modDef38(null != tmp8, "createMessage: author cannot be undefined");
   if (nonce == null) {
     nonce = snowflakeSequence.createNonce();
-    const obj3 = snowflakeSequence;
   }
   obj = { id: nonce, type: DEFAULT, content, channel_id: channelId, author: tmp8, attachments: [], embeds: [], pinned: false, mentions: items, mention_channels: [], mention_roles: [], mention_everyone: false, timestamp: new Date().toISOString(), state: null, tts: null, message_reference: null, message_snapshots: null, flags: null, nonce: null, poll: null, shared_client_theme: null, changelog_id: null, gifting_prompt: null, boosting_prompt: null, media_mention: null };
   if (state == null) {
@@ -83,7 +82,6 @@ export const createBotMessage = function createBotMessage(arg0) {
     let obj = snowflakeSequence;
     messageId = obj.createNonce();
   }
-  obj = { id: messageId, type: constants2.DEFAULT, flags: constants3.EPHEMERAL, content, channel_id: channelId, author: obj, attachments: [], embeds: null, pinned: false, mentions: null, mention_channels: null, mention_roles: null, mention_everyone: false, timestamp: null, state: null, tts: false, loggingName: null };
   obj = { id: closure_9, username: "Clyde", discriminator: closure_10, avatar: "clyde", bot: true };
   if (embeds == null) {
     embeds = [];

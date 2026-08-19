@@ -1,9 +1,9 @@
 // === Module 1953: isActivityParticipantValidGuildMember ===
 
 // Module 1953 (isActivityParticipantValidGuildMember)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/isActivityParticipantValidGuildMember.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/isActivityParticipantValidGuildMember.tsx");
 
 export default function isActivityParticipantValidGuildMember(member) {
   let tmp = null != member.member && null != member.member.joined_at;

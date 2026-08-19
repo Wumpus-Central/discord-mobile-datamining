@@ -5,19 +5,19 @@ import ThemesDefault from "Themes" /* 712 */;
 import ManaContext from "ManaContext" /* 4104 */;
 import getProductNameAndTypeFromSku from "getProductNameAndTypeFromSku" /* 9178 */;
 import getProductPurchaseState from "getProductPurchaseState" /* 9243 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { ShopCtaEnum } from "items" /* 678 */;
 import { ThemeTypes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
 import { Easing } from "module_4115" /* 4115 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 class WishlistButtonBase {
   constructor(arg0) {
     isWishlisted = global.isWishlisted;
@@ -87,7 +87,7 @@ class WishlistButtonBase {
     items1[2] = sharedValue;
     callback = obj3.useCallback(() => {
       if (disabled) {
-        obj = onPress(busy[17]);
+        onPress(busy[17]);
         obj = { key: "WISHLIST_DISABLED", content: null };
         const intl = isWishlisted(busy[18]).intl;
         obj[1] = intl.string(isWishlisted(busy[18]).t["50TX9k"]);
@@ -131,18 +131,18 @@ class WishlistButtonBase {
         let result = sharedValue.set(0);
         const _requestAnimationFrame = requestAnimationFrame;
         closure_0 = requestAnimationFrame(() => {
-          obj = callback(closure_1_2[19]);
+          callback(busy[19]);
           const fn = function t(arg0) {
             if (arg0) {
               closure_1_0(closure_1_2[9]).runOnJS(closure_12)(false);
               obj = closure_1_0(closure_1_2[9]);
             }
           };
-          obj = { runOnJS: callback(closure_1_2[9]).runOnJS, setIsClickAnimating: closure_12 };
+          obj = { runOnJS: callback(busy[9]).runOnJS, setIsClickAnimating: closure_12 };
           fn.__closure = obj;
           fn.__workletHash = 13061953734403;
           fn.__initData = closure_1_18;
-          const result = closure_14.set(obj.withTiming(1, closure_1_14, "animate-always", fn));
+          const result = closure_14.set(obj.withTiming(1, sharedValue, "animate-always", fn));
         });
         return () => cancelAnimationFrame(closure_0);
       }
@@ -244,7 +244,7 @@ class WishlistButtonBase {
             const items = [closure_6.button, closure_8, , , , ];
             let midnight = closure_7;
             if (closure_7) {
-              midnight = tmp.midnight;
+              midnight = closure_6.midnight;
             }
             items[2] = midnight;
             if (pressed) {
@@ -255,7 +255,7 @@ class WishlistButtonBase {
             }
             items[3] = pressed;
             if (disabled) {
-              disabled = tmp.disabled;
+              disabled = closure_6.disabled;
             }
             items[4] = disabled;
             items[5] = closure_4;
@@ -361,7 +361,7 @@ class WishlistButton {
     items3 = [];
     items3[0] = stringResult;
     callback1 = closure_5.useCallback(() => {
-      obj = onPress(onTrackPress[17]);
+      onPress(onTrackPress[17]);
       obj = { key: "WISHLIST_ERROR", content: c5 };
       obj.open(obj);
     }, items3);
@@ -406,11 +406,9 @@ let closure_17 = createCacheKey.createStyles((arg0) => {
   obj[1] = obj;
   obj1 = { backgroundColor: ManaContext.setColorOpacity("white", 0.62) };
   obj[2] = obj1;
-  const obj6 = ManaContext;
   obj[3] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
   obj3 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
   obj[4] = obj3;
-  const obj2 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
   obj[5] = { borderColor: ThemesDefault.colors.BORDER_STRONG };
   obj[6] = { opacity: 0.5 };
   obj[7] = { position: "relative", alignItems: "center", justifyContent: "center" };
@@ -421,7 +419,7 @@ let closure_18 = { code: "function WishlistButtonTsx1(done){const{runOnJS,setIsC
 let closure_19 = { code: "function WishlistButtonTsx2(){const{styles,withSpring,showFilled,SUBTLE_SPRING}=this.__closure;return{...styles.animationFill,opacity:withSpring(showFilled?0:1,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(showFilled?0.9:1,SUBTLE_SPRING,'animate-always')}]};}" };
 let closure_20 = { code: "function WishlistButtonTsx3(){const{animationFillProgress,styles,withSpring,showFilled,SUBTLE_SPRING,interpolate,Extrapolation}=this.__closure;const progress=animationFillProgress.get();return{...styles.animationFill,opacity:withSpring(showFilled?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:interpolate(progress,[0,0.625,1],[0,1.35,1],Extrapolation.CLAMP)}]};}" };
 let closure_21 = { code: "function WishlistButtonTsx4(){const{animationFillProgress,styles,showFilled,interpolate,Extrapolation}=this.__closure;const progress=animationFillProgress.get();return{...styles.animationFill,opacity:showFilled?interpolate(progress,[0,0.7],[1,0],Extrapolation.CLAMP):0,transform:[{scale:interpolate(progress,[0,0.625,1],[0,1.35,1],Extrapolation.CLAMP)}]};}" };
-let result = require("set").fileFinishedImporting("modules/collectibles/native/WishlistButton.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/native/WishlistButton.tsx");
 
 export default function CollectiblesWishlistButton(selectedProduct) {
   selectedProduct = selectedProduct.selectedProduct;

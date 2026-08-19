@@ -1,27 +1,26 @@
 // === Module 10253: getAutocompleteOptions ===
 
 // Module 10253 (getAutocompleteOptions)
-import applyDefault from "apply" /* 12 */;
 import _executeCommandDefault from "_executeCommand" /* 10255 */;
-import closure_3 from "handleInit" /* 7526 */;
-import closure_4 from "handleInit" /* 7527 */;
-import closure_5 from "set" /* 6899 */;
-import closure_6 from "loadSavedGuildStickers" /* 6769 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import handleInit from "handleInit" /* 7526 */;
+import handleInit2 from "handleInit" /* 7527 */;
+import set from "set" /* 6899 */;
+import loadSavedGuildStickers from "loadSavedGuildStickers" /* 6769 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 import regExp from "regExp" /* 6810 */;
 import { AutocompleteTypes } from "AutocompleteTypes" /* 10254 */;
-import set from "set" /* 1925 */;
+import importDefaultResult from "apply" /* 12 */;
 
-const require = arg1;
+const require = fn;
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: unpackModuleId } = ME);
 ({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = regExp);
-({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = set);
+({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = require("set"));
 let c20 = false;
-let closure_21 = applyDefault.debounce(_executeCommandDefault, require("TRUE_OPTION_NAME").AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
-let result = set.fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
+let closure_21 = importDefaultResult.debounce(_executeCommandDefault, require("TRUE_OPTION_NAME").AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
+let result = require("obj132").fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
 
 export const getAutocompleteOptions = function getAutocompleteOptions(channel, arg1, setting) {
   closure_0 = channel;
@@ -33,126 +32,9 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
   if (setting === undefined) {
     flag2 = true;
   }
+  let items = [closure_8, closure_5];
+  let items1 = [closure_5];
   let obj = {
-    stores: items,
-    queryResults(query, canMentionEveryone) {
-      let obj = flag(flag2[14]);
-      obj = { query, channel: _private, canMentionEveryone: null, canMentionHere: null, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: null, includeNonMentionableRoles: null, request: null };
-      canMentionEveryone = undefined;
-      if (canMentionEveryone != null) {
-        canMentionEveryone = canMentionEveryone.canMentionEveryone;
-      }
-      obj[2] = canMentionEveryone;
-      let canMentionHere;
-      if (canMentionEveryone != null) {
-        canMentionHere = canMentionEveryone.canMentionHere;
-      }
-      obj[3] = canMentionHere;
-      let canMentionUsers;
-      if (canMentionEveryone != null) {
-        canMentionUsers = canMentionEveryone.canMentionUsers;
-      }
-      obj[4] = canMentionUsers;
-      let canMentionRoles;
-      if (canMentionEveryone != null) {
-        canMentionRoles = canMentionEveryone.canMentionRoles;
-      }
-      obj[5] = canMentionRoles;
-      let prop;
-      if (canMentionEveryone != null) {
-        prop = canMentionEveryone.canMentionAnyGuildUser;
-      }
-      obj[6] = prop;
-      let prop1;
-      if (canMentionEveryone != null) {
-        prop1 = canMentionEveryone.canMentionNonMentionableRoles;
-      }
-      obj[7] = prop1;
-      obj[8] = arg2;
-      ({ users, globals, roles } = obj.queryMentionResults(obj));
-      const GameMentionsMobileExperiment = _private(tmp2[15]).GameMentionsMobileExperiment;
-      const config = GameMentionsMobileExperiment.getConfig({ location: "mentions autocomplete" });
-      let enabled = config.enabled;
-      if (enabled) {
-        const IncludeGameMentionsInAutocomplete = tmp10(tmp2[16]).IncludeGameMentionsInAutocomplete;
-        enabled = IncludeGameMentionsInAutocomplete.getSetting();
-      }
-      let canMentionGames;
-      if (canMentionEveryone != null) {
-        canMentionGames = canMentionEveryone.canMentionGames;
-      }
-      if (true === canMentionGames) {
-        if (enabled) {
-          if (config.combineMentionAutocomplete) {
-            if (query.length > 0) {
-              let prop2;
-              if (canMentionEveryone != null) {
-                prop2 = canMentionEveryone.isActiveApplicationCommand;
-              }
-              if (!prop2) {
-                let result = tmp10(tmp2[17]).queryGamesAutocomplete(query);
-                if (result == null) {
-                  result = [];
-                }
-                const substr = result.slice(0, 1);
-                let mapped = substr.map((game) => ({ type: constants.GAME_MENTION, game }));
-                const tmp10Result = tmp10(tmp2[17]);
-              }
-              const items = [];
-              let arraySpreadResult = HermesBuiltin.arraySpread(users.map((arg0) => {
-                const merged = Object.assign(arg0);
-                return { type: constants.USER };
-              }), 0);
-              arraySpreadResult = HermesBuiltin.arraySpread(globals.map((arg0) => {
-                const merged = Object.assign(arg0);
-                return { type: constants.GLOBAL };
-              }), arraySpreadResult);
-              HermesBuiltin.arraySpread(mapped, HermesBuiltin.arraySpread(roles.map((arg0) => {
-                const merged = Object.assign(arg0);
-                return { type: constants.ROLE };
-              }), arraySpreadResult));
-              const tmpResult = flag(tmp2[12]);
-              return flag(tmp2[12])(items).value();
-            }
-          }
-        }
-      }
-      mapped = [];
-    },
-    matches(arg0, arg1) {
-      return flag(flag2[14]).matchSentinel(arg0, arg1, closure_12);
-    }
-  };
-  items = [closure_8, closure_5];
-  obj = {
-    stores: items1,
-    queryResults(query) {
-      const GameMentionsMobileExperiment = _private(flag2[15]).GameMentionsMobileExperiment;
-      const config = GameMentionsMobileExperiment.getConfig({ location: "game_mentions autocomplete" });
-      if (config.enabled) {
-        const IncludeGameMentionsInAutocomplete = tmp(tmp2[16]).IncludeGameMentionsInAutocomplete;
-        if (IncludeGameMentionsInAutocomplete.getSetting()) {
-          if (!config.combineMentionAutocomplete) {
-            if (0 !== query.length) {
-              let result = tmp(tmp2[17]).queryGamesAutocomplete(query);
-              if (result == null) {
-                result = [];
-              }
-              const substr = result.slice(0, closure_11);
-              const mapped = substr.map((game) => ({ type: constants.GAME_MENTION, game }));
-              const tmpResult = tmp(tmp2[17]);
-            }
-            return [];
-          }
-        }
-      }
-    },
-    matches() {
-      return false;
-    }
-  };
-  items1 = [closure_5];
-  obj = {
     queryResults(arg0, channelTypes) {
       if (channelTypes != null) {
         channelTypes = channelTypes.channelTypes;
@@ -175,7 +57,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         result = obj.queryChannelResults(obj);
       }
       const channels = result.channels;
-      return channels.map((channel) => ({ type: constants.CHANNEL, channel, category: channel.getChannel(channel.parent_id) }));
+      return channels.map((item, index) => ({ type: constants.CHANNEL, channel: item, category: channel.getChannel(item.parent_id) }));
     },
     matches(arg0, arg1) {
       const isPrivateResult = _private.isPrivate();
@@ -198,8 +80,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         if (flag2) {
           num = 0;
         }
-        let obj = flag(flag2[14]);
-        obj = { query, channel: _private, intention: closure_1_17.CHAT, maxCount: closure_1_11 + num };
+        flag(flag2[14]);
+        let obj = { query, channel: _private, intention: closure_1_17.CHAT, maxCount: closure_1_11 + num };
         const queryEmojiResultsResult = obj.queryEmojiResults(obj);
         let prop;
         if (includeEmojiPremiumUpsell != null) {
@@ -215,7 +97,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               let items5 = items;
             }
             let items1 = [];
-            if (flag2) {
+            if (tmp) {
               let hasLoadedStickerPacks = c20;
               if (!c20) {
                 hasLoadedStickerPacks = closure_1_6.hasLoadedStickerPacks;
@@ -227,30 +109,30 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               }
               const items2 = [query];
               const items3 = [_private, (arg0, arg1) => arg1 === callback(7298).StickerSendability.SENDABLE];
-              items1 = flag(tmp3[14]).queryStickers(items2, true, items3);
-              const tmp2Result = flag(tmp3[14]);
+              items1 = tmp2(tmp3[14]).queryStickers(items2, true, items3);
+              const tmp2Result = tmp2(tmp3[14]);
             }
             const items4 = [];
             const unlocked = queryEmojiResultsResult.emojis.unlocked;
-            let arraySpreadResult = HermesBuiltin.arraySpread(items1.map((sticker) => {
-              sticker = sticker.sticker;
+            let arraySpreadResult = HermesBuiltin.arraySpread(items1.map((item, index) => {
+              const sticker = item.sticker;
               return { type: constants.STICKER, name: sticker.name, sticker };
             }), 0);
-            arraySpreadResult = HermesBuiltin.arraySpread(items5, HermesBuiltin.arraySpread(unlocked.map((name) => {
-              let obj = { type: constants.EMOJI, name: name.name, url: null, surrogates: null };
-              if (null != name.id) {
+            arraySpreadResult = HermesBuiltin.arraySpread(items5, HermesBuiltin.arraySpread(unlocked.map((item, index) => {
+              let obj = { type: constants.EMOJI, name: item.name, url: null, surrogates: null };
+              if (null != item.id) {
                 obj = { id: null, animated: null, size: null };
-                ({ id: obj3[0], animated: obj3[1] } = name);
+                ({ id: obj3[0], animated: obj3[1] } = item);
                 obj[2] = closure_19;
                 let url = callback2(1435).getEmojiURL(obj);
                 const obj2 = callback2(1435);
               } else {
-                url = name.url;
+                url = item.url;
               }
               obj[2] = url;
               let surrogates;
-              if (null == name.id) {
-                surrogates = name.surrogates;
+              if (null == item.id) {
+                surrogates = item.surrogates;
               }
               obj[3] = surrogates;
               return obj;
@@ -259,6 +141,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
           }
         }
         items5 = [];
+        tmp = flag2;
+        tmp2 = flag;
       },
       matches(arg0, arr) {
         let tmp2 = arg0 === closure_13;
@@ -315,7 +199,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
     },
     [closure_16.CHOICES]: {
       stores: items2,
-      queryResults(first, option) {
+      queryResults(query, option) {
         let autocomplete;
         if (option != null) {
           option = option.option;
@@ -334,18 +218,17 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               optionValues = option.optionValues;
             }
             if (null != optionValues) {
-              let obj = { command: null, optionValues: null, context: null };
               ({ activeCommand: obj3[0], optionValues: obj3[1] } = option);
-              obj = { channel: null, guild: null, autocomplete: null };
+              let obj = { channel: null, guild: null, autocomplete: null };
               obj[0] = _private;
               obj[1] = closure_1_9.getGuild(_private.guild_id);
               obj1 = { name: null, query: null };
               obj1[0] = option.option.name;
-              obj1[1] = first;
+              obj1[1] = query;
               obj[2] = obj1;
               obj[2] = obj;
               closure_1_21(obj);
-              const autocompleteChoices = closure_1_3.getAutocompleteChoices(_private.id, option.option.name, first);
+              const autocompleteChoices = closure_1_3.getAutocompleteChoices(_private.id, option.option.name, query);
               if (null == autocompleteChoices) {
                 const _Array = Array;
                 const array = new Array(4);
@@ -360,7 +243,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const items = [obj3];
                 fillResult = items;
               } else {
-                fillResult = autocompleteChoices.map((choice) => ({ type: constants.CHOICE, choice }));
+                fillResult = autocompleteChoices.map((item, index) => ({ type: constants.CHOICE, choice: item }));
               }
               return fillResult;
             }
@@ -375,10 +258,10 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         } else {
           obj = flag(flag2[14]);
           const obj4 = { query: null, choices: null };
-          obj4[0] = first;
+          obj4[0] = query;
           obj4[1] = choices;
           const choices1 = obj.queryChoiceResults(obj4).choices;
-          items1 = choices1.map((choice) => ({ type: constants.CHOICE, choice }));
+          items1 = choices1.map((item, index) => ({ type: constants.CHOICE, choice: item }));
         }
         return items1;
       },

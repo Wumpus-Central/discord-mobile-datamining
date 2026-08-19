@@ -2,15 +2,14 @@
 
 // Module 8116 (useLegacyTextMigrationHighlight)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "getUserAgnosticState" /* 4737 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import getUserAgnosticState from "getUserAgnosticState" /* 4737 */;
+import "createCacheKey";
 
-const require = arg1;
-createCacheKey = { highlight: null };
-createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.STATUS_DANGER };
+const require = fn;
+const createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.STATUS_DANGER };
 createCacheKey[0] = createCacheKey;
 let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/LegacyText/native/useLegacyTextMigrationHighlight.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/LegacyText/native/useLegacyTextMigrationHighlight.tsx");
 
 export const useLegacyTextMigrationHighlight = function useLegacyTextMigrationHighlight() {
   const tmp = callback();

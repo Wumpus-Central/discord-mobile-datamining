@@ -2,19 +2,15 @@
 
 // Module 15832
 import sendRequest from "sendRequest" /* 530 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
 
 export default {
   updateEstimate(arg0) {
     closure_0 = arg0;
-    let num = arg1;
-    if (arg1 === undefined) {
-      num = 7;
-    }
     const callback = arg2;
     return callback(function*() {
       const HTTP = v0(530).HTTP;
@@ -26,15 +22,11 @@ export default {
       obj1[1] = obj2;
       obj1[3] = v0(530).rejectWithMigratedError();
       yield HTTP.get(obj1);
-      return arg1.body.pruned;
+      return body.body.pruned;
     })();
   },
-  updateEstimateV2(id, first) {
+  updateEstimateV2(id, arg1) {
     closure_0 = id;
-    let num = first;
-    if (first === undefined) {
-      num = 7;
-    }
     const callback = arg2;
     return callback(function*() {
       if (v0 === 2) {
@@ -98,7 +90,7 @@ export default {
   },
   prune(c0, days, include_roles) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.GUILD_PRUNE(c0), body: obj, oldFormErrors: true, rejectWithError: null };
+    { url: Endpoints.GUILD_PRUNE(c0), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { days, compute_prune_count: false, include_roles };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);

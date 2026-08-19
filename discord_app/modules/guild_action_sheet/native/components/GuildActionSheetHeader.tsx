@@ -4,20 +4,19 @@
 import ThemesDefault from "Themes" /* 712 */;
 import registerAssetDefault from "registerAsset" /* 9156 */;
 import registerAssetDefault2 from "registerAsset" /* 9159 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "initialize" /* 13428 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "handleConnectionOpenOrResumed" /* 7240 */;
+import initialize from "initialize" /* 13428 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import handleConnectionOpenOrResumed from "handleConnectionOpenOrResumed" /* 7240 */;
 import { GuildFeatures } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
-const require = arg1;
+const require = fn;
 function CommunityPill(guildVisibility) {
   let GlobeEarthIcon;
-  importDefault = undefined;
   const tmp = callback3();
   const intl = GlobeEarthIcon(1236).intl;
   importDefault = intl.string(GlobeEarthIcon(1236).t.TME4LJ);
@@ -28,17 +27,7 @@ function CommunityPill(guildVisibility) {
     GlobeEarthIcon = tmp2(9826).GlobeEarthIcon;
     tmp4Result = registerAssetDefault2;
   }
-  let obj = {
-    style: tmp.communityPill,
-    accessibilityRole: "button",
-    onPress() {
-      let obj = callback(closure_1_2[16]);
-      obj = { key: "SERVER_BADGE_DESCRIPTION_INVITE_ONLY", content: callback, IconComponent: GlobeEarthIcon };
-      obj.open(obj);
-    },
-    children: null
-  };
-  obj = { style: tmp.communityPillIcon, source: tmp4Result, disableColor: true };
+  let obj = { style: tmp.communityPillIcon, source: tmp4Result, disableColor: true };
   const items = [callback(GlobeEarthIcon(1297).Icon, obj), ];
   obj = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
   const intl3 = tmp2(1236).intl;
@@ -49,14 +38,12 @@ function CommunityPill(guildVisibility) {
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { content: { padding: 16 }, avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 }, headerContainer: null, avatarBackground: null, description: null, memberInfo: null, nameRow: null, communityPill: null, communityPillIcon: null, communityPillText: null, guildBanner: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[4] = { marginTop: 8 };
 createCacheKey[5] = { marginTop: 16, flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 16 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", marginTop: 8 };
-let obj1 = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[7] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, paddingTop: 4, paddingRight: 8, paddingBottom: 4, paddingLeft: 6, borderRadius: ThemesDefault.radii.round };
 createCacheKey[8] = { width: 16, height: 16, marginRight: 6 };
 let num;
@@ -66,12 +53,10 @@ if (PlatformTypes.isAndroid()) {
 createCacheKey[9] = { lineHeight: num };
 createCacheKey[10] = { position: "absolute", left: "50%", top: 0 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, paddingTop: 4, paddingRight: 8, paddingBottom: 4, paddingLeft: 6, borderRadius: ThemesDefault.radii.round };
-let result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetHeader.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetHeader.tsx");
 
 export default function GuildActionSheetHeader(guild) {
   guild = guild.guild;
-  importDefault = undefined;
   let stateFromStores;
   let width;
   c4 = undefined;
@@ -153,7 +138,6 @@ export default function GuildActionSheetHeader(guild) {
     let guildSplashSource = guildBannerSource;
     let tmp17 = callback(c4, obj);
     let tmp18 = callback;
-    const tmp21 = callback;
     const tmp24 = callback(c4, obj);
   } else {
     obj2 = { id: null, icon: null, canAnimate: true, size: 68 };
@@ -162,7 +146,6 @@ export default function GuildActionSheetHeader(guild) {
     obj3[0] = tmp.avatar;
     obj3[1] = tmp2(tmp3[26]).getGuildIconSource(obj2);
     guildSplashSource = null;
-    const tmp13 = callback;
     const tmp2Result1 = tmp2(tmp3[26]);
     if (null != stateFromStores1.splash) {
       guildSplashSource = null;
@@ -176,7 +159,7 @@ export default function GuildActionSheetHeader(guild) {
       }
     }
     tmp17 = callback(closure_5, obj3);
-    tmp18 = tmp13;
+    tmp18 = callback;
     const tmp15 = callback(closure_5, obj3);
   }
   ({ description, name } = stateFromStores1);
@@ -217,7 +200,7 @@ export default function GuildActionSheetHeader(guild) {
   const obj8 = { style: tmp.nameRow, children: null };
   const items9 = [tmp18(importDefault(stateFromStores[31]), { guild: stateFromStores1 }), tmp18(guild(stateFromStores[18]).Text, { lineClamp: 2, accessibilityRole: "header", variant: token, color: "mobile-text-heading-primary", children: name })];
   obj8[1] = items9;
-  items8[1] = closure_11(c4, obj8);
+  items8[1] = callback(c4, obj8);
   tmp18Result = null;
   if (null != description) {
     const obj9 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
@@ -250,11 +233,11 @@ export default function GuildActionSheetHeader(guild) {
   }
   items11[1] = tmp18Result3;
   obj12[1] = items11;
-  items10[1] = closure_11(c4, obj12);
+  items10[1] = callback(c4, obj12);
   obj10[1] = items10;
-  items8[3] = closure_11(c4, obj10);
+  items8[3] = callback(c4, obj10);
   obj7[1] = items8;
-  items6[1] = closure_11(c4, obj7);
+  items6[1] = callback(c4, obj7);
   obj5[1] = items6;
-  return closure_11(c4, obj5);
+  return callback(c4, obj5);
 };

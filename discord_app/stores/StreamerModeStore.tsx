@@ -5,13 +5,12 @@ import initializeDefault from "initialize" /* 589 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import apexExperiment from "apexExperiment" /* 4221 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = arg1;
-let obj = { enabled: false, autoToggle: true, hideInstantInvites: true, hidePersonalInformation: true, disableSounds: true, disableNotifications: true, disabledOverlayWidgets: [], enableContentProtection: false };
+require = fn;
 let closure_6 = {};
-obj = {};
+let obj = {};
 let merged = Object.assign(obj);
 const PersistedStore = initializeDefault.PersistedStore;
 class StreamerModeStore extends PersistedStore {
@@ -130,7 +129,6 @@ let items = [
     if (null != arg0) {
       if (null != id) {
         obj = {};
-        obj = {};
         const merged = Object.assign(arg0);
         obj[id] = obj;
       }
@@ -162,7 +160,6 @@ obj = {
         obj = { enabled: null, automatic: false };
         obj[0] = value.value;
         expandEventPropertiesDefault.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
-        const obj5 = expandEventPropertiesDefault;
       }
       return true;
     }
@@ -190,7 +187,6 @@ obj = {
   RUNNING_STREAMER_TOOLS_CHANGE: function handleRunningStreamerToolsChange(count) {
     if (obj.autoToggle) {
       obj.enabled = count.count > 0;
-      obj = expandEventPropertiesDefault;
       obj = { enabled: null, automatic: true };
       obj[0] = count.count > 0;
       obj.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
@@ -201,6 +197,6 @@ obj = {
   }
 };
 const streamerModeStore = new StreamerModeStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("stores/StreamerModeStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/StreamerModeStore.tsx");
 
 export default streamerModeStore;

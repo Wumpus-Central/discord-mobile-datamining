@@ -6,7 +6,7 @@ import { jsx } from "jsxProd" /* 21 */;
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/edit_state/EditStateContextProvider.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/edit_state/EditStateContextProvider.tsx");
 
 export const useEditStateContext = function useEditStateContext() {
   const context = importAllResult.useContext(closure_2);
@@ -19,5 +19,5 @@ export const useEditStateContext = function useEditStateContext() {
   }
 };
 export const EditStateContextProvider = function EditStateContextProvider(children) {
-  return <redux.Provider value={Object.assign(arg0, Object.create(null))}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={Object.assign(children, Object.create(null))}>{children.children}</redux.Provider>;
 };

@@ -1,9 +1,9 @@
-// === Module 4648: set ===
+// === Module 4648: obj132 ===
 
-// Module 4648 (set)
-import set from "set" /* 2 */;
+// Module 4648 (obj132)
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
+const result = obj132.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
 
 export default {
   clearNavigationHistory() {

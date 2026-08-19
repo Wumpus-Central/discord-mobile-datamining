@@ -1,14 +1,14 @@
 // === Module 15493: useStartTime ===
 
 // Module 15493 (useStartTime)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "_handleConnectionOpen" /* 4495 */;
-import closure_4 from "handleConnectionOpen" /* 4826 */;
-import closure_5 from "_toTimestampMs" /* 10509 */;
+import noop from "noop" /* 19 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4826 */;
+import _toTimestampMs from "_toTimestampMs" /* 10509 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");
 
 export const useStartTime = function useStartTime(channel) {
   const _require = channel;

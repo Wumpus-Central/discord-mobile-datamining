@@ -1,10 +1,10 @@
 // === Module 15324: _fetchActiveChannels ===
 
 // Module 15324 (_fetchActiveChannels)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _fetchActiveChannels() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -143,9 +143,9 @@ function _fetchActiveChannels() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/active_channels/ActiveChannelsActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/active_channels/ActiveChannelsActionCreators.tsx");
 
-export const fetchActiveChannels = function fetchActiveChannels(arg0) {
+export const fetchActiveChannels = function fetchActiveChannels(id) {
   const self = this;
   const apply = _fetchActiveChannels.apply;
   if (typeof apply === "unknown") {

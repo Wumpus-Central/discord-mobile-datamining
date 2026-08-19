@@ -6,21 +6,21 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2853 */;
 import Text from "Text" /* 4734 */;
 import _modDef13991 from "module_13991" /* 13991 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function SettingsAgeGroupHeader() {
-  let obj = { style: callback3().headerContainer, children: null };
+  { style: callback3().headerContainer, children: null };
   const callback = React.useCallback(() => {
     const obj = callback(5428);
     obj.openUrl(callback(1993).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
   }, []);
-  obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+  let obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxyDefault.PY4MA0);
   const items = [callback(Text.Text, obj), ];
@@ -32,17 +32,15 @@ function SettingsAgeGroupHeader() {
   return callback2(View, obj);
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { headerContainer: null };
-createCacheKey = { gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
+const createCacheKey = { gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
   const node = React.useMemo(() => {
-    let obj = callback(10669);
-    obj = { sections: null, ListHeaderComponent: null };
-    obj = { label: null, settings: null };
+    callback(10669);
+    const obj = { label: null, settings: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback2(2853)["5Mi5TE"]);
     const items = [, ];

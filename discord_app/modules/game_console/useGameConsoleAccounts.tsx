@@ -2,11 +2,11 @@
 
 // Module 9747 (useGameConsoleAccounts)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "set" /* 5221 */;
+import set from "set" /* 5221 */;
 import { PlatformTypes } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
 
 export default function useGameConsoleAccounts() {
   let items = [closure_2];

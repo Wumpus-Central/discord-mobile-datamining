@@ -2,10 +2,11 @@
 
 // Module 15742 (createItem)
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7589 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "filterStaffGuild" /* 9044 */;
+import _modDef9057 from "module_9057" /* 9057 */;
+import noop from "noop" /* 19 */;
+import filterStaffGuild from "filterStaffGuild" /* 9044 */;
 
-require = arg1;
+require = fn;
 function createItem(id, type, arg2) {
   type = type.type;
   if (MessageEmbedTypes.ICYMIItemTypes.MESSAGE === type) {
@@ -42,9 +43,9 @@ function createItem(id, type, arg2) {
     obj1[5] = JSON.stringify(id.score_components);
     obj1[6] = arg2;
   } else {
-    if (tmp(7589).ICYMIItemTypes.ACTIVITY !== type) {
-      if (tmp(7589).ICYMIItemTypes.CUSTOM_STATUS !== type) {
-        if (tmp(7589).ICYMIItemTypes.GUILD_EVENT === type) {
+    if (MessageEmbedTypes.ICYMIItemTypes.ACTIVITY !== type) {
+      if (MessageEmbedTypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
+        if (MessageEmbedTypes.ICYMIItemTypes.GUILD_EVENT === type) {
           const obj3 = { id: null, timestamp: null, data: null, score: null, debugScore: null, unread: null };
           obj3[0] = id.id;
           const _Date2 = Date;
@@ -57,7 +58,7 @@ function createItem(id, type, arg2) {
           obj3[4] = JSON.stringify(id.score_components);
           obj3[5] = arg2;
           return obj3;
-        } else if (tmp(7589).ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
+        } else if (MessageEmbedTypes.ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
           obj = { id: null, timestamp: null, data: null, score: null, debugScore: null, unread: null };
           obj[0] = id.id;
           const _Date = Date;
@@ -87,7 +88,7 @@ function createItem(id, type, arg2) {
     return obj5;
   }
 }
-const result = require("set").fileFinishedImporting("modules/icymi/useICYMIItems.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/useICYMIItems.tsx");
 
 export default function useICYMIItems() {
   let obj = stateFromStores1(589);
@@ -107,9 +108,9 @@ export default function useICYMIItems() {
   const items5 = [stateFromStores1];
   const effect = React.useEffect(() => {
     stateFromStores1 = Date.now() + stateFromStores1.length;
-    closure_1_1(closure_1_2[4]).ackGravityItems(stateFromStores1.map((id) => {
+    _modDef9057.ackGravityItems(stateFromStores1.map((item, index) => {
       closure_0 = tmp - 1;
-      return { id: id.id, timestamp: +closure_0 };
+      return { id: item.id, timestamp: +closure_0 };
     }, true));
   }, items5);
   const items6 = [];
@@ -121,14 +122,10 @@ export default function useICYMIItems() {
     if (0 < stateFromStores2) {
       while (true) {
         let tmp6 = stateFromStores[num3];
-        let tmp7 = num3;
-        let tmp8 = num4;
         if (!stateFromStores3[tmp6.id]) {
           let tmp9 = stateFromStoresObject[tmp6.id];
           let tmp10 = null == tmp9;
           if (tmp10) {
-            let tmp11 = stateFromStores1;
-            let tmp12 = dependencyMap;
             tmp10 = tmp6.type === stateFromStores1(7589).ICYMIItemTypes.MESSAGE;
           }
           if (tmp10) {
@@ -143,7 +140,6 @@ export default function useICYMIItems() {
             tmp9 = stateFromStoresObject[tmp6.data.message_id];
           }
           if (null != tmp9) {
-            let tmp14 = createItem;
             let tmp15 = createItem(tmp6, tmp9, true);
             if (null != tmp15) {
               let arr = items6.push(tmp15);
@@ -172,14 +168,10 @@ export default function useICYMIItems() {
     if (num < stateFromStores2) {
       while (true) {
         let tmp19 = stateFromStores1[num5];
-        let tmp20 = num5;
-        let tmp21 = num;
         if (!stateFromStores3[tmp19.id]) {
           let tmp22 = stateFromStoresObject[tmp19.id];
           let tmp23 = null == tmp22;
           if (tmp23) {
-            let tmp24 = stateFromStores1;
-            let tmp25 = dependencyMap;
             tmp23 = tmp19.type === stateFromStores1(7589).ICYMIItemTypes.MESSAGE;
           }
           if (tmp23) {
@@ -194,7 +186,6 @@ export default function useICYMIItems() {
             tmp22 = stateFromStoresObject[tmp19.data.message_id];
           }
           if (null != tmp22) {
-            let tmp27 = createItem;
             let tmp28 = createItem(tmp19, tmp22, false);
             if (null != tmp28) {
               arr = items7.push(tmp28);

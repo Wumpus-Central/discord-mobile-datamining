@@ -10,26 +10,23 @@ import TableRowInner from "TableRowInner" /* 6291 */;
 import AvatarDuoPile from "AvatarDuoPile" /* 13541 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { labelContainer: { flexDirection: "row", alignItems: "center" }, showAllText: null };
-createCacheKey = { marginLeft: ThemesDefault.space.PX_12 };
+const createCacheKey = { marginLeft: ThemesDefault.space.PX_12 };
 createCacheKey[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ShowAllRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ShowAllRow.tsx");
 
 export default function ShowAllRow(users) {
   users = users.users;
   ({ onPress, count } = users);
   const tmp = callback3();
-  let obj = { onPress, end: true, height: "100%", label: null, trailing: null };
-  obj = { style: tmp.labelContainer, children: null };
-  obj = { size: Button.AvatarSizes.XSMALL_20, "aria-label": "", children: null };
+  const obj = { size: Button.AvatarSizes.XSMALL_20, "aria-label": "", children: null };
   const substr = users.slice(0, 2);
-  obj[2] = substr.map((getAvatarSource) => callback2(callback(1297).Avatar, { source: getAvatarSource.getAvatarSource(null, false, callback(1297).AVATAR_SIZE_MAP[callback(undefined, 1297).AvatarSizes.XSMALL]), size: callback(1297).AvatarSizes.XSMALL_20 }, arg1));
+  obj[2] = substr.map((item, index) => callback2(callback(1297).Avatar, { source: item.getAvatarSource(null, false, callback(1297).AVATAR_SIZE_MAP[callback(undefined, 1297).AvatarSizes.XSMALL]), size: callback(1297).AvatarSizes.XSMALL_20 }, index));
   const items = [callback(AvatarDuoPile.AvatarDuoPile, obj), ];
   obj1 = { style: tmp.showAllText, variant: "text-md/semibold", color: "text-brand", children: null };
   const intl = getSystemLocale.intl;

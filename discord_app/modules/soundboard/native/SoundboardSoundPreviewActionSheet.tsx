@@ -2,42 +2,36 @@
 
 // Module 16295 (SoundboardSoundPreviewActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "handleSoundCreateOrUpdate" /* 4780 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate" /* 4780 */;
 import { AnalyticsObjects } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import "createCacheKey";
+import obj132 from "obj132" /* 500 */;
 
-const require = arg1;
+const require = fn;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
+const createCacheKey = { marginTop: ThemesDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 128, height: 128 };
 let num;
-if (set.isIOS()) {
+if (obj132.isIOS()) {
   num = 60;
 }
 createCacheKey[2] = { fontSize: num, lineHeight: 74 };
 createCacheKey[3] = { marginTop: ThemesDefault.space.PX_16, alignSelf: "center" };
-let obj1 = { marginTop: ThemesDefault.space.PX_16, alignSelf: "center" };
 createCacheKey[4] = { gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24 };
-set = { width: 16, height: 16, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
-createCacheKey[5] = set;
+obj132 = { width: 16, height: 16, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
+createCacheKey[5] = obj132;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPreviewActionSheet.tsx");
+const result = obj132.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPreviewActionSheet.tsx");
 
 export default function SoundboardSoundPreviewActionSheet(channelId) {
   channelId = channelId.channelId;
   const sound = channelId.sound;
-  dependencyMap = undefined;
-  let analyticsLocations;
-  let isPlayingSound;
-  let isFavorite;
   const tmp = callback();
   let obj = channelId(589);
   const items = [closure_6];
@@ -49,7 +43,7 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
     }
     return id;
   });
-  analyticsLocations = sound(7139)().analyticsLocations;
+  const analyticsLocations = sound(7139)().analyticsLocations;
   obj1 = channelId(589);
   const items1 = [closure_7];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => {
@@ -59,21 +53,21 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
     }
     return { isPlayingSound: isUserPlayingSoundsResult, isFavorite: closure_1_7.isFavoriteSound(sound.soundId) };
   });
-  isPlayingSound = stateFromStoresObject.isPlayingSound;
-  isFavorite = stateFromStoresObject.isFavorite;
+  const isPlayingSound = stateFromStoresObject.isPlayingSound;
+  const isFavorite = stateFromStoresObject.isFavorite;
   const items2 = [isFavorite, sound, analyticsLocations];
   const items3 = [channelId, sound, isPlayingSound];
   callback = analyticsLocations.useCallback(() => {
     if (isFavorite) {
-      let tmpResult = tmp(7299);
+      let tmpResult = channelId(7299);
       tmpResult.removeFavoriteSound(sound.soundId);
     } else {
-      tmpResult = tmp(7304);
+      tmpResult = channelId(7304);
       let obj = { sound: null, location: null };
       obj[0] = sound;
       obj = {};
       const merged = Object.assign(analyticsLocations);
-      obj.object = closure_1_8.SOUNDBOARD_SOUND;
+      obj.object = AnalyticsObjects.SOUNDBOARD_SOUND;
       obj[1] = obj;
       tmpResult.trackSoundFavorited(obj);
       channelId(7299).addFavoriteSound(sound.soundId);
@@ -96,16 +90,16 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
     str = "";
   }
   obj[3] = str;
-  const items6 = [closure_9(sound(6930), obj), , ];
+  const items6 = [callback(sound(6930), obj), , ];
   obj = { style: tmp.text, variant: "heading-lg/extrabold", children: sound.name };
-  items6[1] = closure_9(channelId(4734).Text, obj);
+  items6[1] = callback(channelId(4734).Text, obj);
   obj1 = { style: tmp.buttonContainer, children: null };
   if (isFavorite) {
     let StarOutlineIcon = tmp2(9410).StarIcon;
   } else {
     StarOutlineIcon = tmp2(9412).StarOutlineIcon;
   }
-  const obj2 = { variant: "primary", icon: closure_9(StarOutlineIcon, obj3), text: null, onPress: null };
+  const obj2 = { variant: "primary", icon: callback(StarOutlineIcon, obj3), text: null, onPress: null };
   const intl = tmp2(1236).intl;
   const string = intl.string;
   const t = tmp2(1236).t;
@@ -116,16 +110,16 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
   }
   obj2[2] = stringResult;
   obj2[3] = callback;
-  const items7 = [closure_9(channelId(4745).Button, obj2), ];
+  const items7 = [callback(channelId(4745).Button, obj2), ];
   if (isPlayingSound) {
     let obj4 = { style: null };
     obj4[0] = tmp.star;
-    let tmp8Result = tmp8(tmp2(10074).WaveformIcon, obj4);
+    let tmp8Result = callback(tmp2(10074).WaveformIcon, obj4);
   } else {
     const obj5 = { style: null, source: null };
     obj5[0] = tmp.star;
     obj5[1] = sound(8130);
-    tmp8Result = tmp8(isFavorite, obj5);
+    tmp8Result = callback(isFavorite, obj5);
   }
   const obj6 = { variant: "secondary", icon: tmp8Result, text: null, onPress: null };
   const intl2 = tmp2(1236).intl;
@@ -134,10 +128,10 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
   const obj8 = { children: null };
   obj6[2] = intl2.string(isPlayingSound ? t2.diasud : t2.Kd4uxG);
   obj6[3] = callback1;
-  items7[1] = closure_9(channelId(4745).Button, obj6);
+  items7[1] = callback(channelId(4745).Button, obj6);
   obj1[1] = items7;
-  items6[2] = closure_10(isPlayingSound, obj1);
+  items6[2] = callback2(isPlayingSound, obj1);
   obj8[0] = items6;
-  obj7[1] = closure_10(isPlayingSound, obj8);
-  return closure_9(channelId(7175).ActionSheet, obj7);
+  obj7[1] = callback2(isPlayingSound, obj8);
+  return callback(channelId(7175).ActionSheet, obj7);
 };

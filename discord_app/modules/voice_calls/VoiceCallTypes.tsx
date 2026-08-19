@@ -1,8 +1,8 @@
 // === Module 9649: RouteTypes ===
 
 // Module 9649 (RouteTypes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_calls/VoiceCallTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_calls/VoiceCallTypes.tsx");
 
 export const RouteTypes = { UNKNOWN: "unknown", BLUETOOTH: "bluetooth", SPEAKER: "speaker", RECEIVER: "receiver", WIRED: "wired" };

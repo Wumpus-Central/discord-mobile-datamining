@@ -1,23 +1,23 @@
 // === Module 15593: useGuildsBarBadges ===
 
 // Module 15593 (useGuildsBarBadges)
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "computeAlertSettings" /* 10014 */;
-import closure_7 from "handleGatewayJoinRequestUpdate" /* 4198 */;
-import closure_8 from "trackCommunicationDisabled" /* 1990 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
+import computeAlertSettings from "computeAlertSettings" /* 10014 */;
+import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["guildActivityIndicatorSource"];
 ({ GuildFeatures: closure_12, Permissions: map1 } = ME);
 let closure_15 = createCacheKey.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
 
 export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImportance) {
   const _require = arg0;
@@ -46,17 +46,16 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
       if (null != currentUser) {
         if (null != request) {
           if (request.userId === currentUser.id) {
-            const member = cutout.getMember(tmp2, request.userId);
+            const member = cutout.getMember(callback, request.userId);
             if (null != member) {
               if (!member.isPending) {
-                const obj = callback(stateFromStores[12]);
+                callback(stateFromStores[12]);
               }
             }
             return request.applicationStatus;
           }
         }
       }
-      tmp2 = callback;
     }
   }, items2);
   let obj2 = _require(stateFromStores[11]);
@@ -109,7 +108,7 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
   const items6 = [tmp5, memo, token];
   const memo1 = token1.useMemo(() => {
     let obj = callback(stateFromStores[17]);
-    const mediaIcon = obj.getMediaIcon(closure_3);
+    const mediaIcon = obj.getMediaIcon(obj);
     let source;
     if (mediaIcon != null) {
       source = mediaIcon.source;
@@ -123,23 +122,23 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
       icon = mediaIcon.icon;
     }
     obj[1] = icon;
-    obj[2] = closure_3.isCurrentUserConnected;
+    obj[2] = obj.isCurrentUserConnected;
     const guildActivityIndicatorSource = obj.guildActivityIndicatorSource;
-    const tmp7 = token(obj, closure_3);
+    const tmp7 = token(obj, obj);
     let tmp8 = null;
     if (null != guildActivityIndicatorSource) {
       obj = { style: null, source: null };
       obj[0] = memo;
       obj[1] = guildActivityIndicatorSource;
       const merged = Object.assign(tmp7);
-      tmp8 = closure_1_14(callback(tmp2[17]).GuildsBarActivityIndicatorBase, obj);
+      tmp8 = jsx(callback(stateFromStores[17]).GuildsBarActivityIndicatorBase, { style: null, source: null });
     }
     obj1 = { badgeTopRight: tmp8, cutoutTopRight: null };
     let tmp14;
     if (null != guildActivityIndicatorSource) {
       const obj2 = { position: "top-right", containerSize: null };
       obj2[1] = token;
-      tmp14 = lib(tmp2[18])(obj2);
+      tmp14 = lib(stateFromStores[18])(obj2);
     }
     obj1[1] = tmp14;
     return obj1;

@@ -2,14 +2,14 @@
 
 // Module 8277 (useHasActiveTrial)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "reset" /* 4045 */;
-import closure_4 from "emitChanges" /* 7421 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import reset from "reset" /* 4045 */;
+import emitChanges from "emitChanges" /* 7421 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-require = arg1;
+require = fn;
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c5, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_6, PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: error, PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_8, PREMIUM_TRIAL_IDS_ALL: c9 } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
 
 export const useHasActiveTrial = function useHasActiveTrial() {
   const items = [closure_3];
@@ -52,7 +52,6 @@ export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
 export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() {
   const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  const obj = initialize;
   const items1 = [closure_2];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let hasActiveTrial;
@@ -70,7 +69,7 @@ export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() 
   return tmp4;
 };
 export const getPremiumTrialOffer = function getPremiumTrialOffer() {
-  const mapped = closure_9.map((closure_9) => userTrialOffer.getUserTrialOffer(closure_9));
-  const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired());
+  const mapped = closure_9.map((item, index) => userTrialOffer.getUserTrialOffer(item));
+  const found = mapped.filter((item, index) => null != item && !item.hasExpired());
   return found.shift();
 };

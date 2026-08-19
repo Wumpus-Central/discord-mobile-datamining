@@ -1,23 +1,22 @@
 // === Module 12320: navigateToPremiumHomePage ===
 
 // Module 12320 (navigateToPremiumHomePage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import transitionTo from "transitionTo" /* 1222 */;
 import pushLayer from "pushLayer" /* 5353 */;
 import openUserSettings from "openUserSettings" /* 7360 */;
 import ME from "ME" /* 676 */;
 
 ({ Routes: obj1, UserSettingsSections: c3 } = ME);
-const result = set.fileFinishedImporting("modules/premium/PremiumMarketingUtil.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/PremiumMarketingUtil.tsx");
 
 export const navigateToPremiumHomePage = function navigateToPremiumHomePage() {
   openUserSettings.openUserSettings({ screen: constants2.PREMIUM });
 };
-export const navigateToNitroHomePage = function navigateToNitroHomePage(arg0) {
-  if (arg0 != null) {
-    arg0();
+export const navigateToNitroHomePage = function navigateToNitroHomePage(fn) {
+  if (fn != null) {
+    fn();
   }
   pushLayer.popLayer();
-  const obj = pushLayer;
   transitionTo.transitionTo(constants.APPLICATION_STORE);
 };

@@ -58,7 +58,7 @@ Object.defineProperty(prototype, "isInFuture", {
   },
   set: undefined
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeRecord.tsx");
 
 export default GooglePlayPriceChangeRecord;
 export const GooglePlayPriceChangeMode = obj;

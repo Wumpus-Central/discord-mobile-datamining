@@ -10,19 +10,18 @@ import hasUserTrialOfferExpired from "hasUserTrialOfferExpired" /* 7420 */;
 import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 12899 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_9 } from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 let c3 = importAllResult;
 ({ View: c4, ActivityIndicator: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
-  let obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, buttonsFloating: null, loading: null };
-  obj = {};
+  let obj = {};
   const merged = Object.assign(closure_6.absoluteFillObject);
   obj.top = undefined;
   obj.alignItems = "center";
@@ -31,15 +30,13 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
   const merged1 = Object.assign(closure_6.absoluteFillObject);
   obj.color = color;
   obj[1] = obj;
-  const obj4 = PlatformTypes;
-  const tmp3 = require;
   const space = ThemesDefault.space;
   if (isIOSResult) {
     let PX_24 = space.PX_24;
-    let tmp8 = tmp6;
+    let tmp8 = importDefault;
   } else {
     PX_24 = space.PX_4 + arg0;
-    tmp8 = tmp6;
+    tmp8 = importDefault;
   }
   obj1 = { marginBottom: PX_24, paddingVertical: tmp8(712).space.PX_8, paddingHorizontal: tmp8(712).space.PX_24, borderRadius: null, backgroundColor: null, flexDirection: "row", borderColor: null, borderWidth: 1 };
   isIOSResult = PlatformTypes.isIOS();
@@ -84,10 +81,10 @@ const memoResult = importAllResult.memo((navigateToPremium) => {
   let tmp5 = navigateToPremium(gradientSecondaryBackground[15]);
   const tmp5Result = navigateToPremium(gradientSecondaryBackground[15])(id);
   ({ theme, primaryColor, secondaryColor } = navigateToPremium(gradientSecondaryBackground[16])({ user: stateFromStores, displayProfile: navigateToPremium(gradientSecondaryBackground[15])(id) }));
-  let tmpResult = tmp(tmp2[17]);
+  let tmpResult = navigateToSettings(tmp2[17]);
   const userProfileColors = tmpResult.useUserProfileColors({ theme, primaryColor, secondaryColor });
   ({ containerBorderColor, gradientSecondaryBackground } = userProfileColors);
-  tmpResult = tmp(tmp2[9]);
+  tmpResult = navigateToSettings(tmp2[9]);
   if (tmpResult.isMobileVisualRefreshEnabled("YouBannerDecorations")) {
     if (tmpResult1.isThemeLight(theme)) {
       containerBackground = null;
@@ -101,23 +98,22 @@ const memoResult = importAllResult.memo((navigateToPremium) => {
       let hexResult1 = null;
       if (null != containerBackground) {
         const obj = navigateToPremium(gradientSecondaryBackground[19]);
-        const obj2 = navigateToPremium(gradientSecondaryBackground[19])(tmp);
-        const hexResult = navigateToPremium(gradientSecondaryBackground[19])(tmp).hex("rgb");
-        const obj3 = navigateToPremium(gradientSecondaryBackground[19])(tmp);
-        hexResult1 = obj.mix(gradientSecondaryBackground, hexResult, navigateToPremium(gradientSecondaryBackground[19])(tmp).alpha(), "rgb").hex("rgb");
-        const mixResult = obj.mix(gradientSecondaryBackground, hexResult, navigateToPremium(gradientSecondaryBackground[19])(tmp).alpha(), "rgb");
+        const obj2 = navigateToPremium(gradientSecondaryBackground[19])(containerBackground);
+        const hexResult = navigateToPremium(gradientSecondaryBackground[19])(containerBackground).hex("rgb");
+        const obj3 = navigateToPremium(gradientSecondaryBackground[19])(containerBackground);
+        hexResult1 = obj.mix(gradientSecondaryBackground, hexResult, navigateToPremium(gradientSecondaryBackground[19])(containerBackground).alpha(), "rgb").hex("rgb");
+        const mixResult = obj.mix(gradientSecondaryBackground, hexResult, navigateToPremium(gradientSecondaryBackground[19])(containerBackground).alpha(), "rgb");
       }
       return hexResult1;
     }, items1), gradientSecondaryBackground, containerBorderColor);
-    tmpResult1 = tmp(tmp2[18]);
-    const hasPremiumSubscriptionToDisplay = tmp(tmp2[20]).useHasPremiumSubscriptionToDisplay();
-    const tmpResult2 = tmp(tmp2[20]);
-    let tmp17 = tmp(tmp2[10]).useUnseenOutboundPromotions().length > 0;
-    const tmpResult3 = tmp(tmp2[10]);
-    const tmp18 = closure_9;
-    const tmpResult4 = tmp(tmp2[11]);
-    const tmp19 = null != tmp(tmp2[11]).useTrialOffer(closure_9);
-    let result = tmp(tmp2[12]).useIsDismissibleContentDismissed_UNSAFE(tmp(tmp2[13]).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
+    tmpResult1 = navigateToSettings(tmp2[18]);
+    const hasPremiumSubscriptionToDisplay = navigateToSettings(tmp2[20]).useHasPremiumSubscriptionToDisplay();
+    const tmpResult2 = navigateToSettings(tmp2[20]);
+    let tmp17 = navigateToSettings(tmp2[10]).useUnseenOutboundPromotions().length > 0;
+    const tmpResult3 = navigateToSettings(tmp2[10]);
+    const tmpResult4 = navigateToSettings(tmp2[11]);
+    const tmp19 = null != navigateToSettings(tmp2[11]).useTrialOffer(closure_9);
+    let result = navigateToSettings(tmp2[12]).useIsDismissibleContentDismissed_UNSAFE(navigateToSettings(tmp2[13]).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
     let tmp21 = !result;
     if (!result) {
       tmp21 = tmp19;
@@ -129,29 +125,29 @@ const memoResult = importAllResult.memo((navigateToPremium) => {
     const tmp22 = tmp4(tmp2[21])();
     showBadge = tmp22.showBadge;
     dismissBadge = tmp22.dismissBadge;
-    const tmpResult5 = tmp(tmp2[12]);
-    const isEligibleForQuests = tmp(tmp2[22]).getIsEligibleForQuests();
-    const tmpResult6 = tmp(tmp2[22]);
-    const mobileReferralSubscriberProfileEntrypointButtonConfig = tmp(tmp2[23]).useMobileReferralSubscriberProfileEntrypointButtonConfig("YouBannerDecorations");
+    const tmpResult5 = navigateToSettings(tmp2[12]);
+    const isEligibleForQuests = navigateToSettings(tmp2[22]).getIsEligibleForQuests();
+    const tmpResult6 = navigateToSettings(tmp2[22]);
+    const mobileReferralSubscriberProfileEntrypointButtonConfig = navigateToSettings(tmp2[23]).useMobileReferralSubscriberProfileEntrypointButtonConfig("YouBannerDecorations");
     ({ enabled, showReferralNotificationDot } = mobileReferralSubscriberProfileEntrypointButtonConfig);
-    const tmpResult7 = tmp(tmp2[23]);
-    const tmp25 = null != tmp(tmp2[11]).useTrialOffer(tmp18);
+    const tmpResult7 = navigateToSettings(tmp2[23]);
+    const tmp25 = null != navigateToSettings(tmp2[11]).useTrialOffer(closure_9);
     closure_7 = tmp25;
     const items2 = [tmp17, navigateToSettings, tmp25];
     const items3 = [navigateToPremium];
     const callback = obj4.useCallback(() => {
-      let obj = navigateToSettings(gradientSecondaryBackground[24]);
-      obj = { isBadged: closure_4 };
+      navigateToSettings(gradientSecondaryBackground[24]);
+      const obj = { isBadged: closure_4 };
       const result = obj.trackYouTabSettingsIconPress(obj);
       navigateToSettings();
       let tmp5 = closure_7;
       if (closure_7) {
-        let tmpResult = tmp(tmp2[12]);
-        tmp5 = !tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(tmp2[13]).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
+        let tmpResult = navigateToSettings(gradientSecondaryBackground[12]);
+        tmp5 = !tmpResult.UNSAFE_isDismissibleContentDismissed(navigateToSettings(gradientSecondaryBackground[13]).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
       }
       if (tmp5) {
-        tmpResult = tmp(tmp2[12]);
-        const result1 = tmpResult.UNSAFE_markDismissibleContentAsDismissed(tmp(tmp2[13]).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
+        tmpResult = navigateToSettings(gradientSecondaryBackground[12]);
+        const result1 = tmpResult.UNSAFE_markDismissibleContentAsDismissed(navigateToSettings(gradientSecondaryBackground[13]).DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
       }
     }, items2);
     const callback1 = obj4.useCallback(() => {
@@ -163,9 +159,9 @@ const memoResult = importAllResult.memo((navigateToPremium) => {
     if (isEligibleForQuests) {
       obj = { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
       let tmp4Result = tmp4(tmp2[27]);
-      obj[0] = tmp(tmp2[28]).QuestsIcon;
-      const intl = tmp(tmp2[29]).intl;
-      obj[1] = intl.string(tmp(tmp2[29]).t.JALI2K);
+      obj[0] = navigateToSettings(tmp2[28]).QuestsIcon;
+      const intl = navigateToSettings(tmp2[29]).intl;
+      obj[1] = intl.string(navigateToSettings(tmp2[29]).t.JALI2K);
       obj[2] = tmp28;
       obj[3] = showBadge;
       tmp29 = callback(tmp4Result, obj, "quests");
@@ -186,25 +182,25 @@ const memoResult = importAllResult.memo((navigateToPremium) => {
     } else {
       let obj2 = { IconComponent: null, accessibilityLabel: null, label: null, onPress: null };
       tmp4Result = tmp4(tmp2[27]);
-      obj2[0] = tmp(tmp2[32]).NitroWheelIcon;
-      const intl2 = tmp(tmp2[29]).intl;
-      obj2[1] = intl2.string(tmp(tmp2[29]).t.Ipxkog);
-      const intl3 = tmp(tmp2[29]).intl;
-      obj2[2] = intl3.string(tmp(tmp2[29]).t.Ipxkog);
+      obj2[0] = navigateToSettings(tmp2[32]).NitroWheelIcon;
+      const intl2 = navigateToSettings(tmp2[29]).intl;
+      obj2[1] = intl2.string(navigateToSettings(tmp2[29]).t.Ipxkog);
+      const intl3 = navigateToSettings(tmp2[29]).intl;
+      obj2[2] = intl3.string(navigateToSettings(tmp2[29]).t.Ipxkog);
       obj2[3] = callback1;
       tmp32Result = tmp32(tmp4Result, obj2, "nitro");
     }
     items5[2] = tmp32Result;
     let obj3 = { ref: null, IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
     obj3[0] = settingsButtonRef;
-    const tmpResult8 = tmp(tmp2[11]);
-    obj3[1] = tmp(tmp2[33]).SettingsIcon;
-    const intl4 = tmp(tmp2[29]).intl;
-    obj3[2] = intl4.string(tmp(tmp2[29]).t["3D5yo/"]);
+    const tmpResult8 = navigateToSettings(tmp2[11]);
+    obj3[1] = navigateToSettings(tmp2[33]).SettingsIcon;
+    const intl4 = navigateToSettings(tmp2[29]).intl;
+    obj3[2] = intl4.string(navigateToSettings(tmp2[29]).t["3D5yo/"]);
     obj3[3] = callback;
     obj3[4] = tmp17;
     items5[3] = callback(tmp4(tmp2[27]), obj3, "settings");
-    const found = items5.filter((arg0) => null != arg0);
+    const found = items5.filter((item, index) => null != item);
     if (isLoading) {
       obj4 = { style: null, children: null };
       obj4[0] = tmp15.loading;
@@ -220,7 +216,6 @@ const memoResult = importAllResult.memo((navigateToPremium) => {
     obj5[0] = items6;
     color = tmp15.containerFloatingGradient.color;
     const items7 = [color];
-    const tmp39 = closure_11;
     const tmp4Result1 = tmp4(tmp2[27]);
     const obj7 = { style: null, pointerEvents: "box-none", children: null };
     obj7[0] = tmp15.containerFloatingWrap;
@@ -236,7 +231,7 @@ const memoResult = importAllResult.memo((navigateToPremium) => {
     }, items7);
     const obj8 = { style: null };
     obj8[0] = tmp15.containerFloatingGradient;
-    const tmp38Result = closure_12(closure_11, obj5);
+    const tmp38Result = callback(closure_11, obj5);
     const merged = Object.assign(memo);
     obj8.pointerEvents = "none";
     const items8 = [callback(tmp4(tmp2[34]), obj8), ];
@@ -245,17 +240,16 @@ const memoResult = importAllResult.memo((navigateToPremium) => {
     obj9[1] = tmp38Result;
     items8[1] = callback(closure_4, obj9);
     obj7[2] = items8;
-    return closure_12(closure_4, obj7);
+    return callback(closure_4, obj7);
   }
   containerBackground = userProfileColors.containerBackground;
+  const tmp8 = navigateToPremium(gradientSecondaryBackground[16])({ user: stateFromStores, displayProfile: navigateToPremium(gradientSecondaryBackground[15])(id) });
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouBannerDecorations.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouBannerDecorations.tsx");
 
 export default memoResult;
 export const useHasSettingsBadge = function useHasSettingsBadge() {
   let tmp = useEligibleActiveOutboundPromotions.useUnseenOutboundPromotions().length > 0;
-  const obj = useEligibleActiveOutboundPromotions;
-  const obj2 = hasUserTrialOfferExpired;
   const tmp2 = null != hasUserTrialOfferExpired.useTrialOffer(closure_9);
   const result = UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
   let tmp4 = !result;

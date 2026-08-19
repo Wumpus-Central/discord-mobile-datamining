@@ -1,11 +1,12 @@
 // === Module 676: ME ===
 
 // Module 676 (ME)
-import set7 from "set" /* 686 */;
-import setDefault from "set" /* 687 */;
+import obj132 from "obj132" /* 2 */;
+import set8 from "set" /* 686 */;
+import obj132Default from "obj132" /* 687 */;
 import ApplicationDistributors from "ApplicationDistributors" /* 690 */;
 import keys2 from "keys" /* 691 */;
-import set8 from "set" /* 692 */;
+import set9 from "set" /* 692 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 693 */;
 import MessageReferenceTypes from "MessageReferenceTypes" /* 694 */;
 import SKUFlags from "SKUFlags" /* 695 */;
@@ -15,19 +16,17 @@ import sum from "sum" /* 505 */;
 import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import int2hexResult from "module_10070709" /* 10070709 */;
-import powResult from "set" /* 2 */;
-import powResult1 from "set" /* 2 */;
-import powResult2 from "set" /* 2 */;
+import powResult from "obj132" /* 2 */;
+import powResult1 from "obj132" /* 2 */;
+import powResult2 from "obj132" /* 2 */;
 import importAllResult from "fromString" /* 506 */;
-import set from "set" /* 2 */;
+import "sum";
 
 const ME = INVITE.ME;
 ({ Routes, FAVORITES, NOTIFICATIONS_INBOX, EMPTY_NUX_SERVER, MOBILE_GUILD_UPSELL_LIST } = INVITE);
 const frozen = Object.freeze({ SUPPRESS_JOIN_NOTIFICATIONS: 1, SUPPRESS_PREMIUM_SUBSCRIPTIONS: 2, SUPPRESS_GUILD_REMINDER_NOTIFICATIONS: 4, SUPPRESS_JOIN_NOTIFICATION_REPLIES: 8, SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS: 16, SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES: 32, SUPPRESS_CHANNEL_PROMPT_DEADCHAT: 128, SUPPRESS_VOICE_SESSION_NOTIFICATIONS: 512 });
-const items = [set7.MessageTypes.REPLY, set7.MessageTypes.THREAD_STARTER_MESSAGE, set7.MessageTypes.CONTEXT_MENU_COMMAND];
-let set = new Set(items);
-let obj = { JOIN: 1, [1]: "JOIN", LISTEN: 3, [3]: "LISTEN", WATCH: 4, [4]: "WATCH", JOIN_REQUEST: 5, [5]: "JOIN_REQUEST", STREAM_REQUEST: 6, [6]: "STREAM_REQUEST" };
-obj = {
+const items = [set8.MessageTypes.REPLY, set8.MessageTypes.THREAD_STARTER_MESSAGE, set8.MessageTypes.CONTEXT_MENU_COMMAND];
+let obj = {
   USER(arg0) {
     return "/users/" + arg0;
   },
@@ -71,14 +70,14 @@ obj = {
   USER_CHANNELS_BULK_LEAVE: "/users/@me/channels/bulk-leave",
   USER_GROUP_DM_SHELL: "/users/@me/channels/group-dm-shell",
   USER_WISHLIST(closure_1_0) {
-    return "/wishlists/" + closure_1_0;
+    return "/wishlists/" + ME;
   },
   USER_WISHLIST_PATCH(closure_1_0) {
-    return "/users/@me/wishlists/" + closure_1_0;
+    return "/users/@me/wishlists/" + ME;
   },
   USER_WISHLIST_ITEMS: "/users/@me/wishlist/items",
   USER_WISHLIST_ITEM(closure_1_0, closure_1_1) {
-    return "/users/@me/wishlists/" + closure_1_0 + "/items/" + closure_1_1;
+    return "/users/@me/wishlists/" + ME + "/items/" + obj;
   },
   USER_APPLICATION_IDENTITIES(arg0) {
     return "/users/" + arg0 + "/application-identities";
@@ -89,7 +88,7 @@ obj = {
     return "/users/@me/application-identities/" + c0 + "/" + c1 + "/config";
   },
   DM_CHANNEL(closure_1_0) {
-    return "/users/@me/dms/" + closure_1_0;
+    return "/users/@me/dms/" + ME;
   },
   USER_SETTINGS_PROTO(type) {
     return "/users/@me/settings-proto/" + type;
@@ -128,19 +127,19 @@ obj = {
     return "/users/@me/guilds/" + guildId + "/member/ack-dm-upsell-settings";
   },
   GUILD_CHANNELS(closure_1_0) {
-    return "/guilds/" + closure_1_0 + "/channels";
+    return "/guilds/" + ME + "/channels";
   },
   GUILD_MEMBERS(arg0) {
     return "/guilds/" + arg0 + "/members";
   },
   GUILD_MEMBER(guildId, closure_1_1) {
-    return "/guilds/" + guildId + "/members/" + closure_1_1;
+    return "/guilds/" + guildId + "/members/" + obj;
   },
   GUILD_MEMBER_NICK(guildId, closure_4) {
     return "/guilds/" + guildId + "/members/" + closure_4 + "/nick";
   },
-  GUILD_MEMBER_AVATAR(guildId, userId, avatar, arg3) {
-    return "/guilds/" + guildId + "/users/" + userId + "/avatars/" + avatar + "." + arg3;
+  GUILD_MEMBER_AVATAR(guildId, userId, avatar, webp) {
+    return "/guilds/" + guildId + "/users/" + userId + "/avatars/" + avatar + "." + webp;
   },
   SET_GUILD_MEMBER(closure_0) {
     return "/guilds/" + closure_0 + "/members/@me";
@@ -153,7 +152,7 @@ obj = {
     return "/guilds/" + closure_0 + "/members/@me";
   },
   GUILD_LEAVE(closure_1_0) {
-    return "/users/@me/guilds/" + closure_1_0;
+    return "/users/@me/guilds/" + ME;
   },
   GUILD_INTEGRATIONS(closure_0) {
     return "/guilds/" + closure_0 + "/integrations";
@@ -177,7 +176,7 @@ obj = {
     return "/guilds/" + id + "/bans/" + id2;
   },
   GUILD_ROLES(closure_1_0) {
-    return "/guilds/" + closure_1_0 + "/roles";
+    return "/guilds/" + ME + "/roles";
   },
   GUILD_ROLE_MEMBER_COUNTS(closure_0) {
     return "/guilds/" + closure_0 + "/roles/member-counts";
@@ -286,8 +285,8 @@ obj = {
   GUILD_TOP_READ_CHANNELS(arg0) {
     return "/guilds/" + arg0 + "/top-read-channels";
   },
-  EMOJI(id, arg1) {
-    return "/emojis/" + id + "." + arg1;
+  EMOJI(id, webp) {
+    return "/emojis/" + id + "." + webp;
   },
   EMOJI_GUILD_DATA(arg0) {
     return "/emojis/" + arg0 + "/guild";
@@ -304,8 +303,8 @@ obj = {
   GUILD_DISCOVERY_SPLASH(id, splash) {
     return "/guilds/" + id + "/discovery-splashes/" + splash + ".jpg";
   },
-  GUILD_BANNER(id, banner, arg2) {
-    return "/guilds/" + id + "/banners/" + banner + "." + arg2;
+  GUILD_BANNER(id, banner, webp) {
+    return "/guilds/" + id + "/banners/" + banner + "." + webp;
   },
   GUILD_HOME_SETTINGS(closure_0) {
     return "/guilds/" + closure_0 + "/new-member-welcome";
@@ -374,8 +373,8 @@ obj = {
   GUILD(id) {
     return "/guilds/" + id;
   },
-  GUILD_BASIC(arg0) {
-    return "/guilds/" + arg0 + "/basic";
+  GUILD_BASIC(callback) {
+    return "/guilds/" + callback + "/basic";
   },
   GUILD_SPACE(arg0) {
     return "/guilds/" + arg0 + "/space";
@@ -401,8 +400,8 @@ obj = {
     return "/channels/" + arg0;
   },
   THREAD_MEMBER(id, closure_1_1) {
-    let tmp = closure_1_1;
-    if (closure_1_1 === undefined) {
+    let tmp = obj;
+    if (obj === undefined) {
       tmp = ME;
     }
     return "/channels/" + id + "/thread-members/" + tmp;
@@ -419,8 +418,8 @@ obj = {
   THREAD_SEARCH(channelId) {
     return "/channels/" + channelId + "/threads/search";
   },
-  FORUM_POSTS(arg0) {
-    return "/channels/" + arg0 + "/post-data";
+  FORUM_POSTS(callback) {
+    return "/channels/" + callback + "/post-data";
   },
   PARTNER_REQUIREMENTS(arg0) {
     return "/partners/" + arg0 + "/requirements";
@@ -432,15 +431,15 @@ obj = {
     }
     return "/users/" + arg0 + "/avatars/" + arg1 + "." + str;
   },
-  ARCHIVED_AVATAR(userId, avatarId, storageHash, arg3) {
-    let str = arg3;
-    if (arg3 === undefined) {
+  ARCHIVED_AVATAR(userId, avatarId, storageHash, webp) {
+    let str = webp;
+    if (webp === undefined) {
       str = "jpg";
     }
     return "/avatars/" + userId + "/archived/" + avatarId + "/" + storageHash + "." + str;
   },
-  USER_BANNER(id, banner, arg2) {
-    return "/users/" + id + "/banners/" + banner + "." + arg2;
+  USER_BANNER(id, banner, webp) {
+    return "/users/" + id + "/banners/" + banner + "." + webp;
   },
   AVATAR_DECORATION_PRESETS(asset) {
     let str = arg1;
@@ -461,8 +460,8 @@ obj = {
   COLLECTIBLES_CLAIM: "/users/@me/claim-premium-collectibles-product",
   COLLECTIBLES_CLAIM_CATEGORY_REWARD: "/users/@me/claim-reward-category-product",
   COLLECTIBLES_PURCHASES: "/users/@me/collectibles-purchases",
-  COLLECTIBLES_PRODUCTS(arg0) {
-    return "/collectibles-products/" + arg0;
+  COLLECTIBLES_PRODUCTS(callback) {
+    return "/collectibles-products/" + callback;
   },
   COLLECTIBLES_VALID_GIFT_RECIPIENT: "/users/@me/valid-collectibles-gift-recipient",
   COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH: "/users/@me/valid-collectibles-gift-recipients-batch",
@@ -471,9 +470,9 @@ obj = {
   COLLECTIBLES_SHOP_TAB_LAYOUT(c0) {
     return "/collectibles-shop-tab-layouts/" + c0;
   },
-  GUILD_MEMBER_BANNER(guildId, id, banner, arg3) {
-    let str = arg3;
-    if (arg3 === undefined) {
+  GUILD_MEMBER_BANNER(guildId, id, banner, webp) {
+    let str = webp;
+    if (webp === undefined) {
       str = "png";
     }
     return "/guilds/" + guildId + "/users/" + id + "/banners/" + banner + "." + str;
@@ -481,8 +480,8 @@ obj = {
   CHANNEL_CONVERSATIONS(c0) {
     return "/channels/" + c0 + "/conversations";
   },
-  CHANNEL_CONVERSATION_MESSAGES(arg0, arg1) {
-    return "/channels/" + arg0 + "/conversations/" + arg1 + "/messages";
+  CHANNEL_CONVERSATION_MESSAGES(callback, arg1) {
+    return "/channels/" + callback + "/conversations/" + arg1 + "/messages";
   },
   MESSAGES(channelId) {
     return "/channels/" + channelId + "/messages";
@@ -518,7 +517,7 @@ obj = {
     return "/attachments/" + arg0;
   },
   MESSAGE_CROSSPOST(closure_1_0, closure_1_1) {
-    return "/channels/" + closure_1_0 + "/messages/" + closure_1_1 + "/crosspost";
+    return "/channels/" + ME + "/messages/" + obj + "/crosspost";
   },
   AI_TITLE: "/ai/title",
   AI_TRANSLATE: "/ai/translate",
@@ -541,13 +540,13 @@ obj = {
     return "/channels/" + c0 + "/messages/pins/" + c1;
   },
   INSTANT_INVITES(closure_1_0) {
-    return "/channels/" + closure_1_0 + "/invites";
+    return "/channels/" + ME + "/invites";
   },
-  TYPING(arg0) {
-    return "/channels/" + arg0 + "/typing";
+  TYPING(channelId) {
+    return "/channels/" + channelId + "/typing";
   },
   CHANNEL_PERMISSIONS_OVERWRITE(closure_1_0, closure_1_1) {
-    return "/channels/" + closure_1_0 + "/permissions/" + closure_1_1;
+    return "/channels/" + ME + "/permissions/" + obj;
   },
   CHANNEL_RECIPIENTS(arg0) {
     return "/channels/" + arg0 + "/recipients";
@@ -583,7 +582,7 @@ obj = {
     return "/channels/" + closure_1 + "/followers";
   },
   CHANNEL_FOLLOWER_STATS(closure_1_0) {
-    return "/channels/" + closure_1_0 + "/follower-stats";
+    return "/channels/" + ME + "/follower-stats";
   },
   CHANNEL_FOLLOWER_MESSAGE_STATS(arg0) {
     return "/channels/" + arg0 + "/follower-message-stats";
@@ -655,7 +654,7 @@ obj = {
   USERS_ME_CUSTOM_THEMES: "/users/@me/custom-themes",
   CONNECTIONS: "/users/@me/connections",
   CONNECTIONS_AUTHORIZE(closure_1_0) {
-    return "/connections/" + closure_1_0 + "/authorize";
+    return "/connections/" + ME + "/authorize";
   },
   CONNECTIONS_SESSION_HANDOFF(arg0) {
     return "/connections/" + arg0 + "/callback/session-handoff";
@@ -733,7 +732,7 @@ obj = {
     return "/invites/" + arg0;
   },
   INVITE_FRIEND_MEMBERS(closure_1_0) {
-    return "/invites/" + closure_1_0 + "/friend-members";
+    return "/invites/" + ME + "/friend-members";
   },
   UNRESOLVED_GUILD_TEMPLATE(closure_0) {
     return "/guilds/templates/" + closure_0;
@@ -781,7 +780,7 @@ obj = {
   INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: "/users/@me/guilds/integration-application-ids",
   USER_GUILD_SETTINGS_BULK: "/users/@me/guilds/settings",
   USER_GUILD_SETTINGS(closure_1_7) {
-    return "/users/@me/guilds/" + closure_1_7 + "/settings";
+    return "/users/@me/guilds/" + error + "/settings";
   },
   GAMES_DETECTABLE: "/games/detectable",
   GAMES_BLOCKLIST: "/games/detectable/exclusions",
@@ -838,8 +837,8 @@ obj = {
   CHANNEL_WEBHOOKS(channelId) {
     return "/channels/" + channelId + "/webhooks";
   },
-  GUILD_WEBHOOKS(guildId) {
-    return "/guilds/" + guildId + "/webhooks";
+  GUILD_WEBHOOKS(id) {
+    return "/guilds/" + id + "/webhooks";
   },
   WEBHOOK(arg0) {
     return "/webhooks/" + arg0;
@@ -871,7 +870,7 @@ obj = {
   SEARCH_TABS_DMS: "/users/@me/messages/search/tabs",
   CHANGELOG_MESSAGES: "/changelogs/@me/messages",
   GUILD_APPLICATIONS(closure_1_0) {
-    return "/guilds/" + closure_1_0 + "/applications";
+    return "/guilds/" + ME + "/applications";
   },
   APPLIED_GUILD_BOOSTS_FOR_GUILD(closure_0) {
     return "/guilds/" + closure_0 + "/premium/subscriptions";
@@ -1092,8 +1091,8 @@ obj = {
   STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS(closure_0) {
     return "/store/published-listings/skus/" + closure_0 + "/subscription-plans";
   },
-  STORE_SKU(arg0) {
-    return "/store/skus/" + arg0;
+  STORE_SKU(callback) {
+    return "/store/skus/" + callback;
   },
   STORE_SKU_PURCHASE(c1) {
     return "/store/skus/" + c1 + "/purchase";
@@ -1110,11 +1109,11 @@ obj = {
   SOCIAL_LAYER_STOREFRONT_BY_APPLICATION_ID(applicationId) {
     return "/partner-sdk/applications/" + applicationId + "/application-storefront";
   },
-  SOCIAL_LAYER_STOREFRONTS_ALL(arg0) {
-    return "/partner-sdk/applications/" + arg0 + "/storefronts/preview";
+  SOCIAL_LAYER_STOREFRONTS_ALL(callback) {
+    return "/partner-sdk/applications/" + callback + "/storefronts/preview";
   },
-  SOCIAL_LAYER_STOREFRONT_BY_ID(arg0, arg1) {
-    return "/partner-sdk/applications/" + arg0 + "/storefront/" + arg1 + "/preview";
+  SOCIAL_LAYER_STOREFRONT_BY_ID(callback, callback2) {
+    return "/partner-sdk/applications/" + callback + "/storefront/" + callback2 + "/preview";
   },
   SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(applicationId, id) {
     return "/partner-sdk/applications/" + applicationId + "/storefront/skus/" + id;
@@ -1145,7 +1144,7 @@ obj = {
     return "/billing/orders/" + c0 + "/sign";
   },
   ORDER_CANCEL_SIGNING(closure_1_0) {
-    return "/billing/orders/" + closure_1_0 + "/cancel-signing";
+    return "/billing/orders/" + ME + "/cancel-signing";
   },
   ORDER_DISCARD(closure_0) {
     return "/billing/orders/" + closure_0 + "/discard";
@@ -1156,11 +1155,11 @@ obj = {
   APPLICATION_SKUS(closure_0) {
     return "/applications/" + closure_0 + "/skus";
   },
-  APPLICATION_MANAGED_ACTIVITY_LINK(arg0, decodedLinkId) {
-    return "/applications/" + arg0 + "/managed-links/" + decodedLinkId;
+  APPLICATION_MANAGED_ACTIVITY_LINK(callback, decodedLinkId) {
+    return "/applications/" + callback + "/managed-links/" + decodedLinkId;
   },
-  APPLICATION_QUICK_ACTIVITY_LINK(arg0, decodedLinkId) {
-    return "/applications/" + arg0 + "/quick-links/" + decodedLinkId;
+  APPLICATION_QUICK_ACTIVITY_LINK(callback, decodedLinkId) {
+    return "/applications/" + callback + "/quick-links/" + decodedLinkId;
   },
   STORE_EULA(arg0) {
     return "/store/eulas/" + arg0;
@@ -1206,7 +1205,7 @@ obj = {
   },
   USER_GIFT_CODE_CREATE: "/users/@me/entitlements/gift-codes",
   USER_GIFT_CODE_REVOKE(closure_1_0) {
-    return "/users/@me/entitlements/gift-codes/" + closure_1_0;
+    return "/users/@me/entitlements/gift-codes/" + ME;
   },
   USER_GIFT_CODES: "/users/@me/entitlements/gift-codes",
   GIFT_INTENTS_DISMISS: "/users/@me/gift-intents/dismiss",
@@ -1250,8 +1249,8 @@ obj = {
   STREAM_NOTIFY(closure_0) {
     return "/streams/" + closure_0 + "/notify";
   },
-  STREAM(encodeStreamKeyResult) {
-    return "/streams/" + encodeStreamKeyResult + "/stream";
+  STREAM(localMutes) {
+    return "/streams/" + localMutes + "/stream";
   },
   GUILD_PREVIEW(closure_0) {
     return "/guilds/" + closure_0 + "/preview";
@@ -1269,8 +1268,8 @@ obj = {
   STORE_DIRECTORY_LAYOUT_STICKER_PACKS(arg0) {
     return "/sticker-packs/directory-v2/" + arg0;
   },
-  STICKER_ASSET(id, arg1) {
-    return "/stickers/" + id + "." + arg1;
+  STICKER_ASSET(id, stickerExtensionFromFormatType) {
+    return "/stickers/" + id + "." + stickerExtensionFromFormatType;
   },
   STICKER(body) {
     return "/stickers/" + body;
@@ -1311,8 +1310,8 @@ obj = {
   APPLICATION_UPLOAD_ATTACHMENT(arg0) {
     return "/applications/" + arg0 + "/attachment";
   },
-  APPLICATION_PROXY_TICKET(arg0) {
-    return "/applications/" + arg0 + "/proxy-tickets";
+  APPLICATION_PROXY_TICKET(callback) {
+    return "/applications/" + callback + "/proxy-tickets";
   },
   CHANNEL_THREADS(id) {
     return "/channels/" + id + "/threads";
@@ -1321,7 +1320,7 @@ obj = {
     return "/channels/" + id + "/messages/" + arg1 + "/threads";
   },
   CHANNEL_LINKED_LOBBY(closure_1_0) {
-    return "/channels/" + closure_1_0 + "/linked-lobby";
+    return "/channels/" + ME + "/linked-lobby";
   },
   APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(arg0, arg1, arg2) {
     return "/applications/" + arg0 + "/guilds/" + arg1 + "/commands/" + arg2 + "/permissions";
@@ -1387,26 +1386,26 @@ obj = {
     return "/guild-events/" + id + "/images/" + image + "." + png;
   },
   GUILD_EVENTS_FOR_GUILD(closure_1_0) {
-    return "/guilds/" + closure_1_0 + "/scheduled-events";
+    return "/guilds/" + ME + "/scheduled-events";
   },
   GUILD_EVENT_USER_COUNTS(closure_1_0, closure_1_1) {
-    return "/guilds/" + closure_1_0 + "/scheduled-events/" + closure_1_1 + "/users/counts";
+    return "/guilds/" + ME + "/scheduled-events/" + obj + "/users/counts";
   },
   GUILD_EVENT_USERS(c2, closure_1_0, closure_1_1) {
     let str = "";
-    if (null != closure_1_1) {
+    if (null != obj) {
       const _HermesInternal = HermesInternal;
-      str = "/" + closure_1_1;
+      str = "/" + obj;
     }
-    return "/guilds/" + c2 + "/scheduled-events/" + closure_1_0 + str + "/users";
+    return "/guilds/" + c2 + "/scheduled-events/" + ME + str + "/users";
   },
   USER_GUILD_EVENT(closure_1_2, closure_1_0, closure_1_1) {
     let str = "";
-    if (null != closure_1_1) {
+    if (null != obj) {
       const _HermesInternal = HermesInternal;
-      str = "/" + closure_1_1;
+      str = "/" + obj;
     }
-    return "/guilds/" + closure_1_2 + "/scheduled-events/" + closure_1_0 + str + "/users/@me";
+    return "/guilds/" + obj1 + "/scheduled-events/" + ME + str + "/users/@me";
   },
   USER_GUILD_EVENTS: "/users/@me/scheduled-events",
   GUILD_EVENT_EXCEPTIONS(guild_id, id) {
@@ -1415,8 +1414,8 @@ obj = {
   GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id) {
     return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + event_exception_id;
   },
-  MEMBER_SAFETY_SUPPLEMENTAL(arg0) {
-    return "/guilds/" + arg0 + "/members/supplemental";
+  MEMBER_SAFETY_SUPPLEMENTAL(callback) {
+    return "/guilds/" + callback + "/members/supplemental";
   },
   GUILD_MEMBER_SEARCH(arg0) {
     return "/guilds/" + arg0 + "/members-search";
@@ -1436,14 +1435,14 @@ obj = {
   GUILD_AUTOMOD_ALERT_ACTION(guild_id) {
     return "/guilds/" + guild_id + "/auto-moderation/alert-action";
   },
-  GUILD_INCIDENT_ACTIONS(arg0) {
-    return "/guilds/" + arg0 + "/incident-actions";
+  GUILD_INCIDENT_ACTIONS(callback) {
+    return "/guilds/" + callback + "/incident-actions";
   },
-  GUILD_INCIDENT_REPORT_FALSE_ALARM(arg0) {
-    return "/guilds/" + arg0 + "/auto-moderation/false-alarm";
+  GUILD_INCIDENT_REPORT_FALSE_ALARM(callback) {
+    return "/guilds/" + callback + "/auto-moderation/false-alarm";
   },
-  GUILD_INCIDENT_REPORT_RAID(arg0) {
-    return "/guilds/" + arg0 + "/auto-moderation/report-raid";
+  GUILD_INCIDENT_REPORT_RAID(callback) {
+    return "/guilds/" + callback + "/auto-moderation/report-raid";
   },
   DIRECTORY_CHANNEL_ENTRIES(closure_0) {
     return "/channels/" + closure_0 + "/directory-entries";
@@ -1451,8 +1450,8 @@ obj = {
   DIRECTORY_CHANNEL_ENTRY(closure_0, closure_1) {
     return "/channels/" + closure_0 + "/directory-entry/" + closure_1;
   },
-  DIRECTORY_ENTRIES_SEARCH(arg0) {
-    return "/channels/" + arg0 + "/directory-entries/search";
+  DIRECTORY_ENTRIES_SEARCH(callback) {
+    return "/channels/" + callback + "/directory-entries/search";
   },
   DIRECTORY_CHANNEL_CATEGORY_COUNTS(closure_0) {
     return "/channels/" + closure_0 + "/directory-entries/counts";
@@ -1468,7 +1467,7 @@ obj = {
   APPLICATIONS: "/applications",
   APPLICATIONS_WITH_ASSETS: "/applications-with-assets",
   APPLICATION_OWNER_TRANSFER(closure_1_0) {
-    return "/applications/" + closure_1_0 + "/transfer";
+    return "/applications/" + ME + "/transfer";
   },
   HUB_WAITLIST_SIGNUP: "/hub-waitlist/signup",
   HUB_EMAIL_VERIFY: "/guilds/automations/email-domain-lookup/verify",
@@ -1578,10 +1577,10 @@ obj = {
     return "/guilds/" + arg0 + "/products/listings/" + arg1 + "/attachments/" + arg2 + "/download";
   },
   GUILD_PROFILE(closure_1_0) {
-    return "/guilds/" + closure_1_0 + "/profile";
+    return "/guilds/" + ME + "/profile";
   },
   GUILD_PROFILE_VISIBILITY(closure_1_0) {
-    return "/guilds/" + closure_1_0 + "/profile/visibility";
+    return "/guilds/" + ME + "/profile/visibility";
   },
   GUILD_THEME(arg0) {
     return "/guilds/" + arg0 + "/theme";
@@ -1640,8 +1639,8 @@ obj = {
   APPLICATION_DIRECTORY_APPLICATION(closure_0) {
     return "/application-directory-static/applications/" + closure_0;
   },
-  APPLICATION_DIRECTORY_EMBED_APPLICATION(arg0) {
-    return "/application-directory/applications/" + arg0 + "/embed";
+  APPLICATION_DIRECTORY_EMBED_APPLICATION(callback) {
+    return "/application-directory/applications/" + callback + "/embed";
   },
   APPLICATION_DIRECTORY_CATEGORIES: "/application-directory-static/categories",
   APPLICATION_DIRECTORY_SIMILAR(c0) {
@@ -1649,8 +1648,8 @@ obj = {
   },
   APPLICATION_DIRECTORY_SEARCH: "/application-directory-static/search",
   APPLICATION_DIRECTORY_COLLECTIONS: "/application-directory-static/collections",
-  APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(itemId, hash, arg2) {
-    return "/application-directory/collection-items/" + itemId + "/" + hash + "." + arg2;
+  APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(itemId, hash, webp) {
+    return "/application-directory/collection-items/" + itemId + "/" + hash + "." + webp;
   },
   GUILD_FEED(arg0) {
     return "/guilds/" + arg0 + "/guild-feed";
@@ -1733,11 +1732,11 @@ obj = {
     return "/users/@me/referrals/" + closure_0;
   },
   FAMILY_CENTER_TEEN_ACTIVITY(closure_1_0) {
-    return "/family-center/" + closure_1_0 + "/activity";
+    return "/family-center/" + ME + "/activity";
   },
   FAMILY_CENTER_TEEN_ACTIVITY_ME: "/family-center/@me",
   FAMILY_CENTER_TEEN_ACTIVITY_MORE(closure_1_0, closure_1_1, closure_1_2, closure_1_3) {
-    return "/family-center/more-activity/" + closure_1_0 + "/" + closure_1_1 + "/" + closure_1_2 + "/" + closure_1_3;
+    return "/family-center/more-activity/" + ME + "/" + obj + "/" + obj1 + "/" + closure_1_3;
   },
   FAMILY_CENTER_LINKED_USERS: "/users/@me/linked-users",
   FAMILY_CENTER_LINK_CODE: "/family-center/@me/link-code",
@@ -1749,7 +1748,7 @@ obj = {
     return "/family-center/" + id + "/settings-and-consents";
   },
   FAMILY_CENTER_TEEN_SETTINGS(closure_1_0) {
-    return "/family-center/" + closure_1_0 + "/settings-proto";
+    return "/family-center/" + ME + "/settings-proto";
   },
   FAMILY_CENTER_TEEN_CONSENTS(selectedTeenId) {
     return "/family-center/" + selectedTeenId + "/consents";
@@ -1764,8 +1763,8 @@ obj = {
   REFERRAL_OFFER_ID_RESOLVE(closure_0) {
     return "/referrals/" + closure_0;
   },
-  BADGE_ICON(arg0) {
-    return "/badge-icons/" + arg0 + ".png";
+  BADGE_ICON(icon) {
+    return "/badge-icons/" + icon + ".png";
   },
   FINISH_MFA_CHECK: "/mfa/finish",
   CREATE_REVERSE_TRIAL: "/user-offers/reverse-trial",
@@ -1781,11 +1780,11 @@ obj = {
     return "/guilds/" + arg0 + "/members/unusual-dm-activity";
   },
   SAFETY_HUB: "/safety-hub/@me",
-  SAFETY_HUB_REQUEST_REVIEW(arg0) {
-    return "/safety-hub/request-review/" + arg0;
+  SAFETY_HUB_REQUEST_REVIEW(callback) {
+    return "/safety-hub/request-review/" + callback;
   },
-  SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(arg0) {
-    return "/safety-hub/suspended/request-review/" + arg0;
+  SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(callback) {
+    return "/safety-hub/suspended/request-review/" + callback;
   },
   SAFETY_HUB_SUSPENDED: "/safety-hub/suspended/@me",
   SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION: "/safety-hub/suspended/request-verification",
@@ -1798,10 +1797,10 @@ obj = {
   EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE: "/attachments/report-false-positive",
   EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE: "/attachments/sender-report-false-positive",
   BULK_GUILD_BAN(closure_1_0) {
-    return "/guilds/" + closure_1_0 + "/bulk-ban";
+    return "/guilds/" + ME + "/bulk-ban";
   },
   BULK_GUILD_BAN_V2(closure_1_0) {
-    return "/guilds/" + closure_1_0 + "/bulk-ban/v2";
+    return "/guilds/" + ME + "/bulk-ban/v2";
   },
   EXPLICIT_MEDIA_SCAN_MESSAGES(channel_id) {
     return "/channels/" + channel_id + "/explicit-media";
@@ -1827,8 +1826,8 @@ obj = {
   QUEST_PREVIEW(arg0) {
     return "/quests/" + arg0 + "/preview";
   },
-  QUESTS_ENROLL(arg0) {
-    return "/quests/" + arg0 + "/enroll";
+  QUESTS_ENROLL(callback) {
+    return "/quests/" + callback + "/enroll";
   },
   QUEST_ON_CONSOLE_START(closure_0) {
     return "/quests/" + closure_0 + "/console/start";
@@ -1842,14 +1841,14 @@ obj = {
   QUESTS_VIDEO_PROGRESS(closure_0) {
     return "/quests/" + closure_0 + "/video-progress";
   },
-  QUESTS_REWARD_CODE(arg0) {
-    return "/quests/" + arg0 + "/reward-code";
+  QUESTS_REWARD_CODE(callback) {
+    return "/quests/" + callback + "/reward-code";
   },
-  QUESTS_CLAIM_REWARD(arg0) {
-    return "/quests/" + arg0 + "/claim-reward";
+  QUESTS_CLAIM_REWARD(callback) {
+    return "/quests/" + callback + "/claim-reward";
   },
-  QUESTS_DISMISS_CONTENT(arg0, arg1) {
-    return "/quests/" + arg0 + "/dismissible-content/" + arg1 + "/dismiss";
+  QUESTS_DISMISS_CONTENT(callback, arg1) {
+    return "/quests/" + callback + "/dismissible-content/" + arg1 + "/dismiss";
   },
   QUESTS_PREVIEW_STATUS(closure_0) {
     return "/quests/" + closure_0 + "/preview/status";
@@ -1962,8 +1961,8 @@ obj = {
     return "/quests/creatives/" + closure_0 + "/claim-reward";
   },
   QUESTS_APP_STORE_METADATA: "/quests/appstore-metadata",
-  GAME_ANNOUNCEMENTS(arg0) {
-    return "/games/" + arg0 + "/announcements";
+  GAME_ANNOUNCEMENTS(callback) {
+    return "/games/" + callback + "/announcements";
   },
   GUILD_ROOM(closure_0, closure_1) {
     return "/guilds/" + closure_0 + "/rooms/" + closure_1;
@@ -2005,8 +2004,9 @@ obj = {
 };
 const frozen1 = Object.freeze({ ACCOUNT_AGE: 5, MEMBER_AGE: 10 });
 const frozen2 = Object.freeze(obj);
-const result = 6 * setDefault.Seconds.HOUR;
-const items1 = [0, 5, 10, 15, 30, setDefault.Seconds.MINUTE, 2 * setDefault.Seconds.MINUTE, 5 * setDefault.Seconds.MINUTE, 10 * setDefault.Seconds.MINUTE, 15 * setDefault.Seconds.MINUTE, 30 * setDefault.Seconds.MINUTE, setDefault.Seconds.HOUR, 2 * setDefault.Seconds.HOUR, result];
+const set = new Set(items);
+const result = 6 * obj132Default.Seconds.HOUR;
+const items1 = [0, 5, 10, 15, 30, obj132Default.Seconds.MINUTE, 2 * obj132Default.Seconds.MINUTE, 5 * obj132Default.Seconds.MINUTE, 10 * obj132Default.Seconds.MINUTE, 15 * obj132Default.Seconds.MINUTE, 30 * obj132Default.Seconds.MINUTE, obj132Default.Seconds.HOUR, 2 * obj132Default.Seconds.HOUR, result];
 obj = {
   API_DOCS: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/docs/intro",
   API_DOCS_GAME_AND_SERVER_MANAGEMENT: "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/docs/game-and-server-management/alpha-and-beta-testing",
@@ -2079,19 +2079,7 @@ const frozen5 = Object.freeze({ TEXT_PLAYGROUND: obj3.SETTINGS_TEXT_PLAYGROUND, 
 const items2 = [, ];
 ({ FACEBOOK: arr3[0], CONTACTS: arr3[1] } = obj7);
 const frozen6 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" });
-const obj1 = {
-  DEVELOPER_PORTAL: "/developers",
-  DEVELOPER_PORTAL_GUILD_ANALYTICS(arg0) {
-    return "/developers/servers/" + arg0;
-  },
-  DEVELOPER_PORTAL_TEAMS: "/developers/teams",
-  DEVELOPER_PORTAL_EDIT_PAYOUTS(closure_0) {
-    return "/developers/teams/" + closure_0 + "/payout-settings";
-  },
-  DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY: "/developers/applications/select/game-identity"
-};
 const obj5 = { page: obj2.DIRECT, object: obj4.WEB_URL };
-const obj6 = { TEXT_PLAYGROUND: obj3.SETTINGS_TEXT_PLAYGROUND, DESIGN_SYSTEMS: obj3.DESIGN_SYSTEM, DESIGN_SYSTEMS_COLORS: obj3.DESIGN_SYSTEM, INTL_TESTING: obj3.SETTINGS_INTL_TESTING, ANIMATION_TESTING: obj3.DESIGN_SYSTEM, OVERVIEW: obj3.SETTINGS_OVERVIEW, BROWSER: obj3.SETTINGS_BROWSER, CHANGE_LOG: obj3.SETTINGS_CHANGELOG, PREMIUM_GIFTING: obj3.SETTINGS_PREMIUM_GIFTING, BLOCKED_USERS: obj3.SETTINGS_BLOCKED_USERS, BLOCKED_USERS_V2: obj3.SETTINGS_BLOCKED_USERS_V2, IGNORED_USERS: obj3.SETTINGS_IGNORED_USERS, CUSTOM_STATUS: obj3.SETTINGS_CUSTOM_STATUS, CUSTOM_STATUS_EMOJI_PICKER: obj3.SETTINGS_CUSTOM_STATUS_EMOJI_PICKER, CHECK_NATIVE_UPDATE: obj3.SETTINGS_CHECK_NATIVE_UPDATE, INSTALL_NATIVE_UPDATE: obj3.SETTINGS_INSTALL_NATIVE_UPDATE, ACCOUNT: obj3.SETTINGS_ACCOUNT, GAMES: obj3.SETTINGS_GAMES, ACCOUNT_CHANGE_USERNAME: obj3.SETTINGS_CHANGE_USERNAME, ACCOUNT_CHANGE_PASSWORD: obj3.SETTINGS_CHANGE_PASSWORD, ACCOUNT_CONFIRM_PASSWORD: obj3.SETTINGS_CONFIRM_PASSWORD, ACCOUNT_BACKUP_CODES: obj3.SETTINGS_BACKUP_CODES, ACCOUNT_CONFIRM_VIEW_BACKUP_CODES: obj3.SETTINGS_BACKUP_CODES, CONNECTIONS: obj3.SETTINGS_CONNECTIONS, CONNECTIONS_XBOX: obj3.SETTINGS_CONNECTIONS_XBOX, AUTHORIZED_APPS: obj3.SETTINGS_AUTHORIZED_APPS, AUTHORIZED_APP: obj3.SETTINGS_AUTHORIZED_APP, AUTHORIZED_APP_PERMISSIONS: obj3.SETTINGS_AUTHORIZED_APP_PERMISSIONS, TEXT: obj3.SETTINGS_TEXT_AND_IMAGES, VOICE: obj3.SETTINGS_VOICE_AND_VIDEO, PRIVACY_AND_SAFETY: obj3.SETTINGS_PRIVACY_AND_SAFETY, CONTENT_AND_SOCIAL: obj3.SETTINGS_CONTENT_AND_SOCIAL, SENSITIVE_MEDIA_FILTERS: obj3.SETTINGS_SENSITIVE_MEDIA_FILTERS, CONNECTED_GAMES: obj3.SETTINGS_CONNECTED_GAMES, DATA_AND_PRIVACY: obj3.SETTINGS_DATA_AND_PRIVACY, SPONSORED_CONTENT_PREFERENCES: obj3.SETTINGS_SPONSORED_CONTENT_PREFERENCES, MANAGE_SPONSORED_CONTENT: obj3.SETTINGS_MANAGE_SPONSORED_CONTENT, REQUEST_DATA: obj3.SETTINGS_REQUEST_DATA, ACCOUNT_STANDING: obj3.SETTINGS_ACCOUNT_STANDING, NOTIFICATIONS: obj3.SETTINGS_NOTIFICATIONS, SOUNDS: obj3.SETTINGS_SOUNDS, APP_ICONS: obj3.SETTINGS_APP_ICONS, DATA: obj3.SETTINGS_DATA, EMAILS: obj3.SETTINGS_EMAILS, ACTIVITY_PRIVACY: obj3.SETTINGS_ACTIVITY_PRIVACY, REGISTERED_GAMES: obj3.SETTINGS_GAME_ACTIVITY, KEYBINDS: obj3.SETTINGS_KEYBINDS, APPEARANCE: obj3.SETTINGS_APPEARANCE, APPEARANCE_THEME_PICKER: obj3.SETTINGS_APPEARANCE_THEME_PICKER, APPEARANCE_LIGHT_MODE_THEME_PICKER: obj3.SETTINGS_APPEARANCE_LIGHT_MODE_THEME_PICKER, APPEARANCE_DARK_MODE_THEME_PICKER: obj3.SETTINGS_APPEARANCE_DARK_MODE_THEME_PICKER, ACCESSIBILITY: obj3.SETTINGS_ACCESSIBILITY, OVERLAY: obj3.SETTINGS_OVERLAY, LANGUAGE: obj3.SETTINGS_LANGUAGE, STREAMER_MODE: obj3.SETTINGS_STREAMER_MODE, SUBSCRIPTIONS: obj3.SETTINGS_SUBSCRIPTIONS, PREMIUM: obj3.SETTINGS_PREMIUM, PREMIUM_PLAN_SELECT: obj3.SETTINGS_PREMIUM_PLAN_SELECT, PREMIUM_MANAGE_PLAN: obj3.SETTINGS_PREMIUM_MANAGE_PLAN, GUILD_ROLE_SUBSCRIPTIONS: obj3.GUILD_ROLE_SUBSCRIPTION, GUILD_ROLE_SUBSCRIPTIONS_CANCEL: obj3.GUILD_ROLE_SUBSCRIPTION_CANCEL, GUILD_BOOSTING: obj3.GUILD_BOOSTING, WEBAUTHN_VIEW: obj3.SETTINGS_WEBAUTHN_VIEW };
 const wrapPathsResult = getAuthenticationPath.wrapPaths(frozen2);
 const items3 = [, , , , ];
 ({ SPOTIFY: arr4[0], XBOX: arr4[1], PLAYSTATION: arr4[2], PLAYSTATION_STAGING: arr4[3], CRUNCHYROLL: arr4[4] } = obj7);
@@ -2253,21 +2241,6 @@ const items9 = [, , , , , , , , , ];
 ({ USD: arr10[0], CAD: arr10[1], EUR: arr10[2], AUD: arr10[3], GBP: arr10[4], PHP: arr10[5], MYR: arr10[6], VND: arr10[7], KRW: arr10[8], IDR: arr10[9] } = sum.CurrencyCodes);
 const frozen15 = Object.freeze(obj17);
 const importAllResult20 = importAllResult;
-const obj14 = {
-  STORAGE_MANIFEST(arg0, arg1) {
-    return "" + arg0 + "/storage/" + arg1 + "/MANIFEST";
-  },
-  INSTALL_DIR(arg0) {
-    return "" + arg0 + "/content";
-  },
-  ROOT_PATTERN: ["**/*"],
-  ROOT_STORAGE_PATH(arg0, arg1) {
-    return "" + arg0 + "/storage/" + arg1 + "/content";
-  },
-  ROOT_ID: "sdk",
-  ROOT_PLATFORMS: { macos: "macos", windows: "windows", linux: "linux" }
-};
-const obj16 = { type: obj15.GIF, command: "gif", title: "Gif", commandId: "-16" };
 const tmp35 = obj18.MUTUAL_FRIENDS | obj18.MUTUAL_GUILDS | obj18.NO_RELATION;
 const tmp36 = obj18.MUTUAL_FRIENDS | obj18.MUTUAL_GUILDS;
 const frozen16 = Object.freeze({
@@ -2372,11 +2345,11 @@ const frozen16 = Object.freeze({
     return combined;
   }
 });
-const result1 = set.fileFinishedImporting("Constants.tsx");
+const set7 = new Set(items9);
+const result1 = obj132.fileFinishedImporting("Constants.tsx");
 const keys = Object.keys();
 if (keys !== undefined) {
   while (keys[1] !== undefined) {
-    let tmp45 = tmp41;
     exports[tmp41] = keys2[tmp41];
     continue;
   }
@@ -2384,9 +2357,6 @@ if (keys !== undefined) {
 sum = Object.keys();
 if (sum !== undefined) {
   while (sum[1] !== undefined) {
-    let tmp46 = tmp44;
-    let tmp47 = tmp44;
-    let tmp48 = tmp44;
     exports[tmp44] = sum[tmp44];
     continue;
   }
@@ -2398,10 +2368,10 @@ export { FAVORITES };
 export { NOTIFICATIONS_INBOX };
 export { EMPTY_NUX_SERVER };
 export { MOBILE_GUILD_UPSELL_LIST };
-export const ChannelTypes = set8.ChannelTypes;
-export const MessageTypes = set7.MessageTypes;
-export const ChannelTypesSets = set8.ChannelTypesSets;
-export const MessageTypesSets = set7.MessageTypesSets;
+export const ChannelTypes = set9.ChannelTypes;
+export const MessageTypes = set8.MessageTypes;
+export const ChannelTypesSets = set9.ChannelTypesSets;
+export const MessageTypesSets = set8.MessageTypesSets;
 export const MessageEmbedTypes = MessageEmbedTypes.MessageEmbedTypes;
 export const MessageReferenceTypes = MessageReferenceTypes.MessageReferenceTypes;
 export const SubscriptionTypes = sum.SubscriptionTypes;
@@ -2662,7 +2632,7 @@ export const StoreRecommendationTypes = { NOW_PLAYING: "1", RECENTLY_PLAYED: "2"
 export const ViewHistoryKeys = { APPLICATION_LIBRARY_BADGE: "application_library_badge_18_11_02", SERVER_DISCOVERY_BADGE: "server_discovery_badge_19_02_11", E3_SERVER_DISCOVERY_BADGE: "e3_server_discovery_badge_19_06_08" };
 export const InAppNotificationTypes = { MESSAGE: "MESSAGE", MESSAGE_FAILED_TO_SEND: "MESSAGE_FAILED_TO_SEND", FORUM_THREAD_CREATED: "FORUM_THREAD_CREATED", BUG_REPORTER: "BUG_REPORTER", ALERT: "ALERT", REACTION: "REACTION", MESSAGE_REMINDER: "MESSAGE_REMINDER", RESTRICTED_HOURS_WARNING: "RESTRICTED_HOURS_WARNING", RESTRICTED_SCHEDULE_UPDATED: "RESTRICTED_SCHEDULE_UPDATED", MESSAGE_REQUEST: "MESSAGE_REQUEST" };
 export const GIFPickerResultTypes = { TRENDING_GIFS: "Trending", FAVORITES: "Favorites", TRENDING_CATEGORY: "Category", SEARCH: "Search", SEARCH_SUGGESTION: "Search Suggestion" };
-export const GIFTABLE_CURRENCIES = new Set(items9);
+export const GIFTABLE_CURRENCIES = set7;
 export const SpoilerRenderSetting = { ALWAYS: "ALWAYS", ON_CLICK: "ON_CLICK", IF_MODERATOR: "IF_MODERATOR" };
 export const NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING = 4;
 export const OFF_PLATFORM_PREMIUM_PERKS = [];

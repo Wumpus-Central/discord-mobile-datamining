@@ -2,119 +2,121 @@
 
 // Module 14528 (handleSaveTheme)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import create from "create" /* 1306 */;
+import getThemeForColor from "getThemeForColor" /* 1347 */;
 import ClientThemeType from "ClientThemeType" /* 1349 */;
 import setSystemTheme from "setSystemTheme" /* 4222 */;
+import saveGuildFolders from "saveGuildFolders" /* 9365 */;
+import updateCustomTheme from "updateCustomTheme" /* 11135 */;
+import updateBackgroundGradientPreset from "updateBackgroundGradientPreset" /* 14529 */;
 import enableSameAsDeviceTheme from "enableSameAsDeviceTheme" /* 14530 */;
-import closure_3 from "reset" /* 1346 */;
-import closure_4 from "handleThemeChange" /* 1302 */;
+import reset from "reset" /* 1346 */;
+import handleThemeChange from "handleThemeChange" /* 1302 */;
 import { SystemThemeState } from "SystemThemeState" /* 1305 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_7 } from "ThemeTypes" /* 1348 */;
 import { AnalyticsPremiumFeatureNames as closure_8 } from "GuildFeatures" /* 1924 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
-export const handleSaveTheme = function handleSaveTheme(found, analyticsLocations, isSynced) {
-  if (found.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-    let obj = expandEventPropertiesDefault;
-    obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
+export const handleSaveTheme = function handleSaveTheme(mobileThemes, analyticsLocations, isSynced) {
+  if (mobileThemes.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+    let obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
     obj[0] = constants.CLIENT_THEME;
     obj[1] = "custom theme";
     obj[2] = true;
     obj[3] = isSynced;
     obj[4] = analyticsLocations;
     obj.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj);
-    if ("system" === found.theme) {
-      let tmpResult = tmp(14529);
+    if ("system" === mobileThemes.theme) {
+      let tmpResult = updateBackgroundGradientPreset;
       const result = tmpResult.resetBackgroundGradientPreset();
-      tmpResult = tmp(11135);
+      tmpResult = updateCustomTheme;
       tmpResult.resetCustomTheme();
       obj = { theme: null };
-      obj[0] = found.theme;
-      return tmp(9365).saveClientTheme(obj);
-    } else if (found.type === tmp(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-      const customThemeBaseTheme = tmp(1347).getCustomThemeBaseTheme(found.theme);
-      const tmpResult2 = tmp(1347);
-      const result1 = tmp(14529).resetBackgroundGradientPreset();
-      const tmpResult3 = tmp(14529);
-      tmp(11135).updateCustomTheme(found.customThemeSettings, customThemeBaseTheme);
-      const tmpResult4 = tmp(11135);
+      obj[0] = mobileThemes.theme;
+      return saveGuildFolders.saveClientTheme(obj);
+    } else if (mobileThemes.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      const customThemeBaseTheme = getThemeForColor.getCustomThemeBaseTheme(mobileThemes.theme);
+      const tmpResult2 = getThemeForColor;
+      const result1 = updateBackgroundGradientPreset.resetBackgroundGradientPreset();
+      const tmpResult3 = updateBackgroundGradientPreset;
+      updateCustomTheme.updateCustomTheme(mobileThemes.customThemeSettings, customThemeBaseTheme);
+      const tmpResult4 = updateCustomTheme;
       obj1 = { customUserThemeSettings: null, theme: null };
-      obj1[0] = found.customThemeSettings;
+      obj1[0] = mobileThemes.customThemeSettings;
       obj1[1] = customThemeBaseTheme;
-      return tmp(9365).saveClientTheme(obj1);
+      return saveGuildFolders.saveClientTheme(obj1);
     } else {
-      if (found.type === tmp(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-        const result2 = tmp(14529).updateBackgroundGradientPreset(found.id);
-        const tmpResult6 = tmp(14529);
-        tmp(11135).resetCustomTheme();
-        const tmpResult7 = tmp(11135);
-        ({ id: obj10[0], theme: obj10[1] } = found);
-        let saveClientThemeResult = tmp(9365).saveClientTheme({ backgroundGradientPresetId: null, theme: null });
-        const obj2 = { backgroundGradientPresetId: null, theme: null };
-        const tmpResult8 = tmp(9365);
+      if (mobileThemes.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+        const result2 = updateBackgroundGradientPreset.updateBackgroundGradientPreset(mobileThemes.id);
+        const tmpResult6 = updateBackgroundGradientPreset;
+        updateCustomTheme.resetCustomTheme();
+        const tmpResult7 = updateCustomTheme;
+        ({ id: obj10[0], theme: obj10[1] } = mobileThemes);
+        let saveClientThemeResult = saveGuildFolders.saveClientTheme({ backgroundGradientPresetId: null, theme: null });
+        const tmpResult8 = saveGuildFolders;
       } else {
-        const result3 = tmp(14529).resetBackgroundGradientPreset();
-        const tmpResult9 = tmp(14529);
-        tmp(11135).resetCustomTheme();
-        const tmpResult10 = tmp(11135);
+        const result3 = updateBackgroundGradientPreset.resetBackgroundGradientPreset();
+        const tmpResult9 = updateBackgroundGradientPreset;
+        updateCustomTheme.resetCustomTheme();
+        const tmpResult10 = updateCustomTheme;
         const obj3 = { theme: null };
-        obj3[0] = found.theme;
-        saveClientThemeResult = tmp(9365).saveClientTheme(obj3);
-        const tmpResult11 = tmp(9365);
+        obj3[0] = mobileThemes.theme;
+        saveClientThemeResult = saveGuildFolders.saveClientTheme(obj3);
+        const tmpResult11 = saveGuildFolders;
       }
       return saveClientThemeResult;
     }
-  } else if (found.type === tmp(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-    let combined = tmp(1306).BackgroundGradientPresetId[found.id];
+  } else if (mobileThemes.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+    let combined = create.BackgroundGradientPresetId[mobileThemes.id];
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "default " + found.theme;
+    combined = "default " + mobileThemes.theme;
   }
 };
-export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations) {
-  if ("system" !== theme.theme) {
-    if (theme.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-      let obj = expandEventPropertiesDefault;
-      obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
+export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(mobileThemes, systemTheme, analyticsLocations) {
+  if ("system" !== mobileThemes.theme) {
+    if (mobileThemes.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      let obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
       obj[0] = constants.CLIENT_THEME;
       obj[1] = "custom theme";
       obj[2] = true;
       obj[3] = false;
       obj[4] = analyticsLocations;
       obj.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj);
-      if (theme.type === tmp14(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-        let tmp14Result = tmp14(1347);
-        theme = tmp14Result.getCustomThemeBaseTheme(theme.theme);
+      if (mobileThemes.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+        let tmp14Result = getThemeForColor;
+        let theme = tmp14Result.getCustomThemeBaseTheme(mobileThemes.theme);
       } else {
-        theme = theme.theme;
+        theme = mobileThemes.theme;
       }
-      tmp14Result = tmp14(4222);
+      tmp14Result = setSystemTheme;
       obj = {};
       obj[systemTheme] = theme;
       const result = tmp14Result.updateThemePreferences(obj);
-      if (theme.type === tmp14(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      if (mobileThemes.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
         obj1 = { customUserThemeSettings: null };
-        obj1[0] = theme.customThemeSettings;
-        const result1 = tmp14(4222).updateSyncedClientTheme(systemTheme, obj1);
-        const tmp14Result1 = tmp14(4222);
-      } else if (theme.type === tmp14(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+        obj1[0] = mobileThemes.customThemeSettings;
+        const result1 = setSystemTheme.updateSyncedClientTheme(systemTheme, obj1);
+        const tmp14Result1 = setSystemTheme;
+      } else if (mobileThemes.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
         const obj2 = { backgroundGradientPresetId: null };
-        obj2[0] = theme.id;
-        const result2 = tmp14(4222).updateSyncedClientTheme(systemTheme, obj2);
-        const tmp14Result2 = tmp14(4222);
+        obj2[0] = mobileThemes.id;
+        const result2 = setSystemTheme.updateSyncedClientTheme(systemTheme, obj2);
+        const tmp14Result2 = setSystemTheme;
       } else {
         const obj3 = { theme: null };
-        obj3[0] = theme.theme;
-        const result3 = tmp14(4222).updateSyncedClientTheme(systemTheme, obj3);
-        const tmp14Result3 = tmp14(4222);
+        obj3[0] = mobileThemes.theme;
+        const result3 = setSystemTheme.updateSyncedClientTheme(systemTheme, obj3);
+        const tmp14Result3 = setSystemTheme;
       }
-    } else if (theme.type === tmp14(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-      let combined = tmp14(1306).BackgroundGradientPresetId[theme.id];
+    } else if (mobileThemes.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+      let combined = create.BackgroundGradientPresetId[mobileThemes.id];
     } else {
       const _HermesInternal = HermesInternal;
-      combined = "default " + theme.theme;
+      combined = "default " + mobileThemes.theme;
     }
   }
 };
@@ -125,7 +127,7 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, c
     prop = syncedClientTheme.customUserThemeSettings;
   }
   if (null != prop) {
-    const findIndexResult = memo2.findIndex((type) => type.type === syncedClientTheme(table[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
+    const findIndexResult = memo2.findIndex((item, index) => item.type === syncedClientTheme(table[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
     if (findIndexResult >= 0) {
       return findIndexResult;
     }
@@ -135,10 +137,10 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, c
     prop1 = syncedClientTheme.backgroundGradientPresetId;
   }
   if (null != prop1) {
-    const findIndexResult1 = memo2.findIndex((type) => {
-      let tmp = type.type === syncedClientTheme(closure_1_2[6]).ClientThemeType.BACKGROUND_GRADIENT_PRESET;
+    const findIndexResult1 = memo2.findIndex((item, index) => {
+      let tmp = item.type === syncedClientTheme(dependencyMap[6]).ClientThemeType.BACKGROUND_GRADIENT_PRESET;
       if (tmp) {
-        tmp = type.id === syncedClientTheme.backgroundGradientPresetId;
+        tmp = item.id === syncedClientTheme.backgroundGradientPresetId;
       }
       return tmp;
     });
@@ -147,7 +149,7 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, c
     }
   }
   closure_1 = syncedClientTheme.themePreferenceForSystemTheme(closure_0);
-  const findIndexResult2 = memo2.findIndex((theme) => theme.theme === closure_1);
+  const findIndexResult2 = memo2.findIndex((item, index) => item.theme === closure_1);
   let num3 = 0;
   if (findIndexResult2 >= 0) {
     num3 = findIndexResult2;
@@ -159,20 +161,18 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme() {
 };
 export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {
   setSystemTheme.setUseSystemTheme(SystemThemeState.OFF);
-  const obj = setSystemTheme;
   const result = setSystemTheme.clearSyncedClientThemes();
 };
 export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
   ({ isPersisted, isSynced, themeName, analyticsLocations } = arg0);
-  let obj = expandEventPropertiesDefault;
-  obj = { feature_name: constants.CLIENT_THEME, theme_name: themeName, is_persisted: isPersisted, is_synced: isSynced, location_stack: analyticsLocations };
+  const obj = { feature_name: constants.CLIENT_THEME, theme_name: themeName, is_persisted: isPersisted, is_synced: isSynced, location_stack: analyticsLocations };
   obj.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj);
 };
 export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
   closure_0 = userPreset;
   if (null != userPreset) {
-    const findIndexResult = memo1.findIndex((type) => type.type === userPreset(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET);
-    const findIndexResult1 = closure_7.findIndex((id) => id.id === userPreset.id);
+    const findIndexResult = memo1.findIndex((item, index) => item.type === userPreset(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET);
+    const findIndexResult1 = closure_7.findIndex((item, index) => item.id === userPreset.id);
     let num4 = 0;
     if (findIndexResult >= 0) {
       num4 = 0;
@@ -184,14 +184,10 @@ export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo
   } else {
     if (c4) {
       if (tmp >= 0) {
-        return memo1.findIndex((type) => type.type === userPreset(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
+        return memo1.findIndex((item, index) => item.type === userPreset(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
       }
     }
-    let str = "system";
-    if (!c1) {
-      str = c3;
-    }
-    const findIndexResult2 = memo1.findIndex((theme) => theme.theme === str);
+    const findIndexResult2 = memo1.findIndex((item, index) => item.theme === str);
     let num2 = 0;
     if (findIndexResult2 >= 0) {
       num2 = findIndexResult2;

@@ -1,12 +1,12 @@
 // === Module 9861: reset ===
 
 // Module 9861 (reset)
+import obj132 from "obj132" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isStreamKey from "isStreamKey" /* 4531 */;
 import StreamIssueReportReasons from "StreamIssueReportReasons" /* 4532 */;
-import set from "set" /* 2 */;
 
 function reset() {
   closure_4 = {};
@@ -15,7 +15,7 @@ function reset() {
 const StreamTypes = StreamIssueReportReasons.StreamTypes;
 let closure_4 = {};
 let closure_5 = {};
-let set = new Set();
+const set = new Set();
 const Store = initializeDefault.Store;
 class ApplicationStreamPreviewStore extends Store {
 }
@@ -116,10 +116,10 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(dispatch
       const tmpResult = applyDefault;
     }
     if (reduced) {
-      reduced = voiceStates.reduce((arg0, guildId) => {
-        guildId = guildId.guildId;
-        if (guildId.selfStream) {
-          return arg0;
+      reduced = voiceStates.reduce((acc, item, index) => {
+        const guildId = item.guildId;
+        if (item.selfStream) {
+          return acc;
         } else {
           let obj = callback(table[2]);
           if (null != guildId) {
@@ -142,6 +142,6 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(dispatch
     return reduced;
   }
 });
-const result = set.fileFinishedImporting("stores/ApplicationStreamPreviewStore.tsx");
+const result = obj132.fileFinishedImporting("stores/ApplicationStreamPreviewStore.tsx");
 
 export default applicationStreamPreviewStore;

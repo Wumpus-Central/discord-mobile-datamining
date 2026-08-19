@@ -1,9 +1,9 @@
 // === Module 4083: makeIntlFormatter ===
 
 // Module 4083 (makeIntlFormatter)
-import closure_2 from "_getSystemLocale" /* 1994 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
 
-const require = arg1;
+const require = fn;
 function makeIntlFormatter(locale, arg1) {
   try {
     const _Intl = Intl;
@@ -13,7 +13,7 @@ function makeIntlFormatter(locale, arg1) {
     return Intl.DateTimeFormat(undefined, tmp).format;
   }
 }
-const result = require("set").fileFinishedImporting("lib/intlFormatDate.tsx");
+const result = require("obj132").fileFinishedImporting("lib/intlFormatDate.tsx");
 
 export const makeFormatter = function makeFormatter(arg0) {
   locale = locale.locale;

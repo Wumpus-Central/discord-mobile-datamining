@@ -9,16 +9,17 @@ import Text2 from "Text" /* 4734 */;
 import TableSwitchRow from "TableSwitchRow" /* 7178 */;
 import TableRadioRow from "TableRadioRow" /* 8100 */;
 import context from "context" /* 8101 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
 import UserSettingsVoice from "UserSettingsVoice" /* 12547 */;
 import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 12557 */;
 import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 12558 */;
 import handleKrispLinkPressedDefault from "handleKrispLinkPressed" /* 12561 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class VoiceProcessingOptions {
   constructor() {
     krisp = closure_8();
@@ -122,12 +123,11 @@ class VoiceProcessingOptions {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { optionsParentContainer: { marginTop: 12 }, optionsDescriptionContainer: null, krisp: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
+const createCacheKey = { paddingTop: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginStart: -20 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceProcessing.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceProcessing.tsx");
 
 export default function UserSettingsVoiceProcessing() {
   let obj = initialize;
@@ -155,22 +155,21 @@ export default function UserSettingsVoiceProcessing() {
   const items2 = [callback(TableSwitchRow.TableSwitchRow, obj1), ];
   if (advancedVoiceActivitySupported) {
     const obj2 = { label: null, subLabel: null, value: null, onValueChange: null };
-    const intl5 = tmp(1236).intl;
-    obj2[0] = intl5.string(tmp(1236).t.BbESsg);
-    const intl6 = tmp(1236).intl;
-    obj2[1] = intl6.string(tmp(1236).t.LoOB1F);
+    const intl5 = getSystemLocale.intl;
+    obj2[0] = intl5.string(getSystemLocale.t.BbESsg);
+    const intl6 = getSystemLocale.intl;
+    obj2[1] = intl6.string(getSystemLocale.t.LoOB1F);
     obj2[2] = vadUseKrisp;
     obj2[3] = function onValueChange(vadUseKrisp) {
-      let obj = closure_1_1(closure_1_2[9]);
-      obj = { vadUseKrisp };
+      const obj = { vadUseKrisp };
       return obj.setMode(closure_0, obj);
     };
-    advancedVoiceActivitySupported = callback(tmp(7178).TableSwitchRow, obj2);
+    advancedVoiceActivitySupported = callback(TableSwitchRow.TableSwitchRow, obj2);
   }
   const obj3 = { children: null };
   items2[1] = advancedVoiceActivitySupported;
-  items1[2] = closure_6(UserSettingsVoice.UserSettingsTableRowGroup, { hasIcons: false, children: items2 });
+  items1[2] = callback(UserSettingsVoice.UserSettingsTableRowGroup, { hasIcons: false, children: items2 });
   obj3[0] = items1;
-  return closure_6(closure_7, obj3);
+  return callback(closure_7, obj3);
 };
 export { VoiceProcessingOptions };

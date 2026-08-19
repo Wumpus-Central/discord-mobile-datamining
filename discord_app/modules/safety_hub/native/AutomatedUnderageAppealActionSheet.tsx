@@ -2,29 +2,24 @@
 
 // Module 11079 (items)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
 import SafetyHubView from "SafetyHubView" /* 5438 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import { intl, intl as intl2, intl as intl3, intl as intl4, intl as intl5, intl as intl6 } from "getSystemLocale" /* 1236 */;
 
-const require = arg1;
+const require = fn;
 ({ AGE_APPEAL_ACTION_SHEET_NAME: closure_6, SafetyHubLinks: error } = SafetyHubView);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, header: null, content: null, moreInfo: null, learnMore: null, footer: null, number: null };
-createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+const createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center" };
 createCacheKey[2] = { flex: 1, gap: ThemesDefault.space.PX_16 };
-let obj1 = { flex: 1, gap: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { gap: ThemesDefault.space.PX_4 };
-let obj2 = { gap: ThemesDefault.space.PX_4 };
 createCacheKey[4] = { marginTop: ThemesDefault.space.PX_12, textAlign: "center", paddingBottom: ThemesDefault.space.PX_32 };
-let obj3 = { marginTop: ThemesDefault.space.PX_12, textAlign: "center", paddingBottom: ThemesDefault.space.PX_32 };
 createCacheKey[5] = { marginTop: ThemesDefault.space.PX_8 };
-let obj4 = { marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[6] = { alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj6 = { title: null, description: null };
@@ -39,27 +34,23 @@ let obj8 = { title: null, description: null };
 obj8[0] = intl5.string(require("getSystemLocale").t["oY/z1Q"]);
 obj8[1] = intl6.string(require("getSystemLocale").t.wtj02W);
 items[2] = obj8;
-let obj5 = { alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/safety_hub/native/AutomatedUnderageAppealActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/safety_hub/native/AutomatedUnderageAppealActionSheet.tsx");
 
 export default function AutomatedUnderageAppealActionSheet(onClose) {
   onClose = onClose.onClose;
   const classificationId = onClose.classificationId;
-  dependencyMap = undefined;
-  let stateFromStores;
-  let callback;
   let callback1;
   const tmp = callback3();
   dependencyMap = tmp;
   let obj = onClose(589);
   items = [callback1];
-  stateFromStores = obj.useStateFromStores(items, () => callback1.getAgeVerificationWebviewUrl());
+  const stateFromStores = obj.useStateFromStores(items, () => callback1.getAgeVerificationWebviewUrl());
   obj1 = onClose(589);
   const items1 = [callback1];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => callback1.getIsLoadingAgeVerification());
   const bottom = classificationId(1629)().bottom;
   const items2 = [onClose];
-  callback = stateFromStores.useCallback(() => {
+  const callback = stateFromStores.useCallback(() => {
     if (onClose != null) {
       tmp();
     }
@@ -75,8 +66,8 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   const items4 = [stateFromStores, callback1];
   const effect = stateFromStores.useEffect(() => {
     if ("" !== stateFromStores) {
-      let obj = classificationId(number[11]);
-      obj = { webviewUrl: null, onComplete: null, entryPoint: null };
+      classificationId(number[11]);
+      const obj = { webviewUrl: null, onComplete: null, entryPoint: null };
       obj[0] = tmp;
       obj[1] = callback1;
       obj[2] = onClose(number[12]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS;
@@ -109,13 +100,13 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   const obj6 = {
     children: callback(onClose(6286).TableRowGroup, {
       hasIcons: true,
-      children: items.map((arg0, arg1) => {
-        ({ title, description } = arg0);
+      children: items.map((item, index) => {
+        ({ title, description } = item);
         let obj = { label: title, subLabel: description, icon: null };
-        obj = { style: number.number, children: closure_1_8(onClose(number[16]).Text, obj) };
-        obj = { variant: "heading-md/semibold", color: "text-brand", children: arg1 + 1 };
+        { style: number.number, children: closure_1_8(onClose(number[16]).Text, obj) };
+        obj = { variant: "heading-md/semibold", color: "text-brand", children: index + 1 };
         obj[2] = closure_1_8(callback, obj);
-        return closure_1_8(onClose(number[18]).TableRow, obj, arg1);
+        return closure_1_8(onClose(number[18]).TableRow, obj, index);
       })
     })
   };

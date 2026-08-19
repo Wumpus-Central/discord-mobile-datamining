@@ -4,11 +4,11 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_2 from "handleInit" /* 7527 */;
+import handleInit2 from "handleInit" /* 7527 */;
 import { AnalyticEvents } from "ME" /* 676 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 
-require = arg1;
+require = fn;
 function handleInit() {
   map.clear();
   map1.clear();
@@ -24,7 +24,6 @@ function handleSetActiveCommand(arg0) {
   let tmp3 = null != value;
   if (tmp3) {
     tmp3 = id !== value.commandId || activeOptionName !== value.optionName;
-    const tmp4 = id !== value.commandId || activeOptionName !== value.optionName;
   }
   if (tmp3) {
     if (tmp5) {
@@ -46,7 +45,7 @@ function handleSetActiveCommand(arg0) {
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-let closure_7 = set.isDesktop();
+let closure_7 = obj132.isDesktop();
 const Store = initializeDefault.Store;
 class ApplicationCommandAutocompleteStore extends Store {
 }
@@ -78,11 +77,10 @@ prototype["getLastErrored"] = function getLastErrored(id) {
     const map3 = new Map();
     obj[5] = map3;
     const result = obj.set(id, obj);
-    const obj2 = store;
   }
   return obj.get(id).lastErrored;
 };
-prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, first) {
+prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, query) {
   let obj = map1;
   if (!map1.has(id)) {
     const activeCommand = store.getActiveCommand(id);
@@ -106,13 +104,12 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
     const map3 = new Map();
     obj[5] = map3;
     const result = obj.set(id, obj);
-    const obj2 = store;
   }
   const optionNameToAutocompleteQueries = obj.get(id).optionNameToAutocompleteQueries;
-  let value = optionNameToAutocompleteQueries.get(name);
-  value = undefined;
+  optionNameToAutocompleteQueries.get(name);
+  let value;
   if (value != null) {
-    value = value.get(first);
+    value = value.get(query);
   }
   return value;
 };
@@ -140,7 +137,6 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
     const map3 = new Map();
     obj[5] = map3;
     const result = obj.set(id, obj);
-    const obj2 = store;
   }
   return obj.get(id).optionNameToLastResults.get(name);
 };
@@ -168,12 +164,11 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
     const map3 = new Map();
     obj[5] = map3;
     const result = obj.set(id, obj);
-    const obj2 = store;
   }
   return obj.get(id).lastResponseNonce;
 };
 ApplicationCommandAutocompleteStore.displayName = "ApplicationCommandAutocompleteStore";
-set = {
+obj132 = {
   CONNECTION_OPEN: handleInit,
   LOGOUT: handleInit,
   CHANNEL_SELECT: handleInit,
@@ -202,7 +197,6 @@ set = {
       const map3 = new Map();
       obj[5] = map3;
       const result = obj.set(channelId, obj);
-      const obj2 = store;
     }
     let value = obj.get(channelId);
     const optionNameToLastQuery = value.optionNameToLastQuery;
@@ -278,7 +272,6 @@ set = {
         const map3 = new Map();
         obj[5] = map3;
         const result = obj10.set(channelId, obj);
-        const obj2 = store;
       }
       value = obj10.get(channelId);
       const optionNameToAutocompleteQueries = value.optionNameToAutocompleteQueries;
@@ -300,8 +293,8 @@ set = {
       _require = tmp29;
       let mapped;
       if (choices != null) {
-        mapped = choices.map((arg0) => {
-          ({ value, name_localized, name } = arg0);
+        mapped = choices.map((item, index) => {
+          ({ value, name_localized, name } = item);
           if (name_localized == null) {
             name_localized = name;
           }
@@ -391,7 +384,6 @@ set = {
           const map3 = new Map();
           obj[5] = map3;
           const result = obj4.set(channelId, obj);
-          const obj5 = store;
         }
         map1.get(channelId).lastErrored = true;
         return true;
@@ -411,7 +403,6 @@ set = {
     let tmp3 = null != value;
     if (tmp3) {
       tmp3 = id !== value.commandId || activeOptionName !== value.optionName;
-      const tmp4 = id !== value.commandId || activeOptionName !== value.optionName;
     }
     if (tmp3) {
       if (tmp5) {
@@ -431,7 +422,7 @@ set = {
     }
   }
 };
-const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteStore(dispatcherDefault, set);
-let result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandAutocompleteStore.tsx");
+const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteStore(dispatcherDefault, obj132);
+let result = obj132.fileFinishedImporting("modules/application_commands/ApplicationCommandAutocompleteStore.tsx");
 
 export default applicationCommandAutocompleteStore;

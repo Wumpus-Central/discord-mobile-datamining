@@ -4,7 +4,7 @@
 import timestampDefault from "timestamp" /* 3 */;
 import PlatformTypes from "PlatformTypes" /* 501 */;
 
-require = arg1;
+require = fn;
 let closure_2 = new timestampDefault("KeyboardStateDebugging");
 let obj = {
   channelSafeAreaBottomLayoutHeightChanged(arg0) {
@@ -63,6 +63,7 @@ let obj = {
     if (!obj.isIOS()) {
       logger.info("KeyboardController keyboardWillHide.");
     }
+    obj = PlatformTypes;
   },
   keyboardControllerKeyboardDidHide() {
     let flag = arg0;
@@ -97,9 +98,10 @@ let obj = {
     if (!obj.isIOS()) {
       logger.warn("Marking potential bad state from user, check logs above.");
     }
+    obj = PlatformTypes;
   }
 };
 const tmp2 = new timestampDefault("KeyboardStateDebugging");
-const result = require("set").fileFinishedImporting("modules/keyboard/KeyboardStateDebugging.tsx");
+const result = require("obj132").fileFinishedImporting("modules/keyboard/KeyboardStateDebugging.tsx");
 
 export default obj;

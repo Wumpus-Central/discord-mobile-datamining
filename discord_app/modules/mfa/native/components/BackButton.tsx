@@ -1,16 +1,15 @@
 // === Module 15126: BackButton ===
 
 // Module 15126 (BackButton)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import MFAButtonDefault from "MFAButton" /* 15127 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
+const result = obj132.fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
 
 export default function BackButton(props) {
   props = props.props;
-  importDefault = undefined;
   let obj = props(1500);
   importDefault = obj.useNavigation();
   obj = { variant: "secondary", text: null, onPress: null };

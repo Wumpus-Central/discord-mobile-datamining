@@ -1,17 +1,18 @@
 // === Module 12521: participantMemberInfo ===
 
 // Module 12521 (participantMemberInfo)
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import nameFromUser from "nameFromUser" /* 4219 */;
 
-require = arg1;
-const DAY = setDefault.Millis.DAY;
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
+require = fn;
+const DAY = obj132Default.Millis.DAY;
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
 
 export const participantMemberInfo = function participantMemberInfo(participant) {
   if (obj.isNewUser(participant.user)) {
-    const intl5 = tmp(1236).intl;
-    return intl5.string(tmp(1236).t.VaCdhQ);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t.VaCdhQ);
   } else {
     const member = participant.member;
     let joinedAt;
@@ -19,8 +20,8 @@ export const participantMemberInfo = function participantMemberInfo(participant)
       joinedAt = member.joinedAt;
     }
     if (null == joinedAt) {
-      const intl4 = tmp(1236).intl;
-      let stringResult = intl4.string(tmp(1236).t.CQmzib);
+      const intl4 = getSystemLocale.intl;
+      let stringResult = intl4.string(getSystemLocale.t.CQmzib);
     } else {
       if (null != participant.member) {
         if (participant.member.roles.length > 0) {
@@ -30,8 +31,8 @@ export const participantMemberInfo = function participantMemberInfo(participant)
             name = role.name;
           }
           if (name == null) {
-            const intl3 = tmp(1236).intl;
-            name = intl3.string(tmp(1236).t["97/NdO"]);
+            const intl3 = getSystemLocale.intl;
+            name = intl3.string(getSystemLocale.t["97/NdO"]);
           }
           stringResult = name;
         }
@@ -41,11 +42,11 @@ export const participantMemberInfo = function participantMemberInfo(participant)
       const _Date2 = Date;
       const time = date.getTime();
       if (time - Date.parse(joinedAt) < DAY) {
-        const intl2 = tmp(1236).intl;
-        stringResult = intl2.string(tmp(1236).t.IKE48n);
+        const intl2 = getSystemLocale.intl;
+        stringResult = intl2.string(getSystemLocale.t.IKE48n);
       } else {
-        const intl = tmp(1236).intl;
-        stringResult = intl.string(tmp(1236).t.u0gUWt);
+        const intl = getSystemLocale.intl;
+        stringResult = intl.string(getSystemLocale.t.u0gUWt);
       }
     }
     return stringResult;

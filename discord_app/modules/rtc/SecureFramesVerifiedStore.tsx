@@ -5,14 +5,14 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
 import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9708 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "initialize" /* 4558 */;
-import closure_5 from "map" /* 9691 */;
-import closure_6 from "initialize" /* 9692 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import initialize from "initialize" /* 4558 */;
+import map from "map" /* 9691 */;
+import initialize2 from "initialize" /* 9692 */;
 import { RTCConnectionStates } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function computeCallVerification() {
   let userIds = authStore.getUserIds();
   if (userIds == null) {
@@ -22,16 +22,11 @@ function computeCallVerification() {
   let flag = true;
   for (const item10020 of userIds) {
     if (tmp5 !== item10020) {
-      let tmp7 = map;
-      let tmp8 = item10020;
       if (true !== map.get(tmp6)) {
         flag = false;
-        let tmp9 = obj;
         obj.return();
         break;
       }
-      let tmp10 = flag;
-      let tmp11 = flag;
       return flag !== flag;
     }
     continue;
@@ -60,11 +55,11 @@ function handleUserUpdate(userId) {
       obj = getCurrentUserSigningKey;
     }
     const allActiveStreamKeys = store2.getAllActiveStreamKeys();
-    const reduced = allActiveStreamKeys.reduce((arg0, streamKey) => {
-      const tmp = true === closure_8.get(callback(table[7]).decodeStreamKey(streamKey).ownerId);
-      const value = store.get(streamKey);
-      const result = store.set(streamKey, tmp);
-      return value !== tmp || arg0;
+    const reduced = allActiveStreamKeys.reduce((acc, item, index) => {
+      const tmp = true === closure_8.get(callback(table[7]).decodeStreamKey(item).ownerId);
+      const value = store.get(item);
+      const result = store.set(item, tmp);
+      return value !== tmp || acc;
     }, false);
     if (!flag) {
       flag = reduced;
@@ -89,11 +84,11 @@ prototype["initialize"] = function initialize() {
 prototype["isCallVerified"] = function isCallVerified() {
   return c10;
 };
-prototype["isStreamVerified"] = function isStreamVerified(arg0) {
-  return map1.get(arg0);
+prototype["isStreamVerified"] = function isStreamVerified(streamKey) {
+  return map1.get(streamKey);
 };
-prototype["isUserVerified"] = function isUserVerified(arg0) {
-  return map.get(arg0);
+prototype["isUserVerified"] = function isUserVerified(userId) {
+  return map.get(userId);
 };
 SecureFramesVerifiedStore.displayName = "SecureFramesVerifiedStore";
 const secureFramesVerifiedStore = new SecureFramesVerifiedStore(dispatcherDefault, {
@@ -116,42 +111,38 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(dispatcherDefaul
     ({ streamKey, context } = state);
     if (state.state !== RTCConnectionStates.DISCONNECTED) {
       return false;
-    } else {
-      if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === context) {
-        let tmp6 = null != streamKey;
-        if (tmp6) {
-          map1.delete(streamKey);
-          tmp6 = computeCallVerification();
-        }
-        return tmp6;
-      } else if (tmp10(4569).MediaEngineContextTypes.DEFAULT === context) {
-        map.clear();
-        map1.clear();
-        c10 = false;
+    } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === context) {
+      let tmp6 = null != streamKey;
+      if (tmp6) {
+        map1.delete(streamKey);
+        tmp6 = computeCallVerification();
       }
-      tmp10 = require;
+      return tmp6;
+    } else if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === context) {
+      map.clear();
+      map1.clear();
+      c10 = false;
     }
   },
   RTC_CONNECTION_ROSTER_MAP_UPDATE: function handleBulkUserUpdate(userIds) {
     userIds = userIds.userIds;
-    let id;
-    id = store.getId();
-    let reduced = userIds.reduce((arg0, arg1) => {
-      let tmp = arg0;
-      if (closure_0 !== arg1) {
+    const id = store.getId();
+    let reduced = userIds.reduce((acc, item, index) => {
+      let tmp = acc;
+      if (closure_0 !== item) {
         const obj = { userId: null };
-        obj[0] = arg1;
-        tmp = closure_1_13(obj) || arg0;
-        const tmp3 = closure_1_13(obj) || arg0;
+        obj[0] = item;
+        tmp = handleUserUpdate(obj) || acc;
+        const tmp3 = handleUserUpdate(obj) || acc;
       }
       return tmp;
     }, false);
     const allActiveStreamKeys = store2.getAllActiveStreamKeys();
-    const reduced1 = allActiveStreamKeys.reduce((arg0, streamKey) => {
-      const tmp = true === closure_8.get(callback(table[7]).decodeStreamKey(streamKey).ownerId);
-      const value = store.get(streamKey);
-      const result = store.set(streamKey, tmp);
-      return value !== tmp || arg0;
+    const reduced1 = allActiveStreamKeys.reduce((acc, item, index) => {
+      const tmp = true === closure_8.get(callback(table[7]).decodeStreamKey(item).ownerId);
+      const value = store.get(item);
+      const result = store.set(item, tmp);
+      return value !== tmp || acc;
     }, false);
     if (!reduced) {
       reduced = reduced1;
@@ -167,6 +158,6 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(dispatcherDefaul
   SECURE_FRAMES_VERIFIED_KEY_DELETE: handleUserUpdate,
   SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: handleUserUpdate
 });
-let result = require("set").fileFinishedImporting("modules/rtc/SecureFramesVerifiedStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/rtc/SecureFramesVerifiedStore.tsx");
 
 export default secureFramesVerifiedStore;

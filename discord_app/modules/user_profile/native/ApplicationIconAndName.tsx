@@ -1,7 +1,7 @@
 // === Module 11799: ApplicationIconAndName ===
 
 // Module 11799 (ApplicationIconAndName)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import Text from "Text" /* 4734 */;
@@ -10,12 +10,11 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles((width) => {
-  let obj = { gameIcon: null };
-  obj = { width, height: width, marginTop: -1, marginRight: 4, borderRadius: ThemesDefault.radii.xs };
+  const obj = { width, height: width, marginTop: -1, marginRight: 4, borderRadius: ThemesDefault.radii.xs };
   obj[0] = obj;
   return obj;
 });
-const result = set.fileFinishedImporting("modules/user_profile/native/ApplicationIconAndName.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/native/ApplicationIconAndName.tsx");
 
 export default function ApplicationIconAndName(textVariant) {
   ({ application, iconSize, useComma } = textVariant);
@@ -28,7 +27,7 @@ export default function ApplicationIconAndName(textVariant) {
     str = "";
   }
   obj[2] = { uri: str };
-  const items = [closure_3(Button.Icon, obj, application.id), ];
+  const items = [callback(Button.Icon, obj, application.id), ];
   obj = { variant: textVariant.textVariant, children: null };
   let str2 = "";
   if (useComma) {
@@ -36,7 +35,7 @@ export default function ApplicationIconAndName(textVariant) {
   }
   obj = { children: null };
   obj[1] = "" + application.name + str2;
-  items[1] = closure_3(Text.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[0] = items;
-  return closure_5(closure_4, obj);
+  return callback2(closure_4, obj);
 };

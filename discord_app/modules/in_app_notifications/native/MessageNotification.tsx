@@ -3,30 +3,24 @@
 // Module 10047
 import NativeMessagePreviewContentDefault from "NativeMessagePreviewContent" /* 10048 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import set from "set" /* 10030 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 10030 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: c5, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_6 } = set);
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: c5, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_6 } = require("set"));
 let closure_8 = createCacheKey.createStyles({ newContainerRoleDot: { paddingRight: 4, paddingTop: 0 } });
 let closure_9 = importAllResult.memo((message) => jsx(NativeMessagePreviewContentDefault, { message: message.message, lineClamp: closure_6, maxHeight: closure_5 }));
-const result = set.fileFinishedImporting("modules/in_app_notifications/native/MessageNotification.tsx");
-
-export default importAllResult.memo(function MessageNotification(notification) {
+const memoResult = importAllResult.memo(function MessageNotification(notification) {
   notification = notification.notification;
-  let message;
-  let channel;
-  let parentChannel;
-  let guild;
   let nullableMessageAuthor;
   let handleDismissNotification;
-  message = notification.message;
-  channel = notification.channel;
-  parentChannel = notification.parentChannel;
-  guild = notification.guild;
+  const message = notification.message;
+  const channel = notification.channel;
+  const parentChannel = notification.parentChannel;
+  const guild = notification.guild;
   let tmp2 = 0 === message.content.length;
   if (tmp2) {
     tmp2 = null !== message.interaction;
@@ -73,7 +67,6 @@ export default importAllResult.memo(function MessageNotification(notification) {
       obj[1] = colorStrings;
       obj[2] = tmp.newContainerRoleDot;
       tmp15Result = jsx(tmp9(tmp10[7]).RoleDot, { color: null, colors: null, containerStyles: null });
-      const tmp15 = jsx;
     }
   }
   const obj4 = message(parentChannel[6]);
@@ -95,8 +88,8 @@ export default importAllResult.memo(function MessageNotification(notification) {
   }, items2);
   const items4 = [channel, parentChannel, guild, nullableMessageAuthor, handleDismissNotification];
   const callback1 = guild.useCallback(() => {
-    let obj = channel(parentChannel[13]);
-    obj = { channelId: channel.id };
+    channel(parentChannel[13]);
+    const obj = { channelId: channel.id };
     return obj.pushLazy(message(parentChannel[16])(parentChannel[15], parentChannel.paths), obj, "in-app-notification-settings-modal");
   }, items3);
   const memo = guild.useMemo(() => ({ type: "message", channel, parentChannel, guild, author: nullableMessageAuthor, onDismiss: handleDismissNotification }), items4);
@@ -119,3 +112,6 @@ export default importAllResult.memo(function MessageNotification(notification) {
   obj2[7] = callback1;
   return jsx(message(parentChannel[17]).NotificationPressable, { icon: null, accessoryLabelNode: null, rightAccessory: null, children: null, header: null, notification: null, onPress: null, onSettingsPress: null });
 });
+const result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/MessageNotification.tsx");
+
+export default memoResult;

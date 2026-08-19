@@ -2,22 +2,21 @@
 
 // Module 10277 (NativeModules)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getDimensionsStoreStateForEntry" /* 1495 */;
+import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry" /* 1495 */;
 import { InAppCameraUsedCameraPreviewTypes as closure_7 } from "DRAG_HANDLE" /* 1624 */;
 import { ACTION_SHEET_START_HEIGHT_RATIO as closure_8 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
 import { NativePermissionStatus } from "NativePermissionStatus" /* 4839 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 const NativeModules = get_ActivityIndicator.NativeModules;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.PhotoLibraryHelper);
-let obj = { listContainer: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 };
+let obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 };
 obj[0] = obj;
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = { code: "function MediaKeyboardListTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get();}" };
@@ -48,58 +47,45 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
   }
   const uploadLimit = channel.uploadLimit;
   const disableWhenReachedLimit = channel.disableWhenReachedLimit;
-  let ref;
-  let first;
-  closure_15 = undefined;
-  let assets;
-  let itemsPerRow;
-  let itemsPageSizeRef;
-  closure_19 = undefined;
-  let height;
-  c21 = undefined;
-  c22 = undefined;
-  let animatedSnapPoints;
-  closure_24 = undefined;
   flag = undefined;
   c26 = undefined;
   let memo;
   let callback1;
   let width;
-  let maximum;
   closure_31 = undefined;
   let obj = onPressItem;
-  ref = onPressItem.useRef(true);
+  const ref = onPressItem.useRef(true);
   let items = [ref];
   const callback = onPressItem.useCallback((nativeEvent) => {
     ref.current = nativeEvent.nativeEvent.contentOffset.y < 100;
   }, items);
   const tmp4 = onAttachPress(onPressItem.useState(null), 2);
-  first = tmp4[0];
+  let first = tmp4[0];
   closure_15 = tmp4[1];
   obj1 = importDefault(sharedValue[11]);
-  assets = obj1.useAssets();
+  const assets = obj1.useAssets();
   let obj2 = animatedIndex(sharedValue[12]);
   const mediaKeyboardItemsPerRow = obj2.useMediaKeyboardItemsPerRow();
-  itemsPerRow = mediaKeyboardItemsPerRow.itemsPerRow;
-  itemsPageSizeRef = mediaKeyboardItemsPerRow.itemsPageSizeRef;
+  const itemsPerRow = mediaKeyboardItemsPerRow.itemsPerRow;
+  const itemsPageSizeRef = mediaKeyboardItemsPerRow.itemsPageSizeRef;
   const effect = onPressItem.useEffect(() => {
     const NativePermissionManager = onLongPressItem.NativePermissionManager;
     const photoAuthorization = NativePermissionManager.requestPhotoAuthorization();
-    photoAuthorization.then((arg0) => {
-      callback(arg0);
+    photoAuthorization.then((result) => {
+      callback(result);
     });
   }, []);
   let items1 = [first, itemsPageSizeRef, extensions];
   const effect1 = onPressItem.useEffect(() => {
-    let obj = _undefined(sharedValue[11]);
-    obj = { batchSize: itemsPageSizeRef.current, extensions };
+    _undefined(sharedValue[11]);
+    let obj = { batchSize: itemsPageSizeRef.current, extensions };
     obj.refreshAssets(obj);
     let addListenerResult;
     if (uploadLimit != null) {
       addListenerResult = uploadLimit.addListener("photoLibraryChanged", () => {
         if (ref.current) {
-          let obj = closure_1_1(closure_1_2[11]);
-          obj = { batchSize: null, extensions: null };
+          closure_1_1(sharedValue[11]);
+          const obj = { batchSize: null, extensions: null };
           obj[0] = ref2.current;
           obj[1] = closure_9;
           obj.refreshAssets(obj);
@@ -108,13 +94,13 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
     }
     animatedIndex = addListenerResult;
     return () => {
-      if (closure_0 != null) {
-        closure_0.remove();
+      if (addListenerResult != null) {
+        addListenerResult.remove();
       }
     };
   }, items1);
   closure_19 = animatedIndex(sharedValue[13]).useAppEntryKey();
-  height = importDefault(sharedValue[15])({ ignoreKeyboard: true }).height;
+  const height = importDefault(sharedValue[15])({ ignoreKeyboard: true }).height;
   let result = height * includedUploadIds;
   c21 = result;
   const diff = height - animatedIndex(sharedValue[16]).NAV_BAR_HEIGHT_MULTILINE - importDefault(sharedValue[14])().top;
@@ -122,11 +108,11 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
   const obj4 = animatedIndex(sharedValue[13]);
   const tmp3 = onAttachPress;
   const bottomSheetInternal = animatedIndex(sharedValue[17]).useBottomSheetInternal();
-  animatedSnapPoints = bottomSheetInternal.animatedSnapPoints;
+  const animatedSnapPoints = bottomSheetInternal.animatedSnapPoints;
   animatedIndex = bottomSheetInternal.animatedIndex;
   const tmp16 = onAttachPress(onPressItem.useState({ minimum: result, maximum: diff }), 2);
   const first1 = tmp16[0];
-  maximum = first1.minimum;
+  let maximum = first1.minimum;
   closure_24 = tmp18;
   const obj5 = animatedIndex(sharedValue[17]);
   class G {
@@ -137,17 +123,17 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
   G.__closure = { animatedSnapPoints };
   G.__workletHash = 7279123713809;
   G.__initData = closure_15;
-  const fn = function $(activeIndex) {
+  const fn = function $(closure_3) {
     let obj = animatedIndex(sharedValue[18]);
-    if (!obj.cheapWorkletArrayShallowEqual(activeIndex, arg1)) {
-      first = activeIndex[0];
+    if (!obj.cheapWorkletArrayShallowEqual(onAttachPress, tmp)) {
+      first = onAttachPress[0];
       const tmp2Result = animatedIndex(sharedValue[10]);
       if (first == null) {
         first = c21;
       }
       obj = { minimum: null, maximum: null };
       obj[0] = height - first;
-      let tmp8 = activeIndex[activeIndex.length - 1];
+      let tmp8 = onAttachPress[onAttachPress.length - 1];
       if (tmp8 == null) {
         tmp8 = c22;
       }
@@ -155,13 +141,13 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
       animatedIndex(sharedValue[10]).runOnJS(closure_24)(obj);
       const runOnJSResult = animatedIndex(sharedValue[10]).runOnJS(closure_24);
     }
+    tmp = arg1;
   };
   obj = { cheapWorkletArrayShallowEqual: animatedIndex(sharedValue[18]).cheapWorkletArrayShallowEqual, runOnJS: animatedIndex(sharedValue[10]).runOnJS, setBottomSheetState: tmp18, windowHeight: height, computedStartHeight: result, maxDynamicContentSize: diff };
   fn.__closure = obj;
   fn.__workletHash = 4619753074319;
   fn.__initData = assets;
   const animatedReaction = animatedIndex(sharedValue[10]).useAnimatedReaction(G, fn);
-  importDefault = undefined;
   sharedValue = undefined;
   const obj6 = animatedIndex(sharedValue[10]);
   [tmp21, tmp22] = onAttachPress(onPressItem.useState(false), 2);
@@ -226,8 +212,8 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
       return _undefined(sharedValue[20]).chunk(items2, itemsPerRow);
     } else {
       let edges;
-      if (tmp != null) {
-        edges = tmp.edges;
+      if (assets != null) {
+        edges = assets.edges;
       }
       if (edges == null) {
         edges = [];
@@ -244,30 +230,30 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
   const items4 = [itemsPageSizeRef, extensions];
   const items5 = [channel, draftType, callback1, onViewAll, onAttachPress, itemsPerRow, onPressItem, onLongPressItem, memo, includedUploadIds, flag2, uploadLimit, disableWhenReachedLimit, sum];
   const callback2 = obj.useCallback(() => {
-    let obj = _undefined(sharedValue[11]);
-    obj = { batchSize: itemsPageSizeRef.current, extensions };
+    _undefined(sharedValue[11]);
+    const obj = { batchSize: itemsPageSizeRef.current, extensions };
     const nextAssetPage = obj.getNextAssetPage(obj);
   }, items4);
-  const callback3 = obj.useCallback((arg0, rowIndex) => flag2(_undefined(sharedValue[21]), { draftType: _undefined, rowIndex, totalNumItems: c26, channel: animatedIndex, numPerRow: itemsPerRow, items: memo[rowIndex], onPressItem, onLongPressItem, includedUploadIds, uploadLimit, disableWhenReachedLimit, handleCameraPress: callback1, handleAttachPress: onAttachPress, handleViewAllPhotosPress: onViewAll, disabled: flag2 }, memo[rowIndex].reduce((arg0, node) => {
-    if (null == node) {
-      return arg0;
+  const callback3 = obj.useCallback((arg0, rowIndex) => flag2(_undefined(sharedValue[21]), { draftType: _undefined, rowIndex, totalNumItems: c26, channel: animatedIndex, numPerRow: itemsPerRow, items: memo[rowIndex], onPressItem, onLongPressItem, includedUploadIds, uploadLimit, disableWhenReachedLimit, handleCameraPress: callback1, handleAttachPress: onAttachPress, handleViewAllPhotosPress: onViewAll, disabled: flag2 }, memo[rowIndex].reduce((acc, item, index) => {
+    if (null == item) {
+      return acc;
     } else {
-      if (obj3.isMediaCameraNode(node)) {
+      if (obj3.isMediaCameraNode(item)) {
         const _HermesInternal4 = HermesInternal;
-        let combined = "" + arg0 + "-camera";
+        let combined = "" + acc + "-camera";
       } else {
-        let tmp6Result = tmp6(tmp7[21]);
-        if (tmp6Result.isAttachFilesNode(node)) {
+        let tmp6Result = callback(table[21]);
+        if (tmp6Result.isAttachFilesNode(item)) {
           const _HermesInternal3 = HermesInternal;
-          combined = "" + arg0 + "-attach";
+          combined = "" + acc + "-attach";
         } else {
-          tmp6Result = tmp6(tmp7[21]);
-          if (tmp6Result.isViewAllPhotosNode(node)) {
+          tmp6Result = callback(table[21]);
+          if (tmp6Result.isViewAllPhotosNode(item)) {
             const _HermesInternal2 = HermesInternal;
-            combined = "" + arg0 + "-view-all";
+            combined = "" + acc + "-view-all";
           } else {
             const _HermesInternal = HermesInternal;
-            combined = "" + arg0 + "-" + node.node.image.uri;
+            combined = "" + acc + "-" + item.node.image.uri;
           }
         }
       }
@@ -339,11 +325,10 @@ const memoResult = importAllResult.memo(function MediaKeyboardList(channel) {
     }
     obj2[20] = prop;
     mediaEmptyStateComponentOrNull = flag2(tmp6(tmp7[27]), obj2);
-    const tmp41 = flag2;
     let tmp6Result = tmp6(tmp7[27]);
   }
   return mediaEmptyStateComponentOrNull;
 });
-let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardList.tsx");
+let result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardList.tsx");
 
 export default memoResult;

@@ -1,11 +1,11 @@
 // === Module 4507: getGameMediaRefURL ===
 
 // Module 4507 (getGameMediaRefURL)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
 import isImageProxyURL from "isImageProxyURL" /* 4508 */;
 
-const result = set.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
+const result = obj132.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 
 export default function getGameMediaRefURL(arg0, type, size) {
   if (null == type) {
@@ -24,7 +24,6 @@ export default function getGameMediaRefURL(arg0, type, size) {
           gameAssetURL = null;
         }
         tmp7 = gameAssetURL;
-        const obj4 = getAvatarURLDefault;
       }
       return tmp7;
     } else if ("url" === type) {

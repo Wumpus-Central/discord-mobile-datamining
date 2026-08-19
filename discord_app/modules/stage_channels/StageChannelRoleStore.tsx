@@ -4,17 +4,18 @@
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
+import Permissions from "Permissions" /* 1399 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
 import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 4991 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 
-require = arg1;
+require = fn;
 function buildStageChannelUserRoles(id, closure_0, flag) {
   if (flag === undefined) {
     flag = false;
@@ -41,18 +42,15 @@ function buildStageChannelUserRoles(id, closure_0, flag) {
         let canResult = null;
         if (flag) {
           obj = { permission: null, user: null, context: null, overwrites: null, roles: null };
-          obj[0] = tmp8(1399).MODERATE_STAGE_CHANNEL_PERMISSIONS;
+          obj[0] = Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS;
           obj[1] = id;
           obj[2] = guild;
           obj[3] = channel.permissionOverwrites;
           obj[4] = unsafeMutableRoles.getUnsafeMutableRoles(guild.id);
           canResult = applyOverwritesAll.can(obj);
-          const obj4 = applyOverwritesAll;
         }
         obj[obj.MODERATOR] = canResult;
         let tmp4 = obj;
-        const obj3 = useAudienceRequestToSpeakState;
-        tmp8 = require;
       }
       dependencyMap[closure_0][id] = tmp4;
       return tmp4;
@@ -62,9 +60,8 @@ function buildStageChannelUserRoles(id, closure_0, flag) {
 }
 function resetStageChannelRolesForGuild(guildId) {
   const values = Object.values(store.getMutableGuildChannelsForGuild(guildId));
-  const found = values.filter((isGuildStageVoice) => isGuildStageVoice.isGuildStageVoice());
+  const found = values.filter((item, index) => item.isGuildStageVoice());
   for (const item10015 of found) {
-    let tmp3 = closure_11;
     let id = item10015.id;
     delete tmp2[tmp];
     continue;
@@ -81,15 +78,11 @@ function handleGuildMemberUpdate(arg0) {
     if (keys !== undefined) {
       flag = true;
       while (keys[tmp] !== undefined) {
-        let tmp10 = tmp6;
-        let tmp11 = store;
         let basicChannel = store.getBasicChannel(tmp6);
         let tmp7 = null != basicChannel && basicChannel.guild_id === guildId;
         if (!tmp7) {
           continue;
         } else {
-          let tmp8 = dependencyMap;
-          let tmp9 = dependencyMap[tmp6];
           delete tmp3[tmp2];
           continue;
         }
@@ -101,8 +94,6 @@ function handleGuildMemberUpdate(arg0) {
 }
 function handleGuildCreateOrDelete(arg0) {
   for (const key10005 in closure_11) {
-    let tmp6 = key10005;
-    let tmp7 = store;
     let basicChannel = store.getBasicChannel(key10005);
     let tmp4 = null != basicChannel;
     if (tmp4) {
@@ -111,7 +102,6 @@ function handleGuildCreateOrDelete(arg0) {
     if (tmp4) {
       continue;
     } else {
-      let tmp5 = closure_11;
       delete tmp[tmp2];
       continue;
     }
@@ -188,7 +178,6 @@ StageChannelRoleStore.displayName = "StageChannelRoleStore";
 obj = {
   CHANNEL_UPDATES: function handleChannelUpdate(arg0) {
     for (const item10006 of tmp3) {
-      let tmp4 = closure_11;
       let id = item10006.id;
       delete tmp2[tmp];
       continue;
@@ -210,8 +199,8 @@ obj = {
     const isEmptyResult = applyDefault.isEmpty(closure_11);
     let reduced = !isEmptyResult;
     if (!isEmptyResult) {
-      reduced = voiceStates.reduce((arg0, arg1) => {
-        ({ userId, channelId } = arg1);
+      reduced = voiceStates.reduce((acc, item, index) => {
+        ({ userId, channelId } = item);
         let flag = false;
         if (null != channelId) {
           channel = channel.getChannel(channelId);
@@ -226,7 +215,7 @@ obj = {
           flag = !num;
         }
         if (!flag) {
-          flag = arg0;
+          flag = acc;
         }
         return flag;
       }, false);
@@ -237,7 +226,7 @@ obj = {
   GUILD_DELETE: handleGuildCreateOrDelete
 };
 const stageChannelRoleStore = new StageChannelRoleStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelRoleStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelRoleStore.tsx");
 
 export default stageChannelRoleStore;
 export const StagePermissionBuckets = obj;

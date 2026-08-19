@@ -1,15 +1,15 @@
 // === Module 5360: items ===
 
 // Module 5360 (items)
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import _modDef1208 from "module_1208" /* 1208 */;
-import set from "set" /* 2 */;
 
 const items = [, , ];
 ({ UNAUTHORIZED: arr[0], EMAIL_VERIFICATION_REQUIRED: arr[1], USER_BANNED: arr[2] } = ME.AbortCodes);
-let set = new Set([500, 502, 503, 504]);
+const set = new Set([500, 502, 503, 504]);
 const set1 = new Set([401, 403, 405, 409, 429]);
-const result = set.fileFinishedImporting("modules/errors/ErrorHandlingUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/errors/ErrorHandlingUtils.tsx");
 
 export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError) {
   let tmp = null == aPIError;
@@ -69,6 +69,5 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
   }
   if (!tmp) {
     _modDef1208.captureException(aPIError);
-    const obj = _modDef1208;
   }
 };

@@ -3,31 +3,28 @@
 // Module 9365 (saveGuildFolders)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4195 */;
-import closure_5 from "initialize" /* 1303 */;
-import closure_6 from "handleThemeChange" /* 1302 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled" /* 4195 */;
+import initialize from "initialize" /* 1303 */;
+import handleThemeChange from "handleThemeChange" /* 1302 */;
 import { ThemeTypes } from "ME" /* 676 */;
 import SystemThemeState from "SystemThemeState" /* 1305 */;
 
-require = arg1;
+require = fn;
 ({ SystemTheme, SystemThemeState: closure_8 } = SystemThemeState);
-let result = require("set").fileFinishedImporting("actions/UserSettingsActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("actions/UserSettingsActionCreators.tsx");
 
 export default {
   overrideLocale(locale) {
-    let obj = dispatcherDefault;
-    obj = { type: "USER_SETTINGS_LOCALE_OVERRIDE", locale };
+    const obj = { type: "USER_SETTINGS_LOCALE_OVERRIDE", locale };
     obj.dispatch(obj);
   },
   updatedUnsyncedSettings(settings) {
-    let obj = dispatcherDefault;
-    obj = { type: "UNSYNCED_USER_SETTINGS_UPDATE", settings };
+    const obj = { type: "UNSYNCED_USER_SETTINGS_UPDATE", settings };
     obj.dispatch(obj);
   },
   setShouldSyncTextSettings(shouldSync) {
-    let obj = dispatcherDefault;
-    obj = { shouldSync, settings: null };
+    let obj = { shouldSync, settings: null };
     if (shouldSync) {
       obj = {};
     } else {
@@ -80,9 +77,9 @@ export default {
               return obj;
             } else {
               closure_0 = tmp3;
-              if (closure_1_0) {
+              if (is_sync_enabled) {
                 dependencyMap = 1;
-                const PreloadedUserSettingsActionCreators = closure_1_0(1374).PreloadedUserSettingsActionCreators;
+                const PreloadedUserSettingsActionCreators = is_sync_enabled(1374).PreloadedUserSettingsActionCreators;
                 v0 = 2;
                 c3 = 1;
                 obj1 = { value: null, done: false };
@@ -92,15 +89,15 @@ export default {
                     let DARK = tmp3(1306).Theme.DARK;
                     tmp3 = dependencyMap;
                     let tmp4 = tmp3;
-                  } else if (tmp.LIGHT === theme) {
+                  } else if (constants.LIGHT === theme) {
                     DARK = tmp3(1306).Theme.LIGHT;
                     tmp3 = dependencyMap;
                     tmp4 = tmp3;
-                  } else if (tmp.DARKER === theme) {
+                  } else if (constants.DARKER === theme) {
                     DARK = tmp3(1306).Theme.DARKER;
                     tmp3 = dependencyMap;
                     tmp4 = tmp3;
-                  } else if (tmp.MIDNIGHT === theme) {
+                  } else if (constants.MIDNIGHT === theme) {
                     DARK = tmp3(1306).Theme.MIDNIGHT;
                     tmp3 = dependencyMap;
                     tmp4 = tmp3;
@@ -133,11 +130,10 @@ export default {
                   if (null != prop) {
                     ({ colors: obj3[0], gradientColorStops: obj3[1], gradientAngle: obj3[2], baseMix: obj3[3] } = prop);
                     tmp17 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-                    obj1 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
                   }
                   obj[1] = tmp17;
                   arg0.clientThemeSettings = obj;
-                }, closure_1_0(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
+                }, is_sync_enabled(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
                 return obj1;
               }
             }
@@ -172,10 +168,10 @@ export default {
             }
             const obj4 = { backgroundGradientPresetId: null, customUserThemeSettings: null };
             obj4[0] = id;
-            let ClientThemeSettings = closure_1_0(4066).ClientThemeSettings;
+            let ClientThemeSettings = is_sync_enabled(4066).ClientThemeSettings;
             obj4[1] = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj3[1] = obj4;
-            const DeveloperMode = closure_1_0(4066).DeveloperMode;
+            const DeveloperMode = is_sync_enabled(4066).DeveloperMode;
             obj3[2] = DeveloperMode.getSetting();
           }
           const obj5 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
@@ -197,8 +193,7 @@ export default {
     })();
   },
   applySettingsOverride(settings) {
-    let obj = dispatcherDefault;
-    obj = { type: "USER_SETTINGS_OVERRIDE_APPLY", settings };
+    const obj = { type: "USER_SETTINGS_OVERRIDE_APPLY", settings };
     obj.dispatch(obj);
   },
   clearSettingsOverride(gifAutoPlay, animateEmoji, animateStickers) {
@@ -209,28 +204,27 @@ export default {
     const _require = arg0;
     const PreloadedUserSettingsActionCreators = _require(1374).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync("localization", (arg0) => {
-      const StringValue = callback(closure_1_2[8]).StringValue;
+      const StringValue = callback(dependencyMap[8]).StringValue;
       arg0.locale = StringValue.create({ value: callback });
     }, _require(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
   },
   updateTheme(theme) {
     const _require = theme;
-    let obj = dispatcherDefault;
-    obj = { theme };
+    const obj = { theme };
     obj.dispatch({ type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: { appearance: { settings: obj } } });
     if (closure_5.shouldSync("appearance")) {
       const PreloadedUserSettingsActionCreators = _require(1374).PreloadedUserSettingsActionCreators;
       PreloadedUserSettingsActionCreators.updateAsync("appearance", (arg0) => {
-        if (closure_1_7.DARK === theme) {
-          let DARK = theme(closure_1_2[7]).Theme.DARK;
-        } else if (tmp2.LIGHT === tmp) {
-          DARK = theme(closure_1_2[7]).Theme.LIGHT;
-        } else if (tmp2.DARKER === tmp) {
-          DARK = theme(closure_1_2[7]).Theme.DARKER;
-        } else if (tmp2.MIDNIGHT === tmp) {
-          DARK = theme(closure_1_2[7]).Theme.MIDNIGHT;
+        if (ThemeTypes.DARK === theme) {
+          let DARK = theme(dependencyMap[7]).Theme.DARK;
+        } else if (ThemeTypes.LIGHT === theme) {
+          DARK = theme(dependencyMap[7]).Theme.LIGHT;
+        } else if (ThemeTypes.DARKER === theme) {
+          DARK = theme(dependencyMap[7]).Theme.DARKER;
+        } else if (ThemeTypes.MIDNIGHT === theme) {
+          DARK = theme(dependencyMap[7]).Theme.MIDNIGHT;
         } else {
-          DARK = theme(closure_1_2[7]).Theme.DARK;
+          DARK = theme(dependencyMap[7]).Theme.DARK;
         }
         arg0.theme = DARK;
       }, _require(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -241,33 +235,33 @@ export const saveGuildFolders = function saveGuildFolders(compatibleGuildFolders
   const _require = compatibleGuildFolders;
   const PreloadedUserSettingsActionCreators = _require(1374).PreloadedUserSettingsActionCreators;
   return PreloadedUserSettingsActionCreators.updateAsync("guildFolders", (arg0) => {
-    arg0.folders = compatibleGuildFolders.map((guildIds) => {
+    arg0.folders = compatibleGuildFolders.map((item, index) => {
       const GuildFolder = callback(table[7]).GuildFolder;
-      let obj = { guildIds: guildIds.guildIds };
+      let obj = { guildIds: item.guildIds };
       obj = GuildFolder.create(obj);
-      if (null != guildIds.folderId) {
-        const Int64Value = tmp(tmp2[8]).Int64Value;
+      if (null != item.folderId) {
+        const Int64Value = callback(table[8]).Int64Value;
         obj = { value: null };
         const _String = String;
-        obj[0] = String(guildIds.folderId);
+        obj[0] = String(item.folderId);
         obj.id = Int64Value.create(obj);
       }
-      if (null != guildIds.folderColor) {
-        const UInt64Value = tmp(tmp2[8]).UInt64Value;
+      if (null != item.folderColor) {
+        const UInt64Value = callback(table[8]).UInt64Value;
         obj1 = { value: null };
         const _String2 = String;
-        obj1[0] = String(guildIds.folderColor);
+        obj1[0] = String(item.folderColor);
         obj.color = UInt64Value.create(obj1);
       }
-      let tmp6 = null != guildIds.folderName;
+      let tmp6 = null != item.folderName;
       if (tmp6) {
-        tmp6 = "" !== guildIds.folderName;
+        tmp6 = "" !== item.folderName;
       }
       if (tmp6) {
-        const StringValue = tmp(tmp2[8]).StringValue;
+        const StringValue = callback(table[8]).StringValue;
         const obj2 = { value: null };
         const _String3 = String;
-        obj2[0] = String(guildIds.folderName);
+        obj2[0] = String(item.folderName);
         obj.name = StringValue.create(obj2);
       }
       return obj;
@@ -282,15 +276,15 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
   if (INFREQUENT_USER_ACTION === undefined) {
     INFREQUENT_USER_ACTION = backgroundGradientPresetId(theme[6]).UserSettingsDelay.INFREQUENT_USER_ACTION;
   }
-  let obj = customUserThemeSettings(theme[9]);
-  obj = { clientThemeSettings: { backgroundGradientPresetId, customUserThemeSettings }, theme: null };
+  customUserThemeSettings(theme[9]);
+  let obj = { clientThemeSettings: { backgroundGradientPresetId, customUserThemeSettings }, theme: null };
   let tmp6;
   if ("system" !== theme) {
     tmp6 = theme;
   }
   obj[1] = tmp6;
   obj.dispatch({ type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: { appearance: { settings: obj } } });
-  let tmp9 = tmp5 ? tmp8.ON : tmp8.OFF;
+  let tmp9 = tmp5 ? constants.ON : constants.OFF;
   if (null != useSystemTheme) {
     tmp9 = useSystemTheme;
   }
@@ -302,19 +296,19 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
   if (closure_5.shouldSync("appearance")) {
     const PreloadedUserSettingsActionCreators = backgroundGradientPresetId(tmp4[6]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync("appearance", (arg0) => {
-      if (closure_1_7.DARK === theme) {
+      if (ThemeTypes.DARK === theme) {
         let DARK = backgroundGradientPresetId(theme[7]).Theme.DARK;
         let tmp4 = theme;
         let tmp3 = backgroundGradientPresetId;
-      } else if (tmp2.LIGHT === tmp) {
+      } else if (ThemeTypes.LIGHT === theme) {
         DARK = backgroundGradientPresetId(theme[7]).Theme.LIGHT;
         tmp4 = theme;
         tmp3 = backgroundGradientPresetId;
-      } else if (tmp2.DARKER === tmp) {
+      } else if (ThemeTypes.DARKER === theme) {
         DARK = backgroundGradientPresetId(theme[7]).Theme.DARKER;
         tmp4 = theme;
         tmp3 = backgroundGradientPresetId;
-      } else if (tmp2.MIDNIGHT === tmp) {
+      } else if (ThemeTypes.MIDNIGHT === theme) {
         DARK = backgroundGradientPresetId(theme[7]).Theme.MIDNIGHT;
         tmp4 = theme;
         tmp3 = backgroundGradientPresetId;
@@ -334,14 +328,12 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
       obj = { backgroundGradientPresetId: obj, customUserThemeSettings: null };
       let tmp16;
       if (null != customUserThemeSettings) {
-        ({ colors: obj3[0], gradientColorStops: obj3[1], gradientAngle: obj3[2], baseMix: obj3[3] } = tmp14);
+        ({ colors: obj3[0], gradientColorStops: obj3[1], gradientAngle: obj3[2], baseMix: obj3[3] } = customUserThemeSettings);
         tmp16 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
-        obj1 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
       }
       obj[1] = tmp16;
       arg0.clientThemeSettings = obj;
     }, INFREQUENT_USER_ACTION);
   }
-  let tmp3 = customUserThemeSettings;
   const tmp3Result = customUserThemeSettings(theme[9]);
 };

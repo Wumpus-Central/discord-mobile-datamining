@@ -7,13 +7,13 @@ import Stack from "Stack" /* 4733 */;
 import EmojiDefault from "Emoji" /* 6930 */;
 import CustomTypingIndicatorAnimation from "CustomTypingIndicatorAnimation" /* 14707 */;
 import getRandomCustomTypingIndicatorEmojis from "getRandomCustomTypingIndicatorEmojis" /* 14709 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { EmojiIntention } from "set" /* 1925 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function EmojiGlyph(emoji) {
   emoji = emoji.emoji;
   let obj = { name: emoji.name, src: null, fastImageStyle: null, textEmojiStyle: null };
@@ -35,29 +35,29 @@ function EmojiGlyph(emoji) {
 }
 function PlaceholderEmojiGlyph(emoji) {
   const pressed = emoji.pressed;
-  let obj = pressed(4115);
+  pressed(4115);
   const fn = function o() {
     const value = pressed.get();
     let obj = { opacity: null, transform: null };
-    const obj2 = pressed(closure_1_2[8]);
-    const obj3 = pressed(closure_1_2[7]);
-    obj[0] = obj2.withSpring(pressed(closure_1_2[7]).interpolate(value, [0, 1], [0.4, 1]), pressed(closure_1_2[9]).ON_PRESS_SPRING);
+    const obj2 = pressed(dependencyMap[8]);
+    const obj3 = pressed(dependencyMap[7]);
+    obj[0] = obj2.withSpring(pressed(dependencyMap[7]).interpolate(value, [0, 1], [0.4, 1]), pressed(dependencyMap[9]).ON_PRESS_SPRING);
     obj = { scale: null };
-    const interpolateResult = pressed(closure_1_2[7]).interpolate(value, [0, 1], [0.4, 1]);
-    const obj5 = pressed(closure_1_2[8]);
-    const obj6 = pressed(closure_1_2[7]);
-    obj[0] = obj5.withSpring(pressed(closure_1_2[7]).interpolate(value, [0, 1], [1, 1.14]), pressed(closure_1_2[9]).ON_PRESS_SPRING);
+    const interpolateResult = pressed(dependencyMap[7]).interpolate(value, [0, 1], [0.4, 1]);
+    const obj5 = pressed(dependencyMap[8]);
+    const obj6 = pressed(dependencyMap[7]);
+    obj[0] = obj5.withSpring(pressed(dependencyMap[7]).interpolate(value, [0, 1], [1, 1.14]), pressed(dependencyMap[9]).ON_PRESS_SPRING);
     const items = [obj];
     obj[1] = items;
     return obj;
   };
-  obj = { pressed, withSpring: pressed(4744).withSpring, interpolate: pressed(4115).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(4748).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
+  let obj = { pressed, withSpring: pressed(4744).withSpring, interpolate: pressed(4115).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(4748).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
   fn.__closure = obj;
   fn.__workletHash = 16574219123934;
   fn.__initData = closure_9;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { style: animatedStyle, children: <EmojiGlyph emoji={arg0.emoji} /> };
-  return jsx(_modDef4115.View, { style: animatedStyle, children: <EmojiGlyph emoji={arg0.emoji} /> });
+  obj = { style: animatedStyle, children: <EmojiGlyph emoji={emoji.emoji} /> };
+  return jsx(_modDef4115.View, { style: animatedStyle, children: <EmojiGlyph emoji={emoji.emoji} /> });
 }
 function CustomTypingIndicatorEmojiSlot(index) {
   index = index.index;
@@ -68,8 +68,8 @@ function CustomTypingIndicatorEmojiSlot(index) {
   const items = [index, onChange];
   const items1 = [sharedValue];
   const callback = React.useCallback(() => {
-    let obj = index(sharedValue[10]);
-    obj = {
+    index(sharedValue[10]);
+    let obj = {
       onPressEmoji(id) {
         id = id.id;
         const obj = { id, name: null, animated: null };
@@ -80,7 +80,7 @@ function CustomTypingIndicatorEmojiSlot(index) {
             }
             obj[1] = str2;
             obj[2] = id.animated;
-            return closure_1(closure_0, obj);
+            return callback(closure_0, obj);
           }
         }
         str2 = id.name;
@@ -88,7 +88,7 @@ function CustomTypingIndicatorEmojiSlot(index) {
           str2 = "";
         }
       },
-      pickerIntention: closure_1_5.TYPING_INDICATOR
+      pickerIntention: EmojiIntention.TYPING_INDICATOR
     };
     const result = obj.openEmojiPickerActionSheet(obj);
   }, items);
@@ -113,26 +113,24 @@ function CustomTypingIndicatorEmojiSlot(index) {
   if (null != emoji) {
     const obj2 = { emoji: null };
     obj2[0] = emoji;
-    let tmp11Result = tmp11(EmojiGlyph, obj2);
+    let tmp11Result = <EmojiGlyph emoji={null} />;
   } else {
     const obj3 = { emoji: null, pressed: null };
     obj3[0] = index.placeholderEmoji;
     obj3[1] = sharedValue;
-    tmp11Result = tmp11(PlaceholderEmojiGlyph, obj3);
+    tmp11Result = <PlaceholderEmojiGlyph emoji={null} pressed={null} />;
   }
   obj1[6] = tmp11Result;
   return jsx(index(sharedValue[14]).Card, { style: callback2().slot, onPress: callback, onPressIn: callback1, onPressOut: callback2, accessibilityLabel: formatToPlainStringResult, radius: 16, children: null });
 }
 let closure_7 = createCacheKey.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 let closure_9 = { code: "function CustomTypingIndicatorEmojiSlotsTsx1(){const{pressed,withSpring,interpolate,PLACEHOLDER_EMOJI_RESTING_OPACITY,ON_PRESS_SPRING,PLACEHOLDER_EMOJI_ACTIVE_SCALE}=this.__closure;const value=pressed.get();return{opacity:withSpring(interpolate(value,[0,1],[PLACEHOLDER_EMOJI_RESTING_OPACITY,1]),ON_PRESS_SPRING),transform:[{scale:withSpring(interpolate(value,[0,1],[1,PLACEHOLDER_EMOJI_ACTIVE_SCALE]),ON_PRESS_SPRING)}]};}" };
-let result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorEmojiSlots.tsx");
+let result = require("obj132").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorEmojiSlots.tsx");
 
 export default function CustomTypingIndicatorEmojiSlots(arg0) {
   ({ emojis: require, onChange: importDefault } = arg0);
-  dependencyMap = undefined;
   dependencyMap = callback(React.useState(getRandomCustomTypingIndicatorEmojis.getRandomCustomTypingIndicatorEmojis), 1)[0];
-  let obj = { direction: "horizontal", spacing: 8, children: null };
-  obj = { length: CustomTypingIndicatorAnimation.CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
+  let obj = { length: CustomTypingIndicatorAnimation.CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
   obj[2] = Array.from(obj, (arg0, index) => {
     const obj = { index, emoji: null, placeholderEmoji: null, onChange: null };
     let tmp3 = table[index];
@@ -142,7 +140,7 @@ export default function CustomTypingIndicatorEmojiSlots(arg0) {
     obj[1] = tmp3;
     obj[2] = table2[index];
     obj[3] = closure_1;
-    return closure_1_6(closure_1_11, obj, index);
+    return <CustomTypingIndicatorEmojiSlot key={index} index={index} emoji={null} placeholderEmoji={null} onChange={null} />;
   });
   return jsx(Stack.Stack, { length: CustomTypingIndicatorAnimation.CUSTOM_TYPING_INDICATOR_EMOJI_COUNT });
 };

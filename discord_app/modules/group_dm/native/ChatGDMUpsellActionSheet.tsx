@@ -3,52 +3,45 @@
 // Module 10791 (ChatGDMUpsellActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import preloadDefault from "preload" /* 5449 */;
 import registerAssetDefault from "registerAsset" /* 10792 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { title: null, footer: null, body: null, noticeContainer: null, innerContainer: null, secondInnerContainer: null, text: null, titleImage: null, item: null, button: null };
-createCacheKey = { marginBottom: ThemesDefault.space.PX_4, textAlign: "center" };
+const createCacheKey = { marginBottom: ThemesDefault.space.PX_4, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { textAlign: "center" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm, marginVertical: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", paddingBottom: 16 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[6] = { flex: 1 };
 createCacheKey[7] = { padding: 16, justifyContent: "center", alignItems: "center" };
-let obj2 = { borderRadius: ThemesDefault.radii.sm, marginVertical: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_16 };
 createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, marginRight: 16, height: 40, width: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, marginRight: 16, height: 40, width: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" };
 createCacheKey[9] = { paddingTop: ThemesDefault.space.PX_16 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { paddingTop: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/group_dm/native/ChatGDMUpsellActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/group_dm/native/ChatGDMUpsellActionSheet.tsx");
 
 export default function ChatGDMUpsellActionSheet(onClick) {
   onClick = onClick.onClick;
   const tmp = callback3();
   const items = [onClick];
   const callback = React.useCallback(() => {
-    const result = onClick(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(onClick(closure_1_2[7]).DismissibleContent.GDM_INVITE_REMINDER);
-    const obj = onClick(closure_1_2[6]);
-    closure_1_1(closure_1_2[8]).hideActionSheet();
+    const result = onClick(dependencyMap[6]).UNSAFE_markDismissibleContentAsDismissed(onClick(dependencyMap[7]).DismissibleContent.GDM_INVITE_REMINDER);
+    const obj = onClick(dependencyMap[6]);
+    ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
     onClick();
   }, items);
-  let obj = { showGradient: true, scrollable: true, startExpanded: true, header: null, footer: null, children: null };
-  obj = { style: tmp.titleImage, children: null };
-  obj = { source: registerAssetDefault, resizeMode: "contain" };
+  let obj = { source: registerAssetDefault, resizeMode: "contain" };
   obj[1] = callback(preloadDefault, obj);
   obj[3] = callback(View, obj);
   obj1 = { style: items1, children: null };
   items1 = [tmp.footer, ];
-  const tmp3 = preloadDefault;
   items1[1] = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
   const obj3 = { text: null, onPress: null };
   const intl = onClick(1236).intl;

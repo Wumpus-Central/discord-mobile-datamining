@@ -5,7 +5,7 @@ import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import messagesProxyDefault from "messagesProxy" /* 3079 */;
 import useScaledRowHeightDefault from "useScaledRowHeight" /* 8633 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import items from "items" /* 15464 */;
 import { NOOP } from "ME" /* 676 */;
@@ -13,13 +13,13 @@ import { getScaledCategoryRowHeight as closure_8 } from "hairlineWidth" /* 10055
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ useFavoritesGuildSuggestions: c5, useFavoritesGuildSuggestionsDismissal: closure_6 } = items);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const PX_8 = ThemesDefault.space.PX_8;
 const PX_4 = ThemesDefault.space.PX_4;
 let closure_13 = createCacheKey.createStyles({ container: { marginTop: PX_4 }, rows: { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: PX_8 } });
-const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildSuggestedChannels.tsx");
+const result = require("obj132").fileFinishedImporting("modules/favorites/native/FavoritesGuildSuggestedChannels.tsx");
 
 export default function FavoritesGuildSuggestedChannels() {
   let tmp = callback6();
@@ -55,19 +55,18 @@ export default function FavoritesGuildSuggestedChannels() {
     const items2 = [tmp5(15369).renderCategoryItem(obj), ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp.rows;
-    obj1[1] = arr.map((result) => {
-      let obj = { style: closure_3, children: null };
-      obj = { result, onPressDestination: callback(15466), onLongPress: closure_1_7, start: 0 === arg1, end: arg1 === result.length - 1, trailing: null };
-      obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
+    obj1[1] = arr.map((item, index) => {
+      { result: item, onPressDestination: callback(15466), onLongPress: NOOP, start: 0 === index, end: index === item.length - 1, trailing: null };
+      const obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
       const intl = arr(1236).intl;
-      obj[3] = intl.string(result(1236).t.OYkgVk);
+      obj[3] = intl.string(item(1236).t.OYkgVk);
       obj[4] = function onPress() {
         const tmp = closure_1_1(closure_1_2[15]);
-        return tmp(callback(closure_1_2[17]).getDestinationIdFromResult(callback));
+        return tmp(item(closure_1_2[17]).getDestinationIdFromResult(item));
       };
-      obj[5] = closure_1_9(result(4745).Button, obj);
+      obj[5] = closure_1_9(item(4745).Button, obj);
       obj[1] = closure_1_9(callback(15465), obj);
-      return closure_1_9(closure_1_4, obj, "" + result.type + "-" + result.record.id);
+      return closure_1_9(View, obj, "" + item.type + "-" + item.record.id);
     });
     items2[1] = callback4(View, obj1);
     obj[1] = items2;

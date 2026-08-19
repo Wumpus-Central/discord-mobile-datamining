@@ -1,11 +1,11 @@
 // === Module 8395: useCollectibleListLayout ===
 
 // Module 8395 (useCollectibleListLayout)
-import closure_0 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
 ({ useCallback: closure_1, useState: obj1 } = noop);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/useCollectibleListLayout.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/useCollectibleListLayout.tsx");
 
 export default function useCollectibleListLayout() {
   const tmp = callback(callback3(0), 2);

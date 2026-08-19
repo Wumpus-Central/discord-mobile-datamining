@@ -1,39 +1,34 @@
 // === Module 15945: ? ===
 
 // Module 15945
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "markAllUserIdListsStale" /* 4030 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
-import closure_8 from "handleUserSearchResults" /* 11513 */;
-import closure_9 from "prototype" /* 11510 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import handleUserSearchResults from "handleUserSearchResults" /* 11513 */;
+import prototype from "prototype" /* 11510 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ SearchListItemTypes: c10, SearchQueryTagTypes: unpackModuleId, USER_ESTIMATED_ITEM_SIZE: closure_12 } = MessageEmbedTypes);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = ME);
 let closure_16 = [];
 const memoResult = importAllResult.memo(function AutocompleteScreen(searchContext) {
   searchContext = searchContext.searchContext;
-  let stateFromStores;
   let first;
-  let callback;
   let fullscreenPlaceholderCount;
-  callback = undefined;
-  let callback1;
-  let callback2;
+  let callback;
   let callback3;
   let obj = searchContext(first[10]);
   let items = [callback3];
   const items1 = [searchContext];
-  stateFromStores = obj.useStateFromStores(items, () => callback3.getState(searchContext), items1, searchContext(first[10]).statesWillNeverBeEqual);
+  const stateFromStores = obj.useStateFromStores(items, () => callback3.getState(searchContext), items1, searchContext(first[10]).statesWillNeverBeEqual);
   const tmp4 = callback(fullscreenPlaceholderCount.useState(false), 2);
   first = tmp4[0];
-  callback = tmp4[1];
   obj1 = searchContext(first[10]);
   const items2 = [closure_9];
   const items3 = [searchContext];
@@ -48,7 +43,7 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
     const initialMessages = stateFromStores(first[12]).fetchInitialMessages(searchContext);
   }, items4);
   const items5 = [callback, searchContext];
-  callback1 = fullscreenPlaceholderCount.useCallback((arg0) => {
+  const callback1 = fullscreenPlaceholderCount.useCallback((arg0) => {
     closure_0 = arg0;
     const prefixTag = closure_1_9.getPrefixTag(closure_0);
     if (null != prefixTag) {
@@ -67,7 +62,7 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
     }
   }, items5);
   const items6 = [callback, searchContext];
-  callback2 = fullscreenPlaceholderCount.useCallback((arg0) => {
+  const callback2 = fullscreenPlaceholderCount.useCallback((arg0) => {
     const user = callback2.getUser(arg0);
     if (null != user) {
       const prefixTag = closure_1_9.getPrefixTag(user);
@@ -75,7 +70,7 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
         let obj = stateFromStores(first[13]);
         obj.updateSearchQuery(tmp9, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
-          const obj = { type: closure_1_11.ANSWER, text: closure_1_1(closure_1_2[15]).getUserTag(user), userId: user.id };
+          const obj = { type: closure_1_11.ANSWER, text: stateFromStores(first[15]).getUserTag(user), userId: user.id };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
@@ -97,17 +92,16 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
       if (null != prefixTag) {
         let userTag = searchContext(first[16]).computeChannelName(channel, callback2, callback1);
         if (channel.isDM()) {
-          const user = obj6.getUser(channel.getRecipientId());
+          const user = callback2.getUser(channel.getRecipientId());
           if (null != user) {
-            userTag = stateFromStores(tmp11[15]).getUserTag(user);
-            const obj7 = stateFromStores(tmp11[15]);
+            userTag = stateFromStores(first[15]).getUserTag(user);
+            const obj7 = stateFromStores(first[15]);
           }
         }
         const obj5 = searchContext(first[16]);
-        obj6 = callback2;
         stateFromStores(first[13]).updateSearchQuery(tmp8, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
-          const obj = { type: closure_1_11.ANSWER, text: callback(closure_1_2[17]).quoteChannelName(closure_1), channelId: callback };
+          const obj = { type: closure_1_11.ANSWER, text: callback(first[17]).quoteChannelName(closure_1), channelId: callback };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
@@ -157,18 +151,12 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   const memo = fullscreenPlaceholderCount.useMemo(() => {
     const items = [];
     if (set1) {
-      let num2 = 0;
-      if (0 < fullscreenPlaceholderCount) {
-        do {
-          let obj = { type: null, key: null };
-          let tmp28 = closure_1_10;
-          obj[0] = closure_1_10.MESSAGE_PLACEHOLDER;
-          let _HermesInternal = HermesInternal;
-          obj[1] = "message-placeholder-" + num2;
-          let arr = items.push(obj);
-          num2 = num2 + 1;
-          let tmp30 = fullscreenPlaceholderCount;
-        } while (num2 < fullscreenPlaceholderCount);
+      for (let num2 = 0; num2 < fullscreenPlaceholderCount; num2 = num2 + 1) {
+        let obj = { type: null, key: null };
+        obj[0] = closure_1_10.MESSAGE_PLACEHOLDER;
+        let _HermesInternal = HermesInternal;
+        obj[1] = "message-placeholder-" + num2;
+        let arr = items.push(obj);
       }
       return items;
     } else {
@@ -178,41 +166,41 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
       const _Set2 = Set;
       set1 = new Set(searchContext(first[18]).getSearchQueryChannelIds(items));
       ({ autocompletes, tokens, mode } = set);
-      let item = autocompletes.forEach((arg0) => {
+      let item = autocompletes.forEach((item, index) => {
         if (mode.type === closure_2_13.FILTER) {
-          ({ results, group: items } = arg0);
+          ({ results, group: items } = item);
           if (0 !== results.length) {
-            const item = results.forEach((arg0) => {
-              ({ user, channel, text } = arg0);
+            item = results.forEach((item, index) => {
+              ({ user, channel, text } = item);
               let obj = searchContext(first[18]);
-              const toSearchListUserItemResult = obj.toSearchListUserItem(items, user, closure_2_7);
+              const toSearchListUserItemResult = obj.toSearchListUserItem(items, user, callback2);
               let id;
               if (user != null) {
                 id = user.id;
               }
               let hasItem = null == toSearchListUserItemResult || null == id;
               if (!hasItem) {
-                hasItem = closure_1_1.has(id);
+                hasItem = set.has(id);
               }
               if (!hasItem) {
-                hasItem = closure_2_6.isBlockedOrIgnored(id);
+                hasItem = callback1.isBlockedOrIgnored(id);
               }
               if (!hasItem) {
-                closure_1_1.add(id);
+                set.add(id);
                 closure_1_0.push(toSearchListUserItemResult);
               }
-              let tmpResult = tmp(tmp2[18]);
-              const result = tmpResult.toSearchListChannelItem(channel, closure_2_8);
+              let tmpResult = searchContext(first[18]);
+              const result = tmpResult.toSearchListChannelItem(channel, callback3);
               let id1;
               if (channel != null) {
                 id1 = channel.id;
               }
               let hasItem1 = null == result || null == id1;
               if (!hasItem1) {
-                hasItem1 = closure_1_2.has(id1);
+                hasItem1 = set1.has(id1);
               }
               if (!hasItem1) {
-                closure_1_2.add(id1);
+                set1.add(id1);
                 closure_1_0.push(result);
               }
               let tmp22 = closure_0 === closure_3_14.FILTER_HAS;
@@ -224,9 +212,9 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
                 obj[0] = closure_3_10.GENERIC;
                 obj = { text: null, icon: null, onPress: null };
                 obj[0] = text;
-                tmpResult = tmp(tmp2[18]);
+                tmpResult = searchContext(first[18]);
                 obj[1] = tmpResult.getSearchFilterHasIcon(text);
-                obj[2] = closure_2_6;
+                obj[2] = callback1;
                 obj[1] = obj;
                 closure_1_0.push(obj);
               }
@@ -235,12 +223,13 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
                 obj1[0] = closure_3_10.GENERIC;
                 const obj2 = { text: null, icon: null, onPress: null };
                 obj2[0] = text;
-                obj2[1] = tmp(tmp2[18]).getSearchFilterAuthorTypeIcon(text);
-                obj2[2] = closure_2_6;
+                obj2[1] = searchContext(first[18]).getSearchFilterAuthorTypeIcon(text);
+                obj2[2] = callback1;
                 obj1[1] = obj2;
                 closure_1_0.push(obj1);
-                const tmpResult1 = tmp(tmp2[18]);
+                const tmpResult1 = searchContext(first[18]);
               }
+              tmp27 = closure_0 === closure_3_14.FILTER_AUTHOR_TYPE && null != text;
             });
           }
         }
@@ -248,14 +237,14 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
       if (0 === items.length) {
         if (mode.type !== closure_1_13.FILTER) {
           if (null != tokens[tokens.length - 1]) {
-            const token = new tmp2(tmp3[19]).Token(tmp32);
+            const token = new searchContext(first[19]).Token(tmp32);
             if (token.type === closure_1_14.ANSWER_USERNAME_FROM) {
-              let tmp2Result = tmp2(tmp3[20]);
+              let tmp2Result = searchContext(first[20]);
               if (tmp2Result.isValidUserAutocomplete(token)) {
                 const data = token.getData("userId");
                 if (null != data) {
                   const user = callback2.getUser(data);
-                  tmp2Result = tmp2(tmp3[18]);
+                  tmp2Result = searchContext(first[18]);
                   let toSearchListUserItemResult = tmp2Result.toSearchListUserItem(tmp4, user, callback2);
                   let id;
                   if (user != null) {
@@ -276,9 +265,9 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
               if (tmp2Result1.isValidChannelAutocomplete(token, tmp4)) {
                 const data1 = token.getData("channelIds");
                 if (null != data1) {
-                  const item1 = data1.forEach((arg0) => {
-                    const channel = callback.getChannel(arg0);
-                    const result = searchContext(first[18]).toSearchListChannelItem(channel, closure_1_8);
+                  const item1 = data1.forEach((item, index) => {
+                    const channel = callback.getChannel(item);
+                    const result = searchContext(first[18]).toSearchListChannelItem(channel, callback3);
                     let id;
                     if (channel != null) {
                       id = channel.id;
@@ -291,10 +280,11 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
                       set1.add(id);
                       items.push(result);
                     }
+                    const obj = searchContext(first[18]);
                   });
                 }
               }
-              tmp2Result1 = tmp2(tmp3[20]);
+              tmp2Result1 = searchContext(first[20]);
             }
           }
         }
@@ -338,6 +328,6 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   }
   return tmp18;
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx");
 
 export default memoResult;

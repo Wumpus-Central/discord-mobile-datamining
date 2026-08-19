@@ -1,12 +1,12 @@
 // === Module 14080: UserSettingsWebAuthn ===
 
 // Module 14080 (UserSettingsWebAuthn)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { WebAuthnScreens } from "WebAuthnScreens" /* 14078 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/webauthn/native/UserSettingsWebAuthn.tsx");
 
 export default function UserSettingsWebAuthn(showNav) {
   ({ navigation: require, initialRouteName } = showNav);

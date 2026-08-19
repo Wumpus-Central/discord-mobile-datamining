@@ -2,12 +2,12 @@
 
 // Module 12528 (useToggleRequestToSpeak)
 import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4981 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/stage_channels/useToggleRequestToSpeak.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/useToggleRequestToSpeak.tsx");
 
 export default function useToggleRequestToSpeak(id) {
   const _require = id;
@@ -30,16 +30,16 @@ export default function useToggleRequestToSpeak(id) {
       let obj = id(table[5]);
       if (obj.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
         obj = { entryPoint: null };
-        obj[0] = tmp(tmp2[7]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
-        const result = callback(tmp2[6]).showAgeVerificationGetStartedModal(obj);
-        const obj4 = callback(tmp2[6]);
+        obj[0] = id(table[7]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
+        const result = callback(table[6]).showAgeVerificationGetStartedModal(obj);
+        const obj4 = callback(table[6]);
       } else {
-        if (callback === tmp(tmp2[4]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
-          let tmpResult = tmp(tmp2[8]);
-          const result1 = tmpResult.audienceAckRequestToSpeak(tmp3, true);
+        if (callback === id(table[4]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
+          let tmpResult = id(table[8]);
+          const result1 = tmpResult.audienceAckRequestToSpeak(id, true);
         } else {
-          tmpResult = tmp(tmp2[8]);
-          tmpResult.toggleRequestToSpeak(tmp3, !first);
+          tmpResult = id(table[8]);
+          tmpResult.toggleRequestToSpeak(id, !first);
         }
         callback2(!first);
       }

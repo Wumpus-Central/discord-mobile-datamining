@@ -1,11 +1,12 @@
 // === Module 9178: getProductNameAndTypeFromSku ===
 
 // Module 9178 (getProductNameAndTypeFromSku)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
 
-let result = set.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
 
 export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSku(sku) {
   ({ name, tenantMetadata } = sku);
@@ -17,22 +18,22 @@ export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSk
     }
   }
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-    const intl2 = tmp2(1236).intl;
+    const intl2 = getSystemLocale.intl;
     let obj = { product: null };
     obj[0] = name;
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1236).t.lvBzLi, obj);
-  } else if (tmp2(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
-    const intl = tmp2(1236).intl;
+    let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.lvBzLi, obj);
+  } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
+    const intl = getSystemLocale.intl;
     obj = { product: null };
     obj[0] = name;
-    formatToPlainStringResult = intl.formatToPlainString(tmp2(1236).t.eR7moP, obj);
+    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.eR7moP, obj);
   } else {
     formatToPlainStringResult = name;
-    if (tmp2(1949).CollectiblesItemType.NAMEPLATE === type) {
-      const intl3 = tmp2(1236).intl;
+    if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
+      const intl3 = getSystemLocale.intl;
       obj = { product: null };
       obj[0] = name;
-      formatToPlainStringResult = intl3.formatToPlainString(tmp2(1236).t.YFOwHj, obj);
+      formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.YFOwHj, obj);
     }
   }
   return formatToPlainStringResult;

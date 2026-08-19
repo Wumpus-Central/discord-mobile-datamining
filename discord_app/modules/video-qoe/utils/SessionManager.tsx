@@ -1,9 +1,9 @@
 // === Module 14491: generateSessionId ===
 
 // Module 14491 (generateSessionId)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/video-qoe/utils/SessionManager.tsx");
+const result = obj132.fileFinishedImporting("modules/video-qoe/utils/SessionManager.tsx");
 const prototype = function SessionManager() {
   return Object.create(new.target.prototype);
 }.prototype;

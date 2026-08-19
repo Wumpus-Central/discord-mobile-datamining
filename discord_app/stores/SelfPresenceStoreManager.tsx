@@ -3,11 +3,10 @@
 // Module 16701 (handleChange)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 5038 */;
-import closure_2 from "filterPlayingActivities" /* 7250 */;
+import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
 
 function handleChange() {
-  let obj = dispatcherDefault;
-  obj = { type: "SELF_PRESENCE_STORE_UPDATE", status: store.getStatus(), activities: store.getActivities(true), hiddenActivities: store.getHiddenActivities() };
+  const obj = { type: "SELF_PRESENCE_STORE_UPDATE", status: store.getStatus(), activities: store.getActivities(true), hiddenActivities: store.getHiddenActivities() };
   obj.dispatch(obj);
 }
 initializeDefault;
@@ -19,6 +18,6 @@ let prototype = function SelfPresenceStoreManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("stores/SelfPresenceStoreManager.tsx");
+const result = require("obj132").fileFinishedImporting("stores/SelfPresenceStoreManager.tsx");
 
 export default prototype;

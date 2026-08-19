@@ -1,14 +1,14 @@
 // === Module 8853: CreateChannelTypeDescription ===
 
 // Module 8853 (CreateChannelTypeDescription)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { GuildProfileFetchStatus } from "handleUpdateStart" /* 8854 */;
 import { ChannelTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
 
 export default function CreateChannelTypeDescription(guildId) {
   guildId = guildId.guildId;
@@ -34,7 +34,6 @@ export default function CreateChannelTypeDescription(guildId) {
   }, items);
   let tmp9 = null;
   if (tmp6) {
-    obj = { children: null };
     obj = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t["2Ab4Id"]);

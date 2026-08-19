@@ -1,11 +1,11 @@
 // === Module 4879: create ===
 
 // Module 4879 (create)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import detectFile from "detectFile" /* 4880 */;
 import create from "create" /* 4907 */;
 
-const result = set.fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
+const result = obj132.fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
 const prototype = function DiscordImageFactory() {
   return Object.create(new.target.prototype);
 }.prototype;

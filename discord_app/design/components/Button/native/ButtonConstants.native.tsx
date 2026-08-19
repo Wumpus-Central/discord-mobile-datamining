@@ -1,7 +1,7 @@
 // === Module 4749: MINIMUM_HIT_AREA ===
 
 // Module 4749 (MINIMUM_HIT_AREA)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import IconSizes from "IconSizes" /* 4747 */;
 
@@ -11,7 +11,7 @@ const MEDIUM = IconSizes.IconSizes.MEDIUM;
 const diff = 32 - IconSizes.getIconSize(SMALL);
 const diff1 = 40 - IconSizes.getIconSize(SMALL_20);
 const diff2 = 48 - IconSizes.getIconSize(MEDIUM);
-const result = set.fileFinishedImporting("design/components/Button/native/ButtonConstants.native.tsx");
+const result = obj132.fileFinishedImporting("design/components/Button/native/ButtonConstants.native.tsx");
 
 export const MINIMUM_HIT_AREA = 44;
 export const SMALL_BUTTON_HEIGHT = 32;
@@ -31,9 +31,9 @@ export const SMALL_BUTTON_PADDING = (diff - 2) / 2;
 export const MEDIUM_BUTTON_PADDING = (diff1 - 2) / 2;
 export const LARGE_BUTTON_PADDING = (diff2 - 2) / 2;
 export const BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER = 3;
-export function getButtonDefaultTextVariant(size) {
+export function getButtonDefaultTextVariant(closure_0) {
   let str = "text-sm/semibold";
-  if ("lg" === size) {
+  if ("lg" === closure_0) {
     str = "text-md/semibold";
   }
   return str;

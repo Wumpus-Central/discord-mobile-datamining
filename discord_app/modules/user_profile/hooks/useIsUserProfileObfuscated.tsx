@@ -1,10 +1,10 @@
 // === Module 12092: useIsUserProfileObfuscated ===
 
 // Module 12092 (useIsUserProfileObfuscated)
-import closure_2 from "createUserWidgetFromServer" /* 5365 */;
+import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useIsUserProfileObfuscated.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useIsUserProfileObfuscated.tsx");
 
 export default function useIsUserProfileObfuscated(flags) {
   const _require = flags;

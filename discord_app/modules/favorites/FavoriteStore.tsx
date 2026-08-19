@@ -5,12 +5,12 @@ import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import create from "create" /* 1306 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
 import { createChannelRecord } from "createChannelRecord" /* 1395 */;
 import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_5 } from "date" /* 1429 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function initializeFromUserSettings() {
   const favorites = settings.settings.favorites;
   let flag;
@@ -25,22 +25,13 @@ function initializeFromUserSettings() {
     favoriteChannels = favorites.favoriteChannels;
   }
   let obj = {};
-  let num = 0;
-  let num2 = 0;
   if (null != favoriteChannels) {
     let num4 = 0;
     let num5 = 0;
-    num = 0;
-    num2 = 0;
     const keys = Object.keys();
     if (keys !== undefined) {
-      num = num4;
-      num2 = num5;
       while (keys[tmp] !== undefined) {
-        let tmp22 = tmp7;
         let tmp23 = favoriteChannels[tmp7];
-        let tmp24 = require;
-        let tmp25 = dependencyMap;
         let sum = num4;
         if (tmp23.type !== create.FavoriteChannelType.CATEGORY) {
           sum = num4 + 1;
@@ -59,7 +50,6 @@ function initializeFromUserSettings() {
         }
         obj[3] = value;
         obj[4] = tmp23.position;
-        let tmp11 = closure_5;
         let parentId = null;
         if (tmp23.parentId !== closure_5) {
           parentId = tmp23.parentId;
@@ -81,7 +71,6 @@ function initializeFromUserSettings() {
   let tmp14 = value;
   if (value == null) {
     tmp14 = !apply.isEmpty(obj);
-    const obj3 = apply;
   }
   let flag2 = flag !== flag;
   if (!flag2) {
@@ -92,7 +81,6 @@ function initializeFromUserSettings() {
   }
   if (!flag2) {
     flag2 = !apply.isEqual(obj, obj);
-    const obj4 = apply;
   }
   if (flag2) {
     closure_12 = tmp14;
@@ -174,7 +162,6 @@ prototype["getCategoryRecord"] = function getCategoryRecord(categoryId) {
       obj[3] = dependencyMap[categoryId].order;
       obj[4] = closure_7;
       tmp = createChannelRecord(obj);
-      const tmp7 = createChannelRecord;
     }
   }
   return tmp;
@@ -198,6 +185,6 @@ prototype["hasStoredFavorites"] = function hasStoredFavorites() {
 };
 FavoriteStore.displayName = "FavoriteStore";
 const favoriteStore = new FavoriteStore(dispatcherDefault, {});
-const result = require("set").fileFinishedImporting("modules/favorites/FavoriteStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/favorites/FavoriteStore.tsx");
 
 export default favoriteStore;

@@ -1,18 +1,18 @@
 // === Module 7363: useGiftCardMobileConsumptionHalfsheet ===
 
 // Module 7363 (useGiftCardMobileConsumptionHalfsheet)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "set" /* 7364 */;
-import closure_6 from "handlePaymentSourceUpdate" /* 4042 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import set from "set" /* 7364 */;
+import handlePaymentSourceUpdate from "handlePaymentSourceUpdate" /* 4042 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { PaymentSourceTypes } from "sum" /* 505 */;
 
-const require = arg1;
+const require = fn;
 const GiftCardMobileConsumptionActionSheet = "GiftCardMobileConsumptionActionSheet";
 let obj = { Idle: "idle", Opening: "opening", Opened: "opened" };
 let Idle = obj.Idle;
-const result = require("set").fileFinishedImporting("modules/checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx");
 
 export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileConsumptionHalfsheet() {
   enabled = enabled(7365).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
@@ -25,10 +25,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
       const _Object = Object;
       const values = Object.values(callback.paymentSources);
       for (const item10013 of values) {
-        let tmp7 = item10013;
-        let tmp8 = closure_1_8;
-        if (item10013.type === closure_1_8.TDS_WALLET) {
-          let tmp9 = obj;
+        if (item10013.type === PaymentSourceTypes.TDS_WALLET) {
           obj.return();
           return item10013.id;
         }
@@ -91,8 +88,8 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
   const effect = React.useEffect(() => {
     closure_5.current = closure_4;
   }, items7);
-  callback = React.useCallback((AUTO_DISMISS) => {
-    ref.current(AUTO_DISMISS);
+  callback = React.useCallback((closure_1_1) => {
+    ref.current(stateFromStores);
   }, []);
   const items8 = [enabled];
   const effect1 = React.useEffect(() => {
@@ -126,7 +123,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
         obj = stateFromStores(709);
         const subscription = obj.subscribe("SHOW_ACTION_SHEET", handleShow);
         const promise = enabled(2007)(7370, dependencyMap.paths);
-        promise.catch(() => {
+        promise.catch((error) => {
           let tmp = c0;
           if (!c0) {
             tmp = Idle !== closure_1_10.Opening;
@@ -138,7 +135,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
         const obj2 = stateFromStores(4342);
         obj = { markAsDismissed: null };
         obj[0] = callback;
-        obj2.openLazy(promise, closure_1_9, obj, "stack");
+        obj2.openLazy(promise, GiftCardMobileConsumptionActionSheet, obj, "stack");
         return () => {
           c0 = true;
           handleShow(closure_1_2[11]).unsubscribe("SHOW_ACTION_SHEET", handleShow);

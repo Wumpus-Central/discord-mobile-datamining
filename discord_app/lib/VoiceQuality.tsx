@@ -7,9 +7,9 @@ import onDefault from "on" /* 4572 */;
 import getSamples from "getSamples" /* 7490 */;
 import getStatsDefault from "getStats" /* 7496 */;
 import _initStatsDefault from "_initStats" /* 13092 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
-require = arg1;
+require = fn;
 let obj = { InputDeviceSampleRateChanged: "input-device-sample-rate-changed" };
 onDefault;
 class VoiceQuality extends tmp2 {
@@ -38,7 +38,7 @@ class VoiceQuality extends tmp2 {
                 if (num4 == null) {
                   num4 = 0;
                 }
-                lib.emit(closure_1_4.InputDeviceSampleRateChanged, num4);
+                lib.emit(obj.InputDeviceSampleRateChanged, num4);
               }
               inputDeviceStats.sessionSampleRate = input.sessionSampleRate;
             }
@@ -48,8 +48,7 @@ class VoiceQuality extends tmp2 {
             tmp10 = undefined !== input.timeFromConnectToFirstCallbackMs && undefined === inputDeviceStats.timeFromConnectToFirstCallbackMs;
             tmp6 = 0 !== num && undefined === inputDeviceStats.timeToFirstCallbackMs;
           } else {
-            let bufferViolations = input.bufferViolations;
-            bufferViolations = inputDeviceStats.bufferViolations;
+            let bufferViolations = inputDeviceStats.bufferViolations;
             if (bufferViolations == null) {
               bufferViolations = { accumulated: 0, lastValue: 0 };
             }
@@ -65,8 +64,7 @@ class VoiceQuality extends tmp2 {
             inputDeviceStats.bufferViolations = accumulated2;
           }
         } else {
-          let restartCount = input.restartCount;
-          restartCount = inputDeviceStats.restartCount;
+          let restartCount = inputDeviceStats.restartCount;
           if (restartCount == null) {
             restartCount = { accumulated: 0, lastValue: 0 };
           }
@@ -109,21 +107,18 @@ class VoiceQuality extends tmp2 {
       const lib = rtp;
       if (null != rtp) {
         const networkQuality = lib.networkQuality;
-        const result = networkQuality.incrementNetworkStats(lib(closure_1_2[7]).now());
+        const result = networkQuality.incrementNetworkStats(lib(dependencyMap[7]).now());
         const systemResources = lib.systemResources;
         systemResources.takeSample();
         const duration4 = lib.duration;
         duration4.connected = duration4.connected + 1;
-        let obj2 = lib(closure_1_2[7]);
-        const tmp4 = closure_1_2;
-        const tmp7 = closure_1_1;
+        let obj2 = lib(dependencyMap[7]);
         c1 = 0;
-        const reduced = closure_1_1(closure_1_2[6]).reduce(lib.inboundStats, (packetsReceived, packetsReceived2) => {
+        const reduced = applyDefault.reduce(lib.inboundStats, (packetsReceived, packetsReceived2) => {
           packetsReceived.packetsReceived = packetsReceived.packetsReceived + packetsReceived2.packetsReceived;
           return packetsReceived;
         }, { packetsReceived: 0 });
-        const arr2 = closure_1_1(closure_1_2[6]);
-        let item = closure_1_1(closure_1_2[6]).forEach(rtp.rtp.outbound, (type) => {
+        let item = applyDefault.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             let num = type.bitrateTarget;
             if (num == null) {
@@ -174,7 +169,7 @@ class VoiceQuality extends tmp2 {
             outboundStats.outboundStats = obj;
             const _Boolean = Boolean;
             if (tmp5) {
-              const speakingAudioLevel = tmp.outboundStats.speakingAudioLevel;
+              const speakingAudioLevel = outboundStats.outboundStats.speakingAudioLevel;
               const _Math = Math;
               speakingAudioLevel.addSample(20 * Math.log(type.audioLevel));
             }
@@ -184,10 +179,9 @@ class VoiceQuality extends tmp2 {
         lib.decryptionFailures = rtp.transport.decryptionFailures;
         lib.routingFailures = rtp.transport.routingFailures;
         lib.appendTargetRates(lib.outboundStats, rtp.transport.availableOutgoingBitrate, c1);
-        const arr3 = closure_1_1(closure_1_2[6]);
-        const item1 = closure_1_1(closure_1_2[6]).forEach(rtp.rtp.inbound, (arg0, arg1) => {
+        const item1 = applyDefault.forEach(rtp.rtp.inbound, (arg0, arg1) => {
           closure_0 = arg1;
-          const item = closure_2_1(closure_2_2[6]).forEach(arg0, (type) => {
+          const item = applyDefault.forEach(arg0, (type) => {
             if ("audio" === type.type) {
               let num = lib.transport.ping;
               if (num == null) {
@@ -212,7 +206,7 @@ class VoiceQuality extends tmp2 {
                 prop = tmp38.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new lib(closure_3_2[1]).Histogram();
+                prop = new lib(dependencyMap[1]).Histogram();
               }
               obj[1] = prop;
               obj[2] = type.audioJitterTarget;
@@ -221,7 +215,7 @@ class VoiceQuality extends tmp2 {
                 prop1 = tmp38.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new lib(closure_3_2[1]).Histogram();
+                prop1 = new lib(dependencyMap[1]).Histogram();
               }
               obj[3] = prop1;
               obj[4] = type.audioJitterDelay;
@@ -230,7 +224,7 @@ class VoiceQuality extends tmp2 {
                 prop2 = tmp38.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new lib(closure_3_2[1]).Histogram();
+                prop2 = new lib(dependencyMap[1]).Histogram();
               }
               obj[5] = prop2;
               ({ relativeReceptionDelay: obj[6], relativePlayoutDelay: obj[7] } = type);
@@ -303,8 +297,8 @@ class VoiceQuality extends tmp2 {
                 let num17 = 0;
                 if (tmp26) {
                   const sum = num + num3;
-                  let obj4 = closure_3_1(closure_3_2[6]);
-                  const calculateMosResult = obj8.calculateMos(sum, obj4.clamp(diff1 / (diff + diff1), 0, 1));
+                  let obj4 = applyDefault;
+                  const calculateMosResult = lib.calculateMos(sum, obj4.clamp(diff1 / (diff + diff1), 0, 1));
                   const _Math = Math;
                   const rounded = Math.floor(calculateMosResult);
                   mosBuckets[rounded] = mosBuckets[rounded] + 1;
@@ -332,10 +326,10 @@ class VoiceQuality extends tmp2 {
                 obj1[11] = obj;
                 obj1[12] = decryptFailureBeforeSuccessCount;
                 const merged = Object.assign(obj);
-                obj8.inboundStats[tmp37] = obj1;
+                lib.inboundStats[lib] = obj1;
                 const obj2 = { previousTimestampMs: null, previous: null, currentTimestampMs: null, current: null, accelerateRateSum: null, expandRateSum: null, preemptiveExpandRateSum: null, speechExpandRateSum: null, numRateSamples: null };
-                obj2[0] = obj8.periodicInboundStats[tmp37].previousTimestampMs;
-                obj2[1] = obj8.periodicInboundStats[tmp37].previous;
+                obj2[0] = lib.periodicInboundStats[lib].previousTimestampMs;
+                obj2[1] = lib.periodicInboundStats[lib].previous;
                 const _performance3 = performance;
                 obj2[2] = performance.now();
                 obj2[3] = obj;
@@ -343,24 +337,24 @@ class VoiceQuality extends tmp2 {
                 if (num20 == null) {
                   num20 = 0;
                 }
-                obj2[4] = obj8.periodicInboundStats[tmp37].accelerateRateSum + num20;
+                obj2[4] = lib.periodicInboundStats[lib].accelerateRateSum + num20;
                 let num21 = type.expandRate;
                 if (num21 == null) {
                   num21 = 0;
                 }
-                obj2[5] = obj8.periodicInboundStats[tmp37].expandRateSum + num21;
+                obj2[5] = lib.periodicInboundStats[lib].expandRateSum + num21;
                 let num22 = type.preemptiveExpandRate;
                 if (num22 == null) {
                   num22 = 0;
                 }
-                obj2[6] = obj8.periodicInboundStats[tmp37].preemptiveExpandRateSum + num22;
+                obj2[6] = lib.periodicInboundStats[lib].preemptiveExpandRateSum + num22;
                 let num23 = type.speechExpandRate;
                 if (num23 == null) {
                   num23 = 0;
                 }
-                obj2[7] = obj8.periodicInboundStats[tmp37].speechExpandRateSum + num23;
-                obj2[8] = obj8.periodicInboundStats[tmp37].numRateSamples + 1;
-                obj8.periodicInboundStats[tmp37] = obj2;
+                obj2[7] = lib.periodicInboundStats[lib].speechExpandRateSum + num23;
+                obj2[8] = lib.periodicInboundStats[lib].numRateSamples + 1;
+                lib.periodicInboundStats[lib] = obj2;
                 tmp26 = diff > 0 && diff1 >= 0;
               } else {
                 const obj3 = { packetsReceived: null, bytesReceived: null, packetsLost: null, nackCount: null, fecPacketsReceived: null, fecPacketsDiscarded: null, mos: 0, mosSum: 0, mosCount: 0, mosBuckets: null, bufferStats: null, frameOpStats: null };
@@ -378,7 +372,7 @@ class VoiceQuality extends tmp2 {
                 obj3[10] = obj;
                 obj3[11] = obj;
                 const merged1 = Object.assign(obj);
-                obj8.inboundStats[tmp37] = obj3;
+                lib.inboundStats[lib] = obj3;
                 obj4 = { previousTimestampMs: null, previous: null, currentTimestampMs: null, current: null, accelerateRateSum: null, expandRateSum: null, preemptiveExpandRateSum: null, speechExpandRateSum: null, numRateSamples: 1 };
                 const _performance = performance;
                 obj4[0] = performance.now();
@@ -406,7 +400,7 @@ class VoiceQuality extends tmp2 {
                   num14 = 0;
                 }
                 obj4[7] = num14;
-                obj8.periodicInboundStats[tmp37] = obj4;
+                lib.periodicInboundStats[lib] = obj4;
               }
             }
           });
@@ -421,7 +415,6 @@ class VoiceQuality extends tmp2 {
           duration.speaking = duration.speaking + 1;
           flag = true;
         }
-        const arr4 = closure_1_1(closure_1_2[6]);
         let flag2 = false;
         if (tmp7Result.reduce(lib.inboundStats, (packetsReceived, packetsReceived2) => {
           packetsReceived.packetsReceived = packetsReceived.packetsReceived + packetsReceived2.packetsReceived;
@@ -438,7 +431,7 @@ class VoiceQuality extends tmp2 {
           const duration3 = obj.duration;
           duration3.participation = duration3.participation + 1;
         }
-        tmp7Result = tmp7(tmp4[6]);
+        tmp7Result = applyDefault;
       }
     };
     tmp3.connection = global;
@@ -551,7 +544,6 @@ prototype["getBufferStats"] = function getBufferStats() {
     let tmp3 = null == bufferStats || null == percentile1;
     if (!tmp3) {
       tmp3 = null != percentile && percentile > percentile1;
-      const tmp4 = null != percentile && percentile > percentile1;
     }
     if (tmp3) {
       bufferStats = bufferStats.bufferStats;
@@ -583,10 +575,7 @@ prototype["getBufferStats"] = function getBufferStats() {
         obj[4] = relativePlayoutDelay;
         obj = {};
         for (const key10055 in obj) {
-          let tmp28 = key10055;
           let obj4 = obj[key10055];
-          let tmp29 = require;
-          let tmp30 = dependencyMap;
           if (obj4 instanceof getSamples.Histogram) {
             let report = obj4.getReport([75, 95, 99]);
             let _Math = Math;
@@ -804,27 +793,17 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
   const items = [];
   const entries = Object.entries(this.periodicInboundStats);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    let tmp8 = tmp7;
     ({ previous, current, currentTimestampMs, previousTimestampMs } = tmp7);
-    let tmp9 = previousTimestampMs;
     let numRateSamples = tmp7.numRateSamples;
     if (undefined !== previousTimestampMs) {
-      let tmp32 = currentTimestampMs;
-      let tmp33 = previousTimestampMs;
-      if (currentTimestampMs > tmp9) {
-        let tmp34 = currentTimestampMs;
-        let tmp35 = previousTimestampMs;
-        let diff = currentTimestampMs - tmp9;
+      if (currentTimestampMs > previousTimestampMs) {
+        let diff = currentTimestampMs - previousTimestampMs;
         obj = { userId: null, silent: null, normal: null, merged: null, expanded: null, accelerated: null, preemptiveExpanded: null, cng: null, accelerateRate: null, expandRate: null, preemptiveExpandRate: null, speechExpandRate: null, durationMs: null };
-        let tmp37 = tmp6;
         obj[0] = tmp6;
-        let tmp38 = current;
         let silent = current.silent;
         if (silent == null) {
-          let tmp10 = previous;
           let num = previous.silent;
           if (num == null) {
             num = 0;
@@ -832,10 +811,8 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
           silent = 0 - num;
         }
         obj[1] = silent;
-        let tmp11 = current;
         let normal = current.normal;
         if (normal == null) {
-          let tmp12 = previous;
           let num2 = previous.normal;
           if (num2 == null) {
             num2 = 0;
@@ -843,10 +820,8 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
           normal = 0 - num2;
         }
         obj[2] = normal;
-        let tmp13 = current;
         let merged = current.merged;
         if (merged == null) {
-          let tmp14 = previous;
           let num3 = previous.merged;
           if (num3 == null) {
             num3 = 0;
@@ -854,10 +829,8 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
           merged = 0 - num3;
         }
         obj[3] = merged;
-        let tmp15 = current;
         let expanded = current.expanded;
         if (expanded == null) {
-          let tmp16 = previous;
           let num4 = previous.expanded;
           if (num4 == null) {
             num4 = 0;
@@ -865,10 +838,8 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
           expanded = 0 - num4;
         }
         obj[4] = expanded;
-        let tmp17 = current;
         let accelerated = current.accelerated;
         if (accelerated == null) {
-          let tmp18 = previous;
           let num5 = previous.accelerated;
           if (num5 == null) {
             num5 = 0;
@@ -876,10 +847,8 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
           accelerated = 0 - num5;
         }
         obj[5] = accelerated;
-        let tmp19 = current;
         let preemptiveExpanded = current.preemptiveExpanded;
         if (preemptiveExpanded == null) {
-          let tmp20 = previous;
           let num6 = previous.preemptiveExpanded;
           if (num6 == null) {
             num6 = 0;
@@ -887,10 +856,8 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
           preemptiveExpanded = 0 - num6;
         }
         obj[6] = preemptiveExpanded;
-        let tmp21 = current;
         let cng = current.cng;
         if (cng == null) {
-          let tmp22 = previous;
           let num7 = previous.cng;
           if (num7 == null) {
             num7 = 0;
@@ -898,29 +865,22 @@ prototype["getPeriodicStats"] = function getPeriodicStats() {
           cng = 0 - num7;
         }
         obj[7] = cng;
-        let tmp23 = tmp7;
-        let tmp24 = numRateSamples;
-        obj[8] = tmp8.accelerateRateSum / numRateSamples;
-        obj[9] = tmp8.expandRateSum / numRateSamples;
-        obj[10] = tmp8.preemptiveExpandRateSum / numRateSamples;
-        obj[11] = tmp8.speechExpandRateSum / numRateSamples;
-        let tmp25 = diff;
+        obj[8] = tmp7.accelerateRateSum / numRateSamples;
+        obj[9] = tmp7.expandRateSum / numRateSamples;
+        obj[10] = tmp7.preemptiveExpandRateSum / numRateSamples;
+        obj[11] = tmp7.speechExpandRateSum / numRateSamples;
         obj[12] = diff;
         if (obj.normal + obj.merged + obj.expanded + obj.accelerated + obj.preemptiveExpanded > 0) {
-          let tmp27 = obj;
           let arr = items.push(tmp26);
         }
       }
     }
-    let tmp29 = tmp6;
     self.periodicInboundStats[tmp6].accelerateRateSum = 0;
     self.periodicInboundStats[tmp6].expandRateSum = 0;
     self.periodicInboundStats[tmp6].preemptiveExpandRateSum = 0;
     self.periodicInboundStats[tmp6].speechExpandRateSum = 0;
     self.periodicInboundStats[tmp6].numRateSamples = 0;
-    let tmp30 = current;
     self.periodicInboundStats[tmp6].previous = current;
-    let tmp31 = currentTimestampMs;
     self.periodicInboundStats[tmp6].previousTimestampMs = currentTimestampMs;
     continue;
   }
@@ -946,7 +906,7 @@ prototype["calculateR"] = function calculateR(sum, arg1) {
   }
   return 93.4 - (result + num) - (10 + 122 * arg1 / (arg1 + 10));
 };
-let result = require("set").fileFinishedImporting("lib/VoiceQuality.tsx");
+let result = require("obj132").fileFinishedImporting("lib/VoiceQuality.tsx");
 
 export default VoiceQuality;
 export const VoiceQualityEvent = obj;

@@ -1,9 +1,9 @@
 // === Module 4566: traceEvent ===
 
 // Module 4566 (traceEvent)
-import set2 from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set2.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
+const result = obj132.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
 class SoundshareStatsAggregator {
   constructor() {
     obj = Object.create(new.target.prototype);

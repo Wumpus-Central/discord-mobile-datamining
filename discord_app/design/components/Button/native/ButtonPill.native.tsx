@@ -2,20 +2,22 @@
 
 // Module 4754 (PillWrapper)
 import ThemesDefault from "Themes" /* 712 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import map from "map" /* 4097 */;
 import ManaContext from "ManaContext" /* 4104 */;
 import _modDef4115 from "module_4115" /* 4115 */;
 import MINIMUM_HIT_AREA2 from "MINIMUM_HIT_AREA" /* 4749 */;
 import styleProperties from "styleProperties" /* 4750 */;
+import useShineEffectStyles from "useShineEffectStyles" /* 4755 */;
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function PillWrapper(expressivePressState) {
   ({ children, variant, style, shiny } = expressivePressState);
   if (shiny === undefined) {
@@ -40,7 +42,7 @@ function PillWrapper(expressivePressState) {
   if (shiny) {
     obj = { variant: null };
     obj[0] = variant;
-    tmp7 = callback2(tmp(4755).ButtonShine, obj);
+    tmp7 = callback2(useShineEffectStyles.ButtonShine, obj);
   }
   if ("experimental_premium-primary" !== variant) {
     if ("experimental_premium-basic" !== variant) {
@@ -61,10 +63,9 @@ function PillWrapper(expressivePressState) {
         obj2[1] = tmp5.expressivePill.borderRadius;
         const merged = Object.assign(expressivePressState);
         obj1[4] = obj2;
-        obj[1] = callback2(tmp(4104).ExpressiveButtonRive, obj1);
-        tmp11Result = tmp11(closure_5, obj);
-        const tmp12 = closure_5;
-        tmpResult = tmp(1363);
+        obj[1] = callback2(ManaContext.ExpressiveButtonRive, obj1);
+        tmp11Result = callback2(closure_5, obj);
+        tmpResult = AccessibilityAnnouncer;
       }
       obj3 = { children: null };
       const items3 = [tmp11Result, ];
@@ -73,10 +74,10 @@ function PillWrapper(expressivePressState) {
       obj4[0] = items4;
       const items5 = [children, tmp7];
       obj4[1] = items5;
-      items3[1] = tmp9(tmp6(4115).View, obj4);
+      items3[1] = callback(_modDef4115.View, obj4);
       obj3[0] = items3;
     }
-    return tmp9(tmp10, obj3);
+    return callback(tmp10, obj3);
   }
   obj5 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, style: items6, colors: null };
   items6 = [style, gradientPillStyles, closure_6.absoluteFill];
@@ -88,9 +89,10 @@ function PillWrapper(expressivePressState) {
   const items7 = [callback2(LinearGradientDefault, obj5), ];
   const items8 = [style, buttonPillStyles];
   const items9 = [children, tmp7];
-  items7[1] = closure_8(_modDef4115.View, { style: items8, children: items9 });
+  items7[1] = callback(_modDef4115.View, { style: items8, children: items9 });
   obj6[0] = items7;
   obj3 = obj6;
+  const tmp6Result = LinearGradientDefault;
 }
 class BasicButtonPill {
   constructor(arg0) {
@@ -150,13 +152,13 @@ class LoadingButtonPill {
     effect = closure_4.useEffect(() => {
       if (null != ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
+        clearTimeout(ref.current);
       }
       if (flag) {
         _undefined(true);
       } else {
         const _setTimeout = setTimeout;
-        tmp.current = setTimeout(() => {
+        ref.current = setTimeout(() => {
           callback(false);
         }, 500);
       }
@@ -214,8 +216,8 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
     obj = { opacity: null, transform: null };
     if (enabled) {
       let withDelayResult = withSpringResult;
-      if (!tmp3) {
-        let tmpResult = tmp(tmp2[12]);
+      if (!callback) {
+        let tmpResult = callback(tmp2[12]);
         withDelayResult = tmpResult.withDelay(closure_1_10, withSpringResult);
       }
       obj[0] = withDelayResult;
@@ -224,13 +226,13 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
       let tmp6 = obj;
     } else {
       obj[0] = withSpringResult;
-      tmpResult = tmp(tmp2[16]);
+      tmpResult = callback(tmp2[16]);
       let num2 = 0;
-      if (tmp3) {
+      if (callback) {
         num2 = -1 * num;
       }
       obj = { translateY: null };
-      obj[0] = tmpResult.withSpring(num2, tmp(tmp2[17]).SUBTLE_SPRING);
+      obj[0] = tmpResult.withSpring(num2, callback(tmp2[17]).SUBTLE_SPRING);
       const items1 = [obj];
       obj[1] = items1;
       tmp6 = obj;
@@ -253,8 +255,8 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
     obj = { opacity: null, transform: null };
     if (enabled) {
       let withDelayResult = withSpringResult;
-      if (tmp3) {
-        let tmpResult = tmp(tmp2[12]);
+      if (callback) {
+        let tmpResult = callback(tmp2[12]);
         withDelayResult = tmpResult.withDelay(closure_1_10, withSpringResult);
       }
       obj[0] = withDelayResult;
@@ -263,13 +265,13 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
       let tmp5 = obj;
     } else {
       obj[0] = withSpringResult;
-      tmpResult = tmp(tmp2[16]);
+      tmpResult = callback(tmp2[16]);
       let num2 = 0;
-      if (!tmp3) {
+      if (!callback) {
         num2 = num;
       }
       obj = { translateY: null };
-      obj[0] = tmpResult.withSpring(num2, tmp(tmp2[17]).SUBTLE_SPRING);
+      obj[0] = tmpResult.withSpring(num2, callback(tmp2[17]).SUBTLE_SPRING);
       const items1 = [obj];
       obj[1] = items1;
       tmp5 = obj;
@@ -327,7 +329,7 @@ let closure_14 = createCacheKey.createStyles((arg0, arg1) => {
 });
 let closure_18 = { code: "function ButtonPillNativeTsx1(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?0:1,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?opacityTransition:withDelay(FADE_DELAY,opacityTransition),transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?-1*offsetY:0,SUBTLE_SPRING)}]};}" };
 let closure_19 = { code: "function ButtonPillNativeTsx2(){const{withSpring,loading,SUBTLE_SPRING,useReducedMotion,withDelay,FADE_DELAY,offsetY}=this.__closure;const opacityTransition=withSpring(loading?1:0,SUBTLE_SPRING,'animate-always');if(useReducedMotion){return{opacity:loading?withDelay(FADE_DELAY,opacityTransition):opacityTransition,transform:[{translateY:0}]};}return{opacity:opacityTransition,transform:[{translateY:withSpring(loading?0:offsetY,SUBTLE_SPRING)}]};}" };
-const result = require("set").fileFinishedImporting("design/components/Button/native/ButtonPill.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Button/native/ButtonPill.native.tsx");
 
 export const ButtonPill = function ButtonPill(loading) {
   if (null == loading.loading) {

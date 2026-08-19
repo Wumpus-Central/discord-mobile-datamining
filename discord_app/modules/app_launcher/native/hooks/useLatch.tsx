@@ -1,9 +1,9 @@
 // === Module 11337: useLatch ===
 
 // Module 11337 (useLatch)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useLatch.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/hooks/useLatch.tsx");
 
 export default function useLatch(arg0) {
   const React = arg0;

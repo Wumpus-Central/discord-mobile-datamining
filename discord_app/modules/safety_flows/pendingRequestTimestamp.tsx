@@ -1,7 +1,7 @@
 // === Module 17103: SENT_TIMESTAMP_FORMATTER ===
 
 // Module 17103 (SENT_TIMESTAMP_FORMATTER)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2597 */;
 import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
@@ -18,7 +18,7 @@ function SENT_TIMESTAMP_FORMATTER() {
   obj[5] = messagesProxyDefault.q6jzya;
   return obj;
 }
-const result = set.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");
+const result = obj132.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");
 
 export const formatPendingRequestSentText = function formatPendingRequestSentText(created_at) {
   return getEmptyActivityFormatter.formatLinkTimestamp(Date.parse(created_at), SENT_TIMESTAMP_FORMATTER);

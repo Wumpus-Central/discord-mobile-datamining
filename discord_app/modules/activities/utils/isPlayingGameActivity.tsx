@@ -1,14 +1,14 @@
 // === Module 9733: isPlayingGameActivity ===
 
 // Module 9733 (isPlayingGameActivity)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import items3 from "items3" /* 4481 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
 
 let closure_2 = items3.XBOX_ACTIVITY_APPLICATION_ID;
 const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/isPlayingGameActivity.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/isPlayingGameActivity.tsx");
 
 export default function isPlayingGameActivity(application_id) {
   let tmp = null != application_id;

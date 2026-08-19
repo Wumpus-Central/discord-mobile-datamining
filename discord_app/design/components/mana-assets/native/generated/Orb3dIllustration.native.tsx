@@ -1,13 +1,13 @@
 // === Module 6034: Orb3dIllustration ===
 
 // Module 6034 (Orb3dIllustration)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import metadataDefault from "metadata" /* 6035 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/Orb3dIllustration.native.tsx");
+const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/Orb3dIllustration.native.tsx");
 
 export const Orb3dIllustration = function Orb3dIllustration(width) {
   let num = width.width;
@@ -23,8 +23,7 @@ export const Orb3dIllustration = function Orb3dIllustration(width) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
+  let obj = { uri: metadataDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];

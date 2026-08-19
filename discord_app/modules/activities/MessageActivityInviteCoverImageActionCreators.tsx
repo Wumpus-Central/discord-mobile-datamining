@@ -1,10 +1,10 @@
 // === Module 12790: setCoverImageURL ===
 
 // Module 12790 (setCoverImageURL)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = set.fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageActionCreators.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageActionCreators.tsx");
 
 export const setCoverImageURL = function setCoverImageURL(arg0) {
   ({ messageId, coverImageURL } = arg0);

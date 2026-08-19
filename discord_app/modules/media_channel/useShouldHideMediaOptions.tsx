@@ -1,11 +1,11 @@
 // === Module 10852: useShouldHideMediaOptions ===
 
 // Module 10852 (useShouldHideMediaOptions)
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { ChannelFlags } from "set" /* 1398 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
 
 export default function useShouldHideMediaOptions(arg0) {
   const _require = arg0;

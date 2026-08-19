@@ -1,16 +1,16 @@
 // === Module 17067: AVErrorAudioCaptureSampleRateMismatchDefinition ===
 
 // Module 17067 (AVErrorAudioCaptureSampleRateMismatchDefinition)
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import mapped from "mapped" /* 9668 */;
 import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17055 */;
-import closure_2 from "updateAveragedStatsHelper" /* 4557 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
+import updateAveragedStatsHelper from "updateAveragedStatsHelper" /* 4557 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
 
-require = arg1;
-let closure_5 = 10 * setDefault.Millis.SECOND;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx");
+require = fn;
+let closure_5 = 10 * obj132Default.Millis.SECOND;
+const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx");
 
 export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
   getActiveErrors() {
@@ -35,7 +35,7 @@ export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
         let num2;
         if (connectionStats != null) {
           const outbound = connectionStats.stats.rtp.outbound;
-          const found = outbound.find((type) => "audio" === type.type);
+          const found = outbound.find((item, index) => "audio" === item.type);
           if (found != null) {
             num2 = found.sampleRateMismatchPercent;
           }
@@ -52,7 +52,6 @@ export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
           const merged = Object.assign(getVoiceChannelErrorContext.getVoiceChannelErrorContext());
           const items = [obj];
           tmp5 = items;
-          const obj4 = getVoiceChannelErrorContext;
         }
         return tmp5;
       }

@@ -2,26 +2,25 @@
 
 // Module 16318 (VoiceControlsToggleActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = { videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4" };
-createCacheKey = { videoContainer: null, bottomSheetWrapper: null, contentContainer: null, title: null, body: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+const createCacheKey = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: 24 };
 createCacheKey[2] = { flex: 1, alignItems: "center", paddingTop: 24, paddingBottom: 16 };
 createCacheKey[3] = { marginTop: 16, textAlign: "center" };
 createCacheKey[4] = { marginTop: 8, marginBottom: 24, textAlign: "center" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/activities/native/VoiceControlsToggleNuxActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/activities/native/VoiceControlsToggleNuxActionSheet.tsx");
 
 export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -38,13 +37,6 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   if (isScreenLandscape) {
     num = 2.0875;
   }
-  obj = {
-    startExpanded: true,
-    onDismiss() {
-      return markAsDismissed(closure_1_7.UNKNOWN);
-    },
-    children: null
-  };
   obj = { style: tmp.bottomSheetWrapper, children: null };
   obj1 = {
     style: tmp.contentContainer,
@@ -54,7 +46,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
       if (isScreenLandscape) {
         result = width / 2;
       }
-      c1(result);
+      _undefined(result);
     },
     children: null
   };
@@ -69,7 +61,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   items1[2] = callback2(markAsDismissed(isScreenLandscape[12]).Text, obj4);
   const obj5 = {
     onPress() {
-      return markAsDismissed(closure_1_7.UNKNOWN);
+      return markAsDismissed(ContentDismissActionType.UNKNOWN);
     },
     text: null
   };

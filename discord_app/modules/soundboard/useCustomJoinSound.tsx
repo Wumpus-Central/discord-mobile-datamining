@@ -1,20 +1,19 @@
 // === Module 7334: CustomSoundType ===
 
 // Module 7334 (CustomSoundType)
-import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1340 */;
 import { CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID as closure_3 } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
 
-const require = arg1;
+const require = fn;
 let obj = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
-const result = require("set").fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");
+const result = require("obj132").fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");
 
 export const CustomSoundType = obj;
 export const useCustomJoinSound = function useCustomJoinSound(arg0) {
   const _require = arg0;
   const items = [closure_2];
   return _require(589).useStateFromStores(items, () => {
-    let guilds = closure_1_2.settings.guilds;
-    guilds = undefined;
+    let guilds;
     if (guilds != null) {
       guilds = guilds.guilds;
     }
@@ -45,8 +44,7 @@ export const useCustomJoinSound = function useCustomJoinSound(arg0) {
   });
 };
 export const getCustomJoinSound = function getCustomJoinSound(currentUser) {
-  let guilds = settings.settings.guilds;
-  guilds = undefined;
+  let guilds;
   if (guilds != null) {
     guilds = guilds.guilds;
   }

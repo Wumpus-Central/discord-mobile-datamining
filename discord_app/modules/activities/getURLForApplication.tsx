@@ -1,10 +1,10 @@
 // === Module 8710: getURLForApplication ===
 
 // Module 8710 (getURLForApplication)
-import closure_0 from "reset" /* 7874 */;
-import closure_1 from "initialize" /* 7872 */;
+import reset from "reset" /* 7874 */;
+import initialize from "initialize" /* 7872 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/getURLForApplication.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/getURLForApplication.tsx");
 
 export default function getURLForApplication(arg0) {
   const state = store.getState();
@@ -17,27 +17,24 @@ export default function getURLForApplication(arg0) {
   }
   if (useActivityUrlOverride) {
     let activityUrlOverride = store.getState().activityUrlOverride;
+  } else if (closure_0.inTestModeForEmbeddedApplication(arg0)) {
+    activityUrlOverride = closure_0.testModeOriginURL;
   } else {
-    if (closure_0.inTestModeForEmbeddedApplication(arg0)) {
-      activityUrlOverride = tmp4.testModeOriginURL;
-    } else {
-      const _window = window;
-      activityUrlOverride = null;
-      if (null != ACTIVITY_APPLICATION_HOST) {
-        if (ACTIVITY_APPLICATION_HOST.startsWith("//")) {
-          const _URL = URL;
-          const _window2 = window;
-          const uRL = new URL(ACTIVITY_APPLICATION_HOST, window.location.href);
-          const _HermesInternal2 = HermesInternal;
-          uRL.hostname = "" + arg0 + "." + uRL.hostname;
-          activityUrlOverride = uRL.origin;
-        } else {
-          const _HermesInternal = HermesInternal;
-          activityUrlOverride = "https://" + arg0 + "." + ACTIVITY_APPLICATION_HOST;
-        }
+    const _window = window;
+    activityUrlOverride = null;
+    if (null != ACTIVITY_APPLICATION_HOST) {
+      if (ACTIVITY_APPLICATION_HOST.startsWith("//")) {
+        const _URL = URL;
+        const _window2 = window;
+        const uRL = new URL(ACTIVITY_APPLICATION_HOST, window.location.href);
+        const _HermesInternal2 = HermesInternal;
+        uRL.hostname = "" + arg0 + "." + uRL.hostname;
+        activityUrlOverride = uRL.origin;
+      } else {
+        const _HermesInternal = HermesInternal;
+        activityUrlOverride = "https://" + arg0 + "." + ACTIVITY_APPLICATION_HOST;
       }
     }
-    tmp4 = closure_0;
   }
   return activityUrlOverride;
 };

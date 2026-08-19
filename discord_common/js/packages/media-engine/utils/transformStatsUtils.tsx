@@ -1,9 +1,9 @@
 // === Module 4631: formatSinkWantStat ===
 
 // Module 4631 (formatSinkWantStat)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/transformStatsUtils.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/transformStatsUtils.tsx");
 
 export const formatSinkWantStat = function formatSinkWantStat(id, ssrc, arg2) {
   let str = id[ssrc];

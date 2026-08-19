@@ -3,12 +3,12 @@
 // Module 14644
 import importAllResult from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "THEME_ITEM_WIDTH" /* 14618 */;
+import THEME_ITEM_WIDTH from "THEME_ITEM_WIDTH" /* 14618 */;
 import { jsx } from "jsxProd" /* 21 */;
 import module_4115 from "module_4115" /* 4115 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 let num = module_4115.processColor("rgba(0, 0, 0, 0)");
 if (num == null) {
@@ -29,8 +29,6 @@ const memoResult = importAllResult.memo(function SettingsAppearanceGradientBackg
   if (BACKGROUND_SURFACE_HIGH === undefined) {
     BACKGROUND_SURFACE_HIGH = sharedValue(sharedValue1[9]).colors.BACKGROUND_SURFACE_HIGH;
   }
-  StyleSheet = undefined;
-  let memo;
   sharedValue = undefined;
   sharedValue1 = undefined;
   let sharedValue2;
@@ -38,7 +36,7 @@ const memoResult = importAllResult.memo(function SettingsAppearanceGradientBackg
   StyleSheet = tmp5;
   let obj = BACKGROUND_SURFACE_HIGH;
   let items = [tmp5];
-  memo = BACKGROUND_SURFACE_HIGH.useMemo(() => closure_4 ? ["mobile-visual-refresh"] : [], items);
+  const memo = BACKGROUND_SURFACE_HIGH.useMemo(() => closure_4 ? ["mobile-visual-refresh"] : [], items);
   const items1 = [themes, themeIndex, isDimmed, memo, BACKGROUND_SURFACE_HIGH];
   const memo1 = BACKGROUND_SURFACE_HIGH.useMemo(() => {
     let prop;
@@ -104,17 +102,17 @@ const memoResult = importAllResult.memo(function SettingsAppearanceGradientBackg
           diff = 90 - obj.interpolate(closure_7.get(), [0, 1], items);
           tmp9 = closure_1(closure_2[11])(diff, width, height);
           obj = { colors: null, locations: null, startPoint: null, endPoint: null };
-          obj[0] = colors.map((arg0, arg1) => {
+          obj[0] = colors.map((item, index) => {
             const obj = launchWelcomeSystemTheme(sharedValue1[4]);
-            const items = [colors[arg1].hex, colors[arg1].hex];
+            const items = [colors[index].hex, colors[index].hex];
             let num = obj.processColor(launchWelcomeSystemTheme(sharedValue1[4]).interpolateColor(closure_1_7.get(), [0, 1], items));
             if (num == null) {
               num = 0;
             }
             return num;
           });
-          obj[1] = colors.map((arg0, arg1) => {
-            const items = [colors[arg1].stop / 100, colors[arg1].stop / 100];
+          obj[1] = colors.map((item, index) => {
+            const items = [colors[index].stop / 100, colors[index].stop / 100];
             return launchWelcomeSystemTheme(sharedValue1[4]).interpolate(closure_1_7.get(), [0, 1], items);
           });
           obj1 = { x: null, y: null };
@@ -142,6 +140,6 @@ const memoResult = importAllResult.memo(function SettingsAppearanceGradientBackg
   obj.animatedProps = animatedProps;
   return sharedValue(sharedValue1, obj);
 });
-let result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceGradientBackground.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceGradientBackground.tsx");
 
 export default memoResult;

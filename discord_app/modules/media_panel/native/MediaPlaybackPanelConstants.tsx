@@ -1,9 +1,9 @@
 // === Module 13902: MediaPlaybackPanelModes ===
 
 // Module 13902 (MediaPlaybackPanelModes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
 
 export const MediaPlaybackPanelModes = { DISMISSED: "dismissed", PIP: "pip" };
 export const PLAYBACK_COMPLETION_DETECTION_TOLERANCE = 100;

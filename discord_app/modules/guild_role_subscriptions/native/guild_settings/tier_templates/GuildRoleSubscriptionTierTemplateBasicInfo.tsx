@@ -8,28 +8,24 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
 import { CurrencyCodes } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null, templateCTAButton: null };
-createCacheKey = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm };
+const createCacheKey = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.sm };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateBasicInfo.tsx");
 
 export const GuildRoleSubscriptionTierTemplateBasicInfo = function GuildRoleSubscriptionTierTemplateBasicInfo(template) {
   template = template.template;
   ({ handleSelectTemplateInPreview: importDefault, closeActionSheet: dependencyMap, descriptionTextProps } = template);
   ({ subscriptionPlanTextStyle, descriptionTextStyle } = template);
   const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.header, children: null };
   ({ image, name, price_tier, description } = template.listings[0]);
-  obj = { source: { uri: image }, style: tmp.image };
+  const obj = { source: { uri: image }, style: tmp.image };
   const items = [callback(preloadDefault, obj), callback(template(1297).Spacer, { size: 16 }), ];
   obj1 = { style: { flexShrink: 1 }, children: null };
   const items1 = [callback(template(4734).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", style: { flexWrap: "wrap" }, children: name }), callback(template(1297).Spacer, { size: 4 }), ];

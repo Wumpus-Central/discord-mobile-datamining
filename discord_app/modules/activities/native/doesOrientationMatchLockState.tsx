@@ -1,11 +1,11 @@
 // === Module 12469: doesOrientationMatchLockState ===
 
 // Module 12469 (doesOrientationMatchLockState)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import items3 from "items3" /* 4481 */;
 
 const OrientationLockState = items3.OrientationLockState;
-const result = set.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");
 
 export default function doesOrientationMatchLockState(arg0, arg1) {
   let tmp = null == arg1;

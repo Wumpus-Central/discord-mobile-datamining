@@ -9,15 +9,15 @@ import useVideoStreamErrorDefault from "useVideoStreamError" /* 12439 */;
 import registerAssetDefault from "registerAsset" /* 12458 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "reset" /* 4652 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
+import reset from "reset" /* 4652 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import { ApplicationStreamStates } from "ME" /* 676 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import hexToRgba from "hexToRgba" /* 4223 */;
 
-require = arg1;
+require = fn;
 class StreamTextOverlay {
   constructor(arg0) {
     subtext = global.subtext;
@@ -46,10 +46,9 @@ class StreamTextOverlay {
 let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let obj = { container: null, screenMessageContainer: null, screenMessageText: null, screenMessageSubtext: null, statusWrapper: null, liveTag: null };
-obj = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
+let obj = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
 obj[0] = obj;
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.flex = 1;
 createCacheKey.padding = 8;
@@ -68,7 +67,6 @@ let closure_13 = createCacheKey.createStyles(obj);
 let closure_15 = importAllResult.memo((participant) => {
   participant = participant.participant;
   ({ user, removeEmptyStateButton, removeEmptyStateImage } = participant);
-  importDefault = undefined;
   ({ streamId, resizeMode, gestureEnabled } = participant);
   importDefault = callback2();
   let obj = participant(589);
@@ -86,7 +84,7 @@ let closure_15 = importAllResult.memo((participant) => {
       obj[3] = tmp(12441).VideoEmptyTypes.STREAM_FAILED;
       obj[4] = StyleSheet.absoluteFill;
       return callback(tmp4Result, obj);
-    } else if (tmp6.ENDED === state) {
+    } else if (ApplicationStreamStates.ENDED === state) {
       obj = { stream: null, removeCloseButton: null, removeSplashImage: null, type: null, style: null };
       obj[0] = stateFromStores;
       obj[1] = removeEmptyStateButton;
@@ -96,14 +94,14 @@ let closure_15 = importAllResult.memo((participant) => {
       obj[4] = StyleSheet.absoluteFill;
       return callback(tmp4Result, obj);
     } else {
-      if (tmp6.RECONNECTING === state) {
+      if (ApplicationStreamStates.RECONNECTING === state) {
         obj1 = { title: null };
         const intl = tmp(1236).intl;
         obj1[0] = intl.string(tmp(1236).t["pdFFK+"]);
         let tmp9 = callback(StreamTextOverlay, obj1);
       } else {
         tmp9 = null;
-        if (tmp6.PAUSED === state) {
+        if (ApplicationStreamStates.PAUSED === state) {
           const obj2 = { title: null, subtext: null };
           const intl2 = tmp(1236).intl;
           obj2[0] = intl2.string(tmp(1236).t["5q17w5"]);
@@ -131,7 +129,7 @@ let closure_15 = importAllResult.memo((participant) => {
         obj5[1] = streamId;
         obj5[2] = gestureEnabled;
         obj5[3] = function renderTag() {
-          return closure_1_10(lib(closure_1_2[18]), { style: lib.liveTag, participant });
+          return closure_1_10(lib(dependencyMap[18]), { style: lib.liveTag, participant });
         };
         if (stateFromStores.ownerId === id) {
           let REMOTE_STREAM = tmp(12448).VideoSpinnerContext.SELF_STREAM;
@@ -141,10 +139,10 @@ let closure_15 = importAllResult.memo((participant) => {
         const obj6 = { children: null };
         obj5[4] = REMOTE_STREAM;
         obj5[5] = user.id;
-        obj5[6] = stateFromStores.state === tmp6.PAUSED;
+        obj5[6] = stateFromStores.state === ApplicationStreamStates.PAUSED;
         const items1 = [callback(tmp4(12445), obj5), tmp9];
         obj6[0] = items1;
-        return closure_11(closure_12, obj6);
+        return callback(closure_12, obj6);
       }
     }
   } else {
@@ -153,14 +151,12 @@ let closure_15 = importAllResult.memo((participant) => {
 });
 let closure_16 = importAllResult.memo((arg0) => {
   ({ onFullScreen, style } = arg0);
-  let obj = { accessibilityRole: "button", onPress: onFullScreen, style: items, hitSlop: { top: 4, left: 4, right: 4, bottom: 4 }, children: null };
-  items = [callback2().statusWrapper, style];
-  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL, color: ThemesDefault.unsafe_rawColors.WHITE };
+  const items = [callback2().statusWrapper, style];
+  const obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL, color: ThemesDefault.unsafe_rawColors.WHITE };
   obj[4] = callback(Button.Icon, obj);
   return callback(PressableBase.PressableOpacity, obj);
 });
-let obj2 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/StreamTile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/StreamTile.tsx");
 
 export default function StreamTile(participant) {
   participant = participant.participant;
@@ -190,8 +186,8 @@ export default function StreamTile(participant) {
   }, items1);
   const tmp3 = callback2();
   ({ streamId, user } = participant);
-  let obj = { gesture: onSingleTap(onDoubleTap[20])({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
-  obj = { style: items2, children: null };
+  { gesture: onSingleTap(onDoubleTap[20])({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
+  let obj = { style: items2, children: null };
   items2 = [tmp3.container, style];
   const items3 = [callback(closure_15, { streamId, participant, user, resizeMode: CONTAIN, gestureEnabled, removeEmptyStateButton, removeEmptyStateImage }), ];
   let tmp7Result = null != onFullScreen;
@@ -203,7 +199,7 @@ export default function StreamTile(participant) {
   }
   items3[1] = tmp7Result;
   obj[1] = items3;
-  obj[1] = closure_11(closure_4, obj);
+  obj[1] = callback(closure_4, obj);
   return callback(participant(onDoubleTap[21]).GestureDetector, obj);
 };
 export { StreamTextOverlay };

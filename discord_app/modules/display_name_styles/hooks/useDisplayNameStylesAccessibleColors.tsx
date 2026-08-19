@@ -1,17 +1,16 @@
 // === Module 9456: useDisplayNameStylesAccessibleColors ===
 
 // Module 9456 (useDisplayNameStylesAccessibleColors)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import noop from "noop" /* 19 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");
 
 export const useDisplayNameStylesAccessibleColors = function useDisplayNameStylesAccessibleColors(displayNameStyles) {
   displayNameStyles = displayNameStyles.displayNameStyles;
   const backgroundColor = displayNameStyles.backgroundColor;
   let stateFromStores;
-  let effectId;
   let displayNameStylesEffectConfig;
   let items = [displayNameStylesEffectConfig];
   stateFromStores = displayNameStyles(stateFromStores[2]).useStateFromStores(items, () => {
@@ -21,7 +20,7 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
     }
     return num;
   });
-  effectId = undefined;
+  let effectId;
   if (displayNameStyles != null) {
     effectId = displayNameStyles.effectId;
   }
@@ -36,13 +35,13 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
       let items = [];
     } else {
       const colors = tmp.colors;
-      items = colors.map((arg0) => {
-        let obj = closure_1_0(closure_1_2[5]);
-        obj = { foreground: closure_1_1(closure_1_2[6])(arg0), background: null, ratio: null, saturationFactor: null };
-        if (closure_3 === closure_1_0(closure_1_2[3]).DisplayNameEffect.TOON) {
-          let tmp4 = tmp2(tmp[6])("#333");
+      items = colors.map((item, index) => {
+        displayNameStyles(stateFromStores[5]);
+        const obj = { foreground: backgroundColor(stateFromStores[6])(item), background: null, ratio: null, saturationFactor: null };
+        if (closure_3 === displayNameStyles(stateFromStores[3]).DisplayNameEffect.TOON) {
+          let tmp4 = backgroundColor(stateFromStores[6])("#333");
         } else {
-          tmp4 = tmp2(tmp[6])(closure_1);
+          tmp4 = backgroundColor(stateFromStores[6])(closure_1);
         }
         obj[1] = tmp4;
         obj[2] = minContrastRatio.minContrastRatio;

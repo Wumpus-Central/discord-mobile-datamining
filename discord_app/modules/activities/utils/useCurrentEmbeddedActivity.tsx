@@ -2,10 +2,10 @@
 
 // Module 11234 (useCurrentEmbeddedActivity)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "participantFromServer" /* 1390 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedActivity.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedActivity.tsx");
 
 export default function useCurrentEmbeddedActivity() {
   const items = [closure_2];

@@ -4,21 +4,21 @@
 import ThemesDefault from "Themes" /* 712 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
 import getRoleRowDataAll from "getRoleRowData" /* 8850 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "_slicedToArray" /* 32 */;
-import closure_7 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_10 from "trackCommunicationDisabled" /* 1990 */;
-import closure_11 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_12 from "createGuildRecordFromRust" /* 1910 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import RowType from "RowType" /* 8064 */;
 import { Permissions } from "sum" /* 505 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function _toPropertyKey(obj) {
   let StringResult = obj;
   if (typeof obj === "object") {
@@ -189,10 +189,10 @@ class AddMembersBody {
     obj2[1] = membersRows;
     arr1 = items9.push(obj2);
     values = Object.values(pendingAdditions);
-    mapped = values.map((display) => {
+    mapped = values.map((item, index) => {
       const obj = {};
-      const merged = Object.assign(display.display);
-      obj.id = display.row.id;
+      const merged = Object.assign(item.display);
+      obj.id = item.row.id;
       return obj;
     });
     if (inActionSheet) {
@@ -285,7 +285,6 @@ class AddMembersBody {
         obj[0] = items;
         obj[5] = item;
         closure_1_17(guild(sectionRowWrapper[22]).Text, obj);
-        const tmp9 = closure_1_17;
       } else {
         let tmp2 = num3 === index;
         if (!tmp2) {
@@ -311,8 +310,8 @@ class AddMembersBody {
               } else {
                 const rowType = tmp4.rowType;
                 if (closure_2_14.ROLE !== rowType) {
-                  if (tmp6.ADMINISTRATOR !== rowType) {
-                    if (tmp6.MEMBER === rowType) {
+                  if (closure_2_14.ADMINISTRATOR !== rowType) {
+                    if (closure_2_14.MEMBER === rowType) {
                       user = closure_2_13.getUser(tmp4.id);
                       if (null != user) {
                         obj = { text: null, icon: null };
@@ -362,36 +361,29 @@ class AddMembersBody {
 ({ View: closure_8, ScrollView: c9 } = get_ActivityIndicator);
 ({ RowType: closure_14, MEMBER_REQUEST_COUNT: closure_15 } = RowType);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-createCacheKey = { container: { flex: 1 }, inputContainer: null, tagRoleColor: null, tagAvatar: null, emptyState: null, emptyStateText: null, sectionRowWrapper: null, adminWarning: null };
-createCacheKey = { alignItems: "stretch", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12 };
+const createCacheKey = { alignItems: "stretch", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { height: 12, width: 12, borderRadius: 6 };
 createCacheKey[3] = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm };
-let obj1 = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[4] = { paddingTop: ThemesDefault.space.PX_16 };
-let obj2 = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { color: ThemesDefault.colors.TEXT_DEFAULT };
-let obj3 = { color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[6] = { paddingVertical: ThemesDefault.space.PX_12 };
 createCacheKey[7] = { marginHorizontal: 16, marginVertical: 8 };
 let closure_21 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { paddingVertical: ThemesDefault.space.PX_12 };
-let result = require("set").fileFinishedImporting("modules/channel_permissions/native/action_sheets/AddMembersActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/channel_permissions/native/action_sheets/AddMembersActionSheet.tsx");
 
 export default function AddMembersActionSheet(channel) {
   channel = channel.channel;
-  let first;
   function _handleAddPressed() {
     const self = this;
     let tmp = closure_1_4(function*() {
-      c1 = tmp3;
       const items = [];
       c1 = 0;
       c2 = 0;
       const _Object = Object;
       const values = Object.values(closure_1_1);
-      const item = values.forEach((row) => {
-        row = row.row;
+      const item = values.forEach((item, index) => {
+        const row = item.row;
         let tmp = null != row.id;
         if (tmp) {
           tmp = "" !== row.id;
@@ -436,7 +428,7 @@ export default function AddMembersActionSheet(channel) {
     return applyArgumentsResult;
   }
   const tmp2 = callback(React.useState({}), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   let obj = channel(589);
   let items = [closure_12];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -470,8 +462,8 @@ export default function AddMembersActionSheet(channel) {
         let obj4 = obj;
       }
       obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
-      obj[2] = tmp11(tmp12, obj4);
-      obj1[1] = tmp11(tmp4(6949).BottomSheetTitleHeader, obj);
+      obj[2] = callback(tmp12, obj4);
+      obj1[1] = callback(tmp4(6949).BottomSheetTitleHeader, obj);
       let obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
       const obj3 = { channel: null, guild: null, permission: null, pendingAdditions: null, setPendingAdditions: null, inActionSheet: true };
@@ -480,9 +472,9 @@ export default function AddMembersActionSheet(channel) {
       obj3[2] = channel.accessPermissions;
       obj3[3] = first;
       obj3[4] = tmp2[1];
-      obj2[1] = tmp11(AddMembersBody, obj3);
-      obj1[3] = tmp11(closure_8, obj2);
-      return tmp11(tmp4(6950).BottomSheet, obj1);
+      obj2[1] = callback(AddMembersBody, obj3);
+      obj1[3] = callback(closure_8, obj2);
+      return callback(tmp4(6950).BottomSheet, obj1);
     }
     obj4 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1236).intl;
@@ -504,5 +496,6 @@ export default function AddMembersActionSheet(channel) {
     obj4[3] = str2;
     obj4[4] = tmp10;
   }
+  tmp = callback3();
 };
 export { AddMembersBody };

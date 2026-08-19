@@ -6,12 +6,12 @@ import useAlertStore from "useAlertStore" /* 4657 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 import trackForwardStart from "trackForwardStart" /* 9077 */;
 import showSearchableDestinationListModalDefault from "showSearchableDestinationListModal" /* 9078 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 let c5 = "forward-modal";
-const result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardModalUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forwarding/native/ForwardModalUtils.tsx");
 
 export const FORWARD_MODAL_KEY = "forward-modal";
 export const openForwardModal = function openForwardModal(arg0) {
@@ -21,7 +21,6 @@ export const openForwardModal = function openForwardModal(arg0) {
   }
   ({ forwardOptions, customSendHandler } = arg0);
   trackForwardStart.trackForwardStart(message.channel_id, message.id, source);
-  const obj = trackForwardStart;
   showSearchableDestinationListModalDefault(asyncRequireImpl(9079, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
 };
 export const closeForwardModal = function closeForwardModal() {

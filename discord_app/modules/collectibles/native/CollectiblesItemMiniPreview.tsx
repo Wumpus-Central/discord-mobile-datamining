@@ -13,17 +13,16 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "fromServer" /* 5306 */;
 import { PROFILE_FRAME_ASPECT_RATIO as closure_8 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8965 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const PX_8 = ThemesDefault.space.PX_8;
-let obj = { tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, framePreview: { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" }, profileEffect: null, sampleProfile: null, nameplate: null, nameplateTile: null, nameplateStrip: null };
-obj = { overflow: "hidden", width: "100%", height: "100%", borderRadius: ThemesDefault.radii.sm };
+let obj = { overflow: "hidden", width: "100%", height: "100%", borderRadius: ThemesDefault.radii.sm };
 obj[2] = obj;
 obj[3] = { aspectRatio: require("SAMPLE_PROFILE_ASPECT_RATIO").SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
-createCacheKey = { overflow: "hidden", borderTopRightRadius: ThemesDefault.radii.xs, borderBottomRightRadius: ThemesDefault.radii.xs };
+const createCacheKey = { overflow: "hidden", borderTopRightRadius: ThemesDefault.radii.xs, borderBottomRightRadius: ThemesDefault.radii.xs };
 obj[4] = createCacheKey;
 obj[5] = { alignItems: "flex-start" };
 obj[6] = { width: "90%", aspectRatio: 1.6, position: "relative" };
@@ -88,6 +87,6 @@ const memoResult = importAllResult.memo(function CollectiblesItemMiniPreview(arg
     return null;
   }
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesItemMiniPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/CollectiblesItemMiniPreview.tsx");
 
 export default memoResult;

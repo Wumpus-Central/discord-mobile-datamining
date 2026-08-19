@@ -4,14 +4,14 @@
 import itemsDefault from "items" /* 8149 */;
 import itemsDefault2 from "items" /* 8150 */;
 import itemsDefault3 from "items" /* 8151 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 const obj = {};
 obj[require("ReportNames").SettingsUpsells.SAFETY_DM_SPAM_FILTER] = itemsDefault;
 obj[require("ReportNames").SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] = itemsDefault2;
 obj[require("ReportNames").SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] = itemsDefault3;
-const result = require("set").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx");
 
 export const SettingsUpsellsConfigRegistry = obj;
 export const useIarReportSettingsUpsells = function useIarReportSettingsUpsells(reportSubType) {
@@ -22,9 +22,9 @@ export const useIarReportSettingsUpsells = function useIarReportSettingsUpsells(
     if (null != closure_0) {
       const items = [];
       const _Object = Object;
-      const entries = Object.entries(closure_1_3);
-      const item = entries.forEach((arg0) => {
-        [tmp, tmp2] = arg0;
+      const entries = Object.entries(obj);
+      const item = entries.forEach((item, index) => {
+        [tmp, tmp2] = item;
         let hasItem = null == tmp2.eligibleReportSubtypes;
         if (!hasItem) {
           const eligibleReportSubtypes = tmp2.eligibleReportSubtypes;
@@ -48,8 +48,8 @@ export const useSettingsUpsellsConfigs = function useSettingsUpsellsConfigs(sett
   closure_1 = type;
   const items = [settingsUpsells, type];
   return React.useMemo(() => {
-    const mapped = settingsUpsells.map((arg0) => {
-      ({ predicate, eligibleChannelTypes } = closure_1_3[arg0]);
+    const mapped = settingsUpsells.map((item, index) => {
+      ({ predicate, eligibleChannelTypes } = closure_1_3[item]);
       let tmp3 = null == predicate;
       if (!tmp3) {
         let predicateResult;

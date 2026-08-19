@@ -1,15 +1,15 @@
 // === Module 7916: createSubscriptionInvoicePreview ===
 
 // Module 7916 (createSubscriptionInvoicePreview)
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "asyncGeneratorStep" /* 5 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "noop" /* 19 */;
-import closure_11 from "createFromServer" /* 4048 */;
+import createFromServer from "createFromServer" /* 4048 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
-function createSubscriptionInvoicePreview() {
+const require = fn;
+function createSubscriptionInvoicePreview(arg0) {
   const self = this;
   const apply = _createSubscriptionInvoicePreview.apply;
   if (typeof apply === "unknown") {
@@ -90,10 +90,10 @@ function _createSubscriptionInvoicePreview() {
               obj2 = { items: null, payment_source_id: null, trial_id: null, code: null, apply_entitlements: null, currency: null, renewal: null, metadata: null, load_id: null };
               const result = callback(4039).coerceExistingItemsToNewItemInterval(callback);
               callback = result;
-              obj2[0] = result.map((planId) => {
+              obj2[0] = result.map((item, index) => {
                 const obj = {};
-                const merged = Object.assign(Object.assign(planId, Object.create(null)));
-                obj.plan_id = planId.planId;
+                const merged = Object.assign(Object.assign(item, Object.create(null)));
+                obj.plan_id = item.planId;
                 return obj;
               });
               obj2[1] = callback2;
@@ -173,7 +173,7 @@ function _createSubscriptionInvoicePreview() {
   }
   return applyArgumentsResult;
 }
-function updateSubscriptionInvoicePreview() {
+function updateSubscriptionInvoicePreview(arg0) {
   const self = this;
   const apply = _updateSubscriptionInvoicePreview.apply;
   if (typeof apply === "unknown") {
@@ -258,10 +258,10 @@ function _updateSubscriptionInvoicePreview() {
               }
               let mapped;
               if (callback2 != null) {
-                mapped = callback2.map((planId) => {
+                mapped = callback2.map((item, index) => {
                   const obj = {};
-                  const merged = Object.assign(Object.assign(planId, Object.create(null)));
-                  obj.plan_id = planId.planId;
+                  const merged = Object.assign(Object.assign(item, Object.create(null)));
+                  obj.plan_id = item.planId;
                   return obj;
                 });
               }
@@ -350,7 +350,7 @@ function _updateSubscriptionInvoicePreview() {
   }
   return applyArgumentsResult;
 }
-function createOneTimePurchaseInvoicePreview() {
+function createOneTimePurchaseInvoicePreview(arg0) {
   const self = this;
   const apply = _createOneTimePurchaseInvoicePreview.apply;
   if (typeof apply === "unknown") {
@@ -489,7 +489,7 @@ function _createOneTimePurchaseInvoicePreview() {
   }
   return applyArgumentsResult;
 }
-function getSubscriptionInvoice() {
+function getSubscriptionInvoice(current) {
   const self = this;
   const apply = _getSubscriptionInvoice.apply;
   if (typeof apply === "unknown") {
@@ -599,7 +599,7 @@ function _getSubscriptionInvoice() {
 }
 let closure_3 = ["subscriptionId"];
 ({ useCallback: error, useEffect: closure_8, useState: c9, useRef: c10 } = noop);
-let result = require("set").fileFinishedImporting("modules/premium/PremiumSubscriptionInvoice.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/PremiumSubscriptionInvoice.tsx");
 
 export { createSubscriptionInvoicePreview };
 export { updateSubscriptionInvoicePreview };
@@ -612,7 +612,6 @@ export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePrev
   }
   closure_1 = arg1;
   c2 = undefined;
-  closure_3 = undefined;
   [tmp2, c2] = callback2(callback6(null), 2);
   const tmp3 = callback2(callback6(null), 2);
   closure_3 = tmp3[1];
@@ -676,8 +675,7 @@ export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePrev
   return items1;
 };
 export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscriptionGiftInvoicePreview(preventFetch) {
-  let flag = preventFetch;
-  closure_1 = callback7(preventFetch);
+  callback7(preventFetch);
   c2 = callback7(false);
   callback5(() => {
     closure_1.current = flag;
@@ -693,17 +691,15 @@ export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscript
       tmp2 = obj;
     }
     _undefined.current = true;
-    return closure_1_17(tmp2);
+    return createOneTimePurchaseInvoicePreview(tmp2);
   }, items);
-  flag = undefined;
   closure_1 = undefined;
-  flag = preventFetch.preventFetch;
+  let flag = preventFetch.preventFetch;
   if (flag === undefined) {
     flag = false;
   }
   closure_1 = tmp3;
   c2 = undefined;
-  closure_3 = undefined;
   [tmp5, c2] = callback2(callback6(null), 2);
   const tmp6 = callback2(callback6(null), 2);
   closure_3 = tmp6[1];
@@ -778,11 +774,9 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
       tmp = tmp5;
     }
   }
-  closure_1 = callback7(tmp);
+  callback7(tmp);
   c2 = callback7(false);
-  flag = undefined;
   let tmp6 = callback7(null);
-  flag = tmp6;
   const items = [arg1];
   callback5(() => {
     flag.current = null;
@@ -808,7 +802,7 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
       }
       let tmp6 = null;
       if (null != payment_sources) {
-        const found = payment_sources.find((enabled) => enabled.enabled);
+        const found = payment_sources.find((item, index) => item.enabled);
         let id;
         if (found != null) {
           id = found.id;
@@ -841,10 +835,10 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
     }
     obj = tmp2;
     if ("subscriptionId" in tmp2) {
-      tmp.current = true;
-      return closure_1_15(tmp2);
+      _undefined.current = true;
+      return updateSubscriptionInvoicePreview(tmp2);
     } else if ("items" in tmp2) {
-      tmp.current = true;
+      _undefined.current = true;
       const _JSON = JSON;
       obj = {};
       const merged1 = Object.assign(tmp2);
@@ -857,16 +851,15 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
         }
         return resolved;
       }
-      resolved = closure_1_13(tmp2).then((arg0) => {
-        closure_1_5(arg0, json, obj.paymentSourceId);
-        return arg0;
+      resolved = createSubscriptionInvoicePreview(tmp2).then((result) => {
+        closure_1_5(result, json, obj.paymentSourceId);
+        return result;
       });
-      const promise = closure_1_13(tmp2);
+      const promise = createSubscriptionInvoicePreview(tmp2);
     } else {
       return null;
     }
   }, items1);
-  flag = undefined;
   closure_1 = undefined;
   flag = tmp.preventFetch;
   if (flag === undefined) {
@@ -874,7 +867,6 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
   }
   closure_1 = tmp12;
   c2 = undefined;
-  closure_3 = undefined;
   [tmp14, c2] = callback2(callback6(null), 2);
   const tmp15 = callback2(callback6(null), 2);
   closure_3 = tmp15[1];
@@ -938,22 +930,19 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
   return items3;
 };
 export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(preventFetch) {
-  let flag = preventFetch;
-  closure_1 = callback7(preventFetch);
+  callback7(preventFetch);
   callback5(() => {
     closure_1.current = flag;
   });
   const items = [JSON.stringify(preventFetch)];
-  const tmp3 = callback4(() => closure_1_19(ref.current), items);
-  flag = undefined;
+  const tmp3 = callback4(() => getSubscriptionInvoice(ref.current), items);
   closure_1 = undefined;
-  flag = preventFetch.preventFetch;
+  let flag = preventFetch.preventFetch;
   if (flag === undefined) {
     flag = false;
   }
   closure_1 = tmp3;
   c2 = undefined;
-  closure_3 = undefined;
   [tmp5, c2] = callback2(callback6(null), 2);
   const tmp6 = callback2(callback6(null), 2);
   closure_3 = tmp6[1];
@@ -1019,8 +1008,8 @@ export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(prev
 export const getItemUnitPriceWithDiscount = function getItemUnitPriceWithDiscount(arg0) {
   closure_0 = arg0;
   ({ subscriptionPlanPrice: importDefault, discounts } = arg0);
-  const item = discounts.forEach((amount) => {
-    closure_1 = closure_1 - amount.amount / quantity.quantity;
+  const item = discounts.forEach((item, index) => {
+    closure_1 = closure_1 - item.amount / quantity.quantity;
   });
   return importDefault;
 };

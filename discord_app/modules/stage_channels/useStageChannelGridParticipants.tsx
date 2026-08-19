@@ -1,14 +1,14 @@
 // === Module 12627: useStageChannelParticipantsList ===
 
 // Module 12627 (useStageChannelParticipantsList)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "getActiveStageChannelIds" /* 4989 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import getParticipants from "getParticipants" /* 4773 */;
+import getActiveStageChannelIds from "getActiveStageChannelIds" /* 4989 */;
 
-const require = arg1;
+const require = fn;
 let closure_6 = { SELECTED: 0, [0]: "SELECTED", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE", MEDIA: 3, [3]: "MEDIA" };
-const result = require("set").fileFinishedImporting("modules/stage_channels/useStageChannelGridParticipants.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/useStageChannelGridParticipants.tsx");
 
 export const useStageChannelParticipantsList = function useStageChannelParticipantsList(arg0, arg1, arg2) {
   const _require = arg0;
@@ -37,21 +37,13 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp10 = nextResult;
-        let tmp11 = id;
-        let tmp12 = memo;
         if (nextResult.type !== id(memo[6]).StageChannelParticipantTypes.STREAM) {
-          let tmp20 = iter;
           iter.return();
           break;
         } else {
-          let tmp13 = nextResult;
-          let tmp14 = stateFromStores1;
-          let tmp15 = stateFromStores1;
           if (tmp10.id !== stateFromStores1) {
-            let tmp16 = nextResult;
             let arr = items2.push(tmp10);
           }
-          let tmp18 = num;
           let sum = num + 1;
           num = sum;
           c2 = sum;
@@ -81,21 +73,22 @@ export const useStageChannelParticipantsList = function useStageChannelParticipa
     }
     pushSection(items4, 1, false);
     const items5 = [id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER, id(memo[6]).StageChannelParticipantNamedIndex.AUDIENCE];
-    const item = items5.forEach((SPEAKER) => {
-      const mutableParticipants = closure_2_5.getMutableParticipants(closure_1_3[0], SPEAKER);
+    const item = items5.forEach((item, index) => {
+      const mutableParticipants = closure_2_5.getMutableParticipants(stateFromStores[0], item);
       let found = mutableParticipants;
-      if (SPEAKER === items(items1[6]).StageChannelParticipantNamedIndex.SPEAKER) {
-        found = mutableParticipants.filter((id) => {
-          let tmp = id.id !== closure_1_4;
+      if (item === items(items1[6]).StageChannelParticipantNamedIndex.SPEAKER) {
+        found = mutableParticipants.filter((item, index) => {
+          let tmp = item.id !== closure_1_4;
           if (tmp) {
-            tmp = arg1 > closure_2;
+            tmp = index > closure_2;
           }
           return tmp;
         });
       }
-      const chunkResult = items(items1[7]).chunk(found, items1[SPEAKER]);
+      const chunkResult = items(items1[7]).chunk(found, items1[item]);
       items1.push(chunkResult);
       items.push(chunkResult.length);
+      const tmpResult = items(items1[7]);
     });
     pushSection(items2, 1, false);
     const items6 = [items, items1];
@@ -150,21 +143,13 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp10 = nextResult;
-        let tmp11 = id;
-        let tmp12 = memo;
         if (nextResult.type !== id(memo[6]).StageChannelParticipantTypes.STREAM) {
-          let tmp20 = iter;
           iter.return();
           break;
         } else {
-          let tmp13 = nextResult;
-          let tmp14 = stateFromStores1;
-          let tmp15 = stateFromStores1;
           if (tmp10.id !== stateFromStores1) {
-            let tmp16 = nextResult;
             let arr = items2.push(tmp10);
           }
-          let tmp18 = num;
           let sum = num + 1;
           num = sum;
           c2 = sum;
@@ -194,21 +179,22 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
     }
     pushSection(items4, 1, false);
     const items5 = [id(memo[6]).StageChannelParticipantNamedIndex.SPEAKER, id(memo[6]).StageChannelParticipantNamedIndex.AUDIENCE];
-    const item = items5.forEach((SPEAKER) => {
-      const mutableParticipants = closure_2_5.getMutableParticipants(closure_1_3[0], SPEAKER);
+    const item = items5.forEach((item, index) => {
+      const mutableParticipants = closure_2_5.getMutableParticipants(stateFromStores[0], item);
       let found = mutableParticipants;
-      if (SPEAKER === items(items1[6]).StageChannelParticipantNamedIndex.SPEAKER) {
-        found = mutableParticipants.filter((id) => {
-          let tmp = id.id !== closure_1_4;
+      if (item === items(items1[6]).StageChannelParticipantNamedIndex.SPEAKER) {
+        found = mutableParticipants.filter((item, index) => {
+          let tmp = item.id !== closure_1_4;
           if (tmp) {
-            tmp = arg1 > closure_2;
+            tmp = index > closure_2;
           }
           return tmp;
         });
       }
-      const chunkResult = items(items1[7]).chunk(found, items1[SPEAKER]);
+      const chunkResult = items(items1[7]).chunk(found, items1[item]);
       items1.push(chunkResult);
       items.push(chunkResult.length);
+      const tmpResult = items(items1[7]);
     });
     pushSection(items2, 1, false);
     const items6 = [items, items1];
@@ -221,11 +207,11 @@ export const useStageChannelParticipantsListThrottled = function useStageChannel
   const obj3 = _require(12628);
   [tmp8, tmp9] = flag(_require(12628).useThrottledState(memo, throttleDurationForChannel, items5), 2);
   if (flag) {
-    let SELECTED = tmp10.MEDIA;
-    let tmp11 = tmp10;
+    let SELECTED = constants.MEDIA;
+    let tmp11 = constants;
   } else {
-    SELECTED = tmp10.SELECTED;
-    tmp11 = tmp10;
+    SELECTED = constants.SELECTED;
+    tmp11 = constants;
   }
   let items6 = [tmp5[SELECTED], tmp5[tmp11.SPEAKER], tmp8[tmp11.AUDIENCE]];
   const items7 = [items6, ];

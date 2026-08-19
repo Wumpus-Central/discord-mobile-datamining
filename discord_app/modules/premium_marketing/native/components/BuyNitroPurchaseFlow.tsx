@@ -2,15 +2,15 @@
 
 // Module 8024 (BuyNitroPurchaseRunner)
 import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 7697 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 import { useNativeCheckoutStore } from "context" /* 7395 */;
 import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7392 */;
 import ME from "ME" /* 676 */;
 import { PaymentGateways } from "sum" /* 505 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function BuyNitroPurchaseRunner(item) {
   item = item.item;
   const analyticsLocations = item.analyticsLocations;
@@ -23,15 +23,11 @@ function BuyNitroPurchaseRunner(item) {
   const onHostSheetClose = item.onHostSheetClose;
   const onPaymentSuccess = item.onPaymentSuccess;
   const onPaymentDismiss = item.onPaymentDismiss;
-  closure_11 = undefined;
-  closure_12 = undefined;
-  let handlePremiumPurchase;
-  closure_14 = undefined;
   let tmp = expectedPriceString((orderRecord) => orderRecord.orderRecord);
   closure_11 = tmp;
   const tmp2 = expectedPriceString((orderRequired) => orderRequired.orderRequired);
   closure_12 = tmp2;
-  handlePremiumPurchase = item(analyticsLoadId[7]).useHandlePremiumPurchase();
+  const handlePremiumPurchase = item(analyticsLoadId[7]).useHandlePremiumPurchase();
   closure_14 = applicationId.useRef(false);
   const items = [tmp, tmp2, handlePremiumPurchase, analyticsLoadId, hasEmittedPaymentFlowStartedRef, analyticsLocations, applicationId, item, expectedPriceString, onExit, onOrderPriceMismatch, onHostSheetClose, onPaymentSuccess, onPaymentDismiss];
   const effect = applicationId.useEffect(() => {
@@ -44,7 +40,7 @@ function BuyNitroPurchaseRunner(item) {
           if (closure_1_11 != null) {
             const checkoutContextRecord = closure_1_11.checkoutContextRecord;
             if (checkoutContextRecord != null) {
-              const obj4 = closure_2_0(7378);
+              const obj4 = result1(7378);
               const availablePlanForItems = checkoutContextRecord.getAvailablePlanForItems(obj4.getSubscriptionItemsForProduct(closure_1_0.productId));
               if (availablePlanForItems != null) {
                 priceString = availablePlanForItems.getPriceString();
@@ -67,13 +63,13 @@ function BuyNitroPurchaseRunner(item) {
             }
           }
         }
-        const obj7 = closure_2_1(698);
+        const obj7 = basePurchaseFlowAnalyticsFields(698);
         let obj2 = { from_step: null, to_step: null, subscription_plan_gateway_plan_id: null, sku_id: null };
-        obj2[0] = closure_2_0(7658).PaymentFlowStep.PLAN_SELECT;
-        obj2[1] = closure_2_0(7658).PaymentFlowStep.EXTERNAL_PAYMENT;
+        obj2[0] = result1(7658).PaymentFlowStep.PLAN_SELECT;
+        obj2[1] = result1(7658).PaymentFlowStep.EXTERNAL_PAYMENT;
         obj2[2] = closure_1_0.productId;
         obj2[3] = closure_1_0;
-        obj7.track(closure_2_8.PAYMENT_FLOW_STEP, closure_2_0(7658).getPaymentFlowStepAnalyticsFields(closure_1_1, obj2));
+        obj7.track(closure_2_8.PAYMENT_FLOW_STEP, result1(7658).getPaymentFlowStepAnalyticsFields(closure_1_1, obj2));
         c4 = 1;
         const obj3 = { productId: null, analyticsLocation: null, analyticsLoadId: null, analyticsLocations: null, orderId: null };
         obj3[0] = closure_1_0.productId;
@@ -87,15 +83,15 @@ function BuyNitroPurchaseRunner(item) {
         yield closure_1_13(obj3);
         if (1 === tmp7) {
           c4 = 0;
-          if (closure_3 instanceof closure_2_1(7619)) {
-            obj1 = closure_2_0(4466);
+          if (closure_3 instanceof basePurchaseFlowAnalyticsFields(7619)) {
+            obj1 = result1(4466);
             const subscriptions = obj1.fetchSubscriptions();
-            obj2 = closure_2_1(4656);
+            obj2 = basePurchaseFlowAnalyticsFields(4656);
             const obj5 = { title: null, body: null, hideActionSheet: true };
-            const intl = closure_2_0(1236).intl;
-            obj5[0] = intl.string(closure_2_0(1236).t["U+H+kd"]);
-            const intl2 = closure_2_0(1236).intl;
-            obj5[1] = intl2.string(closure_2_0(1236).t.F9ktNa);
+            const intl = result1(1236).intl;
+            obj5[0] = intl.string(result1(1236).t["U+H+kd"]);
+            const intl2 = result1(1236).intl;
+            obj5[1] = intl2.string(result1(1236).t.F9ktNa);
             obj2.show(obj5);
           }
           closure_1_6();
@@ -139,7 +135,7 @@ function BuyNitroPurchaseRunner(item) {
         basePurchaseFlowAnalyticsFields = obj3.getBasePurchaseFlowAnalyticsFields(obj);
         if (!hasEmittedPaymentFlowStartedRef.current) {
           hasEmittedPaymentFlowStartedRef.current = true;
-          let tmp5Result = tmp5(tmp6[11]);
+          let tmp5Result = item(analyticsLoadId[11]);
           obj1 = {};
           const merged = Object.assign(basePurchaseFlowAnalyticsFields);
           obj1.application_id = applicationId;
@@ -147,7 +143,7 @@ function BuyNitroPurchaseRunner(item) {
           obj1.sku_id = result1;
           let customCheckoutFlowForAnalytics;
           if (result) {
-            tmp5Result = tmp5(tmp6[8]);
+            tmp5Result = item(analyticsLoadId[8]);
             customCheckoutFlowForAnalytics = tmp5Result.getCustomCheckoutFlowForAnalytics();
           }
           obj1.custom_checkout_flow = customCheckoutFlowForAnalytics;
@@ -167,19 +163,19 @@ function BuyNitroPurchaseRunner(item) {
         obj2[2] = onPaymentDismiss;
         onOrderPriceMismatch(obj2);
         if (result) {
-          const tmp5Result1 = tmp5(tmp6[13]);
+          const tmp5Result1 = item(analyticsLoadId[13]);
           obj3 = { planId: null, isGift: false, loadId: null };
           obj3[0] = tmp9.basePlanId;
           obj3[2] = tmp11;
           const result3 = tmp5Result1.goToStandalonePremiumCheckoutFromMobileApp("premium_nitro_marketing_page", obj3, () => {
-            closure_1_6();
+            onExit();
             callback();
             if (callback2 != null) {
               callback2();
             }
           }, () => {
-            let obj = basePurchaseFlowAnalyticsFields(_runPurchase[14]);
-            obj = { title: null, body: null, hideActionSheet: true };
+            basePurchaseFlowAnalyticsFields(_runPurchase[14]);
+            const obj = { title: null, body: null, hideActionSheet: true };
             const intl = result1(_runPurchase[15]).intl;
             obj[0] = intl.string(result1(_runPurchase[15]).t.NrBVjw);
             const intl2 = result1(_runPurchase[15]).intl;
@@ -207,7 +203,7 @@ function BuyNitroPurchaseRunner(item) {
 }
 ({ reset: closure_6, setInitiatedPurchaseFromNewFlow: error } = usePremiumPlanPurchasedStore);
 ({ AnalyticEvents: closure_8, AnalyticsObjects: c9, AnalyticsObjectTypes: c10, AnalyticsPages: unpackModuleId, AnalyticsSections: closure_12 } = ME);
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPurchaseFlow.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPurchaseFlow.tsx");
 
 export default function BuyNitroPurchaseFlow(item) {
   item = item.item;
@@ -218,16 +214,14 @@ export default function BuyNitroPurchaseFlow(item) {
   let obj = item(500);
   if (obj.isIOS()) {
     if (enabled) {
-      let APPLE = tmp3.APPLE_ADVANCED_COMMERCE;
-      let tmp5 = tmp3;
+      let APPLE = PaymentGateways.APPLE_ADVANCED_COMMERCE;
     } else {
-      APPLE = tmp3.APPLE;
-      tmp5 = tmp3;
+      APPLE = PaymentGateways.APPLE;
     }
   } else {
-    const GOOGLE = tmp3.GOOGLE;
-    let tmpResult = tmp(500);
-    tmpResult = tmp(7418);
+    const GOOGLE = PaymentGateways.GOOGLE;
+    tmp(500);
+    const tmpResult = tmp(7418);
     const premiumTrialOffer = tmpResult.usePremiumTrialOffer();
     let tmp10;
     if (!tmp8) {
@@ -239,7 +233,6 @@ export default function BuyNitroPurchaseFlow(item) {
     }
     let tmp14;
     if (null != tmp10) {
-      obj = { subscription_preview: null };
       obj = { subscription_trial_id: null };
       obj[0] = tmp10;
       obj[0] = obj;
@@ -247,18 +240,18 @@ export default function BuyNitroPurchaseFlow(item) {
     }
     const items = [item.productId];
     const memo = React.useMemo(() => {
-      const subscriptionItemsForProduct = item(closure_1_2[16]).getSubscriptionItemsForProduct(item.productId);
-      return subscriptionItemsForProduct.map((planId) => {
-        const obj = { subscriptionPlanId: planId.planId, skuId: null, quantity: null };
+      const subscriptionItemsForProduct = item(dependencyMap[16]).getSubscriptionItemsForProduct(item.productId);
+      return subscriptionItemsForProduct.map((item, index) => {
+        const obj = { subscriptionPlanId: item.planId, skuId: null, quantity: null };
         const obj2 = callback(4039);
-        obj[1] = obj2.castPremiumSubscriptionAsSkuId(callback2(4039).getSkuIdForPlan(planId.planId));
-        obj[2] = planId.quantity;
+        obj[1] = obj2.castPremiumSubscriptionAsSkuId(callback2(4039).getSkuIdForPlan(item.planId));
+        obj[2] = item.quantity;
         return obj;
       });
     }, items);
     obj1 = { paymentGateway: null, orderRequired: null, skuIds: null, defaultPlans: null, isGift: false, activeSubscription: null, initialSubscriptionFacet: null, onOrderRetryCancellation: null, children: null };
     obj1[0] = GOOGLE;
-    obj1[1] = GOOGLE === tmp3.APPLE_ADVANCED_COMMERCE;
+    obj1[1] = GOOGLE === PaymentGateways.APPLE_ADVANCED_COMMERCE;
     obj1[2] = [];
     obj1[3] = memo;
     obj1[6] = tmp14;

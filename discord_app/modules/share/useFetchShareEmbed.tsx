@@ -1,12 +1,12 @@
 // === Module 13361: useFetchShareEmbed ===
 
 // Module 13361 (useFetchShareEmbed)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/share/useFetchShareEmbed.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/share/useFetchShareEmbed.tsx");
 
 export default function useFetchShareEmbed(arg0) {
   closure_0 = arg0;
@@ -141,7 +141,7 @@ export default function useFetchShareEmbed(arg0) {
     }
     if (null != closure_0) {
       if ("" !== str) {
-        const match = str.match(callback(closure_1_2[3]).URL_REGEX);
+        const match = str.match(callback(dependencyMap[3]).URL_REGEX);
         let atResult;
         if (match != null) {
           atResult = match.at(0);

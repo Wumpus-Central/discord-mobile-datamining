@@ -1,10 +1,10 @@
 // === Module 15340: _getEmojiSource ===
 
 // Module 15340 (_getEmojiSource)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
-const require = arg1;
+const require = fn;
 function _getEmojiSource() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -125,7 +125,7 @@ function _getEmojiSource() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/emojis/native/utils/EmojiSourceUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/emojis/native/utils/EmojiSourceUtils.tsx");
 
 export const getEmojiSource = function getEmojiSource(emoji) {
   const self = this;

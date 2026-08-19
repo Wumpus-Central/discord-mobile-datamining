@@ -1,10 +1,10 @@
 // === Module 8723: stashPendingFrameLaunch ===
 
 // Module 8723 (stashPendingFrameLaunch)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let closure_0 = {};
-const result = set.fileFinishedImporting("modules/activities/utils/pendingFrameLaunch.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/pendingFrameLaunch.tsx");
 
 export const stashPendingFrameLaunch = function stashPendingFrameLaunch(applicationId, arg1) {
   closure_0[applicationId] = arg1;

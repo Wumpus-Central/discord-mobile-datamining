@@ -7,13 +7,13 @@ import notSupportedDefault from "notSupported" /* 7935 */;
 import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14559 */;
 import UnavailableNoticeDefault from "UnavailableNotice" /* 15790 */;
 import SeparatorDefault from "Separator" /* 15791 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
-import closure_5 from "initialize" /* 4201 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import noop from "noop" /* 19 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
+import initialize from "initialize" /* 4201 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function serverNameHook(children) {
   return jsx(Text.Text, { variant: "heading-lg/extrabold", color: "interactive-text-active", children });
 }
@@ -40,21 +40,19 @@ function PurchasePage(arg0) {
   obj = { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: jsx(SeparatorDefault, { guildId, gatedChannelId }) };
   return jsx(useGroupListingsFetchContext.GroupListingsFetchContextProvider, { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: jsx(SeparatorDefault, { guildId, gatedChannelId }) });
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsOverview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsOverview.tsx");
 
 export default function GuildRoleSubscriptionsOverview(guildId) {
   guildId = guildId.guildId;
-  let stateFromStores;
   let stateFromStores1;
-  let React;
   let obj = guildId(stateFromStores1[11]);
   const items = [closure_6];
   const items1 = [guildId];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId), items1);
   const items2 = [closure_4];
   stateFromStores1 = guildId(stateFromStores1[11]).useStateFromStores(items2, () => connected.isConnected());
   const tmp3 = stateFromStores(stateFromStores1[12])(guildId);
-  React = tmp3;
+  const React = tmp3;
   const obj2 = guildId(stateFromStores1[11]);
   const items3 = [stateFromStores, stateFromStores1, tmp3];
   const canUseRoleSubscriptionIAP = guildId(stateFromStores1[13]).useCanUseRoleSubscriptionIAP(guildId);
@@ -62,11 +60,10 @@ export default function GuildRoleSubscriptionsOverview(guildId) {
     let tmp = !stateFromStores1;
     if (stateFromStores1) {
       tmp = null != stateFromStores && closure_3;
-      const tmp4 = null != stateFromStores && closure_3;
     }
     if (!tmp) {
-      let obj = stateFromStores(stateFromStores1[14]);
-      obj = { title: null, body: null, confirmText: null };
+      stateFromStores(stateFromStores1[14]);
+      const obj = { title: null, body: null, confirmText: null };
       const intl = guildId(stateFromStores1[7]).intl;
       obj[0] = intl.string(guildId(stateFromStores1[7]).t.r0DLNm);
       const intl2 = guildId(stateFromStores1[7]).intl;
@@ -82,7 +79,7 @@ export default function GuildRoleSubscriptionsOverview(guildId) {
     obj = { guildId: null, gatedChannelId: null };
     obj[0] = guildId;
     obj[1] = guildId.gatedChannelId;
-    let tmp6Result = tmp6(PurchasePage, obj);
+    let tmp6Result = <PurchasePage guildId={null} gatedChannelId={null} />;
   } else {
     let str;
     if (stateFromStores != null) {
@@ -93,8 +90,7 @@ export default function GuildRoleSubscriptionsOverview(guildId) {
     }
     obj = { serverName: null };
     obj[0] = str;
-    tmp6Result = tmp6(RoleSubscriptionsUnavailableNotice, obj);
-    const tmp7 = RoleSubscriptionsUnavailableNotice;
+    tmp6Result = <RoleSubscriptionsUnavailableNotice serverName={null} />;
   }
   return tmp6Result;
 };

@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 4504 */;
 
 initializeDefault;
-const result = require("set").fileFinishedImporting("modules/analytics_sessions/ClientHeartbeatPiggyback.tsx");
+const result = require("obj132").fileFinishedImporting("modules/analytics_sessions/ClientHeartbeatPiggyback.tsx");
 
 export function getClientHeartbeatPiggybackProperties() {
   return {};

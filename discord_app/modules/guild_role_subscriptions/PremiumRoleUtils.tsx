@@ -1,9 +1,9 @@
 // === Module 4012: isSubscriptionRole ===
 
 // Module 4012 (isSubscriptionRole)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");
 
 export const isSubscriptionRole = function isSubscriptionRole(role) {
   let prop;
@@ -15,10 +15,10 @@ export const isSubscriptionRole = function isSubscriptionRole(role) {
   }
   return null != prop;
 };
-export const isSubscriptionRoleAvailableForPurchase = function isSubscriptionRoleAvailableForPurchase(tags) {
+export const isSubscriptionRoleAvailableForPurchase = function isSubscriptionRoleAvailableForPurchase(role) {
   let prop;
-  if (tags != null) {
-    tags = tags.tags;
+  if (role != null) {
+    const tags = role.tags;
     if (tags != null) {
       prop = tags.available_for_purchase;
     }

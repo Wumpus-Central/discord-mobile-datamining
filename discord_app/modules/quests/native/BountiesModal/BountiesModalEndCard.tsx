@@ -1,7 +1,7 @@
 // === Module 14415: BountiesModalEndCard ===
 
 // Module 14415 (BountiesModalEndCard)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _modDef4115 from "module_4115" /* 4115 */;
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
 import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 14397 */;
@@ -12,8 +12,7 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles(() => {
-  let obj = { container: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center" }, backdropTint: null, backdropGradient: null };
-  obj = {};
+  let obj = {};
   const merged = Object.assign(closure_3.absoluteFillObject);
   obj.backgroundColor = "rgba(241, 251, 169, 0.15)";
   obj[1] = obj;
@@ -23,7 +22,7 @@ let closure_7 = createCacheKey.createStyles(() => {
   return obj;
 });
 let closure_8 = { code: "function BountiesModalEndCardTsx1(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}" };
-const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndCard.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndCard.tsx");
 
 export default function BountiesModalEndCard(visible) {
   visible = visible.visible;
@@ -31,12 +30,12 @@ export default function BountiesModalEndCard(visible) {
   const tmp = callback3();
   visible(4115);
   const fn = function y() {
-    let obj = visible(closure_1_2[4]);
+    let obj = visible(dependencyMap[4]);
     let num = 0;
     if (visible) {
       num = 1;
     }
-    obj = { opacity: obj.withTiming(num, visible(closure_1_2[5]).timingStandard) };
+    obj = { opacity: obj.withTiming(num, visible(dependencyMap[5]).timingStandard) };
     return obj;
   };
   let obj = { withTiming: visible(4664).withTiming, visible, timingStandard: visible(4667).timingStandard };

@@ -2,22 +2,21 @@
 
 // Module 11321 (useIsPrimaryEntryPointDisabled)
 import getPlatformDefault from "getPlatform" /* 8718 */;
-import closure_3 from "createExecutable" /* 4479 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import createExecutable from "createExecutable" /* 4479 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "sum" /* 505 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
 
 export default function useIsPrimaryEntryPointDisabled(arg0) {
   ({ context, application, activityAction } = arg0);
   let channel;
-  channel = undefined;
   if ("channel" === context.type) {
     channel = context.channel;
   }
   const items = [closure_4];
-  const stateFromStores = channel(589).useStateFromStores(items, () => closure_1_4.can(closure_1_5.USE_EMBEDDED_ACTIVITIES, channel));
+  const stateFromStores = channel(589).useStateFromStores(items, () => closure_1_4.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel));
   const obj = channel(589);
   let id;
   if (channel != null) {

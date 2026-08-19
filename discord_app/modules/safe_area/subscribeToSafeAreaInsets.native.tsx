@@ -1,9 +1,9 @@
 // === Module 10560: subscribeToSafeAreaInsets ===
 
 // Module 10560 (subscribeToSafeAreaInsets)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");
+const result = obj132.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");
 
 export default function subscribeToSafeAreaInsets(arg0) {
   const _require = arg0;

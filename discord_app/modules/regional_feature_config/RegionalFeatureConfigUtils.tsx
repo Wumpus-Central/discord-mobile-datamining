@@ -2,10 +2,10 @@
 
 // Module 4072 (isFeatureAgeGated)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "getRegionalFeatureConfig" /* 4073 */;
+import getRegionalFeatureConfig from "getRegionalFeatureConfig" /* 4073 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigUtils.tsx");
 
 export const isFeatureAgeGated = function isFeatureAgeGated(arg0) {
   return closure_2.isFeatureAgeGated(arg0);

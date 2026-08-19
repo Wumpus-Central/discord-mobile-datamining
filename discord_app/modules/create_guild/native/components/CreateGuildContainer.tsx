@@ -1,21 +1,20 @@
 // === Module 11500: CreateGuildContainer ===
 
 // Module 11500 (CreateGuildContainer)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "comparator" /* 1980 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import comparator from "comparator" /* 1980 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
-createCacheKey = { flex: { flex: 1 }, contentContainer: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
+const require = fn;
+const createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[1] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/create_guild/native/components/CreateGuildContainer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/create_guild/native/components/CreateGuildContainer.tsx");
 
 export default function CreateGuildContainer(onCreate) {
   onCreate = onCreate.onCreate;
@@ -29,10 +28,8 @@ export default function CreateGuildContainer(onCreate) {
   const merged = Object.assign(onCreate, Object.create(null));
   let first;
   let first1;
-  closure_6 = undefined;
   c7 = undefined;
   c8 = undefined;
-  let first2;
   let obj = guildTemplate(onHubGuildInfoSet[9]);
   const tmp3 = first(first1.useState(obj.getGuildNameSuggestion({ truncateUsername: true })), 2);
   first = tmp3[0];
@@ -54,17 +51,17 @@ export default function CreateGuildContainer(onCreate) {
     }
     return flag;
   }), 2);
-  first2 = tmp11[0];
+  const first2 = tmp11[0];
   callback = first1.useCallback(isCommunityIntent(function*() {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw base64;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj[0] = base64;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -75,17 +72,17 @@ export default function CreateGuildContainer(onCreate) {
         if (0 === table) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw base64;
           } else if (arg0 === 2) {
             c3 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = base64;
             return obj;
           } else {
             closure_1 = tmp5;
-            let base64 = tmp2;
+            base64 = tmp2;
             base64 = undefined;
-            obj1 = closure_1_1(table[10]);
+            obj1 = guildTemplate(table[10]);
             obj1 = { size: null };
             obj1[0] = closure_1_8;
             table = 1;
@@ -96,14 +93,14 @@ export default function CreateGuildContainer(onCreate) {
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw base64;
         } else if (arg0 === 2) {
           c3 = 3;
           obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = base64;
           return obj;
         } else {
-          base64 = arg1.base64;
+          base64 = base64.base64;
           if (null != base64) {
             callback(base64);
           }
@@ -153,15 +150,15 @@ export default function CreateGuildContainer(onCreate) {
             c3 = undefined;
             closure_1_7(true);
             c3 = 1;
-            if (null != closure_1_2) {
+            if (null != onHubGuildInfoSet) {
               tmp65(c4, c5, id);
               c3 = 0;
             } else {
-              let obj9 = id(closure_1_2[11]);
+              let obj9 = id(onHubGuildInfoSet[11]);
               c4 = 2;
               c5 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj9.createGuildFromTemplate(c4, c5, id, c3, closure_1_9);
+              obj1[0] = obj9.createGuildFromTemplate(c4, c5, id, c3, first2);
               return obj1;
             }
           }
@@ -181,7 +178,7 @@ export default function CreateGuildContainer(onCreate) {
           } else {
             const lib = arg1;
             id = lib.id;
-            let obj6 = lib(closure_1_2[12]);
+            let obj6 = lib(onHubGuildInfoSet[12]);
             c4 = 3;
             c5 = 1;
             const obj3 = { value: null, done: false };
@@ -200,8 +197,8 @@ export default function CreateGuildContainer(onCreate) {
             return obj4;
           } else {
             defaultChannel = closure_1_6.getDefaultChannel(c1);
-            c3 = lib(closure_1_2[13]).dangerouslyConstructGuildRecordFromUntypedObject(c0);
-            const obj14 = lib(closure_1_2[13]);
+            c3 = lib(onHubGuildInfoSet[13]).dangerouslyConstructGuildRecordFromUntypedObject(c0);
+            const obj14 = lib(onHubGuildInfoSet[13]);
             const obj5 = { omitUserIds: null, guild: null, channel: null };
             const _Set = Set;
             const set = new Set();
@@ -211,7 +208,7 @@ export default function CreateGuildContainer(onCreate) {
             c4 = 4;
             c5 = 1;
             obj6 = { value: null, done: false };
-            obj6[0] = lib(closure_1_2[14]).loadInviteSuggestions(obj5);
+            obj6[0] = lib(onHubGuildInfoSet[14]).loadInviteSuggestions(obj5);
             return obj6;
           }
         } else if (4 === tmp7) {
@@ -260,8 +257,7 @@ export default function CreateGuildContainer(onCreate) {
       }
     }
   }), items);
-  obj = { top: true, left: true, right: true, style: items1, children: null };
-  items1 = [, ];
+  const items1 = [, ];
   ({ flex: arr2[0], contentContainer: arr2[1] } = tmp2);
   obj = {};
   const tmp9 = first(first1.useState(null), 2);

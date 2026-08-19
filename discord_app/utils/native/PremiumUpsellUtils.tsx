@@ -8,13 +8,13 @@ import registerAssetDefault3 from "registerAsset" /* 8474 */;
 import registerAssetDefault4 from "registerAsset" /* 8475 */;
 import registerAssetDefault5 from "registerAsset" /* 8476 */;
 import registerAssetDefault6 from "registerAsset" /* 8477 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analyticsLocation) {
   const _require = initialUpsellKey;
   closure_1 = analyticsLocations2;
@@ -46,16 +46,16 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
       return initialUpsellKey(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_0_LEADING;
     } else {
       if (closure_1_7.UPLOAD !== initialUpsellKey) {
-        if (tmp2.ANIMATED_EMOJI !== tmp) {
-          if (tmp2.GLOBAL_EMOJI !== tmp) {
-            if (tmp2.GLOBAL_STICKER !== tmp) {
-              if (tmp2.CUSTOM_PROFILES !== tmp) {
-                if (tmp2.PREMIUM_GUILD_PROFILE !== tmp) {
-                  if (tmp2.APP_ICONS !== tmp) {
-                    if (tmp2.STREAM_HIGH_QUALITY !== tmp) {
-                      if (tmp2.LONGER_MESSAGE !== tmp) {
-                        if (tmp2.GUILD_CAP !== tmp) {
-                          const ANIMATED_AVATAR = tmp2.ANIMATED_AVATAR;
+        if (closure_1_7.ANIMATED_EMOJI !== initialUpsellKey) {
+          if (closure_1_7.GLOBAL_EMOJI !== initialUpsellKey) {
+            if (closure_1_7.GLOBAL_STICKER !== initialUpsellKey) {
+              if (closure_1_7.CUSTOM_PROFILES !== initialUpsellKey) {
+                if (closure_1_7.PREMIUM_GUILD_PROFILE !== initialUpsellKey) {
+                  if (closure_1_7.APP_ICONS !== initialUpsellKey) {
+                    if (closure_1_7.STREAM_HIGH_QUALITY !== initialUpsellKey) {
+                      if (closure_1_7.LONGER_MESSAGE !== initialUpsellKey) {
+                        if (closure_1_7.GUILD_CAP !== initialUpsellKey) {
+                          const ANIMATED_AVATAR = closure_1_7.ANIMATED_AVATAR;
                         }
                       }
                       return initialUpsellKey(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_0_LEADING;
@@ -95,6 +95,7 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
     obj[1] = items;
     obj[2] = memo;
     analyticsLocations2(analyticsLocation[22])(obj);
+    const tmp5 = analyticsLocations2(analyticsLocation[22]);
   }, items2);
   obj = {
     useTier0UpsellContent: tmp4,
@@ -127,7 +128,7 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
 }
 ({ AnalyticEvents: c5, AnalyticsObjects: closure_6, UpsellTypes: error } = ME);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumTypes: c9 } = GuildFeatures);
-const result = require("set").fileFinishedImporting("utils/native/PremiumUpsellUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/native/PremiumUpsellUtils.tsx");
 
 export default {
   handleShowUpsellAlert(initialUpsellKey) {
@@ -151,19 +152,19 @@ export default {
       if (constants.UPLOAD === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).isPremiumExactly(currentUser, TIER_2.TIER_2);
         const obj15 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.GLOBAL_EMOJI === initialUpsellKey) {
+      } else if (constants.GLOBAL_EMOJI === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUseEmojisEverywhere(currentUser);
         const obj14 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.ANIMATED_AVATAR === initialUpsellKey) {
+      } else if (constants.ANIMATED_AVATAR === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUseAnimatedAvatar(currentUser);
         const obj13 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.BADGE === initialUpsellKey) {
+      } else if (constants.BADGE === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUseBadges(currentUser);
         const obj12 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.ANIMATED_EMOJI === initialUpsellKey) {
+      } else if (constants.ANIMATED_EMOJI === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUseAnimatedEmojis(currentUser);
         const obj11 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.EMOJI_AUTOCOMPLETE === initialUpsellKey) {
+      } else if (constants.EMOJI_AUTOCOMPLETE === initialUpsellKey) {
         const canUseAnimatedEmojisResult = analyticsLocation(analyticsLocations[16]).canUseAnimatedEmojis(currentUser);
         let tmp18 = !canUseAnimatedEmojisResult;
         if (canUseAnimatedEmojisResult) {
@@ -174,27 +175,27 @@ export default {
         const obj9 = analyticsLocation(analyticsLocations[16]);
         tmp15 = analyticsLocation;
         tmp16 = analyticsLocations;
-      } else if (tmp2.CUSTOM_PROFILES === initialUpsellKey) {
+      } else if (constants.CUSTOM_PROFILES === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUsePremiumProfileCustomization(currentUser);
         const obj8 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.APP_ICONS === initialUpsellKey) {
+      } else if (constants.APP_ICONS === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUsePremiumAppIcons(currentUser);
         const obj7 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.GLOBAL_STICKER === initialUpsellKey) {
+      } else if (constants.GLOBAL_STICKER === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUseCustomStickersEverywhere(currentUser);
         const obj6 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.PREMIUM_GUILD_PROFILE === initialUpsellKey) {
+      } else if (constants.PREMIUM_GUILD_PROFILE === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUsePremiumGuildMemberProfile(currentUser);
         const obj5 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.LONGER_MESSAGE === initialUpsellKey) {
+      } else if (constants.LONGER_MESSAGE === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUseIncreasedMessageLength(currentUser);
         const obj4 = analyticsLocation(analyticsLocations[16]);
-      } else if (tmp2.GUILD_CAP === initialUpsellKey) {
+      } else if (constants.GUILD_CAP === initialUpsellKey) {
         flag = !analyticsLocation(analyticsLocations[16]).canUseIncreasedGuildCap(currentUser);
         const obj3 = analyticsLocation(analyticsLocations[16]);
       } else {
         flag = false;
-        if (tmp2.STREAM_HIGH_QUALITY === initialUpsellKey) {
+        if (constants.STREAM_HIGH_QUALITY === initialUpsellKey) {
           flag = true;
         }
       }
@@ -203,8 +204,8 @@ export default {
       if (!analyticsLocation(analyticsLocations[12])(initialUpsellKey)) {
         let obj = { importer: null };
         obj[0] = function importer() {
-          return initialUpsellKey(analyticsLocations[15])(analyticsLocations[14], analyticsLocations.paths).then((arg0) => {
-            closure_0 = arg0.default;
+          return initialUpsellKey(analyticsLocations[15])(analyticsLocations[14], analyticsLocations.paths).then((result) => {
+            closure_0 = result.default;
             return (arg0) => {
               const obj = {};
               const merged = Object.assign(arg0);

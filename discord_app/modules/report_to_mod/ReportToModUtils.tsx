@@ -4,19 +4,21 @@
 import fromStringAll from "fromString" /* 506 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
 import isCurrentUserTeen from "isCurrentUserTeen" /* 5005 */;
+import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 5019 */;
+import ContentHarmType from "ContentHarmType" /* 5020 */;
 import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 5291 */;
 import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 5292 */;
 import getContextForPermission from "getContextForPermission" /* 7231 */;
 import canReportUser from "canReportUser" /* 7267 */;
-import closure_4 from "handleLoadThreadsSuccess" /* 7239 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import handleLoadThreadsSuccess from "handleLoadThreadsSuccess" /* 7239 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { ReportToModPermissions } from "ReportToModPermissions" /* 7266 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 
 export const canReportMessageToMods = function canReportMessageToMods(message) {
   if (obj.canReportUser(message.author)) {
@@ -36,10 +38,10 @@ export const canReportMessageToMods = function canReportMessageToMods(message) {
   }
   obj = canReportUser;
 };
-export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    const items = [closure_6, closure_8];
+export const canAccessReportsChannel = function canAccessReportsChannel(arg0, items) {
+  let tmp = items;
+  if (items === undefined) {
+    items = [closure_6, closure_8];
     tmp = items;
   }
   let obj = getContextForPermission;
@@ -62,7 +64,6 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
       obj[0] = contextForPermission.user;
       obj[1] = guild;
       hasAnyResult = obj2.hasAny(applyOverwritesAll.computePermissions(obj), ReportToModPermissions);
-      const obj3 = applyOverwritesAll;
     }
     return hasAnyResult;
   }
@@ -181,8 +182,8 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
           tmp9 = null == firstMessage;
         }
         if (!tmp9) {
-          tmp9 = !tmp10(5019).messageHasObscurableMediaForBitmask(firstMessage, tmp10(5020).ContentHarmTypeBitMask.EXPLICIT);
-          const tmp10Result = tmp10(5019);
+          tmp9 = !getEligibleHarmTypesConfigsForContext.messageHasObscurableMediaForBitmask(firstMessage, ContentHarmType.ContentHarmTypeBitMask.EXPLICIT);
+          const tmp10Result = getEligibleHarmTypesConfigsForContext;
         }
         return tmp9;
       } else {
@@ -226,7 +227,7 @@ export const sortedModeratorReportTags = function sortedModeratorReportTags(foun
 };
 export const isModeratorReportMessage = function isModeratorReportMessage(messageSnapshots) {
   messageSnapshots = messageSnapshots.messageSnapshots;
-  return messageSnapshots.some((moderatorReport) => null != moderatorReport.moderatorReport);
+  return messageSnapshots.some((item, index) => null != item.moderatorReport);
 };
 export const isUserAuthorOfReportedMessage = function isUserAuthorOfReportedMessage(arg0, arg1) {
   const channel = store.getChannel(arg0);

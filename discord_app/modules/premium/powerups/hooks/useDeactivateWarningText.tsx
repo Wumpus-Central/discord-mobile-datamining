@@ -1,13 +1,13 @@
 // === Module 11711: useDeactivateWarningText ===
 
 // Module 11711 (useDeactivateWarningText)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleInviteData" /* 4295 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import noop from "noop" /* 19 */;
+import handleInviteData from "handleInviteData" /* 4295 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useDeactivateWarningText.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useDeactivateWarningText.tsx");
 
 export default function useDeactivateWarningText(arg0, skuId) {
   const _require = arg0;
@@ -35,19 +35,19 @@ export default function useDeactivateWarningText(arg0, skuId) {
       num = 0;
       if (null != closure_3) {
         const sortedRoles = stateFromStores2.getSortedRoles(callback);
-        num = sortedRoles.reduce((arg0, colorStrings) => {
-          colorStrings = colorStrings.colorStrings;
+        num = sortedRoles.reduce((acc, item, index) => {
+          const colorStrings = item.colorStrings;
           let secondaryColor;
           if (colorStrings != null) {
             secondaryColor = colorStrings.secondaryColor;
           }
-          let sum = arg0;
+          let sum = acc;
           if (null != secondaryColor) {
-            let num = table[colorStrings.id];
+            let num = table[item.id];
             if (num == null) {
               num = 0;
             }
-            sum = arg0 + num;
+            sum = acc + num;
           }
           return sum;
         }, 0);
@@ -60,24 +60,22 @@ export default function useDeactivateWarningText(arg0, skuId) {
     skuId = skuId.skuId;
     if (callback(stateFromStores[6]).GUILD_POWERUP_ROLE_COLOR_SKU_ID === skuId) {
       if (stateFromStores2 > 0) {
-        const intl5 = tmp2(tmp3[7]).intl;
+        const intl5 = callback(stateFromStores[7]).intl;
         let obj = { perk: null, memberCount: null };
         obj[0] = tmp.title;
         obj[1] = tmp14;
-        let formatToPlainStringResult = intl5.formatToPlainString(skuId(tmp3[8])["4jSvr1"], obj);
-        let tmp15 = skuId;
+        let formatToPlainStringResult = intl5.formatToPlainString(skuId(stateFromStores[8])["4jSvr1"], obj);
       } else {
-        const intl4 = tmp2(tmp3[7]).intl;
-        tmp15 = skuId;
+        const intl4 = callback(stateFromStores[7]).intl;
         obj = { perk: null };
         obj[0] = tmp.title;
-        formatToPlainStringResult = intl4.formatToPlainString(skuId(tmp3[8]).cavtEo, obj);
+        formatToPlainStringResult = intl4.formatToPlainString(skuId(stateFromStores[8]).cavtEo, obj);
       }
     } else {
-      if (tmp2(tmp3[6]).VANITY_URL_POWERUP_SKU_ID === skuId) {
-        const intl3 = tmp2(tmp3[7]).intl;
+      if (callback(stateFromStores[6]).VANITY_URL_POWERUP_SKU_ID === skuId) {
+        const intl3 = callback(stateFromStores[7]).intl;
         const string = intl3.string;
-        const tmp11 = skuId(tmp3[8]);
+        const tmp11 = skuId(stateFromStores[8]);
         if (stateFromStores1) {
           let stringResult = string(tmp11.hN75yb);
           let tmp13 = tmp10;
@@ -88,11 +86,11 @@ export default function useDeactivateWarningText(arg0, skuId) {
         let tmp7 = tmp13;
         let formatToPlainStringResult1 = stringResult;
       } else {
-        if (tmp2(tmp3[6]).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID !== skuId) {
-          if (tmp2(tmp3[6]).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID !== skuId) {
-            if (tmp2(tmp3[6]).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID !== skuId) {
-              if (tmp2(tmp3[6]).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID !== skuId) {
-                const intl = tmp2(tmp3[7]).intl;
+        if (callback(stateFromStores[6]).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID !== skuId) {
+          if (callback(stateFromStores[6]).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID !== skuId) {
+            if (callback(stateFromStores[6]).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID !== skuId) {
+              if (callback(stateFromStores[6]).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID !== skuId) {
+                const intl = callback(stateFromStores[7]).intl;
                 obj = { perk: null, memberCount: null };
                 obj[0] = tmp.title;
                 let num = stateFromStores;
@@ -100,29 +98,28 @@ export default function useDeactivateWarningText(arg0, skuId) {
                   num = 0;
                 }
                 obj[1] = num;
-                formatToPlainStringResult1 = intl.formatToPlainString(skuId(tmp3[8])["4jSvr1"], obj);
+                formatToPlainStringResult1 = intl.formatToPlainString(skuId(stateFromStores[8])["4jSvr1"], obj);
                 tmp7 = skuId;
-                const tmp4 = skuId;
               }
             }
           }
         }
-        const intl2 = tmp2(tmp3[7]).intl;
-        formatToPlainStringResult1 = intl2.string(skuId(tmp3[8]).Vf2ZcR);
+        const intl2 = callback(stateFromStores[7]).intl;
+        formatToPlainStringResult1 = intl2.string(skuId(stateFromStores[8]).Vf2ZcR);
         tmp7 = skuId;
       }
       obj1 = { text: null, critical: null };
       obj1[0] = formatToPlainStringResult1;
-      obj1[1] = tmp.skuId === tmp2(tmp3[6]).VANITY_URL_POWERUP_SKU_ID;
+      obj1[1] = tmp.skuId === callback(stateFromStores[6]).VANITY_URL_POWERUP_SKU_ID;
       const items = [obj1];
       let tmp20 = stateFromStores1;
       if (stateFromStores1) {
-        tmp20 = tmp.skuId === tmp2(tmp3[6]).GUILD_POWERUP_LEVEL_3_SKU_ID;
+        tmp20 = tmp.skuId === callback(stateFromStores[6]).GUILD_POWERUP_LEVEL_3_SKU_ID;
       }
       if (tmp20) {
         const obj2 = { text: null, critical: true };
-        const intl6 = tmp2(tmp3[7]).intl;
-        obj2[0] = intl6.string(tmp7(tmp3[8]).M4XL5n);
+        const intl6 = callback(stateFromStores[7]).intl;
+        obj2[0] = intl6.string(tmp7(stateFromStores[8]).M4XL5n);
         items.push(obj2);
       }
       return items;

@@ -1,8 +1,8 @@
 // === Module 5239: AutomodQuarantineUserMessageEmbedKeys ===
 
 // Module 5239 (AutomodQuarantineUserMessageEmbedKeys)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx");
 
 export const AutomodQuarantineUserMessageEmbedKeys = { BIO: "bio", USERNAME: "username", NICKNAME: "nickname", GLOBAL_NAME: "display_name", CLAN_TAG: "clan_tag" };

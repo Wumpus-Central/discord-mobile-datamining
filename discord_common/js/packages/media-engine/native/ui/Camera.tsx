@@ -33,6 +33,6 @@ class Camera {
 }
 noopAll;
 Camera.defaultProps = { disabled: false, width: 320, height: 180 };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/Camera.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/Camera.tsx");
 
 export default Camera;

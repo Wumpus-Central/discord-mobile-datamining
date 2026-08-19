@@ -1,20 +1,20 @@
 // === Module 17073: getCurrentScreenshareCaptureMethod ===
 
 // Module 17073 (getCurrentScreenshareCaptureMethod)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "updateAveragedStatsHelper" /* 4557 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import updateAveragedStatsHelper from "updateAveragedStatsHelper" /* 4557 */;
 import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo" /* 4536 */;
-import closure_6 from "ApplicationStreamPresets" /* 4562 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
-import closure_10 from "initialize" /* 4565 */;
-import closure_11 from "handleConnectionOpen" /* 1979 */;
-import closure_12 from "initialize" /* 4558 */;
+import ApplicationStreamPresets from "ApplicationStreamPresets" /* 4562 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import initialize from "initialize" /* 4565 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import initialize2 from "initialize" /* 4558 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
 
-const require = arg1;
+const require = fn;
 function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   const connectionStats = store.getConnectionStats(mediaEngineConnectionId);
   const lastConnectionStats = store.getLastConnectionStats(mediaEngineConnectionId);
@@ -29,7 +29,6 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
         let screenshare = lastConnectionStats.stats.screenshare;
         let num;
         if (screenshare != null) {
-          let tmp7 = nextResult;
           num = screenshare[tmp6];
         }
         if (num == null) {
@@ -39,14 +38,11 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
         let num2;
         let tmp8 = num;
         if (screenshare2 != null) {
-          let tmp9 = nextResult;
           num2 = screenshare2[tmp6];
         }
         if (num2 == null) {
           num2 = 0;
         }
-        let tmp10 = nextResult;
-        let tmp11 = num;
         obj[tmp6] = num2 - tmp8;
         continue;
       }
@@ -56,11 +52,8 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
       const entries = Object.entries(obj);
       const tmp16 = entries[Symbol.iterator]();
       while (tmp16 !== undefined) {
-        let tmp20 = callback;
         let tmp21 = callback(tmp18, 2);
         let tmp23 = tmp21[1];
-        let tmp24 = tmp23;
-        let tmp25 = num3;
         if (tmp23 > num3) {
           num3 = tmp23;
           tmp12 = tmp22;
@@ -77,7 +70,7 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   return null;
 }
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = DesktopSources);
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");
+const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");
 
 export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(error, context) {
   const _require = error;
@@ -192,12 +185,6 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     if (rTCConnection != tmp6) {
       voiceParticipantType = rTCConnection.getVoiceParticipantType();
     }
-    let str = voiceParticipantType;
-  } else {
-    str = "receiver";
-    if (isErrorOutbound) {
-      str = "sender";
-    }
   }
   let mediaEngineConnectionId;
   if (rTCConnection1 != tmp6) {
@@ -214,7 +201,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
           const outboundStats = rTCConnection1.getOutboundStats();
           tmp6 = outboundStats == tmp6;
           if (!tmp6) {
-            found = outboundStats.find((quality) => quality.quality === prop1);
+            found = outboundStats.find((item, index) => item.quality === prop1);
           }
         }
         let inboundStats = found;
@@ -249,13 +236,13 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
   }
   inboundStats1 = tmp32;
   let obj = _require(errorInfo[12]);
-  mediaContext().then((cpu_brand) => {
+  mediaContext().then((result) => {
     const obj = { error_name: error.valueOf(), error_code: errorInfo.errorCode, error_severity: errorInfo.severity, error_category: errorInfo.category, underlying_error: null, error_message: null, guild_id: null, channel_id: null, channel_type: null, rtc_connection_id: null, media_session_id: null, parent_media_session_id: null, context: null, voice_backend_version: null, rtc_worker_backend_version: null, guild_region: null, hostname: null, duration: null, participant_type: null, num_frames: null, num_packets: null, num_bytes: null, num_packets_lost: null, video_codec: null, video_encoder: null, video_decoder: null, audio_capture_sample_rate_mismatch_percent: null, audio_capture_processing_sample_rate: null, incoming_video_stopped_for_occlusion: null, bitrate: null, target_bitrate: null, fps: null, target_fps: null, sender_user_id: null, stream_region: null, stream_source_type: null, num_stream_viewers: null, video_input_resolution_height: null, video_input_frame_rate: null, screenshare_capture_method: null, share_application_name: null, share_application_id: null, share_application_executable: null, share_application_distributor: null, cpu_brand: null, cpu_vendor: null, cpu_memory: null, gpu_brand: null, gpu_count: null, gpu_memory: null, gpu_device_vendor_id: null, gpu_device_device_id: null, gpu_device_sub_sys_id: null, gpu_device_revision: null, gpu_driver_version: null, cpu_usage: null, memory_usage: null, outbound_bitrate_estimate: null, inbound_bitrate_estimate: null, hardware_enabled: null, audio_input_device_name: null, audio_output_device_name: null, video_device_name: null, audio_subsystem: null, automatic_audio_subsystem: null, audio_layer: null, audio_input_mode: null, automatic_audio_input_sensitivity_enabled: null, audio_input_sensitivity: null, echo_cancellation_enabled: null, noise_suppression_enabled: null, noise_cancellation_enabled: null, automatic_gain_control_enabled: null, sidechain_compression_enabled: null, input_volume: null, output_volume: null, audio_input_device_count: null, audio_output_device_count: null, app_hardware_acceleration_enabled: null, input_device_os_muted: null, input_device_os_volume: null };
-    let cpu_vendor = underlyingError;
+    let tmp = underlyingError;
     if (underlyingError == null) {
-      cpu_vendor = null;
+      tmp = null;
     }
-    obj[4] = cpu_vendor;
+    obj[4] = tmp;
     let tmp2 = errorMessage;
     if (errorMessage == null) {
       tmp2 = null;
@@ -263,7 +250,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[5] = tmp2;
     let guild_id;
     if (store != null) {
-      guild_id = tmp3.guild_id;
+      guild_id = store.guild_id;
     }
     if (guild_id == null) {
       guild_id = null;
@@ -276,7 +263,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[7] = tmp5;
     let type;
     if (store != null) {
-      type = tmp3.type;
+      type = store.type;
     }
     if (type == null) {
       type = null;
@@ -350,7 +337,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[18] = tmp17;
     let num;
     if (inboundStats1 != null) {
-      num = tmp18.num_frames;
+      num = inboundStats1.num_frames;
     }
     if (num == null) {
       num = 0;
@@ -358,7 +345,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[19] = num;
     let num2;
     if (inboundStats1 != null) {
-      num2 = tmp18.num_packets;
+      num2 = inboundStats1.num_packets;
     }
     if (num2 == null) {
       num2 = 0;
@@ -366,18 +353,18 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[20] = num2;
     let num3;
     if (inboundStats1 != null) {
-      num3 = tmp18.num_bytes;
+      num3 = inboundStats1.num_bytes;
     }
     if (num3 == null) {
       num3 = 0;
     }
     obj[21] = num3;
     if (isErrorOutbound) {
-      const connectionStats = store.getConnectionStats(tmp20);
+      const connectionStats = store.getConnectionStats(mediaEngineConnectionId);
       let tmp29 = null;
       if (null != connectionStats) {
         const outbound = connectionStats.stats.rtp.outbound;
-        let found = outbound.find((type) => "video" === type.type);
+        let found = outbound.find((item, index) => "video" === item.type);
         if (found == null) {
           found = null;
         }
@@ -386,13 +373,13 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       let tmp22 = tmp29;
     } else {
       tmp22 = null;
-      if (null != tmp21) {
-        const connectionStats1 = store.getConnectionStats(tmp20);
+      if (null != userId) {
+        const connectionStats1 = store.getConnectionStats(mediaEngineConnectionId);
         tmp22 = null;
         if (null != connectionStats1) {
           let tmp25 = null;
-          if (null != connectionStats1.stats.rtp.inbound[tmp21]) {
-            let found1 = arr.find((type) => "video" === type.type);
+          if (null != connectionStats1.stats.rtp.inbound[userId]) {
+            let found1 = arr.find((item, index) => "video" === item.type);
             if (found1 == null) {
               found1 = null;
             }
@@ -412,14 +399,12 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[22] = num4;
     let parseCodecTypeResult = videoCodec;
     if (videoCodec == null) {
-      cpu_vendor = error;
-      cpu_vendor = errorInfo;
-      if (tmp19) {
-        const connectionStats2 = store.getConnectionStats(tmp20);
+      if (isErrorOutbound) {
+        const connectionStats2 = store.getConnectionStats(mediaEngineConnectionId);
         let tmp39 = null;
         if (null != connectionStats2) {
           const outbound1 = connectionStats2.stats.rtp.outbound;
-          let found2 = outbound1.find((type) => "video" === type.type);
+          let found2 = outbound1.find((item, index) => "video" === item.type);
           if (found2 == null) {
             found2 = null;
           }
@@ -428,13 +413,13 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
         let tmp32 = tmp39;
       } else {
         tmp32 = null;
-        if (null != tmp21) {
-          const connectionStats3 = store.getConnectionStats(tmp20);
+        if (null != userId) {
+          const connectionStats3 = store.getConnectionStats(mediaEngineConnectionId);
           tmp32 = null;
           if (null != connectionStats3) {
             let tmp35 = null;
-            if (null != connectionStats3.stats.rtp.inbound[tmp21]) {
-              let found3 = arr3.find((type) => "video" === type.type);
+            if (null != connectionStats3.stats.rtp.inbound[userId]) {
+              let found3 = arr3.find((item, index) => "video" === item.type);
               if (found3 == null) {
                 found3 = null;
               }
@@ -457,11 +442,11 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[23] = parseCodecTypeResult;
     let parseEncoderResult = videoEncoder;
     if (videoEncoder == null) {
-      const connectionStats4 = store.getConnectionStats(tmp20);
+      const connectionStats4 = store.getConnectionStats(mediaEngineConnectionId);
       let tmp47 = null;
       if (null != connectionStats4) {
         const outbound2 = connectionStats4.stats.rtp.outbound;
-        let found4 = outbound2.find((type) => "video" === type.type);
+        let found4 = outbound2.find((item, index) => "video" === item.type);
         if (found4 == null) {
           found4 = null;
         }
@@ -480,16 +465,14 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[24] = parseEncoderResult;
     let parseDecoderResult = videoDecoder;
     if (videoDecoder == null) {
-      cpu_vendor = error;
-      cpu_vendor = errorInfo;
       let tmp53 = null;
-      if (null != tmp21) {
-        const connectionStats5 = store.getConnectionStats(tmp20);
+      if (null != userId) {
+        const connectionStats5 = store.getConnectionStats(mediaEngineConnectionId);
         tmp53 = null;
         if (null != connectionStats5) {
           let tmp54 = null;
-          if (null != connectionStats5.stats.rtp.inbound[tmp21]) {
-            let found5 = arr6.find((type) => "video" === type.type);
+          if (null != connectionStats5.stats.rtp.inbound[userId]) {
+            let found5 = arr6.find((item, index) => "video" === item.type);
             if (found5 == null) {
               found5 = null;
             }
@@ -514,11 +497,11 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       tmp57 = null;
     }
     obj[26] = tmp57;
-    const connectionStats6 = store.getConnectionStats(tmp20);
+    const connectionStats6 = store.getConnectionStats(mediaEngineConnectionId);
     let currentSampleRate;
     if (connectionStats6 != null) {
       const outbound3 = connectionStats6.stats.rtp.outbound;
-      const found6 = outbound3.find((type) => "audio" === type.type);
+      const found6 = outbound3.find((item, index) => "audio" === item.type);
       if (found6 != null) {
         currentSampleRate = found6.currentSampleRate;
       }
@@ -530,11 +513,11 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     const WindowVisibilityVideoManager = error(errorInfo[17]).WindowVisibilityVideoManager;
     obj[28] = !WindowVisibilityVideoManager.isIncomingVideoEnabled();
     if (isErrorOutbound) {
-      const connectionStats7 = obj7.getConnectionStats(tmp20);
+      const connectionStats7 = store.getConnectionStats(mediaEngineConnectionId);
       let tmp67 = null;
       if (null != connectionStats7) {
         const outbound4 = connectionStats7.stats.rtp.outbound;
-        let found7 = outbound4.find((type) => "video" === type.type);
+        let found7 = outbound4.find((item, index) => "video" === item.type);
         if (found7 == null) {
           found7 = null;
         }
@@ -543,13 +526,13 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       let tmp62 = tmp67;
     } else {
       tmp62 = null;
-      if (null != tmp21) {
-        const connectionStats8 = obj7.getConnectionStats(tmp20);
+      if (null != userId) {
+        const connectionStats8 = store.getConnectionStats(mediaEngineConnectionId);
         tmp62 = null;
         if (null != connectionStats8) {
           let tmp64 = null;
-          if (null != connectionStats8.stats.rtp.inbound[tmp21]) {
-            let found8 = arr8.find((type) => "video" === type.type);
+          if (null != connectionStats8.stats.rtp.inbound[userId]) {
+            let found8 = arr8.find((item, index) => "video" === item.type);
             if (found8 == null) {
               found8 = null;
             }
@@ -569,11 +552,11 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[29] = bitrate;
     let tmp70 = null;
     if (isErrorOutbound) {
-      const connectionStats9 = obj7.getConnectionStats(tmp20);
+      const connectionStats9 = store.getConnectionStats(mediaEngineConnectionId);
       let tmp72 = null;
       if (null != connectionStats9) {
         const outbound5 = connectionStats9.stats.rtp.outbound;
-        let found9 = outbound5.find((type) => "video" === type.type);
+        let found9 = outbound5.find((item, index) => "video" === item.type);
         if (found9 == null) {
           found9 = null;
         }
@@ -590,11 +573,11 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     }
     obj[30] = tmp70;
     if (isErrorOutbound) {
-      const connectionStats10 = obj7.getConnectionStats(tmp75);
+      const connectionStats10 = store.getConnectionStats(mediaContext);
       let tmp82 = null;
       if (null != connectionStats10) {
         const outbound6 = connectionStats10.stats.rtp.outbound;
-        let found10 = outbound6.find((type) => "video" === type.type);
+        let found10 = outbound6.find((item, index) => "video" === item.type);
         if (found10 == null) {
           found10 = null;
         }
@@ -610,13 +593,13 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       let frameRateDecode = frameRateEncode;
     } else {
       let tmp76 = null;
-      if (null != tmp21) {
-        const connectionStats11 = obj7.getConnectionStats(tmp75);
+      if (null != userId) {
+        const connectionStats11 = store.getConnectionStats(mediaContext);
         tmp76 = null;
         if (null != connectionStats11) {
           let tmp78 = null;
-          if (null != connectionStats11.stats.rtp.inbound[tmp21]) {
-            let found11 = arr11.find((type) => "video" === type.type);
+          if (null != connectionStats11.stats.rtp.inbound[userId]) {
+            let found11 = arr11.find((item, index) => "video" === item.type);
             if (found11 == null) {
               found11 = null;
             }
@@ -640,7 +623,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     let tmp85 = null;
     if (mediaContext === audioInputDeviceName.STREAM) {
       tmp85 = null;
-      if (tmp19) {
+      if (isErrorOutbound) {
         tmp85 = closure_21;
       }
     }
@@ -726,156 +709,157 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       tmp98 = null;
     }
     obj[43] = tmp98;
-    cpu_brand = undefined;
-    if (cpu_brand != null) {
-      cpu_brand = cpu_brand.cpu_brand;
+    let cpu_brand;
+    if (result != null) {
+      cpu_brand = result.cpu_brand;
     }
     if (cpu_brand == null) {
       cpu_brand = null;
     }
     obj[44] = cpu_brand;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.cpu_vendor;
+    let cpu_vendor;
+    if (result != null) {
+      cpu_vendor = result.cpu_vendor;
     }
     if (cpu_vendor == null) {
       cpu_vendor = null;
     }
     obj[45] = cpu_vendor;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.cpu_memory;
+    let cpu_memory;
+    if (result != null) {
+      cpu_memory = result.cpu_memory;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (cpu_memory == null) {
+      cpu_memory = null;
     }
-    obj[46] = cpu_vendor;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_brand;
+    obj[46] = cpu_memory;
+    let gpu_brand;
+    if (result != null) {
+      gpu_brand = result.gpu_brand;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (gpu_brand == null) {
+      gpu_brand = null;
     }
-    obj[47] = cpu_vendor;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_count;
+    obj[47] = gpu_brand;
+    let gpu_count;
+    if (result != null) {
+      gpu_count = result.gpu_count;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (gpu_count == null) {
+      gpu_count = null;
     }
-    obj[48] = cpu_vendor;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_memory;
+    obj[48] = gpu_count;
+    let gpu_memory;
+    if (result != null) {
+      gpu_memory = result.gpu_memory;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (gpu_memory == null) {
+      gpu_memory = null;
     }
-    obj[49] = cpu_vendor;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_device_vendor_id;
+    obj[49] = gpu_memory;
+    let gpu_device_vendor_id;
+    if (result != null) {
+      gpu_device_vendor_id = result.gpu_device_vendor_id;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (gpu_device_vendor_id == null) {
+      gpu_device_vendor_id = null;
     }
-    obj[50] = cpu_vendor;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_device_device_id;
+    obj[50] = gpu_device_vendor_id;
+    let gpu_device_device_id;
+    if (result != null) {
+      gpu_device_device_id = result.gpu_device_device_id;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (gpu_device_device_id == null) {
+      gpu_device_device_id = null;
     }
-    obj[51] = cpu_vendor;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_device_sub_sys_id;
+    obj[51] = gpu_device_device_id;
+    let prop2;
+    if (result != null) {
+      prop2 = result.gpu_device_sub_sys_id;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (prop2 == null) {
+      prop2 = null;
     }
-    obj[52] = cpu_vendor;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_device_revision;
+    obj[52] = prop2;
+    let gpu_device_revision;
+    if (result != null) {
+      gpu_device_revision = result.gpu_device_revision;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (gpu_device_revision == null) {
+      gpu_device_revision = null;
     }
-    obj[53] = cpu_vendor;
-    cpu_vendor = undefined;
-    if (cpu_brand != null) {
-      cpu_vendor = cpu_brand.gpu_driver_version;
+    obj[53] = gpu_device_revision;
+    let gpu_driver_version;
+    if (result != null) {
+      gpu_driver_version = result.gpu_driver_version;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (gpu_driver_version == null) {
+      gpu_driver_version = null;
     }
-    obj[54] = cpu_vendor;
-    cpu_vendor = inboundStats1;
-    cpu_vendor = inboundStats1(errorInfo[18]).getCurrentCPUUsagePercent();
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    obj[54] = gpu_driver_version;
+    let currentCPUUsagePercent = inboundStats1(errorInfo[18]).getCurrentCPUUsagePercent();
+    if (currentCPUUsagePercent == null) {
+      currentCPUUsagePercent = null;
     }
-    obj[55] = cpu_vendor;
-    obj5 = rTCConnection1;
-    const obj8 = inboundStats1(errorInfo[18]);
-    cpu_vendor = cpu_vendor(errorInfo[18]).getCurrentMemoryUsageKB();
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    obj[55] = currentCPUUsagePercent;
+    let tmp110Result = inboundStats1(errorInfo[18]);
+    let currentMemoryUsageKB = tmp110Result.getCurrentMemoryUsageKB();
+    if (currentMemoryUsageKB == null) {
+      currentMemoryUsageKB = null;
     }
-    obj[56] = cpu_vendor;
-    cpu_vendor = obj7.getConnectionStats(tmp20);
-    cpu_vendor = undefined;
-    if (cpu_vendor != null) {
-      cpu_vendor = cpu_vendor.stats.transport.outboundBitrateEstimate;
+    obj[56] = currentMemoryUsageKB;
+    const connectionStats12 = store.getConnectionStats(mediaEngineConnectionId);
+    let prop3;
+    if (connectionStats12 != null) {
+      prop3 = connectionStats12.stats.transport.outboundBitrateEstimate;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (prop3 == null) {
+      prop3 = null;
     }
-    obj[57] = cpu_vendor;
-    cpu_vendor = obj7.getConnectionStats(tmp20);
-    cpu_vendor = undefined;
-    if (cpu_vendor != null) {
-      cpu_vendor = cpu_vendor.stats.transport.inboundBitrateEstimate;
+    obj[57] = prop3;
+    const connectionStats13 = store.getConnectionStats(mediaEngineConnectionId);
+    let prop4;
+    if (connectionStats13 != null) {
+      prop4 = connectionStats13.stats.transport.inboundBitrateEstimate;
     }
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    if (prop4 == null) {
+      prop4 = null;
     }
-    obj[58] = cpu_vendor;
+    obj[58] = prop4;
     obj[59] = mediaSessionId.getHardwareEncoding();
-    cpu_vendor = audioInputDeviceName;
+    let tmp117 = audioInputDeviceName;
     if (audioInputDeviceName == null) {
-      cpu_vendor = obj10.getInputDevices();
-      cpu_vendor = cpu_vendor[obj10.getInputDeviceId(obj10)];
-      cpu_vendor = undefined;
-      if (cpu_vendor != null) {
-        cpu_vendor = cpu_vendor.name;
+      const inputDevices = obj10.getInputDevices();
+      const tmp119 = inputDevices[obj10.getInputDeviceId(obj10)];
+      let name1;
+      if (tmp119 != null) {
+        name1 = tmp119.name;
       }
+      tmp117 = name1;
     }
-    obj[60] = cpu_vendor;
-    cpu_vendor = prop1;
+    obj[60] = tmp117;
+    let tmp121 = prop1;
     if (prop1 == null) {
-      cpu_vendor = obj10.getOutputDevices();
-      cpu_vendor = cpu_vendor[obj10.getOutputDeviceId(obj10)];
-      cpu_vendor = undefined;
-      if (cpu_vendor != null) {
-        cpu_vendor = cpu_vendor.name;
+      const outputDevices = obj10.getOutputDevices();
+      const tmp123 = outputDevices[obj10.getOutputDeviceId(obj10)];
+      let name2;
+      if (tmp123 != null) {
+        name2 = tmp123.name;
       }
+      tmp121 = name2;
     }
-    obj[61] = cpu_vendor;
-    cpu_vendor = videoDeviceName;
+    obj[61] = tmp121;
+    let tmp125 = videoDeviceName;
     if (videoDeviceName == null) {
-      cpu_vendor = obj10.getVideoDevices();
-      cpu_vendor = cpu_vendor[obj10.getVideoDeviceId(obj10)];
-      cpu_vendor = undefined;
-      if (cpu_vendor != null) {
-        cpu_vendor = cpu_vendor.name;
+      const videoDevices = obj10.getVideoDevices();
+      const tmp127 = videoDevices[obj10.getVideoDeviceId(obj10)];
+      let name3;
+      if (tmp127 != null) {
+        name3 = tmp127.name;
       }
+      tmp125 = name3;
     }
-    obj[62] = cpu_vendor;
+    obj[62] = tmp125;
     const mediaEngine = obj10.getMediaEngine();
     obj[63] = mediaEngine.getAudioSubsystem();
     obj[64] = mediaSessionId.getSettings().automaticAudioSubsystem;
@@ -893,19 +877,21 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     obj[75] = mediaSessionId.getOutputVolume();
     obj[76] = Object.keys(mediaSessionId.getInputDevices()).length;
     obj[77] = Object.keys(mediaSessionId.getOutputDevices()).length;
-    const cpu_vendorResult = cpu_vendor(errorInfo[18]);
-    obj[78] = cpu_vendor(errorInfo[19]).getAppHardwareAccelerationEnabled();
-    cpu_vendor = obj10.getInputDeviceOSMuted();
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    tmp110Result = inboundStats1(errorInfo[19]);
+    obj[78] = tmp110Result.getAppHardwareAccelerationEnabled();
+    let inputDeviceOSMuted = obj10.getInputDeviceOSMuted();
+    if (inputDeviceOSMuted == null) {
+      inputDeviceOSMuted = null;
     }
-    obj[79] = cpu_vendor;
-    cpu_vendor = obj10.getInputDeviceOSVolume();
-    if (cpu_vendor == null) {
-      cpu_vendor = null;
+    obj[79] = inputDeviceOSMuted;
+    let inputDeviceOSVolume = obj10.getInputDeviceOSVolume();
+    if (inputDeviceOSVolume == null) {
+      inputDeviceOSVolume = null;
     }
-    obj[80] = cpu_vendor;
-    const cpu_vendorResult1 = cpu_vendor(errorInfo[19]);
-    cpu_vendor = cpu_vendor(errorInfo[20]).track(prop.AV_ERROR_REPORTED, obj);
+    obj[80] = inputDeviceOSVolume;
+    obj5 = rTCConnection1;
+    const obj8 = inboundStats1(errorInfo[18]);
+    inboundStats1(errorInfo[20]).track(prop.AV_ERROR_REPORTED, obj);
+    const tmp110Result1 = inboundStats1(errorInfo[20]);
   });
 };

@@ -4,18 +4,20 @@
 import noopAll from "noop" /* 19 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import messagesProxyDefault from "messagesProxy" /* 2565 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import closeActionSheetDefault from "closeActionSheet" /* 16566 */;
+import _trackVoiceFeedbackDefault from "_trackVoiceFeedback" /* 16573 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import FeedbackRating from "FeedbackRating" /* 10811 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function trackOpen() {
   expandEventPropertiesDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Call Session Feedback" });
 }
 noopAll;
 ({ AudioFeedbackOption: c4, ConnectionFeedbackOption: c5, FeedbackCategory: closure_6, FeedbackType: error, PeopleFeedbackOption: closure_8, VideoFeedbackOption: c9 } = FeedbackRating);
-const result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceFeedbackActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceFeedbackActionSheet.tsx");
 
 export default function VoiceFeedbackActionSheet(analyticsData) {
   analyticsData = analyticsData.analyticsData;
@@ -76,8 +78,8 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
   obj6[6] = function trackReport(dontShowAgain) {
     ({ rating, category, reason, feedback } = dontShowAgain);
     if (dontShowAgain.dontShowAgain) {
-      let obj = analyticsData(closure_1_2[7]);
-      obj = { feedbackType: null, location: "VoiceFeedbackActionSheet" };
+      analyticsData(dependencyMap[7]);
+      let obj = { feedbackType: null, location: "VoiceFeedbackActionSheet" };
       obj[0] = closure_1_7.VOICE;
       obj.processOptOut(obj);
     }
@@ -106,21 +108,17 @@ export default function VoiceFeedbackActionSheet(analyticsData) {
       }
       obj[4] = feedback;
       obj[5] = analyticsData;
-      closure_1_1(closure_1_2[9])(closure_1_3.CALL_REPORT_PROBLEM, obj);
+      _trackVoiceFeedbackDefault(AnalyticEvents.CALL_REPORT_PROBLEM, obj);
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
-          ({ media_session_id: obj6[0], rtc_connection_id: obj6[1] } = tmp7);
-          tmp20(closure_1_2[11]).openLazy(analyticsData(closure_1_2[13])(closure_1_2[12], closure_1_2.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
-          obj1 = { mediaSessionId: null, rtcConnectionId: null };
-          const tmp20Result = tmp20(closure_1_2[11]);
+          ({ media_session_id: obj6[0], rtc_connection_id: obj6[1] } = analyticsData);
+          ACTION_SHEET_HEIGHT_HALFDefault.openLazy(analyticsData(dependencyMap[13])(dependencyMap[12], dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
+          const tmp20Result = ACTION_SHEET_HEIGHT_HALFDefault;
         }
-        obj3 = analyticsData(closure_1_2[10]);
+        obj3 = analyticsData(dependencyMap[10]);
       }
-      tmp20 = closure_1_1;
-      const tmp22 = closure_1_1(closure_1_2[9]);
-      tmp7 = analyticsData;
-      analyticsData(closure_1_2[14]).presentFeedbackSent();
-      const obj4 = analyticsData(closure_1_2[14]);
+      analyticsData(dependencyMap[14]).presentFeedbackSent();
+      const obj4 = analyticsData(dependencyMap[14]);
     }
   };
   return jsx(closeActionSheetDefault, { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: stringResult1, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });

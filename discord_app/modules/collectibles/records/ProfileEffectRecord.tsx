@@ -4,10 +4,9 @@
 import fromServerDefault from "fromServer" /* 1948 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 
-require = arg1;
+require = fn;
 fromServerDefault;
-let prototype;
-prototype = function ProfileEffectRecord(arg0) {
+const prototype = function ProfileEffectRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);
   // ThrowIfThisInitialized (0x7c)
   tmp2.type = CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
@@ -30,10 +29,10 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ title: tmp4.title, description: tmp4.description, accessibilityLabel: tmp4.accessibilityLabel, reducedMotionSrc: tmp4.reducedMotionSrc, thumbnailPreviewSrc: tmp4.thumbnailPreviewSrc, effects: tmp4.effects, animationType: tmp4.animationType, staticFrameSrc: tmp4.staticFrameSrc } = obj);
   return tmp;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/ProfileEffectRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/records/ProfileEffectRecord.tsx");
 
 export default prototype;
 export const RestartMethod = { FromLoop: "fromLoop", FromStart: "fromStart" };
-export const isProfileEffectRecord = function isProfileEffectRecord(first) {
-  return first instanceof prototype;
+export const isProfileEffectRecord = function isProfileEffectRecord(item) {
+  return item instanceof prototype;
 };

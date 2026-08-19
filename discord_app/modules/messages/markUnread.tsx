@@ -2,15 +2,15 @@
 
 // Module 10867 (_markUnread)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "storeThread" /* 4023 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import storeThread from "storeThread" /* 4023 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 import { shouldBadgeMessage } from "generateOldThreadCutoff" /* 4772 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _markUnread() {
   const self = this;
   let tmp = callback((arg0, arg1) => {
@@ -53,8 +53,8 @@ function _markUnread() {
               channel = undefined;
               currentUser = closure_1_8.getCurrentUser();
               if (null != currentUser) {
-                const messages = closure_1_6.getMessages(tmp41);
-                const found = messages.toArray().filter((id) => callback(currentUser[8]).compare(id.id, callback) < 0);
+                const messages = closure_1_6.getMessages(callback);
+                const found = messages.toArray().filter((item, index) => callback(currentUser[8]).compare(item.id, callback) < 0);
                 const sorted = found.sort((id, id2) => callback(currentUser[8]).compare(id.id, id2.id));
                 const first = sorted.reverse()[0];
                 if (null == first) {
@@ -72,8 +72,9 @@ function _markUnread() {
                   if (tmp) {
                     closure_4 = closure_4 + 1;
                   }
+                  const obj = callback(currentUser[8]);
                 });
-                channel = channel.getChannel(tmp41);
+                channel = channel.getChannel(callback);
                 let isThreadResult = null != channel;
                 if (isThreadResult) {
                   isThreadResult = channel.isThread();
@@ -148,7 +149,7 @@ function _markUnread() {
 }
 let closure_10 = new timestampDefault("markUnread");
 const tmp2 = new timestampDefault("markUnread");
-const result = require("set").fileFinishedImporting("modules/messages/markUnread.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/markUnread.tsx");
 
 export default function markUnread() {
   const self = this;

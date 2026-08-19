@@ -1,11 +1,11 @@
 // === Module 12324: useAddToWishlistGridItems ===
 
 // Module 12324 (useAddToWishlistGridItems)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
 
 export const useAddToWishlistGridItems = function useAddToWishlistGridItems(userId) {
   const wishlist = userId.wishlist;
@@ -13,20 +13,18 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
   if (maxWishlistItemsToShow === undefined) {
     maxWishlistItemsToShow = numWishlistItemsToRecommend;
   }
-  let recommendations;
-  let memo;
   closure_4 = undefined;
   let obj = wishlist(maxWishlistItemsToShow[2]);
   const recommendationsForSingleUser = obj.useRecommendationsForSingleUser({ userId: userId.userId, numItems: numWishlistItemsToRecommend, source: userId.source });
-  recommendations = recommendationsForSingleUser.recommendations;
+  const recommendations = recommendationsForSingleUser.recommendations;
   const status = recommendationsForSingleUser.status;
   const isNitroWishlistingEnabled = wishlist(maxWishlistItemsToShow[3]).useIsNitroWishlistingEnabled("add_to_wishlist_grid_suggested_nitro");
   let items = [wishlist];
-  memo = recommendations.useMemo(() => {
+  const memo = recommendations.useMemo(() => {
     let mapped;
     if (wishlist != null) {
       const items = wishlist.items;
-      mapped = items.map((skuId) => skuId.skuId);
+      mapped = items.map((item, index) => item.skuId);
     }
     if (mapped == null) {
       mapped = [];
@@ -43,8 +41,8 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
   closure_4 = tmp3;
   obj = {
     items: recommendations.useMemo(() => {
-      const found = recommendations.filter((id) => !set.has(id.id));
-      const mapped = found.map((sku) => ({ sku, itemSource: "recommendation" }));
+      const found = recommendations.filter((item, index) => !set.has(item.id));
+      const mapped = found.map((item, index) => ({ sku: item, itemSource: "recommendation" }));
       if (closure_4) {
         const obj = { sku: null, itemSource: "takeover" };
         obj[0] = wishlist(maxWishlistItemsToShow[4]).createNitroSuggestedSku();

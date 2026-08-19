@@ -14,14 +14,14 @@ import StyleSheetDefault from "StyleSheet" /* 16131 */;
 import MuteDeafenDefault from "MuteDeafen" /* 16139 */;
 import trackActionSheetImpressionDefault from "trackActionSheetImpression" /* 16141 */;
 import AnimatedToastDefault from "AnimatedToast" /* 16172 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("components_native/MainShared.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("components_native/MainShared.tsx");
 
 export const BurstReactionAnimationContainer = BurstReactionAnimationContainerInnerDefault;
 export const MenuContainer = MenuContainerDefault;
@@ -35,7 +35,6 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
   const items = [closure_5, closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
   const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
-  const obj2 = usePipVideoOrStream;
   const isModalOpen = coerceMainRoute.useIsModalOpen();
   isVoicePanelEnabled;
   let tmp7 = null;
@@ -59,13 +58,13 @@ export const useAppKeyCommands = function useAppKeyCommands() {
   const memo = React.useMemo(() => {
     let obj = callback(table[10]);
     if (obj.isAndroid()) {
-      let keyModifierCommand = callback2(tmp2[11]).getConstants().keyModifierCommand;
-      const obj2 = callback2(tmp2[11]);
+      let keyModifierCommand = callback2(table[11]).getConstants().keyModifierCommand;
+      const obj2 = callback2(table[11]);
     } else {
       keyModifierCommand = KeyCommandsView.KeyCommandsView.keyModifierCommand;
     }
     obj = { input: "k", modifierFlags: keyModifierCommand, eventName: "keyCommandShowQuickSwitcher", discoverabilityTitle: null, onKeyCommand: null };
-    const intl = tmp(tmp2[12]).intl;
+    const intl = callback(table[12]).intl;
     obj[3] = intl.string(callback(table[12]).t.yYsRlD);
     obj[4] = function onKeyCommand() {
       callback(table[13])();

@@ -1,7 +1,8 @@
 // === Module 11579: NativeModules ===
 
 // Module 11579 (NativeModules)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
+import obj1322 from "obj132" /* 500 */;
 import enforcing from "enforcing" /* 10134 */;
 import RNCPushNotificationIOSDefault from "RNCPushNotificationIOS" /* 11580 */;
 import openNotificationSettingsDefault from "openNotificationSettings" /* 11581 */;
@@ -14,7 +15,7 @@ if (null != PushNotificationAndroid) {
   tmp3 = new tmp3(NativeModules.PushNotificationAndroid);
 }
 let closure_5 = tmp3;
-let result = set.fileFinishedImporting("lib/pushnotification/PushNotification.tsx");
+let result = obj132.fileFinishedImporting("lib/pushnotification/PushNotification.tsx");
 
 export default {
   getInitialNotification() {
@@ -22,10 +23,10 @@ export default {
       let initialNotification = new Promise((arg0) => {
         closure_0 = arg0;
         initialNotification = initialNotification.getInitialNotification();
-        initialNotification.then((arg0) => {
-          closure_0 = arg0;
+        initialNotification.then((result) => {
+          closure_0 = result;
           let tmp2 = null;
-          if (null != arg0) {
+          if (null != result) {
             let obj = { getData: null, getMessage: null, getSound: null, getCategory: null, getAlert: null, getContentAvailable: null, getBadgeCount: null, finish: null };
             obj[0] = function getData() {
               const obj = {};
@@ -73,7 +74,6 @@ export default {
       });
     } else {
       initialNotification = RNCPushNotificationIOSDefault.getInitialNotification();
-      const obj2 = RNCPushNotificationIOSDefault;
     }
     return initialNotification;
   },
@@ -81,17 +81,17 @@ export default {
     if (obj.isAndroid()) {
       PushNotificationAndroid.setCurrentUser(username, id);
     }
+    obj = obj1322;
   },
   setMultiAccountUsers(arg0) {
     const json = JSON.stringify(arg0);
     if (obj.isAndroid()) {
       if (PushNotificationAndroid != null) {
-        const setMultiAccountUsernames = tmp5.setMultiAccountUsernames;
+        const setMultiAccountUsernames = PushNotificationAndroid.setMultiAccountUsernames;
         if (setMultiAccountUsernames != null) {
           const result = setMultiAccountUsernames(json);
         }
       }
-      tmp5 = PushNotificationAndroid;
     } else {
       const NSUserDefaultsBridge = NativeModules.NSUserDefaultsBridge;
       if (NSUserDefaultsBridge != null) {
@@ -101,34 +101,36 @@ export default {
         }
       }
     }
+    obj = obj1322;
   },
   clearPushNotificationLogs() {
     if (obj.isAndroid()) {
       enforcing.default.clearLogs();
       const _default = enforcing.default;
     }
+    obj = obj1322;
   },
   setApplicationIconBadgeNumber(arg0) {
     if (!obj.isAndroid()) {
       const result = RNCPushNotificationIOSDefault.setApplicationIconBadgeNumber(arg0);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = obj1322;
   },
   clearAllNotifications() {
     if (obj.isAndroid()) {
       const result = PushNotificationAndroid.clearAllNotifications();
     } else {
       const result1 = RNCPushNotificationIOSDefault.setApplicationIconBadgeNumber(0);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = obj1322;
   },
   presentLocalNotification(arg0) {
     if (obj.isAndroid()) {
       const result = PushNotificationAndroid.presentLocalNotification(arg0);
     } else {
       const result1 = RNCPushNotificationIOSDefault.presentLocalNotification(arg0);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = obj1322;
   },
   getDeliveredNotifications() {
     if (obj.isAndroid()) {
@@ -143,47 +145,46 @@ export default {
   removeDeliveredNotifications(arg0) {
     if (!obj.isAndroid()) {
       const result = RNCPushNotificationIOSDefault.removeDeliveredNotifications(arg0);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = obj1322;
   },
   scheduleLocalNotification(arg0) {
     if (!obj.isAndroid()) {
       const result = RNCPushNotificationIOSDefault.scheduleLocalNotification(arg0);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = obj1322;
   },
   getScheduledLocalNotifications(arg0) {
     if (!obj.isAndroid()) {
       const scheduledLocalNotifications = RNCPushNotificationIOSDefault.getScheduledLocalNotifications(arg0);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = obj1322;
   },
   cancelLocalNotifications(arg0) {
     if (!obj.isAndroid()) {
       const result = RNCPushNotificationIOSDefault.cancelLocalNotifications(arg0);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = obj1322;
   },
   cancelAllLocalNotifications() {
     if (!obj.isAndroid()) {
       const result = RNCPushNotificationIOSDefault.cancelAllLocalNotifications();
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = obj1322;
   },
-  checkPermissions(arg0) {
+  checkPermissions(fn) {
     if (obj.isAndroid()) {
-      arg0({});
+      fn({});
     } else {
-      RNCPushNotificationIOSDefault.checkPermissions(arg0);
-      const obj2 = RNCPushNotificationIOSDefault;
+      RNCPushNotificationIOSDefault.checkPermissions(fn);
     }
+    obj = obj1322;
   },
   requestPermissions(arg0) {
     if (obj.isAndroid()) {
-      let permissions = new Promise((arg0) => arg0({}));
+      let permissions = new Promise((fn) => fn({}));
     } else {
       permissions = RNCPushNotificationIOSDefault.requestPermissions(arg0);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
     return permissions;
   },
@@ -300,8 +301,8 @@ export default {
       const result = PushNotificationAndroid.registerEventListener(localNotification);
     } else {
       const listener = RNCPushNotificationIOSDefault.addEventListener(localNotification, handleLocalNotification);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = _require(500);
   },
   addRegisterEventListener(handleToken) {
     const _require = handleToken;
@@ -312,39 +313,39 @@ export default {
       const result = PushNotificationAndroid.registerEventListener("register");
     } else {
       const listener = RNCPushNotificationIOSDefault.addEventListener("register", handleToken);
-      const obj2 = RNCPushNotificationIOSDefault;
     }
+    obj = _require(500);
   },
   getSoundsEnabled() {
-    return new Promise((arg0) => {
-      const callback = arg0;
+    return new Promise((fn) => {
+      const callback = fn;
       if (obj.isAndroid()) {
         soundsEnabled = soundsEnabled.getSoundsEnabled();
-        soundsEnabled.then((arg0) => callback(arg0));
+        soundsEnabled.then((result) => callback(result));
       } else {
-        arg0(false);
+        fn(false);
       }
     });
   },
   getVibrationsEnabled() {
-    return new Promise((arg0) => {
-      const callback = arg0;
+    return new Promise((fn) => {
+      const callback = fn;
       if (obj.isAndroid()) {
         vibrationsEnabled = vibrationsEnabled.getVibrationsEnabled();
-        vibrationsEnabled.then((arg0) => callback(arg0));
+        vibrationsEnabled.then((result) => callback(result));
       } else {
-        arg0(false);
+        fn(false);
       }
     });
   },
   getLightsEnabled() {
-    return new Promise((arg0) => {
-      const callback = arg0;
+    return new Promise((fn) => {
+      const callback = fn;
       if (obj.isAndroid()) {
         lightsEnabled = lightsEnabled.getLightsEnabled();
-        lightsEnabled.then((arg0) => callback(arg0));
+        lightsEnabled.then((result) => callback(result));
       } else {
-        arg0(false);
+        fn(false);
       }
     });
   },
@@ -352,31 +353,36 @@ export default {
     if (obj.isAndroid()) {
       PushNotificationAndroid.setSoundsEnabled(arg0);
     }
+    obj = obj1322;
   },
   setVibrationsEnabled(arg0) {
     if (obj.isAndroid()) {
       PushNotificationAndroid.setVibrationsEnabled(arg0);
     }
+    obj = obj1322;
   },
   setLightsEnabled(arg0) {
     if (obj.isAndroid()) {
       PushNotificationAndroid.setLightsEnabled(arg0);
     }
+    obj = obj1322;
   },
   setAndroidNotifyEveryTime(arg0) {
     if (obj.isAndroid()) {
       PushNotificationAndroid.setNotifyEveryTime(arg0);
     }
+    obj = obj1322;
   },
   shouldAndroidNotifyEveryTime() {
-    return new Promise((arg0) => {
-      const callback = arg0;
+    return new Promise((fn) => {
+      const callback = fn;
       if (obj.isAndroid()) {
         const result = closure_4.shouldNotifyEveryTime();
-        result.then((arg0) => callback(arg0));
+        result.then((result) => callback(result));
       } else {
-        arg0(false);
+        fn(false);
       }
+      obj = callback(table[1]);
     });
   }
 };

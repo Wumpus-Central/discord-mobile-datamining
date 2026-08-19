@@ -3,7 +3,7 @@
 // Module 16706 (prototype)
 import initializeDefault from "initialize" /* 5038 */;
 
-let require = arg1;
+let require = fn;
 initializeDefault;
 let prototype = function StaffMemberPreloaderManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -21,6 +21,6 @@ let prototype = function StaffMemberPreloaderManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/staff/StaffMemberPreloaderManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/staff/StaffMemberPreloaderManager.tsx");
 
 export default prototype;

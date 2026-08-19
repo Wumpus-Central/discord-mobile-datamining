@@ -1,9 +1,9 @@
 // === Module 1403: hasFlag ===
 
 // Module 1403 (hasFlag)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
 
 export const hasFlag = function hasFlag(arg0, arg1) {
   return (arg0 & arg1) === arg1;
@@ -19,7 +19,7 @@ export const removeFlag = function removeFlag(flags, OBFUSCATED) {
 };
 export const removeFlags = function removeFlags(setting, UNREADS_ALL_MESSAGES, NO_RELATION) {
   const substr = [...arguments].slice();
-  return substr.reduce((arg0, arg1) => arg0 & ~arg1, setting);
+  return substr.reduce((acc, item, index) => acc & ~item, setting);
 };
 export const setFlag = function setFlag(arg0, arg1, arg2) {
   if (arg2) {

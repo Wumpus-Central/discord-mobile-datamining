@@ -1,7 +1,7 @@
 // === Module 14524: MobileQuestPreviewContainer ===
 
 // Module 14524 (MobileQuestPreviewContainer)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
@@ -10,13 +10,11 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 
 const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let obj = { container: null, title: null };
-obj = { marginTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj = { marginTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 obj[1] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_5 = createCacheKey.createStyles(obj);
-const obj1 = { marginBottom: ThemesDefault.space.PX_16 };
-const result = set.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx");
 
 export default function MobileQuestPreviewContainer(title) {
   title = title.title;
@@ -31,5 +29,5 @@ export default function MobileQuestPreviewContainer(title) {
   }
   const items = [tmp4, title.children];
   obj[1] = items;
-  return closure_4(View, obj);
+  return callback(View, obj);
 };

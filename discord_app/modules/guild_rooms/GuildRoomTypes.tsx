@@ -1,8 +1,8 @@
 // === Module 9865: GuildRoomObjectTypes ===
 
 // Module 9865 (GuildRoomObjectTypes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_rooms/GuildRoomTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_rooms/GuildRoomTypes.tsx");
 
 export const GuildRoomObjectTypes = { NOTE: 1, [1]: "NOTE", PLANT: 2, [2]: "PLANT" };

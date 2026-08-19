@@ -3,16 +3,16 @@
 // Module 9800 (CrunchyrollLinkLanding)
 import combinedDefault from "combined" /* 1993 */;
 import registerAssetDefault from "registerAsset" /* 9801 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9799 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ HelpdeskArticles: c5, PlatformTypes: closure_6 } = ME);
 let closure_8 = createCacheKey.createStyles({ image: { width: 234, height: 147 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
 
 export default function CrunchyrollLinkLanding() {
   let obj = navigation(1500);

@@ -2,10 +2,10 @@
 
 // Module 17029 (initialize)
 import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const HOUR = setDefault.Millis.HOUR;
+const HOUR = obj132Default.Millis.HOUR;
 let obj = { lastReportedAtMs: null };
 const PersistedStore = initializeDefault.PersistedStore;
 class FriendOnlineTimerStore extends PersistedStore {
@@ -41,6 +41,6 @@ obj = {
   }
 };
 const friendOnlineTimerStore = new FriendOnlineTimerStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimerStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/friend_online/FriendOnlineTimerStore.tsx");
 
 export default friendOnlineTimerStore;

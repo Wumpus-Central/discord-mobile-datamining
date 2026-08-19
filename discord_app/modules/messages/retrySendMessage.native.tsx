@@ -1,12 +1,12 @@
 // === Module 10866: retrySendMessage ===
 
 // Module 10866 (retrySendMessage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
 import trackInviteDefault from "trackInvite" /* 7427 */;
 
 const MessageSendLocation = MESSAGE_GROUP_SPACING.MessageSendLocation;
-let result = set.fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");
+let result = obj132.fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");
 
 export default function retrySendMessage(id, id2, arr) {
   const _require = id;
@@ -26,11 +26,11 @@ export default function retrySendMessage(id, id2, arr) {
     let mapped;
     ({ content, tts, flags, nonce } = id2);
     if (arr != null) {
-      mapped = arr.map((on) => {
-        let fromJsonResult = on;
-        if (null == on.on) {
+      mapped = arr.map((item, index) => {
+        let fromJsonResult = item;
+        if (null == item.on) {
           const CloudUpload = guildId(table[3]).CloudUpload;
-          fromJsonResult = CloudUpload.fromJson(on);
+          fromJsonResult = CloudUpload.fromJson(item);
         }
         return fromJsonResult;
       });
@@ -50,8 +50,8 @@ export default function retrySendMessage(id, id2, arr) {
     obj.location = MessageSendLocation.RETRY;
     obj.attachmentsToUpload = mapped;
     obj.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {
-      let obj = guildId(closure_1_2[4]);
-      obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
+      guildId(dependencyMap[4]);
+      const obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
       const result = obj.handleUploadMessageAttachmentsErrors(obj);
     };
     tmpResult.sendMessage(id, obj, undefined, obj);

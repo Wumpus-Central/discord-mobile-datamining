@@ -4,11 +4,11 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import apexExperiment from "apexExperiment" /* 4303 */;
-import closure_2 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 10669 */;
+import noop from "noop" /* 19 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Q7mm4g);
@@ -39,6 +39,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
 
 export default createToggle;

@@ -3,14 +3,14 @@
 // Module 5070 (result)
 import timestampDefault from "timestamp" /* 3 */;
 import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import itemsDefault from "items" /* 1955 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_0 = importDefault;
 let closure_3 = new timestampDefault("FileSystemStore");
-const result = 10 * setDefault.Millis.MINUTE;
+const result = 10 * obj132Default.Millis.MINUTE;
 let c4 = result;
 const Store = initializeDefault.Store;
 class FileSystemStore extends Store {
@@ -81,12 +81,12 @@ function refresh() {
             closure_1 = undefined;
             closure_2 = undefined;
             c3 = undefined;
-            const databaseResult = closure_1_0(closure_1_1[5]).database();
+            const databaseResult = self(closure_1_1[5]).database();
             let catchPromise;
             if (databaseResult != null) {
               const fsInfoResult = databaseResult.fsInfo();
               if (fsInfoResult != null) {
-                catchPromise = fsInfoResult.catch((arg0) => logger.warn("couldn't get fs info", arg0));
+                catchPromise = fsInfoResult.catch((error) => logger.warn("couldn't get fs info", error));
               }
             }
             closure_2 = 1;
@@ -166,15 +166,7 @@ tmp.isLowDisk = false;
 tmp.refresh();
 tmp.waitFor(itemsDefault);
 let timerId = setInterval(() => obj.refresh(), result);
-let obj = {
-  APP_STATE_UPDATE(arg0) {
-    return obj.handleAppStateUpdate(arg0);
-  },
-  POST_CONNECTION_OPEN() {
-    return obj.handlePostConnectionOpen();
-  }
-};
 const tmp4 = new timestampDefault("FileSystemStore");
-const result1 = require("set").fileFinishedImporting("modules/app_database/stores/FileSystemStore.tsx");
+const result1 = require("obj132").fileFinishedImporting("modules/app_database/stores/FileSystemStore.tsx");
 
 export default tmp;

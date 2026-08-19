@@ -5,21 +5,20 @@ import ThemesDefault from "Themes" /* 712 */;
 import registerAssetDefault from "registerAsset" /* 7352 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "initialize" /* 4022 */;
-import closure_6 from "storeThread" /* 4023 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
+import initialize from "initialize" /* 4022 */;
+import storeThread from "storeThread" /* 4023 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
 import useChannelDetailsStore from "useChannelDetailsStore" /* 8505 */;
 import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
 import { ChannelSettingsSections } from "ME" /* 676 */;
 import { SearchEntrypointAnalyticsLocations as closure_14 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function MuteButton(channelId) {
   channelId = channelId.channelId;
-  let navigation;
   let obj = channelId(589);
   const items = [closure_7, closure_6, closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -33,7 +32,7 @@ function MuteButton(channelId) {
       isMutedResult = closure_1_8.isChannelMuted(id.getGuildId(), id.id);
     }
   });
-  navigation = channelId(1500).useNavigation();
+  const navigation = channelId(1500).useNavigation();
   const items1 = [channelId, navigation];
   const callback = importAllResult.useCallback(() => {
     navigation.navigate("sidebar", { screen: closure_1_12.MUTE, channelId, source: "channel-details-navigation-bar" });
@@ -50,7 +49,7 @@ function MuteButton(channelId) {
   obj[2] = token1;
   obj[3] = token;
   obj[4] = tmp5(stateFromStores ? 10002 : 8174);
-  return closure_15(channelId(8035).IconButton, obj, constants.MUTE);
+  return callback(channelId(8035).IconButton, obj, constants.MUTE);
 }
 function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -60,12 +59,11 @@ function SearchButton(channelId) {
     const channel = closure_1_7.getChannel(channelId);
     if (null != channel) {
       const guildId = channel.getGuildId();
-      let trackSearchOpenedResult = closure_1_2;
+      let trackSearchOpenedResult = dependencyMap;
       const isThreadResult = channel.isThread();
-      const channelDetailsSearchContext = channelId(closure_1_2[21]).getChannelDetailsSearchContext(channelId, guildId, isThreadResult);
-      let obj2 = closure_1_14;
-      const obj4 = channelId(closure_1_2[21]);
-      obj2 = closure_1_1(trackSearchOpenedResult[22]);
+      const channelDetailsSearchContext = channelId(dependencyMap[21]).getChannelDetailsSearchContext(channelId, guildId, isThreadResult);
+      const obj4 = channelId(dependencyMap[21]);
+      const obj2 = importDefault(trackSearchOpenedResult[22]);
       const obj = { searchContext: null, searchLocation: null };
       obj[0] = channelDetailsSearchContext;
       obj[1] = channel.isPrivate() ? obj2.INDIVIDUAL_DM : obj2.CHANNEL_DETAILS_HEADER;
@@ -93,25 +91,24 @@ function SearchButton(channelId) {
 }
 function SettingsButton(channel) {
   channel = channel.channel;
-  let navigation;
   let obj = channel(1500);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [channel, navigation];
   const callback = importAllResult.useCallback(() => {
     let obj = channel;
     if (null != channel) {
       if (!obj.isDM()) {
         if (!obj.isMultiUserDM()) {
-          navigation(closure_1_2[26]).init(obj.id);
+          navigation(dependencyMap[26]).init(obj.id);
           obj = { screen: null, channelId: null, source: "channel-details-navigation-bar" };
-          obj[0] = closure_1_13.OVERVIEW;
+          obj[0] = ChannelSettingsSections.OVERVIEW;
           obj[1] = obj.id;
           navigation.navigate("sidebar", obj);
-          const obj2 = navigation(closure_1_2[26]);
+          const obj2 = navigation(dependencyMap[26]);
         }
       }
-      const result = channel(closure_1_2[25]).openChannelLongPressActionSheet(obj.id);
-      const obj4 = channel(closure_1_2[25]);
+      const result = channel(dependencyMap[25]).openChannelLongPressActionSheet(obj.id);
+      const obj4 = channel(dependencyMap[25]);
     }
   }, items);
   const token = channel(4097).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
@@ -130,14 +127,12 @@ function NavigationHeader(channel) {
   channel = channel.channel;
   const width = channel.width;
   const cleanUp = channel.cleanUp;
-  importAllResult = undefined;
-  let guild_id;
   let stateFromStores;
   ({ onBackPress, transitionState } = channel);
   const tmp = callback4();
   const tmp2 = transitionState < channel(cleanUp[29]).TransitionStates.YEETED;
   importAllResult = tmp2;
-  guild_id = channel.guild_id;
+  const guild_id = channel.guild_id;
   let obj = channel(cleanUp[15]);
   const items = [stateFromStores];
   const items1 = [guild_id];
@@ -166,8 +161,8 @@ function NavigationHeader(channel) {
       }
       fn = function n(arg0) {
         if (arg0) {
-          closure_1_0(closure_1_2[30]).runOnJS(closure_2)();
-          const obj = closure_1_0(closure_1_2[30]);
+          channel(cleanUp[30]).runOnJS(closure_2)();
+          const obj = channel(cleanUp[30]);
         }
       };
       obj = { runOnJS: tmp2(tmp3[30]).runOnJS, cleanUp };
@@ -187,23 +182,23 @@ function NavigationHeader(channel) {
   const animatedStyle = obj1.useAnimatedStyle(S);
   const memo = importAllResult.useMemo(() => {
     const channelDetailsButtons = channel(cleanUp[34]).getChannelDetailsButtons(channel, stateFromStores);
-    return channelDetailsButtons.map((arg0) => {
-      if (closure_1_11.SEARCH === arg0) {
+    return channelDetailsButtons.map((item, index) => {
+      if (closure_1_11.SEARCH === item) {
         let obj = { channelId: null };
-        obj[0] = tmp.id;
-        let tmp3 = closure_1_15(closure_1_20, obj, arg0);
-      } else if (tmp2.MUTE === arg0) {
+        obj[0] = user.id;
+        let tmp3 = closure_1_15(closure_1_20, obj, item);
+      } else if (closure_1_11.MUTE === item) {
         obj = { channelId: null };
-        obj[0] = tmp.id;
-        tmp3 = closure_1_15(closure_1_19, obj, arg0);
-      } else if (tmp2.SETTINGS === arg0) {
+        obj[0] = user.id;
+        tmp3 = closure_1_15(closure_1_19, obj, item);
+      } else if (closure_1_11.SETTINGS === item) {
         obj = { channel: null };
-        obj[0] = tmp;
-        tmp3 = closure_1_15(closure_1_21, obj, arg0);
-      } else if (tmp2.MORE === arg0) {
+        obj[0] = user;
+        tmp3 = closure_1_15(closure_1_21, obj, item);
+      } else if (closure_1_11.MORE === item) {
         obj1 = { channel: null };
-        obj1[0] = tmp;
-        tmp3 = closure_1_15(closure_1_1(closure_1_2[28]), obj1, arg0);
+        obj1[0] = user;
+        tmp3 = closure_1_15(width(cleanUp[28]), obj1, item);
       }
       return tmp3;
     });
@@ -226,10 +221,9 @@ let c3 = importAllResult;
 ({ setIsChannelDetailsSearchActive: c9, useIsChannelDetailsSearchActive: c10 } = useChannelDetailsStore);
 ({ ChannelDetailsButtonTypes: unpackModuleId, ChannelDetailsNavigatorScreens: closure_12 } = ChannelDetailsNavigatorScreens);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let obj = { container: null, navigationHeader: null, buttonsContainer: null, searchHeader: null };
-obj = { position: "relative", zIndex: 1, height: require("SEARCH_BAR_HEIGHT").SEARCH_BAR_HEIGHT, marginTop: ThemesDefault.space.PX_8 };
+let obj = { position: "relative", zIndex: 1, height: require("SEARCH_BAR_HEIGHT").SEARCH_BAR_HEIGHT, marginTop: ThemesDefault.space.PX_8 };
 obj[0] = obj;
-createCacheKey = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_4, position: "absolute", height: require("SEARCH_BAR_HEIGHT").SEARCH_BAR_HEIGHT };
+const createCacheKey = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_4, position: "absolute", height: require("SEARCH_BAR_HEIGHT").SEARCH_BAR_HEIGHT };
 obj[1] = createCacheKey;
 obj[2] = { flex: 1, flexDirection: "row", gap: ThemesDefault.modules.mobile.CHANNEL_DETAILS_NAV_BUTTONS_GAP, justifyContent: "flex-end" };
 obj[3] = { position: "absolute" };
@@ -240,7 +234,6 @@ let closure_23 = { code: "function ChannelDetailsNavigationBarTsx2(finished){con
 let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
   ({ channel, width } = cleanUp);
   cleanUp = cleanUp.cleanUp;
-  dependencyMap = undefined;
   ({ onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, transitionState } = cleanUp);
   const tmp2 = transitionState !== width(4668).TransitionStates.YEETED;
   dependencyMap = tmp2;
@@ -284,7 +277,6 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
 });
 let closure_25 = { code: "function ChannelDetailsNavigationBarTsx3(){const{isActive,withTiming,timingFast,runOnJS,cleanUp,width}=this.__closure;return{pointerEvents:isActive?'auto':'none',opacity:withTiming(isActive?1:0,timingFast,'animate-always',function(finished){if(finished)runOnJS(cleanUp)();}),width:width};}" };
 let closure_26 = { code: "function ChannelDetailsNavigationBarTsx4(finished){const{runOnJS,cleanUp}=this.__closure;if(finished)runOnJS(cleanUp)();}" };
-let obj2 = { flex: 1, flexDirection: "row", gap: ThemesDefault.modules.mobile.CHANNEL_DETAILS_NAV_BUTTONS_GAP, justifyContent: "flex-end" };
 const memoResult = importAllResult.memo(importAllResult.forwardRef((channel) => {
   channel = channel.channel;
   const onBackPress = channel.onBackPress;
@@ -293,21 +285,20 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channel) => 
   const suggestionsDismissed = channel.suggestionsDismissed;
   const setSuggestionsDismissed = channel.setSuggestionsDismissed;
   closure_6 = arg1;
-  closure_7 = undefined;
   const tmp2 = callback(channel.id);
   closure_7 = tmp2;
   let items = [tmp2];
   let items1 = [channel, onBackPress, componentWidth, arg1, onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed];
   const memo = onSuggestionsLayoutMeasure.useMemo(() => {
     if (closure_7) {
-      const items = [tmp.SEARCH];
+      const items = [closure_1_18.SEARCH];
       let items1 = items;
     } else {
-      items1 = [tmp.BUTTONS];
+      items1 = [closure_1_18.BUTTONS];
     }
     return items1;
   }, items);
-  let obj = { style: callback4().container, children: null };
+  { style: callback4().container, children: null };
   callback = onSuggestionsLayoutMeasure.useCallback((arg0, arg1, arg2, arg3) => {
     if (closure_1_18.BUTTONS === arg1) {
       let obj = { channel: null, onBackPress: null, transitionState: null, width: null, cleanUp: null };
@@ -316,7 +307,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channel) => 
       obj[2] = arg2;
       obj[3] = componentWidth;
       obj[4] = arg3;
-      return closure_1_15(closure_1_27, obj, arg0);
+      return closure_1_15(NavigationHeader, obj, arg0);
     } else if (tmp.SEARCH === arg1) {
       obj = { ref: null, channel: null, onSuggestionsLayoutMeasure: null, suggestionsDismissed: null, setSuggestionsDismissed: null, transitionState: null, width: null, cleanUp: null };
       obj[0] = closure_6;
@@ -330,10 +321,10 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channel) => 
       return closure_1_15(closure_1_24, obj, arg0);
     }
   }, items1);
-  obj = { items: memo, getItemKey, renderItem: callback };
+  let obj = { items: memo, getItemKey, renderItem: callback };
   obj[1] = callback2(channel(componentWidth[29]).TransitionGroup, obj);
   return callback2(suggestionsDismissed, obj);
 }));
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelDetailsNavigationBar.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelDetailsNavigationBar.tsx");
 
 export default memoResult;

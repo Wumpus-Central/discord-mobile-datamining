@@ -1,11 +1,11 @@
 // === Module 16419: useControlAccessoryHeight ===
 
 // Module 16419 (useControlAccessoryHeight)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_4 = { code: "function useControlAccessoryHeightTsx1(){const{consoleStatusHeight,floatingCTAHeight}=this.__closure;return consoleStatusHeight.get()+floatingCTAHeight.get();}" };
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx");
 
 export default function useControlAccessoryHeight() {
   const channelId = sharedValue1.useContext(sharedValue(shouldShowFloatingCTA[1])).channelId;

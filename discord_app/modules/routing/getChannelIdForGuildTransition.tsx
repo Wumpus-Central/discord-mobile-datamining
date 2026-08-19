@@ -4,18 +4,18 @@
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
 import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 5283 */;
 import getPrice from "getPrice" /* 7200 */;
-import closure_2 from "initializeFromUserSettings" /* 1394 */;
-import closure_3 from "shouldShowOnboarding" /* 6784 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "comparator" /* 1980 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
-import closure_8 from "makeSortedChannel" /* 5388 */;
+import initializeFromUserSettings from "initializeFromUserSettings" /* 1394 */;
+import shouldShowOnboarding from "shouldShowOnboarding" /* 6784 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import comparator from "comparator" /* 1980 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import makeSortedChannel from "makeSortedChannel" /* 5388 */;
 import { ME } from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");
 
 export const getChannelIdForGuildTransition = function getChannelIdForGuildTransition(guildId) {
   channelId = channelId.getChannelId(guildId);
@@ -53,7 +53,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     }
     return id;
   } else {
-    if (channelId === tmp8.GAME_SHOP) {
+    if (channelId === StaticChannelRoute.GAME_SHOP) {
       if (obj2.canSeeGameShop(guildId)) {
         return channelId;
       }

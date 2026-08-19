@@ -2,16 +2,16 @@
 
 // Module 15386 (VoiceUserNameItem)
 import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 4815 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsxs: closure_6, jsx: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { marginLeft: 8, flex: 1, flexDirection: "row" }, tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 }, measuringTag: { opacity: 0 } });
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUserNameItem.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/VoiceUserNameItem.tsx");
 
 export default function VoiceUserNameItem(arg0) {
   ({ member, user, isGuest } = arg0);
@@ -72,14 +72,13 @@ export default function VoiceUserNameItem(arg0) {
     const intl = tmp5(1236).intl;
     const items2 = ["\u00A0", intl.string(tmp5(1236).t["pFO/Ph"])];
     obj2[3] = items2;
-    isGuest = tmp18(tmp5(4734).Text, obj2);
+    isGuest = callback(tmp5(4734).Text, obj2);
   }
   items1[1] = isGuest;
   obj[5] = items1;
-  const items3 = [closure_6(_require(4734).Text, obj), ];
+  const items3 = [callback(_require(4734).Text, obj), ];
   if (!tmp12) {
     tmp12 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
-    const tmp22 = 0 !== tmp8 && 0 !== tmp10 && 0 !== tmp14 && tmp8 >= tmp10 + tmp14;
   }
   if (tmp12) {
     const obj3 = { onLayout: null, style: null, children: null };
@@ -88,9 +87,9 @@ export default function VoiceUserNameItem(arg0) {
     const obj4 = { userId: null };
     obj4[0] = user.id;
     obj3[2] = callback2(tmp2(15387), obj4);
-    tmp12 = callback2(tmp19, obj3);
+    tmp12 = callback2(View, obj3);
   }
   items3[1] = tmp12;
   obj[2] = items3;
-  return closure_6(View, obj);
+  return callback(View, obj);
 };

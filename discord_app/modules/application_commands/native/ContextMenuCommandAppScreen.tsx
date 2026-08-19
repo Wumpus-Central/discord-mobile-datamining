@@ -2,15 +2,14 @@
 
 // Module 16086 (ContextMenuCommandAppScreen)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-createCacheKey = { list: null };
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandAppScreen.tsx");
 
 export default function ContextMenuCommandAppScreen(route) {
   const params = route.route.params;
@@ -26,10 +25,10 @@ export default function ContextMenuCommandAppScreen(route) {
   const callback = onPressCommand.useCallback((arg0, arg1) => {
     closure_0 = tmp;
     const diff = commands.length - 1;
-    return closure_1_3(section(commands[6]), {
+    return jsx(section(commands[6]), {
       item: commands[arg1],
       onPress() {
-        return closure_1_2(closure_0);
+        return onPressCommand(closure_0);
       },
       section: closure_0,
       start: 0 === arg1,

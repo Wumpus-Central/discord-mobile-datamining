@@ -1,7 +1,7 @@
 // === Module 8682: updateChatInputContainerHeight ===
 
 // Module 8682 (updateChatInputContainerHeight)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import keys from "keys" /* 644 */;
 
 let chatInputContainerHeight = "chatInputContainerHeight";
@@ -15,7 +15,7 @@ let obj = keys.create(() => {
   obj[3] = new Map();
   return obj;
 });
-let result = set.fileFinishedImporting("modules/chat_input/native/useChatBottomManagerUIStore.tsx");
+let result = obj132.fileFinishedImporting("modules/chat_input/native/useChatBottomManagerUIStore.tsx");
 
 export default obj;
 export const updateChatInputContainerHeight = function updateChatInputContainerHeight(num) {
@@ -60,7 +60,7 @@ export const useChatInputContainerHeight = function useChatInputContainerHeight(
     chatInputContainerHeight = chatInputContainerHeight.chatInputContainerHeight;
     let value = chatInputContainerHeight.get(callback);
     if (value == null) {
-      const Storage = callback(closure_1_1[0]).Storage;
+      const Storage = callback(dependencyMap[0]).Storage;
       let num2 = Storage.get(closure_1_2, 0);
       if (num2 == null) {
         num2 = 0;
@@ -91,12 +91,11 @@ export const updateIsAtBottom = function updateIsAtBottom(arg0, arg1) {
     } else {
       const _Map = Map;
       const map = new Map(isAtBottom.isAtBottom);
-      const result = map.set(tmp, tmp2);
+      const result = map.set(closure_0, tmp2);
       obj = { isAtBottom: null };
       obj[0] = map;
       return obj;
     }
-    tmp = closure_0;
   });
 };
 export const useChatIsAtBottom = function useChatIsAtBottom(arg0) {
@@ -114,7 +113,7 @@ export const useBestActiveChatInputContainerHeight = function useBestActiveChatI
   return obj((chatInputContainerHeight) => {
     const highestActiveScreenIndex = callback(table[2]).getHighestActiveScreenIndex();
     if (null == highestActiveScreenIndex) {
-      const Storage2 = tmp(tmp2[0]).Storage;
+      const Storage2 = callback(table[0]).Storage;
       let num4 = Storage2.get(closure_2, 0);
       if (num4 == null) {
         num4 = 0;
@@ -124,7 +123,7 @@ export const useBestActiveChatInputContainerHeight = function useBestActiveChatI
       chatInputContainerHeight = chatInputContainerHeight.chatInputContainerHeight;
       value = chatInputContainerHeight.get(highestActiveScreenIndex);
       if (value == null) {
-        const Storage = tmp(tmp2[0]).Storage;
+        const Storage = callback(table[0]).Storage;
         let num2 = Storage.get(closure_2, 0);
         if (num2 == null) {
           num2 = 0;

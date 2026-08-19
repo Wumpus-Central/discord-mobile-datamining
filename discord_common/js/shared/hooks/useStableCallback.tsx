@@ -1,9 +1,9 @@
 // === Module 8602: useStableCallback ===
 
 // Module 8602 (useStableCallback)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
 
 export default function useStableCallback(stateFromStores) {
   const React = stateFromStores;

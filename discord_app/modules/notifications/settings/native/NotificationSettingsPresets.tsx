@@ -2,12 +2,12 @@
 
 // Module 10093 (NotificationSettingsPresets)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function NotificationSettingsPresets(preset) {
   const _require = preset;
   let num = 0;
@@ -23,35 +23,7 @@ function NotificationSettingsPresets(preset) {
     num = num2;
   }
   let tmp = callback3();
-  let obj = {
-    pageWidth: 0,
-    onSetActiveIndex(arg0) {
-      let tmp = 0 === arg0;
-      if (tmp) {
-        tmp = preset.preset !== preset(num[4]).Presets.ALL_MESSAGES;
-      }
-      if (tmp) {
-        preset.updatePreset(preset(num[4]).Presets.ALL_MESSAGES);
-      }
-      let tmp9 = 1 === arg0;
-      if (tmp9) {
-        tmp9 = preset.preset !== preset(num[4]).Presets.MENTIONS;
-      }
-      if (tmp9) {
-        preset.updatePreset(preset(num[4]).Presets.MENTIONS);
-      }
-      let tmp17 = 2 === arg0;
-      if (tmp17) {
-        tmp17 = preset.preset !== preset(num[4]).Presets.NOTHING;
-      }
-      if (tmp17) {
-        preset.updatePreset(preset(num[4]).Presets.NOTHING);
-      }
-    },
-    items: null,
-    defaultIndex: null
-  };
-  obj = { label: null, id: null, icon: null, page: null };
+  const obj = { label: null, id: null, icon: null, page: null };
   const intl = tmp2(tmp3[3]).intl;
   obj[0] = intl.string(_require(num[3]).t.hZrr6k);
   obj[1] = _require(num[4]).Presets.ALL_MESSAGES;
@@ -90,11 +62,11 @@ function NotificationSettingsPresets(preset) {
     const obj5 = { variant: "text-sm/semibold", children: null };
     const intl4 = tmp2(tmp3[3]).intl;
     obj5[1] = intl4.string(tmp2(tmp3[3]).t["32yow9"]);
-    const items2 = [tmp4(tmp2(tmp3[11]).Text, obj5), ];
+    const items2 = [callback(tmp2(tmp3[11]).Text, obj5), ];
     const obj6 = { variant: "text-xs/medium", children: null };
     const intl5 = tmp2(tmp3[3]).intl;
     obj6[1] = intl5.string(tmp2(tmp3[3]).t.l3doVX);
-    items2[1] = tmp4(tmp2(tmp3[11]).Text, obj6);
+    items2[1] = callback(tmp2(tmp3[11]).Text, obj6);
     obj4[1] = items2;
     const items3 = [callback2(View, obj4), ];
     const obj7 = { variant: "secondary", text: null, onPress: null };
@@ -103,29 +75,28 @@ function NotificationSettingsPresets(preset) {
     obj7[2] = function onPress() {
       preset.updatePreset(preset(num[4]).Presets.MENTIONS);
     };
-    items3[1] = tmp4(tmp2(tmp3[12]).Button, obj7);
+    items3[1] = callback(tmp2(tmp3[12]).Button, obj7);
     obj3[1] = items3;
     let tmp4Result = callback2(View, obj3);
   } else {
     const obj8 = { variant: "experimental_Large", state: null };
     obj8[1] = segmentedControlState;
-    tmp4Result = tmp4(tmp2(tmp3[13]).SegmentedControl, obj8);
+    tmp4Result = callback(tmp2(tmp3[13]).SegmentedControl, obj8);
   }
   return tmp4Result;
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { customContainer: null };
-createCacheKey = { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg + 8, backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG };
+const createCacheKey = { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg + 8, backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsPresets.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsPresets.tsx");
 
 export const NotificationSettingsGuildPresets = function NotificationSettingsGuildPresets(guildId) {
   const _require = guildId;
   const obj = {
     preset: _require(10098).useGuildPresetSettings(guildId.guildId).preset,
     updatePreset(arg0) {
-      return guildId(closure_1_1[14]).updateGuildPreset(guildId.guildId, arg0);
+      return guildId(dependencyMap[14]).updateGuildPreset(guildId.guildId, arg0);
     }
   };
   return callback(NotificationSettingsPresets, obj);
@@ -135,7 +106,7 @@ export const NotificationSettingsChannelPresets = function NotificationSettingsC
   const obj = {
     preset: _require(10090).useChannelPresetSettings(channel.channel).preset,
     updatePreset(arg0) {
-      return channel(closure_1_1[15]).updateChannelPreset(channel.channel.guild_id, channel.channel.id, arg0);
+      return channel(dependencyMap[15]).updateChannelPreset(channel.channel.guild_id, channel.channel.id, arg0);
     }
   };
   return callback(NotificationSettingsPresets, obj);

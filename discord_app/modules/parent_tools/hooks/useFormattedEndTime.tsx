@@ -2,10 +2,10 @@
 
 // Module 16508 (useFormattedEndTime)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useFormattedEndTime.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useFormattedEndTime.tsx");
 
 export default function useFormattedEndTime() {
   const items = [closure_2];

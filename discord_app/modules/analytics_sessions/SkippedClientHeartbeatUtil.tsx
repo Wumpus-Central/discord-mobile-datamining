@@ -2,10 +2,10 @@
 
 // Module 5061 (shouldLogClientHeartbeatSkipped)
 import sampleWithUserId from "sampleWithUserId" /* 5062 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");
 
 export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeatSkipped() {
   currentUser = currentUser.getCurrentUser();
@@ -14,7 +14,6 @@ export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeat
     let isStaffResult = currentUser.isStaff();
     if (!isStaffResult) {
       isStaffResult = sampleWithUserId.sampleWithUserId(currentUser.id, 0.02);
-      const obj2 = sampleWithUserId;
     }
     tmp = isStaffResult;
   }

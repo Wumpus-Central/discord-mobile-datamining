@@ -2,10 +2,10 @@
 
 // Module 8278 (useIsInReverseTrial)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
 
 export const useIsInReverseTrial = function useIsInReverseTrial() {
   const items = [closure_2];

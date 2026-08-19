@@ -1,15 +1,15 @@
 // === Module 7660: registeredExperimentIds ===
 
 // Module 7660 (registeredExperimentIds)
-import closure_0 from "initialize" /* 1212 */;
+import initialize from "initialize" /* 1212 */;
 import { CommonTriggerPoints } from "ExperimentBuckets" /* 4289 */;
 
-let result = require("set").fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
+let result = require("obj132").fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
 class CommonTriggerPointConfiguration {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);
     obj.experiments = global;
-    obj.triggerPoint = arg1;
+    obj.triggerPoint = fn;
     obj.params = importDefault;
     return obj;
   }
@@ -17,7 +17,7 @@ class CommonTriggerPointConfiguration {
 const prototype = CommonTriggerPointConfiguration.prototype;
 prototype["registeredExperimentIds"] = function registeredExperimentIds() {
   const experiments = this.experiments;
-  return experiments.map((definition) => definition.definition.id);
+  return experiments.map((item, index) => item.definition.id);
 };
 prototype["trigger"] = function trigger() {
   let obj = arg0;
@@ -29,8 +29,8 @@ prototype["trigger"] = function trigger() {
   obj = {};
   const merged = Object.assign(this.params);
   const merged1 = Object.assign(obj);
-  const item = experiments.forEach((trackExposure) => {
-    trackExposure.trackExposure(obj);
+  const item = experiments.forEach((item, index) => {
+    item.trackExposure(obj);
   });
 };
 prototype["getExperiments"] = function getExperiments() {

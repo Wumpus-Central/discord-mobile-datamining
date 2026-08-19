@@ -2,41 +2,35 @@
 
 // Module 15128 (isValidClipboardCode)
 import finishMFACheck from "finishMFACheck" /* 15129 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function isValidClipboardCode(arg0) {
   let isMatch = arg0.length === finishMFACheck.TOTP_CODE_LENGTH;
   if (isMatch) {
     isMatch = /^\d+$/.test(arg0);
-    const obj = /^\d+$/;
   }
   return isMatch;
 }
-const result = require("set").fileFinishedImporting("modules/mfa/native/screens/TotpScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/mfa/native/screens/TotpScreen.tsx");
 
 export default function TotpScreen(finish) {
   finish = finish.finish;
-  let _require = finish;
   importDefault = undefined;
-  let first;
-  let callback;
   let callback2;
   let React;
-  callback = undefined;
   [tmp2, c1] = callback2(React.useState(false), 2);
   const tmp3 = callback2(React.useState(""), 2);
-  first = tmp3[0];
-  callback = tmp3[1];
+  const first = tmp3[0];
+  let callback = tmp3[1];
   const tmp = callback2(React.useState(false), 2);
   [tmp5, c4] = callback2(React.useState(undefined), 2);
   const tmp4 = callback2(React.useState(undefined), 2);
   [tmp7, c5] = callback2(React.useState(false), 2);
-  _require = undefined;
-  _require = callback((arg0) => {
+  const _require = callback((arg0) => {
     closure_0 = arg0;
     c6 = 0;
     c7 = 0;
@@ -72,7 +66,7 @@ export default function TotpScreen(finish) {
               closure_3 = tmp3;
               closure_2 = tmp7;
               closure_1_3(lib);
-              tmp7 = closure_2_7(lib);
+              tmp7 = isValidClipboardCode(lib);
               if (tmp7) {
                 closure_1_4(undefined);
                 closure_1_1(true);
@@ -102,7 +96,6 @@ export default function TotpScreen(finish) {
                 message = lib.message;
               }
               closure_1_4(message);
-              const tmp15 = closure_1_4;
             } else if (arg0 === 1) {
               c7 = 3;
               throw arg1;

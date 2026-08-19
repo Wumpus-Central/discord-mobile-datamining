@@ -1,9 +1,9 @@
 // === Module 6908: MAX_TRAITS ===
 
 // Module 6908 (MAX_TRAITS)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx");
 
 export const MAX_TRAITS = 5;
 export const MAX_TRAIT_LABEL_LENGTH = 24;

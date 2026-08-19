@@ -2,12 +2,12 @@
 
 // Module 5231 (isSpamSupported)
 import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 5232 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ UserFlags: c3, ChannelTypes: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/isSpam.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/isSpam.tsx");
 
 export const isSpamSupported = function isSpamSupported(type) {
   let tmp = undefined !== type;
@@ -38,7 +38,6 @@ export const isSpam = function isSpam(author) {
   }
   if (flag) {
     flag = !getDecisionOutcomeFromMessage.isAutomodMessageRecord(author);
-    const obj2 = getDecisionOutcomeFromMessage;
   }
   return flag;
 };

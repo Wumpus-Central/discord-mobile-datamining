@@ -3,10 +3,10 @@
 // Module 6901 (useGameProfileObscured)
 import initialize from "initialize" /* 589 */;
 import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
 
 export default function useGameProfileObscured(contentClassification) {
   initialize;
@@ -28,7 +28,6 @@ export const isGameProfileObscured = function isGameProfileObscured(game, nsfwAl
   }
   if (result) {
     result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(game.contentClassification);
-    const obj = isAgeRestrictedContentClassification;
   }
   return result;
 };

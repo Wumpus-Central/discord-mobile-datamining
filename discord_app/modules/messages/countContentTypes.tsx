@@ -1,9 +1,9 @@
 // === Module 10855: countContentTypes ===
 
 // Module 10855 (countContentTypes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/countContentTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/countContentTypes.tsx");
 
 export default function countContentTypes(content) {
   let num = 0;

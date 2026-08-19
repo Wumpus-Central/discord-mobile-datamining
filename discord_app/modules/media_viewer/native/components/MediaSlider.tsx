@@ -1,23 +1,23 @@
 // === Module 9002: MediaSlider ===
 
 // Module 9002 (MediaSlider)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import "createCacheKey";
+import obj132 from "obj132" /* 500 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flex: 1, marginHorizontal: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, icon: { marginRight: 16 }, centerText: null, sliderContainer: null, progressSliderContainer: null, timelineBackgroundSlider: null, downloadProgressSlider: null, playbackSlider: null };
+const createCacheKey = { container: { flex: 1, marginHorizontal: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, icon: { marginRight: 16 }, centerText: null, sliderContainer: null, progressSliderContainer: null, timelineBackgroundSlider: null, downloadProgressSlider: null, playbackSlider: null };
 let num;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   num = 12;
 }
 createCacheKey[2] = { lineHeight: num };
 let num2 = 16;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   num2 = 0;
 }
 createCacheKey[3] = { position: "relative", flex: 1, marginHorizontal: num2, justifyContent: "center" };
@@ -26,7 +26,7 @@ createCacheKey[5] = { position: "absolute", width: "100%", backgroundColor: "tra
 createCacheKey[6] = { position: "absolute", width: "100%", backgroundColor: "transparent", zIndex: 1 };
 createCacheKey[7] = { position: "absolute", width: "100%", zIndex: 2 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = set.fileFinishedImporting("modules/media_viewer/native/components/MediaSlider.tsx");
+const result = obj132.fileFinishedImporting("modules/media_viewer/native/components/MediaSlider.tsx");
 
 export default function MediaSlider(controls) {
   controls = controls.controls;
@@ -34,12 +34,8 @@ export default function MediaSlider(controls) {
   ({ setPaused: dependencyMap, onPlayPress: closure_3 } = controls);
   let React;
   c5 = undefined;
-  closure_6 = undefined;
   c7 = undefined;
   let ref;
-  closure_9 = undefined;
-  closure_10 = undefined;
-  closure_11 = undefined;
   const tmp = ref();
   React = React.useRef(false);
   [tmp3, c5] = callback(React.useState(0), 2);
@@ -50,19 +46,19 @@ export default function MediaSlider(controls) {
   ref = React.useRef(0);
   const tmp8 = callback(React.useState(0), 2);
   closure_9 = tmp8[1];
-  const tmp11 = paused(7127)(() => paused(closure_1_2[7]).throttle((arg0) => {
+  const tmp11 = paused(7127)(() => paused(dependencyMap[7]).throttle((arg0) => {
     callback(arg0);
   }, 100));
   closure_10 = tmp11;
-  closure_11 = paused(7127)(() => paused(closure_1_2[7]).throttle((arg0) => {
+  closure_11 = paused(7127)(() => paused(dependencyMap[7]).throttle((arg0) => {
     callback(arg0);
     let str = "transparent";
     if (1 === arg0) {
-      const obj = closure_1_1(closure_1_2[8])("#FFFFFF");
-      str = closure_1_1(closure_1_2[8])("#FFFFFF").alpha(0.2).hex();
-      const alphaResult = closure_1_1(closure_1_2[8])("#FFFFFF").alpha(0.2);
+      const obj = paused(closure_1_2[8])("#FFFFFF");
+      str = paused(closure_1_2[8])("#FFFFFF").alpha(0.2).hex();
+      const alphaResult = paused(closure_1_2[8])("#FFFFFF").alpha(0.2);
     }
-    closure_7(str);
+    callback(str);
   }, 100));
   const items = [tmp11];
   const effect = React.useEffect(() => () => {
@@ -91,8 +87,8 @@ export default function MediaSlider(controls) {
       tmp2.current = false;
     }
   }, items2);
-  let obj = controls(4869);
-  obj = { style: items3, children: null };
+  controls(4869);
+  let obj = { style: items3, children: null };
   items3 = [tmp.container, controls.style];
   const timeFormat = obj.getTimeFormat(tmp3);
   obj = { style: tmp.icon, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };

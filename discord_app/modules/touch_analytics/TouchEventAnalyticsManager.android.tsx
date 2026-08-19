@@ -4,9 +4,9 @@
 import initializeDefault from "initialize" /* 4720 */;
 import apexExperiment from "apexExperiment" /* 13559 */;
 import enforcingDefault from "enforcing" /* 13914 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
+require = fn;
 function updateEnabledState() {
   const currentUser = closure_3.getCurrentUser();
   let isStaffResult;
@@ -16,14 +16,12 @@ function updateEnabledState() {
   let result = true === isStaffResult;
   if (!result) {
     result = apexExperiment.isZoomedExperimentEnabled();
-    const obj2 = apexExperiment;
   }
   if (result) {
     if (!c4) {
       try {
         enforcingDefault.enableTouchLogging();
         c4 = true;
-        const obj3 = enforcingDefault;
       } catch (err) {
         c4 = false;
       }
@@ -34,7 +32,6 @@ function updateEnabledState() {
       try {
         enforcingDefault.disableTouchLogging();
         c4 = false;
-        const obj4 = enforcingDefault;
       } catch (err) {
       }
     }
@@ -55,12 +52,11 @@ prototype["_terminate"] = function _terminate() {
     try {
       enforcingDefault.disableTouchLogging();
       c4 = false;
-      const obj = enforcingDefault;
     } catch (err) {
     }
   }
 };
 const touchEventAnalyticsManager = new TouchEventAnalyticsManager();
-let result = require("set").fileFinishedImporting("modules/touch_analytics/TouchEventAnalyticsManager.android.tsx");
+let result = require("obj132").fileFinishedImporting("modules/touch_analytics/TouchEventAnalyticsManager.android.tsx");
 
 export default touchEventAnalyticsManager;

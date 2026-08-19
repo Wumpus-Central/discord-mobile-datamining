@@ -4,52 +4,47 @@
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "sortActivity" /* 4559 */;
-import closure_6 from "generateOldThreadCutoff" /* 4772 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
-import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
-import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import sortActivity from "sortActivity" /* 4559 */;
+import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { ActivityTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
   let obj = { marginBottom: 1, borderRadius: ThemesDefault.radii.md, marginHorizontal: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: null, marginVertical: null, flexDirection: "row", alignItems: "center", flex: 1 };
   let num = 0;
   if (!arg0) {
-    num = tmp(712).space.PX_8;
+    num = ThemesDefault.space.PX_8;
   }
   obj[4] = num;
   let PX_4;
   if (arg0) {
-    PX_4 = tmp(712).space.PX_4;
+    PX_4 = ThemesDefault.space.PX_4;
   }
   obj = { pressable: obj, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
   obj[5] = PX_4;
-  obj = { borderRadius: tmp(712).radii.md };
+  obj = { borderRadius: ThemesDefault.radii.md };
   obj[1] = obj;
   obj[2] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  obj1 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
   obj[3] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.radii.md };
-  const obj2 = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.radii.md };
   obj[4] = { borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
   return obj;
 });
 const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel) {
   channel = channel.channel;
   const height = channel.height;
-  let isPressed = channel.isPressed;
   const setIsPressed = channel.setIsPressed;
-  let stateFromStores;
-  closure_5 = undefined;
-  isPressed = undefined;
+  let isPressed;
   let obj = channel(isPressed[12]);
   let items = [closure_8];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     let id;
     const channelId = closure_1_8.getChannelId(null);
     if (channel != null) {
@@ -92,13 +87,12 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   let obj3 = channel(isPressed[12]);
   const items4 = [isPressed];
   const stateFromStoresObject1 = obj3.useStateFromStoresObject(items4, () => {
-    let obj = isPressed;
     const mentionCount = isPressed.getMentionCount(channel.id);
-    obj = { mentionCount, hasUnreadMessages: null };
+    const obj = { mentionCount, hasUnreadMessages: null };
     let tmp2 = mentionCount > 0;
     if (!tmp2) {
-      tmp2 = null != obj2.getGuildId() && obj.hasUnread(obj2.id);
-      const tmp4 = null != obj2.getGuildId() && obj.hasUnread(obj2.id);
+      tmp2 = null != channel.getGuildId() && obj.hasUnread(channel.id);
+      const tmp4 = null != channel.getGuildId() && obj.hasUnread(channel.id);
     }
     obj[1] = tmp2;
     return obj;
@@ -176,13 +170,11 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   const callback2 = obj1.useCallback(() => {
     channel(isPressed[18]).transitionToChannel(channel.id);
   }, items11);
-  obj = { style: memo, collapsable: false, children: null };
   const callback3 = obj1.useCallback(() => {
     const result = channel(isPressed[19]).openChannelLongPressActionSheet(channel.id);
   }, items12);
   obj = { onPressIn: callback, onPressOut: callback1, onPress: callback2, onLongPress: callback3, accessibilityRole: "button", accessibilityLabel: tmp4(tmp2[21])({ channel, unread: hasUnreadMessages, mentionCount, isIncomingCall, isOngoingCall }), accessibilityHint: null, underlayColor: null, style: null, children: null };
   const obj8 = channel(isPressed[15]);
-  const tmp24 = closure_13;
   obj[6] = channel(isPressed[21]).getChannelA11yHint({ channel, muted, userStatus: status, isFavorite: favorite });
   obj[7] = tmp5.rowActive.backgroundColor;
   obj[8] = memo1;
@@ -202,41 +194,41 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
   obj1[3] = tmp27;
   obj1[4] = isPressed;
   obj1[5] = tmp5.nameplate;
-  const items13 = [closure_12(tmp4Result, obj1), , , , ];
+  const items13 = [callback(tmp4Result, obj1), , , , ];
   let tmp22Result = stateFromStores;
   if (stateFromStores) {
     obj2 = { style: null, pointerEvents: "none" };
     obj2[0] = tmp5.selectedBorder;
-    tmp22Result = tmp22(tmp23, obj2);
+    tmp22Result = callback(tmp23, obj2);
   }
   items13[1] = tmp22Result;
   obj3 = { unread: hasUnreadMessages, resolvedUnreadSetting, muted, layout: null, panelVariant: true };
   tmp4Result = tmp4(tmp2[23]);
   obj3[3] = channel(isPressed[24]).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-  items13[2] = closure_12(tmp4Result, obj3);
+  items13[2] = callback(tmp4Result, obj3);
   obj4 = { backgroundColor: memo2, children: null };
   obj5 = { channel, channelSelected: stateFromStores, hasUnreadMessages, muted, ignored, blocked, isStreaming: null, status: null };
   const tmpResult = channel(isPressed[21]);
   obj5[6] = height(isPressed[27])(activities);
   obj5[7] = status;
-  obj4[1] = closure_12(height(isPressed[26]), obj5);
-  items13[3] = closure_12(channel(isPressed[25]).CutoutBackgroundProvider, obj4);
+  obj4[1] = callback(height(isPressed[26]), obj5);
+  items13[3] = callback(channel(isPressed[25]).CutoutBackgroundProvider, obj4);
   obj6 = { channel, channelSelected: stateFromStores, favorite, muted, ignored, blocked, hasActivity: null, hasUnreadMessages: null, resolvedUnreadSetting: null, hasNameplate: null };
   let someResult;
   const tmp4Result1 = height(isPressed[26]);
   if (activities != null) {
-    someResult = activities.some((type) => type.type !== constants.CUSTOM_STATUS);
+    someResult = activities.some((item, index) => item.type !== constants.CUSTOM_STATUS);
   }
   obj6[6] = true === someResult;
   obj6[7] = hasUnreadMessages;
   obj6[8] = resolvedUnreadSetting;
   obj6[9] = tmp15;
-  items13[4] = closure_12(height(isPressed[28]), obj6);
+  items13[4] = callback(height(isPressed[28]), obj6);
   obj[9] = items13;
-  obj[2] = tmp24(channel(isPressed[20]).PressableHighlight, obj);
-  return closure_12(stateFromStores, obj);
+  obj[2] = callback2(channel(isPressed[20]).PressableHighlight, obj);
+  return callback(stateFromStores, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelBase.tsx");
 
 export default memoResult;
 export const MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING = 1;

@@ -6,10 +6,10 @@ import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
 import getShouldObscureForSetting from "getShouldObscureForSetting" /* 5024 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { ExplicitContentFilterTypes } from "items" /* 4068 */;
 
-require = arg1;
+require = fn;
 function resolveExplicitContentSettingWithDefaults(isFriend) {
   ({ setting, isDm } = isFriend);
   if (isDm === undefined) {
@@ -36,10 +36,10 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
     if (isDm) {
       if (!flag) {
-        let BLUR2 = tmp4(1306).ExplicitContentRedaction.BLOCK;
+        let BLUR2 = create.ExplicitContentRedaction.BLOCK;
       }
     }
-    ExplicitContentRedaction = tmp4(1306).ExplicitContentRedaction;
+    ExplicitContentRedaction = create.ExplicitContentRedaction;
     BLUR2 = ExplicitContentRedaction.BLUR;
   } else {
     let nsfwAllowed;
@@ -56,15 +56,10 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag6 = false;
       }
       if (!flag5) {
-        const BLUR = tmp4(1306).ExplicitContentRedaction.BLUR;
+        const BLUR = create.ExplicitContentRedaction.BLUR;
       }
-      const ExplicitContentFilter2 = tmp4(4066).ExplicitContentFilter;
+      const ExplicitContentFilter2 = explicitContentFromProto.ExplicitContentFilter;
       setting = ExplicitContentFilter2.getSetting();
-      if (flag6) {
-        let tmp11 = obj[setting];
-      } else {
-        tmp11 = obj1[setting];
-      }
     } else {
       let flag3 = isDm;
       if (isDm === undefined) {
@@ -75,7 +70,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag4 = false;
       }
       if (flag3) {
-        const ExplicitContentFilter = tmp4(4066).ExplicitContentFilter;
+        const ExplicitContentFilter = explicitContentFromProto.ExplicitContentFilter;
         const setting1 = ExplicitContentFilter.getSetting();
         if (flag4) {
           let SHOW = obj[setting1];
@@ -83,7 +78,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
           SHOW = obj[setting1];
         }
       } else {
-        SHOW = tmp4(1306).ExplicitContentRedaction.SHOW;
+        SHOW = create.ExplicitContentRedaction.SHOW;
       }
       return SHOW;
     }
@@ -129,7 +124,7 @@ const FRIENDS_AND_NON_FRIENDS4 = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIE
 const valueOfResult9 = NON_FRIENDS4.valueOf();
 obj1[FRIENDS_AND_NON_FRIENDS4.valueOf()] = require("create").ExplicitContentRedaction.BLOCK;
 const valueOfResult10 = FRIENDS_AND_NON_FRIENDS4.valueOf();
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx");
 
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = obj;
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM = obj1;
@@ -144,7 +139,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     flag2 = false;
   }
   if (flag) {
-    const ExplicitContentFilter = tmp(4066).ExplicitContentFilter;
+    const ExplicitContentFilter = explicitContentFromProto.ExplicitContentFilter;
     const setting = ExplicitContentFilter.getSetting();
     if (flag2) {
       let tmp5 = obj[setting];
@@ -153,7 +148,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     }
     return tmp5;
   } else {
-    return tmp(1306).ExplicitContentRedaction.BLUR;
+    return create.ExplicitContentRedaction.BLUR;
   }
 };
 export const getExplicitContentSettingOrDefault = function getExplicitContentSettingOrDefault(arg0) {
@@ -186,7 +181,7 @@ export const updateExplicitContentSetting = function updateExplicitContentSettin
   if (setting != null) {
     prop = setting.explicitContentGuilds;
   }
-  obj = { explicitContentGuilds: tmp4({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
+  obj = { explicitContentGuilds: resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
   let prop1;
   if (setting != null) {
     prop1 = setting.explicitContentNonFriendDm;
@@ -216,13 +211,13 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
     obj = { setting: null };
     obj[0] = prop;
     let prop1;
-    let tmp10Result = tmp10(obj);
+    let tmp10Result = resolveExplicitContentSettingWithDefaults(obj);
     if (setting != null) {
       prop1 = setting.explicitContentNonFriendDm;
     }
     obj = { setting: null, isDm: true };
     obj[0] = prop1;
-    tmp10Result = tmp10(obj);
+    tmp10Result = resolveExplicitContentSettingWithDefaults(obj);
     let prop2;
     if (setting != null) {
       prop2 = setting.explicitContentFriendDm;

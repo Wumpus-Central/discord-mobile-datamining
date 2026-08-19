@@ -1,10 +1,10 @@
 // === Module 15139: _testCaptcha ===
 
 // Module 15139 (_testCaptcha)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _testCaptcha() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -80,7 +80,7 @@ function _testCaptcha() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
 
 export const CaptchaDeciderType = { HCAPTCHA_RQDATA: "hCaptchaRqdata", SMITE_RQDATA: "SmiteRqdata", RECAPTCHA: "Recaptcha", RECAPTCHA_ENTERPRISE: "RecaptchaEnterprise" };
 export const HCaptchaDifficulty = { EASY: 1, [1]: "EASY", MODERATE: 2, [2]: "MODERATE", DIFFICULT: 3, [3]: "DIFFICULT", VERY_DIFFICULT: 4, [4]: "VERY_DIFFICULT" };

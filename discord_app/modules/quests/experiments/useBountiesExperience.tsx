@@ -1,12 +1,12 @@
 // === Module 10711: useBountiesExperience ===
 
 // Module 10711 (useBountiesExperience)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import apexExperiment from "apexExperiment" /* 10712 */;
 import apexExperiment2 from "apexExperiment" /* 10713 */;
 import apexExperiment3 from "apexExperiment" /* 10714 */;
 
-const result = set.fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
 
 export const useBountiesExperience = function useBountiesExperience(VIDEO_MODAL_MOBILE) {
   const BountiesVerticalScrollExperiment = apexExperiment.BountiesVerticalScrollExperiment;

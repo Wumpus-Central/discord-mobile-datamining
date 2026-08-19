@@ -2,14 +2,14 @@
 
 // Module 7588
 import allSettledDefault from "allSettled" /* 4385 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import { MessageFlags } from "ME" /* 676 */;
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
-const require = arg1;
+const require = fn;
 let obj = {
   sendForward(closure_0, alsoForwardToChannelId, closure_1) {
     closure_1 = alsoForwardToChannelId;
@@ -46,7 +46,7 @@ let obj = {
               channel = undefined;
               c1 = undefined;
               dependencyMap = undefined;
-              channel = closure_1_5.getChannel(closure_1_1);
+              channel = closure_1_5.getChannel(alsoForwardToChannelId);
               const channel1 = closure_1_5.getChannel(closure_1_0.channel_id);
               let prop;
               if (dependencyMap != null) {
@@ -69,10 +69,10 @@ let obj = {
                 const error1 = new Error("Unable to find destination channel for message");
                 throw error1;
               } else {
-                const parsed = closure_1_1(7436).parse(channel, "");
+                const parsed = alsoForwardToChannelId(7436).parse(channel, "");
                 obj1 = { guild_id: null, channel_id: null, message_id: null, type: null, forward_only: null };
                 obj1[0] = guild_id;
-                ({ channel_id: obj16[1], id: obj16[2] } = tmp72);
+                ({ channel_id: obj16[1], id: obj16[2] } = closure_1_0);
                 obj1[3] = closure_1_0(694).MessageReferenceTypes.FORWARD;
                 let onlyAttachmentIds;
                 if (tmp74 != null) {
@@ -97,7 +97,7 @@ let obj = {
                 dependencyMap = withMessage;
                 let num9 = 0;
                 if (null != withMessage) {
-                  const tmp39 = v0(closure_1_1(7437)(withMessage), 2);
+                  const tmp39 = v0(alsoForwardToChannelId(7437)(withMessage), 2);
                   num9 = 0;
                   if (tmp39[0]) {
                     dependencyMap = tmp39[1];
@@ -107,7 +107,7 @@ let obj = {
                     const obj9 = closure_1_0(1403);
                   }
                 }
-                const obj10 = closure_1_1(7427);
+                const obj10 = alsoForwardToChannelId(7427);
                 let obj3 = { messageReference: null, location: null, eagerDispatch: false, flags: null };
                 obj3[0] = obj1;
                 obj3[1] = closure_1_8.FORWARDING;
@@ -118,7 +118,6 @@ let obj = {
                 obj4[0] = obj10.sendMessage(channel.id, parsed, false, obj3);
                 return obj4;
               }
-              tmp72 = closure_1_0;
             }
           } else {
             if (1 === tmp5) {
@@ -140,9 +139,9 @@ let obj = {
                   result = obj1.isRatelimitedInChannel(channel, closure_1_6);
                 }
                 if (!result) {
-                  obj2 = closure_1_1(7427);
+                  obj2 = alsoForwardToChannelId(7427);
                   const id = channel.id;
-                  obj3 = closure_1_1(7436);
+                  obj3 = alsoForwardToChannelId(7436);
                   const obj6 = { location: null, flags: null };
                   obj6[0] = closure_1_8.FORWARDING;
                   obj6[1] = c1;
@@ -173,11 +172,11 @@ let obj = {
     })();
   },
   sendForwards(closure_1_8, c1, arg2) {
-    closure_0 = closure_1_8;
+    closure_0 = MessageSendLocation;
     importDefault = arg2;
-    return allSettledDefault(c1.map((alsoForwardToChannelId) => closure_1_9.sendForward(closure_0, alsoForwardToChannelId, closure_1)));
+    return allSettledDefault(importDefault.map((item, index) => obj.sendForward(closure_0, item, closure_1)));
   }
 };
-let result = require("set").fileFinishedImporting("modules/forwarding/ForwardActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/forwarding/ForwardActionCreators.tsx");
 
 export default obj;

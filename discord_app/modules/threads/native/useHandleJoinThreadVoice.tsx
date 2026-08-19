@@ -1,11 +1,11 @@
 // === Module 8521: useHandleJoinThreadVoice ===
 
 // Module 8521 (useHandleJoinThreadVoice)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "storeThread" /* 4023 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import storeThread from "storeThread" /* 4023 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/threads/native/useHandleJoinThreadVoice.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/threads/native/useHandleJoinThreadVoice.tsx");
 
 export default function useHandleJoinThreadVoice(arg0) {
   closure_0 = arg0;
@@ -15,10 +15,10 @@ export default function useHandleJoinThreadVoice(arg0) {
       HermesBuiltin.throwTypeError();
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw openMemberVerificationModal;
       } else if (arg0 === 2) {
         let obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj[0] = openMemberVerificationModal;
         return obj;
       } else {
         return { value: "HermesInternal", done: "HermesInternal" };
@@ -29,11 +29,11 @@ export default function useHandleJoinThreadVoice(arg0) {
         if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw openMemberVerificationModal;
           } else if (arg0 === 2) {
             c3 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = openMemberVerificationModal;
             return obj;
           } else {
             closure_1 = tmp2;
@@ -59,27 +59,27 @@ export default function useHandleJoinThreadVoice(arg0) {
         } else if (1 === tmp5) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw openMemberVerificationModal;
           } else if (arg0 === 2) {
             c3 = 3;
             const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
+            obj3[0] = openMemberVerificationModal;
             return obj3;
           } else {
             c3 = 3;
             const obj4 = { value: null, done: true };
-            obj4[0] = arg1.openMemberVerificationModal(guildId);
+            obj4[0] = openMemberVerificationModal.openMemberVerificationModal(guildId);
             return obj4;
           }
         } else {
           if (2 === tmp5) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw openMemberVerificationModal;
             } else if (arg0 === 2) {
               c3 = 3;
               const obj5 = { value: null, done: true };
-              obj5[0] = arg1;
+              obj5[0] = openMemberVerificationModal;
               return obj5;
             } else if (!closure_1_4.hasJoined(guildId.id)) {
               obj2 = closure_1_1(c2[5]);
@@ -92,23 +92,23 @@ export default function useHandleJoinThreadVoice(arg0) {
           } else if (3 === tmp5) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw openMemberVerificationModal;
             } else if (arg0 === 2) {
               c3 = 3;
               const obj7 = { value: null, done: true };
-              obj7[0] = arg1;
+              obj7[0] = openMemberVerificationModal;
               return obj7;
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw openMemberVerificationModal;
           } else if (arg0 === 2) {
             c3 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = openMemberVerificationModal;
             return obj;
           } else {
-            arg1.openGuildVoiceModal(guildId, "Thread Header");
+            openMemberVerificationModal.openGuildVoiceModal(guildId, "Thread Header");
             c3 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }

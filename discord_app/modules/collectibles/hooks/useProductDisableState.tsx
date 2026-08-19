@@ -3,10 +3,11 @@
 // Module 9582 (useProductDisableState)
 import initialize from "initialize" /* 589 */;
 import set from "set" /* 679 */;
-import closure_2 from "reset" /* 4045 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import reset from "reset" /* 4045 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export const useProductDisableState = function useProductDisableState(skuId) {
   let obj = initialize;
@@ -25,8 +26,8 @@ export const useProductDisableState = function useProductDisableState(skuId) {
     obj[0] = stateFromStores;
     let stringResult = null;
     if (stateFromStores) {
-      const intl = tmp(1236).intl;
-      stringResult = intl.string(tmp(1236).t.NbveHD);
+      const intl = getSystemLocale.intl;
+      stringResult = intl.string(getSystemLocale.t.NbveHD);
     }
     obj[1] = stringResult;
   } else {

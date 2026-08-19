@@ -1,8 +1,8 @@
 // === Module 5259: str2 ===
 
 // Module 5259 (str2)
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import obj132 from "obj132" /* 2 */;
+import obj1322 from "obj132" /* 500 */;
 import getConstants from "getConstants" /* 1626 */;
 import isMetaQuest from "isMetaQuest" /* 1625 */;
 
@@ -34,7 +34,7 @@ if (!startsWithResult) {
   }
   str4 = str5;
 }
-const result = set.fileFinishedImporting("modules/push_notifications/PushNotificationConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/push_notifications/PushNotificationConstants.tsx");
 
 export const BUNDLE_ID = str;
 export const IS_QUEST_RELEASE = isMetaQuest;
@@ -50,7 +50,7 @@ export const getDevicePushProvider = function getDevicePushProvider() {
     if (!obj.isAndroid()) {
       str = str2;
     }
-    obj = set2;
+    obj = obj1322;
   }
   return str;
 };

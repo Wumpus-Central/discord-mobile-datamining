@@ -1,18 +1,21 @@
 // === Module 17034: _fetch ===
 
 // Module 17034 (_fetch)
-import setDefault from "set" /* 687 */;
+import obj132 from "obj132" /* 500 */;
+import obj132Default from "obj132" /* 687 */;
 import _modDef1208 from "module_1208" /* 1208 */;
 import initializeDefault from "initialize" /* 5038 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10477 */;
+import _modDef10501 from "module_10501" /* 10501 */;
 import getIsEligibleForQuests from "getIsEligibleForQuests" /* 10685 */;
-import closure_3 from "initializeState" /* 7453 */;
+import initializeState from "initializeState" /* 7453 */;
 
-require = arg1;
-const DAY = setDefault.Millis.DAY;
-let closure_5 = 30 * setDefault.Millis.MINUTE;
-let closure_6 = 5 * setDefault.Millis.MINUTE;
-const HOUR = setDefault.Millis.HOUR;
-let closure_7 = 5 * setDefault.Millis.MINUTE;
+require = fn;
+const DAY = obj132Default.Millis.DAY;
+let closure_5 = 30 * obj132Default.Millis.MINUTE;
+let closure_6 = 5 * obj132Default.Millis.MINUTE;
+const HOUR = obj132Default.Millis.HOUR;
+let closure_7 = 5 * obj132Default.Millis.MINUTE;
 initializeDefault;
 class QuestFetchManager extends tmp2 {
   constructor() {
@@ -37,19 +40,19 @@ class QuestFetchManager extends tmp2 {
           lib._fetch("post_connect_recurring");
         }
       }, closure_1_5);
-      const isEligibleForQuests = applyArgumentsResult(closure_1_2[3]).getIsEligibleForQuests();
+      const isEligibleForQuests = applyArgumentsResult(dependencyMap[3]).getIsEligibleForQuests();
       applyArgumentsResult.hasHandledConnectionOpen = true;
       if (applyArgumentsResult.hasHandledConnectionOpen) {
         if (isEligibleForQuests) {
-          let DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(tmp6[8]).getQuestFetchReconnectJitterConfig({ location: "QuestFetchManager" });
-          const tmp5Result = tmp5(tmp6[8]);
+          let DEFAULT_QUEST_FETCH_JITTER_CONFIG = applyArgumentsResult(dependencyMap[8]).getQuestFetchReconnectJitterConfig({ location: "QuestFetchManager" });
+          const tmp5Result = applyArgumentsResult(dependencyMap[8]);
         }
         const _Math = Math;
         const _Math2 = Math;
         ({ questFetchJitterMs, questHomeHeroJitterMs } = DEFAULT_QUEST_FETCH_JITTER_CONFIG);
         const rounded = Math.floor(Math.random() * questFetchJitterMs);
         const _window = window;
-        tmp.initialFetchTimerId = window.setTimeout(() => {
+        applyArgumentsResult.initialFetchTimerId = window.setTimeout(() => {
           if (Date.now() - closure_1_3.lastFetchedCurrentQuests > closure_1_7) {
             lib._fetch("post_connect_initial");
           }
@@ -58,15 +61,17 @@ class QuestFetchManager extends tmp2 {
           const _Math3 = Math;
           const _Math4 = Math;
           const _window2 = window;
-          tmp.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
+          applyArgumentsResult.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
             try {
               const questHomeHero = lib(table[5]).fetchQuestHomeHero();
+              const obj = lib(table[5]);
             } catch (err) {
             }
           }, rounded + Math.floor(Math.random() * questHomeHeroJitterMs));
         }
       }
-      DEFAULT_QUEST_FETCH_JITTER_CONFIG = tmp5(tmp6[8]).DEFAULT_QUEST_FETCH_JITTER_CONFIG;
+      DEFAULT_QUEST_FETCH_JITTER_CONFIG = applyArgumentsResult(dependencyMap[8]).DEFAULT_QUEST_FETCH_JITTER_CONFIG;
+      let obj = applyArgumentsResult(dependencyMap[3]);
     };
     applyArgumentsResult.handleRunningGamesChange = function handleRunningGamesChange() {
 
@@ -111,7 +116,6 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     isEligibleForQuests = !closure_3.isFetchingCurrentQuests;
   }
   if (isEligibleForQuests) {
-    obj = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
     obj = { callerSource: null, storeSize: null, lastFetchedCurrentQuests: null, msSinceLastFetch: null, isFetchingCurrentQuests: null };
     obj[0] = arg0;
     obj[1] = closure_3.quests.size;
@@ -121,18 +125,16 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
     obj[4] = closure_3.isFetchingCurrentQuests;
     obj[2] = obj;
     _modDef1208.addBreadcrumb(obj);
-    let tmpResult = tmp(10477);
+    let tmpResult = _manuallyStartConsoleQuest;
     const currentQuests = tmpResult.fetchCurrentQuests();
-    tmpResult = tmp(500);
+    tmpResult = obj132;
     if (tmpResult.isMac()) {
-      const state = tmp6(10501).getState();
-      const tmp6Result = tmp6(10501);
+      const state = _modDef10501.getState();
+      const tmp6Result = _modDef10501;
     }
-    const obj2 = _modDef1208;
-    tmp6 = importDefault;
   }
 };
 const questFetchManager = new QuestFetchManager();
-const result = require("set").fileFinishedImporting("modules/quests/managers/QuestFetchManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/managers/QuestFetchManager.tsx");
 
 export default questFetchManager;

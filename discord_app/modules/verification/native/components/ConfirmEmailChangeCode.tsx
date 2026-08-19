@@ -1,29 +1,28 @@
 // === Module 8573: ConfirmEmailChangeCode ===
 
 // Module 8573 (ConfirmEmailChangeCode)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 import { setEmailToken } from "ChangeEmailFields" /* 8563 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
 
 export default function ConfirmEmailChangeCode(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
   let _require = isChangeEmail;
-  let navigation;
   let obj = _require(1500);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [isChangeEmail, navigation];
   const callback = React.useCallback((arg0) => {
     let tmp = arg0;
     if (arg0 == null) {
       tmp = null;
     }
-    closure_1_5(tmp);
+    setEmailToken(tmp);
     const push = navigation.push;
-    const VerificationModalScenes = callback(closure_1_2[5]).VerificationModalScenes;
+    const VerificationModalScenes = callback(dependencyMap[5]).VerificationModalScenes;
     if (callback) {
       push(VerificationModalScenes.CHANGE_EMAIL_COLLECT_REASONS);
     } else {
@@ -31,7 +30,6 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     }
   }, items);
   obj = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
-  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c2 = 0;

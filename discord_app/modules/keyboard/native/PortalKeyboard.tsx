@@ -6,11 +6,11 @@ import coerceMainRoute from "coerceMainRoute" /* 4229 */;
 import Portal from "Portal" /* 4244 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let c3 = "default";
 const modal = "modal";
-const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/keyboard/native/PortalKeyboard.tsx");
 
 export const PortalKeyboardState = { EMPTY: "empty", REQUEST_OPEN: "request_open", OPENING: "opening", OPEN: "open", REQUEST_CLOSE: "request_close", CLOSING: "closing", CLOSED: "closed" };
 export const PORTAL_HOST_NAME_DEFAULT = "default";
@@ -24,7 +24,7 @@ export const PortalKeyboard = function PortalKeyboard(children) {
     obj = { hostName: null, children: null };
     obj[0] = tmp3;
     obj[1] = children.children;
-    return jsx(tmp(4244).Portal, { hostName: null, children: null });
+    return jsx(Portal.Portal, { hostName: null, children: null });
   }
   tmp3 = c3;
 };

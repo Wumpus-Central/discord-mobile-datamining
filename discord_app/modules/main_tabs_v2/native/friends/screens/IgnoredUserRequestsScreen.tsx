@@ -1,23 +1,22 @@
 // === Module 16001: IgnoredUserRequestsScreen ===
 
 // Module 16001 (IgnoredUserRequestsScreen)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import noop from "noop" /* 19 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { UserRowModes } from "UserRowModes" /* 9081 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/IgnoredUserRequestsScreen.tsx");
 
 export default function IgnoredUserRequestsScreen(navigation) {
   navigation = navigation.navigation;
-  let analyticsLocations;
   let stateFromStoresArray;
   let stateFromStores;
   let callback;
-  analyticsLocations = stateFromStoresArray(stateFromStores[6])(stateFromStoresArray(stateFromStores[7]).FRIEND_REQUESTS).analyticsLocations;
+  const analyticsLocations = stateFromStoresArray(stateFromStores[6])(stateFromStoresArray(stateFromStores[7]).FRIEND_REQUESTS).analyticsLocations;
   let obj = analyticsLocations(stateFromStores[8]);
   const items = [closure_4];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => analyticsLocations(stateFromStores[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).ignoredUserIds);
@@ -27,8 +26,8 @@ export default function IgnoredUserRequestsScreen(navigation) {
   const items1 = [closure_5];
   const items2 = [stateFromStoresArray];
   stateFromStores = analyticsLocations(stateFromStores[8]).useStateFromStores(items1, () => {
-    const mapped = stateFromStoresArray.map((arg0) => user.getUser(arg0));
-    return mapped.filter((arg0) => null != arg0);
+    const mapped = stateFromStoresArray.map((item, index) => user.getUser(item));
+    return mapped.filter((item, index) => null != item);
   }, items2);
   const items3 = [analyticsLocations];
   callback = callback.useCallback((id) => {

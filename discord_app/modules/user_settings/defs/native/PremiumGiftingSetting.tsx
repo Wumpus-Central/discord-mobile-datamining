@@ -5,12 +5,12 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4052 */;
 import useEligibleActiveOutboundPromotions from "useEligibleActiveOutboundPromotions" /* 12899 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createToggle from "createToggle" /* 10669 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+{
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["jcSP+g"]);
@@ -47,6 +47,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/PremiumGiftingSetting.tsx");
 
 export default createToggle;

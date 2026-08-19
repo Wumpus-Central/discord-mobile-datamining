@@ -1,14 +1,14 @@
 // === Module 16931: useOnboardingMonetizationEnableFlow ===
 
 // Module 16931 (useOnboardingMonetizationEnableFlow)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ GuildFeatures: closure_6, HelpdeskArticles: error, MarketingURLs: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx");
 
 export default function useOnboardingMonetizationEnableFlow(features) {
   const _require = features;
@@ -27,7 +27,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     let tmp3 = null != closure_0;
     if (tmp3) {
-      tmp3 = closure_1_4(tmp2, tmp);
+      tmp3 = isGuildOwner(tmp2, tmp);
     }
     return tmp3;
   });
@@ -83,7 +83,6 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   tmp9Result = tmp9(1993);
   obj[0] = tmp9Result.getArticleURL(constants2.CREATOR_FAQ);
   const tmp16 = refresh(16934)(eligibility);
-  const tmp26 = constants2;
   if (isApplicationRejected) {
     if (tmpResult.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
       if (true === hasItem) {
@@ -108,7 +107,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     const intl2 = tmp(1236).intl;
     const obj2 = { requestCooldownDuration: null, creatorRevenuePolicyUrl: null };
     obj2[0] = requestCooldownDuration;
-    obj2[1] = tmp9(1993).getArticleURL(tmp26.CREATOR_POLICY);
+    obj2[1] = tmp9(1993).getArticleURL(constants2.CREATOR_POLICY);
     formatResult2 = intl2.format(tmp(1236).t.TvX207, obj2);
     const tmp9Result1 = tmp9(1993);
   }

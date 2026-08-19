@@ -7,12 +7,12 @@ import PressableBase from "PressableBase" /* 5433 */;
 import StaffBadgeIcon from "StaffBadgeIcon" /* 14882 */;
 import VisualEffectViewOverrideOverlay_Default from "VisualEffectViewOverrideOverlay_" /* 15193 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "initialize" /* 7471 */;
+import initialize from "initialize" /* 7471 */;
 import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 710 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function DraggableContainer(children) {
   const x = children.x;
   const _require = x;
@@ -25,19 +25,15 @@ function DraggableContainer(children) {
     num = 0;
   }
   const onChangePosition = children.onChangePosition;
-  let sharedValue;
-  let sharedValue1;
-  closure_8 = undefined;
-  let callback3;
   let callback;
   let obj = _require(contentWidth[6]);
-  sharedValue = obj.useSharedValue(x.get());
+  const sharedValue = obj.useSharedValue(x.get());
   obj1 = _require(contentWidth[6]);
-  sharedValue1 = obj1.useSharedValue(y.get());
+  const sharedValue1 = obj1.useSharedValue(y.get());
   const tmp4 = importDefault(contentWidth[7])();
   closure_8 = tmp4;
   const tmp5 = importDefault(contentWidth[8])();
-  callback3 = tmp5;
+  const callback3 = tmp5;
   class P {
     constructor(arg0, arg1) {
       value = closure_9.get();
@@ -128,8 +124,7 @@ function DraggableContainer(children) {
 }
 let c3 = importAllResult;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-let obj = { widgetContainer: { position: "absolute" }, widget: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: ThemesDefault.radii.xl };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: ThemesDefault.radii.xl };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
 obj[1] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
@@ -150,13 +145,12 @@ let closure_16 = importAllResult.memo(() => {
     children: callback(StaffBadgeIcon.StaffBadgeIcon, { size: "md", color: "white" })
   });
 });
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
+let result = require("obj132").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
   let obj = _mod4115;
   const sharedValue = obj.useSharedValue(closure_4.devWidgetPosition.x);
   const sharedValue1 = _mod4115.useSharedValue(closure_4.devWidgetPosition.y);
-  obj = { children: null };
   const items = [callback(VisualEffectViewOverrideOverlay_Default, { x: sharedValue, y: sharedValue1 }), ];
   obj = {
     x: sharedValue,
@@ -165,8 +159,8 @@ export default function DevWidget() {
     contentHeight: DEV_WIDGET_SIZE,
     dragBoundsPadding: ThemesDefault.space.PX_4,
     onChangePosition(devWidgetPosition) {
-      let obj = callback(table[16]);
-      obj = { devWidgetPosition };
+      callback(table[16]);
+      const obj = { devWidgetPosition };
       return obj.updateDevToolsSettings(obj);
     },
     children: callback(closure_16, {})

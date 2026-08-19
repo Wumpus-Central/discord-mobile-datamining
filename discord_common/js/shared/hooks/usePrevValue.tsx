@@ -1,11 +1,11 @@
 // === Module 8902: usePrevValue ===
 
 // Module 8902 (usePrevValue)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
 
 const useRef = noop.useRef;
-const result = set.fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
 
 export default function usePrevValue(current) {
   const tmp = useRef(null);

@@ -1,7 +1,7 @@
 // === Module 589: initialize ===
 
 // Module 589 (initialize)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initialize2 from "initialize" /* 591 */;
 import loggerDefault from "logger" /* 593 */;
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
@@ -20,7 +20,7 @@ const Store = initialize2.Store;
 const obj = { Emitter: loggerDefault, Store, PersistedStore, DeviceSettingsStore, OfflineCacheStore, connectStores: connectStoresDefault, initialize };
 ({ createFetchStore, NO_DATA } = areStatesEqual);
 Object.defineProperty(obj, "initialized", { get: () => Store.initialized, set: undefined });
-const result = set.fileFinishedImporting("../discord_common/js/packages/flux/index.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/flux/index.tsx");
 
 export default obj;
 export { NO_DATA };

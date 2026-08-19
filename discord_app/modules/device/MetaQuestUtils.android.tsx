@@ -5,7 +5,7 @@ import getConstantsAll from "getConstants" /* 1626 */;
 import importDefaultResult from "enforcing" /* 670 */;
 
 const isMetaQuestResult = importDefaultResult.isMetaQuest();
-const result = require("set").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
+const result = require("obj132").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
 
 export const isMetaQuest = function isMetaQuest() {
   return importDefaultResult.isMetaQuest();

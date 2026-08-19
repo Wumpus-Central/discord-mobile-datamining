@@ -6,10 +6,10 @@ import Stack from "Stack" /* 4733 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_3 = createCacheKey.createStyles({ container: { paddingVertical: 16 } });
-const result = require("set").fileFinishedImporting("design/components/ButtonGroup/native/ButtonGroup.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/ButtonGroup/native/ButtonGroup.native.tsx");
 
 export const ButtonGroup = function ButtonGroup(size) {
   let str = size.size;

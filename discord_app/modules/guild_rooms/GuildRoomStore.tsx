@@ -4,12 +4,12 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 9865 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "createRTCConnection" /* 4539 */;
-import closure_8 from "handleConnectionOpen" /* 1979 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 
-require = arg1;
+require = fn;
 function resolveCreatingNotes(roomId, objects) {
   if (null != dependencyMap5[roomId]) {
     if (0 !== arr.length) {
@@ -18,13 +18,13 @@ function resolveCreatingNotes(roomId, objects) {
         if (0 !== value.length) {
           _require = store.getId();
           const _Set = Set;
-          const found = value.filter((createdBy) => createdBy.createdBy === closure_0);
-          set = new Set(found.map((position) => {
-            position = position.position;
+          const found = value.filter((item, index) => item.createdBy === closure_0);
+          set = new Set(found.map((item, index) => {
+            const position = item.position;
             return "" + position.x + "," + position.y;
           }));
-          const found1 = arr.filter((position) => {
-            position = position.position;
+          const found1 = arr.filter((item, index) => {
+            const position = item.position;
             return !set.has("" + position.x + "," + position.y);
           });
           if (found1.length !== arr.length) {
@@ -48,7 +48,6 @@ function handleSelectedChannelStoreChange() {
       flag = true;
     }
     dependencyMap3[voiceChannelId] = flag;
-    const tmp4 = dependencyMap3;
   }
 }
 let closure_2 = ["users", "objects"];
@@ -230,7 +229,7 @@ obj = {
     }
     dependencyMap2[room.roomId] = room.users;
     if (null != value) {
-      if (tmp3[room.roomId] != null) {
+      if (dependencyMap2[room.roomId] != null) {
         const result = obj2.set(id, value);
       }
     }
@@ -285,15 +284,15 @@ obj = {
       const id = store.getId();
       if (null != background) {
         obj = {};
-        const merged = Object.assign(tmp[roomId]);
+        const merged = Object.assign(dependencyMap[roomId]);
         obj.background = background;
-        tmp[roomId] = obj;
+        dependencyMap[roomId] = obj;
       }
       if (null != position) {
         const value = dependencyMap2[roomId].get(id);
         if (null != value) {
           const _Map = Map;
-          map = new Map(tmp4[roomId]);
+          map = new Map(dependencyMap2[roomId]);
           obj = {};
           const merged1 = Object.assign(value);
           if (position == null) {
@@ -309,9 +308,8 @@ obj = {
           }
           obj.statusText = statusText;
           const result = map.set(id, obj);
-          tmp4[roomId] = map;
+          dependencyMap2[roomId] = map;
         }
-        const obj2 = dependencyMap2[roomId];
       }
     }
   },
@@ -321,6 +319,7 @@ obj = {
     if (tmp3) {
       const result = map2.set(channelId, mediaSessionId);
     }
+    tmp3 = null != channelId && null != mediaSessionId;
   },
   GUILD_ROOM_PENDING_NOTE_START: function handlePendingNoteStart(roomId) {
     closure_22[roomId.roomId] = { position: null };
@@ -355,7 +354,7 @@ obj = {
     if (null == dependencyMap5[roomId]) {
       return false;
     } else {
-      const found = arr.filter((localId) => localId.localId !== closure_0);
+      const found = arr.filter((item, index) => item.localId !== closure_0);
       if (found.length === arr.length) {
         return false;
       } else if (0 === found.length) {
@@ -373,7 +372,7 @@ obj = {
   }
 };
 const guildRoomStore = new GuildRoomStore(dispatcherDefault, obj);
-let result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_rooms/GuildRoomStore.tsx");
 
 export default guildRoomStore;
 export const DEFAULT_ROOM = obj;

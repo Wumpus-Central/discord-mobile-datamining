@@ -2,13 +2,13 @@
 
 // Module 5312 (getProductOrbPrice)
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { isProfileEffectRecord } from "fromServer" /* 5307 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ CurrencyCodes: c4, PriceSetAssignmentPurchaseTypes: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/collectibles/utils/CollectiblesProductUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/utils/CollectiblesProductUtils.tsx");
 
 export const getProductOrbPrice = function getProductOrbPrice(arg0) {
   const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? closure_5.PREMIUM_TIER_2 : closure_5.DEFAULT];
@@ -25,7 +25,7 @@ export const getProductOrbPrice = function getProductOrbPrice(arg0) {
   if (substr == null) {
     substr = [];
   }
-  let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+  let found = substr.find((item, index) => item.currency === constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
@@ -46,7 +46,7 @@ export const getProductFiatPrice = function getProductFiatPrice(arg0) {
   if (substr == null) {
     substr = [];
   }
-  let found = substr.find((currency) => currency.currency !== constants.DISCORD_ORB);
+  let found = substr.find((item, index) => item.currency !== constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
@@ -66,7 +66,7 @@ export const getHasOrbPrice = function getHasOrbPrice(arg0) {
   if (substr == null) {
     substr = [];
   }
-  let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+  let found = substr.find((item, index) => item.currency === constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
@@ -86,7 +86,7 @@ export const getHasNonOrbPrice = function getHasNonOrbPrice(arg0) {
   if (substr == null) {
     substr = [];
   }
-  let found = substr.find((currency) => currency.currency !== constants.DISCORD_ORB);
+  let found = substr.find((item, index) => item.currency !== constants.DISCORD_ORB);
   if (found == null) {
     found = null;
   }
@@ -109,7 +109,7 @@ export const isOrbsExclusiveProduct = function isOrbsExclusiveProduct(product) {
     if (substr == null) {
       substr = [];
     }
-    let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+    let found = substr.find((item, index) => item.currency === constants.DISCORD_ORB);
     if (found == null) {
       found = null;
     }
@@ -127,7 +127,7 @@ export const isOrbsExclusiveProduct = function isOrbsExclusiveProduct(product) {
     if (substr1 == null) {
       substr1 = [];
     }
-    let found1 = substr1.find((currency) => currency.currency !== constants.DISCORD_ORB);
+    let found1 = substr1.find((item, index) => item.currency !== constants.DISCORD_ORB);
     if (found1 == null) {
       found1 = null;
     }
@@ -162,14 +162,14 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
     let someResult = type1 === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
     if (someResult) {
       const items = selectedProduct.items;
-      someResult = items.some((effects) => {
-        let someResult = callback(effects);
+      someResult = items.some((item, index) => {
+        let someResult = callback(item);
         if (someResult) {
-          effects = effects.effects;
-          someResult = effects.some((randomizedSources) => {
-            let tmp = null != randomizedSources.randomizedSources;
+          const effects = item.effects;
+          someResult = effects.some((item, index) => {
+            let tmp = null != item.randomizedSources;
             if (tmp) {
-              tmp = randomizedSources.randomizedSources.length > 0;
+              tmp = item.randomizedSources.length > 0;
             }
             return tmp;
           });
@@ -182,9 +182,9 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
   return tmp;
 };
 export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
-  return arr.filter((arg0) => {
+  return arr.filter((item, index) => {
     let substr;
-    if (arg0.prices[constants.DEFAULT] != null) {
+    if (item.prices[constants.DEFAULT] != null) {
       const countryPrices = tmp2.countryPrices;
       if (countryPrices != null) {
         const prices = countryPrices.prices;
@@ -196,13 +196,13 @@ export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
     if (substr == null) {
       substr = [];
     }
-    let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+    let found = substr.find((item, index) => item.currency === constants.DISCORD_ORB);
     if (found == null) {
       found = null;
     }
     let tmp4 = null != found;
     let substr1;
-    if (arg0.prices[constants.MOBILE] != null) {
+    if (item.prices[constants.MOBILE] != null) {
       const countryPrices2 = tmp5.countryPrices;
       if (countryPrices2 != null) {
         const prices1 = countryPrices2.prices;
@@ -214,7 +214,7 @@ export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
     if (substr1 == null) {
       substr1 = [];
     }
-    let found1 = substr1.find((currency) => currency.currency !== constants.DISCORD_ORB);
+    let found1 = substr1.find((item, index) => item.currency !== constants.DISCORD_ORB);
     if (found1 == null) {
       found1 = null;
     }
@@ -235,18 +235,18 @@ export const getIsVariantProduct = function getIsVariantProduct(product) {
   return tmp;
 };
 export const getProductSkuIds = function getProductSkuIds(closure_0) {
-  let tmp = closure_0.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
+  let tmp = _require.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
   if (tmp) {
-    tmp = null != closure_0.variants;
+    tmp = null != _require.variants;
   }
   if (tmp) {
-    tmp = 0 !== closure_0.variants.length;
+    tmp = 0 !== _require.variants.length;
   }
   if (tmp) {
-    const variants = closure_0.variants;
-    let mapped = variants.map((skuId) => skuId.skuId);
+    const variants = _require.variants;
+    let mapped = variants.map((item, index) => item.skuId);
   } else {
-    mapped = [closure_0.skuId];
+    mapped = [_require.skuId];
   }
   return mapped;
 };

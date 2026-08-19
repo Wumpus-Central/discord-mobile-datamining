@@ -3,17 +3,19 @@
 // Module 8609 (AuthFormView)
 import ThemesDefault from "Themes" /* 712 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
-import closure_3 from "noop" /* 19 */;
+import AuthHeaderDefault from "AuthHeader" /* 8611 */;
+import BackgroundImageDefault from "BackgroundImage" /* 8612 */;
+import AuthNavbarPlaceholderDefault from "AuthNavbarPlaceholder" /* 8615 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((arg0) => {
-  let obj = { container: null, flex: null, content: null, subHeader: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+  let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
   obj[0] = obj;
   obj[1] = { flex: 1 };
   let num = 0;
@@ -45,7 +47,7 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   obj[3] = { marginTop: 8, alignItems: "center" };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
 
 export default function AuthFormView(arg0) {
   ({ children, headerText, subHeader, contentStyle } = arg0);
@@ -67,7 +69,7 @@ export default function AuthFormView(arg0) {
     if (null != headerText) {
       obj = { children: null };
       obj[0] = headerText;
-      tmp15 = callback(tmp(8611), obj);
+      tmp15 = callback(AuthHeaderDefault, obj);
     }
     const items1 = [tmp15, , ];
     let tmp17 = null;
@@ -80,8 +82,7 @@ export default function AuthFormView(arg0) {
     items1[1] = tmp17;
     items1[2] = children;
     obj[8] = items1;
-    let tmp5Result = tmp5(closure_5, obj);
-    const tmp13 = closure_5;
+    let tmp5Result = callback(closure_5, obj);
   } else {
     obj = { style: null, children: null };
     const items2 = [, ];
@@ -90,7 +91,7 @@ export default function AuthFormView(arg0) {
     const obj2 = { backgroundImageSource: null, backgroundImageCover: null };
     obj2[0] = backgroundImageSource;
     obj2[1] = backgroundImageCover;
-    const items3 = [callback(tmp(8612), obj2), callback(tmp(8615), {}), ];
+    const items3 = [callback(BackgroundImageDefault, obj2), callback(AuthNavbarPlaceholderDefault, {}), ];
     const obj3 = { contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, style: null, contentContainerStyle: null, children: null };
     obj3[0] = { top: 0 };
     obj3[4] = tmp4.flex;
@@ -102,7 +103,7 @@ export default function AuthFormView(arg0) {
     if (null != headerText) {
       const obj4 = { children: null };
       obj4[0] = headerText;
-      tmp7Result = tmp7(tmp(8611), obj4);
+      tmp7Result = callback(AuthHeaderDefault, obj4);
     }
     const items5 = [tmp7Result, , ];
     tmp7Result = null;
@@ -110,15 +111,14 @@ export default function AuthFormView(arg0) {
       const obj5 = { style: null, children: null };
       obj5[0] = tmp4.subHeader;
       obj5[1] = subHeader;
-      tmp7Result = tmp7(tmp6, obj5);
+      tmp7Result = callback(closure_4, obj5);
     }
     items5[1] = tmp7Result;
     items5[2] = children;
     obj3[6] = items5;
-    items3[2] = tmp5(closure_5, obj3);
+    items3[2] = callback(closure_5, obj3);
     obj[1] = items3;
-    tmp5Result = tmp5(tmp6, obj);
-    const tmp8 = closure_5;
+    tmp5Result = callback(closure_4, obj);
   }
   return tmp5Result;
 };

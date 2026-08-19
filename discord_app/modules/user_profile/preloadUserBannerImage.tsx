@@ -1,11 +1,11 @@
 // === Module 8419: preloadUserBannerImage ===
 
 // Module 8419 (preloadUserBannerImage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getAvatarURL from "getAvatarURL" /* 1435 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 
-const result = set.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 
 export default function preloadUserBannerImage(user) {
   if (typeof globalThis.Image !== "undefined") {
@@ -27,8 +27,7 @@ export default function preloadUserBannerImage(user) {
         }
         let guildMemberBannerURL;
         if (tmp3) {
-          let obj = getAvatarURL;
-          obj = { id: null, guildId: null, banner: null, canAnimate: null, size: 600 };
+          let obj = { id: null, guildId: null, banner: null, canAnimate: null, size: 600 };
           obj[0] = id;
           obj[1] = arg1;
           obj[2] = user.guild_member_profile.banner;
@@ -50,7 +49,6 @@ export default function preloadUserBannerImage(user) {
           const GifAutoPlay2 = explicitContentFromProto.GifAutoPlay;
           obj[2] = GifAutoPlay2.getSetting();
           guildMemberBannerURL = getAvatarURL.getUserBannerURL(obj);
-          const obj3 = getAvatarURL;
         }
         if (null != guildMemberBannerURL) {
           const image = new globalThis.Image();

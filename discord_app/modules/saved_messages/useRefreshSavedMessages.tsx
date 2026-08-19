@@ -1,10 +1,10 @@
 // === Module 12722: useRefreshSavedMessages ===
 
 // Module 12722 (useRefreshSavedMessages)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
 
 export default function useRefreshSavedMessages() {
   const effect = React.useEffect(() => {

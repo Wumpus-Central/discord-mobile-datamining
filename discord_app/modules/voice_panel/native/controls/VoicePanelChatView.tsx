@@ -2,9 +2,11 @@
 
 // Module 11437 (memoResult1)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
+import registerAssetDefault from "registerAsset" /* 4329 */;
 import IconButton from "IconButton" /* 8035 */;
-import setDefault from "set" /* 8125 */;
+import obj132Default from "obj132" /* 8125 */;
 import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 11435 */;
 import dismissPanelDefault from "dismissPanel" /* 11439 */;
 import importAllResult from "noop" /* 19 */;
 import { Platform } from "get ActivityIndicator" /* 17 */;
@@ -13,7 +15,7 @@ import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 let c3 = importAllResult;
 ({ ComponentActions: c4, ME: c5 } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -33,7 +35,7 @@ let closure_10 = importAllResult.memo(() => {
   items = [callback2().gradientWrapper, animatedStyle];
   const tmp = callback2();
   obj[1] = callback(getMixedGradientColorDefault, { absolute: true });
-  return callback(setDefault, obj);
+  return callback(obj132Default, obj);
 });
 const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
   const callback = importAllResult.useCallback(() => {
@@ -44,27 +46,26 @@ const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
     let obj = { accessibilityLabel: null, icon: null, onPress: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4329);
+    obj[1] = registerAssetDefault;
     obj[2] = callback;
-    let tmp5Result = tmp5(tmp(11435), obj);
-    const tmpResult = tmp(11435);
+    let tmp5Result = callback(ChatFloatingNavButtonDefault, obj);
+    const tmpResult = ChatFloatingNavButtonDefault;
   } else {
     obj = { accessibilityLabel: null, icon: null, onPress: null, variant: "primary-overlay" };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["5MstTl"]);
-    obj[1] = tmp(4329);
+    obj[1] = registerAssetDefault;
     obj[2] = callback;
-    tmp5Result = tmp5(IconButton.IconButton, obj);
+    tmp5Result = callback(IconButton.IconButton, obj);
   }
   return tmp5Result;
 });
 const memoResult1 = importAllResult.memo(function VoicePanelChatView(shown) {
   shown = shown.shown;
-  let ref;
   let guildId;
   let channelId;
   let tmp = callback2();
-  ref = channelId.useRef(null);
+  const ref = channelId.useRef(null);
   const context = channelId.useContext(ref(guildId[13]));
   guildId = context.guildId;
   channelId = context.channelId;
@@ -81,7 +82,7 @@ const memoResult1 = importAllResult.memo(function VoicePanelChatView(shown) {
     }
     ref(guildId[21]).preload(tmp, channelId);
     return () => {
-      closure_1_1(closure_1_2[6]).updateChatOpen(closure_3, false);
+      ref(guildId[6]).updateChatOpen(closure_3, false);
     };
   }, items);
   const items1 = [channelId, shown];
@@ -106,13 +107,11 @@ const memoResult1 = importAllResult.memo(function VoicePanelChatView(shown) {
     const ComponentDispatch = shown(guildId[8]).ComponentDispatch;
     ComponentDispatch.dispatch(constants.VOICE_PANEL_TIV_CLOSE);
   }, []);
-  obj = { value: controlsDrawerOpenWidth, children: null };
   obj = { gradient: ref(guildId[22])(), children: null };
   obj1 = { nativeID: "voice-panel-chat-view", accessibilityViewIsModal: shown, onAccessibilityEscape: callback, style: items2, children: null };
   items2 = [tmp.container, gradientTop];
   const items3 = [callback(closure_10, {}), , ];
   const obj2 = { title: null, disablePill: true, blurStyle: null };
-  const tmp11 = closure_7;
   const tmp9 = ref(guildId[22])();
   const intl = shown(guildId[10]).intl;
   obj2[0] = intl.string(shown(guildId[10]).t["/VQax8"]);
@@ -124,11 +123,11 @@ const memoResult1 = importAllResult.memo(function VoicePanelChatView(shown) {
   }
   items3[2] = callback(ref(guildId[27]), { disableGradient: true, alwaysRespectKeyboard: false, setNoExtractUI: false, guildId, channelId, chatInputRef: ref, screenIndex: "voice-panel" });
   obj1[4] = items3;
-  obj[1] = tmp11(shown(guildId[25]).AccessibilityView, obj1);
+  obj[1] = callback2(shown(guildId[25]).AccessibilityView, obj1);
   obj[1] = callback(shown(guildId[24]).ThemeContextProvider, obj);
   return callback(ref(guildId[23]).Provider, obj);
 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelChatView.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelChatView.tsx");
 
 export default memoResult1;
 export const MemoedVoicePanelDismissChatButton = memoResult;

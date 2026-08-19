@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ View: c3, StyleSheet, Image: c4, PixelRatio: c5, Platform } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const styles = StyleSheet.create({ container: { flexGrow: 1 }, fill: { flex: 1 }, hidden: { opacity: 0 } });
@@ -26,12 +26,12 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
     tmp3 = obj;
   }
   let riveFile = obj.useRiveFile(src, tmp3).riveFile;
-  let tmpResult = tmp(tmp2[3]);
+  let tmpResult = require(tmp2[3]);
   const rive = tmpResult.useRive();
   const riveViewRef = rive.riveViewRef;
   let obj3 = pause;
-  const enabled = pause.useContext(tmp(tmp2[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
-  tmpResult = tmp(tmp2[5]);
+  const enabled = pause.useContext(require(tmp2[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
+  tmpResult = require(tmp2[5]);
   const experiments = tmpResult.useManaContext().experiments;
   let flag;
   if (experiments != null) {
@@ -63,14 +63,13 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
   let instance = require(play[3]).useViewModelInstance(tmp11, { artboardName: artboard, instanceName: memo }).instance;
   let None = instance;
   if (instance == null) {
-    None = tmp(tmp2[3]).DataBindMode.None;
+    None = require(tmp2[3]).DataBindMode.None;
   }
   let reducedMotion;
   if (artboardProperties[artboard] != null) {
     reducedMotion = tmp14.reducedMotion;
   }
   const tmp16 = null != reducedMotion;
-  const tmp9 = items.length > 0;
   const tmpResult1 = require(play[3]);
   obj = { isReady: tmp6, appStatePlaybackEnabled: flag, shouldShortLoopForReducedMotion: null };
   let tmp17 = enabled;
@@ -89,7 +88,7 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
   const items2 = [container.container, ];
   let hidden;
   if (null == riveViewRef) {
-    hidden = tmp22.hidden;
+    hidden = container.hidden;
   }
   obj1 = { style: items2, children: null };
   items2[1] = hidden;
@@ -112,14 +111,14 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
     }
     items3[1] = renderDataBindingResult;
     obj1[1] = items3;
-    return closure_7(closure_3, obj1);
+    return callback2(closure_3, obj1);
   } else {
     obj3 = { file: null, hybridRef: null, artboardName: null, autoPlay: true, dataBind: null, style: null };
     obj3[0] = riveFile;
     obj3[1] = rive.setHybridRef;
     obj3[2] = artboard;
     obj3[4] = None;
-    const items4 = [tmp22.fill, style];
+    const items4 = [container.fill, style];
     obj3[5] = items4;
     if (null != stateMachine) {
       const obj4 = { stateMachineName: null };
@@ -131,7 +130,7 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
     const merged = Object.assign(obj5);
     if (null != fit) {
       const obj6 = { fit: null };
-      obj6[0] = tmp(tmp2[7]).FIT_MAP[fit];
+      obj6[0] = require(tmp2[7]).FIT_MAP[fit];
       let obj7 = obj6;
     } else {
       obj7 = {};
@@ -139,7 +138,7 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
     const merged1 = Object.assign(obj7);
     if (null != alignment) {
       const obj8 = { alignment: null };
-      obj8[0] = tmp(tmp2[7]).ALIGNMENT_MAP[alignment];
+      obj8[0] = require(tmp2[7]).ALIGNMENT_MAP[alignment];
       let obj9 = obj8;
     } else {
       obj9 = {};
@@ -153,41 +152,39 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
       obj11 = {};
     }
     const merged3 = Object.assign(obj11);
-    closure_6(tmp(tmp2[3]).RiveView, obj3);
-    const tmp25 = closure_6;
+    callback(require(tmp2[3]).RiveView, obj3);
   }
+  const tmpResult2 = require(play[6]);
 });
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/BaseRive.tsx");
+let result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/BaseRive.tsx");
 
 export const BaseRive = forwardRefResult;
 export const useNumberBinding = function useNumberBinding(AnimationState, instance, AnimationState2, AnimationState1, playIfNeeded) {
   let _require = AnimationState2;
-  dependencyMap = playIfNeeded;
   const iter = _require(4110).useRiveNumber(AnimationState, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
   const items = [AnimationState2, setValue, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
-    if (null != closure_0) {
-      if (typeof str !== "number") {
+    if (null != AnimationState2) {
+      if (typeof AnimationState2 !== "number") {
         const _Number = Number;
         const _parseFloat = parseFloat;
         let num = 0;
-        if (!Number.isNaN(parseFloat(str.toString()))) {
+        if (!Number.isNaN(parseFloat(AnimationState2.toString()))) {
           const _parseFloat2 = parseFloat;
-          num = parseFloat(str.toString());
+          num = parseFloat(AnimationState2.toString());
         }
         let tmp2 = num;
       } else {
         const _Number2 = Number;
-        tmp2 = str;
+        tmp2 = AnimationState2;
       }
-      closure_2(tmp2);
+      callback(tmp2);
       if (AnimationState1 != null) {
         AnimationState1();
       }
-      const tmp5 = closure_2;
     }
   }, items);
   _require = value;
@@ -209,15 +206,14 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
 };
 export const useStringBinding = function useStringBinding(LVL, instance, LVL2, LVL1, playIfNeeded) {
   let _require = LVL2;
-  dependencyMap = playIfNeeded;
   const iter = _require(4110).useRiveString(LVL, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
   const value = iter.value;
   const items = [LVL2, setValue, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
-    if (null != closure_0) {
-      callback(closure_0.toString());
+    if (null != LVL2) {
+      callback(LVL2.toString());
       if (LVL1 != null) {
         LVL1();
       }
@@ -242,7 +238,6 @@ export const useStringBinding = function useStringBinding(LVL, instance, LVL2, L
 };
 export const useBooleanBinding = function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled, pressed1, playIfNeeded) {
   let _require = reducedMotionEnabled;
-  dependencyMap = playIfNeeded;
   const iter = _require(4110).useRiveBoolean(reducedMotion, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
@@ -283,8 +278,8 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
   closure_4 = value;
   const items = [FillColor2, setValue, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
-    if (null != closure_0) {
-      setValue(closure_0.toString());
+    if (null != FillColor2) {
+      setValue(FillColor2.toString());
       if (playIfNeeded != null) {
         playIfNeeded();
       }
@@ -297,17 +292,16 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
   }, items1);
   const items2 = [value];
   const effect2 = importAllResult.useEffect(() => {
-    if (null != closure_4) {
+    if (null != value) {
       const current = ref.current;
       if (current != null) {
-        current(closure_4.toInt());
+        current(value.toInt());
       }
     }
   }, items2);
 };
 export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, stateFromStores) {
   let _require = arg2;
-  dependencyMap = arg4;
   const iter = _require(4110).useRiveEnum(FillColor, instance);
   const setValue = iter.setValue;
   importAllResult = setValue;
@@ -353,9 +347,9 @@ export const useTriggerBinding = function useTriggerBinding(startAnimation, inst
   const effect = trigger.useEffect(() => {
     let tmp2 = closure_0;
     if (typeof closure_0 !== "boolean") {
-      let tmp4 = 0 !== tmp;
+      let tmp4 = 0 !== closure_0;
       if (tmp4) {
-        tmp4 = null != tmp;
+        tmp4 = null != closure_0;
       }
       tmp2 = tmp4;
     }
@@ -378,22 +372,22 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
       if (null != closure_2) {
         c0 = false;
         const RiveImages = img(instance[3]).RiveImages;
-        let uri = tmp;
-        if (typeof tmp === "number") {
-          uri = playIfNeeded.resolveAssetSource(tmp).uri;
+        let uri = closure_2;
+        if (typeof closure_2 === "number") {
+          uri = playIfNeeded.resolveAssetSource(closure_2).uri;
         }
         const fromURLAsync = RiveImages.loadFromURLAsync(uri);
-        fromURLAsync.then((arg0) => {
+        fromURLAsync.then((result) => {
           if (!c0) {
-            const imagePropertyResult = closure_1_1.imageProperty(c0);
+            const imagePropertyResult = instance.imageProperty(c0);
             if (imagePropertyResult != null) {
-              const result = imagePropertyResult.set(arg0);
+              result = imagePropertyResult.set(result);
             }
-            if (closure_1_4 != null) {
+            if (playIfNeeded != null) {
               tmp6();
             }
           }
-        }).catch(() => {
+        }).catch((error) => {
 
         });
         return () => {
@@ -409,8 +403,8 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
   }, items1);
   const items2 = [img, instance];
   const effect2 = importAllResult.useEffect(() => {
-    if (null != closure_1) {
-      const imagePropertyResult = closure_1.imageProperty(closure_0);
+    if (null != instance) {
+      const imagePropertyResult = instance.imageProperty(closure_0);
       if (null != imagePropertyResult) {
         return imagePropertyResult.addListener(() => {
           const current = ref.current;
@@ -431,13 +425,13 @@ export const useArtboardBinding = function useArtboardBinding(Icon, instance, fi
   closure_4 = playIfNeeded;
   const items = [Icon, instance, file, Icon2, playIfNeeded];
   const effect = file.useEffect(() => {
-    if (null != closure_1) {
-      if (null != closure_2) {
+    if (null != instance) {
+      if (null != bindableArtboard) {
         if (typeof closure_3 === "string") {
           try {
-            const artboardPropertyResult = closure_1.artboardProperty(closure_0);
+            const artboardPropertyResult = instance.artboardProperty(closure_0);
             if (artboardPropertyResult != null) {
-              const result = artboardPropertyResult.set(obj2.getBindableArtboard(tmp));
+              const result = artboardPropertyResult.set(bindableArtboard.getBindableArtboard(tmp));
             }
             if (closure_4 != null) {
               tmp4();
@@ -446,7 +440,6 @@ export const useArtboardBinding = function useArtboardBinding(Icon, instance, fi
           }
         }
       }
-      obj2 = closure_2;
     }
   }, items);
 };

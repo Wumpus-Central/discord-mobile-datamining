@@ -2,15 +2,15 @@
 
 // Module 15220 (trackRegTransition)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateInvite" /* 4359 */;
-import closure_5 from "getDisplayedInviteCode" /* 8923 */;
+import noop from "noop" /* 19 */;
+import updateInvite from "updateInvite" /* 4359 */;
+import getDisplayedInviteCode from "getDisplayedInviteCode" /* 8923 */;
 import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 function trackRegTransition(overrideRegistrationOptions) {
   let registrationOptions = overrideRegistrationOptions.overrideRegistrationOptions;
   ({ step, fromStep, toStep, actionType, details } = overrideRegistrationOptions);
@@ -41,8 +41,7 @@ function trackRegTransition(overrideRegistrationOptions) {
       str2 = "phone";
     }
   }
-  let obj = expandEventPropertiesDefault;
-  obj = { step, identity_type: str2, action_type: actionType, action_details: details, registration_source: str, invite_code: null, invite_channel_id: null, invite_channel_type: null, invite_guild_id: null, invite_inviter_id: null, from_step: null, to_step: null };
+  const obj = { step, identity_type: str2, action_type: actionType, action_details: details, registration_source: str, invite_code: null, invite_channel_id: null, invite_channel_type: null, invite_guild_id: null, invite_inviter_id: null, from_step: null, to_step: null };
   let code;
   if (invite != null) {
     code = invite.code;
@@ -86,7 +85,7 @@ function trackRegTransition(overrideRegistrationOptions) {
 }
 ({ clearRegistrationErrorMessage: closure_6, useRegistrationUIStore: error } = useRegistrationUIStore);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: c9 } = RegistrationTransitionActionTypes);
-const result = require("set").fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
 
 export const hasAllRegistrationFieldsCompleted = function hasAllRegistrationFieldsCompleted(email, isConsentRequired) {
   isConsentRequired = isConsentRequired.isConsentRequired;
@@ -126,7 +125,7 @@ export function getTrackRegTransition(closure_0) {
         obj[0] = step;
         obj[1] = ref.current;
         obj[2] = actionType;
-        closure_1_12(obj);
+        trackRegTransition(obj);
       }
     }
     if (actionType === closure_1_9.VIEWED) {
@@ -135,7 +134,7 @@ export function getTrackRegTransition(closure_0) {
         obj[0] = step;
         obj[1] = ref.current;
         obj[2] = actionType;
-        closure_1_12(obj);
+        trackRegTransition(obj);
       }
       ref.current = step;
     } else if (null != step) {
@@ -145,7 +144,7 @@ export function getTrackRegTransition(closure_0) {
       obj[2] = actionType;
       obj[3] = details;
       obj[4] = overrideRegistrationOptions;
-      closure_1_12(obj);
+      trackRegTransition(obj);
     }
     return tmp9;
   };

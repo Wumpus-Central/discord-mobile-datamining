@@ -2,7 +2,7 @@
 
 // Module 12687 (HeaderWithBorder)
 import noopAll from "noop" /* 19 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4097 */;
 import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
@@ -10,27 +10,27 @@ import GenericHeaderTitle from "GenericHeaderTitle" /* 8492 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
 
-require = arg1;
+require = fn;
 function HeaderWithBorder(arg0) {
   let obj = map;
   const token = obj.useToken(ThemesDefault.colors.BORDER_SUBTLE);
   obj = {};
   const merged = Object.assign(arg0);
   const obj2 = GenericHeaderTitle;
-  obj.shouldHandleSafeArea = set.isAndroid();
+  obj.shouldHandleSafeArea = obj132.isAndroid();
   obj.style = { borderColor: token };
   return obj2.renderHeader(obj);
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_6 = createNativeStackNavigator.createNativeStackNavigator();
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
+const result = require("obj132").fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
 
 export default function ConversationNavigator(route) {
   const params = route.route.params;
   const channelId = params.channelId;
   let obj = channelId(6312);
-  obj = { id: "conversation-navigator", screenOptions: obj.useAccessibilityNativeStackOptions(), children: null };
+  { id: "conversation-navigator", screenOptions: obj.useAccessibilityNativeStackOptions(), children: null };
   obj = {
     initialParams: { channelId, guildId: params.guildId },
     name: channelId(12688).ConversationNavigatorScreens.LIST,
@@ -40,11 +40,11 @@ export default function ConversationNavigator(route) {
           const merged = Object.assign(arg0);
           return callback(closure_5, {});
         },
-        headerLeft: channelId(closure_1_2[4]).getRenderBackImage(navigation.navigation),
+        headerLeft: channelId(dependencyMap[4]).getRenderBackImage(navigation.navigation),
         headerTitle() {
           const obj = { channelId: closure_0, title: null };
-          const intl = closure_1_0(closure_1_2[10]).intl;
-          obj[1] = intl.string(closure_1_0(closure_1_2[10]).t.T3WBRp);
+          const intl = channelId(closure_1_2[10]).intl;
+          obj[1] = intl.string(channelId(closure_1_2[10]).t.T3WBRp);
           return closure_1_3(closure_1_1(closure_1_2[9]), obj);
         }
       };

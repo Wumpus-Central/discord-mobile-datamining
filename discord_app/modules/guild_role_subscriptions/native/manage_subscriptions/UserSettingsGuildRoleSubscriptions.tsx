@@ -13,11 +13,10 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function GuildRoleSubscriptionsSectionHeader() {
   const tmp = callback3();
-  let obj = { style: tmp.sectionHeader, children: null };
-  obj = { variant: "eyebrow", color: "text-default", children: null };
+  let obj = { variant: "eyebrow", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["KzCF/6"]);
   const items = [callback(Text.Text, obj), ];
@@ -43,7 +42,7 @@ noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let c7 = "role-subscriptions";
 let closure_8 = createCacheKey.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");
 
 export default function UserSettingsGuildRoleSubscriptions() {
   const tmp = callback3();
@@ -51,7 +50,7 @@ export default function UserSettingsGuildRoleSubscriptions() {
   const tmp5 = useActiveGuildSubscriptionsDefault({ ensureFresh: true });
   let obj = useFetchListingsForGuild;
   if (obj.useFetchListingsForSubscriptions(tmp5).loading) {
-    let tmp6Result = tmp6(LoadingIndicatorDefault, {});
+    let tmp6Result = callback(LoadingIndicatorDefault, {});
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
@@ -70,8 +69,8 @@ export default function UserSettingsGuildRoleSubscriptions() {
       return callback2(callback(table[11]), { subscription: subscription.item });
     };
     obj[7] = ItemSeparator;
-    obj[1] = tmp6(closure_4, obj);
-    tmp6Result = tmp6(closure_3, obj);
+    obj[1] = callback(closure_4, obj);
+    tmp6Result = callback(closure_3, obj);
   }
   return tmp6Result;
 };

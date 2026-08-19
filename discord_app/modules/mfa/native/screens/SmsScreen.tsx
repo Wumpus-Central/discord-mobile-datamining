@@ -1,21 +1,20 @@
 // === Module 15132: SmsScreen ===
 
 // Module 15132 (SmsScreen)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { Endpoints } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/mfa/native/screens/SmsScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/mfa/native/screens/SmsScreen.tsx");
 
 export default function SmsScreen(mfaChallenge) {
   mfaChallenge = mfaChallenge.mfaChallenge;
   const finish = mfaChallenge.finish;
-  dependencyMap = undefined;
   c3 = undefined;
   let first;
   let React;
@@ -96,7 +95,6 @@ export default function SmsScreen(mfaChallenge) {
                   message = lib.message;
                 }
                 SMS_CODE_LENGTH(message);
-                const tmp14 = SMS_CODE_LENGTH;
               } else if (arg0 === 1) {
                 v02 = 3;
                 throw arg1;
@@ -206,7 +204,6 @@ export default function SmsScreen(mfaChallenge) {
               c4 = 0;
               closure_1_3(false);
               v0 = 3;
-              const tmp16 = closure_2;
             } else if (arg0 === 1) {
               v0 = 3;
               throw arg1;
@@ -266,22 +263,21 @@ export default function SmsScreen(mfaChallenge) {
   const effect = React.useEffect(() => {
     dependencyMap(null);
     const HTTP = mfaChallenge(530).HTTP;
-    obj = { url: _undefined2.LOGIN_SMS_SEND, body: obj, oldFormErrors: true, rejectWithError: false };
-    obj = { ticket: mfaChallenge.ticket };
+    const obj = { ticket: mfaChallenge.ticket };
     const postResult = HTTP.post(obj);
-    HTTP.post(obj).then((body) => {
-      const intl = closure_1_0(closure_1_2[8]).intl;
-      callback(intl.formatToPlainString(closure_1_0(closure_1_2[8]).t["8r6h7+"], { phoneNumber: body.body.phone }));
-    }).catch((body) => {
-      body = body.body;
+    HTTP.post(obj).then((result) => {
+      const intl = mfaChallenge(closure_1_2[8]).intl;
+      callback(intl.formatToPlainString(mfaChallenge(closure_1_2[8]).t["8r6h7+"], { phoneNumber: result.body.phone }));
+    }).catch((error) => {
+      const body = error.body;
       let message;
       if (body != null) {
         message = body.message;
       }
       if (message == null) {
-        message = body.message;
+        message = error.message;
       }
-      closure_2(message);
+      callback(message);
       callback(undefined);
     });
   }, items);

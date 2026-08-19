@@ -1,7 +1,7 @@
 // === Module 1967: prefix ===
 
 // Module 1967 (prefix)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1960 */;
 import TableId from "TableId" /* 1962 */;
 
@@ -118,12 +118,12 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((state) => {
-    if (typeof closure_1_2 !== "function") {
+    if (typeof GuildDaoTransaction !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(closure_1_2.prototype);
+    const obj = Object.create(GuildDaoTransaction.prototype);
     obj.state = state;
-    return closure_0(obj);
+    return callback(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
@@ -198,7 +198,7 @@ prototype2["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
   const state = this.state;
   return state.deleteGeneration([], arg0, arg1);
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildDao.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildDao.tsx");
 
 export { GuildDao };
 export { GuildDaoTransaction };

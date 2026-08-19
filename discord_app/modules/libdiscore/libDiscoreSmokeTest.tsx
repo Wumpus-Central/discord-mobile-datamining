@@ -3,10 +3,10 @@
 // Module 17140 (libDiscoreSmokeTest)
 import timestampDefault from "timestamp" /* 3 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function libDiscoreSmokeTest() {
   const self = this;
   const apply = _libDiscoreSmokeTest.apply;
@@ -108,8 +108,8 @@ function _libDiscoreSmokeTest() {
 function trackLibdiscoreSuccess() {
   const items = [];
   const prop = items(1914).ALL_LIBDISCORE_EXPERIMENTS;
-  const item = prop.forEach((getEnabledFeatureName) => {
-    const enabledFeatureName = getEnabledFeatureName.getEnabledFeatureName();
+  const item = prop.forEach((item, index) => {
+    const enabledFeatureName = item.getEnabledFeatureName();
     if (null != enabledFeatureName) {
       items.push(enabledFeatureName);
     }
@@ -142,7 +142,7 @@ function trackLibdiscoreFailure(arg0) {
 let closure_5 = new timestampDefault("libdiscore");
 let c6 = false;
 const tmp2 = new timestampDefault("libdiscore");
-const result = require("set").fileFinishedImporting("modules/libdiscore/libDiscoreSmokeTest.tsx");
+const result = require("obj132").fileFinishedImporting("modules/libdiscore/libDiscoreSmokeTest.tsx");
 
 export default libDiscoreSmokeTest;
 export { libDiscoreSmokeTest };

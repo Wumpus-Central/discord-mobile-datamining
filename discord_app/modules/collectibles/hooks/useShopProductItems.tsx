@@ -2,9 +2,9 @@
 
 // Module 9205 (firstAvatarDecoration)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 class ItemsSortingHat {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -14,7 +14,7 @@ class ItemsSortingHat {
 }
 const prototype = ItemsSortingHat.prototype;
 Object.defineProperty(prototype, "firstAvatarDecoration", {
-  get: function firstAvatarDecoration(first) {
+  get: function firstAvatarDecoration(closure_2) {
     return this.getFirstItemByType(require(1949) /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION);
   },
   set: undefined
@@ -26,13 +26,13 @@ Object.defineProperty(prototype, "firstProfileEffect", {
   set: undefined
 });
 Object.defineProperty(prototype, "firstNameplate", {
-  get: function firstNameplate(first) {
+  get: function firstNameplate(closure_2) {
     return this.getFirstItemByType(require(1949) /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstProfileFrame", {
-  get: function firstProfileFrame(first) {
+  get: function firstProfileFrame(closure_2) {
     return this.getFirstItemByType(require(1949) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME);
   },
   set: undefined
@@ -47,28 +47,28 @@ prototype["getFirstItemByType"] = function getFirstItemByType(AVATAR_DECORATION)
   return null != first ? first : undefined;
 };
 prototype["sortByTypes"] = function sortByTypes(items) {
-  return items.reduce((get, type) => {
-    const value = get.get(type.type);
+  return items.reduce((acc, item, index) => {
+    const value = acc.get(item.type);
     if (null != value) {
-      value.push(type);
+      value.push(item);
     } else {
-      const items = [type];
-      const result = get.set(type.type, items);
+      const items = [item];
+      const result = acc.set(item.type, items);
     }
-    return get;
+    return acc;
   }, new Map());
 };
-let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
 
 export { ItemsSortingHat };
 export const useShopProductItems = function useShopProductItems(product) {
   closure_0 = product;
   const items = [product];
   return React.useMemo(() => {
-    if (typeof closure_1_3 !== "function") {
+    if (typeof ItemsSortingHat !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = Object.create(closure_1_3.prototype);
+    let obj = Object.create(ItemsSortingHat.prototype);
     obj.itemsByTypes = obj.sortByTypes(product.items);
     obj = { firstProfileEffect: obj.firstProfileEffect, firstAvatarDecoration: obj.firstAvatarDecoration, firstNameplate: obj.firstNameplate, firstProfileFrame: obj.firstProfileFrame };
     return obj;

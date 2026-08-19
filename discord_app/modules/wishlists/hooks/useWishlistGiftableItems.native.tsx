@@ -1,13 +1,12 @@
 // === Module 9202: set ===
 
 // Module 9202 (set)
-import closure_0 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
 
 let items = [, , ];
 ({ COLLECTIBLES: arr[0], PREMIUM: arr[1], SOCIAL_LAYER_GAME_ITEM: arr[2] } = require("ME").SKUProductLines);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/wishlists/hooks/useWishlistGiftableItems.native.tsx");
+const set = new Set(items);
+const result = require("obj132").fileFinishedImporting("modules/wishlists/hooks/useWishlistGiftableItems.native.tsx");
 
 export const GIFTABLE_PRODUCT_LINES = set;
 export const useWishlistGiftableItems = function useWishlistGiftableItems(wishlist) {
@@ -17,7 +16,7 @@ export const useWishlistGiftableItems = function useWishlistGiftableItems(wishli
     let found;
     if (wishlist != null) {
       const items = wishlist.items;
-      found = items.filter((skuProductLine) => set.has(skuProductLine.skuProductLine) && !skuProductLine.isOwned);
+      found = items.filter((item, index) => set.has(item.skuProductLine) && !item.isOwned);
     }
     if (found == null) {
       found = [];

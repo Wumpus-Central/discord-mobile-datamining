@@ -1,10 +1,10 @@
 // === Module 10355: useFormattedSKUPrice ===
 
 // Module 10355 (useFormattedSKUPrice)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
 
 export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   sku = sku.sku;
@@ -25,8 +25,8 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   const effect = React.useEffect(() => {
     if (null != _null) {
       const items = [tmp];
-      const inAppSkus = _null(closure_1_2[1]).loadInAppSkus(items);
-      const obj = _null(closure_1_2[1]);
+      const inAppSkus = _null(dependencyMap[1]).loadInAppSkus(items);
+      const obj = _null(dependencyMap[1]);
     }
   }, items);
   const items1 = [stateFromStores(5319)];
@@ -34,8 +34,8 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   stateFromStores = _require(589).useStateFromStores(items1, () => {
     let product = null;
     if (null != c0) {
-      product = stateFromStores(closure_1_2[3]).getProduct(tmp);
-      const obj = stateFromStores(closure_1_2[3]);
+      product = stateFromStores(dependencyMap[3]).getProduct(tmp);
+      const obj = stateFromStores(dependencyMap[3]);
     }
     return product;
   }, items2);
@@ -43,11 +43,11 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   return React.useMemo(() => {
     let priceString;
     if (stateFromStores != null) {
-      priceString = tmp.priceString;
+      priceString = stateFromStores.priceString;
     }
     if (null != priceString) {
       let obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
-      ({ priceString: obj2[0], priceString: obj2[3] } = tmp);
+      ({ priceString: obj2[0], priceString: obj2[3] } = stateFromStores);
     } else {
       obj = { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
     }

@@ -1,12 +1,12 @@
 // === Module 9167: useGameAnnouncements ===
 
 // Module 9167 (useGameAnnouncements)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "getSimilarGames" /* 9098 */;
+import getSimilarGames from "getSimilarGames" /* 9098 */;
 
 const useEffect = noop.useEffect;
-let result = set.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
+let result = obj132.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
 
 export default function useGameAnnouncements(arg0, arg1) {
   const _require = arg0;
@@ -16,17 +16,17 @@ export default function useGameAnnouncements(arg0, arg1) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let announcements;
     if (null != closure_0) {
-      announcements = closure_1_3.getAnnouncements(tmp);
+      announcements = closure_1_3.getAnnouncements(closure_0);
     }
     const obj = { data: announcements, hasFetched: null, isFetching: null };
-    let result = null != tmp;
+    let result = null != closure_0;
     if (result) {
-      result = closure_1_3.hasAnnouncementsBeenFetched(tmp);
+      result = closure_1_3.hasAnnouncementsBeenFetched(closure_0);
     }
     obj[1] = result;
-    let result1 = null != tmp;
+    let result1 = null != closure_0;
     if (result1) {
-      result1 = closure_1_3.isAnnouncementsFetching(tmp);
+      result1 = closure_1_3.isAnnouncementsFetching(closure_0);
     }
     obj[2] = result1;
     return obj;
@@ -36,13 +36,13 @@ export default function useGameAnnouncements(arg0, arg1) {
   hasFetched(() => {
     let result = null == callback || hasFetched;
     if (!result) {
-      result = closure_1_3.isAnnouncementsFetching(tmp);
+      result = closure_1_3.isAnnouncementsFetching(callback);
     }
     if (!result) {
-      let obj = callback(table[3]);
-      obj = { limit: null };
+      callback(table[3]);
+      const obj = { limit: null };
       obj[0] = table;
-      const gameAnnouncements = obj.getGameAnnouncements(tmp, obj);
+      const gameAnnouncements = obj.getGameAnnouncements(callback, obj);
     }
   }, items1);
   let messages;

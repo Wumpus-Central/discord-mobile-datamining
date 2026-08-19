@@ -9,6 +9,7 @@ import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
 import apexExperimentDefault from "apexExperiment" /* 12136 */;
 import handleInputModePressDefault from "handleInputModePress" /* 12550 */;
+import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 12552 */;
 import SoundboardVolumeDefault from "SoundboardVolume" /* 12553 */;
 import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 12554 */;
 import VoiceProcessingOptionsDefault from "VoiceProcessingOptions" /* 12556 */;
@@ -18,11 +19,11 @@ import { USER_SETTINGS_VOICE_GUILD_URL as closure_5 } from "combined" /* 12549 *
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 16 }, tableRow: { marginTop: 12 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoice.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoice.tsx");
 
 export default function UserSettingsVoice() {
   const tmp = callback2();
@@ -31,11 +32,11 @@ export default function UserSettingsVoice() {
   obj = { style: tmp.container, children: null };
   const items = [callback(handleInputModePressDefault, {}), , , , , , ];
   if (nonContextualStreamOutputPresent) {
-    nonContextualStreamOutputPresent = tmp4(tmp2(12552), {});
+    nonContextualStreamOutputPresent = callback(UserSettingsVoiceOutputOptionsDefault, {});
   }
   items[1] = nonContextualStreamOutputPresent;
   obj = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
-  const intl = tmp7(1236).intl;
+  const intl = getSystemLocale.intl;
   obj[2] = intl.format(getSystemLocale.t["V+B3FH"], { guideURL: closure_5 });
   items[2] = callback(Text.Text, obj);
   items[3] = callback(SoundboardVolumeDefault, {});
@@ -44,7 +45,7 @@ export default function UserSettingsVoice() {
   items[5] = callback(VoiceProcessingOptionsDefault, {});
   items[6] = callback(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true });
   obj2[1] = items;
-  obj[1] = closure_7(Stack.Stack, obj2);
+  obj[1] = callback(Stack.Stack, obj2);
   return callback(View, obj);
 };
 export const UserSettingsTableRowGroup = function UserSettingsTableRowGroup(arg0) {

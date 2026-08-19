@@ -1,7 +1,7 @@
 // === Module 8780: SERVER_INVITE ===
 
 // Module 8780 (SERVER_INVITE)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
@@ -10,9 +10,9 @@ import ME2 from "ME" /* 4488 */;
 const AnalyticEvents = ME.AnalyticEvents;
 let closure_4 = { MESSAGE: "Discord Message Link", CHANNEL: "Discord Channel Link", SERVER_INVITE: "Discord Server Invite", GIFT: "Discord Gift Link", UNKNOWN: "Unknown", DISCOVERY: "Discord Discovery Link" };
 const items = [
-  (arr) => {
+  (substr) => {
     let SERVER_INVITE = null;
-    if (obj.isInvite(arr)) {
+    if (obj.isInvite(substr)) {
       SERVER_INVITE = constants.SERVER_INVITE;
     }
     return SERVER_INVITE;
@@ -39,7 +39,6 @@ const items = [
         }
         UNKNOWN = constants.UNKNOWN;
       }
-      const obj2 = ME2;
     }
   },
   (arg0) => {
@@ -50,7 +49,7 @@ const items = [
     return DISCOVERY;
   }
 ];
-const result = set.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");
 
 export default {
   trackDiscordLinkClicked(guildId) {
@@ -89,9 +88,7 @@ export default {
               const iter = dependencyMap[Symbol.iterator]();
               while (iter !== undefined) {
                 let tmp2 = iter.next()(closure_1);
-                let tmp3 = tmp2;
                 if (null != tmp2) {
-                  let tmp4 = iter;
                   iter.return();
                   return tmp2;
                 }
@@ -116,7 +113,6 @@ export default {
         }
         UNKNOWN = constants.UNKNOWN;
       }
-      const tmp = importDefault;
     }
   },
   trackAnnouncementMessageLinkClicked(arg0) {

@@ -1,8 +1,8 @@
 // === Module 7465: QuestTaskJoinOperator ===
 
 // Module 7465 (QuestTaskJoinOperator)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestTaskJoinOperator.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestTaskJoinOperator.tsx");
 
 export const QuestTaskJoinOperator = { AND: "and", OR: "or" };

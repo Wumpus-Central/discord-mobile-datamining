@@ -3,34 +3,34 @@
 // Module 5278 (setIndex)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "initializeFromUserSettings" /* 1394 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import initializeFromUserSettings from "initializeFromUserSettings" /* 1394 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import comparator from "comparator" /* 1980 */;
-import closure_7 from "comparator" /* 1980 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import comparator2 from "comparator" /* 1980 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 
 function setIndex(arg0, index) {
   arg0.index = index;
 }
 function rebuildGuild(arg0) {
-  function updateChannel(channel) {
-    channel = channel.channel;
+  function updateChannel(item, index) {
+    const channel = item.channel;
     let str = "null";
     if (null != channel.parent_id) {
       str = channel.parent_id;
     }
-    let _null = tmp[str];
+    let _null = obj[str];
     if (_null == null) {
-      _null = tmp.null;
+      _null = obj.null;
     }
     _null.push({ channel, index: -1 });
   }
   const channels = store2.getChannels(arg0);
   const obj = { _categories: [], null: [] };
-  const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-    channel = channel.channel;
+  const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+    const channel = item.channel;
     const _categories = obj._categories;
     _categories.push({ channel, index: -1 });
     obj[channel.id] = [];
@@ -44,15 +44,15 @@ function rebuildGuild(arg0) {
 function handleConnectionOpen() {
   closure_12 = {};
   if (null != c11) {
-    function updateChannel(channel) {
-      channel = channel.channel;
+    function updateChannel(item, index) {
+      const channel = item.channel;
       let str = "null";
       if (null != channel.parent_id) {
         str = channel.parent_id;
       }
-      let _null = tmp[str];
+      let _null = obj[str];
       if (_null == null) {
-        _null = tmp.null;
+        _null = obj.null;
       }
       _null.push({ channel, index: -1 });
     }
@@ -60,8 +60,8 @@ function handleConnectionOpen() {
     const obj = { _categories: null, null: null };
     obj[0] = [];
     obj[1] = [];
-    const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-      channel = channel.channel;
+    const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+      const channel = item.channel;
       const _categories = obj._categories;
       _categories.push({ channel, index: -1 });
       obj[channel.id] = [];
@@ -70,9 +70,6 @@ function handleConnectionOpen() {
     const item2 = channels[closure_6].forEach(updateChannel);
     const item3 = obj(5279)(obj._categories, obj).forEach(setIndex);
     closure_12[c11] = obj;
-    const arr = channels[constants.GUILD_CATEGORY];
-    const arr2 = channels[closure_5];
-    const arr3 = channels[closure_6];
     const arr4 = obj(5279)(obj._categories, obj);
   }
 }
@@ -80,15 +77,15 @@ function handleGuildUpdates(guild) {
   const id = guild.guild.id;
   closure_12[id] = undefined;
   if (c11 === id) {
-    function updateChannel(channel) {
-      channel = channel.channel;
+    function updateChannel(item, index) {
+      const channel = item.channel;
       let str = "null";
       if (null != channel.parent_id) {
         str = channel.parent_id;
       }
-      let _null = tmp[str];
+      let _null = obj[str];
       if (_null == null) {
-        _null = tmp.null;
+        _null = obj.null;
       }
       _null.push({ channel, index: -1 });
     }
@@ -96,8 +93,8 @@ function handleGuildUpdates(guild) {
     const obj = { _categories: null, null: null };
     obj[0] = [];
     obj[1] = [];
-    const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-      channel = channel.channel;
+    const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+      const channel = item.channel;
       const _categories = obj._categories;
       _categories.push({ channel, index: -1 });
       obj[channel.id] = [];
@@ -106,9 +103,6 @@ function handleGuildUpdates(guild) {
     const item2 = channels[closure_6].forEach(updateChannel);
     const item3 = obj(5279)(obj._categories, obj).forEach(setIndex);
     closure_12[id] = obj;
-    const arr = channels[constants.GUILD_CATEGORY];
-    const arr2 = channels[closure_5];
-    const arr3 = channels[closure_6];
     const arr4 = obj(5279)(obj._categories, obj);
   }
 }
@@ -119,15 +113,15 @@ function handleChannelUpdate(channel) {
   } else {
     closure_12[guild_id] = undefined;
     if (c11 === guild_id) {
-      function updateChannel(channel) {
-        channel = channel.channel;
+      function updateChannel(item, index) {
+        const channel = item.channel;
         let str = "null";
         if (null != channel.parent_id) {
           str = channel.parent_id;
         }
-        let _null = tmp[str];
+        let _null = obj[str];
         if (_null == null) {
-          _null = tmp.null;
+          _null = obj.null;
         }
         _null.push({ channel, index: -1 });
       }
@@ -135,8 +129,8 @@ function handleChannelUpdate(channel) {
       const obj = { _categories: null, null: null };
       obj[0] = [];
       obj[1] = [];
-      const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-        channel = channel.channel;
+      const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+        const channel = item.channel;
         const _categories = obj._categories;
         _categories.push({ channel, index: -1 });
         obj[channel.id] = [];
@@ -145,9 +139,6 @@ function handleChannelUpdate(channel) {
       const item2 = channels[closure_6].forEach(updateChannel);
       const item3 = obj(5279)(obj._categories, obj).forEach(setIndex);
       closure_12[guild_id] = obj;
-      const arr = channels[constants.GUILD_CATEGORY];
-      const arr2 = channels[closure_5];
-      const arr3 = channels[closure_6];
       const arr4 = obj(5279)(obj._categories, obj);
     }
   }
@@ -156,15 +147,15 @@ function handleGuildRoleUpdate(guildId) {
   guildId = guildId.guildId;
   closure_12[guildId] = undefined;
   if (guildId === c11) {
-    function updateChannel(channel) {
-      channel = channel.channel;
+    function updateChannel(item, index) {
+      const channel = item.channel;
       let str = "null";
       if (null != channel.parent_id) {
         str = channel.parent_id;
       }
-      let _null = tmp[str];
+      let _null = obj[str];
       if (_null == null) {
-        _null = tmp.null;
+        _null = obj.null;
       }
       _null.push({ channel, index: -1 });
     }
@@ -172,8 +163,8 @@ function handleGuildRoleUpdate(guildId) {
     const obj = { _categories: null, null: null };
     obj[0] = [];
     obj[1] = [];
-    const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-      channel = channel.channel;
+    const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+      const channel = item.channel;
       const _categories = obj._categories;
       _categories.push({ channel, index: -1 });
       obj[channel.id] = [];
@@ -182,9 +173,6 @@ function handleGuildRoleUpdate(guildId) {
     const item2 = channels[closure_6].forEach(updateChannel);
     const item3 = obj(5279)(obj._categories, obj).forEach(setIndex);
     closure_12[guildId] = obj;
-    const arr = channels[constants.GUILD_CATEGORY];
-    const arr2 = channels[closure_5];
-    const arr3 = channels[closure_6];
     const arr4 = obj(5279)(obj._categories, obj);
   }
 }
@@ -198,15 +186,15 @@ function updateSelectedVoiceChannel(channel, channelId) {
         closure_12[guildId] = undefined;
         flag = true;
         if (guildId === c11) {
-          function updateChannel(channel) {
-            channel = channel.channel;
+          function updateChannel(item, index) {
+            const channel = item.channel;
             let str = "null";
             if (null != channel.parent_id) {
               str = channel.parent_id;
             }
-            let _null = tmp[str];
+            let _null = obj[str];
             if (_null == null) {
-              _null = tmp.null;
+              _null = obj.null;
             }
             _null.push({ channel, index: -1 });
           }
@@ -214,8 +202,8 @@ function updateSelectedVoiceChannel(channel, channelId) {
           const obj = { _categories: null, null: null };
           obj[0] = [];
           obj[1] = [];
-          const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-            channel = channel.channel;
+          const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+            const channel = item.channel;
             const _categories = obj._categories;
             _categories.push({ channel, index: -1 });
             obj[channel.id] = [];
@@ -225,9 +213,6 @@ function updateSelectedVoiceChannel(channel, channelId) {
           const item3 = obj(5279)(obj._categories, obj).forEach(setIndex);
           closure_12[guildId] = obj;
           flag = true;
-          const arr = channels[constants.GUILD_CATEGORY];
-          const arr2 = channels[closure_5];
-          const arr3 = channels[closure_6];
           const arr4 = obj(5279)(obj._categories, obj);
         }
       }
@@ -237,22 +222,22 @@ function updateSelectedVoiceChannel(channel, channelId) {
   return false;
 }
 function handleFavoritesUpdate() {
-  function updateChannel(channel) {
-    channel = channel.channel;
+  function updateChannel(item, index) {
+    const channel = item.channel;
     let str = "null";
     if (null != channel.parent_id) {
       str = channel.parent_id;
     }
-    let _null = tmp[str];
+    let _null = obj[str];
     if (_null == null) {
-      _null = tmp.null;
+      _null = obj.null;
     }
     _null.push({ channel, index: -1 });
   }
   const channels = store2.getChannels(closure_10);
   const obj = { _categories: [], null: [] };
-  const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-    channel = channel.channel;
+  const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+    const channel = item.channel;
     const _categories = obj._categories;
     _categories.push({ channel, index: -1 });
     obj[channel.id] = [];
@@ -281,15 +266,15 @@ prototype["getCategories"] = function getCategories(arg0) {
   if (null != arg0) {
     let tmp3 = dependencyMap[arg0];
     if (tmp3 == null) {
-      function updateChannel(channel) {
-        channel = channel.channel;
+      function updateChannel(item, index) {
+        const channel = item.channel;
         let str = "null";
         if (null != channel.parent_id) {
           str = channel.parent_id;
         }
-        let _null = tmp[str];
+        let _null = obj[str];
         if (_null == null) {
-          _null = tmp.null;
+          _null = obj.null;
         }
         _null.push({ channel, index: -1 });
       }
@@ -297,8 +282,8 @@ prototype["getCategories"] = function getCategories(arg0) {
       const obj = { _categories: null, null: null };
       obj[0] = [];
       obj[1] = [];
-      const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-        channel = channel.channel;
+      const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+        const channel = item.channel;
         const _categories = obj._categories;
         _categories.push({ channel, index: -1 });
         obj[channel.id] = [];
@@ -308,9 +293,6 @@ prototype["getCategories"] = function getCategories(arg0) {
       const item3 = obj(5279)(obj._categories, obj).forEach(setIndex);
       dependencyMap[arg0] = obj;
       tmp3 = obj;
-      const arr = channels[constants.GUILD_CATEGORY];
-      const arr2 = channels[closure_5];
-      const arr3 = channels[closure_6];
       const arr4 = obj(5279)(obj._categories, obj);
     }
     let tmp = tmp3;
@@ -331,15 +313,15 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
     let tmp2 = null != guildId;
     if (tmp2) {
       if (null == dependencyMap[guildId]) {
-        function updateChannel(channel) {
-          channel = channel.channel;
+        function updateChannel(item, index) {
+          const channel = item.channel;
           let str = "null";
           if (null != channel.parent_id) {
             str = channel.parent_id;
           }
-          let _null = tmp[str];
+          let _null = obj[str];
           if (_null == null) {
-            _null = tmp.null;
+            _null = obj.null;
           }
           _null.push({ channel, index: -1 });
         }
@@ -347,8 +329,8 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
         const obj = { _categories: null, null: null };
         obj[0] = [];
         obj[1] = [];
-        const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-          channel = channel.channel;
+        const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+          const channel = item.channel;
           const _categories = obj._categories;
           _categories.push({ channel, index: -1 });
           obj[channel.id] = [];
@@ -357,9 +339,6 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
         const item2 = channels[closure_6].forEach(updateChannel);
         const item3 = obj(5279)(obj._categories, obj).forEach(setIndex);
         dependencyMap[guildId] = obj;
-        const arr = channels[constants.GUILD_CATEGORY];
-        const arr2 = channels[closure_5];
-        const arr3 = channels[closure_6];
         const arr4 = obj(5279)(obj._categories, obj);
       }
       tmp2 = tmp4;
@@ -383,14 +362,9 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
       let guild_id = iter.next().guild_id;
       let tmp = guild_id;
       if (null != guild_id) {
-        let tmp2 = closure_12;
-        let tmp3 = guild_id;
         closure_12[tmp] = undefined;
         flag = true;
-        let tmp4 = c11;
         if (c11 === tmp) {
-          let tmp5 = rebuildGuild;
-          let tmp6 = guild_id;
           let tmp7 = rebuildGuild(tmp);
         }
       }
@@ -405,15 +379,15 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
     } else {
       closure_12[guildId] = undefined;
       if (guildId === c11) {
-        function updateChannel(channel) {
-          channel = channel.channel;
+        function updateChannel(item, index) {
+          const channel = item.channel;
           let str = "null";
           if (null != channel.parent_id) {
             str = channel.parent_id;
           }
-          let _null = tmp[str];
+          let _null = obj[str];
           if (_null == null) {
-            _null = tmp.null;
+            _null = obj.null;
           }
           _null.push({ channel, index: -1 });
         }
@@ -421,8 +395,8 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
         const obj = { _categories: null, null: null };
         obj[0] = [];
         obj[1] = [];
-        const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-          channel = channel.channel;
+        const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+          const channel = item.channel;
           const _categories = obj._categories;
           _categories.push({ channel, index: -1 });
           obj[channel.id] = [];
@@ -431,9 +405,6 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
         const item2 = channels[closure_6].forEach(updateChannel);
         const item3 = obj(5279)(obj._categories, obj).forEach(setIndex);
         closure_12[guildId] = obj;
-        const arr = channels[constants.GUILD_CATEGORY];
-        const arr2 = channels[closure_5];
-        const arr3 = channels[closure_6];
         const arr4 = obj(5279)(obj._categories, obj);
       }
     }
@@ -442,15 +413,15 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
     if (null == c11) {
       return false;
     } else {
-      function updateChannel(channel) {
-        channel = channel.channel;
+      function updateChannel(item, index) {
+        const channel = item.channel;
         let str = "null";
         if (null != channel.parent_id) {
           str = channel.parent_id;
         }
-        let _null = tmp[str];
+        let _null = obj[str];
         if (_null == null) {
-          _null = tmp.null;
+          _null = obj.null;
         }
         _null.push({ channel, index: -1 });
       }
@@ -458,8 +429,8 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
       const obj = { _categories: null, null: null };
       obj[0] = [];
       obj[1] = [];
-      const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
-        channel = channel.channel;
+      const item = channels[constants.GUILD_CATEGORY].forEach((item, index) => {
+        const channel = item.channel;
         const _categories = obj._categories;
         _categories.push({ channel, index: -1 });
         obj[channel.id] = [];
@@ -468,6 +439,7 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
       const item2 = channels[closure_6].forEach(updateChannel);
       const item3 = obj(5279)(obj._categories, obj).forEach(setIndex);
       closure_12[c11] = obj;
+      const arr4 = obj(5279)(obj._categories, obj);
     }
   },
   GUILD_ROLE_CREATE: handleGuildRoleUpdate,
@@ -487,17 +459,17 @@ const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((arg0, channelId) => {
-      channelId = channelId.channelId;
-      let tmp = arg0;
-      if (sessionId.getSessionId() === channelId.sessionId) {
-        tmp = callback(channel.getChannel(channelId), channelId) || arg0;
-        const tmp4 = callback(channel.getChannel(channelId), channelId) || arg0;
+    return voiceStates.reduce((acc, item, index) => {
+      const channelId = item.channelId;
+      let tmp = acc;
+      if (sessionId.getSessionId() === item.sessionId) {
+        tmp = callback(channel.getChannel(channelId), channelId) || acc;
+        const tmp4 = callback(channel.getChannel(channelId), channelId) || acc;
       }
       return tmp;
     }, false);
   }
 });
-const result = require("set").fileFinishedImporting("stores/GuildCategoryStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/GuildCategoryStore.tsx");
 
 export default guildCategoryStore;

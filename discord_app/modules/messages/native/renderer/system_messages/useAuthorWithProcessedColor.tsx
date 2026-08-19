@@ -1,13 +1,13 @@
 // === Module 8185: getMessageAuthorWithProcessedColor ===
 
 // Module 8185 (getMessageAuthorWithProcessedColor)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
 import processColorStrings from "processColorStrings" /* 8186 */;
 
 const processColor = get_ActivityIndicator.processColor;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");
 
 export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithProcessedColor(message) {
   let obj = useNullableMessageAuthor;

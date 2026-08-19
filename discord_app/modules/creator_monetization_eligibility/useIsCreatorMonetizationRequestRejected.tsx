@@ -1,12 +1,12 @@
 // === Module 16934: useIsCreatorMonetizationRequestRejected ===
 
 // Module 16934 (useIsCreatorMonetizationRequestRejected)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import CreatorMonetizationApplicationState from "CreatorMonetizationApplicationState" /* 16903 */;
 
 let closure_2 = CreatorMonetizationApplicationState.CreatorMonetizationApplicationState;
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
+const result = obj132.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
 
 export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
   let state;

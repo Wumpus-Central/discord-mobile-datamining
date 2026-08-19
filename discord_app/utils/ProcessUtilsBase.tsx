@@ -1,9 +1,9 @@
 // === Module 5423: ElectronProcessType ===
 
 // Module 5423 (ElectronProcessType)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
+const result = obj132.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
 class ProcessUtils {
 }
 const prototype = ProcessUtils.prototype;

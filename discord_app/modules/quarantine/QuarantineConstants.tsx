@@ -1,8 +1,8 @@
 // === Module 11620: QUARANTINE_APPEAL_LINK ===
 
 // Module 11620 (QUARANTINE_APPEAL_LINK)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quarantine/QuarantineConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/quarantine/QuarantineConstants.tsx");
 
 export const QUARANTINE_APPEAL_LINK = "https://dis.gd/appeal";

@@ -2,9 +2,9 @@
 
 // Module 16359 (useActivityShelfItemData)
 import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11212 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");
 
 export const useActivityShelfItemData = function useActivityShelfItemData(guild_id1, applicationId) {
   importDefault = applicationId;
@@ -12,7 +12,7 @@ export const useActivityShelfItemData = function useActivityShelfItemData(guild_
   dependencyMap = tmp;
   const items = [tmp, applicationId];
   return React.useMemo(() => {
-    let found = closure_1.find((application) => application.application.id === closure_0);
+    let found = closure_1.find((item, index) => item.application.id === closure_0);
     if (found == null) {
       found = null;
     }

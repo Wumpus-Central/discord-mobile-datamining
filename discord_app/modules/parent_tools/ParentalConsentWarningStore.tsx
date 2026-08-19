@@ -117,6 +117,6 @@ const parentalConsentWarningStore = new ParentalConsentWarningStore(dispatcherDe
     parentalConsentWarningStore.persist();
   }
 });
-const result = require("set").fileFinishedImporting("modules/parent_tools/ParentalConsentWarningStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/ParentalConsentWarningStore.tsx");
 
 export default parentalConsentWarningStore;

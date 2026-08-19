@@ -9,12 +9,12 @@ import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 
 import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 10600 */;
 import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 10624 */;
 import OptInChannelBannerDefault from "OptInChannelBanner" /* 10633 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   ({ channelId, senderId } = arg0);
   let obj = useStrangerDangerWarning;
@@ -50,7 +50,6 @@ let c4 = importAllResult;
 ({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScrollToNewMessages, ref) => {
   const channel = handleScrollToNewMessages.channel;
-  importDefault = undefined;
   const tmp = callback(importAllResult.useState(false), 2);
   importDefault = tmp[1];
   ({ showUnreadsNotice, clearUnreadsNotice } = useUnreadSettingNoticeDefault(channel));
@@ -90,8 +89,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
   items[2] = tmp13;
   items[3] = callback2(OptInChannelBannerDefault, { channel, handleScrollToNewMessages: handleScrollToNewMessages.scrollToNewMessages });
   obj1[0] = items;
-  return closure_8(closure_7, obj1);
+  return callback(closure_7, obj1);
 }));
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/chat/native/ChatViewStickyHeader.tsx");
 
 export default memoResult;

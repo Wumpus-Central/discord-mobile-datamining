@@ -2,11 +2,12 @@
 
 // Module 10410 (BalanceWidgetPillButton)
 import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 4745 */;
 import registerAssetDefault from "registerAsset" /* 9239 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 class BalanceWidgetPillButton {
   constructor(arg0) {
     ({ balance, variant } = global);
@@ -54,7 +55,7 @@ class BalanceWidgetPillButton {
 }
 noopAll;
 BalanceWidgetPillButton.displayName = "BalanceWidgetPillButton";
-const result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPillButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetPillButton.tsx");
 
 export default BalanceWidgetPillButton;
 export { BalanceWidgetPillButton };

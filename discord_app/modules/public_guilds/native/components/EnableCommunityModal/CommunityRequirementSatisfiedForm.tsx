@@ -5,10 +5,10 @@ import noopAll from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/CommunityRequirementSatisfiedForm.tsx");
+let result = require("obj132").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/CommunityRequirementSatisfiedForm.tsx");
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
@@ -22,13 +22,13 @@ export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
     obj[1] = enableCommunitySharedStyles.communityRequirementSatisfiedFormPressable;
     obj[2] = function onPress() {
       if (formSwitchDisabled) {
-        const result = formSwitchDisabled(closure_1_1[3]).communityRequirementSatisfied();
-        const obj = formSwitchDisabled(closure_1_1[3]);
+        const result = formSwitchDisabled(dependencyMap[3]).communityRequirementSatisfied();
+        const obj = formSwitchDisabled(dependencyMap[3]);
       }
     };
     tmp6 = callback(formSwitchDisabled(5433).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[1] = items;
-  return closure_4(View, obj);
+  return callback(View, obj);
 };

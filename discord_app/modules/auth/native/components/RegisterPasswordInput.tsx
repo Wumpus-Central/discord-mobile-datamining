@@ -5,16 +5,16 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import PasswordScore from "PasswordScore" /* 15236 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_7 from "handleSetLocationMetadata" /* 8581 */;
+import handleSetLocationMetadata from "handleSetLocationMetadata" /* 8581 */;
 import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4115" /* 4115 */;
 
-require = arg1;
+require = fn;
 function PasswordStrength(passwordScore) {
   passwordScore = passwordScore.passwordScore;
   ({ password, isPasswordFocused, passwordError } = passwordScore);
@@ -24,18 +24,18 @@ function PasswordStrength(passwordScore) {
       if (0 !== password.length) {
         if (null == passwordError) {
           if (passwordScore <= PasswordScore.PasswordScore.WEAK) {
-            const intl2 = tmp9(1236).intl;
-            let str = intl2.string(tmp9(1236).t["w/8TuV"]);
+            const intl2 = getSystemLocale.intl;
+            let str = intl2.string(getSystemLocale.t["w/8TuV"]);
             let strong = tmp.weak;
-          } else if (passwordScore === tmp9(15236).PasswordScore.MEDIUM) {
-            const intl = tmp9(1236).intl;
-            str = intl.string(tmp9(1236).t["2fmTpT"]);
+          } else if (passwordScore === PasswordScore.PasswordScore.MEDIUM) {
+            const intl = getSystemLocale.intl;
+            str = intl.string(getSystemLocale.t["2fmTpT"]);
             strong = tmp.medium;
           } else {
             str = "";
-            if (passwordScore === tmp9(15236).PasswordScore.STRONG) {
-              const intl4 = tmp9(1236).intl;
-              str = intl4.string(tmp9(1236).t.Xraqqc);
+            if (passwordScore === PasswordScore.PasswordScore.STRONG) {
+              const intl4 = getSystemLocale.intl;
+              str = intl4.string(getSystemLocale.t.Xraqqc);
               strong = tmp.strong;
             }
           }
@@ -46,7 +46,7 @@ function PasswordStrength(passwordScore) {
           const items = [tmp.passwordStrength, strong];
           obj.style = items;
           obj.animated = true;
-          const intl3 = tmp9(1236).intl;
+          const intl3 = getSystemLocale.intl;
           const items1 = [intl3.string(getSystemLocale.t["5gbdUX"]), ": ", str];
           obj.children = items1;
           return callback2(Text.Text, obj);
@@ -59,10 +59,9 @@ function PasswordStrength(passwordScore) {
 let closure_3 = ["password"];
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: c9 } = useRegistrationUIStore);
 ({ jsxs: c10, jsx: unpackModuleId, Fragment: closure_12 } = jsxProd);
-let obj = { weak: null, medium: null, strong: null, passwordStrength: null, inputHint: null };
-obj = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let obj = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj[0] = obj;
-createCacheKey = { color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
+const createCacheKey = { color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
 obj[1] = createCacheKey;
 obj[2] = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj[3] = { marginTop: 4, marginBottom: 4 };
@@ -72,16 +71,14 @@ let obj3 = { entering: null, exiting: null };
 obj3[0] = require("module_300");
 obj3[1] = require("module_300");
 const obj4 = { layout: null };
-const obj2 = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj4[0] = require("module_300");
 const easingResult = LinearTransition.easing(Easing.inOut(require("module_4115").Easing.quad));
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   ({ password, onPasswordChange } = arg0);
   ({ returnKeyType, autoFocus } = arg0);
-  let obj = importAllResult;
   ({ onSubmitEditing, passwordScore } = arg0);
   ref = importAllResult.useRef(null);
-  obj = { inputRef: ref, enabled: null };
+  let obj = { inputRef: ref, enabled: null };
   const tmp = callback3();
   const tmp3 = importDefault;
   if (autoFocus == null) {
@@ -101,8 +98,8 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const items = [onPasswordChange, tmp13];
   callback = obj.useCallback((arg0) => {
     if (null != lib.password) {
-      const password = tmp.password;
-      closure_1_8(lib(tmp, closure_3));
+      const password = lib.password;
+      closure_1_8(lib(lib, closure_3));
     }
     onPasswordChange(arg0);
   }, items);
@@ -138,8 +135,6 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     tmp9((arg0) => !arg0);
   }, items5);
   obj = { ref: null, textContentType: "newPassword", autoComplete: "new-password", onChange: null, value: null, label: null, accessibilityHint: null, secureTextEntry: null, returnKeyType: null, autoCapitalize: "none", onSubmitEditing: null, onFocus: null, onBlur: null, trailingIcon: null, trailingPressableProps: null, errorMessage: null, status: null };
-  const tmp22 = closure_10;
-  const tmp23 = closure_12;
   const tmp7 = stateFromStores(obj.useState(false), 2);
   obj[0] = onPasswordChange(first[17]).mergeRefs(ref, ref);
   obj[3] = callback;
@@ -157,14 +152,14 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj[11] = callback1;
   obj[12] = callback2;
   if (tmp8) {
-    let EyeIcon = tmp16(tmp4[18]).EyeSlashIcon;
+    let EyeIcon = onPasswordChange(tmp4[18]).EyeSlashIcon;
   } else {
-    EyeIcon = tmp16(tmp4[19]).EyeIcon;
+    EyeIcon = onPasswordChange(tmp4[19]).EyeIcon;
   }
   obj[13] = EyeIcon;
-  const intl3 = tmp16(tmp4[10]).intl;
+  const intl3 = onPasswordChange(tmp4[10]).intl;
   const string = intl3.string;
-  const t = tmp16(tmp4[10]).t;
+  const t = onPasswordChange(tmp4[10]).t;
   if (tmp8) {
     let stringResult = string(t.Nusip4);
   } else {
@@ -177,7 +172,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     str = "error";
   }
   obj[16] = str;
-  const children = [closure_11(onPasswordChange(first[16]).TextInput, obj), closure_11(PasswordStrength, { password, isPasswordFocused: first, passwordError: tmp14, passwordScore }), ];
+  const children = [callback2(onPasswordChange(first[16]).TextInput, obj), callback2(PasswordStrength, { password, isPasswordFocused: first, passwordError: tmp14, passwordScore }), ];
   let tmp24Result = null;
   if (null != memo) {
     tmp24Result = null;
@@ -190,12 +185,12 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       obj1.color = "text-muted";
       obj1.animated = true;
       obj1.children = memo;
-      tmp24Result = tmp24(tmp16(tmp4[11]).Text, obj1);
+      tmp24Result = callback2(onPasswordChange(tmp4[11]).Text, obj1);
     }
   }
   children[2] = tmp24Result;
-  return tmp22(tmp23, { children });
+  return callback(closure_12, { children });
 });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterPasswordInput.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/components/RegisterPasswordInput.tsx");
 
 export const RegisterPasswordInput = forwardRefResult;

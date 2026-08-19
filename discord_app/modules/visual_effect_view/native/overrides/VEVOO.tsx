@@ -4,13 +4,14 @@
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "getUserAgnosticState" /* 4737 */;
+import getUserAgnosticState from "getUserAgnosticState" /* 4737 */;
 import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 710 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 function VisualEffectViewOverrideOverlay_(arg0) {
   const x = arg0.x;
   const _require = x;
@@ -19,17 +20,17 @@ function VisualEffectViewOverrideOverlay_(arg0) {
   let PX_8;
   const tmp = callback3();
   PX_8 = importDefault(PX_8[6]).space.PX_8;
-  let obj = _require(PX_8[7]);
+  _require(PX_8[7]);
   const fn = function _() {
     const obj = { top: null, left: null };
-    const sum = closure_1.get() - PX_8 + closure_1_5;
+    const sum = closure_1.get() - PX_8 + DEV_WIDGET_SIZE;
     obj[0] = x(PX_8[8]).withSpring(sum, x(PX_8[9]).springUnclamped);
     const obj2 = x(PX_8[8]);
     const diff = x.get() - PX_8;
     obj[1] = x(PX_8[8]).withSpring(diff, x(PX_8[9]).springUnclamped);
     return obj;
   };
-  obj = { withSpring: _require(PX_8[8]).withSpring, y, px8: PX_8, DEV_WIDGET_SIZE, springUnclamped: _require(PX_8[9]).springUnclamped, x };
+  let obj = { withSpring: _require(PX_8[8]).withSpring, y, px8: PX_8, DEV_WIDGET_SIZE, springUnclamped: _require(PX_8[9]).springUnclamped, x };
   fn.__closure = obj;
   fn.__workletHash = 8104480272354;
   fn.__initData = closure_9;
@@ -49,8 +50,7 @@ function VisualEffectViewOverrideOverlay_(arg0) {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const styles = createCacheKey.createStyles({ zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 }, zeroPaddingVertical: { paddingVertical: 0 }, zeroPaddingHorizontal: { paddingHorizontal: 0 }, zeroHeight: { height: 0 }, enabledSwitchStyle: { alignSelf: "flex-start" } });
-let obj = { wrapper: null, scrollView: null, scrollViewContent: null, close: null };
-obj = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_660, borderRadius: ThemesDefault.radii.lg, position: "absolute", top: 0, left: 0, width: 300, height: 400 };
+let obj = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_660, borderRadius: ThemesDefault.radii.lg, position: "absolute", top: 0, left: 0, width: 300, height: 400 };
 let merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
 obj[0] = obj;
 createCacheKey = { borderRadius: ThemesDefault.radii.lg, paddingTop: ThemesDefault.space.PX_24, overflow: "hidden" };
@@ -61,7 +61,6 @@ const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW_HOVER);
 obj[3] = { position: "absolute", right: ThemesDefault.space.PX_8, top: ThemesDefault.space.PX_8 };
 let closure_8 = createCacheKey.createStyles(obj);
 let closure_9 = { code: "function VEVOOTsx1(){const{withSpring,y,px8,DEV_WIDGET_SIZE,springUnclamped,x}=this.__closure;return{top:withSpring(y.get()-px8+DEV_WIDGET_SIZE,springUnclamped),left:withSpring(x.get()-px8,springUnclamped)};}" };
-let obj3 = { position: "absolute", right: ThemesDefault.space.PX_8, top: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo(function VisualEffectViewOverrideOverlay(arg0) {
   let obj = initialize;
   const items = [closure_4];
@@ -76,7 +75,7 @@ const memoResult = importAllResult.memo(function VisualEffectViewOverrideOverlay
   }
   return tmp;
 });
-const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOO.tsx");
+const result = require("obj132").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOO.tsx");
 
 export default memoResult;
 export const useVisualEffectViewOverrideSharedStyles = styles;

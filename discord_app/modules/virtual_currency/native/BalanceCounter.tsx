@@ -4,12 +4,12 @@
 import context from "context" /* 1356 */;
 import _mod4115 from "module_4115" /* 4115 */;
 import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
-import closure_8 from "noop" /* 19 */;
+import noop2 from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 ({ useState: c4, useEffect: c5, useRef: closure_6, useCallback: error } = noop);
 let closure_10 = { code: "function BalanceCounterTsx1(){const{runOnJS,setIsAnimating}=this.__closure;runOnJS(setIsAnimating)(false);}" };
 let closure_11 = { code: "function BalanceCounterTsx2(){const{isAnimating,animatedValue,runOnJS,setDisplayValue,setMaxDigits}=this.__closure;if(isAnimating){const roundedValue=Math.round(animatedValue.get());runOnJS(setDisplayValue)(roundedValue);runOnJS(setMaxDigits)(roundedValue.toString().length);}return{};}" };
@@ -30,8 +30,8 @@ class BalanceCounter {
     clearAnimationTimeout = function clearAnimationTimeout() {
       if (null != ref2.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
-        tmp.current = null;
+        clearTimeout(ref2.current);
+        ref2.current = null;
       }
       callback(false);
     };
@@ -56,12 +56,11 @@ class BalanceCounter {
     closure_9 = tmp8[1];
     tmp10 = closure_7((set, value, duration) => {
       callback(true);
-      let obj = value(ref[5]);
-      obj = { duration, damping: 15, stiffness: 150, mass: 1 };
+      value(ref[5]);
       const fn = function l() {
         closure_1_0(closure_1_2[3]).runOnJS(closure_9)(false);
       };
-      obj = { runOnJS: value(ref[3]).runOnJS, setIsAnimating: callback };
+      const obj = { runOnJS: value(ref[3]).runOnJS, setIsAnimating: callback };
       fn.__closure = obj;
       fn.__workletHash = 16153226572520;
       fn.__initData = closure_10;
@@ -79,21 +78,21 @@ class BalanceCounter {
       if (null !== duration) {
         if (null !== ref.current) {
           if (!enabled) {
-            if (tmp !== tmp2.current) {
-              const diff = tmp - tmp2.current;
+            if (tmp !== ref.current) {
+              const diff = tmp - ref.current;
               onValueChange(diff);
-              tmp2.current = tmp;
+              ref.current = tmp;
               const desiredAnimationConfigs = value(ref[6]).getDesiredAnimationConfigs(diff, value(ref[6]).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS);
               duration = desiredAnimationConfigs.duration;
               if (null != ref2.current) {
                 const _clearTimeout = clearTimeout;
-                clearTimeout(tmp12.current);
-                tmp12.current = null;
+                clearTimeout(ref2.current);
+                ref2.current = null;
               }
               callback(false);
               const _setTimeout = setTimeout;
               ref2.current = setTimeout(() => {
-                closure_1_10(closure_1_3, duration, duration);
+                closure_1_10(sharedValue, duration, duration);
                 closure_1_4.current = null;
               }, desiredAnimationConfigs.delay);
               return clearAnimationTimeout;
@@ -153,7 +152,7 @@ class BalanceCounter {
     return tmp14;
   }
 }
-let result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceCounter.tsx");
+let result = require("obj132").fileFinishedImporting("modules/virtual_currency/native/BalanceCounter.tsx");
 
 export default BalanceCounter;
 export { BalanceCounter };

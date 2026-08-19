@@ -3,10 +3,10 @@
 // Module 13192 (presenceUpdate)
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import Opcode from "Opcode" /* 13193 */;
-import closure_3 from "initialize" /* 4565 */;
+import initialize from "initialize" /* 4565 */;
 import { EventEmitter } from "EventEmitter" /* 652 */;
 
-require = arg1;
+require = fn;
 class GatewaySocketOpCodes extends EventEmitter {
 }
 const prototype = GatewaySocketOpCodes.prototype;
@@ -62,7 +62,7 @@ prototype["voiceStateUpdate"] = function voiceStateUpdate(guildId) {
   if (null != prop) {
     let mapped;
     if (prop != null) {
-      mapped = prop.map((type) => ({ type: type.type, rid: type.rid, quality: type.quality }));
+      mapped = prop.map((item, index) => ({ type: item.type, rid: item.rid, quality: item.quality }));
     }
     obj.tracks = mapped;
   }
@@ -89,15 +89,14 @@ prototype["searchRecentMembers"] = function searchRecentMembers(guild_id) {
   this.send(Opcode.Opcode.SEARCH_RECENT_MEMBERS, obj);
 };
 prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscriptions) {
-  let self = this;
-  self = this;
+  const self = this;
   importDefault = subscriptions;
   dependencyMap = {};
   const _require = 0;
   let obj = DISCORD_EPOCHDefault;
   const keys = obj.keys(subscriptions);
-  const item = keys.forEach((arg0) => {
-    const items = [arg0, subscriptions[arg0]];
+  const item = keys.forEach((item, index) => {
+    const items = [item, subscriptions[item]];
     const length = JSON.stringify(items).length;
     if (closure_0 + length > 15360) {
       const obj = { subscriptions: null };
@@ -106,7 +105,7 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
       table = {};
       closure_0 = 0;
     }
-    table[arg0] = subscriptions[arg0];
+    table[item] = subscriptions[item];
     closure_0 = closure_0 + length;
   });
   if (_require > 0) {
@@ -138,7 +137,7 @@ prototype["streamSetPaused"] = function streamSetPaused(streamKey, paused) {
   this.send(Opcode.Opcode.STREAM_SET_PAUSED, { stream_key: streamKey, paused });
 };
 prototype["requestForumUnreads"] = function requestForumUnreads(guildId, channelId, threads) {
-  this.send(Opcode.Opcode.REQUEST_FORUM_UNREADS, { guild_id: guildId, channel_id: channelId, threads: threads.map((threadId) => ({ thread_id: threadId.threadId, ack_message_id: threadId.ackMessageId })) });
+  this.send(Opcode.Opcode.REQUEST_FORUM_UNREADS, { guild_id: guildId, channel_id: channelId, threads: threads.map((item, index) => ({ thread_id: item.threadId, ack_message_id: item.ackMessageId })) });
 };
 prototype["requestSoundboardSounds"] = function requestSoundboardSounds(guildIds) {
   this.send(Opcode.Opcode.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: guildIds });
@@ -146,11 +145,11 @@ prototype["requestSoundboardSounds"] = function requestSoundboardSounds(guildIds
 prototype["requestLastMessages"] = function requestLastMessages(closure_0, closure_1) {
   this.send(Opcode.Opcode.REQUEST_LAST_MESSAGES, { guild_id: closure_0, channel_ids: closure_1 });
 };
-prototype["getDeletedEntityIdsNotMatchingHash"] = function getDeletedEntityIdsNotMatchingHash(guild_id, channel_ids_hash, role_ids_hash, emoji_ids_hash, sticker_ids_hash) {
-  this.send(Opcode.Opcode.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, { guild_id, channel_ids_hash, role_ids_hash, emoji_ids_hash, sticker_ids_hash });
+prototype["getDeletedEntityIdsNotMatchingHash"] = function getDeletedEntityIdsNotMatchingHash(closure_0, channel_ids_hash, role_ids_hash, emoji_ids_hash, sticker_ids_hash) {
+  this.send(Opcode.Opcode.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, { guild_id: closure_0, channel_ids_hash, role_ids_hash, emoji_ids_hash, sticker_ids_hash });
 };
-prototype["triggerGuildChannelResync"] = function triggerGuildChannelResync(guild_id, items) {
-  this.send(Opcode.Opcode.GUILD_CHANNELS_RESYNC, { guild_id, obfuscated_channel_ids: items });
+prototype["triggerGuildChannelResync"] = function triggerGuildChannelResync(closure_0, items) {
+  this.send(Opcode.Opcode.GUILD_CHANNELS_RESYNC, { guild_id: closure_0, obfuscated_channel_ids: items });
 };
 prototype["requestChannelInfo"] = function requestChannelInfo(guild_id, fields) {
   this.send(Opcode.Opcode.REQUEST_CHANNEL_INFO, { guild_id, fields });
@@ -161,7 +160,7 @@ prototype["requestChannelMemberCount"] = function requestChannelMemberCount(guil
 prototype["remoteCommand"] = function remoteCommand(sessionId, payload) {
   this.send(Opcode.Opcode.REMOTE_COMMAND, { target_session_id: sessionId, payload });
 };
-let result = require("set").fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
+let result = require("obj132").fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
 
 export default GatewaySocketOpCodes;
 export const Opcode = require("Opcode").Opcode;

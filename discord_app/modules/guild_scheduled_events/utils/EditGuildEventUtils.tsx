@@ -3,12 +3,12 @@
 // Module 8784 (EditGuildEventScreens)
 import getRRule from "getRRule" /* 8785 */;
 import getChannelFromEvent from "getChannelFromEvent" /* 8788 */;
-import closure_2 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
-require = arg1;
+require = fn;
 ({ GuildScheduledEventEntityTypes: c3, GuildScheduledEventStatus: c4, GuildScheduledEventPrivacyLevel: c5, FAKE_EVENT_ID: closure_6 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/EditGuildEventUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/utils/EditGuildEventUtils.tsx");
 
 export const EditGuildEventScreens = { CHANNEL_SELECTOR: "ChannelSelector", DETAILS: "Details", PREVIEW: "Preview" };
 export const isEditingEvent = function isEditingEvent(initialGuildEvent) {
@@ -111,7 +111,7 @@ export const convertToFakeGuildEvent = function convertToFakeGuildEvent(guildEve
     tmp2 = obj;
   }
   obj[13] = tmp2;
-  obj[14] = eventExceptions.map((eventExceptionId) => ({ event_exception_id: eventExceptionId.eventExceptionId, event_id: eventExceptionId.eventId, guild_id: eventExceptionId.guildId, scheduled_start_time: eventExceptionId.scheduledStartTime, scheduled_end_time: eventExceptionId.scheduledEndTime, is_canceled: eventExceptionId.isCanceled }));
+  obj[14] = eventExceptions.map((item, index) => ({ event_exception_id: item.eventExceptionId, event_id: item.eventId, guild_id: item.guildId, scheduled_start_time: item.scheduledStartTime, scheduled_end_time: item.scheduledEndTime, is_canceled: item.isCanceled }));
   return obj;
 };
 export const getInitialGuildEventData = function getInitialGuildEventData(initialGuildEvent, targetChannel) {
@@ -146,7 +146,6 @@ export const getInitialGuildEventData = function getInitialGuildEventData(initia
   if (scheduled_start_time == null) {
     const initialEventStartDate = getRRule.getInitialEventStartDate();
     scheduled_start_time = initialEventStartDate.toISOString();
-    const obj2 = getRRule;
   }
   obj[3] = scheduled_start_time;
   let entity_type;
@@ -210,7 +209,7 @@ export const getInitialGuildEventData = function getInitialGuildEventData(initia
   if (prop == null) {
     prop = [];
   }
-  obj[11] = prop.map((eventExceptionId) => ({ eventExceptionId: eventExceptionId.event_exception_id, eventId: eventExceptionId.event_id, guildId: eventExceptionId.guild_id, scheduledStartTime: eventExceptionId.scheduled_start_time, scheduledEndTime: eventExceptionId.scheduled_end_time, isCanceled: eventExceptionId.is_canceled }));
+  obj[11] = prop.map((item, index) => ({ eventExceptionId: item.event_exception_id, eventId: item.event_id, guildId: item.guild_id, scheduledStartTime: item.scheduled_start_time, scheduledEndTime: item.scheduled_end_time, isCanceled: item.is_canceled }));
   let tmp23 = null != initialGuildEvent;
   if (tmp23) {
     tmp23 = "id" in initialGuildEvent;
@@ -227,7 +226,6 @@ export const getInitialGuildEventData = function getInitialGuildEventData(initia
         obj[0] = locationFromEvent;
         obj.entityMetadata = obj;
       }
-      const obj7 = getChannelFromEvent;
     }
     return obj;
   }
@@ -239,4 +237,5 @@ export const getInitialGuildEventData = function getInitialGuildEventData(initia
       obj.entityType = constants.VOICE;
     }
   }
+  tmp26 = null == obj.channelId && null != targetChannel;
 };

@@ -1,17 +1,18 @@
 // === Module 13093: start ===
 
 // Module 13093 (start)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
+import applyDefault from "apply" /* 12 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
 
-const result = set.fileFinishedImporting("lib/SystemResponsiveness.tsx");
+const result = obj132.fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
-        const item = closure_1_1(closure_1_2[2]).forEach(rtp.rtp.outbound, (type) => {
+        const item = applyDefault.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             let prop = type.pttQueueLatencyMicrosSamples;
             if (prop == null) {
@@ -19,14 +20,12 @@ class SystemResponsiveness {
             }
             const iter = prop[Symbol.iterator]();
             while (iter !== undefined) {
-              let tmp5 = obj;
               let pttQueueLatencyHistogram = obj.pttQueueLatencyHistogram;
               let addSampleResult = pttQueueLatencyHistogram.addSample(iter.next() / 1000);
               continue;
             }
           }
         });
-        const arr = closure_1_1(closure_1_2[2]);
       }
     };
     obj.connection = global;

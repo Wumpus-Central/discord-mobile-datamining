@@ -2,11 +2,11 @@
 
 // Module 10389 (MODAL_KEY)
 import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+const require = fn;
 const ShopProductPurchaseSuccessModal = "ShopProductPurchaseSuccessModal";
-const result = require("set").fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/ProductPurchaseSuccessActionCreators.tsx");
 
 export default {
   open(closure_0) {

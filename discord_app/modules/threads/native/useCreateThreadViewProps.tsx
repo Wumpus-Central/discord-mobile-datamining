@@ -2,10 +2,10 @@
 
 // Module 10564 (useCreateThreadViewProps)
 import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10167 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
 
 export default function useCreateThreadViewProps(arg0) {
   const tmp = useGetThreadDraftSettingsDefault(arg0);

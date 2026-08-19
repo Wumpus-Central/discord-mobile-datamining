@@ -2,13 +2,13 @@
 
 // Module 16992 (StepNode)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function StepNode(isCurrent) {
   isCurrent = isCurrent.isCurrent;
   let sharedValue;
@@ -26,9 +26,9 @@ function StepNode(isCurrent) {
     num2 = 0;
   }
   const fn = function p() {
-    let obj = isCurrent(num2[6]);
+    isCurrent(num2[6]);
     obj1 = isCurrent(num2[7]);
-    obj = { duration: num2, easing: null };
+    let obj = { duration: num2, easing: null };
     const Easing = isCurrent(num2[6]).Easing;
     obj[1] = Easing.out(isCurrent(num2[6]).Easing.ease);
     const interpolateResult = obj.interpolate(sharedValue.get(), [0, 1], [0.4, 1]);
@@ -67,21 +67,20 @@ function StepNode(isCurrent) {
     if (isCurrent) {
       obj1 = { variant: "heading-deprecated-12/extrabold", color: "interactive-text-active", children: null };
       obj1[2] = label;
-      isCurrent = tmp7(tmp2(tmp3[8]).Text, obj1);
+      isCurrent = jsx(tmp2(tmp3[8]).Text, { variant: "heading-deprecated-12/extrabold", color: "interactive-text-active", children: null });
     }
     obj[1] = isCurrent;
     return jsx(sharedValue(tmp3[6]).View, { style: null, children: null });
   }
   filledNode = tmp.filledNode;
+  const tmp2Result = isCurrent(num2[6]);
 }
-createCacheKey = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 }, filledNode: null, emptyNode: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, alignItems: "center", justifyContent: "center" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function StepsIndicatorTsx1(){const{interpolate,state,withTiming,duration,Easing}=this.__closure;const rawScale=interpolate(state.get(),[0,1],[8/20,1]);const scale=withTiming(rawScale,{duration:duration,easing:Easing.out(Easing.ease)});const rawMargin=interpolate(state.get(),[0,1],[-2,6]);const marginHorizontal=withTiming(rawMargin,{duration:duration,easing:Easing.out(Easing.ease)});return{marginHorizontal:marginHorizontal,transform:[{scale:scale}]};}" };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/StepsIndicator.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/StepsIndicator.tsx");
 
 export default function StepsIndicator(current) {
   current = current.current;
@@ -100,17 +99,12 @@ export default function StepsIndicator(current) {
       if (0 < total) {
         do {
           sum = num + 1;
-          let tmp2 = closure_1_6;
-          let tmp3 = closure_1_9;
           let obj = { useReducedMotion: null, isCurrent: null, isDone: null, label: null };
-          let tmp4 = stateFromStores;
           obj[0] = stateFromStores;
-          let tmp5 = current;
           obj[1] = sum === current;
           obj[2] = sum < current;
           obj[3] = sum;
-          let arr = items.push(closure_1_6(closure_1_9, obj, num));
-          let tmp7 = total;
+          let arr = items.push(<StepNode key={num} useReducedMotion={null} isCurrent={null} isDone={null} label={null} />);
           num = sum;
         } while (sum < total);
       }
@@ -125,17 +119,12 @@ export default function StepsIndicator(current) {
     if (0 < total) {
       do {
         sum = num + 1;
-        let tmp2 = closure_1_6;
-        let tmp3 = closure_1_9;
         let obj = { useReducedMotion: null, isCurrent: null, isDone: null, label: null };
-        let tmp4 = stateFromStores;
         obj[0] = stateFromStores;
-        let tmp5 = current;
         obj[1] = sum === current;
         obj[2] = sum < current;
         obj[3] = sum;
-        let arr = items.push(closure_1_6(closure_1_9, obj, num));
-        let tmp7 = total;
+        let arr = items.push(<StepNode key={num} useReducedMotion={null} isCurrent={null} isDone={null} label={null} />);
         num = sum;
       } while (sum < total);
     }

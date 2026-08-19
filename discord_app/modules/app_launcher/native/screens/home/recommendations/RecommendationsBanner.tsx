@@ -9,18 +9,17 @@ import UserProfileBannerDefault from "UserProfileBanner" /* 8987 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createdAt" /* 1930 */;
+import createdAt from "createdAt" /* 1930 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: error } = ME);
 let closure_9 = createCacheKey.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let closure_10 = importAllResult.memo((applicationId) => {
   let heroMediaDimensions;
-  importDefault = undefined;
   let obj = heroMediaDimensions(9565);
   obj1 = heroMediaDimensions(11260);
   heroMediaDimensions = obj1.useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
@@ -29,10 +28,8 @@ let closure_10 = importAllResult.memo((applicationId) => {
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];
   const memo = importAllResult.useMemo(() => {
-    obj = { imageStyle: obj, imageSource: null };
-    obj = { backgroundColor: "black", height: heroMediaDimensions.height, width: heroMediaDimensions.width, transform: items };
-    obj = { translateY: (closure_1_6 - heroMediaDimensions.height) / 2 };
-    items = [obj];
+    const obj = { translateY: (closure_1_6 - heroMediaDimensions.height) / 2 };
+    const items = [obj];
     let tmp2;
     if (null != url.url) {
       obj1 = { uri: null };
@@ -64,8 +61,6 @@ let closure_11 = importAllResult.memo((applicationBot) => {
   if (id == null) {
     id = closure_7;
   }
-  const tmp = importDefault;
-  const tmp3 = useDisplayProfileDefault;
   const obj = { displayProfile: useDisplayProfileDefault(id), user: null };
   const tmp3Result = useDisplayProfileDefault(id);
   const tmpResult = UserProfileBannerDefault;
@@ -112,6 +107,6 @@ const memoResult = importAllResult.memo(function RecommendationBanner(arg0) {
   }
   return tmp11;
 });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/home/recommendations/RecommendationsBanner.tsx");
 
 export default memoResult;

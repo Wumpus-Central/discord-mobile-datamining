@@ -2,34 +2,27 @@
 
 // Module 10388 (PremiumGiftingPromotionSuccessActions)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { isAvatarDecorationRecord, isNameplateRecord } from "fromServer" /* 5306 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, nameplateContainer: null, nameplateWrapper: null, singleAvatarContainer: null };
-createCacheKey = { flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_16 };
+const createCacheKey = { flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-let obj1 = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[3] = { flexDirection: "row", paddingRight: 15, justifyContent: "center", alignItems: "center", marginLeft: 5 };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
 
 export default function PremiumGiftingPromotionSuccessActions(purchase) {
   purchase = purchase.purchase;
   let onClose;
-  let prePurchaseGiftingBadgeProgress;
   let navigation;
-  let enabled;
-  c4 = undefined;
-  let callback;
   let tmp = callback2();
   let obj = onClose(navigation[8]);
   const items = [closure_7];
@@ -37,17 +30,17 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
   obj1 = onClose(navigation[9]);
   const nativeGiftContext = obj1.useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
-  prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
+  const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
   let obj2 = onClose(navigation[10]);
   navigation = obj2.useNavigation();
   const GiftingBadgeExperiment = onClose(navigation[11]).GiftingBadgeExperiment;
-  enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftingPromotionSuccessActions" }).enabled;
+  const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftingPromotionSuccessActions" }).enabled;
   let obj3 = onClose(navigation[12]);
   const fetchCollectiblesProduct = obj3.useFetchCollectiblesProduct(purchase.skuId);
   const product = fetchCollectiblesProduct.product;
   c4 = product;
   const items1 = [enabled, prePurchaseGiftingBadgeProgress, navigation];
-  callback = enabled.useCallback(() => {
+  const callback = enabled.useCallback(() => {
     let tmp = enabled;
     if (enabled) {
       tmp = null != prePurchaseGiftingBadgeProgress;
@@ -97,7 +90,7 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
     obj3[1] = callback(tmp2(tmp3[17]).Avatar, obj4);
     items3[1] = callback(tmp12, obj3);
     obj[1] = items3;
-    let tmp11Result = tmp11(tmp12, obj);
+    let tmp11Result = callback(tmp12, obj);
     const tmp2Result = tmp2(tmp3[16]);
   } else if (callback(first)) {
     const obj5 = { size: null, asset: null };
@@ -114,5 +107,5 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
   obj6[3] = callback1;
   items4[1] = callback(onClose(navigation[19]).Button, obj6);
   obj[1] = items4;
-  return closure_9(c4, obj);
+  return callback(c4, obj);
 };

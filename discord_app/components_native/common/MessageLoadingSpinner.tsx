@@ -6,16 +6,16 @@ import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4097 */;
 import ActivityIndicator from "ActivityIndicator" /* 5446 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let result = null;
-if (!set.isAndroid()) {
+if (!obj132.isAndroid()) {
   result = require("get ActivityIndicator").requireNativeComponent("DCDMessageLoadingSpinner");
 }
 let c4 = result;
-const result1 = set.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
+const result1 = obj132.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
 
 export default function MessageLoadingSpinner(color) {
   let obj = map;

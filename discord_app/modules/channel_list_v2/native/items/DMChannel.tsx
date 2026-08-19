@@ -6,16 +6,15 @@ import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8886 */;
 import useCallA11yStateDefault from "useCallA11yState" /* 15297 */;
 import getChannelModeDefault from "getChannelMode" /* 15378 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
+import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
 import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
-let obj = { container: null };
-obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+let obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((channel) => {
@@ -24,10 +23,10 @@ const memoResult = importAllResult.memo((channel) => {
   const items = [channel.id];
   const items1 = [channel.id];
   const callback = importAllResult.useCallback(() => {
-    const result = channel(closure_1_2[8]).openChannelLongPressActionSheet(channel.id);
+    const result = channel(dependencyMap[8]).openChannelLongPressActionSheet(channel.id);
   }, items);
   const callback1 = importAllResult.useCallback(() => {
-    channel(closure_1_2[9]).transitionToChannel(channel.id);
+    channel(dependencyMap[9]).transitionToChannel(channel.id);
   }, items1);
   let obj = channel(589);
   const items2 = [closure_4];
@@ -52,6 +51,6 @@ const memoResult = importAllResult.memo((channel) => {
   obj[12] = stateFromStores;
   return jsx(getChannelModeDefault, { onPress: callback1, onLongPress: callback, style: tmp.container, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, unread: null, resolvedUnreadSetting: null, mentionCount: null, muted: null });
 });
-let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
+let result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
 
 export default memoResult;

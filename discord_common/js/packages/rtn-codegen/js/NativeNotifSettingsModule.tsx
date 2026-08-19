@@ -1,11 +1,11 @@
 // === Module 13825: NativeNotifSettingsModule ===
 
 // Module 13825 (NativeNotifSettingsModule)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 const value = TurboModuleRegistry.get("NativeNotifSettingsModule");
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx");
 
 export default value;

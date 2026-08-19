@@ -3,11 +3,11 @@
 // Module 4171 (CheckpointCardRive)
 import BaseRive from "BaseRive" /* 4109 */;
 import getDerivedStateFromError from "getDerivedStateFromError" /* 4164 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let c5 = importAllResult;
 let closure_7 = { Main: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, Cassette: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Cassette Icon": {}, Cat: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Cat Icon": {}, Banana: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Banana Icon": {}, "Duck Icon": {}, Duck: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Snail Icon": {}, Snail: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Origami Icon": {}, Origami: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Disco Icon": {}, Disco: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, Capybara: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Capybara Icon": {}, Donut: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Donut Icon": {}, "Bonsai Icon": {}, Bonsai: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Globe Single Line": {}, "Card Back": { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, Knickknack: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, Globe: {}, Card: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" } };
@@ -16,19 +16,18 @@ let closure_9 = {
   Main: function MainBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -38,7 +37,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -103,19 +101,18 @@ let closure_9 = {
   Cassette: function CassetteBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -125,7 +122,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -190,19 +186,18 @@ let closure_9 = {
   Cat: function CatBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -212,7 +207,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -277,19 +271,18 @@ let closure_9 = {
   Banana: function BananaBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -299,7 +292,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -364,19 +356,18 @@ let closure_9 = {
   Duck: function DuckBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -386,7 +377,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -451,19 +441,18 @@ let closure_9 = {
   Snail: function SnailBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -473,7 +462,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -538,19 +526,18 @@ let closure_9 = {
   Origami: function OrigamiBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -560,7 +547,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -625,19 +611,18 @@ let closure_9 = {
   Disco: function DiscoBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -647,7 +632,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -712,19 +696,18 @@ let closure_9 = {
   Capybara: function CapybaraBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -734,7 +717,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -799,19 +781,18 @@ let closure_9 = {
   Donut: function DonutBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -821,7 +802,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -886,19 +866,18 @@ let closure_9 = {
   Bonsai: function BonsaiBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -908,7 +887,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -973,19 +951,18 @@ let closure_9 = {
   "Card Back": function CardBackBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -995,7 +972,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -1060,19 +1036,18 @@ let closure_9 = {
   Knickknack: function KnickknackBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1082,7 +1057,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -1147,19 +1121,18 @@ let closure_9 = {
   Card: function CardBindings(reducedMotionEnabled) {
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
     let Icon;
     if (dataBinding != null) {
       Icon = dataBinding.Icon;
     }
     const artboardBinding = BaseRive.useArtboardBinding("Icon", instance, file, Icon, playIfNeeded);
-    let tmpResult = tmp(4109);
+    let tmpResult = BaseRive;
     let Illustration;
     if (dataBinding != null) {
       Illustration = dataBinding.Illustration;
     }
     const artboardBinding1 = tmpResult.useArtboardBinding("Illustration", instance, file, Illustration, playIfNeeded);
-    tmpResult = tmp(4109);
+    tmpResult = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1169,7 +1142,6 @@ let closure_9 = {
       AnimationState1 = onDataBindingChange.AnimationState;
     }
     const numberBinding = tmpResult.useNumberBinding("AnimationState", instance, AnimationState, AnimationState1, playIfNeeded);
-    const obj2 = BaseRive;
     let PowerMeter;
     if (dataBinding != null) {
       PowerMeter = dataBinding.PowerMeter;
@@ -1253,7 +1225,7 @@ let closure_10 = importAllResult.forwardRef(function CheckpointCardRiveInner(def
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = closure_1_6(tmp, obj);
+      tmp2 = <tmp />;
     }
     return tmp2;
   }, items);
@@ -1262,12 +1234,11 @@ let closure_10 = importAllResult.forwardRef(function CheckpointCardRiveInner(def
   return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 });
 const forwardRefResult = importAllResult.forwardRef(function CheckpointCardRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
+  const obj = { ref };
   const merged = Object.assign(fallback);
-  obj[1] = <closure_10 ref={arg1} />;
+  obj[1] = <closure_10 ref={ref} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointCardRive.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointCardRive.tsx");
 
 export const CheckpointCardRive = forwardRefResult;

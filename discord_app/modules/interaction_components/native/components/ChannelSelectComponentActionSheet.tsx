@@ -1,20 +1,19 @@
 // === Module 11006: ChannelSelectComponentActionSheet ===
 
 // Module 11006 (ChannelSelectComponentActionSheet)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import noop from "noop" /* 19 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/ChannelSelectComponentActionSheet.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/components/ChannelSelectComponentActionSheet.tsx");
 
 export default function ChannelSelectComponentActionSheet(guildId) {
   ({ selectionActionComponent, channelId } = guildId);
   guildId = guildId.guildId;
-  let channelTypes;
   let React;
-  channelTypes = selectionActionComponent.channelTypes;
+  const channelTypes = selectionActionComponent.channelTypes;
   const items = [channelId, channelTypes];
   ({ labelComponent, containerId, onSubmit, allowEmpty } = guildId);
   const callback = React.useCallback((arg0) => channelId(channelTypes[4]).queryChannels(arg0, channelId, channelTypes), items);
@@ -35,7 +34,7 @@ export default function ChannelSelectComponentActionSheet(guildId) {
         if (tmp8) {
           obj = { source: null };
           obj[0] = channelIconData;
-          tmp8 = closure_1_6(channelId(channelTypes[8]).Icon, obj);
+          tmp8 = jsx(channelId(channelTypes[8]).Icon, { source: null });
         }
         return tmp8;
       }

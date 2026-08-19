@@ -1,19 +1,19 @@
 // === Module 6860: items ===
 
 // Module 6860 (items)
+import obj132 from "obj132" /* 2 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
-import set from "set" /* 2 */;
 
 const items = [{ field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION }];
 const items1 = [MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS];
-let set = new Set(items1);
 const items2 = [MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.MULTIPLE_CHOICE, MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TEXT_INPUT, MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.PARAGRAPH];
-const obj = { field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION };
-const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationConstants.tsx");
+const set = new Set(items1);
+const set1 = new Set(items2);
+const result = obj132.fileFinishedImporting("modules/guild_member_verification/MemberVerificationConstants.tsx");
 
 export const REQUIRED_FORM_FIELDS = items;
 export const AUTOMATIC_APPROVAL_FORM_FIELDS = set;
-export const MANUAL_APPROVAL_FORM_FIELDS = new Set(items2);
+export const MANUAL_APPROVAL_FORM_FIELDS = set1;
 export const MAX_FORM_ELEMENTS = 5;
 export const MAX_NUM_RULES = 16;
 export const MAX_RULE_LENGTH = 300;

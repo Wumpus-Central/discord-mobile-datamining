@@ -1,9 +1,9 @@
 // === Module 8649: getFastestListVisibleItemsDefault ===
 
 // Module 8649 (getFastestListVisibleItemsDefault)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/fastest_list/getFastestListVisibleItemsDefault.tsx");
+const result = obj132.fileFinishedImporting("modules/fastest_list/getFastestListVisibleItemsDefault.tsx");
 
 export default function getFastestListVisibleItemsDefault(arg0) {
   ({ estimatedListSize, sectionsVersioned } = arg0);
@@ -15,8 +15,6 @@ export default function getFastestListVisibleItemsDefault(arg0) {
     let num2 = 0;
     if (0 < sections.length) {
       while (true) {
-        let tmp4 = num2;
-        let tmp5 = listHeaderSize;
         let sum2 = listHeaderSize;
         if (0 !== sections[num2]) {
           obj.sectionEnd = num2;
@@ -31,8 +29,6 @@ export default function getFastestListVisibleItemsDefault(arg0) {
             if (0 < sections[num2]) {
               while (true) {
                 obj.itemEnd = num;
-                let tmp10 = num;
-                let tmp11 = tmp8;
                 if (tmp) {
                   let first = itemSizes[0].sizes[0];
                 } else {

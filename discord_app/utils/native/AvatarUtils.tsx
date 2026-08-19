@@ -1,6 +1,7 @@
 // === Module 1438: ensureAvatarSource ===
 
 // Module 1438 (ensureAvatarSource)
+import obj132 from "obj132" /* 2 */;
 import registerAssetDefault from "registerAsset" /* 1439 */;
 import registerAssetDefault2 from "registerAsset" /* 1440 */;
 import registerAssetDefault3 from "registerAsset" /* 1441 */;
@@ -31,7 +32,6 @@ import registerAssetDefault27 from "registerAsset" /* 1465 */;
 import registerAssetDefault28 from "registerAsset" /* 1466 */;
 import registerAssetDefault29 from "registerAsset" /* 1468 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 2 */;
 
 function ensureAvatarSource(source) {
   if (typeof source === "number") {
@@ -48,16 +48,15 @@ const items1 = [registerAssetDefault7, registerAssetDefault8, registerAssetDefau
 const items2 = [registerAssetDefault13, registerAssetDefault14, registerAssetDefault15, registerAssetDefault16, registerAssetDefault17, registerAssetDefault18];
 const items3 = [registerAssetDefault19, registerAssetDefault20, registerAssetDefault21, registerAssetDefault22, registerAssetDefault23, registerAssetDefault24, registerAssetDefault25, registerAssetDefault26];
 const MediaManager = NativeModules.MediaManager;
-let set = new Set(MediaManager.getConstants().supportedExtensions);
-let obj = { DEFAULT_AVATARS: items, DEFAULT_AVATARS_SMALL: items1, DEFAULT_AVATARS_SMALL_MAX_SIZE: 24, DEFAULT_PROVISIONAL_AVATARS: items2, DEFAULT_GROUP_DM_AVATARS: items3, BOT_AVATARS: null, DEFAULT_CHANNEL_ICON: null, ensureAvatarSource: null, canUseWebp: null };
-obj = { clyde: registerAssetDefault27, nitro_wumpus: registerAssetDefault28 };
+const set = new Set(MediaManager.getConstants().supportedExtensions);
+const obj = { clyde: registerAssetDefault27, nitro_wumpus: registerAssetDefault28 };
 obj[5] = obj;
 obj[6] = registerAssetDefault29;
 obj[7] = ensureAvatarSource;
 obj[8] = function canUseWebp() {
   return set.has("webp");
 };
-const result = set.fileFinishedImporting("utils/native/AvatarUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/native/AvatarUtils.tsx");
 
 export default obj;
 export const DEFAULT_AVATARS = items;

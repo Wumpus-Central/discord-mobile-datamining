@@ -7,10 +7,10 @@ import HeaderBackImage from "HeaderBackImage" /* 6314 */;
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6318 */;
 import _modDef16882 from "module_16882" /* 16882 */;
 import EnableCommunityModalSteps from "EnableCommunityModalSteps" /* 16884 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function onModalClose() {
   _modDef16882.close();
 }
@@ -19,11 +19,10 @@ function HeaderBackButton(arg0) {
     callback(table[2]).close();
     return true;
   });
-  const obj = useNavigatorBackPressHandler;
   const intl = getSystemLocale.intl;
   return HeaderBackImage.getHeaderTextButton(intl.string(getSystemLocale.t["13/7kX"]), onModalClose)(arg0);
 }
-const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
 
 export default function EnableCommunityModal() {
   const memo = React.useMemo(() => {
@@ -34,25 +33,6 @@ export default function EnableCommunityModal() {
       return callback3(callback(5432).HeaderActionButton, obj);
     }
     let obj = {
-      headerRight,
-      headerLeft: closure_6,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return callback3(callback2(16885), {});
-      }
-    };
-    obj = {
-      headerRight,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return callback3(callback2(16897), {});
-      }
-    };
-    obj = {
       headerRight,
       headerTitle() {
         return null;

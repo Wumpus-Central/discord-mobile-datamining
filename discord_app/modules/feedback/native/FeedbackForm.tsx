@@ -2,35 +2,29 @@
 
 // Module 10813 (FeedbackForm)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { FeedbackRating } from "FeedbackRating" /* 10811 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { ratingsLabel: { textAlign: "center" }, reasonsHeader: { marginBottom: 8 }, reasonsList: { overflow: "hidden", marginBottom: 12, padding: 0 }, reason: null, doNotShowAgainContainer: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+const createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { paddingHorizontal: 0, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingHorizontal: 0, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackForm.tsx");
+const result = require("obj132").fileFinishedImporting("modules/feedback/native/FeedbackForm.tsx");
 
 export const FeedbackForm = function FeedbackForm(otherKey) {
   ({ ratingsBodyLabel, reasons } = otherKey);
   otherKey = otherKey.otherKey;
   const onFeedbackChanged = otherKey.onFeedbackChanged;
   const trackOpen = otherKey.trackOpen;
-  let React;
-  FeedbackRating = undefined;
-  let callback;
-  let first;
   let callback2;
   ({ showDoNotShowAgainCheckbox, reasonsHeaderLabel } = otherKey);
   const tmp = callback2();
-  React = tmp;
+  const React = tmp;
   const tmp4 = otherKey(onFeedbackChanged[6])(reasons);
   FeedbackRating = tmp4;
   let obj = otherKey(onFeedbackChanged[7]);
@@ -41,31 +35,31 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
       _undefined(reasons(onFeedbackChanged[8]).shuffleProblems(reasons, otherKey));
       const obj2 = reasons(onFeedbackChanged[8]);
     }
+    obj = otherKey(onFeedbackChanged[7]);
   }, items);
   const tmp8 = trackOpen(React.useState({}), 2);
-  first = tmp8[0];
+  const first = tmp8[0];
   callback2 = tmp8[1];
   otherKey(onFeedbackChanged[9])(() => {
     trackOpen();
   });
   const items1 = [first, onFeedbackChanged];
-  callback = React.useCallback(() => {
+  const callback = React.useCallback(() => {
     let flag = first.doNotShowAgain;
     if (flag == null) {
       flag = false;
     }
     const obj = {};
-    const merged = Object.assign(tmp);
+    const merged = Object.assign(first);
     obj.doNotShowAgain = !flag;
     callback(obj);
     onFeedbackChanged(first);
   }, items1);
-  const found = arr.filter((label) => Boolean(label.label));
+  const found = arr.filter((item, index) => Boolean(item.label));
   let tmp14 = null;
   if (null != first.rating) {
     tmp14 = null;
     if (first.rating !== FeedbackRating.GOOD) {
-      obj = { children: null };
       obj = { style: null, variant: "eyebrow", color: "text-default", children: null };
       obj[0] = tmp.reasonsHeader;
       obj[3] = reasonsHeaderLabel;
@@ -88,7 +82,6 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
   const children = [tmp17, , , ];
   let rating = first.rating;
   const tmp16 = first;
-  let tmp2 = otherKey;
   const tmp6 = trackOpen(React.useState(obj.shuffle(reasons)), 2);
   if (rating == null) {
     rating = null;

@@ -6,31 +6,30 @@ import ThemesDefault from "Themes" /* 712 */;
 import ManaContext from "ManaContext" /* 4104 */;
 import _modDef15651 from "module_15651" /* 15651 */;
 import ConnectionBannerIconDefault from "ConnectionBannerIcon" /* 15652 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "isSyncedModeThemesEnabled" /* 4195 */;
-import closure_9 from "handleConnectionOpen" /* 4197 */;
-import closure_10 from "filterPlayingActivities" /* 7250 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled" /* 4195 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
+import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
 import { ME } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 let c5 = importAllResult;
 ({ View: closure_6, Pressable: error } = get_ActivityIndicator);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_PADDING: map1, YOU_BAR_SPRING_CONFIG: closure_14, YOU_BAR_AVATAR_LARGE_SIZE: closure_15, YOU_BAR_AVATAR_SIZE: closure_16, YOU_BAR_BUTTON_HIT_SLOP: closure_17 } = CONNECTION_BANNER_HEIGHT);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-let obj = { youRow: null, youRowRight: null, youPressable: null };
-obj = { position: "absolute", left: 0, right: 0, bottom: 0, flexDirection: "row", alignItems: "center", backgroundColor: "transparent" };
+let obj = { position: "absolute", left: 0, right: 0, bottom: 0, flexDirection: "row", alignItems: "center", backgroundColor: "transparent" };
 const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
 obj[0] = obj;
 obj[1] = { flexDirection: "row", gap: 8 };
-createCacheKey = { flex: 1, marginRight: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.modules.mobile.YOU_BAR_BORDER_RADIUS };
+const createCacheKey = { flex: 1, marginRight: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.modules.mobile.YOU_BAR_BORDER_RADIUS };
 obj[2] = createCacheKey;
 let closure_22 = createCacheKey.createStyles(obj);
 let closure_23 = { code: "function YouBarTsx1(){const{withSpring,barMarginBottom,connectionBannerHeight,YOU_BAR_SPRING_CONFIG,isPressedValue,isQuestRendered}=this.__closure;return{marginBottom:withSpring(barMarginBottom+connectionBannerHeight,YOU_BAR_SPRING_CONFIG),transform:[{scale:withSpring(isPressedValue.get()&&!isQuestRendered?0.98:1,YOU_BAR_SPRING_CONFIG)}]};}" };
@@ -38,7 +37,7 @@ let closure_24 = { code: "function YouBarTsx2(_,success){const{runOnJS,handleNav
 let closure_25 = { code: "function YouBarTsx3(_,manager){const{startingTranslateX,translateX}=this.__closure;if(Math.abs(startingTranslateX.get()-translateX.get())>=10){manager.fail();}}" };
 let closure_26 = { code: "function YouBarTsx4(){const{startingTranslateX,translateX}=this.__closure;startingTranslateX.set(translateX.get());}" };
 let closure_27 = importAllResult.memo(() => {
-  let tmp = callback3();
+  const tmp = callback3();
   let obj = isMobileQuestDockRenderedBase(14443);
   const mobileQuestDock = obj.useMobileQuestDock();
   obj1 = isMobileQuestDockRenderedBase(14443);
@@ -61,7 +60,6 @@ let closure_27 = importAllResult.memo(() => {
   let fn = function r() {
     let obj = { marginBottom: isMobileQuestDockRenderedBase(4744).withSpring(youBarBottomMargin + connectionBannerHeight, closure_14), transform: null };
     const obj2 = isMobileQuestDockRenderedBase(4744);
-    const tmp = closure_14;
     let num = 1;
     if (sharedValue.get()) {
       num = 1;
@@ -69,7 +67,7 @@ let closure_27 = importAllResult.memo(() => {
         num = 0.98;
       }
     }
-    obj = { scale: isMobileQuestDockRenderedBase(4744).withSpring(num, tmp) };
+    obj = { scale: isMobileQuestDockRenderedBase(4744).withSpring(num, closure_14) };
     const items = [obj];
     obj[1] = items;
     return obj;
@@ -127,7 +125,7 @@ let closure_27 = importAllResult.memo(() => {
         const obj = isMobileQuestDockRenderedBase(4219);
       }
       const items = [tmp, tag, humanizeStatusResult];
-      const found = items.filter((arg0) => null != arg0);
+      const found = items.filter((item, index) => null != item);
       return found.join(", ");
     }
   });
@@ -153,7 +151,7 @@ let closure_27 = importAllResult.memo(() => {
     if (null != rootNavigationRef) {
       function checkYouScreenPresence() {
         if (null != rootNavigationRef) {
-          const state = obj.getState();
+          const state = rootNavigationRef.getState();
           let tmp3 = null != state;
           if (tmp3) {
             let name;
@@ -175,23 +173,22 @@ let closure_27 = importAllResult.memo(() => {
           if (state != null) {
             const routes = state.routes;
             if (routes != null) {
-              someResult = routes.some((name) => "you" === name.name);
+              someResult = routes.some((item, index) => "you" === item.name);
             }
           }
           if (!someResult) {
             if (null != closure_1_13.current) {
-              if ("press" === tmp9.current) {
+              if ("press" === closure_1_13.current) {
                 const result = isMobileQuestDockRenderedBase(4343).triggerHapticFeedback(isMobileQuestDockRenderedBase(4343).HapticFeedbackTypes.SOFT);
-                obj.navigate("you");
+                rootNavigationRef.navigate("you");
                 const obj3 = isMobileQuestDockRenderedBase(4343);
               } else {
-                isMobileQuestDockRenderedBase(1370).assertNever(tmp9.current);
+                isMobileQuestDockRenderedBase(1370).assertNever(closure_1_13.current);
                 const obj2 = isMobileQuestDockRenderedBase(1370);
               }
-              tmp9.current = null;
+              closure_1_13.current = null;
             }
           }
-          const tmp4 = closure_1_15;
         }
       }
       let result = checkYouScreenPresence();
@@ -204,14 +201,14 @@ let closure_27 = importAllResult.memo(() => {
   }, []);
   const items4 = [sharedValue];
   const memo2 = obj7.useMemo(() => isMobileQuestDockRenderedBase(12).debounce(() => {
-    const rootNavigationRef = closure_1_0(closure_1_2[33]).getRootNavigationRef();
+    const rootNavigationRef = isMobileQuestDockRenderedBase(closure_1_2[33]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       const state = rootNavigationRef.getState();
       let someResult;
       if (state != null) {
         const routes = state.routes;
         if (routes != null) {
-          someResult = routes.some((name) => "you" === name.name);
+          someResult = routes.some((item, index) => "you" === item.name);
         }
       }
       if (someResult) {
@@ -219,11 +216,12 @@ let closure_27 = importAllResult.memo(() => {
       }
     }
     if (null != rootNavigationRef) {
-      const result = tmp(tmp2[34]).triggerHapticFeedback(tmp(tmp2[34]).HapticFeedbackTypes.SOFT);
+      const result = isMobileQuestDockRenderedBase(closure_1_2[34]).triggerHapticFeedback(isMobileQuestDockRenderedBase(closure_1_2[34]).HapticFeedbackTypes.SOFT);
       rootNavigationRef.navigate("you");
       const result1 = closure_5.set(false);
-      const tmpResult = tmp(tmp2[34]);
+      const tmpResult = isMobileQuestDockRenderedBase(closure_1_2[34]);
     }
+    const obj = isMobileQuestDockRenderedBase(closure_1_2[33]);
   }, 500, { leading: true, trailing: false }), items4);
   const items5 = [sharedValue];
   const items6 = [sharedValue];
@@ -260,7 +258,7 @@ let closure_27 = importAllResult.memo(() => {
             paths = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(paths[38])(paths[37], paths.paths);
+            obj1[0] = isMobileQuestDockRenderedBase(paths[38])(paths[37], paths.paths);
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -273,7 +271,7 @@ let closure_27 = importAllResult.memo(() => {
           return obj;
         } else {
           closure_0 = arg1;
-          const result = closure_1_0(paths[34]).triggerHapticFeedback(closure_1_0(paths[34]).HapticFeedbackTypes.SOFT);
+          const result = isMobileQuestDockRenderedBase(paths[34]).triggerHapticFeedback(isMobileQuestDockRenderedBase(paths[34]).HapticFeedbackTypes.SOFT);
           const result1 = closure_0.showYouAccountActionSheet();
           const result2 = closure_5.set(false);
           c3 = 3;
@@ -295,8 +293,8 @@ let closure_27 = importAllResult.memo(() => {
   const callback4 = obj7.useCallback(() => {
     const coerceGuildsRouteResult = isMobileQuestDockRenderedBase(4229).coerceGuildsRoute(youBarHorizontalMargin(9569)());
     if (null != coerceGuildsRouteResult) {
-      let tmpResult = tmp(4343);
-      const result = tmpResult.triggerHapticFeedback(tmp(4343).HapticFeedbackTypes.SOFT);
+      let tmpResult = isMobileQuestDockRenderedBase(4343);
+      const result = tmpResult.triggerHapticFeedback(isMobileQuestDockRenderedBase(4343).HapticFeedbackTypes.SOFT);
       const params = coerceGuildsRouteResult.params;
       let guildId;
       if (params != null) {
@@ -305,17 +303,18 @@ let closure_27 = importAllResult.memo(() => {
       if (guildId === translateX) {
         const lastSelectedGuildId = ref2.getLastSelectedGuildId();
         if (null != lastSelectedGuildId) {
-          tmpResult = tmp(7302);
+          tmpResult = isMobileQuestDockRenderedBase(7302);
           tmpResult.transitionToGuild(lastSelectedGuildId);
         }
       } else {
-        if (ref2.current === tmp(1377).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK) {
+        if (ref2.current === isMobileQuestDockRenderedBase(1377).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK) {
           ref.current(constants.TAKE_ACTION);
         }
-        tmp(7302).transitionToGuild(tmp5);
-        const tmpResult1 = tmp(7302);
+        isMobileQuestDockRenderedBase(7302).transitionToGuild(tmp5);
+        const tmpResult1 = isMobileQuestDockRenderedBase(7302);
       }
     }
+    const obj = isMobileQuestDockRenderedBase(4229);
   }, []);
   const context = obj7.useContext(tmp2(15276));
   const gesture = context.gesture;
@@ -349,8 +348,8 @@ let closure_27 = importAllResult.memo(() => {
     const onBeginResult = result.activeOffsetX(50).failOffsetX(-10).failOffsetY([-40, 40]).onBegin(fn);
     const fn3 = function t(arg0, arg1) {
       if (arg1) {
-        closure_1_0(closure_1_2[20]).runOnJS(closure_16)();
-        const obj = closure_1_0(closure_1_2[20]);
+        isMobileQuestDockRenderedBase(closure_1_2[20]).runOnJS(closure_16)();
+        const obj = isMobileQuestDockRenderedBase(closure_1_2[20]);
       }
     };
     obj = { runOnJS: isMobileQuestDockRenderedBase(4115).runOnJS, handleNavBetweenGuildsAndDMs: callback4 };
@@ -401,9 +400,9 @@ let closure_27 = importAllResult.memo(() => {
   }
   const items11 = [tmp43Result, callback(youBarHorizontalMargin(15649), { hasNameplate: null != nameplate })];
   obj4[1] = items11;
-  items10[3] = closure_21(visibleContent, obj4);
+  items10[3] = callback(visibleContent, obj4);
   obj[3] = items10;
-  return closure_21(youBarHorizontalMargin(4115).View, obj);
+  return callback(youBarHorizontalMargin(4115).View, obj);
 });
 const memoResult = importAllResult.memo(function YouBarThemed() {
   let obj = initialize;
@@ -414,6 +413,6 @@ const memoResult = importAllResult.memo(function YouBarThemed() {
   obj[1] = items1;
   return callback2(ManaContext.ThemeContextProvider, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBar.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBar.tsx");
 
 export default memoResult;

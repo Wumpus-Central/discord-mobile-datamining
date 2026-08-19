@@ -1,20 +1,20 @@
 // === Module 15303: usePrivateChannelWaveEligible ===
 
 // Module 15303 (usePrivateChannelWaveEligible)
-import closure_3 from "reinjectEphemerals" /* 4994 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
 import { ChannelFlags } from "set" /* 1398 */;
 import { MessageTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
 
 export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligible(isDM, arg1) {
   const _require = isDM;
   let tmp = isDM.isDM() && !isDM.isSystemDM();
   if (tmp) {
     const rawRecipients = isDM.rawRecipients;
-    tmp = !rawRecipients.some((bot) => bot.bot);
+    tmp = !rawRecipients.some((item, index) => item.bot);
   }
   let recipientId = null;
   if (tmp) {
@@ -48,7 +48,7 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
       if (firstResult != null) {
         type = firstResult.type;
       }
-      tmp = type === closure_1_6.FRIEND_REQUEST_ACCEPTED;
+      tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
     }
     return tmp;
   });

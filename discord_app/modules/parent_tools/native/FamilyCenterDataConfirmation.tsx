@@ -21,23 +21,22 @@ import CreditCardIcon from "CreditCardIcon" /* 11110 */;
 import PiggyBankIcon from "PiggyBankIcon" /* 11112 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function RowGroup(children) {
   const rows = children.rows;
-  let obj = { spacing: 8, children: null };
   const items = [callback(Text.Text, { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: children.title }), ];
-  obj = {
+  let obj = {
     hasIcons: true,
-    children: rows.map((header) => {
-      header = header.header;
-      ({ description, IconComponent, negative } = header);
+    children: rows.map((item, index) => {
+      const header = item.header;
+      ({ description, IconComponent, negative } = item);
       const obj = { label: header, subLabel: description, icon: null };
       let str = "default";
       if (true === negative) {
         str = "text-status-dnd";
       }
-      obj[2] = closure_3(callback(6291).TableRow.Icon, { variant: str, IconComponent });
-      return closure_3(callback(6291).TableRow, obj, header);
+      obj[2] = callback(callback(6291).TableRow.Icon, { variant: str, IconComponent });
+      return callback(callback(6291).TableRow, obj, header);
     })
   };
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
@@ -46,7 +45,7 @@ function RowGroup(children) {
 }
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterDataConfirmation.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterDataConfirmation.tsx");
 
 export default function FamilyCenterDataConfirmation() {
   const intl = getSystemLocale.intl;

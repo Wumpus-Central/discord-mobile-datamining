@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 5038 */;
 import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8041 */;
 
-require = arg1;
+require = fn;
 initializeDefault;
 class SocialLayerStorefrontConfigManager extends tmp2 {
   constructor() {
@@ -19,6 +19,6 @@ SocialLayerStorefrontConfigManager.prototype["onPostConnectionOpen"] = function 
   const socialLayerStorefrontConfig = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontConfig();
 };
 const socialLayerStorefrontConfigManager = new SocialLayerStorefrontConfigManager();
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx");
 
 export default socialLayerStorefrontConfigManager;

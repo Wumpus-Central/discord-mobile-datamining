@@ -1,13 +1,13 @@
 // === Module 5574: CandyIllocon ===
 
 // Module 5574 (CandyIllocon)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import metadataDefault from "metadata" /* 5575 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/CandyIllocon.native.tsx");
+const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/CandyIllocon.native.tsx");
 
 export const CandyIllocon = function CandyIllocon(size) {
   let num = size.size;
@@ -15,8 +15,7 @@ export const CandyIllocon = function CandyIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
+  const obj = { uri: metadataDefault };
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;

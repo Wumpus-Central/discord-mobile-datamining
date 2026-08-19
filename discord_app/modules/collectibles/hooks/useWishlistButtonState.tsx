@@ -1,13 +1,13 @@
 // === Module 9232: useWishlistButtonState ===
 
 // Module 9232 (useWishlistButtonState)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "createUserWidgetFromServer" /* 5365 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useWishlistButtonState.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useWishlistButtonState.tsx");
 
 export const useWishlistButtonState = function useWishlistButtonState(onRemoveSuccess) {
   ({ userId: require, skuId } = onRemoveSuccess);
@@ -28,10 +28,10 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
     items = [_location];
   }
   analyticsLocations = skuId(onAddSuccess[4])(items).analyticsLocations;
-  let tmp3Result = tmp3(tmp[6]);
+  let tmp3Result = require(onAddSuccess[6]);
   const items1 = [analyticsLocations];
   stateFromStores = tmp3Result.useStateFromStores(items1, () => analyticsLocations.getFirstWishlistId(closure_0));
-  tmp3Result = tmp3(tmp[7]);
+  tmp3Result = require(onAddSuccess[7]);
   isSkuInWishlist = tmp3Result.useIsSkuInWishlist(stateFromStores, skuId);
   const tmp2 = skuId(onAddSuccess[4]);
   [tmp7, c8] = onError(skipAddAnnouncement.useState(null), 2);
@@ -79,8 +79,7 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
             } else {
               closure_1 = tmp4;
               closure_0 = tmp9;
-              let announceResult = closure_1_9;
-              if (closure_1_9) {
+              if (first) {
                 c5 = 3;
                 if (arg0 === 1) {
                   c5 = 3;
@@ -94,13 +93,9 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
                   obj1[0] = arg1;
                   return obj1;
                 } else {
-                  const AccessibilityAnnouncer2 = closure_1_0(closure_1_2[9]).AccessibilityAnnouncer;
-                  announceResult = closure_1_0;
-                  announceResult = closure_1_2;
-                  const intl2 = closure_1_0(closure_1_2[10]).intl;
-                  announceResult = closure_1_0;
-                  announceResult = closure_1_2;
-                  announceResult = AccessibilityAnnouncer2.announce(intl2.string(closure_1_0(closure_1_2[10]).t.DSXOiP));
+                  const AccessibilityAnnouncer2 = closure_1_0(onAddSuccess[9]).AccessibilityAnnouncer;
+                  const intl2 = closure_1_0(onAddSuccess[10]).intl;
+                  AccessibilityAnnouncer2.announce(intl2.string(closure_1_0(onAddSuccess[10]).t.DSXOiP));
                   if (v0 != null) {
                     v0();
                   }
@@ -108,24 +103,24 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
                 }
               } else {
                 closure_1_10(true);
-                if (closure_1_11) {
-                  if (null != closure_1_7) {
+                if (isSkuInWishlist) {
+                  if (null != stateFromStores) {
                     closure_1_8(false);
                     v0 = 3;
                     c4 = 4;
                     c5 = 1;
                     let obj2 = { value: null, done: false };
-                    obj2[0] = closure_1_1(closure_1_2[8]).removeSkuFromWishlist(tmp73, closure_1_1, closure_1_6);
+                    obj2[0] = skuId(onAddSuccess[8]).removeSkuFromWishlist(tmp73, skuId, analyticsLocations);
                     return obj2;
                   }
                 }
                 closure_1_8(true);
                 v0 = 4;
-                obj2 = closure_1_1(closure_1_2[8]);
+                obj2 = skuId(onAddSuccess[8]);
                 c4 = 6;
                 c5 = 1;
                 const obj3 = { value: null, done: false };
-                obj3[0] = obj2.addSkuToWishlist(closure_1_1, closure_1_6);
+                obj3[0] = obj2.addSkuToWishlist(skuId, analyticsLocations);
                 return obj3;
               }
             }
@@ -150,7 +145,7 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
               v0 = 2;
               closure_1 = closure_2;
               if (c4 != null) {
-                tmp28(closure_1_1);
+                tmp28(skuId);
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -165,12 +160,12 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
               return obj;
             } else {
               if (!c5) {
-                const AccessibilityAnnouncer = closure_1_0(closure_1_2[9]).AccessibilityAnnouncer;
-                const intl = closure_1_0(closure_1_2[10]).intl;
-                AccessibilityAnnouncer.announce(intl.string(closure_1_0(closure_1_2[10]).t["3T2jbf"]));
+                const AccessibilityAnnouncer = closure_1_0(onAddSuccess[9]).AccessibilityAnnouncer;
+                const intl = closure_1_0(onAddSuccess[10]).intl;
+                AccessibilityAnnouncer.announce(intl.string(closure_1_0(onAddSuccess[10]).t["3T2jbf"]));
               }
-              if (closure_1_2 != null) {
-                closure_1_2();
+              if (onAddSuccess != null) {
+                onAddSuccess();
               }
               v0 = 2;
             }
@@ -188,8 +183,8 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
             throw tmp86;
           } else if (tmp2 === tmp88) {
             c4 = tmp2;
-          } else if (announceResult === tmp88) {
-            c4 = announceResult;
+          } else if (tmp === tmp88) {
+            c4 = tmp;
           } else if (tmp3 === tmp88) {
             c4 = tmp3;
           } else {

@@ -1,11 +1,11 @@
 // === Module 10295: openGiftModal ===
 
 // Module 10295 (openGiftModal)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
-const result = set.fileFinishedImporting("modules/premium/native/utils/openGiftModal.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/native/utils/openGiftModal.tsx");
 
 export const openGiftModal = function openGiftModal(navigationParams) {
   const merged = Object.assign(navigationParams, Object.create(null));

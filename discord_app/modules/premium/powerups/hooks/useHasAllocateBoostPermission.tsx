@@ -1,12 +1,12 @@
 // === Module 11682: useHasAllocateBoostPermission ===
 
 // Module 11682 (useHasAllocateBoostPermission)
-import closure_2 from "createGuildRecordFromRust" /* 1910 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import { Permissions } from "sum" /* 505 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx");
 
 export default function useHasAllocateBoostPermission(arg0) {
   const _require = arg0;
@@ -16,8 +16,8 @@ export default function useHasAllocateBoostPermission(arg0) {
     let canResult = null;
     if (null != guild) {
       canResult = null;
-      if (null != obj.getGuildPermissions(guild)) {
-        canResult = obj.can(closure_1_4.ADMINISTRATOR, guild);
+      if (null != closure_1_3.getGuildPermissions(guild)) {
+        canResult = closure_1_3.can(Permissions.ADMINISTRATOR, guild);
       }
     }
     return canResult;
@@ -27,8 +27,8 @@ export const getHasAllocateBoostPermission = function getHasAllocateBoostPermiss
   let canResult = null;
   if (null != guild) {
     canResult = null;
-    if (null != closure_4.getGuildPermissions(guild)) {
-      canResult = closure_4.can(Permissions.ADMINISTRATOR, guild);
+    if (null != Permissions.getGuildPermissions(guild)) {
+      canResult = Permissions.can(Permissions.ADMINISTRATOR, guild);
     }
   }
   return canResult;

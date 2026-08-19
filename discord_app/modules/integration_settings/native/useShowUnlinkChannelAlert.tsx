@@ -1,11 +1,11 @@
 // === Module 9950: useShowUnlinkChannelAlert ===
 
 // Module 9950 (useShowUnlinkChannelAlert)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/integration_settings/native/useShowUnlinkChannelAlert.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/integration_settings/native/useShowUnlinkChannelAlert.tsx");
 
 export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -40,8 +40,8 @@ export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
   }), items);
   const items1 = [arg1, callback];
   return React.useCallback(() => {
-    let obj = callback2(4656);
-    obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
+    callback2(4656);
+    let obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
     const intl = callback(1236).intl;
     obj[0] = intl.string(callback(1236).t.JmUENg);
     const intl2 = callback(1236).intl;

@@ -1,7 +1,7 @@
 // === Module 8753: prototype ===
 
 // Module 8753 (prototype)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 const prototype = function RPCError(arg0, message) {
   const tmp = new prototype(message, new.target, new.target, arg0);
@@ -17,6 +17,6 @@ const prototype = function RPCError(arg0, message) {
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("../discord_common/js/shared/lib/RPCError.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/lib/RPCError.tsx");
 
 export const RPCError = prototype;

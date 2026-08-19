@@ -7,9 +7,9 @@ import getScreens from "getScreens" /* 14081 */;
 import { WebAuthnScreens } from "WebAuthnScreens" /* 14078 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellFullModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellFullModal.tsx");
 
 export default function PasskeyUpsellFullModal() {
   let obj = getScreens;

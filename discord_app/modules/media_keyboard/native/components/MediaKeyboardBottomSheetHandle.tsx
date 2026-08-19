@@ -9,20 +9,19 @@ import map from "map" /* 8995 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { DRAG_HANDLE } from "DRAG_HANDLE" /* 1624 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 ({ Pressable: c3, View: c4, StyleSheet } = get_ActivityIndicator);
-let obj = { headerHandleWrap: null, dragHandleBar: null };
-obj = {};
+let obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.backgroundColor = "transparent";
 obj.height = DRAG_HANDLE.slotHeight;
 obj.alignItems = "center";
 obj.bottom = undefined;
 obj[0] = obj;
-createCacheKey = { backgroundColor: DRAG_HANDLE.barColor, borderRadius: ThemesDefault.radii.xs, marginTop: DRAG_HANDLE.barMarginTop, height: DRAG_HANDLE.barHeight, width: DRAG_HANDLE.barWidth };
+const createCacheKey = { backgroundColor: DRAG_HANDLE.barColor, borderRadius: ThemesDefault.radii.xs, marginTop: DRAG_HANDLE.barMarginTop, height: DRAG_HANDLE.barHeight, width: DRAG_HANDLE.barWidth };
 obj[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHandle(onPress) {
@@ -45,7 +44,7 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHandle(
     obj[0] = onPress;
     obj[1] = stringResult;
     obj[2] = null == onPress;
-    let tmp8Result = tmp8(TwinButtons.ActionSheetDragHandle, obj);
+    let tmp8Result = jsx(TwinButtons.ActionSheetDragHandle, { onPress: null, accessibilityLabel: null, "aria-hidden": null });
   } else {
     obj = { accessibilityLabel: null, accessibilityRole: "button", "aria-hidden": null, style: null, onPress: null, children: null };
     obj[0] = stringResult;
@@ -55,11 +54,11 @@ const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHandle(
     obj[4] = onPress;
     obj1 = { style: null };
     obj1[0] = tmp.dragHandleBar;
-    obj[5] = tmp8(closure_4, obj1);
-    tmp8Result = tmp8(closure_3, obj);
+    obj[5] = <closure_4 style={null} />;
+    tmp8Result = <closure_3 accessibilityLabel={null} accessibilityRole="button" aria-hidden={null} style={null} onPress={null}>{null}</closure_3>;
   }
   return tmp8Result;
 });
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx");
 
 export default memoResult;

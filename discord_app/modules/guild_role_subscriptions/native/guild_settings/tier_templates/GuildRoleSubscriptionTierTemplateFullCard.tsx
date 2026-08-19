@@ -10,13 +10,12 @@ import SectionTitle from "SectionTitle" /* 14583 */;
 import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15380 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function SectionSeparator() {
-  let obj = { children: null };
   const items = [callback(Button.Spacer, { size: 24 }), , ];
-  obj = { style: callback3().separator };
+  const obj = { style: callback3().separator };
   items[1] = callback(View, obj);
   items[2] = callback(Button.Spacer, { size: 24 });
   obj[0] = items;
@@ -25,8 +24,7 @@ function SectionSeparator() {
 function BenefitRow(description) {
   description = description.description;
   const tmp = callback3();
-  let obj = { style: tmp.benefitRowContainer, children: null };
-  obj = { children: callback(SubscriptionGatedChannelIconDefault, {}) };
+  let obj = { children: callback(SubscriptionGatedChannelIconDefault, {}) };
   const items = [callback(View, obj), ];
   obj = { style: tmp.benefitTextContainer, children: null };
   const items1 = [description.title, ];
@@ -39,9 +37,9 @@ function BenefitRow(description) {
   }
   items1[1] = tmp4Result;
   obj[1] = items1;
-  items[1] = closure_6(View, obj);
+  items[1] = callback(View, obj);
   obj[1] = items;
-  return closure_6(View, obj);
+  return callback(View, obj);
 }
 function BenefitSection(arg0) {
   const obj = { children: null };
@@ -52,14 +50,11 @@ function BenefitSection(arg0) {
 }
 noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, content: null, separator: null, benefitRowContainer: null, benefitTextContainer: null, benefitDescription: null, channelTitle: null, channelIcon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj1 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[2] = { color: ThemesDefault.colors.TEXT_DEFAULT, paddingTop: 16, paddingBottom: 24 };
 createCacheKey[3] = { paddingTop: 24 };
-let obj2 = { color: ThemesDefault.colors.TEXT_DEFAULT, paddingTop: 16, paddingBottom: 24 };
 createCacheKey[4] = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 createCacheKey[5] = { flexDirection: "row", justifyContent: "flex-start" };
 createCacheKey[6] = { flex: 1, justifyContent: "center", marginLeft: 16 };
@@ -67,21 +62,17 @@ createCacheKey[7] = { marginTop: 2 };
 createCacheKey[8] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[9] = { marginEnd: 8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateFullCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateFullCard.tsx");
 
 export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   template = template.template;
-  let _require;
   ({ guildId, handleSelectTemplateInPreview } = template);
   const tmp = callback3();
-  _require = tmp;
+  const _require = tmp;
   const first = template.listings[0];
   ({ channels, additional_perks } = first);
   ({ image, name, role_color } = first);
-  let obj = { scrollable: true, startExpanded: true, children: null };
-  obj = { style: tmp.container, children: null };
-  obj = { template, handleSelectTemplateInPreview, subscriptionPlanTextStyle: tmp.subscriptionPlanTextStyle, descriptionTextStyle: tmp.descriptionPlanTextStyle, closeActionSheet: true };
+  let obj = { template, handleSelectTemplateInPreview, subscriptionPlanTextStyle: tmp.subscriptionPlanTextStyle, descriptionTextStyle: tmp.descriptionPlanTextStyle, closeActionSheet: true };
   let items = [callback(_require(17006).GuildRoleSubscriptionTierTemplateBasicInfo, obj), callback(View, { style: tmp.separator }), ];
   const obj2 = { scrollsToTop: false, style: tmp.content, contentContainerStyle: obj3, children: null };
   const obj4 = { variant: "text-sm/bold", color: "text-default", style: { textTransform: "uppercase" }, children: null };
@@ -103,17 +94,15 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   const obj7 = { sectionTitle: null, children: null };
   const intl4 = _require(1236).intl;
   obj7[0] = intl4.string(_require(1236).t.Ofvpfs);
-  obj1 = { style: tmp.separator };
   obj3 = { paddingBottom: 32 + useSafeAreaInsetsDefault().bottom };
   obj7[1] = callback(_require(9422).GappedList, {
     gap: 14,
-    children: channels.map((children) => {
-      let obj = lib(closure_1_2[16]);
-      obj = { style: lib.channelTitle, children: null };
-      obj = { style: lib.channelIcon, size: "xs" };
-      const items = [closure_1_4(obj.getPrivateChannelIconComponent(children.type), obj), closure_1_4(lib(closure_1_2[7]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name })];
+    children: channels.map((item, index) => {
+      lib(dependencyMap[16]);
+      const obj = { style: lib.channelIcon, size: "xs" };
+      const items = [closure_1_4(obj.getPrivateChannelIconComponent(item.type), obj), closure_1_4(lib(dependencyMap[7]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: item.name })];
       obj[1] = items;
-      return closure_1_4(closure_1_9, { title: closure_1_6(closure_1_3, obj), description: children.description }, children.id);
+      return closure_1_4(BenefitRow, { title: closure_1_6(View, obj), description: item.description }, item.id);
     })
   });
   items1[8] = callback(BenefitSection, obj7);
@@ -123,21 +112,20 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   obj9[0] = intl5.string(_require(1236).t.w7KA8R);
   const obj8 = {
     gap: 14,
-    children: channels.map((children) => {
-      let obj = lib(closure_1_2[16]);
-      obj = { style: lib.channelTitle, children: null };
-      obj = { style: lib.channelIcon, size: "xs" };
-      const items = [closure_1_4(obj.getPrivateChannelIconComponent(children.type), obj), closure_1_4(lib(closure_1_2[7]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name })];
+    children: channels.map((item, index) => {
+      lib(dependencyMap[16]);
+      const obj = { style: lib.channelIcon, size: "xs" };
+      const items = [closure_1_4(obj.getPrivateChannelIconComponent(item.type), obj), closure_1_4(lib(dependencyMap[7]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: item.name })];
       obj[1] = items;
-      return closure_1_4(closure_1_9, { title: closure_1_6(closure_1_3, obj), description: children.description }, children.id);
+      return closure_1_4(BenefitRow, { title: closure_1_6(View, obj), description: item.description }, item.id);
     })
   };
   obj9[1] = callback(_require(9422).GappedList, {
     gap: 14,
-    children: additional_perks.map((children) => {
-      let obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name };
+    children: additional_perks.map((item, index) => {
+      let obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: item.name };
       obj = { title: callback(lib(table[7]).Text, obj) };
-      return callback(closure_9, obj, arg1);
+      return callback(closure_9, obj, index);
     })
   });
   items1[10] = callback(BenefitSection, obj9);

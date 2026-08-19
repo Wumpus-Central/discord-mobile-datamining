@@ -1,17 +1,18 @@
 // === Module 1495: getDimensionsStoreStateForEntry ===
 
 // Module 1495 (getDimensionsStoreStateForEntry)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
 import APP_ENTRY_KEYS from "APP_ENTRY_KEYS" /* 1642 */;
 import readWindowSizeForAppEntry from "readWindowSizeForAppEntry" /* 1894 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1895 */;
 import keys from "keys" /* 644 */;
 import importDefaultResult from "subscribeToKeyboardUIStore" /* 1496 */;
 import importDefaultResult1 from "module_1630" /* 1630 */;
 
-function getDimensionsStoreStateForEntry(appEntryKey) {
+function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
   const size = {};
   obj = Dimensions;
   const merged = Object.assign(Dimensions.get("window"));
@@ -34,7 +35,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   }
   let width = size.width;
   ({ width: width2, height } = size2);
-  let tmp2Result = tmp2(1629);
+  let tmp2Result = useSafeAreaInsets;
   const rect = tmp2Result.getSafeAreaInsets(appEntryKey);
   let tmp8 = height;
   let tmp9 = width2;
@@ -44,7 +45,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
   }
   const bound = Math.min(width + rect.left + rect.right, tmp9);
   const sum = size.height + rect.top + rect.bottom;
-  tmp2Result = tmp2(1895);
+  tmp2Result = useSystemKeyboardHeight;
   obj = { appEntryKey };
   const bound1 = Math.min(sum - tmp2Result.getSystemKeyboardHeight(obj), tmp8);
   width = undefined;
@@ -87,7 +88,8 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
       return obj2;
     }
   }
-  obj2 = { fontScale, screenIsLandscape: tmp5, windowDimensions, windowDimensionsIgnoringKeyboard: prop };
+  obj2 = { fontScale, screenIsLandscape: size2.width > size2.height, windowDimensions, windowDimensionsIgnoringKeyboard: prop };
+  const tmp2Result1 = useSafeAreaInsets;
 }
 function getDimensionsStoreState(arg0) {
   let tmp = arg0;
@@ -98,21 +100,16 @@ function getDimensionsStoreState(arg0) {
   while (iter !== undefined) {
     let tmp3 = nextResult;
     let tmp5;
-    let tmp4 = getDimensionsStoreStateForEntry;
     if (tmp != null) {
-      let tmp6 = nextResult;
       tmp5 = tmp.byAppEntry[tmp3];
     }
-    let tmp4Result = tmp4(nextResult, tmp5);
-    let tmp9 = nextResult;
+    let tmp4Result = getDimensionsStoreStateForEntry(nextResult, tmp5);
     obj[tmp3] = tmp4Result;
     let tmp10;
     let tmp8 = tmp4Result;
     if (tmp != null) {
-      let tmp11 = nextResult;
       tmp10 = tmp.byAppEntry[tmp3];
     }
-    let tmp12 = tmp4Result;
     if (tmp10 !== tmp8) {
       flag = false;
     }
@@ -133,9 +130,9 @@ const subscription = importDefaultResult1.subscribe(() => {
 importDefaultResult(() => {
   batchUpdates.batchUpdates(() => state.setState((arg0) => callback(arg0)));
 });
-const listener = Dimensions.addEventListener("change", () => {
+const listener = Dimensions.addEventListener("change", (event) => {
   batchUpdates.batchUpdates(() => state.setState((arg0) => callback(arg0)));
 });
-const result = set.fileFinishedImporting("modules/screen/native/DimensionsStore.android.tsx");
+const result = obj132.fileFinishedImporting("modules/screen/native/DimensionsStore.android.tsx");
 
 export default obj;

@@ -1,13 +1,13 @@
 // === Module 16682: clearPendingRetry ===
 
 // Module 16682 (clearPendingRetry)
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 14224 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import initialize from "initialize" /* 14224 */;
 import importDefaultResult from "fails" /* 584 */;
 
-const require = arg1;
+const require = fn;
 function clearPendingRetry() {
   if (null != c8) {
     const _clearTimeout = clearTimeout;
@@ -309,12 +309,12 @@ function _forceFetchWarning() {
   return applyArgumentsResult;
 }
 let logger = new require("log").Logger("ParentalConsentWarning");
-const result = 5 * setDefault.Millis.SECOND;
-importDefaultResult = new importDefaultResult(result, 5 * setDefault.Millis.MINUTE, true);
+const result = 5 * obj132Default.Millis.SECOND;
+importDefaultResult = new importDefaultResult(result, 5 * obj132Default.Millis.MINUTE, true);
 let c7 = null;
 let c8 = null;
 let c9 = 0;
-const result1 = require("set").fileFinishedImporting("modules/parent_tools/ParentalConsentWarningActionCreators.tsx");
+const result1 = require("obj132").fileFinishedImporting("modules/parent_tools/ParentalConsentWarningActionCreators.tsx");
 
 export { maybeFetchWarning };
 export const forceFetchWarning = function forceFetchWarning() {

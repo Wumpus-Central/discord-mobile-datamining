@@ -1,10 +1,10 @@
 // === Module 14424: _search ===
 
 // Module 14424 (_search)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _search() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -121,7 +121,7 @@ function _search() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/collectibles/api/Shopfront.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/api/Shopfront.tsx");
 
 export const search = function search() {
   const self = this;

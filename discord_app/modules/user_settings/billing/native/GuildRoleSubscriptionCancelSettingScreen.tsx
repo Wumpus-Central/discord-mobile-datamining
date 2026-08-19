@@ -6,9 +6,9 @@ import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7385 */;
 import WhatYouLoseDefault from "WhatYouLose" /* 14572 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/GuildRoleSubscriptionCancelSettingScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/billing/native/GuildRoleSubscriptionCancelSettingScreen.tsx");
 
 export default function GuildRoleSubscriptionCancelSettingScreen() {
   let obj = useSettingNavigationRoute;

@@ -1,14 +1,13 @@
 // === Module 9742: openClearAllIncomingRequestsConfirmationModal ===
 
 // Module 9742 (openClearAllIncomingRequestsConfirmationModal)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
-const result = set.fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmationModal.tsx");
+const result = obj132.fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmationModal.tsx");
 
 export default function openClearAllIncomingRequestsConfirmationModal(incomingPendingRequestCount) {
-  let obj = _modDef5260;
-  obj = { incomingPendingRequestCount };
+  const obj = { incomingPendingRequestCount };
   obj.pushLazy(asyncRequireImpl(9743, dependencyMap.paths), obj);
 };

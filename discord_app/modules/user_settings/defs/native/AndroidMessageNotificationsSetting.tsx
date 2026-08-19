@@ -1,8 +1,8 @@
 // === Module 14799: useAndroidMessageNotificationsSettingValue ===
 
 // Module 14799 (useAndroidMessageNotificationsSettingValue)
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import obj132 from "obj132" /* 2 */;
+import obj1322 from "obj132" /* 500 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import MobileUserSettings from "MobileUserSettings" /* 8198 */;
 import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore" /* 14788 */;
@@ -17,7 +17,7 @@ function useAndroidMessageNotificationsSettingValue() {
 }
 function useHasAndroidMessageNotificationsSetting() {
   const tmp = callback();
-  let isAndroidResult = set2.isAndroid();
+  let isAndroidResult = obj1322.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != tmp;
   }
@@ -34,17 +34,7 @@ const toggle = createToggle.createToggle({
   onValueChange: setAndroidMessageNotificationsEnabled,
   usePredicate: useHasAndroidMessageNotificationsSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["zViLy+"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: useAndroidMessageNotificationsSettingValue,
-  onValueChange: setAndroidMessageNotificationsEnabled,
-  usePredicate: useHasAndroidMessageNotificationsSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx");
 
 export default toggle;
 export { useAndroidMessageNotificationsSettingValue };

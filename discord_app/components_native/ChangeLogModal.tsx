@@ -4,18 +4,21 @@
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
 import _modDef5260 from "module_5260" /* 5260 */;
+import preloadDefault from "preload" /* 5449 */;
 import NavigationStack from "NavigationStack" /* 6312 */;
 import LHeadingDefault from "LHeading" /* 8302 */;
+import renderDefault from "render" /* 8910 */;
 import VideoComponentDefault from "VideoComponent" /* 9018 */;
+import registerAssetDefault from "registerAsset" /* 10227 */;
 import _modDef14851 from "module_14851" /* 14851 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY" /* 1978 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class ChangeLogScreen {
   constructor(arg0) {
     fn = global.onClose;
@@ -55,18 +58,18 @@ class ChangeLogScreen {
         let obj = { headerTitle: null };
         obj[0] = function headerTitle() {
           let obj = { title: null, subtitle: null };
-          const intl = closure_1_0(closure_1_2[13]).intl;
-          obj[0] = intl.string(closure_1_0(closure_1_2[13]).t.LRmNAl);
-          const intl2 = closure_1_0(closure_1_2[13]).intl;
+          const intl = changelog(navigation[13]).intl;
+          obj[0] = intl.string(changelog(navigation[13]).t.LRmNAl);
+          const intl2 = changelog(navigation[13]).intl;
           if (null != date.date) {
-            if ("" !== tmp4.date) {
-              let toDateResult = closure_1_1(closure_1_2[23])(tmp4.date).toDate();
-              const obj2 = closure_1_1(closure_1_2[23])(tmp4.date);
+            if ("" !== date.date) {
+              let toDateResult = loaded(navigation[23])(date.date).toDate();
+              const obj2 = loaded(navigation[23])(date.date);
             }
             obj = { date: null };
             obj[0] = toDateResult;
             obj[1] = intl2.formatToPlainString(tmp3, obj);
-            return closure_1_7(closure_1_0(closure_1_2[22]).NavigatorHeader, obj);
+            return closure_1_7(changelog(navigation[22]).NavigatorHeader, obj);
           }
           toDateResult = new Date();
         };
@@ -79,7 +82,7 @@ class ChangeLogScreen {
     effect1 = closure_3.useEffect(() => {
       if (loaded) {
         if (null != changelog) {
-          return () => closure_1_1(closure_1_2[24]).markChangelogAsSeen(closure_0.id, closure_0.date);
+          return () => loaded(navigation[24]).markChangelogAsSeen(closure_0.id, closure_0.date);
         }
       }
     }, items1);
@@ -134,8 +137,7 @@ function hideChangeLog() {
 let c3 = importAllResult;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-createCacheKey = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: null, videoOverlay: null, playButton: null, playIcon: null, empty: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+let createCacheKey = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { position: "absolute", width: "100%", height: "100%" };
 createCacheKey[4] = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
@@ -143,7 +145,6 @@ createCacheKey[5] = { width: 21, height: 21 };
 createCacheKey[6] = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 let obj2 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
-let obj1 = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
 obj2[0] = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 obj2[1] = { flexDirection: "row", marginLeft: 4, marginBottom: 8 };
 createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
@@ -156,8 +157,7 @@ class ListItem extends PureComponent {
 ListItem.prototype["render"] = function render() {
   const children = this.props.children;
   const tmp = callback3(this.context);
-  let obj = { style: tmp.listItem, children: null };
-  obj = { style: tmp.bulletPoint };
+  let obj = { style: tmp.bulletPoint };
   const items = [callback(View, obj), ];
   obj = { style: tmp.listText, children: null };
   let childrenResult = children;
@@ -169,7 +169,7 @@ ListItem.prototype["render"] = function render() {
   obj[1] = childrenResult;
   items[1] = callback(View, obj);
   obj[1] = items;
-  return closure_8(View, obj);
+  return callback(View, obj);
 };
 ListItem.contextType = require("ManaContext").ThemeContext;
 const PureComponent2 = importAllResult.PureComponent;
@@ -201,7 +201,7 @@ class ChangeLog extends PureComponent2 {
         obj = { uri: null };
         obj[0] = image;
       }
-      obj.track(closure_1_5.CHANGE_LOG_VIDEO_INTERACTED);
+      obj.track(AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED);
       const current = obj.ref.current;
       if (null != current) {
         obj1 = { initialSources: null, disableDownload: true, shareable: false, analyticsSource: "Change Log", originViewOrOriginLayout: null };
@@ -212,8 +212,8 @@ class ChangeLog extends PureComponent2 {
         const items = [obj2];
         obj1[0] = items;
         obj1[4] = current;
-        applyArgumentsResult(closure_1_2[9]).openMediaModal(obj1);
-        const obj4 = applyArgumentsResult(closure_1_2[9]);
+        applyArgumentsResult(dependencyMap[9]).openMediaModal(obj1);
+        const obj4 = applyArgumentsResult(dependencyMap[9]);
       }
     };
     return applyArgumentsResult;
@@ -252,12 +252,10 @@ prototype["track"] = function track(arg0) {
       tmp10 = obj;
     }
     expandEventPropertiesDefault.track(arg0, tmp10);
-    const obj2 = expandEventPropertiesDefault;
   }
 };
 prototype["renderVideo"] = function renderVideo() {
-  let self = this;
-  self = this;
+  const self = this;
   const tmp = callback2(this.context);
   const props = this.props;
   ({ changeLog, height, onClose } = props);
@@ -286,16 +284,12 @@ prototype["renderVideo"] = function renderVideo() {
         const _HermesInternal = HermesInternal;
         obj3[0] = "https://i.ytimg.com/vi/" + youtube_video_id + "/hqdefault.jpg";
         obj2[1] = obj3;
-        tmp6Result = tmp6(tmp7(5449), obj2);
-        const tmp7Result = tmp7(5449);
+        tmp6Result = callback(preloadDefault, obj2);
+        const tmp7Result = preloadDefault;
       }
       items[1] = tmp6Result;
       obj[2] = items;
-      tmp4Result = closure_8(View, obj);
-      const tmp4 = closure_8;
-      const tmp5 = View;
-      tmp6 = callback;
-      tmp7 = importDefault;
+      tmp4Result = callback(View, obj);
     }
     return tmp4Result;
   } else {
@@ -308,7 +302,7 @@ prototype["renderVideo"] = function renderVideo() {
   const intl = self(1236).intl;
   obj6[7] = intl.string(self(1236).t.zHeo07);
   obj6[8] = function onPress() {
-    self.track(closure_1_5.CHANGE_LOG_VIDEO_INTERACTED);
+    self.track(AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED);
   };
   const items1 = [callback(VideoComponentDefault, obj6), ];
   let tmp12Result = null;
@@ -317,18 +311,18 @@ prototype["renderVideo"] = function renderVideo() {
     obj7[2] = tmp.videoOverlay;
     obj7[3] = self.playVideo;
     const obj8 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: null, onPress: null, style: null, iconSize: null, iconStyle: null };
-    obj8[2] = tmp15(10227);
+    obj8[2] = registerAssetDefault;
     obj8[3] = self.playVideo;
     obj8[4] = tmp.playButton;
     obj8[5] = tmp18(1297).IconSizes.CUSTOM;
     obj8[6] = tmp.playIcon;
-    obj7[4] = tmp12(tmp15(8910), obj8);
-    tmp12Result = tmp12(tmp18(5433).PressableOpacity, obj7);
-    const tmp15Result = tmp15(8910);
+    obj7[4] = callback(renderDefault, obj8);
+    tmp12Result = callback(tmp18(5433).PressableOpacity, obj7);
+    const tmp15Result = renderDefault;
   }
   items1[1] = tmp12Result;
   obj5[2] = items1;
-  obj4[2] = closure_8(View, obj5);
+  obj4[2] = callback(View, obj5);
   return callback(View, obj4);
 };
 prototype["render"] = function render() {
@@ -339,13 +333,11 @@ prototype["render"] = function render() {
   return callback(LHeadingDefault, obj);
 };
 ChangeLog.contextType = require("ManaContext").ThemeContext;
-let obj3 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-let result = require("set").fileFinishedImporting("components_native/ChangeLogModal.tsx");
+let result = require("obj132").fileFinishedImporting("components_native/ChangeLogModal.tsx");
 
 export default function ChangelogModal() {
   const screens = importAllResult.useMemo(() => {
-    let obj = { CHANGELOG: null };
-    obj = {
+    const obj = {
       name: "CHANGELOG",
       headerLeft: callback(table[22]).getHeaderCloseButton(closure_14),
       render() {

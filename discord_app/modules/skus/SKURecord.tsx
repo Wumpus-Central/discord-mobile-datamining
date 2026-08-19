@@ -5,11 +5,11 @@ import toJSDefault from "toJS" /* 1931 */;
 import tDefault from "t" /* 3975 */;
 import getPricesFromServerDefault from "getPricesFromServer" /* 4517 */;
 import transformProfileEffectKeyFrameFromServerDefault from "transformProfileEffectKeyFrameFromServer" /* 4518 */;
-import closure_3 from "createExecutable" /* 4479 */;
+import createExecutable from "createExecutable" /* 4479 */;
 import { THE_GAME_AWARD_WINNER_SKUS as closure_4 } from "set" /* 4516 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 toJSDefault;
 ({ GIFTABLE_CURRENCIES: c5, OperatingSystems: closure_6, SKUFlags: error, SKUTypes: closure_8 } = ME);
 let SKURecord;
@@ -60,7 +60,6 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   ({ preorder_approximate_release_date: obj[10], summary: obj[11] } = id);
   obj[12] = new Set(id.features);
   const set = new Set(id.features);
-  const tmp = SKURecord;
   obj[13] = new Set(id.genres);
   ({ dependent_sku_id: obj[14], manifests: obj[15], available_regions: obj[16], access_type: obj[17], system_requirements: obj[18], content_rating: obj[19], content_rating_agency: obj[20], legal_notice: obj[21] } = id);
   let tmp14 = null;
@@ -102,7 +101,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   const bundled_skus = id.bundled_skus;
   let mapped;
   if (bundled_skus != null) {
-    mapped = bundled_skus.map((arg0) => closure_9.createFromServer(arg0));
+    mapped = bundled_skus.map((item, index) => closure_9.createFromServer(item));
   }
   if (mapped == null) {
     mapped = [];
@@ -112,7 +111,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   const selected_options = id.selected_options;
   let mapped1;
   if (selected_options != null) {
-    mapped1 = selected_options.map((optionName) => ({ optionName: optionName.option_name, optionValue: optionName.option_value }));
+    mapped1 = selected_options.map((item, index) => ({ optionName: item.option_name, optionValue: item.option_value }));
   }
   if (mapped1 == null) {
     mapped1 = [];
@@ -133,7 +132,7 @@ SKURecord["createFromServer"] = function createFromServer(id) {
     tmp17 = obj;
   }
   obj[42] = tmp17;
-  return new tmp(obj);
+  return new SKURecord(obj);
 };
 Object.defineProperty(prototype, "supportedOperatingSystems", {
   get: function supportedOperatingSystems() {
@@ -284,13 +283,11 @@ prototype["isPremiumPerk"] = function isPremiumPerk() {
   if (premium) {
     let hasFlagResult = require(1403) /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp(1403).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
-      const tmpResult = tmp(1403);
+      hasFlagResult = require(1403) /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
+      const tmpResult = require(1403) /* hasFlag */;
     }
     premium = hasFlagResult;
     const obj = require(1403) /* hasFlag */;
-    tmp = require;
-    tmp3 = constants2;
   }
   return premium;
 };
@@ -301,6 +298,6 @@ prototype["hasFeature"] = function hasFeature(arg0) {
 prototype["isPreorder"] = function isPreorder() {
   return null != this.preorderReleaseAt || null != this.preorderApproximateReleaseDate;
 };
-const result = require("set").fileFinishedImporting("modules/skus/SKURecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/skus/SKURecord.tsx");
 
 export default SKURecord;

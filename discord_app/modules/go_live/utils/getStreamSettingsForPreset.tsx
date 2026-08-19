@@ -1,16 +1,14 @@
 // === Module 10933: getApplicationStreamPresetValues ===
 
 // Module 10933 (getApplicationStreamPresetValues)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _modDef10934 from "module_10934" /* 10934 */;
 import canStreamWithSettingsDefault from "canStreamWithSettings" /* 10935 */;
 import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
 
 function getApplicationStreamPresetValues() {
-  let obj = _modDef10934;
-  obj = { [closure_3.PRESET_DOCUMENTS]: items };
-  obj = { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_15 };
-  items = [obj, { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_5 }];
+  const obj = { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_15 };
+  const items = [obj, { resolution: closure_4.RESOLUTION_SOURCE, fps: closure_2.FPS_5 }];
   const items1 = [{ resolution: obj.getConfig({ location: "getApplicationStreamPresetValues" }).videoPresetResolutionMax, fps: closure_2.FPS_60 }, { resolution: closure_4.RESOLUTION_1080, fps: closure_2.FPS_60 }, { resolution: closure_4.RESOLUTION_720, fps: closure_2.FPS_60 }, { resolution: closure_4.RESOLUTION_720, fps: closure_2.FPS_30 }];
   obj[constants.PRESET_VIDEO] = items1;
   obj[constants.PRESET_AUTO] = [];
@@ -29,17 +27,9 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier) {
     return null;
   } else {
     for (const item10012 of tmp) {
-      let tmp4 = item10012;
-      let tmp5 = importDefault;
-      let tmp6 = dependencyMap;
-      let tmp7 = arg0;
-      let tmp8 = arg1;
-      let tmp9 = arg2;
       if (canStreamWithSettingsDefault(arg0, item10012.resolution, item10012.fps, arg1, arg2)) {
-        let tmp10 = item10012;
         let items = [, ];
-        ({ resolution: arr[0], fps: arr[1] } = tmp4);
-        let tmp11 = obj;
+        ({ resolution: arr[0], fps: arr[1] } = item10012);
         obj.return();
         return items;
       }
@@ -48,7 +38,7 @@ function getStreamSettingsForPreset(arg0, user, guildPremiumTier) {
   }
 }
 ({ ApplicationStreamFPS: obj1, ApplicationStreamPresets: c3, ApplicationStreamResolutions: c4 } = RESOLUTION_720);
-const result = set.fileFinishedImporting("modules/go_live/utils/getStreamSettingsForPreset.tsx");
+const result = obj132.fileFinishedImporting("modules/go_live/utils/getStreamSettingsForPreset.tsx");
 
 export default getStreamSettingsForPreset;
 export { getApplicationStreamPresetValues };

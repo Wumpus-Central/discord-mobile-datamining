@@ -1,17 +1,17 @@
 // === Module 14146: TwoFASetupEnterCode ===
 
 // Module 14146 (TwoFASetupEnterCode)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getState" /* 7383 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import getState from "getState" /* 7383 */;
 import { TwoFAModalSetupSections } from "frozen" /* 14140 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
 
 export default function TwoFASetupEnterCode(stateFromStores) {
   const _require = stateFromStores;
@@ -27,7 +27,6 @@ export default function TwoFASetupEnterCode(stateFromStores) {
   const items = [ref1];
   stateFromStores = obj2.useStateFromStores(items, () => ref1.getState());
   const tmp6 = callback(ref.useState(false), 2);
-  callback = tmp6[1];
   ref = ref.useRef(null);
   ref1 = ref.useRef(null);
   const items1 = [navigation];
@@ -38,14 +37,14 @@ export default function TwoFASetupEnterCode(stateFromStores) {
     obj = { code, secret: encodeTotpSecretResult };
     const obj2 = ref(navigation[10]);
     const enableResult = ref(navigation[10]).enable(obj);
-    ref(navigation[10]).enable(obj).then(() => {
+    ref(navigation[10]).enable(obj).then((result) => {
 
-    }).catch((body) => {
-      if (null != body.body) {
-        let message = body.body.message;
+    }).catch((error) => {
+      if (null != error.body) {
+        let message = error.body.message;
       } else {
-        const intl = closure_1_0(closure_1_2[11]).intl;
-        message = intl.string(closure_1_0(closure_1_2[11]).t["1u5B+G"]);
+        const intl = stateFromStores(navigation[11]).intl;
+        message = intl.string(stateFromStores(navigation[11]).t["1u5B+G"]);
       }
       closure_4.current = message;
       const current = ref.current;
@@ -55,7 +54,6 @@ export default function TwoFASetupEnterCode(stateFromStores) {
       callback(false);
     });
   }, items1);
-  obj = { children: null };
   obj = { bottom: true, style: callback4().container, children: null };
   obj1 = { style: items2, children: null };
   items2 = [, ];

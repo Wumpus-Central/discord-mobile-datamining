@@ -1,18 +1,18 @@
 // === Module 16340: useSpeakerTooltips ===
 
 // Module 16340 (useSpeakerTooltips)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import useConsoleVoiceUpsellStore from "useConsoleVoiceUpsellStore" /* 16337 */;
 import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ setVoiceUpsellDismissed: c5, useConsoleVoiceUpsellStore: closure_6 } = useConsoleVoiceUpsellStore);
 let closure_10 = { code: "function useSpeakerTooltipsTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}" };
 let closure_11 = { code: "function useSpeakerTooltipsTsx2(currentControlsMode,previous){const{runOnJS,setIsShowingControls,VoicePanelControlsModes}=this.__closure;if(currentControlsMode===previous)return;runOnJS(setIsShowingControls)(currentControlsMode===VoicePanelControlsModes.FLOATING_DEFAULT);}" };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useSpeakerTooltips.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useSpeakerTooltips.tsx");
 
 export default function useSpeakerTooltips(targetRef, memo) {
   let first = memo;
@@ -51,7 +51,6 @@ export default function useSpeakerTooltips(targetRef, memo) {
   if (first) {
     first = tmp9[0];
   }
-  memo2 = first;
   const items = [first, tmp5];
   memo = obj2.useMemo(() => memo2 ? closure_3 : [], items);
   let tmp6Result = tmp6(tmp3[11]);
@@ -128,20 +127,18 @@ export default function useSpeakerTooltips(targetRef, memo) {
   const items3 = [memo1.visible || memo2.visible, tmp16];
   const effect = obj2.useEffect(() => {
     if (closure_10) {
-      obj.lock(constants.FLOATING_DEFAULT);
+      closure_8.lock(constants.FLOATING_DEFAULT);
     } else {
-      obj.unlock();
+      closure_8.unlock();
     }
   }, items3);
   memo2 = memo1;
-  callback1 = undefined;
   const items4 = [memo1];
   callback = obj2.useCallback(() => {
     if (memo2.visible) {
       memo2.onDismiss();
     }
   }, items4);
-  callback1 = callback;
   const items5 = [first, callback];
   const effect1 = obj2.useEffect(() => {
     if (!first) {
@@ -150,7 +147,6 @@ export default function useSpeakerTooltips(targetRef, memo) {
   }, items5);
   tmp6Result = tmp6(tmp3[16]);
   const coachmark = tmp6Result.useCoachmark(targetRef, memo1);
-  callback1 = undefined;
   const items6 = [memo2];
   callback1 = obj2.useCallback(() => {
     if (memo2.visible) {
@@ -164,7 +160,5 @@ export default function useSpeakerTooltips(targetRef, memo) {
     }
   }, items7);
   const obj3 = memo2(callback1[10]);
-  const tmp2 = first;
-  const tmp8 = callback;
   const coachmark1 = memo2(callback1[16]).useCoachmark(targetRef, memo2);
 };

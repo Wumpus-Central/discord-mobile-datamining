@@ -8,8 +8,8 @@ import trackHeartbeat from "trackHeartbeat" /* 5054 */;
 import importDefaultResult from "fetchFingerprint" /* 1218 */;
 import encodeProperties from "encodeProperties" /* 503 */;
 
-require = arg1;
-encodeProperties = {
+require = fn;
+{
   dispatcher: dispatcherDefault,
   actionHandler: encodeProperties,
   TRACKING_URL: require("ME").Endpoints.TRACK,
@@ -17,10 +17,10 @@ encodeProperties = {
   getFingerprint: importDefaultResult.getFingerprint,
   getSessionId() {
     const session = trackHeartbeat.getSession();
-    return session.then((uuid) => {
+    return session.then((result) => {
       let sessionId;
-      if (uuid != null) {
-        sessionId = uuid.uuid;
+      if (result != null) {
+        sessionId = result.uuid;
       }
       return { sessionId };
     });
@@ -56,6 +56,6 @@ encodeProperties = {
 };
 items = [importDefaultResult];
 encodeProperties = encodeProperties.analyticsTrackingStoreMaker(encodeProperties);
-const result1 = require("set").fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
+const result1 = require("obj132").fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
 
 export default encodeProperties;

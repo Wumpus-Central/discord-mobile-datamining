@@ -1,20 +1,20 @@
 // === Module 7362: GuildBoostingMarketingOverview ===
 
 // Module 7362 (GuildBoostingMarketingOverview)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ AnalyticEvents: closure_8, AnalyticsPages: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ wrapper: { paddingBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
 
 export default function GuildBoostingMarketingOverview(guildId) {
   guildId = guildId.guildId;
@@ -73,8 +73,8 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items2);
   const items3 = [guildId, analyticsLocations, tmp11];
   const effect = obj3.useEffect(() => () => {
-    let obj = closure_1_1(closure_1_2[15]);
-    obj = { type: closure_1_9.PREMIUM_GUILD_USER_MODAL, location_stack: closure_4, guild_id: closure_0, duration_open_ms: Date.now() - closure_9 };
+    guildBoostSlots(stateFromStores[15]);
+    const obj = { type: closure_1_9.PREMIUM_GUILD_USER_MODAL, location_stack: closure_4, guild_id: closure_0, duration_open_ms: Date.now() - closure_9 };
     obj.track(closure_1_8.MODAL_DISMISSED, obj);
   }, items3);
   const effect1 = obj3.useEffect(() => {
@@ -86,7 +86,6 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, []);
   let tmp18 = null;
   if (null != stateFromStores) {
-    obj = { children: null };
     obj = { contentContainerStyle: null, onScroll: null, scrollEventThrottle: 16, children: null };
     obj[0] = tmp.wrapper;
     obj[1] = function onScroll(nativeEvent) {
@@ -99,8 +98,8 @@ export default function GuildBoostingMarketingOverview(guildId) {
         tmp3 = sum >= tmp.height - guildId(stateFromStores[19]).VISIBILITY_OFFSET;
       }
       if (tmp3) {
-        let obj = guildBoostSlots(stateFromStores[15]);
-        obj = { type: null, location_stack: null, guild_id: null };
+        guildBoostSlots(stateFromStores[15]);
+        const obj = { type: null, location_stack: null, guild_id: null };
         obj[0] = constants.PREMIUM_GUILD_USER_MODAL;
         obj[1] = analyticsLocations;
         obj[2] = stateFromStores.id;

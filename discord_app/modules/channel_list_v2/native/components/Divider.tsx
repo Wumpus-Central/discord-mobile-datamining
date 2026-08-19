@@ -11,13 +11,12 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 noopAll;
 let closure_4 = createCacheKey.createStyles((arg0) => {
   const colors = ThemesDefault.colors;
-  let obj = { height: 1, backgroundColor: arg0 ? colors.BORDER_SUBTLE : colors.BORDER_MUTED, marginTop: 8, marginBottom: 8 };
-  obj = { divider: null };
+  const obj = { divider: null };
   const merged = Object.assign(arg0 ? { marginHorizontal: 16 } : {});
   obj[0] = obj;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/Divider.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/components/Divider.tsx");
 
 export default function Divider() {
   return <View style={callback(useIsMobileVisualRefreshExperimentEnabledDefault("Divider")).divider} />;

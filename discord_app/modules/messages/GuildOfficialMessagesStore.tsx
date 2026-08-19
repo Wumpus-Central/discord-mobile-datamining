@@ -4,28 +4,28 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import hasFlag from "hasFlag" /* 1403 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "trackCommunicationDisabled" /* 1990 */;
-import closure_4 from "createGuildRecordFromRust" /* 1910 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { MessageFlags } from "ME" /* 676 */;
 
-require = arg1;
-function updateGuildState(guildId, arg1) {
+require = fn;
+function updateGuildState(guildId, fn) {
   if (null != obj[guildId]) {
     obj = {};
     const merged = Object.assign(obj);
     obj = {};
     const merged1 = Object.assign(tmp);
-    const merged2 = Object.assign(arg1(tmp));
+    const merged2 = Object.assign(fn(tmp));
     obj[guildId] = obj;
   }
 }
 function handleChannelDelete(channel) {
   channel = channel.channel;
   let items;
-  let obj;
   const guild_id = channel.guild_id;
   if (null == guild_id) {
     return false;
@@ -33,22 +33,18 @@ function handleChannelDelete(channel) {
     return false;
   } else {
     items = [];
-    obj = {};
     const merged = Object.assign(tmp13.messages);
     const ids = tmp13.ids;
     for (const item10007 of ids) {
       let tmp5 = tmp13.messages[item10007];
       let channel_id;
-      let tmp4 = item10007;
       if (tmp5 != null) {
         channel_id = tmp5.channel_id;
       }
       if (channel_id === channel.id) {
-        let tmp9 = item10007;
         delete tmp[tmp2];
       } else {
-        let tmp7 = item10007;
-        let arr = items.push(tmp4);
+        let arr = items.push(item10007);
       }
       continue;
     }
@@ -70,63 +66,40 @@ function handleRelationshipUpdate() {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    let tmp4 = obj;
     let tmp5 = obj[nextResult];
     let tmp6 = tmp5;
     let tmp7 = null;
     let ids = tmp5.ids;
-    let tmp8 = ids;
-    let tmp9 = ids;
     for (const item10031 of ids) {
-      let tmp11 = tmp5;
       let tmp12 = tmp6.messages[item10031];
       obj1 = tmp12;
       if (null != tmp12) {
-        let tmp33 = closure_5;
-        let tmp34 = tmp12;
         let isBlockedForMessageResult = closure_5.isBlockedForMessage(obj1);
         let tmp36 = isBlockedForMessageResult;
         let isIgnoredForMessageResult = closure_5.isIgnoredForMessage(obj1);
         let tmp15 = obj1.blocked === isBlockedForMessageResult;
         if (tmp15) {
-          let tmp13 = tmp12;
-          let tmp14 = isIgnoredForMessageResult;
           tmp15 = obj1.ignored === isIgnoredForMessageResult;
         }
         if (!tmp15) {
-          let tmp16 = tmp7;
           if (null == tmp7) {
             obj = {};
-            let tmp17 = tmp5;
-            let tmp18 = obj;
             let merged = Object.assign(tmp6.messages);
             tmp7 = obj;
           }
-          let tmp20 = tmp7;
-          let tmp21 = item10031;
-          let tmp22 = tmp12;
           obj = { blocked: null, ignored: null };
-          let tmp23 = isBlockedForMessageResult;
           obj[0] = tmp36;
-          let tmp24 = isIgnoredForMessageResult;
           obj[1] = isIgnoredForMessageResult;
           tmp7[tmp10] = obj1.merge(obj);
         }
       }
       continue;
     }
-    let tmp25 = tmp7;
     if (null == tmp7) {
-      let tmp31 = nextResult;
-      let tmp32 = tmp5;
       obj[tmp3] = tmp6;
     } else {
-      let tmp26 = nextResult;
       obj1 = {};
-      let tmp27 = tmp5;
-      let tmp28 = obj1;
       let merged1 = Object.assign(tmp6);
-      let tmp30 = tmp7;
       obj1.messages = tmp7;
       obj[tmp3] = obj1;
       flag = true;
@@ -161,8 +134,8 @@ prototype["getMessages"] = function getMessages(arg0) {
     let items = [];
   } else {
     const ids = tmp.ids;
-    const mapped = ids.map((arg0) => messages.messages[arg0]);
-    items = mapped.filter((arg0) => null != arg0);
+    const mapped = ids.map((item, index) => messages.messages[item]);
+    items = mapped.filter((item, index) => null != item);
   }
   return items;
 };
@@ -244,10 +217,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
           const items1 = [];
         }
         if (null != closure_2) {
-          obj = {};
           const merged = Object.assign(tmp.messages);
-        } else {
-          obj = {};
         }
         tmp = dependencyMap[Symbol.iterator]();
       };
@@ -304,7 +274,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
             let tmp5 = null != tmp4;
             if (tmp5) {
               if (null == tmp4.messages[message.id]) {
-                const messageRecord = tmp23(4803).createMessageRecord(message);
+                const messageRecord = createMinimalMessageRecord.createMessageRecord(message);
                 if (null != obj[guildId]) {
                   obj = {};
                   const merged = Object.assign(obj);
@@ -321,14 +291,13 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
                   const merged3 = Object.assign(obj1);
                   obj[guildId] = obj;
                 }
-                const tmp23Result = tmp23(4803);
+                const tmp23Result = createMinimalMessageRecord;
               }
               tmp5 = tmp6;
             }
             return tmp5;
           }
           obj6 = hasFlag;
-          tmp23 = require;
         }
         return false;
       }
@@ -355,9 +324,8 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
           let obj5 = id(4803);
           const updateMessageRecordResult = obj5.updateMessageRecord(tmp42, message);
           if (null != obj11[guildId]) {
-            let obj = {};
             const merged = Object.assign(obj11);
-            obj = {};
+            const obj = {};
             const merged1 = Object.assign(tmp27);
             obj1 = { messages: null };
             const obj2 = {};
@@ -413,7 +381,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
               delete tmp2[tmp];
               const obj10 = { ids: null, messages: null };
               const ids = tmp46.ids;
-              obj10[0] = ids.filter((arg0) => arg0 !== id);
+              obj10[0] = ids.filter((item, index) => item !== id);
               obj10[1] = obj9;
               const merged11 = Object.assign(obj10);
               obj7[guildId] = obj8;
@@ -647,14 +615,13 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
         if (null != obj[guildId]) {
           obj = {};
           const merged = Object.assign(obj);
-          obj = {};
           const merged1 = Object.assign(tmp9);
           obj = {};
           const merged2 = Object.assign(tmp9.messages);
           delete tmp2[tmp];
           obj1 = { ids: null, messages: null };
           const ids = tmp9.ids;
-          obj1[0] = ids.filter((arg0) => arg0 !== id);
+          obj1[0] = ids.filter((item, index) => item !== id);
           obj1[1] = obj;
           const merged3 = Object.assign(obj1);
           obj[guildId] = obj;
@@ -668,7 +635,6 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
     ({ ids, guildId } = arg0);
     let set;
     let found;
-    let obj;
     if (null == guildId) {
       return false;
     } else if (null == dependencyMap[guildId]) {
@@ -677,17 +643,14 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
       const _Set = Set;
       set = new Set(ids);
       ids = tmp12.ids;
-      found = ids.filter((arg0) => !set.has(arg0));
+      found = ids.filter((item, index) => !set.has(item));
       if (found.length === tmp12.ids.length) {
         return false;
       } else {
-        obj = {};
         const merged = Object.assign(tmp12.messages);
         const ids2 = tmp12.ids;
         for (const item10014 of ids2) {
-          let tmp7 = item10014;
           if (set.has(item10014)) {
-            let tmp8 = item10014;
             delete tmp[tmp2];
           }
           continue;
@@ -703,6 +666,6 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefa
   RELATIONSHIP_REMOVE: handleRelationshipUpdate,
   RELATIONSHIP_UPDATE: handleRelationshipUpdate
 });
-let result = require("set").fileFinishedImporting("modules/messages/GuildOfficialMessagesStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/messages/GuildOfficialMessagesStore.tsx");
 
 export default guildOfficialMessagesStore;

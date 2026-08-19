@@ -3,7 +3,6 @@
 // Module 5325 (items)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
 
 const items = [];
 let c3 = null;
@@ -15,19 +14,19 @@ class CollectiblesShopStore extends Store {
 }
 const prototype = CollectiblesShopStore.prototype;
 Object.defineProperty(prototype, "analyticsLocations", {
-  get: function analyticsLocations(c4, arg1) {
+  get: function analyticsLocations(dependencyMap, arg1) {
     return items;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "analyticsSource", {
-  get: function analyticsSource(arg0) {
+  get: function analyticsSource(screen) {
     return c3;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "initialProductSkuId", {
-  get: function initialProductSkuId(arg0) {
+  get: function initialProductSkuId(products) {
     return closure_0;
   },
   set: undefined
@@ -110,6 +109,6 @@ const collectiblesShopStore = new CollectiblesShopStore(dispatcherDefault, {
     closure_6 = {};
   }
 });
-const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/CollectiblesShopStore.tsx");
 
 export default collectiblesShopStore;

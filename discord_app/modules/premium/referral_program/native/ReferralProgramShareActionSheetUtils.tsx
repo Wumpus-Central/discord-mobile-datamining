@@ -1,10 +1,10 @@
 // === Module 12884: buildReferralUserRow ===
 
 // Module 12884 (buildReferralUserRow)
-import closure_0 from "markAllUserIdListsStale" /* 4030 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
 import { UserRowModes } from "UserRowModes" /* 9081 */;
 
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");
 
 export const buildReferralUserRow = function buildReferralUserRow(selectedNotResendUsers) {
   ({ eligibleUsers, row, selectedUserIds, resendUsers } = selectedNotResendUsers);

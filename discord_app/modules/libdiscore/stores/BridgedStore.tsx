@@ -1,17 +1,17 @@
 // === Module 1915: ensureValidMode ===
 
 // Module 1915 (ensureValidMode)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import fluxApi from "fluxApi" /* 1916 */;
 
-const result = set.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
+const result = obj132.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 
-export const ensureValidMode = function ensureValidMode(arg0) {
+export const ensureValidMode = function ensureValidMode(typescript) {
   let str = "typescript";
-  if ("typescript" === arg0) {
-    str = arg0;
+  if ("typescript" === typescript) {
+    str = typescript;
   } else {
-    const obj = fluxApi;
+    fluxApi;
   }
   return str;
 };

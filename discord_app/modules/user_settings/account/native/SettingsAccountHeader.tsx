@@ -4,24 +4,26 @@
 import initialize from "initialize" /* 589 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
 import handleOpenEmailVerification from "handleOpenEmailVerification" /* 8624 */;
 import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14104 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 import { SafetySettingsNoticeType } from "SafetyToastType" /* 5430 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function RestrictedAccountRedirect() {
   let obj = {
     label: getSystemLocale.t.zqv4nV,
     labelHook() {
-      let obj = callback(table[11]);
-      obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
+      callback(table[11]);
+      const obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
       obj.openUserSettings(obj);
     },
     noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE
@@ -30,8 +32,7 @@ function RestrictedAccountRedirect() {
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let obj = { header: null };
-obj = { paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
+let obj = { paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
@@ -62,19 +63,17 @@ const memoResult = importAllResult.memo(() => {
       obj1 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6[0], button: obj6[1] } = bannerText);
       obj1[2] = callback;
-      obj[4] = callback(tmp2(4745).Button, obj1);
-      tmp14 = callback(tmp2(6291).TableRow, obj);
+      obj[4] = callback(Button.Button, obj1);
+      tmp14 = callback(TableRowInner.TableRow, obj);
     }
     items2[1] = tmp14;
     obj[1] = items2;
-    let tmp9Result = closure_10(View, obj);
-    const tmp10 = View;
-    const tmp9 = closure_10;
+    let tmp9Result = callback(View, obj);
   } else {
     tmp9Result = null;
   }
   return tmp9Result;
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
 
 export default memoResult;

@@ -5,7 +5,7 @@ import importAllResult from "noop" /* 19 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 const bounty_main = "bounty_main";
 const memoResult = importAllResult.memo(function BountiesModal(bountyId) {
@@ -22,7 +22,7 @@ const memoResult = importAllResult.memo(function BountiesModal(bountyId) {
         return null;
       },
       render() {
-        return closure_1_5(closure_1_1(closure_2 ? closure_1_2[4] : closure_1_2[5]), { bountyId: closure_0, sourceQuestContent: closure_1 });
+        return closure_1_5(sourceQuestContent(closure_2 ? verticalScrollEnabled[4] : verticalScrollEnabled[5]), { bountyId: closure_0, sourceQuestContent: closure_1 });
       }
     }
   }), items);
@@ -33,6 +33,6 @@ const memoResult = importAllResult.memo(function BountiesModal(bountyId) {
   obj = { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } };
   return jsx(bountyId(verticalScrollEnabled[7]).Modal, { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
 
 export default memoResult;

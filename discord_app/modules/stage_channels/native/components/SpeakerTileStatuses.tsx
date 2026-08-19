@@ -7,21 +7,19 @@ import registerAssetDefault from "registerAsset" /* 8606 */;
 import registerAssetDefault2 from "registerAsset" /* 12610 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_5 from "updateVoiceState" /* 4542 */;
-import closure_6 from "buildStageChannelUserRoles" /* 4990 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
+import buildStageChannelUserRoles from "buildStageChannelUserRoles" /* 4990 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
-let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
-obj = { position: "absolute", top: 4, left: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+require = fn;
+let obj = { position: "absolute", top: 4, left: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
 obj[0] = obj;
-createCacheKey = { position: "absolute", top: 4, right: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+const createCacheKey = { position: "absolute", top: 4, right: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
 obj[1] = createCacheKey;
 obj[2] = { marginEnd: ThemesDefault.space.PX_4 };
 let closure_8 = createCacheKey.createStyles(obj);
-const obj2 = { marginEnd: ThemesDefault.space.PX_4 };
 const memoResult = importAllResult.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
@@ -99,7 +97,7 @@ const memoResult1 = importAllResult.memo((userId) => {
   }
   return tmp6;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTileStatuses.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTileStatuses.tsx");
 
 export const VoiceStatus = memoResult;
 export const ModeratorStatus = memoResult1;

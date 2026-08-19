@@ -1,8 +1,8 @@
 // === Module 7598: UserSearchWorkerManager ===
 
 // Module 7598 (UserSearchWorkerManager)
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 2 */;
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const UserSearchWorkerManager = get_ActivityIndicator.NativeModules.UserSearchWorkerManager;
@@ -18,7 +18,7 @@ class UserSearchWorker extends NativeEventEmitter {
     tmp.handleCallback = function handleCallback(arg0) {
       let handlers = arg0;
       handlers = handlers.handlers;
-      const item = handlers.forEach((arg0) => arg0({ data: closure_0 }));
+      const item = handlers.forEach((item, index) => item({ data: closure_0 }));
     };
     return tmp;
   }
@@ -64,14 +64,14 @@ prototype["terminate"] = function terminate() {
 tmp = new tmp(UserSearchWorkerManager, prototype, "terminate", UserSearchWorkerManager, UserSearchWorker);
 // ThrowIfThisInitialized (0x7c)
 closure_0 = tmp;
-let set = new Set();
-tmp.handlers = set;
+tmp.handlers = new Set();
 tmp.subscription = null;
 tmp.handleCallback = function handleCallback(arg0) {
   let handlers = arg0;
   handlers = handlers.handlers;
-  const item = handlers.forEach((arg0) => arg0({ data: closure_0 }));
+  const item = handlers.forEach((item, index) => item({ data: closure_0 }));
 };
-const result = set.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
+const set = new Set();
+const result = obj132.fileFinishedImporting("modules/autocompleter/native/UserSearch.worker.tsx");
 
 export default tmp;

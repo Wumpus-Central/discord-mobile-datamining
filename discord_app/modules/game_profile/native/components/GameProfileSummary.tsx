@@ -1,26 +1,24 @@
 // === Module 9145: GameProfileSummary ===
 
 // Module 9145 (GameProfileSummary)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ View: c4, Pressable: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { flexDirection: "column" } });
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");
 
 export default function GameProfileSummary(arg0) {
   ({ game, trackAction } = arg0);
-  let first;
   let callback;
   let first1;
-  closure_4 = undefined;
   const tmp2 = callback(first1.useState(false), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   callback = tmp2[1];
   const tmp4 = callback(first1.useState(null), 2);
   first1 = tmp4[0];
@@ -60,7 +58,7 @@ export default function GameProfileSummary(arg0) {
     obj[2] = num;
     obj[3] = callback;
     obj[4] = summaryLocalized;
-    const items2 = [closure_6(trackAction(first[7]).Text, obj), ];
+    const items2 = [callback(trackAction(first[7]).Text, obj), ];
     let tmp13Result = null;
     if (first1) {
       obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -68,12 +66,12 @@ export default function GameProfileSummary(arg0) {
       obj[2] = stringResult;
       obj1 = { variant: "text-md/medium", color: "text-brand", children: null };
       obj1[2] = stringResult;
-      obj[3] = tmp13(tmp16(tmp17[7]).Text, obj1);
-      tmp13Result = tmp13(closure_5, obj);
+      obj[3] = callback(trackAction(tmp17[7]).Text, obj1);
+      tmp13Result = callback(closure_5, obj);
     }
     items2[1] = tmp13Result;
     obj[1] = items2;
-    return closure_7(closure_4, obj);
+    return callback2(closure_4, obj);
   }
   tmp = callback2();
 };

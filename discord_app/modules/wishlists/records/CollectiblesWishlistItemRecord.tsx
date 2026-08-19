@@ -3,32 +3,31 @@
 // Module 9189 (createCollectiblesItemFromServerResponse)
 import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 import fromServerDefault from "fromServer" /* 9188 */;
-import closure_2 from "fromServer" /* 5306 */;
+import fromServer from "fromServer" /* 5306 */;
 import { transformSKUToCollectiblesItem as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 5305 */;
-import closure_4 from "fromServer" /* 1947 */;
-import closure_5 from "fromServer" /* 5307 */;
-import closure_6 from "fromServer" /* 5308 */;
-import closure_7 from "createFromServer" /* 4515 */;
+import fromServer2 from "fromServer" /* 1947 */;
+import fromServer3 from "fromServer" /* 5307 */;
+import fromServer4 from "fromServer" /* 5308 */;
+import createFromServer from "createFromServer" /* 4515 */;
 import { SKUProductLines } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function createCollectiblesItemFromServerResponse(collectibles_item) {
   const type = collectibles_item.type;
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     return closure_2.fromServer(collectibles_item);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
+  } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
     return closure_5.fromServer(collectibles_item);
-  } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === type) {
+  } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
     return closure_4.fromServer(collectibles_item);
-  } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
+  } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
     return closure_6.fromServer(collectibles_item);
   } else {
     return null;
   }
 }
 fromServerDefault;
-let prototype;
-prototype = function CollectiblesWishlistItemRecord(bundle_items) {
+const prototype = function CollectiblesWishlistItemRecord(bundle_items) {
   const tmp2 = new prototype(bundle_items, tmp);
   // ThrowIfThisInitialized (0x7c)
   tmp2.skuProductLine = SKUProductLines.COLLECTIBLES;
@@ -37,10 +36,8 @@ prototype = function CollectiblesWishlistItemRecord(bundle_items) {
     bundle_items = bundle_items.bundle_items;
     const tmp16 = bundle_items[Symbol.iterator]();
     while (tmp16 !== undefined) {
-      let tmp20 = createCollectiblesItemFromServerResponse;
       let tmp21 = createCollectiblesItemFromServerResponse(tmp18);
       if (null != tmp21) {
-        let tmp23 = tmp21;
         let arr = items.push(tmp22);
       }
       continue;
@@ -104,7 +101,7 @@ prototype["fromSKU"] = function fromSKU(id) {
     return tmp6;
   }
 };
-const result = require("set").fileFinishedImporting("modules/wishlists/records/CollectiblesWishlistItemRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/wishlists/records/CollectiblesWishlistItemRecord.tsx");
 
 export default prototype;
 export const isCollectiblesWishlistItemRecord = function isCollectiblesWishlistItemRecord(arg0) {

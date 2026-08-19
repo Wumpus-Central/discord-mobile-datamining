@@ -2,10 +2,11 @@
 
 // Module 9405 (useMaybeAddPollsMarketingEasterEggNote)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "_getSystemLocale" /* 1994 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
 
 export default function useMaybeAddPollsMarketingEasterEggNote(arg0) {
   initialize;
@@ -14,10 +15,10 @@ export default function useMaybeAddPollsMarketingEasterEggNote(arg0) {
   if (":pizza:" === arg0) {
     formatToPlainStringResult = arg0;
     if (tmp4) {
-      const intl = tmp(1236).intl;
+      const intl = getSystemLocale.intl;
       const obj = { emojiName: null };
       obj[0] = arg0;
-      formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t["1knDPI"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["1knDPI"], obj);
     }
   }
   return formatToPlainStringResult;

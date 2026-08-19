@@ -2,11 +2,10 @@
 
 // Module 9188 (fromServer)
 import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "createFromServer" /* 4515 */;
+import createFromServer from "createFromServer" /* 4515 */;
 
 toJSDefault;
-let prototype;
-prototype = function BaseWishlistItemRecord(arg0) {
+const prototype = function BaseWishlistItemRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ sku_id: tmp.skuId, sku_product_line: tmp.skuProductLine, sku_name: tmp.skuName, is_owned: tmp.isOwned, gifter_user_id: tmp.gifterUserId, sku: tmp.sku } = arg0);
@@ -41,6 +40,6 @@ prototype["fromServer"] = function fromServer(sku) {
   ({ sku_id: tmp7.skuId, sku_product_line: tmp7.skuProductLine, sku_name: tmp7.skuName, is_owned: tmp7.isOwned, gifter_user_id: tmp7.gifterUserId, sku: tmp7.sku } = obj);
   return tmp7;
 };
-const result = require("set").fileFinishedImporting("modules/wishlists/records/BaseWishlistItemRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/wishlists/records/BaseWishlistItemRecord.tsx");
 
 export default prototype;

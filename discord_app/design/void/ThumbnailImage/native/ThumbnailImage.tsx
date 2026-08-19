@@ -4,13 +4,13 @@
 import noopAll from "noop" /* 19 */;
 import { Image as _default } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 
 noopAll;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   _default = require("__INTERNAL_VIEW_CONFIG").default;
 }
-const result = set.fileFinishedImporting("design/void/ThumbnailImage/native/ThumbnailImage.tsx");
+const result = obj132.fileFinishedImporting("design/void/ThumbnailImage/native/ThumbnailImage.tsx");
 
 export default function LocalImageThumbnail(arg0) {
   const merged = Object.assign(arg0);

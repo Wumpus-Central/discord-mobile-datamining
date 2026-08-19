@@ -1,36 +1,35 @@
 // === Module 10929: canFulfillStreamRequest ===
 
 // Module 10929 (canFulfillStreamRequest)
-import closure_2 from "initialize" /* 4504 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_8 from "sortActivity" /* 4559 */;
-import closure_9 from "createRTCConnection" /* 4539 */;
+import initialize from "initialize" /* 4504 */;
+import reset from "reset" /* 4652 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import sortActivity from "sortActivity" /* 4559 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
-function canFulfillStreamRequest(channel_id, arg1) {
-  let flag = arg1;
-  if (arg1 === undefined) {
+const require = fn;
+function canFulfillStreamRequest(channel_id, flag, closure_1_3, closure_1_5, closure_1_8, closure_1_2, closure_1_9, closure_1_6, closure_1_7) {
+  if (flag === undefined) {
     flag = false;
   }
-  obj = arg2;
-  if (arg2 === undefined) {
+  obj = closure_1_3;
+  if (closure_1_3 === undefined) {
     obj = closure_3;
   }
-  let obj2 = arg3;
-  if (arg3 === undefined) {
+  let obj2 = closure_1_5;
+  if (closure_1_5 === undefined) {
     obj2 = closure_5;
   }
-  let obj3 = arg4;
-  if (arg4 === undefined) {
+  let obj3 = closure_1_8;
+  if (closure_1_8 === undefined) {
     obj3 = closure_8;
   }
-  let obj4 = arg6;
-  if (arg6 === undefined) {
+  let obj4 = closure_1_9;
+  if (closure_1_9 === undefined) {
     obj4 = closure_9;
   }
   let id;
@@ -50,9 +49,8 @@ function canFulfillStreamRequest(channel_id, arg1) {
     if (application != null) {
       id = application.id;
     }
-    DESKTOP = constants.DESKTOP;
     const obj6 = flag(id[9]);
-    DESKTOP = tmp16(tmp17[10]).isAndroid() ? tmp3.ANDROID : tmp3.IOS;
+    DESKTOP = tmp16(tmp17[10]).isAndroid() ? constants.ANDROID : constants.IOS;
     if (null == id) {
       const items1 = [false, obj.NOT_RUNNING_GAME];
       return items1;
@@ -70,11 +68,9 @@ function canFulfillStreamRequest(channel_id, arg1) {
         if (tmp21) {
           items3[0] = true;
           items3[1] = null;
-          let tmp8 = items3;
         } else {
           items3[0] = false;
           items3[1] = obj.NOT_RUNNING_GAME;
-          tmp8 = items3;
         }
       } else {
         items4 = [false, obj.NOT_IN_VOICE_CHANNEL];
@@ -86,7 +82,7 @@ function canFulfillStreamRequest(channel_id, arg1) {
 }
 ({ ActivityGamePlatforms: c10, ActivityTypes: unpackModuleId } = ME);
 let obj = { NOT_IN_VOICE_CHANNEL: "NOT_IN_VOICE_CHANNEL", NOT_RUNNING_GAME: "NOT_RUNNING_GAME", ALREADY_STREAMING: "ALREADY_STREAMING", NO_PERMISSION: "NO_PERMISSION", PENDING_REQUEST: "PENDING_REQUEST", EXPIRED: "EXPIRED" };
-const result = require("set").fileFinishedImporting("modules/request_to_stream/useCanFulfillStreamRequest.tsx");
+const result = require("obj132").fileFinishedImporting("modules/request_to_stream/useCanFulfillStreamRequest.tsx");
 
 export default function useCanFulfillStreamRequest(arg0) {
   const _require = arg0;
@@ -95,7 +91,7 @@ export default function useCanFulfillStreamRequest(arg0) {
     flag = false;
   }
   const items = [closure_3, closure_5, closure_8, closure_2, closure_9, closure_6, closure_7];
-  return _require(flag[11]).useStateFromStores(items, () => closure_1_13(closure_0, flag, closure_1_3, closure_1_5, closure_1_8, closure_1_2, closure_1_9, closure_1_6, closure_1_7));
+  return _require(flag[11]).useStateFromStores(items, () => canFulfillStreamRequest(closure_0, flag, closure_1_3, closure_1_5, closure_1_8, closure_1_2, closure_1_9, closure_1_6, closure_1_7));
 };
 export const StreamRequestUnfulfillableReason = obj;
 export { canFulfillStreamRequest };

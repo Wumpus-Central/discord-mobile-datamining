@@ -1,12 +1,12 @@
 // === Module 15427: useGuildThemeNuxTrigger ===
 
 // Module 15427 (useGuildThemeNuxTrigger)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { DismissibleContentGroupName as closure_4 } from "ContentDismissActionType" /* 1388 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
 
 export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
   const _require = guildId;
@@ -50,7 +50,7 @@ export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
                 }
               }
             }));
-            resolved.catch(() => {
+            resolved.catch((error) => {
               closure_5.current = false;
             });
           }, 2000);

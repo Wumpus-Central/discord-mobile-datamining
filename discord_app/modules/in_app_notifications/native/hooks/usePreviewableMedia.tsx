@@ -4,22 +4,23 @@
 import ThemesDefault from "Themes" /* 712 */;
 import map from "map" /* 4097 */;
 import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
 import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import CirclePlayIcon from "CirclePlayIcon" /* 10071 */;
 import WaveformIcon from "WaveformIcon" /* 10074 */;
-import closure_3 from "noop" /* 19 */;
+import FileIcon from "FileIcon" /* 10076 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function VoiceMessageIcon() {
   obj = map;
   const token = obj.useToken(ThemesDefault.colors.BACKGROUND_MOD_STRONG);
   obj1 = map;
-  obj = { children: null };
   const token1 = obj1.useToken(ThemesDefault.colors.BACKGROUND_MOD_SUBTLE);
   obj = { width: "100%", height: "100%", viewBox: "0 0 64 61", fill: "none", children: null };
   const tmp = callback3();
@@ -58,13 +59,9 @@ function getBasePreviewableMedia(arg0) {
         let tmp6 = nextResult;
         let filename = nextResult.filename;
         let tmp7 = filename;
-        let tmp8 = require;
-        let tmp9 = dependencyMap;
         obj = urlMatchesFileExtension;
         if (obj.isImageFile(filename)) {
           obj = { id: null, type: null, media: null, parentType: null };
-          let tmp22 = nextResult;
-          let tmp23 = obj;
           let _HermesInternal4 = HermesInternal;
           obj[0] = "" + tmp6.id + "-" + obj.IMAGE;
           obj[1] = obj.IMAGE;
@@ -76,12 +73,9 @@ function getBasePreviewableMedia(arg0) {
           obj[3] = str7;
           let arr = items.push(obj);
         } else {
-          let tmp8Result = tmp8(4811);
-          let tmp10 = filename;
+          let tmp8Result = urlMatchesFileExtension;
           if (tmp8Result.isVideoFile(tmp7)) {
             obj1 = { id: null, type: null, media: null, parentType: null };
-            let tmp19 = nextResult;
-            let tmp20 = obj;
             let _HermesInternal3 = HermesInternal;
             obj1[0] = "" + tmp6.id + "-" + obj.VIDEO;
             obj1[1] = obj.VIDEO;
@@ -93,11 +87,9 @@ function getBasePreviewableMedia(arg0) {
             obj1[3] = str6;
             let arr1 = items.push(obj1);
           } else {
-            tmp8Result = tmp8(4811);
-            let tmp11 = filename;
+            tmp8Result = urlMatchesFileExtension;
             let push = items.push;
             let obj2 = { id: null, type: null, media: null, icon: null, parentType: null };
-            let tmp12 = nextResult;
             let id = tmp6.id;
             let tmp13 = obj;
             if (tmp8Result.isAudioFile(tmp7)) {
@@ -105,8 +97,7 @@ function getBasePreviewableMedia(arg0) {
               obj2[0] = "" + id + "-" + tmp13.AUDIO;
               obj2[1] = tmp13.AUDIO;
               obj2[2] = tmp6;
-              let tmp17 = callback;
-              obj2[3] = callback(tmp8(10071).CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
+              obj2[3] = callback(CirclePlayIcon.CirclePlayIcon, { size: "lg", color: "background-brand", secondaryColor: "white" });
               let str5 = null;
               if (isForward) {
                 str5 = "forward";
@@ -118,11 +109,9 @@ function getBasePreviewableMedia(arg0) {
               obj2[0] = "" + id + "-" + tmp13.FILE;
               obj2[1] = tmp13.FILE;
               obj2[2] = tmp6;
-              let tmp14 = callback;
               let obj3 = { size: "lg", color: null };
-              let tmp15 = importDefault;
               obj3[1] = ThemesDefault.colors.ICON_SUBTLE;
-              obj2[3] = callback(tmp8(10076).FileIcon, obj3);
+              obj2[3] = callback(FileIcon.FileIcon, obj3);
               let str4 = null;
               if (isForward) {
                 str4 = "forward";
@@ -140,11 +129,8 @@ function getBasePreviewableMedia(arg0) {
   const nextResult1 = iter2.next();
   while (iter2 !== undefined) {
     let tmp32 = nextResult1;
-    let tmp33 = constants;
     if (nextResult1.type === constants.GIFV) {
       let obj4 = { id: null, type: null, media: null, parentType: null };
-      let tmp34 = nextResult1;
-      let tmp35 = obj;
       let _HermesInternal6 = HermesInternal;
       obj4[0] = "" + tmp32.id + "-" + obj.GIF;
       obj4[1] = obj.GIF;
@@ -177,9 +163,7 @@ function getBasePreviewableMedia(arg0) {
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ MessageEmbedTypes: c5, MessageFlags: closure_6 } = ME);
 ({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let obj = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", FILE: "file", STICKER: "sticker", GIF: "gif", VOICE_MESSAGE: "voice_message" };
-obj = { voiceMessageIconOverlay: null };
-obj = {};
+let obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.flexDirection = "row";
 obj.alignItems = "center";
@@ -187,7 +171,7 @@ obj.justifyContent = "center";
 obj.paddingBottom = 13;
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx");
 
 export const PreviewableMediaTypes = obj;
 export const usePreviewableMedia = function usePreviewableMedia(message) {
@@ -195,16 +179,16 @@ export const usePreviewableMedia = function usePreviewableMedia(message) {
   let items = [message];
   return React.useMemo(() => {
     const items = [];
-    obj = { message: closure_0, isForward: false };
+    obj = { message, isForward: false };
     const items1 = [...closure_1_13(obj)];
     items.push.apply(items1);
-    if (closure_1_1(closure_1_2[12])(closure_0)) {
-      if (tmp2.messageSnapshots.length > 0) {
+    if (isForwardMessageDefault(message)) {
+      if (message.messageSnapshots.length > 0) {
         obj = { message: null, isForward: true };
-        obj[0] = tmp2.messageSnapshots[0].message;
+        obj[0] = message.messageSnapshots[0].message;
         const push = items.push;
         const items2 = [];
-        HermesBuiltin.arraySpread(closure_1_13(obj), 0);
+        HermesBuiltin.arraySpread(getBasePreviewableMedia(obj), 0);
         HermesBuiltin.apply(items2, items);
       }
     }

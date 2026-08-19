@@ -1,32 +1,29 @@
 // === Module 13538: StepModal ===
 
 // Module 13538 (StepModal)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { height: "100%" }, stepContainer: null };
-createCacheKey = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
+const createCacheKey = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
 
 export const StepModal = function StepModal(steps) {
   steps = steps.steps;
   const onWillFocus = steps.onWillFocus;
   const merged = Object.assign(steps, Object.create(null));
-  dependencyMap = undefined;
   const tmp2 = callback3();
   const tmp3 = onWillFocus(1629)();
   const tmp4 = callback(React.useState(0), 2);
   dependencyMap = tmp4[1];
   const items = [onWillFocus, steps];
-  let obj = { style: tmp2.container, children: null };
-  callback = React.useCallback((route) => {
+  callback = React.useCallback((onDidFocus) => {
     let num;
     if (steps != null) {
       num = steps.indexOf(tmp.name);
@@ -34,12 +31,12 @@ export const StepModal = function StepModal(steps) {
     if (num == null) {
       num = 0;
     }
-    closure_2(num);
+    callback(num);
     if (onWillFocus != null) {
-      onWillFocus(route);
+      onWillFocus(onDidFocus);
     }
   }, items);
-  obj = {};
+  let obj = {};
   const merged1 = Object.assign(merged);
   obj.onWillFocus = callback;
   obj = { height: steps(6370).NAV_BAR_HEIGHT + tmp3.top };
@@ -60,5 +57,5 @@ export const StepModal = function StepModal(steps) {
   obj1[2] = callback2(steps(13539).ModalStepIndicator, obj2);
   items1[1] = callback2(View, obj1);
   obj[1] = items1;
-  return closure_7(View, obj);
+  return callback(View, obj);
 };

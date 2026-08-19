@@ -4,23 +4,23 @@
 import fromStringAll from "fromString" /* 506 */;
 import Permissions from "Permissions" /* 1399 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
-import closure_3 from "initialize" /* 4022 */;
+import initialize from "initialize" /* 4022 */;
 import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ GuildFeatures: c10, Permissions: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelPermissionUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelPermissionUtils.tsx");
 
 export const createModeratorOverwrite = function createModeratorOverwrite(id, MEMBER, c0) {
   let tmp;
-  if (c0 != null) {
-    tmp = c0.permissionOverwrites[id];
+  if (_require != null) {
+    tmp = _require.permissionOverwrites[id];
   }
   const obj = { id, type: MEMBER, deny: null, allow: null };
   let deny;
@@ -28,16 +28,15 @@ export const createModeratorOverwrite = function createModeratorOverwrite(id, ME
     deny = tmp.deny;
   }
   if (deny == null) {
-    deny = tmp2(4026).NONE;
+    deny = applyOverwritesAll.NONE;
   }
   obj[2] = fromStringAll.remove(deny, Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
-  const obj2 = fromStringAll;
   let allow;
   if (tmp != null) {
     allow = tmp.allow;
   }
   if (allow == null) {
-    allow = tmp2(4026).NONE;
+    allow = applyOverwritesAll.NONE;
   }
   obj[3] = fromStringAll.combine(Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
@@ -49,24 +48,23 @@ export const createOrUpdateModeratorOverwrite = function createOrUpdateModerator
     deny = deny.deny;
   }
   if (deny == null) {
-    deny = tmp(4026).NONE;
+    deny = applyOverwritesAll.NONE;
   }
   obj[2] = fromStringAll.remove(deny, Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS);
-  const obj2 = fromStringAll;
   let allow;
   if (deny != null) {
     allow = deny.allow;
   }
   if (allow == null) {
-    allow = tmp(4026).NONE;
+    allow = applyOverwritesAll.NONE;
   }
   obj[3] = fromStringAll.combine(Permissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, allow);
   return obj;
 };
 export const removeModeratorOverwrite = function removeModeratorOverwrite(id, MEMBER, closure_0) {
   let tmp;
-  if (closure_0 != null) {
-    tmp = closure_0.permissionOverwrites[id];
+  if (_require != null) {
+    tmp = _require.permissionOverwrites[id];
   }
   const obj = { id, type: MEMBER, deny: null, allow: null };
   let deny;
@@ -91,8 +89,8 @@ export const isEmptyOverwrite = function isEmptyOverwrite(c2) {
   ({ allow, deny } = c2);
   let equalsResult = fromStringAll.equals(allow, applyOverwritesAll.NONE);
   if (equalsResult) {
-    equalsResult = tmp(506).equals(deny, tmp(4026).NONE);
-    const tmpResult = tmp(506);
+    equalsResult = fromStringAll.equals(deny, applyOverwritesAll.NONE);
+    const tmpResult = fromStringAll;
   }
   return equalsResult;
 };
@@ -108,9 +106,9 @@ export const useCanCreateStageChannelByGuild = function useCanCreateStageChannel
       const features = guild.features;
       let hasItem = features.has(closure_1_10.COMMUNITY);
       if (hasItem) {
-        let canResult = closure_1_4(guild, id);
+        let canResult = isGuildOwner(guild, id);
         if (!canResult) {
-          canResult = closure_1_8.can(guildId(closure_1_2[10]).CREATE_STAGE_CHANNEL_PERMISSIONS, guild);
+          canResult = closure_1_8.can(guildId(dependencyMap[10]).CREATE_STAGE_CHANNEL_PERMISSIONS, guild);
         }
         hasItem = canResult;
       }
@@ -132,11 +130,11 @@ export const useCanUpdateStageChannelModerators = function useCanUpdateStageChan
     let canResult = closure_1_8.can(closure_1_11.ADMINISTRATOR, closure_1_7.getGuild(guildId));
     let tmp5 = !canResult;
     if (!canResult) {
-      tmp5 = !obj2.can(closure_1_11.MANAGE_ROLES, channel, undefined, undefined, true);
+      tmp5 = !closure_1_8.can(closure_1_11.MANAGE_ROLES, channel, undefined, undefined, true);
     }
     canResult = !tmp5;
     if (tmp5) {
-      canResult = obj2.can(id(closure_1_2[10]).UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, channel);
+      canResult = closure_1_8.can(id(dependencyMap[10]).UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, channel);
     }
     return canResult;
   }, items1);

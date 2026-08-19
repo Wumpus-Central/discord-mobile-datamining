@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 5038 */;
 import _openSafetyFlow from "_openSafetyFlow" /* 17083 */;
 
-require = arg1;
+require = fn;
 function handleConnectionOpenSupplemental() {
   _openSafetyFlow.openSafetyFlow();
 }
@@ -23,6 +23,6 @@ let prototype = function SafetyFlowsManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_flows/SafetyFlowsManager.tsx");
 
 export default prototype;

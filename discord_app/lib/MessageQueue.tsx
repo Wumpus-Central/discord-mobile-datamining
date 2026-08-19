@@ -2,22 +2,22 @@
 
 // Module 5040 (items)
 import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import enqueueDefault from "enqueue" /* 5041 */;
 import getOverlayMessageAnalyticsLocationDefault from "getOverlayMessageAnalyticsLocation" /* 5051 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "getUserAgnosticState" /* 4737 */;
-import closure_7 from "fetchFingerprint" /* 1218 */;
-import closure_8 from "handleConnectionInfoChange" /* 4564 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import getUserAgnosticState from "getUserAgnosticState" /* 4737 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import handleConnectionInfoChange from "handleConnectionInfoChange" /* 4564 */;
 import ME from "ME" /* 676 */;
 import { MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS as closure_12 } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
-let handleCommand = arg1;
+let handleCommand = fn;
 let closure_3 = ["channelId", "analyticsLocation"];
 let closure_4 = ["channelId", "analyticsLocation"];
 ({ AbortCodes: c9, Endpoints: c10, AnalyticEvents: unpackModuleId } = ME);
 let obj = { SEND: 0, [0]: "SEND", EDIT: 1, [1]: "EDIT", COMMAND: 2, [2]: "COMMAND", SEND_ANNOUNCEMENT: 3, [3]: "SEND_ANNOUNCEMENT" };
-let items = [setDefault.Millis.MINUTE, 5 * setDefault.Millis.MINUTE];
+let items = [obj132Default.Millis.MINUTE, 5 * obj132Default.Millis.MINUTE];
 enqueueDefault;
 class MessageQueue extends tmp5 {
   constructor() {
@@ -33,12 +33,11 @@ class MessageQueue extends tmp5 {
     tmp.requests = map;
     map1 = new Map();
     tmp.analyticsTimeouts = map1;
-    tmp.handleEdit = function handleEdit(messageId) {
+    tmp.handleEdit = function handleEdit(messageId, fn) {
       messageId = messageId.messageId;
       ({ channelId, isCrossposted } = messageId);
-      let abortController;
       const merged = Object.assign(messageId, Object.create(null));
-      abortController = new AbortController();
+      const abortController = new AbortController();
       obj = {
         url: closure_1_10.MESSAGE(channelId, messageId),
         body: merged,
@@ -54,8 +53,8 @@ class MessageQueue extends tmp5 {
       if (isCrossposted) {
         obj.failImmediatelyWhenRateLimited = true;
       }
-      const HTTP = callback(closure_1_2[12]).HTTP;
-      HTTP.patch(obj, messageId.createResponseHandler(messageId, arg1));
+      const HTTP = callback(dependencyMap[12]).HTTP;
+      HTTP.patch(obj, messageId.createResponseHandler(messageId, fn));
     };
     tmp.maxSize = num;
     return tmp;
@@ -63,11 +62,11 @@ class MessageQueue extends tmp5 {
   clear() {
     self = this;
     requests = this.requests;
-    item = requests.forEach((abort) => abort.abort());
+    item = requests.forEach((item, index) => item.abort());
     requests = this.requests;
     clearResult = requests.clear();
     analyticsTimeouts = this.analyticsTimeouts;
-    item1 = analyticsTimeouts.forEach((arg0, closure_2) => self.cancelQueueMetricTimers(closure_2));
+    item1 = analyticsTimeouts.forEach((item, index) => self.cancelQueueMetricTimers(index));
     clearResult1 = super.clear();
     return;
   }
@@ -76,19 +75,19 @@ const prototype = MessageQueue.prototype;
 prototype["isFull"] = function isFull() {
   return this.queue.length >= this.maxSize;
 };
-prototype["drain"] = function drain(type) {
+prototype["drain"] = function drain(type, fn) {
   const self = this;
   const logger = this.logger;
   logger.log("Draining Message Queue with: ", type.type);
   type = type.type;
   if (obj.SEND === type) {
-    self.handleSend(type.message, arg1);
-  } else if (tmp2.SEND_ANNOUNCEMENT === type) {
-    const result = self.handleSendAnnouncement(type.message, arg1);
-  } else if (tmp2.EDIT === type) {
-    self.handleEdit(type.message, arg1);
-  } else if (tmp2.COMMAND === type) {
-    self.handleCommand(type.message, arg1);
+    self.handleSend(type.message, fn);
+  } else if (obj.SEND_ANNOUNCEMENT === type) {
+    const result = self.handleSendAnnouncement(type.message, fn);
+  } else if (obj.EDIT === type) {
+    self.handleEdit(type.message, fn);
+  } else if (obj.COMMAND === type) {
+    self.handleCommand(type.message, fn);
   }
 };
 prototype["cancelRequest"] = function cancelRequest(closure_2) {
@@ -105,7 +104,7 @@ prototype["cancelRequest"] = function cancelRequest(closure_2) {
   requests2.delete(closure_2);
   const result = self.cancelQueueMetricTimers(closure_2);
   self.remove((type) => {
-    let tmp2 = type.type === closure_1_13.SEND || type.type === tmp.SEND_ANNOUNCEMENT || type.type === tmp.COMMAND;
+    let tmp2 = type.type === obj.SEND || type.type === obj.SEND_ANNOUNCEMENT || type.type === obj.COMMAND;
     if (tmp2) {
       tmp2 = type.message.nonce === closure_0;
     }
@@ -121,7 +120,6 @@ prototype["cancelPendingSendRequests"] = function cancelPendingSendRequests(clos
       let queue = self.queue;
       let arr = queue.shift();
       let message = arr.message;
-      let tmp2 = obj;
       if (message.type === obj.SEND) {
         if (message.message.channelId === closure_0) {
           arr = items.push(message.message);
@@ -142,34 +140,34 @@ prototype["cancelPendingSendRequests"] = function cancelPendingSendRequests(clos
 };
 prototype["startQueueMetricTimers"] = function startQueueMetricTimers(nonce) {
   const analyticsTimeouts = this.analyticsTimeouts;
-  const result = analyticsTimeouts.set(nonce, items.map((arg0) => {
-    closure_0 = arg0;
+  const result = analyticsTimeouts.set(nonce, items.map((item, index) => {
+    closure_0 = item;
     return setTimeout(() => {
-      obj = callback(closure_1_2[9]);
-      obj = { queued_duration_ms: callback };
+      item(closure_1_2[9]);
+      obj = { queued_duration_ms: item };
       obj.trackWithMetadata(closure_1_11.SEND_MESSAGE_QUEUED, obj);
-    }, arg0);
+    }, item);
   }));
 };
-prototype["cancelQueueMetricTimers"] = function cancelQueueMetricTimers(closure_2) {
+prototype["cancelQueueMetricTimers"] = function cancelQueueMetricTimers(closure_1) {
   const analyticsTimeouts = this.analyticsTimeouts;
-  const value = analyticsTimeouts.get(closure_2);
+  const value = analyticsTimeouts.get(closure_1);
   if (value != null) {
     const _clearTimeout = clearTimeout;
     const item = value.forEach(clearTimeout);
   }
   const analyticsTimeouts2 = this.analyticsTimeouts;
-  analyticsTimeouts2.delete(closure_2);
+  analyticsTimeouts2.delete(closure_1);
 };
-prototype["createResponseHandler"] = function createResponseHandler(nonce, arg1) {
+prototype["createResponseHandler"] = function createResponseHandler(nonce, fn) {
   const self = this;
   closure_1 = nonce;
-  closure_0 = arg1;
+  closure_0 = fn;
   return (hasErr) => {
     if (null != nonce) {
       const requests = self.requests;
-      requests.delete(tmp);
-      const result = self.cancelQueueMetricTimers(tmp);
+      requests.delete(nonce);
+      const result = self.cancelQueueMetricTimers(nonce);
     }
     if (hasErr.hasErr) {
       return callback(null, hasErr);
@@ -179,11 +177,11 @@ prototype["createResponseHandler"] = function createResponseHandler(nonce, arg1)
         const parsed = parseInt(hasErr.headers["retry-after"]);
         const _isNaN = isNaN;
         if (isNaN(parsed)) {
-          tmp12(null, hasErr);
+          callback(null, hasErr);
         } else {
           obj = { retryAfter: null };
           obj[0] = parsed * nonce(self[6]).Millis.SECOND;
-          tmp12(obj);
+          callback(obj);
         }
       } else {
         callback(null, hasErr);
@@ -193,7 +191,7 @@ prototype["createResponseHandler"] = function createResponseHandler(nonce, arg1)
     }
   };
 };
-prototype["handleSend"] = function handleSend(nonce) {
+prototype["handleSend"] = function handleSend(nonce, fn) {
   ({ channelId, analyticsLocation } = nonce);
   let tmp3 = getOverlayMessageAnalyticsLocationDefault();
   if (tmp3 == null) {
@@ -221,7 +219,7 @@ prototype["handleSend"] = function handleSend(nonce) {
     logger.log("Skipping message send because send_fail_100 is enabled");
     obj1 = { ok: false, hasErr: false, status: 500, headers: null, body: "{}", text: "Simulated failure" };
     obj1[3] = {};
-    arg1(null, obj1);
+    fn(null, obj1);
   } else {
     const _AbortController = AbortController;
     const abortController = new AbortController();
@@ -230,7 +228,7 @@ prototype["handleSend"] = function handleSend(nonce) {
       const result = requests.set(nonce.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(nonce.nonce);
-    const HTTP = tmp5(530).HTTP;
+    const HTTP = handleCommand(530).HTTP;
     const obj2 = { url: null, body: null, context: null, oldFormErrors: true };
     obj2[0] = closure_10.MESSAGES(channelId);
     obj2[1] = obj;
@@ -238,12 +236,12 @@ prototype["handleSend"] = function handleSend(nonce) {
     const merged2 = Object.assign(closure_12);
     obj2.signal = abortController.signal;
     obj2.rejectWithError = true;
-    HTTP.post(obj2, self.createResponseHandler(nonce.nonce, arg1));
+    HTTP.post(obj2, self.createResponseHandler(nonce.nonce, fn));
+    const responseHandler = self.createResponseHandler(nonce.nonce, fn);
   }
   const tmp = callback(nonce, closure_3);
-  tmp5 = handleCommand;
 };
-prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, arg1) {
+prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, fn) {
   ({ channelId, analyticsLocation } = message);
   let tmp3 = getOverlayMessageAnalyticsLocationDefault();
   if (tmp3 == null) {
@@ -271,7 +269,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
     logger.log("Skipping message send because send_fail_100 is enabled");
     obj1 = { ok: false, hasErr: false, status: 500, headers: null, body: "{}", text: "Simulated failure" };
     obj1[3] = {};
-    arg1(null, obj1);
+    fn(null, obj1);
   } else {
     const _AbortController = AbortController;
     const abortController = new AbortController();
@@ -280,7 +278,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
       const result = requests.set(message.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(message.nonce);
-    const HTTP = tmp5(530).HTTP;
+    const HTTP = handleCommand(530).HTTP;
     const obj2 = { url: null, body: null, context: null, oldFormErrors: true };
     obj2[0] = closure_10.MESSAGES_ANNOUNCEMENT(channelId);
     obj2[1] = obj;
@@ -288,24 +286,23 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
     const merged2 = Object.assign(closure_12);
     obj2.signal = abortController.signal;
     obj2.rejectWithError = true;
-    HTTP.post(obj2, self.createResponseHandler(message.nonce, arg1));
+    HTTP.post(obj2, self.createResponseHandler(message.nonce, fn));
+    const responseHandler = self.createResponseHandler(message.nonce, fn);
   }
   const tmp = callback(message, closure_4);
-  tmp5 = handleCommand;
 };
-handleCommand = function handleCommand(message, arg1, arg2, arg3, MessageQueue, handleCommand, arg6, arg7, arg8, dependencyMap, arg10) {
-  let self = this;
-  self = this;
-  const guildId = message.guildId;
-  const nonce = message.nonce;
-  ({ attachments, maxSizeCallback: handleCommand } = message);
+handleCommand = function handleCommand(dependencyMap, fn, arg2, arg3, MessageQueue, handleCommand, arg6, arg7, fn, dependencyMap2, arg10) {
+  const self = this;
+  const guildId = dependencyMap.guildId;
+  const nonce = dependencyMap.nonce;
+  ({ attachments, maxSizeCallback: handleCommand } = dependencyMap);
   obj = { type: handleCommand(nonce[13]).InteractionTypes.APPLICATION_COMMAND, application_id: applicationId, guild_id: guildId, channel_id: channelId, session_id: sessionId.getSessionId(), data, nonce, analytics_location, section_name: sectionName, source };
-  ({ applicationId, channelId, data, analytics_location, sectionName, source } = message);
+  ({ applicationId, channelId, data, analytics_location, sectionName, source } = dependencyMap);
   if (null != attachments) {
-    obj.data.attachments = attachments.map((status, closure_1) => {
-      guildId(nonce[14])(status.status === callback(nonce[15]).CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message");
+    obj.data.attachments = attachments.map((item, index) => {
+      guildId(nonce[14])(item.status === callback(nonce[15]).CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message");
       const tmp = guildId(nonce[14]);
-      return callback(nonce[16]).getAttachmentPayload(status, closure_1);
+      return callback(nonce[16]).getAttachmentPayload(item, index);
     });
   }
   const abortController = new AbortController();
@@ -320,31 +317,32 @@ handleCommand = function handleCommand(message, arg1, arg2, arg3, MessageQueue, 
     onRequestCreated(on) {
       on.on("progress", (total) => {
         total = total.total;
-        const maxFileSizeResult = closure_1_0(closure_1_2[17]).maxFileSize(closure_1);
+        const maxFileSizeResult = closure_1_0(nonce[17]).maxFileSize(closure_1);
         if (tmp2) {
           closure_3.cancelRequest(closure_2);
           if (callback != null) {
             callback(maxFileSizeResult);
           }
         }
+        obj = closure_1_0(nonce[17]);
+        tmp2 = null != total && total > maxFileSizeResult;
       });
     }
   };
-  HTTP.post(obj, self.createResponseHandler(nonce, arg1));
+  HTTP.post(obj, self.createResponseHandler(nonce, fn));
 };
 prototype["handleCommand"] = handleCommand;
 const tmp6 = new timestampDefault("MessageQueue");
-handleCommand = new handleCommand(tmp6, tmp2, tmp, new.target, MessageQueue, handleCommand, globalThis, new.target, arg1, dependencyMap, tmp6);
+handleCommand = new handleCommand(tmp6, tmp2, tmp, new.target, MessageQueue, handleCommand, globalThis, new.target, fn, dependencyMap, tmp6);
 // ThrowIfThisInitialized (0x7c)
 handleCommand.requests = new Map();
 let map = new Map();
 handleCommand.analyticsTimeouts = new Map();
-handleCommand.handleEdit = function handleEdit(messageId) {
+handleCommand.handleEdit = function handleEdit(messageId, fn) {
   messageId = messageId.messageId;
   ({ channelId, isCrossposted } = messageId);
-  let abortController;
   const merged = Object.assign(messageId, Object.create(null));
-  abortController = new AbortController();
+  const abortController = new AbortController();
   obj = {
     url: closure_1_10.MESSAGE(channelId, messageId),
     body: merged,
@@ -360,12 +358,12 @@ handleCommand.handleEdit = function handleEdit(messageId) {
   if (isCrossposted) {
     obj.failImmediatelyWhenRateLimited = true;
   }
-  const HTTP = callback(closure_1_2[12]).HTTP;
-  HTTP.patch(obj, messageId.createResponseHandler(messageId, arg1));
+  const HTTP = callback(dependencyMap[12]).HTTP;
+  HTTP.patch(obj, messageId.createResponseHandler(messageId, fn));
 };
 handleCommand.maxSize = 5;
 const map1 = new Map();
-let result = require("set").fileFinishedImporting("lib/MessageQueue.tsx");
+let result = require("obj132").fileFinishedImporting("lib/MessageQueue.tsx");
 
 export default handleCommand;
 export const MessageDataType = obj;
@@ -381,7 +379,7 @@ export const isMessageDataCommand = function isMessageDataCommand(type) {
 export const getFailedMessageId = function getFailedMessageId(messageData) {
   if (tmp2) {
     let id = messageData.message.nonce;
-  } else if (messageData.type === tmp.EDIT) {
+  } else if (messageData.type === obj.EDIT) {
     id = messageData.message.messageId;
   } else {
     id = messageData.message.data.id;

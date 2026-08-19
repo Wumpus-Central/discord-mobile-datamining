@@ -1,16 +1,18 @@
 // === Module 9719: SecureFramesExistingVerificationsHelpMessage ===
 
 // Module 9719 (SecureFramesExistingVerificationsHelpMessage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
 import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9720 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
 const View = get_ActivityIndicator.View;
 const jsx = jsxProd.jsx;
 let closure_4 = createCacheKey.createStyles({ container: { width: "100%" } });
-const result = set.fileFinishedImporting("modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx");
+const result = obj132.fileFinishedImporting("modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx");
 
 export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
   ({ style, userId, userKey } = arg0);
@@ -22,12 +24,12 @@ export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
     const items = [tmp.container, style];
     obj[0] = items;
     obj = { messageType: null, children: null };
-    obj[0] = tmp2(1297).HelpMessageTypes.INFO;
-    const intl = tmp2(1236).intl;
+    obj[0] = Button.HelpMessageTypes.INFO;
+    const intl = getSystemLocale.intl;
     obj1 = { count: null };
     obj1[0] = secureFramesUserVerifiedKeysCount;
-    obj[1] = intl.format(tmp2(1236).t.uZDkz0, obj1);
-    obj[1] = jsx(tmp2(1297).HelpMessage, { messageType: null, children: null });
+    obj[1] = intl.format(getSystemLocale.t.uZDkz0, obj1);
+    obj[1] = jsx(Button.HelpMessage, { messageType: null, children: null });
     tmp5 = <View messageType={null}>{null}</View>;
   }
   return tmp5;

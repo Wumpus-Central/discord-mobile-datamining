@@ -3,10 +3,10 @@
 // Module 9565 (context)
 import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let obj = { DISMISSED: 0, [0]: "DISMISSED", COMMAND: 1, [1]: "COMMAND", ACTIVITY: 2, [2]: "ACTIVITY", BACK: 3, [3]: "BACK", OAUTH_MODAL: 4, [4]: "OAUTH_MODAL" };
 let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/AppLauncherContext.tsx");
 
 export const AppLauncherKeyboardCloseReason = obj;
 export const AppLauncherBottomSheetExpandReason = { GESTURE: 0, [0]: "GESTURE", KEYBOARD: 1, [1]: "KEYBOARD", APP_VIEW: 2, [2]: "APP_VIEW", COMMAND_VIEW: 3, [3]: "COMMAND_VIEW", OTHER: 4, [4]: "OTHER" };

@@ -1,11 +1,11 @@
 // === Module 13569: getUpdatedOptions ===
 
 // Module 13569 (getUpdatedOptions)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import add from "add" /* 594 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = set.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
 export const getUpdatedOptions = function getUpdatedOptions(extra) {
   let obj = {};
@@ -25,7 +25,8 @@ export const getUpdatedOptions = function getUpdatedOptions(extra) {
   }
   const obj2 = {};
   const merged2 = Object.assign(obj1);
-  obj2.lastFewActions = add.serialize();
+  const serializer = add;
+  obj2.lastFewActions = serializer.serialize();
   const merged3 = Object.assign(obj2);
   obj.extra = obj;
   return obj;

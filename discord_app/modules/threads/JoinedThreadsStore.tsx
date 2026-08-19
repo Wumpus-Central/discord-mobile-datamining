@@ -1,13 +1,13 @@
 // === Module 4023: storeThread ===
 
 // Module 4023 (storeThread)
+import obj132 from "obj132" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
 import resetDefault from "reset" /* 4024 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import set from "set" /* 2 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 
 function storeThread(channel) {
   let hasItem = ALL_CHANNEL_TYPES.has(channel.type);
@@ -31,7 +31,7 @@ function storeThread(channel) {
       set = new Set(set2);
       set2 = set;
       set.add(id);
-      if (obj2.setTimer(id, tmp10.muteConfig, () => {
+      if (navigation.setTimer(id, tmp10.muteConfig, () => {
         closure_1_4[id].muted = false;
         set = new Set(set);
         set.delete(id);
@@ -48,17 +48,16 @@ function storeThread(channel) {
       set2 = new Set(set2);
       set2.delete(id);
     }
-    obj2 = navigation;
   }
 }
 function handleThreadListSyncOrSearchFinish(guildId) {
   guildId = guildId.guildId;
   const members = guildId.members;
   if (tmp) {
-    const item = members.forEach((id) => {
-      const obj = { threadId: id.id, guildId: id, flags: id.flags, muted: id.muted, muteConfig: id.muteConfig, joinTimestamp: new Date(id.joinTimestamp) };
-      closure_1_4[id.id] = obj;
-      id = id.id;
+    const item = members.forEach((item, index) => {
+      const obj = { threadId: item.id, guildId: id, flags: item.flags, muted: item.muted, muteConfig: item.muteConfig, joinTimestamp: new Date(item.joinTimestamp) };
+      closure_1_4[item.id] = obj;
+      id = item.id;
       closure_1_5.clearTimer(id);
       if (true === closure_1_4[id].muted) {
         const _Set2 = Set;
@@ -82,6 +81,7 @@ function handleThreadListSyncOrSearchFinish(guildId) {
         set2 = new Set(set2);
         set2.delete(id);
       }
+      const date = new Date(item.joinTimestamp);
     });
   }
 }
@@ -89,12 +89,12 @@ function handleSearchMessagesSuccess(guildId) {
   guildId = guildId.guildId;
   const data = guildId.data;
   if (null != guildId) {
-    let item = data.forEach((members) => {
-      members = members.members;
-      const item = members.forEach((id) => {
-        const obj = { threadId: id.id, guildId: id, flags: id.flags, muted: id.muted, muteConfig: id.muteConfig, joinTimestamp: new Date(id.joinTimestamp) };
-        closure_1_4[id.id] = obj;
-        id = id.id;
+    let item = data.forEach((item, index) => {
+      const members = item.members;
+      item = members.forEach((item, index) => {
+        const obj = { threadId: item.id, guildId: id, flags: item.flags, muted: item.muted, muteConfig: item.muteConfig, joinTimestamp: new Date(item.joinTimestamp) };
+        closure_1_4[item.id] = obj;
+        id = item.id;
         closure_1_5.clearTimer(id);
         if (true === closure_1_4[id].muted) {
           const _Set2 = Set;
@@ -118,6 +118,7 @@ function handleSearchMessagesSuccess(guildId) {
           set2 = new Set(set2);
           set2.delete(id);
         }
+        const date = new Date(item.joinTimestamp);
       });
     });
   }
@@ -173,18 +174,18 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
     set = new Set();
     closure_4 = {};
     guilds = guilds.guilds;
-    let item = guilds.forEach((threads) => {
-      threads = threads.threads;
+    let item = guilds.forEach((item, index) => {
+      const threads = item.threads;
       if (threads != null) {
-        const item = threads.forEach(closure_7);
+        item = threads.forEach(closure_7);
       }
     });
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(joinedThreads) {
-    const mapped = applyDefault(joinedThreads.joinedThreads).map((joinTimestamp) => {
+    const mapped = applyDefault(joinedThreads.joinedThreads).map((item, index) => {
       const obj = {};
-      const merged = Object.assign(joinTimestamp);
-      obj.joinTimestamp = new Date(joinTimestamp.joinTimestamp);
+      const merged = Object.assign(item);
+      obj.joinTimestamp = new Date(item.joinTimestamp);
       return obj;
     });
     const arr = applyDefault(joinedThreads.joinedThreads);
@@ -200,6 +201,7 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
     if (threads != null) {
       const item = threads.forEach(storeThread);
     }
+    const iter = id(12)(closure_4).reject((guildId) => guildId.guildId === id).keyBy("threadId");
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
@@ -305,16 +307,16 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
     }
     const addedMembers = removedMemberIds.addedMembers;
     if (addedMembers != null) {
-      const item = addedMembers.forEach((userId) => {
-        if (userId.userId === closure_1_3.getId()) {
+      const item = addedMembers.forEach((item, index) => {
+        if (item.userId === closure_1_3.getId()) {
           obj = {};
           const merged = Object.assign(obj);
           obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
           ({ id: obj5[0], guildId: obj5[1] } = id);
-          ({ flags: obj5[2], muted: obj5[3], muteConfig: obj5[4] } = userId);
+          ({ flags: obj5[2], muted: obj5[3], muteConfig: obj5[4] } = item);
           let tmp15 = globalThis;
           const _Date = Date;
-          const date = new Date(userId.joinTimestamp);
+          const date = new Date(item.joinTimestamp);
           obj[5] = date;
           obj[id.id] = obj;
           id = id.id;
@@ -325,7 +327,7 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
             set2 = set;
             set.add(id);
             muteConfig = muteConfig.muteConfig;
-            if (obj6.setTimer(id, muteConfig, () => {
+            if (closure_1_5.setTimer(id, muteConfig, () => {
               closure_1_4[id].muted = false;
               set = new Set(set);
               set.delete(id);
@@ -343,13 +345,13 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
             set2.delete(id);
           }
           c1 = true;
-          obj6 = closure_1_5;
         }
       });
     }
     return c1;
   }
 });
-const result = set.fileFinishedImporting("modules/threads/JoinedThreadsStore.tsx");
+const tmp2 = new resetDefault();
+const result = obj132.fileFinishedImporting("modules/threads/JoinedThreadsStore.tsx");
 
 export default joinedThreadsStoreClass;

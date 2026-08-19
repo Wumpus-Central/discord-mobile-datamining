@@ -1,12 +1,12 @@
 // === Module 4874: getCreateAttachmentURL ===
 
 // Module 4874 (getCreateAttachmentURL)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import items from "items" /* 4830 */;
 import ME from "ME" /* 676 */;
 
 ({ Endpoints: obj1, MAX_ATTACHMENT_SIZE: c3, MAX_UPLOAD_COUNT: c4 } = ME);
-const result = set.fileFinishedImporting("modules/icymi/ICYMIAttachmentUploadTarget.tsx");
+const result = obj132.fileFinishedImporting("modules/icymi/ICYMIAttachmentUploadTarget.tsx");
 class ICYMIAttachmentUploadTarget {
 }
 const prototype = ICYMIAttachmentUploadTarget.prototype;

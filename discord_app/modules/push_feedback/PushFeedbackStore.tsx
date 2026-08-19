@@ -1,7 +1,7 @@
 // === Module 10640: initialize ===
 
 // Module 10640 (initialize)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import str2 from "str2" /* 5259 */;
@@ -112,6 +112,6 @@ const pushFeedbackStore = new PushFeedbackStore(dispatcherDefault, {
     return false;
   }
 });
-const result = set.fileFinishedImporting("modules/push_feedback/PushFeedbackStore.tsx");
+const result = obj132.fileFinishedImporting("modules/push_feedback/PushFeedbackStore.tsx");
 
 export default pushFeedbackStore;

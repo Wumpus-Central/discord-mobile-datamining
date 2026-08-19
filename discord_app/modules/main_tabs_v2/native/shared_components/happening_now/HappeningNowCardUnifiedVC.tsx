@@ -2,17 +2,18 @@
 
 // Module 15335 (HappeningNowCardUnifiedVC)
 import noopAll from "noop" /* 19 */;
+import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 15326 */;
 import IconOrPreviewDefault from "IconOrPreview" /* 15336 */;
 import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 15348 */;
 import formatVoiceActivityTitleDefault from "formatVoiceActivityTitle" /* 15349 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "reset" /* 4652 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import reset from "reset" /* 4652 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUnifiedVC.tsx");
 
 export default function HappeningNowCardUnifiedVC(arg0) {
   ({ guildId, index, voiceState, fullwidth, panelVariant } = arg0);
@@ -28,17 +29,17 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     if (null == channelId) {
       return {};
     } else {
-      const allApplicationStreamsForChannel = closure_1_4.getAllApplicationStreamsForChannel(tmp);
+      const allApplicationStreamsForChannel = closure_1_4.getAllApplicationStreamsForChannel(channelId);
       if (allApplicationStreamsForChannel.length > 0) {
-        const found = allApplicationStreamsForChannel.find((ownerId) => friend.isFriend(ownerId.ownerId));
+        const found = allApplicationStreamsForChannel.find((item, index) => friend.isFriend(item.ownerId));
         if (null != found) {
           let obj = { stream: null };
           obj[0] = found;
           return obj;
         }
       }
-      const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(tmp);
-      const tmp7 = closure_1_1(closure_1_2[9])(embeddedActivitiesForChannel);
+      const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(channelId);
+      const tmp7 = findActivityWithMostParticipantsDefault(embeddedActivitiesForChannel);
       if (null != tmp7) {
         obj = { activity: null };
         obj[0] = tmp7;
@@ -92,17 +93,17 @@ export const useCallActivityData = function useCallActivityData(channel_id) {
     if (null == channelId) {
       return {};
     } else {
-      const allApplicationStreamsForChannel = closure_1_4.getAllApplicationStreamsForChannel(tmp);
+      const allApplicationStreamsForChannel = closure_1_4.getAllApplicationStreamsForChannel(channelId);
       if (allApplicationStreamsForChannel.length > 0) {
-        const found = allApplicationStreamsForChannel.find((ownerId) => friend.isFriend(ownerId.ownerId));
+        const found = allApplicationStreamsForChannel.find((item, index) => friend.isFriend(item.ownerId));
         if (null != found) {
           let obj = { stream: null };
           obj[0] = found;
           return obj;
         }
       }
-      const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(tmp);
-      const tmp7 = closure_1_1(closure_1_2[9])(embeddedActivitiesForChannel);
+      const embeddedActivitiesForChannel = closure_1_3.getEmbeddedActivitiesForChannel(channelId);
+      const tmp7 = findActivityWithMostParticipantsDefault(embeddedActivitiesForChannel);
       if (null != tmp7) {
         obj = { activity: null };
         obj[0] = tmp7;

@@ -10,16 +10,15 @@ import IntlLink from "IntlLink" /* 13548 */;
 import messagesProxyDefault from "messagesProxy" /* 13552 */;
 import { Fonts } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import getAvailableLocales from "getAvailableLocales" /* 1237 */;
 import module_1274 from "module_1274" /* 1274 */;
 
-require = arg1;
+require = fn;
 noopAll;
-let obj = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
-obj = { fontFamily: Fonts.CODE_NORMAL };
+let obj = { fontFamily: Fonts.CODE_NORMAL };
 let closure_3 = { strong: obj, italic: { fontStyle: "italic" }, code: obj, del: { textDecorationLine: "line-through", textDecorationStyle: "solid" } };
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   let LocalizationManager = require("enforcing").default;
 } else {
   LocalizationManager = get_ActivityIndicator.NativeModules.LocalizationManager;
@@ -29,7 +28,6 @@ if (null != LocalizationManager) {
   str = LocalizationManager.getConstants().Language;
 }
 function getSystemLocale(arg0) {
-  const tmp = require;
   const tmp3 = get_ActivityIndicator;
   if (obj.isAndroid()) {
     let LocalizationManager = enforcing.default;
@@ -66,16 +64,16 @@ obj = {
 };
 const reactFormatter = module_1274.makeReactFormatter(obj);
 const intlManager = new require("module_1274").IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
-set = { format: reactFormatter, formatToPlainString: require("module_1274").stringFormatter, formatToMarkdownString: require("module_1274").markdownFormatter, formatToParts: require("module_1274").astFormatter };
-set = intlManager.withFormatters(set);
-const result = set.fileFinishedImporting("intl/index.native.tsx");
+obj132 = { format: reactFormatter, formatToPlainString: require("module_1274").stringFormatter, formatToMarkdownString: require("module_1274").markdownFormatter, formatToParts: require("module_1274").astFormatter };
+intlManager.withFormatters(obj132);
+const result = obj132.fileFinishedImporting("intl/index.native.tsx");
 
-export const intl = set;
+export const intl = obj132;
 export { getSystemLocale };
 export const getAvailableLocales = require("getAvailableLocales").getAvailableLocales;
 export const getLanguages = require("getAvailableLocales").getLanguages;
 export const useSyncMessages = function useSyncMessages(arg0) {
-  return getAvailableLocales2.useSyncMessages(arg0, set);
+  return getAvailableLocales2.useSyncMessages(arg0, obj132);
 };
 export const t = require("_defaultMessages")._defaultMessages;
 export const international = messagesProxyDefault;

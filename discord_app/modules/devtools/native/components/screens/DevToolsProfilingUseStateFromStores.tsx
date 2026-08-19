@@ -1,13 +1,13 @@
 // === Module 15115: DevToolsProfilingUseStateFromStores ===
 
 // Module 15115 (DevToolsProfilingUseStateFromStores)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx");
+let result = require("obj132").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx");
 
 export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUseStateFromStores() {
   let obj = first(str[3]);

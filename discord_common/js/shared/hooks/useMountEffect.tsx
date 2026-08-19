@@ -1,9 +1,9 @@
 // === Module 4762: useMountEffect ===
 
 // Module 4762 (useMountEffect)
-import closure_0 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useMountEffect.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/shared/hooks/useMountEffect.tsx");
 
 export default function useMountEffect(stateFromStores) {
   React = React.useRef(stateFromStores);

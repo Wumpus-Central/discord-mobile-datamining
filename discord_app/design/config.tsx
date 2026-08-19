@@ -1,7 +1,7 @@
 // === Module 6546: designConfig ===
 
 // Module 6546 (designConfig)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 const obj = {
   getDefaultLinkInterceptor() {
@@ -11,7 +11,7 @@ const obj = {
 
   }
 };
-const result = set.fileFinishedImporting("design/config.tsx");
+const result = obj132.fileFinishedImporting("design/config.tsx");
 
 export const designConfig = obj;
 export const setDesignConfig = function setDesignConfig(arg0) {

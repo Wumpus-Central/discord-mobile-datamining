@@ -1,10 +1,10 @@
 // === Module 7704: _discardDraftOrder ===
 
 // Module 7704 (_discardDraftOrder)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { OrderStatus } from "CustomCheckoutFlow" /* 4357 */;
 
-const require = arg1;
+const require = fn;
 function _discardDraftOrder() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -115,7 +115,7 @@ function _discardDraftOrder() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/checkout/utils/OrderUtils.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/checkout/utils/OrderUtils.native.tsx");
 
 export const discardDraftOrder = function discardDraftOrder(arg0) {
   const self = this;

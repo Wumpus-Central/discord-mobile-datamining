@@ -2,15 +2,15 @@
 
 // Module 14282 (FamilyCenterModalAcceptScreen)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function FamilyCenterModalAcceptScreen(otherUser) {
   otherUser = otherUser.otherUser;
-  let acceptLinkRequest;
   const tmp = callback3();
   const callback = React.useCallback(() => {
     let arr = acceptLinkRequest(5260);
@@ -22,13 +22,12 @@ function FamilyCenterModalAcceptScreen(otherUser) {
   }, []);
   let obj = otherUser(11104);
   const familyCenterActions = obj.useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
-  acceptLinkRequest = familyCenterActions.acceptLinkRequest;
+  const acceptLinkRequest = familyCenterActions.acceptLinkRequest;
   const isAcceptLoading = familyCenterActions.isAcceptLoading;
   const items = [acceptLinkRequest, otherUser.id];
   const callback2 = React.useCallback(() => {
     acceptLinkRequest(otherUser.id);
   }, items);
-  obj = { children: null };
   obj = { children: null };
   obj1 = { style: tmp.header, children: null };
   const obj2 = { otherUser, iconSrc: acceptLinkRequest(4319), iconStyles: tmp.icon };
@@ -65,27 +64,22 @@ function FamilyCenterModalAcceptScreen(otherUser) {
   return callback2(otherUser(5440).ModalScreen, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { header: null, headerText: null, icon: null, disclaimer: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
+const createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-let obj1 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 let items = [{ rotate: "45deg" }];
 createCacheKey[2] = { transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj2 = { transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[3] = { marginTop: ThemesDefault.space.PX_12 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalAccept.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalAccept.tsx");
 
 export default function FamilyCenterModalAccept(otherUser) {
   otherUser = otherUser.otherUser;
   const items = [otherUser];
   const memo = React.useMemo(() => {
-    let obj = { ACCEPT: null };
-    obj = {
+    const obj = {
       headerShown: true,
-      headerLeft: otherUser(closure_1_2[20]).getHeaderCloseButton(closure_1_1(closure_1_2[5]).pop),
+      headerLeft: otherUser(dependencyMap[20]).getHeaderCloseButton(_modDef5260.pop),
       headerTitle() {
         return null;
       },

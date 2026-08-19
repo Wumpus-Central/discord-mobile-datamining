@@ -1,7 +1,7 @@
 // === Module 4640: Video ===
 
 // Module 4640 (Video)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
 import onDefault from "on" /* 4572 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
@@ -79,8 +79,8 @@ prototype["getVideoInputDeviceId"] = function getVideoInputDeviceId() {
 prototype["setAsyncVideoInputDeviceInit"] = function setAsyncVideoInputDeviceInit() {
 
 };
-prototype["getCodecCapabilities"] = function getCodecCapabilities(arg0) {
-  arg0("");
+prototype["getCodecCapabilities"] = function getCodecCapabilities(fn) {
+  fn("");
 };
 prototype["getCodecSurvey"] = function getCodecSurvey() {
   error = new Error("getCodecSurvey is not implemented for MediaEngineDummy");
@@ -264,8 +264,8 @@ prototype["setNcModels"] = function setNcModels() {
 prototype["getSupportedSecureFramesProtocolVersion"] = function getSupportedSecureFramesProtocolVersion() {
   return 0;
 };
-prototype["getSupportedBandwidthEstimationExperiments"] = function getSupportedBandwidthEstimationExperiments(arg0) {
-  arg0([]);
+prototype["getSupportedBandwidthEstimationExperiments"] = function getSupportedBandwidthEstimationExperiments(fn) {
+  fn([]);
 };
 prototype["getMLSSigningKey"] = function getMLSSigningKey() {
   error = new Error("NOT_IMPLEMENTED");
@@ -324,6 +324,6 @@ prototype["getNoiseCancellationStats"] = function getNoiseCancellationStats() {
 prototype["setNoiseCancellationEnableStats"] = function setNoiseCancellationEnableStats() {
 
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaEngineDummy.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaEngineDummy.tsx");
 
 export default MediaEngineDummy;

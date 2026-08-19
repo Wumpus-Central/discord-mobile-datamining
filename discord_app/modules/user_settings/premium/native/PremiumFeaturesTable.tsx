@@ -9,22 +9,22 @@ import Text from "Text" /* 4734 */;
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
 import registerAssetDefault from "registerAsset" /* 12908 */;
 import registerAssetDefault2 from "registerAsset" /* 12909 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HorizontalGradient } from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import jsxProd from "jsxProd" /* 21 */;
+import "createCacheKey";
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function CheckIcon() {
   let obj = AccessibilityAnnouncer;
-  const tmp = importDefault;
   const tmp3 = useThemeDefault();
   const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
-  obj = { source: registerAssetDefault, color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: tmp4(1297).IconSizes.SMALL };
+  obj = { source: registerAssetDefault, color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: Button.IconSizes.SMALL };
   return callback2(Button.Icon, obj);
 }
 function CloseIcon() {
@@ -61,10 +61,9 @@ function Row(withTopBorderRadius) {
     flag3 = false;
   }
   ({ rowName, column1AccessibilityLabel, column2AccessibilityLabel, rowNumber } = withTopBorderRadius);
-  let _require;
   const tmp = callback3();
   const tmp2 = callback(React.useState(0), 2);
-  _require = tmp2[1];
+  const _require = tmp2[1];
   let num = 0;
   if (withBottomBorder) {
     num = 1;
@@ -81,15 +80,8 @@ function Row(withTopBorderRadius) {
   if (withBottomBorder) {
     withBottomBorder = tmp.bottomBorder;
   }
-  let obj = {
-    style: items,
-    onLayout(nativeEvent) {
-      return callback(nativeEvent.nativeEvent.layout.height);
-    },
-    children: null
-  };
   items[1] = withBottomBorder;
-  obj = { style: items1, accessible: !flag3, accessibilityLabel: rowName, children: label };
+  let obj = { style: items1, accessible: !flag3, accessibilityLabel: rowName, children: label };
   items1 = [, ];
   ({ labelCell: arr2[0], cell: arr2[1] } = tmp);
   const items2 = [callback2(View, obj), , ];
@@ -181,11 +173,11 @@ function Row(withTopBorderRadius) {
         ({ START: obj9[1], END: obj9[2] } = HorizontalGradient);
         obj6[3] = ["rgba(133, 71, 198, 0.10)", "rgba(184, 69, 193, 0.10)", "rgba(171, 93, 138, 0.10)"];
         obj6[4] = column2;
-        obj4[3] = tmp5(LinearGradientDefault, obj6);
+        obj4[3] = callback2(LinearGradientDefault, obj6);
       }
-      items2[2] = tmp5(tmp4, obj4);
+      items2[2] = callback2(View, obj4);
       obj[2] = items2;
-      return closure_12(tmp4, obj);
+      return callback(View, obj);
     }
   }
   const items6 = [, , , , ];
@@ -227,14 +219,12 @@ function Row(withTopBorderRadius) {
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: error, PRICE_PLACEHOLDER: closure_8, PremiumTypes: c9, SubscriptionPlans: c10 } = GuildFeatures);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
-createCacheKey = { container: { display: "flex", flex: 1, width: "100%" }, headerText: { textAlign: "center" }, logo: { marginTop: 8, marginBottom: -6 }, table: { marginTop: 16 }, row: { display: "flex", flexDirection: "row" }, bottomBorder: { borderBottomColor: "rgba(106, 116, 128, 0.24)", borderBottomWidth: 1 }, topBorderRadius: null, bottomBorderRadius: null, cell: null, labelCell: null, dataCell: null, themedHighlightedCell: null, nitroHomeHightlightedBorderLeftRight: null, premiumGroupCard: null, priceContainer: null };
-createCacheKey = { borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
+let createCacheKey = { borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 createCacheKey[6] = createCacheKey;
 createCacheKey[7] = { borderBottomLeftRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm };
 createCacheKey[8] = { paddingVertical: 12 };
 createCacheKey[9] = { flex: 1, justifyContent: "flex-start" };
 createCacheKey[10] = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
-let obj1 = { borderBottomLeftRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm };
 createCacheKey[11] = { backgroundColor: require("result").PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 createCacheKey[12] = { borderLeftColor: "rgba(184, 69, 193, 0.5)", borderLeftWidth: 2, borderRightColor: "rgba(184, 69, 193, 0.5)", borderRightWidth: 2 };
 createCacheKey[13] = { marginTop: 16 };
@@ -244,8 +234,7 @@ let obj3 = { icon: null };
 let obj2 = { backgroundColor: require("result").PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj3[0] = { tintColor: ThemesDefault.colors.TEXT_MUTED };
 let closure_16 = createCacheKey.createStyles(obj3);
-let obj4 = { tintColor: ThemesDefault.colors.TEXT_MUTED };
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesTable.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesTable.tsx");
 
 export default function PremiumFeaturesTable(highlightNitroBasic) {
   let flag = highlightNitroBasic.highlightNitroBasic;
@@ -285,7 +274,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   const maxFileSizeForPremiumType = obj.getMaxFileSizeForPremiumType(closure_9.TIER_0);
   obj1 = flag(tmp3[18]);
   const maxFileSizeForPremiumType1 = obj1.getMaxFileSizeForPremiumType(closure_9.TIER_2);
-  obj = { column1: callback2(tmp2(tmp3[19]), obj), column2: callback2(tmp2(tmp3[20]), obj1), withBottomBorder: false, disableAccessibility: true, hidden: !isPremiumGroup };
+  { column1: callback2(tmp2(tmp3[19]), obj), column2: callback2(tmp2(tmp3[20]), obj1), withBottomBorder: false, disableAccessibility: true, hidden: !isPremiumGroup };
   obj = { style: tmp.logo, width: 48, height: 9 };
   obj1 = { style: tmp.logo, width: 50, height: 9 };
   const items = [obj, , , , , , , , , , ];
@@ -325,12 +314,12 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   obj5[1] = intl4.string(tmp9(tmp3[15]).t.LkKGZ2);
   const obj7 = { style: tmp.priceContainer, children: null };
   const parts = priceString.split(/ (?=\()/g);
-  obj7[1] = parts.map((text) => callback(closure_18, { text }, text));
+  obj7[1] = parts.map((item, index) => callback(closure_18, { text: item }, item));
   obj5[2] = callback2(View, obj7);
   obj5[3] = priceString;
   const obj8 = { style: tmp.priceContainer, children: null };
   const parts1 = priceString1.split(/ (?=\()/g);
-  obj8[1] = parts1.map((text) => callback(closure_18, { text }, text));
+  obj8[1] = parts1.map((item, index) => callback(closure_18, { text: item }, item));
   obj5[4] = callback2(View, obj8);
   obj5[5] = priceString1;
   items[2] = obj5;
@@ -433,7 +422,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   obj23[5] = intl30.string(tmp9(tmp3[15]).t["tq+6t/"]);
   items[9] = obj23;
   items[10] = { withBottomBorder: false, withBottomBorderRadius: true, disableAccessibility: true };
-  const found = items.filter((hidden) => null != hidden && !hidden.hidden);
+  const found = items.filter((item, index) => null != item && !item.hidden);
   const obj25 = { style: items1, children: null };
   items1 = [tmp.container, highlightNitroBasic.style];
   const obj26 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
@@ -450,25 +439,22 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
     const obj27 = { style: null, premiumGroupRole: null };
     obj27[0] = tmp.premiumGroupCard;
     obj27[1] = premiumGroupRole;
-    isPremiumGroup = tmp12(tmp2(tmp3[26]), obj27);
+    isPremiumGroup = callback2(tmp2(tmp3[26]), obj27);
   }
   items2[1] = isPremiumGroup;
-  const obj17 = { numBoosts: closure_7 };
-  const obj18 = { numBoosts: closure_7 };
-  const tmp18 = closure_12;
   tmp9Result = tmp9(tmp3[10]);
   items2[2] = callback2(View, {
     style: tmp.table,
-    children: found.map((arg0, rowNumber) => {
+    children: found.map((item, index) => {
       const obj = {};
-      const merged = Object.assign(arg0);
+      const merged = Object.assign(item);
       obj.highlightColumn1 = flag;
       obj.disableHighlightColumn2 = isPremiumGroup;
       obj.variant = str;
-      obj.rowNumber = rowNumber;
-      return closure_1_11(closure_1_19, obj, rowNumber);
+      obj.rowNumber = index;
+      return closure_1_11(Row, obj, index);
     })
   });
   obj25[1] = items2;
-  return tmp18(View, obj25);
+  return callback(View, obj25);
 };

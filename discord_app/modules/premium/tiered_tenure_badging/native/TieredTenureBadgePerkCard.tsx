@@ -1,17 +1,17 @@
 // === Module 12875: TieredTenureBadgePerkCard ===
 
 // Module 12875 (TieredTenureBadgePerkCard)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ badgeNameContainer: { flexDirection: "row" }, tenureRequirements: { marginStart: 4 }, image: { width: "100%", height: "100%" }, imageContainer: { height: 238, paddingVertical: 32 }, upcomingBadge: { opacity: 0.4 }, title: { marginTop: 0 } });
-const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
 
 export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
   let obj = tieredTenureBadgeData(9496);
@@ -99,12 +99,11 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     if (tmp30Result) {
       const obj5 = { variant: "heading-sm/normal", color: "text-muted", children: null };
       obj5[2] = formatResult;
-      tmp30Result = tmp30(tmp(4734).Text, obj5);
+      tmp30Result = callback(tmp(4734).Text, obj5);
     }
     const obj6 = { children: null };
     items3[1] = tmp30Result;
     obj6[0] = items3;
-    const tmp28 = callback2;
     const tmpResult = tmp(9495);
     const obj7 = { title: null, titleStyle: null, bodyComponent: null, cta: null, buttonOnPress: null, headerComponent: null, pillText: null };
     const tmp28Result = callback2(View, obj6);

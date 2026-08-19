@@ -2,21 +2,19 @@
 
 // Module 11435 (ChatFloatingNavButton)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ Image: c4, Pressable: c5 } = get_ActivityIndicator);
-createCacheKey = { pill: null, icon: null };
-createCacheKey = { height: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, width: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: ThemesDefault.colors.BORDER_MUTED, alignItems: "center", justifyContent: "center", overflow: "hidden" };
+const createCacheKey = { height: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, width: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: ThemesDefault.colors.BORDER_MUTED, alignItems: "center", justifyContent: "center", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE, height: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function ChatFloatingNavButtonTsx1(){const{withSpring,interpolateColor,pressed,bgColor,pressedBgColor,ON_PRESS_SPRING}=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[bgColor,pressedBgColor]),ON_PRESS_SPRING,'animate-always')};}" };
-let obj1 = { width: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE, height: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_ICON_SIZE };
-let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatFloatingNavButton.tsx");
+let result = require("obj132").fileFinishedImporting("modules/chat_input/native/ChatFloatingNavButton.tsx");
 
 export default function ChatFloatingNavButton(arg0) {
   let sharedValue;

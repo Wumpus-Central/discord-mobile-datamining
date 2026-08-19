@@ -2,10 +2,10 @@
 
 // Module 11095 (useSafetyHubInitialized)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubInitialized.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubInitialized.tsx");
 
 export const useSafetyHubInitialized = function useSafetyHubInitialized() {
   const items = [closure_2];

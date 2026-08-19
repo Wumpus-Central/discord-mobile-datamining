@@ -1,10 +1,10 @@
 // === Module 8378: useShouldConvertBioEmoji ===
 
 // Module 8378 (useShouldConvertBioEmoji)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 
-const result = set.fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");
 
 export default function useShouldConvertBioEmoji() {
   const UseLegacyChatInput = explicitContentFromProto.UseLegacyChatInput;

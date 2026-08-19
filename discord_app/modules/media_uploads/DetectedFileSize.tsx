@@ -1,7 +1,7 @@
 // === Module 4875: _getDetectedFileSize ===
 
 // Module 4875 (_getDetectedFileSize)
-import closure_0 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _getDetectedFileSize() {
   const self = this;
@@ -119,7 +119,7 @@ function _getDetectedFileSize() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/media_uploads/DetectedFileSize.tsx");
+let result = require("obj132").fileFinishedImporting("modules/media_uploads/DetectedFileSize.tsx");
 
 export const getDetectedFileSize = function getDetectedFileSize() {
   const self = this;

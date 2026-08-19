@@ -4,12 +4,12 @@
 import _modDef4115 from "module_4115" /* 4115 */;
 import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
 import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 11410 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta" /* 11149 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function FadeTransitionItem(state) {
   state = state.state;
   const cleanup = state.cleanup;
@@ -24,23 +24,23 @@ function FadeTransitionItem(state) {
   const items = [state, sharedValue, cleanup];
   const effect = React.useEffect(() => {
     if (state === state(sharedValue[4]).TransitionStates.YEETED) {
-      let tmpResult = tmp(tmp2[6]);
+      let tmpResult = state(sharedValue[6]);
       const fn = function t(arg0) {
         if (true === arg0) {
-          closure_1_0(closure_1_2[5]).runOnJS(closure_1)();
-          const obj = closure_1_0(closure_1_2[5]);
+          state(sharedValue[5]).runOnJS(closure_1)();
+          const obj = state(sharedValue[5]);
         }
       };
       let obj = { runOnJS: null, cleanup: null };
-      obj[0] = tmp(tmp2[5]).runOnJS;
+      obj[0] = state(sharedValue[5]).runOnJS;
       obj[1] = cleanup;
       fn.__closure = obj;
       fn.__workletHash = 10965161938750;
       fn.__initData = closure_1_7;
-      const result = sharedValue.set(tmpResult.withTiming(0, closure_1_4, "respect-motion-settings", fn));
+      const result = sharedValue.set(tmpResult.withTiming(0, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings", fn));
     } else {
-      tmpResult = tmp(tmp2[6]);
-      const result1 = sharedValue.set(tmpResult.withTiming(1, closure_1_4, "respect-motion-settings"));
+      tmpResult = state(sharedValue[6]);
+      const result1 = sharedValue.set(tmpResult.withTiming(1, CHAT_INPUT_TIMING_CONFIG, "respect-motion-settings"));
     }
   }, items);
   class T {
@@ -73,7 +73,6 @@ function BounceTransitionItem(state) {
   state = state.state;
   ({ cleanup, bounceEnterDelayMs, children } = state);
   let obj = { visible: state !== wrapChildrenDefault.TransitionStates.YEETED, initiallyVisible: state !== wrapChildrenDefault.TransitionStates.ENTERED, enterDelayMs: bounceEnterDelayMs, onExitComplete: cleanup, interactiveDuringEnter: true };
-  const tmp = useChatInputFloatingBounceDefault;
   ({ isInteractive, animatedStyle } = useChatInputFloatingBounceDefault(obj));
   obj = { style: items };
   items = [closure_6.transitionItemCentered, animatedStyle];
@@ -94,7 +93,7 @@ function BounceTransitionItem(state) {
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}" };
 let closure_8 = { code: "function ChatInputActionButtonTransitionItemTsx2(){const{visible}=this.__closure;return{opacity:visible.get()};}" };
-let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx");
+let result = require("obj132").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx");
 
 export default function ChatInputActionButtonTransitionItem(bounceEnterDelayMs) {
   ({ state, cleanup, children, withBounce } = bounceEnterDelayMs);
@@ -111,13 +110,13 @@ export default function ChatInputActionButtonTransitionItem(bounceEnterDelayMs) 
     obj[1] = cleanup;
     obj[2] = num;
     obj[3] = children;
-    let tmpResult = tmp(BounceTransitionItem, obj);
+    let tmpResult = <BounceTransitionItem state={null} cleanup={null} bounceEnterDelayMs={null}>{null}</BounceTransitionItem>;
   } else {
     obj = { state: null, cleanup: null, children: null };
     obj[0] = state;
     obj[1] = cleanup;
     obj[2] = children;
-    tmpResult = tmp(FadeTransitionItem, obj);
+    tmpResult = <FadeTransitionItem state={null} cleanup={null}>{null}</FadeTransitionItem>;
   }
   return tmpResult;
 };

@@ -1,7 +1,7 @@
 // === Module 8431: formatExpirationLabel ===
 
 // Module 8431 (formatExpirationLabel)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import tDefault from "t" /* 3975 */;
 
@@ -30,7 +30,7 @@ function formatExpirationLabel(expiry) {
     }
   }
 }
-const result = set.fileFinishedImporting("modules/polls/chat/useFormattedExpirationLabel.tsx");
+const result = obj132.fileFinishedImporting("modules/polls/chat/useFormattedExpirationLabel.tsx");
 
 export default function useFormattedExpirationLabel(expiry) {
   if (null != expiry) {

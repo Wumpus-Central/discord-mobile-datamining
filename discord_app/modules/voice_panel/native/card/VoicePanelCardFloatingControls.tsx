@@ -4,15 +4,22 @@
 import ThemesDefault from "Themes" /* 712 */;
 import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
 import ManaContext from "ManaContext" /* 4104 */;
+import obj132Default from "obj132" /* 7190 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
+import VideoDisabledSvgIcon from "VideoDisabledSvgIcon" /* 9677 */;
 import dismissPanelDefault from "dismissPanel" /* 11439 */;
+import VoiceXIcon from "VoiceXIcon" /* 12140 */;
+import registerAssetDefault from "registerAsset" /* 12620 */;
 import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 16324 */;
-import registerAssetDefault from "registerAsset" /* 16326 */;
+import registerAssetDefault2 from "registerAsset" /* 16326 */;
+import registerAssetDefault3 from "registerAsset" /* 16369 */;
+import registerAssetDefault4 from "registerAsset" /* 16370 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_6 from "participantFromServer" /* 1390 */;
-import closure_7 from "reset" /* 4652 */;
-import closure_8 from "createRTCConnection" /* 4539 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import reset from "reset" /* 4652 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
 import VoicePanelModes from "VoicePanelModes" /* 11440 */;
 import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
 import { VOICE_PANEL_CARD_INNER_PADDING as closure_12 } from "CARD_SIZE" /* 11443 */;
@@ -22,14 +29,13 @@ import jsxProd from "jsxProd" /* 21 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function StreamIcon(voicePlatform) {
   voicePlatform = voicePlatform.voicePlatform;
-  let controlsSpecs;
-  controlsSpecs = importAllResult.useContext(dismissPanelDefault).controlsSpecs;
-  let obj = controlsSpecs(4115);
+  const controlsSpecs = importAllResult.useContext(dismissPanelDefault).controlsSpecs;
+  controlsSpecs(4115);
   const fn = function o() {
-    const tmp = controlsSpecs.get().mode === closure_1_11.HIDDEN;
+    const tmp = controlsSpecs.get().mode === VoicePanelControlsModes.HIDDEN;
     let num = 4;
     if (tmp) {
       num = 2;
@@ -42,18 +48,18 @@ function StreamIcon(voicePlatform) {
     obj[1] = num2;
     return obj;
   };
-  obj = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
+  let obj = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
   fn.__closure = obj;
   fn.__workletHash = 3270040588948;
   fn.__initData = closure_23;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let source = registerAssetDefault;
+  let source = registerAssetDefault2;
   if (voicePlatform === constants2.XBOX) {
-    source = tmp(16369);
-  } else if (voicePlatform === tmp6.MOBILE) {
-    source = tmp(12620);
-  } else if (voicePlatform === tmp6.QUEST) {
-    source = tmp(16370);
+    source = registerAssetDefault3;
+  } else if (voicePlatform === constants2.MOBILE) {
+    source = registerAssetDefault;
+  } else if (voicePlatform === constants2.QUEST) {
+    source = registerAssetDefault4;
   }
   const style = [callback2(useIsMobileVisualRefreshExperimentEnabledDefault("VoicePanelCardFloatingControls")).iconWithoutBackground, animatedStyle];
   return callback(closure_19, { source, style });
@@ -66,24 +72,24 @@ function AnimatedLabelIcon(icon) {
     let obj = { voicePlatform: null };
     obj[0] = icon.voicePlatform;
     return callback(StreamIcon, obj);
-  } else if (tmp4(16324).VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
+  } else if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.SPEAKER_MUTE_ICON === type) {
     obj = { style: null, hitSlop: 12, onPress: null, children: null };
     obj[0] = tmp3.speakerMuteIcon;
     obj[2] = icon.onPress;
     obj1 = { style: null };
     obj1[0] = tmp3.iconWithoutBackground;
-    obj[3] = callback(tmp4(12140).VoiceXIcon, obj1);
+    obj[3] = callback(VoiceXIcon.VoiceXIcon, obj1);
     return callback(Pressable, obj);
-  } else if (tmp4(16324).VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
+  } else if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.USER_VIDEO_ICON === type) {
     const obj2 = { style: null, onPress: null, children: null };
     obj2[0] = tmp3.iconContainer;
     obj2[1] = icon.onPress;
     const obj3 = { style: null, state: null };
     obj3[0] = tmp3.icon;
     obj3[1] = icon.videoIconState;
-    obj2[2] = callback(tmp4(9677).VideoIcon, obj3);
+    obj2[2] = callback(VideoDisabledSvgIcon.VideoIcon, obj3);
     return callback(Pressable, obj2);
-  } else if (tmp4(16324).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
+  } else if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON === type) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp3.iconContainer;
     const obj5 = { onPress: null, hitSlop: 12, children: null };
@@ -91,16 +97,16 @@ function AnimatedLabelIcon(icon) {
     const obj6 = { style: null, state: null, alwaysWhite: true };
     obj6[0] = tmp3.icon;
     obj6[1] = icon.muteDeafenIconState;
-    obj5[2] = callback(tmp4(9677).MuteDeafenIcon, obj6);
+    obj5[2] = callback(VideoDisabledSvgIcon.MuteDeafenIcon, obj6);
     obj4[1] = callback(Pressable, obj5);
-    return callback(tmp(7190), obj4);
-  } else if (tmp4(16324).VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
+    return callback(obj132Default, obj4);
+  } else if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.USER_DISCONNECTED_ICON === type) {
     obj = { style: null, onPress: null, children: null };
     obj[0] = tmp3.iconContainer;
     obj[1] = icon.onPress;
     const obj7 = { size: "xs", color: null };
-    obj7[1] = tmp(712).colors.TEXT_FEEDBACK_WARNING;
-    obj[2] = callback(tmp4(8074).CircleErrorIcon, obj7);
+    obj7[1] = ThemesDefault.colors.TEXT_FEEDBACK_WARNING;
+    obj[2] = callback(CircleErrorIcon.CircleErrorIcon, obj7);
     return callback(Pressable, obj);
   }
 }
@@ -117,10 +123,10 @@ let closure_22 = createCacheKey.createStyles((arg0) => {
   const radii = ThemesDefault.radii;
   if (arg0) {
     let round = radii.sm;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     round = radii.round;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   obj = { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", borderRadius: round, overflow: "hidden", paddingHorizontal: 8, backgroundColor: tmp4(712).colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, height: c21, gap: 4 };
   obj[1] = obj;
@@ -144,12 +150,11 @@ let closure_23 = { code: "function VoicePanelCardFloatingControlsTsx1(){const{co
 let closure_26 = { code: "function VoicePanelCardFloatingControlsTsx2(){const{controlsHidden,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get();return{position:'absolute',top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,left:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}" };
 let closure_27 = importAllResult.memo((participant) => {
   participant = participant.participant;
-  let controlsHidden = participant;
-  controlsHidden = participant.controlsHidden;
+  const controlsHidden = participant.controlsHidden;
   let guildId;
   ({ isSelf, layout } = participant);
   guildId = importAllResult.useContext(guildId(11439)).guildId;
-  let obj = controlsHidden(4115);
+  controlsHidden(4115);
   const fn = function n() {
     const value = controlsHidden.get();
     if (value) {
@@ -162,22 +167,22 @@ let closure_27 = importAllResult.memo((participant) => {
     if (value) {
       num2 = 0;
     }
-    obj[3] = controlsHidden(closure_1_2[29]).withSpring(num2, closure_1_9);
+    obj[3] = controlsHidden(dependencyMap[29]).withSpring(num2, closure_1_9);
     return obj;
   };
-  obj = { controlsHidden, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12, withSpring: controlsHidden(4744).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
+  let obj = { controlsHidden, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12, withSpring: controlsHidden(4744).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
   fn.__closure = obj;
   fn.__workletHash = 4080439075039;
   fn.__initData = closure_26;
   const items = [guildId, participant];
   const animatedStyle = obj.useAnimatedStyle(fn);
   const callback = importAllResult.useCallback(() => {
-    let obj = controlsHidden(closure_1_2[30]);
+    let obj = controlsHidden(dependencyMap[30]);
     if (obj.isStableStreamParticipant(controlsHidden)) {
-      const streamForUser = closure_1_7.getStreamForUser(tmp3.user.id, guildId);
+      const streamForUser = closure_1_7.getStreamForUser(controlsHidden.user.id, guildId);
       if (null != streamForUser) {
-        let tmpResult = tmp(tmp2[31]);
-        tmpResult = tmp(tmp2[32]);
+        controlsHidden(dependencyMap[31]);
+        const tmpResult = controlsHidden(dependencyMap[32]);
         tmpResult.stopStream(tmpResult.encodeStreamKey(streamForUser));
       }
     }
@@ -189,13 +194,13 @@ let closure_27 = importAllResult.memo((participant) => {
       }
       obj = { location: null, applicationId: null };
       obj[0] = _location;
-      obj[1] = tmp3.applicationId;
-      guildId(tmp2[33]).leaveActivity(obj);
-      const obj3 = guildId(tmp2[33]);
+      obj[1] = controlsHidden.applicationId;
+      guildId(dependencyMap[33]).leaveActivity(obj);
+      const obj3 = guildId(dependencyMap[33]);
     }
+    tmpResult1 = controlsHidden(dependencyMap[30]);
   }, items);
   obj = { icon: guildId(16371), onPress: callback, style: animatedStyle, layout, accessibilityLabel: null };
-  const tmp3 = closure_16;
   const tmp4 = guildId(16254);
   const result = controlsHidden(16322).isStableActivityParticipant(participant);
   const intl = controlsHidden(1236).intl;
@@ -209,7 +214,7 @@ let closure_27 = importAllResult.memo((participant) => {
     stringResult = string(t.q3O3J8);
   }
   obj[4] = stringResult;
-  return tmp3(tmp4, obj);
+  return callback(tmp4, obj);
 });
 let closure_28 = { code: "function VoicePanelCardFloatingControlsTsx3(){const{controlsHidden,mode,VoicePanelModes,FLOATING_BAR_HEIGHT,VOICE_PANEL_CARD_INNER_PADDING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const hidden=controlsHidden.get()||mode.get()===VoicePanelModes.PIP;return{position:'absolute',top:hidden?-(FLOATING_BAR_HEIGHT+VOICE_PANEL_CARD_INNER_PADDING*2):VOICE_PANEL_CARD_INNER_PADDING,right:VOICE_PANEL_CARD_INNER_PADDING,opacity:withSpring(hidden?0:1,MODE_CHANGE_PHYSICS),zIndex:1};}" };
 let closure_29 = importAllResult.memo((participantId) => {
@@ -226,7 +231,7 @@ let closure_29 = importAllResult.memo((participantId) => {
   const callback = mode.useCallback(() => {
     setFocused(participantId);
   }, items);
-  let obj = participantId(setFocused[12]);
+  participantId(setFocused[12]);
   const fn = function _() {
     let value = controlsHidden.get();
     if (!value) {
@@ -245,7 +250,7 @@ let closure_29 = importAllResult.memo((participantId) => {
     obj[3] = participantId(setFocused[29]).withSpring(num2, closure_1_9);
     return obj;
   };
-  obj = { controlsHidden, mode, VoicePanelModes: closure_10, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12, withSpring: participantId(setFocused[29]).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
+  let obj = { controlsHidden, mode, VoicePanelModes: closure_10, FLOATING_BAR_HEIGHT: c21, VOICE_PANEL_CARD_INNER_PADDING: closure_12, withSpring: participantId(setFocused[29]).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
   fn.__closure = obj;
   fn.__workletHash = 12421495364262;
   fn.__initData = closure_28;
@@ -364,9 +369,9 @@ let closure_37 = importAllResult.memo((controlsHidden) => {
   }
   obj2 = { style: tmp14, pointerEvents: "none", children: null };
   obj3 = { source: tmp(tmp2[40]), size: tmp4(tmp2[13]).IconSizes.SMALL_20, style: tmp3.ringingIcon };
-  obj2[2] = closure_16(controlsHidden(sharedValue1[13]).Icon, obj3);
-  obj1[1] = closure_16(sharedValue(sharedValue1[39]), obj2);
-  return closure_16(tmp12, obj1);
+  obj2[2] = callback(controlsHidden(sharedValue1[13]).Icon, obj3);
+  obj1[1] = callback(sharedValue(sharedValue1[39]), obj2);
+  return callback(tmp12, obj1);
 });
 let closure_38 = importAllResult.memo((controlsHidden) => callback(ManaContext.ThemeContextProvider, { theme: ThemeTypes.LIGHT, children: callback(closure_37, { controlsHidden: controlsHidden.controlsHidden }) }));
 let closure_39 = { code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}" };
@@ -380,10 +385,6 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   channelId = undefined;
   let controlsSpecs;
   let focused;
-  let connected;
-  let mode;
-  let isScreenReaderEnabled;
-  let id;
   let analyticsLocations;
   closure_9 = undefined;
   closure_10 = undefined;
@@ -394,13 +395,13 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   ({ guildId, channelId } = context);
   controlsSpecs = context.controlsSpecs;
   focused = context.focused;
-  connected = context.connected;
-  mode = context.mode;
+  const connected = context.connected;
+  const mode = context.mode;
   obj1 = controlsHidden(controlsSpecs[42]);
-  isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   const tmp6 = callback2(channelId(controlsSpecs[16])("VoicePanelCardFloatingControls"));
   let obj2 = controlsHidden(controlsSpecs[30]);
-  id = undefined;
+  let id;
   if (obj2.isStableParticipantWithUser(participant)) {
     id = participant.user.id;
   }
@@ -428,7 +429,7 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   const displayNameStylesFont = controlsHidden(controlsSpecs[47]).useDisplayNameStylesFont({ displayNameStyles: tmp12 });
   let num = 1;
   closure_9 = tmp14;
-  const tmp15 = tmpResultResult.filter((type) => type.type !== controlsHidden(controlsSpecs[22]).VoicePanelCardUserStateIconType.STREAM_ICON).length >= 1;
+  const tmp15 = tmpResultResult.filter((item, index) => item.type !== controlsHidden(controlsSpecs[22]).VoicePanelCardUserStateIconType.STREAM_ICON).length >= 1;
   closure_10 = tmp15;
   const tmp4Result1 = controlsHidden(controlsSpecs[47]);
   const fn = function c() {
@@ -473,6 +474,7 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
       num = 0;
     }
     const result = sharedValue.set(controlsHidden(controlsSpecs[29]).withSpring(num, closure_9));
+    const obj = controlsHidden(controlsSpecs[29]);
   };
   obj = { pillOpacity: sharedValue, withSpring: tmp4(tmp2[29]).withSpring, MODE_CHANGE_PHYSICS: closure_9 };
   fn3.__closure = obj;
@@ -552,14 +554,13 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   if (tmp20Result) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp6.initialIcons;
-    obj5[1] = tmpResultResult.map((icon) => callback(closure_25, { icon }, icon.type));
-    tmp20Result = tmp20(tmp(tmp2[25]), obj5);
+    obj5[1] = tmpResultResult.map((item, index) => callback(closure_25, { icon: item }, item.type));
+    tmp20Result = callback(tmp(tmp2[25]), obj5);
     const tmpResult1 = tmp(tmp2[25]);
   }
   const items3 = [tmp20Result, ];
   const obj6 = { style: items4, layout, children: null };
   items4 = [tmp6.floatingContainer, animatedStyle1];
-  const tmp23 = closure_20;
   const tmp4Result6 = controlsHidden(controlsSpecs[12]);
   const items5 = [tmp6.floatingText, ];
   let tmp28 = null != displayNameStylesFont;
@@ -570,13 +571,13 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   }
   const obj8 = { variant: "heading-sm/semibold", color: "text-overlay-light", lineClamp: 1, style: items5, ellipsizeMode: "tail", accessibilityLabel: null, children: null };
   items5[1] = tmp28;
-  if (null != tmpResultResult.find((type) => type.type === controlsHidden(controlsSpecs[22]).VoicePanelCardUserStateIconType.STREAM_ICON)) {
+  if (null != tmpResultResult.find((item, index) => item.type === controlsHidden(controlsSpecs[22]).VoicePanelCardUserStateIconType.STREAM_ICON)) {
     const intl3 = tmp4(tmp2[27]).intl;
     const obj9 = { username: null };
     obj9[0] = label;
     let formatToPlainStringResult = intl3.formatToPlainString(tmp4(tmp2[27]).t.I0mOAs, obj9);
   } else {
-    const found = tmpResultResult.find((type) => type.type === controlsHidden(controlsSpecs[22]).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON);
+    const found = tmpResultResult.find((item, index) => item.type === controlsHidden(controlsSpecs[22]).VoicePanelCardUserStateIconType.MUTE_DEAFEN_ICON);
     formatToPlainStringResult = label;
     if (null != found) {
       const muteDeafenIconState = found.muteDeafenIconState;
@@ -596,12 +597,12 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
   }
   obj8[5] = formatToPlainStringResult;
   obj8[6] = label;
-  const items6 = [closure_16(controlsHidden(controlsSpecs[48]).Text, obj8), , ];
+  const items6 = [callback(controlsHidden(controlsSpecs[48]).Text, obj8), , ];
   tmp20Result = participant.type === constants.USER;
   if (tmp20Result) {
     const obj12 = { userId: null, textColor: "text-overlay-light" };
     obj12[0] = participant.user.id;
-    tmp20Result = tmp20(tmp(tmp2[49]), obj12);
+    tmp20Result = callback(tmp(tmp2[49]), obj12);
   }
   items6[1] = tmp20Result;
   if (isUserSecureFramesVerified) {
@@ -609,14 +610,14 @@ let closure_44 = importAllResult.memo((controlsHidden) => {
     obj13[0] = tmp6.secureFramesIcon;
     const intl4 = tmp4(tmp2[27]).intl;
     obj13[2] = intl4.string(tmp4(tmp2[27]).t.mR9cf3);
-    isUserSecureFramesVerified = tmp20(tmp4(tmp2[50]).ShieldLockIcon, obj13);
+    isUserSecureFramesVerified = callback(tmp4(tmp2[50]).ShieldLockIcon, obj13);
   }
   items6[2] = isUserSecureFramesVerified;
   obj6[2] = items6;
-  items3[1] = closure_17(channelId(controlsSpecs[39]), obj6);
+  items3[1] = callback2(channelId(controlsSpecs[39]), obj6);
   obj4[3] = items3;
-  obj3[3] = closure_17(tmp23, obj4);
-  return closure_16(tmpResult, obj3);
+  obj3[3] = callback2(closure_20, obj4);
+  return callback(tmpResult, obj3);
 });
 let closure_45 = { code: "function VoicePanelCardFloatingControlsTsx15(){const{controlsSpecs,VoicePanelControlsModes,focused,mode,VoicePanelModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN||focused.get()!=null||mode.get()===VoicePanelModes.PIP;}" };
 const importDefaultResult1 = importDefaultResult;
@@ -626,17 +627,16 @@ const memoResult = importAllResult.memo(function FloatingControls(arg0) {
   let guildId;
   let controlsSpecs;
   let focused;
-  let mode;
   const context = focused.useContext(guildId(controlsSpecs[17]));
   guildId = context.guildId;
   controlsSpecs = context.controlsSpecs;
   focused = context.focused;
-  mode = context.mode;
+  const mode = context.mode;
   let obj = participant(controlsSpecs[37]);
   const items = [closure_8];
   let stateFromStores = obj.useStateFromStores(items, () => connected.isConnected());
   obj1 = participant(controlsSpecs[30]);
-  let tmp4Result = tmp4(tmp2[37]);
+  let tmp4Result = participant(tmp2[37]);
   const items1 = [closure_6, closure_7];
   const stateFromStores1 = tmp4Result.useStateFromStores(items1, () => {
     if (obj.isStableActivityParticipant(participant)) {
@@ -645,21 +645,18 @@ const memoResult = importAllResult.memo(function FloatingControls(arg0) {
       if (currentEmbeddedActivity != null) {
         applicationId = currentEmbeddedActivity.applicationId;
       }
-      return tmp3.applicationId === applicationId;
+      return participant.applicationId === applicationId;
     } else {
-      let result = tmp(tmp2[30]).isStableStreamParticipant(tmp3);
+      let result = participant(controlsSpecs[30]).isStableStreamParticipant(participant);
       if (result) {
-        result = null != closure_1_7.getActiveStreamForUser(tmp3.user.id, guildId);
+        result = null != closure_1_7.getActiveStreamForUser(participant.user.id, guildId);
       }
       return result;
     }
     obj = participant(controlsSpecs[30]);
-    tmp = participant;
-    tmp2 = controlsSpecs;
   });
-  let tmp = guildId;
   const tmp6 = obj1.isStableParticipantWithUser(participant) && participant.isSelf;
-  tmp4Result = tmp4(tmp2[12]);
+  tmp4Result = participant(tmp2[12]);
   class I {
     constructor() {
       tmp = controlsSpecs.get().mode === closure_1_11.HIDDEN;
@@ -717,15 +714,15 @@ const memoResult = importAllResult.memo(function FloatingControls(arg0) {
     obj3[0] = derivedValue;
     obj3[1] = participant.id;
     obj3[2] = label;
-    obj3[3] = tmp4(tmp2[30]).isStableActivityParticipant(participant);
+    obj3[3] = participant(tmp2[30]).isStableActivityParticipant(participant);
     obj3[4] = layout;
     stateFromStores = callback(closure_29, obj3);
-    const tmp4Result1 = tmp4(tmp2[30]);
+    const tmp4Result1 = participant(tmp2[30]);
   }
   children[2] = stateFromStores;
   children[3] = tmp10;
-  return closure_17(closure_18, { children });
+  return callback2(closure_18, { children });
 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardFloatingControls.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardFloatingControls.tsx");
 
 export default memoResult;

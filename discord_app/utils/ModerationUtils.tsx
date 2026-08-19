@@ -1,36 +1,37 @@
 // === Module 14194: mapColorToHighlightColor ===
 
 // Module 14194 (mapColorToHighlightColor)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 1306 */;
 import items2 from "items" /* 4068 */;
+import HighlightColors from "HighlightColors" /* 14195 */;
 import ME from "ME" /* 676 */;
 
 function mapColorToHighlightColor(arg0) {
   if (obj.unsafe_getRawColor("PRIMARY_400") === arg0) {
-    return tmp(14195).HighlightColors.ACCENT;
+    return HighlightColors.HighlightColors.ACCENT;
   } else {
-    let tmpResult = tmp(711);
+    let tmpResult = unsafe_getRawColor;
     if (tmpResult.unsafe_getRawColor("GREEN_360") === arg0) {
-      return tmp(14195).HighlightColors.GREEN;
+      return HighlightColors.HighlightColors.GREEN;
     } else {
-      tmpResult = tmp(711);
+      tmpResult = unsafe_getRawColor;
       if (tmpResult.unsafe_getRawColor("YELLOW_360") === arg0) {
-        return tmp(14195).HighlightColors.YELLOW;
+        return HighlightColors.HighlightColors.YELLOW;
       } else {
         if (tmpResult1.unsafe_getRawColor("ORANGE_345") === arg0) {
-          return tmp(14195).HighlightColors.ORANGE;
+          return HighlightColors.HighlightColors.ORANGE;
         } else {
           if (tmpResult2.unsafe_getRawColor("RED_400") === arg0) {
-            return tmp(14195).HighlightColors.RED;
+            return HighlightColors.HighlightColors.RED;
           } else {
-            return tmp(14195).HighlightColors.NONE;
+            return HighlightColors.HighlightColors.NONE;
           }
-          tmpResult2 = tmp(711);
+          tmpResult2 = unsafe_getRawColor;
         }
-        tmpResult1 = tmp(711);
+        tmpResult1 = unsafe_getRawColor;
       }
     }
   }
@@ -38,11 +39,11 @@ function mapColorToHighlightColor(arg0) {
 }
 ({ VerificationLevels: obj1, VerificationCriteria: c3, GuildExplicitContentFilterTypes: c4 } = ME);
 let closure_5 = items2.ExplicitContentFilterTypes;
-const result = set.fileFinishedImporting("utils/ModerationUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/ModerationUtils.tsx");
 
 export { mapColorToHighlightColor };
 export const mapOptionToHighlightedRowOptions = function mapOptionToHighlightedRowOptions(arr) {
-  return arr.map((name) => ({ title: name.name, description: name.desc, highlightColor: callback(name.color), value: name.value, disabled: name.disabled }));
+  return arr.map((item, index) => ({ title: item.name, description: item.desc, highlightColor: callback(item.color), value: item.value, disabled: item.disabled }));
 };
 export const generateVerificationLevelOptions = function generateVerificationLevelOptions(features) {
   let flag = features;
@@ -69,54 +70,54 @@ export const generateVerificationLevelOptions = function generateVerificationLev
   obj[3] = flag;
   const items = [obj, , , , ];
   obj = { name: null, desc: null, value: null, color: null };
-  const intl3 = tmp(1236).intl;
+  const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.SsCK8I);
-  const intl4 = tmp(1236).intl;
+  const intl4 = getSystemLocale.intl;
   obj[1] = intl4.string(getSystemLocale.t["8GCOX6"]);
   obj[2] = constants.LOW;
   let unsafe_getRawColorResult;
   if (!flag2) {
-    let tmpResult = tmp(711);
+    let tmpResult = unsafe_getRawColor;
     unsafe_getRawColorResult = tmpResult.unsafe_getRawColor("GREEN_360");
   }
   obj[3] = unsafe_getRawColorResult;
   items[1] = obj;
   obj = { name: null, desc: null, value: null, color: null };
-  const intl5 = tmp(1236).intl;
+  const intl5 = getSystemLocale.intl;
   obj[0] = intl5.string(getSystemLocale.t.WwNoR4);
-  const intl6 = tmp(1236).intl;
+  const intl6 = getSystemLocale.intl;
   obj[1] = intl6.formatToPlainString(getSystemLocale.t.VS14ga, { min: constants2.ACCOUNT_AGE });
   obj[2] = constants.MEDIUM;
   let unsafe_getRawColorResult1;
   if (!flag2) {
-    tmpResult = tmp(711);
+    tmpResult = unsafe_getRawColor;
     unsafe_getRawColorResult1 = tmpResult.unsafe_getRawColor("YELLOW_360");
   }
   obj[3] = unsafe_getRawColorResult1;
   items[2] = obj;
   const obj2 = { name: null, desc: null, value: null, color: null };
-  const intl7 = tmp(1236).intl;
+  const intl7 = getSystemLocale.intl;
   obj2[0] = intl7.string(getSystemLocale.t.I2jMUF);
-  const intl8 = tmp(1236).intl;
+  const intl8 = getSystemLocale.intl;
   obj2[1] = intl8.formatToPlainString(getSystemLocale.t["r+b3I4"], { min: constants2.MEMBER_AGE });
   obj2[2] = constants.HIGH;
   let unsafe_getRawColorResult2;
   if (!flag2) {
-    unsafe_getRawColorResult2 = tmp(711).unsafe_getRawColor("ORANGE_345");
-    const tmpResult1 = tmp(711);
+    unsafe_getRawColorResult2 = unsafe_getRawColor.unsafe_getRawColor("ORANGE_345");
+    const tmpResult1 = unsafe_getRawColor;
   }
   obj2[3] = unsafe_getRawColorResult2;
   items[3] = obj2;
   const obj4 = { name: null, desc: null, value: null, color: null };
-  const intl9 = tmp(1236).intl;
+  const intl9 = getSystemLocale.intl;
   obj4[0] = intl9.string(getSystemLocale.t.cJY8w9);
-  const intl10 = tmp(1236).intl;
+  const intl10 = getSystemLocale.intl;
   obj4[1] = intl10.string(getSystemLocale.t.PWaKme);
   obj4[2] = constants.VERY_HIGH;
   let unsafe_getRawColorResult3;
   if (!flag2) {
-    unsafe_getRawColorResult3 = tmp(711).unsafe_getRawColor("RED_400");
-    const tmpResult2 = tmp(711);
+    unsafe_getRawColorResult3 = unsafe_getRawColor.unsafe_getRawColor("RED_400");
+    const tmpResult2 = unsafe_getRawColor;
   }
   obj4[3] = unsafe_getRawColorResult3;
   items[4] = obj4;
@@ -149,15 +150,15 @@ export const generateContentFilterHighlightedOptions = function generateContentF
   obj[1] = stringResult;
   obj[2] = constants3.MEMBERS_WITHOUT_ROLES;
   obj[3] = flag;
-  let tmpResult = tmp(711);
+  let tmpResult = unsafe_getRawColor;
   obj[4] = tmpResult.unsafe_getRawColor("YELLOW_360");
   items[1] = obj;
   obj = { name: null, desc: null, value: null, disabled: null, color: null };
-  const intl5 = tmp(1236).intl;
+  const intl5 = getSystemLocale.intl;
   obj[0] = intl5.string(getSystemLocale.t.VbSyAx);
-  const intl6 = tmp(1236).intl;
+  const intl6 = getSystemLocale.intl;
   const string2 = intl6.string;
-  const t2 = tmp(1236).t;
+  const t2 = getSystemLocale.t;
   if (flag) {
     let string2Result = string2(t2.j9WtHx);
   } else {
@@ -166,7 +167,7 @@ export const generateContentFilterHighlightedOptions = function generateContentF
   obj[1] = string2Result;
   obj[2] = constants3.DISABLED;
   obj[3] = flag;
-  tmpResult = tmp(711);
+  tmpResult = unsafe_getRawColor;
   obj[4] = tmpResult.unsafe_getRawColor("PRIMARY_400");
   items[2] = obj;
   return items;
@@ -199,11 +200,11 @@ export const generateContentFilterOptions = function generateContentFilterOption
   obj[3] = flag;
   items[1] = obj;
   obj = { name: null, desc: null, value: null, disabled: null };
-  const intl5 = tmp(1236).intl;
+  const intl5 = getSystemLocale.intl;
   obj[0] = intl5.string(getSystemLocale.t.VbSyAx);
-  const intl6 = tmp(1236).intl;
+  const intl6 = getSystemLocale.intl;
   const string2 = intl6.string;
-  const t2 = tmp(1236).t;
+  const t2 = getSystemLocale.t;
   if (flag) {
     let string2Result = string2(t2.j9WtHx);
   } else {
@@ -254,7 +255,6 @@ export const generateExplicitImageOptions = function generateExplicitImageOption
   const intl4 = getSystemLocale.intl;
   obj[1] = intl4.string(getSystemLocale.t.z4l4Cr);
   obj[2] = constants4.NON_FRIENDS;
-  const obj2 = unsafe_getRawColor;
   obj[3] = unsafe_getRawColor.unsafe_getRawColor("YELLOW_360");
   items[1] = obj;
   obj = { name: null, desc: null, value: null, color: null };
@@ -263,7 +263,6 @@ export const generateExplicitImageOptions = function generateExplicitImageOption
   const intl6 = getSystemLocale.intl;
   obj[1] = intl6.string(getSystemLocale.t.MoZlaD);
   obj[2] = constants4.DISABLED;
-  const obj4 = unsafe_getRawColor;
   obj[3] = unsafe_getRawColor.unsafe_getRawColor("RED_400");
   items[2] = obj;
   return items;

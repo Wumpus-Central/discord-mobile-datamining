@@ -1,7 +1,7 @@
 // === Module 6548: runAfterInteractions ===
 
 // Module 6548 (runAfterInteractions)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 function runAfterInteractions(arg0, MINUTE) {
@@ -10,7 +10,6 @@ function runAfterInteractions(arg0, MINUTE) {
   if (MINUTE === undefined) {
     num = 2000;
   }
-  dependencyMap = undefined;
   let delayedCall;
   dependencyMap = delayedCall.runAfterInteractions(() => {
     delayedCall.cancel();
@@ -29,7 +28,7 @@ function runAfterInteractions(arg0, MINUTE) {
   };
 }
 const InteractionManager = get_ActivityIndicator.InteractionManager;
-const result = set.fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
 
 export default { runAfterInteractions };
 export { runAfterInteractions };

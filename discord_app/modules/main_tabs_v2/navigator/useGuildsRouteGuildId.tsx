@@ -1,10 +1,10 @@
 // === Module 15282: useGuildsRouteGuildId ===
 
 // Module 15282 (useGuildsRouteGuildId)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
+const result = obj132.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
 
 export default function useGuildsRouteGuildId() {
   const params = createStandardNavigationFactories.useRoute().params;

@@ -1,13 +1,13 @@
 // === Module 11213: useActivityShelfData ===
 
 // Module 11213 (useActivityShelfData)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "reset" /* 7874 */;
-import closure_6 from "participantFromServer" /* 1390 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import reset from "reset" /* 7874 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfData.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/useActivityShelfData.tsx");
 
 export const useActivityShelfData = function useActivityShelfData(guildId) {
   const _require = guildId;
@@ -20,7 +20,7 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
   const obj2 = _require(stateFromStoresArray[4]);
   const items2 = [memo];
   const stateFromStores1 = _require(stateFromStoresArray[4]).useStateFromStores(items2, () => memo.testModeEmbeddedApplicationId);
-  let mapped = stateFromStoresArray.map((application_id) => application_id.application_id);
+  let mapped = stateFromStoresArray.map((item, index) => item.application_id);
   let tmp5 = mapped;
   if (null != stateFromStores1) {
     const items3 = [stateFromStores1];
@@ -35,11 +35,11 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
   memo1 = stateFromStores1.useMemo(() => {
     if (null != stateFromStores1) {
       if (memo.length > 0) {
-        if (tmp2[0].id === tmp) {
-          if (null != tmp2[0].embeddedActivityConfig) {
+        if (memo[0].id === tmp) {
+          if (null != memo[0].embeddedActivityConfig) {
             const obj = { activity: null, application: null };
-            obj[0] = tmp2[0].embeddedActivityConfig;
-            obj[1] = tmp2[0];
+            obj[0] = memo[0].embeddedActivityConfig;
+            obj[1] = memo[0];
             const items = [obj];
           }
           return [];
@@ -49,13 +49,13 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
   }, items5);
   const items6 = [stateFromStoresArray, memo];
   const memo2 = stateFromStores1.useMemo(() => {
-    const mapped = stateFromStoresArray.map((arg0) => {
-      closure_0 = arg0;
-      const found = closure_5.find((id) => id.id === application_id.application_id);
+    const mapped = stateFromStoresArray.map((item, index) => {
+      closure_0 = item;
+      const found = closure_5.find((item, index) => item.id === item.application_id);
       let tmp2 = null;
       if (null != found) {
         const obj = { activity: null, application: null };
-        obj[0] = arg0;
+        obj[0] = item;
         obj[1] = found;
         tmp2 = obj;
       }
@@ -70,16 +70,16 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
   const items7 = [nsfwAllowed, memo2, memo1];
   return stateFromStores1.useMemo(() => {
     const items = [...memo2];
-    const found = items.filter((activity) => {
-      let supported_platforms = activity.activity.supported_platforms;
+    const found = items.filter((item, index) => {
+      let supported_platforms = item.activity.supported_platforms;
       if (supported_platforms == null) {
         supported_platforms = [];
       }
       const tmp = lib(8718);
       return supported_platforms.includes(tmp(callback(500).getOS()));
     });
-    const found1 = found.filter((activity) => {
-      const requires_age_gate = activity.activity.requires_age_gate;
+    const found1 = found.filter((item, index) => {
+      const requires_age_gate = item.activity.requires_age_gate;
       let tmp = !requires_age_gate;
       if (requires_age_gate) {
         let nsfwAllowed;
@@ -97,14 +97,14 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
       }
       return tmp;
     });
-    return found1.filter((application) => {
+    return found1.filter((item, index) => {
       let nsfwAllowed;
       if (lib != null) {
         nsfwAllowed = lib.nsfwAllowed;
       }
       let tmp2 = false === nsfwAllowed;
       if (tmp2) {
-        tmp2 = closure_1_1(closure_1_2[9])(application.application.id);
+        tmp2 = stateFromStores(stateFromStoresArray[9])(item.application.id);
       }
       return !tmp2;
     });

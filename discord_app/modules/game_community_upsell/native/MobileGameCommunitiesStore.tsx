@@ -3,12 +3,10 @@
 // Module 15074 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import set from "set" /* 2 */;
 
-const require = arg1;
-let obj = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: null, dismissedGuildIds: null, guildGameIds: null };
+const require = fn;
+let obj = { guilds: [], lastFetchedAt: 0, lastFetchedGameIds: new Set(), dismissedGuildIds: null, guildGameIds: null };
 let set = new Set();
-obj[2] = set;
 obj[3] = new Set();
 obj[4] = {};
 const PersistedStore = initializeDefault.PersistedStore;
@@ -19,10 +17,10 @@ prototype["initialize"] = function initialize(guilds) {
   if (null != guilds) {
     obj = { guilds: null, lastFetchedAt: null, lastFetchedGameIds: null, dismissedGuildIds: null, guildGameIds: null };
     guilds = guilds.guilds;
-    obj[0] = guilds.map((features) => {
+    obj[0] = guilds.map((item, index) => {
       obj = {};
-      const merged = Object.assign(features);
-      obj.features = new Set(features.features);
+      const merged = Object.assign(item);
+      obj.features = new Set(item.features);
       return obj;
     });
     obj[1] = guilds.lastFetchedAt;
@@ -41,10 +39,10 @@ prototype["initialize"] = function initialize(guilds) {
 };
 prototype["getState"] = function getState() {
   obj = {
-    guilds: guilds.map((features) => {
+    guilds: guilds.map((item, index) => {
       obj = {};
-      const merged = Object.assign(features);
-      const items = [...features.features];
+      const merged = Object.assign(item);
+      const items = [...item.features];
       obj.features = items;
       return obj;
     }),
@@ -59,9 +57,9 @@ prototype["getState"] = function getState() {
 };
 prototype["getPresentableUpsellGuilds"] = function getPresentableUpsellGuilds() {
   const guilds = obj.guilds;
-  return guilds.filter((id) => {
+  return guilds.filter((item, index) => {
     dismissedGuildIds = dismissedGuildIds.dismissedGuildIds;
-    return !dismissedGuildIds.has(id.id);
+    return !dismissedGuildIds.has(item.id);
   });
 };
 prototype["hasGuilds"] = function hasGuilds() {
@@ -113,14 +111,13 @@ obj = {
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.game_id) {
-        let tmp4 = nextResult;
         obj[tmp3.id] = tmp3.game_id;
       }
       continue;
     }
     obj = {};
     const merged1 = Object.assign(obj);
-    obj.guilds = guilds.map((body) => callback(table[0]).makeDiscoverableGuild(body));
+    obj.guilds = guilds.map((item, index) => callback(table[0]).makeDiscoverableGuild(item));
     obj.lastFetchedAt = Date.now();
     obj.lastFetchedGameIds = new Set(gameIds);
     obj.guildGameIds = obj;
@@ -140,6 +137,7 @@ obj = {
   }
 };
 const mobileGameCommunitiesStore = new MobileGameCommunitiesStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesStore.tsx");
+let set1 = new Set();
+const result = require("obj132").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesStore.tsx");
 
 export default mobileGameCommunitiesStore;

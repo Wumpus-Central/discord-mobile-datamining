@@ -5,9 +5,9 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
 import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
 import shouldRunDefault from "shouldRun" /* 13558 */;
-import closure_2 from "initialize" /* 1212 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "getState" /* 7383 */;
+import initialize from "initialize" /* 1212 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import getState from "getState" /* 7383 */;
 import { AppStates } from "ME" /* 676 */;
 
 initializeDefault;
@@ -34,20 +34,18 @@ prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
   let shouldRunResult = state === AppStates.ACTIVE;
   if (shouldRunResult) {
     shouldRunResult = shouldRunDefault.shouldRun();
-    const obj = shouldRunDefault;
   }
   const result = getHermesInstrumentedStatsSummaryDefault.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
-    let tmp6Result = tmp6(13558);
+    let tmp6Result = shouldRunDefault;
     tmp6Result.start();
   } else {
-    tmp6Result = tmp6(13558);
+    tmp6Result = shouldRunDefault;
     tmp6Result.stop();
   }
 };
 prototype["_initialize"] = function _initialize() {
-  let self = this;
-  self = this;
+  const self = this;
   if (!this._initialized) {
     self._initialized = true;
     const subscription = self(709).subscribe("LOGOUT", self._handleLogout);
@@ -72,13 +70,13 @@ prototype["_terminate"] = function _terminate() {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
   }
-  let tmpResult = tmp(13558);
+  let tmpResult = shouldRunDefault;
   tmpResult.stop();
-  tmpResult = tmp(5422);
+  tmpResult = getHermesInstrumentedStatsSummaryDefault;
   const result1 = tmpResult.setShouldCollectHermesInstrumentedStats(false);
   self._initialized = false;
 };
 const telemetryRingLifecycleImpl = new TelemetryRingLifecycleImpl();
-let result = require("set").fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingLifecycle.tsx");
+let result = require("obj132").fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingLifecycle.tsx");
 
 export default telemetryRingLifecycleImpl;

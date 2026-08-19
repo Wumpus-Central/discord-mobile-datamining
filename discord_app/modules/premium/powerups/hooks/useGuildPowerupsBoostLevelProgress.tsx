@@ -3,12 +3,12 @@
 // Module 4300 (useGuildPowerupBoostLevelProgress)
 import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4281 */;
 import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4281 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c4, BoostedGuildTiers: c5, GuildFeatures: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");
 
 export default function useGuildPowerupBoostLevelProgress(arg0) {
   const _require = arg0;

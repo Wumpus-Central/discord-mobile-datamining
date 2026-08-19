@@ -1,9 +1,9 @@
 // === Module 16307: VoicePanelPIPModes ===
 
 // Module 16307 (VoicePanelPIPModes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");
 
 export const VoicePanelPIPModes = { IN_APP: "IN_APP", IN_PANEL: "IN_PANEL" };
 export const PIP_OFFSET_BOTTOM = 44;

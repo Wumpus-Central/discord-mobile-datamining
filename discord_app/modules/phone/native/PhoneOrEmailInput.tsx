@@ -1,11 +1,11 @@
 // === Module 8599: ? ===
 
 // Module 8599
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
   onChange = onChange.onChange;
@@ -13,9 +13,6 @@ const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
   const onPressCountrySelector = onChange.onPressCountrySelector;
   const forceMode = onChange.forceMode;
   const merged = Object.assign(onChange, Object.create(null));
-  ref = undefined;
-  closure_6 = undefined;
-  let combined;
   let obj = importAllResult;
   [tmp3, c4] = forceMode(undefined.useState(""), 2);
   ref = importAllResult.useRef(null);
@@ -117,9 +114,9 @@ const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
     if (str == null) {
       str = "";
     }
-    closure_6(str);
+    callback(str);
   }, items1);
-  combined = undefined;
+  let combined;
   if (result) {
     if (alpha2 == null) {
       alpha2 = "";
@@ -147,6 +144,6 @@ const forwardRefResult = importAllResult.forwardRef((onChange, ref) => {
   obj.leadingPressableProps = memo;
   return ref(tmp6(tmp7[6]).SplitTextInput, obj);
 });
-let result = require("set").fileFinishedImporting("modules/phone/native/PhoneOrEmailInput.tsx");
+let result = require("obj132").fileFinishedImporting("modules/phone/native/PhoneOrEmailInput.tsx");
 
 export default forwardRefResult;

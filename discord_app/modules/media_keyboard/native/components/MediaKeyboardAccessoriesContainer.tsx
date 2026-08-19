@@ -1,30 +1,26 @@
 // === Module 15980: MediaKeyboardAccessoriesContainer ===
 
 // Module 15980 (MediaKeyboardAccessoriesContainer)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 10046 */;
+import noop from "noop" /* 19 */;
+import initialize from "initialize" /* 10046 */;
 import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
-let closure_6 = set.isAndroid();
-set = { androidContainer: { flex: 1 }, iosContainer: null };
-set = {};
+const require = fn;
+let closure_6 = obj132.isAndroid();
+obj132 = {};
 let merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
-set[1] = set;
-let closure_7 = createCacheKey.createStyles(set);
+obj132[1] = obj132;
+let closure_7 = createCacheKey.createStyles(obj132);
 let closure_8 = { code: "function MediaKeyboardAccessoriesContainerTsx1(){const{animateOnMount,initialLayout,animatedIndex,initialPosition,animatedPosition,interpolate,IS_ANDROID}=this.__closure;const animatedMountDisabledAndNotInitialLayout=!animateOnMount&&!initialLayout.get();const animatedSheetIndexOrDefault=animatedMountDisabledAndNotInitialLayout?0:Math.min(animatedIndex.get(),0);const animatedSheetPositionOrDefault=animatedMountDisabledAndNotInitialLayout?initialPosition:animatedPosition.get();const transform=[{translateY:interpolate(animatedSheetIndexOrDefault,[-1,0],[100,0])}];if(IS_ANDROID){return{marginTop:animatedSheetPositionOrDefault,transform:transform};}return{top:animatedSheetPositionOrDefault,transform:transform};}" };
-let result = set.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx");
+let result = obj132.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx");
 
 export default function MediaKeyboardAccessoriesContainer(children) {
   const animatedIndex = children.animatedIndex;
   const animatedPosition = children.animatedPosition;
   const animateOnMount = children.animateOnMount;
   const initialPosition = children.initialPosition;
-  closure_4 = undefined;
-  closure_5 = undefined;
-  let sharedValue;
   let tmp = callback();
   closure_4 = tmp;
   let items = [tmp];
@@ -36,7 +32,7 @@ export default function MediaKeyboardAccessoriesContainer(children) {
   }, items);
   closure_5 = initialPosition.useRef(false);
   let obj = animatedIndex(animateOnMount[6]);
-  sharedValue = obj.useSharedValue(false);
+  const sharedValue = obj.useSharedValue(false);
   const items1 = [sharedValue];
   const onLayout = initialPosition.useCallback(() => {
     if (!ref.current) {

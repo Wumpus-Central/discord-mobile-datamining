@@ -1,7 +1,7 @@
 // === Module 5429: AGE_VERIFICATION_INCODE_PATH ===
 
 // Module 5429 (AGE_VERIFICATION_INCODE_PATH)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
 let c1 = "Verification.Result";
@@ -9,7 +9,7 @@ let c2 = "Verification.CaptureComplete";
 let c3 = "Verification.FallbackRequest";
 let c4 = "__DISCORD_APPLY_INCODE_FALLBACK_SESSION__";
 let obj = { COMPLETED: "completed", CANCELLED: "cancelled", ERROR: "error" };
-const result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationIncodeWebViewConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/age_assurance/AgeVerificationIncodeWebViewConstants.tsx");
 
 export const AGE_VERIFICATION_INCODE_PATH = "/age-verification/incode";
 export const AGE_VERIFICATION_INCODE_PARAMS_KEY = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
@@ -127,6 +127,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
           obj = { kind: "result", status: null };
           obj[1] = status;
           tmp8 = obj;
+          tmp7 = obj;
         }
       }
     }

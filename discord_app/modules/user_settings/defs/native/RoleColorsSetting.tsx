@@ -4,11 +4,11 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import setFontSize from "setFontSize" /* 13813 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import createToggle from "createToggle" /* 10669 */;
+import noop from "noop" /* 19 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import "createToggle";
 
-require = arg1;
+require = fn;
 function useRoleColorSettingValue() {
   const items = [closure_3];
   return initialize.useStateFromStores(items, () => roleStyle.roleStyle);
@@ -33,7 +33,7 @@ function useRoleColorSettingOptions() {
     return items;
   }, []);
 }
-createToggle = {
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.uSOPWm);
@@ -44,7 +44,7 @@ createToggle = {
   useOptions: useRoleColorSettingOptions
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");
 
 export default createToggle;
 export { useRoleColorSettingValue };

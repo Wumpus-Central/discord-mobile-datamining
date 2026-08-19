@@ -9,26 +9,23 @@ import notSupportedDefault from "notSupported" /* 7935 */;
 import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 7936 */;
 import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
 import registerAssetDefault from "registerAsset" /* 15798 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "addSubscriptionPlan" /* 4044 */;
+import addSubscriptionPlan from "addSubscriptionPlan" /* 4044 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ TouchableOpacity: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { toggleTruncateButton: null, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
-createCacheKey = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: ThemesDefault.colors.TEXT_DEFAULT, marginTop: 2 };
+const createCacheKey = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: ThemesDefault.colors.TEXT_DEFAULT, marginTop: 2 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[2] = { flexGrow: 1, flexShrink: 1 };
-let obj1 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[3] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/Elements.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/Elements.tsx");
 
 export const TruncatedText = function TruncatedText(lineClamp) {
   let num = lineClamp.lineClamp;
@@ -37,13 +34,11 @@ export const TruncatedText = function TruncatedText(lineClamp) {
   }
   const merged = Object.assign(lineClamp, Object.create(null));
   c1 = undefined;
-  let first;
-  dependencyMap = undefined;
   let callback;
   const tmp2 = callback4();
   [tmp4, c1] = callback(React.useState(false), 2);
   const tmp5 = callback(React.useState(false), 2);
-  first = tmp5[0];
+  const first = tmp5[0];
   dependencyMap = tmp5[1];
   callback = React.useRef(false);
   if (!first) {
@@ -75,9 +70,9 @@ export const TruncatedText = function TruncatedText(lineClamp) {
         callback(nativeEvent.nativeEvent.lines.length > num);
       }
     };
-    const items = [closure_9(num(4734).Text, obj), first];
+    const items = [callback(num(4734).Text, obj), first];
     obj[3] = items;
-    return closure_10(closure_6, obj);
+    return callback2(closure_6, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp2.toggleTruncateButton;
@@ -91,17 +86,16 @@ export const TruncatedText = function TruncatedText(lineClamp) {
     }
     obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
     obj1[2] = stringResult;
-    t = tmp7(num(4734).Text, obj1);
+    t = callback(num(4734).Text, obj1);
     obj[1] = t;
-    closure_9(closure_7, obj);
-    const tmp8 = closure_7;
+    callback(closure_7, obj);
   }
+  const tmp3 = callback(React.useState(false), 2);
 };
 export const ArrowButton = function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = callback4();
-  let obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  obj = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
+  let obj = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
   const items = [callback2(Text.Text, obj), ];
   obj = { size: Button.Icon.Sizes.SMALL, source: registerAssetDefault, style: tmp.arrowButtonIcon };
   items[1] = callback2(Button.Icon, obj);
@@ -111,7 +105,6 @@ export const ArrowButton = function ArrowButton(arg0) {
 export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPlan(listingId) {
   const obj = notSupportedDefault;
   const _require = callback(getRoleEmojisAll.useSubscriptionPlan(listingId), 1)[0];
-  const obj2 = getRoleEmojisAll;
   const tmp2 = _require;
   const items = [closure_8];
   const stateFromStores = _require(647).useStateFromStores(items, () => closure_1_8.get(id.id));

@@ -4,17 +4,20 @@
 import noopAll from "noop" /* 19 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import receivedNotification from "receivedNotification" /* 10812 */;
 import closeActionSheetDefault from "closeActionSheet" /* 10832 */;
 import { NotificationUserFeedbackReasons as closure_3 } from "NotificationUserFeedbackReasons" /* 10809 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function trackOpen() {
   expandEventPropertiesDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Notification Feedback Sheet", source: "Notification End" });
 }
 noopAll;
-const result = require("set").fileFinishedImporting("modules/notifications/native/NotificationSurveyActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/native/NotificationSurveyActionSheet.tsx");
 
 export default function NotificationSurveyActionSheet(arg0) {
   ({ notificationType: require, location: importDefault, messageId: dependencyMap } = arg0);
@@ -52,17 +55,14 @@ export default function NotificationSurveyActionSheet(arg0) {
       obj[2] = closure_0;
       obj[3] = closure_1;
       obj[4] = closure_2;
-      closure_1_1(closure_1_2[5]).track(closure_1_4.NOTIFICATION_REPORT_SUBMITTED, obj);
-      const obj5 = closure_1_1(closure_1_2[5]);
-      const tmp10 = closure_1_1;
-      closure_1_0(closure_1_2[7]).handleSurveyCleanup();
-      const obj2 = closure_1_0(closure_1_2[7]);
+      expandEventPropertiesDefault.track(AnalyticEvents.NOTIFICATION_REPORT_SUBMITTED, obj);
+      receivedNotification.handleSurveyCleanup();
       obj = { header: null };
-      const tmp10Result = tmp10(closure_1_2[8]);
-      const intl = closure_1_0(tmp11[4]).intl;
-      obj[0] = intl.string(closure_1_0(closure_1_2[4]).t.wGioO1);
-      tmp10Result.openLazy(closure_1_0(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), "UserFeedbackSurvey", obj);
-      const tmp8 = closure_1_0(closure_1_2[10])(closure_1_2[9], closure_1_2.paths);
+      const tmp10Result = ACTION_SHEET_HEIGHT_HALFDefault;
+      const intl = getSystemLocale.intl;
+      obj[0] = intl.string(getSystemLocale.t.wGioO1);
+      tmp10Result.openLazy(asyncRequireImpl(dependencyMap[9], dependencyMap.paths), "UserFeedbackSurvey", obj);
+      const tmp8 = asyncRequireImpl(dependencyMap[9], dependencyMap.paths);
     }
   };
   return jsx(closeActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, trackOpen: null, trackReport: null });

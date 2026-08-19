@@ -1,12 +1,12 @@
 // === Module 9268: usePreviewCollectibleProduct ===
 
 // Module 9268 (usePreviewCollectibleProduct)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "fromServer" /* 5306 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
 
 export const usePreviewCollectibleProduct = function usePreviewCollectibleProduct(product, arg1, arg2) {
   const _require = product;
@@ -36,17 +36,17 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
         obj.profileFrame = firstProfileFrame;
       }
       if (null != callback) {
-        if (firstAvatarDecoration(tmp11)) {
-          obj.avatarDecoration = tmp11;
+        if (firstAvatarDecoration(callback)) {
+          obj.avatarDecoration = callback;
         } else {
-          if (firstProfileFrame(tmp11)) {
-            obj.profileEffect = tmp11;
-          } else if (!firstNameplate(tmp11)) {
-            if (closure_1_7(tmp11)) {
-              obj.profileFrame = tmp11;
+          if (firstProfileFrame(callback)) {
+            obj.profileEffect = callback;
+          } else if (!firstNameplate(callback)) {
+            if (isProfileFrameRecord(callback)) {
+              obj.profileFrame = callback;
             }
           }
-          obj.nameplate = tmp11;
+          obj.nameplate = callback;
         }
       }
       obj = obj(setPendingChangesResult[8]);
@@ -68,7 +68,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
         obj2[0] = first;
         obj(setPendingChangesResult[8]).setPendingChanges(obj2);
         const objResult1 = obj(setPendingChangesResult[8]);
-      } else if (closure_1_7(first)) {
+      } else if (isProfileFrameRecord(first)) {
         const obj3 = { profileFrame: null };
         obj3[0] = first;
         obj(setPendingChangesResult[8]).setPendingChanges(obj3);

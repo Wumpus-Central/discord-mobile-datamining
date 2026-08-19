@@ -8,6 +8,6 @@ import importAllResult from "noop" /* 19 */;
 const memoResult = importAllResult.memo(function ChannelSafeAreaNoop() {
   return <View />;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomNoop.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomNoop.tsx");
 
 export default memoResult;

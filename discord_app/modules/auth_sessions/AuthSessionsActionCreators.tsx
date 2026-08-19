@@ -2,15 +2,14 @@
 
 // Module 14306 (_fetchAuthSessions)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _fetchAuthSessions() {
   const self = this;
   const tmp = callback(function*() {
     const callback = tmp2;
-    closure_0 = tmp5;
     const HTTP = closure_1_0(530).HTTP;
     obj1 = { url: null, rejectWithError: false };
     obj1[0] = closure_1_4.AUTH_SESSIONS;
@@ -130,7 +129,7 @@ function _logOutSessions() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth_sessions/AuthSessionsActionCreators.tsx");
 
 export const fetchAuthSessions = function fetchAuthSessions() {
   const self = this;

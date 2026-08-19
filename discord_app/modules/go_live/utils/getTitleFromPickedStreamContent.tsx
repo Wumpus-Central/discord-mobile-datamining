@@ -1,19 +1,19 @@
 // === Module 4654: getTitleFromPickedStreamContent ===
 
 // Module 4654 (getTitleFromPickedStreamContent)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = set.fileFinishedImporting("modules/go_live/utils/getTitleFromPickedStreamContent.tsx");
+const result = obj132.fileFinishedImporting("modules/go_live/utils/getTitleFromPickedStreamContent.tsx");
 
 export default function getTitleFromPickedStreamContent(windows) {
   if (windows.windows.length > 0) {
     windows = windows.windows;
-    const mapped = windows.map((title) => title.title);
+    const mapped = windows.map((item, index) => item.title);
     let joined = mapped.join(", ");
   } else if (windows.applications.length > 0) {
     const applications = windows.applications;
-    const mapped1 = applications.map((name) => name.name);
+    const mapped1 = applications.map((item, index) => item.name);
     joined = mapped1.join(", ");
   } else {
     joined = null;

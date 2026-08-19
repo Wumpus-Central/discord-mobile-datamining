@@ -1,11 +1,11 @@
 // === Module 9102: useInAppBrowserReturn ===
 
 // Module 9102 (useInAppBrowserReturn)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getSimilarGames" /* 9098 */;
+import noop from "noop" /* 19 */;
+import getSimilarGames from "getSimilarGames" /* 9098 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/game_profile/native/hooks/useInAppBrowserReturn.tsx");
 
 export default function useInAppBrowserReturn(gameId) {
   gameId = gameId.gameId;
@@ -15,12 +15,12 @@ export default function useInAppBrowserReturn(gameId) {
     if (null != c0) {
       if (obj.isIOS()) {
         c0 = false;
-        closure_1 = tmp(tmp2[3]).subscribeToIsInAppBrowserOpen((arg0, arg1) => {
+        closure_1 = gameId(dependencyMap[3]).subscribeToIsInAppBrowserOpen((arg0, arg1) => {
           if (!arg1) {
             if (arg0) {
               c0 = true;
-              let obj = scrollOffsetRef(closure_2_2[4]);
-              obj = { gameId: null, initialScrollOffset: null };
+              scrollOffsetRef(dependencyMap[4]);
+              let obj = { gameId: null, initialScrollOffset: null };
               obj[0] = c0;
               obj[1] = ref.current;
               const result = obj.setGameProfilePendingReturn(obj);
@@ -34,10 +34,10 @@ export default function useInAppBrowserReturn(gameId) {
               if (null != pendingReturn) {
                 obj = { gameId: null, source: null, initialScrollOffset: null };
                 obj[0] = pendingReturn.gameId;
-                obj[1] = gameId(closure_2_2[5]).GameProfileSources.InAppBrowserReturn;
+                obj[1] = gameId(dependencyMap[5]).GameProfileSources.InAppBrowserReturn;
                 obj[2] = pendingReturn.initialScrollOffset;
-                scrollOffsetRef(closure_2_2[4]).returnToGameProfile(obj);
-                const obj3 = scrollOffsetRef(closure_2_2[4]);
+                scrollOffsetRef(dependencyMap[4]).returnToGameProfile(obj);
+                const obj3 = scrollOffsetRef(dependencyMap[4]);
               }
             }
           }
@@ -48,9 +48,7 @@ export default function useInAppBrowserReturn(gameId) {
           }
         };
       }
-      obj = gameId(closure_1_2[2]);
-      tmp = gameId;
-      tmp2 = closure_1_2;
+      obj = gameId(dependencyMap[2]);
     }
   }, items);
 };

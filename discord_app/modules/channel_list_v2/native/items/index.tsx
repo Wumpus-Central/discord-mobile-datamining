@@ -1,12 +1,12 @@
 // === Module 15368: CategoryChannel ===
 
 // Module 15368 (CategoryChannel)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import renderCategoryItem from "renderCategoryItem" /* 15369 */;
 import ThreadChannelDefault from "ThreadChannel" /* 15375 */;
 import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary" /* 15393 */;
 
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
+const result = obj132.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
 
 export const CategoryChannel = renderCategoryItem.CategoryChannel;
 export const SuggestedCategory = renderCategoryItem.SuggestedCategory;

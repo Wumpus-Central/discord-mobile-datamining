@@ -1,10 +1,10 @@
 // === Module 10035: isInMentionRaidExperiment ===
 
 // Module 10035 (isInMentionRaidExperiment)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import experiment from "experiment" /* 10036 */;
 
-const result = set.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
 
 export const isInMentionRaidExperiment = function isInMentionRaidExperiment(guildId) {
   const AutomodMentionRaidLimit = experiment.AutomodMentionRaidLimit;

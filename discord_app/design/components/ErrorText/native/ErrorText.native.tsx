@@ -1,12 +1,12 @@
 // === Module 8073: ErrorText ===
 
 // Module 8073 (ErrorText)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/ErrorText/native/ErrorText.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/ErrorText/native/ErrorText.native.tsx");
 
 export const ErrorText = function ErrorText(children) {
   children = children.children;
@@ -17,11 +17,11 @@ export const ErrorText = function ErrorText(children) {
   const effect = React.useEffect(() => {
     let tmp2 = null != nodeText;
     if (tmp2) {
-      tmp2 = "" !== tmp;
+      tmp2 = "" !== nodeText;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = nodeText(closure_1_1[3]).AccessibilityAnnouncer;
-      AccessibilityAnnouncer.announce(tmp);
+      const AccessibilityAnnouncer = nodeText(dependencyMap[3]).AccessibilityAnnouncer;
+      AccessibilityAnnouncer.announce(nodeText);
     }
   }, items);
   obj = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };

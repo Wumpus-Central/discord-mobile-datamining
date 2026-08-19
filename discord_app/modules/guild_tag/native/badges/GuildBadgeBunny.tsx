@@ -3,15 +3,15 @@
 // Module 13399 (items)
 import inlineStyles from "inlineStyles" /* 6571 */;
 import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13377 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = ["#847D8B", "#D1CDD5"];
 let closure_6 = [0.2, 0.65];
 let items = [{ base: 4, tint: 1 }, { base: 3, tint: 1 }];
-const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeBunny.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeBunny.tsx");
 
 export const GuildBadgeBunny = function GuildBadgeBunny(primaryTintColor) {
   let num = primaryTintColor.width;
@@ -24,8 +24,7 @@ export const GuildBadgeBunny = function GuildBadgeBunny(primaryTintColor) {
   }
   const merged = Object.assign(primaryTintColor, Object.create(null));
   const memo = React.useMemo(() => "badge-bunny-clip-" + callback(table[2]).v4(), []);
-  let obj = getTransformedBadgeColors;
-  obj = { primaryBaseColors: closure_5, primaryTintColor: primaryTintColor.primaryTintColor, primaryTintLuminances: closure_6, primaryLuminanceWeights: items };
+  let obj = { primaryBaseColors: closure_5, primaryTintColor: primaryTintColor.primaryTintColor, primaryTintLuminances: closure_6, primaryLuminanceWeights: items };
   const primaryColorsTransformed = obj.getTransformedBadgeColors(obj).primaryColorsTransformed;
   obj = {};
   const merged1 = Object.assign(merged);

@@ -2,23 +2,23 @@
 
 // Module 15243 (AccountDisabledOrDeletionScheduled)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import { LoginStates } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   const space = ThemesDefault.space;
   if (arg0) {
     let PX_16 = space.PX_8;
-    let tmp4 = tmp;
+    let tmp4 = importDefault;
   } else {
     PX_16 = space.PX_16;
-    tmp4 = tmp;
+    tmp4 = importDefault;
   }
   const container = { display: "flex", height: "100%", flex: 1, paddingBottom: PX_16, paddingHorizontal: null, backgroundColor: null, justifyContent: null };
   let num = 0;
@@ -38,30 +38,28 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   container[6] = str2;
   return { container, image: { marginBottom: 32, alignSelf: "center" }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 24, textAlign: "center" } };
 });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx");
 
 export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   handleLogin = handleLogin.handleLogin;
   const onReset = handleLogin.onReset;
   let navigation;
-  let stateFromStores;
-  closure_4 = undefined;
   let obj = handleLogin(navigation[7]);
   navigation = obj.useNavigation();
   obj1 = handleLogin(navigation[8]);
   const items = [closure_5];
-  stateFromStores = obj1.useStateFromStores(items, () => loginStatus.getLoginStatus());
+  const stateFromStores = obj1.useStateFromStores(items, () => loginStatus.getLoginStatus());
   closure_4 = stateFromStores.useRef(null);
   const items1 = [stateFromStores, navigation];
   const effect = stateFromStores.useEffect(() => {
     if (ref.current !== stateFromStores) {
-      if (null != tmp.current) {
+      if (null != ref.current) {
         if (tmp4) {
           navigation.pop();
         }
-        tmp4 = tmp2 !== closure_1_6.ACCOUNT_SCHEDULED_FOR_DELETION && tmp2 !== closure_1_6.ACCOUNT_DISABLED;
+        tmp4 = stateFromStores !== LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION && stateFromStores !== LoginStates.ACCOUNT_DISABLED;
       } else {
-        tmp.current = tmp2;
+        ref.current = stateFromStores;
       }
     }
   }, items1);
@@ -101,7 +99,6 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   } else {
     string2Result = string2(t2["pCBti+"]);
   }
-  obj = { contentStyle: { flexGrow: 1 }, children: null };
   obj = { style: tmp9.container, children: null };
   obj1 = { children: null };
   const items4 = [callback(handleLogin(navigation[13]).WumpTrash, { style: tmp9.image }), callback(handleLogin(navigation[14]).Text, { style: tmp9.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stringResult }), callback(handleLogin(navigation[14]).Text, { style: tmp9.description, variant: "text-sm/medium", color: "text-default", children: string2Result })];

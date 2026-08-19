@@ -1,23 +1,22 @@
 // === Module 7280: showSimpleLoadingModal ===
 
 // Module 7280 (showSimpleLoadingModal)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
-const result = set.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
+const result = obj132.fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
 
-export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_4, arg1) {
-  const _require = closure_4;
+export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_1_8, arg1) {
+  const _require = closure_1_8;
   importDefault = arg1;
-  let obj = _modDef5260;
-  obj = {};
+  const obj = {};
   const merged = Object.assign(arg1);
   obj.onDismissed = function onDismissed() {
-    lib(closure_1_2[0]).popWithKey(closure_0);
+    lib(dependencyMap[0]).popWithKey(closure_0);
     const onDismissed = lib.onDismissed;
     if (onDismissed != null) {
       onDismissed();
     }
   };
-  obj.pushLazy(_require(2007)(7281, dependencyMap.paths), obj, closure_4, { animation: "none" });
+  obj.pushLazy(_require(2007)(7281, dependencyMap.paths), obj, closure_1_8, { animation: "none" });
 };

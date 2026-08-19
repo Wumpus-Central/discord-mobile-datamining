@@ -2,24 +2,20 @@
 
 // Module 13465 (Tooltip)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { UP: "UP", DOWN: "DOWN" };
-obj = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-obj = { container: { padding: 10, borderRadius: ThemesDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND }, label: null, title: null, arrow: null };
-createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, fontSize: 12, color: ThemesDefault.colors.WHITE };
+let obj = { container: { padding: 10, borderRadius: ThemesDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND }, label: null, title: null, arrow: null };
+const createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, fontSize: 12, color: ThemesDefault.colors.WHITE };
 obj[1] = createCacheKey;
 obj[2] = { marginBottom: 4 };
-let obj1 = { padding: 10, borderRadius: ThemesDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 obj[3] = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj3 = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND };
-const result = require("set").fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
 
 export default function Tooltip(arrowHeight) {
   ({ arrowStyle, label, title, arrowWidth } = arrowHeight);
@@ -50,21 +46,20 @@ export default function Tooltip(arrowHeight) {
       obj = { alignSelf: "flex-start", left: null };
       obj[1] = num2;
       return obj;
-    } else if (tmp2.CENTER === tmp) {
+    } else if (closure_1_7.CENTER === LEFT) {
       return { alignSelf: "center" };
-    } else if (tmp2.RIGHT === tmp) {
+    } else if (closure_1_7.RIGHT === LEFT) {
       obj = { alignSelf: "flex-end", right: null };
       obj[1] = num2;
       return obj;
     } else {
       obj = num2(LEFT[6]);
-      obj.assertNever(tmp);
+      obj.assertNever(LEFT);
     }
   }, items);
   obj = { style, children: null };
   let tmp8 = UP === obj.UP;
   if (tmp8) {
-    obj = { style: null };
     const items1 = [tmp3.arrow, , , ];
     obj = { borderLeftWidth: null, borderRightWidth: null, borderBottomWidth: null };
     obj[0] = arrowWidth / 2;
@@ -74,7 +69,7 @@ export default function Tooltip(arrowHeight) {
     items1[2] = memo;
     items1[3] = arrowStyle;
     obj[0] = items1;
-    tmp8 = callback(tmp6, obj);
+    tmp8 = callback(View, obj);
   }
   const items2 = [tmp8, , ];
   obj1 = { onLayout: arrowHeight.onLayout, style: items3, children: null };
@@ -98,7 +93,7 @@ export default function Tooltip(arrowHeight) {
   items4[1] = tmp14;
   items4[2] = children;
   obj1[2] = items4;
-  items2[1] = closure_5(View, obj1);
+  items2[1] = callback(View, obj1);
   let tmp18 = UP === obj.DOWN;
   if (tmp18) {
     const obj4 = { style: null };
@@ -111,11 +106,11 @@ export default function Tooltip(arrowHeight) {
     items6[2] = memo;
     items6[3] = arrowStyle;
     obj4[0] = items6;
-    tmp18 = callback(tmp6, obj4);
+    tmp18 = callback(View, obj4);
   }
   items2[2] = tmp18;
   obj[1] = items2;
-  return closure_5(View, obj);
+  return callback(View, obj);
 };
 export const TooltipArrowDirections = obj;
 export const TooltipArrowPositions = obj;

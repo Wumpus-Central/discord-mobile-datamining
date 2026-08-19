@@ -5,14 +5,14 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9708 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function UserListItem(userId) {
   userId = userId.userId;
   const onPress = userId.onPress;
@@ -42,7 +42,7 @@ function UserListItem(userId) {
     obj = { user: null, guildId: "Array", size: null };
     obj[0] = stateFromStores;
     obj[2] = tmp(tmp2[14]).AvatarSizes.REFRESH_MEDIUM_32;
-    tmp8Result = tmp8(tmp(tmp2[14]).Avatar, obj);
+    tmp8Result = callback(tmp(tmp2[14]).Avatar, obj);
   }
   obj = { icon: tmp8Result, subLabel: null, label: null, start: null, end: null, onPress: null, onLongPress: null, trailing: null };
   const intl = tmp(tmp2[15]).intl;
@@ -53,8 +53,8 @@ function UserListItem(userId) {
   obj[4] = end;
   obj[5] = callback;
   obj[6] = callback1;
-  obj[7] = closure_7(userId(analyticsLocations[16]).TableRowArrow, {});
-  return closure_7(userId(analyticsLocations[13]).TableRow, obj);
+  obj[7] = callback(userId(analyticsLocations[16]).TableRowArrow, {});
+  return callback(userId(analyticsLocations[13]).TableRow, obj);
 }
 function renderItem(item) {
   item = item.item;
@@ -77,7 +77,7 @@ function SettingsSecureFramesFooter() {
   navigation = obj1.useNavigation();
   const items = [navigation];
   callback = React.useCallback((userId) => {
-    navigation.navigate(closure_1_6.SECURE_FRAMES_VERIFIED_DEVICES, { userId });
+    navigation.navigate(UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES, { userId });
   }, items);
   let obj2 = navigation(secureFramesVerifiedUserIds[19]);
   secureFramesVerifiedUserIds = obj2.useSecureFramesVerifiedUserIds();
@@ -114,22 +114,17 @@ function SettingsSecureFramesFooter() {
   return tmp8;
 }
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, header: null, list: null };
-createCacheKey = { flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+const createCacheKey = { flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_8 };
-let obj1 = { marginTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { flexGrow: 1, gap: ThemesDefault.space.PX_8 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { USER: "USER" };
-let obj2 = { flexGrow: 1, gap: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx");
 
 export default function SettingsSecureFramesScreen() {
   const tmp = callback3();
-  let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.header, children: null };
-  obj = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+  const obj = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["9Q/PQv"]);
   const items = [callback(Text.Text, obj), ];

@@ -3,26 +3,24 @@
 // Module 8862
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 let c4 = importAllResult;
 ({ View: c5, ScrollView: closure_6, StyleSheet: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles(() => {
-  let obj = { placeholder: null, iconContainer: null, iconLeft: null, scrollViewContent: null, horizontalScrollViewContent: null, inputInner: null, horizontalInputInner: null, searchInput: null, horizontalSearchInput: null };
-  obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+  let obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
   obj[0] = obj;
   obj = { paddingHorizontal: ThemesDefault.space.PX_12 };
   obj[1] = obj;
   obj[2] = { marginLeft: ThemesDefault.space.PX_12 };
   obj[3] = { paddingVertical: 5 };
   obj[4] = { flexGrow: 1 };
-  obj1 = { marginLeft: ThemesDefault.space.PX_12 };
   obj[5] = { marginHorizontal: ThemesDefault.space.PX_4, alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
   obj[6] = { flexWrap: "nowrap" };
   const obj3 = { flex: 1, minHeight: ThemesDefault.space.PX_24, minWidth: ThemesDefault.space.PX_48, color: ThemesDefault.colors.TEXT_DEFAULT };
@@ -30,7 +28,6 @@ let closure_10 = createCacheKey.createStyles(() => {
   obj3.paddingVertical = 0;
   obj3.marginVertical = 2;
   obj[7] = obj3;
-  const obj2 = { marginHorizontal: ThemesDefault.space.PX_4, alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
   obj[8] = { minWidth: ThemesDefault.space.PX_64 };
   return obj;
 });
@@ -38,8 +35,7 @@ let closure_11 = { x: 0, y: 0.5 };
 let closure_12 = { x: 1, y: 0.5 };
 let closure_13 = ["transparent", "black"];
 let closure_14 = createCacheKey.createStyles(() => {
-  let obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
-  obj = {};
+  let obj = {};
   const merged = Object.assign(closure_7.absoluteFillObject);
   obj.flexDirection = "row";
   obj[1] = obj;
@@ -81,35 +77,24 @@ const memoResult = importAllResult.memo(function TagListInput(accessibilityHint)
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let animatedStyle;
-  let ref1;
-  let callback;
-  closure_7 = undefined;
   c8 = undefined;
   c9 = undefined;
-  callback = undefined;
-  let ref3;
+  let callback;
   c12 = undefined;
   c13 = undefined;
   let callback2;
-  closure_15 = undefined;
-  let ref4;
   c17 = undefined;
   let tmp = callback();
   let obj = onScroll(flag2[13]);
   const bound = Math.min(2, obj.useFontScale());
   onScroll = onChangeText;
-  importDefault = undefined;
   flag2 = undefined;
-  sharedValue = undefined;
-  animatedStyle = undefined;
-  ref1 = undefined;
-  callback = undefined;
+  let animatedStyle;
   obj1 = animatedStyle;
   let result = onScroll(flag2[14]).InputHeights.MD * bound;
   const ref = animatedStyle.useRef(null);
   importDefault = ref;
-  ref1 = animatedStyle.useRef("");
+  let ref1 = animatedStyle.useRef("");
   flag2 = ref1;
   const ref2 = animatedStyle.useRef(false);
   sharedValue = ref2;
@@ -221,16 +206,16 @@ const memoResult = importAllResult.memo(function TagListInput(accessibilityHint)
   const focus = obj4.useFocus();
   ({ focusProps: c8, isFocused } = focus);
   ({ onFocus: c9, onBlur: c10 } = importDefault(flag2[17])({ onFocus, onBlur }));
-  ref3 = animatedStyle.useRef(null);
+  const ref3 = animatedStyle.useRef(null);
   const tmp18 = importDefault;
   const tmp19 = importDefault(flag2[17])({ onFocus, onBlur });
-  let tmp9 = sharedValue;
+  const tmp9 = sharedValue;
   [c12, c13] = sharedValue(animatedStyle.useState(null), 2);
   const tmp21 = sharedValue(animatedStyle.useState(null), 2);
   [tmp23, c14] = sharedValue(animatedStyle.useState(false), 2);
   const tmp24 = importDefault(flag2[18])(tags);
   closure_15 = tmp24;
-  ref4 = animatedStyle.useRef(tags);
+  const ref4 = animatedStyle.useRef(tags);
   let items2 = [focusOnAdd, callback, ref4, tags, ref, ref1, autoClearInputOnTagAdd];
   const layoutEffect = animatedStyle.useLayoutEffect(() => {
     if (ref4.current.length < onScroll.length) {
@@ -415,36 +400,35 @@ const memoResult = importAllResult.memo(function TagListInput(accessibilityHint)
   obj3 = { style: items8, children: null };
   items8[1] = horizontalInputInner;
   const items9 = [
-    tags.map((id) => {
-      onScroll = id;
-      closure_1 = arg1;
+    tags.map((item, index) => {
+      onScroll = item;
+      closure_1 = index;
       return _undefined(onScroll(flag2[23]).TagListInputTagComponent, {
-        tag: id,
-        selected: id.id === c12,
+        tag: item,
+        selected: item.id === c12,
         onPress(arg0) {
           if ("select" === arg0) {
-            if (closure_1_12 !== id.id) {
+            if (closure_1_12 !== item.id) {
               closure_1_13(tmp5.id);
             }
-            const current = closure_1_4.current;
+            const current = animatedStyle.current;
             if (current != null) {
               current.focus();
             }
             closure_1_14(true);
-            const current2 = closure_1_4.current;
+            const current2 = animatedStyle.current;
             if (current2 != null) {
               current2.setSelection(0, 0);
             }
             closure_1_7.current = { start: 0, end: 0 };
-            const tmp9 = closure_1_4;
-          } else if (closure_1_2 != null) {
+          } else if (flag2 != null) {
             const tmpResult = tmp(closure_1);
           }
           return tmpResult;
         },
-        start: 0 === arg1,
-        end: arg1 === onScroll.length - 1
-      }, arg1);
+        start: 0 === index,
+        end: index === onScroll.length - 1
+      }, index);
     }),
 
   ];
@@ -474,11 +458,11 @@ const memoResult = importAllResult.memo(function TagListInput(accessibilityHint)
     _undefined4(false);
     let tmp4 = 0 === ref.current.start;
     if (tmp4) {
-      tmp4 = 0 === tmp3.current.end;
+      tmp4 = 0 === ref.current.end;
     }
     if ("Backspace" === nativeEvent.nativeEvent.key) {
       if (null != c12) {
-        const findIndexResult = onScroll.findIndex((id) => id.id === closure_12);
+        const findIndexResult = onScroll.findIndex((item, index) => item.id === closure_12);
         if (findIndexResult > -1) {
           if (flag2 != null) {
             flag2(findIndexResult);
@@ -490,12 +474,12 @@ const memoResult = importAllResult.memo(function TagListInput(accessibilityHint)
     if ("Backspace" === nativeEvent.nativeEvent.key) {
       if (tmp4) {
         if (0 !== onScroll.length) {
-          _undefined3(arr[arr.length - 1].id);
+          _undefined3(onScroll[onScroll.length - 1].id);
           _undefined4(true);
           const AccessibilityAnnouncer = onScroll(flag2[24]).AccessibilityAnnouncer;
           const intl = onScroll(flag2[22]).intl;
           const obj = { text: null };
-          obj[0] = arr[arr.length - 1].text;
+          obj[0] = onScroll[onScroll.length - 1].text;
           AccessibilityAnnouncer.announce(intl.formatToPlainString(onScroll(flag2[22]).t.QymItZ, obj));
         }
       }
@@ -503,9 +487,9 @@ const memoResult = importAllResult.memo(function TagListInput(accessibilityHint)
     if (null != c12) {
       _undefined3(null);
     } else {
-      let tmp8 = null != tmp3.current && tmp3.current.start === tmp3.current.end;
+      let tmp8 = null != ref.current && ref.current.start === ref.current.end;
       if (tmp8) {
-        tmp8 = tmp3.current.start === ref1.current.length;
+        tmp8 = ref.current.start === ref1.current.length;
       }
       if (tmp8) {
         const _setTimeout = setTimeout;
@@ -583,6 +567,6 @@ const memoResult = importAllResult.memo(function TagListInput(accessibilityHint)
   obj6[1] = c9(onScroll(flag2[25]).InputFieldContainer, obj7);
   return c8(ref1, obj6);
 });
-let result = require("set").fileFinishedImporting("design/components/TagListInput/native/TagListInput.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/TagListInput/native/TagListInput.native.tsx");
 
 export default memoResult;

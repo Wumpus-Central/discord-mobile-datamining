@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 6837 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/GroupIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/GroupIcon.tsx");
 
 export const GroupIcon = function GroupIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

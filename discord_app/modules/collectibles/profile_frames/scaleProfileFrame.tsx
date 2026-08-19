@@ -1,9 +1,9 @@
 // === Module 8967: scaleProfileFrame ===
 
 // Module 8967 (scaleProfileFrame)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/collectibles/profile_frames/scaleProfileFrame.tsx");
+let result = obj132.fileFinishedImporting("modules/collectibles/profile_frames/scaleProfileFrame.tsx");
 
 export default function scaleProfileFrame(innerWidth) {
   const result = arg1 / innerWidth.innerWidth;

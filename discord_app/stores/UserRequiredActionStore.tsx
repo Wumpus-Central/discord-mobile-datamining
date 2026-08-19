@@ -20,6 +20,6 @@ prototype["getAction"] = function getAction() {
 };
 UserRequiredActionStore.displayName = "UserRequiredActionStore";
 const userRequiredActionStore = new UserRequiredActionStore(dispatcherDefault, { CONNECTION_OPEN: handleRequiredAction, USER_REQUIRED_ACTION_UPDATE: handleRequiredAction });
-const result = require("set").fileFinishedImporting("stores/UserRequiredActionStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/UserRequiredActionStore.tsx");
 
 export default userRequiredActionStore;

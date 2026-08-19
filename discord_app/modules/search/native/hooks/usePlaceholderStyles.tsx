@@ -2,12 +2,12 @@
 
 // Module 15870 (useFullscreenPlaceholderCount)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes" /* 8507 */;
 
-const require = arg1;
+const require = fn;
 let closure_5 = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
-const result = require("set").fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
 
 export const useFullscreenPlaceholderCount = function useFullscreenPlaceholderCount(arg0) {
   ({ placeholderHeight, numColumns } = arg0);

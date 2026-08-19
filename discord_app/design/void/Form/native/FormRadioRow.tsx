@@ -4,12 +4,13 @@
 import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
 import _modDef6937 from "module_6937" /* 6937 */;
 import context2 from "context" /* 6939 */;
+import FormRadioDefault from "FormRadio" /* 6943 */;
 import TableRadioRow from "TableRadioRow" /* 8100 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormRadioRow.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormRadioRow.tsx");
 
 export default function FormRadioRow(arg0) {
   ({ selected, align } = arg0);
@@ -29,7 +30,7 @@ export default function FormRadioRow(arg0) {
     obj[2] = selected;
     obj[3] = onPress;
     const merged1 = Object.assign(merged);
-    let tmp8Result = tmp8(TableRadioRow.TableRadioRow, obj);
+    let tmp8Result = jsx(TableRadioRow.TableRadioRow, { icon: null, value: null, legacyCompat_selected: null, legacyCompat_onPress: null });
   } else {
     obj = {};
     const merged2 = Object.assign(merged);
@@ -41,18 +42,17 @@ export default function FormRadioRow(arg0) {
     if ("right" === align) {
       obj1 = { selected: null };
       obj1[0] = selected;
-      tmp8Result = tmp8(tmp9(6943), obj1);
+      tmp8Result = jsx(FormRadioDefault, { selected: null });
     }
     obj.trailing = tmp8Result;
     let tmp8Result1 = leading;
     if ("left" === align) {
       const obj2 = { selected: null };
       obj2[0] = selected;
-      tmp8Result1 = tmp8(tmp9(6943), obj2);
+      tmp8Result1 = jsx(FormRadioDefault, { selected: null });
     }
     obj.leading = tmp8Result1;
-    tmp8Result = tmp8(_modDef6937, obj);
-    const tmp10 = _modDef6937;
+    tmp8Result = jsx(_modDef6937, {});
   }
   return tmp8Result;
 };

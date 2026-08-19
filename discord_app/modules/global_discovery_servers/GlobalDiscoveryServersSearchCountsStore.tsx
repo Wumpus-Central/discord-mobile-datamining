@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
 
-require = arg1;
+require = fn;
 const map = new Map();
 class SearchCountState {
 }
@@ -59,56 +59,49 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function handleGlobalDiscoveryServersSearchCountStart(query) {
     query = query.query;
-    let obj = map;
-    obj = map.get(query);
+    let obj = map.get(query);
     if (obj == null) {
       if (typeof SearchCountState !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);
-      const tmp = SearchCountState;
     }
     const result = obj.set(query, obj);
     const result1 = obj.handleSearchCountStart();
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function handleGlobalDiscoveryServersSearchCountSuccess(query) {
     query = query.query;
-    let obj = map;
-    obj = map.get(query);
+    let obj = map.get(query);
     if (obj == null) {
       if (typeof SearchCountState !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);
-      const tmp = SearchCountState;
     }
     const result = obj.set(query, obj);
     const result1 = obj.handleSearchCountSuccess(query.categoryCounts);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function handleGlobalDiscoveryServersSearchCountFailure(query) {
     query = query.query;
-    let obj = map;
-    obj = map.get(query);
+    let obj = map.get(query);
     if (obj == null) {
       if (typeof SearchCountState !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);
-      const tmp = SearchCountState;
     }
     const result = obj.set(query, obj);
     const result1 = obj.handleSearchCountFailure(query.error);
   },
   GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function handleGlobalDiscoveryServersSearchClear(ignoreQueries) {
-    let set;
-    set = new Set(ignoreQueries.ignoreQueries);
-    const item = map.forEach((arg0, arg1) => {
-      if (!set.has(arg1)) {
-        closure_1_2.delete(arg1);
+    const set = new Set(ignoreQueries.ignoreQueries);
+    const item = map.forEach((item, index) => {
+      if (!set.has(index)) {
+        map.delete(index);
       }
     });
   }
 });
-let result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx");
 
 export default globalDiscoveryServersSearchCountStore;

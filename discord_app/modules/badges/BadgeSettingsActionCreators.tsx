@@ -1,10 +1,10 @@
 // === Module 14020: _updateBadgeSettings ===
 
 // Module 14020 (_updateBadgeSettings)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _updateBadgeSettings() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -161,7 +161,7 @@ function _updateBadgeSettings() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/badges/BadgeSettingsActionCreators.tsx");
 
 export const updateBadgeSettings = function updateBadgeSettings(arg0) {
   const self = this;

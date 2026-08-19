@@ -1,7 +1,7 @@
 // === Module 4082: defaultMeridiem ===
 
 // Module 4082 (defaultMeridiem)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 function defaultMeridiem(arg0, arg1, arg2) {
   if (arg0 < 12) {
@@ -133,7 +133,7 @@ function getLocaleData() {
   obj[9] = week;
   return obj;
 }
-let result = set.fileFinishedImporting("lib/makeDateFormatter.tsx");
+let result = obj132.fileFinishedImporting("lib/makeDateFormatter.tsx");
 
 export default function makeFormatter(str) {
   let flag = arg2;
@@ -198,21 +198,6 @@ export default function makeFormatter(str) {
   const items = [];
   while (replaced.length > 0) {
     let charAtResult = str.charAt(0);
-    let tmp19 = tmp8;
-    let tmp20 = tmp9;
-    let tmp21 = tmp10;
-    let tmp22 = tmp11;
-    let tmp23 = tmp12;
-    let tmp24 = tmp13;
-    let tmp25 = flag2;
-    let tmp26 = flag3;
-    let tmp27 = tmp14;
-    let tmp28 = tmp15;
-    let tmp29 = tmp16;
-    let tmp30 = tmp17;
-    let tmp31 = str;
-    let tmp32 = flag2;
-    let tmp33 = flag3;
   }
   // // eliminated: always false
   // // eliminated: always false

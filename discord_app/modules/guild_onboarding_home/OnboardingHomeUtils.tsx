@@ -3,16 +3,17 @@
 // Module 5283 (useCanSeeOnboardingHome)
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
 import useIsNewMemberDefault from "useIsNewMember" /* 5284 */;
-import closure_3 from "initialize" /* 1982 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 5048 */;
+import isChattableChannel from "isChattableChannel" /* 5285 */;
+import initialize from "initialize" /* 1982 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import handleSettingsLoadSuccess from "handleSettingsLoadSuccess" /* 5048 */;
 import ME from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 
-require = arg1;
+require = fn;
 ({ GuildFeatures: error, ME: closure_8 } = ME);
-let result = require("set").fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
 
 export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id) {
   const _require = guild_id;
@@ -22,8 +23,8 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
   const items1 = [guild_id, tmp];
   return _require(647).useStateFromStores(items, () => {
     if (guild_id !== closure_1_8) {
-      if (!obj3.isFavoritesGuildId(tmp2)) {
-        let has = closure_1_5.getGuild(tmp2);
+      if (!obj3.isFavoritesGuildId(guild_id)) {
+        let has = closure_1_5.getGuild(guild_id);
         let hasItem;
         if (has != null) {
           const features = has.features;
@@ -31,7 +32,7 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
         }
         if (!hasItem) {
           return tmp7;
-        } else if (closure_1_3.isFullServerPreview(tmp2)) {
+        } else if (closure_1_3.isFullServerPreview(guild_id)) {
           const id = has.id;
           let newMemberActions = closure_1_6.getNewMemberActions(id);
           if (newMemberActions == null) {
@@ -50,26 +51,23 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
             const tmp21 = has(closure_1_7.GUILD_ONBOARDING) && !enabled;
           }
           let result = hasItem1;
-          const obj2 = closure_1_6;
         } else {
-          result = tmp23(tmp24[9]).isGuildOnboardingSettingsAvailable(tmp2);
+          result = guild_id(dependencyMap[9]).isGuildOnboardingSettingsAvailable(guild_id);
           if (!result) {
-            result = callback(tmp24[10])(has);
+            result = callback(dependencyMap[10])(has);
           }
           if (result) {
             let tmp11 = callback;
             if (!callback) {
-              const mutableGuildChannelsForGuild = closure_1_4.getMutableGuildChannelsForGuild(tmp2);
+              const mutableGuildChannelsForGuild = closure_1_4.getMutableGuildChannelsForGuild(guild_id);
               let flag = false;
               const keys = Object.keys();
               if (keys !== undefined) {
                 flag = false;
                 while (keys[tmp] !== undefined) {
-                  let tmp25 = tmp16;
                   let obj4 = mutableGuildChannelsForGuild[tmp16];
-                  let tmp26 = closure_1_9;
                   flag = true;
-                  if (obj4.hasFlag(closure_1_9.IS_GUILD_RESOURCE_CHANNEL)) {
+                  if (obj4.hasFlag(ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) {
                     break;
                   }
                 }
@@ -78,11 +76,10 @@ export const useCanSeeOnboardingHome = function useCanSeeOnboardingHome(guild_id
             }
             result = tmp11;
           }
-          const tmp23Result = tmp23(tmp24[9]);
+          const tmp23Result = guild_id(dependencyMap[9]);
         }
       }
-      obj3 = guild_id(closure_1_2[8]);
-      tmp23 = guild_id;
+      obj3 = guild_id(dependencyMap[8]);
     }
     return false;
   }, items1);
@@ -113,7 +110,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           }
           return hasItem;
         } else {
-          let result = tmp14(5285).isGuildOnboardingSettingsAvailable(id);
+          let result = isChattableChannel.isGuildOnboardingSettingsAvailable(id);
           if (result) {
             const features = guild.features;
             result = features.has(constants.GUILD_ONBOARDING);
@@ -126,20 +123,19 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           let hasItem1 = features3.has(constants.GUILD_ONBOARDING);
           if (hasItem1) {
             const features4 = guild.features;
-            hasItem1 = features4.has(tmp6.GUILD_SERVER_GUIDE);
+            hasItem1 = features4.has(constants.GUILD_SERVER_GUIDE);
           }
           if (!hasItem1) {
             hasItem1 = result;
           }
           if (hasItem1) {
             const features5 = guild.features;
-            hasItem1 = features5.has(tmp6.COMMUNITY);
+            hasItem1 = features5.has(constants.COMMUNITY);
           }
           return hasItem1;
         }
       }
       obj3 = getFavoritesAwareGuildName;
-      tmp14 = require;
     }
     return false;
   }

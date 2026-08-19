@@ -1,20 +1,19 @@
 // === Module 11083: useEmitAppealIngestionEvent ===
 
 // Module 11083 (useEmitAppealIngestionEvent)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import noop from "noop" /* 19 */;
+import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
 import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView" /* 5438 */;
 import ME from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_6, AnalyticEvents: error } = ME);
-const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");
 
 export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent() {
   let items = [closure_4];
   stateFromStores = stateFromStores(safetyHubAccountStanding[4]).useStateFromStores(items, () => store.getAppealClassificationId());
   let obj = stateFromStores(safetyHubAccountStanding[4]);
-  const tmp3 = closure_4;
   let tmp5 = stateFromStores;
   if (stateFromStores == null) {
     tmp5 = closure_6;
@@ -23,12 +22,12 @@ export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent(
   let tmpResult = tmp(tmp2[6]);
   safetyHubAccountStanding = tmpResult.useSafetyHubAccountStanding();
   tmpResult = tmp(tmp2[4]);
-  const items1 = [tmp3];
+  const items1 = [closure_4];
   const stateFromStores1 = tmpResult.useStateFromStores(items1, () => store.getIsDsaEligible());
   const items2 = [safetyHubAccountStanding.state, stateFromStores, safetyHubClassification, stateFromStores1];
   return stateFromStores1.useCallback((action) => {
-    let obj = safetyHubClassification(safetyHubAccountStanding[7]);
-    obj = { action, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_dsa_eligible: null, violation_type: null };
+    safetyHubClassification(safetyHubAccountStanding[7]);
+    const obj = { action, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_dsa_eligible: null, violation_type: null };
     let tmp2 = null;
     if (null != stateFromStores) {
       const _Number = Number;

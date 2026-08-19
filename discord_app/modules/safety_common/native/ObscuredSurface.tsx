@@ -3,23 +3,22 @@
 // Module 9127 (ObscuredSurface)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 6877 */;
 import context from "context" /* 9128 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { position: "relative", overflow: "hidden" }, content: { pointerEvents: "none", userSelect: "none" }, cover: null, warning: null };
-createCacheKey = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND };
+const createCacheKey = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
-const result = require("set").fileFinishedImporting("modules/safety_common/native/ObscuredSurface.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_common/native/ObscuredSurface.tsx");
 
 export default function ObscuredSurface(obscured) {
   ({ heading, description, children } = obscured);
@@ -43,24 +42,24 @@ export default function ObscuredSurface(obscured) {
     obj3[1] = ThemesDefault.colors.TEXT_DEFAULT;
     const items1 = [callback(ImageWarningIcon.ImageWarningIcon, obj3), , ];
     if (heading == null) {
-      const intl = tmp4(1236).intl;
-      heading = intl.string(tmp4(1236).t.xC8Saf);
+      const intl = getSystemLocale.intl;
+      heading = intl.string(getSystemLocale.t.xC8Saf);
     }
     const obj4 = { variant: "heading-md/semibold", color: "text-strong", children: null };
     obj4[2] = heading;
     items1[1] = callback(Text.Text, obj4);
     if (description == null) {
-      const intl2 = tmp4(1236).intl;
-      description = intl2.string(tmp4(1236).t["0fc/DG"]);
+      const intl2 = getSystemLocale.intl;
+      description = intl2.string(getSystemLocale.t["0fc/DG"]);
     }
     const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
     obj5[2] = description;
     items1[2] = callback(Text.Text, obj5);
     obj2[1] = items1;
-    items[2] = closure_5(View, obj2);
+    items[2] = callback(View, obj2);
     obj[1] = items;
-    obj[1] = closure_5(View, obj);
-    tmp3Result = tmp3(context.ObscuredSurfaceContext.Provider, obj);
+    obj[1] = callback(View, obj);
+    tmp3Result = callback(context.ObscuredSurfaceContext.Provider, obj);
   }
   return tmp3Result;
 };

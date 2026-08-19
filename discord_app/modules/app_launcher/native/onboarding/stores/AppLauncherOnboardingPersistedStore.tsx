@@ -105,6 +105,6 @@ obj = {
   }
 };
 const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx");
 
 export default appLauncherOnboardingPersistedStore;

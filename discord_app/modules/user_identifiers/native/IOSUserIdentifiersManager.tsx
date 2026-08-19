@@ -2,12 +2,12 @@
 
 // Module 16616 (onPostConnectionOpen)
 import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-let require = arg1;
+let require = fn;
 initializeDefault;
 class IOSUserIdentifiersManager extends tmp2 {
   constructor() {
@@ -62,11 +62,10 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
                   return obj1;
                 }
               }
-              tmp15Result = tmp15(tmp16[6]);
+              tmp15Result = tmp15(closure_1_2[6]);
             }
             obj6 = v0(closure_1_2[5]);
             tmp15 = v0;
-            tmp16 = closure_1_2;
           }
         } else if (arg0 === 1) {
           v0 = 3;
@@ -106,15 +105,15 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId(currentUser) {
     } else if (2 === tmp7) {
       if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw appTransactionId;
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
         const obj3 = { value: null, done: true };
-        obj3[0] = arg1;
+        obj3[0] = appTransactionId;
         return obj3;
       } else {
-        const appTransactionId = arg1.appTransactionId;
+        appTransactionId = appTransactionId.appTransactionId;
         if (null != appTransactionId) {
           if ("" !== appTransactionId) {
             const appTransactionIds = appTransactionId.appTransactionIds;
@@ -146,17 +145,17 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId(currentUser) {
       }
     } else if (arg0 === 1) {
       c5 = 3;
-      throw arg1;
+      throw appTransactionId;
     } else if (arg0 !== 2) {
       obj = closure_1_1(closure_1_2[8]);
       obj.track(closure_1_6.APP_TRANSACTION_ID_SYNCED, { success: true });
       c3 = 0;
     }
     c3 = 0;
-    return arg1;
+    return appTransactionId;
   })();
 };
 const iOSUserIdentifiersManager = new IOSUserIdentifiersManager();
-const result = require("set").fileFinishedImporting("modules/user_identifiers/native/IOSUserIdentifiersManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_identifiers/native/IOSUserIdentifiersManager.tsx");
 
 export default iOSUserIdentifiersManager;

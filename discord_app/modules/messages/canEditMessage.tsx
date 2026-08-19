@@ -1,13 +1,14 @@
 // === Module 5425: canEditMessage ===
 
 // Module 5425 (canEditMessage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
 import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
 import ME from "ME" /* 676 */;
 
 ({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
-let result = set.fileFinishedImporting("modules/messages/canEditMessage.tsx");
+let result = obj132.fileFinishedImporting("modules/messages/canEditMessage.tsx");
 
 export default function canEditMessage(author) {
   let tmp = null != arg1;
@@ -29,7 +30,7 @@ export default function canEditMessage(author) {
                 const isPollResult = author.isPoll();
                 let tmp17 = !isPollResult;
                 if (!isPollResult) {
-                  const tmp18 = tmp6(5026)(author);
+                  const tmp18 = isForwardMessageDefault(author);
                   let tmp19 = !tmp18;
                   if (!tmp18) {
                     tmp19 = author.type !== constants3.MEDIA_MENTION_MESSAGE;
@@ -43,10 +44,8 @@ export default function canEditMessage(author) {
             result = tmp14;
           }
           tmp9 = result;
-          const obj = createMinimalMessageRecord;
         }
         tmp5 = tmp9;
-        tmp6 = importDefault;
       }
       tmp3 = tmp5;
     }

@@ -7,13 +7,12 @@ import Text from "Text" /* 4734 */;
 import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 15569 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
 
 export const HomeDrawerFavoritesRowExpandedChildren = function HomeDrawerFavoritesRowExpandedChildren() {
-  let obj = { title: null, subtitle: null };
-  obj = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
+  const obj = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.wMWyci);
   obj[0] = jsx(Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });

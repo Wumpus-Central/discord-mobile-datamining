@@ -5,18 +5,17 @@ import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
-import setDefault from "set" /* 4827 */;
+import obj132Default from "obj132" /* 4827 */;
 import registerAssetDefault from "registerAsset" /* 8743 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PRIVATE_APPS_HELP_ARTICLE } from "items3" /* 4481 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = callback3();
-  let obj = { style: tmp.alertContainer, children: null };
-  obj = { source: registerAssetDefault, style: tmp.announcementBirb };
+  let obj = { source: registerAssetDefault, style: tmp.announcementBirb };
   const items = [callback(closure_3, obj), , , ];
   obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = getSystemLocale.intl;
@@ -34,8 +33,8 @@ function ConfirmActivityGateContent(activityName) {
   return callback2(closure_4, obj);
 }
 function LinkButton() {
-  let obj = { style: callback3().linkWrapper, children: null };
-  obj = {
+  { style: callback3().linkWrapper, children: null };
+  const obj = {
     variant: "secondary",
     size: "sm",
     onPress() {
@@ -52,12 +51,11 @@ noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
-const result = require("set").fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
 
 export const confirmExternalAppLaunchAlert = function confirmExternalAppLaunchAlert(arg0) {
   ({ application, onConfirm, onCancel } = arg0);
-  let obj = setDefault;
-  obj = { title: "", children: callback(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
+  const obj = { title: "", children: callback(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["3PatSz"]);
   obj[4] = onCancel;

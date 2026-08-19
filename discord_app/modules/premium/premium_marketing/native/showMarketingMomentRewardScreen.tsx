@@ -1,10 +1,10 @@
 // === Module 12837: _showMarketingMomentRewardScreen ===
 
 // Module 12837 (_showMarketingMomentRewardScreen)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import updateCategoriesAndProducts from "updateCategoriesAndProducts" /* 5301 */;
 
-const require = arg1;
+const require = fn;
 function _showMarketingMomentRewardScreen() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -83,9 +83,9 @@ function _showMarketingMomentRewardScreen() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/premium/premium_marketing/native/showMarketingMomentRewardScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_marketing/native/showMarketingMomentRewardScreen.tsx");
 
-export const showMarketingMomentRewardScreen = function showMarketingMomentRewardScreen(arg0) {
+export const showMarketingMomentRewardScreen = function showMarketingMomentRewardScreen(closure_0) {
   const self = this;
   const apply = _showMarketingMomentRewardScreen.apply;
   if (typeof apply === "unknown") {

@@ -4,11 +4,11 @@
 import toJSDefault from "toJS" /* 1931 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
 import set from "set" /* 4519 */;
-import closure_3 from "createFromServer" /* 4515 */;
-import closure_4 from "createdAt" /* 1930 */;
+import createFromServer from "createFromServer" /* 4515 */;
+import createdAt from "createdAt" /* 1930 */;
 import { EntitlementTypes } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 toJSDefault;
 let EntitlementRecord;
 class EntitlementRecord extends tmp2 {
@@ -60,7 +60,6 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   ({ gift_style, guild_id, deleted } = user);
   if (null != user.sku) {
     const fromServer = closure_3.createFromServer(user.sku);
-    const tmp18 = closure_3;
   }
   let source_type = user.source_type;
   if (source_type == null) {
@@ -73,7 +72,7 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   if (typeof EntitlementRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const tmp22 = new EntitlementRecord(str, tmp18, EntitlementRecord, new.target, id, sku_id, application_id, tmp2, user_id, gifter_user_id, type, branches, date, date1, subscription_id, id, parent_id, consumed, gift_code_batch_id, gift_style, guild_id, deleted, source_type);
+  const tmp22 = new EntitlementRecord(str, closure_3, EntitlementRecord, new.target, id, sku_id, application_id, tmp2, user_id, gifter_user_id, type, branches, date, date1, subscription_id, id, parent_id, consumed, gift_code_batch_id, gift_style, guild_id, deleted, source_type);
   // ThrowIfThisInitialized (0x7c)
   tmp22.id = id;
   tmp22.skuId = sku_id;
@@ -159,6 +158,6 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
 prototype["isFulfilled"] = function isFulfilled() {
   return this.fulfillmentStatus === set.EntitlementTenantFulfillmentStatus.FULFILLED;
 };
-const result = require("set").fileFinishedImporting("records/EntitlementRecord.tsx");
+const result = require("obj132").fileFinishedImporting("records/EntitlementRecord.tsx");
 
 export default EntitlementRecord;

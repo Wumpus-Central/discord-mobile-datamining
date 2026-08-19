@@ -1,12 +1,12 @@
 // === Module 9230: useTrackShopCardClick ===
 
 // Module 9230 (useTrackShopCardClick)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { useSelectedVariantIndex } from "useSelectedVariantIndex" /* 9231 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-let require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");
+let require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");
 
 export const useTrackShopCardClick = function useTrackShopCardClick(product) {
   product = product.product;
@@ -33,28 +33,29 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
   const items = [product, tmp3, sessionId, cardId, analyticsLocations, tilePosition, shopDiscountSource];
   return sessionId.useCallback((cta) => {
     let obj = product(cardId[6]);
-    if (obj.getIsVariantProduct(closure_0)) {
+    if (obj.getIsVariantProduct(product)) {
       let tmp4 = arg1;
       if (arg1 == null) {
         tmp4 = constants;
       }
       let skuId;
-      if (tmp3.variants[tmp4] != null) {
+      if (product.variants[tmp4] != null) {
         skuId = tmp6.skuId;
       }
       if (skuId == null) {
-        skuId = tmp3.skuId;
+        skuId = product.skuId;
       }
     } else {
-      skuId = tmp3.skuId;
+      skuId = product.skuId;
     }
     obj = { sku_id: skuId, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: null, location_stack: null, position_in_section: null, discount_source: null };
-    let tmpResult = tmp(tmp2[6]);
-    obj[4] = tmpResult.getProductSkuIds(closure_0);
+    let tmpResult = product(cardId[6]);
+    obj[4] = tmpResult.getProductSkuIds(product);
     obj[5] = analyticsLocations;
     obj[6] = tilePosition;
-    tmpResult = tmp(tmp2[5]);
+    tmpResult = product(cardId[5]);
     obj[7] = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
     analyticsLocations(cardId[7]).track(constants.SHOP_CARD_CLICKED, obj);
+    const obj2 = analyticsLocations(cardId[7]);
   }, items);
 };

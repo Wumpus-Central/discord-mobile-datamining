@@ -1,10 +1,10 @@
 // === Module 8060: useStageChannelIsLive ===
 
 // Module 8060 (useStageChannelIsLive)
-import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/useStateChannelIsLive.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/useStateChannelIsLive.tsx");
 
 export default function useStageChannelIsLive(arg0) {
   const _require = arg0;

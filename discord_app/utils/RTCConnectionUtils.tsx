@@ -1,12 +1,12 @@
 // === Module 12598: ? ===
 
 // Module 12598
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import ME from "ME" /* 676 */;
 
 ({ RTCConnectionStates: obj1, ConnectionStatus: c3 } = ME);
-const result = set.fileFinishedImporting("utils/RTCConnectionUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/RTCConnectionUtils.tsx");
 
 export default {
   getStatus(arg0) {
@@ -18,15 +18,15 @@ export default {
       let connectionStatus = constants2.CONNECTING;
       const intl10 = getSystemLocale.intl;
       let connectionStatusText = intl10.string(getSystemLocale.t.MzW9sN);
-    } else if (tmp.AUTHENTICATING === arg0) {
+    } else if (constants.AUTHENTICATING === arg0) {
       connectionStatus = constants2.CONNECTING;
       const intl9 = getSystemLocale.intl;
       connectionStatusText = intl9.string(getSystemLocale.t.GxXwE2);
-    } else if (tmp.AWAITING_ENDPOINT === arg0) {
+    } else if (constants.AWAITING_ENDPOINT === arg0) {
       connectionStatus = constants2.CONNECTING;
       const intl8 = getSystemLocale.intl;
       connectionStatusText = intl8.string(getSystemLocale.t.uQle7a);
-    } else if (tmp.RTC_CONNECTED === arg0) {
+    } else if (constants.RTC_CONNECTED === arg0) {
       const intl7 = getSystemLocale.intl;
       const string = intl7.string;
       const t = getSystemLocale.t;
@@ -37,28 +37,28 @@ export default {
       }
       connectionStatusText = stringResult1;
       connectionStatus = constants2.CONNECTED;
-    } else if (tmp.RTC_CONNECTING === arg0) {
+    } else if (constants.RTC_CONNECTING === arg0) {
       connectionStatus = constants2.CONNECTING;
       const intl6 = getSystemLocale.intl;
       connectionStatusText = intl6.string(getSystemLocale.t.Gp51dl);
-    } else if (tmp.ICE_CHECKING === arg0) {
+    } else if (constants.ICE_CHECKING === arg0) {
       connectionStatus = constants2.CONNECTING;
       const intl5 = getSystemLocale.intl;
       connectionStatusText = intl5.string(getSystemLocale.t["rdCyA/"]);
-    } else if (tmp.DTLS_CONNECTING === arg0) {
+    } else if (constants.DTLS_CONNECTING === arg0) {
       connectionStatus = constants2.CONNECTING;
       const intl4 = getSystemLocale.intl;
       connectionStatusText = intl4.string(getSystemLocale.t.UvB3gV);
-    } else if (tmp.NO_ROUTE === arg0) {
+    } else if (constants.NO_ROUTE === arg0) {
       connectionStatus = constants2.ERROR;
       const intl3 = getSystemLocale.intl;
       connectionStatusText = intl3.string(getSystemLocale.t.mGhOIi);
-    } else if (tmp.RTC_DISCONNECTED === arg0) {
+    } else if (constants.RTC_DISCONNECTED === arg0) {
       connectionStatus = constants2.ERROR;
       const intl2 = getSystemLocale.intl;
       connectionStatusText = intl2.string(getSystemLocale.t.M7LDmE);
     } else {
-      const DISCONNECTED = tmp.DISCONNECTED;
+      const DISCONNECTED = constants.DISCONNECTED;
       connectionStatus = constants2.ERROR;
       const intl = getSystemLocale.intl;
       connectionStatusText = intl.string(getSystemLocale.t.NLKQbx);

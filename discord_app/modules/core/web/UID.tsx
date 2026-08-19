@@ -1,11 +1,11 @@
 // === Module 9961: uid ===
 
 // Module 9961 (uid)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import uniqueIdDefault from "uniqueId" /* 5261 */;
 import useInitialValueDefault from "useInitialValue" /* 7127 */;
 
-const result = set.fileFinishedImporting("modules/core/web/UID.tsx");
+const result = obj132.fileFinishedImporting("modules/core/web/UID.tsx");
 
 export const uid = function uid() {
   let str = arg0;

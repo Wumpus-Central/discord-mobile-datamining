@@ -1,15 +1,15 @@
 // === Module 16811: useGuildTagBadgeCollection ===
 
 // Module 16811 (useGuildTagBadgeCollection)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "handleFormInit" /* 8875 */;
-import closure_4 from "calculateAppliedBoosts" /* 4261 */;
+import handleFormInit from "handleFormInit" /* 8875 */;
+import calculateAppliedBoosts from "calculateAppliedBoosts" /* 4261 */;
 import items from "items" /* 8168 */;
 
 const useMemo = noop.useMemo;
 ({ BADGE_PACKS: c5, BADGES: closure_6, BADGE_PACK_TO_SKU_ID: error } = items);
-const result = set.fileFinishedImporting("modules/guild_tag/useGuildTagBadgeCollection.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_tag/useGuildTagBadgeCollection.tsx");
 
 export default function useGuildTagBadgeCollection() {
   let items = [closure_3];
@@ -35,7 +35,7 @@ export default function useGuildTagBadgeCollection() {
   const items2 = [features, stateFromStores1];
   return useMemo(() => {
     let features;
-    const unlockedBadges = closure_1_6.map((kind) => ({ kind }));
+    const unlockedBadges = closure_1_6.map((item, index) => ({ kind: item }));
     const lockedBadges = [];
     if (unlockedBadges != null) {
       features = unlockedBadges.features;
@@ -43,18 +43,18 @@ export default function useGuildTagBadgeCollection() {
     if (null != features) {
       const _Object = Object;
       const keys = Object.keys(closure_1_5);
-      const item = keys.forEach((arg0) => {
+      const item = keys.forEach((item, index) => {
         let tmp;
         if (lockedBadges != null) {
-          tmp = lockedBadges[closure_2_7[arg0]];
+          tmp = lockedBadges[closure_2_7[item]];
         }
         let title;
         if (tmp != null) {
           title = tmp.title;
         }
-        const mapped = closure_2_5[arg0].map((kind) => ({ kind, packName: title }));
+        const mapped = closure_2_5[item].map((item, index) => ({ kind: item, packName: title }));
         const features = unlockedBadges.features;
-        if (features.has(arg0)) {
+        if (features.has(item)) {
           const push2 = title.push;
           const items = [];
           HermesBuiltin.arraySpread(mapped, 0);

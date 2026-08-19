@@ -1,24 +1,24 @@
 // === Module 5279: getFlattenedChannelList ===
 
 // Module 5279 (getFlattenedChannelList)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 
-const result = set.fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
+const result = obj132.fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
 
 export default function getFlattenedChannelList(arg0, arg1) {
   importDefault = arg1;
   let fn = arg2;
   if (arg2 === undefined) {
-    fn = function l() {
+    fn = function l(item, index) {
       return true;
     };
   }
-  const mapped = applyDefault(arg0).map((channel) => {
-    if ("null" === channel.channel.id) {
-      let items = dependencyMap[channel.channel.id];
+  const mapped = applyDefault(arg0).map((item, index) => {
+    if ("null" === item.channel.id) {
+      let items = dependencyMap[item.channel.id];
     } else {
-      items = [channel, dependencyMap[channel.channel.id]];
+      items = [item, dependencyMap[item.channel.id]];
     }
     return items;
   });

@@ -2,18 +2,16 @@
 
 // Module 7662 (getPlanIdForProduct)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_7 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import setGPlayAnalytics from "setGPlayAnalytics" /* 7618 */;
-import closure_11 from "fetchFingerprint" /* 1218 */;
-import closure_12 from "updateProduct" /* 5319 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import updateProduct from "updateProduct" /* 5319 */;
 import ME from "ME" /* 676 */;
 import GPlayConnectionState from "GPlayConnectionState" /* 5320 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { PaymentGateways } from "sum" /* 505 */;
 
-let closure_0 = arg1;
-let c1 = importDefault;
 function getPlanIdForProduct(arg0, arg1) {
   if (arg1) {
     try {
@@ -55,426 +53,269 @@ function _fetchDesktopSubscriptionSkus() {
     const iter = (function*(arg0) {
       if (logger === 2) {
         logger = 3;
-        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
-      } else {
-        throwTypeErrorResult = arg1;
-        throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp2;
-        throwTypeErrorResult = globalThis;
-        throwTypeErrorResult = null;
-        if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
-          }
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          while (true) {
-            let num = 2;
-            logger = 2;
-            let tmp4 = c21;
-            if (0 === c21) {
-              if (arg0 === 1) {
-                let num11 = 3;
-                logger = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                let num10 = 3;
-                logger = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let constants = throwTypeErrorResult;
-                let first = tmp4;
-                let DEFAULT;
-                let flag;
-                throwTypeErrorResult = dependencyMap;
-                if (DEFAULT === undefined) {
-                  throwTypeErrorResult = closure_1_15;
-                  DEFAULT = closure_1_15.DEFAULT;
-                }
-                if (flag === undefined) {
-                  flag = false;
-                }
-                let arr;
-                let set;
-                closure_5 = undefined;
-                closure_6 = undefined;
-                closure_7 = undefined;
-                closure_8 = undefined;
-                closure_9 = undefined;
-                let dependencyMap2;
-                let usd;
-                let US;
-                c13 = undefined;
-                let name;
-                let user;
-                name = undefined;
-                first = undefined;
-                constants = undefined;
-                let amount;
-                let user2;
-                c21 = 1;
-                let num9 = 1;
-                logger = 1;
-                return { value: "ct", done: true };
+          return { value: "HermesInternal", done: "HermesInternal" };
+        }
+      } else {
+        while (true) {
+          logger = 2;
+          let tmp4 = c21;
+          if (0 === c21) {
+            if (arg0 === 1) {
+              logger = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              logger = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let constants = tmp;
+              let first = tmp4;
+              let DEFAULT;
+              let flag;
+              if (DEFAULT === undefined) {
+                DEFAULT = closure_1_15.DEFAULT;
               }
-            } else if (1 === tmp4) {
-              if (arg0 === 1) {
-                let num8 = 3;
-                logger = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                let num7 = 3;
-                logger = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                throwTypeErrorResult = first;
-                arr = [];
-                let _Set = Set;
-                throwTypeErrorResult = new.target;
-                throwTypeErrorResult = new.target;
-                throwTypeErrorResult = new Set();
-                set = throwTypeErrorResult;
-                closure_5 = {};
-                throwTypeErrorResult = dependencyMap;
-                set = dependencyMap;
-                throwTypeErrorResult = dependencyMap;
-                set = dependencyMap;
-                arr = dependencyMap[Symbol.iterator]();
-                throwTypeErrorResult = set;
-                throwTypeErrorResult = arr;
-                while (arr !== undefined) {
-                  throwTypeErrorResult = first;
-                  throwTypeErrorResult = constants;
-                  user2 = 1;
-                  closure_6 = throwTypeErrorResult;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = closure_6;
-                  throwTypeErrorResult = flag;
-                  closure_7 = callback(closure_6, flag);
-                  throwTypeErrorResult = closure_7;
-                  if (null != closure_7) {
-                    throwTypeErrorResult = first;
-                    throwTypeErrorResult = constants;
-                    throwTypeErrorResult = amount;
-                    throwTypeErrorResult = closure_7;
-                    closure_8 = amount[closure_7];
-                    throwTypeErrorResult = undefined;
-                    if (closure_8 != null) {
-                      throwTypeErrorResult = closure_8.skuId;
-                    }
-                    throwTypeErrorResult = null != throwTypeErrorResult;
-                    if (throwTypeErrorResult) {
-                      throwTypeErrorResult = first;
-                      throwTypeErrorResult = constants;
-                      throwTypeErrorResult = closure_8;
-                      throwTypeErrorResult = constants;
-                      throwTypeErrorResult = closure_8.skuId !== constants.NONE;
-                    }
-                    if (throwTypeErrorResult) {
-                      throwTypeErrorResult = first;
-                      throwTypeErrorResult = set;
-                      throwTypeErrorResult = closure_8;
-                      throwTypeErrorResult = set.add(closure_8.skuId);
-                      throwTypeErrorResult = closure_5;
-                      throwTypeErrorResult = closure_6;
-                      throwTypeErrorResult = closure_7;
-                      closure_5[closure_6] = closure_7;
-                    }
+              if (flag === undefined) {
+                flag = false;
+              }
+              let arr;
+              let set;
+              closure_5 = undefined;
+              closure_6 = undefined;
+              closure_7 = undefined;
+              closure_8 = undefined;
+              closure_9 = undefined;
+              let dependencyMap2;
+              let usd;
+              let US;
+              c13 = undefined;
+              let user;
+              let name;
+              first = undefined;
+              constants = undefined;
+              let amount;
+              let user2;
+              c21 = 1;
+              logger = 1;
+              return { value: "ct", done: true };
+            }
+          } else if (1 === tmp4) {
+            if (arg0 === 1) {
+              logger = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              logger = 3;
+              obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              let _Set = Set;
+              set = new Set();
+              closure_5 = {};
+              set = dependencyMap;
+              arr = dependencyMap[Symbol.iterator]();
+              while (arr !== undefined) {
+                user2 = 1;
+                closure_6 = tmp110;
+                closure_7 = callback(closure_6, flag);
+                if (null != closure_7) {
+                  closure_8 = amount[closure_7];
+                  let skuId;
+                  if (closure_8 != null) {
+                    skuId = closure_8.skuId;
                   }
-                  user2 = 0;
-                  continue;
+                  let tmp112 = null != skuId;
+                  if (tmp112) {
+                    tmp112 = closure_8.skuId !== constants.NONE;
+                  }
+                  if (tmp112) {
+                    let addResult = set.add(closure_8.skuId);
+                    closure_5[closure_6] = closure_7;
+                  }
                 }
-                throwTypeErrorResult = first;
-                throwTypeErrorResult = constants;
-                closure_9 = {};
-                throwTypeErrorResult = dependencyMap;
-                throwTypeErrorResult = flag;
-                let obj7 = dependencyMap(flag[12]);
-                throwTypeErrorResult = set;
-                let items = [];
-                throwTypeErrorResult = items;
-                let num5 = 0;
-                throwTypeErrorResult = HermesBuiltin.arraySpread(set, 0);
-                c21 = 3;
-                let num6 = 1;
-                logger = 1;
-                let obj2 = { value: null, done: false };
-                obj2[0] = obj7.fetchSubscriptionPlansBySKUs(items);
-                return obj2;
+                user2 = 0;
+                continue;
               }
-            } else if (2 === tmp4) {
-              throwTypeErrorResult = amount;
-              throwTypeErrorResult = amount;
-              user2 = 0;
-              throwTypeErrorResult = arr;
-              arr.return();
-              throw amount;
-            } else if (3 === tmp4) {
-              if (arg0 === 1) {
-                let num4 = 3;
-                logger = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                let num3 = 3;
-                logger = 3;
-                let obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
-              } else {
-                throwTypeErrorResult = first;
-                dependencyMap2 = arg1;
-                throwTypeErrorResult = dependencyMap2;
-                closure_6 = dependencyMap2;
-                throwTypeErrorResult = dependencyMap2;
-                closure_6 = dependencyMap2;
-                closure_5 = dependencyMap2[Symbol.iterator]();
-                let tmp14 = closure_6;
-                let tmp15 = closure_5;
-                while (closure_5 !== undefined) {
-                  let tmp17 = first;
+              closure_9 = {};
+              let obj7 = dependencyMap(flag[12]);
+              let items = [];
+              let arraySpreadResult = HermesBuiltin.arraySpread(set, 0);
+              c21 = 3;
+              logger = 1;
+              let obj2 = { value: null, done: false };
+              obj2[0] = obj7.fetchSubscriptionPlansBySKUs(items);
+              return obj2;
+            }
+          } else if (2 === tmp4) {
+            user2 = 0;
+            arr.return();
+            throw amount;
+          } else if (3 === tmp4) {
+            if (arg0 === 1) {
+              logger = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              logger = 3;
+              let obj3 = { value: null, done: true };
+              obj3[0] = arg1;
+              return obj3;
+            } else {
+              dependencyMap2 = arg1;
+              closure_6 = dependencyMap2;
+              closure_5 = dependencyMap2[Symbol.iterator]();
+              while (closure_5 !== undefined) {
+                user2 = 2;
+                usd = tmp16;
+                dependencyMap2 = usd;
+                closure_9 = usd[Symbol.iterator]();
+                while (closure_9 !== undefined) {
+                  US = tmp22;
+                  closure_9[US.id] = US;
                   user2 = 2;
-                  usd = tmp16;
-                  let tmp18 = usd;
-                  dependencyMap2 = usd;
-                  let tmp19 = usd;
-                  dependencyMap2 = usd;
-                  closure_9 = usd[Symbol.iterator]();
-                  let tmp20 = dependencyMap2;
-                  let tmp21 = closure_9;
-                  while (closure_9 !== undefined) {
-                    let tmp23 = first;
-                    user2 = 3;
-                    US = tmp22;
-                    let tmp24 = closure_9;
-                    let tmp25 = US;
-                    let tmp26 = US;
-                    closure_9[US.id] = US;
-                    user2 = 2;
-                    continue;
-                  }
-                  user2 = 0;
                   continue;
                 }
-                let tmp27 = first;
-                let tmp28 = dependencyMap;
-                closure_8 = dependencyMap;
-                let tmp29 = dependencyMap;
-                closure_8 = dependencyMap;
-                closure_7 = dependencyMap[Symbol.iterator]();
-                let tmp30 = closure_8;
-                let tmp31 = closure_7;
-                while (closure_7 !== undefined) {
-                  throwTypeErrorResult = first;
-                  user2 = 4;
-                  c13 = tmp32;
-                  throwTypeErrorResult = closure_5;
-                  throwTypeErrorResult = c13;
-                  name = closure_5[c13];
-                  throwTypeErrorResult = name;
-                  if (null != name) {
-                    let tmp38 = first;
-                    let tmp39 = closure_9;
-                    let tmp40 = name;
-                    user = closure_9[name];
-                    let tmp41 = user;
-                    if (null != user) {
-                      let tmp48 = first;
-                      let tmp49 = user;
-                      let prices = user.prices;
-                      let country_prices;
-                      if (prices != null) {
-                        let tmp51 = first;
-                        let tmp52 = DEFAULT;
-                        let tmp53 = prices[DEFAULT];
-                        if (tmp53 != null) {
-                          country_prices = tmp53.country_prices;
-                        }
+                user2 = 0;
+                continue;
+              }
+              closure_8 = dependencyMap;
+              closure_7 = dependencyMap[Symbol.iterator]();
+              while (closure_7 !== undefined) {
+                user2 = 4;
+                c13 = tmp32;
+                name = closure_5[c13];
+                if (null != name) {
+                  user = closure_9[name];
+                  if (null != user) {
+                    let prices = user.prices;
+                    let country_prices;
+                    if (prices != null) {
+                      let tmp53 = prices[DEFAULT];
+                      if (tmp53 != null) {
+                        country_prices = tmp53.country_prices;
                       }
-                      let tmp54 = first;
-                      name = country_prices;
-                      first = undefined;
+                    }
+                    name = country_prices;
+                    first = undefined;
+                    if (name != null) {
+                      let prices2 = name.prices;
+                      if (prices2 != null) {
+                        first = prices2[0];
+                      }
+                    }
+                    if (null != first) {
+                      let str = first.currency;
+                      let formatted;
+                      if (str != null) {
+                        formatted = str.toLowerCase();
+                      }
+                      usd = formatted;
+                      if (formatted == null) {
+                        usd = "usd";
+                      }
+                      constants = usd;
+                      amount = first.amount;
+                      user2 = amount[name];
+                      let obj4 = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: null, downloadable: false, description: null, title: null, type: null, subscriptionOffers: null };
+                      obj4[0] = c13;
+                      obj4[1] = amount;
+                      obj4[2] = first.currency;
+                      obj4[3] = constants;
+                      let str2 = "";
+                      if (null != first.currency) {
+                        let result = amount / 100;
+                        let _HermesInternal = HermesInternal;
+                        str2 = "" + first.currency + " " + result.toFixed(2);
+                      }
+                      obj4[4] = str2;
+                      let country_code;
                       if (name != null) {
-                        let prices2 = name.prices;
-                        if (prices2 != null) {
-                          first = prices2[0];
-                        }
+                        country_code = name.country_code;
                       }
-                      let tmp56 = first;
-                      let tmp57 = first;
-                      if (null != first) {
-                        let tmp65 = first;
-                        let tmp66 = first;
-                        let str = first.currency;
-                        let formatted;
-                        if (str != null) {
-                          formatted = str.toLowerCase();
-                        }
-                        usd = formatted;
-                        if (formatted == null) {
-                          usd = "usd";
-                        }
-                        let tmp68 = first;
-                        let tmp69 = constants;
-                        let tmp70 = usd;
-                        constants = usd;
-                        let tmp71 = first;
-                        amount = first.amount;
-                        let tmp72 = amount;
-                        let tmp73 = name;
-                        user2 = amount[name];
-                        let obj4 = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: null, downloadable: false, description: null, title: null, type: null, subscriptionOffers: null };
-                        let tmp75 = c13;
-                        obj4[0] = c13;
-                        let tmp76 = amount;
-                        obj4[1] = amount;
-                        let tmp77 = first;
-                        obj4[2] = first.currency;
-                        let tmp78 = constants;
-                        obj4[3] = constants;
-                        let tmp79 = first;
-                        let str2 = "";
-                        let tmp74 = arr;
-                        if (null != first.currency) {
-                          let tmp80 = first;
-                          let tmp81 = first;
-                          let tmp82 = amount;
-                          let result = amount / 100;
-                          let _HermesInternal = HermesInternal;
-                          str2 = "" + first.currency + " " + result.toFixed(2);
-                        }
-                        let tmp83 = first;
-                        obj4[4] = str2;
-                        let country_code;
-                        if (name != null) {
-                          country_code = name.country_code;
-                        }
-                        US = country_code;
-                        if (country_code == null) {
-                          let tmp85 = constants;
-                          let tmp86 = dependencyMap;
-                          let tmp87 = flag;
-                          US = dependencyMap(flag[13]).CountryCodes.US;
-                        }
-                        let tmp88 = first;
-                        let tmp89 = US;
-                        obj4[5] = US;
-                        name = undefined;
-                        if (user2 != null) {
-                          name = user2.name;
-                        }
-                        if (name == null) {
-                          let tmp91 = first;
-                          let tmp92 = user;
-                          name = user.name;
-                        }
-                        let tmp93 = name;
-                        c13 = name;
-                        if (name == null) {
-                          c13 = "";
-                        }
-                        let tmp94 = first;
-                        let tmp95 = c13;
-                        obj4[7] = c13;
-                        let name1;
-                        if (user2 != null) {
-                          name1 = user2.name;
-                        }
-                        name = name1;
-                        if (name1 == null) {
-                          let tmp97 = first;
-                          let tmp98 = user;
-                          name = user.name;
-                        }
-                        let tmp99 = name;
-                        user = name;
-                        if (name == null) {
-                          user = "";
-                        }
-                        throwTypeErrorResult = first;
-                        throwTypeErrorResult = user;
-                        obj4[8] = user;
-                        throwTypeErrorResult = flag;
-                        let str3 = "subs";
-                        if (flag) {
-                          str3 = "inapp";
-                        }
-                        obj4[9] = str3;
-                        obj4[10] = [];
-                        throwTypeErrorResult = arr.push(obj4);
-                      } else {
-                        let tmp58 = first;
-                        let tmp59 = constants;
-                        let tmp60 = logger;
-                        let obj5 = { productId: null, planId: null, priceSetAssignmentType: null };
-                        let tmp61 = c13;
-                        obj5[0] = c13;
-                        let tmp62 = name;
-                        obj5[1] = name;
-                        let tmp63 = DEFAULT;
-                        obj5[2] = DEFAULT;
-                        let warnResult = logger.warn("[fetchDesktopSubscriptionSkus] No price info found", obj5);
+                      US = country_code;
+                      if (country_code == null) {
+                        US = dependencyMap(flag[13]).CountryCodes.US;
                       }
+                      obj4[5] = US;
+                      name = undefined;
+                      if (user2 != null) {
+                        name = user2.name;
+                      }
+                      if (name == null) {
+                        name = user.name;
+                      }
+                      c13 = name;
+                      if (name == null) {
+                        c13 = "";
+                      }
+                      obj4[7] = c13;
+                      let name1;
+                      if (user2 != null) {
+                        name1 = user2.name;
+                      }
+                      name = name1;
+                      if (name1 == null) {
+                        name = user.name;
+                      }
+                      user = name;
+                      if (name == null) {
+                        user = "";
+                      }
+                      obj4[8] = user;
+                      let str3 = "subs";
+                      if (flag) {
+                        str3 = "inapp";
+                      }
+                      obj4[9] = str3;
+                      obj4[10] = [];
+                      arr = arr.push(obj4);
                     } else {
-                      let tmp42 = first;
-                      let tmp43 = constants;
-                      let tmp44 = logger;
-                      let obj6 = { productId: null, planId: null };
-                      let tmp45 = c13;
-                      obj6[0] = c13;
-                      let tmp46 = name;
-                      obj6[1] = name;
-                      let warnResult1 = logger.warn("[fetchDesktopSubscriptionSkus] Plan not found", obj6);
+                      let obj5 = { productId: null, planId: null, priceSetAssignmentType: null };
+                      obj5[0] = c13;
+                      obj5[1] = name;
+                      obj5[2] = DEFAULT;
+                      let warnResult = logger.warn("[fetchDesktopSubscriptionSkus] No price info found", obj5);
                     }
                   } else {
-                    let tmp33 = first;
-                    let tmp34 = constants;
-                    let tmp35 = logger;
-                    obj = { productId: null };
-                    let tmp36 = c13;
-                    obj[0] = c13;
-                    let warnResult2 = logger.warn("[fetchDesktopSubscriptionSkus] No plan ID found", obj);
+                    let obj6 = { productId: null, planId: null };
+                    obj6[0] = c13;
+                    obj6[1] = name;
+                    let warnResult1 = logger.warn("[fetchDesktopSubscriptionSkus] Plan not found", obj6);
                   }
-                  user2 = 0;
-                  continue;
+                } else {
+                  obj = { productId: null };
+                  obj[0] = c13;
+                  let warnResult2 = logger.warn("[fetchDesktopSubscriptionSkus] No plan ID found", obj);
                 }
-                throwTypeErrorResult = first;
-                let num2 = 3;
-                logger = 3;
-                obj7 = { value: null, done: true };
-                obj7[0] = arr;
-                return obj7;
+                user2 = 0;
+                continue;
               }
-            } else if (4 === tmp4) {
-              let tmp11 = amount;
-              let tmp12 = amount;
-              user2 = 0;
-              let tmp13 = closure_5;
-              closure_5.return();
-              throw amount;
-            } else if (5 === tmp4) {
-              let tmp8 = amount;
-              let tmp9 = amount;
-              user2 = 2;
-              let tmp10 = closure_9;
-              closure_9.return();
-              throw amount;
-            } else {
-              let tmp5 = amount;
-              let tmp6 = amount;
-              user2 = 0;
-              let tmp7 = closure_7;
-              closure_7.return();
-              throw amount;
+              logger = 3;
+              obj7 = { value: null, done: true };
+              obj7[0] = arr;
+              return obj7;
             }
+          } else if (4 === tmp4) {
+            user2 = 0;
+            closure_5.return();
+            throw amount;
+          } else if (5 === tmp4) {
+            user2 = 2;
+            closure_9.return();
+            throw amount;
+          } else {
+            user2 = 0;
+            closure_7.return();
+            throw amount;
           }
         }
       }
@@ -592,8 +433,8 @@ function _subscribe() {
         obj2[1] = c5;
         obj3[0] = obj2;
         const result = obj1.captureBillingException(message, obj3);
-        let obj4 = callback2(4827);
-        obj4 = { title: null, body: null };
+        callback2(4827);
+        const obj4 = { title: null, body: null };
         const intl = callback(1236).intl;
         obj4[0] = intl.string(callback(1236).t["U+H+kd"]);
         const intl2 = callback(1236).intl;
@@ -606,7 +447,6 @@ function _subscribe() {
         callback2(698).track(constants.GPLAY_PURCHASE_FAILED, obj5);
         c11 = 3;
         const obj7 = callback2(698);
-        const tmp14 = message;
       } else if (arg0 === 1) {
         c11 = 3;
         throw arg1;
@@ -692,7 +532,7 @@ function _verifyPurchase() {
               if (tmp54) {
                 let obj8 = lib2(closure_1_2[19]);
                 obj1 = { source: "verifyPurchase", sku_id: null };
-                obj1[1] = tmp75.productId;
+                obj1[1] = lib.productId;
                 obj8.track(closure_1_13.GIFT_INFO_OPTIONS_MISSING, obj1);
               }
               c6 = 1;
@@ -799,7 +639,7 @@ let closure_6 = ["succeededOnlyFields"];
 ({ PremiumSubscriptionSKUs: closure_18, SubscriptionPlanInfo: closure_19 } = GuildFeatures);
 const BillingManager = require("get ActivityIndicator").NativeModules.BillingManager;
 let closure_22 = new timestampDefault("GPlayActionCreators");
-closure_0 = importDefaultResult(() => {
+importDefaultResult(() => {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
@@ -934,7 +774,6 @@ closure_0 = importDefaultResult(() => {
   iter.next();
   return iter;
 });
-c1 = true;
 const importDefaultResultResult = importDefaultResult(() => {
   closure_0 = [...arguments];
   c5 = 0;
@@ -1026,7 +865,7 @@ const importDefaultResultResult = importDefaultResult(() => {
           if (!closure_1) {
             if (!closure_2) {
               if (!closure_3) {
-                let obj3 = callback(closure_1_2[16]);
+                let obj3 = callback(dependencyMap[16]);
                 const result = obj3.captureBillingException(c4);
               }
               if (closure_1) {
@@ -1039,8 +878,8 @@ const importDefaultResultResult = importDefaultResult(() => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            const result1 = callback(closure_1_2[16]).captureBillingException(c4);
-            const obj5 = callback(closure_1_2[16]);
+            const result1 = callback(dependencyMap[16]).captureBillingException(c4);
+            const obj5 = callback(dependencyMap[16]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1072,7 +911,7 @@ const importDefaultResultResult = importDefaultResult(() => {
   iter.next();
   return iter;
 });
-closure_0 = importDefaultResult(() => {
+importDefaultResult(() => {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
@@ -1134,7 +973,7 @@ closure_0 = importDefaultResult(() => {
                   c5 = 4;
                   c6 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = closure_1_21.getIAPSkus(IAPProductIds);
+                  obj2[0] = BillingManager.getIAPSkus(IAPProductIds);
                   return obj2;
                 } else {
                   c5 = 3;
@@ -1226,7 +1065,6 @@ closure_0 = importDefaultResult(() => {
   iter.next();
   return iter;
 });
-c1 = true;
 const importDefaultResultResult1 = importDefaultResult(() => {
   closure_0 = [...arguments];
   c5 = 0;
@@ -1318,7 +1156,7 @@ const importDefaultResultResult1 = importDefaultResult(() => {
           if (!closure_1) {
             if (!closure_2) {
               if (!closure_3) {
-                let obj3 = callback(closure_1_2[16]);
+                let obj3 = callback(dependencyMap[16]);
                 const result = obj3.captureBillingException(c4);
               }
               if (closure_1) {
@@ -1331,8 +1169,8 @@ const importDefaultResultResult1 = importDefaultResult(() => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            const result1 = callback(closure_1_2[16]).captureBillingException(c4);
-            const obj5 = callback(closure_1_2[16]);
+            const result1 = callback(dependencyMap[16]).captureBillingException(c4);
+            const obj5 = callback(dependencyMap[16]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1364,7 +1202,7 @@ const importDefaultResultResult1 = importDefaultResult(() => {
   iter.next();
   return iter;
 });
-closure_0 = importDefaultResult(function*() {
+importDefaultResult(function*() {
   if (c0 === 2) {
     c0 = 3;
     HermesBuiltin.throwTypeError();
@@ -1391,7 +1229,7 @@ closure_0 = importDefaultResult(function*() {
           obj[0] = arg1;
           return obj;
         } else {
-          const items = [closure_1_26(), closure_1_27()];
+          const items = [closure_1_26(), importDefaultResultResult1()];
           c1 = 1;
           c0 = 1;
           obj1 = { value: null, done: false };
@@ -1416,10 +1254,8 @@ closure_0 = importDefaultResult(function*() {
     }
   }
 });
-c1 = false;
-closure_0 = undefined;
 let tmp7 = new timestampDefault("GPlayActionCreators");
-closure_0 = importDefaultResult((arg0, arg1) => {
+importDefaultResult((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   c7 = 0;
@@ -1430,7 +1266,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
     c3 = tmp5;
     const callback2 = closure_1_10.getState().analyticsByProductId[callback];
     c6 = 1;
-    yield closure_1_21.purchase(callback, callback2);
+    yield BillingManager.purchase(callback, callback2);
     if (1 === tmp8) {
       c6 = 0;
       closure_4 = closure_5;
@@ -1440,8 +1276,8 @@ closure_0 = importDefaultResult((arg0, arg1) => {
       obj3[0] = callback;
       obj2[0] = obj3;
       const result = obj1.captureBillingException(closure_4, obj2);
-      let obj4 = callback2(succeededOnlyFields[17]);
-      obj4 = { title: null, body: null };
+      callback2(succeededOnlyFields[17]);
+      const obj4 = { title: null, body: null };
       const intl = callback(succeededOnlyFields[18]).intl;
       obj4[0] = intl.string(callback(succeededOnlyFields[18]).t["U+H+kd"]);
       const intl2 = callback(succeededOnlyFields[18]).intl;
@@ -1471,7 +1307,7 @@ closure_0 = importDefaultResult((arg0, arg1) => {
     return arg1;
   })();
 });
-closure_0 = importDefaultResult(function*() {
+let closure_0 = importDefaultResult(function*() {
   if (c5 === 2) {
     c5 = 3;
     HermesBuiltin.throwTypeError();
@@ -1505,14 +1341,14 @@ closure_0 = importDefaultResult(function*() {
             c4 = 2;
             c5 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = closure_1_21.getUserCountry();
+            obj1[0] = BillingManager.getUserCountry();
             return obj1;
           } else {
             closure_1_22.info("[getUserCountry] Quest: Skipping Google Play country lookup");
             c5 = 3;
             return { value: null, done: true };
           }
-          obj9 = closure_1_0(closure_1_2[15]);
+          obj9 = closure_1_0(dependencyMap[15]);
         }
       } else if (1 === tmp7) {
         c3 = 0;
@@ -1581,7 +1417,7 @@ closure_0 = importDefaultResult(function*() {
     }
   }
 });
-c1 = true;
+let c1 = true;
 const importDefaultResultResult3 = importDefaultResult(() => {
   closure_0 = [...arguments];
   c5 = 0;
@@ -1673,7 +1509,7 @@ const importDefaultResultResult3 = importDefaultResult(() => {
           if (!closure_1) {
             if (!closure_2) {
               if (!closure_3) {
-                let obj3 = callback(closure_1_2[16]);
+                let obj3 = callback(dependencyMap[16]);
                 const result = obj3.captureBillingException(c4);
               }
               if (closure_1) {
@@ -1686,8 +1522,8 @@ const importDefaultResultResult3 = importDefaultResult(() => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            const result1 = callback(closure_1_2[16]).captureBillingException(c4);
-            const obj5 = callback(closure_1_2[16]);
+            const result1 = callback(dependencyMap[16]).captureBillingException(c4);
+            const obj5 = callback(dependencyMap[16]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1810,7 +1646,7 @@ const importDefaultResultResult2 = importDefaultResult(() => {
           if (!closure_1) {
             if (!closure_2) {
               if (!closure_3) {
-                let obj3 = callback(closure_1_2[16]);
+                let obj3 = callback(dependencyMap[16]);
                 const result = obj3.captureBillingException(c4);
               }
               if (closure_1) {
@@ -1823,8 +1659,8 @@ const importDefaultResultResult2 = importDefaultResult(() => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            const result1 = callback(closure_1_2[16]).captureBillingException(c4);
-            const obj5 = callback(closure_1_2[16]);
+            const result1 = callback(dependencyMap[16]).captureBillingException(c4);
+            const obj5 = callback(dependencyMap[16]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1856,7 +1692,7 @@ const importDefaultResultResult2 = importDefaultResult(() => {
   iter.next();
   return iter;
 });
-let result = require("set").fileFinishedImporting("actions/native/GPlayActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("actions/native/GPlayActionCreators.tsx");
 
 export const loadSubscriptionSkus = importDefaultResultResult;
 export const loadInAppSkus = importDefaultResultResult1;
@@ -1891,7 +1727,7 @@ export const subscribe = function subscribe() {
   }
   return applyArgumentsResult;
 };
-export const verifyPurchase = function verifyPurchase() {
+export const verifyPurchase = function verifyPurchase(purchase, closure_2) {
   const self = this;
   const apply = _verifyPurchase.apply;
   if (typeof apply === "unknown") {
@@ -1901,8 +1737,8 @@ export const verifyPurchase = function verifyPurchase() {
   }
   return applyArgumentsResult;
 };
-export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytics(productId) {
-  const tmp = state.getState().analyticsByProductId[productId.productId];
+export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytics(purchase) {
+  const tmp = state.getState().analyticsByProductId[purchase.productId];
   if (null != tmp) {
     const succeededOnlyFields = tmp.succeededOnlyFields;
     const tmp4 = callback2(tmp, closure_4);
@@ -1912,7 +1748,7 @@ export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytic
     const merged = Object.assign(tmp4);
     const merged1 = Object.assign(succeededOnlyFields);
     _true(698).track(constants.PAYMENT_FLOW_SUCCEEDED, obj);
-    callback3(productId.productId);
+    callback3(purchase.productId);
     const obj2 = _true(698);
   }
 };
@@ -1930,7 +1766,6 @@ export const updatePendingDowngrade = function updatePendingDowngrade(closure_0,
           }
         }
       }
-      obj = { type: "GPLAY_UPDATE_PENDING_DOWNGRADE", pendingDowngrade: null };
       obj = { purchaseToken: null, subscriptionId: null, newSubscriptionSkuId: null };
       obj[0] = c7;
       obj[1] = c5;

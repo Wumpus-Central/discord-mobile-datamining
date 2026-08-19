@@ -1,10 +1,10 @@
 // === Module 4529: DesktopSources ===
 
 // Module 4529 (DesktopSources)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import SystemServiceNotAvailableError from "SystemServiceNotAvailableError" /* 4530 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
 
 export const DesktopSources = SystemServiceNotAvailableError.DesktopSources;
 export const MediaEngineContextTypes = { DEFAULT: "default", STREAM: "stream" };

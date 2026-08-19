@@ -6,14 +6,14 @@ import int2hslRaw from "int2hslRaw" /* 688 */;
 import map from "map" /* 4097 */;
 import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14452 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "isSyncedModeThemesEnabled" /* 4195 */;
+import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled" /* 4195 */;
 import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
 import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE" /* 15548 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let closure_11 = { code: "function YouBarFloatingShadeTsx1(){const{gradientHeight,drawerWidth}=this.__closure;return{height:gradientHeight,opacity:1,width:drawerWidth};}" };
@@ -62,7 +62,6 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   if (str2 == null) {
     str2 = "transparent";
   }
-  obj = { children: null };
   const items1 = [tmp.container, animatedStyle, { height: youBarTotalHeight, opacity: 0 }];
   const items2 = [callback(View, { style: items1, pointerEvents: "box-only" }), , ];
   const items3 = [tmp.container, ];
@@ -75,6 +74,6 @@ const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   obj[0] = items2;
   return callback2(closure_8, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");
 
 export default memoResult;

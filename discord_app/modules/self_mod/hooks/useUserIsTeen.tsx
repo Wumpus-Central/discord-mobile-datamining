@@ -2,10 +2,10 @@
 
 // Module 8152 (useUserIsTeen)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/self_mod/hooks/useUserIsTeen.tsx");
 
 export const useUserIsTeen = function useUserIsTeen() {
   const items = [closure_2];

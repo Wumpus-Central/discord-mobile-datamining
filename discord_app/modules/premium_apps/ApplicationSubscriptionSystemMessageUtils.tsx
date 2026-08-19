@@ -1,10 +1,10 @@
 // === Module 8214: getApplicationSubscriptionSystemMessageASTContent ===
 
 // Module 8214 (getApplicationSubscriptionSystemMessageASTContent)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = set.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
 
 export const getApplicationSubscriptionSystemMessageASTContent = function getApplicationSubscriptionSystemMessageASTContent(arg0) {
   ({ application, username, usernameOnClick } = arg0);

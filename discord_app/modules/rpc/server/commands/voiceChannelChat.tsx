@@ -1,7 +1,7 @@
 // === Module 13878: ? ===
 
 // Module 13878
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
 import prototypeDefault from "prototype" /* 8752 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
@@ -12,8 +12,8 @@ const RPCErrors = ME.RPCErrors;
 let obj = {
   scope: RPC_SCOPE_CONFIG.RPC_LOCAL_SCOPE,
   validation(boolean) {
-    let obj = createRpcJoiSchemaObjectDefault(boolean);
-    obj = { open: boolean.boolean() };
+    createRpcJoiSchemaObjectDefault(boolean);
+    const obj = { open: boolean.boolean() };
     return obj.keys(obj);
   },
   handler(args) {
@@ -31,6 +31,6 @@ let obj = {
     }
   }
 };
-let result = set.fileFinishedImporting("modules/rpc/server/commands/voiceChannelChat.tsx");
+let result = obj132.fileFinishedImporting("modules/rpc/server/commands/voiceChannelChat.tsx");
 
 export default { [ME.RPCCommands.TOGGLE_VOICE_CHANNEL_CHAT]: obj };

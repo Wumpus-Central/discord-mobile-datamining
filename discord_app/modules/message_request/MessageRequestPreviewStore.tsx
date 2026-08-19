@@ -4,12 +4,11 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
-import closure_3 from "processChannel" /* 4799 */;
-import closure_4 from "processChannel" /* 4800 */;
-import set from "set" /* 2 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import processChannel from "processChannel" /* 4799 */;
+import processChannel2 from "processChannel" /* 4800 */;
 
-require = arg1;
+require = fn;
 function isMessagePreviewEnabledForChannel(id) {
   let isMessageRequestResult = closure_3.isMessageRequest(id);
   if (!isMessageRequestResult) {
@@ -78,12 +77,8 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;
-      let tmp5 = isMessagePreviewEnabledForChannel;
       if (!isMessagePreviewEnabledForChannel(nextResult.id)) {
-        let tmp6 = set;
-        let tmp7 = nextResult;
         let deleteResult = set.delete(tmp4.id);
-        let tmp9 = closure_5;
         let id = tmp4.id;
         delete tmp2[tmp];
       }
@@ -136,7 +131,6 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
           const merged = Object.assign(tmp2);
           obj.message = createMinimalMessageRecord.updateMessageRecord(tmp2.message, message.message);
           dependencyMap[channel_id] = obj;
-          const obj2 = createMinimalMessageRecord;
         }
         tmp3 = tmp4;
       }
@@ -157,11 +151,10 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
   },
   LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function handleLoadMessageRequestsSupplementalDataSuccess(supplementalData) {
     supplementalData = supplementalData.supplementalData;
-    set = undefined;
     const items = [...supplementalData.requestedChannelIds];
     set = new Set(items);
-    const item = supplementalData.forEach((channel_id) => {
-      ({ channel_id, message_preview } = channel_id);
+    const item = supplementalData.forEach((item, index) => {
+      ({ channel_id, message_preview } = item);
       let isMessageRequestResult = closure_1_3.isMessageRequest(channel_id);
       if (!isMessageRequestResult) {
         isMessageRequestResult = closure_1_4.isSpam(channel_id);
@@ -170,7 +163,7 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
         if (null == message_preview) {
           let messageRecord = null;
           if (null != message_preview) {
-            let obj = set(closure_1_1[3]);
+            let obj = set(dependencyMap[3]);
             messageRecord = obj.createMessageRecord(message_preview);
           }
           obj = { loaded: true, error: null, message: null };
@@ -184,31 +177,31 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(dispatcherDefa
           }
         }
       }
-      set.delete(channel_id.channel_id);
+      set.delete(item.channel_id);
     });
     const arr = Array.from(set);
     while (tmp4 !== undefined) {
-      let tmp6 = storeMessagePreview;
       let tmp7 = storeMessagePreview(tmp5, null);
       continue;
     }
+    tmp4 = Array.from(set)[Symbol.iterator]();
   },
   LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: function handleLoadMessageRequestsSupplementalDataError(requestedChannelIds) {
     requestedChannelIds = requestedChannelIds.requestedChannelIds;
-    const item = requestedChannelIds.forEach((id) => {
-      let isMessageRequestResult = messageRequest.isMessageRequest(id);
+    const item = requestedChannelIds.forEach((item, index) => {
+      let isMessageRequestResult = messageRequest.isMessageRequest(item);
       if (!isMessageRequestResult) {
-        isMessageRequestResult = spam.isSpam(id);
+        isMessageRequestResult = spam.isSpam(item);
       }
       if (isMessageRequestResult) {
         const obj = { loaded: true, error: null, message: null };
         obj[1] = true;
         obj[2] = null;
-        closure_5[id] = obj;
+        closure_5[item] = obj;
       }
     });
   }
 });
-const result = set.fileFinishedImporting("modules/message_request/MessageRequestPreviewStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/message_request/MessageRequestPreviewStore.tsx");
 
 export default messageRequestPreviewStore;

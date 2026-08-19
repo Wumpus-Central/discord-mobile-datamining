@@ -5,19 +5,18 @@ import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 10861 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
-createCacheKey = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: null };
-createCacheKey = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+const createCacheKey = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 createCacheKey[2] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
 
 export default function PublishModal(channelId) {
   const tmp = callback2();
@@ -56,10 +55,10 @@ export default function PublishModal(channelId) {
       }
       obj1 = { numGuildsFollowing: null };
       obj1[0] = num2;
-      obj[1] = intl.format(tmp11(1236).t.GCGrNP, obj1);
+      obj[1] = intl.format(getSystemLocale.t.GCGrNP, obj1);
       let tmp12 = obj;
     } else {
-      obj[1] = intl.string(tmp11(1236).t["8FpqOs"]);
+      obj[1] = intl.string(getSystemLocale.t["8FpqOs"]);
       tmp12 = obj;
     }
     obj[1] = jsx(Button.LegacyText, tmp12);

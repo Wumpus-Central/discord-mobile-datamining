@@ -4,22 +4,21 @@
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9941 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createNativeStackNavigator.createNativeStackNavigator();
-createNativeStackNavigator = { container: null, header: null };
 createNativeStackNavigator = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createNativeStackNavigator[0] = createNativeStackNavigator;
-createCacheKey = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
+const createCacheKey = { borderBottomWidth: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 createNativeStackNavigator[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/MessageRequestsNavigator.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/MessageRequestsNavigator.tsx");
 
 export default function MessageRequestsNavigator() {
   const tmp = callback3();
@@ -28,8 +27,7 @@ export default function MessageRequestsNavigator() {
   importDefault = obj.useAccessibilityNativeStackOptions();
   const layoutEffect = React.useLayoutEffect(() => lib(5066).trackAppUIViewed(), []);
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: items, children: null };
-  items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  const items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj = {
     screenOptions(navigation) {
       const obj = {
@@ -41,7 +39,7 @@ export default function MessageRequestsNavigator() {
           return callback2(callback(table[9]).GenericHeaderTitle, { title: children.children });
         },
         headerTitleAlign: "center",
-        headerLeft: lib(closure_1_2[9]).getRenderModalCloseImage(navigation.navigation)
+        headerLeft: lib(dependencyMap[9]).getRenderModalCloseImage(navigation.navigation)
       };
       let merged = Object.assign(closure_1);
       return obj;

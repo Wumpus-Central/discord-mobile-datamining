@@ -1,19 +1,19 @@
 // === Module 11431: MAX_MESSAGES_ALLOWED_FOR_GREETING ===
 
 // Module 11431 (MAX_MESSAGES_ALLOWED_FOR_GREETING)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
-import set2 from "set" /* 1398 */;
-import closure_3 from "processChannel" /* 4799 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
-import closure_5 from "markAllUserIdListsStale" /* 4030 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import set from "set" /* 1398 */;
+import processChannel from "processChannel" /* 4799 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
 let useRef = noop.useRef;
 ({ RelationshipTypes: error, UserFlags: closure_8 } = ME);
-const ChannelFlags = set2.ChannelFlags;
-let result = set.fileFinishedImporting("modules/messages/useShowConvoStarterInDM.tsx");
+const ChannelFlags = set.ChannelFlags;
+let result = obj132.fileFinishedImporting("modules/messages/useShowConvoStarterInDM.tsx");
 
 export const MAX_MESSAGES_ALLOWED_FOR_GREETING = 25;
 export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel) {
@@ -23,7 +23,7 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
   let tmp = channel.isDM() && !channel.isSystemDM();
   if (tmp) {
     const rawRecipients = channel.rawRecipients;
-    tmp = !rawRecipients.some((bot) => bot.bot);
+    tmp = !rawRecipients.some((item, index) => item.bot);
   }
   closure_3 = tmp;
   let recipientId = null;
@@ -38,28 +38,28 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
   return _require(589).useStateFromStores(items, () => {
     if (ref2.current !== id.id) {
       ref.current = false;
-      tmp.current = tmp2.id;
+      tmp.current = id.id;
     }
     if (null != strangerDangerWarning) {
       return false;
     } else if (messageRequest) {
-      if (messageRequest.isMessageRequest(tmp2.id)) {
+      if (messageRequest.isMessageRequest(id.id)) {
         return false;
       } else {
         if (null != recipientId) {
-          if (strangerDangerWarning.getRelationshipType(tmp5) === closure_1_7.BLOCKED) {
+          if (strangerDangerWarning.getRelationshipType(recipientId) === closure_1_7.BLOCKED) {
             return false;
           }
         }
         if (null != recipientId) {
-          const user = hasFlagResult.getUser(tmp5);
+          const user = hasFlagResult.getUser(recipientId);
           if (null != user) {
             if (user.hasFlag(closure_1_8.PROVISIONAL_ACCOUNT)) {
               return false;
             }
           }
         }
-        const messages = recipientId.getMessages(tmp2.id);
+        const messages = recipientId.getMessages(id.id);
         const hasMoreBefore = messages.hasMoreBefore;
         let tmp10 = !hasMoreBefore;
         if (!hasMoreBefore) {
@@ -69,7 +69,7 @@ export const useShowConvoStarterInDM = function useShowConvoStarterInDM(channel)
           tmp10 = messages.length < 25;
         }
         let current = messages.ready;
-        const result = recipientId.hasCurrentUserSentWaveBlockingMessage(tmp2.id);
+        const result = recipientId.hasCurrentUserSentWaveBlockingMessage(id.id);
         if (!current) {
           current = ref.current;
         }

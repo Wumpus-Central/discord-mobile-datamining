@@ -1,9 +1,9 @@
 // === Module 7308: VoiceChannelEffectAnimationType ===
 
 // Module 7308 (VoiceChannelEffectAnimationType)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsConstants.tsx");
 
 export const VoiceChannelEffectAnimationType = { PREMIUM: 0, [0]: "PREMIUM", BASIC: 1, [1]: "BASIC" };
 export const EMOJI_SIZE = 32;

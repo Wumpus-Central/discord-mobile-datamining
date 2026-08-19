@@ -4,16 +4,16 @@
 import ThemesDefault from "Themes" /* 712 */;
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
 import timingNone from "timingNone" /* 4667 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "noop" /* 19 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-require = arg1;
+require = fn;
 function BountiesModalAdvertiserCtaContent(bounty) {
   bounty = bounty.bounty;
   const sourceQuestContent = bounty.sourceQuestContent;
@@ -41,9 +41,9 @@ function BountiesModalAdvertiserCtaContent(bounty) {
   items[2] = sourceQuestContent;
   items[3] = getQuestImpressionId;
   callback = React.useCallback((content) => {
-    let obj = bounty(getQuestImpressionId[15]);
-    obj = { adContentId: bounty.id, adCreativeType: bounty(getQuestImpressionId[16]).AdCreativeType.BOUNTY, cta: bounty.cta };
-    obj = { content, ctaContent: bounty(getQuestImpressionId[17]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
+    bounty(getQuestImpressionId[15]);
+    { adContentId: bounty.id, adCreativeType: bounty(getQuestImpressionId[16]).AdCreativeType.BOUNTY, cta: bounty.cta };
+    const obj = { content, ctaContent: bounty(getQuestImpressionId[17]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
     const result = obj.openAdGameLinkDirectly(obj, obj);
   }, items);
   const items1 = [callback];
@@ -71,8 +71,6 @@ function BountiesModalAdvertiserCtaContent(bounty) {
   obj5[1] = items6;
   items5[1] = callback3(closure_7, obj5);
   const obj3 = { style: tmp.ctaLogoContainer, children: callback2(sourceQuestContent(getQuestImpressionId[20]), obj4) };
-  const obj6 = { lineClamp: 2, variant: "text-sm/semibold", color: "text-default", children: bountyCtaInfo.label };
-  const obj7 = { variant: "text-xs/medium", color: "text-default", children: bountyCtaInfo.subtext };
   items5[2] = callback2(closure_7, { accessible: false, importantForAccessibility: "no-hide-descendants", children: callback2(bounty(getQuestImpressionId[22]).Button, obj9) });
   obj2[3] = items5;
   obj1.children = callback3(bounty(getQuestImpressionId[19]).BackgroundBlurView, obj2);
@@ -84,8 +82,7 @@ let closure_3 = ["style"];
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = importDefaultResult.createAnimatedComponent(Pressable);
 let closure_13 = createCacheKey.createStyles(() => {
-  let obj = { outerContainer: null, ctaPressable: null, cta: null, ctaLogoContainer: null, ctaLogo: null, ctaInfo: null };
-  obj = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center" };
+  let obj = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center" };
   obj[0] = obj;
   obj = {};
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
@@ -96,14 +93,13 @@ let closure_13 = createCacheKey.createStyles(() => {
   obj.overflow = "hidden";
   obj[1] = obj;
   obj[2] = { flexDirection: "row", alignItems: "center", paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12 };
-  obj1 = { flexDirection: "row", alignItems: "center", paddingLeft: ThemesDefault.space.PX_12, paddingRight: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12 };
   obj[3] = { width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md, overflow: "hidden" };
   const merged1 = Object.assign(absoluteFillObject.absoluteFillObject);
   obj[4] = {};
   obj[5] = { flex: 1, justifyContent: "center", gap: 2 };
   return obj;
 });
-let fn = function n(value) {
+fn = function n(value) {
   const obj = { opacity: CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, timingNone.timingStandard, "respect-motion-settings") };
   return obj;
 };
@@ -120,28 +116,27 @@ fn2.__closure = obj;
 fn2.__workletHash = 15850601331978;
 fn2.__initData = { code: "function BountiesModalAdvertiserCtaTsx2(visible,cleanUp){const{withTiming,timingFast}=this.__closure;return{opacity:withTiming(visible,timingFast,'respect-motion-settings',cleanUp)};}" };
 let closure_17 = { code: "function BountiesModalAdvertiserCtaTsx3(){const{withTiming,interpolate,visibility,visible,timingStandard,timingFast}=this.__closure;return{transform:[{translateY:withTiming(interpolate(visibility,[0,1],[8,0]),visible?timingStandard:timingFast)}]};}" };
-let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalAdvertiserCta.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalAdvertiserCta.tsx");
 
 export default function BountiesModalAdvertiserCta(visible) {
   visible = visible.visible;
   let merged = Object.assign(visible, Object.create(null));
-  let num;
   let animatedStyle;
   let obj = visible(animatedStyle[23]);
   const isBountiesModalTransitionsRefactorEnabled = obj.useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
   obj1 = visible(animatedStyle[24]);
   let items = [closure_8];
-  num = 0;
+  let num = 0;
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (visible) {
     num = 1;
   }
   let tmp2Result = tmp2(tmp3[6]);
   fn = function s() {
-    let obj = visible(animatedStyle[9]);
+    visible(animatedStyle[9]);
     const obj2 = visible(animatedStyle[6]);
     const tmp2 = visible(animatedStyle[10]);
-    obj = { transform: null };
+    let obj = { transform: null };
     obj = { translateY: obj.withTiming(visible(animatedStyle[6]).interpolate(num, [0, 1], [8, 0]), visible ? tmp2.timingStandard : tmp2.timingFast) };
     const items = [obj];
     obj[0] = items;
@@ -158,7 +153,7 @@ export default function BountiesModalAdvertiserCta(visible) {
     const merged = Object.assign(arg0);
     obj.opacityStyle = opacityStyle;
     obj.transformStyle = animatedStyle;
-    return closure_1_10(closure_1_16, obj);
+    return closure_1_10(BountiesModalAdvertiserCtaContent, obj);
   }, items1);
   tmp2Result = tmp2(tmp3[25]);
   obj = { visible, entranceTiming: tmp2(tmp3[10]).timingStandard, exitTiming: tmp2(tmp3[10]).timingFast };
@@ -176,7 +171,6 @@ export default function BountiesModalAdvertiserCta(visible) {
     obj1[3] = fn2;
     obj1[4] = callback;
     shouldRender = callback2(num(tmp3[26]), obj1);
-    const tmp15 = callback2;
     const tmp17 = num(tmp3[26]);
   } else if (shouldRender) {
     let obj2 = {};

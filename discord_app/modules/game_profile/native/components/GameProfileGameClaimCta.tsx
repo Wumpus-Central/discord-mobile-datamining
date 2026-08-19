@@ -1,13 +1,13 @@
 // === Module 12030: GameProfileGameClaimCta ===
 
 // Module 12030 (GameProfileGameClaimCta)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 import { RelativeMarketingURLs } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
 
 export default function GameProfileGameClaimCta(trackAction) {
   trackAction = trackAction.trackAction;
@@ -68,7 +68,7 @@ export default function GameProfileGameClaimCta(trackAction) {
     }
   }), items);
   if (linkedApplications != null) {
-    someResult = linkedApplications.some((type) => type.type === trackAction(table[6]).GameLinkTypes.OFFICIAL);
+    someResult = linkedApplications.some((item, index) => item.type === trackAction(table[6]).GameLinkTypes.OFFICIAL);
   }
   if (someResult == null) {
     let obj = { variant: "secondary", size: "md", text: null, onPress: null };

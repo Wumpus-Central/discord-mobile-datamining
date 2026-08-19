@@ -2,16 +2,15 @@
 
 // Module 13364 (ShareEmbed)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
-createCacheKey = { container: null, containerRevamp: null, thumbnail: null, contentContainer: null, authorView: null, authorThumbnail: null, loadingSpinner: null };
-createCacheKey = { flexDirection: "row", height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+const createCacheKey = { flexDirection: "row", height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderWidth: 0 };
 createCacheKey[2] = { width: 80 };
@@ -20,26 +19,23 @@ createCacheKey[4] = { flexDirection: "row", alignItems: "center", marginBottom: 
 createCacheKey[5] = { height: 16, width: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 4 };
 createCacheKey[6] = { flex: 1 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: 16, width: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 4 };
-const result = require("set").fileFinishedImporting("modules/share/native/ShareEmbed.tsx");
+const result = require("obj132").fileFinishedImporting("modules/share/native/ShareEmbed.tsx");
 
 export default function ShareEmbed(embed) {
   embed = embed.embed;
   const isLoadingEmbed = embed.isLoadingEmbed;
-  let React;
-  let memo3;
   let tmp = callback();
-  React = tmp;
+  const React = tmp;
   let items = [embed];
   const memo = React.useMemo(() => {
     if (null != embed) {
-      const thumbnail = tmp.thumbnail;
+      const thumbnail = embed.thumbnail;
       let url;
       if (thumbnail != null) {
         url = thumbnail.url;
       }
       if (url == null) {
-        const image = tmp.image;
+        const image = embed.image;
         let url1;
         if (image != null) {
           url1 = image.url;
@@ -96,7 +92,7 @@ export default function ShareEmbed(embed) {
       return closure_1_6(closure_1_4, obj);
     }
   }, items2);
-  memo3 = React.useMemo(() => {
+  const memo3 = React.useMemo(() => {
     let title;
     if (embed != null) {
       title = embed.title;
@@ -143,7 +139,7 @@ export default function ShareEmbed(embed) {
         obj = { style: null, source: null, resizeMode: "cover" };
         obj[0] = tmp.thumbnail;
         obj[1] = memo;
-        tmp9Result = tmp9(memo3, obj);
+        tmp9Result = callback(memo3, obj);
       }
       obj = { children: null };
       const items6 = [tmp9Result, ];
@@ -151,13 +147,12 @@ export default function ShareEmbed(embed) {
       obj1[0] = tmp.contentContainer;
       const items7 = [memo2, memo3, memo4, tmp7];
       obj1[1] = items7;
-      items6[1] = closure_6(tmp10, obj1);
+      items6[1] = callback2(closure_4, obj1);
       obj[0] = items6;
-      memo1 = tmp12(closure_7, obj);
-      const tmp13 = closure_7;
+      memo1 = callback2(closure_7, obj);
     }
     obj[1] = memo1;
-    tmp9Result = tmp9(tmp10, obj);
+    tmp9Result = callback(closure_4, obj);
   } else {
     tmp9Result = null;
   }

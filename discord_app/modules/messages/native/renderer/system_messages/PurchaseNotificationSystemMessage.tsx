@@ -1,11 +1,11 @@
 // === Module 8242: createPurchaseNotificationSystemMessage ===
 
 // Module 8242 (createPurchaseNotificationSystemMessage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
 import createGuildProductPurchaseSystemMessage from "createGuildProductPurchaseSystemMessage" /* 8243 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
 
 export const createPurchaseNotificationSystemMessage = function createPurchaseNotificationSystemMessage(message) {
   const purchaseNotification = message.message.purchaseNotification;

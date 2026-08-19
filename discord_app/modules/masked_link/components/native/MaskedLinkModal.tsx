@@ -1,7 +1,7 @@
 // === Module 12424: MaskedLinkModal ===
 
 // Module 12424 (MaskedLinkModal)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
@@ -9,11 +9,10 @@ import createCacheKey from "createCacheKey" /* 4661 */;
 
 ({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let obj = { linkCalloutContainer: { maxHeight: 250 }, emphasis: null };
-obj = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[1] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/masked_link/components/native/MaskedLinkModal.tsx");
+const result = obj132.fileFinishedImporting("modules/masked_link/components/native/MaskedLinkModal.tsx");
 
 export default function MaskedLinkModal(isProtocol) {
   isProtocol = isProtocol.isProtocol;
@@ -47,13 +46,13 @@ export default function MaskedLinkModal(isProtocol) {
   }
   obj1 = { children: null };
   obj[2] = stringResult;
-  const items = [closure_4(shouldTrustUrl(setShouldTrustUrl[5]).AlertActionButton, obj, "confirm"), ];
+  const items = [callback(shouldTrustUrl(setShouldTrustUrl[5]).AlertActionButton, obj, "confirm"), ];
   const obj2 = { onPress: handleCancel, variant: "secondary", text: null };
   const intl4 = tmp2(tmp3[6]).intl;
   obj2[2] = intl4.string(shouldTrustUrl(setShouldTrustUrl[6]).t["/g10LC"]);
-  items[1] = closure_4(shouldTrustUrl(setShouldTrustUrl[5]).AlertActionButton, obj2, "cancel");
+  items[1] = callback(shouldTrustUrl(setShouldTrustUrl[5]).AlertActionButton, obj2, "cancel");
   obj1[0] = items;
-  obj[2] = closure_5(shouldTrustUrl(setShouldTrustUrl[7]).AlertActions, obj1);
+  obj[2] = callback2(shouldTrustUrl(setShouldTrustUrl[7]).AlertActions, obj1);
   const obj3 = { style: tmp.emphasis, children: null };
   const obj4 = { style: tmp.linkCalloutContainer, children: null };
   let str = "text-md/normal";
@@ -68,7 +67,7 @@ export default function MaskedLinkModal(isProtocol) {
   obj5[1] = str2;
   const items1 = [protocol, authorityPrefix];
   obj5[2] = items1;
-  const items2 = [closure_5(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj5), , ];
+  const items2 = [callback2(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj5), , ];
   let str3 = "text-md/semibold";
   if (isProtocol) {
     str3 = "text-md/normal";
@@ -82,13 +81,13 @@ export default function MaskedLinkModal(isProtocol) {
   const obj8 = { variant: "text-md/normal", children: null };
   obj6[1] = str4;
   obj6[2] = hostname;
-  items2[1] = closure_4(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj6);
-  items2[2] = closure_4(shouldTrustUrl(setShouldTrustUrl[10]).Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl });
+  items2[1] = callback(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj6);
+  items2[2] = callback(shouldTrustUrl(setShouldTrustUrl[10]).Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl });
   obj8[1] = items2;
-  obj4[1] = closure_5(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj8);
-  obj7[2] = closure_4(closure_3, obj4);
-  obj3[1] = closure_4(shouldTrustUrl(setShouldTrustUrl[9]).FormRow, obj7);
-  const items3 = [closure_4(closure_2, obj3), ];
+  obj4[1] = callback2(shouldTrustUrl(setShouldTrustUrl[10]).Text, obj8);
+  obj7[2] = callback(closure_3, obj4);
+  obj3[1] = callback(shouldTrustUrl(setShouldTrustUrl[9]).FormRow, obj7);
+  const items3 = [callback(closure_2, obj3), ];
   const obj9 = {
     start: true,
     end: true,
@@ -111,9 +110,9 @@ export default function MaskedLinkModal(isProtocol) {
     formatResult1 = format(t2.ZgXDsI, obj11);
   }
   const obj12 = { spacing: 16, children: null };
-  obj9[4] = closure_4(shouldTrustUrl(setShouldTrustUrl[10]).Text, { variant: "text-md/medium", children: formatResult1 });
-  items3[1] = closure_4(shouldTrustUrl(setShouldTrustUrl[9]).FormCheckboxRow, obj9);
+  obj9[4] = callback(shouldTrustUrl(setShouldTrustUrl[10]).Text, { variant: "text-md/medium", children: formatResult1 });
+  items3[1] = callback(shouldTrustUrl(setShouldTrustUrl[9]).FormCheckboxRow, obj9);
   obj12[1] = items3;
-  obj[3] = closure_5(shouldTrustUrl(setShouldTrustUrl[8]).Stack, obj12);
-  return closure_4(shouldTrustUrl(setShouldTrustUrl[5]).AlertModal, obj);
+  obj[3] = callback2(shouldTrustUrl(setShouldTrustUrl[8]).Stack, obj12);
+  return callback(shouldTrustUrl(setShouldTrustUrl[5]).AlertModal, obj);
 };

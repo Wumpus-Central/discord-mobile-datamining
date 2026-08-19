@@ -1,7 +1,7 @@
 // === Module 17109: AccountLinkManagerNative ===
 
 // Module 17109 (AccountLinkManagerNative)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _claimIncentivizedAccountLinkingReward from "_claimIncentivizedAccountLinkingReward" /* 16158 */;
 
 const AccountLinkManager = _claimIncentivizedAccountLinkingReward.AccountLinkManager;
@@ -44,6 +44,6 @@ class AccountLinkManagerNative extends AccountLinkManager {
 }
 let closure_2 = AccountLinkManagerNative.prototype;
 const accountLinkManagerNative = new AccountLinkManagerNative();
-const result = set.fileFinishedImporting("modules/application_account_linking/native/AccountLinkManagerNative.tsx");
+const result = obj132.fileFinishedImporting("modules/application_account_linking/native/AccountLinkManagerNative.tsx");
 
 export default accountLinkManagerNative;

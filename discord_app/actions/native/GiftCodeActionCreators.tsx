@@ -3,10 +3,10 @@
 // Module 10644 (redeemGiftCode)
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function redeemGiftCode(arg0) {
   const self = this;
   const apply = _redeemGiftCode.apply;
@@ -190,13 +190,12 @@ function _redeemGiftCode() {
   return applyArgumentsResult;
 }
 function openGiftCodeRedeemModal(code) {
-  let obj = _modDef5260;
-  obj = { code };
+  const obj = { code };
   obj.pushLazy(asyncRequireImpl(10645, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 ({ Endpoints: c4, AnalyticEvents: c5 } = ME);
 let closure_6 = Object.freeze({});
-const result = require("set").fileFinishedImporting("actions/native/GiftCodeActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("actions/native/GiftCodeActionCreators.tsx");
 
 export default { redeemGiftCode, openGiftCodeRedeemModal };
 export { redeemGiftCode };

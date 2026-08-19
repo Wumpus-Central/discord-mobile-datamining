@@ -1,20 +1,19 @@
 // === Module 17115: ? ===
 
 // Module 17115
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import setDefault from "set" /* 4827 */;
+import obj132Default from "obj132" /* 4827 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let c4 = false;
-const result = set.fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
 
 export default {
   prepareUpdate(versionRequired) {
     if (versionRequired) {
-      let obj = setDefault;
-      obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+      const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       const intl = getSystemLocale.intl;
       obj[0] = intl.string(getSystemLocale.t.GQZdmI);
       const intl2 = getSystemLocale.intl;

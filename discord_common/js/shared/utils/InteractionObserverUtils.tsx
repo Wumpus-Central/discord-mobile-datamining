@@ -1,29 +1,29 @@
 // === Module 7450: __handleIntersections ===
 
 // Module 7450 (__handleIntersections)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 function __handleIntersections(arr) {
   closure_0 = arg1;
-  const item = arr.forEach((target) => {
-    let value = closure_1_1.get(closure_0);
-    value = undefined;
+  const item = arr.forEach((item, index) => {
+    weakMap1.get(closure_0);
+    let value;
     if (value != null) {
-      value = value.get(target.target);
+      value = value.get(item.target);
     }
     if (null != value) {
       const call = value.call;
       if (typeof call === "unknown") {
-        value(target);
+        value(item);
       } else {
-        call(null, target);
+        call(null, item);
       }
     }
   });
 }
 let weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
-let result = set.fileFinishedImporting("../discord_common/js/shared/utils/InteractionObserverUtils.tsx");
+let result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/InteractionObserverUtils.tsx");
 
 export const getIntersectionObserver = function getIntersectionObserver(current) {
   let value = weakMap.get(current);

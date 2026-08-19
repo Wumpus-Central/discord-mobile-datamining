@@ -3,13 +3,13 @@
 // Module 17055 (getVoiceChannelErrorContext)
 import isStreamKey from "isStreamKey" /* 4531 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
-import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "handleConnectionOpen" /* 1979 */;
-import closure_5 from "initialize" /* 4558 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import initialize from "initialize" /* 4558 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorContext.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/errors/av_errors/AVErrorContext.tsx");
 
 export const getVoiceChannelErrorContext = function getVoiceChannelErrorContext() {
   voiceChannelId = voiceChannelId.getVoiceChannelId();
@@ -25,14 +25,14 @@ export const getVoiceChannelErrorContext = function getVoiceChannelErrorContext(
     name = tmp4.name;
   }
   obj = { videoDeviceName: name, audioInputDeviceName: null, audioOutputDeviceName: null };
-  const inputDevices = obj3.getInputDevices();
+  const inputDevices = store.getInputDevices();
   const tmp7 = inputDevices[store.getInputDeviceId(store)];
   let name1;
   if (tmp7 != null) {
     name1 = tmp7.name;
   }
   obj[1] = name1;
-  const outputDevices = obj3.getOutputDevices();
+  const outputDevices = store.getOutputDevices();
   const tmp10 = outputDevices[store.getOutputDeviceId(store)];
   let name2;
   if (tmp10 != null) {
@@ -67,14 +67,14 @@ export const getStreamErrorContext = function getStreamErrorContext(streamKey) {
     name = tmp7.name;
   }
   obj = { videoDeviceName: name, audioInputDeviceName: null, audioOutputDeviceName: null };
-  const inputDevices = obj4.getInputDevices();
+  const inputDevices = store.getInputDevices();
   const tmp10 = inputDevices[store.getInputDeviceId(store)];
   let name1;
   if (tmp10 != null) {
     name1 = tmp10.name;
   }
   obj[1] = name1;
-  const outputDevices = obj4.getOutputDevices();
+  const outputDevices = store.getOutputDevices();
   const tmp13 = outputDevices[store.getOutputDeviceId(store)];
   let name2;
   if (tmp13 != null) {

@@ -1,7 +1,7 @@
 // === Module 12196: applicationWidgetStaticFieldConfigSchema ===
 
 // Module 12196 (applicationWidgetStaticFieldConfigSchema)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 12194 */;
 import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 12195 */;
 import _mod12197 from "module_12197" /* 12197 */;
@@ -43,7 +43,7 @@ const objectResult2 = z12.object(obj1);
 const z16 = _mod12197.z;
 const z17 = _mod12197.z;
 const partialRecordResult = z16.partialRecord(z17.enum(ApplicationWidgetConfigSurface.ApplicationWidgetConfigSurface), objectResult2);
-const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/schemas.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/schemas.tsx");
 
 export const applicationWidgetStaticFieldConfigSchema = objectResult;
 export const applicationWidgetFieldConfigSchema = objectResult;

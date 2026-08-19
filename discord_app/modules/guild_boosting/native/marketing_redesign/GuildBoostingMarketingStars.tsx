@@ -6,10 +6,10 @@ import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingStars.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingStars.tsx");
 
 export default function StarsBackgroundSvg(arg0) {
   const obj = { viewBox: "0 0 336 129", fill: "none", preserveAspectRatio: "xMidYMid" };

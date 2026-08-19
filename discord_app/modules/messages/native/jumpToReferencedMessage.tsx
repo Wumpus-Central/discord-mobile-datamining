@@ -1,10 +1,10 @@
 // === Module 11116: jumpToReferencedMessage ===
 
 // Module 11116 (jumpToReferencedMessage)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import trackInviteDefault from "trackInvite" /* 7427 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
 
 export default function jumpToReferencedMessage(messageReference) {
   messageReference = messageReference.messageReference;
@@ -13,10 +13,10 @@ export default function jumpToReferencedMessage(messageReference) {
     channel_id = messageReference.channel_id;
   }
   if (tmp2) {
-    let obj = trackInviteDefault;
-    obj = { channelId: null, messageId: null, flash: true, returnMessageId: null };
+    const obj = { channelId: null, messageId: null, flash: true, returnMessageId: null };
     ({ channel_id: obj2[0], message_id: obj2[1] } = messageReference);
     obj[3] = messageReference.id;
     obj.jumpToMessage(obj);
   }
+  tmp2 = null != channel_id && null != messageReference.message_id;
 };

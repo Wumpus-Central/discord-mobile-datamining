@@ -1,10 +1,10 @@
 // === Module 12414: CustomLinkType ===
 
 // Module 12414 (CustomLinkType)
-import closure_0 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 let obj = { MANAGED: 0, [0]: "MANAGED", QUICK: 1, [1]: "QUICK" };
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx");
 
 export const CustomLinkType = obj;
 export const decodeCustomActivityLink = function decodeCustomActivityLink(link_id) {

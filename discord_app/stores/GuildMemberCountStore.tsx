@@ -45,12 +45,11 @@ const guildMemberCountStore = new GuildMemberCountStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
     closure_0 = {};
-    const item = guilds.forEach((id) => {
-      closure_0[id.id] = id.member_count;
+    const item = guilds.forEach((item, index) => {
+      closure_0[item.id] = item.member_count;
     });
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(guildMemberCounts) {
-    const obj = {};
     const merged = Object.assign(guildMemberCounts.guildMemberCounts);
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
@@ -92,6 +91,6 @@ const guildMemberCountStore = new GuildMemberCountStore(dispatcherDefault, {
     return false;
   }
 });
-const result = require("set").fileFinishedImporting("stores/GuildMemberCountStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/GuildMemberCountStore.tsx");
 
 export default guildMemberCountStore;

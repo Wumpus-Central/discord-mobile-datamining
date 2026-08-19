@@ -2,14 +2,14 @@
 
 // Module 15778 (jsx)
 import noopAll from "noop" /* 19 */;
-import setDefault from "set" /* 7190 */;
+import obj132Default from "obj132" /* 7190 */;
 import closure_2 from "module_9010" /* 9010 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
-let closure_4 = jsx(setDefault, { style: { flex: 1 } });
-const result = require("set").fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
+let closure_4 = jsx(obj132Default, { style: { flex: 1 } });
+const result = require("obj132").fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
 
 export default function AppFreezer(children) {
   let flag = children.manualFreeze;
@@ -24,7 +24,7 @@ export default function AppFreezer(children) {
   let freeze = callback((lockKeys) => {
     lockKeys = lockKeys.lockKeys;
     if (null != lockKeys) {
-      let someResult = lockKeys.some((arg0) => lockKeys.has(arg0));
+      let someResult = lockKeys.some((item, index) => lockKeys.has(item));
     } else {
       someResult = lockKeys.size > 0;
     }

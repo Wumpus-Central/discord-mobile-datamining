@@ -5,57 +5,60 @@ import applyDefault from "apply" /* 12 */;
 import clearAllDefault from "clearAll" /* 1220 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import WidgetType from "WidgetType" /* 5366 */;
+import items2 from "items" /* 5367 */;
+import convertClip from "convertClip" /* 5374 */;
+import isFieldEmpty from "isFieldEmpty" /* 5375 */;
+import toSubmission from "toSubmission" /* 5380 */;
 import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 5382 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "createdAt" /* 1930 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "sortActivity" /* 4559 */;
-import closure_8 from "insertUnsortedGuilds" /* 5078 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import createdAt from "createdAt" /* 1930 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import sortActivity from "sortActivity" /* 4559 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
 import { MAX_TIMEOUT_MS } from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function createUserWidgetFromServer(data) {
   const type = data.data.type;
   if (WidgetType.WidgetType.CURRENT_GAMES !== type) {
-    if (tmp(5366).WidgetType.FAVORITE_GAMES !== type) {
-      if (tmp(5366).WidgetType.PLAYED_GAMES !== type) {
-        if (tmp(5366).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-          if (tmp(5366).WidgetType.APPLICATION === type) {
+    if (WidgetType.WidgetType.FAVORITE_GAMES !== type) {
+      if (WidgetType.WidgetType.PLAYED_GAMES !== type) {
+        if (WidgetType.WidgetType.WANT_TO_PLAY_GAMES !== type) {
+          if (WidgetType.WidgetType.APPLICATION === type) {
             let obj = { id: null, applicationId: null };
             obj[0] = data.id;
             obj[1] = data.data.application_id;
-            const applicationWidget = new tmp(5380).ApplicationWidget(obj);
+            const applicationWidget = new toSubmission.ApplicationWidget(obj);
             return applicationWidget;
-          } else if (tmp(5366).WidgetType.PERSONAL === type) {
+          } else if (WidgetType.WidgetType.PERSONAL === type) {
             obj = { id: null, header: null, sections: null };
             obj[0] = data.id;
             const header = data.data.header;
             obj[1] = header;
-            obj[2] = tmp(5375).parsePersonalWidgetSections(data.data.sections);
-            const userProfilePersonalWidget = new tmp(5375).UserProfilePersonalWidget(obj);
+            obj[2] = isFieldEmpty.parsePersonalWidgetSections(data.data.sections);
+            const userProfilePersonalWidget = new isFieldEmpty.UserProfilePersonalWidget(obj);
             return userProfilePersonalWidget;
-          } else if (tmp(5366).WidgetType.CLIPS_GALLERY === type) {
+          } else if (WidgetType.WidgetType.CLIPS_GALLERY === type) {
             obj = { id: null, clips: null };
             obj[0] = data.id;
             const clips = data.data.clips;
-            const mapped = clips.map((id) => {
+            const mapped = clips.map((item, index) => {
               let tmp = null;
-              if (null != id.id) {
+              if (null != item.id) {
                 tmp = null;
-                if (null != id.file_id) {
+                if (null != item.file_id) {
                   const obj = { status: "saved", id: null, fileId: null, gameId: null, title: null, tags: null };
-                  ({ id: obj[1], file_id: obj[2], game_id: obj[3], title } = id);
+                  ({ id: obj[1], file_id: obj[2], game_id: obj[3], title } = item);
                   obj[4] = title;
-                  obj[5] = id.tags;
+                  obj[5] = item.tags;
                   tmp = obj;
                 }
               }
               return tmp;
             });
-            obj[1] = mapped.filter(tmp(1370).isNotNullish);
-            const clipsGalleryWidget = new tmp(5374).ClipsGalleryWidget(obj);
+            obj[1] = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+            const clipsGalleryWidget = new convertClip.ClipsGalleryWidget(obj);
             return clipsGalleryWidget;
           }
         }
@@ -63,39 +66,38 @@ function createUserWidgetFromServer(data) {
     }
   }
   const games = data.data.games;
-  const mapped1 = games.map((gameId) => ({ gameId: gameId.game_id, comment: gameId.comment, tags: gameId.tags }));
-  const obj5 = applyDefault;
+  const mapped1 = games.map((item, index) => ({ gameId: item.game_id, comment: item.comment, tags: item.tags }));
   const uniqByResult = applyDefault.uniqBy(mapped1, "gameId");
-  const baseGameWidget = new tmp(5367).BaseGameWidget({ id: data.id, type, games: applyDefault.uniqBy(mapped1, "gameId") });
+  const baseGameWidget = new items2.BaseGameWidget({ id: data.id, type, games: applyDefault.uniqBy(mapped1, "gameId") });
   return baseGameWidget;
 }
 function createUserWidgetFromSnapshot(type) {
   type = type.type;
   if (WidgetType.WidgetType.CURRENT_GAMES !== type) {
-    if (tmp(5366).WidgetType.FAVORITE_GAMES !== type) {
-      if (tmp(5366).WidgetType.PLAYED_GAMES !== type) {
-        if (tmp(5366).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-          if (tmp(5366).WidgetType.APPLICATION === type) {
+    if (WidgetType.WidgetType.FAVORITE_GAMES !== type) {
+      if (WidgetType.WidgetType.PLAYED_GAMES !== type) {
+        if (WidgetType.WidgetType.WANT_TO_PLAY_GAMES !== type) {
+          if (WidgetType.WidgetType.APPLICATION === type) {
             ({ id: id3, applicationId } = type);
             let obj = { id: null, applicationId: null };
             obj[0] = id3;
             obj[1] = applicationId;
-            const applicationWidget = new tmp(5380).ApplicationWidget(obj);
+            const applicationWidget = new toSubmission.ApplicationWidget(obj);
             return applicationWidget;
-          } else if (tmp(5366).WidgetType.PERSONAL === type) {
+          } else if (WidgetType.WidgetType.PERSONAL === type) {
             ({ id: id2, header, sections } = type);
             obj = { id: null, header: null, sections: null };
             obj[0] = id2;
             obj[1] = header;
             obj[2] = sections;
-            const userProfilePersonalWidget = new tmp(5375).UserProfilePersonalWidget(obj);
+            const userProfilePersonalWidget = new isFieldEmpty.UserProfilePersonalWidget(obj);
             return userProfilePersonalWidget;
-          } else if (tmp(5366).WidgetType.CLIPS_GALLERY === type) {
+          } else if (WidgetType.WidgetType.CLIPS_GALLERY === type) {
             ({ id, clips } = type);
             obj = { id: null, clips: null };
             obj[0] = id;
             obj[1] = clips;
-            const clipsGalleryWidget = new tmp(5374).ClipsGalleryWidget(obj);
+            const clipsGalleryWidget = new convertClip.ClipsGalleryWidget(obj);
             return clipsGalleryWidget;
           } else {
             const type2 = type.type;
@@ -105,7 +107,7 @@ function createUserWidgetFromSnapshot(type) {
     }
   }
   ({ id: id4, type: type3, games } = type);
-  const baseGameWidget = new tmp(5367).BaseGameWidget({ id: id4, type: type3, games });
+  const baseGameWidget = new items2.BaseGameWidget({ id: id4, type: type3, games });
   return baseGameWidget;
 }
 function checkUserProfileCollectiblesExpiration(id, guild_id) {
@@ -113,8 +115,8 @@ function checkUserProfileCollectiblesExpiration(id, guild_id) {
   closure_0 = id;
   closure_1 = guild_id;
   if (null != guild_id) {
-    let value = map2.get(value2);
-    value = undefined;
+    map2.get(value2);
+    let value;
     if (value != null) {
       value = value.get(guild_id);
     }
@@ -129,19 +131,19 @@ function checkUserProfileCollectiblesExpiration(id, guild_id) {
   if (null != collectibles) {
     const items = [];
     const collectibles1 = value1.collectibles;
-    const item = collectibles1.forEach((expiresAt) => {
-      if (null != expiresAt.expiresAt) {
-        expiresAt = expiresAt.expiresAt;
+    const item = collectibles1.forEach((item, index) => {
+      if (null != item.expiresAt) {
+        const expiresAt = item.expiresAt;
         const _Date = Date;
         const time = expiresAt.getTime();
         const diff = time - Date.now();
         if (diff <= 0) {
-          items.push(expiresAt);
+          items.push(item);
         } else {
           if (null == closure_1_15[id]) {
             const obj = {};
             obj[closure_1_10] = {};
-            tmp20[tmp21] = obj;
+            closure_1_15[id] = obj;
           }
           let tmp2 = closure_1;
           let tmp3 = closure_1;
@@ -153,38 +155,37 @@ function checkUserProfileCollectiblesExpiration(id, guild_id) {
             if (tmp2 == null) {
               tmp4 = closure_1_10;
             }
-            tmp20[tmp21][tmp4] = {};
+            closure_1_15[id][tmp4] = {};
           }
           let tmp5 = tmp2;
           if (tmp2 == null) {
             tmp5 = closure_1_10;
           }
-          if (null == closure_1_15[id][tmp5][expiresAt.skuId]) {
+          if (null == closure_1_15[id][tmp5][item.skuId]) {
             let tmp6 = tmp2;
             if (tmp2 == null) {
               tmp6 = closure_1_10;
             }
             const timeout = new id(value1[15]).Timeout();
-            tmp20[tmp21][tmp6][expiresAt.skuId] = timeout;
+            closure_1_15[id][tmp6][item.skuId] = timeout;
           }
           if (tmp2 == null) {
             tmp2 = closure_1_10;
           }
           const _Math = Math;
-          closure_1_15[id][tmp2][expiresAt.skuId].start(Math.min(closure_1_9, diff), () => {
+          closure_1_15[id][tmp2][item.skuId].start(Math.min(MAX_TIMEOUT_MS, diff), () => {
             closure_1_25(closure_0, closure_1);
           });
-          const obj2 = closure_1_15[id][tmp2][expiresAt.skuId];
         }
       }
     });
     if (0 !== items.length) {
       const collectibles2 = value1.collectibles;
-      value1.collectibles = collectibles2.filter((arg0) => !items.includes(arg0));
-      const item1 = items.forEach((type) => {
-        if (type.type === id(value1[16]).CollectiblesItemType.PROFILE_EFFECT) {
+      value1.collectibles = collectibles2.filter((item, index) => !items.includes(item));
+      const item1 = items.forEach((item, index) => {
+        if (item.type === id(value1[16]).CollectiblesItemType.PROFILE_EFFECT) {
           value1.profileEffect = undefined;
-        } else if (type.type === id(value1[16]).CollectiblesItemType.PROFILE_FRAME) {
+        } else if (item.type === id(value1[16]).CollectiblesItemType.PROFILE_FRAME) {
           value1.profileFrame = undefined;
         }
         if (closure_1_15[id] != null) {
@@ -193,7 +194,7 @@ function checkUserProfileCollectiblesExpiration(id, guild_id) {
             tmp8 = closure_1_10;
           }
           if (tmp7[tmp8] != null) {
-            const skuId = type.skuId;
+            const skuId = item.skuId;
             delete tmp2[tmp];
           }
         }
@@ -229,14 +230,13 @@ function handleMutualFriendsFetchFailure(userId) {
 function handleMutualFriendsFetchSuccess(userId) {
   set.delete(userId.userId);
   ({ userId, mutualFriends } = userId);
-  const mapped = applyDefault(mutualFriends).map((id) => {
-    let obj = { key: id.id, user: null, status: null };
-    obj = {};
-    const merged = Object.assign(id);
-    obj.collectibles = set(date1[17]).parseServerUserCollectibles(id.collectibles);
+  const mapped = applyDefault(mutualFriends).map((item, index) => {
+    const obj = {};
+    const merged = Object.assign(item);
+    obj.collectibles = set(date1[17]).parseServerUserCollectibles(item.collectibles);
     const obj3 = set(date1[17]);
     obj[1] = new closure_4(obj);
-    obj[2] = status.getStatus(id.id);
+    obj[2] = status.getStatus(item.id);
     return obj;
   });
   const arr = applyDefault(mutualFriends);
@@ -267,19 +267,19 @@ function handleProfileFetch(arg0) {
   if (null != userProfile.mutual_guilds) {
     set = {};
     const mutual_guilds = userProfile.mutual_guilds;
-    const item = mutual_guilds.forEach((id) => {
-      id = id.id;
+    const item = mutual_guilds.forEach((item, index) => {
+      const id = item.id;
       const guild = closure_1_6.getGuild(id);
       if (null != guild) {
         const obj = { guild: null, nick: null };
         obj[0] = guild;
-        obj[1] = id.nick;
+        obj[1] = item.nick;
         set[id] = obj;
       }
     });
     flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
-    const found = flattenedGuildIds.filter((arg0) => null != set[arg0]);
-    const result = map5.set(userProfile.user.id, found.map((arg0) => ({ guild: set[arg0].guild, nick: set[arg0].nick })));
+    const found = flattenedGuildIds.filter((item, index) => null != set[item]);
+    const result = map5.set(userProfile.user.id, found.map((item, index) => ({ guild: set[item].guild, nick: set[item].nick })));
   }
   if (null != userProfile.mutual_friends_count) {
     const mutual_friends_count = userProfile.mutual_friends_count;
@@ -289,14 +289,13 @@ function handleProfileFetch(arg0) {
     }
   }
   if (null != userProfile.mutual_friends) {
-    const mapped = date(date1[9])(userProfile.mutual_friends).map((id) => {
-      let obj = { key: id.id, user: null, status: null };
-      obj = {};
-      const merged = Object.assign(id);
-      obj.collectibles = set(date1[17]).parseServerUserCollectibles(id.collectibles);
+    const mapped = date(date1[9])(userProfile.mutual_friends).map((item, index) => {
+      const obj = {};
+      const merged = Object.assign(item);
+      obj.collectibles = set(date1[17]).parseServerUserCollectibles(item.collectibles);
       const obj3 = set(date1[17]);
       obj[1] = new closure_4(obj);
-      obj[2] = status.getStatus(id.id);
+      obj[2] = status.getStatus(item.id);
       return obj;
     });
     const arr13 = date(date1[9])(userProfile.mutual_friends);
@@ -317,38 +316,38 @@ function handleProfileFetch(arg0) {
   const application = userProfile.application;
   if (null != userProfile.badges) {
     const badges = userProfile.badges;
-    let mapped1 = badges.map((id) => {
+    let mapped1 = badges.map((item, index) => {
       let obj = set(date1[18]);
-      const tieredTenureBadgeData = obj.getTieredTenureBadgeData(id.id);
-      if ("premium" === id.id) {
+      const tieredTenureBadgeData = obj.getTieredTenureBadgeData(item.id);
+      if ("premium" === item.id) {
         if (null != date) {
-          const intl2 = tmp(tmp2[19]).intl;
+          const intl2 = set(date1[19]).intl;
           obj = { date: null };
-          obj[0] = tmp5;
-          let formatToPlainStringResult = intl2.formatToPlainString(tmp(tmp2[19]).t["8zbGNR"], obj);
+          obj[0] = date;
+          let formatToPlainStringResult = intl2.formatToPlainString(set(date1[19]).t["8zbGNR"], obj);
           if (null != tieredTenureBadgeData) {
-            const intl3 = tmp(tmp2[19]).intl;
+            const intl3 = set(date1[19]).intl;
             obj = { date: null };
-            obj[0] = tmp5;
-            formatToPlainStringResult = intl3.formatToPlainString(tmp(tmp2[19]).t.Hu4jfi, obj);
+            obj[0] = date;
+            formatToPlainStringResult = intl3.formatToPlainString(set(date1[19]).t.Hu4jfi, obj);
           }
           obj1 = {};
-          const merged = Object.assign(id);
+          const merged = Object.assign(item);
           obj1.description = formatToPlainStringResult;
           return obj1;
         }
       }
-      id = id.id;
-      let tmp7 = id;
+      const id = item.id;
+      let tmp7 = item;
       if (id.startsWith("guild_booster_lvl")) {
-        tmp7 = id;
+        tmp7 = item;
         if (null != date1) {
           const obj2 = {};
-          const merged1 = Object.assign(id);
-          const intl = tmp(tmp2[19]).intl;
+          const merged1 = Object.assign(item);
+          const intl = set(date1[19]).intl;
           const obj3 = { date: null };
           obj3[0] = tmp8;
-          obj2.description = intl.formatToPlainString(tmp(tmp2[19]).t.IWkAq7, obj3);
+          obj2.description = intl.formatToPlainString(set(date1[19]).t.IWkAq7, obj3);
           tmp7 = obj2;
         }
       }
@@ -367,11 +366,11 @@ function handleProfileFetch(arg0) {
       _null = null;
     } else if (null != mapped1) {
       const _Set = Set;
-      set = new Set(mapped1.map((id) => id.id));
+      set = new Set(mapped1.map((item, index) => item.id));
       let found1;
       if (tmp64 != null) {
         const badges1 = tmp64.badges;
-        found1 = badges1.filter((id) => !set.has(id.id));
+        found1 = badges1.filter((item, index) => !set.has(item.id));
       }
       if (found1.length > 0) {
         const push = mapped1.push;
@@ -428,7 +427,7 @@ function handleProfileFetch(arg0) {
   }
   obj.pronouns = str2;
   const connected_accounts = userProfile.connected_accounts;
-  let found2 = connected_accounts.filter((type) => date(date1[21]).isSupported(type.type));
+  let found2 = connected_accounts.filter((item, index) => date(date1[21]).isSupported(item.type));
   if (found2 == null) {
     found2 = [];
   }
@@ -464,7 +463,7 @@ function handleProfileFetch(arg0) {
   checkUserProfileCollectiblesExpiration(userProfile.user.id);
   if (null != userProfile.guild_member_profile) {
     obj1 = {};
-    let merged1 = Object.assign(date(tmp36[20])(userProfile.guild_member_profile));
+    let merged1 = Object.assign(tmp35(tmp36[20])(userProfile.guild_member_profile));
     obj1.userId = userProfile.user.id;
     obj1.guildId = userProfile.guild_member_profile.guild_id;
     obj1.banner = userProfile.guild_member_profile.banner;
@@ -493,12 +492,12 @@ function handleProfileFetch(arg0) {
       const _Map = Map;
       map = new Map();
       const result7 = map.set(userProfile.guild_member_profile.guild_id, obj1);
-      const result8 = obj4.set(userProfile.user.id, map);
+      const result8 = map2.set(userProfile.user.id, map);
     }
     userProfile = userProfile.guild_member_profile.guild_id;
     checkUserProfileCollectiblesExpiration(userProfile.user.id, userProfile);
-    obj4 = map2;
   }
+  tmp35 = date;
 }
 function handleProfileFetchStart(withMutualFriends) {
   ({ userId, guildId } = withMutualFriends);
@@ -577,9 +576,8 @@ function handleProfileUpdateSuccess(guild_id) {
       if (null != value) {
         value = value.get(guild_id);
         if (null != value) {
-          let obj = {};
           const merged = Object.assign(value);
-          obj = { collectibles: null };
+          const obj = { collectibles: null };
           obj[0] = collectibles;
           const merged1 = Object.assign(parseUserProfileCollectiblesDefault(obj));
           obj.accentColor = accent_color;
@@ -609,10 +607,9 @@ function handleProfileUpdateSuccess(guild_id) {
       obj1.pronouns = pronouns2;
       obj1.popoutAnimationParticleType = popout_animation_particle_type2;
       obj1.themeColors = theme_colors2;
-      const result1 = obj4.set(userId2, obj1);
+      const result1 = map1.set(userId2, obj1);
       checkUserProfileCollectiblesExpiration(userId2);
     }
-    obj4 = map1;
   }
 }
 function handleProfileUpdateFailure() {
@@ -644,10 +641,9 @@ function handlePinBadgesToProfile(badges) {
     if (null != badges) {
       const _Set = Set;
       let found;
-      set = new Set(badges.map((id) => id.id));
       if (tmp2 != null) {
         const badges1 = tmp2.badges;
-        found = badges1.filter((id) => !set.has(id.id));
+        found = badges1.filter((item, index) => !set.has(item.id));
       }
       if (found.length > 0) {
         const push = badges.push;
@@ -655,6 +651,7 @@ function handlePinBadgesToProfile(badges) {
         HermesBuiltin.arraySpread(found, 0);
         HermesBuiltin.apply(items, badges);
       }
+      set = new Set(badges.map((item, index) => item.id));
     }
     obj = {};
     const merged = Object.assign(value);
@@ -680,7 +677,7 @@ function handleUserUpdate(user) {
 }
 function handleGuildStatusChange() {
   const items = [...map1.keys()];
-  return items.reduce((arg0, arg1) => callback(arg1) || arg0, false);
+  return items.reduce((acc, item, index) => callback(item) || acc, false);
 }
 function handleGuildMemberStatusChange(user) {
   return resetProfileFetch(user.user.id);
@@ -767,10 +764,10 @@ class UserProfileStore extends tmp2 {
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp;
     tmp.loadCache = function loadCache() {
-      const snapshot = closure_0.readSnapshot(closure_1_45.LATEST_SNAPSHOT_VERSION);
+      const snapshot = closure_0.readSnapshot(UserProfileStore.LATEST_SNAPSHOT_VERSION);
       if (null != snapshot) {
-        const item = snapshot.forEach((arg0) => {
-          ({ userId, profile } = arg0);
+        const item = snapshot.forEach((item, index) => {
+          ({ userId, profile } = item);
           if (null != userId) {
             if (null != profile) {
               const obj = {};
@@ -826,8 +823,8 @@ prototype["getUserProfile"] = function getUserProfile(id) {
 prototype["getGuildMemberProfile"] = function getGuildMemberProfile(id, guildId) {
   let tmp = null;
   if (null != guildId) {
-    let value = map2.get(id);
-    value = undefined;
+    map2.get(id);
+    let value;
     if (value != null) {
       value = value.get(guildId);
     }
@@ -917,6 +914,6 @@ prototype["takeSnapshot"] = function takeSnapshot() {
 UserProfileStore.displayName = "UserProfileStore";
 UserProfileStore.LATEST_SNAPSHOT_VERSION = 1;
 const userProfileStore = new UserProfileStore();
-let result = set.fileFinishedImporting("modules/user_profile/UserProfileStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/UserProfileStore.tsx");
 
 export default userProfileStore;

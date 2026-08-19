@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 9006 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/PauseIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/PauseIcon.tsx");
 
 export const PauseIcon = function PauseIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

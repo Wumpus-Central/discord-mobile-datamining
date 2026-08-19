@@ -1,10 +1,10 @@
 // === Module 15477: useSubmittedGuildJoinRequestTotal ===
 
 // Module 15477 (useSubmittedGuildJoinRequestTotal)
-import closure_2 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
+import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx");
 
 export const useSubmittedGuildJoinRequestTotal = function useSubmittedGuildJoinRequestTotal(guildId) {
   guildId = guildId.guildId;

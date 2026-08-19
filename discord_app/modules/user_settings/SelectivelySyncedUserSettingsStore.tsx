@@ -1,7 +1,7 @@
 // === Module 1303: initialize ===
 
 // Module 1303 (initialize)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import Storage4 from "Storage" /* 595 */;
@@ -15,10 +15,7 @@ class SelectivelySyncedUserSettingsStore extends PersistedStore {
 }
 const prototype = SelectivelySyncedUserSettingsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
-  if (arg0 == null) {
-    obj = {};
-  }
+
 };
 prototype["getState"] = function getState() {
   return closure_4;
@@ -55,25 +52,23 @@ const items = [
     if (obj == null) {
       obj = {};
     }
-    const Storage2 = tmp(595).Storage;
+    const Storage2 = Storage4.Storage;
     let value = Storage2.get("UserSettingsStore");
     if (value == null) {
       value = {};
     }
-    const Storage3 = tmp(595).Storage;
+    const Storage3 = Storage4.Storage;
     Storage3.remove("UserSettingsSync");
     obj = {};
     if (false === obj[UserSettingsSections.TEXT]) {
       obj1 = { shouldSync: false, settings: null };
       obj1[1] = applyDefault.pick(value, ["inlineAttachmentMedia", "inlineEmbedMedia", "renderEmbeds", "renderReactions", "animateEmoji", "animateStickers", "gifAutoPlay", "defaultReactionEmoji"]);
       obj.text = obj1;
-      const obj5 = applyDefault;
     }
-    if (false === obj[tmp4.APPEARANCE]) {
+    if (false === obj[UserSettingsSections.APPEARANCE]) {
       const obj2 = { shouldSync: false, settings: null };
       obj2[1] = applyDefault.pick(value, ["theme", "clientThemeSettings", "developerMode"]);
       obj.appearance = obj2;
-      const obj7 = applyDefault;
     }
     return obj;
   },
@@ -89,11 +84,9 @@ const items = [
       }
     }
     if ("amoled" === theme) {
-      let obj = {};
       const merged = Object.assign(appearance);
-      obj = {};
       const merged1 = Object.assign(appearance.appearance);
-      obj = {};
+      const obj = {};
       const merged2 = Object.assign(appearance.appearance.settings);
       obj.theme = "midnight";
       obj.settings = obj;
@@ -107,17 +100,14 @@ const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStor
   SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function handleSelectivelySyncedUserSettingsUpdate(changes) {
     changes = changes.changes;
     for (const key10008 in changes) {
-      let tmp12 = key10008;
       ({ shouldSync, settings } = changes[key10008]);
       if (true !== shouldSync) {
         if (false === shouldSync) {
-          let tmp5 = closure_4;
           let obj = { shouldSync: null, settings: null };
           obj[0] = shouldSync;
           obj[1] = {};
           closure_4[key10008] = obj;
         }
-        let tmp6 = closure_4;
         let tmp7 = closure_4[key10008];
         shouldSync = undefined;
         if (tmp7 != null) {
@@ -126,15 +116,12 @@ const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStor
         if (false !== shouldSync) {
           continue;
         } else {
-          let tmp9 = settings;
           let keys = Object.keys();
           if (keys === undefined) {
             continue;
           } else {
             let tmp11 = keys[tmp];
             while (tmp11 !== undefined) {
-              let tmp13 = tmp11;
-              let tmp14 = closure_4;
               closure_4[key10008].settings[tmp11] = settings[tmp11];
               continue;
             }
@@ -143,7 +130,6 @@ const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStor
         }
         continue;
       } else {
-        let tmp4 = closure_4;
         delete tmp2[tmp3];
         continue;
       }
@@ -154,6 +140,6 @@ const selectivelySyncedUserSettingsStore = new SelectivelySyncedUserSettingsStor
     closure_4 = {};
   }
 });
-const result = set.fileFinishedImporting("modules/user_settings/SelectivelySyncedUserSettingsStore.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/SelectivelySyncedUserSettingsStore.tsx");
 
 export default selectivelySyncedUserSettingsStore;

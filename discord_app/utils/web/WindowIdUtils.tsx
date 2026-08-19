@@ -1,10 +1,10 @@
 // === Module 6913: getWindowId ===
 
 // Module 6913 (getWindowId)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import apply from "apply" /* 12 */;
 
-const result = set.fileFinishedImporting("utils/web/WindowIdUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/web/WindowIdUtils.tsx");
 
 export const getWindowId = function getWindowId(defaultView) {
   return defaultView.__DISCORD_WINDOW_ID;

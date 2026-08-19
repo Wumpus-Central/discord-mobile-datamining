@@ -2,13 +2,13 @@
 
 // Module 14448 (QuestDockMode)
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "QuestDockMode" /* 14445 */;
+import QuestDockMode2 from "QuestDockMode" /* 14445 */;
 import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ QUEST_DOCK_COLLAPSED_HEIGHT: closure_6, QUEST_DOCK_EXPANDED_HEIGHT: error } = QUEST_DOCK_COLLAPSED_HEIGHT);
 let obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDockMode: null, minExpandedContentHeight: null };
@@ -18,10 +18,9 @@ obj[2] = createFakeSharedValue.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj[3] = require("module_0");
 const context = importAllResult.createContext(obj);
 const memoResult = importAllResult.memo(function QuestDockGestureContextProviderInner(children) {
-  let obj = sharedValue3;
   const size = sharedValue3.useMemo(sharedValue(sharedValue2[6]).getWindowDimensions, []);
   obj1 = sharedValue(sharedValue2[7]);
-  obj = { width: size.width, height: size.height, landscape: size.width > size.height, maxContentHeight: size.height };
+  let obj = { width: size.width, height: size.height, landscape: size.width > size.height, maxContentHeight: size.height };
   sharedValue = obj1.useSharedValue(obj);
   const youBarHorizontalMargin = sharedValue(sharedValue2[8]).useYouBarHorizontalMargin();
   const obj4 = sharedValue(sharedValue2[8]);
@@ -34,7 +33,7 @@ const memoResult = importAllResult.memo(function QuestDockGestureContextProvider
   const sharedValue1 = obj5.useSharedValue(obj);
   const obj7 = sharedValue(sharedValue2[9]);
   const obj8 = sharedValue(sharedValue2[7]);
-  sharedValue2 = obj8.useSharedValue(sharedValue(sharedValue2[9]).isSoftDismissed(obj.questDockSoftDismissedAt) ? tmp6.SOFT_DISMISSED : tmp6.COLLAPSED);
+  sharedValue2 = obj8.useSharedValue(sharedValue(sharedValue2[9]).isSoftDismissed(obj.questDockSoftDismissedAt) ? QuestDockMode.SOFT_DISMISSED : QuestDockMode.COLLAPSED);
   const obj9 = sharedValue(sharedValue2[9]);
   sharedValue3 = tmp(tmp2[7]).useSharedValue(closure_7);
   const items = [sharedValue];
@@ -44,9 +43,9 @@ const memoResult = importAllResult.memo(function QuestDockGestureContextProvider
   }), items);
   const items1 = [sharedValue, sharedValue1, sharedValue2, sharedValue3];
   obj1 = { value: obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1), children: children.children };
-  return <context.Provider value={obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1)}>{arg0.children}</context.Provider>;
+  return <context.Provider value={obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1)}>{children.children}</context.Provider>;
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockGestureContext.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockGestureContext.tsx");
 
 export const QuestDockGestureContext = context;
 export const QuestDockGestureContextProvider = memoResult;

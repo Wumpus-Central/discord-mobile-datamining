@@ -6,20 +6,19 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
 import nameFromUserDefault from "nameFromUser" /* 4219 */;
 import getTransformedUserDefault from "getTransformedUser" /* 7597 */;
-import closure_4 from "getHash" /* 4288 */;
-import closure_5 from "recomputeAffinities" /* 5407 */;
+import getHash from "getHash" /* 4288 */;
+import recomputeAffinities from "recomputeAffinities" /* 5407 */;
 import { PrivateChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "hasConsented" /* 5258 */;
-import closure_9 from "handleChannelSelect" /* 6772 */;
-import closure_10 from "trackCommunicationDisabled" /* 1990 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "markAllUserIdListsStale" /* 4030 */;
-import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import hasConsented from "hasConsented" /* 5258 */;
+import handleChannelSelect from "handleChannelSelect" /* 6772 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function performQuery() {
   if (c15) {
     channel = channel.getChannel(c22);
@@ -39,14 +38,14 @@ function performQuery() {
       }
       arr = items;
       if (isStaffResult) {
-        const found = arr.filter((isStaff) => {
-          let isStaffResult = isStaff.isStaff();
+        const found = arr.filter((item, index) => {
+          let isStaffResult = item.isStaff();
           if (isStaffResult) {
-            isStaffResult = isStaff.id !== obj1.id;
+            isStaffResult = item.id !== obj1.id;
           }
           return isStaffResult;
         }, false);
-        const mapped = found.map((id) => id.id);
+        const mapped = found.map((item, index) => item.id);
         const _Array = Array;
         const _Set = Set;
         const items1 = [];
@@ -60,32 +59,30 @@ function performQuery() {
       }
       let found1 = arr;
       if (isGroupDMResult) {
-        found1 = arr.filter((arg0) => {
+        found1 = arr.filter((item, index) => {
           recipients = recipients.recipients;
-          return !recipients.includes(arg0);
+          return !recipients.includes(item);
         });
       }
-      const reduced = found1.reduce((arr) => {
-        const user = closure_1_13.getUser(arg1);
+      const reduced = found1.reduce((acc, item, index) => {
+        const user = closure_1_13.getUser(item);
         if (null != user) {
           if (!user.isProvisional) {
             if (user.bot) {
               if (user.isStaff()) {
-                let isStaffResult;
                 if (obj1 != null) {
-                  isStaffResult = obj2.isStaff();
+                  obj1.isStaff();
                 }
-                obj2 = obj1;
               }
             }
             const obj = { user: null, comparator: null };
             obj[0] = user;
-            obj[1] = obj1(closure_1_2[12]).getName(user);
-            arr.push(obj);
-            return arr;
+            obj[1] = obj1(dependencyMap[12]).getName(user);
+            acc.push(obj);
+            return acc;
           }
         }
-        return arr;
+        return acc;
       }, []);
       closure_18 = reduced.sort(sortUserList);
       if (c20 !== false) {
@@ -108,19 +105,17 @@ function performQuery() {
         obj[1] = flag2;
         obj[1] = obj;
         obj[2] = tmp4;
-        closure_0 = undefined;
-        obj1 = undefined;
         frequentlyWithoutFetchingLatest = frequentlyWithoutFetchingLatest.getFrequentlyWithoutFetchingLatest();
-        const found2 = frequentlyWithoutFetchingLatest.filter((isDM) => isDM instanceof closure_6 && isDM.isDM());
+        const found2 = frequentlyWithoutFetchingLatest.filter((item, index) => item instanceof closure_6 && item.isDM());
         const _Math = Math;
         const items2 = [];
-        HermesBuiltin.arraySpread(found2.map((id) => scoreWithoutFetchingLatest.getScoreWithoutFetchingLatest(id.id)), 0);
+        HermesBuiltin.arraySpread(found2.map((item, index) => scoreWithoutFetchingLatest.getScoreWithoutFetchingLatest(item.id)), 0);
         const _Math2 = Math;
         closure_0 = HermesBuiltin.apply(items2, Math);
         obj1 = {};
-        const item = found2.forEach((id) => {
-          const scoreWithoutFetchingLatest = closure_1_9.getScoreWithoutFetchingLatest(id.id);
-          const recipientId = id.getRecipientId();
+        const item = found2.forEach((item, index) => {
+          const scoreWithoutFetchingLatest = closure_1_9.getScoreWithoutFetchingLatest(item.id);
+          const recipientId = item.getRecipientId();
           let num = 0;
           if (closure_1_12.isFriend(recipientId)) {
             num = 0.2;
@@ -152,7 +147,6 @@ function updateHasFriends() {
 function sortUserList(user, user2) {
   const obj = isNullOrEmpty;
   const name = nameFromUserDefault.getName(user.user);
-  const obj2 = nameFromUserDefault;
   const stripDiacriticsResult = obj.stripDiacritics(name.toLocaleLowerCase());
   const obj5 = isNullOrEmpty;
   const name1 = nameFromUserDefault.getName(user2.user);
@@ -168,34 +162,23 @@ function parseUserResults(results) {
       while (iter !== undefined) {
         ({ id, comparator } = nextResult);
         if (null == currentUser) {
-          let tmp6 = authStore;
-          let tmp7 = id;
           let user = authStore.getUser(id);
           let obj = user;
           if (null != user) {
-            let tmp9 = user;
             if (!obj.isProvisional) {
-              let tmp10 = user;
               if (!obj.bot) {
                 obj = { user: null, comparator: null };
-                let tmp13 = user;
                 obj[0] = obj;
-                let tmp14 = comparator;
                 obj[1] = comparator;
                 let arr = items.push(obj);
-              } else {
-                let tmp11 = user;
-                if (obj.isStaff()) {
-                  let isStaffResult;
-                  if (currentUser != null) {
-                    isStaffResult = currentUser.isStaff();
-                  }
+              } else if (obj.isStaff()) {
+                let isStaffResult;
+                if (currentUser != null) {
+                  isStaffResult = currentUser.isStaff();
                 }
               }
             }
           }
-        } else {
-          let tmp5 = id;
         }
         continue;
       }
@@ -304,7 +287,6 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
       c17 = 0;
       closure_18 = [];
       const _Set = Set;
-      set = new Set();
       c20 = false;
       c22 = tmp;
       return performQuery();
@@ -357,6 +339,6 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
     set = new Set(set);
   }
 });
-const result = set.fileFinishedImporting("stores/PrivateChannelRecipientsInviteStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/PrivateChannelRecipientsInviteStore.tsx");
 
 export default privateChannelRecipientsInviteStoreClass;

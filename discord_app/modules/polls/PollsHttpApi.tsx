@@ -1,10 +1,10 @@
 // === Module 10889: _submitPollVote ===
 
 // Module 10889 (_submitPollVote)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _submitPollVote() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -218,7 +218,7 @@ function _endPollEarly() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/polls/PollsHttpApi.tsx");
+const result = require("obj132").fileFinishedImporting("modules/polls/PollsHttpApi.tsx");
 
 export const submitPollVote = function submitPollVote(arg0) {
   const self = this;

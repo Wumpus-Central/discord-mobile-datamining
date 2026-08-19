@@ -1,15 +1,15 @@
 // === Module 12138: useFetchStreamPreview ===
 
 // Module 12138 (useFetchStreamPreview)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "reset" /* 9861 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_6 from "handleConnectionOpen" /* 1979 */;
+import noop from "noop" /* 19 */;
+import reset from "reset" /* 9861 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 import { BasicPermissions } from "sum" /* 505 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
 
 export default function useFetchStreamPreview(arg0, arg1, arg2) {
   const _require = arg0;
@@ -23,7 +23,7 @@ export default function useFetchStreamPreview(arg0, arg1, arg2) {
   let stateFromStores = _require(589).useStateFromStores(items1, () => {
     let canBasicChannelResult = null != closure_4;
     if (canBasicChannelResult) {
-      canBasicChannelResult = shouldFetchPreview.canBasicChannel(closure_1_7.CONNECT, tmp);
+      canBasicChannelResult = shouldFetchPreview.canBasicChannel(BasicPermissions.CONNECT, tmp);
     }
     return canBasicChannelResult;
   });

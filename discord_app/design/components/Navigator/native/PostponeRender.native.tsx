@@ -4,30 +4,26 @@
 import ThemesDefault from "Themes" /* 712 */;
 import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
 import _modDef6551 from "module_6551" /* 6551 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
-createCacheKey = { view: null };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
 
 export const PostponeRender = function PostponeRender(children) {
   children = children.children;
-  let first;
-  importDefault = undefined;
-  dependencyMap = undefined;
   ({ postpone, ignoreKeyboard, viewStyle } = children);
   const tmp2 = callback(React.useState(postpone), 2);
-  first = tmp2[0];
+  const first = tmp2[0];
   importDefault = tmp2[1];
   dependencyMap = React.useRef(undefined);
   useMountLayoutEffectDefault(() => {

@@ -2,28 +2,27 @@
 
 // Module 14984 (DebugLogView)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getUserAgnosticState" /* 4737 */;
+import getUserAgnosticState from "getUserAgnosticState" /* 4737 */;
 import useCollectiblesDebugStore from "useCollectiblesDebugStore" /* 5323 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: c3, ScrollView: c4, TouchableOpacity: c5 } = get_ActivityIndicator);
 ({ useCollectiblesDebugStore: error, addDebugLog: closure_8 } = useCollectiblesDebugStore);
 ({ jsxs: c9, jsx: c10 } = jsxProd);
-createCacheKey = { debugLogContainer: { backgroundColor: "rgba(0, 0, 0, 0.8)", padding: 10, maxHeight: 350, width: "100%", position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 9999, borderTopWidth: 1, borderTopColor: "#ff0000" }, debugLogHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 5 }, debugLogText: { color: "#00ff00", fontSize: 12, marginBottom: 2, fontFamily: "monospace" }, clearButton: null, clearButtonText: null };
-createCacheKey = { backgroundColor: "#ff0000", paddingHorizontal: 8, paddingVertical: 2, borderRadius: ThemesDefault.radii.xs };
+const createCacheKey = { backgroundColor: "#ff0000", paddingHorizontal: 8, paddingVertical: 2, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { color: "#ffffff", fontSize: 10, fontWeight: "bold" };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/DebugLogView.tsx");
+const result = require("obj132").fileFinishedImporting("modules/collectibles/native/DebugLogView.tsx");
 
 export default function DebugLogView() {
   const arr = callback((logs) => logs.logs);
   dependencyMap = callback((clearLogs) => clearLogs.clearLogs);
-  const tmp = callback4();
+  let tmp = callback4();
   const React = tmp;
   let obj = arr(589);
   const items = [closure_6];
@@ -33,6 +32,7 @@ export default function DebugLogView() {
     if (tmp) {
       closure_1_8("Debug log initialized");
     }
+    tmp = 0 === arr.length && stateFromStores;
   }, items1);
   if (stateFromStores) {
     if (0 !== arr.length) {
@@ -62,7 +62,7 @@ export default function DebugLogView() {
       obj[1] = items3;
       const items4 = [callback2(stateFromStores, obj), ];
       const obj5 = { children: null };
-      obj5[0] = substr.map((children) => closure_1_10(arr(4734).Text, { variant: "text-xs/normal", style: debugLogText.debugLogText, children }, arg1));
+      obj5[0] = substr.map((item, index) => closure_1_10(arr(4734).Text, { variant: "text-xs/normal", style: debugLogText.debugLogText, children: item }, index));
       items4[1] = callback3(closure_4, obj5);
       obj[1] = items4;
       return callback2(stateFromStores, obj);

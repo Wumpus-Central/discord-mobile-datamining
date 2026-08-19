@@ -3,14 +3,14 @@
 // Module 16128 (BurstReactionAnimationContainerInner)
 import ThemesDefault from "Themes" /* 712 */;
 import ManaContext from "ManaContext" /* 4104 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function BurstReactionAnimationContainerInner() {
   function handleComponentFinish() {
     if (false === ref.current) {
@@ -26,18 +26,18 @@ function BurstReactionAnimationContainerInner() {
   React = tmp3[1];
   closure_5 = React.useRef(false);
   const effect = React.useEffect(() => {
-    function handleEffectReceived(channelId) {
-      dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
+    function handleEffectReceived(closure_1_2) {
+      dependencyMap({ channelId: closure_1_2.channelId, emoji: closure_1_2.emoji, messageId: closure_1_2.messageId });
       callback(true);
       closure_5.current = true;
-      const result = handleEffectReceived(closure_1_2[8]).triggerHapticFeedback(closure_1_1(closure_1_2[9]).IMPACT_HEAVY);
+      const result = handleEffectReceived(closure_1_2[8]).triggerHapticFeedback(first(closure_1_2[9]).IMPACT_HEAVY);
     }
     const subscription = first(709).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
       first(709).unsubscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     };
   }, []);
-  let obj = _require(4115);
+  _require(4115);
   let fn = function y() {
     if (null == first) {
       let obj = { opacity: 0 };
@@ -66,7 +66,7 @@ function BurstReactionAnimationContainerInner() {
     }
     return obj;
   };
-  obj = { animationData: first, showAnimation: first1, withTiming: _require(4664).withTiming, runOnJS: _require(4115).runOnJS, handleComponentFinish };
+  let obj = { animationData: first, showAnimation: first1, withTiming: _require(4664).withTiming, runOnJS: _require(4115).runOnJS, handleComponentFinish };
   fn.__closure = obj;
   fn.__workletHash = 12044515783370;
   fn.__initData = closure_12;
@@ -78,10 +78,8 @@ function BurstReactionAnimationContainerInner() {
     obj[0] = items;
     obj[1] = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
-      let obj = { style: markAsDismissed.fill, children: null };
-      obj = { style: items, children: null };
-      items = [markAsDismissed.fill, closure_7];
-      obj = {
+      const items = [markAsDismissed.fill, closure_7];
+      const obj = {
         activeOpacity: callback(7531).BACKDROP_OPACITY,
         onPress() {
           closure_1_4(false);
@@ -103,23 +101,23 @@ function BurstReactionAnimationContainerInner() {
             closure_5.current = false;
           }
         };
-        tmpResult = tmp(first(7573), obj3);
+        tmpResult = closure_1_8(first(7573), obj3);
       }
       obj2[1] = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj2);
-      let tmp6Result = markAsDismissed.visibleContent === tmp2(1377).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+      let tmp6Result = markAsDismissed.visibleContent === callback(1377).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
         const obj4 = { children: null };
         const obj5 = { style: null, variant: "text-sm/medium", children: null };
         obj5[0] = tmp4.dismissTextContainer;
-        const intl = tmp2(1236).intl;
-        obj5[2] = intl.string(tmp2(1236).t.QpPMih);
-        const items2 = [tmp(tmp2(4734).Text, obj5), ];
+        const intl = callback(1236).intl;
+        obj5[2] = intl.string(callback(1236).t.QpPMih);
+        const items2 = [closure_1_8(callback(4734).Text, obj5), ];
         const obj6 = { style: null };
         obj6[0] = tmp4.dismissTextBackground;
-        items2[1] = tmp(tmp8, obj6);
+        items2[1] = closure_1_8(handleComponentFinish, obj6);
         obj4[0] = items2;
-        tmp6Result = tmp6(closure_1_9, obj4);
+        tmp6Result = closure_1_10(closure_1_9, obj4);
       }
       items1[2] = tmp6Result;
       obj[3] = items1;
@@ -134,8 +132,7 @@ function BurstReactionAnimationContainerInner() {
 }
 ({ TouchableOpacity: c5, View: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { background: null, fill: null, dismissTextContainer: null, dismissTextBackground: null };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.backgroundColor = ThemesDefault.colors.BLACK;
 createCacheKey.opacity = require("_generateAnimationSource").BACKDROP_OPACITY;
@@ -151,8 +148,7 @@ createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_H
 let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { code: "function BurstReactionAnimationContainerTsx1(){const{animationData,showAnimation,withTiming,runOnJS,handleComponentFinish}=this.__closure;if(animationData==null){return{opacity:0};}if(!showAnimation){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(handleComponentFinish)();})};}return{opacity:withTiming(1,{duration:300})};}" };
 let closure_13 = { code: "function BurstReactionAnimationContainerTsx2(finished){const{runOnJS,handleComponentFinish}=this.__closure;if(finished)runOnJS(handleComponentFinish)();}" };
-let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.round, position: "absolute", bottom: -600, height: 700, width: 700 };
-let result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx");
+let result = require("obj132").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimationContainer.tsx");
 
 export default function BurstReactionAnimationContainer() {
   return callback(ManaContext.ThemeContextProvider, { theme: ThemesDefault.themes.DARKER, children: callback(BurstReactionAnimationContainerInner, {}) });

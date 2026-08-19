@@ -4,11 +4,11 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
-import createToggle from "createToggle" /* 10669 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Z4oaN0);
@@ -20,8 +20,7 @@ createToggle = {
   },
   onValueChange: function onAutoVoiceSensitivitySettingValueChange(autoThreshold) {
     mode = mode.getMode();
-    let obj = trackDeviceChangedDefault;
-    obj = { autoThreshold };
+    const obj = { autoThreshold };
     obj.setMode(mode, obj);
   },
   useSearchTerms() {
@@ -31,6 +30,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AutoVoiceSensitivitySetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/AutoVoiceSensitivitySetting.tsx");
 
 export default createToggle;

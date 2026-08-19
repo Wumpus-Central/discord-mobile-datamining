@@ -2,25 +2,24 @@
 
 // Module 15384 (VoiceUserConnected)
 import noopAll from "noop" /* 19 */;
-import closure_3 from "participantFromServer" /* 1390 */;
-import closure_4 from "getParticipants" /* 4773 */;
-import closure_5 from "reset" /* 4652 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_8 from "handleUpdate" /* 4541 */;
-import closure_9 from "updateVoiceState" /* 4542 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
+import getParticipants from "getParticipants" /* 4773 */;
+import reset from "reset" /* 4652 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import handleUpdate from "handleUpdate" /* 4541 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUser.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_sidebar/native/VoiceUser.tsx");
 
 export default function VoiceUserConnected(channel) {
   channel = channel.channel;
   const user = channel.user;
   const sessionId = channel.sessionId;
   ({ selfVideo, mute } = channel);
-  closure_3 = undefined;
   let obj = id;
   ({ member, selfMute, selfDeaf, deaf, suppress, collapsed, isGuest } = channel);
   const tmp = id.getId() === user.id;
@@ -70,8 +69,8 @@ export default function VoiceUserConnected(channel) {
   const items6 = [user.id, channel.id];
   const stateFromStores3 = tmp2Result.useStateFromStores(items5, () => {
     embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channel.id);
-    return embeddedActivitiesForChannel.find((userIds) => {
-      userIds = userIds.userIds;
+    return embeddedActivitiesForChannel.find((item, index) => {
+      const userIds = item.userIds;
       return userIds.has(id.id);
     });
   }, items6);
@@ -83,7 +82,6 @@ export default function VoiceUserConnected(channel) {
   });
   obj = { guildId: channel.guild_id, channelId: channel.id, member, user, collapsed, serverMute: null, serverDeaf: null, mute: null, deaf: null, localMute: null, video: null, stream: null, platform: null, disabled: null, isInEmbeddedActivity: null, isGuest: null, voicePlatform: null, ringing: null };
   const obj5 = channel(sessionId[9]);
-  const tmp11 = jsx;
   if (!mute) {
     mute = suppress;
   }
@@ -107,5 +105,5 @@ export default function VoiceUserConnected(channel) {
   obj[15] = isGuest;
   obj[16] = stateFromStores2;
   obj[17] = stateFromStores4;
-  return tmp11(user(sessionId[10]), obj);
+  return jsx(user(sessionId[10]), { guildId: channel.guild_id, channelId: channel.id, member, user, collapsed, serverMute: null, serverDeaf: null, mute: null, deaf: null, localMute: null, video: null, stream: null, platform: null, disabled: null, isInEmbeddedActivity: null, isGuest: null, voicePlatform: null, ringing: null });
 };

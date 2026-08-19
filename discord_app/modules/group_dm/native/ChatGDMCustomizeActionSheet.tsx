@@ -6,9 +6,9 @@ import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesO
 import _modDef9930 from "module_9930" /* 9930 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/group_dm/native/ChatGDMCustomizeActionSheet.tsx");
 
 export default function ChatGDMCustomizeActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -20,7 +20,7 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   const intl = channelId(1236).intl;
   obj[1] = intl.string(channelId(1236).t["1r5E+m"]);
   obj[2] = function render() {
-    return closure_1_3(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
+    return jsx(_undefined(_undefined2[5]), { ref: _undefined2, onFinish: _undefined, channelId });
   };
   return jsx(_modDef9930, { screenKey: "kick", title: null, render: null });
 };

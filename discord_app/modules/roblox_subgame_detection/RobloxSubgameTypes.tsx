@@ -1,7 +1,7 @@
 // === Module 4644: ROBLOX_PROTOCOL_URL ===
 
 // Module 4644 (ROBLOX_PROTOCOL_URL)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 class ROBLOX_PROTOCOL_URL {
   constructor(arg0) {
@@ -13,7 +13,7 @@ class ROBLOX_WEB_URL {
     return "https://www.roblox.com/games/start?placeId=" + global;
   }
 }
-const result = set.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameTypes.tsx");
 
 export const ROBLOX_APPLICATION_ID = "363445589247131668";
 export const ROBLOX_GAME_ID = "363445589247131668";
@@ -22,12 +22,12 @@ export const NativeRobloxSubgameKeys = { UNIVERSE_ID: "universeid", PLACE_ID: "p
 export const ROBLOX_URL_SCHEME = "roblox";
 export { ROBLOX_PROTOCOL_URL };
 export { ROBLOX_WEB_URL };
-export const ROBLOX_DEFERRED_WEB_URL = (arg0) => {
+export const ROBLOX_DEFERRED_WEB_URL = (closure_0) => {
   if (typeof ROBLOX_PROTOCOL_URL !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (typeof ROBLOX_WEB_URL !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  return "https://ro.blox.com/Ebh5?af_dp=" + encodeURIComponent("roblox://placeId=" + arg0) + "&af_web_dp=" + encodeURIComponent("https://www.roblox.com/games/start?placeId=" + arg0);
+  return "https://ro.blox.com/Ebh5?af_dp=" + encodeURIComponent("roblox://placeId=" + closure_0) + "&af_web_dp=" + encodeURIComponent("https://www.roblox.com/games/start?placeId=" + closure_0);
 };

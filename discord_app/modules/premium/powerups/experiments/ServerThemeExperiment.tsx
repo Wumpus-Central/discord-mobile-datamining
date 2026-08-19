@@ -1,7 +1,7 @@
 // === Module 4304: experiment ===
 
 // Module 4304 (experiment)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import apexExperiment from "apexExperiment" /* 4305 */;
 import createExperiment from "createExperiment" /* 4286 */;
@@ -9,7 +9,7 @@ import createExperiment from "createExperiment" /* 4286 */;
 const EMPTY_STRING_SNOWFLAKE_ID = ME.EMPTY_STRING_SNOWFLAKE_ID;
 const items = [{ id: 0, label: "Control", config: { enabled: false, inExperiment: true, gatesApex: false } }, { id: 1, label: "Enable Server Theme", config: { enabled: true, inExperiment: true, gatesApex: false } }];
 let experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-04_server_theme", label: "Server Theme", defaultConfig: { enabled: false, inExperiment: false, gatesApex: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeExperiment.tsx");
+const result = obj132.fileFinishedImporting("modules/premium/powerups/experiments/ServerThemeExperiment.tsx");
 
 export const ServerThemeExperiment = experiment;
 export const getServerThemeEnabled = function getServerThemeEnabled(guildId, GuildPowerupsConstants) {
@@ -27,7 +27,6 @@ export const getServerThemeEnabled = function getServerThemeEnabled(guildId, Gui
   }
   if (!currentConfig.inExperiment) {
     enabled = config.gatesApex && tmp4;
-    const tmp5 = config.gatesApex && tmp4;
   }
   return enabled;
 };
@@ -46,7 +45,6 @@ export const useServerThemeEnabled = function useServerThemeEnabled(guildId, use
     let tmp6 = null != guildId;
     if (tmp6) {
       tmp6 = tmp5 && tmp4;
-      const tmp7 = tmp5 && tmp4;
     }
     enabled = tmp6;
   }

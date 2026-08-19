@@ -3,17 +3,17 @@
 // Module 17014 (AdvancedInstantInviteScreen)
 import ThemesDefault from "Themes" /* 712 */;
 import NavigationStack from "NavigationStack" /* 6312 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "updateWithLatestInvite" /* 8919 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import updateWithLatestInvite from "updateWithLatestInvite" /* 8919 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
 import ME from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function AdvancedInstantInviteScreen() {
   let tmp = callback();
   let obj = navigation(1500);
@@ -46,7 +46,7 @@ function AdvancedInstantInviteScreen() {
   const tmp10 = !tmp2Result.isEqual(settings, inviteSettings);
   dependencyMap = tmp10;
   const items1 = [channel];
-  const effect = obj3.useEffect(() => {
+  const effect = React.useEffect(() => {
     if (null == channel) {
       const guildId = closure_1_6.getGuildId();
       let invitableChannelForGuild = null;
@@ -76,7 +76,7 @@ function AdvancedInstantInviteScreen() {
     channel(709).wait(channel(8925).resetSettings);
   });
   const items2 = [channel];
-  callback = obj3.useCallback(() => {
+  callback = React.useCallback(() => {
     if (null != channel) {
       if (closure_1_8.can(closure_1_10.CREATE_INSTANT_INVITE, tmp)) {
         const invite = channel(8925).createInvite("IOS Regenerate");
@@ -85,8 +85,8 @@ function AdvancedInstantInviteScreen() {
         const obj4 = channel(8925);
       }
     }
-    let obj = channel(4827);
-    obj = { title: null, body: null, onConfirm: null };
+    channel(4827);
+    const obj = { title: null, body: null, onConfirm: null };
     const intl = navigation(1236).intl;
     obj[0] = intl.string(navigation(1236).t.VINpSK);
     const intl2 = navigation(1236).intl;
@@ -95,47 +95,46 @@ function AdvancedInstantInviteScreen() {
     obj.show(obj);
   }, items2);
   const items3 = [navigation, tmp10, callback];
-  const effect1 = obj3.useEffect(() => {
+  const effect1 = React.useEffect(() => {
     navigation.setOptions({
       headerRight() {
         let tmp;
         if (closure_2) {
           const obj = { onPress: null, text: null };
           obj[0] = closure_3;
-          const intl = closure_1_0(closure_1_2[17]).intl;
-          obj[1] = intl.string(closure_1_0(closure_1_2[17]).t["R3BPH+"]);
-          tmp = closure_1_11(closure_1_0(closure_1_2[20]).HeaderActionButton, obj);
+          const intl = navigation(closure_1_2[17]).intl;
+          obj[1] = intl.string(navigation(closure_1_2[17]).t["R3BPH+"]);
+          tmp = closure_1_11(navigation(closure_1_2[20]).HeaderActionButton, obj);
         }
         return tmp;
       }
     });
   }, items3);
-  const callback1 = obj3.useCallback((maxUses) => {
-    let obj = channel(8925);
-    obj = { maxUses };
+  const callback1 = React.useCallback((maxUses) => {
+    channel(8925);
+    const obj = { maxUses };
     obj.updateSettings(obj);
   }, []);
-  const callback2 = obj3.useCallback((maxAge) => {
-    let obj = channel(8925);
-    obj = { maxAge };
+  const callback2 = React.useCallback((maxAge) => {
+    channel(8925);
+    const obj = { maxAge };
     obj.updateSettings(obj);
   }, []);
-  const callback3 = obj3.useCallback((temporary) => {
-    let obj = channel(8925);
-    obj = { temporary };
+  const callback3 = React.useCallback((temporary) => {
+    channel(8925);
+    const obj = { temporary };
     obj.updateSettings(obj);
   }, []);
-  const callback4 = obj3.useCallback((flags) => {
-    let obj = channel(8925);
-    obj = { flags };
+  const callback4 = React.useCallback((flags) => {
+    channel(8925);
+    const obj = { flags };
     obj.updateSettings(obj);
   }, []);
-  const callback5 = obj3.useCallback((roleIds) => {
-    let obj = channel(8925);
-    obj = { roleIds };
+  const callback5 = React.useCallback((roleIds) => {
+    channel(8925);
+    const obj = { roleIds };
     obj.updateSettings(obj);
   }, []);
-  obj = { contentContainerStyle: tmp.formContainer, children: null };
   obj = { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null };
   let obj2 = navigation(589);
   obj[5] = channel(8920).getMaxUsesOptions;
@@ -149,18 +148,15 @@ function AdvancedInstantInviteScreen() {
   return jsx(navigation(8083).Form, { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
 }
 ({ InviteModalScenes: c9, Permissions: c10 } = ME);
-createCacheKey = { formContainer: null, formContent: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
+const createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-const result = require("set").fileFinishedImporting("modules/guild_invite/native/InviteSettingsModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_invite/native/InviteSettingsModal.tsx");
 
 export default function InviteSettingsModal() {
   const memo = React.useMemo(() => {
-    let obj = {};
-    obj = { impressionName: callback(503).ImpressionNames.GUILD_INVITE_LINK_SETTINGS, title: null, headerLeft: null, render: null };
+    const obj = { impressionName: callback(503).ImpressionNames.GUILD_INVITE_LINK_SETTINGS, title: null, headerLeft: null, render: null };
     const intl = callback(1236).intl;
     obj[1] = intl.string(callback(1236).t.Yx4IiC);
     obj[2] = callback(6314).getHeaderCloseButton(callback2(8925).close);

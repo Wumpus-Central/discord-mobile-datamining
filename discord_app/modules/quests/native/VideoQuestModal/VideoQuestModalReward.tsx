@@ -7,7 +7,7 @@ import importAllResult from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ questName: { textAlign: "center" } });
@@ -31,11 +31,10 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(style) {
   const items = [quest.id];
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
   const callback = importAllResult.useCallback(() => {
-    let obj = quest(closure_1_2[5]);
-    obj = { questId: quest.id };
+    quest(dependencyMap[5]);
+    const obj = { questId: quest.id };
     const result = obj.openRewardDetailsBottomSheet(obj);
   }, items);
-  obj = { justify: "center", align: "center", spacing: ThemesDefault.space.PX_24, style: style.style, children: null };
   obj = { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: callback, withAnimation: withRewardTileAnimation };
   const items1 = [callback(QUEST_PROGRESS_DIAMETER_BY_SIZEDefault, obj), ];
   obj1 = { align: "center", spacing: ThemesDefault.space.PX_4, onLayout: onTextBlockLayout, children: null };
@@ -57,10 +56,10 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(style) {
   }
   items2[1] = tmp9Result;
   obj1[3] = items2;
-  items1[1] = closure_5(quest(4733).Stack, obj1);
+  items1[1] = callback(quest(4733).Stack, obj1);
   obj[4] = items1;
-  return closure_5(quest(4733).Stack, obj);
+  return callback(quest(4733).Stack, obj);
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalReward.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalReward.tsx");
 
 export default memoResult;

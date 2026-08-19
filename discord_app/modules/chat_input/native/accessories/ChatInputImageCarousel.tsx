@@ -1,18 +1,17 @@
 // === Module 11395: ? ===
 
 // Module 11395
-import closure_3 from "handleInit" /* 7527 */;
+import handleInit from "handleInit" /* 7527 */;
 import { DraftType } from "handleChanged" /* 4825 */;
-import closure_5 from "map" /* 4824 */;
+import map from "map" /* 4824 */;
 import { useChatShowingAutoComplete as closure_6 } from "updateChatInputContainerHeight" /* 8682 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUpload) {
   canUpload = canUpload.canUpload;
   const channelId = canUpload.channelId;
-  dependencyMap = undefined;
   let tmp = callback(canUpload.screenIndex);
   dependencyMap = tmp;
   let obj = canUpload(589);
@@ -25,9 +24,8 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
       if (canUpload) {
         uploads = null;
         if (null == closure_1_3.getActiveCommand(channelId)) {
-          uploads = closure_1_5.getUploads(tmp5, closure_1_4.ChannelMessage);
+          uploads = closure_1_5.getUploads(channelId, DraftType.ChannelMessage);
         }
-        tmp5 = channelId;
       }
       tmp = uploads;
     }
@@ -42,6 +40,6 @@ const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUploa
   }
   return tmp4;
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputImageCarousel.tsx");
+const result = require("obj132").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputImageCarousel.tsx");
 
 export default memoResult;

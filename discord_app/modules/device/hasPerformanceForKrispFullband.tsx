@@ -1,10 +1,10 @@
 // === Module 13171: hasPerformanceForKrispFullband ===
 
 // Module 13171 (hasPerformanceForKrispFullband)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5418 */;
 
-const result = set.fileFinishedImporting("modules/device/hasPerformanceForKrispFullband.tsx");
+const result = obj132.fileFinishedImporting("modules/device/hasPerformanceForKrispFullband.tsx");
 
 export default function hasPerformanceForKrispFullband() {
   const tmp = getMediaPerformanceClassDefault();

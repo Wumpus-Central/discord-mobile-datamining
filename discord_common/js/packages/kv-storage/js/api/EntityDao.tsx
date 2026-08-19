@@ -1,7 +1,7 @@
 // === Module 1966: prefix ===
 
 // Module 1966 (prefix)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1960 */;
 import TableId from "TableId" /* 1962 */;
 
@@ -100,12 +100,12 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof closure_1_3 !== "function") {
+    if (typeof EntityDaoTransaction !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(closure_1_3.prototype);
+    const obj = Object.create(EntityDaoTransaction.prototype);
     obj.transaction = transaction;
-    return closure_0(obj);
+    return callback(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
@@ -161,7 +161,7 @@ prototype2["putAll"] = function putAll(arr) {
     Replace = TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
-  return transaction.putAll(arr.map((arg0) => closure_2.cell(arg0, null)), Replace);
+  return transaction.putAll(arr.map((item, index) => closure_2.cell(item, null)), Replace);
 };
 prototype2["replaceAll"] = function replaceAll(arg0) {
   this.delete();
@@ -183,7 +183,7 @@ prototype2["deleteAllExcept"] = function deleteAllExcept(arg0) {
   const transaction = this.transaction;
   transaction.deleteAllExcept([], arg0);
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/EntityDao.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/EntityDao.tsx");
 
 export { EntityDao };
 export { EntityDaoTransaction };

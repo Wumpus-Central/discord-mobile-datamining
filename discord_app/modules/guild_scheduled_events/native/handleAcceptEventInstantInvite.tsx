@@ -2,10 +2,10 @@
 
 // Module 10801 (handleAcceptEventInstantInvite)
 import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8042 */;
-import closure_3 from "scheduledEventSort" /* 4370 */;
+import scheduledEventSort from "scheduledEventSort" /* 4370 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
 
 export default function handleAcceptEventInstantInvite(code) {
   let obj = guildScheduledEvent(9346);
@@ -23,13 +23,13 @@ export default function handleAcceptEventInstantInvite(code) {
           obj[0] = code.code;
           obj[1] = { location: "Guild Scheduled Event Invite Button Embed" };
           obj[2] = function callback() {
-            const result = guildScheduledEvent(closure_1_2[4]).transitionToEventDetailsFromInvite(guildScheduledEvent);
+            const result = guildScheduledEvent(dependencyMap[4]).transitionToEventDetailsFromInvite(guildScheduledEvent);
           };
           generateAcceptInviteOptionsDefault.acceptInvite(obj);
-          const obj3 = generateAcceptInviteOptionsDefault;
         }
       }
     }
-    tmpResult = guildScheduledEvent(4369);
+    tmpResult = tmp(4369);
   }
+  tmp = guildScheduledEvent;
 };

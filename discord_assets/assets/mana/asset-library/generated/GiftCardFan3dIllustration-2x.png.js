@@ -1,9 +1,9 @@
 // === Module 5837: metadata ===
 
 // Module 5837 (metadata)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftCardFan3dIllustration-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftCardFan3dIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/8a77bfe6e7f768d9c287f7e877d02c008d0f52fc50fc5133c61bca8f2286ff1e.png";
 export const metadata = { fileBytes: 171737 };

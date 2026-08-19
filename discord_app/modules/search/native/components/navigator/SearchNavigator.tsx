@@ -3,6 +3,7 @@
 // Module 16080
 import ThemesDefault from "Themes" /* 712 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _modDef11531 from "module_11531" /* 11531 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { SearchEntrypointAnalyticsLocations as closure_5 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
@@ -12,11 +13,10 @@ import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { container: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 obj[0] = obj;
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = createNativeStackNavigator.createNativeStackNavigator();
@@ -26,21 +26,20 @@ const memoResult = importAllResult.memo((route) => {
   const accessibilityNativeStackOptions = obj.useAccessibilityNativeStackOptions();
   const items = [searchContext];
   const effect = importAllResult.useEffect(() => {
-    if (searchContext.type === closure_1_7.GUILD) {
+    if (searchContext.type === SearchTypes.GUILD) {
       let DM_LIST = closure_1_5.GUILD;
     } else {
       DM_LIST = closure_1_5.DM_LIST;
     }
-    closure_1_1(closure_1_2[10]).trackSearchOpened({ searchContext, searchLocation: DM_LIST });
+    _modDef11531.trackSearchOpened({ searchContext, searchLocation: DM_LIST });
     return () => {
-      let obj = closure_1_1(closure_1_2[10]);
-      obj = { searchContext: closure_0 };
+      closure_1_1(closure_1_2[10]);
+      const obj = { searchContext: closure_0 };
       obj.trackSearchClosed(obj);
     };
   }, items);
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: items1, children: null };
-  items1 = [callback3().container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  const items1 = [callback3().container, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj = { id: "search-navigator", screenOptions: null, children: null };
   const merged = Object.assign(accessibilityNativeStackOptions);
   obj[1] = {};
@@ -77,6 +76,6 @@ const memoResult = importAllResult.memo((route) => {
   obj[1] = callback2(closure_11.Navigator, obj);
   return callback(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigator.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigator.tsx");
 
 export default memoResult;

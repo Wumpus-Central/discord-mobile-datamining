@@ -6,13 +6,12 @@ import Button from "Button" /* 1297 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 ({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { alignItems: "center" }, carouselContentWrapper: { flexDirection: "row" }, pageIndicator: { flexDirection: "row", justifyContent: "space-around", alignItems: "center" }, activeIndicator: null, inactiveIndicator: null };
-createCacheKey = { color: ThemesDefault.colors.ICON_STRONG };
+const createCacheKey = { color: ThemesDefault.colors.ICON_STRONG };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { color: ThemesDefault.colors.ICON_SUBTLE };
 let closure_6 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
@@ -28,17 +27,13 @@ PageIndicator.prototype["render"] = function render() {
   ({ indicatorSpace, pageIndicatorStyle } = props);
   if (0 < count) {
     do {
-      let tmp5 = require;
-      let tmp6 = dependencyMap;
-      let tmp4 = callback;
       let obj = { fontSize: null };
       obj[0] = tmp3;
       let items1 = [obj, ];
-      let tmp7 = num;
       obj = { style: null, children: "\u2022" };
       items1[1] = num === tmp2 ? tmp.activeIndicator : tmp.inactiveIndicator;
       obj[0] = items1;
-      let arr = children.push(tmp4(Button.LegacyText, obj, num));
+      let arr = children.push(callback(Button.LegacyText, obj, num));
       num = num + 1;
     } while (num < count);
   }
@@ -84,8 +79,7 @@ Carousel.prototype["render"] = function render() {
   if (scrollViewProps == null) {
     scrollViewProps = {};
   }
-  obj = { style: items, children: null };
-  items = [tmp.container, self.props.style];
+  const items = [tmp.container, self.props.style];
   obj = { automaticallyAdjustContentInsets: false, horizontal: true, pagingEnabled: true, scrollEnabled: length > 1, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, onMomentumScrollEnd: self.onAnimationEnd };
   const merged = Object.assign(scrollViewProps);
   obj.children = callback(closure_2, {
@@ -101,7 +95,6 @@ Carousel.prototype["render"] = function render() {
 };
 Carousel.contextType = require("ManaContext").ThemeContext;
 Carousel.defaultProps = { pageIndictor: true, width: 375 };
-obj1 = { color: ThemesDefault.colors.ICON_SUBTLE };
-const result = require("set").fileFinishedImporting("components_native/common/Carousel.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/Carousel.tsx");
 
 export default Carousel;

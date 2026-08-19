@@ -1,13 +1,13 @@
 // === Module 5093: getTimestampString ===
 
 // Module 5093 (getTimestampString)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let c3 = 2592000;
 let c4 = 31104000;
-const result = set.fileFinishedImporting("modules/threads/getTimestampString.tsx");
+const result = obj132.fileFinishedImporting("modules/threads/getTimestampString.tsx");
 
-export default function getTimestampString(arg0, arg1) {
+export default function getTimestampString(arg0, fn) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -17,12 +17,12 @@ export default function getTimestampString(arg0, arg1) {
   obj = importDefault(obj[1])();
   const diffResult = obj.diff(importDefault(obj[1])(arg0), "s");
   let tmp4;
-  if (null != arg1) {
-    tmp4 = arg1();
+  if (null != fn) {
+    tmp4 = fn();
   }
   function formatString(minutes, diffResult) {
     if (tmp3) {
-      let tmp5 = tmp[minutes];
+      let tmp5 = dependencyMap[minutes];
       if (tmp5 == null) {
         let tmp6;
         if (tmp2 != null) {
@@ -107,7 +107,7 @@ export default function getTimestampString(arg0, arg1) {
     }
     if (null != years) {
       const _Math5 = Math;
-      const formatStringResult5 = formatString("years", Math.floor(diffResult / tmp14));
+      const formatStringResult5 = formatString("years", Math.floor(diffResult / c4));
       if (null != formatStringResult5) {
         return formatStringResult5;
       }

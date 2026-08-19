@@ -1,16 +1,16 @@
 // === Module 11515: ANSWER_IN_REGEX ===
 
 // Module 11515 (ANSWER_IN_REGEX)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
 
 export const ANSWER_IN_REGEX = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i;
 export const GENERIC_REGEX = /(?:\s*([^\s]+))/;
 export const makeRegexForOptionsWithNegation = function makeRegexForOptionsWithNegation(items) {
   items = [...items];
   const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
-  const mapped = sorted.map((arg0) => callback(table[0]).escape(arg0));
+  const mapped = sorted.map((item, index) => callback(table[0]).escape(item));
   const regExp = new RegExp("(?:\\s*(-?(?:" + mapped.join("|") + ")))", "i");
   return regExp;
 };

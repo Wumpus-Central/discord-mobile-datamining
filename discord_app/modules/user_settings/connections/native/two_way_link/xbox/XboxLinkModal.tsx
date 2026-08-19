@@ -4,12 +4,12 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import HeaderActionButton from "HeaderActionButton" /* 5432 */;
 import registerAssetDefault from "registerAsset" /* 8143 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9752 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function CloseButton() {
   const obj = {
     source: registerAssetDefault,
@@ -28,7 +28,7 @@ function CloseButton() {
     accessibilityLabel: null
   });
 }
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx");
 
 export default function XboxLinkModal(locationStack) {
   let twoWayLinkStyles;
@@ -42,29 +42,9 @@ export default function XboxLinkModal(locationStack) {
     function blank() {
       return null;
     }
-    let obj = {
+    const obj = {
       headerLeft: blank,
-      headerRight: closure_1_7,
-      headerTitle: blank,
-      headerStyle: onClose.navHeader,
-      render() {
-        return callback2(callback(9753), {});
-      }
-    };
-    obj = {
-      headerLeft: blank,
-      headerRight: closure_1_7,
-      headerStyle: onClose.navHeader,
-      headerTitle() {
-        return callback2(onClose(9757).TwoWayLinkStepHeader, { idx: 1, total: 2 });
-      },
-      render() {
-        return callback2(callback(9758), {});
-      }
-    };
-    obj = {
-      headerLeft: blank,
-      headerRight: closure_1_7,
+      headerRight: CloseButton,
       headerStyle: onClose.navHeader,
       headerTitle() {
         return callback2(onClose(9757).TwoWayLinkStepHeader, { idx: 2, total: 2 });
@@ -80,7 +60,7 @@ export default function XboxLinkModal(locationStack) {
       [closure_1_4.DISCORD_CONSENT]: obj,
       [closure_1_4.SUCCESS]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {
@@ -89,7 +69,7 @@ export default function XboxLinkModal(locationStack) {
       },
       [closure_1_4.EDUCATION]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {
@@ -98,7 +78,7 @@ export default function XboxLinkModal(locationStack) {
       },
       [closure_1_4.ERROR]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {

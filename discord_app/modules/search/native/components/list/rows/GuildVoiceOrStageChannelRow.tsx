@@ -5,24 +5,21 @@ import useStageParticipants from "useStageParticipants" /* 6708 */;
 import _modDef15881 from "module_15881" /* 15881 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 import { CHANNEL_LIST_SEARCH_LAYOUT as closure_6 } from "MessageEmbedTypes" /* 8507 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function GuildVoiceChannelSubtitle(channel) {
   channel = channel.channel;
   const voiceStates = channel.voiceStates;
-  let id;
-  let guild_id;
-  let stateFromStores;
-  id = channel.id;
-  guild_id = channel.guild_id;
+  const id = channel.id;
+  const guild_id = channel.guild_id;
   let obj = channel(id[9]);
   const items = [closure_5];
   const items1 = [channel.id];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     const stageInstanceByChannel = closure_1_5.getStageInstanceByChannel(channel.id);
     let topic;
     if (stageInstanceByChannel != null) {
@@ -289,8 +286,8 @@ function GuildVoiceChannelExtras(arg0) {
     obj[2] = channel.guild_id;
     obj[3] = closure_6;
     obj[4] = tmp4;
-    obj[1] = tmp5(_modDef15881, obj);
-    tmp5Result = tmp5(tmp6, obj);
+    obj[1] = jsx(_modDef15881, { users: null, max: 5, guildId: null, layout: null, audienceCount: null });
+    tmp5Result = <View users={null} max={5} guildId={null} layout={null} audienceCount={null} />;
   }
   obj[1] = tmp5Result;
   return <View style={tmp.subtitle}>{null}</View>;
@@ -303,7 +300,7 @@ const memoResult = importAllResult.memo(function GuildVoiceChannelRow(channel) {
   if (channel.isGuildStageVoice()) {
     voiceStates = channel.speakerVoiceStates;
   }
-  const mapped = voiceStates.map((user) => user.user);
+  const mapped = voiceStates.map((item, index) => item.user);
   const items = [channel.id, onPress];
   const callback = importAllResult.useCallback(() => {
     onPress(channel.id);
@@ -317,13 +314,13 @@ const memoResult = importAllResult.memo(function GuildVoiceChannelRow(channel) {
     obj = { channel: null, voiceStates: null };
     obj[0] = channel;
     obj[1] = voiceStates;
-    obj[1] = tmp4(channel(11458).VocalChannelJoinButton, obj);
-    trailing = tmp4(View, obj);
+    obj[1] = jsx(channel(11458).VocalChannelJoinButton, { channel: null, voiceStates: null });
+    trailing = <View channel={null} voiceStates={null} />;
   }
   obj[4] = trailing;
   obj[5] = <GuildVoiceChannelExtras channel={channel} voiceStates={voiceStates} users={mapped} />;
   return jsx(onPress(15883), { onPress: callback, voiceStates, channel, subtitle: null, trailing: null, extras: null });
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");
 
 export default memoResult;

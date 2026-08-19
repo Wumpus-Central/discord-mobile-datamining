@@ -2,11 +2,11 @@
 
 // Module 10356 (useMobileSocialLayerPurchaseSKU)
 import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10357 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { PriceSetAssignmentPurchaseTypes as closure_4 } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/slayer_storefront/native/hooks/useMobileSocialLayerPurchaseSKU.android.tsx");
 
 export default function useMobileSocialLayerPurchaseSKU(sku) {
   sku = sku.sku;
@@ -37,8 +37,8 @@ export default function useMobileSocialLayerPurchaseSKU(sku) {
     const effect = React.useEffect(() => {
       if (null != _null) {
         const items = [tmp];
-        const inAppSkus = _null(closure_1_2[2]).loadInAppSkus(items);
-        const obj = _null(closure_1_2[2]);
+        const inAppSkus = _null(dependencyMap[2]).loadInAppSkus(items);
+        const obj = _null(dependencyMap[2]);
       }
     }, items);
     let obj = {};

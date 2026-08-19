@@ -5,7 +5,7 @@ import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const require = arg1;
+const require = fn;
 let c3 = null;
 let c4 = null;
 const Store = initializeDefault.Store;
@@ -33,9 +33,9 @@ const messagePreviewStore = new MessagePreviewStore(dispatcherDefault, {
   LOAD_MESSAGES_AROUND_SUCCESS: function handleLoadMessagesAroundSuccess(messages) {
     messages = messages.messages;
     closure_3 = [];
-    const item = messages.forEach((message) => {
+    const item = messages.forEach((item, index) => {
       if (null != arr) {
-        arr = arr.unshift(callback(table[0]).createMessageRecord(message));
+        arr = arr.unshift(callback(table[0]).createMessageRecord(item));
         const obj = callback(table[0]);
       }
     });
@@ -46,6 +46,6 @@ const messagePreviewStore = new MessagePreviewStore(dispatcherDefault, {
     c4 = null;
   }
 });
-const result = require("set").fileFinishedImporting("stores/native/MessagePreviewStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/native/MessagePreviewStore.tsx");
 
 export default messagePreviewStore;

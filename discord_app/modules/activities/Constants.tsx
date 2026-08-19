@@ -1,17 +1,15 @@
 // === Module 4481: items3 ===
 
 // Module 4481 (items3)
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
-import set from "set" /* 2 */;
 
 const ChannelTypes = ME.ChannelTypes;
 const items = ["1037680572660727838", "235088799074484224", "1007373802981822582", "1067803140071620628", "1194351737264406548", "1245041113882955918", "1245040907732910201", "1245040436427489471", "1208090049871351890", "1235205910863806484", "1227719606223765687"];
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
-let obj = { UNLOCKED: 1, [1]: "UNLOCKED", PORTRAIT: 2, [2]: "PORTRAIT", LANDSCAPE: 3, [3]: "LANDSCAPE" };
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
-let set = new Set(items2);
-obj = { label_type: PermissionOverwriteType.EmbeddedActivityLabelTypes.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] };
+let obj = { label_type: PermissionOverwriteType.EmbeddedActivityLabelTypes.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] };
 obj = { application_id: "", requires_age_gate: false, legacy_responsive_aspect_ratio: false, default_orientation_lock_state: obj.UNLOCKED, tablet_default_orientation_lock_state: obj.UNLOCKED, supported_platforms: null, client_platform_config: null, has_csp_exception: false, displays_advertisements: false, blocked_locales: null, supported_locales: null };
 const items3 = [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB];
 obj[5] = items3;
@@ -22,7 +20,8 @@ const items4 = [, , , ];
 ({ GUILD_TEXT: arr5[0], DM: arr5[1], GROUP_DM: arr5[2], GUILD_SPACE: arr5[3] } = ChannelTypes);
 const items5 = [];
 items5[HermesBuiltin.arraySpread(items4, 0)] = ChannelTypes.GUILD_VOICE;
-const result = set.fileFinishedImporting("modules/activities/Constants.tsx");
+const set = new Set(items2);
+const result = obj132.fileFinishedImporting("modules/activities/Constants.tsx");
 
 export const ACTIVITY_INVITE_COVER_IMAGE_SIZE = 160;
 export const validStreamURL = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/;

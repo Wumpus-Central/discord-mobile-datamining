@@ -1,12 +1,12 @@
 // === Module 12607: useIsGuestOrLurker ===
 
 // Module 12607 (useIsGuestOrLurker)
-import closure_2 from "trackCommunicationDisabled" /* 1990 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");
 
 export default function useIsGuestOrLurker(arg0, arg1) {
   const _require = arg0;
@@ -18,7 +18,7 @@ export default function useIsGuestOrLurker(arg0, arg1) {
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(closure_1_4.CONFERENCE);
+      hasItem = features.has(GuildFeatures.CONFERENCE);
     }
     return true !== hasItem && closure_1_2.isGuestOrLurker(closure_0, closure_1);
   }, items1);
@@ -32,7 +32,7 @@ export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, 
   }
   let isGuestOrLurkerResult = true !== hasItem;
   if (isGuestOrLurkerResult) {
-    isGuestOrLurkerResult = closure_2.isGuestOrLurker(guild_id, id);
+    isGuestOrLurkerResult = guestOrLurker.isGuestOrLurker(guild_id, id);
   }
   return isGuestOrLurkerResult;
 };

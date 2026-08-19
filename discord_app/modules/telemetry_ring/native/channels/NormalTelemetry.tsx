@@ -5,7 +5,7 @@ import TelemetryChannel from "TelemetryChannel" /* 13562 */;
 import importDefaultResult from "append" /* 13561 */;
 import importDefaultResult1 from "TelemetryChannel" /* 13562 */;
 
-require = arg1;
+require = fn;
 class NormalTelemetryImpl extends tmp3 {
   constructor() {
     tmp2 = require("TelemetryChannel");
@@ -19,6 +19,6 @@ class NormalTelemetryImpl extends tmp3 {
 let items = [require("TelemetryChannel").TelemetryChannel.NORMAL];
 importDefaultResult = new importDefaultResult(importDefaultResult1, items, tmp, Object, NormalTelemetryImpl, importDefaultResult, importDefaultResult1);
 // ThrowIfThisInitialized (0x7c)
-const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/NormalTelemetry.tsx");
+const result = require("obj132").fileFinishedImporting("modules/telemetry_ring/native/channels/NormalTelemetry.tsx");
 
 export default importDefaultResult;

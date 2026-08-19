@@ -1,12 +1,12 @@
 // === Module 15212: useRegistrationUIStore ===
 
 // Module 15212 (useRegistrationUIStore)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import batchUpdates from "batchUpdates" /* 705 */;
 import keys from "keys" /* 644 */;
 
 let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessibilityRole" }));
-const result = set.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
+const result = obj132.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export const useRegistrationUIStore = obj;
 export const setRegistrationErrors = function setRegistrationErrors(arg0) {
@@ -29,7 +29,6 @@ export const updateRegistrationOptions = function updateRegistrationOptions(arg0
   const registrationOptions = obj.getState().registrationOptions;
   obj = _require(registrationOptions[1]);
   obj.batchUpdates(() => {
-    obj = { registrationOptions: null };
     obj = {};
     const merged = Object.assign(registrationOptions);
     const merged1 = Object.assign(closure_0);

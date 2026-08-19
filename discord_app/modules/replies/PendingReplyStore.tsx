@@ -4,9 +4,9 @@
 import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "reinjectEphemerals" /* 4994 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 
 let closure_5 = {};
 let closure_6 = {};
@@ -18,9 +18,7 @@ const prototype = PendingReplyStore.prototype;
 prototype["getState"] = function getState() {
   let obj = {};
   const entries = DISCORD_EPOCHDefault.entries(closure_5);
-  const obj2 = DISCORD_EPOCHDefault;
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     obj = { channelId: null, messageId: null, shouldMention: null, showMentionToggle: null };
@@ -36,17 +34,13 @@ prototype["getState"] = function getState() {
   return obj;
 };
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
   this.waitFor(closure_4, closure_3);
-  if (arg0 == null) {
-    obj = {};
-  }
 };
 prototype["getPendingReply"] = function getPendingReply(id) {
   return dependencyMap[id];
 };
-prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(pendingReplyActionSource) {
-  return table[pendingReplyActionSource];
+prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(closure_0) {
+  return table[closure_0];
 };
 PendingReplyStore.displayName = "PendingReplyStore";
 PendingReplyStore.persistKey = "PendingReplyStore";
@@ -105,8 +99,8 @@ const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
     const keys = DISCORD_EPOCHDefault.keys(closure_6);
-    const item = keys.forEach((arg0) => {
-      if (null == channel.getChannel(arg0)) {
+    const item = keys.forEach((item, index) => {
+      if (null == channel.getChannel(item)) {
         delete tmp[tmp2];
       }
     });
@@ -180,6 +174,6 @@ const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/replies/PendingReplyStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/replies/PendingReplyStore.tsx");
 
 export default pendingReplyStore;

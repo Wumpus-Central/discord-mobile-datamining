@@ -1,13 +1,13 @@
 // === Module 12115: isOnMetaHorizon ===
 
 // Module 12115 (isOnMetaHorizon)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import items3 from "items3" /* 4481 */;
 
 let closure_0 = items3.META_PRESENCE_APPLICATION_ID;
 const ActivityGamePlatforms = ME.ActivityGamePlatforms;
-const result = set.fileFinishedImporting("modules/activities/utils/isOnMetaHorizon.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/isOnMetaHorizon.tsx");
 
 export default function isOnMetaHorizon(application_id) {
   application_id = undefined;

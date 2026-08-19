@@ -1,9 +1,9 @@
 // === Module 6920: language ===
 
 // Module 6920 (language)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/spellcheck/LanguageDetector.tsx");
+const result = obj132.fileFinishedImporting("lib/spellcheck/LanguageDetector.tsx");
 class LanguageDetector {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -53,13 +53,13 @@ prototype["process"] = function process(arg0) {
         _languageHint = obj._languageHint;
         const obj2 = arr(self[0]);
         const ensureModuleResult = arr(self[0]).ensureModule("discord_spellcheck");
-        arr(self[0]).ensureModule("discord_spellcheck").then(() => {
+        arr(self[0]).ensureModule("discord_spellcheck").then((result) => {
           let cld = lib(_languageHint[0]).requireModule("discord_spellcheck").cld;
           const obj = lib(_languageHint[0]);
           return new Promise((arg0, arg1) => {
             cld = arg0;
             closure_1 = arg1;
-            cld.detect(cld, { httpHint: closure_1_1, encodingHint: "UTF8" }, (message, reliable) => {
+            cld.detect(cld, { httpHint: _languageHint, encodingHint: "UTF8" }, (message, reliable) => {
               if (null != message) {
                 const _Error2 = Error;
                 error = new Error(message.message);
@@ -78,19 +78,19 @@ prototype["process"] = function process(arg0) {
               }
             });
           });
-        }).then((language) => {
-          _languageHint.language = language;
+        }).then((result) => {
+          _languageHint.language = result;
           _languageHint._processEnd(lib.didTimeout);
         }, () => {
           _languageHint._processEnd(lib.didTimeout);
         });
-        const nextPromise = arr(self[0]).ensureModule("discord_spellcheck").then(() => {
+        const nextPromise = arr(self[0]).ensureModule("discord_spellcheck").then((result) => {
           let cld = lib(_languageHint[0]).requireModule("discord_spellcheck").cld;
           const obj = lib(_languageHint[0]);
           return new Promise((arg0, arg1) => {
             cld = arg0;
             closure_1 = arg1;
-            cld.detect(cld, { httpHint: closure_1_1, encodingHint: "UTF8" }, (message, reliable) => {
+            cld.detect(cld, { httpHint: _languageHint, encodingHint: "UTF8" }, (message, reliable) => {
               if (null != message) {
                 const _Error2 = Error;
                 error = new Error(message.message);

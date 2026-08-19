@@ -3,7 +3,7 @@
 // Module 10020 (initialize)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "fetchFingerprint" /* 1218 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 
 let closure_1 = {};
 const Store = initializeDefault.Store;
@@ -15,9 +15,6 @@ prototype["initialize"] = function initialize() {
 };
 prototype["areSlayerNotificationsSuppressed"] = function areSlayerNotificationsSuppressed() {
   for (const key10002 in closure_1) {
-    let tmp = key10002;
-    let tmp2 = table;
-    let tmp3 = id;
     if (table[key10002] !== id.getId()) {
       continue;
     } else {
@@ -39,6 +36,6 @@ const rpcNotificationSettingsStore = new RpcNotificationSettingsStore(dispatcher
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/notifications/RpcNotificationSettingsStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notifications/RpcNotificationSettingsStore.tsx");
 
 export default rpcNotificationSettingsStore;

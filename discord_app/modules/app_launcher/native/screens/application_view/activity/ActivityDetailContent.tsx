@@ -6,23 +6,27 @@ import Text from "Text" /* 4734 */;
 import contextDefault from "context" /* 7139 */;
 import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
 import toggleUseActivityUrlOverrideAll from "toggleUseActivityUrlOverride" /* 8747 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
+import _modDef9815 from "module_9815" /* 9815 */;
+import HeroMediaDefault from "HeroMedia" /* 11260 */;
+import useIsPrimaryEntryPointDisabledDefault from "useIsPrimaryEntryPointDisabled" /* 11321 */;
+import useShowTryItOutButtonInAppLauncherDefault from "useShowTryItOutButtonInAppLauncher" /* 11322 */;
+import getItemSubtitleForMaxPlayersDefault from "getItemSubtitleForMaxPlayers" /* 11324 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_8 from "initialize" /* 7872 */;
-import closure_9 from "createExecutable" /* 4479 */;
+import initialize from "initialize" /* 7872 */;
+import createExecutable from "createExecutable" /* 4479 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function Tag(arg0) {
   ({ tagName, icon, accessibilityLabel } = arg0);
   const tmp = callback5();
-  let obj = { style: tmp.tag, accessible: true, accessibilityLabel, children: null };
   const items = [icon, ];
-  obj = { variant: "text-sm/normal", style: tmp.tagText, children: tagName };
+  const obj = { variant: "text-sm/normal", style: tmp.tagText, children: tagName };
   items[1] = callback3(Text.Text, obj);
   obj[3] = items;
   return callback4(View, obj);
@@ -32,25 +36,22 @@ function PrimaryEntryPointButton(applicationId) {
   ({ context, primaryEntryPointCommand } = applicationId);
   const activityAction = applicationId.activityAction;
   let chatInputRef;
-  let keyboardCloseReasonRef;
-  let callback;
   let handleActivityItemSelected;
-  let obj = handleActivityItemSelected;
   ({ sectionName, disabled, onActivityItemSelected, entrypoint } = applicationId);
   const id = handleActivityItemSelected.useId();
   obj1 = applicationId(chatInputRef[11]);
   const requiredAppLauncherContext = obj1.useRequiredAppLauncherContext();
   chatInputRef = requiredAppLauncherContext.chatInputRef;
-  keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
+  const keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
   const items = [chatInputRef, keyboardCloseReasonRef];
-  callback = handleActivityItemSelected.useCallback(() => {
+  const callback = handleActivityItemSelected.useCallback(() => {
     keyboardCloseReasonRef.current = applicationId(chatInputRef[11]).AppLauncherKeyboardCloseReason.ACTIVITY;
     const current = chatInputRef.current;
     if (current != null) {
       current.closeCustomKeyboard();
     }
   }, items);
-  obj = { applicationId, context, launchingComponentId: id, onSubmissionComplete: null };
+  let obj = { applicationId, context, launchingComponentId: id, onSubmissionComplete: null };
   let tmp7;
   if (activityAction !== applicationId(chatInputRef[13]).ActivityAction.LEAVE) {
     tmp7 = callback;
@@ -94,28 +95,26 @@ function TryItOutButton(botUserId) {
   botUserId = botUserId.botUserId;
   const applicationId = botUserId.applicationId;
   const analyticsLocations = botUserId.analyticsLocations;
-  dependencyMap = undefined;
-  let callback;
   const tmp = callback2(React.useState(false), 2);
   dependencyMap = tmp[1];
-  callback = React.useRef(null);
+  let callback = React.useRef(null);
   const items = [botUserId, applicationId, analyticsLocations];
   let str = "primary";
   callback = React.useCallback(callback(function*() {
     closure_1 = tmp3;
     obj1 = { application_id: null, button_action: null };
-    obj1[0] = closure_1_1;
-    obj1[1] = closure_1_0(9566).EntryPointCommandButtonActions.OPEN_APP_DM;
-    closure_1_1(698).track(closure_1_10.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, obj1);
+    obj1[0] = applicationId;
+    obj1[1] = botUserId(9566).EntryPointCommandButtonActions.OPEN_APP_DM;
+    applicationId(698).track(closure_1_10.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, obj1);
     const _setTimeout = setTimeout;
     ref.current = setTimeout(() => {
       v0(true);
     }, 250);
     dependencyMap = 1;
-    const obj8 = closure_1_1(698);
+    const obj8 = applicationId(698);
     const obj2 = { recipientIds: null };
-    obj2[0] = closure_1_0;
-    yield closure_1_1(4770).openPrivateChannel(obj2);
+    obj2[0] = botUserId;
+    yield applicationId(4770).openPrivateChannel(obj2);
     if (1 === tmp7) {
       dependencyMap = 0;
       const _clearTimeout = clearTimeout;
@@ -141,7 +140,7 @@ function TryItOutButton(botUserId) {
         ref = 3;
         c5 = 1;
         const obj6 = { value: null, done: false };
-        obj6[0] = closure_1_1(8746)(obj5);
+        obj6[0] = applicationId(8746)(obj5);
         return obj6;
       }
     } else if (arg0 === 1) {
@@ -164,26 +163,22 @@ function TryItOutButton(botUserId) {
 }
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_12 = ThemesDefault.space.PX_12;
-createCacheKey = { container: { flex: 1 }, cardContainer: null, activityHeroDetailsLandscape: null, heroMediaContainerLandscape: null, detailsContainerLandscape: null, details: null, tagList: null, tag: null, tagText: null, tagIcon: null, buttonContainer: null, activityUrlOverrideInputContainer: null, primaryEntryPointButtonDisabledCTA: null, tryItOutButtonContainerStyle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", gap: ThemesDefault.space.PX_16, paddingBottom: PX_12 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", gap: ThemesDefault.space.PX_16, paddingBottom: PX_12 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row" };
 createCacheKey[3] = { width: "65%" };
 createCacheKey[4] = { width: "35%" };
 createCacheKey[5] = { marginTop: 16, paddingHorizontal: PX_12, rowGap: 4 };
 createCacheKey[6] = { display: "flex", flexDirection: "row", flexWrap: "wrap", marginTop: ThemesDefault.space.PX_8, columnGap: 4, rowGap: 6 };
-let obj1 = { display: "flex", flexDirection: "row", flexWrap: "wrap", marginTop: ThemesDefault.space.PX_8, columnGap: 4, rowGap: 6 };
 createCacheKey[7] = { display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: 12, paddingVertical: 4 };
 createCacheKey[8] = { top: -1 };
 createCacheKey[9] = { marginRight: 4 };
 createCacheKey[10] = { paddingTop: 16 };
 createCacheKey[11] = { marginTop: -4 };
-let obj2 = { display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: 12, paddingVertical: 4 };
 createCacheKey[12] = { marginTop: ThemesDefault.space.PX_12, color: ThemesDefault.colors.TEXT_MUTED, textAlign: "center" };
 createCacheKey[13] = { marginTop: 8 };
 let closure_15 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_12, color: ThemesDefault.colors.TEXT_MUTED, textAlign: "center" };
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/ActivityDetailContent.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/ActivityDetailContent.tsx");
 
 export default function ActivityDetailContent(application) {
   application = application.application;
@@ -232,15 +227,13 @@ export default function ActivityDetailContent(application) {
         obj2[0] = tmp.activityUrlOverrideInputContainer;
         const obj3 = { placeholder: "e.g. http://192.168.1.1:3000", value: null, onChange: null };
         obj3[1] = activityUrlOverride;
-        obj3[2] = tmp20(8747).setActivityUrlOverride;
-        obj2[1] = tmp19(tmp2(8071).TextInput, obj3);
-        tmp19Result = tmp19(tmp18, obj2);
+        obj3[2] = toggleUseActivityUrlOverrideAll.setActivityUrlOverride;
+        obj2[1] = callback3(tmp2(8071).TextInput, obj3);
+        tmp19Result = callback3(View, obj2);
       }
       items1[2] = tmp19Result;
       obj[1] = items1;
-      tmp17Result = closure_12(tmp18, obj);
-      const tmp17 = closure_12;
-      tmp20 = importAll;
+      tmp17Result = callback(View, obj);
     }
     const getOrFetchApplication = tmp2(7145).useGetOrFetchApplication(application.id);
     let bot;
@@ -259,12 +252,12 @@ export default function ActivityDetailContent(application) {
     obj5[1] = application;
     obj5[2] = delayedSwapToActivityActionLeave;
     const tmp2Result3 = tmp2(11320);
-    ({ reason, disabled } = tmp5(11321)(obj5));
+    ({ reason, disabled } = useIsPrimaryEntryPointDisabledDefault(obj5));
     const obj6 = { context: null, application: null, botUserId: null };
     obj6[0] = context;
     obj6[1] = application;
     let id;
-    let tmp5Result = tmp5(11322);
+    let tmp5Result = useShowTryItOutButtonInAppLauncherDefault;
     if (bot != null) {
       id = bot.id;
     }
@@ -295,8 +288,8 @@ export default function ActivityDetailContent(application) {
           obj9[1] = application.id;
           obj9[2] = analyticsLocations;
           obj9[3] = context;
-          obj8[1] = tmp36(TryItOutButton, obj9);
-          tmp36Result = tmp36(View, obj8);
+          obj8[1] = callback3(TryItOutButton, obj9);
+          tmp36Result = callback3(View, obj8);
         }
       }
       const obj10 = { children: null };
@@ -304,19 +297,17 @@ export default function ActivityDetailContent(application) {
       obj10[0] = items2;
       const obj11 = { style: null, children: null };
       obj11[0] = tmp.buttonContainer;
-      const items3 = [closure_12(closure_13, obj10), ];
+      const items3 = [callback(closure_13, obj10), ];
       tmp36Result = null != reason;
       if (tmp36Result) {
         const obj12 = { variant: "text-sm/normal", style: null, children: null };
         obj12[1] = tmp.primaryEntryPointButtonDisabledCTA;
         obj12[2] = reason;
-        tmp36Result = tmp36(tmp2(4734).Text, obj12);
+        tmp36Result = callback3(tmp2(4734).Text, obj12);
       }
       items3[1] = tmp36Result;
       obj11[1] = items3;
-      const tmp34Result = closure_12(View, obj11);
-      const tmp35 = closure_13;
-      const tmp42 = View;
+      const tmp34Result = callback(View, obj11);
     } else {
       if (isDeveloperOfThisApp) {
         isDeveloperOfThisApp = !hasCommands;
@@ -358,7 +349,7 @@ export default function ActivityDetailContent(application) {
     const obj20 = { applicationId: null, width: null };
     obj20[0] = application.id;
     let result = width;
-    tmp5Result = tmp5(11260);
+    tmp5Result = HeroMediaDefault;
     if (detailsContainerLandscape) {
       result = 65 * width / 100;
     }
@@ -374,15 +365,14 @@ export default function ActivityDetailContent(application) {
     obj21[0] = items6;
     const obj22 = { application: null };
     obj22[0] = application;
-    const items7 = [callback3(tmp5(9815), obj22), , , , ];
+    const items7 = [callback3(_modDef9815, obj22), , , , ];
     const obj23 = { style: null, children: null };
     obj23[0] = tmp.tagList;
     const obj24 = { icon: null, tagName: null, accessibilityLabel: null };
     const obj25 = { style: null, size: "xs" };
     obj25[0] = tmp.tagIcon;
     obj24[0] = callback3(tmp2(6884).GroupIcon, obj25);
-    const tmp26 = tmp5(11321)(obj5);
-    const tmp49 = Tag;
+    const tmp26 = useIsPrimaryEntryPointDisabledDefault(obj5);
     let num5 = num;
     if (num == null) {
       num5 = 0;
@@ -392,29 +382,28 @@ export default function ActivityDetailContent(application) {
     if (num == null) {
       num = 0;
     }
-    obj24[2] = tmp5(11324)(num);
-    const items8 = [callback3(tmp49, obj24, "participants"), ];
+    obj24[2] = getItemSubtitleForMaxPlayersDefault(num);
+    const items8 = [callback3(Tag, obj24, "participants"), ];
     const tags = application.tags;
     let mapped;
     if (tags != null) {
-      mapped = tags.map((tagName) => {
-        let obj = { tagName, accessibilityLabel: null };
+      mapped = tags.map((item, index) => {
         const intl = application(1236).intl;
-        obj = { tagName };
+        const obj = { tagName: item };
         obj[1] = intl.formatToPlainString(application(1236).t.tXXD6v, obj);
-        return callback(closure_16, obj, tagName);
+        return callback(closure_16, obj, item);
       });
     }
     items8[1] = mapped;
     obj23[1] = items8;
-    items7[1] = closure_12(View, obj23);
+    items7[1] = callback(View, obj23);
     items7[2] = tmp34Result;
     items7[3] = tmp30;
     items7[4] = tmp17Result;
     obj21[1] = items7;
-    items5[1] = closure_12(View, obj21);
+    items5[1] = callback(View, obj21);
     obj18[1] = items5;
-    obj17[1] = closure_12(View, obj18);
+    obj17[1] = callback(View, obj18);
     obj16[1] = callback3(View, obj17);
     obj15[1] = callback3(View, obj16);
     return callback3(tmp2(7139).AnalyticsLocationProvider, obj15);
@@ -423,5 +412,4 @@ export default function ActivityDetailContent(application) {
     error = new Error("ActivityDetailContent was passed the Built-in App, which is not supported.");
     throw error;
   }
-  const tmp6 = contextDefault;
 };

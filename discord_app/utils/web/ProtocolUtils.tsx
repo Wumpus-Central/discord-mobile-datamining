@@ -22,9 +22,9 @@ if ("Android" !== family) {
   }
   tmp3 = launchMobile;
   if ("iOS" !== family1) {
-    function launchFirefox(str) {
+    function launchFirefox(href) {
       closure_0 = arg1;
-      if (str.startsWith("discord:")) {
+      if (href.startsWith("discord:")) {
         const _document = document;
         if (null == body) {
           const _process4 = process;
@@ -35,7 +35,7 @@ if ("Android" !== family) {
           body.appendChild(element);
           try {
             if (null != element.contentWindow) {
-              element.contentWindow.location.href = str;
+              element.contentWindow.location.href = href;
             }
             const _process2 = process;
             process.nextTick(() => callback(true));
@@ -43,13 +43,13 @@ if ("Android" !== family) {
             const timerId = window.setTimeout(() => {
               let parentElement;
               if (element != null) {
-                parentElement = tmp.parentElement;
+                parentElement = element.parentElement;
               }
               if (parentElement == null) {
                 parentElement = null;
               }
               if (null !== parentElement) {
-                body.removeChild(tmp);
+                body.removeChild(element);
               }
             }, 1000);
           } catch (tmp4) {
@@ -61,7 +61,7 @@ if ("Android" !== family) {
         }
       } else {
         const _location = location;
-        location.href = str;
+        location.href = href;
         const _process = process;
         return process.nextTick(() => callback(true));
       }
@@ -69,7 +69,7 @@ if ("Android" !== family) {
     if ("Gecko" !== formatDefault.layout) {
       function launchChrome(href) {
         closure_0 = arg1;
-        function handleBlur() {
+        function handleBlur(event) {
           c1 = true;
         }
         c1 = false;
@@ -85,8 +85,8 @@ if ("Android" !== family) {
         const ua = formatDefault.ua;
         launchSteam = launchChrome;
         if (-1 !== ua.indexOf("Valve Steam GameOverlay")) {
-          launchSteam = function launchSteam(arg0, arg1) {
-            arg1(false);
+          launchSteam = function launchSteam(arg0, fn) {
+            fn(false);
           };
         }
       }
@@ -95,6 +95,6 @@ if ("Android" !== family) {
     tmp3 = launchFirefox;
   }
 }
-const result = require("set").fileFinishedImporting("utils/web/ProtocolUtils.tsx");
+const result = require("obj132").fileFinishedImporting("utils/web/ProtocolUtils.tsx");
 
 export default { launch: tmp3 };

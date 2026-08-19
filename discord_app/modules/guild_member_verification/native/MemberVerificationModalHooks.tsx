@@ -2,13 +2,13 @@
 
 // Module 8526 (useSetInitialVerificationEffect)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
-import closure_4 from "map" /* 8527 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import map from "map" /* 8527 */;
 import { setInitialVerification } from "map" /* 8527 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
 
 export const useSetInitialVerificationEffect = function useSetInitialVerificationEffect(guildId) {
   let _require = guildId;
@@ -46,7 +46,7 @@ export const useSetInitialVerificationEffect = function useSetInitialVerificatio
   const items3 = [guildId];
   const effect1 = React.useEffect(() => {
     if (null == ref.current.initial) {
-      closure_1_5(closure_0, tmp);
+      setInitialVerification(closure_0, tmp);
     }
   }, items3);
   return obj.initial;

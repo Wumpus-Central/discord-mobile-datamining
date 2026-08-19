@@ -1,22 +1,21 @@
 // === Module 5427: set ===
 
 // Module 5427 (set)
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
+import combinedDefault from "combined" /* 1993 */;
 import messagesProxyDefault from "messagesProxy" /* 2853 */;
 import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 5254 */;
-import set from "set" /* 2 */;
+import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
 
 const HelpdeskArticles = ME.HelpdeskArticles;
 let items = [AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.NSFW_GUILD];
-let set = new Set(items);
-let obj = { FACIAL_AGE_ESTIMATION: 1, [1]: "FACIAL_AGE_ESTIMATION", ID_VERIFICATION: 2, [2]: "ID_VERIFICATION", MODULAR: 3, [3]: "MODULAR", GOOGLE_WALLET: 9, [9]: "GOOGLE_WALLET" };
-obj = {};
-obj = { title: messagesProxyDefault["2yLvkS"], description: messagesProxyDefault.eJmat5 };
+let obj = { title: messagesProxyDefault["2yLvkS"], description: messagesProxyDefault.eJmat5 };
 obj[obj.FACIAL_AGE_ESTIMATION] = obj;
+const set = new Set(items);
 obj[obj.ID_VERIFICATION] = { title: messagesProxyDefault.dwkwo0, description: messagesProxyDefault.ZdmRwW };
-const obj1 = { title: messagesProxyDefault.dwkwo0, description: messagesProxyDefault.ZdmRwW };
 obj[obj.GOOGLE_WALLET] = { title: messagesProxyDefault.Y9sLpR, description: messagesProxyDefault.dah4bF };
-let result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
+let result = obj132.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
 
 export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;
 export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetStartedSteps(arg0) {
@@ -39,10 +38,9 @@ export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetS
   const intl6 = _require(1236).intl;
   obj[1] = intl6.format(_require(1236).t.n5vd1E, {
     handleOnHelpUrlHook() {
-      const obj = closure_1_1(closure_1_2[3]);
-      obj.openUrl(closure_1_1(closure_1_2[4]).getArticleURL(closure_1_3.TIGGER_PAWTECT_SYSTEM_DMS));
-      const obj2 = closure_1_1(closure_1_2[4]);
-      const result = callback(closure_1_2[1]).trackAgeVerificationModalClicked(callback, callback(closure_1_2[1]).AgeVerificationModalVersion.PRIMARY, callback(closure_1_2[1]).AgeVerificationModalCta.SYSTEM_DMS_LEARN_MORE);
+      const obj = openIncodeAgeVerificationModalDefault;
+      obj.openUrl(combinedDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_SYSTEM_DMS));
+      const result = callback(dependencyMap[1]).trackAgeVerificationModalClicked(callback, callback(dependencyMap[1]).AgeVerificationModalVersion.PRIMARY, callback(dependencyMap[1]).AgeVerificationModalCta.SYSTEM_DMS_LEARN_MORE);
     }
   });
   items[2] = obj;

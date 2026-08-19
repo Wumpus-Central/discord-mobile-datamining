@@ -1,10 +1,10 @@
 // === Module 12882: useDebounce ===
 
 // Module 12882 (useDebounce)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("hooks/useDebounce.tsx");
+const result = require("obj132").fileFinishedImporting("hooks/useDebounce.tsx");
 
 export default function useDebounce(arg0, arg1) {
   const callback = arg0;

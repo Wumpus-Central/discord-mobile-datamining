@@ -2,27 +2,25 @@
 
 // Module 15012 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1910 */;
-import closure_6 from "insertUnsortedGuilds" /* 5078 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15011 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: error, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: c9 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
-createCacheKey = { iconContainer: null };
-createCacheKey = { marginRight: ThemesDefault.space.PX_12 };
+const createCacheKey = { marginRight: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsPrivacyAndSafetyGuildSelectActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsPrivacyAndSafetyGuildSelectActionSheet.tsx");
 
 export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
   let obj = React;
   const tmp2 = callback(React.useState(""), 2);
-  let selectedGuildId;
-  selectedGuildId = callback2().selectedGuildId;
+  const selectedGuildId = callback2().selectedGuildId;
   obj1 = selectedGuildId(callback[11]);
   let items = [closure_5];
   const stateFromStores = obj1.useStateFromStores(items, () => closure_1_5.getGuild(selectedGuildId));
@@ -41,7 +39,7 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
     const intl3 = tmp3(tmp4[10]).intl;
     obj[2] = intl3.string(tmp3(tmp4[10]).t["ZImm/x"]);
     callback = obj.useCallback((arg0) => {
-      obj = { type: selectedGuildId(callback[8]).SelectOptionType.GUILD, guild: null, label: null, value: null };
+      { type: selectedGuildId(callback[8]).SelectOptionType.GUILD, guild: null, label: null, value: null };
       obj = { id: closure_7, name: null };
       const intl = selectedGuildId(callback[10]).intl;
       obj[1] = intl.string(selectedGuildId(callback[10]).t["32u1Dx"]);
@@ -52,23 +50,23 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
       const items = [obj];
       if (0 === arg0.length) {
         flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
-        let reduced = flattenedGuildIds.reduce((arr) => {
-          guild = guild.getGuild(arg1);
+        let reduced = flattenedGuildIds.reduce((acc, item, index) => {
+          guild = guild.getGuild(item);
           if (null != guild) {
             obj = { type: null, value: null, label: null, guild: null };
             obj[0] = callback(4813).SelectOptionType.GUILD;
             ({ id: obj[1], name: obj[2] } = guild);
             obj[3] = guild;
-            arr.push(obj);
+            acc.push(obj);
           }
-          return arr;
+          return acc;
         }, items);
       } else {
         obj = { query: null };
         obj[0] = arg0;
         const obj4 = obj(callback[16]);
-        reduced = obj(callback[16]).queryGuilds(obj).map((record) => {
-          record = record.record;
+        reduced = obj(callback[16]).queryGuilds(obj).map((item, index) => {
+          const record = item.record;
           return { type: callback(4813).SelectOptionType.GUILD, value: record.id, label: record.name, guild: record };
         });
         const queryGuildsResult = obj(callback[16]).queryGuilds(obj);
@@ -132,4 +130,5 @@ export default function SettingsPrivacyAndSafetyGuildSelectActionSheet() {
   obj2[2] = intl2.string(selectedGuildId(callback[10]).t["32u1Dx"]);
   obj2[3] = closure_7;
   obj = obj2;
+  const tmp3Result = selectedGuildId(callback[9]);
 };

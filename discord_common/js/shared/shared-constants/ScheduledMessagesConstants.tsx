@@ -1,9 +1,9 @@
 // === Module 11170: MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS ===
 
 // Module 11170 (MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ScheduledMessagesConstants.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/shared-constants/ScheduledMessagesConstants.tsx");
 
 export const MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS = 600;
 export const MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS = 691200;

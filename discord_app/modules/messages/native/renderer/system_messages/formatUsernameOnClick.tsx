@@ -1,9 +1,9 @@
 // === Module 8187: formatUsernameOnClick ===
 
 // Module 8187 (formatUsernameOnClick)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
 
 export default function formatUsernameOnClick(arg0) {
   ({ userId, message, author, roleStyle, messageChannelId } = arg0);

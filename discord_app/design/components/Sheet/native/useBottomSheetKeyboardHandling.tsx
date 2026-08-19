@@ -1,16 +1,15 @@
 // === Module 7350: useBottomSheetKeyboardHandling ===
 
 // Module 7350 (useBottomSheetKeyboardHandling)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
 
 export default function useBottomSheetKeyboardHandling(onFocus) {
   onFocus = onFocus.onFocus;
   const onBlur = onFocus.onBlur;
-  let bottomSheetInternal;
-  bottomSheetInternal = onFocus(onBlur[1]).useBottomSheetInternal(true);
+  const bottomSheetInternal = onFocus(onBlur[1]).useBottomSheetInternal(true);
   const items = [bottomSheetInternal, onBlur, onFocus];
   return bottomSheetInternal.useMemo(() => {
     if (null == bottomSheetInternal) {

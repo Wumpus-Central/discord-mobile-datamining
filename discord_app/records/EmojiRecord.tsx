@@ -2,10 +2,10 @@
 
 // Module 16784 (prototype)
 import toJSDefault from "toJS" /* 1931 */;
-import closure_0 from "createdAt" /* 1930 */;
+import createdAt from "createdAt" /* 1930 */;
 
 toJSDefault;
-const result = require("set").fileFinishedImporting("records/EmojiRecord.tsx");
+const result = require("obj132").fileFinishedImporting("records/EmojiRecord.tsx");
 const prototype = function EmojiRecord(user) {
   const tmp2 = new prototype(tmp, new.target, new.target);
   // ThrowIfThisInitialized (0x7c)

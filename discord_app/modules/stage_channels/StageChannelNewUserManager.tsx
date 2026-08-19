@@ -3,12 +3,12 @@
 // Module 12825 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
-import closure_6 from "buildStageChannelUserRoles" /* 4990 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
+import buildStageChannelUserRoles from "buildStageChannelUserRoles" /* 4990 */;
 import { STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY as closure_7 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
 
-let require = arg1;
+let require = fn;
 initializeDefault;
 class StageChannelNewUserManager extends tmp2 {
   constructor() {
@@ -16,26 +16,24 @@ class StageChannelNewUserManager extends tmp2 {
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleVoiceStateUpdates = function handleVoiceStateUpdates(voiceStates) {
       voiceStates = voiceStates.voiceStates;
-      const item = voiceStates.forEach((channelId) => {
-        if (null != channelId.channelId) {
-          if (channelId.userId === closure_1_4.getId()) {
+      const item = voiceStates.forEach((item, index) => {
+        if (null != item.channelId) {
+          if (item.userId === closure_1_4.getId()) {
             closure_0.terminate();
             const Storage2 = closure_1_0(closure_1_3[6]).Storage;
             if (!Storage2.get(closure_1_7, false)) {
               const voiceChannelId = closure_1_5.getVoiceChannelId();
-              let isAudienceMemberResult = null != voiceChannelId && channelId.channelId === voiceChannelId;
+              let isAudienceMemberResult = null != voiceChannelId && item.channelId === voiceChannelId;
               if (isAudienceMemberResult) {
-                isAudienceMemberResult = closure_1_6.isAudienceMember(channelId.userId, voiceChannelId);
+                isAudienceMemberResult = closure_1_6.isAudienceMember(item.userId, voiceChannelId);
               }
               if (isAudienceMemberResult) {
-                const Storage = tmp11(tmp12[6]).Storage;
-                const result = Storage.set(tmp13, true);
-                const result1 = closure_1_2(tmp12[7]).openStageChannelAudienceNoticeModal(voiceChannelId);
-                const obj = closure_1_2(tmp12[7]);
+                const Storage = closure_1_0(closure_1_3[6]).Storage;
+                const result = Storage.set(closure_1_7, true);
+                const result1 = closure_1_2(closure_1_3[7]).openStageChannelAudienceNoticeModal(voiceChannelId);
+                const obj = closure_1_2(closure_1_3[7]);
               }
             }
-            tmp11 = closure_1_0;
-            tmp13 = closure_1_7;
           }
         }
       });
@@ -51,6 +49,6 @@ prototype["_terminate"] = function _terminate() {
   dispatcherDefault.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
 };
 const stageChannelNewUserManager = new StageChannelNewUserManager();
-let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelNewUserManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/StageChannelNewUserManager.tsx");
 
 export default stageChannelNewUserManager;

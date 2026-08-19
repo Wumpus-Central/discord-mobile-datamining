@@ -1,12 +1,12 @@
 // === Module 1363: AccessibilityAnnouncer ===
 
 // Module 1363 (AccessibilityAnnouncer)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _mod1350 from "module_1350" /* 1350 */;
 import isThemeLight from "isThemeLight" /* 1364 */;
 import WCAGContrastRatios from "WCAGContrastRatios" /* 1365 */;
 
-const result = set.fileFinishedImporting("design/shared.tsx");
+const result = obj132.fileFinishedImporting("design/shared.tsx");
 
 export const AccessibilityAnnouncer = _mod1350.AccessibilityAnnouncer;
 export const AccessibilityPreferencesContext = _mod1350.AccessibilityPreferencesContext;

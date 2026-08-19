@@ -1,16 +1,17 @@
 // === Module 10392: createUseCollectiblesShopStyles ===
 
 // Module 10392 (createUseCollectiblesShopStyles)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import tinycolorDefault from "tinycolor" /* 5311 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/createUseCollectiblesShopStyles.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/createUseCollectiblesShopStyles.tsx");
 
 export default function createUseCollectiblesShopStyles(arg0) {
   closure_0 = arg0;
   return (backgroundColors) => {
-    let obj = callback(closure_1_2[4]);
+    let obj = callback(dependencyMap[4]);
     const items = [closure_1_4];
     const stateFromStores = obj.useStateFromStores(items, () => saturation.saturation);
     if (null == backgroundColors) {
@@ -38,7 +39,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj2[0] = h;
               obj2[1] = s * stateFromStores;
               obj2[2] = l;
-              obj1[0] = closure_1_1(tmp2[3])(obj2);
+              obj1[0] = tinycolorDefault(obj2);
               const secondary = obj.backgroundColors.secondary;
               const toHslResult = primary.toHsl();
               ({ h: h2, s: s2, l: l2 } = secondary.toHsl());
@@ -46,7 +47,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj3[0] = h2;
               obj3[1] = s2 * stateFromStores;
               obj3[2] = l2;
-              obj1[1] = closure_1_1(tmp2[3])(obj3);
+              obj1[1] = tinycolorDefault(obj3);
               let tmp26;
               if (null != obj.backgroundColors.tertiary) {
                 const tertiary = obj.backgroundColors.tertiary;
@@ -55,7 +56,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
                 obj4[0] = h3;
                 obj4[1] = s3 * stateFromStores;
                 obj4[2] = l3;
-                tmp26 = tmp24(tmp2[3])(obj4);
+                tmp26 = tinycolorDefault(obj4);
                 const toHslResult2 = tertiary.toHsl();
               }
               obj1[2] = tmp26;
@@ -66,7 +67,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj5[0] = h4;
               obj5[1] = s4 * stateFromStores;
               obj5[2] = l4;
-              obj1[3] = closure_1_1(tmp2[3])(obj5);
+              obj1[3] = tinycolorDefault(obj5);
               const label = obj.backgroundColors.label;
               const toHslResult3 = border.toHsl();
               ({ h: h5, s: s5, l: l5 } = label.toHsl());
@@ -74,7 +75,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj6[0] = h5;
               obj6[1] = s5 * stateFromStores;
               obj6[2] = l5;
-              obj1[4] = closure_1_1(tmp2[3])(obj6);
+              obj1[4] = tinycolorDefault(obj6);
               tmp30 = obj1;
               const toHslResult4 = label.toHsl();
             }
@@ -89,7 +90,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj9[0] = h6;
               obj9[1] = s6 * stateFromStores;
               obj9[2] = l6;
-              obj8[0] = closure_1_1(tmp2[3])(obj9);
+              obj8[0] = tinycolorDefault(obj9);
               const secondary2 = obj.buttonColors.secondary;
               const toHslResult5 = primary2.toHsl();
               ({ h: h7, s: s7, l: l7 } = secondary2.toHsl());
@@ -97,7 +98,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj10[0] = h7;
               obj10[1] = s7 * stateFromStores;
               obj10[2] = l7;
-              obj8[1] = closure_1_1(tmp2[3])(obj10);
+              obj8[1] = tinycolorDefault(obj10);
               const text = obj.buttonColors.text;
               const toHslResult6 = secondary2.toHsl();
               ({ h: h8, s: s8, l: l8 } = text.toHsl());
@@ -105,14 +106,14 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj11[0] = h8;
               obj11[1] = s8 * stateFromStores;
               obj11[2] = l8;
-              obj8[2] = closure_1_1(tmp2[3])(obj11);
+              obj8[2] = tinycolorDefault(obj11);
               tmp31 = obj8;
               const toHslResult7 = text.toHsl();
             }
             obj7[1] = tmp31;
             const confettiColors = obj.confettiColors;
-            obj7[2] = confettiColors.map((toHsl) => {
-              ({ h, s, l } = toHsl.toHsl());
+            obj7[2] = confettiColors.map((item, index) => {
+              ({ h, s, l } = item.toHsl());
               return closure_1_1(closure_1_2[3])({ h, s: s * stateFromStores, l });
             });
           }
@@ -124,7 +125,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
             obj12[1] = buttonColors[1];
             [obj32, obj33] = buttonColors;
             const toRgbResult = obj32.toRgb();
-            let tmpResult = tmp(tmp2[2]);
+            let tmpResult = callback(dependencyMap[2]);
             const items1 = [, , ];
             ({ r: arr9[0], g: arr9[1], b: arr9[2] } = toRgbResult);
             const items2 = [, , ];
@@ -136,8 +137,8 @@ export default function createUseCollectiblesShopStyles(arg0) {
             obj13[1] = tmp45;
             obj13[2] = tmp46;
             const tmp43 = closure_1_3(tmpResult.getValueInColorGradientByPercentage(items1, items2, 50), 3);
-            obj12[2] = closure_1_1(tmp2[3])(obj13).isLight() ? tmp39.dark : tmp39.light;
-            const obj36 = closure_1_1(tmp2[3])(obj13);
+            obj12[2] = tinycolorDefault(obj13).isLight() ? tmp39.dark : tmp39.light;
+            const obj36 = tinycolorDefault(obj13);
           }
           const obj14 = { primary: null, secondary: null, text: null };
           obj14[0] = buttonColors[0];
@@ -156,7 +157,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
           obj15[2] = tmp4;
           [obj2, obj3] = backgroundColors;
           const toRgbResult2 = obj1.toRgb();
-          tmpResult = tmp(tmp2[2]);
+          tmpResult = callback(dependencyMap[2]);
           const items3 = [, , ];
           ({ r: arr2[0], g: arr2[1], b: arr2[2] } = toRgbResult2);
           const items4 = [, , ];
@@ -167,7 +168,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
           obj16[0] = tmp9;
           obj16[1] = tmp10;
           obj16[2] = tmp11;
-          obj5 = closure_1_1(tmp2[3])(obj16);
+          obj5 = tinycolorDefault(obj16);
           obj15[3] = obj5.setAlpha(0.4);
           [obj7, obj8] = backgroundColors;
           const tmp8 = closure_1_3(tmpResult.getValueInColorGradientByPercentage(items3, items4, 50), 3);
@@ -177,15 +178,15 @@ export default function createUseCollectiblesShopStyles(arg0) {
           ({ r: arr4[0], g: arr4[1], b: arr4[2] } = toRgbResult4);
           const items6 = [, , ];
           ({ r: arr5[0], g: arr5[1], b: arr5[2] } = toRgbResult5);
-          const tmpResult1 = tmp(tmp2[2]);
-          [tmp16, tmp17, tmp18] = closure_1_3(tmp(tmp2[2]).getValueInColorGradientByPercentage(items5, items6, 50), 3);
+          const tmpResult1 = callback(dependencyMap[2]);
+          [tmp16, tmp17, tmp18] = closure_1_3(callback(dependencyMap[2]).getValueInColorGradientByPercentage(items5, items6, 50), 3);
           const obj17 = { r: null, g: null, b: null };
           obj17[0] = tmp16;
           obj17[1] = tmp17;
           obj17[2] = tmp18;
-          obj10 = closure_1_1(tmp2[3])(obj17);
+          obj10 = tinycolorDefault(obj17);
           obj15[4] = obj10.isLight() ? tmp39.dark : tmp39.light;
-          const tmp15 = closure_1_3(tmp(tmp2[2]).getValueInColorGradientByPercentage(items5, items6, 50), 3);
+          const tmp15 = closure_1_3(callback(dependencyMap[2]).getValueInColorGradientByPercentage(items5, items6, 50), 3);
         }
         const obj18 = { primary: null, secondary: null, border: null, label: null };
         obj18[0] = backgroundColors[0];

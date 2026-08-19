@@ -1,7 +1,7 @@
 // === Module 4843: requestPermissionCore ===
 
 // Module 4843 (requestPermissionCore)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import requestAuthorization from "requestAuthorization" /* 4844 */;
 
 const NativePermissionBaseUtils = requestAuthorization.NativePermissionBaseUtils;
@@ -24,6 +24,6 @@ prototype["openAlertModal"] = function openAlertModal() {
 
 };
 const nativePermissionDesktopNullUtils = new NativePermissionDesktopNullUtils();
-const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.null.tsx");
+const result = obj132.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.null.tsx");
 
 export default nativePermissionDesktopNullUtils;

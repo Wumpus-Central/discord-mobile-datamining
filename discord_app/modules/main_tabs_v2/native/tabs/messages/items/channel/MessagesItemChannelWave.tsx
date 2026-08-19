@@ -7,7 +7,7 @@ import Button from "Button" /* 4745 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 const memoResult = importAllResult.memo(function MessagesItemChannelWave(hasNameplate) {
   let flag = hasNameplate.hasNameplate;
   if (flag === undefined) {
@@ -25,6 +25,6 @@ const memoResult = importAllResult.memo(function MessagesItemChannelWave(hasName
   obj[4] = hasNameplate.wavePressed;
   return jsx(Button.Button, { text: null, icon: null, variant: null, size: "sm", onPress: null });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx");
 
 export default memoResult;

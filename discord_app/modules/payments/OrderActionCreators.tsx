@@ -3,10 +3,10 @@
 // Module 7210 (_signOrder)
 import timestampDefault from "timestamp" /* 3 */;
 import setDefault from "set" /* 4061 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _signOrder() {
   const self = this;
   let tmp = callback((arg0) => {
@@ -367,7 +367,7 @@ const prototype = function OrderProcessingPendingError() {
 class prototype extends tmp4 {
 }
 const tmp2 = new timestampDefault("OrderActionCreators");
-let result = require("set").fileFinishedImporting("modules/payments/OrderActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("modules/payments/OrderActionCreators.tsx");
 
 export { OrderSigningFailedWithConstraintsError };
 export const OrderProcessingPendingError = prototype;

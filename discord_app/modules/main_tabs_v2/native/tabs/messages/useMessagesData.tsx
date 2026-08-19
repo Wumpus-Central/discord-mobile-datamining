@@ -1,16 +1,16 @@
 // === Module 15310: useMessagesData ===
 
 // Module 15310 (useMessagesData)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "makeSortedChannel" /* 5388 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import makeSortedChannel from "makeSortedChannel" /* 5388 */;
 
-const require = arg1;
+const require = fn;
 let obj = { HappeningNow: 0, [0]: "HappeningNow", EmptyState: 1, [1]: "EmptyState" };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesData.tsx");
 
 export default function useMessagesData() {
   let items = [numFriendSuggestions, friendSuggestions];
@@ -40,14 +40,14 @@ export default function useMessagesData() {
   const items3 = [connected, connectedToGateway, first, tmp4[1], numFriendSuggestions, friendSuggestions, setting, stateFromStores, setAdded];
   return setAdded.useMemo(() => {
     if (-1 === ref.current) {
-      tmp.current = 0;
+      ref.current = 0;
     } else {
       let tmp2 = connected;
       if (connected) {
         tmp2 = connectedToGateway;
       }
       if (tmp2) {
-        tmp.current = tmp.current + 1;
+        ref.current = ref.current + 1;
       }
     }
     let arr = first;
@@ -64,7 +64,7 @@ export default function useMessagesData() {
       bound = Math.min(tmp4, 5);
     }
     const items = [];
-    arr = items.push(arr.length);
+    items.push(arr.length);
     arr = items.push(arr1.length);
     let num4 = 0;
     if (numFriendSuggestions > 0) {
@@ -99,7 +99,7 @@ export default function useMessagesData() {
     let combined = null;
     if (ref.current > 0) {
       const _HermesInternal = HermesInternal;
-      combined = "" + tmp.current;
+      combined = "" + ref.current;
     }
     obj[2] = combined;
     let tmp26 = !tmp3;

@@ -43,6 +43,6 @@ const transientKeyStore = new TransientKeyStore(dispatcherDefault, {
     return map.delete(userId.userId);
   }
 });
-let result = require("set").fileFinishedImporting("modules/rtc/TransientKeyStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/rtc/TransientKeyStore.tsx");
 
 export default transientKeyStore;

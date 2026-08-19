@@ -1,10 +1,10 @@
 // === Module 10437: useCanSetThumbnail ===
 
 // Module 10437 (useCanSetThumbnail)
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/media_channel/useCanSetThumbnail.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/media_channel/useCanSetThumbnail.tsx");
 
 export default function useCanSetThumbnail(arg0, isImage) {
   const _require = arg0;

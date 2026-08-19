@@ -6,19 +6,19 @@ import encodeProperties from "encodeProperties" /* 503 */;
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "set" /* 5221 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import set from "set" /* 5221 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function callback(arg0, arg1) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
   const HTTP = sendRequest.HTTP;
-  let obj = { url: closure_6.CONNECTIONS_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
-  obj = {};
+  { url: closure_6.CONNECTIONS_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
+  const obj = {};
   const merged = Object.assign(arg1);
   obj.insecure = flag;
   obj.friend_sync = set.has(arg0);
@@ -32,9 +32,9 @@ let obj = {
   fetch() {
     const HTTP = sendRequest.HTTP;
     const value = HTTP.get({ url: closure_6.CONNECTIONS, oldFormErrors: true, rejectWithError: true });
-    return value.then((accounts) => {
-      let obj = callback(709);
-      obj = { type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body };
+    return value.then((result) => {
+      callback(709);
+      const obj = { type: "USER_CONNECTIONS_UPDATE", local: true, accounts: result.body };
       return obj.dispatch(obj);
     }, () => callback(709).dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }));
   },
@@ -93,9 +93,8 @@ let obj = {
   },
   callback,
   connect(arg0, arg1, name, location, friend_sync) {
-    let obj = _modDef5227;
-    obj = { url: closure_6.CONNECTION(arg0, arg1), body: null, context: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { name, friend_sync: null };
+    { url: closure_6.CONNECTION(arg0, arg1), body: null, context: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const obj = { name, friend_sync: null };
     friend_sync = undefined;
     if (friend_sync != null) {
       friend_sync = friend_sync.friend_sync;
@@ -135,9 +134,8 @@ let obj = {
     return this.update(type, id, { show_activity: closure_0 });
   },
   update(arg0, arg1, body) {
-    let obj = _modDef5227;
-    obj = { url: closure_6.CONNECTION(arg0, arg1), body, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
+    { url: closure_6.CONNECTION(arg0, arg1), body, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     const merged = Object.assign(body);
     obj[1] = {};
     obj[3] = obj;
@@ -147,14 +145,13 @@ let obj = {
   joinServer(id, arg1) {
     const _require = id;
     importDefault = arg1;
-    let obj = dispatcherDefault;
-    obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true };
+    let obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: id, joining: true };
     obj.dispatch(obj);
     const HTTP = _require(530).HTTP;
     obj = { url: closure_6.INTEGRATION_JOIN(id), oldFormErrors: true, rejectWithError: _require(530).rejectWithMigratedError() };
     HTTP.post(obj, (ok) => {
-      let obj = callback(closure_1_2[5]);
-      obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: closure_0, joining: false };
+      callback(dependencyMap[5]);
+      let obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: closure_0, joining: false };
       obj.dispatch(obj);
       if (!ok.ok) {
         obj = { type: "USER_CONNECTIONS_INTEGRATION_JOINING_ERROR", integrationId: null, error: null };
@@ -164,11 +161,11 @@ let obj = {
           message = ok.body.message;
         }
         obj[2] = message;
-        callback(closure_1_2[5]).dispatch(obj);
+        callback(dependencyMap[5]).dispatch(obj);
         if (callback != null) {
           callback();
         }
-        const tmpResult = callback(closure_1_2[5]);
+        const tmpResult = callback(dependencyMap[5]);
       }
     });
   },
@@ -181,10 +178,10 @@ let obj = {
         HermesBuiltin.throwTypeError();
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw body;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = body;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -195,21 +192,21 @@ let obj = {
           if (0 === c4) {
             if (arg0 === 1) {
               constants = 3;
-              throw arg1;
+              throw body;
             } else if (arg0 === 2) {
               constants = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = body;
               return obj;
             } else {
               let lib = tmp3;
               let access_token = tmp7;
               access_token = undefined;
               c3 = 1;
-              const HTTP = closure_1_0(closure_1_2[4]).HTTP;
+              const HTTP = type(closure_1_2[4]).HTTP;
               obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = closure_1_6.CONNECTION_ACCESS_TOKEN(closure_1_0, lib);
-              obj1[2] = closure_1_0(closure_1_2[4]).rejectWithMigratedError();
+              obj1[0] = closure_1_6.CONNECTION_ACCESS_TOKEN(type, lib);
+              obj1[2] = type(closure_1_2[4]).rejectWithMigratedError();
               c4 = 2;
               constants = 1;
               const obj2 = { value: null, done: false };
@@ -229,15 +226,15 @@ let obj = {
             throw lib;
           } else if (arg0 === 1) {
             constants = 3;
-            throw arg1;
+            throw body;
           } else if (arg0 === 2) {
             c3 = 0;
             constants = 3;
             obj4 = { value: null, done: true };
-            obj4[0] = arg1;
+            obj4[0] = body;
             return obj4;
           } else {
-            access_token = arg1.body.access_token;
+            access_token = body.body.access_token;
             obj = lib(closure_1_2[5]);
             const obj5 = { type: "USER_CONNECTION_UPDATE", platformType: null, id: null, accessToken: null };
             obj5[1] = access_token;
@@ -264,18 +261,18 @@ let obj = {
   },
   linkDispatchAuthCallback(arg0, arg1) {
     const HTTP = sendRequest.HTTP;
-    let obj = { url: closure_6.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
-    obj = {};
+    { url: closure_6.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
+    const obj = {};
     const merged = Object.assign(arg1);
     obj[1] = obj;
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   completeTwoWayLink(closure_1_2, location, closure_0, closure_1_1) {
-    closure_0 = closure_1_2;
+    closure_0 = dependencyMap;
     closure_1 = location;
     closure_2 = closure_0;
-    callback = closure_1_1;
+    callback = importDefault;
     closure_4 = arg4;
     return callback(function*() {
       if (v0 === 2) {
@@ -355,7 +352,7 @@ let obj = {
   },
   sessionHandoff(arg0, state, code, openid_params, iss) {
     const HTTP = sendRequest.HTTP;
-    obj = { url: closure_6.CONNECTIONS_SESSION_HANDOFF(arg0), body: obj, oldFormErrors: true, rejectWithError: null };
+    { url: closure_6.CONNECTIONS_SESSION_HANDOFF(arg0), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { state, code, openid_params, iss };
     obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
@@ -371,6 +368,6 @@ let obj = {
   }
 };
 const tmp3 = new timestampDefault("ConnectedAccounts");
-let result = require("set").fileFinishedImporting("actions/ConnectedAccountsActionCreators.tsx");
+let result = require("obj132").fileFinishedImporting("actions/ConnectedAccountsActionCreators.tsx");
 
 export default obj;

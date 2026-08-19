@@ -3,15 +3,15 @@
 // Module 16492 (isAnalyticsEndpoint)
 import reportAll from "report" /* 7 */;
 import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 531 */;
+import awaitOnlineDefault from "awaitOnline" /* 1474 */;
 import getTimeZoneDefault from "getTimeZone" /* 16495 */;
-import closure_4 from "getHash" /* 4288 */;
+import getHash from "getHash" /* 4288 */;
 import { AbortCodes } from "ME" /* 676 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import "ApexExperiment";
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 import sendRequest from "sendRequest" /* 530 */;
 import importDefaultResult1 from "dispatcher" /* 709 */;
 
-let closure_0 = arg1;
 function isAnalyticsEndpoint(pathname) {
   try {
     const _URL = URL;
@@ -25,7 +25,7 @@ let closure_6 = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
 const idGenerator = new require("IdGenerator").IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
-ApexExperiment = { 1: null };
+let ApexExperiment = { 1: null };
 ApexExperiment[1] = { migrationKilled: true };
 let closure_10 = ApexExperiment.createApexExperiment({ name: "2026-07-reject-with-error-kill-switch", kind: "user", defaultConfig: { migrationKilled: false }, variations: ApexExperiment });
 let c11 = null;
@@ -102,15 +102,15 @@ ApexExperiment = {
         }
         const result5 = promise.set("Accept-Language", (function populateQValues(items) {
           c0 = 10;
-          const reduced = items.reduce((arr) => {
+          const reduced = items.reduce((acc, item, index) => {
             if (10 === closure_0) {
-              arr.push(arg1);
+              acc.push(item);
             } else {
               const _HermesInternal = HermesInternal;
-              arr.push("" + arg1 + ";q=0." + closure_0);
+              acc.push("" + item + ";q=0." + closure_0);
             }
             closure_0 = Math.max(closure_0 - 1, 1);
-            return arr;
+            return acc;
           }, []);
           return reduced.join(",");
         })(items));
@@ -186,7 +186,7 @@ ApexExperiment = {
         const _HermesInternal = HermesInternal;
         str = "and body: " + text;
       }
-      let obj = callback2(closure_1_3[20]);
+      let obj = callback2(dependencyMap[20]);
       ({ method, url } = closure_0);
       status = undefined;
       if (status != null) {
@@ -204,14 +204,14 @@ ApexExperiment = {
         const _Math = Math;
         const _performance = performance;
         obj[3] = Math.round(performance.now() - callback);
-        callback(closure_1_3[19])(obj);
+        callback(dependencyMap[19])(obj);
         c2 = false;
-        const tmp8 = callback(closure_1_3[19]);
+        const tmp8 = callback(dependencyMap[19]);
       }
     });
     promise.on("error", (status, text) => {
-      let obj = callback2(closure_1_3[20]);
-      ({ method, url } = closure_0);
+      let obj = callback2(dependencyMap[20]);
+      ({ method, url } = promise);
       status = undefined;
       if (status != null) {
         status = status.status;
@@ -225,8 +225,8 @@ ApexExperiment = {
         if ("parse" in status) {
           if (status.parse) {
             let str = "[FILTERED]";
-            if (closure_1_6.includes(tmp2.url)) {
-              const xhr = tmp2.xhr;
+            if (closure_1_6.includes(promise.url)) {
+              const xhr = promise.xhr;
               let substr;
               if (xhr != null) {
                 const responseText = xhr.responseText;
@@ -236,10 +236,9 @@ ApexExperiment = {
               }
               str = substr;
             }
-            obj1 = callback(tmp[21]);
-            obj = { category: "superagent", message: "Failed to parse HTTP response.", data: null };
+            obj1 = callback(dependencyMap[21]);
             obj = { method: null, url: null, responseText: null, status: null };
-            ({ method: obj4[0], url: obj4[1] } = tmp2);
+            ({ method: obj4[0], url: obj4[1] } = promise);
             obj[2] = str;
             obj[3] = status.status;
             obj[2] = obj;
@@ -249,7 +248,7 @@ ApexExperiment = {
       }
       if (c2) {
         obj1 = { url: null, method: null, status_code: null, duration_ms: null };
-        ({ url: obj5[0], method: obj5[1] } = tmp2);
+        ({ url: obj5[0], method: obj5[1] } = promise);
         let status1;
         if (text != null) {
           status1 = text.status;
@@ -258,9 +257,9 @@ ApexExperiment = {
         const _Math = Math;
         const _performance = performance;
         obj1[3] = Math.round(performance.now() - callback);
-        callback(tmp[19])(obj1);
+        callback(dependencyMap[19])(obj1);
         c2 = false;
-        const tmp11 = callback(tmp[19]);
+        const tmp11 = callback(dependencyMap[19]);
       }
     });
   },
@@ -277,8 +276,8 @@ ApexExperiment = {
       if (captcha_key) {
         const items = [callback(2007)(16499, dependencyMap.paths), callback(2007)(10478, dependencyMap.paths)];
         const allPromises = Promise.all(items);
-        const nextPromise = Promise.all(items).then((arg0) => {
-          const iter = arg0[Symbol.iterator]();
+        const nextPromise = Promise.all(items).then((result) => {
+          const iter = result[Symbol.iterator]();
           let nextResult;
           if (iter !== undefined) {
             nextResult = iter.next();
@@ -297,8 +296,8 @@ ApexExperiment = {
           }
           return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
         });
-        Promise.all(items).then((arg0) => {
-          const iter = arg0[Symbol.iterator]();
+        Promise.all(items).then((result) => {
+          const iter = result[Symbol.iterator]();
           let nextResult;
           if (iter !== undefined) {
             nextResult = iter.next();
@@ -316,9 +315,9 @@ ApexExperiment = {
             iter.return();
           }
           return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
-        }).then((X_Captcha_Key) => {
-          ({ captcha_rqtoken, captcha_session_id } = X_Captcha_Key);
-          const obj = { "X-Captcha-Key": X_Captcha_Key.captcha_key };
+        }).then((result) => {
+          ({ captcha_rqtoken, captcha_session_id } = result);
+          const obj = { "X-Captcha-Key": result.captcha_key };
           if (null != captcha_rqtoken) {
             obj["X-Captcha-Rqtoken"] = captcha_rqtoken;
           }
@@ -328,8 +327,8 @@ ApexExperiment = {
           callback(obj);
         }).catch(arg2);
         let flag = true;
-        const nextPromise1 = Promise.all(items).then((arg0) => {
-          const iter = arg0[Symbol.iterator]();
+        const nextPromise1 = Promise.all(items).then((result) => {
+          const iter = result[Symbol.iterator]();
           let nextResult;
           if (iter !== undefined) {
             nextResult = iter.next();
@@ -347,9 +346,9 @@ ApexExperiment = {
             iter.return();
           }
           return nextResult.default.showCaptchaAsync(nextResult1.extractCaptchaPropsFromResponse(statusCode.body));
-        }).then((X_Captcha_Key) => {
-          ({ captcha_rqtoken, captcha_session_id } = X_Captcha_Key);
-          const obj = { "X-Captcha-Key": X_Captcha_Key.captcha_key };
+        }).then((result) => {
+          ({ captcha_rqtoken, captcha_session_id } = result);
+          const obj = { "X-Captcha-Key": result.captcha_key };
           if (null != captcha_rqtoken) {
             obj["X-Captcha-Rqtoken"] = captcha_rqtoken;
           }
@@ -375,12 +374,12 @@ ApexExperiment = {
         }
         if (mfa) {
           const promise4 = callback(2007)(15118, dependencyMap.paths);
-          callback(2007)(15118, dependencyMap.paths).then((openMFAModal) => {
-            openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
+          callback(2007)(15118, dependencyMap.paths).then((result) => {
+            result.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           }).catch(arg2);
           flag = true;
-          const nextPromise2 = callback(2007)(15118, dependencyMap.paths).then((openMFAModal) => {
-            openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
+          const nextPromise2 = callback(2007)(15118, dependencyMap.paths).then((result) => {
+            result.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
       }
@@ -391,11 +390,11 @@ ApexExperiment = {
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(2007)(6780, tmp8.paths).then((arg0) => {
-        arg0.default();
+      tmp7(2007)(6780, dependencyMap.paths).then((result) => {
+        result.default();
       });
       flag = false;
-      const promise3 = tmp7(2007)(6780, tmp8.paths);
+      const promise3 = tmp7(2007)(6780, dependencyMap.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -403,16 +402,16 @@ ApexExperiment = {
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(2007)(4655, tmp8.paths).then((arg0) => {
+        tmp7(2007)(4655, dependencyMap.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
             guild_id = body.guild_id;
           }
-          arg0.default(guild_id);
+          result.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(2007)(4655, tmp8.paths);
+        const promise2 = tmp7(2007)(4655, dependencyMap.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -424,20 +423,20 @@ ApexExperiment = {
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(2007)(16506, tmp8.paths).then((openRestrictedHoursModal) => {
-            const result = openRestrictedHoursModal.openRestrictedHoursModal();
+          tmp7(2007)(16506, dependencyMap.paths).then((result) => {
+            result = result.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(2007)(16506, tmp8.paths);
+          const promise = tmp7(2007)(16506, dependencyMap.paths);
         }
       }
       tmp7Result = tmp7(16505);
     }
+    obj = callback(9739);
   }
 };
 ApexExperiment = sendRequest.setRequestPatch(ApexExperiment);
-closure_0 = undefined;
-closure_0 = importDefaultResult((arg0) => {
+let closure_0 = importDefaultResult((arg0) => {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -471,25 +470,23 @@ closure_0 = importDefaultResult((arg0) => {
             closure_2 = tmp5;
             closure_1 = tmp2;
             const _HermesInternal2 = HermesInternal;
-            closure_1_2(7).report("Network", "Request to " + closure_0 + " failed, will retry.");
-            const obj7 = closure_1_2(7);
-            const tmp25 = closure_1_1;
+            reportAll.report("Network", "Request to " + closure_0 + " failed, will retry.");
             if (obj8.isOnline()) {
               c4 = 3;
             } else {
               dependencyMap = 1;
               c4 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = tmp25(1474).awaitOnline();
+              obj1[0] = awaitOnlineDefault.awaitOnline();
               return obj1;
             }
-            obj8 = closure_1_1(1474);
+            obj8 = awaitOnlineDefault;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw arg1;
         } else if (arg0 !== 2) {
-          obj = closure_1_2(7);
+          obj = reportAll;
           const _HermesInternal = HermesInternal;
           obj.report("Network", "Network detected online, retrying " + closure_0);
         }
@@ -514,4 +511,4 @@ sendRequest.setAwaitOnline(function() {
   }
   return applyArgumentsResult;
 });
-let result1 = require("set").fileFinishedImporting("lib/superagentPatch.tsx");
+let result1 = require("obj132").fileFinishedImporting("lib/superagentPatch.tsx");

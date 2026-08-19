@@ -1,9 +1,9 @@
 // === Module 4667: timingNone ===
 
 // Module 4667 (timingNone)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("design/animation/reanimated/timing/timingPresets.tsx");
+const result = obj132.fileFinishedImporting("design/animation/reanimated/timing/timingPresets.tsx");
 
 export const timingNone = { duration: 0 };
 export const timingInstant = { duration: 1 };

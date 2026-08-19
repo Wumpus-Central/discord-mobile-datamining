@@ -8,16 +8,15 @@ import Text from "Text" /* 4734 */;
 import registerAssetDefault from "registerAsset" /* 6299 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { wrapper: { flexDirection: "row", alignItems: "center" }, icon: null };
-createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: -8, marginLeft: 8 };
+const createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: -8, marginLeft: 8 };
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormArrow.tsx");
+const result = require("obj132").fileFinishedImporting("design/void/Form/native/FormArrow.tsx");
 
 export default function FormArrow(arg0) {
   ({ label, style } = arg0);

@@ -4,9 +4,9 @@
 import initialize from "initialize" /* 589 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
 import items2 from "items" /* 10494 */;
-import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
+require = fn;
 function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub) {
   if (null == isFractionalPremiumWithNoStandardSub) {
     let INELIGIBLE = items2.QuestOrbMultiplierEligibilityType.INELIGIBLE;
@@ -15,12 +15,11 @@ function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStanda
     if (obj2.canUseMoreQuestOrbs(isFractionalPremiumWithNoStandardSub)) {
       const questOrbMultiplierSource = items2.getQuestOrbMultiplierSource(isFractionalPremiumWithNoStandardSub);
       if (questOrbMultiplierSource === items2.QuestOrbMultiplierSource.CREPE) {
-        QuestOrbMultiplierEligibilityType2 = tmp3(10494).QuestOrbMultiplierEligibilityType;
+        QuestOrbMultiplierEligibilityType2 = items2.QuestOrbMultiplierEligibilityType;
         let NITRO = QuestOrbMultiplierEligibilityType2.CREPE;
       } else {
-        NITRO = tmp3(10494).QuestOrbMultiplierEligibilityType.NITRO;
+        NITRO = items2.QuestOrbMultiplierEligibilityType.NITRO;
       }
-      const obj = items2;
     } else {
       let result;
       if (isFractionalPremiumWithNoStandardSub != null) {
@@ -33,7 +32,7 @@ function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStanda
   }
   return INELIGIBLE;
 }
-let result = require("set").fileFinishedImporting("modules/quests/hooks/QuestOrbMultiplierHooks.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/hooks/QuestOrbMultiplierHooks.tsx");
 
 export const useQuestOrbMultiplierEligibility = function useQuestOrbMultiplierEligibility() {
   const items = [closure_3];

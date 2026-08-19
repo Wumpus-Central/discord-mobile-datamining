@@ -2,6 +2,7 @@
 
 // Module 16366 (ActivityActionOverlay)
 import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1896 */;
 import ManaContext from "ManaContext" /* 4104 */;
@@ -9,50 +10,52 @@ import Text from "Text" /* 4734 */;
 import getNicknameDefault from "getNickname" /* 4796 */;
 import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
 import PressableBase from "PressableBase" /* 5433 */;
-import setDefault from "set" /* 7190 */;
+import obj132Default from "obj132" /* 7190 */;
 import isTestModeForApplication2 from "isTestModeForApplication" /* 7871 */;
 import postMessageToWebViewDefault from "postMessageToWebView" /* 8713 */;
 import useActivityAction from "useActivityAction" /* 11230 */;
 import useActivityActionDefault from "useActivityAction" /* 11230 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11262 */;
 import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11319 */;
+import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 11324 */;
+import registerAssetDefault from "registerAsset" /* 11953 */;
+import _modDef16363 from "module_16363" /* 16363 */;
 import ParticipantsSummaryDefault from "ParticipantsSummary" /* 16364 */;
 import useActivityUsersDefault from "useActivityUsers" /* 16365 */;
-import closure_3 from "noop" /* 19 */;
+import registerAssetDefault2 from "registerAsset" /* 16367 */;
+import noop from "noop" /* 19 */;
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import hexToRgba from "hexToRgba" /* 4223 */;
 
-require = arg1;
+require = fn;
 function ActivityActionOverlay(arg0) {
   ({ action, context } = arg0);
   ({ applicationId, activityItem, launchingComponentId } = arg0);
   ({ id, name } = activityItem.application);
   if (useActivityAction.ActivityAction.JOIN !== action) {
-    if (tmp4(11230).ActivityAction.LEAVE !== action) {
+    if (useActivityAction.ActivityAction.LEAVE !== action) {
       return null;
     }
   }
-  let tmp8 = action === tmp4(11230).ActivityAction.LEAVE;
+  let tmp8 = action === useActivityAction.ActivityAction.LEAVE;
   if (tmp8) {
     let obj = { style: null };
     obj[0] = tmp3.ongoingActivityJoinedContainer;
-    tmp8 = callback(tmp(7190), obj);
+    tmp8 = callback(obj132Default, obj);
   }
   const items = [tmp8, ];
   id = undefined;
-  const tmp10 = callback;
   tmp3 = callback2();
-  const tmp6 = closure_7;
-  const tmp7 = closure_6;
   if ("channel" === context.type) {
     id = context.channel.id;
   }
   obj = { children: null };
-  items[1] = tmp10(ParticipantsSummaryDefault, { channelId: id, applicationId: id, applicationName: name, submitting: useLaunchingActivityButtonStateDefault({ applicationId, context, launchingComponentId }).submitting });
+  items[1] = callback(ParticipantsSummaryDefault, { channelId: id, applicationId: id, applicationName: name, submitting: useLaunchingActivityButtonStateDefault({ applicationId, context, launchingComponentId }).submitting });
   obj[0] = items;
-  return tmp6(tmp7, obj);
+  return callback2(closure_6, obj);
 }
 function ParticipantsText(arg0) {
   ({ activityItem, channelId } = arg0);
@@ -65,10 +68,9 @@ function ParticipantsText(arg0) {
     first = arr[0];
   }
   const name = obj.getName(guildId, channelId, first);
-  obj = { style: items, children: null };
-  items = [, ];
+  const items = [, ];
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
-  obj = { source: tmp2(11953), size: Button.Icon.Sizes.EXTRA_SMALL, color: "white" };
+  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.EXTRA_SMALL, color: "white" };
   const items1 = [callback(Button.Icon, obj), ];
   obj1 = { lineClamp: 1, style: tmp.participantsText, variant: "text-xxs/medium", color: "text-overlay-light", children: null };
   if (action === useActivityAction.ActivityAction.START) {
@@ -76,26 +78,25 @@ function ParticipantsText(arg0) {
     if (num2 == null) {
       num2 = 0;
     }
-    let itemSubtitleForMaxPlayersShort = tmp9(11324).getItemSubtitleForMaxPlayersShort(num2);
-    const tmp9Result = tmp9(11324);
+    let itemSubtitleForMaxPlayersShort = getItemSubtitleForMaxPlayers.getItemSubtitleForMaxPlayersShort(num2);
+    const tmp9Result = getItemSubtitleForMaxPlayers;
   } else {
     itemSubtitleForMaxPlayersShort = name;
     if (arr.length > 1) {
-      const intl = tmp9(1236).intl;
+      const intl = getSystemLocale.intl;
       const obj2 = { count: null, username: null };
       obj2[0] = arr.length - 1;
       obj2[1] = name;
-      itemSubtitleForMaxPlayersShort = intl.formatToPlainString(tmp9(1236).t.cpe6CK, obj2);
+      itemSubtitleForMaxPlayersShort = intl.formatToPlainString(getSystemLocale.t.cpe6CK, obj2);
     }
   }
   obj1[4] = itemSubtitleForMaxPlayersShort;
   items1[1] = callback(Text.Text, obj1);
   obj[1] = items1;
-  return closure_7(setDefault, obj);
+  return callback2(obj132Default, obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, imageOuterContainer: null, ongoingActivityJoinedContainer: null, overlayBubble: null, participantsContainer: null, participantsText: null, developerIconContainer: null, developerIconColor: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", height: 120, position: "relative", backgroundColor: "black", justifyContent: "center" };
+const createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", height: 120, position: "relative", backgroundColor: "black", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { justifyContent: "center", alignItems: "center" };
 createCacheKey[2] = { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(255,255,255,0.5)", zIndex: 1 };
@@ -106,11 +107,9 @@ createCacheKey[3] = obj1;
 createCacheKey[4] = { paddingHorizontal: 8, position: "absolute", left: 8, bottom: 8, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height: 20 };
 createCacheKey[5] = { marginLeft: 4, lineHeight: 20 };
 createCacheKey[6] = { position: "absolute", top: 4, right: 4, width: 22, height: 22, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignItems: "center", justifyContent: "center" };
-let obj2 = { position: "absolute", top: 4, right: 4, width: 22, height: 22, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignItems: "center", justifyContent: "center" };
 createCacheKey[7] = { color: ThemesDefault.colors.WHITE };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { color: ThemesDefault.colors.WHITE };
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItem.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItem.tsx");
 
 export default function ActivityShelfItem(arg0) {
   ({ itemDimensions, activityItem, context, disableBadges } = arg0);
@@ -127,36 +126,34 @@ export default function ActivityShelfItem(arg0) {
   const result = width * getDevicePixelRatioDefault();
   const id = closure_3.useId();
   let obj = { activityItem, context, guildId, locationObject, onActivityItemSelected, embeddedActivitiesManager: postMessageToWebViewDefault, backgroundResolution: result, assetNames: ["embedded_cover"], launchingComponentId: id, commandOrigin: ApplicationCommandSectionType.CommandOrigin.VOICE_UI };
-  const tmp7 = useActivityActionDefault;
   ({ activityAction, imageBackground, onActivityItemSelected: onActivityItemSelected2, labelType } = useActivityActionDefault(obj));
   obj = { applicationId: activityItem.application.id, size: result, names: ["embedded_background"] };
   let tmp10 = useEmbeddedActivityBackgroundDefault(obj);
   let tmp11 = !disableBadges;
   if (!disableBadges) {
-    const items = [tmp8(11230).ActivityAction.LEAVE, tmp8(11230).ActivityAction.JOIN];
+    const items = [useActivityAction.ActivityAction.LEAVE, useActivityAction.ActivityAction.JOIN];
     tmp11 = !items.includes(activityAction);
   }
   const tmp7Result = useActivityActionDefault(obj);
   const isTestModeForApplication = isTestModeForApplication2.useIsTestModeForApplication(activityItem.application.id);
-  obj = { activeOpacity: 0.7, onPress: onActivityItemSelected2, disabled: activityAction === tmp8(11230).ActivityAction.LEAVE, androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, style: items1, children: null };
+  obj = { activeOpacity: 0.7, onPress: onActivityItemSelected2, disabled: activityAction === useActivityAction.ActivityAction.LEAVE, androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, style: items1, children: null };
   items1 = [tmp.container, { width, height }];
   obj1 = { style: tmp.imageOuterContainer, children: null };
-  let tmp3Result = tmp3(7190);
   const obj2 = { accessibilityLabel: activityItem.application.name, imageBackground: null, aspectRatio: null };
-  tmp3Result = tmp3(16363);
+  const tmp3Result = _modDef16363;
   if (activityAction === useActivityAction.ActivityAction.START) {
     tmp10 = imageBackground;
   }
   obj2[1] = tmp10;
   obj2[2] = width / height;
-  const items2 = [closure_5(tmp3Result, obj2), closure_5(ActivityActionOverlay, { action: activityAction, applicationId: activityItem.application.id, context, activityItem, launchingComponentId: id })];
+  const items2 = [callback(tmp3Result, obj2), callback(ActivityActionOverlay, { action: activityAction, applicationId: activityItem.application.id, context, activityItem, launchingComponentId: id })];
   obj1[1] = items2;
-  const items3 = [closure_7(tmp3Result, obj1), , ];
+  const items3 = [callback2(tmp3Result, obj1), , ];
   let tmp15Result = null;
   if (tmp11) {
     const obj4 = { labelType: null };
     obj4[0] = labelType;
-    tmp15Result = tmp15(tmp3(11262), obj4);
+    tmp15Result = callback(ActivityShelfBadgeDefault, obj4);
   }
   items3[1] = tmp15Result;
   tmp15Result = null;
@@ -166,17 +163,17 @@ export default function ActivityShelfItem(arg0) {
       const obj5 = { style: null, children: null };
       obj5[0] = tmp.developerIconContainer;
       const obj6 = { size: null, source: null, color: null };
-      obj6[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-      obj6[1] = tmp3(16367);
+      obj6[0] = Button.Icon.Sizes.REFRESH_SMALL_16;
+      obj6[1] = registerAssetDefault2;
       obj6[2] = tmp.developerIconColor.color;
-      obj5[1] = tmp15(tmp8(1297).Icon, obj6);
-      tmp15Result = tmp15(tmp3(7190), obj5);
-      const tmp3Result1 = tmp3(7190);
+      obj5[1] = callback(Button.Icon, obj6);
+      tmp15Result = callback(obj132Default, obj5);
+      const tmp3Result1 = obj132Default;
     }
   }
   items3[2] = tmp15Result;
-  const items4 = [closure_7(ManaContext.ThemeContextProvider, { theme: "dark", children: items3 }), ];
-  let tmp15Result1 = activityAction === tmp8(11230).ActivityAction.START;
+  const items4 = [callback2(ManaContext.ThemeContextProvider, { theme: "dark", children: items3 }), ];
+  let tmp15Result1 = activityAction === useActivityAction.ActivityAction.START;
   if (tmp15Result1) {
     const obj7 = { action: null, channelId: null, guildId: null, activityItem: null };
     obj7[0] = activityAction;
@@ -191,10 +188,9 @@ export default function ActivityShelfItem(arg0) {
     }
     obj7[2] = guildId;
     obj7[3] = activityItem;
-    tmp15Result1 = tmp15(ParticipantsText, obj7);
-    const tmp21 = ParticipantsText;
+    tmp15Result1 = callback(ParticipantsText, obj7);
   }
   items4[1] = tmp15Result1;
   obj[5] = items4;
-  return closure_7(PressableBase.PressableOpacity, obj);
+  return callback2(PressableBase.PressableOpacity, obj);
 };

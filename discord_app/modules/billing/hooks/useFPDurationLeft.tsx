@@ -1,39 +1,39 @@
 // === Module 12893: roundFPCountdownUnits ===
 
 // Module 12893 (roundFPCountdownUnits)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useCountdownDefault from "useCountdown" /* 7410 */;
 
 function roundFPCountdownUnits(arg0) {
-  obj = {};
+  const time = {};
   const merged = Object.assign(arg0);
-  if (obj.seconds > 0) {
-    obj.minutes = obj.minutes + 1;
-    obj.seconds = 0;
+  if (time.seconds > 0) {
+    time.minutes = time.minutes + 1;
+    time.seconds = 0;
   }
-  if (60 === obj.minutes) {
-    obj.hours = obj.hours + 1;
-    obj.minutes = 0;
+  if (60 === time.minutes) {
+    time.hours = time.hours + 1;
+    time.minutes = 0;
   }
-  if (24 === obj.hours) {
-    obj.days = obj.days + 1;
-    obj.hours = 0;
+  if (24 === time.hours) {
+    time.days = time.days + 1;
+    time.hours = 0;
   }
-  if (obj.days > 0) {
-    if (obj.hours > 0) {
-      let days = obj.days + 1;
+  if (time.days > 0) {
+    if (time.hours > 0) {
+      let days = time.days + 1;
     } else {
-      days = obj.days;
+      days = time.days;
     }
     obj = { days: null, hours: 0, minutes: 0, seconds: 0 };
     obj[0] = days;
     return obj;
-  } else if (obj.hours > 0) {
-    if (obj.minutes > 45) {
-      let hours = obj.hours + 1;
+  } else if (time.hours > 0) {
+    if (time.minutes > 45) {
+      let hours = time.hours + 1;
     } else {
-      hours = obj.hours;
+      hours = time.hours;
     }
     if (hours > 11) {
       obj = { days: 1, hours: 0, minutes: 0, seconds: 0 };
@@ -42,29 +42,29 @@ function roundFPCountdownUnits(arg0) {
       obj[1] = hours;
     }
     return obj;
-  } else if (obj.minutes > 0) {
+  } else if (time.minutes > 0) {
     let num5 = 0;
-    if (obj.minutes > 45) {
+    if (time.minutes > 45) {
       num5 = 1;
     }
     obj1 = { days: 0, hours: null, minutes: null, seconds: 0 };
     obj1[1] = num5;
     let num7 = 0;
     if (1 !== num5) {
-      num7 = obj.minutes;
+      num7 = time.minutes;
     }
     obj1[2] = num7;
     return obj1;
   } else {
-    let obj2 = obj;
-    if (obj.seconds > 0) {
-      obj2 = { days: 0, hours: 0, minutes: 1, seconds: 0 };
+    obj = time;
+    if (time.seconds > 0) {
+      obj = { days: 0, hours: 0, minutes: 1, seconds: 0 };
     }
-    return obj2;
+    return obj;
   }
 }
 let obj = { SHORT_TIME_LEFT: 0, [0]: "SHORT_TIME_LEFT", LONG_TIME_LEFT: 1, [1]: "LONG_TIME_LEFT", ENDS_IN: 2, [2]: "ENDS_IN", SHORT_TIME: 3, [3]: "SHORT_TIME", CREDITS_ENDS_IN: 4, [4]: "CREDITS_ENDS_IN" };
-const result = set.fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
+const result = obj132.fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
 
 export default function useFPDurationLeft(toDate) {
   if (obj.SHORT_TIME_LEFT === arg1) {

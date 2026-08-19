@@ -1,13 +1,13 @@
 // === Module 12314: useUserProfileApplicationRoleConnections ===
 
 // Module 12314 (useUserProfileApplicationRoleConnections)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_3 from "createUserWidgetFromServer" /* 5365 */;
+import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
 
 const useMemo = noop.useMemo;
 let closure_4 = [];
-const result = set.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/hooks/useUserProfileApplicationRoleConnections.tsx");
 
 export default function useUserProfileApplicationRoleConnections(arg0) {
   const _require = arg0;
@@ -21,7 +21,7 @@ export default function useUserProfileApplicationRoleConnections(arg0) {
   return useMemo(() => {
     let prop;
     if (stateFromStores != null) {
-      prop = tmp.applicationRoleConnections;
+      prop = stateFromStores.applicationRoleConnections;
     }
     return null == prop ? closure_1_4 : stateFromStores.applicationRoleConnections;
   }, items1);

@@ -1,16 +1,16 @@
 // === Module 8538: MemberVerificationAlertRejected ===
 
 // Module 8538 (MemberVerificationAlertRejected)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate" /* 4198 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertRejected.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertRejected.tsx");
 
 export default function MemberVerificationAlertRejected(guildId) {
   guildId = guildId.guildId;
@@ -88,21 +88,21 @@ export default function MemberVerificationAlertRejected(guildId) {
           } else {
             closure_0 = tmp4;
             let isPending;
-            if (closure_1_3 != null) {
-              isPending = closure_1_3.isPending;
+            if (stateFromStores2 != null) {
+              isPending = stateFromStores2.isPending;
             }
             let obj3 = v0(8537);
             if (isPending) {
               v0 = 2;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj3.removeGuildJoinRequest(closure_1_0);
+              obj1[0] = obj3.removeGuildJoinRequest(guildId);
               return obj1;
             } else {
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = obj3.resetGuildJoinRequest(closure_1_0);
+              obj2[0] = obj3.resetGuildJoinRequest(guildId);
               return obj2;
             }
           }
@@ -129,7 +129,7 @@ export default function MemberVerificationAlertRejected(guildId) {
           if (v0 != null) {
             tmp6();
           }
-          obj1 = closure_1_0(8522);
+          obj1 = guildId(8522);
           const result = obj1.openMemberVerificationModal(closure_0);
           dependencyMap = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -191,21 +191,21 @@ export default function MemberVerificationAlertRejected(guildId) {
           } else {
             closure_0 = tmp4;
             let isPending;
-            if (closure_1_3 != null) {
-              isPending = closure_1_3.isPending;
+            if (stateFromStores2 != null) {
+              isPending = stateFromStores2.isPending;
             }
             let obj3 = v0(8537);
             if (isPending) {
               v0 = 2;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj3.removeGuildJoinRequest(closure_1_0);
+              obj1[0] = obj3.removeGuildJoinRequest(guildId);
               return obj1;
             } else {
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = obj3.resetGuildJoinRequest(closure_1_0);
+              obj2[0] = obj3.resetGuildJoinRequest(guildId);
               return obj2;
             }
           }
@@ -232,7 +232,7 @@ export default function MemberVerificationAlertRejected(guildId) {
           if (v0 != null) {
             tmp6();
           }
-          obj1 = closure_1_0(8522);
+          obj1 = guildId(8522);
           const result = obj1.openMemberVerificationModal(closure_0);
           dependencyMap = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -254,11 +254,11 @@ export default function MemberVerificationAlertRejected(guildId) {
     const intl4 = tmp2(tmp3[11]).intl;
     obj2[3] = intl4.string(tmp2(tmp3[11]).t.rpFCLs);
     obj2[4] = callback;
-    let tmp17Result = tmp17(tmp2(tmp3[14]).Button, obj2);
+    let tmp17Result = callback(tmp2(tmp3[14]).Button, obj2);
   } else {
     tmp17Result = null;
   }
   const items6 = [tmp17Result, guildId.secondaryButton];
-  obj1.buttons = closure_10(closure_9, { children: items6 });
-  return closure_8(onClose(stateFromStores[12]), obj1);
+  obj1.buttons = callback2(closure_9, { children: items6 });
+  return callback(onClose(stateFromStores[12]), obj1);
 };

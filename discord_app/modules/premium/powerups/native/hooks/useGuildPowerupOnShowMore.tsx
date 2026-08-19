@@ -1,9 +1,9 @@
 // === Module 11736: useGuildPowerupOnShowMore ===
 
 // Module 11736 (useGuildPowerupOnShowMore)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");
 
 export default function useGuildPowerupOnShowMore(arg0, arg1) {
   closure_0 = arg0;

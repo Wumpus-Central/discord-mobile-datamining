@@ -1,10 +1,10 @@
 // === Module 16240: MorphablePanelModes ===
 
 // Module 16240 (MorphablePanelModes)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
 
-const require = arg1;
+const require = fn;
 ({ IS_IOS: c4, MIN_PAN_GESTURE_MOVE: c5, MorphablePanelModes } = MIN_PAN_GESTURE_MOVE);
 ({ PANEL_TAP_GESTURE_MAX_DISTANCE: error, PIP_POP_HEIGHT: closure_8, POP_RESISTANCE: c9 } = MIN_PAN_GESTURE_MOVE);
 let closure_10 = { code: "function useMorphablePanelGestureTsx1(){const{onTapGestureStart}=this.__closure;var _onTapGestureStart;(_onTapGestureStart=onTapGestureStart)===null||_onTapGestureStart===void 0||_onTapGestureStart();}" };
@@ -14,7 +14,7 @@ let closure_13 = { code: "function useMorphablePanelGestureTsx4(_e){const{update
 let closure_14 = { code: "function useMorphablePanelGestureTsx5(event){const{mode,MorphablePanelModes,safeArea,initialGestureOffset,POP_RESISTANCE,PIP_POP_HEIGHT,runOnJS,triggerHapticFeedback,HapticFeedbackTypes,updateSharedValueIfChanged,wrapperOffset}=this.__closure;if(mode!==MorphablePanelModes.PIP){const minYOffset=safeArea.top;let newYOffset=(initialGestureOffset.get().absoluteYStart-event.absoluteY)*-1;if(!initialGestureOffset.get().requiresPop&&newYOffset<=minYOffset){initialGestureOffset.set({...initialGestureOffset.get(),requiresPop:true});}if(initialGestureOffset.get().requiresPop){const distance=Math.max(newYOffset,0);const resistance=distance*POP_RESISTANCE;if(distance<=PIP_POP_HEIGHT){newYOffset=distance-resistance;}else{initialGestureOffset.set({...initialGestureOffset.get(),requiresPop:false});runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);}}updateSharedValueIfChanged(wrapperOffset,{y:newYOffset,x:0});}else{updateSharedValueIfChanged(wrapperOffset,{x:(initialGestureOffset.get().absoluteXStart-event.absoluteX)*-1,y:(initialGestureOffset.get().absoluteYStart-event.absoluteY)*-1});}}" };
 let closure_15 = { code: "function useMorphablePanelGestureTsx6(event,manager){const{IS_IOS,initialGestureOffset,State,calculateXYDiff,mode,MorphablePanelModes,MIN_PAN_GESTURE_MOVE,runOnJS,triggerIOSHaptic,updateSharedValueIfChanged,wrapperOffset}=this.__closure;if(IS_IOS&&initialGestureOffset.get().gestureInBottomSafeArea){manager.activate();return;}if(initialGestureOffset.get().cancel){manager.fail();return;}if(event.state!==State.BEGAN||initialGestureOffset.get().active){return;}const{absoluteX:absoluteX,absoluteY:absoluteY,absoluteMovement:absoluteMovement,isNotPullDownGesture:isNotPullDownGesture,yDiff:yDiff}=calculateXYDiff(event,initialGestureOffset);let startGesture=false;if(mode===MorphablePanelModes.PANEL){if(yDiff<0){startGesture=true;}else if(isNotPullDownGesture){manager.fail();}}else if(mode===MorphablePanelModes.PIP&&absoluteMovement>MIN_PAN_GESTURE_MOVE){startGesture=true;runOnJS(triggerIOSHaptic)();}if(startGesture){updateSharedValueIfChanged(wrapperOffset,{x:0,y:0,gestureActive:true});initialGestureOffset.set({absoluteXStart:absoluteX,absoluteYStart:absoluteY,active:true,cancel:false,gestureInBottomSafeArea:false,requiresPop:initialGestureOffset.get().requiresPop});manager.activate();}}" };
 let closure_16 = { code: "function useMorphablePanelGestureTsx7(event){const{updateSharedValueIfChanged,wrapperOffset,initialGestureOffset,windowDimensions,safeArea,swipeRequiresPop}=this.__closure;updateSharedValueIfChanged(wrapperOffset,{x:0,y:0});initialGestureOffset.set({absoluteXStart:event.absoluteX,absoluteYStart:event.absoluteY,active:false,cancel:event.absoluteY>windowDimensions.height-safeArea.bottom*2,gestureInBottomSafeArea:event.absoluteY>windowDimensions.height-safeArea.bottom,requiresPop:swipeRequiresPop});}" };
-let result = require("set").fileFinishedImporting("modules/panels/morphable/native/useMorphablePanelGesture.tsx");
+let result = require("obj132").fileFinishedImporting("modules/panels/morphable/native/useMorphablePanelGesture.tsx");
 
 export default function useMorphablePanelGesture(mode) {
   mode = mode.mode;
@@ -34,14 +34,11 @@ export default function useMorphablePanelGesture(mode) {
   if (flag3 === undefined) {
     flag3 = false;
   }
-  closure_8 = undefined;
-  closure_9 = undefined;
-  let sharedValue;
   const tmp = onPanMinimizeGestureEnd(onTapGestureStart[2])();
   closure_8 = tmp;
   const tmp2 = onPanMinimizeGestureEnd(onTapGestureStart[3])();
   closure_9 = tmp2;
-  sharedValue = mode(onTapGestureStart[4]).useSharedValue({ absoluteXStart: 0, absoluteYStart: 0, active: false, gestureInBottomSafeArea: false, cancel: false, requiresPop: false });
+  const sharedValue = mode(onTapGestureStart[4]).useSharedValue({ absoluteXStart: 0, absoluteYStart: 0, active: false, gestureInBottomSafeArea: false, cancel: false, requiresPop: false });
   const items = [sharedValue, mode, flag2, onPanMinimizeGestureEnd, onTapGestureStart, flag, tmp2, tmp, pipState, wrapperOffset, flag3];
   return flag.useMemo(() => {
     const Gesture = mode(onTapGestureStart[5]).Gesture;
@@ -292,7 +289,7 @@ export default function useMorphablePanelGesture(mode) {
     X.__initData = closure_1_12;
     let obj3 = { initialGestureOffset: sharedValue, mode, MorphablePanelModes: wrapperOffset, calculatePIPPositionFromVelocity: mode(onTapGestureStart[7]).calculatePIPPositionFromVelocity, windowDimensions: closure_8, safeArea: closure_9, disableHorizontalSafeAreas: flag3, updateSharedValueIfChanged: onPanMinimizeGestureEnd(onTapGestureStart[6]), wrapperOffset, pipState, onPanMinimizeGestureEnd };
     const fn2 = function t() {
-      closure_1_1(closure_1_2[6])(closure_10, { active: false, cancel: false });
+      onPanMinimizeGestureEnd(onTapGestureStart[6])(closure_10, { active: false, cancel: false });
     };
     const onEndResult = onTouchesCancelledResult.onEnd(X);
     fn2.__closure = { updateSharedValueIfChanged: onPanMinimizeGestureEnd(onTapGestureStart[6]), initialGestureOffset: sharedValue };

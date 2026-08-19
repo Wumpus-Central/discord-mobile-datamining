@@ -1,9 +1,9 @@
 // === Module 14492: mapDiscordToMuxMetadata ===
 
 // Module 14492 (mapDiscordToMuxMetadata)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
+let result = obj132.fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
 const prototype = function MuxIntegration() {
   return Object.create(new.target.prototype);
 }.prototype;

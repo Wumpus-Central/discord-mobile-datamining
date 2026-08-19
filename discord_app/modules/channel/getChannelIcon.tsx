@@ -3,12 +3,12 @@
 // Module 12127 (getChannelIconURL)
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
 import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { ChannelTypes } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel/getChannelIcon.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/channel/getChannelIcon.tsx");
 
 export const getChannelIconURL = function getChannelIconURL(type) {
   let num = arg1;
@@ -26,8 +26,7 @@ export const getChannelIconURL = function getChannelIconURL(type) {
     }
     return avatarURL;
   } else if (tmp.GROUP_DM === type) {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, icon: null, applicationId: null, size: null };
+    const obj = { id: null, icon: null, applicationId: null, size: null };
     ({ id: obj2[0], icon: obj2[1] } = type);
     obj[2] = type.getApplicationId();
     obj[3] = num;
@@ -46,8 +45,7 @@ export const getChannelIconSource = function getChannelIconSource(type) {
     }
     return avatarSource;
   } else if (tmp.GROUP_DM === type) {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, icon: null, applicationId: null, size: 128 };
+    const obj = { id: null, icon: null, applicationId: null, size: 128 };
     ({ id: obj2[0], icon: obj2[1] } = type);
     obj[2] = type.getApplicationId();
     return obj.getChannelIconSource(obj);

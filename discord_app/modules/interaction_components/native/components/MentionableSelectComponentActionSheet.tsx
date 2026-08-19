@@ -2,38 +2,35 @@
 
 // Module 11002 (MentionableSelectComponentActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_6 from "createGuildRecordFromRust" /* 1910 */;
-import closure_7 from "sortActivity" /* 4559 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import sortActivity from "sortActivity" /* 4559 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { name: null, discriminator: null, roleCountContainer: null, roleCountText: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
+const createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { color: ThemesDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
 createCacheKey[2] = { display: "flex", flexDirection: "row", flexGrow: 1, alignItems: "center", justifyContent: "flex-end", marginRight: 12 };
 createCacheKey[3] = { paddingRight: 4 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx");
 
 export default function MentionableSelectComponentActionSheet(selectionActionComponent) {
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
   const channelId = selectionActionComponent.channelId;
   const guildId = selectionActionComponent.guildId;
-  let React;
   let guild;
   closure_5 = undefined;
   ({ labelComponent, containerId, onSubmit, allowEmpty } = selectionActionComponent);
-  React = callback2();
+  const React = callback2();
   guild = guild.getGuild(guildId);
   let id;
   if (guild != null) {
@@ -60,18 +57,18 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         obj[2] = closure_1_7.isVROnline(user.id);
         obj[3] = status;
         obj[4] = guildId;
-        obj[5] = tmp(tmp2[14]).AvatarSizes.XSMALL;
-        return closure_1_10(tmp(tmp2[14]).Avatar, obj);
+        obj[5] = selectionActionComponent(guildId[14]).AvatarSizes.XSMALL;
+        return closure_1_10(selectionActionComponent(guildId[14]).Avatar, obj);
       }
-    } else if (type.type === tmp(tmp2[13]).SelectOptionType.ROLE) {
+    } else if (type.type === selectionActionComponent(guildId[13]).SelectOptionType.ROLE) {
       if (null != guild) {
-        const role = store.getRole(tmp3.id, type.value);
+        const role = store.getRole(guild.id, type.value);
       }
       if (null != guild) {
         if (null != role) {
-          let tmpResult = tmp(tmp2[15]);
-          if (tmpResult.canGuildUseRoleIcons(tmp3, role)) {
-            tmpResult = tmp(tmp2[15]);
+          let tmpResult = selectionActionComponent(guildId[15]);
+          if (tmpResult.canGuildUseRoleIcons(guild, role)) {
+            tmpResult = selectionActionComponent(guildId[15]);
             let roleIconData = tmpResult.getRoleIconData(role);
             if (roleIconData == null) {
               roleIconData = {};
@@ -87,7 +84,7 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
             obj1[0] = tmp7;
             obj1[1] = unicodeEmoji;
             obj1[3] = role.name;
-            return closure_1_10(channelId(tmp2[16]), obj1);
+            return closure_1_10(channelId(guildId[16]), obj1);
           }
           let colorString;
           if (role != null) {
@@ -98,7 +95,7 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           }
           const obj2 = { color: null };
           obj2[0] = colorString;
-          return closure_1_10(tmp(tmp2[17]).ShieldUserIcon, obj2);
+          return closure_1_10(selectionActionComponent(guildId[17]).ShieldUserIcon, obj2);
         }
       }
       return null;
@@ -113,9 +110,8 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         const obj = { user: null, usernameStyle: null, discriminatorStyle: null, nicknameStyle: null };
         obj[0] = user;
         ({ name: obj[1], discriminator: obj[2], name: obj[3] } = closure_3);
-        return closure_1_10(channelId(tmp[19]), obj);
+        return closure_1_10(channelId(guildId[19]), obj);
       }
-      tmp = guildId;
     },
     renderOptionSuffix(item) {
       if (item.type === selectionActionComponent(guildId[13]).SelectOptionType.ROLE) {
@@ -137,7 +133,7 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
           obj[0] = closure_3.roleCountText;
           obj[3] = tmp7;
-          const items = [closure_1_10(tmp(tmp2[20]).Text, obj), closure_1_10(tmp(tmp2[21]).UserIcon, { size: "xs" })];
+          const items = [closure_1_10(selectionActionComponent(guildId[20]).Text, obj), closure_1_10(selectionActionComponent(guildId[21]).UserIcon, { size: "xs" })];
           obj[1] = items;
           return closure_1_11(guild, obj);
         }
@@ -158,9 +154,9 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         if (user != null) {
           bot = user.bot;
         }
-        const intl2 = tmp(tmp2[22]).intl;
+        const intl2 = selectionActionComponent(guildId[22]).intl;
         const formatToPlainString = intl2.formatToPlainString;
-        const t = tmp(tmp2[22]).t;
+        const t = selectionActionComponent(guildId[22]).t;
         if (bot) {
           let obj = { username: null, discriminator: null };
           obj[0] = type.label;
@@ -181,11 +177,11 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           formatToPlainStringResult = formatToPlainString(t.AydQ7a, obj);
         }
         return formatToPlainStringResult;
-      } else if (type.type === tmp(tmp2[13]).SelectOptionType.ROLE) {
-        const intl = tmp(tmp2[22]).intl;
+      } else if (type.type === selectionActionComponent(guildId[13]).SelectOptionType.ROLE) {
+        const intl = selectionActionComponent(guildId[22]).intl;
         obj = { roleName: null };
         obj[0] = type.label;
-        return intl.formatToPlainString(tmp(tmp2[22]).t.F6ejkk, obj);
+        return intl.formatToPlainString(selectionActionComponent(guildId[22]).t.F6ejkk, obj);
       }
     },
     channelId,

@@ -1,11 +1,11 @@
 // === Module 9314: useCoachmark ===
 
 // Module 9314 (useCoachmark)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
 
 export const useCoachmark = function useCoachmark(targetRef, memo) {
   const _require = memo;
@@ -18,7 +18,7 @@ export const useCoachmark = function useCoachmark(targetRef, memo) {
     const merged = Object.assign(memo);
     obj.targetMeasurements = targetMeasurements;
     obj.surfaceMeasurements = surfaceMeasurements;
-    context.add(arg0, closure_1_3(memo(context[5]).AnimatedCoachmark, obj));
+    context.add(arg0, jsx(memo(context[5]).AnimatedCoachmark, {}));
   }, items);
   const ref = React.useRef(_require(context[2]).v4());
   return _require(context[3]).useTooltipHelper(ref, targetRef, callback);

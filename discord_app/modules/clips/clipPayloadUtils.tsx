@@ -1,15 +1,15 @@
 // === Module 4831: getClipCreatedAt ===
 
 // Module 4831 (getClipCreatedAt)
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import result from "result" /* 4523 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { SpeakingFlags } from "DesktopSources" /* 4529 */;
 
-const require = arg1;
+const require = fn;
 ({ CLIPS_MAX_PARTICIPANTS: c4, CLIPS_MAX_TIMELINE_EVENTS: c5, ClipSignalTypes: closure_6, GameEventType: error } = result);
 let obj = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
-result = require("set").fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");
+result = require("obj132").fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");
 
 export const getClipCreatedAt = function getClipCreatedAt(createdAt) {
   return new Date(createdAt).toISOString();
@@ -46,7 +46,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
       const sum1 = diff + 1000 * editMetadata.start;
       closure_1 = _require(4832).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
       const timeline1 = clip.timeline;
-      const found = timeline1.filter((signal) => {
+      const found = timeline1.filter((item, index) => {
         editMetadata = editMetadata.editMetadata;
         let voiceAudio;
         if (editMetadata != null) {
@@ -54,12 +54,12 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         }
         let tmp2 = false !== voiceAudio;
         if (tmp2) {
-          tmp2 = signal.signal.type === closure_1_6.SPEAKING;
+          tmp2 = item.signal.type === closure_1_6.SPEAKING;
         }
         if (!tmp2) {
           let tmp4 = closure_1;
           if (closure_1) {
-            tmp4 = signal.signal.type === closure_1_6.GAME_EVENT;
+            tmp4 = item.signal.type === closure_1_6.GAME_EVENT;
           }
           tmp2 = tmp4;
         }
@@ -73,29 +73,19 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         const _Map2 = Map;
         new Map();
         for (const item10061 of sorted) {
-          let tmp16 = item10061;
-          let tmp17 = constants;
-          let tmp18 = constants;
           if (item10061.signal.type !== constants.SPEAKING) {
             continue;
           } else {
-            let tmp19 = item10061;
-            if (tmp16.timestamp >= sum1) {
-              let tmp23 = obj5;
+            if (item10061.timestamp >= sum1) {
               obj5.return();
               break;
             } else {
-              let tmp20 = item10061;
-              let tmp21 = SpeakingFlags;
-              let result = map.set(tmp16.signal.userId, (tmp16.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE);
+              let result = map.set(item10061.signal.userId, (item10061.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE);
             }
             break;
           }
-          let tmp25 = map;
-          let num4 = 2;
-          let tmp24 = __exception;
           tmp10[Symbol.iterator]().return();
-          throw tmp24;
+          throw __exception;
         }
         const tmp10 = map;
       }

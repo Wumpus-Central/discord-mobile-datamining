@@ -1,8 +1,8 @@
 // === Module 13847: response ===
 
 // Module 13847 (response)
-import set from "set" /* 2 */;
-import set2 from "set" /* 4375 */;
+import obj132 from "obj132" /* 2 */;
+import set from "set" /* 4375 */;
 import RPCCommands from "RPCCommands" /* 13848 */;
 
 let obj = { request: "Array", response: 0 };
@@ -25,8 +25,8 @@ obj = {
     return obj;
   },
   response(string) {
-    let obj = { access_token: string.string().required(), user: null, scopes: null, expires: null, application: null };
-    obj = { username: null, discriminator: null, id: null, avatar: null, public_flags: null, global_name: null };
+    { access_token: string.string().required(), user: null, scopes: null, expires: null, application: null };
+    let obj = { username: null, discriminator: null, id: null, avatar: null, public_flags: null, global_name: null };
     const stringResult = string.string();
     obj[0] = string.string().required();
     const stringResult1 = string.string();
@@ -44,8 +44,7 @@ obj = {
     let arrayResult = string.array();
     const stringResult5 = string.string();
     const stringResult6 = string.string();
-    const items = [...RPCCommands.joiEnum(set2.OAuth2Scopes)];
-    const obj12 = RPCCommands;
+    const items = [...RPCCommands.joiEnum(set.OAuth2Scopes)];
     obj[2] = arrayResult.items(stringResult6.valid.apply(items)).required();
     const itemsResult = arrayResult.items(stringResult6.valid.apply(items));
     obj[3] = string.string().required();
@@ -68,9 +67,8 @@ obj = {
 };
 let obj1 = { request: "Array", response: 0 };
 obj1[1] = function response(array) {
-  let obj = { participants: null };
   const arrayResult = array.array();
-  obj = { nickname: null };
+  const obj = { nickname: null };
   const obj3 = User(array);
   obj[0] = array.string().description("Server nickname. Not unique.");
   const keys = obj3.keys(obj);
@@ -255,7 +253,7 @@ function ActionRowComponent(arg0) {
 function ButtonComponent(arg0) {
 
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/definitions.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/rpc-schema/definitions.tsx");
 
 export const RPCCommandSchemas = {
   [RPCCommands.RPCCommand.INITIATE_IMAGE_UPLOAD]: obj,
@@ -264,9 +262,9 @@ export const RPCCommandSchemas = {
   [RPCCommands.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj1,
   [RPCCommands.RPCCommand.SHARE_INTERACTION]: {
     request(string) {
-      let obj = { command: string.string().required(), options: null, content: null, require_launch_channel: null, preview_image: null, components: null, pid: null };
+      { command: string.string().required(), options: null, content: null, require_launch_channel: null, preview_image: null, components: null, pid: null };
       let arrayResult = string.array();
-      obj = { name: null, value: null };
+      let obj = { name: null, value: null };
       const stringResult = string.string();
       obj[0] = string.string().required();
       const stringResult1 = string.string();

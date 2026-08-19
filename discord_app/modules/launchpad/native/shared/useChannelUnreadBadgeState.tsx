@@ -1,12 +1,12 @@
 // === Module 15606: useChannelUnreadBadgeState ===
 
 // Module 15606 (useChannelUnreadBadgeState)
-import closure_2 from "guildHasCommunity" /* 5276 */;
-import closure_3 from "generateOldThreadCutoff" /* 4772 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 5043 */;
+import guildHasCommunity from "guildHasCommunity" /* 5276 */;
+import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/launchpad/native/shared/useChannelUnreadBadgeState.tsx");
 
 export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(channel, flag) {
   const _require = channel;
@@ -17,7 +17,7 @@ export const useChannelUnreadBadgeState = function useChannelUnreadBadgeState(ch
     const obj = { ackMessageId: closure_1_3.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
     let hasUnreadResult = !closure_1;
     if (!closure_1) {
-      hasUnreadResult = obj2.hasUnread(tmp.id);
+      hasUnreadResult = closure_1_3.hasUnread(user.id);
     }
     obj[1] = hasUnreadResult;
     obj[2] = closure_1_3.getMentionCount(user.id);
@@ -49,7 +49,7 @@ export const useBaseChannelUnreadBadgeState = function useBaseChannelUnreadBadge
     const obj = { ackMessageId: closure_1_3.ackMessageId(user.id), unread: null, mentionCount: null, isMentionLowImportance: null };
     let hasUnreadResult = !closure_1;
     if (!closure_1) {
-      hasUnreadResult = obj2.hasUnread(tmp.id);
+      hasUnreadResult = closure_1_3.hasUnread(user.id);
     }
     obj[1] = hasUnreadResult;
     obj[2] = closure_1_3.getMentionCount(user.id);

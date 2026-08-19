@@ -1,14 +1,14 @@
 // === Module 12001: _maybeFetchCollectionsWithProducts ===
 
 // Module 12001 (_maybeFetchCollectionsWithProducts)
-import setDefault from "set" /* 687 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
-import closure_5 from "getFetchState" /* 11999 */;
-import closure_6 from "fromServer" /* 5327 */;
+import obj132Default from "obj132" /* 687 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import getFetchState from "getFetchState" /* 11999 */;
+import fromServer from "fromServer" /* 5327 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _maybeFetchCollectionsWithProducts() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -78,13 +78,13 @@ function _maybeFetchCollectionsWithProducts() {
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                c4 = lib.filter((arg0) => {
-                  if (Boolean(arg0)) {
-                    fetchState = fetchState.getFetchState(arg0);
+                c4 = lib.filter((item, index) => {
+                  if (Boolean(item)) {
+                    fetchState = fetchState.getFetchState(item);
                     if ("loading" === fetchState) {
                       return false;
                     } else {
-                      const fetchedAt = obj.getFetchedAt(arg0);
+                      const fetchedAt = obj.getFetchedAt(item);
                       if (null != fetchedAt) {
                         const _Date = Date;
                         return Date.now() - fetchedAt > ("error" === fetchState ? closure_9 : closure_8);
@@ -371,9 +371,9 @@ function _maybeFetchCollectionsForApplication() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = 12 * setDefault.Millis.HOUR;
-let closure_9 = 10 * setDefault.Millis.MINUTE;
-const result = require("set").fileFinishedImporting("modules/storefront/StorefrontCollectionActionCreators.tsx");
+let closure_8 = 12 * obj132Default.Millis.HOUR;
+let closure_9 = 10 * obj132Default.Millis.MINUTE;
+const result = require("obj132").fileFinishedImporting("modules/storefront/StorefrontCollectionActionCreators.tsx");
 
 export const maybeFetchCollectionsWithProducts = function maybeFetchCollectionsWithProducts(arg0) {
   const self = this;

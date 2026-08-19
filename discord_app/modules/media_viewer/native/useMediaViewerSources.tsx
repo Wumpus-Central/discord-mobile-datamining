@@ -1,14 +1,14 @@
 // === Module 8993: zustandStore ===
 
 // Module 8993 (zustandStore)
-import set2 from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4241 */;
 
 const zustandStore = defaultStatesAreEqual.createZustandStore(() => {
   const obj = { sources: [], spoilerIndexes: new Set() };
   return obj;
 });
-const result = set2.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
+const result = obj132.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
 
 export const MediaViewerSourcesStore = zustandStore;
 export const setMediaViewerSources = function setMediaViewerSources(arg0) {
@@ -16,23 +16,22 @@ export const setMediaViewerSources = function setMediaViewerSources(arg0) {
   if (initialIndex === undefined) {
     initialIndex = null;
   }
-  let set;
   const items = [];
-  set = new Set();
-  const item = sources.forEach((closure_1) => {
-    const flattenSourceResult = initialIndex(items[1]).flattenSource(closure_1);
+  const set = new Set();
+  const item = sources.forEach((item, index) => {
+    const flattenSourceResult = initialIndex(items[1]).flattenSource(item);
     let tmp2 = null != flattenSourceResult;
     if (tmp2) {
       tmp2 = flattenSourceResult.spoiler || flattenSourceResult.obscure;
-      const tmp3 = flattenSourceResult.spoiler || flattenSourceResult.obscure;
     }
     if (tmp2) {
-      tmp2 = initialIndex !== arg1;
+      tmp2 = initialIndex !== index;
     }
     if (tmp2) {
-      set.add(arg1);
+      set.add(index);
     }
-    items.push(closure_1);
+    items.push(item);
+    const obj = initialIndex(items[1]);
   });
   set.setState({ sources: items, spoilerIndexes: set });
 };

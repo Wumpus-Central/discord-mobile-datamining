@@ -1,7 +1,7 @@
 // === Module 14212: handleRequestSuccess ===
 
 // Module 14212 (handleRequestSuccess)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import sendRequest from "sendRequest" /* 530 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -9,9 +9,7 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 
 function handleRequestSuccess(body) {
   if (tmp) {
-    let obj = dispatcherDefault;
-    obj = { type: "UPDATE_CONSENTS", consents: null };
-    obj = {};
+    const obj = {};
     const merged = Object.assign(body.body);
     obj[1] = obj;
     obj.dispatch(obj);
@@ -39,7 +37,7 @@ function handleRequestFailure(status) {
   message = intl.string(getSystemLocale.t.cvJdtg);
 }
 const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("actions/ConsentActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/ConsentActionCreators.tsx");
 
 export const fetchConsents = function fetchConsents() {
   const HTTP = sendRequest.HTTP;
@@ -52,9 +50,7 @@ export const fetchConsents = function fetchConsents() {
 };
 export const setConsents = function setConsents(items, items2) {
   const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.SETTINGS_CONSENT, body: obj, oldFormErrors: true, rejectWithError: null };
-  obj = { grant: items, revoke: items2 };
+  const obj = { grant: items, revoke: items2 };
   obj[3] = sendRequest.rejectWithMigratedError();
-  const obj3 = sendRequest;
   return HTTP.post(obj).then(handleRequestSuccess, handleRequestFailure);
 };

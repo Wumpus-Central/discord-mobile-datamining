@@ -1,15 +1,15 @@
 // === Module 16077: SearchNavigatorPreviewScreen ===
 
 // Module 16077 (SearchNavigatorPreviewScreen)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
 import { SearchTypes } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_7 = createCacheKey.createStyles({ container: { flex: 1 } });
-let result = require("set").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx");
 
 export default function SearchNavigatorPreviewScreen() {
   let obj = navigation(searchContext[5]);
@@ -21,8 +21,8 @@ export default function SearchNavigatorPreviewScreen() {
   const onBeforeJumpToMessage = route.params.onBeforeJumpToMessage;
   const items = [searchContext, channelId, onBeforeJumpToMessage, navigation];
   callback = onBeforeJumpToMessage.useCallback(() => {
-    let obj = channelId(searchContext[7]);
-    obj = { searchContext, channelId };
+    channelId(searchContext[7]);
+    const obj = { searchContext, channelId };
     const result = obj.trackSearchJumpToMessage(obj);
     if (onBeforeJumpToMessage != null) {
       onBeforeJumpToMessage();

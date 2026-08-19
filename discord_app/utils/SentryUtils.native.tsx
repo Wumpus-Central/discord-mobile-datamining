@@ -1,7 +1,7 @@
 // === Module 1208: ? ===
 
 // Module 1208
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 809 */;
@@ -36,17 +36,18 @@ let obj = {
   captureException(arg0, extra) {
     const _require = arg0;
     importAll = _require(13569).getUpdatedOptions(extra);
-    const obj = _require(13569);
+    let obj = _require(13569);
     addBreadcrumbAll.withScope((setTags) => {
       if (null != callback) {
-        if (null != tmp.tags) {
-          setTags.setTags(tmp.tags);
+        if (null != callback.tags) {
+          setTags.setTags(callback.tags);
         }
-        if (null != tmp.extra) {
-          setTags.setExtras(tmp.extra);
+        if (null != callback.extra) {
+          setTags.setExtras(callback.extra);
         }
       }
-      closure_1 = callback(closure_1_3[3]).captureException(closure_0);
+      closure_1 = callback(dependencyMap[3]).captureException(closure_0);
+      const obj = callback(dependencyMap[3]);
     });
     return importDefault;
   },
@@ -67,7 +68,7 @@ let obj = {
     let obj = _require(13569);
     updatedOptions(810).withScope((setExtras) => {
       if (tmp2) {
-        setExtras.setExtras(tmp.extra);
+        setExtras.setExtras(updatedOptions.extra);
       }
       setExtras.setTags(table);
       setExtras.setLevel("fatal");
@@ -89,21 +90,25 @@ let obj = {
         return exception;
       });
       closure_1 = updatedOptions(table[3]).captureException(closure_0);
+      let obj = updatedOptions(table[3]);
+      tmp2 = null != updatedOptions && null != updatedOptions.extra;
     });
     return importDefault;
   },
   captureMessage(arg0, extra) {
     const _require = arg0;
     const updatedOptions = _require(13569).getUpdatedOptions(extra);
-    const obj = _require(13569);
+    let obj = _require(13569);
     addBreadcrumbAll.withScope((setExtras) => {
       if (tmp2) {
-        setExtras.setExtras(tmp.extra);
+        setExtras.setExtras(closure_1.extra);
       }
       if (tmp4) {
-        setExtras.setTags(tmp.tags);
+        setExtras.setTags(closure_1.tags);
       }
-      closure_1_2(closure_1_3[3]).captureMessage(closure_0);
+      addBreadcrumbAll.captureMessage(closure_0);
+      tmp2 = null != closure_1 && null != closure_1.extra;
+      tmp4 = null != closure_1 && null != closure_1.tags;
     });
   },
   addFeatureFlag(arg0, arg1) {
@@ -160,8 +165,8 @@ let obj = {
     }
   },
   getLastCrashReport(arg0) {
-    return new Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    return new Promise((fn) => {
+      closure_0 = fn;
       closure_1 = arg1;
       const CrashReportingManager = obj.CrashReportingManager;
       let getLastCrashReport;
@@ -293,18 +298,18 @@ let obj = {
                 return obj;
               })(timestamp);
             }
-            closure_0(tmp3);
+            callback(tmp3);
           } catch (tmp5) {
             callback(tmp5);
           }
         });
       } else {
-        arg0(null);
+        fn(null);
       }
     });
   }
 };
-const tmp2 = new timestampDefault("Sentry");
-let result = set.fileFinishedImporting("utils/SentryUtils.native.tsx");
+let tmp2 = new timestampDefault("Sentry");
+let result = obj132.fileFinishedImporting("utils/SentryUtils.native.tsx");
 
 export default obj;

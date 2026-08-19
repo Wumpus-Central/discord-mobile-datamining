@@ -1,24 +1,23 @@
 // === Module 8685: PictureInPicturePositions ===
 
 // Module 8685 (PictureInPicturePositions)
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { toggleFocus } from "VoiceChatDrawerState" /* 8669 */;
 import { PictureInPicturePositions } from "ME" /* 676 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import Button from "Button" /* 1297 */;
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ StyleSheet, View: c5 } = get_ActivityIndicator);
-let obj = { pipOuterContainer: null, pipInnerContainer: null, elevationShadow: null };
-obj = {};
+let obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.alignItems = "baseline";
 obj[0] = obj;
-createCacheKey = {};
+const createCacheKey = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.alignItems = "baseline";
 obj[1] = createCacheKey;
@@ -47,13 +46,12 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   insets = importDefault(ref[10])({ includeKeyboardHeight: true }).insets;
   obj = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
   const size = importDefault(ref[11])(obj);
-  let obj2 = importAllResult;
   const tmp7 = importDefault(ref[9])();
   [size2, c1] = callback(importAllResult.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
   let obj3 = insets(ref[12]);
   const fn = function w() {
     const obj = { marginTop: insets.top, marginBottom: null };
-    if (typeof closure_1_10 !== "function") {
+    if (typeof getSpringAnimationConfig !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj[1] = insets(ref[13]).withSpring(insets.bottom, { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity: undefined });
@@ -66,9 +64,8 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   const animatedStyle = obj3.useAnimatedStyle(fn);
   let obj5 = insets(ref[14]);
   const isViewingActivity = obj5.useIsViewingActivity({ channelId: channel.id });
-  obj1 = { channelId: channel.id };
   const tmp8 = callback(importAllResult.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
-  obj2 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
+  const obj2 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
   let tmp11;
   if (isViewingActivity) {
     tmp11 = toggleFocus;
@@ -114,7 +111,7 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   }}>{null}</closure_5>;
   return jsx(importDefault(ref[12]).View, { style: items, pointerEvents: "box-none", children: null });
 });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
 
 export default memoResult;
 export const DEFAULT_PIP_POSITION = PictureInPicturePositions.TOP_LEFT;

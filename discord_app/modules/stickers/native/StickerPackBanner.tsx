@@ -6,10 +6,10 @@ import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
-const result = require("set").fileFinishedImporting("modules/stickers/native/StickerPackBanner.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stickers/native/StickerPackBanner.tsx");
 
 export default function StickerPackBanner(arg0) {
   ({ containerStyle, style, stickerPack } = arg0);

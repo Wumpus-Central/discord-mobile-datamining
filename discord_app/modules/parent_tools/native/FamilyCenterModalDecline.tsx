@@ -2,15 +2,15 @@
 
 // Module 14283 (FamilyCenterModalDeclineScreen)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function FamilyCenterModalDeclineScreen(otherUser) {
   otherUser = otherUser.otherUser;
-  let declineLinkRequest;
   const tmp = callback3();
   const callback = React.useCallback(() => {
     let arr = declineLinkRequest(5260);
@@ -22,14 +22,13 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   }, []);
   let obj = otherUser(11104);
   const familyCenterActions = obj.useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
-  declineLinkRequest = familyCenterActions.declineLinkRequest;
+  const declineLinkRequest = familyCenterActions.declineLinkRequest;
   const isDeclineLoading = familyCenterActions.isDeclineLoading;
   const items = [declineLinkRequest, otherUser.id];
   const callback2 = React.useCallback(() => {
     declineLinkRequest(otherUser.id);
   }, items);
   declineLinkRequest(38)(!declineLinkRequest(7622)(), "FamilyCenterDeclineLinkModal should only be rendered for teens.");
-  obj = { children: null };
   obj = { children: null };
   obj1 = { style: tmp.header, children: null };
   const obj2 = { otherUser, iconSrc: null };
@@ -75,26 +74,21 @@ function FamilyCenterModalDeclineScreen(otherUser) {
   return callback2(otherUser(5440).ModalScreen, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { header: null, headerText: null, body: null, noticeHeader: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
+const createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-let obj1 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[2] = { padding: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj2 = { padding: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_4 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginBottom: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDecline.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDecline.tsx");
 
 export default function FamilyCenterModalDecline(otherUser) {
   otherUser = otherUser.otherUser;
   const items = [otherUser];
   const memo = React.useMemo(() => {
-    let obj = { DECLINE: null };
-    obj = {
+    const obj = {
       headerShown: true,
-      headerLeft: otherUser(closure_1_2[21]).getHeaderCloseButton(closure_1_1(closure_1_2[6]).pop),
+      headerLeft: otherUser(dependencyMap[21]).getHeaderCloseButton(_modDef5260.pop),
       headerTitle() {
         return null;
       },

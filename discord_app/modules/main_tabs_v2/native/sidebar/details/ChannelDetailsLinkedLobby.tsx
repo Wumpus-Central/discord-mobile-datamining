@@ -10,16 +10,15 @@ import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7145 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ Fragment: c5, jsxs: closure_6, jsx: error } = jsxProd);
-createCacheKey = { container: { alignItems: "center" }, divider: null };
-createCacheKey = { height: 1, width: 48, marginTop: 12, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
+const createCacheKey = { height: 1, width: 48, marginTop: 12, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx");
 
 export default function ChannelDetailsLinkedLobby(channel) {
   channel = channel.channel;
@@ -59,16 +58,14 @@ export default function ChannelDetailsLinkedLobby(channel) {
     obj3[0] = getArticleURL(HelpdeskArticles.LINKED_LOBBIES);
     items1[2] = intl.format(BPDKoA, obj3);
     obj2[0] = items1;
-    obj1[2] = closure_6(closure_5, obj2);
-    const items2 = [closure_7(Text, obj1), ];
+    obj1[2] = callback(closure_5, obj2);
+    const items2 = [callback2(Text, obj1), ];
     const obj4 = { style: null };
     divider = divider.divider;
     obj4[0] = divider;
-    Text = tmp4(tmp3, obj4);
+    Text = callback2(View, obj4);
     items2[1] = Text;
     obj[1] = items2;
-    closure_6(View, obj);
-    const tmp5 = closure_5;
-    const tmp8 = combinedDefault;
+    callback(View, obj);
   }
 };

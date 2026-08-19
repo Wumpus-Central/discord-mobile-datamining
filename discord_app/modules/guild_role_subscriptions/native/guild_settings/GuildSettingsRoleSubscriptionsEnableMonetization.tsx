@@ -4,12 +4,12 @@
 import noopAll from "noop" /* 19 */;
 import UnavailableNoticeDefault from "UnavailableNotice" /* 15790 */;
 import PlaceholderDefault from "Placeholder" /* 16901 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx");
 
 export default function GuildSubscriptionEnableMonetization(guildId) {
   guildId = guildId.guildId;
@@ -24,7 +24,6 @@ export default function GuildSubscriptionEnableMonetization(guildId) {
     const intl2 = tmp(1236).intl;
     obj[2] = intl2.string(tmp(1236).t["tJLG+L"]);
     tmp5 = jsx(UnavailableNoticeDefault, { brightTitle: true, title: null, description: null });
-    const tmp8 = UnavailableNoticeDefault;
   }
   return tmp5;
 };

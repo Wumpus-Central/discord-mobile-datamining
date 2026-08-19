@@ -1,7 +1,7 @@
 // === Module 8811: TwinButtons ===
 
 // Module 8811 (TwinButtons)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import AnimatedPressableHighlight from "AnimatedPressableHighlight" /* 6294 */;
 import BackgroundBlurView from "BackgroundBlurView" /* 8087 */;
 import BlurTheme from "BlurTheme" /* 8088 */;
@@ -14,7 +14,7 @@ import CollapsableButton from "CollapsableButton" /* 8817 */;
 import useCollapsibleFloatingActionButtonState from "useCollapsibleFloatingActionButtonState" /* 8819 */;
 import ActionSheetDragHandle from "ActionSheetDragHandle" /* 8820 */;
 
-const result = set.fileFinishedImporting("design/components/experimental/native.tsx");
+const result = obj132.fileFinishedImporting("design/components/experimental/native.tsx");
 
 export const TwinButtons = TwinButtons.TwinButtons;
 export const HeaderButton = HeaderButton.HeaderButton;

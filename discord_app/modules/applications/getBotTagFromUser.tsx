@@ -1,11 +1,11 @@
 // === Module 9914: getBotTagTypeFromUser ===
 
 // Module 9914 (getBotTagTypeFromUser)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ApplicationTypes from "ApplicationTypes" /* 4482 */;
 
 const BotTagTypes = ApplicationTypes.BotTagTypes;
-const result = set.fileFinishedImporting("modules/applications/getBotTagFromUser.tsx");
+const result = obj132.fileFinishedImporting("modules/applications/getBotTagFromUser.tsx");
 
 export const getBotTagTypeFromUser = function getBotTagTypeFromUser(user) {
   if (user.isSystemUser()) {

@@ -2,19 +2,19 @@
 
 // Module 7590 (useSelectedDestinationChannel)
 import canBypassSlowmodeHelper from "canBypassSlowmodeHelper" /* 7441 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "loadSavedGuildStickers" /* 6769 */;
+import noop from "noop" /* 19 */;
+import loadSavedGuildStickers from "loadSavedGuildStickers" /* 6769 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_10 from "markAllUserIdListsStale" /* 4030 */;
-import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ ChannelRecordBase: c5, isGuildChannelType: closure_6, createChannelRecord: error } = createChannelRecord);
 ({ MessageFlags: closure_12, Permissions: map1 } = ME);
-const result = require("set").fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
   const mapped = selectedDestinations.map(found(7591).getChannelIdFromDestinationId);
@@ -27,16 +27,16 @@ export const useSelectedDestinationChannel = function useSelectedDestinationChan
     let tmp = stateFromStores;
     if (stateFromStores == null) {
       const obj = { id: "1", type: null };
-      obj[1] = found(closure_1_2[11]).ChannelTypes.DM;
+      obj[1] = found(dependencyMap[11]).ChannelTypes.DM;
       tmp = closure_1_7(obj);
     }
     return tmp;
   }, items2);
 };
-export const getDestinationIsUnavailable = function getDestinationIsUnavailable(components, channel, type) {
+export const getDestinationIsUnavailable = function getDestinationIsUnavailable(components, channel, type, fn) {
   const _require = type;
-  if (null != arg3) {
-    const tmp2 = arg3(type);
+  if (null != fn) {
+    const tmp2 = fn(type);
     if (null != tmp2) {
       return tmp2;
     }
@@ -104,19 +104,18 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
           let arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4823).getMessageStickers(components), 0);
-          arraySpreadResult = HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(table[12]).getMessageStickers(message.message)), arraySpreadResult);
+          arraySpreadResult = HermesBuiltin.arraySpread(messageSnapshots3.flatMap((item, index) => type(table[12]).getMessageStickers(item.message)), arraySpreadResult);
           if (items.length > 0) {
             if (!closure_9.can(constants2.USE_EXTERNAL_STICKERS, type)) {
-              if (items.some((id) => {
-                const stickerById = closure_1_4.getStickerById(id.id);
+              if (items.some((item, index) => {
+                const stickerById = closure_1_4.getStickerById(item.id);
                 let isGuildStickerResult = null != stickerById;
                 if (isGuildStickerResult) {
-                  isGuildStickerResult = type(closure_1_2[12]).isGuildSticker(stickerById);
-                  const obj = type(closure_1_2[12]);
+                  isGuildStickerResult = type(dependencyMap[12]).isGuildSticker(stickerById);
+                  const obj = type(dependencyMap[12]);
                 }
                 if (isGuildStickerResult) {
                   isGuildStickerResult = stickerById.guild_id !== type.guild_id || undefined;
-                  const tmp6 = stickerById.guild_id !== type.guild_id || undefined;
                 }
                 return isGuildStickerResult;
               })) {
@@ -150,7 +149,6 @@ export const isRatelimitedInChannel = function isRatelimitedInChannel(channel, c
   }
   if (tmp) {
     tmp = !canBypassSlowmodeHelper.canBypassSlowmodeHelper(channel, closure_1_6);
-    const obj = canBypassSlowmodeHelper;
   }
   return tmp;
 };
@@ -159,9 +157,9 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
   const items = [closure_11, closure_8, closure_10];
   const items1 = [arg0];
   return _require(589).useStateFromStoresArray(items, () => {
-    const mapped = lib.map((id) => {
-      id = id.id;
-      if ("user" === id.type) {
+    const mapped = lib.map((item, index) => {
+      const id = item.id;
+      if ("user" === item.type) {
         user = user.getUser(id);
         let tmp13 = null;
         if (null != user) {
@@ -183,7 +181,7 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
         return channelName;
       }
     });
-    return mapped.filter(lib(closure_1_2[9]).isNotNullish);
+    return mapped.filter(lib(dependencyMap[9]).isNotNullish);
   }, items1);
 };
 export const useDestinationNamesWithSlowmode = function useDestinationNamesWithSlowmode(selectedDestinations) {
@@ -191,21 +189,21 @@ export const useDestinationNamesWithSlowmode = function useDestinationNamesWithS
   const items = [closure_8, closure_9];
   const items1 = [selectedDestinations];
   const stateFromStoresArray = _require(589).useStateFromStoresArray(items, () => {
-    const mapped = selectedDestinations.map((type) => {
+    const mapped = selectedDestinations.map((item, index) => {
       let channel = null;
-      if ("channel" === type.type) {
+      if ("channel" === item.type) {
         channel = channel.getChannel(tmp);
       }
       return channel;
     });
-    const found = mapped.filter(selectedDestinations(closure_1_2[9]).isNotNullish);
-    return found.filter((rateLimitPerUser) => {
-      let tmp2 = null != rateLimitPerUser.rateLimitPerUser;
+    const found = mapped.filter(selectedDestinations(dependencyMap[9]).isNotNullish);
+    return found.filter((item, index) => {
+      let tmp2 = null != item.rateLimitPerUser;
       if (tmp2) {
-        tmp2 = rateLimitPerUser.rateLimitPerUser > 0;
+        tmp2 = item.rateLimitPerUser > 0;
       }
       if (tmp2) {
-        tmp2 = !callback(table[17]).canBypassSlowmodeHelper(rateLimitPerUser, closure_9);
+        tmp2 = !callback(table[17]).canBypassSlowmodeHelper(item, closure_9);
         const obj = callback(table[17]);
       }
       return tmp2;
@@ -214,5 +212,5 @@ export const useDestinationNamesWithSlowmode = function useDestinationNamesWithS
   let obj = _require(589);
   const items2 = [closure_11, closure_10];
   const items3 = [stateFromStoresArray];
-  return _require(589).useStateFromStoresArray(items2, () => stateFromStoresArray.map((channel) => callback(table[19]).computeChannelName(channel, closure_11, closure_10, true)), items3);
+  return _require(589).useStateFromStoresArray(items2, () => stateFromStoresArray.map((item, index) => callback(table[19]).computeChannelName(item, closure_11, closure_10, true)), items3);
 };

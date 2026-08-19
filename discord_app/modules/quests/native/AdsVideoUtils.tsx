@@ -1,11 +1,11 @@
 // === Module 14377: isSourceError ===
 
 // Module 14377 (isSourceError)
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import obj132 from "obj132" /* 2 */;
+import obj1322 from "obj132" /* 500 */;
 
 let closure_2 = [-1000, -1003, -1004, -1008];
-const result = set.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
 
 export const isSourceError = function isSourceError(error) {
   if (error != null) {
@@ -21,7 +21,7 @@ export const isSourceError = function isSourceError(error) {
     }
     let isIOSResult = hasItem;
   } else {
-    isIOSResult = set2.isIOS();
+    isIOSResult = obj1322.isIOS();
     if (isIOSResult) {
       let hasItem1 = null != code;
       if (hasItem1) {
@@ -29,7 +29,7 @@ export const isSourceError = function isSourceError(error) {
       }
       isIOSResult = hasItem1;
     }
-    const tmpResult = set2;
+    const tmpResult = obj1322;
   }
   return isIOSResult;
 };

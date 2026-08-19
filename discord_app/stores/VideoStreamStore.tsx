@@ -1,7 +1,7 @@
 // === Module 4776: makeTimeoutKey ===
 
 // Module 4776 (makeTimeoutKey)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -27,18 +27,14 @@ function clearUser(arg0, arg1) {
       const iter = values[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp11 = nextResult;
         let tmp12 = tmp4 !== nextResult && null != tmp4;
         if (!tmp12) {
-          let tmp13 = nextResult;
           delete tmp[tmp2];
-          let tmp14 = closure_5;
           let tmp16 = tmp4;
-          let tmp15 = makeTimeoutKey;
           if (tmp4 == null) {
             tmp16 = nextResult;
           }
-          let tmp15Result = tmp15(tmp16, arg0);
+          let tmp15Result = makeTimeoutKey(tmp16, arg0);
           delete tmp3[tmp2];
         }
         continue;
@@ -145,12 +141,12 @@ const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((arg0, arg1) => {
-      ({ userId, channelId, guildId } = arg1);
+    return voiceStates.reduce((acc, item, index) => {
+      ({ userId, channelId, guildId } = item);
       if (null == channelId) {
         if (userId === closure_2) {
           if (tmp !== closure_3) {
-            return arg0;
+            return acc;
           } else {
             const table = {};
             closure_5 = {};
@@ -171,7 +167,7 @@ const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
           callback(userId, guildId);
         }
       }
-      return arg0;
+      return acc;
     }, false);
   },
   VIDEO_STREAM_READY_TIMEOUT: function handleVideoStreamReadyTimeout(arg0) {
@@ -187,6 +183,6 @@ const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("stores/VideoStreamStore.tsx");
+const result = obj132.fileFinishedImporting("stores/VideoStreamStore.tsx");
 
 export default videoStreamStore;

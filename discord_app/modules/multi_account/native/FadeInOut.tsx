@@ -4,17 +4,16 @@
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 let closure_5 = { code: "function FadeInOutTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 let closure_6 = { code: "function FadeInOutTsx2(finished){const{runOnJS,handleTransitionFinished}=this.__closure;if(finished){runOnJS(handleTransitionFinished)();}}" };
 const forwardRefResult = importAllResult.forwardRef((duration, ref) => {
   duration = duration.duration;
-  let sharedValue;
   ref = undefined;
   importAllResult = undefined;
   ({ children, style } = duration);
-  sharedValue = duration(ref[2]).useSharedValue(0);
+  const sharedValue = duration(ref[2]).useSharedValue(0);
   let obj = duration(ref[2]);
   let fn = function h() {
     return { opacity: sharedValue.get() };
@@ -33,26 +32,25 @@ const forwardRefResult = importAllResult.forwardRef((duration, ref) => {
   }, items);
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
     componentDidAppear() {
-      let obj = closure_1_0(closure_1_2[3]);
-      obj = { duration: closure_0 };
+      duration(ref[3]);
+      const obj = { duration: closure_0 };
       const result = store.set(obj.withTiming(1, obj));
     },
     componentDidEnter() {
-      let obj = closure_1_0(closure_1_2[3]);
-      obj = { duration: closure_0 };
+      duration(ref[3]);
+      const obj = { duration: closure_0 };
       const result = store.set(obj.withTiming(1, obj));
     },
     componentWillLeave(current) {
       closure_2.current = current;
-      let obj = closure_1_0(closure_1_2[3]);
-      obj = { duration: closure_0 };
+      duration(ref[3]);
       const fn = function t(arg0) {
         if (arg0) {
           closure_1_0(closure_1_2[2]).runOnJS(closure_3)();
           const obj = closure_1_0(closure_1_2[2]);
         }
       };
-      obj = { runOnJS: closure_1_0(closure_1_2[2]).runOnJS, handleTransitionFinished: closure_3 };
+      let obj = { runOnJS: duration(ref[2]).runOnJS, handleTransitionFinished: closure_3 };
       fn.__closure = obj;
       fn.__workletHash = 7644958904451;
       fn.__initData = closure_1_6;
@@ -64,6 +62,6 @@ const forwardRefResult = importAllResult.forwardRef((duration, ref) => {
   style[1] = animatedStyle;
   return jsx(sharedValue(ref[2]).View, { style, children });
 });
-let result = require("set").fileFinishedImporting("modules/multi_account/native/FadeInOut.tsx");
+let result = require("obj132").fileFinishedImporting("modules/multi_account/native/FadeInOut.tsx");
 
 export default forwardRefResult;

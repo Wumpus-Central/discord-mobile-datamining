@@ -9,12 +9,12 @@ import useDiscountOfferDefault from "useDiscountOffer" /* 7626 */;
 import _fetchUserOffer from "_fetchUserOffer" /* 7876 */;
 import useHasActiveTrial from "useHasActiveTrial" /* 8277 */;
 import useIsInReverseTrial from "useIsInReverseTrial" /* 8278 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "reset" /* 4045 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import reset from "reset" /* 4045 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-require = arg1;
+require = fn;
 ({ PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID: closure_6, PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: error, PREMIUM_TIER_2_ANNUAL_V2_20_PERCENT_DISCOUNT_ID: closure_8, PREMIUM_TIER_2_ANNUAL_V2_30_PERCENT_DISCOUNT_ID: c9, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: c10, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID: closure_12, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: map1, PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: closure_14, PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: closure_15, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_16, PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID: closure_17 } = GuildFeatures);
 function useHasDiscountApplied() {
   const items = [closure_5];
@@ -29,27 +29,21 @@ function useHasDiscountApplied() {
   let tmp4 = null != prop;
   if (tmp4) {
     const _Date = Date;
-    const tmp6 = tDefault;
     tmp4 = tDefault(Date.now()) <= tDefault(prop);
     const tmp6Result = tDefault(Date.now());
   }
   return tmp4;
 }
-const result = require("set").fileFinishedImporting("modules/premium/PremiumSubscriptionOfferUtil.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/PremiumSubscriptionOfferUtil.tsx");
 
 export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperience() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
-  const obj = usePremiumTrialOffer;
-  const tmp = require;
   const hasActiveTrial = useHasActiveTrial.useHasActiveTrial();
-  const obj2 = useHasActiveTrial;
   const premiumDiscountOffer = usePremiumDiscountOffer.usePremiumDiscountOffer();
-  const obj3 = usePremiumDiscountOffer;
   const premiumGroupDiscountOffer = usePremiumDiscountOffer.usePremiumGroupDiscountOffer();
   if (typeof useHasDiscountApplied !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj4 = usePremiumDiscountOffer;
   const items = [closure_5];
   const stateFromStores = initialize.useStateFromStores(items, () => store.getPremiumTypeSubscription());
   let prop;
@@ -62,7 +56,6 @@ export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperie
   let tmp9 = null != prop;
   if (tmp9) {
     const _Date = Date;
-    const tmp11 = tDefault;
     tmp9 = tDefault(Date.now()) <= tDefault(prop);
     const tmp11Result = tDefault(Date.now());
   }
@@ -157,16 +150,16 @@ export const useFetchChurnUserDiscountOffer = function useFetchChurnUserDiscount
       tmp8(true);
       obj = _fetchUserOffer;
       const churnDiscountOffer = obj.fetchChurnDiscountOffer();
-      churnDiscountOffer.then((arg0) => {
-        callback2(arg0);
+      churnDiscountOffer.then((result) => {
+        callback2(result);
         callback(true);
         tmp8(false);
-      }).catch(() => {
+      }).catch((error) => {
         callback(true);
         tmp8(false);
       });
-      const nextPromise = churnDiscountOffer.then((arg0) => {
-        callback2(arg0);
+      const nextPromise = churnDiscountOffer.then((result) => {
+        callback2(result);
         callback(true);
         tmp8(false);
       });
@@ -184,10 +177,7 @@ export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
   if (typeof useHasDiscountApplied !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj = initialize;
-  const tmp = require;
-  const tmp3 = closure_5;
-  const items1 = [tmp3];
+  const items1 = [closure_5];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => store.getPremiumTypeSubscription());
   let prop;
   if (stateFromStores1 != null) {
@@ -199,7 +189,6 @@ export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
   let tmp7 = null != prop;
   if (tmp7) {
     const _Date = Date;
-    const tmp9 = tDefault;
     tmp7 = tDefault(Date.now()) <= tDefault(prop);
     const tmp9Result = tDefault(Date.now());
   }
@@ -217,28 +206,20 @@ export const renewalInvoiceChurnDiscountInfo = function renewalInvoiceChurnDisco
   const iter = arg0.invoiceItems[Symbol.iterator]();
   while (iter !== undefined) {
     let discounts = iter.next().discounts;
-    let found = discounts.find((type) => type.type === callback(table[11]).InvoiceDiscountTypes.SUBSCRIPTION_PLAN);
+    let found = discounts.find((item, index) => item.type === callback(table[11]).InvoiceDiscountTypes.SUBSCRIPTION_PLAN);
     let tmp2 = found;
     if (null != found) {
-      let tmp3 = found;
       let discount_id = tmp2.discount_id;
-      let tmp4 = closure_10;
       if (closure_10 === discount_id) {
         let obj = { duration: 1, percentage: null, discountId: null };
         ({ percentage_amount: obj2[1], discount_id: obj2[2] } = found);
-        let tmp8 = iter;
         iter.return();
         return obj;
-      } else {
-        let tmp5 = closure_11;
-        if (closure_11 === discount_id) {
-          obj = { duration: 3, percentage: null, discountId: null };
-          let tmp6 = found;
-          ({ percentage_amount: obj[1], discount_id: obj[2] } = tmp2);
-          let tmp7 = iter;
-          iter.return();
-          return obj;
-        }
+      } else if (closure_11 === discount_id) {
+        obj = { duration: 3, percentage: null, discountId: null };
+        ({ percentage_amount: obj[1], discount_id: obj[2] } = tmp2);
+        iter.return();
+        return obj;
       }
     }
     continue;

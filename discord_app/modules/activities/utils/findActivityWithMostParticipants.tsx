@@ -1,9 +1,9 @@
 // === Module 15326: findActivityWithMostParticipants ===
 
 // Module 15326 (findActivityWithMostParticipants)
-import closure_0 from "markAllUserIdListsStale" /* 4030 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");
 
 export default function findActivityWithMostParticipants(arr) {
   if (0 === arr.length) {
@@ -11,10 +11,10 @@ export default function findActivityWithMostParticipants(arr) {
   } else if (1 === length) {
     let first = arr[0];
   } else {
-    first = arr.reduce((userIds, userIds2) => {
-      let tmp = userIds;
-      if (userIds.userIds.size < userIds2.userIds.size) {
-        tmp = userIds2;
+    first = arr.reduce((acc, item, index) => {
+      let tmp = acc;
+      if (acc.userIds.size < item.userIds.size) {
+        tmp = item;
       }
       return tmp;
     }, arr[0]);
@@ -29,13 +29,13 @@ export const findActivityWithMostNonBlockedOrIgnoredParticipants = function find
     let items = [embeddedActivitiesForChannel[0], ];
     const items1 = [];
     HermesBuiltin.arraySpread(embeddedActivitiesForChannel[0].userIds, 0);
-    items[1] = items1.map((id) => !blockedOrIgnored.isBlockedOrIgnored(id)).length;
+    items[1] = items1.map((item, index) => !blockedOrIgnored.isBlockedOrIgnored(item)).length;
     [closure_0, closure_1] = items;
-    const item = embeddedActivitiesForChannel.forEach((userIds) => {
-      const items = [...userIds.userIds];
-      const length = items.filter((id) => !userIds.isBlockedOrIgnored(id)).length;
+    const item = embeddedActivitiesForChannel.forEach((item, index) => {
+      const items = [...item.userIds];
+      const length = items.filter((item, index) => !item.isBlockedOrIgnored(item)).length;
       if (length > length) {
-        closure_0 = userIds;
+        closure_0 = item;
       }
     });
     return closure_0;

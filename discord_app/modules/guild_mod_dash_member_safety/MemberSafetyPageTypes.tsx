@@ -1,7 +1,7 @@
 // === Module 15826: SUBMITTED ===
 
 // Module 15826 (SUBMITTED)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
 
 const obj = { ALL_MEMBERS: "ALL_MEMBERS" };
@@ -14,6 +14,6 @@ obj[REJECTED] = "REJECTED";
 const APPROVED = MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED;
 obj.APPROVED = APPROVED;
 obj[APPROVED] = "APPROVED";
-const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPageTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPageTypes.tsx");
 
 export const MemberSafetyPageTab = obj;

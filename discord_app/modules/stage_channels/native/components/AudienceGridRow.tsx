@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo((theme) => {
   }
   let obj = { style: items, children: null };
   items[1] = { justifyContent: str };
-  const items1 = [participants.map((id) => closure_1_4(closure_1_0(theme[6]), { theme, channel: closure_0, participant: id }, id.id)), ];
+  const items1 = [participants.map((item, index) => closure_1_4(importDefault(theme[6]), { theme, channel: closure_0, participant: item }, item.id)), ];
   let tmp5 = null;
   if (num > 0) {
     obj = { count: null };
@@ -49,9 +49,9 @@ const memoResult = importAllResult.memo((theme) => {
   }
   items1[1] = tmp5;
   obj[1] = items1;
-  return closure_5(View, obj);
+  return callback(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
 
 export default memoResult;
 export { BlankAudience };

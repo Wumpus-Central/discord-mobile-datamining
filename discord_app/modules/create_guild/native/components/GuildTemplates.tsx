@@ -4,20 +4,19 @@
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import GuildTemplateId from "GuildTemplateId" /* 11880 */;
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 8617 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function GuildTemplatesHeader() {
   const tmp = callback5();
-  let obj = { style: tmp.headerContainer, children: null };
-  obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  let obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t["5HZu07"]);
   const items = [callback3(Text.Text, obj), ];
@@ -31,7 +30,6 @@ function GuildTemplatesHeader() {
 function GuildTemplatesJoinFooter(trigger) {
   trigger = trigger.trigger;
   const onHeightChange = trigger.onHeightChange;
-  dependencyMap = undefined;
   const tmp = callback5();
   let obj = trigger(1500);
   dependencyMap = obj.useNavigation();
@@ -43,7 +41,7 @@ function GuildTemplatesJoinFooter(trigger) {
     stringResult = intl.string(tmp2(1236).t.riOUtB);
   }
   const items = [onHeightChange];
-  obj = {
+  {
     style: items1,
     onLayout: React.useCallback((nativeEvent) => {
       onHeightChange(nativeEvent.nativeEvent.layout.height);
@@ -98,41 +96,37 @@ function GuildTemplatesItem(guildTemplate) {
 ({ CreateGuildModalStates: c9, GuildTemplateTriggers: c10, NUXGuildTemplatesAnalytics: unpackModuleId } = NUXGuildTemplatesAnalytics);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { flex: { flex: 1 }, contentContainer: null, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
+const createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[3] = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };
 createCacheKey[4] = { alignItems: "center", paddingTop: 20, paddingBottom: 20, paddingHorizontal: 16 };
 createCacheKey[5] = { textAlign: "center", marginBottom: 8 };
 createCacheKey[6] = { lineHeight: 18, textAlign: "center" };
-let obj2 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };
 createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
 createCacheKey[8] = { padding: 16, gap: 16, minHeight: 110, justifyContent: "center" };
 createCacheKey[9] = { alignSelf: "center", textAlign: "center" };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
-const result = require("set").fileFinishedImporting("modules/create_guild/native/components/GuildTemplates.tsx");
+const result = require("obj132").fileFinishedImporting("modules/create_guild/native/components/GuildTemplates.tsx");
 
 export default function GuildTemplates(trigger) {
   trigger = trigger.trigger;
   const _location = trigger.location;
   const fromStep = trigger.fromStep;
-  let callback;
   let React;
-  function onGuildTemplatePress(guildTemplate) {
-    let obj = { guildTemplate, trigger };
+  function onGuildTemplatePress(dependencyMap) {
+    let obj = { guildTemplate: dependencyMap, trigger };
     if (trigger === closure_1_10.IN_APP) {
       obj = { template_name: null };
-      obj[0] = guildTemplate.id;
+      obj[0] = dependencyMap.id;
       _location(fromStep[16]).track(closure_1_12.GUILD_TEMPLATE_SELECTED, obj);
       const obj2 = _location(fromStep[16]);
     }
+    arr = arr.push(closure_1_9.CREATION_INTENT, obj);
   }
   const tmp = callback5();
   let obj = trigger(fromStep[12]);
-  callback = obj.useNavigation();
+  let callback = obj.useNavigation();
   const items = [trigger, _location, fromStep];
   const effect = React.useEffect(() => {
     if (closure_1_10.NUF === trigger) {
@@ -158,8 +152,7 @@ export default function GuildTemplates(trigger) {
   callback = React.useCallback((arg0) => {
     _undefined(arg0);
   }, []);
-  obj = { top: true, left: true, right: true, style: items1, children: null };
-  items1 = [, ];
+  const items1 = [, ];
   ({ flex: arr2[0], contentContainer: arr2[1] } = tmp);
   obj = { style: tmp.flex, children: null };
   obj1 = { style: tmp.scrollContainer, contentContainerStyle: obj2, children: null };

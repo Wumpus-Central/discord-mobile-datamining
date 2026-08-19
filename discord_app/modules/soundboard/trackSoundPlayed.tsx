@@ -2,16 +2,16 @@
 
 // Module 7332 (trackSoundPlayed)
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
-import closure_2 from "initialize" /* 4504 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "createRTCConnection" /* 4539 */;
-import closure_5 from "handleConnectionOpen" /* 1979 */;
+import initialize from "initialize" /* 4504 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 ({ AnalyticsPremiumFeatureNames: closure_8, AnalyticsPremiumFeatureTiers: c9 } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");
+const result = require("obj132").fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");
 
 export default function trackSoundPlayed(location_stack, in_overlay, guildId) {
   channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
@@ -38,7 +38,7 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId) {
     }
     str = str2;
   }
-  const obj = { feature_name: constants.SOUNDBOARD_PLAY, feature_tier: tmp6 ? tmp8.PREMIUM_STANDARD : tmp8.FREE, guild_id: guildId, home_guild_id: guildId.guildId, location_stack, rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, in_overlay, application_name: name, emoji_count: null, feature_selection: null, feature_selection_id: null, sound_type: null, sequence_number: null };
+  const obj = { feature_name: constants.SOUNDBOARD_PLAY, feature_tier: tmp6 ? constants.PREMIUM_STANDARD : constants.FREE, guild_id: guildId, home_guild_id: guildId.guildId, location_stack, rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, in_overlay, application_name: name, emoji_count: null, feature_selection: null, feature_selection_id: null, sound_type: null, sequence_number: null };
   if (null != guildId.emojiId) {
     let num = 1;
   } else {

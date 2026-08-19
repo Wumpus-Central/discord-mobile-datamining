@@ -2,11 +2,11 @@
 
 // Module 13879 (toggleVoiceChannelChat)
 import _modDef8666 from "module_8666" /* 8666 */;
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
-import closure_3 from "createRTCConnection" /* 4539 */;
-import closure_4 from "getParticipants" /* 4773 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import getParticipants from "getParticipants" /* 4773 */;
 
-const result = require("set").fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
+const result = require("obj132").fileFinishedImporting("modules/calls/toggleVoiceChannelChat.tsx");
 
 export const toggleVoiceChannelChat = function toggleVoiceChannelChat(open) {
   let obj = connected;

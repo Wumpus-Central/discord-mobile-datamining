@@ -1,29 +1,26 @@
 // === Module 5378: importDefaultResult1 ===
 
 // Module 5378 (importDefaultResult1)
-import setDefault from "set" /* 687 */;
-import closure_3 from "noop" /* 19 */;
+import obj132Default from "obj132" /* 687 */;
+import noop from "noop" /* 19 */;
 import importDefaultResult1 from "handleLoadMessages" /* 4505 */;
-import initialize from "initialize" /* 589 */;
+import "initialize";
 import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-initialize = {
+const require = fn;
+const initialize = {
   getQueryId: require("ME").QueryIds.GAME,
-  failureStaleAfter: 15 * setDefault.Seconds.SECOND,
+  failureStaleAfter: 15 * obj132Default.Seconds.SECOND,
   get(closure_0) {
     if (null == closure_0) {
       return null;
+    } else if (importDefaultResult1.hasNoData(closure_0)) {
+      let NO_DATA = require(589) /* initialize */.NO_DATA;
     } else {
-      if (importDefaultResult1.hasNoData(closure_0)) {
-        let NO_DATA = require(589) /* initialize */.NO_DATA;
-      } else {
-        NO_DATA = obj.getGame(closure_0);
-        if (NO_DATA == null) {
-          NO_DATA = null;
-        }
+      NO_DATA = importDefaultResult1.getGame(closure_0);
+      if (NO_DATA == null) {
+        NO_DATA = null;
       }
-      obj = importDefaultResult1;
     }
   },
   load: null,
@@ -104,11 +101,11 @@ initialize[4] = function getIsLoading(arg0) {
   }
   return isFetchingResult;
 };
-initialize[5] = function getError(closure_0) {
+initialize[5] = function getError(item) {
   error = null;
-  if (null != closure_0) {
+  if (null != item) {
     error = null;
-    if (importDefaultResult1.didFetchingFail(closure_0)) {
+    if (importDefaultResult1.didFetchingFail(item)) {
       const _Error = Error;
       error = new Error("Failed to fetch game data");
     }
@@ -116,7 +113,7 @@ initialize[5] = function getError(closure_0) {
   return error;
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult1, initialize);
-const result = require("set").fileFinishedImporting("modules/games/hooks/useGame.tsx");
+const result = require("obj132").fileFinishedImporting("modules/games/hooks/useGame.tsx");
 
 export const useGame = fetchStore;
 export const useGames = function useGames(memo) {
@@ -124,11 +121,11 @@ export const useGames = function useGames(memo) {
   let items = [memo];
   const effect = React.useEffect(() => {
     let items = [
-      ...closure_0.map((arg0) => {
-        const items = [arg0];
+      ...closure_0.map((item, index) => {
+        const items = [item];
         return items;
       })
     ];
-    closure_1_5.fetchMany.apply(items);
+    fetchStore.fetchMany.apply(items);
   }, items);
 };

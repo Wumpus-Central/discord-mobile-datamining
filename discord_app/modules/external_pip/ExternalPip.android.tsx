@@ -1,7 +1,7 @@
 // === Module 10027: NativeEventEmitter ===
 
 // Module 10027 (NativeEventEmitter)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
@@ -67,6 +67,6 @@ prototype["isInPipMode"] = function isInPipMode() {
 let obj = Object.create(ExternalPip.prototype);
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PipAndroid);
 obj.eventEmitter = nativeEventEmitter;
-const result = set.fileFinishedImporting("modules/external_pip/ExternalPip.android.tsx");
+const result = obj132.fileFinishedImporting("modules/external_pip/ExternalPip.android.tsx");
 
 export default obj;

@@ -1,30 +1,32 @@
 // === Module 17150: promise ===
 
 // Module 17150 (promise)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import tDefault from "t" /* 3975 */;
+import _modDef6798 from "module_6798" /* 6798 */;
+import _modDef17148 from "module_17148" /* 17148 */;
 
 const MuteUntilSeconds = MAX_FAVORITES.MuteUntilSeconds;
-let result = set.fileFinishedImporting("modules/headless_tasks/android/MuteAction.tsx");
+let result = obj132.fileFinishedImporting("modules/headless_tasks/android/MuteAction.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    closure_1_1(closure_1_2[1]).awaitStorage(() => {
+    _modDef17148.awaitStorage(() => {
       let toISOStringResult = null;
       if (-1 !== lib.muteTime) {
-        let obj = closure_2_1(closure_2_2[2])();
-        let HOURS_1 = tmp.muteTime;
+        let obj = tDefault();
+        let HOURS_1 = lib.muteTime;
         if (HOURS_1 == null) {
-          HOURS_1 = closure_2_3.HOURS_1;
+          HOURS_1 = MuteUntilSeconds.HOURS_1;
         }
         toISOStringResult = obj.add(HOURS_1, "second").toISOString();
         const addResult = obj.add(HOURS_1, "second");
       }
-      obj = { muted: true, mute_config: obj };
-      obj = { selected_time_window: closure_2_3.HOURS_1, end_time: toISOStringResult };
-      const result = closure_2_1(closure_2_2[3]).updateChannelOverrideSettings(tmp.guildId, tmp.channelId, obj, lib(closure_2_2[4]).NotificationLabels.Muted);
+      obj = { selected_time_window: MuteUntilSeconds.HOURS_1, end_time: toISOStringResult };
+      const result = _modDef6798.updateChannelOverrideSettings(lib.guildId, lib.channelId, obj, lib(dependencyMap[4]).NotificationLabels.Muted);
       lib(true);
     });
   });

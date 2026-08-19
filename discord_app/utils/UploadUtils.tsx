@@ -1,7 +1,7 @@
 // === Module 4830: items ===
 
 // Module 4830 (items)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import cancel from "cancel" /* 4829 */;
 import getClipCreatedAt from "getClipCreatedAt" /* 4831 */;
 
@@ -105,7 +105,7 @@ const items = [
     type: "image/webm"
   }
 ];
-const result = set.fileFinishedImporting("utils/UploadUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/UploadUtils.tsx");
 
 export const MAX_TOTAL_ATTACHMENT_SIZE = 524288000;
 export const MAX_TOTAL_ATTACHMENT_SIZE_MB = 500;
@@ -119,59 +119,56 @@ export const getAttachmentPayload = function getAttachmentPayload(closure_0, clo
     str = tmp.toString();
   }
   if (str == null) {
-    str = closure_0.id;
+    str = _require.id;
   }
   const obj = { id: str };
-  if (null != closure_0.description) {
-    obj.description = closure_0.description;
+  if (null != _require.description) {
+    obj.description = _require.description;
   }
   let filename = name;
   if (name == null) {
-    filename = closure_0.filename;
+    filename = _require.filename;
   }
   obj.filename = filename;
-  obj.uploaded_filename = closure_0.uploadedFilename;
-  if (closure_0.spoiler) {
+  obj.uploaded_filename = _require.uploadedFilename;
+  if (_require.spoiler) {
     obj.is_spoiler = true;
   }
   if (tmp3) {
-    obj.duration_secs = closure_0.durationSecs;
+    obj.duration_secs = _require.durationSecs;
   }
   if (tmp4) {
-    obj.waveform = closure_0.waveform;
+    obj.waveform = _require.waveform;
   }
-  let tmp5 = "isThumbnail" in closure_0;
+  let tmp5 = "isThumbnail" in _require;
   if (tmp5) {
-    tmp5 = true === closure_0.isThumbnail;
+    tmp5 = true === _require.isThumbnail;
   }
   if (tmp5) {
-    obj.is_thumbnail = closure_0.isThumbnail;
+    obj.is_thumbnail = _require.isThumbnail;
   }
   if (tmp6) {
     obj.is_clip = true;
-    obj.title = closure_0.clip.name;
-    obj.application_id = closure_0.clip.applicationId;
-    obj.clip_created_at = getClipCreatedAt.getClipCreatedAt(closure_0.clip.createdAt);
-    const obj2 = getClipCreatedAt;
-    obj.clip_participant_ids = getClipCreatedAt.getClipParticipantIds(closure_0.clip.users);
-    obj.clip_remote_id = closure_0.clip.remoteClipId;
-    const obj3 = getClipCreatedAt;
-    obj.clip_events_timeline = getClipCreatedAt.getClipEventsTimeline(closure_0.clip);
-    const obj4 = getClipCreatedAt;
+    obj.title = _require.clip.name;
+    obj.application_id = _require.clip.applicationId;
+    obj.clip_created_at = getClipCreatedAt.getClipCreatedAt(_require.clip.createdAt);
+    obj.clip_participant_ids = getClipCreatedAt.getClipParticipantIds(_require.clip.users);
+    obj.clip_remote_id = _require.clip.remoteClipId;
+    obj.clip_events_timeline = getClipCreatedAt.getClipEventsTimeline(_require.clip);
   }
-  let tmp9 = "item" in closure_0 && null != closure_0.item;
+  let tmp9 = "item" in _require && null != _require.item;
   if (tmp9) {
-    tmp9 = closure_0.item.platform === cancel.UploadPlatform.WEB;
+    tmp9 = _require.item.platform === cancel.UploadPlatform.WEB;
   }
   if (tmp9) {
     str = "mimeType";
-    tmp9 = "mimeType" in closure_0;
+    tmp9 = "mimeType" in _require;
   }
   if (tmp9) {
-    tmp9 = null != closure_0.mimeType;
+    tmp9 = null != _require.mimeType;
   }
   if (tmp9) {
-    obj.original_content_type = closure_0.mimeType;
+    obj.original_content_type = _require.mimeType;
   }
   return obj;
 };
@@ -194,7 +191,7 @@ export const getFileData = function getFileData(arg0) {
           data = response.data;
         }
       }
-      return closure_0(data);
+      return callback(data);
     };
     xMLHttpRequest.send();
   });
@@ -208,8 +205,8 @@ export const getFileContentLength = function getFileContentLength(arg0) {
     xMLHttpRequest.open("HEAD", closure_0, true);
     xMLHttpRequest.onload = () => {
       if (xMLHttpRequest.status >= 200) {
-        if (obj.status < 300) {
-          const responseHeader = obj.getResponseHeader("Content-Length");
+        if (xMLHttpRequest.status < 300) {
+          const responseHeader = xMLHttpRequest.getResponseHeader("Content-Length");
           if (null != responseHeader) {
             if ("" !== responseHeader) {
               const _parseInt = parseInt;
@@ -221,7 +218,7 @@ export const getFileContentLength = function getFileContentLength(arg0) {
           onerror(error);
         }
       }
-      const error1 = new Error("HTTP request failed with status code " + obj.status);
+      const error1 = new Error("HTTP request failed with status code " + xMLHttpRequest.status);
       onerror(error1);
     };
     xMLHttpRequest.onerror = onerror;
@@ -233,11 +230,9 @@ export const getFileContentLength = function getFileContentLength(arg0) {
 export const getFile = function getFile(overrideType) {
   ({ uri, i, overrideFilename } = overrideType);
   let str = overrideType.overrideType;
-  let str3;
   const parts = uri.split("/");
-  str3 = str2;
   const parts1 = str2.split("?");
-  str3 = undefined;
+  let str3;
   if (parts1 != null) {
     if (parts1[0] != null) {
       str3 = str4.toLowerCase();
@@ -246,14 +241,14 @@ export const getFile = function getFile(overrideType) {
   if (str3 == null) {
     str3 = "";
   }
-  const found = items.find((reName) => {
-    reName = reName.reName;
+  const found = items.find((item, index) => {
+    const reName = item.reName;
     return reName.test(str3);
   });
   let found1 = found;
   if (tmp3) {
-    found1 = items.find((reName) => {
-      reName = reName.reName;
+    found1 = items.find((item, index) => {
+      const reName = item.reName;
       return reName.test(overrideFilename);
     });
   }

@@ -1,12 +1,12 @@
 // === Module 4379: makeStorefrontSKUCodedLink ===
 
 // Module 4379 (makeStorefrontSKUCodedLink)
-import closure_0 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
-const result = require("set").fileFinishedImporting("modules/application_storefront/storefrontMessageEmbedCodedLink.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_storefront/storefrontMessageEmbedCodedLink.tsx");
 
-export const makeStorefrontSKUCodedLink = function makeStorefrontSKUCodedLink(formatted, formatted2) {
-  return "" + formatted + ":" + formatted2;
+export const makeStorefrontSKUCodedLink = function makeStorefrontSKUCodedLink(match7, match72) {
+  return "" + match7 + ":" + match72;
 };
 export const parseStorefrontSkuCodedLink = function parseStorefrontSkuCodedLink(code) {
   const parts = code.split(":");

@@ -48,6 +48,6 @@ const merged19 = Object.assign(RPC_LOCAL_SCOPEDefault3);
 const merged20 = Object.assign(_modDef13876);
 const merged21 = Object.assign(_modDef13877);
 const merged22 = Object.assign(_modDef13878);
-const result = require("set").fileFinishedImporting("modules/rpc/server/commands/crossPlatformRPCCommands.tsx");
+const result = require("obj132").fileFinishedImporting("modules/rpc/server/commands/crossPlatformRPCCommands.tsx");
 
 export const crossPlatformCommands = {};

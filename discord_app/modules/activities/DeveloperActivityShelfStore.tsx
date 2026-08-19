@@ -1,7 +1,7 @@
 // === Module 7872: initialize ===
 
 // Module 7872 (initialize)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -17,7 +17,6 @@ class DeveloperActivityShelfStore extends PersistedStore {
 }
 const prototype = DeveloperActivityShelfStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  obj = arg0;
   obj = { lastUsedObject: {}, useActivityUrlOverride: false, activityUrlOverride: null, filter: "" };
   if (arg0 == null) {
     obj = {};
@@ -65,11 +64,10 @@ prototype["getFilter"] = function getFilter() {
 prototype["getDeveloperShelfItems"] = function getDeveloperShelfItems() {
   return this.getIsEnabled() ? closure_6 : [];
 };
-prototype["inDevModeForApplication"] = function inDevModeForApplication(closure_1) {
-  closure_0 = closure_1;
+prototype["inDevModeForApplication"] = function inDevModeForApplication(closure_0) {
   let isEnabled = this.getIsEnabled();
   if (isEnabled) {
-    isEnabled = null != closure_6.find((id) => id.id === closure_0);
+    isEnabled = null != closure_6.find((item, index) => item.id === closure_0);
   }
   return isEnabled;
 };
@@ -97,7 +95,7 @@ obj = {
   },
   DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: function handleMarkActivityUsed(applicationId) {
     applicationId = applicationId.applicationId;
-    if (null == closure_6.find((id) => id.id === applicationId)) {
+    if (null == closure_6.find((item, index) => item.id === applicationId)) {
       return false;
     } else {
       closure_3.lastUsedObject[applicationId] = applicationId.timestamp;
@@ -109,7 +107,7 @@ obj = {
   DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function handleEmbeddedActivitiesFetchDeveloperApplicationsSuccess(applications) {
     applications = applications.applications;
     const LOADED = obj.LOADED;
-    closure_6 = applications.filter((application) => callback(table[1]).hasApplicationFlag(application, constants.EMBEDDED));
+    closure_6 = applications.filter((item, index) => callback(table[1]).hasApplicationFlag(item, constants.EMBEDDED));
   },
   DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function handleEmbeddedActivitiesFetchDeveloperApplicationsFail(arg0) {
     const ERROR = obj.ERROR;
@@ -122,7 +120,7 @@ obj = {
   }
 };
 const developerActivityShelfStore = new DeveloperActivityShelfStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/activities/DeveloperActivityShelfStore.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/DeveloperActivityShelfStore.tsx");
 
 export default developerActivityShelfStore;
 export const DevShelfFetchState = obj;

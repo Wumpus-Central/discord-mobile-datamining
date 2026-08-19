@@ -11,8 +11,9 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HAPPENING_NOW_PANELS_CONTAINER_PADDING.HAPPENING_NOW_CARD_MARGIN_RIGHT;
 ({ HAPPENING_NOW_CARD_PADDING: c5, HAPPENING_NOW_CARD_HEIGHT: closure_6, HAPPENING_NOW_BADGE_SIZE } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
@@ -82,7 +83,7 @@ let closure_21 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
 });
 createCacheKey = { marginRight: HAPPENING_NOW_BADGE_SIZE + 4 };
 let closure_22 = createCacheKey.createStyles({ cardHeaderMargin: createCacheKey });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCard.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCard.tsx");
 
 export default function HappeningNowCard(IconComponent) {
   const tmp4 = useIsMobileVisualRefreshExperimentEnabledDefault("HappeningNowCard");
@@ -90,11 +91,9 @@ export default function HappeningNowCard(IconComponent) {
   if (panelVariant == null) {
     panelVariant = false;
   }
-  const tmp5Result = closure_21(width, panelVariant, useIsWindowLargeDefault(), tmp4);
+  const tmp5Result = callback3(width, panelVariant, useIsWindowLargeDefault(), tmp4);
   IconComponent = IconComponent.IconComponent;
-  const tmp = importDefault;
   const tmp3 = useIsWindowLargeDefault();
-  const tmp5 = closure_21;
   ({ accessibilityLabel, accessibilityHint } = IconComponent);
   let obj = { variant: "secondary", style: items, onPress: IconComponent.onPress, border: "faint", shadow: null, onLongPress: null, disabled: null, accessibilityLabel: null, accessibilityHint: null, children: null };
   items = [tmp5Result.card, IconComponent.style];
@@ -125,13 +124,13 @@ export default function HappeningNowCard(IconComponent) {
       str3 = "icon-voice-connected";
     }
     obj1[1] = str3;
-    obj[1] = closure_18(IconComponent, obj1);
-    obj[1] = closure_18(View, obj);
-    tmp10Result = tmp10(tmp11, obj);
+    obj[1] = callback(IconComponent, obj1);
+    obj[1] = callback(View, obj);
+    tmp10Result = callback(View, obj);
   }
   items1[1] = tmp10Result;
   obj[9] = items1;
-  return closure_19(PressableCard.Card, obj);
+  return callback2(PressableCard.Card, obj);
 };
 export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNameFont) {
   displayNameFont = displayNameFont.displayNameFont;
@@ -158,7 +157,7 @@ export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNam
   obj[4] = items;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return closure_18(Text.Text, obj);
+  return callback(Text.Text, obj);
 };
 export const HappeningNowCardSubtitle = function HappeningNowCardSubtitle(variant) {
   variant = variant.variant;
@@ -179,5 +178,5 @@ export const HappeningNowCardSubtitle = function HappeningNowCardSubtitle(varian
   obj[1] = str2;
   const merged1 = Object.assign(merged);
   obj.children = variant.children;
-  return closure_18(Text.Text, obj);
+  return callback(Text.Text, obj);
 };

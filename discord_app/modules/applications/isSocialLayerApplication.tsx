@@ -1,12 +1,12 @@
 // === Module 10724: isSocialLayerApplication ===
 
 // Module 10724 (isSocialLayerApplication)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import getApplicationFlags from "getApplicationFlags" /* 7873 */;
 
 const ApplicationFlags = ME.ApplicationFlags;
-const result = set.fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");
+const result = obj132.fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");
 
 export default function isSocialLayerApplication(application) {
   let hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED);
@@ -23,7 +23,7 @@ export const isSocialLayerSDKAuthorization = function isSocialLayerSDKAuthorizat
     const tmpResult = getApplicationFlags;
   }
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = scopes.some((arg0) => callback(table[2]).isSocialLayerUmbrellaScope(arg0));
+    hasApplicationFlagResult = scopes.some((item, index) => callback(table[2]).isSocialLayerUmbrellaScope(item));
   }
   return hasApplicationFlagResult;
 };

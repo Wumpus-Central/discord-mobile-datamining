@@ -6,14 +6,13 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import privDefault from "priv" /* 1405 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
 import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "removePendingListFetch" /* 5014 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "reinjectEphemerals" /* 4994 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import removePendingListFetch from "removePendingListFetch" /* 5014 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function processMessage(message) {
   let flag = false;
   if (obj.updateExistingMessageIfCached(message)) {
@@ -41,7 +40,6 @@ function processMessage(message) {
             processMessage(referenced_message);
             flag2 = true;
           }
-          const obj5 = createMinimalMessageRecord;
         } else {
           obj = { state: null };
           obj[0] = obj.DELETED;
@@ -68,11 +66,11 @@ function processMessage(message) {
   }
   return flag2;
 }
-function anyChanged(messages, arg1) {
+function anyChanged(data, fn) {
   let flag = false;
-  const iter = messages[Symbol.iterator]();
+  const iter = data[Symbol.iterator]();
   while (iter !== undefined) {
-    let tmp = false !== arg1(iter.next()) || flag;
+    let tmp = false !== fn(iter.next()) || flag;
     flag = tmp;
     continue;
   }
@@ -179,8 +177,8 @@ prototype2["has"] = function has(arg0, arg1) {
 };
 prototype2["get"] = function get(arg0, arg1) {
   const _channelCaches = this._channelCaches;
-  let value = _channelCaches.get(arg0);
-  value = undefined;
+  _channelCaches.get(arg0);
+  let value;
   if (value != null) {
     value = value.get(arg1);
   }
@@ -193,7 +191,7 @@ prototype2["set"] = function set(arg0, arg1, arg2) {
     if (typeof ChannelReferencedMessageCache !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    obj = Object.create(ChannelReferencedMessageCache.prototype);
+    Object.create(ChannelReferencedMessageCache.prototype);
     obj = { max: 100, dispose: null };
     obj[1] = function dispose(arg0, arg1) {
       return obj.handleCacheDisposed(arg0, arg1);
@@ -206,7 +204,6 @@ prototype2["set"] = function set(arg0, arg1, arg2) {
     const _channelCaches2 = this._channelCaches;
     const result = _channelCaches2.set(arg0, obj);
     value = obj;
-    const tmp16 = ChannelReferencedMessageCache;
   }
   const result1 = value.set(arg1, arg2);
 };
@@ -222,7 +219,6 @@ prototype2["updateExistingMessageIfCached"] = function updateExistingMessageIfCa
       obj[1] = createMinimalMessageRecord.createMessageRecord(channel_id);
       const result = value.set(channel_id.id, obj);
       flag = true;
-      const obj3 = createMinimalMessageRecord;
     }
     tmp = flag;
   }
@@ -232,15 +228,13 @@ prototype2["deleteChannelCache"] = function deleteChannelCache(id) {
   const _channelCaches = this._channelCaches;
   return _channelCaches.delete(id);
 };
-prototype2["retainWhere"] = function retainWhere(arg0) {
+prototype2["retainWhere"] = function retainWhere(fn) {
   const self = this;
   const items = [];
   while (tmp !== undefined) {
-    let tmp3 = callback;
     let first = callback(tmp2, 1)[0];
     let tmp5 = first;
-    if (!arg0(first)) {
-      let tmp6 = first;
+    if (!fn(first)) {
       let arr = items.push(tmp5);
     }
     continue;
@@ -320,7 +314,7 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
       if (messages == null) {
         messages = [];
       }
-      return closure_15(messages, (arg0) => callback(arg0));
+      return callback(messages, (arg0) => callback(arg0));
     });
   },
   LOAD_THREADS_SUCCESS: handleLoadThreadsSuccess,
@@ -414,7 +408,8 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
   CONNECTION_OPEN: resetState,
   LOGOUT: resetState
 });
-let result = set.fileFinishedImporting("modules/replies/ReferencedMessageStore.tsx");
+const map = new Map();
+let result = require("obj132").fileFinishedImporting("modules/replies/ReferencedMessageStore.tsx");
 
 export default referencedMessageStore;
 export const ReferencedMessageState = obj;

@@ -1,7 +1,7 @@
 // === Module 13572: toLocaleLowerCase ===
 
 // Module 13572 (toLocaleLowerCase)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import addLikelySubtags from "addLikelySubtags" /* 13573 */;
 import module_13669 from "module_13669" /* 13669 */;
 
@@ -12,7 +12,6 @@ String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   } else {
     const call = toLocaleLowerCase.call;
     typeof call === "unknown" ? toLocaleLowerCase() : call(self);
-    const tmp = toLocaleLowerCase;
   }
 };
-const result = set.fileFinishedImporting("polyfills.android.tsx");
+const result = obj132.fileFinishedImporting("polyfills.android.tsx");

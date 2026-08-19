@@ -1,17 +1,15 @@
 // === Module 16596: HolidayEmojiAnimationType ===
 
 // Module 16596 (HolidayEmojiAnimationType)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 16593 */;
 
-const result = set.fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
 
 export default {
   isEligible() {
     const isExperimentEligible = HolidayEmojiAnimationTypeDefault.getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = HolidayEmojiAnimationTypeDefault;
-    const tmp = importDefault;
     return timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs && timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs && isExperimentEligible;
   },
   useHolidaySoundpack() {
@@ -21,12 +19,12 @@ export default {
     let tmp6 = null;
     if (tmp5) {
       tmp6 = null;
-      if (null != tmp(16593).soundpack) {
+      if (null != HolidayEmojiAnimationTypeDefault.soundpack) {
         tmp6 = null;
-        if (null != tmp(16593).soundpackLabel) {
+        if (null != HolidayEmojiAnimationTypeDefault.soundpackLabel) {
           obj = { soundpack: null, soundpackLabel: null };
-          obj[0] = tmp(16593).soundpack;
-          obj[1] = tmp(16593).soundpackLabel;
+          obj[0] = HolidayEmojiAnimationTypeDefault.soundpack;
+          obj[1] = HolidayEmojiAnimationTypeDefault.soundpackLabel;
           tmp6 = obj;
         }
       }
@@ -36,15 +34,13 @@ export default {
   useIsEligible() {
     const isExperimentEligible = HolidayEmojiAnimationTypeDefault.useIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = HolidayEmojiAnimationTypeDefault;
-    const tmp = importDefault;
     return timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs && timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs && isExperimentEligible;
   },
   getAppSpinnerSources() {
     const timestamp = Date.now();
     let appSpinnerSources = null;
     if (tmp4) {
-      appSpinnerSources = tmp2(16593).appSpinnerSources;
+      appSpinnerSources = HolidayEmojiAnimationTypeDefault.appSpinnerSources;
     }
     return appSpinnerSources;
   },
@@ -52,25 +48,24 @@ export default {
     const timestamp = Date.now();
     let tmp5 = null;
     if (tmp4) {
-      const getLoadingTips = tmp2(16593).getLoadingTips;
+      const getLoadingTips = HolidayEmojiAnimationTypeDefault.getLoadingTips;
       let loadingTips;
       if (getLoadingTips != null) {
         loadingTips = getLoadingTips();
       }
       tmp5 = loadingTips;
-      const tmp2Result = tmp2(16593);
+      const tmp2Result = HolidayEmojiAnimationTypeDefault;
     }
     return tmp5;
   },
   getHolidaySoundpack() {
     const isExperimentEligible = HolidayEmojiAnimationTypeDefault.getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = HolidayEmojiAnimationTypeDefault;
     let soundpack = null;
     if (tmp5) {
       soundpack = null;
-      if (null != tmp(16593).soundpack) {
-        soundpack = tmp(16593).soundpack;
+      if (null != HolidayEmojiAnimationTypeDefault.soundpack) {
+        soundpack = HolidayEmojiAnimationTypeDefault.soundpack;
       }
     }
     return soundpack;

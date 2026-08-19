@@ -4,11 +4,10 @@
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
-import closure_3 from "_getSystemLocale" /* 1994 */;
-import closure_4 from "createFromServer" /* 13867 */;
-import set from "set" /* 2 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import createFromServer from "createFromServer" /* 13867 */;
 
-require = arg1;
+require = fn;
 function addRegularStoreListing(id) {
   let deleteResult = id;
   id = id.id;
@@ -29,6 +28,7 @@ function addRegularStoreListing(id) {
     dependencyMap[id] = fromServer;
     deleteResult = set.delete(deleteResult.sku.id);
   }
+  tmp2 = null != dependencyMap[id] && !dependencyMap[id].isSlimDirectoryVersion() && fromServer.isSlimDirectoryVersion();
 }
 function handleUserSettingsStoreUpdate() {
   if (locale === closure_3.locale) {
@@ -78,7 +78,7 @@ prototype["getUnpublishedForSKU"] = function getUnpublishedForSKU(skuId) {
     let items = [];
   } else {
     const _Array = Array;
-    const mapped = Array.from(tmp).map((arg0) => table[arg0]);
+    const mapped = Array.from(tmp).map((item, index) => table[item]);
     items = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     const arr = Array.from(tmp);
   }
@@ -131,10 +131,10 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
   },
   STORE_LISTINGS_FETCH_SUCCESS: function handleStoreListingsFetch(arg0) {
     while (tmp !== undefined) {
-      let tmp3 = addRegularStoreListing;
       let tmp4 = addRegularStoreListing(tmp2);
       continue;
     }
+    tmp = arg0.storeListings[Symbol.iterator]();
   },
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetch(arg0) {
     ({ storeListing, channelId } = arg0);
@@ -155,7 +155,6 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
             dependencyMap3[id2] = set;
           }
           dependencyMap3[id2].add(id);
-          const obj = dependencyMap3[id2];
         } else {
           closure_8[id2] = id;
         }
@@ -201,6 +200,6 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("stores/game_store/StoreListingStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/game_store/StoreListingStore.tsx");
 
 export default storeListingStore;

@@ -1,6 +1,7 @@
 // === Module 4262: BoostedGuildTiers ===
 
 // Module 4262 (BoostedGuildTiers)
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import DismissibleContent from "DismissibleContent" /* 1377 */;
 import GuildFeatures2 from "GuildFeatures" /* 1924 */;
@@ -13,19 +14,16 @@ import experiment2 from "experiment" /* 4302 */;
 import apexExperiment2 from "apexExperiment" /* 4303 */;
 import experiment3 from "experiment" /* 4304 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
 const BoostedGuildFeatures = GuildFeatures2.BoostedGuildFeatures;
 const BoostedGuildTiers = ME.BoostedGuildTiers;
 const GuildFeatures = ME.GuildFeatures;
 const items = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_1_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_2_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_3_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_TAG_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_ROLE_COLOR_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
-let set = new Set(items);
 const items1 = [, , , , , ];
 ({ GUILD_TAGS: arr2[0], ENHANCED_ROLE_COLORS: arr2[1], GUILD_TAGS_BADGE_PACK_PETS: arr2[2], GUILD_TAGS_BADGE_PACK_FLEX: arr2[3], GUILD_TAGS_BADGE_PACK_PLANT: arr2[4], GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES: arr2[5] } = GuildFeatures);
-let obj = { [TIER_1]: VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_1_SKU_ID, [TIER_2]: VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_2_SKU_ID, [TIER_3]: VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_3_SKU_ID, [BoostedGuildTiers.NONE]: undefined };
+const set = new Set(items);
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
-obj = { [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_1_SKU_ID]: BoostedGuildTiers.TIER_1, [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_2_SKU_ID]: BoostedGuildTiers.TIER_2, [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_3_SKU_ID]: BoostedGuildTiers.TIER_3 };
-obj = { [TIER_12]: DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK, [TIER_22]: DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK, [TIER_32]: DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK, [BoostedGuildTiers.NONE]: undefined };
+let obj = { [TIER_12]: DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK, [TIER_22]: DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK, [TIER_32]: DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK, [BoostedGuildTiers.NONE]: undefined };
 ({ TIER_1: TIER_12, TIER_2: TIER_22, TIER_3: TIER_32 } = BoostedGuildTiers);
 const items2 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_TAG_SKU_ID];
 const items3 = [items2, , , , , , ];
@@ -99,7 +97,8 @@ obj7[obj6.GUILD_THEME] = new Set(items16);
 const items17 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_TAG_SKU_ID];
 const set9 = new Set(items16);
 obj7[obj6.GUILD_TAG] = new Set(items17);
-const result = set.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsConstants.tsx");
+const set10 = new Set(items17);
+const result = obj132.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsConstants.tsx");
 
 export const GuildPowerupType = { PERK: "perk", LEVEL: "level" };
 export const GUILD_POWERUP_APPLICATION_ID = "1340102344645283891";
@@ -115,8 +114,7 @@ export const PERK_SKU_BADGES = { [str11.GAME_SERVER_POWERUP_SKU_ID]: "beta", [VA
 export const GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP = set2;
 export const GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE = set3;
 export const GUILD_FEATURE_TO_PERK = () => {
-  let obj = {};
-  obj = { perkIcon: getGuildTierFromGuild.PerkIcons.STREAM, description: null };
+  let obj = { perkIcon: getGuildTierFromGuild.PerkIcons.STREAM, description: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.y4ft4D);
   obj[GuildFeatures.VIDEO_QUALITY_1080_60FPS] = obj;

@@ -2,11 +2,11 @@
 
 // Module 10687 (useAdContentImpressionTrackerProps)
 import set from "set" /* 10688 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initializeState" /* 7453 */;
+import noop from "noop" /* 19 */;
+import initializeState from "initializeState" /* 7453 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");
 
 export const useAdContentImpressionTrackerProps = function useAdContentImpressionTrackerProps(questOrQuests) {
   questOrQuests = undefined;
@@ -17,18 +17,17 @@ export const useAdContentImpressionTrackerProps = function useAdContentImpressio
   if ("adContentId" in questOrQuests) {
     adContentId = questOrQuests.adContentId;
   }
-  let memo = adContentId;
   let items = [questOrQuests, adContentId];
-  memo = React.useMemo(() => {
+  const memo = React.useMemo(() => {
     if (null != memo) {
       const items = [tmp];
       let items1 = items;
     } else if (null != questOrQuests) {
       const _Array = Array;
-      if (Array.isArray(arr)) {
-        let mapped = arr.map((id) => id.id);
+      if (Array.isArray(questOrQuests)) {
+        let mapped = questOrQuests.map((item, index) => item.id);
       } else {
-        mapped = [arr.id];
+        mapped = [questOrQuests.id];
       }
     } else {
       items1 = [];

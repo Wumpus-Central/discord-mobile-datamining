@@ -2,17 +2,16 @@
 
 // Module 14682 (useDisplayNameStylesPendingName)
 import nameFromUserDefault from "nameFromUser" /* 4219 */;
-import closure_3 from "handleFormOpen" /* 8370 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import handleFormOpen from "handleFormOpen" /* 8370 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesPendingName.tsx");
 
 export const useDisplayNameStylesPendingName = function useDisplayNameStylesPendingName(stateFromStores, guildId) {
   const _require = stateFromStores;
   importDefault = guildId;
   const name = nameFromUserDefault.useName(stateFromStores);
-  const obj = nameFromUserDefault;
   const items = [closure_3, closure_4];
   const items1 = [guildId, stateFromStores];
   let str = _require(589).useStateFromStores(items, () => {

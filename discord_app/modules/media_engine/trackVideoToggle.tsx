@@ -1,20 +1,19 @@
 // === Module 13102: trackVideoToggle ===
 
 // Module 13102 (trackVideoToggle)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import calculateFps from "calculateFps" /* 13096 */;
 
 const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/media_engine/trackVideoToggle.tsx");
+const result = obj132.fileFinishedImporting("modules/media_engine/trackVideoToggle.tsx");
 
 export default function trackVideoToggle(toggled_user_id, video_toggle_reason) {
   const defaultConfig = calculateFps.VideoHealthManager.defaultConfig;
   const featureEnabled = defaultConfig.featureEnabled;
   ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
-  let obj = expandEventPropertiesDefault;
-  obj = { video_toggle_reason, toggled_user_id, rtc_connection_id: null, media_session_id: null, video_health_manager_window_length: null, video_health_manager_poor_fps_ratio: null, video_health_manager_fps_threshold: null, is_video_shown: null, video_health_manager_backoff_time_seconds: null };
+  const obj = { video_toggle_reason, toggled_user_id, rtc_connection_id: null, media_session_id: null, video_health_manager_window_length: null, video_health_manager_poor_fps_ratio: null, video_health_manager_fps_threshold: null, is_video_shown: null, video_health_manager_backoff_time_seconds: null };
   let tmp;
   if (callback != null) {
     tmp = callback();

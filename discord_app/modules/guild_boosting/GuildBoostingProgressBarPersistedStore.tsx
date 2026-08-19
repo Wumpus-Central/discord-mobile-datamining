@@ -33,6 +33,6 @@ const guildBoostingProgressBarPersistedStore = new GuildBoostingProgressBarPersi
     closure_0 = {};
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx");
 
 export default guildBoostingProgressBarPersistedStore;

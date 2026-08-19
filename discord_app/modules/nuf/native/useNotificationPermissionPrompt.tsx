@@ -1,14 +1,14 @@
 // === Module 15779: useNotificationPermissionPrompt ===
 
 // Module 15779 (useNotificationPermissionPrompt)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleUpdateUser" /* 1384 */;
-import closure_5 from "_handleConnectionOpen" /* 4495 */;
-import closure_6 from "handleRequiredAction" /* 1385 */;
-import closure_7 from "set" /* 11578 */;
+import noop from "noop" /* 19 */;
+import handleUpdateUser from "handleUpdateUser" /* 1384 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
+import handleRequiredAction from "handleRequiredAction" /* 1385 */;
+import set from "set" /* 11578 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/nuf/native/useNotificationPermissionPrompt.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/nuf/native/useNotificationPermissionPrompt.tsx");
 
 export default function useNotificationPermissionPrompt() {
   const items = [closure_5];
@@ -21,11 +21,11 @@ export default function useNotificationPermissionPrompt() {
     if (stateFromStores) {
       if (!stateFromStores1) {
         if (tmp5) {
-          const permission = tmp3(tmp4[7]).requestPermission();
-          tmp3(tmp4[7]).shouldRequestNotification = false;
-          const tmp3Result = tmp3(tmp4[7]);
+          const permission = stateFromStores1(dependencyMap[7]).requestPermission();
+          stateFromStores1(dependencyMap[7]).shouldRequestNotification = false;
+          const tmp3Result = stateFromStores1(dependencyMap[7]);
         }
-        tmp5 = stateFromStores1(closure_1_2[7]).shouldRequestNotification && !closure_1_7.promptSeen;
+        tmp5 = stateFromStores1(dependencyMap[7]).shouldRequestNotification && !closure_1_7.promptSeen;
       }
     }
   }, items2);

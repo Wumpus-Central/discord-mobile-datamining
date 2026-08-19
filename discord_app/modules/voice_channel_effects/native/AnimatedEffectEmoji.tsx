@@ -1,17 +1,17 @@
 // === Module 12465: Emoji ===
 
 // Module 12465 (Emoji)
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
 import preloadDefault from "preload" /* 5449 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function Emoji(url) {
   url = url.url;
   const tmp = callback();
@@ -32,10 +32,9 @@ function Emoji(url) {
   }
   return tmp5;
 }
-let closure_7 = 6 * setDefault.Millis.SECOND;
-let closure_8 = 2 * setDefault.Millis.SECOND;
-createCacheKey = { voiceChannelEffectEmojiContainer: null, voiceChannelEffectEmojiContainerTileNotch: null, voiceChannelEffectEmoji: null, textEmoji: null, imageEmoji: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, position: "absolute", right: 16, top: 16 };
+let closure_7 = 6 * obj132Default.Millis.SECOND;
+let closure_8 = 2 * obj132Default.Millis.SECOND;
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, position: "absolute", right: 16, top: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { right: "auto", left: 16 };
 createCacheKey[2] = { padding: 12 };
@@ -43,7 +42,7 @@ createCacheKey[3] = { fontSize: 32, lineHeight: 38, alignContent: "center", just
 createCacheKey[4] = { width: 32, height: 32 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { code: "function AnimatedEffectEmojiTsx1(){const{withSequence,withTiming,ANIMATION_ROTATION_DEG,withDelay,useReducedMotion,STANDARD_EASING}=this.__closure;const rotate=withSequence(withTiming(ANIMATION_ROTATION_DEG+\"deg\",{duration:0}),withDelay(100,withTiming('0deg',{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));const scale=withSequence(withTiming(0,{duration:0}),withDelay(100,withTiming(1,{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));return{transform:[{scale:scale},{rotate:rotate}]};}" };
-const result = require("set").fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
 
 export default function AnimatedEffectEmoji(onComplete) {
   ({ voiceChannelEffect, hasNotch } = onComplete);
@@ -140,7 +139,7 @@ export default function AnimatedEffectEmoji(onComplete) {
     obj2[1] = emoji.name;
     obj1[1] = <Emoji url={null} surrogates={null} />;
     obj[1] = <View style={null}>{null}</View>;
-    tmp9Result = tmp9(sentAt(tmp3[10]).View, obj);
+    tmp9Result = jsx(sentAt(tmp3[10]).View, { style: null, children: null });
   }
   return tmp9Result;
 };

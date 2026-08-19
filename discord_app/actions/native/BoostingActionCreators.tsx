@@ -1,16 +1,15 @@
 // === Module 6710: openApplyBoostModal ===
 
 // Module 6710 (openApplyBoostModal)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
 import _modDef5260 from "module_5260" /* 5260 */;
 
 const PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY = "PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY";
-const result = set.fileFinishedImporting("actions/native/BoostingActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/native/BoostingActionCreators.tsx");
 
 export const openApplyBoostModal = function openApplyBoostModal(guildId) {
-  let obj = _modDef5260;
-  obj = { guildId };
+  const obj = { guildId };
   obj.pushLazy(asyncRequireImpl(6711, dependencyMap.paths), obj, PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY);
 };
 export const openTransferModal = function openTransferModal(arg0) {

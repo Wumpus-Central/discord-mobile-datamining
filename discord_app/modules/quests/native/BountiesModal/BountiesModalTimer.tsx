@@ -2,15 +2,15 @@
 
 // Module 14395 (result)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import { Easing, Easing as Easing2, Easing as Easing3 } from "module_4115" /* 4115 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import "createCacheKey";
+import obj132 from "obj132" /* 500 */;
 import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let c7 = "#2ECC71";
 let result = (require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT - 4) / 2;
@@ -19,16 +19,15 @@ let closure_10 = Easing.bezier(0.15, 0.21, 0.58, 1);
 let closure_11 = Easing2.bezier(0.61, 0, 0.58, 1);
 let closure_12 = Easing3.bezier(0.42, 0, 0.58, 1);
 let closure_13 = importDefaultResult.createAnimatedComponent(require("inlineStyles").Circle);
-let obj = { progress: null, ring: null, trackPath: null, countdownText: null, checkmarkLayer: null, checkmarkBackground: null, checkmarkIcon: null };
-obj = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, width: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT };
+let obj = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, width: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT };
 obj[0] = obj;
 let items = [{ rotate: "-90deg" }];
 obj[1] = { position: "absolute", transform: items };
-createCacheKey = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+const createCacheKey = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 obj[2] = createCacheKey;
 let obj2 = { color: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, lineHeight: null };
 let num;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   num = 14;
 }
 obj2[1] = num;
@@ -40,7 +39,7 @@ let closure_14 = createCacheKey.createStyles(obj);
 let closure_15 = { code: "function BountiesModalTimerTsx1(){const{PROGRESS_CIRCUMFERENCE,animatedProgress}=this.__closure;return{strokeDashoffset:PROGRESS_CIRCUMFERENCE-PROGRESS_CIRCUMFERENCE*animatedProgress.get()};}" };
 let closure_16 = { code: "function BountiesModalTimerTsx2(){const{checkmarkBackgroundScale}=this.__closure;return{transform:[{scale:checkmarkBackgroundScale.get()}]};}" };
 let closure_17 = { code: "function BountiesModalTimerTsx3(){const{checkmarkScale}=this.__closure;return{transform:[{scale:checkmarkScale.get()}]};}" };
-let result1 = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalTimer.tsx");
+let result1 = obj132.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalTimer.tsx");
 
 export default function BountiesModalTimer(arg0) {
   ({ isCompleted, totalSeconds, remainingSeconds } = arg0);
@@ -87,9 +86,9 @@ export default function BountiesModalTimer(arg0) {
     let withDelay = sharedValue1.set;
     if (callback) {
       if (ref.current) {
-        let obj = callback(sharedValue[4]);
+        callback(sharedValue[4]);
         obj1 = callback(sharedValue[9]);
-        obj = { duration: 267, easing: null };
+        let obj = { duration: 267, easing: null };
         obj[1] = closure_1_10;
         const withTimingResult = obj1.withTiming(1.65, obj);
         obj = { duration: 233, easing: null };
@@ -130,8 +129,7 @@ export default function BountiesModalTimer(arg0) {
   const animatedProps = obj3.useAnimatedProps(U);
   let obj5 = _require(sharedValue[4]);
   const fn = function x() {
-    let obj = { transform: null };
-    obj = { scale: sharedValue1.get() };
+    const obj = { scale: sharedValue1.get() };
     const items = [obj];
     obj[0] = items;
     return obj;
@@ -177,10 +175,9 @@ export default function BountiesModalTimer(arg0) {
   items3[2] = callback(importDefault(sharedValue[4]).View, obj5);
   let obj7 = { style: items5, children: null };
   items5 = [tmp.checkmarkLayer, animatedStyle1];
-  const tmp15 = callback2;
   const tmp18 = importDefault(sharedValue[5]);
   obj7[1] = callback(_require(sharedValue[11]).CheckmarkSmallBoldIcon, { size: "custom", color: importDefault(sharedValue[7]).colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, style: tmp.checkmarkIcon });
   items3[3] = callback(importDefault(sharedValue[4]).View, obj7);
   obj[1] = items3;
-  return tmp15(sharedValue2, obj);
+  return callback2(sharedValue2, obj);
 };

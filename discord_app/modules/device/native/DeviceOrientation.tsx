@@ -1,16 +1,17 @@
 // === Module 8671: handleOrientationChange ===
 
 // Module 8671 (handleOrientationChange)
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import batchUpdates from "batchUpdates" /* 705 */;
-import closure_3 from "noop" /* 19 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import noop from "noop" /* 19 */;
 import { AppState } from "get ActivityIndicator" /* 17 */;
 import keys from "keys" /* 644 */;
 import importDefaultResult from "get ActivityIndicator" /* 8672 */;
 
-require = arg1;
+require = fn;
 function handleOrientationChange(initialOrientation) {
-  obj = set;
+  obj = obj132;
   if (obj.isIOS()) {
     handleDeviceOrientationChange(initialOrientation);
   }
@@ -23,13 +24,13 @@ function handleOrientationChange(initialOrientation) {
     }
     if ("LANDSCAPE" === closure_7) {
       if (!hasItem) {
-        let tmpResult = tmp(705);
+        let tmpResult = batchUpdates;
         tmpResult.batchUpdates(() => store.setState({ orientation: constants.LANDSCAPE }));
       }
     }
     let tmp9 = "PORTRAIT" === closure_7;
     if (!tmp9) {
-      tmpResult = tmp(4354);
+      tmpResult = DCDDeviceManager;
       let isIpadOSResult = tmpResult.isIpadOS();
       if (isIpadOSResult) {
         isIpadOSResult = "PORTRAITUPSIDEDOWN" === closure_7;
@@ -40,10 +41,9 @@ function handleOrientationChange(initialOrientation) {
       tmp9 = "LANDSCAPE" !== orientationLock;
     }
     if (tmp9) {
-      tmp(705).batchUpdates(() => store.setState({ orientation: constants.PORTRAIT }));
-      const tmpResult1 = tmp(705);
+      batchUpdates.batchUpdates(() => store.setState({ orientation: constants.PORTRAIT }));
+      const tmpResult1 = batchUpdates;
     }
-    const tmp7 = closure_7;
   }
 }
 function handleDeviceOrientationChange(LANDSCAPE) {
@@ -53,17 +53,15 @@ function handleDeviceOrientationChange(LANDSCAPE) {
       if ("LANDSCAPE" === orientationLock) {
         const orientationLock3 = obj.getState().orientationLock;
         if (!obj13.isAndroid()) {
-          let tmp14Result = tmp14(500);
+          let tmp14Result = obj132;
           if (tmp14Result.isIOS()) {
-            tmp14Result = tmp14(4354);
+            tmp14Result = DCDDeviceManager;
             tmp14Result.getSystemVersionMajor() >= 16;
           }
         }
-        obj13 = set;
+        obj13 = obj132;
         importDefaultResult.ignoreAutoRotate(false);
-        const obj9 = importDefaultResult;
         const result = importDefaultResult.unlockAllOrientations();
-        const obj10 = importDefaultResult;
         batchUpdates.batchUpdates(() => {
           state.setState({ orientationLock: null });
         });
@@ -74,17 +72,15 @@ function handleDeviceOrientationChange(LANDSCAPE) {
       if ("PORTRAIT" === orientationLock) {
         const orientationLock2 = obj.getState().orientationLock;
         if (!obj12.isAndroid()) {
-          let tmp12Result = tmp12(500);
+          let tmp12Result = obj132;
           if (tmp12Result.isIOS()) {
-            tmp12Result = tmp12(4354);
+            tmp12Result = DCDDeviceManager;
             tmp12Result.getSystemVersionMajor() >= 16;
           }
         }
-        obj12 = set;
+        obj12 = obj132;
         importDefaultResult.ignoreAutoRotate(false);
-        const obj4 = importDefaultResult;
         const result1 = importDefaultResult.unlockAllOrientations();
-        const obj5 = importDefaultResult;
         batchUpdates.batchUpdates(() => {
           state.setState({ orientationLock: null });
         });
@@ -95,9 +91,9 @@ function handleDeviceOrientationChange(LANDSCAPE) {
   }
 }
 function lockOrientationForiOS(PORTRAIT) {
-  let isAndroidResult = set.isAndroid();
+  let isAndroidResult = obj132.isAndroid();
   if (!isAndroidResult) {
-    let tmpResult = tmp(4354);
+    let tmpResult = DCDDeviceManager;
     let isIpadOSResult = tmpResult.isIpadOS();
     if (isIpadOSResult) {
       isIpadOSResult = null == PORTRAIT;
@@ -108,26 +104,24 @@ function lockOrientationForiOS(PORTRAIT) {
     importDefaultResult.ignoreAutoRotate(false);
     c8 = false;
     if ("LANDSCAPE" === PORTRAIT) {
-      let tmp6Result = tmp6(8672);
+      let tmp6Result = importDefaultResult;
       tmp6Result.lockToLandscapeLeft();
-      tmpResult = tmp(705);
+      tmpResult = batchUpdates;
       tmpResult.batchUpdates(() => {
         store.setState({ orientationLock: "LANDSCAPE" });
       });
     } else {
-      tmp6Result = tmp6(8672);
+      tmp6Result = importDefaultResult;
       tmp6Result.lockToPortrait();
-      tmp(705).batchUpdates(() => {
+      batchUpdates.batchUpdates(() => {
         store.setState({ orientationLock: "PORTRAIT" });
       });
-      const tmpResult1 = tmp(705);
+      const tmpResult1 = batchUpdates;
     }
-    const obj3 = importDefaultResult;
   }
 }
-let obj = { PORTRAIT: 0, [0]: "PORTRAIT", LANDSCAPE: 1, [1]: "LANDSCAPE" };
 let closure_5 = ["PORTRAIT", "PORTRAITUPSIDEDOWN"];
-obj = keys.create(() => {
+let obj = keys.create(() => {
   obj = { orientation: obj.PORTRAIT, orientationLock: null };
   return obj;
 });
@@ -178,9 +172,9 @@ let result = importDefaultResult.addOrientationDegreesChangeListener(function ha
 let result1 = importDefaultResult.addOrientationListener(handleOrientationChange);
 const importDefaultResult1 = importDefaultResult;
 const result2 = handleOrientationChange(importDefaultResult.getInitialOrientation());
-const listener = AppState.addEventListener("change", function applyLockStateOnAppActive(arg0) {
+const listener = AppState.addEventListener("change", function applyLockStateOnAppActive(event) {
   const orientationLock = obj.getState().orientationLock;
-  let tmp = "active" === arg0;
+  let tmp = "active" === event;
   if (tmp) {
     tmp = null != orientationLock;
   }
@@ -189,30 +183,28 @@ const listener = AppState.addEventListener("change", function applyLockStateOnAp
     obj.ignoreAutoRotate(true);
     c8 = false;
     if ("LANDSCAPE" === orientationLock) {
-      let tmp3Result = tmp3(8672);
+      let tmp3Result = importDefaultResult;
       tmp3Result.lockToLandscapeLeft();
       batchUpdates.batchUpdates(() => {
         store.setState({ orientationLock: "LANDSCAPE" });
       });
-      const obj5 = batchUpdates;
     } else {
-      tmp3Result = tmp3(8672);
+      tmp3Result = importDefaultResult;
       tmp3Result.lockToPortrait();
       batchUpdates.batchUpdates(() => {
         store.setState({ orientationLock: "PORTRAIT" });
       });
-      const obj3 = batchUpdates;
     }
   }
 });
 const importDefaultResult2 = importDefaultResult;
-const result3 = require("set").fileFinishedImporting("modules/device/native/DeviceOrientation.tsx");
+const result3 = require("obj132").fileFinishedImporting("modules/device/native/DeviceOrientation.tsx");
 
 export const OrientationType = obj;
 export const useStore = obj;
 export { handleOrientationChange };
 export const unlockOrientation = function unlockOrientation(unlockAfterRotatingToPreviousLock) {
-  obj = set;
+  obj = obj132;
   if (obj.isAndroid()) {
     if (unlockAfterRotatingToPreviousLock.unlockAfterRotatingToPreviousLock) {
       if (null != obj.getState().orientationLock) {
@@ -220,18 +212,17 @@ export const unlockOrientation = function unlockOrientation(unlockAfterRotatingT
       }
     }
   } else {
-    let tmpResult = tmp(500);
+    let tmpResult = obj132;
     if (tmpResult.isIOS()) {
-      tmpResult = tmp(4354);
+      tmpResult = DCDDeviceManager;
     }
   }
   importDefaultResult.ignoreAutoRotate(false);
-  const obj4 = importDefaultResult;
   const result = importDefaultResult.unlockAllOrientations();
-  const obj5 = importDefaultResult;
   batchUpdates.batchUpdates(() => {
     state.setState({ orientationLock: null });
   });
+  const tmpResult1 = batchUpdates;
 };
 export const lockOrientation = function lockOrientation(PORTRAIT, flag) {
   if (flag == null) {
@@ -240,19 +231,17 @@ export const lockOrientation = function lockOrientation(PORTRAIT, flag) {
   importDefaultResult.ignoreAutoRotate(flag);
   c8 = false;
   if ("LANDSCAPE" === PORTRAIT) {
-    let tmpResult = tmp(8672);
+    let tmpResult = importDefaultResult;
     tmpResult.lockToLandscapeLeft();
     batchUpdates.batchUpdates(() => {
       store.setState({ orientationLock: "LANDSCAPE" });
     });
-    const obj5 = batchUpdates;
   } else {
-    tmpResult = tmp(8672);
+    tmpResult = importDefaultResult;
     tmpResult.lockToPortrait();
     batchUpdates.batchUpdates(() => {
       store.setState({ orientationLock: "PORTRAIT" });
     });
-    const obj3 = batchUpdates;
   }
 };
 export { lockOrientationForiOS };
@@ -268,28 +257,27 @@ export const useOrientation = function useOrientation() {
 export const useOrientationListener = function useOrientationListener(callback2) {
   closure_0 = callback2;
   const items = [callback2];
-  const effect = React.useEffect(() => closure_1_6.subscribe(closure_0), items);
+  const effect = React.useEffect(() => obj.subscribe(closure_0), items);
 };
 export const restoreDefaultOrientation = function restoreDefaultOrientation() {
-  obj = set;
+  obj = obj132;
   if (obj.isIOS()) {
-    let tmpResult = tmp(4354);
+    let tmpResult = DCDDeviceManager;
   }
   const orientationLock = obj.getState().orientationLock;
-  tmpResult = tmp(500);
+  tmpResult = obj132;
   if (!tmpResult.isAndroid()) {
     if (tmpResult1.isIOS()) {
-      tmp(4354).getSystemVersionMajor() >= 16;
-      const tmpResult2 = tmp(4354);
+      DCDDeviceManager.getSystemVersionMajor() >= 16;
+      const tmpResult2 = DCDDeviceManager;
     }
-    tmpResult1 = tmp(500);
+    tmpResult1 = obj132;
   }
   importDefaultResult.ignoreAutoRotate(false);
-  const obj6 = importDefaultResult;
   const result = importDefaultResult.unlockAllOrientations();
-  const obj7 = importDefaultResult;
   batchUpdates.batchUpdates(() => {
     state.setState({ orientationLock: null });
   });
   lockOrientationForiOS();
+  const tmpResult3 = batchUpdates;
 };

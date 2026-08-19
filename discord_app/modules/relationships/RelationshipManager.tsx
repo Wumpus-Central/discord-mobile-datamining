@@ -1,7 +1,7 @@
 // === Module 16691: handleRelationshipAdd ===
 
 // Module 16691 (handleRelationshipAdd)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1363 */;
@@ -17,8 +17,8 @@ function handleRelationshipAdd(relationship) {
     obj[0] = relationship.user.username;
     AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale.t.zH0kC7, obj));
     const result = showPendingNotificationAll.showPendingNotification(relationship.user);
-    const obj2 = showPendingNotificationAll;
   }
+  tmp = relationship.type !== RelationshipTypes.PENDING_INCOMING || relationship.userIgnored;
 }
 function handleFriendRequestAccepted(user) {
   user = user.user;
@@ -37,6 +37,6 @@ let prototype = function RelationshipManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = set.fileFinishedImporting("modules/relationships/RelationshipManager.tsx");
+let result = obj132.fileFinishedImporting("modules/relationships/RelationshipManager.tsx");
 
 export default prototype;

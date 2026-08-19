@@ -1,14 +1,14 @@
 // === Module 13488: generateBoxShadowStyle ===
 
 // Module 13488 (generateBoxShadowStyle)
-import set from "set" /* 2 */;
-import set2 from "set" /* 500 */;
+import obj132 from "obj132" /* 2 */;
+import obj1322 from "obj132" /* 500 */;
 
-const result = set.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
+const result = obj132.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 
-export const generateBoxShadowStyle = (arg0) => {
-  ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = arg0);
-  let obj = set2;
+export const generateBoxShadowStyle = (EIGHT_DP_ELEVATION_SHADOW_PARAMS) => {
+  ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+  let obj = obj1322;
   if (obj.isAndroid()) {
     obj = { elevation: null, shadowColor: null };
     obj[0] = elevation;

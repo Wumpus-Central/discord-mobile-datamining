@@ -5,12 +5,12 @@ import initialize from "initialize" /* 589 */;
 import navigateToDevTools from "navigateToDevTools" /* 13946 */;
 import DevToolsContentSortButtons from "DevToolsContentSortButtons" /* 13947 */;
 import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
-import closure_2 from "getCurrentBuildOverride" /* 10638 */;
+import getCurrentBuildOverride from "getCurrentBuildOverride" /* 10638 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 10669 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     return "Build Override Active";
   },
@@ -40,9 +40,7 @@ createToggle = {
   },
   usePredicate: function useHasBuildOverrideActive() {
     const staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
-    const obj = useStaffOrDeveloperSettingPredicate;
     const items = [closure_2];
-    const obj2 = initialize;
     return null != initialize.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
@@ -61,6 +59,6 @@ createToggle = {
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/BuildOverrideActiveSetting.tsx");
 
 export default createToggle;

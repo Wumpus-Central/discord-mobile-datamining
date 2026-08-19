@@ -1,11 +1,11 @@
 // === Module 12502: useCanShowTooltip ===
 
 // Module 12502 (useCanShowTooltip)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "set" /* 12503 */;
+import noop from "noop" /* 19 */;
+import set from "set" /* 12503 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/tooltip/useCanShowTooltip.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/tooltip/useCanShowTooltip.tsx");
 
 export const useCanShowTooltip = function useCanShowTooltip(SCREENSHARE_SWIPE_UP_CONTROLS, arg1) {
   const _require = SCREENSHARE_SWIPE_UP_CONTROLS;

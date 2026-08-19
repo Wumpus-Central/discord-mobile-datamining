@@ -1,13 +1,13 @@
 // === Module 9528: useGuildProfileGames ===
 
 // Module 9528 (useGuildProfileGames)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "getOfficialApplicationId" /* 4506 */;
-import closure_4 from "handleLoadMessages" /* 4505 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import noop from "noop" /* 19 */;
+import getOfficialApplicationId from "getOfficialApplicationId" /* 4506 */;
+import handleLoadMessages from "handleLoadMessages" /* 4505 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileGames.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileGames.tsx");
 
 export default function useGuildProfileGames(games) {
   let stateFromStoresArray;
@@ -22,18 +22,13 @@ export default function useGuildProfileGames(games) {
     }
     tmp5(items1);
     const items2 = [games];
-    stateFromStoresArray = memo.useMemo(() => {
+    memo.useMemo(() => {
       const map = new Map();
       if (null == games) {
         return map;
       } else {
         for (const item10012 of tmp) {
-          let tmp4 = closure_1_3;
-          let tmp5 = new.target;
-          let tmp6 = new.target;
-          let tmp7 = item10012;
           let tmp8 = new closure_1_3(item10012);
-          let tmp9 = tmp8;
           let result = map.set(item10012.id, tmp8);
           continue;
         }
@@ -41,12 +36,12 @@ export default function useGuildProfileGames(games) {
       }
     }, items2);
     const items3 = [closure_4];
-    stateFromStoresArray = games(stateFromStoresArray[4]).useStateFromStoresArray(items3, () => {
+    stateFromStoresArray = tmp(tmp2[4]).useStateFromStoresArray(items3, () => {
       const gameApplicationIds = games.gameApplicationIds;
-      const mapped = gameApplicationIds.map((closure_0) => {
-        let game = closure_1_4.getGame(closure_0);
+      const mapped = gameApplicationIds.map((item, index) => {
+        let game = closure_1_4.getGame(item);
         if (game == null) {
-          game = closure_1.get(closure_0);
+          game = closure_1.get(item);
         }
         return game;
       });
@@ -93,10 +88,11 @@ export default function useGuildProfileGames(games) {
     return obj;
   }
   items1 = games.gameApplicationIds;
+  tmp = games;
+  tmp2 = stateFromStoresArray;
 };
 export const useAllGuildProfileGames = function useAllGuildProfileGames(profile) {
-  let games = profile;
-  games = profile.games;
+  const games = profile.games;
   const items = [closure_5];
   const stateFromStores = games(589).useStateFromStores(items, () => authenticated.isAuthenticated());
   games(5378);
@@ -112,12 +108,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
         return map;
       } else {
         for (const item10012 of tmp) {
-          let tmp4 = closure_1_3;
-          let tmp5 = new.target;
-          let tmp6 = new.target;
-          let tmp7 = item10012;
           let tmp8 = new closure_1_3(item10012);
-          let tmp9 = tmp8;
           let result = map.set(item10012.id, tmp8);
           continue;
         }
@@ -125,12 +116,12 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
       }
     }, items2);
     const items3 = [closure_4];
-    return games(589).useStateFromStoresArray(items3, () => {
+    return tmp(589).useStateFromStoresArray(items3, () => {
       const gameApplicationIds = games.gameApplicationIds;
-      const mapped = gameApplicationIds.map((closure_0) => {
-        let game = closure_1_4.getGame(closure_0);
+      const mapped = gameApplicationIds.map((item, index) => {
+        let game = closure_1_4.getGame(item);
         if (game == null) {
-          game = closure_1.get(closure_0);
+          game = closure_1.get(item);
         }
         return game;
       });
@@ -138,4 +129,6 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
     });
   }
   items1 = profile.gameApplicationIds;
+  const obj = games(589);
+  tmp = games;
 };

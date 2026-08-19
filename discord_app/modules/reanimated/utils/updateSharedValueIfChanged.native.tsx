@@ -1,10 +1,9 @@
 // === Module 10561: u ===
 
 // Module 10561 (u)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _mod4115 from "module_4115" /* 4115 */;
 
-let fn2 = require;
 const fn = function u(get) {
   if (globalThis._WORKLET) {
     const value = get.get();
@@ -12,7 +11,6 @@ const fn = function u(get) {
     const merged = Object.assign(value);
     const merged1 = Object.assign(arg1);
     for (const key10024 in obj) {
-      let tmp14 = key10024;
       if (value[key10024] === obj[key10024]) {
         continue;
       } else {
@@ -34,15 +32,13 @@ obj = { runOnUI: _mod4115.runOnUI };
 fn.__closure = obj;
 fn.__workletHash = 13662114226774;
 fn.__initData = { code: "function updateSharedValueIfChanged_updateSharedValueIfChangedNativeTsx1(sharedValue,value){const updateSharedValueIfChanged_updateSharedValueIfChangedNativeTsx1=this._recur;const{runOnUI}=this.__closure;if(!_WORKLET){runOnUI(updateSharedValueIfChanged_updateSharedValueIfChangedNativeTsx1)(sharedValue,value);}else{const _sharedValue=sharedValue.get();const newValue={..._sharedValue,...value};for(const key in newValue){if(_sharedValue[key]!==newValue[key]){sharedValue.set(newValue);break;}}}}" };
-fn2 = undefined;
-fn2 = function u(get) {
+const fn2 = function u(get) {
   if (globalThis._WORKLET) {
     const value = get.get();
     if (value.length !== arg1.length) {
       const result = get.set(arg1);
     }
     for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp6 = num;
       if (value[num] !== arg1[num]) {
         let result1 = get.set(arg1);
       }
@@ -59,8 +55,7 @@ fn2.__initData = { code: "function updateSharedValueIfChangedNativeTsx4(sharedVa
 fn2.__closure = { runOnUI: _mod4115.runOnUI };
 fn2.__workletHash = 13887777879519;
 fn2.__initData = { code: "function updateSharedValueArrayIfChanged_updateSharedValueIfChangedNativeTsx3(sharedValue,value){const updateSharedValueArrayIfChanged_updateSharedValueIfChangedNativeTsx3=this._recur;const{runOnUI}=this.__closure;if(!_WORKLET){runOnUI(updateSharedValueArrayIfChanged_updateSharedValueIfChangedNativeTsx3)(sharedValue,value);}else{const _sharedValue=sharedValue.get();if(_sharedValue.length!==value.length){sharedValue.set(value);}for(let i=0;i<value.length;i++){if(_sharedValue[i]!==value[i]){sharedValue.set(value);}}}}" };
-const obj1 = { runOnUI: _mod4115.runOnUI };
-let result = set.fileFinishedImporting("modules/reanimated/utils/updateSharedValueIfChanged.native.tsx");
+let result = obj132.fileFinishedImporting("modules/reanimated/utils/updateSharedValueIfChanged.native.tsx");
 
 export default fn;
 export const updateSharedValueArrayIfChanged = fn2;

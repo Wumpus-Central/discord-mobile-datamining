@@ -2,10 +2,10 @@
 
 // Module 5396 (getAsync)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import obj132 from "obj132" /* 2 */;
 
-let set = importDefault;
+let obj132 = importDefault;
 let closure_3 = new timestampDefault("GuildEmojis");
 class GuildEmojis {
   constructor() {
@@ -38,12 +38,10 @@ const prototype = GuildEmojis.prototype;
 prototype["getAsync"] = function getAsync(arg0) {
   closure_0 = arg0;
   return callback(function*() {
-    let length = tmp5;
-    closure_0 = tmp2;
     const _performance2 = performance;
     closure_0 = performance.now();
     const obj6 = closure_1_0(closure_1_1[2]);
-    length = yield closure_1_0(closure_1_1[2]).emojis(closure_1_0).getMapEntries();
+    const length = yield closure_1_0(closure_1_1[2]).emojis(closure_1_0).getMapEntries();
     const _performance = performance;
     const _HermesInternal = HermesInternal;
     logger.log("asynchronously loaded in " + closure_2 - closure_0 + "ms (guilds: " + length.length + ")");
@@ -53,8 +51,8 @@ prototype["getAsync"] = function getAsync(arg0) {
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
   const items = [...unavailableGuilds.unavailableGuilds];
-  const obj = set(1955);
-  set(1955).emojisTransaction(database).deleteAllExcept(items);
+  const obj = obj132(1955);
+  obj132(1955).emojisTransaction(database).deleteAllExcept(items);
   for (const item10027 of tmp2) {
     let handleOneGuildCreateResult = self.handleOneGuildCreate(item10027, arg1);
     continue;
@@ -77,20 +75,20 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(promisesForBac
   closure_0 = arg1;
   const prop = promisesForBackgroundSyncToWaitOn.promisesForBackgroundSyncToWaitOn;
   const emojis = promisesForBackgroundSyncToWaitOn.emojis;
-  prop.push(Promise.all(emojis.map((dataMode) => {
-    if ("unavailable" === dataMode.dataMode) {
+  prop.push(Promise.all(emojis.map((item, index) => {
+    if ("unavailable" === item.dataMode) {
       return Promise.resolve();
-    } else if ("full" === dataMode.dataMode) {
+    } else if ("full" === item.dataMode) {
       const _HermesInternal2 = HermesInternal;
-      closure_1_3.verbose("Replacing " + dataMode.entities.length + " emojis for " + dataMode.guildId);
-      const replaced = self.replace(dataMode.guildId, dataMode.entities, closure_0);
+      closure_1_3.verbose("Replacing " + item.entities.length + " emojis for " + item.guildId);
+      const replaced = self.replace(item.guildId, item.entities, closure_0);
     } else {
       if (tmp) {
         const _HermesInternal = HermesInternal;
-        closure_1_3.verbose("Updating " + dataMode.updatedEntities.length + " and deleting " + dataMode.deletedEntityIds.length + " emojis for " + dataMode.guildId);
-        self.update(dataMode.guildId, dataMode.updatedEntities, dataMode.deletedEntityIds, closure_0);
+        closure_1_3.verbose("Updating " + item.updatedEntities.length + " and deleting " + item.deletedEntityIds.length + " emojis for " + item.guildId);
+        self.update(item.guildId, item.updatedEntities, item.deletedEntityIds, closure_0);
       }
-      tmp = dataMode.updatedEntities.length > 0 || dataMode.deletedEntityIds.length > 0;
+      tmp = item.updatedEntities.length > 0 || item.deletedEntityIds.length > 0;
     }
   })));
 };
@@ -109,24 +107,24 @@ prototype["resetInMemoryState"] = function resetInMemoryState() {
 
 };
 prototype["replace"] = function replace(arg0, arg1, database) {
-  const obj = set(1955);
-  const replaced = set(1955).emojisTransaction(database).replaceAll(arg0, arg1);
+  const obj = obj132(1955);
+  const replaced = obj132(1955).emojisTransaction(database).replaceAll(arg0, arg1);
 };
 prototype["delete"] = function delete(arg0, database) {
-  const obj = set(1955);
-  set(1955).emojisTransaction(database).delete(arg0);
+  const obj = obj132(1955);
+  obj132(1955).emojisTransaction(database).delete(arg0);
 };
 prototype["update"] = function update(arg0, arg1, arg2, database) {
-  const emojisTransactionResult = set(1955).emojisTransaction(database);
+  const emojisTransactionResult = obj132(1955).emojisTransaction(database);
   emojisTransactionResult.putAll(arg0, arg1);
-  const obj = set(1955);
+  const obj = obj132(1955);
   while (tmp2 !== undefined) {
     let deleteResult = emojisTransactionResult.delete(arg0, tmp3);
     continue;
   }
 };
-set = Object.create(GuildEmojis.prototype);
-set.actions = {
+obj132 = Object.create(GuildEmojis.prototype);
+obj132.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -146,6 +144,6 @@ set.actions = {
     return obj.handleGuildUpdate(arg0, arg1);
   }
 };
-const result = set.fileFinishedImporting("modules/app_database/modules/GuildEmojis.tsx");
+const result = obj132.fileFinishedImporting("modules/app_database/modules/GuildEmojis.tsx");
 
-export default set;
+export default obj132;

@@ -8,20 +8,20 @@ import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9463 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { BotTagTypes } from "ApplicationTypes" /* 4482 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function getBotLabel(BOT) {
   if (BOT === undefined) {
     BOT = BotTagTypes.BOT;
   }
   if (BotTagTypes.SYSTEM_DM !== BOT) {
-    if (tmp2.OFFICIAL !== BOT) {
-      if (tmp2.SERVER === BOT) {
+    if (BotTagTypes.OFFICIAL !== BOT) {
+      if (BotTagTypes.SERVER === BOT) {
         const intl2 = getSystemLocale.intl;
         let stringResult = intl2.string(getSystemLocale.t.PuJGuM);
       } else {
-        const BOT2 = tmp2.BOT;
+        const BOT2 = BotTagTypes.BOT;
         const intl = getSystemLocale.intl;
         stringResult = intl.string(getSystemLocale.t["9RNkeF"]);
       }
@@ -114,21 +114,16 @@ class BotTag {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { tag: null, verifiedTagLeftPadding: null, tagNormal: null, tagInverted: null, tagTextNormal: null, tagTextInverted: null };
-createCacheKey = { paddingLeft: 4, paddingRight: 4, borderRadius: ThemesDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 };
+const createCacheKey = { paddingLeft: 4, paddingRight: 4, borderRadius: ThemesDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingLeft: 1 };
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-const obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[3] = { backgroundColor: ThemesDefault.colors.WHITE };
-const obj2 = { backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[4] = { color: ThemesDefault.colors.WHITE };
-const obj3 = { color: ThemesDefault.colors.WHITE };
 createCacheKey[5] = { color: ThemesDefault.colors.BACKGROUND_BRAND };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 BotTag.Types = BotTagTypes;
-const obj4 = { color: ThemesDefault.colors.BACKGROUND_BRAND };
-const result = require("set").fileFinishedImporting("modules/applications/native/BotTag.tsx");
+const result = require("obj132").fileFinishedImporting("modules/applications/native/BotTag.tsx");
 
 export default BotTag;
 export { getBotLabel };

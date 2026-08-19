@@ -1,10 +1,10 @@
 // === Module 6709: isVersionEqual ===
 
 // Module 6709 (isVersionEqual)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 
-const result = set.fileFinishedImporting("utils/SecondaryIndexMapUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/SecondaryIndexMapUtils.tsx");
 
 export const isVersionEqual = function isVersionEqual(arg0, arg1) {
   [tmp, tmp2] = arg0;

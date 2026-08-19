@@ -7,7 +7,7 @@ import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 const memoResult = importAllResult.memo(function SettingLayout(node) {
   node = node.node;
   const type = node.type;
@@ -21,6 +21,6 @@ const memoResult = importAllResult.memo(function SettingLayout(node) {
     return jsx(SettingSegmentedControlDefault, { node: null });
   }
 });
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
+const result = require("obj132").fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
 
 export default memoResult;

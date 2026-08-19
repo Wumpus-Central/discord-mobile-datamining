@@ -5,17 +5,18 @@ import coerceMainRoute from "coerceMainRoute" /* 4229 */;
 import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 8675 */;
 import useRevealProviderValue from "useRevealProviderValue" /* 8678 */;
 import CameraPreviewDefault from "CameraPreview" /* 8681 */;
+import _initializeDefault from "_initialize" /* 12483 */;
 import CallWithVoiceChatDefault from "CallWithVoiceChat" /* 12484 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
-import closure_5 from "getParticipants" /* 4773 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import getParticipants from "getParticipants" /* 4773 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
 import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
 import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8677 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 class ChannelCallCameraPreview {
   constructor(arg0) {
     channel = global.channel;
@@ -56,13 +57,12 @@ let c4 = importAllResult;
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = PIP_GESTURE_ACTIVE_OFFSET);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_18 = importAllResult.memo((arg0) => {
-  let first;
-  first = callback(importAllResult.useState(channel.getChannel(arg0.channelId)), 1)[0];
+  const first = callback(importAllResult.useState(channel.getChannel(arg0.channelId)), 1)[0];
   callback2(first);
   const items = [first];
   const effect = importAllResult.useEffect(() => {
     if (null != first) {
-      closure_1_1(closure_1_2[13]).initialize(tmp);
+      _initializeDefault.initialize(tmp);
       return () => {
         callback2(12483).terminate();
         const obj = callback2(12483);
@@ -71,6 +71,7 @@ let closure_18 = importAllResult.memo((arg0) => {
         if (!obj3.isModalOpen(closure_31)) {
           callback3();
         }
+        obj3 = callback(4229);
       };
     }
   }, items);
@@ -95,36 +96,28 @@ let closure_28 = { code: "function ChannelCallModalTsx10(){const{immediate,trans
 let closure_29 = { code: "function ChannelCallModalTsx11(){const{translateX,withPanGestureTiming}=this.__closure;translateX.set(withPanGestureTiming(0));}" };
 let closure_30 = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;
-  let width = channelId;
   const guildId = channelId.guildId;
   let ref;
-  let ref1;
   let ref2;
-  let ref3;
   let sharedValue;
-  let sharedValue1;
-  let voiceChatDrawerState;
   let derivedValue;
-  width = undefined;
-  let sharedValue2;
-  c12 = undefined;
+  let width;
   c13 = undefined;
-  let obj;
   let callback5;
-  obj = width(ref[19]);
+  let obj = width(ref[19]);
   let items = [sharedValue];
   let items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => sharedValue.getChannel(width), items1);
   let obj2 = ref2;
   ref = ref2.useRef(undefined);
-  ref1 = ref2.useRef(undefined);
+  const ref1 = ref2.useRef(undefined);
   ref2 = ref2.useRef(undefined);
-  ref3 = ref2.useRef(undefined);
+  const ref3 = ref2.useRef(undefined);
   let obj3 = width(ref[16]);
   sharedValue = obj3.useSharedValue(0);
   let obj4 = width(ref[16]);
-  sharedValue1 = obj4.useSharedValue(0);
-  voiceChatDrawerState = derivedValue().voiceChatDrawerState;
+  const sharedValue1 = obj4.useSharedValue(0);
+  const voiceChatDrawerState = derivedValue().voiceChatDrawerState;
   let obj5 = width(ref[16]);
   let fn = function c() {
     return voiceChatDrawerState;
@@ -137,7 +130,7 @@ let closure_30 = importAllResult.memo((channelId) => {
   width = size.width;
   const height = size.height;
   let obj6 = width(ref[16]);
-  sharedValue2 = obj6.useSharedValue(false);
+  const sharedValue2 = obj6.useSharedValue(false);
   let result = 0.8 * height;
   c12 = result;
   const tmp13 = guildId(ref[21])(channelId);
@@ -164,7 +157,7 @@ let closure_30 = importAllResult.memo((channelId) => {
       chatOpen = ref3.getChatOpen(channelId);
     }
     if (chatOpen) {
-      obj = width(ref[16]);
+      width(ref[16]);
       const fn = function t() {
         const result = closure_6.set(-closure_10);
       };
@@ -185,25 +178,25 @@ let closure_30 = importAllResult.memo((channelId) => {
     let value = sharedValue2.get();
     let tmp3 = sharedValue.get() === -width;
     if (!tmp3) {
-      tmp3 = 0 === obj.get();
+      tmp3 = 0 === sharedValue.get();
     }
     value = derivedValue.get();
     const value1 = derivedValue.get();
     if (!value) {
       if (tmp3) {
-        return obj.get() === -tmp2 ? tmp5.OPEN : tmp5.CLOSED;
+        return sharedValue.get() === -width ? _undefined.OPEN : _undefined.CLOSED;
       }
     }
     if (value !== _undefined.OPEN) {
       let OPENING = null;
       if (value1 === _undefined.CLOSED) {
         OPENING = null;
-        if (obj.get() < 0) {
-          OPENING = tmp5.OPENING;
+        if (sharedValue.get() < 0) {
+          OPENING = _undefined.OPENING;
         }
       }
     }
-    OPENING = tmp5.CLOSING;
+    OPENING = _undefined.CLOSING;
   }
   obj = { isSwipeToChatInProgress: sharedValue2, translateX: sharedValue, width, voiceChatDrawerState: derivedValue, VoiceChatDrawerState: c12 };
   ae.__closure = obj;
@@ -220,11 +213,10 @@ let closure_30 = importAllResult.memo((channelId) => {
     if (tmp2) {
       width(ref[16]).runOnJS(width)(width, arg0);
       if (arg0 === _undefined.OPEN) {
-        tmp4(tmp5[16]).runOnJS(tmp4(tmp5[22]).transitionToVoiceRoute)(guildId, tmp7);
-        const tmp4Result = tmp4(tmp5[16]);
+        width(ref[16]).runOnJS(width(ref[22]).transitionToVoiceRoute)(guildId, width);
+        const tmp4Result = width(ref[16]);
       }
       obj = width(ref[16]);
-      tmp7 = width;
     }
   }
   const tmp10Result = guildId(ref[23]);
@@ -295,7 +287,6 @@ let closure_30 = importAllResult.memo((channelId) => {
   }, items5);
   const withRefResult1 = guildId(ref[25])(obj5).withRef(ref3);
   function oe() {
-    obj = { flex: 1, transform: null };
     obj = { translateY: width(ref[16]).interpolate(sharedValue1.get(), items, items1) };
     items = [0, c12];
     items1 = [0, c12];
@@ -335,7 +326,7 @@ let closure_30 = importAllResult.memo((channelId) => {
   return tmp32;
 });
 ChannelCallModal.modalConfig = { animation: require("ME").ModalAnimation.SLIDE_UP, shouldPersistUnderModals: true };
-let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/ChannelCallModal.tsx");
 
 export default ChannelCallModal;
 export { ChannelCallCameraPreview };

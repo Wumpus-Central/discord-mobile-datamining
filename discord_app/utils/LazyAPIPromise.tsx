@@ -1,12 +1,12 @@
 // === Module 8798: useLazyAPIPromise ===
 
 // Module 8798 (useLazyAPIPromise)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("utils/LazyAPIPromise.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("utils/LazyAPIPromise.tsx");
 
 export default function useLazyAPIPromise(arg0, arg1) {
   closure_0 = arg0;

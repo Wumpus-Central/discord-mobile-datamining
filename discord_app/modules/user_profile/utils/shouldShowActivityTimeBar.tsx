@@ -1,11 +1,11 @@
 // === Module 12104: shouldShowActivityTimeBar ===
 
 // Module 12104 (shouldShowActivityTimeBar)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");
 
 export default function shouldShowActivityTimeBar(type) {
   let tmp2 = type.type === ActivityTypes.LISTENING || type.type === tmp.WATCHING;

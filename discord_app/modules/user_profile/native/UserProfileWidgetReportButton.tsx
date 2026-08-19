@@ -3,15 +3,16 @@
 // Module 12186 (UserProfileWidgetReportButton)
 import noopAll from "noop" /* 19 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _submitHamReportForFirstDM from "_submitHamReportForFirstDM" /* 8136 */;
 import FlagIcon from "FlagIcon" /* 9435 */;
 import ContextMenu from "ContextMenu" /* 9958 */;
 import { Pressable } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_5 = { top: 8, bottom: 8, left: 8, right: 8 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetReportButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetReportButton.tsx");
 
 export default function UserProfileWidgetReportButton(arg0) {
   ({ userId: require, widget: importDefault } = arg0);
@@ -20,7 +21,7 @@ export default function UserProfileWidgetReportButton(arg0) {
   obj[0] = intl.string(getSystemLocale.t.D4GvHE);
   obj[2] = FlagIcon.FlagIcon;
   obj[3] = function action() {
-    return closure_1_0(closure_1_2[5]).showReportModalForWidget(closure_0, closure_1);
+    return _submitHamReportForFirstDM.showReportModalForWidget(closure_0, closure_1);
   };
   const items = [obj];
   obj = {

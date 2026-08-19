@@ -1,10 +1,10 @@
 // === Module 8698: useIsActivitiesAvailableInShelf ===
 
 // Module 8698 (useIsActivitiesAvailableInShelf)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/useIsActivitiesAvailableInShelf.tsx");
 
 export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
   const _require = arg0;
@@ -25,8 +25,8 @@ export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
       tmp = isActivitiesEnabledForCurrentPlatform;
     }
     if (tmp) {
-      let obj = callback(table[3]);
-      obj = { guildId: null };
+      callback(table[3]);
+      const obj = { guildId: null };
       obj[0] = callback;
       const shelf = obj.fetchShelf(obj);
     }

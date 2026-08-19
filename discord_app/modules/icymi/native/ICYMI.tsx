@@ -18,21 +18,21 @@ import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14356 */;
 import goBack from "goBack" /* 15657 */;
 import IconWithBadge from "IconWithBadge" /* 15659 */;
 import jsxDefault from "jsx" /* 15778 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "createGuildRecordFromRust" /* 1910 */;
-import closure_10 from "initialize" /* 9054 */;
-import closure_11 from "filterStaffGuild" /* 9044 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import initialize from "initialize" /* 9054 */;
+import filterStaffGuild from "filterStaffGuild" /* 9044 */;
 import { NUM_GUILDS_EXTENDED_ONBOARDING as closure_12 } from "NUM_GUILDS_EXTENDED_ONBOARDING" /* 15707 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-require = arg1;
+require = fn;
 function SettingsButton() {
   return callback(IconButton.IconButton, {
     accessibilityLabel: "button",
@@ -68,8 +68,7 @@ function ICYMIHeaderTextWrapper() {
   return callback(closure_5, {
     style: callback3().headerText,
     children: importAllResult.useMemo(() => {
-      let obj = { children: null };
-      obj = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
+      let obj = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
       const intl = callback(1236).intl;
       obj[4] = intl.string(callback(1236).t.SY4sdZ);
       const items = [callback2(callback(4734).Text, obj), ];
@@ -89,12 +88,8 @@ function ICYMI(inNestedNavigator) {
   let isFocused;
   let stateFromStores;
   visibleItemIds = undefined;
-  let endVisible;
   handleOnRefresh = undefined;
-  let first;
-  closure_6 = undefined;
   let stateFromStores2;
-  let ref;
   let ref1;
   let stateFromStores3;
   closure_11 = undefined;
@@ -118,7 +113,7 @@ function ICYMI(inNestedNavigator) {
   let obj3 = isFocused(visibleItemIds[39]);
   const sharedICYMILogic = obj3.useSharedICYMILogic({ showDot: stateFromStores(visibleItemIds[38])().showDot, notificationItem: stateFromStores1 });
   ({ loading, visibleItemIds } = sharedICYMILogic);
-  endVisible = sharedICYMILogic.endVisible;
+  const endVisible = sharedICYMILogic.endVisible;
   ({ isRefreshing, handleOnRefresh } = sharedICYMILogic);
   ({ data, version, stickyHeaderIndices, viewabilityConfigCallbackPairs } = sharedICYMILogic);
   let obj4 = isFocused(visibleItemIds[40]);
@@ -126,7 +121,7 @@ function ICYMI(inNestedNavigator) {
   let obj5 = isFocused(visibleItemIds[41]);
   const items3 = [isFocused(visibleItemIds[42]).DismissibleContent.ICYMI_ALPHA_UPSELL];
   const tmp12 = endVisible(obj5.useGetDismissibleContent(items3), 2);
-  first = tmp12[0];
+  const first = tmp12[0];
   closure_6 = tmp14;
   const tmp3 = stateFromStores(visibleItemIds[33])();
   const items4 = [ref1];
@@ -134,11 +129,11 @@ function ICYMI(inNestedNavigator) {
   const items5 = [first, tmp12[1], stateFromStores2];
   const effect1 = handleOnRefresh.useEffect(() => {
     if (null != first) {
-      let obj = isFocused(visibleItemIds[21]);
-      obj = { extendedOnboarding: null };
+      isFocused(visibleItemIds[21]);
+      const obj = { extendedOnboarding: null };
       obj[0] = stateFromStores2 <= closure_1_12;
       obj.pushICYMIInfoModal(obj);
-      callback(closure_1_13.USER_DISMISS);
+      callback(ContentDismissActionType.USER_DISMISS);
     }
   }, items5);
   const items6 = [endVisible];
@@ -152,7 +147,7 @@ function ICYMI(inNestedNavigator) {
       const obj = stateFromStores(visibleItemIds[17]);
     }
   }, items6);
-  ref = handleOnRefresh.useRef(null);
+  const ref = handleOnRefresh.useRef(null);
   obj = {
     scrollToTop() {
       const current = ref.current;
@@ -211,21 +206,21 @@ function ICYMI(inNestedNavigator) {
         let obj = { unread: null, message: null, visible: null };
         obj[0] = item.unread;
         obj[1] = item.data.message;
-        obj[2] = null != visibleItemIds.find((item) => item.item.id === item.id);
+        obj[2] = null != visibleItemIds.find((item, index) => item.item.id === item.id);
         let tmp41 = closure_1_14(stateFromStores(visibleItemIds[50]), obj);
         const tmp45 = stateFromStores(visibleItemIds[50]);
       } else {
         obj = { message: null, messageContext: null, visible: null };
         obj[0] = item.data.message;
         obj[1] = item.data.messageContext;
-        obj[2] = null != visibleItemIds.find((item) => item.item.id === item.id);
+        obj[2] = null != visibleItemIds.find((item, index) => item.item.id === item.id);
         tmp41 = closure_1_14(stateFromStores(visibleItemIds[51]), obj);
         const tmp38 = stateFromStores(visibleItemIds[51]);
       }
     } else {
       if ("contentInventory" === kind) {
         obj1 = { visible: null, content: null };
-        obj1[0] = null != visibleItemIds.find((item) => item.item.id === item.id);
+        obj1[0] = null != visibleItemIds.find((item, index) => item.item.id === item.id);
         obj1[1] = item.data.content;
         let tmp7 = closure_1_14(stateFromStores(visibleItemIds[52]), obj1);
         const tmp30 = stateFromStores(visibleItemIds[52]);
@@ -249,7 +244,7 @@ function ICYMI(inNestedNavigator) {
         obj = { message: null, channel: null, visible: null };
         obj[0] = item.data.message;
         obj[1] = item.data.threadChannel;
-        obj[2] = null != visibleItemIds.find((item) => item.item.id === item.id);
+        obj[2] = null != visibleItemIds.find((item, index) => item.item.id === item.id);
         tmp7 = closure_1_14(isFocused(visibleItemIds[59]).ICYMIForumThreadRow, obj);
       } else {
         return null;
@@ -304,7 +299,6 @@ function ICYMI(inNestedNavigator) {
   obj4[11] = callback;
   obj4[12] = isFocused(visibleItemIds[32]).itemToType;
   const obj14 = isFocused(visibleItemIds[37]);
-  const tmp31 = closure_6;
   isFocused(visibleItemIds[64]).isAndroid();
   obj4[14] = stickyHeaderIndices;
   obj4[15] = viewabilityConfigCallbackPairs;
@@ -314,9 +308,9 @@ function ICYMI(inNestedNavigator) {
   items15[1] = callback(isFocused(visibleItemIds[63]).FlashList, obj4, "Version-" + num);
   items15[2] = callback(isFocused(visibleItemIds[65]).TTIFirstContentfulPaint, { label: "icymi" });
   obj1[1] = items15;
-  items13[1] = closure_16(first, obj1);
+  items13[1] = callback2(first, obj1);
   obj[1] = items13;
-  return closure_16(first, obj);
+  return callback2(first, obj);
 }
 function keyExtractor(id) {
   return id.id;
@@ -325,46 +319,34 @@ let c4 = importAllResult;
 ({ View: c5, RefreshControl: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = createCacheKey.createStyles((paddingTop) => {
-  let obj = { containerOuterTablet: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, overflow: "hidden", flex: 1, paddingTop };
+  const obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, overflow: "hidden", flex: 1, paddingTop };
   obj[0] = obj;
   return obj;
 });
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
-  let obj = { container: { flex: 1, flexShrink: 1, flexGrow: 1 }, containerInPanels: null, containerBackground: null, flashListWrapper: null, refreshing: null, header: null, headerLeft: null, headerClose: null, headerTitle: null, headerText: null, headerActions: null, notificationBadge: null, loading: null, headerBorder: null };
-  obj = { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
+  let obj = { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
   obj[1] = obj;
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
   obj[2] = obj;
   obj[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
-  obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, minHeight: 2, flex: 1 };
   obj[4] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  const obj2 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
   obj[6] = { flexDirection: "row", alignItems: "center" };
-  const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative", overflow: "hidden", width: "100%" };
   obj[7] = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
   obj[8] = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
   obj[9] = { flexDirection: "row", alignItems: "center", gap: 4 };
-  const obj4 = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
-  const obj5 = { height: 56, marginHorizontal: margin.margin, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
   obj[10] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-  const obj6 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
   obj[11] = { height: 18, width: 18, borderRadius: ThemesDefault.radii.round };
-  const obj7 = { height: 18, width: 18, borderRadius: ThemesDefault.radii.round };
   obj[12] = { flex: 1, justifyContent: "center", paddingTop: ThemesDefault.space.PX_96 };
-  const obj8 = { flex: 1, justifyContent: "center", paddingTop: ThemesDefault.space.PX_96 };
   obj[13] = { position: "absolute", bottom: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1 };
   return obj;
 });
 let closure_22 = importAllResult.memo((inNestedNavigator) => {
   inNestedNavigator = inNestedNavigator.inNestedNavigator;
   const tmp = callback3();
-  let obj = dependencyMap;
   const tmp2 = useIsWindowLargeDefault();
   let LeftBackIconWithBadge = require;
-  obj = { top: !tmp2, style: tmp.header, children: null };
-  obj = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
+  let obj = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   obj1 = { dark: getGradientColorByPercentage.OverlayOpacity.LEVEL_7, light: getGradientColorByPercentage.OverlayOpacity.LEVEL_8 };
   obj[4] = obj1;
   const items = [callback(getMixedGradientColorDefault, obj), , ];
@@ -372,21 +354,21 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
   const obj3 = { style: tmp.headerLeft, children: null };
   if (!tmp2) {
     if (!inNestedNavigator) {
-      const items1 = [null, tmp4(ICYMIHeaderTextWrapper, {})];
+      const items1 = [null, callback(ICYMIHeaderTextWrapper, {})];
       obj3[1] = items1;
-      const items2 = [tmp3(tmp6, obj3), ];
+      const items2 = [callback2(closure_5, obj3), ];
       const obj4 = { style: null, children: null };
       obj4[0] = tmp.headerActions;
-      const items3 = [tmp4(InfoButton, {}), tmp4(SettingsButton, {})];
+      const items3 = [callback(InfoButton, {}), callback(SettingsButton, {})];
       obj4[1] = items3;
-      items2[1] = tmp3(tmp6, obj4);
+      items2[1] = callback2(closure_5, obj4);
       obj2[1] = items2;
-      items[1] = tmp3(tmp6, obj2);
+      items[1] = callback2(closure_5, obj2);
       const obj5 = { style: null };
       obj5[0] = tmp.headerBorder;
-      items[2] = tmp4(tmp6, obj5);
+      items[2] = callback(closure_5, obj5);
       obj[2] = items;
-      return tmp3(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+      return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
     }
   }
   const obj6 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
@@ -396,14 +378,14 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
   if (inNestedNavigator) {
     LeftBackIconWithBadge = IconWithBadge.LeftBackIconWithBadge;
     obj = { includeNotificationsCount: true };
-    let tmp4Result = tmp4(LeftBackIconWithBadge, obj);
+    let tmp4Result = callback(LeftBackIconWithBadge, obj);
   } else {
-    tmp4Result = tmp4(XSmallIcon.XSmallIcon, { color: "interactive-text-default" });
+    tmp4Result = callback(XSmallIcon.XSmallIcon, { color: "interactive-text-default" });
   }
   obj6[3] = tmp4Result;
-  tmp4Result = tmp4(PressableBase.PressableOpacity, obj6);
+  tmp4Result = callback(PressableBase.PressableOpacity, obj6);
 });
-const result = require("set").fileFinishedImporting("modules/icymi/native/ICYMI.tsx");
+const result = require("obj132").fileFinishedImporting("modules/icymi/native/ICYMI.tsx");
 
 export const ICYMITab = function ICYMITab(route) {
   route = route.route;
@@ -433,7 +415,6 @@ export const ICYMITab = function ICYMITab(route) {
   }, items1);
   const tmp11 = tmp6 ? closure_5 : importAllResult.Fragment;
   const tmp3 = getGuildThemeNameDefault();
-  const tmp9 = importAllResult;
   if (tmp6) {
     obj = { style: null };
     obj[0] = memo;
@@ -444,12 +425,11 @@ export const ICYMITab = function ICYMITab(route) {
   const obj2 = { children: null };
   const obj3 = {};
   const merged = Object.assign(obj);
-  const items2 = [closure_14(getMixedGradientColorDefault, { absolute: true }), ];
-  const tmp14 = closure_16;
+  const items2 = [callback(getMixedGradientColorDefault, { absolute: true }), ];
   const tmpResult = jsxDefault;
-  items2[1] = closure_14(_require(4104).ThemeContextProvider, { gradient: tmp3, children: closure_14(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
+  items2[1] = callback(_require(4104).ThemeContextProvider, { gradient: tmp3, children: callback(ICYMI, { inNestedNavigator }, "" + stateFromStores) });
   obj3.children = items2;
-  obj2[0] = tmp14(tmp11, obj3);
-  obj1[0] = closure_14(_require(15709).ICYMIContextProvider, obj2);
-  return closure_14(tmpResult, obj1);
+  obj2[0] = callback2(tmp11, obj3);
+  obj1[0] = callback(_require(15709).ICYMIContextProvider, obj2);
+  return callback(tmpResult, obj1);
 };

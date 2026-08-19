@@ -1,21 +1,21 @@
 // === Module 7579: getComboShakeIntensity ===
 
 // Module 7579 (getComboShakeIntensity)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
 import ConfettiLocation from "ConfettiLocation" /* 7433 */;
 
 ({ ShakeLevel: obj1, SHAKE_STEPS: c3, SHAKE_STEP_DIVIDER: c4 } = ConfettiLocation);
 let items = [[1, 0.001], [25, 0.3], [100, 0.5], [250, 0.8], [500, 0.9], [2500, 0.95], [9001, 1]];
-let closure_5 = items.map((arg0) => {
-  [tmp] = arg0;
+let closure_5 = items.map((item, index) => {
+  [tmp] = item;
   return tmp;
 });
-let closure_6 = items.map((arg0) => {
-  [, tmp] = arg0;
+let closure_6 = items.map((item, index) => {
+  [, tmp] = item;
   return tmp;
 });
-let result = set.fileFinishedImporting("modules/poggermode/PoggermodeUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/poggermode/PoggermodeUtils.tsx");
 
 export const getComboShakeIntensity = function getComboShakeIntensity(userCombo, LEVEL_4) {
   let LEVEL_3 = LEVEL_4;
@@ -26,23 +26,22 @@ export const getComboShakeIntensity = function getComboShakeIntensity(userCombo,
   c0 = undefined;
   c1 = undefined;
   [arr2, ] = items;
-  LEVEL_3 = undefined;
   const result = userCombo.value * userCombo.multiplier;
   LEVEL_3 = result;
   let num = 0;
   if (result > 0) {
     const _Math = Math;
-    num = Math.min(100000, arr2.reduce((arg0, arg1, arg2) => {
-      if (c2 > arg1) {
-        if (arg2 + 1 === length.length) {
-          return tmp4[arg2];
+    num = Math.min(100000, arr2.reduce((acc, item, index) => {
+      if (c2 > item) {
+        if (index + 1 === length.length) {
+          return dependencyMap[index];
         } else {
-          return (tmp - arg1) / (tmp6[arg2 + 1] - arg1) * (tmp4[arg2 + 1] - tmp5) + tmp5;
+          return (c2 - item) / (tmp6[index + 1] - item) * (dependencyMap[index + 1] - tmp5) + tmp5;
         }
       } else {
-        let tmp2 = arg0;
-        if (tmp === arg1) {
-          tmp2 = dependencyMap[arg2];
+        let tmp2 = acc;
+        if (c2 === item) {
+          tmp2 = dependencyMap[index];
         }
         return tmp2;
       }
@@ -53,23 +52,22 @@ export const getComboShakeIntensity = function getComboShakeIntensity(userCombo,
 export const getComboPercentage = function getComboPercentage(value) {
   const items = [closure_5, closure_6];
   [arr2, ] = items;
-  c2 = undefined;
   const result = value.value * value.multiplier;
   c2 = result;
   let num = 0;
   if (result > 0) {
     const _Math = Math;
-    num = Math.min(1, arr2.reduce((arg0, arg1, arg2) => {
-      if (c2 > arg1) {
-        if (arg2 + 1 === length.length) {
-          return tmp4[arg2];
+    num = Math.min(1, arr2.reduce((acc, item, index) => {
+      if (c2 > item) {
+        if (index + 1 === length.length) {
+          return dependencyMap[index];
         } else {
-          return (tmp - arg1) / (tmp6[arg2 + 1] - arg1) * (tmp4[arg2 + 1] - tmp5) + tmp5;
+          return (c2 - item) / (tmp6[index + 1] - item) * (dependencyMap[index + 1] - tmp5) + tmp5;
         }
       } else {
-        let tmp2 = arg0;
-        if (tmp === arg1) {
-          tmp2 = dependencyMap[arg2];
+        let tmp2 = acc;
+        if (c2 === item) {
+          tmp2 = dependencyMap[index];
         }
         return tmp2;
       }
@@ -81,7 +79,6 @@ export const getComboStyles = function getComboStyles(arg0) {
   if (1 === arg0) {
     let obj = { color: null };
     obj[0] = unsafe_getRawColor.unsafe_getRawColor("BRAND_500");
-    const obj10 = unsafe_getRawColor;
   } else {
     if (2 !== arg0) {
       if (3 !== arg0) {
@@ -90,7 +87,6 @@ export const getComboStyles = function getComboStyles(arg0) {
             if (6 === arg0) {
               obj = { color: null, square: true };
               obj[0] = unsafe_getRawColor.unsafe_getRawColor("RED_400");
-              const obj4 = unsafe_getRawColor;
             } else {
               obj = { color: null, flair: true };
               obj1 = unsafe_getRawColor;
@@ -101,13 +97,11 @@ export const getComboStyles = function getComboStyles(arg0) {
         obj1 = { color: null, square: true };
         obj1[0] = unsafe_getRawColor.unsafe_getRawColor("YELLOW_300");
         obj = obj1;
-        const obj6 = unsafe_getRawColor;
       }
     }
     const obj2 = { color: null };
     obj2[0] = unsafe_getRawColor.unsafe_getRawColor("GREEN_360");
     obj = obj2;
-    const obj8 = unsafe_getRawColor;
   }
   return obj;
 };

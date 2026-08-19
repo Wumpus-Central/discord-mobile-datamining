@@ -2,39 +2,33 @@
 
 // Module 16663 (RedesignAddAvatarModal)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "handleFormOpen" /* 8370 */;
+import handleFormOpen from "handleFormOpen" /* 8370 */;
 import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, contentContainer: null, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 2, alignItems: "center" };
 createCacheKey[2] = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { display: "flex", alignItems: "center" };
 createCacheKey[4] = { width: "100%" };
-let obj1 = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
 createCacheKey[5] = { marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[6] = { textAlign: "center" };
-let obj2 = { marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[7] = { alignSelf: "center", paddingTop: ThemesDefault.space.PX_24 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { alignSelf: "center", paddingTop: ThemesDefault.space.PX_24 };
-let result = require("set").fileFinishedImporting("modules/avatar/native/components/RedesignAddAvatarModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/avatar/native/components/RedesignAddAvatarModal.tsx");
 
 export default function RedesignAddAvatarModal(route) {
   const onComplete = route.route.params.onComplete;
   importDefault = undefined;
-  let first;
-  closure_3 = undefined;
   let pendingImage;
   function _handleSelectAvatar() {
     const self = this;
@@ -44,10 +38,10 @@ export default function RedesignAddAvatarModal(route) {
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw base64;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = base64;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -58,15 +52,15 @@ export default function RedesignAddAvatarModal(route) {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               v0 = 3;
-              throw arg1;
+              throw base64;
             } else if (arg0 === 2) {
               v0 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = base64;
               return obj;
             } else {
               c1 = tmp5;
-              let base64 = tmp2;
+              base64 = tmp2;
               base64 = undefined;
               c1 = undefined;
               pendingImage(false);
@@ -80,14 +74,14 @@ export default function RedesignAddAvatarModal(route) {
             }
           } else if (arg0 === 1) {
             v0 = 3;
-            throw arg1;
+            throw base64;
           } else if (arg0 === 2) {
             v0 = 3;
             let obj3 = { value: null, done: true };
-            obj3[0] = arg1;
+            obj3[0] = base64;
             return obj3;
           } else {
-            base64 = arg1.base64;
+            base64 = base64.base64;
             if (null == base64) {
               pendingImage = undefined;
               if (null != closure_1_0) {
@@ -131,17 +125,17 @@ export default function RedesignAddAvatarModal(route) {
   let tmp = callback3();
   [tmp3, c1] = pendingImage(_handleSelectAvatar.useState(false), 2);
   const tmp4 = pendingImage(_handleSelectAvatar.useState(), 2);
-  first = tmp4[0];
+  const first = tmp4[0];
   closure_3 = tmp6;
   let obj = onComplete(first[10]);
   const items = [closure_8];
   pendingImage = undefined;
   const stateFromStores = obj.useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
   if (null != first) {
-    let tmp9Result = tmp9(tmp8[11]);
+    tmp9(tmp8[11]);
     obj = { imageUri: null, description: null };
     obj[0] = tmp9(tmp8[12]).DEFAULT_AVATARS[first];
-    tmp9Result = tmp9(tmp8[13]);
+    const tmp9Result = tmp9(tmp8[13]);
     obj[1] = tmp9Result.generateAvatarDescription();
     pendingImage = tmp9Result.createPendingImage(obj);
   }
@@ -174,7 +168,6 @@ export default function RedesignAddAvatarModal(route) {
   obj3[0] = items2;
   const items3 = [callback2(closure_6, obj3), , ];
   const memoizedImageSourceResult = onComplete(first[14]).memoizedImageSource(imageUri);
-  const tmp15 = closure_7;
   items3[1] = callback(importDefault(first[20]), {
     avatarSource: onComplete(first[14]).memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
@@ -194,7 +187,7 @@ export default function RedesignAddAvatarModal(route) {
     const obj8 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
     const intl3 = tmp9(tmp8[19]).intl;
     obj8[2] = intl3.string(tmp9(tmp8[19]).t.XyLlVm);
-    tmp17Result = tmp17(tmp9(tmp8[18]).Text, obj8);
+    tmp17Result = callback(tmp9(tmp8[18]).Text, obj8);
   }
   obj7[1] = tmp17Result;
   items3[2] = callback(closure_6, obj7);
@@ -217,5 +210,5 @@ export default function RedesignAddAvatarModal(route) {
   obj10[1] = callback(onComplete(first[21]).Button, obj11);
   items4[3] = callback(closure_6, obj10);
   obj[3] = items4;
-  return callback2(tmp15, obj);
+  return callback2(closure_7, obj);
 };

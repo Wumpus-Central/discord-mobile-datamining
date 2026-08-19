@@ -1,11 +1,11 @@
 // === Module 9739: isLimitedAccessErrorCode ===
 
 // Module 9739 (isLimitedAccessErrorCode)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 
 const AbortCodes = ME.AbortCodes;
-const result = set.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
 
 export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(arg0, arg1) {
   let tmp = arg0 >= 400;

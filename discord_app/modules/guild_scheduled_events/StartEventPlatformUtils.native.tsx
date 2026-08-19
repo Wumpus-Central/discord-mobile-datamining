@@ -1,14 +1,14 @@
 // === Module 8908: _navigateToEvent ===
 
 // Module 8908 (_navigateToEvent)
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "handleConnectionOpen" /* 4197 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
 import { GuildScheduledEventEntityTypes as closure_8 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { Routes } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _navigateToEvent() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
@@ -61,19 +61,18 @@ function _navigateToEvent() {
                   return obj1;
                 }
               } else {
-                if (tmp54.VOICE === entity_type) {
+                if (closure_1_8.VOICE === entity_type) {
                   const channelId1 = closure_1_6.getChannelId();
                   const channel1 = store.getChannel(tmp53.channel_id);
                   callback2(closure_1_3[6])(null != channel1, "could not find channel");
                   if (channelId1 !== channel1.id) {
-                    const voiceChannel = tmp21(closure_1_3[9]).selectVoiceChannel(channel1.id);
-                    const tmp21Result = tmp21(closure_1_3[9]);
+                    const voiceChannel = callback2(closure_1_3[9]).selectVoiceChannel(channel1.id);
+                    const tmp21Result = callback2(closure_1_3[9]);
                   }
                   if (tmp27 != null) {
                     tmp27 = tmp27();
                   }
-                  tmp21 = callback2;
-                } else if (tmp54.EXTERNAL === entity_type) {
+                } else if (closure_1_8.EXTERNAL === entity_type) {
                   if (closure_1_7.getGuildId() !== guild_id) {
                     let obj5 = callback(closure_1_3[10]);
                     obj5.transitionTo(closure_1_9.CHANNEL(guild_id));
@@ -145,7 +144,7 @@ function _navigateToEvent() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
 
 export const navigateToEvent = function navigateToEvent(closure_0, onSuccess) {
   const self = this;

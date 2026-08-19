@@ -2,36 +2,30 @@
 
 // Module 9815
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ View: c5, Pressable: closure_6, StyleSheet: error } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
 let closure_11 = ["black", "transparent"];
-let obj = { animatedViewContainer: { overflow: "hidden" }, container: { position: "relative", width: "100%" }, measuringContainer: { width: "100%", position: "absolute" }, descriptionContainer: { marginTop: 8 }, viewMoreCTA: { position: "absolute", right: 0, bottom: 0, pointerEvents: "none" }, maskFill: { flex: 1, backgroundColor: "black" }, maskLastLine: { flexDirection: "row" }, maskFade: { width: 32 }, collapseDescriptionCTA: { marginTop: 4 }, nameContainer: null, nameText: null, partnerLabelWrapper: null };
-obj = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, overflow: "hidden" };
+let obj = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, overflow: "hidden" };
 obj[9] = obj;
 obj[10] = { flexShrink: 1 };
-createCacheKey = { justifyContent: "center", paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, borderRadius: ThemesDefault.radii.lg };
+const createCacheKey = { justifyContent: "center", paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, borderRadius: ThemesDefault.radii.lg };
 obj[11] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = { code: "function DetailsHeaderTsx1(){const{height}=this.__closure;return{height:height.get()};}" };
 let closure_14 = { code: "function DetailsHeaderTsx2(){const{runOnJS,setShouldLineClamp}=this.__closure;runOnJS(setShouldLineClamp)(true);}" };
 const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyle) {
   ({ application, mainContainerStyle, hideName } = viewContainerStyle);
-  let sharedValue;
-  let first;
-  dependencyMap = undefined;
   let first1;
   importAllResult = undefined;
-  closure_5 = undefined;
-  sharedValue = undefined;
-  let str;
+  let sharedValue;
   let num2;
   closure_9 = undefined;
   let num3;
@@ -47,9 +41,8 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   let obj = sharedValue(8447);
   obj1 = importAllResult;
   const ref = importAllResult.useRef(null);
-  sharedValue = ref;
   const tmp7 = first1(importAllResult.useState(false), 2);
-  first = tmp7[0];
+  const first = tmp7[0];
   dependencyMap = tmp7[1];
   const tmp9 = first1(importAllResult.useState(false), 2);
   first1 = tmp9[0];
@@ -69,7 +62,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   let obj4 = sharedValue(8447);
   const sectionName = obj4.getSectionName(application);
   let obj5 = sharedValue(8447);
-  str = obj5.getSectionDescription(application);
+  const str = obj5.getSectionDescription(application);
   let tmp28Result1 = null != str;
   if (tmp28Result1) {
     tmp28Result1 = str.trim().length > 0;
@@ -113,8 +106,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   if (first) {
     tmp27 = !first1;
   }
-  obj = { style: items2, children: null };
-  items2 = [tmp.animatedViewContainer, animatedStyle, viewContainerStyle.viewContainerStyle];
+  const items2 = [tmp.animatedViewContainer, animatedStyle, viewContainerStyle.viewContainerStyle];
   obj = {
     style: items3,
     onLayout(nativeEvent) {
@@ -124,7 +116,6 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
         if (tmp6) {
           callback4(true);
         }
-        const tmp2 = ref;
         tmp6 = ref2.current > 0 && ref.current > 0;
       }
     },
@@ -168,7 +159,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
           const obj2 = sharedValue(4664);
           const current = ref.current;
           const fn = function t() {
-            closure_1_0(closure_1_2[6]).runOnJS(closure_14)(true);
+            sharedValue(closure_1_2[6]).runOnJS(closure_14)(true);
           };
           let obj = { runOnJS: null, setShouldLineClamp: null };
           obj[0] = sharedValue(4115).runOnJS;
@@ -183,7 +174,6 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
           const result1 = sharedValue.set(obj.withTiming(ref2.current, sharedValue(4667).timingStandard));
         }
         callback(!first1);
-        const tmp2 = first1;
       }
     };
     const obj6 = { style: null };
@@ -268,7 +258,6 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
     items10[2] = tmp30Result3;
     obj5[3] = items10;
     tmp28Result = tmp28(sharedValue, obj5);
-    const tmp35 = sharedValue;
   }
   items5[1] = tmp28Result;
   obj[2] = items5;
@@ -316,6 +305,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
           _undefined(true);
           dependencyMap(true);
         }
+        tmp = null == num3 && null != lines[0];
       };
       obj22[3] = memo;
       const items15 = [tmp30(tmp2(4734).Text, obj22), ];
@@ -334,6 +324,6 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   children[1] = tmp28Result2;
   return closure_9(num3, { children });
 });
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx");
 
 export default memoResult;

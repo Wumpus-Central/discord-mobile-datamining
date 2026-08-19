@@ -3,22 +3,25 @@
 // Module 14262 (FamilyCenterActivityGiftRow)
 import noopAll from "noop" /* 19 */;
 import ThemesDefault from "Themes" /* 712 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import Text from "Text" /* 4734 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8387 */;
 import useSelectedTeenUser from "useSelectedTeenUser" /* 14250 */;
 import getCollectibleTypeName from "getCollectibleTypeName" /* 14259 */;
+import AvatarDecorationPreviewImageDefault from "AvatarDecorationPreviewImage" /* 14260 */;
+import getGiftRowDisplayInfo from "getGiftRowDisplayInfo" /* 14261 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, textContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+const createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "column", flexShrink: 1 };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
 
 export default function FamilyCenterActivityGiftRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
@@ -49,7 +52,7 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[1] = price;
     let name = null;
     if (null != teenUserForId) {
-      let tmp2Result = tmp2(4219);
+      let tmp2Result = nameFromUserDefault;
       name = tmp2Result.getName(teenUserForId);
     }
     obj[2] = name;
@@ -57,28 +60,28 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[4] = claimedAt;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const giftSubtext = tmp5(14261).getGiftSubtext(obj);
+    const giftSubtext = getGiftRowDisplayInfo.getGiftSubtext(obj);
     obj1 = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj1[0] = displayName;
-    tmp2Result = tmp2(14260);
+    tmp2Result = AvatarDecorationPreviewImageDefault;
     if (product == null) {
       product = null;
     }
     obj1[1] = product;
     obj1[2] = isSubscription;
     obj1[3] = subscriptionPlanId;
-    const items = [closure_4(tmp2Result, obj1), ];
+    const items = [callback(tmp2Result, obj1), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.textContainer;
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     obj3[4] = displayName;
-    const items1 = [closure_4(tmp5(4734).Text, obj3), ];
+    const items1 = [callback(Text.Text, obj3), ];
     const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj4[2] = giftSubtext;
-    items1[1] = closure_4(tmp5(4734).Text, obj4);
+    items1[1] = callback(Text.Text, obj4);
     obj2[1] = items1;
-    items[1] = closure_5(View, obj2);
+    items[1] = callback2(View, obj2);
     obj[1] = items;
-    return closure_5(View, obj);
+    return callback2(View, obj);
   }
 };

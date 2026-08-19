@@ -25,6 +25,6 @@ obj[10] = createFakeSharedValue.createFakeSharedValue(true);
 obj[11] = createFakeSharedValue.createFakeSharedValue(false);
 obj[12] = createFakeSharedValue.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
 const context = importAllResult.createContext(obj);
-const result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelStateContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelStateContext.tsx");
 
 export default context;

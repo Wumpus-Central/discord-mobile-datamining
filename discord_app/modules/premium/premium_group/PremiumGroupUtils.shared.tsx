@@ -3,10 +3,10 @@
 // Module 8269 (getPriceString)
 import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
 import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
-import closure_2 from "addSubscriptionPlan" /* 4044 */;
+import addSubscriptionPlan from "addSubscriptionPlan" /* 4044 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
 
 export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
   if (null != hasAnyPremiumGroup) {
@@ -20,16 +20,13 @@ export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
           return null;
         } else {
           const price = getPremiumPlanItem.getPrice(planIdFromItems);
-          const obj2 = getPremiumPlanItem;
-          const tmp2 = require;
           const formatPriceResult = formatSingleCurrencyPrice.formatPrice(price.amount, price.currency);
           if (tmp) {
             ({ interval, intervalCount } = value);
-            return tmp2(5316).formatRate(formatPriceResult, interval, intervalCount);
+            return formatSingleCurrencyPrice.formatRate(formatPriceResult, interval, intervalCount);
           } else {
             return formatPriceResult;
           }
-          const obj3 = formatSingleCurrencyPrice;
         }
       }
     }

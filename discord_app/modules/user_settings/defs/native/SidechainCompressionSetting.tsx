@@ -4,12 +4,12 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
-import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
 import { Features } from "DesktopSources" /* 4529 */;
-import createToggle from "createToggle" /* 10669 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/jwMtn"]);
@@ -31,6 +31,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SidechainCompressionSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/SidechainCompressionSetting.tsx");
 
 export default createToggle;

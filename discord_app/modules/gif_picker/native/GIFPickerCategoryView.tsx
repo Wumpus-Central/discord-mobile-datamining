@@ -2,17 +2,16 @@
 
 // Module 10213 (GIFPickerCategoryView)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ StyleSheet, View: c4, TouchableOpacity: c5 } = get_ActivityIndicator);
 require("ME").GIFPickerResultTypes;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, gifImage: null, gifOverlay: null, categoryName: null, categoryNameIcon: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: ThemesDefault.radii.xs, flex: 1 };
 const obj2 = {};
@@ -28,11 +27,9 @@ obj3.justifyContent = "center";
 obj3.flexDirection = "row";
 obj3.alignItems = "center";
 createCacheKey[3] = obj3;
-const obj1 = { borderRadius: ThemesDefault.radii.xs, flex: 1 };
 createCacheKey[4] = { marginRight: ThemesDefault.space.PX_4 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginRight: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
+const result = require("obj132").fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
 
 export default function GIFPickerCategoryView(onSelectCategory) {
   onSelectCategory = onSelectCategory.onSelectCategory;
@@ -45,7 +42,6 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   const intl = onSelectCategory(1236).intl;
   let obj = { categoryName: item.name };
   const formatToPlainStringResult = intl.formatToPlainString(onSelectCategory(1236).t["j+63pw"], obj);
-  obj = { style: tmp.container, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult };
   const merged = Object.assign(item(8866)(callback, formatToPlainStringResult));
   obj = { style: tmp.gifImage, source: obj1 };
   const items1 = [callback(item(5449), obj), callback(closure_4, { style: tmp.gifOverlay }), ];
@@ -66,7 +62,7 @@ export default function GIFPickerCategoryView(onSelectCategory) {
   }
   const items2 = [tmp10Result, callback(onSelectCategory(4734).Text, { variant: "text-sm/semibold", color: "text-overlay-light", maxFontSizeMultiplier: 2, accessible: false, children: item.name })];
   obj3[2] = items2;
-  items1[2] = closure_8(closure_4, obj3);
+  items1[2] = callback(closure_4, obj3);
   obj.children = items1;
-  return closure_8(closure_5, obj);
+  return callback(closure_5, obj);
 };

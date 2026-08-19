@@ -1,12 +1,12 @@
 // === Module 15550: getGuildFolderMenuItems ===
 
 // Module 15550 (getGuildFolderMenuItems)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "insertUnsortedGuilds" /* 5078 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
 import { AnalyticsSections } from "ME" /* 676 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
 
 export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFolderMenuItems) {
   const _require = guildFolderMenuItems;
@@ -83,10 +83,10 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
         HermesBuiltin.throwTypeError();
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw showGuildsBarFolderModal;
         } else if (arg0 === 2) {
           let obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj[0] = showGuildsBarFolderModal;
           return obj;
         } else {
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -97,11 +97,11 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
           if (0 === paths) {
             if (arg0 === 1) {
               c2 = 3;
-              throw arg1;
+              throw showGuildsBarFolderModal;
             } else if (arg0 === 2) {
               c2 = 3;
               obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj[0] = showGuildsBarFolderModal;
               return obj;
             } else {
               closure_0 = tmp4;
@@ -113,14 +113,14 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
             }
           } else if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw showGuildsBarFolderModal;
           } else if (arg0 === 2) {
             c2 = 3;
             obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj[0] = showGuildsBarFolderModal;
             return obj;
           } else {
-            const result = arg1.showGuildsBarFolderModal(closure_0);
+            const result = showGuildsBarFolderModal.showGuildsBarFolderModal(closure_0);
             c2 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }

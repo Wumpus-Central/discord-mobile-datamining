@@ -2,10 +2,10 @@
 
 // Module 11057 (useUserIsConsideredAdult)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useUserIsConsideredAdult.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useUserIsConsideredAdult.tsx");
 
 export default function useUserIsConsideredAdult() {
   const items = [closure_2];

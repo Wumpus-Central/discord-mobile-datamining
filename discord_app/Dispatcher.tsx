@@ -1,7 +1,7 @@
 // === Module 709: dispatcher ===
 
 // Module 709 (dispatcher)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initialize from "initialize" /* 589 */;
 import Storage2 from "Storage" /* 595 */;
 import logger from "logger" /* 651 */;
@@ -18,7 +18,7 @@ obj = { persist: flag };
 const actionLogger = new logger.ActionLogger(obj);
 obj = { addBreadcrumb: addSentryBreadcrumbDefault };
 const dispatcher = new initialize.Dispatcher(obj.Default, actionLogger, obj);
-const result = set.fileFinishedImporting("Dispatcher.tsx");
+const result = obj132.fileFinishedImporting("Dispatcher.tsx");
 
 export default dispatcher;
 export const DispatchBand = obj;

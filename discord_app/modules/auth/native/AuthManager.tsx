@@ -3,14 +3,14 @@
 // Module 15263 (_initialize)
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 4720 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PermissionStateType } from "set" /* 11578 */;
 import { ME } from "ME" /* 676 */;
 import { NotificationAuthorizationStatus as closure_8 } from "NativePermissionStatus" /* 4839 */;
 import { NewUserTypes } from "NewUserTypes" /* 11878 */;
 
-const require = arg1;
+const require = fn;
 ({ NativeModules: c4, Keyboard: c5 } = get_ActivityIndicator);
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
@@ -61,7 +61,7 @@ class AuthManager extends tmp3 {
                 closure_1 = tmp2;
                 closure_1_5.dismiss();
                 if (closure_1_1(closure_1_2[8])()) {
-                  tmp25();
+                  callback();
                   obj = 3;
                 } else {
                   const NativePermissionManager = obj.NativePermissionManager;
@@ -71,7 +71,6 @@ class AuthManager extends tmp3 {
                   obj1[0] = NativePermissionManager.getNotificationAuthorizationStatus();
                   return obj1;
                 }
-                tmp25 = callback;
               }
             } else if (arg0 === 1) {
               obj = 3;
@@ -107,18 +106,20 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterWithConnection = function handleRegisterWithConnection() {
       if (obj.isIOS()) {
-        const result = lib(closure_1_2[11]).setPushPermissionState(closure_1_6.PROMPT_SEEN);
-        const tmpResult = lib(closure_1_2[11]);
+        const result = lib(dependencyMap[11]).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+        const tmpResult = lib(dependencyMap[11]);
       }
       const result1 = lib.handleRegisterComplete();
+      obj = lib(dependencyMap[10]);
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = tmp(11925);
+        let tmpResult = lib(11925);
         tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
       }
-      tmpResult = tmp(11877);
+      tmpResult = lib(11877);
       tmpResult.startOnboarding();
+      obj = lib(8918);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = lib.handlePushNotificationOptIn(() => {
@@ -141,8 +142,8 @@ class AuthManager extends tmp3 {
           const result3 = DCDSKAdNetworkManager.updateConversionValue(10);
         }
       } else {
-        lib(closure_1_2[15]).transitionToGuild(closure_1_7);
-        const obj = lib(closure_1_2[15]);
+        lib(dependencyMap[15]).transitionToGuild(ME);
+        const obj = lib(dependencyMap[15]);
       }
       c11 = null;
     };
@@ -159,23 +160,17 @@ class AuthManager extends tmp3 {
 const prototype = AuthManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const subscription = dispatcherDefault.subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
-  const obj = dispatcherDefault;
   const subscription1 = dispatcherDefault.subscribe("LOGIN_SUCCESS", this.handleLogin);
-  const obj2 = dispatcherDefault;
   const subscription2 = dispatcherDefault.subscribe("REGISTER_SUCCESS", this.handleRegister);
-  const obj3 = dispatcherDefault;
   const subscription3 = dispatcherDefault.subscribe("LOGOUT", this.handleLogout);
 };
 prototype["_terminate"] = function _terminate() {
   dispatcherDefault.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
-  const obj = dispatcherDefault;
   dispatcherDefault.unsubscribe("LOGIN_SUCCESS", this.handleLogin);
-  const obj2 = dispatcherDefault;
   dispatcherDefault.unsubscribe("REGISTER_SUCCESS", this.handleRegister);
-  const obj3 = dispatcherDefault;
   dispatcherDefault.unsubscribe("LOGOUT", this.handleLogout);
 };
 const authManager = new AuthManager();
-let result = require("set").fileFinishedImporting("modules/auth/native/AuthManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/auth/native/AuthManager.tsx");
 
 export default authManager;

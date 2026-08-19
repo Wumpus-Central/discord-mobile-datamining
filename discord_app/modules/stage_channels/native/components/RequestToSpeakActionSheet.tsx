@@ -4,16 +4,16 @@
 import ThemesDefault from "Themes" /* 712 */;
 import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4981 */;
 import registerAssetDefault from "registerAsset" /* 12519 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "fetchFingerprint" /* 1218 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { REQUEST_TO_SPEAK_SHEET_KEY as closure_8 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function RequestToSpeakRow(channel) {
   let _require;
   let obj = _require(12518);
@@ -34,7 +34,7 @@ function RequestToSpeakRow(channel) {
   obj[3] = function onValueChange(arg0) {
     return _undefined(arg0);
   };
-  return closure_9(_require(7178).TableSwitchRow, obj);
+  return callback(_require(7178).TableSwitchRow, obj);
 }
 function ManageSelfSpeakerRow(channel) {
   channel = channel.channel;
@@ -46,8 +46,6 @@ function ManageSelfSpeakerRow(channel) {
   if (channel != null) {
     id = channel.id;
   }
-  const tmp4 = importDefault;
-  const tmp5 = useAudienceRequestToSpeakStateDefault;
   const tmp8 = useAudienceRequestToSpeakStateDefault(stateFromStores, id) === channel(4981).RequestToSpeakStates.ON_STAGE;
   importDefault = tmp8;
   const intl = tmp(1236).intl;
@@ -63,22 +61,23 @@ function ManageSelfSpeakerRow(channel) {
   } else {
     MicrophoneArrowRightIcon = tmp(12154).MicrophoneArrowRightIcon;
   }
-  obj = {
+  {
     onPress() {
       if (!callback) {
-        let obj = channel(closure_1_2[17]);
+        let obj = channel(dependencyMap[17]);
         if (obj.shouldAgeVerifyToSpeakForCurrentUser(channel.id)) {
           obj = { entryPoint: null };
-          obj[0] = channel(closure_1_2[19]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
-          const result = callback(closure_1_2[18]).showAgeVerificationGetStartedModal(obj);
-          const obj2 = callback(closure_1_2[18]);
-          callback(closure_1_2[20]).hideActionSheet(closure_1_8);
+          obj[0] = channel(dependencyMap[19]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
+          const result = callback(dependencyMap[18]).showAgeVerificationGetStartedModal(obj);
+          const obj2 = callback(dependencyMap[18]);
+          callback(dependencyMap[20]).hideActionSheet(closure_1_8);
+          const obj4 = callback(dependencyMap[20]);
         }
       }
-      const result1 = channel(closure_1_2[21]).audienceAckRequestToSpeak(channel, callback);
-      const obj5 = channel(closure_1_2[21]);
-      const tmp = callback;
-      callback(closure_1_2[20]).hideActionSheet(closure_1_8);
+      const result1 = channel(dependencyMap[21]).audienceAckRequestToSpeak(channel, callback);
+      const obj5 = channel(dependencyMap[21]);
+      callback(dependencyMap[20]).hideActionSheet(closure_1_8);
+      const obj6 = callback(dependencyMap[20]);
     },
     icon: callback2(MicrophoneArrowRightIcon, {}),
     label: stringResult,
@@ -89,16 +88,14 @@ function ManageSelfSpeakerRow(channel) {
   return callback2(channel(6291).TableRow, obj);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx");
+let result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx");
 
 export default function RequestToSpeakActionSheet(channelId) {
   channelId = channelId.channelId;
   let first;
-  dependencyMap = undefined;
   let first1;
   let React;
   let obj = channelId(4097);

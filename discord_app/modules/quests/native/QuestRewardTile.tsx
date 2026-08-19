@@ -2,25 +2,24 @@
 
 // Module 10950 (QuestRewardTile)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { useMemo } from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ AppState: closure_6, View: error } = get_ActivityIndicator);
 let closure_10 = createCacheKey.createStyles(() => {
-  let obj = { container: null, video: null, image: null };
-  obj = { borderRadius: ThemesDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+  const obj = { borderRadius: ThemesDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
   obj[0] = obj;
   obj[1] = { overflow: "hidden", height: "100%", width: "100%" };
   obj[2] = { height: "100%", width: "100%" };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
 
 export default function QuestRewardTile(quest) {
   quest = quest.quest;
@@ -55,8 +54,8 @@ export default function QuestRewardTile(quest) {
   const items3 = [tmp6Result.isAnimated];
   const effect = React.useEffect(() => {
     if (closure_3.isAnimated) {
-      closure_0 = closure_1_6.addEventListener("change", (arg0) => {
-        callback("active" === arg0);
+      closure_0 = closure_1_6.addEventListener("change", (event) => {
+        callback("active" === event);
       });
       return () => {
         closure_0.remove();
@@ -65,8 +64,8 @@ export default function QuestRewardTile(quest) {
   }, items3);
   const items4 = [tmp6Result, width, height];
   const memo = React.useMemo(() => {
-    let obj = quest(width[10]);
-    obj = { assetUrl: closure_3.url, width, height };
+    quest(width[10]);
+    const obj = { assetUrl: closure_3.url, width, height };
     return obj.getScaledImageUrl(obj);
   }, items4);
   const items5 = [quest.accessibilityLabelPrefix, name];
@@ -89,10 +88,12 @@ export default function QuestRewardTile(quest) {
         tmp17 = stateFromStores;
       }
       obj[7] = tmp17;
-      let tmp14Result = tmp14(quest(tmp4[11]).VideoComponent, obj);
+      let tmp14Result = jsx(tmp3(tmp4[11]).VideoComponent, { style: null, source: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", poster: null, resizeMode: "cover", paused: null, muted: true });
     }
     obj[2] = tmp14Result;
-    return tmp14(tmp15, obj);
+    return <tmp15 {...obj} />;
   }
-  tmp14Result = tmp14(height(tmp4[12]), { source: { uri: memo }, style: tmp9.image });
+  tmp14Result = jsx(height(tmp4[12]), { source: { uri: memo }, style: tmp9.image });
+  const tmp10 = callback(React.useState("active" === currentState.currentState), 2);
+  tmp3 = quest;
 };

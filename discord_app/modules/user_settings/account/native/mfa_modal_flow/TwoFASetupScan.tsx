@@ -2,22 +2,20 @@
 
 // Module 14145 (TwoFASetupScan)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, copy: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
+const createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
 createCacheKey[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupScan.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupScan.tsx");
 
 export default function TwoFASetupScan(totpSecret) {
   totpSecret = totpSecret.totpSecret;
-  dependencyMap = undefined;
   const tmp = callback3();
   const tmp2 = callback(React.useState(false), 2);
   dependencyMap = tmp2[1];
@@ -28,7 +26,6 @@ export default function TwoFASetupScan(totpSecret) {
   }, items);
   let obj = totpSecret(14143);
   const twoFASetupStyles = obj.useTwoFASetupStyles();
-  obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: items1, children: null };
   items1 = [, ];
   ({ modalHeader: arr2[0], text: arr2[1] } = twoFASetupStyles);
@@ -57,6 +54,6 @@ export default function TwoFASetupScan(totpSecret) {
   obj2[2] = callback2(totpSecret(1297).LegacyText, obj3);
   items2[3] = callback2(totpSecret(5433).PressableOpacity, obj2);
   obj[2] = items2;
-  obj4[0] = closure_5(totpSecret(6803).SafeAreaPaddingView, obj);
+  obj4[0] = callback(totpSecret(6803).SafeAreaPaddingView, obj);
   return callback2(totpSecret(14139).TwoFASetupModalScreen, obj4);
 };

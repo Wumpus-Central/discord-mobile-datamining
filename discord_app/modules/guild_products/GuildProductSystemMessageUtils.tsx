@@ -1,12 +1,12 @@
 // === Module 8213: getGuildProductPurchaseSystemMessageContentMobile ===
 
 // Module 8213 (getGuildProductPurchaseSystemMessageContentMobile)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
 const NOOP = ME.NOOP;
-const result = set.fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");
 
 export const getGuildProductPurchaseSystemMessageContentMobile = function getGuildProductPurchaseSystemMessageContentMobile(username) {
   let usernameHook = username.usernameOnClickHandler;

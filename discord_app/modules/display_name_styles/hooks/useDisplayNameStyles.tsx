@@ -1,13 +1,13 @@
 // === Module 4815: useDisplayNameStyles ===
 
 // Module 4815 (useDisplayNameStyles)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import noop from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 1990 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
 const useContext = noop.useContext;
-const result = set.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStyles.tsx");
+const result = obj132.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStyles.tsx");
 
 export default function useDisplayNameStyles() {
   let obj = arg0;
@@ -23,7 +23,6 @@ export default function useDisplayNameStyles() {
   let stateFromStores;
   const displayNameStylesEnabled = require(stateFromStores[3]).useDisplayNameStylesEnabled({ location: "useDisplayNameStyles" });
   const obj2 = require(stateFromStores[3]);
-  const tmp = require;
   const tmp2 = stateFromStores;
   const items = [closure_5];
   stateFromStores = require(stateFromStores[4]).useStateFromStores(items, () => {
@@ -42,7 +41,7 @@ export default function useDisplayNameStyles() {
   }
   const obj3 = require(stateFromStores[4]);
   const items1 = [closure_4];
-  const stateFromStores1 = tmp(tmp2[4]).useStateFromStores(items1, () => {
+  const stateFromStores1 = require(tmp2[4]).useStateFromStores(items1, () => {
     let member = null;
     if (null != closure_1) {
       member = null;
@@ -84,4 +83,5 @@ export default function useDisplayNameStyles() {
       displayNameStyles = displayNameStyles1;
     }
   }
+  const tmpResult = require(tmp2[4]);
 };

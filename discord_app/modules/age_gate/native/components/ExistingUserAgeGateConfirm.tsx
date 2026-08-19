@@ -2,22 +2,21 @@
 
 // Module 16523 (ExistingUserAgeGateConfirm)
 import combinedDefault from "combined" /* 1993 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, buttonWrapper: { width: "100%" } });
-const result = require("set").fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx");
+const result = require("obj132").fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGateConfirm.tsx");
 
 export default function ExistingUserAgeGateConfirm(age) {
   const onConfirm = age.onConfirm;
-  importDefault = undefined;
   dependencyMap = undefined;
   function _handleConfirm() {
     const self = this;
@@ -33,15 +32,15 @@ export default function ExistingUserAgeGateConfirm(age) {
         c4 = 3;
       } else if (arg0 === 1) {
         c4 = 3;
-        throw arg1;
+        throw shouldShowError;
       } else if (arg0 !== 2) {
-        if (arg1.shouldShowError) {
+        if (shouldShowError.shouldShowError) {
           arr = arr.pop();
         }
         c3 = 0;
       }
       c3 = 0;
-      return arg1;
+      return shouldShowError;
     });
     closure_3 = tmp;
     const apply = tmp.apply;
@@ -56,7 +55,6 @@ export default function ExistingUserAgeGateConfirm(age) {
   let obj = onConfirm(1500);
   importDefault = obj.useNavigation();
   [tmp3, c2] = callback(React.useState(false), 2);
-  obj = { top: true, style: tmp.container, children: null };
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = onConfirm(1236).intl;
   obj[3] = intl.format(onConfirm(1236).t.wumolR, { age: age.age });

@@ -1,7 +1,7 @@
 // === Module 14623: items1 ===
 
 // Module 14623 (items1)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import registerAssetDefault from "registerAsset" /* 10102 */;
@@ -19,12 +19,11 @@ import registerAssetDefault12 from "registerAsset" /* 14633 */;
 import registerAssetDefault13 from "registerAsset" /* 14634 */;
 
 const StatusTypes = ME.StatusTypes;
-const result = set.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");
 
 export default function _default() {
   const items = [{ id: "1", kind: "messages-header" }, , , , , , , , , , ];
-  let obj = { id: "2", kind: "activity-cards", cards: null };
-  obj = { title: null, subtitle: null, kind: "activity", image: null, avatars: null };
+  let obj = { title: null, subtitle: null, kind: "activity", image: null, avatars: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.B6GPzA);
   const intl2 = getSystemLocale.intl;

@@ -12,7 +12,7 @@ import { HelpdeskArticles } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
   let AdTopicOptOuts = adTopic(4066).AdTopicOptOuts;
@@ -26,18 +26,18 @@ function AdTopicRow(adTopic) {
   obj[1] = intl2.string(hasItem ? tmp3.B9PPxE : tmp3.Y9ZOp8);
   obj[2] = !hasItem;
   obj[3] = function onValueChange(arg0) {
-    const AdTopicOptOuts = adTopic(closure_1_2[6]).AdTopicOptOuts;
+    const AdTopicOptOuts = adTopic(dependencyMap[6]).AdTopicOptOuts;
     const set = new Set(AdTopicOptOuts.getSetting());
     if (arg0) {
       set.delete(adTopic);
     } else {
       set.add(adTopic);
     }
-    const AdTopicOptOuts2 = adTopic(closure_1_2[6]).AdTopicOptOuts;
+    const AdTopicOptOuts2 = adTopic(dependencyMap[6]).AdTopicOptOuts;
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7178).TableSwitchRow, obj);
+  return callback(adTopic(7178).TableSwitchRow, obj);
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -45,15 +45,13 @@ let obj = {};
 obj[require("create").AdTopic.REAL_MONEY_GAMING] = messagesProxyDefault.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
-obj = { content: null };
 obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 let closure_10 = createCacheKey.createStyles(obj);
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/ManageSponsoredContentScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/ManageSponsoredContentScreen.tsx");
 
 export default function ManageSponsoredContentScreen() {
-  obj = { style: callback3().content, children: null };
-  obj = { hasIcons: false, description: null };
+  { style: callback3().content, children: null };
   const intl = getSystemLocale.intl;
   obj = { helpdeskArticle: combinedDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
   obj[1] = intl.format(messagesProxyDefault["z/MfaY"], obj);
@@ -61,7 +59,7 @@ export default function ManageSponsoredContentScreen() {
   obj1 = { hasIcons: false, title: null, children: null };
   const intl2 = getSystemLocale.intl;
   obj1[1] = intl2.string(messagesProxyDefault.OkmBx0);
-  obj1[2] = closure_8.map((adTopic) => callback(closure_9, { adTopic }, adTopic));
+  obj1[2] = closure_8.map((item, index) => callback(closure_9, { adTopic: item }, item));
   items[1] = callback(TableRowGroupTitle.TableRowGroup, obj1);
   obj[1] = items;
   return callback2(View, obj);

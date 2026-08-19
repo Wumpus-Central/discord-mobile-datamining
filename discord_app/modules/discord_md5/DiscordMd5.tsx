@@ -2,10 +2,9 @@
 
 // Module 4858 (fromBlob)
 import _modDef4859 from "module_4859" /* 4859 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let prototype;
-prototype = function DiscordMd5() {
+const prototype = function DiscordMd5() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromBlob"] = function fromBlob(arg0) {
@@ -22,7 +21,7 @@ prototype["fromArrayBuffer"] = function fromArrayBuffer(arg0) {
 prototype["fromDataURI"] = function fromDataURI(arg0) {
   closure_0 = arg0;
   const resolved = Promise.resolve();
-  return resolved.then(() => {
+  return resolved.then((result) => {
     let length;
     const match = /^data:[^;]*;base64,(.*)$/.exec(callback);
     if (null == match) {
@@ -44,12 +43,11 @@ prototype["fromDataURI"] = function fromDataURI(arg0) {
           length = atobResult.length;
         } while (num < length);
       }
-      const _ArrayBuffer = callback(closure_1_1[1]).ArrayBuffer;
+      const _ArrayBuffer = callback(dependencyMap[1]).ArrayBuffer;
       return _ArrayBuffer.hash(arrayBuffer);
     }
-    const obj = /^data:[^;]*;base64,(.*)$/;
   });
 };
-const result = require("set").fileFinishedImporting("modules/discord_md5/DiscordMd5.tsx");
+const result = require("obj132").fileFinishedImporting("modules/discord_md5/DiscordMd5.tsx");
 
 export default prototype;

@@ -1,16 +1,16 @@
 // === Module 7933: PremiumTypes ===
 
 // Module 7933 (PremiumTypes)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
+const require = fn;
 const PremiumTypes = GuildFeatures.PremiumTypes;
 const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
 let items = [, ];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = PremiumTypes);
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx");
 
 export const NITRO_PLAN_TIERS = items;
 export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) {
@@ -84,10 +84,10 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     tmp16 = num;
   }
   obj[3] = tmp16;
-  found = memo.find((interval) => interval.interval === priceString1.MONTH);
-  found1 = memo.find((interval) => interval.interval === priceString1.YEAR);
+  found = memo.find((item, index) => item.interval === priceString1.MONTH);
+  found1 = memo.find((item, index) => item.interval === priceString1.YEAR);
   let basePlanId;
-  let tmp19 = importDefault;
+  const tmp19 = importDefault;
   const tmpResult1 = memo2(memo[9]);
   if (found != null) {
     basePlanId = found.basePlanId;
@@ -101,7 +101,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     priceString = null;
   }
   let basePlanId1;
-  let tmp20 = importDefault(memo[10]);
+  const tmp20 = importDefault(memo[10]);
   if (found1 != null) {
     basePlanId1 = found1.basePlanId;
   }
@@ -126,10 +126,9 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
       } else {
         const _Map = Map;
         const map = new Map(get);
-        const result = map.set(tmp, tmp2);
+        const result = map.set(closure_0, tmp2);
         return map;
       }
-      tmp = closure_0;
     });
   }, []);
   const memo1 = obj3.useMemo(() => {
@@ -149,14 +148,10 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
       const result1 = map.set(found1.productId, priceString1);
     }
     while (tmp12 !== undefined) {
-      let tmp14 = found;
       let tmp15 = found(tmp13, 2);
       [tmp16, tmp18] = tmp15;
-      let tmp17 = tmp16;
       if (map.has(tmp16)) {
-        let tmp19 = tmp16;
-        let tmp20 = tmp18;
-        let result2 = map.set(tmp17, tmp18);
+        let result2 = map.set(tmp16, tmp18);
       }
       continue;
     }
@@ -167,11 +162,8 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     const set = new Set();
     if (memo1.size > 0) {
       for (const item10015 of memo) {
-        let tmp4 = memo1;
-        let tmp3 = item10015;
         if (!memo1.has(item10015.productId)) {
-          let tmp5 = item10015;
-          let addResult = set.add(tmp3.productId);
+          let addResult = set.add(item10015.productId);
         }
         continue;
       }
@@ -197,7 +189,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     }
   }, items3);
   if (null != first1) {
-    const found2 = memo.find((productId) => productId.productId === first1);
+    const found2 = memo.find((item, index) => item.productId === first1);
     let tmp42 = null != tmp4;
     if (tmp42) {
       let premiumTier;
@@ -239,12 +231,12 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     return obj1;
   }
   importDefault = isEligibleForBogoOffer ? priceString1.MONTH : priceString1.YEAR;
-  const found3 = memo.filter((productId) => !memo2.has(productId.productId));
+  const found3 = memo.filter((item, index) => !memo2.has(item.productId));
   let arr7 = memo;
   if (found3.length > 0) {
     arr7 = found3;
   }
-  let found4 = arr7.find((interval) => interval.interval === closure_1);
+  let found4 = arr7.find((item, index) => item.interval === closure_1);
   if (found4 == null) {
     found4 = arr7[0];
   }

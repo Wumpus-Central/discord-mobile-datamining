@@ -1,27 +1,27 @@
 // === Module 10279: getDeviceMediaPhotos ===
 
 // Module 10279 (getDeviceMediaPhotos)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 500 */;
+import obj1322 from "obj132" /* 500 */;
 import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 10280 */;
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 let closure_4 = new timestampDefault("DeviceMedia.tsx");
 const tmp2 = new timestampDefault("DeviceMedia.tsx");
-const result = set.fileFinishedImporting("modules/device/native/getDeviceMediaPhotos.tsx");
+const result = obj132.fileFinishedImporting("modules/device/native/getDeviceMediaPhotos.tsx");
 
 export default function getDeviceMediaPhotos(arg0) {
   ({ batchSize, extensions, onFetched, onError } = arg0);
   ({ endCursor, lastAssetIndex, lastNodeImageUri } = arg0);
   if (onError === undefined) {
-    onError = function u(arg0) {
-      logger.log("CameraRollUtils -- Failed to get photos with error " + arg0);
-      callback(table[2]).captureException(arg0, { tags: { source: "DEVICE_MEDIA" } });
+    onError = function u(error) {
+      logger.log("CameraRollUtils -- Failed to get photos with error " + error);
+      callback(table[2]).captureException(error, { tags: { source: "DEVICE_MEDIA" } });
     };
   }
-  let obj = set2;
+  let obj = obj1322;
   if (obj.isIOS()) {
     const obj3 = get_ActivityIndicatorDefault;
     if (obj3 != null) {

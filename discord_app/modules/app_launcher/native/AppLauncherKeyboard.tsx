@@ -8,58 +8,46 @@ import { AnalyticEvents } from "ME" /* 676 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { KEYBOARD_ANIMATION_CONFIG } from "KEYBOARD_ANIMATION_DURATION" /* 11208 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let obj = { onboardingRoundingView: null, onboardingHeader: null, onboardingNavigatorContent: null };
-obj = { borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
+let obj = { borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 obj[0] = obj;
-createCacheKey = { borderWidth: 2, borderBottomWidth: 0, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: "transparent", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
+const createCacheKey = { borderWidth: 2, borderBottomWidth: 0, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: "transparent", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 obj[1] = createCacheKey;
 obj[2] = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 let closure_11 = createCacheKey.createStyles(obj);
 let c12 = null;
 let closure_13 = { code: "function AppLauncherKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}" };
 let closure_14 = { code: "function AppLauncherKeyboardTsx2(i,prev){const{runOnJS,handleOnboardingParamChange,showOnboarding}=this.__closure;if(i===prev)return;runOnJS(handleOnboardingParamChange)(i,showOnboarding);}" };
-let obj2 = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   context = context.context;
   const chatInputRef = context.chatInputRef;
   const onClose = context.onClose;
   const transitionState = context.transitionState;
   const entrypoint = context.entrypoint;
-  let ref;
-  let ref1;
-  let minimum;
-  closure_7 = undefined;
-  closure_8 = undefined;
-  let isScreenReaderEnabled;
-  let visibleContent;
   let onboardingNavigatorContent;
-  c12 = undefined;
-  let ref2;
-  let callback1;
   let obj = context(onClose[8]);
   const defaultAppLauncherWidth = obj.useDefaultAppLauncherWidth(entrypoint);
-  ref = transitionState.useRef(context(onClose[9]).AppLauncherKeyboardCloseReason.DISMISSED);
-  ref1 = transitionState.useRef(undefined);
+  const ref = transitionState.useRef(context(onClose[9]).AppLauncherKeyboardCloseReason.DISMISSED);
+  const ref1 = transitionState.useRef(undefined);
   const tmp6 = onboardingNavigatorContent();
   const tmp8 = chatInputRef(onClose[10])();
-  minimum = tmp8.minimum;
+  const minimum = tmp8.minimum;
   closure_7 = transitionState.useRef(Date.now());
   closure_8 = transitionState.useRef(false);
   obj1 = context(onClose[11]);
-  isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  let isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   obj = { channelId: context.channel.id };
-  visibleContent = chatInputRef(onClose[12])(obj).visibleContent;
+  const visibleContent = chatInputRef(onClose[12])(obj).visibleContent;
   onboardingNavigatorContent = null != visibleContent;
   let obj3 = context(onClose[13]);
   const sharedValue = obj3.useSharedValue(-1);
   c12 = sharedValue;
   const sharedValue1 = context(onClose[13]).useSharedValue(0);
-  ref2 = transitionState.useRef(null);
+  const ref2 = transitionState.useRef(null);
   const items = [ref2];
   const callback = transitionState.useCallback(() => {
     if (ref2 != null) {
@@ -69,7 +57,7 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
       }
     }
   }, items);
-  callback1 = transitionState.useCallback((arg0, arg1) => {
+  const callback1 = transitionState.useCallback((arg0, arg1) => {
     let tmp = arg1;
     if (arg1) {
       tmp = 1 === arg0;
@@ -121,14 +109,14 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
       obj = { context: null, visibleContent: null, bottomOffset: null };
       obj[0] = context;
       obj[1] = visibleContent;
-      const tmp9 = chatInputRef(tmp5[17]);
+      const tmp9 = chatInputRef(onClose[17]);
       let num = 0;
       if (!tmp4Result.isAndroid()) {
         num = minimum;
       }
       obj[2] = num;
       tmp3Result = ref2(tmp9, obj);
-      tmp4Result = context(tmp5[18]);
+      tmp4Result = context(onClose[18]);
     }
     children[1] = tmp3Result;
     return visibleContent(isScreenReaderEnabled, { children });
@@ -160,8 +148,8 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   }, items4);
   const callback4 = transitionState.useCallback(() => {
     if (!ref2.current) {
-      let obj = context(onClose[19]);
-      obj = { time_spent: null, reason: null };
+      context(onClose[19]);
+      let obj = { time_spent: null, reason: null };
       const _Date = Date;
       obj[0] = Date.now() - ref.current;
       obj[1] = ref.current;
@@ -195,6 +183,7 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
       }
       const obj4 = context(onClose[21]);
     }
+    obj3 = context(onClose[20]);
   }, items5);
   obj1 = { ref: ref2, animationConfigs: closure_7, animatedIndex: sharedValue, animatedPosition: sharedValue1, chatInputRef, forceMaxHeight: null, enablePanDownToClose: null, onAnimate: null, onClose: null, transitionState: null, backdropComponent: null, disableHeaderRoundingAnimation: null, roundingViewStyle: null, headerStyle: null, isAppsKeyboard: true, rendersHandle: null, width: null, children: null };
   let obj6 = context(onClose[13]);
@@ -242,7 +231,7 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   obj1[17] = closure_8(tmp24, obj2);
   return closure_8(tmp22, obj1);
 });
-let result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherKeyboard.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_launcher/native/AppLauncherKeyboard.tsx");
 
 export default memoResult;
 export function setAppLauncherA11yFocusReturnRef(current2) {

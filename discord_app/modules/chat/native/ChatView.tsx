@@ -3,22 +3,21 @@
 // Module 10546
 import ThemesDefault from "Themes" /* 712 */;
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 4495 */;
+import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
 import { createChannelRecord } from "createChannelRecord" /* 1395 */;
-import closure_6 from "ensureGuildLoaded" /* 1391 */;
-import closure_7 from "reinjectEphemerals" /* 4994 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 import { ChannelTypes } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let obj = { empty: null, messages: null, chat: null };
-obj = { flex: 1, borderTopWidth: require("get ActivityIndicator").StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj = { flex: 1, borderTopWidth: require("get ActivityIndicator").StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[0] = obj;
 obj[1] = { flex: 1, overflow: "hidden" };
-createCacheKey = { backgroundColor: ThemesDefault.colors.CHANNEL_BACKGROUND_DEFAULT, justifyContent: "flex-start", overflow: "hidden", flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.CHANNEL_BACKGROUND_DEFAULT, justifyContent: "flex-start", overflow: "hidden", flex: 1 };
 obj[2] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard) {
@@ -33,8 +32,6 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
     flag2 = false;
   }
   ({ guildId, HACK_fixModalInteraction: closure_3, screenIndex: closure_4, secondaryTextFieldRef: createChannelRecord, setNoExtractUI: closure_6 } = alwaysRespectKeyboard);
-  let setInterstitial;
-  let stateFromStores;
   channel = undefined;
   closure_10 = undefined;
   let ref;
@@ -47,7 +44,7 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
   closure_18 = undefined;
   closure_19 = undefined;
   closure_20 = undefined;
-  setInterstitial = callback();
+  let setInterstitial = callback();
   let obj = importAllResult;
   let items = [channelId, flag];
   const effect = importAllResult.useEffect(() => {
@@ -58,7 +55,7 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
   }, items);
   obj1 = flag(chatInputRef[11]);
   let items1 = [closure_6];
-  stateFromStores = obj1.useStateFromStores(items1, () => closure_1_6.getChannel(channelId));
+  let stateFromStores = obj1.useStateFromStores(items1, () => closure_1_6.getChannel(channelId));
   let items2 = [stateFromStores, channelId];
   const memo = importAllResult.useMemo(() => {
     let tmp2 = stateFromStores;
@@ -68,7 +65,7 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
       obj[1] = stateFromStores.GUILD_TEXT;
       const intl = flag(chatInputRef[12]).intl;
       obj[2] = intl.string(flag(chatInputRef[12]).t.ZTNur7);
-      tmp2 = closure_1_5(obj);
+      tmp2 = createChannelRecord(obj);
     }
     obj = { channel: tmp2, channelIsLoading: null == stateFromStores };
     return obj;
@@ -95,7 +92,6 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
     let tmp = 0 === messages.length;
     if (tmp) {
       tmp = messages.loadingMore || !messages.ready;
-      const tmp2 = messages.loadingMore || !messages.ready;
     }
     const obj = { shouldRenderPlaceholder: tmp, shouldRenderBegginingRow: null };
     const hasMoreBefore = messages.hasMoreBefore;
@@ -146,7 +142,7 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
     closure_10.current = channel.id;
   }, items9);
   const effect3 = obj.useEffect(() => () => {
-    const result = closure_1_0(closure_1_2[21]).clearOldestUnreadMessageId(ref.current);
+    const result = flag(chatInputRef[21]).clearOldestUnreadMessageId(ref.current);
   }, []);
   obj = { profile: flag(chatInputRef[33]).Profiles.ChatView, children: null };
   const items10 = [channel(channelId(chatInputRef[34]), { channelId, guildId }), , ];
@@ -162,18 +158,12 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
     tmp9Result.setInterstitial("NsfwGateChat");
   } else {
     function renderMessagesWrapper() {
-      let obj = { style: setInterstitial.messages, channelId, stickyHeader: null, children: null };
-      obj = { channel, ref: closure_12, scrollToNewMessages: closure_19 };
+      let obj = { channel, ref: closure_12, scrollToNewMessages: closure_19 };
       obj[2] = channel(channelId(chatInputRef[23]), obj);
       obj = { alwaysRespectKeyboard: flag, channel, screenIndex: closure_4, chatInputRef, HACK_fixModalInteraction: closure_3, isResourceChannel: closure_14, onPressKey: closure_18, onScroll: closure_17, ref, style: setInterstitial.chat, visibleMessagesWindowHandler: closure_13, children: null };
-      const tmp2 = ref;
       const tmp5 = channelId(chatInputRef[22]);
-      const tmp8 = channel;
       const items = [channel(channelId(chatInputRef[25]), { ref: chatInputRef, channel, isResourceChannel: closure_14, screenIndex: closure_4, secondaryTextFieldRef: closure_5, setNoExtractUI: closure_6, onJumpToPresent: closure_20 }), ];
       const obj2 = { channelId, guildId: null, shouldRender: null };
-      obj1 = { ref: chatInputRef, channel, isResourceChannel: closure_14, screenIndex: closure_4, secondaryTextFieldRef: closure_5, setNoExtractUI: closure_6, onJumpToPresent: closure_20 };
-      const tmp11 = ref;
-      const tmp12 = closure_20;
       const tmp9 = channelId(chatInputRef[24]);
       obj2[1] = channel.getGuildId();
       obj2[2] = c16;
@@ -184,34 +174,33 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
       let tmp7Result = null;
       if (!obj5.isAndroid()) {
         const obj3 = { channelId: null, messagesRef: null };
-        obj3[0] = tmp8.id;
-        obj3[1] = tmp11;
-        tmp7Result = tmp7(tmp3(tmp4[28]), obj3);
+        obj3[0] = channel.id;
+        obj3[1] = ref;
+        tmp7Result = channel(channelId(chatInputRef[28]), obj3);
       }
       items1[1] = tmp7Result;
       tmp7Result = null;
       if (c15) {
         const obj4 = { screenIndex: null };
-        obj4[0] = tmp10;
-        tmp7Result = tmp7(tmp3(tmp4[29]), obj4);
+        obj4[0] = closure_4;
+        tmp7Result = channel(channelId(chatInputRef[29]), obj4);
       }
       items1[2] = tmp7Result;
       const tmp13 = channelId(chatInputRef[26]);
-      const tmp14 = flag;
       let tmp7Result1 = null;
       if (tmp14Result.isAndroid()) {
         obj5 = { channelId: null, screenIndex: null, onJumpToPresent: null };
-        obj5[0] = tmp6;
-        obj5[1] = tmp10;
-        obj5[2] = tmp12;
-        tmp7Result1 = tmp7(tmp3(tmp4[30]), obj5);
+        obj5[0] = channelId;
+        obj5[1] = closure_4;
+        obj5[2] = closure_20;
+        tmp7Result1 = channel(channelId(chatInputRef[30]), obj5);
       }
       const obj6 = { children: null };
       items1[3] = tmp7Result1;
       obj[3] = items1;
       const items2 = [callback(tmp5, obj), channel(channelId(chatInputRef[31]), { channelId }), channel(channelId(chatInputRef[32]), { channelId })];
       obj6[0] = items2;
-      return callback(tmp2, obj6);
+      return callback(ref, obj6);
     }
     if (channelIsLoading) {
       if (!connected.isConnected()) {
@@ -269,6 +258,6 @@ const memoResult = importAllResult.memo(function ChatView(alwaysRespectKeyboard)
   obj[1] = items10;
   return closure_10(channelId(chatInputRef[33]), obj);
 });
-let result = require("set").fileFinishedImporting("modules/chat/native/ChatView.tsx");
+let result = require("obj132").fileFinishedImporting("modules/chat/native/ChatView.tsx");
 
 export default memoResult;

@@ -1,14 +1,14 @@
 // === Module 16352: useTapGestures ===
 
 // Module 16352 (useTapGestures)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_4 = { code: "function useTapGesturesTsx1(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('double');}" };
 let closure_5 = { code: "function useTapGesturesTsx2(event,manager){const{isFocusedVideoZoomed}=this.__closure;if(isFocusedVideoZoomed.get()){manager.fail();}}" };
 let closure_6 = { code: "function useTapGesturesTsx3(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('single');}" };
 let closure_7 = { code: "function useTapGesturesTsx4(){const{runOnJS,triggerHapticFeedback,HapticFeedbackTypes,handleEvent}=this.__closure;runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);runOnJS(handleEvent)('long');}" };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useTapGestures.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useTapGestures.tsx");
 
 export default function useTapGestures(onSingleTap) {
   closure_0 = onSingleTap;
@@ -71,12 +71,12 @@ export default function useTapGestures(onSingleTap) {
     const fn = function b() {
       return handleEvent(ref[3]).runOnJS(handleEvent)("double");
     };
-    obj = { runOnJS: tmp(4115).runOnJS, handleEvent };
+    obj = { runOnJS: onSingleTap(4115).runOnJS, handleEvent };
     fn.__closure = obj;
     fn.__workletHash = 13571114432746;
     fn.__initData = closure_4;
     const onTouchesDownResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2).onTouchesDown(S);
-    const Gesture3 = tmp(6377).Gesture;
+    const Gesture3 = onSingleTap(6377).Gesture;
     const onStartResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2).onTouchesDown(S).onStart(fn);
     let tmp6 = tmp3;
     if (tmp3) {
@@ -92,7 +92,7 @@ export default function useTapGestures(onSingleTap) {
     fn2.__workletHash = 14109132753191;
     fn2.__initData = gesturesEnabled;
     obj1 = { runOnJS: onSingleTap(4115).runOnJS, handleEvent };
-    const Gesture4 = tmp(6377).Gesture;
+    const Gesture4 = onSingleTap(6377).Gesture;
     const onStartResult1 = maxDistanceResult1.onStart(fn2);
     if (tmp3) {
       tmp3 = closure_5;

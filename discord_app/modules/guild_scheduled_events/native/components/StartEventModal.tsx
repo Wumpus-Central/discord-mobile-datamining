@@ -6,22 +6,21 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import registerAssetDefault from "registerAsset" /* 8176 */;
 import GuildEventCardControlsDefault from "GuildEventCardControls" /* 8899 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 8793 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function NavigationBar(onClose) {
   onClose = onClose.onClose;
-  let obj = { children: null };
-  obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+  let obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl = onClose(1236).intl;
   obj[1] = intl.string(onClose(1236).t.cpT0Cq);
   obj[2] = function onPress() {
@@ -34,8 +33,7 @@ function NavigationBar(onClose) {
 }
 function StartEventHeader(children) {
   const tmp = callback3();
-  let obj = { style: tmp.header, children: null };
-  obj = { style: tmp.headerPrivacyLevel, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+  let obj = { style: tmp.headerPrivacyLevel, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["q+fFJv"]);
   const items = [callback(Text.Text, obj), ];
@@ -53,28 +51,22 @@ class PreviewEventCard {
 }
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: c9, GuildScheduledEventEntityTypes: c10 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { mainContainer: null, container: null, headerContainer: null, footerContainer: null, header: null, headerTitle: null, buttonContainer: null, previewCard: null, headerPrivacyLevel: null };
-createCacheKey = { flex: 1, padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "column", justifyContent: "space-between", alignContent: "center" };
 createCacheKey[2] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { display: "flex", flexDirection: "column" };
-let obj1 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { alignItems: "center", paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[5] = { lineHeight: 24, textAlign: "center" };
-let obj2 = { alignItems: "center", paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[6] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
-let obj3 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[7] = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, shadowColor: "#000", shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 } };
 createCacheKey[8] = { textAlign: "center", lineHeight: 18 };
 let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, shadowColor: "#000", shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 } };
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/StartEventModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/StartEventModal.tsx");
 
 export default function StartEventModal(event) {
   event = event.event;
   const onCloseActionSheet = event.onCloseActionSheet;
-  let guild_id;
   closure_3 = undefined;
   let first;
   let React;
@@ -84,7 +76,7 @@ export default function StartEventModal(event) {
     if (arg0 === undefined) {
       flag = false;
     }
-    onCloseActionSheet(guild_id[11]).popWithKey(closure_1_11);
+    onCloseActionSheet(guild_id[11]).popWithKey(START_EVENT_MODAL_KEY);
     if (onCloseActionSheet != null) {
       onCloseActionSheet(flag);
     }
@@ -160,7 +152,7 @@ export default function StartEventModal(event) {
     return applyArgumentsResult;
   }
   let tmp = callback3();
-  guild_id = event.guild_id;
+  const guild_id = event.guild_id;
   let obj = event(guild_id[18]);
   const items = [_handleStart];
   const stateFromStores = obj.useStateFromStores(items, () => _handleStart.getGuild(guild_id));
@@ -178,7 +170,6 @@ export default function StartEventModal(event) {
   React = tmp7[1];
   [c6, tmp11] = first(onCloseActionSheet(guild_id[20])(), 2);
   ({ loading, error } = tmp11);
-  obj = { top: true, bottom: true, style: tmp.mainContainer, children: null };
   const items3 = [callback(NavigationBar, { onClose: onCloseModal }), ];
   obj = { style: tmp.container, children: null };
   obj1 = { style: tmp.headerContainer, children: null };
@@ -190,7 +181,7 @@ export default function StartEventModal(event) {
   if (hasItem) {
     const obj3 = { channelId: null };
     obj3[0] = event.channel_id;
-    hasItem = tmp13(onCloseActionSheet(tmp3[22]), obj3);
+    hasItem = callback(onCloseActionSheet(tmp3[22]), obj3);
   }
   const items6 = [hasItem, , ];
   let tmp13Result = null;
@@ -200,7 +191,7 @@ export default function StartEventModal(event) {
     obj4[1] = function handleToggleNotifyMembers() {
       callback2((arg0) => !arg0);
     };
-    tmp13Result = tmp13(tmp2(tmp3[23]).NotificationToggle, obj4);
+    tmp13Result = callback(tmp2(tmp3[23]).NotificationToggle, obj4);
   }
   items6[1] = tmp13Result;
   const obj5 = { style: tmp.buttonContainer, children: null };
@@ -208,7 +199,7 @@ export default function StartEventModal(event) {
   if (null != error) {
     const obj6 = { variant: "text-sm/medium", color: "text-feedback-critical", children: null };
     obj6[2] = error.getAnyErrorMessage();
-    tmp13Result = tmp13(tmp2(tmp3[16]).Text, obj6);
+    tmp13Result = callback(tmp2(tmp3[16]).Text, obj6);
   }
   const items7 = [tmp13Result, ];
   const obj7 = { variant: "active", text: null, onPress: null, disabled: null, loading: null };

@@ -1,40 +1,34 @@
 // === Module 8883: EditGuildEventDetails ===
 
 // Module 8883 (EditGuildEventDetails)
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 4370 */;
 import { GuildScheduledEventEntityTypes as closure_7 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ error: { paddingVertical: 8 } });
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");
 
 export default function EditGuildEventDetails(guildEvent) {
   guildEvent = guildEvent.guildEvent;
   const onChange = guildEvent.onChange;
   scheduledStartTime = undefined;
-  let scheduledEndTime;
-  let recurrenceRule;
   let memo;
-  let memo1;
   let constants;
   let callback;
-  let ref;
-  closure_10 = undefined;
   let callback2;
-  closure_12 = undefined;
   ({ description, scheduledStartTime } = guildEvent);
-  scheduledEndTime = guildEvent.scheduledEndTime;
-  recurrenceRule = guildEvent.recurrenceRule;
+  const scheduledEndTime = guildEvent.scheduledEndTime;
+  const recurrenceRule = guildEvent.recurrenceRule;
   const items = [scheduledStartTime];
   ({ name, entityType } = guildEvent);
   memo = memo.useMemo(() => onChange(scheduledEndTime[7])(scheduledStartTime), items);
   const items1 = [scheduledEndTime, scheduledStartTime];
-  memo1 = memo.useMemo(() => {
+  const memo1 = memo.useMemo(() => {
     if (null != scheduledEndTime) {
       let addResult = onChange(scheduledEndTime[7])(tmp);
     } else {
@@ -50,7 +44,7 @@ export default function EditGuildEventDetails(guildEvent) {
   const memo3 = memo.useMemo(() => onChange(scheduledEndTime[7])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"), []);
   const memo4 = memo.useMemo(() => onChange(scheduledEndTime[7])(memo).add(15, "minutes"), items2);
   const memo5 = memo.useMemo(() => onChange(scheduledEndTime[7])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"), []);
-  ref = memo.useRef(null);
+  const ref = memo.useRef(null);
   const tmp10 = memo1(guildEvent.initialGuildEvent);
   closure_10 = tmp10;
   const tmp4 = recurrenceRule(memo.useState(() => guildEvent(scheduledEndTime[8]).recurrenceRuleToOption(onChange(scheduledEndTime[7])(scheduledStartTime), recurrenceRule)), 2);
@@ -87,12 +81,12 @@ export default function EditGuildEventDetails(guildEvent) {
       const AccessibilityAnnouncer = guildEvent(tmp2[14]).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp13.message);
     }
+    const obj = scheduledStartTime(scheduledEndTime[12]);
   };
   obj1[3] = null != tmp12;
   items3[1] = callback(guildEvent(scheduledEndTime[11]).Button, obj1);
   obj[0] = items3;
   const tmp11 = recurrenceRule(memo.useState(null), 2);
-  const tmp16 = ref;
   let obj2 = { action: closure_10(ref, obj), ref, children: null };
   const tmp15Result = closure_10(ref, obj);
   const obj3 = { title: null, subtitle: null };
@@ -176,13 +170,13 @@ export default function EditGuildEventDetails(guildEvent) {
   items4[4] = callback(guildEvent(scheduledEndTime[17]).GuildEventRecurrence, {
     startDate: memo,
     recurrenceRule,
-    onRecurrenceChange(c7) {
+    onRecurrenceChange(closure_3) {
       if (null != memo) {
-        let obj = guildEvent(scheduledEndTime[8]);
-        obj = { recurrenceRule: null };
-        obj[0] = obj.recurrenceOptionToRecurrenceRule(c7, tmp);
+        guildEvent(scheduledEndTime[8]);
+        const obj = { recurrenceRule: null };
+        obj[0] = obj.recurrenceOptionToRecurrenceRule(closure_3, tmp);
         onChange(obj);
-        _undefined(c7);
+        _undefined(closure_3);
       }
     }
   });

@@ -1,9 +1,9 @@
 // === Module 4980: hasStream ===
 
 // Module 4980 (hasStream)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
 
 export const hasStream = function hasStream(voiceStates) {
   if (null == voiceStates) {

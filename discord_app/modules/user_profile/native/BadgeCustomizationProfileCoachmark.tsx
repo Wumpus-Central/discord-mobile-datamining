@@ -1,20 +1,19 @@
 // === Module 16021: BadgeCustomizationProfileCoachmark ===
 
 // Module 16021 (BadgeCustomizationProfileCoachmark)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
 
 export default function BadgeCustomizationProfileCoachmark(visible) {
   visible = visible.visible;
   const markAsDismissed = visible.markAsDismissed;
   const onTryItOut = visible.onTryItOut;
-  let stateFromStores;
   const items = [closure_4];
-  stateFromStores = visible(onTryItOut[3]).useStateFromStores(items, () => markAsDismissed(onTryItOut[4]).canUsePremiumProfileCustomization(currentUser.getCurrentUser()));
+  const stateFromStores = visible(onTryItOut[3]).useStateFromStores(items, () => markAsDismissed(onTryItOut[4]).canUsePremiumProfileCustomization(currentUser.getCurrentUser()));
   const items1 = [stateFromStores, visible, markAsDismissed, onTryItOut];
   const memo = stateFromStores.useMemo(() => {
     const obj = { title: null, description: null, visible: null, position: "bottom", onDismiss: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
@@ -27,7 +26,7 @@ export default function BadgeCustomizationProfileCoachmark(visible) {
     obj[4] = function onDismiss() {
       return callback(closure_1_5.USER_DISMISS);
     };
-    const intl3 = tmp(tmp2[5]).intl;
+    const intl3 = visible(onTryItOut[5]).intl;
     obj[5] = intl3.string(visible(onTryItOut[5]).t["4P5I8V"]);
     obj[7] = function onButtonPress() {
       callback(closure_1_5.TAKE_ACTION);

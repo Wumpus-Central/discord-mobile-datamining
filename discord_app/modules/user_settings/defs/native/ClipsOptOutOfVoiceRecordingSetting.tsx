@@ -2,10 +2,10 @@
 
 // Module 14332 (_updateClipsAllowVoiceRecording)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import createToggle from "createToggle" /* 10669 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import "createToggle";
 
-require = arg1;
+require = fn;
 function _updateClipsAllowVoiceRecording() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -77,7 +77,7 @@ function _updateClipsAllowVoiceRecording() {
   }
   return applyArgumentsResult;
 }
-createToggle = {
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.AGDDkH);
@@ -100,6 +100,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx");
 
 export default createToggle;

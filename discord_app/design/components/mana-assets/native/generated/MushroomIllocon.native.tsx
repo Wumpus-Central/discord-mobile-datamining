@@ -1,13 +1,13 @@
 // === Module 5948: MushroomIllocon ===
 
 // Module 5948 (MushroomIllocon)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import metadataDefault from "metadata" /* 5949 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/MushroomIllocon.native.tsx");
+const result = obj132.fileFinishedImporting("design/components/mana-assets/native/generated/MushroomIllocon.native.tsx");
 
 export const MushroomIllocon = function MushroomIllocon(size) {
   let num = size.size;
@@ -15,8 +15,7 @@ export const MushroomIllocon = function MushroomIllocon(size) {
   if (num === undefined) {
     num = 64;
   }
-  let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
+  const obj = { uri: metadataDefault };
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;

@@ -1,11 +1,11 @@
 // === Module 11965: getFavoritesAddButtonLabel ===
 
 // Module 11965 (getFavoritesAddButtonLabel)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 3079 */;
 
-const result = set.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
+const result = obj132.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
 
 export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(length) {
   if (length >= 2) {

@@ -31,10 +31,10 @@ prototype["requiredActionsIncludes"] = function requiredActionsIncludes(id, item
   closure_0 = requiredActionsResult;
   let reduced = null != requiredActionsResult;
   if (reduced) {
-    reduced = items.reduce((arg0, arg1) => {
-      let hasItem = arg0;
-      if (!arg0) {
-        hasItem = closure_0.includes(arg1);
+    reduced = items.reduce((acc, item, index) => {
+      let hasItem = acc;
+      if (!acc) {
+        hasItem = closure_0.includes(item);
       }
       return hasItem;
     }, false);
@@ -84,6 +84,6 @@ const loginRequiredActionStore = new LoginRequiredActionStore(dispatcherDefault,
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/auth/LoginRequiredActionStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/LoginRequiredActionStore.tsx");
 
 export default loginRequiredActionStore;

@@ -1,7 +1,7 @@
 // === Module 7358: getSearchSessionId ===
 
 // Module 7358 (getSearchSessionId)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import v1 from "v1" /* 514 */;
 import trackSettingSearchInputFocused from "trackSettingSearchInputFocused" /* 7359 */;
 
@@ -23,14 +23,12 @@ prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
   if (!this.isQueryEnteredTracked) {
     const result = trackSettingSearchInputFocused.trackSettingSearchQueryEntered();
     tmp.isQueryEnteredTracked = true;
-    const obj = trackSettingSearchInputFocused;
   }
 };
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    let obj = trackSettingSearchInputFocused;
-    obj = { searchSessionDuration: null };
+    const obj = { searchSessionDuration: null };
     const _Date = Date;
     obj[0] = Date.now() - self.searchSessionStartTime;
     const result = obj.trackSettingSearchClosed(obj);
@@ -38,7 +36,8 @@ prototype["terminate"] = function terminate() {
     self.searchSessionStartTime = null;
     self.isQueryEnteredTracked = false;
   }
+  tmp = null != this.searchSessionId && null != self.searchSessionStartTime;
 };
-let result = set.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
+let result = obj132.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
 
 export default Object.create(SettingSearchSessionAnalyticsManager.prototype);

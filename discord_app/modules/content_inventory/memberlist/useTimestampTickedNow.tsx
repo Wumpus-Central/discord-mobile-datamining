@@ -1,13 +1,13 @@
 // === Module 12103: useTimestampTickedNow ===
 
 // Module 12103 (useTimestampTickedNow)
-import setDefault from "set" /* 687 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import obj132Default from "obj132" /* 687 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/content_inventory/memberlist/useTimestampTickedNow.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/content_inventory/memberlist/useTimestampTickedNow.tsx");
 
 export const useTimestampTickedNow = function useTimestampTickedNow() {
   let obj = arg0;
@@ -18,14 +18,13 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   if (isAppFocused === undefined) {
     isAppFocused = true;
   }
-  let _require;
   importDefault = undefined;
   const now = callback(React.useState(() => {
     const timestamp = Date.now();
     const rounded = Math.floor(timestamp / _undefined(687).Millis.SECOND);
     return rounded * _undefined(687).Millis.SECOND;
   }), 2);
-  _require = now[1];
+  const _require = now[1];
   const items = [closure_5];
   let stateFromStores = _require(589).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let slowTickMode = !isAppFocused;
@@ -35,7 +34,7 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
     }
     slowTickMode = stateFromStores;
   }
-  const SECOND = setDefault.Millis.SECOND;
+  const SECOND = obj132Default.Millis.SECOND;
   if (slowTickMode) {
     let result = 15 * SECOND;
   } else {
@@ -44,7 +43,7 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   importDefault = result;
   const items1 = [result];
   const effect = React.useEffect(() => {
-    const interval = new callback(closure_1_2[5]).Interval();
+    const interval = new callback(dependencyMap[5]).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
       const rounded = Math.floor(timestamp / closure_1_1(closure_1_2[3]).Millis.SECOND);

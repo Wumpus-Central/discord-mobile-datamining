@@ -17,6 +17,6 @@ const spotifyProtocolStore = new SpotifyProtocolStore(dispatcherDefault, {
     isRegistered = isRegistered.isRegistered;
   }
 });
-const result = require("set").fileFinishedImporting("modules/spotify/SpotifyProtocolStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/spotify/SpotifyProtocolStore.tsx");
 
 export default spotifyProtocolStore;

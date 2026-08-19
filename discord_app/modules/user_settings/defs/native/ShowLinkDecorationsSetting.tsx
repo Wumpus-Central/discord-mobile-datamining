@@ -4,10 +4,10 @@
 import initialize from "initialize" /* 589 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import setFontSize from "setFontSize" /* 13813 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import createToggle from "createToggle" /* 10669 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import "createToggle";
 
-require = arg1;
+require = fn;
 function useShowLinkDecorationsSettingValue() {
   const items = [closure_2];
   return initialize.useStateFromStores(items, () => obj.alwaysShowLinkDecorations);
@@ -15,7 +15,7 @@ function useShowLinkDecorationsSettingValue() {
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
   const result = setFontSize.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-createToggle = {
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.OLZFB8);
@@ -25,7 +25,7 @@ createToggle = {
   onValueChange: onShowLinkDecorationsValueChange
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx");
 
 export default createToggle;
 export { useShowLinkDecorationsSettingValue };

@@ -2,37 +2,32 @@
 
 // Module 16405 (ChatButton)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" }, badge: null, notificationBadge: null };
-createCacheKey = { position: "absolute", zIndex: 1, width: 10, height: 10, borderRadius: ThemesDefault.radii.round, top: 0, right: 0 };
+const createCacheKey = { position: "absolute", zIndex: 1, width: 10, height: 10, borderRadius: ThemesDefault.radii.round, top: 0, right: 0 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION };
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelChatButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelChatButton.tsx");
 
 export default function ChatButton(props) {
   props = props.props;
   const openTab = props.openTab;
   let connected;
   let React;
-  let voicePanelButtonStyles;
-  closure_5 = undefined;
-  let backgroundColor;
   const context = React.useContext(openTab(connected[4]));
   connected = context.connected;
   const tmp2 = callback();
   React = tmp2;
   let obj = props(connected[5]);
-  voicePanelButtonStyles = obj.useVoicePanelButtonStyles(props.wrapperSpecs);
+  const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(props.wrapperSpecs);
   const tmp4 = openTab(connected[6])(context.channelId);
   closure_5 = tmp4;
-  backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
+  const backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
   const items = [openTab, connected];
   callback = React.useCallback(() => {
     const value = connected.get();
@@ -48,7 +43,6 @@ export default function ChatButton(props) {
   obj[3] = React.useMemo(() => {
     let obj = { fill: backgroundColor, circleRadius: props.width / 2, cutoutRadius: 8, enableCutout: null != closure_5, cutoutPositionInDegrees: 45, alignBadgeEdgeWithCircleEdge: true, badgeRadius: 5, scaleToPixelDensity: true };
     const children = [voicePanelButtonStyles(openTab(connected[10]), obj), , ];
-    obj = { style: iconContainer.iconContainer, children: null };
     obj = { color: voicePanelButtonStyles.iconFill.color };
     obj[1] = voicePanelButtonStyles(props(connected[12]).ChatIcon, obj);
     children[1] = voicePanelButtonStyles(openTab(connected[11]), obj);

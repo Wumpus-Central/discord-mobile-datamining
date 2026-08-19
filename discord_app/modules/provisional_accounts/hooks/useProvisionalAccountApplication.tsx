@@ -1,10 +1,10 @@
 // === Module 11801: useProvisionalAccountApplication ===
 
 // Module 11801 (useProvisionalAccountApplication)
-import closure_2 from "recountRelationshipTypes" /* 5406 */;
+import recountRelationshipTypes from "recountRelationshipTypes" /* 5406 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");
 
 export default function useProvisionalAccountApplication(arg0) {
   const _require = arg0;

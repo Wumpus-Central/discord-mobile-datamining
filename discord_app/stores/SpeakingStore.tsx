@@ -5,11 +5,11 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import applyOverwritesAll from "applyOverwrites" /* 4026 */;
 import getUnitIdDefault from "getUnitId" /* 4775 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "handleConnectionOpen" /* 1979 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import handleConnectionOpen2 from "handleConnectionOpen" /* 1979 */;
 import { Permissions } from "ME" /* 676 */;
 import DesktopSources from "DesktopSources" /* 4529 */;
 
@@ -24,21 +24,15 @@ function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
   } else {
     const obj = value[Symbol.iterator]();
     while (obj !== undefined) {
-      let tmp6 = callback;
       let tmp7 = callback(tmp4, 2);
       let first = tmp7[0];
       let flags = tmp7[1].flags;
       if (!flag) {
-        let tmp11 = flags;
         if ((flags & VOICE) === VOICE) {
-          let tmp12 = obj;
           obj.return();
           let flag2 = true;
           return true;
         }
-      } else {
-        let tmp9 = first;
-        let tmp10 = c12;
       }
       continue;
     }
@@ -102,12 +96,12 @@ prototype["getSpeakers"] = function getSpeakers() {
   if (keys == null) {
     keys = [];
   }
-  return Array.from(keys).filter((arg0) => {
+  return Array.from(keys).filter((item, index) => {
     const VOICE = closure_1_9.VOICE;
-    let value = closure_1_11.get(DEFAULT);
+    let value = map.get(DEFAULT);
     let flags;
     if (value != null) {
-      value = value.get(arg0);
+      value = value.get(item);
       if (value != null) {
         flags = value.flags;
       }
@@ -260,8 +254,7 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
     if ((speakingFlags & constants.PRIORITY) === constants.PRIORITY) {
       channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
       if (null != channel) {
-        let obj = applyOverwritesAll;
-        obj = { permission: null, user: null, context: null };
+        let obj = { permission: null, user: null, context: null };
         obj[0] = Permissions.PRIORITY_SPEAKER;
         obj[1] = userId;
         obj[2] = channel;
@@ -271,7 +264,7 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
         }
       }
       store.setCanHavePriority(userId, false);
-      num = speakingFlags & ~tmp.PRIORITY;
+      num = speakingFlags & ~constants.PRIORITY;
     }
     if ((num & constants.HIDDEN) === constants.HIDDEN) {
       num = 0;
@@ -314,7 +307,7 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
         if (since == null) {
           since = null;
         }
-        if ((num2 & tmp.VOICE) === tmp.VOICE !== (num & tmp.VOICE) === tmp.VOICE) {
+        if ((num2 & constants.VOICE) === constants.VOICE !== (num & constants.VOICE) === constants.VOICE) {
           let timestamp = null;
           if (tmp18) {
             const _Date = Date;
@@ -336,8 +329,8 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((arg0, arg1) => {
-      ({ userId, channelId, sessionId } = arg1);
+    return voiceStates.reduce((acc, item, index) => {
+      ({ userId, channelId, sessionId } = item);
       let tmp2 = userId === closure_12;
       if (tmp2) {
         tmp2 = sessionId === closure_13;
@@ -365,14 +358,13 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
             const deleteResult = value.delete(userId);
             flag3 = deleteResult;
             if (0 === value.size) {
-              obj3.delete(DEFAULT2);
+              store.delete(DEFAULT2);
               flag3 = deleteResult;
             }
           }
           if (!flag3) {
             flag3 = flag;
           }
-          obj3 = store;
         }
         flag3 = store.delete(constants.DEFAULT) || flag;
         const tmp27 = store.delete(constants.DEFAULT) || flag;
@@ -383,7 +375,7 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
             const tmp19 = store.delete(constants.DEFAULT) || flag;
           }
           if (!tmp13) {
-            tmp13 = arg0;
+            tmp13 = acc;
           }
           return tmp13;
         }
@@ -400,7 +392,7 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
             const deleteResult2 = value.delete(userId);
             flag2 = deleteResult2;
             if (0 === value.size) {
-              obj.delete(DEFAULT);
+              store.delete(DEFAULT);
               flag2 = deleteResult2;
             }
           }
@@ -408,9 +400,7 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
             flag2 = flag;
           }
           tmp13 = flag2;
-          obj = store;
         }
-        const tmp29 = closure_12;
       }
     }, false);
   },
@@ -418,6 +408,6 @@ const speakingStore = new SpeakingStore(dispatcherDefault, {
     isActive = isActive.isActive;
   }
 });
-let result = require("set").fileFinishedImporting("stores/SpeakingStore.tsx");
+let result = require("obj132").fileFinishedImporting("stores/SpeakingStore.tsx");
 
 export default speakingStore;

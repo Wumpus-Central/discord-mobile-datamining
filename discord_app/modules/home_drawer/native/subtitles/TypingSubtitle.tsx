@@ -3,14 +3,16 @@
 // Module 15590 (TypingSubtitle)
 import noopAll from "noop" /* 19 */;
 import Text from "Text" /* 4734 */;
+import getChannelIcon from "getChannelIcon" /* 6832 */;
+import TextIcon from "TextIcon" /* 6876 */;
 import styles from "styles" /* 15589 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/subtitles/TypingSubtitle.tsx");
+const result = require("obj132").fileFinishedImporting("modules/home_drawer/native/subtitles/TypingSubtitle.tsx");
 
 export default function TypingSubtitle(arg0) {
   ({ channel, channelName } = arg0);
@@ -19,11 +21,11 @@ export default function TypingSubtitle(arg0) {
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(6832).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(6832);
+    channelIconComponentWithGuild = getChannelIcon.getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = getChannelIcon;
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(6876).TextIcon;
+    channelIconComponentWithGuild = TextIcon.TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   let tmp7 = null;
@@ -39,11 +41,11 @@ export default function TypingSubtitle(arg0) {
     const obj2 = { variant: "text-xs/medium", children: null };
     const items1 = [channelName, "  \u00B7  "];
     obj2[1] = items1;
-    tmp5Result = tmp5(tmp(4734).Text, obj2);
+    tmp5Result = callback(Text.Text, obj2);
   }
   const items2 = [tmp5Result, text];
   obj1[4] = items2;
-  items[1] = closure_4(Text.Text, obj1);
+  items[1] = callback(Text.Text, obj1);
   obj[1] = items;
-  return closure_4(View, obj);
+  return callback(View, obj);
 };

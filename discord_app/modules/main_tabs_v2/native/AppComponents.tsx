@@ -15,13 +15,13 @@ import _modDef16258 from "module_16258" /* 16258 */;
 import VoicePanelDefault from "VoicePanel" /* 16270 */;
 import _modDef16434 from "module_16434" /* 16434 */;
 import jsxProd from "jsxProd" /* 21 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import importDefaultResult from "jsx" /* 15778 */;
 
 ({ jsx, jsxs } = jsxProd);
 let closure_2 = jsx(transitionGroupGetItemKey.PortalKeyboardRenderer, {});
 let obj = { lockKeys: ["external-pip"], children: null };
-const tmp3 = set.isIOS() ? (() => {
+const tmp3 = obj132.isIOS() ? (() => {
   let tmp = null;
   if (!obj.useIsModalOpen()) {
     tmp = closure_2;
@@ -31,7 +31,7 @@ const tmp3 = set.isIOS() ? (() => {
 const items = [jsx(BurstReactionAnimationContainer.PictureInPictureGlobalContainer, {}), jsx(BurstReactionAnimationContainer.BurstReactionAnimationContainer, {}), jsx(BurstReactionAnimationContainer.MenuContainer, {}), jsx(PortalKeyboardState.PortalKeyboardHost, {}), <tmp3 />, jsx(BurstReactionAnimationContainer.ActionSheetContainer, { appEntryKey: "main" }), jsx(BurstReactionAnimationContainer.Alerts, {}), jsx(BurstReactionAnimationContainer.SoundPlayer, {}), jsx(trackActionSheetImpressionDefault, {}), jsx(NotificationsDefault, {}), jsx(getItemKey.ContextMenuContainer, {}), jsx(getAlertModalItemKey.AlertModalContainer, {}), jsx(BurstReactionAnimationContainer.ToastContainer, {})];
 obj[1] = items;
 let jsxResult = null;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   jsxResult = jsx(updateAccessibilityAnnouncerLiveRegionMessage.AccessibilityAnnouncerLiveRegion, {});
 }
 const jsxsResult = jsxs(importDefaultResult, { lockKeys: ["external-pip"], children: null });
@@ -40,7 +40,7 @@ const jsxResult1 = jsx(FreezeAfterLayoutPipViewDefault, {});
 const items1 = [jsx(_modDef16225, {}), jsx(_modDef16258, {}), jsx(VoicePanelDefault, {}), jsx(_modDef16434, {})];
 obj[1] = items1;
 const importDefaultResult1 = importDefaultResult;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");
+const result = obj132.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");
 
 export const APP_EXTRA_COMPONENTS = jsxsResult;
 export const APP_EXTRA_COMPONENTS_NEVER_FREEZE = jsxResult;

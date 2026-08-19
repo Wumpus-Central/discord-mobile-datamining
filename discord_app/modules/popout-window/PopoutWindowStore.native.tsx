@@ -10,10 +10,7 @@ class PopoutWindowStore extends PersistedStore {
 }
 const prototype = PopoutWindowStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
-  if (arg0 == null) {
-    obj = {};
-  }
+
 };
 prototype["getWindow"] = function getWindow() {
   return null;
@@ -51,6 +48,6 @@ prototype["unmountWindow"] = function unmountWindow() {
 PopoutWindowStore.displayName = "PopoutWindowStore";
 PopoutWindowStore.persistKey = "PopoutWindowStoreIOS";
 const popoutWindowStore = new PopoutWindowStore(dispatcherDefault, {});
-const result = require("set").fileFinishedImporting("modules/popout-window/PopoutWindowStore.native.tsx");
+const result = require("obj132").fileFinishedImporting("modules/popout-window/PopoutWindowStore.native.tsx");
 
 export default popoutWindowStore;

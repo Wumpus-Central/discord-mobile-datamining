@@ -1,10 +1,10 @@
 // === Module 15622: useGuildsBarSelectedGuildScroller ===
 
 // Module 15622 (useGuildsBarSelectedGuildScroller)
-import closure_0 from "noop" /* 19 */;
-import closure_1 from "handleConnectionOpen" /* 4197 */;
+import noop from "noop" /* 19 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 4197 */;
 
-const result = require("set").fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx");
 
 export default function useGuildsBarSelectedGuildScroller(arg0) {
   const React = arg0;
@@ -22,7 +22,6 @@ export default function useGuildsBarSelectedGuildScroller(arg0) {
           guildId = null;
         }
         c0(guildId, false);
-        const tmp4 = c0;
       }
     }
     c0 = null;

@@ -1,23 +1,22 @@
 // === Module 9716: useIsPersistentSecureFramesFingerprint ===
 
 // Module 9716 (useIsPersistentSecureFramesFingerprint)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
 import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_6 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsPersistentSecureFramesFingerprint.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/rtc/hooks/useIsPersistentSecureFramesFingerprint.tsx");
 
 export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSecureFramesFingerprint(userId) {
   userId = userId.userId;
   let _require = userId;
   let stateFromStores;
-  let callback;
   let callback2;
   let React;
-  callback = undefined;
+  let callback;
   const items = [callback];
   stateFromStores = _require(stateFromStores[5]).useStateFromStores(items, () => callback.getSecureFramesRosterMapEntry(closure_0));
   const loading = callback2(React.useState(true), 2);
@@ -26,7 +25,6 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
   [tmp4, c3] = callback2(React.useState(false), 2);
   const isOtherUserKeyPersistent = callback2(React.useState(false), 2);
   React = isOtherUserKeyPersistent[1];
-  _require = undefined;
   _require = callback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;

@@ -1,7 +1,7 @@
 // === Module 4862: toString ===
 
 // Module 4862 (toString)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import timestampDefault from "timestamp" /* 3 */;
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
 
@@ -48,13 +48,13 @@ VideoQualityTarget.VERY_HIGH = obj3;
 VideoQualityTarget.fromCompressionQuality = function fromCompressionQuality(videoQualitySetting) {
   if (VideoCompressionQuality.VERY_LOW === videoQualitySetting) {
     let VERY_HIGH = VideoQualityTarget.VERY_LOW;
-  } else if (tmp.LOW === videoQualitySetting) {
+  } else if (VideoCompressionQuality.LOW === videoQualitySetting) {
     VERY_HIGH = VideoQualityTarget.LOW;
-  } else if (tmp.MEDIUM === videoQualitySetting) {
+  } else if (VideoCompressionQuality.MEDIUM === videoQualitySetting) {
     VERY_HIGH = VideoQualityTarget.MEDIUM;
-  } else if (tmp.HIGH === videoQualitySetting) {
+  } else if (VideoCompressionQuality.HIGH === videoQualitySetting) {
     VERY_HIGH = VideoQualityTarget.HIGH;
-  } else if (tmp.VERY_HIGH === videoQualitySetting) {
+  } else if (VideoCompressionQuality.VERY_HIGH === videoQualitySetting) {
     VERY_HIGH = VideoQualityTarget.VERY_HIGH;
   } else {
     const _Error = Error;
@@ -66,7 +66,7 @@ VideoQualityTarget.fromCompressionQuality = function fromCompressionQuality(vide
 };
 obj = { bitrateFloor: 300000, createHDR: false, frameRate: 30, keyFrameIntervalSeconds: 2, rotationDegrees: 0, skipVideoTranscode: false, targetBitrate: VideoQualityTarget.MEDIUM.targetBitrate, targetHeight: 480, targetWidth: 640, useHEVC: false, videoQuality: VideoQualityTarget.MEDIUM, hevcIsSupported: false, useTranscodedVideoForMovSources: true, transmuxLivePhotos: true, progressUpdateGranularity: 10 };
 const tmp2 = new timestampDefault("VideoUploadUtils.tsx");
-let result = set.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
 
 export { VideoQualityTarget };
 export const DEFAULT_VIDEO_ENCODING_CONFIG = obj;
@@ -137,7 +137,6 @@ export const canSkipVideoTranscode = function canSkipVideoTranscode(result, vide
   }
   if (!tmp12) {
     tmp12 = null === videoMetadata.format.match(/(avc1|hvc1|video\/(avc|hevc))/i);
-    const str = videoMetadata.format;
   }
   return !tmp12;
 };
@@ -167,8 +166,7 @@ export const logSourceMetadata = function logSourceMetadata(format) {
 };
 export const logEncoderSettings = function logEncoderSettings(videoQuality) {
   logger.info("Encoder Video Quality Settings:");
-  let str = videoQuality.videoQuality;
-  str = undefined;
+  let str;
   if (str != null) {
     str = str.toString();
   }
@@ -186,7 +184,7 @@ export const logEncoderSettings = function logEncoderSettings(videoQuality) {
   }
   logger.info("- Compression Quality Max Bitrate: " + targetBitrate + " bps");
   logger.info("Encoder Video Transcoding Settings:");
-  const info = obj.info;
+  const info = logger.info;
   if (videoQuality.skipVideoTranscode) {
     info("- Skip Video Transcode: Yes");
   } else {
@@ -196,27 +194,27 @@ export const logEncoderSettings = function logEncoderSettings(videoQuality) {
     }
     info(`- Codec: ${str2}`);
     const _HermesInternal = HermesInternal;
-    obj.info("- Dimensions: " + videoQuality.targetWidth + "x" + videoQuality.targetHeight);
+    logger.info("- Dimensions: " + videoQuality.targetWidth + "x" + videoQuality.targetHeight);
     const _HermesInternal2 = HermesInternal;
-    obj.info("- Bitrate: " + videoQuality.targetBitrate + " bps");
+    logger.info("- Bitrate: " + videoQuality.targetBitrate + " bps");
     const _HermesInternal3 = HermesInternal;
-    obj.info("- Frame Rate: " + videoQuality.frameRate + " fps");
+    logger.info("- Frame Rate: " + videoQuality.frameRate + " fps");
     const _HermesInternal4 = HermesInternal;
-    obj.info("- Key Frame Interval: " + videoQuality.keyFrameIntervalSeconds + " seconds");
+    logger.info("- Key Frame Interval: " + videoQuality.keyFrameIntervalSeconds + " seconds");
     let str11 = "No";
     let str12 = "No";
     if (videoQuality.createHDR) {
       str12 = "Yes";
     }
-    obj.info(`- Create HDR: ${str12}`);
+    logger.info(`- Create HDR: ${str12}`);
     const _HermesInternal5 = HermesInternal;
-    obj.info("- Rotation Degrees: " + videoQuality.rotationDegrees);
+    logger.info("- Rotation Degrees: " + videoQuality.rotationDegrees);
     if (videoQuality.hevcIsSupported) {
       str11 = "Yes";
     }
-    obj.info(`- HEVC Supported: ${str11}`);
+    logger.info(`- HEVC Supported: ${str11}`);
     const _HermesInternal6 = HermesInternal;
-    obj.info("- Progress Update Granularity: " + videoQuality.progressUpdateGranularity);
+    logger.info("- Progress Update Granularity: " + videoQuality.progressUpdateGranularity);
   }
 };
 export const calculateOptimalBitrate = function calculateOptimalBitrate(videoMetadata, result, bitrateFloor) {

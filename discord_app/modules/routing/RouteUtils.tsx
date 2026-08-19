@@ -1,15 +1,15 @@
 // === Module 4215: RouteParam ===
 
 // Module 4215 (RouteParam)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import INVITE from "INVITE" /* 677 */;
-import set2 from "set" /* 1398 */;
+import set from "set" /* 1398 */;
 import RouteParam from "RouteParam" /* 4216 */;
 
 const PSEUDO_GUILD_IDS = INVITE.PSEUDO_GUILD_IDS;
-const isStaticChannelRoute = set2.isStaticChannelRoute;
+const isStaticChannelRoute = set.isStaticChannelRoute;
 const re2 = /^\d+$/;
-const result = set.fileFinishedImporting("modules/routing/RouteUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/routing/RouteUtils.tsx");
 
 export const RouteParam = RouteParam.RouteParam;
 export const isPseudoGuildId = function isPseudoGuildId(stateFromStores) {

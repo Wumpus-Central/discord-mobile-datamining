@@ -5,18 +5,19 @@ import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import preloadDefault from "preload" /* 5449 */;
 import create from "create" /* 7644 */;
 import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10304 */;
+import PremiumFeaturesPromotionalLogoDefault from "PremiumFeaturesPromotionalLogo" /* 10308 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles(() => {
-  let obj = { gradient: { minHeight: 60 }, bannerImage: { position: "absolute", top: 0, left: 0, right: 0, width: "100%", aspectRatio: 5 }, content: null, heading: null, subheading: null, logoContainer: null, logoContainerLargeTilted: null, logo: null, logoLargeTilted: null };
-  obj = { minHeight: 60, justifyContent: "center", gap: 2, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12, paddingStart: ThemesDefault.space.PX_24, paddingEnd: 120 };
+  const obj = { minHeight: 60, justifyContent: "center", gap: 2, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12, paddingStart: ThemesDefault.space.PX_24, paddingEnd: 120 };
   obj[2] = obj;
   obj[3] = {};
   obj[4] = {};
@@ -62,20 +63,20 @@ const memoResult = importAllResult.memo(function PremiumGiftPlanSelectPromotiona
     obj1 = { uri: null };
     obj1[0] = themeAndReducedMotionAwareAssetUrl;
     obj[2] = obj1;
-    tmp9 = callback(tmp7(5449), obj);
+    tmp9 = callback(preloadDefault, obj);
   }
   const items = [tmp9, , ];
   const obj2 = { style: tmp.content, children: null };
   const obj3 = { style: tmp.heading, variant: "text-md/bold", color: "text-overlay-light", children: null };
-  const intl = tmp2(1236).intl;
+  const intl = getSystemLocale.intl;
   obj3[3] = intl.string(getSystemLocale.t.OEtqpm);
   const items1 = [callback(Text.Text, obj3), ];
   const obj4 = { style: tmp.subheading, variant: "text-md/medium", color: "text-overlay-light", children: null };
-  const intl2 = tmp2(1236).intl;
+  const intl2 = getSystemLocale.intl;
   obj4[3] = intl2.formatToPlainString(getSystemLocale.t["2h5M+X"], { availableCount: claimableRewards.length });
   items1[1] = callback(Text.Text, obj4);
   obj2[1] = items1;
-  items[1] = closure_5(View, obj2);
+  items[1] = callback(View, obj2);
   let tmp12Result = null != themeAndReducedMotionAwareAssetUrl1;
   if (tmp12Result) {
     let logoLargeTilted = giftPlanSelectionCardBannerComponent.assetVariant === create.GiftPlanSelectionCardBanner_AssetVariant.LARGE_TILTED;
@@ -96,14 +97,14 @@ const memoResult = importAllResult.memo(function PremiumGiftPlanSelectPromotiona
     items3[1] = logoLargeTilted;
     obj7[1] = items3;
     obj7[2] = themeAndReducedMotionAwareAssetUrl1;
-    obj6[1] = tmp12(tmp7(10308), obj7);
-    tmp12Result = tmp12(View, obj6);
-    const tmp7Result = tmp7(10308);
+    obj6[1] = callback(PremiumFeaturesPromotionalLogoDefault, obj7);
+    tmp12Result = callback(View, obj6);
+    const tmp7Result = PremiumFeaturesPromotionalLogoDefault;
   }
   items[2] = tmp12Result;
   obj[6] = items;
-  return closure_5(LinearGradientDefault, obj);
+  return callback(LinearGradientDefault, obj);
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPlanSelectPromotionalBanner.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPlanSelectPromotionalBanner.tsx");
 
 export default memoResult;

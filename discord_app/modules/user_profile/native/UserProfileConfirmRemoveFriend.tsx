@@ -6,10 +6,10 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmRemoveFriend.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmRemoveFriend.tsx");
 
 export default function UserProfileConfirmRemoveFriend(userDisplayName) {
   userDisplayName = userDisplayName.userDisplayName;
@@ -18,7 +18,6 @@ export default function UserProfileConfirmRemoveFriend(userDisplayName) {
   obj[0] = intl.formatToPlainString(getSystemLocale.t.fPLvZd, { name: userDisplayName });
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.formatToPlainString(getSystemLocale.t.l5FFq6, { name: userDisplayName });
-  obj = { children: null };
   obj = { variant: "destructive", text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t.cvSt1J);

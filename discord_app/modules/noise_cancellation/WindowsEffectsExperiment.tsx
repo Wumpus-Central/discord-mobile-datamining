@@ -1,20 +1,19 @@
 // === Module 12560: getWindowsAudioEffectsExperimentConfig ===
 
 // Module 12560 (getWindowsAudioEffectsExperimentConfig)
-import closure_2 from "initialize" /* 1212 */;
-import ApexExperiment from "ApexExperiment" /* 1472 */;
+import initialize from "initialize" /* 1212 */;
+import "ApexExperiment";
 
-const require = arg1;
+const require = fn;
 let obj = { preferSystemEffects: false };
-obj = { name: "2025-12-windows-audio-effects", kind: "user", defaultConfig: obj, variations: null };
 obj = { 1: null };
-ApexExperiment = {};
+const ApexExperiment = {};
 const merged = Object.assign(obj);
 ApexExperiment.preferSystemEffects = true;
 obj[1] = ApexExperiment;
 obj[3] = obj;
 let closure_3 = ApexExperiment.createApexExperiment(obj);
-const result = require("set").fileFinishedImporting("modules/noise_cancellation/WindowsEffectsExperiment.tsx");
+const result = require("obj132").fileFinishedImporting("modules/noise_cancellation/WindowsEffectsExperiment.tsx");
 
 export const getWindowsAudioEffectsExperimentConfig = function getWindowsAudioEffectsExperimentConfig(location) {
   return config.getConfig({ location: location.location });

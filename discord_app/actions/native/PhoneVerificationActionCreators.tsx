@@ -1,10 +1,10 @@
 // === Module 8653: dispatcher ===
 
 // Module 8653 (dispatcher)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = set.fileFinishedImporting("actions/native/PhoneVerificationActionCreators.tsx");
+const result = obj132.fileFinishedImporting("actions/native/PhoneVerificationActionCreators.tsx");
 
 export default {
   openCountrySelector() {

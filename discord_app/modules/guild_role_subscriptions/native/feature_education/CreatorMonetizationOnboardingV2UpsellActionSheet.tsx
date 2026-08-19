@@ -7,6 +7,7 @@ import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
 import preloadDefault from "preload" /* 5449 */;
 import Background from "Background" /* 6950 */;
+import _modDef8874 from "module_8874" /* 8874 */;
 import registerAssetDefault from "registerAsset" /* 15511 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { GuildSettingsSections } from "ME" /* 676 */;
@@ -14,24 +15,16 @@ import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 }, title: { marginBottom: 6 }, description: { marginBottom: 24 }, image: { marginBottom: 24, width: "100%" }, dismissButton: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/CreatorMonetizationOnboardingV2UpsellActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/CreatorMonetizationOnboardingV2UpsellActionSheet.tsx");
 
 export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed: importDefault } = arg0);
   const tmp = callback3();
-  let obj = {
-    startExpanded: true,
-    onDismiss() {
-      return callback(closure_1_5.UNKNOWN);
-    },
-    children: null
-  };
-  obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  const obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t["v+Jm6X"]);
   const items = [callback(Text.Text, obj), , , , ];
@@ -43,8 +36,8 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   items[2] = callback(preloadDefault, obj2);
   const obj3 = {
     onPress() {
-      callback(closure_1_5.UNKNOWN);
-      closure_1_1(closure_1_2[12]).open(closure_0, closure_1_4.ROLE_SUBSCRIPTIONS);
+      callback(ContentDismissActionType.UNKNOWN);
+      _modDef8874.open(closure_0, GuildSettingsSections.ROLE_SUBSCRIPTIONS);
     },
     text: null
   };
@@ -54,7 +47,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   const obj4 = { style: tmp.dismissButton, children: null };
   const obj5 = {
     onPress() {
-      return callback(closure_1_5.UNKNOWN);
+      return callback(ContentDismissActionType.UNKNOWN);
     },
     text: null,
     variant: "secondary"

@@ -3,15 +3,16 @@
 // Module 10029 (isReactionMilestoneNotification)
 import apply from "apply" /* 12 */;
 import v1 from "v1" /* 514 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
 import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { REACTION_MILESTONE_COUNTS } from "set" /* 10030 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ AnalyticEvents: c5, ChannelTypes: closure_6, InAppNotificationTypes: error, MessageEmbedTypes: closure_8, MessageFlags: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationUtils.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationUtils.tsx");
 
 export const isReactionMilestoneNotification = function isReactionMilestoneNotification(reactions, type) {
   if (null != type) {
@@ -50,22 +51,22 @@ export const getMessagePreviewTextVariant = function getMessagePreviewTextVarian
 };
 export const getNotificationDuration = function getNotificationDuration(ALERT) {
   if (constants3.MESSAGE !== ALERT) {
-    if (tmp.MESSAGE_FAILED_TO_SEND !== ALERT) {
-      if (tmp.FORUM_THREAD_CREATED !== ALERT) {
-        if (tmp.BUG_REPORTER !== ALERT) {
-          if (tmp.REACTION !== ALERT) {
-            if (tmp.MESSAGE_REQUEST !== ALERT) {
-              if (tmp.ALERT === ALERT) {
-                return 30 * setDefault.Millis.SECOND;
+    if (constants3.MESSAGE_FAILED_TO_SEND !== ALERT) {
+      if (constants3.FORUM_THREAD_CREATED !== ALERT) {
+        if (constants3.BUG_REPORTER !== ALERT) {
+          if (constants3.REACTION !== ALERT) {
+            if (constants3.MESSAGE_REQUEST !== ALERT) {
+              if (constants3.ALERT === ALERT) {
+                return 30 * obj132Default.Millis.SECOND;
               } else {
-                if (tmp.MESSAGE_REMINDER !== ALERT) {
-                  if (tmp.RESTRICTED_HOURS_WARNING !== ALERT) {
-                    if (tmp.RESTRICTED_SCHEDULE_UPDATED === ALERT) {
-                      return 7 * setDefault.Millis.SECOND;
+                if (constants3.MESSAGE_REMINDER !== ALERT) {
+                  if (constants3.RESTRICTED_HOURS_WARNING !== ALERT) {
+                    if (constants3.RESTRICTED_SCHEDULE_UPDATED === ALERT) {
+                      return 7 * obj132Default.Millis.SECOND;
                     }
                   }
                 }
-                return 10 * setDefault.Millis.SECOND;
+                return 10 * obj132Default.Millis.SECOND;
               }
             }
           }
@@ -73,7 +74,7 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
       }
     }
   }
-  return 5 * setDefault.Millis.SECOND;
+  return 5 * obj132Default.Millis.SECOND;
 };
 export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
   closure_0 = message;
@@ -81,25 +82,25 @@ export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
   return React.useMemo(() => {
     let hasFlagResult = message.hasFlag(closure_1_9.IS_VOICE_MESSAGE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp.attachments.length > 0;
+      hasFlagResult = message.attachments.length > 0;
     }
     if (!hasFlagResult) {
-      let everyResult = tmp.embeds.length > 0;
+      let everyResult = message.embeds.length > 0;
       if (everyResult) {
-        let embeds = tmp.embeds;
-        everyResult = embeds.every((type) => type.type === constants.GIFV);
+        let embeds = message.embeds;
+        everyResult = embeds.every((item, index) => item.type === constants.GIFV);
       }
       hasFlagResult = everyResult;
     }
     if (!hasFlagResult) {
-      hasFlagResult = tmp.stickerItems.length > 0;
+      hasFlagResult = message.stickerItems.length > 0;
     }
     if (!hasFlagResult) {
-      let someResult = closure_1_1(closure_1_2[7])(tmp);
+      let someResult = isForwardMessageDefault(message);
       if (someResult) {
-        const messageSnapshots = tmp.messageSnapshots;
-        someResult = messageSnapshots.some((message) => {
-          message = message.message;
+        const messageSnapshots = message.messageSnapshots;
+        someResult = messageSnapshots.some((item, index) => {
+          message = item.message;
           let hasFlagResult = message.hasFlag(constants.IS_VOICE_MESSAGE);
           if (!hasFlagResult) {
             hasFlagResult = message.attachments.length > 0;
@@ -108,7 +109,7 @@ export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
             let everyResult = message.embeds.length > 0;
             if (everyResult) {
               const embeds = message.embeds;
-              everyResult = embeds.every((type) => type.type === constants.GIFV);
+              everyResult = embeds.every((item, index) => item.type === constants.GIFV);
             }
             hasFlagResult = everyResult;
           }
@@ -126,8 +127,8 @@ export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
 export const extractMetadataFromNotification = function extractMetadataFromNotification(closure_21) {
   let type = closure_21.type;
   if (constants3.MESSAGE !== type) {
-    if (tmp.REACTION !== type) {
-      if (tmp.ALERT === type) {
+    if (constants3.REACTION !== type) {
+      if (constants3.ALERT === type) {
         const guild = closure_21.guild;
         let id;
         if (guild != null) {
@@ -154,7 +155,7 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
         let tmp2 = type;
         let channelId = id1;
         let tmp4 = id;
-      } else if (tmp.FORUM_THREAD_CREATED === type) {
+      } else if (constants3.FORUM_THREAD_CREATED === type) {
         const thread = closure_21.thread;
         let guild_id1;
         if (thread != null) {
@@ -167,9 +168,9 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
         }
         channelId = id2;
         tmp4 = guild_id1;
-      } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
+      } else if (constants3.MESSAGE_FAILED_TO_SEND === type) {
         channelId = closure_21.channelId;
-      } else if (tmp.MESSAGE_REMINDER === type) {
+      } else if (constants3.MESSAGE_REMINDER === type) {
         const channel9 = closure_21.channel;
         let guild_id2;
         if (channel9 != null) {
@@ -193,7 +194,7 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
     const obj = { guildId: null, channelId: null, messageId: null, channelType: null };
     obj[0] = tmp4;
     obj[1] = channelId;
-    obj[2] = id6;
+    obj[2] = tmp3;
     obj[3] = tmp2;
     return obj;
   }
@@ -216,7 +217,7 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
     id5 = channel7.id;
   }
   const message = closure_21.message;
-  id6 = undefined;
+  let id6;
   if (message != null) {
     id6 = message.id;
   }
@@ -228,6 +229,7 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
   tmp2 = type2;
   channelId = id5;
   tmp4 = id4;
+  tmp3 = id6;
 };
 export const trackDismissed = function trackDismissed(arg0) {
   ({ guildId, channelId, type, dismissReason, inAppNotificationId, messageId } = arg0);

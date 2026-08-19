@@ -2,41 +2,34 @@
 
 // Module 16111 (RestrictedMessageRequestPreview)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1391 */;
-import closure_8 from "reinjectEphemerals" /* 4994 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, scroll: null, hidden: null, scrollContent: null, footer: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { opacity: 0 };
 createCacheKey[3] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { paddingHorizontal: ThemesDefault.space.PX_12 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingHorizontal: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessageRequestPreview.tsx");
+const result = require("obj132").fileFinishedImporting("modules/message_request/native/RestrictedMessageRequestPreview.tsx");
 
 export default function RestrictedMessageRequestPreview(channelId) {
   channelId = channelId.channelId;
-  let ref;
-  dependencyMap = undefined;
   let first;
   let React;
-  closure_5 = undefined;
-  let first1;
   const tmp = callback2();
   let obj = React;
-  ref = React.useRef(null);
+  const ref = React.useRef(null);
   dependencyMap = React.useRef(false);
   const tmp5 = first(React.useState(false), 2);
   first = tmp5[0];
@@ -49,7 +42,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
   const items2 = [closure_7];
   const items3 = [channelId];
   const stateFromStores = obj2.useStateFromStores(items2, () => closure_1_7.getChannel(channelId), items3);
-  first1 = undefined;
+  let first1;
   if (stateFromStores != null) {
     const recipients = stateFromStores.recipients;
     if (recipients != null) {
@@ -116,7 +109,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj2[0] = channelId;
       items8[1] = callback(tmp2(16114), obj2);
       obj[5] = items8;
-      const items9 = [closure_11(closure_5, obj), ];
+      const items9 = [callback(closure_5, obj), ];
       const obj3 = { style: null, children: null };
       const items10 = [tmp.footer, ];
       const obj4 = { paddingBottom: null };
@@ -128,8 +121,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj3[1] = callback(tmp2(11607), obj5);
       items9[1] = callback(first1, obj3);
       obj[1] = items9;
-      tmp13Result = tmp13(tmp14, obj);
-      const tmp15 = closure_5;
+      tmp13Result = callback(tmp14, obj);
     }
   }
   return tmp13Result;

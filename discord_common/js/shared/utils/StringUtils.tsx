@@ -1,8 +1,8 @@
 // === Module 1904: cssValueToNumber ===
 
 // Module 1904 (cssValueToNumber)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1906 */;
+import obj132 from "obj132" /* 2 */;
+import set from "set" /* 1906 */;
 
 const re2 = /[\u0300-\u036f]/g;
 const re3 = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
@@ -10,8 +10,9 @@ if (null == String.prototype.normalize) {
   let fn = (arg0) => arg0;
 } else {
   fn = (str) => {
-    const replaced = str.normalize("NFD").replace(closure_2, "");
-    return replaced.normalize("NFC");
+    str = str.normalize("NFD");
+    const normalizer = str.replace(closure_2, "");
+    return normalizer.normalize("NFC");
   };
 }
 if (null == String.prototype.normalize) {
@@ -21,49 +22,49 @@ if (null == String.prototype.normalize) {
     _require = _require(1905);
     dependencyMap = "";
     const items = [...str.normalize("NFD")];
-    const item = items.forEach((arg0) => {
-      let tmp2 = table[arg0];
+    const item = items.forEach((item, index) => {
+      let tmp2 = table[item];
       if (tmp2 == null) {
-        tmp2 = arg0;
+        tmp2 = item;
       }
       closure_1 = closure_1 + tmp2;
     });
     return dependencyMap.normalize("NFD").toLocaleLowerCase();
   };
 }
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/StringUtils.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/shared/utils/StringUtils.tsx");
 
-export const cssValueToNumber = set2.cssValueToNumber;
-export const upperCaseFirstChar = function upperCaseFirstChar(str) {
-  str = "";
-  if (null != str) {
-    const formatted = str.charAt(0).toUpperCase();
+export const cssValueToNumber = set.cssValueToNumber;
+export const upperCaseFirstChar = function upperCaseFirstChar(item) {
+  let str = "";
+  if (null != item) {
+    const formatted = item.charAt(0).toUpperCase();
     const _HermesInternal = HermesInternal;
-    str = "" + formatted + str.slice(1);
-    const str2 = str.charAt(0);
+    str = "" + formatted + item.slice(1);
+    const str2 = item.charAt(0);
   }
   return str;
 };
-export const truncateText = (arg0, arg1) => {
+export const truncateText = (name, closure_8) => {
   let str = arg2;
   if (arg2 === undefined) {
     str = "\u2026";
   }
-  let concat = arg0;
+  let concat = name;
   let str2 = "";
-  if (null != arg0) {
+  if (null != name) {
     str2 = "";
-    if (null != arg1) {
-      if (concat.length <= arg1) {
+    if (null != closure_8) {
+      if (concat.length <= closure_8) {
         str2 = concat;
       } else {
         if (regex.test(concat)) {
           const items = [];
           HermesBuiltin.arraySpread(concat, 0);
-          const substr = items.slice(0, arg1 - str.length);
+          const substr = items.slice(0, closure_8 - str.length);
           let str3 = substr.join("");
         } else {
-          str3 = concat.substring(0, arg1 - str.length);
+          str3 = concat.substring(0, closure_8 - str.length);
         }
         const _HermesInternal = HermesInternal;
         concat = HermesInternal.concat;

@@ -1,12 +1,12 @@
 // === Module 15553: DEFAULT_FOLDER_COLOR ===
 
 // Module 15553 (DEFAULT_FOLDER_COLOR)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import int2hslRaw from "int2hslRaw" /* 688 */;
 import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
 
 const hex2intResult = int2hslRaw.hex2int(unsafe_getRawColor.unsafe_getResolvedRawColor("BRAND_500", { saturation: 1 }));
-const result = set.fileFinishedImporting("modules/guilds_bar/GuildsBarConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/guilds_bar/GuildsBarConstants.tsx");
 
 export const DEFAULT_FOLDER_COLOR = hex2intResult;
 export const GuildPeekCardTypes = { WHO: 0, [0]: "WHO", WHAT: 1, [1]: "WHAT" };

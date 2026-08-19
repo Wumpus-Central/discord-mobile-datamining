@@ -1,10 +1,10 @@
 // === Module 13177: _queryAudioEffects ===
 
 // Module 13177 (_queryAudioEffects)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _queryAudioEffects() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -120,7 +120,7 @@ function _queryAudioEffects() {
   return applyArgumentsResult;
 }
 let logger = new require("log").Logger("AudioEffects");
-const result = require("set").fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");
+const result = require("obj132").fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");
 
 export default function queryAudioEffects() {
   const self = this;

@@ -1,7 +1,7 @@
 // === Module 4498: ? ===
 
 // Module 4498
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import inject from "inject" /* 4499 */;
 
 inject.inject({
@@ -22,4 +22,4 @@ inject.inject({
 
   }
 });
-const result = set.fileFinishedImporting("lib/injectMediaEngine.native.tsx");
+const result = obj132.fileFinishedImporting("lib/injectMediaEngine.native.tsx");

@@ -1,7 +1,7 @@
 // === Module 9001: nativeEventEmitter ===
 
 // Module 9001 (nativeEventEmitter)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import keys from "keys" /* 644 */;
 
@@ -25,7 +25,7 @@ prototype["terminate"] = function terminate() {
     muteSubscription.remove();
   }
 };
-const result = set.fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
+const result = obj132.fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
 
 export default Object.create(MediaPlayerMuteManager.prototype);
 export const useMediaPlayerMutedStore = obj;

@@ -7,24 +7,23 @@ import Button from "Button" /* 1297 */;
 import TrashIcon from "TrashIcon" /* 4333 */;
 import PressableBase from "PressableBase" /* 5433 */;
 import stylesDefault from "styles" /* 13358 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "markAllUserIdListsStale" /* 4030 */;
-import closure_8 from "mergeGuildAvatar" /* 1922 */;
-import closure_9 from "resetImperatively" /* 16973 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import resetImperatively from "resetImperatively" /* 16973 */;
 import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 import importAllResult from "noop" /* 19 */;
 import importDefaultResult from "createTextStyle" /* 6782 */;
 
-require = arg1;
+require = fn;
 function DeleteButton(onDelete) {
   const tmp = callback4();
-  let obj = { style: items, accessibilityRole: "button", onPress: onDelete.onDelete, children: null };
-  items = [stylesDefault().textInput, tmp.deleteButton];
-  obj = { style: tmp.deleteIcon, color: ThemesDefault.unsafe_rawColors.RED_400, size: "custom" };
+  const items = [stylesDefault().textInput, tmp.deleteButton];
+  let obj = { style: tmp.deleteIcon, color: ThemesDefault.unsafe_rawColors.RED_400, size: "custom" };
   const items1 = [callback2(TrashIcon.TrashIcon, obj), ];
   obj = { style: tmp.deleteLabel, children: null };
   const intl = getSystemLocale.intl;
@@ -36,13 +35,12 @@ function DeleteButton(onDelete) {
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: unpackModuleId, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = MAX_SUBSCRIPTION_TIERS);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { container: null, scrollContainer: null, deleteButton: null, deleteIcon: null, deleteLabel: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" };
 obj[0] = obj;
 obj[1] = { flexGrow: 1 };
 obj[2] = { flexDirection: "row", marginTop: 16, alignItems: "center", justifyContent: "center" };
 obj[3] = { width: 20, height: 20 };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_SEMIBOLD, ThemesDefault.unsafe_rawColors.RED_400, 16));
 createCacheKey.marginStart = 8;
 createCacheKey.lineHeight = 20;
@@ -324,11 +322,10 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     }
     items2[6] = tmp26Result;
     obj2[4] = items2;
-    items[1] = closure_14(closure_6, obj2);
+    items[1] = callback(closure_6, obj2);
     obj[1] = items;
-    return closure_14(first2, obj);
+    return callback(first2, obj);
   } else if (benefitType.benefitType === _handleSave.CHANNEL) {
-    let tmp15 = null != first4;
   } else {
     let num3;
     if (first != null) {
@@ -337,9 +334,8 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
     if (num3 == null) {
       num3 = 0;
     }
-    tmp15 = num3 > 0;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModal.tsx");
 
 export default forwardRefResult;

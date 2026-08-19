@@ -1,7 +1,7 @@
 // === Module 653: u ===
 
 // Module 653 (u)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import u from "u" /* 654 */;
 
 try {
@@ -50,7 +50,7 @@ try {
     } catch (err) {
     }
   }
-  const _module1 = set;
+  const _module1 = obj132;
   const result = _module1.fileFinishedImporting("../discord_common/js/packages/performance-utils/index.js");
   exports.navigationStart = tmp4;
   exports.timeOrigin = tmp5;

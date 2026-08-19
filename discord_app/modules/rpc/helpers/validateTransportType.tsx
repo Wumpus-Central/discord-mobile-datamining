@@ -1,14 +1,14 @@
 // === Module 13864: validateTransportType ===
 
 // Module 13864 (validateTransportType)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
 import prototypeDefault from "prototype" /* 8752 */;
 
 const TransportTypes = RPC_SCOPE_CONFIG.TransportTypes;
 const RPCErrors = ME.RPCErrors;
-const result = set.fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
+const result = obj132.fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
 
 export const validateTransportType = function validateTransportType(transport) {
   if (TransportTypes.IPC !== transport) {

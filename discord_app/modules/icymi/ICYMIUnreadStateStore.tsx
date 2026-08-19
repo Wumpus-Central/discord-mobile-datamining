@@ -2,12 +2,13 @@
 
 // Module 9055 (initialize)
 import initializeDefault from "initialize" /* 589 */;
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 7589 */;
+import generateHydrationId from "generateHydrationId" /* 9056 */;
 
-require = arg1;
-let closure_2 = 7 * setDefault.Millis.DAY;
+require = fn;
+let closure_2 = 7 * obj132Default.Millis.DAY;
 let closure_3 = { readIdToTimestampMap: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ICYMIUnreadStateStore extends DeviceSettingsStore {
@@ -22,7 +23,7 @@ prototype["initialize"] = function initialize(arg0) {
     closure_0 = Date.now() - closure_2;
     const _Object = Object;
     const keys = Object.keys(obj.readIdToTimestampMap);
-    const found = keys.filter((arg0) => obj.readIdToTimestampMap[arg0] < closure_0);
+    const found = keys.filter((item, index) => obj.readIdToTimestampMap[item] < closure_0);
     tmp = found[Symbol.iterator]();
   }
   obj = { readIdToTimestampMap: tmp.readIdToTimestampMap };
@@ -41,14 +42,13 @@ ICYMIUnreadStateStore.persistKey = "ICYMIUnreadStateStore";
 const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(dispatcherDefault, {
   ICYMI_ACK_ITEMS: function handleTabAck(arg0) {
     ({ items, override: require } = arg0);
-    const item = items.forEach((id) => {
-      let tmp = null != id;
+    const item = items.forEach((item, index) => {
+      let tmp = null != item;
       if (tmp) {
-        tmp = null == closure_1_3.readIdToTimestampMap[id.id] || closure_0;
-        const tmp3 = null == closure_1_3.readIdToTimestampMap[id.id] || closure_0;
+        tmp = null == closure_1_3.readIdToTimestampMap[item.id] || closure_0;
       }
       if (tmp) {
-        closure_1_3.readIdToTimestampMap[id.id] = id.timestamp;
+        closure_1_3.readIdToTimestampMap[item.id] = item.timestamp;
       }
     });
   },
@@ -57,14 +57,9 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp2 = nextResult;
-      let tmp3 = require;
-      let tmp4 = dependencyMap;
       if (nextResult.type === MessageEmbedTypes.ICYMIItemTypes.MESSAGE) {
-        let tmp11 = closure_3;
-        let tmp12 = nextResult;
         let result = null != closure_3.readIdToTimestampMap[tmp2.id];
         if (!result) {
-          let tmp5 = nextResult;
           let message_context = tmp2.data.message_context;
           let prop;
           if (message_context != null) {
@@ -73,13 +68,10 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(dispatcherDefault, {
           result = null != prop;
         }
         if (!result) {
-          let tmp3Result = tmp3(9056);
-          let tmp8 = nextResult;
+          let tmp3Result = generateHydrationId;
           result = tmp3Result.isItemUnreadInChannel(tmp2.data.channel_id, tmp2.data.message_id);
         }
         if (!result) {
-          let tmp9 = closure_3;
-          let tmp10 = nextResult;
           closure_3.readIdToTimestampMap[tmp2.id] = 0;
         }
       }
@@ -90,6 +82,6 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(dispatcherDefault, {
     closure_3.readIdToTimestampMap = {};
   }
 });
-let result = require("set").fileFinishedImporting("modules/icymi/ICYMIUnreadStateStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/icymi/ICYMIUnreadStateStore.tsx");
 
 export default iCYMIUnreadStateStore;

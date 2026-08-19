@@ -2,13 +2,13 @@
 
 // Module 14228 (useSelectedMyFamilyTab)
 import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
-import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
+import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
 import items from "items" /* 5297 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ FamilyCenterAction: c4, FamilyCenterSubPages } = items);
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
+const result = require("obj132").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
 
 export default function useSelectedMyFamilyTab() {
   let obj = {

@@ -1,9 +1,9 @@
 // === Module 8320: sanitizeMediaDimension ===
 
 // Module 8320 (sanitizeMediaDimension)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");
 
 export const sanitizeMediaDimension = function sanitizeMediaDimension(height) {
   if (typeof height !== "number") {

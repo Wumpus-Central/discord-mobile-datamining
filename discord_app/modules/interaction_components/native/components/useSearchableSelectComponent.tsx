@@ -1,11 +1,11 @@
 // === Module 11003: useSearchableSelectComponent ===
 
 // Module 11003 (useSearchableSelectComponent)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/interaction_components/native/components/useSearchableSelectComponent.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/interaction_components/native/components/useSearchableSelectComponent.tsx");
 
 export default function useSearchableSelectComponent(selectActionComponent) {
   selectActionComponent = selectActionComponent.selectActionComponent;
@@ -13,19 +13,16 @@ export default function useSearchableSelectComponent(selectActionComponent) {
   const onSubmit = selectActionComponent.onSubmit;
   let first;
   let React;
-  let first1;
-  closure_6 = undefined;
-  closure_7 = undefined;
   ({ containerId, guildId } = selectActionComponent);
   const tmp = first(React.useState(""), 2);
   first = tmp[0];
   let obj = selectActionComponent(onSubmit[2]);
   React = obj.getInitialSnowflakeSelectOptions(selectActionComponent, containerId, guildId);
-  const tmp3 = first(React.useState(() => new Map(closure_4.map((value) => {
-    const items = [value.value, value];
+  const tmp3 = first(React.useState(() => new Map(closure_4.map((item, index) => {
+    const items = [item.value, item];
     return items;
   }))), 2);
-  first1 = tmp3[0];
+  const first1 = tmp3[0];
   closure_6 = tmp3[1];
   let items = [first, queryOptions];
   closure_7 = selectActionComponent.maxValues > 1;

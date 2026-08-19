@@ -5,16 +5,16 @@ import keys from "keys" /* 691 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import initializeDefault from "initialize" /* 5038 */;
 import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 11877 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "handleSetLocationMetadata" /* 8581 */;
-import closure_5 from "set" /* 5221 */;
-import closure_6 from "mergeGuildAvatar" /* 1922 */;
-import closure_7 from "initialize" /* 4494 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import handleSetLocationMetadata from "handleSetLocationMetadata" /* 8581 */;
+import set from "set" /* 5221 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import initialize from "initialize" /* 4494 */;
 import { NewUserTypes } from "NewUserTypes" /* 11878 */;
 import { PlatformTypes } from "ME" /* 676 */;
 import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps" /* 11897 */;
 
-require = arg1;
+require = fn;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
 obj = {
   key: obj.ADD_AVATAR,
@@ -105,7 +105,6 @@ items[5] = {
 initializeDefault;
 let prototype = function NewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  closure_0 = applyArgumentsResult;
   applyArgumentsResult._onboardingStepIndex = -1;
   applyArgumentsResult._lastStep = null;
   applyArgumentsResult.actions = {
@@ -113,7 +112,6 @@ let prototype = function NewUserManager() {
       closure_0.handleOnboardingStep(guildId);
     }
   };
-  closure_0 = undefined;
   importDefault = applyArgumentsResult;
   closure_0 = callback((arg0) => {
     closure_0 = arg0;
@@ -258,7 +256,6 @@ let prototype = function NewUserManager() {
               }
               c1._lastStep = c2;
               transitionToStep();
-              const tmp16 = c1;
             } else {
               obj = { skip: null };
               obj[0] = flag;
@@ -297,6 +294,6 @@ let obj2 = {
     dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
-let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");
 
 export default prototype;

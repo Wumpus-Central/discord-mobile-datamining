@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
 
-require = arg1;
+require = fn;
 let closure_2 = {};
 const Store = initializeDefault.Store;
 class AuthInviteStore extends Store {
@@ -24,6 +24,6 @@ const authInviteStore = new AuthInviteStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/auth/AuthInviteStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/auth/AuthInviteStore.tsx");
 
 export default authInviteStore;

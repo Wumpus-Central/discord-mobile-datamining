@@ -5,11 +5,11 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import clickstreamExperimentEnabled from "clickstreamExperimentEnabled" /* 5058 */;
 import getClickstreamDrainEvent from "getClickstreamDrainEvent" /* 5059 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "createRTCConnection" /* 4539 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
 
-require = arg1;
+require = fn;
 function isClickstreamEnabled(flag) {
   if (flag === undefined) {
     flag = true;
@@ -20,9 +20,7 @@ function isClickstreamEnabled(flag) {
       drainClickstream(false);
       c7 = extractTimestampResult;
     }
-    const obj = DISCORD_EPOCHDefault;
     closure_8 = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
-    const obj2 = clickstreamExperimentEnabled;
   }
   return closure_8;
 }
@@ -31,28 +29,24 @@ function drainClickstream(flag) {
     flag = true;
   }
   if (isClickstreamEnabled(flag)) {
-    const tmp3 = obj[Symbol.iterator]();
+    const tmp3 = map[Symbol.iterator]();
     while (tmp3 !== undefined) {
-      let tmp7 = callback;
       let tmp8 = callback(tmp5, 2);
       let first = tmp8[0];
-      let tmp10 = importDefault;
-      let tmp11 = dependencyMap;
       let obj2 = expandEventPropertiesDefault;
-      let tmp12 = require;
       let obj3 = getClickstreamDrainEvent;
       let trackResult = obj2.track(first, obj3.getClickstreamDrainEvent(first, tmp8[1]));
       continue;
     }
     map.clear();
   } else {
-    obj.clear();
+    map.clear();
   }
 }
 const map = new Map();
 let c7 = -1;
 let c8 = false;
-let result = require("set").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
+let result = require("obj132").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
 export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTREAM, arg1) {
   let obj = DISCORD_EPOCHDefault;
@@ -65,9 +59,9 @@ export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTRE
   c8 = result;
   if (result) {
     if (!map.has(GUILD_VIEWED_CLICKSTREAM)) {
-      const result1 = obj3.set(GUILD_VIEWED_CLICKSTREAM, []);
+      const result1 = map.set(GUILD_VIEWED_CLICKSTREAM, []);
     }
-    const value = obj3.get(GUILD_VIEWED_CLICKSTREAM);
+    const value = map.get(GUILD_VIEWED_CLICKSTREAM);
     if (value != null) {
       obj = { timestamp: null, rtc_state: null };
       const _Date = Date;

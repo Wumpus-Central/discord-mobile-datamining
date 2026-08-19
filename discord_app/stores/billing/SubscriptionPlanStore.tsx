@@ -5,12 +5,11 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
-import closure_3 from "createFromServer" /* 4040 */;
+import createFromServer from "createFromServer" /* 4040 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function addSubscriptionPlan(fromServer) {
   const skuId = fromServer.skuId;
   closure_10[fromServer.id] = fromServer;
@@ -31,7 +30,6 @@ function addSubscriptionPlan(fromServer) {
     arraySpreadResult = HermesBuiltin.arraySpread(Array.from(set), arraySpreadResult);
     const set2 = new Set(items);
     dependencyMap2[fromServer.skuId] = set2;
-    const tmp28 = dependencyMap2;
   }
   if (null != dependencyMap[skuId]) {
     obj.add(fromServer.id);
@@ -47,17 +45,14 @@ function addSubscriptionPlanFromServer(subscription_plan) {
 }
 function reset() {
   areArraysShallowlyEqual.clearObject(closure_10);
-  const obj = areArraysShallowlyEqual;
   areArraysShallowlyEqual.clearObject(closure_11);
   set.clear();
   set1.clear();
-  const obj2 = areArraysShallowlyEqual;
   areArraysShallowlyEqual.clearObject(closure_14);
-  const obj3 = areArraysShallowlyEqual;
   areArraysShallowlyEqual.clearObject(closure_15);
   const items = [SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR], SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH]];
-  const item = items.forEach((id) => {
-    callback(closure_3.createFromServer({ id: id.id, name: id.name, interval: id.interval, interval_count: id.intervalCount, tax_inclusive: true, sku_id: id.skuId, currency: constants.USD, price: 0, price_tier: 0 }));
+  const item = items.forEach((item, index) => {
+    callback(closure_3.createFromServer({ id: item.id, name: item.name, interval: item.interval, interval_count: item.intervalCount, tax_inclusive: true, sku_id: item.skuId, currency: constants.USD, price: 0, price_tier: 0 }));
   });
 }
 ({ CurrencyCodes: c4, PriceSetAssignmentPurchaseTypes: c5 } = ME);
@@ -71,8 +66,8 @@ let set1 = new Set();
 let closure_14 = {};
 let closure_15 = {};
 let items = [SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR], SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH], SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH]];
-let item = items.forEach((id) => {
-  callback(closure_3.createFromServer({ id: id.id, name: id.name, interval: id.interval, interval_count: id.intervalCount, tax_inclusive: true, sku_id: id.skuId, currency: constants.USD, price: 0, price_tier: 0 }));
+let item = items.forEach((item, index) => {
+  callback(closure_3.createFromServer({ id: item.id, name: item.name, interval: item.interval, interval_count: item.intervalCount, tax_inclusive: true, sku_id: item.skuId, currency: constants.USD, price: 0, price_tier: 0 }));
 });
 let items1 = [, , ];
 ({ DAY: arr2[0], MONTH: arr2[1], YEAR: arr2[2] } = SubscriptionIntervalTypes);
@@ -83,12 +78,9 @@ const prototype = SubscriptionPlanStore.prototype;
 prototype["getPlanIdsForSkus"] = function getPlanIdsForSkus(items) {
   items = [];
   while (tmp !== undefined) {
-    let tmp3 = dependencyMap;
     set = dependencyMap[tmp2];
     if (set == null) {
       let _Set = Set;
-      let tmp5 = new.target;
-      let tmp6 = new.target;
       set = new Set();
     }
     let arr = Array.from(set);
@@ -98,13 +90,7 @@ prototype["getPlanIdsForSkus"] = function getPlanIdsForSkus(items) {
     });
     let push = items.push;
     items1 = [];
-    let tmp8 = items1;
-    let tmp9 = arr;
-    let num = 0;
     let arraySpreadResult = HermesBuiltin.arraySpread(arr, 0);
-    let tmp11 = push;
-    let tmp12 = items1;
-    let tmp13 = items;
     let applyResult = HermesBuiltin.apply(items1, items);
     continue;
   }
@@ -118,22 +104,18 @@ prototype["getForSKU"] = function getForSKU(arg0) {
   if (items == null) {
     items = [];
   }
-  return Array.from(items).map((arg0) => table[arg0]);
+  return Array.from(items).map((item, index) => table[item]);
 };
 prototype["getForSkuAndInterval"] = function getForSkuAndInterval(GUILD, interval, intervalCount) {
   closure_0 = interval;
-  let num = intervalCount;
-  if (intervalCount === undefined) {
-    num = 1;
-  }
   const forSKU = this.getForSKU(GUILD);
-  return forSKU.find((id) => {
-    let tmp = id.id !== closure_1_7.PREMIUM_GROUP_MONTH;
+  return forSKU.find((item, index) => {
+    let tmp = item.id !== SubscriptionPlans.PREMIUM_GROUP_MONTH;
     if (tmp) {
-      tmp = id.interval === closure_0;
+      tmp = item.interval === closure_0;
     }
     if (tmp) {
-      tmp = id.intervalCount === num;
+      tmp = item.intervalCount === num;
     }
     return tmp;
   });
@@ -146,7 +128,7 @@ prototype["isFetchingForSKU"] = function isFetchingForSKU(arg0) {
 };
 prototype["isFetchingForSKUs"] = function isFetchingForSKUs(skuIDs) {
   const self = this;
-  return skuIDs.some((arg0) => self.isFetchingForSKU(arg0));
+  return skuIDs.some((item, index) => self.isFetchingForSKU(item));
 };
 prototype["isLoadedForSKU"] = function isLoadedForSKU(TIER_2) {
   let hasItem = set1.has(TIER_2);
@@ -162,15 +144,15 @@ prototype["isLoadedForSKU"] = function isLoadedForSKU(TIER_2) {
 };
 prototype["isLoadedForSKUs"] = function isLoadedForSKUs(items) {
   const self = this;
-  return items.every((TIER_2) => self.isLoadedForSKU(TIER_2));
+  return items.every((item, index) => self.isLoadedForSKU(item));
 };
 prototype["isFetchingForPremiumSKUs"] = function isFetchingForPremiumSKUs() {
   const self = this;
-  return closure_9.some((arg0) => self.isFetchingForSKU(arg0));
+  return closure_9.some((item, index) => self.isFetchingForSKU(item));
 };
 prototype["isLoadedForPremiumSKUs"] = function isLoadedForPremiumSKUs() {
   const self = this;
-  return closure_9.every((TIER_2) => self.isLoadedForSKU(TIER_2));
+  return closure_9.every((item, index) => self.isLoadedForSKU(item));
 };
 prototype["ignoreSKUFetch"] = function ignoreSKUFetch(arg0) {
   set1.add(arg0);
@@ -185,25 +167,24 @@ prototype["getPaymentSourcesForPlanId"] = function getPaymentSourcesForPlanId(ke
 prototype["getPaymentSourceIds"] = function getPaymentSourceIds() {
   set = new Set();
   const values = Object.values(closure_14);
-  const item = values.forEach((arr) => arr.forEach((arg0) => set.add(arg0)));
+  const item = values.forEach((item, index) => item.forEach((item, index) => set.add(item)));
   return set;
 };
-prototype["hasPaymentSourceForSKUId"] = function hasPaymentSourceForSKUId(closure_0, arg1) {
-  let tmp = constants2.NONE === arg1;
+prototype["hasPaymentSourceForSKUId"] = function hasPaymentSourceForSKUId(closure_0, item) {
+  let tmp = constants2.NONE === item;
   if (!tmp) {
-    let hasItem = null != dependencyMap2[arg1];
+    let hasItem = null != dependencyMap2[item];
     if (hasItem) {
-      hasItem = tmp2[arg1].has(closure_0);
-      const obj = tmp2[arg1];
+      hasItem = tmp2[item].has(closure_0);
     }
     tmp = hasItem;
   }
   return tmp;
 };
-prototype["hasPaymentSourceForSKUIds"] = function hasPaymentSourceForSKUIds(defaultPaymentSourceId, arr) {
+prototype["hasPaymentSourceForSKUIds"] = function hasPaymentSourceForSKUIds(defaultPaymentSourceId, items) {
   const self = this;
   closure_0 = defaultPaymentSourceId;
-  return arr.every((arg0) => self.hasPaymentSourceForSKUId(closure_0, arg0));
+  return items.every((item, index) => self.hasPaymentSourceForSKUId(closure_0, item));
 };
 SubscriptionPlanStore.displayName = "SubscriptionPlanStore";
 const subscriptionPlanStore = new SubscriptionPlanStore(dispatcherDefault, {
@@ -237,8 +218,6 @@ const subscriptionPlanStore = new SubscriptionPlanStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       if (null != nextResult.subscription_plan) {
-        let tmp3 = addSubscriptionPlanFromServer;
-        let tmp4 = nextResult;
         let tmp5 = addSubscriptionPlanFromServer(tmp2.subscription_plan);
       }
       continue;
@@ -246,7 +225,7 @@ const subscriptionPlanStore = new SubscriptionPlanStore(dispatcherDefault, {
   },
   LOGOUT: reset
 });
-const result = set.fileFinishedImporting("stores/billing/SubscriptionPlanStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/billing/SubscriptionPlanStore.tsx");
 
 export default subscriptionPlanStore;
 export const subscriptionPlansFetchingForSKU = set;

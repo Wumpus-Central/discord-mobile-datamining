@@ -1,10 +1,10 @@
 // === Module 9173: useDefaultVariantIndex ===
 
 // Module 9173 (useDefaultVariantIndex)
-import closure_2 from "map" /* 5324 */;
+import map from "map" /* 5324 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
 
 export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
   const items = [closure_2];
@@ -15,7 +15,7 @@ export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
     if (tmpResult.getIsVariantProduct(product)) {
       const _Math = Math;
       const variants = product.variants;
-      num = Math.max(0, variants.findIndex((skuId) => !set.has(skuId.skuId)));
+      num = Math.max(0, variants.findIndex((item, index) => !set.has(item.skuId)));
     }
     tmpResult = _require(5312);
   }

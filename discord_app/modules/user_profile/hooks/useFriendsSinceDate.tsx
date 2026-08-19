@@ -1,12 +1,12 @@
 // === Module 9553: useFriendsSinceDate ===
 
 // Module 9553 (useFriendsSinceDate)
-import closure_2 from "_getSystemLocale" /* 1994 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
 import { RelationshipTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");
 
 export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
   const _require = userId;
@@ -17,7 +17,7 @@ export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
   const items2 = [userId];
   const stateFromStores1 = _require(647).useStateFromStores(items1, () => {
     let since = null;
-    if (closure_1_3.getRelationshipType(closure_0) === closure_1_4.FRIEND) {
+    if (closure_1_3.getRelationshipType(closure_0) === RelationshipTypes.FRIEND) {
       since = closure_1_3.getSince(closure_0);
     }
     return since;

@@ -9,9 +9,9 @@ import Text from "Text" /* 4734 */;
 import renderChannelBadge from "renderChannelBadge" /* 11458 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelBadge.tsx");
+const result = require("obj132").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelBadge.tsx");
 
 export const renderChannelBadge = function renderChannelBadge(newChannel) {
   let flag = newChannel.newChannel;
@@ -43,7 +43,6 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
         obj1[0] = shortenAndLocalizeNumber.humanizeValue(newPostCount, newChannel.locale);
         obj[2] = intl.format(getSystemLocale.t.GkAbqY, obj1);
         tmp2 = jsx(Text.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
-        const obj5 = shortenAndLocalizeNumber;
       }
     }
     if (null != postsWithUnreadsCount) {

@@ -4,15 +4,14 @@
 import initializeDefault from "initialize" /* 589 */;
 import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "handleConnectionOpen" /* 1979 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 1979 */;
 import { VoiceCallOverlayType } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
 
 let c4 = false;
 let c5 = false;
 let c6 = false;
 let c7 = false;
-let obj = {};
-obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
+let obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
 obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = obj;
@@ -113,6 +112,6 @@ const channelCallLifecycleStore = new ChannelCallLifecycleStore(dispatcherDefaul
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
 
 export default channelCallLifecycleStore;

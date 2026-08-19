@@ -2,10 +2,10 @@
 
 // Module 15976
 import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function PortalKeyboardRendererComponent(item) {
   item = item.item;
@@ -13,10 +13,9 @@ const memoResult = importAllResult.memo(function PortalKeyboardRendererComponent
   ({ chatInputRef, type } = item);
   ({ state, cleanUp } = item);
   let channel;
-  let memo;
   channel = channel.getChannel(channelId);
   const items = [channel, channelId];
-  memo = importAllResult.useMemo(() => {
+  const memo = importAllResult.useMemo(() => {
     if (channelId !== channelId(memo[3]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
       let FAKE_PLACEHOLDER_PRIVATE_CHANNEL = channel;
     } else {
@@ -65,6 +64,6 @@ const memoResult = importAllResult.memo(function PortalKeyboardRendererComponent
   }
   return null;
 });
-const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboardRendererComponent.tsx");
+const result = require("obj132").fileFinishedImporting("modules/keyboard/native/PortalKeyboardRendererComponent.tsx");
 
 export default memoResult;

@@ -3,26 +3,25 @@
 // Module 15269
 import timestampDefault from "timestamp" /* 3 */;
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let c4 = importAllResult;
 ({ View: c5, StyleSheet: closure_6, Pressable: error } = get_ActivityIndicator);
 ({ ComponentActions: closure_8, ME: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = new timestampDefault("MainTabsNavigatorPanel");
-let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 obj[1] = obj;
 obj[2] = { flex: 1 };
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_14 = { code: "function MainTabsNavigatorPanelTsx1(){const{translateX,highestFullyRenderedScreenIndex}=this.__closure;return{opacity:translateX.get()>0&&highestFullyRenderedScreenIndex.get()<1?1:0};}" };
-let tmp5 = new timestampDefault("MainTabsNavigatorPanel");
+const tmp5 = new timestampDefault("MainTabsNavigatorPanel");
 const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
   let tmp = callback2();
   let obj = navigation(drawerWidth[8]);
@@ -37,10 +36,10 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
   const items = [isChatLockedOpen];
   const layoutEffect = importAllResult.useLayoutEffect(() => {
     if (ref.current !== isChatLockedOpen) {
-      tmp.current = tmp2;
+      tmp.current = isChatLockedOpen;
       obj = navigation;
       let result = drawerWidth;
-      if (tmp2) {
+      if (isChatLockedOpen) {
         obj = obj(result[12]);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
@@ -85,7 +84,6 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
       do {
         let diff = index - 1;
         let tmp6 = state.routes[diff];
-        let tmp7 = num;
         name1 = undefined;
         if (tmp6 != null) {
           name1 = tmp6.name;
@@ -99,7 +97,7 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
       navigation.pop(num2);
     }
   }, items2);
-  let tmp15 = callback(importAllResult.useState(() => navigation(drawerWidth[14]).isActiveTabsGuilds(navigation.getState())), 2);
+  const tmp15 = callback(importAllResult.useState(() => navigation(drawerWidth[14]).isActiveTabsGuilds(navigation.getState())), 2);
   const first2 = tmp15[0];
   closure_12 = tmp15[1];
   const tmp8 = isChatLockedOpen(drawerWidth[11])();
@@ -107,7 +105,7 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
   const items3 = [navigation];
   const effect1 = importAllResult.useEffect(() => {
     function handleStateChange(data) {
-      callback(handleStateChange(closure_1_2[14]).isActiveTabsGuilds(data.data.state));
+      callback(handleStateChange(drawerWidth[14]).isActiveTabsGuilds(data.data.state));
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {
@@ -148,12 +146,10 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
           }
           if ("modal" !== name) {
             tmp2.current = true;
-            tmp14(tmp15[16]).transitionToChannel(tmp5.current.channelId);
-            const tmp14Result = tmp14(tmp15[16]);
+            navigation(drawerWidth[16]).transitionToChannel(tmp5.current.channelId);
+            const tmp14Result = navigation(drawerWidth[16]);
           }
           const obj2 = navigation(drawerWidth[15]);
-          tmp14 = navigation;
-          tmp15 = drawerWidth;
         }
       }
     } else {
@@ -238,11 +234,9 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
           movePanel(true, false, 0, true);
         }
       } else if (movePanel(false, false, 0, false)) {
-        tmp4(tmp5[13]).dismissKeyboard();
-        const tmp4Result = tmp4(tmp5[13]);
+        navigation(drawerWidth[13]).dismissKeyboard();
+        const tmp4Result = navigation(drawerWidth[13]);
       }
-      tmp4 = navigation;
-      tmp5 = drawerWidth;
     }
   }, items7);
   let channelId;
@@ -389,6 +383,6 @@ const memoResult = importAllResult.memo(function MainTabsNavigatorPanel() {
   }
   tmp38 = !first;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanel.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanel.tsx");
 
 export default memoResult;

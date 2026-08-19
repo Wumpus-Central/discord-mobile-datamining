@@ -1,9 +1,9 @@
 // === Module 11968: metadata ===
 
 // Module 11968 (metadata)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/collectibles/previews/sample_profile_small.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/collectibles/previews/sample_profile_small.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/12b31ddb6470a59ecf9103c1aee866f9fdb3331727949eb88029160c02be9e0e.png";
 export const metadata = { fileBytes: 2460 };

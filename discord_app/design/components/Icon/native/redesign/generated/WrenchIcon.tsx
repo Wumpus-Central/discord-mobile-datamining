@@ -7,9 +7,9 @@ import BaseIconImage from "BaseIconImage" /* 4096 */;
 import registerAsset from "registerAsset" /* 14871 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/WrenchIcon.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Icon/native/redesign/generated/WrenchIcon.tsx");
 
 export const WrenchIcon = function WrenchIcon(color) {
   let INTERACTIVE_ICON_DEFAULT = color.color;

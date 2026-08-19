@@ -37,6 +37,6 @@ Object.defineProperty(SubscriptionTrialRecord.prototype, "isMultiInterval", {
   },
   set: undefined
 });
-const result = require("set").fileFinishedImporting("modules/billing/records/SubscriptionTrialRecord.tsx");
+const result = require("obj132").fileFinishedImporting("modules/billing/records/SubscriptionTrialRecord.tsx");
 
 export default SubscriptionTrialRecord;

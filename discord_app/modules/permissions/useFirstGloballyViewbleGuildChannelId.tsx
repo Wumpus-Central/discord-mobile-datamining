@@ -1,11 +1,12 @@
 // === Module 15325: useFirstGloballyViewbleGuildChannelId ===
 
 // Module 15325 (useFirstGloballyViewbleGuildChannelId)
-import closure_3 from "comparator" /* 1980 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import comparator from "comparator" /* 1980 */;
 import { Permissions } from "sum" /* 505 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");
 
 export const useFirstGloballyViewbleGuildChannelId = function useFirstGloballyViewbleGuildChannelId(guildId) {
   const _require = guildId;
@@ -16,13 +17,8 @@ export const useFirstGloballyViewbleGuildChannelId = function useFirstGloballyVi
       const selectableChannels = closure_1_3.getSelectableChannels(tmp);
       for (const item10010 of selectableChannels) {
         let channel = item10010.channel;
-        let tmp6 = channel;
-        let tmp7 = closure_1_1;
-        let tmp8 = closure_1_2;
-        let obj2 = closure_1_1(closure_1_2[3]);
-        let tmp9 = closure_1_4;
-        if (obj2.canEveryone(closure_1_4.VIEW_CHANNEL, channel)) {
-          let tmp10 = obj;
+        let obj2 = applyOverwritesAll;
+        if (obj2.canEveryone(Permissions.VIEW_CHANNEL, channel)) {
           obj.return();
           return channel.id;
         }

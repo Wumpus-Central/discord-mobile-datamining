@@ -1,7 +1,7 @@
 // === Module 9292: StatusTypes ===
 
 // Module 9292 (StatusTypes)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import sum from "sum" /* 505 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import nameFromUser from "nameFromUser" /* 4219 */;
@@ -272,7 +272,7 @@ const items2 = [
     }
   }
 ];
-const result = set.fileFinishedImporting("modules/custom_status/Constants.tsx");
+const result = obj132.fileFinishedImporting("modules/custom_status/Constants.tsx");
 
 export const STATUS_MAX_LENGTH = 128;
 export const ClearAfterValues = frozen;

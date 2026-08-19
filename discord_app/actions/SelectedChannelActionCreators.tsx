@@ -5,14 +5,14 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import transitionTo from "transitionTo" /* 1222 */;
 import selectVoiceChannelAdditional from "selectVoiceChannelAdditional" /* 4976 */;
 import disconnectRemoteAll from "disconnectRemote" /* 9845 */;
-import closure_4 from "set" /* 4540 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
-import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import set from "set" /* 4540 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
 import ME from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 ({ ME: error, PopoutWindowKeys, Routes: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
 
 export default {
   selectChannel(guildId) {
@@ -56,7 +56,6 @@ export default {
     remoteSessionId = remoteSessionId.getRemoteSessionId();
     if (null != remoteSessionId) {
       disconnectRemoteAll.remoteDisconnect(remoteSessionId);
-      const obj = disconnectRemoteAll;
     }
     const voiceChannel = this.selectVoiceChannel(null);
   }

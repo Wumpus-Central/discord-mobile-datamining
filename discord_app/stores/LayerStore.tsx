@@ -40,6 +40,6 @@ const layerStore = new LayerStore(dispatcherDefault, {
   LOGOUT: handlePopAllLayers,
   NOTIFICATION_CLICK: handlePopAllLayers
 });
-const result = require("set").fileFinishedImporting("stores/LayerStore.tsx");
+const result = require("obj132").fileFinishedImporting("stores/LayerStore.tsx");
 
 export default layerStore;

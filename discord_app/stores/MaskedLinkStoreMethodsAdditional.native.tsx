@@ -1,9 +1,9 @@
 // === Module 8778: getHostname ===
 
 // Module 8778 (getHostname)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("stores/MaskedLinkStoreMethodsAdditional.native.tsx");
+const result = obj132.fileFinishedImporting("stores/MaskedLinkStoreMethodsAdditional.native.tsx");
 
 export const getHostname = function getHostname(arg0) {
   try {

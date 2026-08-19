@@ -2,24 +2,23 @@
 
 // Module 12734 (ForLaterNitroUpsellBar)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX" /* 8481 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ SAVED_BOOKMARKS_MAX: error, SAVED_REMINDERS_MAX: closure_8 } = SAVED_BOOKMARKS_MAX);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: null, icon: null, text: null };
-createCacheKey = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.md, flexDirection: "row", gap: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_16, marginHorizontal: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_12 };
+const createCacheKey = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.md, flexDirection: "row", gap: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_16, marginHorizontal: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 20, width: 20 };
 createCacheKey[2] = { flex: 1 };
 let closure_11 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterNitroUpsellBar.tsx");
+const result = require("obj132").fileFinishedImporting("modules/saved_messages/native/ForLaterNitroUpsellBar.tsx");
 
 export default function ForLaterNitroUpsellBar(isReminder) {
   isReminder = isReminder.isReminder;
@@ -29,18 +28,18 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   analyticsLocations = analyticsLocations(7139)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
   let obj = { style: tmp.container, children: null };
-  callback = React.useCallback(() => analyticsLocations(closure_1_2[8])(isReminder, analyticsLocations), items);
+  callback = React.useCallback(() => analyticsLocations(dependencyMap[8])(isReminder, analyticsLocations), items);
   if (isAtLimit) {
     obj = { color: "text-feedback-warning", style: null };
     obj[1] = tmp.icon;
-    let tmp7Result = tmp7(isReminder(8078).WarningIcon, obj);
-    let tmp10 = tmp7;
+    let tmp7Result = callback(isReminder(8078).WarningIcon, obj);
+    let tmp10 = callback;
   } else {
     obj = { source: null, style: null };
     obj[0] = tmp2(9397);
     obj[1] = tmp.icon;
-    tmp7Result = tmp7(closure_4, obj);
-    tmp10 = tmp7;
+    tmp7Result = callback(closure_4, obj);
+    tmp10 = callback;
   }
   const items1 = [tmp7Result, , ];
   obj1 = { variant: "text-xs/medium", color: "text-default", style: tmp.text, children: null };
@@ -63,7 +62,7 @@ export default function ForLaterNitroUpsellBar(isReminder) {
     obj4[0] = premiumTypeDisplayName;
     items2[2] = formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj4);
     obj1[3] = items2;
-    items1[1] = tmp5(isReminder(4734).Text, obj1);
+    items1[1] = callback2(isReminder(4734).Text, obj1);
     if (isAtLimit) {
       let Button = tmp2(9498);
     } else {
@@ -75,6 +74,7 @@ export default function ForLaterNitroUpsellBar(isReminder) {
     obj5[2] = callback;
     items1[2] = tmp10(Button, obj5);
     obj[1] = items1;
-    return tmp5(closure_5, obj);
+    return callback2(closure_5, obj);
   }
+  const str = intl.string(isReminder(1236).t.oW0eUd);
 };

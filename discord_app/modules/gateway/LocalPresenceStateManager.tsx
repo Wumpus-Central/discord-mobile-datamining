@@ -3,7 +3,7 @@
 // Module 13227 (getInitialState)
 import shouldCommitDefault from "shouldCommit" /* 13228 */;
 import rateLimitDefault from "rateLimit" /* 13229 */;
-import closure_2 from "filterPlayingActivities" /* 7250 */;
+import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
 
 shouldCommitDefault;
 class LocalPresenceStateManager extends tmp2 {
@@ -42,6 +42,6 @@ prototype["handleAccountSwitch"] = function handleAccountSwitch() {
   this.reset();
   this.emitPresenceUpdate(this.getState());
 };
-const result = require("set").fileFinishedImporting("modules/gateway/LocalPresenceStateManager.tsx");
+const result = require("obj132").fileFinishedImporting("modules/gateway/LocalPresenceStateManager.tsx");
 
 export default LocalPresenceStateManager;

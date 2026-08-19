@@ -3,13 +3,12 @@
 // Module 4540 (set)
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_0 from "handleUpdate" /* 4541 */;
-import closure_1 from "updateVoiceState" /* 4542 */;
-import set from "set" /* 2 */;
+import handleUpdate from "handleUpdate" /* 4541 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
 
 let c2 = null;
 let c3 = null;
-let set = new Set();
+const set = new Set();
 let closure_5 = {};
 let closure_6 = {};
 const set1 = new Set();
@@ -82,9 +81,7 @@ const gameConsoleStore = new GameConsoleStore(dispatcherDefault, {
     obj = {};
     for (const item10014 of devices) {
       obj[item10014.id] = item10014;
-      let tmp3 = obj;
       if (obj[platform] === item10014.id) {
-        let tmp4 = item10014;
         obj[platform] = tmp2.id;
       }
       continue;
@@ -97,6 +94,6 @@ const gameConsoleStore = new GameConsoleStore(dispatcherDefault, {
     closure_6[platform.platform] = platform.deviceId;
   }
 });
-const result = set.fileFinishedImporting("modules/game_console/GameConsoleStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/game_console/GameConsoleStore.tsx");
 
 export default gameConsoleStore;

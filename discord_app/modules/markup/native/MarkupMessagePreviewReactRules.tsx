@@ -2,6 +2,7 @@
 
 // Module 10054 (defaultReactFn)
 import noopAll from "noop" /* 19 */;
+import preloadDefault from "preload" /* 5449 */;
 import parseLinkDefault from "parseLink" /* 6809 */;
 import ICON_SIZE from "ICON_SIZE" /* 7187 */;
 import smartOutput from "smartOutput" /* 8308 */;
@@ -9,13 +10,12 @@ import getLayoutStyles from "getLayoutStyles" /* 10056 */;
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10055 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 function defaultReactFn(content, output, state) {
   if (typeof content.content === "string") {
     content = content.content;
   } else {
     content = smartOutput.smartOutput(content, output, state);
-    const obj = smartOutput;
   }
   return content;
 }
@@ -24,8 +24,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   if (num === undefined) {
     num = 15;
   }
-  obj = { [closure_0(closure_2[7]).AST_KEY.TEXT]: obj };
-  obj = { react: defaultReactFn };
+  { [closure_0(closure_2[7]).AST_KEY.TEXT]: obj };
   obj = {};
   const merged = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.STRIKETHROUGH]);
   obj.react = defaultReactFn;
@@ -85,10 +84,10 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4765).AST_KEY.CUSTOM_EMOJI] = {
     react(src, arg1, muted) {
       if (src.src) {
-        let obj = num(closure_1_2[5]);
+        let obj = num(dependencyMap[5]);
         const sizeStyle = obj.makeSizeStyle(num);
         const items = [sizeStyle, { resizeMode: "contain" }, , ];
-        obj1 = num(closure_1_2[11]);
+        obj1 = num(dependencyMap[11]);
         let isAndroidResult = obj1.isAndroid();
         if (isAndroidResult) {
           obj = { transform: null };
@@ -100,7 +99,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
         muted = muted.muted;
         if (muted) {
           obj = { opacity: null };
-          obj[0] = closure_1_3;
+          obj[0] = MUTED_OPACITY_CONTENT;
           muted = obj;
         }
         obj1 = { style: null, source: null };
@@ -109,7 +108,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
         const obj2 = { uri: null };
         obj2[0] = src.src;
         obj1[1] = obj2;
-        return closure_1_4(closure_1_1(closure_1_2[10]), obj1, muted.key);
+        return closure_1_4(preloadDefault, obj1, muted.key);
       } else {
         return src.alt;
       }
@@ -213,7 +212,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const regExp = new RegExp(require("regExp").ANSI_CONTROL_SEQUENCE_RE, "g");
-const result = require("set").fileFinishedImporting("modules/markup/native/MarkupMessagePreviewReactRules.tsx");
+const result = require("obj132").fileFinishedImporting("modules/markup/native/MarkupMessagePreviewReactRules.tsx");
 
 export default function createChannelListMessagePreviewReactRules(layout) {
   let obj = getLayoutStyles;

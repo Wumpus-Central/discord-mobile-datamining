@@ -6,7 +6,7 @@ import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import SubscriptionPlans from "SubscriptionPlans" /* 5322 */;
 
-require = arg1;
+require = fn;
 let c3 = null;
 let c4 = false;
 let c5 = null;
@@ -24,7 +24,6 @@ prototype["genericProductsLoaded"] = function genericProductsLoaded() {
       const GenericProductIds = callback(table[2]).GenericProductIds;
       return GenericProductIds.includes(identifier.identifier);
     }).length === SubscriptionPlans.GenericProductIds.length;
-    const arr = applyDefault;
   }
   return tmp;
 };
@@ -52,6 +51,6 @@ const genericIAPStore = new GenericIAPStore(dispatcherDefault, {
     storeFront = storeFront.storeFront;
   }
 });
-const result = require("set").fileFinishedImporting("modules/billing/native/GenericIAPStore.tsx");
+const result = require("obj132").fileFinishedImporting("modules/billing/native/GenericIAPStore.tsx");
 
 export default genericIAPStore;

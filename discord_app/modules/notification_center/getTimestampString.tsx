@@ -1,52 +1,52 @@
 // === Module 4968: getDurationString ===
 
 // Module 4968 (getDurationString)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import tDefault from "t" /* 3975 */;
 
 function getDurationString(seconds) {
   seconds = seconds.seconds;
-  const formatter = seconds.getFormatter();
+  const time = seconds.getFormatter();
   if (seconds < 60) {
     const intl6 = getSystemLocale.intl;
-    let formatToPlainStringResult = intl6.formatToPlainString(formatter.minutes, { minutes: 1 });
+    let formatToPlainStringResult = intl6.formatToPlainString(time.minutes, { minutes: 1 });
   } else if (seconds < 3600) {
     const intl5 = getSystemLocale.intl;
     let obj = { minutes: null };
     const _Math5 = Math;
     obj[0] = Math.floor(seconds / 60);
-    formatToPlainStringResult = intl5.formatToPlainString(formatter.minutes, obj);
+    formatToPlainStringResult = intl5.formatToPlainString(time.minutes, obj);
   } else if (seconds < 86400) {
     const intl4 = getSystemLocale.intl;
     obj = { hours: null };
     const _Math4 = Math;
     obj[0] = Math.floor(seconds / 3600);
-    formatToPlainStringResult = intl4.formatToPlainString(formatter.hours, obj);
+    formatToPlainStringResult = intl4.formatToPlainString(time.hours, obj);
   } else if (seconds < c3) {
     const intl3 = getSystemLocale.intl;
     obj1 = { days: null };
     const _Math3 = Math;
     obj1[0] = Math.floor(seconds / 86400);
-    formatToPlainStringResult = intl3.formatToPlainString(formatter.days, obj1);
+    formatToPlainStringResult = intl3.formatToPlainString(time.days, obj1);
   } else if (seconds < c4) {
     const intl2 = getSystemLocale.intl;
     const obj2 = { months: null };
     const _Math2 = Math;
-    obj2[0] = Math.floor(seconds / tmp20);
-    formatToPlainStringResult = intl2.formatToPlainString(formatter.months, obj2);
+    obj2[0] = Math.floor(seconds / tmp19);
+    formatToPlainStringResult = intl2.formatToPlainString(time.months, obj2);
   } else {
     const intl = getSystemLocale.intl;
     obj = { years: null };
     const _Math = Math;
-    obj[0] = Math.floor(seconds / tmp21);
-    formatToPlainStringResult = intl.formatToPlainString(formatter.years, obj);
+    obj[0] = Math.floor(seconds / tmp20);
+    formatToPlainStringResult = intl.formatToPlainString(time.years, obj);
   }
   return formatToPlainStringResult;
 }
 let c3 = 2592000;
 let c4 = 31104000;
-const result = set.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
+const result = obj132.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
   const obj = { seconds: tDefault().diff(tDefault(since), "s"), getFormatter };

@@ -1,7 +1,7 @@
 // === Module 5380: toSubmission ===
 
 // Module 5380 (toSubmission)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import WidgetType from "WidgetType" /* 5366 */;
 
 let ApplicationWidget;
@@ -17,8 +17,7 @@ class ApplicationWidget {
 }
 const prototype = ApplicationWidget.prototype;
 prototype["toSubmission"] = function toSubmission() {
-  obj = { id: this.id, data: obj };
-  obj = { type: this.type, application_id: this.applicationId };
+  const obj = { type: this.type, application_id: this.applicationId };
   return obj;
 };
 prototype["isUpdatable"] = function isUpdatable() {
@@ -47,7 +46,7 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type, applicationId: this.applicationId };
 };
-const result = set.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
 
 export { ApplicationWidget };
 export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId) {

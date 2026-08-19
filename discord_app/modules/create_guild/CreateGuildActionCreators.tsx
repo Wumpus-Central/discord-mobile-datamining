@@ -1,10 +1,10 @@
 // === Module 11487: _createGuildFromTemplate ===
 
 // Module 11487 (_createGuildFromTemplate)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _createGuildFromTemplate() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3, arg4) => {
@@ -109,7 +109,7 @@ function _createGuildFromTemplate() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/create_guild/CreateGuildActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/create_guild/CreateGuildActionCreators.tsx");
 
 export default {
   createGuildFromTemplate(c4, c5, id, c3, closure_1_9) {

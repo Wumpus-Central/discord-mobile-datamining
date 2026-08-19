@@ -2,25 +2,24 @@
 
 // Module 10383 (PremiumGiftSuccess)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createEmptyPromotionsByType" /* 7628 */;
+import createEmptyPromotionsByType from "createEmptyPromotionsByType" /* 7628 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((arg0) => {
-  let obj = { bodyContainer: null, actionContainer: null };
-  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };
+  let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };
   obj[0] = obj;
   obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: ThemesDefault.space.PX_16, paddingBottom: arg0 + ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
   const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_LOW);
   obj[1] = obj;
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftSuccess.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftSuccess.tsx");
 
 export default function PremiumGiftSuccess() {
   const tmp3 = callback3(importDefault(stateFromStores[7])().bottom);
@@ -53,9 +52,9 @@ export default function PremiumGiftSuccess() {
       tmp = null != stateFromStores;
     }
     if (tmp) {
-      let obj = lib(stateFromStores[16]);
-      obj = { dismissAction: null };
-      obj[0] = closure_1_6.INDIRECT_ACTION;
+      lib(stateFromStores[16]);
+      const obj = { dismissAction: null };
+      obj[0] = ContentDismissActionType.INDIRECT_ACTION;
       const result = obj.markSnowflakeBoundDismissibleContentAsDismissed(lib(stateFromStores[17]).DismissibleContent.GIFTING_PROMOTION_REMINDER, stateFromStores, obj);
     }
   }, items1);

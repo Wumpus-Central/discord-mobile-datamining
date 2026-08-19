@@ -1,10 +1,10 @@
 // === Module 7727: items ===
 
 // Module 7727 (items)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import items from "items" /* 7728 */;
 
-const result = set.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
+const result = obj132.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 
 export default {
   loadProducts() {

@@ -19,11 +19,11 @@ import TwinButtons from "TwinButtons" /* 8811 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemExperimentalButtons.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemExperimentalButtons.tsx");
 
 export default function UserSettingsDesignSystemExperimentalButtons() {
   let obj = map;
@@ -31,12 +31,10 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   obj1 = TwinButtons;
   const collapsibleFloatingActionButtonState = obj1.useCollapsibleFloatingActionButtonState();
   let obj2 = TwinButtons;
-  obj = { children: null };
   obj = { onScroll: obj2.useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState), children: null };
   obj1 = { spacing: ThemesDefault.space.PX_24, style: { paddingHorizontal: token }, children: null };
   obj2 = { title: "Header Button", description: "A specialized version of the 'secondary-overlay' Button which functions as both a Header and a button.", hasIcons: false, children: null };
   const obj3 = { style: { alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_1, paddingVertical: ThemesDefault.space.PX_48 }, children: null };
-  const obj4 = { alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.BG_GRADIENT_CHROMA_GLOW_1, paddingVertical: ThemesDefault.space.PX_48 };
   obj3[1] = callback(TwinButtons.HeaderButton, {
     onPress() {
 
@@ -51,16 +49,6 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   const items = [callback(TableRowGroupTitle.TableRowGroup, obj2), , , , , , ];
   const obj6 = { title: "Input Button", description: "A specialized button which looks like a text field, but functions as a button.", hasIcons: false, children: null };
   const obj7 = { spacing: ThemesDefault.space.PX_24, children: null };
-  const obj5 = {
-    onPress() {
-
-    },
-    text: "Channel Name",
-    icon: registerAssetDefault2,
-    iconPosition: "end",
-    accessibilityHint: "double-tap for more options",
-    iconOpticalOffsetMargin: -6
-  };
   const items1 = [
     callback(TwinButtons.InputButton, {
       onPress() {
@@ -73,15 +61,6 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     }),
 
   ];
-  const obj8 = {
-    onPress() {
-
-    },
-    size: "lg",
-    text: "Search",
-    icon: registerAssetDefault3,
-    isRound: true
-  };
   items1[1] = callback(TwinButtons.InputButton, {
     onPress() {
 
@@ -122,28 +101,6 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     },
     children: null
   };
-  const obj12 = {
-    onPress() {
-
-    },
-    text: "Add Status"
-  };
-  const obj13 = {
-    onPress() {
-
-    },
-    text: "Edit Profile"
-  };
-  const obj9 = {
-    onPress() {
-
-    },
-    size: "lg",
-    text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: registerAssetDefault,
-    iconPosition: "end",
-    accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-  };
   obj16[1] = callback(closure_3, { style: { borderColor: "pink", borderWidth: 1, borderRadius: 8, padding: 12 }, children: callback(Text.Text, { variant: "text-md/semibold", children: "This is a custom button" }) });
   obj15[1] = callback(TwinButtons.PressableScale, obj16);
   obj14[3] = callback(closure_3, obj15);
@@ -165,15 +122,6 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   });
   obj19[1] = callback(tmp3, obj20);
   items[5] = callback(ManaContext.ThemeContextProvider, obj19);
-  const obj21 = {
-    icon: registerAssetDefault4,
-    label: "Row Button",
-    subLabel: "With a blur background",
-    experimental_withBlurBackground: true,
-    onPress() {
-
-    }
-  };
   items[6] = callback(TableRowGroupTitle.TableRowGroup, { title: "Collapsible Floating Action Button", description: "A variation of the FloatingActionButton which will display some text until the user scrolls. We currently recommend the use of the FloatingActionButton over the CollapsibleFloatingActionButton, as a singular icon button without animation is more compact, understandable, and predictable.", hasIcons: false, children: callback(closure_3, { style: { padding: 48 } }) });
   obj1[2] = items;
   obj[1] = callback2(Stack.Stack, obj1);

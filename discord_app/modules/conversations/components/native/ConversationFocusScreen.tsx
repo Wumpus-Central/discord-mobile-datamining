@@ -2,22 +2,20 @@
 
 // Module 12696 (ConversationFocusScreen)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "removePendingListFetch" /* 5014 */;
+import removePendingListFetch from "removePendingListFetch" /* 5014 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ ActivityIndicator: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { container: null, pendingContent: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", gap: ThemesDefault.space.PX_32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", gap: ThemesDefault.space.PX_32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-let result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
+let result = require("obj132").fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
 
 export default function ConversationFocusScreen() {
   let container = callback2();
@@ -119,9 +117,7 @@ export default function ConversationFocusScreen() {
     }
     items7[1] = tmp12Result;
     obj2[1] = items7;
-    closure_8(closure_5, obj2);
-    const tmp10 = closure_8;
-    const tmp11 = closure_5;
+    callback(closure_5, obj2);
     tmp12 = callback;
   }
 };

@@ -6,17 +6,16 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 4745 */;
 import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 5554 */;
 import PromoSheet from "PromoSheet" /* 8017 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
-createCacheKey = { illustrationContainer: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_12 };
+require = fn;
+const createCacheKey = { paddingTop: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
 
 export default function BountiesNuxPromoSheet() {
   const callback = React.useCallback(() => {

@@ -1,7 +1,7 @@
 // === Module 8581: handleSetLocationMetadata ===
 
 // Module 8581 (handleSetLocationMetadata)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
@@ -43,6 +43,6 @@ const phoneStore = new PhoneStore(dispatcherDefault, {
   CONNECTION_OPEN: handleSetLocationMetadata,
   SET_LOCATION_METADATA: handleSetLocationMetadata
 });
-const result = set.fileFinishedImporting("modules/phone/PhoneStore.tsx");
+const result = obj132.fileFinishedImporting("modules/phone/PhoneStore.tsx");
 
 export default phoneStore;

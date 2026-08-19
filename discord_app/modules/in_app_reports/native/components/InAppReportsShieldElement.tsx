@@ -7,10 +7,10 @@ import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 let closure_4 = createCacheKey.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
-const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
+const result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
 
 export default function ShieldElement(element) {
   element = element.element;

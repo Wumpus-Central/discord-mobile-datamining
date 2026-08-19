@@ -1,12 +1,12 @@
 // === Module 11231: useEmbeddedActivityBackground ===
 
 // Module 11231 (useEmbeddedActivityBackground)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_4 = ["embedded_cover", "embedded_background"];
-const result = require("set").fileFinishedImporting("modules/activities/utils/useEmbeddedActivityBackground.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/useEmbeddedActivityBackground.tsx");
 
 export default function useEmbeddedActivityBackground(applicationId) {
   applicationId = applicationId.applicationId;
@@ -43,24 +43,17 @@ export default function useEmbeddedActivityBackground(applicationId) {
     const current = ref.current;
     if (null != current) {
       const assets = applicationId(names[2]).getAssets(tmp);
-      assets.then((arg0) => {
+      assets.then((result) => {
         closure_1_3(false);
-        const entries = Object.entries(arg0);
+        const entries = Object.entries(result);
         const obj = entries[Symbol.iterator]();
         while (obj !== undefined) {
-          let tmp4 = callback;
           let tmp5 = callback(tmp3, 2);
           [r10020, tmp6] = tmp5;
-          let tmp7 = tmp6;
           if (null != tmp6) {
-            let tmp8 = tmp6;
-            if ("" !== tmp7.id) {
-              let tmp9 = current;
-              let tmp10 = tmp6;
-              if (current.includes(tmp7.name)) {
-                let tmp11 = closure_1_2;
+            if ("" !== tmp6.id) {
+              if (current.includes(tmp6.name)) {
                 let tmp12 = closure_1_2(tmp6.id);
-                let tmp13 = obj;
                 obj.return();
               }
             }

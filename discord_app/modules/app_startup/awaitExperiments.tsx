@@ -1,12 +1,12 @@
 // === Module 13555: future ===
 
 // Module 13555 (future)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import Future from "Future" /* 8451 */;
 
 const future = new Future.Future();
 let c1 = null;
-const result = set.fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");
+const result = obj132.fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");
 
 export const beginLoadedExperimentsTimeout = function beginLoadedExperimentsTimeout() {
   const timeout = setTimeout(() => {

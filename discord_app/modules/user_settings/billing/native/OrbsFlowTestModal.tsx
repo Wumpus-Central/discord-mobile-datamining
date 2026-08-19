@@ -6,20 +6,20 @@ import Stack from "Stack" /* 4733 */;
 import Text from "Text" /* 4734 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
 import Layer from "Layer" /* 7126 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9941 */;
 import BalanceWidgetDefault from "BalanceWidget" /* 15149 */;
 import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15151 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function BalanceWidgetMenuSection() {
   const tmp = callback4();
-  let obj = { spacing: 16, style: tmp.container, children: null };
-  obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" };
+  const obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" };
   const items = [callback2(Text.Text, obj), callback2(BalanceWidgetDefault, {})];
   obj[2] = items;
   return callback3(Stack.Stack, obj);
@@ -31,7 +31,6 @@ function BalanceWidgetPillSection() {
   closure_1 = tmp2[1];
   const tmp4 = callback(importAllResult.useState("1000"), 2);
   const first1 = tmp4[0];
-  callback = tmp4[1];
   const items = [first1];
   callback = importAllResult.useCallback((arg0) => {
     callback2(arg0);
@@ -49,9 +48,8 @@ function BalanceWidgetPillSection() {
     }
   }, items);
   const callback2 = importAllResult.useCallback(() => {
-    let obj = callback(first1[13]);
-    obj = { balance: first, primaryButtonConfig: null, secondaryButtonConfig: null };
-    obj = { buttonText: null, onButtonPress: null };
+    callback(first1[13]);
+    const obj = { buttonText: null, onButtonPress: null };
     const intl = first(first1[16]).intl;
     obj[0] = intl.string(first(first1[16]).t.cpT0Cq);
     obj[1] = function onButtonPress() {
@@ -65,10 +63,9 @@ function BalanceWidgetPillSection() {
       callback2(paths[13]).hideActionSheet();
     };
     obj[2] = obj1;
-    obj.openLazy(() => callback(paths[15])(paths[14], paths.paths).then((arg0) => arg0.default), "OrbsFlowTestModalBalanceWidgetMenuKey", obj);
+    obj.openLazy(() => callback(paths[15])(paths[14], paths.paths).then((result) => result.default), "OrbsFlowTestModalBalanceWidgetMenuKey", obj);
   }, items1);
-  let obj = { spacing: 16, style: tmp.container, children: null };
-  obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Pill" };
+  let obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Pill" };
   const items2 = [callback2(first(first1[11]).Text, obj), callback2(first(first1[17]).TextInput, { value: first1, onChange: callback, placeholder: "Enter balance amount", keyboardType: "numeric" }), callback2(first(first1[18]).Button, { text: "Apply Balance", variant: "primary", onPress: callback1 }), ];
   obj = { style: tmp.balancePillContainer, children: null };
   const items3 = [callback2(first(first1[19]).BalanceWidgetPill, { balance: first }), callback2(first(first1[20]).BalanceWidgetPillButton, { balance: first, onPress: callback2 })];
@@ -80,7 +77,7 @@ function BalanceWidgetPillSection() {
 function OrbsFlowTest() {
   const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   let obj = { children: null };
-  obj = { style: callback4().wrap, contentContainerStyle: obj, children: null };
+  { style: callback4().wrap, contentContainerStyle: obj, children: null };
   obj = { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right };
   const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(OrbCheckoutMenuDefault, {})];
   obj[2] = items;
@@ -91,19 +88,18 @@ let c4 = importAllResult;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createNativeStackNavigator.createNativeStackNavigator();
-let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
 createNativeStackNavigator = { padding: ThemesDefault.space.PX_16 };
 obj[1] = createNativeStackNavigator;
 obj[2] = { marginBottom: 8 };
-createCacheKey = { flexDirection: "row", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+const createCacheKey = { flexDirection: "row", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 obj[3] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
   let obj = _require(6312);
   _require = obj.useAccessibilityNativeStackOptions();
-  obj = {
+  {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
@@ -111,11 +107,11 @@ const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
           const merged1 = Object.assign(merged);
           return callback2(callback(table[6]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: callback(closure_1_2[6]).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: callback(dependencyMap[6]).getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
       let merged = Object.assign(callback);
-      let merged1 = Object.assign(closure_1_1(closure_1_2[7])());
+      let merged1 = Object.assign(getNavigationModalPresentationDefault());
       return obj;
     },
     children: callback2(closure_9.Screen, obj)
@@ -129,6 +125,6 @@ const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
   };
   return callback2(closure_9.Navigator, obj);
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/OrbsFlowTestModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/billing/native/OrbsFlowTestModal.tsx");
 
 export default memoResult;

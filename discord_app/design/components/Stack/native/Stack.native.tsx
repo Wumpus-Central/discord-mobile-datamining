@@ -16,7 +16,7 @@ let closure_2 = createCacheKey.createStyles((gap, arg1, alignItems, justifyConte
   stack[4] = str;
   return { stack };
 });
-const result = require("set").fileFinishedImporting("design/components/Stack/native/Stack.native.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Stack/native/Stack.native.tsx");
 
 export const Stack = function Stack(spacing) {
   spacing = spacing.spacing;

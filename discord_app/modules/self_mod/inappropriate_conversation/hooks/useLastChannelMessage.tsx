@@ -1,10 +1,10 @@
 // === Module 10603: useLastChannelMessage ===
 
 // Module 10603 (useLastChannelMessage)
-import closure_2 from "reinjectEphemerals" /* 4994 */;
+import reinjectEphemerals from "reinjectEphemerals" /* 4994 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx");
 
 export const useLastChannelMessage = function useLastChannelMessage(channelId) {
   const _require = channelId;

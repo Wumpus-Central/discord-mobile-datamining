@@ -12,32 +12,26 @@ import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
 import registerAssetDefault from "registerAsset" /* 11929 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, topContainer: null, growContainer: null, image: null, title: null, subtitle: null, info: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { flexGrow: 2 };
-let obj1 = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { width: "100%", marginBottom: ThemesDefault.space.PX_32 };
-let obj2 = { width: "100%", marginBottom: ThemesDefault.space.PX_32 };
 createCacheKey[4] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
-let obj3 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_32 };
 createCacheKey[6] = { paddingHorizontal: 16, marginTop: 8, marginBottom: 24, textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_32 };
-const result = require("set").fileFinishedImporting("modules/nuf/native/components/RedesignDiscoverabilityLanding.tsx");
+const result = require("obj132").fileFinishedImporting("modules/nuf/native/components/RedesignDiscoverabilityLanding.tsx");
 
 export default function RedesignDiscoverabilityLanding(onNext) {
   const tmp = callback3();
-  let obj = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
-  obj = { flexGrow: 2, paddingTop: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: ThemesDefault.space.PX_16 };
+  let obj = { flexGrow: 2, paddingTop: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: ThemesDefault.space.PX_16 };
   obj[2] = obj;
   obj = { style: tmp.topContainer };
   const items = [callback(closure_3, obj), , , , , , ];

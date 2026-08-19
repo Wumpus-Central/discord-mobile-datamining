@@ -4,36 +4,17 @@
 import encodeProperties from "encodeProperties" /* 503 */;
 import sendRequest from "sendRequest" /* 530 */;
 import _modDef5227 from "module_5227" /* 5227 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("actions/HubActionCreators.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("actions/HubActionCreators.tsx");
 
 export default {
   signup(email, school) {
     let obj = _modDef5227;
-    obj = { url: Endpoints.HUB_WAITLIST_SIGNUP, body: obj, trackedActionData: null, rejectWithError: null };
     obj = { email, school };
     obj[2] = {
-      event: encodeProperties.NetworkActionNames.HUB_WAITLIST_SIGNUP,
-      properties(body) {
-        let email_domain;
-        if (body != null) {
-          body = body.body;
-          if (body != null) {
-            email_domain = body.email_domain;
-          }
-        }
-        let is_edu_email = false;
-        if (null != email_domain) {
-          const parts = email_domain.split(".");
-          is_edu_email = -1 !== parts.indexOf("edu");
-        }
-        return callback(table[4]).exact({ is_edu_email });
-      }
-    };
-    obj1 = {
       event: encodeProperties.NetworkActionNames.HUB_WAITLIST_SIGNUP,
       properties(body) {
         let email_domain;
@@ -82,7 +63,7 @@ export default {
       obj1[2] = obj3;
       obj1[3] = v0(closure_1_2[5]).rejectWithMigratedError();
       yield obj5.post(obj1);
-      return arg1.body;
+      return body.body;
     })();
   },
   verify(arg0) {
@@ -180,7 +161,7 @@ export default {
     })();
   },
   verifyCode(closure_0, closure_1_1, closure_02) {
-    closure_1 = closure_1_1;
+    closure_1 = importDefault;
     closure_2 = closure_02;
     return callback(function*() {
       if (c5 === 2) {

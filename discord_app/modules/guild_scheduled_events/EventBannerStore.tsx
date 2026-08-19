@@ -1,7 +1,7 @@
 // === Module 16277: initialize ===
 
 // Module 16277 (initialize)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
@@ -62,6 +62,6 @@ const eventBannerStore = new EventBannerStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/EventBannerStore.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/EventBannerStore.tsx");
 
 export default eventBannerStore;

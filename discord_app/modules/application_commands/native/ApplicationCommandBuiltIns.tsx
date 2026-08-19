@@ -1,11 +1,13 @@
 // === Module 8460: get untranslatedDescription ===
 
 // Module 8460 (get untranslatedDescription)
-import setDefault from "set" /* 4827 */;
-import closure_3 from "markAllUserIdListsStale" /* 4030 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import _modDef4770 from "module_4770" /* 4770 */;
+import obj132Default from "obj132" /* 4827 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+const require = fn;
 let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: require("TRUE_OPTION_NAME").BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
@@ -48,8 +50,7 @@ obj.execute = function execute(arg0, channel) {
       obj1[0] = channelName;
       formatResult = intl2.format(tmp5(1236).t.IK1Qvs, obj1);
     }
-    let obj2 = setDefault;
-    obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+    let obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
     obj2[0] = formatToPlainStringResult1;
     obj2[1] = formatResult;
     const intl3 = tmp5(1236).intl;
@@ -58,11 +59,10 @@ obj.execute = function execute(arg0, channel) {
     obj2[3] = intl4.string(channel(1236).t["ETE/oC"]);
     obj2[4] = function onConfirm() {
       try {
-        closure_1_1(closure_1_2[8]).closePrivateChannel(channel.id);
+        _modDef4770.closePrivateChannel(channel.id);
       } catch (err) {
-        const intl = channel(closure_1_2[5]).intl;
-        closure_1_1(closure_1_2[9]).sendBotMessage(channel.id, intl.string(channel(closure_1_2[5]).t["YOsuT/"]));
-        const obj2 = closure_1_1(closure_1_2[9]);
+        const intl = channel(dependencyMap[5]).intl;
+        trackInviteDefault.sendBotMessage(channel.id, intl.string(channel(dependencyMap[5]).t["YOsuT/"]));
       }
     };
     obj2.show(obj2);
@@ -70,6 +70,6 @@ obj.execute = function execute(arg0, channel) {
   }
 };
 const items = [obj];
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandBuiltIns.tsx");
+const result = require("obj132").fileFinishedImporting("modules/application_commands/native/ApplicationCommandBuiltIns.tsx");
 
 export default items;

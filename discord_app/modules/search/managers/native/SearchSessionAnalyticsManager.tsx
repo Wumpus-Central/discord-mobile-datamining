@@ -1,7 +1,7 @@
 // === Module 11532: _initialize ===
 
 // Module 11532 (_initialize)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 8506 */;
 import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
 import getSessionDefault from "getSession" /* 11533 */;
@@ -46,6 +46,6 @@ prototype["setSelectedTab"] = function setSelectedTab(visibleTabs, arg1) {
   const result = selectedTabs.set(SearchTokenTypes.getSearchContextId(visibleTabs), table[arg1]);
 };
 const searchSessionAnalyticsManager = new SearchSessionAnalyticsManager();
-let result = set.fileFinishedImporting("modules/search/managers/native/SearchSessionAnalyticsManager.tsx");
+let result = obj132.fileFinishedImporting("modules/search/managers/native/SearchSessionAnalyticsManager.tsx");
 
 export default searchSessionAnalyticsManager;

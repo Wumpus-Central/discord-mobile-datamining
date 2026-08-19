@@ -1,14 +1,14 @@
 // === Module 7934: usePremiumPlanPrice ===
 
 // Module 7934 (usePremiumPlanPrice)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "addSubscriptionPlan" /* 4044 */;
-import closure_5 from "reset" /* 4045 */;
-import closure_6 from "updateProduct" /* 5319 */;
+import noop from "noop" /* 19 */;
+import addSubscriptionPlan from "addSubscriptionPlan" /* 4044 */;
+import reset from "reset" /* 4045 */;
+import updateProduct from "updateProduct" /* 5319 */;
 import { PaymentGateways } from "sum" /* 505 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/premium/native/hooks/usePremiumPlanPrice.tsx");
 
 export default function usePremiumPlanPrice(arg0) {
   const _require = arg0;
@@ -68,21 +68,21 @@ export default function usePremiumPlanPrice(arg0) {
   const effect = React.useEffect(() => {
     if (closure_4) {
       if (priceState !== callback(priceState[8]).PriceStates.PRICE_AVAILABLE) {
-        if (tmp === tmp2(tmp3[8]).PriceStates.MISMATCHING_COUNTRIES) {
+        if (priceState === callback(priceState[8]).PriceStates.MISMATCHING_COUNTRIES) {
           let country;
           if (storeFront != null) {
-            country = tmp6.country;
+            country = storeFront.country;
           }
           if (null != country) {
             if (!closure_5.pending) {
               if (!isIOSResult.isFetchingForPremiumSKUs()) {
-                if (obj.fails < 3) {
-                  country = tmp6.country;
-                  obj.fail(() => {
+                if (closure_5.fails < 3) {
+                  country = storeFront.country;
+                  closure_5.fail(() => {
                     if (!isIOSResult.isFetchingForPremiumSKUs()) {
                       const obj = country(priceState[13]);
-                      const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, closure_2_7.APPLE_ADVANCED_COMMERCE);
-                      premiumSubscriptionPlans.catch(() => {
+                      const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
+                      premiumSubscriptionPlans.catch((error) => {
 
                       });
                     }
@@ -103,9 +103,7 @@ export default function usePremiumPlanPrice(arg0) {
   if (tmp5 == arg0) {
     return null;
   } else if (isIOSResult) {
-    let tmp14 = null;
     if (priceState === formatPrice(amount[8]).PriceStates.PRICE_AVAILABLE) {
-      tmp14 = null;
       if (tmp5 != price) {
         obj = { price: null, currency: null, countryCode: null, priceString: null, source: "API" };
         ({ amount: obj7[0], currency: obj7[1] } = price);
@@ -120,25 +118,19 @@ export default function usePremiumPlanPrice(arg0) {
         amount = price.amount;
         price = formatPrice(amount, price.currency);
         obj[3] = price;
-        tmp14 = obj;
       }
     }
-    let tmp12 = tmp14;
-  } else {
-    tmp12 = null;
-    if (tmp5 != stateFromStores2) {
-      obj = { price: null, currency: null, countryCode: null, priceString: null, source: "IAP" };
-      ({ price: obj6[0], currencyCode: obj6[1] } = stateFromStores2);
-      let country1;
-      if (storeFront != tmp5) {
-        country1 = storeFront.country;
-      }
-      if (country1 == tmp5) {
-        country1 = stateFromStores2.countryCode;
-      }
-      obj[2] = country1;
-      obj[3] = stateFromStores2.priceString;
-      tmp12 = obj;
+  } else if (tmp5 != stateFromStores2) {
+    obj = { price: null, currency: null, countryCode: null, priceString: null, source: "IAP" };
+    ({ price: obj6[0], currencyCode: obj6[1] } = stateFromStores2);
+    let country1;
+    if (storeFront != tmp5) {
+      country1 = storeFront.country;
     }
+    if (country1 == tmp5) {
+      country1 = stateFromStores2.countryCode;
+    }
+    obj[2] = country1;
+    obj[3] = stateFromStores2.priceString;
   }
 };

@@ -10,15 +10,13 @@ import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10302 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { getSingleRequirementThreshold as closure_4 } from "initialize" /* 8936 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function GiftingBadgeProgressBar(percent) {
   const tmp = callback3();
-  let obj = { style: tmp.progressBarTrack, children: null };
-  obj = { style: null };
   const items = [tmp.progressBarFill, ];
-  obj = { width: "" + Math.min(Math.max(percent.percent, 0), 100) + "%" };
+  const obj = { width: "" + Math.min(Math.max(percent.percent, 0), 100) + "%" };
   items[1] = obj;
   obj[0] = items;
   obj[1] = callback2(View, obj);
@@ -26,19 +24,14 @@ function GiftingBadgeProgressBar(percent) {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, content: null, progressBarTrack: null, progressBarFill: null, labels: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_16 };
+const createCacheKey = { flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
-let obj1 = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
 createCacheKey[2] = { height: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
-let obj2 = { height: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, overflow: "hidden" };
 createCacheKey[3] = { height: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-let obj3 = { height: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[4] = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: ThemesDefault.space.PX_16 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", minHeight: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeProgress.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeProgress.tsx");
 
 export default function GiftingBadgeProgress(title) {
   ({ progress, currentTier, nextTier, iconSize } = title);
@@ -88,12 +81,12 @@ export default function GiftingBadgeProgress(title) {
     obj4[0] = progress;
     obj4[1] = tmp2;
     obj3[2] = intl.format(messagesProxyDefault.iIpfQe, obj4);
-    tmp16Result = tmp16(Text.Text, obj3);
+    tmp16Result = callback2(Text.Text, obj3);
   }
   obj2[1] = tmp16Result;
   items1[2] = callback2(View, obj2);
   obj[1] = items1;
-  items[1] = closure_6(View, obj);
+  items[1] = callback(View, obj);
   let simple_icon_url1;
   if (nextTier != null) {
     simple_icon_url1 = nextTier.simple_icon_url;
@@ -103,9 +96,9 @@ export default function GiftingBadgeProgress(title) {
     const obj5 = { icon: null, size: null };
     obj5[0] = nextTier.simple_icon_url;
     obj5[1] = iconSize;
-    tmp16Result = tmp16(GiftingBadgeIconDefault, obj5);
+    tmp16Result = callback2(GiftingBadgeIconDefault, obj5);
   }
   items[2] = tmp16Result;
   obj[1] = items;
-  return closure_6(View, obj);
+  return callback(View, obj);
 };

@@ -1,12 +1,12 @@
 // === Module 12037: useShareChatInputActions ===
 
 // Module 12037 (useShareChatInputActions)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { EmojiIntention } from "set" /* 1925 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/share/native/useShareChatInputActions.tsx");
 
 export const useShareChatInputActions = function useShareChatInputActions(setText, selectedDestinationChannel, appEntryKey) {
   closure_0 = setText;
@@ -69,8 +69,8 @@ export const useShareChatInputActions = function useShareChatInputActions(setTex
       if (current != null) {
         current.blur();
       }
-      let obj = setText(selectedDestinationChannel[3]);
-      obj = { onPressEmoji: callback3, onClose: callback4, pickerIntention: constants.CHAT, autoFocus: false, startExpanded: false, channel: selectedDestinationChannel, appEntryKey: closure_2, guildId: null };
+      setText(selectedDestinationChannel[3]);
+      const obj = { onPressEmoji: callback3, onClose: callback4, pickerIntention: constants.CHAT, autoFocus: false, startExpanded: false, channel: selectedDestinationChannel, appEntryKey: closure_2, guildId: null };
       let guildId;
       if (selectedDestinationChannel != null) {
         guildId = selectedDestinationChannel.getGuildId();

@@ -2,11 +2,11 @@
 
 // Module 16227 (useIsActivityPanelFullscreen)
 import initialize from "initialize" /* 589 */;
-import closure_3 from "participantFromServer" /* 1390 */;
+import participantFromServer from "participantFromServer" /* 1390 */;
 import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 
 export const useIsActivityPanelFullscreen = function useIsActivityPanelFullscreen() {
   const items = [closure_3];

@@ -2,10 +2,10 @@
 
 // Module 8619 (_saveEmail)
 import keys from "keys" /* 691 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChangeEmailFields from "ChangeEmailFields" /* 8563 */;
 
-require = arg1;
+require = fn;
 function _saveEmail() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -127,7 +127,7 @@ function _saveEmail() {
   return applyArgumentsResult;
 }
 ({ setChangeEmailError: c4, ChangeEmailFields: c5 } = ChangeEmailFields);
-let result = require("set").fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");
 
 export const saveEmail = function saveEmail(arg0, c2, closure_1_7) {
   const self = this;
@@ -140,13 +140,13 @@ export const saveEmail = function saveEmail(arg0, c2, closure_1_7) {
   return applyArgumentsResult;
 };
 export const finishChangeEmailFlow = function finishChangeEmailFlow(closure_2, closure_4) {
-  const replaced = closure_2.replace(keys.VerificationModalScenes.CHANGE_EMAIL_COMPLETE, { email: closure_4 });
+  const replaced = dependencyMap.replace(keys.VerificationModalScenes.CHANGE_EMAIL_COMPLETE, { email: closure_4 });
 };
 export const finishVerifyEmailFlow = function finishVerifyEmailFlow(closure_2, closure_7) {
-  const tmp3 = closure_7(keys.VerificationModalScenes.RESEND_EMAIL);
+  const tmp3 = callback(keys.VerificationModalScenes.RESEND_EMAIL);
   if (-1 !== tmp3) {
-    closure_2.pop(closure_2.getState().routes.length - tmp3);
+    dependencyMap.pop(dependencyMap.getState().routes.length - tmp3);
   } else {
-    const replaced = closure_2.replace(keys.VerificationModalScenes.RESEND_EMAIL);
+    const replaced = dependencyMap.replace(keys.VerificationModalScenes.RESEND_EMAIL);
   }
 };

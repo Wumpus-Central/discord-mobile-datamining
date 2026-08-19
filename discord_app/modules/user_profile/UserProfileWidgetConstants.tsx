@@ -2,30 +2,30 @@
 
 // Module 5371 (items)
 import getSystemLocale from "getSystemLocale" /* 1236 */;
-import closure_2 from "addApplication" /* 4478 */;
+import addApplication from "addApplication" /* 4478 */;
 
-require = arg1;
+require = fn;
 const items = [require("WidgetType").WidgetType.PERSONAL, require("WidgetType").WidgetType.CLIPS_GALLERY, require("WidgetType").WidgetType.APPLICATION, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES, require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES];
 const items1 = [require("WidgetType").WidgetType.FAVORITE_GAMES];
 const items2 = [require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.CLIPS_GALLERY];
 const obj = {
-  [arg1(5366).WidgetType.FAVORITE_GAMES]: () => {
+  [fn(5366).WidgetType.FAVORITE_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Rpf6Ak);
   },
-  [arg1(5366).WidgetType.CURRENT_GAMES]: () => {
+  [fn(5366).WidgetType.CURRENT_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.zs6NsE);
   },
-  [arg1(5366).WidgetType.WANT_TO_PLAY_GAMES]: () => {
+  [fn(5366).WidgetType.WANT_TO_PLAY_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.I509Dl);
   },
-  [arg1(5366).WidgetType.PLAYED_GAMES]: () => {
+  [fn(5366).WidgetType.PLAYED_GAMES]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.QTq6Pf);
   },
-  [arg1(5366).WidgetType.APPLICATION]: (applicationId) => {
+  [fn(5366).WidgetType.APPLICATION]: (applicationId) => {
     application = application.getApplication(applicationId.applicationId);
     let str;
     if (application != null) {
@@ -36,16 +36,16 @@ const obj = {
     }
     return str;
   },
-  [arg1(5366).WidgetType.PERSONAL]: () => {
+  [fn(5366).WidgetType.PERSONAL]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.AVkYMx);
   },
-  [arg1(5366).WidgetType.CLIPS_GALLERY]: () => {
+  [fn(5366).WidgetType.CLIPS_GALLERY]: () => {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.zY8Ghg);
   }
 };
-const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileWidgetConstants.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/UserProfileWidgetConstants.tsx");
 
 export const WIDGET_SORT_ORDER = items;
 export const WIDGET_TITLES_BY_TYPE = obj;

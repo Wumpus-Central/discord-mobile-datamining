@@ -6,7 +6,7 @@ import _modDef6551 from "module_6551" /* 6551 */;
 import jsxProd from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-let require = arg1;
+let require = fn;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = { input: "", error: "accessibilityRole" };
 const PureComponent = importAllResult.PureComponent;
@@ -28,20 +28,20 @@ class UserSettingsInputAlert extends PureComponent {
       }
       if (!isLoading) {
         const onSubmitResult = onSubmit(applyArgumentsResult.state.input);
-        onSubmit(applyArgumentsResult.state.input).then(() => {
+        onSubmit(applyArgumentsResult.state.input).then((result) => {
           if (closure_0 != null) {
             tmp();
           }
           if (closure_1) {
             closure_1_0.close();
           }
-        }).catch((body) => {
+        }).catch((error) => {
           if (closure_2 != null) {
-            tmp(body);
+            tmp(error);
           }
-          if (body) {
-            if (body.body) {
-              const v6OrEarlierAPIError = new applyArgumentsResult(closure_2_2[2]).V6OrEarlierAPIError(body);
+          if (error) {
+            if (error.body) {
+              const v6OrEarlierAPIError = new applyArgumentsResult(dependencyMap[2]).V6OrEarlierAPIError(error);
               if (v6OrEarlierAPIError.code !== closure_3) {
                 const obj = { error: null };
                 obj[0] = v6OrEarlierAPIError.message;
@@ -50,7 +50,7 @@ class UserSettingsInputAlert extends PureComponent {
             }
           }
         });
-        const nextPromise = onSubmit(applyArgumentsResult.state.input).then(() => {
+        const nextPromise = onSubmit(applyArgumentsResult.state.input).then((result) => {
           if (closure_0 != null) {
             tmp();
           }
@@ -65,8 +65,7 @@ class UserSettingsInputAlert extends PureComponent {
 }
 const prototype = UserSettingsInputAlert.prototype;
 prototype["renderContent"] = function renderContent() {
-  let self = this;
-  self = this;
+  const self = this;
   const helpText = this.props.helpText;
   if (null != this.props.error) {
     if ("" !== self.props.error) {
@@ -96,7 +95,7 @@ prototype["renderContent"] = function renderContent() {
     };
     items[1] = callback(self(8071).TextInput, obj);
     obj[1] = items;
-    return closure_4(self(4733).Stack, obj);
+    return callback(self(4733).Stack, obj);
   }
   error = self.state.error;
 };
@@ -113,6 +112,6 @@ prototype["render"] = function render() {
   return tmpResult;
 };
 UserSettingsInputAlert.defaultProps = { isLoading: false, useKeyboardAwareWrapper: false, secureTextEntry: true };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsInputAlert.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/account/native/UserSettingsInputAlert.tsx");
 
 export default UserSettingsInputAlert;

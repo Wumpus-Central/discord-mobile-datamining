@@ -1,9 +1,9 @@
 // === Module 9566: AppLauncherEntrypoint ===
 
 // Module 9566 (AppLauncherEntrypoint)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_launcher/AppLauncherTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/app_launcher/AppLauncherTypes.tsx");
 
 export const AppLauncherEntrypoint = { NONE: "NONE", TEXT: "TEXT", VOICE: "VOICE" };
 export const AppLauncherSectionName = { SEARCH: "search", RECENT: "recent", INSTALLED: "installed", ACTIVITIES: "activities", RECENT_APPS: "recent_apps", RECENT_COMMANDS: "recent_commands", NEW_TO_APPS: "new_to_apps", APPS_IN_THIS_SERVER: "apps_in_this_server" };

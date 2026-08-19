@@ -1,10 +1,10 @@
 // === Module 9666: isVideoBackgroundSupported ===
 
 // Module 9666 (isVideoBackgroundSupported)
-import closure_0 from "_detectH265HardwareDecode" /* 4497 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
 import { Features } from "DesktopSources" /* 4529 */;
 
-const result = require("set").fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
+const result = require("obj132").fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 
 export default function isVideoBackgroundSupported() {
   let obj = arg0;

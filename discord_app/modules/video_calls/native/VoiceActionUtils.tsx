@@ -1,14 +1,14 @@
 // === Module 12567: NOOP ===
 
 // Module 12567 (NOOP)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import _handleToggleVideo from "_handleToggleVideo" /* 9647 */;
 
 function NOOP() {
 
 }
 const obj = { SERVER_MUTE: 0, [0]: "SERVER_MUTE", SUPPRESS: 1, [1]: "SUPPRESS", SELF_MUTE: 2, [2]: "SELF_MUTE", NONE: 3, [3]: "NONE" };
-const result = set.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
 
 export const DominantMuteState = obj;
 export const createMuteHandler = function createMuteHandler(muteStates, stateFromStores) {
@@ -18,7 +18,7 @@ export const createMuteHandler = function createMuteHandler(muteStates, stateFro
   }
   let dominantMuteState = obj.NONE;
   if (muteStates.selfMute) {
-    dominantMuteState = tmp.SELF_MUTE;
+    dominantMuteState = obj.SELF_MUTE;
   }
   if (flag) {
     let onPress = NOOP;
@@ -27,11 +27,11 @@ export const createMuteHandler = function createMuteHandler(muteStates, stateFro
   }
   if (muteStates.suppress) {
     onPress = _handleToggleVideo.showSuppressedAlert;
-    dominantMuteState = tmp.SUPPRESS;
+    dominantMuteState = obj.SUPPRESS;
   }
   if (muteStates.mute) {
     onPress = _handleToggleVideo.showServerMuteAlert;
-    dominantMuteState = tmp.SERVER_MUTE;
+    dominantMuteState = obj.SERVER_MUTE;
   }
   const mute = muteStates.selfMute || muteStates.mute || muteStates.suppress;
   return { mute, onPress, dominantMuteState };

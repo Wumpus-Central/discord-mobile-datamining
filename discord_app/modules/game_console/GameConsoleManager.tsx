@@ -4,18 +4,20 @@
 import timestampDefault from "timestamp" /* 3 */;
 import start from "start" /* 4259 */;
 import initializeDefault from "initialize" /* 5038 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
-import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
-import closure_6 from "createRTCConnection" /* 4539 */;
-import closure_7 from "handleUpdate" /* 4541 */;
-import closure_8 from "updateVoiceState" /* 4542 */;
-import closure_9 from "set" /* 4540 */;
+import obj132Default from "obj132" /* 9848 */;
+import _modDef16581 from "module_16581" /* 16581 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import _detectH265HardwareDecode from "_detectH265HardwareDecode" /* 4497 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import handleUpdate from "handleUpdate" /* 4541 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
+import set from "set" /* 4540 */;
 import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
 
-require = arg1;
-function syncLocalState() {
+require = fn;
+function syncLocalState(found) {
   const self = this;
   const apply = _syncLocalState.apply;
   if (typeof apply === "unknown") {
@@ -140,13 +142,13 @@ let prototype = function GameConsoleManager() {
       return applyArgumentsResult.handleRemoteSessionDisconnect();
     }
   };
-  applyArgumentsResult.maybeConnect = function maybeConnect(mapped) {
+  applyArgumentsResult.maybeConnect = function maybeConnect(arr) {
     applyArgumentsResult = closure_1_9.getAwaitingRemoteSessionInfo();
-    const found = mapped.find((clientInfo) => {
-      let hasItem = closure_1_10.has(clientInfo.clientInfo.os);
+    const found = arr.find((item, index) => {
+      let hasItem = closure_1_10.has(item.clientInfo.os);
       let tmp4 = null == callback;
       if (!tmp4) {
-        tmp4 = callback(closure_1_2[12]).coercePlatformTypeToConsoleType(tmp3.type) === clientInfo.clientInfo.os;
+        tmp4 = callback(closure_1_2[12]).coercePlatformTypeToConsoleType(tmp3.type) === item.clientInfo.os;
         const obj = callback(closure_1_2[12]);
       }
       if (hasItem) {
@@ -162,17 +164,18 @@ let prototype = function GameConsoleManager() {
     } else {
       const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
       awaitRemoteTimeout.stop();
-      applyArgumentsResult(closure_1_2[15]).connectToRemote(found.sessionId);
+      applyArgumentsResult(dependencyMap[15]).connectToRemote(found.sessionId);
       const voiceStateForSession = closure_1_8.getVoiceStateForSession(closure_1_4.getId(), found.sessionId);
       if (null != voiceStateForSession) {
-        closure_1_14(voiceStateForSession);
+        syncLocalState(voiceStateForSession);
       }
+      let obj = applyArgumentsResult(dependencyMap[15]);
     }
   };
   applyArgumentsResult.handleAudioStateToggle = function handleAudioStateToggle(syncRemote) {
     let voiceStateForSession;
     if (syncRemote.syncRemote) {
-      if (tmp === closure_1_12.DEFAULT) {
+      if (tmp === MediaEngineContextTypes.DEFAULT) {
         const isSelfDeafResult = closure_1_5.isSelfDeaf();
         const isSelfMuteResult = closure_1_5.isSelfMute();
         const id = closure_1_4.getId();
@@ -181,8 +184,8 @@ let prototype = function GameConsoleManager() {
           voiceStateForSession = closure_1_8.getVoiceStateForSession(id, remoteSessionId);
           if (null != voiceStateForSession) {
             if (!tmp3) {
-              let obj = applyArgumentsResult(closure_1_2[15]);
-              obj = { selfDeaf: null, selfMute: null };
+              applyArgumentsResult(dependencyMap[15]);
+              const obj = { selfDeaf: null, selfMute: null };
               obj[0] = isSelfDeafResult;
               obj[1] = isSelfMuteResult;
               const result = obj.remoteVoiceStateUpdate(remoteSessionId, obj);
@@ -201,21 +204,21 @@ let prototype = function GameConsoleManager() {
     voiceStates = voiceStates.voiceStates;
     const remoteSessionId = closure_1_9.getRemoteSessionId();
     if (null == remoteSessionId) {
-      const mapped = voiceStates.map((sessionId) => {
-        sessionId = sessionId.sessionId;
+      const mapped = voiceStates.map((item, index) => {
+        const sessionId = item.sessionId;
         let sessionById = null;
         if (null != sessionId) {
           sessionById = sessionById.getSessionById(sessionId);
         }
         return sessionById;
       });
-      return remoteSessionId.maybeConnect(mapped.filter(applyArgumentsResult(closure_1_2[16]).isNotNullish));
+      return remoteSessionId.maybeConnect(mapped.filter(applyArgumentsResult(dependencyMap[16]).isNotNullish));
     } else {
-      const found = voiceStates.find((sessionId) => sessionId.sessionId === remoteSessionId);
+      const found = voiceStates.find((item, index) => item.sessionId === remoteSessionId);
       if (null != found) {
         const rollbackCommandTimeout = remoteSessionId.rollbackCommandTimeout;
         rollbackCommandTimeout.stop();
-        closure_1_14(found);
+        syncLocalState(found);
       }
     }
   };
@@ -226,8 +229,8 @@ let prototype = function GameConsoleManager() {
       tmp2 = null == closure_1_7.getSessionById(remoteSessionId);
     }
     if (tmp2) {
-      applyArgumentsResult(closure_1_2[15]).disconnectRemote();
-      const obj = applyArgumentsResult(closure_1_2[15]);
+      applyArgumentsResult(dependencyMap[15]).disconnectRemote();
+      const obj = applyArgumentsResult(dependencyMap[15]);
     }
     if (null == remoteSessionId) {
       const _Object = Object;
@@ -262,16 +265,16 @@ let prototype = function GameConsoleManager() {
           if (str2 == null) {
             str2 = "";
           }
-          let device = obj5.getDevice(awaitingRemoteSessionInfo.type, str2);
+          let device = closure_1_9.getDevice(awaitingRemoteSessionInfo.type, str2);
           if (device == null) {
             let obj = { id: "id", platform: null, name: null };
-            const intl = applyArgumentsResult(tmp7[18]).intl;
-            obj[1] = intl.string(applyArgumentsResult(tmp7[18]).t["UQMV/E"]);
-            const intl2 = applyArgumentsResult(tmp7[18]).intl;
-            obj[2] = intl2.string(applyArgumentsResult(tmp7[18]).t["UQMV/E"]);
+            const intl = applyArgumentsResult(dependencyMap[18]).intl;
+            obj[1] = intl.string(applyArgumentsResult(dependencyMap[18]).t["UQMV/E"]);
+            const intl2 = applyArgumentsResult(dependencyMap[18]).intl;
+            obj[2] = intl2.string(applyArgumentsResult(dependencyMap[18]).t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = closure_1_1(closure_1_2[19])(device, result, error);
+          const tmp8Result = _modDef16581(device, result, error);
           if (null != tmp8Result) {
             obj = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3[0], body: obj3[1], errorCodeMessage: obj3[2] } = tmp8Result);
@@ -280,25 +283,21 @@ let prototype = function GameConsoleManager() {
               type = awaitingRemoteSessionInfo.type;
             }
             obj[3] = type;
-            result = tmp6(tmp7[20]).showSelfDismissableAlert(obj);
-            const tmp6Result = tmp6(tmp7[20]);
+            result = obj132Default.showSelfDismissableAlert(obj);
+            const tmp6Result = obj132Default;
           }
           if (closure_1_11.has(error.code)) {
             const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
             if (awaitRemoteTimeout.isStarted()) {
-              const awaitRemoteTimeout2 = tmp14.awaitRemoteTimeout;
+              const awaitRemoteTimeout2 = applyArgumentsResult.awaitRemoteTimeout;
               awaitRemoteTimeout2.start(180000, () => callback(table[15]).disconnectRemote(), true);
             }
-            tmp14 = applyArgumentsResult;
           }
           if (tmp2) {
-            applyArgumentsResult(tmp7[15]).disconnectRemote();
-            const obj4 = applyArgumentsResult(tmp7[15]);
+            applyArgumentsResult(dependencyMap[15]).disconnectRemote();
+            const obj4 = applyArgumentsResult(dependencyMap[15]);
           }
-          tmp6 = closure_1_1;
-          const tmp8 = closure_1_1(closure_1_2[19]);
         }
-        obj5 = closure_1_9;
       }
     }
   };
@@ -312,6 +311,6 @@ class prototype extends tmp4 {
 }
 prototype = new prototype();
 let tmp3 = new timestampDefault("GameConsoleManager");
-let result = require("set").fileFinishedImporting("modules/game_console/GameConsoleManager.tsx");
+let result = require("obj132").fileFinishedImporting("modules/game_console/GameConsoleManager.tsx");
 
 export default prototype;

@@ -1,9 +1,9 @@
 // === Module 4720: initialize ===
 
 // Module 4720 (initialize)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/LifecycleManager.tsx");
+const result = obj132.fileFinishedImporting("lib/LifecycleManager.tsx");
 class LifecycleManager {
 }
 const prototype = LifecycleManager.prototype;

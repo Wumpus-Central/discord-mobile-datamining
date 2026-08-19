@@ -6,9 +6,9 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileAlertUserReported.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileAlertUserReported.tsx");
 
 export default function UserProfileAlertUserReported() {
   let obj = { title: null, content: null, actions: null };
@@ -16,7 +16,6 @@ export default function UserProfileAlertUserReported() {
   obj[0] = intl.string(getSystemLocale.t.IwHU3R);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.qxyRaq);
-  obj = { children: null };
   obj = { text: null };
   const intl3 = getSystemLocale.intl;
   obj[0] = intl3.string(getSystemLocale.t.BddRzS);

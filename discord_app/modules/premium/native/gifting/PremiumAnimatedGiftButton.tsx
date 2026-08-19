@@ -2,16 +2,15 @@
 
 // Module 11412 (PremiumAnimatedGiftButton)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { useRef } from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 let closure_7 = createCacheKey.createStyles((width, marginHorizontal) => {
-  let obj = { container: null, containerRefresh: null, animation: null, animationRefresh: null };
-  obj = { backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, width, height: width, borderRadius: ThemesDefault.radii.round, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
+  let obj = { backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, width, height: width, borderRadius: ThemesDefault.radii.round, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
   obj[0] = obj;
   obj = { width, height: width, borderRadius: ThemesDefault.radii.sm, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
   obj[1] = obj;
@@ -19,7 +18,7 @@ let closure_7 = createCacheKey.createStyles((width, marginHorizontal) => {
   obj[3] = { width: 24, height: 24 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumAnimatedGiftButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/native/gifting/PremiumAnimatedGiftButton.tsx");
 
 export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0) {
   ({ active, disabled, accessibilityState } = arg0);
@@ -56,7 +55,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
           current2.play();
         }
       }
-      obj = ref(closure_1_2[8]);
+      obj = ref(dependencyMap[8]);
     }
   }, items1);
   let FadeOut;

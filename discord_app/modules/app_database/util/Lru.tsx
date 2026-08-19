@@ -1,7 +1,7 @@
 // === Module 5072: length ===
 
 // Module 5072 (length)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 class Lru {
   constructor(arg0) {
@@ -80,6 +80,6 @@ prototype["oldestKey"] = function oldestKey() {
   const items = this.items;
   return items.keys().next().value;
 };
-let result = set.fileFinishedImporting("modules/app_database/util/Lru.tsx");
+let result = obj132.fileFinishedImporting("modules/app_database/util/Lru.tsx");
 
 export { Lru };

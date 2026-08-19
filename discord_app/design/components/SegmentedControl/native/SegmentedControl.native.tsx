@@ -2,19 +2,18 @@
 
 // Module 10096 (SegmentedControl)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let c8 = 0.04;
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
 let closure_10 = createCacheKey.createStyles((borderRadius, paddingVertical) => {
-  let obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
-  obj = { backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
+  let obj = { backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
   obj[1] = obj;
   obj[2] = { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" };
   obj = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, borderRadius };
@@ -29,7 +28,7 @@ let closure_15 = { code: "function SegmentedControlNativeTsx5(){const{indicatorT
 let closure_16 = { code: "function onPanGestureUpdate_SegmentedControlNativeTsx6(event){const{indicatorWidth,panIndex,activeIndex,itemCount}=this.__closure;const progess=event.translationX/indicatorWidth.get();const index=panIndex.get()+progess;activeIndex.set(Math.min(Math.max(index,0),itemCount-1));}" };
 let closure_17 = { code: "function SegmentedControlNativeTsx7(){const{panIndex,activeIndex,runOnJS,setActiveIndex}=this.__closure;panIndex.set(-1);activeIndex.set(Math.round(activeIndex.get()));runOnJS(setActiveIndex)(activeIndex.get());}" };
 let closure_18 = { code: "function SegmentedControlNativeTsx8(){const{panIndex,activeIndex}=this.__closure;panIndex.set(activeIndex.get());}" };
-let result = require("set").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControl.native.tsx");
+let result = require("obj132").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControl.native.tsx");
 
 export const SegmentedControl = function SegmentedControl(keyboardShouldPersistTaps) {
   const state = keyboardShouldPersistTaps.state;
@@ -37,30 +36,22 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   if (str === undefined) {
     str = "default";
   }
-  let activeIndex;
-  let scrollOverflow;
-  let items;
-  let pressedIndex;
-  let setActiveIndex;
-  let callback;
-  let num;
   closure_9 = undefined;
   let length;
   let sharedValue;
   let sharedValue1;
   let sharedValue2;
-  callback = undefined;
   let sharedValue3;
   let derivedValue;
   let derivedValue1;
   let animatedStyle;
-  activeIndex = state.activeIndex;
-  scrollOverflow = state.scrollOverflow;
-  items = state.items;
-  pressedIndex = state.pressedIndex;
-  setActiveIndex = state.setActiveIndex;
-  callback = tmp;
-  num = 4;
+  const activeIndex = state.activeIndex;
+  const scrollOverflow = state.scrollOverflow;
+  let items = state.items;
+  const pressedIndex = state.pressedIndex;
+  const setActiveIndex = state.setActiveIndex;
+  let callback = tmp;
+  let num = 4;
   if ("experimental_Large" === str) {
     num = 8;
   }
@@ -232,14 +223,14 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   animatedStyle = state(activeIndex[6]).useAnimatedStyle(B);
   const items2 = [items, sharedValue3, callback, tmp4.indicator, animatedStyle];
   const items3 = [items, length, num, state, pressedIndex, "experimental_Large" === str, str, setActiveIndex];
-  const memo = scrollOverflow.useMemo(() => items.map((id) => {
-    const tmp = closure_15.get() === arg1;
+  const memo = scrollOverflow.useMemo(() => items.map((item, index) => {
+    const tmp = closure_15.get() === index;
     let onLayout;
     if (tmp) {
       onLayout = closure_14;
     }
     const style = [indicator.indicator, tmp ? closure_18 : { opacity: 0 }];
-    return closure_1_6(closure_1_1(closure_1_2[6]).View, { onLayout, style }, id.id);
+    return setActiveIndex(str(activeIndex[6]).View, { onLayout, style }, item.id);
   }), items2);
   function onPanGestureUpdate(translationX) {
     const result = translationX.translationX / sharedValue1.get();
@@ -248,9 +239,9 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   onPanGestureUpdate.__closure = { indicatorWidth: sharedValue1, panIndex: sharedValue, activeIndex, itemCount: length };
   onPanGestureUpdate.__workletHash = 4853281820821;
   onPanGestureUpdate.__initData = derivedValue;
-  const memo1 = scrollOverflow.useMemo(() => items.map((arg0, index) => {
+  const memo1 = scrollOverflow.useMemo(() => items.map((item, index) => {
     closure_0 = index;
-    ({ label, id, icon } = arg0);
+    ({ label, id, icon } = item);
     if (0 === index) {
       let tmp3 = closure_8;
     } else if (index === closure_10 - 1) {
@@ -261,33 +252,14 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
     } else if (index === closure_10 - 1) {
       tmp6 = closure_8;
     }
-    obj = {
-      style: obj,
-      index,
-      itemCount: closure_10,
-      label,
-      state: closure_0,
-      pressed: closure_5,
-      onPress() {
-        closure_1_6(closure_0);
-      },
-      onPressIn() {
-        const result = closure_1_5.set(closure_0);
-      },
-      onPressOut() {
-        const result = closure_5.set(-1);
-      },
-      icon: null,
-      variant: null
-    };
-    obj = { minWidth: `${1 / closure_10 * 100}%`, marginStart: tmp3, marginEnd: tmp6 };
+    const obj = { minWidth: `${1 / closure_10 * 100}%`, marginStart: tmp3, marginEnd: tmp6 };
     let tmp9 = null;
     if (closure_7) {
       tmp9 = icon;
     }
     obj[9] = tmp9;
     obj[10] = closure_1;
-    return closure_1_6(closure_1_0(closure_1_2[8]).SegmentedControlItem, obj, id);
+    return setActiveIndex(state(activeIndex[8]).SegmentedControlItem, obj, id);
   }), items3);
   const Gesture = state(activeIndex[9]).Gesture;
   const obj9 = state(activeIndex[6]);

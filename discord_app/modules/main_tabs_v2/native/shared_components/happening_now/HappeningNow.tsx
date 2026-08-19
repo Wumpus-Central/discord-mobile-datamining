@@ -4,7 +4,7 @@
 import ThemesDefault from "Themes" /* 712 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
 import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 15332 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
@@ -14,7 +14,7 @@ import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import { Gesture } from "LegacyBaseButton" /* 6377 */;
 
-require = arg1;
+require = fn;
 function renderCard(kind, fullWidth) {
   if ("placeholder" !== kind.kind) {
     if (!fullWidth.loading) {
@@ -23,13 +23,8 @@ function renderCard(kind, fullWidth) {
   }
   return jsx(HappeningNowCardPlaceholder.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
-function keyExtractor(voiceState) {
-  ({ kind, kind: kind2 } = voiceState);
-  let userId = voiceState.voiceState.channelId;
-  if (userId == null) {
-    userId = voiceState.userId;
-  }
-  return "" + kind2 + "-" + userId + "-" + voiceState.activity.applicationId;
+function keyExtractor(arg0) {
+
 }
 function getItemType(kind) {
   return kind.kind;
@@ -38,16 +33,14 @@ let c4 = importAllResult;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: error, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: c9 } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
 const context = importAllResult.createContext(createFakeSharedValue.createFakeSharedValue([]));
-let obj = { containerInner: { paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING, paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING }, loading: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_8, flex: 1 };
+let obj = { paddingHorizontal: ThemesDefault.space.PX_8, flex: 1 };
 obj[1] = obj;
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_14 = Gesture.Native().disallowInterruption(true);
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  let obj = { gesture: closure_14, children: null };
-  obj = { ref };
+  const obj = { ref };
   const merged = Object.assign(arg0);
-  obj[1] = <closure_5 ref={arg1} />;
+  obj[1] = <closure_5 ref={ref} />;
   return jsx(LegacyBaseButton.GestureDetector, { ref });
 });
 forwardRefResult.displayName = "HappeningNowScrollView";
@@ -55,33 +48,26 @@ const NativeResult = Gesture.Native();
 const memoResult = importAllResult.memo((listRef) => {
   listRef = listRef.listRef;
   let obj = listRef;
-  let ref;
   let isFocused;
   let callback;
   importAllResult = undefined;
-  c5 = undefined;
-  let num;
   let sharedValue;
   let callback2;
   let tmp = callback2();
   obj = obj(isFocused[14]);
   isFocused = obj.useIsFocused();
-  ref = isFocused;
+  let ref = isFocused;
   const tmp7 = callback(ref(isFocused[15])(listRef.cards, { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: null, isFocused }), 2);
   let first = tmp7[0];
   isFocused = first;
-  callback = tmp8;
   obj1 = importAllResult;
   ref = importAllResult.useRef(0);
-  importAllResult = ref;
   obj = { data: first, isFocused, loading: tmp8 };
-  isFocused = undefined;
-  callback = undefined;
   importAllResult = undefined;
   isFocused = obj.isFocused;
   callback = importAllResult.useRef(obj);
   const tmp11 = ref(isFocused[10])(() => {
-    obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: data.map((arg0) => table[arg0.kind]) };
+    obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: data.map((item, index) => table[item.kind]) };
     data = closure_3.current.data;
     const merged = Object.assign(obj(isFocused[11]).getAffinityProperties(closure_3.current.data));
     return obj;
@@ -103,7 +89,7 @@ const memoResult = importAllResult.memo((listRef) => {
       tmp = tmp3;
     }
     if (tmp) {
-      ref(isFocused[12]).track(closure_1_10.ACTIVITY_CARDS_VIEWED, ref());
+      ref(isFocused[12]).track(AnalyticEvents.ACTIVITY_CARDS_VIEWED, ref());
       obj = ref(isFocused[12]);
     }
   }, items);
@@ -115,8 +101,8 @@ const memoResult = importAllResult.memo((listRef) => {
       tmp = current.data.length > 0;
     }
     if (tmp) {
-      closure_1_1(closure_1_2[12]).track(closure_1_10.ACTIVITY_CARDS_VIEWED, callback());
-      obj = closure_1_1(closure_1_2[12]);
+      closure_1_1(isFocused[12]).track(closure_1_10.ACTIVITY_CARDS_VIEWED, callback());
+      obj = closure_1_1(isFocused[12]);
     }
   });
   const items1 = [isFocused, listRef];
@@ -129,12 +115,12 @@ const memoResult = importAllResult.memo((listRef) => {
       closure_4.current = 0;
     }
   }, items1);
-  const findIndexResult = first.findIndex((arg0) => {
+  const findIndexResult = first.findIndex((item, index) => {
     obj = obj(isFocused[18]);
-    return obj.cardSize(arg0) === callback2;
+    return obj.cardSize(item) === callback2;
   });
   c5 = findIndexResult;
-  num = Infinity;
+  let num = Infinity;
   if (findIndexResult >= 0) {
     num = sharedValue * findIndexResult;
   }
@@ -163,14 +149,14 @@ const memoResult = importAllResult.memo((listRef) => {
   let tmp2Result = tmp2(tmp3[19]);
   const items4 = [tmp7[1]];
   const happeningNowScrollSnapping = tmp2Result.useHappeningNowScrollSnapping(listRef);
-  const callback1 = obj1.useCallback((index) => closure_1_16(index.item, { index: index.index, loading: closure_3, panelVariant: true }), items4);
+  const callback1 = obj1.useCallback((index) => renderCard(index.item, { index: index.index, loading: closure_3, panelVariant: true }), items4);
   tmp2Result = tmp2(tmp3[20]);
   sharedValue = tmp2Result.useSharedValue([]);
   const items5 = [sharedValue];
   callback2 = obj1.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     obj = obj(isFocused[21]);
-    const result = obj.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item) => callback(item.item)));
+    const result = obj.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item, index) => callback(item.item)));
   }, items5);
   const items6 = [callback2];
   const memo1 = obj1.useMemo(() => {
@@ -201,16 +187,17 @@ const memoResult = importAllResult.memo((listRef) => {
     obj2[12] = memo1;
     obj2[13] = keyExtractor;
     obj2[14] = getItemType;
-    obj1[1] = tmp29(tmp2(tmp3[23]).FlashList, obj2);
-    obj[1] = tmp29(tmp2(tmp3[16]).AnalyticsLocationProvider, obj1);
-    tmp29(context.Provider, obj);
+    obj1[1] = jsx(tmp2(tmp3[23]).FlashList, { ref: null, horizontal: true, renderScrollComponent: null, decelerationRate: "fast", onScroll: null, snapToInterval: null, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
+    obj[1] = jsx(tmp2(tmp3[16]).AnalyticsLocationProvider, { value: null, children: null });
+    <context.Provider value={null}>{null}</context.Provider>;
   }
   const obj3 = { style: tmp.loading, children: null };
   first = renderCard(first.length > 0 ? first[0] : { kind: "placeholder", index: 0 }, { index: 0, loading: tmp8, fullwidth: true, panelVariant: true });
   obj3[1] = first;
   <num style={tmp.loading}>{null}</num>;
+  tmp9 = ref(isFocused[16]);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");
 
 export default memoResult;
 export const ViewableHappeningNowCardKeysContext = context;

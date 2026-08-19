@@ -2,12 +2,11 @@
 
 // Module 15671 (set)
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7145 */;
-import closure_2 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
 
 let items = [require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, require("NotificationCenterScenes").NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED];
 let set = new Set(items);
-const result = set.fileFinishedImporting("modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx");
 
 export const useGetOrFetchNotificationCenterItemsApplications = function useGetOrFetchNotificationCenterItemsApplications(stateFromStores1) {
   importDefault = stateFromStores1;
@@ -15,9 +14,9 @@ export const useGetOrFetchNotificationCenterItemsApplications = function useGetO
   const memo = React.useMemo(() => {
     set = new Set();
     const items = [];
-    const item = set.forEach((applicationId) => {
-      applicationId = applicationId.applicationId;
-      if (closure_1_3.has(applicationId.type)) {
+    const item = set.forEach((item, index) => {
+      const applicationId = item.applicationId;
+      if (closure_1_3.has(item.type)) {
         let hasItem = null == applicationId;
         if (!hasItem) {
           hasItem = set.has(applicationId);

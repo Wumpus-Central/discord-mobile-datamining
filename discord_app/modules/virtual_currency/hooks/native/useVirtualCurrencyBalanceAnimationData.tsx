@@ -1,12 +1,12 @@
 // === Module 10401: useVirtualCurrencyBalanceAnimationData ===
 
 // Module 10401 (useVirtualCurrencyBalanceAnimationData)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyBalanceAnimationData.tsx");
 
 export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrencyBalanceAnimationData(initialRenderedBalance) {
   initialRenderedBalance = initialRenderedBalance.initialRenderedBalance;
@@ -15,23 +15,18 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
   let currentAnimationType;
   let React;
   closure_5 = undefined;
-  let lottieRef;
   c7 = undefined;
-  let first1;
-  closure_9 = undefined;
-  closure_10 = undefined;
-  let callback2;
   const items = [closure_5];
   stateFromStores = initialRenderedBalance(stateFromStores[3]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let tmp2 = currentAnimationType(React.useState(null), 2);
   currentAnimationType = tmp2[0];
   React = tmp2[1];
   closure_5 = React.useRef(null);
-  lottieRef = React.useRef(null);
+  const lottieRef = React.useRef(null);
   const obj = initialRenderedBalance(stateFromStores[3]);
   [tmp6, c7] = currentAnimationType(React.useState(null != initialRenderedBalance), 2);
   const tmp7 = currentAnimationType(React.useState(null == initialRenderedBalance), 2);
-  first1 = tmp7[0];
+  const first1 = tmp7[0];
   closure_9 = tmp7[1];
   const tmp9 = balance(stateFromStores[4])(balance);
   closure_10 = tmp9;
@@ -43,20 +38,20 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
     closure_5.current = null;
     callback(null);
   }, []);
-  callback2 = React.useCallback((arg0) => {
+  const callback2 = React.useCallback((arg0) => {
     if (0 !== arg0) {
       let str = "spend";
       if (arg0 > 0) {
         str = "earn";
       }
-      closure_5.current = str;
-      if (currentAnimationType === closure_5.current) {
+      ref.current = str;
+      if (currentAnimationType === ref.current) {
         const current = lottieRef.current;
         if (current != null) {
           current.play();
         }
       } else {
-        callback(tmp.current);
+        callback(ref.current);
       }
     }
   }, items1);
@@ -85,7 +80,7 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
       tmp2 = null !== closure_10;
     }
     if (tmp2) {
-      tmp2 = tmp !== closure_10;
+      tmp2 = balance !== closure_10;
     }
     if (tmp2) {
       tmp2 = first1;
@@ -94,7 +89,7 @@ export const useVirtualCurrencyBalanceAnimationData = function useVirtualCurrenc
       tmp2 = !stateFromStores;
     }
     if (tmp2) {
-      callback2(tmp - closure_10);
+      callback2(balance - closure_10);
     }
   }, items3);
   return { onValueChange, onValueReached, showInitialRenderedBalance, currentAnimationType, lottieRef };

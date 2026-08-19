@@ -1,12 +1,12 @@
 // === Module 10701: _openAppStoreOverlayMediaModal ===
 
 // Module 10701 (_openAppStoreOverlayMediaModal)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "setContent" /* 4086 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import setContent from "setContent" /* 4086 */;
 import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _openAppStoreOverlayMediaModal() {
   const self = this;
   let tmp = callback((arg0) => {
@@ -102,15 +102,15 @@ function _openAppStoreOverlayMediaModal() {
             obj4[1] = c5;
             const result = callback(c2[9]).setMediaModalFooterAction(obj4);
             (function getMeasureInWindowFunction(c0) {
-              closure_0 = c0;
-              if (null != c0) {
-                if ("measureInWindow" in c0) {
-                  const measureInWindow = c0.measureInWindow;
-                  let fn = measureInWindow.bind(c0);
+              closure_0 = _undefined;
+              if (null != _undefined) {
+                if ("measureInWindow" in _undefined) {
+                  const measureInWindow = _undefined.measureInWindow;
+                  let fn = measureInWindow.bind(_undefined);
                 }
                 return fn;
               }
-              fn = (arg0) => {
+              fn = (fn) => {
                 let size = c0;
                 if (c0 == null) {
                   const obj = { x: 0, y: 0, width: null, height: null };
@@ -120,13 +120,13 @@ function _openAppStoreOverlayMediaModal() {
                   size = obj;
                   const obj3 = c0(closure_1_2[4]);
                 }
-                arg0(size.x, size.y, size.width, size.height, size.resizeMode);
+                fn(size.x, size.y, size.width, size.height, size.resizeMode);
               };
             })(callback)((arg0, arg1, width, height, resizeMode) => {
               initialIndex(_undefined2[11])(_undefined3.isOpen(), "An action sheet must be open to open the media modal as an action sheet");
-              let obj = initialIndex(_undefined2[12]);
+              initialIndex(_undefined2[12]);
               const tmp = initialIndex(_undefined2[11]);
-              obj = {};
+              let obj = {};
               const merged = Object.assign(closure_7);
               obj.initialIndex = initialIndex;
               obj = { x: arg0, y: arg1, width, height, resizeMode };
@@ -159,7 +159,7 @@ function _openAppStoreOverlayMediaModal() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayMediaModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayMediaModal.tsx");
 
 export const openAppStoreOverlayMediaModal = function openAppStoreOverlayMediaModal(arg0) {
   const self = this;

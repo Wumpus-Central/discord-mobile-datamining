@@ -2,15 +2,15 @@
 
 // Module 7162 (RoleDot)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "trackCommunicationDisabled" /* 1990 */;
-import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function RoleDot(color) {
   color = color.color;
   const style = [callback2().roleDot, ];
@@ -18,7 +18,7 @@ function RoleDot(color) {
     color = closure_7;
   }
   style[1] = { backgroundColor: color };
-  return closure_9(View, { style });
+  return callback(View, { style });
 }
 class RoleItem {
   constructor(arg0) {
@@ -66,16 +66,14 @@ class RoleItem {
           colorString = role.colorString;
         }
         obj[2] = colorString;
-        let tmp3Result = tmp3(guildId(name[16]), obj);
-        let tmp8 = tmp3;
+        let tmp3Result = closure_1_9(guildId(name[16]), obj);
+        let tmp8 = closure_1_9;
         const tmp11 = guildId(name[16]);
       } else {
         obj = { color: null };
         obj[0] = colorString;
-        tmp3Result = tmp3(closure_1_13, obj);
-        tmp8 = tmp3;
-        const tmp4 = closure_1_13;
-        const tmp5 = colorString;
+        tmp3Result = closure_1_9(RoleDot, obj);
+        tmp8 = closure_1_9;
       }
       obj = { children: null };
       const items = [tmp3Result, roleIcon, tmp8(role(name[17]).Text, { variant: "text-xs/medium", children: name })];
@@ -135,26 +133,24 @@ function RolesList(guildMemberRoleIds) {
   const items1 = [guildMemberRoleIds, guildId];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     const manyRoles = closure_1_6.getManyRoles(guildId, guildMemberRoleIds);
-    return manyRoles.sort(guildMemberRoleIds(closure_1_2[20]).sortRolesByVerification);
+    return manyRoles.sort(guildMemberRoleIds(dependencyMap[20]).sortRolesByVerification);
   }, items1);
   let tmp2 = null;
   if (0 !== stateFromStoresArray.length) {
     obj = { style: null, children: null };
     obj[0] = tmp.roleContainer;
-    obj[1] = stateFromStoresArray.map((id) => closure_1_9(closure_1_14, { role: id, guildId }, id.id));
+    obj[1] = stateFromStoresArray.map((item, index) => closure_1_9(RoleItem, { role: item, guildId }, item.id));
     tmp2 = callback(View, obj);
   }
   return tmp2;
 }
 ({ DEFAULT_ROLE_COLOR_HEX: error, MAX_VISUAL_ROLE_LENGTH: closure_8 } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: null, roleDot: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm };
+const createCacheKey = { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.round, height: 12, width: 12 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.round, height: 12, width: 12 };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileRolesCard.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/UserProfileRolesCard.tsx");
 
 export default function UserProfileRolesCard(userId) {
   userId = userId.userId;

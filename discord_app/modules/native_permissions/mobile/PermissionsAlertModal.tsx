@@ -6,16 +6,14 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
 
 export default function PermissionsAlertModal(arg0) {
   ({ title, body, onConfirm } = arg0);
-  let obj = { title, content: body, actions: null };
-  obj = { children: null };
-  obj = { onPress: onConfirm, text: null };
+  const obj = { onPress: onConfirm, text: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.jVcuVY);
   const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];

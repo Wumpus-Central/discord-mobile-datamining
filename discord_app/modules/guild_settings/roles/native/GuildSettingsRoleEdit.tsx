@@ -1,40 +1,44 @@
 // === Module 16844: componentDidMount ===
 
 // Module 16844 (componentDidMount)
+import applyDefault from "apply" /* 12 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Button from "Button" /* 1297 */;
+import Stack from "Stack" /* 4733 */;
+import obj132Default from "obj132" /* 4827 */;
 import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
 import TableRowInner from "TableRowInner" /* 6291 */;
+import Form from "Form" /* 8083 */;
 import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 16846 */;
 import GuildSettingsRoleEditPermissionDefault from "GuildSettingsRoleEditPermission" /* 16853 */;
 import onMembersLoadFailDefault from "onMembersLoadFail" /* 16855 */;
 import HeaderSectionDefault from "HeaderSection" /* 16856 */;
-import closure_5 from "_objectWithoutProperties" /* 109 */;
-import closure_6 from "asyncGeneratorStep" /* 5 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import importAllResult from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
-import closure_10 from "fetchFingerprint" /* 1218 */;
-import closure_11 from "trackCommunicationDisabled" /* 1990 */;
-import closure_12 from "createGuildRoleRecordFromRust" /* 1983 */;
-import closure_13 from "createGuildRecordFromRust" /* 1910 */;
-import closure_14 from "handleFormInit" /* 8875 */;
-import closure_15 from "handleSetSection" /* 16831 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 1983 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import handleFormInit from "handleFormInit" /* 8875 */;
+import handleSetSection from "handleSetSection" /* 16831 */;
 import { RoleColorsStyle } from "handleSetSection" /* 16831 */;
 import { GuildSettingsRoleEditSections as closure_17 } from "MAX_SUBCATEGORIES" /* 16826 */;
 import ME from "ME" /* 676 */;
 import { HOLOGRAPHIC_ROLE_COLORS } from "HOLOGRAPHIC_ROLE_COLORS" /* 16833 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 let closure_4 = ["guild"];
 const error = importAllResult;
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = ME);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-createCacheKey = { container: { flex: 1, paddingTop: 16 }, innerContainer: null, managedRolesWarningContainer: null, form: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginVertical: 8, marginHorizontal: 16 };
 createCacheKey[3] = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -53,23 +57,23 @@ class GuildSettingsRoleEdit extends PureComponent {
       navigation.push(closure_1_20.ROLE_EDIT_REFRESH, obj);
     };
     applyArgumentsResult.trackTabChanged = function trackTabChanged(DISPLAY) {
-      let obj = applyArgumentsResult(closure_1_3[21]);
+      let obj = applyArgumentsResult(dependencyMap[21]);
       const result = obj.collectGuildAnalyticsMetadata(id.props.guild.id);
       const role = id.props.role;
       id = role.id;
       ({ permissions, mentionable, hoist } = role);
-      const sectionAnalyticsName = applyArgumentsResult(closure_1_3[22]).getSectionAnalyticsName(DISPLAY);
+      const sectionAnalyticsName = applyArgumentsResult(dependencyMap[22]).getSectionAnalyticsName(DISPLAY);
       const members = closure_1_11.getMembers(id.props.guild.id);
-      const obj2 = applyArgumentsResult(closure_1_3[22]);
-      const found = closure_1_1(closure_1_3[23])(members).filter((roles) => {
-        roles = roles.roles;
+      const obj2 = applyArgumentsResult(dependencyMap[22]);
+      const found = applyDefault(members).filter((item, index) => {
+        const roles = item.roles;
         return roles.includes(id);
       });
-      const arr = closure_1_1(closure_1_3[23])(members);
+      const arr = applyDefault(members);
       const sizeResult = found.size();
       obj = { tab_opened: sectionAnalyticsName, is_everyone: null, role_id: null, role_mentionable: null, role_hoist: null, role_permissions: null, role_num_members: null };
-      const obj4 = closure_1_1(closure_1_3[24]);
-      obj[1] = applyArgumentsResult(closure_1_3[25]).isEveryoneRoleId(id.props.guild.id, id);
+      const obj4 = expandEventPropertiesDefault;
+      obj[1] = applyArgumentsResult(dependencyMap[25]).isEveryoneRoleId(id.props.guild.id, id);
       obj[2] = id;
       obj[3] = mentionable;
       obj[4] = hoist;
@@ -82,31 +86,30 @@ class GuildSettingsRoleEdit extends PureComponent {
       const merged = Object.assign(applyArgumentsResult.state.formErrors);
       delete tmp2[tmp];
       applyArgumentsResult.setState({ formErrors: {} });
-      applyArgumentsResult(closure_1_3[26]).updateRoleName(applyArgumentsResult.props.role.id, name);
+      applyArgumentsResult(dependencyMap[26]).updateRoleName(applyArgumentsResult.props.role.id, name);
     };
     applyArgumentsResult.handleMentionableChanged = function handleMentionableChanged(mentionable) {
-      applyArgumentsResult(closure_1_3[26]).toggleRoleSettings(applyArgumentsResult.props.role.id, applyArgumentsResult.props.role.hoist, mentionable);
+      applyArgumentsResult(dependencyMap[26]).toggleRoleSettings(applyArgumentsResult.props.role.id, applyArgumentsResult.props.role.hoist, mentionable);
     };
     applyArgumentsResult.handleHoistChanged = function handleHoistChanged(hoist) {
-      applyArgumentsResult(closure_1_3[26]).toggleRoleSettings(applyArgumentsResult.props.role.id, hoist, applyArgumentsResult.props.role.mentionable);
+      applyArgumentsResult(dependencyMap[26]).toggleRoleSettings(applyArgumentsResult.props.role.id, hoist, applyArgumentsResult.props.role.mentionable);
     };
     applyArgumentsResult.handlePermissionsChanged = function handlePermissionsChanged(permissions) {
-      const result = applyArgumentsResult(closure_1_3[26]).updateRolePermissionSet(applyArgumentsResult.props.role.id, permissions);
+      const result = applyArgumentsResult(dependencyMap[26]).updateRolePermissionSet(applyArgumentsResult.props.role.id, permissions);
     };
     applyArgumentsResult.handleSaveRole = function handleSaveRole() {
       return new Promise((arg0) => {
         let effectiveSection = arg0;
         let obj = effectiveSection;
         const navigation = effectiveSection.props.navigation;
-        let id = effectiveSection.props.guild.id;
-        id = effectiveSection.props.role.id;
+        const id = effectiveSection.props.role.id;
         ({ name, permissions, mentionable, hoist } = effectiveSection.props.role);
         effectiveSection = effectiveSection.getEffectiveSection();
         if (effectiveSection === closure_1_17.PERMISSIONS) {
           obj = { permissions: null };
           obj[0] = permissions;
           obj1 = obj;
-        } else if (effectiveSection === tmp2.DISPLAY) {
+        } else if (effectiveSection === closure_1_17.DISPLAY) {
           const roleStyleData = closure_1_15.getRoleStyleData(id);
           let currentStyle;
           if (roleStyleData != null) {
@@ -158,7 +161,7 @@ class GuildSettingsRoleEdit extends PureComponent {
           obj1[3] = hoist;
           obj1[4] = mentionable;
         }
-        let hasRoleConfigurationChanges = effectiveSection === tmp2.VERIFICATIONS;
+        let hasRoleConfigurationChanges = effectiveSection === closure_1_17.VERIFICATIONS;
         if (hasRoleConfigurationChanges) {
           hasRoleConfigurationChanges = closure_1_15.hasRoleConfigurationChanges;
         }
@@ -197,6 +200,7 @@ class GuildSettingsRoleEdit extends PureComponent {
           obj[2] = closure_2_1(closure_2_3[29]);
           closure_2_1(closure_2_3[27]).open(obj);
           store(false);
+          const obj2 = closure_2_1(closure_2_3[27]);
         }
         obj.setState({ submitting: true, formErrors: {} }, () => {
           if (null != obj1) {
@@ -205,9 +209,9 @@ class GuildSettingsRoleEdit extends PureComponent {
           } else {
             updateRoleResult = Promise.resolve();
           }
-          updateRoleResult.then(() => {
+          updateRoleResult.then((result) => {
             if (null != closure_2) {
-              const result = callback(navigation[31]).putRoleConnectionsConfigurations(closure_4, closure_5, tmp);
+              result = callback(navigation[31]).putRoleConnectionsConfigurations(closure_4, closure_5, tmp);
               result.then(callback2, closure_8);
               const obj = callback(navigation[31]);
             } else {
@@ -223,17 +227,15 @@ class GuildSettingsRoleEdit extends PureComponent {
       const props = applyArgumentsResult.props;
       ({ guild: closure_1, role } = props);
       const navigation = props.navigation;
-      let obj = closure_1_1(closure_1_3[32]);
-      obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, confirmColor: null };
-      const intl = applyArgumentsResult(closure_1_3[20]).intl;
-      obj = { name: role.name };
-      obj[0] = intl.formatToPlainString(applyArgumentsResult(closure_1_3[20]).t.FiMFTZ, obj);
-      const intl2 = applyArgumentsResult(closure_1_3[20]).intl;
-      obj[1] = intl2.string(applyArgumentsResult(closure_1_3[20]).t.qALKny);
-      const intl3 = applyArgumentsResult(closure_1_3[20]).intl;
-      obj[2] = intl3.string(applyArgumentsResult(closure_1_3[20]).t["ETE/oC"]);
-      const intl4 = applyArgumentsResult(closure_1_3[20]).intl;
-      obj[3] = intl4.string(applyArgumentsResult(closure_1_3[20]).t.N86XcP);
+      const intl = applyArgumentsResult(dependencyMap[20]).intl;
+      let obj = { name: role.name };
+      obj[0] = intl.formatToPlainString(applyArgumentsResult(dependencyMap[20]).t.FiMFTZ, obj);
+      const intl2 = applyArgumentsResult(dependencyMap[20]).intl;
+      obj[1] = intl2.string(applyArgumentsResult(dependencyMap[20]).t.qALKny);
+      const intl3 = applyArgumentsResult(dependencyMap[20]).intl;
+      obj[2] = intl3.string(applyArgumentsResult(dependencyMap[20]).t["ETE/oC"]);
+      const intl4 = applyArgumentsResult(dependencyMap[20]).intl;
+      obj[3] = intl4.string(applyArgumentsResult(dependencyMap[20]).t.N86XcP);
       applyArgumentsResult = closure_1_6(function*() {
         if (user === 2) {
           user = 3;
@@ -271,7 +273,7 @@ class GuildSettingsRoleEdit extends PureComponent {
                   v0 = 1;
                   user = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_0(closure_1_3[31]).putRoleConnectionsConfigurations(v0.id, user.id, []);
+                  obj1[0] = closure_1_0(navigation[31]).putRoleConnectionsConfigurations(v0.id, user.id, []);
                   return obj1;
                 }
               }
@@ -284,7 +286,7 @@ class GuildSettingsRoleEdit extends PureComponent {
               obj[0] = arg1;
               return obj;
             }
-            obj1 = v0(closure_1_3[30]);
+            obj1 = v0(navigation[30]);
             obj1.deleteRole(v0.id, user.id);
             arr = arr.pop();
             user = 3;
@@ -305,20 +307,20 @@ class GuildSettingsRoleEdit extends PureComponent {
         }
         return applyArgumentsResult;
       };
-      obj[6] = applyArgumentsResult(closure_1_3[33]).ButtonColors.RED;
+      obj[6] = applyArgumentsResult(dependencyMap[33]).ButtonColors.RED;
       obj.show(obj);
     };
     applyArgumentsResult.handleBack = function handleBack() {
       const props = applyArgumentsResult.props;
       const navigation = props.navigation;
       if (props.section !== closure_1_17.DISPLAY) {
-        obj.trackTabChanged(tmp.DISPLAY);
+        applyArgumentsResult.trackTabChanged(tmp.DISPLAY);
       }
       if (applyArgumentsResult.getSectionChanges()) {
         let resolved = new Promise((arg0) => {
           closure_0 = arg0;
-          let obj = closure_1_1(closure_1_3[32]);
-          obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, hideActionSheet: false, confirmColor: null };
+          closure_1_1(closure_1_3[32]);
+          let obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, hideActionSheet: false, confirmColor: null };
           const intl = closure_1_0(closure_1_3[20]).intl;
           obj[0] = intl.string(closure_1_0(closure_1_3[20]).t.P3yCXJ);
           const intl2 = closure_1_0(closure_1_3[20]).intl;
@@ -328,7 +330,7 @@ class GuildSettingsRoleEdit extends PureComponent {
           const intl4 = closure_1_0(closure_1_3[20]).intl;
           obj[3] = intl4.string(closure_1_0(closure_1_3[20]).t.p89ACt);
           obj[4] = function onConfirm() {
-            lib.handleSaveRole().then((arg0) => callback(arg0));
+            lib.handleSaveRole().then((result) => callback(result));
           };
           obj[5] = function onCancel() {
             const id = lib.props.role.id;
@@ -374,8 +376,7 @@ prototype["getSectionChanges"] = function getSectionChanges() {
   return closure_15.hasSectionChanges(this.props.role.id, this.getEffectiveSection());
 };
 prototype["updateNavigation"] = function updateNavigation(role, submitting) {
-  let self = this;
-  self = this;
+  const self = this;
   const props = this.props;
   role = props.role;
   const navigation = props.navigation;
@@ -388,24 +389,23 @@ prototype["updateNavigation"] = function updateNavigation(role, submitting) {
   } else if (sectionChanges) {
     fn = () => {
       const obj = { onPress: self.handleSaveRole, text: null };
-      const intl = role(closure_1_3[20]).intl;
-      obj[1] = intl.string(role(closure_1_3[20]).t["R3BPH+"]);
-      return closure_1_22(role(closure_1_3[19]).HeaderActionButton, obj);
+      const intl = role(dependencyMap[20]).intl;
+      obj[1] = intl.string(role(dependencyMap[20]).t["R3BPH+"]);
+      return closure_1_22(role(dependencyMap[19]).HeaderActionButton, obj);
     };
   }
   setOptionsResult[1] = fn;
   setOptionsResult[2] = function headerTitle() {
     const obj = { title: role.name, subtitle: null };
-    const intl = role(closure_1_3[20]).intl;
-    obj[1] = intl.string(role(closure_1_3[20]).t.XPGZXP);
-    return closure_1_22(role(closure_1_3[18]).NavigatorHeader, obj);
+    const intl = role(dependencyMap[20]).intl;
+    obj[1] = intl.string(role(dependencyMap[20]).t.XPGZXP);
+    return closure_1_22(role(dependencyMap[18]).NavigatorHeader, obj);
   };
   setOptionsResult = navigation.setOptions(setOptionsResult);
 };
 prototype["renderSubScreenButtons"] = function renderSubScreenButtons() {
   const self = this;
-  let obj = { hasIcons: false, children: null };
-  obj = { label: null, onPress: null, arrow: true };
+  let obj = { label: null, onPress: null, arrow: true };
   const intl = self(1236).intl;
   obj[0] = intl.string(self(1236).t.WIDE1L);
   obj[1] = function onPress() {
@@ -430,8 +430,7 @@ prototype["renderSubScreenButtons"] = function renderSubScreenButtons() {
   return callback3(self(6286).TableRowGroup, obj);
 };
 prototype["renderDeleteButton"] = function renderDeleteButton() {
-  let obj = { hasIcons: false, children: null };
-  obj = { variant: "danger", label: null, onPress: null };
+  const obj = { variant: "danger", label: null, onPress: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.c9ej8n);
   obj[2] = this.handleDeleteRole;
@@ -439,8 +438,8 @@ prototype["renderDeleteButton"] = function renderDeleteButton() {
   return callback2(TableRowGroupTitle.TableRowGroup, obj);
 };
 prototype["renderManagedRoleWarningText"] = function renderManagedRoleWarningText() {
-  let obj = { style: callback4(this.context).managedRolesWarningContainer, children: null };
-  obj = { messageType: Button.HelpMessageTypes.WARNING, children: null };
+  { style: callback4(this.context).managedRolesWarningContainer, children: null };
+  const obj = { messageType: Button.HelpMessageTypes.WARNING, children: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.k5d7DJ);
   obj[1] = callback2(Button.HelpMessage, obj);
@@ -485,7 +484,7 @@ prototype["render"] = function render() {
     obj[9] = locked;
     obj[10] = newRole;
     let tmp11Result = callback2(GuildSettingsRoleEditDisplayDefault, obj);
-  } else if (tmp9.PERMISSIONS === effectiveSection) {
+  } else if (constants.PERMISSIONS === effectiveSection) {
     obj = { guild: null, role: null, permissions: null, onPermissionsChanged: null, contentContainerStyle: null };
     obj[0] = guild;
     obj[1] = role;
@@ -493,7 +492,7 @@ prototype["render"] = function render() {
     obj[3] = self.handlePermissionsChanged;
     obj[4] = self.props.contentContainerStyle;
     tmp11Result = callback2(GuildSettingsRoleEditPermissionDefault, obj);
-  } else if (tmp9.MEMBERS === effectiveSection) {
+  } else if (constants.MEMBERS === effectiveSection) {
     obj = { guild: null, role: null, locked: null, contentContainerStyle: null };
     obj[0] = guild;
     obj[1] = role;
@@ -504,9 +503,7 @@ prototype["render"] = function render() {
     obj[2] = tmp15;
     obj[3] = self.props.contentContainerStyle;
     tmp11Result = callback2(onMembersLoadFailDefault, obj);
-    const tmp11 = callback2;
-    const tmp14 = onMembersLoadFailDefault;
-  } else if (tmp9.VERIFICATIONS === effectiveSection) {
+  } else if (constants.VERIFICATIONS === effectiveSection) {
     obj1 = { guild: null, role: null, locked: null, integrations: null };
     obj1[0] = guild;
     obj1[1] = role;
@@ -522,14 +519,14 @@ prototype["render"] = function render() {
     obj4[1] = ThemesDefault.space.PX_16;
     obj3[1] = obj4;
     obj3[2] = tmp11Result;
-    let tmp22Result = tmp22(tmp24(4733).Stack, obj3);
+    let tmp22Result = callback2(Stack.Stack, obj3);
   } else {
     const obj5 = { contentContainerStyle: null, children: null };
     obj5[0] = tmp.form;
     const obj6 = { spacing: null, children: null };
     obj6[0] = ThemesDefault.space.PX_24;
     let result = null;
-    if (effectiveSection === tmp9.DISPLAY) {
+    if (effectiveSection === constants.DISPLAY) {
       result = null;
       if (role.managed) {
         result = self.renderManagedRoleWarningText();
@@ -537,12 +534,12 @@ prototype["render"] = function render() {
     }
     const items = [result, tmp11Result, , ];
     let result1 = null;
-    if (effectiveSection === tmp9.DISPLAY) {
+    if (effectiveSection === constants.DISPLAY) {
       result1 = self.renderSubScreenButtons();
     }
     items[2] = result1;
     let renderDeleteButtonResult = null;
-    if (effectiveSection === tmp9.DISPLAY) {
+    if (effectiveSection === constants.DISPLAY) {
       renderDeleteButtonResult = null;
       if (tmp6) {
         renderDeleteButtonResult = self.renderDeleteButton();
@@ -550,16 +547,14 @@ prototype["render"] = function render() {
     }
     items[3] = renderDeleteButtonResult;
     obj6[1] = items;
-    obj5[1] = closure_23(tmp24(4733).Stack, obj6);
-    tmp22Result = tmp22(tmp24(8083).Form, obj5);
-    const tmp26 = closure_23;
+    obj5[1] = callback(Stack.Stack, obj6);
+    tmp22Result = callback2(Form.Form, obj5);
   }
   obj2[1] = tmp22Result;
   return callback2(View, obj2);
 };
 GuildSettingsRoleEdit.contextType = require("ManaContext").ThemeContext;
-let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-let result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEdit.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEdit.tsx");
 
 export default function ConnectedGuildSettingsRoleEdit(guildId) {
   guildId = guildId.guildId;
@@ -621,16 +616,15 @@ export default function ConnectedGuildSettingsRoleEdit(guildId) {
   const effect1 = importAllResult.useEffect(() => {
     let id;
     if (role != null) {
-      id = tmp.id;
+      id = role.id;
     }
     if (null != id) {
-      const roleConnectionsConfiguration = guildId(section[31]).fetchRoleConnectionsConfiguration(guildId, tmp.id);
+      const roleConnectionsConfiguration = guildId(section[31]).fetchRoleConnectionsConfiguration(guildId, role.id);
       const obj = guildId(section[31]);
     }
   }, items2);
   let tmp10 = null;
   if (null != guild) {
-    obj = { children: null };
     obj = {};
     const merged = Object.assign(tmp5);
     obj.guild = guild;

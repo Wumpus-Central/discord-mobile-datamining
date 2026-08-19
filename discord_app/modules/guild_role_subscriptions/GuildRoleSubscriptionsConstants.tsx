@@ -1,7 +1,7 @@
 // === Module 14551: MAX_SUBSCRIPTION_TIERS ===
 
 // Module 14551 (MAX_SUBSCRIPTION_TIERS)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import sum from "sum" /* 505 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
@@ -9,7 +9,7 @@ const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
 const items = [{ interval: SubscriptionIntervalTypes.DAY, interval_count: 1 }, { interval: SubscriptionIntervalTypes.DAY, interval_count: 7 }];
 const combined = "https://" + sum.PRIMARY_DOMAIN + "/creators";
 const frozen = Object.freeze({ MUST_READ_ARTICLES: "https://discord.com/creators/5-must-read-articles-for-beginners", CREATOR_TO_ADMIN_101: "https://discord.com/creators/creator-to-server-admin-101", CREATOR_TO_ADMIN_201: "https://discord.com/creators/creator-to-server-admin-201" });
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx");
 
 export const MAX_SUBSCRIPTION_TIERS = 3;
 export const MAX_SUBSCRIPTION_TIER_NAME_LENGTH = 100;

@@ -3,16 +3,18 @@
 // Module 8407 (EditCollectiblesPreviewDescription)
 import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import resetCache from "resetCache" /* 4063 */;
 import Text2 from "Text" /* 4734 */;
 import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8387 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_getSystemLocale" /* 1994 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 function EditCollectiblesPreviewDescription(arg0) {
   ({ user, purchase } = arg0);
   let stringResult = dependencyMap;
@@ -25,12 +27,12 @@ function EditCollectiblesPreviewDescription(arg0) {
   let obj2 = getItemRecordsFromPurchases;
   let result = obj2.isPremiumCollectiblesProduct(product);
   if (!result) {
-    let tmpResult = tmp(5313);
+    let tmpResult = getItemRecordsFromPurchases;
     result = tmpResult.isPremiumCollectiblesPurchase(purchase);
   }
   let result1 = !canUseCollectiblesResult;
   if (!canUseCollectiblesResult) {
-    tmpResult = tmp(5313);
+    tmpResult = getItemRecordsFromPurchases;
     result1 = tmpResult.isPremiumCollectiblesPurchase(purchase);
   }
   if (null != purchase) {
@@ -43,21 +45,19 @@ function EditCollectiblesPreviewDescription(arg0) {
       if (null != expiresAt) {
         const _Date = Date;
         const date = new Date();
-        diffAsUnitsResult = tmp(4063).diffAsUnits(date, purchase.expiresAt);
-        const tmpResult1 = tmp(4063);
+        diffAsUnitsResult = resetCache.diffAsUnits(date, purchase.expiresAt);
+        const tmpResult1 = resetCache;
       }
       let tmp17 = null != diffAsUnitsResult;
       if (tmp17) {
-        obj = { variant: "text-sm/medium", color: "text-default", children: null };
-        const intl = tmp(1236).intl;
+        const intl = getSystemLocale.intl;
         obj = { days: null };
         obj[0] = diffAsUnitsResult.days.toString();
-        obj[2] = intl.format(tmp(1236).t.Io7ozn, obj);
-        tmp17 = callback(tmp(4734).Text, obj);
-        const str = diffAsUnitsResult.days;
+        obj[2] = intl.format(getSystemLocale.t.Io7ozn, obj);
+        tmp17 = callback(Text2.Text, obj);
       }
       const items1 = [tmp17, , ];
-      const intl2 = tmp(1236).intl;
+      const intl2 = getSystemLocale.intl;
       let toLocaleDateStringResult;
       if (purchase != null) {
         const purchasedAt = purchase.purchasedAt;
@@ -66,8 +66,8 @@ function EditCollectiblesPreviewDescription(arg0) {
       obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
       obj2 = { date: null };
       obj2[0] = toLocaleDateStringResult;
-      obj1[2] = intl2.format(tmp(1236).t.gW9R4B, obj2);
-      items1[1] = callback(tmp(4734).Text, obj1);
+      obj1[2] = intl2.format(getSystemLocale.t.gW9R4B, obj2);
+      items1[1] = callback(Text2.Text, obj1);
       let expiresAt1;
       if (purchase != null) {
         expiresAt1 = purchase.expiresAt;
@@ -75,50 +75,50 @@ function EditCollectiblesPreviewDescription(arg0) {
       let tmp19Result = null != expiresAt1;
       if (tmp19Result) {
         const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
-        const intl3 = tmp(1236).intl;
+        const intl3 = getSystemLocale.intl;
         const obj4 = { date: null };
         expiresAt = purchase.expiresAt;
         obj4[0] = expiresAt.toLocaleDateString(stateFromStores, { minute: "numeric", hour: "numeric", day: "numeric", month: "long", year: "numeric" });
-        obj3[2] = intl3.format(tmp(1236).t.eZSTa5, obj4);
-        tmp19Result = tmp19(tmp(4734).Text, obj3);
+        obj3[2] = intl3.format(getSystemLocale.t.eZSTa5, obj4);
+        tmp19Result = callback(Text2.Text, obj3);
       }
       const obj5 = { children: null };
       items1[2] = tmp19Result;
       obj5[0] = items1;
-      return closure_7(closure_6, obj5);
+      return callback2(closure_6, obj5);
     }
   }
   if (result) {
     if (canUseCollectiblesResult) {
       const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
-      const intl5 = tmp(1236).intl;
-      stringResult = intl5.string(tmp(1236).t.hmyYK8);
+      const intl5 = getSystemLocale.intl;
+      stringResult = intl5.string(getSystemLocale.t.hmyYK8);
       obj6[2] = stringResult;
-      let tmp25Result = callback(tmp(4734).Text, obj6);
+      let tmp25Result = callback(Text2.Text, obj6);
     } else {
       const tmp4Result = getPremiumPlanItemDefault;
-      const Text = tmp(4734).Text;
+      const Text = Text2.Text;
       const obj7 = { variant: "text-sm/medium", color: "text-default", children: null };
       if (isPremiumResult) {
         obj7[2] = nitroUpgradeCTA;
-        tmp25Result = tmp25(Text, obj7);
+        tmp25Result = callback(Text, obj7);
       } else {
         obj7[2] = nitroJoinCTA;
-        tmp25Result = tmp25(Text, obj7);
+        tmp25Result = callback(Text, obj7);
       }
       isPremiumResult = getPremiumPlanItemDefault.isPremium(user);
     }
   } else {
     const obj8 = { variant: "text-sm/medium", color: "text-default", children: null };
-    const intl4 = tmp(1236).intl;
-    obj8[2] = intl4.string(tmp(1236).t.fEGjVQ);
-    return callback(tmp(4734).Text, obj8);
+    const intl4 = getSystemLocale.intl;
+    obj8[2] = intl4.string(getSystemLocale.t.fEGjVQ);
+    return callback(Text2.Text, obj8);
   }
 }
 noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ productDetailsContainer: { width: "100%", marginTop: 16, alignItems: "center", gap: 2 } });
-let result = require("set").fileFinishedImporting("modules/user_profile/native/EditCollectiblesPreviewDetails.tsx");
+let result = require("obj132").fileFinishedImporting("modules/user_profile/native/EditCollectiblesPreviewDetails.tsx");
 
 export default function EditCollectiblesPreviewDetails(previewSkuId) {
   previewSkuId = previewSkuId.previewSkuId;
@@ -143,18 +143,16 @@ export default function EditCollectiblesPreviewDetails(previewSkuId) {
       }
       obj = { variant: "text-md/bold", color: "text-default", children: null };
       obj[2] = name;
-      const items = [closure_5(Text2.Text, obj), ];
+      const items = [callback(Text2.Text, obj), ];
       obj = { user: null, product: null, purchase: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
       obj[0] = user;
       obj[1] = product;
       obj[2] = purchase;
       obj[3] = nitroJoinCTA;
       obj[4] = nitroUpgradeCTA;
-      items[1] = closure_5(EditCollectiblesPreviewDescription, obj);
+      items[1] = callback(EditCollectiblesPreviewDescription, obj);
       obj[1] = items;
-      tmp5Result = closure_7(View, obj);
-      const tmp5 = closure_7;
-      const tmp6 = View;
+      tmp5Result = callback2(View, obj);
     } else {
       tmp5Result = null;
     }

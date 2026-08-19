@@ -10,19 +10,18 @@ import set30 from "set" /* 1402 */;
 import hasFlag from "hasFlag" /* 1403 */;
 import exact from "exact" /* 1404 */;
 import privDefault from "priv" /* 1405 */;
-import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 import ME from "ME" /* 676 */;
 import { ChannelFlags } from "set" /* 1398 */;
 import importAllResult from "fromString" /* 506 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function createChannelRecord(type) {
   let GUILD_TEXT = type.type;
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  let tmp5 = closure_30[GUILD_TEXT];
+  let tmp5 = dependencyMap[GUILD_TEXT];
   if (tmp5 == null) {
     tmp5 = UnknownChannelRecord;
   }
@@ -66,7 +65,7 @@ const BasicPermissions = ME.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = ME);
 let items = [, , , , , , , , , ];
 ({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], ANNOUNCEMENT_THREAD: arr[2], PUBLIC_THREAD: arr[3], PRIVATE_THREAD: arr[4], GUILD_DIRECTORY: arr[5], GUILD_FORUM: arr[6], GUILD_MEDIA: arr[7], DM: arr[8], GROUP_DM: arr[9] } = ChannelTypes);
-let set = new Set(items);
+const set = new Set(items);
 let items1 = [, , , , , , , , , , , , , , ];
 ({ DM: arr2[0], GROUP_DM: arr2[1], GUILD_TEXT: arr2[2], GUILD_VOICE: arr2[3], GUILD_STAGE_VOICE: arr2[4], GUILD_CATEGORY: arr2[5], GUILD_ANNOUNCEMENT: arr2[6], GUILD_STORE: arr2[7], ANNOUNCEMENT_THREAD: arr2[8], PUBLIC_THREAD: arr2[9], PRIVATE_THREAD: arr2[10], GUILD_DIRECTORY: arr2[11], GUILD_FORUM: arr2[12], GUILD_MEDIA: arr2[13], MEDIA_THREAD: arr2[14] } = ChannelTypes);
 const items2 = [, , , , ];
@@ -195,7 +194,7 @@ Object.defineProperty(prototype, "topic", {
   set: undefined
 });
 Object.defineProperty(prototype, "position", {
-  get: function position(align, arg1) {
+  get: function position(onPress, arg1) {
     let num = this.position_;
     if (num == null) {
       num = 0;
@@ -334,7 +333,6 @@ prototype["merge"] = function merge(topic) {
   if (keys !== undefined) {
     tmp5 = tmp4;
     while (keys[tmp] !== undefined) {
-      let tmp15 = tmp8;
       let tmp9 = topic.hasOwnProperty(tmp8) && self[tmp8] !== topic[tmp8];
       if (!tmp9) {
         continue;
@@ -581,7 +579,7 @@ prototype["isGameInvitesChannel"] = function isGameInvitesChannel() {
   return this.hasFlag(ChannelFlags.IS_GAME_INVITES_CHANNEL);
 };
 Object.defineProperty(prototype, "accessPermissions", {
-  get: function accessPermissions() {
+  get: function accessPermissions(table) {
     const type = this.type;
     let hasItem = "SELECTABLE" !== type;
     if (hasItem) {
@@ -680,17 +678,18 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
         arg0[id.id] = id.nick;
         return arg0;
       }, {});
-      const arr3 = applyDefault;
     }
     obj[28] = obj2;
     ({ nsfw: obj[29], origin_channel_id: obj[30], owner_id: obj[31], parent_id: obj[32], permission_overwrites } = application_id);
     const obj3 = {};
     if (permission_overwrites != null) {
-      const item = permission_overwrites.forEach((id) => {
-        obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[3]).deserialize(id.allow), deny: null };
-        const obj2 = closure_1_2(closure_1_3[3]);
-        obj[3] = closure_1_2(closure_1_3[3]).deserialize(id.deny);
-        obj1[id.id] = obj;
+      const item = permission_overwrites.forEach((item, index) => {
+        obj = { id: item.id, type: item.type, allow: null, deny: null };
+        const deserializer = importAllResult;
+        obj[2] = deserializer.deserialize(item.allow);
+        const deserializer2 = importAllResult;
+        obj[3] = deserializer2.deserialize(item.deny);
+        obj1[item.id] = obj;
       });
     }
     obj[34] = obj3;
@@ -698,7 +697,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
     obj[37] = null != application_id.recipients ? application_id.recipients : [];
     if (null != application_id.recipients) {
       const recipients = application_id.recipients;
-      let mapped = recipients.map((id) => id.id);
+      let mapped = recipients.map((item, index) => item.id);
     } else {
       mapped = [];
     }
@@ -734,14 +733,14 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id) {
     if (null == available_tags) {
       let items = [];
     } else {
-      items = available_tags.map((id) => {
-        obj = { id: id.id, name: id.name, emojiId: null, emojiName: null, moderated: null, color: null };
+      items = available_tags.map((item, index) => {
+        obj = { id: item.id, name: item.name, emojiId: null, emojiName: null, moderated: null, color: null };
         let emoji_id;
-        if (0 !== id.emoji_id) {
-          emoji_id = id.emoji_id;
+        if (0 !== item.emoji_id) {
+          emoji_id = item.emoji_id;
         }
         obj[2] = emoji_id;
-        ({ emoji_name: obj[3], moderated: obj[4], color: obj[5] } = id);
+        ({ emoji_name: obj[3], moderated: obj[4], color: obj[5] } = item);
         return obj;
       });
     }
@@ -791,11 +790,13 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id) {
   ({ origin_channel_id: obj[11], parent_id: obj[12], permission_overwrites } = application_id);
   obj = {};
   if (permission_overwrites != null) {
-    const item = permission_overwrites.forEach((id) => {
-      obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[3]).deserialize(id.allow), deny: null };
-      const obj2 = closure_1_2(closure_1_3[3]);
-      obj[3] = closure_1_2(closure_1_3[3]).deserialize(id.deny);
-      obj1[id.id] = obj;
+    const item = permission_overwrites.forEach((item, index) => {
+      obj = { id: item.id, type: item.type, allow: null, deny: null };
+      const deserializer = importAllResult;
+      obj[2] = deserializer.deserialize(item.allow);
+      const deserializer2 = importAllResult;
+      obj[3] = deserializer2.deserialize(item.deny);
+      obj1[item.id] = obj;
     });
   }
   obj[13] = obj;
@@ -816,7 +817,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id) {
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  let tmp7 = closure_30[GUILD_TEXT];
+  let tmp7 = dependencyMap[GUILD_TEXT];
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
@@ -866,11 +867,13 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id) {
   ({ parent_id: obj[12], permission_overwrites } = application_id);
   obj = {};
   if (permission_overwrites != null) {
-    const item = permission_overwrites.forEach((id) => {
-      obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[3]).deserialize(id.allow), deny: null };
-      const obj2 = closure_1_2(closure_1_3[3]);
-      obj[3] = closure_1_2(closure_1_3[3]).deserialize(id.deny);
-      obj1[id.id] = obj;
+    const item = permission_overwrites.forEach((item, index) => {
+      obj = { id: item.id, type: item.type, allow: null, deny: null };
+      const deserializer = importAllResult;
+      obj[2] = deserializer.deserialize(item.allow);
+      const deserializer2 = importAllResult;
+      obj[3] = deserializer2.deserialize(item.deny);
+      obj1[item.id] = obj;
     });
   }
   obj[13] = obj;
@@ -891,7 +894,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id) {
   if (GUILD_TEXT2 == null) {
     GUILD_TEXT2 = ChannelTypes.GUILD_TEXT;
   }
-  let tmp7 = closure_30[GUILD_TEXT2];
+  let tmp7 = dependencyMap[GUILD_TEXT2];
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
@@ -936,14 +939,14 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags) {
     if (null == available_tags) {
       let items = [];
     } else {
-      items = available_tags.map((id) => {
-        obj = { id: id.id, name: id.name, emojiId: null, emojiName: null, moderated: null, color: null };
+      items = available_tags.map((item, index) => {
+        obj = { id: item.id, name: item.name, emojiId: null, emojiName: null, moderated: null, color: null };
         let emoji_id;
-        if (0 !== id.emoji_id) {
-          emoji_id = id.emoji_id;
+        if (0 !== item.emoji_id) {
+          emoji_id = item.emoji_id;
         }
         obj[2] = emoji_id;
-        ({ emoji_name: obj[3], moderated: obj[4], color: obj[5] } = id);
+        ({ emoji_name: obj[3], moderated: obj[4], color: obj[5] } = item);
         return obj;
       });
     }
@@ -993,11 +996,13 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags) {
     ({ parent_id: obj[17], permission_overwrites } = available_tags);
     obj1 = {};
     if (permission_overwrites != null) {
-      const item = permission_overwrites.forEach((id) => {
-        obj = { id: id.id, type: id.type, allow: closure_1_2(closure_1_3[3]).deserialize(id.allow), deny: null };
-        const obj2 = closure_1_2(closure_1_3[3]);
-        obj[3] = closure_1_2(closure_1_3[3]).deserialize(id.deny);
-        obj1[id.id] = obj;
+      const item = permission_overwrites.forEach((item, index) => {
+        obj = { id: item.id, type: item.type, allow: null, deny: null };
+        const deserializer = importAllResult;
+        obj[2] = deserializer.deserialize(item.allow);
+        const deserializer2 = importAllResult;
+        obj[3] = deserializer2.deserialize(item.deny);
+        obj1[item.id] = obj;
       });
     }
     obj[18] = obj1;
@@ -1078,8 +1083,8 @@ PrivateChannelRecord["sortRecipients"] = function sortRecipients(rawRecipients, 
   }
   const items1 = [...items];
   return items1.sort((id, id2) => {
-    const orCompute = closure_1_28.getOrCompute(id.id);
-    return (orCompute ^ closure_0) - (closure_1_28.getOrCompute(id2.id) ^ closure_0);
+    const orCompute = obj.getOrCompute(id.id);
+    return (orCompute ^ closure_0) - (obj.getOrCompute(id2.id) ^ closure_0);
   });
 };
 PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
@@ -1103,12 +1108,11 @@ PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
       arg0[id.id] = id.nick;
       return arg0;
     }, {});
-    const arr2 = applyDefault;
   }
   reduced[11] = reduced;
   reduced[12] = application_id.owner_id;
   reduced[13] = sortRecipientsResult;
-  reduced[14] = sortRecipientsResult.map((id) => id.id);
+  reduced[14] = sortRecipientsResult.map((item, index) => item.id);
   ({ recipient_flags: obj[15], safety_warnings: obj[16], blocked_user_warning_dismissed: obj[17] } = application_id);
   if (null != application_id.type) {
     let DM = application_id.type;
@@ -1162,8 +1166,7 @@ class DMChannelRecord extends PrivateChannelRecord {
 }
 class GroupDMChannelRecord extends PrivateChannelRecord {
 }
-let prototype3;
-prototype3 = function ThreadChannelRecord(appliedTags) {
+const prototype3 = function ThreadChannelRecord(appliedTags) {
   const tmp2 = new prototype3(appliedTags, tmp);
   // ThrowIfThisInitialized (0x7c)
   appliedTags = appliedTags.appliedTags;
@@ -1240,7 +1243,8 @@ prototype3["fromServer"] = function fromServer(applied_tags) {
 };
 let closure_29 = { [ChannelTypes.DM]: PrivateChannelRecord.fromServer, [ChannelTypes.GROUP_DM]: PrivateChannelRecord.fromServer, [ChannelTypes.GUILD_TEXT]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_VOICE]: GuildVocalChannelRecord.fromServer, [ChannelTypes.GUILD_STAGE_VOICE]: GuildVocalChannelRecord.fromServer, [ChannelTypes.GUILD_CATEGORY]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_STORE]: GuildTextualChannelRecord.fromServer, [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3.fromServer, [ChannelTypes.PUBLIC_THREAD]: prototype3.fromServer, [ChannelTypes.PRIVATE_THREAD]: prototype3.fromServer, [ChannelTypes.MEDIA_THREAD]: prototype3.fromServer, [ChannelTypes.GUILD_DIRECTORY]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_FORUM]: ForumChannelRecord.fromServer, [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord.fromServer };
 let closure_30 = { [ChannelTypes.DM]: DMChannelRecord, [ChannelTypes.GROUP_DM]: GroupDMChannelRecord, [ChannelTypes.GUILD_TEXT]: GuildTextChannelRecord, [ChannelTypes.GUILD_VOICE]: GuildVoiceChannelRecord, [ChannelTypes.GUILD_STAGE_VOICE]: GuildStageVoiceChannelRecord, [ChannelTypes.GUILD_CATEGORY]: GuildCategoryChannelRecord, [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildAnnouncementChannelRecord, [ChannelTypes.GUILD_STORE]: GuildStoreChannelRecord, [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3, [ChannelTypes.PUBLIC_THREAD]: prototype3, [ChannelTypes.PRIVATE_THREAD]: prototype3, [ChannelTypes.MEDIA_THREAD]: prototype3, [ChannelTypes.GUILD_DIRECTORY]: GuildDirectoryChannelRecord, [ChannelTypes.GUILD_FORUM]: ForumChannelRecord, [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord };
-let result = set.fileFinishedImporting("records/ChannelRecord.tsx");
+const tmp34 = new privDefault(100);
+let result = require("obj132").fileFinishedImporting("records/ChannelRecord.tsx");
 
 export const isGuildSelectableChannelType = function isGuildSelectableChannelType(arg0) {
   return set.has(arg0);
@@ -1359,7 +1363,7 @@ export const createChannelRecordFromServer = function createChannelRecordFromSer
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  let fromServer = closure_29[GUILD_TEXT];
+  let fromServer = table[GUILD_TEXT];
   if (fromServer == null) {
     fromServer = UnknownChannelRecord.fromServer;
   }
@@ -1373,7 +1377,7 @@ export const castChannelRecord = function castChannelRecord(type) {
   if (GUILD_TEXT == null) {
     GUILD_TEXT = ChannelTypes.GUILD_TEXT;
   }
-  let tmp3 = closure_30[GUILD_TEXT];
+  let tmp3 = dependencyMap[GUILD_TEXT];
   if (tmp3 == null) {
     tmp3 = UnknownChannelRecord;
   }

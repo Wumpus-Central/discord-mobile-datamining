@@ -1,7 +1,7 @@
 // === Module 4530: SystemServiceNotAvailableError ===
 
 // Module 4530 (SystemServiceNotAvailableError)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 class SystemServiceNotAvailableError extends Error {
   constructor() {
@@ -11,7 +11,7 @@ class SystemServiceNotAvailableError extends Error {
     return tmp;
   }
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/discord-native-types/DiscordNative.tsx");
+const result = obj132.fileFinishedImporting("../discord_common/js/packages/discord-native-types/DiscordNative.tsx");
 
 export { SystemServiceNotAvailableError };
 export const StoredCrashInformation = { HasRTCConnection: 0, [0]: "HasRTCConnection", IsSendingVideo: 1, [1]: "IsSendingVideo", IsSendingStream: 2, [2]: "IsSendingStream", IsReceivingVideo: 3, [3]: "IsReceivingVideo", IsReceivingStream: 4, [4]: "IsReceivingStream", VideoMediaSessionId: 5, [5]: "VideoMediaSessionId", StreamMediaSessionId: 6, [6]: "StreamMediaSessionId", IntentionalCrashReason: 7, [7]: "IntentionalCrashReason" };

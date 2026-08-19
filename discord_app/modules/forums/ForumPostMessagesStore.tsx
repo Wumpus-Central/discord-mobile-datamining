@@ -5,24 +5,22 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
-import closure_3 from "handleConnectionOpenOrResumed" /* 7240 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import handleConnectionOpenOrResumed from "handleConnectionOpenOrResumed" /* 7240 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-require = arg1;
+require = fn;
 function handleLoadThreadsSuccess(arg0) {
   ({ threads, firstMessages } = arg0);
   if (null == firstMessages) {
     return false;
   } else {
     for (const item10008 of threads) {
-      let tmp3 = closure_5;
       closure_5[item10008.id] = { loaded: true, firstMessage: null };
       continue;
     }
     const iter = firstMessages[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp8 = storeFirstMessage;
       let tmp9 = storeFirstMessage(nextResult.channel_id, nextResult);
       continue;
     }
@@ -32,7 +30,6 @@ function storeFirstMessage(channel_id, nextResult) {
   let messageRecord = null;
   if (null != nextResult) {
     messageRecord = createMinimalMessageRecord.createMessageRecord(nextResult);
-    const obj = createMinimalMessageRecord;
   }
   closure_5[channel_id] = { loaded: true, firstMessage: messageRecord };
 }
@@ -105,7 +102,6 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
         let messageRecord = null;
         if (null != message) {
           messageRecord = createMinimalMessageRecord.createMessageRecord(message);
-          const obj2 = createMinimalMessageRecord;
         }
         obj = { loaded: true, firstMessage: null };
         obj[1] = messageRecord;
@@ -130,7 +126,6 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
           const tmp10Result = DISCORD_EPOCHDefault;
           obj.firstMessage = createMinimalMessageRecord.updateMessageRecord(tmp12.firstMessage, message.message);
           dependencyMap[result] = obj;
-          const obj3 = createMinimalMessageRecord;
         }
         tmp8 = tmp;
       }
@@ -212,6 +207,7 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
           const merged = Object.assign(tmp3);
           obj.firstMessage = firstMessage.addReactionBatch(tmp2, id);
           dependencyMap[channelId] = obj;
+          const addReactionBatchResult = firstMessage.addReactionBatch(tmp2, id);
         }
       }
     }
@@ -220,16 +216,12 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
   LOAD_FORUM_POSTS: function handlePostChannelLoadData(threads) {
     threads = threads.threads;
     for (const key10006 in threads) {
-      let tmp5 = key10006;
       let first_message = threads[key10006].first_message;
       let messageRecord = null;
       if (null != first_message) {
-        let tmp = require;
-        let tmp2 = dependencyMap;
         let obj = createMinimalMessageRecord;
         messageRecord = obj.createMessageRecord(first_message);
       }
-      let tmp4 = closure_5;
       obj = { loaded: true, firstMessage: null };
       obj[1] = messageRecord;
       closure_5[key10006] = obj;
@@ -249,10 +241,9 @@ const forumPostMessagesStore = new ForumPostMessagesStore(dispatcherDefault, {
       obj = { loaded: true, firstMessage: null };
       obj[1] = createMinimalMessageRecord.createMessageRecord(tmp);
       closure_5[channelId] = obj;
-      const obj3 = createMinimalMessageRecord;
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/forums/ForumPostMessagesStore.tsx");
+let result = require("obj132").fileFinishedImporting("modules/forums/ForumPostMessagesStore.tsx");
 
 export default forumPostMessagesStore;

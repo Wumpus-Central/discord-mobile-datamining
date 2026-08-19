@@ -1,9 +1,9 @@
 // === Module 8126: createFakeSharedValue ===
 
 // Module 8126 (createFakeSharedValue)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/reanimated/ReanimatedHelperTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/reanimated/ReanimatedHelperTypes.tsx");
 
 export function createFakeSharedValue(COLLAPSED) {
   return {

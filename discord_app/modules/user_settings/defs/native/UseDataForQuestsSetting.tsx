@@ -1,7 +1,7 @@
 // === Module 14997: useIsDisabled ===
 
 // Module 14997 (useIsDisabled)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 import MobileUserSettings2 from "MobileUserSettings" /* 8198 */;
@@ -11,7 +11,6 @@ import createToggle from "createToggle" /* 10669 */;
 
 function useIsDisabled() {
   let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
-  const obj = useAdPersonalizationTogglesDisabled;
   if (!adPersonalizationTogglesDisabled) {
     adPersonalizationTogglesDisabled = obj2.useIsParentallyControlled();
   }
@@ -52,7 +51,7 @@ obj = {
   useIsDisabled
 };
 const toggle1 = createToggle.createToggle(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuestsSetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuestsSetting.tsx");
 
 export default toggle;
 export const UseDataForQuestsSponsoredContentSetting = toggle1;

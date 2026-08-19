@@ -1,10 +1,10 @@
 // === Module 5393: handleBackgroundSync ===
 
 // Module 5393 (handleBackgroundSync)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import createChannelRecord from "createChannelRecord" /* 1395 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
 let obj = importDefault;
 let closure_2 = createChannelRecord.createChannelRecordFromServer;
@@ -56,8 +56,8 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
     closure_0 = iter;
     const data_mode = iter.data_mode;
     if ("unavailable" !== data_mode) {
-      function asRecord(arg0) {
-        return closure_1_2(arg0, iter.id);
+      function asRecord(item, index) {
+        return closure_1_2(item, iter.id);
       }
       if ("partial" === data_mode) {
         const channels = iter.partial_updates.channels;
@@ -216,6 +216,6 @@ obj.actions = {
     return obj.handleGuildDelete(arg0, arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/Channels.tsx");
+let result = obj132.fileFinishedImporting("modules/app_database/modules/Channels.tsx");
 
 export default obj;

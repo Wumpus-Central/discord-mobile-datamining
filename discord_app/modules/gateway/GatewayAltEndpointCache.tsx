@@ -1,8 +1,8 @@
 // === Module 13918: USE_ALT_GATEWAY_KEY ===
 
 // Module 13918 (USE_ALT_GATEWAY_KEY)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/GatewayAltEndpointCache.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/GatewayAltEndpointCache.tsx");
 
 export const USE_ALT_GATEWAY_KEY = "use_alt_gateway";

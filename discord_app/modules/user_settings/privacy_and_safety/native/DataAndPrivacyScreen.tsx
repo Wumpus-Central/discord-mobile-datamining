@@ -1,22 +1,21 @@
 // === Module 15007: DataAndPrivacySettings ===
 
 // Module 15007 (DataAndPrivacySettings)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasConsented" /* 5258 */;
+import noop from "noop" /* 19 */;
+import hasConsented from "hasConsented" /* 5258 */;
 import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ HelpdeskArticles: closure_6, UserSettingsSections: error } = ME);
 ({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx");
 
 export default function DataAndPrivacySettings() {
   let obj = stackNavigation(1500);
   stackNavigation = obj.useStackNavigation();
-  obj = { settings: items, subLabel: null };
-  items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
+  let items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   let intl = stackNavigation(1236).intl;
   obj = { helpdeskArticle: null };
   let obj3 = items1(1993);
@@ -73,31 +72,31 @@ export default function DataAndPrivacySettings() {
       const obj = stackNavigation(14212);
     }
     const harvestStatus = stackNavigation(14215).fetchHarvestStatus();
+    const obj2 = stackNavigation(14215);
   }, []);
   const items8 = [stackNavigation, items1];
   const obj11 = { children: null };
   const memo = React.useMemo(() => {
-    let obj = stackNavigation(closure_1_2[11]);
-    obj = { sections: null };
+    stackNavigation(dependencyMap[11]);
     const items = [...items1];
-    obj = { label: null, settings: null, subLabel: null };
-    const intl = stackNavigation(closure_1_2[5]).intl;
-    obj[0] = intl.string(stackNavigation(closure_1_2[5]).t.Me5lVK);
+    const obj = { label: null, settings: null, subLabel: null };
+    const intl = stackNavigation(dependencyMap[5]).intl;
+    obj[0] = intl.string(stackNavigation(dependencyMap[5]).t.Me5lVK);
     items1 = [, ];
-    ({ DATA_AND_PRIVACY_SECURE_FRAMES_PERSISTENT_CODES: arr2[0], ENCRYPTION_VERIFIED_DEVICES: arr2[1] } = closure_1_5);
+    ({ DATA_AND_PRIVACY_SECURE_FRAMES_PERSISTENT_CODES: arr2[0], ENCRYPTION_VERIFIED_DEVICES: arr2[1] } = MobileUserSettings);
     obj[1] = items1;
-    const intl2 = stackNavigation(closure_1_2[5]).intl;
-    obj1 = { helpArticle: stackNavigation(closure_1_2[7]).getSecureFramesHelpdeskArticle() };
-    obj[2] = intl2.format(stackNavigation(closure_1_2[5]).t["/6sFWa"], obj1);
+    const intl2 = stackNavigation(dependencyMap[5]).intl;
+    obj1 = { helpArticle: stackNavigation(dependencyMap[7]).getSecureFramesHelpdeskArticle() };
+    obj[2] = intl2.format(stackNavigation(dependencyMap[5]).t["/6sFWa"], obj1);
     items[tmp] = obj;
     const obj2 = { label: null, settings: null, subLabel: null };
-    const intl3 = stackNavigation(closure_1_2[5]).intl;
-    obj2[0] = intl3.string(stackNavigation(closure_1_2[5]).t["+uHbqE"]);
+    const intl3 = stackNavigation(dependencyMap[5]).intl;
+    obj2[0] = intl3.string(stackNavigation(dependencyMap[5]).t["+uHbqE"]);
     const items2 = [, ];
-    ({ SAFETY_TERMS_OF_SERVICE: arr3[0], SAFETY_PRIVACY_POLICY: arr3[1] } = closure_1_5);
+    ({ SAFETY_TERMS_OF_SERVICE: arr3[0], SAFETY_PRIVACY_POLICY: arr3[1] } = MobileUserSettings);
     obj2[1] = items2;
-    const intl4 = stackNavigation(closure_1_2[5]).intl;
-    obj2[2] = intl4.format(stackNavigation(closure_1_2[5]).t.R5N31P, {
+    const intl4 = stackNavigation(dependencyMap[5]).intl;
+    obj2[2] = intl4.format(stackNavigation(dependencyMap[5]).t.R5N31P, {
       onClick() {
         return navigation.navigate(closure_1_7.ACCOUNT);
       }
@@ -108,11 +107,6 @@ export default function DataAndPrivacySettings() {
     return obj.createList(obj);
   }, items8);
   obj12 = { screen: null };
-  const obj10 = {
-    onClick() {
-      return stackNavigation.navigate(closure_1_7.CONTENT_AND_SOCIAL);
-    }
-  };
   const obj16 = items1(1993);
   obj12[0] = stackNavigation(14172).SettingsScreen.DATA_AND_PRIVACY;
   const items9 = [callback(items1(14172), obj12), callback(items1(13991), { node: memo })];

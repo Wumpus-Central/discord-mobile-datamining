@@ -2,14 +2,19 @@
 
 // Module 8970 (useProfileTheme)
 import initialize from "initialize" /* 589 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 import useThemeDefault from "useTheme" /* 4310 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import hasFetchedColors from "hasFetchedColors" /* 8345 */;
+import getProfileTheme from "getProfileTheme" /* 8422 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore" /* 8971 */;
 import { ThemeTypes } from "ME" /* 676 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
 
 export default function useProfileTheme(arg0) {
   ({ user, displayProfile, pendingAvatarSrc } = arg0);
@@ -30,9 +35,9 @@ export default function useProfileTheme(arg0) {
     }
     pendingAvatarSrc = avatarURL;
   }
-  let tmp4Result = tmp4(711);
+  let tmp4Result = unsafe_getRawColor;
   const result = tmp4Result.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
-  tmp4Result = tmp4(8345);
+  tmp4Result = hasFetchedColors;
   callback(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
   if (null != tmp3) {
     return tmp3;
@@ -57,42 +62,42 @@ export default function useProfileTheme(arg0) {
       first = previewThemeColors[0];
     }
     if (first == null) {
-      first = tmp4(688).hex2int(tmp10);
-      const tmp4Result1 = tmp4(688);
+      first = int2hslRaw.hex2int(tmp10);
+      const tmp4Result1 = int2hslRaw;
     }
     let hex2intResult;
     if (previewThemeColors != null) {
       hex2intResult = previewThemeColors[1];
     }
     if (hex2intResult == null) {
-      hex2intResult = tmp4(688).hex2int(tmp11);
-      const tmp4Result2 = tmp4(688);
+      hex2intResult = int2hslRaw.hex2int(tmp11);
+      const tmp4Result2 = int2hslRaw;
     }
     let tmp16 = tmp2;
     if (!stateFromStores) {
       tmp16 = tmp2;
       if (!forceUserTheme) {
-        let profileTheme = tmp4(8422).getProfileTheme(first);
+        let profileTheme = getProfileTheme.getProfileTheme(first);
         if (profileTheme == null) {
           profileTheme = tmp2;
         }
         tmp16 = profileTheme;
-        const tmp4Result3 = tmp4(8422);
+        const tmp4Result3 = getProfileTheme;
       }
     }
     if (tmp16 !== ThemeTypes.DARK) {
-      let isThemeLightResult = tmp16 === tmp18.DARK;
+      let isThemeLightResult = tmp16 === ThemeTypes.DARK;
       if (isThemeLightResult) {
-        isThemeLightResult = tmp4(1363).isThemeLight(tmp2);
-        const tmp4Result4 = tmp4(1363);
+        isThemeLightResult = AccessibilityAnnouncer.isThemeLight(tmp2);
+        const tmp4Result4 = AccessibilityAnnouncer;
       }
       let DARKER = tmp16;
       if (isThemeLightResult) {
-        DARKER = tmp18.DARKER;
+        DARKER = ThemeTypes.DARKER;
       }
     } else {
+      AccessibilityAnnouncer;
       DARKER = tmp2;
-      const tmp4Result5 = tmp4(1363);
     }
     obj = { theme: null, primaryColor: null, secondaryColor: null };
     obj[0] = DARKER;

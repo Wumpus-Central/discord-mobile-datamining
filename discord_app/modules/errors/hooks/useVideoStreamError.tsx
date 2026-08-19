@@ -1,12 +1,12 @@
 // === Module 12439: useVideoStreamError ===
 
 // Module 12439 (useVideoStreamError)
-import closure_2 from "fetchFingerprint" /* 1218 */;
-import closure_3 from "isAVErrorContextOfType" /* 12440 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import isAVErrorContextOfType from "isAVErrorContextOfType" /* 12440 */;
 import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/errors/hooks/useVideoStreamError.tsx");
 
 export default function useVideoStreamError(arg0, arg1) {
   const _require = arg0;
@@ -19,7 +19,7 @@ export default function useVideoStreamError(arg0, arg1) {
       arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9668).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
       items[Symbol.iterator]();
     }
-    if (callback === closure_1_4.STREAM) {
+    if (callback === MediaEngineContextTypes.STREAM) {
       let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9668).AVError.SCREENSHARE_OS_ERROR);
     } else {
       activeErrorsOfType = [];
@@ -43,7 +43,7 @@ export const useVideoStreamErrorContext = function useVideoStreamErrorContext(ar
       arraySpreadResult = HermesBuiltin.arraySpread(closure_1_3.getActiveErrorsOfType(callback(9668).AVError.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM), arraySpreadResult);
       items[Symbol.iterator]();
     }
-    if (callback === closure_1_4.STREAM) {
+    if (callback === MediaEngineContextTypes.STREAM) {
       let activeErrorsOfType = closure_1_3.getActiveErrorsOfType(callback(9668).AVError.SCREENSHARE_OS_ERROR);
     } else {
       activeErrorsOfType = [];

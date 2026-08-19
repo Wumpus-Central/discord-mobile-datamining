@@ -2,23 +2,23 @@
 
 // Module 7530 (getURL)
 import applyDefault from "apply" /* 12 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 import onDismiss from "onDismiss" /* 7570 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "defaultImageSrcGenerator" /* 4035 */;
-import importDefaultResult from "set" /* 7575 */;
+import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4035 */;
+import importDefaultResult from "obj132" /* 7575 */;
 
-require = arg1;
+require = fn;
 function getURL(name) {
   if (null == name) {
     convert = convert.convert;
     const _HermesInternal = HermesInternal;
     let str = "asset:/emoji-" + convert.toCodePoint(name) + ".png";
   } else {
+    obj132;
     str = "";
-    const obj = set;
   }
   return str;
 }
@@ -103,9 +103,9 @@ function _getEmojiColors() {
             closure_1 = arg1;
             let mapped;
             if (closure_1 != null) {
-              mapped = closure_1.map((arg0) => {
-                [tmp2, tmp3, tmp4] = v2(arg0, 3);
-                const tmp = v2(arg0, 3);
+              mapped = closure_1.map((item, index) => {
+                [tmp2, tmp3, tmp4] = v2(item, 3);
+                const tmp = v2(item, 3);
                 return emojiURL(table[10]).rgbToHex(tmp2, tmp3, tmp4);
               });
             }
@@ -137,10 +137,10 @@ function _getEmojiColors() {
 ({ NativeModules: c5, processColor: closure_6 } = get_ActivityIndicator);
 let obj = {
   getURL: importDefaultResult.makeMemoizer(getURL),
-  filterUnsupportedEmojis(emojis) {
-    let found = emojis;
+  filterUnsupportedEmojis(arg0) {
+    let found = arg0;
     if (!obj.isAndroid()) {
-      found = applyDefault.filter(emojis, (unicodeVersion) => {
+      found = applyDefault.filter(arg0, (unicodeVersion) => {
         unicodeVersion = unicodeVersion.unicodeVersion;
         const systemVersionMajor = callback(4354).getSystemVersionMajor();
         const obj = callback(4354);
@@ -259,7 +259,6 @@ let obj = {
         }
         return flag;
       });
-      const arr = applyDefault;
     }
     return found;
   },
@@ -276,17 +275,17 @@ let obj = {
           accentColor = LIGHT.accentColor;
         }
         let obj = { accentColor: null, backgroundColor: null, highlightColor: null, opacity: null };
-        obj[0] = closure_6(accentColor);
+        obj[0] = callback(accentColor);
         let backgroundColor;
         if (LIGHT != null) {
           backgroundColor = LIGHT.backgroundColor;
         }
-        obj[1] = closure_6(backgroundColor);
+        obj[1] = callback(backgroundColor);
         let highlightColor;
         if (LIGHT != null) {
           highlightColor = LIGHT.highlightColor;
         }
-        obj[2] = closure_6(highlightColor);
+        obj[2] = callback(highlightColor);
         let opacity;
         if (LIGHT != null) {
           opacity = LIGHT.opacity;
@@ -299,17 +298,17 @@ let obj = {
           accentColor1 = DARK.accentColor;
         }
         obj = { accentColor: null, backgroundColor: null, highlightColor: null, opacity: null };
-        obj[0] = closure_6(accentColor1);
+        obj[0] = callback(accentColor1);
         let backgroundColor1;
         if (DARK != null) {
           backgroundColor1 = DARK.backgroundColor;
         }
-        obj[1] = closure_6(backgroundColor1);
+        obj[1] = callback(backgroundColor1);
         let highlightColor1;
         if (DARK != null) {
           highlightColor1 = DARK.highlightColor;
         }
-        obj[2] = closure_6(highlightColor1);
+        obj[2] = callback(highlightColor1);
         let opacity1;
         if (DARK != null) {
           opacity1 = DARK.opacity;
@@ -336,6 +335,6 @@ let obj = {
     const result = onDismiss.openBurstReactionFirstSendActionSheet({ channelId, messageId, emoji });
   }
 };
-let result = require("set").fileFinishedImporting("utils/EmojiUtilsPlatformed.native.tsx");
+let result = require("obj132").fileFinishedImporting("utils/EmojiUtilsPlatformed.native.tsx");
 
 export default obj;

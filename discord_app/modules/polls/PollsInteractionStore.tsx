@@ -1,7 +1,7 @@
 // === Module 8430: useMessagePollInteractions ===
 
 // Module 8430 (useMessagePollInteractions)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import shallowEqualDefault from "shallowEqual" /* 643 */;
 import identity from "identity" /* 700 */;
 
@@ -15,18 +15,16 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
       const callback = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
-      callback(closure_1_2[1]).batchUpdates(() => {
+      callback(dependencyMap[1]).batchUpdates(() => {
         callback((pollsByChannelId) => {
           let tmp4;
           if (pollsByChannelId.pollsByChannelId[closure_0] != null) {
             tmp4 = tmp3[closure_1];
           }
-          const tmpResult = closure_2(tmp4);
-          let obj = { pollsByChannelId: null, pollsByMessageId: null };
-          obj = {};
+          const tmpResult = callback(tmp4);
           const merged = Object.assign(pollsByChannelId.pollsByChannelId);
-          obj = {};
-          const merged1 = Object.assign(pollsByChannelId.pollsByChannelId[tmp2]);
+          const obj = {};
+          const merged1 = Object.assign(pollsByChannelId.pollsByChannelId[closure_0]);
           obj[closure_1] = tmpResult;
           obj[closure_0] = obj;
           obj[0] = obj;
@@ -40,16 +38,16 @@ let closure_4 = identity.createWithEqualityFn((arg0) => {
     }
   };
 });
-const result = set.fileFinishedImporting("modules/polls/PollsInteractionStore.tsx");
+const result = obj132.fileFinishedImporting("modules/polls/PollsInteractionStore.tsx");
 
 export const useMessagePollInteractions = function useMessagePollInteractions(arg0) {
   closure_0 = arg0;
   return store((arg0) => {
     closure_0 = arg0;
     const obj = {};
-    const item = closure_0.forEach((arg0) => {
-      if (null != pollsByMessageId.pollsByMessageId[arg0]) {
-        obj[arg0] = tmp;
+    const item = closure_0.forEach((item, index) => {
+      if (null != pollsByMessageId.pollsByMessageId[item]) {
+        obj[item] = tmp;
       }
     });
     return obj;
@@ -79,7 +77,7 @@ export const clearChannelPollState = function clearChannelPollState(arg0) {
       const keys = pollsByMessageId.keys(tmp3);
       pollsByMessageId = {};
       const merged = Object.assign(pollsByMessageId);
-      const item = keys.forEach((arg0) => {
+      const item = keys.forEach((item, index) => {
         delete tmp2[tmp];
       });
       const merged1 = Object.assign(pollsByChannelId);

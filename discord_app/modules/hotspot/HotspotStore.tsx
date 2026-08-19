@@ -1,11 +1,11 @@
 // === Module 7194: set ===
 
 // Module 7194 (set)
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import CONFERENCE_MODE_ENABLED2 from "CONFERENCE_MODE_ENABLED" /* 683 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import get from "get" /* 4842 */;
-import set from "set" /* 2 */;
 
 const CONFERENCE_MODE_ENABLED = CONFERENCE_MODE_ENABLED2.CONFERENCE_MODE_ENABLED;
 let set = new Set();
@@ -94,6 +94,6 @@ const hotspotStore = new HotspotStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("modules/hotspot/HotspotStore.tsx");
+const result = obj132.fileFinishedImporting("modules/hotspot/HotspotStore.tsx");
 
 export default hotspotStore;

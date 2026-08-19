@@ -3,11 +3,11 @@
 // Module 14610 (fetchUserCustomThemes)
 import sendRequest from "sendRequest" /* 530 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "validateSavedTheme" /* 4308 */;
+import validateSavedTheme from "validateSavedTheme" /* 4308 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/client_themes/SavedCustomThemeActionCreators.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/client_themes/SavedCustomThemeActionCreators.tsx");
 
 export const fetchUserCustomThemes = function fetchUserCustomThemes() {
   if (!fetching.isFetching()) {
@@ -17,8 +17,8 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
     obj = { url: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.USERS_ME_CUSTOM_THEMES;
     const value = HTTP.get(obj);
-    value.then((body) => {
-      body = body.body;
+    value.then((result) => {
+      const body = result.body;
       let custom_themes;
       if (body != null) {
         custom_themes = body.custom_themes;
@@ -28,12 +28,12 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
       }
       callback(709).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
     }).catch((error) => {
-      let obj = callback(709);
-      obj = { type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE", error };
+      callback(709);
+      const obj = { type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE", error };
       obj.dispatch(obj);
     });
-    const nextPromise = value.then((body) => {
-      body = body.body;
+    const nextPromise = value.then((result) => {
+      const body = result.body;
       let custom_themes;
       if (body != null) {
         custom_themes = body.custom_themes;

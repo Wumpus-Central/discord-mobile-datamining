@@ -6,14 +6,14 @@ import registerAssetDefault from "registerAsset" /* 7989 */;
 import frozen from "frozen" /* 8171 */;
 import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
 import createPremiumGroupInviteEmbed from "createPremiumGroupInviteEmbed" /* 8266 */;
-import closure_3 from "fetchFingerprint" /* 1218 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import "createCacheKey";
 
-require = arg1;
-createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
+require = fn;
+const createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
 let closure_5 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
+const result = require("obj132").fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
 
 export const createPremiumGroupInviteSystemMessage = function createPremiumGroupInviteSystemMessage(message) {
   ({ message, theme } = message);
@@ -32,5 +32,4 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj;
   }
-  const tmp3 = require;
 };

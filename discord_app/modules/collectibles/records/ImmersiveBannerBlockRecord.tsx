@@ -1,11 +1,10 @@
 // === Module 5346: fromServer ===
 
 // Module 5346 (fromServer)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ShopBlockType from "ShopBlockType" /* 5339 */;
 
-let prototype;
-prototype = function ImmersiveBannerBlockRecord(end_time) {
+const prototype = function ImmersiveBannerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.IMMERSIVE_BANNER;
   ({ title: tmp.title, body: tmp.body, help_center_url: tmp.helpCenterUrl, text_color: tmp.textColor } = end_time);
@@ -34,6 +33,6 @@ prototype["fromServer"] = function fromServer(end_time) {
   ({ banner_url: tmp2.bannerUrl, banner_animated_url: tmp2.bannerAnimatedUrl } = end_time);
   return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/ImmersiveBannerBlockRecord.tsx");
+const result = obj132.fileFinishedImporting("modules/collectibles/records/ImmersiveBannerBlockRecord.tsx");
 
 export const ImmersiveBannerBlockRecord = prototype;

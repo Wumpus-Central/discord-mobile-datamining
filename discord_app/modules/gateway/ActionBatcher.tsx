@@ -1,7 +1,7 @@
 // === Module 13203: flush ===
 
 // Module 13203 (flush)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 let ActionBatcher;
 class ActionBatcher {
@@ -29,13 +29,11 @@ ActionBatcher["flush"] = function flush(arg0, arg1) {
     if (tmp2) {
       let shouldFlushResult = null == arg0;
       if (!shouldFlushResult) {
-        let tmp4 = nextResult;
         shouldFlushResult = obj.shouldFlush(arg0, arg1);
       }
       tmp2 = shouldFlushResult;
     }
     if (tmp2) {
-      let tmp5 = nextResult;
       let flushResult = obj.flush();
     }
     continue;
@@ -55,6 +53,6 @@ ActionBatcher.prototype["flush"] = function flush() {
   }
 };
 ActionBatcher.batchers = [];
-const result = set.fileFinishedImporting("modules/gateway/ActionBatcher.tsx");
+const result = obj132.fileFinishedImporting("modules/gateway/ActionBatcher.tsx");
 
 export default ActionBatcher;

@@ -1,10 +1,10 @@
 // === Module 12715: useIsForumChannelSearchActive ===
 
 // Module 12715 (useIsForumChannelSearchActive)
-import closure_2 from "initialize" /* 7515 */;
+import initialize from "initialize" /* 7515 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
 
 export const useIsForumChannelSearchActive = function useIsForumChannelSearchActive(channelId) {
   const _require = channelId;

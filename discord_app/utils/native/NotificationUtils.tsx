@@ -4,13 +4,13 @@
 import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 import createSoundForPack from "createSoundForPack" /* 10040 */;
 import NativeModulesDefault from "NativeModules" /* 11579 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import { PermissionStateType } from "set" /* 11578 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("utils/native/NotificationUtils.tsx");
+require = fn;
+let result = require("obj132").fileFinishedImporting("utils/native/NotificationUtils.tsx");
 
 export default {
   hasPermission() {
@@ -30,12 +30,11 @@ export default {
     let result = _require(11584).setPushPermissionState(PermissionStateType.REQUESTED);
     let obj = _require(11584);
     expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
-    const obj2 = expandEventPropertiesDefault;
     const permissions = NativeModulesDefault.requestPermissions();
-    permissions.then((sound) => {
-      ({ alert: _alert, badge } = sound);
+    permissions.then((result) => {
+      ({ alert: _alert, badge } = result);
       if (!_alert) {
-        _alert = sound.sound;
+        _alert = result.sound;
       }
       if (!_alert) {
         _alert = badge;
@@ -44,12 +43,12 @@ export default {
       if (_alert) {
         str = "accepted";
       }
-      closure_1_1(closure_1_2[5]).track(closure_1_6.PERMISSIONS_ACKED, { type: "notification", action: str });
-      const NativePermissionManager = closure_1_4.NativePermissionManager;
+      expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_ACKED, { type: "notification", action: str });
+      const NativePermissionManager = NativeModules.NativePermissionManager;
       const notificationAuthorizationStatus = NativePermissionManager.getNotificationAuthorizationStatus();
-      notificationAuthorizationStatus.then((closure_0) => {
-        if (null != closure_0) {
-          const result = callback(table[4]).updateNotificationAuthorizationStatus(closure_0);
+      notificationAuthorizationStatus.then((result) => {
+        if (null != result) {
+          result = callback(table[4]).updateNotificationAuthorizationStatus(result);
           const obj = callback(table[4]);
         }
       });

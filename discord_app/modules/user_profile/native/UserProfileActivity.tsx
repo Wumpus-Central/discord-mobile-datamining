@@ -3,25 +3,25 @@
 // Module 12095 (ActivityCardText)
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "addApplication" /* 4478 */;
-import closure_9 from "reset" /* 4652 */;
-import closure_10 from "ensureGuildLoaded" /* 1391 */;
-import closure_11 from "createGuildRecordFromRust" /* 1910 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_13 from "sortActivity" /* 4559 */;
-import closure_14 from "filterPlayingActivities" /* 7250 */;
-import closure_15 from "updateVoiceState" /* 4542 */;
-import closure_16 from "createUserWidgetFromServer" /* 5365 */;
+import addApplication from "addApplication" /* 4478 */;
+import reset from "reset" /* 4652 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import sortActivity from "sortActivity" /* 4559 */;
+import filterPlayingActivities from "filterPlayingActivities" /* 7250 */;
+import updateVoiceState from "updateVoiceState" /* 4542 */;
+import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
 import { CARD_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
-import set from "set" /* 500 */;
+import "createCacheKey";
+import obj132 from "obj132" /* 500 */;
 
-require = arg1;
+require = fn;
 function ActivityCardText(children) {
   const merged = Object.assign(children, Object.create(null));
   let trimmed = str;
@@ -47,8 +47,8 @@ function MaybeLink(href) {
   if (null != href) {
     let obj = { accessibilityRole: "link", onPress: null, children: null };
     obj[1] = function onPress() {
-      let obj = href(closure_1_2[19]);
-      obj = { href };
+      href(dependencyMap[19]);
+      const obj = { href };
       return obj.handleClick(obj);
     };
     obj[2] = children;
@@ -79,11 +79,11 @@ function ActivityCardBody(user) {
       obj2[2] = function onPress() {
         return onAction({ action: "OPEN_SPOTIFY_TRACK" });
       };
-      obj1[1] = tmp24(IM4J4e(tmp2[24]).SpotifyTrack, obj2);
-      let tmp24Result = tmp24(ActivityCardText, obj1);
+      obj1[1] = callback(IM4J4e(tmp2[24]).SpotifyTrack, obj2);
+      let tmp24Result = callback(ActivityCardText, obj1);
       let tmp29 = ActivityCardText;
-      let tmp30 = tmp24;
-      let tmp31 = tmp24;
+      let tmp30 = callback;
+      let tmp31 = callback;
     } else {
       const obj3 = { href: null, children: null };
       obj3[0] = activity.details_url;
@@ -97,12 +97,11 @@ function ActivityCardBody(user) {
       }
       const obj4 = { variant: "text-md/semibold", children: null };
       obj4[1] = name;
-      obj3[1] = tmp24(ActivityCardText, obj4);
-      tmp24Result = tmp24(MaybeLink, obj3);
-      tmp29 = tmp26;
-      tmp30 = tmp24;
-      tmp31 = tmp24;
-      const tmp25 = MaybeLink;
+      obj3[1] = callback(ActivityCardText, obj4);
+      tmp24Result = callback(MaybeLink, obj3);
+      tmp29 = ActivityCardText;
+      tmp30 = callback;
+      tmp31 = callback;
     }
     const items1 = [tmp24Result, , , ];
     if (activity(tmp2[22])(activity)) {
@@ -197,7 +196,6 @@ function ActivityCardBody(user) {
           obj13[2] = large_text;
           obj12[1] = tmp30(tmp29, obj13);
           tmp30Result1 = tmp30(MaybeLink, obj12);
-          const tmp43 = MaybeLink;
         }
       }
     }
@@ -212,9 +210,9 @@ function ActivityCardBody(user) {
     }
     items1[3] = tmp31Result;
     obj[1] = items1;
-    items[1] = tmp6(tmp7, obj);
+    items[1] = callback2(closure_7, obj);
     obj[1] = items;
-    return tmp6(tmp7, obj);
+    return callback2(closure_7, obj);
   } else {
     if (null == largeImage) {
       if (null != largeImage) {
@@ -252,14 +250,14 @@ function ActivityCardBody(user) {
           obj20[0] = IM4J4e(tmp2[26]).makeSource(smallImage.src);
           obj20[1] = smallImage.alt;
           obj20[2] = tmp.smallImage;
-          obj19[1] = tmp13(tmp12Result, obj20);
-          obj18[1] = tmp13(tmp14, obj19);
-          tmp13Result = tmp13(tmp7, obj18);
+          obj19[1] = callback(tmp12Result, obj20);
+          obj18[1] = callback(MaybeLink, obj19);
+          tmp13Result = callback(closure_7, obj18);
           const IM4J4eResult1 = IM4J4e(tmp2[26]);
         }
         items4[1] = tmp13Result;
         obj15[1] = items4;
-        let tmp51Result = tmp6(tmp7, obj15);
+        let tmp51Result = callback2(closure_7, obj15);
         const IM4J4eResult = IM4J4e(tmp2[26]);
       } else {
         const obj21 = { style: null, children: null };
@@ -272,7 +270,7 @@ function ActivityCardBody(user) {
         const colors = activity(tmp2[16]).colors;
         obj22[2] = IM4J4e(tmp2[29]).isThemeDark(tmp5) ? colors.WHITE : colors.BLACK;
         obj21[1] = callback(IM4J4e(tmp2[28]).UnknownGameIcon, obj22);
-        tmp51Result = tmp51(tmp7, obj21);
+        tmp51Result = callback(closure_7, obj21);
         const isThemeDarkResult = IM4J4e(tmp2[29]).isThemeDark(tmp5);
       }
     } else {
@@ -297,7 +295,7 @@ function ActivityCardBody(user) {
     largeImage = tmp.largeImage;
     obj25[2] = largeImage;
     obj24[1] = callback(tmp10, obj25);
-    obj23[4] = callback(tmp7, obj24);
+    obj23[4] = callback(closure_7, obj24);
     tmp51Result = callback(closure_6, obj23);
     const IM4J4eResult3 = IM4J4e(tmp2[26]);
   }
@@ -320,7 +318,7 @@ function ActivityCard(user) {
   const tmp5Result = activity(12117)({ display: "live", voiceChannelId: id, user, activity, analyticsLocations });
   dependencyMap = tmp5Result;
   const application_id = activity.application_id;
-  let tmp2Result = tmp2(9519);
+  let tmp2Result = activity(9519);
   obj = { location: "User Profile Activity Card", applicationId: application_id, source: user(9101).GameProfileSources.UserProfile, trackEntryPointImpression: true, sourceUserId: user.id };
   let ConnectPlatformButton = user;
   const tmp2ResultResult = tmp2Result(obj);
@@ -338,8 +336,8 @@ function ActivityCard(user) {
   const stateFromStores = obj3.useStateFromStores(items1, () => {
     if (activity(7259)(activity)) {
       let session_id;
-      if (tmp != null) {
-        session_id = tmp.session_id;
+      if (activity != null) {
+        session_id = activity.session_id;
       }
       const voiceStateForSession = closure_1_15.getVoiceStateForSession(user.id, session_id);
       let channelId;
@@ -360,11 +358,11 @@ function ActivityCard(user) {
   const items2 = [closure_8];
   const stateFromStores1 = obj4.useStateFromStores(items2, () => {
     if (null != activity.application_id) {
-      let application = closure_1_8.getApplication(tmp.application_id);
+      let application = closure_1_8.getApplication(activity.application_id);
     } else {
       application = null;
-      if (null != tmp.name) {
-        application = closure_1_8.getApplicationByName(tmp.name);
+      if (null != activity.name) {
+        application = closure_1_8.getApplicationByName(activity.name);
       }
     }
     return application;
@@ -388,7 +386,7 @@ function ActivityCard(user) {
       obj4[1] = tmp3.text;
       obj4[2] = tmp.cardTitle;
       let tmp34Result = null != tmp3.platformIcon;
-      tmp2Result = tmp2(7185);
+      tmp2Result = activity(7185);
       if (tmp34Result) {
         const obj5 = { style: null, source: null, size: null, disableColor: true };
         obj5[0] = tmp.cardTitleIcon;
@@ -400,7 +398,7 @@ function ActivityCard(user) {
         }
         obj5[1] = result.makeSource(whitePNG);
         obj5[2] = ConnectPlatformButton(1297).IconSizes.SMALL_14;
-        tmp34Result = tmp34(ConnectPlatformButton(1297).Icon, obj5);
+        tmp34Result = callback(ConnectPlatformButton(1297).Icon, obj5);
       }
       obj4[3] = tmp34Result;
       const obj6 = { user: null, activity: null, application: null, onAction: null };
@@ -408,14 +406,14 @@ function ActivityCard(user) {
       obj6[1] = activity;
       obj6[2] = stateFromStores1;
       obj6[3] = tmp5Result;
-      const items4 = [closure_21(ActivityCardBody, obj6), , , ];
+      const items4 = [callback(ActivityCardBody, obj6), , , ];
       tmp34Result = null;
-      if (tmp2(12104)(activity)) {
+      if (activity(12104)(activity)) {
         ({ start, end } = activity.timestamps);
         const obj7 = { start: null, end: null };
         obj7[0] = start;
         obj7[1] = end;
-        tmp34Result = tmp34(tmp2(12119), obj7);
+        tmp34Result = callback(activity(12119), obj7);
       }
       items4[1] = tmp34Result;
       let tmp34Result1 = null;
@@ -427,39 +425,39 @@ function ActivityCard(user) {
           obj8[1] = voiceChannel;
           obj8[2] = tmp5Result;
           obj8[3] = tmp.voiceChannelDivider;
-          tmp34Result1 = tmp34(tmp2(12121), obj8);
+          tmp34Result1 = callback(activity(12121), obj8);
         }
       }
       items4[2] = tmp34Result1;
-      if (tmp2(12099)(activity)) {
+      if (activity(12099)(activity)) {
         ConnectPlatformButton = ConnectPlatformButton(12129).ConnectPlatformButton;
         obj = { type: null, onAction: null };
         obj[0] = constants2.XBOX;
         obj[1] = tmp5Result;
-        let tmp34Result2 = tmp34(ConnectPlatformButton, obj);
-      } else if (tmp2(12100)(activity)) {
+        let tmp34Result2 = callback(ConnectPlatformButton, obj);
+      } else if (activity(12100)(activity)) {
         const obj9 = { type: null, onAction: null };
         obj9[0] = constants2.PLAYSTATION;
         obj9[1] = tmp5Result;
-        tmp34Result2 = tmp34(ConnectPlatformButton(12129).ConnectPlatformButton, obj9);
+        tmp34Result2 = callback(ConnectPlatformButton(12129).ConnectPlatformButton, obj9);
       } else {
         tmp34Result2 = null;
         if (user.id !== currentUser.id) {
-          if (tmp2(7261)(activity)) {
+          if (activity(7261)(activity)) {
             const obj10 = { activity: null, onAction: null };
             obj10[0] = activity;
             obj10[1] = tmp5Result;
-            tmp34Result2 = tmp34(ConnectPlatformButton(12129).PlayOnSpotifyButton, obj10);
-          } else if (tmp2(7259)(activity)) {
+            tmp34Result2 = callback(ConnectPlatformButton(12129).PlayOnSpotifyButton, obj10);
+          } else if (activity(7259)(activity)) {
             const obj11 = { user: null, currentUser: null, activity: null, application: null, onAction: null };
             obj11[0] = user;
             obj11[1] = currentUser;
             obj11[2] = activity;
             obj11[3] = stateFromStores1;
             obj11[4] = tmp5Result;
-            tmp34Result2 = tmp34(ConnectPlatformButton(12129).JoinActivityButton, obj11);
+            tmp34Result2 = callback(ConnectPlatformButton(12129).JoinActivityButton, obj11);
           } else {
-            if (tmp2(9902)(activity)) {
+            if (activity(9902)(activity)) {
               const result1 = ConnectPlatformButton(12132);
               let supported_platforms = activity.supported_platforms;
               const currentActivityGamePlatform = result1.getCurrentActivityGamePlatform();
@@ -480,16 +478,16 @@ function ActivityCard(user) {
                     obj12[2] = activity;
                     obj12[3] = stateFromStores1;
                     obj12[4] = tmp5Result;
-                    tmp34Result2 = tmp34(ConnectPlatformButton(12129).JoinGameActivityButton, obj12);
+                    tmp34Result2 = callback(ConnectPlatformButton(12129).JoinGameActivityButton, obj12);
                   }
                 }
               }
             }
-            if (tmp2(8411)(activity)) {
+            if (activity(8411)(activity)) {
               const obj13 = { activity: null, onAction: null };
               obj13[0] = activity;
               obj13[1] = tmp5Result;
-              let tmp34Result3 = tmp34(ConnectPlatformButton(12129).WatchActivityButton, obj13);
+              let tmp34Result3 = callback(ConnectPlatformButton(12129).WatchActivityButton, obj13);
             } else {
               tmp34Result3 = null;
               if (null != activity.buttons) {
@@ -498,8 +496,8 @@ function ActivityCard(user) {
                   const obj14 = { style: null, children: null };
                   obj14[0] = tmp.customButtons;
                   const buttons = activity.buttons;
-                  obj14[1] = buttons.map((arg0, index) => closure_1_21(user(12129).CustomActivityButton, { index, user, activity, onAction: dependencyMap }, index));
-                  tmp34Result3 = tmp34(closure_7, obj14);
+                  obj14[1] = buttons.map((item, index) => closure_1_21(user(12129).CustomActivityButton, { index, user, activity, onAction: dependencyMap }, index));
+                  tmp34Result3 = callback(closure_7, obj14);
                 }
               }
             }
@@ -509,12 +507,11 @@ function ActivityCard(user) {
       }
       items4[3] = tmp34Result2;
       obj4[4] = items4;
-      obj4 = closure_22(tmp2Result, obj4);
+      obj4 = callback2(tmp2Result, obj4);
       obj2[4] = obj4;
-      obj2 = tmp34(ConnectPlatformButton(5433).PressableOpacity, obj2);
+      obj2 = callback(ConnectPlatformButton(5433).PressableOpacity, obj2);
       obj1[1] = obj2;
-      closure_21(ConnectPlatformButton(7139).AnalyticsLocationProvider, obj1);
-      const tmp35 = closure_22;
+      callback(ConnectPlatformButton(7139).AnalyticsLocationProvider, obj1);
     }
   }
   return tmp15;
@@ -523,12 +520,11 @@ function StreamActivityCard(user) {
   user = user.user;
   const stream = user.stream;
   const activity = user.activity;
-  let stateFromStores;
   closure_4 = undefined;
   const tmp = callback2();
   let obj = user(activity[40]);
   const items = [closure_10];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getChannel(stream.channelId));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getChannel(stream.channelId));
   obj1 = user(activity[40]);
   const items1 = [closure_15];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
@@ -558,18 +554,18 @@ function StreamActivityCard(user) {
   const stateFromStores5 = tmp2Result.useStateFromStores(items5, () => {
     let application_id;
     if (activity != null) {
-      application_id = tmp.application_id;
+      application_id = activity.application_id;
     }
     if (null != application_id) {
-      let application = closure_1_8.getApplication(tmp.application_id);
+      let application = closure_1_8.getApplication(activity.application_id);
     } else {
       let name;
-      if (tmp != null) {
-        name = tmp.name;
+      if (activity != null) {
+        name = activity.name;
       }
       application = null;
       if (null != name) {
-        application = closure_1_8.getApplicationByName(tmp.name);
+        application = closure_1_8.getApplicationByName(activity.name);
       }
     }
     return application;
@@ -590,7 +586,6 @@ function StreamActivityCard(user) {
   obj = { value: analyticsLocations, children: null };
   obj1 = { style: items6, title: null, titleStyle: null, titleIcon: null, children: null };
   items6 = [tmp.card, user.style];
-  const tmp20 = closure_22;
   const tmp9Result1 = stream(activity[56]);
   if (null != stateFromStores3) {
     const intl2 = tmp2(tmp3[23]).intl;
@@ -603,8 +598,8 @@ function StreamActivityCard(user) {
   }
   obj1[1] = formatToPlainStringResult;
   obj1[2] = tmp.cardTitle;
-  obj1[3] = closure_21(user(activity[43]).LiveTag, {});
-  obj3 = { style: tmp.streamPreview, children: tmp19(tmp2(tmp3[57]).VoicePanelStreamPreview, obj4) };
+  obj1[3] = callback(user(activity[43]).LiveTag, {});
+  obj3 = { style: tmp.streamPreview, children: callback(tmp2(tmp3[57]).VoicePanelStreamPreview, obj4) };
   obj4 = { mode: "a", stream: "capitalize", disabled: null, onPress: null };
   obj4[1] = stream;
   obj4[2] = !stateFromStores(tmp2Result.useCanWatchStream(stateFromStores), 1)[0];
@@ -616,13 +611,13 @@ function StreamActivityCard(user) {
     const obj2 = user(activity[59]);
     stream(activity[60]).hideActionSheet();
   };
-  const items7 = [closure_21(closure_7, obj3), , , , ];
+  const items7 = [callback(closure_7, obj3), , , , ];
   let tmp19Result = null != stateFromStores4 && !tmp9Result1.useConfig({ location: "UserProfileVoiceSettings" }).nonContextualStreamOutputPresent;
   if (tmp19Result) {
     const obj5 = { value: null, onValueChange: null };
     obj5[0] = effectiveVolume;
     obj5[1] = handleVolumeChange;
-    tmp19Result = tmp19(tmp9(tmp3[61]), obj5, "set-stream-volume");
+    tmp19Result = callback(tmp9(tmp3[61]), obj5, "set-stream-volume");
   }
   items7[1] = tmp19Result;
   tmp19Result = null != activity && tmp9(tmp3[31])(activity);
@@ -632,7 +627,7 @@ function StreamActivityCard(user) {
     obj6[1] = activity;
     obj6[2] = stateFromStores5;
     obj6[3] = tmp9Result1Result;
-    tmp19Result = tmp19(ActivityCardBody, obj6);
+    tmp19Result = callback(ActivityCardBody, obj6);
   }
   items7[2] = tmp19Result;
   let tmp19Result1 = null != stateFromStores2 && null != stateFromStores;
@@ -642,7 +637,7 @@ function StreamActivityCard(user) {
     obj7[1] = stateFromStores;
     obj7[2] = tmp9Result1Result;
     obj7[3] = tmp.voiceChannelDivider;
-    tmp19Result1 = tmp19(tmp9(tmp3[46]), obj7);
+    tmp19Result1 = callback(tmp9(tmp3[46]), obj7);
   }
   items7[3] = tmp19Result1;
   let tmp19Result2 = null != stateFromStores;
@@ -651,18 +646,17 @@ function StreamActivityCard(user) {
     obj8[0] = stateFromStores;
     obj8[1] = stateFromStores1;
     obj8[2] = tmp9Result1Result;
-    tmp19Result2 = tmp19(tmp2(tmp3[48]).VoiceChannelButtons, obj8);
+    tmp19Result2 = callback(tmp2(tmp3[48]).VoiceChannelButtons, obj8);
   }
   items7[4] = tmp19Result2;
   obj1[4] = items7;
-  obj[1] = tmp20(stream(activity[42]), obj1);
-  return closure_21(user(activity[34]).AnalyticsLocationProvider, obj);
+  obj[1] = callback2(stream(activity[42]), obj1);
+  return callback(user(activity[34]).AnalyticsLocationProvider, obj);
 }
 function VoiceCallActivityCard(arg0) {
   ({ user, channel } = arg0);
   let stateFromStores;
   dependencyMap = undefined;
-  closure_3 = undefined;
   ({ isInChannel, style } = arg0);
   const tmp = callback2();
   const tmp5 = stateFromStores(4984)(channel);
@@ -691,9 +685,9 @@ function VoiceCallActivityCard(arg0) {
   const tmp9Result = stateFromStores(7139)(stateFromStores(7159).USER_PROFILE_VOICE_ACTIVITY_CARD);
   if (!channel.isDM()) {
     if (!channel.isGroupDM()) {
-      const intl = tmp6(1236).intl;
+      const intl = channel(1236).intl;
       const string = intl.string;
-      const t = tmp6(1236).t;
+      const t = channel(1236).t;
       if (isGuildStageVoiceResult) {
         let stringResult = string(t.QygGCN);
       } else {
@@ -712,7 +706,7 @@ function VoiceCallActivityCard(arg0) {
       id = stateFromStores.id;
     }
     obj3[1] = id;
-    const items3 = [closure_21(tmp2(12142), obj3), ];
+    const items3 = [callback(tmp2(12142), obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.voiceCallContent;
     if (stateFromStores1) {
@@ -720,8 +714,8 @@ function VoiceCallActivityCard(arg0) {
       const obj6 = { channel: null };
       obj6[0] = channel;
       obj5[1] = tmp2(8886)(obj6);
-      const intl3 = tmp6(1236).intl;
-      obj5[2] = intl3.string(tmp6(1236).t["9C444m"]);
+      const intl3 = channel(1236).intl;
+      obj5[2] = intl3.string(channel(1236).t["9C444m"]);
       obj5[3] = function onPress() {
         callback({ action: "OPEN_VOICE_CHANNEL" });
         stateFromStores(_undefined[60]).hideActionSheet();
@@ -735,32 +729,32 @@ function VoiceCallActivityCard(arg0) {
       obj8[0] = tmp.voiceCallNameIconWrapper;
       const obj9 = { channel: null, size: "sm", color: "mobile-text-heading-primary" };
       obj9[0] = channel;
-      obj8[1] = tmp18(tmp2(9910), obj9);
-      const items4 = [tmp18(tmp17, obj8), tmp5];
+      obj8[1] = callback(tmp2(9910), obj9);
+      const items4 = [callback(closure_7, obj8), tmp5];
       obj7[2] = items4;
-      obj5[4] = tmp13(tmp6(4734).Text, obj7);
-      let tmp13Result = tmp18(tmp6(5433).PressableOpacity, obj5);
+      obj5[4] = callback2(channel(4734).Text, obj7);
+      let tmp13Result = callback(channel(5433).PressableOpacity, obj5);
     } else {
       const obj10 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj11 = { style: null, children: null };
       obj11[0] = tmp.voiceCallNameIconWrapper;
       const obj12 = { channel: null, size: "sm", color: "mobile-text-heading-primary" };
       obj12[0] = channel;
-      obj11[1] = tmp18(tmp2(9910), obj12);
-      const items5 = [tmp18(tmp17, obj11), tmp5];
+      obj11[1] = callback(tmp2(9910), obj12);
+      const items5 = [callback(closure_7, obj11), tmp5];
       obj10[2] = items5;
-      tmp13Result = tmp13(tmp6(4734).Text, obj10);
+      tmp13Result = callback2(channel(4734).Text, obj10);
     }
     const items6 = [tmp13Result, ];
     let tmp18Result = null;
     if (null != stateFromStores) {
       const obj13 = { accessibilityRole: "button", accessibilityHint: null, accessibilityLabel: null, onPress: null, children: null };
-      const intl4 = tmp6(1236).intl;
-      obj13[1] = intl4.string(tmp6(1236).t.KLOhbO);
-      const intl5 = tmp6(1236).intl;
+      const intl4 = channel(1236).intl;
+      obj13[1] = intl4.string(channel(1236).t.KLOhbO);
+      const intl5 = channel(1236).intl;
       const obj14 = { guildName: null };
       obj14[0] = stateFromStores.name;
-      obj13[2] = intl5.formatToPlainString(tmp6(1236).t["hq/Qze"], obj14);
+      obj13[2] = intl5.formatToPlainString(channel(1236).t["hq/Qze"], obj14);
       obj13[3] = function onPress() {
         callback({ action: "OPEN_VOICE_GUILD" });
         channel(_undefined[69]).transitionToGuild(stateFromStores.id);
@@ -769,34 +763,34 @@ function VoiceCallActivityCard(arg0) {
         stateFromStores(_undefined[60]).hideActionSheet();
       };
       const obj15 = { variant: "text-xs/medium", children: null };
-      const intl6 = tmp6(1236).intl;
+      const intl6 = channel(1236).intl;
       const obj16 = { guildName: null };
       obj16[0] = stateFromStores.name;
-      obj15[1] = intl6.format(tmp6(1236).t["hq/Qze"], obj16);
-      obj13[4] = tmp18(tmp6(4734).Text, obj15);
-      tmp18Result = tmp18(tmp6(5433).PressableOpacity, obj13);
+      obj15[1] = intl6.format(channel(1236).t["hq/Qze"], obj16);
+      obj13[4] = callback(channel(4734).Text, obj15);
+      tmp18Result = callback(channel(5433).PressableOpacity, obj13);
     }
     items6[1] = tmp18Result;
     obj4[1] = items6;
-    items3[1] = tmp13(closure_7, obj4);
+    items3[1] = callback2(closure_7, obj4);
     obj2[1] = items3;
-    const items7 = [tmp13(closure_7, obj2), ];
+    const items7 = [callback2(closure_7, obj2), ];
     const obj17 = { channel: null, isInChannel: null, onAction: null };
     obj17[0] = channel;
     obj17[1] = isInChannel;
     obj17[2] = tmp11;
-    items7[1] = closure_21(tmp6(12129).VoiceChannelButtons, obj17);
+    items7[1] = callback(channel(12129).VoiceChannelButtons, obj17);
     obj1[3] = items7;
-    return tmp13(tmp14, obj1);
+    return callback2(tmp14, obj1);
   }
-  const intl2 = tmp6(1236).intl;
-  stringResult = intl2.string(tmp6(1236).t["9FaEzi"]);
+  const intl2 = channel(1236).intl;
+  stringResult = intl2.string(channel(1236).t["9FaEzi"]);
+  tmp14 = stateFromStores(7185);
 }
 ({ TouchableOpacity: c5, TouchableWithoutFeedback: closure_6, View: error } = get_ActivityIndicator);
 ({ ActivityTypes: closure_17, Permissions: closure_18, PlatformTypes: closure_19, StatusTypes: closure_20 } = ME);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-createCacheKey = { card: { gap: 12 }, cardTitle: { marginBottom: 0 }, cardTitleIcon: null, body: null, content: null, imageContainer: null, imageAspectRatio: null, crunchyrollImageAspectRatio: null, largeImage: null, smallImageBackground: null, smallImage: null, badges: null, voiceChannelDivider: null, customButtons: null, streamPreview: null, voiceActivityCard: null, voiceSettings: null, voiceSettingsDivider: null, voiceCallContent: null, voiceCallNameIconWrapper: null };
-createCacheKey = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+const createCacheKey = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: 16 };
 createCacheKey[4] = { flex: 1 };
@@ -804,48 +798,39 @@ createCacheKey[5] = { position: "relative" };
 createCacheKey[6] = { width: 60, maxHeight: 60, aspectRatio: "1 / 1" };
 createCacheKey[7] = { width: 60, maxHeight: 100, aspectRatio: "2 / 3" };
 createCacheKey[8] = { borderRadius: ThemesDefault.radii.xs, width: "100%", height: "100%" };
-let obj1 = { borderRadius: ThemesDefault.radii.xs, width: "100%", height: "100%" };
 createCacheKey[9] = { borderRadius: 16, position: "absolute", right: -4, bottom: -4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[10] = { width: 24, height: 24, borderRadius: 12 };
 createCacheKey[11] = { marginTop: 4, flexDirection: "row", flexWrap: "wrap", columnGap: 8, rowGap: 0 };
-let obj2 = { borderRadius: 16, position: "absolute", right: -4, bottom: -4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[12] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingTop: 12 };
 createCacheKey[13] = { flexDirection: "column", gap: 8 };
-let obj3 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingTop: 12 };
 createCacheKey[14] = { aspectRatio: 1.7777777777777777, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[15] = { padding: 0 };
 createCacheKey[16] = { padding: 0, marginBottom: -16 };
-let obj4 = { aspectRatio: 1.7777777777777777, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[17] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingTop: 16, marginTop: 4, marginHorizontal: -CARD_PADDING, paddingHorizontal: CARD_PADDING };
 createCacheKey[18] = { flex: 1, gap: 4 };
 let num = 16;
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   num = 12;
 }
 createCacheKey[19] = { width: 22, height: num, justifyContent: "center" };
 let closure_24 = createCacheKey.createStyles(createCacheKey);
-let result = set.fileFinishedImporting("modules/user_profile/native/UserProfileActivity.tsx");
+let result = obj132.fileFinishedImporting("modules/user_profile/native/UserProfileActivity.tsx");
 
 export default function UserProfileActivity(guildId) {
   const user = guildId.user;
   const currentUser = guildId.currentUser;
   const style = guildId.style;
-  closure_3 = undefined;
   stream = undefined;
-  let voiceChannel;
-  let voiceActivity;
-  let stateFromStores;
-  closure_8 = undefined;
   const tmp = callback2();
   closure_3 = tmp;
   ({ live, stream } = currentUser(style[71])(user.id));
   let obj = { userId: user.id, guildId: guildId.guildId };
   const tmp5 = currentUser(style[72])(obj);
-  voiceChannel = tmp5.voiceChannel;
-  voiceActivity = tmp5.voiceActivity;
+  const voiceChannel = tmp5.voiceChannel;
+  const voiceActivity = tmp5.voiceActivity;
   obj1 = user(style[40]);
   const items = [closure_15];
-  stateFromStores = obj1.useStateFromStores(items, () => {
+  const stateFromStores = obj1.useStateFromStores(items, () => {
     let isInChannelResult = null != voiceChannel;
     if (isInChannelResult) {
       isInChannelResult = closure_1_15.isInChannel(tmp.id);
@@ -897,7 +882,7 @@ export default function UserProfileActivity(guildId) {
   } else {
     let found = live;
     if (null != voiceActivity) {
-      found = live.filter((arg0) => arg0 !== voiceActivity);
+      found = live.filter((item, index) => item !== voiceActivity);
     }
     let tmp12 = !stateFromStores2;
     if (!stateFromStores2) {
@@ -926,25 +911,25 @@ export default function UserProfileActivity(guildId) {
       }
       obj2 = { children: null };
       items5[1] = tmp20;
-      items5[2] = found.map((activity) => {
-        let application_id = activity.application_id;
+      items5[2] = found.map((item, index) => {
+        let application_id = item.application_id;
         if (application_id == null) {
-          application_id = arg1;
+          application_id = index;
         }
-        return closure_1_21(closure_1_28, { user, currentUser, activity, style }, application_id);
+        return closure_1_21(ActivityCard, { user, currentUser, activity: item, style }, application_id);
       });
       obj2[0] = items5;
-      return tmp10(tmp11, obj2);
+      return callback2(closure_23, obj2);
     } else {
       let items7 = function renderVoiceActivityCard(voiceChannel) {
         if (null != stream) {
-          if (tmp.channelId === voiceChannel.id) {
+          if (stream.channelId === voiceChannel.id) {
             let obj = { user: null, stream: null, activity: null, style: null };
             obj[0] = user;
-            obj[1] = tmp;
+            obj[1] = stream;
             obj[2] = voiceActivity;
             obj[3] = closure_3.voiceActivityCard;
-            let tmp8 = closure_1_21(closure_1_29, obj);
+            let tmp8 = closure_1_21(StreamActivityCard, obj);
           }
           return tmp8;
         }
@@ -955,14 +940,14 @@ export default function UserProfileActivity(guildId) {
           obj[2] = tmp2;
           obj[3] = voiceChannel;
           obj[4] = closure_3.voiceActivityCard;
-          tmp8 = closure_1_21(closure_1_28, obj);
+          tmp8 = closure_1_21(ActivityCard, obj);
         } else {
           obj = { user: null, channel: null, isInChannel: null, style: null };
           obj[0] = user;
           obj[1] = voiceChannel;
           obj[2] = stateFromStores;
           obj[3] = closure_3.voiceActivityCard;
-          tmp8 = closure_1_21(closure_1_30, obj);
+          tmp8 = closure_1_21(VoiceCallActivityCard, obj);
         }
       };
       if (stateFromStores) {
@@ -981,7 +966,7 @@ export default function UserProfileActivity(guildId) {
         obj4[3] = items8;
         items7[1] = callback(tmp2(tmp3[73]), obj4);
         obj3[1] = items7;
-        let tmp10Result = tmp10(tmp2Result, obj3);
+        let tmp10Result = callback2(tmp2Result, obj3);
         const items7Result = items7(voiceChannel);
       } else {
         const obj5 = { style: null, children: null };
@@ -992,6 +977,6 @@ export default function UserProfileActivity(guildId) {
         const tmp2Result1 = tmp2(tmp3[42]);
       }
     }
-    tmp11 = closure_23;
   }
+  const tmp4 = currentUser(style[71])(user.id);
 };

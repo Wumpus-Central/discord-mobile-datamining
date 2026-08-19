@@ -6,12 +6,12 @@ import dispatcherDefault from "dispatcher" /* 709 */;
 import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1363 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-require = arg1;
+require = fn;
 function _saveProfileChanges() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
@@ -177,7 +177,7 @@ function _saveProfileChanges() {
 }
 ({ ComponentActions: c5, AnalyticEvents: closure_6, Endpoints: error, ME: closure_8 } = ME);
 ({ AnalyticsPremiumFeatureTiers: c9, AnalyticsPremiumFeatureNames: c10 } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/UserProfileActionCreators.tsx");
 
 export const notifyUnsavedUserProfileChangesInModal = function notifyUnsavedUserProfileChangesInModal() {
   const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
@@ -206,8 +206,7 @@ export const pinUserProfileBadgesOnClient = function pinUserProfileBadgesOnClien
     id = currentUser.id;
   }
   if (null != id) {
-    let obj = dispatcherDefault;
-    obj = { type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: null, ttlInSeconds: null, userId: null };
+    const obj = { type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: null, ttlInSeconds: null, userId: null };
     obj[1] = items;
     obj[2] = arg1;
     obj[3] = id;
@@ -224,50 +223,43 @@ export const resetAllTryItOutChanges = function resetAllTryItOutChanges() {
   dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES" });
 };
 export const setTryItOutAvatar = function setTryItOutAvatar(closure_1_4) {
-  let obj = dispatcherDefault;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: closure_1_4 };
+  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: closure_1_4 };
   obj.dispatch(obj);
   obj = { feature_name: constants4.ANIMATED_AVATAR, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutAvatarDecoration = function setTryItOutAvatarDecoration(avatarDecoration) {
-  let obj = dispatcherDefault;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration };
+  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration };
   obj.dispatch(obj);
   obj = { feature_name: constants4.AVATAR_DECORATION, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutProfileEffect = function setTryItOutProfileEffect(profileEffect) {
-  let obj = dispatcherDefault;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect };
+  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT", profileEffect };
   obj.dispatch(obj);
   obj = { feature_name: constants4.PROFILE_EFFECT, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutBanner = function setTryItOutBanner(closure_1_8) {
-  let obj = dispatcherDefault;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: closure_1_8 };
+  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: closure_1_8 };
   obj.dispatch(obj);
   obj = { feature_name: constants4.PROFILE_BANNER, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutThemeColors = function setTryItOutThemeColors(themeColors) {
-  let obj = dispatcherDefault;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors };
+  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors };
   obj.dispatch(obj);
   obj = { feature_name: constants4.PROFILE_THEME_COLOR, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutDisplayNameStyles = function setTryItOutDisplayNameStyles(displayNameStyles) {
-  let obj = dispatcherDefault;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles };
+  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles };
   obj.dispatch(obj);
   obj = { feature_name: constants4.DISPLAY_NAME_STYLES, feature_tier: constants3.PREMIUM_STANDARD };
   expandEventPropertiesDefault.track(constants2.PREMIUM_FEATURE_TRY_OUT, obj);
 };
 export const setTryItOutPreset = function setTryItOutPreset(arg0) {
-  let obj = dispatcherDefault;
-  obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" };
+  let obj = { type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET" };
   const merged = Object.assign(arg0);
   obj.dispatch(obj);
   obj = { feature_name: constants4.PRESET, feature_tier: constants3.PREMIUM_STANDARD };

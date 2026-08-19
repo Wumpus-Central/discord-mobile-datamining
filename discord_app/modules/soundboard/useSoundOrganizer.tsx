@@ -1,7 +1,7 @@
 // === Module 16286: sortSoundsOldestToNewestCreationDate ===
 
 // Module 16286 (sortSoundsOldestToNewestCreationDate)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
 function sortSoundsOldestToNewestCreationDate(value2) {
   let flag = arg1;
@@ -32,7 +32,7 @@ function sortSoundsOldestToNewestCreationDate(value2) {
   }
   return sorted1;
 }
-const result = set.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
+const result = obj132.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
 
 export { sortSoundsOldestToNewestCreationDate };
 export function useSoundOrganizer() {

@@ -1,14 +1,13 @@
 // === Module 14121: formatUsernameLiveCheckValidation ===
 
 // Module 14121 (formatUsernameLiveCheckValidation)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import t from "t" /* 4486 */;
 
-const result = set.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
 export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(arg0) {
   const match = t.match(arg0);
-  const str = t;
   let obj = { error: null };
   const P = t.P;
   obj[0] = P.not(t.P.nullish);

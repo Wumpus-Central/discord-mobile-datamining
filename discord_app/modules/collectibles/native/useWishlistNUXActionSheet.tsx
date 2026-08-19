@@ -1,13 +1,13 @@
 // === Module 9179: useWishlistNUXActionSheet ===
 
 // Module 9179 (useWishlistNUXActionSheet)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createUserWidgetFromServer" /* 5365 */;
-import closure_5 from "fetchFingerprint" /* 1218 */;
+import noop from "noop" /* 19 */;
+import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
 export default function useWishlistNUXActionSheet() {
   let obj = _require(589);

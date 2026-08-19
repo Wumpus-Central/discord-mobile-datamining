@@ -1,9 +1,9 @@
 // === Module 7467: questCtaConfigFromServer ===
 
 // Module 7467 (questCtaConfigFromServer)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
 
 export const questCtaConfigFromServer = function questCtaConfigFromServer(cta_config) {
   let tmp;

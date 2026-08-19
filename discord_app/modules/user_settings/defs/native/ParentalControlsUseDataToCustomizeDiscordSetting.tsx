@@ -4,12 +4,12 @@
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
 import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
-import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
+import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 5296 */;
 import { Consents } from "ME" /* 676 */;
-import createToggle from "createToggle" /* 10669 */;
+import "createToggle";
 
-require = arg1;
-createToggle = {
+require = fn;
+let createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.MNKzyg);
@@ -33,11 +33,10 @@ createToggle = {
         items2 = [Consents.PERSONALIZATION];
       }
       maybeFetchCollectiblesForInvoicesDefault.updateTeenConsents(selectedTeenId, items1, items2);
-      const obj = maybeFetchCollectiblesForInvoicesDefault;
     }
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx");
 
 export default createToggle;

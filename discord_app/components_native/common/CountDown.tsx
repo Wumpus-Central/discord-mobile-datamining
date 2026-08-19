@@ -1,13 +1,13 @@
 // === Module 9946: componentDidMount ===
 
 // Module 9946 (componentDidMount)
-import setDefault from "set" /* 687 */;
+import obj132Default from "obj132" /* 687 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import Text from "Text" /* 4734 */;
 import { jsx } from "jsxProd" /* 21 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 const Component = importAllResult.Component;
 class CountDown extends Component {
 }
@@ -43,25 +43,25 @@ prototype["render"] = function render() {
     }
     if (result < 0) {
       const _Math = Math;
-      const items = [Math.floor(result / setDefault.Seconds.DAY), , , ];
+      const items = [Math.floor(result / obj132Default.Seconds.DAY), , , ];
       const _Math2 = Math;
-      const result1 = result % setDefault.Seconds.DAY;
-      items[1] = Math.floor(result1 / setDefault.Seconds.HOUR);
+      const result1 = result % obj132Default.Seconds.DAY;
+      items[1] = Math.floor(result1 / obj132Default.Seconds.HOUR);
       const _Math3 = Math;
-      const result2 = result1 % setDefault.Seconds.HOUR;
-      items[2] = Math.floor(result2 / setDefault.Seconds.MINUTE);
+      const result2 = result1 % obj132Default.Seconds.HOUR;
+      items[2] = Math.floor(result2 / obj132Default.Seconds.MINUTE);
       const _Math4 = Math;
-      items[3] = Math.floor(result2 % setDefault.Seconds.MINUTE);
+      items[3] = Math.floor(result2 % obj132Default.Seconds.MINUTE);
       let num = 0;
       if (0 === items[0]) {
         items.shift();
         num = 1;
       }
-      const mapped = items.map((arg0) => {
-        let combined = arg0;
-        if (arg0 < 10) {
+      const mapped = items.map((item, index) => {
+        let combined = item;
+        if (item < 10) {
           const _HermesInternal = HermesInternal;
-          combined = "0" + arg0;
+          combined = "0" + item;
         }
         return combined;
       });
@@ -109,6 +109,6 @@ prototype["render"] = function render() {
   }
   return jsx(Text.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
 };
-let result = require("set").fileFinishedImporting("components_native/common/CountDown.tsx");
+let result = require("obj132").fileFinishedImporting("components_native/common/CountDown.tsx");
 
 export default CountDown;

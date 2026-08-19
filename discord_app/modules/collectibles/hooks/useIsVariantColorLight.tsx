@@ -1,19 +1,19 @@
 // === Module 9261: useIsVariantColorLight ===
 
 // Module 9261 (useIsVariantColorLight)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useIsVariantColorLight.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/collectibles/hooks/useIsVariantColorLight.tsx");
 
 export default function useIsVariantColorLight(variantValue) {
   closure_0 = variantValue;
   const items = [variantValue.variantValue];
   return React.useMemo(() => {
-    let isValidHexResult = variantValue(closure_1_1[1]).isValidHex(variantValue.variantValue);
+    let isValidHexResult = variantValue(dependencyMap[1]).isValidHex(variantValue.variantValue);
     if (isValidHexResult) {
-      let tmpResult = tmp(tmp2[1]);
-      tmpResult = tmp(tmp2[1]);
+      variantValue(dependencyMap[1]);
+      const tmpResult = variantValue(dependencyMap[1]);
       isValidHexResult = tmpResult.getDarkness(tmpResult.hex2int(variantValue.variantValue)) < 0.3;
     }
     return isValidHexResult;

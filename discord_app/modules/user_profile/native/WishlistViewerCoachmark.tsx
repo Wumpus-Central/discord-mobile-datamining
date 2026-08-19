@@ -2,18 +2,16 @@
 
 // Module 12357 (CoachmarkImage)
 import metadataDefault from "metadata" /* 12358 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 function CoachmarkImage() {
   const tmp = callback();
-  let obj = { style: tmp.imageContainer, children: null };
-  obj = { source: null, style: null };
-  obj = { uri: metadataDefault };
+  const obj = { uri: metadataDefault };
   obj[0] = obj;
   obj[1] = tmp.image;
   obj[1] = <closure_5 uri={metadataDefault} />;
@@ -21,7 +19,7 @@ function CoachmarkImage() {
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 let closure_8 = createCacheKey.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");
 
 export default function WishlistViewerCoachmark(isVisible) {
   isVisible = isVisible.isVisible;

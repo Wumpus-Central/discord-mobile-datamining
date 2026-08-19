@@ -7,29 +7,27 @@ import _modDef4115 from "module_4115" /* 4115 */;
 import registerAssetDefault from "registerAsset" /* 7129 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 ({ jsxs: c5, jsx: closure_6 } = jsxProd);
-createCacheKey = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: null, audience: null };
-createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: ThemesDefault.radii.xs };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function StageSectionHeaderTsx1(){const{withTiming,collapsed}=this.__closure;return{transform:[{rotate:withTiming(collapsed?'180deg':'0deg',{duration:150})}]};}" };
-let obj1 = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: ThemesDefault.radii.xs };
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageSectionHeader.tsx");
+const result = require("obj132").fileFinishedImporting("modules/stage_channels/native/components/StageSectionHeader.tsx");
 
 export default function StageSectionHeader(collapsed) {
   collapsed = collapsed.collapsed;
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
   const tmp = callback2();
-  let obj = collapsed(4115);
+  collapsed(4115);
   const fn = function y() {
-    let obj = collapsed(closure_1_2[6]);
+    let obj = collapsed(dependencyMap[6]);
     let str = "0deg";
     if (collapsed) {
       str = "180deg";
@@ -40,7 +38,7 @@ export default function StageSectionHeader(collapsed) {
     obj[0] = items;
     return obj;
   };
-  obj = { withTiming: collapsed(4664).withTiming, collapsed };
+  let obj = { withTiming: collapsed(4664).withTiming, collapsed };
   fn.__closure = obj;
   fn.__workletHash = 13855092771739;
   fn.__initData = closure_8;
@@ -54,14 +52,14 @@ export default function StageSectionHeader(collapsed) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.children;
     obj2[1] = children;
-    tmp5Result = tmp5(tmp6, obj2);
+    tmp5Result = callback(closure_4, obj2);
   }
   items1[1] = tmp5Result;
   const obj3 = { style: tmp.collapseButton, children: null };
-  const obj4 = { style: animatedStyle, children: closure_6(collapsed(1297).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }) };
-  obj3[1] = closure_6(_modDef4115.View, obj4);
-  items1[2] = closure_6(closure_4, obj3);
+  const obj4 = { style: animatedStyle, children: callback(collapsed(1297).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }) };
+  obj3[1] = callback(_modDef4115.View, obj4);
+  items1[2] = callback(closure_4, obj3);
   obj1[2] = items1;
   obj[1] = callback(closure_3, obj1);
-  return closure_6(closure_4, obj);
+  return callback(closure_4, obj);
 };

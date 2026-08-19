@@ -1,9 +1,9 @@
 // === Module 5647: metadata ===
 
 // Module 5647 (metadata)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordQuestsLockupLogo-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiscordQuestsLockupLogo-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/4c55bedb285367da010745f517f516c89dd8d1bf5af4066c7be76f489e78d31b.png";
 export const metadata = { fileBytes: 4526 };

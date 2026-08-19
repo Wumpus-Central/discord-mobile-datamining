@@ -2,37 +2,34 @@
 
 // Module 10365 (PurchaseSuccessModalBase)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_toArray" /* 853 */;
-import closure_4 from "noop" /* 19 */;
+import _toArray from "_toArray" /* 853 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_9 from "addSku" /* 4521 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import addSku from "addSku" /* 4521 */;
 import { SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM as closure_10 } from "STOREFRONT_MARKETING_GUILD_ID" /* 7203 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
+import "createCacheKey";
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+const require = fn;
 function PurchaseSuccessModalBase(sku) {
   sku = sku.sku;
   let stateFromStores = sku;
   ({ finePrint, ctaLabel, onCtaPress, onClose } = sku);
   importDefault = undefined;
   let callback;
-  closure_3 = undefined;
-  let width;
   ({ title, body, ctaIcon, ctaLoading } = sku);
   const tmp = callback2();
   closure_3 = tmp;
-  width = importDefault(callback[14])().width;
+  const width = importDefault(callback[14])().width;
   let obj = stateFromStores(callback[15]);
   let items = [closure_8];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  importDefault = undefined;
   callback = undefined;
   obj1 = stateFromStores(callback[10]);
   const sharedValue = obj1.useSharedValue(0);
-  importDefault = sharedValue;
   let obj2 = stateFromStores(callback[10]);
   const sharedValue1 = obj2.useSharedValue(0);
   callback = sharedValue1;
@@ -55,8 +52,8 @@ function PurchaseSuccessModalBase(sku) {
   }, items1);
   let obj3 = stateFromStores(callback[10]);
   const fn = function o() {
-    let obj = { opacity: stateFromStores(callback[10]).interpolate(store.get(), [0, 1], [0.1, 1]), transform: null };
-    obj = { scale: null };
+    { opacity: stateFromStores(callback[10]).interpolate(store.get(), [0, 1], [0.1, 1]), transform: null };
+    const obj = { scale: null };
     const obj2 = stateFromStores(callback[10]);
     obj[0] = stateFromStores(callback[10]).interpolate(store.get(), [0, 1], [0, 1]);
     const items = [obj];
@@ -70,8 +67,8 @@ function PurchaseSuccessModalBase(sku) {
   const animatedStyle = obj3.useAnimatedStyle(fn);
   let obj5 = stateFromStores(callback[10]);
   const fn2 = function c() {
-    let obj = { opacity: stateFromStores(callback[10]).interpolate(store.get(), [0, 1], [0, 1]), transform: null };
-    obj = { scale: null };
+    { opacity: stateFromStores(callback[10]).interpolate(store.get(), [0, 1], [0, 1]), transform: null };
+    const obj = { scale: null };
     const obj2 = stateFromStores(callback[10]);
     obj[0] = stateFromStores(callback[10]).interpolate(store.get(), [0, 1], [0.75, 1]);
     const items = [obj];
@@ -180,9 +177,9 @@ function PurchaseSuccessModalBase(sku) {
   items10 = [tmp.messages, animatedStyle1];
   const items11 = [callback(stateFromStores(callback[24]).Text, { variant: "heading-xl/semibold", color: "text-overlay-light", style: tmp.title, children: title }), callback(stateFromStores(callback[24]).Text, { variant: "text-md/medium", color: "text-overlay-light", style: tmp.description, children: body })];
   obj11[1] = items11;
-  items9[1] = closure_15(importDefault(callback[10]).View, obj11);
+  items9[1] = callback2(importDefault(callback[10]).View, obj11);
   obj9[3] = items9;
-  items7[1] = closure_15(closure_6, obj9);
+  items7[1] = callback2(closure_6, obj9);
   const obj14 = { style: tmp.footer, children: null };
   let tmp22Result = null != finePrint;
   if (tmp22Result) {
@@ -207,53 +204,42 @@ function PurchaseSuccessModalBase(sku) {
   obj16[1] = callback(stateFromStores(callback[25]).Button, obj17);
   items12[1] = callback(closure_7, obj16);
   obj14[1] = items12;
-  items7[2] = closure_15(closure_7, obj14);
+  items7[2] = callback2(closure_7, obj14);
   obj6[5] = items7;
-  items6[2] = closure_15(stateFromStores(callback[19]).SafeAreaPaddingView, obj6);
+  items6[2] = callback2(stateFromStores(callback[19]).SafeAreaPaddingView, obj6);
   const items13 = [tmp.curtain, animatedStyle2];
   items6[3] = callback(importDefault(callback[10]).View, { style: items13, pointerEvents: "none" });
   obj2[1] = items6;
-  return closure_15(closure_7, obj2);
+  return callback2(closure_7, obj2);
 }
 ({ Image: c5, ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ AnalyticEvents: unpackModuleId, Orientation: closure_12, VerticalGradient: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-createCacheKey = { root: null, backdropImage: null, backdropGradient: null, curtain: null, main: null, header: null, closeButtonIcon: null, body: null, preview: null, messages: null, title: null, description: null, footer: null, cta: null, finePrint: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BLACK };
+let createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", inset: 0, opacity: 0.45 };
 createCacheKey[2] = { position: "absolute", inset: 0 };
 createCacheKey[3] = { position: "absolute", inset: 0, backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[4] = { flex: 1 };
-let obj1 = { position: "absolute", inset: 0, backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[5] = { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj2 = { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[6] = { tintColor: ThemesDefault.colors.WHITE };
 createCacheKey[7] = { flexGrow: 1, flexDirection: "column", justifyContent: "center" };
 createCacheKey[8] = { flexDirection: "row", justifyContent: "center", alignItems: "center" };
-let obj3 = { tintColor: ThemesDefault.colors.WHITE };
 createCacheKey[9] = { paddingTop: ThemesDefault.space.PX_24, flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: ThemesDefault.space.PX_8 };
-let obj4 = { paddingTop: ThemesDefault.space.PX_24, flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: ThemesDefault.space.PX_8 };
 createCacheKey[10] = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_32 };
-let obj5 = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_32 };
 createCacheKey[11] = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_32 };
-let obj6 = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_32 };
 createCacheKey[12] = { marginBottom: ThemesDefault.space.PX_16 };
-let obj7 = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[13] = { marginHorizontal: ThemesDefault.space.PX_24 };
-let obj8 = { marginHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[14] = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_12 };
 let closure_16 = createCacheKey.createStyles(createCacheKey);
 const obj10 = { linkAccountIcon: null };
-let obj9 = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_12 };
 obj10[0] = { marginRight: ThemesDefault.space.PX_4 };
 let closure_17 = createCacheKey.createStyles(obj10);
 let closure_18 = { code: "function SocialLayerStorefrontPoductPurchaseSuccessModalTsx1(){const{interpolate,springInput}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0.1,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0,1])}]};}" };
 let closure_19 = { code: "function SocialLayerStorefrontPoductPurchaseSuccessModalTsx2(){const{interpolate,springInput}=this.__closure;return{opacity:interpolate(springInput.get(),[0,1],[0,1]),transform:[{scale:interpolate(springInput.get(),[0,1],[0.75,1])}]};}" };
 let closure_20 = { code: "function SocialLayerStorefrontPoductPurchaseSuccessModalTsx3(){const{interpolate,linearInput}=this.__closure;return{opacity:interpolate(linearInput.get(),[0,1],[0.5,0])};}" };
 let closure_21 = [80, 79, 78, 75, 72, 50, 45, 35, 70];
-let obj11 = { marginRight: ThemesDefault.space.PX_4 };
-let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontPoductPurchaseSuccessModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/slayer_storefront/native/SocialLayerStorefrontPoductPurchaseSuccessModal.tsx");
 
 export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
   skuId = skuId.skuId;
@@ -317,8 +303,8 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = function Soc
   const effect1 = obj4.useEffect(() => {
     if (fetched) {
       ({ analyticsLocations, skuId, applicationId, canStartAuthorization } = ref.current);
-      let obj = analyticsLocations(stateFromStores[30]);
-      obj = { location_stack: null, sku_id: null, application_id: null, is_gift: false, is_account_linked: null, can_start_authorization: null };
+      analyticsLocations(stateFromStores[30]);
+      const obj = { location_stack: null, sku_id: null, application_id: null, is_gift: false, is_account_linked: null, can_start_authorization: null };
       obj[0] = analyticsLocations;
       obj[1] = skuId;
       obj[2] = applicationId;
@@ -334,8 +320,8 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = function Soc
   }
   items4[3] = applicationId3;
   const callback = obj4.useCallback(() => {
-    let obj = analyticsLocations(stateFromStores[30]);
-    obj = { location_stack: memo, sku_id: skuId, application_id: null, is_gift: false };
+    analyticsLocations(stateFromStores[30]);
+    const obj = { location_stack: memo, sku_id: skuId, application_id: null, is_gift: false };
     let applicationId;
     if (stateFromStores != null) {
       applicationId = stateFromStores.applicationId;
@@ -345,8 +331,8 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = function Soc
     startAuthorization({ analyticsLocations: memo });
   }, items4);
   analyticsLocations(stateFromStores[31])(() => {
-    let obj = analyticsLocations(stateFromStores[30]);
-    obj = { location_stack: memo, type: skuId(stateFromStores[32]).SOCIAL_LAYER_STOREFRONT_SELF_PURCHASE_SUCCESS_MODAL_KEY, sku_id: skuId, application_id: null };
+    analyticsLocations(stateFromStores[30]);
+    const obj = { location_stack: memo, type: skuId(stateFromStores[32]).SOCIAL_LAYER_STOREFRONT_SELF_PURCHASE_SUCCESS_MODAL_KEY, sku_id: skuId, application_id: null };
     let applicationId;
     if (stateFromStores != null) {
       applicationId = stateFromStores.applicationId;
@@ -359,7 +345,7 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = function Soc
   if (hasAlreadyLinked) {
     let stringResult = string(tmp2(tmp3[22]).t["5glWta"]);
   } else {
-    stringResult = string(tmp7(tmp3[33]).bRPsNX);
+    stringResult = string(analyticsLocations(tmp3[33]).bRPsNX);
   }
   let tmp21 = !hasAlreadyLinked;
   if (!hasAlreadyLinked) {
@@ -455,9 +441,9 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = function Soc
   let tmp27Result;
   if (tmp21) {
     const obj2 = { size: "xs", color: null, style: null };
-    obj2[1] = tmp7(tmp3[9]).colors.WHITE;
+    obj2[1] = analyticsLocations(tmp3[9]).colors.WHITE;
     obj2[2] = tmp.linkAccountIcon;
-    tmp27Result = tmp27(tmp2(tmp3[34]).ExperimentalGameControllerLinkIcon, obj2);
+    tmp27Result = callback(tmp2(tmp3[34]).ExperimentalGameControllerLinkIcon, obj2);
   }
   obj1[5] = tmp27Result;
   obj1[6] = !fetched;
@@ -467,16 +453,15 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = function Soc
   }
   obj1[7] = tmp31;
   obj1[8] = skuId.onClose;
-  return closure_14(PurchaseSuccessModalBase, obj1);
+  return callback(PurchaseSuccessModalBase, obj1);
 };
 export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = function SocialLayerStorefrontProductGiftPurchaseSuccessModal(analyticsLocations) {
   ({ skuId: require, orbsReward, recipient } = analyticsLocations);
   analyticsLocations = analyticsLocations.analyticsLocations;
-  let stateFromStores;
   let React;
   let obj = require(analyticsLocations[15]);
   let items = [closure_9];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_9.get(closure_0));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.get(closure_0));
   let items1 = [analyticsLocations];
   React = React.useMemo(() => {
     let items = analyticsLocations;
@@ -487,8 +472,8 @@ export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = function Soc
     return items1;
   }, items1);
   recipient(analyticsLocations[31])(() => {
-    let obj = recipient(analyticsLocations[30]);
-    obj = { location_stack: closure_4, type: closure_1_0(analyticsLocations[32]).SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY, sku_id: closure_0, application_id: null };
+    recipient(analyticsLocations[30]);
+    const obj = { location_stack: closure_4, type: require(analyticsLocations[32]).SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY, sku_id: closure_0, application_id: null };
     let applicationId;
     if (stateFromStores != null) {
       applicationId = stateFromStores.applicationId;
@@ -506,7 +491,7 @@ export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = function Soc
     sku: stateFromStores,
     title: intl.string(require(analyticsLocations[22]).t["5glWta"]),
     body: React.useMemo(() => {
-      const intl = closure_1_0(analyticsLocations[22]).intl;
+      const intl = require(analyticsLocations[22]).intl;
       let name;
       if (stateFromStores != null) {
         name = stateFromStores.name;
@@ -517,7 +502,7 @@ export const SocialLayerStorefrontProductGiftPurchaseSuccessModal = function Soc
         str = "your recipient";
       }
       obj[1] = str;
-      return intl.formatToPlainString(closure_1_0(analyticsLocations[22]).t["2VjPTw"], obj);
+      return intl.formatToPlainString(require(analyticsLocations[22]).t["2VjPTw"], obj);
     }, items2),
     onClose: analyticsLocations.onClose
   };

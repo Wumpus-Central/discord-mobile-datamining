@@ -1,7 +1,7 @@
 // === Module 8083: Form ===
 
 // Module 8083 (Form)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import FormCheckboxRowDefault from "FormCheckboxRow" /* 6936 */;
 import _modDef6937 from "module_6937" /* 6937 */;
 import contextDefault from "context" /* 6938 */;
@@ -29,7 +29,7 @@ import FormRadioGroupDefault from "FormRadioGroup" /* 8103 */;
 import FormSliderRowDefault from "FormSliderRow" /* 8104 */;
 import CardSectionDefault from "CardSection" /* 8114 */;
 
-const result = set.fileFinishedImporting("design/void/Form/native/index.tsx");
+const result = obj132.fileFinishedImporting("design/void/Form/native/index.tsx");
 
 export const Form = contextDefault;
 export const FormArrow = FormArrowDefault;

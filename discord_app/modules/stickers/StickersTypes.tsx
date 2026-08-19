@@ -1,12 +1,12 @@
 // === Module 4964: StickerFormat ===
 
 // Module 4964 (StickerFormat)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import TypeTag2 from "TypeTag" /* 1432 */;
 import MetaStickerType from "MetaStickerType" /* 4965 */;
 
 const TypeTag = TypeTag2.TypeTag;
-const result = set.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
+const result = obj132.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
 
 export const StickerFormat = MetaStickerType.StickerFormat;
 export const MetaStickerType = MetaStickerType.MetaStickerType;

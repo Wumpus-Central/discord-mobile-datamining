@@ -4,15 +4,15 @@
 import ThemesDefault from "Themes" /* 712 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _modDef9930 from "module_9930" /* 9930 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { DraftType } from "handleChanged" /* 4825 */;
-import closure_9 from "map" /* 4824 */;
+import map from "map" /* 4824 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function AddDescription(id) {
   ({ source, channelId } = id);
   id = id.id;
@@ -23,7 +23,7 @@ function AddDescription(id) {
   const tmp = callback3();
   let obj = channelId(stateFromStores[8]);
   const items = [closure_9];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getUpload(channelId, id, closure_1_8.ChannelMessage));
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getUpload(channelId, id, DraftType.ChannelMessage));
   ({ width, height } = source);
   let num = 1;
   if (null != width) {
@@ -64,12 +64,12 @@ function AddDescription(id) {
   const effect1 = obj1.useEffect(() => {
     navigation.setOptions({
       headerRight(arg0) {
-        let obj = closure_1_0(closure_1_2[13]);
-        const intl = closure_1_0(closure_1_2[14]).intl;
-        obj = {};
-        const renderHeaderTextButton = obj.getRenderHeaderTextButton(intl.string(closure_1_0(closure_1_2[14]).t["R3BPH+"]), () => {
-          let obj = closure_1_1(closure_1_2[15]);
-          obj = {};
+        channelId(stateFromStores[13]);
+        const intl = channelId(stateFromStores[14]).intl;
+        let obj = {};
+        const renderHeaderTextButton = obj.getRenderHeaderTextButton(intl.string(channelId(stateFromStores[14]).t["R3BPH+"]), () => {
+          closure_1_1(closure_1_2[15]);
+          const obj = {};
           const merged = Object.assign(closure_2);
           obj.description = ref.current;
           obj.update(closure_0, closure_1, closure_1_8.ChannelMessage, obj);
@@ -80,7 +80,6 @@ function AddDescription(id) {
       }
     });
   }, items3);
-  obj = { ref: ref1, style: tmp.contentContainer, contentContainerStyle: null, children: null };
   obj = { padding: tmp5(tmp3[7]).space.PX_16, paddingBottom: insets.bottom + tmp5(tmp3[7]).space.PX_16 };
   obj[2] = obj;
   obj1 = { style: tmp.imageContainer, children: callback(closure_6, { style: items4, source }) };
@@ -102,18 +101,15 @@ function AddDescription(id) {
 }
 ({ View: c5, Image: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { contentContainer: null, imageContainer: null, image: null, placeholderText: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", borderRadius: ThemesDefault.radii.sm };
 let obj2 = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: "\u{1F9DB}\u{1F3FD}\u200D\u2642\uFE0F" };
 obj2[3] = ThemesDefault.radii.sm;
 createCacheKey[2] = obj2;
-let obj1 = { alignItems: "center", borderRadius: ThemesDefault.radii.sm };
 createCacheKey[3] = { color: ThemesDefault.colors.TEXT_MUTED };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { color: ThemesDefault.colors.TEXT_MUTED };
-const result = require("set").fileFinishedImporting("modules/image_upload/native/AddImageDescriptionModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/image_upload/native/AddImageDescriptionModal.tsx");
 
 export default function AddImageDescriptionModal(arg0) {
   ({ source: require, channelId: importDefault, id: dependencyMap } = arg0);
@@ -121,7 +117,7 @@ export default function AddImageDescriptionModal(arg0) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["5S2AK+"]);
   obj[2] = function render() {
-    return closure_1_10(closure_1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
+    return closure_1_10(AddDescription, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
   return callback(_modDef9930, obj);
 };

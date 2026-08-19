@@ -1,37 +1,35 @@
 // === Module 12814: MuteUserElement ===
 
 // Module 12814 (MuteUserElement)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 import { AnalyticEvents } from "ME" /* 676 */;
 import { MuteUntilSeconds } from "MAX_FAVORITES" /* 685 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
 
 export default function MuteUserElement(user) {
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
   let dMFromUserId;
-  let stateFromStores;
-  dMFromUserId = undefined;
   dMFromUserId = dMFromUserId.getDMFromUserId(user.id);
   let obj = user(reportId[6]);
   const items = [dMFromUserId];
   const items1 = [channelId];
-  stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId), items1);
   const items2 = [stateFromStores, user];
   const memo = stateFromStores.useMemo(() => {
     let guild_id;
     if (stateFromStores != null) {
-      guild_id = tmp.guild_id;
+      guild_id = stateFromStores.guild_id;
     }
     let id;
     if (stateFromStores != null) {
-      id = tmp.id;
+      id = stateFromStores.id;
     }
     return channelId(reportId[7]).getName(guild_id, id, user);
   }, items2);
@@ -45,7 +43,6 @@ export default function MuteUserElement(user) {
   const items4 = [dMFromUserId, channelId, user, reportId];
   let tmp9 = null;
   if (null != user) {
-    obj = { title: null, disabledTitle: null, description: null, disabled: null, onPress: null, icon: null };
     const intl = tmp2(tmp3[12]).intl;
     obj = { username: null };
     obj[0] = memo;

@@ -1,10 +1,10 @@
 // === Module 12828: deferJoinActivityApplication ===
 
 // Module 12828 (deferJoinActivityApplication)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");
+const result = obj132.fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");
 
 export default function deferJoinActivityApplication(arg0) {
   ({ channelId, applicationId, intent, inviterUserId, analyticsLocations, commandOrigin } = arg0);

@@ -1,14 +1,14 @@
 // === Module 15663: NotificationCenterActionSheet ===
 
 // Module 15663 (NotificationCenterActionSheet)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "findOrCreateMessageRecord" /* 5384 */;
+import noop from "noop" /* 19 */;
+import findOrCreateMessageRecord from "findOrCreateMessageRecord" /* 5384 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-const require = arg1;
+const require = fn;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/notification_center/native/NotificationCenterActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/notification_center/native/NotificationCenterActionSheet.tsx");
 
 export default function NotificationCenterActionSheet() {
   let obj = roleFilter(589);
@@ -18,8 +18,8 @@ export default function NotificationCenterActionSheet() {
   const everyoneFilter = stateFromStoresObject.everyoneFilter;
   const items1 = [everyoneFilter, roleFilter];
   dependencyMap = hasForLaterAccess.useCallback((arg0) => {
-    let obj = everyoneFilter(15664);
-    obj = { roleFilter, everyoneFilter };
+    everyoneFilter(15664);
+    const obj = { roleFilter, everyoneFilter };
     const merged = Object.assign(arg0);
     obj.setGuildFilter(obj);
   }, items1);
@@ -34,10 +34,11 @@ export default function NotificationCenterActionSheet() {
       roleFilter(8488).showForLaterModal(BOOKMARK);
       const obj2 = roleFilter(8488);
     } else {
-      const items = [tmp(7159).FOR_LATER_ROADBLOCK];
-      tmp(8479)(roleFilter(8482).EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
-      const tmpResult = tmp(8479);
+      const items = [everyoneFilter(7159).FOR_LATER_ROADBLOCK];
+      everyoneFilter(8479)(roleFilter(8482).EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
+      const tmpResult = everyoneFilter(8479);
     }
+    const obj = everyoneFilter(4342);
   }, items2);
   const callback = hasForLaterAccess.useCallback(() => {
     let obj = everyoneFilter(4342);
@@ -45,7 +46,6 @@ export default function NotificationCenterActionSheet() {
     obj = { screen: constants.NOTIFICATIONS };
     roleFilter(7360).openUserSettings(obj);
   }, []);
-  obj = { showGradient: true, header: null, children: null };
   obj = { title: null };
   const intl = roleFilter(1236).intl;
   obj[0] = intl.string(roleFilter(1236).t.HcoRu0);

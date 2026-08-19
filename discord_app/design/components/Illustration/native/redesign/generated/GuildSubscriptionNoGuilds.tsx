@@ -7,13 +7,12 @@ import getIllustrationSource from "getIllustrationSource" /* 7907 */;
 import { Image } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx");
+const result = require("obj132").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionNoGuilds.tsx");
 
 export const getGuildSubscriptionNoGuildsSource = function getGuildSubscriptionNoGuildsSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
       return callback(12965);
     },
@@ -27,8 +26,7 @@ export const getGuildSubscriptionNoGuildsSource = function getGuildSubscriptionN
   return obj.getIllustrationSource(theme, obj);
 };
 export const useGuildSubscriptionNoGuildsSource = function useGuildSubscriptionNoGuildsSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
       return callback(12965);
     },
@@ -42,19 +40,7 @@ export const useGuildSubscriptionNoGuildsSource = function useGuildSubscriptionN
   return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const GuildSubscriptionNoGuilds = function GuildSubscriptionNoGuilds(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
-    dark() {
-      return callback(12965);
-    },
-    darker() {
-      return callback(12966);
-    },
-    light() {
-      return callback(12967);
-    }
-  };
-  obj = {};
+  const obj = {};
   const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;

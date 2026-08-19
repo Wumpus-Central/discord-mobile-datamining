@@ -3,13 +3,13 @@
 // Module 11702 (useGuildPowerupCardFooterConfig)
 import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 11665 */;
 import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
-import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
 import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
 import { GuildFeatures } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 ({ GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP, GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: c4, PowerupActiveStatusType: c5 } = BoostedGuildTiers);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx");
+const result = require("obj132").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx");
 
 export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
   const _require = arg0;
@@ -22,7 +22,7 @@ export default function useGuildPowerupCardFooterConfig(arg0, skuId) {
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(closure_1_6.GUILD_THEME);
+      hasItem = features.has(GuildFeatures.GUILD_THEME);
     }
     return true === hasItem;
   }, items1);

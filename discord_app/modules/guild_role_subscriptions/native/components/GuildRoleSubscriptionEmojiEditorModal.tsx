@@ -2,39 +2,32 @@
 
 // Module 16980 (GuildRoleSubscriptionEmojiEditorModal)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "computeRolesForGuild" /* 6728 */;
+import computeRolesForGuild from "computeRolesForGuild" /* 6728 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ View: closure_6, SectionList: error } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, emojiList: null, row: null, emojiImage: null, emojiAlias: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[2] = { alignItems: "flex-start", paddingTop: 16, paddingBottom: 14 };
 createCacheKey[3] = { width: 24, height: 24, marginBottom: 2 };
 createCacheKey[4] = { marginBottom: 2 };
 let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx");
 
 export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   guildId = guildId.guildId;
   const subscriptionRoleId = guildId.subscriptionRoleId;
   const onClose = guildId.onClose;
   const onSave = guildId.onSave;
-  let callback;
-  let React;
-  let stateFromStores;
-  let first;
   closure_8 = undefined;
-  let callback2;
   function handleSave() {
     const self = this;
     const apply = _handleSave.apply;
@@ -75,43 +68,42 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   }
   ({ initialTierEmojiIds, listingId } = guildId);
   let tmp = callback3();
-  callback = tmp;
+  const callback = tmp;
   let tmp2 = subscriptionRoleId(onClose[8])(guildId);
-  React = tmp2;
+  const React = tmp2;
   let obj = guildId(onClose[9]);
   const items = [closure_8];
-  stateFromStores = obj.useStateFromStores(items, () => subscriptionRoles.getSubscriptionRoles(guildId));
+  const stateFromStores = obj.useStateFromStores(items, () => subscriptionRoles.getSubscriptionRoles(guildId));
   const tmp4 = callback(React.useState(initialTierEmojiIds), 2);
-  first = tmp4[0];
+  const first = tmp4[0];
   closure_8 = tmp4[1];
   let items1 = [stateFromStores, tmp2, subscriptionRoleId, first];
-  callback2 = React.useMemo(() => {
+  const callback2 = React.useMemo(() => {
     if (null == subscriptionRoleId) {
       const _Set2 = Set;
       const set = new Set();
       return set;
     } else {
-      const found = closure_5.filter((roles) => {
-        closure_0 = roles;
-        roles = roles.roles;
-        return 0 === roles.filter((arg0) => {
-          let tmp = arg0 === closure_1_1;
+      const found = closure_5.filter((item, index) => {
+        closure_0 = item;
+        const roles = item.roles;
+        return 0 === roles.filter((item, index) => {
+          let tmp = item === closure_1_1;
           if (tmp) {
-            tmp = !closure_1_7.has(id.id);
+            tmp = !closure_1_7.has(item.id);
           }
           let hasItem = !tmp;
           if (!tmp) {
-            hasItem = closure_1_6.has(arg0);
+            hasItem = closure_1_6.has(item);
           }
           return hasItem;
         }).length;
       });
       const _Set = Set;
-      const set1 = new Set(found.map((id) => id.id));
+      const set1 = new Set(found.map((item, index) => item.id));
       return set1;
     }
   }, items1);
-  obj = { style: tmp.container, children: null };
   obj = { title: null, onClose: null, onSave: null, listingId: null, canSave: true };
   let intl = guildId(onClose[13]).intl;
   obj[0] = intl.string(guildId(onClose[13]).t.W4XhnR);
@@ -120,8 +112,8 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
     if (0 === set.size) {
       handleSave();
     } else {
-      let obj = subscriptionRoleId(onClose[14]);
-      obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
+      subscriptionRoleId(onClose[14]);
+      let obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
       const intl = guildId(onClose[13]).intl;
       obj[0] = intl.string(guildId(onClose[13]).t["30V0t5"]);
       const intl2 = guildId(onClose[13]).intl;
@@ -143,12 +135,9 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
     style: tmp.emojiList,
     renderItem(item) {
       item = item.item;
-      closure_1 = undefined;
       const hasItem = first.has(item.id);
       closure_1 = set.has(item.id);
-      let obj = { style: closure_4.row, leading: null, label: null, onPress: null, trailing: null };
-      obj = { style: closure_4.emojiImage, source: null };
-      obj = { uri: null };
+      let obj = { uri: null };
       const tmp2 = subscriptionRoleId(onClose[10]);
       obj[0] = subscriptionRoleId(onClose[11]).getEmojiURL({ id: item.id, animated: item.animated, size: 48 });
       obj[1] = obj;
@@ -158,24 +147,23 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
         const children = [callback(subscriptionRoleId(onClose[17]), obj), ];
         let tmpResult = closure_1;
         if (closure_1) {
-          obj = { children: null };
           obj = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
-          const intl = guildId(tmp4[13]).intl;
-          obj[2] = intl.string(guildId(tmp4[13]).t["1GlN06"]);
-          const items1 = [tmp3(guildId(tmp4[18]).Text, obj), ];
+          const intl = guildId(onClose[13]).intl;
+          obj[2] = intl.string(guildId(onClose[13]).t["1GlN06"]);
+          const items1 = [callback(guildId(onClose[18]).Text, obj), ];
           obj1 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
-          const intl2 = guildId(tmp4[13]).intl;
-          obj1[2] = intl2.string(guildId(tmp4[13]).t.J0XdJ4);
-          items1[1] = tmp3(guildId(tmp4[18]).Text, obj1);
+          const intl2 = guildId(onClose[13]).intl;
+          obj1[2] = intl2.string(guildId(onClose[13]).t.J0XdJ4);
+          items1[1] = callback(guildId(onClose[18]).Text, obj1);
           obj[0] = items1;
-          tmpResult = tmp(tmp2, obj);
+          tmpResult = _handleSave(handleSave, obj);
         }
         children[1] = tmpResult;
         return _handleSave(handleSave, { children });
       };
       obj[3] = function onPress() {
         const id = item.id;
-        const set = new Set(closure_1_7);
+        const set = new Set(first);
         if (set.has(id)) {
           set.delete(id);
         } else {

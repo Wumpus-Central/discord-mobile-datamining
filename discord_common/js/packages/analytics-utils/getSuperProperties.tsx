@@ -1,7 +1,7 @@
 // === Module 664: getOS ===
 
 // Module 664 (getOS)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import encodeProperties from "encodeProperties" /* 662 */;
 import getSystemLocale2 from "getSystemLocale" /* 665 */;
@@ -10,6 +10,8 @@ import clientLaunchId from "clientLaunchId" /* 668 */;
 import formatDefault from "format" /* 669 */;
 import enforcing from "enforcing" /* 670 */;
 import enforcing2 from "enforcing" /* 671 */;
+import enforcing3 from "enforcing" /* 672 */;
+import DesignIds from "DesignIds" /* 673 */;
 
 function getOS() {
   const _default = enforcing.default;
@@ -54,10 +56,10 @@ function getDeviceProperties() {
   obj.system_locale = getSystemLocale();
   obj.has_client_mods = usesClientMods.usesClientMods();
   try {
-    const tmp2Result = tmp2(17);
+    const tmp2Result = get_ActivityIndicator;
     if ("android" === tmp2Result.Platform.OS) {
-      let constants = tmp2(672).default.getConstants();
-      let _default = tmp2(672).default;
+      let constants = enforcing3.default.getConstants();
+      let _default = enforcing3.default;
     } else {
       const InfoDictionaryManager = tmp2Result.NativeModules.InfoDictionaryManager;
       constants = InfoDictionaryManager.getConstants();
@@ -70,7 +72,7 @@ function getDeviceProperties() {
     obj.client_version = Version + str2;
     obj.release_channel = ReleaseChannel;
     obj.device_vendor_id = DeviceVendorID;
-    obj.design_id = tmp2(673).DesignIds.DESIGN_TABS_IA;
+    obj.design_id = DesignIds.DesignIds.DESIGN_TABS_IA;
     return obj;
   } catch (err) {
   }
@@ -115,11 +117,8 @@ if (null != DiscordNative) {
   }
   if ("electron" === toLocaleLowerCaseResult) {
     closure_3.browser_user_agent = formatDefault.ua || "";
-    let tmp3 = closure_3;
-    const tmp4 = formatDefault.ua || "";
     const tmp5 = closure_3;
     tmp5.browser_version = formatDefault.version || "";
-    let tmp6 = formatDefault.version || "";
   }
   if ("linux" === platform) {
     const crashReporter = DiscordNative.crashReporter;
@@ -134,14 +133,12 @@ if (null != DiscordNative) {
       first = str10.split(".")[0];
     }
     closure_3.os_sdk_version = first;
-    const tmp8 = closure_3;
   } else if ("win32" === platform) {
     let tmp7;
     if (str10 != null) {
       tmp7 = str10.split(".")[2];
     }
     closure_3.os_sdk_version = tmp7;
-    const tmp19 = closure_3;
   }
 }
 let closure_12 = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
@@ -161,22 +158,21 @@ if (null == closure_3) {
       if (null == value) {
         obj = {};
         const Storage4 = tmp(595).Storage;
-        const result1 = Storage4.set(tmp8, obj);
+        const result1 = Storage4.set(referralProperties, obj);
         value = obj;
       }
       const SessionStorage = tmp(674).SessionStorage;
-      let value1 = SessionStorage.get(tmp8);
+      let value1 = SessionStorage.get(referralProperties);
       if (null == value1) {
-        obj = {};
         obj = {};
         const _Object = Object;
         const keys = Object.keys(obj);
-        const mapped = keys.map((arg0) => {
-          obj["" + arg0 + "_current"] = obj[arg0];
-          return obj[arg0];
+        const mapped = keys.map((item, index) => {
+          obj["" + item + "_current"] = obj[item];
+          return obj[item];
         });
         const SessionStorage2 = tmp(674).SessionStorage;
-        const result2 = SessionStorage2.set(tmp8, obj);
+        const result2 = SessionStorage2.set(referralProperties, obj);
         value1 = obj;
       }
       const merged = Object.assign(value);
@@ -229,19 +225,19 @@ let result = extendSuperProperties((function getContextualSuperProperties() {
   obj.client_launch_id = clientLaunchId.clientLaunchId;
   return obj;
 })());
-let result1 = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/getSuperProperties.tsx");
+let result1 = obj132.fileFinishedImporting("../discord_common/js/packages/analytics-utils/getSuperProperties.tsx");
 
 export { getOS };
 export { getDevice };
 export const getCampaignParams = function getCampaignParams(arg0) {
   closure_0 = arg0;
   const obj = {};
-  const item = closure_12.forEach((str) => {
-    str = "";
+  const item = closure_12.forEach((item, index) => {
+    let str = "";
     if (null != closure_0) {
       const _RegExp = RegExp;
       const _HermesInternal = HermesInternal;
-      const regExp = new RegExp("[\\?&]" + str.replace(/[[]/, "\\[").replace(/[\]]/, "\\]") + "=([^&#]*)");
+      const regExp = new RegExp("[\\?&]" + item.replace(/[[]/, "\\[").replace(/[\]]/, "\\]") + "=([^&#]*)");
       const match = regExp.exec(tmp);
       let str7 = "";
       if (null !== match) {
@@ -254,10 +250,10 @@ export const getCampaignParams = function getCampaignParams(arg0) {
         }
       }
       str = str7;
-      const str3 = str.replace(/[[]/, "\\[");
+      const str3 = item.replace(/[[]/, "\\[");
     }
     if (str.length > 0) {
-      obj[str] = str;
+      obj[item] = str;
     }
   });
   return obj;

@@ -2,36 +2,30 @@
 
 // Module 10210 (GIFPickerItemActionSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { contentWrapper: null, gifContainer: null, gifImage: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "column", alignItems: "center" };
 createCacheKey[2] = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemActionSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemActionSheet.tsx");
 
 export default function GIFPickerItemActionSheet(item) {
   item = item.item;
-  let isFavoriteGIF;
   let width;
-  let height;
-  let callback;
-  let callback1;
   const tmp = callback2();
   let obj = item(width[5]);
   obj1 = item(width[6]);
-  isFavoriteGIF = obj.useIsFavoriteGIF(obj1.gifUrlKey(item.url));
+  const isFavoriteGIF = obj.useIsFavoriteGIF(obj1.gifUrlKey(item.url));
   const size = isFavoriteGIF(width[7])();
   width = size.width;
-  height = size.height;
+  const height = size.height;
   const items = [, , , ];
   ({ width: arr[0], height: arr[1] } = item);
   items[2] = width;
@@ -40,11 +34,11 @@ export default function GIFPickerItemActionSheet(item) {
     const bound = Math.min((width - 2 * isFavoriteGIF(width[4]).space.PX_16) / item.width, 0.5 * height / item.height);
     return { width: item.width * bound, height: item.height * bound };
   }, items);
-  callback = height.useCallback(() => {
+  const callback = height.useCallback(() => {
     isFavoriteGIF(width[8]).hideActionSheet();
   }, []);
   const items1 = [callback, isFavoriteGIF, item];
-  callback1 = height.useCallback(() => {
+  const callback1 = height.useCallback(() => {
     callback();
     let obj = item(width[6]);
     if (isFavoriteGIF) {
@@ -77,9 +71,9 @@ export default function GIFPickerItemActionSheet(item) {
       str = "destructive";
     }
     const obj = { variant: str, onPress: callback1, text: null, grow: true };
-    const intl = tmp2(tmp3[10]).intl;
+    const intl = item(width[10]).intl;
     const string = intl.string;
-    const t = tmp2(tmp3[10]).t;
+    const t = item(width[10]).t;
     if (isFavoriteGIF) {
       let stringResult = string(t["5/NS74"]);
     } else {
@@ -88,7 +82,6 @@ export default function GIFPickerItemActionSheet(item) {
     obj[2] = stringResult;
     return callback1(item(width[14]).Button, obj);
   }, items3);
-  obj = { startExpanded: true, children: null };
   obj = { style: tmp.contentWrapper, children: null };
   obj1 = { style: tmp.gifContainer, children: null };
   const items4 = [tmp.gifImage, memo];

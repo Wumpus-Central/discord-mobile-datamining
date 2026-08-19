@@ -2,13 +2,13 @@
 
 // Module 11989 (OrbBadgeCollectedRootScreen)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function OrbBadgeCollectedRootScreen(modalKey) {
   modalKey = modalKey.modalKey;
   const onPressViewBadge = modalKey.onPressViewBadge;
@@ -23,7 +23,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   }, items1);
   obj = { style: tmp.root, children: null };
   const callback1 = React.useCallback(() => {
-    onPressViewBadge(closure_1_2[7]).popWithKey(modalKey);
+    onPressViewBadge(dependencyMap[7]).popWithKey(modalKey);
   }, items2);
   if (stateFromStores) {
     obj = { source: null, style: null };
@@ -31,9 +31,9 @@ function OrbBadgeCollectedRootScreen(modalKey) {
     obj1[0] = onPressViewBadge(10959);
     obj[0] = obj1;
     obj[1] = tmp.background;
-    let tmp9Result = tmp9(onPressViewBadge(5449), obj);
+    let tmp9Result = callback(onPressViewBadge(5449), obj);
     let tmp12 = onPressViewBadge;
-    let tmp13 = tmp9;
+    let tmp13 = callback;
     const tmp15 = onPressViewBadge(5449);
   } else {
     const obj2 = { source: null, poster: null, style: null, resizeMode: "contain", muted: true, pauseWhileAppInactive: true, paused: false };
@@ -42,9 +42,9 @@ function OrbBadgeCollectedRootScreen(modalKey) {
     obj2[0] = obj3;
     obj2[1] = onPressViewBadge(10959);
     obj2[2] = tmp.background;
-    tmp9Result = tmp9(tmp2(9018).VideoComponent, obj2);
+    tmp9Result = callback(tmp2(9018).VideoComponent, obj2);
     tmp12 = onPressViewBadge;
-    tmp13 = tmp9;
+    tmp13 = callback;
   }
   const items3 = [tmp9Result, ];
   const obj4 = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
@@ -65,7 +65,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   obj11[3] = intl2.string(modalKey(1236).t.B25MUf);
   items5[1] = tmp13(modalKey(4734).Text, obj11);
   obj9[1] = items5;
-  const items6 = [closure_7(closure_4, obj9), ];
+  const items6 = [callback2(closure_4, obj9), ];
   const obj12 = { style: tmp.buttonsContainer, children: null };
   const obj13 = { onPress: callback, variant: "primary", size: "lg", text: null };
   const intl3 = tmp2(1236).intl;
@@ -76,35 +76,30 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   obj14[3] = intl4.string(modalKey(1236).t["6gF4aS"]);
   items7[1] = tmp13(modalKey(4745).Button, obj14);
   obj12[1] = items7;
-  items6[1] = closure_7(closure_4, obj12);
+  items6[1] = callback2(closure_4, obj12);
   obj8[1] = items6;
-  items4[1] = closure_7(closure_4, obj8);
+  items4[1] = callback2(closure_4, obj8);
   obj5[1] = items4;
-  obj4[5] = closure_7(closure_4, obj5);
+  obj4[5] = callback2(closure_4, obj5);
   items3[1] = tmp13(modalKey(6803).SafeAreaPaddingView, obj4);
   obj[1] = items3;
-  return closure_7(closure_4, obj);
+  return callback2(closure_4, obj);
 }
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { root: { flex: 1 }, background: null, orbBadge: null, main: null, body: null, bottomContainer: null, textContainer: null, text: null, buttonsContainer: null };
-createCacheKey = {};
+const createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 172, height: 172, alignSelf: "center" };
 createCacheKey[3] = { flex: 1 };
 createCacheKey[4] = { paddingTop: "50%", padding: ThemesDefault.space.PX_16, flex: 1, justifyContent: "space-between", gap: ThemesDefault.space.PX_32 };
-let obj1 = { paddingTop: "50%", padding: ThemesDefault.space.PX_16, flex: 1, justifyContent: "space-between", gap: ThemesDefault.space.PX_32 };
 createCacheKey[5] = { alignSelf: "flex-end", alignItems: "stretch", gap: ThemesDefault.space.PX_32, width: "100%" };
-let obj2 = { alignSelf: "flex-end", alignItems: "stretch", gap: ThemesDefault.space.PX_32, width: "100%" };
 createCacheKey[6] = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[7] = { textAlign: "center" };
-let obj3 = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[8] = { alignItems: "stretch", gap: ThemesDefault.space.PX_16 };
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = { ROOT: "ROOT" };
-let obj4 = { alignItems: "stretch", gap: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/collectibles/native/OrbBadgeCollectedModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/collectibles/native/OrbBadgeCollectedModal.tsx");
 
 export default function OrbBadgeCollectedModal(arg0) {
   ({ modalKey, onPressViewBadge, orbBalancePriorToPurchase } = arg0);
@@ -113,15 +108,14 @@ export default function OrbBadgeCollectedModal(arg0) {
     const items = [modalKey(orbBalancePriorToPurchase[21]).createOrbProfileBadge()];
     const result = obj.pinUserProfileBadgesOnClient(items, 600);
   }, []);
-  obj = { screens: { [closure_9.ROOT]: obj }, initialRouteName: constants.ROOT };
-  obj = {
+  let obj = {
     render() {
-      return closure_1_6(closure_1_10, { modalKey, onPressViewBadge });
+      return closure_1_6(OrbBadgeCollectedRootScreen, { modalKey, onPressViewBadge });
     },
     ignoreKeyboard: true,
     fullscreen: true,
     headerLeft() {
-      return closure_1_6(modalKey(orbBalancePriorToPurchase[6]).getHeaderCloseButton(() => closure_1_1(closure_1_2[7]).popWithKey(closure_0)), { tintColor: "white" });
+      return closure_1_6(modalKey(orbBalancePriorToPurchase[6]).getHeaderCloseButton(() => onPressViewBadge(orbBalancePriorToPurchase[7]).popWithKey(closure_0)), { tintColor: "white" });
     },
     headerRight() {
       let obj = modalKey(orbBalancePriorToPurchase[8]);

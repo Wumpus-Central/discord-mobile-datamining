@@ -1,9 +1,9 @@
-// === Module 7190: set ===
+// === Module 7190: obj132 ===
 
-// Module 7190 (set)
-import set from "set" /* 2 */;
+// Module 7190 (obj132)
+import obj132 from "obj132" /* 2 */;
 import CommandsDefault from "Commands" /* 112 */;
 
-const result = set.fileFinishedImporting("modules/core/native/NativeView.tsx");
+const result = obj132.fileFinishedImporting("modules/core/native/NativeView.tsx");
 
 export default CommandsDefault;

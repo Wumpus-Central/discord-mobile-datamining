@@ -1,14 +1,14 @@
 // === Module 8275: useMaybeFetchReferralsRemaining ===
 
 // Module 8275 (useMaybeFetchReferralsRemaining)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1922 */;
-import closure_5 from "emitChanges" /* 7423 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import emitChanges from "emitChanges" /* 7423 */;
 import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
+const require = fn;
 ({ PremiumTypes: closure_6, FractionalPremiumStates: error } = GuildFeatures);
-let result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
+let result = require("obj132").fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
 
 export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRemaining(flag) {
   if (flag === undefined) {
@@ -54,4 +54,5 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
       const result = closure_1_5.checkAndFetchReferralsRemaining();
     }
   }, items1);
+  const obj3 = flag(8277);
 };

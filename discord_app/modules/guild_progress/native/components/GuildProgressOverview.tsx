@@ -7,12 +7,12 @@ import Text from "Text" /* 4734 */;
 import PressableBase from "PressableBase" /* 5433 */;
 import registerAssetDefault from "registerAsset" /* 11640 */;
 import GuildProgressBarDefault from "GuildProgressBar" /* 13436 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class GuildProgressOverviewView {
   constructor(arg0) {
     ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = global);
@@ -42,13 +42,12 @@ class GuildProgressOverviewView {
   }
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: null, step: null, progressBar: null };
-createCacheKey = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 };
+const createCacheKey = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { lineHeight: 16 };
 createCacheKey[4] = { marginTop: 8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
 
 export default function GuildProgressOverview(guild) {
   guild = guild.guild;
@@ -80,16 +79,16 @@ export default function GuildProgressOverview(guild) {
         const obj = flag(completed[7]);
       }
       guild(completed[6]).openActionSheet(guild);
+      const obj2 = guild(completed[6]);
     },
     onLongPress() {
       if (!flag) {
-        let obj = guild(completed[8]);
-        obj = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
-        obj = { label: null, onPress: null };
+        guild(completed[8]);
+        const obj = { label: null, onPress: null };
         const intl = guild(completed[9]).intl;
         obj[0] = intl.string(guild(completed[9]).t.PbNxaW);
         obj[1] = function onPress() {
-          closure_1_1(closure_1_2[7]).dismissProgress(id.id);
+          flag(completed[7]).dismissProgress(id.id);
         };
         const items = [obj];
         obj[1] = items;
@@ -111,6 +110,6 @@ export default function GuildProgressOverview(guild) {
   obj[3] = stringResult;
   obj[4] = subtitle;
   obj[5] = percentComplete;
-  return closure_5(GuildProgressOverviewView, obj);
+  return callback(GuildProgressOverviewView, obj);
 };
 export { GuildProgressOverviewView };

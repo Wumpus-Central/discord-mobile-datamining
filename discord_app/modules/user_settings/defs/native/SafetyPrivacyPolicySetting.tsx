@@ -1,7 +1,7 @@
 // === Module 15016: pressable ===
 
 // Module 15016 (pressable)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ME from "ME" /* 676 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import _modDef4090 from "module_4090" /* 4090 */;
@@ -20,17 +20,6 @@ const pressable = createToggle.createPressable({
   },
   withArrow: true
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.KGFTww);
-  },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  onPress: function onPrivacyPolicyPress() {
-    _modDef4090.openURL(MarketingURLs.PRIVACY);
-  },
-  withArrow: true
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx");
+const result = obj132.fileFinishedImporting("modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx");
 
 export default pressable;

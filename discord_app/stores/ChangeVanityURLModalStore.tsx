@@ -1,7 +1,7 @@
 // === Module 16864: FormStates ===
 
 // Module 16864 (FormStates)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import ME from "ME" /* 676 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
@@ -41,6 +41,6 @@ const changeVanityURLModalStore = new ChangeVanityURLModalStore(dispatcherDefaul
     c5 = null;
   }
 });
-const result = set.fileFinishedImporting("stores/ChangeVanityURLModalStore.tsx");
+const result = obj132.fileFinishedImporting("stores/ChangeVanityURLModalStore.tsx");
 
 export default changeVanityURLModalStore;

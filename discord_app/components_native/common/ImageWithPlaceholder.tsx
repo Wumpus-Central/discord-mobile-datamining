@@ -5,18 +5,18 @@ import jsxProd from "jsxProd" /* 21 */;
 import preloadDefault from "preload" /* 5449 */;
 import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 9166 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 500 */;
+import obj132 from "obj132" /* 500 */;
 
 ({ View: obj1, requireNativeComponent } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
 let closure_4 = { flex: 1 };
 let obj = { THUMBHASH: 1, [1]: "THUMBHASH" };
-if (set.isAndroid()) {
+if (obj132.isAndroid()) {
   let importDefaultResult = __INTERNAL_VIEW_CONFIGDefault;
 } else {
   importDefaultResult = requireNativeComponent("DCDImageWithThumbhashPlaceholderView");
 }
-const result = set.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
+const result = obj132.fileFinishedImporting("components_native/common/ImageWithPlaceholder.tsx");
 
 export const ImagePlaceholderVersions = obj;
 export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
@@ -35,7 +35,6 @@ export const ImageWithPlaceholder = function ImageWithPlaceholder(arg0) {
     }
     return tmp4;
   }
-  obj = { style };
   const merged2 = Object.assign(merged);
   obj = { style: closure_4, resizeMode: "cover", source: { uri }, alt };
   obj.children = jsx(preloadDefault, { style: closure_4, resizeMode: "cover", source: { uri }, alt });

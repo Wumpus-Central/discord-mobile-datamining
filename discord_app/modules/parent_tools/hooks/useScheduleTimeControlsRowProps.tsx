@@ -1,19 +1,18 @@
 // === Module 14267: useScheduleTimeControlsRowProps ===
 
 // Module 14267 (useScheduleTimeControlsRowProps)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 import messagesProxyDefault from "messagesProxy" /* 2335 */;
 import Text from "Text" /* 4734 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");
+const result = obj132.fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");
 
 export default function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
-    let obj = { subLabel: null, trailing: "a" };
-    obj = { variant: "text-xs/medium", color: "text-muted", children: null };
+    let obj = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = getSystemLocale.intl;
     obj[2] = intl.string(messagesProxyDefault.fOBIZH);
     obj[0] = jsx(Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });

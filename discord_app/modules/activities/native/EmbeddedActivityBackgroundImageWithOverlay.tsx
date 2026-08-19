@@ -3,26 +3,24 @@
 // Module 12479 (EmbeddedActivityBackgroundImageWithOverlay)
 import ThemesDefault from "Themes" /* 712 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
 ({ ImageBackground: c4, View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
-createCacheKey = { overlay: null };
-createCacheKey = { flex: 1, opacity: 0.6, backgroundColor: ThemesDefault.colors.BLACK };
+const createCacheKey = { flex: 1, opacity: 0.6, backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[0] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = ["embedded_background"];
-const result = require("set").fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
 
 export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
   ({ application, dimensionsStyle, borderRadius, resizeMode } = arg0);
   if (resizeMode === undefined) {
     resizeMode = "contain";
   }
-  importDefault = undefined;
   const tmp2 = callback(React.useState(false), 2);
   importDefault = tmp2[1];
   let str;
@@ -63,8 +61,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
         items[1] = obj3;
         obj2[0] = items;
         obj[5] = <closure_5 style={null} />;
-        tmp7Result = tmp7(closure_4, obj);
-        const tmp8 = closure_4;
+        tmp7Result = <closure_4 uri={null} />;
       }
     }
   }

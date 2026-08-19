@@ -1,7 +1,7 @@
 // === Module 14450: CONNECTION_BANNER_HEIGHT ===
 
 // Module 14450 (CONNECTION_BANNER_HEIGHT)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import ThemesDefault from "Themes" /* 712 */;
 import Button from "Button" /* 1297 */;
@@ -18,7 +18,7 @@ const sum = Button.AVATAR_SIZE_MAP[YOUBAR_60] + 12;
 const diff = sum - (Button.AVATAR_SIZE_MAP[REFRESH_MEDIUM_32] + PX_12);
 const sum1 = Button.AVATAR_SIZE_MAP[NORMAL] + 8;
 const diff1 = sum1 + 8 - (Button.AVATAR_SIZE_MAP[REFRESH_MEDIUM_32] + PX_12);
-const result1 = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarConstants.tsx");
+const result1 = obj132.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarConstants.tsx");
 
 export const CONNECTION_BANNER_HEIGHT = 48;
 export const YOU_BAR_SPRING_CONFIG = { damping: 20, stiffness: 300, mass: 1.5, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };

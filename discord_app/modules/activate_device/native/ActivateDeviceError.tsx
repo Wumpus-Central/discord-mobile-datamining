@@ -11,16 +11,15 @@ import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ image: { width: 254, height: 127, alignSelf: "center" } });
-const result = require("set").fileFinishedImporting("modules/activate_device/native/ActivateDeviceError.tsx");
+const result = require("obj132").fileFinishedImporting("modules/activate_device/native/ActivateDeviceError.tsx");
 
 export const ActivateDeviceError = function ActivateDeviceError(onRetry) {
-  let obj = { children: null };
-  obj = { source: registerAssetDefault, style: callback3().image };
+  let obj = { source: registerAssetDefault, style: callback3().image };
   const items = [callback(closure_3, obj), , ];
   obj = { style: innerContentDefault.innerContent, children: null };
   obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: innerContentDefault.centerText, children: null };

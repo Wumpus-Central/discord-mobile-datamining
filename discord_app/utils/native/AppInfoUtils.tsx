@@ -1,11 +1,11 @@
 // === Module 16540: getAppMajorVersion ===
 
 // Module 16540 (getAppMajorVersion)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getConstants from "getConstants" /* 1626 */;
 
 const constants = getConstants.getConstants();
-const result = set.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
+const result = obj132.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
 
 export const getAppMajorVersion = function getAppMajorVersion() {
   if (undefined === closure_0) {

@@ -1,10 +1,10 @@
 // === Module 8700: useIsPrivateChannelWithEnabledActivities ===
 
 // Module 8700 (useIsPrivateChannelWithEnabledActivities)
-import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx");
 
 export default function useIsPrivateChannelWithEnabledActivities(arg0) {
   const _require = arg0;

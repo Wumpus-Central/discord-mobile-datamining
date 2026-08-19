@@ -3,26 +3,24 @@
 // Module 15469 (GuildHomeChannelRow)
 import ThemesDefault from "Themes" /* 712 */;
 import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 11553 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { Routes } from "ME" /* 676 */;
 import { StaticChannelRoute } from "set" /* 1398 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
-createCacheKey = { container: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
+const require = fn;
+const createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");
 
 export default function GuildHomeChannelRow(selected) {
   selected = selected.selected;
-  let id;
-  id = selected.guild.id;
+  const id = selected.guild.id;
   const items = [id];
   const callback = React.useCallback(() => {
-    id(closure_1_2[7]).transitionTo(closure_1_4.CHANNEL(id, closure_1_5.GUILD_HOME));
+    id(dependencyMap[7]).transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
   }, items);
   const ChannelModes = id(11553).ChannelModes;
   if (selected) {

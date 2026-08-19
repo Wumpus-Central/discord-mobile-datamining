@@ -2,31 +2,29 @@
 
 // Module 12718 (AppDMOptionsBottomSheet)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "recomputeFromAppTokens" /* 5289 */;
+import recomputeFromAppTokens from "recomputeFromAppTokens" /* 5289 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { sheet: null, content: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingLeft: 16, paddingRight: 16, paddingBottom: 24 };
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_dms/native/AppDMOptionsBottomSheet.tsx");
+const result = require("obj132").fileFinishedImporting("modules/app_dms/native/AppDMOptionsBottomSheet.tsx");
 
 export default function AppDMOptionsBottomSheet(userId) {
   userId = userId.userId;
   const channel = userId.channel;
   const application = userId.application;
-  let stateFromStores;
   let tmp = callback3();
   let obj = userId(application[7]);
   const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => {
+  const stateFromStores = obj.useStateFromStores(items, () => {
     let id;
     if (application != null) {
       id = application.id;
@@ -45,9 +43,9 @@ export default function AppDMOptionsBottomSheet(userId) {
       tmp = null != stateFromStores;
     }
     if (tmp) {
-      let obj = userId(application[10]);
-      obj = { screen: null, params: null };
-      obj[0] = closure_1_6.AUTHORIZED_APP;
+      userId(application[10]);
+      let obj = { screen: null, params: null };
+      obj[0] = UserSettingsSections.AUTHORIZED_APP;
       obj = { oauth2Token: null };
       obj[0] = stateFromStores;
       obj[1] = obj;
@@ -59,7 +57,6 @@ export default function AppDMOptionsBottomSheet(userId) {
   const effect = stateFromStores.useEffect(() => {
     const response = channel(application[11]).fetch();
   }, []);
-  obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
   obj = { style: tmp.content, children: null };
   obj1 = { hasIcons: false, children: null };
   const obj2 = { label: null, onPress: null };

@@ -3,11 +3,11 @@
 // Module 4169 (CameraRive)
 import BaseRive from "BaseRive" /* 4109 */;
 import getDerivedStateFromError from "getDerivedStateFromError" /* 4164 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let c5 = importAllResult;
 let closure_7 = { "Icon Camera": { reducedMotion: "boolean", fill: "color", on: "boolean" }, "Animation Main": {} };
@@ -16,8 +16,6 @@ let closure_9 = {
   "Icon Camera": function IconCameraBindings(reducedMotionEnabled) {
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive;
-    const tmp = require;
     let fill;
     if (dataBinding != null) {
       fill = dataBinding.fill;
@@ -27,7 +25,6 @@ let closure_9 = {
       fill1 = onDataBindingChange.fill;
     }
     const colorBinding = BaseRive.useColorBinding("fill", instance, fill, fill1, playIfNeeded);
-    const obj2 = BaseRive;
     let on;
     if (dataBinding != null) {
       on = dataBinding.on;
@@ -61,7 +58,7 @@ let closure_10 = importAllResult.forwardRef(function CameraRiveInner(defaultView
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = closure_1_6(tmp, obj);
+      tmp2 = <tmp />;
     }
     return tmp2;
   }, items);
@@ -70,12 +67,11 @@ let closure_10 = importAllResult.forwardRef(function CameraRiveInner(defaultView
   return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 });
 const forwardRefResult = importAllResult.forwardRef(function CameraRiveWithBoundary(fallback, ref) {
-  let obj = { fallback: fallback.fallback, children: null };
-  obj = { ref };
+  const obj = { ref };
   const merged = Object.assign(fallback);
-  obj[1] = <closure_10 ref={arg1} />;
+  obj[1] = <closure_10 ref={ref} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CameraRive.tsx");
+const result = require("obj132").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CameraRive.tsx");
 
 export const CameraRive = forwardRefResult;

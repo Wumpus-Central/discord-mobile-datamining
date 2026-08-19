@@ -1,9 +1,9 @@
 // === Module 13568: IGNORE_ANALYTICS_BREADCRUMB_EVENTS ===
 
 // Module 13568 (IGNORE_ANALYTICS_BREADCRUMB_EVENTS)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");
 
 export const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = ["notification_clicked", "experiment_user_triggered", "experiment_dm_triggered", "experiment_guild_triggered", "device_event", "react_soft_exception", "network_capabilities_changed", "foreground_service", "app_lifecycle", "ui_lifecycle", "touch_event", "http_request", "websocket_message_received"];
 export const filterThrottle = function filterThrottle(arg0) {

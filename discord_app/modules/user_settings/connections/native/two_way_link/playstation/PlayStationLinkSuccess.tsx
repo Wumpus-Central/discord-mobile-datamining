@@ -6,21 +6,20 @@ import Text from "Text" /* 4734 */;
 import Button from "Button" /* 4745 */;
 import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
 import styles from "styles" /* 9756 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
 
 export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   let obj = styles;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = callback3();
   const items = [callback(closure_4, { source: React.useMemo(() => ({ uri: callback(table[5]) }), []), style: callback3().image }), , ];

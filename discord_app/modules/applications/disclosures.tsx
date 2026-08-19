@@ -1,11 +1,12 @@
 // === Module 9768: _getDisclosures ===
 
 // Module 9768 (_getDisclosures)
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 import create from "create" /* 9769 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function _getDisclosures() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -112,7 +113,7 @@ function _ackDisclosures() {
   }
   return applyArgumentsResult;
 }
-let result = require("set").fileFinishedImporting("modules/applications/disclosures.tsx");
+let result = require("obj132").fileFinishedImporting("modules/applications/disclosures.tsx");
 
 export const ApplicationDisclosure = require("create").ApplicationDisclosureType;
 export const getDisclosures = function getDisclosures(closure_0) {
@@ -135,13 +136,13 @@ export const ackDisclosures = function ackDisclosures(closure_0, closure_1_50) {
   }
   return applyArgumentsResult;
 };
-export const getTextForDisclosure = function getTextForDisclosure(toFixed) {
-  if (create.ApplicationDisclosureType.IP_LOCATION === toFixed) {
-    const intl2 = tmp(1236).intl;
-    return intl2.string(tmp(1236).t["6wPmjo"]);
-  } else if (tmp(9769).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
-    const intl = tmp(1236).intl;
-    return intl.string(tmp(1236).t["/uOMKZ"]);
+export const getTextForDisclosure = function getTextForDisclosure(item) {
+  if (create.ApplicationDisclosureType.IP_LOCATION === item) {
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t["6wPmjo"]);
+  } else if (create.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === item) {
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/uOMKZ"]);
   } else {
     return null;
   }

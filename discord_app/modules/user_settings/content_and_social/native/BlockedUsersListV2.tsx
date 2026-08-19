@@ -13,11 +13,11 @@ import context from "context" /* 7139 */;
 import contextDefault from "context" /* 7139 */;
 import getBlockedSource from "getBlockedSource" /* 14159 */;
 import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function BlockedUsersList(userIds) {
   userIds = userIds.userIds;
   const tmp = callback3();
@@ -42,7 +42,7 @@ function BlockedUsersList(userIds) {
     obj2[3] = intl2.formatToPlainString(getSystemLocale.t["c+JVEB"], obj3);
     const items = [callback(Text.Text, obj2), ];
     const obj4 = { hasIcons: true, children: null };
-    obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
+    obj4[1] = userIds.map((item, index) => callback2(callback(table[14]), { userId: item }, item));
     const intl3 = getSystemLocale.intl;
     items[1] = callback(TableRowGroupTitle.TableRowGroup, obj4, intl3.string(getSystemLocale.t.PFOUKW));
     obj1[0] = items;
@@ -54,13 +54,11 @@ function BlockedUsersList(userIds) {
 }
 noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { list: null, sectionLabelStyle: null };
-createCacheKey = { flex: 1, paddingTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
+const createCacheKey = { flex: 1, paddingTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
 
 export default function ConnectedBlockedUsersList() {
   let obj = initialize;

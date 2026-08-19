@@ -1,17 +1,16 @@
 // === Module 9417: handleJoinGuild ===
 
 // Module 9417 (handleJoinGuild)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
 
-let result = set.fileFinishedImporting("modules/guild/GuildUtils.tsx");
+let result = obj132.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
 export const handleJoinGuild = function handleJoinGuild(closure_0) {
   importDefault = closure_0;
   if (null != closure_0) {
-    const obj = showTooManyUserGuildsAlertDefault;
-    showTooManyUserGuildsAlertDefault.joinGuild(closure_0).then(() => {
-      const result = callback(closure_1_1[0]).transitionToGuildSync(callback);
+    showTooManyUserGuildsAlertDefault.joinGuild(closure_0).then((result) => {
+      result = callback(dependencyMap[0]).transitionToGuildSync(callback);
     });
     const joinGuildResult = showTooManyUserGuildsAlertDefault.joinGuild(closure_0);
   }

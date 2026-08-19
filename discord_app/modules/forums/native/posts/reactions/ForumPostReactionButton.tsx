@@ -14,12 +14,12 @@ import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10
 import handleOutOfSuperReactions from "handleOutOfSuperReactions" /* 10456 */;
 import useEmojiColorPalette from "useEmojiColorPalette" /* 10461 */;
 import AnimatedCountDefault from "AnimatedCount" /* 10519 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 class BurstReactionButton {
   constructor(arg0) {
     ({ colors, emoji, onPress, onLongPress, containerStyle, count, emojiSize, selected, animate, animateCount, accessible } = global);
@@ -145,16 +145,14 @@ class ReactionButton {
   }
 }
 ({ jsxs: c5, jsx: closure_6 } = jsxProd);
-createCacheKey = { container: null, selected: null, textEmoji: null, imageEmoji: null, countContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 8, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.REACTION_BORDER_DEFAULT, backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_DEFAULT, minWidth: 32, minHeight: 26, maxHeight: 26 };
+const createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 8, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.REACTION_BORDER_DEFAULT, backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_DEFAULT, minWidth: 32, minHeight: 26, maxHeight: 26 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT, backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT };
 createCacheKey[2] = { fontSize: 12 };
 createCacheKey[3] = { height: 16, width: 16 };
 createCacheKey[4] = { paddingStart: 4 };
 let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderColor: ThemesDefault.colors.REACTION_BORDER_REACTED_DEFAULT, backgroundColor: ThemesDefault.colors.REACTION_BACKGROUND_REACTED_DEFAULT };
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/reactions/ForumPostReactionButton.tsx");
+const result = require("obj132").fileFinishedImporting("modules/forums/native/posts/reactions/ForumPostReactionButton.tsx");
 
 export const DEFAULT_EMOJI_SIZE = 14;
 export const AdditionalReactionCount = function AdditionalReactionCount(arg0) {
@@ -191,16 +189,13 @@ export const ForumPostReactionButton = function ForumPostReactionButton(emojiSiz
     num = 14;
   }
   let disableReactionCreates;
-  let disableReactionUpdates;
-  let onTapReaction;
-  let onLongTapReaction;
   const tmp = locationAnalyticsObject(disableReactionCreates[11])(thread);
   disableReactionCreates = tmp.disableReactionCreates;
-  disableReactionUpdates = tmp.disableReactionUpdates;
+  const disableReactionUpdates = tmp.disableReactionUpdates;
   let obj = { threadId: thread.id };
   const tmp2 = locationAnalyticsObject(disableReactionCreates[5])(obj);
-  onTapReaction = tmp2.onTapReaction;
-  onLongTapReaction = tmp2.onLongTapReaction;
+  const onTapReaction = tmp2.onTapReaction;
+  const onLongTapReaction = tmp2.onLongTapReaction;
   const AnimateEmoji = reaction(disableReactionCreates[12]).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
   const items = [disableReactionCreates, disableReactionUpdates, locationAnalyticsObject, onTapReaction, reaction];
@@ -232,8 +227,6 @@ export const ForumPostReactionButton = function ForumPostReactionButton(emojiSiz
     obj[10] = setting;
     obj[11] = animateCount;
     let tmp10Result = callback2(BurstReactionButton, obj);
-    const tmp10 = callback2;
-    const tmp11 = BurstReactionButton;
   } else {
     obj = { accessible: null, emoji: null, selected: null, count: null, onPress: null, onLongPress: null, containerStyle: null, textStyle: null, emojiSize: null, animate: null, animateCount: null };
     obj[0] = tmp6;

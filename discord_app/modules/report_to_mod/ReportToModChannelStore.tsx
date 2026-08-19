@@ -1,8 +1,9 @@
 // === Module 11941: useReportToModChannelFiltersStore ===
 
 // Module 11941 (useReportToModChannelFiltersStore)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import keys from "keys" /* 644 */;
+import "createJSONStorage";
 import createJSONStorage from "createJSONStorage" /* 4242 */;
 
 let obj = { name: "report-to-mod-channel-storage", storage: null };
@@ -15,9 +16,8 @@ obj = keys.create(createJSONStorage.persist((arg0, arg1) => {
     setShowResolvedFlags(arg0, arg1) {
       const callback = arg0;
       closure_1 = arg1;
-      return callback(closure_1_2[2]).batchUpdates(() => {
+      return callback(dependencyMap[2]).batchUpdates(() => {
         callback((channelShowResolvedFlags) => {
-          obj = { channelShowResolvedFlags: null };
           obj = {};
           const merged = Object.assign(channelShowResolvedFlags.channelShowResolvedFlags);
           obj[closure_0] = closure_1;
@@ -35,7 +35,7 @@ obj = keys.create(createJSONStorage.persist((arg0, arg1) => {
     }
   };
 }, obj));
-const result = set.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
+const result = obj132.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
 
 export const useReportToModChannelFiltersStore = obj;
 export const useShouldShowResolvedFlagsForChannel = function useShouldShowResolvedFlagsForChannel(arg0) {

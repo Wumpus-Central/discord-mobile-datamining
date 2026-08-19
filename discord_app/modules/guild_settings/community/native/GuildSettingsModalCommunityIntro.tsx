@@ -3,21 +3,20 @@
 // Module 16877 (FeatureCard)
 import ThemesDefault from "Themes" /* 712 */;
 import Text from "Text" /* 4734 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "createGuildRecordFromRust" /* 1910 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_9 from "handleFormInit" /* 8875 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import handleFormInit from "handleFormInit" /* 8875 */;
 import ME from "ME" /* 676 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 function FeatureCard(arg0) {
   ({ icon, header, body } = arg0);
   const tmp = callback3();
-  let obj = { style: tmp.featureCard, children: null };
-  obj = { style: tmp.featureIcon, children: icon() };
+  let obj = { style: tmp.featureIcon, children: icon() };
   const items = [callback(closure_4, obj), ];
   obj = { style: tmp.featureDescription, children: null };
   const items1 = [callback(Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: body })];
@@ -29,30 +28,25 @@ function FeatureCard(arg0) {
 ({ View: c4, Image: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ HelpdeskArticles: c10, GuildFeatures: unpackModuleId, GuildSettingsSections: closure_12, Permissions: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-createCacheKey = { container: { height: "100%" }, contentPadding: { padding: 16 }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", marginBottom: 24 }, details: { textAlign: "center", marginTop: 24 }, headerImage: { width: "100%" }, features: { marginTop: 32, marginBottom: 32 }, featureCard: null, featureIcon: null, featureDescription: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.sm, marginTop: 8, alignItems: "flex-start" };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.sm, marginTop: 8, alignItems: "flex-start" };
 createCacheKey[7] = createCacheKey;
 createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
 createCacheKey[9] = { overflow: "hidden", flex: 1 };
 let closure_17 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx");
 
 export default function GuildSettingsModalCommunityIntro(contentContainerStyle) {
   ({ guildId: require, onClose } = contentContainerStyle);
   let navigation;
-  let stateFromStores;
-  let stateFromStores1;
-  let stateFromStores2;
   let tmp = callback3();
   let obj = require(navigation[14]);
   navigation = obj.useNavigation();
   obj1 = require(navigation[15]);
   const items = [closure_7];
-  stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getGuild(closure_0));
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getGuild(closure_0));
   let obj2 = require(navigation[15]);
   const items1 = [closure_8];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => {
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let canResult = null != stateFromStores;
     if (canResult) {
       canResult = closure_1_8.can(closure_1_13.ADMINISTRATOR, tmp);
@@ -61,7 +55,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   });
   let obj3 = require(navigation[15]);
   const items2 = [closure_9];
-  stateFromStores2 = obj3.useStateFromStores(items2, () => submitting.isSubmitting());
+  const stateFromStores2 = obj3.useStateFromStores(items2, () => submitting.isSubmitting());
   const items3 = [stateFromStores, stateFromStores2, navigation, onClose];
   const effect = stateFromStores.useEffect(() => {
     let tmp = !stateFromStores2;
@@ -82,7 +76,6 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
     }
   }, items3);
   let obj4 = require(navigation[18]);
-  obj = { children: null };
   obj = { style: tmp.container, contentContainerStyle: items4, children: null };
   items4 = [tmp.contentPadding, contentContainerStyle.contentContainerStyle];
   obj1 = { resizeMode: "contain", source: obj4.useIntroHeaderSource(), style: tmp.headerImage };
@@ -106,8 +99,8 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
       onClose(navigation[21]).open();
       const obj2 = onClose(navigation[21]);
     } else {
-      closure_1_0(navigation[22]).communityAdminOnly();
-      const obj = closure_1_0(navigation[22]);
+      require(navigation[22]).communityAdminOnly();
+      const obj = require(navigation[22]);
     }
   };
   obj5[2] = !stateFromStores1;
@@ -165,9 +158,9 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   const intl10 = require(navigation[10]).intl;
   obj12[2] = intl10.string(require(navigation[10]).t.hyNkHz);
   items6[2] = obj12;
-  obj7[1] = items6.map((arg0, arg1) => {
-    const merged = Object.assign(arg0);
-    return callback2(closure_18, {}, arg1);
+  obj7[1] = items6.map((item, index) => {
+    const merged = Object.assign(item);
+    return callback2(closure_18, {}, index);
   });
   items5[5] = callback(stateFromStores1, obj7);
   obj[2] = items5;

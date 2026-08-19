@@ -1,14 +1,13 @@
 // === Module 12000: chunk ===
 
 // Module 12000 (chunk)
-import dispatcherDefault from "dispatcher" /* 709 */;
 import _maybeFetchProductsWithSkus from "_maybeFetchProductsWithSkus" /* 8962 */;
 import _maybeFetchCollectionsWithProducts from "_maybeFetchCollectionsWithProducts" /* 12001 */;
-import closure_2 from "getFetchState" /* 11999 */;
-import closure_3 from "getFetchState" /* 8963 */;
-import set from "set" /* 2 */;
+import getFetchState from "getFetchState" /* 11999 */;
+import getFetchState2 from "getFetchState" /* 8963 */;
+import importDefaultResult from "dispatcher" /* 709 */;
 
-require = arg1;
+require = fn;
 function chunk(arr) {
   let length;
   let sum;
@@ -29,30 +28,28 @@ function flushProducts() {
   const items = [...set];
   set.clear();
   for (const item10016 of tmp2) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let obj = _maybeFetchProductsWithSkus;
     obj = { skuIds: null };
     obj[0] = item10016;
     let result = obj.maybeFetchProductsBySkuIds(obj);
     continue;
   }
+  const tmp2 = chunk(items);
 }
 function flushCollections() {
   c7 = null;
   const items = [...set1];
   set1.clear();
   for (const item10016 of tmp2) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let obj = _maybeFetchCollectionsWithProducts;
     obj = { collectionIds: null };
     obj[0] = item10016;
     let result = obj.maybeFetchCollectionsWithProducts(obj);
     continue;
   }
+  const tmp2 = chunk(items);
 }
-let set = new Set();
+const set = new Set();
 const set1 = new Set();
 let c6 = null;
 let c7 = null;
@@ -64,13 +61,9 @@ let obj = {
       let tmp2 = nextResult;
       let tmp3 = "" !== nextResult;
       if (tmp3) {
-        let tmp4 = fetchStateForSku;
-        let tmp5 = nextResult;
         tmp3 = "loading" !== fetchStateForSku.getFetchStateForSku(tmp2);
       }
       if (tmp3) {
-        let tmp6 = set;
-        let tmp7 = nextResult;
         let addResult = set.add(tmp2);
       }
       continue;
@@ -91,13 +84,9 @@ let obj = {
       let tmp2 = nextResult;
       let tmp3 = "" !== nextResult;
       if (tmp3) {
-        let tmp4 = fetchState;
-        let tmp5 = nextResult;
         tmp3 = "loading" !== fetchState.getFetchState(tmp2);
       }
       if (tmp3) {
-        let tmp6 = set1;
-        let tmp7 = nextResult;
         let addResult = set1.add(tmp2);
       }
       continue;
@@ -126,7 +115,7 @@ let obj = {
     }
   }
 };
-const subscription = dispatcherDefault.subscribe("LOGOUT", obj.reset);
-let result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopManager.tsx");
+const subscription = importDefaultResult.subscribe("LOGOUT", obj.reset);
+let result = require("obj132").fileFinishedImporting("modules/collectibles/CollectiblesShopManager.tsx");
 
 export const CollectiblesShopManager = obj;

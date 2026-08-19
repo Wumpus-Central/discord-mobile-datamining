@@ -2,12 +2,12 @@
 
 // Module 5084 (getAll)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "ensureGuildLoaded" /* 1391 */;
-import closure_4 from "generateOldThreadCutoff" /* 4772 */;
-import set from "set" /* 2 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
+import obj132 from "obj132" /* 2 */;
 
-let set = importDefault;
+let obj132 = importDefault;
 let closure_5 = new timestampDefault("ReadStates");
 class ReadStates {
   constructor() {
@@ -40,12 +40,10 @@ const prototype = ReadStates.prototype;
 prototype["getAll"] = function getAll(arg0) {
   closure_0 = arg0;
   return callback(function*() {
-    let length = tmp5;
-    closure_0 = tmp2;
     const _performance2 = performance;
     closure_0 = performance.now();
     const states = closure_1_0(closure_1_1[4]).readStates(closure_1_0);
-    length = yield states.getMany();
+    const length = yield states.getMany();
     const _performance = performance;
     const _HermesInternal = HermesInternal;
     closure_1_5.log("asynchronously loaded in " + closure_2 - closure_0 + "ms (readStates: " + length.length + ")");
@@ -75,7 +73,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       const _Object = Object;
       const keys = Object.keys(mutablePrivateChannels.getMutablePrivateChannels());
       const _Set = Set;
-      set = new Set(keys);
+      const set = new Set(keys);
       const sorted = statesTransaction(12)(keys).sort(statesTransaction(11).compare);
       const obj10 = statesTransaction(12)(keys);
       let str = sorted.reverse().value()[0];
@@ -88,29 +86,17 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       while (iter !== undefined) {
         let tmp7 = nextResult;
         if (null != nextResult._lastMessageId) {
-          let tmp34 = statesTransaction;
           let tmp35 = statesTransaction;
-          let tmp36 = dependencyMap;
-          let tmp37 = dependencyMap;
           let obj12 = statesTransaction(11);
-          let tmp38 = nextResult;
-          let tmp39 = str2;
           if (1 === obj12.compare(tmp7._lastMessageId, str2)) {
-            let tmp8 = nextResult;
             str2 = tmp7._lastMessageId;
           }
-          let tmp9 = nextResult;
           let hasItem = set.has(tmp7.channelId);
           if (hasItem) {
-            let tmp11 = tmp34;
-            let tmp12 = tmp36;
             let tmp35Result = tmp35(11);
-            let tmp13 = nextResult;
-            let tmp14 = _lastMessageId;
             hasItem = 1 === tmp35Result.compare(tmp7._lastMessageId, _lastMessageId);
           }
           if (hasItem) {
-            let tmp15 = nextResult;
             _lastMessageId = tmp7._lastMessageId;
           }
         }
@@ -133,11 +119,12 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
   }
   statesTransaction = statesTransaction(1955).readStatesTransaction(database);
   statesTransaction.delete();
-  const item = allReadStates.forEach((type) => statesTransaction.put("" + type.type + "-" + type.channelId, type));
+  const item = allReadStates.forEach((item, index) => statesTransaction.put("" + item.type + "-" + item.channelId, item));
+  const obj7 = statesTransaction(1955);
 };
-set = Object.create(ReadStates.prototype);
-set.readStateVersion = null;
-set.actions = {
+obj132 = Object.create(ReadStates.prototype);
+obj132.readStateVersion = null;
+obj132.actions = {
   CONNECTION_OPEN(arg0) {
     return obj.handleConnectionOpen(arg0);
   },
@@ -156,6 +143,6 @@ set.actions = {
     return obj.handleWriteCaches(arg1, true);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/ReadStates.tsx");
+let result = obj132.fileFinishedImporting("modules/app_database/modules/ReadStates.tsx");
 
-export default set;
+export default obj132;

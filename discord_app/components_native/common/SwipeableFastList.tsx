@@ -31,13 +31,14 @@ class SwipeableFastList extends Component {
         ref(arg0) {
           closure_0._refs[closure_3] = arg0;
           if (tmp) {
-            obj.bounceSwipeable(arg0);
-            const props = obj.props;
+            closure_0.bounceSwipeable(arg0);
+            const props = closure_0.props;
             const onBounceSwipable = props.onBounceSwipable;
             if (onBounceSwipable != null) {
               onBounceSwipable();
             }
           }
+          tmp = null != arg0 && c4;
         },
         overshootFriction: 8,
         onSwipeableWillOpen(View, arg1) {
@@ -48,7 +49,31 @@ class SwipeableFastList extends Component {
         },
         children: props.renderItem(arg0, arg1, arg2)
       };
-      return closure_1_2(arg0(closure_1_1[2]), obj);
+      return jsx(arg0(dependencyMap[2]), {
+        renderRightActions() {
+          return renderQuickActions(closure_0, closure_1);
+        },
+        ref(arg0) {
+          closure_0._refs[closure_3] = arg0;
+          if (tmp) {
+            closure_0.bounceSwipeable(arg0);
+            const props = closure_0.props;
+            const onBounceSwipable = props.onBounceSwipable;
+            if (onBounceSwipable != null) {
+              onBounceSwipable();
+            }
+          }
+          tmp = null != arg0 && c4;
+        },
+        overshootFriction: 8,
+        onSwipeableWillOpen(View, arg1) {
+          return closure_0.handleOpen(closure_3);
+        },
+        onSwipeableClose() {
+          return closure_0.handleClose(closure_3);
+        },
+        children: props.renderItem(arg0, arg1, arg2)
+      });
     };
     applyArgumentsResult.handleScroll = function handleScroll(arg0) {
       applyArgumentsResult.closeOpenRow();
@@ -68,8 +93,7 @@ prototype["componentWillUnmount"] = function componentWillUnmount() {
   }
 };
 prototype["bounceSwipeable"] = function bounceSwipeable(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   closure_0 = arg0;
   if (null != this._bounceTimeout) {
     const _clearTimeout = clearTimeout;
@@ -87,7 +111,6 @@ prototype["closeOpenRow"] = function closeOpenRow() {
   if (null != this._openRowKey) {
     if (null != self._refs[self._openRowKey]) {
       self._refs[self._openRowKey].close();
-      const obj = self._refs[self._openRowKey];
     }
     self._openRowKey = null;
   }
@@ -113,6 +136,6 @@ SwipeableFastList.defaultProps = {
     return null;
   }
 };
-const result = require("set").fileFinishedImporting("components_native/common/SwipeableFastList.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/SwipeableFastList.tsx");
 
 export default SwipeableFastList;

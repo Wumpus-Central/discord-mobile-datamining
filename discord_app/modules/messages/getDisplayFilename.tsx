@@ -1,9 +1,9 @@
 // === Module 8428: getDisplayFilename ===
 
 // Module 8428 (getDisplayFilename)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/getDisplayFilename.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/getDisplayFilename.tsx");
 
 export default function getDisplayFilename(title) {
   if (null != title.title) {
@@ -13,7 +13,6 @@ export default function getDisplayFilename(title) {
       let str2 = "";
       if (lastIndexOfResult > 0) {
         str2 = title.filename.substr(lastIndexOfResult);
-        const str3 = title.filename;
       }
       return title.title + str2;
     }

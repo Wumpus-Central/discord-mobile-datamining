@@ -1,12 +1,12 @@
 // === Module 10679: hasUpdates ===
 
 // Module 10679 (hasUpdates)
-import set2 from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const DCDChatBlockerManager = get_ActivityIndicator.NativeModules.DCDChatBlockerManager;
-const result = set2.fileFinishedImporting("modules/chat/native/ChatUpdatesQueue.tsx");
+const result = obj132.fileFinishedImporting("modules/chat/native/ChatUpdatesQueue.tsx");
 class ChatUpdatesQueue {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -107,11 +107,11 @@ prototype["flush"] = function flush() {
   const self = this;
   this.queueStartTimestamp = null;
   const queue = this.queue;
-  const item = queue.forEach((arg0) => {
-    if (null != arg0) {
+  const item = queue.forEach((item, index) => {
+    if (null != item) {
       const onFlushItem = self.onFlushItem;
       if (onFlushItem != null) {
-        onFlushItem(arg0);
+        onFlushItem(item);
       }
     }
   });

@@ -1,19 +1,18 @@
 // === Module 11893: JoinServerContainer ===
 
 // Module 11893 (JoinServerContainer)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 8617 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ CreateGuildModalStates: c5, NUXGuildTemplatesAnalytics: closure_6 } = NUXGuildTemplatesAnalytics);
-createCacheKey = { flex: { flex: 1 }, contentContainer: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
+const createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/create_guild/native/components/JoinServer.tsx");
+const result = require("obj132").fileFinishedImporting("modules/create_guild/native/components/JoinServer.tsx");
 
 export default function JoinServerContainer(initialRoute) {
   initialRoute = initialRoute.initialRoute;
@@ -22,8 +21,6 @@ export default function JoinServerContainer(initialRoute) {
   let first;
   let React;
   c5 = undefined;
-  closure_6 = undefined;
-  let navigation;
   const tmp2 = first(React.useState(""), 2);
   first = tmp2[0];
   React = tmp2[1];
@@ -32,12 +29,12 @@ export default function JoinServerContainer(initialRoute) {
   const tmp6 = first(React.useState(false), 2);
   closure_6 = tmp6[1];
   let obj = initialRoute(location[6]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [navigation, initialRoute, onClose];
   const layoutEffect = React.useLayoutEffect(() => {
     if (initialRoute === _undefined.JOIN_SERVER) {
       let headerCloseButton = initialRoute(location[7]).getHeaderCloseButton(() => {
-        closure_1_0(closure_1_2[8]).trackNUFStep(closure_1_6.STEP_GUILD_JOIN, closure_1_6.STEP_FRIEND_LIST, { skip: true });
+        initialRoute(location[8]).trackNUFStep(closure_1_6.STEP_GUILD_JOIN, closure_1_6.STEP_FRIEND_LIST, { skip: true });
         callback();
       });
       const obj2 = initialRoute(location[7]);
@@ -49,8 +46,7 @@ export default function JoinServerContainer(initialRoute) {
     }
     navigation.setOptions({ headerLeft: headerCloseButton });
   }, items);
-  obj = { top: true, left: true, right: true, style: items1, children: null };
-  items1 = [, ];
+  const items1 = [, ];
   ({ flex: arr2[0], contentContainer: arr2[1] } = tmp);
   obj = { inviteString: first, error: null, submitting: null, onInviteChange: null, onDone: null };
   let stringResult = null;
@@ -64,7 +60,7 @@ export default function JoinServerContainer(initialRoute) {
   obj[3] = function onInviteChange(arg0) {
     callback(arg0);
   };
-  obj[4] = function onDone(arg0) {
+  obj[4] = function onDone(dependencyMap) {
     const str = first.trim();
     if ("" !== str) {
       callback2(true);
@@ -77,7 +73,7 @@ export default function JoinServerContainer(initialRoute) {
         str3 = "Join Guild Modal";
       }
       const invite = obj.resolveInvite(arr, str3);
-      invite.then(() => {
+      invite.then((result) => {
         callback(false);
       });
       obj = { code: null };

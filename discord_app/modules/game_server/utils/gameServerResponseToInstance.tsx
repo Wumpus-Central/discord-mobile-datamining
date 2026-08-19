@@ -1,9 +1,9 @@
 // === Module 4284: gameServerResponseToInstance ===
 
 // Module 4284 (gameServerResponseToInstance)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
+const result = obj132.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
 
 export default function gameServerResponseToInstance(id) {
   const obj = { id: id.id, name: id.name, regionId: id.region_id, regionName: id.region_name, planId: id.sku_id, planName: id.plan_name, onlineConnectionsCount: null, maxConnectionsCount: null, serverIP: null, port: null, entitlementId: null, subscriptionId: null, providerType: null, gameServerPanelUrl: null, status: null, gameId: null, gameConfig: null };

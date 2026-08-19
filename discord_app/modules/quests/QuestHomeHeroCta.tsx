@@ -1,9 +1,9 @@
 // === Module 10504: questHomeHeroCtaFromServer ===
 
 // Module 10504 (questHomeHeroCtaFromServer)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
+const result = obj132.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
 
 export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(cta) {
   let obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };

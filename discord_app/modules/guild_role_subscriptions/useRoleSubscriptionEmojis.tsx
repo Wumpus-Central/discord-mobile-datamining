@@ -1,12 +1,12 @@
 // === Module 16971: items ===
 
 // Module 16971 (items)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "getEmojiToGroupId" /* 6727 */;
+import noop from "noop" /* 19 */;
+import getEmojiToGroupId from "getEmojiToGroupId" /* 6727 */;
 
-const require = arg1;
+const require = fn;
 let items = [];
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionEmojis.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionEmojis.tsx");
 
 export default function useRoleSubscriptionEmojis(arg0) {
   const _require = arg0;
@@ -16,9 +16,9 @@ export default function useRoleSubscriptionEmojis(arg0) {
   const items2 = [stateFromStores, arg0];
   return React.useMemo(() => {
     if (null == stateFromStores) {
-      let found = closure_1_4;
+      let found = items;
     } else {
-      found = stateFromStores.filter((roles) => closure_1_0(closure_1_1[3]).isRoleSubscriptionEmoji(roles, closure_0));
+      found = stateFromStores.filter((item, index) => closure_1_0(stateFromStores[3]).isRoleSubscriptionEmoji(item, closure_0));
     }
     return found;
   }, items2);

@@ -1,11 +1,12 @@
 // === Module 8885: getEventLocationIconSource ===
 
 // Module 8885 (getEventLocationIconSource)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getChannelIcon from "getChannelIcon" /* 6832 */;
 import registerAssetDefault from "registerAsset" /* 8825 */;
+import LocationIcon2 from "LocationIcon" /* 8826 */;
 
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");
+const result = obj132.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");
 
 export const getEventLocationIconSource = function getEventLocationIconSource(event, channel, stateFromStores2) {
   if (null != obj.getLocationFromEvent(event)) {
@@ -25,11 +26,11 @@ export const getEventLocationIconSource = function getEventLocationIconSource(ev
 };
 export const getEventLocationIconComponent = function getEventLocationIconComponent(event, channel, stateFromStores1) {
   if (null != obj.getLocationFromEvent(event)) {
-    let LocationIcon = tmp(8826).LocationIcon;
+    let LocationIcon = LocationIcon2.LocationIcon;
   } else {
     LocationIcon = null;
     if (null != channel) {
-      const tmpResult = tmp(6832);
+      const tmpResult = getChannelIcon;
       if (stateFromStores1) {
         let channelIconComponent = tmpResult.getChannelIconComponent(channel);
       } else {

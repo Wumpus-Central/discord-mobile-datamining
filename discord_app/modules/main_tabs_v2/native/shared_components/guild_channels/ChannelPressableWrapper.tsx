@@ -6,9 +6,9 @@ import getLayoutStyles from "getLayoutStyles" /* 10056 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx");
+const result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx");
 
 export const renderChannelPressableWrapper = function renderChannelPressableWrapper(children, panelVariant) {
   let flag = panelVariant.panelVariant;
@@ -25,5 +25,5 @@ export const renderChannelPressableWrapper = function renderChannelPressableWrap
   }
   obj = { style: items, children };
   items = [marginThread, { flex: 1, flexDirection: "row", alignItems: "center" }];
-  return <View style={items}>{arg0}</View>;
+  return <View style={items}>{children}</View>;
 };

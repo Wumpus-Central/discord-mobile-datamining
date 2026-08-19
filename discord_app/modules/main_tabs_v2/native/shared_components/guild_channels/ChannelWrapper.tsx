@@ -6,9 +6,9 @@ import getLayoutStyles from "getLayoutStyles" /* 10056 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx");
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx");
 
 export const renderChannelWrapper = function renderChannelWrapper(children, fontScale) {
   ({ channel, layout, launchpad, panelVariant } = fontScale);
@@ -49,5 +49,5 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
   }
   obj = { style: items, children };
   items[2] = paddingThread;
-  return <View style={items}>{arg0}</View>;
+  return <View style={items}>{children}</View>;
 };

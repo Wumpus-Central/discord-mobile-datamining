@@ -1,10 +1,10 @@
 // === Module 8065: getSystemLocale ===
 
 // Module 8065 (getSystemLocale)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = set.fileFinishedImporting("modules/forums/ForumPlatformUtils.native.tsx");
+const result = obj132.fileFinishedImporting("modules/forums/ForumPlatformUtils.native.tsx");
 
 export default {
   getForumChannelPermissionText() {

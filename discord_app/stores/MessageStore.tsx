@@ -6,31 +6,33 @@ import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
+import hasFlag from "hasFlag" /* 1403 */;
 import _handleConnectionOpen from "_handleConnectionOpen" /* 4495 */;
 import mergeMessageDefault from "mergeMessage" /* 4996 */;
 import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotificationRawPayloadFixExperimentEnabled" /* 4999 */;
 import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
 import items2 from "items" /* 5040 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 1982 */;
-import closure_6 from "dropChannelIfEmpty" /* 4995 */;
-import closure_7 from "_getSystemLocale" /* 1994 */;
-import closure_8 from "fetchFingerprint" /* 1218 */;
-import closure_9 from "ensureGuildLoaded" /* 1391 */;
-import closure_10 from "percentageScrolled" /* 4973 */;
-import closure_11 from "comparator" /* 1980 */;
-import closure_12 from "trackCommunicationDisabled" /* 1990 */;
-import closure_13 from "createGuildRecordFromRust" /* 1910 */;
-import closure_14 from "getUncachedChannelPermissions" /* 4021 */;
-import closure_15 from "markAllUserIdListsStale" /* 4030 */;
-import closure_16 from "handleConnectionOpen" /* 1979 */;
-import closure_17 from "handleConnectionOpen" /* 4197 */;
-import closure_18 from "mergeGuildAvatar" /* 1922 */;
+import isNotAutomodEmbed from "isNotAutomodEmbed" /* 5424 */;
+import canEditMessageDefault from "canEditMessage" /* 5425 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import initialize from "initialize" /* 1982 */;
+import dropChannelIfEmpty from "dropChannelIfEmpty" /* 4995 */;
+import _getSystemLocale from "_getSystemLocale" /* 1994 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import percentageScrolled from "percentageScrolled" /* 4973 */;
+import comparator from "comparator" /* 1980 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1910 */;
+import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4021 */;
+import markAllUserIdListsStale from "markAllUserIdListsStale" /* 4030 */;
+import handleConnectionOpen2 from "handleConnectionOpen" /* 1979 */;
+import handleConnectionOpen3 from "handleConnectionOpen" /* 4197 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import ME from "ME" /* 676 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 function reinjectEphemerals(channelId, truncateResult) {
   closure_0 = truncateResult;
   if (truncateResult.hasMoreAfter) {
@@ -40,7 +42,7 @@ function reinjectEphemerals(channelId, truncateResult) {
     if (0 === messages.length) {
       return truncateResult;
     } else {
-      const found = messages.filter((id) => !truncateResult.has(id.id));
+      const found = messages.filter((item, index) => !truncateResult.has(item.id));
       let mutation = truncateResult;
       if (0 !== found.length) {
         mutation = truncateResult.mutate((_merge) => {
@@ -54,8 +56,8 @@ function reinjectEphemerals(channelId, truncateResult) {
   }
 }
 function handleConnectionOpen() {
-  const item = mergeMessageDefault.forEach((mutate) => {
-    callback(table[19]).commit(mutate.mutate({ ready: false, loadingMore: false }));
+  const item = mergeMessageDefault.forEach((item, index) => {
+    callback(table[19]).commit(item.mutate({ ready: false, loadingMore: false }));
   });
   set.clear();
 }
@@ -107,13 +109,11 @@ function _addPushNotificationMessageIfNotCached() {
                   c6 = 2;
                   c7 = 1;
                   obj1 = { value: null, done: false };
-                  obj1[0] = lib(1955).messages(databaseResult).get(basicChannel.guild_id, tmp35, tmp36.id);
+                  obj1[0] = lib(1955).messages(databaseResult).get(basicChannel.guild_id, closure_0, lib.id);
                   return obj1;
                 }
               }
               const obj9 = lib(1955);
-              tmp35 = closure_0;
-              tmp36 = lib;
             }
           } else {
             if (1 === tmp7) {
@@ -187,17 +187,15 @@ function receiveMediaMentionMessage(item10037) {
     }
     obj[3] = guild_id;
     obj.message_reference = obj;
-    const obj3 = mergeMessageDefault;
-    const tmp5 = importDefault;
     const mutation = orCreate.receiveMessage(obj, false).mutate({ ready: true });
     const receiveMessageResult = orCreate.receiveMessage(obj, false);
-    tmp5(4996).commit(mutation);
-    const tmp5Result = tmp5(4996);
+    mergeMessageDefault.commit(mutation);
+    const tmp5Result = mergeMessageDefault;
   }
 }
 function handleCleanup() {
-  const item = mergeMessageDefault.forEach((channelId) => {
-    channelId = channelId.channelId;
+  const item = mergeMessageDefault.forEach((item, index) => {
+    const channelId = item.channelId;
     if (null == channel.getChannel(channelId)) {
       callback(table[19]).clear(channelId);
       const obj = callback(table[19]);
@@ -206,17 +204,17 @@ function handleCleanup() {
 }
 function handleRelationshipUpdate() {
   c0 = false;
-  const item = mergeMessageDefault.forEach((reset) => {
-    closure_1_1(closure_1_2[19]).commit(reset.reset(reset.map((blocked) => {
-      let result = blocked;
-      if (blocked.blocked !== closure_1_15.isBlockedForMessage(blocked)) {
+  const item = mergeMessageDefault.forEach((item, index) => {
+    mergeMessageDefault.commit(item.reset(item.map((item, index) => {
+      let result = item;
+      if (item.blocked !== closure_1_15.isBlockedForMessage(item)) {
         c0 = true;
-        result = blocked.set("blocked", obj.isBlockedForMessage(blocked));
+        result = item.set("blocked", closure_1_15.isBlockedForMessage(item));
       }
       let result1 = result;
       if (result.ignored !== closure_1_15.isIgnoredForMessage(result)) {
         c0 = true;
-        result1 = result.set("ignored", obj.isIgnoredForMessage(result));
+        result1 = result.set("ignored", closure_1_15.isIgnoredForMessage(result));
       }
       return result1;
     })));
@@ -225,8 +223,8 @@ function handleRelationshipUpdate() {
 }
 function performAuthorUpdate(guildId) {
   closure_0 = guildId;
-  const item = mergeMessageDefault.forEach((channelId) => {
-    const channel = closure_1_9.getChannel(channelId.channelId);
+  const item = mergeMessageDefault.forEach((item, index) => {
+    const channel = closure_1_9.getChannel(item.channelId);
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -234,20 +232,20 @@ function performAuthorUpdate(guildId) {
     if (guild_id === items) {
       items = [];
       c1 = false;
-      const item = channelId.forEach((nick) => {
-        const messageAuthor = items(closure_1_2[27]).getMessageAuthor(nick);
+      item = item.forEach((item, index) => {
+        const messageAuthor = items(closure_1_2[27]).getMessageAuthor(item);
         ({ nick, colorString } = messageAuthor);
-        if (nick === nick.nick) {
-          if (colorString === nick.colorString) {
-            items.push(nick);
+        if (nick === item.nick) {
+          if (colorString === item.colorString) {
+            items.push(item);
           }
         }
         c1 = true;
-        items.push(nick.merge({ nick, colorString }));
+        items.push(item.merge({ nick, colorString }));
+        const obj = items(closure_1_2[27]);
       });
       if (c1) {
-        closure_1_1(closure_1_2[19]).commit(channelId.reset(items));
-        const obj = closure_1_1(closure_1_2[19]);
+        mergeMessageDefault.commit(item.reset(items));
       }
     }
   });
@@ -281,26 +279,23 @@ function handleReaction(optimistic) {
         return addReactionResult;
       });
       mergeMessageDefault.commit(updateResult);
+      const tmpResult = mergeMessageDefault;
     } else {
       return false;
     }
     obj4 = _require(4032);
   }
-  let obj = mergeMessageDefault;
-  const tmp = importDefault;
 }
 function handleMessageSendFailedAutomod(arg0) {
   ({ type: require, messageData } = arg0);
   const failedMessageId = items2.getFailedMessageId(messageData);
-  const obj = items2;
-  const tmp3 = importDefault;
   const orCreate = mergeMessageDefault.getOrCreate(messageData.message.channelId);
   if (orCreate.has(failedMessageId)) {
     const updateResult = orCreate.update(failedMessageId, (embeds) => {
       embeds = embeds.embeds;
       let length;
       if (embeds != null) {
-        length = embeds.filter(closure_1_0(closure_1_2[30]).isNotAutomodEmbed).length;
+        length = embeds.filter(isNotAutomodEmbed.isNotAutomodEmbed).length;
       }
       let result = embeds;
       if (length > 0) {
@@ -308,19 +303,18 @@ function handleMessageSendFailedAutomod(arg0) {
       }
       let result1 = result;
       if ("MESSAGE_SEND_FAILED_AUTOMOD" === closure_0) {
-        result1 = result.set("flags", closure_1_0(closure_1_2[24]).addFlag(result.flags, closure_1_20.EPHEMERAL));
-        const obj2 = closure_1_0(closure_1_2[24]);
+        result1 = result.set("flags", hasFlag.addFlag(result.flags, closure_1_20.EPHEMERAL));
       }
       return result1;
     });
     mergeMessageDefault.commit(updateResult);
+    const tmp3Result = mergeMessageDefault;
   } else {
     return false;
   }
-  let obj2 = mergeMessageDefault;
 }
 ({ ChannelTypes: closure_19, MessageFlags: closure_20, MessageReferenceTypes: closure_21, MessageStates: closure_22, MessageTypes: closure_23, Permissions: closure_24 } = ME);
-let set = new Set();
+const set = new Set();
 let closure_26 = new timestampDefault("MessageStore");
 let c27 = false;
 const Store = initializeDefault.Store;
@@ -357,62 +351,59 @@ prototype["getMessage"] = function getMessage(arg0, arg1) {
 prototype["getLastEditableMessage"] = function getLastEditableMessage(id) {
   const currentUser = authStore.getCurrentUser();
   const messages = this.getMessages(id);
-  const tmp = applyDefault;
   const reversed = applyDefault(messages.toArray()).reverse();
-  return reversed.find((arg0) => {
+  return reversed.find((item, index) => {
     let id;
     if (id != null) {
       id = id.id;
     }
-    return closure_1_1(closure_1_2[32])(arg0, id);
+    return canEditMessageDefault(item, id);
   });
 };
 prototype["getLastChatCommandMessage"] = function getLastChatCommandMessage(arg0) {
   const currentUser = authStore.getCurrentUser();
   const messages = this.getMessages(arg0);
   const reversed = messages.toArray().reverse();
-  return reversed.find((interaction) => {
-    interaction = interaction.interaction;
+  return reversed.find((item, index) => {
+    const interaction = item.interaction;
     let type;
     if (interaction != null) {
       type = interaction.type;
     }
-    let tmp4 = type === lib(closure_1_2[33]).InteractionTypes.APPLICATION_COMMAND;
+    let tmp4 = type === lib(dependencyMap[33]).InteractionTypes.APPLICATION_COMMAND;
     if (tmp4) {
-      const interactionData = interaction.interactionData;
+      const interactionData = item.interactionData;
       let type1;
       if (interactionData != null) {
         type1 = interactionData.type;
       }
-      tmp4 = type1 === lib(closure_1_2[33]).ApplicationCommandType.CHAT;
+      tmp4 = type1 === lib(dependencyMap[33]).ApplicationCommandType.CHAT;
     }
     if (tmp4) {
       let id;
       if (lib != null) {
         id = lib.id;
       }
-      tmp4 = interaction.interaction.user.id === id;
+      tmp4 = item.interaction.user.id === id;
     }
     return tmp4;
   });
 };
-prototype["getLastMessage"] = function getLastMessage(channelId) {
-  const messages = this.getMessages(channelId);
-  const tmp = applyDefault;
+prototype["getLastMessage"] = function getLastMessage(closure_0) {
+  const messages = this.getMessages(closure_0);
   const reversed = applyDefault(messages.toArray()).reverse();
   return reversed.get(0);
 };
 prototype["getLastNonCurrentUserMessage"] = function getLastNonCurrentUserMessage(closure_0) {
   const currentUser = authStore.getCurrentUser();
   const messages = this.getMessages(closure_0);
-  const tmp = applyDefault;
   const reversed = applyDefault(messages.toArray()).reverse();
-  return reversed.find((author) => {
+  return reversed.find((item, index) => {
     let id;
     if (id != null) {
       id = id.id;
     }
-    return author.author.id !== id;
+    return item.author.id !== id;
   });
 };
 prototype["jumpedMessageId"] = function jumpedMessageId(arg0) {
@@ -433,7 +424,6 @@ prototype["focusedMessageId"] = function focusedMessageId(arg0) {
 };
 prototype["hasPresent"] = function hasPresent(arg0) {
   const value = mergeMessageDefault.get(arg0);
-  const obj = mergeMessageDefault;
   return null != value && value.ready && value.hasPresent();
 };
 prototype["isReady"] = function isReady(arg0) {
@@ -488,29 +478,17 @@ const messageStore = new MessageStore(dispatcherDefault, {
   BACKGROUND_SYNC_CHANNEL_MESSAGES: function handleBackgroundSyncChannelMessages(changesByChannelId) {
     changesByChannelId = changesByChannelId.changesByChannelId;
     for (const key10012 in changesByChannelId) {
-      let tmp9 = importDefault;
-      let tmp8 = key10012;
-      let tmp10 = dependencyMap;
       let obj = mergeMessageDefault;
       let value = obj.get(key10012);
       if (null == value) {
         continue;
       } else {
-        let tmp = require;
         let _default = _handleConnectionOpen.default;
         let isConnectedResult = _default.isConnected();
         if (!value.cached) {
           if (isConnectedResult) {
-            let tmp3 = logger;
             let _HermesInternal = HermesInternal;
-            let str = "Skipping background message sync for ";
-            let tmp4 = key10012;
-            let str2 = " cached:";
-            let str3 = " ready:";
-            let str4 = " hasMoreAfter:";
-            let str5 = " isConnected:";
-            let tmp5 = isConnectedResult;
-            let logResult = logger.log("Skipping background message sync for " + tmp8 + " cached:" + value.cached + " ready:" + value.ready + " hasMoreAfter:" + value.hasMoreAfter + " isConnected:" + isConnectedResult);
+            let logResult = logger.log("Skipping background message sync for " + key10012 + " cached:" + value.cached + " ready:" + value.ready + " hasMoreAfter:" + value.hasMoreAfter + " isConnected:" + isConnectedResult);
             continue;
           }
           continue;
@@ -525,12 +503,8 @@ const messageStore = new MessageStore(dispatcherDefault, {
   OVERLAY_INITIALIZE: handleConnectionOpen,
   CACHE_LOADED: function handleCacheLoaded(messages) {
     const entries = DISCORD_EPOCHDefault.entries(messages.messages);
-    const obj = DISCORD_EPOCHDefault;
     while (tmp2 !== undefined) {
-      let tmp4 = callback;
       let tmp5 = callback(tmp3, 2);
-      let tmp8 = importDefault;
-      let tmp9 = dependencyMap;
       [tmp6, tmp7] = tmp5;
       let obj2 = mergeMessageDefault;
       let orCreate = obj2.getOrCreate(tmp6);
@@ -539,6 +513,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
       let commitResult = obj4.commit(addCachedMessagesResult);
       continue;
     }
+    tmp2 = entries[Symbol.iterator]();
   },
   LOAD_MESSAGES: function handleLoadMessages() {
     return true;
@@ -567,19 +542,16 @@ const messageStore = new MessageStore(dispatcherDefault, {
     if (!tmp3) {
       truncateResult = complete.truncate(isBefore, isAfter);
     }
-    const obj = mergeMessageDefault;
-    const tmp = importDefault;
     const tmp7 = reinjectEphemerals(channelId, truncateResult);
     mergeMessageDefault.commit(tmp7);
     for (const item10037 of messages) {
-      let tmp9 = receiveMediaMentionMessage;
       let tmp10 = receiveMediaMentionMessage(item10037);
       continue;
     }
+    const tmpResult = mergeMessageDefault;
   },
   LOAD_MESSAGES_FAILURE: function handleLoadMessagesFailure(channelId) {
     const orCreate = mergeMessageDefault.getOrCreate(channelId.channelId);
-    const obj = mergeMessageDefault;
     mergeMessageDefault.commit(orCreate.mutate({ loadingMore: false, error: true }));
   },
   LOAD_MESSAGES_SUCCESS_CACHED: function handleLoadMessagesSuccessCached(truncate) {
@@ -620,11 +592,9 @@ const messageStore = new MessageStore(dispatcherDefault, {
     let tmp7 = null == truncate.truncate;
     if (!tmp7) {
       tmp7 = null == before && null == after;
-      const tmp8 = null == before && null == after;
     }
     if (!tmp7) {
       tmp7 = null != before && null != after;
-      const tmp9 = null != before && null != after;
     }
     let truncateResult = jumpToPresentResult;
     if (!tmp7) {
@@ -636,7 +606,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
       const messages = store.getMessages(channelId);
       tmp10 = truncateResult;
       if (0 !== messages.length) {
-        found = messages.filter((id) => !truncateResult.has(id.id));
+        found = messages.filter((item, index) => !truncateResult.has(item.id));
         let mutation = truncateResult;
         if (0 !== found.length) {
           mutation = truncateResult.mutate((_merge) => {
@@ -649,6 +619,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
       }
     }
     found(4996).commit(tmp10);
+    const tmpResult = found(4996);
   },
   LOCAL_MESSAGES_LOADED: function handleLocalMessagesLoaded(channelId) {
     let obj = mergeMessageDefault;
@@ -669,6 +640,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
       mutation = addCachedMessagesResult.mutate(obj);
     }
     mergeMessageDefault.commit(mutation);
+    const tmpResult = mergeMessageDefault;
   },
   LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: function handleLoadMessageInteractionDataSuccess(messageId) {
     closure_0 = messageId;
@@ -678,6 +650,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
       if (value.has(messageId)) {
         const updateResult = value.update(messageId, (set) => set.set("interactionData", messageId.interactionData));
         mergeMessageDefault.commit(updateResult);
+        const tmpResult = mergeMessageDefault;
       }
     }
     return false;
@@ -686,7 +659,6 @@ const messageStore = new MessageStore(dispatcherDefault, {
     ({ channelId, truncateBottom, truncateTop } = arg0);
     logger.log("Truncating messages for " + channelId + " bottom:" + truncateBottom + " top:" + truncateTop);
     const orCreate = mergeMessageDefault.getOrCreate(channelId);
-    const obj = mergeMessageDefault;
     const truncateResult = orCreate.truncate(truncateBottom, truncateTop);
     mergeMessageDefault.commit(truncateResult);
   },
@@ -699,8 +671,6 @@ const messageStore = new MessageStore(dispatcherDefault, {
   MESSAGE_CREATE: function handleIncomingMessage(isPushNotification) {
     ({ channelId, message, optimistic } = isPushNotification);
     const orCreate = mergeMessageDefault.getOrCreate(channelId);
-    const obj = mergeMessageDefault;
-    const tmp3 = require;
     const isConnectedResult = _handleConnectionOpen.default.isConnected();
     if (isPushNotification.isPushNotification) {
       if (tmp3Result.isIOSPushNotificationRawPayloadFixExperimentEnabled()) {
@@ -716,7 +686,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
         })(channelId, message, isConnectedResult);
       } else {
         logger.log("Inserting message tapped on from a push notification", message.id, message.channel_id);
-        let tmpResult = tmp(4996);
+        let tmpResult = mergeMessageDefault;
         tmpResult.commit(orCreate.receivePushNotification(message, isConnectedResult));
       }
       tmp3Result = isIOSPushNotificationRawPayloadFixExperimentEnabled;
@@ -740,7 +710,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
             removeResult = orCreate.remove(message.nonce);
             set.delete(message.nonce);
           }
-          tmpResult = tmp(4996);
+          tmpResult = mergeMessageDefault;
           tmpResult.commit(removeResult.receiveMessage(message, true === atBottom.isAtBottom(channelId)));
           receiveMediaMentionMessage(message);
           const receiveMessageResult = removeResult.receiveMessage(message, true === atBottom.isAtBottom(channelId));
@@ -749,6 +719,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
       }
       return ready;
     }
+    const _default = _handleConnectionOpen.default;
   },
   MESSAGE_SEND_FAILED: function handleSendFailed(channelId) {
     ({ messageId, reason: require } = channelId);
@@ -771,8 +742,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
                 str3 = "";
               }
               const result1 = result.set("interactionError", str3);
-              let result2 = result1.set("flags", closure_1_0(closure_1_2[24]).addFlag(result1.flags, closure_1_20.EPHEMERAL));
-              const obj3 = closure_1_0(closure_1_2[24]);
+              let result2 = result1.set("flags", hasFlag.addFlag(result1.flags, closure_1_20.EPHEMERAL));
             } else {
               let str = closure_0;
               result2 = result;
@@ -787,6 +757,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
           });
         }
         mergeMessageDefault.commit(removeResult);
+        const tmpResult = mergeMessageDefault;
       }
     }
     return false;
@@ -798,8 +769,8 @@ const messageStore = new MessageStore(dispatcherDefault, {
     const orCreate = mergeMessageDefault.getOrCreate(message.message.channel_id);
     if (null != orCreate) {
       if (orCreate.has(id)) {
-        let tmpResult = tmp(4996);
-        tmpResult.commit(orCreate.update(id, (message) => message(closure_1_2[23]).updateMessageRecord(message, message.message)));
+        let tmpResult = mergeMessageDefault;
+        tmpResult.commit(orCreate.update(id, (message) => message(dependencyMap[23]).updateMessageRecord(message, message.message)));
         message = message.message;
         const media_mention = message.media_mention;
         let message_id;
@@ -808,17 +779,18 @@ const messageStore = new MessageStore(dispatcherDefault, {
         }
         if (null != message_id) {
           if ("content" in message) {
-            tmpResult = tmp(4996);
+            tmpResult = mergeMessageDefault;
             const orCreate1 = tmpResult.getOrCreate(message.media_mention.attachment_id);
             const updateResult1 = orCreate1.update(message.media_mention.message_id, (message) => {
-              let obj = message(closure_1_2[23]);
-              obj = { content: message.content };
+              message(dependencyMap[23]);
+              const obj = { content: message.content };
               return obj.updateMessageRecord(message, obj);
             });
-            tmp(4996).commit(updateResult1);
-            const tmpResult1 = tmp(4996);
+            mergeMessageDefault.commit(updateResult1);
+            const tmpResult1 = mergeMessageDefault;
           }
         }
+        const updateResult = orCreate.update(id, (message) => message(dependencyMap[23]).updateMessageRecord(message, message.message));
       }
     }
     return false;
@@ -830,6 +802,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
       if (value.has(messageId)) {
         const updateResult = value.update(messageId, redactionSettingToRenderedString.handleExplicitMediaScanTimeoutForMessage);
         mergeMessageDefault.commit(updateResult);
+        const tmpResult = mergeMessageDefault;
       }
     }
     return false;
@@ -849,7 +822,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
               attachment_id = mediaMention.attachment_id;
             }
             if (null != attachment_id) {
-              let tmpResult = tmp(4996);
+              let tmpResult = mergeMessageDefault;
               value = tmpResult.get(attachment_id);
               if (null != value) {
                 const mediaMention2 = value.mediaMention;
@@ -858,7 +831,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
                   message_id = mediaMention2.message_id;
                 }
                 if (null != message_id) {
-                  tmpResult = tmp(4996);
+                  tmpResult = mergeMessageDefault;
                   tmpResult.commit(value.remove(message_id));
                   const removeResult = value.remove(message_id);
                 }
@@ -866,8 +839,9 @@ const messageStore = new MessageStore(dispatcherDefault, {
             }
           }
           const removeResult1 = orCreate.remove(id);
-          tmp(4996).commit(removeResult1);
+          mergeMessageDefault.commit(removeResult1);
           set.delete(id);
+          const tmpResult1 = mergeMessageDefault;
         } else {
           let id2 = orCreate.getAfter(id);
           if (null == id2) {
@@ -884,15 +858,14 @@ const messageStore = new MessageStore(dispatcherDefault, {
   },
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
-    let orCreate;
     let mutation;
     let obj = mutation(4996);
-    orCreate = obj.getOrCreate(ids.channelId);
+    const orCreate = obj.getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
-      const item = ids.forEach((arg0) => {
-        let value = orCreate.get(arg0);
+      const item = ids.forEach((item, index) => {
+        let value = orCreate.get(item);
         if (null != value) {
           const mediaMention = value.mediaMention;
           let attachment_id;
@@ -900,7 +873,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
             attachment_id = mediaMention.attachment_id;
           }
           if (null != attachment_id) {
-            value = mutation(closure_1_2[19]).get(attachment_id);
+            value = mutation(dependencyMap[19]).get(attachment_id);
             if (null != value) {
               const mediaMention2 = value.mediaMention;
               let message_id;
@@ -909,13 +882,11 @@ const messageStore = new MessageStore(dispatcherDefault, {
               }
               if (null != message_id) {
                 const removeResult = value.remove(message_id);
-                tmp3(tmp4[19]).commit(removeResult);
-                const tmp3Result = tmp3(tmp4[19]);
+                mutation(dependencyMap[19]).commit(removeResult);
+                const tmp3Result = mutation(dependencyMap[19]);
               }
             }
-            const obj = mutation(closure_1_2[19]);
-            tmp3 = mutation;
-            tmp4 = closure_1_2;
+            const obj = mutation(dependencyMap[19]);
           }
         }
       });
@@ -941,8 +912,8 @@ const messageStore = new MessageStore(dispatcherDefault, {
         }
         tmpResult = tmp(4996);
         tmpResult.commit(tmp8);
-        const item1 = ids.forEach((arg0) => {
-          set.delete(arg0);
+        const item1 = ids.forEach((item, index) => {
+          set.delete(item);
         });
       }
     }
@@ -950,13 +921,11 @@ const messageStore = new MessageStore(dispatcherDefault, {
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);
     const orCreate = mergeMessageDefault.getOrCreate(channelId);
-    const obj = mergeMessageDefault;
     mergeMessageDefault.commit(orCreate.mutate({ revealedMessageId: messageId }));
   },
   THREAD_CREATE_LOCAL: function handleThreadCreateLocal(channelId) {
     const orCreate = mergeMessageDefault.getOrCreate(channelId.channelId);
     const complete = orCreate.loadComplete({ newMessages: [], hasMoreAfter: false, hasMoreBefore: false });
-    const obj = mergeMessageDefault;
     mergeMessageDefault.commit(complete);
   },
   CHANNEL_DELETE: handleCleanup,
@@ -967,15 +936,15 @@ const messageStore = new MessageStore(dispatcherDefault, {
   RELATIONSHIP_REMOVE: handleRelationshipUpdate,
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch(arg0) {
     while (tmp !== undefined) {
-      let tmp3 = performAuthorUpdate;
       let tmp4 = performAuthorUpdate(tmp2.guildId);
       continue;
     }
+    tmp = arg0.chunks[Symbol.iterator]();
   },
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(guildId) {
     guildId = guildId.guildId;
-    let item = mergeMessageDefault.forEach((channelId) => {
-      const channel = closure_1_9.getChannel(channelId.channelId);
+    let item = mergeMessageDefault.forEach((item, index) => {
+      const channel = closure_1_9.getChannel(item.channelId);
       let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
@@ -983,20 +952,20 @@ const messageStore = new MessageStore(dispatcherDefault, {
       if (guild_id === items) {
         items = [];
         c1 = false;
-        const item = channelId.forEach((nick) => {
-          const messageAuthor = items(closure_1_2[27]).getMessageAuthor(nick);
+        item = item.forEach((item, index) => {
+          const messageAuthor = items(closure_1_2[27]).getMessageAuthor(item);
           ({ nick, colorString } = messageAuthor);
-          if (nick === nick.nick) {
-            if (colorString === nick.colorString) {
-              items.push(nick);
+          if (nick === item.nick) {
+            if (colorString === item.colorString) {
+              items.push(item);
             }
           }
           c1 = true;
-          items.push(nick.merge({ nick, colorString }));
+          items.push(item.merge({ nick, colorString }));
+          const obj = items(closure_1_2[27]);
         });
         if (c1) {
-          closure_1_1(closure_1_2[19]).commit(channelId.reset(items));
-          const obj = closure_1_1(closure_1_2[19]);
+          mergeMessageDefault.commit(item.reset(items));
         }
       }
     });
@@ -1018,9 +987,8 @@ const messageStore = new MessageStore(dispatcherDefault, {
         return addReactionBatch.addReactionBatch(reactions, id);
       });
       mergeMessageDefault.commit(updateResult);
+      const tmpResult = mergeMessageDefault;
     }
-    const obj = mergeMessageDefault;
-    const tmp = importDefault;
   },
   MESSAGE_REACTION_REMOVE: handleReaction,
   MESSAGE_REACTION_REMOVE_ALL: function handleRemoveAllReactions(arg0) {
@@ -1031,9 +999,8 @@ const messageStore = new MessageStore(dispatcherDefault, {
     } else {
       const updateResult = value.update(messageId, (set) => set.set("reactions", []));
       mergeMessageDefault.commit(updateResult);
+      const tmpResult = mergeMessageDefault;
     }
-    const obj = mergeMessageDefault;
-    const tmp = importDefault;
   },
   MESSAGE_REACTION_REMOVE_EMOJI: function handleRemoveEmojiReactions(emoji) {
     emoji = emoji.emoji;
@@ -1044,13 +1011,12 @@ const messageStore = new MessageStore(dispatcherDefault, {
     } else {
       const updateResult = value.update(messageId, (removeReactionsForEmoji) => removeReactionsForEmoji.removeReactionsForEmoji(emoji));
       mergeMessageDefault.commit(updateResult);
+      const tmpResult = mergeMessageDefault;
     }
-    const obj = mergeMessageDefault;
-    const tmp = importDefault;
   },
   LOGOUT: function handleLogout() {
-    const item = mergeMessageDefault.forEach((channelId) => {
-      callback(table[19]).clear(channelId.channelId);
+    const item = mergeMessageDefault.forEach((item, index) => {
+      callback(table[19]).clear(item.channelId);
     });
     set.clear();
   },
@@ -1068,25 +1034,21 @@ const messageStore = new MessageStore(dispatcherDefault, {
     messageId = messageId.messageId;
     if (null == messageId) {
       return false;
-    } else {
-      if (set.has(messageId)) {
-        const orCreate = mergeMessageDefault.getOrCreate(tmp);
-        const value = orCreate.get(messageId);
-        if (null == value) {
-          return false;
-        } else {
-          const items = [value];
-          const removeResult = orCreate.remove(messageId);
-          obj5.delete(messageId);
-          const mergeResult = orCreate.remove(messageId).merge(items);
-          tmp2(4996).commit(mergeResult);
-        }
-        const obj = mergeMessageDefault;
-        tmp2 = importDefault;
-      } else {
+    } else if (set.has(messageId)) {
+      const orCreate = mergeMessageDefault.getOrCreate(tmp);
+      const value = orCreate.get(messageId);
+      if (null == value) {
         return false;
+      } else {
+        const items = [value];
+        const removeResult = orCreate.remove(messageId);
+        set.delete(messageId);
+        const mergeResult = orCreate.remove(messageId).merge(items);
+        mergeMessageDefault.commit(mergeResult);
+        const tmp2Result = mergeMessageDefault;
       }
-      obj5 = set;
+    } else {
+      return false;
     }
   },
   LOCAL_MESSAGE_CREATE: function handleLocalIncomingMesssage(message) {
@@ -1097,6 +1059,7 @@ const messageStore = new MessageStore(dispatcherDefault, {
     }
   }
 });
-let result = set.fileFinishedImporting("stores/MessageStore.tsx");
+let tmp4 = new timestampDefault("MessageStore");
+let result = require("obj132").fileFinishedImporting("stores/MessageStore.tsx");
 
 export default messageStore;

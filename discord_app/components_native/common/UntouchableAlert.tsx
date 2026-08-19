@@ -7,7 +7,7 @@ import { jsx } from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 import importAllResult from "noop" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_4 = createCacheKey.createLegacyClassComponentStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const PureComponent = importAllResult.PureComponent;
 class UntouchableAlert extends PureComponent {
@@ -44,6 +44,6 @@ prototype["render"] = function render() {
   return tmp2;
 };
 UntouchableAlert.contextType = require("ManaContext").ThemeContext;
-const result = require("set").fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
+const result = require("obj132").fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
 
 export default UntouchableAlert;

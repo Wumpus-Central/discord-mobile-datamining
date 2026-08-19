@@ -2,10 +2,10 @@
 
 // Module 17010 (_getTemplates)
 import dispatcherDefault from "dispatcher" /* 709 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+const require = fn;
 function _getTemplates() {
   const self = this;
   const tmp = callback((arg0) => {
@@ -88,11 +88,10 @@ function _getTemplates() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
 
 export const stashTemplateChannels = function stashTemplateChannels(selectedTemplate, guildId) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId };
+  const obj = { type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId };
   obj.dispatch(obj);
 };
 export const getTemplates = function getTemplates() {

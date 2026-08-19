@@ -2,23 +2,22 @@
 
 // Module 10299 (useCreateOrReuseGiftOrder)
 import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
 import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4357 */;
 import { SubscriptionPlanInfo } from "GuildFeatures" /* 1924 */;
 import { PaymentGateways } from "sum" /* 505 */;
 
-const require = arg1;
+const require = fn;
 let closure_8 = new timestampDefault("createOrReuseGiftOrder");
 const tmp2 = new timestampDefault("createOrReuseGiftOrder");
-let result = require("set").fileFinishedImporting("modules/payments/native/utils/createOrReuseGiftOrder.tsx");
+let result = require("obj132").fileFinishedImporting("modules/payments/native/utils/createOrReuseGiftOrder.tsx");
 
 export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
   let _require = GiftPurchaseButton;
-  let obj = _require(9266);
-  obj = { location: GiftPurchaseButton };
+  _require(9266);
+  let obj = { location: GiftPurchaseButton };
   const androidShopOrdersEnabled = obj.useAndroidShopOrdersEnabled(obj);
-  _require = undefined;
   _require = callback((arg0) => {
     closure_0 = arg0;
     c5 = 0;
@@ -74,7 +73,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
               obj1[0] = arg1;
               return obj1;
             } else {
-              skuId = closure_2_6[c0];
+              skuId = SubscriptionPlanInfo[c0];
               if (null == skuId) {
                 const _Error = Error;
                 const _HermesInternal2 = HermesInternal;
@@ -93,11 +92,11 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
                 }
                 c5 = tmp25;
                 skuId2 = 1;
-                let getOrCreateOrder = callback(closure_2_2[7]).getOrCreateOrder;
+                let getOrCreateOrder = callback(dependencyMap[7]).getOrCreateOrder;
                 const obj4 = { skuId: null, paymentGateway: null, recipientUserId: null, purchaseType: null, isGift: true, createdAfter: null, subscriptionPlanId: null, externalGatewayFacet: null };
                 obj4[0] = skuId2;
-                const tmp30 = callback(closure_2_2[7]);
-                let tmp35 = closure_2_7;
+                const tmp30 = callback(dependencyMap[7]);
+                let tmp35 = PaymentGateways;
                 if (obj10.isAndroid()) {
                   let APPLE = tmp35.GOOGLE;
                 } else {
@@ -105,18 +104,18 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
                 }
                 obj4[1] = APPLE;
                 obj4[2] = androidShopOrdersEnabled;
-                obj4[3] = closure_2_5.ONE_TIME;
-                obj10 = callback(closure_2_2[8]);
-                const obj11 = androidShopOrdersEnabled(closure_2_2[9])();
-                const utcResult = androidShopOrdersEnabled(closure_2_2[9])().utc();
-                obj4[5] = androidShopOrdersEnabled(closure_2_2[9])().utc().subtract(callback(closure_2_2[7]).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
+                obj4[3] = ItemPurchaseType.ONE_TIME;
+                obj10 = callback(dependencyMap[8]);
+                const obj11 = androidShopOrdersEnabled(dependencyMap[9])();
+                const utcResult = androidShopOrdersEnabled(dependencyMap[9])().utc();
+                obj4[5] = androidShopOrdersEnabled(dependencyMap[9])().utc().subtract(callback(dependencyMap[7]).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
                 obj4[6] = callback;
-                tmp35 = closure_2_5;
-                obj4[7] = closure_2_5;
+                tmp35 = ItemPurchaseType;
+                obj4[7] = ItemPurchaseType;
                 getOrCreateOrder = getOrCreateOrder(obj4);
                 c5 = 3;
                 c6 = 1;
-                const subtractResult = androidShopOrdersEnabled(closure_2_2[9])().utc().subtract(callback(closure_2_2[7]).DRAFT_ORDER_LOOKBACK_DAYS, "days");
+                const subtractResult = androidShopOrdersEnabled(dependencyMap[9])().utc().subtract(callback(dependencyMap[7]).DRAFT_ORDER_LOOKBACK_DAYS, "days");
               }
             }
           } else if (2 === tmp7) {
@@ -127,7 +126,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
             obj5[1] = skuId2;
             obj5[2] = callback;
             closure_2_8.error("Failed to create order for gift purchase", obj5);
-            obj3 = callback(closure_2_2[10]);
+            obj3 = callback(dependencyMap[10]);
             const obj6 = { tags: null };
             const obj7 = { skuId: null, source: null };
             obj7[0] = skuId2;

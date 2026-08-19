@@ -1,12 +1,12 @@
 // === Module 14664: useLatestChannelMessage ===
 
 // Module 14664 (useLatestChannelMessage)
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import { useEffect } from "noop" /* 19 */;
-import closure_5 from "initialize" /* 13265 */;
+import initialize from "initialize" /* 13265 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/message_previews/useLatestChannelMessage.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/message_previews/useLatestChannelMessage.tsx");
 
 export default function useLatestChannelMessage(arg0) {
   let flag = arg1;

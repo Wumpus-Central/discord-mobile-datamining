@@ -2,30 +2,26 @@
 
 // Module 11390 (EditPollCreationImageAltTextModal)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { MAX_POLL_ANSWER_LENGTH } from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 ({ TouchableOpacity: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, header: null, separator: null, contentContainer: null, imageContainer: null, formContainer: null, textInput: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 18, paddingTop: 10 };
 createCacheKey[2] = { borderBottomWidth: 1, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 createCacheKey[3] = { flex: 1, justifyContent: "center" };
-let obj1 = { borderBottomWidth: 1, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 createCacheKey[4] = { borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center", alignSelf: "center", overflow: "hidden", aspectRatio: 1 };
 createCacheKey[5] = { paddingHorizontal: 16 };
-const obj2 = { borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center", alignSelf: "center", overflow: "hidden", aspectRatio: 1 };
 createCacheKey[6] = { backgroundColor: ThemesDefault.colors.REDESIGN_CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.radii.lg };
 let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { backgroundColor: ThemesDefault.colors.REDESIGN_CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.radii.lg };
-let result = require("set").fileFinishedImporting("modules/polls/native/EditPollCreationImageAltTextModal.tsx");
+let result = require("obj132").fileFinishedImporting("modules/polls/native/EditPollCreationImageAltTextModal.tsx");
 
 export default function EditPollCreationImageAltTextModal(imageSize) {
   ({ channelId, answer, onSave } = imageSize);
@@ -49,9 +45,9 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
     if (null != first) {
       onSave(tmp);
     }
-    const result = onSave(closure_1_2[8]).closeEditPollCreationImageAltTextModal();
+    const result = onSave(dependencyMap[8]).closeEditPollCreationImageAltTextModal();
+    const obj = onSave(dependencyMap[8]);
   }, items);
-  obj = { top: true, style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
   obj1 = { onPress: onSave(11389).closeEditPollCreationImageAltTextModal, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = onSave(1236).intl;
@@ -71,12 +67,12 @@ export default function EditPollCreationImageAltTextModal(imageSize) {
   obj[1] = items1;
   const items2 = [callback3(closure_6, obj), callback2(closure_6, { style: tmp.separator }), ];
   const obj7 = { style: tmp.contentContainer, children: null };
-  let tmp2Result = tmp2(6551);
+  tmp2(6551);
   const items3 = [callback2(closure_6, { style: tmp.imageContainer, children: tmp4.renderImage }), ];
   const obj9 = { style: tmp.formContainer, children: null };
   const items4 = [callback2(onSave(1297).Spacer, { size: 27 }), , , ];
   const obj10 = { children: null };
-  tmp2Result = tmp2(8913);
+  const tmp2Result = tmp2(8913);
   const intl4 = onSave(1236).intl;
   obj10[0] = intl4.string(onSave(1236).t["/2Gnoa"]);
   items4[1] = callback2(tmp2Result, obj10);

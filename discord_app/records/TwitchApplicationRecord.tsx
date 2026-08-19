@@ -5,10 +5,10 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import createExecutableDefault from "createExecutable" /* 4479 */;
 import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
 
-require = arg1;
+require = fn;
 createExecutableDefault;
 let c3 = "twitch:";
-const result = require("set").fileFinishedImporting("records/TwitchApplicationRecord.tsx");
+const result = require("obj132").fileFinishedImporting("records/TwitchApplicationRecord.tsx");
 class TwitchApplicationRecord extends tmp2 {
   constructor(arg0) {
     tmp3 = new TwitchApplicationRecord(global, tmp2, tmp, new.target);

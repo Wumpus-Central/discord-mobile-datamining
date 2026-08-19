@@ -1,13 +1,12 @@
 // === Module 12041: items ===
 
 // Module 12041 (items)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import ThemesDefault from "Themes" /* 712 */;
 import CheckpointPersonas2 from "CheckpointPersonas" /* 4806 */;
 
 const CheckpointPersonas = CheckpointPersonas2.CheckpointPersonas;
-let obj = {};
-obj = { primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_PRIMARY, secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_SECONDARY, backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_BACKGROUND_OVERLAY, gradient: null };
+let obj = { primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_PRIMARY, secondaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_SECONDARY, backgroundOverlayColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_BACKGROUND_OVERLAY, gradient: null };
 const items = [ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_GRADIENT_START, ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_ZERO_GRADIENT_END];
 obj[3] = items;
 obj[CheckpointPersonas.ZERO] = obj;
@@ -47,6 +46,6 @@ const obj8 = { primaryColor: ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_N
 const items9 = [ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_GRADIENT_START, ThemesDefault.unsafe_rawColors.CHECKPOINT_PERSONA_NINE_GRADIENT_END];
 obj8[3] = items9;
 obj[CheckpointPersonas.NINE] = obj8;
-const result = set.fileFinishedImporting("modules/checkpoint/CheckpointColors.native.tsx");
+const result = obj132.fileFinishedImporting("modules/checkpoint/CheckpointColors.native.tsx");
 
 export const CHECKPOINT_PERSONA_COLORS = obj;

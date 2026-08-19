@@ -1,11 +1,11 @@
 // === Module 16208: useTextChannelPressEvents ===
 
 // Module 16208 (useTextChannelPressEvents)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import noop from "noop" /* 19 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx");
+const require = fn;
+let result = require("obj132").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx");
 
 export const useTextChannelPressEvents = function useTextChannelPressEvents(channel, flag2) {
   closure_0 = channel;
@@ -16,25 +16,25 @@ export const useTextChannelPressEvents = function useTextChannelPressEvents(chan
   const items1 = [channel];
   return {
     onPress: React.useCallback(() => {
-      let obj = callback(closure_1_2[2]);
+      let obj = callback(dependencyMap[2]);
       obj.preload(channel.guild_id, channel.id);
       obj = { navigationReplace: callback };
-      channel(closure_1_2[3]).transitionToChannel(channel.id, obj);
+      channel(dependencyMap[3]).transitionToChannel(channel.id, obj);
     }, items),
     onLongPress: React.useCallback(() => {
       channel = closure_1_4.getChannel(channel.parent_id);
       if (null != channel) {
         if (channel.isForumLikeChannel()) {
           if (obj.isForumPost()) {
-            callback(closure_1_2[4])(obj, channel);
+            callback(dependencyMap[4])(obj, channel);
           }
         }
       }
       if (channel.isThread()) {
-        callback(closure_1_2[5])(obj.id);
+        callback(dependencyMap[5])(obj.id);
       } else {
-        const result = channel(closure_1_2[6]).openChannelLongPressActionSheet(obj.id);
-        const obj3 = channel(closure_1_2[6]);
+        const result = channel(dependencyMap[6]).openChannelLongPressActionSheet(obj.id);
+        const obj3 = channel(dependencyMap[6]);
       }
     }, items1),
     unstable_pressDelay: 32

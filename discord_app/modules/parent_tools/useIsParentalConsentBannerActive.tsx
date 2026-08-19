@@ -1,11 +1,11 @@
 // === Module 14222: useIsParentalConsentBannerActive ===
 
 // Module 14222 (useIsParentalConsentBannerActive)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import useParentalConsentWarning from "useParentalConsentWarning" /* 14223 */;
 import frozen from "frozen" /* 14225 */;
 
-const result = set.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
+const result = obj132.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 
 export const useIsParentalConsentBannerActive = function useIsParentalConsentBannerActive() {
   const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();

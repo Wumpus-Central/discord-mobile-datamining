@@ -3,23 +3,22 @@
 // Module 16306 (PIPReferenceDimensions)
 import ThemesDefault from "Themes" /* 712 */;
 import canRenderParticipantVideo from "canRenderParticipantVideo" /* 11444 */;
-import closure_2 from "getParticipants" /* 4773 */;
-import closure_3 from "reset" /* 4652 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import getParticipants from "getParticipants" /* 4773 */;
+import reset from "reset" /* 4652 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import VoicePanelModes from "VoicePanelModes" /* 11440 */;
 import VoicePanelPIPModes from "VoicePanelPIPModes" /* 16307 */;
 import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
 import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE" /* 11441 */;
-import set from "set" /* 2 */;
 
-require = arg1;
+require = fn;
 ({ SECONDARY_PIP_TOP_MARGIN: c5, VoicePanelModes: closure_6 } = VoicePanelModes);
 ({ VoicePanelPIPModes: error, PIPReferenceDimensions } = VoicePanelPIPModes);
 const SquarePIPReferenceDimensions = VoicePanelPIPModes.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPModes.SquareActivityPIPReferenceDimensions;
 const MIN_PIP_TOSS_VELOCITY = MIN_PAN_GESTURE_MOVE.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MIN_PAN_GESTURE_MOVE.PIP_WINDOW_OFFSET;
-let set = new Set();
+const set = new Set();
 function clamp(arg0, arg1, arg2) {
   return Math.min(Math.max(arg0, arg1), arg2);
 }
@@ -236,7 +235,7 @@ function getVoicePanelPIPBorderRadius(width, height) {
 getVoicePanelPIPBorderRadius.__closure = { SquareActivityPIPReferenceDimensions, lg, xl };
 getVoicePanelPIPBorderRadius.__workletHash = 16698745361037;
 getVoicePanelPIPBorderRadius.__initData = { code: "function getVoicePanelPIPBorderRadius_VoicePanelPIPUtilsTsx6(width,height){const{SquareActivityPIPReferenceDimensions,lg,xl}=this.__closure;if(width<=SquareActivityPIPReferenceDimensions.width&&height<=SquareActivityPIPReferenceDimensions.height){return lg;}return xl;}" };
-let result = set.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx");
+let result = require("obj132").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx");
 
 export { PIPReferenceDimensions };
 export { SquarePIPReferenceDimensions };
@@ -332,15 +331,11 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
     if (!showSecondaryPIP.showSecondaryPIP) {
       const activityParticipants = store.getActivityParticipants(channelId);
       for (const item10060 of activityParticipants) {
-        let tmp17 = item10060;
         let participants = item10060.participants;
-        if (participants.some((userId) => callback(13445).isActivityParticipantCurrentUserCurrentSession(userId))) {
-          let tmp18 = item10060;
-          if (!blockList.has(tmp17.id)) {
+        if (participants.some((item, index) => callback(13445).isActivityParticipantCurrentUserCurrentSession(item))) {
+          if (!blockList.has(item10060.id)) {
             obj1 = { id: null, type: null };
-            let tmp19 = item10060;
-            ({ id: obj5[0], type: obj5[1] } = tmp17);
-            let tmp20 = obj3;
+            ({ id: obj5[0], type: obj5[1] } = item10060);
             obj3.return();
             return obj1;
           }
@@ -351,15 +346,10 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   }
   const streamParticipants = store.getStreamParticipants(channelId);
   for (const item10083 of streamParticipants) {
-    let tmp22 = item10083;
     if (!blockList.has(item10083.id)) {
-      let tmp23 = authStore;
-      let tmp24 = item10083;
-      if (null != authStore.getActiveStreamForUser(tmp22.user.id, tmp22.stream.guildId)) {
+      if (null != authStore.getActiveStreamForUser(item10083.user.id, item10083.stream.guildId)) {
         let obj2 = { id: null, type: null };
-        let tmp25 = item10083;
-        ({ id: obj7[0], type: obj7[1] } = tmp22);
-        let tmp26 = obj5;
+        ({ id: obj7[0], type: obj7[1] } = item10083);
         obj5.return();
         return obj2;
       }
@@ -391,14 +381,14 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
             return { id: null, type: null };
           }
         }
-      } else if (tmp31.ACTIVITY === type) {
+      } else if (ParticipantTypes.ACTIVITY === type) {
         const participants2 = participant2.participants;
-        if (participants2.some((userId) => callback(13445).isActivityParticipantCurrentUserCurrentSession(userId))) {
+        if (participants2.some((item, index) => callback(13445).isActivityParticipantCurrentUserCurrentSession(item))) {
           const obj5 = { id: null, type: null };
           ({ id: obj9[0], type: obj9[1] } = participant2);
           return obj5;
         }
-      } else if (tmp31.USER === type) {
+      } else if (ParticipantTypes.USER === type) {
         ({ id: obj19[0], type: obj19[1] } = participant2);
         return { id: null, type: null };
       }
@@ -418,17 +408,11 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   }
   const videoParticipants = store.getVideoParticipants(channelId);
   for (const item10162 of videoParticipants) {
-    let tmp40 = item10162;
     if (!blockList.has(item10162.id)) {
-      let tmp41 = require;
-      let tmp42 = dependencyMap;
       let obj16 = canRenderParticipantVideo;
-      let tmp43 = item10162;
-      if (obj16.canRenderParticipantVideo(tmp40)) {
+      if (obj16.canRenderParticipantVideo(item10162)) {
         let obj8 = { id: null, type: null };
-        let tmp44 = item10162;
-        ({ id: obj17[0], type: obj17[1] } = tmp40);
-        let tmp45 = obj15;
+        ({ id: obj17[0], type: obj17[1] } = item10162);
         obj15.return();
         return obj8;
       }
@@ -479,16 +463,9 @@ export const getPIPMode = function getPIPMode(connected) {
             } else {
               const videoParticipants = store.getVideoParticipants(channelId);
               for (const item10032 of videoParticipants) {
-                let tmp13 = store2;
-                let tmp12 = item10032;
                 if (item10032.id !== store2.getId()) {
-                  let tmp14 = require;
-                  let tmp15 = dependencyMap;
                   let obj2 = canRenderParticipantVideo;
-                  let tmp16 = item10032;
-                  if (obj2.canRenderParticipantVideo(tmp12)) {
-                    let tmp17 = constants2;
-                    let tmp18 = obj3;
+                  if (obj2.canRenderParticipantVideo(item10032)) {
                     obj3.return();
                     return constants2.IN_PANEL;
                   }

@@ -6,38 +6,37 @@ import getSystemLocale from "getSystemLocale" /* 1236 */;
 import useThemeDefault from "useTheme" /* 4310 */;
 import Text from "Text" /* 4734 */;
 import preloadDefault from "preload" /* 5449 */;
+import registerAssetDefault from "registerAsset" /* 8034 */;
+import registerAssetDefault2 from "registerAsset" /* 12904 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createCacheKey from "createCacheKey" /* 4661 */;
 
-require = arg1;
+require = fn;
 noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
 
 export default function Header(style) {
   const tmp = callback();
-  let obj = { style: items, children: null };
-  items = [tmp.container, style.style];
-  obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
+  const items = [tmp.container, style.style];
+  let obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
   const tmp4 = useThemeDefault();
-  const tmp5 = closure_5;
-  const tmp6 = View;
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.lpNrPu);
   const tmp8 = preloadDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(8034);
+    let tmp2Result = registerAssetDefault;
   } else {
-    tmp2Result = tmp2(12904);
+    tmp2Result = registerAssetDefault2;
   }
   obj[3] = tmp2Result;
-  const items1 = [closure_4(tmp8, obj), ];
+  const items1 = [callback(tmp8, obj), ];
   obj = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl2 = tmp9(1236).intl;
+  const intl2 = getSystemLocale.intl;
   obj[3] = intl2.string(getSystemLocale.t.SD5MJW);
-  items1[1] = closure_4(Text.Text, obj);
+  items1[1] = callback(Text.Text, obj);
   obj[1] = items1;
-  return tmp5(tmp6, obj);
+  return callback2(View, obj);
 };

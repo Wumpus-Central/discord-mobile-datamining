@@ -1,9 +1,9 @@
 // === Module 5412: maybeDispatchDevOnlyDummyFriendSuggestions ===
 
 // Module 5412 (maybeDispatchDevOnlyDummyFriendSuggestions)
-import closure_0 from "mergeGuildAvatar" /* 1922 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 
-const result = require("set").fileFinishedImporting("modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx");
+const result = require("obj132").fileFinishedImporting("modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx");
 
 export default function maybeDispatchDevOnlyDummyFriendSuggestions() {
   let MAX_VALUE = arg0;

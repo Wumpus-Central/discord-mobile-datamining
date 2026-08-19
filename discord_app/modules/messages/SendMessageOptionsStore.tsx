@@ -1,7 +1,7 @@
 // === Module 10858: getOptions ===
 
 // Module 10858 (getOptions)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 import initializeDefault from "initialize" /* 589 */;
 import dispatcherDefault from "dispatcher" /* 709 */;
 import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
@@ -27,7 +27,6 @@ const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
       }
       obj.location = OTHER;
       closure_1[message.id] = obj;
-      const tmp3 = closure_1;
     }
     let tmp8 = null != message.nonce && message.nonce !== message.id;
     if (tmp8) {
@@ -39,6 +38,6 @@ const sendMessageOptionsStore = new SendMessageOptionsStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("modules/messages/SendMessageOptionsStore.tsx");
+const result = obj132.fileFinishedImporting("modules/messages/SendMessageOptionsStore.tsx");
 
 export default sendMessageOptionsStore;

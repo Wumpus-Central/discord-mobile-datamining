@@ -1,12 +1,12 @@
 // === Module 12355: usePrivateChannelCall ===
 
 // Module 12355 (usePrivateChannelCall)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/calls/native/usePrivateChannelCall.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/calls/native/usePrivateChannelCall.tsx");
 
 export default function usePrivateChannelCall(arg0, arg1, arg2) {
   const _require = arg0;
@@ -29,10 +29,10 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
     const t = callback(1236).t;
     if (callback2) {
       let stringResult = string(t["7AWk50"]);
-      let tmp10 = tmp6;
+      let tmp10 = callback;
     } else {
       stringResult = string(t["EZgS+9"]);
-      tmp10 = tmp6;
+      tmp10 = callback;
     }
     obj = { text: stringResult, accessibilityHint: null, inCall: false };
     const intl2 = tmp10(1236).intl;
@@ -86,10 +86,9 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(4770).ensurePrivateChannel(tmp33);
+                obj1[0] = closure_1_1(4770).ensurePrivateChannel(closure_1_0);
                 return obj1;
               }
-              tmp33 = closure_1_0;
             }
           } else if (arg0 === 1) {
             c3 = 3;

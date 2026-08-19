@@ -1,10 +1,10 @@
 // === Module 16406: useChatBadge ===
 
 // Module 16406 (useChatBadge)
-import closure_2 from "generateOldThreadCutoff" /* 4772 */;
+import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4772 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useChatBadge.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/voice_panel/native/hooks/useChatBadge.tsx");
 
 export default function useChatBadge(arg0) {
   const _require = arg0;

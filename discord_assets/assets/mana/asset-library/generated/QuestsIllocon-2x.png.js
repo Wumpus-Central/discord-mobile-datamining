@@ -1,9 +1,9 @@
 // === Module 6085: metadata ===
 
 // Module 6085 (metadata)
-import set from "set" /* 2 */;
+import obj132 from "obj132" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QuestsIllocon-2x.png.js");
+const result = obj132.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QuestsIllocon-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/ef88805ad3aacbf83eb6dd26cf91deffa0195da7651c77d6ca1ec5202a067687.png";
 export const metadata = { fileBytes: 670 };

@@ -2,30 +2,27 @@
 
 // Module 13436 (GuildProgressBar)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
-createCacheKey = { wrapper: null, progress: null };
-createCacheKey = { position: "relative", backgroundColor: require("useIOSCompletionStates").PROGRESS_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xs, height: 8 };
+const require = fn;
+const createCacheKey = { position: "relative", backgroundColor: require("useIOSCompletionStates").PROGRESS_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xs, height: 8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", height: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.xs };
 let closure_6 = createCacheKey.createStyles(createCacheKey);
 let closure_7 = { code: "function GuildProgressBarTsx1(){const{percentWidth}=this.__closure;return{width:percentWidth.get()+\"%\"};}" };
-const obj1 = { position: "absolute", height: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.xs };
-let result = require("set").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressBar.tsx");
+let result = require("obj132").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressBar.tsx");
 
 export default function GuildProgressBar(percent) {
   percent = percent.percent;
-  let sharedValue;
   const tmp = callback();
   let obj = percent(4115);
-  sharedValue = obj.useSharedValue(0);
+  const sharedValue = obj.useSharedValue(0);
   const items = [percent, sharedValue];
   const effect = React.useEffect(() => {
-    const result = sharedValue.set(percent(closure_1_2[7]).withTiming(percent, percent(closure_1_2[8]).timingSlow));
+    const result = sharedValue.set(percent(dependencyMap[7]).withTiming(percent, percent(dependencyMap[8]).timingSlow));
   }, items);
   const fn = function h() {
     return { width: "" + sharedValue.get() + "%" };

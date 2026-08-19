@@ -6,26 +6,24 @@ import ThemesDefault from "Themes" /* 712 */;
 import { View } from "get ActivityIndicator" /* 17 */;
 import items from "items" /* 8168 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 noopAll;
 ({ GUILD_TAG_BADGE_PALETTE_PRESETS: c4, GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: c5, GuildTagBadgeSize: closure_6 } = items);
 ({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { grid: { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 }, defaultIcon: null };
-createCacheKey = { position: "absolute", right: ThemesDefault.space.PX_4, bottom: ThemesDefault.space.PX_4 };
+const createCacheKey = { position: "absolute", right: ThemesDefault.space.PX_4, bottom: ThemesDefault.space.PX_4 };
 createCacheKey[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorGrid.tsx");
+const result = require("obj132").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagColorGrid.tsx");
 
 export default function GuildSettingsServerTagColorGrid(badge) {
   badge = badge.badge;
   let primary = badge.primaryColor;
   let secondary = badge.secondaryColor;
   ({ onSelectColor: View, cellSize } = badge);
-  let table;
   let tmp = callback3();
-  table = tmp2;
+  const table = tmp2;
   let tmp3 = null == primary;
   if (tmp3) {
     let tmp4 = !tmp2;
@@ -36,12 +34,12 @@ export default function GuildSettingsServerTagColorGrid(badge) {
   }
   let everyResult = !tmp3;
   if (!tmp3) {
-    everyResult = cellSize.every((primary) => {
-      let tmp = primary.primary !== primary;
+    everyResult = cellSize.every((item, index) => {
+      let tmp = item.primary !== primary;
       if (!tmp) {
         let tmp2 = closure_5;
         if (closure_5) {
-          tmp2 = primary.secondary !== secondary;
+          tmp2 = item.secondary !== secondary;
         }
         tmp = tmp2;
       }
@@ -82,40 +80,40 @@ export default function GuildSettingsServerTagColorGrid(badge) {
   const items = [callback(tmp12(tmp11[8]).Text, obj1), ];
   let obj2 = { accessibilityRole: "radiogroup", style: tmp.grid, children: null };
   const items1 = [
-    cellSize.map((primary) => {
-      closure_0 = primary;
+    cellSize.map((item, index) => {
+      closure_0 = item;
       let obj = { size: cellSize, selected: null, accessibilityLabel: null, onPress: null, children: null };
-      let tmp5 = primary.primary === primary;
+      let tmp5 = item.primary === primary;
       if (tmp5) {
         let tmp7 = !closure_5;
         if (closure_5) {
-          tmp7 = primary.secondary === secondary;
+          tmp7 = item.secondary === secondary;
         }
         tmp5 = tmp7;
       }
       obj[1] = tmp5;
       if (closure_5) {
-        let guildTagPalettePresetColorLabel = primary(tmp3[10])(primary.primary, primary.secondary);
+        let guildTagPalettePresetColorLabel = primary(tmp3[10])(item.primary, item.secondary);
       } else {
-        guildTagPalettePresetColorLabel = badge(tmp3[10]).getGuildTagPalettePresetColorLabel(primary.primary);
+        guildTagPalettePresetColorLabel = badge(tmp3[10]).getGuildTagPalettePresetColorLabel(item.primary);
         const obj2 = badge(tmp3[10]);
       }
       obj[2] = guildTagPalettePresetColorLabel;
       obj[3] = function onPress() {
         secondary = null;
         if (closure_1_5) {
-          secondary = primary.secondary;
+          secondary = item.secondary;
         }
-        return closure_1_3(primary.primary, secondary);
+        return closure_1_3(item.primary, secondary);
       };
-      obj = { badge: closure_0, width: closure_1_6.SIZE_32, height: closure_1_6.SIZE_32, primaryTintColor: primary.primary, secondaryTintColor: null };
+      obj = { badge: closure_0, width: closure_1_6.SIZE_32, height: closure_1_6.SIZE_32, primaryTintColor: item.primary, secondaryTintColor: null };
       secondary = undefined;
       if (closure_5) {
-        secondary = primary.secondary;
+        secondary = item.secondary;
       }
       obj[4] = secondary;
       obj[4] = closure_1_7(badge(secondary[11]).GuildBadge, obj);
-      return closure_1_7(primary(secondary[9]), obj, "" + primary.primary + primary.secondary);
+      return closure_1_7(primary(secondary[9]), obj, "" + item.primary + item.secondary);
     }),
   ,
 
@@ -127,7 +125,6 @@ export default function GuildSettingsServerTagColorGrid(badge) {
     return callback(null, null);
   };
   const items2 = [callback(tmp12(tmp11[11]).GuildBadge, { badge, width: closure_6.SIZE_32, height: closure_6.SIZE_32 }), ];
-  const obj4 = { badge, width: closure_6.SIZE_32, height: closure_6.SIZE_32 };
   const tmp15 = primary(tmp11[9]);
   items2[1] = callback(tmp12(tmp11[12]).RefreshIcon, { size: "xs", color: primary(tmp11[4]).colors.ICON_DEFAULT, style: tmp.defaultIcon });
   obj3[4] = items2;

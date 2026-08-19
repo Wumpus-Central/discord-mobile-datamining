@@ -7,10 +7,10 @@ import importAllResult from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
 let context = importAllResult.createContext(null);
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/MediaViewerDimensionsContext.tsx");
+const result = require("obj132").fileFinishedImporting("modules/media_viewer/native/MediaViewerDimensionsContext.tsx");
 
 export const MediaViewerDimensionsProvider = function MediaViewerDimensionsProvider(children) {
-  return <redux.Provider value={useWindowDimensionsDefault({ ignoreKeyboard: true })}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={useWindowDimensionsDefault({ ignoreKeyboard: true })}>{children.children}</redux.Provider>;
 };
 export const useMediaViewerDimensions = function useMediaViewerDimensions() {
   const context = importAllResult.useContext(closure_4);

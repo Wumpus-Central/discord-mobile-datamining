@@ -1,14 +1,14 @@
 // === Module 16797: useLoadGuildStickersWithCreator ===
 
 // Module 16797 (useLoadGuildStickersWithCreator)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1922 */;
-import closure_6 from "parseServerGuildSticker" /* 6770 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
+import parseServerGuildSticker from "parseServerGuildSticker" /* 6770 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
 
 export default function useLoadGuildStickersWithCreator(arg0) {
   const _require = arg0;
@@ -23,7 +23,7 @@ export default function useLoadGuildStickersWithCreator(arg0) {
       const tmp = closure_2_2(function*() {
         c0 = tmp3;
         c3 = 1;
-        obj1 = closure_2_0(closure_2_1[6]);
+        obj1 = abortController(signal[6]);
         yield obj1.fetchGuildStickersWithCreator(closure_1_0, v0);
         if (1 === tmp7) {
           c3 = 0;
@@ -72,12 +72,12 @@ export default function useLoadGuildStickersWithCreator(arg0) {
   if ("success" === tmp2) {
     obj = { status: null, stickers: null };
     obj[0] = tmp2;
-    obj[1] = stateFromStores.map((user_id) => {
-      user = user.getUser(user_id.user_id);
-      let tmp2 = user_id;
+    obj[1] = stateFromStores.map((item, index) => {
+      user = user.getUser(item.user_id);
+      let tmp2 = item;
       if (null != user) {
         const obj = {};
-        const merged = Object.assign(user_id);
+        const merged = Object.assign(item);
         obj.user = user;
         tmp2 = obj;
       }

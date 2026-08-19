@@ -2,12 +2,12 @@
 
 // Module 12990 (useResettingValue)
 import useInitialValueDefault from "useInitialValue" /* 7127 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import noop from "noop" /* 19 */;
 
-const require = arg1;
+const require = fn;
 ({ useState: c4, useCallback: c5, useEffect: closure_6 } = noop);
-const result = require("set").fileFinishedImporting("hooks/useResettingValue.tsx");
+const result = require("obj132").fileFinishedImporting("hooks/useResettingValue.tsx");
 
 export default function useResettingValue(arg0, arg1) {
   closure_0 = arg0;

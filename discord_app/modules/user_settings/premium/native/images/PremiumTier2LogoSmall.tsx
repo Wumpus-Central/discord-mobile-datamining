@@ -8,9 +8,9 @@ import inlineStyles from "inlineStyles" /* 6571 */;
 import inlineStylesDefault from "inlineStyles" /* 6571 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-require = arg1;
+require = fn;
 noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/images/PremiumTier2LogoSmall.tsx");
+const result = require("obj132").fileFinishedImporting("modules/user_settings/premium/native/images/PremiumTier2LogoSmall.tsx");
 
 export default function PremiumTier2LogoSmall(arg0) {
   ({ style, width, height } = arg0);

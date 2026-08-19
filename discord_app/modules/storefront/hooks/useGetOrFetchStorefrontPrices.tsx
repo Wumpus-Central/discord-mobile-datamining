@@ -1,18 +1,18 @@
 // === Module 9193: useGetOrFetchStorefrontPricesForApplicationId ===
 
 // Module 9193 (useGetOrFetchStorefrontPricesForApplicationId)
-import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/storefront/hooks/useGetOrFetchStorefrontPrices.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("modules/storefront/hooks/useGetOrFetchStorefrontPrices.tsx");
 
 export const useGetOrFetchStorefrontPricesForApplicationId = function useGetOrFetchStorefrontPricesForApplicationId(applicationId) {
   applicationId = applicationId.applicationId;
   const items = [applicationId];
   const effect = React.useEffect(() => {
     if (null != applicationId) {
-      let obj = applicationId(closure_1_1[1]);
-      obj = { applicationId: null };
+      applicationId(dependencyMap[1]);
+      const obj = { applicationId: null };
       obj[0] = tmp;
       const storefrontPricesForApplicationId = obj.fetchStorefrontPricesForApplicationId(obj);
     }
@@ -23,8 +23,8 @@ export const useGetOrFetchStorefrontPricesForSkuIds = function useGetOrFetchStor
   const items = [skuIds];
   const effect = React.useEffect(() => {
     if (0 !== skuIds.length) {
-      let obj = skuIds(closure_1_1[1]);
-      obj = { skuIds: null };
+      skuIds(dependencyMap[1]);
+      const obj = { skuIds: null };
       obj[0] = tmp;
       const storefrontPricesForSkuIds = obj.fetchStorefrontPricesForSkuIds(obj);
     }

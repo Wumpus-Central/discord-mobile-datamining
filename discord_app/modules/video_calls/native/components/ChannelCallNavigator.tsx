@@ -2,26 +2,25 @@
 
 // Module 12484 (CallWithVoiceChat)
 import contextDefault from "context" /* 4255 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import closure_8 from "module_12485" /* 12485 */;
 import { ChannelCallScreens } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
 import { ComponentActions } from "ME" /* 676 */;
 import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_11 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 function CallWithVoiceChat(channel) {
   channel = channel.channel;
-  let _require;
   let translateX;
   dependencyMap = undefined;
   let tmp = callback3();
   const result = 2 * translateX(1494)().width;
-  _require = result;
+  const _require = result;
   let obj = _require(10010);
   const voiceChatNavigationContext = obj.useVoiceChatNavigationContext();
   translateX = undefined;
@@ -115,26 +114,25 @@ function CallWithVoiceChat(channel) {
   const items2 = [animatedStyle1, StyleSheet.absoluteFill];
   items1[1] = callback2(translateX(4115).View, { pointerEvents: "box-none", style: items2 });
   obj2[1] = items1;
-  const items3 = [closure_13(closure_6, obj2), ];
+  const items3 = [callback2(closure_6, obj2), ];
   const obj4 = { style: tmp.textContainer, children: null };
   let tmp18Result = null;
   if (tmp11[0]) {
     const obj5 = { channel: null };
     obj5[0] = channel;
-    tmp18Result = tmp18(tmp2(10009), obj5);
+    tmp18Result = callback2(tmp2(10009), obj5);
   }
   obj4[1] = tmp18Result;
   items3[1] = callback2(closure_6, obj4);
   obj1[1] = items3;
-  return closure_13(translateX(4115).View, obj1);
+  return callback2(translateX(4115).View, obj1);
 }
 function MainCallScreen(channel) {
   channel = channel.channel;
   let isConnectedToVoiceChannel;
-  let id;
   let obj = isConnectedToVoiceChannel(8675);
   isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
-  id = React.useId();
+  const id = React.useId();
   const items = [isConnectedToVoiceChannel, id];
   const effect = React.useEffect(() => {
     let state = closure_1_8.getState();
@@ -275,12 +273,11 @@ function MainCallScreen(channel) {
     if (channel.isGuildStageVoice()) {
       let obj2 = { channel: null };
       obj2[0] = channel;
-      tmp14Result = tmp14(id(12486), obj2);
+      tmp14Result = callback2(id(12486), obj2);
     }
     obj1[1] = tmp14Result;
-    tmp14Result = tmp14(closure_6, obj1);
-    tmp11 = tmp14;
-    const tmp15 = closure_6;
+    tmp14Result = callback2(closure_6, obj1);
+    tmp11 = callback2;
   }
   tmp = callback3();
   const tmp21 = id(4225)();
@@ -291,8 +288,7 @@ function MainCallScreen(channel) {
 }
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { flex: { flex: 1, alignSelf: "stretch" }, textInVoiceContainer: null, voiceContainer: null, textContainer: null };
-createCacheKey = {};
+const createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.right = undefined;
 createCacheKey[1] = createCacheKey;
@@ -309,7 +305,7 @@ let closure_15 = { code: "function ChannelCallNavigatorTsx1(){const{width,transl
 let closure_16 = { code: "function ChannelCallNavigatorTsx2(){const{interpolate,translateX,width}=this.__closure;var _translateX$get,_translateX;return{backgroundColor:'black',opacity:interpolate((_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0,[-width,0],[0.9,0])};}" };
 let closure_17 = { code: "function ChannelCallNavigatorTsx3(){const{translateX}=this.__closure;var _translateX$get,_translateX;return Math.abs((_translateX$get=(_translateX=translateX)===null||_translateX===void 0?void 0:_translateX.get())!==null&&_translateX$get!==void 0?_translateX$get:0)>0;}" };
 let closure_18 = { code: "function ChannelCallNavigatorTsx4(isMoving,previous){const{runOnJS,setShouldRenderChat}=this.__closure;if(!isMoving||isMoving===previous)return;runOnJS(setShouldRenderChat)(true);}" };
-let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigator.tsx");
+let result = require("obj132").fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigator.tsx");
 
 export default function ChannelCallNavigator(channel) {
   channel = channel.channel;
@@ -317,15 +313,15 @@ export default function ChannelCallNavigator(channel) {
   if (guild_id == null) {
     guild_id = null;
   }
-  obj = { value: guild_id, children: tmp2(channel(6312).Navigator, { screens: { [ChannelCallScreens.MAIN_CALL_SCREEN]: obj }, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN }) };
+  { value: guild_id, children: callback(channel(6312).Navigator, { screens: { [ChannelCallScreens.MAIN_CALL_SCREEN]: obj }, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN }) };
   obj = {
     headerShown: false,
     ignoreKeyboard: true,
     gestureEnabled: false,
     title: "",
     render() {
-      return closure_1_12(closure_1_20, { channel });
+      return closure_1_12(MainCallScreen, { channel });
     }
   };
-  return closure_12(contextDefault.Provider, obj);
+  return callback(contextDefault.Provider, obj);
 };

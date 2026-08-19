@@ -1,11 +1,11 @@
 // === Module 8863: BottomSheetTextInput ===
 
 // Module 8863 (BottomSheetTextInput)
-import closure_3 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/BottomSheetTextInput.native.tsx");
+const require = fn;
+const result = require("obj132").fileFinishedImporting("design/components/Sheet/native/BottomSheetTextInput.native.tsx");
 
 export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
   ref = ref.ref;
@@ -20,9 +20,9 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {
-        tmp(current);
-      } else if (null != tmp) {
-        tmp.current = current;
+        ref(current);
+      } else if (null != ref) {
+        ref.current = current;
       }
     },
     onFocus: onFocus2,
@@ -34,9 +34,9 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
     ref(current) {
       ref.current = current;
       if (typeof ref === "function") {
-        tmp(current);
-      } else if (null != tmp) {
-        tmp.current = current;
+        ref(current);
+      } else if (null != ref) {
+        ref.current = current;
       }
     },
     onFocus: onFocus2,

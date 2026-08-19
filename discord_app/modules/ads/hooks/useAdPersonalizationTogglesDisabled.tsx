@@ -2,10 +2,10 @@
 
 // Module 14998 (useAdPersonalizationTogglesDisabled)
 import initialize from "initialize" /* 589 */;
-import closure_2 from "reset" /* 13234 */;
+import reset from "reset" /* 13234 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx");
+require = fn;
+const result = require("obj132").fileFinishedImporting("modules/ads/hooks/useAdPersonalizationTogglesDisabled.tsx");
 
 export const useAdPersonalizationTogglesDisabled = function useAdPersonalizationTogglesDisabled() {
   const items = [closure_2];

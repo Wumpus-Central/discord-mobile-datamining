@@ -2,19 +2,18 @@
 
 // Module 11058 (ClassificationDetailModal)
 import ThemesDefault from "Themes" /* 712 */;
-import closure_4 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
 import { UserSettingsSections } from "ME" /* 676 */;
 import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11059 */;
 import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-const require = arg1;
+const require = fn;
 let closure_8 = { CLASSIFICATION_DETAIL: "CLASSIFICATION_DETAIL" };
-createCacheKey = { headerStyle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/ClassificationDetailModal.tsx");
+const result = require("obj132").fileFinishedImporting("modules/safety_hub/native/ClassificationDetailModal.tsx");
 
 export default function ClassificationDetailModal(classificationId) {
   classificationId = classificationId.classificationId;
@@ -23,12 +22,10 @@ export default function ClassificationDetailModal(classificationId) {
   if (flag === undefined) {
     flag = false;
   }
-  dependencyMap = undefined;
-  let safetyHubInitialized;
   const tmp = callback();
   dependencyMap = tmp;
   let obj = classificationId(11095);
-  safetyHubInitialized = obj.useSafetyHubInitialized();
+  const safetyHubInitialized = obj.useSafetyHubInitialized();
   const items = [safetyHubInitialized];
   const effect = safetyHubInitialized.useEffect(() => {
     if (!safetyHubInitialized) {
@@ -41,8 +38,7 @@ export default function ClassificationDetailModal(classificationId) {
   const memo = safetyHubInitialized.useMemo(() => {
     closure_1 = closure_2;
     closure_2 = closure_1;
-    let obj = {};
-    obj = {
+    let obj = {
       headerStyle: headerStyle.headerStyle,
       headerTitle() {
         return null;
@@ -58,8 +54,8 @@ export default function ClassificationDetailModal(classificationId) {
             let arr = closure_1_1(closure_1_3[6]);
             arr = arr.pop();
             if (closure_1) {
-              let obj = closure_1_0(closure_1_3[9]);
-              obj = { screen: null, params: null };
+              closure_1_0(closure_1_3[9]);
+              let obj = { screen: null, params: null };
               obj[0] = closure_1_5.ACCOUNT;
               obj = { initialTab: null };
               obj[0] = closure_1_6.STANDING;
@@ -71,7 +67,6 @@ export default function ClassificationDetailModal(classificationId) {
             let arr = callback2(5260);
             arr = arr.pop();
             let obj = callback(7360);
-            obj = { screen: constants.ACCOUNT, params: obj };
             obj = { initialTab: constants2.STANDING };
             obj.openUserSettings(obj);
           }

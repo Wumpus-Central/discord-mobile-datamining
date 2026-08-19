@@ -1,36 +1,41 @@
 // === Module 12697: componentDidMount ===
 
 // Module 12697 (componentDidMount)
-import set from "set" /* 500 */;
+import applyDefault from "apply" /* 12 */;
+import obj132 from "obj132" /* 500 */;
 import ThemesDefault from "Themes" /* 712 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import dismissGlobalKeyboardAll from "dismissGlobalKeyboard" /* 1892 */;
 import Text from "Text" /* 4734 */;
 import PressableBase from "PressableBase" /* 5433 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
 import setOptionsDefault from "setOptions" /* 8157 */;
+import computeScrollDataDefault from "computeScrollData" /* 10472 */;
+import ChatScrollPositionDefault from "ChatScrollPosition" /* 10473 */;
 import getPreviousMessagesDefault from "getPreviousMessages" /* 10730 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10781 */;
+import _modDef10911 from "module_10911" /* 10911 */;
 import DCDChatListDefault from "DCDChatList" /* 11073 */;
 import GuildNSFWDefault from "GuildNSFW" /* 11838 */;
 import ChannelSpoilerDefault from "ChannelSpoiler" /* 11840 */;
 import importAllResult from "noop" /* 19 */;
 import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
-import closure_7 from "setContent" /* 4086 */;
-import closure_8 from "ensureGuildLoaded" /* 1391 */;
-import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import setContent from "setContent" /* 4086 */;
+import ensureGuildLoaded from "ensureGuildLoaded" /* 1391 */;
+import mergeGuildAvatar from "mergeGuildAvatar" /* 1922 */;
 import Changeset from "Changeset" /* 8158 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4661 */;
+import "createCacheKey";
 
-require = arg1;
+require = fn;
 let c4 = importAllResult;
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ Changeset: c10, RowType: unpackModuleId, SeparatorType: closure_12 } = Changeset);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-createCacheKey = { chat: { flex: 1, overflow: "hidden" }, containerInner: null, jumpToChatButtonContainer: null, jumpToChatButton: null, jumpToChatText: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexShrink: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj1 = { flexShrink: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[3] = { height: 44, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[4] = { textAlign: "center", flex: 1, lineHeight: 44 };
 let closure_15 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
@@ -47,10 +52,11 @@ class ChatPreviewBase extends PureComponent {
     applyArgumentsResult.didPositionInitialScroll = false;
     applyArgumentsResult.handleCompleteFirstLayout = function handleCompleteFirstLayout() {
       if (tmp2) {
-        tmp.didPositionInitialScroll = true;
-        applyArgumentsResult(closure_1_3[13]).scrollToTopMessage(tmp.chatRef, tmp.chatManager);
-        const obj = applyArgumentsResult(closure_1_3[13]);
+        applyArgumentsResult.didPositionInitialScroll = true;
+        applyArgumentsResult(dependencyMap[13]).scrollToTopMessage(applyArgumentsResult.chatRef, applyArgumentsResult.chatManager);
+        const obj = applyArgumentsResult(dependencyMap[13]);
       }
+      tmp2 = applyArgumentsResult.props.initialScrollToTop && !applyArgumentsResult.didPositionInitialScroll;
     };
     applyArgumentsResult.setup = function setup() {
       let flag = arg0;
@@ -58,14 +64,12 @@ class ChatPreviewBase extends PureComponent {
         flag = false;
       }
       messages = undefined;
-      let roleStyle;
       closure_3 = undefined;
-      let map;
       let items;
       let items1;
       const props = applyArgumentsResult.props;
       ({ channel: c0, messages } = props);
-      roleStyle = props.roleStyle;
+      const roleStyle = props.roleStyle;
       if (null != messages) {
         const rowGenerator2 = tmp2.rowGenerator;
         let obj = { renderEmbeds: null, inlineEmbedMedia: null, inlineAttachmentMedia: null, constrainedWidth: null };
@@ -76,42 +80,41 @@ class ChatPreviewBase extends PureComponent {
         rowGenerator2.setOptions(obj);
         const chatManager5 = tmp2.chatManager;
         chatManager5.setup(messages);
-        closure_3 = flag ? tmp31.UPDATE : tmp31.NOOP;
+        closure_3 = flag ? closure_1_10.UPDATE : closure_1_10.NOOP;
         const chatManager = tmp2.chatManager;
         const previousMessages = chatManager.getPreviousMessages();
         const _Array = Array;
-        map = null;
         if (Array.isArray(previousMessages)) {
           const _Map = Map;
-          map = new Map(previousMessages.map((id) => {
-            items = [id.id, id];
+          new Map(previousMessages.map((item, index) => {
+            items = [item.id, item];
             return items;
           }));
         }
         items = [];
-        let item = messages.forEach((props) => {
+        let item = messages.forEach((item, index) => {
           let arr = items;
           const first = items[0];
           if (null != first) {
-            if (messages(11139)(c0, first[first.length - 1], props)) {
-              items = [props];
+            if (messages(11139)(c0, first[first.length - 1], item)) {
+              items = [item];
               arr = arr.unshift(items);
             } else {
-              arr = first.unshift(props);
+              arr = first.unshift(item);
             }
           } else {
-            items1 = [props];
+            items1 = [item];
             arr.unshift(items1);
           }
         });
         items1 = [];
-        let item1 = items.forEach((arr) => {
+        let item1 = items.forEach((item, index) => {
           let obj2 = tmp;
-          let isSameDayResult = items[items.length - 1] === arr;
+          let isSameDayResult = items[items.length - 1] === item;
           messages = false;
           let timestamp = null;
           if (!isSameDayResult) {
-            timestamp = tmp2[arg1 + 1][0].timestamp;
+            timestamp = tmp2[index + 1][0].timestamp;
           }
           if (!isSameDayResult) {
             isSameDayResult = null == timestamp;
@@ -125,21 +128,21 @@ class ChatPreviewBase extends PureComponent {
             messages = true;
             flag = true;
           }
-          arr = items1;
+          let arr = items1;
           let tmp8 = items1[items1.length - 1];
           obj = { roleStyle, rowType: closure_1_11.BLOCKED_GROUP, changeType: dependencyMap, message: tmp, isFirst: true, content: [], text: "", revealed: false };
-          if (arr[arr.length - 1].blocked) {
+          if (item[item.length - 1].blocked) {
             if (!tmp25) {
               obj = {};
               const merged = Object.assign(obj);
-              obj.rowType = tmp10.BLOCKED_GROUP;
+              obj.rowType = closure_1_11.BLOCKED_GROUP;
               arr = arr.push(obj);
               tmp8 = obj;
             }
             obj2 = tmp8;
-            const item = arr.forEach((message) => {
+            item = item.forEach((item, index) => {
               const content = obj2.content;
-              content.unshift({ rowType: closure_3_11.MESSAGE, changeType: closure_3_10.NOOP, roleStyle, message, isFirst: message === obj2 });
+              content.unshift({ rowType: closure_3_11.MESSAGE, changeType: closure_3_10.NOOP, roleStyle, message: item, isFirst: item === obj2 });
             });
             tmp8.revealed = tmp.id === messages.revealedMessageId;
             tmp8.context = tmp.id;
@@ -147,20 +150,20 @@ class ChatPreviewBase extends PureComponent {
             obj1 = { count: null };
             obj1[0] = tmp8.content.length;
             tmp8.text = intl2.formatToPlainString(_undefined(1236).t["+FcYM/"], obj1);
-            tmp25 = null != tmp8 && tmp8.rowType === tmp10.BLOCKED_GROUP;
+            tmp25 = null != tmp8 && tmp8.rowType === closure_1_11.BLOCKED_GROUP;
           } else if (tmp.ignored) {
             let tmp14 = tmp8;
             if (!tmp13) {
               obj2 = {};
               const merged1 = Object.assign(obj);
-              obj2.rowType = tmp10.IGNORED_GROUP;
+              obj2.rowType = closure_1_11.IGNORED_GROUP;
               arr = arr.push(obj2);
               tmp14 = obj2;
             }
             obj2 = tmp14;
-            const item1 = arr.forEach((message) => {
+            const item1 = item.forEach((item, index) => {
               const content = obj2.content;
-              content.unshift({ rowType: closure_3_11.MESSAGE, changeType: closure_3_10.NOOP, roleStyle, message, isFirst: message === obj2 });
+              content.unshift({ rowType: closure_3_11.MESSAGE, changeType: closure_3_10.NOOP, roleStyle, message: item, isFirst: item === obj2 });
             });
             tmp14.revealed = tmp.id === messages.revealedMessageId;
             tmp14.context = tmp.id;
@@ -168,26 +171,26 @@ class ChatPreviewBase extends PureComponent {
             const obj3 = { count: null };
             obj3[0] = tmp14.content.length;
             tmp14.text = intl.formatToPlainString(_undefined(1236).t["VFWjc+"], obj3);
-            tmp13 = null != tmp8 && tmp8.rowType === tmp10.IGNORED_GROUP;
+            tmp13 = null != tmp8 && tmp8.rowType === closure_1_11.IGNORED_GROUP;
           } else {
-            const item2 = arr.forEach((id) => {
-              let obj = closure_1_4;
-              if (null != closure_1_4) {
-                if (obj.get(id.id) !== id) {
+            const item2 = item.forEach((item, index) => {
+              let obj = map;
+              if (null != map) {
+                if (obj.get(item.id) !== item) {
                   let UPDATE = closure_2_10.UPDATE;
                 }
                 obj = { roleStyle: null, rowType: null, changeType: null, message: null, isFirst: null, isEditing: false, separatorBefore: null };
-                obj[0] = closure_1_2;
+                obj[0] = roleStyle;
                 obj[1] = closure_2_11.MESSAGE;
                 obj[2] = UPDATE;
-                obj[3] = id;
-                obj[4] = id === obj2;
-                let tmp6 = id === obj2;
+                obj[3] = item;
+                obj[4] = item === obj2;
+                let tmp6 = item === obj2;
                 if (tmp6) {
                   tmp6 = c1;
                 }
                 obj[6] = tmp6;
-                closure_1_6.push(obj);
+                items1.push(obj);
               }
               UPDATE = closure_1_3;
             });
@@ -203,8 +206,6 @@ class ChatPreviewBase extends PureComponent {
           }
         });
         for (const item10042 of items1) {
-          let tmp17 = applyArgumentsResult;
-          let tmp18 = applyArgumentsResult;
           ({ chatManager: chatManager2, rowGenerator } = applyArgumentsResult);
           let row = chatManager2.createRow(rowGenerator.generate(item10042));
           continue;
@@ -220,24 +221,22 @@ class ChatPreviewBase extends PureComponent {
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;
-          tmp23 = closure_1_1(closure_1_3[17])(obj);
+          tmp23 = computeScrollDataDefault(obj);
         }
         obj.updateContent(changeset, tmp23);
-        const tmp20 = applyArgumentsResult;
       }
     };
     applyArgumentsResult.updateContent = function updateContent(changeset, arg1) {
       const current = applyArgumentsResult.chatRef.current;
       if (null != current) {
-        let obj = closure_1_1(closure_1_3[18]);
-        obj = { rows: null, isLoadingAtTop: false, scrollData: null };
+        const obj = { rows: null, isLoadingAtTop: false, scrollData: null };
         obj[0] = changeset;
         obj[2] = arg1;
         obj.updateRows(current, obj);
       }
     };
     applyArgumentsResult.getMessage = function getMessage(arg0) {
-      return closure_1_1(closure_1_3[19]).find(arg0.props.messages, (id) => id.id === closure_0 || id.nonce === closure_0);
+      return applyDefault.find(arg0.props.messages, (id) => id.id === closure_0 || id.nonce === closure_0);
     };
     applyArgumentsResult.handleJumpToChat = function handleJumpToChat() {
       ({ channelId: closure_0, jumpToChatProps } = applyArgumentsResult.props);
@@ -248,7 +247,7 @@ class ChatPreviewBase extends PureComponent {
       }
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
-        resolved.then(() => {
+        resolved.then((result) => {
           closure_1_0(closure_1_3[20]).transitionToMessage(closure_0, jumpTargetId, { navigationReplace: true });
         });
       }
@@ -264,12 +263,13 @@ class ChatPreviewBase extends PureComponent {
             if (onBeforeJumpToMessage != null) {
               let result = onBeforeJumpToMessage("message_link");
             }
-            applyArgumentsResult(closure_1_3[20]).transitionToMessage(data.targetChannelId, data.targetMessageId, { navigationReplace: true });
+            applyArgumentsResult(dependencyMap[20]).transitionToMessage(data.targetChannelId, data.targetMessageId, { navigationReplace: true });
+            const obj3 = applyArgumentsResult(dependencyMap[20]);
           }
         }
       }
-      let obj = applyArgumentsResult(closure_1_3[21]);
-      obj = { allowWithinModal: true, chatInputRef: "a", handleTransitionToThread: "Array", message: 0, messageChannel: "asc", selectedChannelId: "asc", tapLinkData: "CHANNEL_ACK" };
+      applyArgumentsResult(dependencyMap[21]);
+      let obj = { allowWithinModal: true, chatInputRef: "a", handleTransitionToThread: "Array", message: 0, messageChannel: "asc", selectedChannelId: "asc", tapLinkData: "CHANNEL_ACK" };
       obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
         const jumpToChatProps = props.props.jumpToChatProps;
         const onBeforeJumpToMessage = jumpToChatProps.onBeforeJumpToMessage;
@@ -278,8 +278,8 @@ class ChatPreviewBase extends PureComponent {
         }
         const channel = closure_1_8.getChannel(arg1);
         if (null != channel) {
-          let obj = closure_1_0(closure_1_3[20]);
-          obj = { source: null, navigationReplace: true };
+          closure_1_0(closure_1_3[20]);
+          const obj = { source: null, navigationReplace: true };
           obj[0] = arg2;
           obj.transitionToThread(channel, obj);
         }
@@ -302,56 +302,56 @@ class ChatPreviewBase extends PureComponent {
       if (!hasActionSheetOpen) {
         const obj = { urlString: null };
         obj[0] = url;
-        closure_1_1(closure_1_3[22])(obj);
+        showLongPressURLActionSheetDefault(obj);
       }
     };
     applyArgumentsResult.handleLongPressMessage = function handleLongPressMessage(closure_0) {
-      let obj = applyArgumentsResult(closure_1_3[23]);
+      let obj = applyArgumentsResult(dependencyMap[23]);
       const nativeSyntheticEventData = obj.getNativeSyntheticEventData(closure_0);
       ({ mediaIndex, mediaType, componentMediaIndex } = nativeSyntheticEventData);
       const props = applyArgumentsResult.props;
       const channel = props.channel;
       if (!props.hasActionSheetOpen) {
-        const message = obj2.getMessage(tmp4);
+        const message = applyArgumentsResult.getMessage(tmp4);
         if (null != message) {
           const user = closure_1_9.getUser(message.author.id);
           if (null != user) {
-            let tmpResult = tmp(tmp2[13]);
-            tmpResult = tmp(tmp2[24]);
+            applyArgumentsResult(dependencyMap[13]);
+            const tmpResult = applyArgumentsResult(dependencyMap[24]);
             const longPressSelectedMedia = tmpResult.getLongPressSelectedMedia(message, mediaIndex, mediaType, tmpResult.asComponentId(tmp5), componentMediaIndex);
-            const result = closure_1_2(tmp2[25]).dismissGlobalKeyboard();
-            const obj5 = closure_1_2(tmp2[25]);
+            const result = dismissGlobalKeyboardAll.dismissGlobalKeyboard();
             obj = { actionSheetSource: "Preview", analyticsLocation: null, canAddNewReactions: null, channel: null, message: null, selectedMedia: null, user: null };
-            obj[1] = obj2.props.analyticsLocation;
+            obj[1] = applyArgumentsResult.props.analyticsLocation;
             let tmp9 = true === tmp6;
             if (tmp9) {
               tmp9 = null != channel;
             }
             if (tmp9) {
-              tmp9 = closure_1_1(tmp2[27])(channel);
+              tmp9 = _modDef10911(channel);
             }
             obj[2] = tmp9;
             obj[3] = channel;
             obj[4] = message;
             obj[5] = longPressSelectedMedia;
             obj[6] = user;
-            const result1 = tmp(tmp2[26]).showLongPressMessageActionSheet(obj);
-            const tmpResult1 = tmp(tmp2[26]);
+            const result1 = applyArgumentsResult(dependencyMap[26]).showLongPressMessageActionSheet(obj);
+            const tmpResult1 = applyArgumentsResult(dependencyMap[26]);
           }
         }
       }
     };
     applyArgumentsResult.handleLongPressReaction = function handleLongPressReaction(closure_0) {
-      const nativeSyntheticEventData = applyArgumentsResult(closure_1_3[23]).getNativeSyntheticEventData(closure_0);
+      const nativeSyntheticEventData = applyArgumentsResult(dependencyMap[23]).getNativeSyntheticEventData(closure_0);
       const reaction = nativeSyntheticEventData.reaction;
       if (!applyArgumentsResult.props.hasActionSheetOpen) {
         let emoji;
         if (null != reaction) {
           emoji = reaction.emoji;
         }
-        const result = applyArgumentsResult(closure_1_3[28]).handleViewPreviewReactions(tmp4, tmp5, emoji);
-        const tmpResult = applyArgumentsResult(closure_1_3[28]);
+        const result = applyArgumentsResult(dependencyMap[28]).handleViewPreviewReactions(tmp4, tmp5, emoji);
+        const tmpResult = applyArgumentsResult(dependencyMap[28]);
       }
+      const obj = applyArgumentsResult(dependencyMap[23]);
     };
     applyArgumentsResult.handleTapReaction = function handleTapReaction(nativeEvent) {
       const props = applyArgumentsResult.props;
@@ -359,9 +359,9 @@ class ChatPreviewBase extends PureComponent {
       if (!props.hasActionSheetOpen) {
         if (true === tmp) {
           if (null != channel) {
-            const nativeSyntheticEventData = applyArgumentsResult(closure_1_3[23]).getNativeSyntheticEventData(nativeEvent);
+            const nativeSyntheticEventData = applyArgumentsResult(dependencyMap[23]).getNativeSyntheticEventData(nativeEvent);
             ({ reaction, messageId, isBurst } = nativeSyntheticEventData);
-            const obj3 = applyArgumentsResult(closure_1_3[13]);
+            const obj3 = applyArgumentsResult(dependencyMap[13]);
             let tmp5 = null;
             if (null != reaction) {
               const obj = {};
@@ -371,12 +371,10 @@ class ChatPreviewBase extends PureComponent {
             }
             let MESSAGE = nativeEvent.nativeEvent.location;
             if (MESSAGE == null) {
-              MESSAGE = tmp15(tmp16[29]).ReactionLocations.MESSAGE;
+              MESSAGE = applyArgumentsResult(dependencyMap[29]).ReactionLocations.MESSAGE;
             }
             const result = obj3.handleAddOrRemoveReaction(messageId, channel, tmp5, isBurst, MESSAGE);
-            const obj2 = applyArgumentsResult(closure_1_3[23]);
-            tmp15 = applyArgumentsResult;
-            tmp16 = closure_1_3;
+            const obj2 = applyArgumentsResult(dependencyMap[23]);
           }
         }
       }
@@ -391,13 +389,13 @@ class ChatPreviewBase extends PureComponent {
           obj[0] = nativeEvent;
           obj[2] = message;
           obj[3] = channel;
-          const result = applyArgumentsResult(closure_1_3[30]).handleMessagesTapImage(obj);
-          const obj2 = applyArgumentsResult(closure_1_3[30]);
+          const result = applyArgumentsResult(dependencyMap[30]).handleMessagesTapImage(obj);
+          const obj2 = applyArgumentsResult(dependencyMap[30]);
         }
       }
     };
     applyArgumentsResult.handleTapChannel = function handleTapChannel(closure_0) {
-      let obj = applyArgumentsResult(closure_1_3[23]);
+      let obj = applyArgumentsResult(dependencyMap[23]);
       obj = {
         data: obj.getNativeSyntheticEventData(closure_0).data,
         navigationReplace: true,
@@ -411,15 +409,15 @@ class ChatPreviewBase extends PureComponent {
           return result;
         }
       };
-      let result = applyArgumentsResult(closure_1_3[31]).handleMessagesTapChannel(obj);
+      let result = applyArgumentsResult(dependencyMap[31]).handleMessagesTapChannel(obj);
     };
     applyArgumentsResult.handleLongPressChannel = function handleLongPressChannel(arg0) {
-      applyArgumentsResult(closure_1_3[23]);
+      applyArgumentsResult(dependencyMap[23]);
       if (!applyArgumentsResult.props.hasActionSheetOpen) {
         const obj = { data: null };
         obj[0] = tmp4;
-        const result = applyArgumentsResult(closure_1_3[32]).handleMessagesLongPressChannel(obj);
-        const tmpResult = applyArgumentsResult(closure_1_3[32]);
+        const result = applyArgumentsResult(dependencyMap[32]).handleMessagesLongPressChannel(obj);
+        const tmpResult = applyArgumentsResult(dependencyMap[32]);
       }
     };
     return applyArgumentsResult;
@@ -488,7 +486,7 @@ prototype["render"] = function render() {
     }
   }
   obj = { ref: self.chatRef, style: tmp.chat, inverted: true, onTapLink: self.handleTapLink, onTapChannel: self.handleTapChannel, onLongPressChannel: self.handleLongPressChannel, onLongPressLink: self.handleLongPressLink, onLongPressMessage: self.handleLongPressMessage, onLongPressReaction: self.handleLongPressReaction, onTapReaction: self.handleTapReaction, onTapImage: self.handleTapImage, onCompleteFirstLayout: null, onFirstLayout: null };
-  obj1 = set;
+  obj1 = obj132;
   let prop;
   if (obj1.isIOS()) {
     prop = self.handleCompleteFirstLayout;
@@ -500,17 +498,17 @@ prototype["render"] = function render() {
     prop1 = self.handleCompleteFirstLayout;
   }
   obj[12] = prop1;
-  tmp6Result = tmp6(tmp8, obj);
+  callback(tmp8, obj);
   const obj2 = { bottom: true, style: tmp.jumpToChatButtonContainer, children: null };
-  tmp9Result = set;
+  tmp9Result = obj132;
   obj2[2] = callback(PressableBase.PressableOpacity, { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: callback(Text.Text, obj4) });
-  tmp6Result = tmp6(tmp9(6803).SafeAreaPaddingView, obj2);
+  tmp6Result = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
+  const obj3 = { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: callback(Text.Text, obj4) };
 };
 ChatPreviewBase.contextType = require("ManaContext").ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
-let obj2 = { height: 44, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-let result = require("set").fileFinishedImporting("components_native/common/ChatPreview.tsx");
+let result = require("obj132").fileFinishedImporting("components_native/common/ChatPreview.tsx");
 
 export const ChatPreview = function ChatPreview(channelId) {
   channelId = channelId.channelId;
@@ -548,5 +546,5 @@ export const ChatPreview = function ChatPreview(channelId) {
   }
   obj.canAccessChannel = tmp12;
   obj.hasActionSheetOpen = stateFromStores2;
-  return closure_13(ChatPreviewBase, obj);
+  return callback(ChatPreviewBase, obj);
 };

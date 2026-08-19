@@ -2,12 +2,12 @@
 
 // Module 5436 (requestAgeVerification)
 import sendRequest from "sendRequest" /* 530 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "fetchFingerprint" /* 1218 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import fetchFingerprint from "fetchFingerprint" /* 1218 */;
 import { VerificationVendorName } from "set" /* 5427 */;
 import { Endpoints } from "ME" /* 676 */;
 
-require = arg1;
+require = fn;
 function requestAgeVerification(arg0) {
   const self = this;
   const apply = _requestAgeVerification.apply;
@@ -182,7 +182,7 @@ function _requestIncodeMethodSession() {
   }
   return applyArgumentsResult;
 }
-function initiateAgeVerification(arg0) {
+function initiateAgeVerification(isManualAgeVerificationHidden) {
   const self = this;
   const apply = _initiateAgeVerification.apply;
   if (typeof apply === "unknown") {
@@ -543,16 +543,16 @@ function _getAgeVerificationMethods() {
       promise = closure_1_18();
     }
     if (promise != null) {
-      const catchPromise = promise.then((body) => {
-        let obj = v1(709);
-        obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods };
+      const catchPromise = promise.then((result) => {
+        v1(709);
+        const obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: result.body.methods };
         obj.dispatch(obj);
-      }).catch(() => {
+      }).catch((error) => {
         v1(709).dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_FAILURE" });
       });
-      const nextPromise = promise.then((body) => {
-        let obj = v1(709);
-        obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: body.body.methods };
+      const nextPromise = promise.then((result) => {
+        v1(709);
+        const obj = { type: "AGE_VERIFICATION_METHODS_LOAD_SUCCESS", methods: result.body.methods };
         obj.dispatch(obj);
       });
     }
@@ -577,7 +577,7 @@ function fetchAgeVerificationMethodsSuspendedUser() {
   const HTTP = sendRequest.HTTP;
   return HTTP.post({ url: Endpoints.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS, rejectWithError: true, body: { token: suspendedUserToken } });
 }
-const result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationURLActionCreators.tsx");
+const result = require("obj132").fileFinishedImporting("modules/age_assurance/AgeVerificationURLActionCreators.tsx");
 
 export { requestAgeVerification };
 export const requestIncodeMethodSession = function requestIncodeMethodSession(closure_0) {
